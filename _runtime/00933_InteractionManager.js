@@ -1,30 +1,18 @@
 // _runtime/00933_InteractionManager.js
+import _mod932 from "metro/00932__.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
-const InteractionManager = require;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_3 = 0;
 class InteractionManager {
   constructor() {
-    self = this;
-    tmp = InteractionManager;
-    tmp2 = c2(this, InteractionManager);
-    __init = InteractionManager.prototype.__init;
-    call = __init.call;
-    if (typeof call === "unknown") {
-      __initResult = __init();
-    } else {
-      callResult = call(self);
-    }
-    __init2 = tmp.prototype.__init2;
-    call2 = __init2.call;
-    if (typeof call2 === "unknown") {
-      __init2Result = __init2();
-    } else {
-      call2Result = call2(self);
-    }
-    return;
+    const self = this;
+    _classCallCheck(this, InteractionManager);
+    const __init = InteractionManager.prototype.__init;
+    __init.call(self);
+    const __init2 = InteractionManager.prototype.__init2;
+    __init2.call(self);
   }
 }
 const entry = {
@@ -39,12 +27,14 @@ let items = [
     key: "__init2",
     value: function __init2() {
       this._longestInteractionMap = new Map();
+      new Map();
     },
   },
   {
     key: "_resetInteractions",
     value: function _resetInteractions() {
-      const interactionCount = InteractionManager(932).getInteractionCount();
+      const obj = _mod932;
+      const interactionCount = obj.getInteractionCount();
       this._longestInteractionList.length = 0;
       const _longestInteractionMap = this._longestInteractionMap;
       _longestInteractionMap.clear();
@@ -54,44 +44,46 @@ let items = [
     key: "_estimateP98LongestInteraction",
     value: function _estimateP98LongestInteraction() {
       const diff = this._longestInteractionList.length - 1;
-      const obj = InteractionManager(932);
+      const obj = _mod932;
       return this._longestInteractionList[
-        Math.min(Math, diff, Math.floor(Math, (obj.getInteractionCount(obj) - closure_3) / 50))
+        min(Math, diff, floor(Math, (obj.getInteractionCount(obj) - closure_3) / 50))
       ];
     },
   },
   {
     key: "_processEntry",
     value: function _processEntry(interactionId) {
+      let items1;
       const self = this;
       const _onBeforeProcessingEntry = this._onBeforeProcessingEntry;
       if (_onBeforeProcessingEntry != null) {
         const result = _onBeforeProcessingEntry(interactionId);
       }
       if (interactionId.interactionId) {
+        let obj;
         const _longestInteractionList = self._longestInteractionList;
         const _longestInteractionMap = self._longestInteractionMap;
-        value = _longestInteractionMap.get(interactionId.interactionId);
+        _longestInteractionList.at(-1);
+        const value = _longestInteractionMap.get(interactionId.interactionId);
         if (value) {
           if (interactionId.duration > value._latency) {
             const items = [interactionId];
             value.entries = items;
             value._latency = interactionId.duration;
-            let obj = value;
+            obj = value;
           } else {
             obj = value;
+            const tmp6 =
+              interactionId.duration === value._latency && interactionId.startTime === value.entries[0].startTime;
             if (tmp6) {
               const entries = value.entries;
               entries.push(interactionId);
               obj = value;
             }
-            tmp6 = interactionId.duration === value._latency && interactionId.startTime === value.entries[0].startTime;
           }
         } else {
-          obj = { id: interactionId.interactionId, entries: null, _latency: null };
-          const items1 = [interactionId];
-          obj.entries = items1;
-          obj._latency = interactionId.duration;
+          obj = { id: interactionId.interactionId, entries: items1, _latency: interactionId.duration };
+          items1 = [interactionId];
           const _longestInteractionMap2 = self._longestInteractionMap;
           const result1 = _longestInteractionMap2.set(obj.id, obj);
           const prop = self._longestInteractionList;
@@ -112,10 +104,10 @@ let items = [
         if (_onAfterProcessingINPCandidate != null) {
           const result2 = _onAfterProcessingINPCandidate(obj);
         }
-        const atResult = _longestInteractionList.at(-1);
       }
     },
   },
 ];
+const InteractionManager_export = _createClass(InteractionManager, items);
 
-export const InteractionManager = _createClass(InteractionManager, items);
+export { InteractionManager_export as InteractionManager };

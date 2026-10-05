@@ -12,6 +12,12 @@ omitZero.__initData = {
   code: "function omitZero_Pnpm_computeOffsetIfDataChangedTs1(a,b){if(a===0)return 0;return b;}",
 };
 function computeOffsetIfDataChanged(arg0) {
+  let currentLength;
+  let direction;
+  let handlerOffset;
+  let previousLength;
+  let sum1;
+  let tmp7;
   ({ direction, handlerOffset, size, previousLength, currentLength } = arg0);
   const absolute = Math.abs(handlerOffset);
   if (direction < 0) {
@@ -21,8 +27,8 @@ function computeOffsetIfDataChanged(arg0) {
       if (0 !== previousLength) {
         num3 = tmp15;
       }
-      let sum = tmp12(tmp13(num3));
-      let tmp7 = tmp14;
+      sum1 = tmp12(tmp13(num3));
+      tmp7 = tmp14;
       let result1 = result;
     } else {
       throw new TypeError("Trying to call a non-function");
@@ -35,7 +41,7 @@ function computeOffsetIfDataChanged(arg0) {
       if (0 !== previousLength) {
         num = tmp8;
       }
-      sum = tmp5(tmp6(num)) + 1;
+      sum1 = tmp5(tmp6(num)) + 1;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -46,20 +52,24 @@ function computeOffsetIfDataChanged(arg0) {
       num4 = tmp16;
     }
     let diff = num4;
-    if (!tmp) {
+    if (direction >= 0) {
       diff = previousLength - num4 - 1;
     }
     if (diff > currentLength - 1) {
+      let sum;
       if (currentLength < previousLength) {
+        let result3;
         const result2 = (currentLength - 1) * size;
-        if (tmp) {
-          let result3 = result2 * direction;
+        if (direction < 0) {
+          result3 = result2 * direction;
         } else {
           result3 = result2 * -1;
         }
+        sum = result3;
       }
+      return sum;
     }
-    return handlerOffset + sum * (currentLength - previousLength) * size * direction;
+    sum = handlerOffset + sum1 * (currentLength - previousLength) * size * direction;
   } else {
     throw new TypeError("Trying to call a non-function");
   }

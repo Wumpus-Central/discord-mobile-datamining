@@ -1,29 +1,36 @@
 // _runtime/15852_ReanimatedNativeStackScreen.js
+import react_native from "00017_react-native.js";
+import Fragment from "react/00021_Fragment.js";
 import _mod1621 from "metro/01621__.js";
-import cancelAnimation2 from "01643_cancelAnimation.js";
-import _modDef15853 from "metro/15853__.js";
-import _modDef15854 from "metro/15854__.js";
+import _mod1643 from "metro/01643__.js";
+import InnerScreen from "05732_InnerScreen.js";
+import reactDefault from "15853_react.js";
 import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import noop from "metro/00019__.js";
+import react from "00019_react.js";
 
-const cancelAnimation = cancelAnimation2;
+const cancelAnimation = _mod1643;
+let children;
 
-require = fn;
 let closure_3 = ["children"];
-const Platform = fn(17).Platform;
-const jsx = fn(21).jsx;
-let closure_7 = cancelAnimation.createAnimatedComponent(fn(5732).InnerScreen);
+const Platform = react_native.Platform;
+const jsx = Fragment.jsx;
+let closure_7 = cancelAnimation.createAnimatedComponent(InnerScreen.InnerScreen);
 const __initData = {
   code: "function pnpm_ReanimatedNativeStackScreenTsx1(event){const{progress,closing,goingForward}=this.__closure;progress.value=event.progress;closing.value=event.closing;goingForward.value=event.goingForward;}",
 };
 const __initData2 = {
   code: "function pnpm_ReanimatedNativeStackScreenTsx2(event){const{cachedHeaderHeight,headerHeight}=this.__closure;if(event.headerHeight!==cachedHeaderHeight.current){headerHeight.value=event.headerHeight;cachedHeaderHeight.current=event.headerHeight;}}",
 };
-const forwardRefResult = noop.forwardRef((children, ref) => {
+const forwardRefResult = react.forwardRef((children, ref) => {
+  let hasLargeHeader;
+  let stackPresentation;
+  children = children.children;
   const tmp = _objectWithoutProperties(children, closure_3);
   ({ stackPresentation, hasLargeHeader } = tmp);
-  const safeAreaFrame = _mod1621.useSafeAreaFrame();
-  let y = _mod1621.useSafeAreaInsets().top;
+  const obj = _mod1621;
+  const safeAreaFrame = obj.useSafeAreaFrame();
+  const obj2 = _mod1621;
+  let y = obj2.useSafeAreaInsets().top;
   let flag = tmp.statusBarTranslucent;
   if (flag == null) {
     flag = false;
@@ -32,16 +39,15 @@ const forwardRefResult = noop.forwardRef((children, ref) => {
     y = safeAreaFrame.y;
   }
   const sum = 56 + y;
-  ref = noop.useRef(sum);
-  const sharedValue = cancelAnimation2.useSharedValue(sum);
-  const tmp2Result = cancelAnimation2;
-  const sharedValue1 = cancelAnimation2.useSharedValue(0);
-  const tmp2Result6 = cancelAnimation2;
-  const sharedValue2 = cancelAnimation2.useSharedValue(0);
-  const tmp2Result7 = cancelAnimation2;
-  const sharedValue3 = cancelAnimation2.useSharedValue(0);
-  const obj3 = { ref, onTransitionProgressReanimated: null, onHeaderHeightChangeReanimated: null };
-  const tmp2Result8 = cancelAnimation2;
+  ref = react.useRef(sum);
+  const tmp2Result = _mod1643;
+  const sharedValue = tmp2Result.useSharedValue(sum);
+  const tmp2Result6 = _mod1643;
+  const sharedValue1 = tmp2Result6.useSharedValue(0);
+  const tmp2Result7 = _mod1643;
+  const sharedValue2 = tmp2Result7.useSharedValue(0);
+  const tmp2Result8 = _mod1643;
+  const sharedValue3 = tmp2Result8.useSharedValue(0);
   const fn = function _(progress) {
     sharedValue1.value = progress.progress;
     sharedValue2.value = progress.closing;
@@ -50,37 +56,29 @@ const forwardRefResult = noop.forwardRef((children, ref) => {
   fn.__closure = { progress: sharedValue1, closing: sharedValue2, goingForward: sharedValue3 };
   fn.__workletHash = 10731156107287;
   fn.__initData = __initData;
-  obj3.onTransitionProgressReanimated = cancelAnimation2.useEvent(fn, ["onTransitionProgress"]);
-  const tmp2Result9 = cancelAnimation2;
+  const tmp2Result9 = _mod1643;
+  const tmp2Result10 = _mod1643;
   class H {
-    constructor(arg0) {
-      if (children.headerHeight !== closure_0.current) {
-        tmp2 = closure_1;
-        ({ headerHeight: closure_1.value, headerHeight: tmp.current } = children);
+    constructor(headerHeight) {
+      if (headerHeight.headerHeight !== ref.current) {
+        ({ headerHeight: sharedValue.value, headerHeight: tmp.current } = headerHeight);
       }
-      return;
     }
   }
   H.__closure = { cachedHeaderHeight: ref, headerHeight: sharedValue };
   H.__workletHash = 4489643073666;
   H.__initData = __initData2;
-  obj3.onHeaderHeightChangeReanimated = cancelAnimation2.useEvent(H, ["onHeaderHeightChange"]);
   const merged = Object.assign(tmp);
-  const obj4 = {
-    value: sharedValue,
-    children: jsx(_modDef15854.Provider, {
-      value: { progress: sharedValue1, closing: sharedValue2, goingForward: sharedValue3 },
-      children: children.children,
-    }),
-  };
-  obj3.children = jsx(_modDef15853.Provider, {
-    value: sharedValue,
-    children: jsx(_modDef15854.Provider, {
-      value: { progress: sharedValue1, closing: sharedValue2, goingForward: sharedValue3 },
-      children: children.children,
-    }),
-  });
-  return <closure_7 ref={ref} onTransitionProgressReanimated={null} onHeaderHeightChangeReanimated={null} />;
+  const Provider = reactDefault.Provider;
+  return (
+    <closure_7
+      ref={ref}
+      onTransitionProgressReanimated={tmp2Result9.useEvent(fn, ["onTransitionProgress"])}
+      onHeaderHeightChangeReanimated={tmp2Result10.useEvent(H, ["onHeaderHeightChange"])}
+    >
+      <Provider value={sharedValue}>{null}</Provider>
+    </closure_7>
+  );
 });
 forwardRefResult.displayName = "ReanimatedNativeStackScreen";
 

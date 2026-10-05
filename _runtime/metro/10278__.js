@@ -7,19 +7,12 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ZHHantRelationWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -34,22 +27,17 @@ const regExp = new RegExp(
 );
 class ZHHantRelationWeekdayParser {
   constructor() {
-    self = this;
-    tmp = c2(this, ZHHantRelationWeekdayParser);
-    tmp2 = closure_4;
-    obj = closure_4(ZHHantRelationWeekdayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, ZHHantRelationWeekdayParser);
+    const obj = _getPrototypeOf(ZHHantRelationWeekdayParser);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return tmp3(self, constructResult);
+    return c3(self, constructResult);
   }
 }
 _inherits(ZHHantRelationWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
@@ -65,7 +53,7 @@ const items = [
     key: "innerExtract",
     value: function innerExtract(createParsingResult, index) {
       const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp2 = ZHHantRelationWeekdayParser(10276).WEEKDAY_OFFSET[index.groups.weekday];
+      const tmp2 = _mod10276.WEEKDAY_OFFSET[index.groups.weekday];
       if (undefined === tmp2) {
         return null;
       } else {
@@ -74,14 +62,8 @@ const items = [
         if ("\u4E0A" != prefix) {
           str2 = "next";
           if ("\u4E0B" != prefix) {
-            let tmp3 = "\u4ECA" != prefix;
-            if (tmp3) {
-              tmp3 = "\u9019" != prefix;
-            }
-            if (tmp3) {
-              tmp3 = "\u5462" != prefix;
-            }
             str2 = null;
+            const tmp3 = "\u4ECA" != prefix && "\u9019" != prefix && "\u5462" != prefix;
             if (!tmp3) {
               str2 = "this";
             }
@@ -89,13 +71,16 @@ const items = [
         }
         const _Date = Date;
         const refDate = createParsingResult.refDate;
+        const self = this;
+        const self2 = this;
         const date = new Date(refDate.getTime());
         const day = date.getDay();
         if ("last" != str2) {
+          let flag;
           if ("past" != str2) {
             if ("next" == str2) {
               date.setDate(date.getDate() + (tmp2 + 7 - day));
-              let flag = true;
+              flag = true;
             } else if ("this" == str2) {
               date.setDate(date.getDate() + (tmp2 - day));
               flag = false;

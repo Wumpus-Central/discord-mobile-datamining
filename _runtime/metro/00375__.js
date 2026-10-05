@@ -1,5 +1,6 @@
 // _runtime/metro/00375__.js
-import _assertNativeAnimatedModuleDefault from "../00367__assertNativeAnimatedModule.js";
+import get_nativeEventEmitterDefault from "../00357_get_nativeEventEmitter.js";
+import _modDef367 from "00367__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
@@ -7,19 +8,12 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
 
-const AnimatedTracking = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -27,34 +21,31 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 class AnimatedTracking {
-  constructor(arg0, arg1, arg2, arg3, arg4, arg5) {
-    self = this;
-    tmp = c2(this, AnimatedTracking);
-    items = [];
-    items[0] = exports;
-    tmp2 = closure_4;
-    obj = closure_4(AnimatedTracking);
-    tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+  constructor(_value, _parent, _animationClass, _animationConfig, _callback, arg5) {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, AnimatedTracking);
+    const items = [arg5];
+    const obj = _getPrototypeOf(AnimatedTracking);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result._value = global;
-    tmp3Result._parent = arg1;
-    tmp3Result._animationClass = importDefault;
-    tmp3Result._animationConfig = importAll;
-    obj3 = closure_0(closure_1[6]);
-    tmp3Result._useNativeDriver = obj3.shouldUseNativeDriver(importAll);
-    tmp3Result._callback = module;
-    __attachResult = tmp3Result.__attach();
+    const tmp3Result = c3(self, constructResult);
+    tmp3Result._value = _value;
+    tmp3Result._parent = _parent;
+    tmp3Result._animationClass = _animationClass;
+    tmp3Result._animationConfig = _animationConfig;
+    const obj3 = get_nativeEventEmitterDefault;
+    tmp3Result._useNativeDriver = obj3.shouldUseNativeDriver(_animationConfig);
+    tmp3Result._callback = _callback;
+    tmp3Result.__attach();
     return tmp3Result;
   }
 }
-_inherits(AnimatedTracking, _assertNativeAnimatedModuleDefault);
+_inherits(AnimatedTracking, _modDef367);
 const entry = {
   key: "__makeNative",
   value: function __makeNative(arg0) {
@@ -62,7 +53,7 @@ const entry = {
     const _parent = this._parent;
     _parent.__makeNative(arg0);
     const self = this;
-    let fn = hasOwnProperty(_getPrototypeOf(AnimatedTracking.prototype), "__makeNative", this);
+    let fn = _get(_getPrototypeOf(AnimatedTracking.prototype), "__makeNative", this);
     if (typeof fn === "function") {
       fn = (items) => fn.apply(self, items);
     }
@@ -90,7 +81,7 @@ let items = [
       if (this._useNativeDriver) {
         self.__makeNative(self._animationConfig.platformConfig);
       }
-      let fn = hasOwnProperty(_getPrototypeOf(AnimatedTracking.prototype), "__attach", self);
+      let fn = _get(_getPrototypeOf(AnimatedTracking.prototype), "__attach", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -103,7 +94,7 @@ let items = [
       const _parent = this._parent;
       _parent.__removeChild(this);
       const self = this;
-      let fn = hasOwnProperty(_getPrototypeOf(AnimatedTracking.prototype), "__detach", this);
+      let fn = _get(_getPrototypeOf(AnimatedTracking.prototype), "__detach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -113,38 +104,40 @@ let items = [
   {
     key: "update",
     value: function update() {
+      let toValue;
       const _value = this._value;
-      const obj = {};
+      const animate = _value.animate;
+      const _animationClass = this._animationClass;
+      const obj = { toValue: toValue.__getValue() };
       const merged = Object.assign(this._animationConfig);
-      const toValue = this._animationConfig.toValue;
-      obj.toValue = toValue.__getValue();
-      const _animationClass = new this._animationClass(obj);
-      _value.animate(_animationClass, this._callback);
+      toValue = this._animationConfig.toValue;
+      const _animationClass1 = new _animationClass(obj);
+      animate(_animationClass1, this._callback);
     },
   },
   {
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
-      const obj = {};
+      let _parent;
+      let _value;
+      let obj4;
+      let result;
+      const _animationClass = this._animationClass;
+      const obj = { toValue: undefined };
       const merged = Object.assign(this._animationConfig);
-      obj.toValue = undefined;
-      const _animationClass = new this._animationClass(obj);
+      const _animationClass1 = new _animationClass(obj);
       const obj2 = {
         type: "tracking",
-        animationId: null,
-        animationConfig: null,
-        toValue: null,
-        value: null,
-        debugID: null,
+        animationId: obj4.generateNewAnimationId(),
+        animationConfig: result,
+        toValue: _parent.__getNativeTag(),
+        value: _value.__getNativeTag(),
+        debugID: this.__getDebugID(),
       };
-      const result = _animationClass.__getNativeAnimationConfig();
-      obj2.animationId = AnimatedTracking(357).generateNewAnimationId();
-      obj2.animationConfig = result;
-      const _parent = this._parent;
-      obj2.toValue = _parent.__getNativeTag();
-      const _value = this._value;
-      obj2.value = _value.__getNativeTag();
-      obj2.debugID = this.__getDebugID();
+      result = _animationClass1.__getNativeAnimationConfig();
+      _parent = this._parent;
+      _value = this._value;
+      obj4 = get_nativeEventEmitterDefault;
       return obj2;
     },
   },

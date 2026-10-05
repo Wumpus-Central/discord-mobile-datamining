@@ -1,30 +1,31 @@
 // _runtime/metro/08002__.js
-import colorPropType from "../07990_colorPropType.js";
+import normalizeColor2 from "../07990_normalizeColor.js";
 import _mod7998 from "07998__.js";
-import merged12 from "../07999_merged1.js";
+import normalizeColor3 from "../07999_normalizeColor.js";
 import merged22 from "../08000_merged2.js";
-import emptyFunction_mod from "04707__.js";
+import "module_4707";
+import module_4707_mod from "04707__.js";
 
-const obj = {};
+let module_4707;
+const obj = {
+  resizeMode: module_4707.oneOf(["center", "contain", "cover", "repeat", "stretch"]),
+  backfaceVisibility: module_4707.oneOf(["visible", "hidden"]),
+  backgroundColor: normalizeColor2,
+  borderColor: normalizeColor2,
+  borderWidth: module_4707.number,
+  borderRadius: module_4707.number,
+  overflow: module_4707.oneOf(["visible", "hidden"]),
+  tintColor: normalizeColor2,
+  opacity: module_4707.number,
+  overlayColor: module_4707.string,
+  borderTopLeftRadius: module_4707.number,
+  borderTopRightRadius: module_4707.number,
+  borderBottomLeftRadius: module_4707.number,
+  borderBottomRightRadius: module_4707.number,
+};
 const size = Object.assign(_mod7998);
-const merged1 = Object.assign(merged12);
+const normalizeColor = Object.assign(normalizeColor3);
 const merged2 = Object.assign(merged22);
-let emptyFunction = emptyFunction_mod;
-obj.resizeMode = emptyFunction.oneOf(["center", "contain", "cover", "repeat", "stretch"]);
-let emptyFunction = emptyFunction_mod;
-obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
-obj.backgroundColor = colorPropType;
-obj.borderColor = colorPropType;
-obj.borderWidth = emptyFunction.number;
-obj.borderRadius = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-obj.overflow = emptyFunction.oneOf(["visible", "hidden"]);
-obj.tintColor = colorPropType;
-obj.opacity = emptyFunction.number;
-obj.overlayColor = emptyFunction.string;
-obj.borderTopLeftRadius = emptyFunction.number;
-obj.borderTopRightRadius = emptyFunction.number;
-obj.borderBottomLeftRadius = emptyFunction.number;
-obj.borderBottomRightRadius = emptyFunction.number;
+module_4707 = module_4707_mod;
 
 export default obj;

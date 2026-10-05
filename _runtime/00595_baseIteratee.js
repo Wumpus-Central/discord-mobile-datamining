@@ -1,22 +1,28 @@
 // _runtime/00595_baseIteratee.js
 import _mod514 from "metro/00514__.js";
 import identity from "00549_identity.js";
+import baseMatchesProperty from "00596_baseMatchesProperty.js";
+import baseMatches from "00673_baseMatches.js";
 import property from "00676_property.js";
 
 export default function baseIteratee(fn) {
-  if (typeof fn === "function") {
-    return tmp;
-  } else if (null == tmp) {
-  } else if (typeof tmp === "object") {
-    let tmp2 = require;
-    if (_mod514(tmp)) {
-      tmp2 = tmp2(596);
-      [tmp3, tmp] = tmp;
-      let tmp2Result = tmp2(dependencyMap, tmp);
+  let tmp = fn;
+  if (typeof fn !== "function") {
+    let tmp5;
+    if (null == fn) {
+      tmp5 = identity;
+    } else if (typeof fn === "object") {
+      let tmp4;
+      if (_mod514(fn)) {
+        tmp4 = baseMatchesProperty(fn[0], fn[1]);
+      } else {
+        tmp4 = baseMatches(fn);
+      }
+      tmp5 = tmp4;
     } else {
-      tmp2Result = tmp2(673)(tmp);
+      tmp5 = property(fn);
     }
-  } else {
-    const tmp8 = property(tmp);
+    tmp = tmp5;
   }
+  return tmp;
 }

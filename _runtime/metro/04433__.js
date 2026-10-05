@@ -1,11 +1,16 @@
 // _runtime/metro/04433__.js
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+let obj7;
 if (Intl.ListFormat) {
   const _Intl = Intl;
   if (typeof Intl.ListFormat.__addLocaleData === "function") {
     const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "el" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = {
+    const obj2 = { data: obj3, locale: "el" };
+    obj3 = { conjunction: obj4, disjunction: obj5, unit: obj6 };
+    obj4 = {
       long: {
         end: "{0} \u03BA\u03B1\u03B9 {1}",
         middle: "{0}, {1}",
@@ -20,56 +25,51 @@ if (Intl.ListFormat) {
         start: "{0}, {1}",
       },
     };
-    obj3.conjunction = obj4;
-    const obj5 = {
+    obj5 = {
       long: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" },
       narrow: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" },
       short: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" },
     };
-    obj3.disjunction = obj5;
-    const obj6 = {
+    obj6 = {
       long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
       narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
       short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
     };
-    obj3.unit = obj6;
-    obj2.data = obj3;
     ListFormat.__addLocaleData(obj2);
   }
 }
 let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+const _globalThis = globalThis;
 if (!prop) {
   prop = [];
 }
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = {
-  data: {
-    conjunction: {
-      long: {
-        end: "{0} \u03BA\u03B1\u03B9 {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u03BA\u03B1\u03B9 {1}",
-        start: "{0}, {1}",
-      },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: {
-        end: "{0} \u03BA\u03B1\u03B9 {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u03BA\u03B1\u03B9 {1}",
-        start: "{0}, {1}",
-      },
+_globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = { data: obj7, locale: "el" };
+obj7 = {
+  conjunction: {
+    long: {
+      end: "{0} \u03BA\u03B1\u03B9 {1}",
+      middle: "{0}, {1}",
+      pair: "{0} \u03BA\u03B1\u03B9 {1}",
+      start: "{0}, {1}",
     },
-    disjunction: {
-      long: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" },
-    },
-    unit: {
-      long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+    narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+    short: {
+      end: "{0} \u03BA\u03B1\u03B9 {1}",
+      middle: "{0}, {1}",
+      pair: "{0} \u03BA\u03B1\u03B9 {1}",
+      start: "{0}, {1}",
     },
   },
-  locale: "el",
+  disjunction: {
+    long: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" },
+    narrow: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" },
+    short: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" },
+  },
+  unit: {
+    long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+    narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+    short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+  },
 };
 prop.push(obj);

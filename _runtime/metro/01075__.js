@@ -1,8 +1,8 @@
 // _runtime/metro/01075__.js
-import _mod17 from "00017__.js";
-import _getClientIntegration from "../01009__getClientIntegration.js";
+import react_native from "../00017_react-native.js";
+import MOBILE_FEEDBACK_INTEGRATION_NAME from "../01009_MOBILE_FEEDBACK_INTEGRATION_NAME.js";
 
-const Appearance = _mod17.Appearance;
+const Appearance = react_native.Appearance;
 const LightTheme = {
   accentBackground: "rgba(88, 74, 192, 1)",
   accentForeground: "#ffffff",
@@ -12,7 +12,7 @@ const LightTheme = {
   feedbackIcon: "rgba(54, 45, 89, 1)",
   sentryLogo: "rgba(54, 45, 89, 1)",
 };
-const obj2 = {
+let obj2 = {
   accentBackground: "rgba(88, 74, 192, 1)",
   accentForeground: "#ffffff",
   foreground: "#ebe6ef",
@@ -23,19 +23,21 @@ const obj2 = {
 };
 
 export const getTheme = function getTheme() {
-  const obj = _getClientIntegration;
+  const obj = MOBILE_FEEDBACK_INTEGRATION_NAME;
   let colorScheme = obj.getColorScheme();
   if ("system" === colorScheme) {
     colorScheme = Appearance.getColorScheme();
   }
   const merged = Object.assign({}, obj);
-  let merged1 = Object.assign(merged, _getClientIntegration.getFeedbackLightTheme());
-  const merged2 = Object.assign({}, obj2);
-  const tmpResult = _getClientIntegration;
+  const tmpResult = MOBILE_FEEDBACK_INTEGRATION_NAME;
+  obj2 = assign(merged, tmpResult.getFeedbackLightTheme());
+  const assign2 = Object.assign;
+  const merged1 = Object.assign({}, obj2);
+  const tmpResult2 = MOBILE_FEEDBACK_INTEGRATION_NAME;
   if ("dark" === colorScheme) {
-    merged1 = Object.assign(merged2, tmpResult2.getFeedbackDarkTheme());
+    obj2 = assign2(merged1, tmpResult2.getFeedbackDarkTheme());
   }
-  return merged1;
+  return obj2;
 };
 export { LightTheme };
 export const DarkTheme = obj2;

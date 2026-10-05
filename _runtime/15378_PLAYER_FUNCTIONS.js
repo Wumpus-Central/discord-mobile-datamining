@@ -26,11 +26,8 @@ let obj = {
     return "player.setPlaybackRate(" + arg0 + "); true;";
   },
   loadPlaylist(playList, arg1, play) {
-    let num = arg1;
-    if (!arg1) {
-      num = 0;
-    }
     let str = "cuePlaylist";
+    const tmp = arg1 || 0;
     if (play) {
       str = "loadPlaylist";
     }
@@ -46,18 +43,19 @@ let obj = {
     if (Array.isArray(playList)) {
       str2 = `${"\"" + playList.join(",")}"`;
     }
-    return "player." + str + "({listType: " + str4 + ", list: " + str3 + ", playlist: " + str2 + ", index: " + num + "}); true;";
+    return "player." + str + "({listType: " + str4 + ", list: " + str3 + ", playlist: " + str2 + ", index: " + tmp + "}); true;";
   },
   loadVideoById(videoId, play) {
     let str = "cueVideoById";
-    if (play) {
+    const tmp = play;
+    if (tmp) {
       str = "loadVideoById";
     }
     const combined = "player." + str + "({videoId: ";
     return combined + JSON.stringify(videoId) + "}); true;";
   }
 };
-const obj2 = {};
+let obj2 = {};
 _defineProperty.default(obj2, PLAY_MODE.PLAY_MODE, obj.playVideo);
 _defineProperty.default(obj2, PLAY_MODE.PAUSE_MODE, obj.pauseVideo);
 const obj3 = {};
@@ -68,28 +66,36 @@ export const PLAYER_FUNCTIONS = obj;
 export const playMode = obj2;
 export const soundMode = obj3;
 export const MAIN_SCRIPT = function MAIN_SCRIPT(current, current2, current3, allowWebViewZoom, num) {
+  let cc_lang_pref;
+  let color;
+  let controls;
+  let end;
+  let iv_load_policy;
+  let joined;
+  let loop;
+  let playerLang;
+  let start;
   ({ end, color, start, playerLang, loop } = current3);
   let tmp = undefined !== loop;
+  const rel = current3.rel;
   if (tmp) {
     tmp = loop;
   }
   ({ cc_lang_pref, iv_load_policy, controls } = current3);
   let tmp2 = undefined === controls;
+  const modestbranding = current3.modestbranding;
   if (!tmp2) {
     tmp2 = controls;
   }
   const preventFullScreen = current3.preventFullScreen;
   num = 0;
-  if (current3.rel) {
+  const showClosedCaptions = current3.showClosedCaptions;
+  if (rel) {
     num = 1;
   }
   let num2 = 0;
   if (tmp) {
     num2 = 1;
-  }
-  let str = current;
-  if (!current) {
-    str = "";
   }
   let num3 = 0;
   if (tmp2) {
@@ -99,7 +105,7 @@ export const MAIN_SCRIPT = function MAIN_SCRIPT(current, current2, current3, all
     cc_lang_pref = "";
   }
   let num4 = 0;
-  if (current3.modestbranding) {
+  if (modestbranding) {
     num4 = 1;
   }
   let num5 = 1;
@@ -111,56 +117,45 @@ export const MAIN_SCRIPT = function MAIN_SCRIPT(current, current2, current3, all
     }
   }
   let num7 = 0;
-  if (current3.showClosedCaptions) {
+  if (showClosedCaptions) {
     num7 = num5;
   }
   if (typeof num === "number") {
     num5 = num;
   }
-  let tmp3;
+  let tmp4;
   if (typeof current2 === "string") {
-    tmp3 = current2;
+    tmp4 = current2;
   }
-  let str2;
+  let str;
   if (typeof current2 === "string") {
-    str2 = "playlist";
+    str = "playlist";
   }
   const text = `initial-scale=${num5}`;
   let text1 = text;
   if (!allowWebViewZoom) {
     text1 = `initial-scale=${num5}${", maximum-scale=" + num5}`;
   }
-  const obj = { end, list: tmp3, start, color, rel_s: num, loop_s: num2, listType: str2, playlist: null, videoId_s: null, controls_s: null, playerLang: null, iv_load_policy: null, contentScale_s: null, cc_lang_pref_s: null, allowWebViewZoom: null, modestbranding_s: null, preventFullScreen_s: null, showClosedCaptions_s: null };
-  let joined;
+  const obj = { end, list: tmp4, start, color, rel_s: num, loop_s: num2, listType: str, playlist: joined, videoId_s: current || "", controls_s: num3, playerLang, iv_load_policy, contentScale_s: num5, cc_lang_pref_s: cc_lang_pref, allowWebViewZoom, modestbranding_s: num4, preventFullScreen_s: num6, showClosedCaptions_s: num7 };
+  joined = undefined;
   if (Array.isArray(current2)) {
     joined = current2.join(",");
   }
-  obj.playlist = joined;
-  obj.videoId_s = str;
-  obj.controls_s = num3;
-  obj.playerLang = playerLang;
-  obj.iv_load_policy = iv_load_policy;
-  obj.contentScale_s = num5;
-  obj.cc_lang_pref_s = cc_lang_pref;
-  obj.allowWebViewZoom = allowWebViewZoom;
-  obj.modestbranding_s = num4;
-  obj.preventFullScreen_s = num6;
-  obj.showClosedCaptions_s = num7;
-  const sum = "\n<!DOCTYPE html>\n<html>\n  <head>\n    <meta\n      name=\"viewport\"\n      content=\"width=device-width, " + text1 + "\"\n    >\n    <style>\n      body {\n        margin: 0;\n      }\n      .container {\n        position: relative;\n        width: 100%;\n        height: 0;\n        padding-bottom: 56.25%;\n      }\n      .video {\n          position: absolute;\n          top: 0;\n          left: 0;\n          width: 100%;\n          height: 100%;\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"container\">\n      <div class=\"video\" id=\"player\" />\n    </div>\n\n    <script>\n      var tag = document.createElement('script');\n\n      tag.src = \"https://www.youtube.com/iframe_api\";\n      var firstScriptTag = document.getElementsByTagName('script')[0];\n      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);\n\n      var player;\n      function onYouTubeIframeAPIReady() {\n        player = new YT.Player('player', {\n          width: '1000',\n          height: '1000',\n          videoId: '" + str;
+  const sum = "\n<!DOCTYPE html>\n<html>\n  <head>\n    <meta\n      name=\"viewport\"\n      content=\"width=device-width, " + text1 + "\"\n    >\n    <style>\n      body {\n        margin: 0;\n      }\n      .container {\n        position: relative;\n        width: 100%;\n        height: 0;\n        padding-bottom: 56.25%;\n      }\n      .video {\n          position: absolute;\n          top: 0;\n          left: 0;\n          width: 100%;\n          height: 100%;\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"container\">\n      <div class=\"video\" id=\"player\" />\n    </div>\n\n    <script>\n      var tag = document.createElement('script');\n\n      tag.src = \"https://www.youtube.com/iframe_api\";\n      var firstScriptTag = document.getElementsByTagName('script')[0];\n      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);\n\n      var player;\n      function onYouTubeIframeAPIReady() {\n        player = new YT.Player('player', {\n          width: '1000',\n          height: '1000',\n          videoId: '" + tmp3;
+  let str4 = "";
   let str5 = "";
-  let str6 = "";
-  if (tmp3) {
-    str6 = `${"list: '" + tmp3}',`;
+  if (tmp4) {
+    str5 = `${"list: '" + tmp4}',`;
   }
-  let text2 = str5;
-  if (str2) {
-    text2 = `${"listType: '" + tmp3}',`;
+  let text2 = str4;
+  if (str) {
+    text2 = `${"listType: '" + tmp4}',`;
   }
   if (current2) {
-    str5 = `${"playlist: '" + current2}',`;
+    str4 = `${"playlist: '" + current2}',`;
   }
-  return {
-    htmlString: `${tmp7 + "',\n          playerVars: {\n            " + str6 + "\n            " + tmp8 + "\n            " + str5 + "\n\n            end: "}${end},
+  const obj2 = {
+    htmlString: `${tmp8 + "',\n          playerVars: {\n            " + str5 + "\n            " + tmp9 + "\n            " + str4 + "\n\n            end: "}${end},
                 rel: ${num},
                 playsinline: 1,
                 loop: ${num2},
@@ -221,4 +216,5 @@ export const MAIN_SCRIPT = function MAIN_SCRIPT(current, current2, current3, all
     `,
     urlEncodedJSON: encodeURI(JSON.stringify(obj))
   };
+  return obj2;
 };

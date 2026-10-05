@@ -1,7 +1,9 @@
 // _runtime/00621_hashSet.js
-import _mod611 from "metro/00611__.js";
+import getNative from "00611_getNative.js";
 
 export default function hashSet(arg0, arg1) {
+  let __data__;
+  let str;
   const self = this;
   ({ __data__, size } = this);
   let num = 1;
@@ -9,8 +11,8 @@ export default function hashSet(arg0, arg1) {
     num = 0;
   }
   self.size = size + num;
-  if (!_mod611) {
-    let str = arg1;
+  if (!getNative) {
+    str = arg1;
   } else {
     str = "__lodash_hash_undefined__";
   }

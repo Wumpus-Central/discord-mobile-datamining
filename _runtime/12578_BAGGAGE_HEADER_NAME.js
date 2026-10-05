@@ -3,10 +3,35 @@ import _mod12564 from "metro/12564__.js";
 import _mod12565 from "metro/12565__.js";
 import _mod12572 from "metro/12572__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const f112321 = (acc, item) => {
+  let closure_0 = acc;
+  let parts = item.split(",");
+  const mapped = parts.map((item) => {
+    const parts = item.split("=");
+    return parts.map((item) => decodeURIComponent(item.trim()));
+  });
+  const entries = Object.entries(
+    mapped.reduce((acc, item) => {
+      let tmp;
+      let tmp2;
+      [tmp, tmp2] = item;
+      const tmp3 = tmp && tmp2;
+      if (tmp3) {
+        acc[tmp] = tmp2;
+      }
+      return acc;
+    }, {}),
+  );
+  item = entries.forEach((item) => {
+    let tmp;
+    let tmp2;
+    [tmp, tmp2] = item;
+    acc[tmp] = tmp2;
+  });
+  return acc;
+};
 let c2 = "sentry-";
-const tmp2 = /^sentry-/;
+let tmp2 = /^sentry-/;
 const re3 = tmp2;
 let c4 = 8192;
 
@@ -15,62 +40,43 @@ export const MAX_BAGGAGE_STRING_LENGTH = 8192;
 export const SENTRY_BAGGAGE_KEY_PREFIX = "sentry-";
 export const SENTRY_BAGGAGE_KEY_PREFIX_REGEX = tmp2;
 export const baggageHeaderToDynamicSamplingContext = function baggageHeaderToDynamicSamplingContext(arr) {
+  let tmp;
   if (arr) {
-    if (!obj.isString(arr)) {
-      const _Array = Array;
-    }
-    const _Array2 = Array;
-    if (Array.isArray(arr)) {
-      let reduced = arr.reduce((acc, item) => {
-        closure_0 = acc;
-        let parts = item.split(",");
-        const mapped = parts.map((item) => {
+    const obj = _mod12572;
+    if (obj.isString(arr)) {
+      let reduced;
+      const _Array2 = Array;
+      if (Array.isArray(arr)) {
+        reduced = arr.reduce(f112321, {});
+      } else {
+        const str = ",";
+        let parts = arr.split(",");
+        let mapped = parts.map((item) => {
           const parts = item.split("=");
           return parts.map((item) => decodeURIComponent(item.trim()));
         });
-        const entries = Object.entries(
-          mapped.reduce((acc, item) => {
-            [tmp, tmp2] = item;
-            let tmp3 = tmp;
-            if (tmp) {
-              tmp3 = tmp2;
-            }
-            if (tmp3) {
-              acc[tmp] = tmp2;
-            }
-            return acc;
-          }, {}),
-        );
-        item = entries.forEach((item) => {
+        reduced = mapped.reduce((acc, item) => {
+          let tmp;
+          let tmp2;
           [tmp, tmp2] = item;
-          closure_0[tmp] = tmp2;
-        });
-        return acc;
-      }, {});
+          const tmp3 = tmp && tmp2;
+          if (tmp3) {
+            acc[tmp] = tmp2;
+          }
+          return acc;
+        }, {});
+      }
+      tmp = reduced;
     } else {
-      let parts = arr.split(",");
-      let mapped = parts.map((item) => {
-        const parts = item.split("=");
-        return parts.map((item) => decodeURIComponent(item.trim()));
-      });
-      reduced = mapped.reduce((acc, item) => {
-        [tmp, tmp2] = item;
-        let tmp3 = tmp;
-        if (tmp) {
-          tmp3 = tmp2;
-        }
-        if (tmp3) {
-          acc[tmp] = tmp2;
-        }
-        return acc;
-      }, {});
+      const _Array = Array;
     }
-    obj = _mod12572;
   }
-  if (undefined) {
+  if (tmp) {
     const _Object = Object;
     let entries = Object.entries(tmp);
     const reduced1 = entries.reduce((acc, item) => {
+      let str;
+      let tmp;
       [str, tmp] = item;
       if (str.match(closure_1_3)) {
         acc[str.slice(7)] = tmp;
@@ -78,20 +84,24 @@ export const baggageHeaderToDynamicSamplingContext = function baggageHeaderToDyn
       return acc;
     }, {});
     const _Object2 = Object;
-    let tmp10;
+    let tmp9;
     if (Object.keys(reduced1).length > 0) {
-      tmp10 = reduced1;
+      tmp9 = reduced1;
     }
-    return tmp10;
+    return tmp9;
   }
 };
 export const dynamicSamplingContextToSentryBaggageHeader = function dynamicSamplingContextToSentryBaggageHeader(
   dynamicSamplingContextFromSpan,
 ) {
-  if (dynamicSamplingContextFromSpan) {
+  const tmp = dynamicSamplingContextFromSpan;
+  if (tmp) {
+    const tmp2 = globalThis;
     const _Object = Object;
     const entries = Object.entries(dynamicSamplingContextFromSpan);
     const reduced = entries.reduce((acc, item) => {
+      let tmp;
+      let tmp2;
       [tmp, tmp2] = item;
       if (tmp2) {
         const _HermesInternal = HermesInternal;
@@ -105,8 +115,11 @@ export const dynamicSamplingContextToSentryBaggageHeader = function dynamicSampl
       const _Object3 = Object;
       const entries1 = Object.entries(reduced);
       reduced1 = entries1.reduce((acc, item, index) => {
+        let tmp;
+        let tmp2;
         [tmp, tmp2] = item;
-        const combined = "" + encodeURIComponent(tmp) + "=" + encodeURIComponent(tmp2);
+        const encodeURIComponentResult = encodeURIComponent(tmp);
+        const combined = "" + encodeURIComponentResult + "=" + encodeURIComponent(tmp2);
         let combined1 = combined;
         if (0 !== index) {
           const _HermesInternal = HermesInternal;
@@ -134,38 +147,16 @@ export const dynamicSamplingContextToSentryBaggageHeader = function dynamicSampl
   }
 };
 export const parseBaggageHeader = function parseBaggageHeader(arr) {
-  if (arr) {
+  const tmp = arr;
+  if (tmp) {
+    let reduced;
+    const obj = _mod12572;
     if (!obj.isString(arr)) {
       const _Array = Array;
     }
     const _Array2 = Array;
     if (Array.isArray(arr)) {
-      let reduced = arr.reduce((acc, item) => {
-        closure_0 = acc;
-        let parts = item.split(",");
-        const mapped = parts.map((item) => {
-          const parts = item.split("=");
-          return parts.map((item) => decodeURIComponent(item.trim()));
-        });
-        const entries = Object.entries(
-          mapped.reduce((acc, item) => {
-            [tmp, tmp2] = item;
-            let tmp3 = tmp;
-            if (tmp) {
-              tmp3 = tmp2;
-            }
-            if (tmp3) {
-              acc[tmp] = tmp2;
-            }
-            return acc;
-          }, {}),
-        );
-        item = entries.forEach((item) => {
-          [tmp, tmp2] = item;
-          closure_0[tmp] = tmp2;
-        });
-        return acc;
-      }, {});
+      reduced = arr.reduce(f112321, {});
     } else {
       const parts = arr.split(",");
       const mapped = parts.map((item) => {
@@ -173,11 +164,10 @@ export const parseBaggageHeader = function parseBaggageHeader(arr) {
         return parts.map((item) => decodeURIComponent(item.trim()));
       });
       reduced = mapped.reduce((acc, item) => {
+        let tmp;
+        let tmp2;
         [tmp, tmp2] = item;
-        let tmp3 = tmp;
-        if (tmp) {
-          tmp3 = tmp2;
-        }
+        const tmp3 = tmp && tmp2;
         if (tmp3) {
           acc[tmp] = tmp2;
         }

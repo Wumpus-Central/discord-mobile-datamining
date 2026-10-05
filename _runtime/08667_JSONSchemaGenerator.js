@@ -1,16 +1,17 @@
 // _runtime/08667_JSONSchemaGenerator.js
+import _mod8665 from "metro/08665__.js";
+import stringProcessor from "08666_stringProcessor.js";
 import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
-const JSONSchemaGenerator = require;
 let closure_4 = ["~standard"];
 class JSONSchemaGenerator {
-  constructor(arg0) {
-    tmp = closure_3(this, JSONSchemaGenerator);
-    str = undefined;
-    if (global != null) {
-      str = global.target;
+  constructor(target) {
+    _classCallCheck(this, JSONSchemaGenerator);
+    let str;
+    if (target != null) {
+      str = target.target;
     }
     if (str == null) {
       str = "draft-2020-12";
@@ -21,58 +22,55 @@ class JSONSchemaGenerator {
     if ("draft-7" === str) {
       str = "draft-07";
     }
-    obj = { processors: closure_0(closure_1[4]).allProcessors, target: str };
-    metadata = undefined;
-    if (global != null) {
-      metadata = global.metadata;
+    const obj = { processors: stringProcessor.allProcessors, target: str };
+    const initializeContext = _mod8665.initializeContext;
+    let metadata;
+    if (target != null) {
+      metadata = target.metadata;
     }
     if (metadata) {
-      obj1 = { metadata: null };
-      obj1.metadata = global.metadata;
-      metadata = obj1;
+      metadata = { metadata: target.metadata };
+      const obj2 = { metadata: target.metadata };
     }
-    merged = Object.assign(metadata);
-    unrepresentable = undefined;
-    if (global != null) {
-      unrepresentable = global.unrepresentable;
+    const merged = Object.assign(metadata);
+    let unrepresentable;
+    if (target != null) {
+      unrepresentable = target.unrepresentable;
     }
     if (unrepresentable) {
-      obj6 = { unrepresentable: null };
-      obj6.unrepresentable = global.unrepresentable;
-      unrepresentable = obj6;
+      unrepresentable = { unrepresentable: target.unrepresentable };
+      const obj3 = { unrepresentable: target.unrepresentable };
     }
-    merged1 = Object.assign(unrepresentable);
-    override = undefined;
-    if (global != null) {
-      override = global.override;
+    const merged1 = Object.assign(unrepresentable);
+    let override;
+    if (target != null) {
+      override = target.override;
     }
     if (override) {
-      obj7 = { override: null };
-      obj7.override = global.override;
-      override = obj7;
+      override = { override: target.override };
+      const obj4 = { override: target.override };
     }
-    merged2 = Object.assign(override);
-    io = undefined;
-    if (global != null) {
-      io = global.io;
+    const merged2 = Object.assign(override);
+    let io;
+    if (target != null) {
+      io = target.io;
     }
     if (io) {
-      obj8 = { io: null };
-      obj8.io = global.io;
-      io = obj8;
+      io = { io: target.io };
+      const obj5 = { io: target.io };
     }
-    merged3 = Object.assign(io);
-    this.ctx = closure_0(closure_1[3]).initializeContext(obj);
-    return;
+    const merged3 = Object.assign(io);
+    this.ctx = initializeContext(obj);
   }
 }
-const items = [
-  {
-    key: "metadataRegistry",
-    get() {
-      return this.ctx.metadataRegistry;
-    },
+let obj = {
+  key: "metadataRegistry",
+  get() {
+    return this.ctx.metadataRegistry;
   },
+};
+const items = [
+  obj,
   {
     key: "target",
     get() {
@@ -117,17 +115,18 @@ const items = [
     value: function process(arg0) {
       let tmp = arg1;
       if (arg1 === undefined) {
+        tmp = { path: [], schemaPath: [] };
         const obj = { path: [], schemaPath: [] };
-        tmp = obj;
       }
-      return JSONSchemaGenerator(8665).process(arg0, this.ctx, tmp);
+      return _mod8665.process(arg0, this.ctx, tmp);
     },
   },
   {
     key: "emit",
     value: function emit(_idmap, cycles) {
       const self = this;
-      if (cycles) {
+      const tmp = cycles;
+      if (tmp) {
         if (cycles.cycles) {
           self.ctx.cycles = cycles.cycles;
         }
@@ -138,10 +137,12 @@ const items = [
           self.ctx.external = cycles.external;
         }
       }
-      JSONSchemaGenerator(8665).extractDefs(self.ctx, _idmap);
-      return _objectWithoutProperties(JSONSchemaGenerator(8665).finalize(self.ctx, _idmap), closure_4);
+      _mod8665.extractDefs(self.ctx, _idmap);
+      const finalizeResult = _mod8665.finalize(self.ctx, _idmap);
+      return _objectWithoutProperties(finalizeResult, closure_4);
     },
   },
 ];
+const JSONSchemaGenerator_export = _createClass(JSONSchemaGenerator, items);
 
-export const JSONSchemaGenerator = _createClass(JSONSchemaGenerator, items);
+export { JSONSchemaGenerator_export as JSONSchemaGenerator };

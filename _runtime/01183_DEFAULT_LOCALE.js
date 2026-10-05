@@ -1,40 +1,38 @@
 // _runtime/01183_DEFAULT_LOCALE.js
-import _slicedToArray from "metro/00032__.js";
+import DEFAULT_FORMAT_CONFIG2 from "01166_DEFAULT_FORMAT_CONFIG.js";
+import _mod1167 from "metro/01167__.js";
+import FormatBuilder from "01169_FormatBuilder.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
-const IntlManager = require;
 class IntlManager {
-  constructor(arg0) {
-    self = this;
-    self = this;
-    DEFAULT_LOCALE = global.initialLocale;
+  constructor(initialLocale) {
+    const self = this;
+    let DEFAULT_LOCALE = initialLocale.initialLocale;
     if (DEFAULT_LOCALE === undefined) {
-      tmp = closure_1;
-      DEFAULT_LOCALE = closure_1.DEFAULT_LOCALE;
+      DEFAULT_LOCALE = exports.DEFAULT_LOCALE;
     }
-    DEFAULT_LOCALE2 = global.defaultLocale;
+    let DEFAULT_LOCALE2 = initialLocale.defaultLocale;
     if (DEFAULT_LOCALE2 === undefined) {
-      tmp2 = closure_1;
-      DEFAULT_LOCALE2 = closure_1.DEFAULT_LOCALE;
+      DEFAULT_LOCALE2 = exports.DEFAULT_LOCALE;
     }
-    DEFAULT_FORMAT_CONFIG = global.formatConfig;
+    let DEFAULT_FORMAT_CONFIG = initialLocale.formatConfig;
     if (DEFAULT_FORMAT_CONFIG === undefined) {
-      tmp3 = closure_0;
-      tmp4 = c2;
-      DEFAULT_FORMAT_CONFIG = closure_0(c2[3]).DEFAULT_FORMAT_CONFIG;
+      DEFAULT_FORMAT_CONFIG = _mod1167.DEFAULT_FORMAT_CONFIG;
     }
-    flag = global.forceLookupMatcher;
+    let flag = initialLocale.forceLookupMatcher;
     if (flag === undefined) {
       flag = false;
     }
-    tmp5 = closure_4(self, IntlManager);
+    _classCallCheck(self, IntlManager);
     self.onLocaleChange = (arg0) => {
-      _self = arg0;
-      let _localeSubscriptions = _self._localeSubscriptions;
+      let closure_0;
+      _localeSubscriptions = arg0;
+      _localeSubscriptions = _localeSubscriptions._localeSubscriptions;
       _localeSubscriptions.add(arg0);
       return () => {
-        const _localeSubscriptions = self._localeSubscriptions;
+        _localeSubscriptions = self._localeSubscriptions;
         return _localeSubscriptions.delete(closure_0);
       };
     };
@@ -42,12 +40,11 @@ class IntlManager {
     self.defaultLocale = DEFAULT_LOCALE2;
     self.formatConfig = DEFAULT_FORMAT_CONFIG;
     self._forceLookupMatcher = flag;
-    items = [,];
+    const items = [,];
     ({ currentLocale: arr[0], defaultLocale: arr[1] } = self);
-    self.data = closure_0(c2[4]).makeDataFormatters(items, self.formatConfig, self._forceLookupMatcher);
-    set = new Set();
-    self._localeSubscriptions = set;
-    return;
+    self.data = DEFAULT_FORMAT_CONFIG2.makeDataFormatters(items, self.formatConfig, self._forceLookupMatcher);
+    self._localeSubscriptions = new Set();
+    new Set();
   }
 }
 const entry = {
@@ -55,6 +52,7 @@ const entry = {
   value: function withFormatters(arg0) {
     const self = this;
     const entries = Object.entries(arg0);
+    const tmp2 = entries[Symbol.iterator]();
     while (tmp2 !== undefined) {
       let tmp5 = _slicedToArray(tmp3, 2);
       self[tmp5[0]] = self.makeFormatFunction(tmp5[1]);
@@ -68,13 +66,14 @@ let items = [
   {
     key: "makeFormatFunction",
     value: function makeFormatFunction(arg0) {
+      let format;
       const self = this;
       ({ format, builder: exports } = arg0);
-      closure_0 = format.bind(this);
+      let closure_0 = format.bind(this);
       return (fn, arg1) => {
         let tmp = null;
         if (null != fn) {
-          tmp = closure_0(fn(self.currentLocale), arg1, _exports);
+          tmp = closure_0(fn(self.currentLocale), arg1, exports);
         }
         return tmp;
       };
@@ -86,15 +85,16 @@ let items = [
       this.currentLocale = currentLocale;
       const items = [,];
       ({ currentLocale: arr[0], defaultLocale: arr[1] } = this);
-      this.data = IntlManager(1166).makeDataFormatters(items, this.formatConfig, this._forceLookupMatcher);
+      this.data = DEFAULT_FORMAT_CONFIG2.makeDataFormatters(items, this.formatConfig, this._forceLookupMatcher);
       this.emitLocaleChange(currentLocale);
     },
   },
   {
     key: "emitLocaleChange",
     value: function emitLocaleChange(currentLocale) {
-      for (const item10007 of tmp) {
-        let item10007Result = item10007(arg0);
+      const _localeSubscriptions = this._localeSubscriptions;
+      for (const item10007 of _localeSubscriptions) {
+        let item10007Result = item10007(currentLocale);
         continue;
       }
     },
@@ -105,8 +105,8 @@ let items = [
       let str = "";
       if (null != fn) {
         const self = this;
-        str = fn(this.currentLocale).reserialize();
         const obj = fn(this.currentLocale);
+        str = obj.reserialize();
       }
       return str;
     },
@@ -130,22 +130,24 @@ let items = [
   {
     key: "bindFormatValues",
     value: function bindFormatValues(Builder, ast, values) {
+      let items;
       const obj = {
         Builder,
         nodes: ast.ast,
-        locales: null,
+        locales: items,
         dataFormatters: this.data,
         formatConfig: this.formatConfig,
         values,
         keyPrefix: "",
       };
-      const items = [,];
+      items = [,];
       ({ currentLocale: arr[0], defaultLocale: arr[1] } = this);
-      obj.locales = items;
-      return IntlManager(1169).bindFormatValues(obj);
+      return FormatBuilder.bindFormatValues(obj);
     },
   },
 ];
+const DEFAULT_LOCALE_export = "en-US";
+const IntlManager_export = _createClass(IntlManager, items);
 
-export const DEFAULT_LOCALE = "en-US";
-export const IntlManager = _createClass(IntlManager, items);
+export { DEFAULT_LOCALE_export as DEFAULT_LOCALE };
+export { IntlManager_export as IntlManager };

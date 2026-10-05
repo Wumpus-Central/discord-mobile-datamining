@@ -1,45 +1,52 @@
 // _runtime/13988_ToRawPrecision.js
-import digitsToString2 from "13969_digitsToString.js";
-import _mod13970 from "metro/13970__.js";
+import _mod13969 from "metro/13969__.js";
+import UNICODE_EXTENSION_SEQUENCE_REGEX from "13970_UNICODE_EXTENSION_SEQUENCE_REGEX.js";
 import TEN from "13972_TEN.js";
 import ApplyUnsignedRoundingMode from "13982_ApplyUnsignedRoundingMode.js";
-import e from "01172_e.js";
+import 01172__ from "metro/01172__.js";
 
-const digitsToString = e.__importDefault(digitsToString2);
+const module_13969 = module_1172.__importDefault(_mod13969);
 
-export const ToRawPrecision = function ToRawPrecision(
-  ZERO,
-  minimumSignificantDigits,
-  maximumSignificantDigits,
-  result,
-) {
+export const ToRawPrecision = function ToRawPrecision(ZERO, minimumSignificantDigits, maximumSignificantDigits, result) {
   let ceilResult1;
   let floorResult;
+  let integerDigitsCount;
+  let repeatResult;
+  let roundedNumber;
+  let roundingMagnitude;
+  let sum;
   let timesResult;
+  let tmp16;
   if (ZERO.isZero()) {
-    let repeatResult = _mod13970.repeat("0", maximumSignificantDigits);
-    let roundedNumber = TEN.ZERO;
-    let roundingMagnitude = 0;
-    let tmp16 = require;
+    repeatResult = UNICODE_EXTENSION_SEQUENCE_REGEX.repeat("0", maximumSignificantDigits);
+    roundedNumber = TEN.ZERO;
+    roundingMagnitude = 0;
+    tmp16 = require;
   } else {
-    const powResult1 = digitsToString.default.pow(10, maximumSignificantDigits - 1);
-    const _default = digitsToString.default;
-    const _default2 = digitsToString.default;
-    const powResult = digitsToString.default.pow(10, maximumSignificantDigits);
+    let str;
+    const _default = module_13969.default;
+    const _default2 = module_13969.default;
+    const powResult = _default.pow(10, maximumSignificantDigits);
+    const powResult1 = _default2.pow(10, maximumSignificantDigits - 1);
     const divResult = ZERO.div(powResult1);
-    const logResult = ZERO.div(powResult1).log(10);
-    const plusResult = ZERO.div(powResult1).log(10).plus(maximumSignificantDigits);
-    let ceilResult = ZERO.div(powResult1).log(10).plus(maximumSignificantDigits).minus(1).ceil();
+    const logResult = divResult.log(10);
+    const plusResult = logResult.plus(maximumSignificantDigits);
+    const minusResult = plusResult.minus(1);
+    let ceilResult = minusResult.ceil();
     while (true) {
-      let _default3 = digitsToString.default;
+      let _default3 = module_13969.default;
+      let div = ZERO.div;
+      let pow = _default3.pow;
       let minusResult1 = ceilResult.minus(maximumSignificantDigits);
-      let divResult1 = ZERO.div(_default3.pow(10, minusResult1.plus(1)));
+      let divResult1 = div(pow(10, minusResult1.plus(1)));
       floorResult = divResult1.floor();
       if (floorResult.lessThan(powResult)) {
         if (floorResult.greaterThanOrEqualTo(powResult1)) {
-          let _default4 = digitsToString.default;
+          let _default4 = module_13969.default;
+          let times = floorResult.times;
+          let pow2 = _default4.pow;
           let minusResult2 = ceilResult.minus(maximumSignificantDigits);
-          timesResult = floorResult.times(_default4.pow(10, minusResult2.plus(1)));
+          timesResult = times(pow2(10, minusResult2.plus(1)));
           if (timesResult.lessThanOrEqualTo(ZERO)) {
             break;
           }
@@ -48,25 +55,29 @@ export const ToRawPrecision = function ToRawPrecision(
       ceilResult = ceilResult.minus(1);
       continue;
     }
-    const powResult2 = digitsToString.default.pow(10, maximumSignificantDigits);
-    const _default5 = digitsToString.default;
-    const _default6 = digitsToString.default;
-    const minusResult = ZERO.div(powResult1).log(10).plus(maximumSignificantDigits).minus(1);
-    const powResult3 = digitsToString.default.pow(10, maximumSignificantDigits - 1);
+    const _default5 = module_13969.default;
+    const powResult2 = _default5.pow(10, maximumSignificantDigits);
+    const _default6 = module_13969.default;
+    const powResult3 = _default6.pow(10, maximumSignificantDigits - 1);
     const divResult2 = ZERO.div(powResult2);
-    const logResult1 = ZERO.div(powResult2).log(10);
-    const plusResult1 = ZERO.div(powResult2).log(10).plus(maximumSignificantDigits);
-    let floorResult1 = ZERO.div(powResult2).log(10).plus(maximumSignificantDigits).minus(1).floor();
+    const logResult1 = divResult2.log(10);
+    const plusResult1 = logResult1.plus(maximumSignificantDigits);
+    const minusResult3 = plusResult1.minus(1);
+    let floorResult1 = minusResult3.floor();
     while (true) {
-      let _default7 = digitsToString.default;
+      let _default7 = module_13969.default;
+      let div2 = ZERO.div;
+      let pow3 = _default7.pow;
       let minusResult4 = floorResult1.minus(maximumSignificantDigits);
-      let divResult3 = ZERO.div(_default7.pow(10, minusResult4.plus(1)));
-      ceilResult1 = divResult3.ceil();
+      let div2Result = div2(pow3(10, minusResult4.plus(1)));
+      ceilResult1 = div2Result.ceil();
       if (ceilResult1.lessThan(powResult2)) {
         if (ceilResult1.greaterThanOrEqualTo(powResult3)) {
-          let _default8 = digitsToString.default;
+          let _default8 = module_13969.default;
+          let times2 = ceilResult1.times;
+          let pow4 = _default8.pow;
           let minusResult5 = floorResult1.minus(maximumSignificantDigits);
-          roundedNumber = ceilResult1.times(_default8.pow(10, minusResult5.plus(1)));
+          roundedNumber = times2(pow4(10, minusResult5.plus(1)));
           if (roundedNumber.greaterThanOrEqualTo(ZERO)) {
             break;
           }
@@ -78,7 +89,7 @@ export const ToRawPrecision = function ToRawPrecision(
     result = ApplyUnsignedRoundingMode.ApplyUnsignedRoundingMode(ZERO, timesResult, roundedNumber, result);
     if (result.eq(timesResult)) {
       roundingMagnitude = ceilResult.toNumber();
-      let str = floorResult;
+      str = floorResult;
       roundedNumber = timesResult;
     } else {
       roundingMagnitude = floorResult1.toNumber();
@@ -86,11 +97,10 @@ export const ToRawPrecision = function ToRawPrecision(
     }
     repeatResult = str.toString();
     tmp16 = require;
-    const minusResult3 = ZERO.div(powResult2).log(10).plus(maximumSignificantDigits).minus(1);
   }
   if (roundingMagnitude >= maximumSignificantDigits - 1) {
-    let sum = repeatResult + tmp16(13970).repeat("0", roundingMagnitude - maximumSignificantDigits + 1);
-    let integerDigitsCount = roundingMagnitude + 1;
+    sum = repeatResult + tmp16(13970).repeat("0", roundingMagnitude - maximumSignificantDigits + 1);
+    integerDigitsCount = roundingMagnitude + 1;
   } else if (roundingMagnitude >= 0) {
     const text = `${arr.slice(0, num3 + 1)}.`;
     sum = `${arr.slice(0, num3 + 1)}.${arr.slice(arr.length - (maximumSignificantDigits - (num3 + 1)))}`;

@@ -1,26 +1,28 @@
 // _runtime/00657_SetCache.js
 import MapCache from "00607_MapCache.js";
-import _mod659 from "metro/00659__.js";
-import 00658__ from "metro/00658__.js";
+import setCacheHas from "00659_setCacheHas.js";
+import setCacheAdd from "00658_setCacheAdd.js";
 
+let prototype;
+let prototype2;
 class SetCache {
   constructor(arg0) {
-    num = 0;
-    if (null != global) {
-      num = global.length;
+    let num2;
+    let num = 0;
+    if (null != arg0) {
+      num = arg0.length;
     }
-    self = this;
-    tmp = new closure_0(closure_1[0])();
-    this.__data__ = tmp;
+    const self = this;
+    this.__data__ = new MapCache();
+    new MapCache();
     for (let num2 = 0; num2 < num; num2 = num2 + 1) {
-      addResult = self.add(global[num2]);
+      let addResult = self.add(arg0[num2]);
     }
-    return;
   }
 }
 ({ prototype, prototype: prototype2 } = SetCache);
-prototype2.push = module_658;
-prototype.add = module_658;
-SetCache.prototype.has = _mod659;
+prototype2.push = setCacheAdd;
+prototype.add = setCacheAdd;
+SetCache.prototype.has = setCacheHas;
 
 export default SetCache;

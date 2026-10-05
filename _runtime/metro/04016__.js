@@ -1,42 +1,54 @@
 // _runtime/metro/04016__.js
-import 04017__ from "04017__.js";
-import 04018__ from "04018__.js";
-import 04019__ from "04019__.js";
+import formatDistance from "../04017_formatDistance.js";
+import buildFormatLongFn from "../04018_buildFormatLongFn.js";
+import formatRelative from "../04019_formatRelative.js";
 import date_mod from "04020__.js";
-import date_mod from "04021__.js";
+import date_mod2 from "04021__.js";
 
-if (!module_4017) {
-  const obj = { default: module_4017 };
-  let tmp3 = obj;
+let tmp11;
+let tmp3;
+let tmp5;
+let tmp7;
+let tmp9;
+if (!formatDistance) {
+  tmp3 = { default: formatDistance };
+  const obj = { default: formatDistance };
 } else {
-  tmp3 = module_4017;
+  tmp3 = formatDistance;
 }
-if (!module_4018) {
-  const obj2 = { default: module_4018 };
-  let tmp5 = obj2;
+if (!buildFormatLongFn) {
+  tmp5 = { default: buildFormatLongFn };
+  const obj2 = { default: buildFormatLongFn };
 } else {
-  tmp5 = module_4018;
+  tmp5 = buildFormatLongFn;
 }
-if (!module_4019) {
-  const obj3 = { default: module_4019 };
-  let tmp7 = obj3;
+if (!formatRelative) {
+  tmp7 = { default: formatRelative };
+  const obj3 = { default: formatRelative };
 } else {
-  tmp7 = module_4019;
+  tmp7 = formatRelative;
 }
-let date = date_mod;
+let date = date_mod2;
 if (!date) {
+  tmp9 = { default: date };
   const obj4 = { default: date };
-  let tmp9 = obj4;
 } else {
   tmp9 = date;
 }
-let date = date_mod;
+date = date_mod2;
 if (!date) {
+  tmp11 = { default: date };
   const obj5 = { default: date };
-  let tmp11 = obj5;
 } else {
   tmp11 = date;
 }
 
-export default { code: "hu", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
-export default exports.default;
+export default {
+  code: "hu",
+  formatDistance: tmp3.default,
+  formatLong: tmp5.default,
+  formatRelative: tmp7.default,
+  localize: tmp9.default,
+  match: tmp11.default,
+  options: { weekStartsOn: 1, firstWeekContainsDate: 4 },
+};

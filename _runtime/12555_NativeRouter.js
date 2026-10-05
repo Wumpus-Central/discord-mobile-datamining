@@ -1,44 +1,46 @@
 // _runtime/12555_NativeRouter.js
+import react_native from "00017_react-native.js";
+import Fragment from "react/00021_Fragment.js";
 import _modDef4707 from "metro/04707__.js";
-import _mod4710 from "metro/04710__.js";
-import noop from "metro/00019__.js";
+import MemoryRouter2 from "04710_MemoryRouter.js";
+import react from "00019_react.js";
 
-require = fn;
 class NativeRouter {
   constructor(arg0) {
-    obj = {};
-    merged = Object.assign(global);
-    return jsx(closure_0(closure_1[3]).MemoryRouter, obj);
+    const MemoryRouter = MemoryRouter2.MemoryRouter;
+    const merged = Object.assign(arg0);
+    return <MemoryRouter />;
   }
 }
-const Alert = fn(17).Alert;
-const jsx = fn(21).jsx;
+const Alert = react_native.Alert;
+const jsx = Fragment.jsx;
 NativeRouter.defaultProps = {
   getUserConfirmation(captureScreenshotError, fn2) {
-    closure_0 = fn2;
-    const items = [
-      {
-        text: "Cancel",
-        onPress() {
-          return closure_0(false);
-        },
+    let closure_0 = fn2;
+    const items = [,];
+    const obj = {
+      text: "Cancel",
+      onPress() {
+        return closure_0(false);
       },
-      {
-        text: "OK",
-        onPress() {
-          return closure_0(true);
-        },
+    };
+    items[0] = obj;
+    items[1] = {
+      text: "OK",
+      onPress() {
+        return closure_0(true);
       },
-    ];
+    };
     Alert.alert("Confirm", captureScreenshotError, items);
   },
 };
-NativeRouter.propTypes = {
+let obj = {
   initialEntries: _modDef4707.array,
   initialIndex: _modDef4707.number,
   getUserConfirmation: _modDef4707.func,
   keyLength: _modDef4707.number,
   children: _modDef4707.node,
 };
+NativeRouter.propTypes = obj;
 
 export default NativeRouter;

@@ -19,6 +19,10 @@ let closure_5 = [
 ];
 
 export default function inflate_table(arg0, arg1, arg2, arg3, arg4, arg5, arg6, bits) {
+  let diff3;
+  let num2;
+  let sum1;
+  let tmp42;
   bits = bits.bits;
   const buf16 = new _mod13462.Buf16(16);
   const buf161 = new _mod13462.Buf16(16);
@@ -49,7 +53,7 @@ export default function inflate_table(arg0, arg1, arg2, arg3, arg4, arg5, arg6, 
   }
   if (0 === num4) {
     arg4[+arg5] = 20971520;
-    arg4[++arg5 + 1] = 20971520;
+    arg4[+(+arg5 + 1)] = 20971520;
     bits.bits = 1;
     return 0;
   } else {
@@ -81,6 +85,7 @@ export default function inflate_table(arg0, arg1, arg2, arg3, arg4, arg5, arg6, 
       if (num8 <= 15) {
         continue;
       } else {
+        let num10;
         if (0 < diff1) {
           return -1;
         }
@@ -100,34 +105,169 @@ export default function inflate_table(arg0, arg1, arg2, arg3, arg4, arg5, arg6, 
           }
         }
         let num11 = 19;
+        let num12 = 0;
+        let tmp15 = arg6;
+        let num13 = 0;
+        let tmp16 = arg6;
         if (0 !== arg0) {
           if (1 === arg0) {
+            tmp16 = closure_2;
+            tmp15 = closure_3;
+            num12 = -257;
             num11 = 256;
+            num13 = -257;
           } else {
+            tmp16 = closure_4;
+            tmp15 = closure_5;
             num11 = -1;
+            num12 = 0;
+            num13 = 0;
           }
         }
         let tmp17 = 1 << bits;
-        let diff2 = tmp17 - 1;
-        if (1 !== arg0) {
+        let tmp19 = 1 === arg0;
+        if (!tmp19) {
+          let num27;
+          let tmp20 = 2 === arg0;
+          let num21 = 0;
+          let tmp21 = tmp17;
           let num22 = 0;
-          let tmp20 = bits;
+          let tmp22 = bits;
           let num23 = 0;
-          let tmp21 = num6;
-          if (2 === arg0) {
+          let tmp23 = num6;
+          let tmp24 = arg5;
+          let num24 = -1;
+          if (tmp20) {
+            num21 = 0;
             num22 = 0;
-            tmp20 = bits;
+            tmp22 = bits;
             num23 = 0;
-            tmp21 = num6;
+            tmp23 = num6;
+            tmp24 = arg5;
+            num24 = -1;
+            tmp21 = tmp17;
           }
           while (true) {
-            let diff3 = tmp21 - num22;
+            let num25;
+            let num26;
+            let tmp27 = tmp21;
+            let tmp28 = num22;
+            let tmp32 = tmp24;
+            let tmp33 = num24;
+            let diff2 = tmp23 - num22;
+            let tmp29 = tmp22;
             if (arg6[num23] < num11) {
+              num25 = arg6[num23];
+              num26 = 0;
+            } else {
+              num25 = 0;
+              num26 = 96;
+              if (arg6[num23] > num11) {
+                num26 = tmp15[num12 + arg6[num23]];
+                num25 = tmp16[num13 + arg6[num23]];
+              }
             }
-            let tmp35 = 1 << (tmp21 - num22);
-            let tmp36 = 1 << tmp20;
-            break;
+            let tmp35 = 1 << tmp22;
+            let tmp36 = tmp35;
+            do {
+              diff3 = tmp36 - tmp34;
+              arg4[tmp24 + (num21 >> num22) + diff3] = (diff2 << 24) | (num26 << 16) | num25;
+              tmp36 = diff3;
+            } while (0 !== diff3);
+            let tmp38 = 1 << (tmp23 - 1);
+            let tmp39 = tmp38;
+            let tmp40 = tmp38;
+            if (num21 & tmp38) {
+              do {
+                let tmp41 = tmp39 >> 1;
+                tmp39 = tmp41;
+                tmp40 = tmp41;
+                tmp42 = num21 & tmp41;
+              } while (tmp42);
+            }
+            num27 = 0;
+            if (0 !== tmp40) {
+              num27 = (num21 & (tmp40 - 1)) + tmp40;
+            }
+            let sum2 = num23 + 1;
+            let diff4 = buf16[tmp23] - 1;
+            buf16[tmp23] = diff4;
+            let tmp45 = tmp23;
+            if (0 == diff4) {
+              if (tmp23 === num4) {
+                break;
+              } else {
+                tmp45 = arg1[arg2 + arg6[sum2]];
+              }
+            }
+            num21 = num27;
+            num23 = sum2;
+            tmp23 = tmp45;
+            if (tmp45 <= bits) {
+              continue;
+            } else {
+              let tmp57 = num27 & tmp18;
+              num21 = num27;
+              tmp21 = tmp27;
+              num22 = tmp28;
+              tmp22 = tmp29;
+              num23 = sum2;
+              tmp23 = tmp45;
+              tmp24 = tmp32;
+              num24 = tmp33;
+              if (tmp57 === tmp33) {
+                continue;
+              } else {
+                let tmp46 = tmp28;
+                if (0 === tmp28) {
+                  tmp46 = bits;
+                }
+                let sum3 = tmp32 + tmp35;
+                let diff5 = tmp45 - tmp46;
+                let tmp50 = diff5;
+                if (diff5 + tmp46 < num4) {
+                  let diff6 = tmp49 - buf16[diff5 + tmp46];
+                  let tmp52 = diff5;
+                  tmp50 = diff5;
+                  if (diff6 > 0) {
+                    let sum4 = tmp52 + 1;
+                    tmp50 = sum4;
+                    while (sum4 + tmp46 < num4) {
+                      diff6 = (diff6 << 1) - buf16[sum4 + tmp46];
+                      tmp52 = sum4;
+                      tmp50 = sum4;
+                      if (diff6 <= 0) {
+                        break;
+                      }
+                    }
+                  }
+                }
+                let sum5 = tmp27 + (1 << tmp50);
+                if (!tmp19) {
+                  if (!tmp20) {
+                    arg4[tmp57] = (bits << 24) | (tmp50 << 16) | (sum3 - arg5);
+                    num21 = num27;
+                    tmp21 = sum5;
+                    num22 = tmp46;
+                    tmp22 = tmp50;
+                    num23 = sum2;
+                    tmp23 = tmp45;
+                    tmp24 = sum3;
+                    num24 = tmp57;
+                    continue;
+                  }
+                }
+                return 1;
+              }
+              continue;
+            }
+            continue;
           }
+          if (0 !== num27) {
+            arg4[tmp24 + num27] = 4194304 | ((tmp23 - num22) << 24);
+          }
+          bits.bits = bits;
+          return 0;
         }
         return 1;
       }

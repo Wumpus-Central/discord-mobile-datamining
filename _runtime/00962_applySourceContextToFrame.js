@@ -1,13 +1,16 @@
 // _runtime/00962_applySourceContextToFrame.js
 import registerSpanErrorInstrumentation from "metro/00693__.js";
 
+let stacktrace;
+
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const applySourceContextToFrame = function applySourceContextToFrame(filename, arg1, arg2, arg3) {
   if (filename.filename === arg2) {
     if (filename.lineno) {
       if (arg1.length) {
-        registerSpanErrorInstrumentation.addContextToFrame(arg1, filename, arg3);
+        const obj = registerSpanErrorInstrumentation;
+        obj.addContextToFrame(arg1, filename, arg3);
       }
     }
   }
@@ -18,17 +21,19 @@ export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIn
   if (arg0 === undefined) {
     obj = {};
   }
+  let num = 7;
+  if (null != obj.frameContextLines) {
+    num = obj.frameContextLines;
+  }
   return {
     name: "ContextLines",
     processEvent(exception) {
-      closure_0 = num;
+      let closure_0 = num;
       const _document = registerSpanErrorInstrumentation.GLOBAL_OBJ.document;
       let _location = registerSpanErrorInstrumentation.GLOBAL_OBJ.location;
       if (_location) {
-        _location = registerSpanErrorInstrumentation.stripUrlQueryAndFragment(
-          registerSpanErrorInstrumentation.GLOBAL_OBJ.location.href,
-        );
-        const tmpResult = registerSpanErrorInstrumentation;
+        const tmp2Result = registerSpanErrorInstrumentation;
+        _location = tmp2Result.stripUrlQueryAndFragment(registerSpanErrorInstrumentation.GLOBAL_OBJ.location.href);
       }
       if (_document) {
         if (_location) {
@@ -44,7 +49,7 @@ export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIn
           if (length) {
             if (_document.documentElement.innerHTML) {
               const items = ["<!DOCTYPE html>", "<html>"];
-              items[HermesBuiltin.arraySpread(str.split("\n"), 2)] = "</html>";
+              items[HermesBuiltin.arraySpread(items, _document.documentElement.innerHTML.split("\n"), 2)] = "</html>";
               const item = values.forEach((stacktrace) => {
                 stacktrace = stacktrace.stacktrace;
                 let frames;
@@ -57,8 +62,8 @@ export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIn
                     if (filename.filename === closure_1_1) {
                       if (filename.lineno) {
                         if (items.length) {
-                          closure_0(_location[0]).addContextToFrame(items, filename, tmp);
                           const obj = closure_0(_location[0]);
+                          obj.addContextToFrame(items, filename, tmp);
                         }
                       }
                     }

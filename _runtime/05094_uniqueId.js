@@ -1,10 +1,9 @@
 // _runtime/05094_uniqueId.js
-import _mod637 from "metro/00637__.js";
+import toString from "00637_toString.js";
 
 let c2 = 0;
 
 export default function uniqueId(arg0) {
-  const sum = c2 + 1;
-  c2 = sum;
-  return _mod637(arg0) + sum;
+  c2 = c2 + 1;
+  return toString(arg0) + c2;
 }

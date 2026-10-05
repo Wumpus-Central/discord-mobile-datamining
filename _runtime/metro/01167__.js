@@ -1,19 +1,5 @@
 // _runtime/metro/01167__.js
-
-export const resolveFormatConfigOptions = function resolveFormatConfigOptions(list, format) {
-  format = undefined;
-  if (null != format) {
-    format = format.format;
-  }
-  if (typeof format === "string") {
-    const _Object = Object;
-    const _Object2 = Object;
-    return Object.assign(Object.assign({}, list[format.format]), format);
-  } else {
-    return format;
-  }
-};
-export const DEFAULT_FORMAT_CONFIG = {
+const obj = {
   duration: {},
   list: {},
   relativeTime: {},
@@ -31,3 +17,18 @@ export const DEFAULT_FORMAT_CONFIG = {
     full: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" },
   },
 };
+
+export const resolveFormatConfigOptions = function resolveFormatConfigOptions(list, format) {
+  format = undefined;
+  if (null != format) {
+    format = format.format;
+  }
+  if (typeof format === "string") {
+    const _Object = Object;
+    const _Object2 = Object;
+    return Object.assign(Object.assign({}, list[format.format]), format);
+  } else {
+    return format;
+  }
+};
+export const DEFAULT_FORMAT_CONFIG = obj;

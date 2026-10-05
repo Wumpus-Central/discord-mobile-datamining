@@ -1,6 +1,7 @@
 // _runtime/metro/10256__.js
 import repeatedTimeunitPattern from "../10161_repeatedTimeunitPattern.js";
 import AbstractParserWithWordBoundaryChecking from "../10168_AbstractParserWithWordBoundaryChecking.js";
+import _mod10188 from "10188__.js";
 import _mod10255 from "10255__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -8,19 +9,12 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const NLWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -35,22 +29,17 @@ const regExp = new RegExp(
 );
 class NLWeekdayParser {
   constructor() {
-    self = this;
-    tmp = c2(this, NLWeekdayParser);
-    tmp2 = closure_4;
-    obj = closure_4(NLWeekdayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, NLWeekdayParser);
+    const obj = _getPrototypeOf(NLWeekdayParser);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return tmp3(self, constructResult);
+    return c3(self, constructResult);
   }
 }
 _inherits(NLWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
@@ -65,8 +54,10 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
+      const str = arg1[2];
+      const formatted = str.toLowerCase();
       let str2 = arg1[1];
+      const tmp4 = _mod10255.WEEKDAY_DICTIONARY[formatted];
       if (!str2) {
         str2 = arg1[3];
       }
@@ -84,11 +75,7 @@ const items = [
           }
         }
       }
-      return NLWeekdayParser(10188).createParsingComponentsAtWeekday(
-        reference.reference,
-        NLWeekdayParser(10255).WEEKDAY_DICTIONARY[formatted],
-        str3,
-      );
+      return _mod10188.createParsingComponentsAtWeekday(reference.reference, tmp4, str3);
     },
   },
 ];

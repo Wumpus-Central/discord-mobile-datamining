@@ -1,155 +1,268 @@
 // _runtime/06028_Color.js
-import _mod6029 from "metro/06029__.js";
+import keys12 from "06029_keys1.js";
 import _mod6033 from "metro/06033__.js";
-import _slicedToArray from "metro/00032__.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 
 const require = globalThis.__r;
+let _require;
 
+let obj2;
 class Color {
-  constructor(arg0, arg1) {
-    self = this;
-    str = require;
-    tmp = Color;
+  constructor(model, arg1) {
+    let length;
+    const self = this;
+    let str = arg1;
     if (this instanceof Color) {
-      tmp4 = str;
-      if (str) {
-        tmp5 = closure_3;
-        tmp4 = str in closure_3;
-      }
-      if (tmp4) {
+      const tmp5 = str && str in closure_3;
+      if (tmp5) {
         str = null;
       }
       if (str) {
-        tmp6 = closure_0;
-        tmp7 = closure_1;
-        if (!(str in closure_0(closure_1[1]))) {
-          tmp8 = globalThis;
-          _Error = Error;
-          str2 = "Unknown model: ";
-          tmp9 = new.target;
-          tmp10 = new.target;
-          error = new Error("Unknown model: " + str);
-          tmp12 = error;
+        if (!(str in keys12)) {
+          const _Error = Error;
+          const self2 = this;
+          const self3 = this;
+          const error = new Error("Unknown model: " + str);
           throw error;
         }
       }
-      tmp13 = null;
-      if (null == global) {
-        str7 = "rgb";
+      if (null == model) {
         self.model = "rgb";
         self.color = [0, 0, 0];
-        num13 = 1;
         self.valpha = 1;
-      } else if (global instanceof tmp) {
-        self.model = global.model;
-        items = [];
-        num12 = 0;
-        tmp36 = items;
-        arraySpreadResult = HermesBuiltin.arraySpread(global.color, 0);
+      } else if (model instanceof Color) {
+        self.model = model.model;
+        const items = [];
+        HermesBuiltin.arraySpread(items, model.color, 0);
         self.color = items;
-        self.valpha = global.valpha;
-      } else if (typeof global === "string") {
-        tmp29 = closure_0;
-        tmp30 = closure_1;
-        obj2 = closure_0(closure_1[2]);
-        iter = obj2.get(global);
+        self.valpha = model.valpha;
+      } else if (typeof model === "string") {
+        const obj2 = _mod6033;
+        const iter = obj2.get(model);
         if (null === iter) {
-          tmp31 = globalThis;
-          _Error3 = Error;
-          str6 = "Unable to parse color from string: ";
-          tmp32 = new.target;
-          tmp33 = new.target;
-          error1 = new Error("Unable to parse color from string: " + global);
-          tmp35 = error1;
+          const _Error3 = Error;
+          const self6 = this;
+          const self7 = this;
+          const error1 = new Error("Unable to parse color from string: " + model);
           throw error1;
         } else {
           self.model = iter.model;
-          channels2 = tmp29(tmp30[1])[self.model].channels;
-          value = iter.value;
-          num10 = 0;
+          const channels2 = keys12[self.model].channels;
+          const value = iter.value;
           self.color = value.slice(0, channels2);
-          num11 = 1;
+          let num11 = 1;
           if (typeof iter.value[channels2] === "number") {
             num11 = iter.value[channels2];
           }
           self.valpha = num11;
         }
+      } else if (model.length > 0) {
+        let num9;
+        if (!str) {
+          str = "rgb";
+        }
+        self.model = str;
+        const channels = keys12[self.model].channels;
+        const _Array = Array;
+        const callResult = slice.call(model, 0, channels);
+        let num8 = 1;
+        for (let num9 = 0; num9 < channels; num9 = num9 + num8) {
+          if (typeof callResult[num9] !== "number") {
+            callResult[num9] = 0;
+          }
+        }
+        self.color = callResult;
+        if (typeof model[channels] === "number") {
+          num8 = model[channels];
+        }
+        self.valpha = num8;
+      } else if (typeof model === "number") {
+        self.model = "rgb";
+        const items1 = [(model >> 16) & 255, (model >> 8) & 255, 255 & model];
+        self.color = items1;
+        self.valpha = 1;
       } else {
-        num18 = 0;
-        if (global.length > 0) {
+        self.valpha = 1;
+        const _Object3 = Object;
+        const keys = Object.keys(model);
+        if ("alpha" in model) {
+          keys.splice(keys.indexOf("alpha"), 1);
+          let num = 0;
+          if (typeof model.alpha === "number") {
+            num = model.alpha;
+          }
+          self.valpha = num;
+        }
+        const sorted = keys.sort();
+        const joined = sorted.join("");
+        if (joined in obj) {
+          self.model = obj[joined];
+          const labels = keys12[self.model].labels;
+          const items2 = [];
+          let num2 = 0;
+          if (0 < labels.length) {
+            do {
+              let arr = items2.push(model[labels[num2]]);
+              num2 = num2 + 1;
+              length = labels.length;
+            } while (num2 < length);
+          }
+          let num3 = 0;
+          if (0 < undefined) {
+            do {
+              if (typeof items2[num3] !== "number") {
+                items2[num3] = 0;
+              }
+              num3 = num3 + 1;
+            } while (num3 < undefined);
+          }
+          self.color = items2;
+        } else {
+          const _Error2 = Error;
+          const _JSON = JSON;
+          const self4 = this;
+          const self5 = this;
+          const error2 = new Error("Unable to parse color from object: " + JSON.stringify(model));
+          throw error2;
+        }
+      }
+      if (closure_5[self.model]) {
+        let num14;
+        const channels3 = keys12[self.model].channels;
+        for (let num14 = 0; num14 < channels3; num14 = num14 + 1) {
+          let tmp37 = closure_5[self.model][num14];
+          if (tmp37) {
+            self.color[num14] = tmp37(self.color[num14]);
+          }
+        }
+      }
+      const _Math = Math;
+      const _Math2 = Math;
+      self.valpha = Math.max(0, Math.min(1, self.valpha));
+      const _Object = Object;
+      if (Object.freeze) {
+        const _Object2 = Object;
+        const frozen = Object.freeze(self);
+      }
+    } else {
+      const tmp2Result = Color(model, str);
+      return tmp2Result;
+    }
+  }
+}
+let closure_3 = ["keyword", "gray", "hex"];
+let obj = {};
+let keys1 = Object.keys(keys12);
+let iter = keys1[Symbol.iterator]();
+const nextResult = iter.next();
+while (iter !== undefined) {
+  let items = [];
+  let tmp4 = items;
+  let num = 0;
+  let arraySpreadResult = HermesBuiltin.arraySpread(items, keys12[nextResult].labels, 0);
+  class Color {
+    constructor(model, arg1) {
+      let length;
+      const self = this;
+      let str = arg1;
+      if (this instanceof Color) {
+        const tmp5 = str && str in closure_3;
+        if (tmp5) {
+          str = null;
+        }
+        if (str) {
+          if (!(str in keys12)) {
+            const _Error = Error;
+            const self2 = this;
+            const self3 = this;
+            const error = new Error("Unknown model: " + str);
+            throw error;
+          }
+        }
+        if (null == model) {
+          self.model = "rgb";
+          self.color = [0, 0, 0];
+          self.valpha = 1;
+        } else if (model instanceof Color) {
+          self.model = model.model;
+          const items = [];
+          HermesBuiltin.arraySpread(items, model.color, 0);
+          self.color = items;
+          self.valpha = model.valpha;
+        } else if (typeof model === "string") {
+          const obj2 = _mod6033;
+          const iter = obj2.get(model);
+          if (null === iter) {
+            const _Error3 = Error;
+            const self6 = this;
+            const self7 = this;
+            const error1 = new Error("Unable to parse color from string: " + model);
+            throw error1;
+          } else {
+            self.model = iter.model;
+            const channels2 = keys12[self.model].channels;
+            const value = iter.value;
+            self.color = value.slice(0, channels2);
+            let num11 = 1;
+            if (typeof iter.value[channels2] === "number") {
+              num11 = iter.value[channels2];
+            }
+            self.valpha = num11;
+          }
+        } else if (model.length > 0) {
+          let num9;
           if (!str) {
             str = "rgb";
           }
           self.model = str;
-          tmp24 = closure_0;
-          tmp25 = closure_1;
-          channels = closure_0(closure_1[1])[self.model].channels;
-          tmp26 = globalThis;
-          _Array = Array;
-          slice = Array.prototype.slice;
-          call = slice.call;
-          tmp27 = typeof call === "unknown" ? slice(0, channels) : call(global, 0, channels);
-          num8 = 1;
+          const channels = keys12[self.model].channels;
+          const _Array = Array;
+          const callResult = slice.call(model, 0, channels);
+          let num8 = 1;
           for (let num9 = 0; num9 < channels; num9 = num9 + num8) {
-            tmp28 = num9;
-            if (typeof tmp27[num9] !== "number") {
-              tmp27[num9] = 0;
+            if (typeof callResult[num9] !== "number") {
+              callResult[num9] = 0;
             }
           }
-          self.color = tmp27;
-          if (typeof global[channels] === "number") {
-            num8 = global[channels];
+          self.color = callResult;
+          if (typeof model[channels] === "number") {
+            num8 = model[channels];
           }
           self.valpha = num8;
-        } else if (typeof global === "number") {
-          str5 = "rgb";
+        } else if (typeof model === "number") {
           self.model = "rgb";
-          num4 = 16;
-          items1 = [, ,];
-          num5 = 255;
-          items1[0] = (global >> 16) & 255;
-          num6 = 8;
-          items1[1] = (global >> 8) & 255;
-          items1[2] = 255 & global;
+          const items1 = [(model >> 16) & 255, (model >> 8) & 255, 255 & model];
           self.color = items1;
-          num7 = 1;
           self.valpha = 1;
         } else {
-          num19 = 1;
           self.valpha = 1;
-          tmp46 = globalThis;
-          _Object3 = Object;
-          keys = Object.keys(global);
-          str8 = "alpha";
-          if ("alpha" in global) {
-            spliceResult = keys.splice(keys.indexOf("alpha"), 1);
-            num = 0;
-            if (typeof global.alpha === "number") {
-              num = global.alpha;
+          const _Object3 = Object;
+          const keys = Object.keys(model);
+          if ("alpha" in model) {
+            keys.splice(keys.indexOf("alpha"), 1);
+            let num = 0;
+            if (typeof model.alpha === "number") {
+              num = model.alpha;
             }
             self.valpha = num;
           }
-          sorted = keys.sort();
-          str3 = "";
-          joined = sorted.join("");
-          if (joined in closure_4) {
-            self.model = closure_4[joined];
-            tmp20 = closure_0;
-            tmp21 = closure_1;
-            labels = closure_0(closure_1[1])[self.model].labels;
-            items2 = [];
-            num2 = 0;
+          const sorted = keys.sort();
+          const joined = sorted.join("");
+          if (joined in obj) {
+            self.model = obj[joined];
+            const labels = keys12[self.model].labels;
+            const items2 = [];
+            let num2 = 0;
             if (0 < labels.length) {
               do {
-                arr1 = items2.push(global[labels[num2]]);
+                let arr = items2.push(model[labels[num2]]);
                 num2 = num2 + 1;
                 length = labels.length;
               } while (num2 < length);
             }
-            num3 = 0;
+            let num3 = 0;
             if (0 < undefined) {
               do {
-                tmp23 = num3;
                 if (typeof items2[num3] !== "number") {
                   items2[num3] = 0;
                 }
@@ -158,262 +271,35 @@ class Color {
             }
             self.color = items2;
           } else {
-            _Error2 = Error;
-            _JSON = JSON;
-            str4 = "Unable to parse color from object: ";
-            tmp16 = new.target;
-            tmp17 = new.target;
-            error2 = new Error("Unable to parse color from object: " + JSON.stringify(global));
-            tmp19 = error2;
+            const _Error2 = Error;
+            const _JSON = JSON;
+            const self4 = this;
+            const self5 = this;
+            const error2 = new Error("Unable to parse color from object: " + JSON.stringify(model));
             throw error2;
           }
         }
-      }
-      tmp38 = closure_5;
-      if (closure_5[self.model]) {
-        tmp39 = closure_0;
-        tmp40 = closure_1;
-        channels3 = closure_0(closure_1[1])[self.model].channels;
-        num14 = 0;
-        num15 = 1;
-        if (0 < channels3) {
-          do {
-            tmp41 = closure_5;
-            tmp42 = closure_5[self.model][num14];
-            tmp43 = num14;
-            if (tmp42) {
-              self.color[num14] = tmp42(self.color[num14]);
-            }
-            num14 = num14 + 1;
-          } while (num14 < channels3);
-        }
-      }
-      tmp44 = globalThis;
-      _Math = Math;
-      _Math2 = Math;
-      num16 = 1;
-      num17 = 0;
-      self.valpha = Math.max(0, Math.min(1, self.valpha));
-      _Object = Object;
-      if (Object.freeze) {
-        _Object2 = Object;
-        frozen = Object.freeze(self);
-      }
-      return;
-    } else {
-      tmpResult = tmp(global, str);
-      tmp3 = tmpResult;
-      return tmpResult;
-    }
-  }
-}
-let closure_3 = ["keyword", "gray", "hex"];
-let obj = {};
-let keys1 = Object.keys(_mod6029);
-let iter = keys1[Symbol.iterator]();
-const nextResult = iter.next();
-while (iter !== undefined) {
-  let items = [];
-  let arraySpreadResult = HermesBuiltin.arraySpread(_mod6029[nextResult].labels, 0);
-  class Color {
-    constructor(arg0, arg1) {
-      self = this;
-      str = require;
-      tmp = Color;
-      if (this instanceof Color) {
-        tmp4 = str;
-        if (str) {
-          tmp5 = closure_3;
-          tmp4 = str in closure_3;
-        }
-        if (tmp4) {
-          str = null;
-        }
-        if (str) {
-          tmp6 = closure_0;
-          tmp7 = closure_1;
-          if (!(str in closure_0(closure_1[1]))) {
-            tmp8 = globalThis;
-            _Error = Error;
-            str2 = "Unknown model: ";
-            tmp9 = new.target;
-            tmp10 = new.target;
-            error = new Error("Unknown model: " + str);
-            tmp12 = error;
-            throw error;
-          }
-        }
-        tmp13 = null;
-        if (null == global) {
-          str7 = "rgb";
-          self.model = "rgb";
-          self.color = [0, 0, 0];
-          num13 = 1;
-          self.valpha = 1;
-        } else if (global instanceof tmp) {
-          self.model = global.model;
-          items = [];
-          num12 = 0;
-          tmp36 = items;
-          arraySpreadResult = HermesBuiltin.arraySpread(global.color, 0);
-          self.color = items;
-          self.valpha = global.valpha;
-        } else if (typeof global === "string") {
-          tmp29 = closure_0;
-          tmp30 = closure_1;
-          obj2 = closure_0(closure_1[2]);
-          iter = obj2.get(global);
-          if (null === iter) {
-            tmp31 = globalThis;
-            _Error3 = Error;
-            str6 = "Unable to parse color from string: ";
-            tmp32 = new.target;
-            tmp33 = new.target;
-            error1 = new Error("Unable to parse color from string: " + global);
-            tmp35 = error1;
-            throw error1;
-          } else {
-            self.model = iter.model;
-            channels2 = tmp29(tmp30[1])[self.model].channels;
-            value = iter.value;
-            num10 = 0;
-            self.color = value.slice(0, channels2);
-            num11 = 1;
-            if (typeof iter.value[channels2] === "number") {
-              num11 = iter.value[channels2];
-            }
-            self.valpha = num11;
-          }
-        } else {
-          num18 = 0;
-          if (global.length > 0) {
-            if (!str) {
-              str = "rgb";
-            }
-            self.model = str;
-            tmp24 = closure_0;
-            tmp25 = closure_1;
-            channels = closure_0(closure_1[1])[self.model].channels;
-            tmp26 = globalThis;
-            _Array = Array;
-            slice = Array.prototype.slice;
-            call = slice.call;
-            tmp27 = typeof call === "unknown" ? slice(0, channels) : call(global, 0, channels);
-            num8 = 1;
-            for (let num9 = 0; num9 < channels; num9 = num9 + num8) {
-              tmp28 = num9;
-              if (typeof tmp27[num9] !== "number") {
-                tmp27[num9] = 0;
-              }
-            }
-            self.color = tmp27;
-            if (typeof global[channels] === "number") {
-              num8 = global[channels];
-            }
-            self.valpha = num8;
-          } else if (typeof global === "number") {
-            str5 = "rgb";
-            self.model = "rgb";
-            num4 = 16;
-            items1 = [, ,];
-            num5 = 255;
-            items1[0] = (global >> 16) & 255;
-            num6 = 8;
-            items1[1] = (global >> 8) & 255;
-            items1[2] = 255 & global;
-            self.color = items1;
-            num7 = 1;
-            self.valpha = 1;
-          } else {
-            num19 = 1;
-            self.valpha = 1;
-            tmp46 = globalThis;
-            _Object3 = Object;
-            keys = Object.keys(global);
-            str8 = "alpha";
-            if ("alpha" in global) {
-              spliceResult = keys.splice(keys.indexOf("alpha"), 1);
-              num = 0;
-              if (typeof global.alpha === "number") {
-                num = global.alpha;
-              }
-              self.valpha = num;
-            }
-            sorted = keys.sort();
-            str3 = "";
-            joined = sorted.join("");
-            if (joined in closure_4) {
-              self.model = closure_4[joined];
-              tmp20 = closure_0;
-              tmp21 = closure_1;
-              labels = closure_0(closure_1[1])[self.model].labels;
-              items2 = [];
-              num2 = 0;
-              if (0 < labels.length) {
-                do {
-                  arr1 = items2.push(global[labels[num2]]);
-                  num2 = num2 + 1;
-                  length = labels.length;
-                } while (num2 < length);
-              }
-              num3 = 0;
-              if (0 < undefined) {
-                do {
-                  tmp23 = num3;
-                  if (typeof items2[num3] !== "number") {
-                    items2[num3] = 0;
-                  }
-                  num3 = num3 + 1;
-                } while (num3 < undefined);
-              }
-              self.color = items2;
-            } else {
-              _Error2 = Error;
-              _JSON = JSON;
-              str4 = "Unable to parse color from object: ";
-              tmp16 = new.target;
-              tmp17 = new.target;
-              error2 = new Error("Unable to parse color from object: " + JSON.stringify(global));
-              tmp19 = error2;
-              throw error2;
-            }
-          }
-        }
-        tmp38 = closure_5;
         if (closure_5[self.model]) {
-          tmp39 = closure_0;
-          tmp40 = closure_1;
-          channels3 = closure_0(closure_1[1])[self.model].channels;
-          num14 = 0;
-          num15 = 1;
-          if (0 < channels3) {
-            do {
-              tmp41 = closure_5;
-              tmp42 = closure_5[self.model][num14];
-              tmp43 = num14;
-              if (tmp42) {
-                self.color[num14] = tmp42(self.color[num14]);
-              }
-              num14 = num14 + 1;
-            } while (num14 < channels3);
+          let num14;
+          const channels3 = keys12[self.model].channels;
+          for (let num14 = 0; num14 < channels3; num14 = num14 + 1) {
+            let tmp37 = closure_5[self.model][num14];
+            if (tmp37) {
+              self.color[num14] = tmp37(self.color[num14]);
+            }
           }
         }
-        tmp44 = globalThis;
-        _Math = Math;
-        _Math2 = Math;
-        num16 = 1;
-        num17 = 0;
+        const _Math = Math;
+        const _Math2 = Math;
         self.valpha = Math.max(0, Math.min(1, self.valpha));
-        _Object = Object;
+        const _Object = Object;
         if (Object.freeze) {
-          _Object2 = Object;
-          frozen = Object.freeze(self);
+          const _Object2 = Object;
+          const frozen = Object.freeze(self);
         }
-        return;
       } else {
-        tmpResult = tmp(global, str);
-        tmp3 = tmpResult;
-        return tmpResult;
+        const tmp2Result = Color(model, str);
+        return tmp2Result;
       }
     }
   }
@@ -421,9 +307,9 @@ while (iter !== undefined) {
   continue;
 }
 function getset(cmyk, arg1, arg2) {
-  closure_0 = cmyk;
-  closure_1 = arg1;
-  closure_2 = arg2;
+  let closure_0 = cmyk;
+  let closure_1 = arg1;
+  let closure_2 = arg2;
   let tmp = cmyk;
   if (!Array.isArray(cmyk)) {
     const items = [cmyk];
@@ -431,7 +317,7 @@ function getset(cmyk, arg1, arg2) {
   }
   closure_0 = tmp;
   for (const item10014 of tmp) {
-    let tmp4 = dependencyMap[item10014];
+    let tmp4 = closure_5[item10014];
     if (!tmp4) {
       let items1 = [];
       tmp3[tmp2] = items1;
@@ -442,6 +328,7 @@ function getset(cmyk, arg1, arg2) {
   }
   closure_0 = tmp[0];
   return function (arg0) {
+    let tmp4;
     const self = this;
     if (undefined !== arg0) {
       let tmp5 = arg0;
@@ -450,7 +337,7 @@ function getset(cmyk, arg1, arg2) {
       }
       const tmp7 = self[closure_0]();
       tmp7.color[closure_1] = tmp5;
-      let tmp4 = tmp7;
+      tmp4 = tmp7;
     } else {
       const tmp3 = self[closure_0]().color[closure_1];
       tmp4 = tmp3;
@@ -462,7 +349,7 @@ function getset(cmyk, arg1, arg2) {
   };
 }
 function maxfn(arg0) {
-  closure_0 = arg0;
+  let closure_0 = arg0;
   return (arg0) => Math.max(0, Math.min(closure_0, arg0));
 }
 const hasOwnProperty = {};
@@ -474,53 +361,58 @@ const point = {
     return this[this.model]();
   },
   string(num) {
+    let color;
     const self = this;
     let self2 = this;
     if (!(this.model in _mod6033.to)) {
       self2 = self.rgb();
     }
-    num = 1;
-    const roundResult = self2.round(num);
+    const round = self2.round;
+    const roundResult = round(1);
     if (1 === roundResult.valpha) {
-      let color = roundResult.color;
+      color = roundResult.color;
     } else {
       color = [];
-      color[HermesBuiltin.arraySpread(roundResult.color, 0)] = self.valpha;
+      color[HermesBuiltin.arraySpread(color, roundResult.color, 0)] = self.valpha;
     }
     const to = _mod6033.to;
     return to[roundResult.model](color);
   },
   percentString(num) {
-    num = 1;
-    const roundResult = this.rgb().round(num);
+    let color;
+    const round = this.rgb().round;
+    this.rgb();
+    const roundResult = round(1);
     if (1 === roundResult.valpha) {
-      let color = roundResult.color;
+      color = roundResult.color;
     } else {
       const items = [];
-      items[HermesBuiltin.arraySpread(roundResult.color, 0)] = this.valpha;
+      items[HermesBuiltin.arraySpread(items, roundResult.color, 0)] = this.valpha;
       color = items;
     }
     const rgb = _mod6033.to.rgb;
     return rgb.percent(color);
   },
   array() {
+    let items1;
     const self = this;
     if (1 === this.valpha) {
       const items = [];
-      HermesBuiltin.arraySpread(self.color, 0);
-      let items1 = items;
+      HermesBuiltin.arraySpread(items, self.color, 0);
+      items1 = items;
     } else {
       items1 = [];
-      items1[HermesBuiltin.arraySpread(self.color, 0)] = self.valpha;
+      items1[HermesBuiltin.arraySpread(items1, self.color, 0)] = self.valpha;
     }
     return items1;
   },
   object() {
+    let num;
     const self = this;
     obj = {};
-    const channels = _mod6029[this.model].channels;
+    const channels = keys12[this.model].channels;
     for (let num = 0; num < channels; num = num + 1) {
-      obj[_mod6029[this.model].labels[num]] = self.color[num];
+      obj[keys12[this.model].labels[num]] = self.color[num];
     }
     if (1 !== self.valpha) {
       obj.alpha = self.valpha;
@@ -538,7 +430,8 @@ const point = {
     return color;
   },
   unitObject() {
-    const objectResult = this.rgb().object();
+    const rgbResult = this.rgb();
+    const objectResult = rgbResult.object();
     objectResult.r = objectResult.r / 255;
     objectResult.g = objectResult.g / 255;
     objectResult.b = objectResult.b / 255;
@@ -548,16 +441,19 @@ const point = {
     return objectResult;
   },
   round(arg0) {
+    let model;
     let num = arg0;
+    const _Math = Math;
     if (!arg0) {
       num = 0;
     }
     const color = this.color;
-    closure_0 = Math.max(num, 0);
+    let closure_0 = max(num, 0);
     const items = [];
     ({
       valpha: arr2[
         HermesBuiltin.arraySpread(
+          tmp,
           arr2,
           arr.map(arr, (toFixed) => Number(toFixed.toFixed(closure_0))),
           0,
@@ -565,17 +461,19 @@ const point = {
       ],
       model,
     } = this);
-    return Color(items, model);
+    const tmp2 = Color(items, model);
+    return tmp2;
   },
   alpha(alphaResult) {
+    let valpha;
     const self = this;
     if (undefined !== alphaResult) {
       const items = [];
       const _Math = Math;
       const _Math2 = Math;
-      items[HermesBuiltin.arraySpread(self.color, 0)] = Math.max(0, Math.min(1, alphaResult));
-      let valpha = Color(items, self.model);
-      const arraySpreadResult = HermesBuiltin.arraySpread(self.color, 0);
+      const arraySpreadResult = HermesBuiltin.arraySpread(items, self.color, 0);
+      items[arraySpreadResult] = Math.max(0, Math.min(1, alphaResult));
+      valpha = Color(items, self.model);
     } else {
       valpha = self.valpha;
     }
@@ -604,22 +502,26 @@ const point = {
   a: getset("lab", 1),
   b: getset("lab", 2),
   keyword(color) {
+    let keywordResult;
     if (undefined !== color) {
-      let keywordResult = Color(color);
+      keywordResult = Color(color);
     } else {
       const self = this;
-      keywordResult = _mod6029[this.model].keyword(this.color);
+      obj = keys12[this.model];
+      keywordResult = obj.keyword(this.color);
     }
     return keywordResult;
   },
   hex(arg0) {
+    let hexResult;
     if (undefined !== arg0) {
-      let hexResult = Color(arg0);
+      hexResult = Color(arg0);
     } else {
       const self = this;
       const to = _mod6033.to;
-      hexResult = to.hex(this.rgb().round().color);
+      const hex = to.hex;
       const rgbResult = this.rgb();
+      hexResult = hex(rgbResult.round().color);
     }
     return hexResult;
   },
@@ -631,16 +533,16 @@ const point = {
       const self = this;
       const _Math = Math;
       const rgbResult = this.rgb();
+      const color = rgbResult.round().color;
       const str2 = Math.round(255 * this.valpha);
-      const formatted = Math.round(255 * this.valpha)
-        .toString(16)
-        .toUpperCase();
+      const str3 = str2.toString(16);
+      const formatted = str3.toUpperCase();
       let text = formatted;
       if (1 === formatted.length) {
         text = `0${arr}`;
       }
       const to = _mod6033.to;
-      return to.hex(rgbResult.round().color) + text;
+      return to.hex(color) + text;
     }
   },
   rgbNumber() {
@@ -651,25 +553,29 @@ const point = {
     const color = this.rgb().color;
     const items = [];
     const entries = color.entries();
+    const tmp2 = entries[Symbol.iterator]();
     while (tmp2 !== undefined) {
+      let result1;
       let tmp5 = _slicedToArray(tmp3, 2);
       let result = tmp5[1] / 255;
-      let tmp7 = result;
+      let tmp8 = result;
+      let first = tmp5[0];
       if (result <= 0.04045) {
-        let result1 = tmp7 / 12.92;
+        result1 = tmp8 / 12.92;
       } else {
-        result1 = ((tmp7 + 0.055) / 1.055) ** 2.4;
+        result1 = ((tmp8 + 0.055) / 1.055) ** 2.4;
       }
-      items[tmp5[0]] = result1;
+      items[first] = result1;
       continue;
     }
     return 0.2126 * items[0] + 0.7152 * items[1] + 0.0722 * items[2];
   },
   contrast(luminosity) {
+    let result;
     const luminosityResult = this.luminosity();
     const luminosityResult1 = luminosity.luminosity();
     if (luminosityResult > luminosityResult1) {
-      let result = (luminosityResult + 0.05) / (luminosityResult1 + 0.05);
+      result = (luminosityResult + 0.05) / (luminosityResult1 + 0.05);
     } else {
       result = (luminosityResult1 + 0.05) / (luminosityResult + 0.05);
     }
@@ -761,7 +667,8 @@ const point = {
     return hslResult;
   },
   mix(cResult, BLACK) {
-    if (cResult) {
+    const tmp = cResult;
+    if (tmp) {
       if (cResult.rgb) {
         const self = this;
         const color = cResult.rgb();
@@ -771,13 +678,15 @@ const point = {
           num = BLACK;
         }
         const diff = 2 * num - 1;
-        const diff1 = color.alpha() - color2.alpha();
+        const alphaResult = color.alpha();
+        const diff1 = alphaResult - color2.alpha();
         let result = diff;
         if (diff * diff1 !== -1) {
           result = (diff + diff1) / (1 + diff * diff1);
         }
         const result1 = (result + 1) / 2;
         const diff2 = 1 - result1;
+        const rgb = Color.rgb;
         const result2 = result1 * color.red();
         const result3 = diff2 * color2.red();
         const result4 = result1 * color.green();
@@ -785,7 +694,7 @@ const point = {
         const result6 = result1 * color.blue();
         const result7 = diff2 * color2.blue();
         const result8 = color.alpha() * num;
-        return Color.rgb(result2 + result3, result4 + result5, result6 + result7, result8 + color2.alpha() * (1 - num));
+        return rgb(result2 + result3, result4 + result5, result6 + result7, result8 + color2.alpha() * (1 - num));
       }
     }
     const error = new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof cResult);
@@ -794,31 +703,36 @@ const point = {
 };
 Color.prototype = point;
 function _loop(item10136) {
+  let channels;
   _require = item10136;
   if (closure_3.includes(item10136)) {
+    let num = 1;
     return 1;
   } else {
-    channels = require("metro/06029__.js")[item10136].channels;
+    let tmp2 = channels;
+    channels = require("keys1")[item10136].channels;
     Color.prototype[item10136] = function () {
+      let tmp9Result;
       const self = this;
       const items = [...arguments];
-      if (this.model === closure_0) {
-        let tmp8Result = Color(self);
+      if (this.model === item10136) {
+        tmp9Result = Color(self);
       } else if (items.length > 0) {
-        tmp8Result = Color(items, closure_0);
+        tmp9Result = Color(items, item10136);
       } else {
-        const rawResult = _mod6029[self.model][closure_0].raw(self.color);
+        obj = keys12[self.model][item10136];
+        const rawResult = obj.raw(self.color);
         const _Array = Array;
-        let tmp2 = rawResult;
+        let tmp3 = rawResult;
         if (!Array.isArray(rawResult)) {
           const items1 = [rawResult];
-          tmp2 = items1;
+          tmp3 = items1;
         }
         const items2 = [];
-        items2[HermesBuiltin.arraySpread(tmp2, 0)] = self.valpha;
-        tmp8Result = Color(items2, closure_0);
+        items2[HermesBuiltin.arraySpread(items2, tmp3, 0)] = self.valpha;
+        tmp9Result = Color(items2, item10136);
       }
-      return tmp8Result;
+      return tmp9Result;
     };
     Color[item10136] = () => {
       const items = [...arguments];
@@ -836,11 +750,12 @@ function _loop(item10136) {
           } while (num < tmp4);
         }
       }
-      return Color(first, closure_0);
+      const tmp3 = Color(first, item10136);
+      return tmp3;
     };
   }
 }
-keys1 = Object.keys(_mod6029);
+keys1 = Object.keys(keys12);
 for (const item10136 of keys1) {
   let _loopResult = _loop(item10136);
   continue;

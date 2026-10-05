@@ -1,9 +1,7 @@
 // _runtime/metro/00776__.js
 import SEMANTIC_ATTRIBUTE_CACHE_HIT from "../00715_SEMANTIC_ATTRIBUTE_CACHE_HIT.js";
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const getHttpSpanDetailsFromUrlObject = function getHttpSpanDetailsFromUrlObject(
   hash,
@@ -12,17 +10,17 @@ export const getHttpSpanDetailsFromUrlObject = function getHttpSpanDetailsFromUr
   method,
   arg4,
 ) {
-  let str = arg4;
+  let tmp = arg4;
   const obj = {
     [closure_1_0(closure_1_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: arg2,
     [closure_1_0(closure_1_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "url",
   };
   if (arg4) {
-    let str2 = "url.template";
+    let str = "url.template";
     if ("server" === arg1) {
-      str2 = "http.route";
+      str = "http.route";
     }
-    obj[str2] = str;
+    obj[str] = tmp;
     obj[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "route";
   }
   method = undefined;
@@ -30,9 +28,11 @@ export const getHttpSpanDetailsFromUrlObject = function getHttpSpanDetailsFromUr
     method = method.method;
   }
   if (method) {
-    obj[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD] = method.method.toUpperCase();
+    const str4 = method.method;
+    obj[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD] = str4.toUpperCase();
   }
-  if (hash) {
+  const tmp5 = hash;
+  if (tmp5) {
     if (hash.search) {
       obj["url.query"] = hash.search;
     }
@@ -54,57 +54,67 @@ export const getHttpSpanDetailsFromUrlObject = function getHttpSpanDetailsFromUr
         obj["url.scheme"] = hash.protocol;
       }
       if (hash.hostname) {
-        let str9 = "url.domain";
+        let str8 = "url.domain";
         if ("server" === arg1) {
-          str9 = "server.address";
+          str8 = "server.address";
         }
-        obj[str9] = hash.hostname;
+        obj[str8] = hash.hostname;
       }
     }
   }
-  let str11;
+  let str10;
   if (method != null) {
     if (method.method != null) {
-      str11 = str12.toUpperCase();
+      str10 = str11.toUpperCase();
     }
   }
-  if (str11 == null) {
-    str11 = "GET";
+  if (str10 == null) {
+    str10 = "GET";
   }
-  if (!str) {
-    if (!hash) {
-      str = "/";
-    } else {
-      if ("client" !== arg1) {
-        const pathname2 = hash.pathname;
-      }
-      if ("isRelative" in hash) {
-        let pathname = hash.pathname;
+  if (!tmp) {
+    let str12 = "/";
+    if (hash) {
+      let pathname;
+      if ("client" === arg1) {
+        let pathname2;
+        if ("isRelative" in hash) {
+          pathname2 = hash.pathname;
+        } else {
+          const _URL = URL;
+          const self = this;
+          const self2 = this;
+          const str15 = new URL(hash);
+          str15.search = "";
+          str15.hash = "";
+          const items = ["80", "443"];
+          if (items.includes(str15.port)) {
+            str15.port = "";
+          }
+          if (str15.password) {
+            str15.password = "%filtered%";
+          }
+          if (str15.username) {
+            str15.username = "%filtered%";
+          }
+          pathname2 = str15.toString();
+        }
+        pathname = pathname2;
       } else {
-        const _URL = URL;
-        const str16 = new URL(hash);
-        str16.search = "";
-        str16.hash = "";
-        const items = ["80", "443"];
-        if (items.includes(str16.port)) {
-          str16.port = "";
-        }
-        if (str16.password) {
-          str16.password = "%filtered%";
-        }
-        if (str16.username) {
-          str16.username = "%filtered%";
-        }
-        pathname = str16.toString();
+        pathname = hash.pathname;
       }
+      str12 = pathname;
     }
+    tmp = str12;
   }
-  const items1 = ["" + str11 + " " + str, obj];
+  const items1 = ["" + str10 + " " + tmp, obj];
   return items1;
 };
 export const getSanitizedUrlString = function getSanitizedUrlString(path) {
+  let host;
+  let protocol;
   ({ protocol, host } = path);
   let str = "";
+  path = path.path;
   if (protocol) {
     const _HermesInternal = HermesInternal;
     str = "" + protocol + "://";
@@ -112,22 +122,21 @@ export const getSanitizedUrlString = function getSanitizedUrlString(path) {
   let str3;
   if (host != null) {
     const str5 = host.replace(/^.*@/, "[filtered]:[filtered]@");
-    str3 = host
-      .replace(/^.*@/, "[filtered]:[filtered]@")
-      .replace(/(:80)$/, "")
-      .replace(/(:443)$/, "");
-    const str6 = host.replace(/^.*@/, "[filtered]:[filtered]@").replace(/(:80)$/, "");
+    const str6 = str5.replace(/(:80)$/, "");
+    str3 = str6.replace(/(:443)$/, "");
   }
   if (!str3) {
     str3 = "";
   }
-  return "" + str + str3 + path.path;
+  return "" + str + str3 + path;
 };
 export const getSanitizedUrlStringFromUrlObject = function getSanitizedUrlStringFromUrlObject(pathname) {
   if ("isRelative" in pathname) {
     return pathname.pathname;
   } else {
     const _URL = URL;
+    const self = this;
+    const self2 = this;
     const str = new URL(pathname);
     str.search = "";
     str.hash = "";
@@ -148,39 +157,38 @@ export const isURLObjectRelative = function isURLObjectRelative(result) {
   return "isRelative" in result;
 };
 export const parseStringToURLObject = function parseStringToURLObject(to, arg1) {
-  let tmp2 = to.indexOf("://") <= 0;
-  if (tmp2) {
-    tmp2 = 0 !== to.indexOf("//");
-  }
-  let tmp3 = arg1;
+  const tmp = to.indexOf("://") <= 0 && 0 !== to.indexOf("//");
+  let tmp2 = arg1;
   if (arg1 == null) {
     let str2;
-    if (tmp2) {
+    if (tmp) {
       str2 = "thismessage:/";
     }
-    tmp3 = str2;
+    tmp2 = str2;
   }
   try {
+    let tmp8;
     const _URL = URL;
     if ("canParse" in URL) {
       const _URL2 = URL;
     }
     const _URL3 = URL;
-    const uRL = new URL(to, tmp3);
-    if (tmp2) {
-      const obj = { isRelative: tmp2, pathname: null, search: null, hash: null };
+    const self = this;
+    const self2 = this;
+    const uRL = new URL(to, tmp2);
+    if (tmp) {
+      const obj = { isRelative: tmp, pathname: null, search: null, hash: null };
       ({ pathname: obj.pathname, search: obj.search, hash: obj.hash } = uRL);
-      let tmp11 = obj;
+      tmp8 = obj;
     } else {
-      tmp11 = uRL;
+      tmp8 = uRL;
     }
-    return tmp11;
-  } catch (err) {
-    return tmp;
-  }
+    return tmp8;
+  } catch (err) {}
 };
 export const parseUrl = function parseUrl(str) {
-  if (str) {
+  const tmp = str;
+  if (tmp) {
     const match = str.match(/^(([^:/?#]+):)?(\/\/([^/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?$/);
     if (match) {
       const url = {

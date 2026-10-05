@@ -3,112 +3,122 @@ import _mod12571 from "metro/12571__.js";
 import _mod12572 from "metro/12572__.js";
 import _mod12576 from "metro/12576__.js";
 import _mod12610 from "metro/12610__.js";
-import _slicedToArray from "metro/00032__.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 
-export const eventFromMessage = function eventFromMessage(fn, value, arg2) {
-  let str = arg2;
-  if (arg2 === undefined) {
+let hasOwnProperty;
+
+export const eventFromMessage = function eventFromMessage(fn, value) {
+  let items;
+  let obj4;
+  let str = info;
+  if (info === undefined) {
     str = "info";
   }
-  if (event_id) {
-    event_id = event_id.event_id;
-  }
-  const obj = { event_id, level: str };
-  if (arg4) {
+  const obj = { event_id: event_id && event_id.event_id, level: str };
+  if (attachStacktrace) {
     if (event_id) {
       if (event_id.syntheticException) {
-        const arr = fn(event_id.syntheticException.stack || "", 1);
+        const tmp2 = event_id.syntheticException.stack || "";
+        const arr = fn(tmp2, 1);
         if (arr.length) {
-          const obj2 = { values: null };
-          const obj3 = { value, stacktrace: null };
-          const obj4 = { frames: arr };
-          obj3.stacktrace = obj4;
-          const items = [obj3];
-          obj2.values = items;
+          const obj3 = { value, stacktrace: obj4 };
+          const obj2 = { values: items };
+          items = [obj3];
+          obj4 = { frames: arr };
           obj.exception = obj2;
-          const result = _mod12576.addExceptionMechanism(obj, { synthetic: true });
+          const obj5 = _mod12576;
+          const result = obj5.addExceptionMechanism(obj, { synthetic: true });
         }
-        const tmp = event_id.syntheticException.stack || "";
       }
     }
   }
+  const obj6 = _mod12572;
   if (obj6.isParameterizedString(value)) {
+    const obj11 = { message: null, params: null };
     ({ __sentry_template_string__: obj7.message, __sentry_template_values__: obj7.params } = value);
-    obj.logentry = { message: null, params: null };
+    obj.logentry = obj11;
     return obj;
   } else {
     obj.message = value;
     return obj;
   }
-  obj6 = _mod12572;
 };
 export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, fn, name, data) {
-  if (data) {
-    data = data.data;
-  }
-  if (data) {
-    data = data.data.mechanism;
-  }
-  if (!data) {
-    data = { handled: true, type: "generic" };
-  }
-  if (obj2.isError(name)) {
-    const items = [name, undefined];
-    let items3 = items;
-  } else {
-    data.synthetic = true;
-    if (tmp2Result.isPlainObject(name)) {
-      let normalizeDepth = getOptions;
-      if (getOptions) {
-        normalizeDepth = getOptions.getOptions().normalizeDepth;
+  let error;
+  let items3;
+  let items4;
+  let obj8;
+  let tmp10;
+  let tmp27;
+  let tmp3Result2;
+  function getObjectClassName(name) {
+    try {
+      const _Object = Object;
+      const prototypeOf = Object.getPrototypeOf(name);
+      name = undefined;
+      if (prototypeOf) {
+        name = prototypeOf.constructor.name;
       }
-      const obj = { __serialized__: _mod12610.normalizeToSize(name, normalizeDepth) };
-      let tmp12;
+      return name;
+    } catch (err) {}
+  }
+  const tmp2 = (data && data.data && data.data.mechanism) || { handled: true, type: "generic" };
+  const obj = _mod12572;
+  if (obj.isError(name)) {
+    const items = [name, undefined];
+    items3 = items;
+  } else {
+    tmp2.synthetic = true;
+    const tmp3Result = _mod12572;
+    if (tmp3Result.isPlainObject(name)) {
+      const obj2 = { __serialized__: tmp3Result2.normalizeToSize(name, tmp10) };
+      tmp10 = getOptions && getOptions.getOptions().normalizeDepth;
+      let tmp13;
+      tmp3Result2 = _mod12610;
       const keys = Object.keys();
       if (keys !== undefined) {
         while (keys[tmp] !== undefined) {
           let _Object = Object;
           hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (!(typeof call === "unknown" ? hasOwnProperty(tmp14) : call(name, tmp14))) {
+          if (!hasOwnProperty.call(name, tmp15)) {
             continue;
           } else {
-            let tmp15 = name[tmp14];
+            let tmp16 = name[tmp15];
             let _Error2 = Error;
-            tmp12 = tmp15;
-            if (tmp15 instanceof Error) {
+            tmp13 = tmp16;
+            if (tmp16 instanceof Error) {
               break;
             }
           }
           continue;
         }
       }
-      if (tmp12) {
-        const items1 = [tmp12, obj];
+      if (tmp13) {
+        const items1 = [tmp13, obj2];
         items3 = items1;
       } else {
+        let message;
         if ("name" in name) {
           if (typeof name.name === "string") {
             const _HermesInternal5 = HermesInternal;
             const combined = "'" + name.name + "' captured as exception";
             let sum = combined;
-            if (tmp21) {
+            const tmp22 = "message" in name && typeof name.message === "string";
+            if (tmp22) {
               const _HermesInternal6 = HermesInternal;
               sum = combined + " with message '" + name.message + "'";
             }
-            let message = sum;
-            tmp21 = "message" in name && typeof name.message === "string";
+            message = sum;
           }
-          let syntheticException2 = data;
-          if (data) {
-            syntheticException2 = data.syntheticException;
-          }
-          if (!syntheticException2) {
+          let error1 = data && data.syntheticException;
+          if (!error1) {
             const _Error3 = Error;
-            syntheticException2 = new Error(message);
+            const self3 = this;
+            const self4 = this;
+            error1 = new Error(message);
           }
-          syntheticException2.message = message;
-          const items2 = [syntheticException2, obj];
+          error1.message = message;
+          const items2 = [error1, obj2];
           items3 = items2;
         }
         if ("message" in name) {
@@ -116,86 +126,66 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
             message = name.message;
           }
         }
-        const result = _mod12571.extractExceptionKeysForMessage(name);
-        if (obj7.isErrorEvent(name)) {
+        const obj5 = _mod12571;
+        const result = obj5.extractExceptionKeysForMessage(name);
+        const obj6 = _mod12572;
+        if (obj6.isErrorEvent(name)) {
           const _HermesInternal4 = HermesInternal;
           message = "Event `ErrorEvent` captured as exception with message `" + name.message + "`";
         } else {
-          const tmp19 = (function getObjectClassName(name) {
-            try {
-              const _Object = Object;
-              const prototypeOf = Object.getPrototypeOf(name);
-              name = undefined;
-              if (prototypeOf) {
-                name = prototypeOf.constructor.name;
-              }
-              return name;
-            } catch (err) {
-              return tmp;
-            }
-          })(name);
+          const tmp20 = getObjectClassName(name);
           let str5 = "Object";
-          if (tmp19) {
+          if (tmp20) {
             str5 = "Object";
-            if ("Object" !== tmp19) {
+            if ("Object" !== tmp20) {
               const _HermesInternal2 = HermesInternal;
-              str5 = "'" + tmp19 + "'";
+              str5 = "'" + tmp20 + "'";
             }
           }
           const _HermesInternal3 = HermesInternal;
           message = "" + str5 + " captured as exception with keys: " + result;
         }
-        obj7 = _mod12572;
       }
-      const tmp2Result2 = _mod12610;
     } else {
-      let syntheticException = data;
-      if (data) {
-        syntheticException = data.syntheticException;
-      }
-      if (!syntheticException) {
+      let error2 = data && data.syntheticException;
+      if (!error2) {
         const _Error = Error;
-        syntheticException = new Error(name);
+        const self = this;
+        const self2 = this;
+        error2 = new Error(name);
       }
       const _HermesInternal = HermesInternal;
-      syntheticException.message = "" + name;
-      items3 = [syntheticException, undefined];
+      error2.message = "" + name;
+      items3 = [error2, undefined];
     }
-    tmp2Result = _mod12572;
   }
-  obj2 = _mod12572;
   [error, tmp27] = items3;
   const obj3 = { type: error.name || error.constructor.name, value: error.message };
-  const arr5 = fn(error.stack || "", 1);
+  _slicedToArray(items3, 2);
+  const tmp29 = error.stack || "";
+  const arr5 = fn(tmp29, 1);
   if (arr5.length) {
     const obj4 = { frames: arr5 };
     obj3.stacktrace = obj4;
   }
-  const obj5 = { exception: null };
-  const obj8 = { values: null };
-  const items4 = [obj3];
-  obj8.values = items4;
-  obj5.exception = obj8;
+  const obj7 = { exception: obj8 };
+  obj8 = { values: items4 };
+  items4 = [obj3];
   if (tmp27) {
-    obj5.extra = tmp27;
+    obj7.extra = tmp27;
   }
-  const tmp26 = _slicedToArray(items3, 2);
-  const tmp28 = error.name || error.constructor.name;
-  const tmp29 = error.stack || "";
-  const result1 = _mod12576.addExceptionTypeValue(obj5, undefined, undefined);
-  const result2 = _mod12576.addExceptionMechanism(obj5, data);
-  const obj9 = {};
-  const merged = Object.assign(obj5);
-  let event_id = data;
-  if (data) {
-    event_id = data.event_id;
-  }
-  obj9.event_id = event_id;
+  const obj11 = _mod12576;
+  const result1 = obj11.addExceptionTypeValue(obj7, undefined, undefined);
+  const obj12 = _mod12576;
+  const result2 = obj12.addExceptionMechanism(obj7, tmp2);
+  const obj9 = { event_id: data && data.event_id };
+  const merged = Object.assign(obj7);
   return obj9;
 };
 export const exceptionFromError = function exceptionFromError(fn, name) {
   const obj = { type: name.name || name.constructor.name, value: name.message };
-  const arr = fn(name.stack || "", 1);
+  const tmp2 = name.stack || "";
+  const arr = fn(tmp2, 1);
   if (arr.length) {
     const obj2 = { frames: arr };
     obj.stacktrace = obj2;
@@ -203,5 +193,6 @@ export const exceptionFromError = function exceptionFromError(fn, name) {
   return obj;
 };
 export const parseStackFrames = function parseStackFrames(fn, stack) {
-  return fn(stack.stack || "", 1);
+  const tmp = stack.stack || "";
+  return fn(tmp, 1);
 };

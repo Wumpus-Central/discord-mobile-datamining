@@ -2,13 +2,13 @@
 import _mod917 from "metro/00917__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const whenIdleOrHidden = (fn) => {
   _require = fn;
+  const tmp3 = require("metro/00915__.js").WINDOW.requestIdleCallback || require("metro/00915__.js").WINDOW.setTimeout;
   const _document = tmp(915).WINDOW.document;
   let visibilityState;
   if (_document != null) {
@@ -17,18 +17,19 @@ export const whenIdleOrHidden = (fn) => {
   if ("hidden" === visibilityState) {
     fn();
   } else {
-    const runOnceResult = tmp(924).runOnce(fn);
+    const tmpResult = require("runOnce");
+    const runOnceResult = tmpResult.runOnce(fn);
     _require = runOnceResult;
-    const tmpResult = tmp(924);
-    tmp(917).addPageListener("visibilitychange", runOnceResult, { once: true, capture: true });
-    const tmpResult3 = tmp(917);
-    tmp(917).addPageListener("pagehide", runOnceResult, { once: true, capture: true });
+    const tmpResult3 = require("metro/00917__.js");
+    tmpResult3.addPageListener("visibilitychange", runOnceResult, { once: true, capture: true });
+    const tmpResult4 = require("metro/00917__.js");
+    tmpResult4.addPageListener("pagehide", runOnceResult, { once: true, capture: true });
     tmp3(() => {
-      closure_0();
-      _mod917.removePageListener("visibilitychange", closure_0, { capture: true });
-      _mod917.removePageListener("pagehide", closure_0, { capture: true });
+      fn();
+      const obj = _mod917;
+      obj.removePageListener("visibilitychange", fn, { capture: true });
+      const obj2 = _mod917;
+      obj2.removePageListener("pagehide", fn, { capture: true });
     });
-    const tmpResult4 = tmp(917);
   }
-  tmp3 = require("metro/00915__.js").WINDOW.requestIdleCallback || require("metro/00915__.js").WINDOW.setTimeout;
 };

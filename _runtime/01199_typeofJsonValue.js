@@ -1,6 +1,6 @@
 // _runtime/01199_typeofJsonValue.js
 
-export const typeofJsonValue = function typeofJsonValue(obj) {
+export const typeofJsonValue = function typeofJsonValue(PbLong) {
   if (typeof obj === "object") {
     const _Array = Array;
     if (Array.isArray(obj)) {

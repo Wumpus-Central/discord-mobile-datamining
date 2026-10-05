@@ -1,44 +1,50 @@
 // _runtime/06034_swizzle.js
-import _mod6035 from "metro/06035__.js";
+import isArrayish from "06035_isArrayish.js";
 
 function swizzle(arg0) {
   let items = [];
   let num = 0;
   let tmp = items;
-  if (0 < length) {
-    while (!_mod6035(arg0[num])) {
-      let arr = items.push(tmp2);
+  if (0 < arg0.length) {
+    do {
+      let callResult;
+      let tmp2 = arg0[num];
+      if (isArrayish(tmp2)) {
+        callResult = concat.call(items, slice.call(tmp2));
+      } else {
+        let arr = items.push(tmp2);
+        callResult = items;
+      }
       num = num + 1;
-      items = tmp6;
-      tmp = tmp6;
-    }
-    const call = concat.call;
-    const call2 = slice.call;
-    const tmp11 = typeof call2 === "unknown" ? slice() : call2(arg0[num]);
-    typeof call === "unknown" ? concat(tmp11) : call(items, tmp11);
+      items = callResult;
+      tmp = callResult;
+    } while (num < arg0.length);
   }
   return tmp;
 }
 swizzle.wrap = (arg0) => {
-  closure_0 = arg0;
-  return () => {
+  let closure_0 = arg0;
+  return function () {
     if (typeof swizzle === "function") {
       const items = [];
+      const length = arguments.length;
       let num = 0;
       let arr2 = items;
       let tmp2 = items;
       if (0 < length) {
-        const tmp3 = arguments[num];
-        while (!_mod6035(tmp3)) {
-          let arr = arr2.push(tmp3);
+        do {
+          let callResult;
+          let tmp3 = arguments[num];
+          if (isArrayish(tmp3)) {
+            callResult = concat.call(arr2, slice.call(tmp3));
+          } else {
+            let arr = arr2.push(tmp3);
+            callResult = arr2;
+          }
           num = num + 1;
-          arr2 = tmp7;
-          tmp2 = tmp7;
-        }
-        const call = concat.call;
-        const call2 = slice.call;
-        const tmp12 = typeof call2 === "unknown" ? slice() : call2(tmp3);
-        typeof call === "unknown" ? concat(tmp12) : call(arr2, tmp12);
+          arr2 = callResult;
+          tmp2 = callResult;
+        } while (num < length);
       }
       return tmp(tmp2);
     } else {

@@ -1,8 +1,18 @@
 // _runtime/10504_Layouts.js
+import normalLayout from "10505_normalLayout.js";
+import parallaxLayout from "10506_parallaxLayout.js";
+import horizontalStackLayout from "10507_horizontalStackLayout.js";
+
+({
+  normal: normalLayout.normalLayout,
+  parallax: parallaxLayout.parallaxLayout,
+  horizontalStack: horizontalStackLayout.horizontalStackLayout,
+  verticalStack: horizontalStackLayout.verticalStackLayout,
+});
 
 export const Layouts = {
-  normal: fn(10505).normalLayout,
-  parallax: fn(10506).parallaxLayout,
-  horizontalStack: fn(10507).horizontalStackLayout,
-  verticalStack: fn(10507).verticalStackLayout,
+  normal: normalLayout.normalLayout,
+  parallax: parallaxLayout.parallaxLayout,
+  horizontalStack: horizontalStackLayout.horizontalStackLayout,
+  verticalStack: horizontalStackLayout.verticalStackLayout,
 };

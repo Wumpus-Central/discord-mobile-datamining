@@ -10,6 +10,9 @@ export default function adler32(arg0, arg1, arg2, arg3) {
   let tmp7 = tmp3;
   if (0 !== arg2) {
     do {
+      let sum;
+      let tmp15;
+      let tmp16;
       let tmp8 = result1;
       let tmp9 = result;
       let tmp10 = tmp2;
@@ -20,9 +23,9 @@ export default function adler32(arg0, arg1, arg2, arg3) {
       diff = tmp - num;
       do {
         let tmp13 = +tmp10;
-        let sum = tmp13 + 1;
-        let tmp15 = (tmp9 + arg1[tmp13]) | 0;
-        let tmp16 = (tmp8 + tmp15) | 0;
+        sum = tmp13 + 1;
+        tmp15 = (tmp9 + arg1[tmp13]) | 0;
+        tmp16 = (tmp8 + tmp15) | 0;
         num = num - 1;
         tmp8 = tmp16;
         tmp9 = tmp15;

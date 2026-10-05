@@ -1,24 +1,18 @@
 // _runtime/metro/10182__.js
-import Filter from "../10180_Filter.js";
+import _mod10180 from "10180__.js";
+import mergeDateTimeComponent from "../10183_mergeDateTimeComponent.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const AbstractMergeDateTimeRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -27,25 +21,20 @@ function _isNativeReflectConstruct() {
 }
 class AbstractMergeDateTimeRefiner {
   constructor() {
-    self = this;
-    tmp = c2(this, AbstractMergeDateTimeRefiner);
-    tmp2 = closure_4;
-    obj = closure_4(AbstractMergeDateTimeRefiner);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, AbstractMergeDateTimeRefiner);
+    const obj = _getPrototypeOf(AbstractMergeDateTimeRefiner);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return tmp3(self, constructResult);
+    return c3(self, constructResult);
   }
 }
-_inherits(AbstractMergeDateTimeRefiner, Filter.MergingRefiner);
+_inherits(AbstractMergeDateTimeRefiner, _mod10180.MergingRefiner);
 const entry = {
   key: "shouldMergeResults",
   value: function shouldMergeResults(str, start, start2) {
@@ -77,8 +66,9 @@ const items = [
     key: "mergeResults",
     value: function mergeResults(arg0, start, text) {
       start = start.start;
-      const mergeDateTimeResult = AbstractMergeDateTimeRefiner(10183).mergeDateTimeResult;
-      const tmp2 = start.isOnlyDate() ? mergeDateTimeResult(start, text) : mergeDateTimeResult(text, start);
+      const isOnlyDateResult = start.isOnlyDate();
+      const mergeDateTimeResult = mergeDateTimeComponent.mergeDateTimeResult;
+      const tmp2 = isOnlyDateResult ? mergeDateTimeResult(start, text) : mergeDateTimeResult(text, start);
       tmp2.index = start.index;
       tmp2.text = start.text + arg0 + text.text;
       return tmp2;

@@ -1,24 +1,26 @@
 // _runtime/metro/00765__.js
-import dateTimestampInSeconds from "../00714_dateTimestampInSeconds.js";
-import forEachEnvelopeItem from "../00740_forEachEnvelopeItem.js";
+import browserPerformanceTimeOrigin from "../00714_browserPerformanceTimeOrigin.js";
+import _mod740 from "00740__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const createClientReportEnvelope = function createClientReportEnvelope(discarded_events, dsn, arg2) {
+  let obj3;
   let result = arg2;
   const items = [{ type: "client_report" }];
   if (!arg2) {
-    result = dateTimestampInSeconds.dateTimestampInSeconds();
+    const obj = browserPerformanceTimeOrigin;
+    result = obj.dateTimestampInSeconds();
   }
   items[1] = { timestamp: result, discarded_events };
+  const createEnvelope = _mod740.createEnvelope;
+  _mod740;
   if (dsn) {
-    const obj3 = { dsn };
-    let obj4 = obj3;
+    obj3 = { dsn };
+    const obj2 = { dsn };
   } else {
-    obj4 = {};
+    obj3 = {};
   }
   const items1 = [items];
-  return forEachEnvelopeItem.createEnvelope(obj4, items1);
+  return createEnvelope(obj3, items1);
 };

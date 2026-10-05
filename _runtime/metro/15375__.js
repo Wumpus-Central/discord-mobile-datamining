@@ -1,23 +1,34 @@
 // _runtime/metro/15375__.js
-import _mod19 from "00019__.js";
-import _mod32 from "00032__.js";
+import react2 from "../00019_react.js";
+import _slicedToArray2 from "00032__slicedToArray.js";
 import PLAY_MODE from "../15374_PLAY_MODE.js";
-import _mod15377 from "15377__.js";
+import _extends from "15377__extends.js";
 import PLAYER_FUNCTIONS3 from "../15378_PLAYER_FUNCTIONS.js";
 import deepComparePlayList from "../15380_deepComparePlayList.js";
 import 07953__ from "07953__.js";
-import _getRequireWildcardCache from "../15376__getRequireWildcardCache.js";
-import get_ActivityIndicator from "00017__.js";
+import _typeof from "15376__typeof.js";
+import react_native from "../00017_react-native.js";
 
-module_7953(_mod15377);
-let _slicedToArray = module_7953(_mod32);
-const noop = _getRequireWildcardCache(_mod19);
+let closure_12;
+
+module_7953(_extends);
+let _slicedToArray = module_7953(_slicedToArray2);
+const react = _typeof(react2);
 const self = this;
 let c7 = "/Users/ananthukanive/side-proj/react-native-youtube-iframe/src/YoutubeIframe.js";
-const StyleSheet = get_ActivityIndicator.StyleSheet;
+const StyleSheet = react_native.StyleSheet;
 const styles = StyleSheet.create({ webView: { backgroundColor: "transparent" } });
 
-export default noop.forwardRef(function YoutubeIframe(videoId, arg1) {
+export default react.forwardRef(function YoutubeIframe(videoId, arg1) {
+  let allowWebViewZoom;
+  let closure_3;
+  let height;
+  let initialPlayerParams;
+  let items6;
+  let str;
+  let webViewProps;
+  let webViewStyle;
+  let width;
   videoId = videoId.videoId;
   const playList = videoId.playList;
   let play = videoId.play;
@@ -28,6 +39,7 @@ export default noop.forwardRef(function YoutubeIframe(videoId, arg1) {
   }
   play = tmp;
   const mute = videoId.mute;
+  const tmp2 = undefined !== mute && mute;
   _slicedToArray = tmp2;
   const volume = videoId.volume;
   let num = 100;
@@ -65,9 +77,11 @@ export default noop.forwardRef(function YoutubeIframe(videoId, arg1) {
     num4 = playListStartIndex;
   }
   ({ initialPlayerParams, allowWebViewZoom } = videoId);
+  const tmp3 = undefined !== allowWebViewZoom && allowWebViewZoom;
   closure_12 = tmp3;
   const forceAndroidAutoplay = videoId.forceAndroidAutoplay;
   let fn3 = videoId.onChangeState;
+  const tmp4 = undefined !== forceAndroidAutoplay && forceAndroidAutoplay;
   if (undefined === fn3) {
     fn3 = (arg0) => {
 
@@ -91,82 +105,93 @@ export default noop.forwardRef(function YoutubeIframe(videoId, arg1) {
 
     };
   }
+  let obj = num;
   const defaultResult = _slicedToArray.default(num.useState(false), 2);
   const first = defaultResult[0];
-  closure_18 = defaultResult[1];
+  let closure_18 = defaultResult[1];
   let ref = num.useRef(videoId);
-  num.useRef(playList);
+  const ref2 = num.useRef(playList);
+  const useRef = num.useRef;
   if (!initialPlayerParams) {
     initialPlayerParams = {};
   }
-  ref = num.useRef(initialPlayerParams);
+  ref = useRef(initialPlayerParams);
   const ref1 = obj.useRef(null);
+  const useRef2 = obj.useRef;
   const eventEmitter = new videoId(playList[6]).EventEmitter();
-  num.useRef(eventEmitter);
+  const ref3 = useRef2(eventEmitter);
   const imperativeHandle = obj.useImperativeHandle(arg1, () => ({
     getVideoUrl() {
       let current = ref1.current;
       current.injectJavaScript(videoId(playList[7]).PLAYER_FUNCTIONS.getVideoUrlScript);
-      return new Promise((arg0) => {
+      const promise = new Promise((arg0) => {
         const current = ref.current;
         current.once("getVideoUrl", arg0);
       });
+      return promise;
     },
     getDuration() {
       let current = ref1.current;
       current.injectJavaScript(videoId(playList[7]).PLAYER_FUNCTIONS.durationScript);
-      return new Promise((arg0) => {
+      const promise = new Promise((arg0) => {
         const current = ref.current;
         current.once("getDuration", arg0);
       });
+      return promise;
     },
     getCurrentTime() {
       let current = ref1.current;
       current.injectJavaScript(videoId(playList[7]).PLAYER_FUNCTIONS.currentTimeScript);
-      return new Promise((arg0) => {
+      const promise = new Promise((arg0) => {
         const current = ref.current;
         current.once("getCurrentTime", arg0);
       });
+      return promise;
     },
     isMuted() {
       let current = ref1.current;
       current.injectJavaScript(videoId(playList[7]).PLAYER_FUNCTIONS.isMutedScript);
-      return new Promise((arg0) => {
+      const promise = new Promise((arg0) => {
         const current = ref.current;
         current.once("isMuted", arg0);
       });
+      return promise;
     },
     getVolume() {
       let current = ref1.current;
       current.injectJavaScript(videoId(playList[7]).PLAYER_FUNCTIONS.getVolumeScript);
-      return new Promise((arg0) => {
+      const promise = new Promise((arg0) => {
         const current = ref.current;
         current.once("getVolume", arg0);
       });
+      return promise;
     },
     getPlaybackRate() {
       let current = ref1.current;
       current.injectJavaScript(videoId(playList[7]).PLAYER_FUNCTIONS.getPlaybackRateScript);
-      return new Promise((arg0) => {
+      const promise = new Promise((arg0) => {
         const current = ref.current;
         current.once("getPlaybackRate", arg0);
       });
+      return promise;
     },
     getAvailablePlaybackRates() {
       let current = ref1.current;
       current.injectJavaScript(videoId(playList[7]).PLAYER_FUNCTIONS.getAvailablePlaybackRatesScript);
-      return new Promise((arg0) => {
+      const promise = new Promise((arg0) => {
         const current = ref.current;
         current.once("getAvailablePlaybackRates", arg0);
       });
+      return promise;
     },
     seekTo(arg0, arg1) {
       const current = ref1.current;
+      const injectJavaScript = current.injectJavaScript;
       const PLAYER_FUNCTIONS = videoId(playList[7]).PLAYER_FUNCTIONS;
-      current.injectJavaScript(PLAYER_FUNCTIONS.seekToScript(arg0, arg1));
+      injectJavaScript(PLAYER_FUNCTIONS.seekToScript(arg0, arg1));
     }
   }), []);
-  let items = [tmp, undefined !== mute && mute, num, num3, first];
+  let items = [tmp, tmp2, num, num3, first];
   const effect = obj.useEffect(() => {
     if (first) {
       const items = [PLAYER_FUNCTIONS3.playMode[play], PLAYER_FUNCTIONS3.soundMode[closure_3], , ];
@@ -179,31 +204,24 @@ export default noop.forwardRef(function YoutubeIframe(videoId, arg1) {
   }, items);
   const items1 = [videoId, tmp, first];
   const effect1 = obj.useEffect(() => {
-    let tmp = first;
-    if (first) {
-      tmp = ref.current !== videoId;
-    }
+    const tmp = first && ref.current !== videoId;
     if (tmp) {
       ref.current = videoId;
       const current = ref1.current;
+      const injectJavaScript = current.injectJavaScript;
       const PLAYER_FUNCTIONS = PLAYER_FUNCTIONS3.PLAYER_FUNCTIONS;
-      current.injectJavaScript(PLAYER_FUNCTIONS.loadVideoById(videoId, play));
+      injectJavaScript(PLAYER_FUNCTIONS.loadVideoById(videoId, play));
     }
   }, items1);
   const items2 = [playList, tmp, num4, first];
   const effect2 = obj.useEffect(() => {
-    let tmp = first;
-    if (first) {
-      tmp = playList;
-    }
-    if (tmp) {
-      tmp = !deepComparePlayList.deepComparePlayList(ref2.current, playList);
-    }
+    const tmp = first && playList && !deepComparePlayList.deepComparePlayList(ref2.current, playList);
     if (tmp) {
       ref2.current = playList;
       const current = ref1.current;
+      const injectJavaScript = current.injectJavaScript;
       const PLAYER_FUNCTIONS = PLAYER_FUNCTIONS3.PLAYER_FUNCTIONS;
-      current.injectJavaScript(PLAYER_FUNCTIONS.loadPlaylist(playList, num4, play));
+      injectJavaScript(PLAYER_FUNCTIONS.loadPlaylist(playList, num4, play));
     }
   }, items2);
   const items3 = [fn2, fn, fn3, fn4, fn6, fn5];
@@ -216,49 +234,47 @@ export default noop.forwardRef(function YoutubeIframe(videoId, arg1) {
       if ("fullScreenChange" === eventType) {
         fn4(parsed.data);
       } else if ("playerStateChange" === eventType) {
-        fn3(PLAY_MODE.PLAYER_STATES[tmp4.data]);
+        fn3(PLAY_MODE.PLAYER_STATES[parsed.data]);
       } else if ("playerReady" === eventType) {
         fn2();
         closure_18(true);
       } else if ("playerQualityChange" === eventType) {
-        fn5(tmp4.data);
+        fn5(parsed.data);
       } else if ("playerError" === eventType) {
-        fn(PLAY_MODE.PLAYER_ERROR[tmp4.data]);
+        fn(PLAY_MODE.PLAYER_ERROR[parsed.data]);
       } else if ("playbackRateChange" === eventType) {
-        fn6(tmp4.data);
+        fn6(parsed.data);
       } else {
         const current = ref3.current;
-        current.emit(tmp4.eventType, tmp4.data);
+        current.emit(parsed.eventType, parsed.data);
       }
     } catch (tmp30) {
       const _console = console;
       console.warn("[rn-youtube-iframe]", tmp30);
     }
   }, items3);
-  const items5 = [useLocalHTML, num2, baseUrlOverride, undefined !== allowWebViewZoom && allowWebViewZoom];
+  const items5 = [useLocalHTML, num2, baseUrlOverride, tmp3];
   const callback1 = obj.useCallback((mainDocumentURL) => {
     try {
-      let url = mainDocumentURL.mainDocumentURL;
-      if (!url) {
-        url = mainDocumentURL.url;
-      }
-      let startsWithResult = "ios" === get_ActivityIndicator.Platform.OS;
-      if (startsWithResult) {
-        startsWithResult = "about:blank" === obj;
-      }
+      const url = mainDocumentURL.mainDocumentURL || mainDocumentURL.url;
+      let startsWithResult = "ios" === react_native.Platform.OS && "about:blank" === tmp2;
       if (!startsWithResult) {
         let DEFAULT_BASE_URL = baseUrlOverride;
+        const startsWith = tmp2.startsWith;
         if (!baseUrlOverride) {
           DEFAULT_BASE_URL = PLAY_MODE.DEFAULT_BASE_URL;
         }
-        startsWithResult = obj.startsWith(DEFAULT_BASE_URL);
+        startsWithResult = startsWith(DEFAULT_BASE_URL);
       }
       return startsWithResult;
     } catch (err) {
       return true;
     }
   }, items4);
+  const _default = obj.default;
+  const _default2 = obj.default;
   const memo = obj.useMemo(() => {
+    const MAIN_SCRIPTResult = PLAYER_FUNCTIONS3.MAIN_SCRIPT(ref.current, ref2.current, ref.current, closure_12, num2);
     if (useLocalHTML) {
       const obj2 = { html: MAIN_SCRIPTResult.htmlString };
       if (baseUrlOverride) {
@@ -266,24 +282,30 @@ export default noop.forwardRef(function YoutubeIframe(videoId, arg1) {
       }
       return obj2;
     } else {
-      let DEFAULT_BASE_URL = baseUrlOverride;
-      if (!baseUrlOverride) {
-        DEFAULT_BASE_URL = PLAY_MODE.DEFAULT_BASE_URL;
-      }
-      const obj = { uri: `${DEFAULT_BASE_URL}?data=${tmp3.urlEncodedJSON}` };
+      const obj = { uri: `${baseUrlOverride || PLAY_MODE.DEFAULT_BASE_URL}?data=${tmp3.urlEncodedJSON}` };
+      baseUrlOverride || PLAY_MODE.DEFAULT_BASE_URL;
       return obj;
     }
-    MAIN_SCRIPTResult = PLAYER_FUNCTIONS3.MAIN_SCRIPT(ref.current, ref2.current, ref.current, closure_12, num2);
   }, items5);
-  const obj3 = { bounces: false, originWhitelist: ["*"], allowsInlineMediaPlayback: true, style: null, mediaPlaybackRequiresUserAction: false, onShouldStartLoadWithRequest: callback1, allowsFullscreenVideo: !ref.current.preventFullScreen, userAgent: null };
-  const items6 = [num2.webView, webViewStyle];
-  obj3.style = items6;
-  let str = "";
+  const createElement = _default.createElement;
+  const View = useLocalHTML.View;
+  const createElement2 = _default2.createElement;
+  const obj3 = { bounces: false, originWhitelist: ["*"], allowsInlineMediaPlayback: true, style: items6, mediaPlaybackRequiresUserAction: false, onShouldStartLoadWithRequest: callback1, allowsFullscreenVideo: !ref.current.preventFullScreen, userAgent: str };
+  items6 = [num2.webView, webViewStyle];
+  str = "";
+  const WebView = videoId(playList[10]).WebView;
+  const _default3 = play.default;
+  const tmp10 = playList;
+  const tmp19 = useLocalHTML;
+  const tmp20 = baseUrlOverride;
+  const tmp21 = num3;
+  const tmp9 = videoId;
   if (tmp4) {
-    const Platform = useLocalHTML.Platform;
-    const obj4 = { android: videoId(playList[9]).CUSTOM_USER_AGENT, ios: "" };
-    str = Platform.select(obj4);
+    const Platform = tmp19.Platform;
+    const select = Platform.select;
+    const obj4 = { android: tmp9(tmp10[9]).CUSTOM_USER_AGENT, ios: "" };
+    str = select(obj4);
   }
-  obj3.userAgent = str;
-  return <useLocalHTML.View style={{ height, width }} __self={baseUrlOverride} __source={{ fileName: num3, lineNumber: 251, columnNumber: 5 }}>{num.default.createElement(videoId(playList[10]).WebView, play.default(obj3, webViewProps, { source: memo, ref: ref1, onMessage: callback, __self: baseUrlOverride, __source: { fileName: num3, lineNumber: 252, columnNumber: 7 } }))}</useLocalHTML.View>;
+  const obj5 = { source: memo, ref: ref1, onMessage: callback, __self: tmp20, __source: { fileName: tmp21, lineNumber: 252, columnNumber: 7 } };
+  return <View style={{ height, width }} __self={baseUrlOverride} __source={{ fileName: num3, lineNumber: 251, columnNumber: 5 }}>{createElement2(WebView, _default3(obj3, webViewProps, obj5))}</View>;
 });

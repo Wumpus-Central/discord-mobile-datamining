@@ -1,0 +1,11 @@
+// _runtime/03624_AssetRegistry.js
+import AssetRegistry from "01132_AssetRegistry.js";
+
+export default AssetRegistry.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/slayer_storefront/intl",
+  scales: [1],
+  hash: "8c60dfaae4176af2c306ea919e9c82f5",
+  name: "SlayerStorefront.compiled.messages",
+  type: "jsona",
+});

@@ -1,22 +1,24 @@
 // _runtime/06364_RVEngagedIndicesTrackerImpl.js
-import _modDef6352 from "metro/06352__.js";
-import _classCallCheck from "metro/06351__.js";
+import _createClassDefault from "metro/06352__createClass.js";
+import PlatformConfig from "06357_PlatformConfig.js";
+import ConsecutiveNumbers from "06365_ConsecutiveNumbers.js";
+import _classCallCheck from "metro/06351__classCallCheck.js";
 
-const RVEngagedIndicesTrackerImpl = arg1;
+let size;
+
 class RVEngagedIndicesTrackerImpl {
   constructor() {
-    tmp = c2(this, RVEngagedIndicesTrackerImpl);
+    _classCallCheck(this, RVEngagedIndicesTrackerImpl);
     this.scrollOffset = 0;
-    this.drawDistance = closure_0(closure_1[2]).PlatformConfig.defaultDrawDistance;
+    this.drawDistance = PlatformConfig.PlatformConfig.defaultDrawDistance;
     this.enableOffsetProjection = true;
     this.averageRenderTime = 16;
     this.forceDisableOffsetProjection = false;
-    this.engagedIndices = closure_0(closure_1[3]).ConsecutiveNumbers.EMPTY;
+    this.engagedIndices = ConsecutiveNumbers.ConsecutiveNumbers.EMPTY;
     this.smallMultiplier = 0.3;
     this.largeMultiplier = 0.7;
     this.velocityHistory = [0, 0, 0, -0.1, -0.1];
     this.velocityIndex = 0;
-    return;
   }
 }
 const entry = {
@@ -24,47 +26,43 @@ const entry = {
   value: function updateScrollOffset(scrollOffset, arg1, getWindowsSize) {
     const self = this;
     this.scrollOffset = scrollOffset;
-    const size = getWindowsSize.getWindowsSize();
+    size = getWindowsSize.getWindowsSize();
     const isHorizontalResult = getWindowsSize.isHorizontal();
-    if (!arg1) {
-      const isScrollingBackwardResult = self.isScrollingBackward();
-      let projectedScrollOffset = scrollOffset;
-      if (self.enableOffsetProjection) {
-        projectedScrollOffset = scrollOffset;
-        if (!self.forceDisableOffsetProjection) {
-          projectedScrollOffset = self.getProjectedScrollOffset(scrollOffset, self.averageRenderTime);
-        }
-      }
-      const result = 2 * self.drawDistance;
-      const _Math = Math;
-      const sum = projectedScrollOffset + (isHorizontalResult ? size.width : size.height);
-      const rounded = Math.ceil(result * (isScrollingBackwardResult ? self.largeMultiplier : self.smallMultiplier));
-      const _Math2 = Math;
-      const _Math3 = Math;
-      const rounded1 = Math.ceil(result * (isScrollingBackwardResult ? self.smallMultiplier : self.largeMultiplier));
-      const bound = Math.max(0, projectedScrollOffset - rounded);
-      const _Math4 = Math;
-      const sum1 = sum + rounded1;
-      const sum2 = sum1 + Math.max(0, rounded - projectedScrollOffset);
-      const size2 = getWindowsSize.getLayoutSize();
-      const tmp14 = isHorizontalResult ? size2.width : size2.height;
-      let bound1 = bound;
-      let tmp16 = sum2;
-      if (sum2 > tmp14) {
-        const _Math5 = Math;
-        bound1 = Math.max(0, bound - (sum2 - tmp14));
-        tmp16 = tmp14;
-      }
-      const visibleLayouts = getWindowsSize.getVisibleLayouts(bound1, tmp16);
-      self.engagedIndices = visibleLayouts;
-      let tmp17;
-      if (!visibleLayouts.equals(self.engagedIndices)) {
-        tmp17 = visibleLayouts;
-      }
-      return tmp17;
-    } else {
-      const result1 = self.updateVelocityHistory(isHorizontalResult ? arg1.x : arg1.y);
+    if (arg1) {
+      const result = self.updateVelocityHistory(isHorizontalResult ? arg1.x : arg1.y);
     }
+    const isScrollingBackwardResult = self.isScrollingBackward();
+    let projectedScrollOffset = scrollOffset;
+    if (self.enableOffsetProjection) {
+      projectedScrollOffset = scrollOffset;
+      if (!self.forceDisableOffsetProjection) {
+        projectedScrollOffset = self.getProjectedScrollOffset(scrollOffset, self.averageRenderTime);
+      }
+    }
+    const result1 = 2 * self.drawDistance;
+    const sum = projectedScrollOffset + (isHorizontalResult ? size.width : size.height);
+    const tmp7 = isScrollingBackwardResult ? self.smallMultiplier : self.largeMultiplier;
+    const rounded = Math.ceil(result1 * (isScrollingBackwardResult ? self.largeMultiplier : self.smallMultiplier));
+    const rounded1 = Math.ceil(result1 * tmp7);
+    const bound = Math.max(0, projectedScrollOffset - rounded);
+    const sum1 = sum + rounded1;
+    const sum2 = sum1 + Math.max(0, rounded - projectedScrollOffset);
+    const size2 = getWindowsSize.getLayoutSize();
+    const tmp13 = isHorizontalResult ? size2.width : size2.height;
+    let bound1 = bound;
+    let tmp15 = sum2;
+    if (sum2 > tmp13) {
+      const _Math = Math;
+      bound1 = Math.max(0, bound - (sum2 - tmp13));
+      tmp15 = tmp13;
+    }
+    const visibleLayouts = getWindowsSize.getVisibleLayouts(bound1, tmp15);
+    self.engagedIndices = visibleLayouts;
+    let tmp16;
+    if (!visibleLayouts.equals(self.engagedIndices)) {
+      tmp16 = visibleLayouts;
+    }
+    return tmp16;
   },
 };
 let items = [
@@ -87,9 +85,11 @@ let items = [
       let num5 = 0;
       if (0 < this.velocityHistory.length) {
         do {
+          let sum;
+          let sum1;
           if (self.velocityHistory[num] > 0) {
-            let sum = num3 + 1;
-            let sum1 = num2;
+            sum = num3 + 1;
+            sum1 = num2;
           } else {
             sum1 = num2;
             sum = num3;
@@ -115,7 +115,7 @@ let items = [
       const sorted = items.sort((arg0, arg1) => arg0 - arg1);
       if (sorted.length % 2 === 1) {
         const _Math = Math;
-        return sorted[Math.floor(Math, length / 2)];
+        return sorted[Math.floor(Math, sorted.length / 2)];
       } else {
         const result = length / 2;
         return (sorted[result - 1] + sorted[result]) / 2;
@@ -131,7 +131,7 @@ let items = [
   {
     key: "computeVisibleIndices",
     value: function computeVisibleIndices(getWindowsSize) {
-      const size = getWindowsSize.getWindowsSize();
+      size = getWindowsSize.getWindowsSize();
       const scrollOffset = this.scrollOffset;
       return getWindowsSize.getVisibleLayouts(
         scrollOffset,
@@ -171,5 +171,6 @@ let items = [
     },
   },
 ];
+const RVEngagedIndicesTrackerImpl_export = _createClassDefault(RVEngagedIndicesTrackerImpl, items);
 
-export const RVEngagedIndicesTrackerImpl = _modDef6352(RVEngagedIndicesTrackerImpl, items);
+export { RVEngagedIndicesTrackerImpl_export as RVEngagedIndicesTrackerImpl };

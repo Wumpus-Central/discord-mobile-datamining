@@ -1,7 +1,10 @@
 // _runtime/01826_finishScreenTransition.js
 import startScreenTransition from "01827_startScreenTransition.js";
-import _mod1831 from "metro/01831__.js";
+import ScreenTransition from "01831_ScreenTransition.js";
+
+const startScreenTransition_export = startScreenTransition.startScreenTransition;
+const ScreenTransition_export = ScreenTransition.ScreenTransition;
 
 export const finishScreenTransition = startScreenTransition.finishScreenTransition;
-export const startScreenTransition = startScreenTransition.startScreenTransition;
-export const ScreenTransition = _mod1831.ScreenTransition;
+export { startScreenTransition_export as startScreenTransition };
+export { ScreenTransition_export as ScreenTransition };

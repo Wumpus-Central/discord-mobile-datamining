@@ -1,23 +1,33 @@
 // _runtime/metro/01600__.js
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
-import _slicedToArray from "00032__.js";
-import noop from "00019__.js";
+import _asyncToGenerator from "00005__asyncToGenerator.js";
+import _slicedToArray from "00032__slicedToArray.js";
+import react from "../00019_react.js";
+
+let c4, c5, closure_2;
 
 export const useThenable = function useThenable(arg0) {
-  const first = items(noop.useState(arg0), 1)[0];
+  let items;
+  let tmp3;
+  const first = items(react.useState(arg0), 1)[0];
   items = [false, undefined];
   first.then((result) => {
     items = [true, result];
   });
-  [tmp3, noop] = items(noop.useState(items), 2);
+  const tmp2 = items(react.useState(items), 2);
+  [tmp3, react] = tmp2;
   const first1 = items(tmp3, 1)[0];
   let items1 = [first, first1];
-  const effect = noop.useEffect(() => {
-    c0 = first(function* () {
+  const effect = react.useEffect(() => {
+    function resolve() {
+      return closure_0(...arguments);
+    }
+    let c0 = false;
+    let closure_0 = first(function* () {
+      let value;
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp6 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -27,6 +37,7 @@ export const useThenable = function useThenable(arg0) {
           return { value: "IconComponent", done: null };
         }
       } else {
+        let c3;
         try {
           c5 = 2;
           if (0 === c4) {
@@ -38,66 +49,58 @@ export const useThenable = function useThenable(arg0) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              closure_1 = tmp3;
-              closure_0 = tmp7;
-              closure_128_0 = undefined;
+              let closure_1 = tmp;
+              value = undefined;
               c3 = 1;
               c4 = 2;
               c5 = 1;
               const obj4 = { value, done: false };
               return obj4;
             }
-          } else if (1 === tmp7) {
+          } else if (1 === c4) {
             c3 = 0;
-            if (!closure_0) {
-              items = [true, closure_128_0];
-              noop(items);
+            const tmp18 = closure_2;
+            if (!value) {
+              items = [true, value];
+              closure_2_2(items);
             }
-            throw closure_2;
+            throw tmp18;
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 0;
-            if (!closure_0) {
-              const items1 = [true, closure_128_0];
-              noop(items1);
+            const tmp12 = value;
+            if (!tmp12) {
+              const items1 = [true, value];
+              closure_2_2(items1);
             }
             c5 = 3;
             const obj = { value, done: true };
             return obj;
           } else {
-            closure_128_0 = value;
             c3 = 0;
-            if (!closure_0) {
-              const items2 = [true, closure_128_0];
-              noop(items2);
+            const tmp7 = value;
+            if (!tmp7) {
+              const items2 = [true, value];
+              closure_2_2(items2);
             }
             c5 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp28) {
-          closure_2 = tmp28;
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp28;
+        } catch (tmp25) {
+          closure_2 = tmp25;
+          if (0 === c3) {
+            c5 = 3;
+            throw tmp25;
           } else {
-            c4 = tmp;
+            c4 = 1;
           }
         }
       }
     });
     if (!first1) {
-      (function resolve() {
-        const self = this;
-        const apply = c0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      })();
+      resolve();
     }
     return () => {
       c0 = true;

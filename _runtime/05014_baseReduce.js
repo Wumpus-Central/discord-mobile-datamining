@@ -1,17 +1,19 @@
 // _runtime/05014_baseReduce.js
 
 export default function baseReduce(arg0, arg1, arg2, arg3, fn) {
-  closure_0 = arg1;
-  closure_1 = arg2;
-  c2 = arg3;
-  fn(arg0, (arg0, arg1, arg2) => {
-    if (c2) {
+  let closure_0 = arg1;
+  let closure_1 = arg2;
+  let c2 = arg3;
+  let tmp = fn(arg0, (arg0, arg1, arg2) => {
+    let tmp7;
+    const tmp = c2;
+    if (tmp) {
       c2 = false;
-      let tmp6 = arg0;
+      tmp7 = arg0;
     } else {
-      tmp6 = closure_0(closure_1, arg0, arg1, arg2);
+      tmp7 = closure_0(closure_1, arg0, arg1, arg2);
     }
-    closure_1 = tmp6;
+    closure_1 = tmp7;
   });
   return closure_1;
 }

@@ -1,64 +1,57 @@
 // _runtime/01334_RequestBase.js
-import _mod1284 from "metro/01284__.js";
+import type2 from "01284_type.js";
 import _mod1328 from "metro/01328__.js";
 
+let _self;
+
 class RequestBase {
-  constructor() {
-    return;
-  }
+  constructor() {}
   clearTimeout() {
-    clearTimeoutResult = clearTimeout(this._timer);
-    clearTimeoutResult1 = clearTimeout(this._responseTimeoutTimer);
-    clearTimeoutResult2 = clearTimeout(this._uploadTimeoutTimer);
-    delete tmp[tmp2];
-    delete tmp[tmp2];
-    delete tmp[tmp2];
+    const self = this;
+    clearTimeout(this._timer);
+    clearTimeout(this._responseTimeoutTimer);
+    clearTimeout(this._uploadTimeoutTimer);
+    delete self["_timer"];
+    delete self["_responseTimeoutTimer"];
+    delete self["_uploadTimeoutTimer"];
     return this;
   }
-  parse(arg0) {
-    this._parser = global;
+  parse(_parser) {
+    this._parser = _parser;
     return this;
   }
-  responseType(arg0) {
-    this._responseType = global;
+  responseType(_responseType) {
+    this._responseType = _responseType;
     return this;
   }
-  serialize(arg0) {
-    this._serializer = global;
+  serialize(_serializer) {
+    this._serializer = _serializer;
     return this;
   }
-  timeout(arg0) {
-    self = this;
-    if (global) {
-      if (typeof global === "object") {
-        tmp2 = global;
-        tmp3 = globalThis;
-        str = "Unknown timeout option";
-        str2 = "upload";
-        str3 = "response";
-        str4 = "deadline";
-        for (const key10002 in arg0) {
-          tmp4 = key10002;
-          tmp5 = closure_0;
-          tmp6 = closure_1;
-          obj = closure_0(closure_1[0]);
-          if (!obj.hasOwn(arg0, key10002)) {
+  timeout(deadline) {
+    const self = this;
+    const tmp = deadline;
+    if (tmp) {
+      if (typeof deadline === "object") {
+        for (const key10002 in deadline) {
+          let obj = type2;
+          if (!obj.hasOwn(deadline, key10002)) {
             continue;
           } else {
             if ("deadline" === key10002) {
-              self._timeout = arg0.deadline;
+              self._timeout = deadline.deadline;
               continue;
             } else {
               if ("response" === key10002) {
-                self._responseTimeout = arg0.response;
+                self._responseTimeout = deadline.response;
                 continue;
               } else {
                 if ("upload" === key10002) {
-                  self._uploadTimeout = arg0.upload;
+                  self._uploadTimeout = deadline.upload;
                   continue;
                 } else {
-                  _console = console;
-                  warnResult = console.warn("Unknown timeout option", key10002);
+                  let _console = console;
+                  let warnResult = console.warn("Unknown timeout option", key10002);
                   continue;
                 }
                 continue;
@@ -72,97 +65,73 @@ class RequestBase {
         return self;
       }
     }
-    self._timeout = global;
+    self._timeout = deadline;
     self._responseTimeout = 0;
     self._uploadTimeout = 0;
     return self;
   }
-  retry(arg0, arg1) {
-    obj = {};
-    num = global;
-    tmp = 0 !== arguments.length;
-    if (tmp) {
-      flag = true;
-      tmp = true !== num;
-    }
+  retry(arg0, _retryCallback) {
+    let num;
+    const obj = { _maxRetries: num, _retries: 0, _retryCallback };
+    num = arg0;
+    const tmp = 0 !== arguments.length && true !== num;
     if (!tmp) {
       num = 1;
     }
     if (num <= 0) {
       num = 0;
     }
-    obj._maxRetries = num;
-    obj._retries = 0;
-    obj._retryCallback = require;
     return obj;
   }
-  _shouldRetry(arg0, arg1) {
-    self = this;
+  _shouldRetry(code, status) {
+    const self = this;
     if (this._maxRetries) {
-      tmp = +self._retries;
-      self._retries = tmp + 1;
-      if (tmp < self._maxRetries) {
-        tmp10 = global;
-        tmp11 = require;
+      self._retries = +self._retries + 1;
+      if (+self._retries < self._maxRetries) {
         if (self._retryCallback) {
           try {
-            _retryCallbackResult = self._retryCallback(global, require);
-            flag = true;
+            const _retryCallbackResult = self._retryCallback(code, status);
             if (true === _retryCallbackResult) {
               return true;
-            } else {
-              tmp4 = _retryCallbackResult;
-              flag2 = false;
-              if (false === tmp3) {
-                return false;
-              }
+            } else if (false === tmp3) {
+              return false;
             }
           } catch (tmp5) {
-            tmp6 = globalThis;
-            _console = console;
-            errorResult = console.error(tmp5);
+            const _console = console;
+            console.error(tmp5);
           }
         }
-        if (require) {
-          if (require.status) {
-            tmp8 = closure_3;
-            if (closure_3.has(require.status)) {
-              flag7 = true;
+        if (status) {
+          if (status.status) {
+            if (set1.has(status.status)) {
               return true;
             }
           }
         }
-        if (global) {
-          if (global.code) {
-            tmp9 = closure_2;
-            if (closure_2.has(global.code)) {
-              flag6 = true;
+        if (code) {
+          if (code.code) {
+            if (set.has(code.code)) {
               return true;
             }
           }
-          if (global.timeout) {
-            str = "ECONNABORTED";
-            if ("ECONNABORTED" === global.code) {
-              flag5 = true;
+          if (code.timeout) {
+            if ("ECONNABORTED" === code.code) {
               return true;
             }
           }
-          if (global.crossDomain) {
-            flag4 = true;
+          if (code.crossDomain) {
             return true;
           }
         }
-        flag3 = false;
         return false;
       }
     }
     return false;
   }
   _retry() {
-    self = this;
-    clearTimeoutResult = this.clearTimeout();
+    const self = this;
+    this.clearTimeout();
     if (this.req) {
-      tmp2 = null;
       self.req = null;
       self.req = self.request();
     }
@@ -172,554 +141,451 @@ class RequestBase {
     return self._end();
   }
   then(arg0, arg1) {
-    self = this;
-    self = this;
+    const f83813 = (arg0, arg1) => {
+      let closure_0;
+      _self = arg0;
+      let closure_1 = arg1;
+      _self.on("abort", function () {
+        if (!self._maxRetries) {
+          if (self.timedout) {
+            if (self.timedoutError) {
+              closure_1(self.timedoutError);
+            }
+          }
+          const _Error = Error;
+          self = this;
+          const self2 = this;
+          const error = new Error("Aborted");
+          error.code = "ABORTED";
+          ({ status: tmp3.status, method: tmp3.method, url: tmp3.url } = self);
+          closure_1(error);
+        }
+      });
+      _self.end((arg0, arg1) => {
+        const tmp = arg0;
+        if (tmp) {
+          closure_1(arg0);
+        } else {
+          closure_0(arg1);
+        }
+      });
+    };
+    let self = this;
     if (!this._fullfilledPromise) {
       if (self._endCalled) {
-        tmp = globalThis;
-        _console = console;
-        str =
-          "Warning: superagent request was sent twice, because both .end() and .then() were called. Never call .end() if you use promises";
-        warnResult = console.warn(
+        let tmp = globalThis;
+        const _console = console;
+        console.warn(
           "Warning: superagent request was sent twice, because both .end() and .then() were called. Never call .end() if you use promises",
         );
       }
-      tmp3 = globalThis;
-      _Promise = Promise;
-      tmp4 = new.target;
-      tmp5 = new.target;
-      promise1 = new Promise((arg0, arg1) => {
-        _self = arg0;
-        closure_1 = arg1;
-        _self.on("abort", () => {
-          if (!self._maxRetries) {
-            if (self.timedout) {
-              if (self.timedoutError) {
-                closure_1(self.timedoutError);
-              }
-            }
-            const _Error = Error;
-            const error = new Error("Aborted");
-            error.code = "ABORTED";
-            ({ status: tmp5.status, method: tmp5.method, url: tmp5.url } = self);
-            closure_1(error);
-          }
-        });
-        _self.end((arg0, arg1) => {
-          if (arg0) {
-            closure_1(arg0);
-          } else {
-            closure_0(arg1);
-          }
-        });
-      });
-      tmp7 = promise1;
-      self._fullfilledPromise = promise1;
+      const tmp3 = globalThis;
+      let self2 = this;
+      const self3 = this;
+      self._fullfilledPromise = new Promise(f83813);
+      const promise = new Promise(f83813);
     }
-    _fullfilledPromise = self._fullfilledPromise;
-    return _fullfilledPromise.then(global, require);
+    const _fullfilledPromise = self._fullfilledPromise;
+    return _fullfilledPromise.then(arg0, arg1);
   }
   catch(arg0) {
-    return this.then(undefined, global);
+    return this.then(undefined, arg0);
   }
-  use(arg0) {
-    tmp = global(this);
+  use(fn) {
+    fn(this);
     return this;
   }
-  ok(arg0) {
-    if (typeof global !== "function") {
-      tmp = globalThis;
-      _Error = Error;
-      tmp2 = new.target;
-      str = "Callback required";
-      tmp3 = new.target;
-      error = new Error("Callback required");
-      tmp5 = error;
+  ok(_okCallback) {
+    if (typeof _okCallback !== "function") {
+      const _Error = Error;
+      const self = this;
+      const self2 = this;
+      const error = new Error("Callback required");
       throw error;
     } else {
-      self = this;
-      this._okCallback = global;
+      const self3 = this;
+      this._okCallback = _okCallback;
       return this;
     }
   }
-  _isResponseOK(arg0) {
-    tmp = global;
-    if (!tmp) {
-      return tmp;
-    } else {
-      self = this;
+  _isResponseOK(status) {
+    let tmp = status;
+    if (tmp) {
+      let _okCallbackResult;
+      const self = this;
       if (this._okCallback) {
-        _okCallbackResult = self._okCallback(global);
+        _okCallbackResult = self._okCallback(status);
       } else {
-        num = 200;
-        _okCallbackResult = global.status >= 200;
-        if (_okCallbackResult) {
-          num2 = 300;
-          _okCallbackResult = global.status < 300;
-        }
+        _okCallbackResult = status.status >= 200 && status.status < 300;
       }
-      tmp3 = _okCallbackResult;
+      tmp = _okCallbackResult;
     }
-    return;
+    return tmp;
   }
   get(arg0) {
-    return this._header[global.toLowerCase(global)];
+    return this._header[arg0.toLowerCase(arg0)];
   }
-  set(arg0, arg1) {
-    self = this;
-    obj = closure_0(closure_1[0]);
-    if (obj.isObject(global)) {
-      tmp2 = global;
-      for (const key10016 in arg0) {
-        tmp4 = key10016;
-        tmp5 = closure_0;
-        tmp6 = closure_1;
-        obj2 = closure_0(closure_1[0]);
-        if (!obj2.hasOwn(arg0, key10016)) {
+  set(_data, arg1) {
+    const self = this;
+    const obj = type2;
+    if (obj.isObject(_data)) {
+      for (const key10016 in _data) {
+        let obj2 = type2;
+        if (!obj2.hasOwn(_data, key10016)) {
           continue;
         } else {
-          result = self.set(key10016, arg0[key10016]);
+          let result = self.set(key10016, _data[key10016]);
           continue;
         }
         continue;
       }
       return self;
     } else {
-      tmp = require;
-      self._header[global.toLowerCase()] = require;
-      self.header[global] = require;
+      self._header[_data.toLowerCase()] = arg1;
+      self.header[_data] = arg1;
       return self;
     }
   }
   unset(arg0) {
-    formatted = global.toLowerCase();
-    delete tmp3[tmp];
-    delete tmp[tmp2];
+    const _header = this._header;
+    delete _header[arg0.toLowerCase(arg0)];
+    delete this.header[arg0];
     return this;
   }
-  field(arg0, arg1, arg2) {
-    if (null == global) {
-      tmp23 = globalThis;
-      _Error3 = Error;
-      tmp24 = new.target;
-      str3 = ".field(name, val) name can not be empty";
-      tmp25 = new.target;
-      error = new Error(".field(name, val) name can not be empty");
-      tmp27 = error;
+  field(_data, obj2, arg2) {
+    if (null == _data) {
+      const _Error3 = Error;
+      const self5 = this;
+      const self6 = this;
+      const error = new Error(".field(name, val) name can not be empty");
       throw error;
     } else {
-      self = this;
+      const self7 = this;
       if (this._data) {
-        tmp18 = globalThis;
-        _Error2 = Error;
-        tmp19 = new.target;
-        str2 = ".field() can't be used if .send() is used. Please use only .send() or only .field() & .attach()";
-        tmp20 = new.target;
-        error1 = new Error(
+        const _Error2 = Error;
+        const self3 = this;
+        const self4 = this;
+        const error1 = new Error(
           ".field() can't be used if .send() is used. Please use only .send() or only .field() & .attach()",
         );
-        tmp22 = error1;
         throw error1;
       } else {
-        tmp = closure_0;
-        tmp2 = closure_1;
-        obj = closure_0(closure_1[0]);
-        if (obj.isObject(global)) {
-          tmp16 = global;
-          for (const key10035 in arg0) {
-            tmp31 = key10035;
-            tmp32 = closure_0;
-            tmp33 = closure_1;
-            obj3 = closure_0(closure_1[0]);
-            if (!obj3.hasOwn(arg0, key10035)) {
+        const obj = type2;
+        if (obj.isObject(_data)) {
+          for (const key10035 in _data) {
+            let obj3 = type2;
+            if (!obj3.hasOwn(_data, key10035)) {
               continue;
             } else {
-              fieldResult = self.field(key10035, arg0[key10035]);
+              let fieldResult = self7.field(key10035, _data[key10035]);
               continue;
             }
             continue;
           }
-          return self;
+          return self7;
         } else {
-          tmp3 = require;
-          tmp4 = globalThis;
-          _Array = Array;
-          if (Array.isArray(require)) {
-            tmp14 = require;
-            for (const key10029 in arg1) {
-              tmp28 = key10029;
-              tmp29 = closure_0;
-              tmp30 = closure_1;
-              obj2 = closure_0(closure_1[0]);
-              if (!obj2.hasOwn(arg1, key10029)) {
+          const _Array = Array;
+          if (Array.isArray(obj2)) {
+            for (const key10029 in obj2) {
+              obj2 = type2;
+              if (!obj2.hasOwn(obj2, key10029)) {
                 continue;
               } else {
-                fieldResult1 = self.field(arg0, arg1[key10029]);
+                let fieldResult1 = self7.field(_data, obj2[key10029]);
                 continue;
               }
               continue;
             }
-            return self;
-          } else if (null == require) {
-            _Error = Error;
-            tmp10 = new.target;
-            str = ".field(name, val) val can not be empty";
-            tmp11 = new.target;
-            error2 = new Error(".field(name, val) val can not be empty");
-            tmp13 = error2;
+            return self7;
+          } else if (null == obj2) {
+            const _Error = Error;
+            const self = this;
+            const self2 = this;
+            const error2 = new Error(".field(name, val) val can not be empty");
             throw error2;
           } else {
-            StringResult = require;
-            if (typeof require === "boolean") {
-              _String = String;
-              StringResult = String(require);
+            let StringResult = obj2;
+            if (typeof obj2 === "boolean") {
+              const _String = String;
+              StringResult = String(obj2);
             }
-            tmp6 = importDefault;
-            _getFormDataResult = self._getFormData();
-            append = _getFormDataResult.append;
-            if (importDefault) {
-              appendResult = append(global, StringResult, importDefault);
+            const append = self7._getFormData().append;
+            self7._getFormData();
+            if (arg2) {
+              append(_data, StringResult, arg2);
             } else {
-              appendResult1 = append(global, StringResult);
+              append(_data, StringResult);
             }
-            return self;
+            return self7;
           }
         }
       }
     }
   }
   abort() {
-    self = this;
+    const self = this;
     if (this._aborted) {
       return self;
     } else {
-      flag = true;
       self._aborted = true;
       if (self.xhr) {
-        xhr = self.xhr;
-        abortResult = xhr.abort();
+        const xhr = self.xhr;
+        xhr.abort();
       }
       if (self.req) {
-        tmp2 = closure_0;
-        tmp3 = closure_1;
-        obj = closure_0(closure_1[1]);
-        tmp4 = globalThis;
-        _process = process;
-        str = "v13.0.0";
+        const _process = process;
+        const obj = _mod1328;
         if (obj.gte(process.version, "v13.0.0")) {
-          tmp2Result = tmp2(tmp3[1]);
-          _process2 = process;
-          str2 = "v14.0.0";
+          const _process2 = process;
+          const tmp2Result = _mod1328;
           if (tmp2Result.lt(process.version, "v14.0.0")) {
-            _Error = Error;
-            tmp8 = new.target;
-            str4 = "Superagent does not work in v13 properly with abort() due to Node.js core changes";
-            tmp9 = new.target;
-            error = new Error("Superagent does not work in v13 properly with abort() due to Node.js core changes");
-            tmp11 = error;
+            const _Error = Error;
+            const self2 = this;
+            const self3 = this;
+            const error = new Error(
+              "Superagent does not work in v13 properly with abort() due to Node.js core changes",
+            );
             throw error;
           }
         }
-        req = self.req;
-        abortResult1 = req.abort();
+        const req = self.req;
+        req.abort();
       }
-      clearTimeoutResult = self.clearTimeout();
-      str3 = "abort";
-      emitResult = self.emit("abort");
+      self.clearTimeout();
+      self.emit("abort");
       return self;
     }
   }
-  _auth(arg0, arg1, arg2, arg3) {
-    type = importDefault.type;
-    self = this;
+  _auth(username, password, type, fn) {
+    type = type.type;
+    const self = this;
     if ("basic" === type) {
-      tmp = importAll;
-      tmp2 = globalThis;
-      _HermesInternal = HermesInternal;
-      str3 = ":";
-      str4 = "";
-      _HermesInternal2 = HermesInternal;
-      str5 = "Basic ";
-      str6 = "Authorization";
-      result = self.set("Authorization", "Basic " + importAll("" + global + ":" + require));
-    } else {
-      str = "auto";
-      if ("auto" === type) {
-        self.username = global;
-        self.password = require;
-      } else {
-        str2 = "bearer";
-        if ("bearer" === type) {
-          tmp4 = globalThis;
-          _HermesInternal3 = HermesInternal;
-          str7 = "Bearer ";
-          str8 = "Authorization";
-          result1 = self.set("Authorization", "Bearer " + global);
-        }
-      }
+      const _HermesInternal = HermesInternal;
+      const _HermesInternal2 = HermesInternal;
+      const result = self.set("Authorization", "Basic " + fn("" + username + ":" + password));
+    } else if ("auto" === type) {
+      self.username = username;
+      self.password = password;
+    } else if ("bearer" === type) {
+      const _HermesInternal3 = HermesInternal;
+      const result1 = self.set("Authorization", "Bearer " + username);
     }
     return self;
   }
   withCredentials(arg0) {
-    flag = global;
-    if (undefined === global) {
+    let flag = arg0;
+    if (undefined === arg0) {
       flag = true;
     }
     this._withCredentials = flag;
     return this;
   }
-  redirects(arg0) {
-    this._maxRedirects = global;
+  redirects(_maxRedirects) {
+    this._maxRedirects = _maxRedirects;
     return this;
   }
-  maxResponseSize(arg0) {
-    if (typeof global !== "number") {
-      tmp = globalThis;
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Invalid argument";
-      tmp3 = new.target;
-      typeError = new TypeError("Invalid argument");
-      tmp5 = typeError;
+  maxResponseSize(_maxResponseSize) {
+    if (typeof _maxResponseSize !== "number") {
+      const _TypeError = TypeError;
+      const self = this;
+      const self2 = this;
+      const typeError = new TypeError("Invalid argument");
       throw typeError;
     } else {
-      self = this;
-      this._maxResponseSize = global;
+      const self3 = this;
+      this._maxResponseSize = _maxResponseSize;
       return this;
     }
   }
   toJSON() {
-    request = { method: this.method, url: this.url, data: this._data, headers: this._header };
+    const request = { method: this.method, url: this.url, data: this._data, headers: this._header };
     return request;
   }
-  send(arg0) {
-    self = this;
-    tmp2 = closure_0;
-    tmp3 = closure_1;
-    obj = closure_0(closure_1[0]);
-    isObjectResult = obj.isObject(global);
-    prop = this._header["content-type"];
+  send(_data) {
+    const self = this;
+    const obj = type2;
+    const isObjectResult = obj.isObject(_data);
+    const prop = this._header["content-type"];
     if (this._formData) {
-      tmp36 = globalThis;
-      _Error4 = Error;
-      tmp37 = new.target;
-      str11 =
-        ".send() can't be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()";
-      tmp38 = new.target;
-      error = new Error(
+      const _Error4 = Error;
+      const self8 = this;
+      const self9 = this;
+      const error = new Error(
         ".send() can't be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()",
       );
-      tmp40 = error;
       throw error;
     } else {
       if (isObjectResult) {
+        let tmp13;
         if (!self._data) {
-          tmp6 = globalThis;
-          _Array = Array;
-          if (Array.isArray(global)) {
+          const _Array = Array;
+          if (Array.isArray(_data)) {
             self._data = [];
-          } else if (!self._isHost(global)) {
+          } else if (!self._isHost(_data)) {
             self._data = {};
           }
         }
         if (isObjectResult) {
-          tmp2Result = tmp2(tmp3[0]);
+          const tmp2Result = type2;
           if (tmp2Result.isObject(self._data)) {
-            tmp19 = global;
             tmp13 = prop;
-            keys = Object.keys();
+            const keys = Object.keys();
             if (keys !== undefined) {
               tmp13 = prop;
-              tmp21 = keys[tmp];
-              while (tmp21 !== undefined) {
-                tmp41 = tmp21;
-                if (typeof global[tmp21] === "bigint") {
-                  if (!global[tmp21].toJSON) {
-                    tmp22 = globalThis;
-                    _Error2 = Error;
-                    tmp23 = new.target;
-                    str8 = "Cannot serialize BigInt value to json";
-                    tmp24 = new.target;
-                    error1 = new Error("Cannot serialize BigInt value to json");
-                    tmp26 = error1;
+              while (keys[tmp] !== undefined) {
+                if (typeof _data[tmp19] === "bigint") {
+                  if (!_data[tmp19].toJSON) {
+                    let tmp20 = globalThis;
+                    let _Error2 = Error;
+                    let self4 = this;
+                    let str8 = "Cannot serialize BigInt value to json";
+                    let self5 = this;
+                    let error1 = new Error("Cannot serialize BigInt value to json");
                     throw error1;
                   }
                 }
-                tmp27 = closure_0;
-                tmp28 = closure_1;
-                obj3 = closure_0(closure_1[0]);
-                if (!obj3.hasOwn(global, tmp21)) {
+                let obj3 = type2;
+                if (!obj3.hasOwn(_data, tmp19)) {
                   continue;
                 } else {
-                  self._data[tmp21] = global[tmp21];
+                  self._data[tmp19] = _data[tmp19];
                   continue;
                 }
                 continue;
               }
             }
           }
-          _isHostResult = !isObjectResult;
+          let _isHostResult = !isObjectResult;
           if (isObjectResult) {
-            _isHostResult = self._isHost(global);
+            _isHostResult = self._isHost(_data);
           }
           if (!_isHostResult) {
             _isHostResult = tmp13;
           }
           if (!_isHostResult) {
-            str9 = "json";
-            typeResult = self.type("json");
+            self.type("json");
           }
           return self;
         }
-        if (typeof global === "bigint") {
-          tmp14 = globalThis;
-          _Error = Error;
-          tmp15 = new.target;
-          str7 = "Cannot send value of type BigInt";
-          tmp16 = new.target;
-          error2 = new Error("Cannot send value of type BigInt");
-          tmp18 = error2;
+        if (typeof _data === "bigint") {
+          const _Error = Error;
+          const self2 = this;
+          const self3 = this;
+          const error2 = new Error("Cannot send value of type BigInt");
           throw error2;
-        } else if (typeof global === "string") {
+        } else if (typeof _data === "string") {
+          let sum;
           if (!prop) {
-            str = "form";
-            typeResult1 = self.type("form");
+            self.type("form");
           }
-          str2 = self._header["content-type"];
-          trimmed = str2;
-          if (str2) {
-            str3 = str2.toLowerCase();
+          let trimmed = str2;
+          if (trimmed) {
+            const str3 = self._header["content-type"].toLowerCase();
             trimmed = str3.trim();
           }
-          str4 = "application/x-www-form-urlencoded";
           if ("application/x-www-form-urlencoded" === trimmed) {
-            combined = global;
+            let combined = _data;
             if (self._data) {
-              tmp12 = globalThis;
-              _HermesInternal = HermesInternal;
-              str5 = "&";
-              str6 = "";
-              combined = "" + self._data + "&" + global;
+              const _HermesInternal = HermesInternal;
+              combined = "" + self._data + "&" + _data;
             }
             sum = combined;
           } else {
-            tmp9 = self._data || "";
-            sum = tmp9 + global;
+            sum = (self._data || "") + _data;
           }
           self._data = sum;
           tmp13 = trimmed;
         } else {
-          self._data = global;
+          self._data = _data;
           tmp13 = prop;
         }
       }
-      if (global) {
+      if (_data) {
         if (self._data) {
           if (self._isHost(self._data)) {
-            tmp31 = globalThis;
-            _Error3 = Error;
-            tmp32 = new.target;
-            str10 = "Can't merge these send calls";
-            tmp33 = new.target;
-            error3 = new Error("Can't merge these send calls");
-            tmp35 = error3;
+            const _Error3 = Error;
+            const self6 = this;
+            const self7 = this;
+            const error3 = new Error("Can't merge these send calls");
             throw error3;
           }
         }
       }
     }
-    return;
   }
   sortQuery(arg0) {
-    tmp = undefined === global || global;
+    const tmp = undefined === arg0 || arg0;
     this._sort = tmp;
     return this;
   }
   _finalizeQueryString() {
-    self = this;
-    _query = this._query;
-    joined = _query.join("&");
+    const self = this;
+    const _query = this._query;
+    const joined = _query.join("&");
     if (joined) {
-      url = self.url;
-      str = "?";
-      if (url.includes("?")) {
+      const url2 = self.url;
+      let str = "?";
+      const url = self.url;
+      if (url2.includes("?")) {
         str = "&";
       }
-      self.url = self.url + (str + joined);
+      self.url = url + (str + joined);
     }
     self._query.length = 0;
     if (self._sort) {
-      url1 = self.url;
-      str2 = "?";
-      index = url1.indexOf("?");
+      const url1 = self.url;
+      const index = url1.indexOf("?");
       if (index >= 0) {
-        url2 = self.url;
-        num = 1;
-        str3 = url2.slice(index + 1);
-        parts = str3.split("&");
+        const url3 = self.url;
+        const str3 = url3.slice(index + 1);
+        const parts = str3.split("&");
         if (typeof self._sort === "function") {
-          sorted = parts.sort(self._sort);
+          const sorted = parts.sort(self._sort);
         } else {
-          sorted1 = parts.sort();
+          const sorted1 = parts.sort();
         }
-        url3 = self.url;
-        str2 = url3.slice(0, index) + str2;
-        self.url = str2 + parts.join("&");
+        const url4 = self.url;
+        const text = `${arr3.slice(0, tmp2)}?`;
+        self.url = `${arr3.slice(0, tmp2)}?` + parts.join("&");
       }
     }
-    return;
   }
   _appendQueryString() {
-    warnResult = console.warn("Unsupported");
-    return;
+    console.warn("Unsupported");
   }
-  _timeoutError(arg0, arg1, arg2) {
-    self = this;
+  _timeoutError(arg0, timeout, errno) {
+    const self = this;
     if (!this._aborted) {
-      tmp = global;
-      tmp2 = require;
-      tmp3 = importDefault;
-      tmp4 = globalThis;
-      _Error = Error;
-      _HermesInternal = HermesInternal;
-      str = "ms exceeded";
-      str2 = "";
-      tmp5 = new.target;
-      tmp6 = new.target;
-      error = new Error("" + global + require + "ms exceeded");
-      tmp8 = error;
-      error.timeout = require;
-      str3 = "ECONNABORTED";
+      const _Error = Error;
+      const _HermesInternal = HermesInternal;
+      const self2 = this;
+      const self3 = this;
+      const error = new Error("" + arg0 + timeout + "ms exceeded");
+      error.timeout = timeout;
       error.code = "ECONNABORTED";
-      error.errno = importDefault;
-      flag = true;
+      error.errno = errno;
       self.timedout = true;
       self.timedoutError = error;
-      abortResult = self.abort();
-      callbackResult = self.callback(error);
+      self.abort();
+      self.callback(error);
     }
-    return;
   }
   _setTimeouts() {
-    self = this;
-    self = this;
-    tmp = this._timeout && !self._timer;
+    const self = this;
+    const tmp = this._timeout && !self._timer;
     if (tmp) {
-      tmp2 = globalThis;
-      _setTimeout = setTimeout;
+      const _setTimeout = setTimeout;
       self._timer = setTimeout(() => {
         self._timeoutError("Timeout of ", self._timeout, "ETIME");
       }, self._timeout);
     }
-    tmp3 = self._responseTimeout && !self._responseTimeoutTimer;
+    const tmp3 = self._responseTimeout && !self._responseTimeoutTimer;
     if (tmp3) {
-      tmp4 = globalThis;
-      _setTimeout2 = setTimeout;
+      const _setTimeout2 = setTimeout;
       self._responseTimeoutTimer = setTimeout(() => {
         self._timeoutError("Response timeout of ", self._responseTimeout, "ETIMEDOUT");
       }, self._responseTimeout);
     }
-    return;
   }
 }
 const set = new Set([

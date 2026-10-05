@@ -18,5 +18,6 @@ let closure_0 = RegExp(
 );
 
 export default function unicodeToArray(str) {
-  return str.match(closure_0) || [];
+  const tmp = str.match(closure_0) || [];
+  return tmp;
 }

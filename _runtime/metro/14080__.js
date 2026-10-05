@@ -3,11 +3,12 @@ import _mod14061 from "14061__.js";
 import _mod14065 from "14065__.js";
 import _mod14081 from "14081__.js";
 
-let prop = Object.getOwnPropertySymbols;
-if (prop) {
-  prop = !_mod14065(() => {
+const prop =
+  Object.getOwnPropertySymbols &&
+  !_mod14065(() => {
     const SymbolResult = Symbol("symbol detection");
-    const StringResult = _mod14061.String(SymbolResult);
+    const obj = _mod14061;
+    const StringResult = obj.String(SymbolResult);
     let tmp5 = !StringResult;
     if (StringResult) {
       const _Object = Object;
@@ -16,17 +17,10 @@ if (prop) {
     }
     if (!tmp5) {
       const _Symbol2 = Symbol;
-      let tmp2Result = !sham;
-      if (!sham) {
-        tmp2Result = _mod14081;
-      }
-      if (tmp2Result) {
-        tmp2Result = _mod14081 < 41;
-      }
-      tmp5 = tmp2Result;
+      tmp5 = !Symbol.sham && _mod14081 && _mod14081 < 41;
+      const tmp6 = !Symbol.sham && _mod14081 && _mod14081 < 41;
     }
     return tmp5;
   });
-}
 
 export default prop;

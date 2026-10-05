@@ -1,15 +1,13 @@
 // _runtime/00880_encodeUTF8.js
 import _mod881 from "metro/00881__.js";
-import globalEncodeFactory from "00882_globalEncodeFactory.js";
-
-require = arg1;
-const dependencyMap = arg6;
+import _mod882 from "metro/00882__.js";
 
 export const encodeUTF8 = function encodeUTF8(json) {
-  const sentryCarrier = _mod881.getSentryCarrier();
+  const obj = _mod881;
+  const sentryCarrier = obj.getSentryCarrier();
   if (!sentryCarrier.encodePolyfill) {
-    const encodePolyfill = globalEncodeFactory.useEncodePolyfill();
-    const tmpResult = globalEncodeFactory;
+    const tmpResult = _mod882;
+    const encodePolyfill = tmpResult.useEncodePolyfill();
   }
   return sentryCarrier.encodePolyfill(json);
 };

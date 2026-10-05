@@ -1,37 +1,44 @@
 // _runtime/metro/05724__.js
+import react_native from "../00017_react-native.js";
 import RNSLog2 from "../05720_RNSLog.js";
-import noop from "00019__.js";
+import react_mod from "../00019_react.js";
 
-require = fn;
-const findNodeHandle = fn(17).findNodeHandle;
+let react = react_mod;
+const findNodeHandle = react_native.findNodeHandle;
 
 export const useTabsHost = function useTabsHost(arg0) {
+  let items;
+  let onTabSelected;
+  let ref;
+  let ref2;
   ({ componentNodeRef: require, onTabSelected } = arg0);
-  noop = undefined;
-  noop = noop.useRef(-1);
-  const effect = noop.useEffect(() => {
-    if (null != ref.current) {
+  react = undefined;
+  react = react.useRef(-1);
+  const effect = react.useEffect(() => {
+    if (null != require.current) {
       let num2 = findNodeHandle(tmp.current);
       if (num2 == null) {
         num2 = -1;
       }
-      closure_2.current = num2;
+      ref2.current = num2;
     } else {
-      closure_2.current = -1;
+      ref2.current = -1;
     }
   }, []);
-  const obj = { onTabSelected: null };
-  const items = [onTabSelected];
-  obj.onTabSelected = noop.useCallback((nativeEvent) => {
-    const RNSLog = RNSLog2.RNSLog;
-    let num = ref2.current;
-    if (num == null) {
-      num = -1;
-    }
-    RNSLog.log("TabsHost [" + num + "] onTabSelected: " + JSON.stringify(nativeEvent.nativeEvent));
-    if (onTabSelected != null) {
-      onTabSelected(nativeEvent);
-    }
-  }, items);
+  const obj = {
+    onTabSelected: react.useCallback((nativeEvent) => {
+      const RNSLog = RNSLog2.RNSLog;
+      let num = ref2.current;
+      const log = RNSLog.log;
+      if (num == null) {
+        num = -1;
+      }
+      log("TabsHost [" + num + "] onTabSelected: " + JSON.stringify(nativeEvent.nativeEvent));
+      if (onTabSelected != null) {
+        onTabSelected(nativeEvent);
+      }
+    }, items),
+  };
+  items = [onTabSelected];
   return obj;
 };

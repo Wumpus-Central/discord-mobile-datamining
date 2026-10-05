@@ -1,34 +1,25 @@
 // _runtime/00614_baseIsNative.js
-import _mod520 from "metro/00520__.js";
-import _mod521 from "metro/00521__.js";
-import _mod615 from "metro/00615__.js";
-import _mod617 from "metro/00617__.js";
+import isFunction from "00520_isFunction.js";
+import isObject from "00521_isObject.js";
+import isMasked from "00615_isMasked.js";
+import toSource from "00617_toSource.js";
 
 const re2 = /^\[object .+?Constructor\]$/;
-const call = toString.call;
-const str = typeof call === "unknown" ? toString() : call(hasOwnProperty);
-let closure_3 = RegExp(
-  `^${
-    typeof call === "unknown"
-      ? toString()
-      : call(hasOwnProperty)
-          .replace(/[\\^$.*+?()[\]{}|]/g, "\\$&")
-          .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?")
-  }$`,
-);
+const _RegExp = RegExp;
+const str = toString.call(Object.prototype.hasOwnProperty);
+const str2 = str.replace(/[\\^$.*+?()[\]{}|]/g, "\\$&");
+let closure_3 = _RegExp(`^${str2.replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?")}$`);
 
 export default function baseIsNative(arg0) {
-  let tmp2 = dependencyMap;
-  const tmp3 = _mod521(arg0);
+  const tmp3 = isObject(arg0);
   let tmp4 = !tmp3;
   if (tmp3) {
-    tmp4 = _mod615(arg0);
+    tmp4 = isMasked(arg0);
   }
-  if (tmp4) {
-    return !tmp4;
-  } else {
-    tmp2 = _mod617(arg0);
-    const isMatch = _mod520(arg0) ? closure_3 : re2.test(tmp2);
-    const obj = _mod520(arg0) ? closure_3 : re2;
+  let isMatch = !tmp4;
+  if (isMatch) {
+    const obj = isFunction(arg0) ? closure_3 : re2;
+    isMatch = obj.test(toSource(arg0));
   }
+  return isMatch;
 }

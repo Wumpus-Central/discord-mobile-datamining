@@ -3,19 +3,21 @@ import baseIsEqual from "00643_baseIsEqual.js";
 import Stack from "00650_Stack.js";
 
 export default function baseIsMatch(arg0, arg1, arg2, fn) {
+  let tmp8;
   if (null == arg0) {
-    return !length;
+    return !arg2.length;
   } else {
     const _Object = Object;
     const ObjectResult = Object(arg0);
-    let diff = tmp35 - 1;
+    let diff = tmp33 - 1;
     let tmp6 = diff;
-    if (+length) {
+    if (+arg2.length) {
       while (true) {
         let tmp = arg2[diff];
         if (!fn) {
+          let tmp3;
           if (tmp[2]) {
-            let tmp3 = tmp[1] !== ObjectResult[tmp[0]];
+            tmp3 = tmp[1] !== ObjectResult[tmp[0]];
           }
           if (tmp3) {
             break;
@@ -30,7 +32,7 @@ export default function baseIsMatch(arg0, arg1, arg2, fn) {
       return false;
     }
     let sum = tmp6 + 1;
-    if (sum < length) {
+    if (sum < arg2.length) {
       while (true) {
         let tmp9 = arg2[sum];
         let first = tmp9[0];
@@ -38,8 +40,9 @@ export default function baseIsMatch(arg0, arg1, arg2, fn) {
         let tmp12 = tmp9[1];
         let tmp13 = tmp8;
         if (!fn) {
+          let tmp15;
           if (tmp9[2]) {
-            let tmp15 = tmp13;
+            tmp15 = tmp13;
             if (undefined === tmp11) {
               tmp15 = tmp13;
               if (!(first in ObjectResult)) {
@@ -50,19 +53,19 @@ export default function baseIsMatch(arg0, arg1, arg2, fn) {
           sum = sum + 1;
           tmp8 = tmp15;
         }
-        let tmp18 = new.target;
-        let tmp19 = new.target;
-        let tmp20 = new Stack();
-        let tmp21 = tmp20;
+        let self = this;
+        let self2 = this;
+        let tmp18 = new Stack();
+        let tmp19 = tmp18;
         if (fn) {
-          tmp13 = fn(tmp11, tmp12, first, ObjectResult, arg1, tmp21);
+          tmp13 = fn(tmp11, tmp12, first, ObjectResult, arg1, tmp19);
         }
-        let tmp28 = tmp13;
+        let tmp26 = tmp13;
         if (undefined === tmp13) {
-          tmp28 = baseIsEqual(tmp12, tmp11, 3, fn, tmp21);
+          tmp26 = baseIsEqual(tmp12, tmp11, 3, fn, tmp19);
         }
         tmp15 = tmp13;
-        if (!tmp28) {
+        if (!tmp26) {
           let flag2 = false;
           return false;
         }

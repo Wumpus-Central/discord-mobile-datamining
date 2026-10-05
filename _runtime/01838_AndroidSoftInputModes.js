@@ -1,7 +1,7 @@
 // _runtime/01838_AndroidSoftInputModes.js
-import nativeEventEmitter from "01633_nativeEventEmitter.js";
+import KeyboardControllerNative2 from "01633_KeyboardControllerNative.js";
 
-const KeyboardControllerNative = nativeEventEmitter.KeyboardControllerNative;
+const KeyboardControllerNative = KeyboardControllerNative2.KeyboardControllerNative;
 
 export const AndroidSoftInputModes = {
   SOFT_INPUT_ADJUST_NOTHING: 48,

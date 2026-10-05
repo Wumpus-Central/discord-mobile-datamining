@@ -4539,7 +4539,7 @@ const obj = {
     "rompecabezas",
   ],
   teddy_bear: ["felpudo", "juguete", "osito", "osito de peluche", "oso", "peluche"],
-  piñata: [
+  "pi\u00f1ata": [
     "caramelos",
     "celebraci\u00F3n",
     "color",

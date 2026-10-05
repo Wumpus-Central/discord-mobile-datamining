@@ -3,11 +3,11 @@ import _mod698 from "metro/00698__.js";
 import _mod708 from "metro/00708__.js";
 
 const require = globalThis.__r;
+let _require, c2;
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-const re3 = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+const re3 =
+  /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
 
 export const addContextToFrame = function addContextToFrame(arr, lineno) {
   let num = arg2;
@@ -20,17 +20,26 @@ export const addContextToFrame = function addContextToFrame(arr, lineno) {
     const bound = Math.max(Math.min(length - 1, lineno.lineno - 1), 0);
     const _Math4 = Math;
     const substr = arr.slice(Math.max(0, bound - num), bound);
-    lineno.pre_context = substr.map((item) => require("metro/00708__.js").snipLine(item, 0));
+    lineno.pre_context = substr.map((item) => {
+      const obj = require("metro/00708__.js");
+      return obj.snipLine(item, 0);
+    });
     const _Math5 = Math;
     const bound1 = Math.min(length - 1, bound);
     let num2 = lineno.colno;
+    const snipLine = _mod708.snipLine;
+    _mod708;
+    const tmp8 = arr[bound1];
     if (!num2) {
       num2 = 0;
     }
-    lineno.context_line = _mod708.snipLine(arr[bound1], num2);
+    lineno.context_line = snipLine(tmp8, num2);
     const _Math = Math;
     const substr1 = arr.slice(Math.min(bound + 1, length), bound + 1 + num);
-    lineno.post_context = substr1.map((item) => require("metro/00708__.js").snipLine(item, 0));
+    lineno.post_context = substr1.map((item) => {
+      const obj = require("metro/00708__.js");
+      return obj.snipLine(item, 0);
+    });
   }
 };
 export const addExceptionMechanism = function addExceptionMechanism(exception, data) {
@@ -70,109 +79,107 @@ export const addExceptionTypeValue = function addExceptionTypeValue(exception, a
   const iter = tmp2[0] || {};
   tmp2[0] = iter;
   if (!iter.value) {
-    let str = arg1;
-    if (!arg1) {
-      str = "";
-    }
-    iter.value = str;
+    iter.value = arg1 || "";
   }
   if (!iter.type) {
-    let str2 = arg2;
-    if (!arg2) {
-      str2 = "Error";
-    }
-    iter.type = str2;
+    iter.type = arg2 || "Error";
   }
 };
 export const checkOrSetAlreadyCaught = function checkOrSetAlreadyCaught(__sentry_captured__) {
-  if ((function isAlreadyCaptured(__sentry_captured__) {
+  function isAlreadyCaptured(__sentry_captured__) {
     try {
       return __sentry_captured__.__sentry_captured__;
-    } catch (err) {
-    }
-  })(__sentry_captured__)) {
+    } catch (err) {}
+  }
+  if (isAlreadyCaptured(__sentry_captured__)) {
     return true;
   } else {
     try {
-      const result = _mod698.addNonEnumerableProperty(__sentry_captured__, "__sentry_captured__", true);
-      return false;
-    } catch (err) {
-    }
+      const obj = _mod698;
+      const result = obj.addNonEnumerableProperty(__sentry_captured__, "__sentry_captured__", true);
+    } catch (err) {}
+    return false;
   }
 };
 export const getEventDescription = function getEventDescription(exception) {
+  let event_id;
+  let message;
   ({ message, event_id } = exception);
   if (message) {
     return message;
   } else {
+    let tmp3;
     exception = exception.exception;
-    let str;
+    let first;
     if (exception != null) {
       const values = exception.values;
       if (values != null) {
-        str = values[0];
+        first = values[0];
       }
     }
-    if (str) {
-      if (!str.type) {
-        let combined = str.type || str.value || event_id || "<unknown>";
+    if (first) {
+      if (first.type) {
+        let combined;
+        if (first.value) {
+          const _HermesInternal = HermesInternal;
+          combined = "" + first.type + ": " + first.value;
+        }
+        tmp3 = combined;
       }
-      const _HermesInternal = HermesInternal;
-      ({ type, value } = str);
-      str = "";
-      combined = "" + type + ": " + value;
+      combined = first.type || first.value || event_id || "<unknown>";
     } else {
-      let str2 = event_id;
-      if (!event_id) {
-        str2 = "<unknown>";
-      }
-      return str2;
+      tmp3 = event_id || "<unknown>";
     }
+    return tmp3;
   }
 };
 export const parseSemver = function parseSemver(str) {
+  let tmp5;
+  let tmp6;
+  let tmp7;
   const tmp = str.match(re3) || [];
   str = tmp[1];
+  const _parseInt = parseInt;
   if (!str) {
     str = "";
   }
-  const parsed = parseInt(str, 10);
+  const _parseIntResult = _parseInt(str, 10);
   let str2 = tmp[2];
+  const _parseInt2 = parseInt;
   if (!str2) {
     str2 = "";
   }
-  const parsed1 = parseInt(str2, 10);
+  const _parseInt2Result = _parseInt2(str2, 10);
   let str3 = tmp[3];
+  const _parseInt3 = parseInt;
   if (!str3) {
     str3 = "";
   }
-  const parsed2 = parseInt(str3, 10);
-  const obj = { buildmetadata: tmp[5], major: null, minor: null, patch: null, prerelease: null };
-  let tmp5;
-  if (!isNaN(parsed)) {
-    tmp5 = parsed;
+  const _parseInt3Result = _parseInt3(str3, 10);
+  const obj = { buildmetadata: tmp[5], major: tmp5, minor: tmp6, patch: tmp7, prerelease: tmp[4] };
+  tmp5 = undefined;
+  if (!isNaN(_parseIntResult)) {
+    tmp5 = _parseIntResult;
   }
-  obj.major = tmp5;
-  let tmp6;
-  if (!isNaN(parsed1)) {
-    tmp6 = parsed1;
+  tmp6 = undefined;
+  if (!isNaN(_parseInt2Result)) {
+    tmp6 = _parseInt2Result;
   }
-  obj.minor = tmp6;
-  let tmp7;
-  if (!isNaN(parsed2)) {
-    tmp7 = parsed2;
+  tmp7 = undefined;
+  if (!isNaN(_parseInt3Result)) {
+    tmp7 = _parseInt3Result;
   }
-  obj.patch = tmp7;
-  obj.prerelease = tmp[4];
   return obj;
 };
 export const uuid4 = function uuid4() {
+  let closure_0;
+  function getCrypto() {
+    const GLOBAL_OBJ = closure_0(dependencyMap[0]).GLOBAL_OBJ;
+    return GLOBAL_OBJ.crypto || GLOBAL_OBJ.msCrypto;
+  }
   let tmp = arg0;
   if (arg0 === undefined) {
-    tmp = (function getCrypto() {
-      const GLOBAL_OBJ = closure_0(697).GLOBAL_OBJ;
-      return GLOBAL_OBJ.crypto || GLOBAL_OBJ.msCrypto;
-    })();
+    tmp = getCrypto();
   }
   _require = tmp;
   try {
@@ -182,18 +189,19 @@ export const uuid4 = function uuid4() {
     }
     if (randomUUID) {
       let obj = require("safeDateNow");
-      return require("safeDateNow").withRandomSafeContext(() => closure_0.randomUUID()).replace(/-/g, "");
+      let str = obj.withRandomSafeContext(() => closure_0.randomUUID());
+      return str.replace(/-/g, "");
     } else {
       let str3 = c2;
-      if (!c2) {
+      if (!str3) {
         c2 = "10000000100040008000100000000000";
         str3 = "10000000100040008000100000000000";
       }
       return str3.replace(/[018]/g, (arg0) => {
-        const obj = closure_0(707);
-        return arg0 ^ (15 & 16 * closure_0(707).safeMathRandom()) >> arg0 / 4.toString(16);
+        const obj = closure_0(dependencyMap[1]);
+        const str = arg0 ^ ((15 & (16 * obj.safeMathRandom())) >> (arg0 / 4));
+        return str.toString(16);
       });
     }
-  } catch (err) {
-  }
+  } catch (err) {}
 };

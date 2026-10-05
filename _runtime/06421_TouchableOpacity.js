@@ -1,7 +1,14 @@
 // _runtime/06421_TouchableOpacity.js
+import _mod6422 from "metro/06422__.js";
+
+({
+  TouchableOpacity: _mod6422.TouchableOpacity,
+  TouchableHighlight: _mod6422.TouchableHighlight,
+  TouchableWithoutFeedback: _mod6422.TouchableWithoutFeedback,
+});
 
 export default {
-  TouchableOpacity: fn(6422).TouchableOpacity,
-  TouchableHighlight: fn(6422).TouchableHighlight,
-  TouchableWithoutFeedback: fn(6422).TouchableWithoutFeedback,
+  TouchableOpacity: _mod6422.TouchableOpacity,
+  TouchableHighlight: _mod6422.TouchableHighlight,
+  TouchableWithoutFeedback: _mod6422.TouchableWithoutFeedback,
 };

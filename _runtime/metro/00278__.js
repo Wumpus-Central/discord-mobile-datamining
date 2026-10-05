@@ -1,26 +1,32 @@
 // _runtime/metro/00278__.js
-import _mod189 from "00189__.js";
+import SyntheticError from "../00189_SyntheticError.js";
 
-const _modDef189 = _mod189;
-
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
+const SyntheticErrorDefault = SyntheticError;
 
 export default {
   showErrorDialog(error) {
     error = error.error;
-    if (error instanceof Error) {
-      try {
-        error.componentStack = error.componentStack;
-        error.isComponentError = true;
-        _modDef189.handleException(error, false);
-        return false;
-      } catch (err) {}
-    } else if (typeof error === "string") {
-      let syntheticError = new _mod189.SyntheticError(error);
-    } else {
-      syntheticError = new _mod189.SyntheticError("Unspecified error");
+    let tmp = error;
+    const componentStack = error.componentStack;
+    if (!(error instanceof Error)) {
+      let syntheticError;
+      if (typeof error === "string") {
+        const self = this;
+        const self2 = this;
+        syntheticError = new SyntheticError.SyntheticError(error);
+      } else {
+        const self3 = this;
+        const self4 = this;
+        syntheticError = new SyntheticError.SyntheticError("Unspecified error");
+      }
+      tmp = syntheticError;
     }
+    try {
+      tmp.componentStack = componentStack;
+      tmp.isComponentError = true;
+    } catch (err) {}
+    const obj = SyntheticErrorDefault;
+    obj.handleException(tmp, false);
+    return false;
   },
 };

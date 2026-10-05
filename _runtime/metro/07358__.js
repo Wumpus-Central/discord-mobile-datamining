@@ -2,22 +2,23 @@
 import _mod7345 from "07345__.js";
 import _modDef7348 from "07348__.js";
 
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-
 export default {
   isWebpFile(dataView) {
     let tmp = dataView;
     if (tmp) {
-      tmp = _mod7345.getStringFromDataView(dataView, 0, 4) === "RIFF";
+      const obj = _mod7345;
+      tmp = obj.getStringFromDataView(dataView, 0, 4) === "RIFF";
     }
     if (tmp) {
-      tmp = _mod7345.getStringFromDataView(dataView, 8, 4) === "WEBP";
+      const obj2 = _mod7345;
+      tmp = obj2.getStringFromDataView(dataView, 8, 4) === "WEBP";
     }
     return tmp;
   },
   findOffsets(byteLength) {
+    let tmp;
+    let tmp2;
+    let tmp3;
     let flag = false;
     let num = 12;
     let hasAppMarkers = false;
@@ -27,6 +28,11 @@ export default {
     let tiffHeaderOffset;
     if (20 < byteLength.byteLength) {
       while (true) {
+        let tmp4;
+        let sum4;
+        let tmp20;
+        let tmp21;
+        let tmp22;
         let obj = _mod7345;
         let stringFromDataView = obj.getStringFromDataView(byteLength, num, 4);
         let uint32 = byteLength.getUint32(num + 4, true);
@@ -39,11 +45,11 @@ export default {
             if (tmp9Result.getStringFromDataView(byteLength, sum, 6) === "Exif\0\0") {
               sum1 = sum + 6;
             }
-            let tmp22 = sum1;
+            tmp22 = sum1;
             flag3 = true;
-            let sum4 = tmp;
-            let tmp20 = tmp2;
-            let tmp21 = tmp3;
+            sum4 = tmp;
+            tmp20 = tmp2;
+            tmp21 = tmp3;
             let sum2 = uint32;
             if (uint32 % 2 !== 0) {
               sum2 = uint32 + 1;
@@ -54,7 +60,7 @@ export default {
             tmp = sum4;
             tmp2 = tmp20;
             tmp3 = tmp21;
-            let tmp4 = tmp22;
+            tmp4 = tmp22;
             hasAppMarkers = flag3;
             vp8xChunkOffset = sum4;
             iccChunks = tmp20;

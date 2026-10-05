@@ -1,15 +1,16 @@
 // _runtime/metro/06193__.js
-import _mod19 from "00019__.js";
-import transformIntoHandlerTags from "../06171_transformIntoHandlerTags.js";
+import react from "../00019_react.js";
+import selectProperties from "../06171_selectProperties.js";
 import MountRegistry2 from "../06174_MountRegistry.js";
 
 function shouldUpdateDetector(blocksHandlers, handlerTag) {
   if (undefined === blocksHandlers) {
     return false;
   } else {
-    const result = transformIntoHandlerTags.transformIntoHandlerTags(blocksHandlers);
+    const obj = selectProperties;
+    const result = obj.transformIntoHandlerTags(blocksHandlers);
     for (const item10012 of result) {
-      if (item10012 === arg1.handlerTag) {
+      if (item10012 === handlerTag.handlerTag) {
         obj2.return();
         let flag = true;
         return true;
@@ -18,11 +19,11 @@ function shouldUpdateDetector(blocksHandlers, handlerTag) {
     return false;
   }
 }
-const useEffect = _mod19.useEffect;
+const useEffect = react.useEffect;
 
 export const useMountReactions = function useMountReactions(detectorUpdater, current2) {
-  closure_0 = detectorUpdater;
-  closure_1 = current2;
+  let closure_0 = detectorUpdater;
+  let closure_1 = current2;
   const items = [detectorUpdater, current2];
   useEffect(() => {
     const MountRegistry = MountRegistry2.MountRegistry;

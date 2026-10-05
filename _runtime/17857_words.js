@@ -1,24 +1,26 @@
 // _runtime/17857_words.js
-import _mod637 from "metro/00637__.js";
-import _mod17858 from "metro/17858__.js";
-import combined from "17859_combined.js";
+import toString from "00637_toString.js";
+import hasUnicodeWord from "17858_hasUnicodeWord.js";
+import unicodeWords from "17859_unicodeWords.js";
 import asciiWords from "17860_asciiWords.js";
 
 export default function words(arg0, arg1, arg2) {
-  let tmpResult = dependencyMap;
-  const str = _mod637(arg0);
+  let tmp4;
+  const str = toString(arg0);
   let tmp3;
   if (!arg2) {
     tmp3 = arg1;
   }
   if (undefined === tmp3) {
-    if (_mod17858(str)) {
-      tmpResult = combined;
-      let tmpResultResult = tmpResult(str);
+    let tmp5;
+    if (hasUnicodeWord(str)) {
+      tmp5 = unicodeWords(str);
     } else {
-      tmpResultResult = asciiWords(str);
+      tmp5 = asciiWords(str);
     }
+    tmp4 = tmp5;
   } else {
-    return str.match(tmp3) || [];
+    tmp4 = str.match(tmp3) || [];
   }
+  return tmp4;
 }

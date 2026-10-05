@@ -4696,7 +4696,7 @@ const obj = {
     "\u73A9\u7269",
     "\u957F\u6BDB\u7ED2",
   ],
-  piñata: [
+  "pi\u00f1ata": [
     "\u4E94\u6708\u8282",
     "\u5E86\u795D",
     "\u5F69\u7F50",

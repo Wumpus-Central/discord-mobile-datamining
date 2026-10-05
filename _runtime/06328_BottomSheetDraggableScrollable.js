@@ -1,15 +1,16 @@
 // _runtime/06328_BottomSheetDraggableScrollable.js
+import Fragment from "react/00021_Fragment.js";
 import LegacyBaseButton from "06140_LegacyBaseButton.js";
-import noop from "metro/00019__.js";
+import react from "00019_react.js";
 
-require = fn;
-const jsx = fn(21).jsx;
+const jsx = Fragment.jsx;
 
 export const BottomSheetDraggableScrollable = function BottomSheetDraggableScrollable(arg0) {
+  let children;
+  let scrollableGesture;
   ({ scrollableGesture, children } = arg0);
   let tmp = children;
   if (scrollableGesture) {
-    const obj = { gesture: scrollableGesture, children };
     tmp = jsx(LegacyBaseButton.GestureDetector, { gesture: scrollableGesture, children });
   }
   return tmp;

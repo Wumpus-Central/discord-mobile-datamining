@@ -1,20 +1,19 @@
 // _runtime/00991_modulesLoaderIntegration.js
-const require = arg1;
-const dependencyMap = arg6;
-let fn = this;
-if (this) {
-  fn = this.__awaiter;
-}
-if (!fn) {
-  fn = (arg0, arg1, arg2, arg3) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
+let c4, c5, closure_2;
+
+const fn =
+  (this && this.__awaiter) ||
+  ((arg0, arg1, arg2, arg3) => {
+    let closure_0 = arg0;
+    let closure_1 = arg1;
     let _Promise = arg2;
-    closure_3 = arg3;
+    const Promise = arg2;
+    let closure_3 = arg3;
     if (!arg2) {
+      let tmp = globalThis;
       _Promise = Promise;
     }
-    return new _Promise((fn, arg1) => {
+    const _Promise1 = new _Promise(function (fn, arg1) {
       closure_0 = fn;
       closure_1 = arg1;
       function fulfilled(result) {
@@ -34,11 +33,13 @@ if (!fn) {
       let iter = rejected;
       function step(done) {
         if (done.done) {
-          closure_0(done.value);
+          fn(done.value);
         } else {
           let tmp1 = done.value;
-          closure_0 = tmp1;
+          const value = tmp1;
           if (!(tmp1 instanceof Promise)) {
+            const self = this;
+            const self2 = this;
             tmp1 = new tmp((fn) => {
               fn(value);
             });
@@ -47,18 +48,22 @@ if (!fn) {
         }
       }
       let items = closure_1;
+      const tmp = iter;
+      const apply = iter.apply;
+      const tmp2 = closure_0;
       if (!closure_1) {
         items = [];
       }
-      iter = iter.apply(closure_0, items);
+      iter = apply(tmp2, items);
       const iter2 = iter.next();
-      value = iter2.value;
+      let value = iter2.value;
       if (iter2.done) {
-        fn(value);
+        const tmp5 = fn(value);
       } else {
-        closure_0 = value;
         let tmp32 = value;
         if (!(value instanceof fulfilled)) {
+          let self = this;
+          let self2 = this;
           tmp32 = new tmp3((fn) => {
             fn(value);
           });
@@ -66,24 +71,23 @@ if (!fn) {
         tmp32.then(fulfilled, rejected);
       }
     });
-  };
-}
+    return _Promise1;
+  });
 
-export () => {
-  c0 = false;
-  c1 = null;
-  return {
+export const modulesLoaderIntegration = () => {
+  let _null;
+  let obj = {
     name: "ModulesLoader",
-    setupOnce() {
-
-    },
+    setupOnce() {},
     processEvent: (arg0) => {
-      closure_0 = arg0;
-      return fn(undefined, undefined, undefined, function*() {
+      let closure_0 = arg0;
+      return fn(undefined, undefined, undefined, function* () {
+        let _true;
+        let tmp12;
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp7 === 3) {
+        } else if (tmp3 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -93,7 +97,9 @@ export () => {
             return { value: "IconComponent", done: null };
           }
         } else {
+          let c3;
           try {
+            let closure_1;
             c5 = 2;
             if (0 === c4) {
               if (arg0 === 1) {
@@ -104,11 +110,12 @@ export () => {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                closure_1 = tmp3;
-                c0 = tmp5;
-                if (!c0) {
+                closure_1 = tmp;
+                c0 = tmp12;
+                tmp12 = c0;
+                if (!tmp12) {
                   c3 = 1;
-                  const NATIVE = _true(877).NATIVE;
+                  const NATIVE = _true(_null[0]).NATIVE;
                   c4 = 2;
                   c5 = 1;
                   const obj4 = { value: NATIVE.fetchModules(), done: false };
@@ -116,12 +123,12 @@ export () => {
                 }
               }
             } else {
-              if (1 === tmp8) {
+              if (1 === tmp4) {
                 c3 = 0;
-                closure_128_0 = closure_2;
-                const debug = _true(693).debug;
+                _true = closure_2;
+                const debug = _true(_null[1]).debug;
                 const _HermesInternal = HermesInternal;
-                debug.log("Failed to get modules from native: " + closure_128_0);
+                debug.log("Failed to get modules from native: " + _true);
               } else if (arg0 === 1) {
                 c5 = 3;
                 throw value;
@@ -136,25 +143,31 @@ export () => {
               }
               c0 = true;
             }
-            if (closure_1) {
+            tmp12 = closure_1;
+            if (tmp12) {
+              tmp12 = _true;
               const _Object = Object;
               const _Object2 = Object;
               _true.modules = Object.assign(Object.assign({}, closure_1), _true.modules);
             }
+            tmp12 = closure_129_0;
             c5 = 3;
-            const obj5 = { value: closure_129_0, done: true };
+            const obj5 = { value: tmp12, done: true };
             return obj5;
-          } catch (tmp26) {
-            closure_2 = tmp26;
-            if (tmp4 === c3) {
-              c5 = tmp2;
-              throw tmp26;
+          } catch (tmp21) {
+            closure_2 = tmp21;
+            if (0 === c3) {
+              c5 = 3;
+              throw tmp21;
             } else {
-              c4 = tmp;
+              c4 = 1;
             }
           }
         }
       });
-    }
+    },
   };
-}
+  let c0 = false;
+  let c1 = null;
+  return obj;
+};

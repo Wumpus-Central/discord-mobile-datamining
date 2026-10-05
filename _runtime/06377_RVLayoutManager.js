@@ -1,43 +1,49 @@
 // _runtime/06377_RVLayoutManager.js
-import _modDef6352 from "metro/06352__.js";
-import _classCallCheck from "metro/06351__.js";
+import ErrorMessages from "06339_ErrorMessages.js";
+import _createClassDefault from "metro/06352__createClass.js";
+import AverageWindow from "06356_AverageWindow.js";
+import ConsecutiveNumbers from "06365_ConsecutiveNumbers.js";
+import findFirstVisibleIndex from "06378_findFirstVisibleIndex.js";
+import react_native from "06379_react-native.js";
+import _classCallCheck from "metro/06351__classCallCheck.js";
 
-const RVLayoutManager = arg1;
+let MAX_VALUE, size;
+
 class RVLayoutManager {
-  constructor(arg0, arg1) {
-    self = this;
-    tmp = c2(this, RVLayoutManager);
+  constructor(horizontal, layouts) {
+    let maxColumns;
+    const self = this;
+    _classCallCheck(this, RVLayoutManager);
     this.requiresRepaint = false;
     this.maxItemsToProcess = 250;
     this.spanSizeInfo = {};
     this.spanTracker = [];
     this.currentMaxIndexWithChangedLayout = -1;
     this.lastSkippedLayoutIndex = Number.MAX_VALUE;
-    multiTypeAverageWindow = new closure_0(closure_1[2]).MultiTypeAverageWindow(5, 200);
+    const multiTypeAverageWindow = new AverageWindow.MultiTypeAverageWindow(5, 200);
     this.heightAverageWindow = multiTypeAverageWindow;
-    multiTypeAverageWindow1 = new closure_0(closure_1[2]).MultiTypeAverageWindow(5, 200);
+    const multiTypeAverageWindow1 = new AverageWindow.MultiTypeAverageWindow(5, 200);
     this.widthAverageWindow = multiTypeAverageWindow1;
-    ({ getItemType: this.getItemType, overrideItemLayout: this.overrideItemLayout } = global);
+    ({ getItemType: this.getItemType, overrideItemLayout: this.overrideItemLayout } = horizontal);
     layouts = undefined;
-    if (arg1 != null) {
-      layouts = arg1.layouts;
+    if (layouts != null) {
+      layouts = layouts.layouts;
     }
     if (layouts == null) {
       layouts = [];
     }
     self.layouts = layouts;
-    if (arg1) {
-      updateLayoutParamsResult = self.updateLayoutParams(global);
+    if (layouts) {
+      self.updateLayoutParams(horizontal);
     } else {
-      _Boolean = Boolean;
-      self.horizontal = Boolean(global.horizontal);
-      ({ windowSize: self.windowSize, maxColumns } = global);
+      const _Boolean = Boolean;
+      self.horizontal = Boolean(horizontal.horizontal);
+      ({ windowSize: self.windowSize, maxColumns } = horizontal);
       if (maxColumns == null) {
         maxColumns = 1;
       }
       self.maxColumns = maxColumns;
     }
-    return;
   }
 }
 const entry = {
@@ -71,21 +77,20 @@ let items = [
   {
     key: "getVisibleLayouts",
     value: function getVisibleLayouts(bound1, arg1) {
-      const result = RVLayoutManager(6378).findFirstVisibleIndex(this.layouts, bound1, this.horizontal);
-      const obj = RVLayoutManager(6378);
-      const findLastVisibleIndexResult = RVLayoutManager(6378).findLastVisibleIndex(
-        this.layouts,
-        arg1,
-        this.horizontal,
-      );
+      const obj = findFirstVisibleIndex;
+      const result = obj.findFirstVisibleIndex(this.layouts, bound1, this.horizontal);
+      const obj2 = findFirstVisibleIndex;
+      const findLastVisibleIndexResult = obj2.findLastVisibleIndex(this.layouts, arg1, this.horizontal);
       if (-1 !== result) {
+        let EMPTY;
         if (-1 !== findLastVisibleIndexResult) {
-          let EMPTY = new RVLayoutManager(6365).ConsecutiveNumbers(result, findLastVisibleIndexResult);
+          const self = this;
+          const self2 = this;
+          EMPTY = new ConsecutiveNumbers.ConsecutiveNumbers(result, findLastVisibleIndexResult);
         }
         return EMPTY;
       }
-      EMPTY = RVLayoutManager(6365).ConsecutiveNumbers.EMPTY;
-      const obj2 = RVLayoutManager(6378);
+      EMPTY = ConsecutiveNumbers.ConsecutiveNumbers.EMPTY;
     },
   },
   {
@@ -93,6 +98,7 @@ let items = [
     value: function deleteLayout(arr) {
       const self = this;
       const sorted = arr.sort((arg0, arg1) => arg1 - arg0);
+      const tmp2 = arr[Symbol.iterator]();
       while (tmp2 !== undefined) {
         let layouts = self.layouts;
         let spliceResult = layouts.splice(tmp3, 1);
@@ -100,15 +106,16 @@ let items = [
       }
       const items = [...arr];
       const applyResult = Math.min.apply(items);
+      const _recomputeLayouts = self._recomputeLayouts;
       const minRecomputeIndex = self.getMinRecomputeIndex(applyResult);
-      self._recomputeLayouts(minRecomputeIndex, self.getMaxRecomputeIndex(applyResult));
+      _recomputeLayouts(minRecomputeIndex, self.getMaxRecomputeIndex(applyResult));
     },
   },
   {
     key: "modifyLayout",
     value: function modifyLayout(arr, arg1) {
       const self = this;
-      closure_0 = arg1;
+      let closure_0 = arg1;
       this.maxItemsToProcess = Math.max(this.maxItemsToProcess, 10 * arr.length);
       let found = arr;
       if (this.layouts.length > arg1) {
@@ -133,21 +140,23 @@ let items = [
           self.recomputeLayouts(self.layouts.length, arg1 - 1);
         }
       }
+      const _Math = Math;
+      const lastSkippedLayoutIndex = self.lastSkippedLayoutIndex;
       const minIndexWithChangedSpan = self.computeMinIndexWithChangedSpan(found);
       let processLayoutInfoResult = self.processLayoutInfo(found, arg1);
       if (processLayoutInfoResult == null) {
         processLayoutInfoResult = bound;
       }
-      const bound1 = Math.min(
+      const minResult = min(
         bound,
-        self.lastSkippedLayoutIndex,
+        lastSkippedLayoutIndex,
         minIndexWithChangedSpan,
         processLayoutInfoResult,
         self.computeEstimatesAndMinMaxChangedLayout(found),
       );
-      if (bound1 >= 0) {
-        if (bound1 < arg1) {
-          self._recomputeLayouts(bound1, self.getMaxRecomputeIndex(bound1));
+      if (minResult >= 0) {
+        if (minResult < arg1) {
+          self._recomputeLayouts(minResult, self.getMaxRecomputeIndex(minResult));
         }
       }
       self.currentMaxIndexWithChangedLayout = -1;
@@ -159,15 +168,18 @@ let items = [
       const self = this;
       if (arg0 >= this.layouts.length) {
         const _Error = Error;
-        const error = new Error(RVLayoutManager(6339).ErrorMessages.indexOutOfBounds);
+        const self2 = this;
+        const self3 = this;
+        const error = new Error(ErrorMessages.ErrorMessages.indexOutOfBounds);
         throw error;
       } else {
         let tmp = self.layouts[arg0];
         if (!tmp) {
-          const size = { x: 0, y: 0, width: 0, height: 0 };
+          size = { x: 0, y: 0, width: 0, height: 0 };
           self.layouts[arg0] = size;
           tmp = size;
         }
+        const tmp2 = tmp.isWidthMeasured && tmp.isHeightMeasured;
         if (!tmp2) {
           self.estimateLayout(arg0);
         }
@@ -178,6 +190,7 @@ let items = [
   {
     key: "updateLayoutParams",
     value: function updateLayoutParams(maxColumns) {
+      let horizontal;
       const self = this;
       ({ windowSize: this.windowSize, horizontal } = maxColumns);
       if (horizontal == null) {
@@ -219,14 +232,15 @@ let items = [
       this.spanSizeInfo.span = undefined;
       this.overrideItemLayout(sum, this.spanSizeInfo);
       let num = this.spanSizeInfo.span;
+      const _Math = Math;
       if (num == null) {
         num = 1;
       }
-      const bound = Math.min(num, self.maxColumns);
+      const minResult = min(num, self.maxColumns);
       if (!flag) {
-        self.spanTracker[sum] = bound;
+        self.spanTracker[sum] = minResult;
       }
-      return bound;
+      return minResult;
     },
   },
   {
@@ -250,9 +264,10 @@ let items = [
   },
   {
     key: "_recomputeLayouts",
-    value: function _recomputeLayouts(bound1, maxRecomputeIndex) {
+    value: function _recomputeLayouts(minRecomputeIndex, maxRecomputeIndex) {
       const self = this;
-      this.recomputeLayouts(bound1, maxRecomputeIndex);
+      this.recomputeLayouts(minRecomputeIndex, maxRecomputeIndex);
+      const tmp2 = this.lastSkippedLayoutIndex >= minRecomputeIndex && self.lastSkippedLayoutIndex <= maxRecomputeIndex;
       if (tmp2) {
         const _Number = Number;
         self.lastSkippedLayoutIndex = Number.MAX_VALUE;
@@ -279,7 +294,7 @@ let items = [
         let index = nextResult.index;
         let tmp2 = index;
         let dimensions = nextResult.dimensions;
-        let size = self.layouts[index];
+        size = self.layouts[index];
         let result = index >= self.lastSkippedLayoutIndex;
         if (!result) {
           result = !size;
@@ -291,11 +306,11 @@ let items = [
           result = !size.isWidthMeasured;
         }
         if (!result) {
-          let obj = RVLayoutManager(6379);
+          let obj = react_native;
           result = obj.areDimensionsNotEqual(size.height, dimensions.height);
         }
         if (!result) {
-          let obj2 = RVLayoutManager(6379);
+          let obj2 = react_native;
           result = obj2.areDimensionsNotEqual(size.width, dimensions.width);
         }
         if (result) {
@@ -334,5 +349,6 @@ let items = [
     },
   },
 ];
+const RVLayoutManager_export = _createClassDefault(RVLayoutManager, items);
 
-export const RVLayoutManager = _modDef6352(RVLayoutManager, items);
+export { RVLayoutManager_export as RVLayoutManager };

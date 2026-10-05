@@ -8,21 +8,31 @@ import differenceInCalendarYears_mod from "04148_differenceInCalendarYears.js";
 import differenceInHours_mod from "04150_differenceInHours.js";
 import differenceInMinutes_mod from "04155_differenceInMinutes.js";
 import differenceInSeconds_mod from "04161_differenceInSeconds.js";
-import _typeof_mod from "metro/03958__.js";
+import toDate_mod from "03958_toDate.js";
 import requiredArgs_mod from "03959_requiredArgs.js";
 
+let tmp11;
+let tmp13;
+let tmp15;
+let tmp17;
+let tmp19;
+let tmp21;
+let tmp3;
+let tmp5;
+let tmp7;
+let tmp9;
 let differenceInCalendarDays = differenceInCalendarDays_mod;
 if (!differenceInCalendarDays) {
+  tmp3 = { default: differenceInCalendarDays };
   const obj = { default: differenceInCalendarDays };
-  let tmp3 = obj;
 } else {
   tmp3 = differenceInCalendarDays;
 }
 differenceInCalendarDays = tmp3;
 let differenceInCalendarMonths = differenceInCalendarMonths_mod;
 if (!differenceInCalendarMonths) {
+  tmp5 = { default: differenceInCalendarMonths };
   const obj2 = { default: differenceInCalendarMonths };
-  let tmp5 = obj2;
 } else {
   tmp5 = differenceInCalendarMonths;
 }
@@ -30,72 +40,76 @@ differenceInCalendarMonths = tmp5;
 let differenceInCalendarQuarters = differenceInCalendarQuarters_mod;
 if (!differenceInCalendarQuarters) {
   let obj3 = { default: differenceInCalendarQuarters };
-  let tmp7 = obj3;
+  tmp7 = obj3;
 } else {
   tmp7 = differenceInCalendarQuarters;
 }
 differenceInCalendarQuarters = tmp7;
 let differenceInCalendarWeeks = differenceInCalendarWeeks_mod;
 if (!differenceInCalendarWeeks) {
+  tmp9 = { default: differenceInCalendarWeeks };
   const obj4 = { default: differenceInCalendarWeeks };
-  let tmp9 = obj4;
 } else {
   tmp9 = differenceInCalendarWeeks;
 }
 differenceInCalendarWeeks = tmp9;
 let differenceInCalendarYears = differenceInCalendarYears_mod;
 if (!differenceInCalendarYears) {
+  tmp11 = { default: differenceInCalendarYears };
   const obj5 = { default: differenceInCalendarYears };
-  let tmp11 = obj5;
 } else {
   tmp11 = differenceInCalendarYears;
 }
 differenceInCalendarYears = tmp11;
 let differenceInHours = differenceInHours_mod;
 if (!differenceInHours) {
+  tmp13 = { default: differenceInHours };
   const obj6 = { default: differenceInHours };
-  let tmp13 = obj6;
 } else {
   tmp13 = differenceInHours;
 }
 differenceInHours = tmp13;
 let differenceInMinutes = differenceInMinutes_mod;
 if (!differenceInMinutes) {
+  tmp15 = { default: differenceInMinutes };
   const obj7 = { default: differenceInMinutes };
-  let tmp15 = obj7;
 } else {
   tmp15 = differenceInMinutes;
 }
 differenceInMinutes = tmp15;
 let differenceInSeconds = differenceInSeconds_mod;
 if (!differenceInSeconds) {
+  tmp17 = { default: differenceInSeconds };
   const obj8 = { default: differenceInSeconds };
-  let tmp17 = obj8;
 } else {
   tmp17 = differenceInSeconds;
 }
 differenceInSeconds = tmp17;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj9 = { default: _typeof };
-  let tmp19 = obj9;
+let toDate = toDate_mod;
+if (!toDate) {
+  tmp19 = { default: toDate };
+  const obj9 = { default: toDate };
 } else {
-  tmp19 = _typeof;
+  tmp19 = toDate;
 }
-_typeof = tmp19;
+toDate = tmp19;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp21 = { default: requiredArgs };
   const obj10 = { default: requiredArgs };
-  let tmp21 = obj10;
 } else {
   tmp21 = requiredArgs;
 }
 requiredArgs = tmp21;
 
 export default function intlFormatDistance(arg0, arg1, unit) {
+  let num2;
+  let str;
+  let str6;
+  let style;
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const defaultResult2 = _typeof.default(arg1);
+  const defaultResult1 = toDate.default(arg0);
+  const defaultResult2 = toDate.default(arg1);
   if (null != unit) {
     if (unit.unit) {
       unit = undefined;
@@ -103,8 +117,8 @@ export default function intlFormatDistance(arg0, arg1, unit) {
         unit = unit.unit;
       }
       if ("second" === unit) {
-        let num2 = differenceInSeconds.default(defaultResult1, defaultResult2);
-        let str = unit;
+        num2 = differenceInSeconds.default(defaultResult1, defaultResult2);
+        str = unit;
       } else if ("minute" === unit) {
         num2 = differenceInMinutes.default(defaultResult1, defaultResult2);
         str = unit;
@@ -133,7 +147,7 @@ export default function intlFormatDistance(arg0, arg1, unit) {
       }
     }
     const _Intl = Intl;
-    locale = undefined;
+    let locale;
     if (null != unit) {
       locale = unit.locale;
     }
@@ -141,21 +155,21 @@ export default function intlFormatDistance(arg0, arg1, unit) {
     if (null != unit) {
       localeMatcher = unit.localeMatcher;
     }
-    const obj3 = { localeMatcher, numeric: null, style: null };
-    let str6;
+    const obj3 = { localeMatcher, numeric: str6, style };
+    str6 = undefined;
     if (null != unit) {
       str6 = unit.numeric;
     }
     if (!str6) {
       str6 = "auto";
     }
-    obj3.numeric = str6;
-    let style;
+    style = undefined;
     if (null != unit) {
       style = unit.style;
     }
-    obj3.style = style;
-    const relativeTimeFormat = new Intl.RelativeTimeFormat(locale, obj3);
+    const self = this;
+    const self2 = this;
+    const relativeTimeFormat = new RelativeTimeFormat(locale, obj3);
     return relativeTimeFormat.format(num2, str);
   }
   const defaultResult3 = differenceInSeconds.default(defaultResult1, defaultResult2);
@@ -214,5 +228,4 @@ export default function intlFormatDistance(arg0, arg1, unit) {
       }
     }
   }
-};
-export default exports.default;
+}

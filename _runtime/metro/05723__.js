@@ -1,19 +1,23 @@
 // _runtime/metro/05723__.js
+import react_native from "../00017_react-native.js";
 import _mod5721 from "05721__.js";
-import noop from "00019__.js";
+import react from "../00019_react.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-const findNodeHandle = fn(17).findNodeHandle;
+const findNodeHandle = react_native.findNodeHandle;
 
 export const useRenderDebugInfo = function useRenderDebugInfo(arg0) {
+  let closure_0;
+  let ref1;
   _require = arg0;
   const ref = ref1.useRef(null);
   ref1 = ref1.useRef(-1);
-  closure_3 = ref1.useEffectEvent((arg0) => {
+  let closure_3 = ref1.useEffectEvent((arg0) => {
+    const current = ref1.current;
     const RNSLog = _mod5721.RNSLog;
-    RNSLog.log("" + closure_0 + " [" + ref1.current + "] " + arg0);
+    RNSLog.log("" + closure_0 + " [" + current + "] " + arg0);
   });
   const effect = ref1.useEffect(() => {
     if (null != ref.current) {
@@ -31,7 +35,8 @@ export const useRenderDebugInfo = function useRenderDebugInfo(arg0) {
       closure_1_3("unmounted");
     };
   }, []);
+  let current = ref1.current;
   let RNSLog = require("05721__.js").RNSLog;
-  RNSLog.log("" + arg0 + " [" + ref1.current + "] " + "rendered");
+  RNSLog.log("" + arg0 + " [" + current + "] " + "rendered");
   return ref;
 };

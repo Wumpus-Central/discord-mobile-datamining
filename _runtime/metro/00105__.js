@@ -1,47 +1,38 @@
 // _runtime/metro/00105__.js
 import _mod26 from "00026__.js";
-import weakSet_mod from "../00106_weakSet.js";
+import "DynamicallyInjectedByGestureHandler";
+import DynamicallyInjectedByGestureHandler_mod from "../00106_DynamicallyInjectedByGestureHandler.js";
 
 const _modDef26 = _mod26;
 
-const obj = { directEventTypes: null, bubblingEventTypes: null, validAttributes: null };
-const obj2 = {
+let DynamicallyInjectedByGestureHandler;
+let obj2;
+let obj3;
+let obj4;
+const obj = { directEventTypes: obj2, bubblingEventTypes: obj3, validAttributes: obj4 };
+obj2 = {
   topAccessibilityAction: { registrationName: "onAccessibilityAction" },
-  onGestureHandlerEvent: null,
-  onGestureHandlerStateChange: null,
-  topContentSizeChange: null,
-  topScrollBeginDrag: null,
-  topMessage: null,
-  topSelectionChange: null,
-  topLoadingFinish: null,
-  topMomentumScrollEnd: null,
-  topLoadingStart: null,
-  topLoadingError: null,
-  topMomentumScrollBegin: null,
-  topScrollEndDrag: null,
-  topScroll: null,
-  topLayout: null,
+  onGestureHandlerEvent: DynamicallyInjectedByGestureHandler.DynamicallyInjectedByGestureHandler({
+    registrationName: "onGestureHandlerEvent",
+  }),
+  onGestureHandlerStateChange: DynamicallyInjectedByGestureHandler.DynamicallyInjectedByGestureHandler({
+    registrationName: "onGestureHandlerStateChange",
+  }),
+  topContentSizeChange: { registrationName: "onContentSizeChange" },
+  topScrollBeginDrag: { registrationName: "onScrollBeginDrag" },
+  topMessage: { registrationName: "onMessage" },
+  topSelectionChange: { registrationName: "onSelectionChange" },
+  topLoadingFinish: { registrationName: "onLoadingFinish" },
+  topMomentumScrollEnd: { registrationName: "onMomentumScrollEnd" },
+  topLoadingStart: { registrationName: "onLoadingStart" },
+  topLoadingError: { registrationName: "onLoadingError" },
+  topMomentumScrollBegin: { registrationName: "onMomentumScrollBegin" },
+  topScrollEndDrag: { registrationName: "onScrollEndDrag" },
+  topScroll: { registrationName: "onScroll" },
+  topLayout: { registrationName: "onLayout" },
 };
-let weakSet = weakSet_mod;
-obj2.onGestureHandlerEvent = weakSet.DynamicallyInjectedByGestureHandler({ registrationName: "onGestureHandlerEvent" });
-let weakSet = weakSet_mod;
-obj2.onGestureHandlerStateChange = weakSet.DynamicallyInjectedByGestureHandler({
-  registrationName: "onGestureHandlerStateChange",
-});
-obj2.topContentSizeChange = { registrationName: "onContentSizeChange" };
-obj2.topScrollBeginDrag = { registrationName: "onScrollBeginDrag" };
-obj2.topMessage = { registrationName: "onMessage" };
-obj2.topSelectionChange = { registrationName: "onSelectionChange" };
-obj2.topLoadingFinish = { registrationName: "onLoadingFinish" };
-obj2.topMomentumScrollEnd = { registrationName: "onMomentumScrollEnd" };
-obj2.topLoadingStart = { registrationName: "onLoadingStart" };
-obj2.topLoadingError = { registrationName: "onLoadingError" };
-obj2.topMomentumScrollBegin = { registrationName: "onMomentumScrollBegin" };
-obj2.topScrollEndDrag = { registrationName: "onScrollEndDrag" };
-obj2.topScroll = { registrationName: "onScroll" };
-obj2.topLayout = { registrationName: "onLayout" };
-obj.directEventTypes = obj2;
-obj.bubblingEventTypes = {
+DynamicallyInjectedByGestureHandler = DynamicallyInjectedByGestureHandler_mod;
+obj3 = {
   topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } },
   topSelect: { phasedRegistrationNames: { captured: "onSelectCapture", bubbled: "onSelect" } },
   topTouchEnd: { phasedRegistrationNames: { captured: "onTouchEndCapture", bubbled: "onTouchEnd" } },
@@ -66,7 +57,39 @@ obj.bubblingEventTypes = {
   topKeyDown: { phasedRegistrationNames: { captured: "onKeyDownCapture", bubbled: "onKeyDown" } },
   topKeyUp: { phasedRegistrationNames: { captured: "onKeyUpCapture", bubbled: "onKeyUp" } },
 };
-const obj4 = {};
+obj4 = {
+  onLayout: true,
+  onMoveShouldSetResponder: true,
+  onMoveShouldSetResponderCapture: true,
+  onStartShouldSetResponder: true,
+  onStartShouldSetResponderCapture: true,
+  onResponderGrant: true,
+  onResponderReject: true,
+  onResponderStart: true,
+  onResponderEnd: true,
+  onResponderRelease: true,
+  onResponderMove: true,
+  onResponderTerminate: true,
+  onResponderTerminationRequest: true,
+  onShouldBlockNativeResponder: true,
+  onTouchStart: true,
+  onTouchMove: true,
+  onTouchEnd: true,
+  onTouchCancel: true,
+  onClick: true,
+  onClickCapture: true,
+  onPointerEnter: true,
+  onPointerEnterCapture: true,
+  onPointerLeave: true,
+  onPointerLeaveCapture: true,
+  onPointerMove: true,
+  onPointerMoveCapture: true,
+  onPointerOut: true,
+  onPointerOutCapture: true,
+  onPointerOver: true,
+  onPointerOverCapture: true,
+  preventClipping: true,
+};
 const size = {
   backgroundColor: _mod26.colorAttribute,
   transform: true,
@@ -242,37 +265,5 @@ const size = {
   backfaceVisibility: true,
 };
 const merged = Object.assign(size);
-obj4.onLayout = true;
-obj4.onMoveShouldSetResponder = true;
-obj4.onMoveShouldSetResponderCapture = true;
-obj4.onStartShouldSetResponder = true;
-obj4.onStartShouldSetResponderCapture = true;
-obj4.onResponderGrant = true;
-obj4.onResponderReject = true;
-obj4.onResponderStart = true;
-obj4.onResponderEnd = true;
-obj4.onResponderRelease = true;
-obj4.onResponderMove = true;
-obj4.onResponderTerminate = true;
-obj4.onResponderTerminationRequest = true;
-obj4.onShouldBlockNativeResponder = true;
-obj4.onTouchStart = true;
-obj4.onTouchMove = true;
-obj4.onTouchEnd = true;
-obj4.onTouchCancel = true;
-obj4.onClick = true;
-obj4.onClickCapture = true;
-obj4.onPointerEnter = true;
-obj4.onPointerEnterCapture = true;
-obj4.onPointerLeave = true;
-obj4.onPointerLeaveCapture = true;
-obj4.onPointerMove = true;
-obj4.onPointerMoveCapture = true;
-obj4.onPointerOut = true;
-obj4.onPointerOutCapture = true;
-obj4.onPointerOver = true;
-obj4.onPointerOverCapture = true;
-obj4.preventClipping = true;
-obj.validAttributes = obj4;
 
 export default obj;

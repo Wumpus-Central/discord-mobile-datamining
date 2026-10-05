@@ -1,9 +1,6 @@
 // _runtime/metro/12597__.js
 import _mod12592 from "12592__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
 export const hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
   if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
     if (!globalThis.__SENTRY_TRACING__) {
@@ -11,23 +8,15 @@ export const hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
     }
   }
   let tmp = tracesSampler;
-  const client = _mod12592.getClient();
+  const obj = _mod12592;
+  const client = obj.getClient();
   if (!tracesSampler) {
-    options = client;
-    if (client) {
-      options = client.getOptions();
-    }
-    tmp = options;
+    tmp = client && client.getOptions();
+    client && client.getOptions();
   }
   let tmp3 = tmp;
   if (tmp3) {
-    let enableTracing = tmp.enableTracing;
-    if (!enableTracing) {
-      enableTracing = "tracesSampleRate" in tmp;
-    }
-    if (!enableTracing) {
-      enableTracing = "tracesSampler" in tmp;
-    }
+    const enableTracing = tmp.enableTracing || "tracesSampleRate" in tmp || "tracesSampler" in tmp;
     tmp3 = enableTracing;
   }
   return tmp3;

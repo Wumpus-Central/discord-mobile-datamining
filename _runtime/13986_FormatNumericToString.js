@@ -1,24 +1,27 @@
 // _runtime/13986_FormatNumericToString.js
 import TEN from "13972_TEN.js";
 
-const _mod13970 = tmp5(13970);
+let tmp5;
+const UNICODE_EXTENSION_SEQUENCE_REGEX = tmp5(13970);
 const GetUnsignedRoundingMode = tmp5(13987);
 const ToRawPrecision = tmp5(13988);
 const ToRawFixed = tmp5(13989);
-require = arg1;
-const dependencyMap = arg6;
 
 export const FormatNumericToString = function FormatNumericToString(roundingType, timesResult) {
+  let ZERO;
+  let formattedString;
+  let roundedNumber;
+  let str2;
   if (timesResult.isZero()) {
+    let ToRawPrecisionResult;
     if (timesResult.isNegative()) {
-      let ZERO = TEN.ZERO;
-      let str2 = "negative";
-      let tmp5Result = dependencyMap;
+      ZERO = TEN.ZERO;
+      str2 = "negative";
     }
     roundingType = roundingType.roundingType;
     const result = GetUnsignedRoundingMode.GetUnsignedRoundingMode(roundingType.roundingMode, tmp9);
     if ("significantDigits" === roundingType) {
-      let ToRawPrecisionResult = ToRawPrecision.ToRawPrecision(
+      ToRawPrecisionResult = ToRawPrecision.ToRawPrecision(
         ZERO,
         roundingType.minimumSignificantDigits,
         roundingType.maximumSignificantDigits,
@@ -52,7 +55,10 @@ export const FormatNumericToString = function FormatNumericToString(roundingType
         }
         ToRawPrecisionResult = ToRawFixedResult;
       } else {
-        _mod13970.invariant("lessPrecision" === roundingType.roundingType, "Invalid roundingType");
+        UNICODE_EXTENSION_SEQUENCE_REGEX.invariant(
+          "lessPrecision" === roundingType.roundingType,
+          "Invalid roundingType",
+        );
         ToRawPrecisionResult = ToRawPrecisionResult1;
         if (ToRawPrecisionResult1.roundingMagnitude <= ToRawFixedResult.roundingMagnitude) {
           ToRawPrecisionResult = ToRawFixedResult;
@@ -75,29 +81,32 @@ export const FormatNumericToString = function FormatNumericToString(roundingType
     const minimumIntegerDigits = roundingType.minimumIntegerDigits;
     let sum = substr;
     if (integerDigitsCount < minimumIntegerDigits) {
-      sum = _mod13970.repeat("0", minimumIntegerDigits - integerDigitsCount) + substr;
+      sum = UNICODE_EXTENSION_SEQUENCE_REGEX.repeat("0", minimumIntegerDigits - integerDigitsCount) + substr;
     }
-    if ("negative" !== str2) {
-      const obj = { roundedNumber, formattedString: sum };
-      return obj;
-    } else if (roundedNumber.isZero()) {
-      tmp5Result = TEN;
-      let NEGATIVE_ZERO = tmp5Result.NEGATIVE_ZERO;
-    } else {
-      NEGATIVE_ZERO = roundedNumber.negated();
+    let tmp22 = roundedNumber;
+    if ("negative" === str2) {
+      let NEGATIVE_ZERO;
+      if (roundedNumber.isZero()) {
+        NEGATIVE_ZERO = TEN.NEGATIVE_ZERO;
+      } else {
+        NEGATIVE_ZERO = roundedNumber.negated();
+      }
+      tmp22 = NEGATIVE_ZERO;
     }
+    return { roundedNumber: tmp22, formattedString: sum };
   }
-  _mod13970.invariant(timesResult.isFinite(), "NumberFormatDigitInternalSlots value is not finite");
+  UNICODE_EXTENSION_SEQUENCE_REGEX.invariant(
+    timesResult.isFinite(),
+    "NumberFormatDigitInternalSlots value is not finite",
+  );
   let str = "positive";
   if (timesResult.lessThan(0)) {
     str = "negative";
   }
   ZERO = timesResult;
   str2 = str;
-  tmp5Result = dependencyMap;
   if ("negative" === str) {
     ZERO = timesResult.negated();
     str2 = str;
-    tmp5Result = dependencyMap;
   }
 };

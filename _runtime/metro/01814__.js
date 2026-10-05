@@ -1,8 +1,8 @@
 // _runtime/metro/01814__.js
 import _modDef1815 from "01815__.js";
 
-importDefault = fn;
-const dependencyMap = arg6;
+let convertOklabToRgb;
+let obj3;
 function convertLrgbToOklab(convert) {
   let num = convert.r;
   if (num === undefined) {
@@ -16,6 +16,7 @@ function convertLrgbToOklab(convert) {
   if (num3 === undefined) {
     num3 = 0;
   }
+  const alpha = convert.alpha;
   const cbrtResult = Math.cbrt(0.41222147079999993 * num + 0.5363325363 * num2 + 0.0514459929 * num3);
   const cbrtResult1 = Math.cbrt(0.2119034981999999 * num + 0.6806995450999999 * num2 + 0.1073969566 * num3);
   const cbrtResult2 = Math.cbrt(0.08830246189999998 * num + 0.2817188376 * num2 + 0.6299787005000002 * num3);
@@ -23,7 +24,7 @@ function convertLrgbToOklab(convert) {
     l: 0.2104542553 * cbrtResult + 0.793617785 * cbrtResult1 - 0.0040720468 * cbrtResult2,
     a: 1.9779984951 * cbrtResult - 2.428592205 * cbrtResult1 + 0.4505937099 * cbrtResult2,
     b: 0.0259040371 * cbrtResult + 0.7827717662 * cbrtResult1 - 0.808675766 * cbrtResult2,
-    alpha: convert.alpha,
+    alpha,
   };
 }
 convertLrgbToOklab.__closure = {};
@@ -34,30 +35,32 @@ convertLrgbToOklab.__initData = {
 function convertRgbToOklab(arg0) {
   const convert = _modDef1815.convert;
   const tmp = convertLrgbToOklab(convert.fromRgb(arg0));
+  const tmp2 = arg0.r === arg0.b && arg0.b === arg0.g;
   if (tmp2) {
     tmp.b = 0;
     tmp.a = 0;
   }
   return tmp;
 }
-convertRgbToOklab.__closure = { lrgb: fn(1815), convertLrgbToOklab };
+convertRgbToOklab.__closure = { lrgb: _modDef1815, convertLrgbToOklab };
 convertRgbToOklab.__workletHash = 16743889557677;
 convertRgbToOklab.__initData = {
   code: "function convertRgbToOklab_Pnpm_oklabTs2(rgb){const{lrgb,convertLrgbToOklab}=this.__closure;const lrgbColor=lrgb.convert.fromRgb(rgb);const result=convertLrgbToOklab(lrgbColor);if(rgb.r===rgb.b&&rgb.b===rgb.g){result.a=result.b=0;}return result;}",
 };
-function convertOklabToLrgb(alpha) {
-  let num = alpha.l;
+function convertOklabToLrgb(l) {
+  let num = l.l;
   if (num === undefined) {
     num = 0;
   }
-  let num2 = alpha.a;
+  let num2 = l.a;
   if (num2 === undefined) {
     num2 = 0;
   }
-  let num3 = alpha.b;
+  let num3 = l.b;
   if (num3 === undefined) {
     num3 = 0;
   }
+  const alpha = l.alpha;
   const powResult = Math.pow(0.9999999984505198 * num + 0.39633779217376786 * num2 + 0.2158037580607588 * num3, 3);
   const powResult1 = Math.pow(1.0000000088817609 * num - 0.10556134232365635 * num2 - 0.06385417477170591 * num3, 3);
   const powResult2 = Math.pow(1.0000000546724108 * num - 0.08948418209496575 * num2 - 1.2914855378640917 * num3, 3);
@@ -65,7 +68,7 @@ function convertOklabToLrgb(alpha) {
     r: 4.076741661347994 * powResult - 3.307711590408193 * powResult1 + 0.230969928729428 * powResult2,
     g: -1.2684380040921763 * powResult + 2.6097574006633715 * powResult1 - 0.3413193963102197 * powResult2,
     b: -0.004196086541837188 * powResult - 0.7034186144594493 * powResult1 + 1.7076147009309444 * powResult2,
-    alpha: alpha.alpha,
+    alpha,
   };
 }
 convertOklabToLrgb.__closure = {};
@@ -73,23 +76,23 @@ convertOklabToLrgb.__workletHash = 14870197803884;
 convertOklabToLrgb.__initData = {
   code: "function convertOklabToLrgb_Pnpm_oklabTs3({l=0,a=0,b=0,alpha:alpha}){const L=Math.pow(l*0.99999999845051981432+0.39633779217376785678*a+0.21580375806075880339*b,3);const M=Math.pow(l*1.0000000088817607767-0.1055613423236563494*a-0.063854174771705903402*b,3);const S=Math.pow(l*1.0000000546724109177-0.089484182094965759684*a-1.2914855378640917399*b,3);return{r:+4.076741661347994*L-3.307711590408193*M+0.230969928729428*S,g:-1.2684380040921763*L+2.6097574006633715*M-0.3413193963102197*S,b:-0.004196086541837188*L-0.7034186144594493*M+1.7076147009309444*S,alpha:alpha};}",
 };
-const obj2 = { convert: null };
-const obj3 = { fromRgb: convertRgbToOklab, toRgb: null };
-function convertOklabToRgb(alpha) {
+const obj2 = { convert: obj3 };
+obj3 = { fromRgb: convertRgbToOklab, toRgb: convertOklabToRgb };
+convertOklabToRgb = function convertOklabToRgb(l) {
+  const tmp = convertOklabToLrgb(l);
   const convert = _modDef1815.convert;
-  const toRgbResult = convert.toRgb(convertOklabToLrgb(alpha));
+  const toRgbResult = convert.toRgb(tmp);
   toRgbResult.r = Math.ceil(100000 * toRgbResult.r) / 100000;
   toRgbResult.g = Math.ceil(100000 * toRgbResult.g) / 100000;
   toRgbResult.b = Math.ceil(100000 * toRgbResult.b) / 100000;
   return toRgbResult;
-}
-const obj = { lrgb: fn(1815), convertLrgbToOklab };
-convertOklabToRgb.__closure = { convertOklabToLrgb, lrgb: fn(1815) };
+};
+const obj = { lrgb: _modDef1815, convertLrgbToOklab };
+convertOklabToRgb.__closure = { convertOklabToLrgb, lrgb: _modDef1815 };
 convertOklabToRgb.__workletHash = 14795767520122;
 convertOklabToRgb.__initData = {
   code: "function convertOklabToRgb_Pnpm_oklabTs4(labColor){const{convertOklabToLrgb,lrgb}=this.__closure;const roundChannel=function(channel){return Math.ceil(channel*100_000)/100_000;};const lrgbColor=convertOklabToLrgb(labColor);const rgbColor=lrgb.convert.toRgb(lrgbColor);rgbColor.r=roundChannel(rgbColor.r);rgbColor.g=roundChannel(rgbColor.g);rgbColor.b=roundChannel(rgbColor.b);return rgbColor;}",
 };
-obj3.toRgb = convertOklabToRgb;
-obj2.convert = obj3;
+({ convertOklabToLrgb, lrgb: _modDef1815 });
 
 export default obj2;

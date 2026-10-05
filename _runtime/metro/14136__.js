@@ -1,12 +1,15 @@
 // _runtime/metro/14136__.js
+let hasOwnProperty;
+
 const SymbolResult = Symbol("wrapper");
+const _window = SymbolResult;
 const SymbolResult1 = Symbol("impl");
 let closure_2 = Symbol("SameObject caches");
 const items = [];
 const forResult = Symbol.for("[webidl2js]  constructor registry");
+const SymbolResult2 = Symbol("internal");
 const prototypeOf = Object.getPrototypeOf(Object.getPrototypeOf(items[Symbol.iterator]()));
 const get = Object.getOwnPropertyDescriptor(ArrayBuffer.prototype, "byteLength").get;
-const SymbolResult2 = Symbol("internal");
 const SymbolResult3 = Symbol("supports property index");
 const SymbolResult4 = Symbol("supported property indices");
 const SymbolResult5 = Symbol("supports property name");
@@ -17,8 +20,7 @@ const SymbolResult9 = Symbol("indexed property set existing");
 const SymbolResult10 = Symbol("named property get");
 const SymbolResult11 = Symbol("named property set new");
 const SymbolResult12 = Symbol("named property set existing");
-
-export default {
+const obj = {
   isObject(obj) {
     let tmp = typeof obj === "object";
     if (typeof obj === "object") {
@@ -29,10 +31,9 @@ export default {
     }
     return tmp;
   },
-  hasOwn(arg0, key10009) {
+  hasOwn(arg0, arg1) {
     hasOwnProperty = Object.prototype.hasOwnProperty;
-    const call = hasOwnProperty.call;
-    return typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009);
+    return hasOwnProperty.call(arg0, arg1);
   },
   wrapperSymbol: SymbolResult,
   implSymbol: SymbolResult1,
@@ -50,7 +51,7 @@ export default {
   wrapperForImpl(arg0) {
     let tmp = null;
     if (arg0) {
-      tmp = arg0[SymbolResult];
+      tmp = arg0[_window];
     }
     return tmp;
   },
@@ -64,7 +65,7 @@ export default {
   tryWrapperForImpl(searchParams) {
     let tmp = null;
     if (searchParams) {
-      tmp = searchParams[SymbolResult];
+      tmp = searchParams[_window];
     }
     if (!tmp) {
       tmp = searchParams;
@@ -85,12 +86,7 @@ export default {
   IteratorPrototype: prototypeOf,
   isArrayBuffer(arg0) {
     try {
-      const call = get.call;
-      if (typeof call === "unknown") {
-        get();
-      } else {
-        call(arg0);
-      }
+      get.call(arg0);
       return true;
     } catch (err) {
       return false;
@@ -119,6 +115,8 @@ export default {
   indexedSetExisting: SymbolResult9,
   namedGet: SymbolResult10,
   namedSetNew: SymbolResult11,
-  namedSetExisting: Symbol("named property set existing"),
+  namedSetExisting: SymbolResult12,
   namedDelete: Symbol("named property delete"),
 };
+
+export default obj;

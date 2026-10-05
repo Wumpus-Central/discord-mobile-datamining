@@ -4,9 +4,10 @@ const obj = {
   round: Math.round,
   floor: Math.floor,
   trunc(endImportTime) {
+    let rounded;
     if (endImportTime < 0) {
       const _Math2 = Math;
-      let rounded = Math.ceil(endImportTime);
+      rounded = Math.ceil(endImportTime);
     } else {
       const _Math = Math;
       rounded = Math.floor(endImportTime);
@@ -14,13 +15,14 @@ const obj = {
     return rounded;
   },
 };
-const trunc = "trunc";
+const trunc_str = "trunc";
 
 export const getRoundingMethod = function getRoundingMethod(roundingMethod) {
+  let tmp3;
   if (roundingMethod) {
-    let tmp3 = obj[roundingMethod];
+    tmp3 = obj[roundingMethod];
   } else {
-    tmp3 = obj[trunc];
+    tmp3 = obj[trunc_str];
   }
   return tmp3;
 };

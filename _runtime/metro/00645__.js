@@ -1,84 +1,96 @@
 // _runtime/metro/00645__.js
-import _mod622 from "00622__.js";
-import _mod647 from "00647__.js";
-import _mod648 from "00648__.js";
-import _mod649 from "00649__.js";
-import module_617_mod from "00617__.js";
-import module_522_mod from "00522__.js";
-import module_646_mod from "00646__.js";
+import getNative2 from "../00622_getNative.js";
+import getNative3 from "../00647_getNative.js";
+import getNative4 from "../00648_getNative.js";
+import getNative5 from "../00649_getNative.js";
+import toSource_mod from "../00617_toSource.js";
+import baseGetTag_mod from "../00522_baseGetTag.js";
+import getNative_mod from "../00646_getNative.js";
 
-let module_617 = module_617_mod;
-module_617(module_646);
-let module_617 = module_617_mod;
-const module_622 = module_617(_mod622);
-let module_617 = module_617_mod;
-const module_647 = module_617(_mod647);
-let module_617 = module_617_mod;
-const module_648 = module_617(_mod648);
-let module_617 = module_617_mod;
-const module_649 = module_617(_mod649);
-let module_522 = module_522_mod;
-let module_646 = module_646_mod;
-if (module_646) {
+let getNative;
+let toSource = toSource_mod;
+toSource(getNative);
+toSource = toSource_mod;
+toSource(getNative2);
+toSource = toSource_mod;
+toSource(getNative3);
+toSource = toSource_mod;
+toSource(getNative4);
+toSource = toSource_mod;
+toSource(getNative5);
+let baseGetTag = baseGetTag_mod;
+getNative = getNative_mod;
+if (getNative) {
   const _ArrayBuffer = ArrayBuffer;
-  const _module6 = module_646;
+  const self = this;
+  const self2 = this;
+  const _module6 = getNative;
   const arrayBuffer = new ArrayBuffer(1);
+  const self3 = this;
+  const self4 = this;
   const _module61 = new _module6(arrayBuffer);
-  module_646 = module_522(_module61) != "[object DataView]";
+  let str = "[object DataView]";
+  getNative = baseGetTag(_module61) != "[object DataView]";
 }
-if (!module_646) {
-  let _module7 = _mod622;
+if (!getNative) {
+  let _module7 = getNative2;
   if (_module7) {
-    const tmp20 = new _mod622();
-    _module7 = module_522(tmp20) != "[object Map]";
+    const self5 = this;
+    const self6 = this;
+    const tmp14 = new getNative2();
+    _module7 = baseGetTag(tmp14) != "[object Map]";
   }
-  module_646 = _module7;
+  getNative = _module7;
 }
-if (!module_646) {
-  let _module8 = _mod647;
+if (!getNative) {
+  let _module8 = getNative3;
   if (_module8) {
-    const _module9 = _mod647;
-    _module8 = module_522(_module9.resolve()) != "[object Promise]";
+    const _module9 = getNative3;
+    _module8 = baseGetTag(_module9.resolve()) != "[object Promise]";
   }
-  module_646 = _module8;
+  getNative = _module8;
 }
-if (!module_646) {
-  let _module10 = _mod648;
+if (!getNative) {
+  let _module10 = getNative4;
   if (_module10) {
-    const tmp26 = new _mod648();
-    _module10 = module_522(tmp26) != "[object Set]";
+    const self7 = this;
+    const self8 = this;
+    const tmp18 = new getNative4();
+    _module10 = baseGetTag(tmp18) != "[object Set]";
   }
-  module_646 = _module10;
+  getNative = _module10;
 }
-if (!module_646) {
-  let _module11 = _mod649;
+if (!getNative) {
+  let _module11 = getNative5;
   if (_module11) {
-    const tmp31 = new _mod649();
-    _module11 = module_522(tmp31) != "[object WeakMap]";
+    const self9 = this;
+    const self10 = this;
+    const tmp21 = new getNative5();
+    _module11 = baseGetTag(tmp21) != "[object WeakMap]";
   }
-  module_646 = _module11;
+  getNative = _module11;
 }
-if (module_646) {
-  module_522 = function v(_module61) {
-    const tmp3 = module_522(_module61);
+if (getNative) {
+  baseGetTag = function v(_module61) {
+    const tmp3 = baseGetTag(_module61);
     let constructor;
     if ("[object Object]" == tmp3) {
       constructor = _module61.constructor;
     }
     let str = "";
     if (constructor) {
-      str = module_617(constructor);
+      str = toSource(constructor);
     }
     if (str) {
-      if (module_646 === str) {
+      if (getNative === str) {
         return "[object DataView]";
-      } else if (module_622 === str) {
+      } else if (getNative === str) {
         return "[object Map]";
-      } else if (module_647 === str) {
+      } else if (getNative === str) {
         return "[object Promise]";
-      } else if (module_648 === str) {
+      } else if (getNative === str) {
         return "[object Set]";
-      } else if (module_649 === str) {
+      } else if (getNative === str) {
         return "[object WeakMap]";
       }
     }
@@ -86,4 +98,4 @@ if (module_646) {
   };
 }
 
-export default module_522;
+export default baseGetTag;

@@ -1,9 +1,13 @@
 // _runtime/metro/04370__.js
-import _typeof_mod from "03958__.js";
-import module_4371_mod from "04371__.js";
-import module_3962_mod from "03962__.js";
+import toDate_mod from "../03958_toDate.js";
+import setMonth_mod from "../04371_setMonth.js";
+import toInteger_mod from "../03962_toInteger.js";
 import requiredArgs_mod from "../03959_requiredArgs.js";
 
+let tmp3;
+let tmp5;
+let tmp7;
+let tmp9;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
@@ -12,16 +16,19 @@ function _typeof(arg0) {
         return typeof arg0;
       };
     }
+    let tmp = arg0;
     return _typeof(arg0);
   }
   _typeof = function _typeof(arg0) {
-    if (arg0) {
+    const tmp = arg0;
+    if (tmp) {
       const _Symbol = Symbol;
       if (typeof Symbol === "function") {
+        let str;
         const _Symbol3 = Symbol;
         if (arg0.constructor === Symbol) {
           const _Symbol2 = Symbol;
-          let str = "symbol";
+          str = "symbol";
         }
         return str;
       }
@@ -29,34 +36,34 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
+let toDate = toDate_mod;
+if (!toDate) {
+  tmp3 = { default: toDate };
+  const obj = { default: toDate };
 } else {
-  tmp3 = _typeof;
+  tmp3 = toDate;
 }
-_typeof = tmp3;
-let module_4371 = module_4371_mod;
-if (!module_4371) {
-  const obj2 = { default: module_4371 };
-  let tmp5 = obj2;
+toDate = tmp3;
+let setMonth = setMonth_mod;
+if (!setMonth) {
+  tmp5 = { default: setMonth };
+  const obj2 = { default: setMonth };
 } else {
-  tmp5 = module_4371;
+  tmp5 = setMonth;
 }
-module_4371 = tmp5;
-let module_3962 = module_3962_mod;
-if (!module_3962) {
-  const obj3 = { default: module_3962 };
-  let tmp7 = obj3;
+setMonth = tmp5;
+let toInteger = toInteger_mod;
+if (!toInteger) {
+  tmp7 = { default: toInteger };
+  const obj3 = { default: toInteger };
 } else {
-  tmp7 = module_3962;
+  tmp7 = toInteger;
 }
-module_3962 = tmp7;
+toInteger = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp9 = { default: requiredArgs };
   const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }
@@ -66,10 +73,12 @@ export default function set(arg0, year) {
   requiredArgs.default(2, arguments);
   if ("object" === _typeof(year)) {
     if (null !== year) {
-      const defaultResult1 = _typeof.default(arg0);
+      const defaultResult1 = toDate.default(arg0);
       const _isNaN = isNaN;
       if (isNaN(defaultResult1.getTime())) {
         const _Date = Date;
+        const self = this;
+        const self2 = this;
         const date = new Date(NaN);
         return date;
       } else {
@@ -78,22 +87,22 @@ export default function set(arg0, year) {
         }
         let defaultResult2 = defaultResult1;
         if (null != year.month) {
-          defaultResult2 = module_4371.default(defaultResult1, year.month);
+          defaultResult2 = setMonth.default(defaultResult1, year.month);
         }
         if (null != year.date) {
-          defaultResult2.setDate(module_3962.default(year.date));
+          defaultResult2.setDate(toInteger.default(year.date));
         }
         if (null != year.hours) {
-          defaultResult2.setHours(module_3962.default(year.hours));
+          defaultResult2.setHours(toInteger.default(year.hours));
         }
         if (null != year.minutes) {
-          defaultResult2.setMinutes(module_3962.default(year.minutes));
+          defaultResult2.setMinutes(toInteger.default(year.minutes));
         }
         if (null != year.seconds) {
-          defaultResult2.setSeconds(module_3962.default(year.seconds));
+          defaultResult2.setSeconds(toInteger.default(year.seconds));
         }
         if (null != year.milliseconds) {
-          defaultResult2.setMilliseconds(module_3962.default(year.milliseconds));
+          defaultResult2.setMilliseconds(toInteger.default(year.milliseconds));
         }
         return defaultResult2;
       }
@@ -101,5 +110,4 @@ export default function set(arg0, year) {
   }
   const rangeError = new RangeError("values parameter must be an object");
   throw rangeError;
-};
-export default exports.default;
+}

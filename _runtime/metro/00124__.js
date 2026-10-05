@@ -1,63 +1,54 @@
 // _runtime/metro/00124__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import DOMRectReadOnlyDefault from "../00125_DOMRectReadOnly.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _modDef125 from "00125__.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import map from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import 00126__ from "00126__.js";
 
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class DOMRect {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, DOMRect);
-    tmp2 = c2;
-    obj = c2(DOMRect);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+  } catch (err) {
   }
 }
-_classCallCheck = DOMRect;
-_inherits(DOMRect, DOMRectReadOnlyDefault);
-const items = [
-  {
-    key: "x",
-    get() {
-      return this.__getInternalX();
-    },
-    set(arg0) {
-      this.__setInternalX(arg0);
-    },
+class DOMRect {
+  constructor() {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, DOMRect);
+    const obj = _getPrototypeOf(DOMRect);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    } else {
+      constructResult = obj(...arguments);
+    }
+    return map(self, constructResult);
+  }
+}
+_inherits(DOMRect, _modDef125);
+let obj = {
+  key: "x",
+  get() {
+    return this.__getInternalX();
   },
+  set(arg0) {
+    this.__setInternalX(arg0);
+  }
+};
+const items = [
+  obj,
   {
     key: "y",
     get() {
@@ -65,7 +56,7 @@ const items = [
     },
     set(arg0) {
       this.__setInternalY(arg0);
-    },
+    }
   },
   {
     key: "width",
@@ -74,7 +65,7 @@ const items = [
     },
     set(width) {
       this.__setInternalWidth(width);
-    },
+    }
   },
   {
     key: "height",
@@ -83,29 +74,35 @@ const items = [
     },
     set(height) {
       this.__setInternalHeight(height);
-    },
-  },
+    }
+  }
 ];
 const entry = {
   key: "fromRect",
   value: function fromRect(arg0) {
+    let height;
+    let tmpResult;
+    let width;
+    let x;
+    let y;
     if (arg0) {
       ({ x, y, width, height } = arg0);
-      let tmpResult = _classCallCheck(x, y, width, height);
-      const obj = Object.create(_classCallCheck.prototype);
+      Object.create(DOMRect.prototype);
+      tmpResult = DOMRect(x, y, width, height);
     } else {
-      tmpResult = _classCallCheck();
+      tmpResult = DOMRect();
     }
     return tmpResult;
-  },
+  }
 };
 const items1 = [entry];
 const importDefaultResultResult = _createClass(DOMRect, items, items1);
-const module_126 = fn(126);
-module_126.setPlatformObject(importDefaultResultResult, {
+const obj2 = {
   clone(arg0) {
-    return new importDefaultResultResult(arg0.x, arg0.y, arg0.width, arg0.height);
-  },
-});
+    const tmp = new importDefaultResultResult(arg0.x, arg0.y, arg0.width, arg0.height);
+    return tmp;
+  }
+};
+module_126.setPlatformObject(importDefaultResultResult, obj2);
 
 export default importDefaultResultResult;

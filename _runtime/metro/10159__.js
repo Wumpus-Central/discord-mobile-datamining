@@ -1,5 +1,6 @@
 // _runtime/metro/10159__.js
 import _mod10160 from "10160__.js";
+import ReferenceWithTimezone from "../10164_ReferenceWithTimezone.js";
 import AbstractParserWithWordBoundaryChecking from "../10168_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -7,19 +8,12 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -45,21 +39,19 @@ const regExp2 = new RegExp(
   "i",
 );
 class ENTimeUnitWithinFormatParser {
-  constructor(arg0) {
-    self = this;
-    tmp = c2(this, ENTimeUnitWithinFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitWithinFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+  constructor(strictMode) {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, ENTimeUnitWithinFormatParser);
+    const obj = _getPrototypeOf(ENTimeUnitWithinFormatParser);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, undefined);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
+    const tmp3Result = c3(self, constructResult);
+    tmp3Result.strictMode = strictMode;
     return tmp3Result;
   }
 }
@@ -67,8 +59,9 @@ _inherits(ENTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.A
 const entry = {
   key: "innerPattern",
   value: function innerPattern(option) {
+    let tmp2;
     if (this.strictMode) {
-      let tmp2 = regExp2;
+      tmp2 = regExp2;
     } else {
       tmp2 = option.option.forwardDate ? regExp : regExp1;
     }
@@ -80,13 +73,14 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
+      const str = arg1[0];
       if (str.match(/^for\s*the\s*\w+/)) {
         return null;
       } else {
-        const parseDurationResult = ENTimeUnitWithinFormatParser(10160).parseDuration(arg1[1]);
+        const parseDurationResult = _mod10160.parseDuration(arg1[1]);
         let relativeFromReference = null;
         if (parseDurationResult) {
-          const ParsingComponents = ENTimeUnitWithinFormatParser(10164).ParsingComponents;
+          const ParsingComponents = ReferenceWithTimezone.ParsingComponents;
           relativeFromReference = ParsingComponents.createRelativeFromReference(
             reference.reference,
             parseDurationResult,
@@ -94,7 +88,6 @@ const items = [
         }
         return relativeFromReference;
       }
-      str = arg1[0];
     },
   },
 ];

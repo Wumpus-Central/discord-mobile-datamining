@@ -5,14 +5,9 @@ if (typeof document === "object") {
   all = document.all;
 }
 if (undefined === all) {
+  let fn;
   if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
-      }
-      return tmp;
-    };
+    fn = (fn) => typeof fn === "function" || fn === all;
   }
   module.exports = fn;
 }

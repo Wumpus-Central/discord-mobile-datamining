@@ -1,5 +1,5 @@
 // _runtime/00840_INSTRUMENTED_METHODS.js
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const items = [
   "response.output_item.added",
   "response.function_call_arguments.delta",
@@ -14,8 +14,8 @@ const items1 = [
   "response.incomplete",
   "response.queued",
   "response.output_text.delta",
+  ...items,
 ];
-HermesBuiltin.arraySpread(items, 7);
 
 export const INSTRUMENTED_METHODS = [
   "responses.create",

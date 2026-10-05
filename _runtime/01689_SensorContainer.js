@@ -1,14 +1,13 @@
 // _runtime/01689_SensorContainer.js
 import _createClassDefault from "metro/00042__createClass.js";
+import _modDef1690 from "metro/01690__.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 
-const SensorContainer = importDefault;
 class SensorContainer {
   constructor() {
-    tmp = c2(this, SensorContainer);
-    map = new Map();
-    this.nativeSensors = map;
-    return;
+    _classCallCheck(this, SensorContainer);
+    this.nativeSensors = new Map();
+    new Map();
   }
 }
 const entry = {
@@ -28,12 +27,14 @@ const items = [
       const sensorId = this.getSensorId(arg0, iosReferenceFrame);
       const nativeSensors = this.nativeSensors;
       if (!nativeSensors.has(sensorId)) {
-        const tmp8 = new SensorContainer(1690)(arg0, iosReferenceFrame);
+        const self2 = this;
+        const self3 = this;
         const nativeSensors2 = self.nativeSensors;
-        const result = nativeSensors2.set(sensorId, tmp8);
+        const tmp6 = new _modDef1690(arg0, iosReferenceFrame);
+        const result = nativeSensors2.set(sensorId, tmp6);
       }
       const nativeSensors3 = self.nativeSensors;
-      value = nativeSensors3.get(sensorId);
+      const value = nativeSensors3.get(sensorId);
       return value.getSharedValue();
     },
   },
@@ -44,7 +45,7 @@ const items = [
       const nativeSensors = this.nativeSensors;
       if (nativeSensors.has(sensorId)) {
         const nativeSensors2 = this.nativeSensors;
-        value = nativeSensors2.get(sensorId);
+        const value = nativeSensors2.get(sensorId);
         let num = -1;
         if (value) {
           num = -1;
@@ -69,12 +70,9 @@ const items = [
       const nativeSensors = this.nativeSensors;
       if (nativeSensors.has(arg0)) {
         const nativeSensors2 = this.nativeSensors;
-        value = nativeSensors2.get(arg0);
-        let isRunningResult = value;
-        if (value) {
-          isRunningResult = value.isRunning();
-        }
-        if (isRunningResult) {
+        const value = nativeSensors2.get(arg0);
+        const tmp = value && value.isRunning();
+        if (tmp) {
           value.listenersNumber = value.listenersNumber - 1;
           if (0 === value.listenersNumber) {
             value.unregister();
@@ -84,5 +82,6 @@ const items = [
     },
   },
 ];
+const SensorContainer_export = _createClassDefault(SensorContainer, items);
 
-export const SensorContainer = _createClassDefault(SensorContainer, items);
+export { SensorContainer_export as SensorContainer };

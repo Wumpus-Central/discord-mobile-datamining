@@ -1,6 +1,8 @@
 // _runtime/13966_CanonicalizeTimeZoneName.js
 
 export const CanonicalizeTimeZoneName = function CanonicalizeTimeZoneName(str, arg1) {
+  let uppercaseLinks;
+  let zoneNames;
   ({ zoneNames, uppercaseLinks } = arg1);
   const formatted = str.toUpperCase();
   const tmp2 =

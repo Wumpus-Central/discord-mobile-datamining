@@ -1,13 +1,10 @@
 // _runtime/00610_hashClear.js
-import _mod611 from "metro/00611__.js";
+import getNative from "00611_getNative.js";
 
 export default function hashClear() {
-  const obj = {};
-  if (_mod611) {
-    let obj2 = _mod611(null);
+  if (getNative) {
+    let obj2 = getNative(null);
   } else {
     obj2 = {};
   }
-  obj.__data__ = obj2;
-  obj.size = 0;
 }

@@ -2,10 +2,15 @@
 import _createClass from "metro/00042__createClass.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 
+let items;
+let items1;
+let items2;
+let items3;
+let items4;
+let items5;
 class AudioTypes {
   constructor() {
-    tmp = closure_0(this, AudioTypes);
-    return;
+    _classCallCheck(this, AudioTypes);
   }
 }
 const _moduleResult = _createClass(AudioTypes);
@@ -13,50 +18,46 @@ const obj = {
   extension: "aac",
   mimeType: "audio/aac",
   description: "Advanced Audio Coding (AAC) is an audio coding standard for lossy digital audio compression",
-  signatures: null,
+  signatures: items,
 };
-const items = [
+items = [
   { sequence: [255, 241], description: "MPEG-4 Advanced Audio Coding (AAC) Low Complexity (LC) audio file" },
   { sequence: [255, 249], description: "MPEG-2 Advanced Audio Coding (AAC) Low Complexity (LC) audio file" },
 ];
-obj.signatures = items;
 _moduleResult.AAC = obj;
 const obj2 = {
   extension: "amr",
   mimeType: "audio/amr",
   description:
     "Adaptive Multi-Rate ACELP (Algebraic Code Excited Linear Prediction) Codec, commonly audio format with GSM cell phones",
-  signatures: null,
+  signatures: items1,
 };
-const items1 = [{ sequence: [35, 33, 65, 77, 82] }];
-obj2.signatures = items1;
+items1 = [{ sequence: [35, 33, 65, 77, 82] }];
 _moduleResult.AMR = obj2;
 const obj3 = {
   extension: "flac",
   mimeType: "audio/x-flac",
   description: "Free Lossless Audio Codec file",
-  signatures: null,
+  signatures: items2,
 };
-const items2 = [{ sequence: [102, 76, 97, 67, 0, 0, 0, 34] }];
-obj3.signatures = items2;
+items2 = [{ sequence: [102, 76, 97, 67, 0, 0, 0, 34] }];
 _moduleResult.FLAC = obj3;
 const obj4 = {
   extension: "m4a",
   mimeType: "audio/x-m4a",
   description: "Apple Lossless Audio Codec file",
-  signatures: null,
+  signatures: items3,
 };
-const items3 = [{ sequence: [102, 116, 121, 112, 77, 52, 65, 32], offset: 4, compatibleExtensions: ["aac"] }];
-obj4.signatures = items3;
+items3 = [{ sequence: [102, 116, 121, 112, 77, 52, 65, 32], offset: 4, compatibleExtensions: ["aac"] }];
 _moduleResult.M4A = obj4;
 const obj5 = {
   extension: "mp3",
   mimeType: "audio/mpeg",
   description:
     "A digital audio file format that uses compression to reduce file size while maintaining high quality sound",
-  signatures: null,
+  signatures: items4,
 };
-const items4 = [
+items4 = [
   {
     sequence: [255, 251],
     description:
@@ -74,11 +75,10 @@ const items4 = [
   },
   { sequence: [73, 68, 51], description: "MP3 file with an ID3v2 container" },
 ];
-obj5.signatures = items4;
 _moduleResult.MP3 = obj5;
-const obj6 = { extension: "wav", mimeType: "audio/wav", description: "Waveform Audio File Format", signatures: null };
-const items5 = [{ sequence: [82, 73, 70, 70, 87, 65, 86, 69, 102, 109, 116, 32], skippedBytes: [4, 5, 6, 7] }];
-obj6.signatures = items5;
+const obj6 = { extension: "wav", mimeType: "audio/wav", description: "Waveform Audio File Format", signatures: items5 };
+items5 = [{ sequence: [82, 73, 70, 70, 87, 65, 86, 69, 102, 109, 116, 32], skippedBytes: [4, 5, 6, 7] }];
 _moduleResult.WAV = obj6;
+const AudioTypes_export = _moduleResult;
 
-export const AudioTypes = _moduleResult;
+export { AudioTypes_export as AudioTypes };

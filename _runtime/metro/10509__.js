@@ -1,14 +1,14 @@
 // _runtime/metro/10509__.js
-import cancelAnimation from "../01643_cancelAnimation.js";
-import SINGLE_ITEM from "../10494_SINGLE_ITEM.js";
+import react2 from "../00019_react.js";
+import _mod1643 from "01643__.js";
+import convertToSharedIndex from "../10494_convertToSharedIndex.js";
 import handlerOffsetDirection from "../10497_handlerOffsetDirection.js";
-import round from "../10510_round.js";
-import noop from "00019__.js";
+import log from "../10510_log.js";
 
 const require = globalThis.__r;
+let _require, value;
 
-require = fn;
-const useRef = fn(19).useRef;
+const useRef = react2.useRef;
 let closure_4 = {
   code: "function pnpm_useCarouselControllerTsx1(){const{handlerOffset,round,size,dataInfo,convertToSharedIndex,loop,autoFillData}=this.__closure;const handlerOffsetValue=handlerOffset.value;const toInt=round(handlerOffsetValue/size)%dataInfo.length;const isPositive=handlerOffsetValue<=0;const i=isPositive?Math.abs(toInt):Math.abs(toInt>0?dataInfo.length-toInt:0);const newSharedIndexValue=convertToSharedIndex({loop:loop,rawDataLength:dataInfo.originalLength,autoFillData:autoFillData,index:i});return{i:i,newSharedIndexValue:newSharedIndexValue};}",
 };
@@ -28,7 +28,7 @@ let closure_8 = {
 export const useCarouselController = function useCarouselController(size) {
   _require = size;
   function setSharedIndex(current) {
-    closure_13.current = current;
+    ref.current = current;
   }
   size = size.size;
   const loop = size.loop;
@@ -37,105 +37,102 @@ export const useCarouselController = function useCarouselController(size) {
   const withAnimation = size.withAnimation;
   const defaultIndex = size.defaultIndex;
   let num = 0;
+  let ref = size.ref;
   if (undefined !== defaultIndex) {
     num = defaultIndex;
   }
   const duration = size.duration;
   const autoFillData = size.autoFillData;
   const fixedDirection = size.fixedDirection;
-  const globalState = require("10501__.js").useGlobalState();
+  let obj = require("10501__.js");
+  const globalState = obj.useGlobalState();
   const overscrollEnabled = globalState.props.overscrollEnabled;
   const containerSize = globalState.layout.containerSize;
   const items = [dataLength];
   const memo = loop.useMemo(() => ({ length: dataLength, disable: !dataLength, originalLength: dataLength }), items);
-  let obj = require("10501__.js");
-  const sharedValue = require("cancelAnimation").useSharedValue(num);
+  let obj2 = require("01643__.js");
+  const sharedValue = obj2.useSharedValue(num);
   const tmp3 = dataLength(num);
+  ref = tmp3;
   const items1 = [handlerOffset, memo, size, loop];
-  let obj2 = require("cancelAnimation");
+  const tmp4 = dataLength(num);
   const currentFixedPage = loop.useCallback(() => {
     if (loop) {
-      const _Math2 = Math;
+      const _Math4 = Math;
       return -Math.round(handlerOffset.value / size);
     } else {
+      let absolute;
       const result = (handlerOffset.value / size) % memo.length;
+      const _Math = Math;
       if (handlerOffset.value <= 0) {
-        const _Math = Math;
-        let absolute = Math.abs(result);
+        const _Math3 = Math;
+        absolute = Math.abs(result);
       } else {
         let num2 = 0;
+        const _Math2 = Math;
         if (result > 0) {
           num2 = arr.length - result;
         }
-        absolute = Math.abs(num2);
+        absolute = abs(num2);
       }
-      return Math.round(absolute);
+      return round(absolute);
     }
   }, items1);
-  const tmp4 = dataLength(num);
+  const tmp6 = require("01643__.js");
   let fn = function v() {
+    let absolute;
+    let obj3;
+    let tmpResult;
     value = handlerOffset.value;
-    const result = round.round(value / size) % memo.length;
+    const obj = log;
+    const result = obj.round(value / size) % memo.length;
     if (value <= 0) {
-      const _Math = Math;
-      let absolute = Math.abs(result);
+      const _Math2 = Math;
+      absolute = Math.abs(result);
     } else {
       let num = 0;
+      const _Math = Math;
       if (result > 0) {
         num = memo.length - result;
       }
-      absolute = Math.abs(num);
+      absolute = abs(num);
     }
-    const obj2 = { i: absolute, newSharedIndexValue: null };
-    obj2.newSharedIndexValue = SINGLE_ITEM.convertToSharedIndex({
-      loop,
-      rawDataLength: memo.originalLength,
-      autoFillData,
-      index: absolute,
-    });
+    const obj2 = { i: absolute, newSharedIndexValue: tmpResult.convertToSharedIndex(obj3) };
+    obj3 = { loop, rawDataLength: memo.originalLength, autoFillData, index: absolute };
+    tmpResult = convertToSharedIndex;
     return obj2;
   };
-  let obj3 = require("cancelAnimation");
-  fn.__closure = {
+  let obj3 = {
     handlerOffset,
-    round: require("round").round,
+    round: require("log").round,
     size,
     dataInfo: memo,
-    convertToSharedIndex: require("SINGLE_ITEM").convertToSharedIndex,
+    convertToSharedIndex: require("convertToSharedIndex").convertToSharedIndex,
     loop,
     autoFillData,
   };
+  const useAnimatedReaction = tmp6.useAnimatedReaction;
+  fn.__closure = obj3;
   fn.__workletHash = 15925793381075;
   fn.__initData = handlerOffset;
   const fn2 = function c(arg0) {
     sharedValue.value = arg0.i;
-    cancelAnimation.runOnJS(setSharedIndex)(arg0.newSharedIndexValue);
+    const newSharedIndexValue = arg0.newSharedIndexValue;
+    const obj = _mod1643;
+    obj.runOnJS(setSharedIndex)(newSharedIndexValue);
   };
-  let obj4 = {
-    handlerOffset,
-    round: require("round").round,
-    size,
-    dataInfo: memo,
-    convertToSharedIndex: require("SINGLE_ITEM").convertToSharedIndex,
-    loop,
-    autoFillData,
-  };
-  fn2.__closure = { index: sharedValue, runOnJS: require("cancelAnimation").runOnJS, setSharedIndex };
+  let obj4 = { index: sharedValue, runOnJS: require("01643__.js").runOnJS, setSharedIndex };
+  fn2.__closure = obj4;
   fn2.__workletHash = 4173925309211;
   fn2.__initData = withAnimation;
   const items2 = [tmp4, tmp3, size, memo, sharedValue, loop, autoFillData, handlerOffset];
-  const animatedReaction = obj3.useAnimatedReaction(fn, fn2, items2);
+  const animatedReaction = useAnimatedReaction(fn, fn2, items2);
   const items3 = [sharedValue, autoFillData, memo, loop];
-  const callback1 = loop.useCallback(
-    () =>
-      SINGLE_ITEM.computedRealIndexWithAutoFillData({
-        index: sharedValue.value,
-        dataLength: memo.originalLength,
-        loop,
-        autoFillData,
-      }),
-    items3,
-  );
+  const callback1 = loop.useCallback(() => {
+    const obj = convertToSharedIndex;
+    const obj2 = { index: sharedValue.value, dataLength: memo.originalLength, loop, autoFillData };
+    return obj.computedRealIndexWithAutoFillData(obj2);
+  }, items3);
   const items4 = [memo];
   const callback2 = loop.useCallback(() => !memo.disable, items4);
   const items5 = [size];
@@ -155,30 +152,32 @@ export const useCarouselController = function useCarouselController(size) {
   const fn3 = function z(arg0, onFinished) {
     size = onFinished;
     const fn = function i(arg0) {
-      if (arg0) {
-        cancelAnimation.runOnJS(callback3)();
-        if (closure_0) {
-          cancelAnimation.runOnJS(tmp5)();
-          const tmpResult = cancelAnimation;
+      const tmp = arg0;
+      if (tmp) {
+        const obj = _mod1643;
+        obj.runOnJS(callback3)();
+        if (onFinished) {
+          const tmp2Result = _mod1643;
+          tmp2Result.runOnJS(tmp6)();
         }
       }
     };
-    fn.__closure = { runOnJS: size(size[2]).runOnJS, onScrollEnd: callback3, onFinished };
+    let obj = { runOnJS: size(size[2]).runOnJS, onScrollEnd: callback3, onFinished };
+    fn.__closure = obj;
     fn.__workletHash = 14195210871308;
     fn.__initData = autoFillData;
-    const obj2 = { type: "timing", config: null };
-    let obj = { runOnJS: size(size[2]).runOnJS, onScrollEnd: callback3, onFinished };
-    obj2.config = { duration, easing: size(size[5]).Easing.easeOutQuart };
-    const obj3 = { duration, easing: size(size[5]).Easing.easeOutQuart };
-    let tmp = withAnimation;
+    const obj2 = { type: "timing", config: { duration, easing: size(size[5]).Easing.easeOutQuart } };
+    ({ duration, easing: size(size[5]).Easing.easeOutQuart });
+    let tmp = size(size[6]);
+    let tmp2 = withAnimation;
+    const dealWithAnimation = tmp.dealWithAnimation;
     if (withAnimation == null) {
-      tmp = obj2;
+      tmp2 = obj2;
     }
-    return size(size[6]).dealWithAnimation(tmp)(arg0, fn);
+    return dealWithAnimation(tmp2)(arg0, fn);
   };
-  const obj5 = { index: sharedValue, runOnJS: require("cancelAnimation").runOnJS, setSharedIndex };
   fn3.__closure = {
-    runOnJS: require("cancelAnimation").runOnJS,
+    runOnJS: require("01643__.js").runOnJS,
     onScrollEnd: callback3,
     duration,
     Easing: require("DATA_LENGTH").Easing,
@@ -188,55 +187,48 @@ export const useCarouselController = function useCarouselController(size) {
   fn3.__workletHash = 4740828363382;
   fn3.__initData = duration;
   const items7 = [duration, withAnimation, callback3];
+  ({
+    runOnJS: require("01643__.js").runOnJS,
+    onScrollEnd: callback3,
+    duration,
+    Easing: require("DATA_LENGTH").Easing,
+    dealWithAnimation: require("dealWithAnimation").dealWithAnimation,
+    withAnimation,
+  });
   const callback5 = loop.useCallback(fn3, items7);
   class W {
     constructor() {
-      obj = size;
-      if (size === undefined) {
+      let obj = arg0;
+      if (arg0 === undefined) {
         obj = {};
       }
-      count = obj.count;
-      num = 1;
+      const count = obj.count;
+      let num = 1;
       if (undefined !== count) {
         num = count;
       }
-      animated = obj.animated;
-      tmp = undefined === animated || animated;
-      onFinished = obj.onFinished;
-      if (closure_17()) {
-        tmp2 = loop;
+      const animated = obj.animated;
+      const onFinished = obj.onFinished;
+      const tmp = undefined === animated || animated;
+      if (callback2()) {
         if (loop) {
-          tmp5 = closure_11;
-          tmp7 = size;
-          tmp9 = overscrollEnabled;
           if (overscrollEnabled) {
-            tmp11 = null;
-            if (closure_19 != null) {
-              tmp12 = closure_19();
+            if (callback4 != null) {
+              callback4();
             }
-            tmp13 = closure_14;
-            sum = closure_14() + num;
+            const sum = callback() + num;
             tmp6.value = sum;
-            tmp15 = handlerOffset;
-            tmp16 = -sum;
             if (tmp) {
-              tmp18 = closure_20;
-              tmp15.value = closure_20(tmp16 * tmp7, onFinished);
+              handlerOffset.value = callback5(-sum * size, onFinished);
             } else {
-              tmp15.value = tmp16 * tmp7;
+              handlerOffset.value = -sum * size;
               if (onFinished != null) {
-                onFinishedResult = onFinished();
+                onFinished();
               }
             }
-          } else {
-            tmp10 = containerSize;
           }
-        } else {
-          tmp3 = closure_12;
-          tmp4 = closure_11;
         }
       }
-      return;
     }
   }
   W.__closure = {
@@ -269,6 +261,7 @@ export const useCarouselController = function useCarouselController(size) {
     }
     const animated = obj.animated;
     const onFinished = obj.onFinished;
+    const tmp = undefined === animated || animated;
     if (callback2()) {
       if (loop) {
         if (callback4 != null) {
@@ -277,16 +270,15 @@ export const useCarouselController = function useCarouselController(size) {
         const diff = callback() - num;
         sharedValue.value = diff;
         if (tmp) {
-          handlerOffset.value = callback5(tmp10 * size, onFinished);
+          handlerOffset.value = callback5(-diff * size, onFinished);
         } else {
-          handlerOffset.value = tmp10 * size;
+          handlerOffset.value = -diff * size;
           if (onFinished != null) {
             onFinished();
           }
         }
       }
     }
-    tmp = undefined === animated || animated;
   }, items9);
   const items10 = [
     size,
@@ -300,14 +292,18 @@ export const useCarouselController = function useCarouselController(size) {
     callback5,
   ];
   const callback8 = loop.useCallback((onFinished) => {
+    let animated;
+    let i;
     ({ i, animated } = onFinished);
     onFinished = onFinished.onFinished;
+    const tmp = undefined !== animated && animated;
     if (i !== sharedValue.value) {
       if (callback2()) {
         if (callback4 != null) {
           callback4();
         }
-        const result = handlerOffsetDirection.handlerOffsetDirection(handlerOffset, fixedDirection);
+        const obj = handlerOffsetDirection;
+        const result = obj.handlerOffsetDirection(handlerOffset, fixedDirection);
         const result1 = memo.length * size;
         let flag = false;
         const result2 = i * size * result;
@@ -335,10 +331,12 @@ export const useCarouselController = function useCarouselController(size) {
         }
       }
     }
-    tmp = undefined !== animated && animated;
   }, items10);
   const items11 = [callback7, callback6, callback8];
   const callback9 = loop.useCallback(() => {
+    let animated;
+    let count;
+    let index;
     let obj = arg0;
     if (arg0 === undefined) {
       obj = {};
@@ -347,7 +345,7 @@ export const useCarouselController = function useCarouselController(size) {
     const onFinished = obj.onFinished;
     if (typeof index === "number") {
       if (index > -1) {
-        const obj2 = { i: index, animated: tmp, onFinished };
+        const obj2 = { i: index, animated: undefined !== animated && animated, onFinished };
         callback8(obj2);
       }
     }
@@ -355,21 +353,18 @@ export const useCarouselController = function useCarouselController(size) {
       const _Math = Math;
       const rounded = Math.round(count);
       if (rounded < 0) {
-        const obj3 = { count: null, animated: null, onFinished: null };
         const _Math2 = Math;
-        obj3.count = Math.abs(rounded);
-        obj3.animated = tmp;
-        obj3.onFinished = onFinished;
+        const obj3 = { count: Math.abs(rounded), animated: undefined !== animated && animated, onFinished };
         callback7(obj3);
       } else {
-        const obj4 = { count: rounded, animated: tmp, onFinished };
+        const obj4 = { count: rounded, animated: undefined !== animated && animated, onFinished };
         callback6(obj4);
       }
     }
   }, items11);
   const items12 = [callback1, callback6, callback7, callback9];
   const imperativeHandle = loop.useImperativeHandle(
-    size.ref,
+    ref,
     () => ({ next: callback6, prev: callback7, getCurrentIndex: callback1, scrollTo: callback9 }),
     items12,
   );

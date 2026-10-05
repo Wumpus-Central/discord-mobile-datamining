@@ -1,12 +1,9 @@
 // _runtime/metro/07362__.js
 import _modDef7350 from "07350__.js";
 
-importDefault = arg2;
-const dependencyMap = arg6;
 const typeSizes = { 1: 1, 2: 1, 3: 2, 4: 4, 5: 8, 7: 1, 9: 4, 10: 8, 13: 4 };
 const obj2 = { BYTE: 1, ASCII: 2, SHORT: 3, LONG: 4, RATIONAL: 5, UNDEFINED: 7, SLONG: 9, SRATIONAL: 10, IFD: 13 };
-
-export default {
+const obj3 = {
   getAsciiValue(items) {
     return items.map((item) => String.fromCharCode(item));
   },
@@ -48,6 +45,8 @@ export default {
   getTypeSize(LONG) {
     if (undefined === obj2[LONG]) {
       const _Error = Error;
+      const self = this;
+      const self2 = this;
       const error = new Error("No such type found.");
       throw error;
     } else {
@@ -55,3 +54,5 @@ export default {
     }
   },
 };
+
+export default obj3;

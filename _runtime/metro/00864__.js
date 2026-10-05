@@ -1,43 +1,42 @@
 // _runtime/metro/00864__.js
 import _mod865 from "00865__.js";
 
-require = arg1;
-const module = arg4;
-const dependencyMap = arg6;
 function dynamicRequire(require, arg1) {
   return require.require(arg1);
 }
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const isNodeEnv = function isNodeEnv() {
-  const isBrowserBundleResult = _mod865.isBrowserBundle();
-  if (isBrowserBundleResult) {
-    return !isBrowserBundleResult;
-  } else {
+  const obj = _mod865;
+  let tmp2 = !obj.isBrowserBundle();
+  obj.isBrowserBundle();
+  if (tmp2) {
     const _Object = Object;
-    const call = toString.call;
     const _process = process;
-    let str = 0;
+    let num = 0;
+    const call = toString.call;
     if (typeof process !== "undefined") {
-      str = process;
+      num = process;
     }
-    str = "[object process]";
-    const tmp3 = typeof call === "unknown" ? toString() : call(str);
+    tmp2 = "[object process]" === call(num);
   }
+  return tmp2;
 };
 export const loadModule = function loadModule(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = module;
   }
+  let tmp2;
   try {
-    let tmp3 = dynamicRequire(tmp, arg0);
-    if (!tmp3) {
-      try {
-        const _HermesInternal = HermesInternal;
-        tmp3 = dynamicRequire(tmp, "" + dynamicRequire(tmp, "process").cwd() + "/node_modules/" + arg0);
-      } catch (err) {}
-    }
-    return tmp3;
+    tmp2 = dynamicRequire(tmp, arg0);
   } catch (err) {}
+  const tmp4 = tmp2;
+  if (!tmp4) {
+    try {
+      const _HermesInternal = HermesInternal;
+      tmp2 = dynamicRequire(tmp, "" + dynamicRequire(tmp, "process").cwd() + "/node_modules/" + arg0);
+    } catch (err) {}
+  }
+  return tmp2;
 };

@@ -1,14 +1,14 @@
 // _runtime/08663__output.js
-import "_classCallCheck";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 export function $ZodRegistry() {
-  _classCallCheck(this, _classCallCheck);
+  _classCallCheck(this, $ZodRegistry);
   const weakMap = new WeakMap();
   this._map = weakMap;
   this._idmap = new Map();
+  new Map();
 }
-const _classCallCheck = $ZodRegistry;
 const entry = {
   key: "add",
   value: function add(arg0) {
@@ -16,13 +16,7 @@ const entry = {
     const first = HermesBuiltin.copyRestArgs()[0];
     const _map = this._map;
     const result = _map.set(arg0, first);
-    let tmp3 = first;
-    if (first) {
-      tmp3 = typeof first === "object";
-    }
-    if (tmp3) {
-      tmp3 = "id" in first;
-    }
+    const tmp3 = first && typeof first === "object" && "id" in first;
     if (tmp3) {
       const _idmap = self._idmap;
       const result1 = _idmap.set(first.id, arg0);
@@ -35,10 +29,10 @@ const items = [
   {
     key: "clear",
     value: function clear() {
-      const obj = {};
-      const weakMap = new WeakMap();
-      obj._map = weakMap;
-      obj._idmap = new Map();
+      let weakMap;
+      const obj = { _map: weakMap, _idmap: new Map() };
+      weakMap = new WeakMap();
+      new Map();
       return obj;
     },
   },
@@ -47,14 +41,8 @@ const items = [
     value: function remove(arg0) {
       const self = this;
       const _map = this._map;
-      value = _map.get(arg0);
-      let tmp2 = value;
-      if (value) {
-        tmp2 = typeof value === "object";
-      }
-      if (tmp2) {
-        tmp2 = "id" in value;
-      }
+      const value = _map.get(arg0);
+      const tmp2 = value && typeof value === "object" && "id" in value;
       if (tmp2) {
         const _idmap = self._idmap;
         _idmap.delete(value.id);
@@ -74,19 +62,19 @@ const items = [
         if (obj == null) {
           obj = {};
         }
-        const obj2 = {};
-        const merged = Object.assign(obj);
-        delete tmp2[tmp];
         const obj3 = {};
-        const merged1 = Object.assign(obj2);
+        const merged = Object.assign(obj);
+        delete obj2["id"];
+        const obj5 = {};
+        const merged1 = Object.assign(obj3);
         const _map2 = self._map;
         const merged2 = Object.assign(_map2.get(_zod));
         const _Object = Object;
-        let tmp13;
-        if (Object.keys(obj3).length) {
-          tmp13 = obj3;
+        let tmp11;
+        if (Object.keys(obj5).length) {
+          tmp11 = obj5;
         }
-        return tmp13;
+        return tmp11;
       } else {
         const _map = self._map;
         return _map.get(_zod);
@@ -102,14 +90,17 @@ const items = [
   },
 ];
 const _moduleResult = _createClass($ZodRegistry, items);
-let closure_1 = _moduleResult;
+const map = _moduleResult;
 if (globalThis.__zod_globalRegistry == null) {
+  let self = this;
+  const self2 = this;
   const tmpResult1 = new _moduleResult();
   tmp4.__zod_globalRegistry = tmpResult1;
 }
 
 export const registry = function registry() {
-  return new _moduleResult();
+  const tmp = new map();
+  return tmp;
 };
 export const $output = Symbol("ZodOutput");
 export const $input = Symbol("ZodInput");

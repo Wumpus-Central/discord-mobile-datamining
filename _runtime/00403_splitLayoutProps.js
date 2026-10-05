@@ -12,120 +12,150 @@ export default function splitLayoutProps(arg0) {
     outer = obj;
     for (const item10015 of keys) {
       switch (item10015) {
-        case "margin":
+        case "margin": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "marginHorizontal":
+        }
+        case "marginHorizontal": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "marginVertical":
+        }
+        case "marginVertical": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "marginBottom":
+        }
+        case "marginBottom": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "marginTop":
+        }
+        case "marginTop": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "marginLeft":
+        }
+        case "marginLeft": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "marginRight":
+        }
+        case "marginRight": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "flex":
+        }
+        case "flex": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "flexGrow":
+        }
+        case "flexGrow": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "flexShrink":
+        }
+        case "flexShrink": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "flexBasis":
+        }
+        case "flexBasis": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "alignSelf":
+        }
+        case "alignSelf": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "height":
+        }
+        case "height": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "minHeight":
+        }
+        case "minHeight": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "maxHeight":
+        }
+        case "maxHeight": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "width":
+        }
+        case "width": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "minWidth":
+        }
+        case "minWidth": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "maxWidth":
+        }
+        case "maxWidth": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "position":
+        }
+        case "position": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "left":
+        }
+        case "left": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "right":
+        }
+        case "right": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "bottom":
+        }
+        case "bottom": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "top":
+        }
+        case "top": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "transform":
+        }
+        case "transform": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "transformOrigin":
+        }
+        case "transformOrigin": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "rowGap":
+        }
+        case "rowGap": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "columnGap":
+        }
+        case "columnGap": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        case "gap":
+        }
+        case "gap": {
           obj[item10015] = arg0[item10015];
           continue;
           break;
-        default:
+        }
+        default: {
           obj2[item10015] = arg0[item10015];
+          break;
+        }
       }
     }
   }

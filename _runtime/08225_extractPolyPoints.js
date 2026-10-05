@@ -5,6 +5,7 @@ export default function extractPolyPoints(join) {
   if (Array.isArray(join)) {
     str = join.join(",");
   }
-  const parts = str.replace(/[^eE]-/, " -").split(/(?:\s+|\s*,\s*)/g);
+  const str3 = str.replace(/[^eE]-/, " -");
+  const parts = str3.split(/(?:\s+|\s*,\s*)/g);
   return parts.join(" ");
 }

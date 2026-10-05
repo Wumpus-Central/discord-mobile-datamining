@@ -1,50 +1,44 @@
 // _runtime/metro/12552__.js
+import react_native from "../00017_react-native.js";
+import Fragment from "../react/00021_Fragment.js";
+import MemoryRouter from "../04710_MemoryRouter.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
+import react from "../00019_react.js";
 
-const BackButton = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-fn(17).BackHandler;
-const jsx = fn(21).jsx;
+const BackHandler = react_native.BackHandler;
+const jsx = Fragment.jsx;
 class BackButton {
   constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, BackButton);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(BackButton);
-    tmp3 = closure_3;
-    if (closure_7()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    const items = [...arguments];
+    let closure_0;
+    _classCallCheck(this, BackButton);
+    const items1 = [...items];
+    const obj = _getPrototypeOf(BackButton);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items1);
     }
-    tmp3Result = tmp3(self, constructResult);
+    const tmp3Result = c3(self, constructResult);
     closure_0 = tmp3Result;
     tmp3Result.handleBack = () => {
       let flag = 0 !== closure_0.history.index;
@@ -58,7 +52,7 @@ class BackButton {
     return tmp3Result;
   }
 }
-_inherits(BackButton, noop.Component);
+_inherits(BackButton, react.Component);
 const entry = {
   key: "componentDidMount",
   value: function componentDidMount() {
@@ -77,7 +71,7 @@ let items = [
     key: "render",
     value: function render() {
       const self = this;
-      return jsx(BackButton(4710).__HistoryContext.Consumer, {
+      return jsx(MemoryRouter.__HistoryContext.Consumer, {
         children(history) {
           self.history = history;
           return self.props.children || null;

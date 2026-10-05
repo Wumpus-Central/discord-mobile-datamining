@@ -1,5 +1,5 @@
 // _runtime/00921_generateUniqueID.js
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const generateUniqueID = () => {
   const timestamp = Date.now();

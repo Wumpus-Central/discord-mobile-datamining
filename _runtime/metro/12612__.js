@@ -1,28 +1,29 @@
 // _runtime/metro/12612__.js
 import _mod12565 from "12565__.js";
-import _slicedToArray from "00032__.js";
+import _slicedToArray from "00032__slicedToArray.js";
 
 function dsnFromString(arg0) {
-  closure_0 = arg0;
+  let closure_0 = arg0;
   const match = re3.exec(arg0);
   if (match) {
     const tmp5 = _slicedToArray(match.slice(1), 6);
     let str = tmp5[1];
     let str3 = "";
+    const first = tmp5[0];
     if (undefined !== tmp5[2]) {
-      str3 = tmp6;
+      str3 = tmp7;
     }
     let str4 = "";
     if (undefined !== tmp5[3]) {
-      str4 = tmp7;
+      str4 = tmp8;
     }
     let str5 = "";
     if (undefined !== tmp5[4]) {
-      str5 = tmp8;
+      str5 = tmp9;
     }
     let str6 = "";
     if (undefined !== tmp5[5]) {
-      str6 = tmp9;
+      str6 = tmp10;
     }
     const parts = str6.split("/");
     let str8 = str6;
@@ -32,36 +33,31 @@ function dsnFromString(arg0) {
       str9 = substr.join("/");
       str8 = parts.pop();
     }
-    let first = str8;
-    if (str8) {
+    let first1 = str8;
+    if (first1) {
       const match1 = str8.match(/^\d+/);
-      first = str8;
+      first1 = str8;
       if (match1) {
-        first = match1[0];
+        first1 = match1[0];
       }
     }
-    const url = { protocol: tmp5[0], publicKey: null, pass: null, host: null, port: null, path: null, projectId: null };
+    const url = { protocol: first, publicKey: str, pass: str3, host: str4, port: str5, path: str9, projectId: first1 };
     if (!str) {
       str = "";
     }
-    url.publicKey = str;
     if (!str3) {
       str3 = "";
     }
-    url.pass = str3;
-    url.host = str4;
     if (!str5) {
       str5 = "";
     }
-    url.port = str5;
     if (!str9) {
       str9 = "";
     }
-    url.path = str9;
-    url.projectId = first;
     return url;
   } else {
-    _mod12565.consoleSandbox(() => {
+    const obj = _mod12565;
+    obj.consoleSandbox(() => {
       console.error("Invalid Sentry Dsn: " + closure_0);
     });
   }
@@ -69,12 +65,19 @@ function dsnFromString(arg0) {
 const re3 = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
 
 export { dsnFromString };
-export const dsnToString = function dsnToString(url) {
+export const dsnToString = function dsnToString(_dsn) {
+  let host;
+  let pass;
+  let path;
+  let port;
+  let projectId;
+  let protocol;
+  let publicKey;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  ({ host, path, pass, port, projectId, protocol, publicKey } = url);
+  ({ host, path, pass, port, projectId, protocol, publicKey } = _dsn);
   let str = "";
   if (flag) {
     str = "";
@@ -89,15 +92,18 @@ export const dsnToString = function dsnToString(url) {
     str3 = ":" + port;
   }
   let combined = path;
-  if (path) {
+  if (combined) {
     const _HermesInternal3 = HermesInternal;
     combined = "" + path + "/";
   }
   return "" + protocol + "://" + publicKey + str + "@" + host + str3 + "/" + combined + projectId;
 };
 export const makeDsn = function makeDsn(protocol) {
+  let port;
+  let projectId;
+  let url;
   if (typeof protocol === "string") {
-    let url = dsnFromString(protocol);
+    url = dsnFromString(protocol);
   } else {
     url = {
       protocol: protocol.protocol,
@@ -110,14 +116,13 @@ export const makeDsn = function makeDsn(protocol) {
     };
   }
   if (url) {
-    let error = url;
     let flag = true;
     if (url(12564).DEBUG_BUILD) {
       ({ port, projectId, protocol } = url);
       const items = ["protocol", "publicKey", "host", "projectId"];
-      const found = items.find((item) => {
-        let flag = !tmp;
-        if (!url[item]) {
+      let found = items.find((item) => {
+        let flag = !url[item];
+        if (flag) {
           const logger = _mod12565.logger;
           const _HermesInternal = HermesInternal;
           logger.error("Invalid Sentry Dsn: " + item + " missing");
@@ -125,38 +130,41 @@ export const makeDsn = function makeDsn(protocol) {
         }
         return flag;
       });
-      if (found) {
-        flag = !found;
-      } else {
-        if (!projectId.match(/^\d+$/)) {
-          let logger = error(12565).logger;
+      if (!found) {
+        let num;
+        if (projectId.match(/^\d+$/)) {
+          let num2;
+          const tmp7 = "http" === protocol || "https" === protocol;
+          if (tmp7) {
+            let num3 = port;
+            if (num3) {
+              const _isNaN = isNaN;
+              const _parseInt = parseInt;
+              num3 = isNaN(parseInt(port, 10));
+            }
+            if (num3) {
+              const logger3 = tmp2(12565).logger;
+              const _HermesInternal3 = HermesInternal;
+              logger3.error("Invalid Sentry Dsn: Invalid port " + port);
+              num3 = 1;
+            }
+            num2 = num3;
+          } else {
+            const logger2 = tmp2(12565).logger;
+            const _HermesInternal2 = HermesInternal;
+            logger2.error("Invalid Sentry Dsn: Invalid protocol " + protocol);
+            num2 = 1;
+          }
+          num = num2;
+        } else {
+          let logger = tmp2(12565).logger;
           let _HermesInternal = HermesInternal;
           logger.error("Invalid Sentry Dsn: Invalid projectId " + projectId);
+          num = 1;
         }
-        let tmp6 = "http" === protocol;
-        if (!tmp6) {
-          tmp6 = "https" === protocol;
-        }
-        if (tmp6) {
-          let num3 = port;
-          if (port) {
-            const _isNaN = isNaN;
-            const _parseInt = parseInt;
-            num3 = isNaN(parseInt(port, 10));
-          }
-          if (num3) {
-            const logger3 = error(12565).logger;
-            error = logger3.error;
-            const _HermesInternal3 = HermesInternal;
-            error("Invalid Sentry Dsn: Invalid port " + port);
-            num3 = 1;
-          }
-        } else {
-          const logger2 = error(12565).logger;
-          const _HermesInternal2 = HermesInternal;
-          logger2.error("Invalid Sentry Dsn: Invalid protocol " + protocol);
-        }
+        found = num;
       }
+      flag = !found;
     }
     if (flag) {
       return url;

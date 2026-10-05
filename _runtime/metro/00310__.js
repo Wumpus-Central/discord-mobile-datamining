@@ -1,44 +1,25 @@
 // _runtime/metro/00310__.js
+import _mod26 from "00026__.js";
 import renderElement from "../00114_renderElement.js";
-import noop from "00019__.js";
+import react from "../00019_react.js";
+import DynamicallyInjectedByGestureHandler from "../00106_DynamicallyInjectedByGestureHandler.js";
+import 00065__ from "00065__.js";
 
-require = fn;
-const __INTERNAL_VIEW_CONFIG = {
-  uiViewClassName: "AndroidDrawerLayout",
-  directEventTypes: {
-    topDrawerSlide: { registrationName: "onDrawerSlide" },
-    topDrawerStateChanged: { registrationName: "onDrawerStateChanged" },
-    topDrawerOpen: { registrationName: "onDrawerOpen" },
-    topDrawerClose: { registrationName: "onDrawerClose" },
+let obj2;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "AndroidDrawerLayout", directEventTypes: { topDrawerSlide: { registrationName: "onDrawerSlide" }, topDrawerStateChanged: { registrationName: "onDrawerStateChanged" }, topDrawerOpen: { registrationName: "onDrawerOpen" }, topDrawerClose: { registrationName: "onDrawerClose" } }, validAttributes: obj2 };
+obj2 = { keyboardDismissMode: true, drawerBackgroundColor: _mod26.colorAttribute, drawerPosition: true, drawerWidth: true, drawerLockMode: true, statusBarBackgroundColor: _mod26.colorAttribute };
+const merged = Object.assign(DynamicallyInjectedByGestureHandler.ConditionallyIgnoredEventHandlers({ onDrawerSlide: true, onDrawerStateChanged: true, onDrawerOpen: true, onDrawerClose: true }));
+const obj3 = {
+  openDrawer(nodeFromPublicInstance) {
+    const obj = renderElement;
+    obj.dispatchCommand(nodeFromPublicInstance, "openDrawer", []);
   },
-  validAttributes: null,
+  closeDrawer(nodeFromPublicInstance) {
+    const obj = renderElement;
+    obj.dispatchCommand(nodeFromPublicInstance, "closeDrawer", []);
+  }
 };
-const weakSet = fn(106);
-const merged = Object.assign(
-  weakSet.ConditionallyIgnoredEventHandlers({
-    onDrawerSlide: true,
-    onDrawerStateChanged: true,
-    onDrawerOpen: true,
-    onDrawerClose: true,
-  }),
-);
-__INTERNAL_VIEW_CONFIG.validAttributes = {
-  keyboardDismissMode: true,
-  drawerBackgroundColor: fn(26).colorAttribute,
-  drawerPosition: true,
-  drawerWidth: true,
-  drawerLockMode: true,
-  statusBarBackgroundColor: fn(26).colorAttribute,
-};
-const module_65 = fn(65);
 
 export default module_65.get("AndroidDrawerLayout", () => obj);
 export { __INTERNAL_VIEW_CONFIG };
-export const Commands = {
-  openDrawer(arg0) {
-    renderElement.dispatchCommand(arg0, "openDrawer", []);
-  },
-  closeDrawer(arg0) {
-    renderElement.dispatchCommand(arg0, "closeDrawer", []);
-  },
-};
+export const Commands = obj3;

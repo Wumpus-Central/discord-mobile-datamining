@@ -1,0 +1,11 @@
+// _runtime/03909_AssetRegistry.js
+import AssetRegistry from "01132_AssetRegistry.js";
+
+export default AssetRegistry.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nYW1lX21vZGU=",
+  scales: [1],
+  hash: "49371d364c5c3715c401defb72f89681",
+  name: "sv-SE.messages.49371d364c5c3715c401defb72f89681.compiled.messages",
+  type: "jsona",
+});

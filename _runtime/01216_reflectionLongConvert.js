@@ -1,9 +1,6 @@
 // _runtime/01216_reflectionLongConvert.js
 import ScalarType from "01211_ScalarType.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
 export const reflectionLongConvert = function reflectionLongConvert(ZERO, STRING) {
   if (ScalarType.LongType.BIGINT === STRING) {
     return ZERO.toBigInt();

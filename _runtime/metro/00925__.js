@@ -1,16 +1,23 @@
 // _runtime/metro/00925__.js
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+let set;
+
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const weakMap = new WeakMap();
 
 export const initUnique = function initUnique(visibilityWatcher, InteractionManager) {
   try {
     if (!weakMap.get(visibilityWatcher)) {
-      const tmp5 = new InteractionManager();
-      const result = weakMap.set(visibilityWatcher, tmp5);
+      const self = this;
+      const self2 = this;
+      set = weakMap.set;
+      const tmp2 = new InteractionManager();
+      const result = set(visibilityWatcher, tmp2);
     }
     return weakMap.get(visibilityWatcher);
   } catch (err) {
-    const tmp7 = new tmp();
-    return tmp7;
+    const self3 = this;
+    const self4 = this;
+    const tmp5 = new InteractionManager();
+    return tmp5;
   }
 };

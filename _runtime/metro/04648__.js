@@ -1,16 +1,24 @@
 // _runtime/metro/04648__.js
-import c from "../00576_c.js";
+import react from "../00019_react.js";
+import react2 from "../00576_react.js";
 import _mod4643 from "04643__.js";
-import _slicedToArray from "00032__.js";
+import _slicedToArray from "00032__slicedToArray.js";
 
+let tmp;
 const RiveColor2 = tmp(4638);
-require = fn;
-fn(19).useCallback;
+react.useCallback;
 const f31210 = (colorProperty, arg1) => colorProperty.colorProperty(arg1);
 
 export const useRiveColor = function useRiveColor(arg0, arg1) {
-  const cResult = c.c(8);
-  const tmp4 = _slicedToArray(_mod4643.useRiveProperty(arg1, arg0, f31210), 3);
+  let closure_0;
+  let tmp10;
+  let tmp5;
+  let tmp6;
+  let tmp8;
+  const obj = react2;
+  const cResult = obj.c(8);
+  const obj2 = _mod4643;
+  const tmp4 = _slicedToArray(obj2.useRiveProperty(arg1, arg0, f31210), 3);
   [tmp5, tmp6] = tmp4;
   require = tmp6;
   if (cResult[0] !== tmp5) {
@@ -21,7 +29,7 @@ export const useRiveColor = function useRiveColor(arg0, arg1) {
     }
     cResult[0] = tmp5;
     cResult[1] = fromIntResult;
-    let tmp8 = fromIntResult;
+    tmp8 = fromIntResult;
   } else {
     tmp8 = cResult[1];
   }
@@ -36,14 +44,15 @@ export const useRiveColor = function useRiveColor(arg0, arg1) {
     };
     cResult[2] = tmp6;
     cResult[3] = fn;
-    let tmp10 = fn;
+    tmp10 = fn;
   } else {
     tmp10 = cResult[3];
   }
   if (cResult[4] === tmp4[2]) {
     if (cResult[5] === tmp10) {
+      let tmp11;
       if (cResult[6] === tmp8) {
-        let tmp11 = cResult[7];
+        tmp11 = cResult[7];
       }
       return tmp11;
     }

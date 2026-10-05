@@ -2,26 +2,26 @@
 import _mod917 from "00917__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+let num2 = -1;
 const set = new Set();
 function onVisibilityUpdate(type) {
-  if (
-    (function isPageHidden(type) {
-      let tmp = "pagehide" === type.type;
-      if (!tmp) {
-        const _document = require("00915__.js").WINDOW.document;
-        let visibilityState;
-        if (_document != null) {
-          visibilityState = _document.visibilityState;
-        }
-        tmp = "hidden" === visibilityState;
+  function isPageHidden(type) {
+    let tmp = "pagehide" === type.type;
+    if (!tmp) {
+      const _document = require("00915__.js").WINDOW.document;
+      let visibilityState;
+      if (_document != null) {
+        visibilityState = _document.visibilityState;
       }
-      return tmp;
-    })(type)
-  ) {
+      tmp = "hidden" === visibilityState;
+    }
+    return tmp;
+  }
+  if (isPageHidden(type)) {
+    let tmp = num2;
     if (num2 > -1) {
       if ("visibilitychange" === type.type) {
         for (const item10012 of set) {
@@ -35,28 +35,26 @@ function onVisibilityUpdate(type) {
         if ("visibilitychange" === type.type) {
           num2 = type.timeStamp;
         }
-        _mod917.removePageListener("prerenderingchange", onVisibilityUpdate, true);
+        const obj = _mod917;
+        obj.removePageListener("prerenderingchange", onVisibilityUpdate, true);
       }
     }
   }
 }
 
 export const getVisibilityWatcher = () => {
+  let closure_0;
+  const tmp = _require;
   if (require("00915__.js").WINDOW.document) {
     if (num2 < 0) {
-      _require = tmp(918).getActivationStart();
+      const tmpResult = tmp(918);
+      _require = tmpResult.getActivationStart();
       let tmp8;
       if (!tmp(915).WINDOW.document.prerendering) {
         const _globalThis = globalThis;
         const _performance = performance;
         const entriesByType = _performance.getEntriesByType("visibility-state");
-        const first = entriesByType.filter((name) => {
-          let tmp = "hidden" === name.name;
-          if (tmp) {
-            tmp = name.startTime > closure_0;
-          }
-          return tmp;
-        })[0];
+        const first = entriesByType.filter((name) => "hidden" === name.name && name.startTime > closure_0)[0];
         let startTime;
         if (first != null) {
           startTime = first.startTime;
@@ -82,19 +80,19 @@ export const getVisibilityWatcher = () => {
         tmp8 = num2;
       }
       num2 = tmp8;
-      const tmpResult = tmp(918);
-      tmp(917).addPageListener("visibilitychange", onVisibilityUpdate, true);
       const tmpResult4 = tmp(917);
-      tmp(917).addPageListener("pagehide", onVisibilityUpdate, true);
+      tmpResult4.addPageListener("visibilitychange", onVisibilityUpdate, true);
       const tmpResult5 = tmp(917);
-      tmp(917).addPageListener("prerenderingchange", onVisibilityUpdate, true);
+      tmpResult5.addPageListener("pagehide", onVisibilityUpdate, true);
       const tmpResult6 = tmp(917);
+      tmpResult6.addPageListener("prerenderingchange", onVisibilityUpdate, true);
     }
   }
-  const obj = {};
-  Object.defineProperty(obj, "firstHiddenTime", { get: () => num2, set: undefined });
-  obj.onHidden = function onHidden(arg0) {
-    set.add(arg0);
+  const obj = {
+    onHidden(arg0) {
+      set.add(arg0);
+    },
   };
+  Object.defineProperty(obj, "firstHiddenTime", { get: () => num2, set: undefined });
   return obj;
 };

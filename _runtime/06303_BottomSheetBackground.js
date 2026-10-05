@@ -1,27 +1,22 @@
 // _runtime/06303_BottomSheetBackground.js
-import _mod6302 from "metro/06302__.js";
-import noop from "metro/00019__.js";
+import react_native from "00017_react-native.js";
+import react2 from "00019_react.js";
+import Fragment from "react/00021_Fragment.js";
+import react_native2 from "06302_react-native.js";
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const memoResult = fn(19).memo((pointerEvents) => {
-  const obj = {
-    pointerEvents: pointerEvents.pointerEvents,
-    accessible: true,
-    accessibilityRole: "adjustable",
-    accessibilityLabel: "Bottom Sheet",
-    style: null,
-  };
-  const items = [_mod6302.styles.background, pointerEvents.style];
-  obj.style = items;
+const memo = react2.memo;
+const View = react_native.View;
+const jsx = Fragment.jsx;
+const memoResult = memo((pointerEvents) => {
+  const style = pointerEvents.style;
+  const items = [react_native2.styles.background, style];
   return (
     <View
       pointerEvents={pointerEvents.pointerEvents}
       accessible
       accessibilityRole="adjustable"
       accessibilityLabel="Bottom Sheet"
-      style={null}
+      style={items}
     />
   );
 });

@@ -1,8 +1,4 @@
 // _runtime/metro/00948__.js
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
-if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
-  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
-}
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const DEBUG_BUILD = __SENTRY_DEBUG__;
+export const DEBUG_BUILD = typeof globalThis.__SENTRY_DEBUG__ === "undefined" || globalThis.__SENTRY_DEBUG__;

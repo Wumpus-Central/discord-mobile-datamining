@@ -1,6 +1,6 @@
 // _runtime/metro/00407__.js
-import _modDef298 from "00298__.js";
-import noop from "00019__.js";
-import module_387 from "../00387_unstable_createAnimatedComponentWithAllowlist.js";
+import TextImplDefault from "../00298_TextImpl.js";
+import react from "../00019_react.js";
+import createAnimatedComponent from "../00387_createAnimatedComponent.js";
 
-export default module_387(_modDef298);
+export default createAnimatedComponent(TextImplDefault);

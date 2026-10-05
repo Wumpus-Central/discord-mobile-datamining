@@ -11330,7 +11330,7 @@ const obj = {
     "ply\u0161\u00E1k",
     "ply\u0161ov\u00FD",
   ],
-  piñata: [
+  "pi\u00f1ata": [
     "bonbony",
     "cinco de mayo",
     "cukrovinka",

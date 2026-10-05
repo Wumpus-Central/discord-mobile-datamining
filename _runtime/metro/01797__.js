@@ -1,18 +1,18 @@
 // _runtime/metro/01797__.js
-import findHostInstance from "../01671_findHostInstance.js";
-import findNodeHandle from "../01751_findNodeHandle.js";
-import _slicedToArray from "00032__.js";
+import _slicedToArray from "00032__slicedToArray.js";
+import react from "../00019_react.js";
+import module_1646_mod from "01646__.js";
 
-require = fn;
-const noop = fn(19);
-({ useRef: c3, useState: closure_4 } = noop);
-let module_1646 = fn(1646);
+let c3;
+let closure_4;
+({ useRef: c3, useState: closure_4 } = react);
+let module_1646 = module_1646_mod;
 module_1646.shouldBeUseWeb();
-module_1646 = fn(1646);
+module_1646 = module_1646_mod;
 module_1646 = module_1646.isIOS();
 if (!module_1646) {
-  module_1646 = fn(1646).isMacOS();
-  const obj3 = fn(1646);
+  const _module3 = module_1646;
+  module_1646 = _module3.isMacOS();
 }
 const __initData = {
   code: "function pnpm_useAnimatedRefTs1(){const{tagOrWrapper,viewName}=this.__closure;const f=function(){return tagOrWrapper.value;};if(viewName){f.viewName=viewName;}return f;}",
@@ -20,9 +20,11 @@ const __initData = {
 
 export const useAnimatedRef = module_1646
   ? function useAnimatedRefWeb() {
+      let fun;
       const f85052 = (getScrollableNode) => {
+        let scrollableNode;
         if (getScrollableNode.getScrollableNode) {
-          let scrollableNode = getScrollableNode.getScrollableNode();
+          scrollableNode = getScrollableNode.getScrollableNode();
         } else {
           scrollableNode = getScrollableNode;
           if (getScrollableNode.getNativeScrollRef) {
@@ -31,20 +33,26 @@ export const useAnimatedRef = module_1646
         }
         return scrollableNode;
       };
-      const current = fun(new Map()).current;
-      closure_2 = fun(-1);
+      map = new Map();
+      const current = fun(map).current;
+      let closure_2 = fun(-1);
       const tmp2 = fun(null);
       if (!tmp2.current) {
         fun = function fun(map) {
-          viewName = map;
-          if (map) {
-            ref.current = viewName(map);
-            closure_3.getTag = () => findNodeHandle.findNodeHandle(closure_0);
-            closure_3.current = map;
+          let tag;
+          let closure_0 = map;
+          if (closure_0) {
+            ref.current = closure_0(map);
+            fun.getTag = () => {
+              const obj = first(first1[3]);
+              return obj.findNodeHandle(map);
+            };
+            fun.current = map;
+            const arr = tag;
             if (tag.size) {
               tag = undefined;
-              if (closure_3 != null) {
-                const getTag = closure_3.getTag;
+              if (fun != null) {
+                const getTag = fun.getTag;
                 if (getTag != null) {
                   tag = getTag();
                 }
@@ -56,18 +64,17 @@ export const useAnimatedRef = module_1646
                 if (fn != null) {
                   fn();
                 }
-                const result = first1.set(fn2, fn2(tag));
+                const result = current.set(fn2, fn2(tag));
               });
             }
-            arr = tag;
           }
           return ref.current;
         };
         fun.observe = (fn) => {
-          closure_0 = fn;
+          let closure_0 = fn;
           let tag;
-          if (closure_3 != null) {
-            const getTag = closure_3.getTag;
+          if (fun != null) {
+            const getTag = fun.getTag;
             if (getTag != null) {
               tag = getTag();
             }
@@ -75,13 +82,13 @@ export const useAnimatedRef = module_1646
           if (tag == null) {
             tag = null;
           }
-          const result = first1.set(fn, fn(tag));
+          const result = current.set(fn, fn(tag));
           return () => {
-            value = first1.get(closure_0);
+            const value = current.get(fn);
             if (value != null) {
               value();
             }
-            first1.delete(closure_0);
+            current.delete(fn);
           };
         };
         fun.current = null;
@@ -90,14 +97,16 @@ export const useAnimatedRef = module_1646
       return tmp2.current;
     }
   : function useAnimatedRefNative() {
-      let viewName = _slicedToArray(
+      let fn;
+      const viewName = _slicedToArray(
         closure_4(() => {
           let mutable = null;
+          const obj = first(first1[2]);
           if (!obj.isFabric()) {
             mutable = null;
             if (module_1646) {
-              mutable = first(first1[4]).makeMutable(null);
               const tmpResult = first(first1[4]);
+              mutable = tmpResult.makeMutable(null);
             }
           }
           return mutable;
@@ -105,27 +114,35 @@ export const useAnimatedRef = module_1646
         1,
       )[0];
       const first1 = _slicedToArray(
-        closure_4(() => first(first1[4]).makeMutable(null)),
+        closure_4(() => {
+          const obj = first(first1[4]);
+          return obj.makeMutable(null);
+        }),
         1,
       )[0];
-      closure_129_0 = (viewConfig) => {
+      const f85055 = (viewConfig) => {
+        let fn;
+        const obj = first(first1[2]);
         if (obj.isFabric()) {
-          let fn = findHostInstance.getShadowNodeWrapperFromRef;
+          fn = first(first1[5]).getShadowNodeWrapperFromRef;
         } else {
           fn = (getScrollableNode) => {
+            let scrollableNode;
+            const findNodeHandle = closure_1_0(current[3]).findNodeHandle;
+            closure_1_0(current[3]);
             if (getScrollableNode.getScrollableNode) {
-              let scrollableNode = getScrollableNode.getScrollableNode();
+              scrollableNode = getScrollableNode.getScrollableNode();
             } else {
               scrollableNode = getScrollableNode;
               if (getScrollableNode.getNativeScrollRef) {
                 scrollableNode = getScrollableNode.getNativeScrollRef();
               }
             }
-            return viewName(first1[3]).findNodeHandle(scrollableNode);
+            return findNodeHandle(scrollableNode);
           };
         }
-        first1.value = fn(viewConfig);
-        if (first) {
+        current.value = fn(viewConfig);
+        if (f85055) {
           let str;
           if (viewConfig != null) {
             viewConfig = viewConfig.viewConfig;
@@ -138,23 +155,29 @@ export const useAnimatedRef = module_1646
           }
           tmp3.value = str;
         }
-        return first1.value;
+        return current.value;
       };
-      closure_129_3 = undefined;
-      const current2 = closure_3(new Map()).current;
-      closure_129_2 = closure_3(-1);
+      let fun;
+      map = new Map();
+      let current = closure_3(map).current;
+      let closure_2 = closure_3(-1);
       const tmp4 = closure_3(null);
       if (!tmp4.current) {
-        function fun(map) {
-          viewName = map;
-          if (map) {
-            ref.current = viewName(map);
-            closure_3.getTag = () => findNodeHandle.findNodeHandle(closure_0);
-            closure_3.current = map;
+        fun = function fun(map) {
+          let tag;
+          let closure_0 = map;
+          if (closure_0) {
+            ref.current = closure_0(map);
+            fun.getTag = () => {
+              const obj = first(first1[3]);
+              return obj.findNodeHandle(map);
+            };
+            fun.current = map;
+            const arr = tag;
             if (tag.size) {
               tag = undefined;
-              if (closure_3 != null) {
-                const getTag = closure_3.getTag;
+              if (fun != null) {
+                const getTag = fun.getTag;
                 if (getTag != null) {
                   tag = getTag();
                 }
@@ -166,19 +189,17 @@ export const useAnimatedRef = module_1646
                 if (fn != null) {
                   fn();
                 }
-                const result = first1.set(fn2, fn2(tag));
+                const result = current.set(fn2, fn2(tag));
               });
             }
-            arr = tag;
           }
           return ref.current;
-        }
-        closure_129_3 = fun;
+        };
         fun.observe = (fn) => {
-          closure_0 = fn;
+          let closure_0 = fn;
           let tag;
-          if (closure_3 != null) {
-            const getTag = closure_3.getTag;
+          if (fun != null) {
+            const getTag = fun.getTag;
             if (getTag != null) {
               tag = getTag();
             }
@@ -186,23 +207,24 @@ export const useAnimatedRef = module_1646
           if (tag == null) {
             tag = null;
           }
-          const result = first1.set(fn, fn(tag));
+          const result = current.set(fn, fn(tag));
           return () => {
-            value = first1.get(closure_0);
+            const value = current.get(fn);
             if (value != null) {
               value();
             }
-            first1.delete(closure_0);
+            current.delete(fn);
           };
         };
         fun.current = null;
         tmp4.current = fun;
       }
-      const current = tmp4.current;
+      current = tmp4.current;
       const shareableMappingCache = viewName(first1[6]).shareableMappingCache;
       if (!shareableMappingCache.get(current)) {
-        const obj = { __init: null };
-        let fn = function n() {
+        let obj = { __init: fn };
+        fn = function n() {
+          let value;
           const fn = function f() {
             return value.value;
           };
@@ -215,11 +237,10 @@ export const useAnimatedRef = module_1646
         fn.__closure = obj2;
         fn.__workletHash = 5138727370224;
         fn.__initData = __initData;
-        obj.__init = fn;
-        const shareableCloneRecursive = tmp5(tmp6[7]).makeShareableCloneRecursive(obj);
+        const tmp5Result = viewName(first1[7]);
+        const shareableCloneRecursive = tmp5Result.makeShareableCloneRecursive(obj);
         const shareableMappingCache2 = tmp5(tmp6[6]).shareableMappingCache;
         let result = shareableMappingCache2.set(current, shareableCloneRecursive);
-        const tmp5Result = tmp5(tmp6[7]);
       }
       return current;
     };

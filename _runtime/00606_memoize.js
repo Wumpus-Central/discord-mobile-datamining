@@ -2,13 +2,14 @@
 import MapCache from "00607_MapCache.js";
 
 function memoize(fn, fn2) {
-  closure_0 = fn;
-  closure_1 = fn2;
+  let closure_0 = fn;
+  let closure_1 = fn2;
   if (typeof fn === "function") {
     function memoized() {
+      let applyResult;
       const self = this;
       if (closure_1) {
-        let applyResult = closure_1(...arguments);
+        applyResult = closure_1(...arguments);
       } else {
         applyResult = arguments[0];
       }
@@ -18,13 +19,13 @@ function memoize(fn, fn2) {
       } else {
         const applyResult1 = closure_0(...arguments);
         memoized.cache = cache.set(applyResult, applyResult1) || cache;
+        cache.set(applyResult, applyResult1) || cache;
         return applyResult1;
       }
     }
-    let Cache = memoize.Cache;
-    if (!Cache) {
-      Cache = MapCache;
-    }
+    const Cache = memoize.Cache || MapCache;
+    let self = this;
+    const self2 = this;
     let cache = new Cache();
     memoized.cache = cache;
     return memoized;

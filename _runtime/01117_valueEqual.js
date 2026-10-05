@@ -1,4 +1,4 @@
 // _runtime/01117_valueEqual.js
-import _mod1118 from "metro/01118__.js";
+import valueEqual from "01118_valueEqual.js";
 
-export default _mod1118;
+export default valueEqual;

@@ -1,12 +1,11 @@
 // _runtime/06166_tapGestureHandlerProps.js
-import _isNativeReflectConstruct from "metro/06167__.js";
+import createHandler from "06167_createHandler.js";
 
+let items1;
 const items = ["maxDurationMs", "maxDelayMs", "numberOfTaps", "maxDeltaX", "maxDeltaY", "maxDist", "minPointers"];
-const obj = { name: "TapGestureHandler", allowedProps: null, config: null };
-const items1 = [...items];
-obj.allowedProps = items1;
-obj.config = { shouldCancelWhenOutside: true };
+const obj = { name: "TapGestureHandler", allowedProps: items1, config: { shouldCancelWhenOutside: true } };
+items1 = [...items];
 
 export const tapGestureHandlerProps = items;
 export const tapHandlerName = "TapGestureHandler";
-export const TapGestureHandler = _isNativeReflectConstruct(obj);
+export const TapGestureHandler = createHandler(obj);

@@ -6,6 +6,7 @@ let closure_1 = null;
 
 export default {
   getConstants() {
+    let constants2;
     if (null == constants2) {
       constants2 = constants.getConstants();
     }

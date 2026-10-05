@@ -1,60 +1,64 @@
 // _runtime/04132_closestIndexTo.js
-import _typeof_mod from "metro/03958__.js";
+import toDate_mod from "03958_toDate.js";
 import requiredArgs_mod from "03959_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
+let tmp3;
+let tmp5;
+let toDate = toDate_mod;
+if (!toDate) {
+  tmp3 = { default: toDate };
+  const obj = { default: toDate };
 } else {
-  tmp3 = _typeof;
+  tmp3 = toDate;
 }
-_typeof = tmp3;
+toDate = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp5 = { default: requiredArgs };
   const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
 
 export default function closestIndexTo(arg0, arg1) {
-  absolute.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
+  let NaN;
+  let absolute;
+  let closure_2;
+  let defaultResult = absolute.default(2, arguments);
+  const defaultResult1 = NaN.default(arg0);
   if (isNaN(Number(defaultResult1))) {
     return NaN;
   } else {
+    let items;
     const time = defaultResult1.getTime();
     if (null == arg1) {
-      let items = [];
+      items = [];
     } else {
       items = arg1;
       if (typeof arg1.forEach !== "function") {
         const _Array = Array;
-        const call = slice.call;
-        typeof call === "unknown" ? slice() : call(arg1);
+        items = slice.call(arg1);
       }
     }
     const item = items.forEach((item, index) => {
-      const defaultResult = _typeof.default(item);
+      const defaultResult = toDate.default(item);
       if (isNaN(Number(defaultResult))) {
-        closure_0 = NaN;
+        NaN = NaN;
         absolute = NaN;
       } else {
         const _Math = Math;
         absolute = Math.abs(closure_2 - defaultResult.getTime());
-        let tmp5 = null == closure_0;
+        let tmp5 = null == NaN;
         if (!tmp5) {
           const _Number = Number;
           tmp5 = absolute < Number(absolute);
         }
         if (tmp5) {
-          closure_0 = index;
+          NaN = index;
         }
       }
     });
-    return _typeof;
+    return NaN;
   }
-};
-export default exports.default;
+}

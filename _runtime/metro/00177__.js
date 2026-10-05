@@ -1,55 +1,47 @@
 // _runtime/metro/00177__.js
 function noop() {}
 class Promise {
-  constructor(arg0) {
-    self = this;
+  constructor(fn) {
+    const self = this;
     if (typeof this !== "object") {
-      tmp8 = globalThis;
-      _TypeError2 = TypeError;
-      tmp9 = new.target;
-      str2 = "Promises must be constructed via new";
-      tmp10 = new.target;
-      typeError = new TypeError("Promises must be constructed via new");
-      tmp12 = typeError;
+      const _TypeError2 = TypeError;
+      const self4 = this;
+      const self5 = this;
+      const typeError = new TypeError("Promises must be constructed via new");
       throw typeError;
+    } else if (typeof fn !== "function") {
+      const _TypeError = TypeError;
+      const self2 = this;
+      const self3 = this;
+      const typeError1 = new TypeError("Promise constructor's argument is not a function");
+      throw typeError1;
     } else {
-      tmp13 = global;
-      if (typeof global !== "function") {
-        tmp3 = globalThis;
-        _TypeError = TypeError;
-        tmp4 = new.target;
-        str = "Promise constructor's argument is not a function";
-        tmp5 = new.target;
-        typeError1 = new TypeError("Promise constructor's argument is not a function");
-        tmp7 = typeError1;
-        throw typeError1;
-      } else {
-        num = 0;
-        self._x = 0;
-        self._y = 0;
-        tmp14 = null;
-        self._z = null;
-        self._A = null;
-        tmp15 = noop;
-        if (global !== noop) {
-          tmp = doResolve;
-          tmp2 = doResolve(global, self);
-        }
-        return;
+      self._x = 0;
+      self._y = 0;
+      self._z = null;
+      self._A = null;
+      if (fn !== noop) {
+        doResolve(fn, self);
       }
     }
   }
-  then(arg0, arg1) {
-    self = this;
+  then(fn, fn2) {
+    let tmp5;
+    let tmp6;
+    let self = this;
     if (this.constructor !== Promise) {
-      closure_1 = global;
-      closure_2 = require;
-      tmp13 = new.target;
-      tmp14 = new.target;
-      constructor = new self.constructor((arg0, arg1) => {
+      let closure_1 = fn;
+      closure_2 = fn2;
+      const self4 = this;
+      const self5 = this;
+      const constructor = new self.constructor(function (arg0, arg1) {
+        let tmp11;
+        let tmp12;
         const obj3 = Object.create(Promise.prototype);
         if (typeof obj3 !== "object") {
           const _TypeError = TypeError;
+          self = this;
+          const self2 = this;
           const typeError = new TypeError("Promises must be constructed via new");
           throw typeError;
         } else {
@@ -60,60 +52,47 @@ class Promise {
           // // eliminated: always false
           obj3.then(arg0, arg1);
           Object.create(Handler.prototype);
-          const obj = {};
-          let tmp11 = null;
-          if (typeof closure_1 === "function") {
-            tmp11 = closure_1;
+          const obj = { onFulfilled: tmp11, onRejected: tmp12, promise: obj3 };
+          tmp11 = null;
+          const tmp6 = self;
+          if (typeof fn === "function") {
+            tmp11 = fn;
           }
-          obj.onFulfilled = tmp11;
-          let tmp12 = null;
-          if (typeof closure_2 === "function") {
-            tmp12 = closure_2;
+          tmp12 = null;
+          if (typeof fn2 === "function") {
+            tmp12 = fn2;
           }
-          obj.onRejected = tmp12;
-          obj.promise = obj3;
-          handle(self, obj);
+          handle(tmp6, obj);
         }
       });
-      tmp16 = constructor;
+      let tmp12 = constructor;
       return constructor;
     } else {
-      tmp17 = self;
-      obj1 = Object.create(tmp.prototype);
-      if (typeof obj1 !== "object") {
-        tmp8 = globalThis;
-        _TypeError = TypeError;
-        tmp9 = new.target;
-        str = "Promises must be constructed via new";
-        tmp10 = new.target;
-        typeError = new TypeError("Promises must be constructed via new");
-        tmp12 = typeError;
+      let obj3 = Object.create(tmp.prototype);
+      if (typeof obj3 !== "object") {
+        let _TypeError = TypeError;
+        let self2 = this;
+        const self3 = this;
+        let typeError = new TypeError("Promises must be constructed via new");
         throw typeError;
       } else {
-        num = 0;
-        obj1._x = 0;
-        obj1._y = 0;
-        tmp19 = null;
-        obj1._z = null;
-        obj1._A = null;
+        obj3._x = 0;
+        obj3._y = 0;
+        obj3._z = null;
+        obj3._A = null;
         // // eliminated: always false
-        tmp3 = Handler;
-        tmp2 = handle;
-        obj2 = Object.create(Handler.prototype);
-        obj = {};
+        Object.create(Handler.prototype);
+        let obj = { onFulfilled: tmp5, onRejected: tmp6, promise: obj3 };
         tmp5 = null;
-        if (typeof global === "function") {
-          tmp5 = global;
+        if (typeof fn === "function") {
+          tmp5 = fn;
         }
-        obj.onFulfilled = tmp5;
         tmp6 = null;
-        if (typeof require === "function") {
-          tmp6 = require;
+        if (typeof fn2 === "function") {
+          tmp6 = fn2;
         }
-        obj.onRejected = tmp6;
-        obj.promise = obj1;
-        tmp2Result = tmp2(self, obj);
-        return obj1;
+        handle(self, obj);
+        return obj3;
       }
     }
   }
@@ -137,6 +116,7 @@ function handle(_y, _A) {
       tmp2._x = 1;
       tmp2._A = _A;
     } else if (1 === tmp2._x) {
+      let num2 = 2;
       tmp2._x = 2;
       const items = [tmp2._A, _A];
       tmp2._A = items;
@@ -151,69 +131,73 @@ function handle(_y, _A) {
     setImmediate(() => {
       let length;
       let length2;
+      let onRejected;
+      let tmp2;
+      function tryCallOne(onRejected, _z) {
+        try {
+          return onRejected(_z);
+        } catch (tmp3) {
+          closure_1 = tmp3;
+          return closure_1_2;
+        }
+      }
       if (1 === _z._y) {
-        let onRejected = _z.onFulfilled;
-        let tmp2 = _z;
+        const tmp3 = _z;
+        onRejected = _z.onFulfilled;
+        tmp2 = _z;
       } else {
         tmp2 = _z;
         onRejected = _z.onRejected;
       }
       if (null !== onRejected) {
-        const tmp11 = (function tryCallOne(onRejected, _z) {
-          try {
-            return onRejected(_z);
-          } catch (tmp3) {
-            closure_1 = tmp3;
-            return closure_1_2;
-          }
-        })(onRejected, tmp._z);
+        const tmp11 = tryCallOne(onRejected, _z._z);
         if (tmp11 === closure_2) {
           tmp2.promise._y = 2;
           tmp2.promise._z = _z;
           if (Promise._C) {
-            Promise._C(promise, tmp15);
+            Promise._C(tmp2.promise, tmp15);
           }
           if (1 === tmp2.promise._x) {
-            handle(promise, promise._A);
-            promise._A = null;
+            handle(tmp2.promise, tmp2.promise._A);
+            tmp2.promise._A = null;
           }
           if (2 === tmp2.promise._x) {
             let num6 = 0;
-            if (0 < promise._A.length) {
+            if (0 < tmp2.promise._A.length) {
               do {
                 let tmp20 = handle(promise, promise._A[num6]);
                 num6 = num6 + 1;
                 length2 = promise._A.length;
               } while (num6 < length2);
             }
-            promise._A = null;
+            tmp2.promise._A = null;
           }
         } else {
           resolve(tmp2.promise, tmp11);
         }
-      } else if (1 === tmp._y) {
-        resolve(tmp2.promise, tmp._z);
+      } else if (1 === _z._y) {
+        resolve(tmp2.promise, _z._z);
       } else {
         _z = tmp._z;
         tmp2.promise._y = 2;
         tmp2.promise._z = _z;
         if (Promise._C) {
-          Promise._C(promise2, _z);
+          Promise._C(tmp2.promise, _z);
         }
         if (1 === tmp2.promise._x) {
-          handle(promise2, promise2._A);
-          promise2._A = null;
+          handle(tmp2.promise, tmp2.promise._A);
+          tmp2.promise._A = null;
         }
         if (2 === tmp2.promise._x) {
           let num2 = 0;
-          if (0 < promise2._A.length) {
+          if (0 < tmp2.promise._A.length) {
             do {
               let tmp8 = handle(promise2, promise2._A[num2]);
               num2 = num2 + 1;
               length = promise2._A.length;
             } while (num2 < length);
           }
-          promise2._A = null;
+          tmp2.promise._A = null;
         }
       }
     });
@@ -224,8 +208,18 @@ function resolve(_x, _z) {
   let length2;
   let length3;
   let length4;
+  function getThen(_z) {
+    try {
+      return _z.then;
+    } catch (tmp2) {
+      closure_1 = tmp2;
+      return closure_1_2;
+    }
+  }
   if (_z === _x) {
     const _TypeError = TypeError;
+    const self = this;
+    const self2 = this;
     const typeError = new TypeError("A promise cannot be resolved with itself.");
     _x._y = 2;
     _x._z = typeError;
@@ -240,7 +234,7 @@ function resolve(_x, _z) {
       let num18 = 0;
       if (0 < _x._A.length) {
         do {
-          let tmp35 = handle(_x, _x._A[num18]);
+          let tmp33 = handle(_x, _x._A[num18]);
           num18 = num18 + 1;
           length4 = _x._A.length;
         } while (num18 < length4);
@@ -250,14 +244,7 @@ function resolve(_x, _z) {
   } else {
     if (_z) {
       if (typeof _z === "object") {
-        const obj = (function getThen(_z) {
-          try {
-            return _z.then;
-          } catch (tmp2) {
-            closure_1 = tmp2;
-            return closure_1_2;
-          }
-        })(_z);
+        const obj = getThen(_z);
         if (obj === closure_2) {
           _x._y = 2;
           _x._z = _z;
@@ -326,27 +313,12 @@ function resolve(_x, _z) {
     }
   }
 }
-function Handler(fn, fn2, promise) {
-  const obj = {};
-  let tmp = null;
-  if (typeof fn === "function") {
-    tmp = fn;
-  }
-  obj.onFulfilled = tmp;
-  let tmp2 = null;
-  if (typeof fn2 === "function") {
-    tmp2 = fn2;
-  }
-  obj.onRejected = tmp2;
-  obj.promise = promise;
-}
+function Handler(fn, fn2, promise) {}
 function doResolve(arg0, _x) {
   let length;
+  let tmp;
   _z = false;
-  let tmp2 = _z;
-  if (!_z) {
-    tmp2 = tmp !== closure_2;
-  }
+  const tmp2 = _z || tmp !== closure_2;
   if (!tmp2) {
     _z = true;
     _x._y = 2;

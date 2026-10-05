@@ -11,7 +11,7 @@ export const isOneofGroup = function isOneofGroup(oneofKind) {
             tmp3 = 2 == Object.keys(oneofKind).length;
           }
           return tmp3;
-        } else if ("undefined" === tmp) {
+        } else if ("undefined" === typeof oneofKind.oneofKind) {
           const _Object = Object;
           return 1 == Object.keys(oneofKind).length;
         } else {
@@ -27,8 +27,7 @@ export const getOneofValue = function getOneofValue(arg0, arg1) {
 };
 export const setOneofValue = function setOneofValue(oneofKind, oneofKind2, arg2) {
   if (undefined !== oneofKind.oneofKind) {
-    oneofKind = oneofKind.oneofKind;
-    delete tmp2[tmp];
+    delete tmp[oneofKind.oneofKind];
   }
   oneofKind.oneofKind = oneofKind2;
   if (undefined !== arg2) {
@@ -37,18 +36,17 @@ export const setOneofValue = function setOneofValue(oneofKind, oneofKind2, arg2)
 };
 export const setUnknownOneofValue = function setUnknownOneofValue(oneofKind, oneofKind2, arg2) {
   if (undefined !== oneofKind.oneofKind) {
-    oneofKind = oneofKind.oneofKind;
-    delete tmp2[tmp];
+    delete tmp[oneofKind.oneofKind];
   }
   oneofKind.oneofKind = oneofKind2;
-  if (tmp3) {
+  const tmp2 = undefined !== arg2 && undefined !== oneofKind2;
+  if (tmp2) {
     oneofKind[oneofKind2] = arg2;
   }
 };
 export const clearOneofValue = function clearOneofValue(oneofKind) {
   if (undefined !== oneofKind.oneofKind) {
-    oneofKind = oneofKind.oneofKind;
-    delete tmp[tmp2];
+    delete tmp[oneofKind.oneofKind];
   }
   oneofKind.oneofKind = undefined;
 };

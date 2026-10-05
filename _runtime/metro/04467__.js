@@ -2,8 +2,9 @@
 import _mod4461 from "04461__.js";
 
 const fn = function n(moment) {
-  closure_0 = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_");
-  closure_1 = "ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic".split("_");
+  let obj2;
+  let closure_0 = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_");
+  let closure_1 = "ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic".split("_");
   const items = [
     /^ene/i,
     /^feb/i,
@@ -18,21 +19,26 @@ const fn = function n(moment) {
     /^nov/i,
     /^dic/i,
   ];
-  const tmp =
+  let tmp =
     /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
   let obj = {
     months: "enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre".split("_"),
     monthsShort(arg0, arg1) {
-      if (arg0) {
+      let tmp2;
+      const tmp = arg0;
+      if (tmp) {
+        let tmp5;
+        const obj = /-MMM-/;
         if (obj.test(arg1)) {
-          let tmp3 = closure_1[arg0.month(arg0)];
+          tmp5 = closure_1[arg0.month(arg0)];
         } else {
-          tmp3 = closure_0[arg0.month(arg0)];
+          tmp5 = closure_0[arg0.month(arg0)];
         }
-        obj = /-MMM-/;
+        tmp2 = tmp5;
       } else {
-        return closure_0;
+        tmp2 = closure_0;
       }
+      return tmp2;
     },
     monthsRegex: tmp,
     monthsShortRegex: tmp,
@@ -53,44 +59,7 @@ const fn = function n(moment) {
       LLL: "D [de] MMMM [de] YYYY H:mm",
       LLLL: "dddd, D [de] MMMM [de] YYYY H:mm",
     },
-    calendar: {
-      sameDay() {
-        let str = "";
-        if (1 !== this.hours()) {
-          str = "s";
-        }
-        return "[hoy a la" + str + "] LT";
-      },
-      nextDay() {
-        let str = "";
-        if (1 !== this.hours()) {
-          str = "s";
-        }
-        return "[ma\u00F1ana a la" + str + "] LT";
-      },
-      nextWeek() {
-        let str = "";
-        if (1 !== this.hours()) {
-          str = "s";
-        }
-        return "dddd [a la" + str + "] LT";
-      },
-      lastDay() {
-        let str = "";
-        if (1 !== this.hours()) {
-          str = "s";
-        }
-        return "[ayer a la" + str + "] LT";
-      },
-      lastWeek() {
-        let str = "";
-        if (1 !== this.hours()) {
-          str = "s";
-        }
-        return "[el] dddd [pasado a la" + str + "] LT";
-      },
-      sameElse: "L",
-    },
+    calendar: obj2,
     relativeTime: {
       future: "en %s",
       past: "hace %s",
@@ -114,6 +83,44 @@ const fn = function n(moment) {
     week: { dow: 1, doy: 4 },
     invalidDate: "Fecha inv\u00E1lida",
   };
+  obj2 = {
+    sameDay() {
+      let str = "";
+      if (1 !== this.hours()) {
+        str = "s";
+      }
+      return "[hoy a la" + str + "] LT";
+    },
+    nextDay() {
+      let str = "";
+      if (1 !== this.hours()) {
+        str = "s";
+      }
+      return "[ma\u00F1ana a la" + str + "] LT";
+    },
+    nextWeek() {
+      let str = "";
+      if (1 !== this.hours()) {
+        str = "s";
+      }
+      return "dddd [a la" + str + "] LT";
+    },
+    lastDay() {
+      let str = "";
+      if (1 !== this.hours()) {
+        str = "s";
+      }
+      return "[ayer a la" + str + "] LT";
+    },
+    lastWeek() {
+      let str = "";
+      if (1 !== this.hours()) {
+        str = "s";
+      }
+      return "[el] dddd [pasado a la" + str + "] LT";
+    },
+    sameElse: "L",
+  };
   return moment.defineLocale("es", obj);
 };
 if (typeof exports === "object") {
@@ -124,6 +131,7 @@ if (typeof exports === "object") {
   }
 }
 if (typeof globalThis.define === "function") {
+  const define2 = globalThis.define;
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], fn);
   }

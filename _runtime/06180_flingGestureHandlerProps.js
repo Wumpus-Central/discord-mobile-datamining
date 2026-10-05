@@ -1,12 +1,11 @@
 // _runtime/06180_flingGestureHandlerProps.js
-import _isNativeReflectConstruct from "metro/06167__.js";
+import createHandler from "06167_createHandler.js";
 
+let items1;
 const items = ["numberOfPointers", "direction"];
-const obj = { name: "FlingGestureHandler", allowedProps: null, config: null };
-const items1 = [...items];
-obj.allowedProps = items1;
-obj.config = {};
+const obj = { name: "FlingGestureHandler", allowedProps: items1, config: {} };
+items1 = [...items];
 
 export const flingGestureHandlerProps = items;
 export const flingHandlerName = "FlingGestureHandler";
-export const FlingGestureHandler = _isNativeReflectConstruct(obj);
+export const FlingGestureHandler = createHandler(obj);

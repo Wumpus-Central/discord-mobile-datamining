@@ -1,6 +1,7 @@
 // _runtime/08109_arrayAggregator.js
 
 export default function arrayAggregator(arg0, fn, fn2, arg3) {
+  let num2;
   let num = 0;
   if (null != arg0) {
     num = arg0.length;

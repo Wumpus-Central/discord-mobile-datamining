@@ -1,28 +1,31 @@
 // _runtime/04398_subYears.js
-import module_3962_mod from "metro/03962__.js";
-import module_4127_mod from "metro/04127__.js";
+import toInteger_mod from "03962_toInteger.js";
+import addYears_mod from "04127_addYears.js";
 import requiredArgs_mod from "03959_requiredArgs.js";
 
-let module_3962 = module_3962_mod;
-if (!module_3962) {
-  const obj = { default: module_3962 };
-  let tmp3 = obj;
+let tmp3;
+let tmp5;
+let tmp7;
+let toInteger = toInteger_mod;
+if (!toInteger) {
+  tmp3 = { default: toInteger };
+  const obj = { default: toInteger };
 } else {
-  tmp3 = module_3962;
+  tmp3 = toInteger;
 }
-module_3962 = tmp3;
-let module_4127 = module_4127_mod;
-if (!module_4127) {
-  const obj2 = { default: module_4127 };
-  let tmp5 = obj2;
+toInteger = tmp3;
+let addYears = addYears_mod;
+if (!addYears) {
+  tmp5 = { default: addYears };
+  const obj2 = { default: addYears };
 } else {
-  tmp5 = module_4127;
+  tmp5 = addYears;
 }
-module_4127 = tmp5;
+addYears = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp7 = { default: requiredArgs };
   const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }
@@ -30,6 +33,5 @@ requiredArgs = tmp7;
 
 export default function subYears(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4127.default(arg0, -module_3962.default(arg1));
-};
-export default exports.default;
+  return addYears.default(arg0, -toInteger.default(arg1));
+}

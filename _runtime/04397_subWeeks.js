@@ -1,28 +1,31 @@
 // _runtime/04397_subWeeks.js
-import module_3962_mod from "metro/03962__.js";
-import module_4126_mod from "metro/04126__.js";
+import toInteger_mod from "03962_toInteger.js";
+import addWeeks_mod from "04126_addWeeks.js";
 import requiredArgs_mod from "03959_requiredArgs.js";
 
-let module_3962 = module_3962_mod;
-if (!module_3962) {
-  const obj = { default: module_3962 };
-  let tmp3 = obj;
+let tmp3;
+let tmp5;
+let tmp7;
+let toInteger = toInteger_mod;
+if (!toInteger) {
+  tmp3 = { default: toInteger };
+  const obj = { default: toInteger };
 } else {
-  tmp3 = module_3962;
+  tmp3 = toInteger;
 }
-module_3962 = tmp3;
-let module_4126 = module_4126_mod;
-if (!module_4126) {
-  const obj2 = { default: module_4126 };
-  let tmp5 = obj2;
+toInteger = tmp3;
+let addWeeks = addWeeks_mod;
+if (!addWeeks) {
+  tmp5 = { default: addWeeks };
+  const obj2 = { default: addWeeks };
 } else {
-  tmp5 = module_4126;
+  tmp5 = addWeeks;
 }
-module_4126 = tmp5;
+addWeeks = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp7 = { default: requiredArgs };
   const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }
@@ -30,6 +33,5 @@ requiredArgs = tmp7;
 
 export default function subWeeks(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4126.default(arg0, -module_3962.default(arg1));
-};
-export default exports.default;
+  return addWeeks.default(arg0, -toInteger.default(arg1));
+}

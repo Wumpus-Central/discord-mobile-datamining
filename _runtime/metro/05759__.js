@@ -1,18 +1,18 @@
 // _runtime/metro/05759__.js
-import _modDef5760 from "05760__.js";
-import noop from "00019__.js";
+import react_native from "../00017_react-native.js";
+import Fragment from "../react/00021_Fragment.js";
+import react_nativeDefault from "../05760_react-native.js";
+import react from "../00019_react.js";
 
-const StyleSheet = fn(17).StyleSheet;
-const jsx = fn(21).jsx;
+const StyleSheet = react_native.StyleSheet;
+const jsx = Fragment.jsx;
 const styles = StyleSheet.create({ flex: { flex: 1 } });
 
 export const SafeAreaView = function SafeAreaView(style) {
-  const obj = {};
+  react_nativeDefault;
   const merged = Object.assign(style);
   const items = [styles.flex, style.style];
-  obj.style = items;
   const rect = { top: false, bottom: false, left: false, right: false };
   const merged1 = Object.assign(style.edges);
-  obj.edges = rect;
-  return jsx(_modDef5760, {});
+  return <tmp style={items} edges={rect} />;
 };

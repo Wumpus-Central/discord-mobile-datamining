@@ -1,13 +1,20 @@
 // _runtime/06327_ScrollableContainer.js
-import BottomSheetDraggableScrollable from "06328_BottomSheetDraggableScrollable.js";
-import _modDef6329 from "metro/06329__.js";
-import _mod6331 from "metro/06331__.js";
-import noop from "metro/00019__.js";
+import react2 from "00019_react.js";
+import Fragment from "react/00021_Fragment.js";
+import BottomSheetDraggableScrollable2 from "06328_BottomSheetDraggableScrollable.js";
+import BottomSheetRefreshControlDefault from "06329_BottomSheetRefreshControl.js";
+import react_native from "06331_react-native.js";
 
-require = fn;
-const jsx = fn(21).jsx;
+const forwardRef = react2.forwardRef;
+const jsx = Fragment.jsx;
 
-export const ScrollableContainer = fn(19).forwardRef(function ScrollableContainer(arg0, ref) {
+export const ScrollableContainer = forwardRef(function ScrollableContainer(arg0, ref) {
+  let ScrollableComponent;
+  let nativeGesture;
+  let onRefresh;
+  let progressViewOffset;
+  let refreshControl;
+  let refreshing;
   ({ nativeGesture, refreshControl, onRefresh } = arg0);
   ({ refreshing, progressViewOffset, ScrollableComponent } = arg0);
   const merged = Object.assign(
@@ -21,31 +28,25 @@ export const ScrollableContainer = fn(19).forwardRef(function ScrollableContaine
       ScrollableComponent: 0,
     }),
   );
-  const obj = { scrollableGesture: nativeGesture, children: null };
+  const BottomSheetDraggableScrollable = BottomSheetDraggableScrollable2.BottomSheetDraggableScrollable;
   const merged1 = Object.assign(merged);
-  obj.children = <ScrollableComponent ref={ref} />;
-  const tmp6 = jsx(BottomSheetDraggableScrollable.BottomSheetDraggableScrollable, {
-    scrollableGesture: nativeGesture,
-    children: null,
-  });
+  const tmp6 = (
+    <BottomSheetDraggableScrollable scrollableGesture={nativeGesture}>{null}</BottomSheetDraggableScrollable>
+  );
   let tmp2Result = tmp6;
   if (onRefresh) {
-    const obj3 = {
-      scrollableGesture: nativeGesture,
-      refreshing,
-      progressViewOffset,
-      onRefresh,
-      style: _mod6331.styles.container,
-      children: tmp6,
-    };
-    tmp2Result = jsx(_modDef6329, {
-      scrollableGesture: nativeGesture,
-      refreshing,
-      progressViewOffset,
-      onRefresh,
-      style: _mod6331.styles.container,
-      children: tmp6,
-    });
+    BottomSheetRefreshControlDefault;
+    tmp2Result = (
+      <tmp9
+        scrollableGesture={nativeGesture}
+        refreshing={refreshing}
+        progressViewOffset={progressViewOffset}
+        onRefresh={onRefresh}
+        style={react_native.styles.container}
+      >
+        {tmp6}
+      </tmp9>
+    );
   }
   return tmp2Result;
 });

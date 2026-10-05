@@ -1,32 +1,18 @@
 // _runtime/00926_LayoutShiftManager.js
-import _classCallCheck_mod from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
-let _classCallCheck = _classCallCheck_mod;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class LayoutShiftManager {
   constructor() {
-    self = this;
-    tmp = LayoutShiftManager;
-    tmp2 = closure_0(this, LayoutShiftManager);
-    __init = LayoutShiftManager.prototype.__init;
-    call = __init.call;
-    if (typeof call === "unknown") {
-      __initResult = __init();
-    } else {
-      callResult = call(self);
-    }
-    __init2 = tmp.prototype.__init2;
-    call2 = __init2.call;
-    if (typeof call2 === "unknown") {
-      __init2Result = __init2();
-    } else {
-      call2Result = call2(self);
-    }
-    return;
+    const self = this;
+    _classCallCheck(this, LayoutShiftManager);
+    const __init = LayoutShiftManager.prototype.__init;
+    __init.call(self);
+    const __init2 = LayoutShiftManager.prototype.__init2;
+    __init2.call(self);
   }
 }
-_classCallCheck = LayoutShiftManager;
 const entry = {
   key: "__init",
   value: function __init() {
@@ -49,8 +35,8 @@ let items = [
         const first = this._sessionEntries[0];
         if (this._sessionValue) {
           if (first) {
-            if (tmp2) {
-              if (hadRecentInput.startTime - tmp2.startTime < 1000) {
+            if (this._sessionEntries[this._sessionEntries.length - 1]) {
+              if (hadRecentInput.startTime - this._sessionEntries[this._sessionEntries.length - 1].startTime < 1000) {
                 if (hadRecentInput.startTime - first.startTime < 5000) {
                   self._sessionValue = self._sessionValue + hadRecentInput.value;
                   const _sessionEntries = self._sessionEntries;
@@ -71,5 +57,6 @@ let items = [
     },
   },
 ];
+const LayoutShiftManager_export = _createClass(LayoutShiftManager, items);
 
-export const LayoutShiftManager = _createClass(LayoutShiftManager, items);
+export { LayoutShiftManager_export as LayoutShiftManager };

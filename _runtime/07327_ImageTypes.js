@@ -2,10 +2,24 @@
 import _createClass from "metro/00042__createClass.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 
+let items;
+let items1;
+let items10;
+let items11;
+let items12;
+let items13;
+let items14;
+let items2;
+let items3;
+let items4;
+let items5;
+let items6;
+let items7;
+let items8;
+let items9;
 class ImageTypes {
   constructor() {
-    tmp = closure_0(this, ImageTypes);
-    return;
+    _classCallCheck(this, ImageTypes);
   }
 }
 const _moduleResult = _createClass(ImageTypes);
@@ -13,84 +27,76 @@ const obj = {
   extension: "avif",
   mimeType: "image/avif",
   description: "Alliance for Open Media (AOMedia) Video 1 (AV1) Image File",
-  signatures: null,
+  signatures: items,
 };
-const items = [{ sequence: [0, 0, 0] }];
-obj.signatures = items;
+items = [{ sequence: [0, 0, 0] }];
 _moduleResult.AVIF = obj;
 const obj2 = {
   extension: "bmp",
   mimeType: "image/bmp",
   description: "A bitmap format used mostly in Windows",
-  signatures: null,
+  signatures: items1,
 };
-const items1 = [{ sequence: [66, 77], compatibleExtensions: ["dib"] }];
-obj2.signatures = items1;
+items1 = [{ sequence: [66, 77], compatibleExtensions: ["dib"] }];
 _moduleResult.BMP = obj2;
 const obj3 = {
   extension: "bpg",
   mimeType: "image/bpg",
   description: "Better Portable Graphics image format",
-  signatures: null,
+  signatures: items2,
 };
-const items2 = [{ sequence: [66, 80, 71, 251] }];
-obj3.signatures = items2;
+items2 = [{ sequence: [66, 80, 71, 251] }];
 _moduleResult.BPG = obj3;
 const obj4 = {
   extension: "cr2",
   mimeType: "image/x-canon-cr2",
   description: "Canon digital camera RAW file",
-  signatures: null,
+  signatures: items3,
 };
-const items3 = [{ sequence: [73, 73, 42, 0, 16, 0, 0, 0, 67, 82] }];
-obj4.signatures = items3;
+items3 = [{ sequence: [73, 73, 42, 0, 16, 0, 0, 0, 67, 82] }];
 _moduleResult.CR2 = obj4;
 const obj5 = {
   extension: "exr",
   mimeType: "image/x-exr",
   description: "OpenEXR bitmap image format",
-  signatures: null,
+  signatures: items4,
 };
-const items4 = [{ sequence: [118, 47, 49, 1] }];
-obj5.signatures = items4;
+items4 = [{ sequence: [118, 47, 49, 1] }];
 _moduleResult.EXR = obj5;
 const obj6 = {
   extension: "gif",
   mimeType: "image/gif",
   description: "Image file encoded in the Graphics Interchange Format (GIF)",
-  signatures: null,
+  signatures: items5,
 };
-const items5 = [{ sequence: [71, 73, 70, 56, 55, 97] }, { sequence: [71, 73, 70, 56, 57, 97] }];
-obj6.signatures = items5;
+items5 = [{ sequence: [71, 73, 70, 56, 55, 97] }, { sequence: [71, 73, 70, 56, 57, 97] }];
 _moduleResult.GIF = obj6;
 const obj7 = {
   extension: "heic",
   mimeType: "image/heic",
   description: "A variant of the HEIF (High Efficiency Image Format) that store images on the latest Apple devices.",
-  signatures: null,
+  signatures: items6,
 };
-const items6 = [
+items6 = [
   { sequence: [102, 116, 121, 112, 104, 101, 105, 99], offset: 4 },
   { sequence: [102, 116, 121, 112, 109], offset: 4 },
 ];
-obj7.signatures = items6;
 _moduleResult.HEIC = obj7;
 const obj8 = {
   extension: "ico",
   mimeType: "image/x-icon",
   description: "Computer icon encoded in ICO file format",
-  signatures: null,
+  signatures: items7,
 };
-const items7 = [{ sequence: [0, 0, 1, 0], compatibleExtensions: ["spl"] }];
-obj8.signatures = items7;
+items7 = [{ sequence: [0, 0, 1, 0], compatibleExtensions: ["spl"] }];
 _moduleResult.ICO = obj8;
 const obj9 = {
   extension: "jpeg",
   mimeType: "image/jpeg",
   description: "JPEG (Joint Photographic Experts Group) is a widely used lossy image compression format.",
-  signatures: null,
+  signatures: items8,
 };
-const items8 = [
+items8 = [
   {
     sequence: [255, 216, 255, 225, 69, 120, 105, 102, 0],
     skippedBytes: [4, 5],
@@ -120,73 +126,67 @@ const items8 = [
   { sequence: [255, 216, 255, 224], description: "JPEG raw or in the JFIF or Exif file format" },
   { sequence: [255, 216], description: "Generic JPEGimage file", compatibleExtensions: ["jpe"] },
 ];
-obj9.signatures = items8;
 _moduleResult.JPEG = obj9;
 const obj10 = {
   extension: "pbm",
   mimeType: "image/x-portable-bitmap",
   description:
     "PBM (Portable Bitmap) is a simple monochrome bitmap image format that uses plain text ASCII characters to represent binary image data",
-  signatures: null,
+  signatures: items9,
 };
-const items9 = [
+items9 = [
   { sequence: [80, 49, 10], description: "Portable bitmap ASCII" },
   { sequence: [80, 52, 10], description: "Portable bitmap binary" },
 ];
-obj10.signatures = items9;
 _moduleResult.PBM = obj10;
 const obj11 = {
   extension: "pgm",
   mimeType: "image/x-portable-graymap",
   description:
     "PGM (Portable Graymap) is a simple grayscale image format that uses ASCII text characters to represent binary image data.",
-  signatures: null,
+  signatures: items10,
 };
-const items10 = [
+items10 = [
   { sequence: [80, 50, 10], description: "Portable Gray Map ASCII" },
   { sequence: [80, 53, 10], description: "Portable Gray Map binary" },
 ];
-obj11.signatures = items10;
 _moduleResult.PGM = obj11;
 const obj12 = {
   extension: "png",
   mimeType: "image/png",
   description:
     "PNG (Portable Network Graphics) is a lossless image compression format that supports a wide range of color depths and transparency and is widely used for high-quality graphics.",
-  signatures: null,
+  signatures: items11,
 };
-const items11 = [{ sequence: [137, 80, 78, 71, 13, 10, 26, 10] }];
-obj12.signatures = items11;
+items11 = [{ sequence: [137, 80, 78, 71, 13, 10, 26, 10] }];
 _moduleResult.PNG = obj12;
 const obj13 = {
   extension: "ppm",
   mimeType: "image/x-portable-pixmap",
   description: "PPM (Portable Pixmap) is a simple color image format in the Portable Network Graphics (PNG) suite.",
-  signatures: null,
+  signatures: items12,
 };
-const items12 = [
+items12 = [
   { sequence: [80, 51, 10], description: "Portable Pixmap ASCII" },
   { sequence: [80, 54, 10], description: "Portable Pixmap binary" },
 ];
-obj13.signatures = items12;
 _moduleResult.PPM = obj13;
 const obj14 = {
   extension: "psd",
   mimeType: "image/vnd.adobe.photoshop",
   description: "PSD (Photoshop Document) is an Adobe Photoshop image file format",
-  signatures: null,
+  signatures: items13,
 };
-const items13 = [{ sequence: [56, 66, 80, 83] }];
-obj14.signatures = items13;
+items13 = [{ sequence: [56, 66, 80, 83] }];
 _moduleResult.PSD = obj14;
 const obj15 = {
   extension: "webp",
   mimeType: "image/webp",
   description: "A modern image format that provides superior lossless and lossy compression for images on the web",
-  signatures: null,
+  signatures: items14,
 };
-const items14 = [{ sequence: [82, 73, 70, 70, 87, 69, 66, 80], skippedBytes: [4, 5, 6, 7] }];
-obj15.signatures = items14;
+items14 = [{ sequence: [82, 73, 70, 70, 87, 69, 66, 80], skippedBytes: [4, 5, 6, 7] }];
 _moduleResult.WEBP = obj15;
+const ImageTypes_export = _moduleResult;
 
-export const ImageTypes = _moduleResult;
+export { ImageTypes_export as ImageTypes };

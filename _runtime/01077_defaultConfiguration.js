@@ -1,6 +1,5 @@
 // _runtime/01077_defaultConfiguration.js
-
-export const defaultConfiguration = {
+const obj = {
   onFormOpen() {},
   onFormClose() {},
   onAddScreenshot(arg0) {},
@@ -35,5 +34,7 @@ export const defaultConfiguration = {
   captureScreenshotButtonLabel: "Take a screenshot",
   genericError: "Unable to send feedback due to an unexpected error.",
 };
+
+export const defaultConfiguration = obj;
 export const defaultButtonConfiguration = { triggerLabel: "Report a Bug", triggerAriaLabel: "" };
 export const defaultScreenshotButtonConfiguration = { triggerLabel: "Take Screenshot", triggerAriaLabel: "" };

@@ -1,9 +1,14 @@
 // _runtime/metro/00750__.js
-import _mod709 from "00709__.js";
+import UNKNOWN_FUNCTION from "../00709_UNKNOWN_FUNCTION.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const require = globalThis.__r;
+let _require, closure_2, closure_5;
+
 function getFilenameToDebugIdMap(arg0) {
+  let closure_0;
+  let keys;
+  let keys1;
+  let length;
   _require = arg0;
   const _sentryDebugIds = require("00697__.js").GLOBAL_OBJ._sentryDebugIds;
   const _debugIds = require("00697__.js").GLOBAL_OBJ._debugIds;
@@ -14,26 +19,32 @@ function getFilenameToDebugIdMap(arg0) {
   }
   if (_sentryDebugIds) {
     const _Object = Object;
-    let keys = Object.keys(_sentryDebugIds);
+    keys = Object.keys(_sentryDebugIds);
   } else {
     keys = [];
   }
   if (_debugIds) {
+    let tmp2 = globalThis;
     const _Object2 = Object;
-    let keys1 = Object.keys(_debugIds);
+    keys1 = Object.keys(_debugIds);
   } else {
     keys1 = [];
   }
-  if (closure_5) {
+  let tmp3 = closure_5;
+  if (tmp3) {
+    const tmp4 = length;
     if (keys.length === length) {
+      let tmp5 = length;
       if (keys1.length === length) {
+        let tmp9 = closure_5;
         return closure_5;
       }
     }
   }
   length = keys1.length;
   closure_5 = {};
-  if (!closure_2) {
+  let tmp6 = closure_2;
+  if (!tmp6) {
     closure_2 = {};
   }
   function processDebugIds(keys, _debugIds) {
@@ -47,9 +58,10 @@ function getFilenameToDebugIdMap(arg0) {
         tmp5 = tmp4[tmp2];
       }
       let tmp7 = tmp5;
-      if (tmp5) {
+      if (tmp7) {
         if (hasOwnProperty) {
-          if (tmp3) {
+          let tmp9 = tmp3;
+          if (tmp9) {
             tmp8[tmp7[0]] = tmp3;
             if (React2) {
               let items = [tmp7[0]];
@@ -60,19 +72,21 @@ function getFilenameToDebugIdMap(arg0) {
           }
         }
       }
-      if (tmp3) {
+      let tmp10 = tmp3;
+      if (tmp10) {
         let arr = closure_0(tmp2);
         let diff = arr.length - 1;
         let tmp15 = diff;
         if (0 <= diff) {
+          let tmp20;
           while (true) {
             let tmp18 = tmp13[tmp15];
             let filename;
             if (tmp18 != null) {
               filename = tmp18.filename;
             }
-            let tmp20 = filename;
-            if (filename) {
+            tmp20 = filename;
+            if (tmp20) {
               if (hasOwnProperty) {
                 if (React2) {
                   break;
@@ -97,7 +111,7 @@ function getFilenameToDebugIdMap(arg0) {
   }
   return closure_5;
 }
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const getDebugImagesForResources = function getDebugImagesForResources(arg0, arg1) {
   const tmp = getFilenameToDebugIdMap(arg0);
@@ -107,13 +121,14 @@ export const getDebugImagesForResources = function getDebugImagesForResources(ar
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp7 = nextResult;
-      let obj = _mod709;
+      let obj = UNKNOWN_FUNCTION;
       let result = obj.normalizeStackTracePath(nextResult);
       let tmp11 = result;
+      if (tmp11) {
+        result = tmp[tmp11];
+      }
       if (result) {
-        let obj2 = { type: "sourcemap", code_file: null, debug_id: null };
-        obj2.code_file = tmp7;
-        obj2.debug_id = tmp[tmp11];
+        let obj2 = { type: "sourcemap", code_file: tmp7, debug_id: tmp[tmp11] };
         let arr = items.push(obj2);
       }
       continue;

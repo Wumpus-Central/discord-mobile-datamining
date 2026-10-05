@@ -1,5 +1,5 @@
 // _runtime/00796_severityLevelFromString.js
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const severityLevelFromString = function severityLevelFromString(level) {
   let str = "warning";

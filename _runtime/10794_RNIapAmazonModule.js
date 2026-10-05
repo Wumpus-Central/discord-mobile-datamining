@@ -1,12 +1,19 @@
 // _runtime/10794_RNIapAmazonModule.js
-import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import react_native from "00017_react-native.js";
+import _asyncToGenerator from "metro/00005__asyncToGenerator.js";
 
-const RNIapAmazonModule = fn(17).NativeModules.RNIapAmazonModule;
-asyncGeneratorStep(async (arg0) => {
+const RNIapAmazonModule = react_native.NativeModules.RNIapAmazonModule;
+_asyncToGenerator(async (arg0) => {
+  let c0;
+  let c1;
+  let c2;
+  let obj3;
+  let useSandbox;
+  closure_0 = arg0;
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
+  } else if (tmp3 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -17,6 +24,8 @@ asyncGeneratorStep(async (arg0) => {
     }
   } else {
     try {
+      let closure_1;
+      let closure_4;
       c4 = 2;
       if (0 === c3) {
         if (arg0 === 1) {
@@ -27,22 +36,22 @@ asyncGeneratorStep(async (arg0) => {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          closure_2 = tmp5;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          ({ developerSecret: closure_129_0, userId: closure_129_1, receiptId: closure_129_2, useSandbox } = closure_0);
+          let closure_2 = tmp4;
+          closure_1 = tmp;
+          c0 = undefined;
+          c1 = undefined;
+          c2 = undefined;
+          useSandbox = undefined;
+          ({ developerSecret: c0, userId: c1, receiptId: c2, useSandbox } = closure_0);
           if (useSandbox === undefined) {
             useSandbox = true;
           }
-          closure_129_3 = useSandbox;
-          closure_129_4 = undefined;
+          closure_4 = undefined;
           c3 = 1;
           c4 = 1;
           return { value: "Set", done: true };
         }
-      } else if (1 === tmp5) {
+      } else if (1 === c3) {
         if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -52,22 +61,23 @@ asyncGeneratorStep(async (arg0) => {
           return obj5;
         } else {
           let str = "";
-          if (closure_129_3) {
+          if (useSandbox) {
             str = "sandbox/";
           }
           const _HermesInternal = HermesInternal;
-          closure_129_4 =
+          closure_4 =
             "https://appstore-sdk.amazon.com/" +
             str +
             "version/1.0/verifyReceiptId/developer/" +
-            closure_129_0 +
+            c0 +
             "/user/" +
-            closure_129_1 +
+            c1 +
             "/receiptId/" +
-            closure_129_2;
+            c2;
           c3 = 2;
           c4 = 1;
-          const obj6 = { value: closure_0(tmp2[2]).enhancedFetch(closure_129_4), done: false };
+          const obj6 = { value: obj3.enhancedFetch(closure_4), done: false };
+          obj3 = closure_0(closure_1[2]);
           return obj6;
         }
       } else if (arg0 === 1) {
@@ -82,17 +92,17 @@ asyncGeneratorStep(async (arg0) => {
         const obj = { value, done: true };
         return obj;
       }
-    } catch (tmp16) {
-      c4 = tmp;
-      throw tmp16;
+    } catch (tmp15) {
+      c4 = 3;
+      throw tmp15;
     }
   }
 });
-asyncGeneratorStep(async () => {
+_asyncToGenerator(async () => {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
+  } else if (tmp2 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -116,26 +126,26 @@ asyncGeneratorStep(async () => {
         const obj = { value: RNIapAmazonModule.verifyLicense(), done: true };
         return obj;
       }
-    } catch (tmp5) {
-      c0 = tmp;
-      throw tmp5;
+    } catch (tmp4) {
+      c0 = 3;
+      throw tmp4;
     }
   }
 });
-let closure_0 = asyncGeneratorStep(async (arg0) => {
-  const isAmazonDevice = arg0;
-  c3 = 0;
-  c4 = 0;
+let closure_0 = _asyncToGenerator(async (arg0) => {
+  let closure_2;
+  let isAmazonDevice = arg0;
+  let c3 = 0;
+  let c4 = 0;
   const iter = (async (arg0) => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        return { value, done: true };
       } else {
         return { value: "IconComponent", done: null };
       }
@@ -148,12 +158,11 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            return { value, done: true };
           } else {
-            closure_1 = tmp2;
-            let isAmazonDevice2;
-            isAmazonDevice2 = isAmazonDevice.isAmazonDevice;
+            closure_1 = tmp;
+            isAmazonDevice = undefined;
+            isAmazonDevice = isAmazonDevice.isAmazonDevice;
             c3 = 1;
             c4 = 1;
             return { value: "Set", done: true };
@@ -163,16 +172,15 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          return { value, done: true };
         } else {
           c4 = 3;
-          const obj = { value: tmp5.deepLinkToSubscriptions(isAmazonDevice2), done: true };
+          const obj = { value: tmp4.deepLinkToSubscriptions(isAmazonDevice), done: true };
           return obj;
         }
-      } catch (tmp11) {
-        c4 = tmp;
-        throw tmp11;
+      } catch (tmp10) {
+        c4 = 3;
+        throw tmp10;
       }
     }
   })();
@@ -182,32 +190,11 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
 
 export const AmazonModule = RNIapAmazonModule;
 export const validateReceiptAmazon = function validateReceiptAmazon(arg0) {
-  const self = this;
-  const apply = closure_0.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return closure_0(...arguments);
 };
 export const verifyLicense = function verifyLicense() {
-  const self = this;
-  const apply = closure_0.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return closure_0(...arguments);
 };
 export const deepLinkToSubscriptionsAmazon = function deepLinkToSubscriptionsAmazon(arg0) {
-  const self = this;
-  const apply = closure_0.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return closure_0(...arguments);
 };

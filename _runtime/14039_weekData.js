@@ -1,6 +1,5 @@
 // _runtime/14039_weekData.js
-
-export const weekData = {
+const obj = {
   "001": { firstDay: 1, minimalDays: 1, weekend: [6, 7] },
   AC: { firstDay: 1, minimalDays: 1, weekend: [6, 7] },
   AD: { firstDay: 1, minimalDays: 4, weekend: [6, 7] },
@@ -261,3 +260,5 @@ export const weekData = {
   ZW: { firstDay: 7, minimalDays: 1, weekend: [6, 7] },
   ZZ: { firstDay: 1, minimalDays: 1, weekend: [6, 7] },
 };
+
+export const weekData = obj;

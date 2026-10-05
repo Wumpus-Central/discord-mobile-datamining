@@ -1,6 +1,6 @@
 // _runtime/metro/08003__.js
-import emptyFunction from "04707__.js";
+import 04707__ from "04707__.js";
 
-const point = { x: emptyFunction.number, y: emptyFunction.number };
+const point = { x: module_4707.number, y: module_4707.number };
 
-export default emptyFunction.shape(point);
+export default module_4707.shape(point);

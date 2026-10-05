@@ -5424,7 +5424,7 @@ const obj = {
     "\u306C\u3044\u3050\u308B\u307F",
     "\u73A9\u5177",
   ],
-  piñata: [
+  "pi\u00f1ata": [
     "\u304A\u795D\u3044",
     "\u30D1\u30FC\u30C6\u30A3\u30FC",
     "\u30D4\u30CB\u30E3\u30FC\u30BF",

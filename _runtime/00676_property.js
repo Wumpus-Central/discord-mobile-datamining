@@ -1,13 +1,14 @@
 // _runtime/00676_property.js
-import _mod597 from "metro/00597__.js";
-import _mod600 from "metro/00600__.js";
+import isKey from "00597_isKey.js";
+import toKey from "00600_toKey.js";
 import baseProperty from "00677_baseProperty.js";
 import basePropertyDeep from "00678_basePropertyDeep.js";
 
 export default function property(arg0) {
-  if (_mod597(arg0)) {
-    let tmpResultResult = baseProperty(_mod600(arg0));
+  let tmpResultResult;
+  if (isKey(arg0)) {
     const tmpResult = baseProperty;
+    tmpResultResult = tmpResult(toKey(arg0));
   } else {
     tmpResultResult = basePropertyDeep(arg0);
   }

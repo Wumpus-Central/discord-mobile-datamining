@@ -1,47 +1,56 @@
 // _runtime/04133_closestTo.js
-import _typeof_mod from "metro/03958__.js";
+import toDate_mod from "03958_toDate.js";
 import requiredArgs_mod from "03959_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
+let tmp3;
+let tmp5;
+let toDate = toDate_mod;
+if (!toDate) {
+  tmp3 = { default: toDate };
+  const obj = { default: toDate };
 } else {
-  tmp3 = _typeof;
+  tmp3 = toDate;
 }
-_typeof = tmp3;
+toDate = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp5 = { default: requiredArgs };
   const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
 
 export default function closestTo(arg0, arg1) {
-  absolute.default(2, arguments);
+  let absolute;
+  let closure_2;
+  let date;
+  let defaultResult = absolute.default(2, arguments);
   const defaultResult1 = date.default(arg0);
   if (isNaN(Number(defaultResult1))) {
     let _Date = Date;
+    let self = this;
+    let self2 = this;
     date = new Date(NaN);
     return date;
   } else {
+    let items;
     const time = defaultResult1.getTime();
     if (null == arg1) {
-      let items = [];
+      items = [];
     } else {
       items = arg1;
       if (typeof arg1.forEach !== "function") {
         const _Array = Array;
-        const call = slice.call;
-        typeof call === "unknown" ? slice() : call(arg1);
+        items = slice.call(arg1);
       }
     }
-    const item = items.forEach((item) => {
-      const defaultResult = _typeof.default(item);
+    const item = items.forEach(function (item) {
+      const defaultResult = toDate.default(item);
       if (isNaN(Number(defaultResult))) {
         const _Date = Date;
+        const self = this;
+        const self2 = this;
         date = new Date(NaN);
         absolute = NaN;
       } else {
@@ -57,7 +66,7 @@ export default function closestTo(arg0, arg1) {
         }
       }
     });
+    let tmp5 = date;
     return date;
   }
-};
-export default exports.default;
+}

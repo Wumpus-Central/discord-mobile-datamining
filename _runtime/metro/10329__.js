@@ -1,4 +1,5 @@
 // _runtime/metro/10329__.js
+import ReferenceWithTimezone from "../10164_ReferenceWithTimezone.js";
 import AbstractParserWithWordBoundaryChecking from "../10168_AbstractParserWithWordBoundaryChecking.js";
 import _mod10330 from "10330__.js";
 import _classCallCheck from "00041__classCallCheck.js";
@@ -7,19 +8,12 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -40,22 +34,17 @@ const regExp1 = new RegExp(
 );
 class ENTimeUnitWithinFormatParser {
   constructor() {
-    self = this;
-    tmp = c2(this, ENTimeUnitWithinFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitWithinFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, ENTimeUnitWithinFormatParser);
+    const obj = _getPrototypeOf(ENTimeUnitWithinFormatParser);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return tmp3(self, constructResult);
+    return c3(self, constructResult);
   }
 }
 _inherits(ENTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
@@ -70,11 +59,9 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const ParsingComponents = ENTimeUnitWithinFormatParser(10164).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        ENTimeUnitWithinFormatParser(10330).parseDuration(arg1[1]),
-      );
+      const parseDurationResult = _mod10330.parseDuration(arg1[1]);
+      const ParsingComponents = ReferenceWithTimezone.ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, parseDurationResult);
     },
   },
 ];

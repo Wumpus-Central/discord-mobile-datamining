@@ -1,8 +1,8 @@
 // _runtime/metro/07014__.js
-Key = Key.Key;
+let Key = exports.Key;
 if (!Key) {
   const obj = {};
-  Key.Key = obj;
+  exports.Key = obj;
   Key = obj;
 }
 Key.Unidentified = "Unidentified";

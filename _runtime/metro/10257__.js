@@ -1,5 +1,6 @@
 // _runtime/metro/10257__.js
 import repeatedTimeunitPattern from "../10161_repeatedTimeunitPattern.js";
+import findMostLikelyADYear from "../10162_findMostLikelyADYear.js";
 import AbstractParserWithWordBoundaryChecking from "../10168_AbstractParserWithWordBoundaryChecking.js";
 import _mod10255 from "10255__.js";
 import _classCallCheck from "00041__classCallCheck.js";
@@ -8,19 +9,12 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const NLMonthNameMiddleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -37,22 +31,17 @@ const sum = combined + repeatedTimeunitPattern.matchAnyPattern(_mod10255.MONTH_D
 const regExp = new RegExp(sum + ")(?:(?:-|/|,?\\s*)" + "(" + _mod10255.YEAR_PATTERN + "(?![^\\s]\\d)))?(?=\\W|$)", "i");
 class NLMonthNameMiddleEndianParser {
   constructor() {
-    self = this;
-    tmp = c2(this, NLMonthNameMiddleEndianParser);
-    tmp2 = closure_4;
-    obj = closure_4(NLMonthNameMiddleEndianParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, NLMonthNameMiddleEndianParser);
+    const obj = _getPrototypeOf(NLMonthNameMiddleEndianParser);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return tmp3(self, constructResult);
+    return c3(self, constructResult);
   }
 }
 _inherits(NLMonthNameMiddleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
@@ -67,8 +56,8 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(createParsingComponents, index) {
-      const tmp3 = NLMonthNameMiddleEndianParser(10255).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
-      const result = NLMonthNameMiddleEndianParser(10255).parseOrdinalNumberPattern(index[1]);
+      const tmp3 = _mod10255.MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const result = _mod10255.parseOrdinalNumberPattern(index[1]);
       if (result > 31) {
         index.index = index.index + index[1].length;
         return null;
@@ -76,15 +65,15 @@ const items = [
         const date = { day: result, month: tmp3 };
         const parsingComponents = createParsingComponents.createParsingComponents(date);
         if (index[4]) {
-          parsingComponents.assign("year", NLMonthNameMiddleEndianParser(10255).parseYear(index[4]));
+          parsingComponents.assign("year", _mod10255.parseYear(index[4]));
         } else {
           parsingComponents.imply(
             "year",
-            NLMonthNameMiddleEndianParser(10162).findYearClosestToRef(createParsingComponents.refDate, result, tmp3),
+            findMostLikelyADYear.findYearClosestToRef(createParsingComponents.refDate, result, tmp3),
           );
         }
         if (index[2]) {
-          const result1 = NLMonthNameMiddleEndianParser(10255).parseOrdinalNumberPattern(index[2]);
+          const result1 = _mod10255.parseOrdinalNumberPattern(index[2]);
           const parsingResult = createParsingComponents.createParsingResult(index.index, index[0]);
           parsingResult.start = parsingComponents;
           parsingResult.end = parsingComponents.clone();

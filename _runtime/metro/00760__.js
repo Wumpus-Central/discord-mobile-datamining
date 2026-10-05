@@ -1,14 +1,12 @@
 // _runtime/metro/00760__.js
 import _mod713 from "00713__.js";
-import forEachEnvelopeItem from "../00740_forEachEnvelopeItem.js";
+import _mod740 from "00740__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const createLogContainerEnvelopeItem = function createLogContainerEnvelopeItem(items) {
-  items = [,];
-  items[0] = { type: "log", item_count: items.length, content_type: "application/vnd.sentry.items.log+json" };
+  const obj = { type: "log", item_count: items.length, content_type: "application/vnd.sentry.items.log+json" };
+  items = [obj];
   items[1] = { items };
   return items;
 };
@@ -22,16 +20,15 @@ export const createLogEnvelope = function createLogEnvelope(items, _metadata, tu
     const obj2 = { name: _metadata.sdk.name, version: _metadata.sdk.version };
     obj.sdk = obj2;
   }
-  let tmp2 = tunnel;
-  if (tunnel) {
-    tmp2 = dsn;
-  }
+  const tmp2 = tunnel && dsn;
   if (tmp2) {
-    obj.dsn = _mod713.dsnToString(dsn);
+    const obj3 = _mod713;
+    obj.dsn = obj3.dsnToString(dsn);
   }
-  items = [,];
-  items[0] = { type: "log", item_count: items.length, content_type: "application/vnd.sentry.items.log+json" };
+  const obj5 = { type: "log", item_count: items.length, content_type: "application/vnd.sentry.items.log+json" };
+  items = [obj5];
   items[1] = { items };
   const items1 = [items];
-  return forEachEnvelopeItem.createEnvelope(obj, items1);
+  const obj4 = _mod740;
+  return obj4.createEnvelope(obj, items1);
 };

@@ -1,11 +1,14 @@
 // _runtime/metro/01903__.js
-globalThis.IntlMessageFormat.__addLocaleData({
+const obj = {
   locale: "da",
   pluralRuleFunction(arg0, arg1) {
-    const parts = String(arg0).split(".");
+    let str3;
+    const str = String(arg0);
+    const parts = str.split(".");
     const first = parts[0];
-    if (arg1) {
-      let str3 = "other";
+    const tmp4 = arg1;
+    if (tmp4) {
+      str3 = "other";
     } else {
       str3 = "one";
       if (1 != arg0) {
@@ -19,5 +22,6 @@ globalThis.IntlMessageFormat.__addLocaleData({
     }
     return str3;
   },
-});
+};
+globalThis.IntlMessageFormat.__addLocaleData(obj);
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "da-GL", parentLocale: "da" });

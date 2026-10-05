@@ -1,4 +1,4 @@
 // _runtime/08057_head.js
-import _mod8058 from "metro/08058__.js";
+import head from "08058_head.js";
 
-export default _mod8058;
+export default head;

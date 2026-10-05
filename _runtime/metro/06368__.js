@@ -1,20 +1,21 @@
 // _runtime/metro/06368__.js
-import _modDef6352 from "06352__.js";
-import _classCallCheck from "06351__.js";
+import ErrorMessages from "../06339_ErrorMessages.js";
+import _createClassDefault from "06352__createClass.js";
+import _classCallCheck from "06351__classCallCheck.js";
 
-const ViewabilityHelper = arg1;
+let size;
+
 class ViewabilityHelper {
-  constructor(arg0, arg1) {
-    tmp = c2(this, ViewabilityHelper);
+  constructor(viewabilityConfig, viewableIndicesChanged) {
+    _classCallCheck(this, ViewabilityHelper);
     this.possiblyViewableIndices = [];
     this.hasInteracted = false;
     this.viewableIndices = [];
     this.lastReportedViewableIndices = [];
-    set = new Set();
-    this.timers = set;
-    this.viewabilityConfig = global;
-    this.viewableIndicesChanged = arg1;
-    return;
+    this.timers = new Set();
+    this.viewabilityConfig = viewabilityConfig;
+    this.viewableIndicesChanged = viewableIndicesChanged;
+    new Set();
   }
 }
 const entry = {
@@ -30,11 +31,11 @@ const items = [
     key: "updateViewableItems",
     value: function updateViewableItems(arg0, arg1, arg2, arg3, arg4, possiblyViewableIndices) {
       const self = this;
-      closure_1 = arg0;
-      closure_2 = arg1;
-      closure_3 = arg2;
-      closure_4 = arg3;
-      closure_5 = arg4;
+      let closure_1 = arg0;
+      let closure_2 = arg1;
+      let closure_3 = arg2;
+      let closure_4 = arg3;
+      let closure_5 = arg4;
       if (undefined !== possiblyViewableIndices) {
         self.possiblyViewableIndices = possiblyViewableIndices;
       }
@@ -63,9 +64,9 @@ const items = [
             }
             if (undefined !== prop3) {
               const _Error = Error;
-              const error = new Error(
-                ViewabilityHelper(6339).ErrorMessages.multipleViewabilityThresholdTypesNotSupported,
-              );
+              const self2 = this;
+              const self3 = this;
+              const error = new Error(ErrorMessages.ErrorMessages.multipleViewabilityThresholdTypesNotSupported);
               throw error;
             }
           }
@@ -81,6 +82,7 @@ const items = [
         const found = prop4.filter((item) => {
           const viewabilityConfig = self.viewabilityConfig;
           let prop;
+          const isItemViewable = self.isItemViewable;
           if (viewabilityConfig != null) {
             prop = viewabilityConfig.viewAreaCoveragePercentThreshold;
           }
@@ -89,7 +91,7 @@ const items = [
           if (viewabilityConfig2 != null) {
             prop1 = viewabilityConfig2.itemVisiblePercentThreshold;
           }
-          return self.isItemViewable(item, closure_1, closure_2, closure_3, closure_4, prop, prop1, closure_5);
+          return isItemViewable(item, closure_1, closure_2, closure_3, closure_4, prop, prop1, closure_5);
         });
         self.viewableIndices = found;
         const viewabilityConfig6 = self.viewabilityConfig;
@@ -129,6 +131,7 @@ const items = [
       });
       const prop = this.lastReportedViewableIndices;
       const found2 = prop.filter((item) => !found.includes(item));
+      const tmp = found1.length > 0 || found2.length > 0;
       if (tmp) {
         self.lastReportedViewableIndices = found;
         const result = self.viewableIndicesChanged(found, found1, found2);
@@ -144,7 +147,7 @@ const items = [
   {
     key: "isItemViewable",
     value: function isItemViewable(item, arg1, arg2, arg3, width, prop, prop1, fn) {
-      const size = fn(item);
+      size = fn(item);
       if (undefined === size) {
         return false;
       } else {
@@ -164,8 +167,10 @@ const items = [
         } else if (0 === diff1) {
           return false;
         } else {
+          let result;
+          const tmp13 = null != prop ? diff1 / width : diff1 / tmp3;
           if (null != prop) {
-            let result = 0.01 * prop;
+            result = 0.01 * prop;
           } else {
             let num2 = prop1;
             if (prop1 == null) {
@@ -173,11 +178,11 @@ const items = [
             }
             result = 0.01 * num2;
           }
-          return (null != prop ? diff1 / width : diff1 / tmp3) >= result;
+          return tmp13 >= result;
         }
       }
     },
   },
 ];
 
-export default _modDef6352(ViewabilityHelper, items);
+export default _createClassDefault(ViewabilityHelper, items);

@@ -1,65 +1,60 @@
 // _runtime/metro/12629__.js
 import _mod12589 from "12589__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+let diff;
 
-export function makePromiseBuffer(bufferSize) {
+export function makePromiseBuffer(arg0) {
+  let closure_0 = arg0;
   const items = [];
-  return {
+  let obj = {
     $: items,
     add(fn) {
-      let tmp2 = undefined === promise;
-      if (!tmp2) {
-        tmp2 = items.length < tmp;
-      }
+      let promise;
+      const tmp2 = undefined === promise || items.length < tmp;
       if (tmp2) {
         promise = fn();
         if (-1 === items.indexOf(promise)) {
           items.push(promise);
         }
-        promise
-          .then(() => {
-            let first = items.splice(items.indexOf(promise), 1)[0];
-            if (!first) {
-              first = Promise.resolve(undefined);
-            }
-            return first;
-          })
-          .then(null, () => {
-            let first = items.splice(items.indexOf(promise), 1)[0];
-            if (!first) {
-              first = Promise.resolve(undefined);
-            }
-            return first.then(null, () => {});
-          });
+        const nextPromise = promise.then(() => {
+          const first = items.splice(items.indexOf(promise), 1)[0] || Promise.resolve(undefined);
+          return first;
+        });
+        nextPromise.then(null, () => {
+          const first = items.splice(items.indexOf(promise), 1)[0] || Promise.resolve(undefined);
+          return first.then(null, () => {});
+        });
         return promise;
       } else {
-        const sentryError = new bufferSize(items[1]).SentryError(
-          "Not adding Promise because buffer limit was reached.",
-        );
-        return bufferSize(items[0]).rejectedSyncPromise(sentryError);
+        const self = this;
+        const self2 = this;
+        const rejectedSyncPromise = closure_0(items[0]).rejectedSyncPromise;
+        const sentryError = new closure_0(items[1]).SentryError("Not adding Promise because buffer limit was reached.");
+        return rejectedSyncPromise(sentryError);
       }
     },
     drain(arg0) {
-      bufferSize = arg0;
-      return new bufferSize(items[0]).SyncPromise((fn, arg1) => {
+      let length;
+      closure_0 = arg0;
+      const syncPromise = new closure_0(items[0]).SyncPromise((fn, arg1) => {
+        let closure_3;
         closure_0 = fn;
-        closure_1 = arg1;
-        length = length.length;
-        if (length) {
+        let closure_1 = arg1;
+        const arr = length;
+        if (length.length) {
+          const tmp = globalThis;
           const _setTimeout = setTimeout;
+          let tmp2 = closure_0;
           const timeout = setTimeout(() => {
-            let tmp2 = closure_0;
-            if (closure_0) {
-              tmp2 = tmp > 0;
-            }
+            const tmp2 = closure_0 && tmp > 0;
             if (tmp2) {
               closure_0(false);
             }
           }, closure_0);
           const item = arr.forEach((item) => {
-            _mod12589.resolvedSyncPromise(item).then(() => {
+            const obj = _mod12589;
+            const resolvedSyncPromiseResult = obj.resolvedSyncPromise(item);
+            resolvedSyncPromiseResult.then(() => {
               diff = diff - 1;
               if (!diff) {
                 const _clearTimeout = clearTimeout;
@@ -71,8 +66,9 @@ export function makePromiseBuffer(bufferSize) {
         } else {
           return fn(true);
         }
-        arr = length;
       });
+      return syncPromise;
     },
   };
+  return obj;
 }

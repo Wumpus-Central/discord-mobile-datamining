@@ -1,6 +1,6 @@
 // _runtime/metro/00830__.js
 import _mod724 from "00724__.js";
-import _INTERNAL_captureSerializedLog from "../00756__INTERNAL_captureSerializedLog.js";
+import _INTERNAL_captureLog from "../00756__INTERNAL_captureLog.js";
 import safeJoinConsoleArgs from "../00828_safeJoinConsoleArgs.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 
@@ -32,20 +32,28 @@ export const createConsolaReporter = function createConsolaReporter() {
   if (arg0 === undefined) {
     obj = {};
   }
-  let set;
+  let _Set1;
   let client;
   let levels = obj.levels;
+  const _Set = Set;
   if (levels == null) {
     levels = closure_4;
   }
-  set = new Set(levels);
+  _Set1 = new _Set(levels);
   client = obj.client;
-  return {
+  let obj2 = {
     log(arg0) {
+      let args;
+      let date;
+      let level;
+      let message;
+      let tag;
+      let type;
       ({ type, level, message, args, tag, date } = arg0);
       const tmp = _objectWithoutProperties(arg0, closure_3);
       if (!client) {
-        client = _mod724.getClient();
+        const obj2 = _mod724;
+        client = obj2.getClient();
       }
       if (client) {
         let str = "debug";
@@ -63,8 +71,8 @@ export const createConsolaReporter = function createConsolaReporter() {
             }
           }
         }
-        if (set.has(str)) {
-          options = client.getOptions();
+        if (_Set1.has(str)) {
+          const options = client.getOptions();
           const normalizeDepth = options.normalizeDepth;
           let num = 3;
           if (undefined !== normalizeDepth) {
@@ -79,12 +87,11 @@ export const createConsolaReporter = function createConsolaReporter() {
           if (message) {
             items.push(message);
           }
-          let tmp8 = args;
-          if (args) {
-            tmp8 = args.length > 0;
-          }
+          const tmp8 = args && args.length > 0;
           if (tmp8) {
-            items.push(safeJoinConsoleArgs.formatConsoleArgs(args, num, num2));
+            const push = items.push;
+            const obj3 = safeJoinConsoleArgs;
+            push(obj3.formatConsoleArgs(args, num, num2));
           }
           tmp["sentry.origin"] = "auto.log.consola";
           const joined = items.join(" ");
@@ -94,14 +101,16 @@ export const createConsolaReporter = function createConsolaReporter() {
           if (type) {
             tmp["consola.type"] = type;
           }
+          const tmp14 = null != level && typeof level === "number";
           if (tmp14) {
             tmp["consola.level"] = level;
           }
           const obj = { level: str, message: joined, attributes: tmp };
-          _INTERNAL_captureSerializedLog._INTERNAL_captureLog(obj);
-          tmp14 = null != level && typeof level === "number";
+          const obj4 = _INTERNAL_captureLog;
+          obj4._INTERNAL_captureLog(obj);
         }
       }
     },
   };
+  return obj2;
 };

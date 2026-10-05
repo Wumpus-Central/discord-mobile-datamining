@@ -1,14 +1,13 @@
 // _runtime/metro/00881__.js
 import _mod693 from "00693__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
 export const getSentryCarrier = () => {
-  const mainCarrier = _mod693.getMainCarrier();
+  const obj = _mod693;
+  const mainCarrier = obj.getMainCarrier();
   const tmp4 = mainCarrier.__SENTRY__ || {};
   mainCarrier.__SENTRY__ = tmp4;
+  const SDK_VERSION = _mod693.SDK_VERSION;
   const tmp5 = tmp4[_mod693.SDK_VERSION] || {};
-  tmp4[_mod693.SDK_VERSION] = tmp5;
+  tmp4[SDK_VERSION] = tmp5;
   return tmp5;
 };

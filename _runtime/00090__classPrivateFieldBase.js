@@ -1,12 +1,14 @@
 // _runtime/00090__classPrivateFieldBase.js
+let hasOwnProperty;
 
-export default function _classPrivateFieldBase(self, key10009) {
+export default function _classPrivateFieldBase(self, arg1) {
   hasOwnProperty = {}.hasOwnProperty;
-  const call = hasOwnProperty.call;
-  if (typeof call === "unknown" ? hasOwnProperty(key10009) : call(self, key10009)) {
+  if (hasOwnProperty.call(self, arg1)) {
     return self;
   } else {
     const _TypeError = TypeError;
+    self = this;
+    const self2 = this;
     const typeError = new TypeError("attempted to use private field on non-instance");
     throw typeError;
   }

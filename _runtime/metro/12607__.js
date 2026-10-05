@@ -1,19 +1,19 @@
 // _runtime/metro/12607__.js
 import _mod12565 from "12565__.js";
-import spanTimeInputToSeconds from "../12570_spanTimeInputToSeconds.js";
+import _mod12570 from "12570__.js";
 import _mod12580 from "12580__.js";
 import _mod12593 from "12593__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
 export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
+  let activeSpan;
   if (activeSpan === undefined) {
-    activeSpan = spanTimeInputToSeconds.getActiveSpan();
+    const obj = _mod12570;
+    activeSpan = obj.getActiveSpan();
   }
   let rootSpan = activeSpan;
-  if (activeSpan) {
-    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
+  if (rootSpan) {
+    const obj3 = _mod12570;
+    rootSpan = obj3.getRootSpan(activeSpan);
   }
   if (rootSpan) {
     if (_mod12593.DEBUG_BUILD) {
@@ -28,7 +28,8 @@ export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
   }
 };
 export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
-  if (arr) {
+  let tmp = arr;
+  if (tmp) {
     if (0 !== arr.length) {
       let obj = {};
       const item = arr.forEach((attributes) => {

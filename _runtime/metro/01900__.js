@@ -1,12 +1,14 @@
 // _runtime/metro/01900__.js
-
-export default {
+const obj = {
   locale: "en",
   pluralRuleFunction(arg0, arg1) {
-    const parts = String(arg0).split(".");
+    let str3;
+    const str = String(arg0);
+    const parts = str.split(".");
+    const tmp2 = parts[1];
     let substr1 = Number(parts[0]) == arg0;
     let substr = substr1;
-    if (substr1) {
+    if (substr) {
       const first = parts[0];
       substr = first.slice(-1);
     }
@@ -15,7 +17,9 @@ export default {
       substr1 = first1.slice(-2);
     }
     if (arg1) {
+      let str4;
       if (1 != substr) {
+        let str5;
         if (2 != substr) {
           let str7 = "other";
           if (3 == substr) {
@@ -24,20 +28,20 @@ export default {
               str7 = "few";
             }
           }
-          let str5 = str7;
+          str5 = str7;
         } else {
           str5 = "two";
         }
-        let str4 = str5;
+        str4 = str5;
       } else {
         str4 = "one";
       }
-      let str3 = str4;
+      str3 = str4;
     } else {
       str3 = "other";
       if (1 == arg0) {
         str3 = "other";
-        if (!parts[1]) {
+        if (!tmp2) {
           str3 = "one";
         }
       }
@@ -45,3 +49,5 @@ export default {
     return str3;
   },
 };
+
+export default obj;

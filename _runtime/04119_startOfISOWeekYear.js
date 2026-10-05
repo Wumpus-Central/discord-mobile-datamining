@@ -1,28 +1,31 @@
 // _runtime/04119_startOfISOWeekYear.js
-import module_4115_mod from "metro/04115__.js";
+import getISOWeekYear_mod from "04115_getISOWeekYear.js";
 import startOfISOWeek_mod from "04116_startOfISOWeek.js";
 import requiredArgs_mod from "03959_requiredArgs.js";
 
-let module_4115 = module_4115_mod;
-if (!module_4115) {
-  const obj = { default: module_4115 };
-  let tmp3 = obj;
+let tmp3;
+let tmp5;
+let tmp7;
+let getISOWeekYear = getISOWeekYear_mod;
+if (!getISOWeekYear) {
+  tmp3 = { default: getISOWeekYear };
+  const obj = { default: getISOWeekYear };
 } else {
-  tmp3 = module_4115;
+  tmp3 = getISOWeekYear;
 }
-module_4115 = tmp3;
+getISOWeekYear = tmp3;
 let startOfISOWeek = startOfISOWeek_mod;
 if (!startOfISOWeek) {
+  tmp5 = { default: startOfISOWeek };
   const obj2 = { default: startOfISOWeek };
-  let tmp5 = obj2;
 } else {
   tmp5 = startOfISOWeek;
 }
 startOfISOWeek = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp7 = { default: requiredArgs };
   const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }
@@ -30,9 +33,9 @@ requiredArgs = tmp7;
 
 export default function startOfISOWeekYear(arg0) {
   requiredArgs.default(1, arguments);
+  const defaultResult1 = getISOWeekYear.default(arg0);
   const date = new Date(0);
-  date.setFullYear(module_4115.default(arg0), 0, 4);
+  date.setFullYear(defaultResult1, 0, 4);
   date.setHours(0, 0, 0, 0);
   return startOfISOWeek.default(date);
-};
-export default exports.default;
+}

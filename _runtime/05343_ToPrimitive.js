@@ -1,11 +1,12 @@
 // _runtime/05343_ToPrimitive.js
-import _mod5344 from "metro/05344__.js";
+import ToPrimitive2 from "05344_ToPrimitive.js";
 
 export default function ToPrimitive(arg0) {
+  let tmp3;
   if (arguments.length > 1) {
-    let tmp3 = _mod5344(arg0, arguments[1]);
+    tmp3 = ToPrimitive2(arg0, arguments[1]);
   } else {
-    tmp3 = _mod5344(arg0);
+    tmp3 = ToPrimitive2(arg0);
   }
   return tmp3;
 }

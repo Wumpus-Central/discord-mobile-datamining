@@ -1,24 +1,20 @@
 // _runtime/metro/10295__.js
-import _mod10292 from "10292__.js";
+import EmptyDuration from "../10163_EmptyDuration.js";
+import ReferenceWithTimezone from "../10164_ReferenceWithTimezone.js";
+import REGEX_PARTS from "../10290_REGEX_PARTS.js";
+import AbstractParserWithLeftBoundaryChecking from "../10292_AbstractParserWithLeftBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const RUTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -27,31 +23,24 @@ function _isNativeReflectConstruct() {
 }
 class RUTimeUnitAgoFormatParser {
   constructor() {
-    self = this;
-    tmp = c2(this, RUTimeUnitAgoFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(RUTimeUnitAgoFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, RUTimeUnitAgoFormatParser);
+    const obj = _getPrototypeOf(RUTimeUnitAgoFormatParser);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return tmp3(self, constructResult);
+    return c3(self, constructResult);
   }
 }
-_inherits(RUTimeUnitAgoFormatParser, _mod10292.AbstractParserWithLeftBoundaryChecking);
+_inherits(RUTimeUnitAgoFormatParser, AbstractParserWithLeftBoundaryChecking.AbstractParserWithLeftBoundaryChecking);
 const entry = {
   key: "innerPatternString",
   value: function innerPatternString(arg0) {
-    return (
-      "(" + RUTimeUnitAgoFormatParser(10290).TIME_UNITS_PATTERN + ")\\s{0,5}\u043D\u0430\u0437\u0430\u0434(?=(?:\\W|$))"
-    );
+    return "(" + REGEX_PARTS.TIME_UNITS_PATTERN + ")\\s{0,5}\u043D\u0430\u0437\u0430\u0434(?=(?:\\W|$))";
   },
 };
 const items = [
@@ -59,12 +48,10 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const parseDurationResult = RUTimeUnitAgoFormatParser(10290).parseDuration(arg1[1]);
-      const ParsingComponents = RUTimeUnitAgoFormatParser(10164).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        RUTimeUnitAgoFormatParser(10163).reverseDuration(RUTimeUnitAgoFormatParser(10290).parseDuration(arg1[1])),
-      );
+      const parseDurationResult = REGEX_PARTS.parseDuration(arg1[1]);
+      const reverseDurationResult = EmptyDuration.reverseDuration(parseDurationResult);
+      const ParsingComponents = ReferenceWithTimezone.ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
     },
   },
 ];

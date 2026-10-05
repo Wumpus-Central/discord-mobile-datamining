@@ -1,60 +1,52 @@
 // _runtime/00246_renderApplication.js
+import Fragment from "react/00021_Fragment.js";
 import _modDef38 from "metro/00038__.js";
 import renderElementAll from "00114_renderElement.js";
-import childrenDefault from "00251_children.js";
-import RootTagContext from "00253_RootTagContext.js";
+import reactDefault from "00251_react.js";
+import react2 from "00253_react.js";
 import frozenDefault from "00257_frozen.js";
-import noop from "metro/00019__.js";
+import react from "00019_react.js";
+import 00247__ from "metro/00247__.js";
 
-require = fn;
-const module_247 = fn(247);
-const jsx = fn(21).jsx;
+const jsx = Fragment.jsx;
 
 export default function renderApplication(arg0) {
+  let RootComponent;
+  let WrapperComponent;
+  let debugName;
+  let displayMode;
+  let initialProps;
+  let isLogBox;
+  let obj5;
+  let rootTag;
+  let rootViewStyle;
+  let useOffscreen;
   ({ initialProps, rootTag, debugName, displayMode } = arg0);
   ({ RootComponent, WrapperComponent, rootViewStyle, isLogBox, useOffscreen } = arg0);
   _modDef38(rootTag, "Expect to have a valid rootTag, instead got ", rootTag);
-  const obj = {
-    rootTag,
-    WrapperComponent,
-    rootViewStyle,
-    initialProps: null,
-    internal_excludeLogBox: null,
-    children: null,
-  };
   let frozen = initialProps;
+  reactDefault;
   if (initialProps == null) {
     const _Object = Object;
     frozen = Object.freeze({});
   }
-  obj.initialProps = frozen;
-  obj.internal_excludeLogBox = isLogBox;
-  const obj2 = {};
   const merged = Object.assign(initialProps);
-  obj2.rootTag = rootTag;
-  obj.children = <RootComponent />;
-  const tmp4Result = jsx(childrenDefault, {
-    rootTag,
-    WrapperComponent,
-    rootViewStyle,
-    initialProps: null,
-    internal_excludeLogBox: null,
-    children: null,
-  });
+  const tmp4Result = <tmp5 rootTag={rootTag} WrapperComponent={WrapperComponent} rootViewStyle={rootViewStyle} initialProps={frozen} internal_excludeLogBox={isLogBox}>{null}</tmp5>;
   let tmp4Result2 = tmp4Result;
   if (true === useOffscreen) {
     tmp4Result2 = tmp4Result;
     if (null != displayMode) {
+      const unstable_Activity = react.unstable_Activity;
       let str = "hidden";
       if (displayMode === frozenDefault.VISIBLE) {
         str = "visible";
       }
-      const obj3 = { mode: str, children: tmp4Result };
-      tmp4Result2 = <noop.unstable_Activity mode={str}>{tmp4Result}</noop.unstable_Activity>;
+      tmp4Result2 = <unstable_Activity mode={str}>{tmp4Result}</unstable_Activity>;
     }
   }
-  const obj5 = { element: tmp4Result2, rootTag: null };
-  const obj4 = renderElementAll;
-  obj5.rootTag = RootTagContext.createRootTag(rootTag);
-  obj4.renderElement(obj5);
-}
+  const obj4 = { element: tmp4Result2, rootTag: obj5.createRootTag(rootTag) };
+  const renderElement = renderElementAll.renderElement;
+  renderElementAll;
+  obj5 = react2;
+  renderElement(obj4);
+};

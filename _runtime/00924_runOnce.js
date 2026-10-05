@@ -1,13 +1,14 @@
 // _runtime/00924_runOnce.js
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export (fn) => {
-  closure_0 = fn;
-  c1 = false;
+export const runOnce = (fn) => {
+  let closure_0 = fn;
+  let c1 = false;
   return () => {
-    if (!c1) {
-      closure_0();
+    const tmp = c1;
+    if (!tmp) {
+      fn();
       c1 = true;
     }
   };
-}
+};

@@ -1,13 +1,11 @@
 // _runtime/00086_pickScale.js
-import PixelRatioDefault from "00087_PixelRatio.js";
-
-importDefault = arg2;
-const dependencyMap = arg6;
+import _modDef87 from "metro/00087__.js";
 
 export const pickScale = function pickScale(scales, _default) {
-  value = _default;
+  let value = _default;
   if (_default == null) {
-    value = PixelRatioDefault.get();
+    const obj = _modDef87;
+    value = obj.get();
   }
   let num = 0;
   if (0 < scales.length) {
@@ -19,12 +17,12 @@ export const pickScale = function pickScale(scales, _default) {
   return scales[scales.length - 1] || 1;
 };
 export function setUrlCacheBreaker(arg0) {
-  global = arg0;
+  let closure_1_2 = arg0;
 }
 export const getUrlCacheBreaker = function getUrlCacheBreaker() {
   let str = "";
-  if (null != global) {
-    str = global;
+  if (null != React2) {
+    str = React2;
   }
   return str;
 };

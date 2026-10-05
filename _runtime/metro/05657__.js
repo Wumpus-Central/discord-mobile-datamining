@@ -1908,7 +1908,7 @@ const obj = {
   game_die: ["noppa", "noppakuutio", "peli", "viihde"],
   jigsaw: ["arvoitus", "pala", "palapeli", "vihje", "yhteenliittynyt", "yhteensopiva"],
   teddy_bear: ["lelu", "nalle", "pehmolelu", "t\u00E4ytetty", "teddykarhu"],
-  piñata: ["juhla", "juhlat", "juhlinta", "karkki", "meksiko", "pinada", "pinata", "pi\u00F1ata"],
+  "pi\u00f1ata": ["juhla", "juhlat", "juhlinta", "karkki", "meksiko", "pinada", "pinata", "pi\u00F1ata"],
   mirror_ball: ["bileet", "disco", "disko", "diskopallo", "glitter", "juhlat", "peilipallo", "tanssi"],
   nesting_dolls: ["maatuska", "maatuskanuket", "nukke", "ven\u00E4l\u00E4inen"],
   spades: ["kortti", "korttipeli", "maa", "pata"],

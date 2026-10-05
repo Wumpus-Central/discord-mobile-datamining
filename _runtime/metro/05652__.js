@@ -3873,7 +3873,7 @@ const obj = {
     "Teddy",
     "Teddyb\u00E4r",
   ],
-  piñata: [
+  "pi\u00f1ata": [
     "Feier",
     "Hau drauf",
     "mexikanisch",

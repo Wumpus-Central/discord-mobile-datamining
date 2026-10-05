@@ -1,4 +1,23 @@
 // _runtime/06201_PanNativeProperties.js
+new Set([
+  "minDist",
+  "avgTouches",
+  "enableTrackpadTwoFingerGesture",
+  "minPointers",
+  "maxPointers",
+  "minVelocity",
+  "minVelocityX",
+  "minVelocityY",
+  "activateAfterLongPress",
+  "activeOffsetYStart",
+  "activeOffsetYEnd",
+  "activeOffsetXStart",
+  "activeOffsetXEnd",
+  "failOffsetYStart",
+  "failOffsetYEnd",
+  "failOffsetXStart",
+  "failOffsetXEnd",
+]);
 
 export const PanNativeProperties = new Set([
   "minDist",

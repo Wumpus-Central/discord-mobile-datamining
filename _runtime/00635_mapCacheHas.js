@@ -1,6 +1,7 @@
 // _runtime/00635_mapCacheHas.js
-import _mod632 from "metro/00632__.js";
+import getMapData from "00632_getMapData.js";
 
 export default function mapCacheHas(arg0) {
-  return _mod632(this, arg0).has(arg0);
+  const obj = getMapData(this, arg0);
+  return obj.has(arg0);
 }

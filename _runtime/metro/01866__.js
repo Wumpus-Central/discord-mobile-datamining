@@ -1,11 +1,13 @@
 // _runtime/metro/01866__.js
+import Fragment from "../react/00021_Fragment.js";
 import TEST_ID_KEYBOARD_TOOLBAR from "../01861_TEST_ID_KEYBOARD_TOOLBAR.js";
-import noop from "00019__.js";
+import react from "../00019_react.js";
+import react_native from "../00017_react-native.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ StyleSheet, View: c2 } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
+let StyleSheet;
+let c2;
+({ StyleSheet, View: c2 } = react_native);
+const jsx = Fragment.jsx;
 const styles = StyleSheet.create({ flex: { flex: 1 } });
 
 export default function _default(children) {

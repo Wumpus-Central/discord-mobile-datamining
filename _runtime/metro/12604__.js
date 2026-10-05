@@ -5,18 +5,18 @@ import _mod12593 from "12593__.js";
 import _mod12597 from "12597__.js";
 import _mod12605 from "12605__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
 export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
+  const obj = _mod12597;
   if (obj.hasTracingEnabled(tracesSampler)) {
-    const isolationScope = _mod12592.getIsolationScope();
-    const obj2 = {};
+    let num;
+    let items3;
+    const tmpResult = _mod12592;
+    const isolationScope = tmpResult.getIsolationScope();
+    const obj2 = { normalizedRequest: normalizedRequest.normalizedRequest || normalizedRequest };
+    normalizedRequest = isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
     const merged = Object.assign(normalizedRequest);
-    obj2.normalizedRequest =
-      normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
     if (typeof tracesSampler.tracesSampler === "function") {
-      let num = tracesSampler.tracesSampler(obj2);
+      num = tracesSampler.tracesSampler(obj2);
     } else if (undefined !== obj2.parentSampled) {
       num = obj2.parentSampled;
     } else {
@@ -25,20 +25,21 @@ export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) 
         num = tracesSampler.tracesSampleRate;
       }
     }
-    const tmpResult = _mod12592;
-    const parseSampleRateResult = _mod12605.parseSampleRate(num);
+    const tmpResult2 = _mod12605;
+    const parseSampleRateResult = tmpResult2.parseSampleRate(num);
     if (undefined === parseSampleRateResult) {
       if (_mod12593.DEBUG_BUILD) {
         const logger3 = _mod12565.logger;
         logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
       }
       const items = [false];
-      let items3 = items;
+      items3 = items;
     } else if (parseSampleRateResult) {
+      let items2;
       const _Math = Math;
       if (Math.random() < parseSampleRateResult) {
         const items1 = [true, parseSampleRateResult];
-        let items2 = items1;
+        items2 = items1;
       } else {
         if (_mod12593.DEBUG_BUILD) {
           const logger2 = _mod12565.logger;
@@ -52,14 +53,16 @@ export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) 
         }
         items2 = [false, parseSampleRateResult];
       }
+      items3 = items2;
     } else {
       if (_mod12593.DEBUG_BUILD) {
         const logger = _mod12565.logger;
         let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
+        const log = logger.log;
         if (typeof tracesSampler.tracesSampler === "function") {
           str = "tracesSampler returned 0 or false";
         }
-        logger.log(`[Tracing] Discarding transaction because ${str}`);
+        log(`[Tracing] Discarding transaction because ${str}`);
       }
       items3 = [false, parseSampleRateResult];
     }
@@ -68,5 +71,4 @@ export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) 
     const items4 = [false];
     return items4;
   }
-  obj = _mod12597;
 };

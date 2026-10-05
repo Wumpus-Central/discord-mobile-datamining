@@ -1,34 +1,34 @@
 // _runtime/05383_DefineOwnProperty.js
-import flag2 from "01316_flag.js";
+import flag from "01316_flag.js";
 import callBoundIntrinsic from "01326_callBoundIntrinsic.js";
-import _mod5368 from "metro/05368__.js";
-import flag_mod from "metro/01463__.js";
+import GetIntrinsic from "05368_GetIntrinsic.js";
+import hasPropertyDescriptors_mod from "01463_hasPropertyDescriptors.js";
 
-let flag = flag_mod;
-flag = flag.hasArrayLengthDefineBug();
-if (flag) {
-  flag = _mod5368;
-}
+let hasPropertyDescriptors = hasPropertyDescriptors_mod;
+hasPropertyDescriptors = hasPropertyDescriptors.hasArrayLengthDefineBug();
+let closure_3 = hasPropertyDescriptors && GetIntrinsic;
+hasPropertyDescriptors && GetIntrinsic;
 let closure_4 = callBoundIntrinsic("Object.prototype.propertyIsEnumerable");
 
 export default function DefineOwnProperty(fn, fn2, fn3, arg3, arg4, __Value__) {
-  if (flag2) {
-    if (flag) {
+  if (flag) {
+    if (hasPropertyDescriptors) {
       if ("length" === arg4) {
         if ("[[Value]]" in __Value__) {
-          if (flag(arg3)) {
+          if (closure_3(arg3)) {
+            let flag4;
             if (arg3.length !== __Value__["[[Value]]"]) {
               arg3.length = __Value__["[[Value]]"];
-              let flag4 = arg3.length === __Value__["[[Value]]"];
+              flag4 = arg3.length === __Value__["[[Value]]"];
             }
             return flag4;
           }
         }
       }
     }
-    flag2(arg3, arg4, fn3(__Value__));
+    const tmpResult = flag;
+    tmpResult(arg3, arg4, fn3(__Value__));
     flag4 = true;
-    const tmpResult = flag2;
   } else if (fn(__Value__)) {
     if (__Value__["[[Configurable]]"]) {
       if (__Value__["[[Writable]]"]) {

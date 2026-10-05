@@ -1,16 +1,16 @@
 // _runtime/05761_ScreenFooter.js
-import _modDef5762 from "metro/05762__.js";
-import noop from "metro/00019__.js";
+import Fragment from "react/00021_Fragment.js";
+import react_nativeDefault from "05762_react-native.js";
+import react from "00019_react.js";
 
 class ScreenFooter {
   constructor(arg0) {
-    obj = {};
-    tmp = closure_0(closure_1[2]);
-    merged = Object.assign(global);
-    return jsx(tmp, obj);
+    react_nativeDefault;
+    const merged = Object.assign(arg0);
+    return <tmp />;
   }
 }
-const jsx = fn(21).jsx;
+const jsx = Fragment.jsx;
 
 export default ScreenFooter;
 export const FooterComponent = function FooterComponent(children) {

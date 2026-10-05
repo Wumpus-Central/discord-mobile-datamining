@@ -1,11 +1,11 @@
 // _runtime/metro/04861__.js
-import _mod19 from "00019__.js";
+import react from "../00019_react.js";
 import _modDef4858 from "04858__.js";
 
-const useMemo = _mod19.useMemo;
+const useMemo = react.useMemo;
 
 export const useHaptics = function useHaptics(enableVibrateFallback) {
-  closure_0 = enableVibrateFallback;
+  let closure_0 = enableVibrateFallback;
   let prop;
   if (enableVibrateFallback != null) {
     prop = enableVibrateFallback.enableVibrateFallback;
@@ -15,39 +15,53 @@ export const useHaptics = function useHaptics(enableVibrateFallback) {
     prop1 = enableVibrateFallback.ignoreAndroidSystemSettings;
   }
   const items = [prop, prop1];
-  return useMemo(
-    () => ({
+  return useMemo(() => {
+    let obj = {
       trigger(arg0, arg1) {
+        const trigger = _modDef4858.trigger;
+        const obj = {};
+        _modDef4858;
         const merged = Object.assign(enableVibrateFallback);
         const merged1 = Object.assign(arg1);
-        _modDef4858.trigger(arg0, {});
+        trigger(arg0, obj);
       },
       triggerPattern(arg0, arg1) {
+        const triggerPattern = _modDef4858.triggerPattern;
+        const obj = {};
+        _modDef4858;
         const merged = Object.assign(enableVibrateFallback);
         const merged1 = Object.assign(arg1);
-        _modDef4858.triggerPattern(arg0, {});
+        triggerPattern(arg0, obj);
       },
       stop() {
-        closure_1_1(4858).stop();
+        const obj = closure_1_1(closure_1_2[1]);
+        obj.stop();
       },
       isSupported() {
-        return closure_1_1(4858).isSupported();
+        const obj = closure_1_1(closure_1_2[1]);
+        return obj.isSupported();
       },
       playHaptic(arg0, arg1, arg2) {
-        const merged = Object.assign(enableVibrateFallback);
+        const playHaptic = closure_0(dependencyMap[2]).playHaptic;
+        const obj = {};
+        closure_0(dependencyMap[2]);
+        const merged = Object.assign(closure_1_0);
         const merged1 = Object.assign(arg2);
-        return closure_0(4862).playHaptic(arg0, arg1, {});
+        return playHaptic(arg0, arg1, obj);
       },
       impact(arg0, arg1, arg2) {
+        const impact = _modDef4858.impact;
+        const obj = {};
+        _modDef4858;
         const merged = Object.assign(enableVibrateFallback);
         const merged1 = Object.assign(arg2);
-        _modDef4858.impact(arg0, arg1, {});
+        impact(arg0, arg1, obj);
       },
       setEnabled: _modDef4858.setEnabled,
       isEnabled: _modDef4858.isEnabled,
       getSystemHapticStatus: _modDef4858.getSystemHapticStatus,
       playAHAP: _modDef4858.playAHAP,
-    }),
-    items,
-  );
+    };
+    return obj;
+  }, items);
 };

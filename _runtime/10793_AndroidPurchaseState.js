@@ -19,34 +19,34 @@ export const FeatureType = {
   SUBSCRIPTIONS_UPDATE: "SUBSCRIPTIONS_UPDATE",
 };
 export const singleProductAndroidMap = (oneTimePurchaseOfferDetails) => {
-  const obj = {};
+  let formattedPrice;
+  let formattedPrice1;
+  let priceCurrencyCode;
+  const obj = { price: formattedPrice, localizedPrice: formattedPrice1, currency: priceCurrencyCode };
   const merged = Object.assign(oneTimePurchaseOfferDetails);
   oneTimePurchaseOfferDetails = oneTimePurchaseOfferDetails.oneTimePurchaseOfferDetails;
-  let formattedPrice;
+  formattedPrice = undefined;
   if (oneTimePurchaseOfferDetails != null) {
     formattedPrice = oneTimePurchaseOfferDetails.formattedPrice;
   }
   if (formattedPrice == null) {
     formattedPrice = oneTimePurchaseOfferDetails.price;
   }
-  obj.price = formattedPrice;
   const oneTimePurchaseOfferDetails2 = oneTimePurchaseOfferDetails.oneTimePurchaseOfferDetails;
-  let formattedPrice1;
+  formattedPrice1 = undefined;
   if (oneTimePurchaseOfferDetails2 != null) {
     formattedPrice1 = oneTimePurchaseOfferDetails2.formattedPrice;
   }
   if (formattedPrice1 == null) {
     formattedPrice1 = oneTimePurchaseOfferDetails.price;
   }
-  obj.localizedPrice = formattedPrice1;
   const oneTimePurchaseOfferDetails3 = oneTimePurchaseOfferDetails.oneTimePurchaseOfferDetails;
-  let priceCurrencyCode;
+  priceCurrencyCode = undefined;
   if (oneTimePurchaseOfferDetails3 != null) {
     priceCurrencyCode = oneTimePurchaseOfferDetails3.priceCurrencyCode;
   }
   if (priceCurrencyCode == null) {
     priceCurrencyCode = oneTimePurchaseOfferDetails.currency;
   }
-  obj.currency = priceCurrencyCode;
   return obj;
 };

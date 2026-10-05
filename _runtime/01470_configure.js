@@ -1,34 +1,44 @@
 // _runtime/01470_configure.js
-import StateDefault from "01472_State.js";
-import NetInfoStateTypeAll from "01477_NetInfoStateType.js";
-import _slicedToArray from "metro/00032__.js";
-import 01471__ from "metro/01471__.js";
+import react_native from "00017_react-native.js";
+import _modDef1472 from "metro/01472__.js";
+import NetInfoStateType from "01477_NetInfoStateType.js";
+import _slicedToArray_mod from "metro/00032__slicedToArray.js";
+import react from "00019_react.js";
+import module_1471_mod from "metro/01471__.js";
 
 const require = globalThis.__r;
+const NetInfoStateTypeAll = NetInfoStateType;
+let importAll, importDefault;
 
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
 function configure(arg0) {
+  const obj = {};
   const merged = Object.assign(module_1471);
   const merged1 = Object.assign(arg0);
-  module_1471 = {};
+  module_1471 = obj;
   if (closure_8) {
-    obj2.tearDown();
+    closure_8.tearDown();
     if (typeof createState === "function") {
-      const tmp10 = new StateDefault(module_1471);
-      closure_8 = tmp10;
+      const self = this;
+      const self2 = this;
+      closure_8 = new _modDef1472(module_1471);
+      const tmp8 = new _modDef1472(module_1471);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   }
-  const obj = {};
-  obj2 = closure_8;
 }
 function fetch(arg0) {
   let obj = closure_8;
-  if (!closure_8) {
+  if (!obj) {
     if (typeof createState === "function") {
-      const tmp7 = new StateDefault(module_1471);
-      closure_8 = tmp7;
-      obj = tmp7;
+      const self = this;
+      const self2 = this;
+      const tmp5 = new _modDef1472(module_1471);
+      closure_8 = tmp5;
+      obj = tmp5;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -36,36 +46,37 @@ function fetch(arg0) {
   return obj.latest(arg0);
 }
 function refresh() {
+  let promise;
   let obj = closure_8;
-  if (!closure_8) {
+  if (!obj) {
     if (typeof createState === "function") {
-      const tmp7 = new StateDefault(module_1471);
-      closure_8 = tmp7;
-      obj = tmp7;
+      const self = this;
+      const self2 = this;
+      const tmp5 = new _modDef1472(module_1471);
+      closure_8 = tmp5;
+      obj = tmp5;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   }
-  if (c10) {
-    let promise = new Promise((arg0) => {
+  const tmp7 = c10;
+  if (tmp7) {
+    const self3 = this;
+    const self4 = this;
+    promise = new Promise((arg0) => {
       closure_11.push(arg0);
     });
   } else {
     c10 = true;
     const _fetchCurrentStateResult = obj._fetchCurrentState();
-    promise = obj._fetchCurrentState().then((result) => {
-      closure_0 = result;
+    const nextPromise = _fetchCurrentStateResult.then((result) => {
+      let closure_0 = result;
       const item = closure_11.forEach((fn) => fn(closure_0));
       closure_11 = [];
       return result;
-    }).finally(() => {
-      c10 = false;
     });
-    const nextPromise = obj._fetchCurrentState().then((result) => {
-      closure_0 = result;
-      const item = closure_11.forEach((fn) => fn(closure_0));
-      closure_11 = [];
-      return result;
+    promise = nextPromise.finally(() => {
+      c10 = false;
     });
   }
   return promise;
@@ -73,57 +84,71 @@ function refresh() {
 function addEventListener(notifyListeners) {
   importDefault = notifyListeners;
   let obj = closure_8;
-  if (!closure_8) {
+  if (!obj) {
     if (typeof createState === "function") {
-      const tmp7 = new StateDefault(module_1471);
-      closure_8 = tmp7;
-      obj = tmp7;
+      const self = this;
+      const self2 = this;
+      const tmp5 = new _modDef1472(module_1471);
+      closure_8 = tmp5;
+      obj = tmp5;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   }
   obj.add(notifyListeners);
   return () => {
-    if (closure_8) {
-      closure_8.remove(f84082);
+    if (closure_2_8) {
+      closure_2_8.remove(f84082);
     }
   };
 }
 function useNetInfo(arg0) {
-  if (arg0) {
+  let closure_0;
+  let first;
+  const tmp = arg0;
+  if (tmp) {
     let obj = {};
     const merged = Object.assign(module_1471);
+    let tmp6 = obj;
     const merged1 = Object.assign(arg0);
+    const tmp2 = importDefault;
     if (closure_8) {
-      obj2.tearDown();
+      closure_8.tearDown();
       if (typeof createState === "function") {
-        const tmp13 = new tmp(1472)(obj);
-        closure_8 = tmp13;
+        let self = this;
+        let self2 = this;
+        closure_8 = new tmp2(1472)(obj);
+        const tmp12 = new tmp2(1472)(obj);
       } else {
+        const str = "Trying to call a non-function";
         throw new TypeError("Trying to call a non-function");
       }
     }
-    obj2 = closure_8;
-    tmp = importDefault;
   }
-  const tmp15 = _slicedToArray(closure_4({ type: NetInfoStateTypeAll.NetInfoStateType.unknown, isConnected: null, isInternetReachable: null, details: null }), 2);
-  importDefault = tmp15[1];
-  closure_5(() => {
-    let f84082 = closure_0;
+  const obj3 = {
+    type: NetInfoStateTypeAll.NetInfoStateType.unknown,
+    isConnected: null,
+    isInternetReachable: null,
+    details: null,
+  };
+  [first, importDefault] = closure_4(obj3);
+  closure_5(function () {
     obj = closure_8;
-    if (!closure_8) {
+    if (!obj) {
       if (typeof createState === "function") {
-        const tmp8 = new StateDefault(module_1471);
-        closure_8 = tmp8;
-        obj = tmp8;
+        const self = this;
+        const self2 = this;
+        const tmp6 = new _modDef1472(module_1471);
+        closure_8 = tmp6;
+        obj = tmp6;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
     }
     obj.add(closure_0);
-    f84082 = () => {
-      if (closure_8) {
-        closure_8.remove(f84082);
+    const f84082 = () => {
+      if (closure_2_8) {
+        closure_2_8.remove(f84082);
       }
     };
     return () => {
@@ -136,9 +161,15 @@ function useNetInfo(arg0) {
       }
     };
   }, []);
-  return tmp15[0];
+  return first;
 }
 function useNetInfoInstance() {
+  let closure_1;
+  let closure_3;
+  let closure_4;
+  let first;
+  let first1;
+  let items1;
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
@@ -148,48 +179,53 @@ function useNetInfoInstance() {
   _slicedToArray = undefined;
   closure_4 = undefined;
   [first, _slicedToArray] = closure_4();
-  const tmp3 = _slicedToArray(closure_4({ type: require("NetInfoStateType").NetInfoStateType.unknown, isConnected: null, isInternetReachable: null, details: null }), 2);
-  closure_4 = tmp3[1];
+  let obj = {
+    type: require("NetInfoStateType").NetInfoStateType.unknown,
+    isConnected: null,
+    isInternetReachable: null,
+    details: null,
+  };
+  [first1, closure_4] = closure_4(obj);
   const items = [flag, arg1];
-  closure_5(() => {
+  closure_5(function () {
     if (!flag) {
       const obj = {};
       const merged = Object.assign(module_1471);
       const merged1 = Object.assign(closure_1);
-      const obj2 = new StateDefault(obj);
+      const self = this;
+      const self2 = this;
+      const obj2 = new _modDef1472(obj);
       closure_3(obj2);
       obj2.add(closure_4);
       return obj2.tearDown;
     }
   }, items);
-  let obj2 = { netInfo: tmp3[0], refresh: null };
-  const items1 = [first];
-  obj2.refresh = closure_6(() => {
-    let tmp = first;
-    if (first) {
-      tmp = !c10;
-    }
-    if (tmp) {
-      c10 = true;
-      first._fetchCurrentState().finally(() => {
-        c10 = false;
-      });
-      const _fetchCurrentStateResult = first._fetchCurrentState();
-    }
-  }, items1);
+  let obj2 = {
+    netInfo: first1,
+    refresh: closure_6(() => {
+      const tmp = first && !c10;
+      if (tmp) {
+        c10 = true;
+        const _fetchCurrentStateResult = first._fetchCurrentState();
+        _fetchCurrentStateResult.finally(() => {
+          c10 = false;
+        });
+      }
+    }, items1),
+  };
+  items1 = [first];
   return obj2;
 }
-const noop = fn(19);
-({ useState: closure_4, useEffect: hasOwnProperty, useCallback: metroRequire } = noop);
-const Platform = fn(17).Platform;
+let _slicedToArray = _slicedToArray_mod;
+({ useState: closure_4, useEffect: hasOwnProperty, useCallback: metroRequire } = react);
+const Platform = react_native.Platform;
+let module_1471 = module_1471_mod;
 let closure_8 = null;
-function createState() {
-
-}
+function createState() {}
 let c10 = false;
 let closure_11 = [];
-for (const key10038 in require("NetInfoStateType")) {
-  arg5[key10038] = require("NetInfoStateType")[key10038];
+for (const key10038 in NetInfoStateType) {
+  exports[key10038] = NetInfoStateType[key10038];
   continue;
 }
 

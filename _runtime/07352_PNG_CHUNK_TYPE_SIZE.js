@@ -2,29 +2,12 @@
 import _mod7345 from "metro/07345__.js";
 import _modDef7348 from "metro/07348__.js";
 
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-let c3 = "\u0089PNG\r\n\u001A\n";
-let c4 = 4;
-let c5 = 4;
-let c6 = 0;
-let c7 = 4;
-let c8 = 8;
-let c9 = "XML:com.adobe.xmp\0";
-const tEXt = "tEXt";
-const iTXt = "iTXt";
-const zTXt = "zTXt";
-const pHYs = "pHYs";
-const tIME = "tIME";
-const eXIf = "eXIf";
-const iCCP = "iCCP";
-
-export default {
+let obj = {
   isPngFile(dataView) {
     let tmp = dataView;
     if (tmp) {
-      tmp = _mod7345.getStringFromDataView(dataView, 0, u0089PNGrnu001An.length) === u0089PNGrnu001An;
+      const obj = _mod7345;
+      tmp = obj.getStringFromDataView(dataView, 0, u0089PNGrnu001An.length) === u0089PNGrnu001An;
     }
     return tmp;
   },
@@ -88,10 +71,7 @@ export default {
         }
         let obj5 = _mod7345;
         let stringFromDataView = obj5.getStringFromDataView(byteLength, length + c7, c5);
-        let tmp19 = stringFromDataView === tEXt;
-        if (!tmp19) {
-          tmp19 = stringFromDataView === iTXt;
-        }
+        let tmp19 = stringFromDataView === tEXt || stringFromDataView === iTXt;
         if (!tmp19) {
           let tmp22 = stringFromDataView === zTXt && flag2;
           tmp19 = tmp22;
@@ -105,7 +85,8 @@ export default {
           }
           let pngTextChunks = obj.pngTextChunks;
           let obj6 = { length: byteLength.getUint32(length + c6), type: stringFromDataView1, offset: length + c8 };
-          let arr = pngTextChunks.push(obj6);
+          let push = pngTextChunks.push;
+          let arr = push(obj6);
         } else {
           let tmp14Result5 = _mod7345;
           if (tmp14Result5.getStringFromDataView(byteLength, length + c7, c5) === eXIf) {
@@ -160,6 +141,22 @@ export default {
     return obj;
   },
 };
+let c3 = "\u0089PNG\r\n\u001A\n";
+let c4 = 4;
+let c5 = 4;
+let c6 = 0;
+let c7 = 4;
+let c8 = 8;
+let c9 = "XML:com.adobe.xmp\0";
+const tEXt = "tEXt";
+const iTXt = "iTXt";
+const zTXt = "zTXt";
+const pHYs = "pHYs";
+const tIME = "tIME";
+const eXIf = "eXIf";
+const iCCP = "iCCP";
+
+export default obj;
 export const PNG_CHUNK_TYPE_SIZE = 4;
 export const PNG_CHUNK_LENGTH_OFFSET = 0;
 export const PNG_CHUNK_TYPE_OFFSET = 4;

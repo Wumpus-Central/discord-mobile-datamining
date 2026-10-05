@@ -1,12 +1,15 @@
 // _runtime/metro/00464__.js
-import merge from "../00067_merge.js";
+import getNativeComponentAttributes from "../00067_getNativeComponentAttributes.js";
 
 const require = globalThis.__r;
-
-require = arg1;
-const dependencyMap = arg6;
+let _require;
 
 export default function _default(arg0) {
+  let closure_0;
   _require = arg0;
-  return require("00300__.js").default(arg0, () => merge.default(closure_0));
+  let obj = require("00300__.js");
+  return obj.default(arg0, () => {
+    const obj = getNativeComponentAttributes;
+    return obj.default(closure_0);
+  });
 }

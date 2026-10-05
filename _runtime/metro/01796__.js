@@ -1,45 +1,58 @@
 // _runtime/metro/01796__.js
-import _mod19 from "00019__.js";
-import runOnRuntime from "../01687_runOnRuntime.js";
+import react from "../00019_react.js";
+import startMapper from "../01687_startMapper.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-let useEffect = _mod19.useEffect;
+let useEffect = react.useEffect;
 let closure_3 = {
   code: "function pnpm_useAnimatedReactionTs1(){const{prepare,react,previous}=this.__closure;const input=prepare();react(input,previous.value);previous.value=input;}",
 };
 
 export const useAnimatedReaction = function useAnimatedReaction(fn, fn2, items) {
+  let previous;
+  let react;
   _require = fn;
   dependencyMap = fn2;
-  useEffect = require("01795__.js").useSharedValue(null);
+  let obj = require("01795__.js");
+  useEffect = obj.useSharedValue(null);
   let __closure = fn.__closure;
+  const _Object = Object;
+  const tmp2 = _require;
   if (__closure == null) {
     __closure = {};
   }
-  const values = Object.values(__closure);
-  const obj = require("01795__.js");
-  let tmp3 = require("01646__.js").shouldBeUseWeb() && !values.length;
+  let values2 = values(__closure);
+  const tmp2Result = tmp2(1646);
+  let tmp4 = tmp2Result.shouldBeUseWeb() && !values2.length;
   let arr2 = items;
-  if (tmp3) {
+  if (tmp4) {
     let length;
     if (arr2 != null) {
       length = arr2.length;
     }
-    tmp3 = length;
+    tmp4 = length;
+  }
+  if (tmp4) {
+    values2 = arr2;
   }
   if (undefined === arr2) {
     let __closure1 = fn.__closure;
+    const _Object2 = Object;
+    const values3 = Object.values;
     if (__closure1 == null) {
       __closure1 = {};
     }
     items = [,];
-    const arraySpreadResult = HermesBuiltin.arraySpread(Object.values(__closure1), 0);
     let __closure2 = fn2.__closure;
+    const _Object3 = Object;
+    const values6 = Object.values;
+    const arraySpreadResult = HermesBuiltin.arraySpread(items, values3(__closure1), 0);
     if (__closure2 == null) {
       __closure2 = {};
     }
-    const arraySpreadResult2 = HermesBuiltin.arraySpread(Object.values(__closure2), arraySpreadResult);
+    const arraySpreadResult2 = HermesBuiltin.arraySpread(items, values6(__closure2), arraySpreadResult);
     items[arraySpreadResult2] = fn.__workletHash;
     items[arraySpreadResult2 + 1] = fn2.__workletHash;
     arr2 = items;
@@ -47,17 +60,22 @@ export const useAnimatedReaction = function useAnimatedReaction(fn, fn2, items) 
     arr2.push(fn.__workletHash, fn2.__workletHash);
   }
   useEffect(() => {
+    let closure_0;
+    let value;
     const fn = function t() {
       const tmp = closure_0();
       react(tmp, value.value);
       value.value = tmp;
     };
-    fn.__closure = { prepare, react, previous };
+    let obj = { prepare, react, previous };
+    fn.__closure = obj;
     fn.__workletHash = 3026350450260;
-    fn.__initData = arr2;
-    prepare = prepare(react[3]).startMapper(fn, arr2);
+    fn.__initData = values2;
+    const obj2 = prepare(react[3]);
+    prepare = obj2.startMapper(fn, values2);
     return () => {
-      runOnRuntime.stopMapper(closure_0);
+      const obj = startMapper;
+      obj.stopMapper(closure_0);
     };
   }, arr2);
 };

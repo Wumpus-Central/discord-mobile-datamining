@@ -1,18 +1,26 @@
 // _runtime/metro/04643__.js
-import _mod4644 from "04644__.js";
-import _slicedToArray from "00032__.js";
+import react2 from "../04644_react.js";
+import _slicedToArray from "00032__slicedToArray.js";
+import react from "../00019_react.js";
 
-require = fn;
-const noop = fn(19);
-({ useCallback: c3, useEffect: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
+({ useCallback: c3, useEffect: closure_4, useRef: hasOwnProperty, useState: metroRequire } = react);
 
 export const useRiveProperty = function useRiveProperty(arg0, arg1, f31210) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = f31210;
+  let closure_7;
+  let first;
+  let first1;
+  let closure_0 = arg0;
+  let closure_1 = arg1;
+  let closure_2 = f31210;
   let tmp = hasOwnProperty(undefined);
+  let c3 = tmp;
   const items = [arg0, arg1];
-  const disposableMemo = _mod4644.useDisposableMemo(
+  const obj = react2;
+  const disposableMemo = obj.useDisposableMemo(
     () => {
       if (closure_0) {
         return closure_2(tmp, closure_1);
@@ -28,28 +36,26 @@ export const useRiveProperty = function useRiveProperty(arg0, arg1, f31210) {
     items,
     tmp,
   );
-  [first, closure_6] = timestampProducer(undefined);
-  const tmp5 = _slicedToArray(timestampProducer(null), 2);
-  closure_7 = tmp5[1];
+  [first, metroRequire] = metroRequire(undefined);
+  [first1, closure_7] = metroRequire(null);
   const items1 = [arg1, arg0];
-  React4(() => {
+  React3(() => {
     closure_7(null);
   }, items1);
   const items2 = [arg0, disposableMemo, arg1];
-  React4(() => {
-    let tmp = closure_0;
-    if (closure_0) {
-      tmp = !disposableMemo;
-    }
+  React3(function () {
+    const tmp = closure_0 && !disposableMemo;
     if (tmp) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
+      const self = this;
+      const self2 = this;
       const error = new Error('Property "' + closure_1 + '" not found in the ViewModel instance');
       closure_7(error);
     }
   }, items2);
   const items3 = [disposableMemo];
-  React4(() => {
+  React3(() => {
     if (disposableMemo) {
       closure_6(disposableMemo.value);
       closure_0 = disposableMemo.addListener((arg0) => {
@@ -65,7 +71,7 @@ export const useRiveProperty = function useRiveProperty(arg0, arg1, f31210) {
   const items4 = [disposableMemo, first];
   const items5 = [
     first,
-    React3((fn) => {
+    _false((fn) => {
       const current = ref.current;
       if (current) {
         let tmp2 = fn;
@@ -75,7 +81,7 @@ export const useRiveProperty = function useRiveProperty(arg0, arg1, f31210) {
         current.value = tmp2;
       }
     }, items4),
-    tmp5[0],
+    first1,
     disposableMemo,
   ];
   return items5;

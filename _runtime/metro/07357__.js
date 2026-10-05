@@ -1,15 +1,14 @@
 // _runtime/metro/07357__.js
-import findOffsets from "../07354_findOffsets.js";
-
-require = arg1;
-const dependencyMap = arg6;
+import _mod7354 from "07354__.js";
 
 export default {
   isAvifFile(getUint32) {
     if (getUint32) {
       try {
-        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
-        if (parseBoxResult) {
+        const obj = _mod7354;
+        let parseBoxResult = obj.parseBox(getUint32, 0);
+        const tmp4 = parseBoxResult;
+        if (tmp4) {
           parseBoxResult = "avif" === parseBoxResult.majorBrand;
         }
         return parseBoxResult;
@@ -21,6 +20,7 @@ export default {
     }
   },
   findAvifOffsets(byteLength) {
-    return findOffsets.findOffsets(byteLength);
+    const obj = _mod7354;
+    return obj.findOffsets(byteLength);
   },
 };

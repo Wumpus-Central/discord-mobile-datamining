@@ -1,10 +1,15 @@
 // _runtime/metro/04754__.js
 import ACTIONS from "../04756_ACTIONS.js";
-import noop from "00019__.js";
+import react from "../00019_react.js";
 
-({ useCallback: c2, useContext: c3 } = noop);
+let dependencyMap;
 
-export const usePortal = () => {
+let c2;
+let c3;
+({ useCallback: c2, useContext: c3 } = react);
+
+export const usePortal = function () {
+  let closure_1;
   let str = hostName;
   if (hostName === undefined) {
     str = "root";
@@ -13,26 +18,33 @@ export const usePortal = () => {
   dependencyMap = tmp;
   if (null === tmp) {
     const _Error = Error;
+    const self = this;
+    const self2 = this;
     const error = new Error(
       "'PortalDispatchContext' cannot be null, please add 'PortalProvider' to the root component.",
     );
     throw error;
   } else {
     const tmp3 = closure_2(() => {
-      closure_1({ type: ACTIONS.ACTIONS.REGISTER_HOST, hostName: str });
+      const obj = { type: ACTIONS.ACTIONS.REGISTER_HOST, hostName: str };
+      closure_1(obj);
+    }, []);
+    const tmp4 = closure_2(() => {
+      const obj = { type: ACTIONS.ACTIONS.DEREGISTER_HOST, hostName: str };
+      closure_1(obj);
     }, []);
     const tmp5 = closure_2((portalName, node) => {
-      closure_1({ type: ACTIONS.ACTIONS.ADD_UPDATE_PORTAL, hostName: str, portalName, node });
+      const obj = { type: ACTIONS.ACTIONS.ADD_UPDATE_PORTAL, hostName: str, portalName, node };
+      closure_1(obj);
     }, []);
-    const obj = {
+    let obj = {
       registerHost: tmp3,
-      deregisterHost: closure_2(() => {
-        closure_1({ type: ACTIONS.ACTIONS.DEREGISTER_HOST, hostName: str });
-      }, []),
+      deregisterHost: tmp4,
       addPortal: tmp5,
       updatePortal: tmp5,
       removePortal: closure_2((portalName) => {
-        closure_1({ type: ACTIONS.ACTIONS.REMOVE_PORTAL, hostName: str, portalName });
+        const obj = { type: ACTIONS.ACTIONS.REMOVE_PORTAL, hostName: str, portalName };
+        closure_1(obj);
       }, []),
     };
     return obj;

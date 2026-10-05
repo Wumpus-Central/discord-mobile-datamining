@@ -1,22 +1,22 @@
 // _runtime/metro/01729__.js
-import _makeShareableClone from "../01653__makeShareableClone.js";
+import _updatePropsJS from "../01653__updatePropsJS.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = arg1;
-const dependencyMap = arg6;
 const weakMap = new WeakMap();
 
 export const snapshots = weakMap;
 export const makeElementVisible = function makeElementVisible(_componentDOMRef, arg1) {
   _require = _componentDOMRef;
   if (0 === arg1) {
-    require("_makeShareableClone")._updatePropsJS({ visibility: "initial" }, _componentDOMRef);
-    const obj = require("_makeShareableClone");
+    let obj = require("_updatePropsJS");
+    obj._updatePropsJS({ visibility: "initial" }, _componentDOMRef);
   } else {
     const _setTimeout = setTimeout;
     const timerId = setTimeout(() => {
-      _makeShareableClone._updatePropsJS({ visibility: "initial" }, closure_0);
+      const obj = _updatePropsJS;
+      obj._updatePropsJS({ visibility: "initial" }, _componentDOMRef);
     }, 1000 * arg1);
   }
 };
@@ -33,6 +33,7 @@ export const setElementPosition = function setElementPosition(cloneNodeResult, r
     rect = parentElement.getBoundingClientRect();
     const _parseInt = parseInt;
     const _parseInt2 = parseInt;
+    const getComputedStyle2 = globalThis.getComputedStyle;
     const parsed = parseInt(globalThis.getComputedStyle(parentElement).borderTopWidth);
     const parsed1 = parseInt(globalThis.getComputedStyle(parentElement).borderLeftWidth);
     const rect2 = cloneNodeResult.getBoundingClientRect();

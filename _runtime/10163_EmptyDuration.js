@@ -4,39 +4,39 @@ export const addDuration = function addDuration(dateWithAdjustedTimezone, EmptyD
   const date = new Date(dateWithAdjustedTimezone);
   if (EmptyDuration.y) {
     EmptyDuration.year = EmptyDuration.y;
-    delete tmp[tmp2];
+    delete EmptyDuration["y"];
   }
   if (EmptyDuration.mo) {
     EmptyDuration.month = EmptyDuration.mo;
-    delete tmp[tmp2];
+    delete EmptyDuration["mo"];
   }
   if (EmptyDuration.M) {
     EmptyDuration.month = EmptyDuration.M;
-    delete tmp[tmp2];
+    delete EmptyDuration["M"];
   }
   if (EmptyDuration.w) {
     EmptyDuration.week = EmptyDuration.w;
-    delete tmp[tmp2];
+    delete EmptyDuration["w"];
   }
   if (EmptyDuration.d) {
     EmptyDuration.day = EmptyDuration.d;
-    delete tmp[tmp2];
+    delete EmptyDuration["d"];
   }
   if (EmptyDuration.h) {
     EmptyDuration.hour = EmptyDuration.h;
-    delete tmp[tmp2];
+    delete EmptyDuration["h"];
   }
   if (EmptyDuration.m) {
     EmptyDuration.minute = EmptyDuration.m;
-    delete tmp[tmp2];
+    delete EmptyDuration["m"];
   }
   if (EmptyDuration.s) {
     EmptyDuration.second = EmptyDuration.s;
-    delete tmp[tmp2];
+    delete EmptyDuration["s"];
   }
   if (EmptyDuration.ms) {
     EmptyDuration.millisecond = EmptyDuration.ms;
-    delete tmp[tmp2];
+    delete EmptyDuration["ms"];
   }
   if ("year" in EmptyDuration) {
     const _Math = Math;
@@ -204,8 +204,8 @@ export const addDuration = function addDuration(dateWithAdjustedTimezone, EmptyD
 };
 export const reverseDuration = function reverseDuration(parseDurationResult) {
   const obj = {};
-  for (const key10004 in arg0) {
-    obj[key10004] = -arg0[key10004];
+  for (const key10004 in parseDurationResult) {
+    obj[key10004] = -parseDurationResult[key10004];
     continue;
   }
   return obj;

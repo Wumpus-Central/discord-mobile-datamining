@@ -5154,7 +5154,7 @@ const obj = {
     "pl\u00FCssmack\u00F3",
     "t\u00F6m\u00F6tt",
   ],
-  piñata: ["buli", "cukor", "\u00E9dess\u00E9g", "mexik\u00F3", "piny\u00E1ta", "\u00FCnneps\u00E9g"],
+  "pi\u00f1ata": ["buli", "cukor", "\u00E9dess\u00E9g", "mexik\u00F3", "piny\u00E1ta", "\u00FCnneps\u00E9g"],
   mirror_ball: ["buli", "csill\u00E1m", "diszk\u00F3", "diszk\u00F3g\u00F6mb", "t\u00E1nc", "t\u00FCk\u00F6rg\u00F6mb"],
   nesting_dolls: ["baba", "b\u00E1buska", "egym\u00E1sba rakhat\u00F3", "matrjoska", "orosz"],
   spades: ["francia k\u00E1rtya", "j\u00E1t\u00E9k", "k\u00E1rtya", "pikk", "sz\u00EDn"],

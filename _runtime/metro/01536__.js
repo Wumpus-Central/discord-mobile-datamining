@@ -1,5 +1,6 @@
 // _runtime/metro/01536__.js
 const forResult = Symbol.for("react.transitional.element");
+const _window = forResult;
 const forResult1 = Symbol.for("react.portal");
 const forResult2 = Symbol.for("react.fragment");
 const forResult3 = Symbol.for("react.strict_mode");
@@ -30,8 +31,8 @@ export const isContextConsumer = ($$typeof) => {
   let tmp;
   if (typeof $$typeof === "object") {
     if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
-      if (forResult === $$typeof2) {
+      $$typeof = $$typeof.$$typeof;
+      if (_window === $$typeof) {
         const type = $$typeof.type;
         tmp = type;
         if (forResult2 !== type) {
@@ -45,28 +46,24 @@ export const isContextConsumer = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
-                    if (type) {
-                      $$typeof = type.$$typeof;
-                    }
-                    if (forResult6 !== $$typeof) {
-                      if (forResult7 !== $$typeof) {
-                        if (forResult11 !== $$typeof) {
-                          if (forResult10 !== $$typeof) {
-                            tmp = $$typeof2;
+                    if (forResult6 !== (type && type.$$typeof)) {
+                      if (forResult7 !== (type && type.$$typeof)) {
+                        if (forResult11 !== (type && type.$$typeof)) {
+                          if (forResult10 !== (type && type.$$typeof)) {
+                            tmp = $$typeof;
                           }
                         }
                       }
                     }
-                    tmp = $$typeof;
+                    tmp = tmp9;
                   }
                 }
               }
             }
           }
         }
-      } else if (forResult1 === $$typeof2) {
-        tmp = $$typeof2;
+      } else if (forResult1 === $$typeof) {
+        tmp = $$typeof;
       }
     }
   }
@@ -76,8 +73,8 @@ export const isContextProvider = ($$typeof) => {
   let tmp;
   if (typeof $$typeof === "object") {
     if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
-      if (forResult === $$typeof2) {
+      $$typeof = $$typeof.$$typeof;
+      if (_window === $$typeof) {
         const type = $$typeof.type;
         tmp = type;
         if (forResult2 !== type) {
@@ -91,28 +88,24 @@ export const isContextProvider = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
-                    if (type) {
-                      $$typeof = type.$$typeof;
-                    }
-                    if (forResult6 !== $$typeof) {
-                      if (forResult7 !== $$typeof) {
-                        if (forResult11 !== $$typeof) {
-                          if (forResult10 !== $$typeof) {
-                            tmp = $$typeof2;
+                    if (forResult6 !== (type && type.$$typeof)) {
+                      if (forResult7 !== (type && type.$$typeof)) {
+                        if (forResult11 !== (type && type.$$typeof)) {
+                          if (forResult10 !== (type && type.$$typeof)) {
+                            tmp = $$typeof;
                           }
                         }
                       }
                     }
-                    tmp = $$typeof;
+                    tmp = tmp9;
                   }
                 }
               }
             }
           }
         }
-      } else if (forResult1 === $$typeof2) {
-        tmp = $$typeof2;
+      } else if (forResult1 === $$typeof) {
+        tmp = $$typeof;
       }
     }
   }
@@ -124,7 +117,7 @@ export const isElement = ($$typeof) => {
     tmp = null !== $$typeof;
   }
   if (tmp) {
-    tmp = $$typeof.$$typeof === forResult;
+    tmp = $$typeof.$$typeof === _window;
   }
   return tmp;
 };
@@ -132,8 +125,8 @@ export const isForwardRef = ($$typeof) => {
   let tmp;
   if (typeof $$typeof === "object") {
     if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
-      if (forResult === $$typeof2) {
+      $$typeof = $$typeof.$$typeof;
+      if (_window === $$typeof) {
         const type = $$typeof.type;
         tmp = type;
         if (forResult2 !== type) {
@@ -147,28 +140,24 @@ export const isForwardRef = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
-                    if (type) {
-                      $$typeof = type.$$typeof;
-                    }
-                    if (forResult6 !== $$typeof) {
-                      if (forResult7 !== $$typeof) {
-                        if (forResult11 !== $$typeof) {
-                          if (forResult10 !== $$typeof) {
-                            tmp = $$typeof2;
+                    if (forResult6 !== (type && type.$$typeof)) {
+                      if (forResult7 !== (type && type.$$typeof)) {
+                        if (forResult11 !== (type && type.$$typeof)) {
+                          if (forResult10 !== (type && type.$$typeof)) {
+                            tmp = $$typeof;
                           }
                         }
                       }
                     }
-                    tmp = $$typeof;
+                    tmp = tmp9;
                   }
                 }
               }
             }
           }
         }
-      } else if (forResult1 === $$typeof2) {
-        tmp = $$typeof2;
+      } else if (forResult1 === $$typeof) {
+        tmp = $$typeof;
       }
     }
   }
@@ -178,8 +167,8 @@ export const isFragment = ($$typeof) => {
   let tmp;
   if (typeof $$typeof === "object") {
     if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
-      if (forResult === $$typeof2) {
+      $$typeof = $$typeof.$$typeof;
+      if (_window === $$typeof) {
         const type = $$typeof.type;
         tmp = type;
         if (forResult2 !== type) {
@@ -193,28 +182,24 @@ export const isFragment = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
-                    if (type) {
-                      $$typeof = type.$$typeof;
-                    }
-                    if (forResult6 !== $$typeof) {
-                      if (forResult7 !== $$typeof) {
-                        if (forResult11 !== $$typeof) {
-                          if (forResult10 !== $$typeof) {
-                            tmp = $$typeof2;
+                    if (forResult6 !== (type && type.$$typeof)) {
+                      if (forResult7 !== (type && type.$$typeof)) {
+                        if (forResult11 !== (type && type.$$typeof)) {
+                          if (forResult10 !== (type && type.$$typeof)) {
+                            tmp = $$typeof;
                           }
                         }
                       }
                     }
-                    tmp = $$typeof;
+                    tmp = tmp9;
                   }
                 }
               }
             }
           }
         }
-      } else if (forResult1 === $$typeof2) {
-        tmp = $$typeof2;
+      } else if (forResult1 === $$typeof) {
+        tmp = $$typeof;
       }
     }
   }
@@ -224,8 +209,8 @@ export const isLazy = ($$typeof) => {
   let tmp;
   if (typeof $$typeof === "object") {
     if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
-      if (forResult === $$typeof2) {
+      $$typeof = $$typeof.$$typeof;
+      if (_window === $$typeof) {
         const type = $$typeof.type;
         tmp = type;
         if (forResult2 !== type) {
@@ -239,28 +224,24 @@ export const isLazy = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
-                    if (type) {
-                      $$typeof = type.$$typeof;
-                    }
-                    if (forResult6 !== $$typeof) {
-                      if (forResult7 !== $$typeof) {
-                        if (forResult11 !== $$typeof) {
-                          if (forResult10 !== $$typeof) {
-                            tmp = $$typeof2;
+                    if (forResult6 !== (type && type.$$typeof)) {
+                      if (forResult7 !== (type && type.$$typeof)) {
+                        if (forResult11 !== (type && type.$$typeof)) {
+                          if (forResult10 !== (type && type.$$typeof)) {
+                            tmp = $$typeof;
                           }
                         }
                       }
                     }
-                    tmp = $$typeof;
+                    tmp = tmp9;
                   }
                 }
               }
             }
           }
         }
-      } else if (forResult1 === $$typeof2) {
-        tmp = $$typeof2;
+      } else if (forResult1 === $$typeof) {
+        tmp = $$typeof;
       }
     }
   }
@@ -270,8 +251,8 @@ export const isMemo = ($$typeof) => {
   let tmp;
   if (typeof $$typeof === "object") {
     if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
-      if (forResult === $$typeof2) {
+      $$typeof = $$typeof.$$typeof;
+      if (_window === $$typeof) {
         const type = $$typeof.type;
         tmp = type;
         if (forResult2 !== type) {
@@ -285,28 +266,24 @@ export const isMemo = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
-                    if (type) {
-                      $$typeof = type.$$typeof;
-                    }
-                    if (forResult6 !== $$typeof) {
-                      if (forResult7 !== $$typeof) {
-                        if (forResult11 !== $$typeof) {
-                          if (forResult10 !== $$typeof) {
-                            tmp = $$typeof2;
+                    if (forResult6 !== (type && type.$$typeof)) {
+                      if (forResult7 !== (type && type.$$typeof)) {
+                        if (forResult11 !== (type && type.$$typeof)) {
+                          if (forResult10 !== (type && type.$$typeof)) {
+                            tmp = $$typeof;
                           }
                         }
                       }
                     }
-                    tmp = $$typeof;
+                    tmp = tmp9;
                   }
                 }
               }
             }
           }
         }
-      } else if (forResult1 === $$typeof2) {
-        tmp = $$typeof2;
+      } else if (forResult1 === $$typeof) {
+        tmp = $$typeof;
       }
     }
   }
@@ -316,8 +293,8 @@ export const isPortal = ($$typeof) => {
   let tmp;
   if (typeof $$typeof === "object") {
     if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
-      if (forResult === $$typeof2) {
+      $$typeof = $$typeof.$$typeof;
+      if (_window === $$typeof) {
         const type = $$typeof.type;
         tmp = type;
         if (forResult2 !== type) {
@@ -331,28 +308,24 @@ export const isPortal = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
-                    if (type) {
-                      $$typeof = type.$$typeof;
-                    }
-                    if (forResult6 !== $$typeof) {
-                      if (forResult7 !== $$typeof) {
-                        if (forResult11 !== $$typeof) {
-                          if (forResult10 !== $$typeof) {
-                            tmp = $$typeof2;
+                    if (forResult6 !== (type && type.$$typeof)) {
+                      if (forResult7 !== (type && type.$$typeof)) {
+                        if (forResult11 !== (type && type.$$typeof)) {
+                          if (forResult10 !== (type && type.$$typeof)) {
+                            tmp = $$typeof;
                           }
                         }
                       }
                     }
-                    tmp = $$typeof;
+                    tmp = tmp9;
                   }
                 }
               }
             }
           }
         }
-      } else if (forResult1 === $$typeof2) {
-        tmp = $$typeof2;
+      } else if (forResult1 === $$typeof) {
+        tmp = $$typeof;
       }
     }
   }
@@ -362,8 +335,8 @@ export const isProfiler = ($$typeof) => {
   let tmp;
   if (typeof $$typeof === "object") {
     if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
-      if (forResult === $$typeof2) {
+      $$typeof = $$typeof.$$typeof;
+      if (_window === $$typeof) {
         const type = $$typeof.type;
         tmp = type;
         if (forResult2 !== type) {
@@ -377,28 +350,24 @@ export const isProfiler = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
-                    if (type) {
-                      $$typeof = type.$$typeof;
-                    }
-                    if (forResult6 !== $$typeof) {
-                      if (forResult7 !== $$typeof) {
-                        if (forResult11 !== $$typeof) {
-                          if (forResult10 !== $$typeof) {
-                            tmp = $$typeof2;
+                    if (forResult6 !== (type && type.$$typeof)) {
+                      if (forResult7 !== (type && type.$$typeof)) {
+                        if (forResult11 !== (type && type.$$typeof)) {
+                          if (forResult10 !== (type && type.$$typeof)) {
+                            tmp = $$typeof;
                           }
                         }
                       }
                     }
-                    tmp = $$typeof;
+                    tmp = tmp9;
                   }
                 }
               }
             }
           }
         }
-      } else if (forResult1 === $$typeof2) {
-        tmp = $$typeof2;
+      } else if (forResult1 === $$typeof) {
+        tmp = $$typeof;
       }
     }
   }
@@ -408,8 +377,8 @@ export const isStrictMode = ($$typeof) => {
   let tmp;
   if (typeof $$typeof === "object") {
     if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
-      if (forResult === $$typeof2) {
+      $$typeof = $$typeof.$$typeof;
+      if (_window === $$typeof) {
         const type = $$typeof.type;
         tmp = type;
         if (forResult2 !== type) {
@@ -423,28 +392,24 @@ export const isStrictMode = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
-                    if (type) {
-                      $$typeof = type.$$typeof;
-                    }
-                    if (forResult6 !== $$typeof) {
-                      if (forResult7 !== $$typeof) {
-                        if (forResult11 !== $$typeof) {
-                          if (forResult10 !== $$typeof) {
-                            tmp = $$typeof2;
+                    if (forResult6 !== (type && type.$$typeof)) {
+                      if (forResult7 !== (type && type.$$typeof)) {
+                        if (forResult11 !== (type && type.$$typeof)) {
+                          if (forResult10 !== (type && type.$$typeof)) {
+                            tmp = $$typeof;
                           }
                         }
                       }
                     }
-                    tmp = $$typeof;
+                    tmp = tmp9;
                   }
                 }
               }
             }
           }
         }
-      } else if (forResult1 === $$typeof2) {
-        tmp = $$typeof2;
+      } else if (forResult1 === $$typeof) {
+        tmp = $$typeof;
       }
     }
   }
@@ -454,8 +419,8 @@ export const isSuspense = ($$typeof) => {
   let tmp;
   if (typeof $$typeof === "object") {
     if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
-      if (forResult === $$typeof2) {
+      $$typeof = $$typeof.$$typeof;
+      if (_window === $$typeof) {
         const type = $$typeof.type;
         tmp = type;
         if (forResult2 !== type) {
@@ -469,28 +434,24 @@ export const isSuspense = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
-                    if (type) {
-                      $$typeof = type.$$typeof;
-                    }
-                    if (forResult6 !== $$typeof) {
-                      if (forResult7 !== $$typeof) {
-                        if (forResult11 !== $$typeof) {
-                          if (forResult10 !== $$typeof) {
-                            tmp = $$typeof2;
+                    if (forResult6 !== (type && type.$$typeof)) {
+                      if (forResult7 !== (type && type.$$typeof)) {
+                        if (forResult11 !== (type && type.$$typeof)) {
+                          if (forResult10 !== (type && type.$$typeof)) {
+                            tmp = $$typeof;
                           }
                         }
                       }
                     }
-                    tmp = $$typeof;
+                    tmp = tmp9;
                   }
                 }
               }
             }
           }
         }
-      } else if (forResult1 === $$typeof2) {
-        tmp = $$typeof2;
+      } else if (forResult1 === $$typeof) {
+        tmp = $$typeof;
       }
     }
   }
@@ -500,8 +461,8 @@ export const isSuspenseList = ($$typeof) => {
   let tmp;
   if (typeof $$typeof === "object") {
     if (null !== $$typeof) {
-      const $$typeof2 = $$typeof.$$typeof;
-      if (forResult === $$typeof2) {
+      $$typeof = $$typeof.$$typeof;
+      if (_window === $$typeof) {
         const type = $$typeof.type;
         tmp = type;
         if (forResult2 !== type) {
@@ -515,79 +476,60 @@ export const isSuspenseList = ($$typeof) => {
                 if (forResult9 !== type) {
                   tmp = type;
                   if (closure_12 !== type) {
-                    $$typeof = type;
-                    if (type) {
-                      $$typeof = type.$$typeof;
-                    }
-                    if (forResult6 !== $$typeof) {
-                      if (forResult7 !== $$typeof) {
-                        if (forResult11 !== $$typeof) {
-                          if (forResult10 !== $$typeof) {
-                            tmp = $$typeof2;
+                    if (forResult6 !== (type && type.$$typeof)) {
+                      if (forResult7 !== (type && type.$$typeof)) {
+                        if (forResult11 !== (type && type.$$typeof)) {
+                          if (forResult10 !== (type && type.$$typeof)) {
+                            tmp = $$typeof;
                           }
                         }
                       }
                     }
-                    tmp = $$typeof;
+                    tmp = tmp9;
                   }
                 }
               }
             }
           }
         }
-      } else if (forResult1 === $$typeof2) {
-        tmp = $$typeof2;
+      } else if (forResult1 === $$typeof) {
+        tmp = $$typeof;
       }
     }
   }
   return tmp === forResult9;
 };
 export const isValidElementType = ($$typeof) => {
-  let tmp = typeof $$typeof === "string";
-  if (typeof $$typeof !== "string") {
-    tmp = typeof $$typeof === "function";
-  }
-  if (!tmp) {
-    tmp = $$typeof === forResult2;
-  }
-  if (!tmp) {
-    tmp = $$typeof === forResult4;
-  }
-  if (!tmp) {
-    tmp = $$typeof === forResult3;
-  }
-  if (!tmp) {
-    tmp = $$typeof === forResult8;
-  }
-  if (!tmp) {
-    tmp = $$typeof === forResult9;
-  }
+  let tmp =
+    typeof $$typeof === "string" ||
+    typeof $$typeof === "function" ||
+    $$typeof === forResult2 ||
+    $$typeof === forResult4 ||
+    $$typeof === forResult3 ||
+    $$typeof === forResult8 ||
+    $$typeof === forResult9;
   if (!tmp) {
     let tmp7 = typeof $$typeof === "object";
     if (typeof $$typeof === "object") {
       tmp7 = null !== $$typeof;
     }
     if (tmp7) {
-      let tmp9 = $$typeof.$$typeof === forResult11;
-      if (!tmp9) {
-        tmp9 = $$typeof.$$typeof === forResult10;
-      }
-      if (!tmp9) {
-        tmp9 = $$typeof.$$typeof === forResult6;
-      }
-      if (!tmp9) {
-        tmp9 = $$typeof.$$typeof === forResult5;
-      }
-      if (!tmp9) {
-        tmp9 = $$typeof.$$typeof === forResult7;
-      }
-      if (!tmp9) {
-        tmp9 = $$typeof.$$typeof === closure_13;
-      }
-      if (!tmp9) {
-        tmp9 = undefined !== $$typeof.getModuleId;
-      }
-      tmp7 = tmp9;
+      tmp7 =
+        $$typeof.$$typeof === forResult11 ||
+        $$typeof.$$typeof === forResult10 ||
+        $$typeof.$$typeof === forResult6 ||
+        $$typeof.$$typeof === forResult5 ||
+        $$typeof.$$typeof === forResult7 ||
+        $$typeof.$$typeof === closure_13 ||
+        undefined !== $$typeof.getModuleId;
+      const tmp9 =
+        $$typeof.$$typeof === forResult11 ||
+        $$typeof.$$typeof === forResult10 ||
+        $$typeof.$$typeof === forResult6 ||
+        $$typeof.$$typeof === forResult5 ||
+        $$typeof.$$typeof === forResult7 ||
+        $$typeof.$$typeof === closure_13 ||
+        undefined !== $$typeof.getModuleId;
     }
     tmp = tmp7;
   }
@@ -597,7 +539,7 @@ export const typeOf = function typeOf($$typeof) {
   if (typeof $$typeof === "object") {
     if (null !== $$typeof) {
       $$typeof = $$typeof.$$typeof;
-      if (forResult === $$typeof) {
+      if (_window === $$typeof) {
         const type = $$typeof.type;
         if (forResult2 !== type) {
           if (forResult4 !== type) {
@@ -605,22 +547,18 @@ export const typeOf = function typeOf($$typeof) {
               if (forResult8 !== type) {
                 if (forResult9 !== type) {
                   if (closure_12 !== type) {
-                    let $$typeof2 = type;
-                    if (type) {
-                      $$typeof2 = type.$$typeof;
-                    }
-                    if (forResult6 !== $$typeof2) {
-                      if (forResult7 !== $$typeof2) {
-                        if (forResult11 !== $$typeof2) {
-                          if (forResult10 !== $$typeof2) {
-                            if (forResult5 !== $$typeof2) {
+                    if (forResult6 !== (type && type.$$typeof)) {
+                      if (forResult7 !== (type && type.$$typeof)) {
+                        if (forResult11 !== (type && type.$$typeof)) {
+                          if (forResult10 !== (type && type.$$typeof)) {
+                            if (forResult5 !== (type && type.$$typeof)) {
                               return $$typeof;
                             }
                           }
                         }
                       }
                     }
-                    return $$typeof2;
+                    return type && type.$$typeof;
                   }
                 }
               }

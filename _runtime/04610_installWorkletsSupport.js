@@ -1,9 +1,7 @@
 // _runtime/04610_installWorkletsSupport.js
 import reactNativeWorkletsCompat from "../discord_app/modules/gesture_handlers/native/reactNativeWorkletsCompat.js";
-import _mod4615 from "metro/04615__.js";
+import installedNitro1 from "04615_installedNitro1.js";
 
-require = arg1;
-const dependencyMap = arg6;
 const __initData = {
   code: "function determine_Pnpm_installWorkletsSupportTs1(value){const{boxedNitroProxy}=this.__closure;const nitroProxy=boxedNitroProxy.unbox();return nitroProxy.isHybridObject(value);}",
 };
@@ -13,34 +11,36 @@ const __initData2 = {
 const __initData3 = { code: "function unpack_Pnpm_installWorkletsSupportTs3(value){return value.unbox();}" };
 
 export const installWorkletsSupport = function installWorkletsSupport() {
+  let fn;
+  let fn2;
+  let fn3;
   try {
-    const NitroModules = _mod4615.NitroModules;
-    const boxResult = NitroModules.box(_mod4615.NitroModules);
-    require = boxResult;
-    const obj = { name: "nitro.HybridObject", determine: null, pack: null, unpack: null };
-    const fn = function _(arg0) {
-      return boxResult.unbox().isHybridObject(arg0);
+    const registerCustomSerializable = reactNativeWorkletsCompat.registerCustomSerializable;
+    const NitroModules = installedNitro1.NitroModules;
+    const boxResult = NitroModules.box(installedNitro1.NitroModules);
+    const obj = { name: "nitro.HybridObject", determine: fn, pack: fn2, unpack: fn3 };
+    fn = function _(arg0) {
+      const unboxResult = boxResult.unbox();
+      return unboxResult.isHybridObject(arg0);
     };
     const obj2 = { boxedNitroProxy: boxResult };
     fn.__closure = obj2;
     fn.__workletHash = 17379885884344;
     fn.__initData = __initData;
-    obj.determine = fn;
-    const fn2 = function c(arg0) {
-      return boxResult.unbox().box(arg0);
+    fn2 = function c(arg0) {
+      const unboxResult = boxResult.unbox();
+      return unboxResult.box(arg0);
     };
     const obj3 = { boxedNitroProxy: boxResult };
     fn2.__closure = obj3;
     fn2.__workletHash = 15686149812025;
     fn2.__initData = __initData2;
-    obj.pack = fn2;
-    const fn3 = function l(unbox) {
+    fn3 = function l(unbox) {
       return unbox.unbox();
     };
     fn3.__closure = {};
     fn3.__workletHash = 16222078380838;
     fn3.__initData = __initData3;
-    obj.unpack = fn3;
-    const result = reactNativeWorkletsCompat.registerCustomSerializable(obj);
+    const result = registerCustomSerializable(obj);
   } catch (err) {}
 };

@@ -1,10 +1,10 @@
 // _runtime/00486_ShareModule.js
-import _modDef487 from "metro/00487__.js";
+import _mod487 from "metro/00487__.js";
 
-const require = globalThis.__r;
+const _modDef487 = _mod487;
 
-for (const key10016 in require("metro/00487__.js")) {
-  arg5[key10016] = require("metro/00487__.js")[key10016];
+for (const key10016 in _mod487) {
+  exports[key10016] = _mod487[key10016];
   continue;
 }
 

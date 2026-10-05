@@ -1,7 +1,7 @@
 // _runtime/00114_renderElement.js
-const require = globalThis.__r;
+import _mod115 from "metro/00115__.js";
 
-for (const key10013 in require("metro/00115__.js")) {
-  arg5[key10013] = require("metro/00115__.js")[key10013];
+for (const key10013 in _mod115) {
+  exports[key10013] = _mod115[key10013];
   continue;
 }

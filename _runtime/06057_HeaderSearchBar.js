@@ -1,19 +1,28 @@
 // _runtime/06057_HeaderSearchBar.js
-import _slicedToArray from "metro/00032__.js";
-import noop from "metro/00019__.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import react from "00019_react.js";
+import react_native from "00017_react-native.js";
+import Fragment from "react/00021_Fragment.js";
 
-const require = fn;
-get_ActivityIndicator = fn(17);
+let RN, closure_12, navigation;
+
+let Image;
+let Platform;
+let StyleSheet;
+let c9;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
 ({
   Animated: hasOwnProperty,
   Image,
   Platform,
   StyleSheet,
   TextInput: metroRequire,
-  View: closure_7,
-} = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+  View: metroImportDefault,
+} = react_native);
+({ jsx: metroImportAll, jsxs: c9 } = Fragment);
 let closure_10 = { text: "text", number: "numeric", phone: "tel", email: "email" };
 let c11 = true;
 const styles = StyleSheet.create({
@@ -36,7 +45,30 @@ const styles = StyleSheet.create({
   },
 });
 
-export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(visible, arg1) {
+export const HeaderSearchBar = react.forwardRef(function HeaderSearchBarInternal(visible, arg1) {
+  let HeaderIcon2;
+  let alphaResult;
+  let alphaResult1;
+  let alphaResult2;
+  let autoCapitalize;
+  let autoFocus;
+  let c6;
+  let cancelButtonText;
+  let closure_5;
+  let colors;
+  let dark;
+  let enterKeyHint;
+  let inputType;
+  let items6;
+  let items7;
+  let items8;
+  let items9;
+  let obj13;
+  let placeholder;
+  let tmp10;
+  let tmp29;
+  let tmp30;
+  let useNativeDriver;
   visible = visible.visible;
   ({ inputType, autoFocus } = visible);
   if (autoFocus === undefined) {
@@ -53,6 +85,7 @@ export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(
   const onChangeText = visible.onChangeText;
   const onClose = visible.onClose;
   let text = visible.tintColor;
+  const style = visible.style;
   const merged = Object.assign(
     visible,
     Object.assign({
@@ -71,29 +104,33 @@ export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(
   );
   let first;
   c6 = undefined;
-  const navigation = visible(onClose[4]).useNavigation();
+  const tmp2 = visible;
   let obj = visible(onClose[4]);
-  const theme = visible(onClose[4]).useTheme();
+  navigation = obj.useNavigation();
+  const obj2 = visible(onClose[4]);
+  const theme = obj2.useTheme();
   ({ dark, colors } = theme);
+  const fonts = theme.fonts;
   const tmp6 = navigation(first.useState(""), 2);
   first = tmp6[0];
   RN = tmp8;
-  const obj2 = visible(onClose[4]);
   [tmp10, c6] = navigation(first.useState(visible), 2);
+  navigation(first.useState(visible), 2);
   const first1 = navigation(
     first.useState(() => {
       let num = 0;
+      const Value = hasOwnProperty.Value;
       if (visible) {
         num = 1;
       }
-      value = new RN.Value(num);
+      const value = new Value(num);
       return value;
     }),
     1,
   )[0];
   const first2 = navigation(
     first.useState(() => {
-      value = new closure_5.Value(0);
+      const value = new closure_5.Value(0);
       return value;
     }),
     1,
@@ -103,13 +140,16 @@ export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(
   const ref = first.useRef(null);
   const items = [visible, first1];
   const effect = first.useEffect(() => {
+    let current;
     if (visible !== ref.current) {
       let num = 0;
+      const timing = hasOwnProperty.timing;
       if (tmp) {
         num = 1;
       }
       const obj = { toValue: num, duration: 100, useNativeDriver };
-      RN.timing(first1, obj).start((finished) => {
+      const timingResult = timing(first1, obj);
+      timingResult.start((finished) => {
         if (finished.finished) {
           closure_1_6(current);
           ref.current = current;
@@ -125,16 +165,17 @@ export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(
   const effect1 = first.useEffect(() => {
     if (ref2.current !== current) {
       let num = 0;
+      const timing = hasOwnProperty.timing;
       if (tmp) {
         num = 1;
       }
       const obj = { toValue: num, duration: 100, useNativeDriver };
-      RN.timing(first2, obj).start((finished) => {
+      const timingResult = timing(first2, obj);
+      timingResult.start((finished) => {
         if (finished.finished) {
           ref2.current = current;
         }
       });
-      const timingResult = RN.timing(first2, obj);
     }
   }, items1);
   const clearText = first.useCallback(() => {
@@ -172,30 +213,33 @@ export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(
   const items5 = [callback2, clearText];
   const imperativeHandle = first.useImperativeHandle(
     arg1,
-    () => ({
-      focus() {
-        const current = ref.current;
-        if (current != null) {
-          current.focus();
-        }
-      },
-      blur() {
-        const current = ref.current;
-        if (current != null) {
-          current.blur();
-        }
-      },
-      setText(text) {
-        const current = ref.current;
-        if (current != null) {
-          const obj = { text };
-          current.setNativeProps(obj);
-        }
-        closure_1_5(text);
-      },
-      clearText,
-      cancelSearch: callback2,
-    }),
+    () => {
+      let obj = {
+        focus() {
+          const current = ref.current;
+          if (current != null) {
+            current.focus();
+          }
+        },
+        blur() {
+          const current = ref.current;
+          if (current != null) {
+            current.blur();
+          }
+        },
+        setText(text) {
+          const current = ref.current;
+          if (current != null) {
+            const obj = { text };
+            current.setNativeProps(obj);
+          }
+          closure_1_5(text);
+        },
+        clearText,
+        cancelSearch: callback2,
+      };
+      return obj;
+    },
     items5,
   );
   if (!visible) {
@@ -207,59 +251,53 @@ export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(
     text = colors.text;
   }
   let str = "none";
+  const View = RN.View;
   if (visible) {
     str = "auto";
   }
-  const obj3 = { pointerEvents: str, "aria-live": "polite", "aria-hidden": !visible, style: null, children: null };
-  const items6 = [closure_12.container, { opacity: first1 }, visible.style];
-  obj3.style = items6;
-  const obj4 = { style: closure_12.searchbarContainer, children: null };
-  const tmp24 = first1;
-  const tmp9 = navigation(first.useState(visible), 2);
-  const items7 = [
-    first2(visible(onClose[5]).HeaderIcon, {
-      source: onChangeText(onClose[6]),
-      tintColor: text,
-      style: closure_12.inputSearchIcon,
-    }),
-    ,
-  ];
-  const obj8 = {};
+  const obj3 = { pointerEvents: str, "aria-live": "polite", "aria-hidden": !visible, style: items6, children: items9 };
+  items6 = [closure_12.container, { opacity: first1 }, style];
+  const obj4 = { style: closure_12.searchbarContainer, children: items7 };
+  const obj5 = { source: onChangeText(onClose[6]), tintColor: text, style: closure_12.inputSearchIcon };
+  const HeaderIcon = tmp2(tmp3[5]).HeaderIcon;
+  items7 = [first2(HeaderIcon, obj5), ,];
+  const obj8 = {
+    ref,
+    onChange: onChangeText,
+    onChangeText: tmp6[1],
+    autoFocus,
+    autoCapitalize: tmp29,
+    inputMode: tmp30[inputType],
+    enterKeyHint,
+    placeholder,
+    placeholderTextColor: alphaResult.string(),
+    selectionColor: alphaResult1.string(),
+    style: items8,
+  };
   const merged1 = Object.assign(merged);
-  obj8.ref = ref;
-  obj8.onChange = onChangeText;
-  obj8.onChangeText = tmp6[1];
-  obj8.autoFocus = autoFocus;
-  let tmp29;
+  tmp29 = undefined;
+  const tmp24 = first1;
+  const tmp27 = c6;
   if ("systemDefault" !== autoCapitalize) {
     tmp29 = autoCapitalize;
   }
-  obj8.autoCapitalize = tmp29;
+  tmp30 = ref2;
   if (inputType == null) {
     inputType = "text";
   }
-  obj8.inputMode = ref2[inputType];
-  obj8.enterKeyHint = enterKeyHint;
-  obj8.placeholder = placeholder;
-  const obj5 = { source: onChangeText(onClose[6]), tintColor: text, style: closure_12.inputSearchIcon };
-  const tmp27 = c6;
   const obj7 = onChangeText(onClose[7])(text);
-  obj8.placeholderTextColor = onChangeText(onClose[7])(text).alpha(0.5).string();
   ({ primary: obj6.cursorColor, primary: obj6.selectionHandleColor } = colors);
-  const alphaResult = onChangeText(onClose[7])(text).alpha(0.5);
+  alphaResult = obj7.alpha(0.5);
   const obj9 = onChangeText(onClose[7])(colors.primary);
-  obj8.selectionColor = onChangeText(onClose[7])(colors.primary).alpha(0.3).string();
-  const items8 = [theme.fonts.regular, closure_12.searchbar];
-  const obj10 = { backgroundColor: "transparent", color: text, borderBottomColor: null };
-  const alphaResult1 = onChangeText(onClose[7])(colors.primary).alpha(0.3);
+  items8 = [fonts.regular, closure_12.searchbar];
+  alphaResult1 = obj9.alpha(0.3);
+  const obj10 = { backgroundColor: "transparent", color: text, borderBottomColor: alphaResult2.string() };
   const obj12 = onChangeText(onClose[7])(text);
-  obj10.borderBottomColor = onChangeText(onClose[7])(text).alpha(0.2).string();
   items8[2] = obj10;
-  obj8.style = items8;
+  alphaResult2 = obj12.alpha(0.2);
   items7[1] = first2(tmp27, obj8);
   items7[2] = null;
-  obj4.children = items7;
-  const items9 = [ref(tmp24, obj4), ,];
+  items9 = [ref(tmp24, obj4), ,];
   const obj11 = {
     onPress() {
       if (first) {
@@ -269,12 +307,12 @@ export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(
       }
     },
     style: closure_12.closeButton,
-    children: null,
+    children: first2(HeaderIcon2, obj13),
   };
-  const alphaResult2 = onChangeText(onClose[7])(text).alpha(0.2);
-  obj11.children = first2(visible(onClose[5]).HeaderIcon, { source: onChangeText(onClose[9]), tintColor: text });
-  items9[1] = first2(visible(onClose[8]).HeaderButton, obj11);
+  const HeaderButton = tmp2(tmp3[8]).HeaderButton;
+  obj13 = { source: onChangeText(onClose[9]), tintColor: text };
+  HeaderIcon2 = tmp2(tmp3[5]).HeaderIcon;
+  items9[1] = first2(HeaderButton, obj11);
   items9[2] = null;
-  obj3.children = items9;
-  return ref(RN.View, obj3);
+  return ref(View, obj3);
 });

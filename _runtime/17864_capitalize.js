@@ -1,8 +1,9 @@
 // _runtime/17864_capitalize.js
-import _mod637 from "metro/00637__.js";
-import _mod17865 from "metro/17865__.js";
+import toString from "00637_toString.js";
+import createCaseFirst from "17865_createCaseFirst.js";
 
 export default function capitalize(arg0) {
-  const tmp = _mod17865;
-  return tmp(_mod637(arg0).toLowerCase());
+  const tmp = createCaseFirst;
+  const str = toString(arg0);
+  return tmp(str.toLowerCase());
 }

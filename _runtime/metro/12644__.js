@@ -1,10 +1,8 @@
 // _runtime/metro/12644__.js
 import _mod12566 from "12566__.js";
 
-require = arg1;
-const dependencyMap = arg6;
 function getMetadataForUrl(fn, arg1) {
-  (function ensureMetadataStacksAreParsed(fn) {
+  function ensureMetadataStacksAreParsed(fn) {
     if (_mod12566.GLOBAL_OBJ._sentryModuleMetadata) {
       const _Object = Object;
       const keys = Object.keys(_mod12566.GLOBAL_OBJ._sentryModuleMetadata);
@@ -12,7 +10,7 @@ function getMetadataForUrl(fn, arg1) {
         let tmp16 = _mod12566.GLOBAL_OBJ._sentryModuleMetadata[item10026];
         if (!set.has(item10026)) {
           let addResult = set.add(item10026);
-          let obj2 = arg0(item10026);
+          let obj2 = fn(item10026);
           let reversed = obj2.reverse();
           for (const item10050 of reversed) {
             if (item10050.filename) {
@@ -26,15 +24,17 @@ function getMetadataForUrl(fn, arg1) {
         continue;
       }
     }
-  })(fn);
+  }
+  ensureMetadataStacksAreParsed(fn);
   return map.get(arg1);
 }
 const map = new Map();
 const set = new Set();
 
 export const addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exception) {
-  closure_0 = arg0;
+  let closure_0 = arg0;
   try {
+    let tmp = exception;
     const values = exception.exception.values;
     const item = values.forEach((stacktrace) => {
       if (stacktrace.stacktrace) {
@@ -57,14 +57,14 @@ export const addMetadataToStackFrames = function addMetadataToStackFrames(arg0, 
 export { getMetadataForUrl };
 export const stripMetadataFromStackFrames = function stripMetadataFromStackFrames(exception) {
   try {
+    let tmp = exception;
     const values = exception.exception.values;
     const item = values.forEach((stacktrace) => {
       if (stacktrace.stacktrace) {
-        const tmp3 = stacktrace.stacktrace.frames || [];
-        const iter = tmp3[Symbol.iterator]();
-        iter.next();
+        const tmp = stacktrace.stacktrace.frames || [];
+        const iter = tmp[Symbol.iterator]();
         while (iter !== undefined) {
-          delete tmp2[tmp];
+          delete iter.next()[`module_metadata`];
           continue;
         }
       }

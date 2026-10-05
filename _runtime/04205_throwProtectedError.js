@@ -13,6 +13,8 @@ export const throwProtectedError = function throwProtectedError(value, value2, a
     const _RangeError4 = RangeError;
     const concat4 = "Use `yyyy` instead of `YYYY` (in `".concat;
     const combined = "Use `yyyy` instead of `YYYY` (in `".concat(value2, "`) for formatting years to the input `");
+    const self7 = this;
+    const self8 = this;
     const rangeError = new RangeError(
       combined.concat(arg2, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"),
     );
@@ -21,6 +23,8 @@ export const throwProtectedError = function throwProtectedError(value, value2, a
     const _RangeError3 = RangeError;
     const concat3 = "Use `yy` instead of `YY` (in `".concat;
     const combined1 = "Use `yy` instead of `YY` (in `".concat(value2, "`) for formatting years to the input `");
+    const self5 = this;
+    const self6 = this;
     const rangeError1 = new RangeError(
       combined1.concat(arg2, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"),
     );
@@ -32,6 +36,8 @@ export const throwProtectedError = function throwProtectedError(value, value2, a
       value2,
       "`) for formatting days of the month to the input `",
     );
+    const self3 = this;
+    const self4 = this;
     const rangeError2 = new RangeError(
       combined2.concat(arg2, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"),
     );
@@ -43,6 +49,8 @@ export const throwProtectedError = function throwProtectedError(value, value2, a
       value2,
       "`) for formatting days of the month to the input `",
     );
+    const self = this;
+    const self2 = this;
     const rangeError3 = new RangeError(
       combined3.concat(arg2, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"),
     );

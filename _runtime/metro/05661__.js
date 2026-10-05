@@ -5503,7 +5503,7 @@ const obj = {
     "soffice",
     "teddy bear",
   ],
-  piñata: [
+  "pi\u00f1ata": [
     "caramelle",
     "divertimento",
     "dolcetti",

@@ -1,58 +1,45 @@
 // _runtime/00818_extractTargetInfo.js
 import CLIENT_ADDRESS_ATTRIBUTE from "00816_CLIENT_ADDRESS_ATTRIBUTE.js";
-import _slicedToArray from "metro/00032__.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 
+let obj2;
+let obj3;
+let obj4;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let obj = {
-  "tools/call": {
+  "tools/call": obj2,
+  "resources/read": obj3,
+  "resources/subscribe": obj4,
+  "resources/unsubscribe": { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE },
+  "prompts/get": {
     targetField: "name",
-    targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_TOOL_NAME_ATTRIBUTE,
+    targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_PROMPT_NAME_ATTRIBUTE,
+    captureName: true,
     captureArguments: true,
     argumentsField: "arguments",
   },
-  "resources/read": null,
-  "resources/subscribe": null,
-  "resources/unsubscribe": null,
-  "prompts/get": null,
 };
-let obj2 = {
+obj2 = {
   targetField: "name",
   targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_TOOL_NAME_ATTRIBUTE,
   captureArguments: true,
   argumentsField: "arguments",
 };
-obj["resources/read"] = {
-  targetField: "uri",
-  targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE,
-  captureUri: true,
-};
-let obj3 = {
-  targetField: "uri",
-  targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE,
-  captureUri: true,
-};
-obj["resources/subscribe"] = {
-  targetField: "uri",
-  targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE,
-};
-let obj4 = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE };
-obj["resources/unsubscribe"] = {
-  targetField: "uri",
-  targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE,
-};
-const obj5 = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE };
-obj["prompts/get"] = {
+obj3 = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE, captureUri: true };
+obj4 = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE };
+({ targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE });
+({
   targetField: "name",
   targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_PROMPT_NAME_ATTRIBUTE,
   captureName: true,
   captureArguments: true,
   argumentsField: "arguments",
-};
+});
 
 export const extractTargetInfo = function extractTargetInfo(method, arg1) {
   if (obj[method]) {
     let tmp2;
-    if (tmp.targetField) {
+    if (obj[method].targetField) {
       let tmp5;
       if (arg1 != null) {
         tmp5 = arg1[tmp.targetField];
@@ -63,10 +50,11 @@ export const extractTargetInfo = function extractTargetInfo(method, arg1) {
     }
     const obj2 = { target: tmp2, attributes: null };
     if (tmp2) {
-      if (tmp.targetAttribute) {
+      let obj4;
+      if (obj[method].targetAttribute) {
         const obj3 = {};
-        obj3[tmp.targetAttribute] = tmp2;
-        let obj4 = obj3;
+        obj3[obj[method].targetAttribute] = tmp2;
+        obj4 = obj3;
       }
       obj2.attributes = obj4;
       return obj2;
@@ -77,28 +65,29 @@ export const extractTargetInfo = function extractTargetInfo(method, arg1) {
     return obj;
   }
 };
-export const getRequestArguments = function getRequestArguments(method, uri) {
+export const getRequestArguments = function getRequestArguments(method3, uri) {
+  let str;
+  let tmp11;
   obj = {};
-  if (obj[method]) {
-    if (tmp.captureArguments) {
-      if (tmp.argumentsField) {
+  if (obj[method3]) {
+    if (obj[method3].captureArguments) {
+      if (obj[method3].argumentsField) {
         let tmp4;
         if (uri != null) {
           tmp4 = uri[tmp.argumentsField];
         }
         if (tmp4) {
-          if (typeof uri[tmp.argumentsField] === "object") {
-            if (null !== tmp5) {
+          if (typeof uri[obj[method3].argumentsField] === "object") {
+            if (null !== uri[obj[method3].argumentsField]) {
               const _Object = Object;
               const entries = Object.entries(tmp5);
-              const tmp29 = entries[Symbol.iterator]();
-              while (tmp29 !== undefined) {
-                let tmp10 = _slicedToArray(tmp7, 2);
-                let str = tmp10[0];
+              const tmp30 = entries[Symbol.iterator]();
+              while (tmp30 !== undefined) {
+                [str, tmp11] = tmp7;
                 let _HermesInternal = HermesInternal;
                 let _JSON = JSON;
                 let combined = "" + CLIENT_ADDRESS_ATTRIBUTE.MCP_REQUEST_ARGUMENT + "." + str.toLowerCase();
-                obj[combined] = JSON.stringify(tmp10[1]);
+                obj[combined] = JSON.stringify(tmp11);
                 continue;
               }
             }

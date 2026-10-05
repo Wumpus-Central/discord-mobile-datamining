@@ -1,10 +1,11 @@
 // _runtime/04337_milliseconds.js
 import requiredArgs_mod from "03959_requiredArgs.js";
 
+let tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp3 = { default: requiredArgs };
   const obj = { default: requiredArgs };
-  let tmp3 = obj;
 } else {
   tmp3 = requiredArgs;
 }
@@ -12,6 +13,13 @@ requiredArgs = tmp3;
 let c1 = 365.2425;
 
 export default function milliseconds(arg0) {
+  let days;
+  let hours;
+  let minutes;
+  let months;
+  let seconds;
+  let weeks;
+  let years;
   ({ years, months, weeks, days, hours, minutes, seconds } = arg0);
   requiredArgs.default(1, arguments);
   let num = 0;
@@ -44,5 +52,4 @@ export default function milliseconds(arg0) {
     sum5 = sum4 + seconds;
   }
   return Math.round(1000 * sum5);
-};
-export default exports.default;
+}

@@ -1,10 +1,10 @@
 // _runtime/00329_ImageLoader.js
-import _modDef330 from "metro/00330__.js";
+import _mod330 from "metro/00330__.js";
 
-const require = globalThis.__r;
+const _modDef330 = _mod330;
 
-for (const key10016 in require("metro/00330__.js")) {
-  arg5[key10016] = require("metro/00330__.js")[key10016];
+for (const key10016 in _mod330) {
+  exports[key10016] = _mod330[key10016];
   continue;
 }
 

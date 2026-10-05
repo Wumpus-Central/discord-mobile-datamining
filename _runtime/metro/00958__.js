@@ -1,16 +1,14 @@
 // _runtime/metro/00958__.js
 import _mod693 from "00693__.js";
-import ignoreNextOnError from "../00904_ignoreNextOnError.js";
+import _mod904 from "00904__.js";
 import _mod948 from "00948__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const checkAndWarnIfIsEmbeddedBrowserExtension = function checkAndWarnIfIsEmbeddedBrowserExtension() {
   let flag = false;
-  if (undefined !== ignoreNextOnError.WINDOW.window) {
-    const WINDOW = ignoreNextOnError.WINDOW;
+  if (undefined !== _mod904.WINDOW.window) {
+    const WINDOW = _mod904.WINDOW;
     flag = false;
     if (!WINDOW.nw) {
       let id;
@@ -22,14 +20,14 @@ export const checkAndWarnIfIsEmbeddedBrowserExtension = function checkAndWarnIfI
       }
       flag = false;
       if (id) {
-        const locationHref = _mod693.getLocationHref();
-        let someResult = ignoreNextOnError.WINDOW === ignoreNextOnError.WINDOW.top;
+        const tmpResult = _mod693;
+        const locationHref = tmpResult.getLocationHref();
+        let someResult = _mod904.WINDOW === _mod904.WINDOW.top;
         if (someResult) {
           const items = ["chrome-extension", "moz-extension", "ms-browser-extension", "safari-web-extension"];
           someResult = items.some((item) => closure_0.startsWith("" + item + "://"));
         }
         flag = !someResult;
-        const tmpResult = _mod693;
       }
     }
   }
@@ -37,13 +35,13 @@ export const checkAndWarnIfIsEmbeddedBrowserExtension = function checkAndWarnIfI
   if (flag2) {
     flag2 = true;
     if (_mod948.DEBUG_BUILD) {
-      _mod693.consoleSandbox(() => {
+      const tmpResult2 = _mod693;
+      tmpResult2.consoleSandbox(() => {
         console.error(
           "[Sentry] You cannot use Sentry.init() in a browser extension, see: https://docs.sentry.io/platforms/javascript/best-practices/browser-extensions/",
         );
       });
       flag2 = true;
-      const tmpResult2 = _mod693;
     }
   }
   return flag2;

@@ -1,43 +1,49 @@
 // _runtime/metro/12617__.js
-const require = arg1;
-const dependencyMap = arg6;
+const require = globalThis.__r;
+let _require, obj;
+
 function getFilenameToDebugIdMap(arg0) {
+  let _sentryDebugIds;
+  let closure_0;
+  let length;
+  let reduced;
   _require = arg0;
   _sentryDebugIds = require("12566__.js").GLOBAL_OBJ._sentryDebugIds;
   if (_sentryDebugIds) {
+    let tmp = globalThis;
     const _Object = Object;
     const keys = Object.keys(_sentryDebugIds);
-    if (reduced) {
+    const tmp2 = reduced;
+    if (tmp2) {
       return reduced;
     }
     reduced = keys.reduce((acc, item) => {
-      let filename;
+      let tmp7;
+      let tmp9;
       let tmp = obj;
-      if (!obj) {
+      if (!tmp) {
         obj = {};
         tmp = obj;
       }
       if (tmp[item]) {
-        acc[tmp2[0]] = tmp2[1];
+        acc[tmp[item][0]] = tmp[item][1];
       } else {
         const arr = closure_0(item);
         let diff = arr.length - 1;
         if (0 <= diff) {
           while (true) {
             let tmp5 = arr[diff];
-            filename = tmp5;
-            if (tmp5) {
-              filename = tmp5.filename;
-            }
-            if (filename) {
-              if (_sentryDebugIds[item]) {
+            tmp7 = tmp5 && tmp5.filename;
+            tmp9 = _sentryDebugIds[item];
+            if (tmp7) {
+              if (tmp9) {
                 break;
               }
             }
             diff = diff - 1;
           }
-          acc[filename] = tmp8;
-          const items = [filename, tmp8];
+          acc[tmp7] = tmp9;
+          const items = [tmp7, tmp9];
           obj[item] = items;
         }
       }
@@ -53,13 +59,14 @@ export const getDebugImagesForResources = function getDebugImagesForResources(ar
   const items = [];
   if (tmp) {
     const iter = arg1[Symbol.iterator]();
-    const nextResult = iter.next();
+    let nextResult = iter.next();
     while (iter !== undefined) {
       let tmp7 = nextResult;
+      if (tmp7) {
+        nextResult = tmp[tmp7];
+      }
       if (nextResult) {
-        obj = { type: "sourcemap", code_file: null, debug_id: null };
-        obj.code_file = tmp7;
-        obj.debug_id = tmp[tmp7];
+        obj = { type: "sourcemap", code_file: tmp7, debug_id: tmp[tmp7] };
         let arr = items.push(obj);
       }
       continue;

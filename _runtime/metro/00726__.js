@@ -1,28 +1,28 @@
 // _runtime/metro/00726__.js
 import _mod699 from "00699__.js";
-import consoleSandbox from "../00700_consoleSandbox.js";
-import _mod709 from "00709__.js";
+import CONSOLE_LEVELS from "../00700_CONSOLE_LEVELS.js";
+import UNKNOWN_FUNCTION from "../00709_UNKNOWN_FUNCTION.js";
 
-require = arg1;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-const dependencyMap = {};
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+let closure_2 = {};
 let closure_3 = {};
 
 export const addHandler = function addHandler(console, errorCallback) {
-  dependencyMap[console] = dependencyMap[console] || [];
-  dependencyMap[console].push(errorCallback);
-  const tmp2 = dependencyMap[console] || [];
+  const tmp2 = closure_2[console] || [];
+  closure_2[console] = tmp2;
+  const arr = closure_2[console];
+  arr.push(errorCallback);
 };
 export const maybeInstrument = function maybeInstrument(console, fn) {
   if (!closure_3[console]) {
-    tmp2[console] = true;
+    tmp[console] = true;
     try {
       fn();
-    } catch (tmp5) {
+    } catch (tmp4) {
       if (_mod699.DEBUG_BUILD) {
-        const debug = consoleSandbox.debug;
+        const debug = CONSOLE_LEVELS.debug;
         const _HermesInternal = HermesInternal;
-        debug.error("Error while instrumenting " + tmp, tmp5);
+        debug.error("Error while instrumenting " + console, tmp4);
       }
     }
   }
@@ -30,27 +30,32 @@ export const maybeInstrument = function maybeInstrument(console, fn) {
 export const resetInstrumentationHandlers = function resetInstrumentationHandlers() {
   const keys = Object.keys(closure_2);
   const item = keys.forEach((item) => {
-    dependencyMap[item] = undefined;
+    closure_1_2[item] = undefined;
   });
 };
 export const triggerHandlers = function triggerHandlers(arg0, arg1) {
-  let tmp8 = arg0;
-  if (arg0) {
-    tmp8 = dependencyMap[arg0];
-  }
-  if (tmp8) {
-    const iter = tmp8[Symbol.iterator]();
+  if (arg0 && closure_2[arg0]) {
+    const iter = (arg0 && closure_2[arg0])[Symbol.iterator]();
+    const nextResult = iter.next();
     if (iter !== undefined) {
       try {
-        tmp15(arg1);
-      } catch (tmp18) {
+        nextResult(arg1);
+      } catch (tmp11) {
         if (_mod699.DEBUG_BUILD) {
-          const debug = consoleSandbox.debug;
-          debug.error(tmp2 + tmp6 + tmp3 + _mod709.getFunctionName(tmp7) + tmp4, tmp18);
-          const tmp19Result = _mod709;
+          const debug = CONSOLE_LEVELS.debug;
+          const error = debug.error;
+          const _HermesInternal = HermesInternal;
+          const tmp12Result = UNKNOWN_FUNCTION;
+          error(
+            "Error while triggering instrumentation handler.\nType: " +
+              arg0 +
+              "\nName: " +
+              tmp12Result.getFunctionName(nextResult) +
+              "\nError:",
+            tmp11,
+          );
         }
       }
     }
-    const nextResult = iter.next();
   }
 };

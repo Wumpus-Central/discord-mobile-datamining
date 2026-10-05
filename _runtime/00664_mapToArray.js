@@ -1,14 +1,14 @@
 // _runtime/00664_mapToArray.js
 
 export default function mapToArray(size) {
-  c0 = -1;
+  let sum;
+  let closure_0 = -1;
   const ArrayResult = Array(size.size);
-  closure_1 = ArrayResult;
+  let closure_1 = ArrayResult;
   const item = size.forEach((item, index) => {
-    const sum = c0 + 1;
-    c0 = sum;
+    closure_0 = closure_0 + 1;
     const items = [index, item];
-    ArrayResult[sum] = items;
+    closure_1[closure_0] = items;
   });
   return ArrayResult;
 }

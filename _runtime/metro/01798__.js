@@ -1,9 +1,7 @@
 // _runtime/metro/01798__.js
 import _mod1788 from "01788__.js";
-import _mod1790 from "01790__.js";
+import react from "../01790_react.js";
 
-require = arg1;
-const dependencyMap = arg6;
 const __initData = {
   code: "function pnpm_useAnimatedScrollHandlerTs1(event){const{scrollHandlers,context}=this.__closure;const{onScroll:onScroll,onBeginDrag:onBeginDrag,onEndDrag:onEndDrag,onMomentumBegin:onMomentumBegin,onMomentumEnd:onMomentumEnd}=scrollHandlers;if(onScroll&&event.eventName.endsWith('onScroll')){onScroll(event,context);}else if(onBeginDrag&&event.eventName.endsWith('onScrollBeginDrag')){onBeginDrag(event,context);}else if(onEndDrag&&event.eventName.endsWith('onScrollEndDrag')){onEndDrag(event,context);}else if(onMomentumBegin&&event.eventName.endsWith('onMomentumScrollBegin')){onMomentumBegin(event,context);}else if(onMomentumEnd&&event.eventName.endsWith('onMomentumScrollEnd')){onMomentumEnd(event,context);}}",
 };
@@ -15,9 +13,11 @@ export const useAnimatedScrollHandler = function useAnimatedScrollHandler(fn, it
     tmp = obj2;
   }
   obj2 = tmp;
-  const handler = _mod1788.useHandler(tmp, items);
+  const obj = _mod1788;
+  const handler = obj.useHandler(tmp, items);
   const context = handler.context;
   items = ["onScroll"];
+  const doDependenciesDiffer = handler.doDependenciesDiffer;
   if (undefined !== tmp.onBeginDrag) {
     items.push("onScrollBeginDrag");
   }
@@ -31,6 +31,11 @@ export const useAnimatedScrollHandler = function useAnimatedScrollHandler(fn, it
     items.push("onMomentumScrollEnd");
   }
   fn = function l(eventName) {
+    let onBeginDrag;
+    let onEndDrag;
+    let onMomentumBegin;
+    let onMomentumEnd;
+    let onScroll;
     ({ onScroll, onBeginDrag, onEndDrag, onMomentumBegin, onMomentumEnd } = obj2);
     if (onScroll) {
       eventName = eventName.eventName;
@@ -57,7 +62,7 @@ export const useAnimatedScrollHandler = function useAnimatedScrollHandler(fn, it
       }
     }
     let endsWithResult = onMomentumEnd;
-    if (onMomentumEnd) {
+    if (endsWithResult) {
       const eventName5 = eventName.eventName;
       endsWithResult = eventName5.endsWith("onMomentumScrollEnd");
     }
@@ -68,5 +73,6 @@ export const useAnimatedScrollHandler = function useAnimatedScrollHandler(fn, it
   fn.__closure = { scrollHandlers: tmp, context };
   fn.__workletHash = 480432859268;
   fn.__initData = __initData;
-  return _mod1790.useEvent(fn, items, handler.doDependenciesDiffer);
+  const tmp2Result = react;
+  return tmp2Result.useEvent(fn, items, doDependenciesDiffer);
 };

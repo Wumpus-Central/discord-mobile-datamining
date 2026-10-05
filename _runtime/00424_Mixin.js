@@ -1,13 +1,17 @@
 // _runtime/00424_Mixin.js
-import measureDefault from "00068_measure.js";
+import Fragment from "react/00021_Fragment.js";
+import _modDef68 from "metro/00068__.js";
 import get_VersionDefault from "00273_get_Version.js";
 import SoundManagerDefault from "00294_SoundManager.js";
 import PositionDefault from "00425_Position.js";
 import BoundingDimensionsDefault from "00427_BoundingDimensions.js";
 import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import noop from "metro/00019__.js";
+import react from "00019_react.js";
 
-const jsx = fn(21).jsx;
+let obj5;
+let touchableHandleBlur;
+let touchableHandleFocus;
+const jsx = Fragment.jsx;
 const f19627 = (arg0) => {};
 const NOT_RESPONDER = "NOT_RESPONDER";
 const RESPONDER_INACTIVE_PRESS_IN = "RESPONDER_INACTIVE_PRESS_IN";
@@ -24,18 +28,12 @@ let obj = {
   RESPONDER_ACTIVE_LONG_PRESS_OUT: false,
   ERROR: false,
 };
-let obj2 = {};
+let obj2 = { RESPONDER_ACTIVE_PRESS_OUT: true, RESPONDER_ACTIVE_PRESS_IN: true };
 const merged = Object.assign(obj);
-obj2.RESPONDER_ACTIVE_PRESS_OUT = true;
-obj2.RESPONDER_ACTIVE_PRESS_IN = true;
-let obj3 = {};
+let obj3 = { RESPONDER_INACTIVE_PRESS_IN: true, RESPONDER_ACTIVE_PRESS_IN: true, RESPONDER_ACTIVE_LONG_PRESS_IN: true };
 const merged1 = Object.assign(obj);
-obj3.RESPONDER_INACTIVE_PRESS_IN = true;
-obj3.RESPONDER_ACTIVE_PRESS_IN = true;
-obj3.RESPONDER_ACTIVE_LONG_PRESS_IN = true;
-let obj4 = {};
+let obj4 = { RESPONDER_ACTIVE_LONG_PRESS_IN: true };
 const merged2 = Object.assign(obj);
-obj4.RESPONDER_ACTIVE_LONG_PRESS_IN = true;
 const DELAY = "DELAY";
 const RESPONDER_GRANT = "RESPONDER_GRANT";
 const RESPONDER_RELEASE = "RESPONDER_RELEASE";
@@ -43,7 +41,7 @@ const RESPONDER_TERMINATED = "RESPONDER_TERMINATED";
 const ENTER_PRESS_RECT = "ENTER_PRESS_RECT";
 const LEAVE_PRESS_RECT = "LEAVE_PRESS_RECT";
 const LONG_PRESS_DETECTED = "LONG_PRESS_DETECTED";
-const dependencyMap = {
+let closure_18 = {
   NOT_RESPONDER: {
     DELAY: "ERROR",
     RESPONDER_GRANT: "RESPONDER_INACTIVE_PRESS_IN",
@@ -117,7 +115,7 @@ const dependencyMap = {
     LONG_PRESS_DETECTED: "NOT_RESPONDER",
   },
 };
-const obj5 = {
+obj5 = {
   componentDidMount() {
     const isTV = get_VersionDefault.isTV;
   },
@@ -148,17 +146,18 @@ const obj5 = {
   touchableLongPressCancelsPress() {
     return true;
   },
-  touchableHandleResponderGrant(persist) {
+  touchableHandleResponderGrant(currentTarget) {
     const self = this;
-    persist.persist();
+    currentTarget = currentTarget.currentTarget;
+    currentTarget.persist();
     if (this.pressOutDelayTimeout) {
       const _clearTimeout = clearTimeout;
       clearTimeout(self.pressOutDelayTimeout);
     }
     self.pressOutDelayTimeout = null;
     self.state.touchable.touchState = NOT_RESPONDER;
-    self.state.touchable.responderID = persist.currentTarget;
-    self._receiveSignal(RESPONDER_GRANT, persist);
+    self.state.touchable.responderID = currentTarget;
+    self._receiveSignal(RESPONDER_GRANT, currentTarget);
     let num = 130;
     let num2 = 130;
     if (undefined !== self.touchableGetHighlightDelayMS) {
@@ -171,9 +170,9 @@ const obj5 = {
     if (0 !== num) {
       const _setTimeout = setTimeout;
       const _handleDelay = self._handleDelay;
-      self.touchableDelayTimeout = setTimeout(_handleDelay.bind(self, persist), num);
+      self.touchableDelayTimeout = setTimeout(_handleDelay.bind(self, currentTarget), num);
     } else {
-      self._handleDelay(persist);
+      self._handleDelay(currentTarget);
     }
     let num4 = 370;
     let num5 = 370;
@@ -185,7 +184,7 @@ const obj5 = {
       num4 = num5;
     }
     const _handleLongDelay = self._handleLongDelay;
-    self.longPressDelayTimeout = setTimeout(_handleLongDelay.bind(self, persist), num4 + num);
+    self.longPressDelayTimeout = setTimeout(_handleLongDelay.bind(self, currentTarget), num4 + num);
   },
   touchableHandleResponderRelease(arg0) {
     this.pressInLocation = null;
@@ -196,12 +195,19 @@ const obj5 = {
     this._receiveSignal(RESPONDER_TERMINATED, arg0);
   },
   touchableHandleResponderMove(nativeEvent) {
+    let bottom;
+    let changedTouches;
+    let left;
+    let right;
+    let top;
+    let touches;
     const self = this;
     if (this.state.touchable.positionOnActivate) {
+      let result;
       const positionOnActivate = self.state.touchable.positionOnActivate;
       const dimensionsOnActivate = self.state.touchable.dimensionsOnActivate;
       if (self.touchableGetPressRectOffset) {
-        let result = self.touchableGetPressRectOffset();
+        result = self.touchableGetPressRectOffset();
       } else {
         result = { left: 20, right: 20, top: 20, bottom: 20 };
       }
@@ -234,49 +240,40 @@ const obj5 = {
         tmp3 = sum2;
         tmp4 = sum1;
         tmp5 = sum;
-        const tmp6 = touchableGetHitSlopResult.left || 0;
       }
       nativeEvent = nativeEvent.nativeEvent;
       if (typeof f19627 === "function") {
         ({ touches, changedTouches } = nativeEvent);
-        let tmp12 = touches;
-        if (touches) {
-          tmp12 = touches.length > 0;
-        }
-        let tmp13 = changedTouches;
-        if (changedTouches) {
-          tmp13 = changedTouches.length > 0;
-        }
-        if (!tmp12) {
+        const tmp13 = changedTouches && changedTouches.length > 0;
+        if (!(touches && touches.length > 0)) {
+          let first;
           if (tmp13) {
-            let first = changedTouches[0];
-          }
-          let pageX = first;
-          if (first) {
-            pageX = first.pageX;
-          }
-          let pageY = first;
-          if (first) {
-            pageY = first.pageY;
+            first = changedTouches[0];
           }
           if (self.pressInLocation) {
             if (
-              self._getDistanceBetweenPoints(pageX, pageY, self.pressInLocation.pageX, self.pressInLocation.pageY) > 10
+              self._getDistanceBetweenPoints(
+                first && first.pageX,
+                first && first.pageY,
+                self.pressInLocation.pageX,
+                self.pressInLocation.pageY,
+              ) > 10
             ) {
               const result1 = self._cancelLongPressDelayTimeout();
             }
           }
-          if (pageX > positionOnActivate.left - tmp5) {
-            if (pageY > positionOnActivate.top - tmp4) {
-              if (pageX < positionOnActivate.left + dimensionsOnActivate.width + tmp3) {
-                if (pageY < positionOnActivate.top + dimensionsOnActivate.height + sum3) {
+          if ((first && first.pageX) > positionOnActivate.left - tmp5) {
+            if ((first && first.pageY) > positionOnActivate.top - tmp4) {
+              if ((first && first.pageX) < positionOnActivate.left + dimensionsOnActivate.width + tmp3) {
+                if ((first && first.pageY) < positionOnActivate.top + dimensionsOnActivate.height + sum3) {
+                  const touchState = self.state.touchable.touchState;
                   self._receiveSignal(ENTER_PRESS_RECT, nativeEvent);
-                  if (tmp24) {
+                  const tmp26 =
+                    self.state.touchable.touchState === RESPONDER_INACTIVE_PRESS_IN &&
+                    touchState !== RESPONDER_INACTIVE_PRESS_IN;
+                  if (tmp26) {
                     const result2 = self._cancelLongPressDelayTimeout();
                   }
-                  tmp24 =
-                    self.state.touchable.touchState === RESPONDER_INACTIVE_PRESS_IN &&
-                    self.state.touchable.touchState !== RESPONDER_INACTIVE_PRESS_IN;
                 }
               }
             }
@@ -284,7 +281,7 @@ const obj5 = {
           const result3 = self._cancelLongPressDelayTimeout();
           self._receiveSignal(LEAVE_PRESS_RECT, nativeEvent);
         }
-        if (tmp12) {
+        if (touches && touches.length > 0) {
           nativeEvent = touches[0];
         }
         first = nativeEvent;
@@ -310,53 +307,42 @@ const obj5 = {
     const responderID = this.state.touchable.responderID;
     if (null != responderID) {
       if (typeof responderID === "number") {
-        measureDefault.measure(responderID, self._handleQueryLayout);
+        const obj = _modDef68;
+        obj.measure(responderID, self._handleQueryLayout);
       } else {
         responderID.measure(self._handleQueryLayout);
       }
     }
   },
   _handleQueryLayout(arg0, arg1, arg2, arg3, arg4, arg5) {
-    let tmp = arg0;
-    if (!arg0) {
-      tmp = arg1;
-    }
-    if (!tmp) {
-      tmp = arg2;
-    }
-    if (!tmp) {
-      tmp = arg3;
-    }
-    if (!tmp) {
-      tmp = arg4;
-    }
-    if (!tmp) {
-      tmp = arg5;
-    }
+    const tmp = arg0 || arg1 || arg2 || arg3 || arg4 || arg5;
     if (tmp) {
       const self = this;
       if (this.state.touchable.positionOnActivate) {
-        PositionDefault.release(self.state.touchable.positionOnActivate);
+        const obj = PositionDefault;
+        obj.release(self.state.touchable.positionOnActivate);
       }
       if (self.state.touchable.dimensionsOnActivate) {
-        BoundingDimensionsDefault.release(self.state.touchable.dimensionsOnActivate);
+        obj2 = BoundingDimensionsDefault;
+        obj2.release(self.state.touchable.dimensionsOnActivate);
       }
-      self.state.touchable.positionOnActivate = PositionDefault.getPooled(arg4, arg5);
-      self.state.touchable.dimensionsOnActivate = BoundingDimensionsDefault.getPooled(arg2, arg3);
+      const touchable = self.state.touchable;
+      obj3 = PositionDefault;
+      touchable.positionOnActivate = obj3.getPooled(arg4, arg5);
+      const touchable2 = self.state.touchable;
+      obj4 = BoundingDimensionsDefault;
+      touchable2.dimensionsOnActivate = obj4.getPooled(arg2, arg3);
     }
   },
-  _handleDelay(persist) {
+  _handleDelay(currentTarget) {
     this.touchableDelayTimeout = null;
-    this._receiveSignal(DELAY, persist);
+    this._receiveSignal(DELAY, currentTarget);
   },
   _handleLongDelay(arg0) {
     const self = this;
     this.longPressDelayTimeout = null;
     const touchState = this.state.touchable.touchState;
-    let tmp = touchState !== RESPONDER_ACTIVE_PRESS_IN;
-    if (tmp) {
-      tmp = touchState !== RESPONDER_ACTIVE_LONG_PRESS_IN;
-    }
+    const tmp = touchState !== RESPONDER_ACTIVE_PRESS_IN && touchState !== RESPONDER_ACTIVE_LONG_PRESS_IN;
     if (!tmp) {
       self._receiveSignal(LONG_PRESS_DETECTED, arg0);
     }
@@ -364,14 +350,16 @@ const obj5 = {
   _receiveSignal(arg0, nativeEvent) {
     const self = this;
     const touchState = this.state.touchable.touchState;
-    let tmp = dependencyMap[touchState];
+    let tmp = closure_18[touchState];
+    const responderID = this.state.touchable.responderID;
     if (tmp) {
-      tmp = dependencyMap[touchState][arg0];
+      tmp = closure_18[touchState][arg0];
     }
-    if (this.state.touchable.responderID) {
+    if (responderID) {
       if (tmp) {
         if (tmp === ERROR) {
           const _HermesInternal2 = HermesInternal;
+          const _Error2 = Error;
           let str9 = "<<host component>>`";
           if (
             "Touchable cannot transition from `" +
@@ -384,14 +372,17 @@ const obj5 = {
           ) {
             str9 = self.state.touchable.responderID;
           }
-          const error = new Error(str9);
-          throw error;
+          const self4 = this;
+          const self5 = this;
+          const _Error21 = new _Error2(str9);
+          throw _Error21;
         } else if (touchState !== tmp) {
           const result = self._performSideEffectsForTransition(touchState, tmp, arg0, nativeEvent);
           self.state.touchable.touchState = tmp;
         }
       } else {
         const _HermesInternal = HermesInternal;
+        const _Error = Error;
         let str4 = "host component`";
         if (
           "Unrecognized signal `" +
@@ -404,8 +395,10 @@ const obj5 = {
         ) {
           str4 = self.state.touchable.responderID;
         }
-        const error1 = new Error(str4);
-        throw error1;
+        const self2 = this;
+        const self3 = this;
+        const _Error1 = new _Error(str4);
+        throw _Error1;
       }
     }
   },
@@ -418,49 +411,33 @@ const obj5 = {
     self.longPressDelayTimeout = null;
   },
   _isHighlight(touchState) {
-    let tmp = touchState === RESPONDER_ACTIVE_PRESS_IN;
-    if (!tmp) {
-      tmp = touchState === RESPONDER_ACTIVE_LONG_PRESS_IN;
-    }
-    return tmp;
+    return touchState === RESPONDER_ACTIVE_PRESS_IN || touchState === RESPONDER_ACTIVE_LONG_PRESS_IN;
   },
   _savePressInLocation(nativeEvent) {
+    let changedTouches;
+    let tmp4;
+    let tmp5;
+    let tmp6;
+    let tmp7;
+    let touches;
     nativeEvent = nativeEvent.nativeEvent;
     if (typeof f19627 === "function") {
       ({ touches, changedTouches } = nativeEvent);
-      let tmp = touches;
-      if (touches) {
-        tmp = touches.length > 0;
-      }
-      let tmp2 = changedTouches;
-      if (changedTouches) {
-        tmp2 = changedTouches.length > 0;
-      }
-      if (!tmp) {
+      const tmp2 = changedTouches && changedTouches.length > 0;
+      if (!(touches && touches.length > 0)) {
+        let first;
         if (tmp2) {
-          let first = changedTouches[0];
-        }
-        let pageX = first;
-        if (first) {
-          pageX = first.pageX;
-        }
-        let pageY = first;
-        if (first) {
-          pageY = first.pageY;
-        }
-        let locationX = first;
-        if (first) {
-          locationX = first.locationX;
-        }
-        let locationY = first;
-        if (first) {
-          locationY = first.locationY;
+          first = changedTouches[0];
         }
         const self = this;
-        const obj = { pageX, pageY, locationX, locationY };
+        const obj = { pageX: tmp4, pageY: tmp5, locationX: tmp6, locationY: tmp7 };
+        tmp4 = first && first.pageX;
+        tmp5 = first && first.pageY;
+        tmp6 = first && first.locationX;
+        tmp7 = first && first.locationY;
         this.pressInLocation = obj;
       }
-      if (tmp) {
+      if (touches && touches.length > 0) {
         nativeEvent = touches[0];
       }
       first = nativeEvent;
@@ -468,43 +445,27 @@ const obj5 = {
       throw new TypeError("Trying to call a non-function");
     }
   },
-  _getDistanceBetweenPoints(pageX, pageY, pageX2, pageY2) {
-    const diff = pageX - pageX2;
-    const diff1 = pageY - pageY2;
+  _getDistanceBetweenPoints(arg0, arg1, pageX, pageY) {
+    const diff = arg0 - pageX;
+    const diff1 = arg1 - pageY;
     return Math.sqrt(diff * diff + diff1 * diff1);
   },
-  _performSideEffectsForTransition(touchState, touchState, arg2, nativeEvent) {
+  _performSideEffectsForTransition(touchState, touchState2, arg2, nativeEvent) {
     const self = this;
     const _isHighlightResult = this._isHighlight(touchState);
     let _isHighlightResult1 = this._isHighlight(touchState);
-    let tmp3 = arg2 === RESPONDER_TERMINATED;
-    if (!tmp3) {
-      tmp3 = arg2 === RESPONDER_RELEASE;
-    }
+    const tmp3 = arg2 === RESPONDER_TERMINATED || arg2 === RESPONDER_RELEASE;
     if (tmp3) {
       const result = self._cancelLongPressDelayTimeout();
     }
-    let tmp6 = touchState === NOT_RESPONDER;
-    if (tmp6) {
-      tmp6 = touchState === RESPONDER_INACTIVE_PRESS_IN;
-    }
+    let tmp6 = touchState === NOT_RESPONDER && touchState === RESPONDER_INACTIVE_PRESS_IN;
     if (!tmp6) {
-      let tmp9 = !tmp8;
-      if (!obj2[touchState]) {
-        tmp9 = obj2[touchState];
-      }
-      tmp6 = tmp9;
+      tmp6 = !obj2[touchState] && obj2[touchState];
     }
     if (tmp6) {
       const result1 = self._remeasureMetricsOnActivation();
     }
-    let touchableHandleLongPress = obj3[touchState];
-    if (touchableHandleLongPress) {
-      touchableHandleLongPress = arg2 === LONG_PRESS_DETECTED;
-    }
-    if (touchableHandleLongPress) {
-      touchableHandleLongPress = self.touchableHandleLongPress;
-    }
+    const touchableHandleLongPress = obj3[touchState] && arg2 === LONG_PRESS_DETECTED && self.touchableHandleLongPress;
     if (touchableHandleLongPress) {
       const result2 = self.touchableHandleLongPress(nativeEvent);
     }
@@ -514,18 +475,18 @@ const obj5 = {
       }
       if (obj3[touchState]) {
         if (arg2 === RESPONDER_RELEASE) {
-          let tmp20 = obj4[touchState];
-          if (tmp20) {
+          let tmp19 = obj4[touchState];
+          if (tmp19) {
             const onLongPress = self.props.onLongPress;
-            let tmp19 = !onLongPress;
+            let tmp18 = !onLongPress;
             if (onLongPress) {
-              tmp19 = !self.touchableLongPressCancelsPress();
+              tmp18 = !self.touchableLongPressCancelsPress();
             }
-            tmp20 = tmp19;
+            tmp19 = tmp18;
           }
-          let touchableHandlePress = !tmp21;
+          let touchableHandlePress = !tmp20;
           if (obj4[touchState]) {
-            touchableHandlePress = tmp20;
+            touchableHandlePress = tmp19;
           }
           if (touchableHandlePress) {
             touchableHandlePress = self.touchableHandlePress;
@@ -539,7 +500,8 @@ const obj5 = {
               self._endHighlight(nativeEvent);
             }
             if (!self.props.touchSoundDisabled) {
-              SoundManagerDefault.playTouchSound();
+              const obj = SoundManagerDefault;
+              obj.playTouchSound();
             }
             self.touchableHandlePress(nativeEvent);
           }
@@ -551,11 +513,8 @@ const obj5 = {
       }
       self.touchableDelayTimeout = null;
     }
-    let tmp15 = !_isHighlightResult1;
-    if (!_isHighlightResult1) {
-      tmp15 = _isHighlightResult;
-    }
-    if (tmp15) {
+    const tmp14 = !_isHighlightResult1 && _isHighlightResult;
+    if (tmp14) {
       self._endHighlight(nativeEvent);
     }
   },
@@ -568,27 +527,28 @@ const obj5 = {
   },
   _endHighlight(nativeEvent) {
     const self = this;
-    closure_0 = nativeEvent;
+    let closure_0 = nativeEvent;
     if (this.touchableHandleActivePressOut) {
       if (self.touchableGetPressOutDelayMS) {
         if (self.touchableGetPressOutDelayMS()) {
           const _setTimeout = setTimeout;
           self.pressOutDelayTimeout = setTimeout(() => {
-            const result = self.touchableHandleActivePressOut(closure_0);
+            const result = self.touchableHandleActivePressOut(nativeEvent);
           }, self.touchableGetPressOutDelayMS());
         }
       }
       let result = self.touchableHandleActivePressOut(nativeEvent);
     }
   },
-  withoutDefaultFocusAndBlur: {},
+  withoutDefaultFocusAndBlur: _objectWithoutProperties(obj5, ["touchableHandleFocus", "touchableHandleBlur"]),
 };
 ({ touchableHandleFocus, touchableHandleBlur } = obj5);
-obj5.withoutDefaultFocusAndBlur = _objectWithoutProperties(obj5, ["touchableHandleFocus", "touchableHandleBlur"]);
 
 export default {
   Mixin: obj5,
   renderDebugView(arg0) {
+    let color;
+    let hitSlop;
     ({ color, hitSlop } = arg0);
     return null;
   },

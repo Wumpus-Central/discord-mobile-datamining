@@ -1,6 +1,6 @@
 // _runtime/00655_stackSet.js
 import MapCache from "00607_MapCache.js";
-import _mod622 from "metro/00622__.js";
+import getNative from "00622_getNative.js";
 import ListCache from "00623_ListCache.js";
 
 export default function stackSet(arg0, arg1) {
@@ -8,16 +8,17 @@ export default function stackSet(arg0, arg1) {
   const __data__ = this.__data__;
   let obj = __data__;
   if (__data__ instanceof ListCache) {
-    const __data__1 = __data__.__data__;
-    if (_mod622) {
-      if (__data__1.length >= 199) {
-        const tmp6 = new MapCache(__data__1);
-        self.__data__ = tmp6;
-        obj = tmp6;
+    if (getNative) {
+      if (__data__.__data__.length >= 199) {
+        const self2 = this;
+        const self3 = this;
+        const tmp4 = new MapCache(__data__.__data__);
+        self.__data__ = tmp4;
+        obj = tmp4;
       }
     }
     const items = [arg0, arg1];
-    __data__1.push(items);
+    __data__.__data__.push(items);
     const sum = __data__.size + 1;
     __data__.size = sum;
     self.size = sum;

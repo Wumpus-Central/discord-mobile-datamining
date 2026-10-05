@@ -1,19 +1,19 @@
 // _runtime/metro/06282__.js
-import cancelAnimation from "../01643_cancelAnimation.js";
-import value22 from "../06113_value2.js";
+import _mod1643 from "01643__.js";
+import GESTURE_SOURCE from "../06113_GESTURE_SOURCE.js";
 import _mod6283 from "06283__.js";
-import _mod6284 from "06284__.js";
-import get_ActivityIndicator from "00017__.js";
+import snapPoint from "../06284_snapPoint.js";
+import react_native from "../00017_react-native.js";
 
-const Platform = get_ActivityIndicator.Platform;
+const Platform = react_native.Platform;
 let obj = {
   initialPosition: 0,
-  initialKeyboardState: value22.KEYBOARD_STATE.UNDETERMINED,
+  initialKeyboardState: GESTURE_SOURCE.KEYBOARD_STATE.UNDETERMINED,
   isScrollablePositionLocked: false,
 };
-const dismiss = get_ActivityIndicator.Keyboard.dismiss;
+const dismiss = react_native.Keyboard.dismiss;
 const fn = function t(arg0) {
-  closure_0 = arg0;
+  let closure_0 = arg0;
   const keys = Object.keys(arg0);
   const mapped = keys.map((item) => {
     closure_0[item] = undefined;
@@ -38,7 +38,24 @@ let closure_9 = {
 };
 
 export const useGestureEventsHandlersDefault = () => {
-  const bottomSheetInternal = animatedPosition(animatedSnapPoints[2]).useBottomSheetInternal();
+  let animatedContainerHeight;
+  let animatedKeyboardHeight;
+  let animatedPosition;
+  let animatedSnapPoints;
+  let handleOnChange;
+  let handleOnEnd;
+  let handleOnFinalize;
+  let handleOnStart;
+  let items;
+  let items1;
+  let items2;
+  let items3;
+  let obj10;
+  let obj4;
+  let obj6;
+  let obj8;
+  obj = animatedPosition(animatedSnapPoints[2]);
+  const bottomSheetInternal = obj.useBottomSheetInternal();
   animatedPosition = bottomSheetInternal.animatedPosition;
   animatedSnapPoints = bottomSheetInternal.animatedSnapPoints;
   const animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
@@ -55,35 +72,35 @@ export const useGestureEventsHandlersDefault = () => {
   const enableBlurKeyboardOnGesture = bottomSheetInternal.enableBlurKeyboardOnGesture;
   const animateToPosition = bottomSheetInternal.animateToPosition;
   const stopAnimation = bottomSheetInternal.stopAnimation;
-  obj = animatedPosition(animatedSnapPoints[2]);
+  const tmp2 = animatedPosition(animatedSnapPoints[3]);
+  let obj2 = {};
+  const useSharedValue = tmp2.useSharedValue;
   let merged = Object.assign(animatedContainerHeight);
-  const sharedValue = animatedPosition(animatedSnapPoints[3]).useSharedValue({});
-  const obj4 = { handleOnStart: null, handleOnChange: null, handleOnEnd: null, handleOnFinalize: null };
-  let obj2 = animatedPosition(animatedSnapPoints[3]);
-  let obj3 = {};
-  function handleOnStart(value, arg1) {
+  const sharedValue = useSharedValue(obj2);
+  let obj3 = {
+    handleOnStart: obj4.useWorkletCallback(handleOnStart, items),
+    handleOnChange: obj6.useWorkletCallback(handleOnChange, items1),
+    handleOnEnd: obj8.useWorkletCallback(handleOnEnd, items2),
+    handleOnFinalize: obj10.useWorkletCallback(handleOnFinalize, items3),
+  };
+  handleOnStart = function handleOnStart(value, arg1) {
     stopAnimation();
-    let tmp3 = enableBlurKeyboardOnGesture;
-    if (enableBlurKeyboardOnGesture) {
-      tmp3 = tmp2 === value22.KEYBOARD_STATE.SHOWN;
-    }
+    const tmp3 = enableBlurKeyboardOnGesture && tmp2 === GESTURE_SOURCE.KEYBOARD_STATE.SHOWN;
     if (tmp3) {
-      const HIDDEN = value22.KEYBOARD_STATE.HIDDEN;
-      cancelAnimation.runOnJS(dismiss)();
+      const HIDDEN = GESTURE_SOURCE.KEYBOARD_STATE.HIDDEN;
+      obj = _mod1643;
+      obj.runOnJS(dismiss)();
     }
-    const obj2 = {};
+    const obj2 = { initialPosition: animatedPosition.value, initialKeyboardState: animatedKeyboardState.value };
     const merged = Object.assign(sharedValue.value);
-    obj2.initialPosition = animatedPosition.value;
-    obj2.initialKeyboardState = animatedKeyboardState.value;
     sharedValue.value = obj2;
     if (animatedScrollableContentOffsetY.value > 0) {
-      const obj3 = {};
+      const obj3 = { isScrollablePositionLocked: true };
       const merged1 = Object.assign(sharedValue.value);
-      obj3.isScrollablePositionLocked = true;
       sharedValue.value = obj3;
     }
-  }
-  const obj5 = animatedPosition(animatedSnapPoints[3]);
+  };
+  obj4 = animatedPosition(animatedSnapPoints[3]);
   handleOnStart.__closure = {
     stopAnimation,
     animatedKeyboardState,
@@ -97,15 +114,14 @@ export const useGestureEventsHandlersDefault = () => {
   };
   handleOnStart.__workletHash = 9400766587341;
   handleOnStart.__initData = animatedClosedPosition;
-  const items = [
+  items = [
     stopAnimation,
     enableBlurKeyboardOnGesture,
     animatedPosition,
     animatedKeyboardState,
     animatedScrollableContentOffsetY,
   ];
-  obj4.handleOnStart = obj5.useWorkletCallback(handleOnStart, items);
-  const obj6 = {
+  ({
     stopAnimation,
     animatedKeyboardState,
     enableBlurKeyboardOnGesture,
@@ -115,20 +131,19 @@ export const useGestureEventsHandlersDefault = () => {
     context: sharedValue,
     animatedPosition,
     animatedScrollableContentOffsetY,
-  };
-  function handleOnChange(arg0, translationY) {
+  });
+  handleOnChange = function handleOnChange(arg0, translationY) {
+    let value3;
     let initialPosition = animatedHighestSnapPoint.value;
-    value = isInTemporaryPosition.value;
+    let value = isInTemporaryPosition.value;
+    translationY = translationY.translationY;
     if (value) {
-      value = sharedValue.value.initialKeyboardState === value22.KEYBOARD_STATE.SHOWN;
+      value = sharedValue.value.initialKeyboardState === GESTURE_SOURCE.KEYBOARD_STATE.SHOWN;
     }
     if (value) {
       initialPosition = sharedValue.value.initialPosition;
     }
-    value2 = isInTemporaryPosition.value;
-    if (value2) {
-      value2 = sharedValue.value.initialPosition < initialPosition;
-    }
+    const value2 = isInTemporaryPosition.value && sharedValue.value.initialPosition < initialPosition;
     if (value2) {
       initialPosition = sharedValue.value.initialPosition;
     }
@@ -139,47 +154,47 @@ export const useGestureEventsHandlersDefault = () => {
     }
     if (sharedValue.value.initialPosition !== initialPosition) {
       let num = 0;
-      const sum = sharedValue.value.initialPosition + translationY.translationY;
+      const sum = sharedValue.value.initialPosition + translationY;
       const sum1 = sum + num;
       let isScrollablePositionLocked = sharedValue.value.isScrollablePositionLocked;
+      obj = _mod6283;
+      const clampResult = obj.clamp(sum1, initialPosition, value3);
       if (isScrollablePositionLocked) {
-        isScrollablePositionLocked = arg0 === value22.GESTURE_SOURCE.CONTENT;
+        isScrollablePositionLocked = arg0 === GESTURE_SOURCE.GESTURE_SOURCE.CONTENT;
       }
       if (isScrollablePositionLocked) {
         isScrollablePositionLocked = animatedPosition.value === initialPosition;
       }
       if (isScrollablePositionLocked) {
-        const obj2 = {};
+        const obj2 = { isScrollablePositionLocked: false };
         const merged = Object.assign(sharedValue.value);
-        obj2.isScrollablePositionLocked = false;
         sharedValue.value = obj2;
       }
       if (enableOverDrag) {
-        if (arg0 === value22.GESTURE_SOURCE.HANDLE) {
+        if (arg0 === GESTURE_SOURCE.GESTURE_SOURCE.HANDLE) {
           if (sum < initialPosition) {
             const _Math3 = Math;
             animatedPosition.value = initialPosition - Math.sqrt(initialPosition - sum + 1) * overDragResistanceFactor;
           }
         }
-        if (arg0 === value22.GESTURE_SOURCE.HANDLE) {
+        if (arg0 === GESTURE_SOURCE.GESTURE_SOURCE.HANDLE) {
           if (sum > value3) {
             const _Math2 = Math;
             animatedPosition.value = value3 + Math.sqrt(sum - value3 + 1) * overDragResistanceFactor;
           }
         }
-        if (arg0 === value22.GESTURE_SOURCE.CONTENT) {
+        if (arg0 === GESTURE_SOURCE.GESTURE_SOURCE.CONTENT) {
           if (sum + num > value3) {
             const _Math = Math;
             animatedPosition.value = value3 + Math.sqrt(sum + num - value3 + 1) * overDragResistanceFactor;
           }
         }
       }
-      animatedPosition.value = _mod6283.clamp(sum1, initialPosition, value3);
-      const clampResult = _mod6283.clamp(sum1, initialPosition, value3);
+      animatedPosition.value = clampResult;
     }
     num = -1 * animatedScrollableContentOffsetY.value;
-  }
-  const obj7 = animatedPosition(animatedSnapPoints[3]);
+  };
+  obj6 = animatedPosition(animatedSnapPoints[3]);
   handleOnChange.__closure = {
     animatedHighestSnapPoint,
     isInTemporaryPosition,
@@ -200,7 +215,7 @@ export const useGestureEventsHandlersDefault = () => {
   };
   handleOnChange.__workletHash = 6221237616078;
   handleOnChange.__initData = animatedScrollableContentOffsetY;
-  const items1 = [
+  items1 = [
     enableOverDrag,
     enablePanDownToClose,
     overDragResistanceFactor,
@@ -213,8 +228,7 @@ export const useGestureEventsHandlersDefault = () => {
     animatedScrollableType,
     animatedScrollableContentOffsetY,
   ];
-  obj4.handleOnChange = obj7.useWorkletCallback(handleOnChange, items1);
-  const obj8 = {
+  ({
     animatedHighestSnapPoint,
     isInTemporaryPosition,
     context: sharedValue,
@@ -231,56 +245,49 @@ export const useGestureEventsHandlersDefault = () => {
     animatedScrollableType,
     SCROLLABLE_TYPE: animatedPosition(animatedSnapPoints[1]).SCROLLABLE_TYPE,
     overDragResistanceFactor,
-  };
-  function handleOnEnd(arg0, translationY) {
+  });
+  handleOnEnd = function handleOnEnd(arg0, translationY) {
+    let absoluteY;
+    let velocityY;
     ({ absoluteY, velocityY } = translationY);
+    translationY = translationY.translationY;
+    const tmp = animatedPosition.value === animatedHighestSnapPoint.value;
     if (isInTemporaryPosition.value) {
       if (sharedValue.value.initialPosition >= animatedPosition.value) {
         if (sharedValue.value.initialPosition > animatedPosition.value) {
-          animateToPosition(sharedValue.value.initialPosition, value22.ANIMATION_SOURCE.GESTURE, velocityY / 2);
+          animateToPosition(sharedValue.value.initialPosition, GESTURE_SOURCE.ANIMATION_SOURCE.GESTURE, velocityY / 2);
         }
       }
     }
-    if (animatedScrollableType.value !== value22.SCROLLABLE_TYPE.UNDETERMINED) {
-      value = animatedScrollableType.value;
-      const VIEW = value22.SCROLLABLE_TYPE.VIEW;
+    if (animatedScrollableType.value !== GESTURE_SOURCE.SCROLLABLE_TYPE.UNDETERMINED) {
+      const value = animatedScrollableType.value;
+      const VIEW = GESTURE_SOURCE.SCROLLABLE_TYPE.VIEW;
     }
+    const tmp5 =
+      sharedValue.value.initialKeyboardState === GESTURE_SOURCE.KEYBOARD_STATE.SHOWN &&
+      animatedPosition.value > sharedValue.value.initialPosition;
     if (tmp5) {
-      cancelAnimation.runOnJS(dismiss)();
-      const tmp2Result = cancelAnimation;
+      const tmp2Result = _mod1643;
+      tmp2Result.runOnJS(dismiss)();
     }
     if (isInTemporaryPosition.value) {
       isInTemporaryPosition.value = false;
     }
-    value2 = animatedSnapPoints.value;
+    const value2 = animatedSnapPoints.value;
     const substr = value2.slice();
     if (enablePanDownToClose) {
       substr.unshift(animatedClosedPosition.value);
     }
-    const tmp = animatedPosition.value === animatedHighestSnapPoint.value;
-    tmp5 =
-      sharedValue.value.initialKeyboardState === value22.KEYBOARD_STATE.SHOWN &&
-      animatedPosition.value > sharedValue.value.initialPosition;
-    const snapPointResult = _mod6284.snapPoint(
-      translationY.translationY + sharedValue.value.initialPosition,
-      velocityY,
-      substr,
-    );
+    const tmp2Result2 = snapPoint;
+    const snapPointResult = tmp2Result2.snapPoint(translationY + sharedValue.value.initialPosition, velocityY, substr);
     if (snapPointResult !== animatedPosition.value) {
-      let tmp12 = arg0 === value22.GESTURE_SOURCE.CONTENT;
-      if (tmp12) {
-        tmp12 = animatedScrollableContentOffsetY.value > 0;
-      }
-      if (tmp12) {
-        tmp12 = tmp;
-      }
-      if (!tmp12) {
-        animateToPosition(snapPointResult, value22.ANIMATION_SOURCE.GESTURE, velocityY / 2);
+      const tmp13 = arg0 === GESTURE_SOURCE.GESTURE_SOURCE.CONTENT && animatedScrollableContentOffsetY.value > 0 && tmp;
+      if (!tmp13) {
+        animateToPosition(snapPointResult, GESTURE_SOURCE.ANIMATION_SOURCE.GESTURE, velocityY / 2);
       }
     }
-    const tmp2Result2 = _mod6284;
-  }
-  const obj9 = animatedPosition(animatedSnapPoints[3]);
+  };
+  obj8 = animatedPosition(animatedSnapPoints[3]);
   handleOnEnd.__closure = {
     animatedHighestSnapPoint,
     animatedPosition,
@@ -306,7 +313,7 @@ export const useGestureEventsHandlersDefault = () => {
   };
   handleOnEnd.__workletHash = 8667894097210;
   handleOnEnd.__initData = enableOverDrag;
-  const items2 = [
+  items2 = [
     enablePanDownToClose,
     isInTemporaryPosition,
     isScrollableRefreshable,
@@ -319,8 +326,7 @@ export const useGestureEventsHandlersDefault = () => {
     animatedScrollableContentOffsetY,
     animateToPosition,
   ];
-  obj4.handleOnEnd = obj9.useWorkletCallback(handleOnEnd, items2);
-  const obj10 = {
+  ({
     animatedHighestSnapPoint,
     animatedPosition,
     GESTURE_SOURCE: animatedPosition(animatedSnapPoints[1]).GESTURE_SOURCE,
@@ -342,10 +348,10 @@ export const useGestureEventsHandlersDefault = () => {
     animatedClosedPosition,
     snapPoint: animatedPosition(animatedSnapPoints[5]).snapPoint,
     animatedScrollableContentOffsetY,
-  };
-  function handleOnFinalize() {
+  });
+  handleOnFinalize = function handleOnFinalize() {
     if (typeof fn === "function") {
-      closure_0 = sharedValue;
+      let closure_0 = sharedValue;
       const _Object = Object;
       const keys = Object.keys(sharedValue);
       const mapped = keys.map((item) => {
@@ -354,11 +360,12 @@ export const useGestureEventsHandlersDefault = () => {
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-  }
-  handleOnFinalize.__closure = { resetContext: animatedHighestSnapPoint, context: sharedValue };
+  };
+  const obj11 = { resetContext: animatedHighestSnapPoint, context: sharedValue };
+  handleOnFinalize.__closure = obj11;
   handleOnFinalize.__workletHash = 8824211868683;
   handleOnFinalize.__initData = enablePanDownToClose;
-  const items3 = [sharedValue];
-  obj4.handleOnFinalize = animatedPosition(animatedSnapPoints[3]).useWorkletCallback(handleOnFinalize, items3);
-  return obj4;
+  items3 = [sharedValue];
+  obj10 = animatedPosition(animatedSnapPoints[3]);
+  return obj3;
 };

@@ -1,5 +1,5 @@
 // _runtime/00847_ANTHROPIC_AI_INSTRUMENTED_METHODS.js
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const ANTHROPIC_AI_INSTRUMENTED_METHODS = [
   "messages.create",

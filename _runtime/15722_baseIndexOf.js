@@ -4,10 +4,12 @@ import strictIndexOf from "15723_strictIndexOf.js";
 import baseIsNaN from "15724_baseIsNaN.js";
 
 export default function baseIndexOf(arg0, arg1, arg2) {
+  let tmp3Result;
   if (arg1 == arg1) {
-    let tmp3Result = strictIndexOf(arg0, arg1, arg2);
+    tmp3Result = strictIndexOf(arg0, arg1, arg2);
   } else {
-    tmp3Result = baseFindIndex(arg0, baseIsNaN, arg2);
+    const tmp3 = baseFindIndex;
+    tmp3Result = tmp3(arg0, baseIsNaN, arg2);
   }
   return tmp3Result;
 }

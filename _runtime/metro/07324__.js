@@ -2,9 +2,6 @@
 import _mod7317 from "07317__.js";
 import _mod7318 from "07318__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
 export const isBLEND = function isBLEND(fileChunk) {
   fileChunk = _mod7317.getFileChunk(fileChunk);
   const FileTypes = _mod7318.FileTypes;

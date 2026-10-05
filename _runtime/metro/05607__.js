@@ -1,10 +1,10 @@
 // _runtime/metro/05607__.js
-import _modDef5608 from "05608__.js";
+import _mod5608 from "05608__.js";
 
-const require = globalThis.__r;
+const _modDef5608 = _mod5608;
 
-for (const key10016 in require("05608__.js")) {
-  arg5[key10016] = require("05608__.js")[key10016];
+for (const key10016 in _mod5608) {
+  exports[key10016] = _mod5608[key10016];
   continue;
 }
 

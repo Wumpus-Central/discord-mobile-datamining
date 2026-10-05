@@ -1,4 +1,5 @@
 // _runtime/metro/10336__.js
+import en from "../10155_en.js";
 import AbstractTimeExpressionParser from "../10175_AbstractTimeExpressionParser.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -7,19 +8,12 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
 
-const ENTimeExpressionParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -28,21 +22,18 @@ function _isNativeReflectConstruct() {
 }
 class ENTimeExpressionParser {
   constructor(arg0) {
-    self = this;
-    tmp = c2(this, ENTimeExpressionParser);
-    items = [];
-    items[0] = global;
-    tmp2 = closure_4;
-    obj = closure_4(ENTimeExpressionParser);
-    tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, ENTimeExpressionParser);
+    const items = [arg0];
+    const obj = _getPrototypeOf(ENTimeExpressionParser);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    return tmp3(self, constructResult);
+    return c3(self, constructResult);
   }
 }
 _inherits(ENTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
@@ -70,12 +61,8 @@ let items = [
     key: "extractPrimaryTimeComponents",
     value: function extractPrimaryTimeComponents(arg0, arg1) {
       const self = this;
-      const tmp = hasOwnProperty(
-        _getPrototypeOf(ENTimeExpressionParser.prototype),
-        "extractPrimaryTimeComponents",
-        this,
-      );
-      dependencyMap = tmp;
+      const tmp = _get(_getPrototypeOf(ENTimeExpressionParser.prototype), "extractPrimaryTimeComponents", this);
+      let closure_1 = tmp;
       let fn = tmp;
       if (typeof tmp === "function") {
         fn = (items) => closure_1.apply(self, items);
@@ -85,32 +72,29 @@ let items = [
       if (fnResult) {
         const first = arg1[0];
         if (first.endsWith("sera")) {
-          value = fnResult.get("hour");
+          const value = fnResult.get("hour");
           if (value >= 6) {
             if (value < 12) {
               fnResult.assign("hour", fnResult.get("hour") + 12);
-              fnResult.assign("meridiem", ENTimeExpressionParser(10155).Meridiem.PM);
+              fnResult.assign("meridiem", en.Meridiem.PM);
             }
           }
           if (value < 6) {
-            fnResult.assign("meridiem", ENTimeExpressionParser(10155).Meridiem.AM);
+            fnResult.assign("meridiem", en.Meridiem.AM);
           }
         }
         const first1 = arg1[0];
         if (first1.endsWith("pomeriggio")) {
-          fnResult.assign("meridiem", ENTimeExpressionParser(10155).Meridiem.PM);
-          value2 = fnResult.get("hour");
-          let tmp14 = value2 >= 0;
-          if (tmp14) {
-            tmp14 = value2 <= 6;
-          }
+          fnResult.assign("meridiem", en.Meridiem.PM);
+          const value2 = fnResult.get("hour");
+          const tmp14 = value2 >= 0 && value2 <= 6;
           if (tmp14) {
             fnResult.assign("hour", fnResult.get("hour") + 12);
           }
         }
         const first2 = arg1[0];
         if (first2.endsWith("mattina")) {
-          fnResult.assign("meridiem", ENTimeExpressionParser(10155).Meridiem.AM);
+          fnResult.assign("meridiem", en.Meridiem.AM);
           if (fnResult.get("hour") < 12) {
             fnResult.assign("hour", fnResult.get("hour"));
           }

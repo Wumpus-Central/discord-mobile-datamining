@@ -1,11 +1,12 @@
 // _runtime/metro/00538__.js
-import _process from "../00539__process.js";
+import _mod539 from "00539__.js";
 import baseUnary from "../00540_baseUnary.js";
 import baseIsTypedArray from "../00541_baseIsTypedArray.js";
 
-const tmp = _process && _process.isTypedArray;
+let _module;
+const tmp = _mod539 && _mod539.isTypedArray;
 if (tmp) {
-  let _module = baseUnary(tmp);
+  _module = baseUnary(tmp);
 } else {
   _module = baseIsTypedArray;
 }

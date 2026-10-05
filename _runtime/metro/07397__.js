@@ -1,18 +1,13 @@
 // _runtime/metro/07397__.js
 const require = globalThis.__r;
 
-const require = arg1;
-const dependencyMap = arg6;
 let closure_2 = [6, 7, 99];
 
 export default {
   get(buffer, Compression, arg2) {
     let prop = Compression;
-    if (Compression) {
-      let hasItem = undefined === Compression.Compression;
-      if (!hasItem) {
-        hasItem = closure_2.includes(Compression.Compression.value);
-      }
+    if (prop) {
+      const hasItem = undefined === Compression.Compression || closure_2.includes(Compression.Compression.value);
       prop = hasItem;
     }
     if (prop) {
@@ -32,10 +27,11 @@ export default {
       const sum = arg2 + Compression.JPEGInterchangeFormat.value;
       buffer = buffer.buffer;
       Compression.image = buffer.slice(sum, sum + Compression.JPEGInterchangeFormatLength.value);
-      require("07345__.js").deferInit(Compression, "base64", function () {
-        return require("07345__.js").getBase64Image(this.image);
+      let obj = require("07345__.js");
+      obj.deferInit(Compression, "base64", function () {
+        const obj = require("07345__.js");
+        return obj.getBase64Image(this.image);
       });
-      const obj = require("07345__.js");
     }
     return Compression;
   },

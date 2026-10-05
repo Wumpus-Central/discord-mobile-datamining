@@ -11,7 +11,7 @@ const fn = function n(moment) {
         tmp13 = arg0 % 10 > 1;
       }
       if (tmp13) {
-        tmp13 = (~~arg0 / 10) % 10 !== 1;
+        tmp13 = ~(~arg0 / 10) % 10 !== 1;
       }
       let str9 = "sekund";
       if (tmp13) {
@@ -31,7 +31,7 @@ const fn = function n(moment) {
         tmp11 = arg0 % 10 > 1;
       }
       if (tmp11) {
-        tmp11 = (~~arg0 / 10) % 10 !== 1;
+        tmp11 = ~(~arg0 / 10) % 10 !== 1;
       }
       let str7 = "minut";
       if (tmp11) {
@@ -51,7 +51,7 @@ const fn = function n(moment) {
         tmp9 = arg0 % 10 > 1;
       }
       if (tmp9) {
-        tmp9 = (~~arg0 / 10) % 10 !== 1;
+        tmp9 = ~(~arg0 / 10) % 10 !== 1;
       }
       let str5 = "godzin";
       if (tmp9) {
@@ -65,7 +65,7 @@ const fn = function n(moment) {
         tmp7 = arg0 % 10 > 1;
       }
       if (tmp7) {
-        tmp7 = (~~arg0 / 10) % 10 !== 1;
+        tmp7 = ~(~arg0 / 10) % 10 !== 1;
       }
       let str4 = "tygodni";
       if (tmp7) {
@@ -79,7 +79,7 @@ const fn = function n(moment) {
         tmp5 = arg0 % 10 > 1;
       }
       if (tmp5) {
-        tmp5 = (~~arg0 / 10) % 10 !== 1;
+        tmp5 = ~(~arg0 / 10) % 10 !== 1;
       }
       let str3 = "miesi\u0119cy";
       if (tmp5) {
@@ -93,7 +93,7 @@ const fn = function n(moment) {
         tmp3 = arg0 % 10 > 1;
       }
       if (tmp3) {
-        tmp3 = (~~arg0 / 10) % 10 !== 1;
+        tmp3 = ~(~arg0 / 10) % 10 !== 1;
       }
       let str2 = "lat";
       if (tmp3) {
@@ -102,11 +102,11 @@ const fn = function n(moment) {
       return text + str2;
     }
   }
-  closure_0 =
+  let closure_0 =
     "stycze\u0144_luty_marzec_kwiecie\u0144_maj_czerwiec_lipiec_sierpie\u0144_wrzesie\u0144_pa\u017Adziernik_listopad_grudzie\u0144".split(
       "_",
     );
-  closure_1 =
+  let closure_1 =
     "stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_wrze\u015Bnia_pa\u017Adziernika_listopada_grudnia".split(
       "_",
     );
@@ -124,18 +124,23 @@ const fn = function n(moment) {
     /^lis/i,
     /^gru/i,
   ];
-  return moment.defineLocale("pl", {
+  let obj = {
     months(arg0, arg1) {
-      if (arg0) {
+      let tmp2;
+      const tmp = arg0;
+      if (tmp) {
+        let tmp5;
+        const obj = /D MMMM/;
         if (obj.test(arg1)) {
-          let tmp3 = closure_1[arg0.month(arg0)];
+          tmp5 = closure_1[arg0.month(arg0)];
         } else {
-          tmp3 = closure_0[arg0.month(arg0)];
+          tmp5 = closure_0[arg0.month(arg0)];
         }
-        obj = /D MMMM/;
+        tmp2 = tmp5;
       } else {
-        return closure_0;
+        tmp2 = closure_0;
       }
+      return tmp2;
     },
     monthsShort: "sty_lut_mar_kwi_maj_cze_lip_sie_wrz_pa\u017A_lis_gru".split("_"),
     monthsParse: items,
@@ -205,7 +210,8 @@ const fn = function n(moment) {
     dayOfMonthOrdinalParse: /\d{1,2}\./,
     ordinal: "%d.",
     week: { dow: 1, doy: 4 },
-  });
+  };
+  return moment.defineLocale("pl", obj);
 };
 if (typeof exports === "object") {
   if (undefined !== module) {
@@ -215,6 +221,7 @@ if (typeof exports === "object") {
   }
 }
 if (typeof globalThis.define === "function") {
+  const define2 = globalThis.define;
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], fn);
   }

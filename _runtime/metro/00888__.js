@@ -17,6 +17,7 @@ export const base64StringFromByteArray = function base64StringFromByteArray(arr2
       sum = num + 16383;
       let sum2 = num;
       let tmp5 = sum;
+      let push = items.push;
       if (diff < sum) {
         tmp5 = diff;
       }
@@ -30,13 +31,13 @@ export const base64StringFromByteArray = function base64StringFromByteArray(arr2
           sum2 = sum2 + 3;
         } while (sum2 < tmp5);
       }
-      arr2 = items.push(items1.join(""));
+      arr2 = push(items1.join(""));
       num = sum;
     } while (sum < diff);
   }
   if (1 === result) {
     const _HermesInternal = HermesInternal;
-    items.push("" + items[arr2[length - 1] >> 2] + items[(arr2[length - 1] << 4) & 63] + "==");
+    items.push("" + items[arr2[arr2.length - 1] >> 2] + items[(arr2[arr2.length - 1] << 4) & 63] + "==");
   } else if (2 === result) {
     const sum3 = (arr2[length - 2] << 8) + arr2[length - 1];
     const _HermesInternal2 = HermesInternal;

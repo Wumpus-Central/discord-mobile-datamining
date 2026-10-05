@@ -26,11 +26,10 @@ let obj = {
     _accountsForMovesUpTo.moveY = closure_1(touchHistory, _accountsForMovesUpTo._accountsForMovesUpTo);
     _accountsForMovesUpTo = _accountsForMovesUpTo._accountsForMovesUpTo;
     const tmp = closure_2(touchHistory, _accountsForMovesUpTo);
+    const sum = _accountsForMovesUpTo.dx + (closure_0(touchHistory, _accountsForMovesUpTo) - tmp);
     const tmp2 = closure_0(touchHistory, _accountsForMovesUpTo);
-    const sum = _accountsForMovesUpTo.dx + (tmp2 - tmp);
-    const sum1 =
-      _accountsForMovesUpTo.dy +
-      (closure_1(touchHistory, _accountsForMovesUpTo) - closure_3(touchHistory, _accountsForMovesUpTo));
+    const tmp3 = closure_3(touchHistory, _accountsForMovesUpTo);
+    const sum1 = _accountsForMovesUpTo.dy + (closure_1(touchHistory, _accountsForMovesUpTo) - tmp3);
     const diff = touchHistory.mostRecentTimeStamp - _accountsForMovesUpTo._accountsForMovesUpTo;
     _accountsForMovesUpTo.vx = (sum - _accountsForMovesUpTo.dx) / diff;
     _accountsForMovesUpTo.vy = (sum1 - _accountsForMovesUpTo.dy) / diff;
@@ -56,17 +55,13 @@ let obj = {
     return {
       panHandlers: {
         onStartShouldSetResponder(arg0) {
-          let result = null != closure_0.onStartShouldSetPanResponder;
-          if (result) {
-            result = closure_0.onStartShouldSetPanResponder(arg0, closure_0);
-          }
+          const result =
+            null != closure_0.onStartShouldSetPanResponder && closure_0.onStartShouldSetPanResponder(arg0, closure_0);
           return result;
         },
         onMoveShouldSetResponder(arg0) {
-          let result = null != closure_0.onMoveShouldSetPanResponder;
-          if (result) {
-            result = closure_0.onMoveShouldSetPanResponder(arg0, closure_0);
-          }
+          const result =
+            null != closure_0.onMoveShouldSetPanResponder && closure_0.onMoveShouldSetPanResponder(arg0, closure_0);
           return result;
         },
         onStartShouldSetResponderCapture(nativeEvent) {
@@ -74,10 +69,10 @@ let obj = {
             const result = closure_0._initializeGestureState(closure_0);
           }
           closure_0.numberActiveTouches = nativeEvent.touchHistory.numberActiveTouches;
-          return (
+          const tmp5 =
             null != closure_0.onStartShouldSetPanResponderCapture &&
-            closure_0.onStartShouldSetPanResponderCapture(nativeEvent, tmp4)
-          );
+            closure_0.onStartShouldSetPanResponderCapture(nativeEvent, tmp4);
+          return tmp5;
         },
         onMoveShouldSetResponderCapture(touchHistory) {
           touchHistory = touchHistory.touchHistory;
@@ -87,8 +82,7 @@ let obj = {
             tmp2 =
               closure_0.onMoveShouldSetPanResponderCapture &&
               closure_0.onMoveShouldSetPanResponderCapture(touchHistory, closure_0);
-            const tmp5 =
-              closure_0.onMoveShouldSetPanResponderCapture &&
+            closure_0.onMoveShouldSetPanResponderCapture &&
               closure_0.onMoveShouldSetPanResponderCapture(touchHistory, closure_0);
           }
           return tmp2;
@@ -101,33 +95,23 @@ let obj = {
           if (closure_0.onPanResponderGrant) {
             closure_0.onPanResponderGrant(touchHistory, closure_0);
           }
-          return (
+          const tmp3 =
             null == closure_0.onShouldBlockNativeResponder ||
-            closure_0.onShouldBlockNativeResponder(touchHistory, closure_0)
-          );
+            closure_0.onShouldBlockNativeResponder(touchHistory, closure_0);
+          return tmp3;
         },
         onResponderReject(arg0) {
           const onPanResponderReject = closure_0.onPanResponderReject;
           if (onPanResponderReject != null) {
-            const call = onPanResponderReject.call;
-            if (typeof call === "unknown") {
-              onPanResponderReject(arg0, obj);
-            } else {
-              call(undefined, arg0, obj);
-            }
+            onPanResponderReject.call(undefined, arg0, obj);
           }
         },
         onResponderRelease(arg0) {
           const onPanResponderRelease = closure_0.onPanResponderRelease;
           if (onPanResponderRelease != null) {
-            const call = onPanResponderRelease.call;
-            if (typeof call === "unknown") {
-              const result = onPanResponderRelease(arg0, obj);
-            } else {
-              call(undefined, arg0, obj);
-            }
+            onPanResponderRelease.call(undefined, arg0, obj);
           }
-          const result1 = obj._initializeGestureState(obj);
+          const result = obj._initializeGestureState(obj);
         },
         onResponderStart(touchHistory) {
           closure_0.numberActiveTouches = touchHistory.touchHistory.numberActiveTouches;
@@ -148,31 +132,20 @@ let obj = {
           obj.numberActiveTouches = touchHistory.touchHistory.numberActiveTouches;
           const onPanResponderEnd = closure_0.onPanResponderEnd;
           if (onPanResponderEnd != null) {
-            const call = onPanResponderEnd.call;
-            if (typeof call === "unknown") {
-              onPanResponderEnd(touchHistory, obj);
-            } else {
-              call(undefined, touchHistory, obj);
-            }
+            onPanResponderEnd.call(undefined, touchHistory, tmp);
           }
         },
         onResponderTerminate(arg0) {
           const onPanResponderTerminate = closure_0.onPanResponderTerminate;
           if (onPanResponderTerminate != null) {
-            const call = onPanResponderTerminate.call;
-            if (typeof call === "unknown") {
-              const result = onPanResponderTerminate(arg0, obj);
-            } else {
-              call(undefined, arg0, obj);
-            }
+            onPanResponderTerminate.call(undefined, arg0, obj);
           }
-          const result1 = obj._initializeGestureState(obj);
+          const result = obj._initializeGestureState(obj);
         },
         onResponderTerminationRequest(arg0) {
-          let result = null == closure_0.onPanResponderTerminationRequest;
-          if (!result) {
-            result = closure_0.onPanResponderTerminationRequest(arg0, closure_0);
-          }
+          const result =
+            null == closure_0.onPanResponderTerminationRequest ||
+            closure_0.onPanResponderTerminationRequest(arg0, closure_0);
           return result;
         },
       },

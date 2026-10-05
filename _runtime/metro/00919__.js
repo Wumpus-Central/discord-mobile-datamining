@@ -1,9 +1,7 @@
 // _runtime/metro/00919__.js
 import _mod915 from "00915__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const getNavigationEntry = (arg0) => {
   let flag = arg0;

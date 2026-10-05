@@ -2,9 +2,6 @@
 import _mod13968 from "metro/13968__.js";
 import PartitionNumberPattern from "13996_PartitionNumberPattern.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
 export const FormatNumericToParts = function FormatNumericToParts(arg0, isNaN, getInternalSlots) {
   let length;
   const result = PartitionNumberPattern.PartitionNumberPattern(getInternalSlots.getInternalSlots(arg0), isNaN);

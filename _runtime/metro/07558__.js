@@ -1,23 +1,104 @@
 // _runtime/metro/07558__.js
 import Link from "../01491_Link.js";
-import _slicedToArray from "00032__.js";
-import noop from "00019__.js";
+import _slicedToArray_mod from "00032__slicedToArray.js";
+import react_mod from "../00019_react.js";
+import react_native from "../00017_react-native.js";
+import Fragment from "../react/00021_Fragment.js";
 
 const require = globalThis.__r;
+let dependencyMap, set;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Animated: hasOwnProperty, Platform, StatusBar: metroRequire, StyleSheet } = get_ActivityIndicator);
-({ useAnimatedValue: closure_8, View: closure_9 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+let Platform;
+let StyleSheet;
+let c10;
+let c9;
+let hasOwnProperty;
+let metroImportAll;
+let metroRequire;
+let unpackModuleId;
+let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
+({ Animated: hasOwnProperty, Platform, StatusBar: metroRequire, StyleSheet } = react_native);
+({ useAnimatedValue: metroImportAll, View: c9 } = react_native);
+({ jsx: c10, jsxs: unpackModuleId } = Fragment);
 function SceneView(arg0) {
+  let Provider;
+  let Provider2;
+  let Provider4;
+  let ScreenStackItem;
+  let _undefined;
+  let animation;
+  let animationDuration;
+  let animationMatchesGesture;
+  let autoHideHomeIndicator;
+  let c3;
+  let closure_5;
+  let contentStyle;
+  let descriptor;
+  let focused;
+  let freezeOnBlur;
+  let fullScreenGestureEnabled;
+  let gestureDirection;
+  let gestureEnabled;
+  let gestureResponseDistance;
+  let header;
+  let headerBackButtonMenuEnabled;
+  let headerBackTitle;
+  let headerBackground;
+  let headerShown;
+  let headerTransparent;
+  let index;
+  let isPreloaded;
+  let items3;
+  let items5;
+  let keyboardHandlingEnabled;
+  let navigationBarColor;
+  let navigationBarHidden;
+  let navigationBarTranslucent;
+  let nextDescriptor;
+  let obj10;
+  let obj12;
+  let obj13;
+  let obj18;
+  let obj19;
+  let obj21;
+  let obj7;
+  let onAppear;
+  let onDisappear;
+  let onDismissed;
+  let onGestureCancel;
+  let onHeaderBackButtonClicked;
+  let onNativeDismissCancelled;
+  let onSheetDetentChanged;
+  let onWillAppear;
+  let onWillDisappear;
+  let options;
+  let orientation;
+  let previousDescriptor;
+  let rect;
+  let route;
+  let scrollEdgeEffects;
+  let sheetAllowedDetents;
+  let shouldFreeze;
+  let statusBarAnimation;
+  let statusBarBackgroundColor;
+  let statusBarHidden;
+  let statusBarStyle;
+  let statusBarTranslucent;
+  let str10;
+  let str8;
+  let str9;
+  let tmp17;
+  let tmp18;
+  let unstable_headerInsets;
+  let unstable_sheetFooter;
+  let value;
   ({ descriptor, previousDescriptor, nextDescriptor } = arg0);
   let safeAreaInsets;
   let num6;
   dependencyMap = undefined;
   _slicedToArray = undefined;
-  noop = undefined;
+  react = undefined;
   set = undefined;
   let title;
   ({ route, navigation, options } = descriptor);
@@ -37,6 +118,7 @@ function SceneView(arg0) {
     onGestureCancel,
     onSheetDetentChanged,
   } = arg0);
+  const render = descriptor.render;
   ({ animation, animationMatchesGesture } = options);
   if (undefined === str) {
     let str2 = "card";
@@ -53,6 +135,7 @@ function SceneView(arg0) {
     str4 = animationTypeForReplace;
   }
   const fullScreenGestureShadowEnabled = options.fullScreenGestureShadowEnabled;
+  const tmp2 = undefined === fullScreenGestureShadowEnabled || fullScreenGestureShadowEnabled;
   ({ gestureEnabled, gestureDirection } = options);
   if (undefined === gestureDirection) {
     let str5 = "vertical";
@@ -87,6 +170,7 @@ function SceneView(arg0) {
   }
   const sheetGrabberVisible = options.sheetGrabberVisible;
   const sheetCornerRadius = options.sheetCornerRadius;
+  const tmp3 = undefined !== sheetGrabberVisible && sheetGrabberVisible;
   if (undefined !== sheetCornerRadius) {
     num = sheetCornerRadius;
   }
@@ -98,11 +182,14 @@ function SceneView(arg0) {
   const sheetExpandsWhenScrolledToEdge = options.sheetExpandsWhenScrolledToEdge;
   const sheetInitialDetentIndex = options.sheetInitialDetentIndex;
   let num4 = 0;
+  const tmp4 = undefined === sheetExpandsWhenScrolledToEdge || sheetExpandsWhenScrolledToEdge;
   if (undefined !== sheetInitialDetentIndex) {
     num4 = sheetInitialDetentIndex;
   }
   const sheetShouldOverflowTopInset = options.sheetShouldOverflowTopInset;
   const sheetResizeAnimationEnabled = options.sheetResizeAnimationEnabled;
+  const tmp5 = undefined !== sheetShouldOverflowTopInset && sheetShouldOverflowTopInset;
+  const tmp6 = undefined === sheetResizeAnimationEnabled || sheetResizeAnimationEnabled;
   ({ statusBarTranslucent, scrollEdgeEffects, unstable_headerInsets } = options);
   let gestureDirection1;
   ({
@@ -123,18 +210,15 @@ function SceneView(arg0) {
   if (0 === index) {
     str = "card";
   }
-  let obj = num6(1491);
-  const tmp2 = undefined === fullScreenGestureShadowEnabled || fullScreenGestureShadowEnabled;
-  const tmp3 = undefined !== sheetGrabberVisible && sheetGrabberVisible;
-  const tmp4 = undefined === sheetExpandsWhenScrolledToEdge || sheetExpandsWhenScrolledToEdge;
-  const tmp5 = undefined !== sheetShouldOverflowTopInset && sheetShouldOverflowTopInset;
-  const tmp6 = undefined === sheetResizeAnimationEnabled || sheetResizeAnimationEnabled;
-  safeAreaInsets = num6(1621).useSafeAreaInsets();
-  const context = noop.useContext(num6(6019).HeaderShownContext);
-  let num5 = noop.useContext(num6(6019).HeaderHeightContext);
-  const context1 = noop.useContext(num6(6019).HeaderBackContext);
+  const obj = num6(1491);
+  const colors = obj.useTheme().colors;
   const obj2 = num6(1621);
-  const frameSize = num6(6019).useFrameSize((width) => width.width > width.height);
+  safeAreaInsets = obj2.useSafeAreaInsets();
+  const context = react.useContext(num6(6019).HeaderShownContext);
+  let num5 = react.useContext(num6(6019).HeaderHeightContext);
+  const context1 = react.useContext(num6(6019).HeaderBackContext);
+  const obj4 = num6(6019);
+  const frameSize = obj4.useFrameSize((width) => width.width > width.height);
   num6 = 0;
   if (!context) {
     let top;
@@ -146,21 +230,22 @@ function SceneView(arg0) {
       num6 = safeAreaInsets.top;
     }
   }
-  const obj4 = num6(6019);
-  const frameSize1 = num6(6019).useFrameSize((arg0) => 56 + num6);
   const tmp8Result = num6(6019);
-  let num7 = 2;
+  const frameSize1 = tmp8Result.useFrameSize((arg0) => 56 + num6);
   const tmp8Result5 = num6(1491);
-  [tmp17, tmp18] = noop.useState(frameSize1);
+  const preventedRoutes = tmp8Result5.usePreventRemoveContext().preventedRoutes;
+  let num7 = 2;
+  [tmp17, tmp18] = react.useState(frameSize1);
   dependencyMap = tmp18;
-  const tmp16 = _slicedToArray(noop.useState(frameSize1), 2);
-  const callback = obj3.useCallback(num6(7559).debounce(tmp18, 100), []);
-  let tmp21 = "usesNewAndroidHeaderHeightImplementation" in tmp8(5715).compatibilityFlags;
-  if (tmp21) {
-    tmp21 = true === tmp8(5715).compatibilityFlags.usesNewAndroidHeaderHeightImplementation;
-  }
+  _slicedToArray(react.useState(frameSize1), 2);
+  const useCallback = react.useCallback;
+  const tmp8Result6 = num6(7559);
+  const callback = useCallback(tmp8Result6.debounce(tmp18, 100), []);
   _slicedToArray = 0;
   let num8 = 0;
+  const tmp21 =
+    "usesNewAndroidHeaderHeightImplementation" in tmp8(5715).compatibilityFlags &&
+    true === tmp8(5715).compatibilityFlags.usesNewAndroidHeaderHeightImplementation;
   if (null == header) {
     num8 = 0;
     if (!tmp21) {
@@ -174,57 +259,56 @@ function SceneView(arg0) {
     }
   }
   const tmp24 = closure_8(frameSize1);
-  noop = tmp24;
+  react = tmp24;
   const items = [num8, tmp24];
   let tmp26 = statusBarTranslucent;
-  const memo = obj3.useMemo(() => set.add(closure_4, c3), items);
+  const memo = obj3.useMemo(() => hasOwnProperty.add(react, c3), items);
   if (typeof statusBarTranslucent !== "boolean") {
     tmp26 = 0 !== num6;
   }
   set = tmp27;
   if (previousDescriptor) {
-    title = tmp8(6019).getHeaderTitle(previousDescriptor.options, previousDescriptor.route.name);
-    const tmp8Result7 = tmp8(6019);
+    const tmp8Result7 = num6(6019);
+    title = tmp8Result7.getHeaderTitle(previousDescriptor.options, previousDescriptor.route.name);
   } else if (context1 != null) {
     title = context1.title;
   }
   const items1 = [null != previousDescriptor || null != context1, title];
   const memo1 = obj3.useMemo(() => {
     if (closure_5) {
-      const obj = { href: "Array", title };
-      return obj;
+      return { href: "Array", title };
     }
   }, items1);
-  const tmp29 = tmp8Result5.usePreventRemoveContext().preventedRoutes[route.key];
   let preventRemove;
-  if (tmp29 != null) {
+  if (preventedRoutes[route.key] != null) {
     preventRemove = tmp29.preventRemove;
   }
-  const tmp8Result6 = num6(7559);
-  const obj5 = {};
+  const obj5 = {
+    route,
+    headerBackButtonMenuEnabled,
+    headerBackTitle,
+    headerHeight: tmp17,
+    headerShown: undefined === header && headerShown,
+    headerTopInsetEnabled: tmp26,
+    headerTransparent,
+    headerBack: memo1,
+  };
+  const useHeaderConfigProps = num6(7560).useHeaderConfigProps;
+  num6(7560);
   const merged = Object.assign(options);
-  obj5.route = route;
   if (undefined !== preventRemove) {
     headerBackButtonMenuEnabled = !preventRemove;
   }
-  obj5.headerBackButtonMenuEnabled = headerBackButtonMenuEnabled;
-  let headerBackTitle;
+  headerBackTitle = undefined;
   if (undefined !== options.headerBackTitle) {
     headerBackTitle = options.headerBackTitle;
   }
-  obj5.headerBackTitle = headerBackTitle;
-  obj5.headerHeight = tmp17;
-  obj5.headerShown = undefined === header && headerShown;
-  obj5.headerTopInsetEnabled = tmp26;
-  obj5.headerTransparent = headerTransparent;
-  obj5.headerBack = memo1;
   let eventResult;
-  const headerConfigProps = num6(7560).useHeaderConfigProps(obj5);
+  const headerConfigProps = useHeaderConfigProps(obj5);
   if (null == header) {
-    const obj6 = { nativeEvent: null };
-    const obj7 = { headerHeight: tmp24 };
-    obj6.nativeEvent = obj7;
+    const obj6 = { nativeEvent: obj7 };
     const items2 = [obj6];
+    obj7 = { headerHeight: tmp24 };
     const obj8 = {
       useNativeDriver: true,
       listener(nativeEvent) {
@@ -248,110 +332,70 @@ function SceneView(arg0) {
     };
     eventResult = set.event(items2, obj8);
   }
-  const obj9 = { route, navigation, children: null };
-  const obj10 = {
+  const obj9 = { route, navigation, children: closure_10(ScreenStackItem, obj10) };
+  const NavigationProvider = tmp8(1491).NavigationProvider;
+  obj10 = {
     screenId: route.key,
-    activityState: null,
-    style: null,
-    "aria-hidden": null,
-    customAnimationOnSwipe: null,
-    fullScreenSwipeEnabled: null,
-    fullScreenSwipeShadowEnabled: null,
-    freezeOnBlur: null,
+    activityState: num7,
+    style: StyleSheet.absoluteFill,
+    "aria-hidden": !focused,
+    customAnimationOnSwipe: animationMatchesGesture,
+    fullScreenSwipeEnabled: fullScreenGestureEnabled,
+    fullScreenSwipeShadowEnabled: tmp2,
+    freezeOnBlur,
     gestureEnabled: false,
-    homeIndicatorHidden: null,
-    hideKeyboardOnSwipe: null,
-    navigationBarColor: null,
-    navigationBarTranslucent: null,
-    navigationBarHidden: null,
-    replaceAnimation: null,
-    stackPresentation: null,
-    stackAnimation: null,
-    screenOrientation: null,
-    sheetAllowedDetents: null,
-    sheetLargestUndimmedDetentIndex: null,
-    sheetGrabberVisible: null,
-    sheetInitialDetentIndex: null,
-    sheetCornerRadius: null,
-    sheetElevation: null,
-    sheetExpandsWhenScrolledToEdge: null,
-    sheetShouldOverflowTopInset: null,
-    sheetDefaultResizeAnimationEnabled: null,
-    statusBarAnimation: null,
-    statusBarHidden: null,
-    statusBarStyle: null,
-    statusBarColor: null,
-    statusBarTranslucent: null,
-    swipeDirection: null,
-    transitionDuration: null,
-    onWillAppear: null,
-    onWillDisappear: null,
-    onAppear: null,
-    onDisappear: null,
-    onDismissed: null,
-    onGestureCancel: null,
-    onSheetDetentChanged: null,
-    gestureResponseDistance: null,
+    homeIndicatorHidden: autoHideHomeIndicator,
+    hideKeyboardOnSwipe: keyboardHandlingEnabled,
+    navigationBarColor,
+    navigationBarTranslucent,
+    navigationBarHidden,
+    replaceAnimation: str4,
+    stackPresentation: str3,
+    stackAnimation: animation,
+    screenOrientation: orientation,
+    sheetAllowedDetents,
+    sheetLargestUndimmedDetentIndex: num2,
+    sheetGrabberVisible: tmp3,
+    sheetInitialDetentIndex: num4,
+    sheetCornerRadius: num,
+    sheetElevation: num3,
+    sheetExpandsWhenScrolledToEdge: tmp4,
+    sheetShouldOverflowTopInset: tmp5,
+    sheetDefaultResizeAnimationEnabled: tmp6,
+    statusBarAnimation,
+    statusBarHidden,
+    statusBarStyle,
+    statusBarColor: statusBarBackgroundColor,
+    statusBarTranslucent,
+    swipeDirection: gestureDirection,
+    transitionDuration: animationDuration,
+    onWillAppear,
+    onWillDisappear,
+    onAppear,
+    onDisappear,
+    onDismissed,
+    onGestureCancel,
+    onSheetDetentChanged,
+    gestureResponseDistance,
     nativeBackButtonDismissalEnabled: false,
-    onHeaderBackButtonClicked: null,
-    preventNativeDismiss: null,
-    scrollEdgeEffects: null,
-    onNativeDismissCancelled: null,
-    onHeaderHeightChange: null,
-    contentStyle: null,
-    headerConfig: null,
-    unstable_sheetFooter: null,
-    shouldFreeze: null,
-    children: null,
+    onHeaderBackButtonClicked,
+    preventNativeDismiss: preventRemove,
+    scrollEdgeEffects: rect,
+    onNativeDismissCancelled,
+    onHeaderHeightChange: eventResult,
+    contentStyle: items3,
+    headerConfig: headerConfigProps,
+    unstable_sheetFooter,
+    shouldFreeze,
+    children: closure_10(Provider, obj12),
   };
+  ScreenStackItem = tmp8(5715).ScreenStackItem;
   if (isPreloaded) {
     num7 = 0;
   }
-  obj10.activityState = num7;
-  obj10.style = StyleSheet.absoluteFill;
-  obj10["aria-hidden"] = !focused;
-  obj10.customAnimationOnSwipe = animationMatchesGesture;
-  obj10.fullScreenSwipeEnabled = fullScreenGestureEnabled;
-  obj10.fullScreenSwipeShadowEnabled = tmp2;
-  obj10.freezeOnBlur = freezeOnBlur;
-  obj10.homeIndicatorHidden = autoHideHomeIndicator;
-  obj10.hideKeyboardOnSwipe = keyboardHandlingEnabled;
-  obj10.navigationBarColor = navigationBarColor;
-  obj10.navigationBarTranslucent = navigationBarTranslucent;
-  obj10.navigationBarHidden = navigationBarHidden;
-  obj10.replaceAnimation = str4;
   if ("card" !== str) {
     str3 = str;
   }
-  obj10.stackPresentation = str3;
-  obj10.stackAnimation = animation;
-  obj10.screenOrientation = orientation;
-  obj10.sheetAllowedDetents = sheetAllowedDetents;
-  obj10.sheetLargestUndimmedDetentIndex = num2;
-  obj10.sheetGrabberVisible = tmp3;
-  obj10.sheetInitialDetentIndex = num4;
-  obj10.sheetCornerRadius = num;
-  obj10.sheetElevation = num3;
-  obj10.sheetExpandsWhenScrolledToEdge = tmp4;
-  obj10.sheetShouldOverflowTopInset = tmp5;
-  obj10.sheetDefaultResizeAnimationEnabled = tmp6;
-  obj10.statusBarAnimation = statusBarAnimation;
-  obj10.statusBarHidden = statusBarHidden;
-  obj10.statusBarStyle = statusBarStyle;
-  obj10.statusBarColor = statusBarBackgroundColor;
-  obj10.statusBarTranslucent = statusBarTranslucent;
-  obj10.swipeDirection = gestureDirection;
-  obj10.transitionDuration = animationDuration;
-  obj10.onWillAppear = onWillAppear;
-  obj10.onWillDisappear = onWillDisappear;
-  obj10.onAppear = onAppear;
-  obj10.onDisappear = onDisappear;
-  obj10.onDismissed = onDismissed;
-  obj10.onGestureCancel = onGestureCancel;
-  obj10.onSheetDetentChanged = onSheetDetentChanged;
-  obj10.gestureResponseDistance = gestureResponseDistance;
-  obj10.onHeaderBackButtonClicked = onHeaderBackButtonClicked;
-  obj10.preventNativeDismiss = preventRemove;
   let str7;
   if (scrollEdgeEffects != null) {
     str7 = scrollEdgeEffects.bottom;
@@ -359,116 +403,97 @@ function SceneView(arg0) {
   if (str7 == null) {
     str7 = "automatic";
   }
-  const rect = { bottom: str7, top: null, left: null, right: null };
-  let str8;
+  rect = { bottom: str7, top: str8, left: str9, right: str10 };
+  str8 = undefined;
   if (scrollEdgeEffects != null) {
     str8 = scrollEdgeEffects.top;
   }
   if (str8 == null) {
     str8 = "automatic";
   }
-  rect.top = str8;
-  let str9;
+  str9 = undefined;
   if (scrollEdgeEffects != null) {
     str9 = scrollEdgeEffects.left;
   }
   if (str9 == null) {
     str9 = "automatic";
   }
-  rect.left = str9;
-  let str10;
+  str10 = undefined;
   if (scrollEdgeEffects != null) {
     str10 = scrollEdgeEffects.right;
   }
   if (str10 == null) {
     str10 = "automatic";
   }
-  rect.right = str10;
-  obj10.scrollEdgeEffects = rect;
-  obj10.onNativeDismissCancelled = onNativeDismissCancelled;
-  obj10.onHeaderHeightChange = eventResult;
-  let tmp37 = "transparentModal" !== str;
-  if (tmp37) {
-    tmp37 = "containedTransparentModal" !== str;
+  let tmp38 = "transparentModal" !== str && "containedTransparentModal" !== str;
+  if (tmp38) {
+    tmp38 = { backgroundColor: colors.background };
+    const obj11 = { backgroundColor: colors.background };
   }
-  if (tmp37) {
-    const obj11 = { backgroundColor: obj.useTheme().colors.background };
-    tmp37 = obj11;
-  }
-  const items3 = [tmp37, contentStyle];
-  obj10.contentStyle = items3;
-  obj10.headerConfig = headerConfigProps;
-  obj10.unstable_sheetFooter = unstable_sheetFooter;
-  obj10.shouldFreeze = shouldFreeze;
-  const obj12 = { value: memo, children: null };
-  let tmp40 = tmp17;
+  items3 = [tmp38, contentStyle];
+  obj12 = { value: memo, children: closure_11(Provider2, obj13) };
+  Provider = tmp8(7562).AnimatedHeaderHeightContext.Provider;
+  let tmp41 = tmp17;
+  Provider2 = tmp8(6019).HeaderHeightContext.Provider;
   if (false === headerShown) {
     if (num5 == null) {
       num5 = 0;
     }
-    tmp40 = num5;
+    tmp41 = num5;
   }
-  const obj13 = { value: tmp40, children: null };
-  let tmp36Result = null;
+  let tmp37Result = null;
+  obj13 = { value: tmp41, children: items5 };
   if (null != headerBackground) {
     const items4 = [closure_13.background, ,];
     let translucent = null;
     if (headerTransparent) {
       translucent = closure_13.translucent;
     }
-    const obj14 = { style: null, children: null };
     items4[1] = translucent;
     const obj15 = { height: tmp17 };
     items4[2] = obj15;
-    obj14.style = items4;
-    obj14.children = headerBackground();
-    tmp36Result = closure_10(closure_9, obj14);
+    const obj14 = { style: items4, children: headerBackground() };
+    tmp37Result = closure_10(closure_9, obj14);
   }
-  const items5 = [tmp36Result, ,];
-  let tmp36Result2 = null;
+  items5 = [tmp37Result, ,];
+  let tmp37Result2 = null;
   if (null != header) {
-    tmp36Result2 = null;
-    if (tmp39) {
+    tmp37Result2 = null;
+    if (false !== headerShown) {
       const items6 = [closure_13.header];
-      let tmp46 = null;
+      let tmp47 = null;
       if (headerTransparent) {
         const items7 = [closure_13.absolute];
         const obj16 = { minHeight: tmp17 };
         items7[1] = obj16;
-        tmp46 = items7;
+        tmp47 = items7;
       }
-      const obj17 = { style: null, children: null };
-      items6[1] = tmp46;
-      obj17.style = items6;
-      const obj18 = {
+      items6[1] = tmp47;
+      const obj17 = { style: items6, children: closure_10(closure_9, obj18) };
+      obj18 = {
         onLayout(nativeEvent) {
           const height = nativeEvent.nativeEvent.layout.height;
           _undefined(height);
           value.setValue(height);
         },
         style: { pointerEvents: "box-none" },
-        children: null,
+        children: header(obj19),
       };
-      const obj19 = { back: memo1, options, route, navigation };
-      obj18.children = header(obj19);
-      obj17.children = closure_10(closure_9, obj18);
-      tmp36Result2 = closure_10(closure_9, obj17);
+      obj19 = { back: memo1, options, route, navigation };
+      tmp37Result2 = closure_10(closure_9, obj17);
     }
   }
-  items5[1] = tmp36Result2;
-  let tmp47 = context;
+  items5[1] = tmp37Result2;
+  let tmp48 = context;
+  const Provider3 = tmp8(6019).HeaderShownContext.Provider;
   if (!context) {
-    tmp47 = tmp39;
+    tmp48 = tmp40;
   }
-  const obj20 = { value: tmp47, children: null };
-  const tmp8Result8 = num6(7560);
-  obj20.children = closure_10(num6(6019).HeaderBackContext.Provider, { value: memo1, children: descriptor.render() });
-  items5[2] = closure_10(num6(6019).HeaderShownContext.Provider, obj20);
-  obj13.children = items5;
-  obj12.children = closure_11(num6(6019).HeaderHeightContext.Provider, obj13);
-  obj10.children = closure_10(num6(7562).AnimatedHeaderHeightContext.Provider, obj12);
-  obj9.children = closure_10(num6(5715).ScreenStackItem, obj10);
-  return closure_10(num6(1491).NavigationProvider, obj9);
+  const obj20 = { value: tmp48, children: closure_10(Provider4, obj21) };
+  obj21 = { value: memo1, children: render() };
+  Provider4 = tmp8(6019).HeaderBackContext.Provider;
+  items5[2] = closure_10(Provider3, obj20);
+  return closure_10(NavigationProvider, obj9);
 }
 const styles = StyleSheet.create({
   container: { flex: 1 },
@@ -479,138 +504,132 @@ const styles = StyleSheet.create({
 });
 
 export const NativeStackView = function NativeStackView(state) {
+  let ScreenStack;
+  let closure_5;
+  let combined;
+  let descriptors;
+  let obj5;
   state = state.state;
   ({ navigation: require, descriptors } = state);
   const describe = state.describe;
-  const setNextDismissedKey = require("07563__.js").useDismissedRouteError(state).setNextDismissedKey;
-  let obj = require("07563__.js");
-  const invalidPreventRemoveError = require("07564__.js").useInvalidPreventRemoveError(descriptors);
-  const obj2 = require("07564__.js");
-  const modalRouteKeys = require("07565__.js").getModalRouteKeys(state.routes, descriptors);
+  let obj = require("_slicedToArray");
+  const setNextDismissedKey = obj.useDismissedRouteError(state).setNextDismissedKey;
+  const obj2 = require("react");
+  const invalidPreventRemoveError = obj2.useInvalidPreventRemoveError(descriptors);
+  const obj3 = require("07565__.js");
+  const modalRouteKeys = obj3.getModalRouteKeys(state.routes, descriptors);
   const preloadedRoutes = state.preloadedRoutes;
-  dependencyMap = preloadedRoutes.reduce((acc, key) => {
-    let tmp = acc[key.key];
-    if (!tmp) {
-      tmp = describe(key, true);
-    }
-    acc[key.key] = tmp;
+  let closure_6 = preloadedRoutes.reduce((acc, key) => {
+    acc[key.key] = acc[key.key] || describe(key, true);
+    const tmp = acc[key.key] || describe(key, true);
     return acc;
   }, {});
-  const obj4 = { children: null };
-  const obj5 = { style: closure_13.container, children: null };
+  const obj4 = { children: closure_10(ScreenStack, obj5) };
+  const SafeAreaProviderCompat = require("06019__.js").SafeAreaProviderCompat;
   const routes = state.routes;
-  const combined = routes.concat(state.preloadedRoutes);
-  obj5.children = combined.map((key, index) => {
-    state = key;
-    let tmp2 = descriptors[key.key];
-    if (tmp2 == null) {
-      tmp2 = dependencyMap[key.key];
-    }
-    key = undefined;
-    const diff = state.index - 1;
-    if (state.routes[index - 1] != null) {
-      key = tmp6.key;
-    }
-    let key1;
-    if (state.routes[index + 1] != null) {
-      key1 = tmp8.key;
-    }
-    let tmp10;
-    if (key) {
-      tmp10 = descriptors[key];
-    }
-    let tmp11;
-    if (key1) {
-      tmp11 = descriptors[key1];
-    }
-    const hasItem = closure_5.includes(key.key);
-    let flag = hasItem;
-    if (hasItem) {
-      flag = false;
-    }
-    if ("nativeFabricUIManager" in state) {
-      let tmp16 = tmp13;
-      if (!tmp13) {
-        tmp16 = tmp14;
+  obj5 = {
+    style: closure_13.container,
+    children: combined.map((key, index) => {
+      let tmp16;
+      state = key;
+      let tmp2 = descriptors[key.key];
+      if (tmp2 == null) {
+        tmp2 = closure_6[key.key];
       }
-      if (!tmp16) {
-        tmp16 = diff === index;
+      key = undefined;
+      index = state.index;
+      const diff = state.index - 1;
+      const tmp4 = state;
+      if (state.routes[index - 1] != null) {
+        key = tmp6.key;
       }
-      if (!tmp16) {
-        tmp16 = flag;
+      let key1;
+      if (tmp4.routes[index + 1] != null) {
+        key1 = tmp8.key;
       }
-      let tmp15 = !tmp16;
-    } else {
-      tmp15 = !tmp13;
-      if (!tmp13) {
-        tmp15 = !tmp14;
+      let tmp10;
+      if (key) {
+        tmp10 = descriptors[key];
       }
-      if (tmp15) {
-        tmp15 = !flag;
+      let tmp11;
+      if (key1) {
+        tmp11 = descriptors[key1];
       }
-    }
-    return closure_1_10(
-      SceneView,
-      {
+      const hasItem = closure_5.includes(key.key);
+      if ("nativeFabricUIManager" in state) {
+        tmp16 = !(
+          (undefined !== closure_6[key.key] && undefined === descriptors[key.key]) ||
+          index === index ||
+          diff === index ||
+          (hasItem && false)
+        );
+      } else {
+        tmp16 = !tmp14 && !tmp15 && !tmp13;
+      }
+      let obj = {
         index,
-        focused: state.index === index,
-        shouldFreeze: tmp15,
+        focused: tmp15,
+        shouldFreeze: tmp16,
         descriptor: tmp2,
         previousDescriptor: tmp10,
         nextDescriptor: tmp11,
         isPresentationModal: hasItem,
-        isPreloaded: undefined !== dependencyMap[key.key] && undefined === descriptors[key.key],
+        isPreloaded: tmp14,
         onWillDisappear() {
-          require.emit({ type: "transitionStart", data: { closing: true }, target: key.key });
+          const obj = { type: "transitionStart", data: { closing: true }, target: key.key };
+          require.emit(obj);
         },
         onWillAppear() {
-          require.emit({ type: "transitionStart", data: { closing: false }, target: key.key });
+          const obj = { type: "transitionStart", data: { closing: false }, target: key.key };
+          require.emit(obj);
         },
         onAppear() {
-          require.emit({ type: "transitionEnd", data: { closing: false }, target: key.key });
+          const obj = { type: "transitionEnd", data: { closing: false }, target: key.key };
+          require.emit(obj);
         },
         onDisappear() {
-          require.emit({ type: "transitionEnd", data: { closing: true }, target: key.key });
+          const obj = { type: "transitionEnd", data: { closing: true }, target: key.key };
+          require.emit(obj);
         },
         onDismissed(nativeEvent) {
-          const obj = {};
+          const dispatch = require.dispatch;
+          const obj = { source: key.key, target: state.key };
           const StackActions = Link.StackActions;
           const merged = Object.assign(StackActions.pop(nativeEvent.nativeEvent.dismissCount));
-          obj.source = key.key;
-          obj.target = state.key;
-          closure_2_1.dispatch(obj);
+          dispatch(obj);
           setNextDismissedKey(key.key);
         },
         onHeaderBackButtonClicked() {
-          const obj = {};
+          const dispatch = require.dispatch;
+          const obj = { source: key.key, target: state.key };
           const StackActions = Link.StackActions;
           const merged = Object.assign(StackActions.pop());
-          obj.source = key.key;
-          obj.target = state.key;
-          closure_2_1.dispatch(obj);
+          dispatch(obj);
         },
         onNativeDismissCancelled(nativeEvent) {
-          const obj = {};
+          const dispatch = require.dispatch;
+          const obj = { source: key.key, target: state.key };
           const StackActions = Link.StackActions;
           const merged = Object.assign(StackActions.pop(nativeEvent.nativeEvent.dismissCount));
-          obj.source = key.key;
-          obj.target = state.key;
-          closure_2_1.dispatch(obj);
+          dispatch(obj);
         },
         onGestureCancel() {
-          require.emit({ type: "gestureCancel", target: key.key });
+          const obj = { type: "gestureCancel", target: key.key };
+          require.emit(obj);
         },
         onSheetDetentChanged(nativeEvent) {
-          require.emit({
+          const obj = {
             type: "sheetDetentChange",
             target: key.key,
             data: { index: nativeEvent.nativeEvent.index, stable: nativeEvent.nativeEvent.isStable },
-          });
+          };
+          require.emit(obj);
         },
-      },
-      key.key,
-    );
-  });
-  obj4.children = closure_10(require("enableScreens").ScreenStack, obj5);
-  return closure_10(require("06019__.js").SafeAreaProviderCompat, obj4);
+      };
+      return closure_1_10(SceneView, obj, key.key);
+    }),
+  };
+  ScreenStack = require("enableScreens").ScreenStack;
+  combined = routes.concat(state.preloadedRoutes);
+  return closure_10(SafeAreaProviderCompat, obj4);
 };

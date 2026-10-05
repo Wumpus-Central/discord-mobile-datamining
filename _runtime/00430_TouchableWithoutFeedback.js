@@ -1,15 +1,55 @@
 // _runtime/00430_TouchableWithoutFeedback.js
-import _modDef301 from "metro/00301__.js";
+import Fragment from "react/00021_Fragment.js";
+import usePressabilityDefault from "00301_usePressability.js";
 import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import "module_19";
+import "react";
+import react from "00019_react.js";
 
+let hasOwnProperty;
+let metroRequire;
 let closure_2 = ["onBlur", "onFocus"];
-const noop = fn(19);
-({ cloneElement: hasOwnProperty, useMemo: metroRequire } = noop);
-const jsx = fn(21).jsx;
-let closure_7 = ["accessibilityActions", "accessibilityElementsHidden", "accessibilityHint", "accessibilityLanguage", "accessibilityIgnoresInvertColors", "accessibilityLabel", "accessibilityLiveRegion", "accessibilityRole", "accessibilityValue", "aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext", "accessibilityViewIsModal", "aria-modal", "hitSlop", "importantForAccessibility", "nativeID", "onAccessibilityAction", "onBlur", "onFocus", "onLayout", "testID"];
+({ cloneElement: hasOwnProperty, useMemo: metroRequire } = react);
+const jsx = Fragment.jsx;
+let closure_7 = [
+  "accessibilityActions",
+  "accessibilityElementsHidden",
+  "accessibilityHint",
+  "accessibilityLanguage",
+  "accessibilityIgnoresInvertColors",
+  "accessibilityLabel",
+  "accessibilityLiveRegion",
+  "accessibilityRole",
+  "accessibilityValue",
+  "aria-valuemax",
+  "aria-valuemin",
+  "aria-valuenow",
+  "aria-valuetext",
+  "accessibilityViewIsModal",
+  "aria-modal",
+  "hitSlop",
+  "importantForAccessibility",
+  "nativeID",
+  "onAccessibilityAction",
+  "onBlur",
+  "onFocus",
+  "onLayout",
+  "testID",
+];
 
 export default function TouchableWithoutFeedback(disabled) {
+  let accessibilityElementsHidden;
+  let accessibilityLiveRegion;
+  let nativeID;
+  let onBlur2;
+  let onFocus2;
+  let prop1;
+  let prop2;
+  let prop3;
+  let prop4;
+  let str;
+  let str2;
+  let tmp18;
+  let tmp7;
   disabled = disabled.disabled;
   const rejectResponderTermination = disabled.rejectResponderTermination;
   const prop = disabled["aria-disabled"];
@@ -26,7 +66,7 @@ export default function TouchableWithoutFeedback(disabled) {
   const onPress = disabled.onPress;
   const onPressIn = disabled.onPressIn;
   const onPressOut = disabled.onPressOut;
-  const items = [rejectResponderTermination, disabled, prop, , , , , , , , , , , , , ];
+  const items = [rejectResponderTermination, disabled, prop, , , , , , , , , , , , ,];
   let disabled1;
   if (accessibilityState != null) {
     disabled1 = accessibilityState.disabled;
@@ -44,9 +84,26 @@ export default function TouchableWithoutFeedback(disabled) {
   items[13] = onPress;
   items[14] = onPressIn;
   items[15] = onPressOut;
-  const tmp5 = _modDef301(timestampProducer(() => {
-    const obj = { cancelable: !rejectResponderTermination, disabled: null, hitSlop: null, delayLongPress: null, delayPressIn: null, delayPressOut: null, minPressDuration: 0, pressRectOffset: null, android_disableSound: null, onBlur: null, onFocus: null, onLongPress: null, onPress: null, onPressIn: null, onPressOut: null };
-    let tmp = disabled;
+  const tmp2Result = metroRequire(() => {
+    let tmp;
+    const obj = {
+      cancelable: !rejectResponderTermination,
+      disabled: tmp,
+      hitSlop,
+      delayLongPress,
+      delayPressIn,
+      delayPressOut,
+      minPressDuration: 0,
+      pressRectOffset: pressRetentionOffset,
+      android_disableSound: touchSoundDisabled,
+      onBlur,
+      onFocus,
+      onLongPress,
+      onPress,
+      onPressIn,
+      onPressOut,
+    };
+    tmp = disabled;
     if (null === disabled) {
       let tmp2 = prop;
       if (prop == null) {
@@ -58,53 +115,13 @@ export default function TouchableWithoutFeedback(disabled) {
       }
       tmp = tmp2;
     }
-    obj.disabled = tmp;
-    obj.hitSlop = hitSlop;
-    obj.delayLongPress = delayLongPress;
-    obj.delayPressIn = delayPressIn;
-    obj.delayPressOut = delayPressOut;
-    obj.pressRectOffset = pressRetentionOffset;
-    obj.android_disableSound = touchSoundDisabled;
-    obj.onBlur = onBlur;
-    obj.onFocus = onFocus;
-    obj.onLongPress = onLongPress;
-    obj.onPress = onPress;
-    obj.onPressIn = onPressIn;
-    obj.onPressOut = onPressOut;
-    return obj;
-  }, items));
-  const Children = noop.Children;
-  const tmp2Result = timestampProducer(() => {
-    const obj = { cancelable: !rejectResponderTermination, disabled: null, hitSlop: null, delayLongPress: null, delayPressIn: null, delayPressOut: null, minPressDuration: 0, pressRectOffset: null, android_disableSound: null, onBlur: null, onFocus: null, onLongPress: null, onPress: null, onPressIn: null, onPressOut: null };
-    let tmp = disabled;
-    if (null === disabled) {
-      let tmp2 = prop;
-      if (prop == null) {
-        disabled = undefined;
-        if (accessibilityState != null) {
-          disabled = accessibilityState.disabled;
-        }
-        tmp2 = disabled;
-      }
-      tmp = tmp2;
-    }
-    obj.disabled = tmp;
-    obj.hitSlop = hitSlop;
-    obj.delayLongPress = delayLongPress;
-    obj.delayPressIn = delayPressIn;
-    obj.delayPressOut = delayPressOut;
-    obj.pressRectOffset = pressRetentionOffset;
-    obj.android_disableSound = touchSoundDisabled;
-    obj.onBlur = onBlur;
-    obj.onFocus = onFocus;
-    obj.onLongPress = onLongPress;
-    obj.onPress = onPress;
-    obj.onPressIn = onPressIn;
-    obj.onPressOut = onPressOut;
     return obj;
   }, items);
+  const tmp5 = usePressabilityDefault(tmp2Result);
+  const Children = react.Children;
   const items1 = [Children.only(disabled.children).props.children];
-  ({ aria-live: accessibilityLiveRegion, aria-busy: tmp7 } = disabled);
+  ({ "aria-live": accessibilityLiveRegion, "aria-busy": tmp7 } = disabled);
+  Children.only(disabled.children);
   if (tmp7 == null) {
     const accessibilityState2 = disabled.accessibilityState;
     let busy;
@@ -112,8 +129,8 @@ export default function TouchableWithoutFeedback(disabled) {
       busy = accessibilityState2.busy;
     }
   }
-  let obj = { busy: tmp7, checked: null, disabled: null, expanded: null, selected: null };
-  let prop1 = disabled["aria-checked"];
+  let obj = { busy: tmp7, checked: prop1, disabled: prop2, expanded: prop3, selected: prop4 };
+  prop1 = disabled["aria-checked"];
   if (prop1 == null) {
     const accessibilityState3 = disabled.accessibilityState;
     let checked;
@@ -122,8 +139,7 @@ export default function TouchableWithoutFeedback(disabled) {
     }
     prop1 = checked;
   }
-  obj.checked = prop1;
-  let prop2 = disabled["aria-disabled"];
+  prop2 = disabled["aria-disabled"];
   if (prop2 == null) {
     const accessibilityState4 = disabled.accessibilityState;
     let disabled2;
@@ -132,8 +148,7 @@ export default function TouchableWithoutFeedback(disabled) {
     }
     prop2 = disabled2;
   }
-  obj.disabled = prop2;
-  let prop3 = disabled["aria-expanded"];
+  prop3 = disabled["aria-expanded"];
   if (prop3 == null) {
     const accessibilityState5 = disabled.accessibilityState;
     let expanded;
@@ -142,8 +157,7 @@ export default function TouchableWithoutFeedback(disabled) {
     }
     prop3 = expanded;
   }
-  obj.expanded = prop3;
-  let prop4 = disabled["aria-selected"];
+  prop4 = disabled["aria-selected"];
   if (prop4 == null) {
     const accessibilityState6 = disabled.accessibilityState;
     let selected;
@@ -152,48 +166,47 @@ export default function TouchableWithoutFeedback(disabled) {
     }
     prop4 = selected;
   }
-  obj.selected = prop4;
   ({ onBlur: onBlur2, onFocus: onFocus2 } = tmp5);
-  const obj2 = {};
+  const obj2 = {
+    accessible: false !== disabled.accessible,
+    accessibilityState: tmp18,
+    focusable: false !== disabled.focusable && undefined !== disabled.onPress && !disabled.disabled,
+    accessibilityElementsHidden,
+    importantForAccessibility: str,
+    accessibilityLiveRegion: str2,
+    nativeID,
+  };
   const merged = Object.assign(_objectWithoutProperties(tmp5, closure_2));
-  obj2.accessible = false !== disabled.accessible;
-  let tmp18 = obj;
+  tmp18 = obj;
   if (null != disabled.disabled) {
-    const obj3 = {};
+    const obj3 = { disabled: disabled.disabled };
     const merged1 = Object.assign(obj);
-    obj3.disabled = disabled.disabled;
     tmp18 = obj3;
   }
-  obj2.accessibilityState = tmp18;
-  obj2.focusable = false !== disabled.focusable && undefined !== disabled.onPress && !disabled.disabled;
-  let accessibilityElementsHidden = disabled["aria-hidden"];
+  accessibilityElementsHidden = disabled["aria-hidden"];
   if (accessibilityElementsHidden == null) {
     accessibilityElementsHidden = disabled.accessibilityElementsHidden;
   }
-  obj2.accessibilityElementsHidden = accessibilityElementsHidden;
-  let str = "no-hide-descendants";
+  str = "no-hide-descendants";
   if (true !== disabled["aria-hidden"]) {
     str = disabled.importantForAccessibility;
   }
-  obj2.importantForAccessibility = str;
-  let str2 = "none";
+  str2 = "none";
   if ("off" !== accessibilityLiveRegion) {
     if (accessibilityLiveRegion == null) {
       accessibilityLiveRegion = disabled.accessibilityLiveRegion;
     }
     str2 = accessibilityLiveRegion;
   }
-  obj2.accessibilityLiveRegion = str2;
-  let nativeID = disabled.id;
+  nativeID = disabled.id;
   if (nativeID == null) {
     nativeID = disabled.nativeID;
   }
-  obj2.nativeID = nativeID;
   for (const item10094 of closure_7) {
-    if (undefined !== arg0[item10094]) {
-      obj2[item10094] = arg0[item10094];
+    if (undefined !== disabled[item10094]) {
+      obj2[item10094] = disabled[item10094];
     }
     continue;
   }
   return hasOwnProperty(obj2, ...items1);
-};
+}

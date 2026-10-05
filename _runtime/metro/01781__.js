@@ -1,68 +1,67 @@
 // _runtime/metro/01781__.js
+import Fragment from "../react/00021_Fragment.js";
+import startMapper from "../01687_startMapper.js";
+import react_native from "../01751_react-native.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop_mod from "00019__.js";
+import react_mod from "../00019_react.js";
+import 01646__ from "01646__.js";
 
-const LayoutAnimationConfig = fn;
+let Component;
+let createContext;
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {}
+  } catch (err) {
+  }
 }
 function SkipEntering(children) {
-  const tmp = React5(children.shouldSkip);
-  closure_0 = tmp;
-  const tmp2 = React5(children.itemKey);
+  const tmp = metroImportDefault(children.shouldSkip);
+  let closure_0 = tmp;
+  const tmp2 = metroImportDefault(children.itemKey);
   if (children.itemKey !== tmp2.current) {
     ({ shouldSkip: tmp.current, itemKey: tmp2.current } = children);
   }
   const items = [tmp, children.itemKey];
-  timestampProducer(() => {
+  metroRequire(() => {
     closure_0.current = false;
   }, items);
   return jsx(closure_10 ? context : context.Provider, { value: tmp, children: children.children });
 }
-let noop = fn(19);
-({ Children: hasOwnProperty, useEffect: metroRequire, useRef: closure_7, Component, createContext } = noop);
-let noop = noop_mod;
-const jsx = fn(21).jsx;
-const module_1646 = fn(1646);
+let react = react_mod;
+({ Children: hasOwnProperty, useEffect: metroRequire, useRef: metroImportDefault, Component, createContext } = react);
+react = react_mod;
+const jsx = Fragment.jsx;
 let closure_10 = module_1646.isReact19();
 const context = createContext(null);
 class LayoutAnimationConfig {
   constructor() {
-    self = this;
-    tmp = c2(this, LayoutAnimationConfig);
-    tmp2 = closure_4;
-    obj = closure_4(LayoutAnimationConfig);
-    tmp3 = closure_3;
-    if (closure_9()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, LayoutAnimationConfig);
+    const obj = _getPrototypeOf(LayoutAnimationConfig);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return tmp3(self, constructResult);
+    return c3(self, constructResult);
   }
 }
 _inherits(LayoutAnimationConfig, Component);
@@ -70,16 +69,15 @@ const entry = {
   key: "getMaybeWrappedChildren",
   value: function getMaybeWrappedChildren() {
     const self = this;
-    if (hasOwnProperty.count(this.props.children) > 1) {
+    if (closure_1_5.count(this.props.children) > 1) {
+      let children;
       if (self.props.skipExiting) {
-        let children = hasOwnProperty.map(self.props.children, (children) =>
-          closure_8(LayoutAnimationConfig, { itemKey: self.props.itemKey, skipExiting: true, children }),
-        );
+        children = closure_1_5.map(self.props.children, (children) => <LayoutAnimationConfig itemKey={self.props.itemKey} skipExiting>{children}</LayoutAnimationConfig>);
       }
       return children;
     }
     children = self.props.children;
-  },
+  }
 };
 let items = [
   entry,
@@ -88,17 +86,14 @@ let items = [
     value: function setShouldAnimateExiting() {
       const self = this;
       if (1 === hasOwnProperty.count(this.props.children)) {
-        const findNodeHandleResult = LayoutAnimationConfig(1751).findNodeHandle(self);
+        const obj = react_native;
+        const findNodeHandleResult = obj.findNodeHandle(self);
         if (findNodeHandleResult) {
-          const result = LayoutAnimationConfig(1687).setShouldAnimateExitingForTag(
-            findNodeHandleResult,
-            !self.props.skipExiting,
-          );
-          const tmpResult = LayoutAnimationConfig(1687);
+          const tmpResult = startMapper;
+          const result = tmpResult.setShouldAnimateExitingForTag(findNodeHandleResult, !self.props.skipExiting);
         }
-        const obj = LayoutAnimationConfig(1751);
       }
-    },
+    }
   },
   {
     key: "componentWillUnmount",
@@ -107,7 +102,7 @@ let items = [
       if (undefined !== this.props.skipExiting) {
         const result = self.setShouldAnimateExiting();
       }
-    },
+    }
   },
   {
     key: "render",
@@ -116,21 +111,13 @@ let items = [
       const maybeWrappedChildren = this.getMaybeWrappedChildren();
       let tmp2 = maybeWrappedChildren;
       if (undefined !== this.props.skipEntering) {
-        const obj = {
-          itemKey: self.props.itemKey,
-          shouldSkip: self.props.skipEntering,
-          children: maybeWrappedChildren,
-        };
-        tmp2 = (
-          <SkipEntering itemKey={self.props.itemKey} shouldSkip={self.props.skipEntering}>
-            {maybeWrappedChildren}
-          </SkipEntering>
-        );
+        tmp2 = <SkipEntering itemKey={self.props.itemKey} shouldSkip={self.props.skipEntering}>{maybeWrappedChildren}</SkipEntering>;
       }
       return tmp2;
-    },
-  },
+    }
+  }
 ];
+const LayoutAnimationConfig_export = _createClass(LayoutAnimationConfig, items);
 
 export const SkipEnteringContext = context;
-export const LayoutAnimationConfig = _createClass(LayoutAnimationConfig, items);
+export { LayoutAnimationConfig_export as LayoutAnimationConfig };

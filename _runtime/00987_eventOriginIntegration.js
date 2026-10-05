@@ -1,10 +1,8 @@
 // _runtime/00987_eventOriginIntegration.js
 
-export () => ({
+export const eventOriginIntegration = () => ({
   name: "EventOrigin",
-  setupOnce() {
-
-  },
+  setupOnce() {},
   processEvent(tags) {
     tags = tags.tags;
     if (null === tags) {
@@ -14,5 +12,5 @@ export () => ({
     tags.tags["event.origin"] = "javascript";
     tags.tags["event.environment"] = "javascript";
     return tags;
-  }
-})
+  },
+});

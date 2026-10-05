@@ -1,9 +1,11 @@
 // _runtime/01498_BaseRouter.js
-const require = arg1;
-const dependencyMap = arg6;
+let name, params, set;
 
-export const BaseRouter = {
+let obj = {
   getStateForAction(routeNames, type) {
+    let index;
+    let routes1;
+    let routes3;
     type = type.type;
     if ("SET_PARAMS" !== type) {
       if ("REPLACE_PARAMS" !== type) {
@@ -13,7 +15,9 @@ export const BaseRouter = {
             return null;
           } else {
             const _Set = Set;
-            const set = new Set(routeNames.routeNames);
+            const self = this;
+            const self2 = this;
+            set = new Set(routeNames.routeNames);
             let tmp8 = null;
             if (0 !== payload.routes.length) {
               const routes2 = payload.routes;
@@ -33,22 +37,25 @@ export const BaseRouter = {
                         if (payload.index >= 0) {
                           tmp4 = null;
                           if (payload.index < payload.routes.length) {
-                            let obj = {};
+                            let obj = {
+                              routes: routes1.map((name) => {
+                                let obj2;
+                                let tmp;
+                                if (!("key" in name)) {
+                                  const obj = { key: "" + name + "-" + obj2.nanoid() };
+                                  const merged = Object.assign(name);
+                                  name = name.name;
+                                  const _HermesInternal = HermesInternal;
+                                  tmp = obj;
+                                  obj2 = type(index[0]);
+                                } else {
+                                  tmp = name;
+                                }
+                                return tmp;
+                              }),
+                            };
                             let merged = Object.assign(payload);
-                            const routes1 = payload.routes;
-                            obj.routes = routes1.map((name) => {
-                              if (!("key" in name)) {
-                                const obj = {};
-                                const merged = Object.assign(name);
-                                const _HermesInternal = HermesInternal;
-                                obj.key = "" + name.name + "-" + type(index[0]).nanoid();
-                                let tmp = obj;
-                                const obj2 = type(index[0]);
-                              } else {
-                                tmp = name;
-                              }
-                              return tmp;
-                            });
+                            routes1 = payload.routes;
                             tmp4 = obj;
                           }
                         }
@@ -63,47 +70,46 @@ export const BaseRouter = {
             return tmp8;
           }
         } else {
+          let tmp = null;
           return null;
         }
       }
     }
     if (type.source) {
       const routes = routeNames.routes;
-      let index = routes.findIndex((key) => key.key === type.source);
+      index = routes.findIndex((key) => key.key === type.source);
     } else {
       index = routeNames.index;
     }
     let tmp9 = null;
     if (-1 !== index) {
-      let obj2 = {};
-      let merged1 = Object.assign(routeNames);
-      const routes3 = routeNames.routes;
-      obj2.routes = routes3.map((params, index) => {
-        if (index !== index) {
-          return params;
-        } else {
-          const obj = {};
-          const merged = Object.assign(params);
-          payload = type;
-          if ("REPLACE_PARAMS" === type.type) {
-            ({ payload, params } = payload);
-          } else {
-            params = {};
-            const merged1 = Object.assign(params.params);
-            const merged2 = Object.assign(payload.payload.params);
+      let obj2 = {
+        routes: routes3.map((params, index) => {
+          let tmp = params;
+          if (index === index) {
+            const obj = { params };
+            const merged = Object.assign(params);
+            if ("REPLACE_PARAMS" === type.type) {
+              params = type.payload.params;
+            } else {
+              params = {};
+              const merged1 = Object.assign(params.params);
+              const merged2 = Object.assign(type.payload.params);
+            }
+            tmp = obj;
           }
-          obj.params = params;
-        }
-      });
+          return tmp;
+        }),
+      };
+      let merged1 = Object.assign(routeNames);
+      routes3 = routeNames.routes;
       tmp9 = obj2;
     }
     return tmp9;
   },
   shouldActionChangeFocus(type) {
-    let tmp = "NAVIGATE" === type.type;
-    if (!tmp) {
-      tmp = "NAVIGATE_DEPRECATED" === type.type;
-    }
-    return tmp;
+    return "NAVIGATE" === type.type || "NAVIGATE_DEPRECATED" === type.type;
   },
 };
+
+export const BaseRouter = obj;

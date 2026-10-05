@@ -5,68 +5,68 @@ import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
+import react from "../00019_react.js";
+import react_native from "../00017_react-native.js";
+import Fragment from "../react/00021_Fragment.js";
 
+let c9;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let requireNativeComponent;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const MaskedView = ["maskElement", "children"];
-get_ActivityIndicator = fn(17);
-({ View: metroRequire, StyleSheet: closure_7, requireNativeComponent } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let closure_0 = ["maskElement", "children"];
+({ View: metroRequire, StyleSheet: metroImportDefault, requireNativeComponent } = react_native);
+({ jsx: metroImportAll, jsxs: c9 } = Fragment);
 let closure_11 = requireNativeComponent("RNCMaskedView");
 class MaskedView {
   constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = c2(this, MaskedView);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(MaskedView);
-    tmp3 = closure_3;
-    if (c10()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    const items = [...arguments];
+    _classCallCheck(this, MaskedView);
+    const items1 = [...items];
+    const obj = _getPrototypeOf(MaskedView);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items1);
     }
-    tmp3Result = tmp3(self, constructResult);
+    const tmp3Result = c3(self, constructResult);
     tmp3Result._hasWarnedInvalidRenderMask = false;
     return tmp3Result;
   }
 }
-_inherits(MaskedView, noop.Component);
+_inherits(MaskedView, react.Component);
 const entry = {
   key: "render",
   value: function render() {
+    let children;
+    let items;
+    let maskElement;
+    let tmp9;
     const self = this;
     const props = this.props;
     ({ maskElement, children } = props);
-    const tmp = _objectWithoutProperties(props, MaskedView);
-    if (noop.isValidElement(maskElement)) {
-      const obj2 = {};
+    const tmp = _objectWithoutProperties(props, closure_0);
+    if (react.isValidElement(maskElement)) {
+      const obj2 = { children: items };
       const merged = Object.assign(tmp);
-      const obj3 = { pointerEvents: "none", style: absoluteFill.absoluteFill, children: maskElement };
-      const items = [closure_1_8(timestampProducer, obj3), children];
-      obj2.children = items;
-      let tmp9 = options(closure_11, obj2);
+      const obj3 = { pointerEvents: "none", style: metroImportDefault.absoluteFill, children: maskElement };
+      items = [metroImportAll(metroRequire, obj3), children];
+      tmp9 = React4(closure_11, obj2);
     } else {
       if (!self._hasWarnedInvalidRenderMask) {
         const _console = console;
@@ -75,10 +75,9 @@ const entry = {
         );
         self._hasWarnedInvalidRenderMask = true;
       }
-      const obj = {};
+      const obj = { children };
       const merged1 = Object.assign(tmp);
-      obj.children = children;
-      tmp9 = closure_1_8(timestampProducer, obj);
+      tmp9 = metroImportAll(metroRequire, obj);
     }
     return tmp9;
   },

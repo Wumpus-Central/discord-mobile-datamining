@@ -1,7 +1,9 @@
 // _runtime/metro/01684__.js
 import 01646__ from "01646__.js";
-import 01680__ from "01680__.js";
+import module_1680_mod from "01680__.js";
 
+let module_1680;
+let prop;
 if (module_1646.isWeb()) {
   const _module1 = module_1646;
   let matches = _module1.isWindowAvailable();
@@ -9,30 +11,35 @@ if (module_1646.isWeb()) {
     let _window = window;
     matches = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }
-  let prop = matches;
+  prop = matches;
 } else {
   prop = global._REANIMATED_IS_REDUCED_MOTION;
 }
-const ReducedMotionManager = { jsValue: prop, uiValue: null, setEnabled: null };
+const ReducedMotionManager = {
+  jsValue: prop,
+  uiValue: module_1680.makeMutable(prop),
+  setEnabled(jsValue) {
+    obj.jsValue = jsValue;
+    obj.uiValue.value = jsValue;
+  }
+};
 function isReducedMotionEnabledInSystem() {
+  let prop;
+  const obj = module_1646;
   if (obj.isWeb()) {
-    let matches = module_1646.isWindowAvailable();
+    const tmpResult = module_1646;
+    let matches = tmpResult.isWindowAvailable();
     if (matches) {
       const _window = window;
       matches = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     }
-    let prop = matches;
-    const tmpResult = module_1646;
+    prop = matches;
   } else {
     prop = global._REANIMATED_IS_REDUCED_MOTION;
   }
   return prop;
 }
-ReducedMotionManager.uiValue = module_1680.makeMutable(prop);
-ReducedMotionManager.setEnabled = function setEnabled(jsValue) {
-  obj.jsValue = jsValue;
-  obj.uiValue.value = jsValue;
-};
+module_1680 = module_1680_mod;
 
 export { isReducedMotionEnabledInSystem };
 export { ReducedMotionManager };

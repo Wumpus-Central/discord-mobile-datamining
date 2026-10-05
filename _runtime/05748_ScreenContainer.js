@@ -1,31 +1,35 @@
 // _runtime/05748_ScreenContainer.js
-import _mod5731 from "metro/05731__.js";
-import _modDef5749 from "metro/05749__.js";
+import Fragment from "react/00021_Fragment.js";
+import react_native from "05731_react-native.js";
+import react_nativeDefault from "05749_react-native.js";
 import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import noop from "metro/00019__.js";
+import react_native2 from "00017_react-native.js";
+import react from "00019_react.js";
 
-require = fn;
+let Platform;
+let hasOwnProperty;
 let closure_3 = ["enabled", "hasTwoStates"];
-get_ActivityIndicator = fn(17);
-({ Platform, View: hasOwnProperty } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
+({ Platform, View: hasOwnProperty } = react_native2);
+const jsx = Fragment.jsx;
 
 export default function ScreenContainer(enabled) {
   enabled = enabled.enabled;
   if (undefined === enabled) {
-    enabled = _mod5731.screensEnabled();
+    const obj = react_native;
+    enabled = obj.screensEnabled();
   }
+  const hasTwoStates = enabled.hasTwoStates;
   const tmp3 = _objectWithoutProperties(enabled, closure_3);
   if (enabled) {
-    if (_mod5731.isNativePlatformSupported) {
-      if (enabled.hasTwoStates) {
-        const obj2 = {};
+    if (react_native.isNativePlatformSupported) {
+      if (hasTwoStates) {
+        react_nativeDefault;
         const merged = Object.assign(tmp3);
-        return jsx(_modDef5749, {});
+        return <tmp14 />;
       } else {
-        const obj3 = {};
+        react_nativeDefault;
         const merged1 = Object.assign(tmp3);
-        return jsx(_modDef5749, {});
+        return <tmp9 />;
       }
     }
   }

@@ -1,22 +1,29 @@
 // _runtime/metro/06408__.js
 import _mod6360 from "06360__.js";
-import _slicedToArray from "06342__.js";
+import _slicedToArray from "06342__slicedToArray.js";
+import react from "../00019_react.js";
 
-require = fn;
-const noop = fn(19);
-({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+let c3;
+let closure_4;
+let hasOwnProperty;
+({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty } = react);
 
 export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
-  closure_0 = arg0;
-  closure_1 = arg2;
+  let tmp3;
+  let closure_0 = arg0;
+  let closure_1 = arg2;
   let tmp = hasOwnProperty(undefined);
-  [r10015, tmp3] = _mod6360.useLayoutState(0);
-  React4(() => {
+  let closure_2 = tmp;
+  const obj = _mod6360;
+  const tmp2 = _slicedToArray(obj.useLayoutState(0), 2);
+  [r10015, tmp3] = tmp2;
+  let c3 = tmp3;
+  React3(() => {
     let tmpResult = closure_0;
     if (typeof closure_0 === "function") {
       tmpResult = tmp();
     }
-    closure_2.current = tmpResult;
+    ref.current = tmpResult;
     if (closure_1 != null) {
       tmp3();
     }
@@ -24,7 +31,7 @@ export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
   const items = [tmp3];
   const items1 = [
     tmp.current,
-    React3((fn, arg1) => {
+    _false((fn, arg1) => {
       let tmp = fn;
       if (typeof fn === "function") {
         tmp = fn(ref.current);

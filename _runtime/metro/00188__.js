@@ -1,22 +1,22 @@
 // _runtime/metro/00188__.js
 import _mod47 from "00047__.js";
-import _mod184 from "00184__.js";
-import _mod189 from "00189__.js";
+import toError from "../00184_toError.js";
+import SyntheticError from "../00189_SyntheticError.js";
 
 if (true !== global.RN$useAlwaysAvailableJSErrorHandling) {
-  let closure_1 = _mod184.default;
-  const result = _mod189.default.installConsoleErrorReporter();
+  const _default = SyntheticError.default;
+  let closure_1 = toError.default;
+  const result = _default.installConsoleErrorReporter();
   if (!global.__fbDisableExceptionsManager) {
-    _mod47.default.setGlobalHandler((arg0, arg1) => {
+    const _default2 = _mod47.default;
+    _default2.setGlobalHandler((arg0, arg1) => {
       try {
         _default.handleException(arg0, arg1);
-      } catch (tmp5) {
+      } catch (tmp4) {
         const _console = console;
-        console.log("Failed to print error: ", closure_1(tmp5).message);
-        throw tmp;
+        console.log("Failed to print error: ", closure_1(tmp4).message);
+        throw arg0;
       }
     });
-    const _default2 = _mod47.default;
   }
-  const _default = _mod189.default;
 }

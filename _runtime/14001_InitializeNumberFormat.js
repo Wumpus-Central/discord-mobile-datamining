@@ -1,7 +1,7 @@
 // _runtime/14001_InitializeNumberFormat.js
-import _mod13965 from "metro/13965__.js";
+import CanonicalizeLocaleList from "13965_CanonicalizeLocaleList.js";
 import CoerceOptionsToObject from "13967_CoerceOptionsToObject.js";
-import _mod13970 from "metro/13970__.js";
+import UNICODE_EXTENSION_SEQUENCE_REGEX from "13970_UNICODE_EXTENSION_SEQUENCE_REGEX.js";
 import GetOption from "13975_GetOption.js";
 import GetStringOrBooleanOption from "13977_GetStringOrBooleanOption.js";
 import CurrencyDigits from "13990_CurrencyDigits.js";
@@ -9,13 +9,17 @@ import LookupSupportedLocales from "14002_LookupSupportedLocales.js";
 import SetNumberFormatUnitOptions from "14016_SetNumberFormatUnitOptions.js";
 import SetNumberFormatDigitOptions from "14017_SetNumberFormatDigitOptions.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
 export const InitializeNumberFormat = function InitializeNumberFormat(arg0, arg1, arg2, arg3) {
+  let availableLocales;
+  let currencyDigitsData;
+  let getDefaultLocale;
+  let getInternalSlots;
+  let localeData;
+  let num2;
+  let numberingSystemNames;
   ({ localeData, numberingSystemNames, getDefaultLocale } = arg3);
   ({ getInternalSlots, availableLocales, currencyDigitsData } = arg3);
-  const result = _mod13965.CanonicalizeLocaleList(arg1);
+  const result = CanonicalizeLocaleList.CanonicalizeLocaleList(arg1);
   const result1 = CoerceOptionsToObject.CoerceOptionsToObject(arg2);
   const obj2 = Object.create(null);
   obj2.localeMatcher = GetOption.GetOption(result1, "localeMatcher", "string", ["lookup", "best fit"], "best fit");
@@ -36,10 +40,8 @@ export const InitializeNumberFormat = function InitializeNumberFormat(arg0, arg1
     localeData,
     getDefaultLocale,
   );
-  _mod13970.invariant(
-    !!localeData[ResolveLocaleResult.dataLocale],
-    "Missing locale data for ".concat(ResolveLocaleResult.dataLocale),
-  );
+  const tmp9 = !localeData[ResolveLocaleResult.dataLocale];
+  UNICODE_EXTENSION_SEQUENCE_REGEX.invariant(!tmp9, "Missing locale data for ".concat(ResolveLocaleResult.dataLocale));
   const internalSlots = getInternalSlots(arg0);
   ({ locale: tmp11.locale, dataLocale: tmp11.dataLocale, nu: tmp11.numberingSystem } = ResolveLocaleResult);
   internalSlots.dataLocaleData = localeData[ResolveLocaleResult.dataLocale];
@@ -54,10 +56,11 @@ export const InitializeNumberFormat = function InitializeNumberFormat(arg0, arg1
   );
   internalSlots.notation = GetOptionResult1;
   if ("currency" === style) {
+    let num3;
     if ("standard" === GetOptionResult1) {
       const obj = { currencyDigitsData };
-      let num2 = CurrencyDigits.CurrencyDigits(internalSlots.currency, obj);
-      let num3 = num2;
+      num2 = CurrencyDigits.CurrencyDigits(internalSlots.currency, obj);
+      num3 = num2;
     }
     const result3 = SetNumberFormatDigitOptions.SetNumberFormatDigitOptions(
       internalSlots,
@@ -99,5 +102,4 @@ export const InitializeNumberFormat = function InitializeNumberFormat(arg0, arg1
     num2 = 0;
   }
   num3 = 0;
-  const tmp9 = !localeData[ResolveLocaleResult.dataLocale];
 };

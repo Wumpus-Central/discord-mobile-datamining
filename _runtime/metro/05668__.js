@@ -3441,7 +3441,7 @@ const obj = {
   game_die: ["dado", "dados", "jogo", "sorte"],
   jigsaw: ["dica", "encaixe", "pe\u00E7a", "quebra-cabe\u00E7a"],
   teddy_bear: ["bichinho", "brinquedo", "enchimento", "pel\u00FAcia", "ursinho", "urso"],
-  piñata: ["cinco de maio", "comemora\u00E7\u00E3o", "doce", "festa", "festival", "pinhata"],
+  "pi\u00f1ata": ["cinco de maio", "comemora\u00E7\u00E3o", "doce", "festa", "festival", "pinhata"],
   mirror_ball: [
     "balada",
     "boate",

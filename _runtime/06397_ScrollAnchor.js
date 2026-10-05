@@ -1,24 +1,31 @@
 // _runtime/06397_ScrollAnchor.js
-import CompatView from "06392_CompatView.js";
-import _slicedToArray from "metro/06342__.js";
-import noop_mod from "metro/00019__.js";
+import Fragment from "react/00021_Fragment.js";
+import react_native from "06392_react-native.js";
+import _slicedToArray_mod from "metro/06342__slicedToArray.js";
+import react_mod from "00019_react.js";
 
-require = fn;
-let noop = fn(19);
-({ useImperativeHandle: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
-let noop = noop_mod;
-const jsx = fn(21).jsx;
+let c3;
+let closure_4;
+let hasOwnProperty;
+let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
+({ useImperativeHandle: c3, useMemo: closure_4, useState: hasOwnProperty } = react);
+react = react_mod;
+const jsx = Fragment.jsx;
 
 export const ScrollAnchor = function ScrollAnchor(horizontal) {
+  let closure_2;
+  let first;
   horizontal = horizontal.horizontal;
   first = undefined;
   _slicedToArray = undefined;
+  const scrollAnchorRef = horizontal.scrollAnchorRef;
   [first, _slicedToArray] = closure_5(1000000);
   closure_3(
-    horizontal.scrollAnchorRef,
+    scrollAnchorRef,
     () => ({
       scrollBy(diff) {
-        closure_0 = diff;
+        let closure_0 = diff;
         closure_1_2((arg0) => arg0 + closure_0);
       },
     }),
@@ -26,16 +33,17 @@ export const ScrollAnchor = function ScrollAnchor(horizontal) {
   );
   const items = [first, horizontal];
   return closure_4(() => {
+    let num2;
     let num = 0;
+    const CompatView = react_native.CompatView;
     if (!horizontal) {
       num = first;
     }
-    const style = { position: "absolute", height: 0, top: num, left: null };
-    let num2 = 0;
+    const style = { position: "absolute", height: 0, top: num, left: num2 };
+    num2 = 0;
     if (horizontal) {
       num2 = first;
     }
-    style.left = num2;
-    return jsx(CompatView.CompatView, { style });
+    return <CompatView style={style} />;
   }, items);
 };

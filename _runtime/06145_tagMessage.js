@@ -1,5 +1,6 @@
 // _runtime/06145_tagMessage.js
-const global = arg0;
+let hasOwnProperty;
+
 function tagMessage(arg0) {
   return "[react-native-gesture-handler] " + arg0;
 }
@@ -38,18 +39,17 @@ function deepEqual(obj, obj2) {
   }
 }
 
-export const toArray = function toArray(items) {
-  let tmp = items;
-  if (!Array.isArray(items)) {
-    items = [];
-    items[0] = items;
+export const toArray = function toArray(blocksHandlers) {
+  let tmp = blocksHandlers;
+  if (!Array.isArray(blocksHandlers)) {
+    const items = [blocksHandlers];
     tmp = items;
   }
   return tmp;
 };
 export const withPrevAndCurrent = function withPrevAndCurrent(arg0, arg1) {
-  closure_0 = arg1;
-  closure_1 = [null];
+  let closure_0 = arg1;
+  let closure_1 = [null];
   const items = [...arg0];
   const items1 = [];
   const item = items.forEach((item, index) => {
@@ -59,23 +59,14 @@ export const withPrevAndCurrent = function withPrevAndCurrent(arg0, arg1) {
   });
   return items1;
 };
-export const hasProperty = function hasProperty(arg0, key10009) {
+export const hasProperty = function hasProperty(arg0, arg1) {
   hasOwnProperty = Object.prototype.hasOwnProperty;
-  const call = hasOwnProperty.call;
-  return typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009);
+  return hasOwnProperty.call(arg0, arg1);
 };
 export const isTestEnv = function isTestEnv() {
   hasOwnProperty = Object.prototype.hasOwnProperty;
-  const call = hasOwnProperty.call;
-  if (typeof call === "unknown") {
-    let flag = hasOwnProperty("process");
-  } else {
-    flag = call(global, "process");
-  }
-  if (flag) {
-    flag = false;
-  }
-  return flag;
+  const tmp = hasOwnProperty.call(global, "process") && false;
+  return tmp;
 };
 export { tagMessage };
 export const isRemoteDebuggingEnabled = function isRemoteDebuggingEnabled() {

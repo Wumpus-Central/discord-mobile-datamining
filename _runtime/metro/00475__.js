@@ -1,32 +1,41 @@
 // _runtime/metro/00475__.js
 const obj = {
   centroidDimension(touchBank, arg1, arg2, arg3) {
-    let tmp2;
+    let noCentroid;
+    let num4;
+    let num5;
     touchBank = touchBank.touchBank;
     let tmp = null;
     if (1 === touchBank.numberActiveTouches) {
       tmp = touchBank.touchBank[touchBank.indexOfSingleActiveTouch];
     }
     if (null !== tmp) {
-      let num4 = 0;
-      let num5 = 0;
-      if (tmp11) {
-        if (!arg3) {
-          if (arg3) {
-            if (!arg2) {
-              const currentPageY = tmp.currentPageY;
-            }
+      num4 = 0;
+      num5 = 0;
+      const tmp8 = tmp.touchActive && tmp.currentTimeStamp > arg1;
+      if (tmp8) {
+        let currentPageY2;
+        if (arg3) {
+          if (arg2) {
+            currentPageY2 = tmp.currentPageX;
           }
-          if (!arg3) {
-            if (arg2) {
-              let previousPageY2 = tmp.previousPageX;
-            }
-          }
-          previousPageY2 = tmp.previousPageY;
+          num5 = currentPageY2;
+          num4 = 1;
         }
-        const currentPageX2 = tmp.currentPageX;
+        if (arg3) {
+          if (!arg2) {
+            currentPageY2 = tmp.currentPageY;
+          }
+        }
+        if (!arg3) {
+          let previousPageY2;
+          if (arg2) {
+            previousPageY2 = tmp.previousPageX;
+          }
+          currentPageY2 = previousPageY2;
+        }
+        previousPageY2 = tmp.previousPageY;
       }
-      tmp11 = tmp.touchActive && tmp.currentTimeStamp > arg1;
     } else {
       let num = 0;
       let num2 = 0;
@@ -34,46 +43,49 @@ const obj = {
       num4 = 0;
       num5 = 0;
       if (0 < touchBank.length) {
-        while (true) {
-          tmp2 = touchBank[num];
-          let tmp6 = num2;
-          let tmp7 = num3;
+        do {
+          let tmp2 = touchBank[num];
+          let sum1 = num2;
+          let sum = num3;
           if (null != tmp2) {
-            tmp6 = num2;
-            tmp7 = num3;
+            sum1 = num2;
+            sum = num3;
             if (tmp2.touchActive) {
-              tmp6 = num2;
-              tmp7 = num3;
+              sum1 = num2;
+              sum = num3;
               if (tmp2.currentTimeStamp >= arg1) {
-                break;
+                if (arg3) {
+                  if (arg2) {
+                    sum = num3 + tmp2.currentPageX;
+                    sum1 = num2 + 1;
+                  }
+                }
+                if (arg3) {
+                  if (!arg2) {
+                    let currentPageY = tmp2.currentPageY;
+                  }
+                }
+                if (!arg3) {
+                  let previousPageY;
+                  if (arg2) {
+                    previousPageY = tmp2.previousPageX;
+                  }
+                  currentPageY = previousPageY;
+                }
+                previousPageY = tmp2.previousPageY;
               }
             }
           }
           num = num + 1;
-          num2 = tmp6;
-          num3 = tmp7;
-          num4 = tmp6;
-          num5 = tmp7;
-        }
-        if (!arg3) {
-          if (arg3) {
-            if (!arg2) {
-              const sum = num3 + tmp2.currentPageY;
-              const sum1 = num2 + 1;
-            }
-          }
-          if (!arg3) {
-            if (arg2) {
-              let previousPageY = tmp2.previousPageX;
-            }
-          }
-          previousPageY = tmp2.previousPageY;
-        }
-        const currentPageX = tmp2.currentPageX;
+          num2 = sum1;
+          num3 = sum;
+          num4 = sum1;
+          num5 = sum;
+        } while (num < touchBank.length);
       }
     }
     if (0 < num4) {
-      let noCentroid = num5 / num4;
+      noCentroid = num5 / num4;
     } else {
       noCentroid = obj.noCentroid;
     }

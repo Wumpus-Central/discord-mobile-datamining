@@ -1,56 +1,47 @@
 // _runtime/metro/14151__.js
 import _createClassDefault from "00042__createClass.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _classCallCheck from "00041__classCallCheck.js";
 
-function monadic(call, get, fn, compareResult) {
-  let tmp2 = compareResult;
+function monadic(call, get, fn, num) {
+  let tmp2 = num;
+  const tmp = null == num || typeof num === "number" || typeof num === "boolean";
   if (!tmp) {
-    tmp2 = fn(compareResult);
+    tmp2 = fn(num);
   }
-  value = get.get(tmp2);
-  if (undefined !== value) {
-    return value;
-  } else {
-    const self = this;
-    let result = call;
-    call = call.call;
-    const tmp6 = typeof call === "unknown" ? result(compareResult) : call(self, compareResult);
-    result = get.set(tmp2, tmp6);
+  let value = get.get(tmp2);
+  if (undefined === value) {
+    const callResult = call.call(this, num);
+    const result = get.set(tmp2, callResult);
+    value = callResult;
   }
+  return value;
 }
 function variadic(apply, get, fn) {
-  const call = slice.call;
-  if (typeof call === "unknown") {
-    let substr = slice(3);
-  } else {
-    substr = call(arguments, 3);
-  }
-  const tmp3 = fn(substr);
-  value = get.get(tmp3);
+  const callResult = slice.call(arguments, 3);
+  const tmp2 = fn(callResult);
+  let value = get.get(tmp2);
   if (undefined === value) {
     const self = this;
-    const applyResult = apply.apply(this, substr);
-    const result = get.set(tmp3, applyResult);
+    const applyResult = apply.apply(this, callResult);
+    const result = get.set(tmp2, applyResult);
     value = applyResult;
   }
   return value;
 }
 function strategyDefault(c165, cache) {
   cache = cache.cache;
-  return 1 === length.length ? monadic : variadic.bind(this, length, cache.create(), cache.serializer);
+  const obj = 1 === length.length ? monadic : variadic;
+  return obj.bind(this, length, cache.create(), cache.serializer);
 }
-let _classCallCheck = _classCallCheck_mod;
 function serializerDefault() {
   return JSON.stringify(arguments);
 }
 class ObjectWithoutPrototypeCache {
   constructor() {
-    tmp = closure_0(this, ObjectWithoutPrototypeCache);
+    _classCallCheck(this, ObjectWithoutPrototypeCache);
     this.cache = Object.create(null);
-    return;
   }
 }
-_classCallCheck = ObjectWithoutPrototypeCache;
 const entry = {
   key: "get",
   value: function get(arg0) {
@@ -69,22 +60,36 @@ const items = [
 let closure_5 = _createClassDefault(ObjectWithoutPrototypeCache, items);
 let closure_6 = {
   create() {
-    return new closure_5();
+    const tmp = new closure_5();
+    return tmp;
+  },
+};
+let obj = {
+  variadic: function strategyVariadic(c165, cache) {
+    cache = cache.cache;
+    return variadic.bind(this, c165, cache.create(), cache.serializer);
+  },
+  monadic: function strategyMonadic(c165, cache) {
+    cache = cache.cache;
+    return monadic.bind(this, c165, cache.create(), cache.serializer);
   },
 };
 
 export const memoize = function memoize(arg0, cache) {
-  if (cache) {
+  const tmp = cache;
+  if (tmp) {
     if (cache.cache) {
       cache = cache.cache;
     }
     if (cache) {
+      let serializer;
       if (cache.serializer) {
-        let serializer = cache.serializer;
+        serializer = cache.serializer;
       }
       if (cache) {
+        let strategy;
         if (cache.strategy) {
-          let strategy = cache.strategy;
+          strategy = cache.strategy;
         }
         const obj = { cache, serializer };
         return strategy(arg0, obj);
@@ -95,13 +100,4 @@ export const memoize = function memoize(arg0, cache) {
   }
   cache = closure_6;
 };
-export const strategies = {
-  variadic: function strategyVariadic(c165, cache) {
-    cache = cache.cache;
-    return variadic.bind(this, c165, cache.create(), cache.serializer);
-  },
-  monadic: function strategyMonadic(c165, cache) {
-    cache = cache.cache;
-    return monadic.bind(this, c165, cache.create(), cache.serializer);
-  },
-};
+export const strategies = obj;

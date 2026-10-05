@@ -1,66 +1,57 @@
 // _runtime/metro/00140__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _mod136 from "00136__.js";
+import _mod137 from "00137__.js";
+import _mod138 from "00138__.js";
 import NativeDOMCxxDefault from "../00139_NativeDOMCxx.js";
-import _modDef141 from "00141__.js";
+import _getBoundingClientRectDefault from "../00141__getBoundingClientRect.js";
 import _modDef143 from "00143__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
 const require = globalThis.__r;
 
-const ReactNativeDocument = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
 class ReactNativeDocument {
-  constructor(arg0, arg1) {
-    self = this;
-    tmp = closure_3(this, ReactNativeDocument);
-    items = [,];
-    items[0] = arg1;
-    items[1] = null;
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(ReactNativeDocument);
-    tmp3 = closure_4;
-    if (metroRequire()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+  constructor(_rootTag, arg1) {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, ReactNativeDocument);
+    const items = [arg1, null];
+    const obj = _getPrototypeOf(ReactNativeDocument);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result._rootTag = global;
-    obj2 = closure_0(c2[10]);
-    reactNativeDocumentElementInstanceHandle = obj2.createReactNativeDocumentElementInstanceHandle();
-    tmp8 = new closure_1(c2[11])(global, null, reactNativeDocumentElementInstanceHandle, tmp3Result);
-    obj3 = closure_1(c2[7]);
-    linkRootNodeResult = obj3.linkRootNode(global, reactNativeDocumentElementInstanceHandle);
-    obj4 = closure_0(c2[10]);
-    result = obj4.setNativeElementReferenceForReactNativeDocumentElementInstanceHandle(
+    const tmp3Result = _possibleConstructorReturn(self, constructResult);
+    tmp3Result._rootTag = _rootTag;
+    const obj2 = _mod138;
+    const reactNativeDocumentElementInstanceHandle = obj2.createReactNativeDocumentElementInstanceHandle();
+    const tmp8 = new _modDef143(_rootTag, null, reactNativeDocumentElementInstanceHandle, tmp3Result);
+    const obj3 = NativeDOMCxxDefault;
+    const linkRootNodeResult = obj3.linkRootNode(_rootTag, reactNativeDocumentElementInstanceHandle);
+    const obj4 = _mod138;
+    const result = obj4.setNativeElementReferenceForReactNativeDocumentElementInstanceHandle(
       reactNativeDocumentElementInstanceHandle,
       linkRootNodeResult,
     );
-    obj5 = closure_0(c2[10]);
-    result1 = obj5.setPublicInstanceForReactNativeDocumentElementInstanceHandle(
+    const obj5 = _mod138;
+    const result1 = obj5.setPublicInstanceForReactNativeDocumentElementInstanceHandle(
       reactNativeDocumentElementInstanceHandle,
       tmp8,
     );
@@ -69,18 +60,20 @@ class ReactNativeDocument {
   }
 }
 _inherits(ReactNativeDocument, require("00131__.js"));
-let items = [
-  {
-    key: "childElementCount",
-    get() {
-      return 1;
-    },
+let obj = {
+  key: "childElementCount",
+  get() {
+    return 1;
   },
+};
+let items = [
+  obj,
   {
     key: "children",
     get() {
       const items = [this.documentElement];
-      return ReactNativeDocument(129).createHTMLCollection(items);
+      const obj = require("00129__.js");
+      return obj.createHTMLCollection(items);
     },
   },
   {
@@ -128,13 +121,15 @@ let items = [
   {
     key: "getElementById",
     value: function getElementById(ReanimatedCustomWebAnimationsStyle) {
-      const element = NativeDOMCxxDefault.getElementById(this._rootTag, ReanimatedCustomWebAnimationsStyle);
+      const obj = NativeDOMCxxDefault;
+      const element = obj.getElementById(this._rootTag, ReanimatedCustomWebAnimationsStyle);
       if (null == element) {
         return null;
       } else {
-        const publicInstanceFromInstanceHandle = ReactNativeDocument(136).getPublicInstanceFromInstanceHandle(element);
+        const obj2 = _mod136;
+        const publicInstanceFromInstanceHandle = obj2.getPublicInstanceFromInstanceHandle(element);
         let tmp6 = null;
-        if (publicInstanceFromInstanceHandle instanceof _modDef141) {
+        if (publicInstanceFromInstanceHandle instanceof _getBoundingClientRectDefault) {
           tmp6 = publicInstanceFromInstanceHandle;
         }
         return tmp6;
@@ -143,12 +138,11 @@ let items = [
   },
 ];
 const importDefaultResultResult = _createClass(ReactNativeDocument, items);
+const metroImportDefault = importDefaultResultResult;
 
 export default importDefaultResultResult;
 export const createReactNativeDocument = function createReactNativeDocument(containerTag) {
-  const obj = ReactNativeDocument(137);
-  return new importDefaultResultResult(
-    containerTag,
-    ReactNativeDocument(137).createReactNativeDocumentInstanceHandle(containerTag),
-  );
+  const obj = _mod137;
+  const tmp = new metroImportDefault(containerTag, obj.createReactNativeDocumentInstanceHandle(containerTag));
+  return tmp;
 };

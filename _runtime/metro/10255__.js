@@ -11,9 +11,10 @@ const combined =
 const regExp = new RegExp(combined, "i");
 
 export const parseNumberPattern = function parseNumberPattern(str) {
+  let num;
   str = str.toLowerCase();
   if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
-    let num = exports.INTEGER_WORD_DICTIONARY[str];
+    num = exports.INTEGER_WORD_DICTIONARY[str];
   } else {
     num = 2;
     if ("paar" !== str) {
@@ -40,10 +41,12 @@ export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(str)
   }
 };
 export const parseYear = function parseYear(match) {
+  const obj = /voor Christus/i;
   if (obj.test(match)) {
     const _parseInt3 = parseInt;
     return -parseInt(match.replace(/voor Christus/i, ""));
   } else {
+    const obj2 = /na Christus/i;
     if (obj2.test(match)) {
       const _parseInt2 = parseInt;
       return parseInt(match.replace(/na Christus/i, ""));
@@ -52,19 +55,18 @@ export const parseYear = function parseYear(match) {
       const parsed = parseInt(match);
       return findMostLikelyADYear.findMostLikelyADYear(parsed);
     }
-    obj2 = /na Christus/i;
   }
-  obj = /voor Christus/i;
 };
 export const parseDuration = function parseDuration(arg0) {
   let str = arg0;
   const obj = {};
   let match = regExp.exec(arg0);
   while (match) {
+    let num;
     let str2 = match[1];
     let str3 = str2.toLowerCase();
     if (undefined !== exports.INTEGER_WORD_DICTIONARY[str3]) {
-      let num = exports.INTEGER_WORD_DICTIONARY[str3];
+      num = exports.INTEGER_WORD_DICTIONARY[str3];
     } else {
       num = 2;
       if ("paar" !== str3) {
@@ -198,7 +200,7 @@ export const ORDINAL_WORD_DICTIONARY = {
   negentiende: 19,
   twintigste: 20,
   eenentwintigste: 21,
-  tweeëntwintigste: 22,
+  "twee\u00ebntwintigste": 22,
   drieentwintigste: 23,
   vierentwintigste: 24,
   vijfentwintigste: 25,

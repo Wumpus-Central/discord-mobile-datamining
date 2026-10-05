@@ -1,11 +1,11 @@
 // _runtime/metro/00046__.js
-const global = arg0;
 let c1 = 8192;
 let closure_2 = 0;
 
 export const isEnabled = function isEnabled() {
+  let nativeTraceIsTracingResult;
   if (global.nativeTraceIsTracing) {
-    let nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
+    nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
   } else {
     const _Boolean = Boolean;
     nativeTraceIsTracingResult = Boolean(global.__RCTProfileIsProfiling);
@@ -14,8 +14,9 @@ export const isEnabled = function isEnabled() {
 };
 export function setEnabled(arg0) {}
 export const beginEvent = function beginEvent(fn, arg1) {
+  let nativeTraceIsTracingResult;
   if (global.nativeTraceIsTracing) {
-    let nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
+    nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
   } else {
     const _Boolean = Boolean;
     nativeTraceIsTracingResult = Boolean(global.__RCTProfileIsProfiling);
@@ -29,8 +30,9 @@ export const beginEvent = function beginEvent(fn, arg1) {
   }
 };
 export const endEvent = function endEvent(arg0) {
+  let nativeTraceIsTracingResult;
   if (global.nativeTraceIsTracing) {
-    let nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
+    nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
   } else {
     const _Boolean = Boolean;
     nativeTraceIsTracingResult = Boolean(global.__RCTProfileIsProfiling);
@@ -40,8 +42,9 @@ export const endEvent = function endEvent(arg0) {
   }
 };
 export const beginAsyncEvent = function beginAsyncEvent(fn, arg1) {
+  let nativeTraceIsTracingResult;
   if (global.nativeTraceIsTracing) {
-    let nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
+    nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
   } else {
     const _Boolean = Boolean;
     nativeTraceIsTracingResult = Boolean(global.__RCTProfileIsProfiling);
@@ -57,8 +60,9 @@ export const beginAsyncEvent = function beginAsyncEvent(fn, arg1) {
   return closure_2;
 };
 export const endAsyncEvent = function endAsyncEvent(fn, arg1, arg2) {
+  let nativeTraceIsTracingResult;
   if (global.nativeTraceIsTracing) {
-    let nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
+    nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
   } else {
     const _Boolean = Boolean;
     nativeTraceIsTracingResult = Boolean(global.__RCTProfileIsProfiling);
@@ -72,8 +76,9 @@ export const endAsyncEvent = function endAsyncEvent(fn, arg1, arg2) {
   }
 };
 export const counterEvent = function counterEvent(pending_js_to_native_queue, length) {
+  let nativeTraceIsTracingResult;
   if (global.nativeTraceIsTracing) {
-    let nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
+    nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
   } else {
     const _Boolean = Boolean;
     nativeTraceIsTracingResult = Boolean(global.__RCTProfileIsProfiling);

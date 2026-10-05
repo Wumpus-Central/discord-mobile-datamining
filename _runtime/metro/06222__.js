@@ -1,10 +1,8 @@
 // _runtime/metro/06222__.js
 import ComposedGestureName from "../06199_ComposedGestureName.js";
-import DEFAULT_PROPS_TRANSFORMER from "../06208_DEFAULT_PROPS_TRANSFORMER.js";
+import maybeExtractNativeEvent from "../06208_maybeExtractNativeEvent.js";
 import _mod6223 from "06223__.js";
 
-require = arg1;
-const dependencyMap = arg6;
 const items = [
   ["maxDistance", "maxDist"],
   ["maxDuration", "maxDurationMs"],
@@ -18,6 +16,8 @@ export const useTapGesture = function useTapGesture() {
   if (cResult === undefined) {
     tmp = closure_3;
   }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map);
-  return _mod6223.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
+  const obj = maybeExtractNativeEvent;
+  const clonedAndRemappedConfig = obj.useClonedAndRemappedConfig(tmp, map);
+  const obj2 = _mod6223;
+  return obj2.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
 };

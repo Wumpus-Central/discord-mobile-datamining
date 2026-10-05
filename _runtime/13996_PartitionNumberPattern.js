@@ -1,40 +1,48 @@
 // _runtime/13996_PartitionNumberPattern.js
-import digitsToString2 from "13969_digitsToString.js";
-import _mod13970 from "metro/13970__.js";
+import _mod13969 from "metro/13969__.js";
+import UNICODE_EXTENSION_SEQUENCE_REGEX from "13970_UNICODE_EXTENSION_SEQUENCE_REGEX.js";
 import ComputeExponent from "13984_ComputeExponent.js";
 import FormatNumericToString from "13986_FormatNumericToString.js";
-import _mod13991 from "metro/13991__.js";
-import e_mod from "01172_e.js";
+import formatToParts2 from "13991_formatToParts.js";
+import module_1172_mod from "metro/01172__.js";
 
-let e = e_mod;
-const digitsToString = e.__importDefault(digitsToString2);
-let e = e_mod;
-const module_13991 = e.__importDefault(_mod13991);
+let module_1172 = module_1172_mod;
+const module_13969 = module_1172.__importDefault(_mod13969);
+module_1172 = module_1172_mod;
+const formatToParts = module_1172.__importDefault(formatToParts2);
 
 export const PartitionNumberPattern = function PartitionNumberPattern(internalSlots, isNaN) {
+  let dataLocaleData;
+  let formattedString;
+  let num;
+  let num2;
+  let num4;
+  let pl;
+  let roundedNumber;
+  let tmp7;
   ({ pl, dataLocaleData } = internalSlots);
   const tmp =
     dataLocaleData.numbers.symbols[internalSlots.numberingSystem] ||
     dataLocaleData.numbers.symbols[dataLocaleData.numbers.nu[0]];
   if (isNaN.isNaN()) {
     formattedString = tmp.nan;
-    let num = 0;
-    let num2 = 0;
+    num = 0;
+    num2 = 0;
     roundedNumber = isNaN;
   } else if (isNaN.isFinite()) {
     let num3 = 0;
     let timesResult1 = isNaN;
     if (!isNaN.isZero()) {
-      _mod13970.invariant(isNaN.isFinite(), "Input must be a mathematical value");
+      UNICODE_EXTENSION_SEQUENCE_REGEX.invariant(isNaN.isFinite(), "Input must be a mathematical value");
       let timesResult = isNaN;
       if ("percent" == internalSlots.style) {
         timesResult = isNaN.times(100);
       }
       [tmp7, num4] = ComputeExponent.ComputeExponent(internalSlots, timesResult);
-      timesResult1 = timesResult.times(digitsToString.default.pow(10, -tmp7));
+      ComputeExponent.ComputeExponent(internalSlots, timesResult);
+      const _default = module_13969.default;
+      timesResult1 = timesResult.times(_default.pow(10, -tmp7));
       num3 = tmp7;
-      const ComputeExponentResult = ComputeExponent.ComputeExponent(internalSlots, timesResult);
-      const _default = digitsToString.default;
     }
     const result = FormatNumericToString.FormatNumericToString(internalSlots, timesResult1);
     ({ formattedString, roundedNumber } = result);
@@ -50,15 +58,17 @@ export const PartitionNumberPattern = function PartitionNumberPattern(internalSl
   let num7 = 0;
   if ("never" !== signDisplay) {
     if ("auto" === signDisplay) {
+      let num12;
       if (roundedNumber.isPositive()) {
-        let num12 = 0;
+        num12 = 0;
       } else {
         num12 = -1;
       }
       num7 = num12;
     } else if ("always" === signDisplay) {
+      let num11;
       if (roundedNumber.isPositive()) {
-        let num11 = 1;
+        num11 = 1;
       } else {
         num11 = -1;
       }
@@ -74,7 +84,7 @@ export const PartitionNumberPattern = function PartitionNumberPattern(internalSl
       }
       num7 = num9;
     } else {
-      _mod13970.invariant("negative" === signDisplay, 'signDisplay must be "negative"');
+      UNICODE_EXTENSION_SEQUENCE_REGEX.invariant("negative" === signDisplay, 'signDisplay must be "negative"');
       let num8 = 0;
       if (roundedNumber.isNegative()) {
         num8 = 0;
@@ -85,10 +95,6 @@ export const PartitionNumberPattern = function PartitionNumberPattern(internalSl
       num7 = num8;
     }
   }
-  return module_13991.default(
-    { roundedNumber, formattedString, exponent: num, magnitude: num2, sign: num7 },
-    internalSlots.dataLocaleData,
-    pl,
-    internalSlots,
-  );
+  const obj = { roundedNumber, formattedString, exponent: num, magnitude: num2, sign: num7 };
+  return formatToParts.default(obj, internalSlots.dataLocaleData, pl, internalSlots);
 };

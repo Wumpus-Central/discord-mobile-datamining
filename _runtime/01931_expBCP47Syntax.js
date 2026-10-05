@@ -4,8 +4,9 @@ const RegExpResult = RegExp(
   "i",
 );
 const RegExpResult1 = RegExp("^(?!x).*?-((?:[a-z0-9]{5,8}|\\d[a-z0-9]{3}))-(?:\\w{4,8}-(?!x-))*\\1\\b", "i");
+RegExp("^(?!x).*?-([0-9a-wy-z])-(?:\\w+-(?!x-))*\\1\\b", "i");
 
 export const expBCP47Syntax = RegExpResult;
-export const expVariantDupes = RegExpResult1;
+export const expVariantDupes = RegExp("^(?!x).*?-((?:[a-z0-9]{5,8}|\\d[a-z0-9]{3}))-(?:\\w{4,8}-(?!x-))*\\1\\b", "i");
 export const expSingletonDupes = RegExp("^(?!x).*?-([0-9a-wy-z])-(?:\\w+-(?!x-))*\\1\\b", "i");
 export const expExtSequences = RegExp("-[0-9a-wy-z](?:-[a-z0-9]{2,8})+", "ig");

@@ -1,11 +1,12 @@
 // _runtime/01055_mergeOutcomes.js
+let map;
 
 export const mergeOutcomes = function mergeOutcomes() {
   const items = [...arguments];
-  const map = new Map();
+  map = new Map();
   function process(reason) {
     const combined = "" + reason.reason + ":" + reason.category;
-    value = map.get(combined);
+    const value = map.get(combined);
     if (value) {
       value.quantity = value.quantity + reason.quantity;
     } else {

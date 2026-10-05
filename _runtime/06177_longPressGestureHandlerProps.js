@@ -1,12 +1,11 @@
 // _runtime/06177_longPressGestureHandlerProps.js
-import _isNativeReflectConstruct from "metro/06167__.js";
+import createHandler from "06167_createHandler.js";
 
+let items1;
 const items = ["minDurationMs", "maxDist", "numberOfPointers"];
-const obj = { name: "LongPressGestureHandler", allowedProps: null, config: null };
-const items1 = [...items];
-obj.allowedProps = items1;
-obj.config = { shouldCancelWhenOutside: true };
+const obj = { name: "LongPressGestureHandler", allowedProps: items1, config: { shouldCancelWhenOutside: true } };
+items1 = [...items];
 
 export const longPressGestureHandlerProps = items;
 export const longPressHandlerName = "LongPressGestureHandler";
-export const LongPressGestureHandler = _isNativeReflectConstruct(obj);
+export const LongPressGestureHandler = createHandler(obj);

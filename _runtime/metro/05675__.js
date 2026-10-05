@@ -4346,7 +4346,7 @@ const obj = {
     "tr\u00F2 gh\u00E9p h\u00ECnh",
   ],
   teddy_bear: ["\u0111\u1ED3 ch\u01A1i", "g\u1EA5u b\u00F4ng", "nh\u1ED3i b\u00F4ng", "v\u1EA3i l\u00F4ng"],
-  piñata: [
+  "pi\u00f1ata": [
     "bu\u1ED5i ti\u1EC7c",
     "k\u1EB9o",
     "k\u1EF7 ni\u1EC7m",

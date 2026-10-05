@@ -1,5 +1,7 @@
 // _runtime/metro/10294__.js
+import Meridiem from "../10166_Meridiem.js";
 import AbstractTimeExpressionParser from "../10175_AbstractTimeExpressionParser.js";
+import REGEX_PARTS from "../10290_REGEX_PARTS.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
@@ -7,19 +9,12 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
 
-const RUTimeExpressionParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -28,28 +23,25 @@ function _isNativeReflectConstruct() {
 }
 class RUTimeExpressionParser {
   constructor(arg0) {
-    self = this;
-    tmp = c2(this, RUTimeExpressionParser);
-    items = [];
-    items[0] = global;
-    tmp2 = closure_4;
-    obj = closure_4(RUTimeExpressionParser);
-    tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, RUTimeExpressionParser);
+    const items = [arg0];
+    const obj = _getPrototypeOf(RUTimeExpressionParser);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    return tmp3(self, constructResult);
+    return c3(self, constructResult);
   }
 }
 _inherits(RUTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
   key: "patternFlags",
   value: function patternFlags() {
-    return RUTimeExpressionParser(10290).REGEX_PARTS.flags;
+    return REGEX_PARTS.REGEX_PARTS.flags;
   },
 };
 let items = [
@@ -77,7 +69,7 @@ let items = [
     value: function primarySuffix() {
       return (
         "(?:\\s*(?:\u0443\u0442\u0440\u0430|\u0432\u0435\u0447\u0435\u0440\u0430|\u043F\u043E\u0441\u043B\u0435 \u043F\u043E\u043B\u0443\u0434\u043D\u044F))?(?!\\/)" +
-        RUTimeExpressionParser(10290).REGEX_PARTS.rightBoundary
+        REGEX_PARTS.REGEX_PARTS.rightBoundary
       );
     },
   },
@@ -85,12 +77,8 @@ let items = [
     key: "extractPrimaryTimeComponents",
     value: function extractPrimaryTimeComponents(arg0, arg1) {
       const self = this;
-      const tmp = hasOwnProperty(
-        _getPrototypeOf(RUTimeExpressionParser.prototype),
-        "extractPrimaryTimeComponents",
-        this,
-      );
-      dependencyMap = tmp;
+      const tmp = _get(_getPrototypeOf(RUTimeExpressionParser.prototype), "extractPrimaryTimeComponents", this);
+      let closure_1 = tmp;
       let fn = tmp;
       if (typeof tmp === "function") {
         fn = (items) => closure_1.apply(self, items);
@@ -100,32 +88,29 @@ let items = [
       if (fnResult) {
         const first = arg1[0];
         if (first.endsWith("\u0432\u0435\u0447\u0435\u0440\u0430")) {
-          value = fnResult.get("hour");
+          const value = fnResult.get("hour");
           if (value >= 6) {
             if (value < 12) {
               fnResult.assign("hour", fnResult.get("hour") + 12);
-              fnResult.assign("meridiem", RUTimeExpressionParser(10166).Meridiem.PM);
+              fnResult.assign("meridiem", Meridiem.Meridiem.PM);
             }
           }
           if (value < 6) {
-            fnResult.assign("meridiem", RUTimeExpressionParser(10166).Meridiem.AM);
+            fnResult.assign("meridiem", Meridiem.Meridiem.AM);
           }
         }
         const first1 = arg1[0];
         if (first1.endsWith("\u043F\u043E\u0441\u043B\u0435 \u043F\u043E\u043B\u0443\u0434\u043D\u044F")) {
-          fnResult.assign("meridiem", RUTimeExpressionParser(10166).Meridiem.PM);
-          value2 = fnResult.get("hour");
-          let tmp14 = value2 >= 0;
-          if (tmp14) {
-            tmp14 = value2 <= 6;
-          }
+          fnResult.assign("meridiem", Meridiem.Meridiem.PM);
+          const value2 = fnResult.get("hour");
+          const tmp14 = value2 >= 0 && value2 <= 6;
           if (tmp14) {
             fnResult.assign("hour", fnResult.get("hour") + 12);
           }
         }
         const first2 = arg1[0];
         if (first2.endsWith("\u0443\u0442\u0440\u0430")) {
-          fnResult.assign("meridiem", RUTimeExpressionParser(10166).Meridiem.AM);
+          fnResult.assign("meridiem", Meridiem.Meridiem.AM);
           if (fnResult.get("hour") < 12) {
             fnResult.assign("hour", fnResult.get("hour"));
           }

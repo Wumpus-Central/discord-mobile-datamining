@@ -2,96 +2,117 @@
 import _mod4461 from "04461__.js";
 
 const fn = function n(moment) {
+  let split;
+  let split2;
   function translate(arg0, arg1, arg2, arg3) {
     let str = "";
     switch (arg2) {
-      case "s":
+      case "s": {
         let str13 = "muutama sekunti";
         if (arg3) {
           str13 = "muutaman sekunnin";
         }
         return str13;
-      case "ss":
+      }
+      case "ss": {
         let str12 = "sekuntia";
         if (arg3) {
           str12 = "sekunnin";
         }
         str = str12;
-        if (arg0 >= 10) {
-          return arg0 + " " + str;
+        let tmp2 = arg0;
+        if (arg0 < 10) {
+          let tmp4;
+          if (arg3) {
+            tmp4 = items[arg0];
+          } else {
+            tmp4 = parts[arg0];
+          }
+          tmp2 = tmp4;
         }
-        break;
-      case "m":
+        return tmp2 + " " + str;
+      }
+      case "m": {
         let str11 = "minuutti";
         if (arg3) {
           str11 = "minuutin";
         }
         return str11;
-      case "mm":
+      }
+      case "mm": {
         let str10 = "minuuttia";
         if (arg3) {
           str10 = "minuutin";
         }
         str = str10;
         break;
-      case "h":
+      }
+      case "h": {
         let str9 = "tunti";
         if (arg3) {
           str9 = "tunnin";
         }
         return str9;
-      case "hh":
+      }
+      case "hh": {
         let str8 = "tuntia";
         if (arg3) {
           str8 = "tunnin";
         }
         str = str8;
         break;
-      case "d":
+      }
+      case "d": {
         let str7 = "p\u00E4iv\u00E4";
         if (arg3) {
           str7 = "p\u00E4iv\u00E4n";
         }
         return str7;
-      case "dd":
+      }
+      case "dd": {
         let str6 = "p\u00E4iv\u00E4\u00E4";
         if (arg3) {
           str6 = "p\u00E4iv\u00E4n";
         }
         str = str6;
         break;
-      case "M":
+      }
+      case "M": {
         let str5 = "kuukausi";
         if (arg3) {
           str5 = "kuukauden";
         }
         return str5;
-      case "MM":
+      }
+      case "MM": {
         let str4 = "kuukautta";
         if (arg3) {
           str4 = "kuukauden";
         }
         str = str4;
         break;
-      case "y":
+      }
+      case "y": {
         let str3 = "vuosi";
         if (arg3) {
           str3 = "vuoden";
         }
         return str3;
-      case "yy":
+      }
+      case "yy": {
         let str2 = "vuotta";
         if (arg3) {
           str2 = "vuoden";
         }
         str = str2;
         break;
+      }
     }
   }
   const parts = "nolla yksi kaksi kolme nelj\u00E4 viisi kuusi seitsem\u00E4n kahdeksan yhdeks\u00E4n".split(" ");
   const items = ["nolla", "yhden", "kahden", "kolmen", "nelj\u00E4n", "viiden", "kuuden", parts[7], parts[8], parts[9]];
   ({ split, split: split2 } = "su_ma_ti_ke_to_pe_la");
-  return moment.defineLocale("fi", {
+  const obj = {
     months:
       "tammikuu_helmikuu_maaliskuu_huhtikuu_toukokuu_kes\u00E4kuu_hein\u00E4kuu_elokuu_syyskuu_lokakuu_marraskuu_joulukuu".split(
         "_",
@@ -139,7 +160,8 @@ const fn = function n(moment) {
     dayOfMonthOrdinalParse: /\d{1,2}\./,
     ordinal: "%d.",
     week: { dow: 1, doy: 4 },
-  });
+  };
+  return moment.defineLocale("fi", obj);
 };
 if (typeof exports === "object") {
   if (undefined !== module) {
@@ -149,6 +171,7 @@ if (typeof exports === "object") {
   }
 }
 if (typeof globalThis.define === "function") {
+  const define2 = globalThis.define;
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], fn);
   }

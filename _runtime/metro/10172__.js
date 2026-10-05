@@ -8,19 +8,12 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENYearMonthDayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -34,21 +27,19 @@ const regExp = new RegExp(
   "i",
 );
 class ENYearMonthDayParser {
-  constructor(arg0) {
-    self = this;
-    tmp = c2(this, ENYearMonthDayParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENYearMonthDayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+  constructor(strictMonthDateOrder) {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, ENYearMonthDayParser);
+    const obj = _getPrototypeOf(ENYearMonthDayParser);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, undefined);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMonthDateOrder = global;
+    const tmp3Result = c3(self, constructResult);
+    tmp3Result.strictMonthDateOrder = strictMonthDateOrder;
     return tmp3Result;
   }
 }
@@ -64,13 +55,16 @@ let items = [
   {
     key: "innerExtract",
     value: function innerExtract(arg0, arg1) {
+      let parsed2;
+      let tmp6;
+      let tmp7;
       const parsed = parseInt(arg1[1]);
       const parsed1 = parseInt(arg1[4]);
       if (arg1[3]) {
         const _parseInt = parseInt;
-        let parsed2 = parseInt(arg1[3]);
+        parsed2 = parseInt(arg1[3]);
       } else {
-        parsed2 = ENYearMonthDayParser(10160).MONTH_DICTIONARY[str.toLowerCase(str)];
+        parsed2 = _mod10160.MONTH_DICTIONARY[str.toLowerCase(str)];
       }
       if (parsed2 < 1) {
         const self = this;
@@ -96,8 +90,8 @@ let items = [
       if (tmp7 >= 1) {
         tmp8 = null;
         if (tmp7 <= 31) {
+          tmp8 = { day: tmp7, month: tmp6, year: parsed };
           const date = { day: tmp7, month: tmp6, year: parsed };
-          tmp8 = date;
         }
       }
       return tmp8;

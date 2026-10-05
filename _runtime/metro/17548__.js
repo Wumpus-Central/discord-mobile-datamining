@@ -1,151 +1,133 @@
 // _runtime/metro/17548__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _mod17549 from "17549__.js";
-import Events from "../17553_Events.js";
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
-import "_classCallCheck";
+import pTimeout from "../17549_pTimeout.js";
+import _mod17551 from "17551__.js";
+import _mod17553 from "17553__.js";
+import _asyncToGenerator from "00005__asyncToGenerator.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const PQueue = require;
+let _resolveEmpty, _resolveIdle, c4, closure_1, closure_3, set;
+
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturn;
 function empty() {}
-const timeoutError = new _mod17549.TimeoutError();
-let closure_1;
+const timeoutError = new pTimeout.TimeoutError();
 let closure_2;
-let _classCallCheck;
+let _false;
+let closure_4;
 class PQueue {
   constructor(arg0) {
-    self = this;
-    tmp = closure_3(this, PQueue);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(PQueue);
-    tmp3 = closure_4;
-    if (metroRequire()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, PQueue);
+    const obj = _getPrototypeOf(PQueue);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, undefined);
     }
-    tmp3Result = tmp3(self, constructResult);
+    const tmp3Result = _possibleConstructorReturn(self, constructResult);
     tmp3Result._intervalCount = 0;
     tmp3Result._intervalEnd = 0;
     tmp3Result._pendingCount = 0;
-    tmp3Result._resolveEmpty = closure_7;
-    tmp3Result._resolveIdle = closure_7;
-    obj1 = {
+    tmp3Result._resolveEmpty = empty;
+    tmp3Result._resolveIdle = empty;
+    const obj2 = {
       carryoverConcurrencyCount: false,
       intervalCap: Infinity,
       interval: 0,
       concurrency: Infinity,
       autoStart: true,
-      queueClass: closure_0(closure_1[7]).default,
+      queueClass: _mod17551.default,
     };
-    merged = Object.assign(obj1, global);
+    const merged = Object.assign(obj2, arg0);
     if (typeof merged.intervalCap === "number") {
-      num = 1;
       if (merged.intervalCap >= 1) {
         if (undefined !== merged.interval) {
-          _Number = Number;
+          const _Number = Number;
           if (Number.isFinite(merged.interval)) {
             if (merged.interval >= 0) {
               tmp3Result._carryoverConcurrencyCount = merged.carryoverConcurrencyCount;
-              num2 = Infinity;
               tmp3Result._isIntervalIgnored = merged.intervalCap === Infinity || 0 === merged.interval;
               ({ intervalCap: tmp6._intervalCap, interval: tmp6._interval } = merged);
-              tmp10 = new.target;
-              tmp11 = new.target;
-              queueClass = new merged.queueClass();
-              tmp13 = queueClass;
+              const self2 = this;
+              const self3 = this;
+              const queueClass = new merged.queueClass();
               tmp3Result._queue = queueClass;
               ({ queueClass: tmp6._queueClass, concurrency: tmp6.concurrency, timeout: tmp6._timeout } = merged);
-              flag = true;
               tmp3Result._throwOnTimeout = true === merged.throwOnTimeout;
-              flag2 = false;
               tmp3Result._isPaused = false === merged.autoStart;
               return tmp3Result;
             }
           }
         }
-        str3 = merged.interval;
-        tmp14 = null;
-        str1 = undefined;
-        if (null !== str3) {
-          if (undefined !== str3) {
+        let str1;
+        const _TypeError2 = TypeError;
+        if (null !== merged.interval) {
+          if (undefined !== merged.interval) {
             str1 = str3.toString();
           }
         }
-        str4 = "";
-        str5 = "";
+        let str5 = "";
         if (null !== str1) {
           str5 = "";
           if (undefined !== str1) {
             str5 = str1;
           }
         }
-        _HermesInternal = HermesInternal;
-        str6 = ")";
-        str7 = "` (";
-        str8 = "Expected `interval` to be a finite number >= 0, got `";
-        tmp16 = str5;
-        tmp17 = new.target;
-        tmp18 = new.target;
-        typeError = new TypeError(
+        const _HermesInternal = HermesInternal;
+        const self4 = this;
+        const self5 = this;
+        const _TypeError21 = new _TypeError2(
           "Expected `interval` to be a finite number >= 0, got `" + str5 + "` (" + typeof merged.interval + ")",
         );
-        tmp20 = typeError;
-        throw typeError;
+        throw _TypeError21;
       }
     }
-    str = merged.intervalCap;
-    str9 = undefined;
-    if (null !== str) {
-      if (undefined !== str) {
+    let str9;
+    const _TypeError = TypeError;
+    if (null !== merged.intervalCap) {
+      if (undefined !== merged.intervalCap) {
         str9 = str.toString();
       }
     }
-    str2 = "";
+    let str2 = "";
     if (null !== str9) {
       str2 = "";
       if (undefined !== str9) {
         str2 = str9;
       }
     }
-    typeError1 = new TypeError(
+    const _TypeError1 = new _TypeError(
       "Expected `intervalCap` to be a number from 1 and up, got `" + str2 + "` (" + typeof merged.intervalCap + ")",
     );
-    throw typeError1;
+    throw _TypeError1;
   }
 }
-_inherits(PQueue, Events);
-const items = [
-  {
-    key: "_doesIntervalAllowAnother",
-    get() {
-      const self = this;
-      return this._isIntervalIgnored || self._intervalCount < self._intervalCap;
-    },
+_inherits(PQueue, _mod17553);
+let obj = {
+  key: "_doesIntervalAllowAnother",
+  get() {
+    const self = this;
+    return this._isIntervalIgnored || self._intervalCount < self._intervalCap;
   },
+};
+const items = [
+  obj,
   {
     key: "_doesConcurrentAllowAnother",
     get() {
@@ -247,10 +229,7 @@ const items = [
     key: "_initializeIntervalIfNeeded",
     value: function _initializeIntervalIfNeeded() {
       const self = this;
-      let _isIntervalIgnored = this._isIntervalIgnored;
-      if (!_isIntervalIgnored) {
-        _isIntervalIgnored = undefined !== self._intervalId;
-      }
+      const _isIntervalIgnored = this._isIntervalIgnored || undefined !== self._intervalId;
       if (!_isIntervalIgnored) {
         const _setInterval = setInterval;
         self._intervalId = setInterval(() => {
@@ -265,6 +244,7 @@ const items = [
     key: "_onInterval",
     value: function _onInterval() {
       const self = this;
+      const tmp = 0 === this._intervalCount && 0 === self._pendingCount && self._intervalId;
       if (tmp) {
         const _clearInterval = clearInterval;
         clearInterval(self._intervalId);
@@ -321,18 +301,23 @@ const items = [
   ,
   ,
 ];
-const entry = { key: "add", value: null };
-asyncGeneratorStep(async function (arg0) {
+const entry = {
+  key: "add",
+  value: function add(arg0) {
+    return closure_4(...arguments);
+  },
+};
+closure_4 = _asyncToGenerator(async function (arg0) {
   let self = this;
-  const dependencyMap = arg0;
+  closure_1 = arg0;
   closure_2 = arg1;
-  c5 = 0;
-  c6 = 0;
-  const iter = (async (arg0) => {
+  let c5 = 0;
+  let c6 = 0;
+  const iter = (async function (arg0) {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -344,6 +329,7 @@ asyncGeneratorStep(async function (arg0) {
     } else {
       try {
         c6 = 2;
+        const tmp4 = c5;
         if (0 === c5) {
           if (arg0 === 1) {
             c6 = 3;
@@ -354,16 +340,12 @@ asyncGeneratorStep(async function (arg0) {
             return obj3;
           } else {
             closure_4 = self;
-            closure_3 = tmp2;
-            closure_131_3 = self;
-            closure_131_2 = undefined;
-            closure_131_1 = closure_1;
+            closure_3 = self;
             let obj4 = closure_2;
             if (closure_2 === undefined) {
               obj4 = {};
             }
-            closure_131_2 = obj4;
-            closure_131_0 = undefined;
+            let closure_0;
             c5 = 1;
             c6 = 1;
             return { value: "Set", done: true };
@@ -373,26 +355,29 @@ asyncGeneratorStep(async function (arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          return { value, done: true };
         } else {
-          closure_131_0 = closure_4;
+          closure_0 = closure_4;
+          self = this;
+          const self2 = this;
           const promise = new Promise((arg0, arg1) => {
             closure_1 = arg1;
-            closure_0 = closure_1_2(function* () {
+            let closure_0 = closure_1_2(function* () {
+              let throwOnTimeout;
               if (c5 === 2) {
                 c5 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
-              } else if (tmp6 === 3) {
+              } else if (tmp3 === 3) {
                 if (arg0 === 1) {
                   throw value;
                 } else if (arg0 === 2) {
-                  const obj3 = { value, done: true };
-                  return obj3;
+                  const obj2 = { value, done: true };
+                  return obj2;
                 } else {
                   return { value: "IconComponent", done: null };
                 }
               } else {
+                let c3;
                 try {
                   c5 = 2;
                   if (0 === c4) {
@@ -401,75 +386,77 @@ asyncGeneratorStep(async function (arg0) {
                       throw value;
                     } else if (arg0 === 2) {
                       c5 = 3;
-                      const obj4 = { value, done: true };
-                      return obj4;
+                      const obj3 = { value, done: true };
+                      return obj3;
                     } else {
+                      let timeout;
+                      closure_1 = tmp;
                       _throwOnTimeout._pendingCount = _throwOnTimeout._pendingCount + 1;
                       _throwOnTimeout._intervalCount = _throwOnTimeout._intervalCount + 1;
                       c3 = 1;
-                      if (undefined !== _throwOnTimeout._timeout) {
-                        const resolved = Promise.resolve(tmp3());
+                      if (undefined === _throwOnTimeout._timeout) {
+                        let _defaultResult;
                         if (undefined === config.timeout) {
-                          let timeout = _throwOnTimeout._timeout;
-                        } else {
-                          timeout = tmp23.timeout;
+                          _defaultResult = closure_2_1();
                         }
-                        self(dependencyMap[6]).default(resolved, timeout, () => {
-                          if (undefined === throwOnTimeout.throwOnTimeout) {
-                            throwOnTimeout = _throwOnTimeout._throwOnTimeout;
-                          } else {
-                            throwOnTimeout = tmp.throwOnTimeout;
-                          }
-                          if (throwOnTimeout) {
-                            closure_1_1(closure_3_8);
-                          }
-                        });
                         c4 = 2;
                         c5 = 1;
-                        const obj2 = self(dependencyMap[6]);
+                        const obj4 = { value: _defaultResult, done: false };
+                        return obj4;
                       }
-                      tmp3();
+                      const _default = _throwOnTimeout(closure_1[6]).default;
+                      const resolved = Promise.resolve(closure_2_1());
+                      if (undefined === config.timeout) {
+                        timeout = _throwOnTimeout._timeout;
+                      } else {
+                        timeout = tmp21.timeout;
+                      }
+                      _defaultResult = _default(resolved, timeout, () => {
+                        if (undefined === throwOnTimeout.throwOnTimeout) {
+                          throwOnTimeout = _throwOnTimeout._throwOnTimeout;
+                        } else {
+                          throwOnTimeout = tmp.throwOnTimeout;
+                        }
+                        if (throwOnTimeout) {
+                          closure_1_1(closure_3_8);
+                        }
+                      });
                     }
                   } else {
-                    if (1 === tmp7) {
+                    if (1 === tmp4) {
                       c3 = 0;
-                      tmp3(throwOnTimeout);
-                      _throwOnTimeout._next();
-                      c5 = 3;
+                      closure_1(throwOnTimeout);
                     } else if (arg0 === 1) {
                       c5 = 3;
                       throw value;
-                    } else if (arg0 !== 2) {
+                    } else if (arg0 === 2) {
+                      c3 = 0;
+                      c5 = 3;
+                      const obj = { value, done: true };
+                      return obj;
+                    } else {
                       _throwOnTimeout(value);
                       c3 = 0;
                     }
-                    c3 = 0;
+                    _throwOnTimeout._next();
                     c5 = 3;
-                    const obj = { value, done: true };
-                    return obj;
+                    return { value: "IconComponent", done: null };
                   }
-                } catch (tmp29) {
-                  throwOnTimeout = tmp29;
-                  if (tmp4 === c3) {
-                    c5 = tmp2;
-                    throw tmp29;
+                } catch (tmp26) {
+                  throwOnTimeout = tmp26;
+                  if (0 === c3) {
+                    c5 = 3;
+                    throw tmp26;
                   } else {
-                    c4 = tmp;
+                    c4 = 1;
                   }
                 }
               }
             });
             const _queue = closure_3._queue;
             _queue.enqueue(function run() {
-              self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            }, config);
+              return closure_0(...arguments);
+            }, closure_2);
             closure_3._tryToStartAnother();
             closure_3.emit("add");
           });
@@ -477,37 +464,32 @@ asyncGeneratorStep(async function (arg0) {
           let obj = { value: promise, done: true };
           return obj;
         }
-      } catch (tmp15) {
-        c6 = tmp;
-        throw tmp15;
+      } catch (tmp12) {
+        c6 = 3;
+        throw tmp12;
       }
     }
   })();
   iter.next();
   return iter;
 });
-entry.value = function add(arg0) {
-  const self = this;
-  const apply = _possibleConstructorReturn.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
 items[11] = entry;
-const entry1 = { key: "addAll", value: null };
-_classCallCheck = asyncGeneratorStep(async function (arg0, arg1) {
-  let self = this;
+const entry1 = {
+  key: "addAll",
+  value: function addAll(arg0, arg1) {
+    return closure_3(...arguments);
+  },
+};
+_false = _asyncToGenerator(async function (arg0, arg1) {
+  const self = this;
   closure_1 = arg0;
   closure_2 = arg1;
-  c3 = 0;
+  let c3 = 0;
   return (async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp2 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -527,18 +509,20 @@ _classCallCheck = asyncGeneratorStep(async function (arg0, arg1) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_0 = closure_2;
+          let closure_0 = closure_2;
           closure_1 = self;
+          const tmp6 = globalThis;
           c3 = 3;
           let obj = {
             value: Promise.all(
               closure_1.map(
                 (() => {
                   closure_0 = closure_1_2(function* (arg0) {
+                    closure_0 = arg0;
                     if (set === 2) {
                       set = 3;
                       throw new TypeError("Generator functions may not be called on executing generators");
-                    } else if (tmp3 === 3) {
+                    } else if (tmp2 === 3) {
                       if (arg0 === 1) {
                         throw value;
                       } else if (arg0 === 2) {
@@ -562,21 +546,14 @@ _classCallCheck = asyncGeneratorStep(async function (arg0, arg1) {
                           const obj = { value: set.add(closure_0, closure_0), done: true };
                           return obj;
                         }
-                      } catch (tmp7) {
-                        set = tmp;
-                        throw tmp7;
+                      } catch (tmp6) {
+                        set = 3;
+                        throw tmp6;
                       }
                     }
                   });
                   return function (arg0) {
-                    self = this;
-                    const apply = closure_0.apply;
-                    if (typeof apply === "unknown") {
-                      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                    } else {
-                      applyArgumentsResult = apply(self, arguments);
-                    }
-                    return applyArgumentsResult;
+                    return closure_0(...arguments);
                   };
                 })(),
               ),
@@ -585,23 +562,13 @@ _classCallCheck = asyncGeneratorStep(async function (arg0, arg1) {
           };
           return obj;
         }
-      } catch (tmp8) {
-        c3 = tmp;
-        throw tmp8;
+      } catch (tmp7) {
+        c3 = 3;
+        throw tmp7;
       }
     }
   })();
 });
-entry1.value = function addAll(arg0, arg1) {
-  const self = this;
-  const apply = _classCallCheck.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
 items[12] = entry1;
 items[13] = {
   key: "start",
@@ -627,20 +594,24 @@ items[15] = {
     this._queue = _queueClass;
   },
 };
-const entry2 = { key: "onEmpty", value: null };
-closure_2 = asyncGeneratorStep(async function () {
-  const self = this;
-  c1 = 0;
-  return (async (arg0) => {
+const entry2 = {
+  key: "onEmpty",
+  value: function onEmpty() {
+    return closure_2(...arguments);
+  },
+};
+closure_2 = _asyncToGenerator(async function () {
+  let self = this;
+  let c1 = 0;
+  return (async function (arg0) {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp2 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        return { value, done: true };
       } else {
         return { value: "IconComponent", done: null };
       }
@@ -652,59 +623,56 @@ closure_2 = asyncGeneratorStep(async function () {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          return { value, done: true };
         } else {
-          let _resolveEmpty = self;
+          let closure_0 = self;
           if (0 !== self._queue.size) {
-            const promise = new Promise((arg0) => {
-              _resolveEmpty = arg0;
-              _resolveEmpty = _resolveEmpty._resolveEmpty;
-              _resolveEmpty._resolveEmpty = () => {
-                _resolveEmpty();
-                closure_0();
-              };
-            });
+            self = this;
+            const self2 = this;
             c1 = 3;
-            const obj = { value: promise, done: true };
+            const obj = {
+              value: new Promise((arg0) => {
+                _resolveEmpty = arg0;
+                _resolveEmpty = _resolveEmpty._resolveEmpty;
+                _resolveEmpty._resolveEmpty = () => {
+                  _resolveEmpty();
+                  closure_0();
+                };
+              }),
+              done: true,
+            };
             return obj;
           } else {
             c1 = 3;
             return { value: "IconComponent", done: null };
           }
         }
-      } catch (tmp10) {
-        c1 = tmp;
-        throw tmp10;
+      } catch (tmp7) {
+        c1 = 3;
+        throw tmp7;
       }
     }
   })();
 });
-entry2.value = function onEmpty() {
-  const self = this;
-  const apply = closure_2.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
 items[16] = entry2;
-const entry3 = { key: "onIdle", value: null };
-closure_1 = asyncGeneratorStep(async function () {
-  const self = this;
-  c1 = 0;
-  return (async (arg0) => {
+const entry3 = {
+  key: "onIdle",
+  value: function onIdle() {
+    return closure_1(...arguments);
+  },
+};
+_asyncToGenerator(async function () {
+  let self = this;
+  let c1 = 0;
+  return (async function (arg0) {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp2 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        return { value, done: true };
       } else {
         return { value: "IconComponent", done: null };
       }
@@ -716,45 +684,38 @@ closure_1 = asyncGeneratorStep(async function () {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          return { value, done: true };
         } else {
-          let _resolveIdle = self;
+          let closure_0 = self;
           if (0 === self._pendingCount) {
             if (0 === self._queue.size) {
               c1 = 3;
               return { value: "IconComponent", done: null };
             }
           }
-          const promise = new Promise((arg0) => {
-            _resolveIdle = arg0;
-            _resolveIdle = _resolveIdle._resolveIdle;
-            _resolveIdle._resolveIdle = () => {
-              _resolveIdle();
-              closure_0();
-            };
-          });
+          self = this;
+          const self2 = this;
           c1 = 3;
-          const obj = { value: promise, done: true };
+          const obj = {
+            value: new Promise((arg0) => {
+              _resolveIdle = arg0;
+              _resolveIdle = _resolveIdle._resolveIdle;
+              _resolveIdle._resolveIdle = () => {
+                _resolveIdle();
+                closure_0();
+              };
+            }),
+            done: true,
+          };
           return obj;
         }
-      } catch (tmp9) {
-        c1 = tmp;
-        throw tmp9;
+      } catch (tmp6) {
+        c1 = 3;
+        throw tmp6;
       }
     }
   })();
 });
-entry3.value = function onIdle() {
-  const self = this;
-  const apply = closure_1.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
 items[17] = entry3;
 items[18] = {
   key: "size",

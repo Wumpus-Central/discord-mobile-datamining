@@ -1,16 +1,13 @@
 // _runtime/00928_LCPEntryManager.js
-import _classCallCheck_mod from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
-let _classCallCheck = _classCallCheck_mod;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class LCPEntryManager {
   constructor() {
-    tmp = closure_0(this, LCPEntryManager);
-    return;
+    _classCallCheck(this, LCPEntryManager);
   }
 }
-_classCallCheck = LCPEntryManager;
 const entry = {
   key: "_processEntry",
   value: function _processEntry(arg0) {
@@ -21,5 +18,6 @@ const entry = {
   },
 };
 const items = [entry];
+const LCPEntryManager_export = _createClass(LCPEntryManager, items);
 
-export const LCPEntryManager = _createClass(LCPEntryManager, items);
+export { LCPEntryManager_export as LCPEntryManager };

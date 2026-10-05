@@ -1,7 +1,7 @@
 // _runtime/06501_PanGestureHandler.js
-const require = globalThis.__r;
+import _mod6502 from "metro/06502__.js";
 
-for (const key10013 in require("metro/06502__.js")) {
-  arg5[key10013] = require("metro/06502__.js")[key10013];
+for (const key10013 in _mod6502) {
+  exports[key10013] = _mod6502[key10013];
   continue;
 }

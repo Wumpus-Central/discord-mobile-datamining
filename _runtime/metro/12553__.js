@@ -1,53 +1,49 @@
 // _runtime/metro/12553__.js
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
+import react_native from "../00017_react-native.js";
+import Fragment from "../react/00021_Fragment.js";
+import MemoryRouter from "../04710_MemoryRouter.js";
+import _asyncToGenerator from "00005__asyncToGenerator.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
+import react from "../00019_react.js";
 
-const DeepLinking = fn;
+let closure_2, closure_3;
+
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const Linking = fn(17).Linking;
-const jsx = fn(21).jsx;
+const Linking = react_native.Linking;
+const jsx = Fragment.jsx;
 const re8 = /.*?:\/\//g;
 let closure_1;
 class DeepLinking {
   constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, DeepLinking);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(DeepLinking);
-    tmp3 = closure_3;
-    if (closure_7()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    const items = [...arguments];
+    let closure_0;
+    _classCallCheck(this, DeepLinking);
+    const items1 = [...items];
+    const obj = _getPrototypeOf(DeepLinking);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items1);
     }
-    tmp3Result = tmp3(self, constructResult);
+    const tmp3Result = c3(self, constructResult);
     closure_0 = tmp3Result;
     tmp3Result.handleChange = (url) => {
       closure_0.push(url.url);
@@ -55,7 +51,7 @@ class DeepLinking {
     return tmp3Result;
   }
 }
-_inherits(DeepLinking, noop.Component);
+_inherits(DeepLinking, react.Component);
 const entry = {
   key: "push",
   value: function push(str) {
@@ -64,26 +60,31 @@ const entry = {
   },
 };
 let items = [entry, , ,];
-const entry1 = { key: "componentDidMount", value: null };
-closure_1 = asyncGeneratorStep(async function () {
+const entry1 = {
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    return closure_1(...arguments);
+  },
+};
+closure_1 = _asyncToGenerator(async function () {
   const self = this;
-  c4 = 0;
-  c5 = 0;
+  let c4 = 0;
+  let c5 = 0;
   return (async (arg0) => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        return { value, done: true };
       } else {
         return { value: "IconComponent", done: null };
       }
     } else {
       try {
+        let closure_0;
         c5 = 2;
         if (0 === c4) {
           if (arg0 === 1) {
@@ -91,13 +92,12 @@ closure_1 = asyncGeneratorStep(async function () {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            return { value, done: true };
           } else {
             closure_3 = self;
             closure_2 = self;
-            closure_1 = tmp2;
-            closure_129_0 = undefined;
+            closure_1 = tmp;
+            closure_0 = undefined;
             c4 = 1;
             c5 = 1;
             const obj4 = { value: c5.getInitialURL(), done: false };
@@ -108,34 +108,24 @@ closure_1 = asyncGeneratorStep(async function () {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj = { value, done: true };
-          return obj;
+          return { value, done: true };
         } else {
-          closure_129_0 = value;
-          if (closure_129_0) {
-            closure_3.push(closure_129_0);
+          closure_0 = value;
+          const tmp6 = closure_0;
+          if (tmp6) {
+            closure_3.push(closure_0);
           }
           const listener = c5.addEventListener("url", closure_3.handleChange);
           c5 = 3;
           return { value: "IconComponent", done: null };
         }
-      } catch (tmp17) {
-        c5 = tmp;
-        throw tmp17;
+      } catch (tmp16) {
+        c5 = 3;
+        throw tmp16;
       }
     }
   })();
 });
-entry1.value = function componentDidMount() {
-  const self = this;
-  const apply = closure_1.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
 items[1] = entry1;
 items[2] = {
   key: "componentWillUnmount",
@@ -147,7 +137,7 @@ items[3] = {
   key: "render",
   value: function render() {
     const self = this;
-    return jsx(DeepLinking(closure_1[9]).__HistoryContext.Consumer, {
+    return jsx(MemoryRouter.__HistoryContext.Consumer, {
       children(history) {
         self.history = history;
         return self.props.children || null;

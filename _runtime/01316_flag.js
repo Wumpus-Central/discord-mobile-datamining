@@ -1,8 +1,8 @@
 // _runtime/01316_flag.js
 let flag = tmp;
-if (Object.defineProperty || false) {
+if (flag) {
   try {
-    tmp({}, "a", { value: 1 });
+    Object.defineProperty || false({}, "a", { value: 1 });
     flag = tmp;
   } catch (err) {
     flag = false;

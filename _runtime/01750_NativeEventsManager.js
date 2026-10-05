@@ -1,24 +1,25 @@
 // _runtime/01750_NativeEventsManager.js
+import flattenArray from "01740_flattenArray.js";
+import WorkletEventHandler from "01748_WorkletEventHandler.js";
+import react_native from "01751_react-native.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 import _classPrivateFieldBase from "00090__classPrivateFieldBase.js";
 import _classPrivateFieldKey from "00091__classPrivateFieldKey.js";
 
-const NativeEventsManager = arg1;
 let closure_4 = _classPrivateFieldKey("managedComponent");
 let closure_5 = _classPrivateFieldKey("componentOptions");
 let closure_6 = _classPrivateFieldKey("eventViewTag");
 class NativeEventsManager {
-  constructor(arg0, arg1) {
-    tmp = c2(this, NativeEventsManager);
-    definePropertyResult = Object.defineProperty(this, closure_4, { writable: true, value: "a" });
-    definePropertyResult1 = Object.defineProperty(this, hasOwnProperty, { writable: true, value: "a" });
-    definePropertyResult2 = Object.defineProperty(this, metroRequire, { writable: true, value: -1 });
-    closure_3(this, closure_4)[closure_4] = global;
-    closure_3(this, hasOwnProperty)[hasOwnProperty] = arg1;
-    tmp5 = closure_3(this, metroRequire);
-    tmp5[metroRequire] = this.getEventViewTag();
-    return;
+  constructor(self, disableReactSync) {
+    _classCallCheck(this, NativeEventsManager);
+    Object.defineProperty(this, closure_4, { writable: true, value: "a" });
+    Object.defineProperty(this, closure_5, { writable: true, value: "a" });
+    Object.defineProperty(this, closure_6, { writable: true, value: -1 });
+    _classPrivateFieldBase(this, closure_4)[closure_4] = self;
+    _classPrivateFieldBase(this, closure_5)[closure_5] = disableReactSync;
+    const tmp5 = _classPrivateFieldBase(this, closure_6);
+    tmp5[closure_6] = this.getEventViewTag();
   }
 }
 const entry = {
@@ -27,11 +28,10 @@ const entry = {
     const props = _classPrivateFieldBase(this, closure_4)[closure_4].props;
     for (const key10010 in props) {
       let tmp6 = props[key10010];
-      let obj = NativeEventsManager(1740);
-      let hasItem = obj.has("workletEventHandler", tmp6);
-      if (hasItem) {
-        hasItem = tmp6.workletEventHandler instanceof NativeEventsManager(1748).WorkletEventHandler;
-      }
+      let obj = flattenArray;
+      let hasItem =
+        obj.has("workletEventHandler", tmp6) &&
+        tmp6.workletEventHandler instanceof WorkletEventHandler.WorkletEventHandler;
       if (!hasItem) {
         continue;
       } else {
@@ -54,11 +54,10 @@ const items = [
       const props = _classPrivateFieldBase(this, closure_4)[closure_4].props;
       for (const key10010 in props) {
         let tmp6 = props[key10010];
-        let obj = NativeEventsManager(1740);
-        let hasItem = obj.has("workletEventHandler", tmp6);
-        if (hasItem) {
-          hasItem = tmp6.workletEventHandler instanceof NativeEventsManager(1748).WorkletEventHandler;
-        }
+        let obj = flattenArray;
+        let hasItem =
+          obj.has("workletEventHandler", tmp6) &&
+          tmp6.workletEventHandler instanceof WorkletEventHandler.WorkletEventHandler;
         if (!hasItem) {
           continue;
         } else {
@@ -78,13 +77,12 @@ const items = [
       const self = this;
       const eventViewTag = this.getEventViewTag(true);
       if (_classPrivateFieldBase(this, closure_6)[closure_6] !== eventViewTag) {
-        for (const key10071 in arg0) {
-          let tmp37 = arg0[key10071];
-          let obj4 = NativeEventsManager(1740);
-          let hasItem = obj4.has("workletEventHandler", tmp37);
-          if (hasItem) {
-            hasItem = tmp37.workletEventHandler instanceof NativeEventsManager(1748).WorkletEventHandler;
-          }
+        for (const key10071 in current) {
+          let tmp37 = current[key10071];
+          let obj4 = flattenArray;
+          let hasItem =
+            obj4.has("workletEventHandler", tmp37) &&
+            tmp37.workletEventHandler instanceof WorkletEventHandler.WorkletEventHandler;
           if (!hasItem) {
             continue;
           } else {
@@ -99,27 +97,23 @@ const items = [
         _classPrivateFieldBase(self, closure_6)[closure_6] = eventViewTag;
         self.attachEvents();
       } else {
-        for (const key10010 in arg0) {
-          let tmp29 = arg0[key10010];
-          let obj2 = NativeEventsManager(1740);
-          let hasItem1 = obj2.has("workletEventHandler", tmp29);
-          if (hasItem1) {
-            hasItem1 = tmp29.workletEventHandler instanceof NativeEventsManager(1748).WorkletEventHandler;
-          }
+        for (const key10010 in current) {
+          let tmp29 = current[key10010];
+          let obj2 = flattenArray;
+          let hasItem1 =
+            obj2.has("workletEventHandler", tmp29) &&
+            tmp29.workletEventHandler instanceof WorkletEventHandler.WorkletEventHandler;
           if (!hasItem1) {
             continue;
           } else {
             let workletEventHandler = tmp29.workletEventHandler;
             let tmp5 = _classPrivateFieldBase(self, closure_4)[closure_4].props[key10010];
             if (tmp5) {
-              let tmp30Result = NativeEventsManager(1740);
-              let hasItem2 = tmp30Result.has("workletEventHandler", tmp5);
-              if (hasItem2) {
-                hasItem2 = tmp5.workletEventHandler instanceof NativeEventsManager(1748).WorkletEventHandler;
-              }
-              if (hasItem2) {
-                hasItem2 = tmp5.workletEventHandler !== workletEventHandler;
-              }
+              let tmp30Result = flattenArray;
+              let hasItem2 =
+                tmp30Result.has("workletEventHandler", tmp5) &&
+                tmp5.workletEventHandler instanceof WorkletEventHandler.WorkletEventHandler &&
+                tmp5.workletEventHandler !== workletEventHandler;
               if (!hasItem2) {
                 continue;
               } else {
@@ -146,16 +140,15 @@ const items = [
         const props = _classPrivateFieldBase(self, closure_4)[closure_4].props;
         for (const key10054 in props) {
           let tmp33 = props[key10054];
-          let obj3 = NativeEventsManager(1740);
-          let hasItem3 = obj3.has("workletEventHandler", tmp33);
-          if (hasItem3) {
-            hasItem3 = tmp33.workletEventHandler instanceof NativeEventsManager(1748).WorkletEventHandler;
-          }
+          let obj3 = flattenArray;
+          let hasItem3 =
+            obj3.has("workletEventHandler", tmp33) &&
+            tmp33.workletEventHandler instanceof WorkletEventHandler.WorkletEventHandler;
           if (!hasItem3) {
             continue;
           } else {
             let workletEventHandler3 = tmp33.workletEventHandler;
-            if (arg0[key10054]) {
+            if (current[key10054]) {
               continue;
             } else {
               let registerForEventsResult1 = workletEventHandler3.registerForEvents(
@@ -185,46 +178,49 @@ const items = [
       }
       if (getScrollableNode) {
         const scrollableNode = _componentRef.getScrollableNode();
-        let tmp16 = scrollableNode;
+        let tmp15 = scrollableNode;
         if (typeof scrollableNode !== "number") {
-          let num4 = NativeEventsManager(1751).findNodeHandle(scrollableNode);
+          const obj4 = react_native;
+          let num4 = obj4.findNodeHandle(scrollableNode);
           if (num4 == null) {
             num4 = -1;
           }
-          tmp16 = num4;
-          const obj4 = NativeEventsManager(1751);
+          tmp15 = num4;
         }
-        return tmp16;
+        return tmp15;
       } else {
+        let componentViewTag;
         const tmp5 = _classPrivateFieldBase(self, closure_5)[closure_5];
         let setNativeProps;
         if (tmp5 != null) {
           setNativeProps = tmp5.setNativeProps;
         }
         if (setNativeProps) {
-          let num3 = NativeEventsManager(1751).findNodeHandle(_classPrivateFieldBase(self, closure_4)[closure_4]);
+          const obj3 = react_native;
+          let num3 = obj3.findNodeHandle(_classPrivateFieldBase(self, closure_4)[closure_4]);
           if (num3 == null) {
             num3 = -1;
           }
-          let componentViewTag = num3;
-          const obj3 = NativeEventsManager(1751);
+          componentViewTag = num3;
         } else if (flag) {
           let __nativeTag;
           if (_componentRef != null) {
             __nativeTag = _componentRef.__nativeTag;
           }
           if (!__nativeTag) {
+            let num;
             let _nativeTag;
             if (_componentRef != null) {
               _nativeTag = _componentRef._nativeTag;
             }
             if (!_nativeTag) {
-              let num = NativeEventsManager(1751).findNodeHandle(_componentRef);
+              const obj2 = react_native;
+              num = obj2.findNodeHandle(_componentRef);
               if (num == null) {
                 num = -1;
               }
-              const obj2 = NativeEventsManager(1751);
             }
+            componentViewTag = num;
           }
           let num2 = _componentRef.__nativeTag;
           if (num2 == null) {
@@ -235,13 +231,14 @@ const items = [
           }
           num = num2;
         } else {
-          componentViewTag = _classPrivateFieldBase(self, closure_4)[closure_4].getComponentViewTag();
           const obj = _classPrivateFieldBase(self, closure_4)[closure_4];
+          componentViewTag = obj.getComponentViewTag();
         }
         return componentViewTag;
       }
     },
   },
 ];
+const NativeEventsManager_export = _createClass(NativeEventsManager, items);
 
-export const NativeEventsManager = _createClass(NativeEventsManager, items);
+export { NativeEventsManager_export as NativeEventsManager };

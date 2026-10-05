@@ -1,12 +1,12 @@
 // _runtime/05357_shimStringTrim.js
-import _mod1463 from "metro/01463__.js";
+import hasPropertyDescriptors from "01463_hasPropertyDescriptors.js";
 import defineDataProperty from "01464_defineDataProperty.js";
-import _mod5350 from "metro/05350__.js";
+import getPolyfill from "05350_getPolyfill.js";
 
-let closure_2 = _mod1463();
+let closure_2 = hasPropertyDescriptors();
 
 export default function shimStringTrim() {
-  const tmp3 = _mod5350();
+  const tmp3 = getPolyfill();
   if (String.prototype.trim !== tmp3) {
     const tmpResult = defineDataProperty;
     const _String = String;

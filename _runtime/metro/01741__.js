@@ -1,6 +1,6 @@
 // _runtime/metro/01741__.js
-const require = arg1;
-const dependencyMap = arg6;
+let set;
+
 let closure_2 = {
   code: "function pnpm_ViewDescriptorsSetTs1(descriptors){const{item,updater}=this.__closure;var _updater;const index=descriptors.findIndex(function(descriptor){return descriptor.tag===item.tag;});if(index!==-1){descriptors[index]=item;}else{descriptors.push(item);}(_updater=updater)===null||_updater===void 0||_updater(true);return descriptors;}",
 };
@@ -9,12 +9,14 @@ let closure_3 = {
 };
 
 export const makeViewDescriptorsSet = function makeViewDescriptorsSet() {
-  mutable = mutable(set[0]).makeMutable([]);
+  let mutable;
+  const obj = mutable(set[0]);
+  mutable = obj.makeMutable([]);
   set = new Set();
   return {
     shareableViewDescriptors: mutable,
     add(tag, current) {
-      closure_0 = tag;
+      let closure_0 = tag;
       set.add(tag.tag);
       current = undefined;
       if (current != null) {
@@ -38,10 +40,10 @@ export const makeViewDescriptorsSet = function makeViewDescriptorsSet() {
       mutable.modify(fn, false);
     },
     remove(viewTag) {
-      closure_0 = viewTag;
+      let closure_0 = viewTag;
       set.delete(viewTag);
       const fn = function c(arr) {
-        const findIndexResult = arr.findIndex((tag) => tag.tag === viewTag);
+        const findIndexResult = arr.findIndex((tag) => tag.tag === closure_1_0);
         if (-1 !== findIndexResult) {
           arr.splice(findIndexResult, 1);
         }

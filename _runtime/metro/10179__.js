@@ -1,24 +1,18 @@
 // _runtime/metro/10179__.js
-import Filter from "../10180_Filter.js";
+import EmptyDuration from "../10163_EmptyDuration.js";
+import _mod10180 from "10180__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const AbstractMergeDateRangeRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -27,33 +21,24 @@ function _isNativeReflectConstruct() {
 }
 class AbstractMergeDateRangeRefiner {
   constructor() {
-    self = this;
-    tmp = c2(this, AbstractMergeDateRangeRefiner);
-    tmp2 = closure_4;
-    obj = closure_4(AbstractMergeDateRangeRefiner);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, AbstractMergeDateRangeRefiner);
+    const obj = _getPrototypeOf(AbstractMergeDateRangeRefiner);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return tmp3(self, constructResult);
+    return c3(self, constructResult);
   }
 }
-_inherits(AbstractMergeDateRangeRefiner, Filter.MergingRefiner);
+_inherits(AbstractMergeDateRangeRefiner, _mod10180.MergingRefiner);
 const entry = {
   key: "shouldMergeResults",
   value: function shouldMergeResults(str, end, end2) {
-    end = end.end;
-    let tmp = !end;
-    if (!end) {
-      tmp = !end2.end;
-    }
+    let tmp = !end.end && !end2.end;
     if (tmp) {
       const self = this;
       tmp = null != str.match(this.patternBetween());
@@ -66,7 +51,7 @@ let items = [
   {
     key: "mergeResults",
     value: function mergeResults(arg0, start, start2) {
-      closure_0 = start;
+      let closure_0 = start;
       let first = start2;
       start = start.start;
       let result = start.isOnlyWeekdayComponent();
@@ -100,6 +85,7 @@ let items = [
       const start6 = start2.start;
       let tmp5 = start2;
       let obj = start;
+      const dateResult = start5.date();
       if (dateResult > start6.date()) {
         const start18 = start.start;
         const dateResult1 = start18.date();
@@ -107,8 +93,8 @@ let items = [
         const dateResult2 = start19.date();
         const start20 = start2.start;
         if (start20.isOnlyWeekdayComponent()) {
-          if (AbstractMergeDateRangeRefiner(10163).addDuration(dateResult2, { day: 7 }) > dateResult1) {
-            const addDurationResult = AbstractMergeDateRangeRefiner(10163).addDuration(dateResult2, { day: 7 });
+          if (EmptyDuration.addDuration(dateResult2, { day: 7 }) > dateResult1) {
+            const addDurationResult = EmptyDuration.addDuration(dateResult2, { day: 7 });
             const start15 = start2.start;
             start15.imply("day", addDurationResult.getDate());
             const start16 = start2.start;
@@ -121,8 +107,8 @@ let items = [
         }
         const start7 = start.start;
         if (start7.isOnlyWeekdayComponent()) {
-          if (AbstractMergeDateRangeRefiner(10163).addDuration(dateResult1, { day: -7 }) < dateResult2) {
-            const addDurationResult1 = AbstractMergeDateRangeRefiner(10163).addDuration(dateResult1, { day: -7 });
+          if (EmptyDuration.addDuration(dateResult1, { day: -7 }) < dateResult2) {
+            const addDurationResult1 = EmptyDuration.addDuration(dateResult1, { day: -7 });
             const start12 = start.start;
             start12.imply("day", addDurationResult1.getDate());
             const start13 = start.start;
@@ -135,28 +121,22 @@ let items = [
         }
         const start8 = start2.start;
         if (start8.isDateWithUnknownYear()) {
-          if (AbstractMergeDateRangeRefiner(10163).addDuration(dateResult2, { year: 1 }) > dateResult1) {
+          if (EmptyDuration.addDuration(dateResult2, { year: 1 }) > dateResult1) {
             const start11 = start2.start;
-            start11.imply(
-              "year",
-              AbstractMergeDateRangeRefiner(10163).addDuration(dateResult2, { year: 1 }).getFullYear(),
-            );
+            const addDurationResult2 = EmptyDuration.addDuration(dateResult2, { year: 1 });
+            start11.imply("year", addDurationResult2.getFullYear());
             tmp5 = start2;
             obj = start;
-            const addDurationResult2 = AbstractMergeDateRangeRefiner(10163).addDuration(dateResult2, { year: 1 });
           }
         }
         const start9 = start.start;
         if (start9.isDateWithUnknownYear()) {
-          if (AbstractMergeDateRangeRefiner(10163).addDuration(dateResult1, { year: -1 }) < dateResult2) {
+          if (EmptyDuration.addDuration(dateResult1, { year: -1 }) < dateResult2) {
             const start10 = start.start;
-            start10.imply(
-              "year",
-              AbstractMergeDateRangeRefiner(10163).addDuration(dateResult1, { year: -1 }).getFullYear(),
-            );
+            const addDurationResult3 = EmptyDuration.addDuration(dateResult1, { year: -1 });
+            start10.imply("year", addDurationResult3.getFullYear());
             tmp5 = start2;
             obj = start;
-            const addDurationResult3 = AbstractMergeDateRangeRefiner(10163).addDuration(dateResult1, { year: -1 });
           }
         }
         const items = [start, start2];

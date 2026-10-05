@@ -1,8 +1,10 @@
 // _runtime/metro/01928__.js
-globalThis.IntlMessageFormat.__addLocaleData({
+const obj = {
   locale: "hi",
   pluralRuleFunction(arg0, arg1) {
-    if (arg1) {
+    let str2;
+    const tmp = arg1;
+    if (tmp) {
       let str3 = "one";
       if (1 != arg0) {
         let str5 = "two";
@@ -22,7 +24,7 @@ globalThis.IntlMessageFormat.__addLocaleData({
         }
         str3 = str5;
       }
-      let str2 = str3;
+      str2 = str3;
     } else {
       str2 = "other";
       if (arg0 >= 0) {
@@ -34,4 +36,5 @@ globalThis.IntlMessageFormat.__addLocaleData({
     }
     return str2;
   },
-});
+};
+globalThis.IntlMessageFormat.__addLocaleData(obj);

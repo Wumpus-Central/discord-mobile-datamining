@@ -1,20 +1,88 @@
 // _runtime/06518_CardContainer.js
 import Link from "01491_Link.js";
 import _mod6019 from "metro/06019__.js";
-import ModalPresentationContext from "06508_ModalPresentationContext.js";
-import _mod6519 from "metro/06519__.js";
-import CardA11yWrapper from "06520_CardA11yWrapper.js";
-import _mod6521 from "metro/06521__.js";
-import noop from "metro/00019__.js";
+import react2 from "06508_react.js";
+import react3 from "06519_react.js";
+import CardA11yWrapper2 from "06520_CardA11yWrapper.js";
+import Card2 from "06521_Card.js";
+import react from "00019_react.js";
+import react_native from "00017_react-native.js";
+import Fragment from "react/00021_Fragment.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ StyleSheet, View: c3 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const container = StyleSheet.create({ container: { flex: 1 }, header: { zIndex: 1 }, scene: { flex: 1 } });
-
-export const CardContainer = noop.memo(function CardContainerInner(active) {
+let StyleSheet;
+let c3;
+let closure_4;
+let hasOwnProperty;
+({ StyleSheet, View: c3 } = react_native);
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
+const memoResult = react.memo(function CardContainerInner(active) {
+  let Card;
+  let Provider;
+  let Provider2;
+  let Provider3;
+  let Provider4;
+  let animation;
+  let c10;
+  let c11;
+  let c12;
+  let cardOverlay;
+  let cardOverlayEnabled;
+  let cardShadowEnabled;
+  let cardStyle;
+  let cardStyleInterpolator;
+  let closing;
+  let closure_129_1;
+  let closure_129_2;
+  let closure_129_3;
+  let closure_129_4;
+  let closure_129_5;
+  let closure_129_6;
+  let closure_129_7;
+  let descriptor;
+  let detachCurrentScreen;
+  let focused;
+  let gesture;
+  let gestureDirection;
+  let gestureEnabled;
+  let gestureResponseDistance;
+  let gestureVelocityImpact;
+  let getFocusedRoute;
+  let getPreviousScene;
+  let hasAbsoluteFloatHeader;
+  let headerHeight;
+  let headerMode;
+  let headerShown;
+  let index;
+  let interpolationIndex;
+  let isNextScreenTransparent;
+  let isParentHeaderShown;
+  let items2;
+  let items3;
+  let items4;
+  let layout;
+  let modal;
+  let obj11;
+  let obj12;
+  let obj13;
+  let obj5;
+  let obj7;
+  let obj8;
+  let onHeaderHeightChange;
+  let opening;
+  let options;
+  let preloaded;
+  let presentation;
+  let renderHeader;
+  let route;
+  let safeAreaInsetBottom;
+  let safeAreaInsetLeft;
+  let safeAreaInsetRight;
+  let safeAreaInsetTop;
+  let scene;
+  let tmp16;
+  let tmp18;
+  let tmp19;
+  let transitionSpec;
   active = active.active;
   ({
     focused,
@@ -22,13 +90,13 @@ export const CardContainer = noop.memo(function CardContainerInner(active) {
     headerHeight,
     isParentHeaderShown,
     layout,
-    onCloseRoute: dependencyMap,
-    onOpenRoute: noop,
-    onGestureCancel: closure_3,
-    onGestureEnd: closure_4,
-    onGestureStart: closure_5,
-    onTransitionEnd: closure_6,
-    onTransitionStart: closure_7,
+    onCloseRoute: closure_129_1,
+    onOpenRoute: closure_129_2,
+    onGestureCancel: closure_129_3,
+    onGestureEnd: closure_129_4,
+    onGestureStart: closure_129_5,
+    onTransitionEnd: closure_129_6,
+    onTransitionStart: closure_129_7,
     scene,
   } = active);
   c10 = undefined;
@@ -36,7 +104,7 @@ export const CardContainer = noop.memo(function CardContainerInner(active) {
   c12 = undefined;
   let headerTitle;
   let href;
-  closure_15 = undefined;
+  let closure_15;
   ({
     interpolationIndex,
     index,
@@ -56,18 +124,18 @@ export const CardContainer = noop.memo(function CardContainerInner(active) {
     safeAreaInsetRight,
     safeAreaInsetTop,
   } = active);
-  const ref = noop.useRef(null);
-  let num = noop.useContext(_mod6019.HeaderHeightContext);
-  let tmp4 = focused;
-  if (focused) {
-    tmp4 = false !== scene.descriptor.options.keyboardHandlingEnabled;
-  }
+  const ref = react.useRef(null);
   let obj2 = Link;
-  const keyboardManager = _mod6519.useKeyboardManager({ enabled: tmp4, focused });
+  const direction = obj2.useLocale().direction;
+  let num = react.useContext(_mod6019.HeaderHeightContext);
+  const tmp4 = focused && false !== scene.descriptor.options.keyboardHandlingEnabled;
+  const tmp2Result = react3;
+  const keyboardManager = tmp2Result.useKeyboardManager({ enabled: tmp4, focused });
   ({ onPageChangeStart: c10, onPageChangeCancel: c11, onPageChangeConfirm: c12 } = keyboardManager);
-  const tmp2Result = _mod6519;
   const items = [scene.progress.next];
-  const effect = noop.useEffect(() => {
+  const tmp2Result4 = Link;
+  const colors = tmp2Result4.useTheme().colors;
+  const effect = react.useEffect(() => {
     let next = scene.progress.next;
     let addListenerResult;
     if (next != null) {
@@ -83,7 +151,7 @@ export const CardContainer = noop.memo(function CardContainerInner(active) {
     }
     active = addListenerResult;
     return () => {
-      if (addListenerResult) {
+      if (active) {
         const next = scene.progress.next;
         if (next != null) {
           const removeListener = next.removeListener;
@@ -110,24 +178,25 @@ export const CardContainer = noop.memo(function CardContainerInner(active) {
     gestureVelocityImpact,
     transitionSpec,
   } = scene.descriptor.options);
-  const tmp2Result4 = Link;
-  const previousScene = getPreviousScene({ route: scene.descriptor.route });
+  const obj3 = { route: scene.descriptor.route };
+  const tmp2Result5 = Link;
+  const buildHref = tmp2Result5.useLinkBuilder().buildHref;
+  const previousScene = getPreviousScene(obj3);
   let tmp8;
   let tmp9;
   if (previousScene) {
     ({ route, options } = previousScene.descriptor);
-    headerTitle = _mod6019.getHeaderTitle(options, route.name);
-    href = tmp2Result5.useLinkBuilder().buildHref(route.name, route.params);
+    const tmp2Result6 = _mod6019;
+    headerTitle = tmp2Result6.getHeaderTitle(options, route.name);
+    href = buildHref(route.name, route.params);
     tmp8 = href;
     tmp9 = headerTitle;
-    const tmp2Result6 = _mod6019;
   }
   closure_15 = tmp12;
   const items1 = [null != previousScene, tmp9, tmp8];
-  const memo = noop.useMemo(() => {
+  const memo = react.useMemo(() => {
     if (closure_15) {
-      const obj = { href, title: headerTitle };
-      return obj;
+      return { href, title: headerTitle };
     }
   }, items1);
   const obj4 = {
@@ -137,15 +206,15 @@ export const CardContainer = noop.memo(function CardContainerInner(active) {
     animated: "none" !== animation,
     isNextScreenTransparent,
     detachCurrentScreen,
-    children: null,
+    children: React3(Card, obj5),
   };
-  const obj5 = {
+  obj5 = {
     animated: "none" !== animation,
     interpolationIndex,
     gestureDirection,
     layout,
     insets: { top: safeAreaInsetTop, right: safeAreaInsetRight, bottom: safeAreaInsetBottom, left: safeAreaInsetLeft },
-    direction: obj2.useLocale().direction,
+    direction,
     gesture,
     current: scene.progress.current,
     next: scene.progress.next,
@@ -153,13 +222,13 @@ export const CardContainer = noop.memo(function CardContainerInner(active) {
     closing,
     onOpen() {
       const route = scene.descriptor.route;
-      container({ route }, false);
-      noop({ route });
+      closure_1_6({ route }, false);
+      closure_1_2({ route });
     },
     onClose() {
       const route = scene.descriptor.route;
-      container({ route }, true);
-      dependencyMap({ route });
+      closure_1_6({ route }, true);
+      closure_1_1({ route });
     },
     overlay: cardOverlay,
     overlayEnabled: cardOverlayEnabled,
@@ -167,116 +236,104 @@ export const CardContainer = noop.memo(function CardContainerInner(active) {
     onTransition(dependencyMap) {
       const closing = dependencyMap.closing;
       const current = ref.current;
+      const gesture = dependencyMap.gesture;
       if (current != null) {
         current.setInert(closing);
       }
+      const route = scene.descriptor.route;
       if (c12 != null) {
-        const obj = { gesture: dependencyMap.gesture, active, closing };
+        const obj = { gesture, active, closing };
         tmp2(obj);
       }
       if (closure_1_7 != null) {
-        const obj2 = { route: scene.descriptor.route };
+        const obj2 = { route };
         tmp5(obj2, closing);
       }
     },
     onGestureBegin() {
+      const route = scene.descriptor.route;
       _undefined();
-      closure_1_5({ route: scene.descriptor.route });
+      closure_1_5({ route });
     },
     onGestureCanceled() {
+      const route = scene.descriptor.route;
       _undefined2();
-      closure_1_3({ route: scene.descriptor.route });
+      closure_1_3({ route });
     },
     onGestureEnd() {
-      closure_1_4({ route: scene.descriptor.route });
+      const obj = { route: scene.descriptor.route };
+      closure_1_4(obj);
     },
-    gestureEnabled: null,
-    gestureResponseDistance: null,
-    gestureVelocityImpact: null,
-    transitionSpec: null,
-    styleInterpolator: null,
-    pageOverflowEnabled: null,
-    preloaded: null,
-    containerStyle: null,
-    contentStyle: null,
-    children: null,
+    gestureEnabled: tmp16,
+    gestureResponseDistance,
+    gestureVelocityImpact,
+    transitionSpec,
+    styleInterpolator: cardStyleInterpolator,
+    pageOverflowEnabled: tmp18,
+    preloaded,
+    containerStyle: tmp19,
+    contentStyle: items2,
+    children: React3(_false, obj7),
   };
-  let tmp16 = 0 !== index;
+  tmp16 = 0 !== index;
+  const CardA11yWrapper = CardA11yWrapper2.CardA11yWrapper;
+  Card = Card2.Card;
   if (tmp16) {
     tmp16 = gestureEnabled;
   }
-  obj5.gestureEnabled = tmp16;
-  obj5.gestureResponseDistance = gestureResponseDistance;
-  obj5.gestureVelocityImpact = gestureVelocityImpact;
-  obj5.transitionSpec = transitionSpec;
-  obj5.styleInterpolator = cardStyleInterpolator;
-  let tmp18 = tmp17;
-  if ("float" !== headerMode) {
-    tmp18 = "modal" !== presentation;
-  }
-  obj5.pageOverflowEnabled = tmp18;
-  obj5.preloaded = preloaded;
-  let tmp19 = null;
+  tmp19 = null;
+  tmp18 = tmp17 && "modal" !== presentation;
   if (hasAbsoluteFloatHeader) {
     tmp19 = null;
     if ("screen" !== headerMode) {
+      tmp19 = { marginTop: headerHeight };
       const obj6 = { marginTop: headerHeight };
-      tmp19 = obj6;
     }
   }
-  obj5.containerStyle = tmp19;
   let str3 = "transparent";
   if ("transparentModal" !== presentation) {
-    str3 = tmp2Result4.useTheme().colors.background;
+    str3 = colors.background;
   }
-  const items2 = [{ backgroundColor: str3 }, cardStyle];
-  obj5.contentStyle = items2;
-  const obj7 = { style: container.container, children: null };
-  const obj8 = { value: modal, children: null };
+  items2 = [{ backgroundColor: str3 }, cardStyle];
+  obj7 = { style: container.container, children: hasOwnProperty(Provider, obj8) };
   let renderHeaderResult = null;
+  obj8 = { value: modal, children: items4 };
+  Provider = react2.ModalPresentationContext.Provider;
   if ("float" !== headerMode) {
     const obj9 = {
       mode: "screen",
       layout,
-      scenes: null,
-      getPreviousScene: null,
-      getFocusedRoute: null,
-      contentHeight: null,
-      onContentHeightChange: null,
-      style: null,
+      scenes: items3,
+      getPreviousScene,
+      getFocusedRoute,
+      contentHeight: headerHeight,
+      onContentHeightChange: onHeaderHeightChange,
+      style: container.header,
     };
-    const items3 = [previousScene, scene];
-    obj9.scenes = items3;
-    obj9.getPreviousScene = getPreviousScene;
-    obj9.getFocusedRoute = getFocusedRoute;
-    obj9.contentHeight = headerHeight;
-    obj9.onContentHeightChange = onHeaderHeightChange;
-    obj9.style = container.header;
+    items3 = [previousScene, scene];
     renderHeaderResult = renderHeader(obj9);
   }
-  const items4 = [renderHeaderResult];
-  const obj10 = { style: container.scene, children: null };
-  const obj11 = { value: memo, children: null };
+  items4 = [renderHeaderResult];
+  const obj10 = { style: container.scene, children: React3(Provider2, obj11) };
+  obj11 = { value: memo, children: React3(Provider3, obj12) };
+  Provider2 = _mod6019.HeaderBackContext.Provider;
+  Provider3 = _mod6019.HeaderShownContext.Provider;
   if (!isParentHeaderShown) {
     isParentHeaderShown = false !== headerShown;
   }
-  const obj12 = { value: isParentHeaderShown, children: null };
+  obj12 = { value: isParentHeaderShown, children: React3(Provider4, obj13) };
+  Provider4 = _mod6019.HeaderHeightContext.Provider;
   if (false === headerShown) {
     if (num == null) {
       num = 0;
     }
     headerHeight = num;
   }
-  const obj13 = { value: headerHeight, children: null };
-  const descriptor = scene.descriptor;
-  obj13.children = descriptor.render();
-  obj12.children = React4(_mod6019.HeaderHeightContext.Provider, obj13);
-  obj11.children = React4(_mod6019.HeaderShownContext.Provider, obj12);
-  obj10.children = React4(_mod6019.HeaderBackContext.Provider, obj11);
-  items4[1] = React4(React3, obj10);
-  obj8.children = items4;
-  obj7.children = hasOwnProperty(ModalPresentationContext.ModalPresentationContext.Provider, obj8);
-  obj5.children = React4(React3, obj7);
-  obj4.children = React4(_mod6521.Card, obj5);
-  return React4(CardA11yWrapper.CardA11yWrapper, obj4);
+  obj13 = { value: headerHeight, children: descriptor.render() };
+  descriptor = scene.descriptor;
+  items4[1] = React3(_false, obj10);
+  return React3(CardA11yWrapper, obj4);
 });
+const container = StyleSheet.create({ container: { flex: 1 }, header: { zIndex: 1 }, scene: { flex: 1 } });
+
+export const CardContainer = memoResult;

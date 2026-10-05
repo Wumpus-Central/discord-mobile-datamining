@@ -1,14 +1,14 @@
 // _runtime/00425_Position.js
-import oneArgumentPooler from "00426_oneArgumentPooler.js";
+import 00426__ from "metro/00426__.js";
 
 class Position {
   constructor(arg0, arg1) {
-    return;
+
   }
   destructor() {
-    return;
+
   }
 }
-oneArgumentPooler.addPoolingTo(Position, oneArgumentPooler.twoArgumentPooler);
+module_426.addPoolingTo(Position, module_426.twoArgumentPooler);
 
 export default Position;

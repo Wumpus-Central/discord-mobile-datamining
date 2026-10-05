@@ -1,13 +1,21 @@
 // _runtime/06363_RecyclerViewManager.js
-import _modDef6352 from "metro/06352__.js";
-import ViewabilityManagerDefault from "06367_ViewabilityManager.js";
-import _classCallCheck from "metro/06351__.js";
+import ErrorMessages from "06339_ErrorMessages.js";
+import _createClassDefault from "metro/06352__createClass.js";
+import RVEngagedIndicesTrackerImpl from "06364_RVEngagedIndicesTrackerImpl.js";
+import RenderStackManager from "06366_RenderStackManager.js";
+import _modDef6367 from "metro/06367__.js";
+import RVMasonryLayoutManagerImpl from "06369_RVMasonryLayoutManagerImpl.js";
+import RVGridLayoutManagerImpl from "06380_RVGridLayoutManagerImpl.js";
+import RVLinearLayoutManagerImpl2 from "06381_RVLinearLayoutManagerImpl.js";
+import WarningMessages from "06382_WarningMessages.js";
+import _classCallCheck from "metro/06351__classCallCheck.js";
 
-const RecyclerViewManager = arg1;
+let size;
+
 class RecyclerViewManager {
-  constructor(arg0) {
-    self = this;
-    tmp = closure_3(this, RecyclerViewManager);
+  constructor(propsRef) {
+    const self = this;
+    _classCallCheck(this, RecyclerViewManager);
     this.initialDrawBatchSize = 2;
     this.isFirstLayoutComplete = false;
     this.hasRenderedProgressively = false;
@@ -20,39 +28,41 @@ class RecyclerViewManager {
     this.isFirstPaintOnUiComplete = false;
     this.isInitialScrollComplete = false;
     this.updateRenderStack = (arg0) => {
+      let getDataKey;
+      let getItemType;
       const renderStackManager = self.renderStackManager;
       ({ getDataKey, getItemType } = self);
       renderStackManager.sync(getDataKey, getItemType, arg0, self.getDataLength());
     };
-    getDataKey = this.getDataKey;
+    const getDataKey = this.getDataKey;
     this.getDataKey = getDataKey.bind(this);
-    getItemType = this.getItemType;
+    const getItemType = this.getItemType;
     this.getItemType = getItemType.bind(this);
-    overrideItemLayout = this.overrideItemLayout;
+    const overrideItemLayout = this.overrideItemLayout;
     this.overrideItemLayout = overrideItemLayout.bind(this);
-    this.propsRef = global;
-    rVEngagedIndicesTrackerImpl = new closure_0(c2[2]).RVEngagedIndicesTrackerImpl();
+    this.propsRef = propsRef;
+    const rVEngagedIndicesTrackerImpl = new RVEngagedIndicesTrackerImpl.RVEngagedIndicesTrackerImpl();
     this.engagedIndicesTracker = rVEngagedIndicesTrackerImpl;
-    renderStackManager = new closure_0(c2[3]).RenderStackManager(global.maxItemsInRecyclePool);
+    let renderStackManager = new RenderStackManager.RenderStackManager(propsRef.maxItemsInRecyclePool);
     this.renderStackManager = renderStackManager;
-    tmp4 = new closure_1(c2[4])(this);
-    this.itemViewabilityManager = tmp4;
+    this.itemViewabilityManager = new _modDef6367(this);
+    new _modDef6367(this);
     this.isInitialScrollComplete = undefined === this.getInitialScrollIndex();
-    checkPropsAndWarnResult = this.checkPropsAndWarn();
-    return;
+    this.checkPropsAndWarn();
   }
 }
-const items = [
-  {
-    key: "animationOptimizationsEnabled",
-    get() {
-      return this._animationOptimizationsEnabled;
-    },
-    set(_animationOptimizationsEnabled) {
-      this._animationOptimizationsEnabled = _animationOptimizationsEnabled;
-      this.renderStackManager.disableRecycling = _animationOptimizationsEnabled;
-    },
+let obj = {
+  key: "animationOptimizationsEnabled",
+  get() {
+    return this._animationOptimizationsEnabled;
   },
+  set(_animationOptimizationsEnabled) {
+    this._animationOptimizationsEnabled = _animationOptimizationsEnabled;
+    this.renderStackManager.disableRecycling = _animationOptimizationsEnabled;
+  },
+};
+const items = [
+  obj,
   {
     key: "isOffsetProjectionEnabled",
     get() {
@@ -93,10 +103,11 @@ const items = [
       const self = this;
       this.propsRef = propsRef;
       let drawDistance = propsRef.drawDistance;
+      const engagedIndicesTracker = this.engagedIndicesTracker;
       if (drawDistance == null) {
         drawDistance = self.engagedIndicesTracker.drawDistance;
       }
-      this.engagedIndicesTracker.drawDistance = drawDistance;
+      engagedIndicesTracker.drawDistance = drawDistance;
       const overrideProps = self.propsRef.overrideProps;
       let initialDrawBatchSize;
       if (overrideProps != null) {
@@ -148,7 +159,9 @@ const items = [
         return layoutManager.getLayout(arg0);
       } else {
         const _Error = Error;
-        const error = new Error(RecyclerViewManager(6339).ErrorMessages.layoutManagerNotInitializedLayoutInfo);
+        const self = this;
+        const self2 = this;
+        const error = new Error(ErrorMessages.ErrorMessages.layoutManagerNotInitializedLayoutInfo);
         throw error;
       }
     },
@@ -190,7 +203,9 @@ const items = [
         return layoutManager.getLayoutSize();
       } else {
         const _Error = Error;
-        const error = new Error(RecyclerViewManager(6339).ErrorMessages.layoutManagerNotInitializedChildContainer);
+        const self = this;
+        const self2 = this;
+        const error = new Error(ErrorMessages.ErrorMessages.layoutManagerNotInitializedChildContainer);
         throw error;
       }
     },
@@ -210,7 +225,9 @@ const items = [
         return layoutManager.getWindowsSize();
       } else {
         const _Error = Error;
-        const error = new Error(RecyclerViewManager(6339).ErrorMessages.layoutManagerNotInitializedWindowSize);
+        const self = this;
+        const self2 = this;
+        const error = new Error(ErrorMessages.ErrorMessages.layoutManagerNotInitializedWindowSize);
         throw error;
       }
     },
@@ -225,14 +242,13 @@ const items = [
     key: "getMaxScrollOffset",
     value: function getMaxScrollOffset() {
       const self = this;
-      const size = this.getChildContainerDimensions();
+      const _Math = Math;
+      const horizontal = this.propsRef.horizontal;
+      size = this.getChildContainerDimensions();
+      const horizontal2 = self.propsRef.horizontal;
+      const tmp = horizontal ? size.width : size.height;
       const size2 = self.getWindowSize();
-      return Math.max(
-        0,
-        (this.propsRef.horizontal ? size.width : size.height) -
-          (self.propsRef.horizontal ? size2.width : size2.height) +
-          self.firstItemOffset,
-      );
+      return max(0, tmp - (horizontal2 ? size2.width : size2.height) + self.firstItemOffset);
     },
   },
   {
@@ -258,22 +274,27 @@ const items = [
   {
     key: "updateLayoutParams",
     value: function updateLayoutParams(windowSize, firstItemOffset) {
+      let flag2;
+      let layoutManager2;
       const self = this;
       this.firstItemOffset = firstItemOffset;
       const layoutManagerClass = this.getLayoutManagerClass();
       if (this.layoutManager) {
         const layoutManager = self.layoutManager;
         let isHorizontalResult;
+        const _Boolean = Boolean;
         if (layoutManager != null) {
           isHorizontalResult = layoutManager.isHorizontal();
         }
-        const _Boolean = Boolean;
-        if (BooleanResult !== Boolean(self.propsRef.horizontal)) {
+        const _Boolean2 = Boolean;
+        const _BooleanResult = _Boolean(isHorizontalResult);
+        if (_BooleanResult !== Boolean(self.propsRef.horizontal)) {
           const _Error = Error;
-          const error = new Error(RecyclerViewManager(6339).ErrorMessages.horizontalPropCannotBeToggled);
+          const self4 = this;
+          const self5 = this;
+          const error = new Error(ErrorMessages.ErrorMessages.horizontalPropCannotBeToggled);
           throw error;
         }
-        BooleanResult = Boolean(isHorizontalResult);
       }
       if (self._isLayoutManagerDirty) {
         self.layoutManager = undefined;
@@ -283,15 +304,14 @@ const items = [
         windowSize,
         maxColumns: self.numColumns,
         horizontal: Boolean(self.propsRef.horizontal),
-        optimizeItemArrangement: null,
+        optimizeItemArrangement: flag2,
         overrideItemLayout: null,
         getItemType: null,
       };
-      let flag2 = self.propsRef.optimizeItemArrangement;
+      flag2 = self.propsRef.optimizeItemArrangement;
       if (flag2 == null) {
         flag2 = true;
       }
-      obj.optimizeItemArrangement = flag2;
       ({
         overrideItemLayout: obj.overrideItemLayout,
         getItemType: obj.getItemType,
@@ -300,6 +320,8 @@ const items = [
       if (self.layoutManager instanceof layoutManagerClass) {
         layoutManager2.updateLayoutParams(obj);
       } else {
+        const self2 = this;
+        const self3 = this;
         const layoutManagerClass1 = new layoutManagerClass(obj, layoutManager2);
         self.layoutManager = layoutManagerClass1;
       }
@@ -320,7 +342,9 @@ const items = [
         return engagedIndicesTracker.computeVisibleIndices(self.layoutManager);
       } else {
         const _Error = Error;
-        const error = new Error(RecyclerViewManager(6339).ErrorMessages.layoutManagerNotInitializedVisibleIndices);
+        const self2 = this;
+        const self3 = this;
+        const error = new Error(ErrorMessages.ErrorMessages.layoutManagerNotInitializedVisibleIndices);
         throw error;
       }
     },
@@ -335,49 +359,51 @@ const items = [
   {
     key: "modifyChildrenLayout",
     value: function modifyChildrenLayout(arr, arg1) {
-      let self = this;
+      const self = this;
       const layoutManager = this.layoutManager;
       if (layoutManager != null) {
         layoutManager.modifyLayout(arr, arg1);
       }
-      if (0 === arg1) {
-        return tmp3;
-      } else {
+      let tmp3 = 0 !== arg1;
+      if (tmp3) {
+        let flag;
         const layoutManager2 = self.layoutManager;
         let requiresRepaint;
         if (layoutManager2 != null) {
           requiresRepaint = layoutManager2.requiresRepaint;
         }
         if (requiresRepaint) {
-          self = self.layoutManager;
-          self.requiresRepaint = false;
-          let flag = true;
+          self.layoutManager.requiresRepaint = false;
+          flag = true;
         } else if (self.hasRenderedProgressively) {
           flag = self.isFirstPaintOnUiComplete && undefined !== self.recomputeEngagedIndices();
-          const tmp6 = self.isFirstPaintOnUiComplete && undefined !== self.recomputeEngagedIndices();
+          self.isFirstPaintOnUiComplete && undefined !== self.recomputeEngagedIndices();
         } else {
           self.renderProgressively();
           flag = !self.hasRenderedProgressively;
         }
+        tmp3 = flag;
       }
+      return tmp3;
     },
   },
   {
     key: "computeItemViewability",
     value: function computeItemViewability() {
-      let self = this;
+      const self = this;
       if (this.itemViewabilityManager.shouldListenToVisibleIndices) {
+        let toArrayResult;
         const itemViewabilityManager = self.itemViewabilityManager;
+        const updateViewableItems = itemViewabilityManager.updateViewableItems;
         if (self.propsRef.masonry) {
           const engagedIndicesTracker = self.engagedIndicesTracker;
           const engagedIndices = engagedIndicesTracker.getEngagedIndices();
-          self = engagedIndices.toArray;
-          let selfResult = self();
+          toArrayResult = engagedIndices.toArray();
         } else {
           const visibleIndices = self.computeVisibleIndices();
-          selfResult = visibleIndices.toArray();
+          toArrayResult = visibleIndices.toArray();
         }
-        itemViewabilityManager.updateViewableItems(selfResult);
+        updateViewableItems(toArrayResult);
       }
     },
   },
@@ -399,22 +425,25 @@ const items = [
   {
     key: "processDataUpdate",
     value: function processDataUpdate() {
+      let engagedIndicesTracker;
+      let updateRenderStack;
       const self = this;
       if (this.hasLayout()) {
         const data = self.propsRef.data;
         let num;
+        const modifyChildrenLayout = self.modifyChildrenLayout;
         if (data != null) {
           num = data.length;
         }
         if (num == null) {
           num = 0;
         }
-        self.modifyChildrenLayout([], num);
+        modifyChildrenLayout([], num);
+        const tmp3 = self.hasRenderedProgressively && !self.recomputeEngagedIndices();
         if (tmp3) {
           ({ engagedIndicesTracker, updateRenderStack } = self);
           updateRenderStack(engagedIndicesTracker.getEngagedIndices());
         }
-        tmp3 = self.hasRenderedProgressively && !self.recomputeEngagedIndices();
       }
     },
   },
@@ -515,30 +544,35 @@ const items = [
   {
     key: "getLayoutManagerClass",
     value: function getLayoutManagerClass() {
+      let RVLinearLayoutManagerImpl;
       const self = this;
       if (this.propsRef.masonry) {
         if (self.propsRef.horizontal) {
           const _Error2 = Error;
-          const error = new Error(RecyclerViewManager(6339).ErrorMessages.masonryAndHorizontalIncompatible);
+          const self4 = this;
+          const self5 = this;
+          const error = new Error(ErrorMessages.ErrorMessages.masonryAndHorizontalIncompatible);
           throw error;
         }
       }
       if (self.numColumns > 1) {
         if (self.propsRef.horizontal) {
           const _Error = Error;
-          const error1 = new Error(RecyclerViewManager(6339).ErrorMessages.numColumnsAndHorizontalIncompatible);
+          const self2 = this;
+          const self3 = this;
+          const error1 = new Error(ErrorMessages.ErrorMessages.numColumnsAndHorizontalIncompatible);
           throw error1;
         }
       }
       if (self.propsRef.masonry) {
-        let RVLinearLayoutManagerImpl = RecyclerViewManager(6369).RVMasonryLayoutManagerImpl;
+        RVLinearLayoutManagerImpl = RVMasonryLayoutManagerImpl.RVMasonryLayoutManagerImpl;
       } else {
         if (self.numColumns > 1) {
           if (!self.propsRef.horizontal) {
-            RVLinearLayoutManagerImpl = RecyclerViewManager(6380).RVGridLayoutManagerImpl;
+            RVLinearLayoutManagerImpl = RVGridLayoutManagerImpl.RVGridLayoutManagerImpl;
           }
         }
-        RVLinearLayoutManagerImpl = RecyclerViewManager(6381).RVLinearLayoutManagerImpl;
+        RVLinearLayoutManagerImpl = RVLinearLayoutManagerImpl2.RVLinearLayoutManagerImpl;
       }
       return RVLinearLayoutManagerImpl;
     },
@@ -546,7 +580,7 @@ const items = [
   {
     key: "applyInitialScrollAdjustment",
     value: function applyInitialScrollAdjustment() {
-      let self = this;
+      const self = this;
       if (this.layoutManager) {
         if (0 !== self.getDataLength()) {
           const initialScrollIndex = self.getInitialScrollIndex();
@@ -555,9 +589,7 @@ const items = [
             layoutManager2.recomputeLayouts(0, initialScrollIndex);
             const layoutManager3 = self.layoutManager;
             const point2 = layoutManager3.getLayout(initialScrollIndex);
-            self = self.engagedIndicesTracker;
-            self.scrollOffset = self.propsRef.horizontal ? point2.x : point2.y;
-            const tmp2 = self.propsRef.horizontal ? point2.x : point2.y;
+            self.engagedIndicesTracker.scrollOffset = self.propsRef.horizontal ? point2.x : point2.y;
           } else {
             const layoutManager = self.layoutManager;
             const point = layoutManager.getLayout(0);
@@ -577,17 +609,18 @@ const items = [
       if (layoutManager) {
         const result = self.applyInitialScrollAdjustment();
         const visibleIndices = self.computeVisibleIndices();
-        self.hasRenderedProgressively = visibleIndices.every(
-          (item) => layoutManager.getLayout(item).isHeightMeasured && layoutManager.getLayout(item).isWidthMeasured,
-        );
+        self.hasRenderedProgressively = visibleIndices.every((item) => {
+          const tmp = layoutManager.getLayout(item).isHeightMeasured && layoutManager.getLayout(item).isWidthMeasured;
+          return tmp;
+        });
         if (self.hasRenderedProgressively) {
           self.isFirstLayoutComplete = true;
         }
         const _Math = Math;
         const numColumns = self.numColumns;
         const initialDrawBatchSize = self.initialDrawBatchSize;
-        const hasRenderedProgressively = self.hasRenderedProgressively;
-        if (!hasRenderedProgressively) {
+        const tmp4 = !self.hasRenderedProgressively;
+        if (tmp4) {
           const _Math2 = Math;
           self.updateRenderStack(
             visibleIndices.slice(0, Math.min(visibleIndices.length, self.getRenderStack().size + tmp3)),
@@ -627,13 +660,14 @@ const items = [
   {
     key: "checkPropsAndWarn",
     value: function checkPropsAndWarn() {
+      const tmp = this.propsRef.onStartReached && !this.propsRef.keyExtractor;
       if (tmp) {
         const _console = console;
-        console.warn(RecyclerViewManager(6382).WarningMessages.keyExtractorNotDefinedForMVCP);
+        console.warn(WarningMessages.WarningMessages.keyExtractorNotDefinedForMVCP);
       }
-      tmp = this.propsRef.onStartReached && !this.propsRef.keyExtractor;
     },
   },
 ];
+const RecyclerViewManager_export = _createClassDefault(RecyclerViewManager, items);
 
-export const RecyclerViewManager = _modDef6352(RecyclerViewManager, items);
+export { RecyclerViewManager_export as RecyclerViewManager };

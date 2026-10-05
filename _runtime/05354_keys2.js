@@ -1,35 +1,33 @@
 // _runtime/05354_keys2.js
-import _mod5355 from "metro/05355__.js";
-import _mod5356 from "metro/05356__.js";
+import isArguments from "05355_isArguments.js";
+import isArguments2 from "05356_isArguments.js";
 
+let keys2;
 if (keys) {
-  let keys2 = function keys(arg0) {
+  keys2 = function keys(arg0) {
     return keys(arg0);
   };
 } else {
-  keys2 = _mod5355;
+  keys2 = isArguments;
 }
-keys = Object.keys;
+keys2 = Object.keys;
 keys2.shim = function shimObjectKeys() {
   if (Object.keys) {
     if (
-      !(() => {
+      !(function () {
         keys = Object.keys(arguments);
-        let tmp = keys;
-        if (keys) {
-          tmp = keys.length === arguments.length;
-        }
-        return tmp;
+        return keys && keys.length === arguments.length;
       })(1, 2)
     ) {
       const _Object2 = Object;
       Object.keys = function keys(arg0) {
-        if (_mod5356(arg0)) {
-          const call = slice.call;
-          keys(typeof call === "unknown" ? slice() : call(arg0));
+        let tmpResult;
+        if (isArguments2(arg0)) {
+          tmpResult = keys2(slice.call(arg0));
         } else {
-          return keys(arg0);
+          tmpResult = keys2(arg0);
         }
+        return tmpResult;
       };
     }
   } else {

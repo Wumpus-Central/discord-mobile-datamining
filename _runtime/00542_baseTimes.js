@@ -1,6 +1,7 @@
 // _runtime/00542_baseTimes.js
 
 export default function baseTimes(arg0, fn) {
+  let num;
   const ArrayResult = Array(arg0);
   for (let num = 0; num < arg0; num = num + 1) {
     ArrayResult[num] = fn(num);

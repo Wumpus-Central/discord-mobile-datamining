@@ -1,18 +1,15 @@
 // _runtime/06242_PressableStateMachine.js
 import _createClassDefault from "metro/00042__createClass.js";
-import _classCallCheck_mod from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
-let _classCallCheck = _classCallCheck_mod;
 class PressableStateMachine {
   constructor() {
-    tmp = closure_0(this, PressableStateMachine);
+    _classCallCheck(this, PressableStateMachine);
     this.states = null;
     this.currentStepIndex = 0;
     this.eventPayload = null;
-    return;
   }
 }
-_classCallCheck = PressableStateMachine;
 const entry = {
   key: "setStates",
   value: function setStates(statesConfig) {
@@ -30,11 +27,8 @@ const items = [
     value: function handleEvent(arg0, arg1) {
       const self = this;
       if (this.states) {
-        let eventPayload = arg1;
-        if (!arg1) {
-          eventPayload = self.eventPayload;
-        }
-        self.eventPayload = eventPayload;
+        const tmp2 = arg1 || self.eventPayload;
+        self.eventPayload = tmp2;
         if (self.currentStepIndex < self.states.length) {
           if (self.states[self.currentStepIndex].eventName !== arg0) {
             if (self.states[self.currentStepIndex].optional) {
@@ -52,14 +46,14 @@ const items = [
         if (self.currentStepIndex >= self.states.length) {
           self.reset();
         } else if (self.states[self.currentStepIndex].eventName === arg0) {
-          if (tmp5) {
-            obj.callback(self.eventPayload);
+          const tmp6 = self.eventPayload && self.states[self.currentStepIndex].callback;
+          if (tmp6) {
+            self.states[self.currentStepIndex].callback(self.eventPayload);
           }
           self.currentStepIndex = self.currentStepIndex + 1;
           if (self.currentStepIndex === self.states.length) {
             self.reset();
           }
-          tmp5 = self.eventPayload && obj.callback;
         } else if (self.currentStepIndex > 0) {
           self.reset();
           self.handleEvent(arg0, arg1);
@@ -68,5 +62,6 @@ const items = [
     },
   },
 ];
+const PressableStateMachine_export = _createClassDefault(PressableStateMachine, items);
 
-export const PressableStateMachine = _createClassDefault(PressableStateMachine, items);
+export { PressableStateMachine_export as PressableStateMachine };

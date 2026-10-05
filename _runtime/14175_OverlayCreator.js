@@ -1,34 +1,37 @@
 // _runtime/14175_OverlayCreator.js
-import noop from "metro/00019__.js";
-import get_ActivityIndicator from "metro/00017__.js";
+import react from "00019_react.js";
+import react_native from "00017_react-native.js";
 import module_14176_mod from "metro/14176__.js";
-import _isNativeReflectConstruct_mod from "metro/14177__.js";
-import jsxProd from "react/00021_jsxProd.js";
+import module_14177_mod from "metro/14177__.js";
+import Fragment from "react/00021_Fragment.js";
 
-if (noop) {
-  const __esModule = noop.__esModule;
+let tmp4;
+let tmp6;
+if (react) {
+  const __esModule = react.__esModule;
 }
 let module_14176 = module_14176_mod;
 if (!module_14176) {
   let obj = { default: module_14176 };
-  let tmp4 = obj;
+  tmp4 = obj;
 } else {
   tmp4 = module_14176;
 }
 module_14176 = tmp4;
-let _isNativeReflectConstruct = _isNativeReflectConstruct_mod;
-if (!_isNativeReflectConstruct) {
-  let obj2 = { default: _isNativeReflectConstruct };
-  let tmp6 = obj2;
+let module_14177 = module_14177_mod;
+if (!module_14177) {
+  tmp6 = { default: module_14177 };
+  const obj2 = { default: module_14177 };
 } else {
-  tmp6 = _isNativeReflectConstruct;
+  tmp6 = module_14177;
 }
-_isNativeReflectConstruct = tmp6;
+module_14177 = tmp6;
 
 export default function OverlayCreator() {
+  let RN;
   return function overlay() {
-    closure_0 = closure_1.default();
-    return {
+    let closure_0 = closure_1.default();
+    let obj = {
       onCommand(type) {
         if ("overlay" === type.type) {
           closure_0.emit("overlay", type.payload);
@@ -41,14 +44,17 @@ export default function OverlayCreator() {
             if (arg0 === undefined) {
               obj = {};
             }
-            const obj2 = { style: { flex: 1 }, children: null };
+            const jsxs = React.jsxs;
+            const View = RN.View;
+            const jsx = React.jsx;
             const merged = Object.assign(obj);
-            const items = [<emitter />, <_isNativeReflectConstruct.default emitter={emitter} />];
-            obj2.children = items;
-            return <RN.View style={{ flex: 1 }}>{null}</RN.View>;
+            const items = [<emitter />];
+            items[1] = <module_14177.default emitter={emitter} />;
+            return <View style={{ flex: 1 }}>{items}</View>;
           };
         },
       },
     };
+    return obj;
   };
 }

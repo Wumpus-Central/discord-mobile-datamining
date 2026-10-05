@@ -1,40 +1,25 @@
 // _runtime/metro/01531__.js
-import context12 from "../01532_context1.js";
-import NavigationContext from "../01534_NavigationContext.js";
-import noop from "00019__.js";
+import Fragment from "../react/00021_Fragment.js";
+import _mod1532 from "01532__.js";
+import react2 from "../01534_react.js";
+import react from "../00019_react.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-let context = noop.createContext(undefined);
+const jsx = Fragment.jsx;
+let context = react.createContext(undefined);
 
 export const NavigationRouteContext = context;
-export const NamedRouteContextListContext = noop.createContext(undefined);
+export const NamedRouteContextListContext = react.createContext(undefined);
 export const NavigationProvider = function NavigationProvider(route) {
+  let children;
   route = route.route;
   ({ navigation, children } = route);
-  context = noop.useContext(context12.IsFocusedContext);
+  context = react.useContext(_mod1532.IsFocusedContext);
   let tmp5 = null != context;
-  const context1 = noop.useContext(context12.FocusedRouteKeyContext);
+  const context1 = react.useContext(_mod1532.FocusedRouteKeyContext);
   if (tmp5) {
     tmp5 = !context;
   }
-  let tmp6 = !tmp5;
-  if (!tmp5) {
-    tmp6 = context1 === route.key;
-  }
-  const obj = {
-    value: route,
-    children: jsx(NavigationContext.NavigationContext.Provider, {
-      value: navigation,
-      children: jsx(context12.IsFocusedContext.Provider, { value: tmp6, children }),
-    }),
-  };
-  return (
-    <context.Provider value={route}>
-      {jsx(NavigationContext.NavigationContext.Provider, {
-        value: navigation,
-        children: jsx(context12.IsFocusedContext.Provider, { value: tmp6, children }),
-      })}
-    </context.Provider>
-  );
+  const Provider = context.Provider;
+  const Provider2 = react2.NavigationContext.Provider;
+  return <Provider value={route}>{null}</Provider>;
 };

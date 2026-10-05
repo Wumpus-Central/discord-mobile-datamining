@@ -2,8 +2,9 @@
 import _mod14087 from "14087__.js";
 
 export default (obj) => {
+  let tmp2;
   if (typeof obj === "object") {
-    let tmp2 = null !== obj;
+    tmp2 = null !== obj;
   } else {
     tmp2 = _mod14087(obj);
   }

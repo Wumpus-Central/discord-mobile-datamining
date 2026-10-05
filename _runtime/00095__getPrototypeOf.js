@@ -16,6 +16,6 @@ function _getPrototypeOf(arg0) {
   module.exports = exports;
   return exports(arg0);
 }
-let exports = _getPrototypeOf;
+exports = _getPrototypeOf;
 
 export default _getPrototypeOf;

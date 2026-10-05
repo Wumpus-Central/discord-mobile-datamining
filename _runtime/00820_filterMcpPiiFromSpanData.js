@@ -9,12 +9,15 @@ const items = [
 ];
 const set = new Set(items);
 
-export const filterMcpPiiFromSpanData = function filterMcpPiiFromSpanData(arg0, BooleanResult) {
+export const filterMcpPiiFromSpanData = function filterMcpPiiFromSpanData(arg0, _BooleanResult) {
   let reduced = arg0;
-  if (!BooleanResult) {
+  if (!_BooleanResult) {
+    const tmp2 = globalThis;
     const _Object = Object;
     const entries = Object.entries(arg0);
     reduced = entries.reduce((acc, item) => {
+      let tmp;
+      let tmp2;
       [tmp, tmp2] = item;
       if (!set.has(tmp)) {
         acc[tmp] = tmp2;

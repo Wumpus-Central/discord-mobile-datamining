@@ -1,11 +1,11 @@
 // _runtime/metro/06158__.js
-import _mod17 from "00017__.js";
-import _mod19 from "00019__.js";
-import _modDef6159 from "06159__.js";
+import react_native from "../00017_react-native.js";
+import react from "../00019_react.js";
+import reactDefault from "../06159_react.js";
 
-const use = _mod19.use;
-const Platform = _mod17.Platform;
+const use = react.use;
+const Platform = react_native.Platform;
 
 export const useEnsureGestureHandlerRootView = function useEnsureGestureHandlerRootView() {
-  use(_modDef6159);
+  use(reactDefault);
 };

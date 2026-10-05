@@ -1,18 +1,18 @@
 // _runtime/15372__regeneratorRuntime.js
-import _mod15373 from "metro/15373__.js";
+import _regeneratorRuntime from "15373__regeneratorRuntime.js";
 
-const tmp3 = _mod15373();
+const tmp = _regeneratorRuntime();
 try {
-  globalThis.regeneratorRuntime = tmp3;
+  globalThis.regeneratorRuntime = tmp;
 } catch (err) {
   const _globalThis = globalThis;
   if (typeof globalThis === "object") {
     const _globalThis2 = globalThis;
-    globalThis.regeneratorRuntime = tmp2;
+    globalThis.regeneratorRuntime = tmp;
   } else {
     const _Function = Function;
-    Function("r", "regeneratorRuntime = r")(tmp2);
+    Function("r", "regeneratorRuntime = r")(tmp);
   }
 }
 
-export default tmp3;
+export default tmp;

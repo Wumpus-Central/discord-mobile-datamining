@@ -1,19 +1,26 @@
 // _runtime/07959_SliderTrackMark.js
-import _mod19 from "metro/00019__.js";
-import _mod7957 from "metro/07957__.js";
+import react2 from "00019_react.js";
+import styles from "07957_styles.js";
 import 07953__ from "metro/07953__.js";
-import get_ActivityIndicator from "metro/00017__.js";
-import jsxProd from "react/00021_jsxProd.js";
+import react_native from "00017_react-native.js";
+import Fragment from "react/00021_Fragment.js";
 
-const noop = module_7953(_mod19);
+const react = module_7953(react2);
 
 export const SliderTrackMark = function SliderTrackMark(arg0) {
+  let StepMarker;
+  let currentValue;
+  let index;
+  let isTrue;
+  let max;
+  let min;
+  let thumbImage;
   ({ isTrue, thumbImage, StepMarker } = arg0);
-  const obj2 = { style: _mod7957.styles.trackMarkContainer, children: null };
   ({ index, currentValue, min, max } = arg0);
+  const jsxs = Fragment.jsxs;
+  const View = react_native.View;
   let jsxResult = null;
   if (StepMarker) {
-    const range = { stepMarked: isTrue, index, currentValue, min, max };
     jsxResult = <StepMarker stepMarked={isTrue} index={index} currentValue={currentValue} min={min} max={max} />;
   }
   const items = [jsxResult, ];
@@ -21,13 +28,14 @@ export const SliderTrackMark = function SliderTrackMark(arg0) {
   if (thumbImage) {
     jsxResult1 = null;
     if (isTrue) {
-      const obj3 = { style: _mod7957.styles.thumbImageContainer, testID: "sliderTrackMark-thumbImage", children: null };
-      const obj4 = { source: thumbImage, style: _mod7957.styles.thumbImage };
-      obj3.children = <get ActivityIndicator.Image source={thumbImage} style={_mod7957.styles.thumbImage} />;
-      jsxResult1 = <get ActivityIndicator.View style={_mod7957.styles.thumbImageContainer} testID="sliderTrackMark-thumbImage">{null}</get ActivityIndicator.View>;
+      const jsx = Fragment.jsx;
+      const View2 = react_native.View;
+      const jsx2 = Fragment.jsx;
+      const Image = react_native.Image;
+      jsxResult1 = <View2 style={styles.styles.thumbImageContainer} testID="sliderTrackMark-thumbImage">{jsx2(Image, { source: thumbImage, style: styles.styles.thumbImage })}</View2>;
+      const obj4 = { source: thumbImage, style: styles.styles.thumbImage };
     }
   }
   items[1] = jsxResult1;
-  obj2.children = items;
-  return <get ActivityIndicator.View style={_mod7957.styles.trackMarkContainer}>{null}</get ActivityIndicator.View>;
+  return <View style={styles.styles.trackMarkContainer}>{items}</View>;
 };

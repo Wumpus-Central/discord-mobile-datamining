@@ -1,8 +1,11 @@
 // _runtime/14006_data.js
-const obj = { supplemental: null };
-const obj2 = { languageMatching: null };
-const obj3 = { "written-new": null };
-const items = [
+let items;
+let obj2;
+let obj3;
+const obj = { supplemental: obj2 };
+obj2 = { languageMatching: obj3 };
+obj3 = { "written-new": items };
+items = [
   { paradigmLocales: { _locales: "en en_GB es es_419 pt_BR pt_PT" } },
   { $enUS: { _value: "AS+CA+GU+MH+MP+PH+PR+UM+US+VI" } },
   { $cnsar: { _value: "HK+MO" } },
@@ -383,8 +386,5 @@ const items = [
   { "zh-Hant-*": { _desired: "zh-Hant-*", _distance: "5" } },
   { "*-*-*": { _desired: "*-*-*", _distance: "4" } },
 ];
-obj3["written-new"] = items;
-obj2.languageMatching = obj3;
-obj.supplemental = obj2;
 
 export const data = obj;

@@ -1,53 +1,64 @@
 // _runtime/00799_generateIteratee.js
-import resolve from "00800_resolve.js";
-import setupIntegration from "00763_setupIntegration.js";
+import basename from "00800_basename.js";
+import 00763__ from "metro/00763__.js";
+
+const require = globalThis.__r;
+let _require, stacktrace;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const generateIteratee = function generateIteratee(arg0) {
+  let closure_2;
+  let require;
   ({ isBrowser: require, root: dependencyMap, prefix: closure_2 } = arg0);
-  return (root) => {
-    if (root.filename) {
-      let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
+  return (filename) => {
+    if (filename.filename) {
+      const obj = /^[a-zA-Z]:\\/;
+      let isMatch = obj.test(filename.filename);
       if (!isMatch) {
-        const filename = root.filename;
+        filename = filename.filename;
         let hasItem = filename.includes("\\");
         if (hasItem) {
-          const filename2 = root.filename;
+          const filename2 = filename.filename;
           hasItem = !filename2.includes("/");
         }
         isMatch = hasItem;
       }
-      if (fn) {
+      if (closure_0) {
         if (root) {
-          const filename1 = root.filename;
+          const filename1 = filename.filename;
           if (0 === filename1.indexOf(root)) {
-            root.filename = filename1.replace(root, prefix);
+            filename.filename = filename1.replace(root, prefix);
           }
         }
       } else if (isMatch) {
+        let replaced;
+        let relativeResult;
         if (isMatch) {
-          let replaced = str3.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/");
-          const str5 = str3.replace(/^[a-zA-Z]:/, "");
+          const str5 = filename.filename.replace(/^[a-zA-Z]:/, "");
+          replaced = str5.replace(/\\/g, "/");
         } else {
           replaced = str3;
         }
-        const obj2 = resolve;
+        const obj2 = basename;
         if (root) {
-          let relativeResult = obj2.relative(root, replaced);
+          relativeResult = obj2.relative(root, replaced);
         } else {
           relativeResult = obj2.basename(replaced);
         }
         const _HermesInternal = HermesInternal;
-        root.filename = "" + prefix + relativeResult;
+        filename.filename = "" + prefix + relativeResult;
       }
-      return root;
+      return filename;
     } else {
-      return root;
+      return filename;
     }
   };
 };
-export const rewriteFramesIntegration = setupIntegration.defineIntegration(() => {
+export const rewriteFramesIntegration = module_763.defineIntegration(() => {
+  let closure_0;
+  let prefix;
+  let root;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -57,96 +68,104 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
   if (!prefix) {
     prefix = "app:///";
   }
+  const tmp = _require;
+  let tmp2 = root;
   fn = obj.iteratee;
+  const tmp3 = "window" in require("metro/00697__.js").GLOBAL_OBJ && tmp(tmp2[1]).GLOBAL_OBJ.window;
   if (!fn) {
-    fn = (root) => {
-      if (root.filename) {
-        let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
+    _require = tmp3;
+    fn = (filename) => {
+      if (filename.filename) {
+        const obj = /^[a-zA-Z]:\\/;
+        let isMatch = obj.test(filename.filename);
         if (!isMatch) {
-          const filename = root.filename;
+          filename = filename.filename;
           let hasItem = filename.includes("\\");
           if (hasItem) {
-            const filename2 = root.filename;
+            const filename2 = filename.filename;
             hasItem = !filename2.includes("/");
           }
           isMatch = hasItem;
         }
-        if (fn) {
+        if (closure_0) {
           if (root) {
-            const filename1 = root.filename;
+            const filename1 = filename.filename;
             if (0 === filename1.indexOf(root)) {
-              root.filename = filename1.replace(root, prefix);
+              filename.filename = filename1.replace(root, prefix);
             }
           }
         } else if (isMatch) {
+          let replaced;
+          let relativeResult;
           if (isMatch) {
-            let replaced = str3.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/");
-            const str5 = str3.replace(/^[a-zA-Z]:/, "");
+            const str5 = filename.filename.replace(/^[a-zA-Z]:/, "");
+            replaced = str5.replace(/\\/g, "/");
           } else {
             replaced = str3;
           }
-          const obj2 = resolve;
+          const obj2 = basename;
           if (root) {
-            let relativeResult = obj2.relative(root, replaced);
+            relativeResult = obj2.relative(root, replaced);
           } else {
             relativeResult = obj2.basename(replaced);
           }
           const _HermesInternal = HermesInternal;
-          root.filename = "" + prefix + relativeResult;
+          filename.filename = "" + prefix + relativeResult;
         }
-        return root;
+        return filename;
       } else {
-        return root;
+        return filename;
       }
     };
   }
-  return {
+  let obj2 = {
     name: "RewriteFrames",
     processEvent(exception) {
+      function _processExceptionsEvent(exception) {
+        let obj2;
+        let values;
+        try {
+          let obj = { exception: obj2 };
+          let merged = Object.assign(exception);
+          obj2 = {
+            values: values.map((stacktrace) => {
+                let mapped;
+                const obj = {};
+                const merged = Object.assign(stacktrace);
+                stacktrace = stacktrace.stacktrace;
+                if (stacktrace) {
+                  const stacktrace2 = stacktrace.stacktrace;
+                  const obj2 = { frames: mapped };
+                  const merged1 = Object.assign(stacktrace2);
+                  mapped = undefined;
+                  if (stacktrace2 != null) {
+                    const frames = stacktrace2.frames;
+                    if (frames != null) {
+                      mapped = frames.map((item) => closure_1_0(item));
+                    }
+                  }
+                  stacktrace = { stacktrace: obj2 };
+                  const obj3 = { stacktrace: obj2 };
+                }
+                const merged2 = Object.assign(stacktrace);
+                return obj;
+              })
+          };
+          let merged1 = Object.assign(exception.exception);
+          values = exception.exception.values;
+          return obj;
+        } catch (err) {
+          return exception;
+        }
+      }
       exception = exception.exception;
       if (exception) {
         const _Array = Array;
         exception = Array.isArray(exception.exception.values);
       }
-      let tmp2 = exception;
-      if (exception) {
-        tmp2 = (function _processExceptionsEvent(exception) {
-          try {
-            const obj = {};
-            let merged = Object.assign(exception);
-            let obj2 = {};
-            let merged1 = Object.assign(exception.exception);
-            const values = exception.exception.values;
-            obj2.values = values.map((stacktrace) => {
-              const merged = Object.assign(stacktrace);
-              stacktrace = stacktrace.stacktrace;
-              if (stacktrace) {
-                const stacktrace2 = stacktrace.stacktrace;
-                const obj2 = {};
-                const merged1 = Object.assign(stacktrace2);
-                let mapped;
-                if (stacktrace2 != null) {
-                  const frames = stacktrace2.frames;
-                  if (frames != null) {
-                    mapped = frames.map((item) => closure_1_0(item));
-                  }
-                }
-                const obj3 = { stacktrace: null };
-                obj2.frames = mapped;
-                obj3.stacktrace = obj2;
-                stacktrace = obj3;
-              }
-              const merged2 = Object.assign(stacktrace);
-              return {};
-            });
-            obj.exception = obj2;
-            return obj;
-          } catch (err) {
-            return tmp;
-          }
-        })(exception);
-      }
+      const tmp2 = exception && _processExceptionsEvent(exception);
       return tmp2;
-    },
+    }
   };
+  return obj2;
 });

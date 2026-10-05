@@ -1,3 +1,7 @@
 // _runtime/metro/10520__.js
+import Basic from "../10521_Basic.js";
+import Custom from "../10523_Custom.js";
 
-export const Pagination = { Basic: fn(10521).Basic, Custom: fn(10523).Custom };
+({ Basic: Basic.Basic, Custom: Custom.Custom });
+
+export const Pagination = { Basic: Basic.Basic, Custom: Custom.Custom };

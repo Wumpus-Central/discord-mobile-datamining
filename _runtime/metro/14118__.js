@@ -1,16 +1,14 @@
 // _runtime/metro/14118__.js
 import _mod14062 from "14062__.js";
 import _mod14087 from "14087__.js";
-import _mod14115 from "14115__.js";
+import defineProperty2 from "../14115_defineProperty2.js";
 import _mod14119 from "14119__.js";
 
 export default (arg0, arg1, value, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
-  }
+  const obj = arg3 || {};
   let flag = obj.enumerable;
   let name = arg1;
+  const tmp = arg1;
   if (undefined !== obj.name) {
     name = obj.name;
   }
@@ -30,16 +28,17 @@ export default (arg0, arg1, value, arg3) => {
           flag = true;
         }
       } else {
-        delete tmp[tmp2];
-      }
-      if (flag) {
-        arg0[arg1] = value;
-      } else {
-        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
-        _mod14115.f(arg0, arg1, obj2);
-        const tmp3Result = _mod14115;
+        delete tmp5[tmp];
       }
     } catch (err) {}
+    const tmp6 = flag;
+    if (tmp6) {
+      arg0[arg1] = value;
+    } else {
+      const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
+      const tmp2Result = defineProperty2;
+      tmp2Result.f(arg0, arg1, obj2);
+    }
   }
   return arg0;
 };

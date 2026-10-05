@@ -10,9 +10,10 @@ const combined =
 const regExp = new RegExp(combined, "i");
 
 export const parseNumberPattern = function parseNumberPattern(str) {
+  let num2;
   str = str.toLowerCase();
   if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
-    let num2 = exports.INTEGER_WORD_DICTIONARY[str];
+    num2 = exports.INTEGER_WORD_DICTIONARY[str];
   } else {
     num2 = 1;
     if ("une" !== str) {
@@ -38,11 +39,14 @@ export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(str)
   return parseInt(str.replace(/(?:er)$/i, ""));
 };
 export const parseYear = function parseYear(match) {
+  const obj = /AC/i;
   if (obj.test(match)) {
     const _parseInt3 = parseInt;
     return -parseInt(match.replace(/BC/i, ""));
   } else {
+    const obj2 = /AD/i;
     if (!obj2.test(match)) {
+      const obj3 = /C/i;
       if (!obj3.test(match)) {
         const _parseInt = parseInt;
         const parsed = parseInt(match);
@@ -56,22 +60,21 @@ export const parseYear = function parseYear(match) {
         }
         return sum;
       }
-      obj3 = /C/i;
     }
     const _parseInt2 = parseInt;
     return parseInt(match.replace(/[^\d]+/i, ""));
   }
-  obj = /AC/i;
 };
 export const parseDuration = function parseDuration(arg0) {
   let str = arg0;
   const obj = {};
   let match = regExp.exec(arg0);
   while (match) {
+    let num;
     let str2 = match[1];
     let str3 = str2.toLowerCase();
     if (undefined !== exports.INTEGER_WORD_DICTIONARY[str3]) {
-      let num = exports.INTEGER_WORD_DICTIONARY[str3];
+      num = exports.INTEGER_WORD_DICTIONARY[str3];
     } else {
       num = 1;
       if ("une" !== str3) {
@@ -118,9 +121,9 @@ export const MONTH_DICTIONARY = {
   janvier: 1,
   jan: 1,
   "jan.": 1,
-  février: 2,
-  fév: 2,
-  "fév.": 2,
+  "f\u00e9vrier": 2,
+  "f\u00e9v": 2,
+  "f\u00e9v.": 2,
   fevrier: 2,
   fev: 2,
   "fev.": 2,
@@ -137,7 +140,7 @@ export const MONTH_DICTIONARY = {
   juil: 7,
   jul: 7,
   "jul.": 7,
-  août: 8,
+  "ao\u00fbt": 8,
   aout: 8,
   septembre: 9,
   sep: 9,
@@ -150,7 +153,7 @@ export const MONTH_DICTIONARY = {
   novembre: 11,
   nov: 11,
   "nov.": 11,
-  décembre: 12,
+  "d\u00e9cembre": 12,
   decembre: 12,
   dec: 12,
   "dec.": 12,
@@ -191,8 +194,8 @@ export const TIME_UNIT_DICTIONARY = {
   trimestre: "quarter",
   trimestres: "quarter",
   ans: "year",
-  année: "year",
-  années: "year",
+  "ann\u00e9e": "year",
+  "ann\u00e9es": "year",
 };
 export const NUMBER_PATTERN =
   "(?:" +

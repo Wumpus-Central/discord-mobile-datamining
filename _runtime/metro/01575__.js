@@ -1,13 +1,13 @@
 // _runtime/metro/01575__.js
-import noop from "00019__.js";
-
-const require = arg1;
+import _mod1554 from "01554__.js";
+import react from "../00019_react.js";
 
 export const useOnGetState = function useOnGetState(getState) {
   getState = getState.getState;
   const getStateListeners = getState.getStateListeners;
   let addKeyedListener;
   let callback;
+  let obj = addKeyedListener;
   addKeyedListener = addKeyedListener.useContext(
     getState(getStateListeners[1]).NavigationBuilderContext,
   ).addKeyedListener;
@@ -27,18 +27,17 @@ export const useOnGetState = function useOnGetState(getState) {
       }
       let tmp3 = state;
       if (state.state !== tmpResult) {
-        const obj = {};
+        const obj = { state: tmpResult };
         const merged = Object.assign(state);
-        obj.state = tmpResult;
         tmp3 = obj;
       }
       return tmp3;
     });
+    let obj = _mod1554;
     let tmp3 = tmp;
     if (!obj.isArrayEqual(tmp.routes, mapped)) {
-      const obj2 = {};
+      const obj2 = { routes: mapped };
       let merged = Object.assign(tmp);
-      obj2.routes = mapped;
       tmp3 = obj2;
     }
     return tmp3;

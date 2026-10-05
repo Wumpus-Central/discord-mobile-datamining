@@ -3154,7 +3154,7 @@ const obj = {
   game_die: ["kauliukas", "pramogos", "\u017Eaidimas"],
   jigsaw: ["dalis", "d\u0117lion\u0117", "galvos\u016Bkis", "raktas", "susijungiantis", "\u017Eaidimas"],
   teddy_bear: ["kim\u0161tas", "me\u0161kiukas", "pliu\u0161as", "pliu\u0161inis me\u0161kiukas", "\u017Eaislas"],
-  piñata: ["meksikieti\u0161ka", "pinjata", "\u0161vent\u0117", "vakar\u0117lis"],
+  "pi\u00f1ata": ["meksikieti\u0161ka", "pinjata", "\u0161vent\u0117", "vakar\u0117lis"],
   mirror_ball: ["blizgesys", "diskoteka", "rutulys", "\u0161okiai", "vakar\u0117lis", "veidrodinis rutulys"],
   nesting_dolls: ["l\u0117l\u0117", "matrio\u0161ka", "matrio\u0161kos", "Rusija"],
   spades: ["kortos", "pikai", "\u017Eaidimas"],

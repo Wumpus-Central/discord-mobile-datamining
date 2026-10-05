@@ -1,18 +1,21 @@
 // _runtime/05330_iterateValue.js
-import _mod5331 from "metro/05331__.js";
+import getIterator from "05331_getIterator.js";
 import iterateIterator from "05332_iterateIterator.js";
 
 export default function iterateValue(arg0) {
-  const tmp3 = _mod5331(arg0);
+  const tmp3 = getIterator(arg0);
   if (tmp3) {
+    let tmp7;
     if (arguments.length > 1) {
-      let tmp9 = iterateIterator(tmp3, arguments[1]);
+      tmp7 = iterateIterator(tmp3, arguments[1]);
     } else {
-      tmp9 = iterateIterator(tmp3);
+      tmp7 = iterateIterator(tmp3);
     }
-    return tmp9;
+    return tmp7;
   } else {
-    const tmp7 = new TypeError("non-iterable value provided");
-    throw tmp7;
+    const self = this;
+    const self2 = this;
+    const tmp5 = new TypeError("non-iterable value provided");
+    throw tmp5;
   }
 }

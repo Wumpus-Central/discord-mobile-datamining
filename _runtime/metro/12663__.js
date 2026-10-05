@@ -3,15 +3,18 @@ import _mod12565 from "12565__.js";
 import _mod12592 from "12592__.js";
 import _mod12593 from "12593__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
 export const profiler = {
   startProfiler() {
-    const client = _mod12592.getClient();
+    const obj = _mod12592;
+    const client = obj.getClient();
     if (client) {
       const integrationByName = client.getIntegrationByName("ProfilingIntegration");
       if (integrationByName) {
+        const tmp6 =
+          integrationByName &&
+          undefined !== integrationByName._profiler &&
+          typeof integrationByName._profiler.start === "function" &&
+          typeof integrationByName._profiler.stop === "function";
         if (tmp6) {
           const _profiler = integrationByName._profiler;
           _profiler.start();
@@ -19,11 +22,6 @@ export const profiler = {
           const logger3 = _mod12565.logger;
           logger3.warn("Profiler is not available on profiling integration.");
         }
-        tmp6 =
-          integrationByName &&
-          undefined !== integrationByName._profiler &&
-          typeof integrationByName._profiler.start === "function" &&
-          typeof integrationByName._profiler.stop === "function";
       } else if (_mod12593.DEBUG_BUILD) {
         const logger2 = _mod12565.logger;
         logger2.warn("ProfilingIntegration is not available");
@@ -34,10 +32,16 @@ export const profiler = {
     }
   },
   stopProfiler() {
-    const client = _mod12592.getClient();
+    const obj = _mod12592;
+    const client = obj.getClient();
     if (client) {
       const integrationByName = client.getIntegrationByName("ProfilingIntegration");
       if (integrationByName) {
+        const tmp6 =
+          integrationByName &&
+          undefined !== integrationByName._profiler &&
+          typeof integrationByName._profiler.start === "function" &&
+          typeof integrationByName._profiler.stop === "function";
         if (tmp6) {
           const _profiler = integrationByName._profiler;
           _profiler.stop();
@@ -45,11 +49,6 @@ export const profiler = {
           const logger3 = _mod12565.logger;
           logger3.warn("Profiler is not available on profiling integration.");
         }
-        tmp6 =
-          integrationByName &&
-          undefined !== integrationByName._profiler &&
-          typeof integrationByName._profiler.start === "function" &&
-          typeof integrationByName._profiler.stop === "function";
       } else if (_mod12593.DEBUG_BUILD) {
         const logger2 = _mod12565.logger;
         logger2.warn("ProfilingIntegration is not available");

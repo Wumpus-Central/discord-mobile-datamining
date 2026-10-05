@@ -2,37 +2,32 @@
 
 export const getNumberOfUrlSegments = function getNumberOfUrlSegments(str) {
   const parts = str.split(/\\?\//);
-  return parts.filter((item) => {
-    let tmp = item.length > 0;
-    if (tmp) {
-      tmp = "," !== item;
-    }
-    return tmp;
-  }).length;
+  return parts.filter((item) => item.length > 0 && "," !== item).length;
 };
 export const getSanitizedUrlString = function getSanitizedUrlString(path) {
+  let host;
+  let protocol;
   ({ protocol, host } = path);
   let str = "";
+  path = path.path;
   if (protocol) {
     const _HermesInternal = HermesInternal;
     str = "" + protocol + "://";
   }
   let str3 = host;
-  if (host) {
+  if (str3) {
     const str5 = host.replace(/^.*@/, "[filtered]:[filtered]@");
-    str3 = host
-      .replace(/^.*@/, "[filtered]:[filtered]@")
-      .replace(/(:80)$/, "")
-      .replace(/(:443)$/, "");
-    const str6 = host.replace(/^.*@/, "[filtered]:[filtered]@").replace(/(:80)$/, "");
+    const str6 = str5.replace(/(:80)$/, "");
+    str3 = str6.replace(/(:443)$/, "");
   }
   if (!str3) {
     str3 = "";
   }
-  return "" + str + str3 + path.path;
+  return "" + str + str3 + path;
 };
 export const parseUrl = function parseUrl(str) {
-  if (str) {
+  const tmp = str;
+  if (tmp) {
     const match = str.match(/^(([^:/?#]+):)?(\/\/([^/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?$/);
     if (match) {
       const url = {
@@ -51,6 +46,6 @@ export const parseUrl = function parseUrl(str) {
     return {};
   }
 };
-export const stripUrlQueryAndFragment = function stripUrlQueryAndFragment(method) {
-  return method.split(/[?#]/, 1)[0];
+export const stripUrlQueryAndFragment = function stripUrlQueryAndFragment(arg0) {
+  return arg0.split(/[?#]/, 1)[0];
 };

@@ -4,16 +4,16 @@ import _mod918 from "00918__.js";
 import _mod919 from "00919__.js";
 import generateUniqueID from "../00921_generateUniqueID.js";
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const initMetric = (CLS, arg1) => {
+  let tmpResult2;
   let num = arg1;
   if (arg1 === undefined) {
     num = -1;
   }
-  const navigationEntry = _mod919.getNavigationEntry();
+  const obj = _mod919;
+  const navigationEntry = obj.getNavigationEntry();
   let str = "navigate";
   let str2 = "navigate";
   if (navigationEntry) {
@@ -25,6 +25,7 @@ export const initMetric = (CLS, arg1) => {
     let str4 = "prerender";
     if (!prerendering) {
       str4 = "prerender";
+      const tmpResult = _mod918;
       if (tmpResult.getActivationStart() <= 0) {
         const _document2 = _mod915.WINDOW.document;
         let wasDiscarded;
@@ -34,18 +35,25 @@ export const initMetric = (CLS, arg1) => {
         let str5 = "restore";
         if (!wasDiscarded) {
           if (navigationEntry.type) {
-            str = navigationEntry.type.replace(/_/g, "-");
+            const str6 = navigationEntry.type;
+            str = str6.replace(/_/g, "-");
           }
           str5 = str;
         }
         str4 = str5;
       }
-      tmpResult = _mod918;
     }
     str2 = str4;
   }
-  const obj2 = { name: CLS, value: num, rating: "good", delta: 0, entries: [], id: null, navigationType: null };
-  obj2.id = generateUniqueID.generateUniqueID();
-  obj2.navigationType = str2;
+  const obj2 = {
+    name: CLS,
+    value: num,
+    rating: "good",
+    delta: 0,
+    entries: [],
+    id: tmpResult2.generateUniqueID(),
+    navigationType: str2,
+  };
+  tmpResult2 = generateUniqueID;
   return obj2;
 };

@@ -1,48 +1,52 @@
 // _runtime/03961_startOfUTCWeek.js
 import _mod3963 from "metro/03963__.js";
-import _typeof_mod from "metro/03958__.js";
+import toDate_mod from "03958_toDate.js";
 import requiredArgs_mod from "03959_requiredArgs.js";
-import module_3962_mod from "metro/03962__.js";
+import toInteger_mod from "03962_toInteger.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
+let tmp3;
+let tmp5;
+let tmp7;
+let toDate = toDate_mod;
+if (!toDate) {
+  tmp3 = { default: toDate };
+  const obj = { default: toDate };
 } else {
-  tmp3 = _typeof;
+  tmp3 = toDate;
 }
-_typeof = tmp3;
+toDate = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp5 = { default: requiredArgs };
   const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
-let module_3962 = module_3962_mod;
-if (!module_3962) {
-  const obj3 = { default: module_3962 };
-  let tmp7 = obj3;
+let toInteger = toInteger_mod;
+if (!toInteger) {
+  tmp7 = { default: toInteger };
+  const obj3 = { default: toInteger };
 } else {
-  tmp7 = module_3962;
+  tmp7 = toInteger;
 }
-module_3962 = tmp7;
+toInteger = tmp7;
 
 export default function startOfUTCWeek(arg0, weekStartsOn) {
   requiredArgs.default(1, arguments);
   const defaultOptions = _mod3963.getDefaultOptions();
   weekStartsOn = undefined;
+  const _default = toInteger.default;
   if (null != weekStartsOn) {
     weekStartsOn = weekStartsOn.weekStartsOn;
   }
   if (null === weekStartsOn) {
     let weekStartsOn1;
     if (null != weekStartsOn) {
-      locale = weekStartsOn.locale;
+      const locale = weekStartsOn.locale;
       if (null !== locale) {
         if (undefined !== locale) {
-          options = locale.options;
+          const options = locale.options;
           if (null !== options) {
             if (undefined !== options) {
               weekStartsOn1 = options.weekStartsOn;
@@ -78,22 +82,21 @@ export default function startOfUTCWeek(arg0, weekStartsOn) {
       num = weekStartsOn;
     }
   }
-  const defaultResult1 = module_3962.default(num);
-  if (defaultResult1 >= 0) {
-    if (defaultResult1 <= 6) {
-      const defaultResult2 = _typeof.default(arg0);
-      const uTCDay = defaultResult2.getUTCDay();
+  const _defaultResult = _default(num);
+  if (_defaultResult >= 0) {
+    if (_defaultResult <= 6) {
+      const defaultResult1 = toDate.default(arg0);
+      const uTCDay = defaultResult1.getUTCDay();
       let num3 = 0;
-      if (uTCDay < defaultResult1) {
+      if (uTCDay < _defaultResult) {
         num3 = 7;
       }
-      const diff = num3 + uTCDay - defaultResult1;
-      defaultResult2.setUTCDate(defaultResult2.getUTCDate() - diff);
-      defaultResult2.setUTCHours(0, 0, 0, 0);
-      return defaultResult2;
+      const diff = num3 + uTCDay - _defaultResult;
+      defaultResult1.setUTCDate(defaultResult1.getUTCDate() - diff);
+      defaultResult1.setUTCHours(0, 0, 0, 0);
+      return defaultResult1;
     }
   }
   const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
   throw rangeError;
-};
-export default exports.default;
+}

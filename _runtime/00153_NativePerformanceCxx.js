@@ -1,9 +1,9 @@
 // _runtime/00153_NativePerformanceCxx.js
 import _modDef154 from "metro/00154__.js";
-import _modDef155 from "metro/00155__.js";
+import setUpPerformanceModernDefault from "00155_setUpPerformanceModern.js";
 
 if (_modDef154) {
-  _modDef155();
+  setUpPerformanceModernDefault();
 } else if (!global.performance) {
   const obj = {
     mark() {},

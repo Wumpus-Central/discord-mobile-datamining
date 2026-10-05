@@ -1,3 +1,3 @@
 // _runtime/metro/06322__.js
 
-export (arg0) => arg0
+export const useBottomSheetSpringConfigs = (arg0) => arg0;

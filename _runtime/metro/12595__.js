@@ -1,9 +1,7 @@
 // _runtime/metro/12595__.js
-import errorCallback from "../12561_errorCallback.js";
-
-require = arg1;
-const dependencyMap = arg6;
+import _mod12561 from "12561__.js";
 
 export const addTracingExtensions = function addTracingExtensions() {
-  const result = errorCallback.registerSpanErrorInstrumentation();
+  const obj = _mod12561;
+  const result = obj.registerSpanErrorInstrumentation();
 };

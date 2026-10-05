@@ -1,9 +1,9 @@
 // _runtime/metro/05728__.js
+import react_native from "../00017_react-native.js";
 import RNSLog2 from "../05720_RNSLog.js";
-import noop from "00019__.js";
+import react from "../00019_react.js";
 
-require = fn;
-const findNodeHandle = fn(17).findNodeHandle;
+const findNodeHandle = react_native.findNodeHandle;
 
 export const useTabsScreen = function useTabsScreen(componentNodeRef) {
   componentNodeRef = componentNodeRef.componentNodeRef;
@@ -11,6 +11,7 @@ export const useTabsScreen = function useTabsScreen(componentNodeRef) {
   const onDidDisappear = componentNodeRef.onDidDisappear;
   const onWillAppear = componentNodeRef.onWillAppear;
   const onWillDisappear = componentNodeRef.onWillDisappear;
+  const screenKey = componentNodeRef.screenKey;
   const ref = onDidDisappear.useRef(-1);
   const effect = onDidDisappear.useEffect(() => {
     if (null != componentNodeRef.current) {
@@ -57,10 +58,11 @@ export const useTabsScreen = function useTabsScreen(componentNodeRef) {
   }, items3);
   let RNSLog = componentNodeRef(onDidAppear[2]).RNSLog;
   let num = ref.current;
+  const log = RNSLog.log;
   if (num == null) {
     num = -1;
   }
-  RNSLog.log("TabsScreen [" + num + "] render; screenKey: " + componentNodeRef.screenKey);
+  log("TabsScreen [" + num + "] render; screenKey: " + screenKey);
   return {
     componentNodeRef,
     lifecycleCallbacks: {

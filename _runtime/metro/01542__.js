@@ -1,43 +1,47 @@
 // _runtime/metro/01542__.js
 import _mod1543 from "01543__.js";
-import _slicedToArray from "00032__.js";
+import _slicedToArray from "00032__slicedToArray.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import noop from "00019__.js";
+import react from "../00019_react.js";
 
-require = arg1;
+let map;
+
 let closure_2 = ["state"];
 const SymbolResult = Symbol("CHILD_STATE");
 const hasOwnProperty = SymbolResult;
 
 export const CHILD_STATE = SymbolResult;
 export const useRouteCache = function useRouteCache(routes) {
-  noop.useMemo(() => {
+  const ref = react.useMemo(() => {
     const obj = { current: new Map() };
+    new Map();
     return obj;
   }, []);
-  const reduced = routes.reduce((set, key) => {
+  const reduce = routes.reduce;
+  map = new Map();
+  const reduced = reduce((set, key) => {
     const current = ref.current;
-    value = current.get(key.key);
-    state = key.state;
+    const value = current.get(key.key);
+    const state = key.state;
     const tmp2 = _objectWithoutProperties(key, closure_2);
     let tmp3 = tmp2;
     if (value) {
       tmp3 = tmp2;
+      const obj = _mod1543;
       if (obj.isRecordEqual(value, tmp2)) {
         tmp3 = value;
       }
-      obj = _mod1543;
     }
-    if (tmp3[SymbolResult] !== state) {
+    if (tmp3[hasOwnProperty] !== state) {
       const _Object = Object;
       const obj2 = { enumerable: false, configurable: true, value: state };
       Object.defineProperty(tmp3, tmp6, obj2);
     }
     const result = set.set(key.key, tmp3);
     return set;
-  }, new Map());
-  const insertionEffect = noop.useInsertionEffect(() => {
-    closure_0.current = reduced;
+  }, map);
+  const insertionEffect = react.useInsertionEffect(() => {
+    ref.current = reduced;
   });
   return Array.from(reduced.values());
 };

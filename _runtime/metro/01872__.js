@@ -1,12 +1,10 @@
 // _runtime/metro/01872__.js
-import cancelAnimation from "../01643_cancelAnimation.js";
+import _mod1643 from "01643__.js";
 import _mod1873 from "01873__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = arg1;
-const importDefault = arg2;
-const dependencyMap = arg6;
 let closure_3 = {
   code: "function pnpm_indexTs1(effective,totalPaddingForMaxScroll){const{size,layout,scroll,scrollTo,scrollViewRef}=this.__closure;const paddingForMax=totalPaddingForMaxScroll!==undefined?totalPaddingForMaxScroll:effective;const maxScroll=Math.max(size.value.height-layout.value.height+paddingForMax,0);if(scroll.value>maxScroll){scrollTo(scrollViewRef,0,maxScroll,false);}}",
 };
@@ -21,6 +19,11 @@ let closure_6 = {
 };
 
 export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
+  let fn2;
+  let fn3;
+  let fn4;
+  let onContentSizeChange;
+  let onLayout;
   _require = animatedRef;
   inverted = inverted.inverted;
   const keyboardLiftBehavior = inverted.keyboardLiftBehavior;
@@ -28,22 +31,23 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
   const offset = inverted.offset;
   const blankSpace = inverted.blankSpace;
   const extraContentPadding = inverted.extraContentPadding;
-  const sharedValue = require("cancelAnimation").useSharedValue(0);
-  let obj = require("cancelAnimation");
-  const sharedValue1 = require("cancelAnimation").useSharedValue(0);
-  let obj2 = require("cancelAnimation");
-  const sharedValue2 = require("cancelAnimation").useSharedValue(0);
-  let obj3 = require("cancelAnimation");
-  const sharedValue3 = require("cancelAnimation").useSharedValue(0);
-  let obj4 = require("cancelAnimation");
-  const sharedValue4 = require("cancelAnimation").useSharedValue(false);
-  let obj5 = require("cancelAnimation");
-  const sharedValue5 = require("cancelAnimation").useSharedValue(0);
-  let obj6 = require("cancelAnimation");
-  const sharedValue6 = require("cancelAnimation").useSharedValue(0);
+  let obj = require("01643__.js");
+  const sharedValue = obj.useSharedValue(0);
+  let obj2 = require("01643__.js");
+  const sharedValue1 = obj2.useSharedValue(0);
+  let obj3 = require("01643__.js");
+  const sharedValue2 = obj3.useSharedValue(0);
+  let obj4 = require("01643__.js");
+  const sharedValue3 = obj4.useSharedValue(0);
+  let obj5 = require("01643__.js");
+  const sharedValue4 = obj5.useSharedValue(false);
+  let obj6 = require("01643__.js");
+  const sharedValue5 = obj6.useSharedValue(0);
+  let obj7 = require("01643__.js");
+  const sharedValue6 = obj7.useSharedValue(0);
   let tmp8 = inverted(keyboardLiftBehavior[1])(animatedRef);
   const layout = tmp8.layout;
-  const size = tmp8.size;
+  size = tmp8.size;
   const offset2 = tmp8.offset;
   const clampScrollIfNeeded = function u(arg0, arg1) {
     let tmp = arg0;
@@ -52,30 +56,17 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
     }
     const bound = Math.max(size.value.height - layout.value.height + tmp, 0);
     if (offset2.value > bound) {
-      const obj = cancelAnimation;
-      obj.scrollTo(closure_0, 0, bound, false);
+      const obj = _mod1643;
+      obj.scrollTo(animatedRef, 0, bound, false);
     }
   };
-  let obj7 = require("cancelAnimation");
+  let obj8 = { size, layout, scroll: offset2, scrollTo: require("01643__.js").scrollTo, scrollViewRef: animatedRef };
   ({ onLayout, onContentSizeChange } = tmp8);
-  clampScrollIfNeeded.__closure = {
-    size,
-    layout,
-    scroll: offset2,
-    scrollTo: require("cancelAnimation").scrollTo,
-    scrollViewRef: animatedRef,
-  };
+  clampScrollIfNeeded.__closure = obj8;
   clampScrollIfNeeded.__workletHash = 2908292579657;
   clampScrollIfNeeded.__initData = freeze;
-  let obj8 = {
-    size,
-    layout,
-    scroll: offset2,
-    scrollTo: require("cancelAnimation").scrollTo,
-    scrollViewRef: animatedRef,
-  };
-  let obj10 = { onStart: null, onMove: null, onEnd: null };
-  const fn2 = function s(height) {
+  let obj9 = { onStart: fn2, onMove: fn3, onEnd: fn4 };
+  fn2 = function s(height) {
     if (!freeze.value) {
       if (height.height > 0) {
         sharedValue3.value = height.height;
@@ -83,9 +74,10 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
       } else {
         sharedValue4.value = true;
       }
-      const effectiveHeight = _mod1873.getEffectiveHeight(height.height, sharedValue3.value, offset);
-      const obj2 = _mod1873;
+      const obj = _mod1873;
+      const effectiveHeight = obj.getEffectiveHeight(height.height, sharedValue3.value, offset);
       let tmp12 = inverted;
+      const obj2 = _mod1873;
       obj2.isScrollAtEnd(offset2.value, layout.value.height, size.value.height, inverted);
       const obj3 = _mod1873;
       const visibleMinimumPaddingFraction = obj3.getVisibleMinimumPaddingFraction(
@@ -97,14 +89,12 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
       );
       let num3 = 0;
       if (visibleMinimumPaddingFraction >= 1) {
-        num3 = _mod1873.getMinimumPaddingAbsorbed(blankSpace.value, extraContentPadding.value);
         const tmp5Result = _mod1873;
+        num3 = tmp5Result.getMinimumPaddingAbsorbed(blankSpace.value, extraContentPadding.value);
       }
-      const scrollEffective = _mod1873.getScrollEffective(effectiveHeight, num3);
-      let tmp21 = tmp12;
-      if (tmp12) {
-        tmp21 = -1 === height.duration;
-      }
+      const tmp5Result2 = _mod1873;
+      const scrollEffective = tmp5Result2.getScrollEffective(effectiveHeight, num3);
+      const tmp21 = tmp12 && -1 === height.duration;
       if (!tmp21) {
         if (height.height > 0) {
           let num6 = 0;
@@ -129,11 +119,10 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
           sharedValue2.value = offset2.value - sharedValue6.value;
         }
       }
-      const tmp5Result2 = _mod1873;
     }
   };
-  let obj9 = require("01837__.js");
-  fn2.__closure = {
+  const tmp9 = require("01837__.js");
+  let obj10 = {
     freeze,
     targetKeyboardHeight: sharedValue3,
     closing: sharedValue4,
@@ -155,18 +144,22 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
     keyboardLiftBehavior,
     actualOpenShift: sharedValue6,
   };
+  const useKeyboardHandler = tmp9.useKeyboardHandler;
+  fn2.__closure = obj10;
   fn2.__workletHash = 16814590881167;
   fn2.__initData = offset;
-  obj10.onStart = fn2;
-  const fn3 = function v(height) {
+  fn3 = function v(height) {
     if (!freeze.value) {
       sharedValue1.value = height.height;
       if (inverted) {
         if (-1 !== height.duration) {
-          const effectiveHeight = _mod1873.getEffectiveHeight(height.height, sharedValue3.value, offset);
+          const obj16 = _mod1873;
+          const effectiveHeight = obj16.getEffectiveHeight(height.height, sharedValue3.value, offset);
+          const obj17 = _mod1873;
           const result =
-            _mod1873.getMinimumPaddingAbsorbed(blankSpace.value, extraContentPadding.value) * sharedValue5.value;
-          const scrollEffective = _mod1873.getScrollEffective(effectiveHeight, result);
+            obj17.getMinimumPaddingAbsorbed(blankSpace.value, extraContentPadding.value) * sharedValue5.value;
+          const obj18 = _mod1873;
+          const scrollEffective = obj18.getScrollEffective(effectiveHeight, result);
           const _Math8 = Math;
           const bound = Math.max(blankSpace.value, effectiveHeight + extraContentPadding.value);
           const obj19 = _mod1873;
@@ -180,18 +173,19 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
             if (isScrollAtEndResult) {
               if (effectiveHeight < sharedValue.value) {
                 sharedValue.value = effectiveHeight;
-                const obj15 = cancelAnimation;
-                obj15.scrollTo(closure_0, 0, 0, false);
+                const obj15 = _mod1643;
+                obj15.scrollTo(animatedRef, 0, 0, false);
               }
             }
           }
+          const obj10 = _mod1873;
           if (obj10.shouldShiftContent(keyboardLiftBehavior, isScrollAtEndResult)) {
             if ("persistent" === keyboardLiftBehavior) {
               if (effectiveHeight < sharedValue2.value + sharedValue.value - offset2.value) {
                 if (isScrollAtEndResult) {
                   sharedValue.value = effectiveHeight;
-                  const obj14 = cancelAnimation;
-                  obj14.scrollTo(closure_0, 0, 0, false);
+                  const obj14 = _mod1643;
+                  obj14.scrollTo(animatedRef, 0, 0, false);
                 } else if (sharedValue4.value) {
                   sharedValue.value = effectiveHeight;
                   if (typeof fn === "function") {
@@ -202,8 +196,8 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
                     const _Math7 = Math;
                     const bound1 = Math.max(size.value.height - layout.value.height + tmp103, 0);
                     if (iter2.value > bound1) {
-                      const obj13 = cancelAnimation;
-                      obj13.scrollTo(closure_0, 0, bound1, false);
+                      const obj13 = _mod1643;
+                      obj13.scrollTo(animatedRef, 0, bound1, false);
                     }
                   } else {
                     throw new TypeError("Trying to call a non-function");
@@ -212,13 +206,10 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
               }
             }
             const diff = sharedValue2.value + sharedValue.value - scrollEffective;
-            const obj12 = cancelAnimation;
-            obj12.scrollTo(closure_0, 0, diff, false);
+            const obj12 = _mod1643;
+            obj12.scrollTo(animatedRef, 0, diff, false);
           } else {
-            value = sharedValue4.value;
-            if (value) {
-              value = effectiveHeight < sharedValue.value;
-            }
+            const value = sharedValue4.value && effectiveHeight < sharedValue.value;
             if (value) {
               sharedValue.value = effectiveHeight;
               if (typeof fn === "function") {
@@ -229,21 +220,23 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
                 const _Math6 = Math;
                 const bound2 = Math.max(size.value.height - layout.value.height + tmp84, 0);
                 if (offset2.value > bound2) {
-                  const obj11 = cancelAnimation;
-                  obj11.scrollTo(closure_0, 0, bound2, false);
+                  const obj11 = _mod1643;
+                  obj11.scrollTo(animatedRef, 0, bound2, false);
                 }
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
             }
           }
-          obj10 = _mod1873;
         }
       } else {
-        const effectiveHeight1 = _mod1873.getEffectiveHeight(height.height, sharedValue3.value, offset);
+        const obj = _mod1873;
+        const effectiveHeight1 = obj.getEffectiveHeight(height.height, sharedValue3.value, offset);
+        const obj2 = _mod1873;
         const result1 =
-          _mod1873.getMinimumPaddingAbsorbed(blankSpace.value, extraContentPadding.value) * sharedValue5.value;
-        const scrollEffective1 = _mod1873.getScrollEffective(effectiveHeight1, result1);
+          obj2.getMinimumPaddingAbsorbed(blankSpace.value, extraContentPadding.value) * sharedValue5.value;
+        const obj3 = _mod1873;
+        const scrollEffective1 = obj3.getScrollEffective(effectiveHeight1, result1);
         const _Math = Math;
         const bound3 = Math.max(blankSpace.value, effectiveHeight1 + extraContentPadding.value);
         if ("never" === keyboardLiftBehavior) {
@@ -257,8 +250,8 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
                 const _Math5 = Math;
                 const bound4 = Math.max(size.value.height - layout.value.height + tmp67, 0);
                 if (offset2.value > bound4) {
-                  const obj9 = cancelAnimation;
-                  obj9.scrollTo(closure_0, 0, bound4, false);
+                  const obj9 = _mod1643;
+                  obj9.scrollTo(animatedRef, 0, bound4, false);
                 }
               } else {
                 throw new TypeError("Trying to call a non-function");
@@ -266,6 +259,7 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
             }
           }
         }
+        const obj4 = _mod1873;
         if (obj4.shouldShiftContent(keyboardLiftBehavior, true)) {
           if (-1 === sharedValue2.value) {
             if (sharedValue4.value) {
@@ -277,8 +271,8 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
                 const _Math4 = Math;
                 const bound5 = Math.max(size.value.height - layout.value.height + tmp55, 0);
                 if (offset2.value > bound5) {
-                  const obj8 = cancelAnimation;
-                  obj8.scrollTo(closure_0, 0, bound5, false);
+                  const obj8 = _mod1643;
+                  obj8.scrollTo(animatedRef, 0, bound5, false);
                 }
               } else {
                 throw new TypeError("Trying to call a non-function");
@@ -290,9 +284,9 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
                 const _Math2 = Math;
                 const sum = sharedValue2.value + sharedValue.value;
                 const bound6 = Math.max(size.value.height - layout.value.height + bound3, 0);
-                const obj7 = cancelAnimation;
                 const _Math3 = Math;
-                obj7.scrollTo(closure_0, 0, Math.min(sum, bound6), false);
+                const obj7 = _mod1643;
+                obj7.scrollTo(animatedRef, 0, Math.min(sum, bound6), false);
               }
             }
             const obj5 = _mod1873;
@@ -303,40 +297,17 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
               layout.value.height,
               bound3,
             );
-            const obj6 = cancelAnimation;
-            obj6.scrollTo(closure_0, 0, clampedScrollTargetResult, false);
+            const obj6 = _mod1643;
+            obj6.scrollTo(animatedRef, 0, clampedScrollTargetResult, false);
             if (!sharedValue4.value) {
               sharedValue6.value = clampedScrollTargetResult - sharedValue2.value;
             }
           }
         }
-        obj4 = _mod1873;
       }
     }
   };
   let obj11 = {
-    freeze,
-    targetKeyboardHeight: sharedValue3,
-    closing: sharedValue4,
-    getEffectiveHeight: require("01873__.js").getEffectiveHeight,
-    offset,
-    isScrollAtEnd: require("01873__.js").isScrollAtEnd,
-    scroll: offset2,
-    layout,
-    size,
-    inverted,
-    getVisibleMinimumPaddingFraction: require("01873__.js").getVisibleMinimumPaddingFraction,
-    blankSpace,
-    getMinimumPaddingAbsorbed: require("01873__.js").getMinimumPaddingAbsorbed,
-    extraContentPadding,
-    getScrollEffective: require("01873__.js").getScrollEffective,
-    minimumPaddingFractionOnOpen: sharedValue5,
-    padding: sharedValue,
-    offsetBeforeScroll: sharedValue2,
-    keyboardLiftBehavior,
-    actualOpenShift: sharedValue6,
-  };
-  fn3.__closure = {
     freeze,
     currentHeight: sharedValue1,
     inverted,
@@ -354,7 +325,7 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
     size,
     keyboardLiftBehavior,
     padding: sharedValue,
-    scrollTo: require("cancelAnimation").scrollTo,
+    scrollTo: require("01643__.js").scrollTo,
     scrollViewRef: animatedRef,
     shouldShiftContent: require("01873__.js").shouldShiftContent,
     closing: sharedValue4,
@@ -363,17 +334,15 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
     clampedScrollTarget: require("01873__.js").clampedScrollTarget,
     actualOpenShift: sharedValue6,
   };
+  fn3.__closure = obj11;
   fn3.__workletHash = 6317221970795;
   fn3.__initData = blankSpace;
-  obj10.onMove = fn3;
-  const fn4 = function c(height) {
+  fn4 = function c(height) {
     if (!freeze.value) {
-      const effectiveHeight = _mod1873.getEffectiveHeight(height.height, sharedValue3.value, offset);
+      const obj = _mod1873;
+      const effectiveHeight = obj.getEffectiveHeight(height.height, sharedValue3.value, offset);
       sharedValue.value = effectiveHeight;
-      let tmp8 = effectiveHeight > 0;
-      if (tmp8) {
-        tmp8 = -1 !== sharedValue2.value;
-      }
+      const tmp8 = effectiveHeight > 0 && -1 !== sharedValue2.value;
       if (tmp8) {
         sharedValue6.value = offset2.value - sharedValue2.value;
       }
@@ -381,33 +350,6 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
   };
   let obj12 = {
     freeze,
-    currentHeight: sharedValue1,
-    inverted,
-    getEffectiveHeight: require("01873__.js").getEffectiveHeight,
-    targetKeyboardHeight: sharedValue3,
-    offset,
-    getMinimumPaddingAbsorbed: require("01873__.js").getMinimumPaddingAbsorbed,
-    blankSpace,
-    extraContentPadding,
-    minimumPaddingFractionOnOpen: sharedValue5,
-    getScrollEffective: require("01873__.js").getScrollEffective,
-    isScrollAtEnd: require("01873__.js").isScrollAtEnd,
-    offsetBeforeScroll: sharedValue2,
-    layout,
-    size,
-    keyboardLiftBehavior,
-    padding: sharedValue,
-    scrollTo: require("cancelAnimation").scrollTo,
-    scrollViewRef: animatedRef,
-    shouldShiftContent: require("01873__.js").shouldShiftContent,
-    closing: sharedValue4,
-    clampScrollIfNeeded,
-    scroll: offset2,
-    clampedScrollTarget: require("01873__.js").clampedScrollTarget,
-    actualOpenShift: sharedValue6,
-  };
-  fn4.__closure = {
-    freeze,
     getEffectiveHeight: require("01873__.js").getEffectiveHeight,
     targetKeyboardHeight: sharedValue3,
     offset,
@@ -416,12 +358,12 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
     actualOpenShift: sharedValue6,
     scroll: offset2,
   };
+  fn4.__closure = obj12;
   fn4.__workletHash = 1904796451086;
   fn4.__initData = extraContentPadding;
-  obj10.onEnd = fn4;
   const items = [inverted, keyboardLiftBehavior, offset];
-  obj9.useKeyboardHandler(obj10, items);
-  let obj14 = {
+  useKeyboardHandler(obj9, items);
+  let obj13 = {
     padding: sharedValue,
     currentHeight: sharedValue1,
     contentOffsetY: "Boolean",
@@ -431,5 +373,5 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
     onLayout,
     onContentSizeChange,
   };
-  return obj14;
+  return obj13;
 };

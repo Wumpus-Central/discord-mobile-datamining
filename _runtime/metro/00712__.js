@@ -1,5 +1,5 @@
 // _runtime/metro/00712__.js
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const parseSampleRate = function parseSampleRate(flag) {
   if (typeof flag === "boolean") {

@@ -28,7 +28,7 @@ export default {
   "=(": "slight_frown",
   "=-(": "slight_frown",
   "<3": "heart",
-  "♡": "heart",
+  "\u2661": "heart",
   "]:(": "imp",
   "]:-(": "imp",
   "]=(": "imp",

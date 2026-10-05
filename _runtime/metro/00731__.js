@@ -1,9 +1,7 @@
 // _runtime/metro/00731__.js
 import _mod724 from "00724__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const hasSpansEnabled = function hasSpansEnabled(options) {
   if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
@@ -12,8 +10,9 @@ export const hasSpansEnabled = function hasSpansEnabled(options) {
     }
   }
   let tmp = options;
-  if (!options) {
-    const client = _mod724.getClient();
+  if (!tmp) {
+    const obj = _mod724;
+    const client = obj.getClient();
     options = undefined;
     if (client != null) {
       options = client.getOptions();
@@ -23,7 +22,6 @@ export const hasSpansEnabled = function hasSpansEnabled(options) {
   let tmp6 = !tmp;
   if (tmp) {
     tmp6 = null == tmp.tracesSampleRate && !tmp.tracesSampler;
-    const tmp8 = null == tmp.tracesSampleRate && !tmp.tracesSampler;
   }
   return !tmp6;
 };

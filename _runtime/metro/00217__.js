@@ -1,11 +1,11 @@
 // _runtime/metro/00217__.js
 import _modDef38 from "00038__.js";
-import dispatchDefault from "../00132_dispatch.js";
-import EventDefault from "../00133_Event.js";
-import BlobManagerDefault from "../00200_BlobManager.js";
-import BlobDefault from "../00203_Blob.js";
+import _modDef132 from "00132__.js";
+import _modDef133 from "00133__.js";
+import _modDef200 from "00200__.js";
+import _modDef203 from "00203__.js";
 import byteLengthDefault from "../00206_byteLength.js";
-import NativeEventEmitterDefault from "../00209_NativeEventEmitter.js";
+import _modDef209 from "00209__.js";
 import binaryToBase64Default from "../00212_binaryToBase64.js";
 import WebSocketModuleDefault from "../00218_WebSocketModule.js";
 import _modDef220 from "00220__.js";
@@ -17,19 +17,14 @@ import metroRequire from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const WebSocket = arg1;
+const require = globalThis.__r;
+
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -37,119 +32,108 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 let closure_3 = ["headers"];
-let c9 = 0;
+let closure_9 = 0;
 class WebSocket {
-  constructor(arg0, arg1, arg2) {
-    self = this;
-    tmp3 = hasOwnProperty(this, WebSocket);
-    tmp4 = closure_7;
-    obj = closure_7(WebSocket);
-    tmp5 = metroRequire;
-    if (closure_8()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp4(self).constructor);
+  constructor(url, str, arg2) {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, WebSocket);
+    const obj = _getPrototypeOf(WebSocket);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, undefined);
     }
-    tmp5Result = tmp5(self, constructResult);
-    tmp5Result.CONNECTING = 0;
-    tmp5Result.OPEN = 1;
-    tmp5Result.CLOSING = 2;
-    tmp5Result.CLOSED = 3;
-    tmp5Result.readyState = 0;
-    tmp5Result.url = global;
-    tmp8 = arg1;
-    if (typeof arg1 === "string") {
-      items = [];
-      items[0] = arg1;
-      tmp8 = items;
+    const tmp3Result = metroRequire(self, constructResult);
+    tmp3Result.CONNECTING = 0;
+    tmp3Result.OPEN = 1;
+    tmp3Result.CLOSING = 2;
+    tmp3Result.CLOSED = 3;
+    tmp3Result.readyState = 0;
+    tmp3Result.url = url;
+    let tmp6 = str;
+    if (typeof str === "string") {
+      const items = [str];
+      tmp6 = items;
     }
-    obj1 = importDefault;
-    if (!importDefault) {
-      obj1 = {};
-    }
-    headers = obj1.headers;
+    const tmp7 = arg2 || {};
+    let headers = tmp7.headers;
     if (undefined === headers) {
       headers = {};
     }
-    tmp9 = closure_4(obj1, closure_3);
-    tmp10 = tmp9;
+    const tmp8 = _objectWithoutProperties(tmp7, closure_3);
+    const tmp9 = tmp8 && typeof tmp8.origin === "string";
     if (tmp9) {
-      tmp10 = typeof tmp9.origin === "string";
-    }
-    if (tmp10) {
-      tmp11 = globalThis;
-      _console = console;
-      str = "Specifying `origin` as a WebSocket connection option is deprecated. Include it under `headers` instead.";
-      warnResult = console.warn(
+      const _console = console;
+      console.warn(
         "Specifying `origin` as a WebSocket connection option is deprecated. Include it under `headers` instead.",
       );
-      headers.origin = tmp9.origin;
-      str2 = "origin";
-      delete tmp2[tmp];
+      headers.origin = tmp8.origin;
+      delete tmp8["origin"];
     }
-    if (Object.keys(tmp9).length > 0) {
-      _console2 = console;
-      _Object = Object;
-      keys = Object.keys(tmp9);
-      str3 = "`, `";
-      str4 = "Unrecognized WebSocket connection option(s) `";
-      str5 = "`. Did you mean to put these under `headers`?";
-      warnResult1 = console.warn(
-        `Unrecognized WebSocket connection option(s) \`${obj5.join("`, `")}\`. Did you mean to put these under \`headers\`?`,
+    if (Object.keys(tmp8).length > 0) {
+      const _console2 = console;
+      const _Object = Object;
+      const keys = Object.keys(tmp8);
+      warn(
+        `Unrecognized WebSocket connection option(s) \`${obj4.join("`, `")}\`. Did you mean to put these under \`headers\`?`,
       );
     }
-    tmp14 = tmp8;
-    if (!Array.isArray(tmp8)) {
-      tmp14 = null;
+    let tmp13 = tmp6;
+    if (!Array.isArray(tmp6)) {
+      tmp13 = null;
     }
-    tmp15 = new closure_1(c2[6])(null);
-    tmp5Result._eventEmitter = tmp15;
-    tmp16 = +closure_9;
-    closure_9 = tmp16 + 1;
-    tmp5Result._socketId = tmp16;
-    _registerEventsResult = tmp5Result._registerEvents();
-    obj6 = closure_1(c2[7]);
-    obj8 = { headers };
-    connectResult = obj6.connect(global, tmp14, obj8, tmp5Result._socketId);
-    return tmp5Result;
+    tmp3Result._eventEmitter = new _modDef209(null);
+    closure_9 = tmp15 + 1;
+    tmp3Result._socketId = +closure_9;
+    new _modDef209(null);
+    tmp3Result._registerEvents();
+    const obj2 = { headers };
+    const obj5 = WebSocketModuleDefault;
+    obj5.connect(url, tmp13, obj2, tmp3Result._socketId);
+    return tmp3Result;
   }
 }
-_inherits(WebSocket, dispatchDefault);
-let items = [
-  {
-    key: "binaryType",
-    get() {
-      return this._binaryType;
-    },
-    set(_binaryType) {
-      if ("blob" !== _binaryType) {
-        if ("arraybuffer" !== _binaryType) {
-          const _Error = Error;
-          const error = new Error("binaryType must be either 'blob' or 'arraybuffer'");
-          throw error;
-        }
-      }
-      const self = this;
-      if (!tmp2) {
-        _modDef38(BlobManagerDefault.isAvailable, "Native module BlobModule is required for blob support");
-        if ("blob" === _binaryType) {
-          BlobManagerDefault.addWebSocketHandler(self._socketId);
-          const tmp3Result = BlobManagerDefault;
-        } else {
-          const result = BlobManagerDefault.removeWebSocketHandler(self._socketId);
-          const tmp3Result2 = BlobManagerDefault;
-        }
-      }
-      self._binaryType = _binaryType;
-      tmp2 = "blob" !== this._binaryType && "blob" !== _binaryType;
-    },
+_inherits(WebSocket, _modDef132);
+let obj = {
+  key: "binaryType",
+  get() {
+    return this._binaryType;
   },
+  set(_binaryType) {
+    if ("blob" !== _binaryType) {
+      if ("arraybuffer" !== _binaryType) {
+        const _Error = Error;
+        const self2 = this;
+        const self3 = this;
+        const error = new Error("binaryType must be either 'blob' or 'arraybuffer'");
+        throw error;
+      }
+    }
+    const self = this;
+    const tmp2 = "blob" !== this._binaryType && "blob" !== _binaryType;
+    if (!tmp2) {
+      const tmp5 = _modDef38;
+      tmp5(_modDef200.isAvailable, "Native module BlobModule is required for blob support");
+      if ("blob" === _binaryType) {
+        const tmp3Result = _modDef200;
+        tmp3Result.addWebSocketHandler(self._socketId);
+      } else {
+        const tmp3Result2 = _modDef200;
+        const result = tmp3Result2.removeWebSocketHandler(self._socketId);
+      }
+    }
+    self._binaryType = _binaryType;
+  },
+};
+let items = [
+  obj,
   {
     key: "close",
     value: function close(arg0, arg1) {
       const self = this;
+      const tmp = this.readyState !== this.CLOSING && self.readyState !== self.CLOSED;
       if (tmp) {
         self.readyState = self.CLOSING;
         self._close(arg0, arg1);
@@ -162,28 +146,32 @@ let items = [
       const self = this;
       if (this.readyState === this.CONNECTING) {
         const _Error2 = Error;
+        const self4 = this;
+        const self5 = this;
         const error = new Error("INVALID_STATE_ERR");
         throw error;
-      } else if (str instanceof BlobDefault) {
-        _modDef38(BlobManagerDefault.isAvailable, "Native module BlobModule is required for blob support");
-        const tmp16Result = _modDef38;
-        BlobManagerDefault.sendOverSocket(str, self._socketId);
-        const tmp16Result4 = BlobManagerDefault;
+      } else if (str instanceof _modDef203) {
+        const tmp12Result = _modDef38;
+        tmp12Result(_modDef200.isAvailable, "Native module BlobModule is required for blob support");
+        const tmp12Result4 = _modDef200;
+        tmp12Result4.sendOverSocket(str, self._socketId);
       } else if (typeof str !== "string") {
         const _ArrayBuffer = ArrayBuffer;
         if (!(str instanceof ArrayBuffer)) {
           const _ArrayBuffer2 = ArrayBuffer;
           if (!ArrayBuffer.isView(str)) {
             const _Error = Error;
+            const self2 = this;
+            const self3 = this;
             const error1 = new Error("Unsupported data type");
             throw error1;
           }
         }
-        WebSocketModuleDefault.sendBinary(binaryToBase64Default(str), self._socketId);
-        const tmp16Result5 = WebSocketModuleDefault;
+        const tmp12Result5 = WebSocketModuleDefault;
+        tmp12Result5.sendBinary(binaryToBase64Default(str), self._socketId);
       } else {
-        WebSocketModuleDefault.send(str, self._socketId);
-        const tmp16Result6 = WebSocketModuleDefault;
+        const tmp12Result6 = WebSocketModuleDefault;
+        tmp12Result6.send(str, self._socketId);
       }
     },
   },
@@ -192,27 +180,26 @@ let items = [
     value: function ping() {
       if (this.readyState === this.CONNECTING) {
         const _Error = Error;
+        const self = this;
+        const self2 = this;
         const error = new Error("INVALID_STATE_ERR");
         throw error;
       } else {
-        WebSocketModuleDefault.ping(tmp._socketId);
+        const obj = WebSocketModuleDefault;
+        obj.ping(tmp._socketId);
       }
     },
   },
   {
     key: "_close",
     value: function _close(num, str) {
-      num = 1000;
-      str = "";
       const self = this;
-      WebSocketModuleDefault.close(num, str, this._socketId);
-      let isAvailable = BlobManagerDefault.isAvailable;
+      const obj = WebSocketModuleDefault;
+      obj.close(1000, "", this._socketId);
+      const isAvailable = _modDef200.isAvailable && "blob" === self._binaryType;
       if (isAvailable) {
-        isAvailable = "blob" === self._binaryType;
-      }
-      if (isAvailable) {
-        const result = BlobManagerDefault.removeWebSocketHandler(self._socketId);
-        const tmpResult = BlobManagerDefault;
+        const tmpResult = _modDef200;
+        const result = tmpResult.removeWebSocketHandler(self._socketId);
       }
     },
   },
@@ -227,56 +214,75 @@ let items = [
   {
     key: "_registerEvents",
     value: function _registerEvents() {
-      const self = this;
+      let self = this;
       const _eventEmitter = this._eventEmitter;
       const items = [
-        _eventEmitter.addListener("websocketMessage", (id) => {
-          let dispatchEventResult = id;
+        _eventEmitter.addListener("websocketMessage", function (id) {
+          let data;
+          let type;
+          const tmp = self;
           if (id.id === self._socketId) {
-            ({ data, type } = dispatchEventResult);
+            ({ data, type } = id);
             if ("binary" === type) {
-              data = byteLengthDefault.toByteArray(dispatchEventResult.data).buffer;
+              const obj2 = byteLengthDefault;
+              data = obj2.toByteArray(id.data).buffer;
             } else if ("blob" === type) {
-              data = BlobManagerDefault.createFromOptions(dispatchEventResult.data);
+              const obj = _modDef200;
+              data = obj.createFromOptions(id.data);
             }
-            const obj4 = { data, raw_length: dispatchEventResult.raw_length };
-            const tmp11 = new _modDef220("message", obj4);
-            dispatchEventResult = self.dispatchEvent(tmp11);
+            const dispatchEvent = tmp.dispatchEvent;
+            self = this;
+            const self2 = this;
+            const obj3 = { data, raw_length: id.raw_length };
+            const tmp9 = new _modDef220("message", obj3);
+            dispatchEvent(tmp9);
           }
         }),
         ,
         ,
       ];
       const _eventEmitter2 = this._eventEmitter;
-      items[1] = _eventEmitter2.addListener("websocketOpen", (id) => {
+      items[1] = _eventEmitter2.addListener("websocketOpen", function (id) {
         if (id.id === self._socketId) {
           self.readyState = self.OPEN;
           self.protocol = id.protocol;
-          const tmp5 = new EventDefault("open");
-          self.dispatchEvent(tmp5);
+          const dispatchEvent = tmp.dispatchEvent;
+          self = this;
+          const self2 = this;
+          const tmp4 = new _modDef133("open");
+          dispatchEvent(tmp4);
         }
       });
       const _eventEmitter3 = this._eventEmitter;
-      items[2] = _eventEmitter3.addListener("websocketClosed", (id) => {
+      items[2] = _eventEmitter3.addListener("websocketClosed", function (id) {
         if (id.id === self._socketId) {
           self.readyState = self.CLOSED;
+          const dispatchEvent = obj.dispatchEvent;
           const obj3 = { code: null, reason: null };
           ({ code: obj2.code, reason: obj2.reason } = id);
-          const tmp6 = new _modDef221("close", obj3);
-          self.dispatchEvent(tmp6);
+          self = this;
+          const self2 = this;
+          const tmp4 = new _modDef221("close", obj3);
+          dispatchEvent(tmp4);
           self._unregisterEvents();
           self.close();
         }
       });
       const _eventEmitter4 = this._eventEmitter;
-      items[3] = _eventEmitter4.addListener("websocketFailed", (id) => {
+      items[3] = _eventEmitter4.addListener("websocketFailed", function (id) {
         if (id.id === self._socketId) {
           self.readyState = self.CLOSED;
-          const tmp5 = new EventDefault("error");
-          self.dispatchEvent(tmp5);
+          const dispatchEvent = obj.dispatchEvent;
+          self = this;
+          const self2 = this;
+          const tmp3 = new _modDef133("error");
+          dispatchEvent(tmp3);
+          const dispatchEvent2 = obj.dispatchEvent;
+          const self3 = this;
+          const self4 = this;
           const obj2 = { code: 1006, reason: id.message };
-          const tmp11 = new _modDef221("close", obj2);
-          self.dispatchEvent(tmp11);
+          const tmp7 = new _modDef221("close", obj2);
+          dispatchEvent2(tmp7);
           self._unregisterEvents();
           self.close();
         }
@@ -287,37 +293,45 @@ let items = [
   {
     key: "onclose",
     get() {
-      return WebSocket(205).getEventHandlerAttribute(this, "close");
+      const obj = require("00205__.js");
+      return obj.getEventHandlerAttribute(this, "close");
     },
     set(handleEvent) {
-      const result = WebSocket(205).setEventHandlerAttribute(this, "close", handleEvent);
+      const obj = require("00205__.js");
+      const result = obj.setEventHandlerAttribute(this, "close", handleEvent);
     },
   },
   {
     key: "onerror",
     get() {
-      return WebSocket(205).getEventHandlerAttribute(this, "error");
+      const obj = require("00205__.js");
+      return obj.getEventHandlerAttribute(this, "error");
     },
     set(handleEvent) {
-      const result = WebSocket(205).setEventHandlerAttribute(this, "error", handleEvent);
+      const obj = require("00205__.js");
+      const result = obj.setEventHandlerAttribute(this, "error", handleEvent);
     },
   },
   {
     key: "onmessage",
     get() {
-      return WebSocket(205).getEventHandlerAttribute(this, "message");
+      const obj = require("00205__.js");
+      return obj.getEventHandlerAttribute(this, "message");
     },
     set(handleEvent) {
-      const result = WebSocket(205).setEventHandlerAttribute(this, "message", handleEvent);
+      const obj = require("00205__.js");
+      const result = obj.setEventHandlerAttribute(this, "message", handleEvent);
     },
   },
   {
     key: "onopen",
     get() {
-      return WebSocket(205).getEventHandlerAttribute(this, "open");
+      const obj = require("00205__.js");
+      return obj.getEventHandlerAttribute(this, "open");
     },
     set(handleEvent) {
-      const result = WebSocket(205).setEventHandlerAttribute(this, "open", handleEvent);
+      const obj = require("00205__.js");
+      const result = obj.setEventHandlerAttribute(this, "open", handleEvent);
     },
   },
 ];

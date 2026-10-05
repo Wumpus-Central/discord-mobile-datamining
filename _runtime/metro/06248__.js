@@ -1,10 +1,10 @@
 // _runtime/metro/06248__.js
-const require = arg1;
-const dependencyMap = arg6;
+let handlerTags;
 
 export const useComposedGesture = function useComposedGesture(type) {
   const substr = [...arguments].slice();
   const flatMapResult = substr.flatMap((handlerTags) => {
+    const obj = substr(dependencyMap[0]);
     if (obj.isComposedGesture(handlerTags)) {
       handlerTags = handlerTags.handlerTags;
     } else {
@@ -13,9 +13,13 @@ export const useComposedGesture = function useComposedGesture(type) {
     }
     return handlerTags;
   });
+  let obj = substr(6208);
   if (obj.containsDuplicates(flatMapResult)) {
     const _Error2 = Error;
-    const error = new Error(tmp2(6145).tagMessage("Each gesture can be used only once in the gesture composition."));
+    const self3 = this;
+    const self4 = this;
+    const tmp2Result = substr(6145);
+    const error = new Error(tmp2Result.tagMessage("Each gesture can be used only once in the gesture composition."));
     throw error;
   } else {
     const obj2 = {
@@ -25,8 +29,11 @@ export const useComposedGesture = function useComposedGesture(type) {
     if (obj2.shouldUseReanimatedDetector) {
       if (obj2.dispatchesAnimatedEvents) {
         const _Error = Error;
+        const self = this;
+        const self2 = this;
+        const tmp2Result2 = substr(6145);
         const error1 = new Error(
-          tmp2(6145).tagMessage("Composed gestures cannot use both Reanimated and Animated events at the same time."),
+          tmp2Result2.tagMessage("Composed gestures cannot use both Reanimated and Animated events at the same time."),
         );
         throw error1;
       }
@@ -49,27 +56,10 @@ export const useComposedGesture = function useComposedGesture(type) {
       handlerTags: flatMapResult,
       type,
       config: obj2,
-      detectorCallbacks: null,
-      externalSimultaneousHandlers: null,
-      gestures: null,
+      detectorCallbacks: obj4,
+      externalSimultaneousHandlers: [],
+      gestures: substr,
     };
-    const obj4 = {
-      jsEventHandler(arg0) {
-        for (const item10007 of substr) {
-          if (item10007.detectorCallbacks.jsEventHandler) {
-            let detectorCallbacks = tmp.detectorCallbacks;
-            let jsEventHandlerResult = detectorCallbacks.jsEventHandler(arg0);
-          }
-          continue;
-        }
-      },
-      reanimatedEventHandler: composedEventHandler,
-      animatedEventHandler,
-    };
-    obj3.detectorCallbacks = obj4;
-    obj3.externalSimultaneousHandlers = [];
-    obj3.gestures = substr;
     return obj3;
   }
-  obj = substr(6208);
 };

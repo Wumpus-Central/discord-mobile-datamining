@@ -1,19 +1,21 @@
 // _runtime/04142_differenceInCalendarISOWeekYears.js
-import module_4115_mod from "metro/04115__.js";
+import getISOWeekYear_mod from "04115_getISOWeekYear.js";
 import requiredArgs_mod from "03959_requiredArgs.js";
 
-let module_4115 = module_4115_mod;
-if (!module_4115) {
-  const obj = { default: module_4115 };
-  let tmp3 = obj;
+let tmp3;
+let tmp5;
+let getISOWeekYear = getISOWeekYear_mod;
+if (!getISOWeekYear) {
+  tmp3 = { default: getISOWeekYear };
+  const obj = { default: getISOWeekYear };
 } else {
-  tmp3 = module_4115;
+  tmp3 = getISOWeekYear;
 }
-module_4115 = tmp3;
+getISOWeekYear = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp5 = { default: requiredArgs };
   const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
@@ -21,6 +23,6 @@ requiredArgs = tmp5;
 
 export default function differenceInCalendarISOWeekYears(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4115.default(arg0) - module_4115.default(arg1);
-};
-export default exports.default;
+  const defaultResult1 = getISOWeekYear.default(arg0);
+  return defaultResult1 - getISOWeekYear.default(arg1);
+}

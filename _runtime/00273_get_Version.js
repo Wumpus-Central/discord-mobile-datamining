@@ -1,9 +1,18 @@
 // _runtime/00273_get_Version.js
 const require = globalThis.__r;
 
-const importDefault = arg2;
-const dependencyMap = arg6;
-let obj = { __constants: null, OS: "android" };
+let obj = {
+  __constants: null,
+  OS: "android",
+  select(android) {
+    if ("android" in android) {
+      android = android.android;
+    } else {
+      android = "native" in android ? android.native : android.default;
+    }
+    return android;
+  },
+};
 Object.defineProperty(obj, "Version", {
   get: function () {
     return this.constants.Version;
@@ -14,8 +23,8 @@ Object.defineProperty(obj, "constants", {
   get: function () {
     const self = this;
     if (null == this.__constants) {
-      self.__constants = require("PlatformConstants").getConstants();
       const obj = require("PlatformConstants");
+      self.__constants = obj.getConstants();
     }
     return self.__constants;
   },
@@ -39,13 +48,5 @@ Object.defineProperty(obj, "isTV", {
   set: undefined,
 });
 Object.defineProperty(obj, "isVision", { get: () => false, set: undefined });
-obj.select = function select(android) {
-  if ("android" in android) {
-    android = android.android;
-  } else {
-    android = "native" in android ? android.native : android.default;
-  }
-  return android;
-};
 
 export default obj;

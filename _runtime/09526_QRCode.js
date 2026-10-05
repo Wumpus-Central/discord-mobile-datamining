@@ -1,40 +1,43 @@
 // _runtime/09526_QRCode.js
 import QRCode_mod from "metro/09527__.js";
 import module_9531_mod from "metro/09531__.js";
-import emptyFunction from "metro/09536__.js";
-import noop_mod from "metro/00019__.js";
+import 09536__ from "metro/09536__.js";
+import react_mod from "00019_react.js";
 import QRCodeSvg_mod from "09539_QRCodeSvg.js";
 
-let fn = Object.assign;
-if (!fn) {
-  fn = (arg0) => {
-    for (let num = 1; num < arguments.length; num = num + 1) {
-      let tmp = arguments[num];
-      for (const key10012 in tmp) {
-        let _Object = Object;
-        hasOwnProperty = Object.prototype.hasOwnProperty;
-        let call = hasOwnProperty.call;
-        if (typeof call === "unknown") {
-          let hasOwnPropertyResult = hasOwnProperty(key10012);
-        } else {
-          hasOwnPropertyResult = call(tmp, key10012);
-        }
-        if (!hasOwnPropertyResult) {
-          continue;
-        } else {
-          arg0[key10012] = tmp[key10012];
-          continue;
-        }
+let hasOwnProperty;
+
+let _default;
+let _default2;
+let items;
+let items1;
+let tmp10;
+let tmp3;
+let tmp5;
+let tmp7;
+let tmp8;
+const fn = Object.assign || (function(arg0) {
+  let num;
+  for (let num = 1; num < arguments.length; num = num + 1) {
+    let tmp = arguments[num];
+    for (const key10012 in tmp) {
+      let _Object = Object;
+      hasOwnProperty = Object.prototype.hasOwnProperty;
+      if (!hasOwnProperty.call(tmp, key10012)) {
+        continue;
+      } else {
+        arg0[key10012] = tmp[key10012];
         continue;
       }
+      continue;
     }
-    return arg0;
-  };
-}
+  }
+  return arg0;
+});
 let QRCode = QRCode_mod;
 if (!QRCode) {
   let obj = { default: QRCode };
-  let tmp3 = obj;
+  tmp3 = obj;
 } else {
   tmp3 = QRCode;
 }
@@ -42,58 +45,58 @@ QRCode = tmp3;
 let module_9531 = module_9531_mod;
 if (!module_9531) {
   let obj2 = { default: module_9531 };
-  let tmp5 = obj2;
+  tmp5 = obj2;
 } else {
   tmp5 = module_9531;
 }
 module_9531 = tmp5;
-if (!emptyFunction) {
-  const obj3 = { default: emptyFunction };
-  let tmp7 = obj3;
+if (!module_9536) {
+  tmp7 = { default: module_9536 };
+  const obj3 = { default: module_9536 };
 } else {
-  tmp7 = emptyFunction;
+  tmp7 = module_9536;
 }
-let noop = noop_mod;
-if (!noop) {
-  const obj4 = { default: noop };
-  let tmp8 = obj4;
+let react = react_mod;
+if (!react) {
+  tmp8 = { default: react };
+  const obj4 = { default: react };
 } else {
-  tmp8 = noop;
+  tmp8 = react;
 }
-noop = tmp8;
+react = tmp8;
 let QRCodeSvg = QRCodeSvg_mod;
 if (!QRCodeSvg) {
+  tmp10 = { default: QRCodeSvg };
   const obj5 = { default: QRCodeSvg };
-  let tmp10 = obj5;
 } else {
   tmp10 = QRCodeSvg;
 }
 QRCodeSvg = tmp10;
-const obj6 = { bgColor: null, fgColor: null, level: tmp7.default.string, size: tmp7.default.number, value: tmp7.default.string.isRequired };
-let items = [tmp7.default.object, tmp7.default.string];
-obj6.bgColor = tmp7.default.oneOfType(items);
-const items1 = [tmp7.default.object, tmp7.default.string];
-obj6.fgColor = tmp7.default.oneOfType(items1);
-const forwardRefResult = noop.forwardRef((obj, ref) => {
+const obj6 = { bgColor: _default.oneOfType(items), fgColor: _default2.oneOfType(items1), level: tmp7.default.string, size: tmp7.default.number, value: tmp7.default.string.isRequired };
+_default = tmp7.default;
+items = [tmp7.default.object, tmp7.default.string];
+_default2 = tmp7.default;
+items1 = [tmp7.default.object, tmp7.default.string];
+const forwardRefResult = react.forwardRef((obj, ref) => {
+  let bgColor;
+  let fgColor;
+  let level;
+  let mapped;
+  let mapped1;
+  let value;
   const items = ["bgColor", "fgColor", "level", "size", "value"];
   obj = {};
   ({ bgColor, fgColor, level, size, value } = obj);
-  for (const key10012 in arg0) {
+  for (const key10012 in obj) {
     if (items.indexOf(key10012) >= 0) {
       continue;
     } else {
       let _Object = Object;
       hasOwnProperty = Object.prototype.hasOwnProperty;
-      let call = hasOwnProperty.call;
-      if (typeof call === "unknown") {
-        let hasOwnPropertyResult = hasOwnProperty(key10012);
-      } else {
-        hasOwnPropertyResult = call(arg0, key10012);
-      }
-      if (!hasOwnPropertyResult) {
+      if (!hasOwnProperty.call(obj, key10012)) {
         continue;
       } else {
-        obj[key10012] = arg0[key10012];
+        obj[key10012] = obj[key10012];
         continue;
       }
       continue;
@@ -104,36 +107,33 @@ const forwardRefResult = noop.forwardRef((obj, ref) => {
   _default1.addData(value);
   _default1.make();
   const modules = _default1.modules;
-  const obj2 = { bgColor, bgD: null, fgColor: null, fgD: null, ref: null, size: null, viewBoxSize: null };
-  let mapped = modules.map((arr, index) => {
-    closure_0 = index;
+  const createElement = react.default.createElement;
+  const obj2 = { bgColor, bgD: mapped.join(" "), fgColor, fgD: mapped1.join(" "), ref, size, viewBoxSize: modules.length };
+  mapped = modules.map((arr, index) => {
+    let closure_0 = index;
     const mapped = arr.map((item, index) => {
       let str = "";
-      if (!item) {
+      const tmp = item;
+      if (!tmp) {
         str = `${"M " + index + " " + closure_0} l 1 0 0 1 -1 0 Z`;
       }
       return str;
     });
     return mapped.join(" ");
   });
-  obj2.bgD = mapped.join(" ");
-  obj2.fgColor = fgColor;
-  const mapped1 = modules.map((arr, index) => {
-    closure_0 = index;
+  mapped1 = modules.map((arr, index) => {
+    let closure_0 = index;
     const mapped = arr.map((item, index) => {
       let str = "";
-      if (item) {
+      const tmp = item;
+      if (tmp) {
         str = `${"M " + index + " " + closure_0} l 1 0 0 1 -1 0 Z`;
       }
       return str;
     });
     return mapped.join(" ");
   });
-  obj2.fgD = mapped1.join(" ");
-  obj2.ref = ref;
-  obj2.size = size;
-  obj2.viewBoxSize = modules.length;
-  return <QRCodeSvg.default {......fn({}, obj, obj2)} />;
+  return <_default2 {...fn({}, obj, obj2)} />;
 });
 forwardRefResult.displayName = "QRCode";
 forwardRefResult.propTypes = obj6;

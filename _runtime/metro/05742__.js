@@ -1,9 +1,8 @@
 // _runtime/metro/05742__.js
 import get_synchronousScreenUpdatesEnabled from "../05722_get_synchronousScreenUpdatesEnabled.js";
-import noop from "00019__.js";
+import react from "../00019_react.js";
 
-require = arg1;
-let context = noop.createContext({
+let context = react.createContext({
   topAlreadyApplied: false,
   leftDisabled: false,
   rightDisabled: false,
@@ -12,7 +11,10 @@ let context = noop.createContext({
 
 export const EdgeInsetApplicationContext = context;
 export const useEdgeInsetApplication = function useEdgeInsetApplication(arg0, flag, flag2, flag3, flag4) {
-  context = noop.useContext(context);
+  let bottomDisabled;
+  let leftDisabled;
+  let rightDisabled;
+  context = react.useContext(context);
   const topAlreadyApplied = context.topAlreadyApplied;
   ({ leftDisabled, rightDisabled, bottomDisabled } = context);
   const experiment = get_synchronousScreenUpdatesEnabled.featureFlags.experiment;
@@ -24,18 +26,11 @@ export const useEdgeInsetApplication = function useEdgeInsetApplication(arg0, fl
     flag = false;
   }
   let tmp2 = flag;
-  if (!flag) {
-    let tmp3 = !topAlreadyApplied;
-    if (!topAlreadyApplied) {
-      tmp3 = arg0;
-    }
-    tmp2 = tmp3;
+  if (!tmp2) {
+    tmp2 = !topAlreadyApplied && arg0;
   }
-  closure_1 = tmp2;
-  let tmp4 = tmp2;
-  if (tmp2) {
-    tmp4 = !flag;
-  }
+  let closure_1 = tmp2;
+  const tmp4 = tmp2 && !flag;
   if (!leftDisabled) {
     leftDisabled = flag2;
   }
@@ -46,18 +41,16 @@ export const useEdgeInsetApplication = function useEdgeInsetApplication(arg0, fl
     bottomDisabled = flag4;
   }
   const items = [topAlreadyApplied, tmp2, leftDisabled, rightDisabled, bottomDisabled];
-  return {
+  const obj2 = {
     appliesTopInset: tmp4,
     consumeLeftInset: !leftDisabled,
     consumeRightInset: !rightDisabled,
     consumeBottomInset: !bottomDisabled,
     useLegacyBehavior: flag,
-    nextContextValue: noop.useMemo(() => {
-      let tmp = topAlreadyApplied;
-      if (!topAlreadyApplied) {
-        tmp = closure_1;
-      }
-      return { topAlreadyApplied: tmp, leftDisabled, rightDisabled, bottomDisabled };
-    }, items),
+    nextContextValue: react.useMemo(
+      () => ({ topAlreadyApplied: topAlreadyApplied || closure_1, leftDisabled, rightDisabled, bottomDisabled }),
+      items,
+    ),
   };
+  return obj2;
 };

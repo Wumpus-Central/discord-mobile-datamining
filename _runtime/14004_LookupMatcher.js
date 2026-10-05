@@ -2,11 +2,8 @@
 import _mod14005 from "metro/14005__.js";
 import BestAvailableLocale from "14008_BestAvailableLocale.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
 export const LookupMatcher = function LookupMatcher(arg0, arg1, fn) {
-  const obj = { locale: "" };
+  const obj = { locale: fn() };
   let num = 0;
   if (0 < arg1.length) {
     const replaced = str.replace(_mod14005.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
@@ -16,10 +13,9 @@ export const LookupMatcher = function LookupMatcher(arg0, arg1, fn) {
     }
     obj.locale = BestAvailableLocaleResult;
     if (arg1[num] !== replaced) {
-      obj.extension = str.slice(replaced.length, str.length);
+      obj.extension = arg1[num].slice(replaced.length, arg1[num].length);
     }
     return obj;
   }
-  obj.locale = fn();
   return obj;
 };

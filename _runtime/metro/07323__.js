@@ -2,13 +2,11 @@
 import _mod7317 from "07317__.js";
 import _mod7318 from "07318__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
 export const isAVIF = function isAVIF(fileChunk) {
   fileChunk = _mod7317.getFileChunk(fileChunk);
   const FileTypes = _mod7318.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "avif") && _mod7317.isAvifStringIncluded(fileChunk);
+  const tmp4 = FileTypes.checkByFileType(fileChunk, "avif") && _mod7317.isAvifStringIncluded(fileChunk);
+  return tmp4;
 };
 export const isBMP = function isBMP(fileChunk) {
   fileChunk = _mod7317.getFileChunk(fileChunk);
@@ -38,7 +36,8 @@ export const isGIF = function isGIF(fileChunk) {
 export const isHEIC = function isHEIC(fileChunk) {
   fileChunk = _mod7317.getFileChunk(fileChunk);
   const FileTypes = _mod7318.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "avif") && _mod7317.isHeicSignatureIncluded(fileChunk);
+  const tmp4 = FileTypes.checkByFileType(fileChunk, "avif") && _mod7317.isHeicSignatureIncluded(fileChunk);
+  return tmp4;
 };
 export const isICO = function isICO(fileChunk) {
   fileChunk = _mod7317.getFileChunk(fileChunk);

@@ -1,11 +1,12 @@
 // _runtime/13972_TEN.js
-import digitsToString2 from "13969_digitsToString.js";
-import e from "01172_e.js";
+import _mod13969 from "metro/13969__.js";
+import 01172__ from "metro/01172__.js";
 
-const digitsToString = e.__importDefault(digitsToString2);
-const _default = new digitsToString.default(10);
-const _default1 = new digitsToString.default(0);
+const module_13969 = module_1172.__importDefault(_mod13969);
+new module_13969.default(10);
+new module_13969.default(0);
+new module_13969.default(-0);
 
-export const TEN = new digitsToString.default(10);
-export const ZERO = new digitsToString.default(0);
-export const NEGATIVE_ZERO = new digitsToString.default(-0);
+export const TEN = new module_13969.default(10);
+export const ZERO = new module_13969.default(0);
+export const NEGATIVE_ZERO = new module_13969.default(-0);

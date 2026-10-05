@@ -6,9 +6,6 @@ import _mod14049 from "metro/14049__.js";
 import _mod14051 from "metro/14051__.js";
 import _mod14053 from "metro/14053__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
 export const supportedValuesOf = function supportedValuesOf(collation, locale) {
   if ("calendar" === collation) {
     return _mod14043.getSupportedCalendars(locale);

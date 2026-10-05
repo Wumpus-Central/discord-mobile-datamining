@@ -1,37 +1,40 @@
 // _runtime/01074_lazyLoadFeedbackIntegration.js
 import _mod693 from "metro/00693__.js";
-import _getClientIntegration from "01009__getClientIntegration.js";
+import MOBILE_FEEDBACK_INTEGRATION_NAME from "01009_MOBILE_FEEDBACK_INTEGRATION_NAME.js";
 
-require = arg1;
-const dependencyMap = arg6;
 const AutoInjectMobileFeedback = "AutoInjectMobileFeedback";
 const AutoInjectMobileFeedbackButton = "AutoInjectMobileFeedbackButton";
 const AutoInjectMobileScreenshotButton = "AutoInjectMobileScreenshotButton";
 
 export const lazyLoadFeedbackIntegration = function lazyLoadFeedbackIntegration() {
-  const client = _mod693.getClient();
+  const obj = _mod693;
+  const client = obj.getClient();
   let integrationByName;
   if (null !== client) {
     if (undefined !== client) {
-      integrationByName = client.getIntegrationByName(_getClientIntegration.MOBILE_FEEDBACK_INTEGRATION_NAME);
+      integrationByName = client.getIntegrationByName(
+        MOBILE_FEEDBACK_INTEGRATION_NAME.MOBILE_FEEDBACK_INTEGRATION_NAME,
+      );
     }
   }
   if (!integrationByName) {
-    const client1 = _mod693.getClient();
-    integrationByName = null === client1;
     const tmpResult = _mod693;
+    const client1 = tmpResult.getClient();
+    integrationByName = null === client1;
   }
   if (!integrationByName) {
-    integrationByName = undefined === obj3;
+    integrationByName = undefined === tmp4;
   }
   if (!integrationByName) {
-    obj3.addIntegration(_getClientIntegration.feedbackIntegration());
-    const tmpResult2 = _getClientIntegration;
+    const addIntegration = tmp4.addIntegration;
+    const tmpResult2 = MOBILE_FEEDBACK_INTEGRATION_NAME;
+    addIntegration(tmpResult2.feedbackIntegration());
   }
 };
 export const AUTO_INJECT_FEEDBACK_INTEGRATION_NAME = "AutoInjectMobileFeedback";
 export const lazyLoadAutoInjectFeedbackIntegration = function lazyLoadAutoInjectFeedbackIntegration() {
-  const client = _mod693.getClient();
+  const obj = _mod693;
+  const client = obj.getClient();
   let integrationByName;
   if (null !== client) {
     if (undefined !== client) {
@@ -39,9 +42,9 @@ export const lazyLoadAutoInjectFeedbackIntegration = function lazyLoadAutoInject
     }
   }
   if (!integrationByName) {
-    const client1 = _mod693.getClient();
-    integrationByName = null === client1;
     const tmpResult = _mod693;
+    const client1 = tmpResult.getClient();
+    integrationByName = null === client1;
   }
   if (!integrationByName) {
     integrationByName = undefined === obj3;
@@ -53,7 +56,8 @@ export const lazyLoadAutoInjectFeedbackIntegration = function lazyLoadAutoInject
 };
 export const AUTO_INJECT_FEEDBACK_BUTTON_INTEGRATION_NAME = "AutoInjectMobileFeedbackButton";
 export const lazyLoadAutoInjectFeedbackButtonIntegration = function lazyLoadAutoInjectFeedbackButtonIntegration() {
-  const client = _mod693.getClient();
+  const obj = _mod693;
+  const client = obj.getClient();
   let integrationByName;
   if (null !== client) {
     if (undefined !== client) {
@@ -61,9 +65,9 @@ export const lazyLoadAutoInjectFeedbackButtonIntegration = function lazyLoadAuto
     }
   }
   if (!integrationByName) {
-    const client1 = _mod693.getClient();
-    integrationByName = null === client1;
     const tmpResult = _mod693;
+    const client1 = tmpResult.getClient();
+    integrationByName = null === client1;
   }
   if (!integrationByName) {
     integrationByName = undefined === obj3;
@@ -75,7 +79,8 @@ export const lazyLoadAutoInjectFeedbackButtonIntegration = function lazyLoadAuto
 };
 export const AUTO_INJECT_SCREENSHOT_BUTTON_INTEGRATION_NAME = "AutoInjectMobileScreenshotButton";
 export const lazyLoadAutoInjectScreenshotButtonIntegration = function lazyLoadAutoInjectScreenshotButtonIntegration() {
-  const client = _mod693.getClient();
+  const obj = _mod693;
+  const client = obj.getClient();
   let integrationByName;
   if (null !== client) {
     if (undefined !== client) {
@@ -83,9 +88,9 @@ export const lazyLoadAutoInjectScreenshotButtonIntegration = function lazyLoadAu
     }
   }
   if (!integrationByName) {
-    const client1 = _mod693.getClient();
-    integrationByName = null === client1;
     const tmpResult = _mod693;
+    const client1 = tmpResult.getClient();
+    integrationByName = null === client1;
   }
   if (!integrationByName) {
     integrationByName = undefined === obj3;

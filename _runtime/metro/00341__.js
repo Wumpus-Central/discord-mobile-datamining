@@ -1,26 +1,26 @@
 // _runtime/metro/00341__.js
+import react2 from "../00019_react.js";
+import Fragment from "../react/00021_Fragment.js";
+import ViewDefault from "../00108_View.js";
+import get_hairlineWidthDefault from "../00254_get_hairlineWidth.js";
+import _modDef343 from "00343__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "00005__asyncToGenerator.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import metroRequire from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
 
-const KeyboardAvoidingView = importDefault;
+const react = react2;
+let c2, c4;
+
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -36,27 +36,23 @@ let closure_2 = [
   "style",
   "onLayout",
 ];
-const createRef = fn(19).createRef;
-const jsx = fn(21).jsx;
-let dependencyMap;
+const createRef = react2.createRef;
+const jsx = Fragment.jsx;
+let closure_1;
 class KeyboardAvoidingView {
   constructor(arg0) {
-    self = this;
-    tmp = hasOwnProperty(this, KeyboardAvoidingView);
-    items = [];
-    items[0] = global;
-    tmp2 = closure_7;
-    obj = closure_7(KeyboardAvoidingView);
-    tmp3 = metroRequire;
-    if (c10()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    const tmp = _classCallCheck(this, KeyboardAvoidingView);
+    const items = [arg0];
+    let obj = _getPrototypeOf(KeyboardAvoidingView);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
+    const tmp3Result = metroRequire(self, constructResult);
     tmp3Result._frame = null;
     tmp3Result._keyboardEvent = null;
     tmp3Result._subscriptions = [];
@@ -70,12 +66,12 @@ class KeyboardAvoidingView {
       closure_0._keyboardEvent = null;
       const result = closure_0._updateBottomIfNecessary();
     };
-    closure_0 = undefined;
-    closure_0 = closure_4(async (arg0) => {
+    let closure_0 = _asyncToGenerator(async (arg0) => {
+      closure_0 = arg0;
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -96,20 +92,16 @@ class KeyboardAvoidingView {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              closure_2 = tmp5;
-              closure_1 = tmp2;
-              closure_129_0 = closure_0;
+              closure_2 = tmp4;
+              closure_1 = tmp;
               closure_0.persist();
               const _frame = closure_0._frame;
               closure_0._frame = closure_0.nativeEvent.layout;
               if (!closure_0._initialFrameHeight) {
                 closure_0._initialFrameHeight = closure_0._frame.height;
               }
-              let tmp8 = _frame;
-              if (_frame) {
-                tmp8 = _frame.height === closure_0._frame.height;
-              }
-              if (!tmp8) {
+              const tmp7 = _frame && _frame.height === closure_0._frame.height;
+              if (!tmp7) {
                 c3 = 1;
                 c4 = 1;
                 const obj4 = { value: closure_0._updateBottomIfNecessary(), done: false };
@@ -126,25 +118,18 @@ class KeyboardAvoidingView {
           }
           if (closure_0.props.onLayout) {
             const props = closure_0.props;
-            props.onLayout(closure_129_0);
+            props.onLayout(closure_0);
           }
           c4 = 3;
           return { value: "IconComponent", done: null };
-        } catch (tmp18) {
-          c4 = tmp;
-          throw tmp18;
+        } catch (tmp17) {
+          c4 = 3;
+          throw tmp17;
         }
       }
     });
     tmp3Result._onLayout = function (arg0) {
-      const self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
+      return closure_0(...arguments);
     };
     tmp3Result._setBottom = (_bottom) => {
       let flag = closure_0.props.enabled;
@@ -157,11 +142,15 @@ class KeyboardAvoidingView {
         closure_0.setState(obj2);
       }
     };
-    tmp3Result._updateBottomIfNecessary = closure_4(async () => {
+    tmp3Result._updateBottomIfNecessary = _asyncToGenerator(async () => {
+      let c0;
+      let c1;
+      let obj6;
+      let str;
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp5 === 3) {
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -172,6 +161,7 @@ class KeyboardAvoidingView {
         }
       } else {
         try {
+          let _true;
           c4 = 2;
           if (0 === c3) {
             if (arg0 === 1) {
@@ -182,93 +172,89 @@ class KeyboardAvoidingView {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              closure_2 = tmp2;
-              closure_129_0 = undefined;
-              closure_129_1 = undefined;
-              closure_129_2 = undefined;
+              closure_1 = tmp2;
+              _true = undefined;
+              c1 = undefined;
+              closure_2 = undefined;
               if (null != _true._keyboardEvent) {
                 const _keyboardEvent = _true._keyboardEvent;
-                ({ duration: closure_129_0, easing: closure_129_1 } = _keyboardEvent);
+                ({ duration: c0, easing: c1 } = _keyboardEvent);
                 c3 = 1;
                 c4 = 1;
                 const obj4 = { value: _true._relativeKeyboardHeight(_keyboardEvent.endCoordinates), done: false };
                 return obj4;
               } else {
                 _true._setBottom(0);
-                c4 = 3;
               }
             }
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
-          } else if (arg0 !== 2) {
-            closure_129_2 = value;
-            if (closure_130_0._bottom !== closure_129_2) {
-              closure_130_0._setBottom(closure_129_2);
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            closure_2 = value;
+            if (closure_130_0._bottom !== closure_2) {
+              closure_130_0._setBottom(closure_2);
               const enabled = closure_130_0.props.enabled;
               _true = enabled;
               if (enabled == null) {
                 _true = true;
               }
-              let tmp7 = _true;
-              if (_true) {
-                tmp7 = closure_129_0;
-              }
-              if (tmp7) {
-                tmp7 = closure_129_1;
-              }
-              if (tmp7) {
+              const tmp6 = _true && _true && c1;
+              if (tmp6) {
                 let num3 = 10;
                 let num4 = 10;
-                if (closure_129_0 > 10) {
-                  num4 = closure_129_0;
+                const configureNext = _true(closure_1[9]).configureNext;
+                const tmp13 = _true(closure_1[9]);
+                if (_true > 10) {
+                  num4 = _true;
                 }
-                const obj5 = { duration: num4, update: null };
-                if (closure_129_0 > num3) {
-                  num3 = closure_129_0;
+                const obj = { duration: num4, update: obj6 };
+                if (_true > num3) {
+                  num3 = _true;
                 }
-                const obj6 = { duration: num3, type: null };
-                let str = _true(tmp3[9]).Types[closure_129_1];
-                if (!str) {
-                  str = "keyboard";
-                }
-                obj6.type = str;
-                obj5.update = obj6;
-                _true(tmp3[9]).configureNext(obj5);
-                const obj = _true(tmp3[9]);
+                obj6 = { duration: num3, type: str };
+                str = _true(closure_1[9]).Types[c1] || "keyboard";
+                configureNext(obj);
               }
             }
           }
           c4 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
+          return { value: "IconComponent", done: null };
         } catch (tmp29) {
-          c4 = tmp;
+          c4 = 3;
           throw tmp29;
         }
       }
     });
     tmp3Result.state = { bottom: 0 };
-    tmp3Result.viewRef = closure_8();
+    tmp3Result.viewRef = createRef();
     return tmp3Result;
   }
 }
-_inherits(KeyboardAvoidingView, noop.Component);
-const entry = { key: "_relativeKeyboardHeight", value: null };
-dependencyMap = asyncGeneratorStep(async function (arg0) {
+_inherits(KeyboardAvoidingView, react.Component);
+const entry = {
+  key: "_relativeKeyboardHeight",
+  value: function _relativeKeyboardHeight(endCoordinates) {
+    return closure_1(...arguments);
+  },
+};
+closure_1 = _asyncToGenerator(async function (arg0) {
   const self = this;
-  const screenY = arg0;
-  c3 = 0;
+  let screenY = arg0;
+  let c3 = 0;
   return (async (arg0) => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp2 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        return { value, done: true };
       } else {
         return { value: "IconComponent", done: null };
       }
@@ -280,52 +266,40 @@ dependencyMap = asyncGeneratorStep(async function (arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj = { value, done: true };
-          return obj;
+          return { value, done: true };
         } else {
-          let sum = self;
-          let num6 = self._frame;
-          if (num6) {
+          const _frame = self._frame;
+          if (_frame) {
             if (screenY) {
-              const keyboardVerticalOffset = sum.props.keyboardVerticalOffset;
+              let bound;
+              const keyboardVerticalOffset = self.props.keyboardVerticalOffset;
               c2 = keyboardVerticalOffset;
+              screenY = screenY.screenY;
               if (keyboardVerticalOffset == null) {
                 c2 = 0;
               }
-              let diff = screenY.screenY - c2;
-              if ("height" === sum.props.behavior) {
+              const diff = screenY - c2;
+              if ("height" === self.props.behavior) {
                 const _Math2 = Math;
-                sum = sum.state.bottom + num6.y;
-                diff = sum + num6.height - diff;
-                num6 = 0;
-                const bound = Math.max(diff, 0);
+                bound = Math.max(self.state.bottom + _frame.y + _frame.height - diff, 0);
               } else {
                 const _Math = Math;
-                const bound1 = Math.max(num6.y + num6.height - diff, 0);
+                bound = Math.max(_frame.y + _frame.height - diff, 0);
               }
               c3 = 3;
+              return { value: bound, done: true };
             }
           }
           c3 = 3;
           return { value: 0, done: true };
         }
-      } catch (tmp12) {
-        c3 = tmp;
-        throw tmp12;
+      } catch (tmp9) {
+        c3 = 3;
+        throw tmp9;
       }
     }
   })();
 });
-entry.value = function _relativeKeyboardHeight(endCoordinates) {
-  const self = this;
-  const apply = closure_1.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
 let items = [
   entry,
   {
@@ -349,16 +323,17 @@ let items = [
     key: "componentDidMount",
     value: function componentDidMount() {
       const self = this;
+      const obj = _modDef343;
       if (!obj.isVisible()) {
         self._keyboardEvent = null;
         self._setBottom(0);
       }
-      obj = KeyboardAvoidingView(343);
-      const items = [KeyboardAvoidingView(343).addListener("keyboardDidHide", self._onKeyboardHide)];
-      const tmpResult = KeyboardAvoidingView(343);
-      items[1] = KeyboardAvoidingView(343).addListener("keyboardDidShow", self._onKeyboardChange);
+      const items = [,];
+      const tmpResult = _modDef343;
+      items[0] = tmpResult.addListener("keyboardDidHide", self._onKeyboardHide);
+      const tmpResult2 = _modDef343;
+      items[1] = tmpResult2.addListener("keyboardDidShow", self._onKeyboardChange);
       self._subscriptions = items;
-      const tmpResult2 = KeyboardAvoidingView(343);
     },
   },
   {
@@ -373,10 +348,17 @@ let items = [
   {
     key: "render",
     value: function render() {
+      let behavior;
+      let children;
+      let enabled;
+      let keyboardVerticalOffset;
+      let onLayout;
+      let style;
       const self = this;
       const props = this.props;
       ({ behavior, children, enabled } = props);
       let tmp = undefined === enabled;
+      const contentContainerStyle = props.contentContainerStyle;
       if (!tmp) {
         tmp = enabled;
       }
@@ -388,45 +370,50 @@ let items = [
       }
       if ("height" === behavior) {
         let tmp27;
+        const tmp26 = null != self._frame && self.state.bottom > 0;
         if (tmp26) {
+          tmp27 = { height: self._initialFrameHeight - num, flex: 0 };
           const obj2 = { height: self._initialFrameHeight - num, flex: 0 };
-          tmp27 = obj2;
         }
-        const obj4 = { ref: self.viewRef, style: null, onLayout: null };
-        tmp26 = null != self._frame && self.state.bottom > 0;
-        const tmp31 = KeyboardAvoidingView(108);
-        obj4.style = KeyboardAvoidingView(254).compose(style, tmp27);
-        obj4.onLayout = self._onLayout;
+        ViewDefault;
+        const obj11 = get_hairlineWidthDefault;
         const merged = Object.assign(tmp2);
-        obj4.children = children;
-        return <tmp31 ref={self.viewRef} style={null} onLayout={null} />;
+        return (
+          <tmp31 ref={self.viewRef} style={obj11.compose(style, tmp27)} onLayout={self._onLayout}>
+            {children}
+          </tmp31>
+        );
       } else if ("position" === behavior) {
-        const obj5 = { ref: self.viewRef, style, onLayout: self._onLayout };
+        ViewDefault;
         const merged1 = Object.assign(tmp2);
-        const obj6 = { style: null, children: null };
-        const tmp20 = KeyboardAvoidingView(108);
-        const tmp24 = KeyboardAvoidingView(108);
+        ViewDefault;
         const obj8 = { bottom: num };
-        obj6.style = KeyboardAvoidingView(254).compose(props.contentContainerStyle, obj8);
-        obj6.children = children;
-        obj5.children = <tmp24 style={null}>{null}</tmp24>;
-        return <tmp20 ref={self.viewRef} style={style} onLayout={self._onLayout} />;
+        const obj7 = get_hairlineWidthDefault;
+        return (
+          <tmp20 ref={self.viewRef} style={style} onLayout={self._onLayout}>
+            <tmp24 style={obj7.compose(contentContainerStyle, obj8)}>{children}</tmp24>
+          </tmp20>
+        );
       } else if ("padding" === behavior) {
-        const obj9 = { ref: self.viewRef, style: null, onLayout: null };
-        const tmp13 = KeyboardAvoidingView(108);
+        ViewDefault;
         const obj10 = { paddingBottom: num };
-        obj9.style = KeyboardAvoidingView(254).compose(style, obj10);
-        obj9.onLayout = self._onLayout;
+        const obj3 = get_hairlineWidthDefault;
         const merged2 = Object.assign(tmp2);
-        obj9.children = children;
-        return <tmp13 ref={self.viewRef} style={null} onLayout={null} />;
+        return (
+          <tmp13 ref={self.viewRef} style={obj3.compose(style, obj10)} onLayout={self._onLayout}>
+            {children}
+          </tmp13>
+        );
       } else {
-        const obj = { ref: null, onLayout: null, style: null };
+        const obj = { ref: null, onLayout: null, style, children };
         ({ viewRef: obj.ref, _onLayout: obj.onLayout } = self);
-        obj.style = style;
+        ViewDefault;
         const merged3 = Object.assign(tmp2);
-        obj.children = children;
-        return jsx(KeyboardAvoidingView(108), { ref: null, onLayout: null, style: null });
+        return (
+          <tmp6 ref={null} onLayout={null} style={style}>
+            {children}
+          </tmp6>
+        );
       }
     },
   },

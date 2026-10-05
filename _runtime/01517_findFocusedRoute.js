@@ -1,8 +1,12 @@
 // _runtime/01517_findFocusedRoute.js
 
 export const findFocusedRoute = function findFocusedRoute(stateForPath) {
+  let index;
+  let index3;
+  let routes;
+  let routes3;
   let state2;
-  state = undefined;
+  let state;
   if (stateForPath != null) {
     ({ index, routes } = stateForPath);
     if (index == null) {
@@ -17,21 +21,22 @@ export const findFocusedRoute = function findFocusedRoute(stateForPath) {
   if (null != state) {
     do {
       let index2 = tmp3.index;
+      let routes2 = tmp3.routes;
       if (index2 == null) {
         index2 = tmp3.routes.length - 1;
       }
-      let tmp6 = tmp3.routes[index2];
+      let tmp6 = routes2[index2];
       let state1;
       if (tmp6 != null) {
         state1 = tmp6.state;
       }
       state2 = undefined;
       if (state1 != null) {
-        ({ index: index3, routes: routes2 } = state1);
+        ({ index: index3, routes: routes3 } = state1);
         if (index3 == null) {
           index3 = state1.routes.length - 1;
         }
-        let tmp9 = routes2[index3];
+        let tmp9 = routes3[index3];
         if (tmp9 != null) {
           state2 = tmp9.state;
         }
@@ -43,13 +48,14 @@ export const findFocusedRoute = function findFocusedRoute(stateForPath) {
   let tmp10;
   if (tmp4 != null) {
     let index1;
+    const routes4 = tmp4.routes;
     if (tmp4 != null) {
       index1 = tmp4.index;
     }
     if (index1 == null) {
       index1 = tmp4.routes.length - 1;
     }
-    tmp10 = tmp4.routes[index1];
+    tmp10 = routes4[index1];
   }
   return tmp10;
 };

@@ -1,26 +1,21 @@
 // _runtime/metro/06274__.js
-import _modDef6273 from "06273__.js";
+import react_native from "../00017_react-native.js";
+import react2 from "../00019_react.js";
+import Fragment from "../react/00021_Fragment.js";
+import TOUCHABLE_STATEDefault from "../06273_TOUCHABLE_STATE.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import hasOwnProperty from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
 
-const TouchableNativeFeedback = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -28,46 +23,39 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 let closure_2 = ["style"];
-const Platform = fn(17).Platform;
-const jsx = fn(21).jsx;
+const Component = react2.Component;
+const Platform = react_native.Platform;
+const jsx = Fragment.jsx;
 class TouchableNativeFeedback {
   constructor() {
-    self = this;
-    tmp = closure_4(this, TouchableNativeFeedback);
-    tmp2 = metroRequire;
-    obj = metroRequire(TouchableNativeFeedback);
-    tmp3 = hasOwnProperty;
-    if (closure_9()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, TouchableNativeFeedback);
+    const obj = _getPrototypeOf(TouchableNativeFeedback);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return tmp3(self, constructResult);
+    return hasOwnProperty(self, constructResult);
   }
 }
-_inherits(TouchableNativeFeedback, fn(19).Component);
+_inherits(TouchableNativeFeedback, Component);
 const entry = {
   key: "getExtraButtonProps",
   value: function getExtraButtonProps() {
-    const obj = {};
-    let rippleRadius = this.props.background;
-    if (!rippleRadius) {
-      obj.foreground = this.props.useForeground;
-      return obj;
-    } else {
-      if ("RippleAndroid" === rippleRadius.type) {
-        ({ borderless: obj.borderless, color: obj.rippleColor } = rippleRadius);
-      } else if ("ThemeAttrAndroid" === rippleRadius.type) {
-        obj.borderless = "selectableItemBackgroundBorderless" === rippleRadius.attribute;
+    const obj = { foreground: this.props.useForeground };
+    const background = this.props.background;
+    if (background) {
+      if ("RippleAndroid" === background.type) {
+        ({ borderless: obj.borderless, color: obj.rippleColor } = background);
+      } else if ("ThemeAttrAndroid" === background.type) {
+        obj.borderless = "selectableItemBackgroundBorderless" === background.attribute;
       }
-      rippleRadius = rippleRadius.rippleRadius;
-      obj.rippleRadius = rippleRadius;
+      obj.rippleRadius = background.rippleRadius;
     }
+    return obj;
   },
 };
 const items = [
@@ -81,20 +69,16 @@ const items = [
       if (undefined === style) {
         style = {};
       }
-      const obj = {};
       const tmp = _objectWithoutProperties(props, closure_2);
+      TOUCHABLE_STATEDefault;
       const merged = Object.assign(tmp);
-      obj.style = style;
-      obj.extraButtonProps = self.getExtraButtonProps();
-      return jsx(TouchableNativeFeedback(6273), {});
+      return <tmp2 style={style} extraButtonProps={self.getExtraButtonProps()} />;
     },
   },
 ];
 const importDefaultResultResult = _createClass(TouchableNativeFeedback, items);
-let obj = {};
-let merged = Object.assign(_modDef6273.defaultProps);
-obj.useForeground = true;
-obj.extraButtonProps = { rippleColor: null };
+let obj = { useForeground: true, extraButtonProps: { rippleColor: null } };
+let merged = Object.assign(TOUCHABLE_STATEDefault.defaultProps);
 importDefaultResultResult.defaultProps = obj;
 importDefaultResultResult.SelectableBackground = (rippleRadius) => ({
   type: "ThemeAttrAndroid",

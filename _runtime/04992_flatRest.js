@@ -1,10 +1,11 @@
 // _runtime/04992_flatRest.js
-import _mod4993 from "metro/04993__.js";
+import flatRest from "04993_flatRest.js";
 import basePick from "05003_basePick.js";
 
-export default _mod4993((arg0, arg1) => {
+export default flatRest((arg0, arg1) => {
+  let obj;
   if (null == arg0) {
-    let obj = {};
+    obj = {};
   } else {
     obj = basePick(arg0, arg1);
   }

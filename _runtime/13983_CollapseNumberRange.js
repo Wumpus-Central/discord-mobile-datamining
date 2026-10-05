@@ -18,10 +18,7 @@ export const CollapseNumberRange = function CollapseNumberRange(arg0, items, get
     "s?[".concat(internalSlots.dataLocaleData.numbers.symbols[internalSlots.numberingSystem].rangeSign, "]s?"),
   );
   const findIndexResult = items.findIndex((type) => {
-    let isMatch = "literal" === type.type;
-    if (isMatch) {
-      isMatch = regExp.test(type.value);
-    }
+    const isMatch = "literal" === type.type && regExp.test(type.value);
     return isMatch;
   });
   items = [];
@@ -39,7 +36,7 @@ export const CollapseNumberRange = function CollapseNumberRange(arg0, items, get
     }
   }
   const mapped = items.map((value) => value.value);
-  if (Array.from(mapped.join("")).length > 1) {
+  if (from(mapped.join("")).length > 1) {
     const _Array3 = Array;
     const arr2 = Array.from(items);
     arr2.splice(findIndexResult - items.length, items.length);
@@ -60,8 +57,9 @@ export const CollapseNumberRange = function CollapseNumberRange(arg0, items, get
       }
     }
     const _Array = Array;
+    const from2 = Array.from;
     const mapped1 = items1.map((value) => value.value);
-    if (Array.from(mapped1.join("")).length > 1) {
+    if (from2(mapped1.join("")).length > 1) {
       const _Array2 = Array;
       const arr4 = Array.from(items);
       arr4.splice(findIndexResult + 1, items1.length);

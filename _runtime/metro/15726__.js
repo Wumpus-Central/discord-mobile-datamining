@@ -1,14 +1,20 @@
 // _runtime/metro/15726__.js
-import _mod648 from "00648__.js";
-import _mod665 from "00665__.js";
-import noop_mod from "15727__.js";
+import getNative from "../00648_getNative.js";
+import setToArray from "../00665_setToArray.js";
+import noop_mod from "../15727_noop.js";
 
-if (_mod648) {
-  const _module = _mod665;
+if (getNative) {
+  let noop;
+  const _module = setToArray;
   const items = [, -0];
-  const tmp5 = new _mod648(items);
-  if (1 / _module(tmp5)[1] === Infinity) {
-    let noop = (arg0) => new _mod648(arg0);
+  const self = this;
+  const self2 = this;
+  const tmp3 = new getNative(items);
+  if (1 / _module(tmp3)[1] === Infinity) {
+    noop = (arg0) => {
+      const tmp = new getNative(arg0);
+      return tmp;
+    };
   }
   module.exports = noop;
 }

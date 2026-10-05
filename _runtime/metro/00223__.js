@@ -1,57 +1,50 @@
 // _runtime/metro/00223__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import dispatchDefault from "../00132_dispatch.js";
-import EventDefault from "../00133_Event.js";
+import _modDef132 from "00132__.js";
+import _modDef133 from "00133__.js";
+import byteLength from "../00206_byteLength.js";
 import FileReaderModuleDefault from "../00224_FileReaderModule.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const FileReader = arg1;
+const require = globalThis.__r;
+
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
 class FileReader {
   constructor() {
-    self = this;
-    tmp = closure_3(this, FileReader);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FileReader);
-    tmp3 = closure_4;
-    if (metroRequire()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, FileReader);
+    const obj = _getPrototypeOf(FileReader);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, undefined);
     }
-    tmp3Result = tmp3(self, constructResult);
+    const tmp3Result = _possibleConstructorReturn(self, constructResult);
     tmp3Result.EMPTY = 0;
     tmp3Result.LOADING = 1;
     tmp3Result.DONE = 2;
     tmp3Result._aborted = false;
-    _resetResult = tmp3Result._reset();
+    tmp3Result._reset();
     return tmp3Result;
   }
 }
-_inherits(FileReader, dispatchDefault);
+_inherits(FileReader, _modDef132);
 const entry = {
   key: "_reset",
   value: function _reset() {},
@@ -61,52 +54,63 @@ const items = [
   {
     key: "_setReadyState",
     value: function _setReadyState(_readyState) {
+      let _error;
+      let dispatchEvent2;
       const self = this;
       this._readyState = _readyState;
-      this.dispatchEvent(new EventDefault("readystatechange"));
+      const dispatchEvent = this.dispatchEvent;
+      const tmp3 = new _modDef133("readystatechange");
+      dispatchEvent(tmp3);
       if (2 === _readyState) {
         if (self._aborted) {
-          let tmpResult = EventDefault;
-          let tmp6 = new.target;
-          const tmpResult1 = new tmpResult("abort");
-          self.dispatchEvent(tmpResult1);
-          dispatchEvent = EventDefault;
-          const tmp = new.target;
-          const dispatchEvent1 = new dispatchEvent("loadend");
-          self.dispatchEvent(dispatchEvent1);
+          const dispatchEvent3 = self.dispatchEvent;
+          const self3 = this;
+          const self4 = this;
+          const tmp14 = new _modDef133("abort");
+          dispatchEvent3(tmp14);
         } else {
-          ({ dispatchEvent, _error } = self);
-          tmpResult = EventDefault;
-          tmp6 = new.target;
-          if (!_error) {
+          ({ dispatchEvent: dispatchEvent2, _error } = self);
+          const tmpResult = _modDef133;
+          const self2 = this;
+          if (_error) {
+            const tmpResult1 = new tmpResult("error");
+            dispatchEvent2(tmpResult1);
+          } else {
             const tmpResult2 = new tmpResult("load");
-            dispatchEvent(tmpResult2);
+            dispatchEvent2(tmpResult2);
           }
         }
-        const tmpResult3 = new tmpResult("error");
-        dispatchEvent(tmpResult3);
+        const dispatchEvent4 = self.dispatchEvent;
+        const self5 = this;
+        const self6 = this;
+        const tmp17 = new _modDef133("loadend");
+        dispatchEvent4(tmp17);
       }
     },
   },
   {
     key: "readAsArrayBuffer",
-    value: function readAsArrayBuffer(response) {
-      const self = this;
+    value: function readAsArrayBuffer(data) {
+      let self = this;
       this._aborted = false;
-      if (null == response) {
+      if (null == data) {
         const _TypeError = TypeError;
+        self = this;
+        const self2 = this;
         const typeError = new TypeError(
           "Failed to execute 'readAsArrayBuffer' on 'FileReader': parameter 1 is not of type 'Blob'",
         );
         throw typeError;
       } else {
-        const asDataURL = FileReaderModuleDefault.readAsDataURL(response.data);
+        const obj = FileReaderModuleDefault;
+        const asDataURL = obj.readAsDataURL(data.data);
         asDataURL.then(
           (result) => {
             if (!self._aborted) {
-              self._result = FileReader(206).toByteArray(result.split(",")[1]).buffer;
+              const tmp2 = result.split(",")[1];
+              const obj2 = byteLength;
+              self._result = obj2.toByteArray(tmp2).buffer;
               self._setReadyState(2);
-              const obj2 = FileReader(206);
             }
           },
           (_error) => {
@@ -122,16 +126,19 @@ const items = [
   {
     key: "readAsDataURL",
     value: function readAsDataURL(data) {
-      const self = this;
+      let self = this;
       this._aborted = false;
       if (null == data) {
         const _TypeError = TypeError;
+        self = this;
+        const self2 = this;
         const typeError = new TypeError(
           "Failed to execute 'readAsDataURL' on 'FileReader': parameter 1 is not of type 'Blob'",
         );
         throw typeError;
       } else {
-        const asDataURL = FileReaderModuleDefault.readAsDataURL(data.data);
+        const obj = FileReaderModuleDefault;
+        const asDataURL = obj.readAsDataURL(data.data);
         asDataURL.then(
           (_result) => {
             if (!self._aborted) {
@@ -152,7 +159,7 @@ const items = [
   {
     key: "readAsText",
     value: function readAsText(_bodyBlob) {
-      const self = this;
+      let self = this;
       let str = match;
       if (match === undefined) {
         str = "UTF-8";
@@ -160,12 +167,15 @@ const items = [
       this._aborted = false;
       if (null == _bodyBlob) {
         const _TypeError = TypeError;
+        self = this;
+        const self2 = this;
         const typeError = new TypeError(
           "Failed to execute 'readAsText' on 'FileReader': parameter 1 is not of type 'Blob'",
         );
         throw typeError;
       } else {
-        const asText = FileReaderModuleDefault.readAsText(_bodyBlob.data, str);
+        const obj = FileReaderModuleDefault;
+        const asText = obj.readAsText(_bodyBlob.data, str);
         asText.then(
           (_result) => {
             if (!self._aborted) {
@@ -188,10 +198,7 @@ const items = [
     value: function abort() {
       const self = this;
       this._aborted = true;
-      let tmp = 0 !== this._readyState;
-      if (tmp) {
-        tmp = 2 !== self._readyState;
-      }
+      const tmp = 0 !== this._readyState && 2 !== self._readyState;
       if (tmp) {
         self._reset();
         self._setReadyState(2);
@@ -220,55 +227,67 @@ const items = [
   {
     key: "onabort",
     get() {
-      return FileReader(205).getEventHandlerAttribute(this, "abort");
+      const obj = require("00205__.js");
+      return obj.getEventHandlerAttribute(this, "abort");
     },
     set(handleEvent) {
-      const result = FileReader(205).setEventHandlerAttribute(this, "abort", handleEvent);
+      const obj = require("00205__.js");
+      const result = obj.setEventHandlerAttribute(this, "abort", handleEvent);
     },
   },
   {
     key: "onerror",
     get() {
-      return FileReader(205).getEventHandlerAttribute(this, "error");
+      const obj = require("00205__.js");
+      return obj.getEventHandlerAttribute(this, "error");
     },
     set(handleEvent) {
-      const result = FileReader(205).setEventHandlerAttribute(this, "error", handleEvent);
+      const obj = require("00205__.js");
+      const result = obj.setEventHandlerAttribute(this, "error", handleEvent);
     },
   },
   {
     key: "onload",
     get() {
-      return FileReader(205).getEventHandlerAttribute(this, "load");
+      const obj = require("00205__.js");
+      return obj.getEventHandlerAttribute(this, "load");
     },
     set(handleEvent) {
-      const result = FileReader(205).setEventHandlerAttribute(this, "load", handleEvent);
+      const obj = require("00205__.js");
+      const result = obj.setEventHandlerAttribute(this, "load", handleEvent);
     },
   },
   {
     key: "onloadstart",
     get() {
-      return FileReader(205).getEventHandlerAttribute(this, "loadstart");
+      const obj = require("00205__.js");
+      return obj.getEventHandlerAttribute(this, "loadstart");
     },
     set(handleEvent) {
-      const result = FileReader(205).setEventHandlerAttribute(this, "loadstart", handleEvent);
+      const obj = require("00205__.js");
+      const result = obj.setEventHandlerAttribute(this, "loadstart", handleEvent);
     },
   },
   {
     key: "onloadend",
     get() {
-      return FileReader(205).getEventHandlerAttribute(this, "loadend");
+      const obj = require("00205__.js");
+      return obj.getEventHandlerAttribute(this, "loadend");
     },
     set(handleEvent) {
-      const result = FileReader(205).setEventHandlerAttribute(this, "loadend", handleEvent);
+      const obj = require("00205__.js");
+      const result = obj.setEventHandlerAttribute(this, "loadend", handleEvent);
     },
   },
   {
     key: "onprogress",
     get() {
-      return FileReader(205).getEventHandlerAttribute(this, "progress");
+      const obj = require("00205__.js");
+      return obj.getEventHandlerAttribute(this, "progress");
     },
     set(handleEvent) {
-      const result = FileReader(205).setEventHandlerAttribute(this, "progress", handleEvent);
+      const obj = require("00205__.js");
+      const result = obj.setEventHandlerAttribute(this, "progress", handleEvent);
     },
   },
 ];

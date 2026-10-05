@@ -3,7 +3,7 @@ const require = globalThis.__r;
 
 const obj = {};
 Object.defineProperty(obj, "BatchedBridge", { get: () => require("metro/00039__.js").default, set: undefined });
-Object.defineProperty(obj, "ExceptionsManager", { get: () => require("metro/00189__.js").default, set: undefined });
+Object.defineProperty(obj, "ExceptionsManager", { get: () => require("SyntheticError").default, set: undefined });
 Object.defineProperty(obj, "Platform", { get: () => require("get Version").default, set: undefined });
 Object.defineProperty(obj, "RCTEventEmitter", { get: () => require("metro/00276__.js").default, set: undefined });
 Object.defineProperty(obj, "ReactNativeViewConfigRegistry", {
@@ -11,7 +11,7 @@ Object.defineProperty(obj, "ReactNativeViewConfigRegistry", {
   set: undefined,
 });
 Object.defineProperty(obj, "TextInputState", { get: () => require("metro/00144__.js").default, set: undefined });
-Object.defineProperty(obj, "UIManager", { get: () => require("measure").default, set: undefined });
+Object.defineProperty(obj, "UIManager", { get: () => require("metro/00068__.js").default, set: undefined });
 Object.defineProperty(obj, "deepDiffer", { get: () => require("deepDiffer").default, set: undefined });
 Object.defineProperty(obj, "deepFreezeAndThrowOnMutationInDev", {
   get: () => require("deepFreezeAndThrowOnMutationInDev").default,
@@ -25,14 +25,8 @@ Object.defineProperty(obj, "legacySendAccessibilityEvent", {
 });
 Object.defineProperty(obj, "RawEventEmitter", { get: () => require("metro/00280__.js").default, set: undefined });
 Object.defineProperty(obj, "CustomEvent", { get: () => require("metro/00152__.js").default, set: undefined });
-Object.defineProperty(obj, "createAttributePayload", {
-  get: () => require("restoreDeletedValuesInNestedArray").create,
-  set: undefined,
-});
-Object.defineProperty(obj, "diffAttributePayloads", {
-  get: () => require("restoreDeletedValuesInNestedArray").diff,
-  set: undefined,
-});
+Object.defineProperty(obj, "createAttributePayload", { get: () => require("create").create, set: undefined });
+Object.defineProperty(obj, "diffAttributePayloads", { get: () => require("create").diff, set: undefined });
 Object.defineProperty(obj, "createPublicRootInstance", {
   get: () => require("metro/00281__.js").createPublicRootInstance,
   set: undefined,

@@ -1,20 +1,19 @@
 // _runtime/05400_PromiseResolve.js
-import _mod1292 from "metro/01292__.js";
+import GetIntrinsic from "01292_GetIntrinsic.js";
 import _mod1314 from "metro/01314__.js";
 import callBind from "01461_callBind.js";
 
-const tmp = _mod1292("%Promise.resolve%", true);
-let tmp2 = tmp;
-if (tmp) {
-  tmp2 = callBind(tmp);
-}
-let closure_2 = tmp2;
+const tmp = GetIntrinsic("%Promise.resolve%", true);
+let closure_2 = tmp && callBind(tmp);
+tmp && callBind(tmp);
 
 export default function PromiseResolve(arg0, arg1) {
   if (closure_2) {
     return tmp(arg0, arg1);
   } else {
-    const tmp6 = new _mod1314("This environment does not support Promises.");
-    throw tmp6;
+    const self = this;
+    const self2 = this;
+    const tmp4 = new _mod1314("This environment does not support Promises.");
+    throw tmp4;
   }
 }

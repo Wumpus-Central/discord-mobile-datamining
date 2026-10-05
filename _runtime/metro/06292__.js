@@ -1,14 +1,18 @@
 // _runtime/metro/06292__.js
-import cancelAnimation from "../01643_cancelAnimation.js";
-import _slicedToArray from "00032__.js";
+import _mod1643 from "01643__.js";
+import _slicedToArray from "00032__slicedToArray.js";
+import react from "../00019_react.js";
+import react_native from "../00017_react-native.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-require = fn;
-const noop = fn(19);
-({ useMemo: c3, useState: closure_4 } = noop);
-get_ActivityIndicator = fn(17);
-({ Platform: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
+({ useMemo: c3, useState: closure_4 } = react);
+({ Platform: hasOwnProperty, StyleSheet: metroRequire } = react_native);
 const __initData = {
   code: "function pnpm_useBottomSheetContentContainerStyleTs1(){const{animatedFooterHeight}=this.__closure;return animatedFooterHeight.get();}",
 };
@@ -20,26 +24,31 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
   flag,
   contentContainerStyle,
 ) {
+  let animatedFooterHeight;
+  let closure_5;
+  let first;
   _require = flag;
   dependencyMap = contentContainerStyle;
   const tmp = first(animatedFooterHeight(0), 2);
   first = tmp[0];
-  closure_3 = tmp3;
-  const bottomSheetInternal = require("06120__.js").useBottomSheetInternal();
+  let closure_3 = tmp3;
+  let obj = require("react");
+  const bottomSheetInternal = obj.useBottomSheetInternal();
   animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
   const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
   let items = [contentContainerStyle];
   const tmp5 = closure_3(() => {
-    if (closure_1) {
+    let obj;
+    if (contentContainerStyle) {
       const _Array = Array;
-      let applyResult = closure_1;
-      if (Array.isArray(closure_1)) {
-        compose = compose.compose;
+      let applyResult = contentContainerStyle;
+      if (Array.isArray(contentContainerStyle)) {
+        metroRequire = metroRequire.compose;
         const items = [];
-        HermesBuiltin.arraySpread(closure_1, 0);
-        applyResult = HermesBuiltin.apply(items, compose);
+        HermesBuiltin.arraySpread(items, contentContainerStyle, 0);
+        applyResult = HermesBuiltin.apply(metroRequire, items, metroRequire);
       }
-      let obj = applyResult;
+      obj = applyResult;
     } else {
       obj = {};
     }
@@ -47,9 +56,11 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
   }, items);
   Platform = tmp5;
   const items1 = [first, flag, tmp5];
-  let obj = require("06120__.js");
   const tmp6 = closure_3(() => {
-    if (closure_0) {
+    let padding;
+    let paddingBottom;
+    let paddingVertical;
+    if (flag) {
       let num = 0;
       if (closure_5) {
         num = 0;
@@ -58,10 +69,10 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
           if (undefined === paddingBottom) {
             if (undefined === paddingVertical) {
               num = 0;
+              const tmp2 = undefined !== padding && typeof padding === "number";
               if (tmp2) {
                 num = padding;
               }
-              tmp2 = undefined !== padding && typeof padding === "number";
             } else {
               num = paddingVertical;
             }
@@ -78,6 +89,7 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
       return closure_5;
     }
   }, items1);
+  const obj2 = require("01643__.js");
   class H {
     constructor() {
       return animatedFooterHeight.get();
@@ -87,14 +99,14 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
   H.__workletHash = 10172145694310;
   H.__initData = __initData;
   const fn = function f(arg0, arg1) {
-    if (closure_0) {
-      cancelAnimation.runOnJS(closure_3)(arg0);
+    if (flag) {
+      const obj = _mod1643;
+      obj.runOnJS(closure_3)(arg0);
     }
   };
-  const obj2 = require("cancelAnimation");
   fn.__closure = {
     enableFooterMarginAdjustment: flag,
-    runOnJS: require("cancelAnimation").runOnJS,
+    runOnJS: require("01643__.js").runOnJS,
     setFooterHeight: tmp[1],
     Platform,
     animatedContentHeight,
@@ -102,6 +114,13 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
   fn.__workletHash = 1149497927090;
   fn.__initData = __initData2;
   const items2 = [animatedFooterHeight, animatedContentHeight, flag];
+  ({
+    enableFooterMarginAdjustment: flag,
+    runOnJS: require("01643__.js").runOnJS,
+    setFooterHeight: tmp[1],
+    Platform,
+    animatedContentHeight,
+  });
   const animatedReaction = obj2.useAnimatedReaction(H, fn, items2);
   return tmp6;
 };

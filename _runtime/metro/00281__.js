@@ -4,13 +4,9 @@ import _mod140 from "00140__.js";
 import _modDef143 from "00143__.js";
 import _modDef151 from "00151__.js";
 
-require = arg1;
-importDefault = arg2;
-importAll = arg3;
-const dependencyMap = arg6;
-
 export const createPublicRootInstance = function createPublicRootInstance(containerTag) {
-  return _mod140.createReactNativeDocument(containerTag);
+  const obj = _mod140;
+  return obj.createReactNativeDocument(containerTag);
 };
 export const createPublicInstance = function createPublicInstance(
   nativeTag,
@@ -18,10 +14,12 @@ export const createPublicInstance = function createPublicInstance(
   internalInstanceHandle,
   publicRootInstance,
 ) {
-  return new _modDef143(nativeTag, viewConfig, internalInstanceHandle, publicRootInstance);
+  const tmp = new _modDef143(nativeTag, viewConfig, internalInstanceHandle, publicRootInstance);
+  return tmp;
 };
 export const createPublicTextInstance = function createPublicTextInstance(stateNode, arg1) {
-  return new _modDef151(stateNode, arg1);
+  const tmp = new _modDef151(stateNode, arg1);
+  return tmp;
 };
 export const getNativeTagFromPublicInstance = function getNativeTagFromPublicInstance(hostInstance) {
   return hostInstance.__nativeTag;
@@ -29,9 +27,8 @@ export const getNativeTagFromPublicInstance = function getNativeTagFromPublicIns
 export const getNodeFromPublicInstance = function getNodeFromPublicInstance(instance) {
   let nodeFromInternalInstanceHandle = null;
   if (null != instance.__internalInstanceHandle) {
-    nodeFromInternalInstanceHandle = renderElementAll.getNodeFromInternalInstanceHandle(
-      instance.__internalInstanceHandle,
-    );
+    const obj = renderElementAll;
+    nodeFromInternalInstanceHandle = obj.getNodeFromInternalInstanceHandle(instance.__internalInstanceHandle);
   }
   return nodeFromInternalInstanceHandle;
 };

@@ -2,8 +2,6 @@
 import ReferenceWithTimezone from "../10164_ReferenceWithTimezone.js";
 import Meridiem from "../10166_Meridiem.js";
 
-require = arg1;
-const dependencyMap = arg6;
 function getDaysToWeekday(dateWithAdjustedTimezone, sum, next) {
   const day = dateWithAdjustedTimezone.getDay();
   if ("this" === next) {
@@ -21,12 +19,13 @@ function getDaysToWeekday(dateWithAdjustedTimezone, sum, next) {
     }
     return diff2;
   } else if ("next" === next) {
+    let sum3;
     if (day == Meridiem.Weekday.SUNDAY) {
       let num12 = 7;
       if (sum != Meridiem.Weekday.SUNDAY) {
         num12 = sum;
       }
-      let sum3 = num12;
+      sum3 = num12;
     } else if (day == Meridiem.Weekday.SATURDAY) {
       let num9 = 7;
       if (sum != Meridiem.Weekday.SATURDAY) {
@@ -75,10 +74,9 @@ function getDaysToWeekday(dateWithAdjustedTimezone, sum, next) {
 }
 
 export const createParsingComponentsAtWeekday = function createParsingComponentsAtWeekday(reference, sum, next) {
+  const tmp = getDaysToWeekday(reference.getDateWithAdjustedTimezone(), sum, next);
   const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference);
-  const addDurationAsImpliedResult = parsingComponents.addDurationAsImplied({
-    day: getDaysToWeekday(reference.getDateWithAdjustedTimezone(), sum, next),
-  });
+  const addDurationAsImpliedResult = parsingComponents.addDurationAsImplied({ day: tmp });
   addDurationAsImpliedResult.assign("weekday", sum);
   return addDurationAsImpliedResult;
 };

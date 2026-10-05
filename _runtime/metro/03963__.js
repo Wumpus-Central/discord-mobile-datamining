@@ -1,9 +1,9 @@
 // _runtime/metro/03963__.js
-let global = {};
+let closure_0 = {};
 
 export function getDefaultOptions() {
-  return global;
+  return closure_0;
 }
 export function setDefaultOptions(arg0) {
-  global = arg0;
+  closure_0 = arg0;
 }

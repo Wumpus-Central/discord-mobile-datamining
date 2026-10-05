@@ -1,32 +1,26 @@
 // _runtime/metro/10270__.js
+import EmptyDuration from "../10163_EmptyDuration.js";
 import AbstractParserWithWordBoundaryChecking from "../10168_AbstractParserWithWordBoundaryChecking.js";
-import NUMBER from "../10269_NUMBER.js";
+import _mod10269 from "10269__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ZHHansDeadlineFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const keys = Object.keys(NUMBER.NUMBER);
+const keys = Object.keys(_mod10269.NUMBER);
 const regExp = new RegExp(
   "(\\d+|[" +
     keys.join("") +
@@ -35,22 +29,17 @@ const regExp = new RegExp(
 );
 class ZHHansDeadlineFormatParser {
   constructor() {
-    self = this;
-    tmp = c2(this, ZHHansDeadlineFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(ZHHansDeadlineFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, ZHHansDeadlineFormatParser);
+    const obj = _getPrototypeOf(ZHHansDeadlineFormatParser);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return tmp3(self, constructResult);
+    return c3(self, constructResult);
   }
 }
 _inherits(ZHHansDeadlineFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
@@ -68,33 +57,33 @@ const items = [
       const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
       let num = parseInt(index[1]);
       if (isNaN(num)) {
-        num = ZHHansDeadlineFormatParser(10269).zhStringToNumber(index[1]);
+        num = _mod10269.zhStringToNumber(index[1]);
       }
       if (isNaN(num)) {
         num = 3;
         if ("\u51E0" !== index[1]) {
           num = 0.5;
-          if ("\u534A" !== tmp4) {
+          if ("\u534A" !== index[1]) {
             return null;
           }
         }
       }
       const obj = {};
       if (index[2][0].match(/[日天星礼月年]/)) {
-        if ("\u65E5" != str3) {
-          if ("\u5929" != str3) {
-            if ("\u661F" != str3) {
-              if ("\u793C" != str3) {
-                if ("\u6708" == str3) {
+        if ("\u65E5" != index[2][0]) {
+          if ("\u5929" != index[2][0]) {
+            if ("\u661F" != index[2][0]) {
+              if ("\u793C" != index[2][0]) {
+                if ("\u6708" == index[2][0]) {
                   obj.month = num;
-                } else if ("\u5E74" == str3) {
+                } else if ("\u5E74" == index[2][0]) {
                   obj.year = num;
                 }
               }
             }
             obj.week = num;
           }
-          const addDurationResult = ZHHansDeadlineFormatParser(10163).addDuration(createParsingResult.refDate, obj);
+          const addDurationResult = EmptyDuration.addDuration(createParsingResult.refDate, obj);
           const start7 = parsingResult.start;
           start7.assign("year", addDurationResult.getFullYear());
           const start8 = parsingResult.start;
@@ -105,20 +94,17 @@ const items = [
         }
         obj.day = num;
       } else {
-        if ("\u79D2" == str3) {
+        if ("\u79D2" == index[2][0]) {
           obj.second = num;
-        } else if ("\u5206" == str3) {
+        } else if ("\u5206" == index[2][0]) {
           obj.minute = num;
         } else {
-          let tmp6 = "\u5C0F" != str3;
-          if (tmp6) {
-            tmp6 = "\u949F" != str3;
-          }
+          const tmp6 = "\u5C0F" != str3 && "\u949F" != str3;
           if (!tmp6) {
             obj.hour = num;
           }
         }
-        const addDurationResult1 = ZHHansDeadlineFormatParser(10163).addDuration(createParsingResult.refDate, obj);
+        const addDurationResult1 = EmptyDuration.addDuration(createParsingResult.refDate, obj);
         const start = parsingResult.start;
         start.imply("year", addDurationResult1.getFullYear());
         const start2 = parsingResult.start;

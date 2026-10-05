@@ -10,6 +10,7 @@ import PinwheelData from "01709_PinwheelData.js";
 import RotateInData from "01710_RotateInData.js";
 import RollInData from "01711_RollInData.js";
 
+const obj = {};
 const merged = Object.assign(FadeInData.FadeInData);
 const merged1 = Object.assign(FadeInData.FadeOutData);
 const merged2 = Object.assign(BounceInData.BounceInData);
@@ -29,6 +30,7 @@ const merged15 = Object.assign(RotateInData.RotateInData);
 const merged16 = Object.assign(RotateInData.RotateOutData);
 const merged17 = Object.assign(RollInData.RollInData);
 const merged18 = Object.assign(RollInData.RollOutData);
+const obj2 = {};
 const merged19 = Object.assign(FadeInData.FadeIn);
 const merged20 = Object.assign(FadeInData.FadeOut);
 const merged21 = Object.assign(BounceInData.BounceIn);
@@ -63,5 +65,5 @@ export const TransitionType = {
   ENTRY_EXIT: 5,
   [5]: "ENTRY_EXIT",
 };
-export const AnimationsData = {};
-export const Animations = {};
+export const AnimationsData = obj;
+export const Animations = obj2;

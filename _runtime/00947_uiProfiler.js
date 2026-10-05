@@ -2,13 +2,12 @@
 import _mod693 from "metro/00693__.js";
 import _mod948 from "metro/00948__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const uiProfiler = {
   startProfiler() {
-    const client = _mod693.getClient();
+    const obj = _mod693;
+    const client = obj.getClient();
     if (client) {
       if (client.getIntegrationByName("BrowserProfiling")) {
         client.emit("startUIProfiler");
@@ -22,7 +21,8 @@ export const uiProfiler = {
     }
   },
   stopProfiler() {
-    const client = _mod693.getClient();
+    const obj = _mod693;
+    const client = obj.getClient();
     if (client) {
       if (client.getIntegrationByName("BrowserProfiling")) {
         client.emit("stopUIProfiler");

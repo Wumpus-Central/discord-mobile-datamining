@@ -1,17 +1,21 @@
 // _runtime/05737_DelayedFreeze.js
-import Suspender from "05738_Suspender.js";
-import _slicedToArray from "metro/00032__.js";
-import noop from "metro/00019__.js";
+import Fragment from "react/00021_Fragment.js";
+import react2 from "05738_react.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import react from "00019_react.js";
 
-require = fn;
-const jsx = fn(21).jsx;
+const jsx = Fragment.jsx;
 
-export default function DelayedFreeze(children) {
-  const freeze = children.freeze;
-  const tmp = _slicedToArray(noop.useState(false), 2);
-  closure_1 = tmp[1];
+export default function DelayedFreeze(freeze) {
+  let closure_1;
+  let first;
+  freeze = freeze.freeze;
+  closure_1 = undefined;
+  const children = freeze.children;
+  [first, closure_1] = react.useState(false);
   const items = [freeze];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
+    let closure_0;
     const timeout = setTimeout(() => {
       closure_1_1(closure_0);
     }, 0);
@@ -19,9 +23,10 @@ export default function DelayedFreeze(children) {
       clearTimeout(closure_0);
     };
   }, items);
-  let freeze1 = freeze;
-  if (freeze1) {
-    freeze1 = tmp[0];
+  let freeze2 = freeze;
+  const Freeze = react2.Freeze;
+  if (freeze2) {
+    freeze2 = first;
   }
-  return jsx(Suspender.Freeze, { freeze: freeze1, children: children.children });
+  return <Freeze freeze={freeze2}>{children}</Freeze>;
 }

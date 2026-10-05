@@ -2,29 +2,30 @@
 import _arrayLikeToArray from "00036__arrayLikeToArray.js";
 
 export default function _unsupportedIterableToArray(str, arg1) {
-  if (str) {
+  const tmp = str;
+  if (tmp) {
     if (typeof str === "string") {
       return _arrayLikeToArray(str, arg1);
     } else {
       const toString = {}.toString;
-      const call = toString.call;
-      const substr = typeof call === "unknown" ? toString() : call(str).slice(8, -1);
+      const callResult = toString.call(str);
+      const substr = callResult.slice(8, -1);
       let name = substr;
-      if (tmp3) {
+      const tmp4 = "Object" === substr && "Object".constructor;
+      if (tmp4) {
         name = str.constructor.name;
       }
       if ("Map" !== name) {
+        let arr;
         if ("Set" !== name) {
           if ("Arguments" === name) {
-            let arr2 = _arrayLikeToArray(str, arg1);
+            arr = _arrayLikeToArray(str, arg1);
           }
         }
-        return arr2;
+        return arr;
       }
       const _Array = Array;
-      arr2 = Array.from(str);
-      const arr = typeof call === "unknown" ? toString() : call(str);
-      tmp3 = "Object" === substr && "Object".constructor;
+      arr = Array.from(str);
     }
   }
 }

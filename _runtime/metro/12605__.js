@@ -2,9 +2,6 @@
 import _mod12565 from "12565__.js";
 import _mod12593 from "12593__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
 export const parseSampleRate = function parseSampleRate(flag) {
   if (typeof flag === "boolean") {
     const _Number = Number;
@@ -28,10 +25,11 @@ export const parseSampleRate = function parseSampleRate(flag) {
     if (_mod12593.DEBUG_BUILD) {
       const logger = _mod12565.logger;
       const _JSON = JSON;
+      const warn = logger.warn;
       const json = JSON.stringify(flag);
       const _JSON2 = JSON;
       const _HermesInternal = HermesInternal;
-      logger.warn(
+      warn(
         "[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " +
           json +
           " of type " +

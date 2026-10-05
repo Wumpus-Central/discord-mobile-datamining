@@ -1,35 +1,37 @@
 // _runtime/04191_subMilliseconds.js
-import module_4113_mod from "metro/04113__.js";
+import addMilliseconds_mod from "04113_addMilliseconds.js";
 import requiredArgs_mod from "03959_requiredArgs.js";
-import module_3962_mod from "metro/03962__.js";
+import toInteger_mod from "03962_toInteger.js";
 
-let module_4113 = module_4113_mod;
-if (!module_4113) {
-  const obj = { default: module_4113 };
-  let tmp3 = obj;
+let tmp3;
+let tmp5;
+let tmp7;
+let addMilliseconds = addMilliseconds_mod;
+if (!addMilliseconds) {
+  tmp3 = { default: addMilliseconds };
+  const obj = { default: addMilliseconds };
 } else {
-  tmp3 = module_4113;
+  tmp3 = addMilliseconds;
 }
-module_4113 = tmp3;
+addMilliseconds = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp5 = { default: requiredArgs };
   const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
-let module_3962 = module_3962_mod;
-if (!module_3962) {
-  const obj3 = { default: module_3962 };
-  let tmp7 = obj3;
+let toInteger = toInteger_mod;
+if (!toInteger) {
+  tmp7 = { default: toInteger };
+  const obj3 = { default: toInteger };
 } else {
-  tmp7 = module_3962;
+  tmp7 = toInteger;
 }
-module_3962 = tmp7;
+toInteger = tmp7;
 
 export default function subMilliseconds(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4113.default(arg0, -module_3962.default(arg1));
-};
-export default exports.default;
+  return addMilliseconds.default(arg0, -toInteger.default(arg1));
+}

@@ -1,25 +1,22 @@
 // _runtime/00324_CellRenderMask.js
+import _modDef38 from "metro/00038__.js";
 import _createClassDefault from "metro/00042__createClass.js";
-import _slicedToArray from "metro/00032__.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 
-const CellRenderMask = importDefault;
 class CellRenderMask {
-  constructor(arg0) {
-    tmp = closure_3(this, CellRenderMask);
-    tmp2 = closure_0(closure_1[3])(global >= 0, "CellRenderMask must contain a non-negative number os cells");
-    this._numCells = global;
-    if (0 === global) {
+  constructor(itemCount) {
+    let items;
+    _classCallCheck(this, CellRenderMask);
+    _modDef38(itemCount >= 0, "CellRenderMask must contain a non-negative number os cells");
+    this._numCells = itemCount;
+    if (0 === itemCount) {
       items = [];
     } else {
-      obj = { first: 0, last: null, isSpacer: true };
-      num = 1;
-      obj.last = global - 1;
-      items = [];
-      items[0] = obj;
+      items = [{ first: 0, last: itemCount - 1, isSpacer: true }];
+      const obj = { first: 0, last: itemCount - 1, isSpacer: true };
     }
     this._regions = items;
-    return;
   }
 }
 const entry = {
@@ -33,60 +30,63 @@ let items = [
   {
     key: "addCells",
     value: function addCells(VirtualizedList) {
-      let self = this;
-      let tmp2 = VirtualizedList.first >= 0;
-      if (tmp2) {
-        tmp2 = VirtualizedList.first < self._numCells;
+      let tmp25;
+      let tmp26;
+      let tmp28;
+      let tmp29;
+      const self = this;
+      let tmp3 = VirtualizedList.first >= 0;
+      const tmp2 = _modDef38;
+      if (tmp3) {
+        tmp3 = VirtualizedList.first < self._numCells;
       }
-      if (tmp2) {
-        tmp2 = VirtualizedList.last >= -1;
+      if (tmp3) {
+        tmp3 = VirtualizedList.last >= -1;
       }
-      if (tmp2) {
-        tmp2 = VirtualizedList.last < self._numCells;
+      if (tmp3) {
+        tmp3 = VirtualizedList.last < self._numCells;
       }
-      if (tmp2) {
-        tmp2 = VirtualizedList.last >= VirtualizedList.first - 1;
+      if (tmp3) {
+        tmp3 = VirtualizedList.last >= VirtualizedList.first - 1;
       }
-      CellRenderMask(38)(tmp2, "CellRenderMask.addCells called with invalid cell range");
+      tmp2(tmp3, "CellRenderMask.addCells called with invalid cell range");
       if (VirtualizedList.last >= VirtualizedList.first) {
-        let num7 = 2;
-        [tmp24, tmp25] = self._findRegion(VirtualizedList.first);
-        const tmp23 = _slicedToArray(self._findRegion(VirtualizedList.first), 2);
-        [last, splice] = self._findRegion(VirtualizedList.last);
-        const items = [];
-        const obj = {};
-        const merged = Object.assign(VirtualizedList);
-        obj.isSpacer = false;
-        if (tmp24.first < obj.first) {
-          if (tmp24.isSpacer) {
-            const obj2 = { first: tmp24.first, last: obj.first - 1, isSpacer: true };
-            items.push(obj2);
-          } else {
-            obj.first = tmp24.first;
+        [tmp25, tmp26] = self._findRegion(VirtualizedList.first);
+        _slicedToArray(self._findRegion(VirtualizedList.first), 2);
+        [tmp28, tmp29] = self._findRegion(VirtualizedList.last);
+        _slicedToArray(self._findRegion(VirtualizedList.last), 2);
+        if (tmp26 !== tmp29) {
+          const items = [];
+          const obj = { isSpacer: false };
+          const merged = Object.assign(VirtualizedList);
+          if (tmp25.first < obj.first) {
+            if (tmp25.isSpacer) {
+              const obj2 = { first: tmp25.first, last: obj.first - 1, isSpacer: true };
+              items.push(obj2);
+            } else {
+              obj.first = tmp25.first;
+            }
           }
-        }
-        let items1 = [];
-        if (last.last <= obj.last) {
+          const items1 = [];
+          if (tmp28.last > obj.last) {
+            if (tmp28.isSpacer) {
+              const obj3 = { first: obj.last + 1, last: tmp28.last, isSpacer: true };
+              items1.push(obj3);
+            } else {
+              obj.last = tmp28.last;
+            }
+          }
           const items2 = [];
-          const arraySpreadResult = HermesBuiltin.arraySpread(items, 0);
+          const arraySpreadResult = HermesBuiltin.arraySpread(items2, items, 0);
           items2[arraySpreadResult] = obj;
-          HermesBuiltin.arraySpread(items1, arraySpreadResult + 1);
-          items1 = self._regions;
-          const sum = splice - tmp25 + 1;
-          splice = items1.splice;
-          const items3 = [tmp25, sum];
-          num7 = HermesBuiltin.arraySpread(items2, num7);
-          self = HermesBuiltin.apply(items3, items1);
-        } else if (!last.isSpacer) {
-          obj.last = last.last;
+          HermesBuiltin.arraySpread(items2, items1, arraySpreadResult + 1);
+          const _regions = self._regions;
+          const splice = _regions.splice;
+          const items3 = [tmp26, tmp29 - tmp26 + 1];
+          HermesBuiltin.arraySpread(items3, items2, 2);
+          HermesBuiltin.apply(splice, items3, _regions);
         }
-        const obj3 = { first: obj.last + 1, last: null, isSpacer: true };
-        last = last.last;
-        obj3.last = last;
-        items1.push(obj3);
-        const tmp26 = _slicedToArray(self._findRegion(VirtualizedList.last), 2);
       }
-      const tmp = CellRenderMask(38);
     },
   },
   {
@@ -122,6 +122,8 @@ let items = [
       let num = 0;
       if (0 <= diff) {
         while (true) {
+          let diff1;
+          let sum;
           let _Math = Math;
           rounded = Math.floor((num + diff) / 2);
           tmp4 = tmp._regions[rounded];
@@ -131,8 +133,8 @@ let items = [
             }
           }
           if (VirtualizedList < tmp4.first) {
-            let diff1 = rounded - 1;
-            let sum = num;
+            diff1 = rounded - 1;
+            sum = num;
           } else {
             diff1 = diff;
             sum = num;
@@ -147,9 +149,11 @@ let items = [
         const items = [tmp4, rounded];
         return items;
       }
-      CellRenderMask(38)(false, "A region was not found containing cellIdx " + VirtualizedList);
+      const tmp9 = _modDef38;
+      tmp9(false, "A region was not found containing cellIdx " + VirtualizedList);
     },
   },
 ];
+const CellRenderMask_export = _createClassDefault(CellRenderMask, items);
 
-export const CellRenderMask = _createClassDefault(CellRenderMask, items);
+export { CellRenderMask_export as CellRenderMask };

@@ -1,10 +1,12 @@
 // _runtime/15855_ReanimatedScreen.js
-import noop from "metro/00019__.js";
-import cancelAnimation from "01643_cancelAnimation.js";
+import Fragment from "react/00021_Fragment.js";
+import InnerScreen from "05732_InnerScreen.js";
+import react from "00019_react.js";
+import cancelAnimation from "metro/01643__.js";
 
-const jsx = fn(21).jsx;
-let closure_1 = cancelAnimation.createAnimatedComponent(fn(5732).InnerScreen);
-const forwardRefResult = noop.forwardRef((arg0, ref) => {
+const jsx = Fragment.jsx;
+let closure_1 = cancelAnimation.createAnimatedComponent(InnerScreen.InnerScreen);
+const forwardRefResult = react.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
   return <closure_1 ref={ref} />;
 });

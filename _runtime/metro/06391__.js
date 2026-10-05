@@ -1,18 +1,23 @@
 // _runtime/metro/06391__.js
-import _mod19 from "00019__.js";
-import jsxProd from "../react/00021_jsxProd.js";
-import CompatView from "../06392_CompatView.js";
-import _mod6393 from "06393__.js";
-import CompatScroller from "../06394_CompatScroller.js";
-import get_ActivityIndicator from "00017__.js";
+import react2 from "../00019_react.js";
+import Fragment from "../react/00021_Fragment.js";
+import react_native from "../06392_react-native.js";
+import react3 from "../06393_react.js";
+import react_native2 from "../06394_react-native.js";
+import react_native3 from "../00017_react-native.js";
 
-const noop = _mod19;
+const react = react2;
 
-({ Animated: c2, RefreshControl: c3 } = get_ActivityIndicator);
-const useMemo = _mod19.useMemo;
-const jsx = jsxProd.jsx;
+let c2;
+let c3;
+({ Animated: c2, RefreshControl: c3 } = react_native3);
+const useMemo = react2.useMemo;
+const jsx = Fragment.jsx;
 
 export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent) {
+  let items5;
+  let tmp;
+  let tmp5Result;
   ListHeaderComponent = ListHeaderComponent.ListHeaderComponent;
   const ListHeaderComponentStyle = ListHeaderComponent.ListHeaderComponentStyle;
   const ListFooterComponent = ListHeaderComponent.ListFooterComponent;
@@ -28,52 +33,61 @@ export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent)
   const stickyHeaderConfig = ListHeaderComponent.stickyHeaderConfig;
   let invertedTransformStyle;
   if (ListHeaderComponent.inverted) {
-    invertedTransformStyle = ListHeaderComponent(ListHeaderComponentStyle[3]).getInvertedTransformStyle(tmp);
+    let tmp3 = ListHeaderComponent;
     let obj = ListHeaderComponent(ListHeaderComponentStyle[3]);
+    invertedTransformStyle = obj.getInvertedTransformStyle(tmp);
   }
+  const tmp5 = ListEmptyComponentStyle;
   let items = [onRefresh, refreshing, progressViewOffset, refreshControl];
   const items1 = [ListHeaderComponent, ListHeaderComponentStyle, invertedTransformStyle];
   const items2 = [ListFooterComponent, ListFooterComponentStyle, invertedTransformStyle];
   const tmp6 = ListEmptyComponentStyle(() => {
     let tmp = refreshControl;
-    if (!refreshControl) {
+    if (!tmp) {
       let tmp3;
       if (onRefresh) {
-        const obj = { refreshing: null, progressViewOffset: null, onRefresh: null };
         const _Boolean = Boolean;
-        obj.refreshing = Boolean(refreshing);
-        obj.progressViewOffset = progressViewOffset;
-        obj.onRefresh = tmp2;
-        tmp3 = <React3 refreshing={null} progressViewOffset={null} onRefresh={null} />;
+        tmp3 = <_false refreshing={Boolean(refreshing)} progressViewOffset={progressViewOffset} onRefresh={tmp2} />;
       }
       tmp = tmp3;
     }
     return tmp;
   }, items);
-  const items3 = [ListEmptyComponent, data, invertedTransformStyle, ListEmptyComponentStyle];
   let tmp7 = ListEmptyComponentStyle(() => {
     let tmp2 = null;
     if (ListHeaderComponent) {
-      const obj = { style: null, children: null };
       const items = [ListHeaderComponentStyle, invertedTransformStyle];
-      obj.style = items;
-      obj.children = _mod6393.getValidComponent(tmp);
-      tmp2 = jsx(CompatView.CompatView, { style: null, children: null });
+      const CompatView = react_native.CompatView;
+      tmp2 = <CompatView style={items}>{react3.getValidComponent(tmp)}</CompatView>;
     }
     return tmp2;
   }, items1);
-  let backdropComponent;
+  const items3 = [ListEmptyComponent, data, invertedTransformStyle, ListEmptyComponentStyle];
   const tmp8 = ListEmptyComponentStyle(() => {
     let tmp2 = null;
     if (ListFooterComponent) {
-      const obj = { style: null, children: null };
       const items = [ListFooterComponentStyle, invertedTransformStyle];
-      obj.style = items;
-      obj.children = _mod6393.getValidComponent(tmp);
-      tmp2 = jsx(CompatView.CompatView, { style: null, children: null });
+      const CompatView = react_native.CompatView;
+      tmp2 = <CompatView style={items}>{react3.getValidComponent(tmp)}</CompatView>;
     }
     return tmp2;
   }, items2);
+  let backdropComponent;
+  const tmp9 = ListEmptyComponentStyle(() => {
+    if (ListEmptyComponent) {
+      let tmp7;
+      const obj = react3;
+      const validComponent = obj.getValidComponent(tmp);
+      if (invertedTransformStyle) {
+        const items = [ListEmptyComponentStyle, tmp5];
+        tmp7 = jsx(react_native.CompatView, { style: items, children: validComponent });
+      } else {
+        tmp7 = validComponent;
+      }
+      return tmp7;
+    }
+    return null;
+  }, items3);
   if (stickyHeaderConfig != null) {
     backdropComponent = stickyHeaderConfig.backdropComponent;
   }
@@ -82,76 +96,46 @@ export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent)
     refreshControl: tmp6,
     renderHeader: tmp7,
     renderFooter: tmp8,
-    renderEmpty: ListEmptyComponentStyle(() => {
-      if (ListEmptyComponent) {
-        const validComponent = _mod6393.getValidComponent(tmp);
-        if (invertedTransformStyle) {
-          const obj2 = { style: null, children: null };
-          const items = [ListEmptyComponentStyle, tmp5];
-          obj2.style = items;
-          obj2.children = validComponent;
-          let tmp7 = jsx(CompatView.CompatView, { style: null, children: null });
-        } else {
-          tmp7 = validComponent;
+    renderEmpty: tmp9,
+    CompatScrollView: tmp5(() => {
+      let forwardRefResult;
+      const CompatAnimatedScroller = react_native2.CompatAnimatedScroller;
+      if (typeof renderScrollComponent === "function") {
+        const tmpResult = react3;
+        if (!tmpResult.isComponentClass(renderScrollComponent)) {
+          forwardRefResult = react.forwardRef((arg0, ref) => {
+            const obj = { ref };
+            const merged = Object.assign(arg0);
+            return renderScrollComponent(obj);
+          });
+          forwardRefResult.displayName = "CustomScrollView";
         }
-        return tmp7;
+        return React2.createAnimatedComponent(forwardRefResult);
       }
-      return null;
-    }, items3),
-    CompatScrollView: null,
-    renderStickyHeaderBackdrop: null,
+      forwardRefResult = CompatAnimatedScroller;
+      if (renderScrollComponent) {
+        forwardRefResult = renderScrollComponent;
+      }
+    }, items5),
+    renderStickyHeaderBackdrop: tmp5Result,
   };
-  const items5 = [renderScrollComponent];
-  const tmp9 = ListEmptyComponentStyle(() => {
-    if (ListEmptyComponent) {
-      const validComponent = _mod6393.getValidComponent(tmp);
-      if (invertedTransformStyle) {
-        const obj2 = { style: null, children: null };
-        const items = [ListEmptyComponentStyle, tmp5];
-        obj2.style = items;
-        obj2.children = validComponent;
-        let tmp7 = jsx(CompatView.CompatView, { style: null, children: null });
-      } else {
-        tmp7 = validComponent;
-      }
-      return tmp7;
-    }
-    return null;
-  }, items3);
-  obj2.CompatScrollView = ListEmptyComponentStyle(() => {
-    if (typeof renderScrollComponent === "function") {
-      if (!tmpResult.isComponentClass(renderScrollComponent)) {
-        let CompatAnimatedScroller = noop.forwardRef((arg0, ref) => {
-          const obj = {};
-          const merged = Object.assign(arg0);
-          obj.ref = ref;
-          return renderScrollComponent(obj);
-        });
-        CompatAnimatedScroller.displayName = "CustomScrollView";
-      }
-      return React2.createAnimatedComponent(CompatAnimatedScroller);
-    }
-    CompatAnimatedScroller = CompatScroller.CompatAnimatedScroller;
-    if (renderScrollComponent) {
-      CompatAnimatedScroller = renderScrollComponent;
-    }
-  }, items5);
-  obj2.renderStickyHeaderBackdrop = ListEmptyComponentStyle(() => {
+  items5 = [renderScrollComponent];
+  tmp5Result = tmp5(() => {
     let backdropComponent;
     if (stickyHeaderConfig != null) {
       backdropComponent = stickyHeaderConfig.backdropComponent;
     }
     let tmp4Result = null;
     if (backdropComponent) {
-      const obj = { style: null, children: null };
       const items = [{ position: "absolute", inset: 0, pointerEvents: "none" }, invertedTransformStyle];
-      obj.style = items;
+      const CompatView = react_native.CompatView;
       let backdropComponent1;
+      const getValidComponent = react3.getValidComponent;
+      react3;
       if (stickyHeaderConfig != null) {
         backdropComponent1 = stickyHeaderConfig.backdropComponent;
       }
-      obj.children = _mod6393.getValidComponent(backdropComponent1);
-      tmp4Result = jsx(CompatView.CompatView, { style: null, children: null });
+      tmp4Result = <CompatView style={items}>{getValidComponent(backdropComponent1)}</CompatView>;
     }
     return tmp4Result;
   }, items4);

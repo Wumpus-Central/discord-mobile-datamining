@@ -1,4 +1,7 @@
 // _runtime/metro/10326__.js
+import repeatedTimeunitPattern from "../10161_repeatedTimeunitPattern.js";
+import ReferenceWithTimezone from "../10164_ReferenceWithTimezone.js";
+import _mod10315 from "10315__.js";
 import _mod10317 from "10317__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -6,19 +9,12 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const UKRelativeDateFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -27,22 +23,17 @@ function _isNativeReflectConstruct() {
 }
 class UKRelativeDateFormatParser {
   constructor() {
-    self = this;
-    tmp = c2(this, UKRelativeDateFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(UKRelativeDateFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, UKRelativeDateFormatParser);
+    const obj = _getPrototypeOf(UKRelativeDateFormatParser);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return tmp3(self, constructResult);
+    return c3(self, constructResult);
   }
 }
 _inherits(UKRelativeDateFormatParser, _mod10317.AbstractParserWithLeftRightBoundaryChecking);
@@ -51,7 +42,7 @@ const entry = {
   value: function innerPatternString(arg0) {
     return (
       "(\u0432 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u0443 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043D\u0430 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E|\u043D\u0430 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u0432 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E|\u043D\u0430 \u0446\u044C\u043E\u043C\u0443|\u0432 \u0446\u044C\u043E\u043C\u0443|\u0443 \u0446\u044C\u043E\u043C\u0443|\u0446\u044C\u043E\u0433\u043E)\\s*(" +
-      UKRelativeDateFormatParser(10161).matchAnyPattern(UKRelativeDateFormatParser(10315).TIME_UNIT_DICTIONARY) +
+      repeatedTimeunitPattern.matchAnyPattern(_mod10315.TIME_UNIT_DICTIONARY) +
       ")(?=\\s*)"
     );
   },
@@ -61,9 +52,11 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(createParsingComponents, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const formatted1 = arg1[2].toLowerCase();
-      const str3 = UKRelativeDateFormatParser(10315).TIME_UNIT_DICTIONARY[formatted1];
+      const str = arg1[1];
+      const formatted = str.toLowerCase();
+      const str2 = arg1[2];
+      const formatted1 = str2.toLowerCase();
+      const str3 = _mod10315.TIME_UNIT_DICTIONARY[formatted1];
       if ("\u043D\u0430 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
         if ("\u0432 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
           if ("\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
@@ -75,13 +68,16 @@ const items = [
                       const parsingComponents = createParsingComponents.createParsingComponents();
                       const _Date = Date;
                       const instant = createParsingComponents.reference.instant;
+                      const self = this;
+                      const self2 = this;
                       const date = new Date(instant.getTime());
                       if (str3.match(/week/i)) {
-                        date.setDate(date.getDate() - date.getDay());
+                        const setDate = date.setDate;
+                        const date1 = date.getDate();
+                        setDate(date1 - date.getDay());
                         parsingComponents.imply("day", date.getDate());
                         parsingComponents.imply("month", date.getMonth() + 1);
                         parsingComponents.imply("year", date.getFullYear());
-                        const date1 = date.getDate();
                       } else if (str3.match(/month/i)) {
                         date.setDate(1);
                         parsingComponents.imply("day", date.getDate());
@@ -101,13 +97,13 @@ const items = [
               }
               const obj = {};
               obj[str3] = -1;
-              const ParsingComponents = UKRelativeDateFormatParser(10164).ParsingComponents;
+              const ParsingComponents = ReferenceWithTimezone.ParsingComponents;
               return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj);
             }
           }
         }
       }
-      const ParsingComponents2 = UKRelativeDateFormatParser(10164).ParsingComponents;
+      const ParsingComponents2 = ReferenceWithTimezone.ParsingComponents;
       return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [str3]: 1 });
     },
   },

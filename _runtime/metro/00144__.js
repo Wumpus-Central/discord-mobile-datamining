@@ -2,35 +2,27 @@
 import renderElement from "../00114_renderElement.js";
 import _mod145 from "00145__.js";
 
-require = arg1;
-const dependencyMap = arg6;
 let c2 = null;
 const set = new Set();
-
-export default {
+let obj = {
   currentlyFocusedInput() {
     return c2;
   },
   focusInput(current) {
-    let tmp = c2 !== current;
-    if (tmp) {
-      tmp = null != current;
-    }
+    const tmp = c2 !== current && null != current;
     if (tmp) {
       c2 = current;
     }
   },
   blurInput(current) {
-    let tmp = c2 === current;
-    if (tmp) {
-      tmp = null != current;
-    }
+    const tmp = c2 === current && null != current;
     if (tmp) {
       c2 = null;
     }
   },
   currentlyFocusedField() {
-    return renderElement.findNodeHandle(c2);
+    const obj = renderElement;
+    return obj.findNodeHandle(c2);
   },
   focusField(arg0) {},
   blurField(arg0) {},
@@ -44,12 +36,12 @@ export default {
             editable = currentProps.editable;
           }
           if (false !== editable) {
+            const tmp4 = c2 !== self && null != self;
             if (tmp4) {
               c2 = self;
             }
             const Commands = _mod145.Commands;
             Commands.focus(self);
-            tmp4 = c2 !== self && null != self;
           }
         }
       }
@@ -64,10 +56,7 @@ export default {
       tmp = null != _default2;
     }
     if (tmp) {
-      let tmp4 = c2 === _default2;
-      if (tmp4) {
-        tmp4 = null != _default2;
-      }
+      const tmp4 = c2 === _default2 && null != _default2;
       if (tmp4) {
         c2 = null;
       }
@@ -93,3 +82,5 @@ export default {
     return hasItem;
   },
 };
+
+export default obj;

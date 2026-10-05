@@ -2,9 +2,10 @@
 
 export default function extractOpacity(str) {
   if (typeof str === "string") {
+    let result;
     const trimmed = str.trim();
     if (trimmed.endsWith("%")) {
-      let result = +str.slice(0, -1) / 100;
+      result = +str.slice(0, -1) / 100;
     }
     const _isNaN = isNaN;
     let num5 = 1;

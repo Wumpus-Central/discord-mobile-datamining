@@ -1,0 +1,92 @@
+// _runtime/00572_react.js
+import react from "00019_react.js";
+
+function identity(arg0) {
+  return arg0;
+}
+function createImpl(arg0) {
+  let store;
+  const obj = store(571);
+  store = obj.createStore(arg0);
+  function useBoundStore(arg0) {
+    let tmp = arg0;
+    let closure_0 = store;
+    if (arg0 === undefined) {
+      tmp = identity;
+    }
+    let closure_1 = tmp;
+    const items = [store, tmp];
+    const useSyncExternalStore = react.useSyncExternalStore;
+    const subscribe = store.subscribe;
+    const items1 = [store, tmp];
+    const callback = react.useCallback(() => closure_1(closure_0.getState()), items);
+    const syncExternalStore = useSyncExternalStore(
+      subscribe,
+      callback,
+      react.useCallback(() => closure_1(closure_0.getInitialState()), items1),
+    );
+    const debugValue = react.useDebugValue(syncExternalStore);
+    return syncExternalStore;
+  }
+  const merged = Object.assign(useBoundStore, store);
+  return useBoundStore;
+}
+
+export const create = (arg0) => {
+  let store;
+  let tmp2;
+  if (arg0) {
+    if (typeof createImpl === "function") {
+      const obj = store(571);
+      store = obj.createStore(arg0);
+      function useBoundStore(arg0) {
+        let tmp = arg0;
+        let closure_0 = store;
+        if (arg0 === undefined) {
+          tmp = identity;
+        }
+        let closure_1 = tmp;
+        const items = [store, tmp];
+        const useSyncExternalStore = react.useSyncExternalStore;
+        const subscribe = store.subscribe;
+        const items1 = [store, tmp];
+        const callback = react.useCallback(() => closure_1(closure_0.getState()), items);
+        const syncExternalStore = useSyncExternalStore(
+          subscribe,
+          callback,
+          react.useCallback(() => closure_1(closure_0.getInitialState()), items1),
+        );
+        const debugValue = react.useDebugValue(syncExternalStore);
+        return syncExternalStore;
+      }
+      const _Object = Object;
+      const merged = Object.assign(useBoundStore, store);
+      tmp2 = useBoundStore;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    tmp2 = createImpl;
+  }
+  return tmp2;
+};
+export const useStore = function useStore(subscribe) {
+  let closure_0 = subscribe;
+  let tmp = arg1;
+  if (arg1 === undefined) {
+    tmp = identity;
+  }
+  let closure_1 = tmp;
+  const items = [subscribe, tmp];
+  const useSyncExternalStore = react.useSyncExternalStore;
+  subscribe = subscribe.subscribe;
+  const items1 = [subscribe, tmp];
+  const callback = react.useCallback(() => closure_1(closure_0.getState()), items);
+  const syncExternalStore = useSyncExternalStore(
+    subscribe,
+    callback,
+    react.useCallback(() => closure_1(closure_0.getInitialState()), items1),
+  );
+  const debugValue = react.useDebugValue(syncExternalStore);
+  return syncExternalStore;
+};

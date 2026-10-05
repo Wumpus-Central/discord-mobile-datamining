@@ -1,12 +1,15 @@
 // _runtime/metro/01789__.js
-import _mod1654 from "01654__.js";
-import _mod1668 from "01668__.js";
+import ReanimatedError from "../01654_ReanimatedError.js";
+import LayoutAnimationType from "../01668_LayoutAnimationType.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const f85029 = (acc, __workletHash) => {
+  const str = __workletHash.__workletHash;
+  return acc + str.toString();
+};
 function isAnimated(onFrame) {
+  let someResult;
   if (Array.isArray(onFrame)) {
-    let someResult = onFrame.some(require);
+    someResult = onFrame.some(isAnimated);
   } else {
     someResult = typeof onFrame === "object";
     if (typeof onFrame === "object") {
@@ -17,27 +20,26 @@ function isAnimated(onFrame) {
       if (!someResult1) {
         const _Object = Object;
         const values = Object.values(onFrame);
-        someResult1 = values.some(require);
+        someResult1 = values.some(isAnimated);
       }
       someResult = someResult1;
     }
   }
   return someResult;
 }
-let closure_129_0 = isAnimated;
 isAnimated.__closure = {};
 isAnimated.__workletHash = 4296700641760;
 isAnimated.__initData = {
   code: "function isAnimated_Pnpm_utilsTs1(prop){const isAnimated_Pnpm_utilsTs1=this._recur;if(Array.isArray(prop)){return prop.some(isAnimated_Pnpm_utilsTs1);}else if(typeof prop==='object'&&prop!==null){if(prop.onFrame!==undefined){return true;}else{return Object.values(prop).some(isAnimated_Pnpm_utilsTs1);}}return false;}",
 };
-function shallowEqual(c8, arg1) {
-  const keys = Object.keys(c8);
+function shallowEqual(animations, arg1) {
+  const keys = Object.keys(animations);
   if (keys.length !== Object.keys(arg1).length) {
     return false;
   } else {
     let num = 0;
     if (0 < keys.length) {
-      while (c8[keys[num]] === arg1[keys[num]]) {
+      while (animations[keys[num]] === arg1[keys[num]]) {
         num = num + 1;
       }
       return false;
@@ -53,14 +55,18 @@ shallowEqual.__initData = {
 function validateAnimatedStyles(obj) {
   if (typeof obj !== "object") {
     const _HermesInternal = HermesInternal;
-    const reanimatedError = new _mod1654.ReanimatedError(
+    const self3 = this;
+    const self4 = this;
+    const reanimatedError = new ReanimatedError.ReanimatedError(
       "`useAnimatedStyle` has to return an object, found " + typeof obj + " instead.",
     );
     throw reanimatedError;
   } else {
     const _Array = Array;
     if (Array.isArray(obj)) {
-      const reanimatedError1 = new _mod1654.ReanimatedError(
+      const self = this;
+      const self2 = this;
+      const reanimatedError1 = new ReanimatedError.ReanimatedError(
         "`useAnimatedStyle` has to return an object and cannot return static styles combined with dynamic ones. Please do merging where a component receives props.",
       );
       throw reanimatedError1;
@@ -75,39 +81,40 @@ validateAnimatedStyles.__initData = {
 
 export const buildWorkletsHash = function buildWorkletsHash(items1) {
   const values = Object.values(items1);
-  return values.reduce((acc, __workletHash) => acc + __workletHash.__workletHash.toString(), "");
+  return values.reduce(f85029, "");
 };
-export const buildDependencies = function buildDependencies(arr, memoizedGestureCallbacks) {
+export const buildDependencies = function buildDependencies(items10, memoizedGestureCallbacks) {
   const values = Object.values(memoizedGestureCallbacks);
   const found = values.filter((item) => undefined !== item);
   let tmp2 = found;
-  if (arr) {
+  if (items10) {
     const _Object = Object;
+    const push = items10.push;
     const values2 = Object.values(found);
-    arr = arr.push(values2.reduce((acc, __workletHash) => acc + __workletHash.__workletHash.toString(), ""));
-    tmp2 = arr;
+    let str = "";
+    push(values2.reduce(f85029, ""));
+    tmp2 = items10;
   }
   return tmp2;
 };
 export const areDependenciesEqual = function areDependenciesEqual(dependencies, savedDependencies) {
+  let is;
   if (typeof Object.is === "function") {
     const _Object = Object;
+    is = Object.is;
   } else {
-    is = function is(arg0, arg1) {
-      let tmp = arg0 === arg1;
+    is = function is(dependencies, savedDependencies) {
+      let tmp = dependencies === savedDependencies;
       if (tmp) {
-        let tmp2 = 0 !== arg0;
-        if (!tmp2) {
-          tmp2 = 1 / arg0 === 1 / arg1;
-        }
-        tmp = tmp2;
+        tmp = 0 !== dependencies || 1 / dependencies === 1 / savedDependencies;
+        const tmp2 = 0 !== dependencies || 1 / dependencies === 1 / savedDependencies;
       }
       if (!tmp) {
         const _Number = Number;
-        let isNaNResult = Number.isNaN(arg0);
+        let isNaNResult = Number.isNaN(dependencies);
         if (isNaNResult) {
           const _Number2 = Number;
-          isNaNResult = Number.isNaN(arg1);
+          isNaNResult = Number.isNaN(savedDependencies);
         }
         tmp = isNaNResult;
       }
@@ -116,6 +123,7 @@ export const areDependenciesEqual = function areDependenciesEqual(dependencies, 
   }
   let flag = false;
   if (dependencies) {
+    let tmp = savedDependencies;
     flag = false;
     if (savedDependencies) {
       flag = false;
@@ -134,18 +142,18 @@ export const areDependenciesEqual = function areDependenciesEqual(dependencies, 
                 break;
               }
             } else {
-              let obj = _mod1668;
+              let obj = LayoutAnimationType;
               flag = false;
               if (!obj.isWorkletFunction(tmp2)) {
                 break;
               } else {
-                let tmp5Result = _mod1668;
+                let tmp5Result = LayoutAnimationType;
                 flag = false;
                 if (!tmp5Result.isWorkletFunction(tmp3)) {
                   break;
                 } else {
-                  let __closure = tmp2;
-                  let __closure2 = tmp3;
+                  let closure_0 = tmp2;
+                  let closure_1 = tmp3;
                   let flag2 = false;
                   if (tmp2.__workletHash === tmp3.__workletHash) {
                     let _Object2 = Object;
@@ -153,13 +161,9 @@ export const areDependenciesEqual = function areDependenciesEqual(dependencies, 
                     let _Object3 = Object;
                     let tmp7 =
                       keys.length === Object.keys(tmp3.__closure).length &&
-                      keys.every((item) => {
-                        let tmp2 = item in __closure2.__closure;
-                        if (tmp2) {
-                          tmp2 = __closure.__closure[item] === tmp.__closure[item];
-                        }
-                        return tmp2;
-                      });
+                      keys.every(
+                        (item) => item in __closure2.__closure && __closure.__closure[item] === tmp.__closure[item],
+                      );
                     flag2 = tmp7;
                   }
                   flag = false;

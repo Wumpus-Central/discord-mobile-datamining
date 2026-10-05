@@ -1,11 +1,12 @@
 // _runtime/04976_keysIn.js
-import _mod518 from "metro/00518__.js";
+import isArrayLike from "00518_isArrayLike.js";
 import arrayLikeKeys from "00532_arrayLikeKeys.js";
 import baseKeysIn from "04977_baseKeysIn.js";
 
 export default function keysIn(arg0) {
-  if (_mod518(arg0)) {
-    let tmp3 = arrayLikeKeys(arg0, true);
+  let tmp3;
+  if (isArrayLike(arg0)) {
+    tmp3 = arrayLikeKeys(arg0, true);
   } else {
     tmp3 = baseKeysIn(arg0);
   }

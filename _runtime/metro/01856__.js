@@ -1,13 +1,18 @@
 // _runtime/metro/01856__.js
-import _mod17 from "00017__.js";
-import cancelAnimation from "../01643_cancelAnimation.js";
+import react_native from "../00017_react-native.js";
+import _mod1643 from "01643__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const value = _mod17.Platform.Version >= 30 || false;
-let obj = { duration: 250, easing: null };
-const Easing = cancelAnimation.Easing;
-obj.easing = Easing.bezier(0.19919472913616398, 0.010644531250000006, 0.27920937042459737, 0.91025390625);
+let Easing;
+const tmp2 = react_native.Platform.Version >= 30 || false;
+const value = tmp2;
+let obj = {
+  duration: 250,
+  easing: Easing.bezier(0.19919472913616398, 0.010644531250000006, 0.27920937042459737, 0.91025390625),
+};
+Easing = _mod1643.Easing;
 let closure_4 = {
   code: "function pnpm_useSmoothKeyboardHandlerTs1(){const{IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS,persistedHeight,TELEGRAM_ANDROID_TIMING_CONFIG,target,animatedKeyboardHeight}=this.__closure;if(IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS){return;}if(persistedHeight.value===0){return;}const event={duration:TELEGRAM_ANDROID_TIMING_CONFIG.duration,target:target.value,height:animatedKeyboardHeight.value,progress:animatedKeyboardHeight.value/persistedHeight.value};return event;}",
 };
@@ -25,79 +30,74 @@ const __initData4 = {
 };
 
 export const useSmoothKeyboardHandler = (handler, items11) => {
+  let fn2;
+  let sharedValue;
   _require = handler;
-  sharedValue = require("cancelAnimation").useSharedValue(-1);
-  obj = require("cancelAnimation");
-  const sharedValue1 = require("cancelAnimation").useSharedValue(0);
-  let obj2 = require("cancelAnimation");
-  const sharedValue2 = require("cancelAnimation").useSharedValue(0);
-  const obj3 = require("cancelAnimation");
-  const sharedValue3 = require("cancelAnimation").useSharedValue(0);
-  const obj4 = require("cancelAnimation");
+  obj = require("01643__.js");
+  sharedValue = obj.useSharedValue(-1);
+  let obj2 = require("01643__.js");
+  const sharedValue1 = obj2.useSharedValue(0);
+  const obj3 = require("01643__.js");
+  const sharedValue2 = obj3.useSharedValue(0);
+  const obj4 = require("01643__.js");
+  const sharedValue3 = obj4.useSharedValue(0);
   const fn = function s() {
-    if (!closure_2) {
+    if (!React2) {
       if (0 !== sharedValue2.value) {
-        obj = { duration: null, target: null, height: null, progress: null };
-        obj.duration = obj.duration;
-        obj.target = sharedValue.value;
-        obj.height = sharedValue3.value;
-        obj.progress = sharedValue3.value / iter.value;
+        obj = {
+          duration: obj.duration,
+          target: sharedValue.value,
+          height: sharedValue3.value,
+          progress: sharedValue3.value / iter.value,
+        };
         return obj;
       }
     }
   };
-  fn.__closure = {
+  const obj5 = {
     IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS: sharedValue1,
     persistedHeight: sharedValue2,
     TELEGRAM_ANDROID_TIMING_CONFIG: sharedValue2,
     target: sharedValue,
     animatedKeyboardHeight: sharedValue3,
   };
+  fn.__closure = obj5;
   fn.__workletHash = 4217597553195;
   fn.__initData = sharedValue3;
+  const tmp8 = require("01643__.js");
   class I {
-    constructor(arg0) {
-      if (handler) {
-        tmp = closure_0;
-        onMove = closure_0.onMove;
-        tmp2 = null;
+    constructor(height) {
+      const tmp = height;
+      if (tmp) {
+        const onMove = handler.onMove;
         if (onMove != null) {
-          onMoveResult = onMove(handler);
+          onMove(height);
         }
-        if (handler.height === closure_2.value) {
-          onEnd = tmp.onEnd;
+        if (height.height === sharedValue1.value) {
+          const onEnd = handler.onEnd;
           if (onEnd != null) {
-            onEndResult = onEnd(handler);
+            onEnd(height);
           }
-          tmp5 = closure_3;
-          closure_3.value = iter.value;
+          sharedValue2.value = iter.value;
         }
       }
-      return;
     }
   }
   I.__closure = { handler, height: sharedValue1, persistedHeight: sharedValue2 };
   I.__workletHash = 1186520959152;
   I.__initData = __initData;
-  let tmp9 = items11;
+  let tmp11 = items11;
+  const useAnimatedReaction = tmp8.useAnimatedReaction;
   if (items11) {
     const items = [];
-    HermesBuiltin.arraySpread(items11, 0);
-    tmp9 = items;
+    HermesBuiltin.arraySpread(items, items11, 0);
+    tmp11 = items;
   }
-  const animatedReaction = require("cancelAnimation").useAnimatedReaction(fn, I, tmp9);
-  const obj5 = require("cancelAnimation");
-  const obj6 = {
-    IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS: sharedValue1,
-    persistedHeight: sharedValue2,
-    TELEGRAM_ANDROID_TIMING_CONFIG: sharedValue2,
-    target: sharedValue,
-    animatedKeyboardHeight: sharedValue3,
-  };
-  const tmp8 = sharedValue2;
-  const obj7 = { onStart: null, onMove: null, onEnd: null };
-  const fn2 = function v(height) {
-    if (!closure_2) {
+  const animatedReaction = useAnimatedReaction(fn, I, tmp11);
+  const obj6 = { onStart: fn2, onMove: R, onEnd: O };
+  fn2 = function v(height) {
+    let duration;
+    if (!React2) {
       if (height.height === sharedValue2.value) {
         const onStart = handler.onStart;
         if (onStart != null) {
@@ -114,24 +114,23 @@ export const useSmoothKeyboardHandler = (handler, items11) => {
     if (height.height > 0) {
       sharedValue2.value = height.height;
     }
-    if (!closure_2) {
-      obj = cancelAnimation;
+    if (!React2) {
+      obj = _mod1643;
       sharedValue3.value = obj.withTiming(height.height, obj);
     }
     const onStart2 = handler.onStart;
     if (onStart2 != null) {
-      let obj2 = {};
+      const obj2 = { duration };
       const merged = Object.assign(height);
-      if (closure_2) {
-        let duration = height.duration;
+      if (React2) {
+        duration = height.duration;
       } else {
         duration = obj.duration;
       }
-      obj2.duration = duration;
-      obj2 = onStart2(obj2);
+      onStart2(obj2);
     }
   };
-  const tmpResult = require("01837__.js");
+  const useKeyboardHandler = require("01837__.js").useKeyboardHandler;
   fn2.__closure = {
     IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS: sharedValue1,
     persistedHeight: sharedValue2,
@@ -139,45 +138,46 @@ export const useSmoothKeyboardHandler = (handler, items11) => {
     target: sharedValue,
     height: sharedValue1,
     animatedKeyboardHeight: sharedValue3,
-    withTiming: require("cancelAnimation").withTiming,
-    TELEGRAM_ANDROID_TIMING_CONFIG: tmp8,
+    withTiming: require("01643__.js").withTiming,
+    TELEGRAM_ANDROID_TIMING_CONFIG: sharedValue2,
   };
   fn2.__workletHash = 2049629670138;
   fn2.__initData = __initData2;
-  obj7.onStart = fn2;
+  ({
+    IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS: sharedValue1,
+    persistedHeight: sharedValue2,
+    handler,
+    target: sharedValue,
+    height: sharedValue1,
+    animatedKeyboardHeight: sharedValue3,
+    withTiming: require("01643__.js").withTiming,
+    TELEGRAM_ANDROID_TIMING_CONFIG: sharedValue2,
+  });
   class R {
     constructor(arg0) {
-      if (c2) {
-        onMove = closure_0.onMove;
-        tmp2 = null;
+      if (React2) {
+        const onMove = handler.onMove;
         if (onMove != null) {
-          tmp3 = handler;
-          onMoveResult = onMove(handler);
+          onMove(arg0);
         }
       }
-      return;
     }
   }
   R.__closure = { IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS: sharedValue1, handler };
   R.__workletHash = 16381726355375;
   R.__initData = __initData3;
-  obj7.onMove = R;
   class O {
     constructor(arg0) {
-      if (c2) {
-        onEnd = closure_0.onEnd;
-        tmp2 = null;
+      if (React2) {
+        const onEnd = handler.onEnd;
         if (onEnd != null) {
-          tmp3 = handler;
-          onEndResult = onEnd(handler);
+          onEnd(arg0);
         }
       }
-      return;
     }
   }
   O.__closure = { IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS: sharedValue1, handler };
   O.__workletHash = 9348108811600;
   O.__initData = __initData4;
-  obj7.onEnd = O;
-  tmpResult.useKeyboardHandler(obj7, items11);
+  useKeyboardHandler(obj6, items11);
 };

@@ -1,42 +1,52 @@
 // _runtime/01210_MessageType.js
+import typeofJsonValue from "01199_typeofJsonValue.js";
+import binaryReadOptions from "01203_binaryReadOptions.js";
+import binaryWriteOptions from "01206_binaryWriteOptions.js";
+import jsonReadOptions from "01208_jsonReadOptions.js";
+import ScalarType from "01211_ScalarType.js";
+import ReflectionTypeCheck from "01213_ReflectionTypeCheck.js";
+import ReflectionJsonReader from "01215_ReflectionJsonReader.js";
+import ReflectionJsonWriter from "01217_ReflectionJsonWriter.js";
+import ReflectionBinaryReader from "01218_ReflectionBinaryReader.js";
+import ReflectionBinaryWriter from "01220_ReflectionBinaryWriter.js";
+import reflectionCreate from "01221_reflectionCreate.js";
+import reflectionMergePartial from "01222_reflectionMergePartial.js";
+import reflectionEquals from "01223_reflectionEquals.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
-const MessageType = require;
 class MessageType {
-  constructor(arg0, arg1, arg2) {
-    self = this;
-    obj = importDefault;
-    tmp = c2(this, MessageType);
+  constructor(typeName, arr, arg2) {
+    const self = this;
+    let obj = arg2;
+    _classCallCheck(this, MessageType);
     this.defaultCheckDepth = 16;
-    this.typeName = global;
-    tmp2 = closure_0;
-    tmp3 = closure_1;
-    this.fields = require.map(closure_0(closure_1[2]).normalizeFieldInfo);
-    if (null == importDefault) {
+    this.typeName = typeName;
+    this.fields = arr.map(ScalarType.normalizeFieldInfo);
+    if (null == arg2) {
       obj = {};
     }
     self.options = obj;
-    reflectionTypeCheck = new tmp2(tmp3[3]).ReflectionTypeCheck(self);
+    const reflectionTypeCheck = new ReflectionTypeCheck.ReflectionTypeCheck(self);
     self.refTypeCheck = reflectionTypeCheck;
-    reflectionJsonReader = new tmp2(tmp3[4]).ReflectionJsonReader(self);
+    const reflectionJsonReader = new ReflectionJsonReader.ReflectionJsonReader(self);
     self.refJsonReader = reflectionJsonReader;
-    reflectionJsonWriter = new tmp2(tmp3[5]).ReflectionJsonWriter(self);
+    const reflectionJsonWriter = new ReflectionJsonWriter.ReflectionJsonWriter(self);
     self.refJsonWriter = reflectionJsonWriter;
-    reflectionBinaryReader = new tmp2(tmp3[6]).ReflectionBinaryReader(self);
+    const reflectionBinaryReader = new ReflectionBinaryReader.ReflectionBinaryReader(self);
     self.refBinReader = reflectionBinaryReader;
-    reflectionBinaryWriter = new tmp2(tmp3[7]).ReflectionBinaryWriter(self);
+    const reflectionBinaryWriter = new ReflectionBinaryWriter.ReflectionBinaryWriter(self);
     self.refBinWriter = reflectionBinaryWriter;
-    return;
   }
 }
 const entry = {
   key: "create",
   value: function create(arr) {
-    const reflectionCreateResult = MessageType(1221).reflectionCreate(this);
+    const obj = reflectionCreate;
+    const reflectionCreateResult = obj.reflectionCreate(this);
     if (undefined !== arr) {
-      const result = MessageType(1222).reflectionMergePartial(this, reflectionCreateResult, arr);
-      const tmpResult = MessageType(1222);
+      const tmpResult = reflectionMergePartial;
+      const result = tmpResult.reflectionMergePartial(this, reflectionCreateResult, arr);
     }
     return reflectionCreateResult;
   },
@@ -47,14 +57,16 @@ const items = [
     key: "clone",
     value: function clone(arr) {
       const obj2 = this.create();
-      const result = MessageType(1222).reflectionMergePartial(this, obj2, arr);
+      const obj = reflectionMergePartial;
+      const result = obj.reflectionMergePartial(this, obj2, arr);
       return obj2;
     },
   },
   {
     key: "equals",
     value: function equals(arg0, arg1) {
-      return MessageType(1223).reflectionEquals(this, arg0, arg1);
+      const obj = reflectionEquals;
+      return obj.reflectionEquals(this, arg0, arg1);
     },
   },
   {
@@ -84,13 +96,15 @@ const items = [
   {
     key: "mergePartial",
     value: function mergePartial(EmojiFrecency, arr) {
-      const result = MessageType(1222).reflectionMergePartial(this, EmojiFrecency, arr);
+      const obj = reflectionMergePartial;
+      const result = obj.reflectionMergePartial(this, EmojiFrecency, arr);
     },
   },
   {
     key: "fromBinary",
     value: function fromBinary(toBinaryResult, BINARY_READ_OPTIONS) {
-      const binaryReadOptionsResult = MessageType(1203).binaryReadOptions(BINARY_READ_OPTIONS);
+      const obj = binaryReadOptions;
+      const binaryReadOptionsResult = obj.binaryReadOptions(BINARY_READ_OPTIONS);
       return this.internalBinaryRead(
         binaryReadOptionsResult.readerFactory(toBinaryResult),
         toBinaryResult.byteLength,
@@ -101,7 +115,9 @@ const items = [
   {
     key: "fromJson",
     value: function fromJson(arg0, arg1) {
-      return this.internalJsonRead(arg0, MessageType(1208).jsonReadOptions(arg1));
+      const internalJsonRead = this.internalJsonRead;
+      const obj = jsonReadOptions;
+      return internalJsonRead(arg0, obj.jsonReadOptions(arg1));
     },
   },
   {
@@ -113,13 +129,17 @@ const items = [
   {
     key: "toJson",
     value: function toJson(arg0, prettySpaces) {
-      return this.internalJsonWrite(arg0, MessageType(1208).jsonWriteOptions(prettySpaces));
+      const internalJsonWrite = this.internalJsonWrite;
+      const obj = jsonReadOptions;
+      return internalJsonWrite(arg0, obj.jsonWriteOptions(prettySpaces));
     },
   },
   {
     key: "toJsonString",
     value: function toJsonString(arg0, prettySpaces) {
       prettySpaces = undefined;
+      const _JSON = JSON;
+      const toJsonResult = this.toJson(arg0, prettySpaces);
       if (null != prettySpaces) {
         prettySpaces = prettySpaces.prettySpaces;
       }
@@ -130,19 +150,20 @@ const items = [
           num = prettySpaces;
         }
       }
-      return JSON.stringify(this.toJson(arg0, prettySpaces), null, num);
+      return stringify(toJsonResult, null, num);
     },
   },
   {
     key: "toBinary",
     value: function toBinary(favoriteGifs, arg1) {
-      const binaryWriteOptionsResult = MessageType(1206).binaryWriteOptions(arg1);
-      const obj = MessageType(1206);
-      return this.internalBinaryWrite(
+      const obj = binaryWriteOptions;
+      const binaryWriteOptionsResult = obj.binaryWriteOptions(arg1);
+      const internalBinaryWriteResult = this.internalBinaryWrite(
         favoriteGifs,
         binaryWriteOptionsResult.writerFactory(),
         binaryWriteOptionsResult,
-      ).finish();
+      );
+      return internalBinaryWriteResult.finish();
     },
   },
   {
@@ -163,10 +184,9 @@ const items = [
           }
         }
       }
-      obj = MessageType(1199);
-      const error = new Error(
-        "Unable to parse message " + self.typeName + " from JSON " + obj.typeofJsonValue(obj) + ".",
-      );
+      const typeName = self.typeName;
+      obj = typeofJsonValue;
+      const error = new Error("Unable to parse message " + typeName + " from JSON " + obj.typeofJsonValue(obj) + ".");
       throw error;
     },
   },
@@ -199,5 +219,6 @@ const items = [
     },
   },
 ];
+const MessageType_export = _createClass(MessageType, items);
 
-export const MessageType = _createClass(MessageType, items);
+export { MessageType_export as MessageType };

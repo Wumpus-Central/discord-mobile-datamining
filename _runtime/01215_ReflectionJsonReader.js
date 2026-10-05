@@ -1,14 +1,18 @@
 // _runtime/01215_ReflectionJsonReader.js
-import _slicedToArray from "metro/00032__.js";
+import typeofJsonValue from "01199_typeofJsonValue.js";
+import base64decode from "01200_base64decode.js";
+import PbULong2 from "01205_PbULong.js";
+import assert2 from "01207_assert.js";
+import ScalarType from "01211_ScalarType.js";
+import reflectionLongConvert3 from "01216_reflectionLongConvert.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
-const ReflectionJsonReader = require;
 class ReflectionJsonReader {
-  constructor(arg0) {
-    tmp = closure_3(this, ReflectionJsonReader);
-    this.info = global;
-    return;
+  constructor(self) {
+    _classCallCheck(this, ReflectionJsonReader);
+    this.info = self;
   }
 }
 const entry = {
@@ -17,10 +21,7 @@ const entry = {
     const self = this;
     if (undefined === this.fMap) {
       self.fMap = {};
-      let fields = self.info.fields;
-      if (null === fields) {
-        fields = [];
-      }
+      const fields = self.info.fields ?? [];
       for (const item10010 of fields) {
         self.fMap[item10010.name] = item10010;
         self.fMap[item10010.jsonName] = item10010;
@@ -35,19 +36,20 @@ let items = [
   {
     key: "assert",
     value: function assert(arg0, arg1, PbLong) {
-      if (!arg0) {
-        const typeofJsonValueResult = ReflectionJsonReader(1199).typeofJsonValue(PbLong);
-        let tmp5 = "number" != typeofJsonValueResult;
-        if (tmp5) {
-          tmp5 = "boolean" != typeofJsonValueResult;
-        }
+      const tmp = arg0;
+      if (!tmp) {
+        const obj = typeofJsonValue;
+        const typeofJsonValueResult = obj.typeofJsonValue(PbLong);
         let str1 = typeofJsonValueResult;
-        if (!tmp5) {
+        const tmp6 = "number" != typeofJsonValueResult && "boolean" != typeofJsonValueResult;
+        if (!tmp6) {
           str1 = PbLong.toString();
         }
         const self = this;
         const _Error = Error;
         const _HermesInternal = HermesInternal;
+        const self2 = this;
+        const self3 = this;
         const error = new Error("Cannot parse JSON " + str1 + " for " + this.info.typeName + "#" + arg1);
         throw error;
       }
@@ -56,16 +58,22 @@ let items = [
   {
     key: "read",
     value: function read(arg0, arg1, ignoreUnknownFields) {
+      let first;
+      let tmp64;
+      let tmp7;
+      let tmp9;
       const self = this;
       this.prepare();
       const items = [];
       const entries = Object.entries(arg0);
+      const tmp3 = entries[Symbol.iterator]();
       while (tmp3 !== undefined) {
         let tmp6 = _slicedToArray(tmp4, 2);
         [tmp7, tmp9] = tmp6;
         let tmp10 = self.fMap[tmp7];
         let obj = tmp10;
-        if (tmp10) {
+        if (obj) {
+          let tmp15;
           let localName = obj.localName;
           if (obj.oneof) {
             if (items.includes(obj.oneof)) {
@@ -74,8 +82,8 @@ let items = [
               let str4 = " are present in JSON.";
               let str5 = '" of ';
               let str6 = 'Multiple members of the oneof group "';
-              let tmp99 = new.target;
-              let tmp100 = new.target;
+              let self4 = this;
+              let self5 = this;
               let error = new Error(
                 'Multiple members of the oneof group "' +
                   tmp10.oneof +
@@ -86,56 +94,54 @@ let items = [
               throw error;
             } else {
               let arr = items.push(obj.oneof);
-              let obj2 = { oneofKind: null };
-              obj2.oneofKind = localName;
+              let obj2 = { oneofKind: localName };
               arg1[obj.oneof] = obj2;
-              let tmp17 = obj2;
+              tmp15 = obj2;
             }
           } else {
-            tmp17 = arg1;
+            tmp15 = arg1;
           }
           if ("map" == obj.kind) {
             if (null === tmp9) {
               continue;
             } else {
-              let obj6 = ReflectionJsonReader(1199);
-              let assertResult = self.assert(obj6.isJsonObject(tmp9), obj.name, tmp9);
-              let tmp124 = tmp17[localName];
+              let assert = self.assert;
+              let obj6 = typeofJsonValue;
+              let assertResult = assert(obj6.isJsonObject(tmp9), obj.name, tmp9);
+              let tmp121 = tmp15[localName];
               let _Object = Object;
               let entries1 = Object.entries(tmp9);
               for (const item10165 of entries1) {
-                [first, tmp65] = item10165;
-                let tmp66 = tmp65;
-                let assertResult1 = self.assert(null !== tmp65, obj.name + " map value", null);
+                [first, tmp64] = item10165;
+                let tmp65 = tmp64;
+                let assertResult1 = self.assert(null !== tmp64, obj.name + " map value", null);
                 let internalJsonReadResult;
                 let kind3 = obj.V.kind;
                 if ("message" === kind3) {
                   let V2 = obj.V;
                   let TResult = V2.T();
-                  internalJsonReadResult = TResult.internalJsonRead(tmp66, arg2);
+                  internalJsonReadResult = TResult.internalJsonRead(tmp65, ignoreUnknownFields);
                 } else if ("enum" === kind3) {
                   let V = obj.V;
-                  let enumResult = self.enum(V.T(), tmp66, obj.name, arg2.ignoreUnknownFields);
+                  let enumResult = self.enum(V.T(), tmp65, obj.name, ignoreUnknownFields.ignoreUnknownFields);
                   internalJsonReadResult = enumResult;
                   continue;
                 } else if ("scalar" === kind3) {
-                  internalJsonReadResult = self.scalar(tmp66, obj.V.T, obj.V.L, obj.name);
+                  internalJsonReadResult = self.scalar(tmp65, obj.V.T, obj.V.L, obj.name);
                 }
-                let assertResult2 = self.assert(undefined !== internalJsonReadResult, obj.name + " map value", tmp66);
-                if (obj.K == ReflectionJsonReader(1211).ScalarType.BOOL) {
-                  let tmp86 = "true" == first;
-                  if (!tmp86) {
-                    let tmp88 = "false" != first;
-                    if (tmp88) {
-                      tmp88 = first;
-                    }
-                    tmp86 = tmp88;
+                let assertResult2 = self.assert(undefined !== internalJsonReadResult, obj.name + " map value", tmp65);
+                let tmp79 = first;
+                if (obj.K == ScalarType.ScalarType.BOOL) {
+                  let tmp85 = "true" == tmp79;
+                  if (!tmp85) {
+                    let tmp87 = "false" != tmp79 && tmp79;
+                    tmp85 = tmp87;
                   }
-                  first = tmp86;
+                  tmp79 = tmp85;
                 }
-                let str3 = self.scalar(first, obj.K, ReflectionJsonReader(1211).LongType.STRING, obj.name);
+                let str3 = self.scalar(tmp79, obj.K, ScalarType.LongType.STRING, obj.name);
                 let str1 = str3.toString();
-                tmp124[str1] = internalJsonReadResult;
+                tmp121[str1] = internalJsonReadResult;
                 continue;
               }
             }
@@ -145,16 +151,16 @@ let items = [
             } else {
               let _Array = Array;
               let assertResult3 = self.assert(Array.isArray(tmp9), obj.name, tmp9);
-              let arr2 = tmp17[localName];
+              let arr2 = tmp15[localName];
               for (const item10121 of tmp9) {
                 let assertResult4 = self.assert(null !== item10121, obj.name, null);
                 let internalJsonReadResult1;
                 let kind2 = obj.kind;
                 if ("message" === kind2) {
                   let TResult1 = obj.T();
-                  internalJsonReadResult1 = TResult1.internalJsonRead(item10121, arg2);
+                  internalJsonReadResult1 = TResult1.internalJsonRead(item10121, ignoreUnknownFields);
                 } else if ("enum" === kind2) {
-                  let enumResult1 = self.enum(obj.T(), item10121, obj.name, arg2.ignoreUnknownFields);
+                  let enumResult1 = self.enum(obj.T(), item10121, obj.name, ignoreUnknownFields.ignoreUnknownFields);
                   internalJsonReadResult1 = enumResult1;
                   continue;
                 } else if ("scalar" === kind2) {
@@ -175,16 +181,16 @@ let items = [
                 }
               }
               let TResult2 = obj.T();
-              tmp17[localName] = TResult2.internalJsonRead(tmp9, ignoreUnknownFields, tmp17[localName]);
+              tmp15[localName] = TResult2.internalJsonRead(tmp9, ignoreUnknownFields, tmp15[localName]);
             } else if ("enum" === kind) {
               let enumResult2 = self.enum(obj.T(), tmp9, obj.name, ignoreUnknownFields.ignoreUnknownFields);
               if (false === enumResult2) {
                 continue;
               } else {
-                tmp17[localName] = tmp28;
+                tmp15[localName] = tmp26;
               }
             } else if ("scalar" === kind) {
-              tmp17[localName] = self.scalar(tmp9, obj.T, obj.L, obj.name);
+              tmp15[localName] = self.scalar(tmp9, obj.T, obj.L, obj.name);
             }
           }
           continue;
@@ -193,8 +199,8 @@ let items = [
           let _HermesInternal = HermesInternal;
           let str = " from JSON format. JSON key: ";
           let str2 = "Found unknown field while reading ";
-          let tmp12 = new.target;
-          let tmp13 = new.target;
+          let self2 = this;
+          let self3 = this;
           let error1 = new Error(
             "Found unknown field while reading " + self.info.typeName + " from JSON format. JSON key: " + tmp8,
           );
@@ -202,7 +208,6 @@ let items = [
         }
         continue;
       }
-      tmp3 = entries[Symbol.iterator]();
     },
   },
   {
@@ -211,20 +216,22 @@ let items = [
       const self = this;
       if ("google.protobuf.NullValue" == arg0[0]) {
         const _HermesInternal = HermesInternal;
-        ReflectionJsonReader(1207).assert(
+        const obj = assert2;
+        obj.assert(
           null === " only accepts null.",
           "Unable to parse field " + self.info.typeName + "#" + arg2 + ", enum " + arg0[0] + " only accepts null.",
         );
-        const obj = ReflectionJsonReader(1207);
       }
       if (null === str) {
         return 0;
       } else if ("number" === typeof str) {
         const _Number = Number;
+        const assert = assert2.assert;
         const _HermesInternal4 = HermesInternal;
-        const obj4 = ReflectionJsonReader(1207);
-        obj4.assert(
-          Number.isInteger(str),
+        assert2;
+        const isIntegerResult = Number.isInteger(str);
+        assert(
+          isIntegerResult,
           "Unable to parse field " +
             self.info.typeName +
             "#" +
@@ -234,23 +241,18 @@ let items = [
             ".",
         );
         return str;
-      } else if ("string" === tmp31) {
-        let tmp13 = arg0[2];
-        if (tmp13) {
-          tmp13 = str.substring(0, arg0[2].length) === arg0[2];
-        }
+      } else if ("string" === typeof str) {
         let substr = str;
+        const tmp13 = arg0[2] && str.substring(0, arg0[2].length) === arg0[2];
         if (tmp13) {
           substr = str.substring(arg0[2].length);
         }
-        let tmp16 = undefined !== tmp15;
-        if (!tmp16) {
-          tmp16 = !arg3;
-        }
+        let tmp16 = undefined !== tmp15 || !arg3;
         if (tmp16) {
           const _HermesInternal3 = HermesInternal;
-          ReflectionJsonReader(1207).assert(
-            typeof tmp15 === "number",
+          const obj3 = assert2;
+          obj3.assert(
+            typeof arg0[1][substr] === "number",
             "Unable to parse field " +
               self.info.typeName +
               "#" +
@@ -262,46 +264,52 @@ let items = [
               '".',
           );
           tmp16 = tmp15;
-          const obj3 = ReflectionJsonReader(1207);
         }
         return tmp16;
       } else {
         const _HermesInternal2 = HermesInternal;
-        ReflectionJsonReader(1207).assert(
+        const obj2 = assert2;
+        obj2.assert(
           false,
-          "Unable to parse field " + self.info.typeName + "#" + arg2 + ", cannot parse enum value from " + tmp31 + '".',
+          "Unable to parse field " +
+            self.info.typeName +
+            "#" +
+            arg2 +
+            ", cannot parse enum value from " +
+            typeof str +
+            '".',
         );
-        const obj2 = ReflectionJsonReader(1207);
       }
     },
   },
   {
     key: "scalar",
     value: function scalar(flag, arg1, STRING, arg3) {
+      let str;
       try {
-        if (ReflectionJsonReader(1211).ScalarType.DOUBLE !== arg1) {
-          if (ReflectionJsonReader(1211).ScalarType.FLOAT !== arg1) {
-            if (ReflectionJsonReader(1211).ScalarType.INT32 !== arg1) {
-              if (ReflectionJsonReader(1211).ScalarType.FIXED32 !== arg1) {
-                if (ReflectionJsonReader(1211).ScalarType.SFIXED32 !== arg1) {
-                  if (ReflectionJsonReader(1211).ScalarType.SINT32 !== arg1) {
-                    if (ReflectionJsonReader(1211).ScalarType.UINT32 !== arg1) {
-                      if (ReflectionJsonReader(1211).ScalarType.INT64 !== arg1) {
-                        if (ReflectionJsonReader(1211).ScalarType.SFIXED64 !== arg1) {
-                          if (ReflectionJsonReader(1211).ScalarType.SINT64 !== arg1) {
-                            if (ReflectionJsonReader(1211).ScalarType.FIXED64 !== arg1) {
-                              if (ReflectionJsonReader(1211).ScalarType.UINT64 !== arg1) {
-                                if (ReflectionJsonReader(1211).ScalarType.BOOL === arg1) {
+        if (ScalarType.ScalarType.DOUBLE !== arg1) {
+          if (ScalarType.ScalarType.FLOAT !== arg1) {
+            if (ScalarType.ScalarType.INT32 !== arg1) {
+              if (ScalarType.ScalarType.FIXED32 !== arg1) {
+                if (ScalarType.ScalarType.SFIXED32 !== arg1) {
+                  if (ScalarType.ScalarType.SINT32 !== arg1) {
+                    if (ScalarType.ScalarType.UINT32 !== arg1) {
+                      if (ScalarType.ScalarType.INT64 !== arg1) {
+                        if (ScalarType.ScalarType.SFIXED64 !== arg1) {
+                          if (ScalarType.ScalarType.SINT64 !== arg1) {
+                            if (ScalarType.ScalarType.FIXED64 !== arg1) {
+                              if (ScalarType.ScalarType.UINT64 !== arg1) {
+                                if (ScalarType.ScalarType.BOOL === arg1) {
                                   if (null === flag) {
                                     return false;
                                   } else if (typeof flag === "boolean") {
                                     return flag;
                                   }
-                                } else if (ReflectionJsonReader(1211).ScalarType.STRING === arg1) {
+                                } else if (ScalarType.ScalarType.STRING === arg1) {
                                   if (null === flag) {
                                     return "";
                                   } else if (typeof flag !== "string") {
-                                    let str = "extra whitespace";
+                                    str = "extra whitespace";
                                   } else {
                                     try {
                                       const _encodeURIComponent = encodeURIComponent;
@@ -309,40 +317,43 @@ let items = [
                                       return flag;
                                     } catch (err) {}
                                   }
-                                } else if (ReflectionJsonReader(1211).ScalarType.BYTES === arg1) {
+                                } else if (ScalarType.ScalarType.BYTES === arg1) {
                                   if (null !== flag) {
                                     if ("" !== flag) {
                                       if (typeof flag === "string") {
-                                        return ReflectionJsonReader(1200).base64decode(flag);
+                                        const tmp3Result = base64decode;
+                                        return tmp3Result.base64decode(flag);
                                       }
                                     }
                                   }
                                   const _Uint8Array = Uint8Array;
+                                  const self = this;
+                                  const self2 = this;
                                   const uint8Array = new Uint8Array(0);
                                   return uint8Array;
                                 }
                               }
                             }
                             if (null === flag) {
-                              return ReflectionJsonReader(1216).reflectionLongConvert(
-                                ReflectionJsonReader(1205).PbULong.ZERO,
-                                STRING,
-                              );
+                              const tmp3Result8 = reflectionLongConvert3;
+                              return tmp3Result8.reflectionLongConvert(PbULong2.PbULong.ZERO, STRING);
                             } else {
-                              const PbULong = ReflectionJsonReader(1205).PbULong;
-                              return ReflectionJsonReader(1216).reflectionLongConvert(PbULong.from(flag), STRING);
+                              const reflectionLongConvert = reflectionLongConvert3.reflectionLongConvert;
+                              reflectionLongConvert3;
+                              const PbULong = PbULong2.PbULong;
+                              return reflectionLongConvert(PbULong.from(flag), STRING);
                             }
                           }
                         }
                       }
                       if (null === flag) {
-                        return ReflectionJsonReader(1216).reflectionLongConvert(
-                          ReflectionJsonReader(1205).PbLong.ZERO,
-                          STRING,
-                        );
+                        const tmp3Result10 = reflectionLongConvert3;
+                        return tmp3Result10.reflectionLongConvert(PbULong2.PbLong.ZERO, STRING);
                       } else {
-                        const PbLong = ReflectionJsonReader(1205).PbLong;
-                        return ReflectionJsonReader(1216).reflectionLongConvert(PbLong.from(flag), STRING);
+                        const reflectionLongConvert2 = reflectionLongConvert3.reflectionLongConvert;
+                        reflectionLongConvert3;
+                        const PbLong = PbULong2.PbLong;
+                        return reflectionLongConvert2(PbLong.from(flag), STRING);
                       }
                     }
                   }
@@ -352,8 +363,9 @@ let items = [
             if (null === flag) {
               return 0;
             } else {
+              let NumberResult;
               if (typeof flag === "number") {
-                let NumberResult = flag;
+                NumberResult = flag;
               } else if ("" === flag) {
                 str = "empty string";
               } else if (typeof flag === "string") {
@@ -365,23 +377,24 @@ let items = [
                 }
               }
               if (undefined !== NumberResult) {
-                if (arg1 == ReflectionJsonReader(1211).ScalarType.UINT32) {
-                  ReflectionJsonReader(1207).assertUInt32(NumberResult);
-                  const tmp3Result12 = ReflectionJsonReader(1207);
+                if (arg1 == ScalarType.ScalarType.UINT32) {
+                  const tmp3Result12 = assert2;
+                  tmp3Result12.assertUInt32(NumberResult);
                 } else {
-                  ReflectionJsonReader(1207).assertInt32(NumberResult);
-                  const tmp3Result13 = ReflectionJsonReader(1207);
+                  const tmp3Result13 = assert2;
+                  tmp3Result13.assertInt32(NumberResult);
                 }
                 return NumberResult;
               }
             }
           }
           let str4 = "";
-          const self = this;
+          const self3 = this;
+          const assert = this.assert;
           if (str) {
             str4 = ` - ${str}`;
           }
-          this.assert(false, arg3 + str4, flag);
+          assert(false, arg3 + str4, flag);
         }
         if (null === flag) {
           return 0;
@@ -410,10 +423,10 @@ let items = [
               str = "not a number";
             } else {
               const _Number4 = Number;
-              if (Number.isFinite(tmp26)) {
-                if (arg1 == ReflectionJsonReader(1211).ScalarType.FLOAT) {
-                  ReflectionJsonReader(1207).assertFloat32(tmp26);
-                  const tmp3Result14 = ReflectionJsonReader(1207);
+              if (Number.isFinite(NumberResult1)) {
+                if (arg1 == ScalarType.ScalarType.FLOAT) {
+                  const tmp3Result14 = assert2;
+                  tmp3Result14.assertFloat32(NumberResult1);
                 }
                 return NumberResult1;
               } else {
@@ -428,5 +441,6 @@ let items = [
     },
   },
 ];
+const ReflectionJsonReader_export = _createClass(ReflectionJsonReader, items);
 
-export const ReflectionJsonReader = _createClass(ReflectionJsonReader, items);
+export { ReflectionJsonReader_export as ReflectionJsonReader };

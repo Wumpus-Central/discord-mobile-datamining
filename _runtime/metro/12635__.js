@@ -1,9 +1,6 @@
 // _runtime/metro/12635__.js
 import _mod12567 from "12567__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
 export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
   let arr = arg2;
   if (arg2 === undefined) {
@@ -16,11 +13,15 @@ export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
   }
   const tmp = _metadata._metadata || {};
   if (!tmp.sdk) {
-    const obj = { name: null, packages: null, version: null };
+    let obj = {
+      name: "sentry.javascript." + arg1,
+      packages: arr.map((item) => {
+        const obj = { name: "" + str + ":@sentry/" + item, version: _mod12567.SDK_VERSION };
+        return obj;
+      }),
+      version: str(12567).SDK_VERSION,
+    };
     const _HermesInternal = HermesInternal;
-    obj.name = "sentry.javascript." + arg1;
-    obj.packages = arr.map((item) => ({ name: "" + str + ":@sentry/" + item, version: _mod12567.SDK_VERSION }));
-    obj.version = str(12567).SDK_VERSION;
     tmp.sdk = obj;
   }
   _metadata._metadata = tmp;

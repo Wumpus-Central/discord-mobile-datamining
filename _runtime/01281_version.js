@@ -1,9 +1,6 @@
 // _runtime/01281_version.js
 import validateDefault from "01270_validate.js";
 
-importDefault = arg2;
-const dependencyMap = arg6;
-
 export default function version(arr) {
   if (validateDefault(arr)) {
     const _parseInt = parseInt;

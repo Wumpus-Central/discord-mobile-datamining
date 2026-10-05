@@ -1,0 +1,46 @@
+// _runtime/00909__addMeasureSpans.js
+import _mod910 from "metro/00910__.js";
+import _mod934 from "metro/00934__.js";
+import extractNetworkProtocol from "00935_extractNetworkProtocol.js";
+import resourceTimingToSpanAttributes from "00939_resourceTimingToSpanAttributes.js";
+import _onElementTiming from "00940__onElementTiming.js";
+import _mod941 from "metro/00941__.js";
+import _mod942 from "metro/00942__.js";
+import fetch from "00943_fetch.js";
+import SENTRY_XHR_DATA_KEY from "00944_SENTRY_XHR_DATA_KEY.js";
+import ORIGINAL_REQ_BODY from "00945_ORIGINAL_REQ_BODY.js";
+import _onInp from "00946__onInp.js";
+
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+const extractNetworkProtocol_export = extractNetworkProtocol.extractNetworkProtocol;
+const fetch_export = fetch.fetch;
+const SENTRY_XHR_DATA_KEY_export = SENTRY_XHR_DATA_KEY.SENTRY_XHR_DATA_KEY;
+const resourceTimingToSpanAttributes_export = resourceTimingToSpanAttributes.resourceTimingToSpanAttributes;
+
+export const addClsInstrumentationHandler = _mod910.addClsInstrumentationHandler;
+export const addInpInstrumentationHandler = _mod910.addInpInstrumentationHandler;
+export const addLcpInstrumentationHandler = _mod910.addLcpInstrumentationHandler;
+export const addPerformanceInstrumentationHandler = _mod910.addPerformanceInstrumentationHandler;
+export const addTtfbInstrumentationHandler = _mod910.addTtfbInstrumentationHandler;
+export const addPerformanceEntries = _mod934.addPerformanceEntries;
+export const startTrackingInteractions = _mod934.startTrackingInteractions;
+export const startTrackingLongAnimationFrames = _mod934.startTrackingLongAnimationFrames;
+export const startTrackingLongTasks = _mod934.startTrackingLongTasks;
+export const startTrackingWebVitals = _mod934.startTrackingWebVitals;
+export const startTrackingElementTiming = _onElementTiming.startTrackingElementTiming;
+export { extractNetworkProtocol_export as extractNetworkProtocol };
+export const addClickKeypressInstrumentationHandler = _mod941.addClickKeypressInstrumentationHandler;
+export const addHistoryInstrumentationHandler = _mod942.addHistoryInstrumentationHandler;
+export const clearCachedImplementation = fetch.clearCachedImplementation;
+export { fetch_export as fetch };
+export const getNativeImplementation = fetch.getNativeImplementation;
+export const setTimeout = fetch.setTimeout;
+export { SENTRY_XHR_DATA_KEY_export as SENTRY_XHR_DATA_KEY };
+export const addXhrInstrumentationHandler = SENTRY_XHR_DATA_KEY.addXhrInstrumentationHandler;
+export const getBodyString = ORIGINAL_REQ_BODY.getBodyString;
+export const getFetchRequestArgBody = ORIGINAL_REQ_BODY.getFetchRequestArgBody;
+export const parseXhrResponseHeaders = ORIGINAL_REQ_BODY.parseXhrResponseHeaders;
+export const serializeFormData = ORIGINAL_REQ_BODY.serializeFormData;
+export { resourceTimingToSpanAttributes_export as resourceTimingToSpanAttributes };
+export const registerInpInteractionListener = _onInp.registerInpInteractionListener;
+export const startTrackingINP = _onInp.startTrackingINP;
