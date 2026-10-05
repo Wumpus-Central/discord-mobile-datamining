@@ -62,9 +62,13 @@ const obj = {
     "spam_message_request_error_view",
     "spam_message_request_view",
   ]),
-  DEPRECATED: null,
+  DEPRECATED: new Set([
+    "debug_ota_200_timeout",
+    "rtc_connection_desync_store_unknown_user",
+    "rtc_connection_duplicate_user",
+  ]),
 };
-const set = new Set([
+new Set([
   "OtaAssetDownloadAttempt",
   "OtaCheckAttempt",
   "ads_manager.targeting_editor.load_time",
@@ -124,11 +128,7 @@ const set = new Set([
   "spam_message_request_error_view",
   "spam_message_request_view",
 ]);
-obj.DEPRECATED = new Set([
-  "debug_ota_200_timeout",
-  "rtc_connection_desync_store_unknown_user",
-  "rtc_connection_duplicate_user",
-]);
+new Set(["debug_ota_200_timeout", "rtc_connection_desync_store_unknown_user", "rtc_connection_duplicate_user"]);
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/MetricEvents.tsx");
 
 export const MetricEvents = {

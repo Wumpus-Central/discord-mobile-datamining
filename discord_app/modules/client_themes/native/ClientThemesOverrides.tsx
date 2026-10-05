@@ -1,127 +1,123 @@
 // discord_app/modules/client_themes/native/ClientThemesOverrides.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import client_themes_ClientThemesUtils from "ClientThemesUtils.tsx";
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const createStyles = fn(4890);
 let closure_4 = createStyles.createStyles({ none: { backgroundColor: "transparent" } });
-fn(558);
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
-      const gradientValue = client_themes_ClientThemesUtils.useGradientValue(
-        client_themes_ClientThemesUtils.GradientPercentage.END,
-      );
+      let tmp3;
+      const obj = react2;
+      const cResult = obj.c(2);
+      const obj2 = client_themes_ClientThemesUtils;
+      const gradientValue = obj2.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.END);
       if (cResult[0] !== gradientValue) {
         let tmp5;
         if (null != gradientValue) {
+          tmp5 = { backgroundColor: gradientValue };
           const obj3 = { backgroundColor: gradientValue };
-          tmp5 = obj3;
         }
         cResult[0] = gradientValue;
         cResult[1] = tmp5;
-        let tmp3 = tmp5;
+        tmp3 = tmp5;
       } else {
         tmp3 = cResult[1];
       }
       return tmp3;
     }
   : () => {
-      const gradientValue = client_themes_ClientThemesUtils.useGradientValue(
-        client_themes_ClientThemesUtils.GradientPercentage.END,
-      );
+      let obj = client_themes_ClientThemesUtils;
+      const gradientValue = obj.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.END);
       const items = [gradientValue];
-      return noop.useMemo(() => {
+      return react.useMemo(() => {
         let tmp2;
         if (null != gradientValue) {
+          tmp2 = { backgroundColor: tmp };
           const obj = { backgroundColor: tmp };
-          tmp2 = obj;
         }
         return tmp2;
       }, items);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
-      const gradientValue = client_themes_ClientThemesUtils.useGradientValue(
-        client_themes_ClientThemesUtils.GradientPercentage.START,
-      );
+      let tmp3;
+      const obj = react2;
+      const cResult = obj.c(2);
+      const obj2 = client_themes_ClientThemesUtils;
+      const gradientValue = obj2.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.START);
       if (cResult[0] !== gradientValue) {
         let tmp5;
         if (null != gradientValue) {
+          tmp5 = { backgroundColor: gradientValue };
           const obj3 = { backgroundColor: gradientValue };
-          tmp5 = obj3;
         }
         cResult[0] = gradientValue;
         cResult[1] = tmp5;
-        let tmp3 = tmp5;
+        tmp3 = tmp5;
       } else {
         tmp3 = cResult[1];
       }
       return tmp3;
     }
   : () => {
-      const gradientValue = client_themes_ClientThemesUtils.useGradientValue(
-        client_themes_ClientThemesUtils.GradientPercentage.START,
-      );
+      let obj = client_themes_ClientThemesUtils;
+      const gradientValue = obj.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.START);
       const items = [gradientValue];
-      return noop.useMemo(() => {
+      return react.useMemo(() => {
         let tmp2;
         if (null != gradientValue) {
+          tmp2 = { backgroundColor: tmp };
           const obj = { backgroundColor: tmp };
-          tmp2 = obj;
         }
         return tmp2;
       }, items);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
-      const gradientValue = client_themes_ClientThemesUtils.useGradientValue(
-        client_themes_ClientThemesUtils.GradientPercentage.MID,
-      );
+      let tmp3;
+      const obj = react2;
+      const cResult = obj.c(2);
+      const obj2 = client_themes_ClientThemesUtils;
+      const gradientValue = obj2.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.MID);
       if (cResult[0] !== gradientValue) {
         let tmp5;
         if (null != gradientValue) {
+          tmp5 = { backgroundColor: gradientValue };
           const obj3 = { backgroundColor: gradientValue };
-          tmp5 = obj3;
         }
         cResult[0] = gradientValue;
         cResult[1] = tmp5;
-        let tmp3 = tmp5;
+        tmp3 = tmp5;
       } else {
         tmp3 = cResult[1];
       }
       return tmp3;
     }
   : () => {
-      const gradientValue = client_themes_ClientThemesUtils.useGradientValue(
-        client_themes_ClientThemesUtils.GradientPercentage.MID,
-      );
+      let obj = client_themes_ClientThemesUtils;
+      const gradientValue = obj.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.MID);
       const items = [gradientValue];
-      return noop.useMemo(() => {
+      return react.useMemo(() => {
         let tmp2;
         if (null != gradientValue) {
+          tmp2 = { backgroundColor: tmp };
           const obj = { backgroundColor: tmp };
-          tmp2 = obj;
         }
         return tmp2;
       }, items);
     };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/client_themes/native/ClientThemesOverrides.tsx");
-
-export const useGradientBottom = tmp2;
-export const useGradientTop = tmp3;
-export const useGradientMidpoint = tmp4;
-export const useClientThemesOverride = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
       let tmp2;
+      const tmp = closure_4();
       if (useIsUsingClientThemeDefault()) {
         let none = arg0;
         if (arg0 == null) {
@@ -133,6 +129,7 @@ export const useClientThemesOverride = ReactCompilerGating.isReactCompilerEnable
     }
   : (arg0) => {
       let tmp2;
+      const tmp = closure_4();
       if (useIsUsingClientThemeDefault()) {
         let none = arg0;
         if (arg0 == null) {
@@ -142,3 +139,9 @@ export const useClientThemesOverride = ReactCompilerGating.isReactCompilerEnable
       }
       return tmp2;
     };
+const result = size.fileFinishedImporting("modules/client_themes/native/ClientThemesOverrides.tsx");
+
+export const useGradientBottom = tmp2;
+export const useGradientTop = tmp3;
+export const useGradientMidpoint = tmp4;
+export const useClientThemesOverride = tmp5;

@@ -1,23 +1,25 @@
 // discord_app/modules/polls/native/useFocusHelper.tsx
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_3 = function FocusHelperState() {
+function FocusHelperState() {
   const merged = Object.assign({ refsByKey: null, keyOrder: null });
   merged[0] = {};
   merged[1] = [];
   return merged;
-}.prototype;
+}
 class FocusHelperImpl {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
-    if (typeof closure_3 === "function") {
-      merged = Object.assign({ refsByKey: null, keyOrder: null });
+    const obj = Object.create(new.target.prototype);
+    if (typeof FocusHelperState === "function") {
+      const merged = Object.assign({ refsByKey: null, keyOrder: null });
       merged[0] = {};
       merged[1] = [];
       obj.validState = merged;
       obj.focusNext = function focusNext() {
+        let keyOrder;
+        let refsByKey;
         ({ refsByKey, keyOrder } = obj.validState);
         let tmp2;
         const keys = Object.keys();
@@ -65,45 +67,43 @@ class FocusHelperImpl {
       };
       return obj;
     } else {
-      str = "Trying to call a non-function";
       throw new TypeError("Trying to call a non-function");
+    }
+  }
+  restartState() {
+    if (typeof FocusHelperState === "function") {
+      const self = this;
+      const merged = Object.assign({ refsByKey: null, keyOrder: null });
+      merged[0] = {};
+      merged[1] = [];
+      this.pendingState = merged;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  }
+  commitState() {
+    const self = this;
+    const pendingState = this.pendingState;
+    if (null != pendingState) {
+      self.validState = pendingState;
+    }
+    self.pendingState = undefined;
+  }
+  refWithKey(question) {
+    const pendingState = this.pendingState;
+    _modDef38(null != pendingState, "Called refWithKey without a valid state");
+    const keyOrder = pendingState.keyOrder;
+    keyOrder.push(question);
+    if (null != pendingState.refsByKey[question]) {
+      return pendingState.refsByKey[question];
+    } else {
+      const ref = react.createRef();
+      pendingState.refsByKey[question] = ref;
+      return ref;
     }
   }
 }
 const prototype = FocusHelperImpl.prototype;
-prototype["restartState"] = function restartState() {
-  if (typeof closure_3 === "function") {
-    const self = this;
-    const merged = Object.assign({ refsByKey: null, keyOrder: null });
-    merged[0] = {};
-    merged[1] = [];
-    this.pendingState = merged;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-};
-prototype["commitState"] = function commitState() {
-  const self = this;
-  const pendingState = this.pendingState;
-  if (null != pendingState) {
-    self.validState = pendingState;
-  }
-  self.pendingState = undefined;
-};
-prototype["refWithKey"] = function refWithKey(question) {
-  const pendingState = this.pendingState;
-  _modDef38(null != pendingState, "Called refWithKey without a valid state");
-  const keyOrder = pendingState.keyOrder;
-  keyOrder.push(question);
-  if (null != pendingState.refsByKey[question]) {
-    return tmp3;
-  } else {
-    const ref = noop.createRef();
-    pendingState.refsByKey[question] = ref;
-    return ref;
-  }
-};
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/native/useFocusHelper.tsx");
 
 export default function useFocusHelper() {
@@ -113,15 +113,18 @@ export default function useFocusHelper() {
   }
   let onAddAnswer = obj.onAddAnswer;
   let obj2;
-  obj2 = onAddAnswer(obj2[2])(() => {
+  obj2 = onAddAnswer(obj2[2])(function () {
     if (typeof FocusHelperImpl === "function") {
       const obj = Object.create(FocusHelperImpl.prototype);
-      if (typeof closure_1_3 === "function") {
+      const self = this;
+      if (typeof FocusHelperState === "function") {
         const merged = Object.assign({ refsByKey: null, keyOrder: null });
         merged[0] = {};
         merged[1] = [];
         obj.validState = merged;
         obj.focusNext = function focusNext() {
+          let keyOrder;
+          let refsByKey;
           ({ refsByKey, keyOrder } = obj.validState);
           let tmp2;
           const keys = Object.keys();
@@ -176,7 +179,7 @@ export default function useFocusHelper() {
     }
   });
   obj2.restartState();
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     obj2.onAddAnswer = onAddAnswer;
     obj2.commitState();
   });

@@ -1,25 +1,35 @@
 // discord_app/modules/conversations/components/native/ConversationPreviewFocusScreen.tsx
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import ConversationFocusViewDefault from "ConversationFocusView.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import ConversationPreviewStore from "../../ConversationPreviewStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationPreviewFocusScreen.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = conversationId(576).c(16);
+      let channelId;
+      let conversationId;
+      let first;
+      let fullyHydrated;
+      let isFullFetchPending;
+      let startMessageId;
+      let tmp11;
+      let tmp12;
+      let tmp6;
+      let tmp7;
+      let tmp9;
       let obj = conversationId(576);
-      const params = conversationId(1493).useRoute().params;
+      const cResult = obj.c(16);
+      const obj2 = conversationId(1493);
+      const params = obj2.useRoute().params;
       ({ channelId, conversationId } = params);
       const messageId = params.messageId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConversationPreviewStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -31,51 +41,51 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = conversationId;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj2 = conversationId(1493);
-      const stateFromStores = conversationId(504).useStateFromStores(first, tmp6, tmp7);
+      const tmpResult = conversationId(504);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [ConversationPreviewStore];
         cResult[4] = items2;
-        let tmp9 = items2;
+        tmp9 = items2;
       } else {
         tmp9 = cResult[4];
       }
       if (cResult[5] !== conversationId) {
         const fn2 = function h() {
+          let startMessageId;
           const obj = {
             fullyHydrated: ConversationPreviewStore.isFullyHydrated(conversationId),
             isFullFetchPending: ConversationPreviewStore.isConversationFetchPending(conversationId, true),
-            startMessageId: null,
+            startMessageId,
           };
           const conversation = ConversationPreviewStore.getConversation(conversationId);
-          let startMessageId;
+          startMessageId = undefined;
           if (conversation != null) {
             startMessageId = conversation.startMessageId;
           }
           if (startMessageId == null) {
             startMessageId = null;
           }
-          obj.startMessageId = startMessageId;
           return obj;
         };
         const items3 = [conversationId];
         cResult[5] = conversationId;
         cResult[6] = fn2;
         cResult[7] = items3;
-        let tmp12 = items3;
-        let tmp11 = fn2;
+        tmp12 = items3;
+        tmp11 = fn2;
       } else {
         tmp11 = cResult[6];
         tmp12 = cResult[7];
       }
-      const tmpResult = conversationId(504);
-      const stateFromStoresObject = conversationId(504).useStateFromStoresObject(tmp9, tmp11, tmp12);
+      const tmpResult2 = conversationId(504);
+      const stateFromStoresObject = tmpResult2.useStateFromStoresObject(tmp9, tmp11, tmp12);
       ({ fullyHydrated, isFullFetchPending, startMessageId } = stateFromStoresObject);
       if (cResult[8] === channelId) {
         if (cResult[9] === conversationId) {
@@ -83,8 +93,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[11] === isFullFetchPending) {
               if (cResult[12] === messageId) {
                 if (cResult[13] === stateFromStores) {
+                  let tmp14;
                   if (cResult[14] === startMessageId) {
-                    let tmp14 = cResult[15];
+                    tmp14 = cResult[15];
                   }
                   return tmp14;
                 }
@@ -111,40 +122,46 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[14] = startMessageId;
       cResult[15] = tmp15;
       tmp14 = tmp15;
-      const tmpResult2 = conversationId(504);
     }
   : () => {
-      const params = conversationId(1493).useRoute().params;
+      let channelId;
+      let conversationId;
+      let fullyHydrated;
+      let isFullFetchPending;
+      let messageId;
+      let startMessageId;
+      let obj = conversationId(1493);
+      const params = obj.useRoute().params;
       conversationId = params.conversationId;
       ({ channelId, messageId } = params);
-      let obj = conversationId(1493);
       const items = [ConversationPreviewStore];
       const items1 = [conversationId];
-      const messages = conversationId(504).useStateFromStores(
+      const obj2 = conversationId(504);
+      const messages = obj2.useStateFromStores(
         items,
         () => ConversationPreviewStore.getHydratedMessages(conversationId),
         items1,
       );
-      const obj2 = conversationId(504);
       const items2 = [ConversationPreviewStore];
       const items3 = [conversationId];
-      const stateFromStoresObject = conversationId(504).useStateFromStoresObject(
+      const obj3 = conversationId(504);
+      const stateFromStoresObject = obj3.useStateFromStoresObject(
         items2,
         () => {
+          let startMessageId;
           const obj = {
             fullyHydrated: ConversationPreviewStore.isFullyHydrated(conversationId),
             isFullFetchPending: ConversationPreviewStore.isConversationFetchPending(conversationId, true),
-            startMessageId: null,
+            startMessageId,
           };
           const conversation = ConversationPreviewStore.getConversation(conversationId);
-          let startMessageId;
+          startMessageId = undefined;
           if (conversation != null) {
             startMessageId = conversation.startMessageId;
           }
           if (startMessageId == null) {
             startMessageId = null;
           }
-          obj.startMessageId = startMessageId;
           return obj;
         },
         items3,
@@ -160,3 +177,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         startMessageId,
       });
     };
+const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationPreviewFocusScreen.tsx");
+
+export default tmp3;

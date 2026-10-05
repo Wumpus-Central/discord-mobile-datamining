@@ -1,24 +1,26 @@
 // discord_app/modules/user_settings/defs/native/FriendAnniversaryNotificationSetting.tsx
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import FriendAnniversaryNotificationUtils from "../../../premium/FriendAnniversaryNotificationUtils.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const toggle = SettingBuilders.createToggle({
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.BVO96v);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.BVO96v);
   },
-  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
+  parent: MobileUserSettings.NOTIFICATIONS,
   useValue: UserSettings.EnableFriendAnniversaryNotifications.useSetting,
   useDescription() {
-    const intl = util.intl;
-    return intl.string(util.t["00TNo7"]);
+    const intl = intl2.intl;
+    return intl.string(intl2.t["00TNo7"]);
   },
   onValueChange: FriendAnniversaryNotificationUtils.onFriendAnniversaryNotificationSettingsChanged,
-});
+};
+const toggle = SettingBuilders.createToggle(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/FriendAnniversaryNotificationSetting.tsx");
 
 export default toggle;

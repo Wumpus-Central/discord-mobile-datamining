@@ -1,77 +1,87 @@
 // discord_app/modules/unique_usernames/UniqueUsernamesStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import privDefault from "../../../_runtime/01444_priv.js";
+import LRUCacheDefault from "../../../_runtime/01444_LRUCache.js";
+import size from "../../../_runtime/metro/00002__.js";
 
+let set;
+
+let obj2;
+let tmp2;
 let closure_2 = { taken: null, error: "IconComponent", rateLimited: null };
-let obj = {
-  validations: new privDefault({ max: 100, maxAge: 60000 }),
-  currentUsernameInvalid: false,
-  retryAfterTime: null,
-  suggestions: {
-    migration: { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false },
-    registration: { suggestion: { username: "r" }, source: "Set", fetched: null },
-  },
+let obj = { validations: tmp2, currentUsernameInvalid: false, retryAfterTime: null, suggestions: obj2 };
+tmp2 = new LRUCacheDefault({ max: 100, maxAge: 60000 });
+obj2 = {
+  migration: { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false },
+  registration: { suggestion: { username: "r" }, source: "Set", fetched: null },
 };
-const Store = initializeDefault.Store;
-class UniqueUsernamesStore extends Store {}
+const Store = get_initializedDefault.Store;
+class UniqueUsernamesStore extends Store {
+  isRateLimited() {
+    let tmp2 = null != obj.retryAfterTime;
+    if (tmp2) {
+      const _Date = Date;
+      tmp2 = Date.now() < tmp.retryAfterTime;
+    }
+    return tmp2;
+  }
+  validate(arg0) {
+    let tmp4;
+    const self = this;
+    const validations = obj.validations;
+    const value = validations.get(arg0);
+    if (!this.isRateLimited()) {
+      tmp4 = value;
+    } else {
+      tmp4 = closure_2;
+    }
+    return tmp4;
+  }
+  registrationUsernameSuggestion() {
+    return obj.suggestions.registration.suggestion.username;
+  }
+  usernameSuggestion() {
+    return obj.suggestions.migration.suggestion.username;
+  }
+  usernameSuggestionLoading() {
+    return obj.suggestions.migration.usernameSuggestionLoading;
+  }
+  isCurrentUsernameInvalid() {
+    return obj.currentUsernameInvalid;
+  }
+  wasRegistrationSuggestionFetched(globalName) {
+    return obj.suggestions.registration.source === globalName && obj.suggestions.registration.fetched;
+  }
+  wasSuggestionsFetched() {
+    return obj.suggestions.migration.fetched;
+  }
+}
 const prototype = UniqueUsernamesStore.prototype;
-prototype["isRateLimited"] = function isRateLimited() {
-  let tmp2 = null != obj.retryAfterTime;
-  if (tmp2) {
-    const _Date = Date;
-    tmp2 = Date.now() < tmp.retryAfterTime;
-  }
-  return tmp2;
-};
-prototype["validate"] = function validate(arg0) {
-  const self = this;
-  const validations = obj.validations;
-  value = validations.get(arg0);
-  if (!this.isRateLimited()) {
-    let tmp4 = value;
-  } else {
-    tmp4 = closure_2;
-  }
-  return tmp4;
-};
-prototype["registrationUsernameSuggestion"] = function registrationUsernameSuggestion() {
-  return obj.suggestions.registration.suggestion.username;
-};
-prototype["usernameSuggestion"] = function usernameSuggestion() {
-  return obj.suggestions.migration.suggestion.username;
-};
-prototype["usernameSuggestionLoading"] = function usernameSuggestionLoading() {
-  return obj.suggestions.migration.usernameSuggestionLoading;
-};
-prototype["isCurrentUsernameInvalid"] = function isCurrentUsernameInvalid() {
-  return obj.currentUsernameInvalid;
-};
-prototype["wasRegistrationSuggestionFetched"] = function wasRegistrationSuggestionFetched(globalName) {
-  return obj.suggestions.registration.source === globalName && obj.suggestions.registration.fetched;
-};
-prototype["wasSuggestionsFetched"] = function wasSuggestionsFetched() {
-  return obj.suggestions.migration.fetched;
-};
 UniqueUsernamesStore.displayName = "UniqueUsernamesStore";
-const uniqueUsernamesStore = new UniqueUsernamesStore(DispatcherDefault, {
+const obj3 = {
   UNIQUE_USERNAME_ATTEMPT_SUCCESS: function handleUniqueUsernameAttemptSuccess(taken) {
     const validations = obj.validations;
     obj = { taken: taken.taken };
     const result = validations.set(taken.username, obj);
   },
   UNIQUE_USERNAME_ATTEMPT_FAILURE: function handleUniqueUsernameAttemptFailure(statusCode) {
+    let error;
+    let retryAfter;
+    let tmp;
+    let username;
     ({ username, error, retryAfter } = statusCode);
     if (429 === statusCode.statusCode) {
       const validations2 = obj.validations;
-      const obj2 = { taken: null, error, rateLimited: true };
       let num = retryAfter;
+      const obj2 = { taken: null, error, rateLimited: true };
+      set = validations2.set;
+      const tmp3 = obj;
       if (retryAfter == null) {
         num = 7;
       }
-      const result = validations2.set(username, obj2, num * DurationsDefault.Millis.SECOND);
-      let tmp = obj;
+      const result = set(username, obj2, num * DurationsDefault.Millis.SECOND);
+      tmp = tmp3;
     } else {
       tmp = obj;
       const validations = obj.validations;
@@ -113,8 +123,8 @@ const uniqueUsernamesStore = new UniqueUsernamesStore(DispatcherDefault, {
       const result = validations.set(suggestion.username, { taken: false });
     }
   },
-});
-const size = fn(2);
+};
+const uniqueUsernamesStore = new UniqueUsernamesStore(DispatcherDefault, obj3);
 let result = size.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesStore.tsx");
 
 export default uniqueUsernamesStore;

@@ -1,20 +1,21 @@
 // discord_app/utils/native/RunAfterInteractionsUtils.tsx
-import _mod17 from "../../../_runtime/metro/00017__.js";
+import react_native from "../../../_runtime/00017_react-native.js";
 import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 function runAfterInteractions(preloadTimestampParser) {
+  let closure_0 = preloadTimestampParser;
   let num = MINUTE;
   if (MINUTE === undefined) {
     num = 2000;
   }
-  closure_1 = InteractionManager.runAfterInteractions(() => {
+  let closure_1 = InteractionManager.runAfterInteractions(() => {
     delayedCall.cancel();
-    preloadTimestampParser();
+    closure_0();
   });
   const delayedCall = new Timers.DelayedCall(num, () => {
     closure_1.cancel();
-    preloadTimestampParser();
+    closure_0();
   });
   delayedCall.delay();
   return {
@@ -24,7 +25,7 @@ function runAfterInteractions(preloadTimestampParser) {
     },
   };
 }
-const InteractionManager = _mod17.InteractionManager;
+const InteractionManager = react_native.InteractionManager;
 const result = size.fileFinishedImporting("utils/native/RunAfterInteractionsUtils.tsx");
 
 export default { runAfterInteractions };

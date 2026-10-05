@@ -7,6 +7,9 @@ const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("modules/debug/uploadDebugLog.tsx");
 
 export default function uploadDebugLog(arg0) {
+  let body;
+  let category;
+  let filename;
   ({ category, filename, body } = arg0);
   const HTTP = HTTPUtils.HTTP;
   const request = {

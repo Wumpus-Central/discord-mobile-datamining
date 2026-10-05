@@ -1,8 +1,8 @@
 // discord_app/modules/fastest_list/useFastestListSections.android.tsx
 import FastestListItemTypeDefault from "FastestListItemType.tsx";
-import noop from "../../../_runtime/metro/00019__.js";
+import react from "../../../_runtime/00019_react.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/useFastestListSections.android.tsx");
 
 export default function useFastestListSections(fastestListId) {
@@ -27,7 +27,7 @@ export default function useFastestListSections(fastestListId) {
     num4 = 0;
   }
   const tmp = fastestListId(itemSize[1])(() => {
-    closure_0 = 0;
+    let closure_0 = 0;
     return {
       getId() {
         return "" + closure_0;
@@ -38,9 +38,10 @@ export default function useFastestListSections(fastestListId) {
       },
     };
   });
-  closure_8 = tmp;
+  let closure_8 = tmp;
   let items = [keyExtractor, itemSize, num, num2, num3, num4, fastestListId, tmp, sections];
   const memo = keyExtractor.useMemo(() => {
+    let items4;
     let tmp2Result = num;
     if (typeof num !== "number") {
       tmp2Result = tmp2();
@@ -74,23 +75,22 @@ export default function useFastestListSections(fastestListId) {
     }
     const items3 = [];
     if (typeof itemSize === "number") {
-      const obj2 = { sizes: null };
-      const items4 = [itemSize];
-      obj2.sizes = items4;
+      const obj2 = { sizes: items4 };
+      items4 = [itemSize];
       items3.push(obj2);
     }
     const items5 = [];
     if (typeof num3 === "number") {
-      items5.push(tmp10);
+      items5.push(num3);
     }
     const items6 = [];
     if (typeof num4 === "number") {
-      items6.push(tmp11);
+      items6.push(num4);
     }
     if (typeof num4 === "number") {
-      if (typeof tmp10 === "number") {
+      if (typeof num3 === "number") {
         const obj3 = {
-          keysAreUniform: tmp12,
+          keysAreUniform: null == keyExtractor,
           listId: fastestListId,
           listFooterKey: str,
           listFooterSize: tmp2Result,
@@ -100,12 +100,12 @@ export default function useFastestListSections(fastestListId) {
           sectionsId: closure_8.getId(),
           sectionHeaderKeys: items1,
           sectionHeaderSizes: items5,
-          sectionHeaderSizeIsUniform: typeof tmp10 === "number",
+          sectionHeaderSizeIsUniform: tmp34,
           sectionFooterKeys: items2,
           sectionFooterSizes: items6,
-          sectionFooterSizeIsUniform: typeof tmp11 === "number",
+          sectionFooterSizeIsUniform: tmp35,
           itemKeys: items,
-          itemSizeIsUniform: typeof itemSize === "number",
+          itemSizeIsUniform: tmp33,
           itemSizes: items3,
         };
         return obj3;
@@ -119,39 +119,42 @@ export default function useFastestListSections(fastestListId) {
         let arr8 = items6.push(num4(num3));
       }
       if (!tmp12) {
+        let push = items1.push;
         let str4 = keyExtractor(FastestListItemTypeDefault.SECTION_HEADER, num3, 0);
         if (str4 == null) {
           str4 = "";
         }
-        let arr9 = items1.push(str4);
+        let arr9 = push(str4);
+        let push2 = items2.push;
         let str5 = keyExtractor(FastestListItemTypeDefault.SECTION_FOOTER, num3, 0);
         if (str5 == null) {
           str5 = "";
         }
-        let arr23 = items2.push(str5);
+        let push2Result = push2(str5);
       }
       if (typeof itemSize !== "number") {
         let tmp25 = sections[num3];
         if (typeof itemSize !== "number") {
           let obj4 = { sizes: [] };
-          let arr24 = items3.push(obj4);
+          let arr21 = items3.push(obj4);
         }
         if (!tmp12) {
           let obj5 = { keys: [] };
-          let arr25 = items.push(obj5);
+          let arr22 = items.push(obj5);
         }
         for (let num4 = 0; num4 < tmp25; num4 = num4 + 1) {
           if (typeof itemSize !== "number") {
             let sizes = items3[num3].sizes;
-            let arr26 = sizes.push(itemSize(num3, num4));
+            let arr23 = sizes.push(itemSize(num3, num4));
           }
           if (!tmp12) {
             let keys = items[num3].keys;
+            let push3 = keys.push;
             let str6 = keyExtractor(FastestListItemTypeDefault.ITEM, num3, num4);
             if (str6 == null) {
               str6 = "";
             }
-            let arr27 = keys.push(str6);
+            let push3Result = push3(str6);
           }
         }
       }

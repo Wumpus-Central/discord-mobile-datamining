@@ -1,6 +1,6 @@
 // discord_app/components_native/chat/contentHandlers.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import asyncRequireImpl from "../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../_runtime/01987_asyncRequire.js";
 import ToastUtils from "../../modules/toast/native/ToastUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
@@ -8,389 +8,263 @@ import AnalyticsLocationDefault from "../../modules/app_analytics/AnalyticsLocat
 import ClipboardUtils from "../../utils/ClipboardUtils.native.tsx";
 import showUserProfileActionSheetDefault from "../../modules/user_profile/native/showUserProfileActionSheet.tsx";
 import showLongPressURLActionSheetDefault from "../../modules/links/native/showLongPressURLActionSheet.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
+let closure_1, fileName, urlString;
+
 let obj = {
   onLongPressLink(nativeEvent) {
     const url = nativeEvent.nativeEvent.url;
-    let tmp = null != url;
-    if (tmp) {
-      tmp = "" !== url;
-    }
+    const tmp = null != url && "" !== url;
     if (tmp) {
       const obj = { urlString: url };
       showLongPressURLActionSheetDefault(obj);
     }
   },
-  onTapAttachmentLink: null,
-  onTapAttachmentTextPreview: null,
-  onLongPressAttachmentLink: null,
-  onTapMention: null,
-  onTapTimestamp: null,
-  onTapInlineCode: null,
-  onTapEmoji: null,
-};
-let closure_6 = asyncGeneratorStep(async (arg0) => {
-  const nativeEvent = arg0;
-  c3 = 0;
-  c4 = 0;
-  const iter = (async (arg0) => {
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+  onTapAttachmentLink: function () {
+    return closure_6(...arguments);
+  },
+  onTapAttachmentTextPreview: function () {
+    return closure_5(...arguments);
+  },
+  onLongPressAttachmentLink: function () {
+    return closure_4(...arguments);
+  },
+  onTapMention(nativeEvent) {
+    let channelId;
+    let guildId;
+    let intl;
+    let intl2;
+    let intl3;
+    let intl4;
+    let items;
+    let obj6;
+    let parsedUserId;
+    let roleId;
+    let roleName;
+    let userId;
+    let obj = parsedUserId(11164);
+    const nativeSyntheticEventData = obj.getNativeSyntheticEventData(nativeEvent);
+    ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
+    ({ roleId, guildId } = nativeSyntheticEventData);
+    if (null != userId) {
+      let obj2 = { userId, channelId, sourceAnalyticsLocations: items };
+      items = [];
+      const tmp17 = showUserProfileActionSheetDefault;
+      items[0] = AnalyticsLocationDefault.USER_MENTION;
+      tmp17(obj2);
     } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            closure_2 = tmp5;
-            closure_1 = tmp2;
-            let attachmentUrl;
-            attachmentUrl = nativeEvent.nativeEvent.data.attachmentUrl;
-            closure_129_1 = undefined;
-            c3 = 1;
-            c4 = 1;
-            return { value: "Set", done: true };
-          }
-        } else {
-          if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
-            } else {
-              if (null != attachmentUrl) {
-                if ("" !== attachmentUrl) {
-                  c3 = 2;
-                  c4 = 1;
-                  const obj7 = {
-                    value: closure_130_2(closure_130_3[2]).maybeRefreshAttachmentUrl(attachmentUrl),
-                    done: false,
-                  };
-                  return obj7;
-                }
-              }
-              c4 = 3;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            closure_129_1 = value;
-            closure_130_1(closure_130_3[3]).trackLinkClicked(closure_129_1);
-            const obj = closure_130_1(closure_130_3[3]);
-            closure_130_1(closure_130_3[4]).openURL(closure_129_1);
-            const obj2 = closure_130_1(closure_130_3[4]);
-          }
-          c4 = 3;
-          const obj8 = { value, done: true };
-          return obj8;
+      if (null != roleId) {
+        if (null != guildId) {
+          const obj3 = { guildId, roleId, channelId };
+          const obj7 = ActionSheetActionCreatorsDefault;
+          obj7.openLazy(parsedUserId(1987)(11209, dependencyMap.paths), "RoleMembersActionSheet", obj3);
         }
-      } catch (tmp25) {
-        c4 = tmp;
-        throw tmp25;
+      }
+      if ("@everyone" === roleName) {
+        if (null != guildId) {
+          const openLazy = ActionSheetActionCreatorsDefault.openLazy;
+          const obj4 = { guildId, roleId: obj6.castGuildIdAsEveryoneGuildRoleId(guildId), channelId };
+          ActionSheetActionCreatorsDefault;
+          const tmp12 = parsedUserId(1987)(11209, dependencyMap.paths);
+          obj6 = SnowflakeUtilsDefault;
+          openLazy(tmp12, "RoleMembersActionSheet", obj4);
+        }
+      }
+      if (null == roleName) {
+        const DeveloperMode = parsedUserId(2028).DeveloperMode;
+        if (DeveloperMode.getSetting()) {
+          let obj9;
+          if (null != parsedUserId) {
+            const obj5 = {
+              secondaryConfirmText: intl.string(parsedUserId(1126).t["/AXYnE"]),
+              onConfirmSecondary() {
+                const obj = ClipboardUtils;
+                obj.copy(parsedUserId);
+                const obj2 = ToastUtils;
+                const result = obj2.presentCopiedToClipboard();
+              },
+            };
+            intl = parsedUserId(1126).intl;
+            obj9 = obj5;
+          }
+          const obj8 = {
+            title: intl2.string(parsedUserId(1126).t.r0DLNm),
+            body: intl3.string(parsedUserId(1126).t.Fqqbhg),
+            confirmText: intl4.string(parsedUserId(1126).t.BddRzS),
+            isDismissable: true,
+          };
+          const show = AlertActionCreatorsDefault.show;
+          AlertActionCreatorsDefault;
+          intl2 = parsedUserId(1126).intl;
+          intl3 = parsedUserId(1126).intl;
+          intl4 = parsedUserId(1126).intl;
+          const merged = Object.assign(obj9);
+          show(obj8);
+        }
+        obj9 = {};
       }
     }
-  })();
-  iter.next();
-  return iter;
-});
-obj.onTapAttachmentLink = function () {
-  const self = this;
-  const apply = closure_6.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
-let closure_5 = asyncGeneratorStep(async (arg0) => {
-  const nativeEvent = arg0;
-  c4 = 0;
-  c5 = 0;
-  const iter = (async (arg0) => {
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_3 = tmp5;
-            closure_2 = tmp2;
-            closure_130_0 = undefined;
-            closure_130_1 = undefined;
-            ({ attachmentUrl: closure_130_0, fileName: closure_130_1 } = nativeEvent.nativeEvent.data);
-            closure_130_2 = undefined;
-            c4 = 1;
-            c5 = 1;
-            return { value: "Set", done: true };
-          }
-        } else {
-          if (1 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
-            } else {
-              if (null != closure_130_0) {
-                if ("" !== closure_130_0) {
-                  c4 = 2;
-                  c5 = 1;
-                  const obj6 = {
-                    value: closure_131_2(closure_131_3[2]).maybeRefreshAttachmentUrl(closure_130_0),
-                    done: false,
-                  };
-                  return obj6;
-                }
-              }
-              c5 = 3;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            closure_130_2 = value;
-            const obj7 = { url: closure_130_2, fileName: null };
-            fileName = closure_130_1;
-            if (closure_130_1 == null) {
-              fileName = "";
-            }
-            obj7.fileName = fileName;
-            const result = closure_131_0(closure_131_3[5]).openPlaintextFilePreview(obj7);
-            const obj = closure_131_0(closure_131_3[5]);
-          }
-          c5 = 3;
-          const obj8 = { value, done: true };
-          return obj8;
-        }
-      } catch (tmp25) {
-        c5 = tmp;
-        throw tmp25;
-      }
+  },
+  onTapTimestamp(nativeEvent) {
+    const node = nativeEvent.nativeEvent.node;
+    const obj = ToastUtils;
+    obj.presentTimestamp(node.full);
+  },
+  onTapInlineCode(nativeEvent) {
+    const node = nativeEvent.nativeEvent.node;
+    const tmp = null != node.content && typeof node.content === "string";
+    if (tmp) {
+      const obj = ClipboardUtils;
+      obj.copy(node.content);
+      const obj2 = ToastUtils;
+      const result = obj2.presentCopiedToClipboard();
     }
-  })();
-  iter.next();
-  return iter;
-});
-obj.onTapAttachmentTextPreview = function () {
-  const self = this;
-  const apply = closure_5.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  },
+  onTapEmoji(nativeEvent) {
+    const node = nativeEvent.nativeEvent.node;
+    const obj = ActionSheetActionCreatorsDefault;
+    obj.openLazy(asyncRequire(9933, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: node });
+  },
 };
-let closure_4 = asyncGeneratorStep(async (arg0) => {
+let closure_6 = _asyncToGenerator(async (arg0) => {
+  let closure_2;
   const nativeEvent = arg0;
-  c3 = 0;
-  c4 = 0;
+  let c3 = 0;
+  let c4 = 0;
   const iter = (async (arg0) => {
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    let attachmentUrl;
+    let obj4;
+    if (1 === c3) {
       if (arg0 === 1) {
+        c4 = 3;
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_2 = tmp5;
-            closure_1 = tmp2;
-            let attachmentUrl;
-            attachmentUrl = nativeEvent.nativeEvent.data.attachmentUrl;
-            closure_129_1 = undefined;
-            c3 = 1;
-            c4 = 1;
-            return { value: "Set", done: true };
-          }
-        } else {
-          if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
-            } else {
-              if (null != attachmentUrl) {
-                if ("" !== attachmentUrl) {
-                  c3 = 2;
-                  c4 = 1;
-                  const obj6 = {
-                    value: closure_130_2(closure_130_3[2]).maybeRefreshAttachmentUrl(attachmentUrl),
-                    done: false,
-                  };
-                  return obj6;
-                }
-              }
-              c4 = 3;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            closure_129_1 = value;
-            const obj = { urlString: closure_129_1 };
-            closure_130_1(closure_130_3[1])(obj);
-          }
-          c4 = 3;
-          const obj7 = { value, done: true };
+        c4 = 3;
+        return { value, done: true };
+      } else if (null != attachmentUrl) {
+        if ("" !== attachmentUrl) {
+          c3 = 2;
+          c4 = 1;
+          const obj7 = { value: obj4.maybeRefreshAttachmentUrl(attachmentUrl), done: false };
+          obj4 = closure_130_2(closure_130_3[2]);
           return obj7;
         }
-      } catch (tmp22) {
-        c4 = tmp;
-        throw tmp22;
       }
+    } else if (arg0 === 1) {
+      c4 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c4 = 3;
+      return { value, done: true };
+    } else {
+      closure_1 = value;
+      const obj = closure_130_1(closure_130_3[3]);
+      obj.trackLinkClicked(closure_1);
+      const obj2 = closure_130_1(closure_130_3[4]);
+      obj2.openURL(closure_1);
     }
+    await "IconComponent";
+    closure_1 = tmp;
+    attachmentUrl = nativeEvent.nativeEvent.data.attachmentUrl;
+    return "Set";
   })();
   iter.next();
   return iter;
 });
-obj.onLongPressAttachmentLink = function () {
-  const self = this;
-  const apply = closure_4.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
-obj.onTapMention = function onTapMention(nativeEvent) {
-  const nativeSyntheticEventData = parsedUserId(11164).getNativeSyntheticEventData(nativeEvent);
-  ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
-  ({ roleId, guildId } = nativeSyntheticEventData);
-  if (null != userId) {
-    const obj2 = { userId, channelId, sourceAnalyticsLocations: null };
-    const items = [AnalyticsLocationDefault.USER_MENTION];
-    obj2.sourceAnalyticsLocations = items;
-    showUserProfileActionSheetDefault(obj2);
-  } else {
-    if (null != roleId) {
-      if (null != guildId) {
-        const obj3 = { guildId, roleId, channelId };
-        ActionSheetActionCreatorsDefault.openLazy(
-          parsedUserId(1987)(11209, dependencyMap.paths),
-          "RoleMembersActionSheet",
-          obj3,
-        );
-      }
-    }
-    if ("@everyone" === roleName) {
-      if (null != guildId) {
-        const obj5 = { guildId, roleId: null, channelId: null };
-        const obj6 = ActionSheetActionCreatorsDefault;
-        const tmp10 = parsedUserId(1987)(11209, dependencyMap.paths);
-        obj5.roleId = SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
-        obj5.channelId = channelId;
-        obj6.openLazy(tmp10, "RoleMembersActionSheet", obj5);
-      }
-    }
-    if (null == roleName) {
-      const DeveloperMode = parsedUserId(2028).DeveloperMode;
-      if (DeveloperMode.getSetting()) {
-        if (null != parsedUserId) {
-          const obj7 = { secondaryConfirmText: null, onConfirmSecondary: null };
-          const intl = parsedUserId(1126).intl;
-          obj7.secondaryConfirmText = intl.string(parsedUserId(1126).t["/AXYnE"]);
-          obj7.onConfirmSecondary = function onConfirmSecondary() {
-            ClipboardUtils.copy(parsedUserId);
-            const result = ToastUtils.presentCopiedToClipboard();
-          };
-          let obj11 = obj7;
+let closure_5 = _asyncToGenerator(async (arg0) => {
+  let closure_3;
+  const nativeEvent = arg0;
+  let c4 = 0;
+  let c5 = 0;
+  const iter = (async (arg0) => {
+    let c0;
+    let c1;
+    let obj3;
+    if (1 === c4) {
+      if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        return { value, done: true };
+      } else if (null != c0) {
+        if ("" !== c0) {
+          c4 = 2;
+          c5 = 1;
+          const obj6 = { value: obj3.maybeRefreshAttachmentUrl(c0), done: false };
+          obj3 = closure_131_2(closure_131_3[2]);
+          return obj6;
         }
-        const obj10 = { title: null, body: null, confirmText: null, isDismissable: true };
-        const intl2 = parsedUserId(1126).intl;
-        obj10.title = intl2.string(parsedUserId(1126).t.r0DLNm);
-        const intl3 = parsedUserId(1126).intl;
-        obj10.body = intl3.string(parsedUserId(1126).t.Fqqbhg);
-        const intl4 = parsedUserId(1126).intl;
-        obj10.confirmText = intl4.string(parsedUserId(1126).t.BddRzS);
-        const merged = Object.assign(obj11);
-        AlertActionCreatorsDefault.show(obj10);
       }
-      obj11 = {};
+    } else if (arg0 === 1) {
+      c5 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c5 = 3;
+      return { value, done: true };
+    } else {
+      url = value;
+      const obj = { url, fileName };
+      const openPlaintextFilePreview = closure_131_0(closure_131_3[5]).openPlaintextFilePreview;
+      closure_131_0(closure_131_3[5]);
+      if (fileName == null) {
+        fileName = "";
+      }
+      const result = openPlaintextFilePreview(obj);
     }
-  }
-  let obj = parsedUserId(11164);
-};
-obj.onTapTimestamp = function onTapTimestamp(nativeEvent) {
-  ToastUtils.presentTimestamp(nativeEvent.nativeEvent.node.full);
-};
-obj.onTapInlineCode = function onTapInlineCode(nativeEvent) {
-  const node = nativeEvent.nativeEvent.node;
-  if (tmp) {
-    ClipboardUtils.copy(node.content);
-    const result = ToastUtils.presentCopiedToClipboard();
-  }
-  tmp = null != node.content && typeof node.content === "string";
-};
-obj.onTapEmoji = function onTapEmoji(emojiNode) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9933, dependencyMap.paths), "MessageEmojiActionSheet", {
-    emojiNode: emojiNode.nativeEvent.node,
-  });
-};
-const size = fn(2);
+    await "IconComponent";
+    url = tmp;
+    ({ attachmentUrl: c0, fileName: c1 } = nativeEvent.nativeEvent.data);
+    return "Set";
+  })();
+  iter.next();
+  return iter;
+});
+let closure_4 = _asyncToGenerator(async (arg0) => {
+  let closure_2;
+  const nativeEvent = arg0;
+  let c3 = 0;
+  let c4 = 0;
+  const iter = (async (arg0) => {
+    let attachmentUrl;
+    let obj3;
+    if (1 === c3) {
+      if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        return { value, done: true };
+      } else if (null != attachmentUrl) {
+        if ("" !== attachmentUrl) {
+          c3 = 2;
+          c4 = 1;
+          const obj6 = { value: obj3.maybeRefreshAttachmentUrl(attachmentUrl), done: false };
+          obj3 = closure_130_2(closure_130_3[2]);
+          return obj6;
+        }
+      }
+    } else if (arg0 === 1) {
+      c4 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c4 = 3;
+      return { value, done: true };
+    } else {
+      urlString = value;
+      const obj = { urlString };
+      closure_130_1(closure_130_3[1])(obj);
+    }
+    await "IconComponent";
+    urlString = tmp;
+    attachmentUrl = nativeEvent.nativeEvent.data.attachmentUrl;
+    return "Set";
+  })();
+  iter.next();
+  return iter;
+});
 let result = size.fileFinishedImporting("components_native/chat/contentHandlers.tsx");
 
 export const contentHandlers = obj;

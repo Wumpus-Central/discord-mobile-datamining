@@ -1,5 +1,5 @@
 // discord_app/modules/report_to_mod/hooks/useReportToModHooks.tsx
-import _mod19 from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import getGuildModeratorReportingEnabledDefault from "../getGuildModeratorReportingEnabled.tsx";
 import ReportToModUtils from "../ReportToModUtils.tsx";
 import getGuildModeratorReportChannelIdDefault from "../getGuildModeratorReportChannelId.tsx";
@@ -7,22 +7,27 @@ import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import MessageStore from "../../../stores/MessageStore.tsx";
-import "ReactCompilerGating";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, messageReference;
 
-const useEffect = _mod19.useEffect;
+const useEffect = react.useEffect;
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
       _require = arg0;
-      const cResult = require("c").c(3);
+      const tmp = _require;
+      const obj = require("react");
+      const cResult = obj.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -31,62 +36,66 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (null == closure_0) {
             return false;
           } else {
-            guild = GuildStore.getGuild(tmp);
+            const guild = GuildStore.getGuild(tmp);
             let tmp4 = null != guild;
             if (tmp4) {
               tmp4 =
                 getGuildModeratorReportingEnabledDefault(guild) &&
                 null != getGuildModeratorReportChannelIdDefault(guild);
-              const tmp7 =
-                getGuildModeratorReportingEnabledDefault(guild) &&
-                null != getGuildModeratorReportChannelIdDefault(guild);
+              getGuildModeratorReportingEnabledDefault(guild) && null != getGuildModeratorReportChannelIdDefault(guild);
             }
             return tmp4;
           }
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       const items = [GuildStore];
-      return require("initialize").useStateFromStores(items, () => {
+      const obj = require("get initialized");
+      return obj.useStateFromStores(items, () => {
         if (null == closure_0) {
           return false;
         } else {
-          guild = GuildStore.getGuild(tmp);
+          const guild = GuildStore.getGuild(tmp);
           let tmp4 = null != guild;
           if (tmp4) {
             tmp4 =
               getGuildModeratorReportingEnabledDefault(guild) && null != getGuildModeratorReportChannelIdDefault(guild);
-            const tmp7 =
-              getGuildModeratorReportingEnabledDefault(guild) && null != getGuildModeratorReportChannelIdDefault(guild);
+            getGuildModeratorReportingEnabledDefault(guild) && null != getGuildModeratorReportChannelIdDefault(guild);
           }
           return tmp4;
         }
       });
     };
-let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
       _require = arg0;
-      const cResult = require("c").c(3);
+      const tmp = _require;
+      const obj = require("react");
+      const cResult = obj.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         const fn = function l() {
-          guild = null;
+          let guild = null;
           if (null != closure_0) {
             guild = GuildStore.getGuild(tmp);
           }
@@ -102,18 +111,20 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       const items = [GuildStore];
-      return require("initialize").useStateFromStores(items, () => {
-        guild = null;
+      const obj = require("get initialized");
+      return obj.useStateFromStores(items, () => {
+        let guild = null;
         if (null != closure_0) {
           guild = GuildStore.getGuild(tmp);
         }
@@ -128,24 +139,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp4;
       });
     };
-const result = size.fileFinishedImporting("modules/report_to_mod/hooks/useReportToModHooks.tsx");
-
-export const useIsReportToModEnabled = tmp2;
-export const useReportToModChannelId = tmp3;
-export const useIsModeratorReportOrPostChannel = function useIsModeratorReportOrPostChannel(isModeratorReportChannel) {
-  return ReportToModUtils.isModeratorReportOrPostChannel(isModeratorReportChannel);
-};
-export const useIsModeratorReportPostChannel = function useIsModeratorReportPostChannel(isModeratorReportChannel) {
-  return ReportToModUtils.isModeratorReportPostChannel(isModeratorReportChannel);
-};
-export const useLoadReportedMessage = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (messageReference) => {
-      const cResult = messageReference(576).c(7);
+      let first;
+      let tmp6;
+      let tmp = messageReference;
+      let obj = messageReference(576);
+      const cResult = obj.c(7);
       messageReference = messageReference.messageReference;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MessageStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -159,29 +165,29 @@ export const useLoadReportedMessage = ReactCompilerGating.isReactCompilerEnabled
         };
         cResult[1] = messageReference;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      let obj = messageReference(576);
-      const stateFromStores = messageReference(504).useStateFromStores(first, tmp6);
+      const tmpResult = tmp(504);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
       if (cResult[3] === messageReference) {
+        let tmp8;
+        let tmp9;
         if (cResult[4] === stateFromStores) {
-          let tmp8 = cResult[5];
-          let tmp9 = cResult[6];
+          tmp8 = cResult[5];
+          tmp9 = cResult[6];
         }
         useEffect(tmp8, tmp9);
       }
       const fn2 = function h() {
-        let tmp = null == stateFromStores;
+        let obj3;
+        const tmp = null == stateFromStores && null != messageReference;
         if (tmp) {
-          tmp = null != messageReference;
-        }
-        if (tmp) {
-          const obj2 = { channelId: messageReference.channel_id, jump: null, limit: 10 };
-          const obj3 = { messageId: messageReference.message_id };
-          obj2.jump = obj3;
-          const messages = MessageActionCreatorsDefault.fetchMessages(obj2);
+          const obj2 = { channelId: messageReference.channel_id, jump: obj3, limit: 10 };
+          obj3 = { messageId: messageReference.message_id };
+          const obj = MessageActionCreatorsDefault;
+          const messages = obj.fetchMessages(obj2);
         }
       };
       const items1 = [stateFromStores, messageReference];
@@ -191,12 +197,12 @@ export const useLoadReportedMessage = ReactCompilerGating.isReactCompilerEnabled
       cResult[6] = items1;
       tmp9 = items1;
       tmp8 = fn2;
-      const tmpResult = messageReference(504);
     }
   : (messageReference) => {
       messageReference = messageReference.messageReference;
+      let obj = messageReference(504);
       const items = [MessageStore];
-      const stateFromStores = messageReference(504).useStateFromStores(items, () => {
+      const stateFromStores = obj.useStateFromStores(items, () => {
         let message = null;
         if (null != messageReference) {
           message = MessageStore.getMessage(messageReference.channel_id, messageReference.message_id);
@@ -205,18 +211,29 @@ export const useLoadReportedMessage = ReactCompilerGating.isReactCompilerEnabled
       });
       const items1 = [stateFromStores, messageReference];
       useEffect(() => {
-        let tmp = null == stateFromStores;
+        let obj3;
+        const tmp = null == stateFromStores && null != messageReference;
         if (tmp) {
-          tmp = null != messageReference;
-        }
-        if (tmp) {
-          const obj2 = { channelId: messageReference.channel_id, jump: null, limit: 10 };
-          const obj3 = { messageId: messageReference.message_id };
-          obj2.jump = obj3;
-          const messages = MessageActionCreatorsDefault.fetchMessages(obj2);
+          const obj2 = { channelId: messageReference.channel_id, jump: obj3, limit: 10 };
+          obj3 = { messageId: messageReference.message_id };
+          const obj = MessageActionCreatorsDefault;
+          const messages = obj.fetchMessages(obj2);
         }
       }, items1);
     };
+const result = size.fileFinishedImporting("modules/report_to_mod/hooks/useReportToModHooks.tsx");
+
+export const useIsReportToModEnabled = tmp2;
+export const useReportToModChannelId = tmp3;
+export const useIsModeratorReportOrPostChannel = function useIsModeratorReportOrPostChannel(isModeratorReportChannel) {
+  const obj = ReportToModUtils;
+  return obj.isModeratorReportOrPostChannel(isModeratorReportChannel);
+};
+export const useIsModeratorReportPostChannel = function useIsModeratorReportPostChannel(isModeratorReportChannel) {
+  const obj = ReportToModUtils;
+  return obj.isModeratorReportPostChannel(isModeratorReportChannel);
+};
+export const useLoadReportedMessage = tmp4;
 export const loadOriginalAuthorFromSnapshot = function loadOriginalAuthorFromSnapshot(arg0) {
   let reported_user_id;
   if (arg0 != null) {
@@ -229,6 +246,7 @@ export const loadOriginalAuthorFromSnapshot = function loadOriginalAuthorFromSna
     }
   }
   if (null != reported_user_id) {
-    const user = UserActionCreators.getUser(reported_user_id);
+    const obj = UserActionCreators;
+    const user = obj.getUser(reported_user_id);
   }
 };

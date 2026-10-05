@@ -52,38 +52,42 @@ const items2 = [
   ,
   ,
 ];
-const obj3 = {
+({
   sortType: CollectibleSearchSortType.CollectibleSearchSortType.RELEVANCE,
   sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC,
-};
+});
 items2[1] = {
   sortType: CollectibleSearchSortType.CollectibleSearchSortType.RECENCY,
   sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC,
 };
-const obj4 = {
+({
   sortType: CollectibleSearchSortType.CollectibleSearchSortType.RECENCY,
   sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC,
-};
+});
 items2[2] = {
   sortType: CollectibleSearchSortType.CollectibleSearchSortType.PRICE,
   sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.ASC,
 };
-const obj5 = {
+({
   sortType: CollectibleSearchSortType.CollectibleSearchSortType.PRICE,
   sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.ASC,
-};
+});
 items2[3] = {
   sortType: CollectibleSearchSortType.CollectibleSearchSortType.PRICE,
   sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC,
 };
-const obj6 = {
+({
   sortType: CollectibleSearchSortType.CollectibleSearchSortType.PRICE,
   sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC,
-};
+});
 items2[4] = {
   sortType: CollectibleSearchSortType.CollectibleSearchSortType.POPULARITY,
   sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC,
 };
+({
+  sortType: CollectibleSearchSortType.CollectibleSearchSortType.POPULARITY,
+  sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC,
+});
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopConstants.tsx");
 const items3 = [{ categorySkuId: "1440063059895779408", rewardSkuId: "1440063059862487193" }];
 
@@ -150,17 +154,7 @@ export const isIndexPageTab = function isIndexPageTab(arg0) {
   return items.includes(arg0);
 };
 export const shouldAddTabToUrl = function shouldAddTabToUrl(arg0) {
-  let tmp = null != arg0;
-  if (tmp) {
-    tmp = arg0 !== obj.HOME;
-  }
-  if (tmp) {
-    tmp = arg0 !== obj.CATALOG;
-  }
-  if (tmp) {
-    tmp = arg0 !== obj.GAME_SHOPS;
-  }
-  return tmp;
+  return null != arg0 && arg0 !== obj.HOME && arg0 !== obj.CATALOG && arg0 !== obj.GAME_SHOPS;
 };
 export const SHOP_FEED_TRANSITION_DURATION = 800;
 export const FEED_ITEMS = [

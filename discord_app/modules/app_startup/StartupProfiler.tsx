@@ -1,10 +1,12 @@
 // discord_app/modules/app_startup/StartupProfiler.tsx
 import AppStartPerformanceDefault from "../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
-import noop from "../../../_runtime/metro/00019__.js";
+import Fragment from "../../../_runtime/react/00021_Fragment.js";
+import react from "../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const jsx = fn(21).jsx;
-const obj = {
+const jsx = Fragment.jsx;
+let obj = {
   App: "App",
   AppContainer: "AppContainer",
   MainNavigator: "MainNavigator",
@@ -24,9 +26,9 @@ const obj = {
 };
 let obj2 = {};
 function setLevels(obj, arg1) {
-  for (const key10006 in arg0) {
+  for (const key10006 in obj) {
     obj2[key10006] = arg1;
-    let tmp4 = setLevels(arg0[key10006], arg1 + " ");
+    let tmp4 = setLevels(obj[key10006], arg1 + " ");
     continue;
   }
 }
@@ -63,37 +65,40 @@ for (const key10073 in obj3) {
   }
   continue;
 }
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/app_startup/StartupProfiler.tsx");
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = profile(576).c(6);
+      let children;
+      let profile;
+      let tmp3;
+      let obj = profile(576);
+      const cResult = obj.c(6);
       ({ children, profile } = arg0);
       obj2 = AppStartPerformanceDefault;
       obj2.mark("\u{1F3A8}", "" + obj2[profile] + profile + " render");
       if (cResult[0] !== profile) {
         const fn = function o(arg0, arg1, arg2) {
-          AppStartPerformanceDefault.mark("\u{1F3A8}", "" + obj2[profile] + profile + " " + arg1, arg2);
+          const obj = AppStartPerformanceDefault;
+          obj.mark("\u{1F3A8}", "" + obj2[profile] + profile + " " + arg1, arg2);
         };
         cResult[0] = profile;
         cResult[1] = fn;
-        let tmp3 = fn;
+        tmp3 = fn;
       } else {
         tmp3 = cResult[1];
       }
       if (cResult[2] === children) {
         if (cResult[3] === profile) {
+          let tmp4;
           if (cResult[4] === tmp3) {
-            let tmp4 = cResult[5];
+            tmp4 = cResult[5];
           }
           return tmp4;
         }
       }
       const tmp5 = (
-        <noop.Profiler id={profile} onRender={tmp3}>
+        <react.Profiler id={profile} onRender={tmp3}>
           {children}
-        </noop.Profiler>
+        </react.Profiler>
       );
       cResult[2] = children;
       cResult[3] = profile;
@@ -101,82 +106,23 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp5;
       tmp4 = tmp5;
     }
-  : (children) => {
-      const profile = children.profile;
-      AppStartPerformanceDefault.mark("\u{1F3A8}", "" + obj2[profile] + profile + " render");
-      obj2 = {
-        id: profile,
-        onRender(arg0, arg1, arg2) {
-          AppStartPerformanceDefault.mark("\u{1F3A8}", "" + obj2[profile] + profile + " " + arg1, arg2);
-        },
-        children: children.children,
-      };
+  : (profile) => {
+      function onRender(arg0, arg1, arg2) {
+        const obj = AppStartPerformanceDefault;
+        obj.mark("\u{1F3A8}", "" + obj2[profile] + profile + " " + arg1, arg2);
+      }
+      profile = profile.profile;
+      const children = profile.children;
+      let obj = AppStartPerformanceDefault;
+      obj.mark("\u{1F3A8}", "" + obj2[profile] + profile + " render");
+      obj2 = { id: profile, onRender, children };
       return (
-        <noop.Profiler
-          id={profile}
-          onRender={function onRender(arg0, arg1, arg2) {
-            AppStartPerformanceDefault.mark("\u{1F3A8}", "" + obj2[profile] + profile + " " + arg1, arg2);
-          }}
-        >
-          {children.children}
-        </noop.Profiler>
+        <react.Profiler id={profile} onRender={onRender}>
+          {children}
+        </react.Profiler>
       );
     };
+const result = size.fileFinishedImporting("modules/app_startup/StartupProfiler.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      const cResult = profile(576).c(6);
-      ({ children, profile } = arg0);
-      obj2 = AppStartPerformanceDefault;
-      obj2.mark("\u{1F3A8}", "" + obj2[profile] + profile + " render");
-      if (cResult[0] !== profile) {
-        const fn = function o(arg0, arg1, arg2) {
-          AppStartPerformanceDefault.mark("\u{1F3A8}", "" + obj2[profile] + profile + " " + arg1, arg2);
-        };
-        cResult[0] = profile;
-        cResult[1] = fn;
-        let tmp3 = fn;
-      } else {
-        tmp3 = cResult[1];
-      }
-      if (cResult[2] === children) {
-        if (cResult[3] === profile) {
-          if (cResult[4] === tmp3) {
-            let tmp4 = cResult[5];
-          }
-          return tmp4;
-        }
-      }
-      const tmp5 = (
-        <noop.Profiler id={profile} onRender={tmp3}>
-          {children}
-        </noop.Profiler>
-      );
-      cResult[2] = children;
-      cResult[3] = profile;
-      cResult[4] = tmp3;
-      cResult[5] = tmp5;
-      tmp4 = tmp5;
-    }
-  : (children) => {
-      const profile = children.profile;
-      AppStartPerformanceDefault.mark("\u{1F3A8}", "" + obj2[profile] + profile + " render");
-      obj2 = {
-        id: profile,
-        onRender(arg0, arg1, arg2) {
-          AppStartPerformanceDefault.mark("\u{1F3A8}", "" + obj2[profile] + profile + " " + arg1, arg2);
-        },
-        children: children.children,
-      };
-      return (
-        <noop.Profiler
-          id={profile}
-          onRender={function onRender(arg0, arg1, arg2) {
-            AppStartPerformanceDefault.mark("\u{1F3A8}", "" + obj2[profile] + profile + " " + arg1, arg2);
-          }}
-        >
-          {children.children}
-        </noop.Profiler>
-      );
-    };
+export default tmp4;
 export const Profiles = obj;

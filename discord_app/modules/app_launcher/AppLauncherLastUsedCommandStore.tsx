@@ -1,44 +1,45 @@
 // discord_app/modules/app_launcher/AppLauncherLastUsedCommandStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 let closure_0 = 10 * DurationsDefault.Millis.MINUTE;
-const lastUsedTimeMs = { lastUsedCommandId: null, lastUsedTimeMs: null };
-const PersistedStore = initializeDefault.PersistedStore;
-class AppLauncherLastUsedCommandStore extends PersistedStore {}
-const prototype = AppLauncherLastUsedCommandStore.prototype;
-prototype["initialize"] = function initialize(arg0) {
-  if (null != arg0) {
-    ({ lastUsedCommandId: closure_1.lastUsedCommandId, lastUsedTimeMs: closure_1.lastUsedTimeMs } = arg0);
-  }
-};
-prototype["getState"] = function getState() {
-  return closure_1;
-};
-prototype["getLastUsedCommandId"] = function getLastUsedCommandId() {
-  let lastUsedCommandId = null;
-  if (null != lastUsedTimeMs.lastUsedTimeMs) {
-    lastUsedCommandId = null;
-    if (null != lastUsedTimeMs.lastUsedCommandId) {
-      if (tmp > lastUsedTimeMs.lastUsedTimeMs + closure_0) {
-        lastUsedTimeMs.lastUsedCommandId = null;
-        lastUsedTimeMs.lastUsedTimeMs = null;
-      }
-      lastUsedCommandId = lastUsedTimeMs.lastUsedCommandId;
+const PersistedStore = get_initializedDefault.PersistedStore;
+class AppLauncherLastUsedCommandStore extends PersistedStore {
+  initialize(arg0) {
+    if (null != arg0) {
+      ({ lastUsedCommandId: closure_1.lastUsedCommandId, lastUsedTimeMs: closure_1.lastUsedTimeMs } = arg0);
     }
   }
-  return lastUsedCommandId;
-};
+  getState() {
+    return lastUsedTimeMs;
+  }
+  getLastUsedCommandId() {
+    let lastUsedCommandId = null;
+    if (null != lastUsedTimeMs.lastUsedTimeMs) {
+      lastUsedCommandId = null;
+      if (null != lastUsedTimeMs.lastUsedCommandId) {
+        if (tmp > lastUsedTimeMs.lastUsedTimeMs + closure_0) {
+          lastUsedTimeMs.lastUsedCommandId = null;
+          lastUsedTimeMs.lastUsedTimeMs = null;
+        }
+        lastUsedCommandId = lastUsedTimeMs.lastUsedCommandId;
+      }
+    }
+    return lastUsedCommandId;
+  }
+}
+const prototype = AppLauncherLastUsedCommandStore.prototype;
 AppLauncherLastUsedCommandStore.displayName = "AppLauncherLastUsedCommandStore";
 AppLauncherLastUsedCommandStore.persistKey = "AppLauncherLastUsedCommandStore";
-const appLauncherLastUsedCommandStore = new AppLauncherLastUsedCommandStore(DispatcherDefault, {
+const obj = {
   APPLICATION_COMMAND_USED: function handleApplicationCommandUsed(command) {
-    closure_1.lastUsedCommandId = command.command.id;
-    closure_1.lastUsedTimeMs = Date.now();
+    lastUsedTimeMs.lastUsedCommandId = command.command.id;
+    lastUsedTimeMs.lastUsedTimeMs = Date.now();
   },
-});
-const size = fn(2);
+};
+const appLauncherLastUsedCommandStore = new AppLauncherLastUsedCommandStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/app_launcher/AppLauncherLastUsedCommandStore.tsx");
 
 export default appLauncherLastUsedCommandStore;

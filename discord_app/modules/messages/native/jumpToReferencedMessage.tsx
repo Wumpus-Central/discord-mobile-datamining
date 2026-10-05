@@ -10,11 +10,11 @@ export default function jumpToReferencedMessage(messageReference) {
   if (messageReference != null) {
     channel_id = messageReference.channel_id;
   }
+  const tmp2 = null != channel_id && null != messageReference.message_id;
   if (tmp2) {
-    const obj3 = { channelId: null, messageId: null, flash: true, returnMessageId: null };
+    const obj3 = { channelId: null, messageId: null, flash: true, returnMessageId: messageReference.id };
     ({ channel_id: obj2.channelId, message_id: obj2.messageId } = messageReference);
-    obj3.returnMessageId = messageReference.id;
-    MessageActionCreatorsDefault.jumpToMessage(obj3);
+    const obj = MessageActionCreatorsDefault;
+    obj.jumpToMessage(obj3);
   }
-  tmp2 = null != channel_id && null != messageReference.message_id;
 }

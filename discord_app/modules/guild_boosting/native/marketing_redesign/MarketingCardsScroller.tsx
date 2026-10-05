@@ -1,79 +1,100 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
-import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+import intl3 from "../../../../intl/index.native.tsx";
+import utils_PlatformUtils from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import AccessibilityStore_mod from "../../../a11y/AccessibilityStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ColorUtils_mod from "../../../../utils/ColorUtils.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let ColorUtils;
+let c9;
+let hasOwnProperty;
+let items;
+let metroImportAll;
+let metroRequire;
+let size;
+let react = react_mod;
+({ ScrollView: hasOwnProperty, View: metroRequire } = react_native);
+let AccessibilityStore = AccessibilityStore_mod;
+({ jsx: metroImportAll, jsxs: c9 } = Fragment);
 const previous = "previous";
 const next = "next";
-const createStyles = fn(4890);
+let createStyles = createStyles_mod;
 let obj = {
   wrapper: { position: "relative" },
-  navigationButton: null,
-  navigationButtonPrevious: null,
-  navigationButtonNext: null,
+  navigationButton: size,
+  navigationButtonPrevious: { left: 16 },
+  navigationButtonNext: { right: 16 },
 };
-let size = {
+size = {
   alignItems: "center",
-  backgroundColor: null,
-  borderRadius: null,
+  backgroundColor: ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.56),
+  borderRadius: nativeDefault.radii.round,
   height: 44,
   justifyContent: "center",
   position: "absolute",
   top: "50%",
-  transform: null,
+  transform: items,
   width: 44,
   zIndex: 1,
 };
-const ColorUtils = fn(4727);
-size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.56);
-size.borderRadius = nativeDefault.radii.round;
-let items = [{ translateY: -22 }];
-size.transform = items;
-obj.navigationButton = size;
-obj.navigationButtonPrevious = { left: 16 };
-obj.navigationButtonNext = { right: 16 };
-let closure_12 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx",
-);
-
-export const MarketingCardsScroller = noop.forwardRef(
+createStyles = createStyles.createStyles;
+ColorUtils = ColorUtils_mod;
+items = [{ translateY: -22 }];
+let closure_12 = createStyles(obj);
+const forwardRef = react.forwardRef;
+const forwardRefResult = forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (onScrollingChange, arg1) => {
-        const cResult = itemCount(num2[9]).c(86);
+    ? function (onScrollingChange, arg1) {
+        let cardMarginRight;
+        let cardWidth;
+        let children;
+        let closure_7;
+        let closure_8;
+        let closure_9;
+        let contentContainerStyle;
+        let initialIndex;
+        let itemCount;
+        let num;
+        let tmp12;
+        let tmp14;
+        const tmp2 = num;
+        let obj = itemCount(num[9]);
+        const cResult = obj.c(86);
         ({ children, contentContainerStyle, initialIndex, itemCount } = onScrollingChange);
         onScrollingChange = onScrollingChange.onScrollingChange;
-        let num = 0;
-        num2 = 0;
+        num = 0;
         ({ cardMarginRight, cardWidth } = onScrollingChange);
         if (undefined !== initialIndex) {
-          num2 = initialIndex;
+          num = initialIndex;
         }
-        closure_12();
-        noop.useRef(null);
+        const tmp4 = closure_12();
+        react.useRef(null);
         const sum = cardWidth + cardMarginRight;
-        noop = sum;
-        const ref = noop.useRef(Math.max(num, Math.min(itemCount - 1, num2)) * sum);
-        if (cResult[0] === num2) {
+        react = sum;
+        const ref = react.useRef(Math.max(0, Math.min(itemCount - 1, num)) * sum);
+        if (cResult[0] === num) {
+          let tmp7;
+          let tmp16;
+          let tmp15;
           if (cResult[1] === itemCount) {
-            let tmp7 = cResult[2];
+            tmp7 = cResult[2];
           }
-          const tmp9 = ref(obj2.useState(tmp7), 2);
+          const tmp9 = ref(react.useState(tmp7), 2);
           const first = tmp9[0];
           AccessibilityStore = tmp9[1];
-          [tmp12, closure_8] = ref(obj2.useState(num), 2);
-          const tmp11 = ref(obj2.useState(num), 2);
-          [tmp14, closure_9] = ref(obj2.useState(num), 2);
+          [tmp12, closure_8] = ref(react.useState(0), 2);
+          ref(react.useState(0), 2);
+          [tmp14, closure_9] = ref(react.useState(0), 2);
           const _Symbol = Symbol;
+          let str = "react.memo_cache_sentinel";
+          ref(react.useState(0), 2);
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
             const items = [AccessibilityStore];
             class L {
@@ -83,19 +104,20 @@ export const MarketingCardsScroller = noop.forwardRef(
             }
             cResult[3] = items;
             cResult[4] = L;
-            let tmp16 = L;
-            let tmp15 = items;
+            tmp16 = L;
+            tmp15 = items;
           } else {
             tmp15 = cResult[3];
             tmp16 = cResult[4];
           }
-          const tmp13 = ref(obj2.useState(num), 2);
-          const stateFromStores = itemCount(tmp2[10]).useStateFromStores(tmp15, tmp16);
-          obj2.useRef(stateFromStores);
+          const tmpResult = itemCount(tmp2[10]);
+          const stateFromStores = tmpResult.useStateFromStores(tmp15, tmp16);
+          const ref2 = obj2.useRef(stateFromStores);
           itemCount(tmp2[11]);
           if (cResult[5] === tmp12) {
+            let tmp20;
             if (cResult[6] === tmp14) {
-              let tmp20 = cResult[7];
+              tmp20 = cResult[7];
             }
             closure_12 = tmp20;
             class L {
@@ -103,324 +125,362 @@ export const MarketingCardsScroller = noop.forwardRef(
                 return closure_7.useReducedMotion;
               }
             }
-            closure_13 = tmp23;
-            let tmp24 = tmp20;
-            if (tmp20) {
-              tmp24 = first < itemCount - 1;
-            }
-            closure_14 = tmp24;
+            let closure_14 = tmp24;
             if (cResult[8] === itemCount) {
-              if (cResult[9] === sum) {
-                if (cResult[13] !== stateFromStores) {
-                  function ie() {
-                    closure_11.current = stateFromStores;
-                  }
-                  const items1 = [stateFromStores];
-                  class L {
-                    constructor() {
-                      return closure_7.useReducedMotion;
-                    }
-                  }
-                  cResult[13] = stateFromStores;
-                  cResult[14] = ie;
-                  cResult[15] = items1;
-                  let tmp34 = items1;
-                  let tmp33 = ie;
-                } else {
-                  tmp33 = cResult[14];
-                  tmp34 = cResult[15];
+              let tmp32;
+              let tmp31;
+              let tmp35;
+              let tmp34;
+              if (cResult[13] !== stateFromStores) {
+                function ie() {
+                  ref2.current = stateFromStores;
                 }
-                const effect = obj2.useEffect(tmp33, tmp34);
+                const items1 = [stateFromStores];
                 class L {
                   constructor() {
                     return closure_7.useReducedMotion;
                   }
                 }
-                if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-                  function oe() {
-                    const current = ref.current;
-                    if (0 !== current) {
-                      const current2 = ref.current;
-                      if (current2 != null) {
-                        const obj = { x: current, animated: false };
-                        current2.scrollTo(obj);
-                      }
-                    }
-                  }
-                  const items2 = [];
-                  class L {
-                    constructor() {
-                      return closure_7.useReducedMotion;
-                    }
-                  }
-                  cResult[17] = items2;
-                  let tmp37 = items2;
-                  let tmp36 = oe;
-                } else {
-                  tmp36 = cResult[16];
-                  tmp37 = cResult[17];
+                cResult[13] = stateFromStores;
+                cResult[14] = ie;
+                cResult[15] = items1;
+                tmp32 = items1;
+                tmp31 = ie;
+              } else {
+                tmp31 = cResult[14];
+                tmp32 = cResult[15];
+              }
+              const effect = obj2.useEffect(tmp31, tmp32);
+              class L {
+                constructor() {
+                  return closure_7.useReducedMotion;
                 }
-                const effect1 = obj2.useEffect(tmp36, tmp37);
-                if (cResult[18] === itemCount) {
-                  if (cResult[19] === sum) {
-                    let tmp39 = cResult[20];
-                  }
-                  const scrollToIndex = tmp39;
-                  if (cResult[21] !== tmp39) {
-                    function ce() {
-                      return { scrollToIndex };
+              }
+              if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
+                function oe() {
+                  const current = ref.current;
+                  if (0 !== current) {
+                    const current2 = ref.current;
+                    if (current2 != null) {
+                      const obj = { x: current, animated: false };
+                      current2.scrollTo(obj);
                     }
-                    const items3 = [tmp39];
-                    class L {
-                      constructor() {
-                        return closure_7.useReducedMotion;
-                      }
-                    }
-                    cResult[21] = tmp39;
-                    cResult[22] = ce;
-                    cResult[23] = items3;
-                    let tmp41 = items3;
-                    let tmp40 = ce;
-                  } else {
-                    tmp40 = cResult[22];
-                    tmp41 = cResult[23];
                   }
+                }
+                const items2 = [];
+                class L {
+                  constructor() {
+                    return closure_7.useReducedMotion;
+                  }
+                }
+                cResult[17] = items2;
+                tmp35 = items2;
+                tmp34 = oe;
+              } else {
+                tmp34 = cResult[16];
+                tmp35 = cResult[17];
+              }
+              const effect1 = obj2.useEffect(tmp34, tmp35);
+              if (cResult[18] === itemCount) {
+                let tmp37;
+                let tmp39;
+                let tmp38;
+                if (cResult[19] === sum) {
+                  tmp37 = cResult[20];
+                }
+                const scrollToIndex = tmp37;
+                if (cResult[21] !== tmp37) {
+                  function ce() {
+                    return { scrollToIndex };
+                  }
+                  const items3 = [tmp37];
                   class L {
                     constructor() {
                       return closure_7.useReducedMotion;
                     }
                   }
-                  const imperativeHandle = obj2.useImperativeHandle(arg1, tmp40, tmp41);
-                  if (cResult[24] === tmp24) {
-                    if (cResult[29] === first) {
-                      if (cResult[30] === tmp23) {
-                        if (cResult[31] === tmp39) {
-                          let tmp47 = cResult[32];
-                        }
-                        closure_16 = tmp47;
-                        if (cResult[33] === first) {
-                          if (cResult[34] === tmp24) {
-                            if (cResult[35] === tmp39) {
-                              let tmp48 = cResult[36];
-                            }
-                            closure_17 = tmp48;
-                            if (cResult[37] === tmp48) {
-                              if (cResult[40] !== onScrollingChange) {
-                                function xe() {
-                                  if (onScrollingChange != null) {
-                                    tmp(true);
-                                  }
+                  cResult[21] = tmp37;
+                  cResult[22] = ce;
+                  cResult[23] = items3;
+                  tmp39 = items3;
+                  tmp38 = ce;
+                } else {
+                  tmp38 = cResult[22];
+                  tmp39 = cResult[23];
+                }
+                class L {
+                  constructor() {
+                    return closure_7.useReducedMotion;
+                  }
+                }
+                const imperativeHandle = obj2.useImperativeHandle(arg1, tmp38, tmp39);
+                if (cResult[24] === (tmp20 && first < itemCount - 1)) {
+                  if (cResult[29] === first) {
+                    if (cResult[30] === (tmp20 && first > 0)) {
+                      let tmp48;
+                      if (cResult[31] === tmp37) {
+                        tmp48 = cResult[32];
+                      }
+                      let closure_16 = tmp48;
+                      if (cResult[33] === first) {
+                        if (cResult[34] === (tmp20 && first < itemCount - 1)) {
+                          let tmp49;
+                          if (cResult[35] === tmp37) {
+                            tmp49 = cResult[36];
+                          }
+                          let closure_17 = tmp49;
+                          if (cResult[37] === tmp49) {
+                            if (cResult[40] !== onScrollingChange) {
+                              function xe() {
+                                if (onScrollingChange != null) {
+                                  tmp(true);
                                 }
-                                cResult[40] = onScrollingChange;
-                                class L {
-                                  constructor() {
-                                    return closure_7.useReducedMotion;
-                                  }
-                                }
-                                cResult[41] = xe;
                               }
-                              const _Symbol2 = Symbol;
+                              cResult[40] = onScrollingChange;
                               class L {
                                 constructor() {
                                   return closure_7.useReducedMotion;
                                 }
                               }
-                              if (tmp53 === Symbol.for("react.memo_cache_sentinel")) {
-                                class Ie {
-                                  constructor(arg0) {
-                                    tmp = closure_9(onScrollingChange.nativeEvent.layout.width);
-                                    return;
-                                  }
-                                }
-                                cResult[42] = Ie;
-                                class L {
-                                  constructor() {
-                                    return closure_7.useReducedMotion;
-                                  }
-                                }
-                              } else {
-                                class Ie {
-                                  constructor(arg0) {
-                                    tmp = closure_9(onScrollingChange.nativeEvent.layout.width);
-                                    return;
-                                  }
-                                }
-                              }
-                              const _Symbol3 = Symbol;
-                              if (cResult[43] === Symbol.for("react.memo_cache_sentinel")) {
-                                class Re {
-                                  constructor(arg0) {
-                                    tmp = closure_8(onScrollingChange);
-                                    return;
-                                  }
-                                }
-                                cResult[43] = Re;
-                                class L {
-                                  constructor() {
-                                    return closure_7.useReducedMotion;
-                                  }
-                                }
-                              } else {
-                                class Re {
-                                  constructor(arg0) {
-                                    tmp = closure_8(onScrollingChange);
-                                    return;
-                                  }
-                                }
-                              }
-                              if (cResult[44] === itemCount) {
-                                class Re {
-                                  constructor(arg0) {
-                                    tmp = closure_8(onScrollingChange);
-                                    return;
-                                  }
-                                }
-                              }
-                              class Pe {
-                                constructor(arg0) {
-                                  tmp = closure_7(
-                                    Math.max(
-                                      0,
-                                      Math.min(
-                                        itemCount - 1,
-                                        Math.round(onScrollingChange.nativeEvent.contentOffset.x / closure_4),
-                                      ),
-                                    ),
-                                  );
-                                  obj = closure_0(closure_2[13]);
-                                  if (obj.isIOS()) {
-                                    velocity = onScrollingChange.nativeEvent.velocity;
-                                    tmp2 = null;
-                                    tmp3 = null == velocity;
-                                    if (!tmp3) {
-                                      tmp4 = 0 === velocity.x && 0 === velocity.y;
-                                      tmp3 = tmp4;
-                                    }
-                                    if (tmp3) {
-                                      if (onScrollingChange != null) {
-                                        flag = false;
-                                        tmp5Result = tmp5(false);
-                                      }
-                                    }
-                                  }
-                                  return;
-                                }
-                              }
-                              cResult[44] = itemCount;
-                              cResult[45] = sum;
-                              cResult[46] = onScrollingChange;
-                              cResult[47] = Pe;
+                              cResult[41] = xe;
                             }
+                            const _Symbol2 = Symbol;
                             class L {
                               constructor() {
                                 return closure_7.useReducedMotion;
                               }
                             }
-                            cResult[37] = tmp48;
-                            cResult[38] = tmp47;
+                            if (tmp54 === Symbol.for("react.memo_cache_sentinel")) {
+                              class Ie {
+                                constructor(nativeEvent) {
+                                  closure_9(nativeEvent.nativeEvent.layout.width);
+                                }
+                              }
+                              cResult[42] = Ie;
+                              class L {
+                                constructor() {
+                                  return closure_7.useReducedMotion;
+                                }
+                              }
+                            } else {
+                              class Ie {
+                                constructor(nativeEvent) {
+                                  closure_9(nativeEvent.nativeEvent.layout.width);
+                                }
+                              }
+                            }
+                            const _Symbol3 = Symbol;
+                            if (cResult[43] === Symbol.for("react.memo_cache_sentinel")) {
+                              class Re {
+                                constructor(arg0) {
+                                  closure_8(arg0);
+                                }
+                              }
+                              cResult[43] = Re;
+                              class L {
+                                constructor() {
+                                  return closure_7.useReducedMotion;
+                                }
+                              }
+                            } else {
+                              class Re {
+                                constructor(arg0) {
+                                  closure_8(arg0);
+                                }
+                              }
+                            }
+                            if (cResult[44] === itemCount) {
+                              class Re {
+                                constructor(arg0) {
+                                  closure_8(arg0);
+                                }
+                              }
+                            }
+                            class Pe {
+                              constructor(nativeEvent) {
+                                closure_7(
+                                  Math.max(
+                                    0,
+                                    Math.min(
+                                      itemCount - 1,
+                                      Math.round(nativeEvent.nativeEvent.contentOffset.x / react),
+                                    ),
+                                  ),
+                                );
+                                const obj = utils_PlatformUtils;
+                                if (obj.isIOS()) {
+                                  const velocity = nativeEvent.nativeEvent.velocity;
+                                  let tmp3 = null == velocity;
+                                  if (!tmp3) {
+                                    tmp3 = 0 === velocity.x && 0 === velocity.y;
+                                  }
+                                  if (tmp3) {
+                                    if (onScrollingChange != null) {
+                                      tmp5(false);
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                            cResult[44] = itemCount;
+                            cResult[45] = sum;
+                            cResult[46] = onScrollingChange;
+                            cResult[47] = Pe;
                           }
-                        }
-                        class L {
-                          constructor() {
-                            return closure_7.useReducedMotion;
+                          class L {
+                            constructor() {
+                              return closure_7.useReducedMotion;
+                            }
                           }
-                        }
-                        cResult[33] = first;
-                        cResult[34] = tmp24;
-                        cResult[36] = tmp49;
-                        tmp48 = tmp49;
-                      }
-                    }
-                    function me() {
-                      if (closure_13) {
-                        scrollToIndex(first - 1);
-                      }
-                    }
-                    class L {
-                      constructor() {
-                        return closure_7.useReducedMotion;
-                      }
-                    }
-                    cResult[29] = first;
-                    cResult[30] = tmp23;
-                    cResult[31] = tmp39;
-                    cResult[32] = me;
-                    tmp47 = me;
-                  }
-                  const items4 = [];
-                  if (!tmp23) {
-                    class Re {
-                      constructor(arg0) {
-                        tmp = closure_8(onScrollingChange);
-                        return;
-                      }
-                    }
-                  } else {
-                    class Re {
-                      constructor(arg0) {
-                        tmp = closure_8(onScrollingChange);
-                        return;
-                      }
-                    }
-                    if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-                      class Re {
-                        constructor(arg0) {
-                          tmp = closure_8(onScrollingChange);
-                          return;
+                          cResult[37] = tmp49;
+                          cResult[38] = tmp48;
                         }
                       }
-                      tmp45[0] = stateFromStores;
                       class L {
                         constructor() {
                           return closure_7.useReducedMotion;
                         }
                       }
-                      tmp45[1] = obj5.string(itemCount(tmp2[12]).t.vgfxaA);
-                      cResult[27] = tmp45;
-                    } else {
-                      class Re {
-                        constructor(arg0) {
-                          tmp = closure_8(onScrollingChange);
-                          return;
-                        }
+                      cResult[33] = first;
+                      cResult[34] = tmp20 && first < itemCount - 1;
+                      cResult[36] = tmp50;
+                      tmp49 = tmp50;
+                    }
+                  }
+                  function me() {
+                    if (closure_1_13) {
+                      scrollToIndex(first - 1);
+                    }
+                  }
+                  class L {
+                    constructor() {
+                      return closure_7.useReducedMotion;
+                    }
+                  }
+                  cResult[29] = first;
+                  cResult[30] = tmp20 && first > 0;
+                  cResult[31] = tmp37;
+                  cResult[32] = me;
+                  tmp48 = me;
+                }
+                const items4 = [];
+                if (tmp20 && first > 0) {
+                  class Re {
+                    constructor(arg0) {
+                      closure_8(arg0);
+                    }
+                  }
+                  if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
+                    class Re {
+                      constructor(arg0) {
+                        closure_8(arg0);
                       }
                     }
+                    tmp43[0] = stateFromStores;
                     class L {
                       constructor() {
                         return closure_7.useReducedMotion;
                       }
                     }
+                    tmp43[1] = obj5.string(itemCount(tmp2[12]).t.vgfxaA);
+                    cResult[27] = tmp43;
+                  } else {
+                    class Re {
+                      constructor(arg0) {
+                        closure_8(arg0);
+                      }
+                    }
+                  }
+                  class L {
+                    constructor() {
+                      return closure_7.useReducedMotion;
+                    }
                   }
                 }
-                function le(arg0) {
-                  const bound = Math.max(0, Math.min(itemCount - 1, arg0));
-                  closure_7(bound);
-                  const current = ref.current;
-                  if (current != null) {
-                    const obj = { x: bound * sum, animated: !ref2.current };
-                    current.scrollTo(obj);
+                if (tmp20 && first < itemCount - 1) {
+                  class Re {
+                    constructor(arg0) {
+                      closure_8(arg0);
+                    }
+                  }
+                  if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
+                    class Re {
+                      constructor(arg0) {
+                        closure_8(arg0);
+                      }
+                    }
+                    tmp46[0] = ref2;
+                    class L {
+                      constructor() {
+                        return closure_7.useReducedMotion;
+                      }
+                    }
+                    tmp46[1] = obj6.string(itemCount(tmp2[12]).t.XiOHRX);
+                    cResult[28] = tmp46;
+                  } else {
+                    class Re {
+                      constructor(arg0) {
+                        closure_8(arg0);
+                      }
+                    }
+                  }
+                  class L {
+                    constructor() {
+                      return closure_7.useReducedMotion;
+                    }
                   }
                 }
-                cResult[18] = itemCount;
-                cResult[19] = sum;
-                cResult[20] = le;
-                tmp39 = le;
+                cResult[24] = tmp20 && first < itemCount - 1;
+                cResult[25] = tmp20 && first > 0;
+                cResult[26] = items4;
+              }
+              function le(arg0) {
+                const bound = Math.max(0, Math.min(itemCount - 1, arg0));
+                closure_7(bound);
+                const current = ref.current;
+                if (current != null) {
+                  const obj = { x: bound * react, animated: !ref2.current };
+                  current.scrollTo(obj);
+                }
+              }
+              cResult[18] = itemCount;
+              cResult[19] = sum;
+              cResult[20] = le;
+              tmp37 = le;
+            }
+            if (cResult[11] !== sum) {
+              class Re {
+                constructor(arg0) {
+                  closure_8(arg0);
+                }
+              }
+              cResult[11] = sum;
+              class L {
+                constructor() {
+                  return closure_7.useReducedMotion;
+                }
+              }
+              cResult[12] = tmp27;
+            } else {
+              class Re {
+                constructor(arg0) {
+                  closure_8(arg0);
+                }
               }
             }
             const _Array = Array;
+            const self = this;
             const array = new Array(itemCount);
-            const mapped = array.fill(num).map(tmp26);
+            const fillResult = array.fill(0);
+            const mapped = fillResult.map(tmp27);
             cResult[8] = itemCount;
             cResult[9] = sum;
-            num = 10;
             cResult[10] = mapped;
-            const fillResult = array.fill(num);
           }
-          if (tmp14 > num) {
+          if (tmp14 > 0) {
             class Re {
               constructor(arg0) {
-                tmp = closure_8(onScrollingChange);
-                return;
+                closure_8(arg0);
               }
             }
             const _Math = Math;
@@ -433,28 +493,45 @@ export const MarketingCardsScroller = noop.forwardRef(
           }
           cResult[5] = tmp12;
           cResult[6] = tmp14;
-          cResult[7] = tmp14 > num;
+          cResult[7] = tmp14 > 0;
           tmp20 = tmp21;
-          const tmpResult = itemCount(tmp2[10]);
         }
         const fn = function p() {
-          return Math.max(0, Math.min(itemCount - 1, num2));
+          return Math.max(0, Math.min(itemCount - 1, num));
         };
-        cResult[num] = num2;
+        cResult[0] = num;
         cResult[1] = itemCount;
         cResult[2] = fn;
         tmp7 = fn;
-        let obj = itemCount(num2[9]);
       }
     : (initialIndex, arg1) => {
+        let ChevronLargeLeftIcon;
+        let ChevronLargeRightIcon;
+        let Children;
+        let cardMarginRight;
+        let cardWidth;
+        let children;
+        let closure_8;
+        let closure_9;
+        let contentContainerStyle;
+        let intl;
+        let intl2;
+        let items6;
+        let items7;
+        let items8;
+        let items9;
+        let obj7;
+        let obj9;
+        let tmp7;
+        let tmp9;
         function handleScrollEnd(nativeEvent) {
-          closure_7(Math.max(0, Math.min(itemCount - 1, Math.round(nativeEvent.nativeEvent.contentOffset.x / sum))));
+          closure_7(Math.max(0, Math.min(itemCount - 1, Math.round(nativeEvent.nativeEvent.contentOffset.x / react))));
+          const obj = utils_PlatformUtils;
           if (obj.isIOS()) {
             const velocity = nativeEvent.nativeEvent.velocity;
             let tmp3 = null == velocity;
             if (!tmp3) {
               tmp3 = 0 === velocity.x && 0 === velocity.y;
-              const tmp4 = 0 === velocity.x && 0 === velocity.y;
             }
             if (tmp3) {
               if (onScrollingChange != null) {
@@ -471,27 +548,30 @@ export const MarketingCardsScroller = noop.forwardRef(
         }
         const itemCount = initialIndex.itemCount;
         const onScrollingChange = initialIndex.onScrollingChange;
+        const style = initialIndex.style;
         const tmp = closure_12();
-        noop.useRef(null);
+        let obj = react;
+        react.useRef(null);
         const sum = cardWidth + cardMarginRight;
-        noop = sum;
-        const ref = noop.useRef(Math.max(0, Math.min(itemCount - 1, num)) * sum);
-        let tmp4 = ref(
-          noop.useState(() => Math.max(0, Math.min(itemCount - 1, num))),
+        react = sum;
+        const ref = react.useRef(Math.max(0, Math.min(itemCount - 1, num)) * sum);
+        const tmp4 = ref(
+          react.useState(() => Math.max(0, Math.min(itemCount - 1, num))),
           2,
         );
         const first = tmp4[0];
-        closure_7 = tmp4[1];
-        [tmp7, closure_8] = ref(noop.useState(0), 2);
-        const tmp6 = ref(noop.useState(0), 2);
-        [tmp9, closure_9] = ref(noop.useState(0), 2);
-        const tmp8 = ref(noop.useState(0), 2);
-        let items = [closure_7];
-        const stateFromStores = num(onScrollingChange[10]).useStateFromStores(items, () => closure_7.useReducedMotion);
-        noop.useRef(stateFromStores);
+        let closure_7 = tmp4[1];
+        [tmp7, closure_8] = ref(react.useState(0), 2);
+        ref(react.useState(0), 2);
+        [tmp9, closure_9] = ref(react.useState(0), 2);
+        ref(react.useState(0), 2);
         let obj2 = num(onScrollingChange[10]);
+        let items = [closure_7];
+        const stateFromStores = obj2.useStateFromStores(items, () => closure_7.useReducedMotion);
+        const ref2 = react.useRef(stateFromStores);
         let tmp14 = tmp9 > 0;
-        const isScreenReaderEnabled = num(onScrollingChange[11]).useIsScreenReaderEnabled();
+        const obj3 = num(onScrollingChange[11]);
+        const isScreenReaderEnabled = obj3.useIsScreenReaderEnabled();
         if (tmp14) {
           const _Math = Math;
           const _Math2 = Math;
@@ -499,24 +579,19 @@ export const MarketingCardsScroller = noop.forwardRef(
           tmp14 = rounded > Math.round(tmp9);
         }
         closure_12 = tmp14;
-        let tmp25Result = tmp14;
-        if (tmp14) {
-          tmp25Result = first > 0;
-        }
-        closure_13 = tmp25Result;
-        let tmp25Result2 = tmp14;
-        if (tmp14) {
-          tmp25Result2 = first < itemCount - 1;
-        }
-        closure_14 = tmp25Result2;
+        let tmp25Result = tmp14 && first > 0;
+        let closure_13 = tmp25Result;
+        let tmp25Result2 = tmp14 && first < itemCount - 1;
+        let closure_14 = tmp25Result2;
         const items1 = [itemCount, sum];
         const items2 = [stateFromStores];
         const memo = obj.useMemo(() => {
           const array = new Array(itemCount);
-          return array.fill(0).map((item, index) => index * closure_1_4);
+          const fillResult = array.fill(0);
+          return fillResult.map((item, index) => index * closure_1_4);
         }, items1);
         const effect = obj.useEffect(() => {
-          closure_11.current = stateFromStores;
+          ref2.current = stateFromStores;
         }, items2);
         const effect1 = obj.useEffect(() => {
           const current = ref.current;
@@ -534,30 +609,31 @@ export const MarketingCardsScroller = noop.forwardRef(
           closure_7(bound);
           const current = ref.current;
           if (current != null) {
-            const obj = { x: bound * sum, animated: !ref2.current };
+            const obj = { x: bound * react, animated: !ref2.current };
             current.scrollTo(obj);
           }
         }, items3);
         const items4 = [scrollToIndex];
         const imperativeHandle = obj.useImperativeHandle(arg1, () => ({ scrollToIndex }), items4);
         const items5 = [tmp25Result2, tmp25Result];
-        const obj4 = { style: null, children: null };
-        const items6 = [initialIndex.style, tmp.wrapper];
-        obj4.style = items6;
+        const obj4 = { style: items6, children: items7 };
+        items6 = [style, tmp.wrapper];
         const obj5 = {
-          accessibilityActions: noop.useMemo(() => {
+          accessibilityActions: obj.useMemo(() => {
+            let intl;
+            let intl2;
             const items = [];
             if (closure_13) {
-              const obj = { name: previous, label: null };
-              const intl = util.intl;
-              obj.label = intl.string(util.t.vgfxaA);
-              items.push(obj);
+              const push = items.push;
+              const obj = { name: previous, label: intl.string(intl3.t.vgfxaA) };
+              intl = intl3.intl;
+              push(obj);
             }
             if (closure_14) {
-              const obj2 = { name: next, label: null };
-              const intl2 = util.intl;
-              obj2.label = intl2.string(util.t.XiOHRX);
-              items.push(obj2);
+              const push2 = items.push;
+              const obj2 = { name: next, label: intl2.string(intl3.t.XiOHRX) };
+              intl2 = intl3.intl;
+              push2(obj2);
             }
             return items;
           }, items5),
@@ -578,10 +654,10 @@ export const MarketingCardsScroller = noop.forwardRef(
             }
           },
           onContentSizeChange(arg0) {
-            closure_1_8(arg0);
+            closure_8(arg0);
           },
           onLayout(nativeEvent) {
-            closure_1_9(nativeEvent.nativeEvent.layout.width);
+            closure_9(nativeEvent.nativeEvent.layout.width);
           },
           onMomentumScrollEnd(nativeEvent) {
             handleScrollEnd(nativeEvent);
@@ -596,33 +672,31 @@ export const MarketingCardsScroller = noop.forwardRef(
           },
           onScrollEndDrag: handleScrollEnd,
           ref,
-          scrollEnabled: null,
-          snapToOffsets: null,
-          children: null,
+          scrollEnabled: tmp14,
+          snapToOffsets: memo,
+          children: Children.map(children, (children, arg1) => {
+            let str;
+            const obj = {
+              accessibilityElementsHidden: closure_12 && arg1 !== first,
+              importantForAccessibility: str,
+              children,
+            };
+            str = undefined;
+            if (closure_12) {
+              if (arg1 !== first) {
+                str = "no-hide-descendants";
+              }
+            }
+            return metroImportAll(metroRequire, obj);
+          }),
         };
+        const tmp24 = first;
+        const tmp26 = ref;
         if (tmp14) {
           tmp14 = !isScreenReaderEnabled;
         }
-        obj5.scrollEnabled = tmp14;
-        obj5.snapToOffsets = memo;
-        const Children = obj.Children;
-        obj5.children = Children.map(children, (children, arg1) => {
-          let tmp4 = closure_12;
-          if (closure_12) {
-            tmp4 = arg1 !== first;
-          }
-          const obj = { accessibilityElementsHidden: tmp4, importantForAccessibility: null, children: null };
-          let str;
-          if (closure_12) {
-            if (arg1 !== first) {
-              str = "no-hide-descendants";
-            }
-          }
-          obj.importantForAccessibility = str;
-          obj.children = children;
-          return closure_2_8(timestampProducer, obj);
-        });
-        const items7 = [closure_8(ref, obj5), ,];
+        Children = obj.Children;
+        items7 = [closure_8(tmp26, obj5), ,];
         if (tmp25Result) {
           function handleNavigatePrevious() {
             if (closure_13) {
@@ -630,21 +704,19 @@ export const MarketingCardsScroller = noop.forwardRef(
             }
           }
           const obj6 = {
-            accessibilityLabel: null,
+            accessibilityLabel: intl.string(num(onScrollingChange[12]).t.vgfxaA),
             accessibilityRole: "button",
-            onPress: null,
-            style: null,
-            children: null,
+            onPress: handleNavigatePrevious,
+            style: items8,
+            children: closure_8(ChevronLargeLeftIcon, obj7),
           };
-          let intl = tmp10(tmp11[12]).intl;
-          obj6.accessibilityLabel = intl.string(tmp10(tmp11[12]).t.vgfxaA);
-          obj6.onPress = handleNavigatePrevious;
-          const items8 = [,];
+          const PressableOpacity = tmp10(tmp11[14]).PressableOpacity;
+          intl = tmp10(tmp11[12]).intl;
+          items8 = [,];
           ({ navigationButton: arr10[0], navigationButtonPrevious: arr10[1] } = tmp);
-          obj6.style = items8;
-          const obj7 = { color: itemCount(tmp11[7]).colors.WHITE, size: "sm" };
-          obj6.children = closure_8(tmp10(tmp11[15]).ChevronLargeLeftIcon, obj7);
-          tmp25Result = closure_8(tmp10(tmp11[14]).PressableOpacity, obj6);
+          obj7 = { color: itemCount(onScrollingChange[7]).colors.WHITE, size: "sm" };
+          ChevronLargeLeftIcon = tmp10(tmp11[15]).ChevronLargeLeftIcon;
+          tmp25Result = closure_8(PressableOpacity, obj6);
         }
         items7[1] = tmp25Result;
         if (tmp25Result2) {
@@ -654,24 +726,27 @@ export const MarketingCardsScroller = noop.forwardRef(
             }
           }
           const obj8 = {
-            accessibilityLabel: null,
+            accessibilityLabel: intl2.string(num(onScrollingChange[12]).t.XiOHRX),
             accessibilityRole: "button",
-            onPress: null,
-            style: null,
-            children: null,
+            onPress: handleNavigateNext,
+            style: items9,
+            children: closure_8(ChevronLargeRightIcon, obj9),
           };
-          let intl2 = tmp10(tmp11[12]).intl;
-          obj8.accessibilityLabel = intl2.string(tmp10(tmp11[12]).t.XiOHRX);
-          obj8.onPress = handleNavigateNext;
-          const items9 = [,];
+          const PressableOpacity2 = tmp10(tmp11[14]).PressableOpacity;
+          intl2 = tmp10(tmp11[12]).intl;
+          items9 = [,];
           ({ navigationButton: arr11[0], navigationButtonNext: arr11[1] } = tmp);
-          obj8.style = items9;
-          const obj9 = { color: itemCount(tmp11[7]).colors.WHITE, size: "sm" };
-          obj8.children = closure_8(tmp10(tmp11[16]).ChevronLargeRightIcon, obj9);
-          tmp25Result2 = closure_8(tmp10(tmp11[14]).PressableOpacity, obj8);
+          obj9 = { color: itemCount(onScrollingChange[7]).colors.WHITE, size: "sm" };
+          ChevronLargeRightIcon = tmp10(tmp11[16]).ChevronLargeRightIcon;
+          tmp25Result2 = closure_8(PressableOpacity2, obj8);
         }
         items7[2] = tmp25Result2;
-        obj4.children = items7;
-        return closure_9(first, obj4);
+        return closure_9(tmp24, obj4);
       },
 );
+size = size_mod;
+const result = size.fileFinishedImporting(
+  "modules/guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx",
+);
+
+export const MarketingCardsScroller = forwardRefResult;

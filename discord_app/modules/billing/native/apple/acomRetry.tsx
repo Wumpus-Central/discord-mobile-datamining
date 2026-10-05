@@ -1,12 +1,15 @@
 // discord_app/modules/billing/native/apple/acomRetry.tsx
 import BackoffDefault from "../../../../../discord_common/js/packages/backoff/Backoff.tsx";
 import ErrorUtilsAll from "../../../../utils/ErrorUtils.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
+let c6, c7;
+
 function parseACOMErrorCode(message) {
-  const underlyingIOSError = ErrorUtilsAll.getUnderlyingIOSError(message);
+  obj = ErrorUtilsAll;
+  const underlyingIOSError = obj.getUnderlyingIOSError(message);
   let match = null;
   if (null != underlyingIOSError) {
     match = re7.exec(underlyingIOSError);
@@ -31,138 +34,152 @@ function parseACOMErrorCode(message) {
 function isRetryableACOMCode(arg0) {
   return arg0 === constants.GENERAL_INTERNAL_RETRYABLE || arg0 === constants.RATE_LIMIT_EXCEEDED;
 }
-let closure_10 = async function _retryACOMRequest(arg0) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_3 = tmp3;
-          closure_2 = tmp7;
-          closure_130_0 = closure_0;
-          closure_130_1 = undefined;
-          let id2;
-          closure_130_3 = undefined;
-          closure_130_4 = undefined;
-          closure_130_5 = undefined;
-          const tmp69 = new BackoffDefault(500, 4000);
-          closure_130_1 = tmp69;
-          id2 = id.getId();
-          const _Date3 = Date;
-          closure_130_3 = Date.now() + 60000;
-          closure_130_4 = 1;
-          if (closure_130_4 > 3) {
-            const _Error = Error;
-            const error = new Error("Unreachable code in retryACOMRequest");
-            throw error;
-          }
-        }
-      } else if (1 === tmp7) {
-        c4 = 0;
-        closure_130_6 = closure_5;
-        closure_130_5 = closure_131_8(closure_130_6);
-        if (closure_130_5 === closure_131_6.REPEATED_REQUEST_REFERENCE_ID) {
-          const obj4 = { kind: "already_applied", error: closure_130_6 };
-          c7 = 3;
-          const obj5 = { value: obj4, done: true };
-          return obj5;
-        } else {
-          if (closure_131_9(closure_130_5)) {
-            if (3 !== closure_130_4) {
-              const _Date = Date;
-              if (Date.now() < closure_130_3) {
-                const promise = new Promise((arg0) => obj11.fail(arg0));
-                c6 = 3;
-                c7 = 1;
-                const obj6 = { value: promise, done: false };
-                return obj6;
-              }
-            }
-          }
-          throw closure_130_6;
-        }
-      } else if (2 === tmp7) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c7 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
-        } else {
-          obj11.value = value;
-          c4 = 0;
-          c7 = 3;
-          const obj8 = { value: obj11, done: true };
-          return obj8;
-        }
-      } else if (3 === tmp7) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj9 = { value, done: true };
-          return obj9;
-        } else {
-          const items = [closure_131_1(closure_131_3[4]).awaitOnline()];
-          const obj13 = closure_131_1(closure_131_3[4]);
-          const _Math = Math;
-          const _Date2 = Date;
-          items[1] = closure_131_0(closure_131_3[5]).timeoutPromise(Math.max(0, closure_130_3 - Date.now()));
-          c6 = 4;
-          c7 = 1;
-          const obj10 = { value: Promise.race(items), done: false };
-          return obj10;
-        }
-      } else if (arg0 === 1) {
-        c7 = 3;
+let obj = function _retryACOMRequest() {
+  let id;
+  obj = _asyncToGenerator(async function (arg0) {
+    let closure_2;
+    let obj11;
+    let closure_0 = arg0;
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        c7 = 3;
-        const obj = { value, done: true };
-        return obj;
-      } else if (id2 !== closure_131_5.getId()) {
-        throw closure_130_6;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        closure_130_4 = closure_130_4 + 1;
+        return { value: "IconComponent", done: null };
       }
-      c4 = 1;
-      obj11 = { kind: "completed" };
-      c6 = 2;
-      c7 = 1;
-      const obj12 = { value: closure_130_0(), done: false };
-      return obj12;
-    } catch (tmp45) {
-      closure_5 = tmp45;
-      if (tmp4 === c4) {
-        c7 = tmp2;
-        throw tmp45;
-      } else {
-        c6 = tmp;
+    } else {
+      let c4;
+      let closure_5;
+      try {
+        let id2;
+        let closure_3;
+        let closure_4;
+        let error;
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_5 = undefined;
+            const self5 = this;
+            const self6 = this;
+            const tmp59 = new BackoffDefault(500, 4000);
+            let closure_1 = tmp59;
+            id2 = id.getId();
+            const _Date3 = Date;
+            closure_3 = Date.now() + 60000;
+            closure_4 = 1;
+            if (closure_4 > 3) {
+              const _Error = Error;
+              const self3 = this;
+              const self4 = this;
+              error = new Error("Unreachable code in retryACOMRequest");
+              throw error;
+            }
+          }
+        } else if (1 === c6) {
+          c4 = 0;
+          error = closure_5;
+          closure_5 = closure_131_8(error);
+          if (closure_5 === closure_131_6.REPEATED_REQUEST_REFERENCE_ID) {
+            const obj4 = { kind: "already_applied", error };
+            c7 = 3;
+            const obj5 = { value: obj4, done: true };
+            return obj5;
+          } else {
+            if (closure_131_9(closure_5)) {
+              if (3 !== closure_4) {
+                const _Date = Date;
+                if (Date.now() < closure_3) {
+                  const self = this;
+                  const self2 = this;
+                  const promise = new Promise((arg0) => obj11.fail(arg0));
+                  c6 = 3;
+                  c7 = 1;
+                  const obj6 = { value: promise, done: false };
+                  return obj6;
+                }
+              }
+            }
+            throw error;
+          }
+        } else if (2 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            c7 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else {
+            obj11.value = value;
+            c4 = 0;
+            c7 = 3;
+            const obj8 = { value: obj11, done: true };
+            return obj8;
+          }
+        } else if (3 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj9 = { value, done: true };
+            return obj9;
+          } else {
+            const items = [,];
+            const obj13 = closure_131_1(closure_131_3[4]);
+            items[0] = obj13.awaitOnline();
+            const _Math = Math;
+            const _Date2 = Date;
+            const obj14 = closure_131_0(closure_131_3[5]);
+            items[1] = obj14.timeoutPromise(Math.max(0, closure_3 - Date.now()));
+            c6 = 4;
+            c7 = 1;
+            const obj10 = { value: race(items), done: false };
+            return obj10;
+          }
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else if (id2 !== closure_131_5.getId()) {
+          throw error;
+        } else {
+          closure_4 = closure_4 + 1;
+        }
+        c4 = 1;
+        obj11 = { kind: "completed" };
+        c6 = 2;
+        c7 = 1;
+        const obj12 = { value: closure_0(), done: false };
+        return obj12;
+      } catch (tmp38) {
+        closure_5 = tmp38;
+        if (0 === c4) {
+          c7 = 3;
+          throw tmp38;
+        } else {
+          c6 = 1;
+        }
       }
     }
-  }
+  });
+  return obj(...arguments);
 };
 const constants = {
   REPEATED_REQUEST_REFERENCE_ID: 4000097,
@@ -173,17 +190,9 @@ const constants = {
   [5000001]: "GENERAL_INTERNAL_RETRYABLE",
 };
 const re7 = /code:\s*(\d{7})(?!\d)/;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/apple/acomRetry.tsx");
 
 export { parseACOMErrorCode };
 export const retryACOMRequest = function retryACOMRequest() {
-  const self = this;
-  const apply = closure_10.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

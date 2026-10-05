@@ -1,5 +1,5 @@
 // discord_app/modules/action_sheet/native/useKeyboardActionSheetHeight.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react from "../../../../_runtime/00576_react.js";
 import useWindowDimensions from "../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsets from "../../safe_area/useSafeAreaInsets.native.tsx";
 import NavigatorConstants from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
@@ -11,16 +11,16 @@ const useWindowDimensionsDefault = useWindowDimensions;
 const useSafeAreaInsetsDefault = useSafeAreaInsets;
 const useCustomKeyboardHeightDefault = useCustomKeyboardHeight;
 
-const result = size.fileFinishedImporting("modules/action_sheet/native/useKeyboardActionSheetHeight.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(5);
+      let first;
+      const obj = react;
+      const cResult = obj.c(5);
       const tmp5 = useSafeAreaInsetsDefault();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { ignoreKeyboard: true };
         cResult[0] = obj2;
-        let first = obj2;
+        first = obj2;
       } else {
         first = cResult[0];
       }
@@ -28,8 +28,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp8 = useCustomKeyboardHeightDefault();
       if (cResult[1] === tmp8) {
         if (cResult[2] === tmp5) {
+          let tmp9;
           if (cResult[3] === tmp7) {
-            let tmp9 = cResult[4];
+            tmp9 = cResult[4];
           }
           return tmp9;
         }
@@ -50,18 +51,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       const tmp2 = useSafeAreaInsetsDefault();
       const tmp3 = useWindowDimensionsDefault({ ignoreKeyboard: true });
+      const tmp4 = useCustomKeyboardHeightDefault();
       const maximum = Math.max(0, tmp3.height - NavigatorConstants.NAV_BAR_HEIGHT_MULTILINE - tmp2.top);
-      let minimum = Math.min(useCustomKeyboardHeightDefault(), maximum);
+      let minimum = Math.min(tmp4, maximum);
       if (minimum >= maximum) {
         const _Math = Math;
         minimum = Math.max(0, maximum - NavigatorConstants.NAV_BAR_HEIGHT_MULTILINE);
       }
       return { minimum, maximum };
     };
+const result = size.fileFinishedImporting("modules/action_sheet/native/useKeyboardActionSheetHeight.tsx");
+
+export default tmp2;
 export const getKeyboardActionSheetHeight = function getKeyboardActionSheetHeight() {
-  const safeAreaInsets = useSafeAreaInsets.getSafeAreaInsets();
-  const windowDimensions = useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true });
-  const customKeyboardHeight = useCustomKeyboardHeight.getCustomKeyboardHeight();
+  const obj = useSafeAreaInsets;
+  const safeAreaInsets = obj.getSafeAreaInsets();
+  const obj2 = useWindowDimensions;
+  const windowDimensions = obj2.getWindowDimensions({ ignoreKeyboard: true });
+  const obj3 = useCustomKeyboardHeight;
+  const customKeyboardHeight = obj3.getCustomKeyboardHeight();
   const maximum = Math.max(
     0,
     windowDimensions.height - NavigatorConstants.NAV_BAR_HEIGHT_MULTILINE - safeAreaInsets.top,

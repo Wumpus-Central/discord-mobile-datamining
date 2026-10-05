@@ -1,19 +1,31 @@
 // discord_app/design/components/Layers/native/LayerScope.native.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import Constants from "../../../../Constants.tsx";
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import LayerContext from "LayerContext.native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let dependencyMap;
+
+let c9;
+let hasOwnProperty;
+let metroImportAll;
+let metroRequire;
 function Layer(zIndex) {
+  let closure_2;
+  let closure_3;
   zIndex = zIndex.zIndex;
   _slicedToArray = undefined;
-  const context = noop.useContext(zIndex(6652).LayerContext);
-  dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
-  _slicedToArray = noop.useRef(null);
+  const context = react.useContext(zIndex(6652).LayerContext);
+  dependencyMap = _slicedToArray(react.useState({}), 2)[1];
+  _slicedToArray = react.useRef(null);
   const items = [context];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     context.invalidate = () => closure_1_2({});
     return () => {
       context.invalidate = () => null;
@@ -21,11 +33,10 @@ function Layer(zIndex) {
   }, items);
   const items1 = context.items;
   const items2 = [zIndex];
-  return closure_8(closure_5, {
-    style: noop.useMemo(() => {
-      const obj = {};
-      const merged = Object.assign(absoluteFillObject.absoluteFillObject);
-      obj.zIndex = zIndex;
+  let obj = {
+    style: react.useMemo(() => {
+      const obj = { zIndex };
+      const merged = Object.assign(metroRequire.absoluteFillObject);
       return obj;
     }, items2),
     ref(current) {
@@ -34,21 +45,26 @@ function Layer(zIndex) {
     },
     onLayout: NOOP,
     pointerEvents: "box-none",
-    children: items1.map((children) => closure_1_8(React.Fragment, { children: children.component }, children.key)),
-  });
+    children: items1.map((children) => {
+      const obj = { children: children.component };
+      return closure_1_8(React.Fragment, obj, children.key);
+    }),
+  };
+  return closure_8(closure_5, obj);
 }
-get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const NOOP = fn(1085).NOOP;
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/Layers/native/LayerScope.native.tsx");
-
-export const LayerScope = ReactCompilerGating.isReactCompilerEnabled()
+let _slicedToArray = _slicedToArray_mod;
+({ View: hasOwnProperty, StyleSheet: metroRequire } = react_native);
+const NOOP = Constants.NOOP;
+({ jsx: metroImportAll, jsxs: c9 } = Fragment);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(7);
+      let children;
+      let first;
+      let items;
+      let tmp6;
+      let zIndex;
+      const obj = react2;
+      const cResult = obj.c(7);
       ({ children, zIndex } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t() {
@@ -56,32 +72,32 @@ export const LayerScope = ReactCompilerGating.isReactCompilerEnabled()
           return layerContextManager;
         };
         cResult[0] = fn;
-        let first = fn;
+        first = fn;
       } else {
         first = cResult[0];
       }
       const tmp5 = useInitialValueDefault(first);
       if (cResult[1] !== zIndex) {
         const obj2 = { zIndex };
-        const tmp9 = closure_1_8(Layer, obj2);
+        const tmp9 = metroImportAll(Layer, obj2);
         cResult[1] = zIndex;
         cResult[2] = tmp9;
-        let tmp6 = tmp9;
+        tmp6 = tmp9;
       } else {
         tmp6 = cResult[2];
       }
       if (cResult[3] === children) {
         if (cResult[4] === tmp5) {
+          let tmp10;
           if (cResult[5] === tmp6) {
-            let tmp10 = cResult[6];
+            tmp10 = cResult[6];
           }
           return tmp10;
         }
       }
-      const obj3 = { value: tmp5, children: null };
-      const items = [children, tmp6];
-      obj3.children = items;
-      const tmp11 = options(LayerContext.LayerContext.Provider, obj3);
+      const obj3 = { value: tmp5, children: items };
+      items = [children, tmp6];
+      const tmp11 = React4(LayerContext.LayerContext.Provider, obj3);
       cResult[3] = children;
       cResult[4] = tmp5;
       cResult[5] = tmp6;
@@ -89,15 +105,22 @@ export const LayerScope = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = tmp11;
     }
   : (arg0) => {
+      let children;
+      let items;
+      let zIndex;
       ({ children, zIndex } = arg0);
       const obj = {
         value: useInitialValueDefault(() => {
           const layerContextManager = new LayerContext.LayerContextManager();
           return layerContextManager;
         }),
-        children: null,
+        children: items,
       };
-      const items = [children, closure_1_8(Layer, { zIndex })];
-      obj.children = items;
-      return options(LayerContext.LayerContext.Provider, obj);
+      items = [children];
+      const Provider = LayerContext.LayerContext.Provider;
+      items[1] = metroImportAll(Layer, { zIndex });
+      return React4(Provider, obj);
     };
+const result = size.fileFinishedImporting("design/components/Layers/native/LayerScope.native.tsx");
+
+export const LayerScope = tmp4;

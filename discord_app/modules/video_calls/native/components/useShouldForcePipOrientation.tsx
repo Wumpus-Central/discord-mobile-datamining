@@ -1,27 +1,34 @@
 // discord_app/modules/video_calls/native/components/useShouldForcePipOrientation.tsx
+import Constants from "../../../activities/Constants.tsx";
 import ChannelRTCParticipants from "../../../calls/ChannelRTCParticipants.tsx";
 import usePipVideoOrStreamDefault from "../usePipVideoOrStream.tsx";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
 import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
+import CallConstants from "../../../calls/CallConstants.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const OrientationLockState = fn(2011).OrientationLockState;
-const CallConstants = fn(4911);
-({ isStreamParticipant: closure_7, ParticipantTypes: closure_8 } = CallConstants);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/video_calls/native/components/useShouldForcePipOrientation.tsx");
+let channel;
 
-export const useShouldForcePipOrientation = ReactCompilerGating.isReactCompilerEnabled()
+let metroImportAll;
+let metroImportDefault;
+const OrientationLockState = Constants.OrientationLockState;
+({ isStreamParticipant: metroImportDefault, ParticipantTypes: metroImportAll } = CallConstants);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      const cResult = channel(576).c(6);
+      let activityLockOrientation;
+      let first;
+      let focusedEmbeddedActivityParticipant;
+      let tmp10;
+      const obj = channel(576);
+      const cResult = obj.c(6);
       channel = channel.channel;
       let tmp4 = usePipVideoOrStreamDefault(channel.id);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelRTCStore, AuthenticationStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -64,8 +71,8 @@ export const useShouldForcePipOrientation = ReactCompilerGating.isReactCompilerE
           }
         }
       }
-      const obj = channel(576);
-      const stateFromStores = channel(504).useStateFromStores(first, A);
+      const tmpResult = channel(504);
+      const stateFromStores = tmpResult.useStateFromStores(first, A);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class A {
           constructor() {
@@ -86,7 +93,7 @@ export const useShouldForcePipOrientation = ReactCompilerGating.isReactCompilerE
         }
         const items1 = [EmbeddedActivitiesStore, ChannelRTCStore];
         cResult[3] = items1;
-        const tmp10 = items1;
+        tmp10 = items1;
       } else {
         class A {
           constructor() {
@@ -145,8 +152,8 @@ export const useShouldForcePipOrientation = ReactCompilerGating.isReactCompilerE
           }
         }
       }
-      const tmpResult = channel(504);
-      const stateFromStoresObject = channel(504).useStateFromStoresObject(tmp10, tmp13);
+      const tmpResult2 = channel(504);
+      const stateFromStoresObject = tmpResult2.useStateFromStoresObject(tmp10, tmp13);
       ({ focusedEmbeddedActivityParticipant, activityLockOrientation } = stateFromStoresObject);
       if (null != tmp4) {
         class A {
@@ -241,6 +248,7 @@ export const useShouldForcePipOrientation = ReactCompilerGating.isReactCompilerE
               return tmp2;
             }
           }
+          return tmp17;
         } else {
           class A {
             constructor() {
@@ -279,7 +287,6 @@ export const useShouldForcePipOrientation = ReactCompilerGating.isReactCompilerE
             return tmp2;
           }
         }
-        const LANDSCAPE = dependencyMap.LANDSCAPE;
       } else {
         class A {
           constructor() {
@@ -318,19 +325,21 @@ export const useShouldForcePipOrientation = ReactCompilerGating.isReactCompilerE
           }
         }
       }
-      const tmpResult2 = channel(504);
     }
   : (channel) => {
+      let LANDSCAPE1;
+      let activityLockOrientation;
+      let focusedEmbeddedActivityParticipant;
       channel = channel.channel;
-      let OrientationType = dependencyMap;
-      const tmp = usePipVideoOrStreamDefault(channel.id);
+      let tmp2 = usePipVideoOrStreamDefault(channel.id);
       const items = [ChannelRTCStore, AuthenticationStore];
-      const stateFromStores = channel(504).useStateFromStores(items, () => {
+      const obj = channel(504);
+      const stateFromStores = obj.useStateFromStores(items, () => {
         const participant = ChannelRTCStore.getParticipant(channel.id, AuthenticationStore.getId());
         let tmp2 = null;
         if (null != participant) {
           tmp2 = null;
-          if (participant.type === constants.USER) {
+          if (participant.type === metroImportAll.USER) {
             tmp2 = null;
             if (null != participant.streamId) {
               tmp2 = participant;
@@ -339,9 +348,10 @@ export const useShouldForcePipOrientation = ReactCompilerGating.isReactCompilerE
         }
         return tmp2;
       });
-      const obj = channel(504);
+      const obj3 = channel(504);
       const items1 = [EmbeddedActivitiesStore, ChannelRTCStore];
-      const stateFromStoresObject = channel(504).useStateFromStoresObject(items1, () => {
+      const stateFromStoresObject = obj3.useStateFromStoresObject(items1, () => {
+        let pipOrientationLockStateForApp;
         const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
         const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
         let applicationId;
@@ -354,50 +364,56 @@ export const useShouldForcePipOrientation = ReactCompilerGating.isReactCompilerE
           if (selectedParticipant != null) {
             id = selectedParticipant.id;
           }
+          const obj4 = { applicationId: null, instanceId: null };
           ({ applicationId: obj3.applicationId, compositeInstanceId: obj3.instanceId } = currentEmbeddedActivity);
           tmp4 = null;
+          const obj2 = ChannelRTCParticipants;
           if (id === obj2.getEmbeddedActivityParticipantId(obj4)) {
             tmp4 = selectedParticipant;
           }
-          obj2 = ChannelRTCParticipants;
-          obj4 = { applicationId: null, instanceId: null };
         }
-        const obj6 = { focusedEmbeddedActivityParticipant: tmp4, activityLockOrientation: null };
-        let pipOrientationLockStateForApp = null;
+        const obj6 = {
+          focusedEmbeddedActivityParticipant: tmp4,
+          activityLockOrientation: pipOrientationLockStateForApp,
+        };
+        pipOrientationLockStateForApp = null;
         if (null != currentEmbeddedActivity) {
           pipOrientationLockStateForApp = EmbeddedActivitiesStore.getPipOrientationLockStateForApp(
             currentEmbeddedActivity.applicationId,
           );
         }
-        obj6.activityLockOrientation = pipOrientationLockStateForApp;
         return obj6;
       });
       ({ focusedEmbeddedActivityParticipant, activityLockOrientation } = stateFromStoresObject);
-      let tmp5 = null;
-      if (null != tmp) {
-        tmp5 = null;
-        if (tmp.user.id !== AuthenticationStore.getId()) {
-          tmp5 = tmp;
+      let tmp6 = null;
+      if (null != tmp2) {
+        tmp6 = null;
+        if (tmp2.user.id !== AuthenticationStore.getId()) {
+          tmp6 = tmp2;
         }
       }
       if (focusedEmbeddedActivityParticipant == null) {
-        focusedEmbeddedActivityParticipant = tmp5;
+        focusedEmbeddedActivityParticipant = tmp6;
       }
       if (null != focusedEmbeddedActivityParticipant) {
         if (closure_7(focusedEmbeddedActivityParticipant)) {
+          let LANDSCAPE;
           if (null == stateFromStores) {
-            return tmp2(8008).OrientationType.LANDSCAPE;
+            LANDSCAPE = tmp3(8008).OrientationType.LANDSCAPE;
           }
+          return LANDSCAPE;
         }
       }
       if (activityLockOrientation === OrientationLockState.LANDSCAPE) {
-        OrientationType = tmp2(8008).OrientationType;
-        let LANDSCAPE = OrientationType.LANDSCAPE;
+        LANDSCAPE1 = tmp3(8008).OrientationType.LANDSCAPE;
       } else {
-        LANDSCAPE = null;
-        if (activityLockOrientation === tmp8.PORTRAIT) {
-          LANDSCAPE = tmp2(8008).OrientationType.PORTRAIT;
+        LANDSCAPE1 = null;
+        if (activityLockOrientation === tmp9.PORTRAIT) {
+          LANDSCAPE1 = tmp3(8008).OrientationType.PORTRAIT;
         }
       }
-      const obj3 = channel(504);
+      LANDSCAPE = LANDSCAPE1;
     };
+const result = size.fileFinishedImporting("modules/video_calls/native/components/useShouldForcePipOrientation.tsx");
+
+export const useShouldForcePipOrientation = tmp3;

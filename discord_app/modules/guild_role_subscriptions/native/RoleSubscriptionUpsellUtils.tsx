@@ -1,29 +1,31 @@
 // discord_app/modules/guild_role_subscriptions/native/RoleSubscriptionUpsellUtils.tsx
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/RoleSubscriptionUpsellUtils.tsx");
-
-export default {
+const jsx = Fragment.jsx;
+let obj = {
   handleShowEmojiUpsellAlert(guildId) {
     guildId = guildId.guildId;
-    actions_AlertActionCreatorsDefault.openLazy({
+    const obj = actions_AlertActionCreatorsDefault;
+    const obj2 = {
       importer() {
-        return asyncRequireImpl(9901, dependencyMap.paths).then((result) => {
-          closure_0 = result.default;
+        const promise = asyncRequire(9901, dependencyMap.paths);
+        return promise.then((result) => {
+          let closure_0 = result.default;
           return (arg0) => {
-            const obj = {};
             const merged = Object.assign(arg0);
-            obj.guildId = guildId;
-            return <closure_0 />;
+            return <closure_0 guildId={guildId} />;
           };
         });
       },
       isDismissable: false,
-    });
+    };
+    obj.openLazy(obj2);
   },
 };
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/RoleSubscriptionUpsellUtils.tsx");
+
+export default obj;

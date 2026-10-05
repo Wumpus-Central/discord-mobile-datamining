@@ -5,11 +5,8 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");
 
-export const isPhotoKitAsset = function isPhotoKitAsset(str, filename) {
-  let tmp = null != str.match(/^ph:\/\//i);
-  if (tmp) {
-    tmp = null != filename;
-  }
+export const isPhotoKitAsset = function isPhotoKitAsset(c0, c1) {
+  const tmp = null != _require.match(/^ph:\/\//i) && null != c1;
   return tmp;
 };
 export const isHeicUTI = function isHeicUTI(str) {
@@ -17,105 +14,101 @@ export const isHeicUTI = function isHeicUTI(str) {
     return false;
   } else {
     const formatted = str.toLowerCase();
-    let hasItem = formatted.includes("heic");
-    if (!hasItem) {
-      hasItem = formatted.includes("heif");
-    }
+    const hasItem = formatted.includes("heic") || formatted.includes("heif");
     return hasItem;
   }
 };
-export const shouldForceConvertToJPG = function shouldForceConvertToJPG(str, str2, str3) {
-  let isIOSResult = PlatformUtils.isIOS();
+export const shouldForceConvertToJPG = function shouldForceConvertToJPG(c0, c1, value) {
+  const obj = PlatformUtils;
+  let isIOSResult = obj.isIOS();
   if (isIOSResult) {
     let flag = false;
-    if (null != str3) {
-      const formatted = str3.toLowerCase();
-      let hasItem = formatted.includes("heic");
-      if (!hasItem) {
-        hasItem = formatted.includes("heif");
-      }
+    if (null != value) {
+      const formatted = value.toLowerCase();
+      const hasItem = formatted.includes("heic") || formatted.includes("heif");
       flag = hasItem;
     }
-    if (flag) {
-      isIOSResult = tmp5;
-    } else {
+    let tmp5 = flag;
+    if (!tmp5) {
+      let tmp9;
+      const tmp8 = null != _require.match(/^ph:\/\//i) && null != importDefault;
       if (tmp8) {
         let match;
-        if (str2 != null) {
-          match = str2.match(/\.HEI[CF]$/i);
+        if (importDefault != null) {
+          match = importDefault.match(/\.HEI[CF]$/i);
         }
-        let tmp9 = null != match;
+        tmp9 = null != match;
       } else {
-        tmp9 = null != str.match(/^(assets-library|file):\/\/.+(&ext=|\.)(HEI[CF])$/i);
+        tmp9 = null != _require.match(/^(assets-library|file):\/\/.+(&ext=|\.)(HEI[CF])$/i);
       }
-      tmp8 = null != str.match(/^ph:\/\//i) && null != str2;
+      tmp5 = tmp9;
     }
+    isIOSResult = tmp5;
   }
   return isIOSResult;
 };
-export const shouldConvertToJPG = function shouldConvertToJPG(str, arr, arg2, arg3, arg4) {
-  let flag = arg4;
-  if (arg4 === undefined) {
+export const shouldConvertToJPG = function shouldConvertToJPG(c0, c1, c2, c4) {
+  let flag = c7;
+  if (c7 === undefined) {
     flag = true;
   }
+  const obj = PlatformUtils;
   if (obj.isIOS()) {
+    let formatted;
     let num;
-    if (arr != null) {
-      num = arr.lastIndexOf(".");
+    if (importDefault != null) {
+      num = importDefault.lastIndexOf(".");
     }
     if (num == null) {
       num = -1;
     }
     if (-1 !== num) {
-      const formatted = arr.substring(num + 1).toLowerCase();
-      const str2 = arr.substring(num + 1);
+      const str2 = importDefault.substring(num + 1);
+      formatted = str2.toLowerCase();
     }
-    const match = str.match;
+    const match = _require.match;
     if (flag) {
+      const tmp8 = null != match(/^ph:\/\//i) && null != importDefault;
       if (tmp8) {
         if (null == formatted) {
           return false;
         } else {
           if ("png" === formatted) {
-            if (arg3) {
+            if (c4) {
               return true;
-            } else if (arg2) {
+            } else if (c2) {
               return true;
             }
           } else {
+            const obj2 = IosImageTypesManagerDefault;
             if (obj2.isExtensionAnimated(formatted)) {
               return false;
             } else {
-              const supportedExtensions = IosImageTypesManagerDefault.getSupportedExtensions();
+              const tmp14Result = IosImageTypesManagerDefault;
+              const supportedExtensions = tmp14Result.getSupportedExtensions();
               if (null !== supportedExtensions) {
                 if (supportedExtensions.has(formatted)) {
                   return true;
                 }
               }
-              const tmp14Result = IosImageTypesManagerDefault;
             }
-            obj2 = IosImageTypesManagerDefault;
           }
           return false;
         }
       } else {
-        let tmp11 = null != str.match(/^(assets-library|file):\/\/.+(&ext=|\.)(hei[cf]|jpe?g|dng)$/i);
+        let tmp11 = null != _require.match(/^(assets-library|file):\/\/.+(&ext=|\.)(hei[cf]|jpe?g|dng)$/i);
         if (!tmp11) {
-          let tmp12 = null == str.match(/^(assets-library|file):\/\/.+(&ext=|\.)png$/i);
+          let tmp12 = null == _require.match(/^(assets-library|file):\/\/.+(&ext=|\.)png$/i);
           if (!tmp12) {
-            let tmp13 = !arg2;
-            if (!arg2) {
-              tmp13 = !arg3;
-            }
-            tmp12 = tmp13;
+            tmp12 = !c2 && !c4;
           }
           tmp11 = !tmp12;
         }
         return tmp11;
       }
-      tmp8 = null != match(/^ph:\/\//i) && null != arr;
     } else {
       let tmp7 = "heic" === formatted;
+      const tmp6 = null != match(/(&ext=|\.)(hei[cf])$/i);
       if (!tmp7) {
         tmp7 = "heif" === formatted;
       }
@@ -127,5 +120,4 @@ export const shouldConvertToJPG = function shouldConvertToJPG(str, arr, arg2, ar
   } else {
     return false;
   }
-  obj = PlatformUtils;
 };

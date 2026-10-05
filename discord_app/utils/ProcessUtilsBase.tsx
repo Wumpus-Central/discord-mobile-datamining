@@ -2,16 +2,17 @@
 import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("utils/ProcessUtilsBase.tsx");
-class ProcessUtils {}
+class ProcessUtils {
+  getSystemMetrics() {
+    return Promise.resolve(null);
+  }
+  setShouldCollectHermesInstrumentedStats() {}
+  getCurrentHermesInstrumentedStatsSummary() {}
+  getCPUCoreCount() {
+    return this.cpuCoreCount;
+  }
+}
 const prototype = ProcessUtils.prototype;
-prototype["getSystemMetrics"] = function getSystemMetrics() {
-  return Promise.resolve(null);
-};
-prototype["setShouldCollectHermesInstrumentedStats"] = function setShouldCollectHermesInstrumentedStats() {};
-prototype["getCurrentHermesInstrumentedStatsSummary"] = function getCurrentHermesInstrumentedStatsSummary() {};
-prototype["getCPUCoreCount"] = function getCPUCoreCount() {
-  return this.cpuCoreCount;
-};
 
 export const ElectronProcessType = {
   Unknown: "unknown",

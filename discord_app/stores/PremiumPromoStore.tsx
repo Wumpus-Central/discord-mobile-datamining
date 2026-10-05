@@ -1,36 +1,40 @@
 // discord_app/stores/PremiumPromoStore.tsx
 import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
-import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import DurationsDefault from "../utils/Durations.tsx";
 import AuthenticationStore from "AuthenticationStore.tsx";
 import RelationshipStore from "RelationshipStore.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
 let closure_4 = 180 * DurationsDefault.Millis.DAY;
 let closure_5 = false;
-const Store = initializeDefault.Store;
-class PremiumPromoStore extends Store {}
+const Store = get_initializedDefault.Store;
+class PremiumPromoStore extends Store {
+  initialize() {
+    this.waitFor(RelationshipStore, AuthenticationStore);
+  }
+  isEligible() {
+    return closure_5;
+  }
+}
 const prototype = PremiumPromoStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(RelationshipStore, AuthenticationStore);
-};
-prototype["isEligible"] = function isEligible() {
-  return closure_5;
-};
 PremiumPromoStore.displayName = "PremiumPromoStore";
-const premiumPromoStore = new PremiumPromoStore(DispatcherDefault, {
+let obj = {
   CONNECTION_OPEN: function updatePremiumPromoEligibility() {
     let tmp2 = RelationshipStore.getFriendIDs().length >= 10;
+    const tmp = closure_5;
     if (tmp2) {
       const _Date = Date;
-      tmp2 = SnowflakeUtilsDefault.extractTimestamp(AuthenticationStore.getId()) < Date.now() - closure_4;
-      const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(AuthenticationStore.getId());
+      const obj = SnowflakeUtilsDefault;
+      const extractTimestampResult = obj.extractTimestamp(AuthenticationStore.getId());
+      tmp2 = extractTimestampResult < Date.now() - closure_4;
     }
     closure_5 = tmp2;
-    return closure_5 !== tmp2;
+    return tmp !== tmp2;
   },
-});
-const size = fn(2);
+};
+const premiumPromoStore = new PremiumPromoStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("stores/PremiumPromoStore.tsx");
 
 export default premiumPromoStore;

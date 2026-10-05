@@ -1,23 +1,32 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTopPerksCards.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
-import _modDef13409 from "../../../../../_runtime/metro/13409__.js";
+import AssetRegistryDefault from "../../../../../_runtime/13409_AssetRegistry.js";
 import _mod13410 from "../../../../../_runtime/metro/13410__.js";
-import _modDef13411 from "../../../../../_runtime/metro/13411__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/13411_AssetRegistry.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+let c3;
+let closure_4;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let size;
+({ Image: c3, View: closure_4 } = react_native);
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
   wrapper: { marginTop: 50 },
   heading: { marginBottom: 20, textAlign: "center" },
   scrollerContent: {
@@ -28,73 +37,13 @@ let obj2 = {
     paddingHorizontal: 16,
     paddingBottom: 16,
   },
-  card: {
-    backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
-    borderColor: nativeDefault.colors.BORDER_SUBTLE,
-    borderWidth: 1,
-    borderRadius: nativeDefault.radii.lg,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginRight: 16,
-    padding: 24,
-    width: 324,
-  },
-  cardGraphic: null,
-  cardLast: null,
-  cardHeading: null,
-  cardBody: null,
+  card: obj2,
+  cardGraphic: size,
+  cardLast: { marginRight: 0 },
+  cardHeading: { marginBottom: 4, textAlign: "center" },
+  cardBody: { textAlign: "center" },
 };
-let size = { borderRadius: nativeDefault.radii.xs, height: 128, marginBottom: 16, overflow: "hidden", width: 211 };
-obj2.cardGraphic = size;
-obj2.cardLast = { marginRight: 0 };
-obj2.cardHeading = { marginBottom: 4, textAlign: "center" };
-obj2.cardBody = { textAlign: "center" };
-let closure_8 = createStyles.createStyles(obj2);
-let items = [
-  {
-    getHeadingCopy() {
-      const intl = util.intl;
-      return intl.string(util.t.y4ft4D);
-    },
-    getBodyCopy() {
-      const intl = util.intl;
-      return intl.string(util.t.HTvLGu);
-    },
-    getGraphic(style) {
-      return timestampProducer(React3, { style, source: _modDef13409 });
-    },
-  },
-  {
-    getHeadingCopy() {
-      const intl = util.intl;
-      return intl.string(util.t.PbAyub);
-    },
-    getBodyCopy() {
-      const intl = util.intl;
-      return intl.string(util.t.wOYbTv);
-    },
-    getGraphic(style) {
-      const obj = { source: _mod13410, autoPlay: !AccessibilityStore.useReducedMotion, style };
-      return timestampProducer(LottieAnimationViewDefault, obj);
-    },
-  },
-  {
-    getHeadingCopy() {
-      const intl = util.intl;
-      return intl.string(util.t["/bX4Jn"]);
-    },
-    getBodyCopy() {
-      const intl = util.intl;
-      return intl.string(util.t.yCjoUC);
-    },
-    getGraphic(style) {
-      return timestampProducer(React3, { style, source: _modDef13411 });
-    },
-  },
-];
-const ReactCompilerGating = fn(558);
-let obj3 = {
+obj2 = {
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderWidth: 1,
@@ -106,35 +55,72 @@ let obj3 = {
   padding: 24,
   width: 324,
 };
-let obj4 = {
+createStyles = createStyles.createStyles;
+size = { borderRadius: nativeDefault.radii.xs, height: 128, marginBottom: 16, overflow: "hidden", width: 211 };
+let closure_8 = createStyles(obj);
+let obj3 = {
   getHeadingCopy() {
-    const intl = util.intl;
-    return intl.string(util.t.y4ft4D);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.y4ft4D);
   },
   getBodyCopy() {
-    const intl = util.intl;
-    return intl.string(util.t.HTvLGu);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.HTvLGu);
   },
   getGraphic(style) {
-    return timestampProducer(React3, { style, source: _modDef13409 });
+    const obj = { style, source: AssetRegistryDefault };
+    return metroRequire(_false, obj);
   },
 };
-size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTopPerksCards.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let items = [
+  obj3,
+  {
+    getHeadingCopy() {
+      const intl = intl2.intl;
+      return intl.string(intl2.t.PbAyub);
+    },
+    getBodyCopy() {
+      const intl = intl2.intl;
+      return intl.string(intl2.t.wOYbTv);
+    },
+    getGraphic(style) {
+      const obj = { source: _mod13410, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const tmp = LottieAnimationViewDefault;
+      return metroRequire(tmp, obj);
+    },
+  },
+  {
+    getHeadingCopy() {
+      const intl = intl2.intl;
+      return intl.string(intl2.t["/bX4Jn"]);
+    },
+    getBodyCopy() {
+      const intl = intl2.intl;
+      return intl.string(intl2.t.yCjoUC);
+    },
+    getGraphic(style) {
+      const obj = { style, source: AssetRegistryDefault2 };
+      return metroRequire(_false, obj);
+    },
+  },
+];
+const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = require("c").c(16);
+      let card;
+      let first;
+      let heading;
+      let tmp7;
+      let wrapper;
+      let obj = require("react");
+      const cResult = obj.c(16);
       const tmp4 = closure_8();
       _require = tmp4;
       ({ wrapper, heading } = tmp4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t.aGdB3E);
+        const stringResult = intl.string(require("intl").t.aGdB3E);
         cResult[0] = stringResult;
-        let first = stringResult;
+        first = stringResult;
       } else {
         first = cResult[0];
       }
@@ -145,10 +131,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: first,
         };
-        const tmp9 = closure_6(tmp(4886).Heading, obj2);
+        const tmp9 = closure_6(require("Text/Text").Heading, obj2);
         cResult[1] = tmp4.heading;
         cResult[2] = tmp9;
-        let tmp7 = tmp9;
+        tmp7 = tmp9;
       } else {
         tmp7 = cResult[2];
       }
@@ -156,24 +142,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[4] === tmp4.cardBody) {
           if (cResult[5] === tmp4.cardGraphic) {
             if (cResult[6] === tmp4.cardHeading) {
+              let tmp11;
               if (cResult[7] === tmp4.cardLast) {
-                let tmp11 = cResult[8];
+                tmp11 = cResult[8];
               }
               if (cResult[9] === tmp4.scrollerContent) {
+                let tmp13;
                 if (cResult[10] === tmp11) {
-                  let tmp13 = cResult[11];
+                  tmp13 = cResult[11];
                 }
                 if (cResult[12] === tmp4.wrapper) {
                   if (cResult[13] === tmp7) {
+                    let tmp17;
                     if (cResult[14] === tmp13) {
-                      let tmp17 = cResult[15];
+                      tmp17 = cResult[15];
                     }
                     return tmp17;
                   }
                 }
-                const obj3 = { style: wrapper, children: null };
+                let obj3 = { style: wrapper, children: items };
                 items = [tmp7, tmp13];
-                obj3.children = items;
                 const tmp20 = closure_7(closure_4, obj3);
                 cResult[12] = tmp4.wrapper;
                 cResult[13] = tmp7;
@@ -188,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 contentContainerStyle: tmp10,
                 children: tmp11,
               };
-              const tmp16 = closure_6(tmp(12227).MarketingCardsScroller, obj4);
+              const tmp16 = closure_6(require("MarketingCardsScroller").MarketingCardsScroller, obj4);
               cResult[9] = tmp4.scrollerContent;
               cResult[10] = tmp11;
               cResult[11] = tmp16;
@@ -198,36 +186,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const mapped = items.map((getGraphic, index) => {
+        let items1;
         items = [card.card];
-        let cardLast = index === items.length - 1;
-        if (cardLast) {
-          cardLast = card.cardLast;
-        }
-        const obj = { style: items, children: null };
+        const cardLast = index === items.length - 1 && card.cardLast;
+        const obj = { style: items, children: items1 };
         items[1] = cardLast;
-        const items1 = [
-          getGraphic.getGraphic(card.cardGraphic),
-          timestampProducer(Text_Text.Heading, {
-            style: card.cardHeading,
-            variant: "heading-lg/extrabold",
-            color: "mobile-text-heading-primary",
-            children: getGraphic.getHeadingCopy(),
-          }),
-        ];
+        items1 = [getGraphic.getGraphic(card.cardGraphic), ,];
         const obj2 = {
           style: card.cardHeading,
           variant: "heading-lg/extrabold",
           color: "mobile-text-heading-primary",
           children: getGraphic.getHeadingCopy(),
         };
-        items1[2] = timestampProducer(Text_Text.Text, {
+        const Heading = Text_Text.Heading;
+        items1[1] = metroRequire(Heading, obj2);
+        const obj3 = {
           style: card.cardBody,
           variant: "text-sm/normal",
           color: "text-default",
           children: getGraphic.getBodyCopy(),
-        });
-        obj.children = items1;
-        return React5(React4, obj, index);
+        };
+        const Text = Text_Text.Text;
+        items1[2] = metroRequire(Text, obj3);
+        return metroImportDefault(React3, obj, index);
       });
       cResult[3] = tmp4.card;
       cResult[4] = tmp4.cardBody;
@@ -236,59 +217,60 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp4.cardLast;
       cResult[8] = mapped;
       tmp11 = mapped;
-      let obj = require("c");
     }
   : () => {
+      let card;
+      let intl;
       const tmp = closure_8();
       _require = tmp;
-      let obj = { style: tmp.wrapper, children: null };
+      let obj = { style: tmp.wrapper, children: items };
       let obj2 = {
         style: tmp.heading,
         variant: "heading-xl/extrabold",
         color: "mobile-text-heading-primary",
-        children: null,
+        children: intl.string(require("intl").t.aGdB3E),
       };
-      const intl = require("util").intl;
-      obj2.children = intl.string(require("util").t.aGdB3E);
-      items = [closure_6(require("Text/Text").Heading, obj2)];
-      items[1] = closure_6(require("MarketingCardsScroller").MarketingCardsScroller, {
+      let Heading = require("Text/Text").Heading;
+      intl = require("intl").intl;
+      items = [closure_6(Heading, obj2)];
+      let obj3 = {
         itemCount: items.length,
         cardWidth: 324,
         cardMarginRight: 16,
         contentContainerStyle: tmp.scrollerContent,
         children: items.map((getGraphic, index) => {
+          let items1;
           items = [card.card];
-          let cardLast = index === items.length - 1;
-          if (cardLast) {
-            cardLast = card.cardLast;
-          }
-          const obj = { style: items, children: null };
+          const cardLast = index === items.length - 1 && card.cardLast;
+          const obj = { style: items, children: items1 };
           items[1] = cardLast;
-          const items1 = [
-            getGraphic.getGraphic(card.cardGraphic),
-            timestampProducer(Text_Text.Heading, {
-              style: card.cardHeading,
-              variant: "heading-lg/extrabold",
-              color: "mobile-text-heading-primary",
-              children: getGraphic.getHeadingCopy(),
-            }),
-          ];
+          items1 = [getGraphic.getGraphic(card.cardGraphic), ,];
           const obj2 = {
             style: card.cardHeading,
             variant: "heading-lg/extrabold",
             color: "mobile-text-heading-primary",
             children: getGraphic.getHeadingCopy(),
           };
-          items1[2] = timestampProducer(Text_Text.Text, {
+          const Heading = Text_Text.Heading;
+          items1[1] = metroRequire(Heading, obj2);
+          const obj3 = {
             style: card.cardBody,
             variant: "text-sm/normal",
             color: "text-default",
             children: getGraphic.getBodyCopy(),
-          });
-          obj.children = items1;
-          return React5(React4, obj, index);
+          };
+          const Text = Text_Text.Text;
+          items1[2] = metroRequire(Text, obj3);
+          return metroImportDefault(React3, obj, index);
         }),
-      });
-      obj.children = items;
+      };
+      const MarketingCardsScroller = require("MarketingCardsScroller").MarketingCardsScroller;
+      items[1] = closure_6(MarketingCardsScroller, obj3);
       return closure_7(closure_4, obj);
     };
+size = size_mod;
+const result = size.fileFinishedImporting(
+  "modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTopPerksCards.tsx",
+);
+
+export default tmp6;

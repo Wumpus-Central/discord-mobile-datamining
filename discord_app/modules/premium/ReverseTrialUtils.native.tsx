@@ -1,16 +1,18 @@
 // discord_app/modules/premium/ReverseTrialUtils.native.tsx
-import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../_runtime/00576_c.js";
+import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../_runtime/00576_react.js";
 import UserStore from "../../stores/UserStore.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/ReverseTrialUtils.native.tsx");
+let currentUser;
 
-export const useIsInReverseTrial = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let tmp4;
+      let tmp5;
+      const obj = react;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         const fn = function n() {
@@ -31,11 +33,13 @@ export const useIsInReverseTrial = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      return initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStores(tmp4, tmp5);
     }
   : () => {
       const items = [UserStore];
-      return initialize.useStateFromStores(items, () => {
+      const obj = get_initialized;
+      return obj.useStateFromStores(items, () => {
         currentUser = currentUser.getCurrentUser();
         let flag;
         if (currentUser != null) {
@@ -47,6 +51,9 @@ export const useIsInReverseTrial = ReactCompilerGating.isReactCompilerEnabled()
         return flag;
       });
     };
+const result = size.fileFinishedImporting("modules/premium/ReverseTrialUtils.native.tsx");
+
+export const useIsInReverseTrial = tmp2;
 export function useReverseTrialDaysRemaining() {
   return 0;
 }

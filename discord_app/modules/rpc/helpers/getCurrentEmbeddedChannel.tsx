@@ -1,12 +1,12 @@
 // discord_app/modules/rpc/helpers/getCurrentEmbeddedChannel.tsx
+import Constants from "../Constants.tsx";
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel.tsx";
 import FramesStore from "../../frames/FramesStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const TransportTypes = fn(5316).TransportTypes;
-const size = fn(2);
+const TransportTypes = Constants.TransportTypes;
 const result = size.fileFinishedImporting("modules/rpc/helpers/getCurrentEmbeddedChannel.tsx");
 
 export default function getCurrentEmbeddedChannel(source) {

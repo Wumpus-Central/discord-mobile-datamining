@@ -1,461 +1,235 @@
 // discord_app/modules/spotify/SpotifyActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import GameUtilsDefault from "../../utils/GameUtils.native.tsx";
 import SpotifyProtocolStore from "SpotifyProtocolStore.tsx";
+import SpotifyConstants from "SpotifyConstants.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
+let closure_4;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
 function apiRequest(fn, arg1, arg2, arg3) {
-  closure_0 = fn;
-  closure_1 = arg1;
-  obj = arg3;
-  obj = {};
-  const merged = Object.assign(arg3);
-  obj.headers = { authorization: "Bearer " + arg2 };
-  const obj2 = { authorization: "Bearer " + arg2 };
-  const promise = fn(obj);
-  return fn(obj).then((status) => {
+  let num;
+  const f107523 = (status) => {
     let rejectResult = status;
     if (202 === status.status) {
       rejectResult = Promise.reject(status);
     }
     return rejectResult;
-  }).catch((error) => {
+  };
+  const f107524 = (error) => {
     let tmp = true !== obj.onlyRetryOnAuthorizationErrors;
     if (tmp) {
+      let num = 202;
       tmp = 202 === error.status;
     }
     if (401 === error.status) {
+      let nextPromise2;
+      let num2 = 0;
       if (closure_3 > 0) {
+        let timeoutPromiseResult;
+        let num3 = 202;
         if (202 === error.status) {
           obj = closure_2_0(closure_2_2[3]);
-          let timeoutPromiseResult = obj.timeoutPromise(5000);
+          let num4 = 5000;
+          timeoutPromiseResult = obj.timeoutPromise(5000);
         } else {
+          let tmp4 = globalThis;
+          let _Promise = Promise;
           timeoutPromiseResult = Promise.resolve();
         }
         let nextPromise = timeoutPromiseResult.then(() => {
-          closure_0 = closure_1_1;
-          const HTTP = closure_0(obj[4]).HTTP;
-          obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, closure_1_1), oldFormErrors: true, rejectWithError: false };
-          const value = HTTP.get(obj);
-          return value.catch((error) => {
+          const f107525 = (error) => {
             let body = error.body;
             let code;
             if (body != null) {
               code = body.code;
             }
-            if (code === closure_2_6.CONNECTION_REVOKED) {
-              let obj3 = { type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE", accountId };
-              closure_2_1(closure_2_2[5]).dispatch(obj3);
+            if (code === constants.CONNECTION_REVOKED) {
               let obj2 = closure_2_1(closure_2_2[5]);
-            } else if (429 === error.status) {
-              let result = error.headers["retry-after"] * closure_2_1(closure_2_2[6]).Millis.SECOND;
-              let _isNaN = isNaN;
-              let num2 = 5000;
-              if (!isNaN(result)) {
-                num2 = 5000;
-                if (0 !== result) {
-                  num2 = result;
+              let obj3 = { type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE", accountId };
+              let dispatchResult = obj2.dispatch(obj3);
+            } else {
+              let num3 = 429;
+              if (429 === error.status) {
+                let result = error.headers["retry-after"] * closure_2_1(closure_2_2[6]).Millis.SECOND;
+                let tmp10 = globalThis;
+                let _isNaN = isNaN;
+                let num4 = 5000;
+                let num2 = 5000;
+                if (!isNaN(result)) {
+                  let num = 0;
+                  num2 = 5000;
+                  if (0 !== result) {
+                    num2 = result;
+                  }
                 }
+                let obj = closure_2_0(closure_2_2[3]);
+                let timeoutPromiseResult = obj.timeoutPromise(num2);
+                return timeoutPromiseResult.then(f141307);
               }
-              let obj = closure_2_0(closure_2_2[3]);
-              return closure_2_0(closure_2_2[3]).timeoutPromise(num2).then(() => {
-                let HTTP = closure_2_0(closure_2_2[4]).HTTP;
-                let value = HTTP.get({ url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false });
-                let obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false };
-                return value.catch(() => { ... }).then(() => { ... });
-              });
             }
             return Promise.reject(error);
-          }).then((accessToken) => {
-            closure_2_1(closure_2_2[5]).dispatch({ type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN", accountId, accessToken: accessToken.body.access_token });
-            return accessToken;
+          };
+          closure_0 = closure_1_1;
+          const HTTP = closure_0(obj[4]).HTTP;
+          obj = {
+            url: closure_2_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, closure_1_1),
+            oldFormErrors: true,
+            rejectWithError: false,
+          };
+          const value = HTTP.get(obj);
+          const catchPromise = value.catch(f107525);
+          return catchPromise.then((body) => {
+            const access_token = body.body.access_token;
+            const obj = closure_2_1(closure_2_2[5]);
+            const obj2 = { type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN", accountId, accessToken: access_token };
+            obj.dispatch(obj2);
+            return body;
           });
         });
-        timeoutPromiseResult.then(() => {
-          closure_0 = closure_1_1;
-          const HTTP = closure_0(obj[4]).HTTP;
-          obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, closure_1_1), oldFormErrors: true, rejectWithError: false };
-          const value = HTTP.get(obj);
-          return value.catch((error) => {
-            let body = error.body;
-            let code;
-            if (body != null) {
-              code = body.code;
-            }
-            if (code === closure_2_6.CONNECTION_REVOKED) {
-              let obj3 = { type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE", accountId };
-              closure_2_1(closure_2_2[5]).dispatch(obj3);
-              let obj2 = closure_2_1(closure_2_2[5]);
-            } else if (429 === error.status) {
-              let result = error.headers["retry-after"] * closure_2_1(closure_2_2[6]).Millis.SECOND;
-              let _isNaN = isNaN;
-              let num2 = 5000;
-              if (!isNaN(result)) {
-                num2 = 5000;
-                if (0 !== result) {
-                  num2 = result;
-                }
-              }
-              let obj = closure_2_0(closure_2_2[3]);
-              return closure_2_0(closure_2_2[3]).timeoutPromise(num2).then(() => {
-                let HTTP = closure_2_0(closure_2_2[4]).HTTP;
-                let value = HTTP.get({ url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false });
-                let obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false };
-                return value.catch(() => { ... }).then(() => { ... });
-              });
-            }
-            return Promise.reject(error);
-          }).then((accessToken) => {
-            closure_2_1(closure_2_2[5]).dispatch({ type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN", accountId, accessToken: accessToken.body.access_token });
-            return accessToken;
-          });
-        }).then((body) => {
-          closure_0 = closure_1_0;
-          closure_1 = closure_1_1;
-          closure_3 = closure_1_3 - 1;
-          obj = {};
-          let merged = Object.assign(closure_1_2);
-          obj.headers = { authorization: "Bearer " + body.body.access_token };
-          let obj2 = { authorization: "Bearer " + body.body.access_token };
-          let promise = closure_1_0(obj);
-          return closure_1_0(obj).then((status) => {
-            let rejectResult = status;
-            if (202 === status.status) {
-              rejectResult = Promise.reject(status);
-            }
-            return rejectResult;
-          }).catch((error) => {
-            let tmp = true !== obj.onlyRetryOnAuthorizationErrors;
-            if (tmp) {
-              tmp = 202 === error.status;
-            }
-            if (401 === error.status) {
-              if (closure_3 > 0) {
-                if (202 === error.status) {
-                  obj = closure_2_0(closure_2_2[3]);
-                  let timeoutPromiseResult = obj.timeoutPromise(5000);
-                } else {
-                  timeoutPromiseResult = Promise.resolve();
-                }
-                let nextPromise = timeoutPromiseResult.then(() => {
-                  closure_0 = closure_1_1;
-                  const HTTP = closure_0(obj[4]).HTTP;
-                  obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, closure_1_1), oldFormErrors: true, rejectWithError: false };
-                  const value = HTTP.get(obj);
-                  return value.catch(() => { ... }).then(() => { ... });
-                });
-                timeoutPromiseResult.then(() => {
-                  closure_0 = closure_1_1;
-                  const HTTP = closure_0(obj[4]).HTTP;
-                  obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, closure_1_1), oldFormErrors: true, rejectWithError: false };
-                  const value = HTTP.get(obj);
-                  return value.catch(() => { ... }).then(() => { ... });
-                }).then((body) => {
-                  closure_0 = closure_1_0;
-                  closure_1 = closure_1_1;
-                  closure_3 = closure_1_3 - 1;
-                  obj = {};
-                  let merged = Object.assign(closure_1_2);
-                  obj.headers = { authorization: "Bearer " + body.body.access_token };
-                  let obj2 = { authorization: "Bearer " + body.body.access_token };
-                  let promise = closure_1_0(obj);
-                  return closure_1_0(obj).then(() => { ... }).catch(() => { ... });
-                }).then((result) => {
-                  closure_0 = result;
-                  return new Promise(() => { ... });
-                });
-                let nextPromise1 = timeoutPromiseResult.then(() => {
-                  closure_0 = closure_1_1;
-                  const HTTP = closure_0(obj[4]).HTTP;
-                  obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, closure_1_1), oldFormErrors: true, rejectWithError: false };
-                  const value = HTTP.get(obj);
-                  return value.catch(() => { ... }).then(() => { ... });
-                }).then((body) => {
-                  closure_0 = closure_1_0;
-                  closure_1 = closure_1_1;
-                  closure_3 = closure_1_3 - 1;
-                  obj = {};
-                  let merged = Object.assign(closure_1_2);
-                  obj.headers = { authorization: "Bearer " + body.body.access_token };
-                  let obj2 = { authorization: "Bearer " + body.body.access_token };
-                  let promise = closure_1_0(obj);
-                  return closure_1_0(obj).then(() => { ... }).catch(() => { ... });
-                });
-              }
-            }
-            return Promise.reject(error);
-          });
-        }).then((result) => {
+        let nextPromise1 = nextPromise.then(f141305);
+        nextPromise2 = nextPromise1.then((result) => {
           closure_0 = result;
-          return new Promise((arg0) => {
+          const promise = new Promise((arg0) => {
             closure_0 = arg0;
             return setImmediate(() => closure_0(closure_0));
           });
-        });
-        let nextPromise1 = timeoutPromiseResult.then(() => {
-          closure_0 = closure_1_1;
-          const HTTP = closure_0(obj[4]).HTTP;
-          obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, closure_1_1), oldFormErrors: true, rejectWithError: false };
-          const value = HTTP.get(obj);
-          return value.catch((error) => {
-            let body = error.body;
-            let code;
-            if (body != null) {
-              code = body.code;
-            }
-            if (code === closure_2_6.CONNECTION_REVOKED) {
-              let obj3 = { type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE", accountId };
-              closure_2_1(closure_2_2[5]).dispatch(obj3);
-              let obj2 = closure_2_1(closure_2_2[5]);
-            } else if (429 === error.status) {
-              let result = error.headers["retry-after"] * closure_2_1(closure_2_2[6]).Millis.SECOND;
-              let _isNaN = isNaN;
-              let num2 = 5000;
-              if (!isNaN(result)) {
-                num2 = 5000;
-                if (0 !== result) {
-                  num2 = result;
-                }
-              }
-              let obj = closure_2_0(closure_2_2[3]);
-              return closure_2_0(closure_2_2[3]).timeoutPromise(num2).then(() => {
-                let HTTP = closure_2_0(closure_2_2[4]).HTTP;
-                let value = HTTP.get({ url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false });
-                let obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false };
-                return value.catch(() => { ... }).then(() => { ... });
-              });
-            }
-            return Promise.reject(error);
-          }).then((accessToken) => {
-            closure_2_1(closure_2_2[5]).dispatch({ type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN", accountId, accessToken: accessToken.body.access_token });
-            return accessToken;
-          });
-        }).then((body) => {
-          closure_0 = closure_1_0;
-          closure_1 = closure_1_1;
-          closure_3 = closure_1_3 - 1;
-          obj = {};
-          let merged = Object.assign(closure_1_2);
-          obj.headers = { authorization: "Bearer " + body.body.access_token };
-          let obj2 = { authorization: "Bearer " + body.body.access_token };
-          let promise = closure_1_0(obj);
-          return closure_1_0(obj).then((status) => {
-            let rejectResult = status;
-            if (202 === status.status) {
-              rejectResult = Promise.reject(status);
-            }
-            return rejectResult;
-          }).catch((error) => {
-            let tmp = true !== obj.onlyRetryOnAuthorizationErrors;
-            if (tmp) {
-              tmp = 202 === error.status;
-            }
-            if (401 === error.status) {
-              if (closure_3 > 0) {
-                if (202 === error.status) {
-                  obj = closure_2_0(closure_2_2[3]);
-                  let timeoutPromiseResult = obj.timeoutPromise(5000);
-                } else {
-                  timeoutPromiseResult = Promise.resolve();
-                }
-                let nextPromise = timeoutPromiseResult.then(() => {
-                  closure_0 = closure_1_1;
-                  const HTTP = closure_0(obj[4]).HTTP;
-                  obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, closure_1_1), oldFormErrors: true, rejectWithError: false };
-                  const value = HTTP.get(obj);
-                  return value.catch(() => { ... }).then(() => { ... });
-                });
-                timeoutPromiseResult.then(() => {
-                  closure_0 = closure_1_1;
-                  const HTTP = closure_0(obj[4]).HTTP;
-                  obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, closure_1_1), oldFormErrors: true, rejectWithError: false };
-                  const value = HTTP.get(obj);
-                  return value.catch(() => { ... }).then(() => { ... });
-                }).then((body) => {
-                  closure_0 = closure_1_0;
-                  closure_1 = closure_1_1;
-                  closure_3 = closure_1_3 - 1;
-                  obj = {};
-                  let merged = Object.assign(closure_1_2);
-                  obj.headers = { authorization: "Bearer " + body.body.access_token };
-                  let obj2 = { authorization: "Bearer " + body.body.access_token };
-                  let promise = closure_1_0(obj);
-                  return closure_1_0(obj).then(() => { ... }).catch(() => { ... });
-                }).then((result) => {
-                  closure_0 = result;
-                  return new Promise(() => { ... });
-                });
-                let nextPromise1 = timeoutPromiseResult.then(() => {
-                  closure_0 = closure_1_1;
-                  const HTTP = closure_0(obj[4]).HTTP;
-                  obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, closure_1_1), oldFormErrors: true, rejectWithError: false };
-                  const value = HTTP.get(obj);
-                  return value.catch(() => { ... }).then(() => { ... });
-                }).then((body) => {
-                  closure_0 = closure_1_0;
-                  closure_1 = closure_1_1;
-                  closure_3 = closure_1_3 - 1;
-                  obj = {};
-                  let merged = Object.assign(closure_1_2);
-                  obj.headers = { authorization: "Bearer " + body.body.access_token };
-                  let obj2 = { authorization: "Bearer " + body.body.access_token };
-                  let promise = closure_1_0(obj);
-                  return closure_1_0(obj).then(() => { ... }).catch(() => { ... });
-                });
-              }
-            }
-            return Promise.reject(error);
-          });
+          return promise;
         });
       }
+      return nextPromise2;
     }
-    return Promise.reject(error);
-  });
+    nextPromise2 = Promise.reject(error);
+  };
+  let closure_0 = fn;
+  let closure_1 = arg1;
+  obj = { headers: { authorization: "Bearer " + arg2 } };
+  const merged = Object.assign(arg3);
+  ({ authorization: "Bearer " + arg2 });
+  const promise = fn(obj);
+  const nextPromise = promise.then(f107523);
+  return nextPromise.catch(f107524);
 }
-const SpotifyConstants = fn(8016);
 ({ SPOTIFY_APP_PROTOCOL: closure_4, SpotifyEndpoints: hasOwnProperty } = SpotifyConstants);
-const Constants = fn(1085);
-({ AbortCodes: metroRequire, Endpoints: closure_7, PlatformTypes: closure_8 } = Constants);
-const SpotifyAPI = { get: apiRequest.bind(null, fn(1282).HTTP.get), put: apiRequest.bind(null, fn(1282).HTTP.put) };
-const size = fn(2);
+({ AbortCodes: metroRequire, Endpoints: metroImportDefault, PlatformTypes: metroImportAll } = Constants);
+const SpotifyAPI = { get: apiRequest.bind(null, HTTPUtils.HTTP.get), put: apiRequest.bind(null, HTTPUtils.HTTP.put) };
 const result = size.fileFinishedImporting("modules/spotify/SpotifyActionCreators.tsx");
 
 export { SpotifyAPI };
 export const getAccessToken = function getAccessToken(id) {
-  _require = id;
-  const HTTP = require("HTTPUtils").HTTP;
-  value = HTTP.get({ url: closure_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, id), oldFormErrors: true, rejectWithError: false });
-  obj = { url: closure_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, id), oldFormErrors: true, rejectWithError: false };
-  return value.catch((error) => {
+  const f107525 = (error) => {
     let body = error.body;
     let code;
     if (body != null) {
       code = body.code;
     }
-    if (code === closure_2_6.CONNECTION_REVOKED) {
-      let obj3 = { type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE", accountId };
-      closure_2_1(closure_2_2[5]).dispatch(obj3);
+    if (code === constants.CONNECTION_REVOKED) {
       let obj2 = closure_2_1(closure_2_2[5]);
-    } else if (429 === error.status) {
-      let result = error.headers["retry-after"] * closure_2_1(closure_2_2[6]).Millis.SECOND;
-      let _isNaN = isNaN;
-      let num2 = 5000;
-      if (!isNaN(result)) {
-        num2 = 5000;
-        if (0 !== result) {
-          num2 = result;
+      let obj3 = { type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE", accountId };
+      let dispatchResult = obj2.dispatch(obj3);
+    } else {
+      let num3 = 429;
+      if (429 === error.status) {
+        let result = error.headers["retry-after"] * closure_2_1(closure_2_2[6]).Millis.SECOND;
+        let tmp10 = globalThis;
+        let _isNaN = isNaN;
+        let num4 = 5000;
+        let num2 = 5000;
+        if (!isNaN(result)) {
+          let num = 0;
+          num2 = 5000;
+          if (0 !== result) {
+            num2 = result;
+          }
         }
+        let obj = closure_2_0(closure_2_2[3]);
+        let timeoutPromiseResult = obj.timeoutPromise(num2);
+        return timeoutPromiseResult.then(f141307);
       }
-      let obj = closure_2_0(closure_2_2[3]);
-      return closure_2_0(closure_2_2[3]).timeoutPromise(num2).then(() => {
-        let HTTP = closure_2_0(closure_2_2[4]).HTTP;
-        let value = HTTP.get({ url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false });
-        let obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false };
-        return value.catch((error) => {
-          let body = error.body;
-          let code;
-          if (body != null) {
-            code = body.code;
-          }
-          if (code === closure_2_6.CONNECTION_REVOKED) {
-            let obj3 = { type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE", accountId };
-            closure_2_1(closure_2_2[5]).dispatch(obj3);
-            let obj2 = closure_2_1(closure_2_2[5]);
-          } else if (429 === error.status) {
-            let result = error.headers["retry-after"] * closure_2_1(closure_2_2[6]).Millis.SECOND;
-            let _isNaN = isNaN;
-            let num2 = 5000;
-            if (!isNaN(result)) {
-              num2 = 5000;
-              if (0 !== result) {
-                num2 = result;
-              }
-            }
-            let obj = closure_2_0(closure_2_2[3]);
-            return closure_2_0(closure_2_2[3]).timeoutPromise(num2).then(() => {
-              let HTTP = closure_2_0(closure_2_2[4]).HTTP;
-              let value = HTTP.get({ url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false });
-              let obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false };
-              return value.catch(() => { ... }).then(() => { ... });
-            });
-          }
-          return Promise.reject(error);
-        }).then((accessToken) => {
-          closure_2_1(closure_2_2[5]).dispatch({ type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN", accountId, accessToken: accessToken.body.access_token });
-          return accessToken;
-        });
-      });
     }
     return Promise.reject(error);
-  }).then((accessToken) => {
-    closure_2_1(closure_2_2[5]).dispatch({ type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN", accountId, accessToken: accessToken.body.access_token });
-    return accessToken;
+  };
+  _require = id;
+  const HTTP = require("HTTPUtils").HTTP;
+  obj = { url: closure_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, id), oldFormErrors: true, rejectWithError: false };
+  const value = HTTP.get(obj);
+  const catchPromise = value.catch(f107525);
+  return catchPromise.then((body) => {
+    const access_token = body.body.access_token;
+    const obj = closure_2_1(closure_2_2[5]);
+    const obj2 = { type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN", accountId, accessToken: access_token };
+    obj.dispatch(obj2);
+    return body;
   });
 };
-export const subscribePlayerStateNotifications = function subscribePlayerStateNotifications(accountId, accessToken, connectionId) {
-  closure_0 = accountId;
-  closure_1 = accessToken;
-  closure_2 = connectionId;
-  const request = { url: closure_5.NOTIFICATIONS_PLAYER, query: { connection_id: connectionId } };
-  return obj.put(accountId, accessToken, request).catch((error) => {
+export const subscribePlayerStateNotifications = function subscribePlayerStateNotifications(
+  accountId,
+  accessToken,
+  connectionId,
+) {
+  let num;
+  const f107527 = (error) => {
+    let rejectResult;
     if (closure_3 <= 0) {
-      let rejectResult = Promise.reject(error);
+      let tmp4 = error;
+      let tmp5 = globalThis;
+      let _Promise = Promise;
+      rejectResult = Promise.reject(error);
     } else {
-      let obj = closure_2_0(closure_2_2[3]);
-      rejectResult = closure_2_0(closure_2_2[3]).timeoutPromise(5000).then(() => {
-        closure_0 = closure_1_0;
-        closure_1 = closure_1_1;
-        closure_2 = connection_id;
-        closure_3 = closure_1_3 - 1;
-        let request = { url: closure_2_5.NOTIFICATIONS_PLAYER, query: { connection_id } };
-        return closure_2_9.put(closure_1_0, closure_1_1, request).catch((error) => {
-          if (closure_3 <= 0) {
-            let rejectResult = Promise.reject(error);
-          } else {
-            let obj = closure_2_0(closure_2_2[3]);
-            rejectResult = closure_2_0(closure_2_2[3]).timeoutPromise(5000).then(() => {
-              closure_0 = closure_1_0;
-              closure_1 = closure_1_1;
-              closure_2 = connection_id;
-              closure_3 = closure_1_3 - 1;
-              let request = { url: closure_2_5.NOTIFICATIONS_PLAYER, query: { connection_id } };
-              return closure_2_9.put(closure_1_0, closure_1_1, request).catch(() => { ... });
-            });
-            let timeoutPromiseResult = closure_2_0(closure_2_2[3]).timeoutPromise(5000);
-          }
-          return rejectResult;
-        });
-      });
-      let timeoutPromiseResult = closure_2_0(closure_2_2[3]).timeoutPromise(5000);
+      let obj = closure_2_0(connection_id[3]);
+      let num = 5000;
+      let timeoutPromiseResult = obj.timeoutPromise(5000);
+      rejectResult = timeoutPromiseResult.then(f141308);
     }
     return rejectResult;
-  });
+  };
+  let closure_0 = accountId;
+  let closure_1 = accessToken;
+  let closure_2 = connectionId;
+  const request = { url: closure_5.NOTIFICATIONS_PLAYER, query: { connection_id: connectionId } };
+  const putResult = obj.put(accountId, accessToken, request);
+  return putResult.catch(f107527);
 };
 export const getProfile = function getProfile(accountId, accessToken) {
   obj = { url: closure_5.PROFILE };
-  value = obj.get(accountId, accessToken, obj);
+  const value = obj.get(accountId, accessToken, obj);
   return value.then((body) => {
-    DispatcherDefault.dispatch({ type: "SPOTIFY_PROFILE_UPDATE", accountId, isPremium: "premium" === body.body.product });
+    obj = DispatcherDefault;
+    const obj2 = { type: "SPOTIFY_PROFILE_UPDATE", accountId, isPremium: "premium" === body.body.product };
+    obj.dispatch(obj2);
     return body;
   });
 };
 export const getDevices = function getDevices(accountId, accessToken) {
   obj = { url: closure_5.PLAYER_DEVICES };
-  value = obj.get(accountId, accessToken, obj);
+  const value = obj.get(accountId, accessToken, obj);
   return value.then((body) => {
     if (body.body) {
       const obj2 = { type: "SPOTIFY_SET_DEVICES", accountId, devices: body.body.devices };
-      DispatcherDefault.dispatch(obj2);
+      obj = DispatcherDefault;
+      obj.dispatch(obj2);
     }
     return body;
   });
 };
 export const play = function play(accountId, accessToken, sync_id, TRACK, arg4) {
-  closure_0 = accountId;
-  closure_1 = accessToken;
+  let c5;
+  let contextUri;
+  let num;
+  let obj2;
+  let tmp4;
+  let tmp5;
+  let closure_0 = accountId;
+  let closure_1 = accessToken;
   const id = sync_id;
   obj = arg4;
   if (arg4 === undefined) {
@@ -466,74 +240,83 @@ export const play = function play(accountId, accessToken, sync_id, TRACK, arg4) 
   const deviceId = obj.deviceId;
   const position = obj.position;
   ({ contextUri, repeat: c5 } = obj);
-  let request = { url: c5.PLAYER_PLAY, query: { device_id: deviceId }, body: null };
+  let request = { url: c5.PLAYER_PLAY, query: { device_id: deviceId }, body: obj2 };
   let tmp3;
+  const tmp2 = obj;
+  let put = obj.put;
   if (null != contextUri) {
     tmp3 = contextUri;
   }
-  let obj2 = { context_uri: tmp3, uris: null, offset: null, position_ms: null };
-  let tmp4;
+  obj2 = { context_uri: tmp3, uris: tmp4, offset: tmp5, position_ms: num };
+  tmp4 = undefined;
   if (null == contextUri) {
     const items = [PLAYER_OPENResult];
     tmp4 = items;
   }
-  obj2.uris = tmp4;
-  let tmp5;
+  tmp5 = undefined;
   if (null != contextUri) {
+    tmp5 = { uri: PLAYER_OPENResult };
     const obj3 = { uri: PLAYER_OPENResult };
-    tmp5 = obj3;
   }
-  obj2.offset = tmp5;
-  let num = 0;
+  num = 0;
   if (null != position) {
     num = position;
   }
-  obj2.position_ms = num;
-  request.body = obj2;
-  let putResult = obj.put(accountId, accessToken, request);
-  return obj.put(accountId, accessToken, request).then((result) => {
+  let putResult = put(accountId, accessToken, request);
+  const nextPromise = putResult.then((result) => {
+    let query;
+    let str;
     let putResult = result;
     if (null != c5) {
-      const request = { url: hasOwnProperty.PLAYER_REPEAT, query: null };
-      const query = { device_id: deviceId, state: null };
-      let str = "off";
+      const request = { url: hasOwnProperty.PLAYER_REPEAT, query };
+      query = { device_id: deviceId, state: str };
+      str = "off";
+      const put = query.put;
       if (tmp2) {
         str = "context";
       }
-      query.state = str;
-      request.query = query;
-      putResult = query.put(closure_0, closure_1, request);
+      putResult = put(accountId, accessToken, request);
     }
     return putResult;
-  }).then((result) => {
-    const obj2 = { type: "SPOTIFY_PLAYER_PLAY", id, position: null };
-    let num = 0;
+  });
+  return nextPromise.then((result) => {
+    let num;
+    obj = { type: "SPOTIFY_PLAYER_PLAY", id, position: num };
+    num = 0;
+    const dispatch = DispatcherDefault.dispatch;
+    DispatcherDefault;
     if (null != position) {
       num = position;
     }
-    obj2.position = num;
-    DispatcherDefault.dispatch(obj2);
+    dispatch(obj);
     return result;
   });
 };
 export const pause = function pause(accountId, accessToken) {
   obj = { url: hasOwnProperty.PLAYER_PAUSE };
-  return obj.put(accountId, accessToken, obj).then((result) => {
-    DispatcherDefault.dispatch({ type: "SPOTIFY_PLAYER_PAUSE" });
+  const putResult = obj.put(accountId, accessToken, obj);
+  return putResult.then((result) => {
+    obj = DispatcherDefault;
+    obj.dispatch({ type: "SPOTIFY_PLAYER_PAUSE" });
     return result;
   });
 };
 export const fetchIsSpotifyProtocolRegistered = function fetchIsSpotifyProtocolRegistered() {
   if (!SpotifyProtocolStore.isProtocolRegistered()) {
-    if (obj.isDesktop()) {
-      GameUtilsDefault.isProtocolRegistered(React4).then((isRegistered) => {
-        DispatcherDefault.dispatch({ type: "SPOTIFY_SET_PROTOCOL_REGISTERED", isRegistered });
-      });
-      const isProtocolRegisteredResult = GameUtilsDefault.isProtocolRegistered(React4);
-    }
     obj = PlatformUtils;
+    if (obj.isDesktop()) {
+      let obj2 = GameUtilsDefault;
+      const isProtocolRegisteredResult = obj2.isProtocolRegistered(React3);
+      isProtocolRegisteredResult.then((isRegistered) => {
+        obj = DispatcherDefault;
+        const obj2 = { type: "SPOTIFY_SET_PROTOCOL_REGISTERED", isRegistered };
+        obj.dispatch(obj2);
+      });
+    }
   }
 };
 export const setActiveDevice = function setActiveDevice(accountId, deviceId) {
-  DispatcherDefault.dispatch({ type: "SPOTIFY_SET_ACTIVE_DEVICE", accountId, deviceId });
+  obj = DispatcherDefault;
+  const obj2 = { type: "SPOTIFY_SET_ACTIVE_DEVICE", accountId, deviceId };
+  obj.dispatch(obj2);
 };

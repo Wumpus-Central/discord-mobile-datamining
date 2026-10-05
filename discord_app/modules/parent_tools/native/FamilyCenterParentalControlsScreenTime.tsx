@@ -1,232 +1,282 @@
 // discord_app/modules/parent_tools/native/FamilyCenterParentalControlsScreenTime.tsx
-import _mod17 from "../../../../_runtime/metro/00017__.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../Constants.tsx";
 import _modDef2493 from "../FamilyCenter.messages.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, importDefault, navigation, rule;
 
-const View = _mod17.View;
+let hasOwnProperty;
+let metroRequire;
+let obj2;
+let obj3;
+const View = react_native.View;
 const UserSettingsSections = Constants.UserSettingsSections;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { header: { paddingTop: nativeDefault.space.PX_24 }, container: null };
-let obj2 = { paddingTop: nativeDefault.space.PX_24 };
-obj.container = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
-let closure_7 = createStyles.createStyles(obj);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { header: obj2, container: obj3 };
+obj2 = { paddingTop: nativeDefault.space.PX_24 };
+createStyles = createStyles.createStyles;
+obj3 = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
+let closure_7 = createStyles(obj);
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? (rule) => {
-      const cResult = rule(navigation[6]).c(19);
+      let tmp13;
+      let tmp5;
+      let tmp7;
+      let tmp9;
+      let obj = rule(navigation[6]);
+      const cResult = obj.c(19);
       rule = rule.rule;
       const teenId = rule.teenId;
       navigation = rule.navigation;
       const readOnly = rule.readOnly;
       if (cResult[0] !== rule) {
-        const scheduleRuleDateRange = tmp(tmp2[7]).getScheduleRuleDateRange(rule);
+        const tmpResult = rule(navigation[7]);
+        const scheduleRuleDateRange = tmpResult.getScheduleRuleDateRange(rule);
         cResult[0] = rule;
         cResult[1] = scheduleRuleDateRange;
-        let tmp5 = scheduleRuleDateRange;
-        const tmpResult = tmp(tmp2[7]);
+        tmp5 = scheduleRuleDateRange;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] !== rule.days) {
-        const formatDaysResult = tmp(tmp2[7]).formatDays(rule.days);
+        const tmpResult2 = rule(navigation[7]);
+        const formatDaysResult = tmpResult2.formatDays(rule.days);
         cResult[2] = rule.days;
         cResult[3] = formatDaysResult;
-        let tmp7 = formatDaysResult;
-        const tmpResult2 = tmp(tmp2[7]);
+        tmp7 = formatDaysResult;
       } else {
         tmp7 = cResult[3];
       }
       if (cResult[4] !== rule.enabled) {
+        let stringResult;
+        const enabled = rule.enabled;
         const intl = tmp(tmp2[8]).intl;
         const string = intl.string;
-        let enabled = teenId(tmp2[9]);
-        if (rule.enabled) {
-          let stringResult = string(enabled["8vDHRq"]);
+        const tmp11 = teenId(navigation[9]);
+        if (enabled) {
+          stringResult = string(tmp11["8vDHRq"]);
         } else {
-          stringResult = string(enabled["4z9fN+"]);
+          stringResult = string(tmp11["4z9fN+"]);
         }
-        enabled = rule.enabled;
-        cResult[4] = enabled;
+        cResult[4] = rule.enabled;
         cResult[5] = stringResult;
+        tmp9 = stringResult;
       } else {
-        if (cResult[6] !== cResult[5]) {
-          const obj2 = { variant: "text-sm/medium", color: "text-subtle", children: tmp9 };
-          const tmp15 = closure_5(tmp(tmp2[10]).Text, obj2);
-          cResult[6] = tmp9;
-          cResult[7] = tmp15;
-          let tmp13 = tmp15;
-        } else {
-          tmp13 = cResult[7];
-        }
-        if (cResult[8] === navigation) {
-          if (cResult[9] === tmp4) {
-            if (cResult[10] === rule) {
-              if (cResult[11] === teenId) {
-                let tmp17 = cResult[12];
-              }
-              if (cResult[13] === tmp7) {
-                if (cResult[14] === tmp13) {
-                  if (cResult[15] === tmp16) {
-                    if (cResult[16] === tmp17) {
-                      if (cResult[17] === tmp5) {
-                        let tmp18 = cResult[18];
-                      }
-                      return tmp18;
+        tmp9 = cResult[5];
+      }
+      if (cResult[6] !== tmp9) {
+        let obj2 = { variant: "text-sm/medium", color: "text-subtle", children: tmp9 };
+        const tmp15 = closure_5(rule(navigation[10]).Text, obj2);
+        cResult[6] = tmp9;
+        cResult[7] = tmp15;
+        tmp13 = tmp15;
+      } else {
+        tmp13 = cResult[7];
+      }
+      if (cResult[8] === navigation) {
+        if (cResult[9] === (undefined !== readOnly && readOnly)) {
+          if (cResult[10] === rule) {
+            let tmp17;
+            if (cResult[11] === teenId) {
+              tmp17 = cResult[12];
+            }
+            if (cResult[13] === tmp7) {
+              if (cResult[14] === tmp13) {
+                if (cResult[15] === !(undefined !== readOnly && readOnly)) {
+                  if (cResult[16] === tmp17) {
+                    let tmp18;
+                    if (cResult[17] === tmp5) {
+                      tmp18 = cResult[18];
                     }
+                    return tmp18;
                   }
                 }
               }
-              const obj3 = { label: tmp5, subLabel: tmp7, trailing: tmp13, arrow: tmp16, onPress: tmp17 };
-              const tmp20 = closure_5(tmp(tmp2[11]).TableRow, obj3);
-              cResult[13] = tmp7;
-              cResult[14] = tmp13;
-              cResult[15] = tmp16;
-              cResult[16] = tmp17;
-              cResult[17] = tmp5;
-              cResult[18] = tmp20;
-              tmp18 = tmp20;
             }
+            const obj3 = {
+              label: tmp5,
+              subLabel: tmp7,
+              trailing: tmp13,
+              arrow: !(undefined !== readOnly && readOnly),
+              onPress: tmp17,
+            };
+            const tmp20 = closure_5(rule(navigation[11]).TableRow, obj3);
+            cResult[13] = tmp7;
+            cResult[14] = tmp13;
+            cResult[15] = !(undefined !== readOnly && readOnly);
+            cResult[16] = tmp17;
+            cResult[17] = tmp5;
+            cResult[18] = tmp20;
+            tmp18 = tmp20;
           }
         }
-        let fn;
-        if (!tmp4) {
-          fn = () => {
-            const obj = { teenId, rule: null };
-            const merged = Object.assign(rule);
-            obj.rule = {};
-            return navigation.navigate(UserSettingsSections.FAMILY_CENTER_SCHEDULE_DOWNTIME, obj);
-          };
-        }
-        cResult[8] = navigation;
-        cResult[9] = tmp4;
-        cResult[10] = rule;
-        cResult[11] = teenId;
-        cResult[12] = fn;
-        tmp17 = fn;
       }
-      let obj = rule(navigation[6]);
+      let fn;
+      if (!(undefined !== readOnly && readOnly)) {
+        fn = () => {
+          let obj2;
+          const navigate = navigation.navigate;
+          const FAMILY_CENTER_SCHEDULE_DOWNTIME = UserSettingsSections.FAMILY_CENTER_SCHEDULE_DOWNTIME;
+          const obj = { teenId, rule: obj2 };
+          obj2 = {};
+          const merged = Object.assign(rule);
+          return navigate(FAMILY_CENTER_SCHEDULE_DOWNTIME, obj);
+        };
+      }
+      cResult[8] = navigation;
+      cResult[9] = undefined !== readOnly && readOnly;
+      cResult[10] = rule;
+      cResult[11] = teenId;
+      cResult[12] = fn;
+      tmp17 = fn;
     }
   : (rule) => {
+      let Text;
+      let fn;
+      let readOnly;
+      let stringResult;
+      let teenId;
       rule = rule.rule;
       ({ teenId: importDefault, navigation: dependencyMap, readOnly } = rule);
       if (readOnly === undefined) {
         readOnly = false;
       }
-      const scheduleRuleDateRange = rule(12468).getScheduleRuleDateRange(rule);
       let obj = rule(12468);
-      const obj2 = rule(12468);
+      const scheduleRuleDateRange = obj.getScheduleRuleDateRange(rule);
+      let obj2 = rule(12468);
       const obj3 = {
         label: scheduleRuleDateRange,
-        subLabel: rule(12468).formatDays(rule.days),
-        trailing: null,
-        arrow: null,
-        onPress: null,
+        subLabel: obj2.formatDays(rule.days),
+        trailing: closure_5(Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult }),
+        arrow: !readOnly,
+        onPress: fn,
       };
+      const TableRow = rule(5993).TableRow;
+      Text = rule(4886).Text;
+      const enabled = rule.enabled;
       const intl = rule(1126).intl;
       const string = intl.string;
       const tmp4 = _modDef2493;
-      if (rule.enabled) {
-        let stringResult = string(tmp4["8vDHRq"]);
+      if (enabled) {
+        stringResult = string(tmp4["8vDHRq"]);
       } else {
         stringResult = string(tmp4["4z9fN+"]);
       }
-      obj3.trailing = closure_5(rule(4886).Text, {
-        variant: "text-sm/medium",
-        color: "text-subtle",
-        children: stringResult,
-      });
-      obj3.arrow = !readOnly;
-      let fn;
+      fn = undefined;
       if (!readOnly) {
         fn = () => {
-          const obj = { teenId, rule: null };
+          let obj2;
+          const navigate = dependencyMap.navigate;
+          const FAMILY_CENTER_SCHEDULE_DOWNTIME = UserSettingsSections.FAMILY_CENTER_SCHEDULE_DOWNTIME;
+          const obj = { teenId: importDefault, rule: obj2 };
+          obj2 = {};
           const merged = Object.assign(rule);
-          obj.rule = {};
-          return navigation.navigate(UserSettingsSections.FAMILY_CENTER_SCHEDULE_DOWNTIME, obj);
+          return navigate(FAMILY_CENTER_SCHEDULE_DOWNTIME, obj);
         };
       }
-      obj3.onPress = fn;
-      return closure_5(rule(5993).TableRow, obj3);
+      return closure_5(TableRow, obj3);
     };
-let ReactCompilerGating = ReactCompilerGating_mod;
-let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
-const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsScreenTime.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (readOnly) => {
-      const cResult = require("c").c(28);
+      let container;
+      let header;
+      let id;
+      let items;
+      let obj = require("react");
+      const cResult = obj.c(28);
       readOnly = readOnly.readOnly;
       _require = tmp4;
       const tmp5 = closure_7();
-      const obj = require("c");
-      const selectedTeenUser = require("useSelectedTeenUser").useSelectedTeenUser();
       const tmpResult = require("useSelectedTeenUser");
-      const navigation = require("useNavigation").useNavigation();
+      const selectedTeenUser = tmpResult.useSelectedTeenUser();
+      const tmpResult3 = require("useNavigation");
+      navigation = tmpResult3.useNavigation();
       id = undefined;
       if (selectedTeenUser != null) {
         id = selectedTeenUser.id;
       }
       if (cResult[0] === navigation) {
-        if (cResult[1] === tmp4) {
+        if (cResult[1] === (undefined !== readOnly && readOnly)) {
           let rules;
+          const tmp9 = cResult[2];
           if (selectedTeenUser != null) {
             const restrictedSchedule = selectedTeenUser.restrictedSchedule;
             if (restrictedSchedule != null) {
               rules = restrictedSchedule.rules;
             }
           }
-          if (cResult[2] === rules) {
+          if (tmp9 === rules) {
             if (cResult[3] === tmp5) {
+              let tmp11;
+              let tmp12;
+              let tmp13;
+              let tmp14;
+              let tmp15;
+              let tmp16;
+              let tmp17;
               if (cResult[4] === id) {
-                let tmp16 = cResult[11];
+                tmp11 = cResult[5];
+                tmp12 = cResult[6];
+                tmp13 = cResult[7];
+                tmp14 = cResult[8];
+                tmp15 = cResult[9];
+                tmp16 = cResult[10];
+                tmp17 = cResult[11];
               }
               const _Symbol2 = Symbol;
-              if (tmp16 !== Symbol.for("react.early_return_sentinel")) {
-                return tmp16;
-              } else {
-                if (cResult[19] === tmp10) {
-                  if (cResult[20] === tmp12) {
-                    if (cResult[21] === tmp13) {
-                      let tmp35 = cResult[22];
+              if (tmp17 === Symbol.for("react.early_return_sentinel")) {
+                if (cResult[19] === tmp11) {
+                  if (cResult[20] === tmp13) {
+                    let tmp36;
+                    if (cResult[21] === tmp14) {
+                      tmp36 = cResult[22];
                     }
-                    if (cResult[23] === tmp11) {
-                      if (cResult[24] === tmp14) {
-                        if (cResult[25] === tmp15) {
+                    if (cResult[23] === tmp12) {
+                      if (cResult[24] === tmp15) {
+                        if (cResult[25] === tmp16) {
+                          let tmp39;
+                          if (cResult[26] === tmp36) {
+                            tmp39 = cResult[27];
+                          }
+                          tmp17 = tmp39;
                         }
                       }
                     }
-                    const obj2 = { style: tmp14, children: null };
-                    const items = [tmp15, tmp35];
-                    obj2.children = items;
-                    const tmp40 = closure_6(tmp11, obj2);
-                    cResult[23] = tmp11;
-                    cResult[24] = tmp14;
-                    cResult[25] = tmp15;
-                    cResult[26] = tmp35;
-                    cResult[27] = tmp40;
+                    const obj2 = { style: tmp15, children: items };
+                    items = [tmp16, tmp36];
+                    const tmp41 = closure_6(tmp12, obj2);
+                    cResult[23] = tmp12;
+                    cResult[24] = tmp15;
+                    cResult[25] = tmp16;
+                    cResult[26] = tmp36;
+                    cResult[27] = tmp41;
+                    tmp39 = tmp41;
                   }
                 }
-                const obj3 = { hasIcons: tmp12, children: tmp13 };
-                const tmp37 = closure_5(tmp10, obj3);
-                cResult[19] = tmp10;
-                cResult[20] = tmp12;
-                cResult[21] = tmp13;
-                cResult[22] = tmp37;
-                tmp35 = tmp37;
+                const obj3 = { hasIcons: tmp13, children: tmp14 };
+                const tmp38 = closure_5(tmp11, obj3);
+                cResult[19] = tmp11;
+                cResult[20] = tmp13;
+                cResult[21] = tmp14;
+                cResult[22] = tmp38;
+                tmp36 = tmp38;
               }
+              return tmp17;
             }
           }
         }
       }
       let rules1;
-      const tmpResult3 = require("useNavigation");
+      const forResult = Symbol.for("react.early_return_sentinel");
       if (selectedTeenUser != null) {
         const restrictedSchedule2 = selectedTeenUser.restrictedSchedule;
         if (restrictedSchedule2 != null) {
@@ -236,58 +286,55 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (rules1 == null) {
         rules1 = [];
       }
-      const forResult = Symbol.for("react.early_return_sentinel");
+      let tmp19 = null;
+      let tmp20;
+      let tmp21;
+      let mapped;
+      let flag;
+      let tmp23;
+      let tmp24;
       const tmpResult4 = require("FamilyCenterRestrictedHoursUtils");
-      if (null == id) {
-        cResult[0] = navigation;
-        cResult[1] = tmp4;
-        let rules2;
-        if (selectedTeenUser != null) {
-          const restrictedSchedule3 = selectedTeenUser.restrictedSchedule;
-          if (restrictedSchedule3 != null) {
-            rules2 = restrictedSchedule3.rules;
-          }
-        }
-        cResult[2] = rules2;
-        cResult[3] = tmp5;
-        cResult[4] = id;
-        cResult[5] = undefined;
-        cResult[6] = undefined;
-        cResult[7] = undefined;
-        cResult[8] = undefined;
-        cResult[9] = undefined;
-        cResult[10] = undefined;
-        cResult[11] = null;
-        tmp16 = null;
-      } else {
+      const sortRulesByStartTimeResult = tmpResult4.sortRulesByStartTime(rules1);
+      if (null != id) {
+        let tmp26;
+        let tmp29;
         const _Symbol = Symbol;
         ({ container, header } = tmp5);
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = tmp(tmp2[8]).intl;
-          const stringResult = intl.string(navigation(tmp2[9])["72CmJd"]);
+          const stringResult = intl.string(navigation(id[9])["72CmJd"]);
           cResult[12] = stringResult;
-          let tmp19 = stringResult;
+          tmp26 = stringResult;
         } else {
-          tmp19 = cResult[12];
+          tmp26 = cResult[12];
         }
         if (cResult[13] !== tmp5.header) {
-          const obj4 = { variant: "text-sm/semibold", color: "text-subtle", style: header, children: tmp19 };
+          const obj4 = { variant: "text-sm/semibold", color: "text-subtle", style: header, children: tmp26 };
           cResult[13] = tmp5.header;
-          cResult[14] = closure_5(tmp(tmp2[10]).Text, obj4);
+          cResult[14] = closure_5(require("Text/Text").Text, obj4);
+          closure_5(require("Text/Text").Text, obj4);
           class P {
             constructor(arg0) {
               obj = { rule: readOnly, teenId: id, navigation: closure_1, readOnly };
               return jsx(f68470, obj, readOnly.ruleId);
             }
           }
-          const tmp24 = closure_5(tmp(tmp2[10]).Text, obj4);
+        } else {
+          tmp29 = cResult[14];
         }
         if (cResult[15] === navigation) {
-          if (cResult[16] === tmp4) {
+          if (cResult[16] === (undefined !== readOnly && readOnly)) {
+            let tmp33;
             if (cResult[17] === id) {
-              let tmp26 = cResult[18];
+              tmp33 = cResult[18];
             }
-            const mapped = sortRulesByStartTimeResult.map(tmp26);
+            mapped = sortRulesByStartTimeResult.map(tmp33);
+            flag = false;
+            tmp19 = forResult;
+            tmp20 = tmp29;
+            tmp21 = container;
+            tmp23 = View;
+            tmp24 = tmp32;
           }
         }
         class P {
@@ -297,23 +344,51 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[15] = navigation;
-        cResult[16] = tmp4;
+        cResult[16] = undefined !== readOnly && readOnly;
         cResult[17] = id;
         cResult[18] = P;
-        tmp26 = P;
+        tmp33 = P;
       }
-      sortRulesByStartTimeResult = require("FamilyCenterRestrictedHoursUtils").sortRulesByStartTime(rules1);
+      cResult[0] = navigation;
+      cResult[1] = undefined !== readOnly && readOnly;
+      let rules2;
+      if (selectedTeenUser != null) {
+        const restrictedSchedule3 = selectedTeenUser.restrictedSchedule;
+        if (restrictedSchedule3 != null) {
+          rules2 = restrictedSchedule3.rules;
+        }
+      }
+      cResult[2] = rules2;
+      cResult[3] = tmp5;
+      cResult[4] = id;
+      cResult[5] = tmp24;
+      cResult[6] = tmp23;
+      cResult[7] = flag;
+      cResult[8] = mapped;
+      cResult[9] = tmp21;
+      cResult[10] = tmp20;
+      cResult[11] = tmp19;
+      tmp17 = tmp19;
+      tmp16 = tmp20;
+      tmp15 = tmp21;
+      tmp14 = mapped;
+      tmp13 = flag;
+      tmp12 = tmp23;
+      tmp11 = tmp24;
     }
   : (readOnly) => {
+      let intl;
+      let items;
       let flag = readOnly.readOnly;
       if (flag === undefined) {
         flag = false;
       }
       let id;
       const tmp = closure_7();
-      const selectedTeenUser = flag(id[12]).useSelectedTeenUser();
-      const obj = flag(id[12]);
-      importDefault = flag(id[13]).useNavigation();
+      let obj = flag(id[12]);
+      const selectedTeenUser = obj.useSelectedTeenUser();
+      const obj2 = flag(id[13]);
+      importDefault = obj2.useNavigation();
       id = undefined;
       if (selectedTeenUser != null) {
         id = selectedTeenUser.id;
@@ -328,24 +403,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (rules == null) {
         rules = [];
       }
-      const obj2 = flag(id[13]);
-      const tmp2Result = flag(id[7]);
       let tmp6 = null;
+      const tmp2Result = flag(id[7]);
+      const sortRulesByStartTimeResult = tmp2Result.sortRulesByStartTime(rules);
       if (null != id) {
-        const obj3 = { style: tmp.container, children: null };
-        const obj4 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.header, children: null };
-        const intl = tmp2(tmp3[8]).intl;
-        obj4.children = intl.string(require("../FamilyCenter.messages.js")["72CmJd"]);
-        const items = [closure_5(tmp2(tmp3[10]).Text, obj4)];
+        const obj3 = { style: tmp.container, children: items };
+        const obj4 = {
+          variant: "text-sm/semibold",
+          color: "text-subtle",
+          style: tmp.header,
+          children: intl.string(require("../FamilyCenter.messages.js")["72CmJd"]),
+        };
+        const Text = tmp2(tmp3[10]).Text;
+        intl = tmp2(tmp3[8]).intl;
+        items = [closure_5(Text, obj4)];
         const obj5 = {
           hasIcons: false,
-          children: sortRulesByStartTimeResult.map((rule) =>
-            hasOwnProperty(closure_8, { rule, teenId: id, navigation, readOnly: flag }, rule.ruleId),
-          ),
+          children: sortRulesByStartTimeResult.map((rule) => {
+            const obj = { rule, teenId: id, navigation, readOnly: flag };
+            return hasOwnProperty(closure_8, obj, rule.ruleId);
+          }),
         };
-        items[1] = closure_5(tmp2(tmp3[14]).TableRowGroup, obj5);
-        obj3.children = items;
+        const TableRowGroup = tmp2(tmp3[14]).TableRowGroup;
+        items[1] = closure_5(TableRowGroup, obj5);
         tmp6 = closure_6(View, obj3);
       }
       return tmp6;
     };
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsScreenTime.tsx");
+
+export default tmp4;

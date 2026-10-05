@@ -1,17 +1,20 @@
 // discord_app/modules/guild_settings/native/showEmojiOverflowActionSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_settings/native/showEmojiOverflowActionSheet.tsx");
 
 export default function showEmojiOverflowActionSheet(arg0) {
-  const obj = ActionSheetActionCreatorsDefault;
-  const obj2 = {
+  const openLazy = ActionSheetActionCreatorsDefault.openLazy;
+  let obj = {
     onClose() {
-      return ActionSheetActionCreatorsDefault.hideActionSheet("EmojiOverflowActionSheet");
+      const obj = ActionSheetActionCreatorsDefault;
+      return obj.hideActionSheet("EmojiOverflowActionSheet");
     },
   };
+  ActionSheetActionCreatorsDefault;
+  const tmp2 = asyncRequire(17738, dependencyMap.paths);
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(17738, dependencyMap.paths), "EmojiOverflowActionSheet", obj2);
+  openLazy(tmp2, "EmojiOverflowActionSheet", obj);
 }

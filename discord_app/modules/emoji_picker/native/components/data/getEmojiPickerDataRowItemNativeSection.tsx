@@ -11,13 +11,20 @@ export default function getEmojiPickerDataRowItemNativeSection(
   hasPremiumInlineRoadblockHeader,
   hasPremiumInlineRoadblockFooter,
 ) {
+  let arr;
+  let emojiCount;
+  let emojisDisabled;
+  let emojisHidden;
+  let guildId;
+  let items;
+  let label;
   let flag = isSectionNitroLocked.isSectionNitroLocked;
   ({ label, guildId, emojiCount, emojisDisabled, emojisHidden } = isSectionNitroLocked);
   if (flag === undefined) {
     flag = false;
   }
   if (flag) {
-    let items = [];
+    items = [];
   } else {
     const _Array = Array;
     items = Array.from(emojisDisabled);
@@ -28,10 +35,11 @@ export default function getEmojiPickerDataRowItemNativeSection(
     guildId,
     emojiCount,
     emojisDisabled: items,
-    emojisHidden: Array.from(emojisHidden),
+    emojisHidden: arr,
     isSectionNitroLocked: flag,
     hasPremiumInlineRoadblockHeader,
     hasPremiumInlineRoadblockFooter,
   };
+  arr = Array.from(emojisHidden);
   return obj;
 }

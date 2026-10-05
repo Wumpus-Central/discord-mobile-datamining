@@ -7,10 +7,9 @@ const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellUtils.tsx");
 
 export const trackEvent = function trackEvent(MODAL_DISABLED_DMS, guildId) {
-  AnalyticsUtilsDefault.track(AnalyticEvents.DM_SETTINGS_UPSELL_ACTION, {
-    action: MODAL_DISABLED_DMS,
-    guild_id: guildId,
-  });
+  const obj = AnalyticsUtilsDefault;
+  const obj2 = { action: MODAL_DISABLED_DMS, guild_id: guildId };
+  obj.track(AnalyticEvents.DM_SETTINGS_UPSELL_ACTION, obj2);
 };
 export const DmUpsellActionTypes = {
   MODAL_VIEWED: "modal_viewed",

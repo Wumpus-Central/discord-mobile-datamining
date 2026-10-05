@@ -1,157 +1,170 @@
 // discord_app/modules/app_database/app/TryLoad.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_4 = async function _tryLoadAsync(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp3;
-          closure_1 = tmp7;
-          c4 = 1;
-          c5 = 2;
-          c6 = 1;
-          const obj4 = { value: importDefault(), done: false };
-          return obj4;
-        }
-      } else if (1 === tmp7) {
-        c4 = 0;
-        closure_129_0 = closure_3;
-        closure_130_3.log("database load failed.", closure_129_0);
-        c6 = 3;
-        return { value: null, done: true };
-      } else if (arg0 === 1) {
-        c6 = 3;
+let c5, c6, closure_3, closure_4, closure_5, closure_6;
+
+let obj = function _tryLoadAsync() {
+  obj = _asyncToGenerator(async (arg0) => {
+    let closure_0 = arg0;
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        c4 = 0;
-        c6 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        c4 = 0;
-        c6 = 3;
-        const obj = { value, done: true };
-        return obj;
+        return { value: "IconComponent", done: null };
       }
-    } catch (tmp16) {
-      closure_3 = tmp16;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp16;
-      } else {
-        c5 = tmp;
-      }
-    }
-  }
-};
-let closure_5 = async function _tryLoadOrResetCacheGatewayAsync(arg0) {
-  if (c9 === 2) {
-    c9 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp7 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c9 = 2;
-      if (0 === c8) {
-        if (arg0 === 1) {
-          c9 = 3;
+      let c4;
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let closure_2 = tmp;
+            let closure_1 = tmp4;
+            c4 = 1;
+            c5 = 2;
+            c6 = 1;
+            const obj4 = { value: closure_0(), done: false };
+            return obj4;
+          }
+        } else if (1 === c5) {
+          c4 = 0;
+          closure_0 = closure_3;
+          closure_130_3.log("database load failed.", closure_0);
+          c6 = 3;
+          return { value: null, done: true };
+        } else if (arg0 === 1) {
+          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c9 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          closure_5 = tmp3;
-          closure_4 = tmp5;
-          closure_132_0 = closure_0;
-          closure_132_1 = closure_2;
-          c7 = 1;
-          c8 = 2;
-          c9 = 1;
-          const obj5 = { value: dependencyMap(), done: false };
+          c4 = 0;
+          c6 = 3;
+          const obj5 = { value, done: true };
           return obj5;
+        } else {
+          c4 = 0;
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
         }
-      } else if (1 === tmp8) {
-        c7 = 0;
-        closure_132_2 = closure_6;
-        const _HermesInternal = HermesInternal;
-        closure_133_3.log(
-          "" + closure_132_0 + ": exception thrown, resetting socket.",
-          closure_132_2,
-          closure_132_2.stack,
-        );
-        const obj6 = { error: closure_132_2, action: null, metricAction: null };
-        const _HermesInternal2 = HermesInternal;
-        obj6.action = "tryLoadOrResetCacheGatewayAsync (" + closure_132_0 + ")";
-        closure_3 = closure_132_1;
-        if (closure_132_1 == null) {
-          closure_3 = closure_132_0;
+      } catch (tmp13) {
+        closure_3 = tmp13;
+        if (0 === c4) {
+          c6 = 3;
+          throw tmp13;
+        } else {
+          c5 = 1;
         }
-        const obj7 = { type: "RESET_SOCKET", args: null };
-        const _HermesInternal3 = HermesInternal;
-        obj6.metricAction = "tryLoadOrResetCacheGatewayAsync (" + closure_3 + ")";
-        obj7.args = obj6;
-        closure_133_0(closure_133_1[2]).dispatch(obj7);
-        c9 = 3;
-        return { value: null, done: true };
-      } else if (arg0 === 1) {
-        c9 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c7 = 0;
-        c9 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
-      } else {
-        c7 = 0;
-        c9 = 3;
-        const obj = { value, done: true };
-        return obj;
-      }
-    } catch (tmp29) {
-      closure_6 = tmp29;
-      if (tmp4 === c7) {
-        c9 = tmp2;
-        throw tmp29;
-      } else {
-        c8 = tmp;
       }
     }
-  }
+  });
+  return obj(...arguments);
 };
-const logger = new LoggerDefault("TryLoad");
-const size = fn(2);
+obj = function _tryLoadOrResetCacheGatewayAsync() {
+  obj = _asyncToGenerator(async (arg0, arg1, error) => {
+    let closure_0 = arg0;
+    let closure_1 = arg1;
+    let c8 = 0;
+    let c9 = 0;
+    let c7 = 0;
+    return (async (arg0, value, arg2) => {
+      let tmp15;
+      if (c9 === 2) {
+        c9 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          return { value, done: true };
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c9 = 2;
+          if (0 === c8) {
+            if (arg0 === 1) {
+              c9 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 3;
+              return { value, done: true };
+            } else {
+              closure_5 = tmp;
+              closure_4 = tmp15;
+              closure_1 = error;
+              c7 = 1;
+              c8 = 2;
+              c9 = 1;
+              const obj4 = { value: closure_1(), done: false };
+              return obj4;
+            }
+          } else if (1 === tmp4) {
+            c7 = 0;
+            error = closure_6;
+            const _HermesInternal = HermesInternal;
+            closure_133_3.log("" + closure_0 + ": exception thrown, resetting socket.", error, error.stack);
+            tmp15 = closure_133_0(closure_133_1[2]);
+            const _HermesInternal2 = HermesInternal;
+            const dispatch = tmp15.dispatch;
+            const obj5 = {
+              error,
+              action: "tryLoadOrResetCacheGatewayAsync (" + closure_0 + ")",
+              metricAction: "tryLoadOrResetCacheGatewayAsync (" + closure_3 + ")",
+            };
+            closure_3 = closure_1;
+            if (closure_1 == null) {
+              closure_3 = closure_0;
+            }
+            const _HermesInternal3 = HermesInternal;
+            const obj6 = { type: "RESET_SOCKET", args: obj5 };
+            dispatch(obj6);
+            c9 = 3;
+            return { value: null, done: true };
+          } else if (arg0 === 1) {
+            c9 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 0;
+            c9 = 3;
+            return { value, done: true };
+          } else {
+            c7 = 0;
+            c9 = 3;
+            return { value, done: true };
+          }
+        } catch (tmp26) {
+          closure_6 = tmp26;
+          if (0 === c7) {
+            c9 = 3;
+            throw tmp26;
+          } else {
+            c8 = 1;
+          }
+        }
+      }
+    })();
+  });
+  return obj(...arguments);
+};
+const tmp2 = new LoggerDefault("TryLoad");
+const logger = tmp2;
 const result = size.fileFinishedImporting("modules/app_database/app/TryLoad.tsx");
 
 export const tryLoad = function tryLoad(fn) {
@@ -163,14 +176,7 @@ export const tryLoad = function tryLoad(fn) {
   }
 };
 export const tryLoadAsync = function tryLoadAsync() {
-  const self = this;
-  const apply = closure_4.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const tryLoadOrResetCacheGateway = function tryLoadOrResetCacheGateway(arg0, fn, ensureGuildLoaded) {
   try {
@@ -179,27 +185,23 @@ export const tryLoadOrResetCacheGateway = function tryLoadOrResetCacheGateway(ar
     let tmp4 = ensureGuildLoaded;
     const _HermesInternal = HermesInternal;
     logger.log("" + arg0 + ": exception thrown, resetting socket.", tmp2, tmp2.stack);
-    const obj2 = { error: tmp2, action: null, metricAction: null };
     const _HermesInternal2 = HermesInternal;
-    obj2.action = "tryLoadOrResetCacheGateway (" + arg0 + ")";
+    obj = {
+      error: tmp2,
+      action: "tryLoadOrResetCacheGateway (" + arg0 + ")",
+      metricAction: "tryLoadOrResetCacheGateway (" + tmp4 + ")",
+    };
+    const dispatch = DispatcherDefault.dispatch;
+    DispatcherDefault;
     if (ensureGuildLoaded == null) {
       tmp4 = arg0;
     }
-    const obj3 = { type: "RESET_SOCKET", args: null };
     const _HermesInternal3 = HermesInternal;
-    obj2.metricAction = "tryLoadOrResetCacheGateway (" + tmp4 + ")";
-    obj3.args = obj2;
-    DispatcherDefault.dispatch(obj3);
+    const obj2 = { type: "RESET_SOCKET", args: obj };
+    dispatch(obj2);
     return null;
   }
 };
 export const tryLoadOrResetCacheGatewayAsync = function tryLoadOrResetCacheGatewayAsync() {
-  const self = this;
-  const apply = closure_5.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

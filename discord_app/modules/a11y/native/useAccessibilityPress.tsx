@@ -1,31 +1,35 @@
 // discord_app/modules/a11y/native/useAccessibilityPress.tsx
-import c from "../../../../_runtime/00576_c.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/a11y/native/useAccessibilityPress.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (current, label) => {
-      const cResult = c.c(6);
-      noop.useRef(current);
-      if (cResult[0] !== current) {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, label) => {
+      let items1;
+      let tmp2;
+      let tmp3;
+      let tmp5;
+      let tmp6;
+      let closure_0 = arg0;
+      const obj = react2;
+      const cResult = obj.c(6);
+      let closure_1 = react.useRef(arg0);
+      if (cResult[0] !== arg0) {
         const fn = function s() {
-          closure_1.current = current;
+          ref.current = current;
         };
-        const items = [current];
-        cResult[0] = current;
+        const items = [arg0];
+        cResult[0] = arg0;
         cResult[1] = fn;
         cResult[2] = items;
-        let tmp3 = items;
-        let tmp2 = fn;
+        tmp3 = items;
+        tmp2 = fn;
       } else {
         tmp2 = cResult[1];
         tmp3 = cResult[2];
       }
-      const effect = noop.useEffect(tmp2, tmp3);
+      const effect = react.useEffect(tmp2, tmp3);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function u(nativeEvent) {
           if ("activate" === nativeEvent.nativeEvent.actionName) {
@@ -33,41 +37,48 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         };
         cResult[3] = fn2;
-        let tmp5 = fn2;
+        tmp5 = fn2;
       } else {
         tmp5 = cResult[3];
       }
       if (cResult[4] !== label) {
-        const obj3 = { onAccessibilityAction: tmp5, accessibilityActions: null };
+        const obj3 = { onAccessibilityAction: tmp5, accessibilityActions: items1 };
+        items1 = [{ name: "activate", label }];
         const obj4 = { name: "activate", label };
-        const items1 = [obj4];
-        obj3.accessibilityActions = items1;
         cResult[4] = label;
         cResult[5] = obj3;
-        let tmp6 = obj3;
+        tmp6 = obj3;
       } else {
         tmp6 = cResult[5];
       }
       return tmp6;
     }
-  : (current, label) => {
-      closure_2 = noop.useRef(current);
-      let items = [current];
-      const effect = noop.useEffect(() => {
+  : (arg0, arg1) => {
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      let closure_2 = react.useRef(arg0);
+      let items = [arg0];
+      const effect = react.useEffect(() => {
         closure_2.current = current;
       }, items);
-      const items1 = [label];
-      return noop.useMemo(() => {
+      const items1 = [arg1];
+      return react.useMemo(() => {
+        let items;
+        let ref;
         const obj = {
           onAccessibilityAction(nativeEvent) {
             if ("activate" === nativeEvent.nativeEvent.actionName) {
               ref.current();
             }
           },
-          accessibilityActions: null,
+          accessibilityActions: items,
         };
-        const items = [{ name: "activate", label }];
-        obj.accessibilityActions = items;
+        items = [];
+        const obj2 = { name: "activate", label };
+        items[0] = obj2;
         return obj;
       }, items1);
     };
+const result = size.fileFinishedImporting("modules/a11y/native/useAccessibilityPress.tsx");
+
+export default tmp2;

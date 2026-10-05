@@ -1,30 +1,33 @@
 // discord_app/modules/collectibles/native/hooks/useMobileCollectiblesPurchaseSKU.android.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
+import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../../../_runtime/00576_react.js";
 import collectibles_CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useMobilePurchaseSKUDefault from "../../../billing/native/hooks/useMobilePurchaseSKU.android.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import UserStore from "../../../../stores/UserStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let product;
+
 let closure_3 = ["product"];
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/collectibles/native/hooks/useMobileCollectiblesPurchaseSKU.android.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (product) => {
-      const cResult = c.c(12);
+      let currentUser;
+      let tmp10;
+      let tmp4;
+      let tmp5;
+      let tmp9;
+      const obj = react;
+      const cResult = obj.c(12);
       if (cResult[0] !== product) {
         product = product.product;
         const tmp8 = _objectWithoutProperties(product, closure_3);
         cResult[0] = product;
         cResult[1] = product;
         cResult[2] = tmp8;
-        let tmp5 = tmp8;
-        let tmp4 = product;
+        tmp5 = tmp8;
+        tmp4 = product;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
@@ -36,54 +39,59 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[3] = items;
         cResult[4] = fn;
-        let tmp10 = fn;
-        let tmp9 = items;
+        tmp10 = fn;
+        tmp9 = items;
       } else {
         tmp9 = cResult[3];
         tmp10 = cResult[4];
       }
-      const stateFromStores = initialize.useStateFromStores(tmp9, tmp10);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp9, tmp10);
       if (cResult[5] === tmp4) {
+        let tmp13;
         if (cResult[6] === stateFromStores) {
-          let tmp13 = cResult[7];
+          tmp13 = cResult[7];
         }
         if (cResult[8] === tmp13) {
           if (cResult[9] === tmp4.skuId) {
+            let tmp15;
             if (cResult[10] === tmp5) {
-              let tmp15 = cResult[11];
+              tmp15 = cResult[11];
             }
             return useMobilePurchaseSKUDefault(tmp15);
           }
         }
-        const obj2 = {};
+        const obj2 = { skuId: tmp4.skuId, platformSkuId: tmp13, isFreeForStaffSelfPurchase: true };
         const merged = Object.assign(tmp5);
-        obj2.skuId = tmp4.skuId;
-        obj2.platformSkuId = tmp13;
-        obj2.isFreeForStaffSelfPurchase = true;
         cResult[8] = tmp13;
         cResult[9] = tmp4.skuId;
         cResult[10] = tmp5;
         cResult[11] = obj2;
         tmp15 = obj2;
       }
-      const tmpResult = initialize;
-      const collectibleGoogleSkuId = collectibles_CollectiblesUtils.getCollectibleGoogleSkuId(tmp4, stateFromStores);
+      const tmpResult2 = collectibles_CollectiblesUtils;
+      const collectibleGoogleSkuId = tmpResult2.getCollectibleGoogleSkuId(tmp4, stateFromStores);
       cResult[5] = tmp4;
       cResult[6] = stateFromStores;
       cResult[7] = collectibleGoogleSkuId;
       tmp13 = collectibleGoogleSkuId;
-      const tmpResult2 = collectibles_CollectiblesUtils;
     }
   : (product) => {
+      let currentUser;
       product = product.product;
       const merged = Object.assign(product, Object.assign({ product: 0 }));
       const items = [UserStore];
-      const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-      const collectibleGoogleSkuId = collectibles_CollectiblesUtils.getCollectibleGoogleSkuId(product, stateFromStores);
-      const obj3 = {};
+      const obj = get_initialized;
+      const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+      const obj2 = collectibles_CollectiblesUtils;
+      const collectibleGoogleSkuId = obj2.getCollectibleGoogleSkuId(product, stateFromStores);
+      const obj3 = { skuId: product.skuId, platformSkuId: collectibleGoogleSkuId, isFreeForStaffSelfPurchase: true };
+      const tmp4 = useMobilePurchaseSKUDefault;
       const merged1 = Object.assign(merged);
-      obj3.skuId = product.skuId;
-      obj3.platformSkuId = collectibleGoogleSkuId;
-      obj3.isFreeForStaffSelfPurchase = true;
-      return useMobilePurchaseSKUDefault(obj3);
+      return tmp4(obj3);
     };
+const result = size.fileFinishedImporting(
+  "modules/collectibles/native/hooks/useMobileCollectiblesPurchaseSKU.android.tsx",
+);
+
+export default tmp2;

@@ -1,18 +1,16 @@
 // discord_app/modules/collectibles/useCollectiblesShopStyles.native.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import createUseCollectiblesShopStylesDefault from "createUseCollectiblesShopStyles.tsx";
-import tinycolor_mod from "../../../_runtime/07063_tinycolor.js";
+import module_7063_mod from "../../../_runtime/metro/07063__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let tinycolor = tinycolor_mod;
-const importDefaultResultResult = tinycolor(nativeDefault.unsafe_rawColors.WHITE);
-let tinycolor = tinycolor_mod;
-const saturateResult = tinycolor(nativeDefault.unsafe_rawColors.WHITE).saturate(1);
-const importDefaultResult1Result = tinycolor(nativeDefault.unsafe_rawColors.BLACK);
-const saturateResult1 = tinycolor(nativeDefault.unsafe_rawColors.BLACK).saturate(1);
-const size = fn(2);
+let module_7063 = module_7063_mod;
+const importDefaultResultResult = module_7063(nativeDefault.unsafe_rawColors.WHITE);
+const saturateResult = importDefaultResultResult.saturate(1);
+module_7063 = module_7063_mod;
+const importDefaultResult1Result = module_7063(nativeDefault.unsafe_rawColors.BLACK);
+const saturateResult1 = importDefaultResult1Result.saturate(1);
+const tmp6 = createUseCollectiblesShopStylesDefault({ dark: saturateResult1, light: saturateResult });
 const result = size.fileFinishedImporting("modules/collectibles/useCollectiblesShopStyles.native.tsx");
 
-export default createUseCollectiblesShopStylesDefault({
-  dark: tinycolor(nativeDefault.unsafe_rawColors.BLACK).saturate(1),
-  light: saturateResult,
-});
+export default tmp6;

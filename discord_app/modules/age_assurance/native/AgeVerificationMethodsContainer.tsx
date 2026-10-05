@@ -2,39 +2,53 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import MonitoringAgentDefault from "../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import AgeVerificationConstants from "../AgeVerificationConstants.tsx";
+import SafetyHubConstants from "../../safety_hub/SafetyHubConstants.tsx";
+import react from "../../../../_runtime/00019_react.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const VerificationMethod = fn(8085).VerificationMethod;
-const SafetyHubLinks = fn(8093).SafetyHubLinks;
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  content: { marginTop: nativeDefault.space.PX_8 },
-  errorContainer: null,
-  noMethodsText: null,
-  buttonGroup: null,
-};
-let obj3 = { marginTop: nativeDefault.space.PX_8 };
-obj2.errorContainer = { marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_24 };
-let obj4 = { marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_24 };
-obj2.noMethodsText = { paddingHorizontal: nativeDefault.space.PX_40, textAlign: "center" };
-obj2.buttonGroup = { paddingVertical: 0 };
-let closure_8 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj5 = { paddingHorizontal: nativeDefault.space.PX_40, textAlign: "center" };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationMethodsContainer.tsx");
-
-export const AgeVerificationMethodsContainer = ReactCompilerGating.isReactCompilerEnabled()
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
+const VerificationMethod = AgeVerificationConstants.VerificationMethod;
+const SafetyHubLinks = SafetyHubConstants.SafetyHubLinks;
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { content: obj2, errorContainer: obj3, noMethodsText: obj4, buttonGroup: { paddingVertical: 0 } };
+obj2 = { marginTop: nativeDefault.space.PX_8 };
+createStyles = createStyles.createStyles;
+obj3 = { marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_24 };
+obj4 = { paddingHorizontal: nativeDefault.space.PX_40, textAlign: "center" };
+let closure_8 = createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (ageVerificationMethods) => {
-      const cResult = prop(576).c(20);
+      let Button;
+      let intl;
+      let intl2;
+      let intl3;
+      let intl4;
+      let items1;
+      let items2;
+      let items3;
+      let obj12;
+      let obj6;
+      let prop;
+      let tmp12;
+      let tmp6;
+      let tmp7;
+      let tmp9;
+      let obj = prop(576);
+      const cResult = obj.c(20);
       prop = ageVerificationMethods.ageVerificationMethods;
-      noMethodsText = ageVerificationMethods.modalSessionId;
+      const modalSessionId = ageVerificationMethods.modalSessionId;
       const tmp4 = closure_8();
-      const obj = prop(576);
-      const isSuspendedUser = prop(8092).useIsSuspendedUser();
+      let obj2 = prop(8092);
+      const isSuspendedUser = obj2.useIsSuspendedUser();
       if (cResult[0] !== prop) {
         const fn = function p() {
           let someResult;
@@ -42,218 +56,262 @@ export const AgeVerificationMethodsContainer = ReactCompilerGating.isReactCompil
             someResult = prop.some((id) => id.id === constants.GOOGLE_WALLET);
           }
           if (someResult) {
-            const obj3 = { name: MetricEvents.MetricEvents.GOOGLE_WALLET_METHOD_IMPRESSION };
-            MonitoringAgentDefault.increment(obj3);
+            const obj2 = { name: MetricEvents.MetricEvents.GOOGLE_WALLET_METHOD_IMPRESSION };
+            const increment = MonitoringAgentDefault.increment;
+            MonitoringAgentDefault;
+            increment(obj2);
           }
         };
         const items = [prop];
         cResult[0] = prop;
         cResult[1] = fn;
         cResult[2] = items;
-        let tmp7 = items;
-        let tmp6 = fn;
+        tmp7 = items;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[1];
         tmp7 = cResult[2];
       }
-      const effect = noop.useEffect(tmp6, tmp7);
+      const effect = react.useEffect(tmp6, tmp7);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj3 = {
-          messageType: tmp(1188).HelpMessageTypes.INFO,
+        const obj3 = {
+          messageType: prop(1188).HelpMessageTypes.INFO,
           textColor: "text-feedback-info",
           textVariant: "text-sm/medium",
-          children: null,
+          children: intl.string(prop(1126).t.El4aXl),
         };
-        const intl = tmp(1126).intl;
-        obj3.children = intl.string(tmp(1126).t.El4aXl);
-        const tmp11 = closure_6(tmp(1188).HelpMessage, obj3);
+        const HelpMessage = tmp(1188).HelpMessage;
+        intl = tmp(1126).intl;
+        const tmp11 = closure_6(HelpMessage, obj3);
         cResult[3] = tmp11;
-        let tmp9 = tmp11;
+        tmp9 = tmp11;
       } else {
         tmp9 = cResult[3];
       }
       if (cResult[4] === prop) {
-        if (cResult[5] === noMethodsText) {
+        if (cResult[5] === modalSessionId) {
           if (cResult[6] === tmp4.buttonGroup) {
             if (cResult[7] === tmp4.errorContainer) {
+              let tmp14;
               if (cResult[8] === tmp4.noMethodsText) {
-                if (cResult[10] !== cResult[9]) {
-                  const obj4 = { hasIcons: false, children: tmp12 };
-                  const tmp17 = closure_6(tmp(6074).TableRowGroup, obj4);
-                  cResult[10] = tmp12;
-                  cResult[11] = tmp17;
-                  let tmp15 = tmp17;
-                } else {
-                  tmp15 = cResult[11];
-                }
-                if (cResult[12] === tmp4.content) {
-                  if (cResult[13] === tmp15) {
-                    let tmp18 = cResult[14];
-                  }
-                  if (cResult[15] !== isSuspendedUser) {
-                    let tmp22 = isSuspendedUser;
-                    if (isSuspendedUser) {
-                      const obj5 = { variant: "text-xs/medium", children: null };
-                      const intl4 = tmp(1126).intl;
-                      const obj6 = {
-                        handleOnHelpUrlHook() {
-                          noMethodsText(8084).openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
-                        },
-                      };
-                      obj5.children = intl4.format(noMethodsText(3045).htWh1G, obj6);
-                      tmp22 = closure_6(tmp(4886).Text, obj5);
-                    }
-                    cResult[15] = isSuspendedUser;
-                    cResult[16] = tmp22;
-                    let tmp21 = tmp22;
-                  } else {
-                    tmp21 = cResult[16];
-                  }
-                  if (cResult[17] === tmp18) {
-                    if (cResult[18] === tmp21) {
-                      let tmp25 = cResult[19];
-                    }
-                    return tmp25;
-                  }
-                  const obj7 = { spacing: 8, align: "center", children: null };
-                  const items1 = [tmp18, tmp21];
-                  obj7.children = items1;
-                  const tmp27 = closure_7(tmp(5593).Stack, obj7);
-                  cResult[17] = tmp18;
-                  cResult[18] = tmp21;
-                  cResult[19] = tmp27;
-                  tmp25 = tmp27;
-                }
-                const obj8 = { spacing: 16, style: tmp4.content, children: null };
-                const items2 = [tmp9, tmp15];
-                obj8.children = items2;
-                const tmp20 = closure_7(tmp(5593).Stack, obj8);
-                cResult[12] = tmp4.content;
-                cResult[13] = tmp15;
-                cResult[14] = tmp20;
-                tmp18 = tmp20;
+                tmp12 = cResult[9];
               }
+              if (cResult[10] !== tmp12) {
+                const obj4 = { hasIcons: false, children: tmp12 };
+                const tmp16 = closure_6(prop(6074).TableRowGroup, obj4);
+                cResult[10] = tmp12;
+                cResult[11] = tmp16;
+                tmp14 = tmp16;
+              } else {
+                tmp14 = cResult[11];
+              }
+              if (cResult[12] === tmp4.content) {
+                let tmp17;
+                let tmp20;
+                if (cResult[13] === tmp14) {
+                  tmp17 = cResult[14];
+                }
+                if (cResult[15] !== isSuspendedUser) {
+                  let tmp21 = isSuspendedUser;
+                  if (tmp21) {
+                    const obj5 = {
+                      variant: "text-xs/medium",
+                      children: intl4.format(modalSessionId(3045).htWh1G, obj6),
+                    };
+                    const Text2 = tmp(4886).Text;
+                    intl4 = tmp(1126).intl;
+                    obj6 = {
+                      handleOnHelpUrlHook() {
+                        const obj = modalSessionId(dependencyMap[21]);
+                        obj.openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
+                      },
+                    };
+                    tmp21 = closure_6(Text2, obj5);
+                  }
+                  cResult[15] = isSuspendedUser;
+                  cResult[16] = tmp21;
+                  tmp20 = tmp21;
+                } else {
+                  tmp20 = cResult[16];
+                }
+                if (cResult[17] === tmp17) {
+                  let tmp24;
+                  if (cResult[18] === tmp20) {
+                    tmp24 = cResult[19];
+                  }
+                  return tmp24;
+                }
+                const obj7 = { spacing: 8, align: "center", children: items1 };
+                items1 = [tmp17, tmp20];
+                const tmp26 = closure_7(prop(5593).Stack, obj7);
+                cResult[17] = tmp17;
+                cResult[18] = tmp20;
+                cResult[19] = tmp26;
+                tmp24 = tmp26;
+              }
+              const obj8 = { spacing: 16, style: tmp4.content, children: items2 };
+              items2 = [tmp9, tmp14];
+              const tmp19 = closure_7(prop(5593).Stack, obj8);
+              cResult[12] = tmp4.content;
+              cResult[13] = tmp14;
+              cResult[14] = tmp19;
+              tmp17 = tmp19;
             }
           }
         }
       }
       if (null != prop) {
+        let mapped;
         if (0 !== prop.length) {
-          let mapped = prop.map((label) =>
-            closure_1_6(
-              prop(5993).TableRow,
-              {
-                label: label.title,
-                subLabel: label.description,
-                onPress() {
-                  return label.onClick(noMethodsText);
-                },
-                arrow: true,
+          mapped = prop.map((label) => {
+            const obj = {
+              label: label.title,
+              subLabel: label.description,
+              onPress() {
+                return label.onClick(modalSessionId);
               },
-              label.id,
-            ),
-          );
+              arrow: true,
+            };
+            return closure_1_6(prop(dependencyMap[19]).TableRow, obj, label.id);
+          });
         }
         cResult[4] = prop;
-        cResult[5] = noMethodsText;
+        cResult[5] = modalSessionId;
         cResult[6] = tmp4.buttonGroup;
-        ({ errorContainer: tmp3[7], noMethodsText } = tmp4);
-        cResult[8] = noMethodsText;
+        cResult[7] = tmp4.errorContainer;
+        cResult[8] = tmp4.noMethodsText;
         cResult[9] = mapped;
+        tmp12 = mapped;
       }
-      const obj9 = { direction: "vertical", align: "center", spacing: 16, style: tmp4.errorContainer, children: null };
-      const obj10 = { variant: "text-sm/medium", color: "text-subtle", style: tmp4.noMethodsText, children: null };
-      const intl2 = tmp(1126).intl;
-      obj10.children = intl2.string(noMethodsText(3045).cR6336);
-      const items3 = [closure_6(prop(4886).Text, obj10)];
-      const obj11 = { style: tmp4.buttonGroup, children: null };
-      const obj12 = { variant: "primary", size: "lg", text: null, onPress: null };
-      const intl3 = tmp(1126).intl;
-      obj12.text = intl3.string(noMethodsText(3045).hDvmYP);
-      obj12.onPress = prop(8091).getAgeVerificationMethods;
-      obj11.children = closure_6(prop(5594).Button, obj12);
-      items3[1] = closure_6(prop(5592).ButtonGroup, obj11);
-      obj9.children = items3;
-      mapped = closure_7(tmp(5593).Stack, obj9);
-      let obj2 = prop(8092);
+      const obj9 = {
+        direction: "vertical",
+        align: "center",
+        spacing: 16,
+        style: tmp4.errorContainer,
+        children: items3,
+      };
+      const Stack = tmp(5593).Stack;
+      const obj10 = {
+        variant: "text-sm/medium",
+        color: "text-subtle",
+        style: tmp4.noMethodsText,
+        children: intl2.string(modalSessionId(3045).cR6336),
+      };
+      const Text = tmp(4886).Text;
+      intl2 = tmp(1126).intl;
+      items3 = [closure_6(Text, obj10)];
+      const obj11 = { style: tmp4.buttonGroup, children: closure_6(Button, obj12) };
+      const ButtonGroup = tmp(5592).ButtonGroup;
+      obj12 = {
+        variant: "primary",
+        size: "lg",
+        text: intl3.string(modalSessionId(3045).hDvmYP),
+        onPress: prop(8091).getAgeVerificationMethods,
+      };
+      Button = tmp(5594).Button;
+      intl3 = tmp(1126).intl;
+      items3[1] = closure_6(ButtonGroup, obj11);
+      mapped = closure_7(Stack, obj9);
     }
   : (ageVerificationMethods) => {
+      let Button;
+      let intl;
+      let intl2;
+      let intl3;
+      let intl4;
+      let items3;
+      let obj11;
+      let obj6;
       const prop = ageVerificationMethods.ageVerificationMethods;
       const modalSessionId = ageVerificationMethods.modalSessionId;
       const tmp = closure_8();
-      const isSuspendedUser = prop(8092).useIsSuspendedUser();
+      let obj = prop(8092);
+      const isSuspendedUser = obj.useIsSuspendedUser();
       const items = [prop];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
         let someResult;
         if (prop != null) {
           someResult = prop.some((id) => id.id === constants.GOOGLE_WALLET);
         }
         if (someResult) {
-          const obj3 = { name: MetricEvents.MetricEvents.GOOGLE_WALLET_METHOD_IMPRESSION };
-          MonitoringAgentDefault.increment(obj3);
+          const obj2 = { name: MetricEvents.MetricEvents.GOOGLE_WALLET_METHOD_IMPRESSION };
+          const increment = MonitoringAgentDefault.increment;
+          MonitoringAgentDefault;
+          increment(obj2);
         }
       }, items);
+      const Stack = prop(5593).Stack;
       let obj2 = { spacing: 16, style: tmp.content, children: null };
-      let obj3 = {
+      const Stack2 = prop(5593).Stack;
+      const obj3 = {
         messageType: prop(1188).HelpMessageTypes.INFO,
         textColor: "text-feedback-info",
         textVariant: "text-sm/medium",
-        children: null,
+        children: intl.string(prop(1126).t.El4aXl),
       };
-      const intl = prop(1126).intl;
-      obj3.children = intl.string(prop(1126).t.El4aXl);
-      const items1 = [closure_6(prop(1188).HelpMessage, obj3)];
+      const HelpMessage = prop(1188).HelpMessage;
+      intl = prop(1126).intl;
+      const items1 = [closure_6(HelpMessage, obj3)];
       if (null != prop) {
+        let mapped;
         if (0 !== prop.length) {
-          let mapped = prop.map((label) =>
-            closure_1_6(
-              prop(5993).TableRow,
-              {
-                label: label.title,
-                subLabel: label.description,
-                onPress() {
-                  return label.onClick(modalSessionId);
-                },
-                arrow: true,
+          mapped = prop.map((label) => {
+            const obj = {
+              label: label.title,
+              subLabel: label.description,
+              onPress() {
+                return label.onClick(modalSessionId);
               },
-              label.id,
-            ),
-          );
+              arrow: true,
+            };
+            return closure_1_6(prop(dependencyMap[19]).TableRow, obj, label.id);
+          });
         }
         const obj4 = { hasIcons: false, children: mapped };
         items1[1] = closure_6(tmp8, obj4);
         obj2.children = items1;
-        const items2 = [closure_7(prop(5593).Stack, obj2)];
+        const items2 = [closure_7(Stack2, obj2)];
         let tmp7Result = isSuspendedUser;
-        if (isSuspendedUser) {
-          const obj5 = { variant: "text-xs/medium", children: null };
-          const intl4 = tmp2(1126).intl;
-          const obj6 = {
+        if (tmp7Result) {
+          const obj5 = { variant: "text-xs/medium", children: intl4.format(modalSessionId(3045).htWh1G, obj6) };
+          const Text2 = tmp2(4886).Text;
+          intl4 = tmp2(1126).intl;
+          obj6 = {
             handleOnHelpUrlHook() {
-              modalSessionId(8084).openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
+              const obj = modalSessionId(dependencyMap[21]);
+              obj.openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
             },
           };
-          obj5.children = intl4.format(modalSessionId(3045).htWh1G, obj6);
-          tmp7Result = closure_6(tmp2(4886).Text, obj5);
+          tmp7Result = closure_6(Text2, obj5);
         }
-        const obj7 = { spacing: 8, align: "center", children: null };
+        const obj7 = { spacing: 8, align: "center", children: items2 };
         items2[1] = tmp7Result;
-        obj7.children = items2;
-        return closure_7(prop(5593).Stack, obj7);
+        return closure_7(Stack, obj7);
       }
-      const obj8 = { direction: "vertical", align: "center", spacing: 16, style: tmp.errorContainer, children: null };
-      const obj9 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.noMethodsText, children: null };
-      const intl2 = tmp2(1126).intl;
-      obj9.children = intl2.string(modalSessionId(3045).cR6336);
-      const items3 = [closure_6(prop(4886).Text, obj9)];
-      const obj10 = { style: tmp.buttonGroup, children: null };
-      const obj11 = { variant: "primary", size: "lg", text: null, onPress: null };
-      const intl3 = tmp2(1126).intl;
-      obj11.text = intl3.string(modalSessionId(3045).hDvmYP);
-      obj11.onPress = prop(8091).getAgeVerificationMethods;
-      obj10.children = closure_6(prop(5594).Button, obj11);
-      items3[1] = closure_6(prop(5592).ButtonGroup, obj10);
-      obj8.children = items3;
-      mapped = closure_7(tmp2(5593).Stack, obj8);
-      const obj = prop(8092);
+      const obj8 = { direction: "vertical", align: "center", spacing: 16, style: tmp.errorContainer, children: items3 };
+      const Stack3 = tmp2(5593).Stack;
+      const obj9 = {
+        variant: "text-sm/medium",
+        color: "text-subtle",
+        style: tmp.noMethodsText,
+        children: intl2.string(modalSessionId(3045).cR6336),
+      };
+      const Text = tmp2(4886).Text;
+      intl2 = tmp2(1126).intl;
+      items3 = [closure_6(Text, obj9)];
+      const obj10 = { style: tmp.buttonGroup, children: closure_6(Button, obj11) };
+      const ButtonGroup = tmp2(5592).ButtonGroup;
+      obj11 = {
+        variant: "primary",
+        size: "lg",
+        text: intl3.string(modalSessionId(3045).hDvmYP),
+        onPress: prop(8091).getAgeVerificationMethods,
+      };
+      Button = tmp2(5594).Button;
+      intl3 = tmp2(1126).intl;
+      items3[1] = closure_6(ButtonGroup, obj10);
+      mapped = closure_7(Stack3, obj8);
     };
+const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationMethodsContainer.tsx");
+
+export const AgeVerificationMethodsContainer = tmp4;

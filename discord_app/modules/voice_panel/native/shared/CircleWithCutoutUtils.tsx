@@ -1,54 +1,60 @@
 // discord_app/modules/voice_panel/native/shared/CircleWithCutoutUtils.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import inlineStyles from "../../../../../_runtime/08136_inlineStyles.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
 const inlineStylesDefault = inlineStyles;
 
-require = fn;
-const jsxProd = fn(21);
-({ jsx: c3, jsxs: closure_4 } = jsxProd);
+let c3;
+let closure_4;
+({ jsx: c3, jsxs: closure_4 } = Fragment);
 let closure_5 = Math.PI / 180;
-const ReactCompilerGating = fn(558);
-function getCutoutCenterX(result, cutoutPositionInDegrees) {
-  return result + result * Math.sin(cutoutPositionInDegrees * closure_5);
-}
-function getCutoutCenterY(result, cutoutPositionInDegrees) {
-  return result - result * Math.cos(cutoutPositionInDegrees * closure_5);
-}
-let size = fn(2);
-let result = size.fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutoutUtils.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(23);
+      let circleFillColor;
+      let circleRadius;
+      let cutoutPositionInDegrees;
+      let cutoutRadius;
+      let items;
+      let items1;
+      let obj4;
+      const obj = react2;
+      const cResult = obj.c(23);
       ({ circleRadius, cutoutRadius, cutoutPositionInDegrees, circleFillColor } = arg0);
       const result = 2 * circleRadius;
       if (cResult[0] === circleRadius) {
+        let tmp6;
         if (cResult[1] === cutoutPositionInDegrees) {
-          let tmp6 = cResult[2];
+          tmp6 = cResult[2];
         }
         if (cResult[3] === circleRadius) {
+          let tmp8;
+          let tmp12;
           if (cResult[4] === cutoutPositionInDegrees) {
-            let tmp8 = cResult[5];
+            tmp8 = cResult[5];
           }
           if (cResult[6] !== result) {
-            const size = { width: result, height: result, fill: "white" };
-            const tmp14 = React3(inlineStyles.Rect, size);
+            size = { width: result, height: result, fill: "white" };
+            const tmp14 = _false(inlineStyles.Rect, size);
             cResult[6] = result;
             cResult[7] = tmp14;
-            let tmp12 = tmp14;
+            tmp12 = tmp14;
           } else {
             tmp12 = cResult[7];
           }
           if (cResult[8] === tmp6) {
             if (cResult[9] === tmp8) {
+              let tmp15;
               if (cResult[10] === cutoutRadius) {
-                let tmp15 = cResult[11];
+                tmp15 = cResult[11];
               }
               if (cResult[12] === tmp12) {
+                let tmp18;
                 if (cResult[13] === tmp15) {
-                  let tmp18 = cResult[14];
+                  tmp18 = cResult[14];
                 }
                 let str;
                 if (tmp4) {
@@ -56,21 +62,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (cResult[15] === circleFillColor) {
                   if (cResult[16] === circleRadius) {
+                    let tmp22;
                     if (cResult[17] === str) {
-                      let tmp22 = cResult[18];
+                      tmp22 = cResult[18];
                     }
                     if (cResult[19] === result) {
                       if (cResult[20] === tmp18) {
+                        let tmp25;
                         if (cResult[21] === tmp22) {
-                          let tmp25 = cResult[22];
+                          tmp25 = cResult[22];
                         }
                         return tmp25;
                       }
                     }
-                    const size1 = { height: result, width: result, children: null };
-                    const items = [tmp18, tmp22];
-                    size1.children = items;
-                    const tmp28 = React4(inlineStylesDefault, size1);
+                    const size1 = { height: result, width: result, children: items };
+                    items = [tmp18, tmp22];
+                    const tmp28 = React3(inlineStylesDefault, size1);
                     cResult[19] = result;
                     cResult[20] = tmp18;
                     cResult[21] = tmp22;
@@ -79,19 +86,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj2 = { cx: circleRadius, cy: circleRadius, r: circleRadius, fill: circleFillColor, mask: str };
-                const tmp24 = React3(inlineStyles.Circle, obj2);
+                const tmp24 = _false(inlineStyles.Circle, obj2);
                 cResult[15] = circleFillColor;
                 cResult[16] = circleRadius;
                 cResult[17] = str;
                 cResult[18] = tmp24;
                 tmp22 = tmp24;
               }
-              const obj3 = { children: null };
-              const obj4 = { id: "mask", children: null };
-              const items1 = [tmp12, tmp15];
-              obj4.children = items1;
-              obj3.children = React4(inlineStyles.Mask, obj4);
-              const tmp21 = React3(inlineStyles.Defs, obj3);
+              const obj3 = { children: React3(inlineStyles.Mask, obj4) };
+              const Defs = inlineStyles.Defs;
+              obj4 = { id: "mask", children: items1 };
+              items1 = [tmp12, tmp15];
+              const tmp21 = _false(Defs, obj3);
               cResult[12] = tmp12;
               cResult[13] = tmp15;
               cResult[14] = tmp21;
@@ -99,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj5 = { cx: tmp6, cy: tmp8, r: cutoutRadius, fill: "black" };
-          const tmp17 = React3(inlineStyles.Circle, obj5);
+          const tmp17 = _false(inlineStyles.Circle, obj5);
           cResult[8] = tmp6;
           cResult[9] = tmp8;
           cResult[10] = cutoutRadius;
@@ -120,31 +126,51 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = sum;
     }
   : (arg0) => {
+      let Mask;
+      let circleFillColor;
+      let circleRadius;
+      let cutoutPositionInDegrees;
+      let cutoutRadius;
+      let enableCutout;
+      let items;
+      let items1;
+      let obj2;
+      let str;
       ({ circleRadius, cutoutPositionInDegrees } = arg0);
       const result = 2 * circleRadius;
       ({ cutoutRadius, enableCutout, circleFillColor } = arg0);
       const sum = circleRadius + circleRadius * Math.sin(cutoutPositionInDegrees * closure_5);
       const diff = circleRadius - circleRadius * Math.cos(cutoutPositionInDegrees * closure_5);
-      const size = { height: result, width: result, children: null };
-      const obj = { children: null };
-      const obj2 = { id: "mask", children: null };
-      const items = [
-        React3(inlineStyles.Rect, { width: result, height: result, fill: "white" }),
-        React3(inlineStyles.Circle, { cx: sum, cy: diff, r: cutoutRadius, fill: "black" }),
+      size = { height: result, width: result, children: items1 };
+      const obj = { children: React3(Mask, obj2) };
+      const tmp5 = inlineStylesDefault;
+      const Defs = inlineStyles.Defs;
+      obj2 = { id: "mask", children: items };
+      Mask = inlineStyles.Mask;
+      items = [
+        _false(inlineStyles.Rect, { width: result, height: result, fill: "white" }),
+        _false(inlineStyles.Circle, { cx: sum, cy: diff, r: cutoutRadius, fill: "black" }),
       ];
-      obj2.children = items;
-      obj.children = React4(inlineStyles.Mask, obj2);
-      const items1 = [React3(inlineStyles.Defs, obj)];
-      const obj3 = { cx: circleRadius, cy: circleRadius, r: circleRadius, fill: circleFillColor, mask: null };
-      let str;
+      items1 = [_false(Defs, obj)];
+      const obj3 = { cx: circleRadius, cy: circleRadius, r: circleRadius, fill: circleFillColor, mask: str };
+      str = undefined;
+      const Circle = inlineStyles.Circle;
       if (enableCutout) {
         str = "url(#mask)";
       }
-      obj3.mask = str;
-      items1[1] = React3(inlineStyles.Circle, obj3);
-      size.children = items1;
-      return React4(inlineStylesDefault, size);
+      items1[1] = _false(Circle, obj3);
+      return React3(tmp5, size);
     };
+function getCutoutCenterX(result, cutoutPositionInDegrees) {
+  return result + result * Math.sin(cutoutPositionInDegrees * closure_5);
+}
+function getCutoutCenterY(result, cutoutPositionInDegrees) {
+  return result - result * Math.cos(cutoutPositionInDegrees * closure_5);
+}
+let size = size_mod;
+let result = size.fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutoutUtils.tsx");
+
+export default tmp4;
 export const getBadgeTop = function getBadgeTop(badgeRadius, buttonRadius, c14) {
   return buttonRadius - buttonRadius * Math.cos(c14 * closure_5) - badgeRadius;
 };

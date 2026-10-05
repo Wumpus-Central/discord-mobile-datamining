@@ -6,9 +6,10 @@ const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("modules/activities/utils/getPreviewVideoAssetUrl.tsx");
 
 export default function getPreviewVideoAssetUrl(hasOwnProperty, banner_asset_id) {
+  let combined;
   if (null != CDN_HOST) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "https://" + CDN_HOST + "/app-assets/" + hasOwnProperty + "/store/" + banner_asset_id + ".mp4";
+    combined = "https://" + CDN_HOST + "/app-assets/" + hasOwnProperty + "/store/" + banner_asset_id + ".mp4";
   } else {
     const _location = location;
     const _HermesInternal = HermesInternal;

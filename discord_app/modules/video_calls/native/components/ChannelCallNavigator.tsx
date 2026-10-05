@@ -1,116 +1,140 @@
 // discord_app/modules/video_calls/native/components/ChannelCallNavigator.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import GuildThemeGuildIdOverrideContextDefault from "../../../guild_themes/native/GuildThemeGuildIdOverrideContext.tsx";
+import react2 from "../../../../../_runtime/00576_react.js";
+import Constants from "../../../../Constants.tsx";
+import reactDefault from "../../../guild_themes/native/GuildThemeGuildIdOverrideContext.tsx";
+import Constants2 from "../../../oauth2/native/Constants.tsx";
+import ChannelCallConstants from "../ChannelCallConstants.tsx";
 import VoiceChatModalContext from "../../../voice_chat/native/VoiceChatModalContext.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import SafeAreaDisabledStore from "../../../panels/morphable/native/SafeAreaDisabledStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let _require, c0, c3, dependencyMap, state;
+
+let StyleSheet;
+let closure_12;
+let map1;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
+let tmp;
+const ReanimatedRexport = tmp(4612);
 function MainCallScreen(channel) {
+  let SHOW_OAUTH2_MODAL;
+  let tmp11;
+  let tmp14Result;
+  let tmp14Result2;
   channel = channel.channel;
   let isConnectedToVoiceChannel;
-  const tmp = closure_14();
-  isConnectedToVoiceChannel = isConnectedToVoiceChannel(9054).useIsConnectedToVoiceChannel(channel);
-  const id = noop.useId();
+  let tmp = closure_14();
+  let obj = isConnectedToVoiceChannel(9054);
+  isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
+  const id = react.useId();
   const items = [isConnectedToVoiceChannel, id];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
+    let key;
     state = SafeAreaDisabledStore.getState();
-    let safeAreaDisableLock = state.requestSafeAreaDisableLock({ key: id, lockEnabled: isConnectedToVoiceChannel });
+    let obj = { key: id, lockEnabled: isConnectedToVoiceChannel };
+    let safeAreaDisableLock = state.requestSafeAreaDisableLock(obj);
     return () => {
       state = state.getState();
-      const safeAreaDisableLock = state.requestSafeAreaDisableLock({ key, lockEnabled: false });
+      const obj = { key, lockEnabled: false };
+      const safeAreaDisableLock = state.requestSafeAreaDisableLock(obj);
     };
   }, items);
-  let obj = isConnectedToVoiceChannel(9054);
-  const isChannelContentGated = isConnectedToVoiceChannel(5100).useIsChannelContentGated(channel);
-  const effect1 = noop.useEffect(() => {
+  let obj2 = isConnectedToVoiceChannel(5100);
+  const isChannelContentGated = obj2.useIsChannelContentGated(channel);
+  const effect1 = react.useEffect(() => {
     function dismissOAuthModal() {
-      if (c0) {
-        id(5093).popWithKey(closure_2_11);
+      const tmp = c0;
+      if (tmp) {
+        obj = id(dependencyMap[19]);
+        obj.popWithKey(closure_2_11);
         c0 = false;
-        const obj = id(5093);
       }
     }
     function showOAuth2Modal() {
-      const self = this;
-      const apply = closure_3.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
+      return obj(...arguments);
     }
-    closure_3 = async function _showOAuth2Modal(arg0) {
-      if (c3 === 2) {
-        c3 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
+    let obj = function _showOAuth2Modal() {
+      obj = _asyncToGenerator(async (arg0) => {
+        let closure_1;
+        let paths;
+        let closure_0 = arg0;
+        if (c3 === 2) {
+          c3 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp3 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "IconComponent", done: null };
+          }
         } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === paths) {
-            if (arg0 === 1) {
+          try {
+            c3 = 2;
+            if (0 === paths) {
+              if (arg0 === 1) {
+                c3 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c3 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                const obj5 = tmp(paths[19]);
+                obj5.popWithKey(closure_1_11);
+                const pushLazy = tmp(paths[19]).pushLazy;
+                const obj4 = { dismissOAuthModal };
+                const tmp15 = tmp(paths[19]);
+                const tmp17 = closure_0(paths[21])(paths[20], paths.paths);
+                const merged = Object.assign(closure_0);
+                paths = 1;
+                c3 = 1;
+                const obj6 = { value: pushLazy(tmp17, obj4, closure_1_11), done: false };
+                return obj6;
+              }
+            } else if (arg0 === 1) {
               c3 = 3;
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              obj = { value, done: true };
+              return obj;
             } else {
-              tmp2(paths[19]).popWithKey(closure_1_11);
-              const obj5 = tmp2(paths[19]);
-              const obj4 = {};
-              const obj6 = tmp2(paths[19]);
-              const merged = Object.assign(closure_0);
-              obj4.dismissOAuthModal = dismissOAuthModal;
-              paths = 1;
-              c3 = 1;
-              const obj7 = {
-                value: obj6.pushLazy(closure_0(paths[21])(paths[20], paths.paths), obj4, closure_1_11),
-                done: false,
-              };
-              return obj7;
+              c0 = true;
+              c3 = 3;
+              return { value: "IconComponent", done: null };
             }
-          } else if (arg0 === 1) {
+          } catch (tmp6) {
             c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            closure_129_0 = true;
-            c3 = 3;
-            return { value: "IconComponent", done: null };
+            throw tmp6;
           }
-        } catch (tmp7) {
-          c3 = tmp;
-          throw tmp7;
         }
-      }
+      });
+      return obj(...arguments);
     };
     isConnectedToVoiceChannel = false;
     let ComponentDispatch = isConnectedToVoiceChannel(showOAuth2Modal[22]).ComponentDispatch;
     const subscription = ComponentDispatch.subscribe(SHOW_OAUTH2_MODAL.SHOW_OAUTH2_MODAL, showOAuth2Modal);
     return () => {
-      const ComponentDispatch = isConnectedToVoiceChannel(1121).ComponentDispatch;
+      const ComponentDispatch = isConnectedToVoiceChannel(dependencyMap[22]).ComponentDispatch;
       ComponentDispatch.unsubscribe(ComponentActions.SHOW_OAUTH2_MODAL, showOAuth2Modal);
-      if (c0) {
-        id(5093).popWithKey(closure_2_11);
+      const tmp3 = c0;
+      if (tmp3) {
+        obj = id(dependencyMap[19]);
+        obj.popWithKey(closure_2_11);
         c0 = false;
-        const obj = id(5093);
       }
     };
   }, []);
@@ -118,9 +142,9 @@ function MainCallScreen(channel) {
   if (isChannelContentGated) {
     let obj3 = { onReturnToSafety: id(5093).pop, guildId: null, channelId: null };
     ({ guild_id: obj6.guildId, id: obj6.channelId } = channel);
-    let tmp14Result2 = closure_12(id(12316), obj3);
-    let tmp11 = closure_12;
     const tmp20 = id(12316);
+    tmp14Result2 = closure_12(tmp20, obj3);
+    tmp11 = closure_12;
   } else {
     if (!tmp10) {
       if (!channel.isVocalThread()) {
@@ -129,54 +153,47 @@ function MainCallScreen(channel) {
         tmp14Result2 = closure_12(closure_23, obj4);
       }
     }
-    let obj5 = { style: tmp.flex, children: null };
-    let tmp14Result = null;
+    let obj5 = { style: tmp.flex, children: tmp14Result };
+    tmp14Result = null;
     if (channel.isGuildStageVoice()) {
-      let obj7 = { channel };
+      let tmp17 = id;
+      const obj7 = { channel };
       tmp14Result = closure_12(id(9157), obj7);
     }
-    obj5.children = tmp14Result;
     tmp14Result2 = closure_12(closure_6, obj5);
     tmp11 = closure_12;
   }
-  let obj2 = isConnectedToVoiceChannel(5100);
   const tmp21 = id(4732)();
   const tmp22 = id(9611);
   const tmp2Result = isConnectedToVoiceChannel(1369);
-  const tmp23 = isConnectedToVoiceChannel(1369).isAndroid() || !isConnectedToVoiceChannel;
-  return tmp11(tmp22, {
-    forceHide: isConnectedToVoiceChannel(1369).isAndroid() || !isConnectedToVoiceChannel,
+  const tmp23 = tmp2Result.isAndroid() || !isConnectedToVoiceChannel;
+  const obj8 = {
+    forceHide: tmp23,
     showWhenParticipantOnScreen: !isConnectedToVoiceChannel,
     children: tmp11(isConnectedToVoiceChannel(4589).ThemeContextProvider, { gradient: tmp21, children: tmp14Result2 }),
-  });
+  };
+  return tmp11(tmp22, obj8);
 }
-get_ActivityIndicator = fn(17);
-({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const ChannelCallScreens = fn(9051).ChannelCallScreens;
-const ComponentActions = fn(1085).ComponentActions;
-let closure_11 = fn(8710).OAUTH2_AUTHORIZE_MODAL_KEY;
-const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+({ View: metroRequire, StyleSheet } = react_native);
+const ChannelCallScreens = ChannelCallConstants.ChannelCallScreens;
+const ComponentActions = Constants.ComponentActions;
+let closure_11 = Constants2.OAUTH2_AUTHORIZE_MODAL_KEY;
+({ jsx: closure_12, jsxs: map1 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
   flex: { flex: 1, alignSelf: "stretch" },
-  textInVoiceContainer: null,
-  voiceContainer: null,
-  textContainer: null,
+  textInVoiceContainer: obj2,
+  voiceContainer: obj3,
+  textContainer: obj4,
 };
-let obj3 = {};
+obj2 = { right: undefined };
+createStyles = createStyles.createStyles;
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj3.right = undefined;
-obj2.textInVoiceContainer = obj3;
-let obj4 = {};
+obj3 = { right: "50%" };
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj4.right = "50%";
-obj2.voiceContainer = obj4;
-let obj5 = {};
+obj4 = { left: "50%" };
 const merged2 = Object.assign(StyleSheet.absoluteFillObject);
-obj5.left = "50%";
-obj2.textContainer = obj5;
-let closure_14 = createStyles.createStyles(obj2);
+let closure_14 = createStyles(obj);
 const __initData = {
   code: "function ChannelCallNavigatorTsx1(){const{width,translateX}=this.__closure;var _translateX$get,_translateX;return{width:width,transform:[{translateX:(_translateX$get=(_translateX=translateX)===null||_translateX===void 0?void 0:_translateX.get())!==null&&_translateX$get!==void 0?_translateX$get:0}]};}",
 };
@@ -201,54 +218,69 @@ const __initData7 = {
 const __initData8 = {
   code: "function ChannelCallNavigatorTsx8(isMoving,previous){const{runOnJS,setShouldRenderChat}=this.__closure;if(!isMoving||isMoving===previous)return;runOnJS(setShouldRenderChat)(true);}",
 };
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      const cResult = c.c(23);
+      let closure_2;
+      let items;
+      let items1;
+      let items2;
+      let require;
+      let tmp11;
+      let tmp13;
+      let tmp14;
+      let translateX;
+      let tmp = require;
+      let obj = react2;
+      const cResult = obj.c(23);
       channel = channel.channel;
       const tmp4 = closure_14();
       const result = 2 * translateX(1484)().width;
-      const require = result;
-      const voiceChatNavigationContext = VoiceChatModalContext.useVoiceChatNavigationContext();
+      require = result;
+      let obj2 = VoiceChatModalContext;
+      const voiceChatNavigationContext = obj2.useVoiceChatNavigationContext();
       translateX = undefined;
       if (voiceChatNavigationContext != null) {
         translateX = voiceChatNavigationContext.translateX;
       }
       const fn = function o() {
-        const obj = { width: result, transform: null };
+        let items;
         let num;
+        const obj = { width: require, transform: items };
         if (translateX != null) {
           num = translateX.get();
         }
         if (num == null) {
           num = 0;
         }
-        const items = [{ translateX: num }];
-        obj.transform = items;
+        items = [{ translateX: num }];
         return obj;
       };
       fn.__closure = { width: result, translateX };
       fn.__workletHash = 4309613236072;
       fn.__initData = __initData;
-      const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
       const tmpResult = ReanimatedRexport;
+      const animatedStyle = tmpResult.useAnimatedStyle(fn);
       const fn2 = function c() {
+        let items;
         let num;
+        const interpolate = ReanimatedRexport.interpolate;
+        ReanimatedRexport;
         if (translateX != null) {
           num = translateX.get();
         }
         if (num == null) {
           num = 0;
         }
-        const obj3 = { backgroundColor: "black", opacity: null };
-        const items = [-result, 0];
-        obj3.opacity = ReanimatedRexport.interpolate(num, items, [0.9, 0]);
-        return obj3;
+        const obj2 = { backgroundColor: "black", opacity: interpolate(num, items, [0.9, 0]) };
+        items = [-require, 0];
+        return obj2;
       };
       const tmpResult3 = ReanimatedRexport;
       fn2.__closure = { interpolate: ReanimatedRexport.interpolate, translateX, width: result };
       fn2.__workletHash = 6685006809487;
       fn2.__initData = __initData2;
+      ({ interpolate: ReanimatedRexport.interpolate, translateX, width: result });
       const animatedStyle1 = tmpResult3.useAnimatedStyle(fn2);
       if (cResult[0] !== translateX) {
         let num;
@@ -260,44 +292,46 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[0] = translateX;
         cResult[1] = num;
-        let tmp11 = num;
+        tmp11 = num;
       } else {
         tmp11 = cResult[1];
       }
-      let obj3 = { interpolate: ReanimatedRexport.interpolate, translateX, width: result };
-      [tmp13, tmp14] = noop.useState(tmp11 > 0);
+      [tmp13, tmp14] = react.useState(tmp11 > 0);
       dependencyMap = tmp14;
-      const tmp12 = _slicedToArray(noop.useState(tmp11 > 0), 2);
+      _slicedToArray(react.useState(tmp11 > 0), 2);
       const fn3 = function k() {
         let num;
+        const _Math = Math;
         if (translateX != null) {
           num = translateX.get();
         }
         if (num == null) {
           num = 0;
         }
-        return Math.abs(num) > 0;
+        return abs(num) > 0;
       };
       fn3.__closure = { translateX };
       fn3.__workletHash = 3076815293699;
       fn3.__initData = __initData3;
       const fn4 = function $(arg0, arg1) {
-        let tmp = arg0;
-        if (arg0) {
-          tmp = arg0 !== arg1;
-        }
+        const tmp = arg0 && arg0 !== arg1;
         if (tmp) {
-          ReanimatedRexport.runOnJS(closure_2)(true);
+          const obj = ReanimatedRexport;
+          obj.runOnJS(dependencyMap)(true);
         }
       };
       const tmpResult4 = ReanimatedRexport;
       fn4.__closure = { runOnJS: ReanimatedRexport.runOnJS, setShouldRenderChat: tmp14 };
       fn4.__workletHash = 11056363056621;
       fn4.__initData = __initData4;
+      ({ runOnJS: ReanimatedRexport.runOnJS, setShouldRenderChat: tmp14 });
       const animatedReaction = tmpResult4.useAnimatedReaction(fn3, fn4);
       if (cResult[2] === animatedStyle) {
+        let tmp16;
+        let tmp17;
+        let tmp20;
         if (cResult[3] === tmp4.textInVoiceContainer) {
-          let tmp16 = cResult[4];
+          tmp16 = cResult[4];
         }
         if (cResult[5] !== channel) {
           let tmp18 = null;
@@ -307,46 +341,48 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[5] = channel;
           cResult[6] = tmp18;
-          let tmp17 = tmp18;
+          tmp17 = tmp18;
         } else {
           tmp17 = cResult[6];
         }
         if (cResult[7] !== animatedStyle1) {
-          const obj6 = { pointerEvents: "box-none", style: null };
-          let items = [animatedStyle1, StyleSheet.absoluteFill];
-          obj6.style = items;
-          const tmp23 = closure_12(tmp5(4612).View, obj6);
+          const obj6 = { pointerEvents: "box-none", style: items };
+          items = [animatedStyle1, StyleSheet.absoluteFill];
+          const tmp23 = closure_12(translateX(4612).View, obj6);
           cResult[7] = animatedStyle1;
           cResult[8] = tmp23;
-          let tmp20 = tmp23;
+          tmp20 = tmp23;
         } else {
           tmp20 = cResult[8];
         }
         if (cResult[9] === tmp4.voiceContainer) {
           if (cResult[10] === tmp17) {
+            let tmp24;
             if (cResult[11] === tmp20) {
-              let tmp24 = cResult[12];
+              tmp24 = cResult[12];
             }
             if (cResult[13] === channel) {
+              let tmp28;
               if (cResult[14] === tmp13) {
-                let tmp28 = cResult[15];
+                tmp28 = cResult[15];
               }
               if (cResult[16] === tmp4.textContainer) {
+                let tmp31;
                 if (cResult[17] === tmp28) {
-                  let tmp31 = cResult[18];
+                  tmp31 = cResult[18];
                 }
                 if (cResult[19] === tmp16) {
                   if (cResult[20] === tmp24) {
+                    let tmp35;
                     if (cResult[21] === tmp31) {
-                      let tmp35 = cResult[22];
+                      tmp35 = cResult[22];
                     }
                     return tmp35;
                   }
                 }
-                const obj7 = { style: tmp16, children: null };
-                const items1 = [tmp24, tmp31];
-                obj7.children = items1;
-                const tmp37 = closure_13(tmp5(4612).View, obj7);
+                const obj7 = { style: tmp16, children: items1 };
+                items1 = [tmp24, tmp31];
+                const tmp37 = closure_13(translateX(4612).View, obj7);
                 cResult[19] = tmp16;
                 cResult[20] = tmp24;
                 cResult[21] = tmp31;
@@ -371,9 +407,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
             tmp28 = tmp29;
           }
         }
-        const obj10 = { style: tmp4.voiceContainer, children: null };
-        const items2 = [tmp17, tmp20];
-        obj10.children = items2;
+        const obj10 = { style: tmp4.voiceContainer, children: items2 };
+        items2 = [tmp17, tmp20];
         const tmp27 = closure_13(closure_6, obj10);
         cResult[9] = tmp4.voiceContainer;
         cResult[10] = tmp17;
@@ -386,130 +421,138 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp4.textInVoiceContainer;
       cResult[4] = items3;
       tmp16 = items3;
-      const obj4 = { runOnJS: ReanimatedRexport.runOnJS, setShouldRenderChat: tmp14 };
     }
   : (channel) => {
+      let closure_2;
+      let items;
+      let items1;
+      let items2;
+      let items3;
+      let tmp19Result;
+      let width;
       channel = channel.channel;
       let translateX;
       dependencyMap = undefined;
       let tmp = closure_14();
       const result = 2 * translateX(1484)().width;
       _require = result;
-      const voiceChatNavigationContext = require("VoiceChatModalContext").useVoiceChatNavigationContext();
+      let obj = require("VoiceChatModalContext");
+      const voiceChatNavigationContext = obj.useVoiceChatNavigationContext();
       translateX = undefined;
       if (voiceChatNavigationContext != null) {
         translateX = voiceChatNavigationContext.translateX;
       }
-      let obj = require("VoiceChatModalContext");
       const fn = function o() {
-        const obj = { width, transform: null };
+        let items;
         let num;
+        const obj = { width, transform: items };
         if (translateX != null) {
           num = translateX.get();
         }
         if (num == null) {
           num = 0;
         }
-        const items = [{ translateX: num }];
-        obj.transform = items;
+        items = [{ translateX: num }];
         return obj;
       };
       fn.__closure = { width: result, translateX };
       fn.__workletHash = 6302430761580;
       fn.__initData = __initData5;
-      const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(fn);
       const tmp5Result = require("ReanimatedRexport");
+      const animatedStyle = tmp5Result.useAnimatedStyle(fn);
       const fn2 = function c() {
+        let items;
         let num;
+        const interpolate = ReanimatedRexport.interpolate;
+        ReanimatedRexport;
         if (translateX != null) {
           num = translateX.get();
         }
         if (num == null) {
           num = 0;
         }
-        const obj3 = { backgroundColor: "black", opacity: null };
-        const items = [-c0, 0];
-        obj3.opacity = ReanimatedRexport.interpolate(num, items, [0.9, 0]);
-        return obj3;
+        const obj2 = { backgroundColor: "black", opacity: interpolate(num, items, [0.9, 0]) };
+        items = [-c0, 0];
+        return obj2;
       };
       const tmp5Result3 = require("ReanimatedRexport");
-      fn2.__closure = { interpolate: require("ReanimatedRexport").interpolate, translateX, width: result };
+      let obj2 = { interpolate: tmp5(4612).interpolate, translateX, width: result };
+      fn2.__closure = obj2;
       fn2.__workletHash = 16939170329355;
       fn2.__initData = __initData6;
       let num;
       const animatedStyle1 = tmp5Result3.useAnimatedStyle(fn2);
+      const useState = react.useState;
       if (translateX != null) {
         num = translateX.get();
       }
       if (num == null) {
         num = 0;
       }
-      const tmp11 = _slicedToArray(noop.useState(num > 0), 2);
-      dependencyMap = tmp12;
-      const obj2 = { interpolate: require("ReanimatedRexport").interpolate, translateX, width: result };
+      const tmp11 = _slicedToArray(useState(num > 0), 2);
+      dependencyMap = tmp13;
+      const first = tmp11[0];
       const fn3 = function h() {
         let num;
+        const _Math = Math;
         if (translateX != null) {
           num = translateX.get();
         }
         if (num == null) {
           num = 0;
         }
-        return Math.abs(num) > 0;
+        return abs(num) > 0;
       };
       fn3.__closure = { translateX };
       fn3.__workletHash = 5069632819207;
       fn3.__initData = __initData7;
       const fn4 = function _(arg0, arg1) {
-        let tmp = arg0;
-        if (arg0) {
-          tmp = arg0 !== arg1;
-        }
+        const tmp = arg0 && arg0 !== arg1;
         if (tmp) {
-          ReanimatedRexport.runOnJS(closure_2)(true);
+          const obj = ReanimatedRexport;
+          obj.runOnJS(closure_2)(true);
         }
       };
       const tmp5Result4 = require("ReanimatedRexport");
       fn4.__closure = { runOnJS: require("ReanimatedRexport").runOnJS, setShouldRenderChat: tmp11[1] };
       fn4.__workletHash = 2530050428359;
       fn4.__initData = __initData8;
+      ({ runOnJS: require("ReanimatedRexport").runOnJS, setShouldRenderChat: tmp11[1] });
       const animatedReaction = tmp5Result4.useAnimatedReaction(fn3, fn4);
-      const obj4 = { style: null, children: null };
-      let items = [tmp.textInVoiceContainer, animatedStyle];
-      obj4.style = items;
-      const obj5 = { style: tmp.voiceContainer, children: null };
-      let tmp16 = null;
+      const obj4 = { style: items, children: items3 };
+      items = [tmp.textInVoiceContainer, animatedStyle];
+      const obj5 = { style: tmp.voiceContainer, children: items1 };
+      const View = tmp2(4612).View;
+      let tmp17 = null;
       if (channel.isGuildStageVoice()) {
         const obj6 = { channel };
-        tmp16 = closure_12(tmp2(9157), obj6);
+        tmp17 = closure_12(tmp2(9157), obj6);
       }
-      const items1 = [tmp16];
-      const obj7 = { pointerEvents: "box-none", style: null };
-      const items2 = [animatedStyle1, StyleSheet.absoluteFill];
-      obj7.style = items2;
+      items1 = [tmp17];
+      const obj7 = { pointerEvents: "box-none", style: items2 };
+      items2 = [animatedStyle1, StyleSheet.absoluteFill];
       items1[1] = closure_12(translateX(4612).View, obj7);
-      obj5.children = items1;
-      const items3 = [closure_13(closure_6, obj5)];
-      const obj8 = { style: tmp.textContainer, children: null };
-      let tmp18Result = null;
-      if (tmp11[0]) {
+      items3 = [closure_13(closure_6, obj5)];
+      const obj8 = { style: tmp.textContainer, children: tmp19Result };
+      tmp19Result = null;
+      if (first) {
         const obj9 = { channel };
-        tmp18Result = closure_12(tmp2(9759), obj9);
+        tmp19Result = closure_12(tmp2(9759), obj9);
       }
-      obj8.children = tmp18Result;
       items3[1] = closure_12(closure_6, obj8);
-      obj4.children = items3;
-      return closure_13(translateX(4612).View, obj4);
+      return closure_13(View, obj4);
     };
-ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallNavigator.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp8 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      const cResult = channel(576).c(7);
+      let tmp6;
+      let tmp7;
+      const obj = channel(576);
+      const cResult = obj.c(7);
+      const tmp = channel;
       channel = channel.channel;
       let guild_id = channel.guild_id;
+      const MAIN_CALL_SCREEN = ChannelCallScreens.MAIN_CALL_SCREEN;
       if (guild_id == null) {
         guild_id = null;
       }
@@ -521,60 +564,63 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           gestureEnabled: false,
           title: "",
           render() {
-            return __initData(MainCallScreen, { channel });
+            const obj = { channel };
+            return closure_12(MainCallScreen, obj);
           },
         };
         obj2[ChannelCallScreens.MAIN_CALL_SCREEN] = obj3;
         cResult[0] = channel;
         cResult[1] = obj2;
-        let tmp6 = obj2;
+        tmp6 = obj2;
       } else {
         tmp6 = cResult[1];
       }
       if (cResult[2] !== tmp6) {
-        const obj4 = { screens: tmp6, initialRouteName: ChannelCallScreens.MAIN_CALL_SCREEN };
+        const obj4 = { screens: tmp6, initialRouteName: MAIN_CALL_SCREEN };
         const tmp9 = closure_12(tmp(6496).Navigator, obj4);
         cResult[2] = tmp6;
         cResult[3] = tmp9;
-        let tmp7 = tmp9;
+        tmp7 = tmp9;
       } else {
         tmp7 = cResult[3];
       }
       if (cResult[4] === guild_id) {
+        let tmp10;
         if (cResult[5] === tmp7) {
-          let tmp10 = cResult[6];
+          tmp10 = cResult[6];
         }
         return tmp10;
       }
-      const tmp11 = closure_12(GuildThemeGuildIdOverrideContextDefault.Provider, { value: guild_id, children: tmp7 });
+      const tmp11 = closure_12(reactDefault.Provider, { value: guild_id, children: tmp7 });
       cResult[4] = guild_id;
       cResult[5] = tmp7;
       cResult[6] = tmp11;
       tmp10 = tmp11;
-      const obj = channel(576);
-      tmp = channel;
     }
   : (channel) => {
+      let obj2;
+      let obj3;
       channel = channel.channel;
+      const MAIN_CALL_SCREEN = ChannelCallScreens.MAIN_CALL_SCREEN;
       let guild_id = channel.guild_id;
+      const Provider = reactDefault.Provider;
       if (guild_id == null) {
         guild_id = null;
       }
-      const obj = { value: guild_id, children: null };
-      const obj2 = {
-        screens: {
-          [ChannelCallScreens.MAIN_CALL_SCREEN]: {
-            headerShown: false,
-            ignoreKeyboard: true,
-            gestureEnabled: false,
-            title: "",
-            render() {
-              return __initData(MainCallScreen, { channel });
-            },
-          },
+      let obj = { value: guild_id, children: closure_12(channel(6496).Navigator, obj2) };
+      obj2 = { screens: { [ChannelCallScreens.MAIN_CALL_SCREEN]: obj3 }, initialRouteName: MAIN_CALL_SCREEN };
+      obj3 = {
+        headerShown: false,
+        ignoreKeyboard: true,
+        gestureEnabled: false,
+        title: "",
+        render() {
+          const obj = { channel };
+          return closure_12(MainCallScreen, obj);
         },
-        initialRouteName: ChannelCallScreens.MAIN_CALL_SCREEN,
       };
-      obj.children = closure_12(channel(6496).Navigator, obj2);
-      return closure_12(GuildThemeGuildIdOverrideContextDefault.Provider, obj);
+      return closure_12(Provider, obj);
     };
+let result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallNavigator.tsx");
+
+export default tmp8;

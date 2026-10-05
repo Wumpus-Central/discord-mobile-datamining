@@ -1,6 +1,11 @@
 // discord_app/modules/poggermode/PoggermodeConstants.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
+let items;
+let items1;
+let items2;
+let items3;
+let items4;
 let obj = {
   LEVEL_1: 0,
   [0]: "LEVEL_1",
@@ -75,7 +80,9 @@ const reduced = keys.reduce(
   (acc, item) => {
     const obj = {};
     const merged = Object.assign(acc);
-    obj[item] = obj2[item].map((item) => {
+    const arr = obj2[item];
+    obj[item] = arr.map((item) => {
+      let tmp;
       [tmp] = item;
       return tmp;
     });
@@ -88,7 +95,9 @@ const reduced1 = keys1.reduce(
   (acc, item) => {
     const obj = {};
     const merged = Object.assign(acc);
-    obj[item] = obj2[item].map((item) => {
+    const arr = obj2[item];
+    obj[item] = arr.map((item) => {
+      let tmp;
       [, tmp] = item;
       return tmp;
     });

@@ -16,63 +16,83 @@ const result = size.fileFinishedImporting("modules/people/PeopleListTracking.tsx
 
 export { FriendsListItemActionType };
 export const trackFriendsListItemClicked = function trackFriendsListItemClicked(arg0) {
+  let obj;
+  let tab;
+  let targetUserId;
   ({ targetUserId, tab } = arg0);
-  const obj = AnalyticsUtilsDefault;
-  obj.track(AnalyticEvents.FRIENDS_LIST_ITEM_ACTION, {
-    target_user_id: targetUserId,
-    tab,
-    action_type: obj.ROW_CLICKED,
-  });
+  const ROW_CLICKED = obj.ROW_CLICKED;
+  obj = AnalyticsUtilsDefault;
+  obj.track(AnalyticEvents.FRIENDS_LIST_ITEM_ACTION, { target_user_id: targetUserId, tab, action_type: ROW_CLICKED });
 };
 export const trackFriendsListItemMessageClicked = function trackFriendsListItemMessageClicked(arg0) {
+  let obj;
+  let tab;
+  let targetUserId;
   ({ targetUserId, tab } = arg0);
-  const obj = AnalyticsUtilsDefault;
+  const MESSAGE_CLICKED = obj.MESSAGE_CLICKED;
+  obj = AnalyticsUtilsDefault;
   obj.track(AnalyticEvents.FRIENDS_LIST_ITEM_ACTION, {
     target_user_id: targetUserId,
     tab,
-    action_type: obj.MESSAGE_CLICKED,
+    action_type: MESSAGE_CLICKED,
   });
 };
 export const trackFriendsListItemVideoCallClicked = function trackFriendsListItemVideoCallClicked(arg0) {
+  let obj;
+  let tab;
+  let targetUserId;
   ({ targetUserId, tab } = arg0);
-  const obj = AnalyticsUtilsDefault;
+  const VIDEO_CALL_CLICKED = obj.VIDEO_CALL_CLICKED;
+  obj = AnalyticsUtilsDefault;
   obj.track(AnalyticEvents.FRIENDS_LIST_ITEM_ACTION, {
     target_user_id: targetUserId,
     tab,
-    action_type: obj.VIDEO_CALL_CLICKED,
+    action_type: VIDEO_CALL_CLICKED,
   });
 };
 export const trackFriendsListItemVoiceCallClicked = function trackFriendsListItemVoiceCallClicked(arg0) {
+  let obj;
+  let tab;
+  let targetUserId;
   ({ targetUserId, tab } = arg0);
-  const obj = AnalyticsUtilsDefault;
+  const VOICE_CALL_CLICKED = obj.VOICE_CALL_CLICKED;
+  obj = AnalyticsUtilsDefault;
   obj.track(AnalyticEvents.FRIENDS_LIST_ITEM_ACTION, {
     target_user_id: targetUserId,
     tab,
-    action_type: obj.VOICE_CALL_CLICKED,
+    action_type: VOICE_CALL_CLICKED,
   });
 };
 export const trackFriendsListItemRemoveFriendClicked = function trackFriendsListItemRemoveFriendClicked(arg0) {
+  let obj;
+  let tab;
+  let targetUserId;
   ({ targetUserId, tab } = arg0);
-  const obj = AnalyticsUtilsDefault;
+  const REMOVE_FRIEND_CLICKED = obj.REMOVE_FRIEND_CLICKED;
+  obj = AnalyticsUtilsDefault;
   obj.track(AnalyticEvents.FRIENDS_LIST_ITEM_ACTION, {
     target_user_id: targetUserId,
     tab,
-    action_type: obj.REMOVE_FRIEND_CLICKED,
+    action_type: REMOVE_FRIEND_CLICKED,
   });
 };
 export const trackFriendsListItemContextMenuInteracted = function trackFriendsListItemContextMenuInteracted(arg0) {
+  let obj;
+  let tab;
+  let targetUserId;
   ({ targetUserId, tab } = arg0);
-  const obj = AnalyticsUtilsDefault;
+  const CONTEXT_MENU_INTERACTED = obj.CONTEXT_MENU_INTERACTED;
+  obj = AnalyticsUtilsDefault;
   obj.track(AnalyticEvents.FRIENDS_LIST_ITEM_ACTION, {
     target_user_id: targetUserId,
     tab,
-    action_type: obj.CONTEXT_MENU_INTERACTED,
+    action_type: CONTEXT_MENU_INTERACTED,
   });
 };
 export const trackViewFriendRequestNote = function trackViewFriendRequestNote(arg0) {
+  let analyticsLocation;
+  let noteLength;
   ({ analyticsLocation, noteLength } = arg0);
-  AnalyticsUtilsDefault.track(AnalyticEvents.FRIEND_REQUEST_NOTE_VIEWED, {
-    location: analyticsLocation,
-    note_length: noteLength,
-  });
+  const obj = AnalyticsUtilsDefault;
+  obj.track(AnalyticEvents.FRIEND_REQUEST_NOTE_VIEWED, { location: analyticsLocation, note_length: noteLength });
 };

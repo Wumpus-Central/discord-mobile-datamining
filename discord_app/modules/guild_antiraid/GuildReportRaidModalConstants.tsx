@@ -1,6 +1,6 @@
 // discord_app/modules/guild_antiraid/GuildReportRaidModalConstants.tsx
 import Constants from "../../Constants.tsx";
-import util from "../../intl/index.native.tsx";
+import intl6 from "../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -23,26 +23,27 @@ const items = [, , , ,];
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildReportRaidModalConstants.tsx");
 
 export const getReportRaidHelpArticleURL = function getReportRaidHelpArticleURL() {
-  return HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.GUILD_RAID);
+  const obj = HelpdeskUtilsDefault;
+  return obj.getArticleURL(HelpdeskArticles.GUILD_RAID);
 };
 export { ReportRaidTypes };
 export const REPORT_RAID_OPTIONS = items;
 export const getReportRaidTypeLabel = function getReportRaidTypeLabel(arg0) {
   if (obj.DM_SPAM === arg0) {
-    const intl5 = util.intl;
-    return intl5.string(util.t["9CYNmS"]);
+    const intl5 = intl6.intl;
+    return intl5.string(intl6.t["9CYNmS"]);
   } else if (obj.MENTION_SPAM === arg0) {
-    const intl4 = util.intl;
-    return intl4.string(util.t["hR/IdO"]);
+    const intl4 = intl6.intl;
+    return intl4.string(intl6.t["hR/IdO"]);
   } else if (obj.MESSAGE_SPAM === arg0) {
-    const intl3 = util.intl;
-    return intl3.string(util.t.fwloj2);
+    const intl3 = intl6.intl;
+    return intl3.string(intl6.t.fwloj2);
   } else if (obj.SETTINGS_SPAM === arg0) {
-    const intl2 = util.intl;
-    return intl2.string(util.t.ETFVFw);
+    const intl2 = intl6.intl;
+    return intl2.string(intl6.t.ETFVFw);
   } else if (obj.SUSPICIOUS_USERS === arg0) {
-    const intl = util.intl;
-    return intl.string(util.t["lKXu+n"]);
+    const intl = intl6.intl;
+    return intl.string(intl6.t["lKXu+n"]);
   } else {
     return null;
   }

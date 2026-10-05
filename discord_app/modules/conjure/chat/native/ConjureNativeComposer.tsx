@@ -1,10 +1,10 @@
 // discord_app/modules/conjure/chat/native/ConjureNativeComposer.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl4 from "../../../../intl/index.native.tsx";
 import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import WarningIcon from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
+import WarningIcon2 from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import SendMessageIcon from "../../../../design/components/Icon/native/redesign/generated/SendMessageIcon.tsx";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ConjureTypes from "../../ConjureTypes.tsx";
@@ -23,132 +23,136 @@ import ConjureModelSettingsSheet from "../../model_settings/native/ConjureModelS
 import StopIcon from "../../../../design/components/Icon/native/redesign/generated/StopIcon.tsx";
 import conjurePickedFiles from "conjurePickedFiles.tsx";
 import conjureAttachmentDrafts from "../conjureAttachmentDrafts.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
-import ConjureConnectionStore from "../../connection/ConjureConnectionStore.tsx";
-import ConjureComposerDraftStore from "../ConjureComposerDraftStore.tsx";
+import ConjureConnectionStore_mod from "../../connection/ConjureConnectionStore.tsx";
+import ConjureComposerDraftStore_mod from "../ConjureComposerDraftStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
 const ConjureModelSettingsSheetDefault = ConjureModelSettingsSheet;
+let _require, c1, closure_1, closure_2, getItemKey, projectId, types;
 
-require = fn;
+let StyleSheet;
+let closure_12;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+let obj7;
+let obj8;
+let obj9;
+let size;
+let unpackModuleId;
 function trailingItemKey(key) {
   return key.key;
 }
 function draftAccessibilityLabel(draft) {
+  let formatToPlainStringResult;
   if ("uploading" === draft.status) {
-    const intl3 = util.intl;
+    const intl3 = intl4.intl;
     const obj3 = { name: draft.name };
-    let formatToPlainStringResult = intl3.formatToPlainString(_modDef3723.MWTYwv, obj3);
+    formatToPlainStringResult = intl3.formatToPlainString(_modDef3723.MWTYwv, obj3);
   } else if (null != draft.errorText) {
-    const intl2 = util.intl;
-    ({ name: obj2.name, errorText: obj2.error } = draft);
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3723.U2WbGx, { name: null, error: null });
+    const intl2 = intl4.intl;
     const obj5 = { name: null, error: null };
+    ({ name: obj2.name, errorText: obj2.error } = draft);
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3723.U2WbGx, obj5);
   } else {
-    const intl = util.intl;
+    const intl = intl4.intl;
     const obj = { name: draft.name };
-    formatToPlainStringResult = intl.formatToPlainString(util.t.MJHFt9, obj);
+    formatToPlainStringResult = intl.formatToPlainString(intl4.t.MJHFt9, obj);
   }
   return formatToPlainStringResult;
 }
-get_ActivityIndicator = fn(17);
-({ ActivityIndicator: metroRequire, View: closure_7, StyleSheet } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+({ ActivityIndicator: metroRequire, View: metroImportDefault, StyleSheet } = react_native);
+let ConjureConnectionStore = ConjureConnectionStore_mod;
+let ConjureComposerDraftStore = ConjureComposerDraftStore_mod;
+({ jsx: unpackModuleId, jsxs: closure_12 } = Fragment);
 let c13 = 120;
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4890);
-let obj2 = {
-  container: {
-    paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING,
-    paddingVertical: nativeDefault.space.PX_8,
-    gap: nativeDefault.space.PX_8,
-  },
-  box: null,
-  boxFocused: null,
-  boxContents: null,
-  input: null,
-  draftCarousel: null,
-  draftOverlay: null,
-  trailingButton: null,
-  trailingSlot: null,
-  sendButtonActive: null,
-  sendIconActive: null,
+let createStyles = createStyles_mod;
+let obj = {
+  container: obj2,
+  box: obj3,
+  boxFocused: obj4,
+  boxContents: obj5,
+  input: obj6,
+  draftCarousel: { marginBottom: 0 },
+  draftOverlay: obj7,
+  trailingButton: size,
+  trailingSlot: { alignItems: "center", justifyContent: "center" },
+  sendButtonActive: obj8,
+  sendIconActive: obj9,
 };
-let obj3 = {
+obj2 = {
   paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING,
   paddingVertical: nativeDefault.space.PX_8,
   gap: nativeDefault.space.PX_8,
 };
-obj2.box = {
+createStyles = createStyles.createStyles;
+obj3 = {
   backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT,
   borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH,
   borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT,
   borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS,
   overflow: "hidden",
 };
-let obj4 = {
-  backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT,
-  borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH,
-  borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT,
-  borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS,
-  overflow: "hidden",
-};
-obj2.boxFocused = {
+obj4 = {
   backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_ACTIVE,
   borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE,
 };
-let obj5 = {
-  backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_ACTIVE,
-  borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE,
-};
-obj2.boxContents = {
+obj5 = {
   flexDirection: "row",
   alignItems: "flex-end",
   paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL,
   paddingVertical: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL,
   gap: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_GAP,
 };
-let obj6 = {
-  flexDirection: "row",
-  alignItems: "flex-end",
-  paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL,
-  paddingVertical: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL,
-  gap: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_GAP,
+obj6 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_4 };
+obj7 = {
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX,
 };
-obj2.input = { flex: 1, paddingHorizontal: nativeDefault.space.PX_4 };
-obj2.draftCarousel = { marginBottom: 0 };
-let obj8 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj8.alignItems = "center";
-obj8.justifyContent = "center";
-obj8.backgroundColor = nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX;
-obj2.draftOverlay = obj8;
-let size = {
+size = {
   width: nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH,
   height: nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT,
 };
-obj2.trailingButton = size;
-obj2.trailingSlot = { alignItems: "center", justifyContent: "center" };
-let obj7 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_4 };
-obj2.sendButtonActive = { backgroundColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND };
-let obj9 = { backgroundColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND };
-obj2.sendIconActive = { tintColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ICON_ACTIVE_TINT };
-let closure_15 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
+obj8 = { backgroundColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND };
+obj9 = { tintColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ICON_ACTIVE_TINT };
+let closure_15 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
   ? (draft) => {
-      const cResult = c.c(25);
+      let WarningIcon;
+      let obj6;
+      let obj8;
+      const obj = react2;
+      const cResult = obj.c(25);
       draft = draft.draft;
       const onRemove = draft.onRemove;
       const tmp4 = closure_15();
-      const token = useToken.useToken(nativeDefault.colors.TEXT_OVERLAY_LIGHT);
+      const obj2 = useToken;
+      const token = obj2.useToken(nativeDefault.colors.TEXT_OVERLAY_LIGHT);
       if (cResult[0] === draft.localId) {
+        let tmp7;
+        let tmp11;
+        let tmp13;
+        let tmp15;
+        let tmp18;
+        let tmp21;
         if (cResult[1] === onRemove) {
-          let tmp7 = cResult[2];
+          tmp7 = cResult[2];
         }
         const _String = String;
         const StringResult = String(draft.localId);
@@ -156,12 +160,13 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         if (str == null) {
           str = "";
         }
+        const name = draft.name;
         if (cResult[3] !== draft.contentType) {
           const contentType = draft.contentType;
           const startsWithResult = contentType.startsWith("image/");
           cResult[3] = draft.contentType;
           cResult[4] = startsWithResult;
-          let tmp11 = startsWithResult;
+          tmp11 = startsWithResult;
         } else {
           tmp11 = cResult[4];
         }
@@ -170,7 +175,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           const startsWithResult1 = contentType2.startsWith("video/");
           cResult[5] = draft.contentType;
           cResult[6] = startsWithResult1;
-          let tmp13 = startsWithResult1;
+          tmp13 = startsWithResult1;
         } else {
           tmp13 = cResult[6];
         }
@@ -178,36 +183,39 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           const tmp17 = draftAccessibilityLabel(draft);
           cResult[7] = draft;
           cResult[8] = tmp17;
-          let tmp15 = tmp17;
+          tmp15 = tmp17;
         } else {
           tmp15 = cResult[8];
         }
         if (cResult[9] !== draft.name) {
-          const intl = util.intl;
+          const intl = intl4.intl;
           const obj3 = { name: draft.name };
-          const formatToPlainStringResult = intl.formatToPlainString(util.t.FxKgb3, obj3);
+          const formatToPlainStringResult = intl.formatToPlainString(intl4.t.FxKgb3, obj3);
           cResult[9] = draft.name;
           cResult[10] = formatToPlainStringResult;
-          let tmp18 = formatToPlainStringResult;
+          tmp18 = formatToPlainStringResult;
         } else {
           tmp18 = cResult[10];
         }
         if (cResult[11] === draft.status) {
           if (cResult[12] === token) {
+            let tmp20;
             if (cResult[13] === tmp4) {
-              if (cResult[15] === draft.name) {
-                if (cResult[16] === tmp7) {
-                  if (cResult[17] === StringResult) {
-                    if (cResult[18] === str) {
-                      if (cResult[19] === tmp11) {
-                        if (cResult[20] === tmp13) {
-                          if (cResult[21] === tmp15) {
-                            if (cResult[22] === tmp18) {
-                              if (cResult[23] === tmp20) {
-                                let tmp28 = cResult[24];
-                              }
-                              return tmp28;
+              tmp20 = cResult[14];
+            }
+            if (cResult[15] === draft.name) {
+              if (cResult[16] === tmp7) {
+                if (cResult[17] === StringResult) {
+                  if (cResult[18] === str) {
+                    if (cResult[19] === tmp11) {
+                      if (cResult[20] === tmp13) {
+                        if (cResult[21] === tmp15) {
+                          if (cResult[22] === tmp18) {
+                            let tmp27;
+                            if (cResult[23] === tmp20) {
+                              tmp27 = cResult[24];
                             }
+                            return tmp27;
                           }
                         }
                       }
@@ -215,50 +223,50 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              const obj4 = {
-                itemKey: StringResult,
-                uri: str,
-                fileName: draft.name,
-                isImage: tmp11,
-                isVideo: tmp13,
-                accessibilityLabel: tmp15,
-                removeAccessibilityLabel: tmp18,
-                onRemove: tmp7,
-                children: cResult[14],
-              };
-              const tmp30 = closure_1_11(ImageCarousel.ImageCarouselTile, obj4);
-              cResult[15] = draft.name;
-              cResult[16] = tmp7;
-              cResult[17] = StringResult;
-              cResult[18] = str;
-              cResult[19] = tmp11;
-              cResult[20] = tmp13;
-              cResult[21] = tmp15;
-              cResult[22] = tmp18;
-              cResult[23] = cResult[14];
-              cResult[24] = tmp30;
-              tmp28 = tmp30;
             }
+            const obj4 = {
+              itemKey: StringResult,
+              uri: str,
+              fileName: name,
+              isImage: tmp11,
+              isVideo: tmp13,
+              accessibilityLabel: tmp15,
+              removeAccessibilityLabel: tmp18,
+              onRemove: tmp7,
+              children: tmp20,
+            };
+            const tmp29 = unpackModuleId(ImageCarousel.ImageCarouselTile, obj4);
+            cResult[15] = draft.name;
+            cResult[16] = tmp7;
+            cResult[17] = StringResult;
+            cResult[18] = str;
+            cResult[19] = tmp11;
+            cResult[20] = tmp13;
+            cResult[21] = tmp15;
+            cResult[22] = tmp18;
+            cResult[23] = tmp20;
+            cResult[24] = tmp29;
+            tmp27 = tmp29;
           }
         }
         if ("uploading" === draft.status) {
-          const obj5 = { style: tmp4.draftOverlay, children: null };
-          const obj6 = { size: "small", color: token };
-          obj5.children = closure_1_11(timestampProducer, obj6);
-          let tmp21 = closure_1_11(React5, obj5);
+          const obj5 = { style: tmp4.draftOverlay, children: unpackModuleId(metroRequire, obj6) };
+          obj6 = { size: "small", color: token };
+          tmp21 = unpackModuleId(metroImportDefault, obj5);
         } else {
           tmp21 = null;
           if ("error" === draft.status) {
-            const obj7 = { style: tmp4.draftOverlay, children: null };
-            const obj8 = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-            obj7.children = closure_1_11(WarningIcon.WarningIcon, obj8);
-            tmp21 = closure_1_11(React5, obj7);
+            const obj7 = { style: tmp4.draftOverlay, children: unpackModuleId(WarningIcon, obj8) };
+            obj8 = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
+            WarningIcon = WarningIcon2.WarningIcon;
+            tmp21 = unpackModuleId(metroImportDefault, obj7);
           }
         }
         cResult[11] = draft.status;
         cResult[12] = token;
         cResult[13] = tmp4;
         cResult[14] = tmp21;
+        tmp20 = tmp21;
       }
       const fn = function n() {
         return onRemove(draft.localId);
@@ -269,221 +277,234 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
     }
   : (draft) => {
+      let WarningIcon;
+      let contentType;
+      let contentType2;
+      let intl;
+      let obj13;
+      let obj4;
+      let obj6;
+      let str;
+      let tmp7Result;
       draft = draft.draft;
       const onRemove = draft.onRemove;
       const tmp = closure_15();
       const items = [onRemove, draft.localId];
-      const token = useToken.useToken(nativeDefault.colors.TEXT_OVERLAY_LIGHT);
-      const callback = noop.useCallback(() => onRemove(draft.localId), items);
+      const obj = useToken;
+      const token = obj.useToken(nativeDefault.colors.TEXT_OVERLAY_LIGHT);
+      const callback = react.useCallback(() => onRemove(draft.localId), items);
       const obj3 = {
         itemKey: String(draft.localId),
-        uri: null,
+        uri: str,
         fileName: null,
-        isImage: null,
-        isVideo: null,
-        accessibilityLabel: null,
-        removeAccessibilityLabel: null,
-        onRemove: null,
-        children: null,
+        isImage: contentType.startsWith("image/"),
+        isVideo: contentType2.startsWith("video/"),
+        accessibilityLabel: draftAccessibilityLabel(draft),
+        removeAccessibilityLabel: intl.formatToPlainString(intl4.t.FxKgb3, obj4),
+        onRemove: callback,
+        children: tmp7Result,
       };
-      let str = draft.previewUrl;
+      const ImageCarouselTile = ImageCarousel.ImageCarouselTile;
+      str = draft.previewUrl;
       if (str == null) {
         str = "";
       }
-      obj3.uri = str;
       ({ name: obj2.fileName, contentType } = draft);
-      obj3.isImage = contentType.startsWith("image/");
-      const contentType2 = draft.contentType;
-      obj3.isVideo = contentType2.startsWith("video/");
-      obj3.accessibilityLabel = draftAccessibilityLabel(draft);
-      const intl = util.intl;
-      obj3.removeAccessibilityLabel = intl.formatToPlainString(util.t.FxKgb3, { name: draft.name });
-      obj3.onRemove = callback;
+      contentType2 = draft.contentType;
+      intl = intl4.intl;
+      obj4 = { name: draft.name };
       if ("uploading" === draft.status) {
-        const obj5 = { style: tmp.draftOverlay, children: null };
-        const obj6 = { size: "small", color: token };
-        obj5.children = closure_1_11(timestampProducer, obj6);
-        let tmp7Result = closure_1_11(React5, obj5);
+        const obj5 = { style: tmp.draftOverlay, children: unpackModuleId(metroRequire, obj6) };
+        obj6 = { size: "small", color: token };
+        tmp7Result = unpackModuleId(metroImportDefault, obj5);
       } else {
         tmp7Result = null;
         if ("error" === draft.status) {
-          const obj7 = { style: tmp.draftOverlay, children: null };
-          const obj13 = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-          obj7.children = closure_1_11(WarningIcon.WarningIcon, obj13);
-          tmp7Result = closure_1_11(React5, obj7);
+          const obj7 = { style: tmp.draftOverlay, children: unpackModuleId(WarningIcon, obj13) };
+          obj13 = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
+          WarningIcon = WarningIcon2.WarningIcon;
+          tmp7Result = unpackModuleId(metroImportDefault, obj7);
         }
       }
-      obj3.children = tmp7Result;
-      return closure_1_11(ImageCarousel.ImageCarouselTile, obj3);
+      return unpackModuleId(ImageCarouselTile, obj3);
     };
-ReactCompilerGating = fn(558);
-let obj10 = { tintColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ICON_ACTIVE_TINT };
-size = fn(2);
-let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureNativeComposer.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (projectId) => {
-      const cResult = require("c").c(146);
+      let closure_11;
+      let closure_13;
+      let closure_9;
+      let first;
+      let items3;
+      let onPress;
+      let onPress2;
+      let onSend;
+      let running;
+      let stopped;
+      let tmp16;
+      let tmp17;
+      let tmp31;
+      let tmp4;
+      let tmp9;
+      let tmp = projectId;
+      let obj = projectId(onSend[13]);
+      const cResult = obj.c(146);
       projectId = projectId.projectId;
-      _require = projectId;
       const canSend = projectId.canSend;
       ({ running, stopped, onSend } = projectId);
       const onInterrupt = projectId.onInterrupt;
       const onDraftHasTextChange = projectId.onDraftHasTextChange;
       if (cResult[0] !== projectId) {
         const fn = function s() {
-          return ConjureComposerDraftStore.getDraft(closure_0);
+          return ConjureComposerDraftStore.getDraft(projectId);
         };
         cResult[0] = projectId;
         cResult[1] = fn;
-        let tmp4 = fn;
+        tmp4 = fn;
       } else {
         tmp4 = cResult[1];
       }
-      let tmp6 = onDraftHasTextChange(first.useState(tmp4), 2);
+      let obj2 = first;
+      const tmp6 = onDraftHasTextChange(first.useState(tmp4), 2);
       first = tmp6[0];
-      closure_6 = tmp8;
+      let closure_6 = tmp8;
       if (cResult[2] !== projectId) {
         class U {
-          constructor(arg0) {
-            obj = closure_0(closure_2[17]);
-            setComposerDraftResult = obj.setComposerDraft(closure_0, projectId);
-            tmp2 = closure_6(projectId);
-            return;
+          constructor(draft) {
+            const obj = ConjureActionCreators;
+            obj.setComposerDraft(projectId, draft);
+            closure_6(draft);
           }
         }
         cResult[2] = projectId;
         cResult[3] = U;
+        tmp9 = U;
       } else {
         class U {
-          constructor(arg0) {
-            obj = closure_0(closure_2[17]);
-            setComposerDraftResult = obj.setComposerDraft(closure_0, projectId);
-            tmp2 = closure_6(projectId);
-            return;
+          constructor(draft) {
+            const obj = ConjureActionCreators;
+            obj.setComposerDraft(projectId, draft);
+            closure_6(draft);
           }
         }
       }
       U = tmp9;
       if (cResult[4] !== first) {
         class U {
-          constructor(arg0) {
-            obj = closure_0(closure_2[17]);
-            setComposerDraftResult = obj.setComposerDraft(closure_0, projectId);
-            tmp2 = closure_6(projectId);
-            return;
+          constructor(draft) {
+            const obj = ConjureActionCreators;
+            obj.setComposerDraft(projectId, draft);
+            closure_6(draft);
           }
         }
         cResult[4] = first;
         cResult[5] = tmp11;
       } else {
         class U {
-          constructor(arg0) {
-            obj = closure_0(closure_2[17]);
-            setComposerDraftResult = obj.setComposerDraft(closure_0, projectId);
-            tmp2 = closure_6(projectId);
-            return;
+          constructor(draft) {
+            const obj = ConjureActionCreators;
+            obj.setComposerDraft(projectId, draft);
+            closure_6(draft);
           }
         }
       }
       const useReducedMotion = tmp12;
       if ((cResult[6] === "") !== tmp11) {
+        let tmp24;
         class U {
-          constructor(arg0) {
-            obj = closure_0(closure_2[17]);
-            setComposerDraftResult = obj.setComposerDraft(closure_0, projectId);
-            tmp2 = closure_6(projectId);
-            return;
+          constructor(draft) {
+            const obj = ConjureActionCreators;
+            obj.setComposerDraft(projectId, draft);
+            closure_6(draft);
           }
         }
         const effect = obj2.useEffect(L, items3);
-        [tmp16, tmp17] = tmp5(obj2.useState(null), 2);
+        let tmp14 = null;
+        [tmp16, tmp17] = onDraftHasTextChange(obj2.useState(null), 2);
         ConjureConnectionStore = tmp17;
+        const tmp5Result = onDraftHasTextChange(obj2.useState(null), 2);
         const ref = obj2.useRef(null);
-        const tmp5Result = tmp5(obj2.useState(null), 2);
+        const tmp5Result4 = onDraftHasTextChange(obj2.useState(projectId), 2);
         if (tmp5Result4[0] !== projectId) {
           class U {
-            constructor(arg0) {
-              obj = closure_0(closure_2[17]);
-              setComposerDraftResult = obj.setComposerDraft(closure_0, projectId);
-              tmp2 = closure_6(projectId);
-              return;
+            constructor(draft) {
+              const obj = ConjureActionCreators;
+              obj.setComposerDraft(projectId, draft);
+              closure_6(draft);
             }
           }
-          tmp8(ref.getDraft(projectId));
+          tmp6[1](ref.getDraft(projectId));
           tmp17(null);
         }
         if (cResult[10] !== projectId) {
           class F {
             constructor() {
-              obj = closure_1(closure_2[18]);
-              setTextResult = obj.setText(closure_10.current, closure_10.getDraft(closure_0));
-              return;
+              const obj = ChatInputNativeCommandsDefault;
+              obj.setText(ref.current, ConjureComposerDraftStore.getDraft(projectId));
             }
           }
           let items = [projectId];
           cResult[10] = projectId;
           cResult[11] = F;
           cResult[12] = items;
-          let tmp24 = items;
+          tmp24 = items;
         } else {
           class F {
             constructor() {
-              obj = closure_1(closure_2[18]);
-              setTextResult = obj.setText(closure_10.current, closure_10.getDraft(closure_0));
-              return;
+              const obj = ChatInputNativeCommandsDefault;
+              obj.setText(ref.current, ConjureComposerDraftStore.getDraft(projectId));
             }
           }
           tmp24 = cResult[12];
         }
         const effect1 = obj2.useEffect(F, tmp24);
-        tmp5Result4 = tmp5(obj2.useState(projectId), 2);
-        const conjureAttachmentDraftList = tmp(onSend[19]).useConjureAttachmentDraftList(projectId, "chat");
         let tmpResult = tmp(onSend[19]);
-        [r10092, closure_11] = tmp5(obj2.useState(false), 2);
-        const tmp5Result5 = tmp5(obj2.useState(false), 2);
-        [r10097, closure_12] = tmp5(obj2.useState(null), 2);
+        let str = "chat";
+        const conjureAttachmentDraftList = tmpResult.useConjureAttachmentDraftList(projectId, "chat");
+        [r10092, closure_11] = onDraftHasTextChange(obj2.useState(false), 2);
+        onDraftHasTextChange(obj2.useState(false), 2);
+        [r10097, closure_12] = onDraftHasTextChange(obj2.useState(null), 2);
         const _Symbol = Symbol;
+        onDraftHasTextChange(obj2.useState(null), 2);
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
           class F {
             constructor() {
-              obj = closure_1(closure_2[18]);
-              setTextResult = obj.setText(closure_10.current, closure_10.getDraft(closure_0));
-              return;
+              const obj = ChatInputNativeCommandsDefault;
+              obj.setText(ref.current, ConjureComposerDraftStore.getDraft(projectId));
             }
           }
           cResult[13] = tmp31;
         } else {
           class F {
             constructor() {
-              obj = closure_1(closure_2[18]);
-              setTextResult = obj.setText(closure_10.current, closure_10.getDraft(closure_0));
-              return;
+              const obj = ChatInputNativeCommandsDefault;
+              obj.setText(ref.current, ConjureComposerDraftStore.getDraft(projectId));
             }
           }
         }
         if (cResult[14] === tmp9) {
+          let tmp38;
+          let tmp37;
           class F {
             constructor() {
-              obj = closure_1(closure_2[18]);
-              setTextResult = obj.setText(closure_10.current, closure_10.getDraft(closure_0));
-              return;
+              const obj = ChatInputNativeCommandsDefault;
+              obj.setText(ref.current, ConjureComposerDraftStore.getDraft(projectId));
             }
           }
-          const token = tmp(onSend[14]).useToken(canSend(onSend[8]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
           const tmpResult6 = tmp(onSend[14]);
-          const token1 = tmp(onSend[14]).useToken(canSend(onSend[8]).modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
+          const token = tmpResult6.useToken(canSend(onSend[8]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
           const tmpResult7 = tmp(onSend[14]);
-          const token2 = tmp(onSend[14]).useToken(canSend(onSend[8]).modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
+          const token1 = tmpResult7.useToken(canSend(onSend[8]).modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
           const tmpResult8 = tmp(onSend[14]);
+          const token2 = tmpResult8.useToken(canSend(onSend[8]).modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
           const _Symbol2 = Symbol;
-          const token3 = tmp(onSend[14]).useToken(canSend(onSend[8]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+          const tmpResult9 = tmp(onSend[14]);
+          const token3 = tmpResult9.useToken(canSend(onSend[8]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
           if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
             class F {
               constructor() {
-                obj = closure_1(closure_2[18]);
-                setTextResult = obj.setText(closure_10.current, closure_10.getDraft(closure_0));
-                return;
+                const obj = ChatInputNativeCommandsDefault;
+                obj.setText(ref.current, ConjureComposerDraftStore.getDraft(projectId));
               }
             }
             const items1 = [useReducedMotion];
@@ -492,41 +513,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             cResult[17] = items1;
             cResult[18] = me;
-            let tmp38 = me;
-            const tmp37 = items1;
+            tmp38 = me;
+            tmp37 = items1;
           } else {
             class F {
               constructor() {
-                obj = closure_1(closure_2[18]);
-                setTextResult = obj.setText(closure_10.current, closure_10.getDraft(closure_0));
-                return;
+                const obj = ChatInputNativeCommandsDefault;
+                obj.setText(ref.current, ConjureComposerDraftStore.getDraft(projectId));
               }
             }
             tmp38 = cResult[18];
           }
-          const tmpResult9 = tmp(onSend[14]);
-          const stateFromStores = tmp(onSend[20]).useStateFromStores(tmp37, tmp38);
+          const tmpResult10 = tmp(onSend[20]);
+          const stateFromStores = tmpResult10.useStateFromStores(tmp37, tmp38);
           let _Math = Math;
           const bound = Math.max(0, (token1 - token) / 2);
           const _Math2 = Math;
           const _Math3 = Math;
           const bound1 = Math.min(Ie, Math.max(0, (token - 20) / 2));
+          const _Math4 = Math;
+          const _Math5 = Math;
+          const tmp43 = c13;
           if (tmp16 == null) {
             class F {
               constructor() {
-                obj = closure_1(closure_2[18]);
-                setTextResult = obj.setText(closure_10.current, closure_10.getDraft(closure_0));
-                return;
+                const obj = ChatInputNativeCommandsDefault;
+                obj.setText(ref.current, ConjureComposerDraftStore.getDraft(projectId));
               }
             }
           }
-          const bound2 = Math.min(c13, Math.max(token, tmp16));
+          min(tmp43, max(token, tmp16));
           class L {
             constructor() {
-              tmpResult = undefined;
+              let tmpResult;
               if (onDraftHasTextChange != null) {
-                tmp3 = closure_8;
-                tmpResult = tmp(closure_8);
+                tmpResult = tmp(useReducedMotion);
               }
               return tmpResult;
             }
@@ -534,337 +555,293 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           c13 = tmp46;
           if (cResult[19] !== projectId) {
             class Ie {
-              constructor(arg0) {
-                if (0 === projectId.length) {
-                  return;
-                } else {
-                  obj2 = closure_0;
-                  result = closure_2;
-                  obj3 = closure_0(closure_2[19]);
-                  str = "chat";
-                  tmp10 = closure_0;
-                  diff =
-                    closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                    obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                  if (projectId.length > diff) {
-                    tmp4 = closure_12;
-                    intl = obj2(result[10]).intl;
-                    tmp5 = closure_1;
-                    obj = { count: null };
-                    obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                    tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                    tmp7 = globalThis;
-                    _Math = Math;
-                    substr = projectId.slice(0, Math.max(0, diff));
-                    arr = substr;
-                    if (0 === substr.length) {
-                      return;
-                    }
+              constructor(arr) {
+                if (0 !== arr.length) {
+                  const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                  let obj3 = conjureAttachmentDrafts;
+                  const diff =
+                    CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                  if (arr.length > diff) {
+                    const intl = intl4.intl;
+                    const formatToPlainString = intl.formatToPlainString;
+                    let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                    const Q0aCVZ = _modDef3723.Q0aCVZ;
+                    closure_12(formatToPlainString(Q0aCVZ, obj));
+                    const _Math = Math;
+                    const substr = arr.slice(0, Math.max(0, diff));
                   } else {
-                    tmp = closure_12;
-                    tmp2 = null;
-                    tmp3 = closure_12(null);
-                    arr = projectId;
+                    closure_12(null);
                   }
-                  mapped = arr.map((name) => {
-                    const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                  const mapped = arr.map((name) => {
+                    let obj4;
+                    let obj6;
+                    let tmpResult;
+                    let closure_0 = name;
+                    let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                     if (null != name.size) {
+                      let obj3;
+                      const obj2 = projectId(onSend[21]);
                       if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                        let obj3 = { draft: null };
-                        const obj4 = {};
+                        obj3 = { draft: obj4 };
+                        obj4 = {
+                          status: "error",
+                          errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                        };
                         const merged = Object.assign(obj);
-                        obj4.status = "error";
-                        obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                        obj3.draft = obj4;
-                        const tmpResult = projectId(onSend[19]);
+                        tmpResult = projectId(onSend[19]);
                       }
                       return obj3;
                     }
-                    const obj5 = { draft: null, upload: null };
-                    const obj6 = {};
-                    const merged1 = Object.assign(obj);
-                    obj6.status = "uploading";
-                    obj5.draft = obj6;
-                    obj5.upload = function upload() {
-                      return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                    const obj5 = {
+                      draft: obj6,
+                      upload() {
+                        const obj = projectId(onSend[22]);
+                        return obj.uploadConjurePickedFile(closure_2_0, name);
+                      },
                     };
+                    obj6 = { status: "uploading" };
+                    const merged1 = Object.assign(obj);
                     obj3 = obj5;
                   });
-                  obj2 = obj2(result[19]);
-                  result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                  const tmp10Result = conjureAttachmentDrafts;
+                  const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                 }
-                return;
               }
             }
             cResult[19] = projectId;
             cResult[20] = Ie;
           } else {
             class Ie {
-              constructor(arg0) {
-                if (0 === projectId.length) {
-                  return;
-                } else {
-                  obj2 = closure_0;
-                  result = closure_2;
-                  obj3 = closure_0(closure_2[19]);
-                  str = "chat";
-                  tmp10 = closure_0;
-                  diff =
-                    closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                    obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                  if (projectId.length > diff) {
-                    tmp4 = closure_12;
-                    intl = obj2(result[10]).intl;
-                    tmp5 = closure_1;
-                    obj = { count: null };
-                    obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                    tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                    tmp7 = globalThis;
-                    _Math = Math;
-                    substr = projectId.slice(0, Math.max(0, diff));
-                    arr = substr;
-                    if (0 === substr.length) {
-                      return;
-                    }
+              constructor(arr) {
+                if (0 !== arr.length) {
+                  const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                  let obj3 = conjureAttachmentDrafts;
+                  const diff =
+                    CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                  if (arr.length > diff) {
+                    const intl = intl4.intl;
+                    const formatToPlainString = intl.formatToPlainString;
+                    let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                    const Q0aCVZ = _modDef3723.Q0aCVZ;
+                    closure_12(formatToPlainString(Q0aCVZ, obj));
+                    const _Math = Math;
+                    const substr = arr.slice(0, Math.max(0, diff));
                   } else {
-                    tmp = closure_12;
-                    tmp2 = null;
-                    tmp3 = closure_12(null);
-                    arr = projectId;
+                    closure_12(null);
                   }
-                  mapped = arr.map((name) => {
-                    const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                  const mapped = arr.map((name) => {
+                    let obj4;
+                    let obj6;
+                    let tmpResult;
+                    let closure_0 = name;
+                    let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                     if (null != name.size) {
+                      let obj3;
+                      const obj2 = projectId(onSend[21]);
                       if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                        let obj3 = { draft: null };
-                        const obj4 = {};
+                        obj3 = { draft: obj4 };
+                        obj4 = {
+                          status: "error",
+                          errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                        };
                         const merged = Object.assign(obj);
-                        obj4.status = "error";
-                        obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                        obj3.draft = obj4;
-                        const tmpResult = projectId(onSend[19]);
+                        tmpResult = projectId(onSend[19]);
                       }
                       return obj3;
                     }
-                    const obj5 = { draft: null, upload: null };
-                    const obj6 = {};
-                    const merged1 = Object.assign(obj);
-                    obj6.status = "uploading";
-                    obj5.draft = obj6;
-                    obj5.upload = function upload() {
-                      return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                    const obj5 = {
+                      draft: obj6,
+                      upload() {
+                        const obj = projectId(onSend[22]);
+                        return obj.uploadConjurePickedFile(closure_2_0, name);
+                      },
                     };
+                    obj6 = { status: "uploading" };
+                    const merged1 = Object.assign(obj);
                     obj3 = obj5;
                   });
-                  obj2 = obj2(result[19]);
-                  result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                  const tmp10Result = conjureAttachmentDrafts;
+                  const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                 }
-                return;
               }
             }
           }
           Ie = tmp47;
           if (cResult[21] !== projectId) {
             class Ie {
-              constructor(arg0) {
-                if (0 === projectId.length) {
-                  return;
-                } else {
-                  obj2 = closure_0;
-                  result = closure_2;
-                  obj3 = closure_0(closure_2[19]);
-                  str = "chat";
-                  tmp10 = closure_0;
-                  diff =
-                    closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                    obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                  if (projectId.length > diff) {
-                    tmp4 = closure_12;
-                    intl = obj2(result[10]).intl;
-                    tmp5 = closure_1;
-                    obj = { count: null };
-                    obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                    tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                    tmp7 = globalThis;
-                    _Math = Math;
-                    substr = projectId.slice(0, Math.max(0, diff));
-                    arr = substr;
-                    if (0 === substr.length) {
-                      return;
-                    }
+              constructor(arr) {
+                if (0 !== arr.length) {
+                  const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                  let obj3 = conjureAttachmentDrafts;
+                  const diff =
+                    CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                  if (arr.length > diff) {
+                    const intl = intl4.intl;
+                    const formatToPlainString = intl.formatToPlainString;
+                    let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                    const Q0aCVZ = _modDef3723.Q0aCVZ;
+                    closure_12(formatToPlainString(Q0aCVZ, obj));
+                    const _Math = Math;
+                    const substr = arr.slice(0, Math.max(0, diff));
                   } else {
-                    tmp = closure_12;
-                    tmp2 = null;
-                    tmp3 = closure_12(null);
-                    arr = projectId;
+                    closure_12(null);
                   }
-                  mapped = arr.map((name) => {
-                    const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                  const mapped = arr.map((name) => {
+                    let obj4;
+                    let obj6;
+                    let tmpResult;
+                    let closure_0 = name;
+                    let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                     if (null != name.size) {
+                      let obj3;
+                      const obj2 = projectId(onSend[21]);
                       if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                        let obj3 = { draft: null };
-                        const obj4 = {};
+                        obj3 = { draft: obj4 };
+                        obj4 = {
+                          status: "error",
+                          errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                        };
                         const merged = Object.assign(obj);
-                        obj4.status = "error";
-                        obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                        obj3.draft = obj4;
-                        const tmpResult = projectId(onSend[19]);
+                        tmpResult = projectId(onSend[19]);
                       }
                       return obj3;
                     }
-                    const obj5 = { draft: null, upload: null };
-                    const obj6 = {};
-                    const merged1 = Object.assign(obj);
-                    obj6.status = "uploading";
-                    obj5.draft = obj6;
-                    obj5.upload = function upload() {
-                      return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                    const obj5 = {
+                      draft: obj6,
+                      upload() {
+                        const obj = projectId(onSend[22]);
+                        return obj.uploadConjurePickedFile(closure_2_0, name);
+                      },
                     };
+                    obj6 = { status: "uploading" };
+                    const merged1 = Object.assign(obj);
                     obj3 = obj5;
                   });
-                  obj2 = obj2(result[19]);
-                  result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                  const tmp10Result = conjureAttachmentDrafts;
+                  const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                 }
-                return;
               }
             }
             cResult[21] = projectId;
             cResult[22] = tmp49;
           } else {
             class Ie {
-              constructor(arg0) {
-                if (0 === projectId.length) {
-                  return;
-                } else {
-                  obj2 = closure_0;
-                  result = closure_2;
-                  obj3 = closure_0(closure_2[19]);
-                  str = "chat";
-                  tmp10 = closure_0;
-                  diff =
-                    closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                    obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                  if (projectId.length > diff) {
-                    tmp4 = closure_12;
-                    intl = obj2(result[10]).intl;
-                    tmp5 = closure_1;
-                    obj = { count: null };
-                    obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                    tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                    tmp7 = globalThis;
-                    _Math = Math;
-                    substr = projectId.slice(0, Math.max(0, diff));
-                    arr = substr;
-                    if (0 === substr.length) {
-                      return;
-                    }
+              constructor(arr) {
+                if (0 !== arr.length) {
+                  const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                  let obj3 = conjureAttachmentDrafts;
+                  const diff =
+                    CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                  if (arr.length > diff) {
+                    const intl = intl4.intl;
+                    const formatToPlainString = intl.formatToPlainString;
+                    let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                    const Q0aCVZ = _modDef3723.Q0aCVZ;
+                    closure_12(formatToPlainString(Q0aCVZ, obj));
+                    const _Math = Math;
+                    const substr = arr.slice(0, Math.max(0, diff));
                   } else {
-                    tmp = closure_12;
-                    tmp2 = null;
-                    tmp3 = closure_12(null);
-                    arr = projectId;
+                    closure_12(null);
                   }
-                  mapped = arr.map((name) => {
-                    const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                  const mapped = arr.map((name) => {
+                    let obj4;
+                    let obj6;
+                    let tmpResult;
+                    let closure_0 = name;
+                    let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                     if (null != name.size) {
+                      let obj3;
+                      const obj2 = projectId(onSend[21]);
                       if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                        let obj3 = { draft: null };
-                        const obj4 = {};
+                        obj3 = { draft: obj4 };
+                        obj4 = {
+                          status: "error",
+                          errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                        };
                         const merged = Object.assign(obj);
-                        obj4.status = "error";
-                        obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                        obj3.draft = obj4;
-                        const tmpResult = projectId(onSend[19]);
+                        tmpResult = projectId(onSend[19]);
                       }
                       return obj3;
                     }
-                    const obj5 = { draft: null, upload: null };
-                    const obj6 = {};
-                    const merged1 = Object.assign(obj);
-                    obj6.status = "uploading";
-                    obj5.draft = obj6;
-                    obj5.upload = function upload() {
-                      return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                    const obj5 = {
+                      draft: obj6,
+                      upload() {
+                        const obj = projectId(onSend[22]);
+                        return obj.uploadConjurePickedFile(closure_2_0, name);
+                      },
                     };
+                    obj6 = { status: "uploading" };
+                    const merged1 = Object.assign(obj);
                     obj3 = obj5;
                   });
-                  obj2 = obj2(result[19]);
-                  result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                  const tmp10Result = conjureAttachmentDrafts;
+                  const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                 }
-                return;
               }
             }
           }
           const onRemove = tmp49;
           if (cResult[23] !== tmp47) {
             class Ie {
-              constructor(arg0) {
-                if (0 === projectId.length) {
-                  return;
-                } else {
-                  obj2 = closure_0;
-                  result = closure_2;
-                  obj3 = closure_0(closure_2[19]);
-                  str = "chat";
-                  tmp10 = closure_0;
-                  diff =
-                    closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                    obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                  if (projectId.length > diff) {
-                    tmp4 = closure_12;
-                    intl = obj2(result[10]).intl;
-                    tmp5 = closure_1;
-                    obj = { count: null };
-                    obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                    tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                    tmp7 = globalThis;
-                    _Math = Math;
-                    substr = projectId.slice(0, Math.max(0, diff));
-                    arr = substr;
-                    if (0 === substr.length) {
-                      return;
-                    }
+              constructor(arr) {
+                if (0 !== arr.length) {
+                  const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                  let obj3 = conjureAttachmentDrafts;
+                  const diff =
+                    CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                  if (arr.length > diff) {
+                    const intl = intl4.intl;
+                    const formatToPlainString = intl.formatToPlainString;
+                    let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                    const Q0aCVZ = _modDef3723.Q0aCVZ;
+                    closure_12(formatToPlainString(Q0aCVZ, obj));
+                    const _Math = Math;
+                    const substr = arr.slice(0, Math.max(0, diff));
                   } else {
-                    tmp = closure_12;
-                    tmp2 = null;
-                    tmp3 = closure_12(null);
-                    arr = projectId;
+                    closure_12(null);
                   }
-                  mapped = arr.map((name) => {
-                    const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                  const mapped = arr.map((name) => {
+                    let obj4;
+                    let obj6;
+                    let tmpResult;
+                    let closure_0 = name;
+                    let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                     if (null != name.size) {
+                      let obj3;
+                      const obj2 = projectId(onSend[21]);
                       if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                        let obj3 = { draft: null };
-                        const obj4 = {};
+                        obj3 = { draft: obj4 };
+                        obj4 = {
+                          status: "error",
+                          errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                        };
                         const merged = Object.assign(obj);
-                        obj4.status = "error";
-                        obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                        obj3.draft = obj4;
-                        const tmpResult = projectId(onSend[19]);
+                        tmpResult = projectId(onSend[19]);
                       }
                       return obj3;
                     }
-                    const obj5 = { draft: null, upload: null };
-                    const obj6 = {};
-                    const merged1 = Object.assign(obj);
-                    obj6.status = "uploading";
-                    obj5.draft = obj6;
-                    obj5.upload = function upload() {
-                      return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                    const obj5 = {
+                      draft: obj6,
+                      upload() {
+                        const obj = projectId(onSend[22]);
+                        return obj.uploadConjurePickedFile(closure_2_0, name);
+                      },
                     };
+                    obj6 = { status: "uploading" };
+                    const merged1 = Object.assign(obj);
                     obj3 = obj5;
                   });
-                  obj2 = obj2(result[19]);
-                  result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                  const tmp10Result = conjureAttachmentDrafts;
+                  const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                 }
-                return;
               }
             }
             _require = onInterrupt(function* () {
+              let obj2;
               if (c2 === 2) {
                 c2 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
-              } else if (tmp3 === 3) {
+              } else if (tmp2 === 3) {
                 if (arg0 === 1) {
                   throw value;
                 } else if (arg0 === 2) {
@@ -885,16 +862,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const obj4 = { value, done: true };
                       return obj4;
                     } else {
-                      projectId = Ie;
+                      closure_0 = Ie;
                       c1 = 1;
                       c2 = 1;
                       const obj5 = {
-                        value: projectId(onSend[22]).pickConjurePhotos(
-                          "any",
-                          projectId(onSend[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
-                        ),
+                        value: obj2.pickConjurePhotos("any", closure_0(onSend[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE),
                         done: false,
                       };
+                      obj2 = closure_0(onSend[22]);
                       return obj5;
                     }
                   } else if (arg0 === 1) {
@@ -905,234 +880,203 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj = { value, done: true };
                     return obj;
                   } else {
-                    projectId(value);
+                    closure_0(value);
                     c2 = 3;
                     return { value: "IconComponent", done: null };
                   }
-                } catch (tmp10) {
-                  c2 = tmp;
-                  throw tmp10;
+                } catch (tmp9) {
+                  c2 = 3;
+                  throw tmp9;
                 }
               }
             });
             const fn2 = function () {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
+              return closure_0(...arguments);
             };
             cResult[23] = tmp47;
             cResult[24] = fn2;
           } else {
             class Ie {
-              constructor(arg0) {
-                if (0 === projectId.length) {
-                  return;
-                } else {
-                  obj2 = closure_0;
-                  result = closure_2;
-                  obj3 = closure_0(closure_2[19]);
-                  str = "chat";
-                  tmp10 = closure_0;
-                  diff =
-                    closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                    obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                  if (projectId.length > diff) {
-                    tmp4 = closure_12;
-                    intl = obj2(result[10]).intl;
-                    tmp5 = closure_1;
-                    obj = { count: null };
-                    obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                    tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                    tmp7 = globalThis;
-                    _Math = Math;
-                    substr = projectId.slice(0, Math.max(0, diff));
-                    arr = substr;
-                    if (0 === substr.length) {
-                      return;
-                    }
+              constructor(arr) {
+                if (0 !== arr.length) {
+                  const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                  let obj3 = conjureAttachmentDrafts;
+                  const diff =
+                    CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                  if (arr.length > diff) {
+                    const intl = intl4.intl;
+                    const formatToPlainString = intl.formatToPlainString;
+                    let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                    const Q0aCVZ = _modDef3723.Q0aCVZ;
+                    closure_12(formatToPlainString(Q0aCVZ, obj));
+                    const _Math = Math;
+                    const substr = arr.slice(0, Math.max(0, diff));
                   } else {
-                    tmp = closure_12;
-                    tmp2 = null;
-                    tmp3 = closure_12(null);
-                    arr = projectId;
+                    closure_12(null);
                   }
-                  mapped = arr.map((name) => {
-                    const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                  const mapped = arr.map((name) => {
+                    let obj4;
+                    let obj6;
+                    let tmpResult;
+                    let closure_0 = name;
+                    let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                     if (null != name.size) {
+                      let obj3;
+                      const obj2 = projectId(onSend[21]);
                       if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                        let obj3 = { draft: null };
-                        const obj4 = {};
+                        obj3 = { draft: obj4 };
+                        obj4 = {
+                          status: "error",
+                          errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                        };
                         const merged = Object.assign(obj);
-                        obj4.status = "error";
-                        obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                        obj3.draft = obj4;
-                        const tmpResult = projectId(onSend[19]);
+                        tmpResult = projectId(onSend[19]);
                       }
                       return obj3;
                     }
-                    const obj5 = { draft: null, upload: null };
-                    const obj6 = {};
-                    const merged1 = Object.assign(obj);
-                    obj6.status = "uploading";
-                    obj5.draft = obj6;
-                    obj5.upload = function upload() {
-                      return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                    const obj5 = {
+                      draft: obj6,
+                      upload() {
+                        const obj = projectId(onSend[22]);
+                        return obj.uploadConjurePickedFile(closure_2_0, name);
+                      },
                     };
+                    obj6 = { status: "uploading" };
+                    const merged1 = Object.assign(obj);
                     obj3 = obj5;
                   });
-                  obj2 = obj2(result[19]);
-                  result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                  const tmp10Result = conjureAttachmentDrafts;
+                  const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                 }
-                return;
               }
             }
           }
           if (cResult[25] === tmp47) {
+            let tmp53;
+            let tmp57;
+            let tmp61;
             class Ie {
-              constructor(arg0) {
-                if (0 === projectId.length) {
-                  return;
-                } else {
-                  obj2 = closure_0;
-                  result = closure_2;
-                  obj3 = closure_0(closure_2[19]);
-                  str = "chat";
-                  tmp10 = closure_0;
-                  diff =
-                    closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                    obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                  if (projectId.length > diff) {
-                    tmp4 = closure_12;
-                    intl = obj2(result[10]).intl;
-                    tmp5 = closure_1;
-                    obj = { count: null };
-                    obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                    tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                    tmp7 = globalThis;
-                    _Math = Math;
-                    substr = projectId.slice(0, Math.max(0, diff));
-                    arr = substr;
-                    if (0 === substr.length) {
-                      return;
-                    }
+              constructor(arr) {
+                if (0 !== arr.length) {
+                  const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                  let obj3 = conjureAttachmentDrafts;
+                  const diff =
+                    CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                  if (arr.length > diff) {
+                    const intl = intl4.intl;
+                    const formatToPlainString = intl.formatToPlainString;
+                    let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                    const Q0aCVZ = _modDef3723.Q0aCVZ;
+                    closure_12(formatToPlainString(Q0aCVZ, obj));
+                    const _Math = Math;
+                    const substr = arr.slice(0, Math.max(0, diff));
                   } else {
-                    tmp = closure_12;
-                    tmp2 = null;
-                    tmp3 = closure_12(null);
-                    arr = projectId;
+                    closure_12(null);
                   }
-                  mapped = arr.map((name) => {
-                    const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                  const mapped = arr.map((name) => {
+                    let obj4;
+                    let obj6;
+                    let tmpResult;
+                    let closure_0 = name;
+                    let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                     if (null != name.size) {
+                      let obj3;
+                      const obj2 = projectId(onSend[21]);
                       if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                        let obj3 = { draft: null };
-                        const obj4 = {};
+                        obj3 = { draft: obj4 };
+                        obj4 = {
+                          status: "error",
+                          errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                        };
                         const merged = Object.assign(obj);
-                        obj4.status = "error";
-                        obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                        obj3.draft = obj4;
-                        const tmpResult = projectId(onSend[19]);
+                        tmpResult = projectId(onSend[19]);
                       }
                       return obj3;
                     }
-                    const obj5 = { draft: null, upload: null };
-                    const obj6 = {};
-                    const merged1 = Object.assign(obj);
-                    obj6.status = "uploading";
-                    obj5.draft = obj6;
-                    obj5.upload = function upload() {
-                      return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                    const obj5 = {
+                      draft: obj6,
+                      upload() {
+                        const obj = projectId(onSend[22]);
+                        return obj.uploadConjurePickedFile(closure_2_0, name);
+                      },
                     };
+                    obj6 = { status: "uploading" };
+                    const merged1 = Object.assign(obj);
                     obj3 = obj5;
                   });
-                  obj2 = obj2(result[19]);
-                  result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                  const tmp10Result = conjureAttachmentDrafts;
+                  const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                 }
-                return;
               }
             }
             if (cResult[28] !== tmp47) {
               class Ie {
-                constructor(arg0) {
-                  if (0 === projectId.length) {
-                    return;
-                  } else {
-                    obj2 = closure_0;
-                    result = closure_2;
-                    obj3 = closure_0(closure_2[19]);
-                    str = "chat";
-                    tmp10 = closure_0;
-                    diff =
-                      closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                      obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                    if (projectId.length > diff) {
-                      tmp4 = closure_12;
-                      intl = obj2(result[10]).intl;
-                      tmp5 = closure_1;
-                      obj = { count: null };
-                      obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                      tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                      tmp7 = globalThis;
-                      _Math = Math;
-                      substr = projectId.slice(0, Math.max(0, diff));
-                      arr = substr;
-                      if (0 === substr.length) {
-                        return;
-                      }
+                constructor(arr) {
+                  if (0 !== arr.length) {
+                    const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                    let obj3 = conjureAttachmentDrafts;
+                    const diff =
+                      CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                    if (arr.length > diff) {
+                      const intl = intl4.intl;
+                      const formatToPlainString = intl.formatToPlainString;
+                      let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                      const Q0aCVZ = _modDef3723.Q0aCVZ;
+                      closure_12(formatToPlainString(Q0aCVZ, obj));
+                      const _Math = Math;
+                      const substr = arr.slice(0, Math.max(0, diff));
                     } else {
-                      tmp = closure_12;
-                      tmp2 = null;
-                      tmp3 = closure_12(null);
-                      arr = projectId;
+                      closure_12(null);
                     }
-                    mapped = arr.map((name) => {
-                      const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                    const mapped = arr.map((name) => {
+                      let obj4;
+                      let obj6;
+                      let tmpResult;
+                      let closure_0 = name;
+                      let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                       if (null != name.size) {
+                        let obj3;
+                        const obj2 = projectId(onSend[21]);
                         if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                          let obj3 = { draft: null };
-                          const obj4 = {};
+                          obj3 = { draft: obj4 };
+                          obj4 = {
+                            status: "error",
+                            errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                          };
                           const merged = Object.assign(obj);
-                          obj4.status = "error";
-                          obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                          obj3.draft = obj4;
-                          const tmpResult = projectId(onSend[19]);
+                          tmpResult = projectId(onSend[19]);
                         }
                         return obj3;
                       }
-                      const obj5 = { draft: null, upload: null };
-                      const obj6 = {};
-                      const merged1 = Object.assign(obj);
-                      obj6.status = "uploading";
-                      obj5.draft = obj6;
-                      obj5.upload = function upload() {
-                        return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                      const obj5 = {
+                        draft: obj6,
+                        upload() {
+                          const obj = projectId(onSend[22]);
+                          return obj.uploadConjurePickedFile(closure_2_0, name);
+                        },
                       };
+                      obj6 = { status: "uploading" };
+                      const merged1 = Object.assign(obj);
                       obj3 = obj5;
                     });
-                    obj2 = obj2(result[19]);
-                    result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                    const tmp10Result = conjureAttachmentDrafts;
+                    const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                   }
-                  return;
                 }
               }
               _require = onInterrupt((types) => {
-                c3 = 0;
-                c4 = 0;
+                let c3 = 0;
+                let c4 = 0;
                 return (function* (arg0) {
                   if (c4 === 2) {
                     c4 = 3;
+                    let str = "Generator functions may not be called on executing generators";
                     throw new TypeError("Generator functions may not be called on executing generators");
-                  } else if (tmp4 === 3) {
+                  } else if (tmp3 === 3) {
                     if (arg0 === 1) {
                       throw value;
                     } else if (arg0 === 2) {
-                      const obj3 = { value, done: true };
-                      return obj3;
+                      return { value, done: true };
                     } else {
                       return { value: "IconComponent", done: null };
                     }
@@ -1145,16 +1089,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           throw value;
                         } else if (arg0 === 2) {
                           c4 = 3;
-                          const obj4 = { value, done: true };
-                          return obj4;
+                          return { value, done: true };
                         } else {
-                          closure_2 = tmp5;
-                          closure_1 = tmp2;
-                          closure_129_0 = undefined;
-                          const obj5 = { pickMultiple: true, types };
+                          closure_2 = tmp4;
+                          closure_1 = tmp;
+                          types = undefined;
+                          let obj2 = types(onSend[23]);
                           c3 = 1;
                           c4 = 1;
-                          const obj6 = { value: types(onSend[23]).handleDocumentSelection(obj5), done: false };
+                          const obj5 = { pickMultiple: true, types };
+                          const obj6 = { value: obj2.handleDocumentSelection(obj5), done: false };
                           return obj6;
                         }
                       } else if (arg0 === 1) {
@@ -1165,26 +1109,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         let obj = { value, done: true };
                         return obj;
                       } else {
-                        closure_129_0 = value;
-                        if (null != closure_129_0) {
-                          Ie(
-                            closure_129_0.map((uri) => {
+                        types = value;
+                        if (null != types) {
+                          closure_1_14(
+                            types.map((uri) => {
+                              let obj2;
+                              let str;
                               const obj = {
                                 uri: uri.uri,
-                                name: types(closure_1_2[22]).pickedName(uri.uri, uri.name),
-                                contentType: null,
-                                size: null,
+                                name: obj2.pickedName(uri.uri, uri.name),
+                                contentType: str,
+                                size,
                               };
-                              let str = uri.type;
+                              str = uri.type;
+                              obj2 = types(closure_1_2[22]);
                               if (str == null) {
                                 str = "application/octet-stream";
                               }
-                              obj.contentType = str;
-                              let size = uri.size;
+                              size = uri.size;
                               if (size == null) {
                                 size = null;
                               }
-                              obj.size = size;
                               return obj;
                             }),
                           );
@@ -1192,87 +1137,71 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         c4 = 3;
                         return { value: "IconComponent", done: null };
                       }
-                    } catch (tmp17) {
-                      c4 = tmp;
-                      throw tmp17;
+                    } catch (tmp16) {
+                      c4 = 3;
+                      throw tmp16;
                     }
                   }
                 })();
               });
               let fn3 = function () {
-                const self = this;
-                const apply = closure_0.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
+                return closure_0(...arguments);
               };
               cResult[28] = tmp47;
               cResult[29] = fn3;
             } else {
               class Ie {
-                constructor(arg0) {
-                  if (0 === projectId.length) {
-                    return;
-                  } else {
-                    obj2 = closure_0;
-                    result = closure_2;
-                    obj3 = closure_0(closure_2[19]);
-                    str = "chat";
-                    tmp10 = closure_0;
-                    diff =
-                      closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                      obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                    if (projectId.length > diff) {
-                      tmp4 = closure_12;
-                      intl = obj2(result[10]).intl;
-                      tmp5 = closure_1;
-                      obj = { count: null };
-                      obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                      tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                      tmp7 = globalThis;
-                      _Math = Math;
-                      substr = projectId.slice(0, Math.max(0, diff));
-                      arr = substr;
-                      if (0 === substr.length) {
-                        return;
-                      }
+                constructor(arr) {
+                  if (0 !== arr.length) {
+                    const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                    let obj3 = conjureAttachmentDrafts;
+                    const diff =
+                      CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                    if (arr.length > diff) {
+                      const intl = intl4.intl;
+                      const formatToPlainString = intl.formatToPlainString;
+                      let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                      const Q0aCVZ = _modDef3723.Q0aCVZ;
+                      closure_12(formatToPlainString(Q0aCVZ, obj));
+                      const _Math = Math;
+                      const substr = arr.slice(0, Math.max(0, diff));
                     } else {
-                      tmp = closure_12;
-                      tmp2 = null;
-                      tmp3 = closure_12(null);
-                      arr = projectId;
+                      closure_12(null);
                     }
-                    mapped = arr.map((name) => {
-                      const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                    const mapped = arr.map((name) => {
+                      let obj4;
+                      let obj6;
+                      let tmpResult;
+                      let closure_0 = name;
+                      let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                       if (null != name.size) {
+                        let obj3;
+                        const obj2 = projectId(onSend[21]);
                         if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                          let obj3 = { draft: null };
-                          const obj4 = {};
+                          obj3 = { draft: obj4 };
+                          obj4 = {
+                            status: "error",
+                            errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                          };
                           const merged = Object.assign(obj);
-                          obj4.status = "error";
-                          obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                          obj3.draft = obj4;
-                          const tmpResult = projectId(onSend[19]);
+                          tmpResult = projectId(onSend[19]);
                         }
                         return obj3;
                       }
-                      const obj5 = { draft: null, upload: null };
-                      const obj6 = {};
-                      const merged1 = Object.assign(obj);
-                      obj6.status = "uploading";
-                      obj5.draft = obj6;
-                      obj5.upload = function upload() {
-                        return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                      const obj5 = {
+                        draft: obj6,
+                        upload() {
+                          const obj = projectId(onSend[22]);
+                          return obj.uploadConjurePickedFile(closure_2_0, name);
+                        },
                       };
+                      obj6 = { status: "uploading" };
+                      const merged1 = Object.assign(obj);
                       obj3 = obj5;
                     });
-                    obj2 = obj2(result[19]);
-                    result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                    const tmp10Result = conjureAttachmentDrafts;
+                    const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                   }
-                  return;
                 }
               }
             }
@@ -1280,198 +1209,171 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const _Symbol3 = Symbol;
             if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
               class Ie {
-                constructor(arg0) {
-                  if (0 === projectId.length) {
-                    return;
-                  } else {
-                    obj2 = closure_0;
-                    result = closure_2;
-                    obj3 = closure_0(closure_2[19]);
-                    str = "chat";
-                    tmp10 = closure_0;
-                    diff =
-                      closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                      obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                    if (projectId.length > diff) {
-                      tmp4 = closure_12;
-                      intl = obj2(result[10]).intl;
-                      tmp5 = closure_1;
-                      obj = { count: null };
-                      obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                      tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                      tmp7 = globalThis;
-                      _Math = Math;
-                      substr = projectId.slice(0, Math.max(0, diff));
-                      arr = substr;
-                      if (0 === substr.length) {
-                        return;
-                      }
+                constructor(arr) {
+                  if (0 !== arr.length) {
+                    const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                    let obj3 = conjureAttachmentDrafts;
+                    const diff =
+                      CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                    if (arr.length > diff) {
+                      const intl = intl4.intl;
+                      const formatToPlainString = intl.formatToPlainString;
+                      let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                      const Q0aCVZ = _modDef3723.Q0aCVZ;
+                      closure_12(formatToPlainString(Q0aCVZ, obj));
+                      const _Math = Math;
+                      const substr = arr.slice(0, Math.max(0, diff));
                     } else {
-                      tmp = closure_12;
-                      tmp2 = null;
-                      tmp3 = closure_12(null);
-                      arr = projectId;
+                      closure_12(null);
                     }
-                    mapped = arr.map((name) => {
-                      const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                    const mapped = arr.map((name) => {
+                      let obj4;
+                      let obj6;
+                      let tmpResult;
+                      let closure_0 = name;
+                      let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                       if (null != name.size) {
+                        let obj3;
+                        const obj2 = projectId(onSend[21]);
                         if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                          let obj3 = { draft: null };
-                          const obj4 = {};
+                          obj3 = { draft: obj4 };
+                          obj4 = {
+                            status: "error",
+                            errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                          };
                           const merged = Object.assign(obj);
-                          obj4.status = "error";
-                          obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                          obj3.draft = obj4;
-                          const tmpResult = projectId(onSend[19]);
+                          tmpResult = projectId(onSend[19]);
                         }
                         return obj3;
                       }
-                      const obj5 = { draft: null, upload: null };
-                      const obj6 = {};
-                      const merged1 = Object.assign(obj);
-                      obj6.status = "uploading";
-                      obj5.draft = obj6;
-                      obj5.upload = function upload() {
-                        return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                      const obj5 = {
+                        draft: obj6,
+                        upload() {
+                          const obj = projectId(onSend[22]);
+                          return obj.uploadConjurePickedFile(closure_2_0, name);
+                        },
                       };
+                      obj6 = { status: "uploading" };
+                      const merged1 = Object.assign(obj);
                       obj3 = obj5;
                     });
-                    obj2 = obj2(result[19]);
-                    result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                    const tmp10Result = conjureAttachmentDrafts;
+                    const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                   }
-                  return;
                 }
               }
-              const stringResult = obj9.string(tmp32(onSend[11])["51+9lc"]);
+              const stringResult = obj9.string(canSend(onSend[11])["51+9lc"]);
               cResult[30] = stringResult;
-              const tmp53 = stringResult;
+              tmp53 = stringResult;
             } else {
               class Ie {
-                constructor(arg0) {
-                  if (0 === projectId.length) {
-                    return;
-                  } else {
-                    obj2 = closure_0;
-                    result = closure_2;
-                    obj3 = closure_0(closure_2[19]);
-                    str = "chat";
-                    tmp10 = closure_0;
-                    diff =
-                      closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                      obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                    if (projectId.length > diff) {
-                      tmp4 = closure_12;
-                      intl = obj2(result[10]).intl;
-                      tmp5 = closure_1;
-                      obj = { count: null };
-                      obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                      tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                      tmp7 = globalThis;
-                      _Math = Math;
-                      substr = projectId.slice(0, Math.max(0, diff));
-                      arr = substr;
-                      if (0 === substr.length) {
-                        return;
-                      }
+                constructor(arr) {
+                  if (0 !== arr.length) {
+                    const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                    let obj3 = conjureAttachmentDrafts;
+                    const diff =
+                      CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                    if (arr.length > diff) {
+                      const intl = intl4.intl;
+                      const formatToPlainString = intl.formatToPlainString;
+                      let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                      const Q0aCVZ = _modDef3723.Q0aCVZ;
+                      closure_12(formatToPlainString(Q0aCVZ, obj));
+                      const _Math = Math;
+                      const substr = arr.slice(0, Math.max(0, diff));
                     } else {
-                      tmp = closure_12;
-                      tmp2 = null;
-                      tmp3 = closure_12(null);
-                      arr = projectId;
+                      closure_12(null);
                     }
-                    mapped = arr.map((name) => {
-                      const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                    const mapped = arr.map((name) => {
+                      let obj4;
+                      let obj6;
+                      let tmpResult;
+                      let closure_0 = name;
+                      let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                       if (null != name.size) {
+                        let obj3;
+                        const obj2 = projectId(onSend[21]);
                         if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                          let obj3 = { draft: null };
-                          const obj4 = {};
+                          obj3 = { draft: obj4 };
+                          obj4 = {
+                            status: "error",
+                            errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                          };
                           const merged = Object.assign(obj);
-                          obj4.status = "error";
-                          obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                          obj3.draft = obj4;
-                          const tmpResult = projectId(onSend[19]);
+                          tmpResult = projectId(onSend[19]);
                         }
                         return obj3;
                       }
-                      const obj5 = { draft: null, upload: null };
-                      const obj6 = {};
-                      const merged1 = Object.assign(obj);
-                      obj6.status = "uploading";
-                      obj5.draft = obj6;
-                      obj5.upload = function upload() {
-                        return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                      const obj5 = {
+                        draft: obj6,
+                        upload() {
+                          const obj = projectId(onSend[22]);
+                          return obj.uploadConjurePickedFile(closure_2_0, name);
+                        },
                       };
+                      obj6 = { status: "uploading" };
+                      const merged1 = Object.assign(obj);
                       obj3 = obj5;
                     });
-                    obj2 = obj2(result[19]);
-                    result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                    const tmp10Result = conjureAttachmentDrafts;
+                    const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                   }
-                  return;
                 }
               }
             }
             if (cResult[31] !== tmp50) {
               class Ie {
-                constructor(arg0) {
-                  if (0 === projectId.length) {
-                    return;
-                  } else {
-                    obj2 = closure_0;
-                    result = closure_2;
-                    obj3 = closure_0(closure_2[19]);
-                    str = "chat";
-                    tmp10 = closure_0;
-                    diff =
-                      closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                      obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                    if (projectId.length > diff) {
-                      tmp4 = closure_12;
-                      intl = obj2(result[10]).intl;
-                      tmp5 = closure_1;
-                      obj = { count: null };
-                      obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                      tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                      tmp7 = globalThis;
-                      _Math = Math;
-                      substr = projectId.slice(0, Math.max(0, diff));
-                      arr = substr;
-                      if (0 === substr.length) {
-                        return;
-                      }
+                constructor(arr) {
+                  if (0 !== arr.length) {
+                    const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                    let obj3 = conjureAttachmentDrafts;
+                    const diff =
+                      CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                    if (arr.length > diff) {
+                      const intl = intl4.intl;
+                      const formatToPlainString = intl.formatToPlainString;
+                      let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                      const Q0aCVZ = _modDef3723.Q0aCVZ;
+                      closure_12(formatToPlainString(Q0aCVZ, obj));
+                      const _Math = Math;
+                      const substr = arr.slice(0, Math.max(0, diff));
                     } else {
-                      tmp = closure_12;
-                      tmp2 = null;
-                      tmp3 = closure_12(null);
-                      arr = projectId;
+                      closure_12(null);
                     }
-                    mapped = arr.map((name) => {
-                      const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                    const mapped = arr.map((name) => {
+                      let obj4;
+                      let obj6;
+                      let tmpResult;
+                      let closure_0 = name;
+                      let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                       if (null != name.size) {
+                        let obj3;
+                        const obj2 = projectId(onSend[21]);
                         if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                          let obj3 = { draft: null };
-                          const obj4 = {};
+                          obj3 = { draft: obj4 };
+                          obj4 = {
+                            status: "error",
+                            errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                          };
                           const merged = Object.assign(obj);
-                          obj4.status = "error";
-                          obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                          obj3.draft = obj4;
-                          const tmpResult = projectId(onSend[19]);
+                          tmpResult = projectId(onSend[19]);
                         }
                         return obj3;
                       }
-                      const obj5 = { draft: null, upload: null };
-                      const obj6 = {};
-                      const merged1 = Object.assign(obj);
-                      obj6.status = "uploading";
-                      obj5.draft = obj6;
-                      obj5.upload = function upload() {
-                        return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                      const obj5 = {
+                        draft: obj6,
+                        upload() {
+                          const obj = projectId(onSend[22]);
+                          return obj.uploadConjurePickedFile(closure_2_0, name);
+                        },
                       };
+                      obj6 = { status: "uploading" };
+                      const merged1 = Object.assign(obj);
                       obj3 = obj5;
                     });
-                    obj2 = obj2(result[19]);
-                    result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                    const tmp10Result = conjureAttachmentDrafts;
+                    const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                   }
-                  return;
                 }
               }
               tmp56[0] = tmp53;
@@ -1481,264 +1383,228 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[32] = tmp56;
             } else {
               class Ie {
-                constructor(arg0) {
-                  if (0 === projectId.length) {
-                    return;
-                  } else {
-                    obj2 = closure_0;
-                    result = closure_2;
-                    obj3 = closure_0(closure_2[19]);
-                    str = "chat";
-                    tmp10 = closure_0;
-                    diff =
-                      closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                      obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                    if (projectId.length > diff) {
-                      tmp4 = closure_12;
-                      intl = obj2(result[10]).intl;
-                      tmp5 = closure_1;
-                      obj = { count: null };
-                      obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                      tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                      tmp7 = globalThis;
-                      _Math = Math;
-                      substr = projectId.slice(0, Math.max(0, diff));
-                      arr = substr;
-                      if (0 === substr.length) {
-                        return;
-                      }
+                constructor(arr) {
+                  if (0 !== arr.length) {
+                    const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                    let obj3 = conjureAttachmentDrafts;
+                    const diff =
+                      CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                    if (arr.length > diff) {
+                      const intl = intl4.intl;
+                      const formatToPlainString = intl.formatToPlainString;
+                      let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                      const Q0aCVZ = _modDef3723.Q0aCVZ;
+                      closure_12(formatToPlainString(Q0aCVZ, obj));
+                      const _Math = Math;
+                      const substr = arr.slice(0, Math.max(0, diff));
                     } else {
-                      tmp = closure_12;
-                      tmp2 = null;
-                      tmp3 = closure_12(null);
-                      arr = projectId;
+                      closure_12(null);
                     }
-                    mapped = arr.map((name) => {
-                      const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                    const mapped = arr.map((name) => {
+                      let obj4;
+                      let obj6;
+                      let tmpResult;
+                      let closure_0 = name;
+                      let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                       if (null != name.size) {
+                        let obj3;
+                        const obj2 = projectId(onSend[21]);
                         if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                          let obj3 = { draft: null };
-                          const obj4 = {};
+                          obj3 = { draft: obj4 };
+                          obj4 = {
+                            status: "error",
+                            errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                          };
                           const merged = Object.assign(obj);
-                          obj4.status = "error";
-                          obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                          obj3.draft = obj4;
-                          const tmpResult = projectId(onSend[19]);
+                          tmpResult = projectId(onSend[19]);
                         }
                         return obj3;
                       }
-                      const obj5 = { draft: null, upload: null };
-                      const obj6 = {};
-                      const merged1 = Object.assign(obj);
-                      obj6.status = "uploading";
-                      obj5.draft = obj6;
-                      obj5.upload = function upload() {
-                        return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                      const obj5 = {
+                        draft: obj6,
+                        upload() {
+                          const obj = projectId(onSend[22]);
+                          return obj.uploadConjurePickedFile(closure_2_0, name);
+                        },
                       };
+                      obj6 = { status: "uploading" };
+                      const merged1 = Object.assign(obj);
                       obj3 = obj5;
                     });
-                    obj2 = obj2(result[19]);
-                    result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                    const tmp10Result = conjureAttachmentDrafts;
+                    const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                   }
-                  return;
                 }
               }
             }
             const _Symbol4 = Symbol;
             if (cResult[33] === Symbol.for("react.memo_cache_sentinel")) {
               class Ie {
-                constructor(arg0) {
-                  if (0 === projectId.length) {
-                    return;
-                  } else {
-                    obj2 = closure_0;
-                    result = closure_2;
-                    obj3 = closure_0(closure_2[19]);
-                    str = "chat";
-                    tmp10 = closure_0;
-                    diff =
-                      closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                      obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                    if (projectId.length > diff) {
-                      tmp4 = closure_12;
-                      intl = obj2(result[10]).intl;
-                      tmp5 = closure_1;
-                      obj = { count: null };
-                      obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                      tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                      tmp7 = globalThis;
-                      _Math = Math;
-                      substr = projectId.slice(0, Math.max(0, diff));
-                      arr = substr;
-                      if (0 === substr.length) {
-                        return;
-                      }
+                constructor(arr) {
+                  if (0 !== arr.length) {
+                    const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                    let obj3 = conjureAttachmentDrafts;
+                    const diff =
+                      CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                    if (arr.length > diff) {
+                      const intl = intl4.intl;
+                      const formatToPlainString = intl.formatToPlainString;
+                      let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                      const Q0aCVZ = _modDef3723.Q0aCVZ;
+                      closure_12(formatToPlainString(Q0aCVZ, obj));
+                      const _Math = Math;
+                      const substr = arr.slice(0, Math.max(0, diff));
                     } else {
-                      tmp = closure_12;
-                      tmp2 = null;
-                      tmp3 = closure_12(null);
-                      arr = projectId;
+                      closure_12(null);
                     }
-                    mapped = arr.map((name) => {
-                      const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                    const mapped = arr.map((name) => {
+                      let obj4;
+                      let obj6;
+                      let tmpResult;
+                      let closure_0 = name;
+                      let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                       if (null != name.size) {
+                        let obj3;
+                        const obj2 = projectId(onSend[21]);
                         if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                          let obj3 = { draft: null };
-                          const obj4 = {};
+                          obj3 = { draft: obj4 };
+                          obj4 = {
+                            status: "error",
+                            errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                          };
                           const merged = Object.assign(obj);
-                          obj4.status = "error";
-                          obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                          obj3.draft = obj4;
-                          const tmpResult = projectId(onSend[19]);
+                          tmpResult = projectId(onSend[19]);
                         }
                         return obj3;
                       }
-                      const obj5 = { draft: null, upload: null };
-                      const obj6 = {};
-                      const merged1 = Object.assign(obj);
-                      obj6.status = "uploading";
-                      obj5.draft = obj6;
-                      obj5.upload = function upload() {
-                        return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                      const obj5 = {
+                        draft: obj6,
+                        upload() {
+                          const obj = projectId(onSend[22]);
+                          return obj.uploadConjurePickedFile(closure_2_0, name);
+                        },
                       };
+                      obj6 = { status: "uploading" };
+                      const merged1 = Object.assign(obj);
                       obj3 = obj5;
                     });
-                    obj2 = obj2(result[19]);
-                    result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                    const tmp10Result = conjureAttachmentDrafts;
+                    const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                   }
-                  return;
                 }
               }
-              const stringResult1 = obj10.string(tmp32(onSend[11])["10ljr2"]);
+              const stringResult1 = obj10.string(canSend(onSend[11])["10ljr2"]);
               cResult[33] = stringResult1;
-              const tmp57 = stringResult1;
+              tmp57 = stringResult1;
             } else {
               class Ie {
-                constructor(arg0) {
-                  if (0 === projectId.length) {
-                    return;
-                  } else {
-                    obj2 = closure_0;
-                    result = closure_2;
-                    obj3 = closure_0(closure_2[19]);
-                    str = "chat";
-                    tmp10 = closure_0;
-                    diff =
-                      closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                      obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                    if (projectId.length > diff) {
-                      tmp4 = closure_12;
-                      intl = obj2(result[10]).intl;
-                      tmp5 = closure_1;
-                      obj = { count: null };
-                      obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                      tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                      tmp7 = globalThis;
-                      _Math = Math;
-                      substr = projectId.slice(0, Math.max(0, diff));
-                      arr = substr;
-                      if (0 === substr.length) {
-                        return;
-                      }
+                constructor(arr) {
+                  if (0 !== arr.length) {
+                    const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                    let obj3 = conjureAttachmentDrafts;
+                    const diff =
+                      CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                    if (arr.length > diff) {
+                      const intl = intl4.intl;
+                      const formatToPlainString = intl.formatToPlainString;
+                      let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                      const Q0aCVZ = _modDef3723.Q0aCVZ;
+                      closure_12(formatToPlainString(Q0aCVZ, obj));
+                      const _Math = Math;
+                      const substr = arr.slice(0, Math.max(0, diff));
                     } else {
-                      tmp = closure_12;
-                      tmp2 = null;
-                      tmp3 = closure_12(null);
-                      arr = projectId;
+                      closure_12(null);
                     }
-                    mapped = arr.map((name) => {
-                      const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                    const mapped = arr.map((name) => {
+                      let obj4;
+                      let obj6;
+                      let tmpResult;
+                      let closure_0 = name;
+                      let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                       if (null != name.size) {
+                        let obj3;
+                        const obj2 = projectId(onSend[21]);
                         if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                          let obj3 = { draft: null };
-                          const obj4 = {};
+                          obj3 = { draft: obj4 };
+                          obj4 = {
+                            status: "error",
+                            errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                          };
                           const merged = Object.assign(obj);
-                          obj4.status = "error";
-                          obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                          obj3.draft = obj4;
-                          const tmpResult = projectId(onSend[19]);
+                          tmpResult = projectId(onSend[19]);
                         }
                         return obj3;
                       }
-                      const obj5 = { draft: null, upload: null };
-                      const obj6 = {};
-                      const merged1 = Object.assign(obj);
-                      obj6.status = "uploading";
-                      obj5.draft = obj6;
-                      obj5.upload = function upload() {
-                        return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                      const obj5 = {
+                        draft: obj6,
+                        upload() {
+                          const obj = projectId(onSend[22]);
+                          return obj.uploadConjurePickedFile(closure_2_0, name);
+                        },
                       };
+                      obj6 = { status: "uploading" };
+                      const merged1 = Object.assign(obj);
                       obj3 = obj5;
                     });
-                    obj2 = obj2(result[19]);
-                    result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                    const tmp10Result = conjureAttachmentDrafts;
+                    const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                   }
-                  return;
                 }
               }
             }
             if (cResult[34] !== tmp52) {
               class Ie {
-                constructor(arg0) {
-                  if (0 === projectId.length) {
-                    return;
-                  } else {
-                    obj2 = closure_0;
-                    result = closure_2;
-                    obj3 = closure_0(closure_2[19]);
-                    str = "chat";
-                    tmp10 = closure_0;
-                    diff =
-                      closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                      obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                    if (projectId.length > diff) {
-                      tmp4 = closure_12;
-                      intl = obj2(result[10]).intl;
-                      tmp5 = closure_1;
-                      obj = { count: null };
-                      obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                      tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                      tmp7 = globalThis;
-                      _Math = Math;
-                      substr = projectId.slice(0, Math.max(0, diff));
-                      arr = substr;
-                      if (0 === substr.length) {
-                        return;
-                      }
+                constructor(arr) {
+                  if (0 !== arr.length) {
+                    const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                    let obj3 = conjureAttachmentDrafts;
+                    const diff =
+                      CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                    if (arr.length > diff) {
+                      const intl = intl4.intl;
+                      const formatToPlainString = intl.formatToPlainString;
+                      let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                      const Q0aCVZ = _modDef3723.Q0aCVZ;
+                      closure_12(formatToPlainString(Q0aCVZ, obj));
+                      const _Math = Math;
+                      const substr = arr.slice(0, Math.max(0, diff));
                     } else {
-                      tmp = closure_12;
-                      tmp2 = null;
-                      tmp3 = closure_12(null);
-                      arr = projectId;
+                      closure_12(null);
                     }
-                    mapped = arr.map((name) => {
-                      const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                    const mapped = arr.map((name) => {
+                      let obj4;
+                      let obj6;
+                      let tmpResult;
+                      let closure_0 = name;
+                      let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                       if (null != name.size) {
+                        let obj3;
+                        const obj2 = projectId(onSend[21]);
                         if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                          let obj3 = { draft: null };
-                          const obj4 = {};
+                          obj3 = { draft: obj4 };
+                          obj4 = {
+                            status: "error",
+                            errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                          };
                           const merged = Object.assign(obj);
-                          obj4.status = "error";
-                          obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                          obj3.draft = obj4;
-                          const tmpResult = projectId(onSend[19]);
+                          tmpResult = projectId(onSend[19]);
                         }
                         return obj3;
                       }
-                      const obj5 = { draft: null, upload: null };
-                      const obj6 = {};
-                      const merged1 = Object.assign(obj);
-                      obj6.status = "uploading";
-                      obj5.draft = obj6;
-                      obj5.upload = function upload() {
-                        return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                      const obj5 = {
+                        draft: obj6,
+                        upload() {
+                          const obj = projectId(onSend[22]);
+                          return obj.uploadConjurePickedFile(closure_2_0, name);
+                        },
                       };
+                      obj6 = { status: "uploading" };
+                      const merged1 = Object.assign(obj);
                       obj3 = obj5;
                     });
-                    obj2 = obj2(result[19]);
-                    result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                    const tmp10Result = conjureAttachmentDrafts;
+                    const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                   }
-                  return;
                 }
               }
               tmp60[0] = tmp57;
@@ -1751,264 +1617,228 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[35] = tmp60;
             } else {
               class Ie {
-                constructor(arg0) {
-                  if (0 === projectId.length) {
-                    return;
-                  } else {
-                    obj2 = closure_0;
-                    result = closure_2;
-                    obj3 = closure_0(closure_2[19]);
-                    str = "chat";
-                    tmp10 = closure_0;
-                    diff =
-                      closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                      obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                    if (projectId.length > diff) {
-                      tmp4 = closure_12;
-                      intl = obj2(result[10]).intl;
-                      tmp5 = closure_1;
-                      obj = { count: null };
-                      obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                      tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                      tmp7 = globalThis;
-                      _Math = Math;
-                      substr = projectId.slice(0, Math.max(0, diff));
-                      arr = substr;
-                      if (0 === substr.length) {
-                        return;
-                      }
+                constructor(arr) {
+                  if (0 !== arr.length) {
+                    const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                    let obj3 = conjureAttachmentDrafts;
+                    const diff =
+                      CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                    if (arr.length > diff) {
+                      const intl = intl4.intl;
+                      const formatToPlainString = intl.formatToPlainString;
+                      let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                      const Q0aCVZ = _modDef3723.Q0aCVZ;
+                      closure_12(formatToPlainString(Q0aCVZ, obj));
+                      const _Math = Math;
+                      const substr = arr.slice(0, Math.max(0, diff));
                     } else {
-                      tmp = closure_12;
-                      tmp2 = null;
-                      tmp3 = closure_12(null);
-                      arr = projectId;
+                      closure_12(null);
                     }
-                    mapped = arr.map((name) => {
-                      const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                    const mapped = arr.map((name) => {
+                      let obj4;
+                      let obj6;
+                      let tmpResult;
+                      let closure_0 = name;
+                      let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                       if (null != name.size) {
+                        let obj3;
+                        const obj2 = projectId(onSend[21]);
                         if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                          let obj3 = { draft: null };
-                          const obj4 = {};
+                          obj3 = { draft: obj4 };
+                          obj4 = {
+                            status: "error",
+                            errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                          };
                           const merged = Object.assign(obj);
-                          obj4.status = "error";
-                          obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                          obj3.draft = obj4;
-                          const tmpResult = projectId(onSend[19]);
+                          tmpResult = projectId(onSend[19]);
                         }
                         return obj3;
                       }
-                      const obj5 = { draft: null, upload: null };
-                      const obj6 = {};
-                      const merged1 = Object.assign(obj);
-                      obj6.status = "uploading";
-                      obj5.draft = obj6;
-                      obj5.upload = function upload() {
-                        return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                      const obj5 = {
+                        draft: obj6,
+                        upload() {
+                          const obj = projectId(onSend[22]);
+                          return obj.uploadConjurePickedFile(closure_2_0, name);
+                        },
                       };
+                      obj6 = { status: "uploading" };
+                      const merged1 = Object.assign(obj);
                       obj3 = obj5;
                     });
-                    obj2 = obj2(result[19]);
-                    result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                    const tmp10Result = conjureAttachmentDrafts;
+                    const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                   }
-                  return;
                 }
               }
             }
             const _Symbol5 = Symbol;
             if (cResult[36] === Symbol.for("react.memo_cache_sentinel")) {
               class Ie {
-                constructor(arg0) {
-                  if (0 === projectId.length) {
-                    return;
-                  } else {
-                    obj2 = closure_0;
-                    result = closure_2;
-                    obj3 = closure_0(closure_2[19]);
-                    str = "chat";
-                    tmp10 = closure_0;
-                    diff =
-                      closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                      obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                    if (projectId.length > diff) {
-                      tmp4 = closure_12;
-                      intl = obj2(result[10]).intl;
-                      tmp5 = closure_1;
-                      obj = { count: null };
-                      obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                      tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                      tmp7 = globalThis;
-                      _Math = Math;
-                      substr = projectId.slice(0, Math.max(0, diff));
-                      arr = substr;
-                      if (0 === substr.length) {
-                        return;
-                      }
+                constructor(arr) {
+                  if (0 !== arr.length) {
+                    const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                    let obj3 = conjureAttachmentDrafts;
+                    const diff =
+                      CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                    if (arr.length > diff) {
+                      const intl = intl4.intl;
+                      const formatToPlainString = intl.formatToPlainString;
+                      let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                      const Q0aCVZ = _modDef3723.Q0aCVZ;
+                      closure_12(formatToPlainString(Q0aCVZ, obj));
+                      const _Math = Math;
+                      const substr = arr.slice(0, Math.max(0, diff));
                     } else {
-                      tmp = closure_12;
-                      tmp2 = null;
-                      tmp3 = closure_12(null);
-                      arr = projectId;
+                      closure_12(null);
                     }
-                    mapped = arr.map((name) => {
-                      const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                    const mapped = arr.map((name) => {
+                      let obj4;
+                      let obj6;
+                      let tmpResult;
+                      let closure_0 = name;
+                      let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                       if (null != name.size) {
+                        let obj3;
+                        const obj2 = projectId(onSend[21]);
                         if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                          let obj3 = { draft: null };
-                          const obj4 = {};
+                          obj3 = { draft: obj4 };
+                          obj4 = {
+                            status: "error",
+                            errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                          };
                           const merged = Object.assign(obj);
-                          obj4.status = "error";
-                          obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                          obj3.draft = obj4;
-                          const tmpResult = projectId(onSend[19]);
+                          tmpResult = projectId(onSend[19]);
                         }
                         return obj3;
                       }
-                      const obj5 = { draft: null, upload: null };
-                      const obj6 = {};
-                      const merged1 = Object.assign(obj);
-                      obj6.status = "uploading";
-                      obj5.draft = obj6;
-                      obj5.upload = function upload() {
-                        return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                      const obj5 = {
+                        draft: obj6,
+                        upload() {
+                          const obj = projectId(onSend[22]);
+                          return obj.uploadConjurePickedFile(closure_2_0, name);
+                        },
                       };
+                      obj6 = { status: "uploading" };
+                      const merged1 = Object.assign(obj);
                       obj3 = obj5;
                     });
-                    obj2 = obj2(result[19]);
-                    result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                    const tmp10Result = conjureAttachmentDrafts;
+                    const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                   }
-                  return;
                 }
               }
-              const stringResult2 = obj11.string(tmp32(onSend[11]).aotDee);
+              const stringResult2 = obj11.string(canSend(onSend[11]).aotDee);
               cResult[36] = stringResult2;
-              const tmp61 = stringResult2;
+              tmp61 = stringResult2;
             } else {
               class Ie {
-                constructor(arg0) {
-                  if (0 === projectId.length) {
-                    return;
-                  } else {
-                    obj2 = closure_0;
-                    result = closure_2;
-                    obj3 = closure_0(closure_2[19]);
-                    str = "chat";
-                    tmp10 = closure_0;
-                    diff =
-                      closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                      obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                    if (projectId.length > diff) {
-                      tmp4 = closure_12;
-                      intl = obj2(result[10]).intl;
-                      tmp5 = closure_1;
-                      obj = { count: null };
-                      obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                      tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                      tmp7 = globalThis;
-                      _Math = Math;
-                      substr = projectId.slice(0, Math.max(0, diff));
-                      arr = substr;
-                      if (0 === substr.length) {
-                        return;
-                      }
+                constructor(arr) {
+                  if (0 !== arr.length) {
+                    const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                    let obj3 = conjureAttachmentDrafts;
+                    const diff =
+                      CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                    if (arr.length > diff) {
+                      const intl = intl4.intl;
+                      const formatToPlainString = intl.formatToPlainString;
+                      let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                      const Q0aCVZ = _modDef3723.Q0aCVZ;
+                      closure_12(formatToPlainString(Q0aCVZ, obj));
+                      const _Math = Math;
+                      const substr = arr.slice(0, Math.max(0, diff));
                     } else {
-                      tmp = closure_12;
-                      tmp2 = null;
-                      tmp3 = closure_12(null);
-                      arr = projectId;
+                      closure_12(null);
                     }
-                    mapped = arr.map((name) => {
-                      const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                    const mapped = arr.map((name) => {
+                      let obj4;
+                      let obj6;
+                      let tmpResult;
+                      let closure_0 = name;
+                      let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                       if (null != name.size) {
+                        let obj3;
+                        const obj2 = projectId(onSend[21]);
                         if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                          let obj3 = { draft: null };
-                          const obj4 = {};
+                          obj3 = { draft: obj4 };
+                          obj4 = {
+                            status: "error",
+                            errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                          };
                           const merged = Object.assign(obj);
-                          obj4.status = "error";
-                          obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                          obj3.draft = obj4;
-                          const tmpResult = projectId(onSend[19]);
+                          tmpResult = projectId(onSend[19]);
                         }
                         return obj3;
                       }
-                      const obj5 = { draft: null, upload: null };
-                      const obj6 = {};
-                      const merged1 = Object.assign(obj);
-                      obj6.status = "uploading";
-                      obj5.draft = obj6;
-                      obj5.upload = function upload() {
-                        return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                      const obj5 = {
+                        draft: obj6,
+                        upload() {
+                          const obj = projectId(onSend[22]);
+                          return obj.uploadConjurePickedFile(closure_2_0, name);
+                        },
                       };
+                      obj6 = { status: "uploading" };
+                      const merged1 = Object.assign(obj);
                       obj3 = obj5;
                     });
-                    obj2 = obj2(result[19]);
-                    result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                    const tmp10Result = conjureAttachmentDrafts;
+                    const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                   }
-                  return;
                 }
               }
             }
             if (cResult[37] !== tmp52) {
               class Ie {
-                constructor(arg0) {
-                  if (0 === projectId.length) {
-                    return;
-                  } else {
-                    obj2 = closure_0;
-                    result = closure_2;
-                    obj3 = closure_0(closure_2[19]);
-                    str = "chat";
-                    tmp10 = closure_0;
-                    diff =
-                      closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                      obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                    if (projectId.length > diff) {
-                      tmp4 = closure_12;
-                      intl = obj2(result[10]).intl;
-                      tmp5 = closure_1;
-                      obj = { count: null };
-                      obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                      tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                      tmp7 = globalThis;
-                      _Math = Math;
-                      substr = projectId.slice(0, Math.max(0, diff));
-                      arr = substr;
-                      if (0 === substr.length) {
-                        return;
-                      }
+                constructor(arr) {
+                  if (0 !== arr.length) {
+                    const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                    let obj3 = conjureAttachmentDrafts;
+                    const diff =
+                      CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                    if (arr.length > diff) {
+                      const intl = intl4.intl;
+                      const formatToPlainString = intl.formatToPlainString;
+                      let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                      const Q0aCVZ = _modDef3723.Q0aCVZ;
+                      closure_12(formatToPlainString(Q0aCVZ, obj));
+                      const _Math = Math;
+                      const substr = arr.slice(0, Math.max(0, diff));
                     } else {
-                      tmp = closure_12;
-                      tmp2 = null;
-                      tmp3 = closure_12(null);
-                      arr = projectId;
+                      closure_12(null);
                     }
-                    mapped = arr.map((name) => {
-                      const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                    const mapped = arr.map((name) => {
+                      let obj4;
+                      let obj6;
+                      let tmpResult;
+                      let closure_0 = name;
+                      let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                       if (null != name.size) {
+                        let obj3;
+                        const obj2 = projectId(onSend[21]);
                         if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                          let obj3 = { draft: null };
-                          const obj4 = {};
+                          obj3 = { draft: obj4 };
+                          obj4 = {
+                            status: "error",
+                            errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                          };
                           const merged = Object.assign(obj);
-                          obj4.status = "error";
-                          obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                          obj3.draft = obj4;
-                          const tmpResult = projectId(onSend[19]);
+                          tmpResult = projectId(onSend[19]);
                         }
                         return obj3;
                       }
-                      const obj5 = { draft: null, upload: null };
-                      const obj6 = {};
-                      const merged1 = Object.assign(obj);
-                      obj6.status = "uploading";
-                      obj5.draft = obj6;
-                      obj5.upload = function upload() {
-                        return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                      const obj5 = {
+                        draft: obj6,
+                        upload() {
+                          const obj = projectId(onSend[22]);
+                          return obj.uploadConjurePickedFile(closure_2_0, name);
+                        },
                       };
+                      obj6 = { status: "uploading" };
+                      const merged1 = Object.assign(obj);
                       obj3 = obj5;
                     });
-                    obj2 = obj2(result[19]);
-                    result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                    const tmp10Result = conjureAttachmentDrafts;
+                    const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                   }
-                  return;
                 }
               }
               tmp64[0] = tmp61;
@@ -2020,131 +1850,113 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[38] = tmp64;
             } else {
               class Ie {
-                constructor(arg0) {
-                  if (0 === projectId.length) {
-                    return;
-                  } else {
-                    obj2 = closure_0;
-                    result = closure_2;
-                    obj3 = closure_0(closure_2[19]);
-                    str = "chat";
-                    tmp10 = closure_0;
-                    diff =
-                      closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                      obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                    if (projectId.length > diff) {
-                      tmp4 = closure_12;
-                      intl = obj2(result[10]).intl;
-                      tmp5 = closure_1;
-                      obj = { count: null };
-                      obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                      tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                      tmp7 = globalThis;
-                      _Math = Math;
-                      substr = projectId.slice(0, Math.max(0, diff));
-                      arr = substr;
-                      if (0 === substr.length) {
-                        return;
-                      }
+                constructor(arr) {
+                  if (0 !== arr.length) {
+                    const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                    let obj3 = conjureAttachmentDrafts;
+                    const diff =
+                      CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                    if (arr.length > diff) {
+                      const intl = intl4.intl;
+                      const formatToPlainString = intl.formatToPlainString;
+                      let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                      const Q0aCVZ = _modDef3723.Q0aCVZ;
+                      closure_12(formatToPlainString(Q0aCVZ, obj));
+                      const _Math = Math;
+                      const substr = arr.slice(0, Math.max(0, diff));
                     } else {
-                      tmp = closure_12;
-                      tmp2 = null;
-                      tmp3 = closure_12(null);
-                      arr = projectId;
+                      closure_12(null);
                     }
-                    mapped = arr.map((name) => {
-                      const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                    const mapped = arr.map((name) => {
+                      let obj4;
+                      let obj6;
+                      let tmpResult;
+                      let closure_0 = name;
+                      let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                       if (null != name.size) {
+                        let obj3;
+                        const obj2 = projectId(onSend[21]);
                         if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                          let obj3 = { draft: null };
-                          const obj4 = {};
+                          obj3 = { draft: obj4 };
+                          obj4 = {
+                            status: "error",
+                            errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                          };
                           const merged = Object.assign(obj);
-                          obj4.status = "error";
-                          obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                          obj3.draft = obj4;
-                          const tmpResult = projectId(onSend[19]);
+                          tmpResult = projectId(onSend[19]);
                         }
                         return obj3;
                       }
-                      const obj5 = { draft: null, upload: null };
-                      const obj6 = {};
-                      const merged1 = Object.assign(obj);
-                      obj6.status = "uploading";
-                      obj5.draft = obj6;
-                      obj5.upload = function upload() {
-                        return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                      const obj5 = {
+                        draft: obj6,
+                        upload() {
+                          const obj = projectId(onSend[22]);
+                          return obj.uploadConjurePickedFile(closure_2_0, name);
+                        },
                       };
+                      obj6 = { status: "uploading" };
+                      const merged1 = Object.assign(obj);
                       obj3 = obj5;
                     });
-                    obj2 = obj2(result[19]);
-                    result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                    const tmp10Result = conjureAttachmentDrafts;
+                    const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                   }
-                  return;
                 }
               }
             }
             if (cResult[39] === tmp56) {
               class Ie {
-                constructor(arg0) {
-                  if (0 === projectId.length) {
-                    return;
-                  } else {
-                    obj2 = closure_0;
-                    result = closure_2;
-                    obj3 = closure_0(closure_2[19]);
-                    str = "chat";
-                    tmp10 = closure_0;
-                    diff =
-                      closure_0(closure_2[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-                      obj3.getConjureAttachmentDrafts(closure_0, "chat").length;
-                    if (projectId.length > diff) {
-                      tmp4 = closure_12;
-                      intl = obj2(result[10]).intl;
-                      tmp5 = closure_1;
-                      obj = { count: null };
-                      obj.count = obj2(result[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
-                      tmp6 = closure_12(intl.formatToPlainString(closure_1(result[11]).Q0aCVZ, obj));
-                      tmp7 = globalThis;
-                      _Math = Math;
-                      substr = projectId.slice(0, Math.max(0, diff));
-                      arr = substr;
-                      if (0 === substr.length) {
-                        return;
-                      }
+                constructor(arr) {
+                  if (0 !== arr.length) {
+                    const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+                    let obj3 = conjureAttachmentDrafts;
+                    const diff =
+                      CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
+                    if (arr.length > diff) {
+                      const intl = intl4.intl;
+                      const formatToPlainString = intl.formatToPlainString;
+                      let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+                      const Q0aCVZ = _modDef3723.Q0aCVZ;
+                      closure_12(formatToPlainString(Q0aCVZ, obj));
+                      const _Math = Math;
+                      const substr = arr.slice(0, Math.max(0, diff));
                     } else {
-                      tmp = closure_12;
-                      tmp2 = null;
-                      tmp3 = closure_12(null);
-                      arr = projectId;
+                      closure_12(null);
                     }
-                    mapped = arr.map((name) => {
-                      const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+                    const mapped = arr.map((name) => {
+                      let obj4;
+                      let obj6;
+                      let tmpResult;
+                      let closure_0 = name;
+                      let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
                       if (null != name.size) {
+                        let obj3;
+                        const obj2 = projectId(onSend[21]);
                         if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                          let obj3 = { draft: null };
-                          const obj4 = {};
+                          obj3 = { draft: obj4 };
+                          obj4 = {
+                            status: "error",
+                            errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType),
+                          };
                           const merged = Object.assign(obj);
-                          obj4.status = "error";
-                          obj4.errorText = projectId(onSend[19]).conjureAttachmentTooLargeText(name.contentType);
-                          obj3.draft = obj4;
-                          const tmpResult = projectId(onSend[19]);
+                          tmpResult = projectId(onSend[19]);
                         }
                         return obj3;
                       }
-                      const obj5 = { draft: null, upload: null };
-                      const obj6 = {};
-                      const merged1 = Object.assign(obj);
-                      obj6.status = "uploading";
-                      obj5.draft = obj6;
-                      obj5.upload = function upload() {
-                        return name(onSend[22]).uploadConjurePickedFile(projectId, name);
+                      const obj5 = {
+                        draft: obj6,
+                        upload() {
+                          const obj = projectId(onSend[22]);
+                          return obj.uploadConjurePickedFile(closure_2_0, name);
+                        },
                       };
+                      obj6 = { status: "uploading" };
+                      const merged1 = Object.assign(obj);
                       obj3 = obj5;
                     });
-                    obj2 = obj2(result[19]);
-                    result = obj2.addConjureAttachmentDrafts(tmp10, "chat", mapped);
+                    const tmp10Result = conjureAttachmentDrafts;
+                    const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
                   }
-                  return;
                 }
               }
             }
@@ -2155,32 +1967,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[42] = items2;
           }
           class Ee {
-            constructor(arg0) {
-              ({ url, type } = projectId.nativeEvent);
+            constructor(nativeEvent) {
+              let obj2;
+              let type;
+              let url;
+              ({ url, type } = nativeEvent.nativeEvent);
               if (canSend) {
-                obj = { uri: null, name: null, contentType: null, size: null };
-                obj.uri = url;
-                tmp2 = closure_0;
-                tmp3 = closure_2;
-                tmp = closure_14;
-                obj2 = closure_0(closure_2[22]);
-                tmp4 = null;
-                obj.name = obj2.pickedName(url, null);
+                const obj = { uri: url, name: obj2.pickedName(url, null), contentType: type, size: null };
+                obj2 = conjurePickedFiles;
                 if (type == null) {
                   type = "application/octet-stream";
                 }
-                obj.contentType = type;
-                items = [];
-                items[0] = obj;
-                tmpResult = tmp(items);
+                const items = [obj];
+                Ie(items);
               }
-              return;
             }
           }
           cResult[25] = tmp47;
           cResult[26] = canSend;
           cResult[27] = Ee;
-          const tmpResult10 = tmp(onSend[20]);
         }
         function se(nativeEvent) {
           nativeEvent = nativeEvent.nativeEvent;
@@ -2193,38 +1998,54 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[16] = se;
         class L {
           constructor() {
-            tmpResult = undefined;
+            let tmpResult;
             if (onDraftHasTextChange != null) {
-              tmp3 = closure_8;
-              tmpResult = tmp(closure_8);
+              tmpResult = tmp(useReducedMotion);
             }
             return tmpResult;
           }
         }
-        const tmp5Result6 = tmp5(obj2.useState(null), 2);
       }
       class L {
         constructor() {
-          tmpResult = undefined;
+          let tmpResult;
           if (onDraftHasTextChange != null) {
-            tmp3 = closure_8;
-            tmpResult = tmp(closure_8);
+            tmpResult = tmp(useReducedMotion);
           }
           return tmpResult;
         }
       }
-      items3 = ["" !== tmp11, onDraftHasTextChange];
+      items3 = [tmp12, onDraftHasTextChange];
       cResult[6] = "" !== tmp11;
       cResult[7] = onDraftHasTextChange;
       cResult[8] = L;
       cResult[9] = items3;
-      let obj = require("c");
     }
   : (projectId) => {
+      let _undefined;
+      let _undefined2;
+      let _undefined3;
+      let boxFocused;
+      let c12;
+      let callback9Result;
+      let intl2;
+      let items18;
+      let items20;
+      let items21;
+      let items22;
+      let num;
+      let obj12;
+      let obj14;
+      let obj16;
+      let onRemove;
+      let string;
+      let tmp20;
+      let tmp23Result;
+      let tmp8;
+      let zZ9NgM;
       projectId = projectId.projectId;
-      _require = projectId;
       const canSend = projectId.canSend;
-      const running = projectId.running;
+      let running = projectId.running;
       let flag = projectId.stopped;
       if (flag === undefined) {
         flag = false;
@@ -2233,31 +2054,35 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const onInterrupt = projectId.onInterrupt;
       const onDraftHasTextChange = projectId.onDraftHasTextChange;
       c12 = undefined;
-      maxHeight = undefined;
-      closure_14 = undefined;
+      c13 = undefined;
+      let closure_14;
       let callback3;
       getItemKey = undefined;
       let callback4;
       let callback6;
-      closure_19 = undefined;
-      c20 = undefined;
+      let closure_19;
+      let sendable;
       let callback7;
       let stateFromStores1;
       let callback8;
       let callback9;
+      let obj = onDraftHasTextChange;
+      let tmp = onInterrupt;
       const tmp2 = onInterrupt(
-        onDraftHasTextChange.useState(() => ConjureComposerDraftStore.getDraft(closure_0)),
+        onDraftHasTextChange.useState(() => ConjureComposerDraftStore.getDraft(projectId)),
         2,
       );
       let str = tmp2[0];
-      closure_7 = tmp3;
+      const tmp3 = tmp2[1];
+      let closure_7 = tmp3;
       let items = [projectId];
       const callback = onDraftHasTextChange.useCallback((draft) => {
-        ConjureActionCreators.setComposerDraft(closure_0, draft);
+        const obj = ConjureActionCreators;
+        obj.setComposerDraft(projectId, draft);
         closure_7(draft);
       }, items);
       const tmp5 = "" !== str.trim();
-      closure_9 = tmp5;
+      let closure_9 = tmp5;
       const items1 = [tmp5, onDraftHasTextChange];
       const effect = onDraftHasTextChange.useEffect(() => {
         let tmpResult;
@@ -2266,7 +2091,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmpResult;
       }, items1);
-      [num, tmp8] = onInterrupt(onDraftHasTextChange.useState(null), 2);
+      let tmp7 = onInterrupt(onDraftHasTextChange.useState(null), 2);
+      [num, tmp8] = tmp7;
       ConjureComposerDraftStore = tmp8;
       const ref = onDraftHasTextChange.useRef(null);
       const tmp10 = onInterrupt(onDraftHasTextChange.useState(projectId), 2);
@@ -2277,18 +2103,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const items2 = [projectId];
       const effect1 = obj.useEffect(() => {
-        ChatInputNativeCommandsDefault.setText(ref.current, ConjureComposerDraftStore.getDraft(closure_0));
+        const obj = ChatInputNativeCommandsDefault;
+        obj.setText(ref.current, ConjureComposerDraftStore.getDraft(projectId));
       }, items2);
-      const tmp7 = onInterrupt(onDraftHasTextChange.useState(null), 2);
-      const conjureAttachmentDraftList = require("conjureAttachmentDrafts").useConjureAttachmentDraftList(
-        projectId,
-        "chat",
-      );
-      let obj2 = require("conjureAttachmentDrafts");
-      [boxFocused, c12] = onInterrupt(onDraftHasTextChange.useState(false), 2);
-      let tmpResult = onInterrupt(onDraftHasTextChange.useState(false), 2);
-      [tmp20, c13] = onInterrupt(onDraftHasTextChange.useState(null), 2);
+      const tmp16 = projectId;
+      let obj2 = projectId(running[19]);
+      const conjureAttachmentDraftList = obj2.useConjureAttachmentDraftList(projectId, "chat");
+      let tmpResult = tmp(obj.useState(false), 2);
+      [boxFocused, c12] = tmpResult;
+      [tmp20, c13] = tmp(obj.useState(null), 2);
       const items3 = [callback, str];
+      tmp(obj.useState(null), 2);
       const callback1 = obj.useCallback((nativeEvent) => {
         _undefined(nativeEvent.nativeEvent.height);
       }, []);
@@ -2298,80 +2123,88 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           callback(nativeEvent.text);
         }
       }, items3);
-      const tmpResult2 = onInterrupt(onDraftHasTextChange.useState(null), 2);
-      const token = require("useToken").useToken(canSend(running[8]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-      let obj3 = require("useToken");
-      const token1 = require("useToken").useToken(canSend(running[8]).modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
-      let obj4 = require("useToken");
-      const token2 = require("useToken").useToken(canSend(running[8]).modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
-      let obj5 = require("useToken");
-      const token3 = require("useToken").useToken(canSend(running[8]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
-      let obj6 = require("useToken");
+      let obj3 = projectId(running[14]);
+      const token = obj3.useToken(canSend(running[8]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+      let obj4 = projectId(running[14]);
+      const token1 = obj4.useToken(canSend(running[8]).modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
+      let obj5 = projectId(running[14]);
+      const token2 = obj5.useToken(canSend(running[8]).modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
+      let obj6 = projectId(running[14]);
+      const token3 = obj6.useToken(canSend(running[8]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
       const items4 = [callback];
-      const stateFromStores = require("initialize").useStateFromStores(items4, () => callback.useReducedMotion);
+      const obj7 = projectId(running[20]);
+      const stateFromStores = obj7.useStateFromStores(items4, () => callback.useReducedMotion);
       const bound = Math.max(0, (token1 - token) / 2);
+      let tmp31 = c13;
       const bound1 = Math.min(closure_14, Math.max(0, (token - 20) / 2));
-      const bound2 = Math.min(tmp31, Math.max(token, num));
+      let _Math = Math;
+      const _Math2 = Math;
+      const minResult = min(tmp31, max(token, num));
       const tmp33 = callback3();
       closure_14 = tmp33;
       const items5 = [projectId];
       callback3 = obj.useCallback((arr) => {
         if (0 !== arr.length) {
-          let obj2 = require;
-          let result = dependencyMap;
-          const diff =
-            ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
-            conjureAttachmentDrafts.getConjureAttachmentDrafts(closure_0, "chat").length;
+          const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE;
+          let obj3 = conjureAttachmentDrafts;
+          const diff = CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - obj3.getConjureAttachmentDrafts(projectId, "chat").length;
           if (arr.length > diff) {
-            const intl = obj2(1126).intl;
-            let obj = { count: obj2(6747).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
-            _undefined3(intl.formatToPlainString(_modDef3723.Q0aCVZ, obj));
+            const intl = intl4.intl;
+            const formatToPlainString = intl.formatToPlainString;
+            let obj = { count: ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+            const Q0aCVZ = _modDef3723.Q0aCVZ;
+            _undefined3(formatToPlainString(Q0aCVZ, obj));
             const _Math = Math;
             const substr = arr.slice(0, Math.max(0, diff));
-            arr = substr;
           } else {
             _undefined3(null);
           }
           const mapped = arr.map((name) => {
-            const obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
+            let obj4;
+            let obj6;
+            let tmpResult;
+            let closure_0 = name;
+            let obj = { name: name.name, contentType: name.contentType, previewUrl: name.uri };
             if (null != name.size) {
+              let obj3;
+              const obj2 = projectId(running[21]);
               if (!obj2.isConjureAttachmentWithinLimit(name.size, name.contentType)) {
-                let obj3 = { draft: null };
-                const obj4 = {};
+                obj3 = { draft: obj4 };
+                obj4 = { status: "error", errorText: tmpResult.conjureAttachmentTooLargeText(name.contentType) };
                 const merged = Object.assign(obj);
-                obj4.status = "error";
-                obj4.errorText = projectId(running[19]).conjureAttachmentTooLargeText(name.contentType);
-                obj3.draft = obj4;
-                const tmpResult = projectId(running[19]);
+                tmpResult = projectId(running[19]);
               }
               return obj3;
             }
-            const obj5 = { draft: null, upload: null };
-            const obj6 = {};
-            const merged1 = Object.assign(obj);
-            obj6.status = "uploading";
-            obj5.draft = obj6;
-            obj5.upload = function upload() {
-              return name(running[22]).uploadConjurePickedFile(projectId, name);
+            const obj5 = {
+              draft: obj6,
+              upload() {
+                const obj = projectId(running[22]);
+                return obj.uploadConjurePickedFile(closure_2_0, name);
+              },
             };
+            obj6 = { status: "uploading" };
+            const merged1 = Object.assign(obj);
             obj3 = obj5;
           });
-          obj2 = obj2(16723);
-          result = obj2.addConjureAttachmentDrafts(closure_0, "chat", mapped);
+          const tmp10Result = conjureAttachmentDrafts;
+          const result = tmp10Result.addConjureAttachmentDrafts(projectId, "chat", mapped);
         }
       }, items5);
       const items6 = [projectId];
-      getItemKey = obj.useCallback(
-        (arg0) => conjureAttachmentDrafts.removeConjureAttachmentDraft(closure_0, "chat", arg0),
-        items6,
-      );
+      getItemKey = obj.useCallback((arg0) => {
+        const obj = conjureAttachmentDrafts;
+        return obj.removeConjureAttachmentDraft(projectId, "chat", arg0);
+      }, items6);
       const items7 = [callback3];
       callback4 = obj.useCallback(
         onSend(function* () {
-          if (dependencyMap === 2) {
-            dependencyMap = 3;
+          let c2;
+          let closure_0;
+          if (running === 2) {
+            running = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
+          } else if (tmp2 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -2382,43 +2215,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           } else {
             try {
-              dependencyMap = 2;
+              running = 2;
               if (0 === c1) {
                 if (arg0 === 1) {
-                  dependencyMap = 3;
+                  running = 3;
                   throw value;
                 } else if (arg0 === 2) {
-                  dependencyMap = 3;
+                  running = 3;
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
                   projectId = callback3;
                   c1 = 1;
-                  dependencyMap = 1;
+                  const obj2 = projectId(running[22]);
+                  running = 1;
                   const obj5 = {
-                    value: projectId(16722).pickConjurePhotos(
-                      "any",
-                      projectId(6747).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
-                    ),
+                    value: obj2.pickConjurePhotos("any", projectId(running[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE),
                     done: false,
                   };
                   return obj5;
                 }
               } else if (arg0 === 1) {
-                dependencyMap = 3;
+                running = 3;
                 throw value;
               } else if (arg0 === 2) {
-                dependencyMap = 3;
+                running = 3;
                 const obj = { value, done: true };
                 return obj;
               } else {
                 projectId(value);
-                dependencyMap = 3;
+                running = 3;
                 return { value: "IconComponent", done: null };
               }
-            } catch (tmp10) {
-              dependencyMap = tmp;
-              throw tmp10;
+            } catch (tmp9) {
+              running = 3;
+              throw tmp9;
             }
           }
         }),
@@ -2426,30 +2257,34 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       const items8 = [callback3, canSend];
       const callback5 = obj.useCallback((nativeEvent) => {
+        let obj2;
+        let type;
+        let url;
         ({ url, type } = nativeEvent.nativeEvent);
         if (canSend) {
-          const obj = { uri: url, name: conjurePickedFiles.pickedName(url, null), contentType: null, size: null };
+          const obj = { uri: url, name: obj2.pickedName(url, null), contentType: type, size: null };
+          obj2 = conjurePickedFiles;
           if (type == null) {
             type = "application/octet-stream";
           }
-          obj.contentType = type;
           const items = [obj];
           callback3(items);
         }
       }, items8);
-      _require = onSend((types) => {
-        c3 = 0;
-        c4 = 0;
+      const useCallback = obj.useCallback;
+      projectId = onSend((types) => {
+        let c3 = 0;
+        let c4 = 0;
         return (function* (arg0) {
           if (c4 === 2) {
             c4 = 3;
+            str = "Generator functions may not be called on executing generators";
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
+          } else if (tmp3 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              const obj3 = { value, done: true };
-              return obj3;
+              return { value, done: true };
             } else {
               return { value: "IconComponent", done: null };
             }
@@ -2462,16 +2297,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   throw value;
                 } else if (arg0 === 2) {
                   c4 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
+                  return { value, done: true };
                 } else {
-                  closure_2 = tmp5;
-                  closure_1 = tmp2;
-                  closure_129_0 = undefined;
-                  const obj5 = { pickMultiple: true, types };
+                  closure_2 = tmp4;
+                  closure_1 = tmp;
+                  types = undefined;
+                  let obj2 = types(running[23]);
                   c3 = 1;
                   c4 = 1;
-                  const obj6 = { value: types(running[23]).handleDocumentSelection(obj5), done: false };
+                  const obj5 = { pickMultiple: true, types };
+                  const obj6 = { value: obj2.handleDocumentSelection(obj5), done: false };
                   return obj6;
                 }
               } else if (arg0 === 1) {
@@ -2482,26 +2317,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let obj = { value, done: true };
                 return obj;
               } else {
-                closure_129_0 = value;
-                if (null != closure_129_0) {
-                  callback3(
-                    closure_129_0.map((uri) => {
-                      const obj = {
-                        uri: uri.uri,
-                        name: types(closure_1_2[22]).pickedName(uri.uri, uri.name),
-                        contentType: null,
-                        size: null,
-                      };
+                types = value;
+                if (null != types) {
+                  closure_1_15(
+                    types.map((uri) => {
+                      let obj2;
+                      const obj = { uri: uri.uri, name: obj2.pickedName(uri.uri, uri.name), contentType: str, size };
                       str = uri.type;
+                      obj2 = types(closure_1_2[22]);
                       if (str == null) {
                         str = "application/octet-stream";
                       }
-                      obj.contentType = str;
-                      let size = uri.size;
+                      size = uri.size;
                       if (size == null) {
                         size = null;
                       }
-                      obj.size = size;
                       return obj;
                     }),
                   );
@@ -2509,84 +2339,78 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 c4 = 3;
                 return { value: "IconComponent", done: null };
               }
-            } catch (tmp17) {
-              c4 = tmp;
-              throw tmp17;
+            } catch (tmp16) {
+              c4 = 3;
+              throw tmp16;
             }
           }
         })();
       });
       const items9 = [callback3];
-      callback6 = obj.useCallback(function () {
-        const self = this;
-        const apply = closure_0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
+      callback6 = useCallback(function () {
+        return closure_0(...arguments);
       }, items9);
       const items10 = [callback4, callback6];
       const memo = obj.useMemo(() => {
-        const obj = { label: null, IconComponent: null, action: null };
-        const intl = util.intl;
-        obj.label = intl.string(_modDef3723["51+9lc"]);
-        obj.IconComponent = ImagesIcon.ImagesIcon;
-        obj.action = callback4;
+        let intl;
+        let intl2;
+        let intl3;
+        const obj = {
+          label: intl.string(_modDef3723["51+9lc"]),
+          IconComponent: ImagesIcon.ImagesIcon,
+          action: callback4,
+        };
+        intl = intl4.intl;
         let items = [obj, ,];
-        const obj2 = { label: null, IconComponent: null, action: null };
-        const intl2 = util.intl;
-        obj2.label = intl2.string(_modDef3723["10ljr2"]);
-        obj2.IconComponent = MusicIcon.MusicIcon;
-        obj2.action = function action() {
-          const items = [closure_0(running[26]).types.audio];
-          return callback6(items);
+        const obj2 = {
+          label: intl2.string(_modDef3723["10ljr2"]),
+          IconComponent: MusicIcon.MusicIcon,
+          action() {
+            const items = [projectId(running[26]).types.audio];
+            return callback6(items);
+          },
         };
+        intl2 = intl4.intl;
         items[1] = obj2;
-        const obj3 = { label: null, IconComponent: null, action: null };
-        const intl3 = util.intl;
-        obj3.label = intl3.string(_modDef3723.aotDee);
-        obj3.IconComponent = FileUpIcon.FileUpIcon;
-        obj3.action = function action() {
-          return callback6();
+        const obj3 = {
+          label: intl3.string(_modDef3723.aotDee),
+          IconComponent: FileUpIcon.FileUpIcon,
+          action() {
+            return callback6();
+          },
         };
+        intl3 = intl4.intl;
         items[2] = obj3;
         return items;
       }, items10);
-      const obj7 = require("initialize");
+      const everyResult = conjureAttachmentDraftList.every((status) => "ready" === status.status);
       const tmp40 = "" !== str.trim() || conjureAttachmentDraftList.length > 0;
       closure_19 = tmp40;
-      let tmp41 = canSend;
-      if (canSend) {
-        tmp41 = tmp40;
-      }
-      if (tmp41) {
-        tmp41 = everyResult;
-      }
-      c20 = tmp41;
-      const items11 = [onSend, projectId, tmp41, callback, str];
+      sendable = tmp41;
+      const items11 = [onSend, projectId, canSend && tmp40 && everyResult, callback, str];
       callback7 = obj.useCallback(() => {
-        if (c20) {
-          const result = conjureAttachmentDrafts.takeConjureAttachmentRefs(closure_0, "chat");
-          let tmp6;
+        if (sendable) {
+          const obj = conjureAttachmentDrafts;
+          const result = obj.takeConjureAttachmentRefs(projectId, "chat");
+          let tmp7;
           if (result.length > 0) {
-            tmp6 = result;
+            tmp7 = result;
           }
-          onSend("chat", tmp6);
+          onSend("chat", tmp7);
           callback("");
-          ChatInputNativeCommandsDefault.setText(ref.current, "");
+          const obj2 = ChatInputNativeCommandsDefault;
+          obj2.setText(ref.current, "");
           _undefined3(null);
           _undefined(null);
         }
       }, items11);
-      everyResult = conjureAttachmentDraftList.every((status) => "ready" === status.status);
       const items12 = [closure_9];
       const items13 = [projectId];
-      stateFromStores1 = require("initialize").useStateFromStores(
+      const tmp16Result = tmp16(running[20]);
+      stateFromStores1 = tmp16Result.useStateFromStores(
         items12,
         () => {
-          const modelSettings = ConjureConnectionStore.getModelSettings(closure_0);
+          const modelSettings = ConjureConnectionStore.getModelSettings(projectId);
           let tierSettings;
           if (modelSettings != null) {
             tierSettings = modelSettings.tierSettings;
@@ -2597,13 +2421,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       const items14 = [projectId];
       callback8 = obj.useCallback(() => {
-        const obj2 = {
-          content: closure_2_11(ConjureModelSettingsSheetDefault, { projectId }),
+        let obj2;
+        const tmp = ActionSheetActionCreators;
+        const showActionSheet = tmp.showActionSheet;
+        const obj = {
+          content: unpackModuleId(ConjureModelSettingsSheetDefault, obj2),
           key: ConjureModelSettingsSheet.CONJURE_MODEL_SETTINGS_SHEET_KEY,
         };
-        ActionSheetActionCreators.showActionSheet(obj2);
+        obj2 = { projectId };
+        showActionSheet(obj);
       }, items14);
-      const items15 = [tmp40, running, stateFromStores1, tmp41];
+      const items15 = [tmp40, running, stateFromStores1, canSend && tmp40 && everyResult];
       const memo1 = obj.useMemo(() => {
         str = "send";
         let str2 = "send";
@@ -2617,82 +2445,93 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           str2 = str3;
         }
-        const items = [{ key: str2, sendable }];
+        const items = [];
+        const obj = { key: str2, sendable };
+        items[0] = obj;
         return items;
       }, items15);
       const items16 = [tmp33, canSend, onInterrupt, callback8, callback7];
       callback9 = obj.useCallback((key) => {
+        let intl;
+        let intl2;
+        let intl3;
+        let tmp14;
         if ("stop" === key.key) {
           const obj2 = {
             style: closure_14.trailingButton,
             IconComponent: StopIcon.StopIcon,
             onPress: onInterrupt,
             disabled: null == onInterrupt,
-            accessibilityLabel: null,
+            accessibilityLabel: intl2.string(_modDef3723.wiguT0),
           };
-          const intl2 = util.intl;
-          obj2.accessibilityLabel = intl2.string(_modDef3723.wiguT0);
-          let tmp14 = closure_2_11(ChatInputActionButtonDefault, obj2);
+          const tmp18 = ChatInputActionButtonDefault;
+          intl2 = intl4.intl;
+          tmp14 = unpackModuleId(tmp18, obj2);
         } else if ("models" === key.key) {
           const obj = {
             style: closure_14.trailingButton,
             IconComponent: FiltersHorizontalIcon.FiltersHorizontalIcon,
             onPress: callback8,
             disabled: !canSend,
-            accessibilityLabel: null,
+            accessibilityLabel: intl.string(_modDef3723["3E7Yc0"]),
           };
-          const intl = util.intl;
-          obj.accessibilityLabel = intl.string(_modDef3723["3E7Yc0"]);
-          tmp14 = closure_2_11(ChatInputActionButtonDefault, obj);
+          const tmp4 = ChatInputActionButtonDefault;
+          intl = intl4.intl;
+          tmp14 = unpackModuleId(tmp4, obj);
         } else {
-          const obj5 = {
-            active: true,
-            style: null,
-            activeStyle: null,
-            activeIconStyle: null,
-            IconComponent: null,
-            accessibilityLabel: null,
-            onPress: null,
-            disabled: null,
-          };
           ({
             trailingButton: obj3.style,
             sendButtonActive: obj3.activeStyle,
             sendIconActive: obj3.activeIconStyle,
           } = closure_14);
-          obj5.IconComponent = SendMessageIcon.SendMessageIcon;
-          const intl3 = util.intl;
-          obj5.accessibilityLabel = intl3.string(util.t.TXNS7S);
-          obj5.onPress = callback7;
-          obj5.disabled = !key.sendable;
-          tmp14 = closure_2_11(ChatInputActionButtonDefault, obj5);
+          const obj5 = {
+            active: true,
+            style: null,
+            activeStyle: null,
+            activeIconStyle: null,
+            IconComponent: SendMessageIcon.SendMessageIcon,
+            accessibilityLabel: intl3.string(intl4.t.TXNS7S),
+            onPress: callback7,
+            disabled: !key.sendable,
+          };
+          const tmp31 = ChatInputActionButtonDefault;
+          intl3 = intl4.intl;
+          tmp14 = unpackModuleId(tmp31, obj5);
         }
         return tmp14;
       }, items16);
       const items17 = [callback9];
-      const callback10 = obj.useCallback((arg0, arg1, state, cleanup) => {
+      const callback10 = obj.useCallback((id, arg1, state, cleanup) => {
         const obj = { state, cleanup, withBounce: true, children: callback9(arg1) };
-        return closure_2_11(ChatInputActionButtonTransitionItemDefault, obj, arg0);
+        const tmp = ChatInputActionButtonTransitionItemDefault;
+        return unpackModuleId(tmp, obj, id);
       }, items17);
       const callback11 = obj.useCallback(() => _undefined2(true), []);
-      const obj8 = { style: tmp33.container, children: null };
       let tmp52 = null;
+      const obj8 = { style: tmp33.container, children: items18 };
       const callback12 = obj.useCallback(() => _undefined2(false), []);
       if (null != tmp20) {
         const obj9 = { variant: "text-xs/normal", color: "text-feedback-critical", children: tmp20 };
         tmp52 = ref(tmp16(tmp17[35]).Text, obj9);
       }
-      const items18 = [
+      items18 = [
         tmp52,
         conjureAttachmentDraftList.map((errorText) => {
+          let intl;
+          let obj3;
           let tmp = null;
           if (null != errorText.errorText) {
-            const obj = { variant: "text-xs/normal", color: "text-feedback-critical", lineClamp: 2, children: null };
-            const intl = projectId(running[10]).intl;
+            const obj = {
+              variant: "text-xs/normal",
+              color: "text-feedback-critical",
+              lineClamp: 2,
+              children: intl.formatToPlainString(canSend(running[11]).U2WbGx, obj3),
+            };
+            const Text = projectId(running[35]).Text;
+            intl = projectId(running[10]).intl;
+            obj3 = { name: null, error: null };
             ({ name: obj2.name, errorText: obj2.error } = errorText);
-            obj.children = intl.formatToPlainString(canSend(running[11]).U2WbGx, { name: null, error: null });
-            tmp = ref(projectId(running[35]).Text, obj, errorText.localId);
-            const obj3 = { name: null, error: null };
+            tmp = ref(Text, obj, errorText.localId);
           }
           return tmp;
         }),
@@ -2703,115 +2542,89 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj10 = {
           visible: true,
           style: tmp33.draftCarousel,
-          children: conjureAttachmentDraftList.map((draft) =>
-            closure_2_11(closure_18, { draft, onRemove }, draft.localId),
-          ),
+          children: conjureAttachmentDraftList.map((draft) => {
+            const obj = { draft, onRemove };
+            return unpackModuleId(closure_18, obj, draft.localId);
+          }),
         };
-        tmp54 = ref(tmp16(tmp17[16]).ImageCarouselRow, obj10);
+        const ImageCarouselRow = tmp16(tmp17[16]).ImageCarouselRow;
+        tmp54 = ref(ImageCarouselRow, obj10);
       }
       items18[2] = tmp54;
       const items19 = [tmp33.box];
       if (boxFocused) {
         boxFocused = tmp33.boxFocused;
       }
-      const obj11 = { style: items19, children: null };
       items19[1] = boxFocused;
-      const obj12 = { style: tmp33.boxContents, children: null };
-      const obj13 = {
-        style: { paddingBottom: bound },
-        children: ref(require("ContextMenu").ContextMenu, {
-          items: memo,
-          align: "above",
-          children(arg0) {
-            ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
-            const obj = {
-              ref,
-              IconComponent: PlusLargeIcon.PlusLargeIcon,
-              onPress,
-              disabled: !canSend,
-              accessibilityLabel: null,
-              accessibilityActions: null,
-              onAccessibilityAction: null,
-            };
-            const intl = util.intl;
-            obj.accessibilityLabel = intl.string(_modDef3723.hFS71Z);
-            obj.accessibilityActions = accessibilityActions;
-            obj.onAccessibilityAction = onAccessibilityAction;
-            return closure_2_11(ChatInputActionButtonDefault, obj);
-          },
-        }),
-      };
-      const items20 = [ref(closure_7, obj13), ,];
-      const obj15 = { style: null, children: null };
-      const items21 = [tmp33.input, { marginBottom: bound, height: bound2 }];
-      obj15.style = items21;
-      const obj16 = {
-        ref,
-        editable: canSend,
-        shouldShowCursor: true,
-        maxHeight,
-        verticalInset: bound1,
-        placeholder: null,
-        accessibilityLabel: null,
-        onBeginFocus: null,
-        onEndBlur: null,
-        onChangeContentSize: null,
-        onSelectionOrTextChange: null,
-        onPasteImage: null,
-      };
-      const obj14 = {
+      const obj11 = { style: items19, children: c12(closure_7, obj12) };
+      obj12 = { style: tmp33.boxContents, children: items20 };
+      const obj13 = { style: { paddingBottom: bound }, children: ref(tmp16(running[37]).ContextMenu, obj14) };
+      obj14 = {
         items: memo,
         align: "above",
         children(arg0) {
+          let accessibilityActions;
+          let intl;
+          let onAccessibilityAction;
+          let onPress;
           ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
           const obj = {
             ref,
             IconComponent: PlusLargeIcon.PlusLargeIcon,
             onPress,
             disabled: !canSend,
-            accessibilityLabel: null,
-            accessibilityActions: null,
-            onAccessibilityAction: null,
+            accessibilityLabel: intl.string(_modDef3723.hFS71Z),
+            accessibilityActions,
+            onAccessibilityAction,
           };
-          const intl = util.intl;
-          obj.accessibilityLabel = intl.string(_modDef3723.hFS71Z);
-          obj.accessibilityActions = accessibilityActions;
-          obj.onAccessibilityAction = onAccessibilityAction;
-          return closure_2_11(ChatInputActionButtonDefault, obj);
+          const tmp = ChatInputActionButtonDefault;
+          intl = intl4.intl;
+          return unpackModuleId(tmp, obj);
         },
       };
-      const tmp16Result = require("initialize");
+      items20 = [ref(closure_7, obj13), ,];
+      const obj15 = { style: items21, children: ref(tmp23Result, obj16) };
+      items21 = [tmp33.input, { marginBottom: bound, height: minResult }];
+      obj16 = {
+        ref,
+        editable: canSend,
+        shouldShowCursor: true,
+        maxHeight: tmp31,
+        verticalInset: bound1,
+        placeholder: string(zZ9NgM),
+        accessibilityLabel: intl2.string(canSend(running[11]).ldNl9x),
+        onBeginFocus: callback11,
+        onEndBlur: callback12,
+        onChangeContentSize: callback1,
+        onSelectionOrTextChange: callback2,
+        onPasteImage: callback5,
+      };
+      tmp23Result = canSend(running[38]);
       let intl = tmp16(tmp17[10]).intl;
+      string = intl.string;
       const tmp23Result2 = canSend(running[11]);
       if (flag) {
-        let zZ9NgM = tmp23Result2.mPB3eo;
-      } else if (!canSend) {
+        zZ9NgM = tmp23Result2.mPB3eo;
+      } else if (canSend) {
+        zZ9NgM = running ? tmp23Result2["0BJa/0"] : tmp23Result2.TEeU7z;
+      } else {
         zZ9NgM = tmp23Result2.zZ9NgM;
       }
-      obj16.placeholder = intl.string(zZ9NgM);
-      let intl2 = tmp16(tmp17[10]).intl;
-      obj16.accessibilityLabel = intl2.string(canSend(running[11]).ldNl9x);
-      obj16.onBeginFocus = callback11;
-      obj16.onEndBlur = callback12;
-      obj16.onChangeContentSize = callback1;
-      obj16.onSelectionOrTextChange = callback2;
-      obj16.onPasteImage = callback5;
-      obj15.children = ref(canSend(running[38]), obj16);
+      intl2 = tmp16(tmp17[10]).intl;
       items20[1] = ref(closure_7, obj15);
-      const obj17 = { style: null, children: null };
-      const items22 = [tmp33.trailingSlot, { width: token2 + 2 * token3, height: token1 }];
-      obj17.style = items22;
+      const obj17 = { style: items22, children: callback9Result };
+      items22 = [tmp33.trailingSlot, { width: token2 + 2 * token3, height: token1 }];
       if (stateFromStores) {
-        let callback9Result = callback9(memo1[0]);
+        callback9Result = callback9(memo1[0]);
       } else {
         const obj18 = { items: memo1, renderItem: callback10, getItemKey };
         callback9Result = tmp56(tmp16(tmp17[39]).TransitionGroup, obj18);
       }
-      obj17.children = callback9Result;
       items20[2] = ref(closure_7, obj17);
-      obj12.children = items20;
-      obj11.children = c12(closure_7, obj12);
       items18[3] = ref(closure_7, obj11);
-      obj8.children = items18;
       return c12(closure_7, obj8);
     };
+size = size_mod;
+let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureNativeComposer.tsx");
+
+export default tmp6;

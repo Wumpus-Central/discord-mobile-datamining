@@ -1,95 +1,116 @@
 // discord_app/modules/collectibles/hooks/useCollectibleProfileOverrides.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import AvatarDecorationRecord from "../records/AvatarDecorationRecord.tsx";
+import ProfileEffectRecord from "../records/ProfileEffectRecord.tsx";
+import ProfileFrameRecord from "../records/ProfileFrameRecord.tsx";
 import useShopProductItems from "useShopProductItems.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const isAvatarDecorationRecord = fn(7058).isAvatarDecorationRecord;
-const isProfileEffectRecord = fn(7059).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7060).isProfileFrameRecord;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectibleProfileOverrides.tsx");
-
-export const useCollectibleProfileOverrides = ReactCompilerGating.isReactCompilerEnabled()
-  ? (items, first1) => {
-      const cResult = c.c(9);
-      if (cResult[0] !== items) {
-        const productItems = useShopProductItems.getProductItems(items);
-        cResult[0] = items;
-        cResult[1] = productItems;
-        let tmp4 = productItems;
+const isAvatarDecorationRecord = AvatarDecorationRecord.isAvatarDecorationRecord;
+const isProfileEffectRecord = ProfileEffectRecord.isProfileEffectRecord;
+const isProfileFrameRecord = ProfileFrameRecord.isProfileFrameRecord;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (type, first1) => {
+      let firstAvatarDecoration;
+      let firstProfileEffect;
+      let firstProfileFrame;
+      let obj3;
+      let tmp4;
+      const obj = react2;
+      const cResult = obj.c(9);
+      if (cResult[0] !== type) {
         const tmpResult = useShopProductItems;
+        const productItems = tmpResult.getProductItems(type);
+        cResult[0] = type;
+        cResult[1] = productItems;
+        tmp4 = productItems;
       } else {
         tmp4 = cResult[1];
       }
       ({ firstAvatarDecoration, firstProfileEffect, firstProfileFrame } = tmp4);
-      const tmp6 = items.type === CollectiblesItemType.CollectiblesItemType.BUNDLE;
+      const tmp6 = type.type === CollectiblesItemType.CollectiblesItemType.BUNDLE;
       if (cResult[2] === firstAvatarDecoration) {
         if (cResult[3] === firstProfileEffect) {
           if (cResult[4] === firstProfileFrame) {
             if (cResult[5] === tmp6) {
-              if (cResult[6] === items.items) {
+              if (cResult[6] === type.items) {
+                let tmp7;
                 if (cResult[7] === first1) {
-                  return cResult[8];
+                  tmp7 = cResult[8];
                 }
+                return tmp7;
               }
             }
           }
         }
       }
       if (tmp6) {
+        obj3 = {
+          avatarDecoration: firstAvatarDecoration,
+          profileEffect: firstProfileEffect,
+          profileFrame: firstProfileFrame,
+        };
         const obj2 = {
           avatarDecoration: firstAvatarDecoration,
           profileEffect: firstProfileEffect,
           profileFrame: firstProfileFrame,
         };
-        let obj3 = obj2;
       } else {
         obj3 = {};
       }
       let first = first1;
       if (!tmp6) {
-        first = items.items[0];
+        first = type.items[0];
       }
       if (isAvatarDecorationRecord(first)) {
         obj3.avatarDecoration = first;
-        cResult[2] = firstAvatarDecoration;
-        cResult[3] = firstProfileEffect;
-        cResult[4] = firstProfileFrame;
-        cResult[5] = tmp6;
-        items = items.items;
-        cResult[6] = items;
-        cResult[7] = first1;
-        cResult[8] = obj3;
-      } else if (!isProfileEffectRecord(first)) {
-        if (isProfileFrameRecord(first)) {
-          obj3.profileFrame = first;
-        }
+      } else if (isProfileEffectRecord(first)) {
+        obj3.profileEffect = first;
+      } else if (isProfileFrameRecord(first)) {
+        obj3.profileFrame = first;
       }
-      obj3.profileEffect = first;
+      cResult[2] = firstAvatarDecoration;
+      cResult[3] = firstProfileEffect;
+      cResult[4] = firstProfileFrame;
+      cResult[5] = tmp6;
+      cResult[6] = type.items;
+      cResult[7] = first1;
+      cResult[8] = obj3;
+      tmp7 = obj3;
     }
   : (arg0, arg1) => {
       const type = arg0;
-      closure_1 = arg1;
+      let closure_1 = arg1;
       const items = [arg0, arg1];
-      return noop.useMemo(() => {
-        const productItems = useShopProductItems.getProductItems(type);
+      return react.useMemo(() => {
+        let first;
+        let firstAvatarDecoration;
+        let firstProfileEffect;
+        let firstProfileFrame;
+        let obj3;
+        const obj = useShopProductItems;
+        const productItems = obj.getProductItems(type);
         ({ firstAvatarDecoration, firstProfileEffect, firstProfileFrame } = productItems);
         const tmp3 = type.type === CollectiblesItemType.CollectiblesItemType.BUNDLE;
         if (tmp3) {
+          obj3 = {
+            avatarDecoration: firstAvatarDecoration,
+            profileEffect: firstProfileEffect,
+            profileFrame: firstProfileFrame,
+          };
           const obj2 = {
             avatarDecoration: firstAvatarDecoration,
             profileEffect: firstProfileEffect,
             profileFrame: firstProfileFrame,
           };
-          let obj3 = obj2;
         } else {
           obj3 = {};
         }
         if (tmp3) {
-          let first = closure_1;
+          first = closure_1;
         } else {
           first = type.items[0];
         }
@@ -103,3 +124,6 @@ export const useCollectibleProfileOverrides = ReactCompilerGating.isReactCompile
         return obj3;
       }, items);
     };
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectibleProfileOverrides.tsx");
+
+export const useCollectibleProfileOverrides = tmp2;

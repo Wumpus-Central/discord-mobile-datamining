@@ -3,11 +3,10 @@ import ThemeContext from "../components/ThemeContextProvider/ThemeContext.tsx";
 import ReactCompilerGating from "../../../../../discord_app/modules/react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = size.fileFinishedImporting("../discord_common/js/packages/design/hooks/useBadgeTextVariant.native.tsx");
-
-export const useBadgeTextVariant = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const themeContext = ThemeContext.useThemeContext();
+      const obj = ThemeContext;
+      const themeContext = obj.useThemeContext();
       let enabledExperiments;
       if (themeContext != null) {
         enabledExperiments = themeContext.enabledExperiments;
@@ -23,7 +22,8 @@ export const useBadgeTextVariant = ReactCompilerGating.isReactCompilerEnabled()
       return str2;
     }
   : () => {
-      const themeContext = ThemeContext.useThemeContext();
+      const obj = ThemeContext;
+      const themeContext = obj.useThemeContext();
       let enabledExperiments;
       if (themeContext != null) {
         enabledExperiments = themeContext.enabledExperiments;
@@ -38,3 +38,6 @@ export const useBadgeTextVariant = ReactCompilerGating.isReactCompilerEnabled()
       }
       return str2;
     };
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/hooks/useBadgeTextVariant.native.tsx");
+
+export const useBadgeTextVariant = tmp2;

@@ -1,32 +1,38 @@
 // discord_app/modules/guild_role_subscriptions/useIsViewingPremiumMemberships.tsx
-import c from "../../../_runtime/00576_c.js";
+import react from "../../../_runtime/00576_react.js";
 import Constants from "../../Constants.tsx";
 import ChannelConstants from "../channel/ChannelConstants.tsx";
-import _mod4710 from "../../../_runtime/metro/04710__.js";
+import MemoryRouter from "../../../_runtime/04710_MemoryRouter.js";
 import RouteUtils from "../routing/RouteUtils.tsx";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const Routes = Constants.Routes;
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useIsViewingPremiumMemberships.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(1);
+      let first;
+      const obj = react;
+      const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const CHANNEL = Routes.CHANNEL;
         const RouteParam = RouteUtils.RouteParam;
-        const CHANNELResult = Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS);
+        const CHANNELResult = CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS);
         cResult[0] = CHANNELResult;
-        let first = CHANNELResult;
+        first = CHANNELResult;
       } else {
         first = cResult[0];
       }
-      return null != _mod4710.useRouteMatch(first);
+      const tmpResult = MemoryRouter;
+      return null != tmpResult.useRouteMatch(first);
     }
   : () => {
+      const useRouteMatch = MemoryRouter.useRouteMatch;
+      const CHANNEL = Routes.CHANNEL;
+      MemoryRouter;
       const RouteParam = RouteUtils.RouteParam;
-      return (
-        null != _mod4710.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS))
-      );
+      return null != useRouteMatch(CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS));
     };
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useIsViewingPremiumMemberships.tsx");
+
+export default tmp2;

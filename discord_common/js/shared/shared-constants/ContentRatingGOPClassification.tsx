@@ -1,9 +1,9 @@
 // discord_common/js/shared/shared-constants/ContentRatingGOPClassification.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { ALL: new Set([1]), IS_ADULT: null };
-const set = new Set([1]);
-obj.IS_ADULT = new Set([1]);
+const obj = { ALL: new Set([1]), IS_ADULT: new Set([1]) };
+new Set([1]);
+new Set([1]);
 const result = size.fileFinishedImporting(
   "../discord_common/js/shared/shared-constants/ContentRatingGOPClassification.tsx",
 );

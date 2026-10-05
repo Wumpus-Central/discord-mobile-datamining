@@ -1,26 +1,28 @@
 // discord_app/modules/age_assurance/ManualAgeAssuranceFallbackExperiment.tsx
+import SafetyHubUtils from "../safety_hub/SafetyHubUtils.tsx";
 import SafetyHubStore from "../safety_hub/SafetyHubStore.tsx";
+import ApexExperiment from "../experiments/apex/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const ApexExperiment = fn(1440);
-let obj2 = {
+let obj2;
+let obj = {
   kind: "user",
   name: "2026-07-manual-age-assurance-fallback",
   defaultConfig: { enabled: false },
-  variations: null,
+  variations: obj2,
 };
-const obj3 = { 1: null };
-obj3[1] = { enabled: true };
-obj2.variations = obj3;
-const config = ApexExperiment.createApexExperiment(obj2);
-const size = fn(2);
+obj2 = { 1: null };
+obj2[1] = { enabled: true };
+const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/age_assurance/ManualAgeAssuranceFallbackExperiment.tsx");
 
 export const isManualAgeAssuranceFallbackEnabled = function isManualAgeAssuranceFallbackEnabled(
   isAgeVerificationMessageWithManualReviewCta,
 ) {
+  let enabled;
+  const obj = SafetyHubUtils;
   if (obj.isCurrentUserSuspended()) {
-    let enabled = SafetyHubStore.getIsManualReviewFallbackEnabled();
+    enabled = SafetyHubStore.getIsManualReviewFallbackEnabled();
   } else {
     const obj2 = { location: isAgeVerificationMessageWithManualReviewCta };
     enabled = config.getConfig(obj2).enabled;

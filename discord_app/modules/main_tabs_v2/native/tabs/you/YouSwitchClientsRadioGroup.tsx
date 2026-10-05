@@ -1,100 +1,124 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouSwitchClientsRadioGroup.tsx
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import DiscordVariants from "../../../../links/native/DiscordVariants.android.tsx";
 import DiscordVariantTypes from "../../../../links/native/DiscordVariantTypes.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouSwitchClientsRadioGroup.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = value(576).c(9);
+      let arr;
+      let tmp10;
+      let tmp7;
+      let tmp8;
+      let value;
+      let obj = value(576);
+      const cResult = obj.c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const currentVariant = tmp(16322).getCurrentVariant();
+        const tmpResult = value(16322);
+        const currentVariant = tmpResult.getCurrentVariant();
         cResult[0] = currentVariant;
         value = currentVariant;
-        const tmpResult = tmp(16322);
       } else {
         value = cResult[0];
       }
-      let obj = value(576);
-      [arr, importDefault] = noop.useState(null);
+      [arr, importDefault] = react.useState(null);
+      _slicedToArray(react.useState(null), 2);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function u() {
+          let _true;
           if (null != c0) {
             c0 = false;
-            let DISCORD_VARIANT_LIST = first(16323).DISCORD_VARIANT_LIST;
-            const allPromises = Promise.all(
-              DISCORD_VARIANT_LIST.map((item) => _true(dependencyMap[5]).isVariantInstalled(item)),
+            let DISCORD_VARIANT_LIST = first(dependencyMap[6]).DISCORD_VARIANT_LIST;
+            const allResult = all(
+              DISCORD_VARIANT_LIST.map((item) => {
+                const obj = _true(closure_1_2[5]);
+                return obj.isVariantInstalled(item);
+              }),
             );
-            Promise.all(DISCORD_VARIANT_LIST.map((item) => _true(dependencyMap[5]).isVariantInstalled(item)))
-              .then((result) => {
-                closure_0 = result;
-                if (!c0) {
-                  const DISCORD_VARIANT_LIST = DiscordVariantTypes.DISCORD_VARIANT_LIST;
-                  importDefault(DISCORD_VARIANT_LIST.filter((item, index) => closure_0[index]));
-                }
-              })
-              .catch(() => {
-                if (!c0) {
-                  importDefault([]);
-                }
-              });
+            const nextPromise = allResult.then((result) => {
+              let closure_0 = result;
+              if (!c0) {
+                const DISCORD_VARIANT_LIST = DiscordVariantTypes.DISCORD_VARIANT_LIST;
+                importDefault(DISCORD_VARIANT_LIST.filter((item, index) => closure_0[index]));
+              }
+            });
+            nextPromise.catch(() => {
+              if (!c0) {
+                importDefault([]);
+              }
+            });
             return () => {
-              c0 = true;
+              let c0 = true;
             };
           }
         };
         const items = [value];
         cResult[1] = fn;
         cResult[2] = items;
-        let tmp8 = items;
-        let tmp7 = fn;
+        tmp8 = items;
+        tmp7 = fn;
       } else {
         tmp7 = cResult[1];
         tmp8 = cResult[2];
       }
-      const effect = noop.useEffect(tmp7, tmp8);
+      const effect = react.useEffect(tmp7, tmp8);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function h(arg0) {
-          ActionSheetActionCreatorsDefault.hideActionSheet();
+          const obj = ActionSheetActionCreatorsDefault;
+          obj.hideActionSheet();
           if (arg0 !== first) {
-            DiscordVariants.launchVariant(arg0).catch(() => {});
-            const launchVariantResult = DiscordVariants.launchVariant(arg0);
+            const obj2 = DiscordVariants;
+            const launchVariantResult = obj2.launchVariant(arg0);
+            launchVariantResult.catch(() => {});
           }
         };
         cResult[3] = fn2;
-        let tmp10 = fn2;
+        tmp10 = fn2;
       } else {
         tmp10 = cResult[3];
       }
       if (null != value) {
         if (null != arr) {
           if (arr.length >= 2) {
+            let tmp14;
             if (cResult[4] !== arr) {
               const _Symbol = Symbol;
               if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
                 class A {
-                  constructor(arg0) {
-                    obj = { value: arg0, label: closure_0(closure_1_2[6]).DISCORD_VARIANTS[arg0].label, icon: null };
-                    obj1 = { color: closure_0(closure_1_2[6]).DISCORD_VARIANTS[arg0].color };
-                    obj.icon = closure_1_5(closure_0(closure_1_2[9]).ClydeIcon, obj1);
-                    return closure_1_5(closure_0(closure_1_2[8]).TableRadioRow, obj, arg0);
+                  constructor(value) {
+                    const TableRadioRow = first(dependencyMap[8]).TableRadioRow;
+                    ({ color: first(dependencyMap[6]).DISCORD_VARIANTS[value].color });
+                    const ClydeIcon = first(dependencyMap[9]).ClydeIcon;
+                    return (
+                      <TableRadioRow
+                        key={value}
+                        value={value}
+                        label={first(dependencyMap[6]).DISCORD_VARIANTS[value].label}
+                        icon={null}
+                      />
+                    );
                   }
                 }
                 cResult[6] = A;
               } else {
                 class A {
-                  constructor(arg0) {
-                    obj = { value: arg0, label: closure_0(closure_1_2[6]).DISCORD_VARIANTS[arg0].label, icon: null };
-                    obj1 = { color: closure_0(closure_1_2[6]).DISCORD_VARIANTS[arg0].color };
-                    obj.icon = closure_1_5(closure_0(closure_1_2[9]).ClydeIcon, obj1);
-                    return closure_1_5(closure_0(closure_1_2[8]).TableRadioRow, obj, arg0);
+                  constructor(value) {
+                    const TableRadioRow = first(dependencyMap[8]).TableRadioRow;
+                    ({ color: first(dependencyMap[6]).DISCORD_VARIANTS[value].color });
+                    const ClydeIcon = first(dependencyMap[9]).ClydeIcon;
+                    return (
+                      <TableRadioRow
+                        key={value}
+                        value={value}
+                        label={first(dependencyMap[6]).DISCORD_VARIANTS[value].label}
+                        icon={null}
+                      />
+                    );
                   }
                 }
               }
@@ -103,76 +127,104 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[5] = mapped;
             } else {
               class A {
-                constructor(arg0) {
-                  obj = { value: arg0, label: closure_0(closure_1_2[6]).DISCORD_VARIANTS[arg0].label, icon: null };
-                  obj1 = { color: closure_0(closure_1_2[6]).DISCORD_VARIANTS[arg0].color };
-                  obj.icon = closure_1_5(closure_0(closure_1_2[9]).ClydeIcon, obj1);
-                  return closure_1_5(closure_0(closure_1_2[8]).TableRadioRow, obj, arg0);
+                constructor(value) {
+                  const TableRadioRow = first(dependencyMap[8]).TableRadioRow;
+                  ({ color: first(dependencyMap[6]).DISCORD_VARIANTS[value].color });
+                  const ClydeIcon = first(dependencyMap[9]).ClydeIcon;
+                  return (
+                    <TableRadioRow
+                      key={value}
+                      value={value}
+                      label={first(dependencyMap[6]).DISCORD_VARIANTS[value].label}
+                      icon={null}
+                    />
+                  );
                 }
               }
-              if (cResult[7] !== tmp11) {
-                class A {
-                  constructor(arg0) {
-                    obj = { value: arg0, label: closure_0(closure_1_2[6]).DISCORD_VARIANTS[arg0].label, icon: null };
-                    obj1 = { color: closure_0(closure_1_2[6]).DISCORD_VARIANTS[arg0].color };
-                    obj.icon = closure_1_5(closure_0(closure_1_2[9]).ClydeIcon, obj1);
-                    return closure_1_5(closure_0(closure_1_2[8]).TableRadioRow, obj, arg0);
-                  }
-                }
-                let obj2 = { title: "Switch Clients", value, onChange: tmp10, hasIcons: true, children: tmp11 };
-                const tmp16 = jsx(tmp(6072).TableRadioGroup, {
-                  title: "Switch Clients",
-                  value,
-                  onChange: tmp10,
-                  hasIcons: true,
-                  children: tmp11,
-                });
-                cResult[7] = tmp11;
-                cResult[8] = tmp16;
-                const tmp15 = tmp16;
-              } else {
-                class A {
-                  constructor(arg0) {
-                    obj = { value: arg0, label: closure_0(closure_1_2[6]).DISCORD_VARIANTS[arg0].label, icon: null };
-                    obj1 = { color: closure_0(closure_1_2[6]).DISCORD_VARIANTS[arg0].color };
-                    obj.icon = closure_1_5(closure_0(closure_1_2[9]).ClydeIcon, obj1);
-                    return closure_1_5(closure_0(closure_1_2[8]).TableRadioRow, obj, arg0);
-                  }
-                }
-              }
-              return tmp15;
             }
+            if (cResult[7] !== tmp11) {
+              class A {
+                constructor(value) {
+                  const TableRadioRow = first(dependencyMap[8]).TableRadioRow;
+                  ({ color: first(dependencyMap[6]).DISCORD_VARIANTS[value].color });
+                  const ClydeIcon = first(dependencyMap[9]).ClydeIcon;
+                  return (
+                    <TableRadioRow
+                      key={value}
+                      value={value}
+                      label={first(dependencyMap[6]).DISCORD_VARIANTS[value].label}
+                      icon={null}
+                    />
+                  );
+                }
+              }
+              const tmp15 = jsx(value(6072).TableRadioGroup, {
+                title: "Switch Clients",
+                value,
+                onChange: tmp10,
+                hasIcons: true,
+                children: tmp11,
+              });
+              cResult[7] = tmp11;
+              cResult[8] = tmp15;
+              tmp14 = tmp15;
+            } else {
+              class A {
+                constructor(value) {
+                  const TableRadioRow = first(dependencyMap[8]).TableRadioRow;
+                  ({ color: first(dependencyMap[6]).DISCORD_VARIANTS[value].color });
+                  const ClydeIcon = first(dependencyMap[9]).ClydeIcon;
+                  return (
+                    <TableRadioRow
+                      key={value}
+                      value={value}
+                      label={first(dependencyMap[6]).DISCORD_VARIANTS[value].label}
+                      icon={null}
+                    />
+                  );
+                }
+              }
+            }
+            return tmp14;
           }
         }
       }
       return null;
     }
   : () => {
-      const memo = noop.useMemo(() => memo(16322).getCurrentVariant(), []);
-      [arr, importDefault] = noop.useState(null);
+      let arr;
+      const memo = react.useMemo(() => {
+        const obj = memo(dependencyMap[5]);
+        return obj.getCurrentVariant();
+      }, []);
+      [arr, importDefault] = react.useState(null);
       const items = [memo];
-      const effect = noop.useEffect(() => {
+      _slicedToArray(react.useState(null), 2);
+      const effect = react.useEffect(() => {
+        let _true;
         if (null != c0) {
           c0 = false;
-          let DISCORD_VARIANT_LIST = memo(16323).DISCORD_VARIANT_LIST;
-          const allPromises = Promise.all(
-            DISCORD_VARIANT_LIST.map((item) => _true(dependencyMap[5]).isVariantInstalled(item)),
+          let DISCORD_VARIANT_LIST = memo(dependencyMap[6]).DISCORD_VARIANT_LIST;
+          const allResult = all(
+            DISCORD_VARIANT_LIST.map((item) => {
+              const obj = _true(closure_1_2[5]);
+              return obj.isVariantInstalled(item);
+            }),
           );
-          Promise.all(DISCORD_VARIANT_LIST.map((item) => _true(dependencyMap[5]).isVariantInstalled(item)))
-            .then((result) => {
-              closure_0 = result;
-              if (!c0) {
-                const DISCORD_VARIANT_LIST = DiscordVariantTypes.DISCORD_VARIANT_LIST;
-                importDefault(DISCORD_VARIANT_LIST.filter((item, index) => closure_0[index]));
-              }
-            })
-            .catch(() => {
-              if (!c0) {
-                importDefault([]);
-              }
-            });
+          const nextPromise = allResult.then((result) => {
+            let closure_0 = result;
+            if (!c0) {
+              const DISCORD_VARIANT_LIST = DiscordVariantTypes.DISCORD_VARIANT_LIST;
+              importDefault(DISCORD_VARIANT_LIST.filter((item, index) => closure_0[index]));
+            }
+          });
+          nextPromise.catch(() => {
+            if (!c0) {
+              importDefault([]);
+            }
+          });
           return () => {
-            c0 = true;
+            let c0 = true;
           };
         }
       }, items);
@@ -183,52 +235,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (null != arr) {
           tmp5 = null;
           if (arr.length >= 2) {
-            let obj = {
-              title: "Switch Clients",
-              value: memo,
-              onChange: tmp4,
-              hasIcons: true,
-              children: arr.map((value) => {
-                const obj = {
-                  value,
-                  label: memo(16323).DISCORD_VARIANTS[value].label,
-                  icon: jsx(memo(10547).ClydeIcon, { color: memo(16323).DISCORD_VARIANTS[value].color }),
-                };
-                return jsx(
-                  memo(6071).TableRadioRow,
-                  {
-                    value,
-                    label: memo(16323).DISCORD_VARIANTS[value].label,
-                    icon: jsx(memo(10547).ClydeIcon, { color: memo(16323).DISCORD_VARIANTS[value].color }),
-                  },
-                  value,
-                );
-              }),
-            };
-            tmp5 = jsx(memo(6072).TableRadioGroup, {
-              title: "Switch Clients",
-              value: memo,
-              onChange: tmp4,
-              hasIcons: true,
-              children: arr.map((value) => {
-                const obj = {
-                  value,
-                  label: memo(16323).DISCORD_VARIANTS[value].label,
-                  icon: jsx(memo(10547).ClydeIcon, { color: memo(16323).DISCORD_VARIANTS[value].color }),
-                };
-                return jsx(
-                  memo(6071).TableRadioRow,
-                  {
-                    value,
-                    label: memo(16323).DISCORD_VARIANTS[value].label,
-                    icon: jsx(memo(10547).ClydeIcon, { color: memo(16323).DISCORD_VARIANTS[value].color }),
-                  },
-                  value,
-                );
-              }),
-            });
+            const TableRadioGroup = memo(6072).TableRadioGroup;
+            tmp5 = (
+              <TableRadioGroup title="Switch Clients" value={memo} onChange={tmp4} hasIcons>
+                {arr.map((value) => {
+                  const TableRadioRow = memo(dependencyMap[8]).TableRadioRow;
+                  ({ color: memo(dependencyMap[6]).DISCORD_VARIANTS[value].color });
+                  const ClydeIcon = memo(dependencyMap[9]).ClydeIcon;
+                  return (
+                    <TableRadioRow
+                      key={value}
+                      value={value}
+                      label={memo(dependencyMap[6]).DISCORD_VARIANTS[value].label}
+                      icon={null}
+                    />
+                  );
+                })}
+              </TableRadioGroup>
+            );
           }
         }
       }
       return tmp5;
     };
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouSwitchClientsRadioGroup.tsx");
+
+export default tmp2;

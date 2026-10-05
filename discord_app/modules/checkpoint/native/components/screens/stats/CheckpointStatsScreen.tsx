@@ -1,80 +1,67 @@
 // discord_app/modules/checkpoint/native/components/screens/stats/CheckpointStatsScreen.tsx
-import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
-import c from "../../../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../../../_runtime/00017_react-native.js";
+import react from "../../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
-import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
-const View = _mod17.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = {
-  container: {
-    flexGrow: 1,
-    justifyContent: "center",
-    gap: nativeDefault.space.PX_12,
-    paddingBottom: nativeDefault.space.PX_64,
-  },
-  name: { textTransform: "uppercase" },
-};
-let closure_6 = createStyles.createStyles(obj);
-let obj2 = {
+let name;
+
+let closure_4;
+let hasOwnProperty;
+let obj2;
+const View = react_native.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
+let obj = { container: obj2, name: { textTransform: "uppercase" } };
+obj2 = {
   flexGrow: 1,
   justifyContent: "center",
   gap: nativeDefault.space.PX_12,
   paddingBottom: nativeDefault.space.PX_64,
 };
-const result = size.fileFinishedImporting(
-  "modules/checkpoint/native/components/screens/stats/CheckpointStatsScreen.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_6 = createStyles.createStyles(obj);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (name) => {
-      const cResult = c.c(7);
+      let first;
+      let items;
+      let obj3;
+      const obj = react;
+      const cResult = obj.c(7);
       name = name.name;
       const tmp3 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = React4(CheckpointTextDefault, { variant: "eyebrow", children: "Stats screen" });
+        const tmp7 = React3(CheckpointTextDefault, { variant: "eyebrow", children: "Stats screen" });
         cResult[0] = tmp7;
-        let first = tmp7;
+        first = tmp7;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === name) {
+        let tmp8;
         if (cResult[2] === tmp3.name) {
-          let tmp8 = cResult[3];
+          tmp8 = cResult[3];
         }
         if (cResult[4] === tmp3.container) {
+          let tmp10;
           if (cResult[5] === tmp8) {
-            let tmp10 = cResult[6];
+            tmp10 = cResult[6];
           }
           return tmp10;
         }
-        const obj2 = { children: null };
-        const obj3 = { style: tmp3.container, children: null };
-        const items = [first, tmp8];
-        obj3.children = items;
-        obj2.children = hasOwnProperty(View, obj3);
-        const tmp16 = React4(CheckpointScreenDefault, obj2);
+        const obj2 = { children: hasOwnProperty(View, obj3) };
+        obj3 = { style: tmp3.container, children: items };
+        items = [first, tmp8];
+        const tmp13 = CheckpointScreenDefault;
+        const tmp16 = React3(tmp13, obj2);
         cResult[4] = tmp3.container;
         cResult[5] = tmp8;
         cResult[6] = tmp16;
         tmp10 = tmp16;
       }
-      const tmp9 = React4(CheckpointTextDefault, {
-        variant: "display-md",
-        style: tmp3.name,
-        adjustsFontSizeToFit: true,
-        lineClamp: 2,
-        children: name,
-      });
-      cResult[1] = name;
-      cResult[2] = tmp3.name;
-      cResult[3] = tmp9;
-      tmp8 = tmp9;
       const obj4 = {
         variant: "display-md",
         style: tmp3.name,
@@ -82,22 +69,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         lineClamp: 2,
         children: name,
       };
+      const tmp9 = React3(CheckpointTextDefault, obj4);
+      cResult[1] = name;
+      cResult[2] = tmp3.name;
+      cResult[3] = tmp9;
+      tmp8 = tmp9;
     }
-  : (children) => {
+  : (name) => {
+      let items;
+      let obj2;
+      name = name.name;
       const tmp = closure_6();
-      const obj = { children: null };
-      const obj2 = { style: tmp.container, children: null };
-      const items = [
-        React4(CheckpointTextDefault, { variant: "eyebrow", children: "Stats screen" }),
-        React4(CheckpointTextDefault, {
-          variant: "display-md",
-          style: tmp.name,
-          adjustsFontSizeToFit: true,
-          lineClamp: 2,
-          children: children.name,
-        }),
-      ];
-      obj2.children = items;
-      obj.children = hasOwnProperty(View, obj2);
-      return React4(CheckpointScreenDefault, obj);
+      const obj = { children: hasOwnProperty(View, obj2) };
+      obj2 = { style: tmp.container, children: items };
+      items = [,];
+      const tmp2 = CheckpointScreenDefault;
+      items[0] = React3(CheckpointTextDefault, { variant: "eyebrow", children: "Stats screen" });
+      const obj3 = { variant: "display-md", style: tmp.name, adjustsFontSizeToFit: true, lineClamp: 2, children: name };
+      items[1] = React3(CheckpointTextDefault, obj3);
+      return React3(tmp2, obj);
     };
+const result = size.fileFinishedImporting(
+  "modules/checkpoint/native/components/screens/stats/CheckpointStatsScreen.tsx",
+);
+
+export default tmp3;

@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/agent_activity/ConjureMidTurnCaption.tsx
-import util from "../../../intl/index.native.tsx";
+import intl5 from "../../../intl/index.native.tsx";
 import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -7,16 +7,16 @@ const result = size.fileFinishedImporting("modules/conjure/agent_activity/Conjur
 
 export const midTurnCaption = function midTurnCaption(acknowledges) {
   if ("steered" === acknowledges) {
-    const intl4 = util.intl;
+    const intl4 = intl5.intl;
     return intl4.string(_modDef3723.Mv5OmK);
   } else if ("queued" === acknowledges) {
-    const intl3 = util.intl;
+    const intl3 = intl5.intl;
     return intl3.string(_modDef3723["Po/2mi"]);
   } else if ("restarting" === acknowledges) {
-    const intl2 = util.intl;
+    const intl2 = intl5.intl;
     return intl2.string(_modDef3723.Vj0woh);
   } else {
-    const intl = util.intl;
+    const intl = intl5.intl;
     return intl.string(_modDef3723.gY3L8p);
   }
 };

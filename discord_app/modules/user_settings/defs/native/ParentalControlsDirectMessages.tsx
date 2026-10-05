@@ -1,24 +1,30 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsDirectMessages.tsx
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import useParentalControlSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 import ParentalControlledUserSettings from "../../family_center/ParentalControlledUserSettings.tsx";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-let ReactCompilerGating = fn(558);
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11129);
-const toggle = SettingBuilders.createToggle({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.RAQUSN);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.RAQUSN);
   },
   useDescription() {
-    const intl = util.intl;
-    return intl.string(util.t.wbYDfT);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.wbYDfT);
   },
-  parent: fn(7634).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
-  useValue: () => !useParentalControlSettings.useDefaultGuildsRestricted(),
+  parent: MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  useValue: () => {
+    const obj = useParentalControlSettings;
+    return !obj.useDefaultGuildsRestricted();
+  },
   onValueChange: function onAllowDirectMessagesFromServerMembersValueChange(arg0) {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
@@ -28,8 +34,8 @@ const toggle = SettingBuilders.createToggle({
     }
   },
   unsearchable: true,
-});
-const size = fn(2);
+};
+const toggle = SettingBuilders.createToggle(obj);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsDirectMessages.tsx");
 
 export default toggle;

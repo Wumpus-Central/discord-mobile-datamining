@@ -1,30 +1,30 @@
 // discord_app/modules/activities/panel/native/ActivityPanelContainer.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import ActivityPanelUtils from "utils/ActivityPanelUtils.tsx";
 import ActivityPanelControllerDefault from "ActivityPanelController.tsx";
-import ActivityPanelUIDefault from "ActivityPanelUI.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelContainer.tsx");
-
-export default noop.memo(
+const jsx = Fragment.jsx;
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
-        const cResult = c.c(2);
-        const isConnectedToActivityInText = ActivityPanelUtils.useIsConnectedToActivityInText();
+        let tmp4;
+        const obj = react2;
+        const cResult = obj.c(2);
+        const obj2 = ActivityPanelUtils;
+        const isConnectedToActivityInText = obj2.useIsConnectedToActivityInText();
         if (cResult[0] !== isConnectedToActivityInText) {
           let tmp5 = null;
           if (isConnectedToActivityInText) {
-            const obj3 = { children: jsx(ActivityPanelUIDefault, {}) };
-            tmp5 = jsx(ActivityPanelControllerDefault, { children: jsx(ActivityPanelUIDefault, {}) });
+            ActivityPanelControllerDefault;
+            tmp5 = <tmp8>{null}</tmp8>;
           }
           cResult[0] = isConnectedToActivityInText;
           cResult[1] = tmp5;
-          let tmp4 = tmp5;
+          tmp4 = tmp5;
         } else {
           tmp4 = cResult[1];
         }
@@ -32,10 +32,14 @@ export default noop.memo(
       }
     : () => {
         let tmp2 = null;
+        const obj = ActivityPanelUtils;
         if (obj.useIsConnectedToActivityInText()) {
-          const obj2 = { children: jsx(ActivityPanelUIDefault, {}) };
-          tmp2 = jsx(ActivityPanelControllerDefault, { children: jsx(ActivityPanelUIDefault, {}) });
+          ActivityPanelControllerDefault;
+          tmp2 = <tmp5>{null}</tmp5>;
         }
         return tmp2;
       },
 );
+const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelContainer.tsx");
+
+export default memoResult;

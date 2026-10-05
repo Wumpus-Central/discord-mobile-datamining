@@ -10,10 +10,8 @@ const AnalyticsPages = Constants.AnalyticsPages;
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
 
 export const isSoundboardSectionNitroLocked = function isSoundboardSectionNitroLocked(guild_id, categoryInfo) {
-  let tmp = categoryInfo.type === SoundboardTypes.SoundboardSoundGridSectionType.GUILD;
-  if (tmp) {
-    tmp = categoryInfo.guild.id !== guild_id;
-  }
+  const tmp =
+    categoryInfo.type === SoundboardTypes.SoundboardSoundGridSectionType.GUILD && categoryInfo.guild.id !== guild_id;
   return tmp;
 };
 export const getAnalyticsPage = function getAnalyticsPage(featureName) {
@@ -39,7 +37,8 @@ export const getAnalyticsPage = function getAnalyticsPage(featureName) {
     return AnalyticsPages.PREMIUM_UPSELL_STREAM_HIGH_QUALITY;
   } else {
     const _HermesInternal = HermesInternal;
-    _modDef38(false, "Missing featureName: " + featureName);
+    const tmp4 = _modDef38;
+    tmp4(false, "Missing featureName: " + featureName);
   }
 };
 export const getUpsellType = function getUpsellType(EMOJIS_EVERYWHERE) {
@@ -67,6 +66,7 @@ export const getUpsellType = function getUpsellType(EMOJIS_EVERYWHERE) {
     return ConstantsIOS.UpsellTypes.SHOP_MEMBER_PRICING;
   } else {
     const _HermesInternal = HermesInternal;
-    _modDef38(false, "Missing featureName: " + EMOJIS_EVERYWHERE);
+    const tmp4 = _modDef38;
+    tmp4(false, "Missing featureName: " + EMOJIS_EVERYWHERE);
   }
 };

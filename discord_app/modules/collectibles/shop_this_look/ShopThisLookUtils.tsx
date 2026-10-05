@@ -6,29 +6,32 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/collectibles/shop_this_look/ShopThisLookUtils.tsx");
 
 export const isShoppableCollectibleSku = function isShoppableCollectibleSku(stateFromStores) {
-  type = stateFromStores;
-  if (null == stateFromStores) {
-    return tmp;
-  } else if (typeof type.isAvailable !== "function") {
-    const obj2 = { extra: null };
-    const obj5 = { skuId: null, skuType: null };
-    ({ id: obj3.skuId, type } = type);
-    obj5.skuType = type;
-    obj2.extra = obj5;
-    SentryUtilsDefault.captureMessage("isShoppableCollectibleSku: sku missing isAvailable()", obj2);
-    let flag = false;
-  } else {
-    flag = type.isAvailable();
-    if (flag) {
-      const tenantMetadata = type.tenantMetadata;
-      let sourceType;
-      if (tenantMetadata != null) {
-        const collectibles = tenantMetadata.collectibles;
-        if (collectibles != null) {
-          sourceType = collectibles.sourceType;
+  let obj5;
+  let tmp = null != stateFromStores;
+  if (tmp) {
+    let flag;
+    if (typeof stateFromStores.isAvailable !== "function") {
+      const obj2 = { extra: obj5 };
+      obj5 = { skuId: null, skuType: null };
+      ({ id: obj3.skuId, type: obj3.skuType } = stateFromStores);
+      const obj = SentryUtilsDefault;
+      obj.captureMessage("isShoppableCollectibleSku: sku missing isAvailable()", obj2);
+      flag = false;
+    } else {
+      flag = stateFromStores.isAvailable();
+      if (flag) {
+        const tenantMetadata = stateFromStores.tenantMetadata;
+        let sourceType;
+        if (tenantMetadata != null) {
+          const collectibles = tenantMetadata.collectibles;
+          if (collectibles != null) {
+            sourceType = collectibles.sourceType;
+          }
         }
+        flag = sourceType === CollectiblesSKUSourceType.CollectiblesSKUSourceType.SHOP;
       }
-      flag = sourceType === CollectiblesSKUSourceType.CollectiblesSKUSourceType.SHOP;
     }
+    tmp = flag;
   }
+  return tmp;
 };

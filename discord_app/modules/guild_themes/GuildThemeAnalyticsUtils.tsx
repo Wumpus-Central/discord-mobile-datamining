@@ -1,14 +1,14 @@
 // discord_app/modules/guild_themes/GuildThemeAnalyticsUtils.tsx
 import GuildStore from "../../stores/GuildStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/GuildThemeAnalyticsUtils.tsx");
 
 export const collectGuildThemeAnalyticsMetadata = function collectGuildThemeAnalyticsMetadata(selectedGuildId) {
   if (null == selectedGuildId) {
     return null;
   } else {
-    guild = GuildStore.getGuild(selectedGuildId);
+    const guild = GuildStore.getGuild(selectedGuildId);
     if (null == guild) {
       return null;
     } else {

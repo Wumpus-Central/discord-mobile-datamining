@@ -1,65 +1,67 @@
 // discord_app/modules/forums/tracking/ForumPostAnalyticsManager.tsx
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
+import ForumUtils from "../ForumUtils.tsx";
 import ActiveThreadsStore from "../../threads/ActiveThreadsStore.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let require = fn;
-class ForumPostAnalyticsManager extends tmp2 {
+class ForumPostAnalyticsManager extends AutomaticLifecycleManager {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    closure_0 = applyArgumentsResult;
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    require = applyArgumentsResult;
     applyArgumentsResult.readStateSnapshots = {};
     applyArgumentsResult.actions = {
       CHANNEL_SELECT(arg0) {
-        return applyArgumentsResult.handleChannelSelect(arg0);
+        return require.handleChannelSelect(arg0);
       },
       THREAD_CREATE(arg0) {
-        return applyArgumentsResult.handleThreadCreate(arg0);
+        return require.handleThreadCreate(arg0);
       },
     };
     applyArgumentsResult.handleChannelSelect = function handleChannelSelect(channelId) {
       channelId = channelId.channelId;
       if (null != channelId) {
         const channel = ChannelStore.getChannel(channelId);
+        const tmp2 = null != channel && channel.isForumLikeChannel();
         if (tmp2) {
-          applyArgumentsResult.readStateSnapshots = {};
-          applyArgumentsResult.processForumChannel(channel.guild_id, channelId);
+          require.readStateSnapshots = {};
+          require.processForumChannel(channel.guild_id, channelId);
         }
-        tmp2 = null != channel && channel.isForumLikeChannel();
       }
     };
     applyArgumentsResult.processForumChannel = function processForumChannel(guild_id, channelId) {
+      let readStateSnapshots;
       const threadsForParent = ActiveThreadsStore.getThreadsForParent(guild_id, channelId);
-      const keys = SnowflakeUtilsDefault.keys(threadsForParent);
+      let obj = SnowflakeUtilsDefault;
+      const keys = obj.keys(threadsForParent);
       const item = keys.forEach((item) => {
-        const forumPostReadStatesById = applyArgumentsResult(dependencyMap[5]).getForumPostReadStatesById(item);
+        const obj = ForumUtils;
+        const forumPostReadStatesById = obj.getForumPostReadStatesById(item);
         if (null != forumPostReadStatesById) {
           readStateSnapshots.readStateSnapshots[item] = forumPostReadStatesById;
         }
-        const obj = applyArgumentsResult(dependencyMap[5]);
       });
     };
     applyArgumentsResult.getReadStateSnapshotAnalytics = function getReadStateSnapshotAnalytics(id) {
-      return applyArgumentsResult.readStateSnapshots[id];
+      return require.readStateSnapshots[id];
     };
     return applyArgumentsResult;
   }
-}
-ForumPostAnalyticsManager.prototype["handleThreadCreate"] = function handleThreadCreate(channel) {
-  channel = channel.channel;
-  if (channel.isForumPost()) {
-    const self = this;
-    const obj = { isNew: null, hasUnreads: null };
-    const tmp2 = channel.ownerId !== AuthenticationStore.getId();
-    obj.isNew = tmp2;
-    obj.hasUnreads = tmp2;
-    this.readStateSnapshots[channel.id] = obj;
+  handleThreadCreate(channel) {
+    let tmp2;
+    channel = channel.channel;
+    if (channel.isForumPost()) {
+      const self = this;
+      const obj = { isNew: tmp2, hasUnreads: tmp2 };
+      tmp2 = channel.ownerId !== AuthenticationStore.getId();
+      this.readStateSnapshots[channel.id] = obj;
+    }
   }
-};
+}
+const prototype = ForumPostAnalyticsManager.prototype;
 const forumPostAnalyticsManager = new ForumPostAnalyticsManager();
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/tracking/ForumPostAnalyticsManager.tsx");
 
 export default forumPostAnalyticsManager;

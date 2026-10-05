@@ -1,183 +1,260 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx
-import util from "../../intl/index.native.tsx";
+import Constants from "../../Constants.tsx";
+import intl8 from "../../intl/index.native.tsx";
 import v1 from "../../../_runtime/01266_v1.js";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-let closure_13 = async function _navigateToGuild() {
-  const obj6 = {};
-  const merged = Object.assign(closure_129_5);
-  obj6.loadId = closure_129_0;
-  closure_129_6 = obj6;
-  await closure_130_2(closure_130_3[6]).startLurking(closure_129_1, closure_129_4, closure_129_6);
-  closure_130_1(closure_130_3[7]).track(closure_130_12.GUILD_DISCOVERY_GUILD_SELECTED, {
-    guild_id: closure_129_1,
-    load_id: closure_129_0,
-    card_index: closure_129_2,
-    category_id: closure_129_3,
-    location: closure_129_4,
+let c10;
+let c9;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let unpackModuleId;
+let obj = function _navigateToGuild() {
+  obj = _asyncToGenerator(async (arg0) => {
+    let _location;
+    let c0;
+    let c1;
+    let c2;
+    let c3;
+    let c4;
+    let c5;
+    let category_id;
+    let obj5;
+    let closure_0 = arg0;
+    if (_location === 2) {
+      _location = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        let load_id;
+        let guild_id;
+        let card_index;
+        let obj6;
+        _location = 2;
+        if (0 === category_id) {
+          if (arg0 === 1) {
+            _location = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            _location = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let closure_2 = tmp4;
+            let closure_1 = tmp;
+            load_id = undefined;
+            guild_id = undefined;
+            card_index = undefined;
+            c5 = undefined;
+            ({ loadId: c0, guildId: c1, index: c2, categoryId: c3, analyticsLocation: c4, options: c5 } = closure_0);
+            obj6 = undefined;
+            category_id = 1;
+            _location = 1;
+            return { value: "Set", done: true };
+          }
+        } else if (1 === category_id) {
+          if (arg0 === 1) {
+            _location = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            _location = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            obj6 = { loadId: load_id };
+            const merged = Object.assign(c5);
+            category_id = 2;
+            _location = 1;
+            const obj7 = { value: obj5.startLurking(guild_id, _location, obj6), done: false };
+            obj5 = closure_130_2(closure_130_3[6]);
+            return obj7;
+          }
+        } else if (arg0 === 1) {
+          _location = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          _location = 3;
+          const obj8 = { value, done: true };
+          return obj8;
+        } else {
+          const obj9 = { guild_id, load_id, card_index, category_id, location: _location };
+          obj = closure_130_1(closure_130_3[7]);
+          obj.track(closure_130_12.GUILD_DISCOVERY_GUILD_SELECTED, obj9);
+          _location = 3;
+          return { value: "IconComponent", done: null };
+        }
+      } catch (tmp27) {
+        _location = 3;
+        throw tmp27;
+      }
+    }
   });
-  await "IconComponent";
-  closure_1 = tmp2;
-  ({
-    loadId: closure_129_0,
-    guildId: closure_129_1,
-    index: closure_129_2,
-    categoryId: closure_129_3,
-    analyticsLocation: closure_129_4,
-    options: closure_129_5,
-  } = closure_0);
-  return "Set";
+  return obj(...arguments);
 };
-const GlobalDiscoveryServersConstants = fn(9249);
 ({
   GlobalDiscoveryServerTab: metroRequire,
-  FEATURED_GUILDS_CACHE_DURATION: closure_7,
-  CategoryId: closure_8,
-  DISCOVERY_ALL_CATEGORIES_ID: closure_9,
+  FEATURED_GUILDS_CACHE_DURATION: metroImportDefault,
+  CategoryId: metroImportAll,
+  DISCOVERY_ALL_CATEGORIES_ID: c9,
   getLanguageOptions: c10,
-  HUBS_CATEGORY_ID: closure_11,
+  HUBS_CATEGORY_ID: unpackModuleId,
 } = GlobalDiscoveryServersConstants);
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const size = fn(2);
+const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx");
 
 export const getGlobalDiscoveryServersTabTitle = function getGlobalDiscoveryServersTabTitle(arg0) {
-  if (constants.FEATURED === arg0) {
-    const intl7 = util.intl;
-    return intl7.string(util.t["RU+DCe"]);
-  } else if (constants.GAMING === arg0) {
-    const intl6 = util.intl;
-    return intl6.string(util.t["CD/USA"]);
-  } else if (constants.MUSIC === arg0) {
-    const intl5 = util.intl;
-    return intl5.string(util.t["nt9PL+"]);
-  } else if (constants.ENTERTAINMENT === arg0) {
-    const intl4 = util.intl;
-    return intl4.string(util.t.gSbmdt);
-  } else if (constants.TECH === arg0) {
-    const intl3 = util.intl;
-    return intl3.string(util.t["0A0By5"]);
-  } else if (constants.EDUCATION === arg0) {
-    const intl2 = util.intl;
-    return intl2.string(util.t.Gy9woq);
-  } else if (constants.HUBS === arg0) {
-    const intl = util.intl;
-    return intl.string(util.t["q469/Z"]);
+  if (metroRequire.FEATURED === arg0) {
+    const intl7 = intl8.intl;
+    return intl7.string(intl8.t["RU+DCe"]);
+  } else if (metroRequire.GAMING === arg0) {
+    const intl6 = intl8.intl;
+    return intl6.string(intl8.t["CD/USA"]);
+  } else if (metroRequire.MUSIC === arg0) {
+    const intl5 = intl8.intl;
+    return intl5.string(intl8.t["nt9PL+"]);
+  } else if (metroRequire.ENTERTAINMENT === arg0) {
+    const intl4 = intl8.intl;
+    return intl4.string(intl8.t.gSbmdt);
+  } else if (metroRequire.TECH === arg0) {
+    const intl3 = intl8.intl;
+    return intl3.string(intl8.t["0A0By5"]);
+  } else if (metroRequire.EDUCATION === arg0) {
+    const intl2 = intl8.intl;
+    return intl2.string(intl8.t.Gy9woq);
+  } else if (metroRequire.HUBS === arg0) {
+    const intl = intl8.intl;
+    return intl.string(intl8.t["q469/Z"]);
   }
 };
 export const getGlobalDiscoveryServersBannerTitle = function getGlobalDiscoveryServersBannerTitle(arg0) {
-  if (constants.FEATURED === arg0) {
-    const intl7 = util.intl;
-    return intl7.string(util.t.OlDfzP);
-  } else if (constants.GAMING === arg0) {
-    const intl6 = util.intl;
-    return intl6.string(util.t["CD/USA"]);
-  } else if (constants.MUSIC === arg0) {
-    const intl5 = util.intl;
-    return intl5.string(util.t["nt9PL+"]);
-  } else if (constants.ENTERTAINMENT === arg0) {
-    const intl4 = util.intl;
-    return intl4.string(util.t.gSbmdt);
-  } else if (constants.TECH === arg0) {
-    const intl3 = util.intl;
-    return intl3.string(util.t["0A0By5"]);
-  } else if (constants.EDUCATION === arg0) {
-    const intl2 = util.intl;
-    return intl2.string(util.t.Gy9woq);
-  } else if (constants.HUBS === arg0) {
-    const intl = util.intl;
-    return intl.string(util.t.X5xPlb);
+  if (metroRequire.FEATURED === arg0) {
+    const intl7 = intl8.intl;
+    return intl7.string(intl8.t.OlDfzP);
+  } else if (metroRequire.GAMING === arg0) {
+    const intl6 = intl8.intl;
+    return intl6.string(intl8.t["CD/USA"]);
+  } else if (metroRequire.MUSIC === arg0) {
+    const intl5 = intl8.intl;
+    return intl5.string(intl8.t["nt9PL+"]);
+  } else if (metroRequire.ENTERTAINMENT === arg0) {
+    const intl4 = intl8.intl;
+    return intl4.string(intl8.t.gSbmdt);
+  } else if (metroRequire.TECH === arg0) {
+    const intl3 = intl8.intl;
+    return intl3.string(intl8.t["0A0By5"]);
+  } else if (metroRequire.EDUCATION === arg0) {
+    const intl2 = intl8.intl;
+    return intl2.string(intl8.t.Gy9woq);
+  } else if (metroRequire.HUBS === arg0) {
+    const intl = intl8.intl;
+    return intl.string(intl8.t.X5xPlb);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
+    const self = this;
+    const self2 = this;
     const error = new Error("[getGlobalDiscoveryServerTabTitle] Unsupported tab: " + arg0);
     throw error;
   }
 };
 export const getGlobalDiscoveryServersBannerDescription = function getGlobalDiscoveryServersBannerDescription(arg0) {
-  if (constants.FEATURED === arg0) {
-    const intl7 = util.intl;
-    return intl7.string(util.t.SdMhrk);
-  } else if (constants.GAMING === arg0) {
-    const intl6 = util.intl;
-    return intl6.string(util.t.AAJ5ov);
-  } else if (constants.MUSIC === arg0) {
-    const intl5 = util.intl;
-    return intl5.string(util.t["SOio+D"]);
-  } else if (constants.ENTERTAINMENT === arg0) {
-    const intl4 = util.intl;
-    return intl4.string(util.t.R09vf0);
-  } else if (constants.TECH === arg0) {
-    const intl3 = util.intl;
-    return intl3.string(util.t.Ew4d56);
-  } else if (constants.EDUCATION === arg0) {
-    const intl2 = util.intl;
-    return intl2.string(util.t.sasIWU);
-  } else if (constants.HUBS === arg0) {
-    const intl = util.intl;
-    return intl.string(util.t["F/IQCI"]);
+  if (metroRequire.FEATURED === arg0) {
+    const intl7 = intl8.intl;
+    return intl7.string(intl8.t.SdMhrk);
+  } else if (metroRequire.GAMING === arg0) {
+    const intl6 = intl8.intl;
+    return intl6.string(intl8.t.AAJ5ov);
+  } else if (metroRequire.MUSIC === arg0) {
+    const intl5 = intl8.intl;
+    return intl5.string(intl8.t["SOio+D"]);
+  } else if (metroRequire.ENTERTAINMENT === arg0) {
+    const intl4 = intl8.intl;
+    return intl4.string(intl8.t.R09vf0);
+  } else if (metroRequire.TECH === arg0) {
+    const intl3 = intl8.intl;
+    return intl3.string(intl8.t.Ew4d56);
+  } else if (metroRequire.EDUCATION === arg0) {
+    const intl2 = intl8.intl;
+    return intl2.string(intl8.t.sasIWU);
+  } else if (metroRequire.HUBS === arg0) {
+    const intl = intl8.intl;
+    return intl.string(intl8.t["F/IQCI"]);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
+    const self = this;
+    const self2 = this;
     const error = new Error("[getGlobalDiscoveryServerTabTitle] Unsupported tab: " + arg0);
     throw error;
   }
 };
 export const getGlobalDiscoveryServersTabSectionTitle = function getGlobalDiscoveryServersTabSectionTitle(arg0) {
-  if (constants.FEATURED === arg0) {
-    const intl6 = util.intl;
-    return intl6.string(util.t.crt84X);
-  } else if (constants.GAMING === arg0) {
-    const intl5 = util.intl;
-    return intl5.string(util.t.fWbIpf);
-  } else if (constants.MUSIC === arg0) {
-    const intl4 = util.intl;
-    return intl4.string(util.t.nfgDzz);
-  } else if (constants.ENTERTAINMENT === arg0) {
-    const intl3 = util.intl;
-    return intl3.string(util.t.k1CYxv);
-  } else if (constants.TECH === arg0) {
-    const intl2 = util.intl;
-    return intl2.string(util.t["4dawps"]);
-  } else if (constants.EDUCATION === arg0) {
-    const intl = util.intl;
-    return intl.string(util.t.uexPgT);
+  if (metroRequire.FEATURED === arg0) {
+    const intl6 = intl8.intl;
+    return intl6.string(intl8.t.crt84X);
+  } else if (metroRequire.GAMING === arg0) {
+    const intl5 = intl8.intl;
+    return intl5.string(intl8.t.fWbIpf);
+  } else if (metroRequire.MUSIC === arg0) {
+    const intl4 = intl8.intl;
+    return intl4.string(intl8.t.nfgDzz);
+  } else if (metroRequire.ENTERTAINMENT === arg0) {
+    const intl3 = intl8.intl;
+    return intl3.string(intl8.t.k1CYxv);
+  } else if (metroRequire.TECH === arg0) {
+    const intl2 = intl8.intl;
+    return intl2.string(intl8.t["4dawps"]);
+  } else if (metroRequire.EDUCATION === arg0) {
+    const intl = intl8.intl;
+    return intl.string(intl8.t.uexPgT);
   } else {
     return null;
   }
 };
 export const getCategoryIdFromServerTab = function getCategoryIdFromServerTab(type) {
-  if (constants.FEATURED === type) {
-    return options;
-  } else if (constants.GAMING === type) {
-    return closure_1_8.Activity;
-  } else if (constants.MUSIC === type) {
-    return closure_1_8.Music;
-  } else if (constants.ENTERTAINMENT === type) {
-    return closure_1_8.Television;
-  } else if (constants.TECH === type) {
-    return closure_1_8.Science;
-  } else if (constants.EDUCATION === type) {
-    return closure_1_8.Education;
-  } else if (constants.HUBS === type) {
-    return closure_1_11;
+  if (metroRequire.FEATURED === type) {
+    return React4;
+  } else if (metroRequire.GAMING === type) {
+    return metroImportAll.Activity;
+  } else if (metroRequire.MUSIC === type) {
+    return metroImportAll.Music;
+  } else if (metroRequire.ENTERTAINMENT === type) {
+    return metroImportAll.Television;
+  } else if (metroRequire.TECH === type) {
+    return metroImportAll.Science;
+  } else if (metroRequire.EDUCATION === type) {
+    return metroImportAll.Education;
+  } else if (metroRequire.HUBS === type) {
+    return unpackModuleId;
   } else {
-    GlobalUtils.assertNever(type);
+    obj = GlobalUtils;
+    obj.assertNever(type);
   }
 };
 export const isStaleFeaturedGuilds = function isStaleFeaturedGuilds(arg0) {
   let tmp = null == arg0;
   if (!tmp) {
     const _Date = Date;
-    tmp = Date.now() - arg0 > React5;
+    tmp = Date.now() - arg0 > metroImportDefault;
   }
   return tmp;
 };
 export const fromDiscoverableGuildServer = function fromDiscoverableGuildServer(id) {
-  const obj = {
+  obj = {
     id: id.id,
     name: id.name,
     description: id.description,
@@ -202,10 +279,11 @@ export const fromDiscoverableGuildServer = function fromDiscoverableGuildServer(
     emojis: obj.emojis,
     emoji_count: obj.emojiCount,
   } = id);
+  new Set(id.features);
   return obj;
 };
 export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildSearchResult(id) {
-  const obj = {
+  obj = {
     id: id.id,
     name: id.name,
     description: id.description,
@@ -218,25 +296,26 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     premiumSubscriptionCount: "r",
     preferredLocale: "unicodeVersion",
     discoverySplash: "backgroundColor",
-    emojis: "Array",
+    emojis: [],
   };
   ({
     approximate_presence_count: obj.presenceCount,
     approximate_member_count: obj.memberCount,
     discovery_splash: obj.discoverySplash,
   } = id);
-  obj.emojis = [];
+  new Set(id.features);
   return obj;
 };
 export const getLanguageCodeFallback = function getLanguageCodeFallback() {
+  let tmp3;
   let tmp = arg0;
   if (arg0 === undefined) {
     const items = [LocaleStore];
     tmp = items;
   }
   [tmp3] = tmp;
-  const arr2 = v65535();
-  locale = tmp3.locale;
+  const arr2 = authStore();
+  const locale = tmp3.locale;
   let found = arr2.find((code) => code.code === locale);
   if (found == null) {
     found = arr2[0];
@@ -244,15 +323,10 @@ export const getLanguageCodeFallback = function getLanguageCodeFallback() {
   return found.code;
 };
 export const navigateToGuild = function navigateToGuild() {
-  const self = this;
-  const apply = closure_13.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const makeAnalyticsID = function makeAnalyticsID() {
-  return v1.v4().replace(/-/g, "");
+  obj = v1;
+  const str = obj.v4();
+  return str.replace(/-/g, "");
 };

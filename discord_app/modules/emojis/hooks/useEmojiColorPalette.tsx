@@ -1,20 +1,24 @@
 // discord_app/modules/emojis/hooks/useEmojiColorPalette.tsx
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../../_runtime/00576_react.js";
 import EmojiColorUtils from "../utils/EmojiColorUtils.tsx";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/emojis/hooks/useEmojiColorPalette.tsx");
-
-export const useEmojiColorPalette = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (colors) => {
-      const cResult = c.c(8);
+      let saturation;
+      let theme;
+      let tmp4;
+      let tmp5;
+      let tmp8;
+      let tmp9;
+      let obj = react;
+      const cResult = obj.c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
         const fn = function u() {
@@ -27,46 +31,58 @@ export const useEmojiColorPalette = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ThemeStore];
         class S {
           constructor() {
-            obj = closure_1_0(closure_1_1[5]);
-            return obj.isThemeDark(closure_1_3.theme);
+            const obj = require("shared");
+            return obj.isThemeDark(theme.theme);
           }
         }
         cResult[2] = items1;
         cResult[3] = S;
-        let tmp9 = S;
-        let tmp8 = items1;
+        tmp9 = S;
+        tmp8 = items1;
       } else {
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const tmpResult = initialize;
-      const stateFromStores1 = initialize.useStateFromStores(tmp8, tmp9);
+      const tmpResult3 = get_initialized;
+      const stateFromStores1 = tmpResult3.useStateFromStores(tmp8, tmp9);
       if (cResult[4] === colors) {
         if (cResult[5] === stateFromStores1) {
+          let tmp12;
           if (cResult[6] === stateFromStores) {
-            let tmp12 = cResult[7];
+            tmp12 = cResult[7];
           }
           return tmp12;
         }
       }
-      const tmpResult3 = initialize;
-      const emojiColorPalette = EmojiColorUtils.buildEmojiColorPalette(colors, stateFromStores, stateFromStores1);
+      const tmpResult4 = EmojiColorUtils;
+      const emojiColorPalette = tmpResult4.buildEmojiColorPalette(colors, stateFromStores, stateFromStores1);
       cResult[4] = colors;
       cResult[5] = stateFromStores1;
       cResult[6] = stateFromStores;
       cResult[7] = emojiColorPalette;
       tmp12 = emojiColorPalette;
-      const tmpResult4 = EmojiColorUtils;
     }
   : (colors) => {
+      let saturation;
+      let theme;
+      let obj = get_initialized;
       const items = [AccessibilityStore];
-      const stateFromStores = initialize.useStateFromStores(items, () => saturation.saturation);
+      const stateFromStores = obj.useStateFromStores(items, () => saturation.saturation);
       const items1 = [ThemeStore];
-      const stateFromStores1 = initialize.useStateFromStores(items1, () => require("shared").isThemeDark(theme.theme));
-      return EmojiColorUtils.buildEmojiColorPalette(colors, stateFromStores, stateFromStores1);
+      const obj2 = get_initialized;
+      const stateFromStores1 = obj2.useStateFromStores(items1, () => {
+        const obj = require("shared");
+        return obj.isThemeDark(theme.theme);
+      });
+      const obj3 = EmojiColorUtils;
+      return obj3.buildEmojiColorPalette(colors, stateFromStores, stateFromStores1);
     };
+const result = size.fileFinishedImporting("modules/emojis/hooks/useEmojiColorPalette.tsx");
+
+export const useEmojiColorPalette = tmp2;

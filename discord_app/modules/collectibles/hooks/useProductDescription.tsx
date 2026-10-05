@@ -1,24 +1,23 @@
 // discord_app/modules/collectibles/hooks/useProductDescription.tsx
-import _mod19 from "../../../../_runtime/metro/00019__.js";
-import c from "../../../../_runtime/00576_c.js";
-import util from "../../../intl/index.native.tsx";
+import react from "../../../../_runtime/00019_react.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import intl7 from "../../../intl/index.native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function getBundleDescription(bundledProducts) {
-  if (flag === undefined) {
-    flag = false;
-  }
   if (flag) {
-    const intl5 = util.intl;
+    const intl5 = intl7.intl;
+    const formatToPlainString = intl5.formatToPlainString;
     bundledProducts = bundledProducts.bundledProducts;
     let length;
+    const prop = intl7.t["/0Yndu"];
     if (bundledProducts != null) {
       length = bundledProducts.length;
     }
     const obj2 = { num: length };
-    return intl5.formatToPlainString(util.t["/0Yndu"], obj2);
+    return formatToPlainString(prop, obj2);
   } else {
     let bundledProducts1 = bundledProducts.bundledProducts;
     if (bundledProducts1 == null) {
@@ -29,46 +28,48 @@ function getBundleDescription(bundledProducts) {
     for (const item10012 of bundledProducts1) {
       let type = item10012.type;
       if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-        let intl2 = util.intl;
+        let push2 = items.push;
+        let intl2 = intl7.intl;
         let obj3 = { itemName: item10012.name };
-        let arr = items.push(intl2.formatToPlainString(util.t.Ntv9Jt, obj3));
+        let push2Result = push2(intl2.formatToPlainString(intl7.t.Ntv9Jt, obj3));
       } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
-        let intl = util.intl;
+        let push = items.push;
+        let intl = intl7.intl;
         let obj = { itemName: item10012.name };
-        let arr2 = items.push(intl.formatToPlainString(util.t["3Y8q7a"], obj));
+        let arr = push(intl.formatToPlainString(intl7.t["3Y8q7a"], obj));
       } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
-        let intl6 = util.intl;
+        let push3 = items.push;
+        let intl6 = intl7.intl;
         let obj4 = { itemName: item10012.name };
-        let arr3 = items.push(intl6.formatToPlainString(util.t["2keXky"], obj4));
+        let push3Result = push3(intl6.formatToPlainString(intl7.t["2keXky"], obj4));
         flag2 = true;
       }
       continue;
     }
     const join = items.join;
     if (flag2) {
-      const replaced = join(", ").replace(/, ([^,]*)$/, " & $1");
-      const intl4 = util.intl;
+      const str3 = join(", ");
+      const replaced = str3.replace(/, ([^,]*)$/, " & $1");
+      const intl4 = intl7.intl;
       const obj5 = { joinedItems: replaced };
-      return intl4.formatToPlainString(util.t.Ofrqj6, obj5);
+      return intl4.formatToPlainString(intl7.t.Ofrqj6, obj5);
     } else {
       const joined = join(" & ");
-      const intl3 = util.intl;
+      const intl3 = intl7.intl;
       const obj6 = { joinedItems: joined };
-      return intl3.formatToPlainString(util.t.Ofrqj6, obj6);
+      return intl3.formatToPlainString(intl7.t.Ofrqj6, obj6);
     }
   }
 }
 function getProductDescription(summary) {
-  if (flag === undefined) {
-    flag = false;
-  }
   if (null != summary) {
     if (null != summary.summary) {
       if ("" !== summary.summary) {
         if (summary.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
           summary = summary.summary;
           if (summary.includes("{joinedItems}")) {
-            return summary.summary.replace("{joinedItems}", getBundleDescription(summary, flag));
+            const str4 = summary.summary;
+            return str4.replace("{joinedItems}", getBundleDescription(summary, flag));
           }
         }
         return summary.summary;
@@ -80,33 +81,32 @@ function getProductDescription(summary) {
     type = summary.type;
   }
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-    const intl4 = util.intl;
-    return intl4.string(util.t["3lv7q2"]);
+    const intl4 = intl7.intl;
+    return intl4.string(intl7.t["3lv7q2"]);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
-    const intl3 = util.intl;
-    return intl3.string(util.t.VhJL72);
+    const intl3 = intl7.intl;
+    return intl3.string(intl7.t.VhJL72);
   } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
-    const intl2 = util.intl;
-    return intl2.string(util.t.ik37EZ);
+    const intl2 = intl7.intl;
+    return intl2.string(intl7.t.ik37EZ);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
-    const intl = util.intl;
-    return intl.string(util.t.fWzWPp);
+    const intl = intl7.intl;
+    return intl.string(intl7.t.fWzWPp);
   } else if (CollectiblesItemType.CollectiblesItemType.BUNDLE === type) {
     return getBundleDescription(summary, flag);
   } else {
     return "";
   }
 }
-const useMemo = _mod19.useMemo;
-const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductDescription.tsx");
-
-export { getProductDescription };
-export const useProductDescription = ReactCompilerGating.isReactCompilerEnabled()
+const useMemo = react.useMemo;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (summary, arg1) => {
-      const cResult = c.c(3);
+      const obj = react2;
+      const cResult = obj.c(3);
       if (cResult[0] === summary) {
-        if (cResult[1] === tmp2) {
-          let tmp3 = cResult[2];
+        let tmp3;
+        if (cResult[1] === (undefined !== arg1 && arg1)) {
+          tmp3 = cResult[2];
         }
         return tmp3;
       }
@@ -117,7 +117,7 @@ export const useProductDescription = ReactCompilerGating.isReactCompilerEnabled(
       tmp3 = tmp4;
     }
   : (arg0) => {
-      closure_0 = arg0;
+      let closure_0 = arg0;
       let flag = arg1;
       if (arg1 === undefined) {
         flag = false;
@@ -125,3 +125,7 @@ export const useProductDescription = ReactCompilerGating.isReactCompilerEnabled(
       const items = [arg0, flag];
       return useMemo(() => getProductDescription(closure_0, flag), items);
     };
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductDescription.tsx");
+
+export { getProductDescription };
+export const useProductDescription = tmp2;

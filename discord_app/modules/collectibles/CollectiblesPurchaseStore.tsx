@@ -1,18 +1,32 @@
 // discord_app/modules/collectibles/CollectiblesPurchaseStore.tsx
 import _mod12 from "../../../_runtime/metro/00012__.js";
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
+let closure_3;
+
 let map = new Map();
-let closure_3 = map;
+const _false = map;
 let c4 = false;
 let c5;
 let c6;
 let c7;
 let c8 = false;
-const Store = initializeDefault.Store;
-class CollectiblesPurchaseStore extends Store {}
+const Store = get_initializedDefault.Store;
+class CollectiblesPurchaseStore extends Store {
+  getPurchase(skuId) {
+    let value;
+    if (null != skuId) {
+      value = closure_3.get(skuId);
+    }
+    return value;
+  }
+  getPurchases(arr) {
+    const mapped = arr.map((item) => closure_1_3.get(item));
+    return mapped.filter((item) => null != item);
+  }
+}
 const prototype = CollectiblesPurchaseStore.prototype;
 Object.defineProperty(prototype, "isFetching", {
   get: function isFetching() {
@@ -50,19 +64,8 @@ Object.defineProperty(prototype, "hasPreviouslyFetched", {
   },
   set: undefined,
 });
-prototype["getPurchase"] = function getPurchase(skuId) {
-  value = undefined;
-  if (null != skuId) {
-    value = closure_3.get(skuId);
-  }
-  return value;
-};
-prototype["getPurchases"] = function getPurchases(arr) {
-  const mapped = arr.map((item) => closure_1_3.get(item));
-  return mapped.filter((item) => null != item);
-};
 CollectiblesPurchaseStore.displayName = "CollectiblesPurchaseStore";
-const collectiblesPurchaseStore = new CollectiblesPurchaseStore(DispatcherDefault, {
+const obj = {
   COLLECTIBLES_PURCHASES_FETCH: function handlePurchasesFetch() {
     c4 = true;
     c6 = undefined;
@@ -71,11 +74,15 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(DispatcherDefaul
     if (0 === purchases.purchases.length) {
       closure_3 = map;
     } else {
+      const isEqual = _mod12.isEqual;
       let items = [];
-      HermesBuiltin.arraySpread(closure_3.values(), 0);
-      if (!obj.isEqual(items, purchases.purchases)) {
+      _mod12;
+      HermesBuiltin.arraySpread(items, closure_3.values(), 0);
+      if (!isEqual(items, purchases.purchases)) {
         const _Map = Map;
         purchases = purchases.purchases;
+        const self = this;
+        const self2 = this;
         map = new Map(
           purchases.map((skuId) => {
             const items = [skuId.skuId, skuId];
@@ -84,7 +91,6 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(DispatcherDefaul
         );
         closure_3 = map;
       }
-      obj = _mod12;
     }
     c8 = true;
     c4 = false;
@@ -103,11 +109,15 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(DispatcherDefaul
   COLLECTIBLES_CLAIM_SUCCESS: function handleClaimSuccess(purchases) {
     if (null != purchases.purchases) {
       if (0 !== purchases.purchases.length) {
+        const isEqual = _mod12.isEqual;
         let items = [];
-        HermesBuiltin.arraySpread(closure_3.values(), 0);
-        if (!obj.isEqual(items, purchases.purchases)) {
+        _mod12;
+        HermesBuiltin.arraySpread(items, closure_3.values(), 0);
+        if (!isEqual(items, purchases.purchases)) {
           const _Map = Map;
           purchases = purchases.purchases;
+          const self = this;
+          const self2 = this;
           map = new Map(
             purchases.map((skuId) => {
               const items = [skuId.skuId, skuId];
@@ -116,7 +126,6 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(DispatcherDefaul
           );
           closure_3 = map;
         }
-        obj = _mod12;
       }
       c5 = undefined;
       c7 = undefined;
@@ -134,8 +143,8 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(DispatcherDefaul
     c7 = undefined;
     c8 = false;
   },
-});
-const size = fn(2);
+};
+const collectiblesPurchaseStore = new CollectiblesPurchaseStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesPurchaseStore.tsx");
 
 export default collectiblesPurchaseStore;

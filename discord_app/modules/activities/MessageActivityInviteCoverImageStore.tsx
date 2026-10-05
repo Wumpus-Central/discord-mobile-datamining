@@ -1,17 +1,23 @@
 // discord_app/modules/activities/MessageActivityInviteCoverImageStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import privDefault from "../../../_runtime/01444_priv.js";
+import LRUCacheDefault from "../../../_runtime/01444_LRUCache.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let closure_0 = new privDefault({ max: 500 });
-const Store = initializeDefault.Store;
-class MessageActivityInviteCoverImageStore extends Store {}
-MessageActivityInviteCoverImageStore.prototype["getCoverImageURL"] = function getCoverImageURL(messageId) {
-  return closure_0.get(messageId.messageId);
-};
+const React = new LRUCacheDefault({ max: 500 });
+new LRUCacheDefault({ max: 500 });
+const Store = get_initializedDefault.Store;
+class MessageActivityInviteCoverImageStore extends Store {
+  getCoverImageURL(messageId) {
+    return closure_0.get(messageId.messageId);
+  }
+}
+const prototype = MessageActivityInviteCoverImageStore.prototype;
 MessageActivityInviteCoverImageStore.displayName = "MessageActivityInviteCoverImageStore";
-const messageActivityInviteCoverImageStore = new MessageActivityInviteCoverImageStore(DispatcherDefault, {
+const obj = {
   SET_MESSAGE_ACTIVITY_INVITE_COVER_IMAGE_URL: function handleSetMessageActivityInviteCoverImageURL(arg0) {
+    let coverImageURL;
+    let messageId;
     ({ messageId, coverImageURL } = arg0);
     if (closure_0.get(messageId) === coverImageURL) {
       return false;
@@ -19,8 +25,8 @@ const messageActivityInviteCoverImageStore = new MessageActivityInviteCoverImage
       const result = closure_0.set(messageId, coverImageURL);
     }
   },
-});
-const size = fn(2);
+};
+const messageActivityInviteCoverImageStore = new MessageActivityInviteCoverImageStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("modules/activities/MessageActivityInviteCoverImageStore.tsx");
 
 export default messageActivityInviteCoverImageStore;

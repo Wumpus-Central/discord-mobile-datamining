@@ -1,236 +1,250 @@
 // discord_app/modules/icymi/ICYMIStoreUtils.tsx
+import Constants from "../../Constants.tsx";
 import ICYMIItemTypes from "ICYMIItemTypes.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import MessageStore from "../../stores/MessageStore.tsx";
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
 import ICYMIStore from "ICYMIStore.tsx";
+import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, c0, c1, c3, c4, constants;
 
-require = fn;
-let closure_8 = async function _hydrateNextPage() {
-  if (c0 === 2) {
-    c0 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+let obj = function _hydrateNextPage() {
+  obj = _asyncToGenerator(async () => {
+    if (c0 === 2) {
+      c0 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c0 = 2;
-      if (0 === c1) {
-        if (arg0 === 1) {
+      try {
+        c0 = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            c0 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c0 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            const unreadDisplayItems = ICYMIStore.getUnreadDisplayItems();
+            const readDisplayItems = ICYMIStore.getReadDisplayItems();
+            const nextIndexToHydrate = ICYMIStore.getNextIndexToHydrate();
+            const tmp15 = require("ICYMIUtils");
+            const items = [];
+            const hydrateItems = tmp15.hydrateItems;
+            HermesBuiltin.arraySpread(items, readDisplayItems, HermesBuiltin.arraySpread(items, unreadDisplayItems, 0));
+            const sum = nextIndexToHydrate + require("ICYMITypes").ICYMI_PAGE_SIZE;
+            c1 = 1;
+            c0 = 1;
+            const obj4 = {
+              value: hydrateItems(items, nextIndexToHydrate, sum, ICYMIStore.getHydratedItems()),
+              done: false,
+            };
+            return obj4;
+          }
+        } else if (arg0 === 1) {
           c0 = 3;
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          obj = { value, done: true };
+          return obj;
         } else {
-          const unreadDisplayItems = ICYMIStore.getUnreadDisplayItems();
-          const readDisplayItems = ICYMIStore.getReadDisplayItems();
-          const nextIndexToHydrate = ICYMIStore.getNextIndexToHydrate();
-          const obj5 = require("ICYMIUtils");
-          const items = [];
-          HermesBuiltin.arraySpread(readDisplayItems, HermesBuiltin.arraySpread(unreadDisplayItems, 0));
-          const sum = nextIndexToHydrate + require("ICYMITypes").ICYMI_PAGE_SIZE;
-          c1 = 1;
-          c0 = 1;
-          const obj4 = {
-            value: obj5.hydrateItems(items, nextIndexToHydrate, sum, ICYMIStore.getHydratedItems()),
-            done: false,
-          };
-          return obj4;
+          c0 = 3;
+          return { value: "IconComponent", done: null };
         }
-      } else if (arg0 === 1) {
+      } catch (tmp5) {
         c0 = 3;
+        throw tmp5;
+      }
+    }
+  });
+  return obj(...arguments);
+};
+obj = function _regenerateFeedAndClearReadStates() {
+  let paths;
+  obj = _asyncToGenerator(async (arg0) => {
+    let closure_0;
+    let closure_2;
+    let obj12;
+    let obj6;
+    let obj9;
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        c0 = 3;
-        const obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
-        c0 = 3;
         return { value: "IconComponent", done: null };
       }
-    } catch (tmp5) {
-      c0 = tmp;
-      throw tmp5;
-    }
-  }
-};
-let closure_9 = async function _regenerateFeedAndClearReadStates(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj2 = { value, done: true };
-      return obj2;
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            constants = tmp;
+            let closure_1 = tmp4;
+            let ack;
+            let AnalyticsObjectTypes;
+            c3 = 1;
+            c4 = 1;
+            const obj5 = { value: require("asyncRequire")(paths[8], paths.paths), done: false };
+            return obj5;
+          }
+        } else if (1 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else {
+            ack = value.ack;
+            c3 = 2;
+            c4 = 1;
+            const obj8 = {
+              value: closure_130_0(closure_130_2[9])(closure_130_2[10], closure_130_2.paths),
+              done: false,
+            };
+            return obj8;
+          }
+        } else if (2 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj10 = { value, done: true };
+            return obj10;
+          } else {
+            AnalyticsObjectTypes = value.AnalyticsObjectTypes;
+            const dehydratedItems = closure_130_6.getDehydratedItems();
+            const item = dehydratedItems.forEach((type) => {
+              let tmp2 =
+                type.type === object(constants[7]).ICYMIItemTypes.MESSAGE &&
+                type.data.channel_type === constants.GUILD_ANNOUNCEMENT;
+              if (tmp2) {
+                obj = closure_1(constants[11]);
+                tmp2 = obj.compare(closure_2_5.ackMessageId(type.data.channel_id), type.data.message_id) >= 0;
+              }
+              if (tmp2) {
+                const channel_id = type.data.channel_id;
+                const obj2 = { object, objectType: constants.ACK_SEMI_AUTOMATIC };
+                const obj3 = closure_1(constants[11]);
+                closure_1_1(channel_id, obj2, true, true, obj3.atPreviousMillisecond(type.data.message_id));
+              }
+            });
+            c3 = 3;
+            c4 = 1;
+            const obj11 = { value: obj12.clearReadStates(), done: false };
+            obj12 = closure_130_1(closure_130_2[12]);
+            return obj11;
+          }
+        } else if (3 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj13 = { value, done: true };
+            return obj13;
+          } else {
+            c3 = 4;
+            c4 = 1;
+            const obj14 = { value: obj9.fetchDehydrated({ isReloading: true, forceRefresh: true }), done: false };
+            obj9 = closure_130_1(closure_130_2[12]);
+            return obj14;
+          }
+        } else if (4 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj15 = { value, done: true };
+            return obj15;
+          } else {
+            c3 = 5;
+            c4 = 1;
+            const obj16 = { value: obj6.reloadICYMITab(), done: false };
+            obj6 = closure_130_1(closure_130_2[12]);
+            return obj16;
+          }
+        } else if (5 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj17 = { value, done: true };
+            return obj17;
+          } else {
+            let obj3 = closure_130_1(closure_130_2[12]);
+            c3 = 6;
+            c4 = 1;
+            const obj18 = { value: obj3.getGuildChannelScores(), done: false };
+            return obj18;
+          }
+        } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj19 = { value, done: true };
+          return obj19;
         } else {
-          constants = tmp2;
-          closure_1 = tmp5;
-          closure_129_0 = object;
-          let ack;
-          let AnalyticsObjectTypes;
-          c3 = 1;
-          c4 = 1;
-          const obj5 = { value: require("asyncRequireImpl")(paths[8], paths.paths), done: false };
-          return obj5;
+          obj = closure_130_1(closure_130_2[12]);
+          const recommendedGuilds = obj.getRecommendedGuilds();
+          c4 = 3;
+          return { value: "IconComponent", done: null };
         }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
-        } else {
-          ack = value.ack;
-          c3 = 2;
-          c4 = 1;
-          const obj8 = { value: closure_130_0(closure_130_2[9])(closure_130_2[10], closure_130_2.paths), done: false };
-          return obj8;
-        }
-      } else if (2 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj10 = { value, done: true };
-          return obj10;
-        } else {
-          AnalyticsObjectTypes = value.AnalyticsObjectTypes;
-          const dehydratedItems = closure_130_6.getDehydratedItems();
-          const item = dehydratedItems.forEach((type) => {
-            let tmp2 = type.type === object(constants[7]).ICYMIItemTypes.MESSAGE;
-            if (tmp2) {
-              tmp2 = type.data.channel_type === constants.GUILD_ANNOUNCEMENT;
-            }
-            if (tmp2) {
-              tmp2 =
-                closure_1(constants[11]).compare(
-                  closure_2_5.ackMessageId(type.data.channel_id),
-                  type.data.message_id,
-                ) >= 0;
-              const obj = closure_1(constants[11]);
-            }
-            if (tmp2) {
-              const channel_id = type.data.channel_id;
-              const obj2 = { object, objectType: constants.ACK_SEMI_AUTOMATIC };
-              closure_1_1(
-                channel_id,
-                obj2,
-                true,
-                true,
-                closure_1(constants[11]).atPreviousMillisecond(type.data.message_id),
-              );
-              const obj3 = closure_1(constants[11]);
-            }
-          });
-          c3 = 3;
-          c4 = 1;
-          const obj11 = { value: closure_130_1(closure_130_2[12]).clearReadStates(), done: false };
-          return obj11;
-        }
-      } else if (3 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj13 = { value, done: true };
-          return obj13;
-        } else {
-          c3 = 4;
-          c4 = 1;
-          const obj14 = {
-            value: closure_130_1(closure_130_2[12]).fetchDehydrated({ isReloading: true, forceRefresh: true }),
-            done: false,
-          };
-          return obj14;
-        }
-      } else if (4 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj15 = { value, done: true };
-          return obj15;
-        } else {
-          c3 = 5;
-          c4 = 1;
-          const obj16 = { value: closure_130_1(closure_130_2[12]).reloadICYMITab(), done: false };
-          return obj16;
-        }
-      } else if (5 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj17 = { value, done: true };
-          return obj17;
-        } else {
-          c3 = 6;
-          c4 = 1;
-          const obj18 = { value: closure_130_1(closure_130_2[12]).getGuildChannelScores(), done: false };
-          return obj18;
-        }
-      } else if (arg0 === 1) {
+      } catch (tmp35) {
         c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj19 = { value, done: true };
-        return obj19;
-      } else {
-        const recommendedGuilds = closure_130_1(closure_130_2[12]).getRecommendedGuilds();
-        c4 = 3;
-        return { value: "IconComponent", done: null };
+        throw tmp35;
       }
-    } catch (tmp36) {
-      c4 = tmp;
-      throw tmp36;
     }
-  }
+  });
+  return obj(...arguments);
 };
-const ChannelTypes = fn(1085).ChannelTypes;
-fn(558);
-let ReactCompilerGating = fn(558);
+const ChannelTypes = Constants.ChannelTypes;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let channelId;
+      let first;
+      let tmp7;
+      let tmp8;
       _require = arg0;
-      const cResult = require("c").c(4);
+      obj = require("react");
+      const cResult = obj.c(4);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MessageStore, ICYMIStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -254,20 +268,22 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp8 = items1;
-        let tmp7 = fn;
+        tmp8 = items1;
+        tmp7 = fn;
       } else {
         tmp7 = cResult[2];
         tmp8 = cResult[3];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp7, tmp8);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp7, tmp8);
     }
   : (arg0) => {
+      let channelId;
       _require = arg0;
       const items = [MessageStore, ICYMIStore];
       const items1 = [arg0];
-      return require("initialize").useStateFromStores(
+      obj = require("get initialized");
+      return obj.useStateFromStores(
         items,
         () => {
           let message = MessageStore.getMessage(channelId.getChannelId(), channelId.id);
@@ -287,15 +303,20 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (id) => {
+      let first;
+      let tmp6;
+      let tmp7;
       _require = id;
-      const cResult = require("c").c(4);
+      obj = require("react");
+      const cResult = obj.c(4);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ICYMIStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -307,22 +328,101 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = id.id;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6, tmp7);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6, tmp7);
     }
   : (id) => {
       _require = id;
       const items = [ICYMIStore];
       const items1 = [id.id];
-      return require("initialize").useStateFromStores(items, () => ICYMIStore.getHydratedItem(id.id), items1);
+      obj = require("get initialized");
+      return obj.useStateFromStores(items, () => ICYMIStore.getHydratedItem(id.id), items1);
     };
-const size = fn(2);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1) => {
+      let closure_0;
+      let first;
+      _require = arg0;
+      let closure_1 = arg1;
+      obj = require("react");
+      const cResult = obj.c(5);
+      const tmp = _require;
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [MessageStore, ICYMIStore];
+        cResult[0] = items;
+        first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] === arg0) {
+        let tmp7;
+        let tmp8;
+        if (cResult[2] === arg1) {
+          tmp7 = cResult[3];
+          tmp8 = cResult[4];
+        }
+        const tmpResult = tmp(504);
+        return tmpResult.useStateFromStores(first, tmp7, tmp8);
+      }
+      const fn = function o() {
+        let tmp2 = null;
+        if (null != closure_1) {
+          let message = MessageStore.getMessage(closure_0, closure_1);
+          if (message == null) {
+            const hydratedItem = ICYMIStore.getHydratedItem(closure_1);
+            let message1;
+            if (hydratedItem != null) {
+              message1 = hydratedItem.message;
+            }
+            message = message1;
+          }
+          tmp2 = message;
+        }
+        return tmp2;
+      };
+      const items1 = [arg0, arg1];
+      cResult[1] = arg0;
+      cResult[2] = arg1;
+      cResult[3] = fn;
+      cResult[4] = items1;
+      tmp8 = items1;
+      tmp7 = fn;
+    }
+  : (arg0, arg1) => {
+      let closure_0;
+      _require = arg0;
+      let closure_1 = arg1;
+      const items = [MessageStore, ICYMIStore];
+      const items1 = [arg0, arg1];
+      obj = require("get initialized");
+      return obj.useStateFromStores(
+        items,
+        () => {
+          let tmp2 = null;
+          if (null != closure_1) {
+            let message = MessageStore.getMessage(closure_0, closure_1);
+            if (message == null) {
+              const hydratedItem = ICYMIStore.getHydratedItem(closure_1);
+              let message1;
+              if (hydratedItem != null) {
+                message1 = hydratedItem.message;
+              }
+              message = message1;
+            }
+            tmp2 = message;
+          }
+          return tmp2;
+        },
+        items1,
+      );
+    };
 const result = size.fileFinishedImporting("modules/icymi/ICYMIStoreUtils.tsx");
 
 export const getViewableFeedItemsArray = function getViewableFeedItemsArray(viewableItems) {
@@ -349,9 +449,10 @@ export const getViewableFeedItemsArray = function getViewableFeedItemsArray(view
   if (null == tmp2) {
     return [];
   } else {
+    let items1;
     const findIndexResult = items.findIndex((id) => id.id === id);
     if (findIndexResult < 0) {
-      let items1 = [];
+      items1 = [];
     } else {
       items1 = items.slice(0, findIndexResult + 1);
     }
@@ -359,95 +460,11 @@ export const getViewableFeedItemsArray = function getViewableFeedItemsArray(view
   }
 };
 export const hydrateNextPage = function hydrateNextPage() {
-  const self = this;
-  const apply = closure_8.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const regenerateFeedAndClearReadStates = function regenerateFeedAndClearReadStates() {
-  const self = this;
-  const apply = closure_9.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const useGravityMessage = tmp2;
 export const useGravityMessageItem = tmp3;
-export const useICYMIMessage = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
-      _require = arg0;
-      closure_1 = arg1;
-      const cResult = require("c").c(5);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [MessageStore, ICYMIStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] === arg0) {
-        if (cResult[2] === arg1) {
-          let tmp7 = cResult[3];
-          let tmp8 = cResult[4];
-        }
-        return tmp(504).useStateFromStores(first, tmp7, tmp8);
-      }
-      const fn = function o() {
-        let tmp2 = null;
-        if (null != closure_1) {
-          let message = MessageStore.getMessage(closure_0, closure_1);
-          if (message == null) {
-            const hydratedItem = ICYMIStore.getHydratedItem(closure_1);
-            let message1;
-            if (hydratedItem != null) {
-              message1 = hydratedItem.message;
-            }
-            message = message1;
-          }
-          tmp2 = message;
-        }
-        return tmp2;
-      };
-      const items1 = [arg0, arg1];
-      cResult[1] = arg0;
-      cResult[2] = arg1;
-      cResult[3] = fn;
-      cResult[4] = items1;
-      tmp8 = items1;
-      tmp7 = fn;
-      const obj = require("c");
-      tmp = _require;
-    }
-  : (arg0, arg1) => {
-      _require = arg0;
-      closure_1 = arg1;
-      const items = [MessageStore, ICYMIStore];
-      const items1 = [arg0, arg1];
-      return require("initialize").useStateFromStores(
-        items,
-        () => {
-          let tmp2 = null;
-          if (null != closure_1) {
-            let message = MessageStore.getMessage(closure_0, closure_1);
-            if (message == null) {
-              const hydratedItem = ICYMIStore.getHydratedItem(closure_1);
-              let message1;
-              if (hydratedItem != null) {
-                message1 = hydratedItem.message;
-              }
-              message = message1;
-            }
-            tmp2 = message;
-          }
-          return tmp2;
-        },
-        items1,
-      );
-    };
+export const useICYMIMessage = tmp4;

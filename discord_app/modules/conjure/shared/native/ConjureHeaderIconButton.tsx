@@ -1,23 +1,31 @@
 // discord_app/modules/conjure/shared/native/ConjureHeaderIconButton.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const jsx = Fragment.jsx;
 let closure_3 = createStyles.createStyles({
   button: { width: 40, height: 40, alignItems: "center", justifyContent: "center" },
 });
 const androidRippleConfig = { borderless: true, radius: 20 };
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/shared/native/ConjureHeaderIconButton.tsx");
-
-export default noop.forwardRef(
+const forwardRef = react.forwardRef;
+const forwardRefResult = forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0, ref) => {
-        const cResult = c.c(12);
+        let IconComponent;
+        let accessibilityActions;
+        let accessibilityLabel;
+        let accessibilityState;
+        let disabled;
+        let onAccessibilityAction;
+        let onPress;
+        let tmp5;
+        const obj = react2;
+        const cResult = obj.c(12);
         ({
           IconComponent,
           onPress,
@@ -32,7 +40,7 @@ export default noop.forwardRef(
           const tmp7 = <IconComponent />;
           cResult[0] = IconComponent;
           cResult[1] = tmp7;
-          let tmp5 = tmp7;
+          tmp5 = tmp7;
         } else {
           tmp5 = cResult[1];
         }
@@ -44,8 +52,9 @@ export default noop.forwardRef(
                   if (cResult[7] === onPress) {
                     if (cResult[8] === ref) {
                       if (cResult[9] === tmp4.button) {
+                        let tmp8;
                         if (cResult[10] === tmp5) {
-                          let tmp8 = cResult[11];
+                          tmp8 = cResult[11];
                         }
                         return tmp8;
                       }
@@ -81,22 +90,15 @@ export default noop.forwardRef(
         cResult[10] = tmp5;
         cResult[11] = tmp9;
         tmp8 = tmp9;
-        const obj2 = {
-          ref,
-          accessibilityRole: "button",
-          accessibilityLabel,
-          accessibilityActions,
-          onAccessibilityAction,
-          accessibilityState,
-          disabled,
-          onPress,
-          activeOpacity: 0.6,
-          androidRippleConfig,
-          style: tmp4.button,
-          children: tmp5,
-        };
       }
     : (arg0, ref) => {
+        let IconComponent;
+        let accessibilityActions;
+        let accessibilityLabel;
+        let accessibilityState;
+        let disabled;
+        let onAccessibilityAction;
+        let onPress;
         ({
           IconComponent,
           onPress,
@@ -106,20 +108,26 @@ export default noop.forwardRef(
           accessibilityState,
           disabled,
         } = arg0);
-        const tmp = closure_3();
-        return jsx(Pressables.PressableOpacity, {
-          ref,
-          accessibilityRole: "button",
-          accessibilityLabel,
-          accessibilityActions,
-          onAccessibilityAction,
-          accessibilityState,
-          disabled,
-          onPress,
-          activeOpacity: 0.6,
-          androidRippleConfig,
-          style: closure_3().button,
-          children: <IconComponent />,
-        });
+        const PressableOpacity = Pressables.PressableOpacity;
+        return (
+          <PressableOpacity
+            ref={ref}
+            accessibilityRole="button"
+            accessibilityLabel={accessibilityLabel}
+            accessibilityActions={accessibilityActions}
+            onAccessibilityAction={onAccessibilityAction}
+            accessibilityState={accessibilityState}
+            disabled={disabled}
+            onPress={onPress}
+            activeOpacity={0.6}
+            androidRippleConfig={androidRippleConfig}
+            style={closure_3().button}
+          >
+            {null}
+          </PressableOpacity>
+        );
       },
 );
+const result = size.fileFinishedImporting("modules/conjure/shared/native/ConjureHeaderIconButton.tsx");
+
+export default forwardRefResult;

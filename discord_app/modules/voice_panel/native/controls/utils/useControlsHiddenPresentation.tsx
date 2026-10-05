@@ -5,11 +5,11 @@ import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap, tmp2;
 
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
-let obj = {};
+let obj = { overshootClamping: true };
 const merged = Object.assign(VoicePanelConstants.MODE_CHANGE_PHYSICS);
-obj.overshootClamping = true;
 const __initData = {
   code: 'function useControlsHiddenPresentationTsx1(){const{yeeted,mode,VoicePanelModes,wrapperSpecs}=this.__closure;return{pointerEvents:yeeted||mode.get()!==VoicePanelModes.PANEL||wrapperSpecs.get().hidden?"none":"auto"};}',
 };
@@ -22,81 +22,86 @@ const __initData3 = {
 const __initData4 = {
   code: "function useControlsHiddenPresentationTsx4(){const{withSpring,yeeted,wrapperSpecs,HIDDEN_OPACITY_PHYSICS,cleanUp,runOnJS}=this.__closure;return{opacity:withSpring(yeeted||wrapperSpecs.get().hidden?0:1,HIDDEN_OPACITY_PHYSICS,'respect-motion-settings',cleanUp!=null?function(finished){if(finished&&yeeted){runOnJS(cleanUp)();}}:undefined)};}",
 };
-const result = size.fileFinishedImporting(
-  "modules/voice_panel/native/controls/utils/useControlsHiddenPresentation.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (mode, wrapperSpecs, arg2) => {
+      let closure_3;
       _require = mode;
       dependencyMap = wrapperSpecs;
       let obj = arg2;
-      const cResult = require("c").c(3);
+      let tmp = _require;
+      const obj2 = require("react");
+      const cResult = obj2.c(3);
       if (undefined === arg2) {
         obj = {};
       }
       const cleanUp = obj.cleanUp;
-      const tmp4 = obj.state === require("native").TransitionStates.YEETED;
+      const tmp4 = obj.state === tmp(4589).TransitionStates.YEETED;
       HIDDEN_OPACITY_PHYSICS = tmp4;
-      const obj2 = require("c");
       let fn = function l() {
         if (!closure_3) {
+          let str;
           if (mode.get() === VoicePanelModes.PANEL) {
-            let str = "auto";
+            str = "auto";
           }
-          const obj = { pointerEvents: str };
-          return obj;
+          return { pointerEvents: str };
         }
         str = "none";
       };
-      fn.__closure = { yeeted: tmp4, mode, VoicePanelModes: cleanUp, wrapperSpecs };
+      const obj3 = { yeeted: tmp4, mode, VoicePanelModes: cleanUp, wrapperSpecs };
+      fn.__closure = obj3;
       fn.__workletHash = 9921694756227;
       fn.__initData = __initData;
-      const animatedProps = require("ReanimatedRexport").useAnimatedProps(fn);
-      const obj3 = { yeeted: tmp4, mode, VoicePanelModes: cleanUp, wrapperSpecs };
-      const tmpResult = require("ReanimatedRexport");
+      const tmpResult = tmp(4612);
+      const animatedProps = tmpResult.useAnimatedProps(fn);
+      const tmpResult2 = tmp(4612);
       class S {
         constructor() {
-          obj = closure_0(closure_1[5]);
+          tmp = closure_0(closure_1[5]);
+          withSpring = tmp.withSpring;
           if (closure_3) {
             num = 0;
           } else {
-            tmp = closure_1;
+            tmp2 = closure_1;
             num = 1;
           }
-          tmp2 = closure_3;
+          tmp3 = closure_3;
           fn = undefined;
           if (null != cleanUp) {
             fn = (arg0) => {
-              let tmp = arg0;
-              if (arg0) {
-                tmp = closure_1_3;
-              }
+              const tmp = arg0 && closure_1_3;
               if (tmp) {
-                closure_0(dependencyMap[4]).runOnJS(cleanUp)();
-                const obj = closure_0(dependencyMap[4]);
+                const obj = mode(wrapperSpecs[4]);
+                obj.runOnJS(cleanUp)();
               }
             };
           }
-          obj1 = { opacity: obj.withSpring(num, tmp2, "respect-motion-settings", fn) };
-          return obj1;
+          obj = { opacity: withSpring(num, tmp3, "respect-motion-settings", fn) };
+          return obj;
         }
       }
-      const tmpResult2 = require("ReanimatedRexport");
       S.__closure = {
-        withSpring: require("spring").withSpring,
+        withSpring: tmp(5597).withSpring,
         yeeted: tmp4,
         wrapperSpecs,
         HIDDEN_OPACITY_PHYSICS,
         cleanUp,
-        runOnJS: require("ReanimatedRexport").runOnJS,
+        runOnJS: tmp(4612).runOnJS,
       };
       S.__workletHash = 6139998685483;
       S.__initData = __initData2;
+      ({
+        withSpring: tmp(5597).withSpring,
+        yeeted: tmp4,
+        wrapperSpecs,
+        HIDDEN_OPACITY_PHYSICS,
+        cleanUp,
+        runOnJS: tmp(4612).runOnJS,
+      });
       const animatedStyle = tmpResult2.useAnimatedStyle(S);
       if (cResult[0] === animatedProps) {
+        let tmp7;
         if (cResult[1] === animatedStyle) {
-          let tmp7 = cResult[2];
+          tmp7 = cResult[2];
         }
         return tmp7;
       }
@@ -107,6 +112,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = obj5;
     }
   : (mode, wrapperSpecs) => {
+      let closure_3;
+      let fn;
+      let obj3;
+      let obj5;
       _require = mode;
       dependencyMap = wrapperSpecs;
       let obj = arg2;
@@ -116,53 +125,49 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cleanUp = obj.cleanUp;
       let tmp = obj.state === require("native").TransitionStates.YEETED;
       HIDDEN_OPACITY_PHYSICS = tmp;
-      const obj2 = { hiddenProps: null, hiddenStyles: null };
+      const obj2 = { hiddenProps: obj3.useAnimatedProps(S), hiddenStyles: obj5.useAnimatedStyle(fn) };
+      obj3 = require("ReanimatedRexport");
       class S {
         constructor() {
           if (!closure_3) {
-            tmp = closure_0;
-            tmp2 = VoicePanelModes;
-            if (closure_0.get() === VoicePanelModes.PANEL) {
-              tmp3 = closure_1;
+            let str;
+            if (mode.get() === VoicePanelModes.PANEL) {
               str = "auto";
             }
-            obj = { pointerEvents: null };
-            obj.pointerEvents = str;
-            return obj;
+            return { pointerEvents: str };
           }
           str = "none";
-          return;
         }
       }
-      S.__closure = { yeeted: tmp, mode, VoicePanelModes: cleanUp, wrapperSpecs };
+      const obj4 = { yeeted: tmp, mode, VoicePanelModes: cleanUp, wrapperSpecs };
+      S.__closure = obj4;
       S.__workletHash = 2189656744769;
       S.__initData = __initData3;
-      obj2.hiddenProps = require("ReanimatedRexport").useAnimatedProps(S);
-      const obj3 = require("ReanimatedRexport");
-      const obj4 = { yeeted: tmp, mode, VoicePanelModes: cleanUp, wrapperSpecs };
-      let fn = function _() {
-        let obj = spring;
+      fn = function _() {
+        let num;
+        let obj;
+        let tmp = spring;
+        const withSpring = tmp.withSpring;
         if (closure_3) {
-          let num = 0;
+          num = 0;
         } else {
           num = 1;
         }
         let fn;
+        const tmp3 = obj;
         if (null != cleanUp) {
           fn = (arg0) => {
-            let tmp = arg0;
-            if (arg0) {
-              tmp = closure_1_3;
-            }
+            const tmp = arg0 && closure_1_3;
             if (tmp) {
-              closure_0(dependencyMap[4]).runOnJS(cleanUp)();
-              const obj = closure_0(dependencyMap[4]);
+              const obj = mode(wrapperSpecs[4]);
+              obj.runOnJS(cleanUp)();
             }
           };
         }
-        return { opacity: obj.withSpring(num, obj, "respect-motion-settings", fn) };
+        obj = { opacity: withSpring(num, tmp3, "respect-motion-settings", fn) };
+        return obj;
       };
-      const obj5 = require("ReanimatedRexport");
+      obj5 = require("ReanimatedRexport");
       fn.__closure = {
         withSpring: require("spring").withSpring,
         yeeted: tmp,
@@ -173,6 +178,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       fn.__workletHash = 8886199641773;
       fn.__initData = __initData4;
-      obj2.hiddenStyles = obj5.useAnimatedStyle(fn);
+      ({
+        withSpring: require("spring").withSpring,
+        yeeted: tmp,
+        wrapperSpecs,
+        HIDDEN_OPACITY_PHYSICS,
+        cleanUp,
+        runOnJS: require("ReanimatedRexport").runOnJS,
+      });
       return obj2;
     };
+const result = size.fileFinishedImporting(
+  "modules/voice_panel/native/controls/utils/useControlsHiddenPresentation.tsx",
+);
+
+export default tmp4;

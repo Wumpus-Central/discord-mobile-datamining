@@ -1,39 +1,47 @@
 // discord_app/modules/people/strangers/AcceptFriendRequestModalActionCreators.native.tsx
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import Constants from "../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import Constants2 from "../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const type = Constants2.ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL_ID;
 const AnalyticEvents = Constants.AnalyticEvents;
-const jsx = jsxProd.jsx;
+const jsx = Fragment.jsx;
 const result = size.fileFinishedImporting("modules/people/strangers/AcceptFriendRequestModalActionCreators.native.tsx");
 
 export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequestConfirmModal(arg0) {
   ({ onConfirm: require, onCancel: importDefault } = arg0);
-  AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type });
+  const obj = AnalyticsUtilsDefault;
   const obj2 = { type };
-  actions_AlertActionCreatorsDefault.openLazy({
+  obj.track(AnalyticEvents.OPEN_MODAL, obj2);
+  const obj3 = actions_AlertActionCreatorsDefault;
+  const obj4 = {
     importer() {
-      return asyncRequireImpl(10608, dependencyMap.paths).then((result) => {
-        closure_0 = result.default;
+      let onConfirm;
+      const promise = asyncRequire(10608, dependencyMap.paths);
+      return promise.then((result) => {
+        let closure_0 = result.default;
         return (View) => {
-          const obj = {};
+          closure_0 = View;
           const merged = Object.assign(View);
-          obj.onCancel = function onCancel() {
-            View.onClose();
-            if (closure_2_1 != null) {
-              tmp2();
-            }
-          };
-          obj.onConfirm = onConfirm;
-          return <View />;
+          return (
+            <closure_0
+              onCancel={function onCancel() {
+                closure_0.onClose();
+                if (closure_2_1 != null) {
+                  tmp2();
+                }
+              }}
+              onConfirm={onConfirm}
+            />
+          );
         };
       });
     },
     isDismissable: false,
-  });
+  };
+  obj3.openLazy(obj4);
 };

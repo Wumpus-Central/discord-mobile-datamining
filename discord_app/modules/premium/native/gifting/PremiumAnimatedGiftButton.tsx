@@ -1,18 +1,22 @@
 // discord_app/modules/premium/native/gifting/PremiumAnimatedGiftButton.tsx
+import react2 from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+const react = react2;
+let _require, playResult, resetResult, tmp4, tmp6;
 
-require = fn;
-const useRef = fn(19).useRef;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const useRef = react2.useRef;
+const jsx = Fragment.jsx;
 let closure_7 = createStyles.createStyles((width, marginHorizontal) => {
-  const obj = { containerRefresh: null, animationRefresh: null };
-  const size = {
+  const obj = { containerRefresh: size, animationRefresh: { width: 24, height: 24 } };
+  size = {
     width,
     height: width,
     borderRadius: nativeDefault.radii.sm,
@@ -21,17 +25,27 @@ let closure_7 = createStyles.createStyles((width, marginHorizontal) => {
     alignItems: "center",
     justifyContent: "center",
   };
-  obj.containerRefresh = size;
-  obj.animationRefresh = { width: 24, height: 24 };
   return obj;
 });
-const ReactCompilerGating = fn(558);
-let size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumAnimatedGiftButton.tsx");
-
-export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = require("c").c(30);
+      let accessibilityState;
+      let active;
+      let activeStyle;
+      let animationDataUrl;
+      let channelId;
+      let disabled;
+      let items2;
+      let loop;
+      let onAnimationFinished;
+      let ref;
+      let stateFromStores;
+      let style;
+      let tmp10;
+      let tmp11;
+      let useReducedMotion;
+      let obj = require("react");
+      const cResult = obj.c(30);
       ({
         active,
         style,
@@ -43,19 +57,17 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
         loop,
         activeStyle,
       } = arg0);
-      let obj = require("c");
-      const tmp = _require;
-      const token = require("useToken").useToken(stateFromStores(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
       const obj2 = require("useToken");
-      const token1 = require("useToken").useToken(stateFromStores(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+      const token = obj2.useToken(stateFromStores(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
       const obj3 = require("useToken");
-      const token2 = require("useToken").useToken(
-        stateFromStores(587).modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE,
-      );
+      const token1 = obj3.useToken(stateFromStores(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+      const obj4 = require("useToken");
+      const token2 = obj4.useToken(stateFromStores(587).modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
       const tmp7 = closure_7(token, token1);
       const bound = Math.max(0, (token2 - token) / 2);
-      const obj4 = require("useToken");
+      const tmp = _require;
       _require = useRef(null);
+      useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
         class T {
@@ -69,17 +81,18 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
       } else {
         [tmp10, tmp11] = cResult;
       }
-      const tmp9 = useRef(null);
-      stateFromStores = tmp(504).useStateFromStores(tmp10, T);
+      const tmpResult = tmp(504);
+      stateFromStores = tmpResult.useStateFromStores(tmp10, T);
       if (cResult[2] !== stateFromStores) {
         class E {
           constructor() {
-            if (!closure_1) {
-              tmp = closure_0;
-              tmp2 = closure_2;
+            tmp = closure_1;
+            if (!tmp) {
+              tmp2 = closure_0;
+              tmp3 = closure_2;
               obj = closure_0(closure_2[9]);
               if (obj.isIOS()) {
-                tmp3 = null;
+                tmp4 = null;
                 if (closure_0 != null) {
                   current = closure_0.current;
                   if (current != null) {
@@ -87,7 +100,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
                   }
                 }
               }
-              tmp5 = null;
+              tmp6 = null;
               if (closure_0 != null) {
                 current2 = closure_0.current;
                 if (current2 != null) {
@@ -107,12 +120,13 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
       } else {
         class E {
           constructor() {
-            if (!closure_1) {
-              tmp = closure_0;
-              tmp2 = closure_2;
+            tmp = closure_1;
+            if (!tmp) {
+              tmp2 = closure_0;
+              tmp3 = closure_2;
               obj = closure_0(closure_2[9]);
               if (obj.isIOS()) {
-                tmp3 = null;
+                tmp4 = null;
                 if (closure_0 != null) {
                   current = closure_0.current;
                   if (current != null) {
@@ -120,7 +134,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
                   }
                 }
               }
-              tmp5 = null;
+              tmp6 = null;
               if (closure_0 != null) {
                 current2 = closure_0.current;
                 if (current2 != null) {
@@ -135,12 +149,13 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
       if (cResult[4] === channelId) {
         class E {
           constructor() {
-            if (!closure_1) {
-              tmp = closure_0;
-              tmp2 = closure_2;
+            tmp = closure_1;
+            if (!tmp) {
+              tmp2 = closure_0;
+              tmp3 = closure_2;
               obj = closure_0(closure_2[9]);
               if (obj.isIOS()) {
-                tmp3 = null;
+                tmp4 = null;
                 if (closure_0 != null) {
                   current = closure_0.current;
                   if (current != null) {
@@ -148,7 +163,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
                   }
                 }
               }
-              tmp5 = null;
+              tmp6 = null;
               if (closure_0 != null) {
                 current2 = closure_0.current;
                 if (current2 != null) {
@@ -159,7 +174,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
             return;
           }
         }
-        const effect = noop.useEffect(E, items2);
+        const effect = react.useEffect(E, items2);
         class T {
           constructor() {
             return closure_1_5.useReducedMotion;
@@ -168,12 +183,13 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
         if (!stateFromStores) {
           class E {
             constructor() {
-              if (!closure_1) {
-                tmp = closure_0;
-                tmp2 = closure_2;
+              tmp = closure_1;
+              if (!tmp) {
+                tmp2 = closure_0;
+                tmp3 = closure_2;
                 obj = closure_0(closure_2[9]);
                 if (obj.isIOS()) {
-                  tmp3 = null;
+                  tmp4 = null;
                   if (closure_0 != null) {
                     current = closure_0.current;
                     if (current != null) {
@@ -181,7 +197,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
                     }
                   }
                 }
-                tmp5 = null;
+                tmp6 = null;
                 if (closure_0 != null) {
                   current2 = closure_0.current;
                   if (current2 != null) {
@@ -196,12 +212,13 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
         if (active) {
           class E {
             constructor() {
-              if (!closure_1) {
-                tmp = closure_0;
-                tmp2 = closure_2;
+              tmp = closure_1;
+              if (!tmp) {
+                tmp2 = closure_0;
+                tmp3 = closure_2;
                 obj = closure_0(closure_2[9]);
                 if (obj.isIOS()) {
-                  tmp3 = null;
+                  tmp4 = null;
                   if (closure_0 != null) {
                     current = closure_0.current;
                     if (current != null) {
@@ -209,7 +226,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
                     }
                   }
                 }
-                tmp5 = null;
+                tmp6 = null;
                 if (closure_0 != null) {
                   current2 = closure_0.current;
                   if (current2 != null) {
@@ -224,12 +241,13 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
         if (active) {
           class E {
             constructor() {
-              if (!closure_1) {
-                tmp = closure_0;
-                tmp2 = closure_2;
+              tmp = closure_1;
+              if (!tmp) {
+                tmp2 = closure_0;
+                tmp3 = closure_2;
                 obj = closure_0(closure_2[9]);
                 if (obj.isIOS()) {
-                  tmp3 = null;
+                  tmp4 = null;
                   if (closure_0 != null) {
                     current = closure_0.current;
                     if (current != null) {
@@ -237,7 +255,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
                     }
                   }
                 }
-                tmp5 = null;
+                tmp6 = null;
                 if (closure_0 != null) {
                   current2 = closure_0.current;
                   if (current2 != null) {
@@ -252,12 +270,13 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
         if (cResult[7] === style) {
           class E {
             constructor() {
-              if (!closure_1) {
-                tmp = closure_0;
-                tmp2 = closure_2;
+              tmp = closure_1;
+              if (!tmp) {
+                tmp2 = closure_0;
+                tmp3 = closure_2;
                 obj = closure_0(closure_2[9]);
                 if (obj.isIOS()) {
-                  tmp3 = null;
+                  tmp4 = null;
                   if (closure_0 != null) {
                     current = closure_0.current;
                     if (current != null) {
@@ -265,7 +284,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
                     }
                   }
                 }
-                tmp5 = null;
+                tmp6 = null;
                 if (closure_0 != null) {
                   current2 = closure_0.current;
                   if (current2 != null) {
@@ -287,29 +306,42 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
       cResult[4] = channelId;
       cResult[5] = stateFromStores;
       cResult[6] = items2;
-      const tmpResult = tmp(504);
     }
   : (arg0) => {
+      let accessibilityState;
+      let active;
+      let activeStyle;
+      let animationDataUrl;
+      let channelId;
+      let disabled;
+      let loop;
+      let obj7;
+      let onAnimationFinished;
+      let ref;
+      let stateFromStores;
+      let style;
+      let tmp14;
+      let useReducedMotion;
       ({ active, disabled, accessibilityState } = arg0);
       ({ style, activeStyle, channelId, animationDataUrl, onAnimationFinished, loop } = arg0);
-      const token = require("useToken").useToken(stateFromStores(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
       let obj = require("useToken");
-      const tmp3 = stateFromStores;
-      const token1 = require("useToken").useToken(stateFromStores(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+      const token = obj.useToken(stateFromStores(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
       const obj2 = require("useToken");
-      const token2 = require("useToken").useToken(
-        stateFromStores(587).modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE,
-      );
+      const token1 = obj2.useToken(stateFromStores(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+      const obj3 = require("useToken");
+      const token2 = obj3.useToken(stateFromStores(587).modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
       const tmp7 = closure_7(token, token1);
       const bound = Math.max(0, (token2 - token) / 2);
       const tmp9 = useRef(null);
       _require = tmp9;
-      const obj3 = require("useToken");
       const items = [AccessibilityStore];
-      stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+      const obj4 = require("get initialized");
+      const tmp3 = stateFromStores;
+      stateFromStores = obj4.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
       const items1 = [channelId, stateFromStores];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
         if (!stateFromStores) {
+          const obj = PlatformUtils;
           if (obj.isIOS()) {
             if (ref != null) {
               const current = ref.current;
@@ -324,44 +356,39 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
               current2.play();
             }
           }
-          obj = PlatformUtils;
         }
       }, items1);
       let FadeOut;
+      const View = stateFromStores(4612).View;
       if (!stateFromStores) {
         FadeOut = tmp(4612).FadeOut;
       }
-      const obj5 = { exiting: FadeOut, children: null };
       const items2 = [tmp7.containerRefresh, style];
+      const PressableOpacity = tmp(5909).PressableOpacity;
       if (active) {
         active = !disabled;
       }
       if (active) {
         active = activeStyle;
       }
-      const obj6 = { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null };
+      ({
+        style: items2,
+        hitSlop: tmp14,
+        accessibilityRole: "button",
+        accessibilityState: obj7,
+        children: jsx(tmp3(5920), obj8),
+      });
       items2[2] = active;
-      let tmp14;
+      tmp14 = undefined;
       if (bound > 0) {
         tmp14 = bound;
       }
-      obj6.hitSlop = tmp14;
+      obj7 = { disabled };
       const merged = Object.assign(accessibilityState);
-      obj6.accessibilityState = { disabled };
       const merged1 = Object.assign(arg0);
-      obj6.children = jsx(tmp3(5920), {
-        ref: tmp9,
-        style: tmp7.animationRefresh,
-        source: { uri: animationDataUrl },
-        loop,
-        autoPlay: false,
-        onAnimationFinish: onAnimationFinished,
-      });
-      obj5.children = jsx(require("Pressables").PressableOpacity, {
-        style: items2,
-        hitSlop: null,
-        accessibilityRole: "button",
-        accessibilityState: null,
-      });
-      return jsx(stateFromStores(4612).View, { exiting: FadeOut, children: null });
+      return <View exiting={FadeOut}>{null}</View>;
     };
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumAnimatedGiftButton.tsx");
+
+export const PremiumAnimatedGiftButton = tmp2;

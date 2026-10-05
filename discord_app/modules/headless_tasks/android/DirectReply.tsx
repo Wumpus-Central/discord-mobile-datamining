@@ -1,102 +1,109 @@
 // discord_app/modules/headless_tasks/android/DirectReply.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import MessageConstants from "../../messages/MessageConstants.tsx";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const NativeModules = fn(17).NativeModules;
-const MessageSendLocation = fn(4883).MessageSendLocation;
-let closure_5 = new LoggerDefault("DirectReply");
-const size = fn(2);
+let c3, c4;
+
+const NativeModules = react_native.NativeModules;
+const MessageSendLocation = MessageConstants.MessageSendLocation;
+let tmp = new LoggerDefault("DirectReply");
+let closure_5 = tmp;
 let result = size.fileFinishedImporting("modules/headless_tasks/android/DirectReply.tsx");
 
 export default (arg0) => {
-  closure_0 = arg0;
-  return new Promise((arg0) => {
+  let logger;
+  let closure_0 = arg0;
+  const promise = new Promise((arg0) => {
     closure_0 = arg0;
-    logger.log("Executing DirectReply");
+    const logResult = logger.log("Executing DirectReply");
     let PushNotificationAndroid = NativeModules.PushNotificationAndroid;
     let result = PushNotificationAndroid.markNotificationAsDirectReply(closure_0.channelId);
-    closure_0(dependencyMap[4]).awaitStorage(() => {
-      closure_0 = async function _sendMessage(arg0) {
-        if (c4 === 2) {
-          c4 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj2 = { value, done: true };
-            return obj2;
+    let obj = closure_0(dependencyMap[4]);
+    obj.awaitStorage(() => {
+      function sendMessage(arg0) {
+        return obj(...arguments);
+      }
+      let obj = function _sendMessage() {
+        obj = _asyncToGenerator(async (arg0) => {
+          let closure_1;
+          closure_0 = arg0;
+          if (c4 === 2) {
+            c4 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj2 = { value, done: true };
+              return obj2;
+            } else {
+              return { value: "IconComponent", done: null };
+            }
           } else {
-            return { value: "IconComponent", done: null };
-          }
-        } else {
-          try {
-            c4 = 2;
-            if (0 === c3) {
-              if (arg0 === 1) {
+            try {
+              let tmp;
+              c4 = 2;
+              if (0 === c3) {
+                if (arg0 === 1) {
+                  c4 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c4 = 3;
+                  const obj3 = { value, done: true };
+                  return obj3;
+                } else {
+                  let closure_2 = tmp4;
+                  tmp = undefined;
+                  const obj6 = obj(closure_3_1[5]);
+                  const obj4 = {
+                    content: closure_0.channelReplyText,
+                    tts: false,
+                    invalidEmojis: [],
+                    validNonShortcutEmojis: [],
+                  };
+                  const obj5 = { eagerDispatch: false, location: constants.PUSH_NOTIFICATION };
+                  c3 = 1;
+                  c4 = 1;
+                  const obj7 = { value: obj6.sendMessage(closure_0.channelId, obj4, false, obj5), done: false };
+                  return obj7;
+                }
+              } else if (arg0 === 1) {
                 c4 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
+                const obj8 = { value, done: true };
+                return obj8;
               } else {
-                closure_2 = tmp5;
-                closure_1 = tmp2;
-                closure_129_0 = closure_0;
-                closure_129_1 = undefined;
-                const obj6 = closure_0(dependencyMap[5]);
-                const obj4 = {
-                  content: closure_0.channelReplyText,
-                  tts: false,
-                  invalidEmojis: [],
-                  validNonShortcutEmojis: [],
-                };
-                const obj5 = { eagerDispatch: false, location: constants.PUSH_NOTIFICATION };
-                c3 = 1;
-                c4 = 1;
-                const obj7 = { value: obj6.sendMessage(closure_0.channelId, obj4, false, obj5), done: false };
-                return obj7;
+                tmp = value;
+                logger.log("Sent message, ok:", tmp.ok);
+                if (tmp.ok) {
+                  const PushNotificationAndroid = closure_3_3.PushNotificationAndroid;
+                  const _JSON = JSON;
+                  obj = {};
+                  const handleDirectReplySuccess = PushNotificationAndroid.handleDirectReplySuccess;
+                  const merged = Object.assign(tmp.body);
+                  const merged1 = Object.assign(closure_0);
+                  const result = handleDirectReplySuccess(stringify(obj));
+                }
+                closure_0(true);
+                c4 = 3;
+                return { value: "IconComponent", done: null };
               }
-            } else if (arg0 === 1) {
+            } catch (tmp19) {
               c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj8 = { value, done: true };
-              return obj8;
-            } else {
-              closure_129_1 = value;
-              logger.log("Sent message, ok:", closure_129_1.ok);
-              if (closure_129_1.ok) {
-                const PushNotificationAndroid = NativeModules.PushNotificationAndroid;
-                const _JSON = JSON;
-                const obj = {};
-                const merged = Object.assign(closure_129_1.body);
-                const merged1 = Object.assign(closure_129_0);
-                const result = PushNotificationAndroid.handleDirectReplySuccess(JSON.stringify(obj));
-              }
-              closure_0(true);
-              c4 = 3;
-              return { value: "IconComponent", done: null };
+              throw tmp19;
             }
-          } catch (tmp20) {
-            c4 = tmp;
-            throw tmp20;
           }
-        }
+        });
+        return obj(...arguments);
       };
       logger.log("Storage loaded");
-      (function sendMessage(arg0) {
-        const self = this;
-        const apply = closure_0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      })(closure_0);
+      sendMessage(closure_0);
     });
   });
+  return promise;
 };

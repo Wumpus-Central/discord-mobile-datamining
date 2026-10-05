@@ -1,40 +1,48 @@
 // discord_app/modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx
-import c from "../../../_runtime/00576_c.js";
+import react2 from "../../../_runtime/00576_react.js";
+import Constants from "../../Constants.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails.tsx";
-import noop from "../../../_runtime/metro/00019__.js";
+import react from "../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const MarketingURLs = fn(1085).MarketingURLs;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
+let roles, set;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+const MarketingURLs = Constants.MarketingURLs;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (id, arg1, size) => {
-      const cResult = c.c(28);
+      let error;
+      let highlightedCreatorDetails;
+      let isLoading;
+      const obj = react2;
+      const cResult = obj.c(28);
       ({ isLoading, error, highlightedCreatorDetails } = useFetchHighlightedCreatorGuildDetailsDefault(id));
       let store_page;
+      useFetchHighlightedCreatorGuildDetailsDefault(id);
       if (highlightedCreatorDetails != null) {
         store_page = highlightedCreatorDetails.store_page;
       }
       let benefit_emojis;
+      const first = cResult[0];
       if (store_page != null) {
         const role_subscription = store_page.role_subscription;
         if (role_subscription != null) {
           benefit_emojis = role_subscription.benefit_emojis;
         }
       }
-      if (cResult[0] === benefit_emojis) {
+      if (first === benefit_emojis) {
+        let arr;
         let group_listings;
+        const tmp8 = cResult[1];
         if (store_page != null) {
           const role_subscription2 = store_page.role_subscription;
           if (role_subscription2 != null) {
             group_listings = role_subscription2.group_listings;
           }
         }
-        if (cResult[1] === group_listings) {
-          let arr = cResult[2];
+        if (tmp8 === group_listings) {
+          arr = cResult[2];
         }
         let icon_hash;
         if (store_page != null) {
@@ -42,19 +50,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[3] === icon_hash) {
           if (cResult[4] === size) {
+            let tmp19;
+            let tmp27;
+            let subscriber_count;
+            let tmp32;
             if (cResult[5] === id) {
-              let tmp17 = cResult[6];
+              tmp19 = cResult[6];
             }
-            let tmp20 = arr;
+            let tmp22 = arr;
             if (null != arr) {
-              tmp20 = arr;
+              tmp22 = arr;
               if (arr.length > arg1) {
                 if (cResult[7] === arr) {
+                  let tmp23;
+                  if (cResult[8] === arg1) {
+                    tmp23 = cResult[9];
+                  }
+                  tmp22 = tmp23;
                 }
                 const substr = arr.slice(0, arg1);
                 cResult[7] = arr;
                 cResult[8] = arg1;
                 cResult[9] = substr;
+                tmp23 = substr;
               }
             }
             let diff = null;
@@ -75,51 +93,53 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               cResult[10] = slug;
               cResult[11] = result;
-              let tmp26 = result;
+              tmp27 = result;
             } else {
-              tmp26 = cResult[11];
+              tmp27 = cResult[11];
             }
+            let name;
             if (store_page != null) {
-              guild = store_page.guild;
+              const guild = store_page.guild;
               if (guild != null) {
-                const name = guild.name;
+                name = guild.name;
               }
             }
             if (store_page != null) {
               const role_subscription7 = store_page.role_subscription;
               if (role_subscription7 != null) {
-                const subscriber_count = role_subscription7.subscriber_count;
+                subscriber_count = role_subscription7.subscriber_count;
               }
             }
-            let tmp29 = !isLoading;
-            if (!isLoading) {
-              tmp29 = null != name;
-            }
-            if (tmp29) {
-              tmp29 = null != icon_hash;
-            }
-            if (tmp29) {
-              tmp29 = null != tmp17;
-            }
-            if (tmp29) {
-              if (cResult[16] === tmp20) {
-                if (cResult[17] === tmp17) {
+            if (!isLoading && null != name && null != icon_hash && null != tmp19) {
+              if (cResult[16] === tmp22) {
+                if (cResult[17] === tmp19) {
                   if (cResult[18] === icon_hash) {
                     if (cResult[19] === name) {
                       if (cResult[20] === diff) {
-                        if (cResult[21] === tmp26) {
+                        if (cResult[21] === tmp27) {
+                          let tmp33;
                           if (cResult[22] === subscriber_count) {
-                            let tmp31 = cResult[23];
+                            tmp33 = cResult[23];
                           }
-                          if (cResult[24] === tmp29) {
+                          if (cResult[24] === (!isLoading && null != name && null != icon_hash && null != tmp19)) {
                             if (cResult[25] === isLoading) {
+                              let tmp34;
+                              if (cResult[26] === tmp33) {
+                                tmp34 = cResult[27];
+                              }
+                              tmp32 = tmp34;
                             }
                           }
-                          const obj2 = { hasAllImperativeDetails: tmp29, isLoading, details: tmp31 };
-                          cResult[24] = tmp29;
+                          const obj2 = {
+                            hasAllImperativeDetails: !isLoading && null != name && null != icon_hash && null != tmp19,
+                            isLoading,
+                            details: tmp33,
+                          };
+                          cResult[24] = !isLoading && null != name && null != icon_hash && null != tmp19;
                           cResult[25] = isLoading;
-                          cResult[26] = tmp31;
+                          cResult[26] = tmp33;
                           cResult[27] = obj2;
+                          tmp34 = obj2;
                         }
                       }
                     }
@@ -129,47 +149,51 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = {
                 guildName: name,
                 guildIcon: icon_hash,
-                guildAvatarUrl: tmp17,
-                storePageUrl: tmp26,
+                guildAvatarUrl: tmp19,
+                storePageUrl: tmp27,
                 subscriberCount: subscriber_count,
-                emojisToShow: tmp20,
+                emojisToShow: tmp22,
                 notShownEmojiCount: diff,
               };
-              cResult[16] = tmp20;
-              cResult[17] = tmp17;
+              cResult[16] = tmp22;
+              cResult[17] = tmp19;
               cResult[18] = icon_hash;
               cResult[19] = name;
               cResult[20] = diff;
-              cResult[21] = tmp26;
+              cResult[21] = tmp27;
               cResult[22] = subscriber_count;
               cResult[23] = obj3;
-              tmp31 = obj3;
+              tmp33 = obj3;
             } else {
               if (cResult[12] === error) {
-                if (cResult[13] === tmp29) {
+                if (cResult[13] === (!isLoading && null != name && null != icon_hash && null != tmp19)) {
                   if (cResult[14] === isLoading) {
-                    let tmp30 = cResult[15];
+                    tmp32 = cResult[15];
                   }
-                  return tmp30;
                 }
               }
-              const obj4 = { hasAllImperativeDetails: tmp29, isLoading, error };
+              const obj4 = {
+                hasAllImperativeDetails: !isLoading && null != name && null != icon_hash && null != tmp19,
+                isLoading,
+                error,
+              };
               cResult[12] = error;
-              cResult[13] = tmp29;
+              cResult[13] = !isLoading && null != name && null != icon_hash && null != tmp19;
               cResult[14] = isLoading;
               cResult[15] = obj4;
-              tmp30 = obj4;
+              tmp32 = obj4;
             }
+            return tmp32;
           }
         }
         const obj5 = { id, icon: icon_hash, size };
-        const guildIconURL = AvatarUtilsDefault.getGuildIconURL(obj5);
+        const tmp3Result = AvatarUtilsDefault;
+        const guildIconURL = tmp3Result.getGuildIconURL(obj5);
         cResult[3] = icon_hash;
         cResult[4] = size;
         cResult[5] = id;
         cResult[6] = guildIconURL;
-        tmp17 = guildIconURL;
-        const tmp3Result = AvatarUtilsDefault;
+        tmp19 = guildIconURL;
       }
       let group_listings1;
       if (store_page != null) {
@@ -178,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           group_listings1 = role_subscription3.group_listings;
         }
       }
-      new Set();
+      set = new Set();
       if (group_listings1 != null) {
         const item = group_listings1.forEach((subscription_listings) => {
           const prop = subscription_listings.subscription_listings;
@@ -221,22 +245,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = group_listings2;
       cResult[2] = found;
       arr = found;
-      const tmp4 = useFetchHighlightedCreatorGuildDetailsDefault(id);
     }
   : (id, arg1, size) => {
-      closure_0 = arg1;
+      let highlightedCreatorDetails;
+      let isLoading;
+      let memo;
+      let obj4;
+      let obj5;
+      let result;
+      let store_page;
+      let subscriber_count;
+      let closure_0 = arg1;
+      const tmp2 = memo;
       const tmp3 = store_page(memo[4])(id);
       ({ isLoading, highlightedCreatorDetails } = tmp3);
+      const tmp = store_page;
       store_page = undefined;
+      const error = tmp3.error;
       if (highlightedCreatorDetails != null) {
         store_page = highlightedCreatorDetails.store_page;
       }
       let role_subscription1;
+      const useMemo = react.useMemo;
       if (store_page != null) {
         role_subscription1 = store_page.role_subscription;
       }
       const items = [role_subscription1];
-      memo = noop.useMemo(() => {
+      memo = useMemo(() => {
         let group_listings;
         if (store_page != null) {
           const role_subscription = store_page.role_subscription;
@@ -244,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             group_listings = role_subscription.group_listings;
           }
         }
-        new Set();
+        set = new Set();
         if (group_listings != null) {
           let item = group_listings.forEach((subscription_listings) => {
             const prop = subscription_listings.subscription_listings;
@@ -275,10 +310,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (store_page != null) {
         icon_hash = store_page.guild.icon_hash;
       }
-      const guildIconURL = store_page(memo[5]).getGuildIconURL({ id, icon: icon_hash, size });
+      const obj2 = { id, icon: icon_hash, size };
+      const tmpResult = tmp(tmp2[5]);
+      const guildIconURL = tmpResult.getGuildIconURL(obj2);
       const items1 = [memo, arg1];
       let diff = null;
-      const memo1 = noop.useMemo(() => {
+      const memo1 = react.useMemo(() => {
         let substr = memo;
         if (null != memo) {
           substr = memo;
@@ -299,33 +336,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         slug = highlightedCreatorDetails.slug;
       }
       if (null != slug) {
-        const result = MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(slug);
+        result = MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(slug);
       }
+      let name;
       if (store_page != null) {
-        guild = store_page.guild;
+        const guild = store_page.guild;
         if (guild != null) {
-          const name = guild.name;
+          name = guild.name;
         }
       }
       if (store_page != null) {
         let role_subscription = store_page.role_subscription;
         if (role_subscription != null) {
-          const subscriber_count = role_subscription.subscriber_count;
+          subscriber_count = role_subscription.subscriber_count;
         }
       }
-      let tmp13 = !isLoading;
-      if (!isLoading) {
-        tmp13 = null != name;
-      }
-      if (tmp13) {
-        tmp13 = null != icon_hash;
-      }
-      if (tmp13) {
-        tmp13 = null != guildIconURL;
-      }
-      if (tmp13) {
-        const obj3 = { hasAllImperativeDetails: tmp13, isLoading, details: null };
-        const obj4 = {
+      if (!isLoading && null != name && null != icon_hash && null != guildIconURL) {
+        const obj3 = {
+          hasAllImperativeDetails: !isLoading && null != name && null != icon_hash && null != guildIconURL,
+          isLoading,
+          details: obj4,
+        };
+        obj5 = obj3;
+        obj4 = {
           guildName: name,
           guildIcon: icon_hash,
           guildAvatarUrl: guildIconURL,
@@ -334,10 +367,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           emojisToShow: memo1,
           notShownEmojiCount: diff,
         };
-        obj3.details = obj4;
-        let obj5 = obj3;
       } else {
-        obj5 = { hasAllImperativeDetails: tmp13, isLoading, error: tmp3.error };
+        obj5 = {
+          hasAllImperativeDetails: !isLoading && null != name && null != icon_hash && null != guildIconURL,
+          isLoading,
+          error,
+        };
       }
       return obj5;
     };
+let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
+
+export default tmp2;

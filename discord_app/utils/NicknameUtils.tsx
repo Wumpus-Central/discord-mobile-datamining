@@ -1,15 +1,20 @@
 // discord_app/utils/NicknameUtils.tsx
-import util from "../intl/index.native.tsx";
+import intl2 from "../intl/index.native.tsx";
 import UserUtilsDefault from "UserUtils.tsx";
 import ChannelStore from "../stores/ChannelStore.tsx";
 import GuildMemberStore from "../stores/GuildMemberStore.tsx";
 import RelationshipStore from "../stores/RelationshipStore.tsx";
+import ReactCompilerGating from "../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-require = fn;
+const require = globalThis.__r;
+let _require, dependencyMap;
+
 function getName(guildId, arg1, id) {
+  let stringResult;
   if (null == id) {
-    const intl = util.intl;
-    let stringResult = intl.string(util.t.sKdZ6U);
+    const intl = intl2.intl;
+    stringResult = intl.string(intl2.t.sKdZ6U);
   } else {
     stringResult = null;
     if (null != id) {
@@ -31,31 +36,38 @@ function getName(guildId, arg1, id) {
       }
     }
     if (stringResult == null) {
-      stringResult = UserUtilsDefault.getName(id);
+      const obj2 = UserUtilsDefault;
+      stringResult = obj2.getName(id);
     }
   }
   return stringResult;
 }
-const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1, arg2) => {
+      let closure_0;
+      let closure_2;
+      let first;
       _require = arg0;
-      closure_1 = arg1;
+      let closure_1 = arg1;
       dependencyMap = arg2;
-      const cResult = require("c").c(5);
+      const obj = require("react");
+      const cResult = obj.c(5);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildMemberStore, ChannelStore, RelationshipStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === arg1) {
         if (cResult[2] === arg0) {
+          let tmp8;
           if (cResult[3] === arg2) {
-            let tmp8 = cResult[4];
+            tmp8 = cResult[4];
           }
-          return tmp(504).useStateFromStores(first, tmp8);
+          const tmpResult = tmp(504);
+          return tmpResult.useStateFromStores(first, tmp8);
         }
       }
       const fn = function o() {
@@ -66,15 +78,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = arg2;
       cResult[4] = fn;
       tmp8 = fn;
-      const obj = require("c");
-      tmp = _require;
     }
   : (arg0, arg1, arg2) => {
+      let closure_0;
+      let closure_2;
       _require = arg0;
-      closure_1 = arg1;
+      let closure_1 = arg1;
       dependencyMap = arg2;
       const items = [GuildMemberStore, ChannelStore, RelationshipStore];
-      return require("initialize").useStateFromStores(items, () => getName(closure_0, closure_1, closure_2));
+      const obj = require("get initialized");
+      return obj.useStateFromStores(items, () => getName(closure_0, closure_1, closure_2));
     };
 function getNickname(guildId, channelId, id) {
   if (null == id) {
@@ -95,7 +108,6 @@ function getNickname(guildId, channelId, id) {
     return null;
   }
 }
-const size = fn(2);
 const result = size.fileFinishedImporting("utils/NicknameUtils.tsx");
 
 export default { getNickname, getName, useName: tmp2 };

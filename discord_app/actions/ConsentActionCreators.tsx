@@ -1,27 +1,33 @@
 // discord_app/actions/ConsentActionCreators.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
 import Constants from "../Constants.tsx";
-import util from "../intl/index.native.tsx";
+import intl3 from "../intl/index.native.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
 function handleRequestSuccess(body) {
+  let obj2;
+  const tmp = null != body && null != body.body;
   if (tmp) {
-    const obj2 = { type: "UPDATE_CONSENTS", consents: null };
-    const obj3 = {};
+    const obj = { type: "UPDATE_CONSENTS", consents: obj2 };
+    obj2 = {};
+    const dispatch = DispatcherDefault.dispatch;
+    DispatcherDefault;
     const merged = Object.assign(body.body);
-    obj2.consents = obj3;
-    DispatcherDefault.dispatch(obj2);
+    dispatch(obj);
   }
   return body.body;
 }
 function handleRequestFailure(status) {
+  let message;
   if (status.status >= 500) {
     if (status.status <= 599) {
-      const intl2 = util.intl;
-      let message = intl2.string(util.t.cvJdtg);
+      const intl2 = intl3.intl;
+      message = intl2.string(intl3.t.cvJdtg);
     }
     const _Error = Error;
+    const self = this;
+    const self2 = this;
     const error = new Error(message);
     throw error;
   }
@@ -32,33 +38,37 @@ function handleRequestFailure(status) {
       }
     }
   }
-  const intl = util.intl;
-  message = intl.string(util.t.cvJdtg);
+  const intl = intl3.intl;
+  message = intl.string(intl3.t.cvJdtg);
 }
 const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("actions/ConsentActionCreators.tsx");
 
 export const fetchConsents = function fetchConsents() {
+  let obj2;
   const HTTP = HTTPUtils.HTTP;
-  const obj = {
-    url: Endpoints.SETTINGS_CONSENT,
-    oldFormErrors: true,
-    rejectWithError: HTTPUtils.rejectWithMigratedError(),
-  };
-  value = HTTP.get(obj);
+  const get = HTTP.get;
+  const obj = { url: Endpoints.SETTINGS_CONSENT, oldFormErrors: true, rejectWithError: obj2.rejectWithMigratedError() };
+  obj2 = HTTPUtils;
+  const value = get(obj);
   return value.then(handleRequestSuccess, (body) => {
     const error = new Error(body.body.message);
-    return Promise.reject(error);
+    return reject(error);
   });
 };
 export const setConsents = function setConsents(items, items2) {
+  let obj;
+  let obj3;
   const HTTP = HTTPUtils.HTTP;
   const request = {
     url: Endpoints.SETTINGS_CONSENT,
-    body: { grant: items, revoke: items2 },
+    body: obj,
     oldFormErrors: true,
-    rejectWithError: HTTPUtils.rejectWithMigratedError(),
+    rejectWithError: obj3.rejectWithMigratedError(),
   };
-  const obj = { grant: items, revoke: items2 };
-  return HTTP.post(request).then(handleRequestSuccess, handleRequestFailure);
+  const post = HTTP.post;
+  obj = { grant: items, revoke: items2 };
+  obj3 = HTTPUtils;
+  const postResult = post(request);
+  return postResult.then(handleRequestSuccess, handleRequestFailure);
 };

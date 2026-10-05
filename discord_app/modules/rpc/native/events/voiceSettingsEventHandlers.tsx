@@ -1,10 +1,12 @@
 // discord_app/modules/rpc/native/events/voiceSettingsEventHandlers.tsx
+import NativeRPCHelpers from "../server/NativeRPCHelpers.tsx";
 import VoiceSettingsEventsFactory from "../../server/events/VoiceSettingsEventsFactory.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const size = fn(2);
+const importDefaultResultResult = VoiceSettingsEventsFactory(
+  NativeRPCHelpers.getDeprecatedVoiceSettings,
+  NativeRPCHelpers.getVoiceSettings,
+);
 const result = size.fileFinishedImporting("modules/rpc/native/events/voiceSettingsEventHandlers.tsx");
 
-export const voiceSettingsEventHandlers = VoiceSettingsEventsFactory(
-  fn(9030).getDeprecatedVoiceSettings,
-  fn(9030).getVoiceSettings,
-);
+export const voiceSettingsEventHandlers = importDefaultResultResult;

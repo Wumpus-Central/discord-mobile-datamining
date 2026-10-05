@@ -1,29 +1,35 @@
 // discord_app/modules/display_name_styles/DisplayNameStylesFontOrder.tsx
+import DisplayNameStylesConstants from "DisplayNameStylesConstants.tsx";
+import DisplayNameFont from "../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
 import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment.tsx";
-import noop from "../../../_runtime/metro/00019__.js";
+import react from "../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
+const FLYWHEEL_FONTS = DisplayNameStylesConstants.FLYWHEEL_FONTS;
 let items = [
-  fn(1397).DisplayNameFont.DEFAULT,
-  fn(1397).DisplayNameFont.ZILLA_SLAB,
-  fn(1397).DisplayNameFont.CHERRY_BOMB,
-  fn(1397).DisplayNameFont.CHICLE,
-  fn(1397).DisplayNameFont.MUSEO_MODERNO,
-  fn(1397).DisplayNameFont.NEO_CASTEL,
-  fn(1397).DisplayNameFont.PIXELIFY,
-  fn(1397).DisplayNameFont.SINISTRE,
+  DisplayNameFont.DisplayNameFont.DEFAULT,
+  DisplayNameFont.DisplayNameFont.ZILLA_SLAB,
+  DisplayNameFont.DisplayNameFont.CHERRY_BOMB,
+  DisplayNameFont.DisplayNameFont.CHICLE,
+  DisplayNameFont.DisplayNameFont.MUSEO_MODERNO,
+  DisplayNameFont.DisplayNameFont.NEO_CASTEL,
+  DisplayNameFont.DisplayNameFont.PIXELIFY,
+  DisplayNameFont.DisplayNameFont.SINISTRE,
 ];
-const items1 = [...fn(1395).FLYWHEEL_FONTS];
-const ReactCompilerGating = fn(558);
-const size = fn(2);
+const items1 = [...FLYWHEEL_FONTS];
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const obj = DisplayNameStylesFlywheelExperiment;
+      return obj.useIsDisplayNameStylesFlywheelSettersEnabled("font-order") ? items1 : items;
+    }
+  : () => {
+      let isDisplayNameStylesFlywheelSettersEnabled;
+      const obj = isDisplayNameStylesFlywheelSettersEnabled(9390);
+      isDisplayNameStylesFlywheelSettersEnabled = obj.useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
+      items = [isDisplayNameStylesFlywheelSettersEnabled];
+      return react.useMemo(() => (isDisplayNameStylesFlywheelSettersEnabled ? items1 : items), items);
+    };
 const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesFontOrder.tsx");
 
-export const useVisibleFontOrder = ReactCompilerGating.isReactCompilerEnabled()
-  ? () =>
-      DisplayNameStylesFlywheelExperiment.useIsDisplayNameStylesFlywheelSettersEnabled("font-order") ? items1 : items
-  : () => {
-      isDisplayNameStylesFlywheelSettersEnabled =
-        isDisplayNameStylesFlywheelSettersEnabled(9390).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
-      items = [isDisplayNameStylesFlywheelSettersEnabled];
-      return noop.useMemo(() => (isDisplayNameStylesFlywheelSettersEnabled ? items1 : items), items);
-    };
+export const useVisibleFontOrder = tmp2;

@@ -7,21 +7,31 @@ import SearchQueryStore from "stores/SearchQueryStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const SearchTypes = Constants.SearchTypes;
-const result = size.fileFinishedImporting("modules/search/native/SearchPlatformActionCreators.tsx");
-
-export default {
+let obj = {
   searchPeopleTab(searchContext, searchQueryString) {
-    const searchContextId = SearchUtils.getSearchContextId(searchContext);
-    DispatcherDefault.dispatch({ type: "SEARCH_PEOPLE_TAB_SEARCH", id: searchContextId, searchQueryString });
+    const obj = SearchUtils;
+    const searchContextId = obj.getSearchContextId(searchContext);
+    const obj2 = DispatcherDefault;
+    const obj3 = { type: "SEARCH_PEOPLE_TAB_SEARCH", id: searchContextId, searchQueryString };
+    obj2.dispatch(obj3);
   },
   cleanupPeopleTab(searchContext) {
-    const searchContextId = SearchUtils.getSearchContextId(searchContext);
-    DispatcherDefault.dispatch({ type: "SEARCH_PEOPLE_TAB_CLEANUP", id: searchContextId });
+    const obj = SearchUtils;
+    const searchContextId = obj.getSearchContextId(searchContext);
+    const obj2 = DispatcherDefault;
+    obj2.dispatch({ type: "SEARCH_PEOPLE_TAB_CLEANUP", id: searchContextId });
   },
   searchGuildMemberTab(arg0) {
+    let channelId;
+    let guildId;
+    let searchContext;
+    let searchQueryString;
+    let threadId;
     ({ searchContext, searchQueryString, guildId, channelId, threadId } = arg0);
-    const searchContextId = SearchUtils.getSearchContextId(searchContext);
-    DispatcherDefault.dispatch({
+    const obj = SearchUtils;
+    const searchContextId = obj.getSearchContextId(searchContext);
+    const obj2 = DispatcherDefault;
+    obj2.dispatch({
       type: "SEARCH_GUILD_MEMBER_TAB_SEARCH",
       id: searchContextId,
       searchQueryString,
@@ -31,56 +41,74 @@ export default {
     });
   },
   cleanupGuildMemberTab(searchContext) {
-    const searchContextId = SearchUtils.getSearchContextId(searchContext);
-    DispatcherDefault.dispatch({ type: "SEARCH_GUILD_MEMBER_TAB_CLEANUP", id: searchContextId });
+    const obj = SearchUtils;
+    const searchContextId = obj.getSearchContextId(searchContext);
+    const obj2 = DispatcherDefault;
+    obj2.dispatch({ type: "SEARCH_GUILD_MEMBER_TAB_CLEANUP", id: searchContextId });
   },
   searchGuildChannelTab(arg0) {
+    let guildId;
+    let searchContext;
+    let searchQueryString;
     ({ searchContext, searchQueryString, guildId } = arg0);
-    const searchContextId = SearchUtils.getSearchContextId(searchContext);
-    DispatcherDefault.dispatch({
-      type: "SEARCH_GUILD_CHANNEL_TAB_SEARCH",
-      id: searchContextId,
-      searchQueryString,
-      guildId,
-    });
+    const obj = SearchUtils;
+    const searchContextId = obj.getSearchContextId(searchContext);
+    const obj2 = DispatcherDefault;
+    obj2.dispatch({ type: "SEARCH_GUILD_CHANNEL_TAB_SEARCH", id: searchContextId, searchQueryString, guildId });
   },
   cleanupGuildChannelTab(searchContext) {
-    const searchContextId = SearchUtils.getSearchContextId(searchContext);
-    DispatcherDefault.dispatch({ type: "SEARCH_GUILD_CHANNEL_TAB_CLEANUP", id: searchContextId });
+    const obj = SearchUtils;
+    const searchContextId = obj.getSearchContextId(searchContext);
+    const obj2 = DispatcherDefault;
+    obj2.dispatch({ type: "SEARCH_GUILD_CHANNEL_TAB_CLEANUP", id: searchContextId });
   },
-  addSearchHistoryItem(type, channel) {
+  addSearchHistoryItem(type, item) {
     if (type.type === SearchTypes.DMS) {
-      const searchContextId = SearchUtils.getSearchContextId(type);
-      const obj3 = { type: "SEARCH_HISTORY_NATIVE_ADD_ITEM", id: searchContextId, item: channel };
-      DispatcherDefault.dispatch(obj3);
+      const obj = SearchUtils;
+      const searchContextId = obj.getSearchContextId(type);
+      const obj3 = { type: "SEARCH_HISTORY_NATIVE_ADD_ITEM", id: searchContextId, item };
+      const obj2 = DispatcherDefault;
+      obj2.dispatch(obj3);
     }
   },
   removeSearchHistoryItem(searchContext, searchHistoryItem) {
-    const searchContextId = SearchUtils.getSearchContextId(searchContext);
-    DispatcherDefault.dispatch({
-      type: "SEARCH_HISTORY_NATIVE_REMOVE_ITEM",
-      id: searchContextId,
-      item: searchHistoryItem,
-    });
+    const obj = SearchUtils;
+    const searchContextId = obj.getSearchContextId(searchContext);
+    const obj2 = DispatcherDefault;
+    const obj3 = { type: "SEARCH_HISTORY_NATIVE_REMOVE_ITEM", id: searchContextId, item: searchHistoryItem };
+    obj2.dispatch(obj3);
   },
   clearSearchHistory(searchContext) {
-    const searchContextId = SearchUtils.getSearchContextId(searchContext);
-    DispatcherDefault.dispatch({ type: "SEARCH_HISTORY_NATIVE_CLEAR_ITEMS", id: searchContextId });
+    const obj = SearchUtils;
+    const searchContextId = obj.getSearchContextId(searchContext);
+    const obj2 = DispatcherDefault;
+    obj2.dispatch({ type: "SEARCH_HISTORY_NATIVE_CLEAR_ITEMS", id: searchContextId });
   },
   updateSearchQuery(searchContext, updater) {
-    const searchContextId = SearchUtils.getSearchContextId(searchContext);
-    DispatcherDefault.dispatch({ type: "SEARCH_QUERY_NATIVE_UPDATE", id: searchContextId, searchContext, updater });
+    const obj = SearchUtils;
+    const searchContextId = obj.getSearchContextId(searchContext);
+    const obj2 = DispatcherDefault;
+    const obj3 = { type: "SEARCH_QUERY_NATIVE_UPDATE", id: searchContextId, searchContext, updater };
+    obj2.dispatch(obj3);
   },
   deleteSearchQuery(searchContext) {
-    const searchContextId = SearchUtils.getSearchContextId(searchContext);
-    DispatcherDefault.dispatch({ type: "SEARCH_QUERY_NATIVE_DELETE", id: searchContextId });
+    const obj = SearchUtils;
+    const searchContextId = obj.getSearchContextId(searchContext);
+    const obj2 = DispatcherDefault;
+    obj2.dispatch({ type: "SEARCH_QUERY_NATIVE_DELETE", id: searchContextId });
   },
   initializeSearchQuery(channelDetailsSearchContext) {
-    const searchContextId = SearchUtils.getSearchContextId(channelDetailsSearchContext);
-    DispatcherDefault.dispatch({
+    const obj = SearchUtils;
+    const searchContextId = obj.getSearchContextId(channelDetailsSearchContext);
+    const obj2 = DispatcherDefault;
+    const obj3 = {
       type: "SEARCH_QUERY_NATIVE_INITIALIZE",
       id: searchContextId,
       searchContext: channelDetailsSearchContext,
-    });
+    };
+    obj2.dispatch(obj3);
   },
 };
+const result = size.fileFinishedImporting("modules/search/native/SearchPlatformActionCreators.tsx");
+
+export default obj;

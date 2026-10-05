@@ -20,6 +20,7 @@ const items1 = [
   { id: "deepseek/deepseek-flash", label: "DeepSeek V4.1 Flash", provider: "deepseek" },
   { id: "moonshotai/kimi-k3", label: "Kimi K3", provider: "moonshotai" },
 ];
+const obj2 = { main: items1, subagent: items1, thinking: obj.thinking };
 const result = size.fileFinishedImporting("modules/conjure/ConjureTypes.tsx");
 
 export const UNNAMED_PROJECT_NAME = "Untitled App";
@@ -48,10 +49,11 @@ export const projectUsesNativeAppChannels = function projectUsesNativeAppChannel
 };
 export const conjureCreateFlags = function conjureCreateFlags(c5) {
   let num = 0;
+  const PUBLIC = frozen.PUBLIC;
   if (c5) {
     num = frozen.NATIVE_APP_CHANNELS;
   }
-  return frozen.PUBLIC | num;
+  return PUBLIC | num;
 };
 export const projectSupportsVisibility = function projectSupportsVisibility(stateFromStores) {
   return null != stateFromStores.flags;
@@ -110,7 +112,7 @@ export const formatConjureAttachmentLimit = function formatConjureAttachmentLimi
 };
 export const CONJURE_MODEL_TIERS = ["simple", "balanced", "complex"];
 export const CONJURE_FALLBACK_MODEL_CHOICES = obj;
-export const CONJURE_DEV_FALLBACK_MODEL_CHOICES = { main: items1, subagent: items1, thinking: obj.thinking };
+export const CONJURE_DEV_FALLBACK_MODEL_CHOICES = obj2;
 export const CONJURE_DEFAULT_TIER_SETTINGS = { tier: "balanced", provider: "openai" };
 export const CONJURE_LANDING_TIER_SEATS = {
   simple: { model: "gpt-6-luna", thinking: "high" },

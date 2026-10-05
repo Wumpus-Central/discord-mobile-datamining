@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/system_messages/RemoveRecipientSystemMessage.tsx
-import util from "../../../../../intl/index.native.tsx";
+import intl3 from "../../../../../intl/index.native.tsx";
 import ChannelRecord from "../../../../../records/ChannelRecord.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
@@ -14,24 +14,26 @@ const result = size.fileFinishedImporting(
 );
 
 export const createRemoveRecipientSystemMessage = function createRemoveRecipientSystemMessage(message) {
+  let obj5;
+  let roleStyle;
   ({ message, roleStyle } = message);
   const first = message.mentions[0];
+  const author = message.author;
   const channel = ChannelStore.getChannel(message.channel_id);
-  let hasItem = null != channel;
-  if (hasItem) {
-    hasItem = THREAD_CHANNEL_TYPES.has(channel.type);
-  }
-  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+  const hasItem = null != channel && THREAD_CHANNEL_TYPES.has(channel.type);
+  const obj = useAuthorWithProcessedColor;
+  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   const obj2 = {
     username: messageAuthorWithProcessedColor.nick,
     usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }),
   };
-  if (message.author.id === first) {
-    const intl = util.intl;
+  if (author.id === first) {
+    let formatToPartsResult;
+    const intl = intl3.intl;
     const formatToParts = intl.formatToParts;
-    const t = util.t;
+    const t = intl3.t;
     if (hasItem) {
-      let formatToPartsResult = formatToParts(t.uHmblj, obj2);
+      formatToPartsResult = formatToParts(t.uHmblj, obj2);
     } else {
       formatToPartsResult = formatToParts(t["Qn5+Lf"], obj2);
     }
@@ -39,18 +41,21 @@ export const createRemoveRecipientSystemMessage = function createRemoveRecipient
     const merged = Object.assign(createCommonMessageDefault(message));
     return obj3;
   } else {
+    let formatToParts2Result;
     const user = UserStore.getUser(first);
-    const userAuthorWithProcessedColor = useAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, channel);
-    const obj4 = {};
+    const tmp5Result = useAuthorWithProcessedColor;
+    const userAuthorWithProcessedColor = tmp5Result.getUserAuthorWithProcessedColor(user, channel);
+    const obj4 = {
+      otherUsername: userAuthorWithProcessedColor.nick,
+      otherUsernameOnClick: formatUsernameOnClickDefault(obj5),
+    };
     const merged1 = Object.assign(obj2);
-    obj4.otherUsername = userAuthorWithProcessedColor.nick;
-    const obj5 = { userId: first, message, author: userAuthorWithProcessedColor, roleStyle };
-    obj4.otherUsernameOnClick = formatUsernameOnClickDefault(obj5);
-    const intl2 = util.intl;
+    obj5 = { userId: first, message, author: userAuthorWithProcessedColor, roleStyle };
+    const intl2 = intl3.intl;
     const formatToParts2 = intl2.formatToParts;
-    const t2 = util.t;
+    const t2 = intl3.t;
     if (hasItem) {
-      let formatToParts2Result = formatToParts2(t2.KBrM5t, obj4);
+      formatToParts2Result = formatToParts2(t2.KBrM5t, obj4);
     } else {
       formatToParts2Result = formatToParts2(t2.QtZ0RD, obj4);
     }

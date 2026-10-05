@@ -1,7 +1,7 @@
 // discord_app/modules/friend_suggestions/maybeDispatchDevOnlyDummyFriendSuggestions.tsx
 import UserStore from "../../stores/UserStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/friend_suggestions/maybeDispatchDevOnlyDummyFriendSuggestions.tsx");
 
 export default function maybeDispatchDevOnlyDummyFriendSuggestions() {

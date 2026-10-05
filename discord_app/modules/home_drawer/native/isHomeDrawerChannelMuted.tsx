@@ -1,21 +1,25 @@
 // discord_app/modules/home_drawer/native/isHomeDrawerChannelMuted.tsx
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../../_runtime/00576_react.js";
+import ChannelRecord from "../../../records/ChannelRecord.tsx";
 import JoinedThreadsStore from "../../threads/JoinedThreadsStore.tsx";
 import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const isThread = fn(2055).isThread;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");
-
-export const useIsHomeDrawerChannelMuted = ReactCompilerGating.isReactCompilerEnabled()
+const isThread = ChannelRecord.isThread;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(3);
+      let tmp4;
+      let tmp5;
+      let tmp6;
+      const obj = react;
+      const cResult = obj.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [JoinedThreadsStore, UserGuildSettingsStore];
         const fn = function s() {
+          let guildOrCategoryOrChannelMuted;
+          let muted;
           return (type) => {
             const tmp = closure_1_3(type.type);
             if (tmp) {
@@ -24,10 +28,8 @@ export const useIsHomeDrawerChannelMuted = ReactCompilerGating.isReactCompilerEn
               }
             }
             const tmp3 = tmp ? type.parent_id : type.id;
-            let result = null != tmp3;
-            if (result) {
-              result = guildOrCategoryOrChannelMuted.isGuildOrCategoryOrChannelMuted(type.guild_id, tmp3);
-            }
+            const result =
+              null != tmp3 && guildOrCategoryOrChannelMuted.isGuildOrCategoryOrChannelMuted(type.guild_id, tmp3);
             return result;
           };
         };
@@ -41,27 +43,34 @@ export const useIsHomeDrawerChannelMuted = ReactCompilerGating.isReactCompilerEn
       } else {
         [tmp4, tmp5, tmp6] = cResult;
       }
-      return initialize.useStateFromStores(tmp4, tmp5, tmp6, initialize.statesWillNeverBeEqual);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStores(tmp4, tmp5, tmp6, get_initialized.statesWillNeverBeEqual);
     }
   : () => {
       const items = [JoinedThreadsStore, UserGuildSettingsStore];
-      return initialize.useStateFromStores(
+      const obj = get_initialized;
+      return obj.useStateFromStores(
         items,
-        () => (type) => {
-          const tmp = closure_1_3(type.type);
-          if (tmp) {
-            if (muted.isMuted(type.id)) {
-              return true;
+        () => {
+          let guildOrCategoryOrChannelMuted;
+          let muted;
+          return (type) => {
+            const tmp = closure_1_3(type.type);
+            if (tmp) {
+              if (muted.isMuted(type.id)) {
+                return true;
+              }
             }
-          }
-          const tmp3 = tmp ? type.parent_id : type.id;
-          let result = null != tmp3;
-          if (result) {
-            result = guildOrCategoryOrChannelMuted.isGuildOrCategoryOrChannelMuted(type.guild_id, tmp3);
-          }
-          return result;
+            const tmp3 = tmp ? type.parent_id : type.id;
+            const result =
+              null != tmp3 && guildOrCategoryOrChannelMuted.isGuildOrCategoryOrChannelMuted(type.guild_id, tmp3);
+            return result;
+          };
         },
         [],
-        initialize.statesWillNeverBeEqual,
+        get_initialized.statesWillNeverBeEqual,
       );
     };
+let result = size.fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");
+
+export const useIsHomeDrawerChannelMuted = tmp2;

@@ -4,9 +4,11 @@ import GuildChannelStore_mod from "../stores/GuildChannelStore.tsx";
 import PermissionStore from "../stores/PermissionStore.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
+let _window;
+let map;
 let GuildChannelStore = GuildChannelStore_mod;
-({ GUILD_SELECTABLE_CHANNELS_KEY: closure_0, GUILD_VOCAL_CHANNELS_KEY: closure_1 } = GuildChannelStore);
-let GuildChannelStore = GuildChannelStore_mod;
+({ GUILD_SELECTABLE_CHANNELS_KEY: _window, GUILD_VOCAL_CHANNELS_KEY: map } = GuildChannelStore);
+GuildChannelStore = GuildChannelStore_mod;
 const Permissions = Constants.Permissions;
 const result = size.fileFinishedImporting("utils/CreateInstantInviteUtils.tsx");
 

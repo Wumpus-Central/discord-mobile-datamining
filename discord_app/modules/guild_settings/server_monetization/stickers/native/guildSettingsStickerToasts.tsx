@@ -1,5 +1,5 @@
 // discord_app/modules/guild_settings/server_monetization/stickers/native/guildSettingsStickerToasts.tsx
-import util from "../../../../../intl/index.native.tsx";
+import intl2 from "../../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../../toast/native/ToastActionCreators.tsx";
 import CircleErrorIcon from "../../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import CircleInformationIcon from "../../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
@@ -10,18 +10,26 @@ const result = size.fileFinishedImporting(
 );
 
 export const showGuildSettingsStickerError = function showGuildSettingsStickerError() {
-  const obj2 = { key: "GUILD_SETTINGS_STICKER_ERROR", IconComponent: CircleErrorIcon.CircleErrorIcon, content: null };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t["5NMPSS"]);
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const tmp = ToastActionCreatorsDefault;
+  const open = tmp.open;
+  const obj = {
+    key: "GUILD_SETTINGS_STICKER_ERROR",
+    IconComponent: CircleErrorIcon.CircleErrorIcon,
+    content: intl.string(intl2.t["5NMPSS"]),
+  };
+  intl = intl2.intl;
+  open(obj);
 };
 export const showGuildSettingsStickerSuccess = function showGuildSettingsStickerSuccess() {
-  const obj2 = {
+  let intl;
+  const tmp = ToastActionCreatorsDefault;
+  const open = tmp.open;
+  const obj = {
     key: "GUILD_SETTINGS_STICKER_SUCCESS",
     IconComponent: CircleInformationIcon.CircleInformationIcon,
-    content: null,
+    content: intl.string(intl2.t["+c5xtT"]),
   };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t["+c5xtT"]);
-  ToastActionCreatorsDefault.open(obj2);
+  intl = intl2.intl;
+  open(obj);
 };

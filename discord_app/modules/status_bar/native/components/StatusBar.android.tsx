@@ -1,30 +1,33 @@
 // discord_app/modules/status_bar/native/components/StatusBar.android.tsx
-import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import StatusBarManagerDefault from "StatusBarManager.android.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const StatusBar = _mod17.StatusBar;
+const StatusBar = react_native.StatusBar;
 class StatusBarAndroid extends StatusBar {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
     applyArgumentsResult._stackEntry = null;
     return applyArgumentsResult;
   }
+  componentDidMount() {
+    const obj = StatusBarManagerDefault;
+    this._stackEntry = obj.pushStackEntry(this.props);
+  }
+  componentDidUpdate() {
+    const obj = StatusBarManagerDefault;
+    this._stackEntry = obj.replaceStackEntry(this._stackEntry, this.props);
+  }
+  componentWillUnmount() {
+    const obj = StatusBarManagerDefault;
+    obj.popStackEntry(this._stackEntry);
+    this._stackEntry = null;
+  }
+  render() {
+    return null;
+  }
 }
 const prototype = StatusBarAndroid.prototype;
-prototype["componentDidMount"] = function componentDidMount() {
-  this._stackEntry = StatusBarManagerDefault.pushStackEntry(this.props);
-};
-prototype["componentDidUpdate"] = function componentDidUpdate() {
-  this._stackEntry = StatusBarManagerDefault.replaceStackEntry(this._stackEntry, this.props);
-};
-prototype["componentWillUnmount"] = function componentWillUnmount() {
-  StatusBarManagerDefault.popStackEntry(this._stackEntry);
-  this._stackEntry = null;
-};
-prototype["render"] = function render() {
-  return null;
-};
 const result = size.fileFinishedImporting("modules/status_bar/native/components/StatusBar.android.tsx");
 
 export default StatusBarAndroid;

@@ -1,23 +1,26 @@
 // discord_app/modules/age_assurance/native/ManualReviewPendingAlertModal.tsx
-import c from "../../../../_runtime/00576_c.js";
-import util from "../../../intl/index.native.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import intl4 from "../../../intl/index.native.tsx";
 import _modDef3109 from "../ManualReview.messages.js";
-import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import AlertModal2 from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewPendingAlertModal.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(3);
+      let intl3;
+      let tmp4;
+      let tmp5;
+      let tmp9;
+      const obj = react2;
+      const cResult = obj.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = util.intl;
+        const intl = intl4.intl;
         const stringResult = intl.string(_modDef3109.CNm4w6);
-        const intl2 = util.intl;
+        const intl2 = intl4.intl;
         const stringResult1 = intl2.string(_modDef3109["14Fje3"]);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
@@ -27,32 +30,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         [tmp4, tmp5] = cResult;
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { title: tmp4, content: tmp5, actions: null };
-        const obj3 = { children: null };
-        const obj4 = { text: null };
-        const intl3 = util.intl;
-        obj4.text = intl3.string(util.t["NX+WJN"]);
-        obj3.children = jsx(AlertModal.AlertActionButton, { text: null }, "got-it");
-        obj2.actions = jsx(AlertModal.AlertActions, { children: null });
-        const tmp11 = jsx(AlertModal.AlertModal, { title: tmp4, content: tmp5, actions: null });
+        const AlertModal = AlertModal2.AlertModal;
+        const AlertActions = AlertModal2.AlertActions;
+        ({ text: intl3.string(intl4.t["NX+WJN"]) });
+        const AlertActionButton = AlertModal2.AlertActionButton;
+        intl3 = intl4.intl;
+        const tmp11 = <AlertModal title={tmp4} content={tmp5} actions={null} />;
         cResult[2] = tmp11;
-        let tmp9 = tmp11;
+        tmp9 = tmp11;
       } else {
         tmp9 = cResult[2];
       }
       return tmp9;
     }
   : () => {
-      const obj = { title: null, content: null, actions: null };
-      const intl = util.intl;
-      obj.title = intl.string(_modDef3109.CNm4w6);
-      const intl2 = util.intl;
-      obj.content = intl2.string(_modDef3109["14Fje3"]);
-      const obj2 = { children: null };
-      const obj3 = { text: null };
-      const intl3 = util.intl;
-      obj3.text = intl3.string(util.t["NX+WJN"]);
-      obj2.children = jsx(AlertModal.AlertActionButton, { text: null }, "got-it");
-      obj.actions = jsx(AlertModal.AlertActions, { children: null });
-      return jsx(AlertModal.AlertModal, { title: null, content: null, actions: null });
+      let intl3;
+      const AlertModal = AlertModal2.AlertModal;
+      const intl = intl4.intl;
+      const intl2 = intl4.intl;
+      const AlertActions = AlertModal2.AlertActions;
+      ({ text: intl3.string(intl4.t["NX+WJN"]) });
+      const AlertActionButton = AlertModal2.AlertActionButton;
+      intl3 = intl4.intl;
+      return (
+        <AlertModal
+          title={intl.string(_modDef3109.CNm4w6)}
+          content={intl2.string(_modDef3109["14Fje3"])}
+          actions={null}
+        />
+      );
     };
+const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewPendingAlertModal.tsx");
+
+export default tmp3;

@@ -9,22 +9,23 @@ const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/telemetry_ring/trackHttpRequest.tsx");
 
 export default function trackHttpRequest(url) {
-  const obj = {};
+  let replaced;
+  const obj = { url: replaced };
   const merged = Object.assign(url);
-  let replaced = str;
+  replaced = str;
   if (null != url.url) {
-    replaced = str.split(/[?#]/)[0].replace(/\d+/g, "#");
-    const str2 = str.split(/[?#]/)[0];
+    const str2 = url.url.split(/[?#]/)[0];
+    replaced = str2.replace(/\d+/g, "#");
   }
-  obj.url = replaced;
   trackZoomedInHttpRequestDefault(obj);
   const random = Math.random();
+  const obj2 = HttpRequestSampleExperiment;
   if (random < obj2.getHttpRequestSampleRate()) {
-    const obj3 = {};
+    const obj3 = { source: "sample" };
+    const track = AnalyticsUtilsDefault.track;
+    const HTTP_REQUEST = AnalyticEvents.HTTP_REQUEST;
+    AnalyticsUtilsDefault;
     const merged1 = Object.assign(obj);
-    obj3.source = "sample";
-    AnalyticsUtilsDefault.track(AnalyticEvents.HTTP_REQUEST, obj3);
-    const tmp3Result = AnalyticsUtilsDefault;
+    track(HTTP_REQUEST, obj3);
   }
-  obj2 = HttpRequestSampleExperiment;
 }

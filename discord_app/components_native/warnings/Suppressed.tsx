@@ -1,43 +1,50 @@
 // discord_app/components_native/warnings/Suppressed.tsx
-import util from "../../intl/index.native.tsx";
+import Fragment from "../../../_runtime/react/00021_Fragment.js";
+import intl4 from "../../intl/index.native.tsx";
 import PermissionActionCreatorsDefault from "../../actions/PermissionActionCreators.tsx";
-import _modDef17100 from "../../../_runtime/metro/17100__.js";
-import _modDef17101 from "../../../_runtime/metro/17101__.js";
-import noop from "../../../_runtime/metro/00019__.js";
+import AssetRegistryDefault from "../../../_runtime/17100_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../_runtime/17101_AssetRegistry.js";
+import react from "../../../_runtime/00019_react.js";
 import PermissionSpeakStore from "../../stores/PermissionSpeakStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const Component = noop.Component;
+const jsx = Fragment.jsx;
+const Component = react.Component;
 class Suppressed extends Component {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
     applyArgumentsResult.close = function close() {
-      PermissionActionCreatorsDefault.clearSuppressWarning();
+      const obj = PermissionActionCreatorsDefault;
+      obj.clearSuppressWarning();
     };
     return applyArgumentsResult;
   }
-}
-Suppressed.prototype["render"] = function render() {
-  const intl = util.intl;
-  const string = intl.string;
-  const t = util.t;
-  if (isAFKChannelResult) {
-    let stringResult = string(t.KuYcnU);
-    const intl3 = util.intl;
-    let stringResult1 = intl3.string(util.t["RaFZ3+"]);
-    let tmp7 = _modDef17100;
-    let tmp6 = importDefault;
-  } else {
-    stringResult = string(t.FJSZVM);
-    const intl2 = util.intl;
-    stringResult1 = intl2.string(util.t.etJjgW);
-    tmp6 = importDefault;
-    tmp7 = _modDef17101;
+  render() {
+    let stringResult;
+    let stringResult1;
+    let tmp6;
+    let tmp7;
+    const isAFKChannelResult = PermissionSpeakStore.isAFKChannel();
+    const intl = intl4.intl;
+    const string = intl.string;
+    const t = intl4.t;
+    if (isAFKChannelResult) {
+      stringResult = string(t.KuYcnU);
+      const intl3 = intl4.intl;
+      stringResult1 = intl3.string(intl4.t["RaFZ3+"]);
+      tmp7 = AssetRegistryDefault;
+      tmp6 = importDefault;
+    } else {
+      stringResult = string(t.FJSZVM);
+      const intl2 = intl4.intl;
+      stringResult1 = intl2.string(intl4.t.etJjgW);
+      tmp6 = importDefault;
+      tmp7 = AssetRegistryDefault2;
+    }
+    return jsx(tmp6(5783), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
   }
-  return jsx(tmp6(5783), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
-};
-const size = fn(2);
+}
+const prototype = Suppressed.prototype;
 const result = size.fileFinishedImporting("components_native/warnings/Suppressed.tsx");
 
 export default Suppressed;

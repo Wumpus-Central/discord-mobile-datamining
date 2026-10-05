@@ -1,17 +1,18 @@
 // discord_app/modules/favorites/utils/getFavoritesAddButtonLabel.tsx
-import util from "../../../intl/index.native.tsx";
+import intl3 from "../../../intl/index.native.tsx";
 import _modDef3367 from "../intl/FavoritesGuild.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/favorites/utils/getFavoritesAddButtonLabel.tsx");
 
 export const getFavoritesAddButtonLabel = function getFavoritesAddButtonLabel(length) {
+  let formatToPlainStringResult;
   if (length >= 2) {
-    const intl2 = util.intl;
+    const intl2 = intl3.intl;
     const obj = { count: length };
-    let formatToPlainStringResult = intl2.formatToPlainString(_modDef3367.LbCa8x, obj);
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3367.LbCa8x, obj);
   } else {
-    const intl = util.intl;
+    const intl = intl3.intl;
     formatToPlainStringResult = intl.string(_modDef3367.xKXcSu);
   }
   return formatToPlainStringResult;

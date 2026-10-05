@@ -1,58 +1,67 @@
 // discord_app/modules/app_launcher/hooks/useDelayedSwapToActivityActionLeave.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/app_launcher/hooks/useDelayedSwapToActivityActionLeave.tsx");
-
-export const useDelayedSwapToActivityActionLeave = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let tmp3;
+      let tmp4;
+      let tmp5;
       _require = arg0;
-      const cResult = require("c").c(3);
-      const obj = require("c");
-      [tmp3, dependencyMap] = noop.useState(arg0);
+      const obj = require("react");
+      const cResult = obj.c(3);
+      [tmp3, dependencyMap] = react.useState(arg0);
+      _slicedToArray(react.useState(arg0), 2);
       if (cResult[0] !== arg0) {
         const fn = function c() {
-          if (timeout === timeout(11671).ActivityAction.LEAVE) {
+          let timeout;
+          const tmp = timeout;
+          if (timeout === timeout(dependencyMap[4]).ActivityAction.LEAVE) {
             const _setTimeout = setTimeout;
-            timeout = setTimeout(() => dependencyMap(closure_0), 100);
+            timeout = setTimeout(() => closure_1_1(closure_0), 100);
             return () => clearTimeout(closure_0);
           } else {
             dependencyMap(tmp);
           }
-          tmp = timeout;
         };
         const items = [arg0];
         cResult[0] = arg0;
         cResult[1] = fn;
         cResult[2] = items;
-        let tmp5 = items;
-        let tmp4 = fn;
+        tmp5 = items;
+        tmp4 = fn;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
       }
-      const layoutEffect = noop.useLayoutEffect(tmp4, tmp5);
+      const layoutEffect = react.useLayoutEffect(tmp4, tmp5);
       return tmp3;
     }
   : (arg0) => {
-      closure_0 = arg0;
-      let tmp = _slicedToArray(noop.useState(arg0), 2);
-      dependencyMap = tmp[1];
+      let closure_1;
+      let first;
+      let closure_0 = arg0;
+      [first, closure_1] = react.useState(arg0);
       const items = [arg0];
-      const layoutEffect = noop.useLayoutEffect(() => {
-        if (timeout === timeout(11671).ActivityAction.LEAVE) {
+      const layoutEffect = react.useLayoutEffect(() => {
+        let timeout;
+        const tmp = timeout;
+        if (timeout === timeout(closure_1[4]).ActivityAction.LEAVE) {
           const _setTimeout = setTimeout;
-          timeout = setTimeout(() => dependencyMap(closure_0), 100);
+          timeout = setTimeout(() => closure_1_1(closure_0), 100);
           return () => clearTimeout(closure_0);
         } else {
-          dependencyMap(tmp);
+          closure_1(tmp);
         }
-        tmp = timeout;
       }, items);
-      return tmp[0];
+      return first;
     };
+const result = size.fileFinishedImporting("modules/app_launcher/hooks/useDelayedSwapToActivityActionLeave.tsx");
+
+export const useDelayedSwapToActivityActionLeave = tmp2;

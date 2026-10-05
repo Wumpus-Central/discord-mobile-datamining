@@ -1,28 +1,34 @@
 // discord_app/hooks/useTimeout.tsx
-import c from "../../_runtime/00576_c.js";
-import noop from "../../_runtime/metro/00019__.js";
+import react2 from "../../_runtime/00576_react.js";
+import react from "../../_runtime/00019_react.js";
 import ReactCompilerGating from "../modules/react_compiler/ReactCompilerGating.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
-({ useEffect: c2, useRef: c3 } = noop);
-const result = size.fileFinishedImporting("hooks/useTimeout.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (current, arg1) => {
-      closure_1 = arg1;
-      const cResult = c.c(6);
-      const tmp2 = React3(current);
-      closure_2 = tmp2;
-      if (cResult[0] !== current) {
+let c2;
+let c3;
+({ useEffect: c2, useRef: c3 } = react);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1) => {
+      let tmp3;
+      let tmp4;
+      let tmp7;
+      let tmp8;
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      const obj = react2;
+      const cResult = obj.c(6);
+      const tmp2 = _false(arg0);
+      let c2 = tmp2;
+      if (cResult[0] !== arg0) {
         const fn = function o() {
           closure_2.current = current;
         };
-        const items = [current];
-        cResult[0] = current;
+        const items = [arg0];
+        cResult[0] = arg0;
         cResult[1] = fn;
         cResult[2] = items;
-        let tmp4 = items;
-        let tmp3 = fn;
+        tmp4 = items;
+        tmp3 = fn;
       } else {
         tmp3 = cResult[1];
         tmp4 = cResult[2];
@@ -30,6 +36,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       React2(tmp3, tmp4);
       if (cResult[3] !== arg1) {
         const fn2 = function s() {
+          let closure_0;
+          let ref;
           if (null !== closure_1) {
             const _setTimeout = setTimeout;
             const timeout = setTimeout(() => ref.current(), tmp);
@@ -40,24 +48,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[3] = arg1;
         cResult[4] = fn2;
         cResult[5] = items1;
-        let tmp8 = items1;
-        let tmp7 = fn2;
+        tmp8 = items1;
+        tmp7 = fn2;
       } else {
         tmp7 = cResult[4];
         tmp8 = cResult[5];
       }
       React2(tmp7, tmp8);
     }
-  : (current, arg1) => {
-      closure_1 = arg1;
-      const tmp = React3(current);
-      closure_2 = tmp;
-      const items = [current];
-      React2(() => {
+  : (arg0, arg1) => {
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      const tmp = _false(arg0);
+      let c2 = tmp;
+      const items = [arg0];
+      const tmp2 = React2(() => {
         closure_2.current = current;
       }, items);
       const items1 = [arg1, tmp];
       React2(() => {
+        let closure_0;
+        let ref;
         if (null !== closure_1) {
           const _setTimeout = setTimeout;
           const timeout = setTimeout(() => ref.current(), tmp);
@@ -65,3 +76,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
     };
+const result = size.fileFinishedImporting("hooks/useTimeout.tsx");
+
+export default tmp3;

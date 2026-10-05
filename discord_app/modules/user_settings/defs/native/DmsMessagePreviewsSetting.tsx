@@ -1,120 +1,78 @@
 // discord_app/modules/user_settings/defs/native/DmsMessagePreviewsSetting.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import util from "../../../../intl/index.native.tsx";
+import react2 from "../../../../../_runtime/00576_react.js";
+import intl4 from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import ChannelListLayoutTypes from "../../../main_tabs_v2/ChannelListLayoutTypes.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import useMessagePreviews from "../../../main_tabs_v2/useMessagePreviews.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-let ReactCompilerGating = fn(558);
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = fn(558);
-fn = () => useMessagePreviews.useMessagePreviewSetting();
-const SettingBuilders = fn(11129);
+ReactCompilerGating = ReactCompilerGating_mod;
+const fn = () => {
+  const obj = useMessagePreviews;
+  return obj.useMessagePreviewSetting();
+};
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(1);
+      let first;
+      let intl;
+      let intl2;
+      let intl3;
+      const obj = react2;
+      const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { label: null, value: null };
-        const intl = util.intl;
-        obj2.label = intl.string(util.t["8K53DF"]);
-        obj2.value = ChannelListLayoutTypes.MessagePreviewTypes.ALL;
+        const obj2 = { label: intl.string(intl4.t["8K53DF"]), value: ChannelListLayoutTypes.MessagePreviewTypes.ALL };
+        intl = intl4.intl;
         const items = [obj2, ,];
-        const obj3 = { label: null, value: null };
-        const intl2 = util.intl;
-        obj3.label = intl2.string(util.t.Gw11zg);
-        obj3.value = ChannelListLayoutTypes.MessagePreviewTypes.UNREADS;
+        const obj3 = { label: intl2.string(intl4.t.Gw11zg), value: ChannelListLayoutTypes.MessagePreviewTypes.UNREADS };
+        intl2 = intl4.intl;
         items[1] = obj3;
-        const obj4 = { label: null, value: null };
-        const intl3 = util.intl;
-        obj4.label = intl3.string(util.t.R2Ok7F);
-        obj4.value = ChannelListLayoutTypes.MessagePreviewTypes.NONE;
+        const obj4 = { label: intl3.string(intl4.t.R2Ok7F), value: ChannelListLayoutTypes.MessagePreviewTypes.NONE };
+        intl3 = intl4.intl;
         items[2] = obj4;
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       return first;
     }
   : () =>
-      noop.useMemo(() => {
-        const obj = { label: null, value: null };
-        const intl = util.intl;
-        obj.label = intl.string(util.t["8K53DF"]);
-        obj.value = ChannelListLayoutTypes.MessagePreviewTypes.ALL;
+      react.useMemo(() => {
+        let intl;
+        let intl2;
+        let intl3;
+        const obj = { label: intl.string(intl4.t["8K53DF"]), value: ChannelListLayoutTypes.MessagePreviewTypes.ALL };
+        intl = intl4.intl;
         const items = [obj, ,];
-        const obj2 = { label: null, value: null };
-        const intl2 = util.intl;
-        obj2.label = intl2.string(util.t.Gw11zg);
-        obj2.value = ChannelListLayoutTypes.MessagePreviewTypes.UNREADS;
+        const obj2 = { label: intl2.string(intl4.t.Gw11zg), value: ChannelListLayoutTypes.MessagePreviewTypes.UNREADS };
+        intl2 = intl4.intl;
         items[1] = obj2;
-        const obj3 = { label: null, value: null };
-        const intl3 = util.intl;
-        obj3.label = intl3.string(util.t.R2Ok7F);
-        obj3.value = ChannelListLayoutTypes.MessagePreviewTypes.NONE;
+        const obj3 = { label: intl3.string(intl4.t.R2Ok7F), value: ChannelListLayoutTypes.MessagePreviewTypes.NONE };
+        intl3 = intl4.intl;
         items[2] = obj3;
         return items;
       }, []);
-const radio = SettingBuilders.createRadio({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.OAOUoQ);
+    const intl = intl4.intl;
+    return intl.string(intl4.t.OAOUoQ);
   },
-  parent: fn(7634).MobileUserSettings.APPEARANCE,
+  parent: MobileUserSettings.APPEARANCE,
   useValue: fn,
   onValueChange: function onDMsMessagePreviewsValueChange(arg0) {
     const MessagePreviewSetting = UserSettings.MessagePreviewSetting;
     MessagePreviewSetting.updateSetting(arg0);
   },
-  useOptions: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
-        const cResult = c.c(1);
-        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { label: null, value: null };
-          const intl = util.intl;
-          obj2.label = intl.string(util.t["8K53DF"]);
-          obj2.value = ChannelListLayoutTypes.MessagePreviewTypes.ALL;
-          const items = [obj2, ,];
-          const obj3 = { label: null, value: null };
-          const intl2 = util.intl;
-          obj3.label = intl2.string(util.t.Gw11zg);
-          obj3.value = ChannelListLayoutTypes.MessagePreviewTypes.UNREADS;
-          items[1] = obj3;
-          const obj4 = { label: null, value: null };
-          const intl3 = util.intl;
-          obj4.label = intl3.string(util.t.R2Ok7F);
-          obj4.value = ChannelListLayoutTypes.MessagePreviewTypes.NONE;
-          items[2] = obj4;
-          cResult[0] = items;
-          let first = items;
-        } else {
-          first = cResult[0];
-        }
-        return first;
-      }
-    : () =>
-        noop.useMemo(() => {
-          const obj = { label: null, value: null };
-          const intl = util.intl;
-          obj.label = intl.string(util.t["8K53DF"]);
-          obj.value = ChannelListLayoutTypes.MessagePreviewTypes.ALL;
-          const items = [obj, ,];
-          const obj2 = { label: null, value: null };
-          const intl2 = util.intl;
-          obj2.label = intl2.string(util.t.Gw11zg);
-          obj2.value = ChannelListLayoutTypes.MessagePreviewTypes.UNREADS;
-          items[1] = obj2;
-          const obj3 = { label: null, value: null };
-          const intl3 = util.intl;
-          obj3.label = intl3.string(util.t.R2Ok7F);
-          obj3.value = ChannelListLayoutTypes.MessagePreviewTypes.NONE;
-          items[2] = obj3;
-          return items;
-        }, []),
-});
-const size = fn(2);
+  useOptions: tmp3,
+};
+const radio = SettingBuilders.createRadio(obj);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/DmsMessagePreviewsSetting.tsx");
 
 export default radio;

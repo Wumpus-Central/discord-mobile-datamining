@@ -1,7 +1,7 @@
 // discord_app/modules/threads/ThreadActionUtils.tsx
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/ThreadActionUtils.tsx");
 
 export const doesThreadMembersActionAffectMe = function doesThreadMembersActionAffectMe(removedMemberIds) {

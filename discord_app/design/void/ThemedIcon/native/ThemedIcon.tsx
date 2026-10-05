@@ -1,52 +1,61 @@
 // discord_app/design/void/ThemedIcon/native/ThemedIcon.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import useToken from "../../../tokens/native/useToken.tsx";
 import IconDefault from "../../Icon/native/Icon.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let themedColor;
+
 let closure_3 = ["themedColor"];
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/void/ThemedIcon/native/ThemedIcon.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (themedColor) => {
-      const cResult = c.c(6);
+      let tmp4;
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(6);
       if (cResult[0] !== themedColor) {
         themedColor = themedColor.themedColor;
         const tmp8 = _objectWithoutProperties(themedColor, closure_3);
         cResult[0] = themedColor;
         cResult[1] = tmp8;
         cResult[2] = themedColor;
-        let tmp5 = themedColor;
-        let tmp4 = tmp8;
+        tmp5 = themedColor;
+        tmp4 = tmp8;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
       }
-      const token = useToken.useToken(tmp5);
+      const tmpResult = useToken;
+      const token = tmpResult.useToken(tmp5);
       if (cResult[3] === tmp4) {
+        let tmp10;
         if (cResult[4] === token) {
-          let tmp10 = cResult[5];
+          tmp10 = cResult[5];
         }
         return tmp10;
       }
-      const obj2 = { color: token };
-      const tmpResult = useToken;
+      IconDefault;
       const merged = Object.assign(tmp4);
-      const tmp13 = jsx(IconDefault, { color: token });
+      const tmp13 = <tmp11 color={token} />;
       cResult[3] = tmp4;
       cResult[4] = token;
       cResult[5] = tmp13;
       tmp10 = tmp13;
     }
   : (themedColor) => {
+      themedColor = themedColor.themedColor;
       const merged = Object.assign(themedColor, Object.assign({ themedColor: 0 }));
-      const token = useToken.useToken(themedColor.themedColor);
-      const obj2 = { color: token };
+      const obj = useToken;
+      const token = obj.useToken(themedColor);
+      IconDefault;
       const merged1 = Object.assign(merged);
-      return jsx(IconDefault, { color: token });
+      return <tmp3 color={token} />;
     };
+const result = size.fileFinishedImporting("design/void/ThemedIcon/native/ThemedIcon.tsx");
+
+export default tmp3;

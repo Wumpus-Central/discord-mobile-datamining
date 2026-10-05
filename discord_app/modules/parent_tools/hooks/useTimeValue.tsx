@@ -1,28 +1,31 @@
 // discord_app/modules/parent_tools/hooks/useTimeValue.tsx
-import c from "../../../../_runtime/00576_c.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import FamilyCenterRestrictedHoursUtils from "../FamilyCenterRestrictedHoursUtils.tsx";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/parent_tools/hooks/useTimeValue.tsx");
+let initial;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (initial) => {
-      const cResult = c.c(3);
+      const obj = react2;
+      const cResult = obj.c(3);
       initial = initial.initial;
       const defaultValue = initial.defaultValue;
       if (cResult[0] === defaultValue) {
+        let tmp2;
         if (cResult[1] === initial) {
-          let tmp2 = cResult[2];
+          tmp2 = cResult[2];
         }
-        return noop.useState(tmp2);
+        return react.useState(tmp2);
       }
       const fn = function n() {
+        let tmp2;
         if (null != initial) {
           const time = { hours: null, minutes: null };
           ({ hours: obj.hours, minutes: obj.minutes } = initial);
-          let tmp2 = time;
+          tmp2 = time;
         } else {
           tmp2 = defaultValue;
         }
@@ -34,16 +37,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp2 = fn;
     }
   : (arg0) => {
-      ({ initial: require, defaultValue: dependencyMap } = arg0);
-      return noop.useState(() => {
-        if (null != require) {
+      let closure_129_0;
+      let closure_129_1;
+      ({ initial: closure_129_0, defaultValue: closure_129_1 } = arg0);
+      return react.useState(() => {
+        let tmp2;
+        if (null != closure_1_0) {
           const time = { hours: null, minutes: null };
-          ({ hours: obj.hours, minutes: obj.minutes } = require);
-          let tmp2 = time;
+          ({ hours: obj.hours, minutes: obj.minutes } = closure_1_0);
+          tmp2 = time;
         } else {
-          tmp2 = dependencyMap;
+          tmp2 = closure_1_1;
         }
         return tmp2;
       });
     };
-export const timeToMinutes = fn(12468).timeToMinutes;
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useTimeValue.tsx");
+
+export default tmp2;
+export const timeToMinutes = FamilyCenterRestrictedHoursUtils.timeToMinutes;

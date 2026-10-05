@@ -1,43 +1,49 @@
 // discord_app/modules/games/hooks/useGameNameAndCoverImage.tsx
-import c from "../../../../_runtime/00576_c.js";
-import util from "../../../intl/index.native.tsx";
+import react from "../../../../_runtime/00576_react.js";
+import intl2 from "../../../intl/index.native.tsx";
 import useGame from "useGame.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const result = size.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1, c9) => {
-      const cResult = c.c(10);
-      const game = useGame.useGame(arg0);
+      let data;
+      let isLoading;
+      const obj = react;
+      const cResult = obj.c(10);
+      const obj2 = useGame;
+      const game = obj2.useGame(arg0);
       ({ data, isLoading } = game);
       if (cResult[0] === data) {
+        let tmp5;
         if (cResult[1] === c9) {
-          let tmp5 = cResult[2];
+          tmp5 = cResult[2];
         }
         let name;
+        const tmp7 = cResult[3];
         if (data != null) {
           name = data.name;
         }
-        if (cResult[3] === name) {
+        if (tmp7 === name) {
+          let tmp11;
           if (cResult[4] === arg1) {
-            let tmp10 = cResult[5];
+            tmp11 = cResult[5];
           }
           if (cResult[6] === isLoading) {
             if (cResult[7] === tmp5) {
-              if (cResult[8] === tmp10) {
-                let tmp13 = cResult[9];
+              let tmp14;
+              if (cResult[8] === tmp11) {
+                tmp14 = cResult[9];
               }
-              return tmp13;
+              return tmp14;
             }
           }
-          const obj3 = { coverImageUrl: tmp5, gameName: tmp10, isLoading };
+          const obj3 = { coverImageUrl: tmp5, gameName: tmp11, isLoading };
           cResult[6] = isLoading;
           cResult[7] = tmp5;
-          cResult[8] = tmp10;
+          cResult[8] = tmp11;
           cResult[9] = obj3;
-          tmp13 = obj3;
+          tmp14 = obj3;
         }
         let name1;
         if (data != null) {
@@ -47,8 +53,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           name1 = arg1;
         }
         if (name1 == null) {
-          const intl = util.intl;
-          name1 = intl.string(util.t.GIWFlF);
+          const intl = intl2.intl;
+          name1 = intl.string(intl2.t.GIWFlF);
         }
         let name2;
         if (data != null) {
@@ -57,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[3] = name2;
         cResult[4] = arg1;
         cResult[5] = name1;
-        tmp10 = name1;
+        tmp11 = name1;
       }
       let coverURL;
       if (data != null) {
@@ -69,14 +75,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = coverURL;
     }
   : (arg0, arg1, c9) => {
-      const game = useGame.useGame(arg0);
+      let name;
+      const obj = useGame;
+      const game = obj.useGame(arg0);
       const data = game.data;
       let coverURL;
+      const isLoading = game.isLoading;
       if (data != null) {
         coverURL = data.getCoverURL(c9);
       }
-      const obj2 = { coverImageUrl: coverURL, gameName: null, isLoading: null };
-      let name;
+      const obj2 = { coverImageUrl: coverURL, gameName: name, isLoading };
+      name = undefined;
       if (data != null) {
         name = data.name;
       }
@@ -84,10 +93,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         name = arg1;
       }
       if (name == null) {
-        const intl = util.intl;
-        name = intl.string(util.t.GIWFlF);
+        const intl = intl2.intl;
+        name = intl.string(intl2.t.GIWFlF);
       }
-      obj2.gameName = name;
-      obj2.isLoading = game.isLoading;
       return obj2;
     };
+const result = size.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
+
+export default tmp2;

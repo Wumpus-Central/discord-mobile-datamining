@@ -1,7 +1,7 @@
 // discord_app/modules/coded_links/ApplicationCodedLink.tsx
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import CodedLink from "CodedLink.tsx";
-import storefrontMessageEmbedCodedLink from "../application_storefront/storefrontMessageEmbedCodedLink.tsx";
+import _slicedToArray from "../application_storefront/storefrontMessageEmbedCodedLink.tsx";
 import activityBookmarkUtils from "../applications/message_embed/utils/activityBookmarkUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -23,18 +23,22 @@ let result = size.fileFinishedImporting("modules/coded_links/ApplicationCodedLin
 
 export const APP_LINK_CODED_TYPES = set;
 export const isApplicationCodedLink = function isApplicationCodedLink(type) {
-  return GlobalUtils.isInSet(type, set);
+  const obj = GlobalUtils;
+  return obj.isInSet(type, set);
 };
 export const APP_LINK_CODED_TYPES_MOBILE_SUPPORT = set1;
 export const isApplicationCodedLinkMobileSupported = function isApplicationCodedLinkMobileSupported(type) {
-  return GlobalUtils.isInSet(type, set1);
+  const obj = GlobalUtils;
+  return obj.isInSet(type, set1);
 };
 export const getApplicationCodedLinkData = function getApplicationCodedLinkData(type, code, url) {
+  let tmpResult2;
   if (CodedLink.CodedLinkType.APP_DIRECTORY_PROFILE !== type) {
     if (CodedLink.CodedLinkType.APP_OAUTH2_LINK !== type) {
       if (CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
         if (CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {
-          const result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
+          const tmpResult = _slicedToArray;
+          const result = tmpResult.parseStorefrontSkuCodedLink(code);
           let tmp5 = null;
           if (null != result) {
             const obj2 = { type, applicationId: null, skuId: null };
@@ -43,7 +47,8 @@ export const getApplicationCodedLinkData = function getApplicationCodedLinkData(
           }
           return tmp5;
         } else if (CodedLink.CodedLinkType.ACTIVITY_BOOKMARK === type) {
-          const obj = { type, applicationId: code, params: activityBookmarkUtils.extractActivityBookmarkParams(url) };
+          const obj = { type, applicationId: code, params: tmpResult2.extractActivityBookmarkParams(url) };
+          tmpResult2 = activityBookmarkUtils;
           return obj;
         }
       }

@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/FavoritesGuildToggleSetting.tsx
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import _modDef3367 from "../../../favorites/intl/FavoritesGuild.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import FavoritesActionCreators from "../../../favorites/FavoritesActionCreators.tsx";
@@ -8,20 +8,23 @@ import useIsFavoritesGuildVisibleDefault from "../../../favorites/hooks/useIsFav
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const toggle = SettingBuilders.createToggle({
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+let obj = {
   useTitle() {
-    const intl = util.intl;
+    const intl = intl2.intl;
     return intl.string(_modDef3367.OT1NK5);
   },
-  parent: SettingsConstants.MobileUserSettings.APPEARANCE,
+  parent: MobileUserSettings.APPEARANCE,
   usePredicate() {
-    return FavoritesHooks.useFavoritesAccess("FavoritesGuildToggleSetting").hasAccess;
+    const obj = FavoritesHooks;
+    return obj.useFavoritesAccess("FavoritesGuildToggleSetting").hasAccess;
   },
   useValue() {
     return useIsFavoritesGuildVisibleDefault(false);
   },
   onValueChange: FavoritesActionCreators.setFavoritesGuildVisibilityFromSettings,
-});
+};
+const toggle = SettingBuilders.createToggle(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/FavoritesGuildToggleSetting.tsx");
 
 export default toggle;

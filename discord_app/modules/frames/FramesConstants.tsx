@@ -4,11 +4,12 @@ import EmbeddedSurfaceType from "../../../discord_common/js/shared/shared-consta
 import size from "../../../_runtime/metro/00002__.js";
 
 const ChannelTypes = Constants.ChannelTypes;
+let obj = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN };
 const obj2 = { MAIN: 0, [0]: "MAIN", INLINE: 1, [1]: "INLINE" };
 const result = size.fileFinishedImporting("modules/frames/FramesConstants.tsx");
 
 export const FrameLayoutModes = { FOCUSED: 0, [0]: "FOCUSED", PIP: 1, [1]: "PIP" };
-export const MAIN_SURFACE = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN };
+export const MAIN_SURFACE = obj;
 export const FrameIntent = obj2;
 export const getFrameIntentForSurface = function getFrameIntentForSurface(type) {
   type = type.type;
@@ -34,8 +35,8 @@ export const makeFrameId = function makeFrameId(arg0, type) {
 export const getFrameSurfaceForChannel = function getFrameSurfaceForChannel(type) {
   type = type.type;
   if (ChannelTypes.GUILD_APP === type) {
-    const obj3 = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, channelId: null, guildId: null };
     ({ id: obj2.channelId, guild_id: obj2.guildId } = type);
+    const obj3 = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, channelId: null, guildId: null };
     return obj3;
   } else if (tmp.GUILD_VOICE === type) {
     const obj = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL, channelId: null, guildId: null };
@@ -54,14 +55,14 @@ export const getChannelIdForSurface = function getChannelIdForSurface(type) {
   }
 };
 export const isLaunched = function isLaunched(mainFrame) {
-  state = undefined;
+  let state;
   if (mainFrame != null) {
     state = mainFrame.state;
   }
   return "launched" === state;
 };
 export const asLaunched = function asLaunched(frameByIframeId) {
-  state = undefined;
+  let state;
   if (frameByIframeId != null) {
     state = frameByIframeId.state;
   }

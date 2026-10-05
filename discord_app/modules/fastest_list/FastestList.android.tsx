@@ -1,55 +1,90 @@
 // discord_app/modules/fastest_list/FastestList.android.tsx
 import FastestListNativeComponentDefault from "../../../discord_common/js/packages/rtn-codegen/js/FastestListNativeComponent.tsx";
 import _readOnlyError from "../../../_runtime/metro/00377__readOnlyError.js";
-import noop from "../../../_runtime/metro/00019__.js";
+import react from "../../../_runtime/00019_react.js";
+import Fragment from "../../../_runtime/react/00021_Fragment.js";
 import ReanimatedRexport_mod from "../reanimated/ReanimatedRexport.tsx";
+import BottomSheetModal from "../../../_runtime/06112_BottomSheetModal.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = Fragment);
 let ReanimatedRexport = ReanimatedRexport_mod;
 ReanimatedRexport.createAnimatedComponent(FastestListNativeComponentDefault);
-let ReanimatedRexport = ReanimatedRexport_mod;
+ReanimatedRexport = ReanimatedRexport_mod;
 const FastestListNativeComponent = ReanimatedRexport.createAnimatedComponent(FastestListNativeComponentDefault);
-const BottomSheetModal = fn(6112);
 let closure_8 = BottomSheetModal.createBottomSheetScrollableComponent(
-  fn(6112).SCROLLABLE_TYPE.SCROLLVIEW,
+  BottomSheetModal.SCROLLABLE_TYPE.SCROLLVIEW,
   FastestListNativeComponent,
 );
 let closure_9 = 0;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/fastest_list/FastestList.android.tsx");
-
-export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
-  let current = estimatedListSize;
-  const enabled = estimatedListSize.enabled;
+const forwardRefResult = react.forwardRef(function FastestList(enabled, arg1) {
+  let inActionSheet;
+  let itemSize;
+  let items5;
+  let keyboardDismissMode;
+  let listFooterAlwaysMounted;
+  let listFooterSize;
+  let listHeaderAlwaysMounted;
+  let listHeaderSize;
+  let marginEnd;
+  let marginStart;
+  let onLayout;
+  let onScroll;
+  let onScrollBeginDrag;
+  let onScrollEndDrag;
+  let placeholderConfig;
+  let placeholdersForceEnabled;
+  let renderAhead;
+  let renderItem;
+  let renderListFooter;
+  let renderListHeader;
+  let renderSectionFooter;
+  let renderSectionHeader;
+  let scrollReporting;
+  let sectionFooterSize;
+  let sectionHeaderSize;
+  let sections;
+  let showsHorizontalScrollIndicator;
+  let style;
+  let style2;
+  let tmp10Result;
+  let tmp25;
+  let wrapChildren;
+  let current = enabled;
+  enabled = enabled.enabled;
   let tmp = undefined === enabled;
+  const accessibilityLabel = enabled.accessibilityLabel;
   if (!tmp) {
     tmp = enabled;
   }
-  const horizontal = estimatedListSize.horizontal;
+  const horizontal = enabled.horizontal;
   let tmp2 = undefined !== horizontal;
+  const estimatedListSize = enabled.estimatedListSize;
   if (tmp2) {
     tmp2 = horizontal;
   }
-  ({ keyboardDismissMode, inActionSheet } = estimatedListSize);
+  ({ keyboardDismissMode, inActionSheet } = enabled);
   let tmp3 = undefined !== inActionSheet;
+  const keyExtractor = enabled.keyExtractor;
   if (tmp3) {
     tmp3 = inActionSheet;
   }
-  const insetStart = estimatedListSize.insetStart;
+  const insetStart = enabled.insetStart;
   let num = 0;
   if (undefined !== insetStart) {
     num = insetStart;
   }
-  const insetEnd = estimatedListSize.insetEnd;
+  const insetEnd = enabled.insetEnd;
   let num2 = 0;
   if (undefined !== insetEnd) {
     num2 = insetEnd;
   }
-  const listId = estimatedListSize.listId;
-  const onContentLengthChange = estimatedListSize.onContentLengthChange;
-  ({ placeholderConfig, renderAhead } = estimatedListSize);
+  const listId = enabled.listId;
+  const onContentLengthChange = enabled.onContentLengthChange;
+  ({ placeholderConfig, renderAhead } = enabled);
   let str = "nominal";
   ({
     itemSize,
@@ -59,32 +94,34 @@ export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
     listHeaderAlwaysMounted,
     onLayout,
     placeholdersForceEnabled,
-  } = estimatedListSize);
+  } = enabled);
   if (undefined !== renderAhead) {
     str = renderAhead;
   }
-  const scrollEventThrottle = estimatedListSize.scrollEventThrottle;
+  const scrollEventThrottle = enabled.scrollEventThrottle;
   let num3 = 32;
-  ({ renderItem, renderListFooter, renderListHeader, renderSectionHeader, renderSectionFooter } = estimatedListSize);
+  ({ renderItem, renderListFooter, renderListHeader, renderSectionHeader, renderSectionFooter } = enabled);
   if (undefined !== scrollEventThrottle) {
     num3 = scrollEventThrottle;
   }
-  ({ scrollReporting, showsHorizontalScrollIndicator } = estimatedListSize);
+  ({ scrollReporting, showsHorizontalScrollIndicator } = enabled);
   let tmp4 = undefined === showsHorizontalScrollIndicator;
-  ({ sections, sectionHeaderSize, sectionFooterSize } = estimatedListSize);
+  ({ sections, sectionHeaderSize, sectionFooterSize } = enabled);
   if (!tmp4) {
     tmp4 = showsHorizontalScrollIndicator;
   }
-  const showsVerticalScrollIndicator = estimatedListSize.showsVerticalScrollIndicator;
-  ({ style, wrapChildren } = estimatedListSize);
+  const showsVerticalScrollIndicator = enabled.showsVerticalScrollIndicator;
+  const tmp5 = undefined === showsVerticalScrollIndicator || showsVerticalScrollIndicator;
+  ({ style, wrapChildren } = enabled);
   const ref = listId.useRef(null);
   const ref1 = listId.useRef(null);
-  const ref2 = listId.useRef(estimatedListSize);
-  const items = [estimatedListSize];
+  const ref2 = listId.useRef(enabled);
+  const items = [enabled];
   const effect = listId.useEffect(() => {
     ref2.current = current;
   }, items);
   ({ style: style2, marginEnd, marginStart } = num(num2[6])({ style }));
+  num(num2[6])({ style });
   const imperativeHandle = listId.useImperativeHandle(arg1, () => ({
     scrollToTop() {
       let flag = arg0;
@@ -92,11 +129,14 @@ export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
         flag = false;
       }
       if (null != ref.current) {
-        const Commands = closure_0(num2[4]).Commands;
+        const Commands = current(num2[4]).Commands;
         Commands.scrollToTop(tmp.current, flag);
       }
     },
     scrollToLocation(paddingStart) {
+      let animated;
+      let item;
+      let section;
       ({ section, item, animated } = paddingStart);
       if (animated === undefined) {
         animated = false;
@@ -106,23 +146,22 @@ export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
         num = 0;
       }
       if (null != ref.current) {
-        const Commands = closure_0(num2[4]).Commands;
+        const Commands = current(num2[4]).Commands;
         Commands.scrollToLocation(tmp.current, section, item, animated, num);
       }
     },
   }));
   const items1 = [ref1];
-  const tmp12 = num(num2[6])({ style });
-  const tmp5 = undefined === showsVerticalScrollIndicator || showsVerticalScrollIndicator;
+  const tmp14 = num(num2[7])(ref2);
   const callback = listId.useCallback((nativeEvent) => {
     current = ref1.current;
     if (current != null) {
       current.setVisibleItems(nativeEvent.nativeEvent);
     }
   }, items1);
-  num(num2[8])({ estimatedListSize: estimatedListSize.estimatedListSize, horizontal: tmp2 });
+  num(num2[8])({ estimatedListSize, horizontal: tmp2 });
   const items2 = [listId];
-  const tmp14 = num(num2[7])(ref2);
+  const tmp17 = num(num2[9])(placeholderConfig);
   const memo = listId.useMemo(() => {
     let str = "fst";
     if (null != listId) {
@@ -134,7 +173,7 @@ export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
   const tmp19 = num(num2[10])({
     fastestListId: memo,
     itemSize,
-    keyExtractor: estimatedListSize.keyExtractor,
+    keyExtractor,
     listFooterSize,
     listHeaderSize,
     sections,
@@ -144,19 +183,29 @@ export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
   closure_8 = tmp19;
   const items3 = [num2, num, onContentLengthChange, tmp19];
   const memo1 = listId.useMemo(() => {
+    let closure_129_0;
+    let closure_129_2;
+    let closure_129_3;
+    let closure_129_4;
+    let closure_129_5;
+    let itemSizes;
+    let listFooterSize;
+    let listHeaderSize;
+    let sections;
     let reduced;
     if (null != onContentLengthChange) {
-      ({ itemSizeIsUniform: closure_0, itemSizes } = closure_8);
+      ({ itemSizeIsUniform: closure_129_0, itemSizes } = closure_8);
       ({
-        sectionFooterSizeIsUniform: num2,
-        sectionFooterSizes: listId,
-        sectionHeaderSizeIsUniform: onContentLengthChange,
-        sectionHeaderSizes: ref,
+        sectionFooterSizeIsUniform: closure_129_2,
+        sectionFooterSizes: closure_129_3,
+        sectionHeaderSizeIsUniform: closure_129_4,
+        sectionHeaderSizes: closure_129_5,
         sections,
       } = closure_8);
       const first = itemSizes[0];
       num = undefined;
       ({ listFooterSize, listHeaderSize } = closure_8);
+      const tmp3 = num;
       if (first != null) {
         num = first.sizes[0];
       }
@@ -165,11 +214,12 @@ export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
       }
       reduced = sections.reduce(
         (acc, item, index) => {
+          let num5;
           num = 0;
-          if (!onContentLengthChange) {
+          if (!closure_1_4) {
             num = index;
           }
-          num2 = ref[num];
+          num2 = closure_1_5[num];
           if (num2 == null) {
             num2 = 0;
           }
@@ -177,13 +227,13 @@ export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
           if (!closure_1_2) {
             num3 = index;
           }
-          let num4 = listId[num3];
+          let num4 = closure_1_3[num3];
           if (num4 == null) {
             num4 = 0;
           }
           const sum = acc + num2;
-          if (current) {
-            let num5 = item * num;
+          if (closure_1_0) {
+            num5 = item * num;
           } else {
             num5 = undefined;
             if (itemSizes[index] != null) {
@@ -196,25 +246,22 @@ export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
           }
           return sum + num5 + num4;
         },
-        num + listHeaderSize + listFooterSize + num2,
+        tmp3 + listHeaderSize + listFooterSize + num2,
       );
     }
     return reduced;
   }, items3);
   const items4 = [memo1, onContentLengthChange];
   const effect1 = listId.useEffect(() => {
-    let tmp2 = null != memo1;
-    if (tmp2) {
-      tmp2 = null != onContentLengthChange;
-    }
+    const tmp2 = null != memo1 && null != onContentLengthChange;
     if (tmp2) {
       onContentLengthChange(memo1);
     }
   }, items4);
-  const tmp17 = num(num2[9])(placeholderConfig);
-  ({ onScroll, onScrollBeginDrag, onScrollEndDrag } = num(num2[11])(estimatedListSize, tmp2));
+  ({ onScroll, onScrollBeginDrag, onScrollEndDrag } = num(num2[11])(enabled, tmp2));
+  num(num2[11])(enabled, tmp2);
   if (tmp3) {
-    let tmp10Result = closure_8;
+    tmp10Result = closure_8;
   } else {
     if ("animatedScrollPosition" !== scrollReporting) {
       if ("animatedCallbacks" !== scrollReporting) {
@@ -224,57 +271,42 @@ export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
     tmp10Result = ref2;
   }
   const obj = {
-    accessibilityLabel: estimatedListSize.accessibilityLabel,
+    accessibilityLabel,
     horizontal: tmp2,
     insetStart: num,
     insetEnd: num2,
-    keyboardDismissOnDrag: null,
-    onUnexpectedItemSize: null,
-    onLayout: null,
-    onScroll: null,
-    onScrollBeginDrag: null,
-    onScrollEndDrag: null,
-    onVisibleItemsChanged: null,
-    placeholderConfig: null,
-    ref: null,
-    renderAhead: null,
-    scrollEventThrottle: null,
-    sectionsVersioned: null,
-    showsHorizontalScrollIndicator: null,
-    showsVerticalScrollIndicator: null,
-    style: null,
+    keyboardDismissOnDrag: tmp25,
+    onUnexpectedItemSize: tmp14,
+    onLayout,
+    onScroll,
+    onScrollBeginDrag,
+    onScrollEndDrag,
+    onVisibleItemsChanged: callback,
+    placeholderConfig: tmp17,
+    ref,
+    renderAhead: str,
+    scrollEventThrottle: num3,
+    sectionsVersioned: tmp19,
+    showsHorizontalScrollIndicator: tmp4,
+    showsVerticalScrollIndicator: tmp5,
+    style: style2,
   };
-  let tmp25 = "on-drag" === keyboardDismissMode;
-  if (!tmp25) {
-    tmp25 = "interactive" === keyboardDismissMode;
-  }
-  obj.keyboardDismissOnDrag = tmp25;
-  obj.onUnexpectedItemSize = tmp14;
-  obj.onLayout = onLayout;
-  obj.onScroll = onScroll;
-  obj.onScrollBeginDrag = onScrollBeginDrag;
-  obj.onScrollEndDrag = onScrollEndDrag;
-  obj.onVisibleItemsChanged = callback;
-  obj.placeholderConfig = tmp17;
-  obj.ref = ref;
-  obj.renderAhead = str;
-  obj.scrollEventThrottle = num3;
-  obj.sectionsVersioned = tmp19;
-  obj.showsHorizontalScrollIndicator = tmp4;
-  obj.showsVerticalScrollIndicator = tmp5;
-  obj.style = style2;
-  const tmp22 = num(num2[11])(estimatedListSize, tmp2);
+  tmp25 = "on-drag" === keyboardDismissMode || "interactive" === keyboardDismissMode;
+  const tmp24Result = onContentLengthChange(tmp10Result, obj);
   if (tmp) {
+    let tmp24Result2;
     if (null != placeholderConfig) {
-      const obj2 = { children: null };
-      const items5 = [tmp24Result, tmp27];
-      obj2.children = items5;
-      let tmp24Result2 = ref1(ref, obj2);
+      const obj2 = { children: items5 };
+      items5 = [tmp24Result, tmp27];
+      tmp24Result2 = ref1(ref, obj2);
     }
     return tmp24Result2;
   }
   const obj3 = {};
-  tmp24Result = onContentLengthChange(tmp10Result, obj);
-  const merged = Object.assign(estimatedListSize);
-  tmp24Result2 = tmp24(num(num2[13]), obj3);
+  const tmp10Result2 = num(num2[13]);
+  const merged = Object.assign(enabled);
+  tmp24Result2 = tmp24(tmp10Result2, obj3);
 });
+const result = size.fileFinishedImporting("modules/fastest_list/FastestList.android.tsx");
+
+export default forwardRefResult;

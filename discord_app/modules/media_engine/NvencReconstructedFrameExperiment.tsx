@@ -1,28 +1,30 @@
 // discord_app/modules/media_engine/NvencReconstructedFrameExperiment.tsx
 import apex_ApexExperimentDefault from "../experiments/apex/ApexExperiment.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
+let obj2;
 const obj = {
   kind: "user",
   name: "2026-07-nvenc-reconstructed-frames",
   defaultConfig: { enabled: false },
-  variations: null,
+  variations: obj2,
 };
-let obj2 = { 1: null };
+obj2 = { 1: null };
 obj2[1] = { enabled: true };
-obj.variations = obj2;
 const config = apex_ApexExperimentDefault(obj);
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_engine/NvencReconstructedFrameExperiment.tsx");
 
 export const getNvencReconstructedFrameExperimentConfig = function getNvencReconstructedFrameExperimentConfig(disable) {
+  let defaultConfig;
   let flag = disable.disable;
+  const _location = disable.location;
   if (flag === undefined) {
     flag = false;
   }
   if (flag) {
-    let defaultConfig = config.definition.defaultConfig;
+    defaultConfig = config.definition.defaultConfig;
   } else {
-    const obj2 = { location: disable.location };
+    const obj2 = { location: _location };
     defaultConfig = config.getConfig(obj2);
   }
   return defaultConfig;

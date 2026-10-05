@@ -1,173 +1,158 @@
 // discord_app/modules/links/native/handleContentLinking.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import Constants from "../../../Constants.tsx";
+import PostConnectionCallbackStore from "../../gateway/PostConnectionCallbackStore.tsx";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-let closure_7 = async function _handleContentLinking(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          c2 = 0;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          ({
-            guildId: closure_129_0,
-            channelId: closure_129_1,
-            navigationSettings: closure_129_2,
-            messageId: closure_129_3,
-            summaryId: closure_129_4,
-          } = closure_0);
-          let safe;
-          let navigationReplace;
-          closure_129_7 = undefined;
-          let waitForConnection;
-          closure_129_9 = undefined;
-          let skipMessageFetch;
-          c3 = 1;
-          c4 = 1;
-          return { value: "Set", done: true };
-        }
+let obj = function _handleContentLinking() {
+  obj = _asyncToGenerator(async function (arg0) {
+    let c0;
+    let c1;
+    let c2;
+    let c3;
+    let c4;
+    let tmp42;
+    let closure_0 = arg0;
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        if (1 === tmp5) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        let safe;
+        let navigationReplace;
+        let waitForConnection;
+        let closure_9;
+        let skipMessageFetch;
+        c4 = 2;
+        if (0 === c3) {
           if (arg0 === 1) {
             c4 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            closure_130_1(closure_130_2[3]).popAll();
-            safe = closure_129_2.safe;
-            navigationReplace = closure_129_2.navigationReplace;
-            let tmp7 = undefined === navigationReplace;
-            if (!tmp7) {
-              tmp7 = navigationReplace;
-            }
-            closure_129_7 = tmp7;
-            waitForConnection = closure_129_2.waitForConnection;
-            let tmp11 = undefined === waitForConnection;
-            if (!tmp11) {
-              tmp11 = waitForConnection;
-            }
-            closure_129_9 = tmp11;
-            skipMessageFetch = closure_129_2.skipMessageFetch;
-            if (closure_129_9) {
-              if (closure_130_6 != null) {
-                closure_130_6();
-              }
-              const promise = new Promise((arg0, arg1) => {
-                closure_0 = arg0;
-                closure_1 = arg1;
-                function o() {
-                  const error = new Error("superseded");
-                  return closure_1(error);
-                }
-                closure_4(() => {
-                  c6 = null;
-                  closure_0();
-                });
-              });
-              c3 = 2;
-              c4 = 1;
-              const obj7 = { value: promise, done: false };
-              return obj7;
-            }
-            const obj12 = closure_130_1(closure_130_2[3]);
+            let closure_1 = tmp;
+            c0 = undefined;
+            c1 = undefined;
+            c2 = undefined;
+            ({ guildId: c0, channelId: c1, navigationSettings: c2, messageId: c3, summaryId: c4 } = closure_0);
+            safe = undefined;
+            navigationReplace = undefined;
+            waitForConnection = undefined;
+            closure_9 = undefined;
+            skipMessageFetch = undefined;
+            c3 = 1;
+            c4 = 1;
+            return { value: "Set", done: true };
           }
         } else {
-          if (2 === tmp5) {
+          if (1 === c3) {
             if (arg0 === 1) {
               c4 = 3;
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj8 = { value, done: true };
-              return obj8;
+              const obj6 = { value, done: true };
+              return obj6;
+            } else {
+              const obj12 = closure_130_1(closure_130_2[3]);
+              obj12.popAll();
+              safe = c2.safe;
+              navigationReplace = c2.navigationReplace;
+              const tmp6 = undefined === navigationReplace || navigationReplace;
+              navigationReplace = tmp6;
+              waitForConnection = c2.waitForConnection;
+              const tmp10 = undefined === waitForConnection || waitForConnection;
+              closure_9 = tmp10;
+              skipMessageFetch = c2.skipMessageFetch;
+              const tmp14 = closure_9;
+              if (tmp14) {
+                if (closure_130_6 != null) {
+                  closure_130_6();
+                }
+                const self = this;
+                const self2 = this;
+                const promise = new Promise((arg0, arg1) => {
+                  closure_0 = arg0;
+                  closure_1 = arg1;
+                  function o() {
+                    const error = new Error("superseded");
+                    return closure_1(error);
+                  }
+                  closure_4(() => {
+                    c6 = null;
+                    closure_0();
+                  });
+                });
+                c3 = 2;
+                c4 = 1;
+                const obj7 = { value: promise, done: false };
+                return obj7;
+              }
             }
-          } else if (arg0 === 1) {
+          } else {
+            if (2 === c3) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                const obj8 = { value, done: true };
+                return obj8;
+              }
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value, done: true };
+              return obj;
+            }
+            const tmp30 = null != c1 && null != c4;
+            if (tmp30) {
+              const obj5 = closure_130_1(closure_130_2[6]);
+              obj5.setSelectedSummary(c1, c4);
+            }
             c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj = { value, done: true };
-            return obj;
+            return { value: "IconComponent", done: null };
           }
-          let tmp31 = null != closure_129_1;
-          if (tmp31) {
-            tmp31 = null != closure_129_4;
+          if (safe) {
+            const obj9 = { navigationReplace, openChannel: true, skipMessageFetch };
+            c3 = 3;
+            c4 = 1;
+            const obj10 = { value: tmp42(closure_130_5.CHANNEL(c0, c1, c3), obj9), done: false };
+            tmp42 = closure_130_1(closure_130_2[4]);
+            return obj10;
+          } else {
+            const obj11 = { navigationReplace, openChannel: true, skipMessageFetch };
+            const obj3 = closure_130_0(closure_130_2[5]);
+            obj3.transitionTo(closure_130_5.CHANNEL(c0, c1, c3), obj11);
           }
-          if (tmp31) {
-            closure_130_1(closure_130_2[6]).setSelectedSummary(closure_129_1, closure_129_4);
-            const obj5 = closure_130_1(closure_130_2[6]);
-          }
-          c4 = 3;
-          return { value: "IconComponent", done: null };
         }
-        if (safe) {
-          const obj9 = { navigationReplace: closure_129_7, openChannel: true, skipMessageFetch };
-          c3 = 3;
-          c4 = 1;
-          const obj10 = {
-            value: closure_130_1(closure_130_2[4])(
-              closure_130_5.CHANNEL(closure_129_0, closure_129_1, closure_129_3),
-              obj9,
-            ),
-            done: false,
-          };
-          return obj10;
-        } else {
-          const obj11 = { navigationReplace: closure_129_7, openChannel: true, skipMessageFetch };
-          closure_130_0(closure_130_2[5]).transitionTo(
-            closure_130_5.CHANNEL(closure_129_0, closure_129_1, closure_129_3),
-            obj11,
-          );
-          const obj3 = closure_130_0(closure_130_2[5]);
-        }
+      } catch (tmp56) {
+        c4 = 3;
+        throw tmp56;
       }
-    } catch (tmp59) {
-      c4 = tmp;
-      throw tmp59;
     }
-  }
+  });
+  return obj(...arguments);
 };
-fn(5948).addPostConnectionCallback;
-const Routes = fn(1085).Routes;
+PostConnectionCallbackStore.addPostConnectionCallback;
+const Routes = Constants.Routes;
 let c6 = null;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/links/native/handleContentLinking.tsx");
 
 export default function handleContentLinking() {
-  const self = this;
-  const apply = closure_7.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }

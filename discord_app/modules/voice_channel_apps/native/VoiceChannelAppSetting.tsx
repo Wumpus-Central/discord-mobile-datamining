@@ -1,20 +1,25 @@
 // discord_app/modules/voice_channel_apps/native/VoiceChannelAppSetting.tsx
-import c from "../../../../_runtime/00576_c.js";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useVoiceChannelApp from "../useVoiceChannelApp.tsx";
 import VoiceChannelAppActionSheet from "VoiceChannelAppActionSheet.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
 function VoiceChannelAppRow(guildId) {
+  let tmp8Result;
   guildId = guildId.guildId;
   const onChange = guildId.onChange;
   let application_id = guildId.channel.application_id;
   if (application_id == null) {
     application_id = null;
   }
-  options = guildId(application_id[5]).useVoiceChannelAppSettingOptions(guildId, application_id).options;
+  let tmp2 = guildId;
+  let obj = guildId(application_id[5]);
+  const options = obj.useVoiceChannelAppSettingOptions(guildId, application_id).options;
   const found = options.find((applicationId) => applicationId.applicationId === application_id);
   const intl = guildId(application_id[6]).intl;
   const stringResult = intl.string(onChange(application_id[7]).AdT7SZ);
@@ -26,77 +31,78 @@ function VoiceChannelAppRow(guildId) {
     const intl2 = tmp2(tmp3[6]).intl;
     name = intl2.string(tmp5(tmp3[7]).KEB4Rm);
   }
-  const obj2 = { title: stringResult, description: null, hasIcons: null, children: null };
+  const TableRowGroup = tmp2(tmp3[8]).TableRowGroup;
   const intl3 = tmp2(tmp3[6]).intl;
-  obj2.description = intl3.string(onChange(application_id[7])["wKSjL/"]);
-  obj2.hasIcons = null != found;
-  const obj3 = {
+  ({
     label: name,
     accessibilityLabel: "" + stringResult + " " + name,
-    icon: null,
-    onPress: null,
+    icon: tmp8Result,
+    onPress() {
+      const openLazy = ActionSheetActionCreatorsDefault.openLazy;
+      ActionSheetActionCreatorsDefault;
+      const obj = { guildId, selectedApplicationId: application_id, onChange };
+      const tmp2 = asyncRequire(16995, dependencyMap.paths);
+      openLazy(tmp2, VoiceChannelAppActionSheet.VOICE_CHANNEL_APP_ACTION_SHEET_KEY, obj);
+    },
     arrow: true,
-  };
-  let tmp8Result = null;
+  });
+  const TableRow = tmp2(tmp3[9]).TableRow;
+  tmp8Result = null;
   if (null != found) {
-    const obj4 = { application: found.iconApplication };
     tmp8Result = jsx(tmp5(tmp3[10]), { application: found.iconApplication });
   }
-  obj3.icon = tmp8Result;
-  obj3.onPress = function onPress() {
-    const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(
-      asyncRequireImpl(16995, dependencyMap.paths),
-      VoiceChannelAppActionSheet.VOICE_CHANNEL_APP_ACTION_SHEET_KEY,
-      { guildId, selectedApplicationId: application_id, onChange },
-    );
-  };
-  obj2.children = jsx(guildId(application_id[9]).TableRow, {
-    label: name,
-    accessibilityLabel: "" + stringResult + " " + name,
-    icon: null,
-    onPress: null,
-    arrow: true,
-  });
-  return jsx(guildId(application_id[8]).TableRowGroup, {
-    title: stringResult,
-    description: null,
-    hasIcons: null,
-    children: null,
-  });
+  return (
+    <TableRowGroup
+      title={stringResult}
+      description={intl3.string(onChange(application_id[7])["wKSjL/"])}
+      hasIcons={null != found}
+    >
+      {null}
+    </TableRowGroup>
+  );
 }
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/voice_channel_apps/native/VoiceChannelAppSetting.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(4);
+      let channel;
+      let guildId;
+      let onChange;
+      const obj = react2;
+      const cResult = obj.c(4);
       ({ channel, guildId, onChange } = arg0);
-      if (!obj2.useCanConfigureVoiceChannelApp(channel)) {
-        return null;
-      } else {
+      let tmp2 = null;
+      const obj2 = useVoiceChannelApp;
+      if (obj2.useCanConfigureVoiceChannelApp(channel)) {
         if (cResult[0] === channel) {
           if (cResult[1] === guildId) {
+            let tmp3;
+            if (cResult[2] === onChange) {
+              tmp3 = cResult[3];
+            }
+            tmp2 = tmp3;
           }
         }
-        const obj3 = { channel, guildId, onChange };
-        const tmp5 = <VoiceChannelAppRow channel={channel} guildId={guildId} onChange={onChange} />;
+        const tmp6 = <VoiceChannelAppRow channel={channel} guildId={guildId} onChange={onChange} />;
         cResult[0] = channel;
         cResult[1] = guildId;
         cResult[2] = onChange;
-        cResult[3] = tmp5;
+        cResult[3] = tmp6;
+        tmp3 = tmp6;
       }
-      obj2 = useVoiceChannelApp;
+      return tmp2;
     }
   : (channel) => {
+      let guildId;
+      let onChange;
       channel = channel.channel;
       ({ guildId, onChange } = channel);
       let tmp = null;
+      const obj = useVoiceChannelApp;
       if (obj.useCanConfigureVoiceChannelApp(channel)) {
-        const obj2 = { channel, guildId, onChange };
         tmp = <VoiceChannelAppRow channel={channel} guildId={guildId} onChange={onChange} />;
       }
       return tmp;
     };
+const result = size.fileFinishedImporting("modules/voice_channel_apps/native/VoiceChannelAppSetting.tsx");
+
+export default tmp3;

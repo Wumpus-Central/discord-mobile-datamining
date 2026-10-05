@@ -1,102 +1,100 @@
 // discord_app/design/void/BetaTag/native/BetaTag.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl3 from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import ColorConstants from "../../../../modules/colors/native/ColorConstants.tsx";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles from "../../../components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const Gradients = fn(6938).Gradients;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = {
-  container: {
-    backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
-    borderRadius: nativeDefault.radii.lg,
-    marginLeft: 8,
-    paddingHorizontal: 8,
-    justifyContent: "center",
-  },
-  text: { textTransform: "uppercase" },
-};
-let closure_6 = createStyles.createStyles(obj2);
-let obj4 = { SMALL: "small", MEDIUM: "medium" };
-const ReactCompilerGating = fn(558);
-let obj3 = {
+let obj2;
+const View = react_native.View;
+const Gradients = ColorConstants.Gradients;
+const jsx = Fragment.jsx;
+let obj = { container: obj2, text: { textTransform: "uppercase" } };
+obj2 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
   borderRadius: nativeDefault.radii.lg,
   marginLeft: 8,
   paddingHorizontal: 8,
   justifyContent: "center",
 };
-const size = fn(2);
-const result = size.fileFinishedImporting("design/void/BetaTag/native/BetaTag.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_6 = createStyles.createStyles(obj);
+let obj3 = { SMALL: "small", MEDIUM: "medium" };
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(26);
+      let gradient;
+      let style;
+      let textStyle;
+      const obj = react2;
+      const cResult = obj.c(26);
       ({ style, textStyle, size, gradient } = arg0);
       if (undefined === size) {
-        size = obj4.MEDIUM;
+        size = obj3.MEDIUM;
       }
+      const tmp5 = undefined !== gradient && gradient;
       const tmp6 = closure_6();
       let str = "text-xs/bold";
-      if (obj4.SMALL !== size) {
-        if (obj4.MEDIUM === size) {
+      if (obj3.SMALL !== size) {
+        if (obj3.MEDIUM === size) {
           str = "text-sm/bold";
         }
       }
       if (tmp5) {
         if (cResult[0] === style) {
+          let tmp19;
           if (cResult[1] === tmp6.container) {
-            let tmp19 = cResult[2];
+            tmp19 = cResult[2];
           }
           if (cResult[3] === tmp6.text) {
+            let tmp20;
+            let tmp22;
             if (cResult[4] === textStyle) {
-              let tmp20 = cResult[5];
+              tmp20 = cResult[5];
             }
             const _Symbol2 = Symbol;
             if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl2 = util.intl;
-              const stringResult = intl2.string(util.t.oW0eUd);
+              const intl2 = intl3.intl;
+              const stringResult = intl2.string(intl3.t.oW0eUd);
               cResult[6] = stringResult;
-              let tmp22 = stringResult;
+              tmp22 = stringResult;
             } else {
               tmp22 = cResult[6];
             }
             if (cResult[7] === tmp20) {
+              let tmp24;
               if (cResult[8] === str) {
-                let tmp24 = cResult[9];
+                tmp24 = cResult[9];
               }
               if (cResult[10] === tmp19) {
+                let tmp27;
                 if (cResult[11] === tmp24) {
-                  let tmp27 = cResult[12];
+                  tmp27 = cResult[12];
                 }
                 return tmp27;
               }
-              const obj2 = {
-                style: tmp19,
-                start: ConstantsIOS.HorizontalGradient.START,
-                end: ConstantsIOS.HorizontalGradient.END,
-                colors: Gradients.PREMIUM_TIER_2_TRI_COLOR,
-                children: tmp24,
-              };
-              const tmp32 = jsx(LinearGradientDefault, {
-                style: tmp19,
-                start: ConstantsIOS.HorizontalGradient.START,
-                end: ConstantsIOS.HorizontalGradient.END,
-                colors: Gradients.PREMIUM_TIER_2_TRI_COLOR,
-                children: tmp24,
-              });
+              LinearGradientDefault;
+              const tmp32 = (
+                <tmp30
+                  style={tmp19}
+                  start={ConstantsIOS.HorizontalGradient.START}
+                  end={ConstantsIOS.HorizontalGradient.END}
+                  colors={Gradients.PREMIUM_TIER_2_TRI_COLOR}
+                >
+                  {tmp24}
+                </tmp30>
+              );
               cResult[10] = tmp19;
               cResult[11] = tmp24;
               cResult[12] = tmp32;
               tmp27 = tmp32;
             }
-            const obj3 = { variant: str, color: "text-overlay-light", style: tmp20, children: tmp22 };
             const tmp26 = jsx(Text_Text.Text, {
               variant: str,
               color: "text-overlay-light",
@@ -121,40 +119,43 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp19 = items1;
       } else {
         if (cResult[13] === style) {
+          let tmp7;
           if (cResult[14] === tmp6.container) {
-            let tmp7 = cResult[15];
+            tmp7 = cResult[15];
           }
           if (cResult[16] === tmp6.text) {
+            let tmp8;
+            let tmp10;
             if (cResult[17] === textStyle) {
-              let tmp8 = cResult[18];
+              tmp8 = cResult[18];
             }
             const _Symbol = Symbol;
             if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl = util.intl;
-              const stringResult1 = intl.string(util.t.oW0eUd);
+              const intl = intl3.intl;
+              const stringResult1 = intl.string(intl3.t.oW0eUd);
               cResult[19] = stringResult1;
-              let tmp10 = stringResult1;
+              tmp10 = stringResult1;
             } else {
               tmp10 = cResult[19];
             }
             if (cResult[20] === tmp8) {
+              let tmp12;
               if (cResult[21] === str) {
-                let tmp12 = cResult[22];
+                tmp12 = cResult[22];
               }
               if (cResult[23] === tmp7) {
+                let tmp15;
                 if (cResult[24] === tmp12) {
-                  let tmp15 = cResult[25];
+                  tmp15 = cResult[25];
                 }
                 return tmp15;
               }
-              obj4 = { style: tmp7, children: tmp12 };
               const tmp18 = <View style={tmp7}>{tmp12}</View>;
               cResult[23] = tmp7;
               cResult[24] = tmp12;
               cResult[25] = tmp18;
               tmp15 = tmp18;
             }
-            const obj5 = { variant: str, color: "text-overlay-light", style: tmp8, children: tmp10 };
             const tmp14 = jsx(Text_Text.Text, {
               variant: str,
               color: "text-overlay-light",
@@ -178,12 +179,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[15] = items3;
         tmp7 = items3;
       }
-      tmp5 = undefined !== gradient && gradient;
     }
   : (gradient) => {
+      let intl;
+      let intl2;
+      let items1;
+      let items3;
+      let style;
+      let textStyle;
+      let tmp3Result;
       ({ style, textStyle, size } = gradient);
       if (size === undefined) {
-        size = obj4.MEDIUM;
+        size = obj3.MEDIUM;
       }
       let flag = gradient.gradient;
       if (flag === undefined) {
@@ -191,43 +198,40 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp2 = closure_6();
       let str = "text-xs/bold";
-      if (obj4.SMALL !== size) {
-        if (obj4.MEDIUM === size) {
+      if (obj3.SMALL !== size) {
+        if (obj3.MEDIUM === size) {
           str = "text-sm/bold";
         }
       }
       if (flag) {
-        const obj2 = { style: null, start: null, end: null, colors: null, children: null };
         const items = [tmp2.container, style];
-        obj2.style = items;
-        obj2.start = ConstantsIOS.HorizontalGradient.START;
-        obj2.end = ConstantsIOS.HorizontalGradient.END;
-        obj2.colors = Gradients.PREMIUM_TIER_2_TRI_COLOR;
-        const obj3 = { variant: str, color: "text-overlay-light", style: null, children: null };
-        const items1 = [tmp2.text, textStyle];
-        obj3.style = items1;
-        const intl2 = util.intl;
-        obj3.children = intl2.string(util.t.oW0eUd);
-        obj2.children = jsx(Text_Text.Text, { variant: str, color: "text-overlay-light", style: null, children: null });
-        let tmp3Result = jsx(LinearGradientDefault, {
-          style: null,
-          start: null,
-          end: null,
-          colors: null,
-          children: null,
-        });
+        LinearGradientDefault;
+        obj3 = { variant: str, color: "text-overlay-light", style: items1, children: intl2.string(intl3.t.oW0eUd) };
+        items1 = [tmp2.text, textStyle];
+        const Text2 = Text_Text.Text;
+        intl2 = intl3.intl;
+        tmp3Result = (
+          <tmp10
+            style={items}
+            start={ConstantsIOS.HorizontalGradient.START}
+            end={ConstantsIOS.HorizontalGradient.END}
+            colors={Gradients.PREMIUM_TIER_2_TRI_COLOR}
+          >
+            {null}
+          </tmp10>
+        );
       } else {
-        const obj = { style: null, children: null };
         const items2 = [tmp2.container, style];
-        obj.style = items2;
-        obj4 = { variant: str, color: "text-overlay-light", style: null, children: null };
-        const items3 = [tmp2.text, textStyle];
-        obj4.style = items3;
-        const intl = util.intl;
-        obj4.children = intl.string(util.t.oW0eUd);
-        obj.children = jsx(Text_Text.Text, { variant: str, color: "text-overlay-light", style: null, children: null });
-        tmp3Result = <View style={null}>{null}</View>;
+        ({ variant: str, color: "text-overlay-light", style: items3, children: intl.string(intl3.t.oW0eUd) });
+        items3 = [tmp2.text, textStyle];
+        const Text = Text_Text.Text;
+        intl = intl3.intl;
+        tmp3Result = <View style={items2}>{null}</View>;
       }
       return tmp3Result;
     };
-export const BetaSizes = obj4;
+let size = size_mod;
+const result = size.fileFinishedImporting("design/void/BetaTag/native/BetaTag.tsx");
+
+export default tmp3;
+export const BetaSizes = obj3;

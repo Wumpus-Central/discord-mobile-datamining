@@ -1,48 +1,55 @@
 // discord_app/modules/guild_settings/GuildSettingsEmojiStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import EmojiRecord from "../../records/EmojiRecord.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
-import priv from "../../../_runtime/01444_priv.js";
+import LRUCache from "../../../_runtime/01444_LRUCache.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const dependencyMap = {};
-const dependencyMap2 = {};
+const React2 = {};
+const _false = {};
 let closure_4 = 0;
-const obj = { max: 5, maxAge: null };
-obj.maxAge = DurationsDefault.Millis.HOUR;
-const importDefaultResult1 = new priv(obj);
-const Store = initializeDefault.Store;
-class GuildSettingsEmojiStore extends Store {}
-const prototype = GuildSettingsEmojiStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(SelectedGuildStore);
-};
-prototype["isUploadingEmoji"] = function isUploadingEmoji() {
-  return closure_4 > 0;
-};
-prototype["getEmojiRevision"] = function getEmojiRevision(id) {
-  let num = dependencyMap[id];
-  if (num == null) {
-    num = 0;
+const obj = { max: 5, maxAge: DurationsDefault.Millis.HOUR };
+const importDefaultResult1 = new LRUCache(obj);
+const Store = get_initializedDefault.Store;
+class GuildSettingsEmojiStore extends Store {
+  initialize() {
+    this.waitFor(SelectedGuildStore);
   }
-  return num;
-};
-prototype["getEmojis"] = function getEmojis(id) {
-  return dependencyMap2[id];
-};
-prototype["getEmojiRawAsset"] = function getEmojiRawAsset(arg0) {
-  return importDefaultResult1.get(arg0);
-};
+  isUploadingEmoji() {
+    return closure_4 > 0;
+  }
+  getEmojiRevision(id) {
+    let num = closure_2[id];
+    if (num == null) {
+      num = 0;
+    }
+    return num;
+  }
+  getEmojis(id) {
+    return closure_3[id];
+  }
+  getEmojiRawAsset(arg0) {
+    return importDefaultResult1.get(arg0);
+  }
+}
+const prototype = GuildSettingsEmojiStore.prototype;
 GuildSettingsEmojiStore.displayName = "GuildSettingsEmojiStore";
-const guildSettingsEmojiStore = new GuildSettingsEmojiStore(DispatcherDefault, {
+const obj2 = {
   EMOJI_DELETE: function handleEmojiDelete(arg0) {
-    ({ guildId, emojiId: EmojiRecord } = arg0);
-    dependencyMap2[guildId] = dependencyMap2[guildId].filter((id) => id.id !== EmojiRecord);
+    let closure_129_0;
+    let guildId;
+    ({ guildId, emojiId: closure_129_0 } = arg0);
+    const arr = closure_3[guildId];
+    closure_3[guildId] = arr.filter((id) => id.id !== closure_1_0);
   },
   EMOJI_FETCH_SUCCESS: function handleFetchSuccess(emojis) {
     emojis = emojis.emojis;
-    closure_3[emojis.guildId] = emojis.map((item) => new EmojiRecord(item));
+    closure_3[emojis.guildId] = emojis.map((item) => {
+      const tmp = new EmojiRecord(item);
+      return tmp;
+    });
   },
   EMOJI_FETCH_FAILURE: function handleFetchFailure(guildId) {
     closure_3[guildId.guildId] = [];
@@ -58,14 +65,14 @@ const guildSettingsEmojiStore = new GuildSettingsEmojiStore(DispatcherDefault, {
   },
   GUILD_EMOJIS_UPDATE: function handleGuildEmojiUpdate(guildId) {
     guildId = guildId.guildId;
-    let num = dependencyMap[guildId];
+    let num = closure_2[guildId];
     if (num == null) {
       num = 0;
     }
-    dependencyMap[guildId] = num + 1;
+    closure_2[guildId] = num + 1;
   },
-});
-const size = fn(2);
+};
+const guildSettingsEmojiStore = new GuildSettingsEmojiStore(DispatcherDefault, obj2);
 let result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsEmojiStore.tsx");
 
 export default guildSettingsEmojiStore;

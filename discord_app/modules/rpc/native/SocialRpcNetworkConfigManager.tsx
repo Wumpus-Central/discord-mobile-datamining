@@ -1,5 +1,5 @@
 // discord_app/modules/rpc/native/SocialRpcNetworkConfigManager.tsx
-import _mod17 from "../../../../_runtime/metro/00017__.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
@@ -9,28 +9,35 @@ import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.ts
 import size from "../../../../_runtime/metro/00002__.js";
 
 function updateSocialRpcNetworkConfig() {
+  let obj2;
+  let obj4;
   const obj = {
-    "X-Super-Properties": AnalyticsUtilsDefault.getSuperPropertiesBase64(),
+    "X-Super-Properties": obj2.getSuperPropertiesBase64(),
     "X-Fingerprint": AuthenticationStore.getFingerprint(),
     "X-Installation-ID": AuthenticationStore.getInstallationForTracking(),
     "X-Discord-Locale": LocaleStore.locale,
   };
   const NativeCacheModule = NativeModules.NativeCacheModule;
+  obj2 = AnalyticsUtilsDefault;
   if (NativeCacheModule != null) {
     const _JSON = JSON;
-    const obj3 = { apiBaseUrl: HTTPUtils.getAPIBaseURL(), headers: obj };
-    const result = NativeCacheModule.setItem("socialRpcNetworkRequest", JSON.stringify(obj3));
+    const setItem = NativeCacheModule.setItem;
+    const obj3 = { apiBaseUrl: obj4.getAPIBaseURL(), headers: obj };
+    obj4 = HTTPUtils;
+    const result = setItem("socialRpcNetworkRequest", stringify(obj3));
   }
 }
-const NativeModules = _mod17.NativeModules;
-const prototype = function SocialRpcNetworkConfigManager() {
-  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.handleUpdate = PlatformUtils.isAndroid() ? updateSocialRpcNetworkConfig : () => {};
-  applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate };
-  return applyArgumentsResult;
-}.prototype;
-class prototype extends tmp2 {}
-const prototype1 = new prototype();
+const NativeModules = react_native.NativeModules;
+class SocialRpcNetworkConfigManager extends AutomaticLifecycleManager {
+  constructor() {
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    const obj = PlatformUtils;
+    applyArgumentsResult.handleUpdate = obj.isAndroid() ? updateSocialRpcNetworkConfig : () => {};
+    applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate };
+    return applyArgumentsResult;
+  }
+}
+const socialRpcNetworkConfigManager = new SocialRpcNetworkConfigManager();
 let result = size.fileFinishedImporting("modules/rpc/native/SocialRpcNetworkConfigManager.tsx");
 
-export default prototype1;
+export default socialRpcNetworkConfigManager;

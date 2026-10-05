@@ -1,32 +1,56 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputCharCounter.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl3 from "../../../../intl/index.native.tsx";
+import PremiumConstants from "../../../premium/PremiumConstants.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import PremiumUpsellUtilsDefault from "../../../../utils/native/PremiumUpsellUtils.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
 import UserStore from "../../../../stores/UserStore.tsx";
+import Constants from "../../../../Constants.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const Constants = fn(1085);
-({ MAX_MESSAGE_LENGTH: metroRequire, UpsellTypes: closure_7 } = Constants);
-const PremiumUpsellTypes = fn(1379).PremiumUpsellTypes;
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4890);
-let obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 } };
+let dependencyMap;
+
+let c10;
+let c9;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let _slicedToArray = _slicedToArray_mod;
+({ MAX_MESSAGE_LENGTH: metroRequire, UpsellTypes: metroImportDefault } = Constants);
+const PremiumUpsellTypes = PremiumConstants.PremiumUpsellTypes;
+({ jsx: c9, jsxs: c10 } = Fragment);
+let obj = { container: obj2 };
+obj2 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 let closure_11 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-const forwardRefResult = noop.forwardRef(
+const forwardRef = react.forwardRef;
+const forwardRefResult = forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0, arg1) => {
-        const cResult = analyticsLocations(576).c(41);
+        let analyticsLocations;
+        let closure_6;
+        let currentUser;
+        let first;
+        let items1;
+        let items3;
+        let maxLength;
+        let style;
+        let tmp15;
+        let tmp5;
+        let tmp6;
+        let obj = analyticsLocations(576);
+        const cResult = obj.c(41);
         ({ style, analyticsLocations } = arg0);
         const tmp4 = closure_11();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [currentUser];
           const fn = function v() {
-            return stateFromStores(maxLength[10]).canUseIncreasedMessageLength(currentUser.getCurrentUser());
+            const obj = stateFromStores(maxLength[10]);
+            return obj.canUseIncreasedMessageLength(currentUser.getCurrentUser());
           };
           cResult[0] = items;
           cResult[1] = fn;
@@ -35,31 +59,37 @@ const forwardRefResult = noop.forwardRef(
         } else {
           [tmp5, tmp6] = cResult;
         }
-        let obj = analyticsLocations(576);
-        const stateFromStores = analyticsLocations(504).useStateFromStores(tmp5, tmp6);
+        const tmpResult = analyticsLocations(504);
+        const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
         const tmp9 = stateFromStores(8809)();
         dependencyMap = tmp9;
         let result = tmp9 / 10;
         _slicedToArray = result;
-        [first, currentUser] = first.useState(-result - 1);
         let obj3 = first;
-        const tmpResult = analyticsLocations(504);
+        const tmp11 = -result;
+        [first, currentUser] = first.useState(tmp11 - 1);
         [tmp15, closure_6] = first.useState(false);
+        _slicedToArray(first.useState(false), 2);
         if (cResult[2] === tmp9) {
+          let tmp16;
           if (cResult[3] === result) {
-            let tmp16 = cResult[4];
+            tmp16 = cResult[4];
           }
           const imperativeHandle = obj3.useImperativeHandle(arg1, tmp16);
           if (cResult[5] === analyticsLocations) {
             if (cResult[6] === stateFromStores) {
               if (cResult[7] === tmp9) {
+                let tmp19;
                 if (cResult[8] === first) {
-                  let tmp19 = cResult[9];
+                  tmp19 = cResult[9];
                 }
                 if (first > 0) {
                   if (cResult[10] === style) {
+                    let tmp39;
+                    let tmp41;
+                    let tmp44;
                     if (cResult[11] === tmp4.container) {
-                      let tmp39 = cResult[12];
+                      tmp39 = cResult[12];
                     }
                     const _HermesInternal = HermesInternal;
                     const combined = "-" + first;
@@ -73,7 +103,7 @@ const forwardRefResult = noop.forwardRef(
                       const tmp43 = closure_9(analyticsLocations(4886).Text, obj2);
                       cResult[13] = combined;
                       cResult[14] = tmp43;
-                      let tmp41 = tmp43;
+                      tmp41 = tmp43;
                     } else {
                       tmp41 = cResult[14];
                     }
@@ -84,23 +114,23 @@ const forwardRefResult = noop.forwardRef(
                       }
                       cResult[15] = stateFromStores;
                       cResult[16] = tmp45;
-                      let tmp44 = tmp45;
+                      tmp44 = tmp45;
                     } else {
                       tmp44 = cResult[16];
                     }
                     if (cResult[17] === tmp19) {
                       if (cResult[18] === tmp39) {
                         if (cResult[19] === tmp41) {
+                          let tmp47;
                           if (cResult[20] === tmp44) {
-                            let tmp47 = cResult[21];
+                            tmp47 = cResult[21];
                           }
                           return tmp47;
                         }
                       }
                     }
-                    let obj4 = { onPress: tmp19, style: tmp39, children: null };
-                    const items1 = [tmp41, tmp44];
-                    obj4.children = items1;
+                    let obj4 = { onPress: tmp19, style: tmp39, children: items1 };
+                    items1 = [tmp41, tmp44];
                     const tmp49 = closure_10(analyticsLocations(5909).PressableOpacity, obj4);
                     cResult[17] = tmp19;
                     cResult[18] = tmp39;
@@ -116,15 +146,23 @@ const forwardRefResult = noop.forwardRef(
                   tmp39 = items2;
                 } else if (first >= tmp11) {
                   if (cResult[22] === style) {
+                    let tmp28;
+                    let tmp30;
+                    let tmp33;
                     if (cResult[23] === tmp4.container) {
-                      let tmp28 = cResult[24];
+                      tmp28 = cResult[24];
                     }
                     if (cResult[25] !== -first) {
-                      let obj5 = { color: "text-default", lineClamp: 1, variant: "text-xxs/semibold", children: tmp29 };
+                      let obj5 = {
+                        color: "text-default",
+                        lineClamp: 1,
+                        variant: "text-xxs/semibold",
+                        children: -first,
+                      };
                       const tmp32 = closure_9(analyticsLocations(4886).Text, obj5);
-                      cResult[25] = tmp29;
+                      cResult[25] = -first;
                       cResult[26] = tmp32;
-                      let tmp30 = tmp32;
+                      tmp30 = tmp32;
                     } else {
                       tmp30 = cResult[26];
                     }
@@ -135,23 +173,23 @@ const forwardRefResult = noop.forwardRef(
                       }
                       cResult[27] = tmp15;
                       cResult[28] = tmp34;
-                      let tmp33 = tmp34;
+                      tmp33 = tmp34;
                     } else {
                       tmp33 = cResult[28];
                     }
                     if (cResult[29] === tmp19) {
                       if (cResult[30] === tmp28) {
                         if (cResult[31] === tmp30) {
+                          let tmp36;
                           if (cResult[32] === tmp33) {
-                            let tmp36 = cResult[33];
+                            tmp36 = cResult[33];
                           }
                           return tmp36;
                         }
                       }
                     }
-                    let obj6 = { onPress: tmp19, style: tmp28, children: null };
-                    const items3 = [tmp30, tmp33];
-                    obj6.children = items3;
+                    let obj6 = { onPress: tmp19, style: tmp28, children: items3 };
+                    items3 = [tmp30, tmp33];
                     const tmp38 = closure_10(analyticsLocations(5909).PressableOpacity, obj6);
                     cResult[29] = tmp19;
                     cResult[30] = tmp28;
@@ -165,64 +203,83 @@ const forwardRefResult = noop.forwardRef(
                   cResult[23] = tmp4.container;
                   cResult[24] = items4;
                   tmp28 = items4;
-                } else if (!tmp15) {
-                  return null;
                 } else {
-                  if (cResult[34] === style) {
-                    if (cResult[35] === tmp4.container) {
-                      let tmp20 = cResult[36];
+                  let tmp27 = null;
+                  if (tmp15) {
+                    if (cResult[34] === style) {
+                      let tmp20;
+                      let tmp21;
+                      if (cResult[35] === tmp4.container) {
+                        tmp20 = cResult[36];
+                      }
+                      const _Symbol = Symbol;
+                      if (cResult[37] === Symbol.for("react.memo_cache_sentinel")) {
+                        const tmp23 = closure_9(analyticsLocations(8313).NitroWheelIcon, {
+                          size: "xs",
+                          color: "icon-muted",
+                        });
+                        cResult[37] = tmp23;
+                        tmp21 = tmp23;
+                      } else {
+                        tmp21 = cResult[37];
+                      }
+                      if (cResult[38] === tmp19) {
+                        let tmp24;
+                        if (cResult[39] === tmp20) {
+                          tmp24 = cResult[40];
+                        }
+                        tmp27 = tmp24;
+                      }
+                      const obj7 = { onPress: tmp19, style: tmp20, children: tmp21 };
+                      const tmp26 = closure_9(analyticsLocations(5909).PressableOpacity, obj7);
+                      cResult[38] = tmp19;
+                      cResult[39] = tmp20;
+                      cResult[40] = tmp26;
+                      tmp24 = tmp26;
                     }
-                    const _Symbol = Symbol;
-                    if (cResult[37] === Symbol.for("react.memo_cache_sentinel")) {
-                      const tmp23 = closure_9(analyticsLocations(8313).NitroWheelIcon, {
-                        size: "xs",
-                        color: "icon-muted",
-                      });
-                      cResult[37] = tmp23;
-                      let tmp21 = tmp23;
-                    } else {
-                      tmp21 = cResult[37];
-                    }
-                    if (cResult[38] === tmp19) {
-                    }
-                    let obj7 = { onPress: tmp19, style: tmp20, children: tmp21 };
-                    const tmp26 = closure_9(analyticsLocations(5909).PressableOpacity, obj7);
-                    cResult[38] = tmp19;
-                    cResult[39] = tmp20;
-                    cResult[40] = tmp26;
+                    const items5 = [tmp4.container, style];
+                    cResult[34] = style;
+                    cResult[35] = tmp4.container;
+                    cResult[36] = items5;
+                    tmp20 = items5;
                   }
-                  const items5 = [tmp4.container, style];
-                  cResult[34] = style;
-                  cResult[35] = tmp4.container;
-                  cResult[36] = items5;
-                  tmp20 = items5;
+                  return tmp27;
                 }
               }
             }
           }
           const fn3 = function b() {
+            let intl;
+            let intl2;
+            let obj4;
+            let obj6;
             if (stateFromStores) {
               if (first > 0) {
-                const obj2 = { content: null, key: "premium-message-length-info-toast" };
-                const intl = util.intl;
-                obj2.content = intl.string(util.t.YSRIqa);
-                ToastActionCreatorsDefault.open(obj2);
+                const obj2 = { content: intl.string(intl3.t.YSRIqa), key: "premium-message-length-info-toast" };
+                const open = ToastActionCreatorsDefault.open;
+                ToastActionCreatorsDefault;
+                intl = intl3.intl;
+                open(obj2);
               } else {
-                const obj3 = { content: null, key: "premium-message-length-info-toast" };
-                const intl2 = util.intl;
-                const obj5 = { maxLength };
-                obj3.content = intl2.formatToPlainString(util.t.vcvHa0, obj5);
-                ToastActionCreatorsDefault.open(obj3);
+                const obj3 = {
+                  content: intl2.formatToPlainString(intl3.t.vcvHa0, obj4),
+                  key: "premium-message-length-info-toast",
+                };
+                const open2 = ToastActionCreatorsDefault.open;
+                ToastActionCreatorsDefault;
+                intl2 = intl3.intl;
+                obj4 = { maxLength };
+                open2(obj3);
               }
             } else {
-              const obj7 = {
-                initialUpsellKey: constants.LONGER_MESSAGE,
+              const obj5 = {
+                initialUpsellKey: metroImportDefault.LONGER_MESSAGE,
                 analyticsLocations,
-                analyticsProperties: null,
+                analyticsProperties: obj6,
               };
-              const obj8 = { type: PremiumUpsellTypes.MESSAGE_LENGTH_UPSELL };
-              obj7.analyticsProperties = obj8;
-              result = PremiumUpsellUtilsDefault.handleShowUpsellAlert(obj7);
+              obj6 = { type: PremiumUpsellTypes.MESSAGE_LENGTH_UPSELL };
+              const obj = PremiumUpsellUtilsDefault;
+              result = obj.handleShowUpsellAlert(obj5);
             }
           };
           cResult[5] = analyticsLocations;
@@ -236,7 +293,7 @@ const forwardRefResult = noop.forwardRef(
           return {
             onMessageLengthChanged(arg0) {
               currentUser(Math.max(-closure_1_3 - 1, arg0 - maxLength));
-              closure_1_6(arg0 > closure_2_6);
+              closure_1_6(arg0 > closure_6);
             },
           };
         };
@@ -244,25 +301,40 @@ const forwardRefResult = noop.forwardRef(
         cResult[3] = result;
         cResult[4] = fn2;
         tmp16 = fn2;
-        const tmp14 = _slicedToArray(first.useState(false), 2);
       }
     : (arg0, arg1) => {
+        let analyticsLocations;
+        let c3;
+        let c6;
+        let currentUser;
+        let first;
+        let items2;
+        let items3;
+        let items4;
+        let items5;
+        let items6;
+        let maxLength;
+        let style;
+        let tmp11;
+        let tmp16Result;
         ({ style, analyticsLocations } = arg0);
         first = undefined;
         currentUser = undefined;
         c6 = undefined;
         const tmp = closure_11();
+        let obj = analyticsLocations(504);
         const items = [currentUser];
-        const stateFromStores = analyticsLocations(504).useStateFromStores(items, () =>
-          stateFromStores(maxLength[10]).canUseIncreasedMessageLength(currentUser.getCurrentUser()),
-        );
+        const stateFromStores = obj.useStateFromStores(items, () => {
+          const obj = stateFromStores(maxLength[10]);
+          return obj.canUseIncreasedMessageLength(currentUser.getCurrentUser());
+        });
         const tmp5 = stateFromStores(8809)();
         dependencyMap = tmp5;
         let result = tmp5 / 10;
         _slicedToArray = result;
         [first, currentUser] = first.useState(-result - 1);
-        let obj = analyticsLocations(504);
         [tmp11, c6] = first.useState(false);
+        _slicedToArray(first.useState(false), 2);
         const imperativeHandle = first.useImperativeHandle(arg1, () => ({
           onMessageLengthChanged(arg0) {
             currentUser(Math.max(-closure_1_3 - 1, arg0 - maxLength));
@@ -271,70 +343,88 @@ const forwardRefResult = noop.forwardRef(
         }));
         const items1 = [analyticsLocations, stateFromStores, tmp5, first];
         const callback = first.useCallback(() => {
+          let intl;
+          let intl2;
+          let obj4;
+          let obj6;
           if (stateFromStores) {
             if (first > 0) {
-              const obj2 = { content: null, key: "premium-message-length-info-toast" };
-              const intl = util.intl;
-              obj2.content = intl.string(util.t.YSRIqa);
-              ToastActionCreatorsDefault.open(obj2);
+              const obj2 = { content: intl.string(intl3.t.YSRIqa), key: "premium-message-length-info-toast" };
+              const open = ToastActionCreatorsDefault.open;
+              ToastActionCreatorsDefault;
+              intl = intl3.intl;
+              open(obj2);
             } else {
-              const obj3 = { content: null, key: "premium-message-length-info-toast" };
-              const intl2 = util.intl;
-              const obj5 = { maxLength };
-              obj3.content = intl2.formatToPlainString(util.t.vcvHa0, obj5);
-              ToastActionCreatorsDefault.open(obj3);
+              const obj3 = {
+                content: intl2.formatToPlainString(intl3.t.vcvHa0, obj4),
+                key: "premium-message-length-info-toast",
+              };
+              const open2 = ToastActionCreatorsDefault.open;
+              ToastActionCreatorsDefault;
+              intl2 = intl3.intl;
+              obj4 = { maxLength };
+              open2(obj3);
             }
           } else {
-            const obj7 = { initialUpsellKey: constants.LONGER_MESSAGE, analyticsLocations, analyticsProperties: null };
-            const obj8 = { type: PremiumUpsellTypes.MESSAGE_LENGTH_UPSELL };
-            obj7.analyticsProperties = obj8;
-            const result = PremiumUpsellUtilsDefault.handleShowUpsellAlert(obj7);
+            const obj5 = {
+              initialUpsellKey: metroImportDefault.LONGER_MESSAGE,
+              analyticsLocations,
+              analyticsProperties: obj6,
+            };
+            obj6 = { type: PremiumUpsellTypes.MESSAGE_LENGTH_UPSELL };
+            const obj = PremiumUpsellUtilsDefault;
+            const result = obj.handleShowUpsellAlert(obj5);
           }
         }, items1);
         if (first > 0) {
-          let obj2 = { onPress: callback, style: null, children: null };
-          const items2 = [tmp.container, style];
-          obj2.style = items2;
-          let obj3 = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xxs/semibold", children: null };
+          let obj2 = { onPress: callback, style: items2, children: items3 };
+          items2 = [tmp.container, style];
+          const PressableOpacity3 = analyticsLocations(5909).PressableOpacity;
+          let obj3 = {
+            color: "text-feedback-critical",
+            lineClamp: 1,
+            variant: "text-xxs/semibold",
+            children: "-" + first,
+          };
           const _HermesInternal = HermesInternal;
-          obj3.children = "-" + first;
-          const items3 = [closure_9(analyticsLocations(4886).Text, obj3)];
+          const Text = analyticsLocations(4886).Text;
+          items3 = [closure_9(Text, obj3)];
           let tmp20Result = null;
           if (!stateFromStores) {
             tmp20Result = closure_9(analyticsLocations(8313).NitroWheelIcon, { size: "xs", color: "icon-muted" });
           }
           items3[1] = tmp20Result;
-          obj2.children = items3;
-          let tmp16Result = closure_10(analyticsLocations(5909).PressableOpacity, obj2);
-        } else if (first >= tmp7) {
-          let obj4 = { onPress: callback, style: null, children: null };
-          const items4 = [tmp.container, style];
-          obj4.style = items4;
+          tmp16Result = closure_10(PressableOpacity3, obj2);
+        } else if (first >= -result) {
+          let obj4 = { onPress: callback, style: items4, children: items5 };
+          items4 = [tmp.container, style];
+          const PressableOpacity2 = analyticsLocations(5909).PressableOpacity;
           let obj5 = { color: "text-default", lineClamp: 1, variant: "text-xxs/semibold", children: -first };
-          const items5 = [closure_9(analyticsLocations(4886).Text, obj5)];
+          items5 = [closure_9(analyticsLocations(4886).Text, obj5)];
           let tmp17Result = null;
           if (tmp11) {
             tmp17Result = closure_9(analyticsLocations(8313).NitroWheelIcon, { size: "xs", color: "icon-muted" });
           }
           items5[1] = tmp17Result;
-          obj4.children = items5;
-          tmp16Result = closure_10(analyticsLocations(5909).PressableOpacity, obj4);
+          tmp16Result = closure_10(PressableOpacity2, obj4);
         } else {
           tmp16Result = null;
           if (tmp11) {
-            let obj6 = { onPress: callback, style: null, children: null };
-            const items6 = [tmp.container, style];
-            obj6.style = items6;
-            obj6.children = closure_9(analyticsLocations(8313).NitroWheelIcon, { size: "xs", color: "icon-muted" });
-            tmp16Result = closure_9(analyticsLocations(5909).PressableOpacity, obj6);
+            let obj6 = {
+              onPress: callback,
+              style: items6,
+              children: closure_9(analyticsLocations(8313).NitroWheelIcon, { size: "xs", color: "icon-muted" }),
+            };
+            items6 = [tmp.container, style];
+            const PressableOpacity = analyticsLocations(5909).PressableOpacity;
+            tmp16Result = closure_9(PressableOpacity, obj6);
           }
         }
         return tmp16Result;
       },
 );
 forwardRefResult.displayName = "ChatInputCharCounter";
-let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-const size = fn(2);
+const memoResult = react.memo(forwardRefResult);
 let result = size.fileFinishedImporting("modules/chat_input/native/accessories/ChatInputCharCounter.tsx");
 
-export default noop.memo(forwardRefResult);
+export default memoResult;

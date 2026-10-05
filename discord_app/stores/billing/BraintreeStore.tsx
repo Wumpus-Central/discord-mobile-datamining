@@ -1,11 +1,16 @@
 // discord_app/stores/billing/BraintreeStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import Constants from "../../Constants.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let state;
+
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
 ({ Endpoints: closure_4, PaymentGateways: hasOwnProperty, PaymentSourceTypes: metroRequire } = Constants);
 let client = null;
 let c8 = null;
@@ -16,38 +21,42 @@ if (PlatformUtils.isDesktop()) {
     getReturnUrlPrefix() {
       if (null == state) {
         const _Error = Error;
+        const self = this;
+        const self2 = this;
         const error = new Error("popupBridgeState is unset");
         throw error;
       } else {
-        const aPIBaseURL = HTTPUtils.getAPIBaseURL();
-        return aPIBaseURL + React4.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(constants.BRAINTREE, state);
+        const obj = HTTPUtils;
+        const aPIBaseURL = obj.getAPIBaseURL();
+        return aPIBaseURL + React3.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(hasOwnProperty.BRAINTREE, state);
       }
     },
     open(arg0) {
-      global = arg0;
+      let closure_1_3 = arg0;
       window.open(arg0);
       braintreeStore.emitChange();
     },
   };
   window.popupBridge = obj;
 }
-const Store = initializeDefault.Store;
-class BraintreeStore extends Store {}
+const Store = get_initializedDefault.Store;
+class BraintreeStore extends Store {
+  getClient() {
+    return client;
+  }
+  getPayPalClient() {
+    return c8;
+  }
+  getVenmoClient() {
+    return c9;
+  }
+  getLastURL() {
+    return _false;
+  }
+}
 const prototype = BraintreeStore.prototype;
-prototype["getClient"] = function getClient() {
-  return client;
-};
-prototype["getPayPalClient"] = function getPayPalClient() {
-  return c8;
-};
-prototype["getVenmoClient"] = function getVenmoClient() {
-  return c9;
-};
-prototype["getLastURL"] = function getLastURL() {
-  return global;
-};
 BraintreeStore.displayName = "BraintreeStore";
-const braintreeStore = new BraintreeStore(DispatcherDefault, {
+const obj2 = {
   BRAINTREE_CREATE_CLIENT_SUCCESS: function handleBraintreeCreateClientSuccess(client) {
     client = client.client;
   },
@@ -55,7 +64,7 @@ const braintreeStore = new BraintreeStore(DispatcherDefault, {
     paypalClient = paypalClient.paypalClient;
   },
   BILLING_POPUP_BRIDGE_CALLBACK: function handleBillingPopupBridgeCallback(paymentSourceType) {
-    if (paymentSourceType.paymentSourceType === constants2.PAYPAL) {
+    if (paymentSourceType.paymentSourceType === metroRequire.PAYPAL) {
       if (tmp === state) {
         const _window = window;
         if (typeof onComplete === "function") {
@@ -66,7 +75,7 @@ const braintreeStore = new BraintreeStore(DispatcherDefault, {
     }
   },
   BILLING_POPUP_BRIDGE_STATE_UPDATE: function handleBillingPopupBridgeStateUpdate(paymentSourceType) {
-    if (paymentSourceType.paymentSourceType === constants2.PAYPAL) {
+    if (paymentSourceType.paymentSourceType === metroRequire.PAYPAL) {
       state = paymentSourceType.state;
     }
   },
@@ -79,7 +88,8 @@ const braintreeStore = new BraintreeStore(DispatcherDefault, {
   BRAINTREE_TEARDOWN_VENMO_CLIENT: function handleBraintreeTeardownVenmoClient() {
     c9 = null;
   },
-});
+};
+const braintreeStore = new BraintreeStore(DispatcherDefault, obj2);
 const result = size.fileFinishedImporting("stores/billing/BraintreeStore.tsx");
 
 export default braintreeStore;

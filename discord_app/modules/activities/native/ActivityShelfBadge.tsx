@@ -1,17 +1,40 @@
 // discord_app/modules/activities/native/ActivityShelfBadge.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import Constants from "../../../Constants.tsx";
+import intl3 from "../../../intl/index.native.tsx";
 import Server from "../../../flow/Server.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import native_mod from "../../../design/void/native.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = { badge: null, newBadge: null, updatedBadge: null, elevationShadow: null, badgeText: null };
-const rect = {
+let native;
+let obj2;
+let obj3;
+let rect;
+const View = react_native.View;
+const Fonts = Constants.Fonts;
+const jsx = Fragment.jsx;
+let createStyles = createStyles_mod;
+let obj = {
+  badge: rect,
+  newBadge: obj2,
+  updatedBadge: obj3,
+  elevationShadow: native.generateBoxShadowStyle(native.FOUR_DP_ELEVATION_SHADOW_PARAMS),
+  badgeText: {
+    textTransform: "uppercase",
+    marginLeft: 2,
+    fontFamily: Fonts.DISPLAY_EXTRABOLD,
+    lineHeight: 16,
+    fontSize: 12,
+  },
+};
+rect = {
   position: "absolute",
   top: 4,
   right: 4,
@@ -20,52 +43,29 @@ const rect = {
   alignItems: "center",
   backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND,
 };
-obj2.badge = rect;
-obj2.newBadge = {
+createStyles = createStyles.createStyles;
+obj2 = {
   paddingLeft: 4,
   paddingRight: 6,
   borderRadius: nativeDefault.radii.sm,
   height: 16,
   backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND,
 };
-let obj3 = {
-  paddingLeft: 4,
-  paddingRight: 6,
-  borderRadius: nativeDefault.radii.sm,
-  height: 16,
-  backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND,
-};
-obj2.updatedBadge = {
+obj3 = {
   paddingLeft: 4,
   paddingRight: 6,
   borderRadius: nativeDefault.radii.sm,
   height: 16,
   backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND,
 };
-const native = fn(1188);
-obj2.elevationShadow = native.generateBoxShadowStyle(fn(1188).FOUR_DP_ELEVATION_SHADOW_PARAMS);
-obj2.badgeText = {
-  textTransform: "uppercase",
-  marginLeft: 2,
-  fontFamily: fn(1085).Fonts.DISPLAY_EXTRABOLD,
-  lineHeight: 16,
-  fontSize: 12,
-};
-let closure_4 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj4 = {
-  paddingLeft: 4,
-  paddingRight: 6,
-  borderRadius: nativeDefault.radii.sm,
-  height: 16,
-  backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND,
-};
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/activities/native/ActivityShelfBadge.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+native = native_mod;
+let closure_4 = createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(20);
+      let labelType;
+      let replacementStyles;
+      const obj = react2;
+      const cResult = obj.c(20);
       ({ labelType, replacementStyles } = arg0);
       const tmp4 = closure_4();
       if (replacementStyles == null) {
@@ -74,44 +74,42 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (labelType === Server.EmbeddedActivityLabelTypes.NEW) {
         if (cResult[0] === replacementStyles) {
           if (cResult[1] === tmp4.elevationShadow) {
+            let tmp16;
+            let tmp18;
+            let tmp20;
             if (cResult[2] === tmp4.newBadge) {
-              let tmp16 = cResult[3];
+              tmp16 = cResult[3];
             }
             const _Symbol2 = Symbol;
+            const badgeText2 = tmp4.badgeText;
             if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl2 = util.intl;
-              const stringResult = intl2.string(util.t.y2b7CA);
+              const intl2 = intl3.intl;
+              const stringResult = intl2.string(intl3.t.y2b7CA);
               cResult[4] = stringResult;
-              let tmp18 = stringResult;
+              tmp18 = stringResult;
             } else {
               tmp18 = cResult[4];
             }
             if (cResult[5] !== tmp4.badgeText) {
-              const obj2 = {
-                variant: "text-xs/semibold",
-                style: tmp4.badgeText,
-                color: "text-overlay-light",
-                children: tmp18,
-              };
               const tmp22 = jsx(Text_Text.Text, {
                 variant: "text-xs/semibold",
-                style: tmp4.badgeText,
+                style: badgeText2,
                 color: "text-overlay-light",
                 children: tmp18,
               });
               cResult[5] = tmp4.badgeText;
               cResult[6] = tmp22;
-              let tmp20 = tmp22;
+              tmp20 = tmp22;
             } else {
               tmp20 = cResult[6];
             }
             if (cResult[7] === tmp16) {
+              let tmp23;
               if (cResult[8] === tmp20) {
-                let tmp23 = cResult[9];
+                tmp23 = cResult[9];
               }
               return tmp23;
             }
-            const obj3 = { style: tmp16, children: tmp20 };
             const tmp26 = <View style={tmp16}>{tmp20}</View>;
             cResult[7] = tmp16;
             cResult[8] = tmp20;
@@ -129,44 +127,42 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else if (labelType === Server.EmbeddedActivityLabelTypes.UPDATED) {
         if (cResult[10] === replacementStyles) {
           if (cResult[11] === tmp4.elevationShadow) {
+            let tmp5;
+            let tmp7;
+            let tmp9;
             if (cResult[12] === tmp4.updatedBadge) {
-              let tmp5 = cResult[13];
+              tmp5 = cResult[13];
             }
             const _Symbol = Symbol;
+            const badgeText = tmp4.badgeText;
             if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl = util.intl;
-              const stringResult1 = intl.string(util.t["/qdhkk"]);
+              const intl = intl3.intl;
+              const stringResult1 = intl.string(intl3.t["/qdhkk"]);
               cResult[14] = stringResult1;
-              let tmp7 = stringResult1;
+              tmp7 = stringResult1;
             } else {
               tmp7 = cResult[14];
             }
             if (cResult[15] !== tmp4.badgeText) {
-              const obj4 = {
-                variant: "text-xs/semibold",
-                style: tmp4.badgeText,
-                color: "text-overlay-light",
-                children: tmp7,
-              };
               const tmp11 = jsx(Text_Text.Text, {
                 variant: "text-xs/semibold",
-                style: tmp4.badgeText,
+                style: badgeText,
                 color: "text-overlay-light",
                 children: tmp7,
               });
               cResult[15] = tmp4.badgeText;
               cResult[16] = tmp11;
-              let tmp9 = tmp11;
+              tmp9 = tmp11;
             } else {
               tmp9 = cResult[16];
             }
             if (cResult[17] === tmp5) {
+              let tmp12;
               if (cResult[18] === tmp9) {
-                let tmp12 = cResult[19];
+                tmp12 = cResult[19];
               }
               return tmp12;
             }
-            const obj5 = { style: tmp5, children: tmp9 };
             const tmp15 = <View style={tmp5}>{tmp9}</View>;
             cResult[17] = tmp5;
             cResult[18] = tmp9;
@@ -186,49 +182,46 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
     }
   : (arg0) => {
+      let intl;
+      let intl2;
+      let labelType;
+      let replacementStyles;
+      let tmp6;
       ({ labelType, replacementStyles } = arg0);
       const tmp = closure_4();
       if (replacementStyles == null) {
         replacementStyles = tmp.badge;
       }
       if (labelType === Server.EmbeddedActivityLabelTypes.NEW) {
-        const obj = { style: null, children: null };
         const items = [replacementStyles, ,];
         ({ newBadge: arr[1], elevationShadow: arr[2] } = tmp);
-        obj.style = items;
-        const obj2 = { variant: "text-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null };
-        const intl = util.intl;
-        obj2.children = intl.string(util.t.y2b7CA);
-        obj.children = jsx(Text_Text.Text, {
+        ({
           variant: "text-xs/semibold",
           style: tmp.badgeText,
           color: "text-overlay-light",
-          children: null,
+          children: intl.string(intl3.t.y2b7CA),
         });
-        let tmp6 = <View style={null}>{null}</View>;
+        const Text = Text_Text.Text;
+        intl = intl3.intl;
+        tmp6 = <View style={items}>{null}</View>;
       } else {
         tmp6 = null;
         if (labelType === Server.EmbeddedActivityLabelTypes.UPDATED) {
-          const obj3 = { style: null, children: null };
           const items1 = [replacementStyles, ,];
           ({ updatedBadge: arr2[1], elevationShadow: arr2[2] } = tmp);
-          obj3.style = items1;
-          const obj4 = {
+          ({
             variant: "text-xs/semibold",
             style: tmp.badgeText,
             color: "text-overlay-light",
-            children: null,
-          };
-          const intl2 = util.intl;
-          obj4.children = intl2.string(util.t["/qdhkk"]);
-          obj3.children = jsx(Text_Text.Text, {
-            variant: "text-xs/semibold",
-            style: tmp.badgeText,
-            color: "text-overlay-light",
-            children: null,
+            children: intl2.string(intl3.t["/qdhkk"]),
           });
-          tmp6 = <View style={null}>{null}</View>;
+          const Text2 = Text_Text.Text;
+          intl2 = intl3.intl;
+          tmp6 = <View style={items1}>{null}</View>;
         }
       }
       return tmp6;
     };
+const result = size.fileFinishedImporting("modules/activities/native/ActivityShelfBadge.tsx");
+
+export default tmp4;

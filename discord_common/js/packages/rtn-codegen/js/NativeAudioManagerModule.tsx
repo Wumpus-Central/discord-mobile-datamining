@@ -1,8 +1,8 @@
 // discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx
-import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+const TurboModuleRegistry = react_native.TurboModuleRegistry;
 const AudioDeviceType = {
   SPEAKERPHONE: "SPEAKERPHONE",
   WIRED_HEADSET: "WIRED_HEADSET",
@@ -16,6 +16,7 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-cod
 export default enforcing;
 export { AudioDeviceType };
 export const getInvalidAndroidDevice = function getInvalidAndroidDevice() {
+  let obj;
   obj = { deviceType: 0, simpleDeviceType: obj.INVALID, deviceId: -1, deviceName: "Invalid" };
   return obj;
 };

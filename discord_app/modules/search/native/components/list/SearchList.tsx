@@ -1,10 +1,10 @@
 // discord_app/modules/search/native/components/list/SearchList.tsx
-import c from "../../../../../../_runtime/00576_c.js";
-import util from "../../../../../intl/index.native.tsx";
+import react2 from "../../../../../../_runtime/00576_react.js";
+import intl2 from "../../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod8371 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import defaultMVCPConfig from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import SuggestedSearchRowDefault from "../../../../intelligence_layer/search/native/components/SuggestedSearchRow.tsx";
-import pages_ErrorScreenDefault from "../tabs/pages/ErrorScreen.tsx";
+import ErrorScreenDefault from "../tabs/pages/ErrorScreen.tsx";
 import MediaGridPlaceholderDefault from "../tabs/pages/placeholders/MediaGridPlaceholder.tsx";
 import DMRowDefault from "rows/DMRow.tsx";
 import rows_GroupDMRowDefault from "rows/GroupDMRow.tsx";
@@ -24,34 +24,49 @@ import GenericTextRowDefault from "rows/GenericTextRow.tsx";
 import SearchListSectionDefault from "SearchListSection.tsx";
 import SmartSearchRowDefault from "../../../../intelligence_layer/search/native/components/SmartSearchRow.tsx";
 import SuggestedSearchSkeletonDefault from "../../../../intelligence_layer/search/native/components/SuggestedSearchSkeleton.tsx";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../../_runtime/00017_react-native.js";
+import SearchConstants from "../../../SearchConstants.tsx";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let c9;
+let closure_4;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
 function keyExtractor(type) {
+  let key;
+  const type2 = type.type;
   type = type.type;
-  if (constants2.DM === type) {
+  if (metroImportDefault.DM === type2) {
     const _HermesInternal12 = HermesInternal;
-    let key = "" + type.section + "-" + type.props.user.id + "-" + type.props.guildId;
-  } else if (constants2.GUILD_CHANNEL_MEMBER === type) {
+    key = "" + type.section + "-" + type.props.user.id + "-" + type.props.guildId;
+  } else if (metroImportDefault.GUILD_CHANNEL_MEMBER === type2) {
     const _HermesInternal11 = HermesInternal;
     key = "" + type.props.user.id + "-" + type.props.guildId;
-  } else if (constants2.SEARCH_HISTORY_ITEM === type) {
+  } else if (metroImportDefault.SEARCH_HISTORY_ITEM === type2) {
+    let combined;
     const searchHistoryItem = type.props.searchHistoryItem;
-    const type2 = searchHistoryItem.type;
-    if (constants.TEXT === type2) {
+    const type3 = searchHistoryItem.type;
+    if (metroRequire.TEXT === type3) {
       const tags = searchHistoryItem.tags;
       let joined;
+      const text = searchHistoryItem.text;
       if (tags != null) {
         const mapped = tags.map((text) => text.text);
         joined = mapped.join(" ");
       }
       const _HermesInternal10 = HermesInternal;
-      let combined = "" + searchHistoryItem.text + " " + joined;
+      combined = "" + text + " " + joined;
     } else {
-      if (constants.GROUP_DM !== type2) {
-        if (constants.GUILD_TEXT_CHANNEL !== type2) {
-          if (constants.GUILD_VOICE_CHANNEL !== type2) {
-            if (constants.DM === type2) {
+      if (metroRequire.GROUP_DM !== type3) {
+        if (metroRequire.GUILD_TEXT_CHANNEL !== type3) {
+          if (metroRequire.GUILD_VOICE_CHANNEL !== type3) {
+            if (metroRequire.DM === type3) {
               const _HermesInternal13 = HermesInternal;
               combined = "" + searchHistoryItem.userId;
             }
@@ -62,44 +77,44 @@ function keyExtractor(type) {
       combined = "" + searchHistoryItem.channelId;
     }
     key = combined;
-  } else if (constants2.MEDIA_GRID === type) {
+  } else if (metroImportDefault.MEDIA_GRID === type2) {
     const media = type.props.media;
     const mapped1 = media.map((messageId) => "" + messageId.messageId + "-" + messageId.mediaIndex);
     key = mapped1.join("-");
-  } else if (constants2.MEDIA === type) {
+  } else if (metroImportDefault.MEDIA === type2) {
     const _HermesInternal8 = HermesInternal;
     key = "" + type.props.media.messageId + "-" + type.props.media.mediaIndex;
   } else {
-    if (constants2.MEDIA_PLACEHOLDER !== type) {
-      if (constants2.FILE_OR_LINK_PLACEHOLDER !== type) {
-        if (constants2.MESSAGE_PLACEHOLDER !== type) {
-          if (constants2.GUILD_CHANNEL_MEMBER_PLACEHOLDER !== type) {
-            if (constants2.GROUP_DM === type) {
+    if (metroImportDefault.MEDIA_PLACEHOLDER !== type2) {
+      if (metroImportDefault.FILE_OR_LINK_PLACEHOLDER !== type2) {
+        if (metroImportDefault.MESSAGE_PLACEHOLDER !== type2) {
+          if (metroImportDefault.GUILD_CHANNEL_MEMBER_PLACEHOLDER !== type2) {
+            if (metroImportDefault.GROUP_DM === type2) {
               const _HermesInternal7 = HermesInternal;
               key = "" + type.section + "-" + type.props.channel.id;
             } else {
-              if (constants2.GUILD_TEXT_CHANNEL !== type) {
-                if (constants2.GUILD_VOICE_CHANNEL !== type) {
-                  if (constants2.MESSAGE === type) {
+              if (metroImportDefault.GUILD_TEXT_CHANNEL !== type2) {
+                if (metroImportDefault.GUILD_VOICE_CHANNEL !== type2) {
+                  if (metroImportDefault.MESSAGE === type2) {
                     const _HermesInternal5 = HermesInternal;
                     key = "" + type.props.message.id;
-                  } else if (constants2.LINK === type) {
+                  } else if (metroImportDefault.LINK === type2) {
                     const _HermesInternal4 = HermesInternal;
                     key = "" + type.props.data.messageId + "-" + type.props.data.linkIndex;
-                  } else if (constants2.FILE === type) {
+                  } else if (metroImportDefault.FILE === type2) {
                     const _HermesInternal3 = HermesInternal;
                     key = "" + type.props.data.messageId + "-" + type.props.data.fileIndex;
-                  } else if (constants2.GENERIC === type) {
+                  } else if (metroImportDefault.GENERIC === type2) {
                     const _HermesInternal2 = HermesInternal;
                     key = "" + type.props.text;
-                  } else if (constants2.SECTION === type) {
+                  } else if (metroImportDefault.SECTION === type2) {
                     const _HermesInternal = HermesInternal;
                     key = "" + type.props.title;
-                  } else if (constants2.SMART_SEARCH === type) {
+                  } else if (metroImportDefault.SMART_SEARCH === type2) {
                     key = type.props.smartSearchQuery.requestKey;
-                  } else if (constants2.SUGGESTED_SEARCH === type) {
+                  } else if (metroImportDefault.SUGGESTED_SEARCH === type2) {
                     key = type.props.suggestedSearch.suggestionId;
-                  } else if (constants2.SUGGESTED_SEARCH_PLACEHOLDER === type) {
+                  } else if (metroImportDefault.SUGGESTED_SEARCH_PLACEHOLDER === type2) {
                     key = type.key;
                   }
                 }
@@ -113,7 +128,7 @@ function keyExtractor(type) {
     }
     key = type.key;
   }
-  return "" + type.type + "-" + key;
+  return "" + type + "-" + key;
 }
 function getItemType(type) {
   return type.type;
@@ -121,100 +136,123 @@ function getItemType(type) {
 function renderItem(item) {
   item = item.item;
   const type = item.type;
-  if (constants2.DM === type) {
+  if (metroImportDefault.DM === type) {
     const obj2 = {};
+    const tmp111 = DMRowDefault;
     const merged = Object.assign(item.props);
-    return closure_1_8(DMRowDefault, obj2);
-  } else if (constants2.GROUP_DM === type) {
+    return metroImportAll(tmp111, obj2);
+  } else if (metroImportDefault.GROUP_DM === type) {
     const obj3 = {};
+    const tmp105 = rows_GroupDMRowDefault;
     const merged1 = Object.assign(item.props);
-    return closure_1_8(rows_GroupDMRowDefault, obj3);
-  } else if (constants2.SEARCH_HISTORY_ITEM === type) {
+    return metroImportAll(tmp105, obj3);
+  } else if (metroImportDefault.SEARCH_HISTORY_ITEM === type) {
     const obj4 = {};
+    const tmp99 = SearchHistoryRowDefault;
     const merged2 = Object.assign(item.props);
-    return closure_1_8(SearchHistoryRowDefault, obj4);
-  } else if (constants2.MEDIA === type) {
+    return metroImportAll(tmp99, obj4);
+  } else if (metroImportDefault.MEDIA === type) {
     const obj5 = {};
+    const tmp93 = MediaGridItemDefault;
     const merged3 = Object.assign(item.props);
-    return closure_1_8(MediaGridItemDefault, obj5);
-  } else if (constants2.MEDIA_PLACEHOLDER === type) {
+    return metroImportAll(tmp93, obj5);
+  } else if (metroImportDefault.MEDIA_PLACEHOLDER === type) {
     const obj6 = {};
+    const tmp87 = MediaGridPlaceholderDefault;
     const merged4 = Object.assign(item.props);
-    return closure_1_8(MediaGridPlaceholderDefault, obj6);
-  } else if (constants2.FILE_OR_LINK_PLACEHOLDER === type) {
+    return metroImportAll(tmp87, obj6);
+  } else if (metroImportDefault.FILE_OR_LINK_PLACEHOLDER === type) {
     const obj7 = {};
+    const tmp81 = FileOrLinkGridPlaceholderDefault;
     const merged5 = Object.assign(item.props);
-    return closure_1_8(FileOrLinkGridPlaceholderDefault, obj7);
-  } else if (constants2.MEDIA_GRID === type) {
+    return metroImportAll(tmp81, obj7);
+  } else if (metroImportDefault.MEDIA_GRID === type) {
     const obj8 = {};
+    const tmp75 = MediaGridDefault;
     const merged6 = Object.assign(item.props);
-    return closure_1_8(MediaGridDefault, obj8);
-  } else if (constants2.GUILD_TEXT_CHANNEL === type) {
+    return metroImportAll(tmp75, obj8);
+  } else if (metroImportDefault.GUILD_TEXT_CHANNEL === type) {
     const obj9 = {};
+    const tmp69 = GuildTextChannelRowDefault;
     const merged7 = Object.assign(item.props);
-    return closure_1_8(GuildTextChannelRowDefault, obj9);
-  } else if (constants2.GUILD_VOICE_CHANNEL === type) {
+    return metroImportAll(tmp69, obj9);
+  } else if (metroImportDefault.GUILD_VOICE_CHANNEL === type) {
     const obj10 = {};
+    const tmp63 = GuildVoiceOrStageChannelRowDefault;
     const merged8 = Object.assign(item.props);
-    return closure_1_8(GuildVoiceOrStageChannelRowDefault, obj10);
-  } else if (constants2.MESSAGE === type) {
+    return metroImportAll(tmp63, obj10);
+  } else if (metroImportDefault.MESSAGE === type) {
     const obj11 = {};
+    const tmp57 = MessageRowDefault;
     const merged9 = Object.assign(item.props);
-    return closure_1_8(MessageRowDefault, obj11);
-  } else if (constants2.MESSAGE_PLACEHOLDER === type) {
-    return closure_1_8(FormRowPlaceholderDefault, {});
-  } else if (constants2.LINK === type) {
+    return metroImportAll(tmp57, obj11);
+  } else if (metroImportDefault.MESSAGE_PLACEHOLDER === type) {
+    return metroImportAll(FormRowPlaceholderDefault, {});
+  } else if (metroImportDefault.LINK === type) {
     const obj12 = {};
+    const tmp48 = LinkGridItemDefault;
     const merged10 = Object.assign(item.props);
-    return closure_1_8(LinkGridItemDefault, obj12);
-  } else if (constants2.FILE === type) {
+    return metroImportAll(tmp48, obj12);
+  } else if (metroImportDefault.FILE === type) {
     const obj13 = {};
+    const tmp42 = FileGridItemDefault;
     const merged11 = Object.assign(item.props);
-    return closure_1_8(FileGridItemDefault, obj13);
-  } else if (constants2.GUILD_CHANNEL_MEMBER === type) {
+    return metroImportAll(tmp42, obj13);
+  } else if (metroImportDefault.GUILD_CHANNEL_MEMBER === type) {
     const obj14 = {};
+    const tmp36 = GuildChannelMemberRowDefault;
     const merged12 = Object.assign(item.props);
-    return closure_1_8(GuildChannelMemberRowDefault, obj14);
-  } else if (constants2.GUILD_CHANNEL_MEMBER_PLACEHOLDER === type) {
-    return closure_1_8(MemberRowPlaceholderDefault, {});
-  } else if (constants2.GENERIC === type) {
+    return metroImportAll(tmp36, obj14);
+  } else if (metroImportDefault.GUILD_CHANNEL_MEMBER_PLACEHOLDER === type) {
+    return metroImportAll(MemberRowPlaceholderDefault, {});
+  } else if (metroImportDefault.GENERIC === type) {
     const obj15 = {};
+    const tmp27 = GenericTextRowDefault;
     const merged13 = Object.assign(item.props);
-    return closure_1_8(GenericTextRowDefault, obj15);
-  } else if (constants2.SECTION === type) {
+    return metroImportAll(tmp27, obj15);
+  } else if (metroImportDefault.SECTION === type) {
     const obj16 = {};
+    const tmp21 = SearchListSectionDefault;
     const merged14 = Object.assign(item.props);
-    return closure_1_8(SearchListSectionDefault, obj16);
-  } else if (constants2.SMART_SEARCH === type) {
+    return metroImportAll(tmp21, obj16);
+  } else if (metroImportDefault.SMART_SEARCH === type) {
     const obj17 = {};
+    const tmp15 = SmartSearchRowDefault;
     const merged15 = Object.assign(item.props);
-    return closure_1_8(SmartSearchRowDefault, obj17);
-  } else if (constants2.SUGGESTED_SEARCH === type) {
+    return metroImportAll(tmp15, obj17);
+  } else if (metroImportDefault.SUGGESTED_SEARCH === type) {
     const obj = {};
+    const tmp9 = SuggestedSearchRowDefault;
     const merged16 = Object.assign(item.props);
-    return closure_1_8(SuggestedSearchRowDefault, obj);
-  } else if (constants2.SUGGESTED_SEARCH_PLACEHOLDER === type) {
-    return closure_1_8(SuggestedSearchSkeletonDefault, {});
+    return metroImportAll(tmp9, obj);
+  } else if (metroImportDefault.SUGGESTED_SEARCH_PLACEHOLDER === type) {
+    return metroImportAll(SuggestedSearchSkeletonDefault, {});
   } else {
     return null;
   }
 }
-get_ActivityIndicator = fn(17);
-({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(7513);
-({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: closure_7 } = SearchConstants);
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4890);
+({ View: closure_4, StyleSheet: hasOwnProperty } = react_native);
+({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: metroImportDefault } = SearchConstants);
+({ jsx: metroImportAll, jsxs: c9 } = Fragment);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/search/native/components/list/SearchList.tsx");
-
-export default noop.memo(
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        const cResult = c.c(21);
+        let ItemSeparatorComponent;
+        let ListFooterComponent;
+        let ListHeaderComponent;
+        let contentContainerStyle;
+        let data;
+        let intl;
+        let items;
+        let numColumns;
+        let obj3;
+        let onEndReached;
+        let tmp14;
+        let tmp6Result;
+        let tmp8;
+        const obj = react2;
+        const cResult = obj.c(21);
         ({
           contentContainerStyle,
           data,
@@ -224,8 +262,10 @@ export default noop.memo(
           ListFooterComponent,
           numColumns,
         } = arg0);
+        const ref = react.useRef(null);
         const tmp5 = closure_10();
         let num = 0.5;
+        const bottom = useSafeAreaInsetsDefault().bottom;
         if (null != numColumns) {
           num = 0.5;
           if (1 !== numColumns) {
@@ -239,36 +279,35 @@ export default noop.memo(
         }
         if (cResult[0] !== (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent)) {
           let tmp9 = tmp7;
-          if (tmp7) {
-            const obj2 = { style: hasOwnProperty.absoluteFill, children: null };
-            const obj3 = { text: null };
-            const intl = util.intl;
-            obj3.text = intl.string(util.t.V6nAfF);
-            obj2.children = closure_1_8(pages_ErrorScreenDefault, obj3);
-            tmp9 = closure_1_8(React4, obj2);
-            const tmp6Result = pages_ErrorScreenDefault;
+          if (tmp9) {
+            const obj2 = { style: hasOwnProperty.absoluteFill, children: metroImportAll(tmp6Result, obj3) };
+            obj3 = { text: intl.string(intl2.t.V6nAfF) };
+            tmp6Result = ErrorScreenDefault;
+            intl = intl2.intl;
+            tmp9 = metroImportAll(React3, obj2);
           }
-          cResult[0] = tmp7;
+          cResult[0] = 0 === data.length && null == ListFooterComponent && null == ListHeaderComponent;
           cResult[1] = tmp9;
-          let tmp8 = tmp9;
+          tmp8 = tmp9;
         } else {
           tmp8 = cResult[1];
         }
         if (cResult[2] !== (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent)) {
           let obj4;
-          if (tmp7) {
+          if (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent) {
             obj4 = { importantForAccessibility: "no", scrollEnabled: false };
           }
-          cResult[2] = tmp7;
+          cResult[2] = 0 === data.length && null == ListFooterComponent && null == ListHeaderComponent;
           cResult[3] = obj4;
-          let tmp14 = obj4;
+          tmp14 = obj4;
         } else {
           tmp14 = cResult[3];
         }
-        const sum = 16 + useSafeAreaInsetsDefault().bottom;
+        const sum = 16 + bottom;
         if (cResult[4] === contentContainerStyle) {
+          let tmp16;
           if (cResult[5] === sum) {
-            let tmp16 = cResult[6];
+            tmp16 = cResult[6];
           }
           if (cResult[7] === ItemSeparatorComponent) {
             if (cResult[8] === ListFooterComponent) {
@@ -278,21 +317,22 @@ export default noop.memo(
                     if (cResult[12] === onEndReached) {
                       if (cResult[13] === tmp14) {
                         if (cResult[14] === tmp16) {
+                          let tmp18;
                           if (cResult[15] === num) {
-                            let tmp18 = cResult[16];
+                            tmp18 = cResult[16];
                           }
                           if (cResult[17] === tmp5.container) {
                             if (cResult[18] === tmp8) {
+                              let tmp24;
                               if (cResult[19] === tmp18) {
-                                let tmp24 = cResult[20];
+                                tmp24 = cResult[20];
                               }
                               return tmp24;
                             }
                           }
-                          const obj5 = { style: tmp5.container, children: null };
-                          const items = [tmp8, tmp18];
-                          obj5.children = items;
-                          const tmp27 = options(React4, obj5);
+                          const obj5 = { style: tmp5.container, children: items };
+                          items = [tmp8, tmp18];
+                          const tmp27 = React4(React3, obj5);
                           cResult[17] = tmp5.container;
                           cResult[18] = tmp8;
                           cResult[19] = tmp18;
@@ -324,7 +364,7 @@ export default noop.memo(
             ItemSeparatorComponent,
             numColumns,
           };
-          const tmp23 = closure_1_8(_mod8371.AnimatedFlashList, obj6);
+          const tmp23 = metroImportAll(defaultMVCPConfig.AnimatedFlashList, obj6);
           cResult[7] = ItemSeparatorComponent;
           cResult[8] = ListFooterComponent;
           cResult[9] = ListHeaderComponent;
@@ -343,13 +383,27 @@ export default noop.memo(
         cResult[5] = sum;
         cResult[6] = obj7;
         tmp16 = obj7;
-        ref = noop.useRef(null);
       }
     : (arg0) => {
+        let ItemSeparatorComponent;
+        let ListFooterComponent;
+        let ListHeaderComponent;
+        let contentContainerStyle;
+        let data;
+        let intl;
+        let items;
+        let numColumns;
+        let obj3;
+        let obj5;
+        let obj6;
+        let onEndReached;
+        let tmp3Result;
         ({ contentContainerStyle, data, ListHeaderComponent, ListFooterComponent, numColumns } = arg0);
         ({ onEndReached, ItemSeparatorComponent } = arg0);
-        const ref = noop.useRef(null);
         let num = 0.5;
+        const ref = react.useRef(null);
+        const tmp2 = closure_10();
+        const bottom = useSafeAreaInsetsDefault().bottom;
         if (null != numColumns) {
           num = 0.5;
           if (1 !== numColumns) {
@@ -361,56 +415,45 @@ export default noop.memo(
             }
           }
         }
-        const obj = { style: closure_10().container, children: null };
         let tmp8 = tmp5;
+        const obj = { style: tmp2.container, children: items };
         if (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent) {
-          const obj2 = { style: hasOwnProperty.absoluteFill, children: null };
-          const obj3 = { text: null };
-          const intl = util.intl;
-          obj3.text = intl.string(util.t.V6nAfF);
-          obj2.children = closure_1_8(pages_ErrorScreenDefault, obj3);
-          tmp8 = closure_1_8(React4, obj2);
-          const tmp3Result = pages_ErrorScreenDefault;
+          const obj2 = { style: hasOwnProperty.absoluteFill, children: metroImportAll(tmp3Result, obj3) };
+          obj3 = { text: intl.string(intl2.t.V6nAfF) };
+          tmp3Result = ErrorScreenDefault;
+          intl = intl2.intl;
+          tmp8 = metroImportAll(React3, obj2);
         }
-        const items = [tmp8];
+        items = [tmp8];
         const obj4 = {
           ref,
-          overrideProps: null,
+          overrideProps: obj5,
           keyboardDismissMode: "on-drag",
           keyboardShouldPersistTaps: "handled",
-          data: null,
-          renderItem: null,
-          onEndReachedThreshold: null,
-          onEndReached: null,
+          data,
+          renderItem,
+          onEndReachedThreshold: num,
+          onEndReached,
           scrollsToTop: true,
-          contentContainerStyle: null,
-          keyExtractor: null,
-          getItemType: null,
-          ListHeaderComponent: null,
-          ListFooterComponent: null,
-          ItemSeparatorComponent: null,
-          numColumns: null,
+          contentContainerStyle: obj6,
+          keyExtractor,
+          getItemType,
+          ListHeaderComponent,
+          ListFooterComponent,
+          ItemSeparatorComponent,
+          numColumns,
         };
-        let obj5;
+        obj5 = undefined;
+        const AnimatedFlashList = defaultMVCPConfig.AnimatedFlashList;
         if (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent) {
           obj5 = { importantForAccessibility: "no", scrollEnabled: false };
         }
-        obj4.overrideProps = obj5;
-        obj4.data = data;
-        obj4.renderItem = renderItem;
-        obj4.onEndReachedThreshold = num;
-        obj4.onEndReached = onEndReached;
-        const tmp2 = closure_10();
+        obj6 = { paddingBottom: 16 + bottom };
         const merged = Object.assign(contentContainerStyle);
-        obj4.contentContainerStyle = { paddingBottom: 16 + useSafeAreaInsetsDefault().bottom };
-        obj4.keyExtractor = keyExtractor;
-        obj4.getItemType = getItemType;
-        obj4.ListHeaderComponent = ListHeaderComponent;
-        obj4.ListFooterComponent = ListFooterComponent;
-        obj4.ItemSeparatorComponent = ItemSeparatorComponent;
-        obj4.numColumns = numColumns;
-        items[1] = closure_1_8(_mod8371.AnimatedFlashList, obj4);
-        obj.children = items;
-        return options(React4, obj);
+        items[1] = metroImportAll(AnimatedFlashList, obj4);
+        return React4(React3, obj);
       },
 );
+const result = size.fileFinishedImporting("modules/search/native/components/list/SearchList.tsx");
+
+export default memoResult;

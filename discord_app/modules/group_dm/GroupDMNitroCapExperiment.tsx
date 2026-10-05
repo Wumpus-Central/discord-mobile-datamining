@@ -1,17 +1,19 @@
 // discord_app/modules/group_dm/GroupDMNitroCapExperiment.tsx
 import apex_ApexExperimentDefault from "../experiments/apex/ApexExperiment.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const tmp2 = apex_ApexExperimentDefault({
+let obj = {
   kind: "user",
   name: "2026-06-nitro-gdm-cap-increase",
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
-});
+};
+const tmp2 = apex_ApexExperimentDefault(obj);
 const config = tmp2;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/GroupDMNitroCapExperiment.tsx");
 
 export default tmp2;
 export const getGroupDMNitroCapConfig = function getGroupDMNitroCapConfig(getGroupDMRecipientLimit) {
-  return config.getConfig({ location: getGroupDMRecipientLimit });
+  const obj = { location: getGroupDMRecipientLimit };
+  return config.getConfig(obj);
 };

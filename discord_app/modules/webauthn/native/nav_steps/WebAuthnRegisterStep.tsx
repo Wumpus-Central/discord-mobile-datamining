@@ -1,19 +1,30 @@
 // discord_app/modules/webauthn/native/nav_steps/WebAuthnRegisterStep.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import Constants from "../../../../Constants.tsx";
+import intl4 from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import NativeCeremoniesDefault from "../NativeCeremonies.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const UserSettingsSections = fn(1085).UserSettingsSections;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+let dependencyMap, importDefault, navigation;
+
+let OTHER_AND_ANDROID_NONDISCOVERABLE;
+let PASSKEY_CREDENTIAL_MANAGER;
+let PASSKEY_DEVICE;
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+const View = react_native.View;
+const UserSettingsSections = Constants.UserSettingsSections;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+let obj = {
   flexContainer: {
     flex: 1,
     flexDirection: "column",
@@ -25,10 +36,11 @@ let obj2 = {
   },
   centerFlex: { display: "flex", alignItems: "center" },
   margin: { marginTop: 16, textAlign: "center" },
-  radioItem: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md },
+  radioItem: obj2,
 };
-let closure_9 = createStyles.createStyles(obj2);
-let obj4 = {
+obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md };
+let closure_9 = createStyles.createStyles(obj);
+let obj3 = {
   PASSKEY_CREDENTIAL_MANAGER: 0,
   [0]: "PASSKEY_CREDENTIAL_MANAGER",
   PASSKEY_DEVICE: 1,
@@ -36,46 +48,51 @@ let obj4 = {
   OTHER_AND_ANDROID_NONDISCOVERABLE: 2,
   [2]: "OTHER_AND_ANDROID_NONDISCOVERABLE",
 };
-let obj5 = {
+let obj4 = {
   [PASSKEY_CREDENTIAL_MANAGER]: NativeCeremoniesDefault.registerPasskey,
   [PASSKEY_DEVICE]: NativeCeremoniesDefault.registerAndroidDevicePasskey,
   [OTHER_AND_ANDROID_NONDISCOVERABLE]: NativeCeremoniesDefault.registerSecurityKey,
 };
-({ PASSKEY_CREDENTIAL_MANAGER, PASSKEY_DEVICE, OTHER_AND_ANDROID_NONDISCOVERABLE } = obj4);
-let ReactCompilerGating = fn(558);
+({ PASSKEY_CREDENTIAL_MANAGER, PASSKEY_DEVICE, OTHER_AND_ANDROID_NONDISCOVERABLE } = obj3);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? (registering) => {
-      const cResult = c.c(10);
+      let authenticatorSelection;
+      let first;
+      let intl;
+      let intl2;
+      let intl3;
+      let onChange;
+      let tmp7;
+      let tmp9;
+      const obj = react2;
+      const cResult = obj.c(10);
       ({ authenticatorSelection, onChange } = registering);
       registering = registering.registering;
       const tmp4 = closure_9();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { value: obj4.PASSKEY_CREDENTIAL_MANAGER, name: null };
-        const intl = util.intl;
-        obj2.name = intl.string(util.t.JQbo8L);
+        const obj2 = { value: obj3.PASSKEY_CREDENTIAL_MANAGER, name: intl.string(intl4.t.JQbo8L) };
+        intl = intl4.intl;
         cResult[0] = obj2;
-        let first = obj2;
+        first = obj2;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { value: obj4.PASSKEY_DEVICE, name: null };
-        const intl2 = util.intl;
-        obj3.name = intl2.string(util.t.GjBNMg);
+        obj3 = { value: obj3.PASSKEY_DEVICE, name: intl2.string(intl4.t.GjBNMg) };
+        intl2 = intl4.intl;
         cResult[1] = obj3;
-        let tmp7 = obj3;
+        tmp7 = obj3;
       } else {
         tmp7 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [first, tmp7];
-        obj4 = { value: null, name: null };
-        obj4.value = obj4.OTHER_AND_ANDROID_NONDISCOVERABLE;
-        const intl3 = util.intl;
-        obj4.name = intl3.string(util.t["OhC77+"]);
+        obj4 = { value: obj3.OTHER_AND_ANDROID_NONDISCOVERABLE, name: intl3.string(intl4.t["OhC77+"]) };
+        intl3 = intl4.intl;
         items[2] = obj4;
         cResult[2] = items;
-        let tmp9 = items;
+        tmp9 = items;
       } else {
         tmp9 = cResult[2];
       }
@@ -101,7 +118,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      obj5 = {
+      const obj5 = {
         style: tmp4.radioItem,
         options: tmp9,
         onChange: N,
@@ -110,46 +127,34 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         size: native.RadioGroup.Sizes.LARGE,
         withSpacing: true,
       };
+      const RadioGroup = native.RadioGroup;
       cResult[5] = authenticatorSelection;
       cResult[6] = registering;
       cResult[7] = tmp4.radioItem;
       cResult[8] = N;
-      cResult[9] = React5(native.RadioGroup, {
-        style: tmp4.radioItem,
-        options: tmp9,
-        onChange: N,
-        value: authenticatorSelection,
-        disabled: registering,
-        size: native.RadioGroup.Sizes.LARGE,
-        withSpacing: true,
-      });
-      const tmp12 = React5(native.RadioGroup, {
-        style: tmp4.radioItem,
-        options: tmp9,
-        onChange: N,
-        value: authenticatorSelection,
-        disabled: registering,
-        size: native.RadioGroup.Sizes.LARGE,
-        withSpacing: true,
-      });
+      cResult[9] = metroImportDefault(RadioGroup, obj5);
+      metroImportDefault(RadioGroup, obj5);
     }
   : (onChange) => {
+      let authenticatorSelection;
+      let intl;
+      let intl2;
+      let intl3;
+      let registering;
       onChange = onChange.onChange;
       ({ authenticatorSelection, registering } = onChange);
-      const obj = { value: obj4.PASSKEY_CREDENTIAL_MANAGER, name: null };
-      const intl = util.intl;
-      obj.name = intl.string(util.t.JQbo8L);
+      const obj = { value: obj3.PASSKEY_CREDENTIAL_MANAGER, name: intl.string(intl4.t.JQbo8L) };
+      const tmp = closure_9();
+      intl = intl4.intl;
       const items = [obj, ,];
-      const obj2 = { value: obj4.PASSKEY_DEVICE, name: null };
-      const intl2 = util.intl;
-      obj2.name = intl2.string(util.t.GjBNMg);
+      const obj2 = { value: obj3.PASSKEY_DEVICE, name: intl2.string(intl4.t.GjBNMg) };
+      intl2 = intl4.intl;
       items[1] = obj2;
-      const obj3 = { value: obj4.OTHER_AND_ANDROID_NONDISCOVERABLE, name: null };
-      const intl3 = util.intl;
-      obj3.name = intl3.string(util.t["OhC77+"]);
+      obj3 = { value: obj3.OTHER_AND_ANDROID_NONDISCOVERABLE, name: intl3.string(intl4.t["OhC77+"]) };
+      intl3 = intl4.intl;
       items[2] = obj3;
       obj4 = {
-        style: closure_9().radioItem,
+        style: tmp.radioItem,
         options: items,
         onChange(value) {
           return onChange(value.value);
@@ -159,27 +164,42 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         size: native.RadioGroup.Sizes.LARGE,
         withSpacing: true,
       };
-      return React5(native.RadioGroup, obj4);
+      const RadioGroup = native.RadioGroup;
+      return metroImportDefault(RadioGroup, obj4);
     };
-ReactCompilerGating = fn(558);
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnRegisterStep.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = navigation(576).c(33);
+      let closure_1;
+      let closure_2;
+      let first;
+      let items;
+      let items1;
+      let obj8;
+      let tmp11;
+      let tmp12;
+      let tmp15;
+      let tmp16;
+      let tmp17;
+      let tmp19;
+      let tmp21;
+      let tmp24;
+      let tmp9;
       const obj = navigation(576);
-      navigation = navigation(1490).useNavigation();
-      const tmp5 = closure_9();
-      const tmp7 = _slicedToArray(noop.useState(false), 2);
-      const first = tmp7[0];
+      const cResult = obj.c(33);
       const obj2 = navigation(1490);
-      [tmp10, tmp11] = noop.useState("");
+      navigation = obj2.useNavigation();
+      const tmp5 = closure_9();
+      [first, tmp9] = react.useState(false);
+      [tmp11, tmp12] = react.useState("");
+      _slicedToArray(react.useState(""), 2);
       obj4 = navigation(1369);
-      const tmp9 = _slicedToArray(noop.useState(""), 2);
-      [tmp14, tmp15] = noop.useState(
-        obj4.isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE,
+      [tmp15, tmp16] = react.useState(
+        obj4.isAndroid() ? react.PASSKEY_CREDENTIAL_MANAGER : react.OTHER_AND_ANDROID_NONDISCOVERABLE,
+      );
+      _slicedToArray(
+        react.useState(obj4.isAndroid() ? react.PASSKEY_CREDENTIAL_MANAGER : react.OTHER_AND_ANDROID_NONDISCOVERABLE),
+        2,
       );
       if (cResult[0] !== navigation) {
         const fn = function s(arg0) {
@@ -187,245 +207,266 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = navigation;
         cResult[1] = fn;
-        let tmp16 = fn;
+        tmp17 = fn;
       } else {
-        tmp16 = cResult[1];
+        tmp17 = cResult[1];
       }
-      importDefault = tmp17;
-      if (cResult[2] !== tmp16) {
-        obj5 = { onRegisterSuccess: tmp16, setError: tmp11, setRegistering: tmp7[1] };
-        cResult[2] = tmp16;
+      importDefault = tmp18;
+      if (cResult[2] !== tmp17) {
+        const obj5 = { onRegisterSuccess: tmp17, setError: tmp12, setRegistering: tmp9 };
+        cResult[2] = tmp17;
         cResult[3] = obj5;
-        let tmp18 = obj5;
+        tmp19 = obj5;
       } else {
-        tmp18 = cResult[3];
+        tmp19 = cResult[3];
       }
-      dependencyMap = tmp18;
-      const tmp6Result = _slicedToArray(
-        noop.useState(obj4.isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE),
-        2,
-      );
-      const announceError = navigation(14595).useAnnounceError(tmp10);
+      dependencyMap = tmp19;
+      const tmpResult = navigation(14595);
+      const announceError = tmpResult.useAnnounceError(tmp11);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp22 = closure_7(tmp(14596).KeyImage, {});
-        cResult[4] = tmp22;
-        let tmp20 = tmp22;
+        const tmp23 = closure_7(navigation(14596).KeyImage, {});
+        cResult[4] = tmp23;
+        tmp21 = tmp23;
       } else {
-        tmp20 = cResult[4];
+        tmp21 = cResult[4];
       }
       if (cResult[5] !== first) {
+        let stringResult;
         const intl = tmp(1126).intl;
         const string = intl.string;
-        let aVMiX3 = tmp(1126).t;
+        const t = tmp(1126).t;
         if (first) {
-          aVMiX3 = aVMiX3.aVMiX3;
-          let stringResult = string(aVMiX3);
+          stringResult = string(t.aVMiX3);
         } else {
-          stringResult = string(aVMiX3.Lh5vTW);
+          stringResult = string(t.Lh5vTW);
         }
         cResult[5] = first;
         cResult[6] = stringResult;
+        tmp24 = stringResult;
       } else {
-        if (cResult[7] === tmp5.margin) {
-          if (cResult[8] === tmp23) {
-            let tmp26 = cResult[9];
+        tmp24 = cResult[6];
+      }
+      if (cResult[7] === tmp5.margin) {
+        let tmp26;
+        let tmp28;
+        if (cResult[8] === tmp24) {
+          tmp26 = cResult[9];
+        }
+        if (cResult[10] !== tmp11) {
+          let tmp29 = "" !== tmp11;
+          if (tmp29) {
+            const obj6 = { variant: "text-md/normal", color: "text-feedback-critical", children: tmp11 };
+            tmp29 = closure_7(tmp(4886).Text, obj6);
           }
-          if (cResult[10] !== tmp10) {
-            let tmp30 = "" !== tmp10;
-            if (tmp30) {
-              const obj6 = { variant: "text-md/normal", color: "text-feedback-critical", children: tmp10 };
-              tmp30 = closure_7(tmp(4886).Text, obj6);
+          cResult[10] = tmp11;
+          cResult[11] = tmp29;
+          tmp28 = tmp29;
+        } else {
+          tmp28 = cResult[11];
+        }
+        if (cResult[12] === tmp5.centerFlex) {
+          if (cResult[13] === tmp26) {
+            let tmp31;
+            if (cResult[14] === tmp28) {
+              tmp31 = cResult[15];
             }
-            cResult[10] = tmp10;
-            cResult[11] = tmp30;
-            let tmp29 = tmp30;
-          } else {
-            tmp29 = cResult[11];
-          }
-          if (cResult[12] === tmp5.centerFlex) {
-            if (cResult[13] === tmp26) {
-              if (cResult[14] === tmp29) {
-                let tmp32 = cResult[15];
+            if (cResult[16] === tmp15) {
+              let tmp35;
+              let tmp39;
+              if (cResult[17] === first) {
+                tmp35 = cResult[18];
               }
-              if (cResult[16] === tmp14) {
-                if (cResult[17] === first) {
-                  let tmp36 = cResult[18];
-                }
-                if (cResult[19] !== first) {
-                  const intl2 = tmp(1126).intl;
-                  const string2 = intl2.string;
-                  let wePEBF = tmp(1126).t;
-                  if (first) {
-                    wePEBF = wePEBF.wePEBF;
-                    let string2Result = string2(wePEBF);
-                  } else {
-                    string2Result = string2(wePEBF.oibaQa);
-                  }
-                  cResult[19] = first;
-                  cResult[20] = string2Result;
+              if (cResult[19] !== first) {
+                let string2Result;
+                const intl2 = tmp(1126).intl;
+                const string2 = intl2.string;
+                const t2 = tmp(1126).t;
+                if (first) {
+                  string2Result = string2(t2.wePEBF);
                 } else {
-                  if (cResult[21] === tmp17) {
-                    if (cResult[22] === tmp18) {
-                      let tmp43 = cResult[23];
+                  string2Result = string2(t2.oibaQa);
+                }
+                cResult[19] = first;
+                cResult[20] = string2Result;
+                tmp39 = string2Result;
+              } else {
+                tmp39 = cResult[20];
+              }
+              if (cResult[21] === obj4[tmp15]) {
+                let tmp41;
+                if (cResult[22] === tmp19) {
+                  tmp41 = cResult[23];
+                }
+                if (cResult[24] === first) {
+                  if (cResult[25] === tmp39) {
+                    let tmp42;
+                    if (cResult[26] === tmp41) {
+                      tmp42 = cResult[27];
                     }
-                    if (cResult[24] === first) {
-                      if (cResult[25] === tmp40) {
-                        if (cResult[26] === tmp43) {
-                          let tmp44 = cResult[27];
-                        }
-                        if (cResult[28] === tmp5.flexContainer) {
-                          if (cResult[29] === tmp44) {
-                            if (cResult[30] === tmp32) {
-                              if (cResult[31] === tmp36) {
-                                let tmp47 = cResult[32];
-                              }
-                              return tmp47;
-                            }
+                    if (cResult[28] === tmp5.flexContainer) {
+                      if (cResult[29] === tmp42) {
+                        if (cResult[30] === tmp31) {
+                          let tmp45;
+                          if (cResult[31] === tmp35) {
+                            tmp45 = cResult[32];
                           }
+                          return tmp45;
                         }
-                        const rect = {
-                          bottom: true,
-                          left: true,
-                          right: true,
-                          style: tmp5.flexContainer,
-                          children: null,
-                        };
-                        const items = [tmp32, tmp36, tmp44];
-                        rect.children = items;
-                        const tmp49 = closure_8(tmp(6619).SafeAreaPaddingView, rect);
-                        cResult[28] = tmp5.flexContainer;
-                        cResult[29] = tmp44;
-                        cResult[30] = tmp32;
-                        cResult[31] = tmp36;
-                        cResult[32] = tmp49;
-                        tmp47 = tmp49;
                       }
                     }
-                    const obj7 = { children: null };
-                    const obj8 = { text: tmp40, disabled: first, loading: first, onPress: tmp43, size: "lg" };
-                    obj7.children = closure_7(tmp(5594).Button, obj8);
-                    const tmp46 = closure_7(tmp(5592).ButtonGroup, obj7);
-                    cResult[24] = first;
-                    cResult[25] = tmp40;
-                    cResult[26] = tmp43;
-                    cResult[27] = tmp46;
-                    tmp44 = tmp46;
+                    const rect = { bottom: true, left: true, right: true, style: tmp5.flexContainer, children: items };
+                    items = [tmp31, tmp35, tmp42];
+                    const tmp47 = closure_8(navigation(6619).SafeAreaPaddingView, rect);
+                    cResult[28] = tmp5.flexContainer;
+                    cResult[29] = tmp42;
+                    cResult[30] = tmp31;
+                    cResult[31] = tmp35;
+                    cResult[32] = tmp47;
+                    tmp45 = tmp47;
                   }
-                  const fn2 = function k() {
-                    return closure_1(closure_2);
-                  };
-                  cResult[21] = tmp17;
-                  cResult[22] = tmp18;
-                  cResult[23] = fn2;
-                  tmp43 = fn2;
                 }
+                const obj7 = { children: closure_7(navigation(5594).Button, obj8) };
+                const ButtonGroup = tmp(5592).ButtonGroup;
+                obj8 = { text: tmp39, disabled: first, loading: first, onPress: tmp41, size: "lg" };
+                const tmp44 = closure_7(ButtonGroup, obj7);
+                cResult[24] = first;
+                cResult[25] = tmp39;
+                cResult[26] = tmp41;
+                cResult[27] = tmp44;
+                tmp42 = tmp44;
               }
-              let shouldDisplayAndroidFidoSelector = NativeCeremoniesDefault.shouldDisplayAndroidFidoSelector;
-              if (shouldDisplayAndroidFidoSelector) {
-                const obj9 = { authenticatorSelection: tmp14, registering: first, onChange: tmp15 };
-                shouldDisplayAndroidFidoSelector = closure_7(closure_12, obj9);
-              }
-              cResult[16] = tmp14;
-              cResult[17] = first;
-              cResult[18] = shouldDisplayAndroidFidoSelector;
-              tmp36 = shouldDisplayAndroidFidoSelector;
+              const fn2 = function k() {
+                return closure_1(closure_2);
+              };
+              cResult[21] = obj4[tmp15];
+              cResult[22] = tmp19;
+              cResult[23] = fn2;
+              tmp41 = fn2;
             }
+            let shouldDisplayAndroidFidoSelector = NativeCeremoniesDefault.shouldDisplayAndroidFidoSelector;
+            if (shouldDisplayAndroidFidoSelector) {
+              const obj9 = { authenticatorSelection: tmp15, registering: first, onChange: tmp16 };
+              shouldDisplayAndroidFidoSelector = closure_7(closure_12, obj9);
+            }
+            cResult[16] = tmp15;
+            cResult[17] = first;
+            cResult[18] = shouldDisplayAndroidFidoSelector;
+            tmp35 = shouldDisplayAndroidFidoSelector;
           }
-          const obj10 = { style: tmp5.centerFlex, children: null };
-          const items1 = [tmp20, tmp26, tmp29];
-          obj10.children = items1;
-          const tmp35 = closure_8(View, obj10);
-          cResult[12] = tmp5.centerFlex;
-          cResult[13] = tmp26;
-          cResult[14] = tmp29;
-          cResult[15] = tmp35;
-          tmp32 = tmp35;
         }
-        const obj11 = { style: tmp5.margin, variant: "text-md/normal", children: cResult[6] };
-        const tmp28 = closure_7(tmp(4886).Text, obj11);
-        cResult[7] = tmp5.margin;
-        cResult[8] = cResult[6];
-        cResult[9] = tmp28;
-        tmp26 = tmp28;
+        const obj10 = { style: tmp5.centerFlex, children: items1 };
+        items1 = [tmp21, tmp26, tmp28];
+        const tmp34 = closure_8(View, obj10);
+        cResult[12] = tmp5.centerFlex;
+        cResult[13] = tmp26;
+        cResult[14] = tmp28;
+        cResult[15] = tmp34;
+        tmp31 = tmp34;
       }
-      const tmpResult = navigation(14595);
+      const obj11 = { style: tmp5.margin, variant: "text-md/normal", children: tmp24 };
+      const tmp27 = closure_7(navigation(4886).Text, obj11);
+      cResult[7] = tmp5.margin;
+      cResult[8] = tmp24;
+      cResult[9] = tmp27;
+      tmp26 = tmp27;
     }
   : () => {
-      navigation = navigation(1490).useNavigation();
-      const tmp4 = closure_9();
+      let authenticatorSelection;
+      let items3;
+      let items4;
+      let obj9;
+      let onRegisterSuccess;
+      let setError;
+      let setRegistering;
+      let string2Result;
+      let stringResult;
+      let tmp10;
+      let tmp11;
+      let tmp7;
+      let tmp8;
       const obj = navigation(1490);
-      const tmp5 = authenticatorSelection;
+      navigation = obj.useNavigation();
+      const tmp4 = closure_9();
       [tmp7, tmp8] = authenticatorSelection(onRegisterSuccess.useState(false), 2);
       importDefault = tmp8;
-      const tmp6 = authenticatorSelection(onRegisterSuccess.useState(false), 2);
+      authenticatorSelection(onRegisterSuccess.useState(false), 2);
       [tmp10, tmp11] = authenticatorSelection(onRegisterSuccess.useState(""), 2);
       dependencyMap = tmp11;
-      const tmp9 = authenticatorSelection(onRegisterSuccess.useState(""), 2);
-      const tmp5Result = tmp5(
+      authenticatorSelection(onRegisterSuccess.useState(""), 2);
+      obj3 = navigation(1369);
+      const tmp5Result = authenticatorSelection(
         onRegisterSuccess.useState(
-          navigation(1369).isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE,
+          obj3.isAndroid() ? obj3.PASSKEY_CREDENTIAL_MANAGER : obj3.OTHER_AND_ANDROID_NONDISCOVERABLE,
         ),
         2,
       );
       authenticatorSelection = tmp5Result[0];
       const items = [navigation];
+      const tmp15 = tmp5Result[1];
       onRegisterSuccess = obj2.useCallback((arg0) => {
         const replaced = navigation.replace(UserSettingsSections.WEBAUTHN_NAME, arg0);
       }, items);
       const items1 = [authenticatorSelection];
-      closure_5 = obj2.useMemo(() => obj5[first], items1);
+      let closure_5 = obj2.useMemo(() => obj4[first], items1);
       const items2 = [onRegisterSuccess, tmp11, tmp8];
-      closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
-      const obj3 = navigation(1369);
-      const announceError = navigation(14595).useAnnounceError(tmp10);
-      const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
-      obj4 = { style: tmp4.centerFlex, children: null };
-      const items3 = [closure_7(navigation(14596).KeyImage, {}), ,];
-      obj5 = { style: tmp4.margin, variant: "text-md/normal", children: null };
+      let closure_6 = obj2.useMemo(
+        () => ({ onRegisterSuccess, setError: dependencyMap, setRegistering: importDefault }),
+        items2,
+      );
+      const tmpResult = navigation(14595);
+      const announceError = tmpResult.useAnnounceError(tmp10);
+      const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: items4 };
+      obj4 = { style: tmp4.centerFlex, children: items3 };
+      const SafeAreaPaddingView = tmp(6619).SafeAreaPaddingView;
+      items3 = [closure_7(navigation(14596).KeyImage, {}), ,];
+      const obj5 = { style: tmp4.margin, variant: "text-md/normal", children: stringResult };
+      const Text = tmp(4886).Text;
       const intl = tmp(1126).intl;
       const string = intl.string;
       const t = tmp(1126).t;
+      const tmp19 = closure_5;
       if (tmp7) {
-        let stringResult = string(t.aVMiX3);
+        stringResult = string(t.aVMiX3);
       } else {
         stringResult = string(t.Lh5vTW);
       }
-      obj5.children = stringResult;
-      items3[1] = closure_7(navigation(4886).Text, obj5);
-      let tmp19Result = "" !== tmp10;
-      if (tmp19Result) {
+      items3[1] = closure_7(Text, obj5);
+      let tmp20Result = "" !== tmp10;
+      if (tmp20Result) {
         const obj6 = { variant: "text-md/normal", color: "text-feedback-critical", children: tmp10 };
-        tmp19Result = closure_7(tmp(4886).Text, obj6);
+        tmp20Result = closure_7(tmp(4886).Text, obj6);
       }
-      items3[2] = tmp19Result;
-      obj4.children = items3;
-      const items4 = [closure_8(closure_5, obj4), ,];
+      items3[2] = tmp20Result;
+      items4 = [closure_8(tmp19, obj4), ,];
       let shouldDisplayAndroidFidoSelector = NativeCeremoniesDefault.shouldDisplayAndroidFidoSelector;
       if (shouldDisplayAndroidFidoSelector) {
-        const obj7 = { authenticatorSelection, registering: tmp7, onChange: tmp5Result[1] };
+        const obj7 = { authenticatorSelection, registering: tmp7, onChange: tmp15 };
         shouldDisplayAndroidFidoSelector = closure_7(closure_12, obj7);
       }
       items4[1] = shouldDisplayAndroidFidoSelector;
+      const ButtonGroup = tmp(5592).ButtonGroup;
+      const Button = tmp(5594).Button;
       const intl2 = tmp(1126).intl;
       const string2 = intl2.string;
       const t2 = tmp(1126).t;
       if (tmp7) {
-        let string2Result = string2(t2.wePEBF);
+        string2Result = string2(t2.wePEBF);
       } else {
         string2Result = string2(t2.oibaQa);
       }
-      const obj8 = {
-        children: closure_7(navigation(5594).Button, {
-          text: string2Result,
-          disabled: tmp7,
-          loading: tmp7,
-          onPress() {
-            return closure_5(closure_6);
-          },
-          size: "lg",
-        }),
+      const obj8 = { children: closure_7(Button, obj9) };
+      obj9 = {
+        text: string2Result,
+        disabled: tmp7,
+        loading: tmp7,
+        onPress() {
+          return closure_5(closure_6);
+        },
+        size: "lg",
       };
-      items4[2] = closure_7(navigation(5592).ButtonGroup, obj8);
-      rect.children = items4;
-      return closure_8(navigation(6619).SafeAreaPaddingView, rect);
+      items4[2] = closure_7(ButtonGroup, obj8);
+      return closure_8(SafeAreaPaddingView, rect);
     };
+const result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnRegisterStep.tsx");
+
+export default tmp3;

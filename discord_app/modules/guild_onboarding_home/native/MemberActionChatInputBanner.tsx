@@ -1,8 +1,11 @@
 // discord_app/modules/guild_onboarding_home/native/MemberActionChatInputBanner.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import Constants from "../../../Constants.tsx";
+import intl4 from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
+import EmojiConstants from "../../emojis/EmojiConstants.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import UnicodeEmojisDefault from "../../emojis/UnicodeEmojis.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
@@ -12,44 +15,59 @@ import useChannelNameDefault from "../../channel/useChannelName.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import GuildOnboardingHomeTypes from "../GuildOnboardingHomeTypes.tsx";
-import _modDef11415 from "../../../../_runtime/metro/11415__.js";
-import _modDef11914 from "../../../../_runtime/metro/11914__.js";
+import AssetRegistryDefault from "../../../../_runtime/11415_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/11914_AssetRegistry.js";
 import MemberActionUtils from "../MemberActionUtils.tsx";
-import _modDef11917 from "../../../../_runtime/metro/11917__.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import AssetRegistryDefault3 from "../../../../_runtime/11917_AssetRegistry.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import EmojiStore from "../../emojis/EmojiStore.tsx";
-import ChannelStore from "../../../stores/ChannelStore.tsx";
+import ChannelStore_mod from "../../../stores/ChannelStore.tsx";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-let Routes = fn(1085).Routes;
-const EMOJI_URL_BASE_SIZE = fn(1380).EMOJI_URL_BASE_SIZE;
-const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4890);
+const require = globalThis.__r;
+let action, channel, emoji, importDefault;
+
+let closure_12;
+let closure_14;
+let map1;
+let obj2;
+let obj3;
+let size;
+let size1;
+let View = react_native.View;
+let ChannelStore = ChannelStore_mod;
+let Routes = Constants.Routes;
+const EMOJI_URL_BASE_SIZE = EmojiConstants.EMOJI_URL_BASE_SIZE;
+({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = Fragment);
+let createStyles = createStyles_mod;
 let obj = {
   animatedContainer: { overflow: "hidden" },
   measurement: { opacity: 0, position: "absolute" },
-  container: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-  },
+  container: obj2,
   text: { flexGrow: 1, flexShrink: 1, marginLeft: 8 },
   wrap: { flexShrink: 1, flexWrap: "wrap" },
   emoji: { width: 24, height: 24 },
   textEmoji: { width: 24, textAlign: "center" },
-  emojiPlaceholder: null,
-  circle: null,
-  icon: null,
+  emojiPlaceholder: size,
+  circle: size1,
+  icon: obj3,
 };
-let size = {
+obj2 = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  paddingHorizontal: 12,
+  paddingVertical: 8,
+};
+createStyles = createStyles.createStyles;
+size = {
   width: 24,
   height: 24,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -58,8 +76,7 @@ let size = {
   alignItems: "center",
   justifyContent: "center",
 };
-obj.emojiPlaceholder = size;
-const size1 = {
+size1 = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -69,27 +86,25 @@ const size1 = {
   marginLeft: 8,
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
-obj.circle = size1;
-let obj3 = {
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-  paddingHorizontal: 12,
-  paddingVertical: 8,
-};
-obj.icon = { tintColor: nativeDefault.colors.WHITE };
-let closure_15 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
+obj3 = { tintColor: nativeDefault.colors.WHITE };
+let closure_15 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   ? (action) => {
-      let stringResult = dependencyMap;
-      const cResult = action(576).c(8);
+      let MkzlDL;
+      let first;
+      let format;
+      let intl3;
+      let obj3;
+      let tmp11;
+      let tmp6;
+      const obj = action(576);
+      const cResult = obj.c(8);
       action = action.action;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -99,108 +114,134 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = action.channelId;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const obj = action(576);
-      const stateFromStores = action(573).useStateFromStores(first, tmp6);
+      const tmpResult = action(573);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
       const tmp8 = useChannelNameDefault(stateFromStores, true);
       if (null == stateFromStores) {
+        let tmp14;
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { variant: "text-xxs/normal", color: "text-default", children: null };
+          const obj2 = { variant: "text-xxs/normal", color: "text-default", children: format(MkzlDL, obj3) };
+          const Text = tmp(4886).Text;
           const intl2 = tmp(1126).intl;
-          const obj3 = { channelName: null };
-          const intl3 = tmp(1126).intl;
-          stringResult = intl3.string(tmp(1126).t.J90oLW);
-          obj3.channelName = stringResult;
-          obj2.children = intl2.format(tmp(1126).t.MkzlDL, obj3);
-          const tmp16 = closure_12(tmp(4886).Text, obj2);
+          format = intl2.format;
+          obj3 = { channelName: intl3.string(action(1126).t.J90oLW) };
+          MkzlDL = tmp(1126).t.MkzlDL;
+          intl3 = tmp(1126).intl;
+          const tmp16 = closure_12(Text, obj2);
           cResult[3] = tmp16;
+          tmp14 = tmp16;
+        } else {
+          tmp14 = cResult[3];
         }
+        tmp11 = tmp14;
       } else {
+        let tmp9;
         if (cResult[4] !== tmp8) {
           const intl = tmp(1126).intl;
           const obj4 = { channelName: tmp8 };
-          const formatResult = intl.format(tmp(1126).t.MkzlDL, obj4);
+          const formatResult = intl.format(action(1126).t.MkzlDL, obj4);
           cResult[4] = tmp8;
           cResult[5] = formatResult;
-          let tmp9 = formatResult;
+          tmp9 = formatResult;
         } else {
           tmp9 = cResult[5];
         }
         if (cResult[6] !== tmp9) {
           const obj5 = { variant: "text-xxs/normal", color: "text-default", children: tmp9 };
-          const tmp13 = closure_12(tmp(4886).Text, obj5);
+          const tmp13 = closure_12(action(4886).Text, obj5);
           cResult[6] = tmp9;
           cResult[7] = tmp13;
-          let tmp11 = tmp13;
+          tmp11 = tmp13;
         } else {
           tmp11 = cResult[7];
         }
-        return tmp11;
       }
-      const tmpResult = action(573);
+      return tmp11;
     }
   : (action) => {
+      let MkzlDL;
+      let format;
+      let intl;
+      let intl3;
+      let obj3;
+      let obj4;
+      let obj5;
       action = action.action;
       const items = [ChannelStore];
-      const stateFromStores = action(573).useStateFromStores(items, () => ChannelStore.getChannel(action.channelId));
       const obj = action(573);
+      const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(action.channelId));
+      const tmp4 = useChannelNameDefault(stateFromStores, true);
+      const Text = action(4886).Text;
       if (null == stateFromStores) {
-        const obj2 = { variant: "text-xxs/normal", color: "text-default", children: null };
+        const obj2 = { variant: "text-xxs/normal", color: "text-default", children: format(MkzlDL, obj3) };
         const intl2 = tmp(1126).intl;
-        const obj3 = { channelName: null };
-        const intl3 = tmp(1126).intl;
-        obj3.channelName = intl3.string(tmp(1126).t.J90oLW);
-        obj2.children = intl2.format(tmp(1126).t.MkzlDL, obj3);
-        let obj4 = obj2;
+        format = intl2.format;
+        obj3 = { channelName: intl3.string(action(1126).t.J90oLW) };
+        MkzlDL = tmp(1126).t.MkzlDL;
+        intl3 = tmp(1126).intl;
+        obj4 = obj2;
       } else {
-        obj4 = { variant: "text-xxs/normal", color: "text-default", children: null };
-        const intl = tmp(1126).intl;
-        const obj5 = { channelName: tmp4 };
-        obj4.children = intl.format(tmp(1126).t.MkzlDL, obj5);
+        obj4 = {
+          variant: "text-xxs/normal",
+          color: "text-default",
+          children: intl.format(action(1126).t.MkzlDL, obj5),
+        };
+        intl = tmp(1126).intl;
+        obj5 = { channelName: tmp4 };
       }
-      return closure_12(action(4886).Text, obj4);
+      return closure_12(Text, obj4);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
   ? (emoji) => {
-      let Text = id;
-      const cResult = id(576).c(18);
+      let first;
+      let id;
+      let name;
+      let tmp14;
+      let tmp16;
+      let tmp17;
+      let tmp9;
+      const tmp = id;
+      const obj = id(576);
+      const cResult = obj.c(18);
       emoji = emoji.emoji;
-      const tmp3 = closure_15();
+      const tmp4 = closure_15();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { size: Text(1188).Icon.Sizes.REFRESH_SMALL_16, source: _modDef11415 };
-        const tmp7 = closure_12(Text(1188).Icon, obj2);
-        cResult[0] = tmp7;
-        let first = tmp7;
+        const obj2 = { size: tmp(1188).Icon.Sizes.REFRESH_SMALL_16, source: AssetRegistryDefault };
+        const Icon = tmp(1188).Icon;
+        const tmp8 = closure_12(Icon, obj2);
+        cResult[0] = tmp8;
+        first = tmp8;
       } else {
         first = cResult[0];
       }
-      if (cResult[1] !== tmp3.emojiPlaceholder) {
-        const obj3 = { style: tmp3.emojiPlaceholder, children: first };
-        const tmp11 = closure_12(View, obj3);
-        cResult[1] = tmp3.emojiPlaceholder;
-        cResult[2] = tmp11;
-        let tmp8 = tmp11;
+      if (cResult[1] !== tmp4.emojiPlaceholder) {
+        const obj3 = { style: tmp4.emojiPlaceholder, children: first };
+        const tmp12 = closure_12(View, obj3);
+        cResult[1] = tmp4.emojiPlaceholder;
+        cResult[2] = tmp12;
+        tmp9 = tmp12;
       } else {
-        tmp8 = cResult[2];
+        tmp9 = cResult[2];
       }
       id = undefined;
       if (emoji != null) {
         id = emoji.id;
       }
       if (emoji != null) {
-        let textEmoji = emoji.name;
+        name = emoji.name;
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [EmojiStore];
         cResult[3] = items;
-        let tmp13 = items;
+        tmp14 = items;
       } else {
-        tmp13 = cResult[3];
+        tmp14 = cResult[3];
       }
       if (cResult[4] !== id) {
         const fn = function y() {
@@ -214,90 +255,103 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = id;
         cResult[5] = fn;
         cResult[6] = items1;
-        let tmp16 = items1;
-        let tmp15 = fn;
+        tmp17 = items1;
+        tmp16 = fn;
       } else {
-        tmp15 = cResult[5];
-        tmp16 = cResult[6];
+        tmp16 = cResult[5];
+        tmp17 = cResult[6];
       }
-      const obj = id(576);
-      const stateFromStores = Text(573).useStateFromStores(tmp13, tmp15, tmp16);
+      const tmpResult = tmp(573);
+      const stateFromStores = tmpResult.useStateFromStores(tmp14, tmp16, tmp17);
       if (null != stateFromStores) {
         if (cResult[7] === stateFromStores.animated) {
+          let tmp24;
+          let tmp28;
           if (cResult[8] === stateFromStores.id) {
-            let tmp23 = cResult[9];
+            tmp24 = cResult[9];
           }
-          if (cResult[10] !== tmp23) {
-            const obj4 = { uri: tmp23 };
-            cResult[10] = tmp23;
+          if (cResult[10] !== tmp24) {
+            const obj4 = { uri: tmp24 };
+            cResult[10] = tmp24;
             cResult[11] = obj4;
-            let tmp27 = obj4;
+            tmp28 = obj4;
           } else {
-            tmp27 = cResult[11];
+            tmp28 = cResult[11];
           }
-          if (cResult[12] === tmp3.emoji) {
-            if (cResult[13] === tmp27) {
-              let tmp28 = cResult[14];
+          if (cResult[12] === tmp4.emoji) {
+            let tmp29;
+            if (cResult[13] === tmp28) {
+              tmp29 = cResult[14];
             }
-            return tmp28;
+            return tmp29;
           }
-          const obj5 = { style: tmp22, source: tmp27, resizeMode: "contain" };
-          const tmp31 = closure_12(FastImageDefault, obj5);
-          cResult[12] = tmp3.emoji;
-          cResult[13] = tmp27;
-          cResult[14] = tmp31;
-          tmp28 = tmp31;
+          const obj5 = { style: tmp23, source: tmp28, resizeMode: "contain" };
+          const tmp32 = closure_12(FastImageDefault, obj5);
+          cResult[12] = tmp4.emoji;
+          cResult[13] = tmp28;
+          cResult[14] = tmp32;
+          tmp29 = tmp32;
         }
-        const obj8 = { id: null, animated: null, size: null };
+        const obj8 = { id: null, animated: null, size: EMOJI_URL_BASE_SIZE };
         ({ id: obj7.id, animated: obj7.animated } = stateFromStores);
-        obj8.size = EMOJI_URL_BASE_SIZE;
-        const emojiURL = AvatarUtilsDefault.getEmojiURL(obj8);
+        const obj6 = AvatarUtilsDefault;
+        const emojiURL = obj6.getEmojiURL(obj8);
         cResult[7] = stateFromStores.animated;
         cResult[8] = stateFromStores.id;
         cResult[9] = emojiURL;
-        tmp23 = emojiURL;
+        tmp24 = emojiURL;
       } else {
-        let tmp32 = tmp8;
-        if (null != textEmoji) {
+        let tmp22 = tmp9;
+        if (null != name) {
+          const getByName = UnicodeEmojisDefault.getByName;
+          UnicodeEmojisDefault;
+          tmp22 = tmp9;
           const obj10 = UnicodeEmojisDefault;
-          tmp32 = tmp8;
-          if (null != obj10.getByName(obj11.convertSurrogateToName(textEmoji, false))) {
-            if (cResult[15] === textEmoji) {
+          if (null != getByName(obj10.convertSurrogateToName(name, false))) {
+            if (cResult[15] === name) {
+              let tmp19;
+              if (cResult[16] === tmp4.textEmoji) {
+                tmp19 = cResult[17];
+              }
+              tmp22 = tmp19;
             }
-            Text = Text(4886).Text;
-            const obj9 = { style: tmp3.textEmoji, variant: "heading-lg/normal", children: textEmoji };
-            const tmp20 = closure_12(Text, obj9);
-            cResult[15] = textEmoji;
-            textEmoji = tmp3.textEmoji;
-            cResult[16] = textEmoji;
-            cResult[17] = tmp20;
+            const obj9 = { style: tmp4.textEmoji, variant: "heading-lg/normal", children: name };
+            const tmp21 = closure_12(tmp(4886).Text, obj9);
+            cResult[15] = name;
+            cResult[16] = tmp4.textEmoji;
+            cResult[17] = tmp21;
+            tmp19 = tmp21;
           }
-          obj11 = UnicodeEmojisDefault;
         }
-        return tmp32;
+        return tmp22;
       }
-      const TextResult = Text(573);
     }
   : (emoji) => {
+      let Icon;
+      let name;
+      let obj2;
+      let obj4;
+      let obj5;
+      let tmp2Result;
+      let tmp5Result4;
       emoji = emoji.emoji;
       let id;
       const tmp = closure_15();
-      const obj = {
-        style: tmp.emojiPlaceholder,
-        children: closure_12(id(1188).Icon, { size: id(1188).Icon.Sizes.REFRESH_SMALL_16, source: _modDef11415 }),
-      };
+      const obj = { style: tmp.emojiPlaceholder, children: closure_12(Icon, obj2) };
+      obj2 = { size: id(1188).Icon.Sizes.REFRESH_SMALL_16, source: AssetRegistryDefault };
+      Icon = id(1188).Icon;
       const tmp6 = closure_12(View, obj);
       id = undefined;
       if (emoji != null) {
         id = emoji.id;
       }
       if (emoji != null) {
-        const name = emoji.name;
+        name = emoji.name;
       }
-      const obj2 = { size: id(1188).Icon.Sizes.REFRESH_SMALL_16, source: _modDef11415 };
       const items = [EmojiStore];
       const items1 = [id];
-      const stateFromStores = id(573).useStateFromStores(
+      const tmp3Result = id(573);
+      const stateFromStores = tmp3Result.useStateFromStores(
         items,
         () => {
           let customEmojiById = null;
@@ -309,26 +363,24 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       if (null != stateFromStores) {
-        const obj3 = { style: tmp.emoji, source: null, resizeMode: "contain" };
-        const obj4 = { uri: null };
+        const obj3 = { style: tmp.emoji, source: obj4, resizeMode: "contain" };
+        obj4 = { uri: tmp5Result4.getEmojiURL(obj5) };
+        obj5 = { id: null, animated: null, size: EMOJI_URL_BASE_SIZE };
+        ({ id: obj9.id, animated: obj9.animated } = stateFromStores);
         const tmp5Result = FastImageDefault;
-        const obj5 = { id: null, animated: null, size: null };
-        ({ id: obj10.id, animated: obj10.animated } = stateFromStores);
-        obj5.size = EMOJI_URL_BASE_SIZE;
-        obj4.uri = AvatarUtilsDefault.getEmojiURL(obj5);
-        obj3.source = obj4;
-        let tmp2Result = closure_12(tmp5Result, obj3);
-        const tmp5Result4 = AvatarUtilsDefault;
+        tmp5Result4 = AvatarUtilsDefault;
+        tmp2Result = closure_12(tmp5Result, obj3);
       } else {
         tmp2Result = tmp6;
         if (null != name) {
-          const tmp5Result5 = UnicodeEmojisDefault;
+          const getByName = UnicodeEmojisDefault.getByName;
+          UnicodeEmojisDefault;
           tmp2Result = tmp6;
-          if (null != tmp5Result5.getByName(tmp5Result6.convertSurrogateToName(name, false))) {
+          const tmp5Result6 = UnicodeEmojisDefault;
+          if (null != getByName(tmp5Result6.convertSurrogateToName(name, false))) {
             const obj6 = { style: tmp.textEmoji, variant: "heading-lg/normal", children: name };
             tmp2Result = closure_12(tmp3(4886).Text, obj6);
           }
-          tmp5Result6 = UnicodeEmojisDefault;
         }
       }
       return tmp2Result;
@@ -345,101 +397,116 @@ const __initData3 = {
 const __initData4 = {
   code: "function MemberActionChatInputBannerTsx4(){const{useReducedMotion,nextHeight,withDelay,isViewAction,completed,withTiming,DECELERATED_EASING}=this.__closure;if(useReducedMotion){return{height:nextHeight.get()};}return{height:withDelay(!isViewAction&&completed?1200:0,withTiming(nextHeight.get(),{duration:400,easing:DECELERATED_EASING}))};}",
 };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      const cResult = channel(channelAction[13]).c(51);
+      let channelAction;
+      let closure_10;
+      let closure_8;
+      let tmp10;
+      let tmp9;
+      let useReducedMotion;
+      let tmp2 = channelAction;
+      let obj = channel(channelAction[13]);
+      const cResult = obj.c(51);
       channel = channel.channel;
       const tmp4 = closure_15();
-      closure_1 = tmp4;
-      let obj = channel(channelAction[13]);
-      const memberActionsForChannel = channel(channelAction[23]).useMemberActionsForChannel(channel.guild_id, channel);
+      let closure_1 = tmp4;
+      let obj2 = channel(channelAction[23]);
+      const memberActionsForChannel = obj2.useMemberActionsForChannel(channel.guild_id, channel);
       channelAction = memberActionsForChannel.channelAction;
       const completed = memberActionsForChannel.completed;
-      let obj2 = channel(channelAction[23]);
       let channelId;
+      const useNextMemberAction = channel(channelAction[23]).useNextMemberAction;
+      const guild_id = channel.guild_id;
+      channel(channelAction[23]);
       if (channelAction != null) {
         channelId = channelAction.channelId;
       }
-      const nextMemberAction = channel(channelAction[23]).useNextMemberAction(channel.guild_id, channelId);
+      const nextMemberAction = useNextMemberAction(guild_id, channelId);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [useReducedMotion];
         const fn = function u() {
           return useReducedMotion.useReducedMotion;
         };
+        let num = 0;
         cResult[0] = items;
         cResult[1] = fn;
-        tmp8 = items;
-        tmp9 = fn;
+        tmp9 = items;
+        tmp10 = fn;
       } else {
-        [tmp8, tmp9] = cResult;
+        [tmp9, tmp10] = cResult;
       }
-      let obj3 = channel(channelAction[23]);
-      const stateFromStores = channel(channelAction[14]).useStateFromStores(tmp8, tmp9);
+      const tmpResult = tmp(tmp2[14]);
+      const stateFromStores = tmpResult.useStateFromStores(tmp9, tmp10);
       let actionType;
       if (channelAction != null) {
         actionType = channelAction.actionType;
       }
-      const tmp13 = actionType === channel(channelAction[24]).NewMemberActionTypes.VIEW;
-      useReducedMotion = tmp13;
-      const tmp14 = completed(nextMemberAction.useState(channel(channelAction[24]).CHANNEL_ACTION_BANNER_HEIGHT), 2);
-      const first = tmp14[0];
-      ChannelStore = tmp14[1];
-      const tmp16 = completed(nextMemberAction.useState(channel(channelAction[24]).CHANNEL_ACTION_BANNER_HEIGHT), 2);
-      const first1 = tmp16[0];
-      Routes = tmp16[1];
-      let tmpResult = channel(channelAction[14]);
-      const sharedValue = channel(channelAction[25]).useSharedValue(0);
-      const tmpResult5 = channel(channelAction[25]);
+      const tmp14 = actionType === channel(tmp2[24]).NewMemberActionTypes.VIEW;
+      useReducedMotion = tmp14;
+      let obj4 = nextMemberAction;
+      const tmp15 = completed(nextMemberAction.useState(channel(tmp2[24]).CHANNEL_ACTION_BANNER_HEIGHT), 2);
+      const first = tmp15[0];
+      ChannelStore = tmp15[1];
+      const tmp17 = completed(nextMemberAction.useState(channel(tmp2[24]).CHANNEL_ACTION_BANNER_HEIGHT), 2);
+      const first1 = tmp17[0];
+      Routes = tmp17[1];
+      const tmpResult5 = channel(tmp2[25]);
+      const sharedValue = tmpResult5.useSharedValue(0);
       let num3 = 0;
+      const useSharedValue = tmp(tmp2[25]).useSharedValue;
+      channel(tmp2[25]);
       if (completed) {
         num3 = first1;
       }
-      const sharedValue1 = channel(channelAction[25]).useSharedValue(num3);
+      const sharedValue1 = useSharedValue(num3);
       if (cResult[2] === completed) {
         if (cResult[3] === sharedValue) {
-          if (cResult[4] === tmp13) {
+          if (cResult[4] === tmp14) {
+            let tmp22;
+            let tmp23;
             if (cResult[5] === first) {
-              let tmp20 = cResult[6];
-              let tmp21 = cResult[7];
+              tmp22 = cResult[6];
+              tmp23 = cResult[7];
             }
-            const effect = obj5.useEffect(tmp20, tmp21);
+            const effect = obj4.useEffect(tmp22, tmp23);
             if (cResult[8] === completed) {
               if (cResult[9] === sharedValue1) {
                 if (cResult[10] === nextMemberAction) {
+                  let tmp25;
+                  let tmp26;
                   if (cResult[11] === first1) {
-                    let tmp23 = cResult[12];
-                    let tmp24 = cResult[13];
+                    tmp25 = cResult[12];
+                    tmp26 = cResult[13];
                   }
-                  const effect1 = obj5.useEffect(tmp23, tmp24);
+                  const effect1 = obj4.useEffect(tmp25, tmp26);
+                  const tmpResult7 = channel(tmp2[25]);
                   class J {
                     constructor() {
-                      obj = { height: null };
-                      if (closure_5) {
-                        tmp7 = closure_11;
-                        obj.height = closure_11.get();
-                        tmp6 = obj;
+                      let tmp8;
+                      const obj = { height: null };
+                      if (stateFromStores) {
+                        obj.height = sharedValue.get();
+                        tmp8 = obj;
                       } else {
-                        tmp = closure_0;
-                        tmp2 = closure_2;
-                        obj2 = closure_0(closure_2[25]);
-                        tmp3 = completed;
-                        num = 200;
+                        let num = 200;
+                        const withDelay = ReanimatedRexport.withDelay;
+                        ReanimatedRexport;
                         if (completed) {
                           num = 800;
                         }
-                        tmpResult = tmp(tmp2[26]);
-                        tmp4 = closure_11;
-                        obj1 = { duration: 400, easing: null };
-                        value = closure_11.get();
-                        obj1.easing = tmp(tmp2[18]).DECELERATED_EASING;
-                        obj.height = obj2.withDelay(num, tmpResult.withTiming(value, obj1));
-                        tmp6 = obj;
+                        const withTiming = timing.withTiming;
+                        const obj2 = { duration: 400, easing: native.DECELERATED_EASING };
+                        timing;
+                        const value = sharedValue.get();
+                        obj.height = withDelay(num, withTiming(value, obj2));
+                        tmp8 = obj;
                       }
-                      return tmp6;
+                      return tmp8;
                     }
                   }
-                  let obj4 = {
+                  let obj3 = {
                     useReducedMotion: stateFromStores,
                     height: sharedValue,
                     withDelay: tmp(tmp2[25]).withDelay,
@@ -447,213 +514,206 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                     withTiming: tmp(tmp2[26]).withTiming,
                     DECELERATED_EASING: tmp(tmp2[18]).DECELERATED_EASING,
                   };
-                  J.__closure = obj4;
+                  const useAnimatedStyle = tmpResult7.useAnimatedStyle;
+                  J.__closure = obj3;
                   J.__workletHash = 5585837927201;
                   J.__initData = __initData;
-                  const animatedStyle = tmp(tmp2[25]).useAnimatedStyle(J);
-                  const tmpResult7 = tmp(tmp2[25]);
+                  const animatedStyle = useAnimatedStyle(J);
+                  const tmpResult8 = channel(tmp2[25]);
                   class K {
                     constructor() {
-                      obj = { height: null };
-                      if (closure_5) {
-                        tmp8 = closure_12;
-                        obj.height = closure_12.get();
-                        tmp7 = obj;
+                      let tmp9;
+                      const obj = { height: null };
+                      if (stateFromStores) {
+                        obj.height = sharedValue1.get();
+                        tmp9 = obj;
                       } else {
-                        tmp = closure_0;
-                        tmp2 = closure_2;
-                        obj2 = closure_0(closure_2[25]);
-                        tmp3 = closure_6;
-                        num = 0;
-                        if (!closure_6) {
-                          tmp4 = completed;
+                        let num = 0;
+                        const withDelay = ReanimatedRexport.withDelay;
+                        ReanimatedRexport;
+                        if (!useReducedMotion) {
                           num = 0;
                           if (completed) {
                             num = 1200;
                           }
                         }
-                        tmpResult = tmp(tmp2[26]);
-                        tmp5 = closure_12;
-                        obj1 = { duration: 400, easing: null };
-                        value = closure_12.get();
-                        obj1.easing = tmp(tmp2[18]).DECELERATED_EASING;
-                        obj.height = obj2.withDelay(num, tmpResult.withTiming(value, obj1));
-                        tmp7 = obj;
+                        const withTiming = timing.withTiming;
+                        const obj2 = { duration: 400, easing: native.DECELERATED_EASING };
+                        timing;
+                        const value = sharedValue1.get();
+                        obj.height = withDelay(num, withTiming(value, obj2));
+                        tmp9 = obj;
                       }
-                      return tmp7;
+                      return tmp9;
                     }
                   }
-                  let obj6 = {
+                  let obj5 = {
                     useReducedMotion: stateFromStores,
                     nextHeight: sharedValue1,
                     withDelay: tmp(tmp2[25]).withDelay,
-                    isViewAction: tmp13,
+                    isViewAction: tmp14,
                     completed,
                     withTiming: tmp(tmp2[26]).withTiming,
                     DECELERATED_EASING: tmp(tmp2[18]).DECELERATED_EASING,
                   };
-                  K.__closure = obj6;
+                  const useAnimatedStyle2 = tmpResult8.useAnimatedStyle;
+                  K.__closure = obj5;
                   K.__workletHash = 10256555667281;
                   K.__initData = __initData2;
-                  const animatedStyle1 = tmp(tmp2[25]).useAnimatedStyle(K);
+                  const animatedStyle2 = useAnimatedStyle2(K);
                   const _Symbol = Symbol;
                   if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
                     class Z {
-                      constructor(arg0) {
-                        tmp = closure_8(channel.nativeEvent.layout.height);
-                        return;
+                      constructor(nativeEvent) {
+                        closure_8(nativeEvent.nativeEvent.layout.height);
                       }
                     }
                     cResult[14] = Z;
                     class J {
                       constructor() {
-                        obj = { height: null };
-                        if (closure_5) {
-                          tmp7 = closure_11;
-                          obj.height = closure_11.get();
-                          tmp6 = obj;
+                        let tmp8;
+                        const obj = { height: null };
+                        if (stateFromStores) {
+                          obj.height = sharedValue.get();
+                          tmp8 = obj;
                         } else {
-                          tmp = closure_0;
-                          tmp2 = closure_2;
-                          obj2 = closure_0(closure_2[25]);
-                          tmp3 = completed;
-                          num = 200;
+                          let num = 200;
+                          const withDelay = ReanimatedRexport.withDelay;
+                          ReanimatedRexport;
                           if (completed) {
                             num = 800;
                           }
-                          tmpResult = tmp(tmp2[26]);
-                          tmp4 = closure_11;
-                          obj1 = { duration: 400, easing: null };
-                          value = closure_11.get();
-                          obj1.easing = tmp(tmp2[18]).DECELERATED_EASING;
-                          obj.height = obj2.withDelay(num, tmpResult.withTiming(value, obj1));
-                          tmp6 = obj;
+                          const withTiming = timing.withTiming;
+                          const obj2 = { duration: 400, easing: native.DECELERATED_EASING };
+                          timing;
+                          const value = sharedValue.get();
+                          obj.height = withDelay(num, withTiming(value, obj2));
+                          tmp8 = obj;
                         }
-                        return tmp6;
+                        return tmp8;
                       }
                     }
                   } else {
                     class Z {
-                      constructor(arg0) {
-                        tmp = closure_8(channel.nativeEvent.layout.height);
-                        return;
+                      constructor(nativeEvent) {
+                        closure_8(nativeEvent.nativeEvent.layout.height);
                       }
                     }
                   }
                   const _Symbol2 = Symbol;
                   if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
                     class X {
-                      constructor(arg0) {
-                        tmp = closure_10(channel.nativeEvent.layout.height);
-                        return;
+                      constructor(nativeEvent) {
+                        closure_10(nativeEvent.nativeEvent.layout.height);
                       }
                     }
                     cResult[15] = X;
                     class J {
                       constructor() {
-                        obj = { height: null };
-                        if (closure_5) {
-                          tmp7 = closure_11;
-                          obj.height = closure_11.get();
-                          tmp6 = obj;
+                        let tmp8;
+                        const obj = { height: null };
+                        if (stateFromStores) {
+                          obj.height = sharedValue.get();
+                          tmp8 = obj;
                         } else {
-                          tmp = closure_0;
-                          tmp2 = closure_2;
-                          obj2 = closure_0(closure_2[25]);
-                          tmp3 = completed;
-                          num = 200;
+                          let num = 200;
+                          const withDelay = ReanimatedRexport.withDelay;
+                          ReanimatedRexport;
                           if (completed) {
                             num = 800;
                           }
-                          tmpResult = tmp(tmp2[26]);
-                          tmp4 = closure_11;
-                          obj1 = { duration: 400, easing: null };
-                          value = closure_11.get();
-                          obj1.easing = tmp(tmp2[18]).DECELERATED_EASING;
-                          obj.height = obj2.withDelay(num, tmpResult.withTiming(value, obj1));
-                          tmp6 = obj;
+                          const withTiming = timing.withTiming;
+                          const obj2 = { duration: 400, easing: native.DECELERATED_EASING };
+                          timing;
+                          const value = sharedValue.get();
+                          obj.height = withDelay(num, withTiming(value, obj2));
+                          tmp8 = obj;
                         }
-                        return tmp6;
+                        return tmp8;
                       }
                     }
                   } else {
                     class X {
-                      constructor(arg0) {
-                        tmp = closure_10(channel.nativeEvent.layout.height);
-                        return;
+                      constructor(nativeEvent) {
+                        closure_10(nativeEvent.nativeEvent.layout.height);
                       }
                     }
                   }
                   if (null == channelAction) {
                     class X {
-                      constructor(arg0) {
-                        tmp = closure_10(channel.nativeEvent.layout.height);
-                        return;
+                      constructor(nativeEvent) {
+                        closure_10(nativeEvent.nativeEvent.layout.height);
                       }
                     }
                   } else {
                     class X {
-                      constructor(arg0) {
-                        tmp = closure_10(channel.nativeEvent.layout.height);
-                        return;
+                      constructor(nativeEvent) {
+                        closure_10(nativeEvent.nativeEvent.layout.height);
                       }
                     }
                     const fn2 = function $() {
+                      let intl;
+                      let items;
+                      let items1;
                       let tmp3Result = null;
                       if (null != channelAction) {
-                        const obj = { style: closure_1.container, children: null };
+                        const obj = { style: closure_1.container, children: items };
                         const obj2 = { emoji: channelAction.emoji };
-                        const items = [__initData(closure_17, obj2), ,];
-                        const obj3 = { style: closure_1.text, children: null };
+                        items = [sharedValue1(closure_17, obj2), ,];
+                        const obj3 = { style: closure_1.text, children: items1 };
                         const obj4 = {
                           variant: "text-sm/medium",
                           color: "mobile-text-heading-primary",
                           style: closure_1.wrap,
                           children: channelAction.title,
                         };
-                        const items1 = [__initData(Text_Text.Text, obj4)];
-                        const obj5 = { variant: "text-xxs/normal", color: "text-muted", children: null };
-                        const intl = util.intl;
-                        obj5.children = intl.string(util.t["ElGg8+"]);
-                        items1[1] = __initData(Text_Text.Text, obj5);
-                        obj3.children = items1;
-                        items[1] = __initData2(View, obj3);
+                        items1 = [sharedValue1(Text_Text.Text, obj4)];
+                        const obj5 = {
+                          variant: "text-xxs/normal",
+                          color: "text-muted",
+                          children: intl.string(intl4.t["ElGg8+"]),
+                        };
+                        const Text = Text_Text.Text;
+                        intl = intl4.intl;
+                        items1[1] = sharedValue1(Text, obj5);
+                        items[1] = map1(View, obj3);
                         let tmp6Result = completed;
-                        if (completed) {
-                          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef11917 };
-                          tmp6Result = __initData(native.Icon, obj6);
+                        if (tmp6Result) {
+                          const obj6 = {
+                            disableColor: true,
+                            size: native.Icon.Sizes.MEDIUM,
+                            source: AssetRegistryDefault3,
+                          };
+                          const Icon = native.Icon;
+                          tmp6Result = sharedValue1(Icon, obj6);
                         }
                         items[2] = tmp6Result;
-                        obj.children = items;
-                        tmp3Result = __initData2(View, obj);
+                        tmp3Result = map1(View, obj);
                       }
                       return tmp3Result;
                     };
                     class J {
                       constructor() {
-                        obj = { height: null };
-                        if (closure_5) {
-                          tmp7 = closure_11;
-                          obj.height = closure_11.get();
-                          tmp6 = obj;
+                        let tmp8;
+                        const obj = { height: null };
+                        if (stateFromStores) {
+                          obj.height = sharedValue.get();
+                          tmp8 = obj;
                         } else {
-                          tmp = closure_0;
-                          tmp2 = closure_2;
-                          obj2 = closure_0(closure_2[25]);
-                          tmp3 = completed;
-                          num = 200;
+                          let num = 200;
+                          const withDelay = ReanimatedRexport.withDelay;
+                          ReanimatedRexport;
                           if (completed) {
                             num = 800;
                           }
-                          tmpResult = tmp(tmp2[26]);
-                          tmp4 = closure_11;
-                          obj1 = { duration: 400, easing: null };
-                          value = closure_11.get();
-                          obj1.easing = tmp(tmp2[18]).DECELERATED_EASING;
-                          obj.height = obj2.withDelay(num, tmpResult.withTiming(value, obj1));
-                          tmp6 = obj;
+                          const withTiming = timing.withTiming;
+                          const obj2 = { duration: 400, easing: native.DECELERATED_EASING };
+                          timing;
+                          const value = sharedValue.get();
+                          obj.height = withDelay(num, withTiming(value, obj2));
+                          tmp8 = obj;
                         }
-                        return tmp6;
+                        return tmp8;
                       }
                     }
                     cResult[17] = completed;
@@ -662,24 +722,17 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                     cResult[20] = tmp4.wrap;
                     cResult[21] = fn2;
                   }
-                  const tmpResult8 = tmp(tmp2[25]);
                 }
               }
             }
             class M {
               constructor() {
                 if (completed) {
-                  tmp = closure_4;
-                  tmp2 = null;
-                  if (null != closure_4) {
-                    tmp4 = closure_12;
-                    tmp5 = closure_9;
-                    result = closure_12.set(closure_9);
+                  if (null != nextMemberAction) {
+                    const result = sharedValue1.set(first1);
                   }
-                  return;
                 }
-                result1 = closure_12.set(0);
-                return;
+                const result1 = sharedValue1.set(0);
               }
             }
             let items1 = [sharedValue1, completed, nextMemberAction, first1];
@@ -689,94 +742,99 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[11] = first1;
             cResult[12] = M;
             cResult[13] = items1;
-            tmp24 = items1;
-            tmp23 = M;
+            tmp26 = items1;
+            tmp25 = M;
           }
         }
       }
       class R {
         constructor() {
           if (!completed) {
-            tmp = closure_6;
-            if (!closure_6) {
-              tmp2 = closure_11;
-              tmp3 = closure_7;
-              result = closure_11.set(closure_7);
+            if (!useReducedMotion) {
+              const result = sharedValue.set(first);
             }
-            return;
           }
-          result1 = closure_11.set(0);
-          return;
+          const result1 = sharedValue.set(0);
         }
       }
-      const items2 = [sharedValue, completed, tmp13, first];
+      const items2 = [sharedValue, completed, tmp14, first];
       cResult[2] = completed;
       cResult[3] = sharedValue;
-      cResult[4] = tmp13;
+      cResult[4] = tmp14;
       cResult[5] = first;
       cResult[6] = R;
       cResult[7] = items2;
-      tmp21 = items2;
-      tmp20 = R;
-      const tmpResult6 = channel(channelAction[25]);
+      tmp23 = items2;
+      tmp22 = R;
     }
   : (channel) => {
+      let closure_1;
+      let items5;
+      let items6;
+      let items7;
       channel = channel.channel;
       let channelAction;
       let nextMemberAction;
       let stateFromStores;
       let useReducedMotion;
       let first;
-      closure_8 = undefined;
+      let closure_8;
       let first1;
-      closure_10 = undefined;
+      let closure_10;
       let sharedValue;
       let sharedValue1;
       const tmp = closure_15();
       importDefault = tmp;
-      const memberActionsForChannel = channel(channelAction[23]).useMemberActionsForChannel(channel.guild_id, channel);
+      let tmp2 = channel;
+      const tmp3 = channelAction;
+      let obj = channel(channelAction[23]);
+      const memberActionsForChannel = obj.useMemberActionsForChannel(channel.guild_id, channel);
       channelAction = memberActionsForChannel.channelAction;
       const completed = memberActionsForChannel.completed;
-      let obj = channel(channelAction[23]);
       let channelId;
+      const useNextMemberAction = channel(channelAction[23]).useNextMemberAction;
+      const guild_id = channel.guild_id;
+      channel(channelAction[23]);
       if (channelAction != null) {
         channelId = channelAction.channelId;
       }
-      nextMemberAction = channel(channelAction[23]).useNextMemberAction(channel.guild_id, channelId);
-      let obj2 = channel(channelAction[23]);
+      nextMemberAction = useNextMemberAction(guild_id, channelId);
       let items = [useReducedMotion];
-      stateFromStores = channel(channelAction[14]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+      const tmp2Result = tmp2(tmp3[14]);
+      stateFromStores = tmp2Result.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
       let actionType;
       if (channelAction != null) {
         actionType = channelAction.actionType;
       }
-      const tmp9 = actionType === channel(channelAction[24]).NewMemberActionTypes.VIEW;
-      useReducedMotion = tmp9;
-      const tmp10 = completed(nextMemberAction.useState(channel(channelAction[24]).CHANNEL_ACTION_BANNER_HEIGHT), 2);
-      first = tmp10[0];
-      closure_8 = tmp12;
-      const tmp13 = completed(nextMemberAction.useState(channel(channelAction[24]).CHANNEL_ACTION_BANNER_HEIGHT), 2);
-      first1 = tmp13[0];
-      closure_10 = tmp15;
-      const tmp2Result = channel(channelAction[14]);
-      sharedValue = channel(channelAction[25]).useSharedValue(0);
-      const tmp2Result5 = channel(channelAction[25]);
+      const tmp10 = actionType === tmp2(tmp3[24]).NewMemberActionTypes.VIEW;
+      useReducedMotion = tmp10;
+      let obj3 = nextMemberAction;
+      const tmp11 = completed(nextMemberAction.useState(tmp2(tmp3[24]).CHANNEL_ACTION_BANNER_HEIGHT), 2);
+      first = tmp11[0];
+      closure_8 = tmp13;
+      const tmp14 = completed(nextMemberAction.useState(tmp2(tmp3[24]).CHANNEL_ACTION_BANNER_HEIGHT), 2);
+      first1 = tmp14[0];
+      closure_10 = tmp16;
+      const tmp2Result5 = tmp2(tmp3[25]);
+      sharedValue = tmp2Result5.useSharedValue(0);
       let num = 0;
+      const useSharedValue = tmp2(tmp3[25]).useSharedValue;
+      tmp2(tmp3[25]);
       if (completed) {
         num = first1;
       }
-      sharedValue1 = channel(channelAction[25]).useSharedValue(num);
-      let items1 = [sharedValue, completed, tmp9, first];
-      const effect = obj4.useEffect(() => {
+      sharedValue1 = useSharedValue(num);
+      let items1 = [sharedValue, completed, tmp10, first];
+      const effect = obj3.useEffect(() => {
         if (!completed) {
-          if (!closure_6) {
+          if (!useReducedMotion) {
             const result = sharedValue.set(first);
           }
         }
         const result1 = sharedValue.set(0);
       }, items1);
       const items2 = [sharedValue1, completed, nextMemberAction, first1];
-      const effect1 = obj4.useEffect(() => {
+      const effect1 = obj3.useEffect(() => {
         if (completed) {
           if (null != nextMemberAction) {
             const result = sharedValue1.set(first1);
@@ -784,235 +842,223 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const result1 = sharedValue1.set(0);
       }, items2);
-      const tmp2Result6 = channel(channelAction[25]);
+      const tmp2Result7 = tmp2(tmp3[25]);
       class B {
         constructor() {
-          obj = { height: null };
-          if (closure_5) {
-            tmp7 = closure_11;
-            obj.height = closure_11.get();
-            tmp6 = obj;
+          let tmp8;
+          const obj = { height: null };
+          if (stateFromStores) {
+            obj.height = sharedValue.get();
+            tmp8 = obj;
           } else {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj2 = closure_0(closure_2[25]);
-            tmp3 = completed;
-            num = 200;
+            let num = 200;
+            const withDelay = ReanimatedRexport.withDelay;
+            ReanimatedRexport;
             if (completed) {
               num = 800;
             }
-            tmpResult = tmp(tmp2[26]);
-            tmp4 = closure_11;
-            obj1 = { duration: 400, easing: null };
-            value = closure_11.get();
-            obj1.easing = tmp(tmp2[18]).DECELERATED_EASING;
-            obj.height = obj2.withDelay(num, tmpResult.withTiming(value, obj1));
-            tmp6 = obj;
+            const withTiming = timing.withTiming;
+            const obj2 = { duration: 400, easing: native.DECELERATED_EASING };
+            timing;
+            const value = sharedValue.get();
+            obj.height = withDelay(num, withTiming(value, obj2));
+            tmp8 = obj;
           }
-          return tmp6;
+          return tmp8;
         }
       }
-      const tmp2Result7 = channel(channelAction[25]);
-      B.__closure = {
+      let obj2 = {
         useReducedMotion: stateFromStores,
         height: sharedValue,
-        withDelay: channel(channelAction[25]).withDelay,
+        withDelay: tmp2(tmp3[25]).withDelay,
         completed,
-        withTiming: channel(channelAction[26]).withTiming,
-        DECELERATED_EASING: channel(channelAction[18]).DECELERATED_EASING,
+        withTiming: tmp2(tmp3[26]).withTiming,
+        DECELERATED_EASING: tmp2(tmp3[18]).DECELERATED_EASING,
       };
+      B.__closure = obj2;
       B.__workletHash = 15931594863971;
       B.__initData = __initData3;
       const animatedStyle = tmp2Result7.useAnimatedStyle(B);
-      let obj3 = {
-        useReducedMotion: stateFromStores,
-        height: sharedValue,
-        withDelay: channel(channelAction[25]).withDelay,
-        completed,
-        withTiming: channel(channelAction[26]).withTiming,
-        DECELERATED_EASING: channel(channelAction[18]).DECELERATED_EASING,
-      };
+      const tmp2Result8 = tmp2(tmp3[25]);
       class V {
         constructor() {
-          obj = { height: null };
-          if (closure_5) {
-            tmp8 = closure_12;
-            obj.height = closure_12.get();
-            tmp7 = obj;
+          let tmp9;
+          const obj = { height: null };
+          if (stateFromStores) {
+            obj.height = sharedValue1.get();
+            tmp9 = obj;
           } else {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj2 = closure_0(closure_2[25]);
-            tmp3 = closure_6;
-            num = 0;
-            if (!closure_6) {
-              tmp4 = completed;
+            let num = 0;
+            const withDelay = ReanimatedRexport.withDelay;
+            ReanimatedRexport;
+            if (!useReducedMotion) {
               num = 0;
               if (completed) {
                 num = 1200;
               }
             }
-            tmpResult = tmp(tmp2[26]);
-            tmp5 = closure_12;
-            obj1 = { duration: 400, easing: null };
-            value = closure_12.get();
-            obj1.easing = tmp(tmp2[18]).DECELERATED_EASING;
-            obj.height = obj2.withDelay(num, tmpResult.withTiming(value, obj1));
-            tmp7 = obj;
+            const withTiming = timing.withTiming;
+            const obj2 = { duration: 400, easing: native.DECELERATED_EASING };
+            timing;
+            const value = sharedValue1.get();
+            obj.height = withDelay(num, withTiming(value, obj2));
+            tmp9 = obj;
           }
-          return tmp7;
+          return tmp9;
         }
       }
-      const tmp2Result8 = channel(channelAction[25]);
-      V.__closure = {
+      let obj4 = {
         useReducedMotion: stateFromStores,
         nextHeight: sharedValue1,
-        withDelay: channel(channelAction[25]).withDelay,
-        isViewAction: tmp9,
+        withDelay: tmp2(tmp3[25]).withDelay,
+        isViewAction: tmp10,
         completed,
-        withTiming: channel(channelAction[26]).withTiming,
-        DECELERATED_EASING: channel(channelAction[18]).DECELERATED_EASING,
+        withTiming: tmp2(tmp3[26]).withTiming,
+        DECELERATED_EASING: tmp2(tmp3[18]).DECELERATED_EASING,
       };
+      V.__closure = obj4;
       V.__workletHash = 12048442500119;
       V.__initData = __initData4;
-      const items3 = [tmp10[1]];
+      const items3 = [tmp11[1]];
       const animatedStyle1 = tmp2Result8.useAnimatedStyle(V);
-      [][0] = tmp13[1];
-      const callback = obj4.useCallback((nativeEvent) => {
+      [][0] = tmp14[1];
+      const callback = obj3.useCallback((nativeEvent) => {
         closure_8(nativeEvent.nativeEvent.layout.height);
       }, items3);
       if (null == channelAction) {
         return null;
       } else {
         function renderAction() {
+          let intl;
+          let items;
+          let items1;
           let tmp3Result = null;
           if (null != channelAction) {
-            const obj = { style: closure_1.container, children: null };
+            const obj = { style: closure_1.container, children: items };
             const obj2 = { emoji: channelAction.emoji };
-            const items = [__initData(closure_17, obj2), ,];
-            const obj3 = { style: closure_1.text, children: null };
+            items = [sharedValue1(closure_17, obj2), ,];
+            const obj3 = { style: closure_1.text, children: items1 };
             const obj4 = {
               variant: "text-sm/medium",
               color: "mobile-text-heading-primary",
               style: closure_1.wrap,
               children: channelAction.title,
             };
-            const items1 = [__initData(Text_Text.Text, obj4)];
-            const obj5 = { variant: "text-xxs/normal", color: "text-muted", children: null };
-            const intl = util.intl;
-            obj5.children = intl.string(util.t["ElGg8+"]);
-            items1[1] = __initData(Text_Text.Text, obj5);
-            obj3.children = items1;
-            items[1] = __initData2(View, obj3);
+            items1 = [sharedValue1(Text_Text.Text, obj4)];
+            const obj5 = { variant: "text-xxs/normal", color: "text-muted", children: intl.string(intl4.t["ElGg8+"]) };
+            const Text = Text_Text.Text;
+            intl = intl4.intl;
+            items1[1] = sharedValue1(Text, obj5);
+            items[1] = map1(View, obj3);
             let tmp6Result = completed;
-            if (completed) {
-              const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef11917 };
-              tmp6Result = __initData(native.Icon, obj6);
+            if (tmp6Result) {
+              const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: AssetRegistryDefault3 };
+              const Icon = native.Icon;
+              tmp6Result = sharedValue1(Icon, obj6);
             }
             items[2] = tmp6Result;
-            obj.children = items;
-            tmp3Result = __initData2(View, obj);
+            tmp3Result = map1(View, obj);
           }
           return tmp3Result;
         }
-        let obj6 = { style: tmp.measurement, onLayout: callback, children: renderAction() };
-        const items4 = [sharedValue1(stateFromStores, obj6), ,];
-        let tmp30Result = !tmp9;
-        if (!tmp9) {
-          let obj7 = { style: null, children: null };
-          const items5 = [tmp.animatedContainer, animatedStyle];
-          obj7.style = items5;
-          obj7.children = renderAction();
-          tmp30Result = tmp30(require("ReanimatedRexport").View, obj7);
+        let obj5 = { style: tmp.measurement, onLayout: callback, children: renderAction() };
+        const items4 = [sharedValue1(stateFromStores, obj5), ,];
+        let tmp32Result = !tmp10;
+        const tmp33 = stateFromStores;
+        if (tmp32Result) {
+          let obj6 = { style: items5, children: renderAction() };
+          items5 = [tmp.animatedContainer, animatedStyle];
+          View = require("ReanimatedRexport").View;
+          tmp32Result = tmp32(View, obj6);
         }
-        items4[1] = tmp30Result;
-        let tmp28Result = null;
+        items4[1] = tmp32Result;
+        let tmp30Result = null;
         if (completed) {
-          tmp28Result = null;
+          tmp30Result = null;
           if (null != nextMemberAction) {
             function renderNextAction() {
+              let Icon;
+              let channelId;
+              let guild_id;
+              let intl;
+              let intl2;
+              let items;
+              let items1;
+              let obj5;
+              let obj8;
               let tmp2 = null;
               if (null != nextMemberAction) {
-                const obj = {
+                let obj = {
                   accessibilityRole: "button",
-                  accessibilityLabel: null,
-                  style: null,
-                  onPress: null,
-                  children: null,
+                  accessibilityLabel: intl.string(intl4.t.PDTjLN),
+                  style: closure_1.container,
+                  onPress() {
+                    const obj = channel(channelAction[29]);
+                    return obj.transitionTo(closure_10.CHANNEL(guild_id.guild_id, channelId.channelId));
+                  },
+                  children: items,
                 };
-                const intl = util.intl;
-                obj.accessibilityLabel = intl.string(util.t.PDTjLN);
-                obj.style = closure_1.container;
-                obj.onPress = function onPress() {
-                  return channel(channelAction[29]).transitionTo(
-                    closure_10.CHANNEL(guild_id.guild_id, channelId.channelId),
-                  );
-                };
+                const PressableHighlight = Pressables.PressableHighlight;
+                intl = intl4.intl;
                 const obj2 = { emoji: nextMemberAction.emoji };
-                const items = [__initData(closure_17, obj2), ,];
-                const obj3 = { style: closure_1.text, children: null };
+                items = [sharedValue1(closure_17, obj2), ,];
+                const obj3 = { style: closure_1.text, children: items1 };
                 const obj4 = {
                   variant: "text-sm/medium",
                   color: "mobile-text-heading-primary",
                   style: closure_1.wrap,
-                  children: null,
+                  children: intl2.format(intl4.t["/beONw"], obj5),
                 };
-                const intl2 = util.intl;
-                const obj5 = { step: nextMemberAction.title };
-                obj4.children = intl2.format(util.t["/beONw"], obj5);
-                const items1 = [__initData(Text_Text.Text, obj4)];
+                const Text = Text_Text.Text;
+                intl2 = intl4.intl;
+                obj5 = { step: nextMemberAction.title };
+                items1 = [sharedValue1(Text, obj4)];
                 const obj6 = { action: nextMemberAction };
-                items1[1] = __initData(closure_16, obj6);
-                obj3.children = items1;
-                items[1] = __initData2(View, obj3);
-                const obj7 = { style: closure_1.circle, children: null };
-                const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef11914 };
-                obj7.children = __initData(native.Icon, obj8);
-                items[2] = __initData(View, obj7);
-                obj.children = items;
-                tmp2 = __initData2(Pressables.PressableHighlight, obj);
+                items1[1] = sharedValue1(closure_16, obj6);
+                items[1] = map1(View, obj3);
+                const obj7 = { style: closure_1.circle, children: sharedValue1(Icon, obj8) };
+                obj8 = {
+                  size: native.Icon.Sizes.REFRESH_SMALL_16,
+                  style: closure_1.icon,
+                  source: AssetRegistryDefault2,
+                };
+                Icon = native.Icon;
+                items[2] = sharedValue1(View, obj7);
+                tmp2 = map1(PressableHighlight, obj);
               }
               return tmp2;
             }
-            let obj8 = { children: null };
-            const obj9 = { style: tmp.measurement, onLayout: tmp23, children: renderNextAction() };
-            const items6 = [tmp30(stateFromStores, obj9)];
-            const obj10 = { style: null, children: null };
-            const items7 = [tmp.animatedContainer, animatedStyle1];
-            obj10.style = items7;
-            obj10.children = renderNextAction();
-            items6[1] = tmp30(require("ReanimatedRexport").View, obj10);
-            obj8.children = items6;
-            tmp28Result = closure_13(closure_14, obj8);
+            let obj7 = { children: items6 };
+            let obj8 = { style: tmp.measurement, onLayout: tmp25, children: renderNextAction() };
+            items6 = [sharedValue1(tmp33, obj8)];
+            const obj9 = { style: items7, children: renderNextAction() };
+            items7 = [tmp.animatedContainer, animatedStyle1];
+            const View2 = require("ReanimatedRexport").View;
+            items6[1] = sharedValue1(View2, obj9);
+            tmp30Result = closure_13(closure_14, obj7);
           }
         }
-        const obj11 = { children: null };
-        items4[2] = tmp28Result;
-        obj11.children = items4;
-        return closure_13(closure_14, obj11);
+        const obj10 = { children: items4 };
+        items4[2] = tmp30Result;
+        return closure_13(closure_14, obj10);
       }
-      let obj5 = {
-        useReducedMotion: stateFromStores,
-        nextHeight: sharedValue1,
-        withDelay: channel(channelAction[25]).withDelay,
-        isViewAction: tmp9,
-        completed,
-        withTiming: channel(channelAction[26]).withTiming,
-        DECELERATED_EASING: channel(channelAction[18]).DECELERATED_EASING,
-      };
     };
-ReactCompilerGating = fn(558);
-const memoResult = noop.memo(
+const memo = react.memo;
+ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (channel) => {
-        const cResult = channel(576).c(5);
-        channel = channel.channel;
+        let first;
+        let tmp7;
         const obj = channel(576);
-        const canSeeOnboardingHome = channel(6723).useCanSeeOnboardingHome(channel.guild_id);
+        const cResult = obj.c(5);
+        channel = channel.channel;
+        const obj2 = channel(6723);
+        const canSeeOnboardingHome = obj2.useCanSeeOnboardingHome(channel.guild_id);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [GuildMemberStore];
           cResult[0] = items;
-          let first = items;
+          first = items;
         } else {
           first = cResult[0];
         }
@@ -1027,25 +1073,30 @@ const memoResult = noop.memo(
           };
           cResult[1] = channel.guild_id;
           cResult[2] = fn;
-          let tmp7 = fn;
+          tmp7 = fn;
         } else {
           tmp7 = cResult[2];
         }
-        const obj2 = channel(6723);
-        const stateFromStores = channel(573).useStateFromStores(first, tmp7);
         const tmpResult = channel(573);
+        const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
         let tmp9 = null;
+        const tmpResult2 = channel(11916);
         if (!tmpResult2.useAllActionsCompleted(channel.guild_id)) {
           tmp9 = null;
           if (!stateFromStores) {
             tmp9 = null;
             if (canSeeOnboardingHome) {
+              let tmp10;
               if (cResult[3] !== channel) {
                 const obj3 = { channel };
                 const tmp13 = closure_12(closure_22, obj3);
                 cResult[3] = channel;
                 cResult[4] = tmp13;
+                tmp10 = tmp13;
+              } else {
+                tmp10 = cResult[4];
               }
+              tmp9 = tmp10;
             }
           }
         }
@@ -1053,10 +1104,11 @@ const memoResult = noop.memo(
       }
     : (channel) => {
         channel = channel.channel;
-        const canSeeOnboardingHome = channel(6723).useCanSeeOnboardingHome(channel.guild_id);
         const obj = channel(6723);
+        const canSeeOnboardingHome = obj.useCanSeeOnboardingHome(channel.guild_id);
         const items = [GuildMemberStore];
-        const stateFromStores = channel(573).useStateFromStores(items, () => {
+        const obj2 = channel(573);
+        const stateFromStores = obj2.useStateFromStores(items, () => {
           const selfMember = GuildMemberStore.getSelfMember(channel.guild_id);
           let isPending;
           if (selfMember != null) {
@@ -1064,8 +1116,8 @@ const memoResult = noop.memo(
           }
           return true === isPending;
         });
-        const obj2 = channel(573);
         let tmp3 = null;
+        const obj3 = channel(11916);
         if (!obj3.useAllActionsCompleted(channel.guild_id)) {
           tmp3 = null;
           if (!stateFromStores) {
@@ -1079,64 +1131,86 @@ const memoResult = noop.memo(
         return tmp3;
       },
 );
-ReactCompilerGating = fn(558);
-let obj4 = { tintColor: nativeDefault.colors.WHITE };
-size = fn(2);
-let result = size.fileFinishedImporting("modules/guild_onboarding_home/native/MemberActionChatInputBanner.tsx");
-
-export const MemberActionChatInputBannerGuarded = memoResult;
-export const MemberActionsChatInputBannerGuardedOuter = noop.memo(
+const memo2 = react.memo;
+ReactCompilerGating = ReactCompilerGating_mod;
+const memo2Result = memo2(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (channel) => {
-        const cResult = c.c(2);
+        let channelAction;
+        let completed;
+        let tmp9;
+        const obj = react2;
+        const cResult = obj.c(2);
         channel = channel.channel;
-        const memberActionsForChannel = MemberActionUtils.useMemberActionsForChannel(channel.guild_id, channel);
+        const obj2 = MemberActionUtils;
+        const memberActionsForChannel = obj2.useMemberActionsForChannel(channel.guild_id, channel);
         ({ channelAction, completed } = memberActionsForChannel);
         let channelId;
+        const useNextMemberAction = MemberActionUtils.useNextMemberAction;
+        const guild_id = channel.guild_id;
+        MemberActionUtils;
         if (channelAction != null) {
           channelId = channelAction.channelId;
         }
         let actionType;
-        const nextMemberAction = MemberActionUtils.useNextMemberAction(channel.guild_id, channelId);
-        if (channelAction != null) {
-          actionType = channelAction.actionType;
-        }
-        if (actionType === GuildOnboardingHomeTypes.NewMemberActionTypes.VIEW) {
-          let tmp8 = null;
-          if (completed) {
-            tmp8 = null;
-          }
-          return tmp8;
-        }
-        if (cResult[0] !== channel) {
-          const obj4 = { channel };
-          const tmp12 = __initData(memoResult, obj4);
-          cResult[0] = channel;
-          cResult[1] = tmp12;
-        }
-      }
-    : (channel) => {
-        channel = channel.channel;
-        const memberActionsForChannel = MemberActionUtils.useMemberActionsForChannel(channel.guild_id, channel);
-        ({ channelAction, completed } = memberActionsForChannel);
-        let channelId;
-        if (channelAction != null) {
-          channelId = channelAction.channelId;
-        }
-        let actionType;
-        const nextMemberAction = MemberActionUtils.useNextMemberAction(channel.guild_id, channelId);
+        const nextMemberAction = useNextMemberAction(guild_id, channelId);
         if (channelAction != null) {
           actionType = channelAction.actionType;
         }
         if (actionType !== GuildOnboardingHomeTypes.NewMemberActionTypes.VIEW) {
-          const obj3 = { channel };
-          let tmp7 = __initData(memoResult, obj3);
+          let tmp10;
+          if (cResult[0] !== channel) {
+            const obj3 = { channel };
+            const tmp13 = closure_12(memoResult, obj3);
+            cResult[0] = channel;
+            cResult[1] = tmp13;
+            tmp10 = tmp13;
+          } else {
+            tmp10 = cResult[1];
+          }
+          tmp9 = tmp10;
         } else {
-          tmp7 = null;
+          tmp9 = null;
           if (completed) {
-            tmp7 = null;
+            tmp9 = null;
           }
         }
-        return tmp7;
+        return tmp9;
+      }
+    : (channel) => {
+        let channelAction;
+        let completed;
+        let tmp8;
+        channel = channel.channel;
+        const obj = MemberActionUtils;
+        const memberActionsForChannel = obj.useMemberActionsForChannel(channel.guild_id, channel);
+        ({ channelAction, completed } = memberActionsForChannel);
+        let channelId;
+        const useNextMemberAction = MemberActionUtils.useNextMemberAction;
+        const guild_id = channel.guild_id;
+        MemberActionUtils;
+        if (channelAction != null) {
+          channelId = channelAction.channelId;
+        }
+        let actionType;
+        const nextMemberAction = useNextMemberAction(guild_id, channelId);
+        if (channelAction != null) {
+          actionType = channelAction.actionType;
+        }
+        if (actionType !== GuildOnboardingHomeTypes.NewMemberActionTypes.VIEW) {
+          const obj2 = { channel };
+          tmp8 = closure_12(memoResult, obj2);
+        } else {
+          tmp8 = null;
+          if (completed) {
+            tmp8 = null;
+          }
+        }
+        return tmp8;
       },
 );
+size = size_mod;
+let result = size.fileFinishedImporting("modules/guild_onboarding_home/native/MemberActionChatInputBanner.tsx");
+
+export const MemberActionChatInputBannerGuarded = memoResult;
+export const MemberActionsChatInputBannerGuardedOuter = memo2Result;

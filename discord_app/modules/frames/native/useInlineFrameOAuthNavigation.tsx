@@ -1,120 +1,119 @@
 // discord_app/modules/frames/native/useInlineFrameOAuthNavigation.tsx
+import Constants from "../../../Constants.tsx";
 import ComponentDispatchUtils from "../../../utils/ComponentDispatchUtils.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import FramesConstants from "../FramesConstants.tsx";
+import Constants2 from "../../oauth2/native/Constants.tsx";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import react from "../../../../_runtime/00019_react.js";
 import FramesStore from "../FramesStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const isLaunched = fn(8704).isLaunched;
-const ComponentActions = fn(1085).ComponentActions;
-let closure_8 = fn(8710).OAUTH2_AUTHORIZE_MODAL_KEY;
-const size = fn(2);
+let c0, closure_1;
+
+const isLaunched = FramesConstants.isLaunched;
+const ComponentActions = Constants.ComponentActions;
+let closure_8 = Constants2.OAUTH2_AUTHORIZE_MODAL_KEY;
 const result = size.fileFinishedImporting("modules/frames/native/useInlineFrameOAuthNavigation.tsx");
 
 export default function useInlineFrameOAuthNavigation(arg0) {
-  closure_0 = arg0;
+  let SHOW_OAUTH2_MODAL;
+  let closure_0 = arg0;
   const items = [arg0];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     function dismissOAuthModal() {
-      if (c1) {
-        ModalActionCreatorsDefault.popWithKey(closure_8);
+      const tmp = c1;
+      if (tmp) {
+        obj = ModalActionCreatorsDefault;
+        obj.popWithKey(closure_8);
         c1 = false;
       }
     }
     function showOAuth2Modal() {
-      const self = this;
-      const apply = closure_4.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
+      return obj(...arguments);
     }
-    closure_4 = async function _showOAuth2Modal(arg0) {
-      let clientId = arg0;
-      c2 = 0;
-      c3 = 0;
-      return (async (arg0) => {
-        if (c3 === 2) {
-          c3 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj4 = { value, done: true };
-            return obj4;
+    let obj = function _showOAuth2Modal() {
+      let mainFrame;
+      obj = _asyncToGenerator(async (arg0) => {
+        const clientId = arg0;
+        let c2 = 0;
+        let c3 = 0;
+        return (async (arg0) => {
+          if (c3 === 2) {
+            c3 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              return { value, done: true };
+            } else {
+              return { value: "IconComponent", done: null };
+            }
           } else {
-            return { value: "IconComponent", done: null };
-          }
-        } else {
-          try {
-            c3 = 2;
-            if (0 === c2) {
-              if (arg0 === 1) {
+            try {
+              c3 = 2;
+              if (0 === c2) {
+                if (arg0 === 1) {
+                  c3 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c3 = 3;
+                  return { value, done: true };
+                } else {
+                  closure_1 = tmp;
+                  if (clientId.clientId === clientId) {
+                    if (!closure_2_6(mainFrame.getMainFrame())) {
+                      const obj2 = closure_2_1(dismissOAuthModal[6]);
+                      obj2.popWithKey(closure_2_8);
+                      const pushLazy = closure_2_1(dismissOAuthModal[6]).pushLazy;
+                      const obj5 = { dismissOAuthModal };
+                      closure_2_1(dismissOAuthModal[6]);
+                      const tmp15 = closure_2_0(dismissOAuthModal[8])(dismissOAuthModal[7], dismissOAuthModal.paths);
+                      const merged = Object.assign(clientId);
+                      c2 = 1;
+                      c3 = 1;
+                      const obj6 = { value: pushLazy(tmp15, obj5, closure_2_8), done: false };
+                      return obj6;
+                    }
+                  }
+                }
+              } else if (arg0 === 1) {
                 c3 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c3 = 3;
-                const obj5 = { value, done: true };
-                return obj5;
+                return { value, done: true };
               } else {
-                closure_1 = tmp2;
-                if (clientId.clientId === clientId) {
-                  if (!closure_2_6(mainFrame.getMainFrame())) {
-                    closure_2_1(dismissOAuthModal[6]).popWithKey(closure_2_8);
-                    const obj2 = closure_2_1(dismissOAuthModal[6]);
-                    const obj6 = {};
-                    const obj3 = closure_2_1(dismissOAuthModal[6]);
-                    const merged = Object.assign(clientId);
-                    obj6.dismissOAuthModal = dismissOAuthModal;
-                    c2 = 1;
-                    c3 = 1;
-                    const obj7 = {
-                      value: obj3.pushLazy(
-                        closure_2_0(dismissOAuthModal[8])(dismissOAuthModal[7], dismissOAuthModal.paths),
-                        obj6,
-                        closure_2_8,
-                      ),
-                      done: false,
-                    };
-                    return obj7;
-                  }
+                c1 = true;
+                if (closure_129_0) {
+                  closure_129_2();
                 }
-                c3 = 3;
               }
-            } else if (arg0 === 1) {
               c3 = 3;
-              throw value;
-            } else if (arg0 !== 2) {
-              closure_129_1 = true;
-              if (closure_129_0) {
-                closure_129_2();
-              }
+              return { value: "IconComponent", done: null };
+            } catch (tmp20) {
+              c3 = 3;
+              throw tmp20;
             }
-            c3 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } catch (tmp20) {
-            c3 = tmp;
-            throw tmp20;
           }
-        }
-      })();
+        })();
+      });
+      return obj(...arguments);
     };
     if (null != c0) {
       c0 = false;
-      c1 = false;
+      let c1 = false;
       let ComponentDispatch = closure_0(dependencyMap[9]).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(SHOW_OAUTH2_MODAL.SHOW_OAUTH2_MODAL, showOAuth2Modal);
       return () => {
         c0 = true;
         const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
         ComponentDispatch.unsubscribe(ComponentActions.SHOW_OAUTH2_MODAL, showOAuth2Modal);
-        if (c1) {
-          ModalActionCreatorsDefault.popWithKey(closure_8);
+        const tmp3 = c1;
+        if (tmp3) {
+          obj = ModalActionCreatorsDefault;
+          obj.popWithKey(closure_8);
           c1 = false;
         }
       };

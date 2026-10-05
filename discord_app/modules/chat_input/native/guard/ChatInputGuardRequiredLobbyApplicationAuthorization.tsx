@@ -1,77 +1,87 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardRequiredLobbyApplicationAuthorization.tsx
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const Image = fn(17).Image;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj = { icon: null };
-let size = { height: 40, width: 40, resizeMode: "contain", borderRadius: nativeDefault.radii.md };
-obj.icon = size;
+let requiredLinkedLobbyApplication;
+
+let size;
+const Image = react_native.Image;
+const jsx = Fragment.jsx;
+let obj = { icon: size };
+size = { height: 40, width: 40, resizeMode: "contain", borderRadius: nativeDefault.radii.md };
 let closure_5 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/chat_input/native/guard/ChatInputGuardRequiredLobbyApplicationAuthorization.tsx",
-);
-
-export default noop.memo(
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (requiredLinkedLobbyApplication) => {
-        const cResult = connectionEntrypointUrl(576).c(22);
+        let connectionEntrypointUrl;
+        let first;
+        let shouldRelaunchLinkedLobbyApplication;
+        let showLinkedLobbyApplicationLoadingIndicator;
+        let obj = connectionEntrypointUrl(576);
+        const cResult = obj.c(22);
         requiredLinkedLobbyApplication = requiredLinkedLobbyApplication.requiredLinkedLobbyApplication;
         ({ showLinkedLobbyApplicationLoadingIndicator, shouldRelaunchLinkedLobbyApplication } =
           requiredLinkedLobbyApplication);
         const tmp4 = closure_5();
         if (!showLinkedLobbyApplicationLoadingIndicator) {
           if (null != requiredLinkedLobbyApplication) {
+            let tmp6;
             if (cResult[1] !== requiredLinkedLobbyApplication) {
               const iconSource = requiredLinkedLobbyApplication.getIconSource(80);
               cResult[1] = requiredLinkedLobbyApplication;
               cResult[2] = iconSource;
-              let tmp6 = iconSource;
+              tmp6 = iconSource;
             } else {
               tmp6 = cResult[2];
             }
             if (cResult[3] === tmp6) {
+              let tmp8;
               if (cResult[4] === tmp4) {
-                let tmp8 = cResult[5];
+                tmp8 = cResult[5];
               }
               if (shouldRelaunchLinkedLobbyApplication) {
+                let tmp21;
                 if (cResult[6] !== requiredLinkedLobbyApplication.name) {
                   const intl3 = tmp(1126).intl;
                   const obj2 = { name: requiredLinkedLobbyApplication.name };
-                  const formatResult = intl3.format(tmp(1126).t["SU2mY/"], obj2);
+                  const formatResult = intl3.format(connectionEntrypointUrl(1126).t["SU2mY/"], obj2);
                   cResult[6] = requiredLinkedLobbyApplication.name;
                   cResult[7] = formatResult;
-                  let tmp21 = formatResult;
+                  tmp21 = formatResult;
                 } else {
                   tmp21 = cResult[7];
                 }
                 if (cResult[8] === tmp8) {
+                  let tmp23;
                   if (cResult[9] === tmp21) {
-                    let tmp23 = cResult[10];
+                    tmp23 = cResult[10];
                   }
                   return tmp23;
                 }
-                const obj3 = { type: "simple-action", icon: tmp8, message: tmp21 };
                 const tmp26 = jsx(ChatInputGuardDefault, { type: "simple-action", icon: tmp8, message: tmp21 });
                 cResult[8] = tmp8;
                 cResult[9] = tmp21;
                 cResult[10] = tmp26;
                 tmp23 = tmp26;
               } else {
+                let tmp12;
+                let tmp14;
+                let tmp16;
                 connectionEntrypointUrl = requiredLinkedLobbyApplication.connectionEntrypointUrl;
                 if (cResult[11] !== requiredLinkedLobbyApplication.name) {
                   const intl = tmp(1126).intl;
                   const obj4 = { name: requiredLinkedLobbyApplication.name };
-                  const formatResult1 = intl.format(tmp(1126).t.EvDn1D, obj4);
+                  const formatResult1 = intl.format(connectionEntrypointUrl(1126).t.EvDn1D, obj4);
                   cResult[11] = requiredLinkedLobbyApplication.name;
                   cResult[12] = formatResult1;
-                  let tmp12 = formatResult1;
+                  tmp12 = formatResult1;
                 } else {
                   tmp12 = cResult[12];
                 }
@@ -83,38 +93,35 @@ export default noop.memo(
                   }
                   cResult[13] = connectionEntrypointUrl;
                   cResult[14] = stringResult;
-                  let tmp14 = stringResult;
+                  tmp14 = stringResult;
                 } else {
                   tmp14 = cResult[14];
                 }
                 if (cResult[15] !== connectionEntrypointUrl) {
                   let fn;
                   if (null != connectionEntrypointUrl) {
-                    fn = () => LinkingDefault.openURLExternally(connectionEntrypointUrl);
+                    fn = () => {
+                      const obj = LinkingDefault;
+                      return obj.openURLExternally(connectionEntrypointUrl);
+                    };
                   }
                   cResult[15] = connectionEntrypointUrl;
                   cResult[16] = fn;
-                  let tmp16 = fn;
+                  tmp16 = fn;
                 } else {
                   tmp16 = cResult[16];
                 }
                 if (cResult[17] === tmp8) {
                   if (cResult[18] === tmp12) {
                     if (cResult[19] === tmp14) {
+                      let tmp17;
                       if (cResult[20] === tmp16) {
-                        let tmp17 = cResult[21];
+                        tmp17 = cResult[21];
                       }
                       return tmp17;
                     }
                   }
                 }
-                const obj5 = {
-                  type: "simple-action",
-                  icon: tmp8,
-                  message: tmp12,
-                  actionLabel: tmp14,
-                  actionOnPress: tmp16,
-                };
                 const tmp20 = jsx(ChatInputGuardDefault, {
                   type: "simple-action",
                   icon: tmp8,
@@ -132,7 +139,6 @@ export default noop.memo(
             }
             let tmp9;
             if (null != tmp6) {
-              const obj6 = { style: tmp4.icon, source: tmp6 };
               tmp9 = <Image style={tmp4.icon} source={tmp6} />;
             }
             cResult[3] = tmp6;
@@ -144,57 +150,72 @@ export default noop.memo(
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const tmp30 = jsx(ChatInputGuardDefault, { type: "simple-action", message: "" });
           cResult[0] = tmp30;
-          let first = tmp30;
+          first = tmp30;
         } else {
           first = cResult[0];
         }
         return first;
       }
     : (requiredLinkedLobbyApplication) => {
+        let shouldRelaunchLinkedLobbyApplication;
+        let showLinkedLobbyApplicationLoadingIndicator;
         requiredLinkedLobbyApplication = requiredLinkedLobbyApplication.requiredLinkedLobbyApplication;
         let connectionEntrypointUrl;
         ({ showLinkedLobbyApplicationLoadingIndicator, shouldRelaunchLinkedLobbyApplication } =
           requiredLinkedLobbyApplication);
         if (!showLinkedLobbyApplicationLoadingIndicator) {
           if (null != requiredLinkedLobbyApplication) {
+            let tmp5;
             const iconSource = requiredLinkedLobbyApplication.getIconSource(80);
             if (null != iconSource) {
-              const obj = { style: tmp.icon, source: iconSource };
-              const tmp5 = <Image style={tmp.icon} source={iconSource} />;
+              tmp5 = <Image style={tmp.icon} source={iconSource} />;
             }
             if (shouldRelaunchLinkedLobbyApplication) {
-              const obj2 = { type: "simple-action", icon: tmp5, message: null };
+              ChatInputGuardDefault;
               const intl3 = connectionEntrypointUrl(1126).intl;
               const obj3 = { name: requiredLinkedLobbyApplication.name };
-              obj2.message = intl3.format(connectionEntrypointUrl(1126).t["SU2mY/"], obj3);
-              return jsx(ChatInputGuardDefault, { type: "simple-action", icon: tmp5, message: null });
+              return (
+                <tmp15
+                  type="simple-action"
+                  icon={tmp5}
+                  message={intl3.format(connectionEntrypointUrl(1126).t["SU2mY/"], obj3)}
+                />
+              );
             } else {
               connectionEntrypointUrl = requiredLinkedLobbyApplication.connectionEntrypointUrl;
-              const obj4 = { type: "simple-action", icon: tmp5, message: null, actionLabel: null, actionOnPress: null };
+              ChatInputGuardDefault;
               const intl = connectionEntrypointUrl(1126).intl;
-              const obj5 = { name: requiredLinkedLobbyApplication.name };
-              obj4.message = intl.format(connectionEntrypointUrl(1126).t.EvDn1D, obj5);
               let stringResult;
+              const obj5 = { name: requiredLinkedLobbyApplication.name };
               if (null != connectionEntrypointUrl) {
                 const intl2 = tmp10(1126).intl;
                 stringResult = intl2.string(tmp10(1126).t.S0W8Z5);
               }
-              obj4.actionLabel = stringResult;
               let fn;
               if (null != connectionEntrypointUrl) {
-                fn = () => LinkingDefault.openURLExternally(connectionEntrypointUrl);
+                fn = () => {
+                  const obj = LinkingDefault;
+                  return obj.openURLExternally(connectionEntrypointUrl);
+                };
               }
-              obj4.actionOnPress = fn;
-              return jsx(ChatInputGuardDefault, {
-                type: "simple-action",
-                icon: tmp5,
-                message: null,
-                actionLabel: null,
-                actionOnPress: null,
-              });
+              return (
+                <tmp9
+                  type="simple-action"
+                  icon={tmp5}
+                  message={intl.format(connectionEntrypointUrl(1126).t.EvDn1D, obj5)}
+                  actionLabel={stringResult}
+                  actionOnPress={fn}
+                />
+              );
             }
           }
         }
         return jsx(ChatInputGuardDefault, { type: "simple-action", message: "" });
       },
 );
+size = size_mod;
+const result = size.fileFinishedImporting(
+  "modules/chat_input/native/guard/ChatInputGuardRequiredLobbyApplicationAuthorization.tsx",
+);
+
+export default memoResult;

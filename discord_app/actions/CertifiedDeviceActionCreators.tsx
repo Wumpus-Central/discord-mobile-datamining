@@ -5,5 +5,7 @@ import size from "../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("actions/CertifiedDeviceActionCreators.tsx");
 
 export const setCertifiedDevices = function setCertifiedDevices(id, devices) {
-  DispatcherDefault.dispatch({ type: "CERTIFIED_DEVICES_SET", applicationId: id, devices });
+  const obj = DispatcherDefault;
+  const obj2 = { type: "CERTIFIED_DEVICES_SET", applicationId: id, devices };
+  obj.dispatch(obj2);
 };

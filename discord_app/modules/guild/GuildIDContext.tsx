@@ -1,8 +1,8 @@
 // discord_app/modules/guild/GuildIDContext.tsx
-import noop from "../../../_runtime/metro/00019__.js";
+import react from "../../../_runtime/00019_react.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const context = noop.createContext(undefined);
-const size = fn(2);
+const context = react.createContext(undefined);
 const result = size.fileFinishedImporting("modules/guild/GuildIDContext.tsx");
 
 export default context;

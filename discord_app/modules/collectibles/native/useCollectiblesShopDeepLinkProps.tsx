@@ -1,18 +1,27 @@
 // discord_app/modules/collectibles/native/useCollectiblesShopDeepLinkProps.tsx
-import _mod19 from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 import CollectiblesShopStore from "../CollectiblesShopStore.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const useMemo = _mod19.useMemo;
-let closure_5 = {};
-const result = size.fileFinishedImporting("modules/collectibles/native/useCollectiblesShopDeepLinkProps.tsx");
+let skuId1, tmp6;
 
-export const useCollectiblesShopDeepLinkProps = ReactCompilerGating.isReactCompilerEnabled()
+const useMemo = react.useMemo;
+let closure_5 = {};
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = initialCategorySkuId(initialBaseProductSkuId[4]).c(14);
+      let categories;
+      let initialBaseProductSkuId;
+      let initialCategorySkuId;
+      let products;
+      let tmp4;
+      let tmp5;
+      const obj = initialCategorySkuId(initialBaseProductSkuId[4]);
+      const cResult = obj.c(14);
       ({ categories, products } = arg0);
+      const tmp = initialCategorySkuId;
+      const tmp2 = initialBaseProductSkuId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [CollectiblesCategoryStore, CollectiblesShopStore];
         class I {
@@ -62,25 +71,33 @@ export const useCollectiblesShopDeepLinkProps = ReactCompilerGating.isReactCompi
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const obj = initialCategorySkuId(initialBaseProductSkuId[4]);
-      const stateFromStoresObject = initialCategorySkuId(initialBaseProductSkuId[6]).useStateFromStoresObject(tmp4, I);
+      const tmpResult = tmp(tmp2[6]);
+      const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp4, I);
       initialCategorySkuId = stateFromStoresObject.initialCategorySkuId;
       initialBaseProductSkuId = stateFromStoresObject.initialBaseProductSkuId;
       let initialVariantIndex = stateFromStoresObject.initialVariantIndex;
       if (null != initialBaseProductSkuId) {
+        let tmp9;
         if (null != initialCategorySkuId) {
           if (cResult[2] === initialBaseProductSkuId) {
+            let tmp10;
             if (cResult[3] === products) {
-              let tmp9 = cResult[4];
+              tmp10 = cResult[4];
             }
             if (cResult[5] === categories) {
+              let tmp12;
               if (cResult[6] === initialCategorySkuId) {
-                let tmp11 = cResult[7];
+                tmp12 = cResult[7];
               }
               if (cResult[8] === initialBaseProductSkuId) {
                 if (cResult[9] === initialCategorySkuId) {
                   if (cResult[10] === initialVariantIndex) {
-                    if (cResult[11] === tmp9) {
+                    if (cResult[11] === tmp10) {
+                      let tmp14;
+                      if (cResult[12] === tmp12) {
+                        tmp14 = cResult[13];
+                      }
+                      tmp9 = tmp14;
                     }
                   }
                 }
@@ -89,8 +106,8 @@ export const useCollectiblesShopDeepLinkProps = ReactCompilerGating.isReactCompi
                 initialProductSkuId: initialBaseProductSkuId,
                 initialVariantIndex,
                 initialCategorySkuId: null,
-                productIndex: null,
-                categoryIndex: null,
+                productIndex: tmp10,
+                categoryIndex: tmp12,
               };
               class I {
                 constructor() {
@@ -133,14 +150,13 @@ export const useCollectiblesShopDeepLinkProps = ReactCompilerGating.isReactCompi
                   return { initialCategorySkuId: skuId1, initialBaseProductSkuId, initialVariantIndex };
                 }
               }
-              obj2.productIndex = tmp9;
-              obj2.categoryIndex = tmp11;
               cResult[8] = initialBaseProductSkuId;
               cResult[9] = initialCategorySkuId;
               cResult[10] = initialVariantIndex;
-              cResult[11] = tmp9;
-              cResult[12] = tmp11;
+              cResult[11] = tmp10;
+              cResult[12] = tmp12;
               cResult[13] = obj2;
+              tmp14 = obj2;
             }
             let bound;
             if (null != categories) {
@@ -193,7 +209,7 @@ export const useCollectiblesShopDeepLinkProps = ReactCompilerGating.isReactCompi
             }
             cResult[6] = initialCategorySkuId;
             cResult[7] = bound;
-            tmp11 = bound;
+            tmp12 = bound;
           }
           let bound1;
           if (null != products) {
@@ -247,18 +263,20 @@ export const useCollectiblesShopDeepLinkProps = ReactCompilerGating.isReactCompi
           }
           cResult[3] = products;
           cResult[4] = bound1;
-          tmp9 = bound1;
+          tmp10 = bound1;
         }
+        return tmp9;
       }
-      return closure_5;
+      tmp9 = closure_5;
     }
   : (categories) => {
       categories = categories.categories;
       const products = categories.products;
       let initialBaseProductSkuId;
       let initialVariantIndex;
+      const obj = categories(products[6]);
       const items = [initialBaseProductSkuId, initialVariantIndex];
-      const stateFromStoresObject = categories(products[6]).useStateFromStoresObject(items, () => {
+      const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
         const initialProductSkuId = initialVariantIndex.initialProductSkuId;
         const product = initialBaseProductSkuId.getProduct(initialProductSkuId);
         initialVariantIndex = 0;
@@ -270,8 +288,8 @@ export const useCollectiblesShopDeepLinkProps = ReactCompilerGating.isReactCompi
             const productByStoreListingId = obj.getProductByStoreListingId(product.variantGroupStoreListingId);
             let isVariantProduct = null != productByStoreListingId;
             if (isVariantProduct) {
-              isVariantProduct = categories(products[5]).getIsVariantProduct(productByStoreListingId);
               const obj2 = categories(products[5]);
+              isVariantProduct = obj2.getIsVariantProduct(productByStoreListingId);
             }
             initialVariantIndex = 0;
             initialBaseProductSkuId = initialProductSkuId;
@@ -298,16 +316,19 @@ export const useCollectiblesShopDeepLinkProps = ReactCompilerGating.isReactCompi
       initialVariantIndex = stateFromStoresObject.initialVariantIndex;
       const items1 = [initialBaseProductSkuId, initialVariantIndex, initialCategorySkuId, products, categories];
       return initialCategorySkuId(() => {
+        let bound;
+        let bound1;
         if (null != initialBaseProductSkuId) {
+          let obj2;
           if (null != initialCategorySkuId) {
-            let obj2 = {
+            obj2 = {
               initialProductSkuId: tmp,
               initialVariantIndex,
               initialCategorySkuId: tmp6,
-              productIndex: null,
-              categoryIndex: null,
+              productIndex: bound,
+              categoryIndex: bound1,
             };
-            let bound;
+            bound = undefined;
             if (null != products) {
               const _Math = Math;
               bound = Math.max(
@@ -315,8 +336,7 @@ export const useCollectiblesShopDeepLinkProps = ReactCompilerGating.isReactCompi
                 products.findIndex((skuId) => skuId.skuId === initialBaseProductSkuId),
               );
             }
-            obj2.productIndex = bound;
-            let bound1;
+            bound1 = undefined;
             if (null != categories) {
               const _Math2 = Math;
               bound1 = Math.max(
@@ -324,10 +344,12 @@ export const useCollectiblesShopDeepLinkProps = ReactCompilerGating.isReactCompi
                 categories.findIndex((skuId) => skuId.skuId === initialCategorySkuId),
               );
             }
-            obj2.categoryIndex = bound1;
           }
           return obj2;
         }
         obj2 = closure_5;
       }, items1);
     };
+const result = size.fileFinishedImporting("modules/collectibles/native/useCollectiblesShopDeepLinkProps.tsx");
+
+export const useCollectiblesShopDeepLinkProps = tmp2;

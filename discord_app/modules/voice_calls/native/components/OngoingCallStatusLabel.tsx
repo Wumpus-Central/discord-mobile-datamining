@@ -1,19 +1,33 @@
 // discord_app/modules/voice_calls/native/components/OngoingCallStatusLabel.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import native from "../../../../design/void/native.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import CallStore from "../../../../stores/CallStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-let ReactCompilerGating = fn(558);
+const require = globalThis.__r;
+let _require, num, num2, tmp, tmp6;
+
+const jsx = Fragment.jsx;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1, arg2) => {
+      let first;
+      let stringResult1;
+      let tmp12;
+      let tmp14;
+      let tmp16;
+      let tmp8;
+      let user;
       _require = arg0;
-      let xNeSms = first;
-      const cResult = require("c").c(11);
+      const tmp2 = first;
+      const obj = require("react");
+      const cResult = obj.c(11);
+      const tmp4 = undefined === arg2 || arg2;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const id = AuthenticationStore.getId();
         cResult[0] = id;
@@ -24,9 +38,9 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [VoiceStateStore, CallStore];
         cResult[1] = items;
-        let tmp7 = items;
+        tmp8 = items;
       } else {
-        tmp7 = cResult[1];
+        tmp8 = cResult[1];
       }
       if (cResult[2] !== arg0) {
         class N {
@@ -48,7 +62,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp2 = call.ringing.length > 0;
               }
               tmp3 = !tmp2;
-              if (!tmp2) {
+              if (tmp3) {
                 num2 = 1;
                 tmp3 = 1 === values.length;
               }
@@ -64,7 +78,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = arg0;
         cResult[3] = N;
         cResult[4] = items1;
-        let tmp11 = items1;
+        tmp12 = items1;
       } else {
         class N {
           constructor() {
@@ -85,7 +99,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp2 = call.ringing.length > 0;
               }
               tmp3 = !tmp2;
-              if (!tmp2) {
+              if (tmp3) {
                 num2 = 1;
                 tmp3 = 1 === values.length;
               }
@@ -97,11 +111,10 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        tmp11 = cResult[4];
+        tmp12 = cResult[4];
       }
-      const obj = require("c");
-      let tmp3 = undefined === arg2 || arg2;
-      const stateFromStores = require("initialize").useStateFromStores(tmp7, N, tmp11);
+      const tmpResult = require("get initialized");
+      const stateFromStores = tmpResult.useStateFromStores(tmp8, N, tmp12);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
@@ -122,7 +135,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp2 = call.ringing.length > 0;
               }
               tmp3 = !tmp2;
-              if (!tmp2) {
+              if (tmp3) {
                 num2 = 1;
                 tmp3 = 1 === values.length;
               }
@@ -134,8 +147,9 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const stringResult = obj3.string(tmp(xNeSms[8]).t["1zFMqU"]);
+        const stringResult = obj3.string(require("intl").t["1zFMqU"]);
         cResult[5] = stringResult;
+        tmp14 = stringResult;
       } else {
         class N {
           constructor() {
@@ -156,7 +170,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp2 = call.ringing.length > 0;
               }
               tmp3 = !tmp2;
-              if (!tmp2) {
+              if (tmp3) {
                 num2 = 1;
                 tmp3 = 1 === values.length;
               }
@@ -189,7 +203,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp2 = call.ringing.length > 0;
               }
               tmp3 = !tmp2;
-              if (!tmp2) {
+              if (tmp3) {
                 num2 = 1;
                 tmp3 = 1 === values.length;
               }
@@ -201,6 +215,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
+        return tmp14;
       }
       if (cResult[6] === stateFromStores) {
         class N {
@@ -222,7 +237,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp2 = call.ringing.length > 0;
               }
               tmp3 = !tmp2;
-              if (!tmp2) {
+              if (tmp3) {
                 num2 = 1;
                 tmp3 = 1 === values.length;
               }
@@ -234,8 +249,9 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
+        tmp14 = tmp16;
       }
-      if (!stateFromStores) {
+      if (stateFromStores) {
         class N {
           constructor() {
             tmp = closure_0;
@@ -255,7 +271,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp2 = call.ringing.length > 0;
               }
               tmp3 = !tmp2;
-              if (!tmp2) {
+              if (tmp3) {
                 num2 = 1;
                 tmp3 = 1 === values.length;
               }
@@ -267,59 +283,28 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        let stringResult1 = obj4.string(tmp(xNeSms[8]).t["NGg/fm"]);
         cResult[6] = stateFromStores;
-        cResult[7] = tmp3;
+        cResult[7] = tmp4;
         cResult[8] = stringResult1;
-      } else {
-        class N {
-          constructor() {
-            tmp = closure_0;
-            if (null == closure_0) {
-              flag = false;
-              return false;
-            } else {
-              tmp5 = globalThis;
-              _Object = Object;
-              tmp6 = closure_4;
-              values = Object.values(closure_4.getVoiceStatesForChannel(tmp.id));
-              tmp7 = closure_3;
-              call = closure_3.getCall(tmp.id);
-              tmp2 = null != call;
-              if (tmp2) {
-                num = 0;
-                tmp2 = call.ringing.length > 0;
-              }
-              tmp3 = !tmp2;
-              if (!tmp2) {
-                num2 = 1;
-                tmp3 = 1 === values.length;
-              }
-              if (tmp3) {
-                tmp4 = closure_1;
-                tmp3 = values[0].userId === closure_1;
-              }
-              return tmp3;
-            }
-          }
-        }
+        tmp16 = stringResult1;
       }
-      const intl = tmp(xNeSms[8]).intl;
-      xNeSms = tmp(xNeSms[8]).t.xNeSms;
-      stringResult1 = intl.string(xNeSms);
-      const tmpResult = require("initialize");
+      const intl = tmp(tmp2[8]).intl;
+      stringResult1 = intl.string(require("intl").t["NGg/fm"]);
     }
   : (arg0, arg1) => {
+      let user;
       _require = arg0;
       let flag = arg2;
       if (arg2 === undefined) {
         flag = true;
       }
       const id = AuthenticationStore.getId();
-      let xNeSms = id;
+      const tmp2 = _require;
+      const tmp3 = id;
       const items = [VoiceStateStore, CallStore];
       const items1 = [id, arg0];
-      const stateFromStores = require("initialize").useStateFromStores(
+      const obj = require("get initialized");
+      const stateFromStores = obj.useStateFromStores(
         items,
         () => {
           if (null == user) {
@@ -328,51 +313,45 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             const _Object = Object;
             const values = Object.values(VoiceStateStore.getVoiceStatesForChannel(user.id));
             const call = CallStore.getCall(user.id);
-            let tmp2 = null != call;
-            if (tmp2) {
-              tmp2 = call.ringing.length > 0;
-            }
-            let tmp3 = !tmp2;
-            if (!tmp2) {
-              tmp3 = 1 === values.length;
-            }
-            if (tmp3) {
-              tmp3 = values[0].userId === id;
-            }
-            return tmp3;
+            return !(null != call && call.ringing.length > 0) && 1 === values.length && values[0].userId === id;
           }
         },
         items1,
       );
-      const intl = require("util").intl;
-      let stringResult = intl.string(require("util").t["1zFMqU"]);
+      const intl = require("intl").intl;
+      let stringResult = intl.string(require("intl").t["1zFMqU"]);
       if (require("CallStateHooks").CallStates.DISCONNECTING !== arg1) {
-        if (tmp2(xNeSms[9]).CallStates.CONNECTED !== arg1) {
-          if (tmp2(xNeSms[9]).CallStates.RINGING === arg1) {
-            const intl2 = tmp2(xNeSms[8]).intl;
-            stringResult = intl2.string(tmp2(xNeSms[8]).t.Xuzre8);
-          } else if (tmp2(xNeSms[9]).CallStates.DISCONNECTED === arg1) {
-            const intl5 = tmp2(xNeSms[8]).intl;
-            stringResult = intl5.string(tmp2(xNeSms[8]).t["w//7ET"]);
+        if (tmp2(tmp3[9]).CallStates.CONNECTED !== arg1) {
+          if (tmp2(tmp3[9]).CallStates.RINGING === arg1) {
+            const intl2 = tmp2(tmp3[8]).intl;
+            stringResult = intl2.string(tmp2(tmp3[8]).t.Xuzre8);
+          } else if (tmp2(tmp3[9]).CallStates.DISCONNECTED === arg1) {
+            const intl5 = tmp2(tmp3[8]).intl;
+            stringResult = intl5.string(tmp2(tmp3[8]).t["w//7ET"]);
           }
-          return stringResult;
         }
+        return stringResult;
       }
-      if (!stateFromStores) {
-        const intl3 = tmp2(xNeSms[8]).intl;
-        let stringResult1 = intl3.string(tmp2(xNeSms[8]).t["NGg/fm"]);
+      if (stateFromStores) {
+        let stringResult1;
+        if (flag) {
+          const intl4 = tmp2(tmp3[8]).intl;
+          stringResult1 = intl4.string(tmp2(tmp3[8]).t.xNeSms);
+        }
+        stringResult = stringResult1;
       }
-      const intl4 = tmp2(xNeSms[8]).intl;
-      xNeSms = tmp2(xNeSms[8]).t.xNeSms;
-      stringResult1 = intl4.string(xNeSms);
+      const intl3 = tmp2(tmp3[8]).intl;
+      stringResult1 = intl3.string(tmp2(tmp3[8]).t["NGg/fm"]);
     };
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/voice_calls/native/components/OngoingCallStatusLabel.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(3);
+      let channel;
+      let style;
+      let useAllAloneText;
+      let voiceState;
+      const obj = react2;
+      const cResult = obj.c(3);
       ({ style, useAllAloneText } = arg0);
       let tmp5 = undefined === useAllAloneText;
       ({ channel, voiceState } = arg0);
@@ -381,8 +360,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp4Result = closure_6(channel, voiceState, tmp5);
       if (cResult[0] === style) {
+        let tmp7;
         if (cResult[1] === tmp4Result) {
-          let tmp7 = cResult[2];
+          tmp7 = cResult[2];
         }
         return tmp7;
       }
@@ -393,6 +373,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = tmp8;
     }
   : (useAllAloneText) => {
+      let channel;
+      let style;
+      let voiceState;
       let flag = useAllAloneText.useAllAloneText;
       ({ style, channel, voiceState } = useAllAloneText);
       if (flag === undefined) {
@@ -401,3 +384,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const children = closure_6(channel, voiceState, flag);
       return jsx(native.LegacyText, { style, children });
     };
+const result = size.fileFinishedImporting("modules/voice_calls/native/components/OngoingCallStatusLabel.tsx");
+
+export default tmp3;

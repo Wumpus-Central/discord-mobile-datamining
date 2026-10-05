@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionTierArchiveOrDeleteActionSheet.tsx
 import _modDef38 from "../../../../../_runtime/metro/00038__.js";
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -11,29 +11,44 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import BottomSheetModal from "../../../../../_runtime/06112_BottomSheetModal.js";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import useArchiveOrDeleteDefault from "useArchiveOrDelete.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 },
-  cancel: { alignSelf: "center" },
-};
-let closure_7 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 };
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionTierArchiveOrDeleteActionSheet.tsx",
-);
+let BottomSheet, groupListingId;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
+let obj2;
+({ TouchableOpacity: c3, View: closure_4 } = react_native);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+let obj = { container: obj2, cancel: { alignSelf: "center" } };
+obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 };
+let closure_7 = createStyles.createStyles(obj);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (groupListingId) => {
-      const cResult = c.c(26);
+      let archiving;
+      let buttonText;
+      let deleting;
+      let descriptionText;
+      let editStateId;
+      let guildId;
+      let handleArchiveOrDelete;
+      let headerText;
+      let intl;
+      let items;
+      let tmp11;
+      let tmp14;
+      let tmp17;
+      let tmp7;
+      let tmp8;
+      let obj = react2;
+      const cResult = obj.c(26);
       groupListingId = groupListingId.groupListingId;
       ({ editStateId, guildId } = groupListingId);
       const tmp4 = closure_7();
@@ -41,11 +56,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       _modDef38(null != groupListingId, "group listing id cannot be null");
       ({ headerText, buttonText, descriptionText, handleArchiveOrDelete, deleting, archiving } =
         useArchiveOrDeleteDefault(guildId, groupListingId, editStateId));
+      useArchiveOrDeleteDefault(guildId, groupListingId, editStateId);
       if (cResult[0] !== bottom) {
         const obj2 = { paddingBottom: bottom };
         cResult[0] = bottom;
         cResult[1] = obj2;
-        let tmp7 = obj2;
+        tmp7 = obj2;
       } else {
         tmp7 = cResult[1];
       }
@@ -54,14 +70,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp10 = hasOwnProperty(Text_Text.Text, obj3);
         cResult[2] = headerText;
         cResult[3] = tmp10;
-        let tmp8 = tmp10;
+        tmp8 = tmp10;
       } else {
         tmp8 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp13 = hasOwnProperty(native.Spacer, { size: 12 });
         cResult[4] = tmp13;
-        let tmp11 = tmp13;
+        tmp11 = tmp13;
       } else {
         tmp11 = cResult[4];
       }
@@ -70,14 +86,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp16 = hasOwnProperty(Text_Text.Text, obj4);
         cResult[5] = descriptionText;
         cResult[6] = tmp16;
-        let tmp14 = tmp16;
+        tmp14 = tmp16;
       } else {
         tmp14 = cResult[6];
       }
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp19 = hasOwnProperty(native.Spacer, { size: 24 });
         cResult[7] = tmp19;
-        let tmp17 = tmp19;
+        tmp17 = tmp19;
       } else {
         tmp17 = cResult[7];
       }
@@ -86,14 +102,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[8] === buttonText) {
         if (cResult[9] === handleArchiveOrDelete) {
+          let tmp20;
+          let tmp22;
+          let tmp26;
           if (cResult[10] === deleting) {
-            let tmp20 = cResult[11];
+            tmp20 = cResult[11];
           }
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
             const tmp24 = hasOwnProperty(native.Spacer, { size: 24 });
             cResult[12] = tmp24;
-            let tmp22 = tmp24;
+            tmp22 = tmp24;
           } else {
             tmp22 = cResult[12];
           }
@@ -122,12 +141,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj.hideActionSheet();
               }
             }
-            const obj5 = { variant: "text-sm/semibold", color: "interactive-text-active", children: null };
-            const intl = util.intl;
-            obj5.children = intl.string(util.t["ETE/oC"]);
-            const tmp27 = hasOwnProperty(Text_Text.Text, obj5);
+            const obj5 = {
+              variant: "text-sm/semibold",
+              color: "interactive-text-active",
+              children: intl.string(intl2.t["ETE/oC"]),
+            };
+            const Text = Text_Text.Text;
+            intl = intl2.intl;
+            const tmp27 = hasOwnProperty(Text, obj5);
             cResult[14] = tmp27;
-            const tmp26 = tmp27;
+            tmp26 = tmp27;
           } else {
             class D {
               constructor() {
@@ -144,9 +167,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj6 = { onPress: D, style: tmp4.cancel, activeOpacity: 0.5, children: tmp26 };
-            const tmp30 = hasOwnProperty(React3, obj6);
             cResult[15] = tmp4.cancel;
-            cResult[16] = tmp30;
+            cResult[16] = hasOwnProperty(_false, obj6);
+            const tmp30 = hasOwnProperty(_false, obj6);
           } else {
             class D {
               constructor() {
@@ -163,16 +186,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const obj7 = { contentContainerStyle: tmp7, children: null };
-          const items = [tmp8, tmp11, tmp14, tmp17, tmp20, tmp22, tmp28];
-          obj7.children = items;
-          const tmp33 = timestampProducer(BottomSheetModal.BottomSheetScrollView, obj7);
+          const obj7 = { contentContainerStyle: tmp7, children: items };
+          items = [tmp8, tmp11, tmp14, tmp17, tmp20, tmp22, tmp28];
           cResult[17] = tmp7;
           cResult[18] = tmp28;
           cResult[19] = tmp8;
           cResult[20] = tmp14;
           cResult[21] = tmp20;
-          cResult[22] = tmp33;
+          cResult[22] = metroRequire(BottomSheetModal.BottomSheetScrollView, obj7);
+          const tmp33 = metroRequire(BottomSheetModal.BottomSheetScrollView, obj7);
         }
       }
       const tmp21 = hasOwnProperty(components_Button_Button.Button, {
@@ -187,19 +209,34 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = deleting;
       cResult[11] = tmp21;
       tmp20 = tmp21;
-      const tmp6 = useArchiveOrDeleteDefault(guildId, groupListingId, editStateId);
     }
   : (groupListingId) => {
+      let BottomSheetScrollView;
+      let Text;
+      let archiving;
+      let buttonText;
+      let descriptionText;
+      let editStateId;
+      let guildId;
+      let handleArchiveOrDelete;
+      let headerText;
+      let intl;
+      let items;
+      let obj2;
+      let obj6;
       groupListingId = groupListingId.groupListingId;
       ({ editStateId, guildId } = groupListingId);
       const tmp = closure_7();
+      const bottom = useSafeAreaInsetsDefault().bottom;
       _modDef38(null != groupListingId, "group listing id cannot be null");
       const tmp4 = useArchiveOrDeleteDefault(guildId, groupListingId, editStateId);
       let deleting = tmp4.deleting;
       ({ headerText, buttonText, descriptionText, handleArchiveOrDelete, archiving } = tmp4);
-      const obj = { style: tmp.container, children: null };
-      const obj2 = { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
-      const items = [
+      let obj = { style: tmp.container, children: metroRequire(BottomSheetScrollView, obj2) };
+      BottomSheet = Sheet_BottomSheet.BottomSheet;
+      obj2 = { contentContainerStyle: { paddingBottom: bottom }, children: items };
+      BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
+      items = [
         hasOwnProperty(Text_Text.Text, {
           variant: "heading-lg/semibold",
           color: "mobile-text-heading-primary",
@@ -216,30 +253,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         variant: "destructive",
         grow: true,
         onPress: handleArchiveOrDelete,
-        disabled: null,
+        disabled: deleting,
       };
+      const Button = components_Button_Button.Button;
       if (!deleting) {
         deleting = archiving;
       }
-      const obj4 = { backdropOpacity: 0.8, children: null };
-      obj3.disabled = deleting;
-      items[4] = hasOwnProperty(components_Button_Button.Button, obj3);
+      const obj4 = { backdropOpacity: 0.8, children: hasOwnProperty(React3, obj) };
+      items[4] = hasOwnProperty(Button, obj3);
       items[5] = hasOwnProperty(native.Spacer, { size: 24 });
       const obj5 = {
         onPress() {
-          return ActionSheetActionCreatorsDefault.hideActionSheet();
+          const obj = ActionSheetActionCreatorsDefault;
+          return obj.hideActionSheet();
         },
         style: tmp.cancel,
         activeOpacity: 0.5,
-        children: null,
+        children: hasOwnProperty(Text, obj6),
       };
-      const obj6 = { variant: "text-sm/semibold", color: "interactive-text-active", children: null };
-      const intl = util.intl;
-      obj6.children = intl.string(util.t["ETE/oC"]);
-      obj5.children = hasOwnProperty(Text_Text.Text, obj6);
-      items[6] = hasOwnProperty(React3, obj5);
-      obj2.children = items;
-      obj.children = timestampProducer(BottomSheetModal.BottomSheetScrollView, obj2);
-      obj4.children = hasOwnProperty(React4, obj);
-      return hasOwnProperty(Sheet_BottomSheet.BottomSheet, obj4);
+      obj6 = {
+        variant: "text-sm/semibold",
+        color: "interactive-text-active",
+        children: intl.string(intl2.t["ETE/oC"]),
+      };
+      Text = Text_Text.Text;
+      intl = intl2.intl;
+      items[6] = hasOwnProperty(_false, obj5);
+      return hasOwnProperty(BottomSheet, obj4);
     };
+const result = size.fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionTierArchiveOrDeleteActionSheet.tsx",
+);
+
+export default tmp5;

@@ -1,33 +1,37 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx
-import c from "../../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../../_runtime/00576_react.js";
 import DispatcherDefault from "../../../../../Dispatcher.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../../_runtime/00019_react.js";
 import GatewayConnectionStore from "../../../../gateway/GatewayConnectionStore.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import PrivateChannelSortStore from "../../../../../stores/views/PrivateChannelSortStore.tsx";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx",
-);
+let channel;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let sortedChannels;
+      let tmp2;
+      let tmp3;
+      let obj = react2;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n() {
-          closure_0 = closure_5.isConnected();
+          let isConnectedResult;
+          let closure_0 = closure_5.isConnected();
           function isGatewayConnectedListener() {
-            isConnectedResult = GatewayConnectionStore.isConnected();
-            if (isConnectedResult !== isConnectedResult) {
-              if (isConnectedResult) {
+            let arr;
+            let closure_0 = GatewayConnectionStore.isConnected();
+            if (closure_0 !== closure_0) {
+              if (closure_0) {
                 [r10011, arr] = sortedChannels.getSortedChannels();
                 const items = [];
                 const _Math = Math;
                 let num3 = 0;
+                _slicedToArray(sortedChannels.getSortedChannels(), 2);
                 if (0 < Math.min(20, arr.length)) {
                   do {
                     channel = channel.getChannel(arr[num3].channelId);
@@ -42,9 +46,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     let _Math2 = Math;
                   } while (num3 < Math.min(20, arr.length));
                 }
-                const tmp4 = _slicedToArray(sortedChannels.getSortedChannels(), 2);
                 const obj = { type: "CALL_CONNECT_MULTIPLE", channelIds: items };
-                DispatcherDefault.dispatch(obj);
+                const obj2 = DispatcherDefault;
+                obj2.dispatch(obj);
               }
             }
           }
@@ -61,18 +65,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp2, tmp3] = cResult;
       }
-      const effect = noop.useEffect(tmp2, tmp3);
+      const effect = react.useEffect(tmp2, tmp3);
     }
   : () => {
-      const effect = noop.useEffect(() => {
+      let sortedChannels;
+      const effect = react.useEffect(() => {
+        let isConnectedResult;
         function isGatewayConnectedListener() {
-          isConnectedResult = GatewayConnectionStore.isConnected();
-          if (isConnectedResult !== isConnectedResult) {
-            if (isConnectedResult) {
+          let arr;
+          let closure_0 = GatewayConnectionStore.isConnected();
+          if (closure_0 !== closure_0) {
+            if (closure_0) {
               [r10011, arr] = sortedChannels.getSortedChannels();
               const items = [];
               const _Math = Math;
               let num3 = 0;
+              _slicedToArray(sortedChannels.getSortedChannels(), 2);
               if (0 < Math.min(20, arr.length)) {
                 do {
                   channel = channel.getChannel(arr[num3].channelId);
@@ -87,16 +95,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let _Math2 = Math;
                 } while (num3 < Math.min(20, arr.length));
               }
-              const tmp4 = _slicedToArray(sortedChannels.getSortedChannels(), 2);
               const obj = { type: "CALL_CONNECT_MULTIPLE", channelIds: items };
-              DispatcherDefault.dispatch(obj);
+              const obj2 = DispatcherDefault;
+              obj2.dispatch(obj);
             }
           }
         }
-        closure_0 = closure_5.isConnected();
+        let closure_0 = closure_5.isConnected();
         closure_5.addChangeListener(isGatewayConnectedListener);
         return () => {
           GatewayConnectionStore.removeChangeListener(isGatewayConnectedListener);
         };
       }, []);
     };
+const result = size.fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx",
+);
+
+export default tmp2;

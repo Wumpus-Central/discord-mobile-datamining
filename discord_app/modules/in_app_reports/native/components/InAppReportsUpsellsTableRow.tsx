@@ -1,19 +1,27 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import TableRow2 from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx");
+let description;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (description) => {
-      const cResult = c.c(7);
+      let disabled;
+      let disabledTitle;
+      let icon;
+      let onPress;
+      let title;
+      let variant;
+      const obj = react2;
+      const cResult = obj.c(7);
       ({ title, disabledTitle, variant, disabled, onPress, icon } = description);
       let str = "default";
+      description = description.description;
       if (undefined !== variant) {
         str = variant;
       }
@@ -24,17 +32,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp4 = disabledTitle;
         }
       }
-      description = null;
+      let tmp6 = null;
       if (!disabled) {
-        description = description.description;
+        tmp6 = description;
       }
       if (cResult[0] === disabled) {
         if (cResult[1] === icon) {
           if (cResult[2] === onPress) {
             if (cResult[3] === tmp4) {
-              if (cResult[4] === description) {
+              if (cResult[4] === tmp6) {
+                let tmp7;
                 if (cResult[5] === str) {
-                  let tmp7 = cResult[6];
+                  tmp7 = cResult[6];
                 }
                 return tmp7;
               }
@@ -42,53 +51,45 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp8 = jsx(TableRow.TableRow, {
-        label: tmp4,
-        subLabel: description,
-        onPress,
-        icon,
-        disabled,
-        variant: str,
-      });
+      const tmp8 = jsx(TableRow2.TableRow, { label: tmp4, subLabel: tmp6, onPress, icon, disabled, variant: str });
       cResult[0] = disabled;
       cResult[1] = icon;
       cResult[2] = onPress;
       cResult[3] = tmp4;
-      cResult[4] = description;
+      cResult[4] = tmp6;
       cResult[5] = str;
       cResult[6] = tmp8;
       tmp7 = tmp8;
     }
-  : (disabled) => {
-      ({ title, disabledTitle, variant } = disabled);
+  : (description) => {
+      let disabledTitle;
+      let icon;
+      let onPress;
+      let title;
+      let variant;
+      ({ title, disabledTitle, variant } = description);
+      description = description.description;
       if (variant === undefined) {
         variant = "default";
       }
-      disabled = disabled.disabled;
-      ({ onPress, icon } = disabled);
+      const disabled = description.disabled;
+      ({ onPress, icon } = description);
       let tmp2 = title;
+      const TableRow = TableRow2.TableRow;
       if (disabled) {
         tmp2 = title;
         if (null != disabledTitle) {
           tmp2 = disabledTitle;
         }
       }
-      const obj = { label: tmp2, subLabel: null, onPress: null, icon: null, disabled: null, variant: null };
-      let description = null;
+      let tmp4 = null;
       if (!disabled) {
-        description = disabled.description;
+        tmp4 = description;
       }
-      obj.subLabel = description;
-      obj.onPress = onPress;
-      obj.icon = icon;
-      obj.disabled = disabled;
-      obj.variant = variant;
-      return jsx(TableRow.TableRow, {
-        label: tmp2,
-        subLabel: null,
-        onPress: null,
-        icon: null,
-        disabled: null,
-        variant: null,
-      });
+      return (
+        <TableRow label={tmp2} subLabel={tmp4} onPress={onPress} icon={icon} disabled={disabled} variant={variant} />
+      );
     };
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx");
+
+export default tmp3;

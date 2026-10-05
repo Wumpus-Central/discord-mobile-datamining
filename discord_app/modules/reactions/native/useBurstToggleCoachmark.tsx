@@ -1,22 +1,29 @@
 // discord_app/modules/reactions/native/useBurstToggleCoachmark.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
-import SuperReactionIcon from "../../../design/components/Icon/native/redesign/generated/SuperReactionIcon.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import intl3 from "../../../intl/index.native.tsx";
+import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import DismissibleContentConstants from "../../dismissible_content/DismissibleContentConstants.tsx";
+import SuperReactionIcon2 from "../../../design/components/Icon/native/redesign/generated/SuperReactionIcon.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
 import UserStore from "../../../stores/UserStore.tsx";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-const View = fn(17).View;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
-const jsx = fn(21).jsx;
-let closure_9 = fn(2036).DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;
-const createStyles = fn(4890);
-let obj2 = { upsellImageContainer: null };
-let size = {
+let size;
+const View = react_native.View;
+const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
+const jsx = Fragment.jsx;
+let closure_9 = dismissible_content.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;
+let obj = { upsellImageContainer: size };
+size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
   borderRadius: nativeDefault.radii.round,
   height: 40,
@@ -25,55 +32,56 @@ let size = {
   alignItems: "center",
   justifyContent: "center",
 };
-obj2.upsellImageContainer = size;
-let closure_10 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
+let closure_10 = createStyles.createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(3);
+      let first;
+      let tmp9;
+      const obj = react2;
+      const cResult = obj.c(3);
       const tmp4 = closure_10();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { color: nativeDefault.colors.WHITE, size: "md" };
-        const tmp8 = jsx(SuperReactionIcon.SuperReactionIcon, { color: nativeDefault.colors.WHITE, size: "md" });
+        const SuperReactionIcon = SuperReactionIcon2.SuperReactionIcon;
+        const tmp8 = <SuperReactionIcon color={nativeDefault.colors.WHITE} size="md" />;
         cResult[0] = tmp8;
-        let first = tmp8;
+        first = tmp8;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== tmp4.upsellImageContainer) {
-        const obj3 = { style: tmp4.upsellImageContainer, children: first };
         const tmp12 = <View style={tmp4.upsellImageContainer}>{first}</View>;
         cResult[1] = tmp4.upsellImageContainer;
         cResult[2] = tmp12;
-        let tmp9 = tmp12;
+        tmp9 = tmp12;
       } else {
         tmp9 = cResult[2];
       }
       return tmp9;
     }
   : () => {
-      const obj = {
-        style: closure_10().upsellImageContainer,
-        children: jsx(SuperReactionIcon.SuperReactionIcon, { color: nativeDefault.colors.WHITE, size: "md" }),
-      };
-      return (
-        <View style={closure_10().upsellImageContainer}>
-          {jsx(SuperReactionIcon.SuperReactionIcon, { color: nativeDefault.colors.WHITE, size: "md" })}
-        </View>
-      );
+      ({ color: nativeDefault.colors.WHITE, size: "md" });
+      const SuperReactionIcon = SuperReactionIcon2.SuperReactionIcon;
+      return <View style={closure_10().upsellImageContainer}>{null}</View>;
     };
-ReactCompilerGating = fn(558);
-size = fn(2);
-const result = size.fileFinishedImporting("modules/reactions/native/useBurstToggleCoachmark.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = require("c").c(12);
+      let closure_0;
+      let currentUser;
+      let tmp13;
+      let tmp15;
+      let tmp17;
+      let tmp4;
+      let tmp5;
+      let tmp8;
+      const obj = require("react");
+      const cResult = obj.c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         class C {
           constructor() {
-            return closure_1_6.getCurrentUser();
+            return currentUser.getCurrentUser();
           }
         }
         cResult[0] = items;
@@ -82,154 +90,155 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(tmp4, C);
+      const tmpResult = require("get initialized");
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, C);
       if (cResult[2] !== stateFromStores) {
+        let items2;
+        const tmpResult4 = require("PremiumUtils");
         if (tmpResult4.isPremium(stateFromStores)) {
           const items1 = [closure_9];
           class C {
             constructor() {
-              return closure_1_6.getCurrentUser();
+              return currentUser.getCurrentUser();
             }
           }
         } else {
-          const items2 = [];
+          items2 = [];
         }
         class C {
           constructor() {
-            return closure_1_6.getCurrentUser();
+            return currentUser.getCurrentUser();
           }
         }
         cResult[3] = items2;
-        tmpResult4 = tmp(4528);
+        tmp8 = items2;
       } else {
+        tmp8 = cResult[3];
+      }
+      const tmpResult5 = require("useSelectedDismissibleContent");
+      const tmp10 = _slicedToArray(tmpResult5.useSelectedDismissibleContent(tmp8), 2);
+      _require = tmp12;
+      const first = tmp10[0];
+      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl = tmp(1126).intl;
+        const stringResult = intl.string(require("intl").t.nyYohm);
         class C {
           constructor() {
-            return closure_1_6.getCurrentUser();
+            return currentUser.getCurrentUser();
           }
         }
-        const tmp11 = _slicedToArray(tmp(6891).useSelectedDismissibleContent(cResult[3]), 2);
-        _require = tmp12;
-        const _Symbol = Symbol;
-        if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1126).intl;
-          const stringResult = intl.string(tmp(1126).t.nyYohm);
-          class C {
-            constructor() {
-              return closure_1_6.getCurrentUser();
-            }
-          }
-          cResult[4] = stringResult;
-          let tmp13 = stringResult;
-        } else {
-          tmp13 = cResult[4];
-        }
-        if (cResult[5] !== tmp11[1]) {
-          const fn = function f() {
-            closure_0(ContentDismissActionType.UNKNOWN);
-          };
-          cResult[5] = tmp12;
-          class C {
-            constructor() {
-              return closure_1_6.getCurrentUser();
-            }
-          }
-          cResult[6] = fn;
-          let tmp15 = fn;
-        } else {
-          tmp15 = cResult[6];
-        }
-        const _Symbol2 = Symbol;
-        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          class S {
-            constructor() {
-              return closure_1_8(closure_1_11, {});
-            }
-          }
-          const string = tmp(1126).intl.string;
-          class C {
-            constructor() {
-              return closure_1_6.getCurrentUser();
-            }
-          }
-          cResult[7] = S;
-          cResult[8] = tmp18;
-          let tmp17 = tmp18;
-        } else {
-          class S {
-            constructor() {
-              return closure_1_8(closure_1_11, {});
-            }
-          }
-          tmp17 = cResult[8];
-        }
-        if (cResult[9] === tmp15) {
-          class S {
-            constructor() {
-              return closure_1_8(closure_1_11, {});
-            }
-          }
-          tmp(9882);
-          class C {
-            constructor() {
-              return closure_1_6.getCurrentUser();
-            }
-          }
-          return tmp12;
-        }
-        const obj2 = {
-          description: tmp13,
-          onDismiss: tmp15,
-          position: "bottom",
-          renderImgComponent: S,
-          title: tmp17,
-          visible: tmp11[0] === closure_9,
-        };
-        cResult[9] = tmp15;
-        cResult[10] = tmp11[0] === closure_9;
-        cResult[11] = obj2;
-        const tmpResult5 = tmp(6891);
+        cResult[4] = stringResult;
+        tmp13 = stringResult;
+      } else {
+        tmp13 = cResult[4];
       }
-      const tmpResult = require("initialize");
+      if (cResult[5] !== tmp10[1]) {
+        const fn = function f() {
+          closure_0(ContentDismissActionType.UNKNOWN);
+        };
+        cResult[5] = tmp10[1];
+        class C {
+          constructor() {
+            return currentUser.getCurrentUser();
+          }
+        }
+        cResult[6] = fn;
+        tmp15 = fn;
+      } else {
+        tmp15 = cResult[6];
+      }
+      if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+        class S {
+          constructor() {
+            return <closure_1_11 />;
+          }
+        }
+        const string = tmp(1126).intl.string;
+        class C {
+          constructor() {
+            return currentUser.getCurrentUser();
+          }
+        }
+        cResult[7] = S;
+        cResult[8] = tmp18;
+        tmp17 = tmp18;
+      } else {
+        class S {
+          constructor() {
+            return <closure_1_11 />;
+          }
+        }
+        tmp17 = cResult[8];
+      }
+      if (cResult[9] === tmp15) {
+        class S {
+          constructor() {
+            return <closure_1_11 />;
+          }
+        }
+        require("useCoachmark");
+        class C {
+          constructor() {
+            return currentUser.getCurrentUser();
+          }
+        }
+        return tmp10[1];
+      }
+      const obj2 = {
+        description: tmp13,
+        onDismiss: tmp15,
+        position: "bottom",
+        renderImgComponent: S,
+        title: tmp17,
+        visible: first === closure_9,
+      };
+      cResult[9] = tmp15;
+      cResult[10] = first === closure_9;
+      cResult[11] = obj2;
     }
   : (arg0) => {
-      const items = [UserStore];
-      const stateFromStores = first(504).useStateFromStores(items, () => currentUser.getCurrentUser());
+      let currentUser;
+      let first;
+      let items2;
       let obj = first(504);
+      const items = [UserStore];
+      const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+      const obj2 = first(4528);
       if (obj2.isPremium(stateFromStores)) {
         const items1 = [closure_9];
-        let items2 = items1;
+        items2 = items1;
       } else {
         items2 = [];
       }
-      obj2 = first(4528);
-      const tmp5 = _slicedToArray(first(6891).useSelectedDismissibleContent(items2), 2);
+      const tmpResult = first(6891);
+      const tmp5 = _slicedToArray(tmpResult.useSelectedDismissibleContent(items2), 2);
       first = tmp5[0];
-      closure_1 = tmp7;
+      let closure_1 = tmp7;
       const items3 = [first, tmp5[1]];
-      const memo = noop.useMemo(() => {
+      const memo = react.useMemo(() => {
+        let intl;
+        let intl2;
         const obj = {
-          description: null,
-          onDismiss: null,
+          description: intl.string(intl3.t.nyYohm),
+          onDismiss() {
+            closure_1_1(constants.UNKNOWN);
+          },
           position: "bottom",
-          renderImgComponent: null,
-          title: null,
-          visible: null,
+          renderImgComponent() {
+            return closure_1_8(closure_1_11, {});
+          },
+          title: intl2.string(intl3.t.ORK94p),
+          visible: first === closure_9,
         };
-        const intl = util.intl;
-        obj.description = intl.string(util.t.nyYohm);
-        obj.onDismiss = function onDismiss() {
-          closure_1_1(constants.UNKNOWN);
-        };
-        obj.renderImgComponent = function renderImgComponent() {
-          return closure_1_8(closure_1_11, {});
-        };
-        const intl2 = util.intl;
-        obj.title = intl2.string(util.t.ORK94p);
-        obj.visible = first === closure_9;
+        intl = intl3.intl;
+        intl2 = intl3.intl;
         return obj;
       }, items3);
-      const tmpResult = first(6891);
-      const coachmark = first(9882).useCoachmark(arg0, memo);
+      const tmpResult2 = first(9882);
+      const coachmark = tmpResult2.useCoachmark(arg0, memo);
       return tmp5[1];
     };
+size = size_mod;
+const result = size.fileFinishedImporting("modules/reactions/native/useBurstToggleCoachmark.tsx");
+
+export default tmp2;

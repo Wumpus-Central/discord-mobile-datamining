@@ -1,20 +1,64 @@
 // discord_app/actions/EntitlementActionCreators.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
-import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import Constants from "../Constants.tsx";
+import _asyncToGenerator from "../../_runtime/metro/00005__asyncToGenerator.js";
+import size from "../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-let closure_5 = async function _fetchUserEntitlements(arg0) {
-  let withSku = arg0;
-  c5 = 0;
-  c6 = 0;
-  c4 = 0;
-  let iter = (async (arg0) => {
-    if (c6 === 2) {
-      c6 = 3;
+let obj = function _fetchUserEntitlements() {
+  obj = _asyncToGenerator(async (arg0) => {
+    let closure_1;
+    let closure_2;
+    let closure_3;
+    const withSku = arg0;
+    let c5 = 0;
+    let c6 = 0;
+    let c4 = 0;
+    const iter = (async (arg0) => {
+      let entitlementType;
+      let obj6;
+      const obj9 = closure_130_1(closure_130_2[2]);
+      obj9.dispatch({ type: "ENTITLEMENTS_FETCH_FOR_USER_START" });
+      const HTTP = closure_130_0(closure_130_2[3]).HTTP;
+      const request = { url: closure_130_4.ENTITLEMENTS_FOR_USER, query: obj6, rejectWithError: true };
+      obj6 = { with_sku: flag, with_application: flag2, entitlement_type: entitlementType, exclude_ended: flag3 };
+      await HTTP.get(request);
+      if (2 === c5) {
+        let c4 = 0;
+        const obj4 = closure_130_1(closure_130_2[2]);
+        obj4.dispatch({ type: "ENTITLEMENTS_FETCH_FOR_USER_FAIL" });
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        return { value, done: true };
+      } else {
+        body = value;
+        const obj10 = { type: "ENTITLEMENTS_FETCH_FOR_USER_SUCCESS", entitlements: body.body, excludeEnded: flag3 };
+        obj = closure_130_1(closure_130_2[2]);
+        obj.dispatch(obj10);
+        c4 = 0;
+      }
+      await "IconComponent";
+      entitlementType = withSku.entitlementType;
+      return "Set";
+    })();
+    iter.next();
+    return iter;
+  });
+  return obj(...arguments);
+};
+obj = function _fetchGiftableEntitlements() {
+  obj = _asyncToGenerator(async () => {
+    let obj9;
+    if (c5 === 2) {
+      c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -24,146 +68,82 @@ let closure_5 = async function _fetchUserEntitlements(arg0) {
         return { value: "IconComponent", done: null };
       }
     } else {
+      let c3;
       try {
-        c6 = 2;
-        if (0 === c5) {
+        let body;
+        c5 = 2;
+        if (0 === c4) {
           if (arg0 === 1) {
-            c6 = 3;
+            c5 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c6 = 3;
+            c5 = 3;
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_2 = tmp3;
-            closure_1 = tmp7;
-            closure_129_0 = undefined;
-            closure_129_1 = undefined;
-            closure_129_2 = undefined;
-            let entitlementType;
-            let flag = withSku.withSku;
-            if (flag === undefined) {
-              flag = false;
-            }
-            closure_129_0 = flag;
-            let flag2 = withSku.withApplication;
-            if (flag2 === undefined) {
-              flag2 = false;
-            }
-            closure_129_1 = flag2;
-            let flag3 = withSku.excludeEnded;
-            if (flag3 === undefined) {
-              flag3 = true;
-            }
-            closure_129_2 = flag3;
-            entitlementType = withSku.entitlementType;
-            closure_129_4 = undefined;
+            let closure_1 = tmp;
+            body = undefined;
+            const obj8 = DispatcherDefault;
+            obj8.dispatch({ type: "ENTITLEMENTS_GIFTABLE_FETCH" });
+            c3 = 1;
+            const obj5 = { url: constants.ENTITLEMENTS_GIFTABLE, rejectWithError: true };
+            c4 = 2;
             c5 = 1;
-            c6 = 1;
-            return { value: "Set", done: true };
+            const obj6 = { value: obj9.httpGetWithCountryCodeQuery(obj5), done: false };
+            obj9 = require("StoreUtils");
+            return obj6;
           }
-        } else if (1 === tmp7) {
-          if (arg0 === 1) {
-            c6 = 3;
+        } else {
+          if (1 === c4) {
+            c3 = 0;
+            const obj4 = closure_129_1(closure_129_2[2]);
+            obj4.dispatch({ type: "ENTITLEMENTS_GIFTABLE_FETCH_FAIL" });
+          } else if (arg0 === 1) {
+            c5 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c6 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            closure_130_1(closure_130_2[2]).dispatch({ type: "ENTITLEMENTS_FETCH_FOR_USER_START" });
-            c4 = 1;
-            const HTTP = closure_130_0(closure_130_2[3]).HTTP;
-            const request = { url: closure_130_4.ENTITLEMENTS_FOR_USER, query: null, rejectWithError: true };
-            const obj6 = {
-              with_sku: closure_129_0,
-              with_application: closure_129_1,
-              entitlement_type: entitlementType,
-              exclude_ended: closure_129_2,
-            };
-            request.query = obj6;
+            c3 = 0;
             c5 = 3;
-            c6 = 1;
-            const obj7 = { value: HTTP.get(request), done: false };
+            const obj7 = { value, done: true };
             return obj7;
+          } else {
+            body = value;
+            const obj10 = { type: "ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS", entitlements: body.body };
+            obj = closure_129_1(closure_129_2[2]);
+            obj.dispatch(obj10);
+            c3 = 0;
           }
-        } else {
-          if (2 === tmp7) {
-            c4 = 0;
-            closure_130_1(closure_130_2[2]).dispatch({ type: "ENTITLEMENTS_FETCH_FOR_USER_FAIL" });
-            c6 = 3;
-            const obj4 = closure_130_1(closure_130_2[2]);
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            closure_129_4 = value;
-            const obj8 = {
-              type: "ENTITLEMENTS_FETCH_FOR_USER_SUCCESS",
-              entitlements: closure_129_4.body,
-              excludeEnded: closure_129_2,
-            };
-            closure_130_1(closure_130_2[2]).dispatch(obj8);
-            c4 = 0;
-            const obj = closure_130_1(closure_130_2[2]);
-          }
-          c4 = 0;
-          c6 = 3;
-          const obj10 = { value, done: true };
-          return obj10;
+          c5 = 3;
+          return { value: "IconComponent", done: null };
         }
-      } catch (tmp20) {
-        closure_3 = tmp20;
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp20;
+      } catch (tmp16) {
+        let closure_2 = tmp16;
+        if (0 === c3) {
+          c5 = 3;
+          throw tmp16;
         } else {
-          c5 = tmp;
+          c4 = 1;
         }
       }
     }
-  })();
-  iter.next();
-  return iter;
-};
-let closure_6 = async function _fetchGiftableEntitlements() {
-  closure_1 = tmp3;
-  DispatcherDefault.dispatch({ type: "ENTITLEMENTS_GIFTABLE_FETCH" });
-  await require("StoreUtils").httpGetWithCountryCodeQuery({
-    url: constants.ENTITLEMENTS_GIFTABLE,
-    rejectWithError: true,
   });
-  if (1 === tmp7) {
-    c3 = 0;
-    closure_129_1(closure_129_2[2]).dispatch({ type: "ENTITLEMENTS_GIFTABLE_FETCH_FAIL" });
-    c5 = 3;
-    closure_129_1(closure_129_2[2]);
-  } else if (arg0 === 1) {
-    c5 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    closure_128_0 = value;
-    closure_129_1(closure_129_2[2]).dispatch({
-      type: "ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS",
-      entitlements: closure_128_0.body,
-    });
-    c3 = 0;
-    closure_129_1(closure_129_2[2]);
-  }
-  return value;
+  return obj(...arguments);
 };
-const Endpoints = fn(1085).Endpoints;
-const size = fn(2);
+const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("actions/EntitlementActionCreators.tsx");
 
 export const fetchUserEntitlementsForApplication = function fetchUserEntitlementsForApplication(id, arg1) {
+  let applicationId;
   _require = id;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
-  DispatcherDefault.wait(() => {
-    DispatcherDefault.dispatch({ type: "ENTITLEMENT_FETCH_APPLICATION_START", applicationId });
+  obj = DispatcherDefault;
+  obj.wait(() => {
+    obj = DispatcherDefault;
+    const obj2 = { type: "ENTITLEMENT_FETCH_APPLICATION_START", applicationId };
+    obj.dispatch(obj2);
   });
   const HTTP = require("HTTPUtils").HTTP;
   const request = {
@@ -172,37 +152,22 @@ export const fetchUserEntitlementsForApplication = function fetchUserEntitlement
     query: { exclude_consumed: flag },
     rejectWithError: true,
   };
-  value = HTTP.get(request);
-  return value
-    .then((body) => {
-      DispatcherDefault.dispatch({
-        type: "ENTITLEMENT_FETCH_APPLICATION_SUCCESS",
-        applicationId,
-        entitlements: body.body,
-      });
-      return body.body;
-    })
-    .catch(() => {
-      DispatcherDefault.dispatch({ type: "ENTITLEMENT_FETCH_APPLICATION_FAIL", applicationId });
-    });
+  const value = HTTP.get(request);
+  const nextPromise = value.then((body) => {
+    obj = DispatcherDefault;
+    const obj2 = { type: "ENTITLEMENT_FETCH_APPLICATION_SUCCESS", applicationId, entitlements: body.body };
+    obj.dispatch(obj2);
+    return body.body;
+  });
+  return nextPromise.catch(() => {
+    obj = DispatcherDefault;
+    const obj2 = { type: "ENTITLEMENT_FETCH_APPLICATION_FAIL", applicationId };
+    obj.dispatch(obj2);
+  });
 };
 export const fetchUserEntitlements = function fetchUserEntitlements() {
-  const self = this;
-  const apply = closure_5.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const fetchGiftableEntitlements = function fetchGiftableEntitlements() {
-  const self = this;
-  const apply = closure_6.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

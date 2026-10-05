@@ -1,51 +1,62 @@
 // discord_app/modules/favorites/native/FavoritesGuildSuggestedChannels.tsx
+import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import Constants from "../../../Constants.tsx";
+import intl3 from "../../../intl/index.native.tsx";
 import _modDef3367 from "../intl/FavoritesGuild.messages.js";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import useScaledRowHeightDefault from "../../main_tabs_v2/native/shared_components/user_list/useScaledRowHeight.tsx";
+import RedesignChannelListConstants from "../../channel_list_v2/native/RedesignChannelListConstants.tsx";
 import SearchableDestinationListRowDefault from "../../share/native/SearchableDestinationListRow.tsx";
 import handleFavoritesGuildAddSuggestedChannelDefault from "../onboarding/handleFavoritesGuildAddSuggestedChannel.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react_mod from "../../../../_runtime/00019_react.js";
+import FavoritesGuildSuggestionsStore from "../FavoritesGuildSuggestionsStore.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const FavoritesGuildSuggestionsStore = fn(16127);
+let dependencyMap, importDefault;
+
+let c10;
+let c9;
+let hasOwnProperty;
+let metroRequire;
+let react = react_mod;
+const View = react_native.View;
 ({ useFavoritesGuildSuggestions: hasOwnProperty, useFavoritesGuildSuggestionsDismissal: metroRequire } =
   FavoritesGuildSuggestionsStore);
-const NOOP = fn(1085).NOOP;
-let closure_8 = fn(11697).getScaledCategoryRowHeight;
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const NOOP = Constants.NOOP;
+let closure_8 = RedesignChannelListConstants.getScaledCategoryRowHeight;
+({ jsx: c9, jsxs: c10 } = Fragment);
 const PX_8 = nativeDefault.space.PX_8;
+const PX_16 = nativeDefault.space.PX_16;
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(4890);
-let closure_13 = createStyles.createStyles({
-  container: { marginTop: PX_4 },
-  rows: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: PX_8 },
-});
-const ReactCompilerGating = fn(558);
-let obj2 = {
-  container: { marginTop: PX_4 },
-  rows: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: PX_8 },
-};
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildSuggestedChannels.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let obj = { container: { marginTop: PX_4 }, rows: { paddingHorizontal: PX_16, paddingBottom: PX_8 } };
+let closure_13 = createStyles.createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = arr(576).c(21);
-      const tmp4 = closure_13();
+      let arr;
+      let first;
+      let intl2;
+      let items;
+      let style;
+      let tmp10;
+      let tmp13;
+      let tmp = arr;
       let obj = arr(576);
-      const categoryStyles = arr(16032).useCategoryStyles();
+      const cResult = obj.c(21);
+      const tmp4 = closure_13();
+      let obj2 = arr(16032);
+      const categoryStyles = obj2.useCategoryStyles();
       arr = closure_5();
       const tmp6 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let intl = tmp(1126).intl;
         const stringResult = intl.string(_modDef3367.F3dWTe);
         cResult[0] = stringResult;
-        let first = stringResult;
+        first = stringResult;
       } else {
         first = cResult[0];
       }
@@ -53,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = { label: first, perform: tmp6, Icon: tmp(6017).XSmallIcon };
         cResult[1] = tmp6;
         cResult[2] = obj3;
-        let tmp10 = obj3;
+        tmp10 = obj3;
       } else {
         tmp10 = cResult[2];
       }
@@ -62,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { height: tmp12 };
         cResult[3] = tmp12;
         cResult[4] = obj4;
-        let tmp13 = obj4;
+        tmp13 = obj4;
       } else {
         tmp13 = cResult[4];
       }
@@ -71,151 +82,189 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return null;
       } else {
         if (cResult[5] === categoryStyles) {
+          let tmp14;
+          let tmp18;
           if (cResult[6] === tmp10) {
-            let tmp14 = cResult[7];
+            tmp14 = cResult[7];
           }
           if (cResult[8] === tmp13) {
             if (cResult[9] === arr) {
-              if (cResult[14] === tmp4.rows) {
-                if (cResult[15] === tmp17) {
-                  let tmp21 = cResult[16];
-                }
-                if (cResult[17] === tmp4.container) {
-                  if (cResult[18] === tmp14) {
-                    if (cResult[19] === tmp21) {
-                      let tmp25 = cResult[20];
-                    }
-                    return tmp25;
-                  }
-                }
-                const obj5 = { style: tmp30, children: null };
-                const items = [tmp14, tmp21];
-                obj5.children = items;
-                const tmp28 = closure_10(View, obj5);
-                cResult[17] = tmp4.container;
-                cResult[18] = tmp14;
-                cResult[19] = tmp21;
-                cResult[20] = tmp28;
-                tmp25 = tmp28;
-              }
-              const obj6 = { style: tmp16, children: cResult[10] };
-              const tmp24 = closure_9(View, obj6);
-              cResult[14] = tmp4.rows;
-              cResult[15] = cResult[10];
-              cResult[16] = tmp24;
-              tmp21 = tmp24;
+              tmp18 = cResult[10];
             }
+            if (cResult[14] === tmp4.rows) {
+              let tmp21;
+              if (cResult[15] === tmp18) {
+                tmp21 = cResult[16];
+              }
+              if (cResult[17] === tmp4.container) {
+                if (cResult[18] === tmp14) {
+                  let tmp25;
+                  if (cResult[19] === tmp21) {
+                    tmp25 = cResult[20];
+                  }
+                  return tmp25;
+                }
+              }
+              const obj5 = { style: tmp30, children: items };
+              items = [tmp14, tmp21];
+              const tmp28 = closure_10(View, obj5);
+              cResult[17] = tmp4.container;
+              cResult[18] = tmp14;
+              cResult[19] = tmp21;
+              cResult[20] = tmp28;
+              tmp25 = tmp28;
+            }
+            const obj6 = { style: tmp17, children: tmp18 };
+            const tmp24 = closure_9(View, obj6);
+            cResult[14] = tmp4.rows;
+            cResult[15] = tmp18;
+            cResult[16] = tmp24;
+            tmp21 = tmp24;
           }
           if (cResult[11] === tmp13) {
+            let tmp19;
             if (cResult[12] === arr.length) {
-              let tmp18 = cResult[13];
+              tmp19 = cResult[13];
             }
-            const mapped = arr.map(tmp18);
+            const mapped = arr.map(tmp19);
             cResult[8] = tmp13;
             cResult[9] = arr;
             cResult[10] = mapped;
+            tmp18 = mapped;
           }
           const fn = function x(result, arg1) {
-            closure_0 = result;
-            const obj = { style, children: null };
-            const obj2 = {
+            let Button;
+            let intl;
+            let obj2;
+            let obj3;
+            let tmp;
+            let closure_0 = result;
+            let obj = { style, children: React4(tmp, obj2) };
+            obj2 = {
               result,
               onPressDestination: handleFavoritesGuildAddSuggestedChannelDefault,
               onLongPress: NOOP,
               start: 0 === arg1,
               end: arg1 === arr.length - 1,
-              trailing: null,
+              trailing: React4(Button, obj3),
             };
-            const obj3 = { variant: "secondary", size: "sm", grow: false, text: null, onPress: null };
-            const intl = util.intl;
-            obj3.text = intl.string(util.t.OYkgVk);
-            obj3.onPress = function onPress() {
-              const tmp = closure_1(16129);
-              return tmp(arr(10711).getDestinationIdFromResult(closure_0));
+            tmp = SearchableDestinationListRowDefault;
+            obj3 = {
+              variant: "secondary",
+              size: "sm",
+              grow: false,
+              text: intl.string(intl3.t.OYkgVk),
+              onPress() {
+                const tmp = style(closure_2_2[16]);
+                const obj = arr(closure_2_2[18]);
+                return tmp(obj.getDestinationIdFromResult(closure_0));
+              },
             };
-            obj2.trailing = options(components_Button_Button.Button, obj3);
-            obj.children = options(SearchableDestinationListRowDefault, obj2);
-            return options(View, obj, "" + result.type + "-" + result.record.id);
+            Button = components_Button_Button.Button;
+            intl = intl3.intl;
+            return React4(View, obj, "" + result.type + "-" + result.record.id);
           };
           cResult[11] = tmp13;
           cResult[12] = arr.length;
           cResult[13] = fn;
-          tmp18 = fn;
+          tmp19 = fn;
         }
-        const obj7 = { name: null, withMarginTop: false, styles: null, trailingAction: null };
-        const intl2 = tmp(1126).intl;
-        obj7.name = intl2.string(_modDef3367.oHWnLy);
-        obj7.styles = categoryStyles;
-        obj7.trailingAction = tmp10;
-        const renderCategoryItemResult = tmp(16032).renderCategoryItem(obj7);
+        const obj7 = {
+          name: intl2.string(_modDef3367.oHWnLy),
+          withMarginTop: false,
+          styles: categoryStyles,
+          trailingAction: tmp10,
+        };
+        const renderCategoryItem = tmp(16032).renderCategoryItem;
+        tmp(16032);
+        intl2 = tmp(1126).intl;
+        const renderCategoryItemResult = renderCategoryItem(obj7);
         cResult[5] = categoryStyles;
         cResult[6] = tmp10;
         cResult[7] = renderCategoryItemResult;
         tmp14 = renderCategoryItemResult;
-        const tmpResult = tmp(16032);
       }
-      let obj2 = arr(16032);
     }
   : () => {
+      let arr;
+      let height;
+      let intl;
+      let items2;
+      let perform;
+      let style;
       let tmp = closure_13();
-      const categoryStyles = arr(16032).useCategoryStyles();
+      let obj = arr(16032);
+      const categoryStyles = obj.useCategoryStyles();
       arr = closure_5();
       const tmp5 = closure_6();
       importDefault = tmp5;
       const items = [tmp5];
-      const memo = noop.useMemo(() => {
-        const obj = { label: null, perform: null, Icon: null };
-        const intl = util.intl;
-        obj.label = intl.string(_modDef3367.F3dWTe);
-        obj.perform = perform;
-        obj.Icon = XSmallIcon.XSmallIcon;
+      const memo = react.useMemo(() => {
+        let intl;
+        const obj = { label: intl.string(_modDef3367.F3dWTe), perform, Icon: XSmallIcon.XSmallIcon };
+        intl = intl3.intl;
         return obj;
       }, items);
       const tmp8 = useScaledRowHeightDefault();
       dependencyMap = tmp8;
       const items1 = [tmp8];
-      noop = noop.useMemo(() => ({ height }), items1);
+      react = react.useMemo(() => ({ height }), items1);
       let tmp9 = null;
       if (0 !== arr.length) {
-        let obj2 = { style: tmp.container, children: null };
-        let obj3 = { name: null, withMarginTop: false, styles: null, trailingAction: null };
-        let intl = tmp2(1126).intl;
-        obj3.name = intl.string(_modDef3367.oHWnLy);
-        obj3.styles = categoryStyles;
-        obj3.trailingAction = memo;
-        const items2 = [tmp2(16032).renderCategoryItem(obj3)];
+        let obj2 = { style: tmp.container, children: items2 };
+        let obj3 = {
+          name: intl.string(_modDef3367.oHWnLy),
+          withMarginTop: false,
+          styles: categoryStyles,
+          trailingAction: memo,
+        };
+        const renderCategoryItem = arr(16032).renderCategoryItem;
+        arr(16032);
+        intl = tmp2(1126).intl;
+        items2 = [renderCategoryItem(obj3)];
         const obj4 = {
           style: tmp.rows,
           children: arr.map((item, index) => {
-            closure_0 = item;
-            const obj = { style, children: null };
-            const obj2 = {
+            let Button;
+            let intl;
+            let obj2;
+            let obj3;
+            let tmp;
+            let closure_0 = item;
+            let obj = { style, children: React4(tmp, obj2) };
+            obj2 = {
               result: item,
               onPressDestination: handleFavoritesGuildAddSuggestedChannelDefault,
               onLongPress: NOOP,
               start: 0 === index,
               end: index === arr.length - 1,
-              trailing: null,
+              trailing: React4(Button, obj3),
             };
-            const obj3 = { variant: "secondary", size: "sm", grow: false, text: null, onPress: null };
-            const intl = util.intl;
-            obj3.text = intl.string(util.t.OYkgVk);
-            obj3.onPress = function onPress() {
-              const tmp = closure_1(16129);
-              return tmp(arr(10711).getDestinationIdFromResult(closure_0));
+            tmp = SearchableDestinationListRowDefault;
+            obj3 = {
+              variant: "secondary",
+              size: "sm",
+              grow: false,
+              text: intl.string(intl3.t.OYkgVk),
+              onPress() {
+                const tmp = perform(height[16]);
+                const obj = arr(height[18]);
+                return tmp(obj.getDestinationIdFromResult(closure_0));
+              },
             };
-            obj2.trailing = options(components_Button_Button.Button, obj3);
-            obj.children = options(SearchableDestinationListRowDefault, obj2);
-            return options(View, obj, "" + item.type + "-" + item.record.id);
+            Button = components_Button_Button.Button;
+            intl = intl3.intl;
+            return React4(View, obj, "" + item.type + "-" + item.record.id);
           }),
         };
         items2[1] = closure_9(View, obj4);
-        obj2.children = items2;
         tmp9 = closure_10(View, obj2);
-        const tmp2Result = tmp2(16032);
       }
       return tmp9;
     };
+const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildSuggestedChannels.tsx");
+
+export default tmp4;
 export const getFavoritesSuggestionsNoticeHeight = function getFavoritesSuggestionsNoticeHeight(fontScale, arg1, arg2) {
   let num = 0;
   if (0 !== arg2) {

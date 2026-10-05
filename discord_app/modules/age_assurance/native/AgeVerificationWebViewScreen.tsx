@@ -1,31 +1,47 @@
 // discord_app/modules/age_assurance/native/AgeVerificationWebViewScreen.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
+import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import AgeVerificationUtils from "../AgeVerificationUtils.tsx";
+import AgeVerificationConstants from "../AgeVerificationConstants.tsx";
 import AgeVerificationURLActionCreators from "../AgeVerificationURLActionCreators.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../_runtime/00019_react.js";
+import AgeVerificationIncodeWebViewConstants from "../AgeVerificationIncodeWebViewConstants.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-let closure_6 = fn(8085).AGE_VERIFICATION_MODAL_KEY;
-const AgeVerificationIncodeWebViewConstants = fn(8088);
+let incode_parameters, ref;
+
+let c10;
+let c9;
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let obj3;
+let rect;
+let unpackModuleId;
+let react = react_mod;
+const View = react_native.View;
+let closure_6 = AgeVerificationConstants.AGE_VERIFICATION_MODAL_KEY;
 ({
-  AgeVerificationIncodeResultStatus: closure_7,
-  buildIncodeFallbackSessionInjection: closure_8,
-  parseIncodeWebViewMessage: closure_9,
+  AgeVerificationIncodeResultStatus: metroImportDefault,
+  buildIncodeFallbackSessionInjection: metroImportAll,
+  parseIncodeWebViewMessage: c9,
 } = AgeVerificationIncodeWebViewConstants);
-const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let closure_12 = new LoggerDefault("AgeVerificationWebViewScreen");
-let c13 = 15000;
-const createStyles = fn(4890);
-let obj2 = { container: null, loadingOverlay: null, webView: null };
+({ jsx: c10, jsxs: unpackModuleId } = Fragment);
 const tmp4 = new LoggerDefault("AgeVerificationWebViewScreen");
-obj2.container = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-const rect = {
+let closure_12 = tmp4;
+let c13 = 15000;
+let createStyles = createStyles_mod;
+let obj = { container: obj2, loadingOverlay: rect, webView: obj3 };
+obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+createStyles = createStyles.createStyles;
+rect = {
   position: "absolute",
   top: 0,
   left: 0,
@@ -35,27 +51,31 @@ const rect = {
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };
-obj2.loadingOverlay = rect;
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-obj2.webView = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-let closure_14 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationWebViewScreen.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (onClose) => {
-      const cResult = onComplete(ref[10]).c(35);
+obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+let closure_14 = createStyles(obj);
+const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function (onClose) {
+      let closure_7;
+      let first;
+      let logger;
+      let obj4;
+      let onComplete;
+      let ref2;
+      let timeoutMs;
+      let tmp8;
+      let webviewUrl;
+      const tmp2 = ref;
+      let obj = onComplete(ref[10]);
+      const cResult = obj.c(35);
       ({ webviewUrl, onComplete } = onClose);
       onClose = onClose.onClose;
       const injectedJavaScriptBeforeContentLoaded = onClose.injectedJavaScriptBeforeContentLoaded;
-      noop.useRef(null);
-      ref = noop.useRef(false);
-      noop = noop.useRef(false);
-      let obj = onComplete(ref[10]);
-      let obj2 = noop;
-      [r10028, View] = ref(noop.useState(true), 2);
+      let obj2 = react;
+      react.useRef(null);
+      ref = react.useRef(false);
+      react = react.useRef(false);
+      const tmp5 = ref(react.useState(true), 2);
+      [r10028, View] = tmp5;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function v() {
           if (!ref2.current) {
@@ -64,37 +84,39 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         };
         cResult[0] = fn;
-        let first = fn;
+        first = fn;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         class W {
           constructor() {
-            closure_0 = setTimeout(() => {
+            let closure_0;
+            const timeout = setTimeout(() => {
               if (!ref.current) {
                 const obj = { timeoutMs };
                 logger.warn("WebView initial load timed out", obj);
               }
               first();
-            }, closure_1_13);
+            }, timeoutMs);
             return () => clearTimeout(closure_0);
           }
         }
         const items = [first];
         cResult[1] = W;
         cResult[2] = items;
-        let tmp8 = items;
+        tmp8 = items;
       } else {
         class W {
           constructor() {
-            closure_0 = setTimeout(() => {
+            let closure_0;
+            const timeout = setTimeout(() => {
               if (!ref.current) {
                 const obj = { timeoutMs };
                 logger.warn("WebView initial load timed out", obj);
               }
               first();
-            }, closure_1_13);
+            }, timeoutMs);
             return () => clearTimeout(closure_0);
           }
         }
@@ -102,34 +124,32 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = obj2.useEffect(W, tmp8);
       if (cResult[3] === onClose) {
+        let tmp13;
         class W {
           constructor() {
-            closure_0 = setTimeout(() => {
+            let closure_0;
+            const timeout = setTimeout(() => {
               if (!ref.current) {
                 const obj = { timeoutMs };
                 logger.warn("WebView initial load timed out", obj);
               }
               first();
-            }, closure_1_13);
+            }, timeoutMs);
             return () => clearTimeout(closure_0);
           }
         }
         if (cResult[6] !== M) {
           class F {
             constructor() {
-              tmp = closure_0;
-              tmp2 = closure_2;
-              obj = closure_0(closure_2[11]);
-              isModalOpenResult = obj.isModalOpen(closure_6);
+              const obj = NavigationRouteUtils;
+              let isModalOpenResult = obj.isModalOpen(closure_6);
               if (isModalOpenResult) {
-                tmpResult = tmp(tmp2[12]);
+                const tmpResult = AgeVerificationUtils;
                 isModalOpenResult = tmpResult.isAgeVerified();
               }
               if (isModalOpenResult) {
-                tmp4 = closure_7;
-                tmp5 = closure_7();
+                tmp10();
               }
-              return;
             }
           }
           cResult[6] = M;
@@ -137,239 +157,193 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class F {
             constructor() {
-              tmp = closure_0;
-              tmp2 = closure_2;
-              obj = closure_0(closure_2[11]);
-              isModalOpenResult = obj.isModalOpen(closure_6);
+              const obj = NavigationRouteUtils;
+              let isModalOpenResult = obj.isModalOpen(closure_6);
               if (isModalOpenResult) {
-                tmpResult = tmp(tmp2[12]);
+                const tmpResult = AgeVerificationUtils;
                 isModalOpenResult = tmpResult.isAgeVerified();
               }
               if (isModalOpenResult) {
-                tmp4 = closure_7;
-                tmp5 = closure_7();
+                tmp10();
               }
-              return;
             }
           }
         }
-        const watchAgeVerificationStatusChange = onComplete(tmp2[12]).useWatchAgeVerificationStatusChange(F);
+        let tmpResult = onComplete(tmp2[12]);
+        const watchAgeVerificationStatusChange = tmpResult.useWatchAgeVerificationStatusChange(F);
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           class U {
-            constructor(arg0) {
-              current = closure_2.current;
+            constructor(View) {
+              const current = ref.current;
               if (current != null) {
-                tmp = onClose;
-                tmp2 = closure_8;
-                injectJavaScriptResult = current.injectJavaScript(closure_8(onClose));
+                current.injectJavaScript(metroImportAll(View));
               }
-              return;
             }
           }
           cResult[8] = U;
+          tmp13 = U;
         } else {
           class U {
-            constructor(arg0) {
-              current = closure_2.current;
+            constructor(View) {
+              const current = ref.current;
               if (current != null) {
-                tmp = onClose;
-                tmp2 = closure_8;
-                injectJavaScriptResult = current.injectJavaScript(closure_8(onClose));
+                current.injectJavaScript(metroImportAll(View));
               }
-              return;
             }
           }
         }
-        closure_8 = U;
+        U = tmp13;
         if (cResult[9] === M) {
+          let tmp15;
           class U {
-            constructor(arg0) {
-              current = closure_2.current;
+            constructor(View) {
+              const current = ref.current;
               if (current != null) {
-                tmp = onClose;
-                tmp2 = closure_8;
-                injectJavaScriptResult = current.injectJavaScript(closure_8(onClose));
+                current.injectJavaScript(metroImportAll(View));
               }
-              return;
             }
           }
           if (cResult[12] !== webviewUrl) {
             class U {
-              constructor(arg0) {
-                current = closure_2.current;
+              constructor(View) {
+                const current = ref.current;
                 if (current != null) {
-                  tmp = onClose;
-                  tmp2 = closure_8;
-                  injectJavaScriptResult = current.injectJavaScript(closure_8(onClose));
+                  current.injectJavaScript(metroImportAll(View));
                 }
-                return;
               }
             }
+            let self = this;
+            let self2 = this;
             let uRL = new URL(webviewUrl);
             cResult[12] = webviewUrl;
             cResult[13] = uRL;
-            const tmp15 = uRL;
+            tmp15 = uRL;
           } else {
             class U {
-              constructor(arg0) {
-                current = closure_2.current;
+              constructor(View) {
+                const current = ref.current;
                 if (current != null) {
-                  tmp = onClose;
-                  tmp2 = closure_8;
-                  injectJavaScriptResult = current.injectJavaScript(closure_8(onClose));
+                  current.injectJavaScript(metroImportAll(View));
                 }
-                return;
               }
             }
           }
-          const origin = tmp15.origin;
+          let origin = tmp15.origin;
           if (cResult[14] !== origin) {
             class U {
-              constructor(arg0) {
-                current = closure_2.current;
+              constructor(View) {
+                const current = ref.current;
                 if (current != null) {
-                  tmp = onClose;
-                  tmp2 = closure_8;
-                  injectJavaScriptResult = current.injectJavaScript(closure_8(onClose));
+                  current.injectJavaScript(metroImportAll(View));
                 }
-                return;
               }
             }
             cResult[14] = origin;
-            cResult[15] = tmp22;
+            cResult[15] = tmp20;
           } else {
             class U {
-              constructor(arg0) {
-                current = closure_2.current;
+              constructor(View) {
+                const current = ref.current;
                 if (current != null) {
-                  tmp = onClose;
-                  tmp2 = closure_8;
-                  injectJavaScriptResult = current.injectJavaScript(closure_8(onClose));
+                  current.injectJavaScript(metroImportAll(View));
                 }
-                return;
               }
             }
           }
-          const tmp24 = closure_14();
+          const tmp22 = closure_14();
           if (cResult[16] !== webviewUrl) {
             class U {
-              constructor(arg0) {
-                current = closure_2.current;
+              constructor(View) {
+                const current = ref.current;
                 if (current != null) {
-                  tmp = onClose;
-                  tmp2 = closure_8;
-                  injectJavaScriptResult = current.injectJavaScript(closure_8(onClose));
+                  current.injectJavaScript(metroImportAll(View));
                 }
-                return;
               }
             }
-            tmp26[0] = webviewUrl;
+            tmp24[0] = webviewUrl;
             cResult[16] = webviewUrl;
-            cResult[17] = tmp26;
+            cResult[17] = tmp24;
           } else {
             class U {
-              constructor(arg0) {
-                current = closure_2.current;
+              constructor(View) {
+                const current = ref.current;
                 if (current != null) {
-                  tmp = onClose;
-                  tmp2 = closure_8;
-                  injectJavaScriptResult = current.injectJavaScript(closure_8(onClose));
+                  current.injectJavaScript(metroImportAll(View));
                 }
-                return;
               }
             }
           }
-          if (cResult[18] !== tmp22) {
+          if (cResult[18] !== tmp20) {
             class U {
-              constructor(arg0) {
-                current = closure_2.current;
+              constructor(View) {
+                const current = ref.current;
                 if (current != null) {
-                  tmp = onClose;
-                  tmp2 = closure_8;
-                  injectJavaScriptResult = current.injectJavaScript(closure_8(onClose));
+                  current.injectJavaScript(metroImportAll(View));
                 }
-                return;
               }
             }
             if (obj4.isIOS()) {
               class U {
-                constructor(arg0) {
-                  current = closure_2.current;
+                constructor(View) {
+                  const current = ref.current;
                   if (current != null) {
-                    tmp = onClose;
-                    tmp2 = closure_8;
-                    injectJavaScriptResult = current.injectJavaScript(closure_8(onClose));
+                    current.injectJavaScript(metroImportAll(View));
                   }
-                  return;
                 }
               }
             }
-            cResult[18] = tmp22;
+            cResult[18] = tmp20;
             cResult[19] = undefined;
           } else {
             class U {
-              constructor(arg0) {
-                current = closure_2.current;
+              constructor(View) {
+                const current = ref.current;
                 if (current != null) {
-                  tmp = onClose;
-                  tmp2 = closure_8;
-                  injectJavaScriptResult = current.injectJavaScript(closure_8(onClose));
+                  current.injectJavaScript(metroImportAll(View));
                 }
-                return;
               }
             }
           }
           const _Symbol2 = Symbol;
           if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
             class U {
-              constructor(arg0) {
-                current = closure_2.current;
+              constructor(View) {
+                const current = ref.current;
                 if (current != null) {
-                  tmp = onClose;
-                  tmp2 = closure_8;
-                  injectJavaScriptResult = current.injectJavaScript(closure_8(onClose));
+                  current.injectJavaScript(metroImportAll(View));
                 }
-                return;
               }
             }
             class H {
               constructor() {
-                tmp = closure_6();
-                return;
+                first();
               }
             }
-            cResult[20] = tmp31;
+            cResult[20] = tmp29;
             cResult[21] = H;
           } else {
             class U {
-              constructor(arg0) {
-                current = closure_2.current;
+              constructor(View) {
+                const current = ref.current;
                 if (current != null) {
-                  tmp = onClose;
-                  tmp2 = closure_8;
-                  injectJavaScriptResult = current.injectJavaScript(closure_8(onClose));
+                  current.injectJavaScript(metroImportAll(View));
                 }
-                return;
               }
             }
             class H {
               constructor() {
-                tmp = closure_6();
-                return;
+                first();
               }
             }
           }
           if (cResult[22] === tmp14) {
             class U {
-              constructor(arg0) {
-                current = closure_2.current;
+              constructor(View) {
+                const current = ref.current;
                 if (current != null) {
-                  tmp = onClose;
-                  tmp2 = closure_8;
-                  injectJavaScriptResult = current.injectJavaScript(closure_8(onClose));
+                  current.injectJavaScript(metroImportAll(View));
                 }
-                return;
               }
             }
           }
@@ -378,96 +352,62 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             allowsInlineMediaPlayback: true,
             mediaCapturePermissionGrantType: "grant",
             javaScriptEnabled: true,
-            source: tmp26,
-            onShouldStartLoadWithRequest: tmp27,
+            source: tmp24,
+            onShouldStartLoadWithRequest: tmp25,
             onMessage: tmp14,
-            onError: tmp31,
+            onError: tmp29,
             onLoadEnd: H,
             injectedJavaScriptBeforeContentLoaded,
             style: null,
             containerStyle: null,
           };
-          ({ webView: obj5.style, webView: obj5.containerStyle } = tmp24);
+          ({ webView: obj5.style, webView: obj5.containerStyle } = tmp22);
           cResult[22] = tmp14;
           cResult[23] = injectedJavaScriptBeforeContentLoaded;
-          cResult[24] = tmp24.webView;
-          cResult[25] = tmp26;
-          cResult[26] = tmp27;
+          cResult[24] = tmp22.webView;
+          cResult[25] = tmp24;
+          cResult[26] = tmp25;
+          closure_10(onClose(tmp2[16]), obj3);
           class M {
             constructor() {
-              if (!closure_3.current) {
-                flag = true;
+              if (!ref.current) {
                 tmp.current = true;
-                tmp2 = onComplete;
-                tmp3 = onComplete();
-                tmp4 = onClose;
-                tmp5 = onClose();
+                onComplete();
+                onClose();
               }
-              return;
             }
           }
-          const tmp35 = closure_10(onClose(tmp2[16]), obj3);
         }
         const fn2 = function q(nativeEvent) {
+          let tmp10;
           try {
-            const tmp3 = options(nativeEvent.nativeEvent.data);
+            const tmp3 = React4(nativeEvent.nativeEvent.data);
             if (null != tmp3) {
-              if ("capture_complete" === tmp4.kind) {
-                const result = AgeVerificationURLActionCreators.registerIncodeInterview(tmp3.interviewId);
-                result
-                  .then(() => {
-                    const current = ref.current;
-                    let isAgeVerifiedResult = !current;
-                    if (!current) {
-                      isAgeVerifiedResult = onComplete(ref[12]).isAgeVerified();
-                      const obj = onComplete(ref[12]);
-                    }
-                    if (isAgeVerifiedResult) {
-                      closure_1_7();
-                    }
-                  })
-                  .catch((error) => {
-                    logger.warn("Failed to register Incode interview from WebView", { error });
-                    if (!ref.current) {
-                      tmp2.current = true;
-                      onClose();
-                    }
-                    const obj = { error };
-                  });
+              if ("capture_complete" === tmp3.kind) {
+                const obj3 = AgeVerificationURLActionCreators;
+                const result = obj3.registerIncodeInterview(tmp3.interviewId);
                 const nextPromise = result.then(() => {
-                  const current = ref.current;
-                  let isAgeVerifiedResult = !current;
-                  if (!current) {
-                    isAgeVerifiedResult = onComplete(ref[12]).isAgeVerified();
+                  let isAgeVerifiedResult = !ref.current;
+                  if (isAgeVerifiedResult) {
                     const obj = onComplete(ref[12]);
+                    isAgeVerifiedResult = obj.isAgeVerified();
                   }
                   if (isAgeVerifiedResult) {
                     closure_1_7();
                   }
                 });
-              } else if ("fallback_request" === tmp4.kind) {
-                const obj2 = { previousInterviewId: tmp4.previousInterviewId };
-                const incodeSessionBootstrap = AgeVerificationURLActionCreators.requestIncodeSessionBootstrap(obj2);
-                incodeSessionBootstrap
-                  .then((incode_parameters) => {
-                    incode_parameters = incode_parameters.incode_parameters;
-                    let session_token;
-                    if (incode_parameters != null) {
-                      session_token = incode_parameters.session_token;
-                    }
-                    if (null != session_token) {
-                      if (null != incode_parameters.interview_id) {
-                        const obj = { sessionToken: null, interviewId: null };
-                        ({ session_token: obj.sessionToken, interview_id: obj.interviewId } = incode_parameters);
-                        closure_1_8(obj);
-                      }
-                    }
-                    closure_1_8({ error: true });
-                  })
-                  .catch((error) => {
-                    logger.warn("Failed to bootstrap Incode fallback session from WebView", { error });
-                    closure_1_8({ error: true });
-                  });
+                nextPromise.catch((error) => {
+                  const obj = { error };
+                  logger.warn("Failed to register Incode interview from WebView", obj);
+                  if (!ref.current) {
+                    tmp2.current = true;
+                    onClose();
+                  }
+                });
+              } else if ("fallback_request" === tmp3.kind) {
+                let obj = AgeVerificationURLActionCreators;
+                const obj2 = { previousInterviewId: tmp3.previousInterviewId };
+                const incodeSessionBootstrap = obj.requestIncodeSessionBootstrap(obj2);
                 const nextPromise1 = incodeSessionBootstrap.then((incode_parameters) => {
                   incode_parameters = incode_parameters.incode_parameters;
                   let session_token;
@@ -483,7 +423,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   closure_1_8({ error: true });
                 });
-              } else if (tmp4.status === React5.COMPLETED) {
+                nextPromise1.catch((error) => {
+                  const obj = { error };
+                  logger.warn("Failed to bootstrap Incode fallback session from WebView", obj);
+                  closure_1_8({ error: true });
+                });
+              } else if (tmp3.status === metroImportDefault.COMPLETED) {
                 tmp10();
               } else if (!ref.current) {
                 tmp8.current = true;
@@ -498,44 +443,49 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = M;
         cResult[10] = onClose;
         cResult[11] = fn2;
-        let tmpResult = onComplete(tmp2[12]);
       }
       class M {
         constructor() {
-          if (!closure_3.current) {
-            flag = true;
+          if (!ref.current) {
             tmp.current = true;
-            tmp2 = onComplete;
-            tmp3 = onComplete();
-            tmp4 = onClose;
-            tmp5 = onClose();
+            onComplete();
+            onClose();
           }
-          return;
         }
       }
       cResult[3] = onClose;
       cResult[4] = onComplete;
       cResult[5] = M;
-      const tmp5 = ref(noop.useState(true), 2);
     }
   : (webviewUrl) => {
+      let _undefined;
+      let c6;
+      let items6;
+      let logger;
+      let timeoutMs;
+      let tmp18Result;
+      let tmp20;
+      let tmp3;
       webviewUrl = webviewUrl.webviewUrl;
       const onComplete = webviewUrl.onComplete;
       const onClose = webviewUrl.onClose;
-      noop = undefined;
+      react = undefined;
       c6 = undefined;
-      ref = noop.useRef(null);
-      noop = noop.useRef(false);
-      const ref2 = noop.useRef(false);
-      [tmp3, c6] = ref(noop.useState(true), 2);
-      const callback = noop.useCallback(() => {
+      const injectedJavaScriptBeforeContentLoaded = webviewUrl.injectedJavaScriptBeforeContentLoaded;
+      ref = react.useRef(null);
+      react = react.useRef(false);
+      const ref2 = react.useRef(false);
+      const tmp2 = ref(react.useState(true), 2);
+      [tmp3, c6] = tmp2;
+      const callback = react.useCallback(() => {
         if (!ref2.current) {
           tmp.current = true;
           _undefined(false);
         }
       }, []);
       const items = [callback];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
+        let closure_0;
         const timeout = setTimeout(() => {
           if (!ref.current) {
             const obj = { timeoutMs };
@@ -546,7 +496,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return () => clearTimeout(closure_0);
       }, items);
       const items1 = [onComplete, onClose];
-      const callback1 = noop.useCallback(() => {
+      const callback1 = react.useCallback(() => {
         if (!ref.current) {
           tmp.current = true;
           onComplete();
@@ -554,88 +504,57 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       const items2 = [callback1];
-      const callback2 = noop.useCallback(() => {
-        let isModalOpenResult = NavigationRouteUtils.isModalOpen(closure_6);
+      const callback2 = react.useCallback(() => {
+        const obj = NavigationRouteUtils;
+        let isModalOpenResult = obj.isModalOpen(closure_6);
         if (isModalOpenResult) {
-          isModalOpenResult = AgeVerificationUtils.isAgeVerified();
           const tmpResult = AgeVerificationUtils;
+          isModalOpenResult = tmpResult.isAgeVerified();
         }
         if (isModalOpenResult) {
           callback1();
         }
       }, items2);
-      const tmp2 = ref(noop.useState(true), 2);
       const tmp8 = webviewUrl;
-      const tmp9 = onClose;
-      const watchAgeVerificationStatusChange = webviewUrl(onClose[12]).useWatchAgeVerificationStatusChange(callback2);
-      const callback3 = noop.useCallback((arg0) => {
+      let obj = webviewUrl(onClose[12]);
+      const watchAgeVerificationStatusChange = obj.useWatchAgeVerificationStatusChange(callback2);
+      const callback3 = react.useCallback((View) => {
         const current = ref.current;
         if (current != null) {
-          current.injectJavaScript(closure_2_8(arg0));
+          current.injectJavaScript(metroImportAll(View));
         }
       }, []);
       const items3 = [callback1, callback3, onClose];
       const items4 = [webviewUrl];
-      const callback4 = noop.useCallback((nativeEvent) => {
+      const callback4 = react.useCallback((nativeEvent) => {
         try {
-          const tmp3 = options(nativeEvent.nativeEvent.data);
+          const tmp3 = React4(nativeEvent.nativeEvent.data);
           if (null != tmp3) {
-            if ("capture_complete" === tmp4.kind) {
-              const result = AgeVerificationURLActionCreators.registerIncodeInterview(tmp3.interviewId);
-              result
-                .then(() => {
-                  const current = ref.current;
-                  let isAgeVerifiedResult = !current;
-                  if (!current) {
-                    isAgeVerifiedResult = webviewUrl(onClose[12]).isAgeVerified();
-                    const obj = webviewUrl(onClose[12]);
-                  }
-                  if (isAgeVerifiedResult) {
-                    callback1();
-                  }
-                })
-                .catch((error) => {
-                  logger.warn("Failed to register Incode interview from WebView", { error });
-                  if (!ref.current) {
-                    tmp2.current = true;
-                    onClose();
-                  }
-                  const obj = { error };
-                });
+            if ("capture_complete" === tmp3.kind) {
+              const obj3 = AgeVerificationURLActionCreators;
+              const result = obj3.registerIncodeInterview(tmp3.interviewId);
               const nextPromise = result.then(() => {
-                const current = ref.current;
-                let isAgeVerifiedResult = !current;
-                if (!current) {
-                  isAgeVerifiedResult = webviewUrl(onClose[12]).isAgeVerified();
+                let isAgeVerifiedResult = !ref.current;
+                if (isAgeVerifiedResult) {
                   const obj = webviewUrl(onClose[12]);
+                  isAgeVerifiedResult = obj.isAgeVerified();
                 }
                 if (isAgeVerifiedResult) {
                   callback1();
                 }
               });
-            } else if ("fallback_request" === tmp4.kind) {
-              const obj2 = { previousInterviewId: tmp4.previousInterviewId };
-              const incodeSessionBootstrap = AgeVerificationURLActionCreators.requestIncodeSessionBootstrap(obj2);
-              incodeSessionBootstrap
-                .then((incode_parameters) => {
-                  incode_parameters = incode_parameters.incode_parameters;
-                  let session_token;
-                  if (incode_parameters != null) {
-                    session_token = incode_parameters.session_token;
-                  }
-                  if (null != session_token) {
-                    if (null != incode_parameters.interview_id) {
-                      const obj = { sessionToken: null, interviewId: null };
-                      ({ session_token: obj.sessionToken, interview_id: obj.interviewId } = incode_parameters);
-                      callback3(obj);
-                    }
-                  }
-                  callback3({ error: true });
-                })
-                .catch((error) => {
-                  logger.warn("Failed to bootstrap Incode fallback session from WebView", { error });
-                  callback3({ error: true });
-                });
+              nextPromise.catch((error) => {
+                const obj = { error };
+                logger.warn("Failed to register Incode interview from WebView", obj);
+                if (!ref.current) {
+                  tmp2.current = true;
+                  onClose();
+                }
+              });
+            } else if ("fallback_request" === tmp3.kind) {
+              let obj = AgeVerificationURLActionCreators;
+              const obj2 = { previousInterviewId: tmp3.previousInterviewId };
+              const incodeSessionBootstrap = obj.requestIncodeSessionBootstrap(obj2);
               const nextPromise1 = incodeSessionBootstrap.then((incode_parameters) => {
                 incode_parameters = incode_parameters.incode_parameters;
                 let session_token;
@@ -651,7 +570,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 callback3({ error: true });
               });
-            } else if (tmp4.status === React5.COMPLETED) {
+              nextPromise1.catch((error) => {
+                const obj = { error };
+                logger.warn("Failed to bootstrap Incode fallback session from WebView", obj);
+                callback3({ error: true });
+              });
+            } else if (tmp3.status === metroImportDefault.COMPLETED) {
               callback1();
             } else if (!ref.current) {
               tmp8.current = true;
@@ -663,12 +587,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           logger.warn("Failed to parse WebView message", obj4);
         }
       }, items3);
-      const memo = noop.useMemo(() => {
+      const memo = react.useMemo(() => {
         const uRL = new URL(webviewUrl);
         return uRL.origin;
       }, items4);
       const items5 = [memo];
-      const callback5 = noop.useCallback((isTopFrame) => {
+      const callback5 = react.useCallback(function (isTopFrame) {
+        let origin;
         if (null != isTopFrame.isTopFrame) {
           if (!isTopFrame.isTopFrame) {
             return true;
@@ -676,54 +601,59 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         try {
           const _URL = URL;
+          const self = this;
+          const self2 = this;
           const uRL = new URL(isTopFrame.url);
-          let flag2 = uRL.origin === memo;
-          if (!flag2) {
-            LinkingDefault.openURL(isTopFrame.url);
-            flag2 = false;
-          }
-          return flag2;
-        } catch (err) {}
+          origin = uRL.origin;
+        } catch (err) {
+          origin = null;
+        }
+        let flag2 = origin === memo;
+        if (!flag2) {
+          const obj = LinkingDefault;
+          obj.openURL(isTopFrame.url);
+          flag2 = false;
+        }
+        return flag2;
       }, items5);
       const tmp15 = closure_14();
-      let obj2 = { style: tmp15.container, children: null };
+      let obj2 = { style: tmp15.container, children: items6 };
       const obj5 = {
         ref,
         allowsInlineMediaPlayback: true,
         mediaCapturePermissionGrantType: "grant",
         javaScriptEnabled: true,
         source: { uri: webviewUrl },
-        onShouldStartLoadWithRequest: null,
-        onMessage: null,
-        onError: null,
-        onLoadEnd: null,
-        injectedJavaScriptBeforeContentLoaded: null,
+        onShouldStartLoadWithRequest: tmp20,
+        onMessage: callback4,
+        onError(code) {
+          const obj = { code: code.nativeEvent.code };
+          logger.warn("WebView load error", obj);
+          callback();
+        },
+        onLoadEnd() {
+          callback();
+        },
+        injectedJavaScriptBeforeContentLoaded,
         style: null,
         containerStyle: null,
       };
-      let obj = webviewUrl(onClose[12]);
       const tmp19 = onComplete(onClose[16]);
-      let tmp20;
+      let obj4 = webviewUrl(onClose[15]);
+      tmp20 = undefined;
+      const tmp9 = onClose;
       if (obj4.isIOS()) {
         tmp20 = callback5;
       }
-      obj5.onShouldStartLoadWithRequest = tmp20;
-      obj5.onMessage = callback4;
-      obj5.onError = function onError(code) {
-        logger.warn("WebView load error", { code: code.nativeEvent.code });
-        callback();
-      };
-      obj5.onLoadEnd = function onLoadEnd() {
-        callback();
-      };
-      obj5.injectedJavaScriptBeforeContentLoaded = webviewUrl.injectedJavaScriptBeforeContentLoaded;
       ({ webView: obj3.style, webView: obj3.containerStyle } = tmp15);
-      const items6 = [memo(tmp19, obj5)];
+      items6 = [memo(tmp19, obj5)];
       if (tmp18Result) {
-        const obj8 = { style: tmp15.loadingOverlay, children: tmp18(tmp8(tmp9[17]).ActivityIndicator, {}) };
-        tmp18Result = tmp18(tmp17, obj8);
+        const obj8 = { style: tmp15.loadingOverlay, children: memo(tmp8(tmp9[17]).ActivityIndicator, {}) };
+        tmp18Result = memo(ref2, obj8);
       }
       items6[1] = tmp18Result;
-      obj2.children = items6;
       return closure_11(ref2, obj2);
     };
+let result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationWebViewScreen.tsx");
+
+export default tmp6;

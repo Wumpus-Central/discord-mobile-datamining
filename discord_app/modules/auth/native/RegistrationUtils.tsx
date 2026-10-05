@@ -1,18 +1,38 @@
 // discord_app/modules/auth/native/RegistrationUtils.tsx
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import Constants from "../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import InviteStore from "../../../stores/InviteStore.tsx";
 import DisplayedInviteStore from "../../../stores/native/DisplayedInviteStore.tsx";
+import RegistrationUIStore from "RegistrationUIStore.tsx";
+import RegistrationConstants from "../RegistrationConstants.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, destinationStep;
 
-const require = fn;
+let c9;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
 function trackRegTransition(overrideRegistrationOptions) {
+  let actionType;
+  let code;
+  let details;
+  let fromStep;
+  let id;
+  let id1;
+  let id2;
+  let step;
+  let toStep;
+  let type;
   let registrationOptions = overrideRegistrationOptions.overrideRegistrationOptions;
   ({ step, fromStep, toStep, actionType, details } = overrideRegistrationOptions);
   const displayedInviteCode = DisplayedInviteStore.getDisplayedInviteCode();
   if (registrationOptions == null) {
-    registrationOptions = state.getState().registrationOptions;
+    registrationOptions = metroImportDefault.getState().registrationOptions;
   }
   let invite = null;
   if (null != displayedInviteCode) {
@@ -37,69 +57,128 @@ function trackRegTransition(overrideRegistrationOptions) {
       str2 = "phone";
     }
   }
-  const obj2 = {
+  const obj = {
     step,
     identity_type: str2,
     action_type: actionType,
     action_details: details,
     registration_source: str,
-    invite_code: null,
-    invite_channel_id: null,
-    invite_channel_type: null,
-    invite_guild_id: null,
-    invite_inviter_id: null,
-    from_step: null,
-    to_step: null,
+    invite_code: code,
+    invite_channel_id: id,
+    invite_channel_type: type,
+    invite_guild_id: id1,
+    invite_inviter_id: id2,
+    from_step: fromStep,
+    to_step: toStep,
   };
-  let code;
+  code = undefined;
+  const track = AnalyticsUtilsDefault.track;
+  const REGISTER_TRANSITION = AnalyticEvents.REGISTER_TRANSITION;
+  AnalyticsUtilsDefault;
   if (invite != null) {
     code = invite.code;
   }
-  obj2.invite_code = code;
-  let id;
+  id = undefined;
   if (invite != null) {
     const channel = invite.channel;
     if (channel != null) {
       id = channel.id;
     }
   }
-  obj2.invite_channel_id = id;
-  let type;
+  type = undefined;
   if (invite != null) {
     const channel2 = invite.channel;
     if (channel2 != null) {
       type = channel2.type;
     }
   }
-  obj2.invite_channel_type = type;
-  let id1;
+  id1 = undefined;
   if (invite != null) {
-    guild = invite.guild;
+    const guild = invite.guild;
     if (guild != null) {
       id1 = guild.id;
     }
   }
-  obj2.invite_guild_id = id1;
-  let id2;
+  id2 = undefined;
   if (invite != null) {
     const inviter = invite.inviter;
     if (inviter != null) {
       id2 = inviter.id;
     }
   }
-  obj2.invite_inviter_id = id2;
-  obj2.from_step = fromStep;
-  obj2.to_step = toStep;
-  AnalyticsUtilsDefault.track(AnalyticEvents.REGISTER_TRANSITION, obj2);
+  track(REGISTER_TRANSITION, obj);
 }
-const RegistrationUIStore = fn(15867);
-({ clearRegistrationErrorMessage: metroRequire, useRegistrationUIStore: closure_7 } = RegistrationUIStore);
-const RegistrationConstants = fn(15868);
-({ RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: closure_9 } = RegistrationConstants);
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
+({ clearRegistrationErrorMessage: metroRequire, useRegistrationUIStore: metroImportDefault } = RegistrationUIStore);
+({ RegisterTransitionSteps: metroImportAll, RegistrationTransitionActionTypes: c9 } = RegistrationConstants);
+const AnalyticEvents = Constants.AnalyticEvents;
+const jsx = Fragment.jsx;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (destinationStep) => {
+      let context;
+      let onPress;
+      const tmp = context;
+      let obj = context(onPress[9]);
+      const cResult = obj.c(7);
+      context = react.useContext(context(onPress[10]).TrackRegistrationContext);
+      destinationStep = destinationStep.destinationStep;
+      const tmp2 = onPress;
+      onPress = destinationStep.onPress;
+      if (cResult[0] === destinationStep) {
+        if (cResult[1] === onPress) {
+          let tmp5;
+          if (cResult[2] === context) {
+            tmp5 = cResult[3];
+          }
+          if (cResult[4] === tmp5) {
+            let tmp6;
+            if (cResult[5] === destinationStep) {
+              tmp6 = cResult[6];
+            }
+            return tmp6;
+          }
+          const HeaderBackButton = tmp(tmp2[11]).HeaderBackButton;
+          const merged = Object.assign(destinationStep);
+          const tmp11 = <HeaderBackButton onPress={tmp5} />;
+          cResult[4] = tmp5;
+          cResult[5] = destinationStep;
+          cResult[6] = tmp11;
+          tmp6 = tmp11;
+        }
+      }
+      const fn = function o() {
+        if (null != onPress) {
+          metroRequire();
+          const obj = { step: destinationStep, actionType: constants.VIEWED };
+          context(obj);
+          tmp();
+        }
+      };
+      cResult[0] = destinationStep;
+      cResult[1] = onPress;
+      cResult[2] = context;
+      cResult[3] = fn;
+      tmp5 = fn;
+    }
+  : (arg0) => {
+      let closure_0;
+      let step;
+      _require = react.useContext(require("Auth").TrackRegistrationContext);
+      ({ destinationStep: importDefault, onPress: dependencyMap } = arg0);
+      const HeaderBackButton = require("../../../../_runtime/metro/06019__.js").HeaderBackButton;
+      const merged = Object.assign(arg0);
+      return (
+        <HeaderBackButton
+          onPress={function onPress() {
+            if (null != dependencyMap) {
+              metroRequire();
+              const obj = { step: importDefault, actionType: constants.VIEWED };
+              closure_0(obj);
+              tmp();
+            }
+          }}
+        />
+      );
+    };
 const result = size.fileFinishedImporting("modules/auth/native/RegistrationUtils.tsx");
 
 export const hasAllRegistrationFieldsCompleted = function hasAllRegistrationFieldsCompleted(email, isConsentRequired) {
@@ -132,15 +211,21 @@ export const hasAllRegistrationFieldsCompleted = function hasAllRegistrationFiel
 };
 export { trackRegTransition };
 export function getTrackRegTransition(arg0) {
+  const ref = arg0;
   return (arg0) => {
+    let actionType;
+    let details;
+    let overrideRegistrationOptions;
+    let step;
+    let toStep;
     ({ step, actionType, toStep, details, overrideRegistrationOptions } = arg0);
-    if (actionType === constants2.VIEWED) {
-      if (step === constants.CAPTCHA) {
+    if (actionType === constants.VIEWED) {
+      if (step === metroImportAll.CAPTCHA) {
         const obj = { step, fromStep: ref.current, actionType };
         trackRegTransition(obj);
       }
     }
-    if (actionType === constants2.VIEWED) {
+    if (actionType === constants.VIEWED) {
       if (null != step) {
         const obj2 = { step, fromStep: ref.current, actionType };
         trackRegTransition(obj2);
@@ -153,65 +238,7 @@ export function getTrackRegTransition(arg0) {
     return tmp9;
   };
 }
-export const BackButtonWithTracking = ReactCompilerGating.isReactCompilerEnabled()
-  ? (destinationStep) => {
-      const cResult = context(onPress[9]).c(7);
-      context = noop.useContext(context(onPress[10]).TrackRegistrationContext);
-      destinationStep = destinationStep.destinationStep;
-      onPress = destinationStep.onPress;
-      if (cResult[0] === destinationStep) {
-        if (cResult[1] === onPress) {
-          if (cResult[2] === context) {
-            let tmp5 = cResult[3];
-          }
-          if (cResult[4] === tmp5) {
-            if (cResult[5] === destinationStep) {
-              let tmp6 = cResult[6];
-            }
-            return tmp6;
-          }
-          const obj2 = {};
-          const merged = Object.assign(destinationStep);
-          obj2.onPress = tmp5;
-          const tmp11 = jsx(tmp(tmp2[11]).HeaderBackButton, {});
-          cResult[4] = tmp5;
-          cResult[5] = destinationStep;
-          cResult[6] = tmp11;
-          tmp6 = tmp11;
-        }
-      }
-      const fn = function o() {
-        if (null != onPress) {
-          timestampProducer();
-          const obj = { step: destinationStep, actionType: constants2.VIEWED };
-          context(obj);
-          tmp();
-        }
-      };
-      cResult[0] = destinationStep;
-      cResult[1] = onPress;
-      cResult[2] = context;
-      cResult[3] = fn;
-      tmp5 = fn;
-      let obj = context(onPress[9]);
-      tmp = context;
-      tmp2 = onPress;
-    }
-  : (arg0) => {
-      _require = noop.useContext(require("Auth").TrackRegistrationContext);
-      ({ destinationStep: importDefault, onPress: dependencyMap } = arg0);
-      let obj = {};
-      const merged = Object.assign(arg0);
-      obj.onPress = function onPress() {
-        if (null != dependencyMap) {
-          timestampProducer();
-          const obj = { step, actionType: constants2.VIEWED };
-          closure_0(obj);
-          tmp();
-        }
-      };
-      return jsx(require("../../../../_runtime/metro/06019__.js").HeaderBackButton, {});
-    };
+export const BackButtonWithTracking = tmp4;
 export const getCommonErrorDetails = function getCommonErrorDetails(error_code) {
   if (-1 === error_code) {
     const _HermesInternal7 = HermesInternal;

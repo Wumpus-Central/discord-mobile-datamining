@@ -1,162 +1,248 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsAgeVerificationScreen.tsx
-import c from "../../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRow3 from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
-import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRowGroup2 from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import KeyIcon from "../../../../../design/components/Icon/native/redesign/generated/KeyIcon.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import AgeVerificationAnalyticsUtils from "../../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import AgeVerificationURLActionCreators from "../../../../age_assurance/AgeVerificationURLActionCreators.tsx";
-import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import _asyncToGenerator from "../../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let c4, c5;
+
+let hasOwnProperty;
+let metroRequire;
+let obj2;
+let obj3;
 function showAgeVerificationTestModal() {
-  const self = this;
-  const apply = closure_9.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }
-let closure_9 = async function _showAgeVerificationTestModal() {
-  closure_1 = tmp3;
-  await AgeVerificationURLActionCreators.requestAgeVerification({});
-  if (1 === tmp7) {
-    c3 = 0;
-    closure_129_1(closure_129_2[8]).open({ content: "Failed to show age verification test modal", key: "age-verification-test-failure" });
-    c5 = 3;
-    closure_129_1(closure_129_2[8]);
-  } else if (arg0 === 1) {
-    c5 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    closure_128_0 = value;
-    closure_129_1(closure_129_2[7]).showAgeVerification({
-      webviewUrl: closure_128_0.verification_webview_url,
-      verificationRequestId: closure_128_0.verification_request_id,
-      verificationVendorName: closure_128_0.verification_vendor_name,
-      incodeParameters: closure_128_0.incode_parameters,
-      onComplete() {
-          closure_1_1(closure_1_2[8]).open({ content: "[On Complete] Successfully age verified", key: "age-verification-test-success" });
-        },
-      entryPoint: closure_129_0(closure_129_2[9]).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS
-    });
-    c3 = 0;
-    closure_129_1(closure_129_2[7]);
-    {
-      webviewUrl: closure_128_0.verification_webview_url,
-      verificationRequestId: closure_128_0.verification_request_id,
-      verificationVendorName: closure_128_0.verification_vendor_name,
-      incodeParameters: closure_128_0.incode_parameters,
-      onComplete() {
-          closure_1_1(closure_1_2[8]).open({ content: "[On Complete] Successfully age verified", key: "age-verification-test-success" });
-        },
-      entryPoint: closure_129_0(closure_129_2[9]).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS
-    };
-  }
-  return value;
-};
-const ScrollView = fn(17).ScrollView;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj2.content = { padding: nativeDefault.space.PX_16 };
-let closure_7 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj4 = { padding: nativeDefault.space.PX_16 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsAgeVerificationScreen.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(10);
-  const tmp4 = closure_7();
-  const sum = tmp4.content.padding + useSafeAreaInsetsDefault().bottom;
-  if (cResult[0] !== sum) {
-    const obj2 = { paddingBottom: sum };
-    cResult[0] = sum;
-    cResult[1] = obj2;
-    let tmp6 = obj2;
-  } else {
-    tmp6 = cResult[1];
-  }
-  if (cResult[2] === tmp4.content) {
-    if (cResult[3] === tmp6) {
-      let tmp7 = cResult[4];
-    }
-    const _Symbol = Symbol;
-    if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { label: "Launch Age Verification Test Tool", onPress: showAgeVerificationTestModal, icon: hasOwnProperty(KeyIcon.KeyIcon, {}), trailing: hasOwnProperty(TableRowArrow.TableRowArrow, {}) };
-      const tmp12 = hasOwnProperty(TableRow.TableRow, obj3);
-      cResult[5] = tmp12;
-      let tmp9 = tmp12;
+let obj = function _showAgeVerificationTestModal() {
+  obj = _asyncToGenerator(async () => {
+    let obj3;
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
     } else {
-      tmp9 = cResult[5];
+      let c3;
+      try {
+        let closure_0;
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            let closure_1 = tmp;
+            closure_0 = undefined;
+            c3 = 1;
+            c4 = 2;
+            c5 = 1;
+            const obj6 = { value: obj3.requestAgeVerification({}), done: false };
+            obj3 = AgeVerificationURLActionCreators;
+            return obj6;
+          }
+        } else {
+          if (1 === c4) {
+            c3 = 0;
+            const obj2 = closure_129_1(closure_129_2[8]);
+            const openResult = obj2.open({
+              content: "Failed to show age verification test modal",
+              key: "age-verification-test-failure",
+            });
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            c5 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_0 = value;
+            const obj7 = {
+              webviewUrl: closure_0.verification_webview_url,
+              verificationRequestId: closure_0.verification_request_id,
+              verificationVendorName: closure_0.verification_vendor_name,
+              incodeParameters: closure_0.incode_parameters,
+              onComplete() {
+                obj = closure_1_1(closure_1_2[8]);
+                obj.open({ content: "[On Complete] Successfully age verified", key: "age-verification-test-success" });
+              },
+              entryPoint: closure_129_0(closure_129_2[9]).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS,
+            };
+            const showAgeVerification = closure_129_1(closure_129_2[7]).showAgeVerification;
+            const tmp22 = closure_129_1(closure_129_2[7]);
+            showAgeVerification(obj7);
+            c3 = 0;
+          }
+          c5 = 3;
+          return { value: "IconComponent", done: null };
+        }
+      } catch (tmp12) {
+        let closure_2 = tmp12;
+        if (0 === c3) {
+          c5 = 3;
+          throw tmp12;
+        } else {
+          c4 = 1;
+        }
+      }
     }
-    const _Symbol2 = Symbol;
-    if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj4 = { title: "Quick Actions", hasIcons: true, children: null };
-      const items = [tmp9, ];
+  });
+  return obj(...arguments);
+};
+const ScrollView = react_native.ScrollView;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+let createStyles = createStyles_mod;
+obj = { container: obj2, content: obj3 };
+obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles = createStyles.createStyles;
+obj3 = { padding: nativeDefault.space.PX_16 };
+let closure_7 = createStyles(obj);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      let items;
+      let tmp6;
+      obj = react2;
+      const cResult = obj.c(10);
+      const tmp4 = closure_7();
+      const sum = tmp4.content.padding + useSafeAreaInsetsDefault().bottom;
+      if (cResult[0] !== sum) {
+        let obj2 = { paddingBottom: sum };
+        cResult[0] = sum;
+        cResult[1] = obj2;
+        tmp6 = obj2;
+      } else {
+        tmp6 = cResult[1];
+      }
+      if (cResult[2] === tmp4.content) {
+        let tmp7;
+        let tmp9;
+        let tmp13;
+        if (cResult[3] === tmp6) {
+          tmp7 = cResult[4];
+        }
+        const _Symbol = Symbol;
+        if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj3 = {
+            label: "Launch Age Verification Test Tool",
+            onPress: showAgeVerificationTestModal,
+            icon: hasOwnProperty(KeyIcon.KeyIcon, {}),
+            trailing: hasOwnProperty(TableRowArrow.TableRowArrow, {}),
+          };
+          const TableRow = TableRow3.TableRow;
+          const tmp12 = hasOwnProperty(TableRow, obj3);
+          cResult[5] = tmp12;
+          tmp9 = tmp12;
+        } else {
+          tmp9 = cResult[5];
+        }
+        const _Symbol2 = Symbol;
+        if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj4 = { title: "Quick Actions", hasIcons: true, children: items };
+          items = [tmp9];
+          const TableRowGroup = TableRowGroup2.TableRowGroup;
+          const obj5 = {
+            label: "Launch Age Verification Modal",
+            onPress() {
+              obj = AgeVerificationActionCreatorsDefault;
+              const obj2 = {
+                entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS,
+              };
+              return obj.showAgeVerificationGetStartedModal(obj2);
+            },
+            icon: hasOwnProperty(KeyIcon.KeyIcon, {}),
+            trailing: hasOwnProperty(TableRowArrow.TableRowArrow, {}),
+          };
+          const TableRow2 = TableRow3.TableRow;
+          items[1] = hasOwnProperty(TableRow2, obj5);
+          const tmp16 = metroRequire(TableRowGroup, obj4);
+          cResult[6] = tmp16;
+          tmp13 = tmp16;
+        } else {
+          tmp13 = cResult[6];
+        }
+        if (cResult[7] === tmp4.container) {
+          let tmp17;
+          if (cResult[8] === tmp7) {
+            tmp17 = cResult[9];
+          }
+          return tmp17;
+        }
+        const obj6 = { style: tmp4.container, contentContainerStyle: tmp7, children: tmp13 };
+        const tmp20 = hasOwnProperty(ScrollView, obj6);
+        cResult[7] = tmp4.container;
+        cResult[8] = tmp7;
+        cResult[9] = tmp20;
+        tmp17 = tmp20;
+      }
+      const items1 = [tmp4.content, tmp6];
+      cResult[2] = tmp4.content;
+      cResult[3] = tmp6;
+      cResult[4] = items1;
+      tmp7 = items1;
+    }
+  : () => {
+      let TableRowGroup;
+      let items;
+      let items1;
+      let obj3;
+      const tmp = closure_7();
+      obj = { style: tmp.container, contentContainerStyle: items, children: metroRequire(TableRowGroup, obj3) };
+      items = [tmp.content];
+      let obj2 = { paddingBottom: tmp.content.padding + useSafeAreaInsetsDefault().bottom };
+      items[1] = obj2;
+      obj3 = { title: "Quick Actions", hasIcons: true, children: items1 };
+      TableRowGroup = TableRowGroup2.TableRowGroup;
+      const obj4 = {
+        label: "Launch Age Verification Test Tool",
+        onPress: showAgeVerificationTestModal,
+        icon: hasOwnProperty(KeyIcon.KeyIcon, {}),
+        trailing: hasOwnProperty(TableRowArrow.TableRowArrow, {}),
+      };
+      const TableRow = TableRow3.TableRow;
+      items1 = [hasOwnProperty(TableRow, obj4)];
       const obj5 = {
         label: "Launch Age Verification Modal",
         onPress() {
-              const obj = AgeVerificationActionCreatorsDefault;
-              return obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS });
-            },
+          obj = AgeVerificationActionCreatorsDefault;
+          const obj2 = {
+            entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS,
+          };
+          return obj.showAgeVerificationGetStartedModal(obj2);
+        },
         icon: hasOwnProperty(KeyIcon.KeyIcon, {}),
-        trailing: hasOwnProperty(TableRowArrow.TableRowArrow, {})
+        trailing: hasOwnProperty(TableRowArrow.TableRowArrow, {}),
       };
-      items[1] = hasOwnProperty(TableRow.TableRow, obj5);
-      obj4.children = items;
-      const tmp16 = timestampProducer(TableRowGroup.TableRowGroup, obj4);
-      cResult[6] = tmp16;
-      let tmp13 = tmp16;
-    } else {
-      tmp13 = cResult[6];
-    }
-    if (cResult[7] === tmp4.container) {
-      if (cResult[8] === tmp7) {
-        let tmp17 = cResult[9];
-      }
-      return tmp17;
-    }
-    const obj6 = { style: tmp4.container, contentContainerStyle: tmp7, children: tmp13 };
-    const tmp20 = hasOwnProperty(ScrollView, obj6);
-    cResult[7] = tmp4.container;
-    cResult[8] = tmp7;
-    cResult[9] = tmp20;
-    tmp17 = tmp20;
-  }
-  const items1 = [tmp4.content, tmp6];
-  cResult[2] = tmp4.content;
-  cResult[3] = tmp6;
-  cResult[4] = items1;
-  tmp7 = items1;
-}) : (() => {
-  const tmp = closure_7();
-  let obj = { style: tmp.container, contentContainerStyle: null, children: null };
-  const items = [tmp.content, { paddingBottom: tmp.content.padding + useSafeAreaInsetsDefault().bottom }];
-  obj.contentContainerStyle = items;
-  const obj3 = { title: "Quick Actions", hasIcons: true, children: null };
-  const obj2 = { paddingBottom: tmp.content.padding + useSafeAreaInsetsDefault().bottom };
-  const items1 = [hasOwnProperty(TableRow.TableRow, { label: "Launch Age Verification Test Tool", onPress: showAgeVerificationTestModal, icon: hasOwnProperty(KeyIcon.KeyIcon, {}), trailing: hasOwnProperty(TableRowArrow.TableRowArrow, {}) }), ];
-  const obj4 = { label: "Launch Age Verification Test Tool", onPress: showAgeVerificationTestModal, icon: hasOwnProperty(KeyIcon.KeyIcon, {}), trailing: hasOwnProperty(TableRowArrow.TableRowArrow, {}) };
-  items1[1] = hasOwnProperty(TableRow.TableRow, {
-    label: "Launch Age Verification Modal",
-    onPress() {
-      const obj = AgeVerificationActionCreatorsDefault;
-      return obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS });
-    },
-    icon: hasOwnProperty(KeyIcon.KeyIcon, {}),
-    trailing: hasOwnProperty(TableRowArrow.TableRowArrow, {})
-  });
-  obj3.children = items1;
-  obj.children = timestampProducer(TableRowGroup.TableRowGroup, obj3);
-  return hasOwnProperty(ScrollView, obj);
-});
+      const TableRow2 = TableRow3.TableRow;
+      items1[1] = hasOwnProperty(TableRow2, obj5);
+      return hasOwnProperty(ScrollView, obj);
+    };
+const result = size.fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsAgeVerificationScreen.tsx",
+);
+
+export default tmp5;

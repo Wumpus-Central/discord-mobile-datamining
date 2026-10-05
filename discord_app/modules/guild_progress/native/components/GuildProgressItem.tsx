@@ -1,57 +1,65 @@
 // discord_app/modules/guild_progress/native/components/GuildProgressItem.tsx
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import GuildProgressUtils from "../GuildProgressUtils.tsx";
 import GuildProgressActionCreatorsDefault from "../../GuildProgressActionCreators.tsx";
 import GuildProgressCircleDefault from "GuildProgressCircle.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+let guild;
+
+const jsx = Fragment.jsx;
 let closure_4 = createStyles.createStyles({ icon: { width: 32, height: 32 } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressItem.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guild) => {
-      const cResult = guild(completed[4]).c(13);
+      let completed;
+      let obj = guild(completed[4]);
+      const cResult = obj.c(13);
       guild = guild.guild;
       const tmp4 = closure_4();
-      let obj = guild(completed[4]);
-      const iOSCompletionStates = guild(completed[5]).useIOSCompletionStates(guild);
+      let obj2 = guild(completed[5]);
+      const iOSCompletionStates = obj2.useIOSCompletionStates(guild);
       const numFinished = iOSCompletionStates.numFinished;
       completed = iOSCompletionStates.completed;
       const totalSteps = iOSCompletionStates.totalSteps;
       if (cResult[0] === completed) {
+        let tmp6;
+        let tmp8;
+        let tmp10;
         if (cResult[1] === guild) {
-          let tmp6 = cResult[2];
+          tmp6 = cResult[2];
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj3 = { uri: numFinished(tmp2[7]) };
+          const obj3 = { uri: numFinished(completed[7]) };
           cResult[3] = obj3;
-          let tmp8 = obj3;
+          tmp8 = obj3;
         } else {
           tmp8 = cResult[3];
         }
         const _Symbol2 = Symbol;
+        const icon = tmp4.icon;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = tmp(tmp2[8]).intl;
-          const stringResult = intl.string(tmp(tmp2[8]).t["J2+r16"]);
+          const stringResult = intl.string(guild(completed[8]).t["J2+r16"]);
           cResult[4] = stringResult;
-          let tmp10 = stringResult;
+          tmp10 = stringResult;
         } else {
           tmp10 = cResult[4];
         }
         if (cResult[5] === numFinished) {
+          let tmp12;
           if (cResult[6] === totalSteps) {
-            let tmp12 = cResult[7];
+            tmp12 = cResult[7];
           }
           if (cResult[8] === completed) {
             if (cResult[9] === tmp6) {
               if (cResult[10] === tmp4.icon) {
+                let tmp13;
                 if (cResult[11] === tmp12) {
-                  let tmp13 = cResult[12];
+                  tmp13 = cResult[12];
                 }
                 return tmp13;
               }
@@ -60,13 +68,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = {
             onPress: tmp6,
             source: tmp8,
-            iconStyle: tmp4.icon,
+            iconStyle: icon,
             title: tmp10,
             isCompleted: completed,
             renderEndComponent: tmp12,
             fullWidth: true,
           };
-          const tmp16 = totalSteps(numFinished(tmp2[10]), obj4);
+          const tmp16 = totalSteps(numFinished(completed[10]), obj4);
           cResult[8] = completed;
           cResult[9] = tmp6;
           cResult[10] = tmp4.icon;
@@ -87,9 +95,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const fn = function s() {
         if (!completed) {
-          const progress = GuildProgressActionCreatorsDefault.createProgress(guild.id);
+          const obj = GuildProgressActionCreatorsDefault;
+          const progress = obj.createProgress(guild.id);
         }
-        GuildProgressUtils.openActionSheet(guild);
+        const obj2 = GuildProgressUtils;
+        obj2.openActionSheet(guild);
       };
       cResult[0] = completed;
       cResult[1] = guild;
@@ -97,42 +107,45 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
     }
   : (guild) => {
+      let fn;
+      let intl;
+      let obj3;
       guild = guild.guild;
       let completed;
       const tmp = closure_4();
-      const iOSCompletionStates = guild(completed[5]).useIOSCompletionStates(guild);
+      let obj = guild(completed[5]);
+      const iOSCompletionStates = obj.useIOSCompletionStates(guild);
       const numFinished = iOSCompletionStates.numFinished;
       completed = iOSCompletionStates.completed;
       const totalSteps = iOSCompletionStates.totalSteps;
       let obj2 = {
         onPress() {
           if (!completed) {
-            const progress = GuildProgressActionCreatorsDefault.createProgress(guild.id);
+            const obj = GuildProgressActionCreatorsDefault;
+            const progress = obj.createProgress(guild.id);
           }
-          GuildProgressUtils.openActionSheet(guild);
+          const obj2 = GuildProgressUtils;
+          obj2.openActionSheet(guild);
         },
-        source: null,
-        iconStyle: null,
-        title: null,
-        isCompleted: null,
-        renderEndComponent: null,
+        source: obj3,
+        iconStyle: tmp.icon,
+        title: intl.string(guild(completed[8]).t["J2+r16"]),
+        isCompleted: completed,
+        renderEndComponent: fn,
         fullWidth: true,
       };
-      const obj3 = { uri: null };
-      let obj = guild(completed[5]);
+      obj3 = { uri: numFinished(completed[7]) };
+      const tmp4 = numFinished(completed[10]);
+      intl = guild(completed[8]).intl;
+      fn = undefined;
       const tmp3 = totalSteps;
-      obj3.uri = numFinished(completed[7]);
-      obj2.source = obj3;
-      obj2.iconStyle = tmp.icon;
-      const intl = guild(completed[8]).intl;
-      obj2.title = intl.string(guild(completed[8]).t["J2+r16"]);
-      obj2.isCompleted = completed;
-      let fn;
       if (numFinished > 0) {
         if (numFinished < totalSteps) {
           fn = () => jsx(GuildProgressCircleDefault, { percent: (100 * numFinished) / totalSteps, size: 32 });
         }
       }
-      obj2.renderEndComponent = fn;
-      return tmp3(numFinished(completed[10]), obj2);
+      return tmp3(tmp4, obj2);
     };
+const result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressItem.tsx");
+
+export default tmp3;

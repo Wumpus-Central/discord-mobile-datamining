@@ -1,21 +1,24 @@
 // discord_app/modules/guild_automod/useGuildBotApplications.tsx
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import GuildSettingsFetchActionCreators from "../guild_settings/GuildSettingsFetchActionCreators.tsx";
-import noop from "../../../_runtime/metro/00019__.js";
+import react from "../../../_runtime/00019_react.js";
 import GuildSettingsStore from "../guild_settings/GuildSettingsStore.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_automod/useGuildBotApplications.tsx");
-
-export const useGuildBotApplications = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let props;
+      let stateFromStores;
+      let tmp4;
+      let tmp5;
       _require = arg0;
-      let found1 = stateFromStores;
-      const cResult = require("c").c(10);
+      let obj = require("react");
+      const cResult = obj.c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildSettingsStore];
         const fn = function s() {
@@ -28,48 +31,59 @@ export const useGuildBotApplications = ReactCompilerGating.isReactCompilerEnable
       } else {
         [tmp4, tmp5] = cResult;
       }
-      let obj = require("c");
-      stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
+      const tmpResult = require("get initialized");
+      stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       if (cResult[2] === arg0) {
+        let tmp7;
+        let tmp8;
         if (cResult[3] === stateFromStores) {
-          let tmp7 = cResult[4];
-          let tmp8 = cResult[5];
+          tmp7 = cResult[4];
+          tmp8 = cResult[5];
         }
-        const effect = noop.useEffect(tmp7, tmp8);
-        if (null == stateFromStores) {
-          return null;
-        } else {
-          const _Symbol = Symbol;
-          if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn3 = function h(type) {
-              return type.type === closure_0(stateFromStores[6]).IntegrationTypes.DISCORD;
-            };
-            cResult[8] = fn3;
-            let mapped = fn3;
+        const effect = react.useEffect(tmp7, tmp8);
+        let tmp11 = null;
+        if (null != stateFromStores) {
+          let tmp12;
+          if (cResult[6] !== stateFromStores) {
+            let tmp13;
+            let tmp14;
+            const _Symbol = Symbol;
+            if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+              const fn3 = function h(type) {
+                return type.type === closure_0(stateFromStores[6]).IntegrationTypes.DISCORD;
+              };
+              cResult[8] = fn3;
+              tmp13 = fn3;
+            } else {
+              tmp13 = cResult[8];
+            }
+            const _Symbol2 = Symbol;
+            if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+              const fn4 = function y(application) {
+                return application.application;
+              };
+              cResult[9] = fn4;
+              tmp14 = fn4;
+            } else {
+              tmp14 = cResult[9];
+            }
+            const found = stateFromStores.filter(tmp13);
+            const mapped = found.map(tmp14);
+            const found1 = mapped.filter(tmp(tmp2[7]).isNotNullish);
+            cResult[6] = stateFromStores;
+            cResult[7] = found1;
+            tmp12 = found1;
           } else {
-            mapped = cResult[8];
+            tmp12 = cResult[7];
           }
-          const _Symbol2 = Symbol;
-          if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn4 = function y(application) {
-              return application.application;
-            };
-            cResult[9] = fn4;
-            let tmp12 = fn4;
-          } else {
-            tmp12 = cResult[9];
-          }
-          const found = stateFromStores.filter(mapped);
-          mapped = found.map(tmp12);
-          found1 = mapped.filter(tmp(found1[7]).isNotNullish);
-          cResult[6] = stateFromStores;
-          cResult[7] = found1;
+          tmp11 = tmp12;
         }
+        return tmp11;
       }
       const fn2 = function c() {
         if (null == stateFromStores) {
-          const guildIntegrationsApplications =
-            GuildSettingsFetchActionCreators.fetchGuildIntegrationsApplications(closure_0);
+          const obj = GuildSettingsFetchActionCreators;
+          const guildIntegrationsApplications = obj.fetchGuildIntegrationsApplications(closure_0);
         }
       };
       const items1 = [arg0, stateFromStores];
@@ -79,21 +93,24 @@ export const useGuildBotApplications = ReactCompilerGating.isReactCompilerEnable
       cResult[5] = items1;
       tmp8 = items1;
       tmp7 = fn2;
-      const tmpResult = require("initialize");
     }
   : (arg0) => {
+      let closure_0;
+      let props;
+      let stateFromStores;
       _require = arg0;
+      let obj = require("get initialized");
       const items = [GuildSettingsStore];
-      stateFromStores = require("initialize").useStateFromStores(items, () => props.getProps().integrations);
+      stateFromStores = obj.useStateFromStores(items, () => props.getProps().integrations);
       const items1 = [arg0, stateFromStores];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
         if (null == stateFromStores) {
-          const guildIntegrationsApplications =
-            GuildSettingsFetchActionCreators.fetchGuildIntegrationsApplications(closure_0);
+          const obj = GuildSettingsFetchActionCreators;
+          const guildIntegrationsApplications = obj.fetchGuildIntegrationsApplications(closure_0);
         }
       }, items1);
       const items2 = [stateFromStores];
-      return noop.useMemo(() => {
+      return react.useMemo(() => {
         let found1 = null;
         if (null != stateFromStores) {
           const found = stateFromStores.filter(
@@ -105,3 +122,6 @@ export const useGuildBotApplications = ReactCompilerGating.isReactCompilerEnable
         return found1;
       }, items2);
     };
+const result = size.fileFinishedImporting("modules/guild_automod/useGuildBotApplications.tsx");
+
+export const useGuildBotApplications = tmp2;

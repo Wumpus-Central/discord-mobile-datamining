@@ -1,11 +1,15 @@
 // discord_app/modules/parent_tools/ParentalConsentWarningActionCreators.tsx
+import logger_Logger from "../../../discord_common/js/packages/logger/Logger.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import ParentalConsentWarningStore from "ParentalConsentWarningStore.tsx";
 import Backoff from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const require = fn;
+const require = globalThis.__r;
+let _require, c0, c1, c4, closure_0, closure_2, closure_7;
+
 function clearPendingRetry() {
   if (null != c8) {
     const _clearTimeout = clearTimeout;
@@ -14,16 +18,41 @@ function clearPendingRetry() {
   }
 }
 function fetchWarning() {
+  obj = require("ParentalConsentWarningFetchExperiment");
   if (obj.isParentalConsentWarningFetchEnabled("parental_consent_warning_manager")) {
+    const tmp3 = null;
     if (null != closure_7) {
       return closure_7;
     } else {
       _require = closure_9;
       const tmp6 = (async () => {
+        function normalizeWarning(body) {
+          let days_remaining;
+          obj = {
+            inGrace: true === body.in_grace,
+            daysRemaining: days_remaining,
+            surfaces: Array.isArray(body.surfaces) ? body.surfaces : [],
+          };
+          days_remaining = null;
+          if (typeof body.days_remaining === "number") {
+            days_remaining = body.days_remaining;
+          }
+          return obj;
+        }
+        function scheduleRetry() {
+          let timeout;
+          if (null == timeout) {
+            const _setTimeout = setTimeout;
+            timeout = setTimeout(() => {
+              c8 = null;
+              closure_1_12();
+            }, closure_1_6.fail());
+          }
+        }
         if (logger === 2) {
           logger = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp7 === 3) {
+        } else if (tmp3 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -33,7 +62,9 @@ function fetchWarning() {
             return { value: "IconComponent", done: null };
           }
         } else {
+          let c3;
           try {
+            let warning;
             logger = 2;
             if (0 === c4) {
               if (arg0 === 1) {
@@ -44,11 +75,10 @@ function fetchWarning() {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                closure_0 = tmp8;
-                closure_128_0 = undefined;
-                closure_128_1 = undefined;
+                closure_0 = undefined;
+                warning = undefined;
                 c3 = 2;
-                const HTTP = closure_0(tmp41[6]).HTTP;
+                const HTTP = closure_0(closure_2[6]).HTTP;
                 c4 = 3;
                 logger = 1;
                 const obj4 = {
@@ -57,16 +87,16 @@ function fetchWarning() {
                 };
                 return obj4;
               }
-            } else if (1 === tmp8) {
+            } else if (1 === c4) {
               c3 = 0;
+              const tmp31 = closure_2;
               if (closure_129_0 === closure_1_9) {
                 c7 = null;
               }
-              throw tmp41;
+              throw tmp31;
             } else {
-              if (2 === tmp8) {
+              if (2 === c4) {
                 c3 = 1;
-                closure_128_2 = tmp41;
                 if (closure_129_0 !== closure_1_9) {
                   c3 = 0;
                   if (closure_129_0 === closure_1_9) {
@@ -75,19 +105,11 @@ function fetchWarning() {
                   logger = 3;
                   return { value: "IconComponent", done: null };
                 } else {
-                  logger.error("Failed to fetch parental-consent warning", closure_128_2);
+                  logger.error("Failed to fetch parental-consent warning", closure_2);
                   const obj5 = { tags: { source: "parental_consent_warning", step: "fetch_warning" } };
-                  tmp4(tmp41[8]).captureException(closure_128_2, obj5);
-                  (function scheduleRetry() {
-                    if (null == timeout) {
-                      const _setTimeout = setTimeout;
-                      timeout = setTimeout(() => {
-                        c8 = null;
-                        closure_1_12();
-                      }, closure_1_6.fail());
-                    }
-                  })();
-                  const obj7 = tmp4(tmp41[8]);
+                  const obj7 = warning(closure_2[8]);
+                  obj7.captureException(closure_2, obj5);
+                  scheduleRetry();
                 }
               } else if (arg0 === 1) {
                 logger = 3;
@@ -101,7 +123,7 @@ function fetchWarning() {
                 const obj6 = { value, done: true };
                 return obj6;
               } else {
-                closure_128_0 = value;
+                closure_0 = value;
                 if (closure_129_0 !== closure_1_9) {
                   c3 = 0;
                   if (closure_129_0 === closure_1_9) {
@@ -110,22 +132,13 @@ function fetchWarning() {
                   logger = 3;
                   return { value: "IconComponent", done: null };
                 } else {
-                  closure_128_1 = (function normalizeWarning(body) {
-                    const obj = { inGrace: true === body.in_grace, daysRemaining: null, surfaces: null };
-                    let days_remaining = null;
-                    if (typeof body.days_remaining === "number") {
-                      days_remaining = body.days_remaining;
-                    }
-                    obj.daysRemaining = days_remaining;
-                    obj.surfaces = Array.isArray(body.surfaces) ? body.surfaces : [];
-                    return obj;
-                  })(closure_128_0.body);
+                  warning = normalizeWarning(closure_0.body);
                   importDefaultResult1.succeed();
                   clearPendingRetry();
-                  const obj8 = { type: "PARENTAL_CONSENT_WARNING_FETCH_SUCCESS", warning: closure_128_1 };
-                  tmp4(tmp41[7]).dispatch(obj8);
+                  obj = warning(closure_2[7]);
+                  const obj8 = { type: "PARENTAL_CONSENT_WARNING_FETCH_SUCCESS", warning };
+                  obj.dispatch(obj8);
                   c3 = 1;
-                  let obj = tmp4(tmp41[7]);
                 }
               }
               c3 = 0;
@@ -135,14 +148,15 @@ function fetchWarning() {
               logger = 3;
               return { value: "IconComponent", done: null };
             }
-          } catch (tmp41) {
-            if (tmp5 === c3) {
-              logger = tmp3;
-              throw tmp41;
-            } else if (tmp2 === tmp43) {
-              c4 = tmp2;
+          } catch (tmp37) {
+            closure_2 = tmp37;
+            if (0 === c3) {
+              logger = 3;
+              throw tmp37;
+            } else if (1 === tmp39) {
+              c4 = 1;
             } else {
-              c4 = tmp;
+              c4 = 2;
             }
           }
         }
@@ -151,146 +165,132 @@ function fetchWarning() {
       return tmp6;
     }
   } else {
+    const tmp = globalThis;
     return Promise.resolve();
   }
-  obj = require("ParentalConsentWarningFetchExperiment");
 }
 function maybeFetchWarning() {
-  const self = this;
-  const apply = closure_13.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }
-let closure_13 = async function _maybeFetchWarning() {
-  if (c0 === 2) {
-    c0 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+let obj = function _maybeFetchWarning() {
+  obj = _asyncToGenerator(async () => {
+    if (c0 === 2) {
+      c0 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp2 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c0 = 2;
-      if (0 === c1) {
-        if (arg0 === 1) {
+      try {
+        c0 = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            c0 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c0 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            const shouldFetchTodayResult =
+              null == closure_2_7 && null == closure_2_8 && ParentalConsentWarningStore.shouldFetchToday();
+            if (shouldFetchTodayResult) {
+              c1 = 1;
+              c0 = 1;
+              const obj4 = { value: fetchWarning(), done: false };
+              return obj4;
+            }
+          }
+        } else if (arg0 === 1) {
           c0 = 3;
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          let shouldFetchTodayResult = null == React5;
-          if (shouldFetchTodayResult) {
-            shouldFetchTodayResult = null == closure_2_8;
-          }
-          if (shouldFetchTodayResult) {
-            shouldFetchTodayResult = ParentalConsentWarningStore.shouldFetchToday();
-          }
-          if (shouldFetchTodayResult) {
+          obj = { value, done: true };
+          return obj;
+        }
+        c0 = 3;
+        return { value: "IconComponent", done: null };
+      } catch (tmp10) {
+        c0 = 3;
+        throw tmp10;
+      }
+    }
+  });
+  return obj(...arguments);
+};
+obj = function _forceFetchWarning() {
+  obj = _asyncToGenerator(async () => {
+    if (c0 === 2) {
+      c0 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp2 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c0 = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            c0 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c0 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            clearPendingRetry();
+            if (null != c7) {
+              closure_9 = closure_9 + 1;
+              c7 = null;
+            }
             c1 = 1;
             c0 = 1;
             const obj4 = { value: fetchWarning(), done: false };
             return obj4;
           }
-        }
-      } else if (arg0 === 1) {
-        c0 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c0 = 3;
-        const obj = { value, done: true };
-        return obj;
-      }
-      c0 = 3;
-      return { value: "IconComponent", done: null };
-    } catch (tmp11) {
-      c0 = tmp;
-      throw tmp11;
-    }
-  }
-};
-let closure_14 = async function _forceFetchWarning() {
-  if (c0 === 2) {
-    c0 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c0 = 2;
-      if (0 === c1) {
-        if (arg0 === 1) {
+        } else if (arg0 === 1) {
           c0 = 3;
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          obj = { value, done: true };
+          return obj;
         } else {
-          clearPendingRetry();
-          if (null != c7) {
-            closure_9 = closure_9 + 1;
-            c7 = null;
-          }
-          c1 = 1;
-          c0 = 1;
-          const obj4 = { value: fetchWarning(), done: false };
-          return obj4;
+          c0 = 3;
+          return { value: "IconComponent", done: null };
         }
-      } else if (arg0 === 1) {
+      } catch (tmp10) {
         c0 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c0 = 3;
-        const obj = { value, done: true };
-        return obj;
-      } else {
-        c0 = 3;
-        return { value: "IconComponent", done: null };
+        throw tmp10;
       }
-    } catch (tmp11) {
-      c0 = tmp;
-      throw tmp11;
     }
-  }
+  });
+  return obj(...arguments);
 };
-let logger = new fn(4).Logger("ParentalConsentWarning");
+let logger = new logger_Logger.Logger("ParentalConsentWarning");
 const result = 5 * DurationsDefault.Millis.SECOND;
 const importDefaultResult1 = new Backoff(result, 5 * DurationsDefault.Millis.MINUTE, true);
 let c7 = null;
 let c8 = null;
 let closure_9 = 0;
-const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/parent_tools/ParentalConsentWarningActionCreators.tsx");
 
 export { maybeFetchWarning };
 export const forceFetchWarning = function forceFetchWarning() {
-  const self = this;
-  const apply = closure_14.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const resetFetchState = function resetFetchState() {
   closure_9 = closure_9 + 1;
@@ -303,5 +303,6 @@ export const resetFetchState = function resetFetchState() {
   importDefaultResult1.succeed();
 };
 export const clearWarning = function clearWarning() {
-  DispatcherDefault.dispatch({ type: "PARENTAL_CONSENT_WARNING_CLEARED" });
+  obj = DispatcherDefault;
+  obj.dispatch({ type: "PARENTAL_CONSENT_WARNING_CLEARED" });
 };

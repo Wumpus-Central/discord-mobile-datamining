@@ -1,74 +1,107 @@
 // discord_app/modules/share/native/ShareScreen.tsx
+import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl4 from "../../../intl/index.native.tsx";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
+import UserRowConstants from "../../main_tabs_v2/native/shared_components/user_list/UserRowConstants.tsx";
+import ForwardConstants from "../../forwarding/ForwardConstants.tsx";
 import ShareAttachmentsDefault from "ShareAttachments.tsx";
 import ShareEmbedDefault from "ShareEmbed.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
+import ChannelRecord from "../../../records/ChannelRecord.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
+import Constants from "../../../Constants.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import PlatformUtils_mod from "../../../utils/PlatformUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let React, c4, c5, c6, closure_0, closure_1, closure_4;
+
+let closure_12;
+let closure_16;
+let closure_17;
+let closure_18;
+let map1;
+let metroImportAll;
+let metroImportDefault;
+let num;
+let num2;
+let obj2;
+let unpackModuleId;
 function getAttachmentsRestriction(type) {
-  if (type instanceof React5) {
-    if (closure_1_8(type.type)) {
+  let intl;
+  if (type instanceof metroImportDefault) {
+    if (metroImportAll(type.type)) {
       let tmp4;
       if (!PermissionStore.can(constants.ATTACH_FILES, type)) {
-        const obj = { label: null };
-        const intl = util.intl;
-        obj.label = intl.string(util.t.P7yvbm);
+        const obj = { label: intl.string(intl4.t.P7yvbm) };
+        intl = intl4.intl;
         tmp4 = obj;
       }
       return tmp4;
     }
   }
 }
-const View = fn(17).View;
-const ChannelRecord = fn(2055);
-({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
-const Constants = fn(1085);
-({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(11309).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10592).UserRowModes;
-const jsxProd = fn(21);
-({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
-  headerLeftContainer: null,
-  headerRightContainer: null,
-};
-let PlatformUtils = fn(1369);
-let num = 0;
+let _slicedToArray = _slicedToArray_mod;
+const View = react_native.View;
+({ ChannelRecordBase: metroImportDefault, isGuildChannelType: metroImportAll } = ChannelRecord);
+({ AnalyticEvents: unpackModuleId, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
+const MAX_DESTINATION_COUNT = ForwardConstants.MAX_DESTINATION_COUNT;
+const UserRowModes = UserRowConstants.UserRowModes;
+({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { container: obj2, headerLeftContainer: { paddingLeft: num }, headerRightContainer: { paddingRight: num2 } };
+obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+createStyles = createStyles.createStyles;
+let PlatformUtils = PlatformUtils_mod;
+num = 0;
 if (PlatformUtils.isIOS()) {
   num = nativeDefault.space.PX_16;
 }
-obj2.headerLeftContainer = { paddingLeft: num };
-PlatformUtils = fn(1369);
-let num2 = 0;
+PlatformUtils = PlatformUtils_mod;
+num2 = 0;
 if (PlatformUtils.isIOS()) {
   num2 = nativeDefault.space.PX_16;
 }
-obj2.headerRightContainer = { paddingRight: num2 };
-let closure_19 = createStyles.createStyles(obj2);
-const size = fn(2);
+let closure_19 = createStyles(obj);
 const result = size.fileFinishedImporting("modules/share/native/ShareScreen.tsx");
 
 export default function ShareScreen(appEntryKey) {
+  let PX_8;
+  let _undefined;
+  let c8;
+  let closure_7;
+  let first1;
+  let headerCloseButton;
+  let initialSelectedDestinations;
+  let intl3;
+  let items3;
+  let stringResult;
+  let tmp11;
+  let tmp13;
+  let tmp13Result6;
+  let tmp29;
+  let tmp31;
+  let tmp9;
   appEntryKey = appEntryKey.appEntryKey;
   const sharedContent = appEntryKey.sharedContent;
   const onClose = appEntryKey.onClose;
   initialSelectedDestinations = undefined;
   _slicedToArray = undefined;
   let length;
+  closure_7 = undefined;
   c8 = undefined;
-  let first1;
+  let first2;
   let embed;
   let isLoading;
-  const tmp = closure_19();
+  let tmp = closure_19();
+  let obj = length;
   let items = [sharedContent];
+  const tmp2 = _slicedToArray;
   [initialSelectedDestinations, _slicedToArray] = length.useState(
     length.useMemo(() => {
       const items = [];
@@ -84,43 +117,54 @@ export default function ShareScreen(appEntryKey) {
     }, items),
   );
   length = initialSelectedDestinations.length;
-  closure_6 = tmp4;
+  let tmp4 = sharedContent.attachments.length > closure_13;
+  let closure_6 = tmp4;
   const callback = length.useCallback((arg0) => {
     closure_4(arg0);
   }, []);
-  const tmp6 = _slicedToArray(length.useState(0), 2);
-  closure_7 = tmp6[1];
-  [tmp8, c8] = length.useState(false);
-  closure_9 = length.useRef(tmp8);
+  [first1, closure_7] = length.useState(0);
+  [tmp9, c8] = _slicedToArray(length.useState(false), 2);
+  const tmp8 = _slicedToArray(length.useState(false), 2);
+  let closure_9 = length.useRef(tmp9);
   if (length <= 1) {
+    let tmp14 = appEntryKey;
     let intl2 = appEntryKey(onClose[14]).intl;
-    let stringResult = intl2.string(appEntryKey(onClose[14]).t.TXNS7S);
-    let tmp10 = onClose;
-    let tmp12 = appEntryKey;
+    stringResult = intl2.string(appEntryKey(onClose[14]).t.TXNS7S);
+    tmp11 = onClose;
+    tmp13 = appEntryKey;
   } else {
-    tmp10 = onClose;
+    let tmp10 = appEntryKey;
+    tmp11 = onClose;
     let intl = appEntryKey(onClose[14]).intl;
     let obj2 = { count: length };
     stringResult = intl.formatToPlainString(appEntryKey(onClose[14]).t.jWtYUm, obj2);
-    tmp12 = appEntryKey;
+    tmp13 = appEntryKey;
   }
   let str = sharedContent.text;
+  const useState = obj.useState;
   if (str == null) {
     str = "";
   }
-  const tmp2Result = _slicedToArray(length.useState(str), 2);
-  first1 = tmp2Result[0];
-  const tmp18 = sharedContent(tmp10[15])(first1);
-  embed = tmp18.embed;
-  isLoading = tmp18.isLoading;
-  const items1 = [appEntryKey, onClose, initialSelectedDestinations, sharedContent.attachments, first1];
+  const tmp2Result = tmp2(useState(str), 2);
+  first2 = tmp2Result[0];
+  let tmp18 = tmp2Result[1];
+  let tmp20 = sharedContent(tmp11[15])(first2);
+  embed = tmp20.embed;
+  isLoading = tmp20.isLoading;
+  const items1 = [appEntryKey, onClose, initialSelectedDestinations, sharedContent.attachments, first2];
   const items2 = [embed, isLoading, sharedContent.attachments];
   const callback1 = obj.useCallback(
     initialSelectedDestinations(function* () {
+      let closure_2;
+      let intl;
+      let intl2;
+      let obj14;
+      let paths;
       if (React === 2) {
         React = 3;
+        let str = "Generator functions may not be called on executing generators";
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp6 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -130,8 +174,17 @@ export default function ShareScreen(appEntryKey) {
           return { value: "IconComponent", done: null };
         }
       } else {
+        let c3;
         try {
+          let tmp;
+          let attachments;
+          let sentDestinations;
+          let failedDestinations;
+          let transitionChannelId;
+          let uploadErrorToAlert;
+          let closure_10;
           React = 2;
+          const tmp4 = c4;
           if (0 === c4) {
             if (arg0 === 1) {
               React = 3;
@@ -141,37 +194,36 @@ export default function ShareScreen(appEntryKey) {
               let obj3 = { value, done: true };
               return obj3;
             } else {
-              appEntryKey = tmp7;
-              closure_128_0 = undefined;
-              closure_128_1 = undefined;
-              let attachments;
-              closure_128_3 = undefined;
-              closure_128_4 = undefined;
-              closure_128_5 = undefined;
-              let sentDestinations;
-              let failedDestinations;
-              let transitionChannelId;
-              let uploadErrorToAlert;
-              closure_128_10 = undefined;
+              appEntryKey = undefined;
+              tmp = undefined;
+              attachments = undefined;
+              let closure_3;
+              closure_4 = undefined;
+              React = undefined;
+              sentDestinations = undefined;
+              failedDestinations = undefined;
+              transitionChannelId = undefined;
+              uploadErrorToAlert = undefined;
+              closure_10 = undefined;
               if (!ref.current) {
                 ref.current = true;
                 _undefined(true);
                 c3 = 1;
                 c4 = 2;
                 React = 1;
-                let obj5 = {
-                  value: Promise.all(first.map(appEntryKey(tmp103[16]).getOrResolveChannelIdFromDestinationId)),
+                let obj4 = {
+                  value: Promise.all(first.map(appEntryKey(paths[16]).getOrResolveChannelIdFromDestinationId)),
                   done: false,
                 };
-                return obj5;
+                return obj4;
               }
             }
-          } else if (1 === tmp7) {
+          } else if (1 === tmp4) {
             c3 = 0;
             closure_129_8(false);
             closure_129_9.current = false;
-            throw tmp103;
-          } else if (2 === tmp7) {
+            throw paths;
+          } else if (2 === tmp4) {
             if (arg0 === 1) {
               React = 3;
               throw value;
@@ -180,23 +232,26 @@ export default function ShareScreen(appEntryKey) {
               closure_129_8(false);
               closure_129_9.current = false;
               React = 3;
-              const obj6 = { value, done: true };
-              return obj6;
+              let obj5 = { value, done: true };
+              return obj5;
             } else {
-              closure_128_0 = value;
-              closure_128_1 = appEntryKey(tmp103[17]).pairDestinationsWithChannels(closure_129_3, closure_128_0);
-              if (0 === closure_128_1.length) {
-                const intl3 = appEntryKey(tmp103[14]).intl;
-                appEntryKey(tmp103[18]).showInformationToast(intl3.string(appEntryKey(tmp103[14]).t.wFcUiF));
+              appEntryKey = value;
+              const obj21 = appEntryKey(paths[17]);
+              tmp = obj21.pairDestinationsWithChannels(closure_129_3, appEntryKey);
+              if (0 === tmp.length) {
+                const showInformationToast = appEntryKey(paths[18]).showInformationToast;
+                const tmp76 = appEntryKey(paths[18]);
+                const intl3 = appEntryKey(paths[14]).intl;
+                showInformationToast(intl3.string(appEntryKey(paths[14]).t.wFcUiF));
                 c3 = 0;
                 closure_129_8(false);
                 closure_129_9.current = false;
                 React = 3;
-                let obj8 = { value: undefined, done: true };
-                return obj8;
+                let obj7 = { value: undefined, done: true };
+                return obj7;
               } else {
                 attachments = closure_129_1.attachments;
-                closure_128_3 = attachments.map((mimeType) => {
+                closure_3 = attachments.map((mimeType) => {
                   let str = mimeType.mimeType;
                   if (str == null) {
                     str = "unknown";
@@ -205,18 +260,24 @@ export default function ShareScreen(appEntryKey) {
                 });
                 c4 = 3;
                 React = 1;
-                let obj9 = {
+                let obj8 = {
                   value: Promise.all(
-                    closure_128_1.map(
+                    tmp.map(
                       (() => {
-                        closure_0 = c3(function* (arg0) {
+                        let comment;
+                        closure_0 = c3(function* (destination) {
+                          let attachment_mimetypes;
+                          let c0;
+                          let c1;
+                          let obj4;
+                          let obj6;
                           if (c6 === 2) {
                             c6 = 3;
                             throw new TypeError("Generator functions may not be called on executing generators");
-                          } else if (tmp6 === 3) {
-                            if (arg0 === 1) {
+                          } else if (tmp3 === 3) {
+                            if (destination === 1) {
                               throw value;
-                            } else if (arg0 === 2) {
+                            } else if (destination === 2) {
                               const obj2 = { value, done: true };
                               return obj2;
                             } else {
@@ -224,65 +285,67 @@ export default function ShareScreen(appEntryKey) {
                             }
                           } else {
                             try {
+                              let channelId;
+                              let tmp;
                               c6 = 2;
                               if (0 === c5) {
-                                if (arg0 === 1) {
+                                if (destination === 1) {
                                   c6 = 3;
                                   throw value;
-                                } else if (arg0 === 2) {
+                                } else if (destination === 2) {
                                   c6 = 3;
                                   const obj3 = { value, done: true };
                                   return obj3;
                                 } else {
-                                  const attachments = tmp3;
-                                  closure_1 = tmp7;
-                                  closure_129_0 = undefined;
-                                  closure_129_1 = undefined;
-                                  ({ destination: closure_129_0, channelId: closure_129_1 } = closure_0);
-                                  let channel2;
+                                  closure_1 = tmp4;
+                                  destination = undefined;
+                                  channelId = undefined;
+                                  ({ destination: c0, channelId: c1 } = closure_0);
+                                  tmp = undefined;
                                   c5 = 1;
                                   c6 = 1;
                                   return { value: "Set", done: true };
                                 }
-                              } else if (1 === tmp7) {
-                                if (arg0 === 1) {
+                              } else if (1 === c5) {
+                                if (destination === 1) {
                                   c6 = 3;
                                   throw value;
-                                } else if (arg0 === 2) {
+                                } else if (destination === 2) {
                                   c6 = 3;
                                   const obj5 = { value, done: true };
                                   return obj5;
                                 } else {
-                                  channel2 = channel.getChannel(closure_129_1);
-                                  if (null == channel2) {
-                                    const obj7 = { status: "failed", destination: closure_129_0, uploadError: null };
+                                  tmp = channel.getChannel(channelId);
+                                  if (null == tmp) {
+                                    const obj7 = { status: "failed", destination, uploadError: null };
                                     c6 = 3;
                                     const obj8 = { value: obj7, done: true };
                                     return obj8;
                                   } else {
                                     c4 = 1;
-                                    const obj9 = { attachments, channel: channel2, comment };
+                                    const obj9 = { attachments: tmp, channel: tmp, comment };
                                     c5 = 3;
                                     c6 = 1;
-                                    const obj10 = { value: closure_3_0(paths[18]).sendShareMessage(obj9), done: false };
+                                    const obj10 = { value: obj6.sendShareMessage(obj9), done: false };
+                                    obj6 = closure_3_0(paths[18]);
                                     return obj10;
                                   }
                                 }
-                              } else if (2 === tmp7) {
+                              } else if (2 === c5) {
                                 c4 = 0;
-                                closure_129_3 = attachment_mimetypes;
                                 const obj11 = {
                                   status: "failed",
-                                  destination: closure_129_0,
-                                  uploadError: closure_3_0(paths[17]).getShareUploadError(closure_129_3),
+                                  destination,
+                                  uploadError: obj4.getShareUploadError(attachment_mimetypes),
                                 };
+                                obj4 = closure_3_0(paths[17]);
                                 c6 = 3;
                                 const obj12 = { value: obj11, done: true };
                                 return obj12;
-                              } else if (arg0 === 1) {
+                              } else if (destination === 1) {
                                 c6 = 3;
                                 throw value;
-                              } else if (arg0 === 2) {
+                              } else if (destination === 2) {
                                 c4 = 0;
                                 c6 = 3;
                                 const obj13 = { value, done: true };
@@ -290,49 +353,42 @@ export default function ShareScreen(appEntryKey) {
                               } else {
                                 c4 = 0;
                                 const obj15 = {
-                                  guild_id: channel2.guild_id,
-                                  channel_id: channel2.id,
-                                  channel_type: channel2.type,
-                                  num_attachments: attachments.length,
+                                  guild_id: tmp.guild_id,
+                                  channel_id: tmp.id,
+                                  channel_type: tmp.type,
+                                  num_attachments: tmp.length,
                                   attachment_mimetypes,
                                 };
-                                tmp3(paths[19]).track(constants.SHARE_MESSAGE_SENT, obj15);
-                                const obj16 = { status: "sent", destination: closure_129_0, channelId: closure_129_1 };
+                                const obj14 = tmp(paths[19]);
+                                obj14.track(constants.SHARE_MESSAGE_SENT, obj15);
+                                const obj16 = { status: "sent", destination, channelId };
                                 c6 = 3;
                                 const obj = { value: obj16, done: true };
                                 return obj;
                               }
-                            } catch (tmp26) {
-                              attachment_mimetypes = tmp26;
-                              if (tmp4 === c4) {
-                                c6 = tmp2;
-                                throw tmp26;
+                            } catch (tmp23) {
+                              attachment_mimetypes = tmp23;
+                              if (0 === c4) {
+                                c6 = 3;
+                                throw tmp23;
                               } else {
-                                c5 = tmp;
+                                c5 = 2;
                               }
                             }
                           }
                         });
                         return function () {
-                          const self = this;
-                          const apply = closure_0.apply;
-                          if (typeof apply === "unknown") {
-                            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                          } else {
-                            applyArgumentsResult = apply(self, arguments);
-                          }
-                          return applyArgumentsResult;
+                          return closure_0(...arguments);
                         };
                       })(),
                     ),
                   ),
                   done: false,
                 };
-                return obj9;
+                return obj8;
               }
-              const obj23 = appEntryKey(tmp103[17]);
             }
-          } else if (3 === tmp7) {
+          } else if (3 === tmp4) {
             if (arg0 === 1) {
               React = 3;
               throw value;
@@ -341,45 +397,36 @@ export default function ShareScreen(appEntryKey) {
               closure_129_8(false);
               closure_129_9.current = false;
               React = 3;
-              let obj10 = { value, done: true };
-              return obj10;
+              let obj9 = { value, done: true };
+              return obj9;
             } else {
-              closure_128_4 = value;
-              closure_128_5 = appEntryKey(tmp103[17]).resolveShareSendOutcome(closure_128_4);
-              sentDestinations = closure_128_5.sentDestinations;
-              failedDestinations = closure_128_5.failedDestinations;
-              transitionChannelId = closure_128_5.transitionChannelId;
-              uploadErrorToAlert = closure_128_5.uploadErrorToAlert;
+              closure_4 = value;
+              const obj18 = appEntryKey(paths[17]);
+              React = obj18.resolveShareSendOutcome(closure_4);
+              sentDestinations = React.sentDestinations;
+              failedDestinations = React.failedDestinations;
+              transitionChannelId = React.transitionChannelId;
+              uploadErrorToAlert = React.uploadErrorToAlert;
               if (0 === failedDestinations.length) {
                 if (null != transitionChannelId) {
-                  let obj11 = { channelId: transitionChannelId };
+                  let obj6 = tmp(paths[20]);
+                  let obj10 = { channelId: transitionChannelId };
                   c4 = 4;
                   React = 1;
-                  let obj13 = { value: tmp3(tmp103[20]).fetchMessages(obj11), done: false };
-                  return obj13;
+                  let obj11 = { value: obj6.fetchMessages(obj10), done: false };
+                  return obj11;
                 }
               }
+              const tmp23 = sentDestinations;
               if (sentDestinations.length > 0) {
-                closure_129_4((arr) => appEntryKey(onClose[17]).withoutSentDestinations(arr, closure_1_6));
-                closure_129_7((arg0) => arg0 + 1);
+                const tmp27 = closure_129_4((arr) => {
+                  const obj = appEntryKey(onClose[17]);
+                  return obj.withoutSentDestinations(arr, closure_1_6);
+                });
+                const tmp29 = closure_129_7((arg0) => arg0 + 1);
               }
-              if (null == uploadErrorToAlert) {
-                closure_128_10 = React.lazy(() => closure_1_0(paths[25])(paths[24], paths.paths));
-                const obj14 = { title: null, content: null, failedDestinations: null };
-                const intl = appEntryKey(tmp103[14]).intl;
-                obj14.title = intl.string(appEntryKey(tmp103[14]).t.dA1gbw);
-                const intl2 = appEntryKey(tmp103[14]).intl;
-                let obj15 = { count: failedDestinations.length };
-                obj14.content = intl2.formatToPlainString(appEntryKey(tmp103[14]).t.thm88D, obj15);
-                obj14.failedDestinations = failedDestinations;
-                appEntryKey(tmp103[26]).openAlert("share-failed-alert-modal", closure_1_16(closure_128_10, obj14));
-                c3 = 0;
-                closure_129_8(false);
-                closure_129_9.current = false;
-                const obj4 = appEntryKey(tmp103[26]);
-              } else {
-                appEntryKey(tmp103[23]);
-                let obj16 = {
+              if (null != uploadErrorToAlert) {
+                let obj12 = {
                   file: uploadErrorToAlert.file,
                   guildId: uploadErrorToAlert.guildId,
                   analyticsLocations: [],
@@ -387,48 +434,69 @@ export default function ShareScreen(appEntryKey) {
                   reason: uploadErrorToAlert.reason,
                   appEntryKey: closure_129_0,
                 };
+                const obj19 = appEntryKey(paths[23]);
+                if (obj19.handleUploadMessageAttachmentsErrors(obj12)) {
+                  c3 = 0;
+                  closure_129_8(false);
+                  closure_129_9.current = false;
+                  React = 3;
+                  return { value: "IconComponent", done: null };
+                }
               }
+              closure_10 = React.lazy(() => closure_1_0(paths[25])(paths[24], paths.paths));
+              const tmp37 = appEntryKey(paths[26]);
+              let obj13 = {
+                title: intl.string(appEntryKey(paths[14]).t.dA1gbw),
+                content: intl2.formatToPlainString(appEntryKey(paths[14]).t.thm88D, obj14),
+                failedDestinations,
+              };
+              const openAlert = tmp37.openAlert;
+              intl = appEntryKey(paths[14]).intl;
+              intl2 = appEntryKey(paths[14]).intl;
+              obj14 = { count: failedDestinations.length };
+              openAlert("share-failed-alert-modal", closure_1_16(closure_10, obj13));
               c3 = 0;
               closure_129_8(false);
               closure_129_9.current = false;
-              React = 3;
-              return { value: "IconComponent", done: null };
             }
           } else if (arg0 === 1) {
             React = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 0;
-            closure_129_8(false);
+            const tmp18 = closure_129_8(false);
             closure_129_9.current = false;
             React = 3;
-            const obj17 = { value, done: true };
-            return obj17;
+            let obj15 = { value, done: true };
+            return obj15;
           } else {
-            appEntryKey(tmp103[21]).transitionToChannel(transitionChannelId, {
+            let obj16 = appEntryKey(paths[21]);
+            obj16.transitionToChannel(transitionChannelId, {
               navigationReplace: true,
               openTextInVoiceIfVoiceChannel: true,
             });
-            const obj18 = appEntryKey(tmp103[21]);
-            if (obj19.isAndroid()) {
-              tmp3(tmp103[22]).launchApp();
-              let obj = tmp3(tmp103[22]);
+            const obj17 = appEntryKey(paths[13]);
+            if (obj17.isAndroid()) {
+              let obj = tmp(paths[22]);
+              obj.launchApp();
             }
             closure_129_2();
             c3 = 0;
-            closure_129_8(false);
+            const tmp14 = closure_129_8(false);
             closure_129_9.current = false;
             React = 3;
-            const obj22 = { value: undefined, done: true };
-            return obj22;
+            const obj20 = { value: undefined, done: true };
+            return obj20;
           }
           React = 3;
-        } catch (tmp103) {
-          if (tmp4 === c3) {
-            React = tmp2;
-            throw tmp103;
+          return { value: "IconComponent", done: null };
+        } catch (tmp102) {
+          paths = tmp102;
+          if (0 === c3) {
+            React = 3;
+            throw tmp102;
           } else {
-            c4 = tmp;
+            c4 = 1;
           }
         }
       }
@@ -436,113 +504,104 @@ export default function ShareScreen(appEntryKey) {
     items1,
   );
   const memo = obj.useMemo(() => {
+    let tmp4Result;
     if (null != embed) {
       const obj = { attachments: sharedContent.attachments, isRevamp: true };
-      const items = [value2(ShareAttachmentsDefault, obj)];
+      const items = [authStore3(ShareAttachmentsDefault, obj)];
       embed = undefined;
-      if (tmp != null) {
+      const tmp10 = ShareEmbedDefault;
+      if (embed != null) {
         embed = tmp.embed;
       }
-      const obj2 = { children: null };
+      const obj2 = { children: items };
       const obj3 = { embed, isLoadingEmbed: isLoading, isRevamp: true };
-      items[1] = value2(ShareEmbedDefault, obj3);
-      obj2.children = items;
-      let tmp4Result = collapsedCategories(constants, obj2);
+      items[1] = authStore3(tmp10, obj3);
+      tmp4Result = authStore4(closure_17, obj2);
     } else {
       tmp4Result = null;
     }
     return tmp4Result;
   }, items2);
-  let obj3 = { style: tmp.container, children: null };
+  let obj3 = { style: tmp.container, children: items3 };
+  const SafeAreaProviderCompat = tmp13(tmp11[29]).SafeAreaProviderCompat;
+  let tmp25 = closure_6;
   let obj5 = {
-    title: null,
-    headerTitle: null,
+    title: intl3.string(tmp13(tmp11[14]).t["MR7/kg"]),
+    headerTitle(children) {
+      let subtitle;
+      const title = children.children;
+      if (closure_6) {
+        const intl2 = intl4.intl;
+        const obj2 = { limit: map1 };
+        subtitle = intl2.formatToPlainString(intl4.t["qqyp/e"], obj2);
+      } else if (length >= MAX_DESTINATION_COUNT) {
+        const intl = intl4.intl;
+        const obj = { count: tmp2 };
+        subtitle = intl.formatToPlainString(intl4.t["3Fbkir"], obj);
+      }
+      return authStore3(HeaderShared.GenericHeaderTitle, {
+        title,
+        subtitle,
+        subtitleColor: "text-feedback-warning",
+        variant: "redesign/heading-18/bold",
+      });
+    },
     headerTitleAlign: "center",
-    headerLeft: null,
+    headerLeft: headerCloseButton,
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null,
-    headerStatusBarHeight: null,
+    headerStatusBarHeight: PX_8,
   };
-  let intl3 = tmp12(tmp10[14]).intl;
-  obj5.title = intl3.string(tmp12(tmp10[14]).t["MR7/kg"]);
-  obj5.headerTitle = function headerTitle(title) {
-    if (closure_6) {
-      const intl2 = util.intl;
-      const obj2 = { limit };
-      let subtitle = intl2.formatToPlainString(util.t["qqyp/e"], obj2);
-    } else if (length >= MAX_DESTINATION_COUNT) {
-      const intl = util.intl;
-      const obj = { count: tmp2 };
-      subtitle = intl.formatToPlainString(util.t["3Fbkir"], obj);
-    }
-    return value2(HeaderShared.GenericHeaderTitle, {
-      title: title.children,
-      subtitle,
-      subtitleColor: "text-feedback-warning",
-      variant: "redesign/heading-18/bold",
-    });
-  };
-  const tmp23 = closure_6;
-  const tmp7 = _slicedToArray(length.useState(false), 2);
-  let headerCloseButton;
-  if (!tmp12Result.isMetaQuest()) {
-    headerCloseButton = tmp12(tmp10[32]).getHeaderCloseButton(onClose);
-    const tmp12Result4 = tmp12(tmp10[32]);
+  const Header = tmp13(tmp11[29]).Header;
+  intl3 = tmp13(tmp11[14]).intl;
+  headerCloseButton = undefined;
+  const tmp13Result = tmp13(tmp11[31]);
+  if (!tmp13Result.isMetaQuest()) {
+    const tmp13Result4 = tmp13(tmp11[32]);
+    headerCloseButton = tmp13Result4.getHeaderCloseButton(onClose);
   }
-  obj5.headerLeft = headerCloseButton;
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  tmp12Result = tmp12(tmp10[31]);
-  let PX_8;
-  if (tmp12Result5.isIOS()) {
-    PX_8 = tmp17(tmp10[12]).space.PX_8;
+  PX_8 = undefined;
+  const tmp13Result5 = tmp13(tmp11[13]);
+  if (tmp13Result5.isIOS()) {
+    PX_8 = tmp19(tmp11[12]).space.PX_8;
   }
-  obj5.headerStatusBarHeight = PX_8;
-  const items3 = [closure_16(tmp12(tmp10[29]).Header, obj5), ,];
+  items3 = [closure_16(Header, obj5), ,];
   let obj6 = {
     rowMode: UserRowModes.TOGGLE,
     initialSelectedDestinations,
     onSelectedDestinationChange: callback,
-    getRowIsUnavailable: null,
+    getRowIsUnavailable: tmp29,
     insetEnd: 0,
     disableGradient: true,
     disableStickySections: true,
-    disableSelection: null,
-    disableLongPress: null,
+    disableSelection: length >= MAX_DESTINATION_COUNT || tmp4,
+    disableLongPress: tmp13Result6.isAndroid(),
   };
-  let tmp27;
-  tmp12Result5 = tmp12(tmp10[13]);
+  tmp29 = undefined;
+  const tmp19Result = sharedContent(tmp11[33]);
   if (sharedContent.attachments.length > 0) {
-    tmp27 = getAttachmentsRestriction;
+    tmp29 = getAttachmentsRestriction;
   }
-  obj6.getRowIsUnavailable = tmp27;
-  obj6.disableSelection = length >= MAX_DESTINATION_COUNT || sharedContent.attachments.length > closure_13;
-  const tmp17Result = sharedContent(tmp10[33]);
-  obj6.disableLongPress = tmp12(tmp10[13]).isAndroid();
-  items3[1] = closure_16(tmp17Result, obj6, tmp6[0]);
+  tmp13Result6 = tmp13(tmp11[13]);
+  items3[1] = closure_16(tmp19Result, obj6, first1);
   let obj7 = {
-    text: first1,
-    setText: tmp2Result[1],
+    text: first2,
+    setText: tmp18,
     preview: memo,
     sendLabel: stringResult,
-    canSend: null,
-    isSending: null,
-    onSend: null,
-    disabled: null,
-    appEntryKey: null,
+    canSend: tmp31,
+    isSending: tmp9,
+    onSend: callback1,
+    disabled: tmp4,
+    appEntryKey,
   };
-  let tmp29 = length > 0;
-  const tmp12Result6 = tmp12(tmp10[13]);
-  if (tmp29) {
-    tmp29 = !tmp4;
+  tmp31 = length > 0;
+  const tmp19Result2 = sharedContent(tmp11[34]);
+  if (tmp31) {
+    tmp31 = !tmp4;
   }
-  let obj8 = { children: null };
-  obj7.canSend = tmp29;
-  obj7.isSending = tmp8;
-  obj7.onSend = callback1;
-  obj7.disabled = sharedContent.attachments.length > closure_13;
-  obj7.appEntryKey = appEntryKey;
-  items3[2] = closure_16(sharedContent(tmp10[34]), obj7);
-  obj3.children = items3;
-  obj8.children = closure_18(tmp23, obj3);
-  return closure_16(tmp12(tmp10[29]).SafeAreaProviderCompat, obj8);
+  let obj8 = { children: closure_18(tmp25, obj3) };
+  items3[2] = closure_16(tmp19Result2, obj7);
+  return closure_16(SafeAreaProviderCompat, obj8);
 }

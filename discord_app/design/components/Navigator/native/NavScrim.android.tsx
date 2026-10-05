@@ -1,72 +1,81 @@
 // discord_app/design/components/Navigator/native/NavScrim.android.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import createStyles_mod from "../../Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c3, StyleSheet } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj = { androidNavScrim: null };
-let obj3 = {};
+let StyleSheet;
+let c3;
+let obj2;
+({ View: c3, StyleSheet } = react_native);
+const jsx = Fragment.jsx;
+let createStyles = createStyles_mod;
+let obj = { androidNavScrim: obj2 };
+obj2 = { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_SCRIM_BACKGROUND, top: undefined };
+createStyles = createStyles.createStyles;
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj3.backgroundColor = nativeDefault.colors.ANDROID_NAVIGATION_SCRIM_BACKGROUND;
-obj3.top = undefined;
-obj.androidNavScrim = obj3;
-let closure_5 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/Navigator/native/NavScrim.android.tsx");
-
-export const NavScrim = noop.memo(
+let closure_5 = createStyles(obj);
+const memo = react.memo;
+const memoResult = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
-        const cResult = c.c(6);
-        let androidNavScrim = closure_5();
+        let first;
+        const obj = react2;
+        const cResult = obj.c(6);
+        const tmp3 = closure_5();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { includeCustomKeyboardHeight: false };
           cResult[0] = obj2;
-          let first = obj2;
+          first = obj2;
         } else {
           first = cResult[0];
         }
         const insets = useSafeAreaInsetsKeyboardAwareDefault(first).insets;
-        if (0 === insets.bottom) {
-          return null;
-        } else {
+        let tmp5 = null;
+        if (0 !== insets.bottom) {
+          let tmp6;
           if (cResult[1] !== insets.bottom) {
             const obj3 = { height: insets.bottom };
             cResult[1] = insets.bottom;
             cResult[2] = obj3;
-            let tmp4 = obj3;
+            tmp6 = obj3;
           } else {
-            tmp4 = cResult[2];
+            tmp6 = cResult[2];
           }
-          if (cResult[3] === androidNavScrim.androidNavScrim) {
+          if (cResult[3] === tmp3.androidNavScrim) {
+            let tmp7;
+            if (cResult[4] === tmp6) {
+              tmp7 = cResult[5];
+            }
+            tmp5 = tmp7;
           }
-          const obj4 = { style: null, pointerEvents: "none" };
-          const items = [androidNavScrim.androidNavScrim, tmp4];
-          obj4.style = items;
-          const tmp8 = <React3 style={null} pointerEvents="none" />;
-          androidNavScrim = androidNavScrim.androidNavScrim;
-          cResult[3] = androidNavScrim;
-          cResult[4] = tmp4;
-          cResult[5] = tmp8;
+          const items = [tmp3.androidNavScrim, tmp6];
+          const tmp10 = <_false style={items} pointerEvents="none" />;
+          cResult[3] = tmp3.androidNavScrim;
+          cResult[4] = tmp6;
+          cResult[5] = tmp10;
+          tmp7 = tmp10;
         }
+        return tmp5;
       }
     : () => {
+        const tmp = closure_5();
         const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeCustomKeyboardHeight: false }).insets;
         let tmp2 = null;
         if (0 !== insets.bottom) {
-          const obj = { style: null, pointerEvents: "none" };
           const items = [tmp.androidNavScrim];
           const obj2 = { height: insets.bottom };
           items[1] = obj2;
-          obj.style = items;
-          tmp2 = <React3 style={null} pointerEvents="none" />;
+          tmp2 = <_false style={items} pointerEvents="none" />;
         }
         return tmp2;
       },
 );
+const result = size.fileFinishedImporting("design/components/Navigator/native/NavScrim.android.tsx");
+
+export const NavScrim = memoResult;

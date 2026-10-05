@@ -1,37 +1,33 @@
 // discord_app/modules/guild_themes/native/GuildThemeNuxPreviewGraphic.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import GuildThemePreviewArtDefault from "GuildThemePreviewArt.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = {
-  container: {
-    width: "100%",
-    aspectRatio: 1.7777777777777777,
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: nativeDefault.space.PX_24,
-  },
-};
-let closure_5 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = {
+let obj2;
+const View = react_native.View;
+const jsx = Fragment.jsx;
+let obj = { container: obj2 };
+obj2 = {
   width: "100%",
   aspectRatio: 1.7777777777777777,
   alignItems: "center",
   justifyContent: "center",
   marginBottom: nativeDefault.space.PX_24,
 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_themes/native/GuildThemeNuxPreviewGraphic.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_5 = createStyles.createStyles(obj);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(5);
+      let isPersonal;
+      let themeSettings;
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(5);
       ({ themeSettings, isPersonal } = arg0);
       const tmp3 = closure_5();
       let tmp4 = null;
@@ -39,17 +35,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = themeSettings;
       }
       if (cResult[0] !== tmp4) {
-        const obj2 = { themeSettings: tmp4 };
         const tmp8 = jsx(GuildThemePreviewArtDefault, { themeSettings: tmp4 });
         cResult[0] = tmp4;
         cResult[1] = tmp8;
-        let tmp5 = tmp8;
+        tmp5 = tmp8;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === tmp3.container) {
+        let tmp9;
         if (cResult[3] === tmp5) {
-          let tmp9 = cResult[4];
+          tmp9 = cResult[4];
         }
         return tmp9;
       }
@@ -62,29 +58,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp5;
       cResult[4] = tmp10;
       tmp9 = tmp10;
-      const obj3 = {
-        accessibilityElementsHidden: true,
-        importantForAccessibility: "no-hide-descendants",
-        style: tmp3.container,
-        children: tmp5,
-      };
     }
   : (arg0) => {
+      let isPersonal;
+      let themeSettings;
       ({ themeSettings, isPersonal } = arg0);
-      const obj = {
-        accessibilityElementsHidden: true,
-        importantForAccessibility: "no-hide-descendants",
-        style: closure_5().container,
-        children: null,
-      };
-      let tmp4 = null;
-      if (!isPersonal) {
-        tmp4 = themeSettings;
-      }
-      obj.children = jsx(GuildThemePreviewArtDefault, { themeSettings: tmp4 });
+      GuildThemePreviewArtDefault;
       return (
         <View accessibilityElementsHidden importantForAccessibility="no-hide-descendants" style={closure_5().container}>
           {null}
         </View>
       );
     };
+const result = size.fileFinishedImporting("modules/guild_themes/native/GuildThemeNuxPreviewGraphic.tsx");
+
+export default tmp3;

@@ -1,82 +1,95 @@
 // discord_app/modules/user_settings/notifications/native/UserSettingsHighlightNotifications.tsx
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import Constants from "../../../../Constants.tsx";
 import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
 import NotificationSettingsUtils from "../../../../utils/NotificationSettingsUtils.tsx";
 import NotificationSettingsModalActionCreatorsDefault from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const HighlightSettings = fn(1085).HighlightSettings;
-const jsx = fn(21).jsx;
-let ReactCompilerGating = fn(558);
+const HighlightSettings = Constants.HighlightSettings;
+const jsx = Fragment.jsx;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      const cResult = guildId(576).c(15);
+      let guild;
+      let isEnd;
+      let isStart;
+      let muted;
+      let tmp4;
+      let tmp5;
+      let tmp8;
+      let tmp9;
+      let obj = guildId(576);
+      const cResult = obj.c(15);
       guildId = guildId.guildId;
       ({ isStart, isEnd } = guildId);
       if (cResult[0] !== guildId) {
         const fn = function n(arg0) {
+          const updateGuildNotificationSettings =
+            NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings;
+          const obj = { notify_highlights: arg0 ? HighlightSettings.ENABLED : HighlightSettings.DISABLED };
+          NotificationSettingsModalActionCreatorsDefault;
           const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
-          const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(
-            guildId,
-            { notify_highlights: arg0 ? HighlightSettings.ENABLED : HighlightSettings.DISABLED },
-            NotificationLabel.highlights(!arg0),
-          );
-          const obj2 = { notify_highlights: arg0 ? HighlightSettings.ENABLED : HighlightSettings.DISABLED };
+          const result = updateGuildNotificationSettings(guildId, obj, NotificationLabel.highlights(!arg0));
         };
         cResult[0] = guildId;
         cResult[1] = fn;
-        let tmp4 = fn;
+        tmp4 = fn;
       } else {
         tmp4 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserGuildSettingsStore, GuildStore];
         cResult[2] = items;
-        let tmp5 = items;
+        tmp5 = items;
       } else {
         tmp5 = cResult[2];
       }
       if (cResult[3] !== guildId) {
         const fn2 = function b() {
-          return {
+          const obj = {
             guild: GuildStore.getGuild(guildId),
             muted: UserGuildSettingsStore.isMuted(guildId),
             notifyHighlights: UserGuildSettingsStore.getNotifyHighlights(guildId),
           };
+          return obj;
         };
         const items1 = [guildId];
         cResult[3] = guildId;
         cResult[4] = fn2;
         cResult[5] = items1;
-        let tmp9 = items1;
-        let tmp8 = fn2;
+        tmp9 = items1;
+        tmp8 = fn2;
       } else {
         tmp8 = cResult[4];
         tmp9 = cResult[5];
       }
-      let obj = guildId(576);
-      const stateFromStoresObject = guildId(504).useStateFromStoresObject(tmp5, tmp8, tmp9);
+      const tmpResult = guildId(504);
+      const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp5, tmp8, tmp9);
       ({ guild, muted } = stateFromStoresObject);
       let name1;
+      const notifyHighlights = stateFromStoresObject.notifyHighlights;
       if (guild != null) {
         name1 = guild.name;
       }
       if (null == name1) {
         return null;
       } else {
+        let tmp14;
         const name = guild.name;
         if (!muted) {
-          muted = stateFromStoresObject.notifyHighlights === HighlightSettings.DISABLED;
+          muted = notifyHighlights === HighlightSettings.DISABLED;
         }
         if (cResult[6] !== guild) {
-          let obj2 = { guild };
           const tmp17 = jsx(GuildIconDefault, { guild });
           cResult[6] = guild;
           cResult[7] = tmp17;
-          let tmp14 = tmp17;
+          tmp14 = tmp17;
         } else {
           tmp14 = cResult[7];
         }
@@ -85,8 +98,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[10] === isStart) {
               if (cResult[11] === name) {
                 if (cResult[12] === tmp4) {
-                  if (cResult[13] === tmp13) {
-                    let tmp18 = cResult[14];
+                  let tmp18;
+                  if (cResult[13] === !muted) {
+                    tmp18 = cResult[14];
                   }
                   return tmp18;
                 }
@@ -94,8 +108,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const obj3 = { label: name, icon: tmp14, value: !muted, onValueChange: tmp4, start: isStart, end: isEnd };
-        const tmp20 = jsx(tmp(6698).TableSwitchRow, {
+        const tmp20 = jsx(guildId(6698).TableSwitchRow, {
           label: name,
           icon: tmp14,
           value: !muted,
@@ -112,75 +125,74 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[14] = tmp20;
         tmp18 = tmp20;
       }
-      const tmpResult = guildId(504);
     }
   : (guildId) => {
+      let guild;
+      let isEnd;
+      let isStart;
+      let muted;
       guildId = guildId.guildId;
       const items = [guildId];
       ({ isStart, isEnd } = guildId);
-      const callback = noop.useCallback((arg0) => {
+      const callback = react.useCallback((arg0) => {
+        const updateGuildNotificationSettings =
+          NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings;
+        const obj = { notify_highlights: arg0 ? HighlightSettings.ENABLED : HighlightSettings.DISABLED };
+        NotificationSettingsModalActionCreatorsDefault;
         const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
-        const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(
-          guildId,
-          { notify_highlights: arg0 ? HighlightSettings.ENABLED : HighlightSettings.DISABLED },
-          NotificationLabel.highlights(!arg0),
-        );
-        const obj2 = { notify_highlights: arg0 ? HighlightSettings.ENABLED : HighlightSettings.DISABLED };
+        const result = updateGuildNotificationSettings(guildId, obj, NotificationLabel.highlights(!arg0));
       }, items);
+      const tmp2 = guildId;
+      let obj = guildId(504);
       const items1 = [UserGuildSettingsStore, GuildStore];
       const items2 = [guildId];
-      const stateFromStoresObject = guildId(504).useStateFromStoresObject(
+      const stateFromStoresObject = obj.useStateFromStoresObject(
         items1,
-        () => ({
-          guild: GuildStore.getGuild(guildId),
-          muted: UserGuildSettingsStore.isMuted(guildId),
-          notifyHighlights: UserGuildSettingsStore.getNotifyHighlights(guildId),
-        }),
+        () => {
+          const obj = {
+            guild: GuildStore.getGuild(guildId),
+            muted: UserGuildSettingsStore.isMuted(guildId),
+            notifyHighlights: UserGuildSettingsStore.getNotifyHighlights(guildId),
+          };
+          return obj;
+        },
         items2,
       );
       ({ guild, muted } = stateFromStoresObject);
-      let name;
+      let name1;
+      const notifyHighlights = stateFromStoresObject.notifyHighlights;
       if (guild != null) {
-        name = guild.name;
+        name1 = guild.name;
       }
-      if (null == name) {
+      if (null == name1) {
         return null;
       } else {
+        const name = guild.name;
         if (!muted) {
-          muted = stateFromStoresObject.notifyHighlights === HighlightSettings.DISABLED;
+          muted = notifyHighlights === HighlightSettings.DISABLED;
         }
-        let obj2 = { guild };
-        const obj3 = {
-          label: guild.name,
-          icon: jsx(GuildIconDefault, { guild }),
-          value: !muted,
-          onValueChange: callback,
-          start: isStart,
-          end: isEnd,
-        };
+        const tmp7 = !muted;
+        jsx(GuildIconDefault, { guild });
         return jsx(tmp2(6698).TableSwitchRow, {
-          label: guild.name,
+          label: name,
           icon: jsx(GuildIconDefault, { guild }),
-          value: !muted,
+          value: tmp7,
           onValueChange: callback,
           start: isStart,
           end: isEnd,
         });
       }
-      let obj = guildId(504);
-      tmp2 = guildId;
     };
-ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting(
-  "modules/user_settings/notifications/native/UserSettingsHighlightNotifications.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let Form = stateFromStoresArray;
-      let tmp = dependencyMap;
-      const cResult = stateFromStoresArray(576).c(8);
+      let flattenedGuildIds;
+      let stateFromStoresArray;
+      let tmp4;
+      let tmp5;
+      let tmp7;
+      const obj = stateFromStoresArray(576);
+      const cResult = obj.c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SortedGuildStore];
         const fn = function l() {
@@ -188,14 +200,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = items;
         cResult[1] = fn;
-        tmp3 = items;
-        tmp4 = fn;
+        tmp4 = items;
+        tmp5 = fn;
       } else {
-        [tmp3, tmp4] = cResult;
+        [tmp4, tmp5] = cResult;
       }
-      const obj = stateFromStoresArray(576);
-      stateFromStoresArray = Form(504).useStateFromStoresArray(tmp3, tmp4);
+      const tmpResult = stateFromStoresArray(504);
+      stateFromStoresArray = tmpResult.useStateFromStoresArray(tmp4, tmp5);
       if (cResult[2] !== stateFromStoresArray) {
+        let tmp8;
         if (cResult[4] !== stateFromStoresArray.length) {
           const fn2 = function c(guildId, arg1) {
             return (
@@ -209,34 +222,48 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           cResult[4] = stateFromStoresArray.length;
           cResult[5] = fn2;
-          let tmp7 = fn2;
+          tmp8 = fn2;
         } else {
-          tmp7 = cResult[5];
+          tmp8 = cResult[5];
         }
-        const mapped = stateFromStoresArray.map(tmp7);
+        const mapped = stateFromStoresArray.map(tmp8);
         cResult[2] = stateFromStoresArray;
         cResult[3] = mapped;
-      } else if (0 === stateFromStoresArray.length) {
-        return null;
-      } else if (cResult[6] !== tmp6) {
-        Form = Form(8895).Form;
-        const obj2 = { children: tmp6 };
-        tmp = <Form>{tmp6}</Form>;
-        cResult[6] = tmp6;
-        cResult[7] = tmp;
+        tmp7 = mapped;
+      } else {
+        tmp7 = cResult[3];
       }
-      const FormResult = Form(504);
+      let tmp10 = null;
+      if (0 !== stateFromStoresArray.length) {
+        let tmp11;
+        if (cResult[6] !== tmp7) {
+          const tmp13 = jsx(stateFromStoresArray(8895).Form, { children: tmp7 });
+          cResult[6] = tmp7;
+          cResult[7] = tmp13;
+          tmp11 = tmp13;
+        } else {
+          tmp11 = cResult[7];
+        }
+        tmp10 = tmp11;
+      }
+      return tmp10;
     }
   : () => {
+      let flattenedGuildIds;
+      let stateFromStoresArray;
       const items = [SortedGuildStore];
-      stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () =>
-        flattenedGuildIds.getFlattenedGuildIds(),
-      );
+      const obj = stateFromStoresArray(504);
+      const tmp = stateFromStoresArray;
+      stateFromStoresArray = obj.useStateFromStoresArray(items, () => flattenedGuildIds.getFlattenedGuildIds());
       [][0] = stateFromStoresArray;
       let tmp4 = null;
       if (0 !== stateFromStoresArray.length) {
-        const obj2 = { children: tmp3 };
-        tmp4 = jsx(stateFromStoresArray(8895).Form, { children: tmp3 });
+        tmp4 = jsx(tmp(8895).Form, { children: tmp3 });
       }
       return tmp4;
     };
+let result = size.fileFinishedImporting(
+  "modules/user_settings/notifications/native/UserSettingsHighlightNotifications.tsx",
+);
+
+export default tmp2;

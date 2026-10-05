@@ -1,15 +1,20 @@
 // discord_app/modules/tti_analytics/native/navigation/NavTTIView.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../../_runtime/00576_react.js";
 import navigationTTIEnabled from "navigationTTIEnabled.tsx";
 import useComponentRenderSpan from "useComponentRenderSpan.tsx";
 import NavigationTTIRegionHierarchy from "debug/NavigationTTIRegionHierarchy.tsx";
 import NavigationTTIRegionDebugOverlay from "debug/NavigationTTIRegionDebugOverlay.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import DevSettingsStore from "../../../devtools/dev_settings/DevSettingsStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let closure_14;
+let closure_15;
 let closure_2 = ["measurementProps", "onLayout", "children"];
 let closure_3 = ["name"];
 let closure_4 = ["tracking", "descendantTracking", "name"];
@@ -18,16 +23,22 @@ let closure_6 = ["tracking", "name", "descendantTracking"];
 let closure_7 = ["tracking", "name"];
 let closure_8 = ["tracking", "name", "descendantTracking"];
 let closure_9 = ["tracking", "name"];
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let ReactCompilerGating = fn(558);
+const View = react_native.View;
+({ jsx: closure_14, jsxs: closure_15 } = Fragment);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   ? (children) => {
-      const cResult = c.c(12);
+      let measurementProps;
+      let onLayout;
+      let tmp2;
+      let tmp3;
+      let tmp4;
+      let tmp5;
+      let obj = react2;
+      const cResult = obj.c(12);
       if (cResult[0] !== children) {
         ({ measurementProps, onLayout } = children);
-        closure_0 = onLayout;
+        let closure_0 = onLayout;
         children = children.children;
         const tmp8 = _objectWithoutProperties(children, closure_2);
         cResult[0] = children;
@@ -35,10 +46,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = measurementProps;
         cResult[3] = onLayout;
         cResult[4] = tmp8;
-        let tmp5 = tmp8;
-        let tmp4 = onLayout;
-        let tmp3 = measurementProps;
-        let tmp2 = children;
+        tmp5 = tmp8;
+        tmp4 = onLayout;
+        tmp3 = measurementProps;
+        tmp2 = children;
       } else {
         tmp2 = cResult[1];
         tmp3 = cResult[2];
@@ -47,25 +58,25 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const onLayout2 = tmp3.onLayout;
       if (cResult[5] === onLayout2) {
+        let tmp9;
         if (cResult[6] === tmp4) {
-          let tmp9 = cResult[7];
+          tmp9 = cResult[7];
         }
         if (null != onLayout2) {
           tmp4 = tmp9;
         }
         if (cResult[8] === tmp2) {
           if (cResult[9] === tmp4) {
+            let tmp11;
             if (cResult[10] === tmp5) {
-              let tmp11 = cResult[11];
+              tmp11 = cResult[11];
             }
             return tmp11;
           }
         }
-        const obj2 = {};
+        let obj2 = { onLayout: tmp4, children: tmp2 };
         const merged = Object.assign(tmp5);
-        obj2.onLayout = tmp4;
-        obj2.children = tmp2;
-        const tmp17 = state(View, obj2);
+        const tmp17 = authStore2(View, obj2);
         cResult[8] = tmp2;
         cResult[9] = tmp4;
         cResult[10] = tmp5;
@@ -86,13 +97,15 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = fn;
     }
   : (onLayout) => {
+      let children;
+      let measurementProps;
       onLayout = onLayout.onLayout;
       ({ measurementProps, children } = onLayout);
       const merged = Object.assign(onLayout, Object.assign({ measurementProps: 0, onLayout: 0, children: 0 }));
       const onLayout2 = measurementProps.onLayout;
       const items = [onLayout2, onLayout];
-      const obj = {};
-      const callback = noop.useCallback((arg0) => {
+      const obj = { onLayout, children };
+      const callback = react.useCallback((arg0) => {
         if (onLayout2 != null) {
           tmp(arg0);
         }
@@ -104,58 +117,70 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != onLayout2) {
         onLayout = callback;
       }
-      obj.onLayout = onLayout;
-      obj.children = children;
-      return state(View, obj);
+      return authStore2(View, obj);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
   ? (name) => {
-      const cResult = c.c(6);
+      let tmp4;
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(6);
       if (cResult[0] !== name) {
         name = name.name;
         const tmp8 = _objectWithoutProperties(name, closure_3);
         cResult[0] = name;
         cResult[1] = name;
         cResult[2] = tmp8;
-        let tmp5 = tmp8;
-        let tmp4 = name;
+        tmp5 = tmp8;
+        tmp4 = name;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
       }
-      const navigationTTIRegionMeasurement = useComponentRenderSpan.useNavigationTTIRegionMeasurement("include", tmp4);
+      const tmpResult = useComponentRenderSpan;
+      const navigationTTIRegionMeasurement = tmpResult.useNavigationTTIRegionMeasurement("include", tmp4);
       if (cResult[3] === navigationTTIRegionMeasurement) {
+        let tmp10;
         if (cResult[4] === tmp5) {
-          let tmp10 = cResult[5];
+          tmp10 = cResult[5];
         }
         return tmp10;
       }
-      const obj2 = {};
+      const obj2 = { measurementProps: navigationTTIRegionMeasurement };
       const merged = Object.assign(tmp5);
-      obj2.measurementProps = navigationTTIRegionMeasurement;
-      const tmp12 = state(closure_16, obj2);
+      const tmp12 = authStore2(closure_16, obj2);
       cResult[3] = navigationTTIRegionMeasurement;
       cResult[4] = tmp5;
       cResult[5] = tmp12;
       tmp10 = tmp12;
-      const tmpResult = useComponentRenderSpan;
     }
   : (name) => {
+      let navigationTTIRegionMeasurement;
+      name = name.name;
       const merged = Object.assign(name, Object.assign({ name: 0 }));
-      const obj2 = {};
-      const navigationTTIRegionMeasurement = useComponentRenderSpan.useNavigationTTIRegionMeasurement(
-        "include",
-        name.name,
-      );
+      const obj2 = { measurementProps: navigationTTIRegionMeasurement };
+      const obj = useComponentRenderSpan;
+      navigationTTIRegionMeasurement = obj.useNavigationTTIRegionMeasurement("include", name);
       const merged1 = Object.assign(merged);
-      obj2.measurementProps = navigationTTIRegionMeasurement;
-      return state(closure_16, obj2);
+      return authStore2(closure_16, obj2);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(23);
+      let descendantTracking;
+      let hierarchy;
+      let items;
+      let measurementProps;
+      let name;
+      let props;
+      let tmp10;
+      let tmp4;
+      let tmp5;
+      let tmp6;
+      let tracking;
+      const obj = react2;
+      const cResult = obj.c(23);
       ({ props, measurementProps, hierarchy } = arg0);
       if (cResult[0] !== props) {
         ({ tracking, descendantTracking, name } = props);
@@ -164,9 +189,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = descendantTracking;
         cResult[2] = tmp9;
         cResult[3] = tracking;
-        let tmp6 = tracking;
-        let tmp5 = tmp9;
-        let tmp4 = descendantTracking;
+        tmp6 = tracking;
+        tmp5 = tmp9;
+        tmp4 = descendantTracking;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
@@ -179,13 +204,14 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[4] = props;
         cResult[5] = str;
-        let tmp10 = str;
+        tmp10 = str;
       } else {
         tmp10 = cResult[5];
       }
       if (cResult[6] === hierarchy.contextValue) {
+        let tmp12;
         if (cResult[7] === props.children) {
-          let tmp12 = cResult[8];
+          tmp12 = cResult[8];
         }
         if (cResult[9] === tmp4) {
           if (cResult[10] === hierarchy.depth) {
@@ -194,25 +220,25 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[13] === hierarchy.regionId) {
                   if (cResult[14] === hierarchy.violation) {
                     if (cResult[15] === tmp10) {
+                      let tmp14;
                       if (cResult[16] === tmp6) {
-                        let tmp14 = cResult[17];
+                        tmp14 = cResult[17];
                       }
                       if (cResult[18] === measurementProps) {
                         if (cResult[19] === tmp5) {
                           if (cResult[20] === tmp12) {
+                            let tmp17;
                             if (cResult[21] === tmp14) {
-                              let tmp17 = cResult[22];
+                              tmp17 = cResult[22];
                             }
                             return tmp17;
                           }
                         }
                       }
-                      const obj2 = {};
+                      const obj2 = { measurementProps, children: items };
                       const merged = Object.assign(tmp5);
-                      obj2.measurementProps = measurementProps;
-                      const items = [tmp12, tmp14];
-                      obj2.children = items;
-                      const tmp23 = closure_1_15(closure_16, obj2);
+                      items = [tmp12, tmp14];
+                      const tmp23 = closure_15(closure_16, obj2);
                       cResult[18] = measurementProps;
                       cResult[19] = tmp5;
                       cResult[20] = tmp12;
@@ -242,7 +268,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           depth: obj3.hierarchyDepth,
           violation: obj3.violation,
         } = hierarchy);
-        const tmp16 = state(NavigationTTIRegionDebugOverlay.NavigationTTIRegionDebugOverlay, obj4);
+        const tmp16 = authStore2(NavigationTTIRegionDebugOverlay.NavigationTTIRegionDebugOverlay, obj4);
         cResult[9] = tmp4;
         cResult[10] = hierarchy.depth;
         cResult[11] = hierarchy.excludedDescendants;
@@ -254,66 +280,67 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[17] = tmp16;
         tmp14 = tmp16;
       }
-      const tmp13 = state(NavigationTTIRegionHierarchy.NavigationTTIRegionHierarchyContext.Provider, {
-        value: hierarchy.contextValue,
-        children: props.children,
-      });
+      const obj7 = { value: hierarchy.contextValue, children: props.children };
+      const tmp13 = authStore2(NavigationTTIRegionHierarchy.NavigationTTIRegionHierarchyContext.Provider, obj7);
       cResult[6] = hierarchy.contextValue;
       cResult[7] = props.children;
       cResult[8] = tmp13;
       tmp12 = tmp13;
-      const obj7 = { value: hierarchy.contextValue, children: props.children };
     }
   : (measurementProps) => {
+      let descendantTracking;
+      let hierarchy;
+      let items;
+      let props;
+      let tracking;
       ({ props, hierarchy } = measurementProps);
+      measurementProps = measurementProps.measurementProps;
       ({ tracking, descendantTracking } = props);
       let str = props.name;
+      const tmp = _objectWithoutProperties(props, closure_5);
       if (str == null) {
         str = "(unnamed)";
       }
-      const obj = {};
-      const merged = Object.assign(_objectWithoutProperties(props, closure_5));
-      obj.measurementProps = measurementProps.measurementProps;
-      const items = [
-        state(NavigationTTIRegionHierarchy.NavigationTTIRegionHierarchyContext.Provider, {
-          value: hierarchy.contextValue,
-          children: props.children,
-        }),
-        state(NavigationTTIRegionDebugOverlay.NavigationTTIRegionDebugOverlay, {
-          name: str,
-          regionId: hierarchy.regionId,
-          tracking,
-          descendantTracking,
-          includedDescendants: hierarchy.includedDescendants,
-          excludedDescendants: hierarchy.excludedDescendants,
-          hierarchyDepth: hierarchy.depth,
-          violation: hierarchy.violation,
-        }),
-      ];
-      obj.children = items;
-      return closure_1_15(closure_16, obj);
+      const obj = { measurementProps, children: items };
+      const merged = Object.assign(tmp);
+      items = [,];
+      const obj2 = { value: hierarchy.contextValue, children: props.children };
+      items[0] = authStore2(NavigationTTIRegionHierarchy.NavigationTTIRegionHierarchyContext.Provider, obj2);
+      const obj3 = {
+        name: str,
+        regionId: hierarchy.regionId,
+        tracking,
+        descendantTracking,
+        includedDescendants: hierarchy.includedDescendants,
+        excludedDescendants: hierarchy.excludedDescendants,
+        hierarchyDepth: hierarchy.depth,
+        violation: hierarchy.violation,
+      };
+      items[1] = authStore2(NavigationTTIRegionDebugOverlay.NavigationTTIRegionDebugOverlay, obj3);
+      return closure_15(closure_16, obj);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
   ? (children) => {
-      const cResult = c.c(8);
-      const Children = noop.Children;
+      const obj = react2;
+      const cResult = obj.c(8);
+      const Children = react.Children;
       const tmp4 = Children.count(children.children) > 0;
       if (cResult[0] === children.name) {
         if (cResult[1] === children.tracking) {
+          let tmp5;
           if (cResult[2] === tmp4) {
-            let tmp5 = cResult[3];
+            tmp5 = cResult[3];
           }
-          const navigationTTIRegionHierarchy = NavigationTTIRegionHierarchy.useNavigationTTIRegionHierarchy(tmp5);
           const tmpResult = NavigationTTIRegionHierarchy;
-          const navigationTTIRegionMeasurement = useComponentRenderSpan.useNavigationTTIRegionMeasurement(
-            "include",
-            children.name,
-          );
+          const navigationTTIRegionHierarchy = tmpResult.useNavigationTTIRegionHierarchy(tmp5);
+          const tmpResult2 = useComponentRenderSpan;
+          const navigationTTIRegionMeasurement = tmpResult2.useNavigationTTIRegionMeasurement("include", children.name);
           if (cResult[4] === navigationTTIRegionHierarchy) {
             if (cResult[5] === navigationTTIRegionMeasurement) {
+              let tmp8;
               if (cResult[6] === children) {
-                let tmp8 = cResult[7];
+                tmp8 = cResult[7];
               }
               return tmp8;
             }
@@ -323,13 +350,12 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             measurementProps: navigationTTIRegionMeasurement,
             hierarchy: navigationTTIRegionHierarchy,
           };
-          const tmp11 = state(closure_18, obj2);
+          const tmp11 = authStore2(closure_18, obj2);
           cResult[4] = navigationTTIRegionHierarchy;
           cResult[5] = navigationTTIRegionMeasurement;
           cResult[6] = children;
           cResult[7] = tmp11;
           tmp8 = tmp11;
-          const tmpResult2 = useComponentRenderSpan;
         }
       }
       const obj3 = { name: children.name, tracking: children.tracking, hasChildren: tmp4 };
@@ -340,20 +366,26 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = obj3;
     }
   : (name) => {
-      const obj2 = { name: name.name, tracking: name.tracking, hasChildren: null };
-      const Children = noop.Children;
-      obj2.hasChildren = Children.count(name.children) > 0;
-      const navigationTTIRegionHierarchy = NavigationTTIRegionHierarchy.useNavigationTTIRegionHierarchy(obj2);
-      return state(closure_18, {
+      let Children;
+      const obj = { name: name.name, tracking: name.tracking, hasChildren: Children.count(name.children) > 0 };
+      Children = react.Children;
+      const useNavigationTTIRegionHierarchy = NavigationTTIRegionHierarchy.useNavigationTTIRegionHierarchy;
+      NavigationTTIRegionHierarchy;
+      const navigationTTIRegionHierarchy = useNavigationTTIRegionHierarchy(obj);
+      const obj2 = useComponentRenderSpan;
+      const obj3 = {
         props: name,
-        measurementProps: useComponentRenderSpan.useNavigationTTIRegionMeasurement("include", name.name),
+        measurementProps: obj2.useNavigationTTIRegionMeasurement("include", name.name),
         hierarchy: navigationTTIRegionHierarchy,
-      });
+      };
+      return authStore2(closure_18, obj3);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
   ? (name) => {
-      const cResult = c.c(11);
+      let tmp4;
+      const obj = react2;
+      const cResult = obj.c(11);
       if (cResult[0] !== name) {
         let str = name.name;
         if (str == null) {
@@ -361,28 +393,31 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[0] = name;
         cResult[1] = str;
-        let tmp4 = str;
+        tmp4 = str;
       } else {
         tmp4 = cResult[1];
       }
-      const Children = noop.Children;
+      const Children = react.Children;
       const tmp6 = Children.count(name.children) > 0;
       if (cResult[2] === tmp4) {
         if (cResult[3] === name.descendantTracking) {
           if (cResult[4] === name.tracking) {
+            let tmp7;
             if (cResult[5] === tmp6) {
-              let tmp7 = cResult[6];
+              tmp7 = cResult[6];
             }
-            const navigationTTIRegionHierarchy = NavigationTTIRegionHierarchy.useNavigationTTIRegionHierarchy(tmp7);
             const tmpResult = NavigationTTIRegionHierarchy;
-            const navigationTTIRegionMeasurement = useComponentRenderSpan.useNavigationTTIRegionMeasurement(
+            const navigationTTIRegionHierarchy = tmpResult.useNavigationTTIRegionHierarchy(tmp7);
+            const tmpResult2 = useComponentRenderSpan;
+            const navigationTTIRegionMeasurement = tmpResult2.useNavigationTTIRegionMeasurement(
               "exclude",
               navigationTTIRegionHierarchy.regionId,
             );
             if (cResult[7] === navigationTTIRegionHierarchy) {
               if (cResult[8] === navigationTTIRegionMeasurement) {
+                let tmp10;
                 if (cResult[9] === name) {
-                  let tmp10 = cResult[10];
+                  tmp10 = cResult[10];
                 }
                 return tmp10;
               }
@@ -392,13 +427,12 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               measurementProps: navigationTTIRegionMeasurement,
               hierarchy: navigationTTIRegionHierarchy,
             };
-            const tmp13 = state(closure_18, obj2);
+            const tmp13 = authStore2(closure_18, obj2);
             cResult[7] = navigationTTIRegionHierarchy;
             cResult[8] = navigationTTIRegionMeasurement;
             cResult[9] = name;
             cResult[10] = tmp13;
             tmp10 = tmp13;
-            const tmpResult2 = useComponentRenderSpan;
           }
         }
       }
@@ -416,67 +450,78 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = obj3;
     }
   : (name) => {
+      let Children;
       let str = name.name;
       if (str == null) {
         str = "(unnamed)";
       }
-      const obj2 = {
+      const obj = {
         name: str,
         tracking: name.tracking,
         descendantTracking: name.descendantTracking,
-        hasChildren: null,
+        hasChildren: Children.count(name.children) > 0,
       };
-      const Children = noop.Children;
-      obj2.hasChildren = Children.count(name.children) > 0;
-      const navigationTTIRegionHierarchy = NavigationTTIRegionHierarchy.useNavigationTTIRegionHierarchy(obj2);
-      return state(closure_18, {
+      Children = react.Children;
+      const useNavigationTTIRegionHierarchy = NavigationTTIRegionHierarchy.useNavigationTTIRegionHierarchy;
+      NavigationTTIRegionHierarchy;
+      const navigationTTIRegionHierarchy = useNavigationTTIRegionHierarchy(obj);
+      const obj2 = useComponentRenderSpan;
+      const obj3 = {
         props: name,
-        measurementProps: useComponentRenderSpan.useNavigationTTIRegionMeasurement(
-          "exclude",
-          navigationTTIRegionHierarchy.regionId,
-        ),
+        measurementProps: obj2.useNavigationTTIRegionMeasurement("exclude", navigationTTIRegionHierarchy.regionId),
         hierarchy: navigationTTIRegionHierarchy,
-      });
+      };
+      return authStore2(closure_18, obj3);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
   ? (tracking) => {
-      const cResult = c.c(2);
+      let tmp2;
+      const obj = react2;
+      const cResult = obj.c(2);
       if (cResult[0] !== tracking) {
+        let tmp8;
         if ("include" === tracking.tracking) {
           const obj2 = {};
           const merged = Object.assign(tracking);
-          let tmp7 = state(closure_19, obj2);
+          tmp8 = authStore2(closure_19, obj2);
         } else {
           const obj3 = {};
           const merged1 = Object.assign(tracking);
-          tmp7 = state(closure_20, obj3);
+          tmp8 = authStore2(closure_20, obj3);
         }
         cResult[0] = tracking;
-        cResult[1] = tmp7;
+        cResult[1] = tmp8;
+        tmp2 = tmp8;
       } else {
-        return cResult[1];
+        tmp2 = cResult[1];
       }
+      return tmp2;
     }
   : (tracking) => {
+      let tmp6;
       if ("include" === tracking.tracking) {
         const obj2 = {};
         const merged = Object.assign(tracking);
-        let tmp6 = state(closure_19, obj2);
+        tmp6 = authStore2(closure_19, obj2);
       } else {
         const obj = {};
         const merged1 = Object.assign(tracking);
-        tmp6 = state(closure_20, obj);
+        tmp6 = authStore2(closure_20, obj);
       }
       return tmp6;
     };
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavTTIView.tsx");
-
-export const NavTTIView = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (tracking) => {
-      const cResult = c.c(16);
+      let descendantTracking;
+      let name;
+      let name2;
+      let tmp4;
+      let tmp5;
+      let tracking2;
+      const obj = react2;
+      const cResult = obj.c(16);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DevSettingsStore];
         const fn = function c() {
@@ -489,104 +534,121 @@ export const NavTTIView = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
+      const tmpResult = get_initialized;
       if (tmpResult.useStateFromStores(tmp4, tmp5)) {
+        let tmp37;
         if (cResult[2] !== tracking) {
           const obj2 = {};
           const merged = Object.assign(tracking);
-          const tmp44 = state(closure_21, obj2);
+          const tmp43 = authStore2(closure_21, obj2);
           cResult[2] = tracking;
-          cResult[3] = tmp44;
-          let tmp38 = tmp44;
+          cResult[3] = tmp43;
+          tmp37 = tmp43;
         } else {
-          tmp38 = cResult[3];
+          tmp37 = cResult[3];
         }
-        return tmp38;
+        return tmp37;
       } else if ("exclude" === tracking.tracking) {
+        let tmp26;
+        let tmp30;
         if (cResult[4] !== tracking) {
           ({ tracking: tracking2, name: name2, descendantTracking } = tracking);
-          const tmp30 = _objectWithoutProperties(tracking, closure_6);
+          const tmp29 = _objectWithoutProperties(tracking, closure_6);
           cResult[4] = tracking;
-          cResult[5] = tmp30;
-          let tmp27 = tmp30;
+          cResult[5] = tmp29;
+          tmp26 = tmp29;
         } else {
-          tmp27 = cResult[5];
+          tmp26 = cResult[5];
         }
-        if (cResult[6] !== tmp27) {
+        if (cResult[6] !== tmp26) {
           const obj3 = {};
-          const merged1 = Object.assign(tmp27);
-          const tmp37 = state(View, obj3);
-          cResult[6] = tmp27;
-          cResult[7] = tmp37;
-          let tmp31 = tmp37;
+          const merged1 = Object.assign(tmp26);
+          const tmp36 = authStore2(View, obj3);
+          cResult[6] = tmp26;
+          cResult[7] = tmp36;
+          tmp30 = tmp36;
         } else {
-          tmp31 = cResult[7];
+          tmp30 = cResult[7];
         }
-        return tmp31;
+        return tmp30;
       } else {
+        let tmp8;
+        let tmp7;
+        let tmp12;
         if (cResult[8] !== tracking) {
           ({ tracking, name } = tracking);
           const tmp11 = _objectWithoutProperties(tracking, closure_7);
           cResult[8] = tracking;
           cResult[9] = name;
           cResult[10] = tmp11;
-          let tmp8 = tmp11;
-          let tmp7 = name;
+          tmp8 = tmp11;
+          tmp7 = name;
         } else {
           tmp7 = cResult[9];
           tmp8 = cResult[10];
         }
+        const tmpResult2 = navigationTTIEnabled;
         if (tmpResult2.isNavigationTTIEnabled()) {
           if (cResult[13] === tmp7) {
+            let tmp19;
+            if (cResult[14] === tmp8) {
+              tmp19 = cResult[15];
+            }
+            tmp12 = tmp19;
           }
-          const obj4 = {};
+          const obj4 = { name: tmp7 };
           const merged2 = Object.assign(tmp8);
-          obj4.name = tmp7;
-          const tmp25 = state(closure_17, obj4);
+          const tmp25 = authStore2(closure_17, obj4);
           cResult[13] = tmp7;
           cResult[14] = tmp8;
           cResult[15] = tmp25;
+          tmp19 = tmp25;
+        } else if (cResult[11] !== tmp8) {
+          const obj5 = {};
+          const merged3 = Object.assign(tmp8);
+          const tmp18 = authStore2(View, obj5);
+          cResult[11] = tmp8;
+          cResult[12] = tmp18;
+          tmp12 = tmp18;
         } else {
-          if (cResult[11] !== tmp8) {
-            const obj5 = {};
-            const merged3 = Object.assign(tmp8);
-            const tmp18 = state(View, obj5);
-            cResult[11] = tmp8;
-            cResult[12] = tmp18;
-            let tmp12 = tmp18;
-          } else {
-            tmp12 = cResult[12];
-          }
-          return tmp12;
+          tmp12 = cResult[12];
         }
-        tmpResult2 = navigationTTIEnabled;
+        return tmp12;
       }
-      tmpResult = initialize;
     }
   : (tracking) => {
+      let descendantTracking;
+      let name2;
+      let tracking2;
       const items = [DevSettingsStore];
+      const obj = get_initialized;
       if (obj.useStateFromStores(items, () => DevSettingsStore.get("navigation_tti_visualizer"))) {
         const obj2 = {};
         const merged = Object.assign(tracking);
-        return state(closure_21, obj2);
+        return authStore2(closure_21, obj2);
       } else if ("exclude" === tracking.tracking) {
-        ({ tracking: tracking2, name, descendantTracking } = tracking);
+        ({ tracking: tracking2, name: name2, descendantTracking } = tracking);
         const obj3 = {};
         const merged1 = Object.assign(_objectWithoutProperties(tracking, closure_8));
-        return state(View, obj3);
+        return authStore2(View, obj3);
       } else {
+        let tmp6Result;
         tracking = tracking.tracking;
+        const name = tracking.name;
         const tmp5 = _objectWithoutProperties(tracking, closure_9);
+        const tmpResult = navigationTTIEnabled;
         if (tmpResult.isNavigationTTIEnabled()) {
-          const obj4 = {};
+          const obj4 = { name };
           const merged2 = Object.assign(tmp5);
-          obj4.name = tracking.name;
-          let tmp6Result = state(closure_17, obj4);
+          tmp6Result = authStore2(closure_17, obj4);
         } else {
           const obj5 = {};
           const merged3 = Object.assign(tmp5);
-          tmp6Result = state(View, obj5);
+          tmp6Result = authStore2(View, obj5);
         }
         return tmp6Result;
       }
-      obj = initialize;
     };
+const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavTTIView.tsx");
+
+export const NavTTIView = tmp3;

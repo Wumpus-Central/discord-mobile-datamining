@@ -1,44 +1,51 @@
 // discord_app/design/components/TableRow/native/TableRowArrow.native.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Icon from "../../../void/Icon/native/Icon.tsx";
-import _modDef6001 from "../../../../../_runtime/metro/06001__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import AssetRegistryDefault from "../../../../../_runtime/06001_AssetRegistry.js";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles_mod from "../../Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
 const IconDefault = Icon;
 
-require = fn;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = { icon: null, iconColor: null };
-let size = {
+let obj2;
+let size;
+const jsx = Fragment.jsx;
+let createStyles = createStyles_mod;
+let obj = { icon: size, iconColor: obj2 };
+size = {
   width: nativeDefault.modules.mobile.TABLE_ROW_ARROW_WIDTH,
   height: 24,
   marginStart: nativeDefault.modules.mobile.TABLE_ROW_ARROW_MARGIN_START,
   marginEnd: nativeDefault.modules.mobile.TABLE_ROW_ARROW_MARGIN_END,
 };
-obj2.icon = size;
-obj2.iconColor = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let closure_4 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-size = fn(2);
-const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowArrow.native.tsx");
-
-export const TableRowArrow = ReactCompilerGating.isReactCompilerEnabled()
+createStyles = createStyles.createStyles;
+obj2 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let closure_4 = createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(3);
+      const obj = react2;
+      const cResult = obj.c(3);
       const tmp4 = closure_4();
       if (cResult[0] === tmp4.icon) {
+        let tmp5;
         if (cResult[1] === tmp4.iconColor.color) {
-          let tmp5 = cResult[2];
+          tmp5 = cResult[2];
         }
         return tmp5;
       }
-      const obj2 = { style: tmp4.icon, color: tmp4.iconColor.color, source: null, size: null };
-      obj2.source = _modDef6001;
-      obj2.size = Icon.IconSizes.CUSTOM;
-      const tmp7 = jsx(IconDefault, { style: tmp4.icon, color: tmp4.iconColor.color, source: null, size: null });
+      IconDefault;
+      const tmp7 = (
+        <tmp6
+          style={tmp4.icon}
+          color={tmp4.iconColor.color}
+          source={AssetRegistryDefault}
+          size={Icon.IconSizes.CUSTOM}
+        />
+      );
       cResult[0] = tmp4.icon;
       cResult[1] = tmp4.iconColor.color;
       cResult[2] = tmp7;
@@ -46,11 +53,12 @@ export const TableRowArrow = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       const tmp = closure_4();
-      const obj = { style: tmp.icon, color: tmp.iconColor.color, source: _modDef6001, size: Icon.IconSizes.CUSTOM };
-      return jsx(IconDefault, {
-        style: tmp.icon,
-        color: tmp.iconColor.color,
-        source: _modDef6001,
-        size: Icon.IconSizes.CUSTOM,
-      });
+      IconDefault;
+      return (
+        <tmp2 style={tmp.icon} color={tmp.iconColor.color} source={AssetRegistryDefault} size={Icon.IconSizes.CUSTOM} />
+      );
     };
+size = size_mod;
+const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowArrow.native.tsx");
+
+export const TableRowArrow = tmp4;

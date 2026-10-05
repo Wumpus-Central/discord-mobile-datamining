@@ -6,24 +6,26 @@ import size from "../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("utils/ErrorCommonUtils.tsx");
 
 export const getUpdatedOptions = function getUpdatedOptions(extra) {
-  const obj = {};
+  let obj2;
+  let obj4;
+  let serializer;
+  const obj = { extra: obj2 };
   const merged = Object.assign(extra);
   extra = undefined;
   if (extra != null) {
     extra = extra.extra;
   }
+  obj2 = {};
   const merged1 = Object.assign(extra);
   if (null != DispatcherDefault._currentDispatchActionType) {
+    obj4 = { currentAction: DispatcherDefault._currentDispatchActionType };
     const obj3 = { currentAction: DispatcherDefault._currentDispatchActionType };
-    let obj4 = obj3;
   } else {
     obj4 = {};
   }
-  const obj5 = {};
+  const obj5 = { lastFewActions: serializer.serialize() };
   const merged2 = Object.assign(obj4);
-  const serializer = LastFewActions;
-  obj5.lastFewActions = serializer.serialize();
+  serializer = LastFewActions;
   const merged3 = Object.assign(obj5);
-  obj.extra = {};
   return obj;
 };

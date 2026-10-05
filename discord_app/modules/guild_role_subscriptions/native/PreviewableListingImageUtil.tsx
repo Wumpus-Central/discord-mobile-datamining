@@ -8,7 +8,8 @@ export const getSource = function getSource(imageLocal) {
   if (null != imageLocal.imageLocal) {
     imageLocal = imageLocal.imageLocal;
   } else {
-    imageLocal = ListingImageUtilAll.getSource(imageLocal);
+    const obj = ListingImageUtilAll;
+    imageLocal = obj.getSource(imageLocal);
   }
   return imageLocal;
 };

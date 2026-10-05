@@ -1,25 +1,26 @@
 // discord_app/modules/media_channel/MediaPostSharePromptStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost.tsx";
 import GatedChannelStore from "../channel/GatedChannelStore.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
 let set = new Set();
-const Store = initializeDefault.Store;
-class MediaPostSharePromptStore extends Store {}
+const Store = get_initializedDefault.Store;
+class MediaPostSharePromptStore extends Store {
+  initialize() {
+    this.waitFor(AuthenticationStore, ChannelStore, GatedChannelStore);
+  }
+  shouldDisplayPrompt(id) {
+    return set.has(id);
+  }
+}
 const prototype = MediaPostSharePromptStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(AuthenticationStore, ChannelStore, GatedChannelStore);
-};
-prototype["shouldDisplayPrompt"] = function shouldDisplayPrompt(id) {
-  return set.has(id);
-};
 MediaPostSharePromptStore.displayName = "MediaPostSharePromptStore";
-const mediaPostSharePromptStore = new MediaPostSharePromptStore(DispatcherDefault, {
+let obj = {
   CONNECTION_OPEN: function handleConnectionOpen() {
     set = new Set();
   },
@@ -33,17 +34,19 @@ const mediaPostSharePromptStore = new MediaPostSharePromptStore(DispatcherDefaul
         id1 = author.id;
       }
       if (id === id1) {
+        const obj2 = useIsFirstMessageInMediaPost;
         if (obj2.isFirstMessageIdInMediaPost(message.id, message.channel_id)) {
           const channel = ChannelStore.getChannel(message.channel_id);
           if (null != channel) {
             if (null != channel.parent_id) {
               if (GatedChannelStore.isChannelGated(channel.guild_id, channel.parent_id)) {
-                set.add(SnowflakeUtilsDefault.castMessageIdAsChannelId(isPushNotification.message.id));
+                const add = set.add;
+                const obj = SnowflakeUtilsDefault;
+                add(obj.castMessageIdAsChannelId(isPushNotification.message.id));
               }
             }
           }
         }
-        obj2 = useIsFirstMessageInMediaPost;
       }
     }
   },
@@ -53,8 +56,8 @@ const mediaPostSharePromptStore = new MediaPostSharePromptStore(DispatcherDefaul
   LOGOUT: function handleLogout() {
     set.clear();
   },
-});
-const size = fn(2);
+};
+const mediaPostSharePromptStore = new MediaPostSharePromptStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/media_channel/MediaPostSharePromptStore.tsx");
 
 export default mediaPostSharePromptStore;

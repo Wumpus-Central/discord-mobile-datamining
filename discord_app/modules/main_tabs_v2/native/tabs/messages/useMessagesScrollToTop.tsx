@@ -1,21 +1,23 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/useMessagesScrollToTop.tsx
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesScrollToTop.tsx");
 
 export default function useMessagesScrollToTop(listRef) {
   listRef = listRef.listRef;
   const listRefHappeningNow = listRef.listRefHappeningNow;
   const items = [listRef, listRefHappeningNow];
-  const ref = noop.useRef(
-    noop.useMemo(
-      () => ({
+  const ref = react.useRef(
+    react.useMemo(() => {
+      let obj = {
         scrollToTopTimeout: -1,
         scrollToTop() {
-          if (null != obj.coerceGuildsRoute(listRefHappeningNow(10997)())) {
+          let ref;
+          let ref2;
+          let obj = listRef(dependencyMap[2]);
+          if (null != obj.coerceGuildsRoute(listRefHappeningNow(dependencyMap[3])())) {
             const self = this;
             if (-1 === this.scrollToTopTimeout) {
               const _setTimeout = setTimeout;
@@ -39,9 +41,10 @@ export default function useMessagesScrollToTop(listRef) {
             }
           }
         },
-      }),
-      items,
-    ),
+      };
+      return obj;
+    }, items),
   );
-  const scrollToTop = listRef(1491).useScrollToTop(ref);
+  let obj = listRef(1491);
+  const scrollToTop = obj.useScrollToTop(ref);
 }

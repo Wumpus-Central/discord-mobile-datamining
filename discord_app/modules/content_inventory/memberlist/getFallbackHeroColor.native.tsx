@@ -6,7 +6,6 @@ const result = size.fileFinishedImporting("modules/content_inventory/memberlist/
 
 export const getFallbackHeroColor = function getFallbackHeroColor(stateFromStores1, stateFromStores) {
   const internal = nativeDefault.internal;
-  return internal.resolveSemanticColor(stateFromStores1, nativeDefault.colors.BACKGROUND_SURFACE_HIGH, {
-    saturation: stateFromStores,
-  });
+  const obj = { saturation: stateFromStores };
+  return internal.resolveSemanticColor(stateFromStores1, nativeDefault.colors.BACKGROUND_SURFACE_HIGH, obj);
 };

@@ -1,14 +1,11 @@
 // discord_app/modules/guild_automod/native/showModerateUserActionSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_automod/native/showModerateUserActionSheet.tsx");
 
 export default function showModerateUserActionSheet(arg0) {
-  ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(11445, dependencyMap.paths),
-    "ModerateUserActionSheet",
-    arg0,
-  );
+  const obj = ActionSheetActionCreatorsDefault;
+  obj.openLazy(asyncRequire(11445, dependencyMap.paths), "ModerateUserActionSheet", arg0);
 }

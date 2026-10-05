@@ -1,12 +1,14 @@
 // discord_common/js/packages/media-engine/native/ui/DirectVideo.tsx
+import logger_Logger from "../../../logger/Logger.tsx";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import DirectVideoStream from "../DirectVideoStream.tsx";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import size_mod from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const logger = new fn(4).Logger("DirectVideo");
+const jsx = Fragment.jsx;
+const logger = new logger_Logger.Logger("DirectVideo");
 logger.enableNativeLogger(true);
-let size = fn(2);
+let size = size_mod;
 let result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/native/ui/DirectVideo.tsx");
 
 export default function DirectVideo(streamId, onContainerResized) {
@@ -21,28 +23,31 @@ export default function DirectVideo(streamId, onContainerResized) {
   if (flag2 === undefined) {
     flag2 = true;
   }
+  const className = streamId.className;
   const merged = Object.assign(
     streamId,
     Object.assign({ streamId: 0, paused: 0, onReady: 0, onResize: 0, reportContainerResized: 0, className: 0 }),
   );
   onResize.useRef(null);
   const ref = onResize.useRef(null);
-  closure_7 = onResize.useRef({ width: 0, height: 0 });
-  closure_8 = onResize.useRef({ streamId, paused: flag, onReady, onResize, onContainerResized });
+  let closure_7 = onResize.useRef({ width: 0, height: 0 });
+  let obj = { streamId, paused: flag, onReady, onResize, onContainerResized };
+  let closure_8 = onResize.useRef(obj);
   const items = [flag2];
   const layoutEffect = onResize.useLayoutEffect(() => {
+    let ref2;
     let current = ref.current;
     const resizeObserver = new globalThis.ResizeObserver((arg0) => {
       if (flag2) {
         const iter = arg0[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
-          let tmp8 = nextResult;
+          let tmp9 = nextResult;
           if (nextResult.target === ref.current) {
             let _window = window;
-            let result = window.devicePixelRatio * tmp8.target.clientWidth;
+            let result = window.devicePixelRatio * tmp9.target.clientWidth;
             let _window2 = window;
-            let result1 = window.devicePixelRatio * tmp8.target.clientHeight;
+            let result1 = window.devicePixelRatio * tmp9.target.clientHeight;
             let current = closure_1_8.current;
             let onContainerResized = current.onContainerResized;
             if (onContainerResized != null) {
@@ -70,6 +75,8 @@ export default function DirectVideo(streamId, onContainerResized) {
         }
       });
       const listener1 = element.addEventListener("resize", function handleResize() {
+        let height;
+        let width;
         const current = ref.current;
         let num;
         ({ width, height } = ref2.current);
@@ -88,7 +95,7 @@ export default function DirectVideo(streamId, onContainerResized) {
           num2 = 0;
         }
         if (width !== num) {
-          const size = { width: num, height: num2 };
+          size = { width: num, height: num2 };
           const current3 = closure_1_8.current;
           onResize = current3.onResize;
           if (onResize != null) {
@@ -110,6 +117,7 @@ export default function DirectVideo(streamId, onContainerResized) {
       });
       const _HermesInternal2 = HermesInternal;
       logger.info("create video element for " + closure_8.current.streamId + ", readyState=" + element.readyState);
+      let num = 3;
       if (element.readyState > 3) {
         const _HermesInternal = HermesInternal;
         logger.error("video element for " + closure_8.current.streamId + " was ready before attached");
@@ -137,7 +145,8 @@ export default function DirectVideo(streamId, onContainerResized) {
       } else {
         const _HermesInternal = HermesInternal;
         logger.info("attaching srcObject for " + streamId);
-        const result = DirectVideoStream.acquireDirectVideoStream(streamId);
+        const obj = DirectVideoStream;
+        const result = obj.acquireDirectVideoStream(streamId);
         current.srcObject = result.stream;
         return () => {
           result.release();
@@ -146,6 +155,7 @@ export default function DirectVideo(streamId, onContainerResized) {
       }
     }
   }, items1);
+  const obj2 = { className: flag(onReady[4])("media-engine-video", className), ref };
   const merged1 = Object.assign(merged);
-  return flag2("div", { className: flag(onReady[4])("media-engine-video", streamId.className), ref });
+  return flag2("div", obj2);
 }

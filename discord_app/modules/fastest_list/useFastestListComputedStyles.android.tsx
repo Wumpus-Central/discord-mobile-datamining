@@ -1,191 +1,199 @@
 // discord_app/modules/fastest_list/useFastestListComputedStyles.android.tsx
-import c from "../../../_runtime/00576_c.js";
-import noop from "../../../_runtime/metro/00019__.js";
+import react_native from "../../../_runtime/00017_react-native.js";
+import react2 from "../../../_runtime/00576_react.js";
+import react from "../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const StyleSheet = fn(17).StyleSheet;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/fastest_list/useFastestListComputedStyles.android.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
-      const cResult = c.c(6);
+const StyleSheet = react_native.StyleSheet;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function (style) {
+      let tmp2;
+      const obj = react2;
+      const cResult = obj.c(6);
       style = style.style;
       if (cResult[0] !== style) {
+        let obj3;
+        const flatten = StyleSheet.flatten;
         if (null != style) {
           let obj2 = style;
           if (style == null) {
             obj2 = { flex: 1 };
           }
           const items = [obj2];
-          let obj3 = items;
+          obj3 = items;
         } else {
           obj3 = { flex: 1 };
         }
-        const flattenResult = StyleSheet.flatten(obj3);
+        const flattenResult = flatten(obj3);
         cResult[0] = style;
         cResult[1] = flattenResult;
+        tmp2 = flattenResult;
       } else {
-        let num3;
-        if (cResult[1] != null) {
-          num3 = tmp2.marginStart;
-        }
-        if (num3 == null) {
-          let marginLeft;
-          if (tmp2 != null) {
-            marginLeft = tmp2.marginLeft;
-          }
-          num3 = marginLeft;
-        }
-        if (num3 == null) {
-          let marginHorizontal;
-          if (tmp2 != null) {
-            marginHorizontal = tmp2.marginHorizontal;
-          }
-          num3 = marginHorizontal;
-        }
-        if (num3 == null) {
-          let margin;
-          if (tmp2 != null) {
-            margin = tmp2.margin;
-          }
-          num3 = margin;
-        }
-        if (num3 == null) {
-          num3 = 0;
-        }
-        let num4;
-        if (cResult[1] != null) {
-          num4 = tmp2.paddingStart;
-        }
-        if (num4 == null) {
-          let paddingLeft;
-          if (tmp2 != null) {
-            paddingLeft = tmp2.paddingLeft;
-          }
-          num4 = paddingLeft;
-        }
-        if (num4 == null) {
-          let paddingHorizontal;
-          if (tmp2 != null) {
-            paddingHorizontal = tmp2.paddingHorizontal;
-          }
-          num4 = paddingHorizontal;
-        }
-        if (num4 == null) {
-          let padding;
-          if (tmp2 != null) {
-            padding = tmp2.padding;
-          }
-          num4 = padding;
-        }
-        if (num4 == null) {
-          num4 = 0;
-        }
-        if (typeof num3 === "number") {
-          if (typeof num4 === "number") {
-            let num5;
-            if (tmp2 != null) {
-              num5 = tmp2.marginEnd;
-            }
-            if (num5 == null) {
-              let marginRight;
-              if (tmp2 != null) {
-                marginRight = tmp2.marginRight;
-              }
-              num5 = marginRight;
-            }
-            if (num5 == null) {
-              let marginHorizontal1;
-              if (tmp2 != null) {
-                marginHorizontal1 = tmp2.marginHorizontal;
-              }
-              num5 = marginHorizontal1;
-            }
-            if (num5 == null) {
-              let margin1;
-              if (tmp2 != null) {
-                margin1 = tmp2.margin;
-              }
-              num5 = margin1;
-            }
-            if (num5 == null) {
-              num5 = 0;
-            }
-            let num6;
-            if (tmp2 != null) {
-              num6 = tmp2.paddingEnd;
-            }
-            if (num6 == null) {
-              let paddingRight;
-              if (tmp2 != null) {
-                paddingRight = tmp2.paddingRight;
-              }
-              num6 = paddingRight;
-            }
-            if (num6 == null) {
-              let paddingHorizontal1;
-              if (tmp2 != null) {
-                paddingHorizontal1 = tmp2.paddingHorizontal;
-              }
-              num6 = paddingHorizontal1;
-            }
-            if (num6 == null) {
-              let padding1;
-              if (tmp2 != null) {
-                padding1 = tmp2.padding;
-              }
-              num6 = padding1;
-            }
-            if (num6 == null) {
-              num6 = 0;
-            }
-            if (typeof num5 === "number") {
-              if (typeof num6 === "number") {
-                const sum = num5 + num6;
-                const sum1 = num3 + num4;
-                if (cResult[2] === sum) {
-                  if (cResult[3] === sum1) {
-                    if (cResult[4] === tmp2) {
-                      let tmp20 = cResult[5];
-                    }
-                    return tmp20;
-                  }
-                }
-                const obj4 = { style: tmp2, marginEnd: sum, marginStart: sum1 };
-                cResult[2] = sum;
-                cResult[3] = sum1;
-                cResult[4] = tmp2;
-                cResult[5] = obj4;
-                tmp20 = obj4;
-              }
-            }
-            const _Error = Error;
-            const error = new Error("FastestList: paddingStart and paddingEnd must be numbers.");
-            throw error;
-          }
-        }
-        const _Error2 = Error;
-        const error1 = new Error("FastestList: marginStart and marginEnd must be numbers.");
-        throw error1;
+        tmp2 = cResult[1];
       }
+      let num3;
+      if (tmp2 != null) {
+        num3 = tmp2.marginStart;
+      }
+      if (num3 == null) {
+        let marginLeft;
+        if (tmp2 != null) {
+          marginLeft = tmp2.marginLeft;
+        }
+        num3 = marginLeft;
+      }
+      if (num3 == null) {
+        let marginHorizontal;
+        if (tmp2 != null) {
+          marginHorizontal = tmp2.marginHorizontal;
+        }
+        num3 = marginHorizontal;
+      }
+      if (num3 == null) {
+        let margin;
+        if (tmp2 != null) {
+          margin = tmp2.margin;
+        }
+        num3 = margin;
+      }
+      if (num3 == null) {
+        num3 = 0;
+      }
+      let num4;
+      if (tmp2 != null) {
+        num4 = tmp2.paddingStart;
+      }
+      if (num4 == null) {
+        let paddingLeft;
+        if (tmp2 != null) {
+          paddingLeft = tmp2.paddingLeft;
+        }
+        num4 = paddingLeft;
+      }
+      if (num4 == null) {
+        let paddingHorizontal;
+        if (tmp2 != null) {
+          paddingHorizontal = tmp2.paddingHorizontal;
+        }
+        num4 = paddingHorizontal;
+      }
+      if (num4 == null) {
+        let padding;
+        if (tmp2 != null) {
+          padding = tmp2.padding;
+        }
+        num4 = padding;
+      }
+      if (num4 == null) {
+        num4 = 0;
+      }
+      if (typeof num3 === "number") {
+        if (typeof num4 === "number") {
+          let num5;
+          if (tmp2 != null) {
+            num5 = tmp2.marginEnd;
+          }
+          if (num5 == null) {
+            let marginRight;
+            if (tmp2 != null) {
+              marginRight = tmp2.marginRight;
+            }
+            num5 = marginRight;
+          }
+          if (num5 == null) {
+            let marginHorizontal1;
+            if (tmp2 != null) {
+              marginHorizontal1 = tmp2.marginHorizontal;
+            }
+            num5 = marginHorizontal1;
+          }
+          if (num5 == null) {
+            let margin1;
+            if (tmp2 != null) {
+              margin1 = tmp2.margin;
+            }
+            num5 = margin1;
+          }
+          if (num5 == null) {
+            num5 = 0;
+          }
+          let num6;
+          if (tmp2 != null) {
+            num6 = tmp2.paddingEnd;
+          }
+          if (num6 == null) {
+            let paddingRight;
+            if (tmp2 != null) {
+              paddingRight = tmp2.paddingRight;
+            }
+            num6 = paddingRight;
+          }
+          if (num6 == null) {
+            let paddingHorizontal1;
+            if (tmp2 != null) {
+              paddingHorizontal1 = tmp2.paddingHorizontal;
+            }
+            num6 = paddingHorizontal1;
+          }
+          if (num6 == null) {
+            let padding1;
+            if (tmp2 != null) {
+              padding1 = tmp2.padding;
+            }
+            num6 = padding1;
+          }
+          if (num6 == null) {
+            num6 = 0;
+          }
+          if (typeof num5 === "number") {
+            if (typeof num6 === "number") {
+              const sum = num5 + num6;
+              const sum1 = num3 + num4;
+              if (cResult[2] === sum) {
+                if (cResult[3] === sum1) {
+                  let tmp18;
+                  if (cResult[4] === tmp2) {
+                    tmp18 = cResult[5];
+                  }
+                  return tmp18;
+                }
+              }
+              const obj4 = { style: tmp2, marginEnd: sum, marginStart: sum1 };
+              cResult[2] = sum;
+              cResult[3] = sum1;
+              cResult[4] = tmp2;
+              cResult[5] = obj4;
+              tmp18 = obj4;
+            }
+          }
+          const _Error = Error;
+          const self = this;
+          const self2 = this;
+          const error = new Error("FastestList: paddingStart and paddingEnd must be numbers.");
+          throw error;
+        }
+      }
+      const error1 = new Error("FastestList: marginStart and marginEnd must be numbers.");
+      throw error1;
     }
   : (style) => {
       style = style.style;
       let items = [style];
-      return noop.useMemo(() => {
+      return react.useMemo(function () {
+        let obj2;
         let obj = style;
+        const flatten = StyleSheet.flatten;
         if (null != style) {
           if (obj == null) {
             obj = { flex: 1 };
           }
           const items = [obj];
-          let obj2 = items;
+          obj2 = items;
         } else {
           obj2 = { flex: 1 };
         }
-        const flattenResult = StyleSheet.flatten(obj2);
+        const flattenResult = flatten(obj2);
         let num;
         if (flattenResult != null) {
           num = flattenResult.marginStart;
@@ -302,11 +310,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (typeof num3 === "number") {
               if (typeof num4 === "number") {
-                const obj3 = { style: flattenResult, marginEnd: num3 + num4, marginStart: num + num2 };
-                return obj3;
+                return { style: flattenResult, marginEnd: num3 + num4, marginStart: num + num2 };
               }
             }
             const _Error = Error;
+            const self = this;
+            const self2 = this;
             const error = new Error("FastestList: paddingStart and paddingEnd must be numbers.");
             throw error;
           }
@@ -315,3 +324,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         throw error1;
       }, items);
     };
+const result = size.fileFinishedImporting("modules/fastest_list/useFastestListComputedStyles.android.tsx");
+
+export default tmp2;

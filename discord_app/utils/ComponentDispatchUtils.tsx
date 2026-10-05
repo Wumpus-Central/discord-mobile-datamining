@@ -7,7 +7,7 @@ import size from "../../_runtime/metro/00002__.js";
 
 const ComponentActionsKeyed = Constants.ComponentActionsKeyed;
 const warn = new LoggerDefault("ComponentDispatchUtils");
-const componentDispatcher = new utils_ComponentDispatchUtils.ComponentDispatcher({
+let obj = {
   maxListeners: 100,
   enableDevtools: false,
   logger: {
@@ -17,20 +17,19 @@ const componentDispatcher = new utils_ComponentDispatchUtils.ComponentDispatcher
     },
   },
   devtoolsReporter: function reportDevtoolsEvent(fullActionName, actionData, durationMs) {
-    closure_0 = fullActionName;
+    let closure_0 = fullActionName;
     const values = Object.values(ComponentActionsKeyed);
     let found = values.find((item) => closure_0.startsWith(item));
     if (found == null) {
       found = fullActionName;
     }
-    DevtoolsExtensionAll.reportEvent({
-      type: "ComponentDispatch",
-      description: found,
-      data: { actionData, fullActionName },
-      durationMs,
-    });
+    const obj = DevtoolsExtensionAll;
+    const obj2 = { type: "ComponentDispatch", description: found, data: { actionData, fullActionName }, durationMs };
+    obj.reportEvent(obj2);
   },
-});
+};
+new LoggerDefault("ComponentDispatchUtils");
+const componentDispatcher = new utils_ComponentDispatchUtils.ComponentDispatcher(obj);
 const result = size.fileFinishedImporting("utils/ComponentDispatchUtils.tsx");
 
 export const ComponentDispatcher = utils_ComponentDispatchUtils.ComponentDispatcher;

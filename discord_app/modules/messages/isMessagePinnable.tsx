@@ -2,22 +2,23 @@
 import ThreadHooks from "../threads/ThreadHooks.tsx";
 import isSystemMessageDefault from "isSystemMessage.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const Constants = fn(1085);
+let closure_4;
+let hasOwnProperty;
 ({ ChannelTypes: closure_4, Permissions: hasOwnProperty } = Constants);
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/isMessagePinnable.tsx");
 
 export default function isMessagePinnable(arg0, isSystemDM) {
-  const isSystemDMResult = isSystemDM.isSystemDM();
-  let isActiveChannelOrUnarchivableThread = !isSystemDMResult;
-  if (!isSystemDMResult) {
+  let isActiveChannelOrUnarchivableThread = !isSystemDM.isSystemDM();
+  isSystemDM.isSystemDM();
+  if (isActiveChannelOrUnarchivableThread) {
     isActiveChannelOrUnarchivableThread = !isSystemMessageDefault(arg0);
   }
   let isPrivateResult =
-    PermissionStore.can(constants2.PIN_MESSAGES, isSystemDM) &&
-    PermissionStore.can(constants2.READ_MESSAGE_HISTORY, isSystemDM);
+    PermissionStore.can(hasOwnProperty.PIN_MESSAGES, isSystemDM) &&
+    PermissionStore.can(hasOwnProperty.READ_MESSAGE_HISTORY, isSystemDM);
   if (isActiveChannelOrUnarchivableThread) {
     if (!isPrivateResult) {
       isPrivateResult = isSystemDM.isPrivate();
@@ -25,7 +26,8 @@ export default function isMessagePinnable(arg0, isSystemDM) {
     isActiveChannelOrUnarchivableThread = isPrivateResult;
   }
   if (isActiveChannelOrUnarchivableThread) {
-    isActiveChannelOrUnarchivableThread = ThreadHooks.getIsActiveChannelOrUnarchivableThread(isSystemDM);
+    const obj2 = ThreadHooks;
+    isActiveChannelOrUnarchivableThread = obj2.getIsActiveChannelOrUnarchivableThread(isSystemDM);
   }
   if (isActiveChannelOrUnarchivableThread) {
     isActiveChannelOrUnarchivableThread = isSystemDM.type !== constants.GUILD_VOICE;

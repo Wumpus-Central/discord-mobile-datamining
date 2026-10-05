@@ -6,13 +6,10 @@ import AVErrorUtils from "../AVErrorUtils.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 import RTCConnectionStore from "../../../../stores/RTCConnectionStore.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
 let closure_5 = 20 * DurationsDefault.Millis.SECOND;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorCameraSendLowFPS.tsx");
-
-export const AVErrorCameraSendLowFPSDefinition = {
+const obj = {
   getActiveErrors() {
     const rTCConnection = RTCConnectionStore.getRTCConnection();
     if (null == rTCConnection) {
@@ -30,18 +27,20 @@ export const AVErrorCameraSendLowFPSDefinition = {
           }
         }
         if (rTCConnection.hasActiveRemoteWants()) {
-          const accumulatedStatsWithMinDatapoints = AVErrorUtils.getAccumulatedStatsWithMinDatapoints(
+          const obj3 = AVErrorUtils;
+          const accumulatedStatsWithMinDatapoints = obj3.getAccumulatedStatsWithMinDatapoints(
             mediaEngineConnectionId,
             AuthenticationStore.getId(),
           );
           let tmp7 = null;
           if (null != accumulatedStatsWithMinDatapoints) {
+            let tmp8;
             if (accumulatedStatsWithMinDatapoints.short.frameRate < 10) {
               const obj2 = { type: AVError.AVError.CAMERA_SEND_LOW_FPS, userId: AuthenticationStore.getId() };
-              const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
-              const items = [obj2];
               const tmp4Result = AVErrorContext;
-              const tmp8 = items;
+              const merged = Object.assign(tmp4Result.getVoiceChannelErrorContext());
+              const items = [obj2];
+              tmp8 = items;
             }
             tmp7 = tmp8;
           }
@@ -58,3 +57,6 @@ export const AVErrorCameraSendLowFPSDefinition = {
     return "" + mediaSessionId.mediaSessionId;
   },
 };
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorCameraSendLowFPS.tsx");
+
+export const AVErrorCameraSendLowFPSDefinition = obj;

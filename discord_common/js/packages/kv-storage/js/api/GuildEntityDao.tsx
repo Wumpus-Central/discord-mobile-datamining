@@ -4,229 +4,231 @@ import TableId from "../types/index.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-let GuildEntityDao;
 class GuildEntityDao {
-  constructor(arg0, arg1, arg2) {
-    flag = importAll;
-    if (importAll === undefined) {
-      flag = true;
-    }
-    obj = Object.create(new.target.prototype);
-    obj.originalPrefix = global;
-    items = [];
-    items[0] = global;
-    table = new closure_0(closure_1[0]).Table(items, require, importDefault, flag);
+  constructor(guild_channels, KvCache, database) {
+    const obj = Object.create(new.target.prototype);
+    obj.originalPrefix = guild_channels;
+    const items = [guild_channels];
+    const table = new Table.Table(items, KvCache, database, flag);
     obj.table = table;
     return obj;
   }
-}
-const prototype = GuildEntityDao.prototype;
-Object.defineProperty(prototype, "prefix", {
-  get: function prefix() {
-    return this.table.prefix;
-  },
-  set: undefined
-});
-prototype["withoutLogging"] = function withoutLogging() {
-  const originalPrefix = this.originalPrefix;
-  const tableId = this.table.tableId;
-  const database = this.table.database;
-  if (typeof GuildEntityDao === "function") {
-    const obj = Object.create(GuildEntityDao.prototype);
-    obj.originalPrefix = originalPrefix;
-    const items = [originalPrefix];
-    const table = new Table.Table(items, tableId, database, false);
-    obj.table = table;
-    return obj;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-};
-prototype["get"] = function get(arg0, arg1) {
-  const table = this.table;
-  const items = [arg0, arg1];
-  return table.get(items);
-};
-prototype["getMany"] = function getMany(arg0, arg1) {
-  const table = this.table;
-  const items = [arg0];
-  return table.getMany(items, arg1);
-};
-prototype["getRange"] = function getRange(arg0, arg1, arg2, arg3) {
-  const table = this.table;
-  const items = [arg0, arg1];
-  const items1 = [arg0, arg2];
-  return table.getRange(items, items1, arg3);
-};
-prototype["getKvEntries"] = function getKvEntries() {
-  const table = this.table;
-  return table.getKvEntries();
-};
-prototype["getMapEntries"] = function getMapEntries() {
-  const table = this.table;
-  return table.getMapEntries();
-};
-prototype["getIds"] = function getIds(arg0) {
-  const table = this.table;
-  const items = [arg0];
-  return table.getChildIds(items);
-};
-prototype["getGuildIds"] = function getGuildIds() {
-  const table = this.table;
-  return table.getChildIds([]);
-};
-prototype["getGuildId"] = function getGuildId(arg0) {
-  const table = this.table;
-  const items = [null, arg0];
-  return table.getParentId(items);
-};
-prototype["put"] = function put(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  let Replace = arg2;
-  if (arg2 === undefined) {
-    Replace = TableId.ConflictOptions.Replace;
-  }
-  return this.transaction((put) => put.put(closure_0, closure_1, Replace), "" + this.prefix + " put");
-};
-prototype["putAll"] = function putAll(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  let Replace = arg2;
-  if (arg2 === undefined) {
-    Replace = TableId.ConflictOptions.Replace;
-  }
-  return this.transaction((putAll) => putAll.putAll(closure_0, closure_1, Replace), "" + this.prefix + " putAll");
-};
-prototype["replaceAll"] = function replaceAll(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return this.transaction((str) => str.replaceAll(closure_0, closure_1), "" + this.prefix + " replaceAll");
-};
-prototype["delete"] = function delete(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return this.transaction((arg0) => arg0.delete(closure_0, closure_1), "" + this.prefix + " delete");
-};
-prototype["deleteGeneration"] = function deleteGeneration(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return this.transaction((deleteGeneration) => deleteGeneration.deleteGeneration(closure_0, closure_1), "" + this.prefix + " deleteGeneration");
-};
-prototype["transaction"] = function transaction(arg0, arg1) {
-  closure_0 = arg0;
-  const table = this.table;
-  return table.transaction((transaction) => {
-    if (typeof GuildEntityDaoTransaction === "function") {
-      const obj = Object.create(tmp2.prototype);
-      obj.transaction = transaction;
-      return tmp(obj);
+  withoutLogging() {
+    const originalPrefix = this.originalPrefix;
+    const tableId = this.table.tableId;
+    const database = this.table.database;
+    if (typeof GuildEntityDao === "function") {
+      const obj = Object.create(GuildEntityDao.prototype);
+      obj.originalPrefix = originalPrefix;
+      const items = [originalPrefix];
+      const self = this;
+      const self2 = this;
+      const table = new Table.Table(items, tableId, database, false);
+      obj.table = table;
+      return obj;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-  }, arg1);
-};
-prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
-  if (typeof GuildEntityDaoTransaction === "function") {
-    const obj = Object.create(GuildEntityDaoTransaction.prototype);
-    obj.transaction = tmp2;
-    return obj;
-  } else {
-    throw new TypeError("Trying to call a non-function");
   }
-};
-prototype["getManySyncUnsafe"] = function getManySyncUnsafe(arg0, arg1) {
-  const table = this.table;
-  const items = [arg0];
-  return table.getManySyncUnsafe(items, arg1);
-};
-prototype["getMapEntriesSyncUnsafe"] = function getMapEntriesSyncUnsafe() {
-  const table = this.table;
-  return table.getMapEntriesSyncUnsafe();
-};
-prototype["deleteSyncUnsafe"] = function deleteSyncUnsafe(arg0) {
-  const table = this.table;
-  const items = [arg0];
-  return table.deleteSyncUnsafe(items);
-};
-GuildEntityDao["cell"] = function cell(arg0, data, generation) {
-  const obj = { key: null, data, generation };
-  const items = [arg0, data.id];
-  obj.key = items;
-  return obj;
-};
-let GuildEntityDaoTransaction;
-class GuildEntityDaoTransaction {
-  constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj.transaction = global;
+  get(arg0, arg1) {
+    const table = this.table;
+    const items = [arg0, arg1];
+    return table.get(items);
+  }
+  getMany(arg0, arg1) {
+    const table = this.table;
+    const items = [arg0];
+    return table.getMany(items, arg1);
+  }
+  getRange(arg0, arg1, arg2, arg3) {
+    const table = this.table;
+    const items = [arg0, arg1];
+    const items1 = [arg0, arg2];
+    return table.getRange(items, items1, arg3);
+  }
+  getKvEntries() {
+    const table = this.table;
+    return table.getKvEntries();
+  }
+  getMapEntries() {
+    const table = this.table;
+    return table.getMapEntries();
+  }
+  getIds(arg0) {
+    const table = this.table;
+    const items = [arg0];
+    return table.getChildIds(items);
+  }
+  getGuildIds() {
+    const table = this.table;
+    return table.getChildIds([]);
+  }
+  getGuildId(arg0) {
+    const table = this.table;
+    const items = [null, arg0];
+    return table.getParentId(items);
+  }
+  put(arg0, arg1) {
+    let closure_0 = arg0;
+    let closure_1 = arg1;
+    let Replace = arg2;
+    if (arg2 === undefined) {
+      Replace = TableId.ConflictOptions.Replace;
+    }
+    return this.transaction((put) => put.put(closure_0, closure_1, Replace), "" + this.prefix + " put");
+  }
+  putAll(arg0, arg1) {
+    let closure_0 = arg0;
+    let closure_1 = arg1;
+    let Replace = arg2;
+    if (arg2 === undefined) {
+      Replace = TableId.ConflictOptions.Replace;
+    }
+    return this.transaction((putAll) => putAll.putAll(closure_0, closure_1, Replace), "" + this.prefix + " putAll");
+  }
+  replaceAll(arg0, arg1) {
+    let closure_0 = arg0;
+    let closure_1 = arg1;
+    return this.transaction((str) => str.replaceAll(closure_0, closure_1), "" + this.prefix + " replaceAll");
+  }
+  delete(arg0, arg1) {
+    let closure_0 = arg0;
+    let closure_1 = arg1;
+    return this.transaction((arg0) => arg0.delete(closure_0, closure_1), "" + this.prefix + " delete");
+  }
+  deleteGeneration(arg0, arg1) {
+    let closure_0 = arg0;
+    let closure_1 = arg1;
+    return this.transaction(
+      (deleteGeneration) => deleteGeneration.deleteGeneration(closure_0, closure_1),
+      "" + this.prefix + " deleteGeneration",
+    );
+  }
+  transaction(arg0, arg1) {
+    let closure_0 = arg0;
+    const table = this.table;
+    return table.transaction((transaction) => {
+      if (typeof GuildEntityDaoTransaction === "function") {
+        const obj = Object.create(tmp2.prototype);
+        obj.transaction = transaction;
+        return tmp(obj);
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }, arg1);
+  }
+  upgradeTransaction(arg0) {
+    if (typeof GuildEntityDaoTransaction === "function") {
+      const obj = Object.create(GuildEntityDaoTransaction.prototype);
+      obj.transaction = tmp2;
+      return obj;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  }
+  getManySyncUnsafe(arg0, arg1) {
+    const table = this.table;
+    const items = [arg0];
+    return table.getManySyncUnsafe(items, arg1);
+  }
+  getMapEntriesSyncUnsafe() {
+    const table = this.table;
+    return table.getMapEntriesSyncUnsafe();
+  }
+  deleteSyncUnsafe(arg0) {
+    const table = this.table;
+    const items = [arg0];
+    return table.deleteSyncUnsafe(items);
+  }
+  static cell(arg0, data, generation) {
+    let items;
+    const obj = { key: items, data, generation };
+    items = [arg0, data.id];
     return obj;
   }
 }
-const prototype2 = GuildEntityDaoTransaction.prototype;
-GuildEntityDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
-  const tableTransaction = new Table.TableTransaction(prefix, tableId, transaction);
-  if (typeof GuildEntityDaoTransaction === "function") {
-    const obj = Object.create(GuildEntityDaoTransaction.prototype);
-    obj.transaction = tableTransaction;
+Object.defineProperty(GuildEntityDao.prototype, "prefix", {
+  get: function prefix() {
+    return this.table.prefix;
+  },
+  set: undefined,
+});
+class GuildEntityDaoTransaction {
+  constructor(transaction) {
+    const obj = Object.create(new.target.prototype);
+    obj.transaction = transaction;
     return obj;
-  } else {
-    throw new TypeError("Trying to call a non-function");
   }
-};
-prototype2["put"] = function put(arg0, arg1) {
-  let Replace = arg2;
-  if (arg2 === undefined) {
-    Replace = TableId.ConflictOptions.Replace;
+  static fromDatabaseTransaction(prefix, tableId, transaction) {
+    const tableTransaction = new Table.TableTransaction(prefix, tableId, transaction);
+    if (typeof GuildEntityDaoTransaction === "function") {
+      const obj = Object.create(GuildEntityDaoTransaction.prototype);
+      obj.transaction = tableTransaction;
+      return obj;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
   }
-  return this.putWithGeneration(arg0, arg1, null, Replace);
-};
-prototype2["putWithGeneration"] = function putWithGeneration(arg0, arg1, arg2) {
-  let Replace = arg3;
-  if (arg3 === undefined) {
-    Replace = TableId.ConflictOptions.Replace;
+  put(arg0, arg1) {
+    let Replace = arg2;
+    if (arg2 === undefined) {
+      Replace = TableId.ConflictOptions.Replace;
+    }
+    return this.putWithGeneration(arg0, arg1, null, Replace);
   }
-  const transaction = this.transaction;
-  return transaction.put(GuildEntityDao.cell(arg0, arg1, arg2), Replace);
-};
-prototype2["putAll"] = function putAll(arg0, arr) {
-  _require = arg0;
-  let Replace = arg2;
-  if (arg2 === undefined) {
-    Replace = require("TableId").ConflictOptions.Replace;
+  putWithGeneration(arg0, arg1, arg2) {
+    let Replace = arg3;
+    if (arg3 === undefined) {
+      Replace = TableId.ConflictOptions.Replace;
+    }
+    const transaction = this.transaction;
+    return transaction.put(GuildEntityDao.cell(arg0, arg1, arg2), Replace);
   }
-  const transaction = this.transaction;
-  return transaction.putAll(arr.map((item) => GuildEntityDao.cell(closure_0, item, null)), Replace);
-};
-prototype2["replaceAll"] = function replaceAll(arg0, arg1) {
-  this.delete(arg0);
-  this.putAll(arg0, arg1);
-};
-prototype2["delete"] = function delete(arg0, arg1) {
-  const length = arguments.length;
-  const self = this;
-  if (0 === length) {
-    const transaction3 = self.transaction;
-    return transaction3.delete([]);
-  } else if (1 === length) {
-    const transaction2 = self.transaction;
-    const items = [arg0];
-    return transaction2.delete(items);
-  } else {
-    const transaction = self.transaction;
-    const items1 = [arg0, arg1];
-    return transaction.delete(items1);
+  putAll(arg0, arr) {
+    let closure_0;
+    _require = arg0;
+    let Replace = arg2;
+    if (arg2 === undefined) {
+      Replace = require("TableId").ConflictOptions.Replace;
+    }
+    const transaction = this.transaction;
+    return transaction.putAll(
+      arr.map((item) => GuildEntityDao.cell(closure_0, item, null)),
+      Replace,
+    );
   }
-};
-prototype2["deleteAllExcept"] = function deleteAllExcept(arg0) {
-  const transaction = this.transaction;
-  transaction.deleteAllExcept([], arg0);
-};
-prototype2["deleteGeneration"] = function deleteGeneration(arg0, arg1) {
-  const transaction = this.transaction;
-  return transaction.deleteGeneration([], arg0, arg1);
-};
+  replaceAll(arg0, arg1) {
+    this.delete(arg0);
+    this.putAll(arg0, arg1);
+  }
+  delete(arg0, arg1) {
+    const length = arguments.length;
+    const self = this;
+    if (0 === length) {
+      const transaction3 = self.transaction;
+      return transaction3.delete([]);
+    } else if (1 === length) {
+      const transaction2 = self.transaction;
+      const items = [arg0];
+      return transaction2.delete(items);
+    } else {
+      const transaction = self.transaction;
+      const items1 = [arg0, arg1];
+      return transaction.delete(items1);
+    }
+  }
+  deleteAllExcept(arg0) {
+    const transaction = this.transaction;
+    transaction.deleteAllExcept([], arg0);
+  }
+  deleteGeneration(arg0, arg1) {
+    const transaction = this.transaction;
+    return transaction.deleteGeneration([], arg0, arg1);
+  }
+}
+const prototype = GuildEntityDaoTransaction.prototype;
 const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/GuildEntityDao.tsx");
 
 export { GuildEntityDao };

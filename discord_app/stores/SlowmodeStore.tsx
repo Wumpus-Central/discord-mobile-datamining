@@ -1,47 +1,59 @@
 // discord_app/stores/SlowmodeStore.tsx
-import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import DurationsDefault from "../utils/Durations.tsx";
 import ChannelStore from "ChannelStore.tsx";
 import PermissionStore from "PermissionStore.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const require = fn;
+const require = globalThis.__r;
+let _require, dependencyMap;
+
 function setCooldown(channel, SendMessage, cooldownMs) {
+  let timeout;
   _require = channel;
   const slowmodeType = SendMessage;
-  if (null != dependencyMap[SendMessage][channel.id]) {
-    const timer = dependencyMap[SendMessage][channel.id].timer;
+  if (null != closure_6[SendMessage][channel.id]) {
+    const timer = closure_6[SendMessage][channel.id].timer;
     timer.stop();
-    const id = channel.id;
-    delete tmp2[tmp];
+    delete closure_6[SendMessage][channel.id];
   }
+  let obj = require("SlowmodeUtils");
+  const tmp3 = _require;
   if (!obj.canBypassSlowmode(channel)) {
     if (cooldownMs > 0) {
       const _Date = Date;
       const sum = cooldownMs + Date.now();
       dependencyMap = sum;
-      const obj2 = { rateLimitPerUser: channel.rateLimitPerUser, cooldownMs, cooldownEndTimestamp: sum, timer: null };
-      const timeout = new tmp6(2046).Timeout();
-      obj2.timer = timeout;
-      dependencyMap[SendMessage][channel.id] = obj2;
-      const timer2 = dependencyMap[SendMessage][channel.id].timer;
+      const id = channel.id;
+      const self = this;
+      const self2 = this;
+      const obj2 = {
+        rateLimitPerUser: channel.rateLimitPerUser,
+        cooldownMs,
+        cooldownEndTimestamp: sum,
+        timer: timeout,
+      };
+      const tmp8 = closure_6[SendMessage];
+      timeout = new tmp3(2046).Timeout();
+      tmp8[id] = obj2;
+      const timer2 = closure_6[SendMessage][channel.id].timer;
       timer2.start(
         1000,
         () => {
-          const obj = DispatcherDefault;
-          obj.dispatch({
+          const dispatch = DispatcherDefault.dispatch;
+          const obj = {
             type: "SLOWMODE_SET_COOLDOWN",
-            channelId: id.id,
+            channelId: channel.id,
             slowmodeType,
-            cooldownMs: Math.max(sum - Date.now(), 0),
-          });
+            cooldownMs: Math.max(dependencyMap - Date.now(), 0),
+          };
+          dispatch(obj);
         },
         true,
       );
     }
   }
-  obj = require("SlowmodeUtils");
-  tmp6 = _require;
 }
 function handleUploadCancel(channelId) {
   const channel = ChannelStore.getChannel(channelId.channelId);
@@ -51,42 +63,46 @@ function handleUploadCancel(channelId) {
   return null != channel;
 }
 const SlowmodeType = { SendMessage: 0, [0]: "SendMessage", CreateThread: 1, [1]: "CreateThread" };
-let dependencyMap = { [SlowmodeType.SendMessage]: {}, [SlowmodeType.CreateThread]: {} };
-const Store = initializeDefault.Store;
-class SlowmodeStore extends Store {}
+let closure_6 = { [SlowmodeType.SendMessage]: {}, [SlowmodeType.CreateThread]: {} };
+const Store = get_initializedDefault.Store;
+class SlowmodeStore extends Store {
+  initialize() {
+    this.waitFor(ChannelStore, PermissionStore);
+  }
+  getSlowmodeCooldownGuess(id, CreateThread) {
+    let SendMessage = CreateThread;
+    if (CreateThread == null) {
+      SendMessage = obj.SendMessage;
+    }
+    let num = 0;
+    if (null != closure_6[SendMessage][id]) {
+      num = tmp3.cooldownMs;
+    }
+    return num;
+  }
+  isChannelOnCooldown(channel, CreateThread) {
+    const tmp = this.getSlowmodeCooldownGuess(channel.id, CreateThread) > 0 && channel.rateLimitPerUser > 0;
+    return tmp;
+  }
+}
 const prototype = SlowmodeStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(ChannelStore, PermissionStore);
-};
-prototype["getSlowmodeCooldownGuess"] = function getSlowmodeCooldownGuess(id, CreateThread) {
-  let SendMessage = CreateThread;
-  if (CreateThread == null) {
-    SendMessage = obj.SendMessage;
-  }
-  let num = 0;
-  if (null != dependencyMap[SendMessage][id]) {
-    num = tmp3.cooldownMs;
-  }
-  return num;
-};
-prototype["isChannelOnCooldown"] = function isChannelOnCooldown(channel, CreateThread) {
-  return this.getSlowmodeCooldownGuess(channel.id, CreateThread) > 0 && channel.rateLimitPerUser > 0;
-};
 SlowmodeStore.displayName = "SlowmodeStore";
-const slowmodeStore = new SlowmodeStore(DispatcherDefault, {
-  SLOWMODE_RESET_COOLDOWN: function handleSlowmodeResetCooldown(channelId) {
-    const channel = ChannelStore.getChannel(channelId.channelId);
+let obj2 = {
+  SLOWMODE_RESET_COOLDOWN: function handleSlowmodeResetCooldown(slowmodeType) {
+    slowmodeType = slowmodeType.slowmodeType;
+    const channel = ChannelStore.getChannel(slowmodeType.channelId);
     if (null != channel) {
       let num2 = 0;
       if (0 !== channel.rateLimitPerUser) {
         num2 = channel.rateLimitPerUser * DurationsDefault.Millis.SECOND + 100;
       }
-      setCooldown(channel, channelId.slowmodeType, num2);
+      setCooldown(channel, slowmodeType, num2);
     }
     return false;
   },
   SLOWMODE_SET_COOLDOWN: function handleSlowmodeSetCooldown(cooldownMs) {
     cooldownMs = cooldownMs.cooldownMs;
+    const slowmodeType = cooldownMs.slowmodeType;
     const channel = ChannelStore.getChannel(cooldownMs.channelId);
     if (null == channel) {
       return false;
@@ -95,17 +111,18 @@ const slowmodeStore = new SlowmodeStore(DispatcherDefault, {
       if (0 !== cooldownMs) {
         num2 = cooldownMs + 100;
       }
-      setCooldown(channel, cooldownMs.slowmodeType, num2);
+      setCooldown(channel, slowmodeType, num2);
     }
   },
   UPLOAD_START: function handleUploadStart(channelId) {
+    const SendMessage = obj.SendMessage;
     const channel = ChannelStore.getChannel(channelId.channelId);
     if (null != channel) {
       let num2 = 0;
       if (0 !== channel.rateLimitPerUser) {
         num2 = channel.rateLimitPerUser * DurationsDefault.Millis.SECOND + 100;
       }
-      setCooldown(channel, obj.SendMessage, num2);
+      setCooldown(channel, SendMessage, num2);
     }
     return false;
   },
@@ -125,13 +142,14 @@ const slowmodeStore = new SlowmodeStore(DispatcherDefault, {
         if (null != tmp5) {
           if (tmp6.rateLimitPerUser !== rateLimitPerUser) {
             let num;
+            let _Math = Math;
             if (tmp6 != null) {
               num = tmp6.cooldownMs;
             }
             if (num == null) {
               num = 0;
             }
-            let tmp9Result = setCooldown(tmp3, item, Math.min(num, rateLimitPerUser * DurationsDefault.Millis.SECOND));
+            let tmp9Result = setCooldown(tmp3, item, min(num, rateLimitPerUser * DurationsDefault.Millis.SECOND));
           }
         }
         continue;
@@ -142,17 +160,17 @@ const slowmodeStore = new SlowmodeStore(DispatcherDefault, {
     const items = [,];
     ({ SendMessage: arr[0], CreateThread: arr[1] } = obj);
     let item = items.forEach((item) => {
-      closure_0 = item;
-      const keys = Object.keys(dependencyMap[item]);
+      let closure_0 = item;
+      const keys = Object.keys(closure_6[item]);
       item = keys.forEach((item) => {
-        const timer = dependencyMap[closure_0][item].timer;
+        const timer = closure_2_6[closure_0][item].timer;
         return timer.stop();
       });
-      dependencyMap[item] = {};
+      closure_6[item] = {};
     });
   },
-});
-const size = fn(2);
+};
+const slowmodeStore = new SlowmodeStore(DispatcherDefault, obj2);
 const result = size.fileFinishedImporting("stores/SlowmodeStore.tsx");
 
 export default slowmodeStore;

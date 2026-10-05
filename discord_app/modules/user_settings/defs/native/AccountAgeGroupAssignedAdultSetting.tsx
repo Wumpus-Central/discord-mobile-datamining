@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/AccountAgeGroupAssignedAdultSetting.tsx
 import Constants from "../../../../Constants.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl3 from "../../../../intl/index.native.tsx";
 import _modDef3045 from "../../../age_assurance/AgeAssurance.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import AgeGroupScreenRowProps from "AgeGroupScreenRowProps.tsx";
@@ -9,25 +9,29 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const route = SettingBuilders.createRoute({
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const UserSettingsSections = Constants.UserSettingsSections;
+const obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.piqs0o);
+    const intl = intl3.intl;
+    return intl.string(intl3.t.piqs0o);
   },
-  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
+  parent: MobileUserSettings.ACCOUNT,
   useTrailing() {
-    const intl = util.intl;
-    const intl2 = util.intl;
-    return "" + intl.string(util.t.XxRj7f) + " \u2022 " + intl2.string(_modDef3045.FTawSP);
+    const intl = intl3.intl;
+    const stringResult = intl.string(intl3.t.XxRj7f);
+    const intl2 = intl3.intl;
+    return "" + stringResult + " \u2022 " + intl2.string(_modDef3045.FTawSP);
   },
   usePredicate: AgeGroupScreenRowProps.useShowAssignedAdultAgeGroupRow,
   screen: {
-    route: Constants.UserSettingsSections.AGE_GROUP,
+    route: UserSettingsSections.AGE_GROUP,
     getComponent() {
       return require("SettingsAgeGroupScreen").default;
     },
   },
-});
+};
+const route = SettingBuilders.createRoute(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupAssignedAdultSetting.tsx");
 
 export default route;

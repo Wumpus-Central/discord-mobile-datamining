@@ -1,44 +1,50 @@
 // discord_app/modules/application_account_linking/AccountLinkStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AuthorizedAppsStore from "../oauth2/AuthorizedAppsStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const map = new Map();
 let set = new Set();
-const Store = initializeDefault.Store;
-class AccountLinkStore extends Store {}
+const Store = get_initializedDefault.Store;
+class AccountLinkStore extends Store {
+  initialize() {
+    this.waitFor(AuthorizedAppsStore);
+  }
+  getPendingAuthorizations() {
+    return map;
+  }
+  deletePendingAuthorization(arg0) {
+    map.delete(arg0);
+  }
+  getGloballyDisabledAuthorizationFlows() {
+    return set;
+  }
+}
 const prototype = AccountLinkStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(AuthorizedAppsStore);
-};
-prototype["getPendingAuthorizations"] = function getPendingAuthorizations() {
-  return map;
-};
-prototype["deletePendingAuthorization"] = function deletePendingAuthorization(arg0) {
-  map.delete(arg0);
-};
-prototype["getGloballyDisabledAuthorizationFlows"] = function getGloballyDisabledAuthorizationFlows() {
-  return set;
-};
 AccountLinkStore.displayName = "AccountLinkStore";
-const accountLinkStore = new AccountLinkStore(DispatcherDefault, {
+let obj = {
   ACCOUNT_LINK_AUTHORIZATION_STARTED: function handleAuthorizationStarted(applicationId) {
-    if (tmp) {
-      const obj = { applicationId: applicationId.applicationId, startedAt: null, accountLinkCallbacks: null };
-      const _Date = Date;
-      obj.startedAt = Date.now();
-      obj.accountLinkCallbacks = applicationId.accountLinkCallbacks;
-      const result = map.set(applicationId.applicationId, obj);
-    }
-    tmp =
+    const tmp =
       null == AuthorizedAppsStore.getNewestTokenForApplication(applicationId.applicationId) &&
       null != applicationId.accountLinkCallbacks;
+    if (tmp) {
+      const _Date = Date;
+      const obj = {
+        applicationId: applicationId.applicationId,
+        startedAt: Date.now(),
+        accountLinkCallbacks: applicationId.accountLinkCallbacks,
+      };
+      applicationId = applicationId.applicationId;
+      set = map.set;
+      const result = set(applicationId, obj);
+    }
   },
   ACCOUNT_LINK_DEVTOOLS_SET_GLOBALLY_DISBLED_FLOWS: function handleSetGloballyDisabledFlows(flows) {
     set = new Set(flows.flows);
   },
-});
-const size = fn(2);
+};
+const accountLinkStore = new AccountLinkStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("modules/application_account_linking/AccountLinkStore.tsx");
 
 export default accountLinkStore;

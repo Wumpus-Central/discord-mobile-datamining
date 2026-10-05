@@ -1,16 +1,24 @@
 // discord_app/modules/conversations/components/native/ConversationFocusView.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl3 from "../../../../intl/index.native.tsx";
 import ConversationsAnalytics2 from "../../ConversationsAnalytics.tsx";
 import ConversationNavigatorUtils from "ConversationNavigatorUtils.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
+let channelId;
+
+let closure_4;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = react_native);
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = {
     container: { flex: 1, backgroundColor },
@@ -22,41 +30,45 @@ let closure_9 = createStyles.createStyles((backgroundColor) => {
       backgroundColor,
     },
   };
+  ({
+    flex: 1,
+    paddingVertical: nativeDefault.space.PX_24,
+    alignItems: "center",
+    gap: nativeDefault.space.PX_32,
+    backgroundColor,
+  });
   return obj;
 });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationFocusView.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channelId) => {
-      const cResult = channelId(startMessageId[6]).c(31);
+      let fullyHydrated;
+      let jumpMessageId;
+      let messages;
+      let startMessageId;
+      const tmp = channelId;
+      let obj = channelId(startMessageId[6]);
+      const cResult = obj.c(31);
       channelId = channelId.channelId;
       const conversationId = channelId.conversationId;
       ({ jumpMessageId, messages, fullyHydrated, startMessageId } = channelId);
-      let obj = channelId(startMessageId[6]);
-      const tmp = channelId;
-      const token = channelId(startMessageId[7]).useToken(
-        conversationId(startMessageId[4]).colors.MOBILE_ACTIONSHEET_BACKGROUND,
-      );
+      const isFullFetchPending = channelId.isFullFetchPending;
+      const obj2 = channelId(startMessageId[7]);
+      const token = obj2.useToken(conversationId(startMessageId[4]).colors.MOBILE_ACTIONSHEET_BACKGROUND);
       const tmp5 = closure_9(token);
       if (cResult[0] === channelId) {
+        let tmp6;
         if (cResult[1] === conversationId) {
-          let tmp6 = cResult[2];
+          tmp6 = cResult[2];
         }
         if (cResult[3] === channelId) {
           if (cResult[4] === conversationId) {
+            let tmp9;
             class M {
               constructor() {
                 if (null != startMessageId) {
-                  tmp2 = closure_0;
-                  tmp3 = closure_2;
-                  obj = closure_0(closure_2[9]);
-                  tmp4 = channelId;
-                  tmp5 = conversationId;
-                  result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
+                  const obj = ConversationNavigatorUtils;
+                  const result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
                 }
-                return;
               }
             }
             if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
@@ -64,18 +76,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               class M {
                 constructor() {
                   if (null != startMessageId) {
-                    tmp2 = closure_0;
-                    tmp3 = closure_2;
-                    obj = closure_0(closure_2[9]);
-                    tmp4 = channelId;
-                    tmp5 = conversationId;
-                    result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
+                    const obj = ConversationNavigatorUtils;
+                    const result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
                   }
-                  return;
                 }
               }
               cResult[7] = tmp10;
-              let tmp9 = tmp10;
+              tmp9 = tmp10;
             } else {
               tmp9 = cResult[7];
             }
@@ -86,33 +93,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[8] === conversationId) {
               if (cResult[9] === tmp6) {
                 if (!fullyHydrated) {
-                  if (channelId.isFullFetchPending) {
+                  if (isFullFetchPending) {
+                    let tmp16;
                     const _Symbol = Symbol;
                     class M {
                       constructor() {
                         if (null != startMessageId) {
-                          tmp2 = closure_0;
-                          tmp3 = closure_2;
-                          obj = closure_0(closure_2[9]);
-                          tmp4 = channelId;
-                          tmp5 = conversationId;
-                          result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
+                          const obj = ConversationNavigatorUtils;
+                          const result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
                         }
-                        return;
                       }
                     }
                     if (cResult[13] !== tmp5.pendingContent) {
                       class M {
                         constructor() {
                           if (null != startMessageId) {
-                            tmp2 = closure_0;
-                            tmp3 = closure_2;
-                            obj = closure_0(closure_2[9]);
-                            tmp4 = channelId;
-                            tmp5 = conversationId;
-                            result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
+                            const obj = ConversationNavigatorUtils;
+                            const result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
                           }
-                          return;
                         }
                       }
                       tmp19[0] = tmp5.pendingContent;
@@ -120,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const tmp20 = closure_7(closure_6, tmp19);
                       cResult[13] = tmp5.pendingContent;
                       cResult[14] = tmp20;
-                      let tmp16 = tmp20;
+                      tmp16 = tmp20;
                     } else {
                       tmp16 = cResult[14];
                     }
@@ -130,14 +128,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 class M {
                   constructor() {
                     if (null != startMessageId) {
-                      tmp2 = closure_0;
-                      tmp3 = closure_2;
-                      obj = closure_0(closure_2[9]);
-                      tmp4 = channelId;
-                      tmp5 = conversationId;
-                      result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
+                      const obj = ConversationNavigatorUtils;
+                      const result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
                     }
-                    return;
                   }
                 }
               }
@@ -152,14 +145,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class M {
           constructor() {
             if (null != startMessageId) {
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              obj = closure_0(closure_2[9]);
-              tmp4 = channelId;
-              tmp5 = conversationId;
-              result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
+              const obj = ConversationNavigatorUtils;
+              const result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
             }
-            return;
           }
         }
         cResult[3] = channelId;
@@ -178,20 +166,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = conversationId;
       cResult[2] = fn;
       tmp6 = fn;
-      const obj2 = channelId(startMessageId[7]);
     }
   : (channelId) => {
+      let fullyHydrated;
+      let intl;
+      let intl2;
+      let isFullFetchPending;
+      let items3;
+      let messages;
+      let obj4;
+      let startMessageId;
+      let tmp12Result;
       channelId = channelId.channelId;
       const conversationId = channelId.conversationId;
       const jumpMessageId = channelId.jumpMessageId;
       ({ fullyHydrated, startMessageId } = channelId);
-      let ChatPreview = channelId;
-      let tmp = jumpMessageId;
+      let tmp = channelId;
       ({ messages, isFullFetchPending } = channelId);
-      const token = channelId(jumpMessageId[7]).useToken(
-        conversationId(jumpMessageId[4]).colors.MOBILE_ACTIONSHEET_BACKGROUND,
-      );
-      let container = closure_9(token);
+      let obj = channelId(jumpMessageId[7]);
+      const token = obj.useToken(conversationId(jumpMessageId[4]).colors.MOBILE_ACTIONSHEET_BACKGROUND);
+      const tmp4 = closure_9(token);
       const items = [channelId, conversationId];
       const onBeforeJumpToMessage = startMessageId.useCallback((arg0) => {
         if ("footer_cta" === arg0) {
@@ -204,40 +198,43 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [conversationId, jumpMessageId, startMessageId, onBeforeJumpToMessage];
       const callback1 = startMessageId.useCallback(() => {
         if (null != startMessageId) {
-          const result = ConversationNavigatorUtils.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
+          const obj = ConversationNavigatorUtils;
+          const result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
         }
       }, items1);
       const memo = startMessageId.useMemo(() => {
-        const obj = { jumpToChatText: null, jumpTargetId: null, onBeforeJumpToMessage: null, conversationId: null };
-        const intl = util.intl;
-        obj.jumpToChatText = intl.string(util.t["bz/ik0"]);
-        let tmp = jumpMessageId;
+        let intl;
+        let tmp;
+        const obj = {
+          jumpToChatText: intl.string(intl3.t["bz/ik0"]),
+          jumpTargetId: tmp,
+          onBeforeJumpToMessage,
+          conversationId,
+        };
+        intl = intl3.intl;
+        tmp = jumpMessageId;
         if (jumpMessageId == null) {
           tmp = startMessageId;
         }
-        obj.jumpTargetId = tmp;
-        obj.onBeforeJumpToMessage = onBeforeJumpToMessage;
-        obj.conversationId = conversationId;
         return obj;
       }, items2);
       if (!fullyHydrated) {
+        let tmp11;
         if (isFullFetchPending) {
-          const obj2 = { style: container.pendingContent, children: closure_7(onBeforeJumpToMessage, {}) };
-          return closure_7(closure_6, obj2);
+          const obj2 = { style: tmp4.pendingContent, children: closure_7(onBeforeJumpToMessage, {}) };
+          tmp11 = closure_7(closure_6, obj2);
         }
+        return tmp11;
       }
       if (fullyHydrated) {
         const obj3 = {
           horizontal: true,
           scrollEnabled: false,
           bounces: false,
-          contentContainerStyle: null,
-          children: null,
+          contentContainerStyle: tmp4.container,
+          children: closure_7(tmp(jumpMessageId[13]).ChatPreview, obj4),
         };
-        container = container.container;
-        obj3.contentContainerStyle = container;
-        ChatPreview = ChatPreview(tmp[13]).ChatPreview;
-        const obj4 = {
+        obj4 = {
           channelId,
           messages,
           jumpToChatProps: memo,
@@ -245,26 +242,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           initialScrollToTop: null == jumpMessageId,
           allowReactions: true,
         };
-        tmp = closure_7(ChatPreview, obj4);
-        obj3.children = tmp;
-        closure_7(closure_5, obj3);
+        tmp12Result = closure_7(closure_5, obj3);
       } else {
-        const obj5 = { style: container.pendingContent, children: null };
-        const obj6 = { variant: "text-md/normal", color: "text-muted", children: null };
-        let intl = ChatPreview(tmp[10]).intl;
-        obj6.children = intl.string(ChatPreview(tmp[10]).t.eylmYW);
-        const items3 = [closure_7(ChatPreview(tmp[11]).Text, obj6)];
-        let tmp11Result = null != startMessageId;
-        if (tmp11Result) {
-          const obj7 = { variant: "tertiary", text: null, onPress: null };
-          const intl2 = ChatPreview(tmp[10]).intl;
-          obj7.text = intl2.string(ChatPreview(tmp[10]).t.aBNTxl);
-          obj7.onPress = callback1;
-          tmp11Result = closure_7(ChatPreview(tmp[12]).Button, obj7);
+        const obj5 = { style: tmp4.pendingContent, children: items3 };
+        const obj6 = {
+          variant: "text-md/normal",
+          color: "text-muted",
+          children: intl.string(tmp(jumpMessageId[10]).t.eylmYW),
+        };
+        const Text = tmp(tmp2[11]).Text;
+        intl = tmp(tmp2[10]).intl;
+        items3 = [closure_7(Text, obj6)];
+        let tmp14Result = null != startMessageId;
+        if (tmp14Result) {
+          const obj7 = { variant: "tertiary", text: intl2.string(tmp(jumpMessageId[10]).t.aBNTxl), onPress: callback1 };
+          const Button = tmp(tmp2[12]).Button;
+          intl2 = tmp(tmp2[10]).intl;
+          tmp14Result = closure_7(Button, obj7);
         }
-        items3[1] = tmp11Result;
-        obj5.children = items3;
-        closure_8(closure_6, obj5);
+        items3[1] = tmp14Result;
+        tmp12Result = closure_8(closure_6, obj5);
       }
-      let obj = channelId(jumpMessageId[7]);
+      tmp11 = tmp12Result;
     };
+let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationFocusView.tsx");
+
+export default tmp4;

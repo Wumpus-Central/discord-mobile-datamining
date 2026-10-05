@@ -1,72 +1,78 @@
 // discord_app/modules/chat_input/native/ChatInputParser.tsx
 import _modDef12 from "../../../../_runtime/metro/00012__.js";
-import _mod17 from "../../../../_runtime/metro/00017__.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const processColor = _mod17.processColor;
+const processColor = react_native.processColor;
 const result = size.fileFinishedImporting("modules/chat_input/native/ChatInputParser.tsx");
 class ChatInputParser {
   constructor() {
-    merged = Object.assign({ rules: null });
+    const merged = Object.assign({ rules: null });
     merged[0] = {};
     return merged;
   }
-}
-const prototype = ChatInputParser.prototype;
-prototype["addRule"] = function addRule(ruleId) {
-  this.rules[ruleId.ruleId] = ruleId;
-};
-prototype["removeRule"] = function removeRule(arg0) {
-  delete tmp2[tmp];
-};
-prototype["parse"] = function parse(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return _modDef12.valuesIn(this.rules).reduce(
-    (arr, matchFunction) =>
-      arr.concat(
-        matchFunction.matchFunction(matchFunction, closure_1).map((item) => {
-          if (typeof matchFunction.deleteNodeOnBackspace === "function") {
-            let deleteNodeOnBackspace = matchFunction.deleteNodeOnBackspace(item);
-          } else {
-            deleteNodeOnBackspace = matchFunction.deleteNodeOnBackspace;
-          }
-          if (typeof matchFunction.editDisabled === "function") {
-            let editDisabled = matchFunction.editDisabled(item);
-          } else {
-            editDisabled = matchFunction.editDisabled;
-          }
-          const obj2 = { type: matchFunction.type, style: null, deleteNodeOnBackspace: null, editDisabled: null };
-          const style = matchFunction.style;
+  addRule(ruleId) {
+    this.rules[ruleId.ruleId] = ruleId;
+  }
+  removeRule(arg0) {
+    delete this.rules[arg0];
+  }
+  parse(arg0, arg1) {
+    let closure_0 = arg0;
+    let closure_1 = arg1;
+    const obj = _modDef12;
+    const valuesInResult = obj.valuesIn(this.rules);
+    return valuesInResult.reduce((arr, matchFunction) => {
+      closure_0 = matchFunction;
+      const matchFunctionResult = matchFunction.matchFunction(closure_0, closure_1);
+      return arr.concat(
+        matchFunctionResult.map((item) => {
+          let deleteNodeOnBackspace;
+          let editDisabled;
           let style1;
+          if (typeof closure_0.deleteNodeOnBackspace === "function") {
+            deleteNodeOnBackspace = closure_0.deleteNodeOnBackspace(item);
+          } else {
+            deleteNodeOnBackspace = closure_0.deleteNodeOnBackspace;
+          }
+          if (typeof closure_0.editDisabled === "function") {
+            editDisabled = closure_0.editDisabled(item);
+          } else {
+            editDisabled = closure_0.editDisabled;
+          }
+          const style = closure_0.style;
+          const obj2 = { type: closure_0.type, style: style1, deleteNodeOnBackspace, editDisabled };
+          style1 = undefined;
           if (style != null) {
             style1 = style(item);
           }
-          obj2.style = style1;
-          obj2.deleteNodeOnBackspace = deleteNodeOnBackspace;
-          obj2.editDisabled = editDisabled;
           const merged = Object.assign(item);
           return obj2;
         }),
-      ),
-    [],
-  );
-};
+      );
+    }, []);
+  }
+}
+const prototype = ChatInputParser.prototype;
 
 export default ChatInputParser;
 export const convertToNativeStyle = (autocomplete) => {
+  let backgroundColor;
+  let borderRadius;
   ({ backgroundColor, borderRadius } = autocomplete);
+  const color = autocomplete.color;
   const merged = Object.assign(autocomplete, Object.assign({ backgroundColor: 0, color: 0, borderRadius: 0 }));
   let tmp2 = null;
   if (null != backgroundColor) {
     tmp2 = null;
     if (null != borderRadius) {
+      tmp2 = { backgroundColor: processColor(backgroundColor), cornerRadius: borderRadius };
       const obj = { backgroundColor: processColor(backgroundColor), cornerRadius: borderRadius };
-      tmp2 = obj;
     }
   }
+  const obj2 = { color: processColor(color), backgroundStyle: tmp2 };
   const merged1 = Object.assign(merged);
-  return { color: processColor(autocomplete.color), backgroundStyle: tmp2 };
+  return obj2;
 };
 export const ChatInputParseResultDataType = {
   COMMAND_OPTION: 0,

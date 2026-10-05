@@ -4,17 +4,24 @@ import FavoritesHooks from "../FavoritesHooks.tsx";
 import FavoritesGuildIntroPopover from "../onboarding/FavoritesGuildIntroPopover.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import FavoriteStore from "../FavoriteStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
 function computeIsFavoritesGuildVisible(FavoriteStore, SelectedGuildStore, isExperimentEnabled) {
+  let hasAccess;
+  let isFreemium;
+  let isIntroPopoverShown;
+  let keepWhileViewing;
   ({ isFreemium, hasAccess, isIntroPopoverShown, keepWhileViewing } = isExperimentEnabled);
   isExperimentEnabled = isExperimentEnabled.isExperimentEnabled;
   if (isExperimentEnabled) {
     let tmp2 = !keepWhileViewing;
     if (keepWhileViewing) {
-      tmp2 = !FavoritesUtils.isFavoritesGuildId(SelectedGuildStore.getGuildId());
+      const obj = FavoritesUtils;
+      tmp2 = !obj.isFavoritesGuildId(SelectedGuildStore.getGuildId());
     }
     let tmp6 = !tmp2;
     if (tmp2) {
@@ -23,12 +30,13 @@ function computeIsFavoritesGuildVisible(FavoriteStore, SelectedGuildStore, isExp
         tmp8 = false === FavoriteStore.favoriteGuildVisibleSetting;
       }
       let tmp9 = !tmp8;
-      if (!tmp8) {
+      if (tmp9) {
         let favoriteGuildEnabled = FavoriteStore.favoriteGuildEnabled;
         if (!favoriteGuildEnabled) {
           if (isFreemium) {
             if (!isIntroPopoverShown) {
-              isIntroPopoverShown = FavoritesGuildIntroPopover.hasOfferedFavoritesGuildOnboarding();
+              const obj2 = FavoritesGuildIntroPopover;
+              isIntroPopoverShown = obj2.hasOfferedFavoritesGuildOnboarding();
             }
             isFreemium = isIntroPopoverShown;
           }
@@ -42,25 +50,25 @@ function computeIsFavoritesGuildVisible(FavoriteStore, SelectedGuildStore, isExp
   }
   return isExperimentEnabled;
 }
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/favorites/hooks/useIsFavoritesGuildVisible.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = require("c").c(8);
+      let first;
+      let isExperimentEnabled;
+      let keepWhileViewing;
+      let obj = require("react");
+      const cResult = obj.c(8);
       _require = tmp4;
-      const obj = require("c");
-      const favoritesAccess = require("FavoritesHooks").useFavoritesAccess();
+      const tmpResult = require("FavoritesHooks");
+      const favoritesAccess = tmpResult.useFavoritesAccess();
       isExperimentEnabled = favoritesAccess.isExperimentEnabled;
       const isFreemium = favoritesAccess.isFreemium;
       const hasAccess = favoritesAccess.hasAccess;
-      const tmpResult = require("FavoritesHooks");
-      const isFavoritesIntroPopoverShown = require("FavoritesGuildIntroPopover").useIsFavoritesIntroPopoverShown();
+      const tmpResult3 = require("FavoritesGuildIntroPopover");
+      const isFavoritesIntroPopoverShown = tmpResult3.useIsFavoritesIntroPopoverShown();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [hasAccess, isFreemium];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -68,23 +76,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] === isExperimentEnabled) {
           if (cResult[3] === isFreemium) {
             if (cResult[4] === isFavoritesIntroPopoverShown) {
-              if (cResult[5] === tmp4) {
-                let tmp10 = cResult[6];
-                let tmp11 = cResult[7];
+              let tmp10;
+              let tmp11;
+              if (cResult[5] === (undefined === arg0 || arg0)) {
+                tmp10 = cResult[6];
+                tmp11 = cResult[7];
               }
-              return tmp(tmp2[7]).useStateFromStores(first, tmp10, tmp11);
+              const tmpResult4 = require("get initialized");
+              return tmpResult4.useStateFromStores(first, tmp10, tmp11);
             }
           }
         }
       }
       const fn = function u() {
-        return computeIsFavoritesGuildVisible(FavoriteStore, SelectedGuildStore, {
+        const obj = {
           isExperimentEnabled,
           isFreemium,
           hasAccess,
           isIntroPopoverShown: isFavoritesIntroPopoverShown,
           keepWhileViewing,
-        });
+        };
+        return computeIsFavoritesGuildVisible(FavoriteStore, SelectedGuildStore, obj);
       };
       const items1 = [
         isExperimentEnabled,
@@ -109,37 +121,45 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flag = true;
       }
       let isExperimentEnabled;
-      const favoritesAccess = flag(isExperimentEnabled[4]).useFavoritesAccess();
+      let obj = flag(isExperimentEnabled[4]);
+      const favoritesAccess = obj.useFavoritesAccess();
       isExperimentEnabled = favoritesAccess.isExperimentEnabled;
       const isFreemium = favoritesAccess.isFreemium;
       const hasAccess = favoritesAccess.hasAccess;
-      const obj = flag(isExperimentEnabled[4]);
-      const isFavoritesIntroPopoverShown = flag(isExperimentEnabled[3]).useIsFavoritesIntroPopoverShown();
       const obj2 = flag(isExperimentEnabled[3]);
+      const isFavoritesIntroPopoverShown = obj2.useIsFavoritesIntroPopoverShown();
       const items = [hasAccess, isFreemium];
       const items1 = [isExperimentEnabled, isFreemium, hasAccess, isFavoritesIntroPopoverShown, flag];
-      return flag(isExperimentEnabled[7]).useStateFromStores(
+      const obj3 = flag(isExperimentEnabled[7]);
+      return obj3.useStateFromStores(
         items,
-        () =>
-          computeIsFavoritesGuildVisible(FavoriteStore, SelectedGuildStore, {
+        () => {
+          const obj = {
             isExperimentEnabled,
             isFreemium,
             hasAccess,
             isIntroPopoverShown: isFavoritesIntroPopoverShown,
             keepWhileViewing: flag,
-          }),
+          };
+          return computeIsFavoritesGuildVisible(FavoriteStore, SelectedGuildStore, obj);
+        },
         items1,
       );
     };
+const result = size.fileFinishedImporting("modules/favorites/hooks/useIsFavoritesGuildVisible.tsx");
+
+export default tmp2;
 export const isFavoritesGuildVisible = function isFavoritesGuildVisible() {
-  const favoritesAccess = FavoritesHooks.getFavoritesAccess();
+  let obj3;
+  const obj = FavoritesHooks;
+  const favoritesAccess = obj.getFavoritesAccess();
   const obj2 = {
     isExperimentEnabled: favoritesAccess.isExperimentEnabled,
     isFreemium: favoritesAccess.isFreemium,
     hasAccess: favoritesAccess.hasAccess,
-    isIntroPopoverShown: null,
+    isIntroPopoverShown: obj3.isFavoritesIntroPopoverShown(),
     keepWhileViewing: true,
   };
-  obj2.isIntroPopoverShown = FavoritesGuildIntroPopover.isFavoritesIntroPopoverShown();
+  obj3 = FavoritesGuildIntroPopover;
   return computeIsFavoritesGuildVisible(FavoriteStore, SelectedGuildStore, obj2);
 };

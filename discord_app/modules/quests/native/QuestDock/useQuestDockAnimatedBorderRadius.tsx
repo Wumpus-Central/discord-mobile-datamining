@@ -1,22 +1,21 @@
 // discord_app/modules/quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
 const __initData = {
   code: "function useQuestDockAnimatedBorderRadiusTsx1(){const{interpolate,questDockOffset,minBorder,maxBorder,Extrapolation}=this.__closure;return interpolate(questDockOffset.get(),[0,50],[minBorder,maxBorder],Extrapolation.CLAMP);}",
 };
 const __initData2 = {
   code: "function useQuestDockAnimatedBorderRadiusTsx2(){const{interpolate,questDockOffset,minBorder,maxBorder,Extrapolation}=this.__closure;return interpolate(questDockOffset.get(),[0,50],[minBorder,maxBorder],Extrapolation.CLAMP);}",
 };
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (maxBorder, arg1) => {
+      let questDockOffset;
       _require = maxBorder;
       let num = 0;
       if (undefined !== arg1) {
@@ -26,9 +25,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         require("QuestDockExternalCoordinationContext").QuestDockExternalCoordinationContext,
       ).questDockOffset;
       const fn = function u() {
-        value = questDockOffset.get();
-        const items = [num, closure_0];
-        return ReanimatedRexport.interpolate(value, [0, 50], items, ReanimatedRexport.Extrapolation.CLAMP);
+        const interpolate = ReanimatedRexport.interpolate;
+        ReanimatedRexport;
+        const value = questDockOffset.get();
+        const items = [num, maxBorder];
+        return interpolate(value, [0, 50], items, ReanimatedRexport.Extrapolation.CLAMP);
       };
       const obj = require("ReanimatedRexport");
       fn.__closure = {
@@ -40,6 +41,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       fn.__workletHash = 17005846780112;
       fn.__initData = __initData;
+      ({
+        interpolate: require("ReanimatedRexport").interpolate,
+        questDockOffset,
+        minBorder: num,
+        maxBorder,
+        Extrapolation: require("ReanimatedRexport").Extrapolation,
+      });
       return obj.useDerivedValue(fn);
     }
   : (maxBorder) => {
@@ -53,9 +61,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         require("QuestDockExternalCoordinationContext").QuestDockExternalCoordinationContext,
       ).questDockOffset;
       const fn = function u() {
-        value = questDockOffset.get();
-        const items = [num, closure_0];
-        return ReanimatedRexport.interpolate(value, [0, 50], items, ReanimatedRexport.Extrapolation.CLAMP);
+        const interpolate = ReanimatedRexport.interpolate;
+        ReanimatedRexport;
+        const value = questDockOffset.get();
+        const items = [num, maxBorder];
+        return interpolate(value, [0, 50], items, ReanimatedRexport.Extrapolation.CLAMP);
       };
       const obj = require("ReanimatedRexport");
       fn.__closure = {
@@ -67,5 +77,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       fn.__workletHash = 13043331962515;
       fn.__initData = __initData2;
+      ({
+        interpolate: require("ReanimatedRexport").interpolate,
+        questDockOffset,
+        minBorder: num,
+        maxBorder,
+        Extrapolation: require("ReanimatedRexport").Extrapolation,
+      });
       return obj.useDerivedValue(fn);
     };
+const result = size.fileFinishedImporting("modules/quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx");
+
+export default tmp2;

@@ -1,16 +1,18 @@
 // discord_app/modules/parent_tools/hooks/useUserIsConsideredAdult.tsx
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../../_runtime/00576_react.js";
 import UserStore from "../../../stores/UserStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/parent_tools/hooks/useUserIsConsideredAdult.tsx");
+let currentUser;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let tmp4;
+      let tmp5;
+      const obj = react;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         const fn = function s() {
@@ -28,11 +30,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      return initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStores(tmp4, tmp5);
     }
   : () => {
       const items = [UserStore];
-      return initialize.useStateFromStores(items, () => {
+      const obj = get_initialized;
+      return obj.useStateFromStores(items, () => {
         currentUser = currentUser.getCurrentUser();
         let nsfwAllowed;
         if (currentUser != null) {
@@ -41,3 +45,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return nsfwAllowed;
       });
     };
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useUserIsConsideredAdult.tsx");
+
+export default tmp2;

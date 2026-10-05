@@ -1,5 +1,7 @@
 // discord_app/modules/connectivity/native/components/GlobalStatusContent.tsx
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../../Constants.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import ChannelCallModalDefault from "../../../video_calls/native/components/ChannelCallModal.tsx";
@@ -7,99 +9,120 @@ import StatusBarDefault from "../../../status_bar/native/components/StatusBar.an
 import useCanSpeakInChannelDefault from "../../../stage_channels/useCanSpeakInChannel.tsx";
 import useVoiceStateForRemoteSessionDefault from "../../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
 import useIsInvitedToSpeakDefault from "../../../stage_channels/useIsInvitedToSpeak.tsx";
+import ConnectivityConstants from "../ConnectivityConstants.tsx";
 import GlobalStageChannelStatusDefault from "../../../stage_channels/native/components/GlobalStageChannelStatus.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import RTCConnectionStore from "../../../../stores/RTCConnectionStore.tsx";
 import SessionsStore from "../../../../stores/SessionsStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(9608).RTC_PANEL_HEIGHT;
-const RTCConnectionStates = fn(1085).RTCConnectionStates;
-const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { bgNeutral: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, bg: null, container: null };
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-obj2.bg = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
-obj2.container = { paddingHorizontal: 16, alignItems: "center", justifyContent: "center" };
-let closure_12 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj4 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/connectivity/native/components/GlobalStatusContent.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let c10;
+let obj2;
+let obj3;
+let unpackModuleId;
+const View = react_native.View;
+const RTC_PANEL_HEIGHT = ConnectivityConstants.RTC_PANEL_HEIGHT;
+const RTCConnectionStates = Constants.RTCConnectionStates;
+({ jsx: c10, jsxs: unpackModuleId } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
+  bgNeutral: obj2,
+  bg: obj3,
+  container: { paddingHorizontal: 16, alignItems: "center", justifyContent: "center" },
+};
+obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+createStyles = createStyles.createStyles;
+obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
+let closure_12 = createStyles(obj);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = require("c").c(33);
+      let channel;
+      let closure_0;
+      let first;
+      let guild;
+      let items2;
+      let remotePlatform;
+      let rtcConnectionState;
+      let tmp12;
+      let tmp13;
+      let tmp15;
+      let tmp24;
+      let obj = require("react");
+      const cResult = obj.c(33);
       const tmp4 = closure_12();
       const tmp6 = useVoiceStateForRemoteSessionDefault();
       _require = tmp6;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [RTCConnectionStore, GuildStore, ChannelStore, SessionsStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== tmp6) {
         const fn = function f() {
+          let RTC_CONNECTED;
+          let guildId1;
           let channelId;
+          const getChannel = ChannelStore.getChannel;
           if (closure_0 != null) {
             channelId = closure_0.channelId;
           }
           if (channelId == null) {
             channelId = RTCConnectionStore.getChannelId();
           }
-          const channel = ChannelStore.getChannel(channelId);
+          const channel = getChannel(channelId);
           if (null != closure_0) {
             let guildId;
             if (channel != null) {
               guildId = channel.getGuildId();
             }
-            let guildId1 = guildId;
+            guildId1 = guildId;
           } else {
             guildId1 = RTCConnectionStore.getGuildId();
           }
           let str;
-          guild = GuildStore.getGuild(guildId1);
+          const guild = GuildStore.getGuild(guildId1);
+          const getSessionById = SessionsStore.getSessionById;
           if (closure_0 != null) {
             str = closure_0.sessionId;
           }
           if (str == null) {
             str = "";
           }
-          const sessionById = SessionsStore.getSessionById(str);
+          const sessionById = getSessionById(str);
           let os;
           if (sessionById != null) {
             os = sessionById.clientInfo.os;
           }
-          const obj = { guild, channel, rtcConnectionState: null, remotePlatform: null };
+          const obj = { guild, channel, rtcConnectionState: RTC_CONNECTED, remotePlatform: os };
           if (null != closure_0) {
-            let RTC_CONNECTED = RTCConnectionStates.RTC_CONNECTED;
+            RTC_CONNECTED = RTCConnectionStates.RTC_CONNECTED;
           } else {
             RTC_CONNECTED = RTCConnectionStore.getState();
           }
-          obj.rtcConnectionState = RTC_CONNECTED;
-          obj.remotePlatform = os;
           return obj;
         };
         const items1 = [tmp6];
         cResult[1] = tmp6;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp13 = items1;
-        let tmp12 = fn;
+        tmp13 = items1;
+        tmp12 = fn;
       } else {
         tmp12 = cResult[2];
         tmp13 = cResult[3];
       }
-      let obj = require("c");
-      const stateFromStoresObject = require("initialize").useStateFromStoresObject(first, tmp12, tmp13);
+      const tmpResult = require("get initialized");
+      const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, tmp12, tmp13);
       ({ guild, channel, rtcConnectionState, remotePlatform } = stateFromStoresObject);
       if (cResult[4] !== channel) {
         let isGuildStageVoiceResult;
@@ -108,25 +131,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[4] = channel;
         cResult[5] = isGuildStageVoiceResult;
-        let tmp15 = isGuildStageVoiceResult;
+        tmp15 = isGuildStageVoiceResult;
       } else {
         tmp15 = cResult[5];
       }
       let id;
-      const tmpResult = require("initialize");
+      const tmp5Result = useCanSpeakInChannelDefault;
       if (channel != null) {
         id = channel.id;
       }
-      let tmp5ResultResult = useCanSpeakInChannelDefault(id);
+      let tmp5ResultResult = tmp5Result(id);
       let tmp22 = null != channel;
-      const tmp5Result = useCanSpeakInChannelDefault;
+      const tmp21 = useIsInvitedToSpeakDefault();
       const tmp23 = useThemeDefault();
       if (cResult[6] !== tmp23) {
-        const isThemeDarkResult = tmp(4729).isThemeDark(tmp23);
+        const tmpResult5 = require("shared");
+        const isThemeDarkResult = tmpResult5.isThemeDark(tmp23);
         cResult[6] = tmp23;
         cResult[7] = isThemeDarkResult;
-        let tmp24 = isThemeDarkResult;
-        const tmpResult5 = tmp(4729);
+        tmp24 = isThemeDarkResult;
       } else {
         tmp24 = cResult[7];
       }
@@ -135,8 +158,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[10] === tmp22) {
             if (cResult[11] === tmp24) {
               if (cResult[12] === remotePlatform) {
+                let tmp26;
+                let tmp28;
                 if (cResult[13] === rtcConnectionState) {
-                  let tmp26 = cResult[14];
+                  tmp26 = cResult[14];
                 }
                 if (tmp15) {
                   if (!tmp5ResultResult) {
@@ -144,20 +169,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   tmp22 = tmp5ResultResult;
                 }
-                const isScreenLandscape = tmp(5912).useIsScreenLandscape();
+                const tmpResult6 = require("useIsScreenLandscape");
+                const isScreenLandscape = tmpResult6.useIsScreenLandscape();
                 if (cResult[15] !== isScreenLandscape) {
                   let isModalOpenResult = isScreenLandscape;
-                  if (isScreenLandscape) {
-                    isModalOpenResult = tmp(4736).isModalOpen(ChannelCallModalDefault);
-                    const tmpResult7 = tmp(4736);
+                  if (isModalOpenResult) {
+                    const tmpResult7 = require("NavigationRouteUtils");
+                    isModalOpenResult = tmpResult7.isModalOpen(ChannelCallModalDefault);
                   }
                   if (isModalOpenResult) {
-                    isModalOpenResult = tmp(1369).isAndroid();
-                    const tmpResult8 = tmp(1369);
+                    const tmpResult8 = require("PlatformUtils");
+                    isModalOpenResult = tmpResult8.isAndroid();
                   }
                   cResult[15] = isScreenLandscape;
                   cResult[16] = isModalOpenResult;
-                  let tmp28 = isModalOpenResult;
+                  tmp28 = isModalOpenResult;
                 } else {
                   tmp28 = cResult[16];
                 }
@@ -168,40 +194,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const tmp30 = tmp22 ? tmp4.bg : tmp4.bgNeutral;
                 const sum = RTC_PANEL_HEIGHT + num11;
                 if (cResult[17] === sum) {
+                  let tmp33;
                   if (cResult[18] === num11) {
-                    let tmp33 = cResult[19];
+                    tmp33 = cResult[19];
                   }
                   if (cResult[20] === tmp4.container) {
                     if (cResult[21] === tmp33) {
+                      let tmp34;
+                      let tmp35;
                       if (cResult[22] === tmp30) {
-                        let tmp34 = cResult[23];
+                        tmp34 = cResult[23];
                       }
                       if (cResult[24] !== tmp28) {
-                        let tmp36 = tmp28;
-                        if (tmp28) {
-                          tmp36 = closure_10(StatusBarDefault, { hidden: true });
-                        }
+                        const tmp36 = tmp28 && closure_10(StatusBarDefault, { hidden: true });
                         cResult[24] = tmp28;
                         cResult[25] = tmp36;
-                        let tmp35 = tmp36;
+                        tmp35 = tmp36;
                       } else {
                         tmp35 = cResult[25];
                       }
                       if (cResult[26] === tmp15) {
+                        let tmp38;
                         if (cResult[27] === tmp26) {
-                          let tmp38 = cResult[28];
+                          tmp38 = cResult[28];
                         }
                         if (cResult[29] === tmp34) {
                           if (cResult[30] === tmp35) {
+                            let tmp45;
                             if (cResult[31] === tmp38) {
-                              let tmp45 = cResult[32];
+                              tmp45 = cResult[32];
                             }
                             return tmp45;
                           }
                         }
-                        const obj2 = { style: tmp34, children: null };
-                        const items2 = [tmp35, tmp38];
-                        obj2.children = items2;
+                        const obj2 = { style: tmp34, children: items2 };
+                        items2 = [tmp35, tmp38];
                         const tmp48 = closure_11(View, obj2);
                         cResult[29] = tmp34;
                         cResult[30] = tmp35;
@@ -212,9 +239,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       let tmp39 = null;
                       if (tmp15) {
                         const obj3 = {};
-                        const merged = Object.assign(tmp26);
-                        tmp39 = closure_10(GlobalStageChannelStatusDefault, obj3);
                         const tmp5Result2 = GlobalStageChannelStatusDefault;
+                        const merged = Object.assign(tmp26);
+                        tmp39 = closure_10(tmp5Result2, obj3);
                       }
                       cResult[26] = tmp15;
                       cResult[27] = tmp26;
@@ -234,7 +261,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[18] = num11;
                 cResult[19] = obj4;
                 tmp33 = obj4;
-                const tmpResult6 = tmp(5912);
               }
             }
           }
@@ -256,55 +282,63 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[13] = rtcConnectionState;
       cResult[14] = obj5;
       tmp26 = obj5;
-      tmp21 = useIsInvitedToSpeakDefault();
     }
   : () => {
+      let closure_0;
+      let guild;
+      let items2;
+      let items3;
+      let remotePlatform;
+      let rtcConnectionState;
       const tmp = closure_12();
       const tmp4 = useVoiceStateForRemoteSessionDefault();
       _require = tmp4;
+      let obj = require("get initialized");
       const items = [RTCConnectionStore, GuildStore, ChannelStore, SessionsStore];
       const items1 = [tmp4];
-      const stateFromStoresObject = require("initialize").useStateFromStoresObject(
+      const stateFromStoresObject = obj.useStateFromStoresObject(
         items,
         () => {
+          let RTC_CONNECTED;
+          let guildId1;
           let channelId;
+          const getChannel = ChannelStore.getChannel;
           if (closure_0 != null) {
             channelId = closure_0.channelId;
           }
           if (channelId == null) {
             channelId = RTCConnectionStore.getChannelId();
           }
-          const channel = ChannelStore.getChannel(channelId);
+          const channel = getChannel(channelId);
           if (null != closure_0) {
             let guildId;
             if (channel != null) {
               guildId = channel.getGuildId();
             }
-            let guildId1 = guildId;
+            guildId1 = guildId;
           } else {
             guildId1 = RTCConnectionStore.getGuildId();
           }
           let str;
-          guild = GuildStore.getGuild(guildId1);
+          const guild = GuildStore.getGuild(guildId1);
+          const getSessionById = SessionsStore.getSessionById;
           if (closure_0 != null) {
             str = closure_0.sessionId;
           }
           if (str == null) {
             str = "";
           }
-          const sessionById = SessionsStore.getSessionById(str);
+          const sessionById = getSessionById(str);
           let os;
           if (sessionById != null) {
             os = sessionById.clientInfo.os;
           }
-          const obj = { guild, channel, rtcConnectionState: null, remotePlatform: null };
+          const obj = { guild, channel, rtcConnectionState: RTC_CONNECTED, remotePlatform: os };
           if (null != closure_0) {
-            let RTC_CONNECTED = RTCConnectionStates.RTC_CONNECTED;
+            RTC_CONNECTED = RTCConnectionStates.RTC_CONNECTED;
           } else {
             RTC_CONNECTED = RTCConnectionStore.getState();
           }
-          obj.rtcConnectionState = RTC_CONNECTED;
-          obj.remotePlatform = os;
           return obj;
         },
         items1,
@@ -316,52 +350,49 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         isGuildStageVoiceResult = channel.isGuildStageVoice();
       }
       let id;
-      let obj = require("initialize");
+      const tmp2Result = useCanSpeakInChannelDefault;
       if (channel != null) {
         id = channel.id;
       }
-      let tmp2ResultResult = useCanSpeakInChannelDefault(id);
-      const tmp2Result = useCanSpeakInChannelDefault;
-      const tmp11 = useIsInvitedToSpeakDefault();
+      let tmp2ResultResult = tmp2Result(id);
       let tmp14 = tmp12;
+      const tmp11 = useIsInvitedToSpeakDefault();
       const tmp5Result = require("shared");
+      const isThemeDarkResult = tmp5Result.isThemeDark(useThemeDefault());
       if (isGuildStageVoiceResult) {
         if (!tmp2ResultResult) {
           tmp2ResultResult = tmp11;
         }
         tmp14 = tmp2ResultResult;
       }
-      const isThemeDarkResult = require("shared").isThemeDark(useThemeDefault());
-      let isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
+      const tmp5Result4 = require("useIsScreenLandscape");
+      let isScreenLandscape = tmp5Result4.useIsScreenLandscape();
       if (isScreenLandscape) {
-        isScreenLandscape = tmp5(4736).isModalOpen(ChannelCallModalDefault);
-        const tmp5Result5 = tmp5(4736);
+        const tmp5Result5 = require("NavigationRouteUtils");
+        isScreenLandscape = tmp5Result5.isModalOpen(ChannelCallModalDefault);
       }
       if (isScreenLandscape) {
-        isScreenLandscape = tmp5(1369).isAndroid();
-        const tmp5Result6 = tmp5(1369);
+        const tmp5Result6 = require("PlatformUtils");
+        isScreenLandscape = tmp5Result6.isAndroid();
       }
       let num = 0;
       if (!isScreenLandscape) {
         num = useSafeAreaInsetsDefault().top;
       }
-      const obj2 = { style: null, children: null };
-      const items2 = [
-        tmp14 ? tmp.bg : tmp.bgNeutral,
-        tmp.container,
-        { minHeight: RTC_PANEL_HEIGHT + num, paddingTop: num },
-      ];
-      obj2.style = items2;
+      const obj2 = { style: items2, children: items3 };
+      items2 = [tmp14 ? tmp.bg : tmp.bgNeutral, tmp.container];
+      const obj3 = { minHeight: RTC_PANEL_HEIGHT + num, paddingTop: num };
+      items2[2] = obj3;
       if (isScreenLandscape) {
         isScreenLandscape = closure_10(StatusBarDefault, { hidden: true });
       }
-      const items3 = [isScreenLandscape];
+      items3 = [isScreenLandscape];
       let tmp19 = null;
       if (isGuildStageVoiceResult) {
         const obj4 = {
           channel,
           guild,
-          hasRTCConnectivity: tmp12,
+          hasRTCConnectivity: null != channel,
           isDarkTheme: isThemeDarkResult,
           rtcConnectionState,
           remotePlatform,
@@ -369,6 +400,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp19 = closure_10(GlobalStageChannelStatusDefault, obj4);
       }
       items3[1] = tmp19;
-      obj2.children = items3;
       return closure_11(View, obj2);
     };
+const result = size.fileFinishedImporting("modules/connectivity/native/components/GlobalStatusContent.tsx");
+
+export default tmp5;

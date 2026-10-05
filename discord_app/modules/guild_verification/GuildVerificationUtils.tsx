@@ -1,12 +1,12 @@
 // discord_app/modules/guild_verification/GuildVerificationUtils.tsx
+import Constants from "../../Constants.tsx";
 import MemberVerificationTypes from "../guild_member_verification/MemberVerificationTypes.tsx";
 import transitionToMemberVerification from "../guild_member_verification/transitionToMemberVerification.native.tsx";
 import MemberVerificationModalActionCreators from "../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import UserGuildJoinRequestStore from "../guild_member_verification/UserGuildJoinRequestStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
-const size = fn(2);
+const GuildFeatures = Constants.GuildFeatures;
 let result = size.fileFinishedImporting("modules/guild_verification/GuildVerificationUtils.tsx");
 
 export const inviteGuildHasPendingMemberDisabledVerification = function inviteGuildHasPendingMemberDisabledVerification(
@@ -33,9 +33,10 @@ export const openVerificationModalOrTransitionToApplication = function openVerif
   const request = UserGuildJoinRequestStore.getRequest(id);
   if (null != request) {
     if (request.applicationStatus !== MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED) {
-      const result = transitionToMemberVerification.transitionToMemberVerification(id);
       const tmp2Result = transitionToMemberVerification;
+      const result = tmp2Result.transitionToMemberVerification(id);
     }
   }
-  const result1 = MemberVerificationModalActionCreators.openMemberVerificationModal(id);
+  const obj = MemberVerificationModalActionCreators;
+  const result1 = obj.openMemberVerificationModal(id);
 };

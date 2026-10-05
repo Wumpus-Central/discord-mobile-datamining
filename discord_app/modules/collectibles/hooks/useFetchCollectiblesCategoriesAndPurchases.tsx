@@ -1,18 +1,40 @@
 // discord_app/modules/collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
 import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import ExperimentStore from "../../experiments/ExperimentStore.tsx";
-import CollectiblesPurchaseStore from "../CollectiblesPurchaseStore.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
+import ExperimentStore_mod from "../../experiments/ExperimentStore.tsx";
+import CollectiblesPurchaseStore_mod from "../CollectiblesPurchaseStore.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const noop = fn(19);
-({ useEffect: closure_4, useRef: hasOwnProperty } = noop);
-let ReactCompilerGating = fn(558);
+const require = globalThis.__r;
+let _require, current, paymentGateway, ref;
+
+let closure_4;
+let hasOwnProperty;
+({ useEffect: closure_4, useRef: hasOwnProperty } = react);
+let ExperimentStore = ExperimentStore_mod;
+let CollectiblesPurchaseStore = CollectiblesPurchaseStore_mod;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = require("c").c(24);
+      let closure_0;
+      let items5;
+      let ref2;
+      let ref3;
+      let tmp10;
+      let tmp21;
+      let tmp22;
+      let tmp26;
+      let tmp28;
+      let tmp29;
+      let tmp5;
+      let tmp6;
+      let tmp9;
+      let obj = require("react");
+      const cResult = obj.c(24);
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [ExperimentStore];
@@ -26,13 +48,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      let obj = require("c");
-      const stateFromStores = require("useStateFromStores").useStateFromStores(tmp5, tmp6);
+      const tmpResult = require("useStateFromStores");
+      const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [CollectiblesPurchaseStore];
         class C {
           constructor() {
-            items = [, , , , ,];
+            const items = [, , , , ,];
             ({
               isFetching: arr[0],
               isClaiming: arr[1],
@@ -40,31 +62,31 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               claimError: arr[3],
               purchases: arr[4],
               hasPreviouslyFetched: arr[5],
-            } = closure_7);
+            } = ref3);
             return items;
           }
         }
         cResult[2] = items1;
         cResult[3] = C;
-        let tmp10 = C;
-        let tmp9 = items1;
+        tmp10 = C;
+        tmp9 = items1;
       } else {
         tmp9 = cResult[2];
         tmp10 = cResult[3];
       }
-      const tmpResult = require("useStateFromStores");
-      const tmp12 = current(require("useStateFromStores").useStateFromStoresArray(tmp9, tmp10), 6);
+      const tmpResult2 = require("useStateFromStores");
+      const tmp12 = current(tmpResult2.useStateFromStoresArray(tmp9, tmp10), 6);
       current = tmp15;
       let current2 = tmp18;
       ref = ref(CollectiblesPurchaseStore.hasPreviouslyFetched);
       if (cResult[4] !== tmp12[5]) {
         const fn2 = function v() {
-          closure_5.current = current2;
+          ref.current = current2;
         };
-        const items2 = [tmp18];
+        const items2 = [tmp12[5]];
         class C {
           constructor() {
-            items = [, , , , ,];
+            const items = [, , , , ,];
             ({
               isFetching: arr[0],
               isClaiming: arr[1],
@@ -72,15 +94,15 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               claimError: arr[3],
               purchases: arr[4],
               hasPreviouslyFetched: arr[5],
-            } = closure_7);
+            } = ref3);
             return items;
           }
         }
-        cResult[4] = tmp18;
+        cResult[4] = tmp12[5];
         cResult[5] = fn2;
         cResult[6] = items2;
-        let tmp22 = items2;
-        let tmp21 = fn2;
+        tmp22 = items2;
+        tmp21 = fn2;
       } else {
         tmp21 = cResult[5];
         tmp22 = cResult[6];
@@ -90,14 +112,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[7] !== tmp12[2]) {
         class A {
           constructor() {
-            closure_6.current = closure_3;
-            return;
+            ref2.current = current;
           }
         }
-        const items3 = [tmp15];
+        const items3 = [tmp12[2]];
         class C {
           constructor() {
-            items = [, , , , ,];
+            const items = [, , , , ,];
             ({
               isFetching: arr[0],
               isClaiming: arr[1],
@@ -105,19 +126,18 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               claimError: arr[3],
               purchases: arr[4],
               hasPreviouslyFetched: arr[5],
-            } = closure_7);
+            } = ref3);
             return items;
           }
         }
-        cResult[7] = tmp15;
+        cResult[7] = tmp12[2];
         cResult[8] = A;
         cResult[9] = items3;
-        let tmp26 = items3;
+        tmp26 = items3;
       } else {
         class A {
           constructor() {
-            closure_6.current = closure_3;
-            return;
+            ref2.current = current;
           }
         }
         tmp26 = cResult[9];
@@ -127,14 +147,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[10] !== current) {
         class A {
           constructor() {
-            closure_6.current = closure_3;
-            return;
+            ref2.current = current;
           }
         }
         const items4 = [current];
         class C {
           constructor() {
-            items = [, , , , ,];
+            const items = [, , , , ,];
             ({
               isFetching: arr[0],
               isClaiming: arr[1],
@@ -142,20 +161,19 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               claimError: arr[3],
               purchases: arr[4],
               hasPreviouslyFetched: arr[5],
-            } = closure_7);
+            } = ref3);
             return items;
           }
         }
         cResult[10] = current;
         cResult[11] = items4;
         cResult[12] = tmp30;
-        let tmp29 = tmp30;
-        const tmp28 = items4;
+        tmp29 = tmp30;
+        tmp28 = items4;
       } else {
         class A {
           constructor() {
-            closure_6.current = closure_3;
-            return;
+            ref2.current = current;
           }
         }
         tmp29 = cResult[12];
@@ -164,22 +182,20 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[13] === stateFromStores) {
         class A {
           constructor() {
-            closure_6.current = closure_3;
-            return;
+            ref2.current = current;
           }
         }
-        tmp23(I, items5);
-        if (cResult[17] === tmp16) {
+        current2(I, items5);
+        if (cResult[17] === tmp12[3]) {
           class A {
             constructor() {
-              closure_6.current = closure_3;
-              return;
+              ref2.current = current;
             }
           }
         }
         class C {
           constructor() {
-            items = [, , , , ,];
+            const items = [, , , , ,];
             ({
               isFetching: arr[0],
               isClaiming: arr[1],
@@ -187,53 +203,38 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               claimError: arr[3],
               purchases: arr[4],
               hasPreviouslyFetched: arr[5],
-            } = closure_7);
+            } = ref3);
             return items;
           }
         }
-        tmp34[0] = tmp14;
-        tmp34[1] = tmp15;
-        tmp34[2] = tmp16;
+        tmp34[0] = tmp12[1];
+        tmp34[1] = tmp12[2];
+        tmp34[2] = tmp12[3];
         tmp34[3] = current;
-        tmp34[4] = tmp17;
-        tmp34[5] = tmp18;
-        cResult[17] = tmp16;
-        cResult[18] = tmp15;
-        cResult[19] = tmp18;
-        cResult[20] = tmp14;
+        tmp34[4] = tmp12[4];
+        tmp34[5] = tmp12[5];
+        cResult[17] = tmp12[3];
+        cResult[18] = tmp12[2];
+        cResult[19] = tmp12[5];
+        cResult[20] = tmp12[1];
         cResult[21] = current;
-        cResult[22] = tmp17;
+        cResult[22] = tmp12[4];
         cResult[23] = tmp34;
       }
       class I {
         constructor() {
-          current = !closure_1;
-          if (closure_1) {
-            tmp = closure_7;
-            current = closure_7.current;
+          current = !stateFromStores;
+          if (stateFromStores) {
+            current = ref3.current;
           }
           if (!current) {
-            tmp2 = closure_0;
-            flag = true;
-            current2 = true === closure_0;
-            if (current2) {
-              tmp3 = closure_5;
-              current2 = closure_5.current;
-            }
-            if (current2) {
-              tmp4 = closure_6;
-              tmp5 = null;
-              current2 = null == closure_6.current;
-            }
+            current2 = true === closure_0 && ref.current && null == ref2.current;
             current = current2;
           }
           if (!current) {
-            tmp6 = closure_0;
-            tmp7 = closure_2;
-            obj = closure_0(closure_2[7]);
-            collectiblesPurchases = obj.fetchCollectiblesPurchases();
+            const obj = CollectiblesActionCreators;
+            const collectiblesPurchases = obj.fetchCollectiblesPurchases();
           }
-          return;
         }
       }
       items5 = [undefined !== arg0 && arg0, stateFromStores];
@@ -241,9 +242,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[14] = undefined !== arg0 && arg0;
       cResult[15] = I;
       cResult[16] = items5;
-      const tmpResult2 = require("useStateFromStores");
     }
   : () => {
+      let ref3;
       let flag = arg0;
       if (arg0 === undefined) {
         flag = false;
@@ -253,12 +254,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       ref = undefined;
       let ref2;
       CollectiblesPurchaseStore = undefined;
-      let items = [ref2];
-      const stateFromStores = flag(isFetching[6]).useStateFromStores(items, () => ref2.hasLoadedExperiments);
       let obj = flag(isFetching[6]);
+      let items = [ref2];
+      const stateFromStores = obj.useStateFromStores(items, () => ref2.hasLoadedExperiments);
       const items1 = [CollectiblesPurchaseStore];
-      const isClaiming = fetchPurchasesError(
-        flag(isFetching[6]).useStateFromStoresArray(items1, () => {
+      const obj2 = flag(isFetching[6]);
+      const tmp2 = fetchPurchasesError(
+        obj2.useStateFromStoresArray(items1, () => {
           const items = [, , , , ,];
           ({
             isFetching: arr[0],
@@ -267,28 +269,31 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             claimError: arr[3],
             purchases: arr[4],
             hasPreviouslyFetched: arr[5],
-          } = closure_7);
+          } = ref3);
           return items;
         }),
         6,
       );
-      isFetching = isClaiming[0];
-      fetchPurchasesError = isClaiming[2];
-      const hasPreviouslyFetched = isClaiming[5];
+      isFetching = tmp2[0];
+      fetchPurchasesError = tmp2[2];
+      const hasPreviouslyFetched = tmp2[5];
+      const isClaiming = tmp2[1];
+      const claimError = tmp2[3];
+      const purchases = tmp2[4];
       ref = ref(CollectiblesPurchaseStore.hasPreviouslyFetched);
       const items2 = [hasPreviouslyFetched];
       hasPreviouslyFetched(() => {
-        closure_5.current = hasPreviouslyFetched;
+        ref.current = hasPreviouslyFetched;
       }, items2);
       ref2 = ref(CollectiblesPurchaseStore.fetchError);
       const items3 = [fetchPurchasesError];
       hasPreviouslyFetched(() => {
-        closure_6.current = fetchPurchasesError;
+        ref2.current = fetchPurchasesError;
       }, items3);
       CollectiblesPurchaseStore = ref(CollectiblesPurchaseStore.isFetching);
       const items4 = [isFetching];
       hasPreviouslyFetched(() => {
-        closure_7.current = isFetching;
+        ref3.current = isFetching;
       }, items4);
       const items5 = [flag, stateFromStores];
       hasPreviouslyFetched(() => {
@@ -297,36 +302,69 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           current = ref3.current;
         }
         if (!current) {
-          let current2 = true === flag;
-          if (current2) {
-            current2 = ref.current;
-          }
-          if (current2) {
-            current2 = null == ref2.current;
-          }
+          const current2 = true === flag && ref.current && null == ref2.current;
           current = current2;
         }
         if (!current) {
-          const collectiblesPurchases = CollectiblesActionCreators.fetchCollectiblesPurchases();
+          const obj = CollectiblesActionCreators;
+          const collectiblesPurchases = obj.fetchCollectiblesPurchases();
         }
       }, items5);
-      return {
-        isClaiming: isClaiming[1],
-        fetchPurchasesError,
-        claimError: isClaiming[3],
-        isFetching,
-        purchases: isClaiming[4],
-        hasPreviouslyFetched,
-      };
+      return { isClaiming, fetchPurchasesError, claimError, isFetching, purchases, hasPreviouslyFetched };
     };
 let closure_8 = tmp3;
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-fn(558);
-ReactCompilerGating = fn(558);
-const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1) => {
+      const obj = react2;
+      const cResult = obj.c(3);
+      const tmp3 = undefined === arg1 || arg1;
+      const purchases = closure_8(tmp3).purchases;
+      if (cResult[0] === purchases) {
+        let tmp4;
+        if (cResult[1] === arg0) {
+          tmp4 = cResult[2];
+        }
+        return tmp4;
+      }
+      let value;
+      if (null != arg0) {
+        value = purchases.get(arg0);
+      }
+      cResult[0] = purchases;
+      cResult[1] = arg0;
+      cResult[2] = value;
+      tmp4 = value;
+    }
+  : (arg0) => {
+      let flag = arg1;
+      if (arg1 === undefined) {
+        flag = true;
+      }
+      const purchases = closure_8(flag).purchases;
+      let value;
+      if (null != arg0) {
+        value = purchases.get(arg0);
+      }
+      return value;
+    };
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (paymentGateway, arg1) => {
-      const cResult = c.c(18);
+      let categories;
+      let claimError;
+      let fetchCategoriesError;
+      let fetchPurchasesError;
+      let hasPreviouslyFetched;
+      let isClaiming;
+      let isFetching;
+      let isFetching2;
+      let purchases;
+      let refreshCategories;
+      const obj = react2;
+      const cResult = obj.c(18);
       paymentGateway = undefined;
       if (paymentGateway != null) {
         paymentGateway = paymentGateway.paymentGateway;
@@ -351,16 +389,17 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === noOp) {
           if (cResult[2] === logPerf) {
             if (cResult[3] === countryCode) {
+              let tmp8;
               if (cResult[4] === skipFetch) {
-                let tmp8 = cResult[5];
+                tmp8 = cResult[5];
               }
               ({ isFetching, categories, fetchCategoriesError, refreshCategories } =
                 useMaybeFetchCollectiblesCategoriesDefault(tmp8, arg1));
               let stalePurchasesOK;
+              useMaybeFetchCollectiblesCategoriesDefault(tmp8, arg1);
               if (paymentGateway != null) {
                 stalePurchasesOK = paymentGateway.stalePurchasesOK;
               }
-              const tmp11 = useMaybeFetchCollectiblesCategoriesDefault(tmp8, arg1);
               ({
                 isClaiming,
                 fetchPurchasesError,
@@ -369,22 +408,20 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                 purchases,
                 hasPreviouslyFetched,
               } = closure_8(stalePurchasesOK));
-              let tmp15 = isFetching;
-              if (!isFetching) {
-                tmp15 = isFetching2;
-              }
+              closure_8(stalePurchasesOK);
               if (cResult[6] === categories) {
                 if (cResult[7] === claimError) {
                   if (cResult[8] === fetchCategoriesError) {
                     if (cResult[9] === fetchPurchasesError) {
                       if (cResult[10] === hasPreviouslyFetched) {
                         if (cResult[11] === isClaiming) {
-                          if (cResult[12] === tmp15) {
+                          if (cResult[12] === (isFetching || isFetching2)) {
                             if (cResult[13] === isFetching) {
                               if (cResult[14] === isFetching2) {
                                 if (cResult[15] === purchases) {
+                                  let tmp16;
                                   if (cResult[16] === refreshCategories) {
-                                    let tmp16 = cResult[17];
+                                    tmp16 = cResult[17];
                                   }
                                   return tmp16;
                                 }
@@ -398,7 +435,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj2 = {
-                isFetching: tmp15,
+                isFetching: isFetching || isFetching2,
                 isFetchingCategories: isFetching,
                 isFetchingPurchases: isFetching2,
                 isClaiming,
@@ -416,14 +453,13 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[9] = fetchPurchasesError;
               cResult[10] = hasPreviouslyFetched;
               cResult[11] = isClaiming;
-              cResult[12] = tmp15;
+              cResult[12] = isFetching || isFetching2;
               cResult[13] = isFetching;
               cResult[14] = isFetching2;
               cResult[15] = purchases;
               cResult[16] = refreshCategories;
               cResult[17] = obj2;
               tmp16 = obj2;
-              const tmp12Result = closure_8(stalePurchasesOK);
             }
           }
         }
@@ -438,32 +474,39 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = obj3;
     }
   : (paymentGateway, arg1) => {
+      let categories;
+      let claimError;
+      let countryCode;
+      let fetchCategoriesError;
+      let fetchPurchasesError;
+      let isClaiming;
+      let logPerf;
+      let noOp;
+      let refreshCategories;
+      let skipFetch;
       paymentGateway = undefined;
       if (paymentGateway != null) {
         paymentGateway = paymentGateway.paymentGateway;
       }
-      const obj = { paymentGateway, noOp: null, logPerf: null, countryCode: null, skipFetch: null };
-      let noOp;
+      const obj = { paymentGateway, noOp, logPerf, countryCode, skipFetch };
+      noOp = undefined;
+      const tmp2 = useMaybeFetchCollectiblesCategoriesDefault;
       if (paymentGateway != null) {
         noOp = paymentGateway.noOp;
       }
-      obj.noOp = noOp;
-      let logPerf;
+      logPerf = undefined;
       if (paymentGateway != null) {
         logPerf = paymentGateway.logPerf;
       }
-      obj.logPerf = logPerf;
-      let countryCode;
+      countryCode = undefined;
       if (paymentGateway != null) {
         countryCode = paymentGateway.countryCode;
       }
-      obj.countryCode = countryCode;
-      let skipFetch;
+      skipFetch = undefined;
       if (paymentGateway != null) {
         skipFetch = paymentGateway.skipFetch;
       }
-      obj.skipFetch = skipFetch;
-      const tmp2Result = useMaybeFetchCollectiblesCategoriesDefault(obj, arg1);
+      const tmp2Result = tmp2(obj, arg1);
       const isFetching = tmp2Result.isFetching;
       let stalePurchasesOK;
       ({ categories, fetchCategoriesError, refreshCategories } = tmp2Result);
@@ -492,53 +535,14 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       };
     };
 let closure_9 = tmp6;
-ReactCompilerGating = fn(558);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
-      const cResult = c.c(3);
-      let tmp3 = undefined === arg1;
-      if (!tmp3) {
-        tmp3 = arg1;
-      }
-      const purchases = closure_8(tmp3).purchases;
-      if (cResult[0] === purchases) {
-        if (cResult[1] === arg0) {
-          let tmp4 = cResult[2];
-        }
-        return tmp4;
-      }
-      value = undefined;
-      if (null != arg0) {
-        value = purchases.get(arg0);
-      }
-      cResult[0] = purchases;
-      cResult[1] = arg0;
-      cResult[2] = value;
-      tmp4 = value;
-    }
-  : (arg0) => {
-      let flag = arg1;
-      if (arg1 === undefined) {
-        flag = true;
-      }
-      const purchases = closure_8(flag).purchases;
-      value = undefined;
-      if (null != arg0) {
-        value = purchases.get(arg0);
-      }
-      return value;
-    };
-fn = () => closure_8(true);
-const size = fn(2);
-const result1 = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx");
-
-export default tmp6;
-export const useFetchPurchases = tmp3;
-export const useGetOrFetchPurchases = fn;
-export const useGetOrFetchPurchase = tmp5;
-export const useGetOrFetchCollectiblesCategoriesAndPurchases = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let fn = () => closure_8(true);
+const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(4);
+      let tmp2;
+      let tmp4;
+      const obj = react2;
+      const cResult = obj.c(4);
       if (cResult[0] !== arg0) {
         let obj2 = arg0;
         if (arg0 == null) {
@@ -546,17 +550,16 @@ export const useGetOrFetchCollectiblesCategoriesAndPurchases = ReactCompilerGati
         }
         cResult[0] = arg0;
         cResult[1] = obj2;
-        let tmp2 = obj2;
+        tmp2 = obj2;
       } else {
         tmp2 = cResult[1];
       }
       if (cResult[2] !== tmp2) {
-        const obj3 = {};
+        const obj3 = { stalePurchasesOK: true };
         const merged = Object.assign(tmp2);
-        obj3.stalePurchasesOK = true;
         cResult[2] = tmp2;
         cResult[3] = obj3;
-        let tmp4 = obj3;
+        tmp4 = obj3;
       } else {
         tmp4 = cResult[3];
       }
@@ -567,8 +570,14 @@ export const useGetOrFetchCollectiblesCategoriesAndPurchases = ReactCompilerGati
       if (arg0 == null) {
         obj = {};
       }
-      const obj2 = {};
+      const obj2 = { stalePurchasesOK: true };
       const merged = Object.assign(obj);
-      obj2.stalePurchasesOK = true;
       return closure_9(obj2);
     };
+const result1 = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx");
+
+export default tmp6;
+export const useFetchPurchases = tmp3;
+export const useGetOrFetchPurchases = fn;
+export const useGetOrFetchPurchase = tmp5;
+export const useGetOrFetchCollectiblesCategoriesAndPurchases = tmp7;

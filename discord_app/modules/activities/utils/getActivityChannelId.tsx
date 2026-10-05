@@ -8,7 +8,10 @@ const isTextChannel = ChannelRecord.isTextChannel;
 const result = size.fileFinishedImporting("modules/activities/utils/getActivityChannelId.tsx");
 
 export default function getActivityChannelId(userId) {
+  let activity;
+  let channelId;
   ({ channelId, activity } = userId);
+  userId = userId.userId;
   const channel = ChannelStore.getChannel(channelId);
   let session_id;
   if (activity != null) {
@@ -18,10 +21,11 @@ export default function getActivityChannelId(userId) {
   if (null != session_id) {
     if (null == channel) {
       let session_id1;
+      const getVoiceStateForSession = VoiceStateStore.getVoiceStateForSession;
       if (activity != null) {
         session_id1 = activity.session_id;
       }
-      const voiceStateForSession = VoiceStateStore.getVoiceStateForSession(userId.userId, session_id1);
+      const voiceStateForSession = getVoiceStateForSession(userId, session_id1);
       let channelId1;
       if (voiceStateForSession != null) {
         channelId1 = voiceStateForSession.channelId;

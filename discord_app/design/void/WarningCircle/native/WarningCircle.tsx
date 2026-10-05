@@ -1,19 +1,26 @@
 // discord_app/design/void/WarningCircle/native/WarningCircle.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import inlineStyles from "../../../../../_runtime/08136_inlineStyles.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
 let closure_2 = ["width", "height", "color"];
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/void/WarningCircle/native/WarningCircle.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(12);
+      let color;
+      let height;
+      let tmp11;
+      let tmp4;
+      let tmp5;
+      let tmp6;
+      let tmp7;
+      let width;
+      const obj = react2;
+      const cResult = obj.c(12);
       if (cResult[0] !== arg0) {
         ({ width, height, color } = arg0);
         const tmp10 = _objectWithoutProperties(arg0, closure_2);
@@ -22,10 +29,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = width;
         cResult[3] = height;
         cResult[4] = color;
-        let tmp7 = color;
-        let tmp6 = height;
-        let tmp5 = width;
-        let tmp4 = tmp10;
+        tmp7 = color;
+        tmp6 = height;
+        tmp5 = width;
+        tmp4 = tmp10;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
@@ -45,12 +52,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         str = tmp7;
       }
       if (cResult[5] !== str) {
-        const obj2 = {
-          d: "M10 0C4.486 0 0 4.486 0 10C0 15.515 4.486 20 10 20C15.514 20 20 15.515 20 10C20 4.486 15.514 0 10 0ZM9 4H11V11H9V4ZM10 15.25C9.31 15.25 8.75 14.691 8.75 14C8.75 13.31 9.31 12.75 10 12.75C10.69 12.75 11.25 13.31 11.25 14C11.25 14.691 10.69 15.25 10 15.25Z",
-          fillRule: "evenodd",
-          clipRule: "evenodd",
-          fill: str,
-        };
         const tmp13 = jsx(inlineStyles.Path, {
           d: "M10 0C4.486 0 0 4.486 0 10C0 15.515 4.486 20 10 20C15.514 20 20 15.515 20 10C20 4.486 15.514 0 10 0ZM9 4H11V11H9V4ZM10 15.25C9.31 15.25 8.75 14.691 8.75 14C8.75 13.31 9.31 12.75 10 12.75C10.69 12.75 11.25 13.31 11.25 14C11.25 14.691 10.69 15.25 10 15.25Z",
           fillRule: "evenodd",
@@ -59,27 +60,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         });
         cResult[5] = str;
         cResult[6] = tmp13;
-        let tmp11 = tmp13;
+        tmp11 = tmp13;
       } else {
         tmp11 = cResult[6];
       }
       if (cResult[7] === num6) {
         if (cResult[8] === tmp4) {
           if (cResult[9] === tmp11) {
+            let tmp14;
             if (cResult[10] === num7) {
-              let tmp14 = cResult[11];
+              tmp14 = cResult[11];
             }
             return tmp14;
           }
         }
       }
-      const obj3 = {};
+      const Svg = inlineStyles.Svg;
       const merged = Object.assign(tmp4);
-      obj3.width = num7;
-      obj3.height = num6;
-      obj3.viewBox = "0 0 20 20";
-      obj3.children = tmp11;
-      const tmp16 = jsx(inlineStyles.Svg, {});
+      const tmp16 = (
+        <Svg width={num7} height={num6} viewBox="0 0 20 20">
+          {tmp11}
+        </Svg>
+      );
       cResult[7] = num6;
       cResult[8] = tmp4;
       cResult[9] = tmp11;
@@ -101,16 +103,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         str = "currentColor";
       }
       const merged = Object.assign(width, Object.assign({ width: 0, height: 0, color: 0 }));
-      const obj = {};
+      const Svg = inlineStyles.Svg;
       const merged1 = Object.assign(merged);
-      obj.width = num;
-      obj.height = num2;
-      obj.viewBox = "0 0 20 20";
-      obj.children = jsx(inlineStyles.Path, {
-        d: "M10 0C4.486 0 0 4.486 0 10C0 15.515 4.486 20 10 20C15.514 20 20 15.515 20 10C20 4.486 15.514 0 10 0ZM9 4H11V11H9V4ZM10 15.25C9.31 15.25 8.75 14.691 8.75 14C8.75 13.31 9.31 12.75 10 12.75C10.69 12.75 11.25 13.31 11.25 14C11.25 14.691 10.69 15.25 10 15.25Z",
-        fillRule: "evenodd",
-        clipRule: "evenodd",
-        fill: str,
-      });
-      return jsx(inlineStyles.Svg, {});
+      return (
+        <Svg width={num} height={num2} viewBox="0 0 20 20">
+          {jsx(inlineStyles.Path, {
+            d: "M10 0C4.486 0 0 4.486 0 10C0 15.515 4.486 20 10 20C15.514 20 20 15.515 20 10C20 4.486 15.514 0 10 0ZM9 4H11V11H9V4ZM10 15.25C9.31 15.25 8.75 14.691 8.75 14C8.75 13.31 9.31 12.75 10 12.75C10.69 12.75 11.25 13.31 11.25 14C11.25 14.691 10.69 15.25 10 15.25Z",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            fill: str,
+          })}
+        </Svg>
+      );
     };
+const result = size.fileFinishedImporting("design/void/WarningCircle/native/WarningCircle.tsx");
+
+export default tmp3;

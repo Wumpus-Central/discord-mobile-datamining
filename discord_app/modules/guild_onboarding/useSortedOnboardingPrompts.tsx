@@ -1,21 +1,24 @@
 // discord_app/modules/guild_onboarding/useSortedOnboardingPrompts.tsx
-import noop from "../../../_runtime/metro/00019__.js";
+import react from "../../../_runtime/00019_react.js";
 import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/useSortedOnboardingPrompts.tsx");
 
 export default function useSortedOnboardingPrompts(arg0) {
+  let closure_0;
+  let stateFromStoresArray;
   _require = arg0;
+  let obj = require("useStateFromStores");
   let items = [GuildOnboardingPromptsStore];
-  stateFromStoresArray = require("useStateFromStores").useStateFromStoresArray(items, () =>
+  stateFromStoresArray = obj.useStateFromStoresArray(items, () =>
     GuildOnboardingPromptsStore.getEnabledOnboardingPrompts(closure_0),
   );
   let items1 = [stateFromStoresArray];
-  return noop.useMemo(() => {
+  return react.useMemo(() => {
     const items = [];
     const items1 = [];
     const items2 = [];
@@ -26,13 +29,14 @@ export default function useSortedOnboardingPrompts(arg0) {
     let num3 = 0;
     if (0 < stateFromStoresArray.length) {
       do {
+        let sum;
         let tmp2 = stateFromStoresArray[num];
         if (tmp2.isNew) {
           let arr = items.push(tmp2);
-          let sum = num2;
+          sum = num2;
         } else if (tmp2.hasNewAnswers) {
           let arr2 = items1.push(tmp2);
-          options = tmp2.options;
+          let options = tmp2.options;
           sum = num2 + options.filter((isUnseen) => isUnseen.isUnseen).length;
         } else if (tmp2.inOnboarding) {
           let arr3 = items3.push(tmp2);
@@ -47,12 +51,13 @@ export default function useSortedOnboardingPrompts(arg0) {
         tmp = stateFromStoresArray;
       } while (num < stateFromStoresArray.length);
     }
-    return {
+    const obj = {
       onboardingPromptsRaw: tmp,
       newOnboardingPrompts: items,
       onboardingPromptsWithNewAnswers: items1,
       newAnswersCount: num3,
       onboardingPrompts: items2.concat(items3),
     };
+    return obj;
   }, items1);
 }

@@ -1,43 +1,41 @@
 // discord_app/modules/forums/native/AppliedForumTag.tsx
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl2 from "../../../intl/index.native.tsx";
+import EmojiConstants from "../../emojis/EmojiConstants.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import ForumTagContextMenuDefault from "ForumTagContextMenu.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import EmojiStore from "../../emojis/EmojiStore.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+const require = globalThis.__r;
+let dependencyMap, importDefault;
+
+let c9;
+let metroImportAll;
+let obj2;
 let closure_3 = ["ref"];
-const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1380).EMOJI_URL_BASE_SIZE;
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  pill: {
-    height: 24,
-    paddingHorizontal: 8,
-    borderRadius: 20,
-    backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
-    borderWidth: 1,
-    borderColor: nativeDefault.colors.BORDER_SUBTLE,
-    marginRight: 4,
-    flexShrink: 1,
-  },
+const View = react_native.View;
+const EMOJI_URL_BASE_SIZE = EmojiConstants.EMOJI_URL_BASE_SIZE;
+({ jsx: metroImportAll, jsxs: c9 } = Fragment);
+let obj = {
+  pill: obj2,
   disableEndMargin: { marginRight: 0 },
   emoji: { height: 12, width: 12, marginRight: 4, flexShrink: 0 },
   textEmoji: { fontSize: 10, marginRight: 4 },
   tagName: { flexShrink: 1 },
   container: { display: "flex", flexDirection: "row", alignItems: "center" },
 };
-let closure_10 = createStyles.createStyles(obj2);
-fn(558);
-const obj3 = {
+obj2 = {
   height: 24,
   paddingHorizontal: 8,
   borderRadius: 20,
@@ -47,11 +45,86 @@ const obj3 = {
   marginRight: 4,
   flexShrink: 1,
 };
-const ReactCompilerGating = fn(558);
+let closure_10 = createStyles.createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      let containerStyle;
+      let disableEndMargin;
+      let hasUnreads;
+      let tag;
+      const obj = react2;
+      const cResult = obj.c(11);
+      ({ tag, hasUnreads, containerStyle, disableEndMargin } = arg0);
+      const tmp2 = closure_10();
+      if (cResult[0] === disableEndMargin) {
+        let tmp3;
+        if (cResult[1] === tmp2.disableEndMargin) {
+          tmp3 = cResult[2];
+        }
+        if (cResult[3] === containerStyle) {
+          if (cResult[4] === tmp2.pill) {
+            let tmp5;
+            if (cResult[5] === tmp3) {
+              tmp5 = cResult[6];
+            }
+            if (cResult[7] === hasUnreads) {
+              if (cResult[8] === tmp5) {
+                let tmp6;
+                if (cResult[9] === tag) {
+                  tmp6 = cResult[10];
+                }
+                return tmp6;
+              }
+            }
+            const obj2 = { tag, hasUnreads, containerStyle: tmp5 };
+            const tmp9 = metroImportAll(closure_11, obj2);
+            cResult[7] = hasUnreads;
+            cResult[8] = tmp5;
+            cResult[9] = tag;
+            cResult[10] = tmp9;
+            tmp6 = tmp9;
+          }
+        }
+        const items = [tmp2.pill, containerStyle, tmp3];
+        cResult[3] = containerStyle;
+        cResult[4] = tmp2.pill;
+        cResult[5] = tmp3;
+        cResult[6] = items;
+        tmp5 = items;
+      }
+      const tmp4 = disableEndMargin ? tmp2.disableEndMargin : {};
+      cResult[0] = disableEndMargin;
+      cResult[1] = tmp2.disableEndMargin;
+      cResult[2] = tmp4;
+      tmp3 = tmp4;
+    }
+  : (arg0) => {
+      let containerStyle;
+      let disableEndMargin;
+      let hasUnreads;
+      let items;
+      let tag;
+      ({ tag, hasUnreads, containerStyle, disableEndMargin } = arg0);
+      const tmp = closure_10();
+      const obj = { tag, hasUnreads, containerStyle: items };
+      items = [tmp.pill, containerStyle, disableEndMargin ? tmp.disableEndMargin : {}];
+      return metroImportAll(closure_11, obj);
+    };
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (hasUnreads) => {
-      const cResult = containerStyle(name[9]).c(17);
+      let container;
+      let containerStyle;
+      let first;
+      let name;
+      let str;
+      let tag;
+      let tmp7;
+      let obj = containerStyle(name[9]);
+      const cResult = obj.c(17);
       ({ tag, containerStyle } = hasUnreads);
+      hasUnreads = hasUnreads.hasUnreads;
       const tmp4 = closure_10();
       importDefault = tmp4;
       name = tag.name;
@@ -60,7 +133,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [str];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -74,14 +147,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = emojiId;
         cResult[2] = fn;
-        let tmp7 = fn;
+        tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
-      let obj = containerStyle(name[9]);
-      const stateFromStores = containerStyle(name[10]).useStateFromStores(first, tmp7);
+      const tmpResult = containerStyle(name[10]);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
       str = "text-muted";
-      if (hasUnreads.hasUnreads) {
+      if (hasUnreads) {
         str = "text-default";
       }
       if (cResult[3] === str) {
@@ -93,16 +166,18 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[9] === tmp4.container) {
                     if (cResult[10] === tmp4.emoji) {
                       if (cResult[11] === tmp4.tagName) {
+                        let tmp9;
                         if (cResult[12] === tmp4.textEmoji) {
-                          let tmp9 = cResult[13];
+                          tmp9 = cResult[13];
                         }
                         if (cResult[14] === tmp9) {
+                          let tmp10;
                           if (cResult[15] === tag.id) {
-                            let tmp10 = cResult[16];
+                            tmp10 = cResult[16];
                           }
                           return tmp10;
                         }
-                        const obj2 = { tagId: tag.id, children: tmp9 };
+                        let obj2 = { tagId: tag.id, children: tmp9 };
                         let tmp13 = closure_8(require("ForumTagContextMenu"), obj2);
                         cResult[14] = tmp9;
                         cResult[15] = tag.id;
@@ -118,59 +193,52 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       class I {
-        constructor(arg0) {
-          tmp = closure_4(hasUnreads, closure_3);
-          obj = { style: null, accessible: true, accessibilityLabel: null, ref: null };
-          tmp4 = closure_1;
-          items = [,];
-          items[0] = closure_1.container;
-          items[1] = containerStyle;
-          obj.style = items;
-          tmp6 = closure_2;
-          tmp2 = jsxs;
-          tmp3 = View;
-          tmp5 = closure_0;
-          intl = closure_0(closure_2[11]).intl;
-          obj1 = { tagName: name };
-          tmp7 = name;
-          obj.accessibilityLabel = intl.formatToPlainString(closure_0(closure_2[11]).t.tXXD6v, obj1);
-          obj.ref = hasUnreads.ref;
-          merged = Object.assign(tmp);
+        constructor(ref) {
+          let emojiURL;
+          let intl;
+          let items;
+          let items1;
+          let obj2;
+          const obj = {
+            style: items,
+            accessible: true,
+            accessibilityLabel: intl.formatToPlainString(intl2.t.tXXD6v, obj2),
+            ref: ref.ref,
+            children: items1,
+          };
+          items = [container.container, containerStyle];
+          const tmp = _objectWithoutProperties(ref.ref, closure_3);
+          intl = intl2.intl;
+          obj2 = { tagName: name };
+          const merged = Object.assign(tmp);
           str = emojiName;
-          tmp11Result = null != emojiName;
-          if (!tmp11Result) {
-            tmp10 = emojiId;
-            tmp11Result = null != emojiId;
-          }
+          let tmp11Result = null != emojiName || null != emojiId;
           if (tmp11Result) {
-            tmp11 = jsx;
-            tmp12 = closure_1;
-            obj7 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
-            ({ textEmoji: obj3.textEmojiStyle, emoji: obj3.fastImageStyle } = tmp4);
-            tmp14 = closure_5;
+            const obj4 = { textEmojiStyle: null, fastImageStyle: null, src: emojiURL, name: str };
+            ({ textEmoji: obj3.textEmojiStyle, emoji: obj3.fastImageStyle } = container);
             emojiURL = undefined;
-            tmp13 = closure_1(tmp6[12]);
-            if (null != closure_5) {
-              tmp12Result = tmp12(tmp6[13]);
-              obj8 = { id: null, animated: null, size: null };
-              ({ id: obj5.id, animated: obj5.animated } = tmp14);
-              tmp16 = EMOJI_URL_BASE_SIZE;
-              obj8.size = EMOJI_URL_BASE_SIZE;
-              emojiURL = tmp12Result.getEmojiURL(obj8);
+            const tmp13 = EmojiDefault;
+            if (null != stateFromStores) {
+              const obj6 = { id: null, animated: null, size: EMOJI_URL_BASE_SIZE };
+              ({ id: obj5.id, animated: obj5.animated } = stateFromStores);
+              const tmp12Result = AvatarUtilsDefault;
+              emojiURL = tmp12Result.getEmojiURL(obj6);
             }
-            obj7.src = emojiURL;
             if (str == null) {
               str = "";
             }
-            obj7.name = str;
-            tmp11Result = tmp11(tmp13, obj7);
+            tmp11Result = metroImportAll(tmp13, obj4);
           }
-          items1 = [,];
-          items1[0] = tmp11Result;
-          obj9 = { lineClamp: 1, style: tmp4.tagName, variant: "text-xs/semibold", color: c6, children: tmp7 };
-          items1[1] = jsx(tmp5(tmp6[14]).Text, obj9);
-          obj.children = items1;
-          return tmp2(tmp3, obj);
+          items1 = [tmp11Result];
+          const obj10 = {
+            lineClamp: 1,
+            style: container.tagName,
+            variant: "text-xs/semibold",
+            color: str,
+            children: name,
+          };
+          items1[1] = metroImportAll(Text_Text.Text, obj10);
+          return React4(View, obj);
         }
       }
       cResult[3] = str;
@@ -185,18 +253,27 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = tmp4.textEmoji;
       cResult[13] = I;
       tmp9 = I;
-      const tmpResult = containerStyle(name[10]);
     }
   : (hasUnreads) => {
+      let c2;
+      let c3;
+      let c4;
+      let container;
+      let require;
+      let tag;
+      let tagName;
       ({ tag, containerStyle: require } = hasUnreads);
       dependencyMap = undefined;
       c3 = undefined;
       c4 = undefined;
       let str;
+      hasUnreads = hasUnreads.hasUnreads;
       importDefault = closure_10();
       ({ name: c2, emojiId: c3, emojiName: c4 } = tag);
+      const tmp = dependencyMap;
+      let obj = get_initialized;
       let items = [str];
-      closure_5 = initialize.useStateFromStores(items, () => {
+      let closure_5 = obj.useStateFromStores(items, () => {
         let usableCustomEmojiById = null;
         if (null != c3) {
           usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(tmp);
@@ -204,111 +281,63 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         return usableCustomEmojiById;
       });
       str = "text-muted";
-      if (hasUnreads.hasUnreads) {
+      if (hasUnreads) {
         str = "text-default";
       }
-      return closure_8(ForumTagContextMenuDefault, {
+      let obj2 = {
         tagId: tag.id,
         children(ref) {
+          let emojiURL;
+          let intl;
+          let items;
+          let items1;
+          let obj2;
           const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-          const obj = { style: null, accessible: true, accessibilityLabel: null, ref: null };
-          const items = [container.container, _require];
-          obj.style = items;
-          const intl = util.intl;
-          obj.accessibilityLabel = intl.formatToPlainString(util.t.tXXD6v, { tagName });
-          obj.ref = ref.ref;
+          const obj = {
+            style: items,
+            accessible: true,
+            accessibilityLabel: intl.formatToPlainString(intl2.t.tXXD6v, obj2),
+            ref: ref.ref,
+            children: items1,
+          };
+          items = [container.container, _require];
+          intl = intl2.intl;
+          obj2 = { tagName };
           const merged1 = Object.assign(merged);
           str = c4;
-          let tmp11Result = null != c4;
-          if (!tmp11Result) {
-            tmp11Result = null != c3;
-          }
+          let tmp11Result = null != c4 || null != c3;
           if (tmp11Result) {
-            const obj4 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
+            const obj4 = { textEmojiStyle: null, fastImageStyle: null, src: emojiURL, name: str };
             ({ textEmoji: obj3.textEmojiStyle, emoji: obj3.fastImageStyle } = container);
-            let emojiURL;
+            emojiURL = undefined;
+            const tmp13 = EmojiDefault;
             if (null != closure_5) {
-              const obj6 = { id: null, animated: null, size: null };
+              const obj6 = { id: null, animated: null, size: EMOJI_URL_BASE_SIZE };
               ({ id: obj5.id, animated: obj5.animated } = closure_5);
-              obj6.size = EMOJI_URL_BASE_SIZE;
-              emojiURL = AvatarUtilsDefault.getEmojiURL(obj6);
               const tmp12Result = AvatarUtilsDefault;
+              emojiURL = tmp12Result.getEmojiURL(obj6);
             }
-            obj4.src = emojiURL;
             if (str == null) {
               str = "";
             }
-            obj4.name = str;
-            tmp11Result = closure_2_8(EmojiDefault, obj4);
+            tmp11Result = metroImportAll(tmp13, obj4);
           }
-          const items1 = [
-            tmp11Result,
-            closure_2_8(Text_Text.Text, {
-              lineClamp: 1,
-              style: container.tagName,
-              variant: "text-xs/semibold",
-              color: str,
-              children: tagName,
-            }),
-          ];
-          obj.children = items1;
-          return options(View, obj);
+          items1 = [tmp11Result];
+          const obj10 = {
+            lineClamp: 1,
+            style: container.tagName,
+            variant: "text-xs/semibold",
+            color: str,
+            children: tagName,
+          };
+          items1[1] = metroImportAll(Text_Text.Text, obj10);
+          return React4(View, obj);
         },
-      });
+      };
+      return closure_8(ForumTagContextMenuDefault, obj2);
     };
 let closure_11 = tmp5;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/AppliedForumTag.tsx");
 
-export const AppliedForumTagPill = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      const cResult = c.c(11);
-      ({ tag, hasUnreads, containerStyle, disableEndMargin } = arg0);
-      const tmp2 = closure_10();
-      if (cResult[0] === disableEndMargin) {
-        if (cResult[1] === tmp2.disableEndMargin) {
-          if (cResult[3] === containerStyle) {
-            if (cResult[4] === tmp2.pill) {
-              if (cResult[5] === tmp3) {
-                let tmp5 = cResult[6];
-              }
-              if (cResult[7] === hasUnreads) {
-                if (cResult[8] === tmp5) {
-                  if (cResult[9] === tag) {
-                    let tmp6 = cResult[10];
-                  }
-                  return tmp6;
-                }
-              }
-              const obj2 = { tag, hasUnreads, containerStyle: tmp5 };
-              const tmp9 = closure_1_8(closure_11, obj2);
-              cResult[7] = hasUnreads;
-              cResult[8] = tmp5;
-              cResult[9] = tag;
-              cResult[10] = tmp9;
-              tmp6 = tmp9;
-            }
-          }
-          const items = [tmp2.pill, containerStyle, cResult[2]];
-          cResult[3] = containerStyle;
-          cResult[4] = tmp2.pill;
-          cResult[5] = cResult[2];
-          cResult[6] = items;
-          tmp5 = items;
-        }
-      }
-      cResult[0] = disableEndMargin;
-      disableEndMargin = tmp2.disableEndMargin;
-      cResult[1] = disableEndMargin;
-      cResult[2] = disableEndMargin ? tmp2.disableEndMargin : {};
-      const tmp4 = disableEndMargin ? tmp2.disableEndMargin : {};
-    }
-  : (arg0) => {
-      ({ tag, hasUnreads, containerStyle, disableEndMargin } = arg0);
-      const tmp = closure_10();
-      const obj = { tag, hasUnreads, containerStyle: null };
-      const items = [tmp.pill, containerStyle, disableEndMargin ? tmp.disableEndMargin : {}];
-      obj.containerStyle = items;
-      return closure_1_8(closure_11, obj);
-    };
+export const AppliedForumTagPill = tmp4;
 export const AppliedForumTag = tmp5;

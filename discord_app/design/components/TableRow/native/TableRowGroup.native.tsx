@@ -1,58 +1,64 @@
 // discord_app/design/components/TableRow/native/TableRowGroup.native.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../tokens/native/useToken.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
 import TableRowDivider from "TableRowDivider.native.tsx";
-import TableRowGroupContext from "TableRowGroupContext.native.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react3 from "TableRowGroupContext.native.tsx";
+import react from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+let c1, importDefault;
+
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+const View = react_native.View;
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: metroImportDefault } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
   container: { flexShrink: 0 },
-  content: {
-    borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
-    overflow: "hidden",
-    flexGrow: 1,
-    flexShrink: 0,
-    padding: 0,
-  },
+  content: obj2,
   title: { marginBottom: 8 },
   description: { marginBottom: 8 },
-  hasTrailingText: null,
-  helperText: null,
+  hasTrailingText: obj3,
+  helperText: { marginTop: 8 },
 };
-let obj3 = {
+obj2 = {
   borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
   overflow: "hidden",
   flexGrow: 1,
   flexShrink: 0,
   padding: 0,
 };
-obj2.hasTrailingText = {
-  borderBottomLeftRadius: nativeDefault.radii.none,
-  borderBottomRightRadius: nativeDefault.radii.none,
-};
-obj2.helperText = { marginTop: 8 };
-let closure_8 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+createStyles = createStyles.createStyles;
+obj3 = { borderBottomLeftRadius: nativeDefault.radii.none, borderBottomRightRadius: nativeDefault.radii.none };
+let closure_8 = createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(7);
+      let lineClamp;
+      let style;
+      let title;
+      const obj = react2;
+      const cResult = obj.c(7);
       ({ title, style, lineClamp } = arg0);
       const tmp4 = closure_8();
       if (cResult[0] === style) {
+        let tmp5;
         if (cResult[1] === tmp4.title) {
-          let tmp5 = cResult[2];
+          tmp5 = cResult[2];
         }
         if (cResult[3] === lineClamp) {
           if (cResult[4] === tmp5) {
+            let tmp6;
             if (cResult[5] === title) {
-              let tmp6 = cResult[6];
+              tmp6 = cResult[6];
             }
             return tmp6;
           }
@@ -79,57 +85,76 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = items;
     }
   : (arg0) => {
+      let items;
+      let lineClamp;
+      let style;
+      let title;
       ({ title, style, lineClamp } = arg0);
       const obj = {
         accessibilityRole: "header",
         variant: "text-md/medium",
         color: "text-subtle",
-        style: null,
+        style: items,
         lineClamp,
         children: title,
       };
-      const items = [closure_8().title, style];
-      obj.style = items;
+      items = [closure_8().title, style];
+      closure_8();
       return hasOwnProperty(Text_Text.Text, obj);
     };
-let closure_9 = tmp3;
-const size = fn(2);
+let closure_9 = tmp4;
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowGroup.native.tsx");
 
-export const TableRowGroupTitle = tmp3;
-export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
-  ({ title, description, helperText, hasIcons: require, hasTrailingText } = accessibilityLabel);
+export const TableRowGroupTitle = tmp4;
+export const TableRowGroup = function TableRowGroup(children) {
+  let adjustSpacingForIcon;
+  let description;
+  let hasTrailingText;
+  let helperText;
+  let items;
+  let title;
+  ({ title, description, helperText, hasIcons: require, hasTrailingText } = children);
+  children = children.children;
   if (hasTrailingText === undefined) {
     hasTrailingText = false;
   }
-  let str = accessibilityLabel.accessibilityRole;
+  let str = children.accessibilityRole;
   if (str === undefined) {
     str = "none";
   }
-  const tmp = closure_8();
+  const accessibilityLabel = children.accessibilityLabel;
+  let tmp = closure_8();
+  let obj = useToken;
   importDefault = false;
-  const Children = noop.Children;
-  const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_GROUP_HELPER_TEXT_STYLE);
-  const mapped = Children.map(accessibilityLabel.children, (arg0) => {
-    if (null == arg0) {
-      return null;
-    } else if (c1) {
-      const obj = { children: null };
-      const obj2 = { adjustSpacingForIcon };
-      const items = [hasOwnProperty(TableRowDivider.TableRowDivider, obj2), arg0];
-      obj.children = items;
-      const tmp2 = React5(timestampProducer, obj);
-    } else {
-      c1 = true;
+  const Children = react.Children;
+  const token = obj.useToken(nativeDefault.modules.mobile.TABLE_ROW_GROUP_HELPER_TEXT_STYLE);
+  const mapped = Children.map(children, (arg0) => {
+    let items;
+    let tmp = null;
+    if (null != arg0) {
+      let tmp3;
+      const tmp2 = c1;
+      if (tmp2) {
+        const obj = { children: items };
+        const obj2 = { adjustSpacingForIcon: require };
+        items = [hasOwnProperty(TableRowDivider.TableRowDivider, obj2), arg0];
+        tmp3 = metroImportDefault(metroRequire, obj);
+      } else {
+        c1 = true;
+        tmp3 = arg0;
+      }
+      tmp = tmp3;
     }
+    return tmp;
   });
-  let obj2 = { style: tmp.container, children: null };
+  let obj2 = { style: tmp.container, children: items };
   let tmp6Result = null != title;
+  const Provider = react3.TableRowGroupContext.Provider;
   if (tmp6Result) {
     const obj3 = { title };
     tmp6Result = closure_5(closure_9, obj3);
   }
-  let items = [tmp6Result, , ,];
+  items = [tmp6Result, , ,];
   let tmp6Result3 = null != description;
   if (tmp6Result3) {
     const obj4 = { variant: "text-sm/normal", color: "text-subtle", style: tmp.description, children: description };
@@ -142,21 +167,13 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
     hasTrailingText1 = tmp.hasTrailingText;
   }
   items1[1] = hasTrailingText1;
-  items[2] = closure_5(View, {
-    style: items1,
-    accessibilityRole: str,
-    accessibilityLabel: accessibilityLabel.accessibilityLabel,
-    children: mapped,
-  });
+  items[2] = closure_5(View, { style: items1, accessibilityRole: str, accessibilityLabel, children: mapped });
   let tmp6Result4 = null != helperText;
   if (tmp6Result4) {
     const obj5 = { variant: token, color: "text-muted", style: tmp.helperText, children: helperText };
     tmp6Result4 = closure_5(Text_Text.Text, obj5);
   }
   items[3] = tmp6Result4;
-  obj2.children = items;
-  return closure_5(TableRowGroupContext.TableRowGroupContext.Provider, {
-    value: true,
-    children: closure_7(View, obj2),
-  });
+  const obj6 = { value: true, children: closure_7(View, obj2) };
+  return closure_5(Provider, obj6);
 };

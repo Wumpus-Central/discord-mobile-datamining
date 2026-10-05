@@ -1,29 +1,30 @@
 // discord_app/records/SpotifyApplicationRecord.tsx
 import ApplicationRecord from "ApplicationRecord.tsx";
 import Platforms from "../lib/Platforms.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
+let tmp2;
 const spotify = "spotify";
 const value = Platforms.get("spotify");
-let closure_1 = value;
-class SpotifyApplicationRecord extends tmp4 {
+const map = value;
+class SpotifyApplicationRecord extends ApplicationRecord {
   constructor() {
-    tmp1 = new tmp({}, new.target, tmp);
-    tmp1.id = spotify;
-    tmp1.name = closure_1.name;
-    return tmp1;
+    const tmp2 = new tmp({}, new.target, tmp);
+    tmp2.id = spotify;
+    tmp2.name = map.name;
+    return tmp2;
+  }
+  getIconURL() {
+    return map.icon.lightPNG;
+  }
+  getWhiteIconURL() {
+    return map.icon.whitePNG;
   }
 }
 const prototype = SpotifyApplicationRecord.prototype;
-prototype["getIconURL"] = function getIconURL() {
-  return value.icon.lightPNG;
-};
-prototype["getWhiteIconURL"] = function getWhiteIconURL() {
-  return value.icon.whitePNG;
-};
 const tmp6 = new "getWhiteIconURL"({}, tmp2, tmp);
 tmp6.id = "spotify";
 tmp6.name = value.name;
-const size = fn(2);
 const result = size.fileFinishedImporting("records/SpotifyApplicationRecord.tsx");
 
 export default SpotifyApplicationRecord;

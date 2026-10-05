@@ -7,9 +7,8 @@ import AppLauncherBadgeUtils from "../app_launcher/utils/AppLauncherBadgeUtils.t
 import WideBannerDismissibleContentVersion from "../collectibles/utils/WideBannerDismissibleContentVersion.tsx";
 import EmbeddedActivitiesStore from "../activities/EmbeddedActivitiesStore.tsx";
 import CollectiblesMarketingsStore from "../collectibles/CollectiblesMarketingsStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/dismissible_content/VersionedDismissibleContentUtils.tsx");
 
 export const getVersionedDismissibleContentCurrentVersion = function getVersionedDismissibleContentCurrentVersion(id) {
@@ -30,12 +29,15 @@ export const getVersionedDismissibleContentCurrentVersion = function getVersione
       storeState: EmbeddedActivitiesStore.getState(),
       surface: Server.EmbeddedActivitySurfaces.VOICE_LAUNCHER,
     };
-    return AppLauncherBadgeUtils.getNewestBadgeableVersion(obj);
+    const getNewestBadgeableVersion = AppLauncherBadgeUtils.getNewestBadgeableVersion;
+    AppLauncherBadgeUtils;
+    return getNewestBadgeableVersion(obj);
   } else {
     if (dismissible_content.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK !== id) {
       if (dismissible_content.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE !== id) {
         if (dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_WIDE_BANNER === id) {
-          return WideBannerDismissibleContentVersion.getWideBannerDismissibleContentVersion();
+          const tmpResult3 = WideBannerDismissibleContentVersion;
+          return tmpResult3.getWideBannerDismissibleContentVersion();
         } else {
           if (dismissible_content.DismissibleContent.GAME_SHOP_ANNOUNCEMENT_MODAL !== id) {
             if (dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE !== id) {
@@ -43,7 +45,8 @@ export const getVersionedDismissibleContentCurrentVersion = function getVersione
                 if (dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER === id) {
                   return 0;
                 } else {
-                  TypeUtils.assertUnreachable(id, { andFail: false });
+                  const tmpResult4 = TypeUtils;
+                  tmpResult4.assertUnreachable(id, { andFail: false });
                   return 0;
                 }
               }

@@ -1,22 +1,25 @@
 // discord_app/modules/premium/native/usePremiumPrimaryGradientColors.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const result = size.fileFinishedImporting("modules/premium/native/usePremiumPrimaryGradientColors.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(4);
-      const token = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT);
-      const token1 = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
-      const token2 = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT);
+      const obj = react;
+      const cResult = obj.c(4);
+      const obj2 = useToken;
+      const token = obj2.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT);
+      const obj3 = useToken;
+      const token1 = obj3.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
+      const obj4 = useToken;
+      const token2 = obj4.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT);
       if (cResult[0] === token) {
         if (cResult[1] === token1) {
+          let tmp5;
           if (cResult[2] === token2) {
-            let tmp5 = cResult[3];
+            tmp5 = cResult[3];
           }
           return tmp5;
         }
@@ -29,8 +32,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = items;
     }
   : () => {
-      const items = [useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT), ,];
-      items[1] = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
-      items[2] = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT);
+      const items = [, ,];
+      const obj = useToken;
+      items[0] = obj.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT);
+      const obj2 = useToken;
+      items[1] = obj2.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
+      const obj3 = useToken;
+      items[2] = obj3.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT);
       return items;
     };
+const result = size.fileFinishedImporting("modules/premium/native/usePremiumPrimaryGradientColors.tsx");
+
+export default tmp2;

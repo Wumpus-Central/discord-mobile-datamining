@@ -1,7 +1,8 @@
 // discord_app/modules/badges/native/BadgeRarityPill.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl5 from "../../../intl/index.native.tsx";
 import BadgeRarity from "../../../../discord_common/js/shared/shared-constants/BadgeRarity.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import shared from "../../../design/shared.tsx";
@@ -11,90 +12,77 @@ import ExperimentalCommonIcon from "../../../design/components/Icon/native/redes
 import ExperimentalRareIcon from "../../../design/components/Icon/native/redesign/generated/ExperimentalRareIcon.tsx";
 import ExperimentalEpicIcon from "../../../design/components/Icon/native/redesign/generated/ExperimentalEpicIcon.tsx";
 import ExperimentalMythicIcon from "../../../design/components/Icon/native/redesign/generated/ExperimentalMythicIcon.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let closure_4;
+let hasOwnProperty;
+let obj2;
 function getRarityStyle(rarity, arg1) {
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let tmp2Result;
+  let tmp2Result3;
+  let tmp2Result4;
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   if (BadgeRarity.BadgeRarity.COMMON === rarity) {
     const obj2 = {
       Icon: ExperimentalCommonIcon.ExperimentalCommonIcon,
-      label: null,
+      label: intl4.string(intl5.t.L0K5ci),
       background: null,
       border: null,
-      text: null,
+      text: arg1 ? unsafe_rawColors.NEUTRAL_45 : unsafe_rawColors.NEUTRAL_15,
     };
-    const intl4 = util.intl;
-    obj2.label = intl4.string(util.t.L0K5ci);
+    intl4 = intl5.intl;
     ({ OPACITY_24: obj7.background, NEUTRAL_35: obj7.border } = unsafe_rawColors);
-    obj2.text = arg1 ? unsafe_rawColors.NEUTRAL_45 : unsafe_rawColors.NEUTRAL_15;
     return obj2;
   } else if (BadgeRarity.BadgeRarity.RARE === rarity) {
     const obj3 = {
       Icon: ExperimentalRareIcon.ExperimentalRareIcon,
-      label: null,
-      background: null,
-      border: null,
-      text: null,
+      label: intl3.string(intl5.t["sTx/5z"]),
+      background: tmp2Result.hexOpacityToRgba(unsafe_rawColors.ILLO_BLUE_40, c6),
+      border: unsafe_rawColors.ILLO_BLUE_40,
+      text: arg1 ? unsafe_rawColors.ILLO_BLUE_50 : unsafe_rawColors.ILLO_BLUE_30,
     };
-    const intl3 = util.intl;
-    obj3.label = intl3.string(util.t["sTx/5z"]);
-    obj3.background = ColorUtils.hexOpacityToRgba(unsafe_rawColors.ILLO_BLUE_40, c6);
-    obj3.border = unsafe_rawColors.ILLO_BLUE_40;
-    obj3.text = arg1 ? unsafe_rawColors.ILLO_BLUE_50 : unsafe_rawColors.ILLO_BLUE_30;
+    intl3 = intl5.intl;
+    tmp2Result = ColorUtils;
     return obj3;
   } else if (BadgeRarity.BadgeRarity.EPIC === rarity) {
     const obj4 = {
       Icon: ExperimentalEpicIcon.ExperimentalEpicIcon,
-      label: null,
-      background: null,
-      border: null,
-      text: null,
+      label: intl2.string(intl5.t.RD8RiN),
+      background: tmp2Result3.hexOpacityToRgba(unsafe_rawColors.ILLO_PURPLE_40, c6),
+      border: unsafe_rawColors.ILLO_PURPLE_40,
+      text: arg1 ? unsafe_rawColors.ILLO_PURPLE_50 : unsafe_rawColors.ILLO_PURPLE_30,
     };
-    const intl2 = util.intl;
-    obj4.label = intl2.string(util.t.RD8RiN);
-    obj4.background = ColorUtils.hexOpacityToRgba(unsafe_rawColors.ILLO_PURPLE_40, c6);
-    obj4.border = unsafe_rawColors.ILLO_PURPLE_40;
-    obj4.text = arg1 ? unsafe_rawColors.ILLO_PURPLE_50 : unsafe_rawColors.ILLO_PURPLE_30;
+    intl2 = intl5.intl;
+    tmp2Result3 = ColorUtils;
     return obj4;
   } else if (BadgeRarity.BadgeRarity.MYTHIC === rarity) {
     const obj = {
       Icon: ExperimentalMythicIcon.ExperimentalMythicIcon,
-      label: null,
-      background: null,
-      border: null,
-      text: null,
+      label: intl.string(intl5.t.vqc1ol),
+      background: tmp2Result4.hexOpacityToRgba(unsafe_rawColors.ILLO_ORANGE_40, c6),
+      border: unsafe_rawColors.ILLO_ORANGE_40,
+      text: arg1 ? unsafe_rawColors.ILLO_ORANGE_50 : unsafe_rawColors.ILLO_ORANGE_30,
     };
-    const intl = util.intl;
-    obj.label = intl.string(util.t.vqc1ol);
-    obj.background = ColorUtils.hexOpacityToRgba(unsafe_rawColors.ILLO_ORANGE_40, c6);
-    obj.border = unsafe_rawColors.ILLO_ORANGE_40;
-    obj.text = arg1 ? unsafe_rawColors.ILLO_ORANGE_50 : unsafe_rawColors.ILLO_ORANGE_30;
+    intl = intl5.intl;
+    tmp2Result4 = ColorUtils;
     return obj;
   } else {
     return null;
   }
 }
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const View = react_native.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
 let c6 = 0.24;
-const createStyles = fn(4890);
-let obj2 = {
-  pill: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: nativeDefault.space.PX_4,
-    paddingHorizontal: nativeDefault.space.PX_6,
-    minHeight: 20,
-    borderRadius: nativeDefault.radii.round,
-    borderWidth: 1,
-  },
-  label: { textTransform: "uppercase" },
-};
-let closure_8 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = {
+let obj = { pill: obj2, label: { textTransform: "uppercase" } };
+obj2 = {
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_4,
@@ -103,57 +91,70 @@ let obj3 = {
   borderRadius: nativeDefault.radii.round,
   borderWidth: 1,
 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/badges/native/BadgeRarityPill.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_8 = createStyles.createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (rarity) => {
-      const cResult = c.c(21);
+      let Icon;
+      let background;
+      let border;
+      let items;
+      let label;
+      let text;
+      const obj = react2;
+      const cResult = obj.c(21);
+      rarity = rarity.rarity;
       const tmp4 = closure_8();
-      const tmp5 = getRarityStyle(rarity.rarity, shared.isThemeLight(useThemeDefault()));
+      const obj2 = shared;
+      const tmp5 = getRarityStyle(rarity, obj2.isThemeLight(useThemeDefault()));
       if (null == tmp5) {
         return null;
       } else {
         ({ Icon, label, background, border, text } = tmp5);
         if (cResult[0] === background) {
+          let tmp6;
           if (cResult[1] === border) {
-            let tmp6 = cResult[2];
+            tmp6 = cResult[2];
           }
           if (cResult[3] === tmp4.pill) {
+            let tmp7;
             if (cResult[4] === tmp6) {
-              let tmp7 = cResult[5];
+              tmp7 = cResult[5];
             }
             if (cResult[6] === Icon) {
+              let tmp8;
+              let tmp11;
               if (cResult[7] === text) {
-                let tmp8 = cResult[8];
+                tmp8 = cResult[8];
               }
               if (cResult[9] !== text) {
                 const obj3 = { color: text };
                 cResult[9] = text;
                 cResult[10] = obj3;
-                let tmp11 = obj3;
+                tmp11 = obj3;
               } else {
                 tmp11 = cResult[10];
               }
               if (cResult[11] === tmp4.label) {
+                let tmp12;
                 if (cResult[12] === tmp11) {
-                  let tmp12 = cResult[13];
+                  tmp12 = cResult[13];
                 }
                 if (cResult[14] === label) {
+                  let tmp13;
                   if (cResult[15] === tmp12) {
-                    let tmp13 = cResult[16];
+                    tmp13 = cResult[16];
                   }
                   if (cResult[17] === tmp7) {
                     if (cResult[18] === tmp8) {
+                      let tmp16;
                       if (cResult[19] === tmp13) {
-                        let tmp16 = cResult[20];
+                        tmp16 = cResult[20];
                       }
                       return tmp16;
                     }
                   }
-                  const obj4 = { style: tmp7, children: null };
-                  const items = [tmp8, tmp13];
-                  obj4.children = items;
+                  const obj4 = { style: tmp7, children: items };
+                  items = [tmp8, tmp13];
                   const tmp19 = hasOwnProperty(View, obj4);
                   cResult[17] = tmp7;
                   cResult[18] = tmp8;
@@ -162,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp16 = tmp19;
                 }
                 const obj5 = { variant: "text-xs/bold", color: "none", lineClamp: 1, style: tmp12, children: label };
-                const tmp15 = React4(Text_Text.Text, obj5);
+                const tmp15 = React3(Text_Text.Text, obj5);
                 cResult[14] = label;
                 cResult[15] = tmp12;
                 cResult[16] = tmp15;
@@ -175,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp12 = items1;
             }
             const obj6 = { size: "xxs", color: text };
-            const tmp10 = React4(Icon, obj6);
+            const tmp10 = React3(Icon, obj6);
             cResult[6] = Icon;
             cResult[7] = text;
             cResult[8] = tmp10;
@@ -195,27 +196,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
     }
   : (rarity) => {
+      let items;
+      let items1;
+      let items2;
+      rarity = rarity.rarity;
       const tmp = closure_8();
-      const tmp4 = getRarityStyle(rarity.rarity, shared.isThemeLight(useThemeDefault()));
+      const obj = shared;
+      const tmp4 = getRarityStyle(rarity, obj.isThemeLight(useThemeDefault()));
       if (null == tmp4) {
         return null;
       } else {
         const text = tmp4.text;
-        const obj2 = { style: null, children: null };
-        const items = [tmp.pill];
+        const obj2 = { style: items, children: items1 };
+        items = [tmp.pill];
+        const obj4 = { backgroundColor: null, borderColor: null };
         ({ background: obj3.backgroundColor, border: obj3.borderColor } = tmp4);
-        items[1] = { backgroundColor: null, borderColor: null };
-        obj2.style = items;
+        items[1] = obj4;
+        const label = tmp4.label;
         const obj5 = { size: "xxs", color: text };
-        const items1 = [React4(tmp4.Icon, obj5)];
-        const obj6 = { variant: "text-xs/bold", color: "none", lineClamp: 1, style: null, children: null };
-        const items2 = [tmp.label];
+        items1 = [React3(tmp4.Icon, obj5)];
+        const obj6 = { variant: "text-xs/bold", color: "none", lineClamp: 1, style: items2, children: label };
+        items2 = [tmp.label];
         const obj11 = { color: text };
         items2[1] = obj11;
-        obj6.style = items2;
-        obj6.children = tmp4.label;
-        items1[1] = React4(Text_Text.Text, obj6);
-        obj2.children = items1;
+        items1[1] = React3(Text_Text.Text, obj6);
         return hasOwnProperty(View, obj2);
       }
     };
+const result = size.fileFinishedImporting("modules/badges/native/BadgeRarityPill.tsx");
+
+export default tmp4;

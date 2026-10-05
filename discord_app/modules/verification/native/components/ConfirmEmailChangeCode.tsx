@@ -1,53 +1,60 @@
 // discord_app/modules/verification/native/components/ConfirmEmailChangeCode.tsx
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import ChangeEmailStore from "../../ChangeEmailStore.tsx";
+import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const setEmailToken = fn(6009).setEmailToken;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeCode.tsx");
+let isChangeEmail, navigation;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+const setEmailToken = ChangeEmailStore.setEmailToken;
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (isChangeEmail) => {
-      const cResult = isChangeEmail(576).c(9);
-      isChangeEmail = isChangeEmail.isChangeEmail;
+      let tmp = isChangeEmail;
       let obj = isChangeEmail(576);
-      const navigation = isChangeEmail(1490).useNavigation();
+      const cResult = obj.c(9);
+      isChangeEmail = isChangeEmail.isChangeEmail;
+      let obj2 = isChangeEmail(1490);
+      navigation = obj2.useNavigation();
       if (cResult[0] === isChangeEmail) {
+        let tmp5;
+        let tmp7;
+        let tmp11;
+        let tmp10;
+        let tmp9;
+        let tmp15;
         if (cResult[1] === navigation) {
-          let tmp5 = cResult[2];
+          tmp5 = cResult[2];
         }
+        const tmp6 = globalThis;
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          closure_129_0 = asyncGeneratorStep(async (arg0) => {
-            await closure_0(c2[8]).confirmEmailChange(closure_0);
+          let closure_0 = _asyncToGenerator(async (arg0) => {
+            let c1;
+            closure_0 = arg0;
+            const obj3 = closure_0(c2[8]);
+            await obj3.confirmEmailChange(closure_0);
             return value;
           });
           const fn2 = function () {
-            const self = this;
-            const apply = isChangeEmail.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
+            return closure_0(...arguments);
           };
           cResult[3] = fn2;
-          let tmp7 = fn2;
+          tmp7 = fn2;
         } else {
           tmp7 = cResult[3];
         }
         const _Symbol2 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-          closure_130_0 = asyncGeneratorStep(async () => {
+          closure_0 = _asyncToGenerator(async () => {
+            let v3;
             if (v3 === 2) {
               v3 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp3 === 3) {
+            } else if (tmp2 === 3) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
@@ -69,8 +76,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return obj4;
                   } else {
                     c1 = 1;
+                    const obj2 = v3(closure_1_2[8]);
                     v3 = 1;
-                    const obj5 = { value: v3(dependencyMap[8]).sendConfirmationCode(), done: false };
+                    const obj5 = { value: obj2.sendConfirmationCode(), done: false };
                     return obj5;
                   }
                 } else if (arg0 === 1) {
@@ -84,21 +92,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   v3 = 3;
                   return { value: "IconComponent", done: null };
                 }
-              } catch (tmp7) {
-                v3 = tmp;
-                throw tmp7;
+              } catch (tmp6) {
+                v3 = 3;
+                throw tmp6;
               }
             }
           });
           const fn3 = function () {
-            const self = this;
-            const apply = isChangeEmail.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
+            return closure_0(...arguments);
           };
           const intl = tmp(1126).intl;
           const stringResult = intl.string(tmp(1126).t["2x/2Uo"]);
@@ -107,22 +108,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[4] = fn3;
           cResult[5] = stringResult;
           cResult[6] = stringResult1;
-          let tmp11 = stringResult1;
-          let tmp10 = stringResult;
-          let tmp9 = fn3;
+          tmp11 = stringResult1;
+          tmp10 = stringResult;
+          tmp9 = fn3;
         } else {
           tmp9 = cResult[4];
           tmp10 = cResult[5];
           tmp11 = cResult[6];
         }
         if (cResult[7] !== tmp5) {
-          let obj3 = {
-            onFormSubmit: tmp7,
-            onSuccess: tmp5,
-            onResend: tmp9,
-            headerText: tmp10,
-            confirmButtonText: tmp11,
-          };
           const tmp18 = jsx(navigation(6096), {
             onFormSubmit: tmp7,
             onSuccess: tmp5,
@@ -132,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           });
           cResult[7] = tmp5;
           cResult[8] = tmp18;
-          let tmp15 = tmp18;
+          tmp15 = tmp18;
         } else {
           tmp15 = cResult[8];
         }
@@ -156,13 +150,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = navigation;
       cResult[2] = fn;
       tmp5 = fn;
-      const obj2 = isChangeEmail(1490);
     }
   : (isChangeEmail) => {
       isChangeEmail = isChangeEmail.isChangeEmail;
-      const navigation = isChangeEmail(1490).useNavigation();
+      let obj = isChangeEmail(1490);
+      navigation = obj.useNavigation();
       const items = [isChangeEmail, navigation];
-      const callback = noop.useCallback((arg0) => {
+      const callback = react.useCallback((arg0) => {
         let tmp = arg0;
         if (arg0 == null) {
           tmp = null;
@@ -176,79 +170,76 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           push(VerificationModalScenes.ENTER_EMAIL);
         }
       }, items);
-      const obj2 = { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null };
-      let obj = isChangeEmail(1490);
-      closure_129_0 = asyncGeneratorStep(async (arg0) => {
-        await closure_0(c2[8]).confirmEmailChange(closure_0);
+      navigation(6096);
+      let closure_0 = _asyncToGenerator(async (arg0) => {
+        let c1;
+        closure_0 = arg0;
+        const obj3 = closure_0(c2[8]);
+        await obj3.confirmEmailChange(closure_0);
         return value;
       });
-      obj2.onFormSubmit = function () {
-        const self = this;
-        const apply = isChangeEmail.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      };
-      obj2.onSuccess = callback;
-      obj2.onResend = asyncGeneratorStep(async () => {
-        if (v3 === 2) {
-          v3 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            return { value: "IconComponent", done: null };
-          }
-        } else {
-          try {
-            v3 = 2;
-            if (0 === c1) {
+      const intl = isChangeEmail(1126).intl;
+      const intl2 = isChangeEmail(1126).intl;
+      return (
+        <tmp3
+          onFormSubmit={function () {
+            return closure_0(...arguments);
+          }}
+          onSuccess={callback}
+          onResend={_asyncToGenerator(async () => {
+            let v3;
+            if (v3 === 2) {
+              v3 = 3;
+              throw new TypeError("Generator functions may not be called on executing generators");
+            } else if (tmp2 === 3) {
               if (arg0 === 1) {
-                v3 = 3;
                 throw value;
               } else if (arg0 === 2) {
-                v3 = 3;
-                const obj4 = { value, done: true };
-                return obj4;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
-                c1 = 1;
-                v3 = 1;
-                const obj5 = { value: v3(dependencyMap[8]).sendConfirmationCode(), done: false };
-                return obj5;
+                return { value: "IconComponent", done: null };
               }
-            } else if (arg0 === 1) {
-              v3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              v3 = 3;
-              const obj = { value, done: true };
-              return obj;
             } else {
-              v3 = 3;
-              return { value: "IconComponent", done: null };
+              try {
+                v3 = 2;
+                if (0 === c1) {
+                  if (arg0 === 1) {
+                    v3 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    v3 = 3;
+                    const obj4 = { value, done: true };
+                    return obj4;
+                  } else {
+                    c1 = 1;
+                    const obj2 = v3(dependencyMap[8]);
+                    v3 = 1;
+                    const obj5 = { value: obj2.sendConfirmationCode(), done: false };
+                    return obj5;
+                  }
+                } else if (arg0 === 1) {
+                  v3 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  v3 = 3;
+                  const obj = { value, done: true };
+                  return obj;
+                } else {
+                  v3 = 3;
+                  return { value: "IconComponent", done: null };
+                }
+              } catch (tmp6) {
+                v3 = 3;
+                throw tmp6;
+              }
             }
-          } catch (tmp7) {
-            v3 = tmp;
-            throw tmp7;
-          }
-        }
-      });
-      const intl = isChangeEmail(1126).intl;
-      obj2.headerText = intl.string(isChangeEmail(1126).t["2x/2Uo"]);
-      const intl2 = isChangeEmail(1126).intl;
-      obj2.confirmButtonText = intl2.string(isChangeEmail(1126).t.PDTjLN);
-      return jsx(navigation(6096), {
-        onFormSubmit: null,
-        onSuccess: null,
-        onResend: null,
-        headerText: null,
-        confirmButtonText: null,
-      });
+          })}
+          headerText={intl.string(isChangeEmail(1126).t["2x/2Uo"])}
+          confirmButtonText={intl2.string(isChangeEmail(1126).t.PDTjLN)}
+        />
+      );
     };
+const result = size.fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeCode.tsx");
+
+export default tmp2;

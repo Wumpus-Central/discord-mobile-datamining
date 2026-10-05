@@ -4,6 +4,9 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let c2;
+let c3;
+let closure_4;
 ({ MessageFlags: c2, MessageStates: c3, MessageTypes: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/stage_channels/sendStageRequestToSpeakEphemeralMessage.tsx");
 
@@ -12,46 +15,36 @@ export const sendStageRequestToSpeakEphemeralMessage = function sendStageRequest
   user,
   requestToSpeakTimestamp,
 ) {
-  const obj2 = {
+  let obj2;
+  let obj3;
+  const obj = {
     type: "MESSAGE_CREATE",
     channelId,
-    message: null,
+    message: obj2,
     optimistic: false,
-    sendMessageOptions: null,
+    sendMessageOptions: {},
     isPushNotification: false,
   };
-  const obj3 = {
-    id: null,
-    type: null,
-    flags: null,
+  obj2 = {
+    id: obj3.fromTimestamp(Date.parse(requestToSpeakTimestamp)),
+    type: constants3.STAGE_RAISE_HAND,
+    flags: constants.EPHEMERAL,
     content: "",
-    channel_id: null,
-    author: null,
-    attachments: null,
-    embeds: null,
+    channel_id: channelId,
+    author: user,
+    attachments: [],
+    embeds: [],
     pinned: false,
-    mentions: null,
-    mention_channels: null,
-    mention_roles: null,
+    mentions: [],
+    mention_channels: [],
+    mention_roles: [],
     mention_everyone: false,
-    timestamp: null,
-    state: null,
+    timestamp: requestToSpeakTimestamp,
+    state: constants2.SENT,
     tts: false,
   };
-  const obj = DispatcherDefault;
-  obj3.id = SnowflakeUtilsDefault.fromTimestamp(Date.parse(requestToSpeakTimestamp));
-  obj3.type = constants3.STAGE_RAISE_HAND;
-  obj3.flags = constants.EPHEMERAL;
-  obj3.channel_id = channelId;
-  obj3.author = user;
-  obj3.attachments = [];
-  obj3.embeds = [];
-  obj3.mentions = [];
-  obj3.mention_channels = [];
-  obj3.mention_roles = [];
-  obj3.timestamp = requestToSpeakTimestamp;
-  obj3.state = constants2.SENT;
-  obj2.message = obj3;
-  obj2.sendMessageOptions = {};
-  obj.dispatch(obj2);
+  const dispatch = DispatcherDefault.dispatch;
+  DispatcherDefault;
+  obj3 = SnowflakeUtilsDefault;
+  dispatch(obj);
 };

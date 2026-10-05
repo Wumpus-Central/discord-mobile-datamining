@@ -1,19 +1,22 @@
 // discord_app/modules/connections/ConnectionsUtils.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import util from "../../intl/index.native.tsx";
+import Constants2 from "../../Constants.tsx";
+import intl27 from "../../intl/index.native.tsx";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import getConnectionsRolesDefault from "../channel/getConnectionsRoles.tsx";
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
+import Constants from "Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-const Constants = fn(6679);
+let hasOwnProperty;
+let metroRequire;
 ({ MetadataFields: hasOwnProperty, OperatorTypes: metroRequire } = Constants);
-const PlatformTypes = fn(1085).PlatformTypes;
-const size = fn(2);
+const PlatformTypes = Constants2.PlatformTypes;
 const result = size.fileFinishedImporting("modules/connections/ConnectionsUtils.tsx");
 
 export const officialApplicationIds = [
@@ -26,321 +29,356 @@ export const officialApplicationIds = [
 ];
 export const ConnectionConfigurationRuleOperator = { AND: 0, [0]: "AND", OR: 1, [1]: "OR" };
 export const getCallbackParamsFromURL = function getCallbackParamsFromURL(c0) {
-  let toURLSafeResult = URLUtilsDefault.toURLSafe(c0);
+  let code;
+  let error;
+  let error_description;
+  let state;
+  let uRLSearchParams;
+  const obj = URLUtilsDefault;
+  let toURLSafeResult = obj.toURLSafe(c0);
   if (toURLSafeResult == null) {
-    const obj2 = { searchParams: null };
     const _URLSearchParams = URLSearchParams;
-    const uRLSearchParams = new URLSearchParams();
-    obj2.searchParams = uRLSearchParams;
+    const self = this;
+    const self2 = this;
+    const obj2 = { searchParams: uRLSearchParams };
+    uRLSearchParams = new URLSearchParams();
     toURLSafeResult = obj2;
   }
   ({ code, state, error, error_description } = Object.fromEntries(toURLSafeResult.searchParams));
-  const fromEntriesResult = Object.fromEntries(toURLSafeResult.searchParams);
-  _modDef38(!Array.isArray(code), "Received multiple query param values for code");
+  Object.fromEntries(toURLSafeResult.searchParams);
   const tmpResult = _modDef38;
-  _modDef38(!Array.isArray(state), "Received multiple query param values for state");
+  tmpResult(!Array.isArray(code), "Received multiple query param values for code");
   const tmpResult4 = _modDef38;
-  _modDef38(!Array.isArray(error), "Received multiple query param values for error");
+  tmpResult4(!Array.isArray(state), "Received multiple query param values for state");
   const tmpResult5 = _modDef38;
-  _modDef38(!Array.isArray(errorDescription), "Received multiple query param values for error_description");
+  tmpResult5(!Array.isArray(error), "Received multiple query param values for error");
+  const tmpResult6 = _modDef38;
+  tmpResult6(!Array.isArray(errorDescription), "Received multiple query param values for error_description");
   return { code, state, error, errorDescription };
 };
 export const getConnectionsCheckText = function getConnectionsCheckText(value) {
+  let closure_0;
+  let connectionMetadataField;
+  let connectionType;
+  let operator;
+  let operatorText;
+  let prop;
   ({ connectionType, connectionMetadataField, operator, operatorText } = value);
   const rounded = Math.round(Number(value.value));
   _require = rounded;
   if (constants2.EQUAL === operator) {
     let tmp14 = connectionType === PlatformTypes.PAYPAL;
+    const H97H4S = require("intl").t.H97H4S;
+    const tmp11 = _require;
     if (tmp14) {
       tmp14 = connectionMetadataField === constants.PAYPAL_VERIFIED;
     }
-    let H97H4S = require("util").t.H97H4S;
+    prop = H97H4S;
     if (tmp14) {
-      H97H4S = tmp11(1126).t["N95b+f"];
+      prop = tmp11(1126).t["N95b+f"];
     }
-    tmp11 = _require;
   } else if (constants2.NOT_EQUAL === operator) {
-    H97H4S = require("util").t["D9B/q2"];
+    prop = require("intl").t["D9B/q2"];
   } else if (constants2.LESS_THAN === operator) {
-    H97H4S = require("util").t["3ru8/N"];
+    prop = require("intl").t["3ru8/N"];
     const _Math2 = Math;
     _require = Math.max(0, rounded - 1);
   } else if (constants2.GREATER_THAN === operator) {
-    H97H4S = require("util").t.wCVDHn;
+    prop = require("intl").t.wCVDHn;
     const _Math = Math;
     _require = Math.max(0, rounded + 1);
   } else {
     if (undefined !== operator) {
-      H97H4S = null;
+      prop = null;
     }
     return null;
   }
   if (null != operatorText) {
-    H97H4S = operatorText;
+    prop = operatorText;
   }
-  let formatResult = H97H4S;
-  if (null != H97H4S) {
-    formatResult = H97H4S;
+  let formatResult = prop;
+  if (null != prop) {
+    formatResult = prop;
     if (null != operator) {
       if (PlatformTypes.REDDIT === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
-          const intl26 = require("util").intl;
+          const intl26 = require("intl").intl;
           const obj2 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.TPbtEu, { days });
+              const intl = intl27.intl;
+              const obj = { days };
+              return intl.formatToPlainString(intl27.t.TPbtEu, obj);
             },
           };
-          formatResult = intl26.format(H97H4S, obj2);
+          formatResult = intl26.format(prop, obj2);
         } else if (constants.REDDIT_TOTAL_KARMA === connectionMetadataField) {
-          const intl25 = require("util").intl;
+          const intl25 = require("intl").intl;
           const obj3 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.P2JAEc, { karma });
+              const intl = intl27.intl;
+              const obj = { karma };
+              return intl.formatToPlainString(intl27.t.P2JAEc, obj);
             },
           };
-          formatResult = intl25.format(H97H4S, obj3);
+          formatResult = intl25.format(prop, obj3);
         } else if (constants.REDDIT_GOLD === connectionMetadataField) {
-          const intl24 = require("util").intl;
+          const intl24 = require("intl").intl;
           const obj4 = {
             platformQuantityHook() {
-              const intl = closure_0(1126).intl;
-              return intl.string(closure_0(1126).t["+/5TCx"]);
+              const intl = closure_0(dependencyMap[6]).intl;
+              return intl.string(closure_0(dependencyMap[6]).t["+/5TCx"]);
             },
           };
-          formatResult = intl24.format(H97H4S, obj4);
+          formatResult = intl24.format(prop, obj4);
         } else if (constants.REDDIT_MOD === connectionMetadataField) {
-          const intl23 = require("util").intl;
+          const intl23 = require("intl").intl;
           const obj5 = {
             platformQuantityHook() {
-              const intl = closure_0(1126).intl;
-              return intl.string(closure_0(1126).t["9rPbEs"]);
+              const intl = closure_0(dependencyMap[6]).intl;
+              return intl.string(closure_0(dependencyMap[6]).t["9rPbEs"]);
             },
           };
-          formatResult = intl23.format(H97H4S, obj5);
+          formatResult = intl23.format(prop, obj5);
         } else {
           return null;
         }
       } else if (PlatformTypes.STEAM === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
-          const intl22 = require("util").intl;
+          const intl22 = require("intl").intl;
           const obj6 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.TPbtEu, { days });
+              const intl = intl27.intl;
+              const obj = { days };
+              return intl.formatToPlainString(intl27.t.TPbtEu, obj);
             },
           };
-          formatResult = intl22.format(H97H4S, obj6);
+          formatResult = intl22.format(prop, obj6);
         } else if (constants.STEAM_GAME_COUNT === connectionMetadataField) {
-          const intl21 = require("util").intl;
+          const intl21 = require("intl").intl;
           const obj7 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.H9eLoe, { count });
+              const intl = intl27.intl;
+              const obj = { count };
+              return intl.formatToPlainString(intl27.t.H9eLoe, obj);
             },
           };
-          formatResult = intl21.format(H97H4S, obj7);
+          formatResult = intl21.format(prop, obj7);
         } else if (constants.STEAM_ITEM_COUNT_TF2 === connectionMetadataField) {
-          const intl20 = require("util").intl;
+          const intl20 = require("intl").intl;
           const obj8 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.MceZJ6, { count });
+              const intl = intl27.intl;
+              const obj = { count };
+              return intl.formatToPlainString(intl27.t.MceZJ6, obj);
             },
           };
-          formatResult = intl20.format(H97H4S, obj8);
+          formatResult = intl20.format(prop, obj8);
         } else if (constants.STEAM_ITEM_COUNT_DOTA2 === connectionMetadataField) {
-          const intl19 = require("util").intl;
+          const intl19 = require("intl").intl;
           const obj9 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.dMnRar, { count });
+              const intl = intl27.intl;
+              const obj = { count };
+              return intl.formatToPlainString(intl27.t.dMnRar, obj);
             },
           };
-          formatResult = intl19.format(H97H4S, obj9);
+          formatResult = intl19.format(prop, obj9);
         } else {
           return null;
         }
       } else if (PlatformTypes.BLUESKY === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
-          const intl18 = require("util").intl;
+          const intl18 = require("intl").intl;
           const obj10 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.TPbtEu, { days });
+              const intl = intl27.intl;
+              const obj = { days };
+              return intl.formatToPlainString(intl27.t.TPbtEu, obj);
             },
           };
-          formatResult = intl18.format(H97H4S, obj10);
+          formatResult = intl18.format(prop, obj10);
         } else if (constants.BLUESKY_FOLLOWERS_COUNT === connectionMetadataField) {
-          const intl17 = require("util").intl;
+          const intl17 = require("intl").intl;
           const obj11 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.xIdKU8, { count });
+              const intl = intl27.intl;
+              const obj = { count };
+              return intl.formatToPlainString(intl27.t.xIdKU8, obj);
             },
           };
-          formatResult = intl17.format(H97H4S, obj11);
+          formatResult = intl17.format(prop, obj11);
         } else if (constants.BLUESKY_STATUSES_COUNT === connectionMetadataField) {
-          const intl16 = require("util").intl;
+          const intl16 = require("intl").intl;
           const obj12 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t["dy3+NR"], { count });
+              const intl = intl27.intl;
+              const obj = { count };
+              return intl.formatToPlainString(intl27.t["dy3+NR"], obj);
             },
           };
-          formatResult = intl16.format(H97H4S, obj12);
+          formatResult = intl16.format(prop, obj12);
         } else {
           return null;
         }
       } else if (PlatformTypes.TWITTER === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
-          const intl15 = require("util").intl;
+          const intl15 = require("intl").intl;
           const obj13 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.TPbtEu, { days });
+              const intl = intl27.intl;
+              const obj = { days };
+              return intl.formatToPlainString(intl27.t.TPbtEu, obj);
             },
           };
-          formatResult = intl15.format(H97H4S, obj13);
+          formatResult = intl15.format(prop, obj13);
         } else if (constants.TWITTER_VERIFIED === connectionMetadataField) {
-          const intl14 = require("util").intl;
+          const intl14 = require("intl").intl;
           const obj14 = {
             platformQuantityHook() {
-              const intl = closure_0(1126).intl;
-              return intl.string(closure_0(1126).t.xRygZL);
+              const intl = closure_0(dependencyMap[6]).intl;
+              return intl.string(closure_0(dependencyMap[6]).t.xRygZL);
             },
           };
-          formatResult = intl14.format(H97H4S, obj14);
+          formatResult = intl14.format(prop, obj14);
         } else if (constants.TWITTER_FOLLOWERS_COUNT === connectionMetadataField) {
-          const intl13 = require("util").intl;
+          const intl13 = require("intl").intl;
           const obj15 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.bkajar, { count });
+              const intl = intl27.intl;
+              const obj = { count };
+              return intl.formatToPlainString(intl27.t.bkajar, obj);
             },
           };
-          formatResult = intl13.format(H97H4S, obj15);
+          formatResult = intl13.format(prop, obj15);
         } else if (constants.TWITTER_STATUSES_COUNT === connectionMetadataField) {
-          const intl12 = require("util").intl;
+          const intl12 = require("intl").intl;
           const obj16 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.MI7NKi, { count });
+              const intl = intl27.intl;
+              const obj = { count };
+              return intl.formatToPlainString(intl27.t.MI7NKi, obj);
             },
           };
-          formatResult = intl12.format(H97H4S, obj16);
+          formatResult = intl12.format(prop, obj16);
         } else {
           return null;
         }
       } else if (PlatformTypes.PAYPAL === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
-          const intl11 = require("util").intl;
+          const intl11 = require("intl").intl;
           const obj17 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.TPbtEu, { days });
+              const intl = intl27.intl;
+              const obj = { days };
+              return intl.formatToPlainString(intl27.t.TPbtEu, obj);
             },
           };
-          formatResult = intl11.format(H97H4S, obj17);
+          formatResult = intl11.format(prop, obj17);
         } else if (tmp37.PAYPAL_VERIFIED === connectionMetadataField) {
-          const intl10 = require("util").intl;
+          const intl10 = require("intl").intl;
           const obj18 = {
             platformQuantityHook() {
-              const intl = closure_0(1126).intl;
-              return intl.string(closure_0(1126).t.slSQuB);
+              const intl = closure_0(dependencyMap[6]).intl;
+              return intl.string(closure_0(dependencyMap[6]).t.slSQuB);
             },
           };
-          formatResult = intl10.format(H97H4S, obj18);
+          formatResult = intl10.format(prop, obj18);
         } else {
           return null;
         }
       } else if (PlatformTypes.EBAY === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
-          const intl9 = require("util").intl;
+          const intl9 = require("intl").intl;
           const obj19 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.TPbtEu, { days });
+              const intl = intl27.intl;
+              const obj = { days };
+              return intl.formatToPlainString(intl27.t.TPbtEu, obj);
             },
           };
-          formatResult = intl9.format(H97H4S, obj19);
+          formatResult = intl9.format(prop, obj19);
         } else if (constants.EBAY_TOP_RATED_SELLER === connectionMetadataField) {
-          const intl8 = require("util").intl;
+          const intl8 = require("intl").intl;
           const obj20 = {
             platformQuantityHook() {
-              const intl = closure_0(1126).intl;
-              return intl.string(closure_0(1126).t.TEEYwa);
+              const intl = closure_0(dependencyMap[6]).intl;
+              return intl.string(closure_0(dependencyMap[6]).t.TEEYwa);
             },
           };
-          formatResult = intl8.format(H97H4S, obj20);
+          formatResult = intl8.format(prop, obj20);
         } else if (constants.EBAY_POSITIVE_FEEDBACK_PERCENTAGE === connectionMetadataField) {
-          const intl7 = require("util").intl;
+          const intl7 = require("intl").intl;
           const obj21 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.rl9Vgy, { value });
+              const intl = intl27.intl;
+              const obj = { value };
+              return intl.formatToPlainString(intl27.t.rl9Vgy, obj);
             },
           };
-          formatResult = intl7.format(H97H4S, obj21);
+          formatResult = intl7.format(prop, obj21);
         } else if (constants.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT === connectionMetadataField) {
-          const intl6 = require("util").intl;
+          const intl6 = require("intl").intl;
           const obj22 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.QP5W1R, { count });
+              const intl = intl27.intl;
+              const obj = { count };
+              return intl.formatToPlainString(intl27.t.QP5W1R, obj);
             },
           };
-          formatResult = intl6.format(H97H4S, obj22);
+          formatResult = intl6.format(prop, obj22);
         } else if (constants.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT === connectionMetadataField) {
-          const intl5 = require("util").intl;
+          const intl5 = require("intl").intl;
           const obj23 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t["6ZFYdK"], { count });
+              const intl = intl27.intl;
+              const obj = { count };
+              return intl.formatToPlainString(intl27.t["6ZFYdK"], obj);
             },
           };
-          formatResult = intl5.format(H97H4S, obj23);
+          formatResult = intl5.format(prop, obj23);
         } else {
           return null;
         }
       } else if (PlatformTypes.TIKTOK === connectionType) {
         if (constants.TIKTOK_VERIFIED === connectionMetadataField) {
-          const intl4 = require("util").intl;
+          const intl4 = require("intl").intl;
           const obj24 = {
             platformQuantityHook() {
-              const intl = closure_0(1126).intl;
-              return intl.string(closure_0(1126).t.uv7ety);
+              const intl = closure_0(dependencyMap[6]).intl;
+              return intl.string(closure_0(dependencyMap[6]).t.uv7ety);
             },
           };
-          formatResult = intl4.format(H97H4S, obj24);
+          formatResult = intl4.format(prop, obj24);
         } else if (constants.TIKTOK_FOLLOWER_COUNT === connectionMetadataField) {
-          const intl3 = require("util").intl;
+          const intl3 = require("intl").intl;
           const obj25 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.qIPDRy, { count });
+              const intl = intl27.intl;
+              const obj = { count };
+              return intl.formatToPlainString(intl27.t.qIPDRy, obj);
             },
           };
-          formatResult = intl3.format(H97H4S, obj25);
+          formatResult = intl3.format(prop, obj25);
         } else if (constants.TIKTOK_FOLLOWING_COUNT === connectionMetadataField) {
-          const intl2 = require("util").intl;
+          const intl2 = require("intl").intl;
           const obj26 = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t.zRta4X, { count });
+              const intl = intl27.intl;
+              const obj = { count };
+              return intl.formatToPlainString(intl27.t.zRta4X, obj);
             },
           };
-          formatResult = intl2.format(H97H4S, obj26);
+          formatResult = intl2.format(prop, obj26);
         } else if (constants.TIKTOK_LIKES_COUNT === connectionMetadataField) {
-          let intl = require("util").intl;
-          const obj = {
+          let intl = require("intl").intl;
+          let obj = {
             platformQuantityHook() {
-              const intl = util.intl;
-              return intl.formatToPlainString(util.t["ar0WW+"], { count });
+              const intl = intl27.intl;
+              const obj = { count };
+              return intl.formatToPlainString(intl27.t["ar0WW+"], obj);
             },
           };
-          formatResult = intl.format(H97H4S, obj);
+          formatResult = intl.format(prop, obj);
         } else {
           return null;
         }
@@ -355,6 +393,10 @@ export const isVerifiedRolesChannelVisible = function isVerifiedRolesChannelVisi
   return sortedRoles.some((tags) => null === tags.tags.guild_connections);
 };
 export const getVisibleConnectionsRole = function getVisibleConnectionsRole(guildMember) {
+  let channel;
+  let guild;
+  let onlyChannelConnectionRoles;
+  let sortedGuildRoles;
   guildMember = guildMember.guildMember;
   ({ guild, sortedGuildRoles, channel, onlyChannelConnectionRoles } = guildMember);
   if (onlyChannelConnectionRoles === undefined) {
@@ -363,12 +405,14 @@ export const getVisibleConnectionsRole = function getVisibleConnectionsRole(guil
   if (null == guildMember) {
     return null;
   } else {
+    const tmp = null == guild && null != channel;
     if (tmp) {
       guild = GuildStore.getGuild(channel.getGuildId());
     }
     if (null == guild) {
       return null;
     } else {
+      let tmp7;
       if (null == sortedGuildRoles) {
         sortedGuildRoles = GuildRoleStore.getSortedRoles(tmp10);
       }
@@ -380,13 +424,14 @@ export const getVisibleConnectionsRole = function getVisibleConnectionsRole(guil
         }
         return hasItem;
       });
-      const intersectionResult = _modDef12.intersection(found, getConnectionsRolesDefault(channel));
+      const obj = _modDef12;
+      const intersectionResult = obj.intersection(found, getConnectionsRolesDefault(channel));
       if (intersectionResult.length > 0) {
         let first = intersectionResult[0];
         if (first == null) {
           first = null;
         }
-        let tmp7 = first;
+        tmp7 = first;
       } else {
         tmp7 = null;
         if (!onlyChannelConnectionRoles) {
@@ -399,13 +444,14 @@ export const getVisibleConnectionsRole = function getVisibleConnectionsRole(guil
       }
       return tmp7;
     }
-    tmp = null == guild && null != channel;
   }
 };
 export const getCreatedAtDate = function getCreatedAtDate(metadata, locale) {
   if (null != metadata) {
     if ("" !== metadata) {
       const _Date = Date;
+      const self = this;
+      const self2 = this;
       const date = new Date(metadata);
       const _Date2 = Date;
       let toLocaleDateStringResult = null;

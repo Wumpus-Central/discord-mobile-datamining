@@ -1,90 +1,107 @@
 // discord_app/modules/game_community_upsell/native/MobileGameCommunitiesActionCreators.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
+import Constants from "../../../Constants.tsx";
 import DurationsDefault from "../../../utils/Durations.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import _modDef1478 from "../../../../_runtime/metro/01478__.js";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
 import LocalAppDetectionStore from "../../local_app_detection/native/LocalAppDetectionStore.tsx";
 import MobileGameCommunitiesStore from "MobileGameCommunitiesStore.tsx";
+import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-let closure_7 = async function _fetchDetectedGameCommunities() {
-  if (c3 === 2) {
-    c3 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp5 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
+let c0, c1, c2, c3;
+
+let obj = function _fetchDetectedGameCommunities() {
+  let dismissedGuildIds;
+  obj = _asyncToGenerator(async () => {
+    let obj4;
+    let stringify;
+    function getDetectedGameIds() {
+      obj = {};
+      const ALL_DETECTABLE_APP_NAMES = gameIds(closure_1_2[4]).ALL_DETECTABLE_APP_NAMES;
+      for (const item10010 of ALL_DETECTABLE_APP_NAMES) {
+        obj[item10010] = appInstalled.isAppInstalled(item10010);
+        continue;
+      }
+      const obj2 = gameIds(closure_1_2[5]);
+      return obj2.getGameIdsForDetectedGames(obj);
     }
-  } else {
-    try {
-      c3 = 2;
-      if (0 === c2) {
-        if (arg0 === 1) {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        let guilds;
+        let gameIds;
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let closure_1 = tmp2;
+            guilds = undefined;
+            const tmp17 = getDetectedGameIds();
+            gameIds = tmp17;
+            const HTTP = HTTPUtils.HTTP;
+            const request = {
+              url: constants.MOBILE_GAME_COMMUNITIES,
+              query: stringify(obj4),
+              oldFormErrors: true,
+              rejectWithError: true,
+            };
+            const get = HTTP.get;
+            obj4 = {
+              game_ids: tmp17,
+              limit: 20,
+              ignored_guild_ids: Array.from(dismissedGuildIds.getDismissedGuildIds()),
+            };
+            const _Array = Array;
+            stringify = _modDef1478.stringify;
+            c2 = 1;
+            c3 = 1;
+            const obj5 = { value: get(request), done: false };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
-          closure_1 = tmp3;
-          closure_0 = tmp2;
-          closure_128_0 = undefined;
-          let guilds;
-          const tmp19 = (function getDetectedGameIds() {
-            const obj = {};
-            for (const item10010 of tmp) {
-              obj[item10010] = appInstalled.isAppInstalled(item10010);
-              continue;
-            }
-            return closure_1_0(closure_1_2[5]).getGameIdsForDetectedGames(obj);
-          })();
-          closure_128_0 = tmp19;
-          const HTTP = HTTPUtils.HTTP;
-          const request = {
-            url: constants.MOBILE_GAME_COMMUNITIES,
-            query: null,
-            oldFormErrors: true,
-            rejectWithError: true,
-          };
-          const obj4 = { game_ids: tmp19, limit: 20, ignored_guild_ids: null };
-          const _Array = Array;
-          obj4.ignored_guild_ids = Array.from(dismissedGuildIds.getDismissedGuildIds());
-          request.query = _modDef1478.stringify(obj4);
-          c2 = 1;
-          c3 = 1;
-          const obj5 = { value: HTTP.get(request), done: false };
-          return obj5;
+          guilds = value.body.guilds;
+          obj = closure_129_1(closure_129_2[8]);
+          const obj7 = { type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds, gameIds };
+          obj.dispatch(obj7);
+          c3 = 3;
+          return { value: "IconComponent", done: null };
         }
-      } else if (arg0 === 1) {
+      } catch (tmp13) {
         c3 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
-      } else {
-        guilds = value.body.guilds;
-        const obj7 = { type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds, gameIds: closure_128_0 };
-        closure_129_1(closure_129_2[8]).dispatch(obj7);
-        c3 = 3;
-        return { value: "IconComponent", done: null };
+        throw tmp13;
       }
-    } catch (tmp14) {
-      c3 = tmp;
-      throw tmp14;
     }
-  }
+  });
+  return obj(...arguments);
 };
-const Endpoints = fn(1085).Endpoints;
-const initialize = fn(504);
-let obj2 = {
+const Endpoints = Constants.Endpoints;
+obj = {
   getQueryId(arg0) {
     let str = null;
     if (arg0) {
@@ -95,15 +112,21 @@ let obj2 = {
   get() {
     return MobileGameCommunitiesStore.getPresentableUpsellGuilds();
   },
-  load: null,
-  staleAfter: null,
-  failureStaleAfter: null,
+  load: function () {
+    return closure_8(...arguments);
+  },
+  staleAfter: DurationsDefault.Seconds.DAY,
+  failureStaleAfter: DurationsDefault.Seconds.MINUTE,
 };
-let closure_8 = asyncGeneratorStep(async () => {
+const createFetchStore = get_initialized.createFetchStore;
+let closure_8 = _asyncToGenerator(async () => {
+  function fetchDetectedGameCommunities() {
+    return closure_1_7(...arguments);
+  }
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
+  } else if (tmp2 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -129,19 +152,7 @@ let closure_8 = asyncGeneratorStep(async () => {
           if (timestamp - MobileGameCommunitiesStore.getLastFetchedAt() >= 86400000) {
             c1 = 1;
             c0 = 1;
-            const obj4 = {
-              value: (function fetchDetectedGameCommunities() {
-                const self = this;
-                const apply = closure_1_7.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              })(),
-              done: false,
-            };
+            const obj4 = { value: fetchDetectedGameCommunities(), done: false };
             return obj4;
           }
         }
@@ -150,36 +161,25 @@ let closure_8 = asyncGeneratorStep(async () => {
         throw value;
       } else if (arg0 === 2) {
         c0 = 3;
-        const obj = { value, done: true };
+        obj = { value, done: true };
         return obj;
       }
       c0 = 3;
       return { value: "IconComponent", done: null };
-    } catch (tmp8) {
-      c0 = tmp;
-      throw tmp8;
+    } catch (tmp7) {
+      c0 = 3;
+      throw tmp7;
     }
   }
 });
-obj2.load = function () {
-  const self = this;
-  const apply = closure_8.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
-obj2.staleAfter = DurationsDefault.Seconds.DAY;
-obj2.failureStaleAfter = DurationsDefault.Seconds.MINUTE;
-const fetchStore = initialize.createFetchStore(MobileGameCommunitiesStore, obj2);
-const size = fn(2);
+const fetchStore = createFetchStore(MobileGameCommunitiesStore, obj);
 const result = size.fileFinishedImporting(
   "modules/game_community_upsell/native/MobileGameCommunitiesActionCreators.tsx",
 );
 
 export const useMobileGameCommunities = fetchStore;
 export const dismissGuild = function dismissGuild(guildId) {
-  DispatcherDefault.dispatch({ type: "MOBILE_GAME_COMMUNITIES_DISMISS_GUILD", guildId });
+  obj = DispatcherDefault;
+  const obj2 = { type: "MOBILE_GAME_COMMUNITIES_DISMISS_GUILD", guildId };
+  obj.dispatch(obj2);
 };

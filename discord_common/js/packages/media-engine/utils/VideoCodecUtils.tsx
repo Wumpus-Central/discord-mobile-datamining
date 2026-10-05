@@ -2,6 +2,17 @@
 import Constants from "../Constants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+let encode, set;
+
+const f89883 = (name) => name.name;
+const f89885 = (codec) => {
+  codec = codec.codec;
+  let str = "AV1";
+  if ("AV1X" !== codec) {
+    str = codec;
+  }
+  return { name: str, encode: codec.encode, decode: codec.decode };
+};
 const ExperimentFlags = Constants.ExperimentFlags;
 let items = [
   { name: "H264", encode: true, decode: true },
@@ -14,31 +25,32 @@ export const filterParsedVideoCodecs = function filterParsedVideoCodecs(
   experimentCodecs,
   arg2,
 ) {
-  closure_0 = parseNativeCodecsResult;
+  let closure_0 = parseNativeCodecsResult;
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
   items = undefined;
-  let set;
   const combined = experimentCodecs.concat(items);
   items = [];
   const item = combined.forEach((encode) => {
-    const found = mapped.find((name) => encode.name === name.name);
+    let closure_0 = encode;
+    const found = mapped.find((name) => name.name === name.name);
     if (null != found) {
-      const obj = { name: null, encode: null, decode: null };
+      const obj = { name: null, encode, decode: found.decode && encode.decode };
       ({ name: obj.name, encode } = found);
+      const push = items.push;
       if (encode) {
         encode = encode.encode;
       }
-      obj.encode = encode;
-      obj.decode = found.decode && encode.decode;
-      items.push(obj);
+      push(obj);
     }
   });
   if (flag) {
     const _Set = Set;
-    set = new Set(items.map((name) => name.name));
+    const self = this;
+    const self2 = this;
+    new Set(items.map(f89883));
     const item1 = parseNativeCodecsResult.forEach((name) => {
       if (!set.has(name.name)) {
         const obj = { name: null, encode: false, decode: null };
@@ -52,21 +64,19 @@ export const filterParsedVideoCodecs = function filterParsedVideoCodecs(
 export const getExperimentCodecs = function getExperimentCodecs(experimentFlags) {
   const hasItem = experimentFlags.has(ExperimentFlags.SIGNAL_AV1_ENCODE);
   const hasItem1 = experimentFlags.has(ExperimentFlags.SIGNAL_AV1_DECODE);
-  let tmp4 = hasItem;
-  if (!hasItem) {
-    tmp4 = hasItem1;
-  }
   items = [];
+  const tmp4 = hasItem || hasItem1;
   if (tmp4) {
     const obj = { name: "AV1", encode: hasItem, decode: hasItem1 };
     items.push(obj);
   }
   const tmp6 = !experimentFlags.has(ExperimentFlags.H265_DISABLE_ENCODE);
-  items.push({
+  const obj2 = {
     name: "H265",
-    encode: !experimentFlags.has(ExperimentFlags.H265_DISABLE_ENCODE),
+    encode: tmp6,
     decode: experimentFlags.has(ExperimentFlags.H265_HARDWARE_DECODE_AVAILABLE),
-  });
+  };
+  items.push(obj2);
   return items;
 };
 export const filterVideoCodecs = function filterVideoCodecs(arg0, arr) {
@@ -75,37 +85,32 @@ export const filterVideoCodecs = function filterVideoCodecs(arg0, arr) {
     flag = false;
   }
   const parsed = JSON.parse(arg0);
-  const mapped = parsed.map((codec) => {
-    codec = codec.codec;
-    let str = "AV1";
-    if ("AV1X" !== codec) {
-      str = codec;
-    }
-    return { name: str, encode: codec.encode, decode: codec.decode };
-  });
+  const mapped = parsed.map(f89885);
   if (flag === undefined) {
     flag = false;
   }
   items = undefined;
-  let set;
+  set = undefined;
   const combined = arr.concat(items);
   items = [];
   const item = combined.forEach((encode) => {
-    const found = mapped.find((name) => encode.name === name.name);
+    let closure_0 = encode;
+    const found = mapped.find((name) => name.name === name.name);
     if (null != found) {
-      const obj = { name: null, encode: null, decode: null };
+      const obj = { name: null, encode, decode: found.decode && encode.decode };
       ({ name: obj.name, encode } = found);
+      const push = items.push;
       if (encode) {
         encode = encode.encode;
       }
-      obj.encode = encode;
-      obj.decode = found.decode && encode.decode;
-      items.push(obj);
+      push(obj);
     }
   });
   if (flag) {
     const _Set = Set;
-    set = new Set(items.map((name) => name.name));
+    const self = this;
+    const self2 = this;
+    set = new Set(items.map(f89883));
     const item1 = mapped.forEach((name) => {
       if (!set.has(name.name)) {
         const obj = { name: null, encode: false, decode: null };
@@ -118,14 +123,7 @@ export const filterVideoCodecs = function filterVideoCodecs(arg0, arr) {
 };
 export const parseNativeCodecs = function parseNativeCodecs(arg0) {
   const parsed = JSON.parse(arg0);
-  return parsed.map((codec) => {
-    codec = codec.codec;
-    let str = "AV1";
-    if ("AV1X" !== codec) {
-      str = codec;
-    }
-    return { name: str, encode: codec.encode, decode: codec.decode };
-  });
+  return parsed.map(f89885);
 };
 export function codecNameToPayloadName(name) {
   let str = "AV1X";

@@ -5,34 +5,40 @@ import UploadLimits from "../../modules/media_uploads/UploadLimits.tsx";
 import GuildProductAttachmentUploadTargetDefault from "../../modules/guild_products/GuildProductAttachmentUploadTarget.tsx";
 import ICYMIAttachmentUploadTargetDefault from "../../modules/icymi/ICYMIAttachmentUploadTarget.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const Constants = fn(1085);
+let hasOwnProperty;
+let metroRequire;
 ({ Endpoints: hasOwnProperty, MAX_UPLOAD_COUNT: metroRequire } = Constants);
-class MessageAttachmentUploadTarget {}
-const prototype = MessageAttachmentUploadTarget.prototype;
-prototype["getCreateAttachmentURL"] = function getCreateAttachmentURL(arg0) {
-  return hasOwnProperty.MESSAGE_CREATE_ATTACHMENT_UPLOAD(arg0);
-};
-prototype["getDeleteUploadURL"] = function getDeleteUploadURL(arg0) {
-  return hasOwnProperty.MESSAGE_DELETE_UPLOAD(arg0);
-};
-prototype["getMaxFileSize"] = function getMaxFileSize(arg0) {
-  const basicChannel = ChannelStore.getBasicChannel(arg0);
-  const obj = UploadLimits;
-  let guild_id;
-  if (basicChannel != null) {
-    guild_id = basicChannel.guild_id;
+class MessageAttachmentUploadTarget {
+  getCreateAttachmentURL(arg0) {
+    return hasOwnProperty.MESSAGE_CREATE_ATTACHMENT_UPLOAD(arg0);
   }
-  return obj.getEffectiveUploadLimit(FileUtilsAll.maxFileSize(guild_id));
-};
-prototype["getMaxAttachmentsCount"] = function getMaxAttachmentsCount() {
-  return timestampProducer;
-};
-prototype["getMaxTotalAttachmentSize"] = function getMaxTotalAttachmentSize() {
-  return UploadUtils.getMaxTotalAttachmentSize({ location: "MessageAttachmentUploadTarget" });
-};
-Object.defineProperty(prototype, "shouldReactNativeCompressUploads", {
+  getDeleteUploadURL(arg0) {
+    return hasOwnProperty.MESSAGE_DELETE_UPLOAD(arg0);
+  }
+  getMaxFileSize(arg0) {
+    const basicChannel = ChannelStore.getBasicChannel(arg0);
+    const getEffectiveUploadLimit = UploadLimits.getEffectiveUploadLimit;
+    UploadLimits;
+    let guild_id;
+    const maxFileSize = FileUtilsAll.maxFileSize;
+    FileUtilsAll;
+    if (basicChannel != null) {
+      guild_id = basicChannel.guild_id;
+    }
+    return getEffectiveUploadLimit(maxFileSize(guild_id));
+  }
+  getMaxAttachmentsCount() {
+    return metroRequire;
+  }
+  getMaxTotalAttachmentSize() {
+    const obj = UploadUtils;
+    return obj.getMaxTotalAttachmentSize({ location: "MessageAttachmentUploadTarget" });
+  }
+}
+Object.defineProperty(MessageAttachmentUploadTarget.prototype, "shouldReactNativeCompressUploads", {
   get: function shouldReactNativeCompressUploads() {
     return true;
   },
@@ -46,19 +52,23 @@ const UploadTargets = {
   GRAVITY_ATTACHMENT: 2,
   [2]: "GRAVITY_ATTACHMENT",
 };
-const size = fn(2);
 const result = size.fileFinishedImporting("lib/uploader/UploadTargets.tsx");
 
 export { UploadTargets };
 export const getUploadTarget = function getUploadTarget(target) {
   if (obj.GUILD_PRODUCT_ATTACHMENT === target) {
-    const tmp13 = new GuildProductAttachmentUploadTargetDefault();
-    return tmp13;
+    const self4 = this;
+    const self5 = this;
+    const tmp8 = new GuildProductAttachmentUploadTargetDefault();
+    return tmp8;
   } else if (obj.GRAVITY_ATTACHMENT === target) {
-    const tmp7 = new ICYMIAttachmentUploadTargetDefault();
-    return tmp7;
+    const self2 = this;
+    const self3 = this;
+    const tmp4 = new ICYMIAttachmentUploadTargetDefault();
+    return tmp4;
   } else {
     const MESSAGE_ATTACHMENT = obj.MESSAGE_ATTACHMENT;
+    const self = this;
     if (typeof MessageAttachmentUploadTarget === "function") {
       return Object.create(MessageAttachmentUploadTarget.prototype);
     } else {

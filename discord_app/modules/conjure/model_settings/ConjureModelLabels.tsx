@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/model_settings/ConjureModelLabels.tsx
-import util from "../../../intl/index.native.tsx";
+import intl2 from "../../../intl/index.native.tsx";
 import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -17,8 +17,11 @@ export const modelTierMessage = function modelTierMessage(value) {
   }
 };
 export const tierTooltip = function tierTooltip(title, arg1) {
+  let intl;
+  let obj;
+  let prop;
   if ("simple" === arg1) {
-    let prop = _modDef3723["/tlOR5"];
+    prop = _modDef3723["/tlOR5"];
   } else if ("balanced" === arg1) {
     prop = _modDef3723.wNhuGQ;
   } else {
@@ -28,10 +31,9 @@ export const tierTooltip = function tierTooltip(title, arg1) {
     }
   }
   if (null != prop) {
-    const obj2 = { title, body: null };
-    const intl = util.intl;
-    obj2.body = intl.string(prop);
-    let obj = obj2;
+    const obj2 = { title, body: intl.string(prop) };
+    intl = intl2.intl;
+    obj = obj2;
   } else {
     obj = { body: title };
   }

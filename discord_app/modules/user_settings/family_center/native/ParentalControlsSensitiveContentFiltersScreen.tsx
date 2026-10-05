@@ -1,77 +1,83 @@
 // discord_app/modules/user_settings/family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import util from "../../../../intl/index.native.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import intl5 from "../../../../intl/index.native.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
 function getContentCategory() {
-  const obj = { label: null, settings: null, subLabel: null };
-  const intl = util.intl;
-  obj.label = intl.string(util.t.GYpoAq);
-  const items = [,];
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let items;
+  let items2;
+  const obj = { label: intl.string(intl5.t.GYpoAq), settings: items, subLabel: intl2.string(intl5.t.Wnojv1) };
+  intl = intl5.intl;
+  items = [,];
   ({
     PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS: arr[0],
     PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS: arr[1],
   } = MobileUserSettings);
-  obj.settings = items;
-  const intl2 = util.intl;
-  obj.subLabel = intl2.string(util.t.Wnojv1);
+  intl2 = intl5.intl;
   const items1 = [obj];
-  const obj2 = { label: null, settings: null, subLabel: null };
-  const intl3 = util.intl;
-  obj2.label = intl3.string(util.t["16/3Bi"]);
-  const items2 = [,];
+  const obj2 = { label: intl3.string(intl5.t["16/3Bi"]), settings: items2, subLabel: intl4.string(intl5.t.XgH9eh) };
+  intl3 = intl5.intl;
+  items2 = [,];
   ({
     PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_FRIENDS_DMS: arr3[0],
     PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_NON_FRIENDS_DMS: arr3[1],
   } = MobileUserSettings);
-  obj2.settings = items2;
-  const intl4 = util.intl;
-  obj2.subLabel = intl4.string(util.t.XgH9eh);
+  intl4 = intl5.intl;
   items1[1] = obj2;
   return items1;
 }
-const MobileUserSettings = fn(7634).MobileUserSettings;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/user_settings/family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let first;
+      let items;
+      let tmp11;
+      const obj = react2;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { sections: null };
-        const items = [];
-        HermesBuiltin.arraySpread(getContentCategory(), 0);
-        obj2.sections = items;
-        const list = SettingBuilders.createList(obj2);
+        const obj2 = { sections: items };
+        const createList = SettingBuilders.createList;
+        items = [];
+        SettingBuilders;
+        HermesBuiltin.arraySpread(items, getContentCategory(), 0);
+        const list = createList(obj2);
         cResult[0] = list;
-        let first = list;
-        const tmpResult = SettingBuilders;
+        first = list;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { node: first };
-        const tmp12 = jsx(SettingLayoutDefault, { node: first });
-        cResult[1] = tmp12;
-        let tmp9 = tmp12;
+        const tmp14 = jsx(SettingLayoutDefault, { node: first });
+        cResult[1] = tmp14;
+        tmp11 = tmp14;
       } else {
-        tmp9 = cResult[1];
+        tmp11 = cResult[1];
       }
-      return tmp9;
+      return tmp11;
     }
   : () => {
-      const node = noop.useMemo(() => {
-        const obj2 = { sections: null };
-        const items = [...closure_1_6()];
-        obj2.sections = items;
-        return SettingBuilders.createList(obj2);
+      const node = react.useMemo(() => {
+        let items;
+        const obj2 = { sections: items };
+        items = [...closure_1_6()];
+        const obj = SettingBuilders;
+        return obj.createList(obj2);
       }, []);
       return jsx(SettingLayoutDefault, { node });
     };
+const result = size.fileFinishedImporting(
+  "modules/user_settings/family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx",
+);
+
+export default tmp2;

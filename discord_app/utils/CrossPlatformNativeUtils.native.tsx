@@ -1,9 +1,7 @@
 // discord_app/utils/CrossPlatformNativeUtils.native.tsx
 import size from "../../_runtime/metro/00002__.js";
 
-const result = size.fileFinishedImporting("utils/CrossPlatformNativeUtils.native.tsx");
-
-export default {
+const obj = {
   clearNavigationHistory() {},
   flushDNSCache() {},
   flushCookies() {
@@ -29,3 +27,6 @@ export default {
     return null;
   },
 };
+const result = size.fileFinishedImporting("utils/CrossPlatformNativeUtils.native.tsx");
+
+export default obj;

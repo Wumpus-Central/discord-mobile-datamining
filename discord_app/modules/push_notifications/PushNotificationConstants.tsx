@@ -1,14 +1,14 @@
 // discord_app/modules/push_notifications/PushNotificationConstants.tsx
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
-import ClientInfoUtils_mod from "../../utils/native/ClientInfoUtils.tsx";
+import react_native_mod from "../../utils/native/ClientInfoUtils.tsx";
 import MetaQuestUtils_mod from "../device/MetaQuestUtils.android.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let ClientInfoUtils = ClientInfoUtils_mod;
-ClientInfoUtils = ClientInfoUtils.getConstants();
+let react_native = react_native_mod;
+react_native = react_native.getConstants();
 let str;
-if (ClientInfoUtils != null) {
-  str = ClientInfoUtils.Identifier;
+if (react_native != null) {
+  str = react_native.Identifier;
 }
 if (str == null) {
   str = "";
@@ -43,14 +43,15 @@ export const DEVICE_PUSH_PROVIDER_META_HORIZON = "meta_horizon";
 export const DEVICE_PUSH_PROVIDER_IOS = str2;
 export const DEVICE_PUSH_VOIP_PROVIDER = str4;
 export const getDevicePushProvider = function getDevicePushProvider() {
+  let str;
   if (MetaQuestUtils) {
-    let str = meta_horizon;
+    str = meta_horizon;
   } else {
     str = "gcm";
+    const obj = PlatformUtils;
     if (!obj.isAndroid()) {
       str = str2;
     }
-    obj = PlatformUtils;
   }
   return str;
 };

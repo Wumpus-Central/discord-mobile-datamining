@@ -1,5 +1,5 @@
 // discord_app/modules/guild_automod/BaseRuleInfo.tsx
-import util from "../../intl/index.native.tsx";
+import intl10 from "../../intl/index.native.tsx";
 import Constants from "Constants.tsx";
 import AutomodRuleUtils from "AutomodRuleUtils.tsx";
 import AutomodTriggerConfigs from "AutomodTriggerConfigs.tsx";
@@ -8,7 +8,10 @@ import size from "../../../_runtime/metro/00002__.js";
 const AutomodTriggerType = Constants.AutomodTriggerType;
 const result = size.fileFinishedImporting("modules/guild_automod/BaseRuleInfo.tsx");
 
-export const getBaseRuleInfo = function getBaseRuleInfo(triggerType, rule) {
+export const getBaseRuleInfo = function getBaseRuleInfo(triggerType, name) {
+  let str2;
+  let str3;
+  let str4;
   let tmp = null;
   if (null != triggerType) {
     if (AutomodTriggerType.KEYWORD !== triggerType) {
@@ -16,84 +19,84 @@ export const getBaseRuleInfo = function getBaseRuleInfo(triggerType, rule) {
         if (AutomodTriggerType.DEFAULT_KEYWORD_LIST !== triggerType) {
           if (AutomodTriggerType.MENTION_SPAM !== triggerType) {
             if (AutomodTriggerType.SERVER_POLICY !== triggerType) {
+              let flag;
               if (AutomodTriggerType.USER_PROFILE !== triggerType) {
-                let flag = false;
+                flag = false;
               }
               tmp = null;
               if (flag) {
-                let length = rule;
                 let str;
-                if (rule != null) {
-                  str = length.name;
+                if (name != null) {
+                  str = name.name;
                 }
                 if (str == null) {
-                  str = AutomodTriggerConfigs.triggerConfigs[triggerType].getDefaultRuleName();
+                  const obj = AutomodTriggerConfigs.triggerConfigs[triggerType];
+                  str = obj.getDefaultRuleName();
                 }
                 if (str == null) {
                   str = "";
                 }
-                const obj2 = { headerText: str, headerSubtext: null, descriptionText: null, descriptionSubtext: null };
-                let str2;
-                if (obj3.isBackendPersistedRule(length)) {
-                  if (tmp5Result.isRuleKeywordFilter(length)) {
-                    if (length.triggerMetadata.regexPatterns.length > 0) {
-                      const intl2 = util.intl;
+                const obj2 = { headerText: str, headerSubtext: str2, descriptionText: str3, descriptionSubtext: str4 };
+                str2 = undefined;
+                const obj3 = AutomodRuleUtils;
+                if (obj3.isBackendPersistedRule(name)) {
+                  let tmp8;
+                  const tmp6Result = AutomodRuleUtils;
+                  if (tmp6Result.isRuleKeywordFilter(name)) {
+                    let formatToPlainStringResult;
+                    if (name.triggerMetadata.regexPatterns.length > 0) {
+                      const intl2 = intl10.intl;
                       const obj4 = {
-                        keywordCount: length.triggerMetadata.keywordFilter.length,
-                        regexPatternCount: null,
+                        keywordCount: name.triggerMetadata.keywordFilter.length,
+                        regexPatternCount: name.triggerMetadata.regexPatterns.length,
                       };
-                      length = length.triggerMetadata.regexPatterns.length;
-                      obj4.regexPatternCount = length;
-                      let formatToPlainStringResult = intl2.formatToPlainString(util.t.xZUvxR, obj4);
+                      formatToPlainStringResult = intl2.formatToPlainString(intl10.t.xZUvxR, obj4);
                     } else {
-                      const intl = util.intl;
-                      const obj5 = { keywordCount: length.triggerMetadata.keywordFilter.length };
-                      formatToPlainStringResult = intl.formatToPlainString(util.t.dJN7Lk, obj5);
+                      const intl = intl10.intl;
+                      const obj5 = { keywordCount: name.triggerMetadata.keywordFilter.length };
+                      formatToPlainStringResult = intl.formatToPlainString(intl10.t.dJN7Lk, obj5);
                     }
+                    tmp8 = formatToPlainStringResult;
                   }
-                  tmp5Result = AutomodRuleUtils;
+                  str2 = tmp8;
                 }
                 if (str2 == null) {
                   str2 = "";
                 }
-                obj2.headerSubtext = str2;
                 if (AutomodTriggerType.KEYWORD === triggerType) {
-                  const intl7 = util.intl;
-                  let str3 = intl7.string(util.t.TzvaeK);
+                  const intl7 = intl10.intl;
+                  str3 = intl7.string(intl10.t.TzvaeK);
                 } else if (AutomodTriggerType.ML_SPAM === triggerType) {
-                  const intl6 = util.intl;
-                  str3 = intl6.string(util.t.jBZSQl);
+                  const intl6 = intl10.intl;
+                  str3 = intl6.string(intl10.t.jBZSQl);
                 } else if (AutomodTriggerType.DEFAULT_KEYWORD_LIST === triggerType) {
-                  const intl5 = util.intl;
-                  str3 = intl5.string(util.t.Drc8ft);
+                  const intl5 = intl10.intl;
+                  str3 = intl5.string(intl10.t.Drc8ft);
                 } else if (AutomodTriggerType.MENTION_SPAM === triggerType) {
-                  const intl4 = util.intl;
-                  str3 = intl4.string(util.t.flhXO4);
+                  const intl4 = intl10.intl;
+                  str3 = intl4.string(intl10.t.flhXO4);
                 } else if (AutomodTriggerType.USER_PROFILE === triggerType) {
-                  const intl3 = util.intl;
-                  str3 = intl3.string(util.t.A35LyL);
+                  const intl3 = intl10.intl;
+                  str3 = intl3.string(intl10.t.A35LyL);
                 } else {
                   str3 = null;
                   if (AutomodTriggerType.APPLICATION === triggerType) {
-                    const intl9 = util.intl;
-                    str3 = intl9.string(util.t.kHNeDa);
+                    const intl9 = intl10.intl;
+                    str3 = intl9.string(intl10.t.kHNeDa);
                   }
                 }
                 if (str3 == null) {
                   str3 = "";
                 }
-                obj2.descriptionText = str3;
-                let str4;
+                str4 = undefined;
                 if (triggerType === AutomodTriggerType.KEYWORD) {
-                  const intl8 = util.intl;
-                  str4 = intl8.formatToPlainString(util.t.yNec2m, {});
+                  const intl8 = intl10.intl;
+                  str4 = intl8.formatToPlainString(intl10.t.yNec2m, {});
                 }
                 if (str4 == null) {
                   str4 = "";
                 }
-                obj2.descriptionSubtext = str4;
                 tmp = obj2;
-                obj3 = AutomodRuleUtils;
               }
             }
           }

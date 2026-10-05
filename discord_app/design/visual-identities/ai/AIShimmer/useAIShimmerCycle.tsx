@@ -1,28 +1,22 @@
 // discord_app/design/visual-identities/ai/AIShimmer/useAIShimmerCycle.tsx
 import waveTransition from "waveTransition.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-function linesKeyFor(join) {
-  let joined = join;
-  if (Array.isArray(join)) {
-    joined = join.join("\0");
-  }
-  return joined;
-}
-function linesFromKey(str) {
-  return str.split("\0");
-}
-const size = fn(2);
-const result = size.fileFinishedImporting("design/visual-identities/ai/AIShimmer/useAIShimmerCycle.tsx");
+let closure_0, closure_12, current, initialDelay, play, ref2, ref3, tmp;
 
-export { linesKeyFor };
-export { linesFromKey };
-export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (initialDelay) => {
-      const cResult = delay(initialDelay[3]).c(43);
+      let delay;
+      let ref6;
+      let ref7;
+      let ref8;
+      let str;
+      let text;
+      let obj = delay(initialDelay[3]);
+      const cResult = obj.c(43);
       ({ text, delay } = initialDelay);
       initialDelay = initialDelay.initialDelay;
       const duration = initialDelay.duration;
@@ -31,7 +25,7 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
       const onComplete = initialDelay.onComplete;
       const onStart = initialDelay.onStart;
       const createController = initialDelay.createController;
-      reducedMotion.useRef(null);
+      ref = reducedMotion.useRef(null);
       if (cResult[0] !== text) {
         const _Array = Array;
         let joined = text;
@@ -40,7 +34,7 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[0] = text;
         cResult[1] = joined;
-        let str = joined;
+        str = joined;
       } else {
         str = cResult[1];
       }
@@ -55,31 +49,35 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
       const tmp6 = duration(reducedMotion.useState(0), 2);
       const first = tmp6[0];
       closure_12 = tmp8;
-      reducedMotion.useRef(0);
-      reducedMotion.useRef(null);
-      reducedMotion.useRef(null);
-      reducedMotion.useRef(true);
-      closure_17 = obj2.useRef(onComplete);
-      closure_18 = obj2.useRef(onStart);
-      reducedMotion.useRef(current);
-      reducedMotion.useRef(createController);
-      reducedMotion.useRef(trailingWidth);
-      reducedMotion.useRef(duration);
-      reducedMotion.useRef(reducedMotion);
+      obj2.useRef(0);
+      obj2.useRef(null);
+      const ref4 = obj2.useRef(null);
+      const ref5 = obj2.useRef(true);
+      let closure_17 = obj2.useRef(onComplete);
+      let closure_18 = obj2.useRef(onStart);
+      ref = obj2.useRef(current);
+      ref2 = obj2.useRef(createController);
+      ref3 = obj2.useRef(trailingWidth);
+      const ref9 = obj2.useRef(duration);
+      const ref10 = obj2.useRef(reducedMotion);
+      const tmp5 = duration;
       if (cResult[4] === createController) {
         if (cResult[5] === duration) {
           if (cResult[6] === current) {
             if (cResult[7] === onComplete) {
               if (cResult[8] === onStart) {
                 if (cResult[9] === reducedMotion) {
+                  let tmp9;
+                  let tmp17;
+                  let tmp20;
                   if (cResult[10] === trailingWidth) {
-                    let tmp9 = cResult[11];
+                    tmp9 = cResult[11];
                   }
                   const effect = obj2.useEffect(tmp9);
-                  const tmp5Result = tmp5(obj2.useState(str), 2);
+                  const tmp5Result = tmp5(reducedMotion.useState(str), 2);
                   if (tmp5Result[0] !== str) {
                     tmp5Result[1](str);
-                    tmp8(0);
+                    tmp6[1](0);
                   }
                   let num5 = 0;
                   if (current.length > 0) {
@@ -106,7 +104,7 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                   }
-                  play = G;
+                  G = tmp15;
                   const _Symbol2 = Symbol;
                   if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
                     class Q {
@@ -125,10 +123,10 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
                         return obj;
                       }
                     }
-                    const items = [G];
+                    const items = [tmp15];
                     cResult[13] = Q;
                     cResult[14] = items;
-                    let tmp17 = items;
+                    tmp17 = items;
                   } else {
                     class Q {
                       constructor() {
@@ -148,13 +146,14 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     tmp17 = cResult[14];
                   }
-                  const imperativeHandle = obj2.useImperativeHandle(initialDelay.ref, Q, tmp17);
+                  const imperativeHandle = obj2.useImperativeHandle(ref, Q, tmp17);
                   const _Symbol3 = Symbol;
                   if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
                     class X {
                       constructor() {
                         str = closure_19.current[0];
                         tmp = closure_20;
+                        current = closure_20.current;
                         if (str == null) {
                           str = "";
                         }
@@ -178,24 +177,25 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
                             return currentResult;
                           },
                         };
-                        currentResult = closure_20.current(obj);
+                        currentResult = current(obj);
                         closure_0 = currentResult;
                         closure_8.current = currentResult;
                         return () => {
-                          currentResult.destroy();
-                          closure_8.current = null;
+                          delay.destroy();
+                          ref.current = null;
                         };
                       }
                     }
                     const items1 = [];
                     cResult[15] = X;
                     cResult[16] = items1;
-                    let tmp20 = items1;
+                    tmp20 = items1;
                   } else {
                     class X {
                       constructor() {
                         str = closure_19.current[0];
                         tmp = closure_20;
+                        current = closure_20.current;
                         if (str == null) {
                           str = "";
                         }
@@ -219,12 +219,12 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
                             return currentResult;
                           },
                         };
-                        currentResult = closure_20.current(obj);
+                        currentResult = current(obj);
                         closure_0 = currentResult;
                         closure_8.current = currentResult;
                         return () => {
-                          currentResult.destroy();
-                          closure_8.current = null;
+                          delay.destroy();
+                          ref.current = null;
                         };
                       }
                     }
@@ -236,6 +236,7 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
                       constructor() {
                         str = closure_19.current[0];
                         tmp = closure_20;
+                        current = closure_20.current;
                         if (str == null) {
                           str = "";
                         }
@@ -259,12 +260,12 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
                             return currentResult;
                           },
                         };
-                        currentResult = closure_20.current(obj);
+                        currentResult = current(obj);
                         closure_0 = currentResult;
                         closure_8.current = currentResult;
                         return () => {
-                          currentResult.destroy();
-                          closure_8.current = null;
+                          delay.destroy();
+                          ref.current = null;
                         };
                       }
                     }
@@ -292,12 +293,11 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
         constructor() {
           closure_17.current = onComplete;
           closure_18.current = onStart;
-          closure_19.current = closure_10;
-          closure_20.current = createController;
-          closure_21.current = trailingWidth;
-          closure_22.current = duration;
-          closure_23.current = reducedMotion;
-          return;
+          ref6.current = current;
+          ref7.current = createController;
+          ref8.current = trailingWidth;
+          ref9.current = duration;
+          ref10.current = reducedMotion;
         }
       }
       cResult[4] = createController;
@@ -309,10 +309,10 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = trailingWidth;
       cResult[11] = K;
       tmp9 = K;
-      let obj = delay(initialDelay[3]);
-      tmp5 = duration;
     }
   : (initialDelay) => {
+      let delay;
+      let text;
       ({ text, delay } = initialDelay);
       initialDelay = initialDelay.initialDelay;
       const duration = initialDelay.duration;
@@ -324,44 +324,55 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
       let lines;
       let first;
       closure_12 = undefined;
-      closure_17 = undefined;
-      closure_18 = undefined;
+      ref2 = undefined;
+      ref3 = undefined;
+      let ref4;
+      let ref5;
+      let closure_17;
+      let closure_18;
+      let ref6;
+      let ref7;
+      let ref8;
+      let ref9;
+      let ref10;
       current = undefined;
       play = undefined;
-      reducedMotion.useRef(null);
+      let obj = reducedMotion;
+      ref = reducedMotion.useRef(null);
       let joined = text;
       if (Array.isArray(text)) {
+        let str = "\0";
         joined = text.join("\0");
       }
       const items = [joined];
       lines = obj.useMemo(() => joined.split("\0"), items);
-      const tmp2 = duration(reducedMotion.useState(0), 2);
+      const tmp2 = duration(obj.useState(0), 2);
       first = tmp2[0];
       closure_12 = tmp4;
-      reducedMotion.useRef(0);
-      reducedMotion.useRef(null);
-      reducedMotion.useRef(null);
-      reducedMotion.useRef(true);
+      ref2 = obj.useRef(0);
+      ref3 = obj.useRef(null);
+      ref4 = obj.useRef(null);
+      ref5 = obj.useRef(true);
       closure_17 = obj.useRef(onComplete);
       closure_18 = obj.useRef(onStart);
-      reducedMotion.useRef(lines);
-      reducedMotion.useRef(createController);
-      reducedMotion.useRef(trailingWidth);
-      reducedMotion.useRef(duration);
-      reducedMotion.useRef(reducedMotion);
+      ref6 = obj.useRef(lines);
+      ref7 = obj.useRef(createController);
+      ref8 = obj.useRef(trailingWidth);
+      ref9 = obj.useRef(duration);
+      ref10 = obj.useRef(reducedMotion);
       const effect = obj.useEffect(() => {
         closure_17.current = onComplete;
         closure_18.current = onStart;
-        closure_19.current = lines;
-        closure_20.current = createController;
-        closure_21.current = trailingWidth;
-        closure_22.current = duration;
-        closure_23.current = reducedMotion;
+        ref6.current = lines;
+        ref7.current = createController;
+        ref8.current = trailingWidth;
+        ref9.current = duration;
+        ref10.current = reducedMotion;
       });
-      const tmp6 = duration(reducedMotion.useState(joined), 2);
+      const tmp6 = duration(obj.useState(joined), 2);
       if (tmp6[0] !== joined) {
         tmp6[1](joined);
-        tmp4(0);
+        tmp2[1](0);
       }
       let num = 0;
       if (lines.length > 0) {
@@ -376,7 +387,7 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       const items1 = [play];
       const imperativeHandle = obj.useImperativeHandle(
-        initialDelay.ref,
+        ref,
         () => ({
           play,
           stop() {
@@ -392,10 +403,11 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
       );
       const effect1 = obj.useEffect(() => {
         let str = ref6.current[0];
+        current = ref7.current;
         if (str == null) {
           str = "";
         }
-        let currentResult = ref7.current({
+        const obj = {
           to: str,
           trailingWidth: ref8.current,
           onStart() {
@@ -414,12 +426,13 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
             }
             return currentResult;
           },
-        });
+        };
+        let currentResult = current(obj);
         delay = currentResult;
         closure_8.current = currentResult;
         return () => {
-          currentResult.destroy();
-          closure_8.current = null;
+          delay.destroy();
+          ref.current = null;
         };
       }, []);
       const items2 = [duration, reducedMotion, trailingWidth];
@@ -442,24 +455,26 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
             ref3.current = current;
             ref5.current = null == current2;
             if (null == current2) {
-              current.setTransition(tmp2, tmp2);
+              current.setTransition(current, current);
             } else {
-              current.setTransition(current2, tmp2);
+              current.setTransition(current2, current);
               current.play();
             }
           }
           if (null != delay) {
+            let current3;
+            let sum;
             if (ref10.current) {
-              let current3 = waveTransition.REDUCED_MOTION_PASS_MS;
+              current3 = waveTransition.REDUCED_MOTION_PASS_MS;
             } else {
               current3 = ref9.current;
             }
             if (ref5.current) {
-              let sum = delay + initialDelay;
+              sum = delay + initialDelay;
             } else {
               sum = delay + current3;
             }
-            closure_13.current = sum;
+            ref2.current = sum;
           }
         }
       }, items3);
@@ -473,3 +488,18 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
       }, items4);
       return { current, lines };
     };
+function linesKeyFor(join) {
+  let joined = join;
+  if (Array.isArray(join)) {
+    joined = join.join("\0");
+  }
+  return joined;
+}
+function linesFromKey(str) {
+  return str.split("\0");
+}
+const result = size.fileFinishedImporting("design/visual-identities/ai/AIShimmer/useAIShimmerCycle.tsx");
+
+export { linesKeyFor };
+export { linesFromKey };
+export const useAIShimmerCycle = tmp2;

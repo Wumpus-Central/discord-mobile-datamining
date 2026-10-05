@@ -1,151 +1,175 @@
 // discord_app/modules/user_settings/profiles/native/GuildProfileEmptyState.tsx
-import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import intl5 from "../../../../intl/index.native.tsx";
+import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import GuildProfileEmptyStateSvgDefault from "GuildProfileEmptyStateSvg.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
+let c0, c1;
+
+let closure_4;
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+({ ScrollView: closure_4, View: hasOwnProperty } = react_native);
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
 let closure_8 = createStyles.createStyles({
   container: { paddingHorizontal: 16, alignItems: "center" },
   image: { marginBottom: 16, marginTop: 64, textAlign: "center" },
   header: { textAlign: "center", marginStart: 8, marginEnd: 8, marginBottom: 8 },
   createButton: { marginTop: 16, marginBottom: 12 },
 });
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/GuildProfileEmptyState.tsx");
 
 export default function GuildProfileEmptyState() {
+  let Button;
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let items;
+  let obj3;
+  let obj7;
   const tmp = closure_8();
-  let obj = { contentContainerStyle: tmp.container, children: null };
-  let obj2 = { style: tmp.image, children: timestampProducer(GuildProfileEmptyStateSvgDefault, { style: tmp.image }) };
-  const items = [timestampProducer(hasOwnProperty, obj2), , , ,];
+  let obj = { contentContainerStyle: tmp.container, children: items };
+  let obj2 = { style: tmp.image, children: metroRequire(GuildProfileEmptyStateSvgDefault, obj3) };
+  obj3 = { style: tmp.image };
+  items = [metroRequire(hasOwnProperty, obj2), , , ,];
   let obj4 = {
     style: tmp.header,
     variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
-    children: null,
+    children: intl.string(intl5.t.Z1OZCV),
   };
-  const intl = util.intl;
-  obj4.children = intl.string(util.t.Z1OZCV);
-  items[1] = timestampProducer(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.header, variant: "text-sm/normal", color: "text-default", children: null };
-  const intl2 = util.intl;
-  obj5.children = intl2.string(util.t.UEmBq7);
-  items[2] = timestampProducer(Text_Text.Text, obj5);
-  const obj6 = { style: tmp.createButton, children: null };
-  const obj7 = { text: null, onPress: null };
-  const intl3 = util.intl;
-  obj7.text = intl3.string(util.t["6dIB4R"]);
-  obj7.onPress = asyncGeneratorStep(async () => {
-    if (c0 === 2) {
-      c0 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+  const Text = Text_Text.Text;
+  intl = intl5.intl;
+  items[1] = metroRequire(Text, obj4);
+  const obj5 = {
+    style: tmp.header,
+    variant: "text-sm/normal",
+    color: "text-default",
+    children: intl2.string(intl5.t.UEmBq7),
+  };
+  const Text2 = Text_Text.Text;
+  intl2 = intl5.intl;
+  items[2] = metroRequire(Text2, obj5);
+  const obj6 = { style: tmp.createButton, children: metroRequire(Button, obj7) };
+  obj7 = {
+    text: intl3.string(intl5.t["6dIB4R"]),
+    onPress: _asyncToGenerator(async () => {
+      if (c0 === 2) {
+        c0 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp2 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
       } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
+        try {
+          c0 = 2;
+          if (0 === c1) {
+            if (arg0 === 1) {
+              c0 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c0 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              c1 = 1;
+              c0 = 1;
+              const obj4 = { value: asyncRequire(dependencyMap[9], dependencyMap.paths), done: false };
+              return obj4;
+            }
+          } else if (arg0 === 1) {
             c0 = 3;
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj = { value, done: true };
+            return obj;
           } else {
-            c1 = 1;
-            c0 = 1;
-            const obj4 = { value: asyncRequireImpl(dependencyMap[9], dependencyMap.paths), done: false };
-            return obj4;
+            const _default = value.default;
+            _default.openCreateGuildModal();
+            c0 = 3;
+            return { value: "IconComponent", done: null };
           }
-        } else if (arg0 === 1) {
+        } catch (tmp7) {
           c0 = 3;
+          throw tmp7;
+        }
+      }
+    }),
+  };
+  Button = components_Button_Button.Button;
+  intl3 = intl5.intl;
+  items[3] = metroRequire(hasOwnProperty, obj6);
+  const obj8 = {
+    text: intl4.string(intl5.t.yRjK4p),
+    variant: "secondary",
+    onPress: _asyncToGenerator(async () => {
+      if (c0 === 2) {
+        c0 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp2 === 3) {
+        if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          c0 = 3;
-          const obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
-          value.default.openCreateGuildModal();
-          c0 = 3;
           return { value: "IconComponent", done: null };
         }
-      } catch (tmp8) {
-        c0 = tmp;
-        throw tmp8;
-      }
-    }
-  });
-  obj6.children = timestampProducer(components_Button_Button.Button, obj7);
-  items[3] = timestampProducer(hasOwnProperty, obj6);
-  const obj8 = { text: null, variant: "secondary", onPress: null };
-  const intl4 = util.intl;
-  obj8.text = intl4.string(util.t.yRjK4p);
-  obj8.onPress = asyncGeneratorStep(async () => {
-    if (c0 === 2) {
-      c0 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
       } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
+        try {
+          c0 = 2;
+          if (0 === c1) {
+            if (arg0 === 1) {
+              c0 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c0 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              c1 = 1;
+              c0 = 1;
+              const obj4 = { value: asyncRequire(dependencyMap[9], dependencyMap.paths), done: false };
+              return obj4;
+            }
+          } else if (arg0 === 1) {
             c0 = 3;
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj = { value, done: true };
+            return obj;
           } else {
-            c1 = 1;
-            c0 = 1;
-            const obj4 = { value: asyncRequireImpl(dependencyMap[9], dependencyMap.paths), done: false };
-            return obj4;
+            const _default = value.default;
+            const result = _default.openGuildJoinServerScreen();
+            c0 = 3;
+            return { value: "IconComponent", done: null };
           }
-        } else if (arg0 === 1) {
+        } catch (tmp7) {
           c0 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c0 = 3;
-          const obj = { value, done: true };
-          return obj;
-        } else {
-          const result = value.default.openGuildJoinServerScreen();
-          c0 = 3;
-          return { value: "IconComponent", done: null };
+          throw tmp7;
         }
-      } catch (tmp8) {
-        c0 = tmp;
-        throw tmp8;
       }
-    }
-  });
-  items[4] = timestampProducer(components_Button_Button.Button, obj8);
-  obj.children = items;
-  return React5(React4, obj);
+    }),
+  };
+  const Button2 = components_Button_Button.Button;
+  intl4 = intl5.intl;
+  items[4] = metroRequire(Button2, obj8);
+  return metroImportDefault(React3, obj);
 }

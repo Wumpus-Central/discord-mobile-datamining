@@ -1,64 +1,66 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsUseDataForQuests3PSetting.tsx
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import useSelectedTeen from "../../../parent_tools/hooks/useSelectedTeen.tsx";
 import ParentalControlledUserSettings from "../../family_center/ParentalControlledUserSettings.tsx";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-fn(558);
-const ReactCompilerGating = fn(558);
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+      const obj = useSelectedTeen;
+      const selectedTeenId = obj.useSelectedTeenId();
       const ParentalControlledQuests3PDataOptedOut =
         ParentalControlledUserSettings.ParentalControlledQuests3PDataOptedOut;
-      return !ParentalControlledQuests3PDataOptedOut.useControlledSetting(selectedTeenId);
+      const useControlledSetting = ParentalControlledQuests3PDataOptedOut.useControlledSetting;
+      return !useControlledSetting(selectedTeenId);
     }
   : () => {
-      const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+      const obj = useSelectedTeen;
+      const selectedTeenId = obj.useSelectedTeenId();
       const ParentalControlledQuests3PDataOptedOut =
         ParentalControlledUserSettings.ParentalControlledQuests3PDataOptedOut;
-      return !ParentalControlledQuests3PDataOptedOut.useControlledSetting(selectedTeenId);
+      const useControlledSetting = ParentalControlledQuests3PDataOptedOut.useControlledSetting;
+      return !useControlledSetting(selectedTeenId);
     };
-const SettingBuilders = fn(11129);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+      const obj = useSelectedTeen;
+      const selectedTeenId = obj.useSelectedTeenId();
       const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;
-      return ParentalControlledDropsOptedOut.useControlledSetting(selectedTeenId);
+      const useControlledSetting = ParentalControlledDropsOptedOut.useControlledSetting;
+      return useControlledSetting(selectedTeenId);
     }
   : () => {
-      const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+      const obj = useSelectedTeen;
+      const selectedTeenId = obj.useSelectedTeenId();
       const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;
-      return ParentalControlledDropsOptedOut.useControlledSetting(selectedTeenId);
+      const useControlledSetting = ParentalControlledDropsOptedOut.useControlledSetting;
+      return useControlledSetting(selectedTeenId);
     };
-const toggle = SettingBuilders.createToggle({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.CyLYKZ);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.CyLYKZ);
   },
-  parent: fn(7634).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: tmp2,
   onValueChange: function onDataToSupportQuests3PSettingValueChange(arg0) {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     const ParentalControlledQuests3PDataOptedOut =
       ParentalControlledUserSettings.ParentalControlledQuests3PDataOptedOut;
-    const result = ParentalControlledQuests3PDataOptedOut.updateControlledSetting(selectedTeenId, !arg0);
+    const updateControlledSetting = ParentalControlledQuests3PDataOptedOut.updateControlledSetting;
+    const result = updateControlledSetting(selectedTeenId, !arg0);
   },
-  useIsDisabled: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
-        const selectedTeenId = useSelectedTeen.useSelectedTeenId();
-        const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;
-        return ParentalControlledDropsOptedOut.useControlledSetting(selectedTeenId);
-      }
-    : () => {
-        const selectedTeenId = useSelectedTeen.useSelectedTeenId();
-        const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;
-        return ParentalControlledDropsOptedOut.useControlledSetting(selectedTeenId);
-      },
+  useIsDisabled: tmp3,
   unsearchable: true,
-});
-const size = fn(2);
+};
+const toggle = SettingBuilders.createToggle(obj);
 let result = size.fileFinishedImporting(
   "modules/user_settings/defs/native/ParentalControlsUseDataForQuests3PSetting.tsx",
 );

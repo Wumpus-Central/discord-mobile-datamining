@@ -1,13 +1,12 @@
 // discord_app/modules/icymi/ICYMIStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import utils from "../content_inventory/utils.tsx";
-import ContentInventoryTypes from "../content_inventory/ContentInventoryTypes.tsx";
 import ICYMITypes from "ICYMITypes.tsx";
 import isItemUnreadInChannel from "isItemUnreadInChannel.tsx";
+import ContentInventoryConstants from "../content_inventory/ContentInventoryConstants.tsx";
 import ICYMIUtils from "ICYMIUtils.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import ContentInventoryStore from "../content_inventory/ContentInventoryStore.tsx";
 import ExperimentStore from "../experiments/ExperimentStore.tsx";
 import GuildScheduledEventStore_mod from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
@@ -22,15 +21,27 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 import ICYMIFiltersStore from "ICYMIFiltersStore.tsx";
 import ICYMIUnreadStateStore from "ICYMIUnreadStateStore.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
+const require = globalThis.__r;
+let _null, _require, closure_34, closure_38, guildIds, guildScheduledEventsForGuild, hasNewContent;
+
+let closure_21;
+let closure_22;
+let closure_23;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+const f96167 = (id) => id.id;
 function filterStaffGuild(data) {
   if (ICYMIFiltersStore.filterStaffContent()) {
+    obj = ICYMIUtils;
     if (obj.isGuildItem(data)) {
       if (data.data.guild_id === ICYMITypes.GAME_CONTENT_GUILD_ID) {
         return true;
       } else {
-        guild = GuildStore.getGuild(data.data.guild_id);
+        const guild = GuildStore.getGuild(data.data.guild_id);
         if (null != guild) {
           const features = guild.features;
         }
@@ -43,8 +54,8 @@ function filterStaffGuild(data) {
   }
 }
 function injectItemsIntoList(arr, arr2, arg2, arg3) {
-  closure_0 = arg2;
-  c1 = 7;
+  let closure_0 = arg2;
+  let c1 = 7;
   const found = arr.filter((type) => type.type !== ACTIVITY);
   const item = arr2.forEach((item, index) => {
     if ((index + 1) * c1 < found1.length) {
@@ -60,16 +71,16 @@ function injectRecommendedGuildsRow() {
   closure_46 = closure_46.filter((type) => type.type !== require("ICYMITypes").ICYMIItemTypes.RECOMMENDED_GUILDS);
   if (0 !== length.length) {
     const guildsArray = GuildStore.getGuildsArray();
-    const tmp24 =
+    const tmp25 =
       guildsArray.filter((features) => {
         features = features.features;
         return features.has(constants.COMMUNITY);
       }).length >= 5;
     const readTimestamp = ICYMIUnreadStateStore.getReadTimestamp("recommendedGuilds");
-    if (tmp24) {
+    if (tmp25) {
       if (null != readTimestamp) {
         const _Date = Date;
-        if (Date.now() - closure_49 > DAY) {
+        if (Date.now() - lastJoinedRecommendedGuild > DAY) {
           const _Date2 = Date;
         }
       }
@@ -79,11 +90,11 @@ function injectRecommendedGuildsRow() {
     closure_33[obj.id] = obj;
     if (0 === closure_45.length) {
       items = [obj];
-      HermesBuiltin.arraySpread(closure_46, 1);
+      HermesBuiltin.arraySpread(items, closure_46, 1);
       closure_46 = items;
     } else {
-      if (tmp24) {
-        if (tmp24) {
+      if (tmp25) {
+        if (tmp25) {
           const _Math = Math;
           const _Math2 = Math;
           closure_45.splice(Math.round(2 * Math.random()) + 3 - 1, 0, obj);
@@ -92,37 +103,35 @@ function injectRecommendedGuildsRow() {
         }
       }
       const items1 = [];
-      items1[HermesBuiltin.arraySpread(closure_45, 0)] = obj;
+      items1[HermesBuiltin.arraySpread(items1, closure_45, 0)] = obj;
       closure_45 = items1;
     }
   }
 }
 function finalizeNewDehydratedItemsContent() {
+  let blockedOrIgnored;
+  let closure_43;
+  let items1;
+  const self = this;
   set = new Set();
   const item = items1.forEach((id) => {
     set.add(id.id);
   });
   if (null != _null) {
     if (set.has(_null.id)) {
-      const id = tmp19.id;
+      let id = tmp19.id;
       const type = _null.type;
-      const findIndexResult = items1.findIndex((id) => {
-        let tmp = id.id === id;
-        if (tmp) {
-          tmp = id.type === type;
-        }
-        return tmp;
-      });
+      const findIndexResult = items1.findIndex((id) => id.id === id && id.type === type);
       if (-1 !== findIndexResult) {
         _null = items1[findIndexResult];
         const found = items1.filter((id) => id.id !== id);
         items = [_null];
-        HermesBuiltin.arraySpread(found, 1);
+        HermesBuiltin.arraySpread(items, found, 1);
         items1 = items;
       }
     } else {
-      items1 = [tmp19];
-      HermesBuiltin.arraySpread(items1, 1);
+      items1 = [_null];
+      HermesBuiltin.arraySpread(items1, items1, 1);
       set.add(_null.id);
     }
   }
@@ -132,91 +141,56 @@ function finalizeNewDehydratedItemsContent() {
       if (blockedOrIgnored.isBlockedOrIgnored(id.data.user_id)) {
         closure_1_35[id.id] = true;
       } else {
-        dependencyMap[id.id] = set(type[18]).customStatusToContentInventoryEntry(id);
+        id = id.id;
         const tmpResult = set(type[18]);
+        closure_1_34[id] = tmpResult.customStatusToContentInventoryEntry(id);
       }
     }
   });
 }
 function reload(arg0) {
-  if (closure_30.length > 0) {
-    dehydratedItems = closure_30;
-    closure_30 = [];
-    closure_31 = [];
-  }
-  closure_38 = closure_38 + 1;
-  if (null != arg0) {
-    ({ newUnread: found, newRead: found1 } = arg0);
-  } else {
-    items = [];
-    let ACTIVITY = items;
-    let items1 = [];
-    c1 = items1;
-    let items2 = [];
-    found1 = items2;
-    let item = dehydratedItems.forEach((id) => {
-      const tmp = null != ICYMIUnreadStateStore.getReadTimestamp(id.id);
-      let tmp4 = id.type === ICYMITypes.ICYMIItemTypes.MESSAGE;
-      if (tmp4) {
-        const message_context = id.data.message_context;
-        let prop;
-        if (message_context != null) {
-          prop = message_context.external_content_application_id;
-        }
-        tmp4 = null == prop;
-      }
-      let tmp6 = tmp;
-      if (tmp4) {
-        let tmp7 = tmp;
-        if (!tmp) {
-          tmp7 = !isItemUnreadInChannel.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
-          const tmp2Result = isItemUnreadInChannel;
-        }
-        tmp6 = tmp7;
-      }
-      if (tmp6) {
-        set1.push(id);
-      } else {
-        if (id.type === ICYMITypes.ICYMIItemTypes.MESSAGE) {
-          if (id.data.has_mention) {
-            dependencyMap.push(id);
-          }
-        }
-        importDefault.push(id);
-      }
-    });
-    const items3 = [];
-    HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(items2, 0));
-    const items4 = [items3, items.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
-    [found, found1] = items4;
-    let tmp33 = _slicedToArray(items4, 2);
-  }
-  (function injectGuildEvents() {
+  let channel;
+  let closure_27;
+  let closure_32;
+  let found;
+  let found1;
+  let items2;
+  let load_id;
+  function injectGuildEvents() {
+    let channel_id;
     guildIds = guildIds.getGuildIds();
     items = [];
     const iter = guildIds[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp3 = nextResult;
-      if (null == dependencyMap2[nextResult]) {
+      if (null == closure_36[nextResult]) {
         guildScheduledEventsForGuild = guildScheduledEventsForGuild.getGuildScheduledEventsForGuild(tmp3);
         let num = 0;
         for (const item10031 of guildScheduledEventsForGuild) {
           if (!closure_7(item10031)) {
-            if (closure_6(item10031, 2 * items2(found1[17]).Seconds.DAY)) {
-              if (null == dependencyMap[item10031.id]) {
-                let obj2 = { id: item10031.id, type: null, score: 10, event_id: null };
-                obj2.type = items1(found1[19]).ICYMIItemTypes.GUILD_EVENT;
-                obj2.event_id = item10031.id;
-                dependencyMap[item10031.id] = obj2;
+            let tmp23 = items2;
+            if (closure_6(item10031, 2 * items2(items2[17]).Seconds.DAY)) {
+              if (null == closure_34[item10031.id]) {
+                let obj2 = {
+                  id: item10031.id,
+                  type: items1(tmp23[19]).ICYMIItemTypes.GUILD_EVENT,
+                  score: 10,
+                  event_id: item10031.id,
+                };
+                let id = item10031.id;
+                closure_34[id] = obj2;
               }
-              let obj3 = { id: item10031.id, type: null, score: 10, data: null };
-              obj3.type = items1(found1[19]).ICYMIItemTypes.GUILD_EVENT;
-              let obj7 = { guild_id: null, event_id: null, channel_id: null };
+              let obj3 = {
+                id: item10031.id,
+                type: items1(tmp23[19]).ICYMIItemTypes.GUILD_EVENT,
+                score: 10,
+                data: obj7,
+              };
+              let push = items.push;
+              let obj7 = { guild_id: null, event_id: null, channel_id };
               ({ guild_id: obj4.guild_id, id: obj4.event_id, channel_id } = item10031);
-              obj7.channel_id = channel_id;
-              obj3.data = obj7;
-              let arr = items.push(obj3);
+              let arr = push(obj3);
               let sum = num + 1;
               num = sum;
               if (1 <= sum) {
@@ -244,25 +218,83 @@ function reload(arg0) {
       }
       return num - num2;
     });
-    const items1 = [];
-    const items2 = [];
+    items1 = [];
+    items2 = [];
     const item = items.forEach((id) => {
       closure_2_33[id.id] = id;
-      if (null != readTimestamp.getReadTimestamp(id.id)) {
+      if (null != ICYMIUnreadStateStore.getReadTimestamp(id.id)) {
         items2.push(id);
       } else {
         items1.push(id);
       }
     });
-    closure_45 = closure_58(closure_45, items1, items1(found1[19]).ICYMIItemTypes.GUILD_EVENT, 7);
-    closure_46 = closure_58(closure_46, items2, items1(found1[19]).ICYMIItemTypes.GUILD_EVENT, 7);
-  })();
-  closure_129_0 = new Set();
-  closure_129_1 = {};
+    closure_45 = closure_58(closure_45, items1, items1(items2[19]).ICYMIItemTypes.GUILD_EVENT, 7);
+    closure_46 = closure_58(closure_46, items2, items1(items2[19]).ICYMIItemTypes.GUILD_EVENT, 7);
+  }
+  if (closure_30.length > 0) {
+    dehydratedItems = closure_30;
+    closure_30 = [];
+    closure_31 = [];
+  }
+  closure_38 = closure_38 + 1;
+  if (null != arg0) {
+    ({ newUnread: found, newRead: found1 } = arg0);
+  } else {
+    items = [];
+    let items1 = [];
+    items2 = [];
+    let item = dehydratedItems.forEach((id) => {
+      const tmp = null != readTimestamp.getReadTimestamp(id.id);
+      let tmp4 = id.type === set(dependencyMap[19]).ICYMIItemTypes.MESSAGE;
+      if (tmp4) {
+        const message_context = id.data.message_context;
+        let prop;
+        if (message_context != null) {
+          prop = message_context.external_content_application_id;
+        }
+        tmp4 = null == prop;
+      }
+      let tmp6 = tmp;
+      if (tmp4) {
+        let tmp7 = tmp;
+        if (!tmp7) {
+          const tmp2Result = set(dependencyMap[24]);
+          tmp7 = !tmp2Result.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
+        }
+        tmp6 = tmp7;
+      }
+      if (tmp6) {
+        items1.push(id);
+      } else {
+        if (id.type === set(dependencyMap[19]).ICYMIItemTypes.MESSAGE) {
+          if (id.data.has_mention) {
+            items3.push(id);
+          }
+        }
+        items2.push(id);
+      }
+    });
+    const items3 = [];
+    let num = 0;
+    let tmp30 = items3;
+    let tmp31 = items1;
+    HermesBuiltin.arraySpread(items3, items1, HermesBuiltin.arraySpread(items3, items2, 0));
+    const items4 = [
+      items3,
+      items.sort((id, id2) => {
+        obj = set(dependencyMap[18]);
+        return obj.compareGravityUnreadIds(id.id, id2.id);
+      }),
+    ];
+    let num2 = 2;
+    let tmp34 = _slicedToArray(items4, 2);
+    [found, found1] = tmp34;
+  }
+  let tmp3 = injectGuildEvents();
+  set = new Set();
+  let closure_1 = {};
   const items5 = [];
-  closure_129_2 = items5;
   const items6 = [];
-  closure_129_3 = items6;
   const feed = ContentInventoryStore.getFeed(ContentInventoryFeedKey.GLOBAL_FEED);
   let entries;
   if (feed != null) {
@@ -273,47 +305,59 @@ function reload(arg0) {
   }
   let sorted = entries.sort((rank, rank2) => rank.rank - rank2.rank);
   const substr = sorted.slice(0, 5);
-  const item1 = entries.forEach((content) => {
-    if (!ACTIVITY.has(content.content.id)) {
+  const item1 = entries.forEach(function (content) {
+    let obj6;
+    obj = set;
+    if (!set.has(content.content.id)) {
+      const tmpResult = items(items2[21]);
       if (!tmpResult.isEntryExpired(content.content)) {
+        const tmpResult2 = items(items2[22]);
         if (tmpResult2.isGamingLikeEntry(content.content)) {
-          if (null == dependencyMap[content.content.author_id]) {
+          if (null == closure_1[content.content.author_id]) {
             const _Set = Set;
+            const self = this;
+            const self2 = this;
+            const author_id = content.content.author_id;
             set = new Set();
-            dependencyMap[content.content.author_id] = set;
+            closure_1[author_id] = set;
           }
+          const obj4 = closure_1[content.content.author_id];
           if (!obj4.has(content.content.extra.application_id)) {
-            dependencyMap[content.content.author_id].add(content.content.extra.application_id);
+            const obj5 = closure_1[content.content.author_id];
+            obj5.add(content.content.extra.application_id);
           }
-          obj4 = dependencyMap[content.content.author_id];
         }
-        if (null == dependencyMap[content.content.id]) {
-          const obj2 = {
+        if (null == closure_2_34[content.content.id]) {
+          const id = content.content.id;
+          closure_2_34[id] = {
             id: content.content.id,
-            type: ICYMITypes.ICYMIItemTypes.ACTIVITY,
+            type: items(items2[19]).ICYMIItemTypes.ACTIVITY,
             score: 15,
             activity: content.content,
           };
-          dependencyMap[content.content.id] = obj2;
+          const obj2 = {
+            id: content.content.id,
+            type: items(items2[19]).ICYMIItemTypes.ACTIVITY,
+            score: 15,
+            activity: content.content,
+          };
         }
-        const obj3 = { id: content.content.id, type: ICYMITypes.ICYMIItemTypes.ACTIVITY, score: 15, data: null };
-        const obj6 = { user_id: content.content.author_id, content_id: content.content.id };
-        obj3.data = obj6;
-        ACTIVITY.add(content.content.id);
-        closure_33[obj3.id] = obj3;
+        const obj3 = { id: content.content.id, type: items(items2[19]).ICYMIItemTypes.ACTIVITY, score: 15, data: obj6 };
+        obj6 = { user_id: content.content.author_id, content_id: content.content.id };
+        obj.add(content.content.id);
+        closure_2_33[obj3.id] = obj3;
         if (null != ICYMIUnreadStateStore.getReadTimestamp(obj3.id)) {
-          _slicedToArray.push(obj3);
+          items6.push(obj3);
         } else {
-          found1.push(obj3);
+          items5.push(obj3);
         }
-        tmpResult2 = ContentInventoryTypes;
       }
-      tmpResult = utils;
     }
   });
-  ACTIVITY = ACTIVITY(found1[19]).ICYMIItemTypes.ACTIVITY;
+  let tmp8 = items;
+  items(items2[19]).ICYMIItemTypes.ACTIVITY;
+  found = undefined;
   found = found.filter((type) => type.type !== ACTIVITY);
-  found1 = found;
   const item2 = items5.forEach((item, index) => {
     if ((index + 1) * c1 < found1.length) {
       found1.splice((index + 1) * tmp, 0, item);
@@ -321,8 +365,8 @@ function reload(arg0) {
       found1.push(item);
     }
   });
-  ACTIVITY = ACTIVITY(found1[19]).ICYMIItemTypes.ACTIVITY;
-  c1 = 5;
+  const ACTIVITY = items(items2[19]).ICYMIItemTypes.ACTIVITY;
+  let c1 = 5;
   found1 = undefined;
   found1 = found1.filter((type) => type.type !== ACTIVITY);
   const item3 = items6.forEach((item, index) => {
@@ -333,32 +377,31 @@ function reload(arg0) {
     }
   });
   injectRecommendedGuildsRow();
-  let tmp14 = null != newTrackingProps.load_id;
-  if (tmp14) {
-    tmp14 = load_id !== newTrackingProps.load_id;
-  }
-  if (tmp14) {
+  const tmp15 = null != newTrackingProps.load_id && load_id !== newTrackingProps.load_id;
+  if (tmp15) {
     obj = { newTrackingProps, hasNewContent, unreadFeedItems: found, readFeedItems: found1, homeSessionId: "gravity" };
-    tmp7(tmp8[23]).trackFeedLoaded(obj);
+    let tmp21 = found1;
+    const tmp8Result = tmp8(items2[23]);
+    tmp8Result.trackFeedLoaded(obj);
+    let tmp23 = newTrackingProps;
     load_id = newTrackingProps.load_id;
     if (load_id == null) {
       load_id = null;
     }
     newTrackingProps = {};
-    const tmp7Result = tmp7(tmp8[23]);
   }
   c47 = 0;
   if (found.length + found1.length === 0) {
     c54 = true;
   }
-  set = new Set();
   const items7 = [...found1];
-  ACTIVITY(found1[18]).hydrateItems(items7, 0, ACTIVITY(found1[19]).ICYMI_PAGE_SIZE, dependencyMap);
-  c51 = false;
-  const tmp7Result2 = ACTIVITY(found1[18]);
+  const tmp8Result2 = tmp8(items2[18]);
+  tmp8Result2.hydrateItems(items7, 0, tmp8(items2[19]).ICYMI_PAGE_SIZE, closure_34);
+  let c51 = false;
 }
 function getNewUnreadItems(arr9, channelId) {
   items = [];
+  set = new Set(dehydratedItems.map((id) => id.id));
   const iter = arr9[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -388,133 +431,83 @@ function getNewUnreadItems(arr9, channelId) {
   return items;
 }
 function maybeFilterChannelItems(channelId, score) {
+  let closure_27;
+  const f96182 = (data) => {
+    obj = channelId(dependencyMap[18]);
+    const isGuildItemResult = obj.isGuildItem(data);
+    let tmp2 = !isGuildItemResult;
+    if (isGuildItemResult) {
+      tmp2 = data.data.channel_id !== channelId;
+    }
+    return tmp2;
+  };
   obj = require("ICYMIUtils");
+  const numberToCustomScoreResult = obj.numberToCustomScore(score);
   if (numberToCustomScoreResult === require("ICYMIUtils").ICYMICustomScore.MUTED) {
+    let tmp2 = channelId;
+    dehydratedItems = dehydratedItems.filter(f96182);
+    closure_45 = closure_45.filter(f96182);
+    closure_46 = closure_46.filter(f96182);
+    closure_30 = closure_30.filter(f96182);
     _require = channelId;
-    dehydratedItems = dehydratedItems.filter((data) => {
-      const isGuildItemResult = ICYMIUtils.isGuildItem(data);
-      let tmp2 = !isGuildItemResult;
-      if (isGuildItemResult) {
-        tmp2 = data.data.channel_id !== closure_0;
-      }
-      return tmp2;
-    });
-    closure_129_0 = channelId;
-    closure_45 = closure_45.filter((data) => {
-      const isGuildItemResult = ICYMIUtils.isGuildItem(data);
-      let tmp2 = !isGuildItemResult;
-      if (isGuildItemResult) {
-        tmp2 = data.data.channel_id !== closure_0;
-      }
-      return tmp2;
-    });
-    closure_130_0 = channelId;
-    closure_46 = closure_46.filter((data) => {
-      const isGuildItemResult = ICYMIUtils.isGuildItem(data);
-      let tmp2 = !isGuildItemResult;
-      if (isGuildItemResult) {
-        tmp2 = data.data.channel_id !== closure_0;
-      }
-      return tmp2;
-    });
-    closure_131_0 = channelId;
-    closure_30 = closure_30.filter((data) => {
-      const isGuildItemResult = ICYMIUtils.isGuildItem(data);
-      let tmp2 = !isGuildItemResult;
-      if (isGuildItemResult) {
-        tmp2 = data.data.channel_id !== closure_0;
-      }
-      return tmp2;
-    });
-    closure_132_0 = channelId;
-    closure_31 = closure_31.filter((data) => {
-      const isGuildItemResult = ICYMIUtils.isGuildItem(data);
-      let tmp2 = !isGuildItemResult;
-      if (isGuildItemResult) {
-        tmp2 = data.data.channel_id !== closure_0;
-      }
-      return tmp2;
-    });
+    closure_31 = closure_31.filter(f96182);
   }
 }
 function maybeFilterGuildItems(guildId, guildScore) {
+  let closure_27;
+  const f96183 = (data) => {
+    obj = guildId(dependencyMap[18]);
+    const isGuildItemResult = obj.isGuildItem(data);
+    let tmp2 = !isGuildItemResult;
+    if (isGuildItemResult) {
+      tmp2 = data.data.guild_id !== guildId;
+    }
+    return tmp2;
+  };
   obj = require("ICYMIUtils");
+  const numberToCustomScoreResult = obj.numberToCustomScore(guildScore);
   if (numberToCustomScoreResult === require("ICYMIUtils").ICYMICustomScore.MUTED) {
+    let tmp2 = guildId;
+    dehydratedItems = dehydratedItems.filter(f96183);
+    closure_45 = closure_45.filter(f96183);
+    closure_46 = closure_46.filter(f96183);
+    closure_30 = closure_30.filter(f96183);
     _require = guildId;
-    dehydratedItems = dehydratedItems.filter((data) => {
-      const isGuildItemResult = ICYMIUtils.isGuildItem(data);
-      let tmp2 = !isGuildItemResult;
-      if (isGuildItemResult) {
-        tmp2 = data.data.guild_id !== closure_0;
-      }
-      return tmp2;
-    });
-    closure_129_0 = guildId;
-    closure_45 = closure_45.filter((data) => {
-      const isGuildItemResult = ICYMIUtils.isGuildItem(data);
-      let tmp2 = !isGuildItemResult;
-      if (isGuildItemResult) {
-        tmp2 = data.data.guild_id !== closure_0;
-      }
-      return tmp2;
-    });
-    closure_130_0 = guildId;
-    closure_46 = closure_46.filter((data) => {
-      const isGuildItemResult = ICYMIUtils.isGuildItem(data);
-      let tmp2 = !isGuildItemResult;
-      if (isGuildItemResult) {
-        tmp2 = data.data.guild_id !== closure_0;
-      }
-      return tmp2;
-    });
-    closure_131_0 = guildId;
-    closure_30 = closure_30.filter((data) => {
-      const isGuildItemResult = ICYMIUtils.isGuildItem(data);
-      let tmp2 = !isGuildItemResult;
-      if (isGuildItemResult) {
-        tmp2 = data.data.guild_id !== closure_0;
-      }
-      return tmp2;
-    });
-    closure_132_0 = guildId;
-    closure_31 = closure_31.filter((data) => {
-      const isGuildItemResult = ICYMIUtils.isGuildItem(data);
-      let tmp2 = !isGuildItemResult;
-      if (isGuildItemResult) {
-        tmp2 = data.data.guild_id !== closure_0;
-      }
-      return tmp2;
-    });
+    closure_31 = closure_31.filter(f96183);
   }
 }
 function handleReaction(colors) {
+  let emoji;
+  let reactionType;
   ({ emoji, reactionType } = colors);
-  if (null == dependencyMap[colors.messageId]) {
+  if (null == closure_34[colors.messageId]) {
     return false;
-  } else if (tmp3.type !== ICYMITypes.ICYMIItemTypes.MESSAGE) {
+  } else if (closure_34[colors.messageId].type !== ICYMITypes.ICYMIItemTypes.MESSAGE) {
     return false;
   } else {
+    let addReactionResult;
     const tmp5 = AuthenticationStore.getId() === tmp2;
     if ("MESSAGE_REACTION_ADD" === tmp) {
       const message2 = tmp3.message;
       obj = { colors: colors.colors, reactionType };
-      let addReactionResult = message2.addReaction(emoji, tmp5, obj);
+      addReactionResult = message2.addReaction(emoji, tmp5, obj);
     } else {
       const message = tmp3.message;
       addReactionResult = message.removeReaction(emoji, tmp5, reactionType);
     }
-    tmp3.message = addReactionResult;
+    closure_34[colors.messageId].message = addReactionResult;
   }
 }
 function handleAck(channelId) {
+  let flag;
+  let tmp6;
   channelId = channelId.channelId;
-  set = channelId;
   items = [];
   const items1 = [];
   const item = items1.forEach((type, index) => {
     if (index > c47) {
       if (type.type === ICYMITypes.ICYMIItemTypes.MESSAGE) {
-        if (type.data.channel_id === set) {
+        if (type.data.channel_id === channelId) {
           items.push(type);
         }
       }
@@ -522,14 +515,11 @@ function handleAck(channelId) {
     items1.push(type);
   });
   const items2 = [];
-  closure_129_0 = items2;
   const items3 = [];
-  closure_129_1 = items3;
   const items4 = [];
-  closure_129_2 = items4;
   const item1 = closure_30.forEach((id) => {
-    const tmp = null != ICYMIUnreadStateStore.getReadTimestamp(id.id);
-    let tmp4 = id.type === ICYMITypes.ICYMIItemTypes.MESSAGE;
+    const tmp = null != readTimestamp.getReadTimestamp(id.id);
+    let tmp4 = id.type === set(dependencyMap[19]).ICYMIItemTypes.MESSAGE;
     if (tmp4) {
       const message_context = id.data.message_context;
       let prop;
@@ -541,79 +531,82 @@ function handleAck(channelId) {
     let tmp6 = tmp;
     if (tmp4) {
       let tmp7 = tmp;
-      if (!tmp) {
-        tmp7 = !isItemUnreadInChannel.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
-        const tmp2Result = isItemUnreadInChannel;
+      if (!tmp7) {
+        const tmp2Result = set(dependencyMap[24]);
+        tmp7 = !tmp2Result.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
       }
       tmp6 = tmp7;
     }
     if (tmp6) {
-      set1.push(id);
+      items1.push(id);
     } else {
-      if (id.type === ICYMITypes.ICYMIItemTypes.MESSAGE) {
+      if (id.type === set(dependencyMap[19]).ICYMIItemTypes.MESSAGE) {
         if (id.data.has_mention) {
-          dependencyMap.push(id);
+          items3.push(id);
         }
       }
-      importDefault.push(id);
+      items2.push(id);
     }
   });
   const items5 = [...items3];
-  const items6 = [items5, items2.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
+  const items6 = [
+    items5,
+    items2.sort((id, id2) => {
+      obj = set(dependencyMap[18]);
+      return obj.compareGravityUnreadIds(id.id, id2.id);
+    }),
+  ];
   const tmp4 = _slicedToArray(items6, 2);
+  const arr8 = getNewUnreadItems(tmp4[0], channelId);
   if (c41) {
-    let tmp15 = tmp2;
-    if (tmp2) {
-      tmp15 = arr8.length >= set(items1[19]).MIN_ITEMS_FOR_NEW_PILL;
-    }
-    let tmp5 = tmp15;
+    tmp6 = tmp2 && arr8.length >= channelId(items1[19]).MIN_ITEMS_FOR_NEW_PILL;
+    const tmp14 = tmp2 && arr8.length >= channelId(items1[19]).MIN_ITEMS_FOR_NEW_PILL;
   } else {
-    tmp5 = tmp2;
-    if (tmp2) {
+    tmp6 = tmp2;
+    if (tmp6) {
       const _Date = Date;
       const diff = Date.now() - closure_29;
-      let flag = false;
+      flag = false;
       if (diff > 6 * items(items1[17]).Millis.HOUR) {
         const _Set = Set;
-        set = new Set(items1.map((id) => id.id));
+        const self = this;
+        const self2 = this;
+        new Set(items1.map(f96167));
         const substr = closure_30.slice(0, 20);
         flag = substr.filter((id) => set1.has(id.id)).length >= 3;
       }
-      tmp5 = flag;
+      tmp6 = flag;
     }
   }
-  flag = tmp5;
+  flag = tmp6;
   if (0 === items.length) {
-    if (tmp2 === flag) {
+    if (flag === flag) {
       return false;
     }
   }
   if (0 !== items.length) {
     const items7 = [];
-    HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(items7, 0));
+    HermesBuiltin.arraySpread(items7, items, HermesBuiltin.arraySpread(items7, items7, 0));
   }
-  arr8 = getNewUnreadItems(_slicedToArray(items6, 2)[0], channelId);
 }
-let GuildScheduledEventStore = fn(7037);
+let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 ({
   eventScheduledToStartWithin: metroRequire,
-  isGuildEventEnded: closure_7,
-  isGuildScheduledEventActive: closure_8,
+  isGuildEventEnded: metroImportDefault,
+  isGuildScheduledEventActive: metroImportAll,
 } = GuildScheduledEventStore);
-let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const Constants = fn(1085);
+GuildScheduledEventStore = GuildScheduledEventStore_mod;
 ({ ChannelTypes: closure_21, GuildFeatures: closure_22, Permissions: closure_23 } = Constants);
-const ContentInventoryFeedKey = fn(8027).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = ContentInventoryConstants.ContentInventoryFeedKey;
 const DAY = DurationsDefault.Millis.DAY;
 let closure_26 = 3 * DurationsDefault.Millis.DAY;
 let dehydratedItems = [];
 let c28 = null;
-const lastOpened = 0;
 let closure_30 = [];
 let closure_31 = [];
 let newTrackingProps = {};
 let closure_33 = {};
-const dependencyMap = {};
+const __initData3 = {};
 let closure_35 = {};
 let obj = {};
 obj = {};
@@ -623,10 +616,11 @@ let c40 = false;
 let c41 = false;
 let items = null;
 let c43 = null;
-let c44 = 0;
+const numOpens = 0;
 let closure_45 = [];
 let closure_46 = [];
 let c47 = 0;
+const length = [];
 const lastJoinedRecommendedGuild = 0;
 let muted = true;
 let refreshing = false;
@@ -635,285 +629,295 @@ let focused = false;
 let c54 = false;
 let timestamp = 0;
 let takenAt = 0;
-const PersistedStore = initializeDefault.PersistedStore;
-class ICYMIStore extends PersistedStore {}
-const prototype = ICYMIStore.prototype;
-prototype["initialize"] = function initialize(dehydratedItems) {
-  this.waitFor(
-    AuthenticationStore,
-    ChannelStore,
-    ContentInventoryStore,
-    ExperimentStore,
-    GuildAffinitiesStore,
-    GuildScheduledEventStore,
-    GuildStore,
-    ICYMIFiltersStore,
-    ICYMIUnreadStateStore,
-    MessageStore,
-    PermissionStore,
-    ReadStateStore,
-    RelationshipStore,
-    UserGuildSettingsStore,
-  );
-  if (null != dehydratedItems) {
-    dehydratedItems = dehydratedItems.dehydratedItems;
-    if (dehydratedItems == null) {
-      dehydratedItems = [];
+const PersistedStore = get_initializedDefault.PersistedStore;
+class ICYMIStore extends PersistedStore {
+  initialize(dehydratedItems) {
+    this.waitFor(
+      AuthenticationStore,
+      ChannelStore,
+      ContentInventoryStore,
+      ExperimentStore,
+      GuildAffinitiesStore,
+      GuildScheduledEventStore,
+      GuildStore,
+      ICYMIFiltersStore,
+      ICYMIUnreadStateStore,
+      MessageStore,
+      PermissionStore,
+      ReadStateStore,
+      RelationshipStore,
+      UserGuildSettingsStore,
+    );
+    if (null != dehydratedItems) {
+      dehydratedItems = dehydratedItems.dehydratedItems;
+      if (dehydratedItems == null) {
+        dehydratedItems = [];
+      }
+      let closure_27 = dehydratedItems;
+      const item = dehydratedItems.forEach((id) => {
+        closure_1_33[id.id] = id;
+      });
+      let customGuildScores = dehydratedItems.customGuildScores;
+      if (customGuildScores == null) {
+        customGuildScores = {};
+      }
+      let prop = dehydratedItems.customChannelScoresByGuild;
+      if (prop == null) {
+        prop = {};
+      }
+      let num = dehydratedItems.numOpens;
+      if (num == null) {
+        num = 0;
+      }
+      let c44 = num;
+      let num2 = dehydratedItems.lastOpened;
+      if (num2 == null) {
+        num2 = 0;
+      }
+      let closure_29 = num2;
+      let num3 = dehydratedItems.lastJoinedRecommendedGuild;
+      if (num3 == null) {
+        num3 = 0;
+      }
+      let closure_49 = num3;
+      let num4 = dehydratedItems.lastTakenICYMISurvey;
+      if (num4 == null) {
+        num4 = 0;
+      }
+      takenAt = num4;
     }
-    closure_27 = dehydratedItems;
-    const item = dehydratedItems.forEach((id) => {
-      closure_1_33[id.id] = id;
-    });
-    let customGuildScores = dehydratedItems.customGuildScores;
-    if (customGuildScores == null) {
-      customGuildScores = {};
+  }
+  getVersion() {
+    return c38;
+  }
+  getDehydratedItems() {
+    return dehydratedItems;
+  }
+  getNewDehydratedItems() {
+    return closure_30;
+  }
+  getDehydratedItem(arg0) {
+    let tmp = closure_33[arg0];
+    if (tmp == null) {
+      tmp = null;
     }
-    let prop = dehydratedItems.customChannelScoresByGuild;
-    if (prop == null) {
-      prop = {};
+    return tmp;
+  }
+  getHydratedItem(id) {
+    let tmp = closure_34[id];
+    if (tmp == null) {
+      tmp = null;
     }
-    let num = dehydratedItems.numOpens;
+    return tmp;
+  }
+  getMessage(arg0) {
+    let message = null;
+    if (null != closure_34[arg0]) {
+      message = null;
+      if (closure_34[arg0].type === ICYMITypes.ICYMIItemTypes.MESSAGE) {
+        message = tmp.message;
+      }
+    }
+    return message;
+  }
+  getHydratedItems() {
+    return closure_34;
+  }
+  getUnreadDisplayItems() {
+    return closure_45;
+  }
+  getNewUnreadDehydratedItems() {
+    return closure_31;
+  }
+  getReadDisplayItems() {
+    return closure_46;
+  }
+  getNextIndexToHydrate() {
+    return c47;
+  }
+  getMissingItems() {
+    return closure_35;
+  }
+  customMuted(id, id2) {
+    const self = this;
+    const customGuildScore = this.getCustomGuildScore(id);
+    let tmp4 = customGuildScore === ICYMIUtils.ICYMICustomScore.MUTED;
+    if (!tmp4) {
+      const customChannelScore = self.getCustomChannelScore(id, id2);
+      tmp4 = customChannelScore === ICYMIUtils.ICYMICustomScore.MUTED;
+    }
+    return tmp4;
+  }
+  getCustomChannelScore(id, id2) {
+    if (null != obj[id]) {
+      let UNKNOWN;
+      if (null != obj[id][id2]) {
+        obj = ICYMIUtils;
+        UNKNOWN = obj.numberToCustomScore(obj[id][id2]);
+      }
+      return UNKNOWN;
+    }
+    UNKNOWN = ICYMIUtils.ICYMICustomScore.UNKNOWN;
+  }
+  getCustomGuildScore(id) {
+    let num = obj[id];
     if (num == null) {
       num = 0;
     }
-    c44 = num;
-    let num2 = dehydratedItems.lastOpened;
-    if (num2 == null) {
-      num2 = 0;
-    }
-    closure_29 = num2;
-    let num3 = dehydratedItems.lastJoinedRecommendedGuild;
-    if (num3 == null) {
-      num3 = 0;
-    }
-    closure_49 = num3;
-    let num4 = dehydratedItems.lastTakenICYMISurvey;
-    if (num4 == null) {
-      num4 = 0;
-    }
-    takenAt = num4;
+    return num;
   }
-};
-prototype["getVersion"] = function getVersion() {
-  return c38;
-};
-prototype["getDehydratedItems"] = function getDehydratedItems() {
-  return closure_27;
-};
-prototype["getNewDehydratedItems"] = function getNewDehydratedItems() {
-  return closure_30;
-};
-prototype["getDehydratedItem"] = function getDehydratedItem(arg0) {
-  let tmp = closure_33[arg0];
-  if (tmp == null) {
-    tmp = null;
+  getCustomGuildScores() {
+    return obj;
   }
-  return tmp;
-};
-prototype["getHydratedItem"] = function getHydratedItem(id) {
-  let tmp = dependencyMap[id];
-  if (tmp == null) {
-    tmp = null;
+  hasNewContent() {
+    return c40;
   }
-  return tmp;
-};
-prototype["getMessage"] = function getMessage(arg0) {
-  let message = null;
-  if (null != dependencyMap[arg0]) {
-    message = null;
-    if (tmp.type === ICYMITypes.ICYMIItemTypes.MESSAGE) {
-      message = tmp.message;
+  getCurrentStatusAttachments(arg0) {
+    if (null != items) {
+      return [];
     }
   }
-  return message;
-};
-prototype["getHydratedItems"] = function getHydratedItems() {
-  return closure_34;
-};
-prototype["getUnreadDisplayItems"] = function getUnreadDisplayItems() {
-  return closure_45;
-};
-prototype["getNewUnreadDehydratedItems"] = function getNewUnreadDehydratedItems() {
-  return closure_31;
-};
-prototype["getReadDisplayItems"] = function getReadDisplayItems() {
-  return closure_46;
-};
-prototype["getNextIndexToHydrate"] = function getNextIndexToHydrate() {
-  return c47;
-};
-prototype["getMissingItems"] = function getMissingItems() {
-  return closure_35;
-};
-prototype["customMuted"] = function customMuted(id, id2) {
-  const self = this;
-  const customGuildScore = this.getCustomGuildScore(id);
-  let tmp4 = customGuildScore === ICYMIUtils.ICYMICustomScore.MUTED;
-  if (!tmp4) {
-    const customChannelScore = self.getCustomChannelScore(id, id2);
-    tmp4 = customChannelScore === ICYMIUtils.ICYMICustomScore.MUTED;
+  getLoadId() {
+    return c28;
   }
-  return tmp4;
-};
-prototype["getCustomChannelScore"] = function getCustomChannelScore(id, id2) {
-  if (null != obj[id]) {
-    if (null != obj[id][id2]) {
-      obj = ICYMIUtils;
-      let UNKNOWN = obj.numberToCustomScore(obj[id][id2]);
+  hasOpenedEnoughTimes() {
+    return 5 === c44;
+  }
+  hasOpened() {
+    return c41;
+  }
+  getDiscoverableGuilds() {
+    return length;
+  }
+  videosMuted() {
+    return muted;
+  }
+  isRefreshing() {
+    return refreshing;
+  }
+  isHydrating() {
+    return set.size > 0;
+  }
+  notificationItem() {
+    return c43;
+  }
+  getIsTabFocused() {
+    return focused;
+  }
+  isFirstPageHydrated() {
+    return c54;
+  }
+  lastScrollEvent() {
+    return timestamp;
+  }
+  lastTakenICYMISurvey() {
+    return takenAt;
+  }
+  getIndexInHydratedFeed(id) {
+    if ("recommended_guilds" !== id) {
+      let findIndexResult;
+      if ("recommendedGuilds" !== id) {
+        items = [];
+        HermesBuiltin.arraySpread(items, closure_46, HermesBuiltin.arraySpread(items, closure_45, 0));
+        const found = items.filter((item) => null != closure_1_34[item.id]);
+        findIndexResult = found.findIndex((id) => id.id === id);
+      }
+      return findIndexResult;
     }
-    return UNKNOWN;
+    const items1 = [...closure_46];
+    findIndexResult = items1.findIndex((type) => type.type === id(dependencyMap[19]).ICYMIItemTypes.RECOMMENDED_GUILDS);
   }
-  UNKNOWN = ICYMIUtils.ICYMICustomScore.UNKNOWN;
-};
-prototype["getCustomGuildScore"] = function getCustomGuildScore(id) {
-  let num = obj[id];
-  if (num == null) {
-    num = 0;
+  getState() {
+    obj = {
+      dehydratedItems,
+      numOpens,
+      customGuildScores: obj,
+      customChannelScoresByGuild: obj,
+      lastOpened,
+      lastJoinedRecommendedGuild,
+      lastTakenICYMISurvey: takenAt,
+    };
+    return obj;
   }
-  return num;
-};
-prototype["getCustomGuildScores"] = function getCustomGuildScores() {
-  return obj;
-};
-prototype["hasNewContent"] = function hasNewContent() {
-  return c40;
-};
-prototype["getCurrentStatusAttachments"] = function getCurrentStatusAttachments(arg0) {
-  if (null != items) {
-    return [];
-  }
-};
-prototype["getLoadId"] = function getLoadId() {
-  return c28;
-};
-prototype["hasOpenedEnoughTimes"] = function hasOpenedEnoughTimes() {
-  return 5 === c44;
-};
-prototype["hasOpened"] = function hasOpened() {
-  return c41;
-};
-prototype["getDiscoverableGuilds"] = function getDiscoverableGuilds() {
-  return closure_48;
-};
-prototype["videosMuted"] = function videosMuted() {
-  return muted;
-};
-prototype["isRefreshing"] = function isRefreshing() {
-  return refreshing;
-};
-prototype["isHydrating"] = function isHydrating() {
-  return set.size > 0;
-};
-prototype["notificationItem"] = function notificationItem() {
-  return c43;
-};
-prototype["getIsTabFocused"] = function getIsTabFocused() {
-  return focused;
-};
-prototype["isFirstPageHydrated"] = function isFirstPageHydrated() {
-  return c54;
-};
-prototype["lastScrollEvent"] = function lastScrollEvent() {
-  return timestamp;
-};
-prototype["lastTakenICYMISurvey"] = function lastTakenICYMISurvey() {
-  return takenAt;
-};
-prototype["getIndexInHydratedFeed"] = function getIndexInHydratedFeed(id) {
-  if ("recommended_guilds" !== id) {
-    if ("recommendedGuilds" !== id) {
-      items = [];
-      HermesBuiltin.arraySpread(closure_46, HermesBuiltin.arraySpread(closure_45, 0));
-      const found = items.filter((item) => null != dependencyMap[item.id]);
-      let findIndexResult = found.findIndex((id) => id.id === closure_0);
-    }
-    return findIndexResult;
-  }
-  const items1 = [...closure_46];
-  findIndexResult = items1.findIndex((type) => type.type === id(dependencyMap[19]).ICYMIItemTypes.RECOMMENDED_GUILDS);
-};
-prototype["getState"] = function getState() {
-  obj = {
-    dehydratedItems,
-    numOpens,
-    customGuildScores: obj,
-    customChannelScoresByGuild: obj,
-    lastOpened,
-    lastJoinedRecommendedGuild,
-    lastTakenICYMISurvey: takenAt,
-  };
-  return obj;
-};
+}
+const prototype = ICYMIStore.prototype;
 ICYMIStore.displayName = "ICYMIStore";
 ICYMIStore.persistKey = "ICYMIStore";
 obj = {
   LOGOUT: function handleLogout() {
-    closure_27 = [];
+    let closure_27 = [];
     closure_30 = [];
     closure_31 = [];
     closure_33 = {};
-    closure_32 = {};
+    let closure_32 = {};
     closure_34 = {};
     closure_35 = {};
     c28 = null;
     c38 = 0;
     c39 = false;
-    c40 = false;
+    let c40 = false;
     c41 = false;
     closure_45 = [];
     closure_46 = [];
     c47 = 0;
-    closure_29 = 0;
-    closure_49 = 0;
+    let closure_29 = 0;
+    let closure_49 = 0;
     muted = true;
     refreshing = false;
-    set = new Set();
-    c43 = null;
+    new Set();
+    let c43 = null;
     focused = false;
     c54 = false;
     items = null;
     timestamp = 0;
   },
   LOAD_ICYMI_FROM_NOTIFICATION: function handleLoadICYMIFromNotification(arg0) {
+    let customStatusItem;
+    let items1;
+    let items2;
+    let items4;
+    let items7;
+    let messageItem;
+    let obj2;
+    let obj4;
     ({ messageItem, customStatusItem } = arg0);
     if (null != customStatusItem) {
-      if (null == c28) {
-        return true;
-      } else {
+      if (null != c28) {
         if (items7.length > 0) {
           items = items7;
         } else {
           items = [];
-          HermesBuiltin.arraySpread(items1, 0);
+          HermesBuiltin.arraySpread(items, items1, 0);
         }
         items7 = items;
         finalizeNewDehydratedItemsContent();
         reload();
       }
+      return true;
     } else if (null != messageItem) {
-      obj = { id: messageItem.message.id, type: items2(items4[19]).ICYMIItemTypes.MESSAGE, score: 50, data: null };
-      const obj2 = {
+      obj = { id: messageItem.message.id, type: items2(items4[19]).ICYMIItemTypes.MESSAGE, score: 50, data: obj2 };
+      obj2 = {
         channel_id: messageItem.channel_id,
         message_id: messageItem.message.id,
         guild_id: messageItem.guild_id,
         channel_type: constants.GUILD_TEXT,
       };
-      obj.data = obj2;
       closure_33[messageItem.message.id] = obj;
-      const obj3 = {};
+      const id = messageItem.message.id;
+      const obj3 = { message: obj4.createMessageRecord(messageItem.message) };
       const merged = Object.assign(obj);
-      obj3.message = items2(items4[27]).createMessageRecord(messageItem.message);
-      closure_34[messageItem.message.id] = obj3;
+      closure_34[id] = obj3;
+      obj4 = items2(items4[27]);
       if (null == c28) {
         if (null == closure_32) {
           items1 = [obj];
-          HermesBuiltin.arraySpread(items1, 1);
+          HermesBuiltin.arraySpread(items1, items1, 1);
           items2 = [];
           const items3 = [];
           items4 = [];
           const item = items1.forEach((id) => {
-            const tmp = null != ICYMIUnreadStateStore.getReadTimestamp(id.id);
-            let tmp4 = id.type === ICYMITypes.ICYMIItemTypes.MESSAGE;
+            const tmp = null != readTimestamp.getReadTimestamp(id.id);
+            let tmp4 = id.type === set(dependencyMap[19]).ICYMIItemTypes.MESSAGE;
             if (tmp4) {
               const message_context = id.data.message_context;
               let prop;
@@ -925,51 +929,64 @@ obj = {
             let tmp6 = tmp;
             if (tmp4) {
               let tmp7 = tmp;
-              if (!tmp) {
-                tmp7 = !isItemUnreadInChannel.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
-                const tmp2Result = isItemUnreadInChannel;
+              if (!tmp7) {
+                const tmp2Result = set(dependencyMap[24]);
+                tmp7 = !tmp2Result.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
               }
               tmp6 = tmp7;
             }
             if (tmp6) {
-              set1.push(id);
+              items1.push(id);
             } else {
-              if (id.type === ICYMITypes.ICYMIItemTypes.MESSAGE) {
+              if (id.type === set(dependencyMap[19]).ICYMIItemTypes.MESSAGE) {
                 if (id.data.has_mention) {
-                  dependencyMap.push(id);
+                  items3.push(id);
                 }
               }
-              importDefault.push(id);
+              items2.push(id);
             }
           });
           const items5 = [];
-          HermesBuiltin.arraySpread(items3, HermesBuiltin.arraySpread(items4, 0));
+          HermesBuiltin.arraySpread(items5, items3, HermesBuiltin.arraySpread(items5, items4, 0));
           const items6 = [
             items5,
-            items2.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id)),
+            items2.sort((id, id2) => {
+              obj = set(dependencyMap[18]);
+              return obj.compareGravityUnreadIds(id.id, id2.id);
+            }),
           ];
           [closure_45, closure_46] = items6;
-          const tmp26 = _slicedToArray(items6, 2);
+          _slicedToArray(items6, 2);
         }
         return true;
       }
       items7 = [obj];
-      HermesBuiltin.arraySpread(items7, 1);
+      HermesBuiltin.arraySpread(items7, items7, 1);
       reload();
-      const obj4 = items2(items4[27]);
     } else {
       return false;
     }
   },
   LOAD_ICYMI_DEHYDRATED: function handleLoadDehydrated(items) {
+    let arr10;
+    let arr9;
+    let c40;
+    let isInitialLoad;
+    let isReloading;
+    let loadId;
+    let readTimestamp;
+    let startTime;
+    let str;
     items = items.items;
-    let set1;
+    set = undefined;
+    let tmp = set;
     ({ loadId, startTime, isInitialLoad, isReloading } = items);
-    set1 = new Set(set1(8024).SUPPORTED_ITEM_TYPES);
-    const found = items.filter((type) => set1.has(type.type));
+    const self = this;
+    set = new Set(set(8024).SUPPORTED_ITEM_TYPES);
+    const found = items.filter((type) => set.has(type.type));
     const found1 = found.filter(filterStaffGuild);
     closure_30 = found1.map((type) => {
-      if (type.type === set1(dependencyMap[19]).ICYMIItemTypes.MESSAGE) {
+      if (type.type === set(dependencyMap[19]).ICYMIItemTypes.MESSAGE) {
         if (null != type.data.message_context) {
           let tmp2 = null != type.data.message_context.reply_message_id;
           if (tmp2) {
@@ -1017,21 +1034,18 @@ obj = {
       }
       return type;
     });
-    finalizeNewDehydratedItemsContent();
+    let tmp4 = finalizeNewDehydratedItemsContent();
     newTrackingProps = {
       load_id: loadId,
       load_time_millis: Date.now() - startTime,
       feed_item_ids: closure_30.map((id) => id.id),
     };
     const items1 = [];
-    closure_129_0 = items1;
     const items2 = [];
-    closure_129_1 = items2;
     const items3 = [];
-    closure_129_2 = items3;
     const item = closure_30.forEach((id) => {
-      const tmp = null != ICYMIUnreadStateStore.getReadTimestamp(id.id);
-      let tmp4 = id.type === ICYMITypes.ICYMIItemTypes.MESSAGE;
+      const tmp = null != readTimestamp.getReadTimestamp(id.id);
+      let tmp4 = id.type === set(dependencyMap[19]).ICYMIItemTypes.MESSAGE;
       if (tmp4) {
         const message_context = id.data.message_context;
         let prop;
@@ -1043,62 +1057,69 @@ obj = {
       let tmp6 = tmp;
       if (tmp4) {
         let tmp7 = tmp;
-        if (!tmp) {
-          tmp7 = !isItemUnreadInChannel.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
-          const tmp2Result = isItemUnreadInChannel;
+        if (!tmp7) {
+          const tmp2Result = set(dependencyMap[24]);
+          tmp7 = !tmp2Result.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
         }
         tmp6 = tmp7;
       }
       if (tmp6) {
-        set1.push(id);
+        items1.push(id);
       } else {
-        if (id.type === ICYMITypes.ICYMIItemTypes.MESSAGE) {
+        if (id.type === set(dependencyMap[19]).ICYMIItemTypes.MESSAGE) {
           if (id.data.has_mention) {
-            dependencyMap.push(id);
+            items3.push(id);
           }
         }
-        importDefault.push(id);
+        items2.push(id);
       }
     });
     const items4 = [...items2];
-    const items5 = [items4, items1.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
-    set = new Set(set1(8024).SUPPORTED_ITEM_TYPES);
-    [arr9, arr10] = items5;
+    const items5 = [
+      items4,
+      items1.sort((id, id2) => {
+        obj = set(dependencyMap[18]);
+        return obj.compareGravityUnreadIds(id.id, id2.id);
+      }),
+    ];
     let tmp6 = _slicedToArray(items5, 2);
+    [arr9, arr10] = tmp6;
+    const arr11 = getNewUnreadItems(arr9);
     if (c41) {
       if (0 !== c38) {
         if (!isInitialLoad) {
           if (c38 > 0) {
-            c43 = null;
+            let c43 = null;
           }
-          const tmp8 = arr11.length > tmp(8024).MIN_ITEMS_FOR_NEW_PILL;
+          let tmp9 = arr11.length > tmp(8024).MIN_ITEMS_FOR_NEW_PILL;
           if (!isReloading) {
-            hasNewContent = tmp8;
+            hasNewContent = tmp9;
           }
-          if (tmp8) {
-            const tmpResult = tmp(8028);
+          if (tmp9) {
             const items6 = [];
-            HermesBuiltin.arraySpread(arr10, HermesBuiltin.arraySpread(arr9, 0));
-            tmpResult.hydrateItems(items6, 0, tmp(8024).ICYMI_PAGE_SIZE, closure_34);
+            const hydrateItems = tmp(8028).hydrateItems;
+            const tmpResult = tmp(8028);
+            HermesBuiltin.arraySpread(items6, arr10, HermesBuiltin.arraySpread(items6, arr9, 0));
+            hydrateItems(items6, 0, tmp(8024).ICYMI_PAGE_SIZE, closure_34);
             if (arr9.length + arr10.length === 0) {
               c54 = true;
             }
           }
-          const obj2 = {
-            newTrackingProps,
-            hasNewContent,
-            unreadFeedItems: arr9,
-            readFeedItems: arr10,
-            homeSessionId: null,
-          };
-          let str = "background_load";
-          if (focused) {
-            str = "foreground_load";
-          }
-          obj2.homeSessionId = str;
-          tmp(8036).trackFeedLoaded(obj2);
-          const tmpResult2 = tmp(8036);
         }
+        const obj2 = {
+          newTrackingProps,
+          hasNewContent,
+          unreadFeedItems: arr9,
+          readFeedItems: arr10,
+          homeSessionId: str,
+        };
+        str = "background_load";
+        const trackFeedLoaded = tmp(8036).trackFeedLoaded;
+        tmp(8036);
+        if (focused) {
+          str = "foreground_load";
+        }
+        trackFeedLoaded(obj2);
       }
     }
     c38 = 0;
@@ -1106,9 +1127,12 @@ obj = {
       const _Date = Date;
       const diff = Date.now() - closure_29;
       let flag = false;
+      const arr13 = closure_30;
       if (diff > 6 * DurationsDefault.Millis.HOUR) {
         const _Set = Set;
-        set1 = new Set(arr9.map((id) => id.id));
+        const self2 = this;
+        const self3 = this;
+        const set1 = new Set(arr9.map(f96167));
         const substr = arr13.slice(0, 20);
         flag = substr.filter((id) => set1.has(id.id)).length >= 3;
       }
@@ -1118,12 +1142,17 @@ obj = {
       }
       const obj3 = { newUnread: arr9, newRead: arr10 };
       reload(obj3);
-      arr13 = closure_30;
     }
     hasNewContent = false;
-    arr11 = getNewUnreadItems(arr9);
   },
   LOAD_ICYMI_HYDRATED: function handleLoadHydratedItems(arg0) {
+    let activityItems;
+    let closure_0;
+    let endingIndex;
+    let messageItems;
+    let requestActivityItems;
+    let requestMessageItems;
+    let startingIndex;
     ({ messageItems, activityItems, requestMessageItems, requestActivityItems, startingIndex, endingIndex } = arg0);
     c54 = true;
     obj = {};
@@ -1132,30 +1161,37 @@ obj = {
       acc[message.message.id] = message;
       return acc;
     }, {});
-    closure_1 = activityItems.reduce((acc, id) => {
+    let closure_1 = activityItems.reduce((acc, id) => {
       acc[id.id] = id;
       return acc;
     }, {});
     const item = requestMessageItems.forEach((message_id) => {
+      let obj5;
       if (null != closure_0[message_id.message_id]) {
-        let tmp4 = dependencyMap[message_id.message_id];
+        let tmp4 = closure_33[message_id.message_id];
         if (null == tmp4) {
-          obj = { id: message_id.message_id, type: ICYMITypes.ICYMIItemTypes.MESSAGE, score: -1, data: null };
-          const obj5 = { guild_id: null, channel_id: null, message_id: null, channel_type: null, has_mention: false };
-          ({ guild_id: obj2.guild_id, channel_id: obj2.channel_id } = tmp);
-          obj5.message_id = tmp.message.id;
-          obj5.channel_type = constants.GUILD_TEXT;
-          obj.data = obj5;
+          obj = { id: message_id.message_id, type: ICYMITypes.ICYMIItemTypes.MESSAGE, score: -1, data: obj5 };
+          obj5 = {
+            guild_id: null,
+            channel_id: null,
+            message_id: closure_0[message_id.message_id].message.id,
+            channel_type: constants.GUILD_TEXT,
+            has_mention: false,
+          };
+          ({ guild_id: obj2.guild_id, channel_id: obj2.channel_id } = closure_0[message_id.message_id]);
           tmp4 = obj;
         }
         const message = MessageStore.getMessage(tmp.channel_id, tmp.message.id);
         if (null != message) {
-          const obj7 = {};
-          const merged = Object.assign(ICYMIUtils.createGravityMessageFromServer(tmp, tmp4));
-          obj7.message = message;
-          closure_34[tmp.message.id] = obj7;
+          const id2 = tmp.message.id;
+          const obj7 = { message };
+          const obj4 = ICYMIUtils;
+          const merged = Object.assign(obj4.createGravityMessageFromServer(tmp, tmp4));
+          closure_34[id2] = obj7;
         } else {
-          closure_34[tmp.message.id] = ICYMIUtils.createGravityMessageFromServer(tmp, tmp4);
+          const id = tmp.message.id;
+          const obj3 = ICYMIUtils;
+          closure_34[id] = obj3.createGravityMessageFromServer(closure_0[message_id.message_id], tmp4);
         }
       } else {
         closure_35[message_id.message_id] = true;
@@ -1163,11 +1199,11 @@ obj = {
     });
     const item1 = requestActivityItems.forEach((content_id) => {
       if (null != closure_1[content_id.content_id]) {
-        if (null != dependencyMap[content_id.content_id]) {
-          obj = {};
+        if (null != closure_33[content_id.content_id]) {
+          const id = tmp.id;
+          obj = { activity: closure_1[content_id.content_id] };
           const merged = Object.assign(tmp4);
-          obj.activity = tmp;
-          closure_34[tmp.id] = obj;
+          closure_34[id] = obj;
         } else {
           closure_35[content_id.content_id] = true;
         }
@@ -1175,7 +1211,9 @@ obj = {
         closure_35[content_id.content_id] = true;
       }
     });
-    set.delete(require("generateHydrationId").generateHydrationId(startingIndex, endingIndex));
+    const _delete = set.delete;
+    const obj2 = require("generateHydrationId");
+    _delete(obj2.generateHydrationId(startingIndex, endingIndex));
   },
   LOAD_ICYMI_CUSTOM_SCORES: function handleLoadCustomScores(arg0) {
     const iter = arg0.scores[Symbol.iterator]();
@@ -1198,16 +1236,21 @@ obj = {
     }
     obj = {};
     const merged = Object.assign(obj);
-    const merged1 = Object.assign(obj);
-    obj = {};
     const obj2 = {};
+    const merged1 = Object.assign(obj);
+    obj = obj2;
   },
   LOAD_ICYMI_RECOMMENDED_GUILDS: function loadICYMIRecommendedGuilds(guilds) {
     guilds = guilds.guilds;
-    closure_48 = guilds.map((guild) => require("GuildDiscoveryUtils").makeDiscoverableGuild(guild.guild));
+    let closure_48 = guilds.map((guild) => {
+      obj = require("GuildDiscoveryUtils");
+      return obj.makeDiscoverableGuild(guild.guild);
+    });
     injectRecommendedGuildsRow();
   },
   ICYMI_CUSTOM_SCORES_UPDATED: function handleCustomScoresUpdated(guildScore) {
+    let channelScores;
+    let guildId;
     ({ channelScores, guildId } = guildScore);
     guildScore = guildScore.guildScore;
     if (null != guildScore) {
@@ -1218,6 +1261,8 @@ obj = {
     }
     if (channelScores != null) {
       const item = channelScores.forEach((item) => {
+        let channelId;
+        let score;
         ({ channelId, score } = item);
         if (null == obj[guildId]) {
           obj[guildId] = {};
@@ -1234,42 +1279,43 @@ obj = {
       return false;
     } else {
       reload();
-      c40 = false;
+      let c40 = false;
     }
   },
   ICYMI_TAB_OPENED: function handleGravityTabOpened() {
     c41 = true;
-    closure_29 = Date.now();
-    if (c39) {
+    let closure_29 = Date.now();
+    const tmp = c39;
+    if (tmp) {
       c39 = false;
-      c40 = false;
+      let c40 = false;
     }
     if (c44 < 5) {
       c44 = c44 + 1;
     }
   },
   ICYMI_FEEDBACK_GIVEN: function handleGravityFeedback() {
-    c44 = 6;
+    let c44 = 6;
   },
   MESSAGE_REACTION_ADD: handleReaction,
   MESSAGE_REACTION_ADD_MANY: function handleReactionBatch(arg0) {
-    if (null == dependencyMap[arg0.messageId]) {
+    if (null == closure_34[arg0.messageId]) {
       return false;
-    } else if (tmp2.type !== ICYMITypes.ICYMIItemTypes.MESSAGE) {
+    } else if (closure_34[arg0.messageId].type !== ICYMITypes.ICYMIItemTypes.MESSAGE) {
       return false;
     } else {
       const message = tmp2.message;
-      tmp2.message = message.addReactionBatch(tmp, AuthenticationStore.getId());
+      closure_34[arg0.messageId].message = message.addReactionBatch(tmp, AuthenticationStore.getId());
     }
   },
   MESSAGE_REACTION_REMOVE: handleReaction,
   MESSAGE_REACTION_REMOVE_ALL: function handleRemoveAllReactions(arg0) {
     let tmp2 = null != tmp;
     if (tmp2) {
-      const tmp5 = tmp.type === ICYMITypes.ICYMIItemTypes.MESSAGE;
+      const tmp5 = closure_34[arg0.messageId].type === ICYMITypes.ICYMIItemTypes.MESSAGE;
       if (tmp5) {
         const message = tmp.message;
-        tmp.message = message.set("reactions", []);
+        closure_34[arg0.messageId].message = message.set("reactions", []);
       }
       tmp2 = tmp5;
     }
@@ -1278,10 +1324,10 @@ obj = {
   MESSAGE_REACTION_REMOVE_EMOJI: function handleRemoveEmojiReactions(arg0) {
     let tmp3 = null != tmp2;
     if (tmp3) {
-      const tmp6 = tmp2.type === ICYMITypes.ICYMIItemTypes.MESSAGE;
+      const tmp6 = closure_34[arg0.messageId].type === ICYMITypes.ICYMIItemTypes.MESSAGE;
       if (tmp6) {
         const message = tmp2.message;
-        tmp2.message = message.removeReactionsForEmoji(tmp);
+        closure_34[arg0.messageId].message = message.removeReactionsForEmoji(tmp);
       }
       tmp3 = tmp6;
     }
@@ -1290,7 +1336,7 @@ obj = {
   CHANNEL_ACK: handleAck,
   MESSAGE_ACK: handleAck,
   ICYMI_JOINED_RECOMMENDED_GUILD: function handleJoinedRecommendedGuild() {
-    closure_49 = Date.now();
+    let closure_49 = Date.now();
   },
   ICYMI_SET_VIDEOS_MUTED: function handleSetVideosMuted(muted) {
     muted = muted.muted;
@@ -1309,18 +1355,18 @@ obj = {
   },
   LOAD_ICYMI_CURRENT_STATUS_MEDIA: function handleLoadCurrentStatusMedia(attachments) {
     attachments = attachments.attachments;
-    let tmp2 = null;
+    let tmp3 = null;
     if (null != attachments) {
-      tmp2 = null;
+      tmp3 = null;
       if (0 !== attachments.length) {
-        items = [tmp];
+        items = [tmp2];
         const items1 = [];
-        HermesBuiltin.arraySpread(attachments, 0);
+        HermesBuiltin.arraySpread(items1, attachments, 0);
         items[1] = items1;
-        tmp2 = items;
+        tmp3 = items;
       }
     }
-    items = tmp2;
+    items = tmp3;
   },
   ICYMI_SCROLL_EVENT: function handleScrollEvent(timestamp) {
     timestamp = timestamp.timestamp;
@@ -1330,7 +1376,6 @@ obj = {
   },
 };
 const iCYMIStore = new ICYMIStore(DispatcherDefault, obj);
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/ICYMIStore.tsx");
 
 export default iCYMIStore;

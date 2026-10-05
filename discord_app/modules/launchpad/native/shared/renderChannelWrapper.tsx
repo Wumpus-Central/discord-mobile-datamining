@@ -1,22 +1,22 @@
 // discord_app/modules/launchpad/native/shared/renderChannelWrapper.tsx
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import getLayoutStylesDefault from "getLayoutStyles.tsx";
 import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const View = fn(17).View;
-const jsx = fn(21).jsx;
+const View = react_native.View;
+const jsx = Fragment.jsx;
 let closure_4 = getLayoutStylesDefault();
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/renderChannelWrapper.tsx");
 
 export default function renderChannelWrapper(children, fontScale) {
-  const obj = { style: null, children: null };
   const items = [
     { flex: 1, flexDirection: "row", alignItems: "center", position: "relative" },
     { minHeight: getScaledChannelRowHeightDefault(fontScale.fontScale) - 2 * closure_4.layout.margin.marginVertical },
     closure_4.container.padding,
   ];
-  obj.style = items;
-  obj.children = children;
-  return <View style={null}>{null}</View>;
+  ({ minHeight: getScaledChannelRowHeightDefault(fontScale.fontScale) - 2 * closure_4.layout.margin.marginVertical });
+  return <View style={items}>{children}</View>;
 }

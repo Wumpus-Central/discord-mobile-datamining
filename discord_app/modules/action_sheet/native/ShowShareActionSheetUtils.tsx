@@ -5,6 +5,7 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import URLUtilsDefault from "../../../utils/URLUtils.tsx";
 import FileExtensionUtils from "../../media/FileExtensionUtils.tsx";
 import SharePreparingModalConstants from "../../share/native/SharePreparingModalConstants.tsx";
+import MobileMediaViewerShareExperiment from "../../media_viewer/native/MobileMediaViewerShareExperiment.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -13,52 +14,55 @@ const result = size.fileFinishedImporting("modules/action_sheet/native/ShowShare
 
 export const trackAppClickInNativeShareSheet = function trackAppClickInNativeShareSheet(app, _location) {
   let str = app;
+  const track = AnalyticsUtilsDefault.track;
+  const NATIVE_SHARE_SHEET_APP_CLICKED = AnalyticEvents.NATIVE_SHARE_SHEET_APP_CLICKED;
+  AnalyticsUtilsDefault;
   if (app == null) {
     str = "";
   }
-  AnalyticsUtilsDefault.track(AnalyticEvents.NATIVE_SHARE_SHEET_APP_CLICKED, {
-    package_name: str,
-    location: _location,
-  });
+  const obj = { package_name: str, location: _location };
+  track(NATIVE_SHARE_SHEET_APP_CLICKED, obj);
 };
 export const getMediaShareParams = function getMediaShareParams(source) {
+  let contentType;
+  let tmp11;
+  let tmp6;
+  let videoURI;
+  const obj = MobileMediaViewerShareExperiment;
   if (obj.getMobileMediaViewerShareExperimentEnabled("shareMediaSource")) {
     if (true !== source.disableDownload) {
       if (null != source.shareURI) {
+        const obj11 = URLUtilsDefault;
         if (obj11.isDiscordDirectAssetUrl(source.shareURI)) {
-          if (tmpResult.isAndroid()) {
-            const obj2 = { presentDelayMs };
-          }
+          const tmpResult = PlatformUtils;
           ({ videoURI, contentType } = source);
           if (null != videoURI) {
-            const decideFileExtensionResult = FileExtensionUtils.decideFileExtension(videoURI, contentType, true);
-            const obj3 = { mediaFallbackUrl: videoURI, mediaStagingOptions: null };
-            let tmp11;
+            const tmpResult3 = FileExtensionUtils;
+            const decideFileExtensionResult = tmpResult3.decideFileExtension(videoURI, contentType, true);
+            const obj3 = { mediaFallbackUrl: videoURI, mediaStagingOptions: tmp11 };
+            tmp11 = undefined;
             if (null != decideFileExtensionResult) {
               const obj4 = { url: videoURI, fileExtension: decideFileExtensionResult, mediaType: "video" };
               const merged = Object.assign(tmp3);
               tmp11 = obj4;
             }
-            obj3.mediaStagingOptions = tmp11;
             return obj3;
           } else {
-            const decideFileExtensionResult1 = FileExtensionUtils.decideFileExtension(source.uri, contentType, true);
-            const obj5 = { mediaFallbackUrl: source.shareURI, mediaStagingOptions: null };
-            let tmp6;
+            const uri = source.uri;
+            const tmpResult4 = FileExtensionUtils;
+            const decideFileExtensionResult1 = tmpResult4.decideFileExtension(uri, contentType, true);
+            const obj5 = { mediaFallbackUrl: source.shareURI, mediaStagingOptions: tmp6 };
+            tmp6 = undefined;
             if (null != decideFileExtensionResult1) {
               const obj6 = { url: source.uri, fileExtension: decideFileExtensionResult1, mediaType: "image" };
               const merged1 = Object.assign(tmp3);
               tmp6 = obj6;
             }
-            obj5.mediaStagingOptions = tmp6;
             return obj5;
           }
-          tmpResult = PlatformUtils;
         } else {
-          const obj7 = { mediaFallbackUrl: source.shareURI };
-          return obj7;
+          return { mediaFallbackUrl: source.shareURI };
         }
-        obj11 = URLUtilsDefault;
       }
     }
   }
@@ -72,5 +76,6 @@ export const getMediaShareParams = function getMediaShareParams(source) {
   return { mediaFallbackUrl };
 };
 export const resolveShareFileExtension = function resolveShareFileExtension(uri, contentType) {
-  return FileExtensionUtils.decideFileExtension(uri, contentType, true);
+  const obj = FileExtensionUtils;
+  return obj.decideFileExtension(uri, contentType, true);
 };

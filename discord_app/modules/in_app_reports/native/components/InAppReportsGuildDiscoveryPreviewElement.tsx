@@ -1,50 +1,61 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsGuildDiscoveryPreviewElement.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import GuildRecordUtils from "../../../../utils/GuildRecordUtils.tsx";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
 import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+let guild;
+
+let hasOwnProperty;
+let metroRequire;
+let obj2;
+let obj3;
+let size;
+const View = react_native.View;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
-  borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
+  borderColor: obj2,
   title: { textTransform: "uppercase", lineHeight: 16, marginBottom: 8 },
-  itemContainer: null,
-  guildInfo: null,
-  guildName: null,
-  guildIcon: null,
+  itemContainer: obj3,
+  guildInfo: { display: "flex", flexDirection: "row", alignItems: "center" },
+  guildName: { lineHeight: 18, marginStart: 8 },
+  guildIcon: size,
 };
-let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-obj2.itemContainer = { minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 8 };
-obj2.guildInfo = { display: "flex", flexDirection: "row", alignItems: "center" };
-obj2.guildName = { lineHeight: 18, marginStart: 8 };
-let size = { borderRadius: nativeDefault.radii.xs, width: 18, height: 18 };
-obj2.guildIcon = size;
-let closure_7 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj4 = { minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 8 };
-size = fn(2);
-let result = size.fileFinishedImporting(
-  "modules/in_app_reports/native/components/InAppReportsGuildDiscoveryPreviewElement.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+obj2 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createStyles = createStyles.createStyles;
+obj3 = { minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 8 };
+size = { borderRadius: nativeDefault.radii.xs, width: 18, height: 18 };
+let closure_7 = createStyles(obj);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guild) => {
-      const cResult = c.c(36);
+      let guildIcon;
+      let guildInfo;
+      let items1;
+      let items2;
+      let tmp10;
+      let tmp6;
+      let tmp7;
+      let useReducedMotion;
+      const obj = react2;
+      const cResult = obj.c(36);
       guild = guild.guild;
       const tmp4 = closure_7();
-      const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow(
+      const obj2 = useTypeConsolidationTextTransform;
+      const typeConsolidationEyebrow = obj2.useTypeConsolidationEyebrow(
         "InAppReportsGuildDiscoveryPreview",
         "text-xs/bold",
       );
@@ -60,85 +71,97 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp6, tmp7] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp6, tmp7);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp6, tmp7);
       if (cResult[2] !== tmp4.borderColor.color) {
-        const hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp4.borderColor.color, 0.08);
+        const tmpResult3 = ColorUtils;
+        const hexWithOpacityResult = tmpResult3.hexWithOpacity(tmp4.borderColor.color, 0.08);
         cResult[2] = tmp4.borderColor.color;
         cResult[3] = hexWithOpacityResult;
-        let tmp10 = hexWithOpacityResult;
-        const tmpResult3 = ColorUtils;
+        tmp10 = hexWithOpacityResult;
       } else {
         tmp10 = cResult[3];
       }
       if (cResult[4] === typeConsolidationEyebrow.style) {
+        let tmp13;
+        let tmp14;
         if (cResult[5] === tmp4.title) {
-          let tmp13 = cResult[6];
+          tmp13 = cResult[6];
         }
         const _Symbol = Symbol;
+        const variant = typeConsolidationEyebrow.variant;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = util.intl;
-          const stringResult = intl.string(util.t.nTe4HC);
+          const intl = intl2.intl;
+          const stringResult = intl.string(intl2.t.nTe4HC);
           cResult[7] = stringResult;
-          let tmp14 = stringResult;
+          tmp14 = stringResult;
         } else {
           tmp14 = cResult[7];
         }
         if (cResult[8] === typeConsolidationEyebrow.variant) {
+          let tmp16;
+          let tmp19;
           if (cResult[9] === tmp13) {
-            let tmp16 = cResult[10];
+            tmp16 = cResult[10];
           }
           if (cResult[11] !== tmp10) {
             const obj3 = { borderColor: tmp10 };
             cResult[11] = tmp10;
             cResult[12] = obj3;
-            let tmp19 = obj3;
+            tmp19 = obj3;
           } else {
             tmp19 = cResult[12];
           }
           if (cResult[13] === tmp4.itemContainer) {
+            let tmp20;
+            let tmp21;
             if (cResult[14] === tmp19) {
-              let tmp20 = cResult[15];
+              tmp20 = cResult[15];
             }
             ({ guildInfo, guildIcon } = tmp4);
             if (cResult[16] !== guild) {
-              const result = GuildRecordUtils.fromClientDiscoverableGuild(guild);
+              const tmpResult4 = GuildRecordUtils;
+              const result = tmpResult4.fromClientDiscoverableGuild(guild);
               cResult[16] = guild;
               cResult[17] = result;
-              let tmp21 = result;
-              const tmpResult4 = GuildRecordUtils;
+              tmp21 = result;
             } else {
               tmp21 = cResult[17];
             }
             if (cResult[18] === tmp4.guildIcon) {
               if (cResult[19] === tmp21) {
-                if (cResult[20] === tmp23) {
-                  let tmp24 = cResult[21];
+                let tmp24;
+                if (cResult[20] === !stateFromStores) {
+                  tmp24 = cResult[21];
                 }
                 if (cResult[22] === guild.name) {
+                  let tmp28;
                   if (cResult[23] === tmp4.guildName) {
-                    let tmp28 = cResult[24];
+                    tmp28 = cResult[24];
                   }
                   if (cResult[25] === tmp4.guildInfo) {
                     if (cResult[26] === tmp24) {
+                      let tmp31;
                       if (cResult[27] === tmp28) {
-                        let tmp31 = cResult[28];
+                        tmp31 = cResult[28];
                       }
                       if (cResult[29] === tmp20) {
+                        let tmp35;
                         if (cResult[30] === tmp31) {
-                          let tmp35 = cResult[31];
+                          tmp35 = cResult[31];
                         }
                         if (cResult[32] === tmp4.container) {
                           if (cResult[33] === tmp35) {
+                            let tmp39;
                             if (cResult[34] === tmp16) {
-                              let tmp39 = cResult[35];
+                              tmp39 = cResult[35];
                             }
                             return tmp39;
                           }
                         }
-                        const obj4 = { style: tmp12, children: null };
-                        const items1 = [tmp16, tmp35];
-                        obj4.children = items1;
-                        const tmp42 = timestampProducer(View, obj4);
+                        const obj4 = { style: tmp12, children: items1 };
+                        items1 = [tmp16, tmp35];
+                        const tmp42 = metroRequire(View, obj4);
                         cResult[32] = tmp4.container;
                         cResult[33] = tmp35;
                         cResult[34] = tmp16;
@@ -153,10 +176,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       tmp35 = tmp38;
                     }
                   }
-                  const obj6 = { style: guildInfo, children: null };
-                  const items2 = [tmp24, tmp28];
-                  obj6.children = items2;
-                  const tmp34 = timestampProducer(View, obj6);
+                  const obj6 = { style: guildInfo, children: items2 };
+                  items2 = [tmp24, tmp28];
+                  const tmp34 = metroRequire(View, obj6);
                   cResult[25] = tmp4.guildInfo;
                   cResult[26] = tmp24;
                   cResult[27] = tmp28;
@@ -190,12 +212,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[15] = items3;
           tmp20 = items3;
         }
-        const obj9 = {
-          style: tmp13,
-          accessibilityRole: "header",
-          variant: typeConsolidationEyebrow.variant,
-          children: tmp14,
-        };
+        const obj9 = { style: tmp13, accessibilityRole: "header", variant, children: tmp14 };
         const tmp18 = hasOwnProperty(Text_Text.Text, obj9);
         cResult[8] = typeConsolidationEyebrow.variant;
         cResult[9] = tmp13;
@@ -207,50 +224,54 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp4.title;
       cResult[6] = items4;
       tmp13 = items4;
-      const tmpResult = initialize;
     }
   : (guild) => {
+      let intl;
+      let items1;
+      let items2;
+      let items3;
+      let items4;
+      let obj7;
+      let obj9;
+      let useReducedMotion;
       guild = guild.guild;
       const tmp = closure_7();
-      const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow(
+      const obj = useTypeConsolidationTextTransform;
+      const typeConsolidationEyebrow = obj.useTypeConsolidationEyebrow(
         "InAppReportsGuildDiscoveryPreview",
         "text-xs/bold",
       );
       const items = [AccessibilityStore];
-      const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-      const obj4 = { style: tmp.container, children: null };
+      const obj2 = get_initialized;
+      const stateFromStores = obj2.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+      const obj4 = { style: tmp.container, children: items2 };
+      const obj3 = ColorUtils;
       const obj5 = {
-        style: null,
+        style: items1,
         accessibilityRole: "header",
         variant: typeConsolidationEyebrow.variant,
-        children: null,
+        children: intl.string(intl2.t.nTe4HC),
       };
-      const items1 = [tmp.title, typeConsolidationEyebrow.style];
-      obj5.style = items1;
-      const intl = util.intl;
-      obj5.children = intl.string(util.t.nTe4HC);
-      const items2 = [hasOwnProperty(Text_Text.Text, obj5)];
-      const obj6 = { style: null, children: null };
-      const items3 = [tmp.itemContainer, { borderColor: ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08) }];
-      obj6.style = items3;
-      const obj7 = { style: tmp.guildInfo, children: null };
-      const obj8 = { style: tmp.guildIcon, guild: null, animate: null };
-      const hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08);
+      items1 = [tmp.title, typeConsolidationEyebrow.style];
+      const hexWithOpacityResult = obj3.hexWithOpacity(tmp.borderColor.color, 0.08);
+      const Text = Text_Text.Text;
+      intl = intl2.intl;
+      items2 = [hasOwnProperty(Text, obj5)];
+      const obj6 = { style: items3, children: metroRequire(View, obj7) };
+      items3 = [tmp.itemContainer, { borderColor: hexWithOpacityResult }];
+      obj7 = { style: tmp.guildInfo, children: items4 };
+      const obj8 = { style: tmp.guildIcon, guild: obj9.fromClientDiscoverableGuild(guild), animate: !stateFromStores };
       const tmp5 = GuildIconDefault;
-      obj8.guild = GuildRecordUtils.fromClientDiscoverableGuild(guild);
-      obj8.animate = !stateFromStores;
-      const items4 = [
-        hasOwnProperty(tmp5, obj8),
-        hasOwnProperty(Text_Text.Text, {
-          style: tmp.guildName,
-          variant: "text-sm/medium",
-          color: "text-default",
-          children: guild.name,
-        }),
-      ];
-      obj7.children = items4;
-      obj6.children = timestampProducer(View, obj7);
+      obj9 = GuildRecordUtils;
+      items4 = [hasOwnProperty(tmp5, obj8)];
+      const obj10 = { style: tmp.guildName, variant: "text-sm/medium", color: "text-default", children: guild.name };
+      items4[1] = hasOwnProperty(Text_Text.Text, obj10);
       items2[1] = hasOwnProperty(View, obj6);
-      obj4.children = items2;
-      return timestampProducer(View, obj4);
+      return metroRequire(View, obj4);
     };
+size = size_mod;
+let result = size.fileFinishedImporting(
+  "modules/in_app_reports/native/components/InAppReportsGuildDiscoveryPreviewElement.tsx",
+);
+
+export default tmp5;

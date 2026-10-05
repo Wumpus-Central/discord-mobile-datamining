@@ -1,73 +1,86 @@
 // discord_app/modules/guild/native/GuildBadge.tsx
-import c from "../../../../_runtime/00576_c.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import Constants from "../../../Constants.tsx";
+import native from "../../../design/void/native.tsx";
 import GuildRecordUtils from "../../../utils/GuildRecordUtils.tsx";
-import _modDef5978 from "../../../../_runtime/metro/05978__.js";
-import _modDef5979 from "../../../../_runtime/metro/05979__.js";
-import _modDef5980 from "../../../../_runtime/metro/05980__.js";
-import _modDef5981 from "../../../../_runtime/metro/05981__.js";
+import AssetRegistryDefault from "../../../../_runtime/05978_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/05979_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../_runtime/05980_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../../_runtime/05981_AssetRegistry.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const native = Icon(1188);
-require = fn;
+let PARTNERED;
+let PARTNERED_BLACK;
+let VERIFIED;
+let VERIFIED_BLACK;
 function getGuildBadgeSource(guild, flag) {
-  let has = guild;
   let NONE = obj.NONE;
   const VERIFIED = GuildFeatures.VERIFIED;
-  if (null == guild) {
-    if (!tmp3) {
-      const PARTNERED = tmp2.PARTNERED;
-      if (null == has) {
-        if (tmp11) {
-          NONE = flag ? tmp.PARTNERED_BLACK : tmp.PARTNERED;
-        }
-        return obj2[NONE];
-      } else {
-        obj2 = GuildRecordUtils;
-        if (obj2.isGuildRecord(has)) {
-          const features6 = has.features;
-          has = features6.has;
-          let hasItem = has(PARTNERED);
-        } else {
-          const _Array2 = Array;
-          if (Array.isArray(has.features)) {
-            const features5 = has.features;
-            hasItem = features5.includes(PARTNERED);
-          } else {
-            const features4 = has.features;
-            let hasItem1;
-            if (features4 != null) {
-              hasItem1 = features4.has(PARTNERED);
-            }
-            hasItem = Boolean(hasItem1);
-          }
-        }
-      }
-    }
-  } else {
+  let tmp3 = null != guild;
+  if (tmp3) {
+    let hasItem;
     obj = GuildRecordUtils;
-    if (obj.isGuildRecord(has)) {
-      const features3 = has.features;
-      let hasItem2 = features3.has(VERIFIED);
+    if (obj.isGuildRecord(guild)) {
+      const features3 = guild.features;
+      hasItem = features3.has(VERIFIED);
     } else {
       const _Array = Array;
-      if (Array.isArray(has.features)) {
-        const features2 = has.features;
-        hasItem2 = features2.includes(VERIFIED);
+      if (Array.isArray(guild.features)) {
+        const features2 = guild.features;
+        hasItem = features2.includes(VERIFIED);
       } else {
-        const features = has.features;
-        let hasItem3;
+        const features = guild.features;
+        let hasItem1;
+        const _Boolean = Boolean;
         if (features != null) {
-          hasItem3 = features.has(VERIFIED);
+          hasItem1 = features.has(VERIFIED);
         }
-        hasItem2 = Boolean(hasItem3);
+        hasItem = _Boolean(hasItem1);
       }
     }
+    tmp3 = hasItem;
   }
+  if (tmp3) {
+    NONE = flag ? tmp.VERIFIED_BLACK : tmp.VERIFIED;
+  } else {
+    const PARTNERED = GuildFeatures.PARTNERED;
+    let tmp9 = null != guild;
+    if (tmp9) {
+      let hasItem2;
+      obj2 = GuildRecordUtils;
+      if (obj2.isGuildRecord(guild)) {
+        const features6 = guild.features;
+        hasItem2 = features6.has(PARTNERED);
+      } else {
+        const _Array2 = Array;
+        if (Array.isArray(guild.features)) {
+          const features5 = guild.features;
+          hasItem2 = features5.includes(PARTNERED);
+        } else {
+          const features4 = guild.features;
+          let hasItem3;
+          const _Boolean2 = Boolean;
+          if (features4 != null) {
+            hasItem3 = features4.has(PARTNERED);
+          }
+          hasItem2 = _Boolean2(hasItem3);
+        }
+      }
+      tmp9 = hasItem2;
+    }
+    if (tmp9) {
+      NONE = flag ? tmp.PARTNERED_BLACK : tmp.PARTNERED;
+    }
+  }
+  return obj2[NONE];
 }
 let closure_2 = ["guild", "monocolored", "size"];
-const GuildFeatures = fn(1085).GuildFeatures;
-const jsx = fn(21).jsx;
+const GuildFeatures = Constants.GuildFeatures;
+const jsx = Fragment.jsx;
 let obj = {
   PARTNERED: 0,
   [0]: "PARTNERED",
@@ -81,179 +94,104 @@ let obj = {
   [4]: "NONE",
 };
 let obj2 = {
-  [VERIFIED]: _modDef5978,
-  [PARTNERED]: _modDef5979,
-  [VERIFIED_BLACK]: _modDef5980,
-  [PARTNERED_BLACK]: _modDef5981,
+  [VERIFIED]: AssetRegistryDefault,
+  [PARTNERED]: AssetRegistryDefault2,
+  [VERIFIED_BLACK]: AssetRegistryDefault3,
+  [PARTNERED_BLACK]: AssetRegistryDefault4,
   [obj.NONE]: null,
 };
 ({ VERIFIED, PARTNERED, VERIFIED_BLACK, PARTNERED_BLACK } = obj);
-const ReactCompilerGating = fn(558);
 if (ReactCompilerGating.isReactCompilerEnabled()) {
   class GuildBadge {
     constructor(arg0) {
-      Icon = closure_0;
-      tmp = closure_1;
-      obj = closure_0(closure_1[10]);
-      cResult = obj.c(12);
-      if (cResult[0] !== global) {
-        ({ guild, monocolored, size } = global);
-        tmp6 = closure_3;
-        tmp7 = closure_2;
-        tmp8 = closure_3(global, closure_2);
-        num = 0;
-        cResult[0] = global;
-        num2 = 1;
+      let MEDIUM;
+      let guild;
+      let monocolored;
+      let tmp4;
+      let tmp5;
+      let tmp6;
+      obj = react2;
+      const cResult = obj.c(12);
+      if (cResult[0] !== arg0) {
+        ({ guild, monocolored, size } = arg0);
+        const tmp9 = _objectWithoutProperties(arg0, closure_2);
+        cResult[0] = arg0;
         cResult[1] = guild;
-        num3 = 2;
-        cResult[2] = tmp8;
-        num4 = 3;
+        cResult[2] = tmp9;
         cResult[3] = monocolored;
-        num5 = 4;
         cResult[4] = size;
         MEDIUM = size;
-        tmp5 = monocolored;
-        tmp4 = tmp8;
-        tmp3 = guild;
+        tmp6 = monocolored;
+        tmp5 = tmp9;
+        tmp4 = guild;
       } else {
-        tmp3 = cResult[1];
-        tmp4 = cResult[2];
-        tmp5 = cResult[3];
+        tmp4 = cResult[1];
+        tmp5 = cResult[2];
+        tmp6 = cResult[3];
         MEDIUM = cResult[4];
       }
-      tmp9 = undefined !== tmp5 && tmp5;
       if (undefined === MEDIUM) {
-        tmp10 = GuildBadge;
         MEDIUM = GuildBadge.Sizes.MEDIUM;
       }
-      if (cResult[5] === tmp3) {
-        if (cResult[6] === tmp9) {
-          tmp11 = cResult[7];
+      if (cResult[5] === tmp4) {
+        let tmp12;
+        if (cResult[6] === (undefined !== tmp6 && tmp6)) {
+          tmp12 = cResult[7];
         }
-        tmp13 = null;
-        if (null == tmp11) {
-          return null;
-        } else {
-          if (cResult[8] === tmp4) {
+        let tmp14 = null;
+        if (null != tmp12) {
+          if (cResult[8] === tmp5) {
             if (cResult[9] === MEDIUM) {
-              if (cResult[10] === tmp11) {
-                tmp14 = cResult[11];
+              let tmp15;
+              if (cResult[10] === tmp12) {
+                tmp15 = cResult[11];
               }
-              tmp19 = tmp14;
+              tmp14 = tmp15;
             }
           }
-          tmp15 = jsx;
-          Icon = Icon(tmp[11]).Icon;
-          obj1 = {};
-          tmp16 = obj1;
-          tmp17 = tmp4;
-          merged = Object.assign(tmp4);
-          obj1.size = MEDIUM;
-          obj1.source = tmp11;
-          tmp = jsx(Icon, obj1);
-          num6 = 8;
-          cResult[8] = tmp4;
-          num7 = 9;
+          const Icon = native.Icon;
+          const merged = Object.assign(tmp5);
+          const tmp20 = <Icon size={MEDIUM} source={tmp12} />;
+          cResult[8] = tmp5;
           cResult[9] = MEDIUM;
-          num8 = 10;
-          cResult[10] = tmp11;
-          num9 = 11;
-          cResult[11] = tmp;
-          tmp14 = tmp;
+          cResult[10] = tmp12;
+          cResult[11] = tmp20;
+          tmp15 = tmp20;
         }
+        return tmp14;
       }
-      tmp12 = getGuildBadgeSource(tmp3, tmp9);
-      cResult[5] = tmp3;
-      cResult[6] = tmp9;
-      cResult[7] = tmp12;
-      tmp11 = tmp12;
-      return;
+      const tmp13 = getGuildBadgeSource(tmp4, undefined !== tmp6 && tmp6);
+      cResult[5] = tmp4;
+      cResult[6] = undefined !== tmp6 && tmp6;
+      cResult[7] = tmp13;
+      tmp12 = tmp13;
     }
   }
 } else {
   class GuildBadge {
-    constructor(arg0) {
-      Icon = closure_0;
-      tmp = closure_1;
-      obj = closure_0(closure_1[10]);
-      cResult = obj.c(12);
-      if (cResult[0] !== global) {
-        ({ guild, monocolored, size } = global);
-        tmp6 = closure_3;
-        tmp7 = closure_2;
-        tmp8 = closure_3(global, closure_2);
-        num = 0;
-        cResult[0] = global;
-        num2 = 1;
-        cResult[1] = guild;
-        num3 = 2;
-        cResult[2] = tmp8;
-        num4 = 3;
-        cResult[3] = monocolored;
-        num5 = 4;
-        cResult[4] = size;
-        MEDIUM = size;
-        tmp5 = monocolored;
-        tmp4 = tmp8;
-        tmp3 = guild;
-      } else {
-        tmp3 = cResult[1];
-        tmp4 = cResult[2];
-        tmp5 = cResult[3];
-        MEDIUM = cResult[4];
+    constructor(monocolored) {
+      let flag = monocolored.monocolored;
+      const guild = monocolored.guild;
+      if (flag === undefined) {
+        flag = false;
       }
-      tmp9 = undefined !== tmp5 && tmp5;
-      if (undefined === MEDIUM) {
-        tmp10 = GuildBadge;
+      let MEDIUM = monocolored.size;
+      if (MEDIUM === undefined) {
         MEDIUM = GuildBadge.Sizes.MEDIUM;
       }
-      if (cResult[5] === tmp3) {
-        if (cResult[6] === tmp9) {
-          tmp11 = cResult[7];
-        }
-        tmp13 = null;
-        if (null == tmp11) {
-          return null;
-        } else {
-          if (cResult[8] === tmp4) {
-            if (cResult[9] === MEDIUM) {
-              if (cResult[10] === tmp11) {
-                tmp14 = cResult[11];
-              }
-              tmp19 = tmp14;
-            }
-          }
-          tmp15 = jsx;
-          Icon = Icon(tmp[11]).Icon;
-          obj1 = {};
-          tmp16 = obj1;
-          tmp17 = tmp4;
-          merged = Object.assign(tmp4);
-          obj1.size = MEDIUM;
-          obj1.source = tmp11;
-          tmp = jsx(Icon, obj1);
-          num6 = 8;
-          cResult[8] = tmp4;
-          num7 = 9;
-          cResult[9] = MEDIUM;
-          num8 = 10;
-          cResult[10] = tmp11;
-          num9 = 11;
-          cResult[11] = tmp;
-          tmp14 = tmp;
-        }
+      let tmp2 = null;
+      const merged = Object.assign(monocolored, Object.assign({ guild: 0, monocolored: 0, size: 0 }));
+      const tmp4 = getGuildBadgeSource(guild, flag);
+      if (null != tmp4) {
+        const Icon = native.Icon;
+        const merged1 = Object.assign(merged);
+        tmp2 = <Icon size={MEDIUM} source={tmp4} />;
       }
-      tmp12 = getGuildBadgeSource(tmp3, tmp9);
-      cResult[5] = tmp3;
-      cResult[6] = tmp9;
-      cResult[7] = tmp12;
-      tmp11 = tmp12;
-      return;
+      return tmp2;
     }
   }
 }
-GuildBadge.Sizes = fn(1188).Icon.Sizes;
-const size = fn(2);
+GuildBadge.Sizes = native.Icon.Sizes;
 const result = size.fileFinishedImporting("modules/guild/native/GuildBadge.tsx");
 
 export default GuildBadge;

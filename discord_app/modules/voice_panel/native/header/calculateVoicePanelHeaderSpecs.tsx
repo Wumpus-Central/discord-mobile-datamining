@@ -3,12 +3,13 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const fn = function t(top, token) {
   const bound = Math.max(token, top.top);
-  return {
+  const obj = {
     height: 44 + bound,
     paddingTop: bound,
     paddingLeft: Math.max(token, top.left),
     paddingRight: Math.max(token, top.right),
   };
+  return obj;
 };
 fn.__closure = { BASE_VOICE_PANEL_HEADER_HEIGHT: 44 };
 fn.__workletHash = 6201232972174;

@@ -1,9 +1,9 @@
 // discord_app/modules/rpc/native/NativeRPCServer.tsx
-import root from "../../../../_runtime/09028_root.js";
+import _mod9028 from "../../../../_runtime/metro/09028__.js";
 import RPCServerDefault from "../RPCServer.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const size = fn(2);
+const tmp2 = new RPCServerDefault(() => Promise.resolve(_mod9028));
 const result = size.fileFinishedImporting("modules/rpc/native/NativeRPCServer.tsx");
 
-export default new RPCServerDefault(() => Promise.resolve(root));
+export default tmp2;

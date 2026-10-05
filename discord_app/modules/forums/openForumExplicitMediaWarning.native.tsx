@@ -1,28 +1,33 @@
 // discord_app/modules/forums/openForumExplicitMediaWarning.native.tsx
-import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import asyncRequireImpl from "../../../_runtime/01987_asyncRequireImpl.js";
+import Fragment from "../../../_runtime/react/00021_Fragment.js";
+import asyncRequire from "../../../_runtime/01987_asyncRequire.js";
 import actions_AlertActionCreatorsDefault from "../../actions/native/AlertActionCreators.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const jsx = jsxProd.jsx;
+let importDefault;
+
+const jsx = Fragment.jsx;
 const result = size.fileFinishedImporting("modules/forums/openForumExplicitMediaWarning.native.tsx");
 
 export default function openForumExplicitMediaWarning(arg0, arg1) {
-  closure_0 = arg0;
+  let closure_1;
+  let closure_0 = arg0;
   importDefault = arg1;
-  actions_AlertActionCreatorsDefault.openLazy({
+  const obj = actions_AlertActionCreatorsDefault;
+  const obj2 = {
     importer() {
-      return asyncRequireImpl(8917, dependencyMap.paths).then((result) => {
+      let channelId;
+      let messageId;
+      const promise = asyncRequire(8917, dependencyMap.paths);
+      return promise.then((result) => {
         closure_0 = result.default;
         return (arg0) => {
-          const obj = {};
           const merged = Object.assign(arg0);
-          obj.channelId = channelId;
-          obj.messageId = messageId;
-          return <closure_0 />;
+          return <closure_0 channelId={channelId} messageId={messageId} />;
         };
       });
     },
     isDismissable: false,
-  });
+  };
+  obj.openLazy(obj2);
 }

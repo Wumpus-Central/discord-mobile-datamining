@@ -26,12 +26,13 @@ const items1 = [, , , , , , , ,];
   VOICE_CHANNEL: arr2[7],
   POLL_RESULT: arr2[8],
 } = MessageEmbedTypes);
-const set = new Set(items);
 const items2 = [,];
 ({ IMAGE: arr3[0], GIFV: arr3[1] } = MessageEmbedTypes);
+const set = new Set(items);
 const set1 = new Set(items1);
+const set2 = new Set(items2);
 const result = size.fileFinishedImporting("modules/messages/EmbedConstants.tsx");
 
 export const EMBED_TYPES_WITH_PARSEABLE_FIELDS = set;
 export const EMBED_TYPES_WITH_SPECIAL_RENDERER = set1;
-export const SIMPLE_EMBED_TYPES = new Set(items2);
+export const SIMPLE_EMBED_TYPES = set2;

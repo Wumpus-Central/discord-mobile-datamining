@@ -1,10 +1,10 @@
 // discord_app/modules/launchpad/native/LaunchPadConstants.tsx
-import _mod17 from "../../../../_runtime/metro/00017__.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
 import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import size_mod from "../../../../_runtime/metro/00002__.js";
 
-const Dimensions = _mod17.Dimensions;
+const Dimensions = react_native.Dimensions;
 let size = Dimensions.get("screen");
 let num = 24;
 if (!PlatformUtils.isAndroid()) {
@@ -16,7 +16,7 @@ if (!PlatformUtils.isAndroid()) {
   }
   num = num2;
 }
-let size = size_mod;
+size = size_mod;
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadConstants.tsx");
 
 export const LAUNCH_PAD_SPRING_CONFIG = {

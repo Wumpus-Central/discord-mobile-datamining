@@ -5,31 +5,30 @@ import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js"
 import GuildPowerupsActionCreators from "../../premium/powerups/GuildPowerupsActionCreators.tsx";
 import useGetGuildPowerupBannerImageDefault from "../../premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx";
 import GuildPowerupsImageDefault from "../../premium/powerups/native/GuildPowerupsImage.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
 import GuildPowerupsStore from "../../premium/powerups/GuildPowerupsStore.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+let guildId;
+
+let StyleSheet;
+let closure_4;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+({ View: closure_4, StyleSheet } = react_native);
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
 const colors = ["rgba(88, 101, 242, 0.3)", "rgba(22, 26, 138, 0.3)"];
 const colors2 = ["rgba(151, 151, 159, 0.04)", "rgba(151, 151, 159, 0.04)"];
 let c12 = "#29292D";
-const createStyles = fn(4890);
-let obj2 = {
-  card: {
-    borderRadius: nativeDefault.radii.xl,
-    borderWidth: 1,
-    borderColor: nativeDefault.colors.BORDER_SUBTLE,
-    backgroundColor: "#29292D",
-    overflow: "hidden",
-    paddingHorizontal: nativeDefault.space.PX_24,
-    paddingTop: nativeDefault.space.PX_20,
-    paddingBottom: nativeDefault.space.PX_24,
-  },
+let obj = {
+  card: obj2,
   imageContainer: { height: 104, justifyContent: "center" },
   textBlock: { alignItems: "center" },
   centerText: { textAlign: "center" },
@@ -37,9 +36,7 @@ let obj2 = {
   backgroundLayer: StyleSheet.absoluteFillObject,
   powerupImage: { width: "92%" },
 };
-let closure_13 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = {
+obj2 = {
   borderRadius: nativeDefault.radii.xl,
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
@@ -49,18 +46,28 @@ let obj3 = {
   paddingTop: nativeDefault.space.PX_20,
   paddingBottom: nativeDefault.space.PX_24,
 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagUpsellCard.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_13 = createStyles.createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      const cResult = guildId(576).c(48);
+      let centerText;
+      let first;
+      let items5;
+      let textBlock;
+      let tmp13;
+      let tmp15;
+      let tmp16;
+      let tmp17;
+      let tmp18;
+      let tmp7;
+      let tmp8;
+      let obj = guildId(576);
+      const cResult = obj.c(48);
       guildId = guildId.guildId;
       const tmp4 = closure_13();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildPowerupsStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -77,60 +84,48 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = guildId;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp8 = items1;
-        let tmp7 = fn;
+        tmp8 = items1;
+        tmp7 = fn;
       } else {
         tmp7 = cResult[2];
         tmp8 = cResult[3];
       }
-      let obj = guildId(576);
-      const stateFromStores = guildId(504).useStateFromStores(first, tmp7, tmp8);
+      const tmpResult = guildId(504);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp7, tmp8);
       const tmp11 = useGetGuildPowerupBannerImageDefault(stateFromStores, true);
       if (cResult[4] !== guildId) {
         class E {
           constructor() {
-            tmp = guildId;
-            if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              obj = closure_0(closure_2[11]);
-              powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+            if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+              const obj = GuildPowerupsActionCreators;
+              const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
             }
-            return;
           }
         }
         const items2 = [guildId];
         cResult[4] = guildId;
         cResult[5] = E;
         cResult[6] = items2;
-        let tmp13 = items2;
+        tmp13 = items2;
       } else {
         class E {
           constructor() {
-            tmp = guildId;
-            if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              obj = closure_0(closure_2[11]);
-              powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+            if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+              const obj = GuildPowerupsActionCreators;
+              const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
             }
-            return;
           }
         }
         tmp13 = cResult[6];
       }
-      const effect = noop.useEffect(E, tmp13);
+      const effect = react.useEffect(E, tmp13);
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         class E {
           constructor() {
-            tmp = guildId;
-            if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              obj = closure_0(closure_2[11]);
-              powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+            if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+              const obj = GuildPowerupsActionCreators;
+              const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
             }
-            return;
           }
         }
         const items3 = ["rgba(41, 41, 45, 0)", c12];
@@ -141,21 +136,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = items3;
         cResult[9] = items4;
         cResult[10] = point;
-        let tmp18 = point;
-        let tmp17 = items4;
-        let tmp16 = items3;
-        const tmp15 = point1;
+        tmp18 = point;
+        tmp17 = items4;
+        tmp16 = items3;
+        tmp15 = point1;
       } else {
         class E {
           constructor() {
-            tmp = guildId;
-            if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              obj = closure_0(closure_2[11]);
-              powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+            if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+              const obj = GuildPowerupsActionCreators;
+              const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
             }
-            return;
           }
         }
         tmp16 = cResult[8];
@@ -165,14 +156,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[11] !== tmp4.backgroundLayer) {
         class E {
           constructor() {
-            tmp = guildId;
-            if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              obj = closure_0(closure_2[11]);
-              powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+            if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+              const obj = GuildPowerupsActionCreators;
+              const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
             }
-            return;
           }
         }
         const obj2 = {
@@ -183,53 +170,42 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           end: tmp15,
           pointerEvents: "none",
         };
-        const tmp22 = closure_6(LinearGradientDefault, obj2);
         const obj3 = { style: tmp4.backgroundLayer, colors, start, end, pointerEvents: "none" };
-        const tmp26 = closure_6(LinearGradientDefault, obj3);
+        const tmp22 = closure_6(LinearGradientDefault, obj2);
         const obj4 = { style: tmp4.backgroundLayer, colors: colors2, start, end, pointerEvents: "none" };
-        const tmp28 = closure_6(LinearGradientDefault, obj4);
+        const tmp26 = closure_6(LinearGradientDefault, obj3);
         cResult[11] = tmp4.backgroundLayer;
         cResult[12] = tmp22;
         cResult[13] = tmp26;
-        cResult[14] = tmp28;
+        cResult[14] = closure_6(LinearGradientDefault, obj4);
+        const tmp28 = closure_6(LinearGradientDefault, obj4);
       } else {
         class E {
           constructor() {
-            tmp = guildId;
-            if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              obj = closure_0(closure_2[11]);
-              powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+            if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+              const obj = GuildPowerupsActionCreators;
+              const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
             }
-            return;
           }
         }
       }
       if (cResult[15] === tmp11) {
         class E {
           constructor() {
-            tmp = guildId;
-            if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              obj = closure_0(closure_2[11]);
-              powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+            if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+              const obj = GuildPowerupsActionCreators;
+              const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
             }
-            return;
           }
         }
         if (cResult[18] === tmp4.imageContainer) {
+          let tmp35;
           class E {
             constructor() {
-              tmp = guildId;
-              if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-                tmp2 = closure_0;
-                tmp3 = closure_2;
-                obj = closure_0(closure_2[11]);
-                powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+              if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+                const obj = GuildPowerupsActionCreators;
+                const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
               }
-              return;
             }
           }
           const _Symbol = Symbol;
@@ -237,161 +213,122 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
             class E {
               constructor() {
-                tmp = guildId;
-                if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-                  tmp2 = closure_0;
-                  tmp3 = closure_2;
-                  obj = closure_0(closure_2[11]);
-                  powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+                if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+                  const obj = GuildPowerupsActionCreators;
+                  const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
                 }
-                return;
               }
             }
-            const stringResult = obj10.string(tmp(1126).t["2QmKZ2"]);
+            const stringResult = obj10.string(guildId(1126).t["2QmKZ2"]);
             cResult[21] = stringResult;
-            const tmp35 = stringResult;
+            tmp35 = stringResult;
           } else {
             class E {
               constructor() {
-                tmp = guildId;
-                if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-                  tmp2 = closure_0;
-                  tmp3 = closure_2;
-                  obj = closure_0(closure_2[11]);
-                  powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+                if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+                  const obj = GuildPowerupsActionCreators;
+                  const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
                 }
-                return;
               }
             }
           }
           if (cResult[22] !== tmp4.centerText) {
             class E {
               constructor() {
-                tmp = guildId;
-                if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-                  tmp2 = closure_0;
-                  tmp3 = closure_2;
-                  obj = closure_0(closure_2[11]);
-                  powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+                if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+                  const obj = GuildPowerupsActionCreators;
+                  const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
                 }
-                return;
               }
             }
             const obj5 = { variant: "heading-xl/semibold", color: "text-strong", style: centerText, children: tmp35 };
-            const tmp38 = closure_6(tmp(4886).Text, obj5);
             cResult[22] = tmp4.centerText;
-            cResult[23] = tmp38;
+            cResult[23] = closure_6(guildId(4886).Text, obj5);
+            const tmp38 = closure_6(guildId(4886).Text, obj5);
           } else {
             class E {
               constructor() {
-                tmp = guildId;
-                if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-                  tmp2 = closure_0;
-                  tmp3 = closure_2;
-                  obj = closure_0(closure_2[11]);
-                  powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+                if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+                  const obj = GuildPowerupsActionCreators;
+                  const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
                 }
-                return;
               }
             }
           }
           if (cResult[24] === tmp4.body) {
+            let tmp40;
             class E {
               constructor() {
-                tmp = guildId;
-                if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-                  tmp2 = closure_0;
-                  tmp3 = closure_2;
-                  obj = closure_0(closure_2[11]);
-                  powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+                if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+                  const obj = GuildPowerupsActionCreators;
+                  const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
                 }
-                return;
               }
             }
             const _Symbol2 = Symbol;
             if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
               class E {
                 constructor() {
-                  tmp = guildId;
-                  if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-                    tmp2 = closure_0;
-                    tmp3 = closure_2;
-                    obj = closure_0(closure_2[11]);
-                    powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+                  if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+                    const obj = GuildPowerupsActionCreators;
+                    const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
                   }
-                  return;
                 }
               }
-              const stringResult1 = obj12.string(tmp(1126).t.Tg0fDm);
+              const stringResult1 = obj12.string(guildId(1126).t.Tg0fDm);
               cResult[27] = stringResult1;
-              const tmp40 = stringResult1;
+              tmp40 = stringResult1;
             } else {
               class E {
                 constructor() {
-                  tmp = guildId;
-                  if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-                    tmp2 = closure_0;
-                    tmp3 = closure_2;
-                    obj = closure_0(closure_2[11]);
-                    powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+                  if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+                    const obj = GuildPowerupsActionCreators;
+                    const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
                   }
-                  return;
                 }
               }
             }
             if (cResult[28] !== tmp39) {
               class E {
                 constructor() {
-                  tmp = guildId;
-                  if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-                    tmp2 = closure_0;
-                    tmp3 = closure_2;
-                    obj = closure_0(closure_2[11]);
-                    powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+                  if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+                    const obj = GuildPowerupsActionCreators;
+                    const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
                   }
-                  return;
                 }
               }
               const obj6 = { variant: "text-sm/medium", color: "text-subtle", style: tmp39, children: tmp40 };
-              const tmp43 = closure_6(tmp(4886).Text, obj6);
               cResult[28] = tmp39;
-              cResult[29] = tmp43;
+              cResult[29] = closure_6(guildId(4886).Text, obj6);
+              const tmp43 = closure_6(guildId(4886).Text, obj6);
             } else {
               class E {
                 constructor() {
-                  tmp = guildId;
-                  if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-                    tmp2 = closure_0;
-                    tmp3 = closure_2;
-                    obj = closure_0(closure_2[11]);
-                    powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+                  if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+                    const obj = GuildPowerupsActionCreators;
+                    const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
                   }
-                  return;
                 }
               }
             }
             if (cResult[30] === tmp4.textBlock) {
               class E {
                 constructor() {
-                  tmp = guildId;
-                  if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-                    tmp2 = closure_0;
-                    tmp3 = closure_2;
-                    obj = closure_0(closure_2[11]);
-                    powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+                  if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+                    const obj = GuildPowerupsActionCreators;
+                    const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
                   }
-                  return;
                 }
               }
             }
-            const obj7 = { spacing: nativeDefault.space.PX_8, style: textBlock, children: null };
-            const items5 = [tmp37, tmp42];
-            obj7.children = items5;
-            const tmp46 = closure_7(tmp(5593).Stack, obj7);
+            const obj7 = { spacing: nativeDefault.space.PX_8, style: textBlock, children: items5 };
+            const Stack = tmp(5593).Stack;
+            items5 = [tmp37, tmp42];
             cResult[30] = tmp4.textBlock;
             cResult[31] = tmp37;
             cResult[32] = tmp42;
-            cResult[33] = tmp46;
+            cResult[33] = closure_7(Stack, obj7);
+            const tmp46 = closure_7(Stack, obj7);
           }
           const items6 = [,];
           ({ centerText: arr6[0], body: arr6[1] } = tmp4);
@@ -405,23 +342,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           importantForAccessibility: "no-hide-descendants",
           children: tmp29,
         };
-        const tmp34 = closure_6(closure_4, obj8);
         cResult[18] = tmp4.imageContainer;
         cResult[19] = tmp29;
-        cResult[20] = tmp34;
+        cResult[20] = closure_6(closure_4, obj8);
+        const tmp34 = closure_6(closure_4, obj8);
       }
       let tmp30 = null != tmp11;
       if (tmp30) {
         class E {
           constructor() {
-            tmp = guildId;
-            if (closure_5.shouldFetchCatalogForGuild(guildId)) {
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              obj = closure_0(closure_2[11]);
-              powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(tmp);
+            if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
+              const obj = GuildPowerupsActionCreators;
+              const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
             }
-            return;
           }
         }
         const obj9 = { imageUrl: tmp11, style: tmp4.powerupImage };
@@ -430,14 +363,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[15] = tmp11;
       cResult[16] = tmp4.powerupImage;
       cResult[17] = tmp30;
-      const tmpResult = guildId(504);
     }
   : (guildId) => {
+      let intl;
+      let intl2;
+      let intl3;
+      let items3;
+      let items4;
+      let items5;
+      let items6;
+      let items7;
+      let tmp10Result;
       guildId = guildId.guildId;
+      const onUnlockPress = guildId.onUnlockPress;
       const tmp = closure_13();
+      let tmp2 = guildId;
+      let obj = guildId(504);
       const items = [GuildPowerupsStore];
       const items1 = [guildId];
-      const stateFromStores = guildId(504).useStateFromStores(
+      const stateFromStores = obj.useStateFromStores(
         items,
         () => {
           const stateForGuild = GuildPowerupsStore.getStateForGuild(guildId);
@@ -451,69 +395,78 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       const tmp6 = useGetGuildPowerupBannerImageDefault(stateFromStores, true);
       const items2 = [guildId];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
         if (GuildPowerupsStore.shouldFetchCatalogForGuild(guildId)) {
-          const powerupCatalogForGuild = GuildPowerupsActionCreators.fetchPowerupCatalogForGuild(guildId);
+          const obj = GuildPowerupsActionCreators;
+          const powerupCatalogForGuild = obj.fetchPowerupCatalogForGuild(guildId);
         }
       }, items2);
-      const obj2 = { style: tmp.card, children: null };
       const obj3 = {
         style: tmp.backgroundLayer,
-        colors: null,
+        colors: items3,
         locations: [0, 0.7],
         start: { x: 0.5, y: 0 },
         end: { x: 0.5, y: 1 },
         pointerEvents: "none",
       };
-      const items3 = ["rgba(41, 41, 45, 0)", c12];
-      obj3.colors = items3;
-      const items4 = [
-        closure_6(LinearGradientDefault, obj3),
-        closure_6(LinearGradientDefault, { style: tmp.backgroundLayer, colors, start, end, pointerEvents: "none" }),
-        closure_6(LinearGradientDefault, {
-          style: tmp.backgroundLayer,
-          colors: colors2,
-          start,
-          end,
-          pointerEvents: "none",
-        }),
-      ];
-      const obj6 = { spacing: nativeDefault.space.PX_16, children: null };
+      items3 = ["rgba(41, 41, 45, 0)", c12];
+      const obj2 = { style: tmp.card, children: items4 };
+      items4 = [closure_6(LinearGradientDefault, obj3), , ,];
+      const obj4 = { style: tmp.backgroundLayer, colors, start, end, pointerEvents: "none" };
+      items4[1] = closure_6(LinearGradientDefault, obj4);
+      const obj5 = { style: tmp.backgroundLayer, colors: colors2, start, end, pointerEvents: "none" };
+      items4[2] = closure_6(LinearGradientDefault, obj5);
+      const obj6 = { spacing: nativeDefault.space.PX_16, children: items5 };
+      const Stack = guildId(5593).Stack;
       const obj7 = {
         style: tmp.imageContainer,
         accessibilityElementsHidden: true,
         importantForAccessibility: "no-hide-descendants",
-        children: null,
+        children: tmp10Result,
       };
-      let tmp10Result = null != tmp6;
+      tmp10Result = null != tmp6;
       if (tmp10Result) {
         const obj8 = { imageUrl: tmp6, style: tmp.powerupImage };
         tmp10Result = closure_6(GuildPowerupsImageDefault, obj8);
       }
-      obj7.children = tmp10Result;
-      const items5 = [closure_6(closure_4, obj7), ,];
-      const obj9 = { spacing: nativeDefault.space.PX_8, style: tmp.textBlock, children: null };
-      const obj10 = { variant: "heading-xl/semibold", color: "text-strong", style: tmp.centerText, children: null };
-      const intl = tmp2(1126).intl;
-      obj10.children = intl.string(guildId(1126).t["2QmKZ2"]);
-      const items6 = [closure_6(guildId(4886).Text, obj10)];
-      const obj11 = { variant: "text-sm/medium", color: "text-subtle", style: null, children: null };
-      const items7 = [,];
+      items5 = [closure_6(closure_4, obj7), ,];
+      const obj9 = { spacing: nativeDefault.space.PX_8, style: tmp.textBlock, children: items6 };
+      const Stack2 = tmp2(5593).Stack;
+      const obj10 = {
+        variant: "heading-xl/semibold",
+        color: "text-strong",
+        style: tmp.centerText,
+        children: intl.string(tmp2(1126).t["2QmKZ2"]),
+      };
+      const Text = tmp2(4886).Text;
+      intl = tmp2(1126).intl;
+      items6 = [closure_6(Text, obj10)];
+      const obj11 = {
+        variant: "text-sm/medium",
+        color: "text-subtle",
+        style: items7,
+        children: intl2.string(tmp2(1126).t.Tg0fDm),
+      };
+      items7 = [,];
       ({ centerText: arr8[0], body: arr8[1] } = tmp);
-      obj11.style = items7;
-      const intl2 = tmp2(1126).intl;
-      obj11.children = intl2.string(guildId(1126).t.Tg0fDm);
-      items6[1] = closure_6(guildId(4886).Text, obj11);
-      obj9.children = items6;
-      items5[1] = closure_7(guildId(5593).Stack, obj9);
-      const obj12 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
-      const intl3 = tmp2(1126).intl;
-      obj12.text = intl3.string(guildId(1126).t.kMRDWs);
-      obj12.icon = closure_6(guildId(16149).BoostTier2Icon, { color: "white" });
-      obj12.onPress = guildId.onUnlockPress;
-      items5[2] = closure_6(guildId(5594).Button, obj12);
-      obj6.children = items5;
-      items4[3] = closure_7(guildId(5593).Stack, obj6);
-      obj2.children = items4;
+      const Text2 = tmp2(4886).Text;
+      intl2 = tmp2(1126).intl;
+      items6[1] = closure_6(Text2, obj11);
+      items5[1] = closure_7(Stack2, obj9);
+      const obj12 = {
+        variant: "primary",
+        size: "lg",
+        text: intl3.string(tmp2(1126).t.kMRDWs),
+        icon: closure_6(tmp2(16149).BoostTier2Icon, { color: "white" }),
+        iconPosition: "start",
+        onPress: onUnlockPress,
+      };
+      const Button = tmp2(5594).Button;
+      intl3 = tmp2(1126).intl;
+      items5[2] = closure_6(Button, obj12);
+      items4[3] = closure_7(Stack, obj6);
       return closure_7(closure_4, obj2);
     };
+const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagUpsellCard.tsx");
+
+export default tmp4;

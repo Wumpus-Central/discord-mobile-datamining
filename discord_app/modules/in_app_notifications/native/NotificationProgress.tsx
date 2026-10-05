@@ -1,109 +1,129 @@
 // discord_app/modules/in_app_notifications/native/NotificationProgress.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = {
-  progress: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, height: 4 },
-  progressContainerBottom: { width: "100%", position: "absolute", bottom: -1 },
-};
-let closure_7 = createStyles.createStyles(obj2);
+let obj2;
+const View = react_native.View;
+const jsx = Fragment.jsx;
+let obj = { progress: obj2, progressContainerBottom: { width: "100%", position: "absolute", bottom: -1 } };
+obj2 = { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, height: 4 };
+let closure_7 = createStyles.createStyles(obj);
 const __initData = {
   code: 'function NotificationProgressTsx1(){const{percent,width}=this.__closure;const percentRemaining=(typeof percent==="number"?percent:percent.get())/100;return{transform:[{translateX:-width+width*percentRemaining}]};}',
 };
 const __initData2 = {
   code: "function NotificationProgressTsx2(){const{percent,width}=this.__closure;const percentRemaining=(typeof percent==='number'?percent:percent.get())/100;return{transform:[{translateX:-width+width*percentRemaining}]};}",
 };
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   ? (percent) => {
-      const cResult = c.c(3);
-      [width, closure_2] = noop.useState(0);
+      let closure_2;
+      let first;
+      let first1;
+      let tmp8;
+      let closure_0 = percent;
+      const obj = react2;
+      const cResult = obj.c(3);
+      [first, closure_2] = react.useState(0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s(nativeEvent) {
           return closure_2(nativeEvent.nativeEvent.layout.width);
         };
         cResult[0] = fn;
-        let first1 = fn;
+        first1 = fn;
       } else {
         first1 = cResult[0];
       }
       const fn2 = function y() {
-        value = percent;
-        if (typeof percent !== "number") {
-          value = percent.get();
+        let items;
+        let value = closure_0;
+        if (typeof closure_0 !== "number") {
+          value = closure_0.get();
         }
-        const obj2 = { transform: null };
-        const items = [{ translateX: first * (value / 100) - first }];
-        obj2.transform = items;
+        const obj2 = { transform: items };
+        items = [];
+        const obj3 = { translateX: first * (value / 100) - first };
+        items[0] = obj3;
         return obj2;
       };
-      fn2.__closure = { percent, width };
+      fn2.__closure = { percent, width: first };
       fn2.__workletHash = 7122786095468;
       fn2.__initData = __initData;
-      const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn2);
+      const tmpResult = ReanimatedRexport;
+      const animatedStyle = tmpResult.useAnimatedStyle(fn2);
       if (cResult[1] !== animatedStyle) {
         let obj2 = { animatedStyles: animatedStyle, handleLayout: first1 };
         cResult[1] = animatedStyle;
         cResult[2] = obj2;
-        let tmp8 = obj2;
+        tmp8 = obj2;
       } else {
         tmp8 = cResult[2];
       }
       return tmp8;
     }
   : (percent) => {
-      [width, closure_2] = noop.useState(0);
-      const obj = { animatedStyles: null, handleLayout: null };
-      const callback = noop.useCallback((nativeEvent) => closure_2(nativeEvent.nativeEvent.layout.width), []);
-      const fn = function s() {
-        value = percent;
-        if (typeof percent !== "number") {
-          value = percent.get();
+      let callback;
+      let closure_2;
+      let first;
+      let fn;
+      let obj2;
+      let closure_0 = percent;
+      [first, closure_2] = react.useState(0);
+      const obj = { animatedStyles: obj2.useAnimatedStyle(fn), handleLayout: callback };
+      callback = react.useCallback((nativeEvent) => closure_2(nativeEvent.nativeEvent.layout.width), []);
+      obj2 = ReanimatedRexport;
+      fn = function s() {
+        let items;
+        let value = closure_0;
+        if (typeof closure_0 !== "number") {
+          value = closure_0.get();
         }
-        const obj2 = { transform: null };
-        const items = [{ translateX: first * (value / 100) - first }];
-        obj2.transform = items;
+        const obj2 = { transform: items };
+        items = [];
+        const obj3 = { translateX: first * (value / 100) - first };
+        items[0] = obj3;
         return obj2;
       };
-      fn.__closure = { percent, width };
+      fn.__closure = { percent, width: first };
       fn.__workletHash = 16319973237775;
       fn.__initData = __initData2;
-      obj.animatedStyles = ReanimatedRexport.useAnimatedStyle(fn);
-      obj.handleLayout = callback;
       return obj;
     };
-ReactCompilerGating = fn(558);
-let obj3 = { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, height: 4 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/in_app_notifications/native/NotificationProgress.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (percent) => {
-      const cResult = c.c(7);
+      let animatedStyles;
+      let handleLayout;
+      const obj = react2;
+      const cResult = obj.c(7);
+      percent = percent.percent;
       const tmp3 = closure_7();
-      ({ animatedStyles, handleLayout } = closure_10(percent.percent));
+      ({ animatedStyles, handleLayout } = closure_10(percent));
+      closure_10(percent);
       if (cResult[0] === animatedStyles) {
+        let tmp5;
         if (cResult[1] === tmp3.progress) {
-          let tmp5 = cResult[2];
+          tmp5 = cResult[2];
         }
         if (cResult[3] === handleLayout) {
           if (cResult[4] === tmp3.progressContainerBottom) {
+            let tmp7;
             if (cResult[5] === tmp5) {
-              let tmp7 = cResult[6];
+              tmp7 = cResult[6];
             }
             return tmp7;
           }
         }
-        const obj2 = { onLayout: handleLayout, style: tmp3.progressContainerBottom, children: tmp5 };
         const tmp10 = (
           <View onLayout={handleLayout} style={tmp3.progressContainerBottom}>
             {tmp5}
@@ -115,27 +135,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = tmp10;
         tmp7 = tmp10;
       }
-      const obj3 = { style: null };
       const items = [tmp3.progress, animatedStyles];
-      obj3.style = items;
-      const tmp6 = jsx(ReanimatedRexportDefault.View, { style: null });
+      const tmp6 = jsx(ReanimatedRexportDefault.View, { style: items });
       cResult[0] = animatedStyles;
       cResult[1] = tmp3.progress;
       cResult[2] = tmp6;
       tmp5 = tmp6;
-      const tmp4 = closure_10(percent.percent);
     }
   : (percent) => {
+      percent = percent.percent;
       const tmp = closure_7();
-      const tmp2 = closure_10(percent.percent);
-      const obj = { onLayout: tmp2.handleLayout, style: tmp.progressContainerBottom, children: null };
-      const obj2 = { style: null };
+      const tmp2 = closure_10(percent);
       const items = [tmp.progress, tmp2.animatedStyles];
-      obj2.style = items;
-      obj.children = jsx(ReanimatedRexportDefault.View, { style: null });
       return (
         <View onLayout={tmp2.handleLayout} style={tmp.progressContainerBottom}>
           {null}
         </View>
       );
     };
+const result = size.fileFinishedImporting("modules/in_app_notifications/native/NotificationProgress.tsx");
+
+export default tmp2;

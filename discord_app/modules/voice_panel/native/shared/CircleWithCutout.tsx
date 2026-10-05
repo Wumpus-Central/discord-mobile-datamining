@@ -1,24 +1,39 @@
 // discord_app/modules/voice_panel/native/shared/CircleWithCutout.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import inlineStyles from "../../../../../_runtime/08136_inlineStyles.js";
 import CircleWithCutoutUtils from "CircleWithCutoutUtils.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
 const inlineStylesDefault = inlineStyles;
 
-require = fn;
-const PixelRatio = fn(17).PixelRatio;
-const jsxProd = fn(21);
-({ jsx: c3, jsxs: closure_4 } = jsxProd);
+let c3;
+let closure_4;
+const PixelRatio = react_native.PixelRatio;
+({ jsx: c3, jsxs: closure_4 } = Fragment);
 let closure_5 = PixelRatio.get();
-const ReactCompilerGating = fn(558);
-let size = fn(2);
-let result = size.fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutout.tsx");
-
-export default noop.memo(
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        const cResult = c.c(26);
+        let alignBadgeEdgeWithCircleEdge;
+        let badgeRadius;
+        let circleRadius;
+        let cutoutPositionInDegrees;
+        let cutoutRadius;
+        let enableCutout;
+        let fill;
+        let items;
+        let items1;
+        let items2;
+        let num;
+        let obj6;
+        let result2;
+        let scaleToPixelDensity;
+        const obj = react2;
+        const cResult = obj.c(26);
         ({ fill, cutoutPositionInDegrees, alignBadgeEdgeWithCircleEdge, badgeRadius, scaleToPixelDensity } = arg0);
         let tmp4 = undefined !== alignBadgeEdgeWithCircleEdge;
         ({ circleRadius, cutoutRadius, enableCutout } = arg0);
@@ -26,23 +41,27 @@ export default noop.memo(
           tmp4 = alignBadgeEdgeWithCircleEdge;
         }
         if (undefined === scaleToPixelDensity) {
-          let num = closure_5;
+          num = closure_5;
         } else {
           num = 1;
         }
         const result = circleRadius * num;
         const result1 = cutoutRadius * num;
         if (null != badgeRadius) {
-          const result2 = badgeRadius * num;
+          result2 = badgeRadius * num;
         }
         const result3 = 2 * result;
         if (cResult[0] === result) {
+          let diff;
           if (cResult[1] === cutoutPositionInDegrees) {
-            let diff = cResult[2];
+            diff = cResult[2];
           }
           if (cResult[3] === result) {
+            let tmp11;
+            let tmp14;
+            let tmp15;
             if (cResult[4] === cutoutPositionInDegrees) {
-              let tmp11 = cResult[5];
+              tmp11 = cResult[5];
             }
             if (tmp4) {
               tmp4 = null != result2;
@@ -53,33 +72,34 @@ export default noop.memo(
             }
             const result4 = 1 / num;
             if (cResult[6] !== result4) {
-              const obj2 = { transform: null };
+              const obj2 = { transform: items };
+              items = [{ scale: result4 }];
               const obj3 = { scale: result4 };
-              const items = [obj3];
-              obj2.transform = items;
               cResult[6] = result4;
               cResult[7] = obj2;
-              let tmp14 = obj2;
+              tmp14 = obj2;
             } else {
               tmp14 = cResult[7];
             }
             if (cResult[8] !== result3) {
-              const size = { width: result3, height: result3, fill: "white" };
-              const tmp17 = React3(inlineStyles.Rect, size);
+              size = { width: result3, height: result3, fill: "white" };
+              const tmp17 = _false(inlineStyles.Rect, size);
               cResult[8] = result3;
               cResult[9] = tmp17;
-              let tmp15 = tmp17;
+              tmp15 = tmp17;
             } else {
               tmp15 = cResult[9];
             }
             if (cResult[10] === diff) {
               if (cResult[11] === tmp11) {
+                let tmp18;
                 if (cResult[12] === result1) {
-                  let tmp18 = cResult[13];
+                  tmp18 = cResult[13];
                 }
                 if (cResult[14] === tmp15) {
+                  let tmp21;
                   if (cResult[15] === tmp18) {
-                    let tmp21 = cResult[16];
+                    tmp21 = cResult[16];
                   }
                   let str;
                   if (enableCutout) {
@@ -87,23 +107,24 @@ export default noop.memo(
                   }
                   if (cResult[17] === result) {
                     if (cResult[18] === fill) {
+                      let tmp25;
                       if (cResult[19] === str) {
-                        let tmp25 = cResult[20];
+                        tmp25 = cResult[20];
                       }
                       if (cResult[21] === result3) {
                         if (cResult[22] === tmp25) {
                           if (cResult[23] === tmp14) {
+                            let tmp28;
                             if (cResult[24] === tmp21) {
-                              let tmp28 = cResult[25];
+                              tmp28 = cResult[25];
                             }
                             return tmp28;
                           }
                         }
                       }
-                      const size1 = { height: result3, width: result3, style: tmp14, children: null };
-                      const items1 = [tmp21, tmp25];
-                      size1.children = items1;
-                      const tmp31 = React4(inlineStylesDefault, size1);
+                      const size1 = { height: result3, width: result3, style: tmp14, children: items1 };
+                      items1 = [tmp21, tmp25];
+                      const tmp31 = React3(inlineStylesDefault, size1);
                       cResult[21] = result3;
                       cResult[22] = tmp25;
                       cResult[23] = tmp14;
@@ -113,19 +134,18 @@ export default noop.memo(
                     }
                   }
                   const obj4 = { cx: result, cy: result, r: result, fill, mask: str };
-                  const tmp27 = React3(inlineStyles.Circle, obj4);
+                  const tmp27 = _false(inlineStyles.Circle, obj4);
                   cResult[17] = result;
                   cResult[18] = fill;
                   cResult[19] = str;
                   cResult[20] = tmp27;
                   tmp25 = tmp27;
                 }
-                const obj5 = { children: null };
-                const obj6 = { id: "mask", children: null };
-                const items2 = [tmp15, tmp18];
-                obj6.children = items2;
-                obj5.children = React4(inlineStyles.Mask, obj6);
-                const tmp24 = React3(inlineStyles.Defs, obj5);
+                const obj5 = { children: React3(inlineStyles.Mask, obj6) };
+                const Defs = inlineStyles.Defs;
+                obj6 = { id: "mask", children: items2 };
+                items2 = [tmp15, tmp18];
+                const tmp24 = _false(Defs, obj5);
                 cResult[14] = tmp15;
                 cResult[15] = tmp18;
                 cResult[16] = tmp24;
@@ -133,28 +153,44 @@ export default noop.memo(
               }
             }
             const obj7 = { cx: diff, cy: tmp11, r: result1, fill: "black" };
-            const tmp20 = React3(inlineStyles.Circle, obj7);
+            const tmp20 = _false(inlineStyles.Circle, obj7);
             cResult[10] = diff;
             cResult[11] = tmp11;
             cResult[12] = result1;
             cResult[13] = tmp20;
             tmp18 = tmp20;
           }
-          const cutoutCenterY = CircleWithCutoutUtils.getCutoutCenterY(result, cutoutPositionInDegrees);
+          const tmpResult = CircleWithCutoutUtils;
+          const cutoutCenterY = tmpResult.getCutoutCenterY(result, cutoutPositionInDegrees);
           cResult[3] = result;
           cResult[4] = cutoutPositionInDegrees;
           cResult[5] = cutoutCenterY;
           tmp11 = cutoutCenterY;
-          const tmpResult = CircleWithCutoutUtils;
         }
-        const cutoutCenterX = CircleWithCutoutUtils.getCutoutCenterX(result, cutoutPositionInDegrees);
+        const tmpResult2 = CircleWithCutoutUtils;
+        const cutoutCenterX = tmpResult2.getCutoutCenterX(result, cutoutPositionInDegrees);
         cResult[0] = result;
         cResult[1] = cutoutPositionInDegrees;
         cResult[2] = cutoutCenterX;
         diff = cutoutCenterX;
-        const tmpResult2 = CircleWithCutoutUtils;
       }
     : (arg0) => {
+        let Mask;
+        let alignBadgeEdgeWithCircleEdge;
+        let badgeRadius;
+        let circleRadius;
+        let cutoutPositionInDegrees;
+        let cutoutRadius;
+        let enableCutout;
+        let fill;
+        let items;
+        let items1;
+        let items2;
+        let obj3;
+        let obj6;
+        let result1;
+        let scaleToPixelDensity;
+        let str;
         ({ cutoutPositionInDegrees, alignBadgeEdgeWithCircleEdge } = arg0);
         ({ fill, circleRadius, cutoutRadius, enableCutout } = arg0);
         if (alignBadgeEdgeWithCircleEdge === undefined) {
@@ -170,11 +206,13 @@ export default noop.memo(
         }
         const result = circleRadius * num;
         if (null != badgeRadius) {
-          const result1 = badgeRadius * num;
+          result1 = badgeRadius * num;
         }
         const result2 = 2 * result;
-        const cutoutCenterX = CircleWithCutoutUtils.getCutoutCenterX(result, cutoutPositionInDegrees);
-        const cutoutCenterY = CircleWithCutoutUtils.getCutoutCenterY(result, cutoutPositionInDegrees);
+        const obj = CircleWithCutoutUtils;
+        const cutoutCenterX = obj.getCutoutCenterX(result, cutoutPositionInDegrees);
+        const obj2 = CircleWithCutoutUtils;
+        const cutoutCenterY = obj2.getCutoutCenterY(result, cutoutPositionInDegrees);
         if (alignBadgeEdgeWithCircleEdge) {
           alignBadgeEdgeWithCircleEdge = null != result1;
         }
@@ -184,31 +222,33 @@ export default noop.memo(
           diff = 2 * result - result1;
           tmp8 = result1;
         }
-        const size = { height: result2, width: result2, style: null, children: null };
-        const obj3 = { transform: null };
-        const items = [{ scale: 1 / num }];
-        obj3.transform = items;
-        size.style = obj3;
+        size = { height: result2, width: result2, style: obj3, children: items2 };
+        obj3 = { transform: items };
+        items = [];
         const obj4 = { scale: 1 / num };
-        const obj5 = { children: null };
-        const obj6 = { id: "mask", children: null };
-        const items1 = [
-          React3(inlineStyles.Rect, { width: result2, height: result2, fill: "white" }),
-          React3(inlineStyles.Circle, { cx: diff, cy: tmp8, r: cutoutRadius * num, fill: "black" }),
-        ];
-        obj6.children = items1;
-        obj5.children = React4(inlineStyles.Mask, obj6);
-        const items2 = [React3(inlineStyles.Defs, obj5)];
-        const obj8 = { cx: result, cy: result, r: result, fill, mask: null };
-        let str;
+        items[0] = obj4;
+        const obj5 = { children: React3(Mask, obj6) };
+        const tmp11 = inlineStylesDefault;
+        const Defs = inlineStyles.Defs;
+        obj6 = { id: "mask", children: items1 };
+        Mask = inlineStyles.Mask;
+        items1 = [_false(inlineStyles.Rect, { width: result2, height: result2, fill: "white" })];
+        const obj7 = { cx: diff, cy: tmp8, r: cutoutRadius * num, fill: "black" };
+        items1[1] = _false(inlineStyles.Circle, obj7);
+        items2 = [_false(Defs, obj5)];
+        const obj8 = { cx: result, cy: result, r: result, fill, mask: str };
+        str = undefined;
+        const Circle = inlineStyles.Circle;
         if (enableCutout) {
           str = "url(#mask)";
         }
-        obj8.mask = str;
-        items2[1] = React3(inlineStyles.Circle, obj8);
-        size.children = items2;
-        return React4(inlineStylesDefault, size);
+        items2[1] = _false(Circle, obj8);
+        return React3(tmp11, size);
       },
 );
-export const getBadgeLeft = fn(9078).getBadgeLeft;
-export const getBadgeTop = fn(9078).getBadgeTop;
+let size = size_mod;
+let result = size.fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutout.tsx");
+
+export default memoResult;
+export const getBadgeLeft = CircleWithCutoutUtils.getBadgeLeft;
+export const getBadgeTop = CircleWithCutoutUtils.getBadgeTop;

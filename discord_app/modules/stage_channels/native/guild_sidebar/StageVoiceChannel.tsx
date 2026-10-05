@@ -1,81 +1,91 @@
 // discord_app/modules/stage_channels/native/guild_sidebar/StageVoiceChannel.tsx
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl5 from "../../../../intl/index.native.tsx";
 import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
+import SortedVoiceStateStore2 from "../../../../stores/views/SortedVoiceStateStore.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import StageMediaHooks from "../../StageMediaHooks.tsx";
 import useShowMemberVerificationGate from "../../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
 import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import openChannelLongPressActionSheet from "../../../channel/native/openChannelLongPressActionSheet.tsx";
-import VoiceUsersDefault from "../../../guild_sidebar/native/VoiceUsers.tsx";
+import RedesignChannelListConstants from "../../../channel_list_v2/native/RedesignChannelListConstants.tsx";
 import ChannelItemDefault from "../../../guild_sidebar/native/ChannelItem.tsx";
 import ChannelInfoDefault from "../../../guild_sidebar/native/ChannelInfo.tsx";
 import useStageChannelSpeakerVoiceStatesDefault from "../../useStageChannelSpeakerVoiceStates.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import CollapsedVoiceChannelStore from "../../../../stores/CollapsedVoiceChannelStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
 import ReadStateStore from "../../../../stores/ReadStateStore.tsx";
 import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
-import SortedVoiceStateStore from "../../../../stores/views/SortedVoiceStateStore.tsx";
 import StageInstanceStore from "../../StageInstanceStore.tsx";
+import Constants from "../../../../Constants.tsx";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+const SortedVoiceStateStore = SortedVoiceStateStore2;
+
+let closure_14;
+let map1;
+let obj2;
 function getStageChannelAccessibilityProps(arg0) {
+  let channel;
+  let channelName;
+  let formatToPlainStringResult1;
+  let intl3;
+  let userCount;
   ({ channelName, channel, userCount } = arg0);
-  const intl = util.intl;
+  const intl = intl5.intl;
+  const formatToPlainStringResult = intl.formatToPlainString(intl5.t.TPPk2T, { channelName });
   if (null != channel.userLimit) {
     if (channel.userLimit > 0) {
-      const intl2 = util.intl;
+      const intl2 = intl5.intl;
       const obj = { channelName, userCount, limit: channel.userLimit };
-      let formatToPlainStringResult1 = intl2.formatToPlainString(util.t.rhh6Ev, obj);
+      formatToPlainStringResult1 = intl2.formatToPlainString(intl5.t.rhh6Ev, obj);
     }
     const obj2 = {
       accessible: true,
       accessibilityRole: "button",
       accessibilityLabel: formatToPlainStringResult1,
-      accessibilityHint: null,
+      accessibilityHint: intl3.string(intl5.t.g6pBAk),
     };
-    const intl3 = util.intl;
-    obj2.accessibilityHint = intl3.string(util.t.g6pBAk);
+    intl3 = intl5.intl;
     return obj2;
   }
-  formatToPlainStringResult1 = intl.formatToPlainString(util.t.TPPk2T, { channelName });
+  formatToPlainStringResult1 = formatToPlainStringResult;
   if (userCount > 0) {
-    const intl4 = util.intl;
+    const intl4 = intl5.intl;
     const obj3 = { channelName, userCount };
-    formatToPlainStringResult1 = intl4.formatToPlainString(util.t["7yr3Qc"], obj3);
+    formatToPlainStringResult1 = intl4.formatToPlainString(intl5.t["7yr3Qc"], obj3);
   }
-  const formatToPlainStringResult = intl.formatToPlainString(util.t.TPPk2T, { channelName });
 }
-const View = fn(17).View;
-const NO_VOICE_STATES = fn(4914).NO_VOICE_STATES;
-const Constants = fn(1085);
+const View = react_native.View;
+const NO_VOICE_STATES = SortedVoiceStateStore2.NO_VOICE_STATES;
 ({ MAX_STAGE_VOICE_USER_LIMIT: map1, Permissions: closure_14 } = Constants);
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj = {
-  voiceStates: { marginLeft: 36, marginBottom: 8 },
-  container: {
-    marginVertical: fn(11697).CHANNEL_MARGIN_VERTICAL,
-    marginHorizontal: 8,
-    borderRadius: nativeDefault.radii.md,
-  },
-};
+const CHANNEL_MARGIN_VERTICAL = RedesignChannelListConstants.CHANNEL_MARGIN_VERTICAL;
+const jsx = Fragment.jsx;
+let obj = { voiceStates: { marginLeft: 36, marginBottom: 8 }, container: obj2 };
+obj2 = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 let closure_17 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-let obj3 = {
-  marginVertical: fn(11697).CHANNEL_MARGIN_VERTICAL,
-  marginHorizontal: 8,
-  borderRadius: nativeDefault.radii.md,
-};
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/stage_channels/native/guild_sidebar/StageVoiceChannel.tsx");
-
-export default noop.memo(
+const memo = react.memo;
+const memoResult = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (channel) => {
-        const cResult = channel(576).c(38);
+        let collapsed;
+        let first;
+        let hasMedia;
+        let hasUnread;
+        let locked;
+        let resolvedUnreadSetting;
+        let stageInstance;
+        let tmp12;
+        let tmp13;
+        let voiceStates;
+        let obj = channel(576);
+        const cResult = obj.c(38);
         channel = channel.channel;
         closure_17();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -88,43 +98,45 @@ export default noop.memo(
             CollapsedVoiceChannelStore,
           ];
           cResult[0] = items;
-          let first = items;
+          first = items;
         } else {
           first = cResult[0];
         }
         if (cResult[1] !== channel) {
           const fn = function b() {
+            let obj2;
             const obj = {
               stageInstance: StageInstanceStore.getStageInstanceByChannel(channel.id),
               hasUnread: ReadStateStore.hasUnread(channel.id),
               resolvedUnreadSetting: UserGuildSettingsStore.resolveUnreadSetting(channel),
               voiceStates: SortedVoiceStateStore.getVoiceStatesForChannel(channel),
-              hasMedia: StageMediaHooks.getStageHasMedia(channel.id),
+              hasMedia: obj2.getStageHasMedia(channel.id),
               locked: !PermissionStore.can(constants.CONNECT, channel),
               collapsed: CollapsedVoiceChannelStore.isCollapsed(channel.id),
             };
+            obj2 = StageMediaHooks;
             return obj;
           };
           const items1 = [channel];
           cResult[1] = channel;
           cResult[2] = fn;
           cResult[3] = items1;
-          let tmp13 = items1;
-          let tmp12 = fn;
+          tmp13 = items1;
+          tmp12 = fn;
         } else {
           tmp12 = cResult[2];
           tmp13 = cResult[3];
         }
-        let obj = channel(576);
-        const stateFromStoresObject = channel(504).useStateFromStoresObject(first, tmp12, tmp13);
+        const tmpResult = channel(504);
+        const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, tmp12, tmp13);
         ({ stageInstance, hasUnread, resolvedUnreadSetting, voiceStates, hasMedia, locked, collapsed } =
           stateFromStoresObject);
         let arr3 = useStageChannelSpeakerVoiceStatesDefault(channel.guild_id)[channel.id];
         if (arr3 == null) {
           arr3 = NO_VOICE_STATES;
         }
-        const tmpResult = channel(504);
-        const stageParticipantsCount = channel(5588).useStageParticipantsCount(
+        const tmpResult3 = channel(5588);
+        const stageParticipantsCount = tmpResult3.useStageParticipantsCount(
           channel.id,
           tmp(5582).StageChannelParticipantNamedIndex.AUDIENCE,
         );
@@ -132,24 +144,18 @@ export default noop.memo(
         if (cResult[4] !== channel) {
           class N {
             constructor() {
-              tmp = channel;
-              guildId = channel.getGuildId();
+              const guildId = channel.getGuildId();
               if (null != guildId) {
-                tmp3 = closure_0;
-                tmp4 = closure_3;
-                obj = closure_0(closure_3[21]);
+                const obj = useShowMemberVerificationGate;
                 if (obj.shouldShowMembershipVerificationGate(guildId)) {
-                  tmp7 = closure_0;
-                  tmp8 = closure_3;
-                  obj4 = closure_0(closure_3[22]);
+                  const obj4 = MemberVerificationModalActionCreators;
                   return obj4.openMemberVerificationModal(guildId);
                 }
               }
-              obj2 = closure_2(closure_3[23]);
-              result = obj2.dismissGlobalKeyboard();
-              obj3 = closure_0(closure_3[24]);
-              openGuildVoiceModalResult = obj3.openGuildVoiceModal(tmp, "Channel List");
-              return;
+              const obj2 = KeyboardManagerUtilsAll;
+              const result = obj2.dismissGlobalKeyboard();
+              const obj3 = PrivateChannelCallUtils;
+              obj3.openGuildVoiceModal(channel, "Channel List");
             }
           }
           cResult[4] = channel;
@@ -157,48 +163,36 @@ export default noop.memo(
         } else {
           class N {
             constructor() {
-              tmp = channel;
-              guildId = channel.getGuildId();
+              const guildId = channel.getGuildId();
               if (null != guildId) {
-                tmp3 = closure_0;
-                tmp4 = closure_3;
-                obj = closure_0(closure_3[21]);
+                const obj = useShowMemberVerificationGate;
                 if (obj.shouldShowMembershipVerificationGate(guildId)) {
-                  tmp7 = closure_0;
-                  tmp8 = closure_3;
-                  obj4 = closure_0(closure_3[22]);
+                  const obj4 = MemberVerificationModalActionCreators;
                   return obj4.openMemberVerificationModal(guildId);
                 }
               }
-              obj2 = closure_2(closure_3[23]);
-              result = obj2.dismissGlobalKeyboard();
-              obj3 = closure_0(closure_3[24]);
-              openGuildVoiceModalResult = obj3.openGuildVoiceModal(tmp, "Channel List");
-              return;
+              const obj2 = KeyboardManagerUtilsAll;
+              const result = obj2.dismissGlobalKeyboard();
+              const obj3 = PrivateChannelCallUtils;
+              obj3.openGuildVoiceModal(channel, "Channel List");
             }
           }
         }
         if (cResult[6] !== channel.id) {
           class N {
             constructor() {
-              tmp = channel;
-              guildId = channel.getGuildId();
+              const guildId = channel.getGuildId();
               if (null != guildId) {
-                tmp3 = closure_0;
-                tmp4 = closure_3;
-                obj = closure_0(closure_3[21]);
+                const obj = useShowMemberVerificationGate;
                 if (obj.shouldShowMembershipVerificationGate(guildId)) {
-                  tmp7 = closure_0;
-                  tmp8 = closure_3;
-                  obj4 = closure_0(closure_3[22]);
+                  const obj4 = MemberVerificationModalActionCreators;
                   return obj4.openMemberVerificationModal(guildId);
                 }
               }
-              obj2 = closure_2(closure_3[23]);
-              result = obj2.dismissGlobalKeyboard();
-              obj3 = closure_0(closure_3[24]);
-              openGuildVoiceModalResult = obj3.openGuildVoiceModal(tmp, "Channel List");
-              return;
+              const obj2 = KeyboardManagerUtilsAll;
+              const result = obj2.dismissGlobalKeyboard();
+              const obj3 = PrivateChannelCallUtils;
+              obj3.openGuildVoiceModal(channel, "Channel List");
             }
           }
           cResult[6] = channel.id;
@@ -206,89 +200,78 @@ export default noop.memo(
         } else {
           class N {
             constructor() {
-              tmp = channel;
-              guildId = channel.getGuildId();
+              const guildId = channel.getGuildId();
               if (null != guildId) {
-                tmp3 = closure_0;
-                tmp4 = closure_3;
-                obj = closure_0(closure_3[21]);
+                const obj = useShowMemberVerificationGate;
                 if (obj.shouldShowMembershipVerificationGate(guildId)) {
-                  tmp7 = closure_0;
-                  tmp8 = closure_3;
-                  obj4 = closure_0(closure_3[22]);
+                  const obj4 = MemberVerificationModalActionCreators;
                   return obj4.openMemberVerificationModal(guildId);
                 }
               }
-              obj2 = closure_2(closure_3[23]);
-              result = obj2.dismissGlobalKeyboard();
-              obj3 = closure_0(closure_3[24]);
-              openGuildVoiceModalResult = obj3.openGuildVoiceModal(tmp, "Channel List");
-              return;
+              const obj2 = KeyboardManagerUtilsAll;
+              const result = obj2.dismissGlobalKeyboard();
+              const obj3 = PrivateChannelCallUtils;
+              obj3.openGuildVoiceModal(channel, "Channel List");
             }
           }
         }
         const tmp21 = useChannelNameDefault(channel, false);
-        const tmpResult3 = channel(5588);
-        const isConnectedToVoiceChannel = channel(9054).useIsConnectedToVoiceChannel(channel);
+        const tmpResult4 = channel(9054);
+        const isConnectedToVoiceChannel = tmpResult4.useIsConnectedToVoiceChannel(channel);
         if (stageInstance != null) {
           class N {
             constructor() {
-              tmp = channel;
-              guildId = channel.getGuildId();
+              const guildId = channel.getGuildId();
               if (null != guildId) {
-                tmp3 = closure_0;
-                tmp4 = closure_3;
-                obj = closure_0(closure_3[21]);
+                const obj = useShowMemberVerificationGate;
                 if (obj.shouldShowMembershipVerificationGate(guildId)) {
-                  tmp7 = closure_0;
-                  tmp8 = closure_3;
-                  obj4 = closure_0(closure_3[22]);
+                  const obj4 = MemberVerificationModalActionCreators;
                   return obj4.openMemberVerificationModal(guildId);
                 }
               }
-              obj2 = closure_2(closure_3[23]);
-              result = obj2.dismissGlobalKeyboard();
-              obj3 = closure_0(closure_3[24]);
-              openGuildVoiceModalResult = obj3.openGuildVoiceModal(tmp, "Channel List");
-              return;
+              const obj2 = KeyboardManagerUtilsAll;
+              const result = obj2.dismissGlobalKeyboard();
+              const obj3 = PrivateChannelCallUtils;
+              obj3.openGuildVoiceModal(channel, "Channel List");
             }
           }
         }
         if (cResult[8] === channel) {
           class N {
             constructor() {
-              tmp = channel;
-              guildId = channel.getGuildId();
+              const guildId = channel.getGuildId();
               if (null != guildId) {
-                tmp3 = closure_0;
-                tmp4 = closure_3;
-                obj = closure_0(closure_3[21]);
+                const obj = useShowMemberVerificationGate;
                 if (obj.shouldShowMembershipVerificationGate(guildId)) {
-                  tmp7 = closure_0;
-                  tmp8 = closure_3;
-                  obj4 = closure_0(closure_3[22]);
+                  const obj4 = MemberVerificationModalActionCreators;
                   return obj4.openMemberVerificationModal(guildId);
                 }
               }
-              obj2 = closure_2(closure_3[23]);
-              result = obj2.dismissGlobalKeyboard();
-              obj3 = closure_0(closure_3[24]);
-              openGuildVoiceModalResult = obj3.openGuildVoiceModal(tmp, "Channel List");
-              return;
+              const obj2 = KeyboardManagerUtilsAll;
+              const result = obj2.dismissGlobalKeyboard();
+              const obj3 = PrivateChannelCallUtils;
+              obj3.openGuildVoiceModal(channel, "Channel List");
             }
           }
         }
-        const tmpResult4 = channel(9054);
         cResult[8] = channel;
         cResult[9] = tmp21;
         cResult[10] = sum;
         cResult[11] = getStageChannelAccessibilityProps({ channel, channelName: tmp21, userCount: sum });
-        const tmp23 = getStageChannelAccessibilityProps({ channel, channelName: tmp21, userCount: sum });
+        getStageChannelAccessibilityProps({ channel, channelName: tmp21, userCount: sum });
       }
     : (channel) => {
+        let collapsed;
+        let hasMedia;
+        let hasUnread;
+        let locked;
+        let resolvedUnreadSetting;
+        let stageInstance;
+        let voiceStates;
         channel = channel.channel;
         const selected = channel.selected;
         const tmp = closure_17();
+        let obj = channel(504);
         const items = [
           StageInstanceStore,
           ReadStateStore,
@@ -298,18 +281,20 @@ export default noop.memo(
           CollapsedVoiceChannelStore,
         ];
         const items1 = [channel];
-        const stateFromStoresObject = channel(504).useStateFromStoresObject(
+        const stateFromStoresObject = obj.useStateFromStoresObject(
           items,
           () => {
+            let obj2;
             const obj = {
               stageInstance: StageInstanceStore.getStageInstanceByChannel(channel.id),
               hasUnread: ReadStateStore.hasUnread(channel.id),
               resolvedUnreadSetting: UserGuildSettingsStore.resolveUnreadSetting(channel),
               voiceStates: SortedVoiceStateStore.getVoiceStatesForChannel(channel),
-              hasMedia: StageMediaHooks.getStageHasMedia(channel.id),
+              hasMedia: obj2.getStageHasMedia(channel.id),
               locked: !PermissionStore.can(constants.CONNECT, channel),
               collapsed: CollapsedVoiceChannelStore.isCollapsed(channel.id),
             };
+            obj2 = StageMediaHooks;
             return obj;
           },
           items1,
@@ -320,90 +305,82 @@ export default noop.memo(
         if (arr3 == null) {
           arr3 = NO_VOICE_STATES;
         }
-        let obj = channel(504);
-        const stageParticipantsCount = channel(5588).useStageParticipantsCount(
+        const tmp2Result = channel(5588);
+        const stageParticipantsCount = tmp2Result.useStageParticipantsCount(
           channel.id,
           tmp2(5582).StageChannelParticipantNamedIndex.AUDIENCE,
         );
         const items2 = [channel];
         const sum = stageParticipantsCount + arr3.length;
         const items3 = [channel.id];
-        const callback = noop.useCallback(() => {
+        const callback = react.useCallback(() => {
           const guildId = channel.getGuildId();
           if (null != guildId) {
+            const obj = useShowMemberVerificationGate;
             if (obj.shouldShowMembershipVerificationGate(guildId)) {
-              return MemberVerificationModalActionCreators.openMemberVerificationModal(guildId);
+              const obj4 = MemberVerificationModalActionCreators;
+              return obj4.openMemberVerificationModal(guildId);
             }
-            obj = useShowMemberVerificationGate;
           }
-          const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
-          PrivateChannelCallUtils.openGuildVoiceModal(channel, "Channel List");
+          const obj2 = KeyboardManagerUtilsAll;
+          const result = obj2.dismissGlobalKeyboard();
+          const obj3 = PrivateChannelCallUtils;
+          obj3.openGuildVoiceModal(channel, "Channel List");
         }, items2);
-        const callback1 = noop.useCallback(() => {
-          const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
+        const callback1 = react.useCallback(() => {
+          const obj = openChannelLongPressActionSheet;
+          const result = obj.openChannelLongPressActionSheet(channel.id);
         }, items3);
-        const tmp2Result = channel(5588);
-        const tmp10 = useChannelNameDefault(channel, false);
         let topic;
-        const isConnectedToVoiceChannel = channel(9054).useIsConnectedToVoiceChannel(channel);
+        const tmp10 = useChannelNameDefault(channel, false);
+        const tmp2Result2 = channel(9054);
+        const isConnectedToVoiceChannel = tmp2Result2.useIsConnectedToVoiceChannel(channel);
         if (stageInstance != null) {
           topic = stageInstance.topic;
         }
-        let obj2 = {};
-        const tmp2Result2 = channel(9054);
+        ChannelItemDefault;
         const merged = Object.assign(
           getStageChannelAccessibilityProps({ channel, channelName: tmp10, userCount: sum }),
         );
-        obj2.onPress = callback;
-        obj2.onLongPress = callback1;
-        obj2.style = tmp.container;
-        obj2.channel = channel;
-        obj2.selected = selected;
-        obj2.locked = locked;
-        obj2.isChannelLive = null != stageInstance;
         if (hasUnread) {
           hasUnread = isConnectedToVoiceChannel;
         }
-        obj2.unread = hasUnread;
-        obj2.resolvedUnreadSetting = resolvedUnreadSetting;
-        obj2.subtitle = topic;
-        let obj3 = {
-          channel,
-          isChannelSelected: selected,
-          isChannelCollapsed: collapsed,
-          enableConnectedUserLimit: null,
-          voiceStates: null,
-        };
-        const tmp5Result = ChannelItemDefault;
+        ChannelInfoDefault;
         if (!hasMedia) {
-          let tmp17 = channel.userLimit > 0;
-          if (tmp17) {
-            tmp17 = channel.userLimit < closure_13;
-          }
-          hasMedia = tmp17;
+          hasMedia = channel.userLimit > 0 && channel.userLimit < closure_13;
+          const tmp17 = channel.userLimit > 0 && channel.userLimit < closure_13;
         }
-        obj3.enableConnectedUserLimit = hasMedia;
-        obj3.voiceStates = voiceStates;
-        obj2.channelInfo = jsx(ChannelInfoDefault, {
-          channel,
-          isChannelSelected: selected,
-          isChannelCollapsed: collapsed,
-          enableConnectedUserLimit: null,
-          voiceStates: null,
-        });
         let tmp13Result = arr3.length > 0;
         if (tmp13Result) {
-          const obj4 = { style: tmp.voiceStates, children: null };
-          const obj5 = { channel, collapsed, voiceStates: arr3, audienceCount: stageParticipantsCount };
-          obj4.children = jsx(VoiceUsersDefault, {
-            channel,
-            collapsed,
-            voiceStates: arr3,
-            audienceCount: stageParticipantsCount,
-          });
           tmp13Result = <View style={tmp.voiceStates}>{null}</View>;
         }
-        obj2.children = tmp13Result;
-        return <tmp5Result />;
+        return (
+          <tmp5Result
+            onPress={callback}
+            onLongPress={callback1}
+            style={tmp.container}
+            channel={channel}
+            selected={selected}
+            locked={locked}
+            isChannelLive={null != stageInstance}
+            unread={hasUnread}
+            resolvedUnreadSetting={resolvedUnreadSetting}
+            subtitle={topic}
+            channelInfo={
+              <tmp5Result2
+                channel={channel}
+                isChannelSelected={selected}
+                isChannelCollapsed={collapsed}
+                enableConnectedUserLimit={hasMedia}
+                voiceStates={voiceStates}
+              />
+            }
+          >
+            {tmp13Result}
+          </tmp5Result>
+        );
       },
 );
+let result = size.fileFinishedImporting("modules/stage_channels/native/guild_sidebar/StageVoiceChannel.tsx");
+
+export default memoResult;

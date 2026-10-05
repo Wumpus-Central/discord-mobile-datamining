@@ -1,34 +1,32 @@
 // discord_common/js/packages/design/components/ManaContext/ManaContext.native.tsx
-import c from "../../../../../../_runtime/00576_c.js";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../../_runtime/00576_react.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import ReactCompilerGating_mod from "../../../../../../discord_app/modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
+const jsx = Fragment.jsx;
 let obj = {};
-const context = noop.createContext(obj);
-fn(558);
-const ReactCompilerGating = fn(558);
+const context = react.createContext(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => noop.useContext(context)
-  : () => noop.useContext(context);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "../discord_common/js/packages/design/components/ManaContext/ManaContext.native.tsx",
-);
-
-export const ManaContext = context;
-export const useManaContext = tmp3;
-export const ManaContextProvider = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => react.useContext(context)
+  : () => react.useContext(context);
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      obj = c;
+      let children;
+      let value;
+      obj = react2;
       const cResult = obj.c(3);
       ({ children, value } = arg0);
       if (value == null) {
         value = obj;
       }
       if (cResult[0] === children) {
+        let tmp2;
         if (cResult[1] === value) {
-          let tmp2 = cResult[2];
+          tmp2 = cResult[2];
         }
         return tmp2;
       }
@@ -38,10 +36,19 @@ export const ManaContextProvider = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp3;
       tmp2 = tmp3;
     }
-  : (children) => {
-      value = children.value;
+  : (value) => {
+      value = value.value;
+      const children = value.children;
+      const Provider = context.Provider;
       if (value == null) {
         value = obj;
       }
-      return <context.Provider value={value}>{children.children}</context.Provider>;
+      return <Provider value={value}>{children}</Provider>;
     };
+const result = size.fileFinishedImporting(
+  "../discord_common/js/packages/design/components/ManaContext/ManaContext.native.tsx",
+);
+
+export const ManaContext = context;
+export const useManaContext = tmp3;
+export const ManaContextProvider = tmp4;

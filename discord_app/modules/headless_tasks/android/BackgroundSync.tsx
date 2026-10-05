@@ -5,25 +5,32 @@ import background_sync_BackgroundSync from "../../app_database/background_sync/n
 import GatewayConnectionStore from "../../gateway/GatewayConnectionStore.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-let closure_6 = new LoggerDefault("BackgroundSync");
-const size = fn(2);
+let tmp = new LoggerDefault("BackgroundSync");
+let closure_6 = tmp;
 let result = size.fileFinishedImporting("modules/headless_tasks/android/BackgroundSync.tsx");
 
-export default (arg0) => {
-  closure_0 = arg0;
+export default function (arg0) {
+  let logger;
+  let resolved;
+  let closure_0 = arg0;
   if ("active" === AppStateStore.getState()) {
-    let resolved = Promise.resolve();
+    resolved = Promise.resolve();
   } else {
+    const tmp = GatewayConnectionStore.isConnected() || GatewayConnectionStore.isTryingToConnect();
     if (!tmp) {
-      const result = DatabaseManagerDefault.carefullyOpenDatabase(AuthenticationStore.getId());
+      const obj2 = DatabaseManagerDefault;
+      const result = obj2.carefullyOpenDatabase(AuthenticationStore.getId());
     }
+    const self = this;
+    const self2 = this;
     resolved = new Promise((arg0) => {
       logger.log("Executing BackgroundSync with ", closure_0);
-      background_sync_BackgroundSync.backgroundSync({}).then(arg0);
+      const obj = background_sync_BackgroundSync;
+      const backgroundSyncResult = obj.backgroundSync({});
+      backgroundSyncResult.then(arg0);
     });
-    tmp = GatewayConnectionStore.isConnected() || GatewayConnectionStore.isTryingToConnect();
   }
   return resolved;
-};
+}

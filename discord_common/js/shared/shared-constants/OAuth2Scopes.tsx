@@ -1,6 +1,7 @@
 // discord_common/js/shared/shared-constants/OAuth2Scopes.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
+let obj2;
 const obj = {
   PUBLIC: new Set([
     "applications.builds.read",
@@ -31,32 +32,188 @@ const obj = {
     "rpc.voice.write",
     "webhook.incoming",
   ]),
-  PRIVATE: null,
-  TEAM_USER: null,
-  PERSONAL_ACCESS_TOKEN: null,
-  EMBEDDED_APPS: null,
-  CLIENT_CREDENTIALS: null,
-  CONFIDENTIAL_REQUEST_SCOPES: null,
-  BYPASS: null,
-  BASE_INTEGRATION: null,
-  GUILD_INTEGRATION: null,
-  USER_INTEGRATION: null,
-  GUILD_INTEGRATION_EXCLUSIVE: null,
-  ALL_INTEGRATION_SCOPES: null,
-  PRIVATE_CHANNEL_INTEGRATION: null,
-  SLAYER_UMBRELLA_DEFAULT_SCOPES_MASK: null,
-  SLAYER_INTEGRATION_PROVISIONAL_ACCOUNT: null,
-  UMBRELLA: null,
-  UMBRELLA_PERMISSIBLE_SCOPES: null,
-  SDK_SOCIAL_LAYER_UMBRELLA_SCOPES: null,
-  SDK_SOCIAL_LAYER_UMBRELLA_DEFAULT_SCOPES: null,
-  CONNECTED_ACCOUNT_SDK_SCOPES: null,
-  APPLICATION_IDENTITIES_SCOPES: null,
-  PERSONAL: null,
-  SCOPES_CAN_READ_MESSAGES: null,
-  ALL: null,
+  PRIVATE: new Set([
+    "account.global_name.update",
+    "activities.invites.write",
+    "activities.read",
+    "activities.write",
+    "application_identities.write",
+    "dm_channels.messages.read",
+    "dm_channels.messages.write",
+    "dm_channels.read",
+    "gateway.connect",
+    "guilds.channels.read",
+    "identify.premium",
+    "lobbies.write",
+    "managed_platform.application_identities.write",
+    "orbs_arcade.play",
+    "payment_sources.country_code",
+    "personal.activities.write",
+    "personal.dm_channels.messages.read",
+    "personal.dm_channels.messages.search",
+    "personal.dm_channels.read",
+    "personal.guilds.channels.messages.read",
+    "personal.guilds.channels.read",
+    "personal.guilds.messages.search",
+    "personal.mentions.read",
+    "personal.relationships.read",
+    "presences.read",
+    "presences.write",
+    "relationships.read",
+    "relationships.write",
+    "sdk.social_layer",
+    "sdk.social_layer_presence",
+    "vibegrations.projects",
+    "voice",
+  ]),
+  TEAM_USER: new Set([
+    "applications.builds.read",
+    "applications.builds.upload",
+    "applications.commands.update",
+    "applications.entitlements",
+    "applications.store.update",
+    "identify",
+  ]),
+  PERSONAL_ACCESS_TOKEN: new Set(["connections", "guilds", "guilds.members.read", "identify"]),
+  EMBEDDED_APPS: new Set(["rpc.activities.write", "rpc.voice.read", "rpc.voice.write"]),
+  CLIENT_CREDENTIALS: new Set(["applications.commands.update"]),
+  CONFIDENTIAL_REQUEST_SCOPES: new Set(["role_connections.write"]),
+  BYPASS: new Set(["applications.commands", "bot"]),
+  BASE_INTEGRATION: new Set(["applications.commands"]),
+  GUILD_INTEGRATION: new Set(["applications.commands", "bot", "webhook.incoming"]),
+  USER_INTEGRATION: new Set(["applications.commands", "managed_platform.application_identities.write"]),
+  GUILD_INTEGRATION_EXCLUSIVE: new Set(["bot", "webhook.incoming"]),
+  ALL_INTEGRATION_SCOPES: new Set([
+    "applications.commands",
+    "bot",
+    "managed_platform.application_identities.write",
+    "webhook.incoming",
+  ]),
+  PRIVATE_CHANNEL_INTEGRATION: new Set(["applications.commands"]),
+  SLAYER_UMBRELLA_DEFAULT_SCOPES_MASK: new Set([
+    "activities.invites.write",
+    "activities.read",
+    "activities.write",
+    "application_identities.write",
+    "dm_channels.messages.read",
+    "dm_channels.messages.write",
+    "dm_channels.read",
+    "gateway.connect",
+    "guilds",
+    "guilds.channels.read",
+    "identify",
+    "lobbies.write",
+    "relationships.read",
+    "relationships.write",
+  ]),
+  SLAYER_INTEGRATION_PROVISIONAL_ACCOUNT: new Set(["account.global_name.update", "openid", "sdk.social_layer"]),
+  UMBRELLA: new Set(["sdk.social_layer", "sdk.social_layer_presence"]),
+  UMBRELLA_PERMISSIBLE_SCOPES: obj2,
+  SDK_SOCIAL_LAYER_UMBRELLA_SCOPES: new Set(["sdk.social_layer", "sdk.social_layer_presence"]),
+  SDK_SOCIAL_LAYER_UMBRELLA_DEFAULT_SCOPES: new Set([
+    "activities.invites.write",
+    "activities.read",
+    "activities.write",
+    "application_identities.write",
+    "dm_channels.messages.read",
+    "dm_channels.messages.write",
+    "dm_channels.read",
+    "gateway.connect",
+    "guilds",
+    "guilds.channels.read",
+    "identify",
+    "lobbies.write",
+    "relationships.read",
+    "relationships.write",
+  ]),
+  CONNECTED_ACCOUNT_SDK_SCOPES: new Set(["activities.write", "managed_platform.application_identities.write"]),
+  APPLICATION_IDENTITIES_SCOPES: new Set([
+    "application_identities.write",
+    "managed_platform.application_identities.write",
+  ]),
+  PERSONAL: new Set([
+    "personal.activities.write",
+    "personal.dm_channels.messages.read",
+    "personal.dm_channels.messages.search",
+    "personal.dm_channels.read",
+    "personal.guilds.channels.messages.read",
+    "personal.guilds.channels.read",
+    "personal.guilds.messages.search",
+    "personal.mentions.read",
+    "personal.relationships.read",
+  ]),
+  SCOPES_CAN_READ_MESSAGES: new Set([
+    "dm_channels.messages.read",
+    "messages.read",
+    "personal.dm_channels.messages.read",
+    "personal.dm_channels.messages.search",
+    "personal.guilds.channels.messages.read",
+    "personal.guilds.messages.search",
+    "personal.mentions.read",
+  ]),
+  ALL: new Set([
+    "account.global_name.update",
+    "activities.invites.write",
+    "activities.read",
+    "activities.write",
+    "application_identities.write",
+    "applications.builds.read",
+    "applications.builds.upload",
+    "applications.commands",
+    "applications.commands.permissions.update",
+    "applications.entitlements",
+    "applications.store.update",
+    "bot",
+    "connections",
+    "dm_channels.messages.read",
+    "dm_channels.messages.write",
+    "dm_channels.read",
+    "email",
+    "gateway.connect",
+    "gdm.join",
+    "guilds",
+    "guilds.channels.read",
+    "guilds.join",
+    "guilds.members.read",
+    "identify",
+    "identify.premium",
+    "lobbies.write",
+    "managed_platform.application_identities.write",
+    "messages.read",
+    "openid",
+    "orbs_arcade.play",
+    "payment_sources.country_code",
+    "personal.activities.write",
+    "personal.dm_channels.messages.read",
+    "personal.dm_channels.messages.search",
+    "personal.dm_channels.read",
+    "personal.guilds.channels.messages.read",
+    "personal.guilds.channels.read",
+    "personal.guilds.messages.search",
+    "personal.mentions.read",
+    "personal.relationships.read",
+    "presences.read",
+    "presences.write",
+    "relationships.read",
+    "relationships.write",
+    "role_connections.write",
+    "rpc",
+    "rpc.activities.write",
+    "rpc.notifications.read",
+    "rpc.screenshare.read",
+    "rpc.screenshare.write",
+    "rpc.video.read",
+    "rpc.video.write",
+    "rpc.voice.read",
+    "rpc.voice.write",
+    "sdk.social_layer",
+    "sdk.social_layer_presence",
+    "vibegrations.projects",
+    "voice",
+    "webhook.incoming",
+  ]),
 };
-const set = new Set([
+new Set([
   "applications.builds.read",
   "applications.builds.upload",
   "applications.commands",
@@ -85,7 +242,7 @@ const set = new Set([
   "rpc.voice.write",
   "webhook.incoming",
 ]);
-obj.PRIVATE = new Set([
+new Set([
   "account.global_name.update",
   "activities.invites.write",
   "activities.read",
@@ -119,41 +276,7 @@ obj.PRIVATE = new Set([
   "vibegrations.projects",
   "voice",
 ]);
-const set1 = new Set([
-  "account.global_name.update",
-  "activities.invites.write",
-  "activities.read",
-  "activities.write",
-  "application_identities.write",
-  "dm_channels.messages.read",
-  "dm_channels.messages.write",
-  "dm_channels.read",
-  "gateway.connect",
-  "guilds.channels.read",
-  "identify.premium",
-  "lobbies.write",
-  "managed_platform.application_identities.write",
-  "orbs_arcade.play",
-  "payment_sources.country_code",
-  "personal.activities.write",
-  "personal.dm_channels.messages.read",
-  "personal.dm_channels.messages.search",
-  "personal.dm_channels.read",
-  "personal.guilds.channels.messages.read",
-  "personal.guilds.channels.read",
-  "personal.guilds.messages.search",
-  "personal.mentions.read",
-  "personal.relationships.read",
-  "presences.read",
-  "presences.write",
-  "relationships.read",
-  "relationships.write",
-  "sdk.social_layer",
-  "sdk.social_layer_presence",
-  "vibegrations.projects",
-  "voice",
-]);
-obj.TEAM_USER = new Set([
+new Set([
   "applications.builds.read",
   "applications.builds.upload",
   "applications.commands.update",
@@ -161,47 +284,18 @@ obj.TEAM_USER = new Set([
   "applications.store.update",
   "identify",
 ]);
-const set2 = new Set([
-  "applications.builds.read",
-  "applications.builds.upload",
-  "applications.commands.update",
-  "applications.entitlements",
-  "applications.store.update",
-  "identify",
-]);
-obj.PERSONAL_ACCESS_TOKEN = new Set(["connections", "guilds", "guilds.members.read", "identify"]);
-const set3 = new Set(["connections", "guilds", "guilds.members.read", "identify"]);
-obj.EMBEDDED_APPS = new Set(["rpc.activities.write", "rpc.voice.read", "rpc.voice.write"]);
-const set4 = new Set(["rpc.activities.write", "rpc.voice.read", "rpc.voice.write"]);
-obj.CLIENT_CREDENTIALS = new Set(["applications.commands.update"]);
-const set5 = new Set(["applications.commands.update"]);
-obj.CONFIDENTIAL_REQUEST_SCOPES = new Set(["role_connections.write"]);
-const set6 = new Set(["role_connections.write"]);
-obj.BYPASS = new Set(["applications.commands", "bot"]);
-const set7 = new Set(["applications.commands", "bot"]);
-obj.BASE_INTEGRATION = new Set(["applications.commands"]);
-const set8 = new Set(["applications.commands"]);
-obj.GUILD_INTEGRATION = new Set(["applications.commands", "bot", "webhook.incoming"]);
-const set9 = new Set(["applications.commands", "bot", "webhook.incoming"]);
-obj.USER_INTEGRATION = new Set(["applications.commands", "managed_platform.application_identities.write"]);
-const set10 = new Set(["applications.commands", "managed_platform.application_identities.write"]);
-obj.GUILD_INTEGRATION_EXCLUSIVE = new Set(["bot", "webhook.incoming"]);
-const set11 = new Set(["bot", "webhook.incoming"]);
-obj.ALL_INTEGRATION_SCOPES = new Set([
-  "applications.commands",
-  "bot",
-  "managed_platform.application_identities.write",
-  "webhook.incoming",
-]);
-const set12 = new Set([
-  "applications.commands",
-  "bot",
-  "managed_platform.application_identities.write",
-  "webhook.incoming",
-]);
-obj.PRIVATE_CHANNEL_INTEGRATION = new Set(["applications.commands"]);
-const set13 = new Set(["applications.commands"]);
-obj.SLAYER_UMBRELLA_DEFAULT_SCOPES_MASK = new Set([
+new Set(["connections", "guilds", "guilds.members.read", "identify"]);
+new Set(["rpc.activities.write", "rpc.voice.read", "rpc.voice.write"]);
+new Set(["applications.commands.update"]);
+new Set(["role_connections.write"]);
+new Set(["applications.commands", "bot"]);
+new Set(["applications.commands"]);
+new Set(["applications.commands", "bot", "webhook.incoming"]);
+new Set(["applications.commands", "managed_platform.application_identities.write"]);
+new Set(["bot", "webhook.incoming"]);
+new Set(["applications.commands", "bot", "managed_platform.application_identities.write", "webhook.incoming"]);
+new Set(["applications.commands"]);
+new Set([
   "activities.invites.write",
   "activities.read",
   "activities.write",
@@ -217,28 +311,39 @@ obj.SLAYER_UMBRELLA_DEFAULT_SCOPES_MASK = new Set([
   "relationships.read",
   "relationships.write",
 ]);
-const set14 = new Set([
-  "activities.invites.write",
-  "activities.read",
-  "activities.write",
-  "application_identities.write",
-  "dm_channels.messages.read",
-  "dm_channels.messages.write",
-  "dm_channels.read",
-  "gateway.connect",
-  "guilds",
-  "guilds.channels.read",
-  "identify",
-  "lobbies.write",
-  "relationships.read",
-  "relationships.write",
-]);
-obj.SLAYER_INTEGRATION_PROVISIONAL_ACCOUNT = new Set(["account.global_name.update", "openid", "sdk.social_layer"]);
-const set15 = new Set(["account.global_name.update", "openid", "sdk.social_layer"]);
-obj.UMBRELLA = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
-const obj2 = { "sdk.social_layer_presence": null, "sdk.social_layer": null };
-const set16 = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
-obj2["sdk.social_layer_presence"] = new Set([
+new Set(["account.global_name.update", "openid", "sdk.social_layer"]);
+obj2 = {
+  "sdk.social_layer_presence": new Set([
+    "activities.invites.write",
+    "activities.read",
+    "activities.write",
+    "application_identities.write",
+    "gateway.connect",
+    "identify",
+    "identify.premium",
+    "relationships.read",
+    "relationships.write",
+  ]),
+  "sdk.social_layer": new Set([
+    "activities.invites.write",
+    "activities.read",
+    "activities.write",
+    "application_identities.write",
+    "dm_channels.messages.read",
+    "dm_channels.messages.write",
+    "dm_channels.read",
+    "gateway.connect",
+    "guilds",
+    "guilds.channels.read",
+    "identify",
+    "identify.premium",
+    "lobbies.write",
+    "relationships.read",
+    "relationships.write",
+  ]),
+};
+new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
+new Set([
   "activities.invites.write",
   "activities.read",
   "activities.write",
@@ -249,18 +354,7 @@ obj2["sdk.social_layer_presence"] = new Set([
   "relationships.read",
   "relationships.write",
 ]);
-const set17 = new Set([
-  "activities.invites.write",
-  "activities.read",
-  "activities.write",
-  "application_identities.write",
-  "gateway.connect",
-  "identify",
-  "identify.premium",
-  "relationships.read",
-  "relationships.write",
-]);
-obj2["sdk.social_layer"] = new Set([
+new Set([
   "activities.invites.write",
   "activities.read",
   "activities.write",
@@ -277,27 +371,8 @@ obj2["sdk.social_layer"] = new Set([
   "relationships.read",
   "relationships.write",
 ]);
-obj.UMBRELLA_PERMISSIBLE_SCOPES = obj2;
-const set18 = new Set([
-  "activities.invites.write",
-  "activities.read",
-  "activities.write",
-  "application_identities.write",
-  "dm_channels.messages.read",
-  "dm_channels.messages.write",
-  "dm_channels.read",
-  "gateway.connect",
-  "guilds",
-  "guilds.channels.read",
-  "identify",
-  "identify.premium",
-  "lobbies.write",
-  "relationships.read",
-  "relationships.write",
-]);
-obj.SDK_SOCIAL_LAYER_UMBRELLA_SCOPES = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
-const set19 = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
-obj.SDK_SOCIAL_LAYER_UMBRELLA_DEFAULT_SCOPES = new Set([
+new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
+new Set([
   "activities.invites.write",
   "activities.read",
   "activities.write",
@@ -313,30 +388,9 @@ obj.SDK_SOCIAL_LAYER_UMBRELLA_DEFAULT_SCOPES = new Set([
   "relationships.read",
   "relationships.write",
 ]);
-const set20 = new Set([
-  "activities.invites.write",
-  "activities.read",
-  "activities.write",
-  "application_identities.write",
-  "dm_channels.messages.read",
-  "dm_channels.messages.write",
-  "dm_channels.read",
-  "gateway.connect",
-  "guilds",
-  "guilds.channels.read",
-  "identify",
-  "lobbies.write",
-  "relationships.read",
-  "relationships.write",
-]);
-obj.CONNECTED_ACCOUNT_SDK_SCOPES = new Set(["activities.write", "managed_platform.application_identities.write"]);
-const set21 = new Set(["activities.write", "managed_platform.application_identities.write"]);
-obj.APPLICATION_IDENTITIES_SCOPES = new Set([
-  "application_identities.write",
-  "managed_platform.application_identities.write",
-]);
-const set22 = new Set(["application_identities.write", "managed_platform.application_identities.write"]);
-obj.PERSONAL = new Set([
+new Set(["activities.write", "managed_platform.application_identities.write"]);
+new Set(["application_identities.write", "managed_platform.application_identities.write"]);
+new Set([
   "personal.activities.write",
   "personal.dm_channels.messages.read",
   "personal.dm_channels.messages.search",
@@ -347,18 +401,7 @@ obj.PERSONAL = new Set([
   "personal.mentions.read",
   "personal.relationships.read",
 ]);
-const set23 = new Set([
-  "personal.activities.write",
-  "personal.dm_channels.messages.read",
-  "personal.dm_channels.messages.search",
-  "personal.dm_channels.read",
-  "personal.guilds.channels.messages.read",
-  "personal.guilds.channels.read",
-  "personal.guilds.messages.search",
-  "personal.mentions.read",
-  "personal.relationships.read",
-]);
-obj.SCOPES_CAN_READ_MESSAGES = new Set([
+new Set([
   "dm_channels.messages.read",
   "messages.read",
   "personal.dm_channels.messages.read",
@@ -367,16 +410,7 @@ obj.SCOPES_CAN_READ_MESSAGES = new Set([
   "personal.guilds.messages.search",
   "personal.mentions.read",
 ]);
-const set24 = new Set([
-  "dm_channels.messages.read",
-  "messages.read",
-  "personal.dm_channels.messages.read",
-  "personal.dm_channels.messages.search",
-  "personal.guilds.channels.messages.read",
-  "personal.guilds.messages.search",
-  "personal.mentions.read",
-]);
-obj.ALL = new Set([
+new Set([
   "account.global_name.update",
   "activities.invites.write",
   "activities.read",

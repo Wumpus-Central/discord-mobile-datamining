@@ -1,6 +1,6 @@
 // discord_app/modules/in_app_notifications/native/hooks/useTruncatedGradientColors.tsx
-import _mod19 from "../../../../../_runtime/metro/00019__.js";
-import c from "../../../../../_runtime/00576_c.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
@@ -8,42 +8,46 @@ import createStyles from "../../../../design/components/Styles/native/createStyl
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const useMemo = _mod19.useMemo;
+const useMemo = react.useMemo;
 let closure_4 = createStyles.createStyles({ gradient: { height: 40 } });
-const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/useTruncatedGradientColors.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(10);
+      let tmp6;
+      let tmp8;
+      const obj = react2;
+      const cResult = obj.c(10);
       const tmp3 = closure_4();
-      const token = useToken.useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
+      const obj2 = useToken;
+      const token = obj2.useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
       if (cResult[0] !== token) {
         const obj3 = _modDef683(token);
-        const hexResult = _modDef683(token).alpha(0).hex();
+        const alphaResult = obj3.alpha(0);
+        const hexResult = alphaResult.hex();
         cResult[0] = token;
         cResult[1] = hexResult;
-        let tmp6 = hexResult;
-        const alphaResult = _modDef683(token).alpha(0);
+        tmp6 = hexResult;
       } else {
         tmp6 = cResult[1];
       }
       if (cResult[2] !== token) {
         const obj5 = _modDef683(token);
-        const hexResult1 = _modDef683(token).alpha(0.72).hex();
+        const alphaResult1 = obj5.alpha(0.72);
+        const hexResult1 = alphaResult1.hex();
         cResult[2] = token;
         cResult[3] = hexResult1;
-        let tmp8 = hexResult1;
-        const alphaResult1 = _modDef683(token).alpha(0.72);
+        tmp8 = hexResult1;
       } else {
         tmp8 = cResult[3];
       }
       if (cResult[4] === tmp6) {
+        let tmp10;
         if (cResult[5] === tmp8) {
-          let tmp10 = cResult[6];
+          tmp10 = cResult[6];
         }
         if (cResult[7] === tmp10) {
+          let tmp11;
           if (cResult[8] === tmp3.gradient) {
-            let tmp11 = cResult[9];
+            tmp11 = cResult[9];
           }
           return tmp11;
         }
@@ -60,17 +64,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = items;
     }
   : () => {
+      let items;
+      let token;
       const tmp = closure_4();
-      token = token(4580).useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
-      const obj2 = { gradientColors: null, gradientStyles: tmp.gradient };
-      let items = [token];
-      obj2.gradientColors = useMemo(() => {
-        const obj = _modDef683(token);
-        const items = [_modDef683(token).alpha(0).hex()];
-        const alphaResult = _modDef683(token).alpha(0);
-        const obj3 = _modDef683(token);
-        items[1] = _modDef683(token).alpha(0.72).hex();
-        return items;
-      }, items);
+      let obj = token(4580);
+      token = obj.useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
+      const obj2 = {
+        gradientColors: useMemo(() => {
+          const items = [,];
+          const obj = _modDef683(token);
+          const alphaResult = obj.alpha(0);
+          items[0] = alphaResult.hex();
+          const obj3 = _modDef683(token);
+          const alphaResult1 = obj3.alpha(0.72);
+          items[1] = alphaResult1.hex();
+          return items;
+        }, items),
+        gradientStyles: tmp.gradient,
+      };
+      items = [token];
       return obj2;
     };
+const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/useTruncatedGradientColors.tsx");
+
+export default tmp2;

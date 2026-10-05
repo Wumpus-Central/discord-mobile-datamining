@@ -1,29 +1,38 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesCards.tsx
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import PremiumConstants from "../../../premium/PremiumConstants.tsx";
 import PremiumFeaturesCardDefault from "PremiumFeaturesCard.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const View = fn(17).View;
-const PremiumTypes = fn(1379).PremiumTypes;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const View = react_native.View;
+const PremiumTypes = PremiumConstants.PremiumTypes;
+const jsx = Fragment.jsx;
 let closure_6 = createStyles.createStyles({ container: { width: "100%", gap: 12 } });
-let obj2 = { TIER_0_LEADING: 0, [0]: "TIER_0_LEADING", TIER_2_LEADING: 1, [1]: "TIER_2_LEADING" };
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesCards.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const PremiumFeatureCardOrder = { TIER_0_LEADING: 0, [0]: "TIER_0_LEADING", TIER_2_LEADING: 1, [1]: "TIER_2_LEADING" };
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (onPaymentSuccess) => {
-      const cResult = applicationId(onPaymentDismiss[6]).c(12);
+      let applicationId;
+      let items1;
+      let onFirstCardLayout;
+      let onLayout;
+      let onPaymentDismiss;
+      let order;
+      let style;
+      let tmp4;
+      const obj = applicationId(onPaymentDismiss[6]);
+      const cResult = obj.c(12);
       ({ style, applicationId } = onPaymentSuccess);
       onPaymentSuccess = onPaymentSuccess.onPaymentSuccess;
       onPaymentDismiss = onPaymentSuccess.onPaymentDismiss;
       ({ order, onLayout, onFirstCardLayout } = onPaymentSuccess);
       if (undefined === order) {
-        order = obj2.TIER_0_LEADING;
+        order = obj.TIER_0_LEADING;
       }
-      let container = closure_6();
+      let tmp3 = closure_6();
       if (cResult[0] === applicationId) {
         if (cResult[1] === onFirstCardLayout) {
           if (cResult[2] === onLayout) {
@@ -31,9 +40,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[4] === onPaymentSuccess) {
                 if (cResult[5] === order) {
                   if (cResult[6] === style) {
-                    if (cResult[7] === container.container) {
-                      return cResult[8];
+                    if (cResult[7] === tmp3.container) {
+                      tmp4 = cResult[8];
                     }
+                    return tmp4;
                   }
                 }
               }
@@ -41,45 +51,37 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      if (obj2.TIER_2_LEADING === order) {
+      if (obj.TIER_2_LEADING === order) {
         const items = [,];
         ({ TIER_2: arr2[0], TIER_0: arr2[1] } = PremiumTypes);
-        let items1 = items;
+        items1 = items;
       } else {
-        const TIER_0_LEADING = tmp3.TIER_0_LEADING;
+        const TIER_0_LEADING = tmp5.TIER_0_LEADING;
         items1 = [,];
         ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
       }
       if (cResult[9] === style) {
-        if (cResult[10] === container.container) {
-          let tmp6 = cResult[11];
+        let tmp8;
+        if (cResult[10] === tmp3.container) {
+          tmp8 = cResult[11];
         }
-        obj2 = {
-          style: tmp6,
-          onLayout,
-          children: items1.map((premiumType, index) => {
-            let tmp3;
-            if (0 === index) {
-              tmp3 = onFirstCardLayout;
-            }
-            return jsx(
-              PremiumFeaturesCardDefault,
-              { onLayout: tmp3, premiumType, applicationId, onPaymentSuccess, onPaymentDismiss },
-              premiumType,
-            );
-          }),
-        };
-        const tmp9 = (
-          <onFirstCardLayout style={tmp6} onLayout={onLayout}>
+        const tmp11 = (
+          <onFirstCardLayout style={tmp8} onLayout={onLayout}>
             {items1.map((premiumType, index) => {
               let tmp3;
+              PremiumFeaturesCardDefault;
               if (0 === index) {
                 tmp3 = onFirstCardLayout;
               }
-              return jsx(
-                PremiumFeaturesCardDefault,
-                { onLayout: tmp3, premiumType, applicationId, onPaymentSuccess, onPaymentDismiss },
-                premiumType,
+              return (
+                <tmp2
+                  key={premiumType}
+                  onLayout={tmp3}
+                  premiumType={premiumType}
+                  applicationId={applicationId}
+                  onPaymentSuccess={onPaymentSuccess}
+                  onPaymentDismiss={onPaymentDismiss}
+                />
               );
             })}
           </onFirstCardLayout>
@@ -91,68 +93,68 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = onPaymentSuccess;
         cResult[5] = order;
         cResult[6] = style;
-        container = container.container;
-        cResult[7] = container;
-        cResult[8] = tmp9;
+        cResult[7] = tmp3.container;
+        cResult[8] = tmp11;
+        tmp4 = tmp11;
       }
-      const items2 = [container.container, style];
+      const items2 = [tmp3.container, style];
       cResult[9] = style;
-      cResult[10] = container.container;
+      cResult[10] = tmp3.container;
       cResult[11] = items2;
-      tmp6 = items2;
-      const obj = applicationId(onPaymentDismiss[6]);
+      tmp8 = items2;
     }
-  : (onFirstCardLayout) => {
-      ({
-        applicationId: require,
-        onPaymentSuccess: importDefault,
-        onPaymentDismiss: dependencyMap,
-        order,
-      } = onFirstCardLayout);
+  : (style) => {
+      let applicationId;
+      let items1;
+      let items2;
+      let obj;
+      let onPaymentDismiss;
+      let onPaymentSuccess;
+      let order;
+      let tmp3;
+      const f98716 = (premiumType, index) => {
+        let tmp3;
+        PremiumFeaturesCardDefault;
+        if (0 === index) {
+          tmp3 = onFirstCardLayout;
+        }
+        return (
+          <tmp2
+            key={premiumType}
+            onLayout={tmp3}
+            premiumType={premiumType}
+            applicationId={require}
+            onPaymentSuccess={importDefault}
+            onPaymentDismiss={dependencyMap}
+          />
+        );
+      };
+      ({ applicationId: require, onPaymentSuccess: importDefault, onPaymentDismiss: dependencyMap, order } = style);
+      style = style.style;
       if (order === undefined) {
-        order = obj2.TIER_0_LEADING;
+        order = obj.TIER_0_LEADING;
       }
-      onFirstCardLayout = onFirstCardLayout.onFirstCardLayout;
-      if (obj2.TIER_2_LEADING === order) {
+      const onFirstCardLayout = style.onFirstCardLayout;
+      const onLayout = style.onLayout;
+      const tmp2 = closure_6();
+      if (obj.TIER_2_LEADING === order) {
         const items = [,];
         ({ TIER_2: arr2[0], TIER_0: arr2[1] } = PremiumTypes);
-        let items1 = items;
+        items1 = items;
       } else {
         const TIER_0_LEADING = tmp3.TIER_0_LEADING;
         items1 = [,];
         ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
       }
-      const obj = {
-        style: null,
-        onLayout: onFirstCardLayout.onLayout,
-        children: items1.map((premiumType, index) => {
-          let tmp3;
-          if (0 === index) {
-            tmp3 = onFirstCardLayout;
-          }
-          return jsx(
-            PremiumFeaturesCardDefault,
-            { onLayout: tmp3, premiumType, applicationId, onPaymentSuccess, onPaymentDismiss },
-            premiumType,
-          );
-        }),
-      };
-      const items2 = [closure_6().container, onFirstCardLayout.style];
-      obj.style = items2;
+      obj = { style: items2, onLayout, children: items1.map(f98716) };
+      items2 = [tmp2.container, style];
       return (
-        <onFirstCardLayout style={null} onLayout={onFirstCardLayout.onLayout}>
-          {items1.map((premiumType, index) => {
-            let tmp3;
-            if (0 === index) {
-              tmp3 = onFirstCardLayout;
-            }
-            return jsx(
-              PremiumFeaturesCardDefault,
-              { onLayout: tmp3, premiumType, applicationId, onPaymentSuccess, onPaymentDismiss },
-              premiumType,
-            );
-          })}
+        <onFirstCardLayout style={items2} onLayout={onLayout}>
+          {items1.map(f98716)}
         </onFirstCardLayout>
       );
     };
-export const PremiumFeatureCardOrder = obj2;
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesCards.tsx");
+
+export default tmp3;
+export { PremiumFeatureCardOrder };

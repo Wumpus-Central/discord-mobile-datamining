@@ -8,11 +8,10 @@ import getDeprecatedModalDataDefault from "../utils/getDeprecatedModalData.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap, importDefault;
 
 const AppContext = Constants.AppContext;
-const result = size.fileFinishedImporting("actions/ModalActionCreators.tsx");
-
-export default {
+let obj = {
   push(modal, props) {
     let tmp = arg2;
     if (arg2 === undefined) {
@@ -22,18 +21,16 @@ export default {
     if (arg4 === undefined) {
       APP = AppContext.APP;
     }
-    const obj = NavigationRouteUtils;
-    const merged = Object.assign(arg3);
-    obj.pushModal({
-      modal: getDeprecatedModalDataDefault(modal, {}, props, tmp),
-      trigger: Types.ModalOpenTrigger.AUTOMATIC,
-    });
-    const obj2 = {
+    const pushModal = NavigationRouteUtils.pushModal;
+    const obj = {
       modal: getDeprecatedModalDataDefault(modal, {}, props, tmp),
       trigger: Types.ModalOpenTrigger.AUTOMATIC,
     };
+    const merged = Object.assign(arg3);
+    pushModal(obj);
     const element = { type: "MODAL_PUSH", modal, props, key: tmp, appContext: APP };
-    DispatcherDefault.dispatch(element);
+    const obj2 = DispatcherDefault;
+    obj2.dispatch(element);
     return tmp;
   },
   pushLazy(promise, merged) {
@@ -44,51 +41,76 @@ export default {
     if (c3 === undefined) {
       tmp = uniqueIdDefault("modal");
     }
-    closure_3 = tmp;
+    let closure_3 = tmp;
     _require = navigationParams;
-    const rootNavigationRef = require("RootNavigationRef").getRootNavigationRef();
+    let obj = require("RootNavigationRef");
+    const rootNavigationRef = obj.getRootNavigationRef();
     if (null != rootNavigationRef) {
+      let nextPromise1;
       if (rootNavigationRef.isReady()) {
+        let nextPromise;
         if (promise instanceof Promise) {
-          let nextPromise = promise.then((result) => result.default);
+          nextPromise = promise.then((result) => result.default);
         } else {
           nextPromise = promise();
         }
-        nextPromise.then((result) => self.push(result, closure_2, closure_3, closure_0));
+        nextPromise1 = nextPromise.then((result) => self.push(result, merged, closure_3, navigationParams));
       }
+      return nextPromise1;
     }
-    promise = new Promise((arg0) => {
-      closure_0 = arg0;
-      return promise(merged[7]).enqueue(() => closure_0(self.pushLazy(closure_1, closure_2, closure_3, closure_0)));
+    nextPromise1 = new Promise((arg0) => {
+      let closure_0 = arg0;
+      const obj = promise(merged[7]);
+      return obj.enqueue(() => closure_0(self.pushLazy(promise, merged, closure_3, closure_0)));
     });
-    return promise;
   },
   updateAnimation(key, SLIDE_IN_OUT) {
     const element = { type: "MODAL_UPDATE", key, props: {}, partial: true, animation: SLIDE_IN_OUT };
-    DispatcherDefault.dispatch(element);
+    const obj = DispatcherDefault;
+    obj.dispatch(element);
   },
   pop() {
-    NavigationRouteUtils.popModal();
-    DispatcherDefault.dispatch({ type: "MODAL_POP" });
+    const obj = NavigationRouteUtils;
+    obj.popModal();
+    const obj2 = DispatcherDefault;
+    obj2.dispatch({ type: "MODAL_POP" });
   },
-  popWithKey(c3, onExited) {
-    NavigationRouteUtils.popModal(key, onExited);
-    DispatcherDefault.dispatch({ type: "MODAL_POP", key, onExited });
+  popWithKey(PREMIUM_KEY, onExited) {
+    const obj = NavigationRouteUtils;
+    obj.popModal(PREMIUM_KEY, onExited);
+    const obj2 = DispatcherDefault;
+    const obj3 = { type: "MODAL_POP", key: PREMIUM_KEY, onExited };
+    obj2.dispatch(obj3);
   },
   popAboveKey(voiceChannelKey) {
-    return NavigationRouteUtils.popModalsAboveKey(voiceChannelKey);
+    const obj = NavigationRouteUtils;
+    return obj.popModalsAboveKey(voiceChannelKey);
   },
   popAll() {
-    NavigationRouteUtils.popAllModals();
-    DispatcherDefault.dispatch({ type: "MODAL_POP_ALL" });
-    DispatcherDefault.dispatch({ type: "EMAIL_VERIFICATION_MODAL_CLOSE" });
-    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_CLOSE" });
-    DispatcherDefault.dispatch({ type: "HIDE_ACTION_SHEET" });
-    DispatcherDefault.dispatch({ type: "DISPLAYED_INVITE_CLEAR" });
-    DispatcherDefault.dispatch({ type: "NOTIFICATION_SETTINGS_MODAL_CLOSE" });
-    DispatcherDefault.dispatch({ type: "QUICKSWITCHER_HIDE" });
-    DispatcherDefault.dispatch({ type: "USER_SETTINGS_MODAL_CLOSE" });
-    DispatcherDefault.dispatch({ type: "CONNECTIONS_GRID_MODAL_HIDE" });
-    DispatcherDefault.dispatch({ type: "USER_PROFILE_MODAL_CLOSE" });
+    const obj = NavigationRouteUtils;
+    obj.popAllModals();
+    const obj2 = DispatcherDefault;
+    obj2.dispatch({ type: "MODAL_POP_ALL" });
+    const obj3 = DispatcherDefault;
+    obj3.dispatch({ type: "EMAIL_VERIFICATION_MODAL_CLOSE" });
+    const obj4 = DispatcherDefault;
+    obj4.dispatch({ type: "GUILD_SETTINGS_CLOSE" });
+    const obj5 = DispatcherDefault;
+    obj5.dispatch({ type: "HIDE_ACTION_SHEET" });
+    const obj6 = DispatcherDefault;
+    obj6.dispatch({ type: "DISPLAYED_INVITE_CLEAR" });
+    const obj7 = DispatcherDefault;
+    obj7.dispatch({ type: "NOTIFICATION_SETTINGS_MODAL_CLOSE" });
+    const obj8 = DispatcherDefault;
+    obj8.dispatch({ type: "QUICKSWITCHER_HIDE" });
+    const obj9 = DispatcherDefault;
+    obj9.dispatch({ type: "USER_SETTINGS_MODAL_CLOSE" });
+    const obj10 = DispatcherDefault;
+    obj10.dispatch({ type: "CONNECTIONS_GRID_MODAL_HIDE" });
+    const obj11 = DispatcherDefault;
+    obj11.dispatch({ type: "USER_PROFILE_MODAL_CLOSE" });
   },
 };
+const result = size.fileFinishedImporting("actions/ModalActionCreators.tsx");
+
+export default obj;

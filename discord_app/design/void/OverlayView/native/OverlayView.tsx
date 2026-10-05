@@ -1,47 +1,48 @@
 // discord_app/design/void/OverlayView/native/OverlayView.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import _modDef5764 from "../../../../../_runtime/metro/05764__.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import enableScreens from "../../../../../_runtime/05715_enableScreens.js";
+import react_nativeDefault from "../../../../../_runtime/05764_react-native.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import PlatformUtils_mod from "../../../../utils/PlatformUtils.tsx";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let children;
+
 let closure_2 = ["children"];
-get_ActivityIndicator = fn(17);
-let View = get_ActivityIndicator.View;
-const StyleSheet = get_ActivityIndicator.StyleSheet;
-const jsx = fn(21).jsx;
-let PlatformUtils = fn(1369);
+let View = react_native.View;
+const StyleSheet = react_native.StyleSheet;
+const jsx = Fragment.jsx;
+let PlatformUtils = PlatformUtils_mod;
 let FullWindowOverlay = View;
 if (PlatformUtils.isIOS()) {
-  FullWindowOverlay = fn(5715).FullWindowOverlay;
+  FullWindowOverlay = enableScreens.FullWindowOverlay;
 }
-const ReactCompilerGating = fn(558);
-PlatformUtils = fn(1369);
-if (PlatformUtils.isIOS()) {
-  View = _modDef5764;
-}
-const size = fn(2);
-const result = size.fileFinishedImporting("design/void/OverlayView/native/OverlayView.tsx");
-
-export default FullWindowOverlay;
-export const TransitionGroupOverlayView = ReactCompilerGating.isReactCompilerEnabled()
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (children) => {
-      const cResult = c.c(6);
+      let arr;
+      let tmp2;
+      const obj = react2;
+      const cResult = obj.c(6);
       if (cResult[0] !== children) {
         children = children.children;
         const tmp5 = _objectWithoutProperties(children, closure_2);
         cResult[0] = children;
         cResult[1] = children;
         cResult[2] = tmp5;
-        let tmp2 = tmp5;
-        let arr = children;
+        tmp2 = tmp5;
+        arr = children;
       } else {
         arr = cResult[1];
         tmp2 = cResult[2];
       }
       if (cResult[3] === arr) {
+        let tmp6;
         if (cResult[4] === tmp2) {
-          let tmp6 = cResult[5];
+          tmp6 = cResult[5];
         }
         return tmp6;
       }
@@ -49,11 +50,7 @@ export const TransitionGroupOverlayView = ReactCompilerGating.isReactCompilerEna
       if (Array.isArray(arr)) {
         tmp7 = null;
         if (arr.length > 0) {
-          const obj2 = { style: StyleSheet.absoluteFill, children: null };
-          const obj3 = {};
           const merged = Object.assign(tmp2);
-          obj3.children = arr;
-          obj2.children = <View />;
           tmp7 = <FullWindowOverlay style={StyleSheet.absoluteFill}>{null}</FullWindowOverlay>;
         }
       }
@@ -69,14 +66,18 @@ export const TransitionGroupOverlayView = ReactCompilerGating.isReactCompilerEna
       if (Array.isArray(children)) {
         tmp2 = null;
         if (children.length > 0) {
-          const obj = { style: StyleSheet.absoluteFill, children: null };
-          const obj2 = {};
           const merged1 = Object.assign(merged);
-          obj2.children = children;
-          obj.children = <View />;
           tmp2 = <FullWindowOverlay style={StyleSheet.absoluteFill}>{null}</FullWindowOverlay>;
         }
       }
       return tmp2;
     };
+PlatformUtils = PlatformUtils_mod;
+if (PlatformUtils.isIOS()) {
+  View = react_nativeDefault;
+}
+const result = size.fileFinishedImporting("design/void/OverlayView/native/OverlayView.tsx");
+
+export default FullWindowOverlay;
+export const TransitionGroupOverlayView = tmp4;
 export const NonExpandingOverlayView = View;

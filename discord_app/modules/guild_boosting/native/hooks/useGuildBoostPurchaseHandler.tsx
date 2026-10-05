@@ -1,36 +1,42 @@
 // discord_app/modules/guild_boosting/native/hooks/useGuildBoostPurchaseHandler.tsx
 import LoggerDefault from "../../../debug/Logger.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import Constants from "../../../../Constants.tsx";
+import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, c3, c4;
 
-const require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-let closure_6 = new LoggerDefault("useGuildBoostPurchaseHandler");
-const ReactCompilerGating = fn(558);
+const AnalyticEvents = Constants.AnalyticEvents;
 const tmp2 = new LoggerDefault("useGuildBoostPurchaseHandler");
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/guild_boosting/native/hooks/useGuildBoostPurchaseHandler.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_6 = tmp2;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let first;
+      let tmp6;
+      let tmp8;
       _require = arg0;
-      const cResult = require("c").c(5);
+      const tmp = _require;
+      let obj = require("react");
+      const cResult = obj.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const result = require("MobileWebRedirectCheckoutUtils").isMobileWebRedirectCheckoutEnabled();
+        const tmpResult = tmp(6912);
+        const result = tmpResult.isMobileWebRedirectCheckoutEnabled();
         cResult[0] = result;
-        let first = result;
-        const tmpResult = require("MobileWebRedirectCheckoutUtils");
+        first = result;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        _require = asyncGeneratorStep(async (arg0, arg1) => {
+        _require = _asyncToGenerator(async (arg0, arg1) => {
+          closure_0 = arg0;
+          let closure_1 = arg1;
           if (c4 === 2) {
             c4 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
+          } else if (tmp3 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -51,39 +57,49 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  let newAnalyticsLoadId = tmp2;
-                  newAnalyticsLoadId = undefined;
-                  newAnalyticsLoadId = args(10394).getNewAnalyticsLoadId();
-                  const obj7 = args(6911);
+                  let closure_2 = tmp;
+                  const obj6 = closure_0(dependencyMap[7]);
+                  const newAnalyticsLoadId = obj6.getNewAnalyticsLoadId();
+                  const obj7 = closure_0(dependencyMap[8]);
                   c3 = 1;
                   c4 = 1;
                   const obj4 = {
                     value: obj7.goToStandaloneGuildBoostCheckoutFromMobileApp(
-                      args,
-                      guild_id,
+                      closure_0,
+                      closure_1,
                       newAnalyticsLoadId,
                       () => {
-                        const obj2 = {
+                        let items;
+                        let obj2;
+                        const obj = {
                           guild_id,
                           load_id: newAnalyticsLoadId,
-                          location_stack: null,
-                          custom_checkout_flow: null,
+                          location_stack: items,
+                          custom_checkout_flow: obj2.getCustomCheckoutFlowForAnalytics(),
                         };
-                        const items = [...closure_0];
-                        obj2.location_stack = items;
-                        const obj = guild_id(newAnalyticsLoadId[9]);
-                        obj2.custom_checkout_flow = args(newAnalyticsLoadId[6]).getCustomCheckoutFlowForAnalytics();
-                        obj.track(constants.MOBILE_OPEN_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE, obj2);
+                        items = [...closure_0];
+                        const track = closure_2_1(closure_2_2[9]).track;
+                        const MOBILE_OPEN_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE =
+                          constants.MOBILE_OPEN_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE;
+                        closure_2_1(closure_2_2[9]);
+                        obj2 = closure_2_0(closure_2_2[6]);
+                        track(MOBILE_OPEN_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE, obj);
                         logger.log("Successfully opened mobile web Guild Boost Management page");
                       },
                       (arg0) => {
+                        let intl;
+                        let intl2;
                         logger.error("Failed to open mobile web Guild Boost Management page, error response: ", arg0);
-                        const obj2 = { title: null, body: null, hideActionSheet: true };
-                        const intl = args(newAnalyticsLoadId[11]).intl;
-                        obj2.title = intl.string(args(newAnalyticsLoadId[11]).t.NrBVjw);
-                        const intl2 = args(newAnalyticsLoadId[11]).intl;
-                        obj2.body = intl2.string(args(newAnalyticsLoadId[11]).t["gD+grx"]);
-                        guild_id(newAnalyticsLoadId[10]).show(obj2);
+                        const obj = {
+                          title: intl.string(closure_1_0(closure_1_2[11]).t.NrBVjw),
+                          body: intl2.string(closure_1_0(closure_1_2[11]).t["gD+grx"]),
+                          hideActionSheet: true,
+                        };
+                        const show = closure_1_1(closure_1_2[10]).show;
+                        closure_1_1(closure_1_2[10]);
+                        intl = closure_1_0(closure_1_2[11]).intl;
+                        intl2 = closure_1_0(closure_1_2[11]).intl;
+                        show(obj);
                       },
                     ),
                     done: false,
@@ -98,29 +114,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj5 = { value, done: true };
                 return obj5;
               } else {
-                args(5612).closeApplyBoostModal();
+                let obj = closure_0(dependencyMap[12]);
+                obj.closeApplyBoostModal();
                 c4 = 3;
                 return { value: "IconComponent", done: null };
               }
-            } catch (tmp10) {
-              c4 = tmp;
-              throw tmp10;
+            } catch (tmp9) {
+              c4 = 3;
+              throw tmp9;
             }
           }
         });
         const fn = function () {
-          const self = this;
-          const apply = closure_0.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
+          return closure_0(...arguments);
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
@@ -128,20 +138,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj2 = { shouldUseMobileWebRedirectCheckout: first, handleMobileWebRedirectCheckout: tmp6 };
         cResult[3] = tmp6;
         cResult[4] = obj2;
-        let tmp8 = obj2;
+        tmp8 = obj2;
       } else {
         tmp8 = cResult[4];
       }
       return tmp8;
     }
   : (arg0) => {
-      _require = undefined;
-      const result = require("MobileWebRedirectCheckoutUtils").isMobileWebRedirectCheckoutEnabled();
-      _require = asyncGeneratorStep(async (arg0, arg1) => {
+      _require = arg0;
+      let obj = require("MobileWebRedirectCheckoutUtils");
+      const result = obj.isMobileWebRedirectCheckoutEnabled();
+      const useCallback = react.useCallback;
+      _require = _asyncToGenerator(async (arg0, arg1) => {
+        closure_0 = arg0;
+        let closure_1 = arg1;
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp4 === 3) {
+        } else if (tmp3 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -162,39 +176,49 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                let newAnalyticsLoadId = tmp2;
-                newAnalyticsLoadId = undefined;
-                newAnalyticsLoadId = args(10394).getNewAnalyticsLoadId();
-                const obj7 = args(6911);
+                let closure_2 = tmp;
+                const obj6 = closure_0(dependencyMap[7]);
+                const newAnalyticsLoadId = obj6.getNewAnalyticsLoadId();
+                const obj7 = closure_0(dependencyMap[8]);
                 c3 = 1;
                 c4 = 1;
                 const obj4 = {
                   value: obj7.goToStandaloneGuildBoostCheckoutFromMobileApp(
-                    args,
-                    guild_id,
+                    closure_0,
+                    closure_1,
                     newAnalyticsLoadId,
                     () => {
-                      const obj2 = {
+                      let items;
+                      let obj2;
+                      const obj = {
                         guild_id,
                         load_id: newAnalyticsLoadId,
-                        location_stack: null,
-                        custom_checkout_flow: null,
+                        location_stack: items,
+                        custom_checkout_flow: obj2.getCustomCheckoutFlowForAnalytics(),
                       };
-                      const items = [...closure_0];
-                      obj2.location_stack = items;
-                      const obj = guild_id(newAnalyticsLoadId[9]);
-                      obj2.custom_checkout_flow = args(newAnalyticsLoadId[6]).getCustomCheckoutFlowForAnalytics();
-                      obj.track(constants.MOBILE_OPEN_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE, obj2);
+                      items = [...closure_0];
+                      const track = closure_2_1(closure_2_2[9]).track;
+                      const MOBILE_OPEN_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE =
+                        constants.MOBILE_OPEN_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE;
+                      closure_2_1(closure_2_2[9]);
+                      obj2 = closure_2_0(closure_2_2[6]);
+                      track(MOBILE_OPEN_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE, obj);
                       logger.log("Successfully opened mobile web Guild Boost Management page");
                     },
                     (arg0) => {
+                      let intl;
+                      let intl2;
                       logger.error("Failed to open mobile web Guild Boost Management page, error response: ", arg0);
-                      const obj2 = { title: null, body: null, hideActionSheet: true };
-                      const intl = args(newAnalyticsLoadId[11]).intl;
-                      obj2.title = intl.string(args(newAnalyticsLoadId[11]).t.NrBVjw);
-                      const intl2 = args(newAnalyticsLoadId[11]).intl;
-                      obj2.body = intl2.string(args(newAnalyticsLoadId[11]).t["gD+grx"]);
-                      guild_id(newAnalyticsLoadId[10]).show(obj2);
+                      const obj = {
+                        title: intl.string(closure_1_0(closure_1_2[11]).t.NrBVjw),
+                        body: intl2.string(closure_1_0(closure_1_2[11]).t["gD+grx"]),
+                        hideActionSheet: true,
+                      };
+                      const show = closure_1_1(closure_1_2[10]).show;
+                      closure_1_1(closure_1_2[10]);
+                      intl = closure_1_0(closure_1_2[11]).intl;
+                      intl2 = closure_1_0(closure_1_2[11]).intl;
+                      show(obj);
                     },
                   ),
                   done: false,
@@ -209,29 +233,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj5 = { value, done: true };
               return obj5;
             } else {
-              args(5612).closeApplyBoostModal();
+              let obj = closure_0(dependencyMap[12]);
+              obj.closeApplyBoostModal();
               c4 = 3;
               return { value: "IconComponent", done: null };
             }
-          } catch (tmp10) {
-            c4 = tmp;
-            throw tmp10;
+          } catch (tmp9) {
+            c4 = 3;
+            throw tmp9;
           }
         }
       });
       let items = [arg0];
-      let obj = require("MobileWebRedirectCheckoutUtils");
-      return {
+      let obj2 = {
         shouldUseMobileWebRedirectCheckout: result,
-        handleMobileWebRedirectCheckout: noop.useCallback(function () {
-          const self = this;
-          const apply = closure_0.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
+        handleMobileWebRedirectCheckout: useCallback(function () {
+          return closure_0(...arguments);
         }, items),
       };
+      return obj2;
     };
+let result = size.fileFinishedImporting("modules/guild_boosting/native/hooks/useGuildBoostPurchaseHandler.tsx");
+
+export default tmp3;

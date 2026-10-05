@@ -16,6 +16,8 @@ export const addBit = function addBit(dismissedContents, CHANNEL_NOTICE_INVITE) 
   let tmp2 = dismissedContents;
   if (dismissedContents.length <= rounded) {
     const _Uint8Array = Uint8Array;
+    const self = this;
+    const self2 = this;
     const uint8Array = new Uint8Array(rounded + 1);
     const result = uint8Array.set(dismissedContents, 0);
     tmp2 = uint8Array;
@@ -23,16 +25,18 @@ export const addBit = function addBit(dismissedContents, CHANNEL_NOTICE_INVITE) 
   tmp2[rounded] = tmp2[rounded] | (1 << (CHANNEL_NOTICE_INVITE % 8));
   return tmp2;
 };
-export const removeBit = function removeBit(dismissedContents, arg1) {
+export const removeBit = function removeBit(dismissedContents, DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL) {
   let tmp = 0 !== dismissedContents.length;
   if (tmp) {
     const _Math = Math;
-    tmp = dismissedContents[Math.floor(Math, arg1 / 8)] & (1 << (arg1 % 8));
+    tmp =
+      dismissedContents[Math.floor(Math, DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL / 8)] &
+      (1 << (DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL % 8));
   }
   if (tmp) {
     const _Math2 = Math;
-    const rounded = Math.floor(arg1 / 8);
-    dismissedContents[rounded] = dismissedContents[rounded] & (~1 << (arg1 % 8));
+    const rounded = Math.floor(DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL / 8);
+    dismissedContents[rounded] = dismissedContents[rounded] & (~1 << (DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL % 8));
   }
   return dismissedContents;
 };
@@ -40,9 +44,5 @@ export const isUint8Array = function isUint8Array(arg0) {
   return arg0 instanceof Uint8Array;
 };
 export const isSerializedUint8Array = function isSerializedUint8Array(__tag__) {
-  let tmp = null != __tag__ && typeof __tag__ === "object";
-  if (tmp) {
-    tmp = "uint8array" === __tag__.__tag__;
-  }
-  return tmp;
+  return null != __tag__ && typeof __tag__ === "object" && "uint8array" === __tag__.__tag__;
 };

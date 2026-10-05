@@ -9,8 +9,9 @@ export const chatEmptyState = function chatEmptyState(connState) {
   if (!connState.historyUnavailable) {
     let str2 = "greeting";
     if (!tmp) {
+      let str4;
       if ("failed" === connState) {
-        let str4 = "unavailable";
+        str4 = "unavailable";
       } else {
         str4 = "loading";
       }

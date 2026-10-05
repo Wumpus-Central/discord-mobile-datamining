@@ -1,5 +1,6 @@
 // discord_app/modules/slayer_storefront/storefrontCodedLink.tsx
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 function normalizeStorefrontSkuIds(items) {
   items = [];
@@ -21,7 +22,6 @@ function normalizeStorefrontSkuIds(items) {
   }
 }
 const re1 = /^[0-9]+$/;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/storefrontCodedLink.tsx");
 
 export const MAX_STOREFRONT_EMBED_SKUS = 6;
@@ -30,22 +30,24 @@ export const makeStorefrontCodedLink = function makeStorefrontCodedLink(items, a
   return "" + items.join(",") + "-" + applicationId;
 };
 export const parseStorefrontCodedLink = function parseStorefrontCodedLink(code) {
+  let str;
+  let tmp3;
   const parts = code.split("-");
   if (2 !== parts.length) {
     return null;
   } else {
     [str, tmp3] = parts;
+    _slicedToArray(parts, 2);
     if (re1.test(tmp3)) {
       const arr2 = normalizeStorefrontSkuIds(str.split(","));
       let tmp7 = null;
       if (0 !== arr2.length) {
+        tmp7 = { scopeId: tmp3, skuIds: arr2 };
         const obj = { scopeId: tmp3, skuIds: arr2 };
-        tmp7 = obj;
       }
       return tmp7;
     } else {
       return null;
     }
-    const tmp2 = _slicedToArray(parts, 2);
   }
 };

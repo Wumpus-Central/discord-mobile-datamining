@@ -1,259 +1,270 @@
 // discord_app/modules/activities/handleUsePrimaryEntryPointAppCommand.tsx
 import getCachedOrFetchActivityApplicationForLaunchDefault from "utils/getCachedOrFetchActivityApplicationForLaunch.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const require = fn;
-let closure_7 = async function _handleUsePrimaryEntryPointAppCommand(arg0) {
-  let targetApplicationId = arg0;
-  c4 = 0;
-  c5 = 0;
-  c3 = 0;
-  return (async (arg0) => {
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_2 = tmp3;
-            const targetApplication = tmp20;
-            closure_129_0 = targetApplicationId;
-            closure_129_1 = undefined;
-            closure_129_2 = undefined;
-            if (null == targetApplicationId.targetApplicationId) {
-              c5 = 3;
-              return { value: false, done: true };
-            } else {
-              closure_129_2 = false;
-              c3 = 1;
-              c4 = 2;
-              c5 = 1;
-              const obj5 = {
-                value: getCachedOrFetchActivityApplicationForLaunchDefault(
-                  targetApplicationId.targetApplicationId,
-                  targetApplicationId.channelId,
-                ),
-                done: false,
-              };
-              return obj5;
-            }
-          }
-        } else if (1 === tmp7) {
-          c3 = 0;
-          c5 = 3;
-          return { value: false, done: true };
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c3 = 0;
-          c5 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          closure_129_1 = value;
-          closure_129_2 = closure_130_0(closure_130_3[4]).shouldOpenActivityInPopoutWindow();
-          c3 = 0;
-          let obj = closure_130_0(closure_130_3[4]);
-          c5 = 3;
-          const obj7 = {
-            value: closure_130_0(closure_130_3[4]).wrapPreemptiveActivityPopout(closure_129_2, () => {
-              const obj = {};
-              const merged = Object.assign(targetApplicationId);
-              obj.targetApplication = targetApplication;
-              return (function handleUsePrimaryEntryPointAppCommandInternal() {
-                const self = this;
-                const apply = closure_1_8.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              })(obj);
-            }),
-            done: true,
-          };
-          return obj7;
-        }
-      } catch (tmp19) {
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp19;
-        } else {
-          c4 = tmp;
-        }
-        tmp20 = c3;
-      }
-    }
-  })();
-};
-let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
+let analyticsLocations,
+  channelId,
+  commandOrigin,
+  componentId,
+  customId,
+  embeddedActivitiesManager,
+  inviterUserId,
+  locationObject,
+  onConfirmActivityLaunchChecksAlertOpen,
+  referrerId,
+  sectionName,
+  source;
+
+let obj = function _handleUsePrimaryEntryPointAppCommand() {
+  obj = _asyncToGenerator(async (arg0) => {
+    let closure_1;
+    const targetApplicationId = arg0;
+    let c4 = 0;
+    let c5 = 0;
+    let c3 = 0;
+    return (async (arg0) => {
+      let obj2;
+      if (c5 === 2) {
+        c5 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          c4 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c4 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          return { value, done: true };
         } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
-          closure_129_6 = undefined;
-          closure_129_7 = undefined;
-          closure_129_8 = undefined;
-          closure_129_9 = undefined;
-          closure_129_10 = undefined;
-          closure_129_11 = undefined;
-          closure_129_12 = undefined;
-          ({
-            targetApplication: closure_129_0,
-            locationObject: closure_129_1,
-            channelId: closure_129_2,
-            analyticsLocations: closure_129_3,
-            componentId: closure_129_4,
-            commandOrigin: closure_129_5,
-            sectionName: closure_129_6,
-            source: closure_129_7,
-            onExecutedCallback: closure_129_8,
-            referrerId: closure_129_9,
-            customId: closure_129_10,
-            inviterUserId: closure_129_11,
-            onConfirmActivityLaunchChecksAlertOpen: closure_129_12,
-          } = closure_0);
-          closure_129_13 = undefined;
-          let currentUser;
-          c3 = 1;
-          c4 = 1;
-          return { value: "Set", done: true };
+          return { value: "IconComponent", done: null };
         }
       } else {
-        if (1 === tmp5) {
-          if (arg0 === 1) {
-            c4 = 3;
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              return { value, done: true };
+            } else {
+              let targetApplication;
+              closure_2 = undefined;
+              if (null == targetApplicationId.targetApplicationId) {
+                c5 = 3;
+                return { value: false, done: true };
+              } else {
+                closure_2 = false;
+                c3 = 1;
+                c4 = 2;
+                c5 = 1;
+                const obj5 = {
+                  value: getCachedOrFetchActivityApplicationForLaunchDefault(
+                    targetApplicationId.targetApplicationId,
+                    targetApplicationId.channelId,
+                  ),
+                  done: false,
+                };
+                return obj5;
+              }
+            }
+          } else if (1 === tmp4) {
+            c3 = 0;
+            c5 = 3;
+            return { value: false, done: true };
+          } else if (arg0 === 1) {
+            c5 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c4 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
+            c3 = 0;
+            c5 = 3;
+            return { value, done: true };
           } else {
-            closure_129_13 = closure_130_1(closure_130_3[5])();
-            currentUser = closure_130_6.getCurrentUser();
-            let tmp17 = null != closure_129_2;
-            if (tmp17) {
-              let tmp11 = null != closure_130_5.getChannel(closure_129_2);
-              if (tmp11) {
-                let tmp14 = null != currentUser;
-                if (tmp14) {
-                  tmp14 = null != closure_129_0;
+            targetApplication = value;
+            obj = closure_130_0(closure_130_3[4]);
+            closure_2 = obj.shouldOpenActivityInPopoutWindow();
+            c3 = 0;
+            c5 = 3;
+            const obj7 = {
+              value: obj2.wrapPreemptiveActivityPopout(closure_2, () => {
+                function handleUsePrimaryEntryPointAppCommandInternal() {
+                  return closure_1_8(...arguments);
                 }
-                let tmp6 = tmp14;
-                if (tmp14) {
-                  closure_130_2(closure_130_3[6]).markActivityUsed(closure_129_0.id);
-                  const obj3 = closure_130_2(closure_130_3[6]);
-                  const obj7 = {
-                    channelId: closure_129_2,
-                    applicationId: closure_129_0.id,
-                    isStart: true,
-                    embeddedActivitiesManager: closure_129_13,
-                    componentId: closure_129_4,
-                    commandOrigin: closure_129_5,
-                    sectionName: closure_129_6,
-                    locationObject: closure_129_1,
-                    analyticsLocations: closure_129_3,
-                    source: closure_129_7,
-                    onExecutedCallback: closure_129_8,
-                    referrerId: closure_129_9,
-                    customId: closure_129_10,
-                    inviterUserId: closure_129_11,
-                    onConfirmActivityLaunchChecksAlertOpen: closure_129_12,
-                  };
-                  c3 = 2;
-                  c4 = 1;
-                  const obj8 = {
-                    value: closure_130_0(closure_130_3[7]).runPrimaryAppCommandOrJoinEmbeddedActivity(obj7),
-                    done: false,
-                  };
-                  return obj8;
-                }
-              }
-              tmp17 = tmp11;
-            }
-            c4 = 3;
-            const obj9 = { value: tmp17, done: true };
-            return obj9;
+                obj = { targetApplication };
+                const merged = Object.assign(targetApplicationId);
+                return handleUsePrimaryEntryPointAppCommandInternal(obj);
+              }),
+              done: true,
+            };
+            obj2 = closure_130_0(closure_130_3[4]);
+            return obj7;
           }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else {
-          tmp6 = value;
-          if (arg0 === 2) {
-            c4 = 3;
-            const obj = { value, done: true };
-            return obj;
+        } catch (tmp16) {
+          if (0 === c3) {
+            c5 = 3;
+            throw tmp16;
+          } else {
+            c4 = 1;
           }
         }
-        tmp11 = tmp6;
       }
-    } catch (tmp40) {
-      c4 = tmp;
-      throw tmp40;
-    }
-  }
+    })();
+  });
+  return obj(...arguments);
 };
-const size = fn(2);
+obj = function _handleUsePrimaryEntryPointAppCommandInternal() {
+  obj = _asyncToGenerator(async (arg0) => {
+    let onExecutedCallback;
+    let user = arg0;
+    let c3 = 0;
+    let c4 = 0;
+    const iter = (async (arg0) => {
+      let c0;
+      let c1;
+      let c10;
+      let c11;
+      let c12;
+      let c2;
+      let c3;
+      let c4;
+      let c5;
+      let c6;
+      let c7;
+      let c8;
+      let c9;
+      let obj4;
+      if (componentId === 2) {
+        componentId = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          return { value, done: true };
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          let currentUser;
+          componentId = 2;
+          if (0 === analyticsLocations) {
+            if (arg0 === 1) {
+              componentId = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              componentId = 3;
+              return { value, done: true };
+            } else {
+              let closure_2 = tmp4;
+              let closure_1 = tmp;
+              user = undefined;
+              locationObject = undefined;
+              channelId = undefined;
+              commandOrigin = undefined;
+              sectionName = undefined;
+              source = undefined;
+              referrerId = undefined;
+              customId = undefined;
+              inviterUserId = undefined;
+              onConfirmActivityLaunchChecksAlertOpen = undefined;
+              ({
+                targetApplication: c0,
+                locationObject: c1,
+                channelId: c2,
+                analyticsLocations: c3,
+                componentId: c4,
+                commandOrigin: c5,
+                sectionName: c6,
+                source: c7,
+                onExecutedCallback: c8,
+                referrerId: c9,
+                customId: c10,
+                inviterUserId: c11,
+                onConfirmActivityLaunchChecksAlertOpen: c12,
+              } = closure_0);
+              embeddedActivitiesManager = undefined;
+              currentUser = undefined;
+              analyticsLocations = 1;
+              componentId = 1;
+              return { value: "Set", done: true };
+            }
+          } else {
+            let tmp5;
+            if (1 === analyticsLocations) {
+              if (arg0 === 1) {
+                componentId = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                componentId = 3;
+                return { value, done: true };
+              } else {
+                embeddedActivitiesManager = closure_130_1(closure_130_3[5])();
+                currentUser = closure_130_6.getCurrentUser();
+                let tmp16 = null != channelId;
+                if (tmp16) {
+                  let tmp10 = null != closure_130_5.getChannel(channelId);
+                  if (tmp10) {
+                    tmp5 = null != currentUser && null != user;
+                    const tmp13 = null != currentUser && null != user;
+                    if (tmp5) {
+                      const obj3 = closure_130_2(closure_130_3[6]);
+                      obj3.markActivityUsed(user.id);
+                      const obj7 = {
+                        channelId,
+                        applicationId: user.id,
+                        isStart: true,
+                        embeddedActivitiesManager,
+                        componentId,
+                        commandOrigin,
+                        sectionName,
+                        locationObject,
+                        analyticsLocations,
+                        source,
+                        onExecutedCallback,
+                        referrerId,
+                        customId,
+                        inviterUserId,
+                        onConfirmActivityLaunchChecksAlertOpen,
+                      };
+                      analyticsLocations = 2;
+                      componentId = 1;
+                      const obj8 = { value: obj4.runPrimaryAppCommandOrJoinEmbeddedActivity(obj7), done: false };
+                      obj4 = closure_130_0(closure_130_3[7]);
+                      return obj8;
+                    }
+                  }
+                  tmp16 = tmp10;
+                }
+                componentId = 3;
+                return { value: tmp16, done: true };
+              }
+            } else if (arg0 === 1) {
+              componentId = 3;
+              throw value;
+            } else {
+              tmp5 = value;
+              if (arg0 === 2) {
+                componentId = 3;
+                return { value, done: true };
+              }
+            }
+            tmp10 = tmp5;
+          }
+        } catch (tmp39) {
+          componentId = 3;
+          throw tmp39;
+        }
+      }
+    })();
+    iter.next();
+    return iter;
+  });
+  return obj(...arguments);
+};
 const result = size.fileFinishedImporting("modules/activities/handleUsePrimaryEntryPointAppCommand.tsx");
 
 export default function handleUsePrimaryEntryPointAppCommand() {
-  const self = this;
-  const apply = closure_7.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }

@@ -1,53 +1,74 @@
 // discord_app/modules/voice_panel/native/VoicePanelSystemUIManager.tsx
-import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import react_native from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import cheapWorkletShallowEqual from "../../reanimated/native/cheapWorkletShallowEqual.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import CallConstants from "../../calls/CallConstants.tsx";
+import cheapWorkletShallowEqual2 from "../../reanimated/native/cheapWorkletShallowEqual.tsx";
+import VoicePanelControlsConstants from "controls/VoicePanelControlsConstants.tsx";
+import VoicePanelConstants from "../VoicePanelConstants.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
 import ChannelRTCStore from "../../calls/ChannelRTCStore.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const VoicePanelModes = fn(11902).VoicePanelModes;
-const VoicePanelControlsModes = fn(11900).VoicePanelControlsModes;
-const ParticipantTypes = fn(4911).ParticipantTypes;
-const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
+let participant;
+
+let c10;
+let c9;
+let unpackModuleId;
+const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
+const VoicePanelControlsModes = VoicePanelControlsConstants.VoicePanelControlsModes;
+const ParticipantTypes = CallConstants.ParticipantTypes;
+({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = Fragment);
 const __initData = {
   code: "function VoicePanelSystemUIManagerTsx1(){const{focused,mode,controlsSpecs,windowDimensions}=this.__closure;var _focused$get;return{focusedId:(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id,mode:mode.get(),controlsMode:controlsSpecs.get().mode,landscape:windowDimensions.get().landscape};}",
 };
 const __initData2 = {
   code: "function VoicePanelSystemUIManagerTsx2(props_0,previous){const{cheapWorkletShallowEqual,runOnJS,handleStateChange}=this.__closure;if(cheapWorkletShallowEqual(props_0,previous!==null&&previous!==void 0?previous:undefined))return;runOnJS(handleStateChange)(props_0);}",
 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelSystemUIManager.tsx");
-
-export default noop.memo(function VoicePanelSystemUIManager() {
+const memoResult = react.memo(function VoicePanelSystemUIManager() {
+  let channelId;
+  let items2;
+  let mode;
+  let tmp5;
+  let tmp9;
+  let windowDimensions;
+  let tmp = channelId;
   const context = windowDimensions.useContext(channelId(mode[7]));
   const focused = context.focused;
   channelId = context.channelId;
   mode = context.mode;
   const controlsSpecs = context.controlsSpecs;
   windowDimensions = context.windowDimensions;
-  [tmp5, ChannelRTCStore] = controlsSpecs(windowDimensions.useState(true), 2);
-  const tmp6 = controlsSpecs(windowDimensions.useState(true), 2);
-  closure_6 = tmp6[1];
   let tmp4 = controlsSpecs(windowDimensions.useState(true), 2);
-  [tmp8, VoicePanelControlsModes] = controlsSpecs(windowDimensions.useState(false), 2);
-  const tmp9 = controlsSpecs(windowDimensions.useState(false), 2);
-  closure_8 = tmp9[1];
+  [tmp5, ChannelRTCStore] = tmp4;
+  const tmp6 = controlsSpecs(windowDimensions.useState(true), 2);
+  let closure_6 = tmp6[1];
+  const first = tmp6[0];
+  [tmp9, VoicePanelControlsModes] = controlsSpecs(windowDimensions.useState(false), 2);
+  const tmp8 = controlsSpecs(windowDimensions.useState(false), 2);
+  const tmp10 = controlsSpecs(windowDimensions.useState(false), 2);
+  let closure_8 = tmp10[1];
   const items = [channelId];
+  const first1 = tmp10[0];
   const memo = windowDimensions.useMemo(() => {
-    closure_0 = channelId(mode[10])(
+    let constants2;
+    let constants3;
+    let closure_0 = channelId(mode[10])(
       function updateState(arg0) {
+        let closure_2;
+        let closure_3;
         ({ focusedId: closure_0, mode: focusedId, controlsMode: closure_2, landscape: closure_3 } = arg0);
-        closure_0(mode[8]).batchUpdates(() => {
+        const obj = closure_0(mode[8]);
+        obj.batchUpdates(() => {
           closure_2_6(c1 !== constants.PIP);
           let tmp4 = null == c0;
+          const HIDDEN = constants2.HIDDEN;
           if (tmp4) {
             tmp4 = !c3;
           }
           if (!tmp4) {
-            tmp4 = c2 !== constants.HIDDEN;
+            tmp4 = c2 !== HIDDEN;
           }
           closure_2_5(tmp4);
           participant = undefined;
@@ -58,25 +79,27 @@ export default noop.memo(function VoicePanelSystemUIManager() {
           if (participant != null) {
             type = participant.type;
           }
-          const tmp11 = focused(mode[9]).isIOS() && type === constants2.ACTIVITY;
+          const ACTIVITY = constants3.ACTIVITY;
+          const obj = _undefined(mode[9]);
+          const tmp11 = obj.isIOS() && type === ACTIVITY;
           closure_2_8(tmp11);
-          let tmp14 = !tmp4;
-          if (!tmp4) {
-            tmp14 = !tmp11;
-          }
+          const tmp14 = !tmp4 && !tmp11;
           closure_2_7(tmp14);
-          const obj = focused(mode[9]);
         });
       },
       500,
       { maxWait: 2000 },
     );
     let focusedId;
-    return {
+    let obj = {
       cancelPendingDebounce() {
         closure_0.cancel();
       },
       handleStateChange(focusedId) {
+        let c0;
+        let c1;
+        let c2;
+        let c3;
         if (focusedId !== focusedId.focusedId) {
           focusedId = focusedId.focusedId;
           closure_0(focusedId);
@@ -87,14 +110,16 @@ export default noop.memo(function VoicePanelSystemUIManager() {
           c2 = undefined;
           c3 = undefined;
           ({ focusedId: c0, mode: c1, controlsMode: c2, landscape: c3 } = focusedId);
-          ReactBatchUpdates.batchUpdates(() => {
+          let obj = react_native;
+          obj.batchUpdates(() => {
             closure_2_6(c1 !== constants.PIP);
             let tmp4 = null == c0;
+            const HIDDEN = constants2.HIDDEN;
             if (tmp4) {
               tmp4 = !c3;
             }
             if (!tmp4) {
-              tmp4 = c2 !== constants.HIDDEN;
+              tmp4 = c2 !== HIDDEN;
             }
             closure_2_5(tmp4);
             participant = undefined;
@@ -105,49 +130,49 @@ export default noop.memo(function VoicePanelSystemUIManager() {
             if (participant != null) {
               type = participant.type;
             }
-            const tmp11 = focused(mode[9]).isIOS() && type === constants2.ACTIVITY;
+            const ACTIVITY = constants3.ACTIVITY;
+            const obj = _undefined(mode[9]);
+            const tmp11 = obj.isIOS() && type === ACTIVITY;
             closure_2_8(tmp11);
-            let tmp14 = !tmp4;
-            if (!tmp4) {
-              tmp14 = !tmp11;
-            }
+            const tmp14 = !tmp4 && !tmp11;
             closure_2_7(tmp14);
-            const obj = focused(mode[9]);
           });
         }
       },
     };
+    return obj;
   }, items);
   const cancelPendingDebounce = memo.cancelPendingDebounce;
   const handleStateChange = memo.handleStateChange;
   const items1 = [cancelPendingDebounce];
   const effect = windowDimensions.useEffect(() => () => cancelPendingDebounce(), items1);
-  const tmp7 = controlsSpecs(windowDimensions.useState(false), 2);
+  let obj = focused(mode[11]);
   const fn = function v() {
-    value = focused.get();
+    const value = focused.get();
     let id;
     if (value != null) {
       id = value.id;
     }
-    return {
+    const obj = {
       focusedId: id,
       mode: mode.get(),
       controlsMode: controlsSpecs.get().mode,
       landscape: windowDimensions.get().landscape,
     };
+    return obj;
   };
   fn.__closure = { focused, mode, controlsSpecs, windowDimensions };
   fn.__workletHash = 2478376475717;
   fn.__initData = __initData;
   const fn2 = function u(safeAreaState, safeAreaState2) {
-    if (!obj.cheapWorkletShallowEqual(safeAreaState, tmp)) {
-      ReanimatedRexport.runOnJS(handleStateChange)(safeAreaState);
+    const cheapWorkletShallowEqual = cheapWorkletShallowEqual2.cheapWorkletShallowEqual;
+    cheapWorkletShallowEqual2;
+    const tmp = safeAreaState2;
+    if (!cheapWorkletShallowEqual(safeAreaState, tmp)) {
       const tmp2Result = ReanimatedRexport;
+      tmp2Result.runOnJS(handleStateChange)(safeAreaState);
     }
-    obj = cheapWorkletShallowEqual;
-    tmp = safeAreaState2;
   };
-  let obj = focused(mode[11]);
   fn2.__closure = {
     cheapWorkletShallowEqual: focused(mode[12]).cheapWorkletShallowEqual,
     runOnJS: focused(mode[11]).runOnJS,
@@ -155,17 +180,25 @@ export default noop.memo(function VoicePanelSystemUIManager() {
   };
   fn2.__workletHash = 9238710291709;
   fn2.__initData = __initData2;
+  ({
+    cheapWorkletShallowEqual: focused(mode[12]).cheapWorkletShallowEqual,
+    runOnJS: focused(mode[11]).runOnJS,
+    handleStateChange,
+  });
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
-  let tmp15 = null;
-  if (tmp6[0]) {
+  let tmp17 = null;
+  const tmp16 = handleStateChange;
+  if (first) {
     const obj3 = { hidden: !tmp5, barStyle: "light-content" };
-    tmp15 = cancelPendingDebounce(tmp(tmp2[13]), obj3);
+    tmp17 = cancelPendingDebounce(tmp(tmp2[13]), obj3);
   }
-  const obj4 = { children: null };
-  const items2 = [
-    tmp15,
-    cancelPendingDebounce(channelId(mode[14]), { prefersHidden: tmp8, prefersDeferringSystemGestures: tmp9[0] }),
+  const obj4 = { children: items2 };
+  items2 = [
+    tmp17,
+    cancelPendingDebounce(tmp(tmp2[14]), { prefersHidden: tmp9, prefersDeferringSystemGestures: first1 }),
   ];
-  obj4.children = items2;
-  return closure_11(handleStateChange, obj4);
+  return closure_11(tmp16, obj4);
 });
+const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelSystemUIManager.tsx");
+
+export default memoResult;

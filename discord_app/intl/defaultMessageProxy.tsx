@@ -4,6 +4,8 @@ import 01165__ from "../../_runtime/metro/01165__.js";
 import messagesProxy from "messages/en-US.messages.js";
 import size from "../../_runtime/metro/00002__.js";
 
+const chainMessagesObjects = module_1165.chainMessagesObjects;
+const chainMessagesObjectsResult = chainMessagesObjects(messagesProxy, _modDef13950);
 const result = size.fileFinishedImporting("intl/defaultMessageProxy.tsx");
 
-export const _defaultMessages = module_1165.chainMessagesObjects(messagesProxy, _modDef13950);
+export const _defaultMessages = chainMessagesObjectsResult;

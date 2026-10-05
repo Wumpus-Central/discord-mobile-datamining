@@ -1,35 +1,41 @@
 // discord_app/utils/LazyAPIPromise.tsx
-import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../_runtime/metro/00032__.js";
-import noop from "../../_runtime/metro/00019__.js";
+import _asyncToGenerator from "../../_runtime/metro/00005__asyncToGenerator.js";
+import _slicedToArray_mod from "../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../_runtime/00019_react.js";
+import ReactCompilerGating from "../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, c4, c5, dependencyMap;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("utils/LazyAPIPromise.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let _slicedToArray = _slicedToArray_mod;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
+      let closure_0;
+      let tmp3;
+      let tmp5;
       _require = arg0;
       dependencyMap = arg1;
-      const cResult = require("c").c(9);
-      let obj = require("c");
-      [tmp3, asyncGeneratorStep] = noop.useState(false);
-      const tmp2 = _slicedToArray(noop.useState(false), 2);
-      [tmp5, _slicedToArray] = noop.useState(null);
+      let obj = require("react");
+      const cResult = obj.c(9);
+      [tmp3, _asyncToGenerator] = react.useState(false);
+      _slicedToArray(react.useState(false), 2);
+      const tmp4 = _slicedToArray(react.useState(null), 2);
+      [tmp5, _slicedToArray] = tmp4;
       if (cResult[0] === arg0) {
+        let tmp6;
         if (cResult[1] === arg1) {
-          let tmp6 = cResult[2];
+          tmp6 = cResult[2];
         }
         if (cResult[3] === tmp5) {
+          let tmp7;
           if (cResult[4] === tmp3) {
-            let tmp7 = cResult[5];
+            tmp7 = cResult[5];
           }
           if (cResult[6] === tmp6) {
+            let tmp8;
             if (cResult[7] === tmp7) {
-              let tmp8 = cResult[8];
+              tmp8 = cResult[8];
             }
             return tmp8;
           }
@@ -45,11 +51,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = obj2;
         tmp7 = obj2;
       }
-      _require = asyncGeneratorStep(async () => {
+      _require = _asyncToGenerator(async function () {
+        let closure_2;
+        let v0;
+        let value;
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp6 === 3) {
+        } else if (tmp3 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -60,6 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         } else {
           try {
+            let aPIError;
             c5 = 2;
             if (0 === c4) {
               if (arg0 === 1) {
@@ -70,28 +80,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                closure_0 = tmp7;
-                closure_128_0 = undefined;
-                closure_128_1 = undefined;
-                closure_128_2 = undefined;
-                tmp41(true);
+                value = undefined;
+                closure_1 = undefined;
+                aPIError = undefined;
+                tmp36(true);
                 v0(null);
                 v0 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj4 = { value: closure_0(), done: false };
+                const obj4 = { value: value(), done: false };
                 return obj4;
               }
-            } else if (1 === tmp7) {
+            } else if (1 === c4) {
               v0 = 0;
-              closure_128_1 = tmp41;
-              const aPIError = new closure_0(tmp3[5]).APIError(closure_128_1);
-              closure_128_2 = aPIError;
-              if (tmp3 != null) {
-                tmp25(closure_128_2);
+              closure_1 = tmp36;
+              const self = this;
+              const self2 = this;
+              aPIError = new value(closure_2_1[5]).APIError(closure_1);
+              if (closure_1 != null) {
+                tmp20(aPIError);
               }
-              v0(closure_128_2);
-              tmp41(false);
+              v0(aPIError);
+              tmp36(false);
               c5 = 3;
               return { value: null, done: true };
             } else if (arg0 === 1) {
@@ -103,33 +113,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj5 = { value, done: true };
               return obj5;
             } else {
-              closure_128_0 = value;
-              tmp41(false);
+              tmp36(false);
               v0(null);
               v0 = 0;
               c5 = 3;
-              const obj = { value: closure_128_0, done: true };
+              const obj = { value, done: true };
               return obj;
             }
-          } catch (tmp41) {
-            if (tmp4 === v0) {
-              c5 = tmp2;
-              throw tmp41;
+          } catch (tmp36) {
+            if (0 === v0) {
+              c5 = 3;
+              throw tmp36;
             } else {
-              c4 = tmp;
+              c4 = 1;
             }
           }
         }
       });
       function execFn() {
-        const self = this;
-        const apply = closure_0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
+        return closure_0(...arguments);
       }
       cResult[0] = arg0;
       cResult[1] = arg1;
@@ -137,100 +139,103 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = execFn;
     }
   : (arg0, arg1) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      noop = async function _execFn2() {
-        if (c5 === 2) {
-          c5 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp6 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj2 = { value, done: true };
-            return obj2;
+      let closure_2;
+      let closure_3;
+      let first;
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      let obj = function _execFn2() {
+        obj = _asyncToGenerator(async function () {
+          let value;
+          if (c5 === 2) {
+            c5 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj2 = { value, done: true };
+              return obj2;
+            } else {
+              return { value: "IconComponent", done: null };
+            }
           } else {
-            return { value: "IconComponent", done: null };
-          }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
+            let c3;
+            try {
+              let aPIError;
+              c5 = 2;
+              if (0 === c4) {
+                if (arg0 === 1) {
+                  c5 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c5 = 3;
+                  const obj3 = { value, done: true };
+                  return obj3;
+                } else {
+                  closure_1 = tmp;
+                  value = undefined;
+                  aPIError = undefined;
+                  closure_2_2(true);
+                  closure_2_3(null);
+                  c3 = 1;
+                  c4 = 2;
+                  c5 = 1;
+                  const obj4 = { value: closure_2_0(), done: false };
+                  return obj4;
+                }
+              } else if (1 === c4) {
+                c3 = 0;
+                const self = this;
+                const self2 = this;
+                aPIError = new value(closure_1[5]).APIError(closure_2);
+                if (closure_129_1 != null) {
+                  tmp20(aPIError);
+                }
+                closure_129_3(aPIError);
+                closure_129_2(false);
+                c5 = 3;
+                return { value: null, done: true };
+              } else if (arg0 === 1) {
                 c5 = 3;
                 throw value;
               } else if (arg0 === 2) {
+                c3 = 0;
                 c5 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
+                const obj5 = { value, done: true };
+                return obj5;
               } else {
-                closure_0 = tmp7;
-                closure_128_0 = undefined;
-                closure_128_1 = undefined;
-                asyncGeneratorStep(true);
-                _slicedToArray(null);
-                c3 = 1;
-                c4 = 2;
-                c5 = 1;
-                const obj4 = { value: _require(), done: false };
-                return obj4;
+                closure_129_2(false);
+                closure_129_3(null);
+                c3 = 0;
+                c5 = 3;
+                obj = { value, done: true };
+                return obj;
               }
-            } else if (1 === tmp7) {
-              c3 = 0;
-              closure_128_2 = closure_2;
-              const aPIError = new closure_0(tmp3[5]).APIError(closure_128_2);
-              closure_128_1 = aPIError;
-              if (closure_129_1 != null) {
-                tmp25(closure_128_1);
+            } catch (tmp36) {
+              closure_2 = tmp36;
+              if (0 === c3) {
+                c5 = 3;
+                throw tmp36;
+              } else {
+                c4 = 1;
               }
-              closure_129_3(closure_128_1);
-              closure_129_2(false);
-              c5 = 3;
-              return { value: null, done: true };
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 0;
-              c5 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
-            } else {
-              closure_128_0 = value;
-              closure_129_2(false);
-              closure_129_3(null);
-              c3 = 0;
-              c5 = 3;
-              const obj = { value: closure_128_0, done: true };
-              return obj;
-            }
-          } catch (tmp41) {
-            closure_2 = tmp41;
-            if (tmp4 === c3) {
-              c5 = tmp2;
-              throw tmp41;
-            } else {
-              c4 = tmp;
             }
           }
-        }
+        });
+        return obj(...arguments);
       };
-      const tmp = _slicedToArray(noop.useState(false), 2);
-      closure_2 = tmp[1];
-      const tmp2 = _slicedToArray(noop.useState(null), 2);
-      _slicedToArray = tmp2[1];
+      [first, closure_2] = obj.useState(false);
+      const tmp3 = _slicedToArray(obj.useState(null), 2);
+      _slicedToArray = tmp3[1];
       const items = [
         function execFn() {
-          const self = this;
-          const apply = closure_4.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
+          return obj(...arguments);
         },
-        { loading: tmp[0], error: tmp2[0] },
+        { loading: first, error: tmp3[0] },
       ];
       return items;
     };
+const result = size.fileFinishedImporting("utils/LazyAPIPromise.tsx");
+
+export default tmp2;

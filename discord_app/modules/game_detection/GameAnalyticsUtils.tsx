@@ -2,9 +2,8 @@
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import RobloxSubgameUtils from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
 import DetectableGameStore from "../../stores/DetectableGameStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_detection/GameAnalyticsUtils.tsx");
 
 export const removeExecutablePathPrefix = function removeExecutablePathPrefix(exePath) {
@@ -18,6 +17,14 @@ export const removeExecutablePathPrefix = function removeExecutablePathPrefix(ex
   return substr.join("/");
 };
 export const getRunningGameAnalytics = function getRunningGameAnalytics(streamApplication) {
+  let distributor;
+  let id2;
+  let joined;
+  let name;
+  let sku;
+  let str2;
+  let str3;
+  let subgameMetadata;
   if (null == streamApplication) {
     return {
       gameName: "toCharArray$esjava$1",
@@ -31,31 +38,28 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;
     const id = streamApplication.id;
-    const obj = { id, name: null, exePath: null, cmdLine: null, lastFocused: 0 };
-    const name = streamApplication.name;
-    obj.name = name;
-    let str2 = str;
+    const obj = { id, name, exePath: str2, cmdLine: str3, lastFocused: 0 };
+    name = streamApplication.name;
+    str2 = str;
     if (str == null) {
       str2 = "";
     }
-    obj.exePath = str2;
-    let str3 = str;
+    str3 = str;
     if (str == null) {
       str3 = "";
     }
-    obj.cmdLine = str3;
     const findGameResult = DetectableGameStore.findGame(obj);
     const name2 = streamApplication.name;
     const obj2 = {
       gameName: name2,
-      gameId: null,
-      exe: null,
-      distributor: null,
-      sku: null,
-      gameMetadata: null,
-      rawExePath: null,
+      gameId: id2,
+      exe: joined,
+      distributor,
+      sku,
+      gameMetadata: subgameMetadata,
+      rawExePath: str,
     };
-    let id2 = streamApplication.id;
+    id2 = streamApplication.id;
     if (id2 == null) {
       let id1;
       if (findGameResult != null) {
@@ -63,8 +67,7 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
       }
       id2 = id1;
     }
-    obj2.gameId = id2;
-    let joined;
+    joined = undefined;
     if (null != str) {
       const formatted = str.toLowerCase();
       let str5 = formatted;
@@ -75,17 +78,13 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
       const substr = parts.slice(-2);
       joined = substr.join("/");
     }
-    obj2.exe = joined;
-    const distributor = streamApplication.distributor;
-    obj2.distributor = distributor;
-    const sku = streamApplication.sku;
-    obj2.sku = sku;
-    let subgameMetadata;
+    distributor = streamApplication.distributor;
+    sku = streamApplication.sku;
+    subgameMetadata = undefined;
     if (null != streamApplication) {
-      subgameMetadata = RobloxSubgameUtils.getSubgameMetadata(streamApplication);
+      const obj4 = RobloxSubgameUtils;
+      subgameMetadata = obj4.getSubgameMetadata(streamApplication);
     }
-    obj2.gameMetadata = subgameMetadata;
-    obj2.rawExePath = str;
     return obj2;
   }
 };
@@ -94,15 +93,18 @@ export const getGameAnalyticsMetadata = function getGameAnalyticsMetadata(
   arg1,
   detected_game_id,
 ) {
-  if (arg1) {
+  const tmp = arg1;
+  if (tmp) {
+    let json;
     if (null != detected_game_id) {
       const _JSON = JSON;
       const obj2 = { detected_game_id };
-      let json = JSON.stringify(obj2);
+      json = JSON.stringify(obj2);
     }
     return json;
   }
-  json = RobloxSubgameUtils.getSubgameMetadata(currentGameForAnalytics);
+  const obj = RobloxSubgameUtils;
+  json = obj.getSubgameMetadata(currentGameForAnalytics);
 };
 export const isVerifiedGameExecutable = function isVerifiedGameExecutable(str, arr) {
   if (null != str) {
@@ -112,7 +114,8 @@ export const isVerifiedGameExecutable = function isVerifiedGameExecutable(str, a
       if (formatted.endsWith("/")) {
         substr = formatted.slice(0, -1);
       }
-      const platformName = PlatformUtils.getPlatformName();
+      const obj = PlatformUtils;
+      const platformName = obj.getPlatformName();
       return arr.some((os) => {
         let tmp = os.os === closure_1;
         if (tmp) {

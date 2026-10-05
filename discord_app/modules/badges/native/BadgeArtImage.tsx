@@ -1,92 +1,102 @@
 // discord_app/modules/badges/native/BadgeArtImage.tsx
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import APNGPlayer2 from "../../image/native/APNGPlayer.android.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import inlineStyles from "../../../../_runtime/08136_inlineStyles.js";
+import APNGPlayer from "../../image/native/APNGPlayer.android.tsx";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, importDefault, obj1, tmp2;
 
-require = fn;
 function ignoreSvgError() {}
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-let size = fn(2);
-const result = size.fileFinishedImporting("modules/badges/native/BadgeArtImage.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const View = react_native.View;
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let SvgUri = _require;
-      let size = dependencyMap;
-      const cResult = require("c").c(18);
+      let animated;
+      let enableAnimation;
+      let fallbackUrl;
+      let height;
+      let style;
+      let url;
+      let width;
+      let obj = require("react");
+      const cResult = obj.c(18);
       ({ url, height, width, fallbackUrl, animated, style } = arg0);
+      const tmp = _require;
       if (undefined === width) {
         width = height;
       }
-      _require = tmp2;
+      let tmp4 = undefined !== animated && animated;
+      _require = tmp4;
       if (cResult[0] === height) {
+        let tmp5;
         if (cResult[1] === width) {
-          let tmp3 = cResult[2];
+          tmp5 = cResult[2];
         }
-        importDefault = tmp3;
-        if (cResult[3] === tmp2) {
-          if (cResult[4] === tmp3) {
-            let tmp4 = cResult[5];
+        importDefault = tmp5;
+        if (cResult[3] === tmp4) {
+          let tmp6;
+          if (cResult[4] === tmp5) {
+            tmp6 = cResult[5];
           }
-          if (cResult[6] === tmp3) {
+          if (cResult[6] === tmp5) {
+            let tmp7;
+            let tmp6Result1;
             if (cResult[7] === style) {
-              let tmp5 = cResult[8];
+              tmp7 = cResult[8];
             }
             if (cResult[9] === fallbackUrl) {
               if (cResult[10] === height) {
-                if (cResult[11] === tmp4) {
+                if (cResult[11] === tmp6) {
                   if (cResult[12] === url) {
+                    let tmp8;
                     if (cResult[13] === width) {
-                      if (cResult[15] === tmp5) {
-                        if (cResult[16] === tmp6) {
-                          let tmp14 = cResult[17];
-                        }
-                        return tmp14;
-                      }
-                      class E {
-                        constructor(arg0) {
-                          tmp = animated;
-                          if (animated) {
-                            tmp3 = closure_2;
-                            tmp2 = closure_0;
-                            obj = closure_0(closure_2[5]);
-                            if (obj.isAndroid()) {
-                              tmp5 = jsx;
-                              tmp6 = closure_2;
-                              obj1 = { url: null, style: null, autoplay: true };
-                              obj1.url = arg0;
-                              tmp7 = closure_1;
-                              obj1.style = closure_1;
-                              tmp4 = jsx(tmp2(closure_2[6]).APNGPlayer, obj1);
-                            }
-                            return tmp4;
-                          }
-                          obj4 = {
-                            source: { uri: arg0 },
-                            style: closure_1,
-                            resizeMode: "contain",
-                            enableAnimation: tmp,
-                          };
-                          tmp4 = jsx(closure_1(closure_2[7]), obj4);
-                          return;
-                        }
-                      }
-                      const obj = { style: tmp5, "aria-hidden": true, children: cResult[14] };
-                      const tmp16 = (
-                        <View style={tmp5} aria-hidden>
-                          {cResult[14]}
-                        </View>
-                      );
-                      cResult[15] = tmp5;
-                      cResult[16] = cResult[14];
-                      cResult[17] = tmp16;
-                      tmp14 = tmp16;
+                      tmp8 = cResult[14];
                     }
+                    if (cResult[15] === tmp7) {
+                      let tmp15;
+                      if (cResult[16] === tmp8) {
+                        tmp15 = cResult[17];
+                      }
+                      return tmp15;
+                    }
+                    class E {
+                      constructor(arg0) {
+                        tmp = animated;
+                        if (tmp) {
+                          tmp3 = closure_2;
+                          tmp2 = closure_0;
+                          obj = closure_0(closure_2[5]);
+                          if (obj.isAndroid()) {
+                            tmp5 = jsx;
+                            tmp6 = closure_2;
+                            obj1 = { url: null, style: null, autoplay: true };
+                            obj1.url = arg0;
+                            tmp7 = closure_1;
+                            obj1.style = closure_1;
+                            tmp4 = jsx(tmp2(closure_2[6]).APNGPlayer, obj1);
+                          }
+                          return tmp4;
+                        }
+                        obj4 = { source: { uri: arg0 }, style: closure_1, resizeMode: "contain", enableAnimation: tmp };
+                        tmp4 = jsx(closure_1(closure_2[7]), obj4);
+                        return;
+                      }
+                    }
+                    const tmp17 = (
+                      <View style={tmp7} aria-hidden>
+                        {tmp8}
+                      </View>
+                    );
+                    cResult[15] = tmp7;
+                    cResult[16] = tmp8;
+                    cResult[17] = tmp17;
+                    tmp15 = tmp17;
                   }
                 }
               }
@@ -95,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             class E {
               constructor(arg0) {
                 tmp = animated;
-                if (animated) {
+                if (tmp) {
                   tmp3 = closure_2;
                   tmp2 = closure_0;
                   obj = closure_0(closure_2[5]);
@@ -115,13 +125,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            if (obj4.endsWith(".svg")) {
-              SvgUri = SvgUri(8136).SvgUri;
-              size = { uri: null, width: null, height: null, onError: null, fallback: null };
+            if (obj3.endsWith(".svg")) {
               class E {
                 constructor(arg0) {
                   tmp = animated;
-                  if (animated) {
+                  if (tmp) {
                     tmp3 = closure_2;
                     tmp2 = closure_0;
                     obj = closure_0(closure_2[5]);
@@ -141,30 +149,30 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              size.width = width;
-              size.height = height;
-              size.onError = ignoreSvgError;
-              let tmp4Result;
+              let tmp6Result;
+              const SvgUri = tmp(8136).SvgUri;
               if (null != fallbackUrl) {
-                tmp4Result = tmp4(fallbackUrl);
+                tmp6Result = tmp6(fallbackUrl);
               }
-              size.fallback = tmp4Result;
-              let tmp4Result1 = <SvgUri uri={null} width={null} height={null} onError={null} fallback={null} />;
+              tmp6Result1 = (
+                <SvgUri uri={url} width={null} height={height} onError={ignoreSvgError} fallback={tmp6Result} />
+              );
             } else {
-              tmp4Result1 = tmp4(url);
+              tmp6Result1 = tmp6(url);
             }
             cResult[9] = fallbackUrl;
             cResult[10] = height;
-            cResult[11] = tmp4;
+            cResult[11] = tmp6;
             cResult[12] = url;
             cResult[13] = width;
-            cResult[14] = tmp4Result1;
+            cResult[14] = tmp6Result1;
+            tmp8 = tmp6Result1;
           }
           const items = [,];
           class E {
             constructor(arg0) {
               tmp = animated;
-              if (animated) {
+              if (tmp) {
                 tmp3 = closure_2;
                 tmp2 = closure_0;
                 obj = closure_0(closure_2[5]);
@@ -185,15 +193,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           items[1] = style;
-          cResult[6] = tmp3;
+          cResult[6] = tmp5;
           cResult[7] = style;
           cResult[8] = items;
-          tmp5 = items;
+          tmp7 = items;
         }
         class E {
           constructor(arg0) {
             tmp = animated;
-            if (animated) {
+            if (tmp) {
               tmp3 = closure_2;
               tmp2 = closure_0;
               obj = closure_0(closure_2[5]);
@@ -213,19 +221,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        cResult[3] = tmp2;
-        cResult[4] = tmp3;
+        cResult[3] = tmp4;
+        cResult[4] = tmp5;
         cResult[5] = E;
-        tmp4 = E;
+        tmp6 = E;
       }
       const size1 = { width, height };
       cResult[0] = height;
       cResult[1] = width;
       cResult[2] = size1;
-      tmp3 = size1;
-      let obj2 = require("c");
+      tmp5 = size1;
     }
   : (style) => {
+      let animated;
+      let fallbackUrl;
+      let height;
+      let tmpResult2;
+      let url;
+      let width;
       ({ url, height, width } = style);
       if (width === undefined) {
         width = height;
@@ -234,57 +247,54 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (animated === undefined) {
         animated = false;
       }
-      const size = { width, height };
-      const obj = { style: null, "aria-hidden": true, children: null };
+      size = { width, height };
       const items = [size, style.style];
-      obj.style = items;
-      const formatted = url.split(/[?#]/)[0].toLowerCase();
+      const str = url.split(/[?#]/)[0];
+      const formatted = str.toLowerCase();
       if (formatted.endsWith(".svg")) {
-        let APNGPlayer = require;
-        const size1 = { uri: url, width, height, onError: ignoreSvgError, fallback: null };
-        if (null == fallbackUrl) {
-          size1.fallback = undefined;
-          let tmpResult = <tmp8 {...size1} />;
-        } else {
-          if (!animated) {
-            const obj2 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
-            const obj3 = { uri: fallbackUrl };
-            obj2.source = obj3;
-            obj2.style = size;
-            obj2.enableAnimation = animated;
-            let tmpResult2 = jsx(FastImageDefault, {
-              source: null,
-              style: null,
-              resizeMode: "contain",
-              enableAnimation: null,
-            });
-          } else {
-            APNGPlayer(1369);
+        let tmp12;
+        const SvgUri = inlineStyles.SvgUri;
+        if (null != fallbackUrl) {
+          if (animated) {
+            let tmpResult;
+            const tmp8Result = PlatformUtils;
+            if (tmp8Result.isAndroid()) {
+              tmpResult = jsx(APNGPlayer.APNGPlayer, { url: fallbackUrl, style: size, autoplay: true });
+            }
+            tmp12 = tmpResult;
           }
-          APNGPlayer = APNGPlayer(8464).APNGPlayer;
-          const obj5 = { url: fallbackUrl, style: size, autoplay: true };
-          tmpResult2 = <APNGPlayer url={fallbackUrl} style={size} autoplay />;
+          const obj5 = { uri: fallbackUrl };
+          tmpResult = jsx(FastImageDefault, {
+            source: obj5,
+            style: size,
+            resizeMode: "contain",
+            enableAnimation: animated,
+          });
         }
+        tmpResult2 = <SvgUri uri={url} width={width} height={height} onError={ignoreSvgError} fallback={tmp12} />;
       } else {
         if (animated) {
+          const obj4 = PlatformUtils;
           if (obj4.isAndroid()) {
-            const obj6 = { url, style: size, autoplay: true };
-            tmpResult = jsx(APNGPlayer2.APNGPlayer, { url, style: size, autoplay: true });
+            tmpResult2 = jsx(APNGPlayer.APNGPlayer, { url, style: size, autoplay: true });
           }
-          obj4 = PlatformUtils;
         }
-        const obj7 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
         const obj8 = { uri: url };
-        obj7.source = obj8;
-        obj7.style = size;
-        obj7.enableAnimation = animated;
-        tmpResult = jsx(FastImageDefault, { source: null, style: null, resizeMode: "contain", enableAnimation: null });
+        tmpResult2 = jsx(FastImageDefault, {
+          source: obj8,
+          style: size,
+          resizeMode: "contain",
+          enableAnimation: animated,
+        });
       }
-      obj.children = tmpResult;
       return (
-        <View style={null} aria-hidden>
-          {null}
+        <View style={items} aria-hidden>
+          {tmpResult2}
         </View>
       );
     };
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/badges/native/BadgeArtImage.tsx");
+
+export default tmp3;
 export const COMPLEX_BADGE_ASPECT_RATIO = 1.56;

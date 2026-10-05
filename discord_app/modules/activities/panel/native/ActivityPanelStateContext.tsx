@@ -1,29 +1,27 @@
 // discord_app/modules/activities/panel/native/ActivityPanelStateContext.tsx
-import noop from "../../../../../_runtime/metro/00019__.js";
+import ActivityPanelConstants from "../ActivityPanelConstants.tsx";
+import react from "../../../../../_runtime/00019_react.js";
+import "ReanimatedHelperTypes";
+import ReanimatedHelperTypes_mod from "../../../reanimated/ReanimatedHelperTypes.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
+let ReanimatedHelperTypes;
 const obj = {
-  mode: fn(8705).ActivityPanelModes.PANEL,
+  mode: ActivityPanelConstants.ActivityPanelModes.PANEL,
   setMode() {
     const error = new Error("ActivityPanelStateContextType.Provider.setMode: not called within a context provider");
     throw error;
   },
   wrapperDimensions: { width: 9, height: 16, isLandscape: false, isWindowLandscape: false },
-  pipState: null,
-  pipAvoidanceSpecs: null,
-  wrapperOffset: null,
-  useActivityWebViewLock: null,
+  pipState: ReanimatedHelperTypes.createFakeSharedValue({ x: -1, y: -1 }),
+  pipAvoidanceSpecs: ReanimatedHelperTypes.createFakeSharedValue({ top: 0, bottom: 0 }),
+  wrapperOffset: ReanimatedHelperTypes.createFakeSharedValue({ x: 0, y: 0, gestureActive: false }),
+  useActivityWebViewLock() {
+    return true;
+  },
 };
-let ReanimatedHelperTypes = fn(6571);
-obj.pipState = ReanimatedHelperTypes.createFakeSharedValue({ x: -1, y: -1 });
-ReanimatedHelperTypes = fn(6571);
-obj.pipAvoidanceSpecs = ReanimatedHelperTypes.createFakeSharedValue({ top: 0, bottom: 0 });
-ReanimatedHelperTypes = fn(6571);
-obj.wrapperOffset = ReanimatedHelperTypes.createFakeSharedValue({ x: 0, y: 0, gestureActive: false });
-obj.useActivityWebViewLock = function useActivityWebViewLock() {
-  return true;
-};
-const context = noop.createContext(obj);
-const size = fn(2);
+ReanimatedHelperTypes = ReanimatedHelperTypes_mod;
+const context = react.createContext(obj);
 const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelStateContext.tsx");
 
 export default context;

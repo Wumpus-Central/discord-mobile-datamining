@@ -1,50 +1,57 @@
 // discord_app/lib/PlainRecord.tsx
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import discord_common_shallowEqual from "../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import shallowEqual from "../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import js_shim_PlainRecord from "../../discord_common/js/packages/libdiscore/js_shim/js/PlainRecord.tsx";
 import SetUtils from "../../discord_common/js/shared/utils/SetUtils.tsx";
-import PlainRecord from "../../discord_common/js/packages/libdiscore/js_shim/js/PlainRecord.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const discord_common_shallowEqualDefault = discord_common_shallowEqual;
+const shallowEqualDefault = shallowEqual;
+const PlainRecord = js_shim_PlainRecord;
 
-require = fn;
 function isValueEqual(getTime, getTime2) {
   if (null != getTime) {
+    let tmp10;
     if (null != getTime2) {
-      let tmp11 = getTime === getTime2;
-      if (!tmp11) {
+      tmp10 = getTime === getTime2;
+      if (!tmp10) {
+        let areSetsEqualResult;
         const _Date = Date;
-        if (!(getTime instanceof Date)) {
-          const _Set = Set;
-          if (getTime instanceof Set) {
-            const _Set2 = Set;
-            if (getTime2 instanceof Set) {
-              let areSetsEqualResult = SetUtils.areSetsEqual(getTime, getTime2);
-            }
-          }
-          const _Array = Array;
-          if (Array.isArray(getTime)) {
-            const _Array2 = Array;
-            if (Array.isArray(getTime2)) {
-              areSetsEqualResult = discord_common_shallowEqual.areArraysShallowEqual(getTime, getTime2);
-            }
-          }
-          areSetsEqualResult = typeof getTime === "object";
-          if (typeof getTime === "object") {
-            areSetsEqualResult = typeof getTime2 === "object";
-          }
-          if (areSetsEqualResult) {
-            areSetsEqualResult = discord_common_shallowEqualDefault(getTime, getTime2);
-          }
-        } else {
+        if (getTime instanceof Date) {
           const _Date2 = Date;
+          if (getTime2 instanceof Date) {
+            const time = getTime.getTime();
+            areSetsEqualResult = time === getTime2.getTime();
+          }
+          tmp10 = areSetsEqualResult;
         }
-        const time = getTime.getTime();
-        areSetsEqualResult = time === getTime2.getTime();
+        const _Set = Set;
+        if (getTime instanceof Set) {
+          const _Set2 = Set;
+          if (getTime2 instanceof Set) {
+            const obj2 = SetUtils;
+            areSetsEqualResult = obj2.areSetsEqual(getTime, getTime2);
+          }
+        }
+        const _Array = Array;
+        if (Array.isArray(getTime)) {
+          const _Array2 = Array;
+          if (Array.isArray(getTime2)) {
+            const obj = shallowEqual;
+            areSetsEqualResult = obj.areArraysShallowEqual(getTime, getTime2);
+          }
+        }
+        areSetsEqualResult = typeof getTime === "object";
+        if (typeof getTime === "object") {
+          areSetsEqualResult = typeof getTime2 === "object";
+        }
+        if (areSetsEqualResult) {
+          areSetsEqualResult = shallowEqualDefault(getTime, getTime2);
+        }
       }
     }
-    return tmp11;
+    return tmp10;
   }
-  tmp11 = getTime === getTime2;
+  tmp10 = getTime === getTime2;
 }
 function isPlainRecordDataEqual(arg0, arg1) {
   if (arg0 === arg1) {
@@ -64,8 +71,7 @@ function isPlainRecordDataEqual(arg0, arg1) {
     return true;
   }
 }
-const TypeTag = fn(2068).TypeTag;
-const size = fn(2);
+const TypeTag = js_shim_PlainRecord.TypeTag;
 const result = size.fileFinishedImporting("lib/PlainRecord.tsx");
 
 export default PlainRecord;
@@ -80,7 +86,7 @@ export const set = function set(arg0, arg1, getTime2) {
   }
   return tmp;
 };
-export const merge = function merge(arg0, arg1) {
+export const merge = function merge(arg0, getTime2) {
   let tmp2 = arg0;
   let tmp3 = null;
   let tmp4 = null;
@@ -89,11 +95,8 @@ export const merge = function merge(arg0, arg1) {
     let tmp6 = tmp3;
     tmp4 = tmp3;
     while (keys[tmp] !== undefined) {
-      let tmp15 = arg1[tmp7];
-      let tmp9 = undefined === tmp15;
-      if (!tmp9) {
-        tmp9 = isValueEqual(tmp14, tmp15);
-      }
+      let tmp15 = getTime2[tmp7];
+      let tmp9 = undefined === tmp15 || isValueEqual(tmp14, tmp15);
       tmp3 = tmp6;
       if (tmp9) {
         continue;
@@ -120,10 +123,11 @@ export const merge = function merge(arg0, arg1) {
 export const tryReuseExistingInPlacePlainRecord = function tryReuseExistingInPlacePlainRecord(arg0, arg1, arg2) {
   let tmp = arg1;
   let tmp3 = null == arg1;
+  const tmp2 = _modDef38;
   if (!tmp3) {
     tmp3 = tmp[TypeTag] === arg0;
   }
-  _modDef38(tmp3, "Existing record type does not match the expected type");
+  tmp2(tmp3, "Existing record type does not match the expected type");
   if (null == tmp) {
     arg2[TypeTag] = arg0;
     tmp = arg2;
@@ -137,7 +141,6 @@ export const objectIsPlainRecordOfType = function objectIsPlainRecordOfType(arg0
   }
   if (tmp) {
     tmp = (TypeTag in obj && obj[TypeTag]) === arg0;
-    const tmp2 = TypeTag in obj && obj[TypeTag];
   }
   return tmp;
 };

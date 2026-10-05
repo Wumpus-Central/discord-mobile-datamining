@@ -1,8 +1,11 @@
 // discord_app/modules/application_account_linking/native/IncentivizedAccountLinkConfirmationBottomSheet.tsx
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import Constants from "../../../Constants.tsx";
+import intl4 from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import _modDef3269 from "../IncentivizedAccountLinking.messages.js";
@@ -11,27 +14,33 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import APNGDecorationNativeComponentDefault from "../../../../discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx";
-import PromoSheet from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
-import WindowLaunchIcon from "../../../design/components/Icon/native/redesign/generated/WindowLaunchIcon.tsx";
+import PromoSheet2 from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
+import WindowLaunchIcon2 from "../../../design/components/Icon/native/redesign/generated/WindowLaunchIcon.tsx";
 import _modDef15741 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
 import _modDef15742 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x_animated.png.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const Image = fn(17).Image;
-const HelpdeskArticles = fn(1085).HelpdeskArticles;
-const jsx = fn(21).jsx;
+const Image = react_native.Image;
+const HelpdeskArticles = Constants.HelpdeskArticles;
+const jsx = Fragment.jsx;
 let c7 = 150;
-const ReactCompilerGating = fn(558);
-let size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/application_account_linking/native/IncentivizedAccountLinkConfirmationBottomSheet.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(11);
+      let tmp10;
+      let tmp22;
+      let tmp26;
+      let tmp27;
+      let tmp31;
+      let tmp4;
+      let tmp5;
+      let tmp8;
+      let tmp9;
+      let useReducedMotion;
+      let obj = react2;
+      const cResult = obj.c(11);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
         const fn = function u() {
@@ -44,162 +53,172 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function _() {
-          ActionSheetActionCreatorsDefault.hideActionSheet();
-          const obj2 = LinkingDefault;
-          obj2.openURL(HelpdeskUtilsDefault.getArticleURL(constants.IN_GAME_FEATURES));
+          const obj = ActionSheetActionCreatorsDefault;
+          obj.hideActionSheet();
+          const openURL = LinkingDefault.openURL;
+          LinkingDefault;
+          const obj2 = HelpdeskUtilsDefault;
+          openURL(obj2.getArticleURL(constants.IN_GAME_FEATURES));
         };
         cResult[2] = fn2;
-        let tmp8 = fn2;
+        tmp8 = fn2;
       } else {
         tmp8 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const fn3 = function f() {
-          ActionSheetActionCreatorsDefault.hideActionSheet();
+          const obj = ActionSheetActionCreatorsDefault;
+          obj.hideActionSheet();
         };
         cResult[3] = fn3;
-        let tmp9 = fn3;
+        tmp9 = fn3;
       } else {
         tmp9 = cResult[3];
       }
       if (cResult[4] !== stateFromStores) {
+        let tmp11Result;
         if (stateFromStores) {
-          let obj2 = { source: null, style: null };
+          size = { width: v150, height: v150 };
+          tmp11Result = <Image source={{ uri: _modDef15741 }} style={size} />;
           const obj3 = { uri: _modDef15741 };
-          obj2.source = obj3;
-          const size = { width: v150, height: v150 };
-          obj2.style = size;
-          let tmp11Result = <Image source={null} style={null} />;
         } else {
+          const tmpResult2 = PlatformUtils;
           if (tmpResult2.isAndroid()) {
-            const obj4 = { url: _modDef15742, style: null };
+            APNGDecorationNativeComponentDefault;
             const size1 = { width: v150, height: v150 };
-            obj4.style = size1;
-            tmp11Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef15742, style: null });
-            const tmp12Result = APNGDecorationNativeComponentDefault;
+            tmp11Result = <tmp12Result url={_modDef15742} style={size1} />;
           } else {
-            const obj5 = { source: null, resizeMode: "contain", style: null };
             const obj6 = { uri: _modDef15742 };
-            obj5.source = obj6;
+            FastImageDefault;
             const size2 = { width: v150, height: v150 };
-            obj5.style = size2;
-            tmp11Result = jsx(FastImageDefault, { source: null, resizeMode: "contain", style: null });
-            const tmp12Result2 = FastImageDefault;
+            tmp11Result = <tmp12Result2 source={obj6} resizeMode="contain" style={size2} />;
           }
-          tmpResult2 = PlatformUtils;
         }
         cResult[4] = stateFromStores;
         cResult[5] = tmp11Result;
+        tmp10 = tmp11Result;
       } else {
-        const _Symbol = Symbol;
-        if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj7 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
-          const intl = util.intl;
-          obj7.text = intl.string(util.t.aRIFWD);
-          const obj8 = { size: "sm", color: nativeDefault.colors.WHITE };
-          obj7.icon = jsx(WindowLaunchIcon.WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-          obj7.onPress = tmp8;
-          const tmp26 = jsx(components_Button_Button.Button, {
-            text: null,
-            icon: null,
-            iconPosition: "end",
-            size: "lg",
-            onPress: null,
-          });
-          cResult[6] = tmp26;
-          let tmp23 = tmp26;
-        } else {
-          tmp23 = cResult[6];
-        }
-        const _Symbol2 = Symbol;
-        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl2 = util.intl;
-          const stringResult = intl2.string(_modDef3269.ublzTG);
-          const intl3 = util.intl;
-          const stringResult1 = intl3.string(_modDef3269.JgM2xu);
-          cResult[7] = stringResult;
-          cResult[8] = stringResult1;
-          let tmp28 = stringResult1;
-          let tmp27 = stringResult;
-        } else {
-          tmp27 = cResult[7];
-          tmp28 = cResult[8];
-        }
-        if (cResult[9] !== cResult[5]) {
-          const obj9 = { title: tmp27, description: tmp28, actions: tmp23, illustration: tmp10, onDismiss: tmp9 };
-          const tmp34 = jsx(PromoSheet.PromoSheet, {
-            title: tmp27,
-            description: tmp28,
-            actions: tmp23,
-            illustration: tmp10,
-            onDismiss: tmp9,
-          });
-          cResult[9] = tmp10;
-          cResult[10] = tmp34;
-          let tmp32 = tmp34;
-        } else {
-          tmp32 = cResult[10];
-        }
-        return tmp32;
+        tmp10 = cResult[5];
       }
-      const tmpResult = initialize;
+      if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+        const Button = components_Button_Button.Button;
+        const intl = intl4.intl;
+        ({ size: "sm", color: nativeDefault.colors.WHITE });
+        const WindowLaunchIcon = WindowLaunchIcon2.WindowLaunchIcon;
+        const tmp25 = (
+          <Button text={intl.string(intl4.t.aRIFWD)} icon={null} iconPosition="end" size="lg" onPress={tmp8} />
+        );
+        cResult[6] = tmp25;
+        tmp22 = tmp25;
+      } else {
+        tmp22 = cResult[6];
+      }
+      if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl2 = intl4.intl;
+        const stringResult = intl2.string(_modDef3269.ublzTG);
+        const intl3 = intl4.intl;
+        const stringResult1 = intl3.string(_modDef3269.JgM2xu);
+        cResult[7] = stringResult;
+        cResult[8] = stringResult1;
+        tmp27 = stringResult1;
+        tmp26 = stringResult;
+      } else {
+        tmp26 = cResult[7];
+        tmp27 = cResult[8];
+      }
+      if (cResult[9] !== tmp10) {
+        const tmp33 = jsx(PromoSheet2.PromoSheet, {
+          title: tmp26,
+          description: tmp27,
+          actions: tmp22,
+          illustration: tmp10,
+          onDismiss: tmp9,
+        });
+        cResult[9] = tmp10;
+        cResult[10] = tmp33;
+        tmp31 = tmp33;
+      } else {
+        tmp31 = cResult[10];
+      }
+      return tmp31;
     }
   : () => {
+      let WindowLaunchIcon;
+      let intl;
+      let intl2;
+      let intl3;
+      let obj8;
+      let tmp3Result;
+      let tmp8;
+      let tmp9;
+      let tmp9Result;
+      let useReducedMotion;
+      let obj = get_initialized;
       const items = [AccessibilityStore];
       if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
-        let obj2 = { source: null, style: null };
+        size = { width: v150, height: v150 };
+        tmp3Result = <Image source={{ uri: _modDef15741 }} style={size} />;
+        tmp8 = importDefault;
+        tmp9 = jsx;
         const obj3 = { uri: _modDef15741 };
-        obj2.source = obj3;
-        const size = { width: v150, height: v150 };
-        obj2.style = size;
-        let tmp3Result = <Image source={null} style={null} />;
-        let tmp8 = importDefault;
-        let tmp9 = jsx;
       } else {
+        const tmpResult = PlatformUtils;
         if (tmpResult.isAndroid()) {
-          const obj4 = { url: _modDef15742, style: null };
+          APNGDecorationNativeComponentDefault;
           const size1 = { width: v150, height: v150 };
-          obj4.style = size1;
-          tmp3Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef15742, style: null });
+          tmp3Result = <tmp4Result url={_modDef15742} style={size1} />;
           tmp8 = importDefault;
           tmp9 = jsx;
-          const tmp4Result = APNGDecorationNativeComponentDefault;
         } else {
-          const obj5 = { source: null, resizeMode: "contain", style: null };
           const obj6 = { uri: _modDef15742 };
-          obj5.source = obj6;
+          FastImageDefault;
           const size2 = { width: v150, height: v150 };
-          obj5.style = size2;
-          tmp3Result = jsx(FastImageDefault, { source: null, resizeMode: "contain", style: null });
+          tmp3Result = <tmp4Result2 source={obj6} resizeMode="contain" style={size2} />;
           tmp8 = importDefault;
           tmp9 = jsx;
-          const tmp4Result2 = FastImageDefault;
         }
-        tmpResult = PlatformUtils;
       }
-      const obj7 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
-      const intl = util.intl;
-      obj7.text = intl.string(util.t.aRIFWD);
-      obj = initialize;
-      obj7.icon = tmp9(WindowLaunchIcon.WindowLaunchIcon, { size: "sm", color: tmp8(587).colors.WHITE });
-      obj7.onPress = function onPress() {
-        ActionSheetActionCreatorsDefault.hideActionSheet();
-        const obj2 = LinkingDefault;
-        obj2.openURL(HelpdeskUtilsDefault.getArticleURL(constants.IN_GAME_FEATURES));
+      const obj7 = {
+        text: intl.string(intl4.t.aRIFWD),
+        icon: tmp9(WindowLaunchIcon, obj8),
+        iconPosition: "end",
+        size: "lg",
+        onPress() {
+          const obj = ActionSheetActionCreatorsDefault;
+          obj.hideActionSheet();
+          const openURL = LinkingDefault.openURL;
+          LinkingDefault;
+          const obj2 = HelpdeskUtilsDefault;
+          openURL(obj2.getArticleURL(constants.IN_GAME_FEATURES));
+        },
       };
-      const obj8 = { size: "sm", color: tmp8(587).colors.WHITE };
-      const obj9 = { title: null, description: null, actions: null, illustration: null, onDismiss: null };
-      const intl2 = util.intl;
-      obj9.title = intl2.string(tmp8(3269).ublzTG);
-      const intl3 = util.intl;
-      obj9.description = intl3.string(tmp8(3269).JgM2xu);
-      obj9.actions = tmp9(components_Button_Button.Button, obj7);
-      obj9.illustration = tmp3Result;
-      obj9.onDismiss = function onDismiss() {
-        ActionSheetActionCreatorsDefault.hideActionSheet();
+      const Button = components_Button_Button.Button;
+      intl = intl4.intl;
+      obj8 = { size: "sm", color: tmp8(587).colors.WHITE };
+      WindowLaunchIcon = WindowLaunchIcon2.WindowLaunchIcon;
+      const obj9 = {
+        title: intl2.string(tmp8(3269).ublzTG),
+        description: intl3.string(tmp8(3269).JgM2xu),
+        actions: tmp9Result,
+        illustration: tmp3Result,
+        onDismiss() {
+          const obj = ActionSheetActionCreatorsDefault;
+          obj.hideActionSheet();
+        },
       };
-      return tmp9(PromoSheet.PromoSheet, obj9);
+      tmp9Result = tmp9(Button, obj7);
+      const PromoSheet = PromoSheet2.PromoSheet;
+      intl2 = intl4.intl;
+      intl3 = intl4.intl;
+      return tmp9(PromoSheet, obj9);
     };
+let size = size_mod;
+const result = size.fileFinishedImporting(
+  "modules/application_account_linking/native/IncentivizedAccountLinkConfirmationBottomSheet.tsx",
+);
+
+export default tmp3;

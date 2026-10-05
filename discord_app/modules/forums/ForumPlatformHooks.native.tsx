@@ -2,13 +2,10 @@
 import NavigationRouteUtils from "../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../main_tabs_v2/RootNavigationRef.native.tsx";
 import ForumChannelSeenManagerDefault from "tracking/ForumChannelSeenManager.tsx";
-import noop from "../../../_runtime/metro/00019__.js";
+import react from "../../../_runtime/00019_react.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/forums/ForumPlatformHooks.native.tsx");
-
-export default {
+let obj = {
   useForumChannelSeenManager(guildId) {
     guildId = guildId.guildId;
     const channelId = guildId.channelId;
@@ -16,25 +13,24 @@ export default {
     const ref = callback.useRef(null);
     const items = [channelId];
     callback = callback.useCallback(() => {
-      const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+      const obj = RootNavigationRef;
+      const rootNavigationRef = obj.getRootNavigationRef();
       if (null != rootNavigationRef) {
         if (rootNavigationRef.isReady()) {
           const currentRoute = rootNavigationRef.getCurrentRoute();
-          const coerceChannelRouteResult = NavigationRouteUtils.coerceChannelRoute(currentRoute);
-          let tmp5 = null != coerceChannelRouteResult;
-          if (tmp5) {
-            tmp5 = coerceChannelRouteResult.params.channelId === channelId;
-          }
+          const tmpResult = NavigationRouteUtils;
+          const coerceChannelRouteResult = tmpResult.coerceChannelRoute(currentRoute);
           const current = ref.current;
+          const tmp5 = null != coerceChannelRouteResult && coerceChannelRouteResult.params.channelId === channelId;
           if (current != null) {
             const result = current.handleReactNavigationFocus(tmp5);
           }
-          const tmpResult = NavigationRouteUtils;
         }
       }
     }, items);
     const effect = callback.useEffect(() => {
-      const rootNavigationRef = guildId(ref[1]).getRootNavigationRef();
+      const obj = guildId(ref[1]);
+      const rootNavigationRef = obj.getRootNavigationRef();
       if (null != rootNavigationRef) {
         if (rootNavigationRef.isReady()) {
           rootNavigationRef.addListener("state", callback);
@@ -43,12 +39,13 @@ export default {
           };
         }
       }
-      const obj = guildId(ref[1]);
     });
     const items1 = [channelId, guildId, callback];
     const layoutEffect = callback.useLayoutEffect(() => {
-      ref.current = new ForumChannelSeenManagerDefault({ guildId, channelId });
+      const obj = { guildId, channelId };
+      ref.current = new ForumChannelSeenManagerDefault(obj);
       let current = ref.current;
+      new ForumChannelSeenManagerDefault(obj);
       current.initialize();
       callback();
       return () => {
@@ -62,3 +59,6 @@ export default {
     return ref.current;
   },
 };
+let result = size.fileFinishedImporting("modules/forums/ForumPlatformHooks.native.tsx");
+
+export default obj;

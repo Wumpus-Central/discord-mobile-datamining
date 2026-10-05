@@ -1,29 +1,33 @@
 // discord_app/stores/LayerStore.tsx
-import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
+import size from "../../_runtime/metro/00002__.js";
+
+let closure_0;
 
 function handlePopAllLayers() {
   closure_0 = [];
 }
-let closure_0 = [];
-const Store = initializeDefault.Store;
-class LayerStore extends Store {}
+const React = [];
+const Store = get_initializedDefault.Store;
+class LayerStore extends Store {
+  hasLayers() {
+    return closure_0.length > 0;
+  }
+  getLayers() {
+    return closure_0;
+  }
+}
 const prototype = LayerStore.prototype;
-prototype["hasLayers"] = function hasLayers() {
-  return closure_0.length > 0;
-};
-prototype["getLayers"] = function getLayers() {
-  return closure_0;
-};
 LayerStore.displayName = "LayerStore";
-const layerStore = new LayerStore(DispatcherDefault, {
+const obj = {
   LAYER_PUSH: function handleAddLayer(component) {
     component = component.component;
     if (closure_0.indexOf(component) >= 0) {
       return false;
     } else {
       const items = [];
-      items[HermesBuiltin.arraySpread(closure_0, 0)] = component;
+      items[HermesBuiltin.arraySpread(items, closure_0, 0)] = component;
       closure_0 = items;
     }
   },
@@ -37,8 +41,8 @@ const layerStore = new LayerStore(DispatcherDefault, {
   LAYER_POP_ALL: handlePopAllLayers,
   LOGOUT: handlePopAllLayers,
   NOTIFICATION_CLICK: handlePopAllLayers,
-});
-const size = fn(2);
+};
+const layerStore = new LayerStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("stores/LayerStore.tsx");
 
 export default layerStore;

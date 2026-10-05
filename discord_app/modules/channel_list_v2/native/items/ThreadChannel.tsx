@@ -1,11 +1,15 @@
 // discord_app/modules/channel_list_v2/native/items/ThreadChannel.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../../Constants.tsx";
+import ThreadConstants from "../../../threads/ThreadConstants.tsx";
 import transitionToChannel from "../../../routing/transitionToChannel.tsx";
+import ReadStateConstants from "../../../read_states/ReadStateConstants.tsx";
 import inlineStyles from "../../../../../_runtime/08136_inlineStyles.js";
 import showLongPressForumPostActionSheetDefault from "../../../action_sheet/native/components/showLongPressForumPostActionSheet.tsx";
 import showThreadLongPressActionSheetDefault from "../../../threads/native/components/showThreadLongPressActionSheet.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
 import JoinedThreadsStore from "../../../threads/JoinedThreadsStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
@@ -14,34 +18,48 @@ import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 import SortedVoiceStateStore from "../../../../stores/views/SortedVoiceStateStore.tsx";
+import RedesignChannelListConstants from "../RedesignChannelListConstants.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
 const inlineStylesDefault = inlineStyles;
+let channel, tmp4;
 
-require = fn;
-const View = fn(17).View;
-const RedesignChannelListConstants = fn(11697);
+let CHANNEL_MARGIN_VERTICAL;
+let closure_17;
+let closure_18;
+let closure_19;
+let map1;
+let obj2;
+let obj3;
+let size;
+let react = react_mod;
+const View = react_native.View;
 ({ getScaledChannelRowHeight: map1, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
-const Permissions = fn(1085).Permissions;
-const UnreadSetting = fn(5072).UnreadSetting;
-let closure_16 = fn(1125).OpenThreadAnalyticsLocations;
-const jsxProd = fn(21);
-({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-const createStyles = fn(4890);
+const Permissions = Constants.Permissions;
+const UnreadSetting = ReadStateConstants.UnreadSetting;
+let closure_16 = ThreadConstants.OpenThreadAnalyticsLocations;
+({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = Fragment);
+let createStyles = createStyles_mod;
 let obj = {
-  container: {
-    marginVertical: CHANNEL_MARGIN_VERTICAL,
-    marginStart: 2,
-    marginEnd: 8,
-    borderRadius: nativeDefault.radii.md,
-    flex: 1,
-  },
+  container: obj2,
   threadRow: { flex: 0, flexDirection: "row", alignSelf: "stretch" },
   unreadContainer: { width: 8, alignItems: "flex-start", justifyContent: "flex-start" },
   spineSpacer: { width: 28 },
-  unreadIcon: null,
-  threadLineSegment: null,
+  unreadIcon: size,
+  threadLineSegment: obj3,
 };
-let size = {
+obj2 = {
+  marginVertical: CHANNEL_MARGIN_VERTICAL,
+  marginStart: 2,
+  marginEnd: 8,
+  borderRadius: nativeDefault.radii.md,
+  flex: 1,
+};
+createStyles = createStyles.createStyles;
+size = {
   width: 8,
   height: 8,
   borderRadius: nativeDefault.radii.xs,
@@ -49,33 +67,24 @@ let size = {
   marginLeft: -4,
   marginTop: 12,
 };
-obj.unreadIcon = size;
-let obj3 = {
-  marginVertical: CHANNEL_MARGIN_VERTICAL,
-  marginStart: 2,
-  marginEnd: 8,
-  borderRadius: nativeDefault.radii.md,
-  flex: 1,
-};
-obj.threadLineSegment = {
-  backgroundColor: nativeDefault.colors.SPINE_DEFAULT,
-  width: 2,
-  position: "absolute",
-  left: 23,
-};
-let closure_20 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
-let closure_21 = noop.memo(
+obj3 = { backgroundColor: nativeDefault.colors.SPINE_DEFAULT, width: 2, position: "absolute", left: 23 };
+let closure_20 = createStyles(obj);
+let memo = react.memo;
+let ReactCompilerGating = ReactCompilerGating_mod;
+let closure_21 = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (color) => {
-        const cResult = c.c(7);
+        let tmp5;
+        let tmp6;
+        const obj = react2;
+        const cResult = obj.c(7);
         color = color.color;
-        const sum = __initData2(color.fontScale) / 2 - 16 + 2;
+        const sum = map1(color.fontScale) / 2 - 16 + 2;
         if (cResult[0] !== sum) {
           const rect = { position: "absolute", left: 23, top: sum };
           cResult[0] = sum;
           cResult[1] = rect;
-          let tmp5 = rect;
+          tmp5 = rect;
         } else {
           tmp5 = cResult[1];
         }
@@ -84,41 +93,64 @@ let closure_21 = noop.memo(
             fill: color,
             d: "M11 16C11.5523 16 12 15.5523 12 15C12 14.4477 11.5523 14 11 14H8C2.47715 14 2 8.52285 2 3V0H0V3H0.00542736C0 9.5 1.49449 16 8 16H11Z",
           };
-          const tmp8 = constants(inlineStyles.Path, obj2);
+          const tmp8 = closure_17(inlineStyles.Path, obj2);
           cResult[2] = color;
           cResult[3] = tmp8;
-          let tmp6 = tmp8;
+          tmp6 = tmp8;
         } else {
           tmp6 = cResult[3];
         }
         if (cResult[4] === tmp5) {
+          let tmp9;
           if (cResult[5] === tmp6) {
-            let tmp9 = cResult[6];
+            tmp9 = cResult[6];
           }
           return tmp9;
         }
-        const tmp10 = constants(inlineStylesDefault, { width: 12, height: 16, style: tmp5, children: tmp6 });
+        const tmp10 = closure_17(inlineStylesDefault, { width: 12, height: 16, style: tmp5, children: tmp6 });
         cResult[4] = tmp5;
         cResult[5] = tmp6;
         cResult[6] = tmp10;
         tmp9 = tmp10;
       }
     : (arg0) => {
+        let color;
+        let fontScale;
+        let rect;
         ({ color, fontScale } = arg0);
-        const size = { width: 12, height: 16, style: null, children: null };
-        const rect = { position: "absolute", left: 23, top: __initData2(fontScale) / 2 - 16 + 2 };
-        size.style = rect;
-        size.children = constants(inlineStyles.Path, {
-          fill: color,
-          d: "M11 16C11.5523 16 12 15.5523 12 15C12 14.4477 11.5523 14 11 14H8C2.47715 14 2 8.52285 2 3V0H0V3H0.00542736C0 9.5 1.49449 16 8 16H11Z",
-        });
-        return constants(inlineStylesDefault, size);
+        size = {
+          width: 12,
+          height: 16,
+          style: rect,
+          children: closure_17(inlineStyles.Path, {
+            fill: color,
+            d: "M11 16C11.5523 16 12 15.5523 12 15C12 14.4477 11.5523 14 11 14H8C2.47715 14 2 8.52285 2 3V0H0V3H0.00542736C0 9.5 1.49449 16 8 16H11Z",
+          }),
+        };
+        rect = { position: "absolute", left: 23, top: map1(fontScale) / 2 - 16 + 2 };
+        const tmp = inlineStylesDefault;
+        return closure_17(tmp, size);
       },
 );
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      const cResult = channel(ownerId[18]).c(76);
+      let first;
+      let hasVideo;
+      let isLocked;
+      let isMentionLowImportance;
+      let mentionCount;
+      let muted;
+      let ownerId;
+      let parentChannel;
+      let selected;
+      let threadCount;
+      let threadId;
+      let threadIndex;
+      let unread;
+      let voiceStates;
+      let obj = channel(ownerId[18]);
+      const cResult = obj.c(76);
       channel = channel.channel;
       ({ selected, threadIndex } = channel);
       ({ threadId, threadCount } = channel);
@@ -132,8 +164,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       if (channel != null) {
         parent_id = channel.parent_id;
       }
-      let obj = channel(ownerId[18]);
-      const fontScale = channel(ownerId[20]).useFontScale();
+      const tmpResult = channel(ownerId[20]);
+      const fontScale = tmpResult.useFontScale();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [
           ChannelStore,
@@ -146,17 +178,19 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           PermissionStore,
         ];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === channel) {
         if (cResult[2] === id) {
           if (cResult[3] === ownerId) {
+            let tmp17;
             if (cResult[4] === parent_id) {
-              let tmp17 = cResult[5];
+              tmp17 = cResult[5];
             }
-            const stateFromStoresObject = tmp(tmp2[21]).useStateFromStoresObject(first, tmp17);
+            const tmpResult2 = channel(ownerId[21]);
+            const stateFromStoresObject = tmpResult2.useStateFromStoresObject(first, tmp17);
             const user = stateFromStoresObject.user;
             parentChannel = stateFromStoresObject.parentChannel;
             ({ voiceStates, hasVideo, isLocked, muted, unread, mentionCount, isMentionLowImportance } =
@@ -206,7 +240,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                   selectedVoiceChannelId: null,
                 };
                 hasUnreadResult = !isMutedResult;
-                if (!isMutedResult) {
+                if (hasUnreadResult) {
                   tmp4 = closure_8;
                   hasUnreadResult = closure_8.hasUnread(tmp);
                 }
@@ -217,7 +251,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                 return obj;
               }
             }
-            const obj2 = {
+            let obj2 = {
               top: num4,
               height: str,
               borderTopRightRadius: num7,
@@ -232,7 +266,6 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[10] = num9;
             cResult[11] = num10;
             cResult[12] = obj2;
-            const tmpResult2 = tmp(tmp2[21]);
           }
         }
       }
@@ -253,7 +286,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             selectedVoiceChannelId: null,
           };
           hasUnreadResult = !isMutedResult;
-          if (!isMutedResult) {
+          if (hasUnreadResult) {
             tmp4 = closure_8;
             hasUnreadResult = closure_8.hasUnread(tmp);
           }
@@ -270,9 +303,27 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = parent_id;
       cResult[5] = L;
       tmp17 = L;
-      const tmpResult = channel(ownerId[20]);
     }
   : (channel) => {
+      let hasVideo;
+      let isLocked;
+      let isMentionLowImportance;
+      let items5;
+      let items6;
+      let mentionCount;
+      let muted;
+      let obj13;
+      let obj14;
+      let selected;
+      let selectedVoiceChannelId;
+      let threadIndex;
+      let threadLineSegment;
+      let tmp15Result;
+      let tmp15Result5;
+      let tmp21;
+      let tmp4Result;
+      let unread;
+      let voiceStates;
       channel = channel.channel;
       ({ selected, threadIndex } = channel);
       const threadCount = channel.threadCount;
@@ -280,8 +331,9 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       let fontScale;
       let user;
       let parentChannel;
+      const threadId = channel.threadId;
       const tmp = closure_20();
-      noop = tmp;
+      react = tmp;
       const id = channel.id;
       let ownerId;
       if (channel != null) {
@@ -291,9 +343,9 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       if (channel != null) {
         parent_id = channel.parent_id;
       }
-      let obj = threadCount;
-      fontScale = channel(threadCount[20]).useFontScale();
-      const obj2 = channel(threadCount[20]);
+      let obj = channel(threadCount[20]);
+      fontScale = obj.useFontScale();
+      let obj2 = channel(threadCount[21]);
       const items = [
         parent_id,
         ownerId,
@@ -304,7 +356,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         parentChannel,
         fontScale,
       ];
-      const stateFromStoresObject = channel(threadCount[21]).useStateFromStoresObject(items, () => {
+      const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => {
+        let hasUnreadResult;
         const isMutedResult = JoinedThreadsStore.isMuted(id);
         const obj = {
           user: UserStore.getUser(ownerId),
@@ -313,19 +366,12 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           hasVideo: VoiceStateStore.hasVideo(channel.id),
           isLocked: !PermissionStore.can(Permissions.CONNECT, channel),
           muted: isMutedResult,
-          unread: null,
-          mentionCount: null,
-          isMentionLowImportance: null,
-          selectedVoiceChannelId: null,
+          unread: hasUnreadResult,
+          mentionCount: ReadStateStore.getMentionCount(id),
+          isMentionLowImportance: ReadStateStore.getIsMentionLowImportance(id),
+          selectedVoiceChannelId: SelectedChannelStore.getVoiceChannelId(),
         };
-        let hasUnreadResult = !isMutedResult;
-        if (!isMutedResult) {
-          hasUnreadResult = ReadStateStore.hasUnread(id);
-        }
-        obj.unread = hasUnreadResult;
-        obj.mentionCount = ReadStateStore.getMentionCount(id);
-        obj.isMentionLowImportance = ReadStateStore.getIsMentionLowImportance(id);
-        obj.selectedVoiceChannelId = SelectedChannelStore.getVoiceChannelId();
+        hasUnreadResult = !isMutedResult && ReadStateStore.hasUnread(id);
         return obj;
       });
       user = stateFromStoresObject.user;
@@ -334,7 +380,12 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [threadIndex, threadCount, fontScale, tmp.threadLineSegment];
       ({ isLocked, muted, isMentionLowImportance, selectedVoiceChannelId } = stateFromStoresObject);
       let num = 0;
-      const memo = noop.useMemo(() => {
+      const memo = react.useMemo(() => {
+        let num4;
+        let num5;
+        let num6;
+        let num7;
+        let str;
         const style = [threadLineSegment.threadLineSegment];
         let num = 0;
         const diff = threadCount - 1;
@@ -343,54 +394,51 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj = {
           top: num,
-          height: null,
-          borderTopRightRadius: null,
-          borderTopLeftRadius: null,
-          borderBottomRightRadius: null,
-          borderBottomLeftRadius: null,
+          height: str,
+          borderTopRightRadius: num4,
+          borderTopLeftRadius: num5,
+          borderBottomRightRadius: num6,
+          borderBottomLeftRadius: num7,
         };
-        let str = "100%";
+        str = "100%";
         if (threadIndex === diff) {
           const _Math = Math;
           const _Math2 = Math;
           str = Math.ceil(Math.max(8, 1.2 * fontScale * 8));
         }
-        obj.height = str;
-        let num4 = 0;
+        num4 = 0;
         if (0 === threadIndex) {
           num4 = nativeDefault.radii.round;
         }
-        obj.borderTopRightRadius = num4;
-        let num5 = 0;
+        num5 = 0;
         if (0 === threadIndex) {
           num5 = nativeDefault.radii.round;
         }
-        obj.borderTopLeftRadius = num5;
-        let num6 = 0;
+        num6 = 0;
         if (threadIndex === diff) {
           num6 = nativeDefault.radii.round;
         }
-        obj.borderBottomRightRadius = num6;
-        let num7 = 0;
+        num7 = 0;
         if (threadIndex === diff) {
           num7 = nativeDefault.radii.round;
         }
-        obj.borderBottomLeftRadius = num7;
         style[1] = obj;
-        return constants(View, { style });
+        return closure_17(View, { style });
       }, items1);
       if (null != voiceStates) {
         num = voiceStates.length;
       }
-      let tmp8 = threadIndex;
       const items2 = [channel];
-      const obj3 = channel(threadCount[21]);
       const items3 = [channel, user, parentChannel];
-      const callback = obj4.useCallback(() => {
-        transitionToChannel.transitionToThread(channel, { source: constants.CHANNEL_LIST });
+      const tmp10 = threadIndex(threadCount[22])({ channel, locked: isLocked, video: hasVideo, selected });
+      const callback = obj3.useCallback(() => {
+        const obj = transitionToChannel;
+        const obj2 = { source: constants.CHANNEL_LIST };
+        obj.transitionToThread(channel, obj2);
       }, items2);
       const items4 = [memo, ,];
-      const callback1 = obj4.useCallback(() => {
+      const obj4 = { color: tmp.threadLineSegment.backgroundColor, fontScale };
+      const callback1 = obj3.useCallback(() => {
         if (channel.isForumPost()) {
           if (null != user) {
             if (null != parentChannel) {
@@ -402,100 +450,93 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         }
         showThreadLongPressActionSheetDefault(channel.id);
       }, items3);
-      items4[1] = closure_17(closure_21, { color: tmp.threadLineSegment.backgroundColor, fontScale });
-      const obj6 = { style: tmp.threadRow, children: null };
-      const obj7 = { style: tmp.unreadContainer, children: null };
-      let tmp14Result = unread;
-      if (unread) {
-        const obj8 = { style: tmp.unreadIcon };
-        tmp14Result = closure_17(tmp15, obj8);
+      items4[1] = closure_17(closure_21, obj4);
+      const obj6 = { style: tmp.unreadContainer, children: tmp15Result };
+      tmp15Result = unread;
+      const obj5 = { style: tmp.threadRow, children: items5 };
+      if (tmp15Result) {
+        const obj7 = { style: tmp.unreadIcon };
+        tmp15Result = closure_17(tmp16, obj7);
       }
-      obj7.children = tmp14Result;
-      const items5 = [closure_17(id, obj7), closure_17(id, { style: tmp.spineSpacer })];
-      const obj10 = {
+      items5 = [closure_17(id, obj6), ,];
+      const obj8 = { style: tmp.spineSpacer };
+      items5[1] = closure_17(id, obj8);
+      const obj9 = {
         onPress: callback,
         onLongPress: callback1,
         style: tmp.container,
         accessible: true,
         accessibilityRole: "button",
-        accessibilityLabel: null,
-        accessibilityState: null,
-        channel: null,
-        selected: null,
-        muted: null,
-        unread: null,
-        resolvedUnreadSetting: null,
+        accessibilityLabel: threadIndex(threadCount[26])({ channel, unread, mentionCount }),
+        accessibilityState: { selected },
+        channel,
+        selected,
+        muted,
+        unread,
+        resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES,
         hideIcon: true,
-        channelInfo: null,
-        children: null,
+        channelInfo: tmp15Result5,
+        children: tmp21,
       };
-      const obj5 = { color: tmp.threadLineSegment.backgroundColor, fontScale };
-      const obj9 = { style: tmp.spineSpacer };
-      const tmp9 = threadIndex(obj[22])({ channel, locked: isLocked, video: hasVideo, selected });
-      obj10.accessibilityLabel = tmp8(obj[26])({ channel, unread, mentionCount });
-      obj10.accessibilityState = { selected };
-      obj10.channel = channel;
-      obj10.selected = selected;
-      obj10.muted = muted;
-      obj10.unread = unread;
-      obj10.resolvedUnreadSetting = UnreadSetting.ALL_MESSAGES;
+      const tmp9Result = threadIndex(threadCount[32]);
       if (0 === mentionCount) {
-        let tmp14Result4 = null;
-        if (tmp9) {
-          const obj11 = { userCount: num, video: hasVideo, channel };
-          tmp14Result4 = closure_17(tmp4(obj[27]).ConnectedUserLimit, obj11);
+        let tmp15Result4 = null;
+        if (tmp10) {
+          const obj10 = { userCount: num, video: hasVideo, channel };
+          tmp15Result4 = closure_17(tmp4(tmp5[27]).ConnectedUserLimit, obj10);
         }
-        let tmp14Result5 = tmp14Result4;
+        tmp15Result5 = tmp15Result4;
       } else {
-        const obj12 = { value: mentionCount, isMentionLowImportance };
-        tmp14Result5 = closure_17(tmp4(obj[28]).Badge, obj12);
+        const obj11 = { value: mentionCount, isMentionLowImportance };
+        tmp15Result5 = closure_17(tmp4(tmp5[28]).Badge, obj11);
       }
-      obj10.channelInfo = tmp14Result5;
-      if (0 === voiceStates.length) {
-        const obj13 = { children: null };
-        obj10.children = null;
-        items5[2] = closure_17(tmp8Result, obj10);
-        obj6.children = items5;
-        items4[2] = closure_18(tmp15, obj6);
-        obj13.children = items4;
-        return closure_18(closure_19, obj13);
-      } else {
-        if (selectedVoiceChannelId !== channel.threadId) {
+      tmp21 = null;
+      if (0 !== voiceStates.length) {
+        if (selectedVoiceChannelId !== threadId) {
+          let tmp15Result6;
           if (1 !== voiceStates.length) {
-            const obj14 = { users: null, max: 8, guildId: null, renderIcon: false, noPadding: true };
-            const tmp8Result2 = tmp8(obj[30]);
-            const obj15 = { channels: null, selectedChannelId: null, selectedVoiceChannelId: null, voiceStates: null };
-            const items6 = [channel];
-            obj15.channels = items6;
-            const obj16 = {};
-            obj16[channel.id] = voiceStates;
-            obj15.voiceStates = obj16;
-            obj14.users = tmp4(obj[31]).computeSummarizedVoiceUsers(obj15);
-            obj14.guildId = channel.guild_id;
-            let tmp14Result6 = closure_17(tmp8Result2, obj14);
-            const tmp4Result = tmp4(obj[31]);
+            const obj12 = {
+              users: tmp4Result.computeSummarizedVoiceUsers(obj13),
+              max: 8,
+              guildId: channel.guild_id,
+              renderIcon: false,
+              noPadding: true,
+            };
+            obj13 = { channels: items6, selectedChannelId: null, selectedVoiceChannelId: null, voiceStates: obj14 };
+            items6 = [channel];
+            obj14 = {};
+            obj14[channel.id] = voiceStates;
+            const tmp9Result2 = threadIndex(threadCount[30]);
+            tmp4Result = channel(threadCount[31]);
+            tmp15Result6 = closure_17(tmp9Result2, obj12);
           }
+          tmp21 = tmp15Result6;
         }
-        tmp8 = tmp8(obj[29]);
-        obj = { channel, collapsed: false, voiceStates };
-        tmp14Result6 = closure_17(tmp8, obj);
+        const obj15 = { channel, collapsed: false, voiceStates };
+        tmp15Result6 = closure_17(threadIndex(tmp5[29]), obj15);
       }
-      tmp8Result = tmp8(obj[32]);
+      const obj16 = { children: items4 };
+      items5[2] = closure_17(tmp9Result, obj9);
+      items4[2] = closure_18(id, obj5);
+      return closure_18(closure_19, obj16);
     };
-ReactCompilerGating = fn(558);
-const obj4 = { backgroundColor: nativeDefault.colors.SPINE_DEFAULT, width: 2, position: "absolute", left: 23 };
-size = fn(2);
-const result = size.fileFinishedImporting("modules/channel_list_v2/native/items/ThreadChannel.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (threadId) => {
-      const cResult = threadId(576).c(9);
+      let first;
+      let selected;
+      let threadCount;
+      let threadIndex;
+      let tmp6;
+      const obj = threadId(576);
+      const cResult = obj.c(9);
+      const tmp = threadId;
       threadId = threadId.threadId;
       ({ threadIndex, threadCount, selected } = threadId);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -505,39 +546,48 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = threadId;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const obj = threadId(576);
-      const stateFromStores = threadId(504).useStateFromStores(first, tmp6);
-      if (null == stateFromStores) {
-        return null;
-      } else {
+      const tmpResult = tmp(504);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+      let tmp8 = null;
+      if (null != stateFromStores) {
         if (cResult[3] === stateFromStores) {
           if (cResult[4] === selected) {
             if (cResult[5] === threadCount) {
               if (cResult[6] === threadId) {
+                let tmp9;
+                if (cResult[7] === threadIndex) {
+                  tmp9 = cResult[8];
+                }
+                tmp8 = tmp9;
               }
             }
           }
         }
         const obj2 = { channel: stateFromStores, threadId, threadIndex, threadCount, selected };
-        const tmp11 = closure_17(closure_22, obj2);
+        const tmp12 = closure_17(closure_22, obj2);
         cResult[3] = stateFromStores;
         cResult[4] = selected;
         cResult[5] = threadCount;
         cResult[6] = threadId;
         cResult[7] = threadIndex;
-        cResult[8] = tmp11;
+        cResult[8] = tmp12;
+        tmp9 = tmp12;
       }
-      const tmpResult = threadId(504);
+      return tmp8;
     }
   : (threadId) => {
+      let selected;
+      let threadCount;
+      let threadIndex;
       threadId = threadId.threadId;
       ({ threadIndex, threadCount, selected } = threadId);
       const items = [ChannelStore];
-      const stateFromStores = threadId(504).useStateFromStores(items, () => ChannelStore.getChannel(threadId));
+      const obj = threadId(504);
+      const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(threadId));
       let tmp2 = null;
       if (null != stateFromStores) {
         const obj2 = { channel: stateFromStores, threadId, threadIndex, threadCount, selected };
@@ -545,3 +595,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp2;
     };
+size = size_mod;
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/items/ThreadChannel.tsx");
+
+export default tmp6;

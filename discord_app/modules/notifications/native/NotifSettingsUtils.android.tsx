@@ -1,15 +1,21 @@
 // discord_app/modules/notifications/native/NotifSettingsUtils.android.tsx
-import util from "../../../intl/index.native.tsx";
+import intl2 from "../../../intl/index.native.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
-import NativeNotifSettingsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx";
+import react_nativeDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx";
 import NotificationSettingsConstants from "../NotificationSettingsConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+let map, map1, notifType;
+
+let c3;
+let closure_4;
+let hasOwnProperty;
 function inferImportanceFromBehavior(visibility) {
   if (!("ringtone" in visibility)) {
+    let HIGH;
     if ("popup" !== visibility.visibility) {
       if ("hidden" === visibility.visibility) {
-        let HIGH = constants.MIN;
+        HIGH = constants.MIN;
       } else {
         HIGH = visibility.sound ? constants.DEFAULT : constants.LOW;
       }
@@ -19,53 +25,52 @@ function inferImportanceFromBehavior(visibility) {
   HIGH = constants.HIGH;
 }
 function formatCategory(id) {
-  const obj = { id: id.string_id, name: null };
-  const intl = util.intl;
-  obj.name = intl.string(id.title);
+  let intl;
+  const obj = { id: id.string_id, name: intl.string(id.title) };
+  intl = intl2.intl;
   return obj;
 }
-function formatSetting(item10022, importance) {
+function formatSetting(item10022, arg1) {
+  let intl;
+  let ringtone;
+  let tmp = arg1;
   const obj = {
     id: item10022.string_id,
     groupId: item10022.category,
-    name: null,
-    importance: null,
-    ringtone: null,
-    badge: null,
-    vibrate: null,
+    name: intl.string(item10022.title),
+    importance: tmp,
+    ringtone,
+    badge: item10022.behavior.badge,
+    vibrate: item10022.behavior.vibrate,
   };
-  const intl = util.intl;
-  obj.name = intl.string(item10022.title);
-  if (importance != null) {
-    obj.importance = importance;
-    let ringtone;
-    if ("ringtone" in item10022.behavior) {
-      ringtone = item10022.behavior.ringtone;
-    }
-    obj.ringtone = ringtone;
-    obj.badge = item10022.behavior.badge;
-    obj.vibrate = item10022.behavior.vibrate;
-    return obj;
-  } else {
+  intl = intl2.intl;
+  if (arg1 == null) {
     const behavior = item10022.behavior;
     if (!("ringtone" in behavior)) {
+      let HIGH;
       if ("popup" !== behavior.visibility) {
         if ("hidden" === behavior.visibility) {
-          let HIGH = constants.MIN;
+          HIGH = constants.MIN;
         } else {
           HIGH = behavior.sound ? constants.DEFAULT : constants.LOW;
         }
       }
+      tmp = HIGH;
     }
     HIGH = constants.HIGH;
   }
+  ringtone = undefined;
+  if ("ringtone" in item10022.behavior) {
+    ringtone = item10022.behavior.ringtone;
+  }
+  return obj;
 }
 function buildChannelsAndMapping() {
-  const assignedNotifSettingsAndMappings = map(14290).getAssignedNotifSettingsAndMappings();
-  ({ settings, mappings } = assignedNotifSettingsAndMappings);
-  const obj2 = (function computeInheritedImportances(mappings) {
+  let mappings;
+  let settings;
+  function computeInheritedImportances(mappings) {
     map = new Map();
-    const tmp = NativeNotifSettingsModuleDefault;
+    const tmp = react_nativeDefault;
     let prop;
     if (tmp != null) {
       prop = tmp.getAndroidNotifChannelStates;
@@ -74,13 +79,17 @@ function buildChannelsAndMapping() {
       return map;
     } else {
       const _Map2 = Map;
-      const map1 = new Map();
+      const self3 = this;
+      const self4 = this;
+      map1 = new Map();
       const propResult = prop();
       for (const item10020 of propResult) {
         let result = map1.set(item10020.channelId, item10020.importance);
         continue;
       }
       const _Map = Map;
+      const self = this;
+      const self2 = this;
       const map2 = new Map();
       for (const item10036 of closure_1_5) {
         let result1 = map2.set(item10036.id, item10036);
@@ -90,18 +99,18 @@ function buildChannelsAndMapping() {
       const nextResult = iter.next();
       while (iter !== undefined) {
         let notifSetting = nextResult.notifSetting;
-        let tmp17 = closure_1_4[nextResult.notifType];
-        if (null != tmp17) {
-          for (const item10055 of tmp17) {
+        let tmp15 = closure_1_4[nextResult.notifType];
+        if (null != tmp15) {
+          for (const item10055 of tmp15) {
             if (item10055 !== notifSetting) {
-              value = map2.get(tmp20);
-              let tmp24 = value;
+              let value = map2.get(tmp18);
+              let tmp22 = value;
               if (null != value) {
-                value2 = map1.get(tmp24.string_id);
-                let tmp27 = value2;
+                let value2 = map1.get(tmp22.string_id);
+                let tmp25 = value2;
                 if (null != value2) {
-                  if (tmp27 !== inferImportanceFromBehavior(tmp24.behavior)) {
-                    let result2 = map.set(notifSetting, tmp27);
+                  if (tmp25 !== inferImportanceFromBehavior(tmp22.behavior)) {
+                    let result2 = map.set(notifSetting, tmp25);
                     obj4.return();
                     break;
                   }
@@ -115,7 +124,11 @@ function buildChannelsAndMapping() {
       }
       return map;
     }
-  })(mappings);
+  }
+  const obj = map(14290);
+  const assignedNotifSettingsAndMappings = obj.getAssignedNotifSettingsAndMappings();
+  ({ settings, mappings } = assignedNotifSettingsAndMappings);
+  const obj2 = computeInheritedImportances(mappings);
   let items = [];
   map = new Map();
   for (const item10022 of settings) {
@@ -123,20 +136,22 @@ function buildChannelsAndMapping() {
     let result = map.set(item10022.id, item10022.string_id);
     continue;
   }
-  const obj = map(14290);
-  return {
-    mapping: mappings.flatMap((notifSetting) => {
-      value = map.get(notifSetting.notifSetting);
+  const obj3 = {
+    mapping: mappings.flatMap((notifType) => {
+      let items;
+      notifType = notifType.notifType;
+      const value = map.get(notifType.notifSetting);
       if (null == value) {
-        let items = [];
+        items = [];
       } else {
-        items = { type: notifSetting.notifType, channel: value };
+        items = { type: notifType, channel: value };
       }
       return items;
     }),
     channels: items,
     inheritedImportances: obj2,
   };
+  return obj3;
 }
 ({
   NOTIF_CATEGORIES: c3,
@@ -155,11 +170,11 @@ const constants = {
   HIGH: 4,
   [4]: "HIGH",
 };
-let result = size.fileFinishedImporting("modules/notifications/native/NotifSettingsUtils.android.tsx");
-
-export default {
+let obj = {
   clear() {
-    let obj = NativeNotifSettingsModuleDefault;
+    let registerAndroidNotifGroupsAndChannels;
+    let registerAndroidNotifTypeMappings;
+    let obj = react_nativeDefault;
     if (obj == null) {
       obj = {};
     }
@@ -172,7 +187,14 @@ export default {
     }
   },
   registerDeclarativeNotificationCategories() {
-    let obj = NativeNotifSettingsModuleDefault;
+    let arr;
+    let channels;
+    let inheritedImportances;
+    let mapping;
+    let obj3;
+    let registerAndroidNotifGroupsAndChannels;
+    let registerAndroidNotifTypeMappings;
+    let obj = react_nativeDefault;
     if (obj == null) {
       obj = {};
     }
@@ -180,18 +202,23 @@ export default {
     if (null != registerAndroidNotifGroupsAndChannels) {
       if (null != registerAndroidNotifTypeMappings) {
         ({ channels, inheritedImportances, mapping } = buildChannelsAndMapping());
-        const tmp4 = buildChannelsAndMapping();
-        const obj2 = { message: "Registering declarative notification categories", data: null };
-        const obj3 = { channels: channels.map((id) => id.id), inheritedImportances: null };
+        buildChannelsAndMapping();
+        const obj2 = { message: "Registering declarative notification categories", data: obj3 };
+        obj3 = {
+          channels: channels.map((id) => id.id),
+          inheritedImportances: arr.map((item) => {
+            let tmp;
+            let tmp2;
+            [tmp, tmp2] = item;
+            return "NotifSettings#" + tmp + " -> " + tmp2;
+          }),
+        };
+        const addBreadcrumb = SentryUtilsDefault.addBreadcrumb;
+        SentryUtilsDefault;
         const _Array = Array;
-        const tmpResult = SentryUtilsDefault;
-        obj3.inheritedImportances = Array.from(inheritedImportances.entries()).map((item) => {
-          [tmp, tmp2] = item;
-          return "NotifSettings#" + tmp + " -> " + tmp2;
-        });
-        obj2.data = obj3;
-        tmpResult.addBreadcrumb(obj2);
-        const result = registerAndroidNotifGroupsAndChannels(React3.map(formatCategory), channels);
+        arr = Array.from(inheritedImportances.entries());
+        addBreadcrumb(obj2);
+        const result = registerAndroidNotifGroupsAndChannels(_false.map(formatCategory), channels);
         const result1 = registerAndroidNotifTypeMappings(mapping);
         return true;
       }
@@ -199,3 +226,6 @@ export default {
     return false;
   },
 };
+let result = size.fileFinishedImporting("modules/notifications/native/NotifSettingsUtils.android.tsx");
+
+export default obj;

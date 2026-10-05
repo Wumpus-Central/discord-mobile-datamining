@@ -1,83 +1,140 @@
 // discord_app/modules/embedded_apps/native/utils/createWebViewController.tsx
+import Constants from "../../../../Constants.tsx";
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
+import Constants2 from "../../../activities/Constants.tsx";
+import Constants3 from "../../../rpc/Constants.tsx";
 import WebViewPostMessageTransportDefault from "../../../rpc/native/server/transports/WebViewPostMessageTransport.tsx";
 import createWebViewHtmlFile from "createWebViewHtmlFile.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, c5, c6, closure_3;
 
-require = fn;
-const ComponentActions = fn(1085).ComponentActions;
-let closure_5 = fn(2011).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
-const TransportTypes = fn(5316).TransportTypes;
-const size = fn(2);
+const ComponentActions = Constants.ComponentActions;
+let closure_5 = Constants2.DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
+const TransportTypes = Constants3.TransportTypes;
 let result = size.fileFinishedImporting("modules/embedded_apps/native/utils/createWebViewController.tsx");
 
 export default function createWebViewController(id, arg1) {
   _require = id;
   ({ getOrigin: importDefault, onDisallowedNavigation: dependencyMap } = arg1);
   function postMessageToWebView(arg0) {
-    const self = this;
-    const apply = closure_5.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+    return obj(...arguments);
   }
-  closure_5 = async function _postMessageToWebView(arg0) {
-    await webViewProxy.injectJavaScript(closure_1(tmp3[5])(closure_0));
-    if (1 === tmp7) {
-      c4 = 0;
-      closure_129_0 = closure_3;
-      closure_1(tmp3[6]).captureException(closure_129_0);
-      c6 = 3;
-      closure_1(tmp3[6]);
-    } else if (arg0 === 1) {
-      c6 = 3;
-      throw value;
-    } else if (arg0 !== 2) {
-      c4 = 0;
-    }
-    return value;
+  let obj = function _postMessageToWebView() {
+    obj = _asyncToGenerator(async (arg0) => {
+      let closure_0 = arg0;
+      if (c6 === 2) {
+        c6 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        let c4;
+        try {
+          let closure_2;
+          let closure_1;
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              closure_2 = tmp;
+              closure_1 = tmp4;
+              c4 = 1;
+              c5 = 2;
+              c6 = 1;
+              const obj5 = { value: webViewProxy.injectJavaScript(closure_1(closure_2[5])(closure_0)), done: false };
+              return obj5;
+            }
+          } else {
+            if (1 === c5) {
+              c4 = 0;
+              closure_0 = closure_3;
+              const obj2 = closure_1(closure_2[6]);
+              obj2.captureException(closure_0);
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 0;
+              c6 = 3;
+              obj = { value, done: true };
+              return obj;
+            } else {
+              c4 = 0;
+            }
+            c6 = 3;
+            return { value: "IconComponent", done: null };
+          }
+        } catch (tmp17) {
+          closure_3 = tmp17;
+          if (0 === c4) {
+            c6 = 3;
+            throw tmp17;
+          } else {
+            c5 = 1;
+          }
+        }
+      }
+    });
+    return obj(...arguments);
   };
-  const webViewProxy = require("WebView").getWebViewProxy(id);
-  closure_6 = webViewProxy.addOnMessageListener((data) => {
+  obj = require("WebView");
+  const webViewProxy = obj.getWebViewProxy(id);
+  let closure_6 = webViewProxy.addOnMessageListener((data) => {
     try {
       const _JSON = JSON;
       const parsed = JSON.parse(data.data);
-      const tmp7 = closure_1_1();
-      let tmp8 = typeof parsed === "object";
-      if (typeof parsed === "object") {
-        tmp8 = null != tmp7;
+      const tmp5 = importDefault();
+      let tmp6 = typeof parsed === "object";
+      const tmp3 = parsed;
+      if (tmp6) {
+        tmp6 = null != tmp5;
       }
-      if (tmp8) {
-        const obj2 = { type: TransportTypes.POST_MESSAGE, origin: tmp7, iframeId: id };
-        WebViewPostMessageTransportDefault.handleMessage(tmp5, obj2, postMessageToWebView);
+      if (tmp6) {
+        const obj2 = { type: TransportTypes.POST_MESSAGE, origin: tmp5, iframeId: id };
+        obj = WebViewPostMessageTransportDefault;
+        obj.handleMessage(tmp3, obj2, postMessageToWebView);
       }
-      tmp5 = parsed;
-    } catch (tmp16) {
+    } catch (tmp14) {
       const _SyntaxError = SyntaxError;
-      if (tmp16 instanceof SyntaxError) {
-        if (tmp2.data === closure_5) {
+      if (tmp14 instanceof SyntaxError) {
+        if (data.data === closure_5) {
           dependencyMap();
         }
       } else {
-        throw tmp16;
+        throw tmp14;
       }
     }
   });
   let ComponentDispatch = require("ComponentDispatchUtils").ComponentDispatch;
-  ComponentDispatch.dispatch(postMessageToWebView.IFRAME_MOUNT, { id });
-  return {
+  let obj2 = { id };
+  ComponentDispatch.dispatch(postMessageToWebView.IFRAME_MOUNT, obj2);
+  let obj3 = {
     iframeId: id,
     release() {
       closure_6.remove();
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-      ComponentDispatch.dispatch(ComponentActions.IFRAME_UNMOUNT, { id });
+      obj = { id };
+      ComponentDispatch.dispatch(ComponentActions.IFRAME_UNMOUNT, obj);
       webViewProxy.releaseWebView();
-      const result = createWebViewHtmlFile.deleteWebViewHtmlFile(id);
+      const obj2 = createWebViewHtmlFile;
+      const result = obj2.deleteWebViewHtmlFile(id);
     },
   };
+  return obj3;
 }

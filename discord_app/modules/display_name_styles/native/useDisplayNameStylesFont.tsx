@@ -1,5 +1,5 @@
 // discord_app/modules/display_name_styles/native/useDisplayNameStylesFont.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react from "../../../../_runtime/00576_react.js";
 import DisplayNameStylesConstants from "../DisplayNameStylesConstants.tsx";
 import DisplayNameFont from "../../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
 import useDisplayNameStylesEnabled from "../hooks/useDisplayNameStylesEnabled.tsx";
@@ -21,31 +21,33 @@ const DISPLAY_NAME_STYLES_FONT_FAMILY_MAP = {
   [DisplayNameFont.DisplayNameFont.NEW_ROCKER]: "Headbang-Normal",
   [DisplayNameFont.DisplayNameFont.KALAM]: "Journal-Bold",
 };
-const result = size.fileFinishedImporting("modules/display_name_styles/native/useDisplayNameStylesFont.tsx");
-
-export { DISPLAY_NAME_STYLES_FONT_FAMILY_MAP };
-export const useDisplayNameStylesFont = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const obj = c;
+      let displayNameStyles;
+      let first;
+      let ignoreDisabledStylesSetting;
+      const obj = react;
       const cResult = obj.c(1);
       ({ displayNameStyles, ignoreDisabledStylesSetting } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { location: "useDisplayNameStylesFont-native" };
         cResult[0] = obj2;
-        let first = obj2;
+        first = obj2;
       } else {
         first = cResult[0];
       }
-      const displayNameStylesEnabled = useDisplayNameStylesEnabled.useDisplayNameStylesEnabled(first);
+      const tmpResult = useDisplayNameStylesEnabled;
+      const displayNameStylesEnabled = tmpResult.useDisplayNameStylesEnabled(first);
       DisplayNameStylesFlywheelExperiment;
       if (displayNameStylesEnabled) {
         if (null != displayNameStyles) {
           return obj[displayNameStyles.fontId];
         }
       }
-      const tmpResult = useDisplayNameStylesEnabled;
     }
   : (arg0) => {
+      let displayNameStyles;
+      let ignoreDisabledStylesSetting;
       ({ displayNameStyles, ignoreDisabledStylesSetting } = arg0);
       if (ignoreDisabledStylesSetting === undefined) {
         ignoreDisabledStylesSetting = false;
@@ -59,3 +61,7 @@ export const useDisplayNameStylesFont = ReactCompilerGating.isReactCompilerEnabl
         }
       }
     };
+const result = size.fileFinishedImporting("modules/display_name_styles/native/useDisplayNameStylesFont.tsx");
+
+export { DISPLAY_NAME_STYLES_FONT_FAMILY_MAP };
+export const useDisplayNameStylesFont = tmp2;

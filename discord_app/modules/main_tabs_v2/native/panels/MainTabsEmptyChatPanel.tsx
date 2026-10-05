@@ -1,81 +1,88 @@
 // discord_app/modules/main_tabs_v2/native/panels/MainTabsEmptyChatPanel.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import FavoritesHooks from "../../../favorites/FavoritesHooks.tsx";
 import useDrawerWidth from "../../../screen/native/drawer/useDrawerWidth.tsx";
 import FavoritesEmptyStateDefault from "../../../favorites/native/FavoritesEmptyState.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+let c3;
+let closure_4;
+({ StyleSheet: c3, View: closure_4 } = react_native);
+const jsx = Fragment.jsx;
 let closure_6 = createStyles.createStyles((left, marginTop) => {
-  const obj = { container: null };
-  const obj2 = {};
+  let obj2;
+  const obj = { container: obj2 };
+  obj2 = {
+    left,
+    marginTop,
+    backgroundColor: nativeDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND,
+    borderTopWidth: nativeDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH,
+    borderTopColor: nativeDefault.colors.APP_FRAME_BORDER,
+    borderLeftWidth: nativeDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH,
+    borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER,
+    borderTopLeftRadius: nativeDefault.modules.mobile.CHANNEL_DRAWER_CORNER_RADIUS,
+  };
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj2.left = left;
-  obj2.marginTop = marginTop;
-  obj2.backgroundColor = nativeDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND;
-  obj2.borderTopWidth = nativeDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH;
-  obj2.borderTopColor = nativeDefault.colors.APP_FRAME_BORDER;
-  obj2.borderLeftWidth = nativeDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH;
-  obj2.borderLeftColor = nativeDefault.colors.APP_FRAME_BORDER;
-  obj2.borderTopLeftRadius = nativeDefault.modules.mobile.CHANNEL_DRAWER_CORNER_RADIUS;
-  obj.container = obj2;
   return obj;
 });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsEmptyChatPanel.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(3);
-      const drawerWidth = useDrawerWidth.useDrawerWidth();
-      let container = closure_6(drawerWidth, useSafeAreaInsetsDefault().top);
-      if (!obj3.useIsFavoritesGuildSelected()) {
-        return null;
-      } else {
+      const obj = react2;
+      const cResult = obj.c(3);
+      const obj2 = useDrawerWidth;
+      const drawerWidth = obj2.useDrawerWidth();
+      const tmp5 = closure_6(drawerWidth, useSafeAreaInsetsDefault().top);
+      let tmp6 = null;
+      const obj3 = FavoritesHooks;
+      if (obj3.useIsFavoritesGuildSelected()) {
+        let first;
+        let tmp11;
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp8 = jsx(FavoritesEmptyStateDefault, {});
-          cResult[0] = tmp8;
-          let first = tmp8;
+          const tmp10 = jsx(FavoritesEmptyStateDefault, {});
+          cResult[0] = tmp10;
+          first = tmp10;
         } else {
           first = cResult[0];
         }
-        if (cResult[1] !== container.container) {
-          const obj4 = { style: container.container, pointerEvents: "box-none", children: first };
-          const tmp12 = (
-            <React4 style={container.container} pointerEvents="box-none">
+        if (cResult[1] !== tmp5.container) {
+          const tmp14 = (
+            <React3 style={tmp5.container} pointerEvents="box-none">
               {first}
-            </React4>
+            </React3>
           );
-          container = container.container;
-          cResult[1] = container;
-          cResult[2] = tmp12;
+          cResult[1] = tmp5.container;
+          cResult[2] = tmp14;
+          tmp11 = tmp14;
+        } else {
+          tmp11 = cResult[2];
         }
+        tmp6 = tmp11;
       }
-      obj3 = FavoritesHooks;
+      return tmp6;
     }
   : () => {
-      const drawerWidth = useDrawerWidth.useDrawerWidth();
-      const tmp4 = closure_6(drawerWidth, useSafeAreaInsetsDefault().top);
+      const obj = useDrawerWidth;
+      const drawerWidth = obj.useDrawerWidth();
       let tmp5 = null;
+      const tmp4 = closure_6(drawerWidth, useSafeAreaInsetsDefault().top);
+      const obj2 = FavoritesHooks;
       if (obj2.useIsFavoritesGuildSelected()) {
-        const obj3 = {
-          style: tmp4.container,
-          pointerEvents: "box-none",
-          children: jsx(FavoritesEmptyStateDefault, {}),
-        };
         tmp5 = (
-          <React4 style={tmp4.container} pointerEvents="box-none">
+          <React3 style={tmp4.container} pointerEvents="box-none">
             {jsx(FavoritesEmptyStateDefault, {})}
-          </React4>
+          </React3>
         );
       }
       return tmp5;
     };
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsEmptyChatPanel.tsx");
+
+export default tmp4;

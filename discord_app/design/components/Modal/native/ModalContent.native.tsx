@@ -1,11 +1,16 @@
 // discord_app/design/components/Modal/native/ModalContent.native.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles from "../../Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ScrollView = fn(17).ScrollView;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+let children;
+
+const ScrollView = react_native.ScrollView;
+const jsx = Fragment.jsx;
 let closure_4 = createStyles.createStyles({
   scrollContainer: { flex: 1 },
   contentContainer: {
@@ -16,21 +21,20 @@ let closure_4 = createStyles.createStyles({
     flexGrow: 1,
   },
 });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/Modal/native/ModalContent.native.tsx");
-
-export const ModalContent = noop.forwardRef(
+const forwardRef = react.forwardRef;
+const forwardRefResult = forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (children, ref) => {
-        const cResult = c.c(5);
+        const obj = react2;
+        const cResult = obj.c(5);
         children = children.children;
         const tmp2 = closure_4();
         if (cResult[0] === children) {
           if (cResult[1] === ref) {
             if (cResult[2] === tmp2.contentContainer) {
+              let tmp3;
               if (cResult[3] === tmp2.scrollContainer) {
-                let tmp3 = cResult[4];
+                tmp3 = cResult[4];
               }
               return tmp3;
             }
@@ -55,6 +59,7 @@ export const ModalContent = noop.forwardRef(
         tmp3 = tmp4;
       }
     : (children, ref) => {
+        children = children.children;
         const tmp = closure_4();
         return (
           <ScrollView
@@ -64,8 +69,11 @@ export const ModalContent = noop.forwardRef(
             keyboardShouldPersistTaps="handled"
             ref={ref}
           >
-            {children.children}
+            {children}
           </ScrollView>
         );
       },
 );
+const result = size.fileFinishedImporting("design/components/Modal/native/ModalContent.native.tsx");
+
+export const ModalContent = forwardRefResult;

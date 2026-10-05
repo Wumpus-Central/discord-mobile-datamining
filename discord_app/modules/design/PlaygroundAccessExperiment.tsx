@@ -1,49 +1,46 @@
 // discord_app/modules/design/PlaygroundAccessExperiment.tsx
-import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../_runtime/00576_c.js";
+import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../_runtime/00576_react.js";
 import UserStore from "../../stores/UserStore.tsx";
+import ApexExperiment from "../experiments/apex/index.tsx";
+import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ApexExperiment = fn(1440);
-let obj2 = {
-  name: "2026-02-mana-playground-access",
-  kind: "user",
-  defaultConfig: { enabled: false },
-  variations: null,
-};
-const obj3 = { 1: null };
-obj3[1] = { enabled: true };
-obj2.variations = obj3;
-const apexExperiment = ApexExperiment.createApexExperiment(obj2);
-let ReactCompilerGating = fn(558);
+let obj2;
+let obj = { name: "2026-02-mana-playground-access", kind: "user", defaultConfig: { enabled: false }, variations: obj2 };
+obj2 = { 1: null };
+obj2[1] = { enabled: true };
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (location) => {
-      const cResult = c.c(2);
+      let tmp2;
+      const obj = react;
+      const cResult = obj.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
         cResult[0] = location;
         cResult[1] = obj2;
-        let tmp2 = obj2;
+        tmp2 = obj2;
       } else {
         tmp2 = cResult[1];
       }
       return apexExperiment.useConfig(tmp2).enabled;
     }
-  : (location) => apexExperiment.useConfig({ location }).enabled;
+  : (location) => {
+      const obj = { location };
+      return apexExperiment.useConfig(obj).enabled;
+    };
 let closure_4 = tmp3;
-ReactCompilerGating = fn(558);
-function getPlaygroundAccessExperiment(location) {
-  return apexExperiment.getConfig({ location }).enabled;
-}
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/design/PlaygroundAccessExperiment.tsx");
-
-export default apexExperiment;
-export const usePlaygroundAccessExperiment = tmp3;
-export { getPlaygroundAccessExperiment };
-export const useHasPlaygroundAccess = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(4);
+      let currentUser;
+      let tmp4;
+      let tmp5;
+      let tmp7;
+      const obj = react;
+      const cResult = obj.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         const fn = function c() {
@@ -56,7 +53,8 @@ export const useHasPlaygroundAccess = ReactCompilerGating.isReactCompilerEnabled
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       if (cResult[2] !== stateFromStores) {
         let isStaffResult;
         if (stateFromStores != null) {
@@ -72,7 +70,7 @@ export const useHasPlaygroundAccess = ReactCompilerGating.isReactCompilerEnabled
         }
         cResult[2] = stateFromStores;
         cResult[3] = tmp10;
-        let tmp7 = tmp10;
+        tmp7 = tmp10;
       } else {
         tmp7 = cResult[3];
       }
@@ -82,8 +80,10 @@ export const useHasPlaygroundAccess = ReactCompilerGating.isReactCompilerEnabled
       return tmp7;
     }
   : (arg0) => {
+      let currentUser;
       const items = [UserStore];
-      const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+      const obj = get_initialized;
+      const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
       let isStaffResult;
       if (stateFromStores != null) {
         isStaffResult = stateFromStores.isStaff();
@@ -101,6 +101,16 @@ export const useHasPlaygroundAccess = ReactCompilerGating.isReactCompilerEnabled
       }
       return tmp2;
     };
+function getPlaygroundAccessExperiment(location) {
+  const obj = { location };
+  return apexExperiment.getConfig(obj).enabled;
+}
+const result = size.fileFinishedImporting("modules/design/PlaygroundAccessExperiment.tsx");
+
+export default apexExperiment;
+export const usePlaygroundAccessExperiment = tmp3;
+export { getPlaygroundAccessExperiment };
+export const useHasPlaygroundAccess = tmp4;
 export const getHasPlaygroundAccess = function getHasPlaygroundAccess(quickswitcher_action) {
   const currentUser = UserStore.getCurrentUser();
   let isStaffResult;

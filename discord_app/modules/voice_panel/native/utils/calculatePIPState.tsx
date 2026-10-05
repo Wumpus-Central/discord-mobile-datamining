@@ -1,13 +1,16 @@
 // discord_app/modules/voice_panel/native/utils/calculatePIPState.tsx
+import CallConstants from "../../../calls/CallConstants.tsx";
 import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
+import VoicePanelConstants from "../../VoicePanelConstants.tsx";
 import VoicePanelPIPUtils from "../pip/VoicePanelPIPUtils.tsx";
 import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const VoicePanelModes = fn(11902).VoicePanelModes;
-const ParticipantTypes = fn(4911).ParticipantTypes;
-const size = fn(2);
+let set;
+
+const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
+const ParticipantTypes = CallConstants.ParticipantTypes;
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
 
 export default function calculatePIPState(
@@ -26,16 +29,19 @@ export default function calculatePIPState(
     }
     tmp = type === ParticipantTypes.ACTIVITY;
   }
-  const set = new Set();
+  set = new Set();
   const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
-    set.add(StreamKeyUtils.encodeStreamKey(currentUserActiveStream));
+    const add = set.add;
+    const obj2 = StreamKeyUtils;
+    add(obj2.encodeStreamKey(currentUserActiveStream));
   }
   let tmp10 = focusedId.mode === VoicePanelModes.PANEL;
+  const tmp11 = null != focusedId.focusedId && tmp10;
   if (tmp11) {
     set.add(focusedId.focusedId);
   }
-  const pIPParticipantToShow = VoicePanelPIPUtils.computePIPParticipantToShow({
+  const obj = {
     channelId,
     lastParticipantId,
     speakingUserId,
@@ -43,7 +49,9 @@ export default function calculatePIPState(
     blockList: set,
     panelMode: focusedId.mode,
     showSecondaryPIP: focusedId.showSecondaryPIP,
-  });
+  };
+  const obj3 = VoicePanelPIPUtils;
+  const pIPParticipantToShow = obj3.computePIPParticipantToShow(obj);
   let type1;
   if (pIPParticipantToShow != null) {
     type1 = pIPParticipantToShow.type;
@@ -67,35 +75,23 @@ export default function calculatePIPState(
     }
     tmp18 = tmp20;
   }
-  const obj = {
-    channelId,
-    lastParticipantId,
-    speakingUserId,
-    focusedParticipantId: focusedId.focusedId,
-    blockList: set,
-    panelMode: focusedId.mode,
-    showSecondaryPIP: focusedId.showSecondaryPIP,
-  };
-  tmp11 = null != focusedId.focusedId && tmp10;
   let id1;
+  const computePIPSize = VoicePanelPIPUtils.computePIPSize;
+  getTargetDimensions = getTargetDimensions.getTargetDimensions;
+  VoicePanelPIPUtils;
   if (pIPParticipantToShow != null) {
     id1 = pIPParticipantToShow.id;
   }
-  let SquarePIPReferenceDimensions = getTargetDimensions.getTargetDimensions(id1);
+  let SquarePIPReferenceDimensions = getTargetDimensions(id1);
   if (SquarePIPReferenceDimensions == null) {
     SquarePIPReferenceDimensions = VoicePanelPIPUtils.SquarePIPReferenceDimensions;
   }
   if (tmp10) {
     tmp10 = tmp;
   }
-  const tmp13Result = VoicePanelPIPUtils;
-  return {
+  const obj4 = {
     participant: pIPParticipantToShow,
-    dimensions: VoicePanelPIPUtils.computePIPSize(
-      SquarePIPReferenceDimensions,
-      tmp18,
-      tmp10,
-      focusedId.showSecondaryPIP,
-    ),
+    dimensions: computePIPSize(SquarePIPReferenceDimensions, tmp18, tmp10, focusedId.showSecondaryPIP),
   };
+  return obj4;
 }

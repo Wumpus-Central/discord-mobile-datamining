@@ -1,19 +1,27 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsBreadCrumbs.tsx
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
+let metroImportAll;
+let metroImportDefault;
+let rect;
+let size;
 let closure_3 = ["element", "menuName"];
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+const View = react_native.View;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
   container: { flex: 0, alignSelf: "stretch", marginBottom: 16, paddingHorizontal: 16 },
   title: { lineHeight: 16, marginBottom: 8 },
   breadCrumbItemContainer: {
@@ -23,11 +31,11 @@ let obj2 = {
     marginEnd: 32,
     overflow: "visible",
   },
-  breadCrumbDot: null,
-  breadCrumbBar: null,
-  breadCrumbText: null,
+  breadCrumbDot: size,
+  breadCrumbBar: rect,
+  breadCrumbText: { marginStart: 8, lineHeight: 20 },
 };
-let size = {
+size = {
   marginStart: 2,
   marginTop: 8,
   width: 4,
@@ -35,8 +43,8 @@ let size = {
   borderRadius: 2,
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
-obj2.breadCrumbDot = size;
-const rect = {
+createStyles = createStyles.createStyles;
+rect = {
   position: "absolute",
   width: 2,
   top: 10,
@@ -44,28 +52,31 @@ const rect = {
   left: 3,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };
-obj2.breadCrumbBar = rect;
-obj2.breadCrumbText = { marginStart: 8, lineHeight: 20 };
-let closure_9 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-size = fn(2);
-const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBreadCrumbs.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_9 = createStyles(obj);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = require("c").c(12);
+      let closure_0;
+      let element;
+      let found;
+      let items;
+      let menuName;
+      let obj = require("react");
+      const cResult = obj.c(12);
       ({ element, menuName } = arg0);
-      let obj = require("c");
+      let tmp4 = _objectWithoutProperties(arg0, closure_3);
       const tmp5 = closure_9();
       _require = tmp5;
       if (null != element) {
         if ("breadcrumbs" === element.type) {
+          let first;
+          let tmp7;
           const _Symbol2 = Symbol;
           if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
             const fn = function h(multiSelect) {
               multiSelect = multiSelect.multiSelect;
               const first = _slicedToArray(multiSelect.destination, 1)[0];
-              state = undefined;
+              let state;
+              const _Object = Object;
               if (multiSelect != null) {
                 state = multiSelect.state;
               }
@@ -73,9 +84,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 state = {};
               }
               const items = [null, null];
-              const values = Object.values(state);
-              if (values.length > 0) {
-                items[0] = values.join(", ");
+              const values2 = values(state);
+              if (values2.length > 0) {
+                items[0] = values2.join(", ");
               }
               if ("" !== first) {
                 items[1] = first;
@@ -83,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return items;
             };
             cResult[0] = fn;
-            let first = fn;
+            first = fn;
           } else {
             first = cResult[0];
           }
@@ -93,174 +104,113 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return null != arg0;
             };
             cResult[1] = fn2;
-            let tmp7 = fn2;
+            tmp7 = fn2;
           } else {
             tmp7 = cResult[1];
           }
           let obj2 = found(12);
+          const flatMapResult = obj2.flatMap(tmp4.history, first);
           const tmp8 = found;
-          found = found(12).flatMap(tmp4.history, first).filter(tmp7);
+          found = flatMapResult.filter(tmp7);
           if (0 === found.length) {
             return null;
-          } else if (cResult[2] !== menuName) {
-            const REPORT_TO_MOD = tmp(8282).ReportMenuTypeSets.REPORT_TO_MOD;
-            const hasItem = REPORT_TO_MOD.has(menuName);
-            const intl = tmp(1126).intl;
-            const string = intl.string;
-            if (hasItem) {
-              let stringResult = string(tmp8(2625)["6mx/DP"]);
-            } else {
-              stringResult = string(tmp(1126).t["+3V9Tp"]);
-            }
-            cResult[2] = menuName;
-            cResult[3] = stringResult;
           } else {
+            let tmp9;
+            const container = tmp5.container;
+            if (cResult[2] !== menuName) {
+              let stringResult;
+              const REPORT_TO_MOD = tmp(8282).ReportMenuTypeSets.REPORT_TO_MOD;
+              const hasItem = REPORT_TO_MOD.has(menuName);
+              const intl = tmp(1126).intl;
+              const string = intl.string;
+              if (hasItem) {
+                stringResult = string(tmp8(2625)["6mx/DP"]);
+              } else {
+                stringResult = string(tmp(1126).t["+3V9Tp"]);
+              }
+              cResult[2] = menuName;
+              cResult[3] = stringResult;
+              tmp9 = stringResult;
+            } else {
+              tmp9 = cResult[3];
+            }
             if (cResult[4] === tmp5.title) {
+              let tmp12;
               if (cResult[5] === tmp9) {
-                let tmp13 = cResult[6];
+                tmp12 = cResult[6];
               }
               const mapped = found.map((children, index) => {
-                const obj = { style: closure_0.breadCrumbItemContainer, children: null };
+                let items;
                 let tmp4 = null;
+                const obj = { style: closure_0.breadCrumbItemContainer, children: items };
                 if (index !== found.length - 1) {
                   const obj2 = { style: closure_0.breadCrumbBar };
-                  tmp4 = React5(View, obj2);
+                  tmp4 = metroImportDefault(View, obj2);
                 }
-                const items = [
-                  tmp4,
-                  React5(View, { style: closure_0.breadCrumbDot }),
-                  React5(Text_Text.Text, {
-                    lineClamp: 2,
-                    ellipsizeMode: "tail",
-                    style: closure_0.breadCrumbText,
-                    variant: "text-md/medium",
-                    children,
-                  }),
-                ];
-                obj.children = items;
-                return closure_2_8(View, obj, "" + children + "+" + index);
+                items = [tmp4, ,];
+                const obj3 = { style: closure_0.breadCrumbDot };
+                items[1] = metroImportDefault(View, obj3);
+                const obj4 = {
+                  lineClamp: 2,
+                  ellipsizeMode: "tail",
+                  style: closure_0.breadCrumbText,
+                  variant: "text-md/medium",
+                  children,
+                };
+                items[2] = metroImportDefault(Text_Text.Text, obj4);
+                return metroImportAll(View, obj, "" + children + "+" + index);
               });
               if (cResult[7] === View) {
                 if (cResult[8] === tmp5.container) {
-                  if (cResult[9] === tmp13) {
+                  if (cResult[9] === tmp12) {
+                    let tmp16;
                     if (cResult[10] === mapped) {
-                      let tmp17 = cResult[11];
+                      tmp16 = cResult[11];
                     }
-                    return tmp17;
+                    return tmp16;
                   }
                 }
               }
-              const obj3 = { style: tmp22, children: null };
-              let items = [tmp13, mapped];
-              obj3.children = items;
-              const tmp19 = closure_8(View, obj3);
+              let obj3 = { style: container, children: items };
+              items = [tmp12, mapped];
+              const tmp18 = closure_8(View, obj3);
               cResult[7] = View;
               cResult[8] = tmp5.container;
-              cResult[9] = tmp13;
+              cResult[9] = tmp12;
               cResult[10] = mapped;
-              cResult[11] = tmp19;
-              tmp17 = tmp19;
+              cResult[11] = tmp18;
+              tmp16 = tmp18;
             }
-            const obj4 = {
-              style: tmp5.title,
-              accessibilityRole: "header",
-              variant: "text-xs/bold",
-              children: cResult[3],
-            };
-            const tmp15 = closure_7(tmp(4886).Text, obj4);
+            let obj4 = { style: tmp5.title, accessibilityRole: "header", variant: "text-xs/bold", children: tmp9 };
+            const tmp14 = closure_7(require("Text/Text").Text, obj4);
             cResult[4] = tmp5.title;
-            cResult[5] = cResult[3];
-            cResult[6] = tmp15;
-            tmp13 = tmp15;
+            cResult[5] = tmp9;
+            cResult[6] = tmp14;
+            tmp12 = tmp14;
           }
-          const flatMapResult = found(12).flatMap(tmp4.history, first);
         }
       }
       return null;
     }
   : (element) => {
+      let closure_0;
+      let items;
+      let stringResult;
       element = element.element;
+      const menuName = element.menuName;
       let found;
       const merged = Object.assign(element, Object.assign({ element: 0, menuName: 0 }));
       const tmp2 = closure_9();
       _require = tmp2;
       if (null != element) {
         if ("breadcrumbs" === element.type) {
-          let prop = dependencyMap;
           let obj = found(12);
-          const tmp7 = found;
-          found = found(12)
-            .flatMap(merged.history, (destination) => {
-              [tmp] = destination.destination;
-              const multiSelect = destination.multiSelect;
-              state = undefined;
-              if (multiSelect != null) {
-                state = multiSelect.state;
-              }
-              if (state == null) {
-                state = {};
-              }
-              const items = [null, null];
-              const values = Object.values(state);
-              if (values.length > 0) {
-                items[0] = values.join(", ");
-              }
-              if ("" !== tmp) {
-                items[1] = tmp;
-              }
-              return items;
-            })
-            .filter((item) => null != item);
-          if (0 === found.length) {
-            return null;
-          } else {
-            let obj2 = { style: tmp2.container, children: null };
-            let map = require("Text/Text").Text;
-            let obj4 = { style: tmp2.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
-            const REPORT_TO_MOD = require("ReportMenuType").ReportMenuTypeSets.REPORT_TO_MOD;
-            const hasItem = REPORT_TO_MOD.has(element.menuName);
-            const intl = require("util").intl;
-            const string = intl.string;
-            if (hasItem) {
-              prop = tmp7(2625)["6mx/DP"];
-              let stringResult = string(prop);
-            } else {
-              stringResult = string(tmp12(1126).t["+3V9Tp"]);
-            }
-            obj4.children = stringResult;
-            obj4 = [,];
-            obj4[0] = closure_7(map, obj4);
-            map = found.map;
-            obj4[1] = map((children, arg1) => {
-              const obj = { style: closure_0.breadCrumbItemContainer, children: null };
-              let tmp4 = null;
-              if (arg1 !== found.length - 1) {
-                const obj2 = { style: closure_0.breadCrumbBar };
-                tmp4 = React5(View, obj2);
-              }
-              const items = [
-                tmp4,
-                React5(View, { style: closure_0.breadCrumbDot }),
-                React5(Text_Text.Text, {
-                  lineClamp: 2,
-                  ellipsizeMode: "tail",
-                  style: closure_0.breadCrumbText,
-                  variant: "text-md/medium",
-                  children,
-                }),
-              ];
-              obj.children = items;
-              return closure_2_8(View, obj, "" + children + "+" + arg1);
-            });
-            obj2.children = obj4;
-            closure_8(View, obj2);
-            const tmp11Result = closure_7(map, obj4);
-            tmp12 = _require;
-          }
-          const flatMapResult = found(12).flatMap(merged.history, (destination) => {
+          const flatMapResult = obj.flatMap(merged.history, (destination) => {
+            let tmp;
             [tmp] = destination.destination;
             const multiSelect = destination.multiSelect;
-            state = undefined;
+            let state;
+            const _Object = Object;
             if (multiSelect != null) {
               state = multiSelect.state;
             }
@@ -268,16 +218,69 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               state = {};
             }
             const items = [null, null];
-            const values = Object.values(state);
-            if (values.length > 0) {
-              items[0] = values.join(", ");
+            const values2 = values(state);
+            if (values2.length > 0) {
+              items[0] = values2.join(", ");
             }
             if ("" !== tmp) {
               items[1] = tmp;
             }
             return items;
           });
+          const tmp5 = found;
+          found = flatMapResult.filter((item) => null != item);
+          let tmp7Result = null;
+          if (0 !== found.length) {
+            let obj2 = { style: tmp2.container, children: items };
+            let obj3 = {
+              style: tmp2.title,
+              accessibilityRole: "header",
+              variant: "text-xs/bold",
+              children: stringResult,
+            };
+            const Text = require("Text/Text").Text;
+            const REPORT_TO_MOD = require("ReportMenuType").ReportMenuTypeSets.REPORT_TO_MOD;
+            const hasItem = REPORT_TO_MOD.has(menuName);
+            const intl = require("intl").intl;
+            const string = intl.string;
+            const tmp10 = _require;
+            if (hasItem) {
+              stringResult = string(tmp5(2625)["6mx/DP"]);
+            } else {
+              stringResult = string(tmp10(1126).t["+3V9Tp"]);
+            }
+            items = [
+              closure_7(Text, obj3),
+              found.map((children, index) => {
+                let items;
+                let tmp4 = null;
+                const obj = { style: closure_0.breadCrumbItemContainer, children: items };
+                if (index !== found.length - 1) {
+                  const obj2 = { style: closure_0.breadCrumbBar };
+                  tmp4 = metroImportDefault(View, obj2);
+                }
+                items = [tmp4, ,];
+                const obj3 = { style: closure_0.breadCrumbDot };
+                items[1] = metroImportDefault(View, obj3);
+                const obj4 = {
+                  lineClamp: 2,
+                  ellipsizeMode: "tail",
+                  style: closure_0.breadCrumbText,
+                  variant: "text-md/medium",
+                  children,
+                };
+                items[2] = metroImportDefault(Text_Text.Text, obj4);
+                return metroImportAll(View, obj, "" + children + "+" + index);
+              }),
+            ];
+            tmp7Result = closure_8(View, obj2);
+          }
+          return tmp7Result;
         }
       }
       return null;
     };
+size = size_mod;
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBreadCrumbs.tsx");
+
+export default tmp5;

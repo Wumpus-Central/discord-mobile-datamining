@@ -4,20 +4,21 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/guild_sidebar/showChannelBadge.tsx");
 
 export default function showChannelBadge(isNewChannel) {
+  let mentionsCount;
+  let muted;
+  let postsWithUnreadsCount;
   ({ mentionsCount, postsWithUnreadsCount, muted } = isNewChannel);
-  isNewChannel = null != mentionsCount;
-  if (isNewChannel) {
-    isNewChannel = mentionsCount > 0;
+  let tmp = null != mentionsCount;
+  isNewChannel = isNewChannel.isNewChannel;
+  if (tmp) {
+    tmp = mentionsCount > 0;
   }
-  if (!isNewChannel) {
-    isNewChannel = isNewChannel.isNewChannel;
+  if (!tmp) {
+    tmp = isNewChannel;
   }
-  if (!isNewChannel) {
-    let tmp = null != muted && !muted && null != postsWithUnreadsCount;
-    if (tmp) {
-      tmp = postsWithUnreadsCount > 0;
-    }
-    isNewChannel = tmp;
+  if (!tmp) {
+    tmp = null != muted && !muted && null != postsWithUnreadsCount && postsWithUnreadsCount > 0;
+    const tmp2 = null != muted && !muted && null != postsWithUnreadsCount && postsWithUnreadsCount > 0;
   }
-  return isNewChannel;
+  return tmp;
 }

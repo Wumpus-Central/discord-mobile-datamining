@@ -1,5 +1,6 @@
 // discord_app/modules/coded_links/findCodedLinkUrlsUsingRegex.tsx
 import ip from "../../../_runtime/01372_ip.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 function trimTrailingPunctuation(str) {
   return str.replace(re2, "");
@@ -12,7 +13,6 @@ const regExp = new RegExp(
 );
 const re1 = /`{3,}[\s\S]*?(?:`{3,}|$)|(`{1,2})[^`]+\1(?!`)/g;
 const re2 = /[.,;:?'*_~|]+$/;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/coded_links/findCodedLinkUrlsUsingRegex.tsx");
 
 export default function findCodedLinkUrlsUsingRegex(str) {

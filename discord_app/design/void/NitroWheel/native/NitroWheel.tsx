@@ -1,31 +1,37 @@
 // discord_app/design/void/NitroWheel/native/NitroWheel.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef8865 from "../../../../../_runtime/metro/08865__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import AssetRegistryDefault from "../../../../../_runtime/08865_AssetRegistry.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/void/NitroWheel/native/NitroWheel.tsx");
+let style;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (style) => {
-      const cResult = c.c(2);
+      let tmp3;
+      const obj = react2;
+      const cResult = obj.c(2);
       style = style.style;
       if (cResult[0] !== style) {
-        const obj2 = { source: _modDef8865, style, resizeMode: "contain" };
-        const tmp7 = jsx(FastImageDefault, { source: _modDef8865, style, resizeMode: "contain" });
+        FastImageDefault;
+        const tmp7 = <tmp6 source={AssetRegistryDefault} style={style} resizeMode="contain" />;
         cResult[0] = style;
         cResult[1] = tmp7;
-        let tmp3 = tmp7;
+        tmp3 = tmp7;
       } else {
         tmp3 = cResult[1];
       }
       return tmp3;
     }
   : (style) => {
-      const obj = { source: _modDef8865, style: style.style, resizeMode: "contain" };
-      return jsx(FastImageDefault, { source: _modDef8865, style: style.style, resizeMode: "contain" });
+      style = style.style;
+      FastImageDefault;
+      return <tmp source={AssetRegistryDefault} style={style} resizeMode="contain" />;
     };
+const result = size.fileFinishedImporting("design/void/NitroWheel/native/NitroWheel.tsx");
+
+export default tmp3;

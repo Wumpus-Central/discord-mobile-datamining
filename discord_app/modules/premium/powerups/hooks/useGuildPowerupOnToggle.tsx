@@ -1,32 +1,38 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupOnToggle.tsx
 import GuildPowerupsActionCreators from "../GuildPowerupsActionCreators.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupOnToggle.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let react = react_mod;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
+      let closure_0;
+      let closure_1;
+      let tmp3;
+      let tmp5;
       _require = arg0;
       dependencyMap = arg1;
-      const cResult = require("c").c(7);
-      const obj = require("c");
-      [tmp3, _slicedToArray] = noop.useState(false);
-      const tmp2 = _slicedToArray(noop.useState(false), 2);
-      [tmp5, noop] = noop.useState(undefined);
+      const obj = require("react");
+      const cResult = obj.c(7);
+      const tmp2 = _slicedToArray(react.useState(false), 2);
+      [tmp3, _slicedToArray] = tmp2;
+      const tmp4 = _slicedToArray(react.useState(undefined), 2);
+      [tmp5, react] = tmp4;
       if (cResult[0] === arg0) {
+        let tmp6;
         if (cResult[1] === arg1) {
-          let tmp6 = cResult[2];
+          tmp6 = cResult[2];
         }
         if (cResult[3] === tmp5) {
           if (cResult[4] === tmp3) {
+            let tmp7;
             if (cResult[5] === tmp6) {
-              let tmp7 = cResult[6];
+              tmp7 = cResult[6];
             }
             return tmp7;
           }
@@ -43,26 +49,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return Promise.resolve();
         } else {
           const tmp5 = GuildPowerupsActionCreators;
-          _slicedToArray(true);
-          noop(undefined);
           const tmp6 = arg0 ? tmp5.enablePowerupForGuild : tmp5.disablePowerupForGuild;
-          const tmp6Result = arg0 ? tmp5.enablePowerupForGuild : tmp5.disablePowerupForGuild(closure_0, tmp.skuId);
-          return arg0
-            ? tmp5.enablePowerupForGuild
-            : tmp5
-                .disablePowerupForGuild(closure_0, tmp.skuId)
-                .catch((error) => {
-                  const body = error.body;
-                  let message;
-                  if (body != null) {
-                    message = body.message;
-                  }
-                  closure_1_3(message);
-                  throw error;
-                })
-                .finally(() => {
-                  closure_1_2(false);
-                });
+          _slicedToArray(true);
+          react(undefined);
+          const tmp6Result = tmp6(closure_0, tmp.skuId);
+          const catchPromise = tmp6Result.catch((error) => {
+            const body = error.body;
+            let message;
+            if (body != null) {
+              message = body.message;
+            }
+            closure_1_3(message);
+            throw error;
+          });
+          return catchPromise.finally(() => {
+            closure_1_2(false);
+          });
         }
       };
       cResult[0] = arg0;
@@ -71,39 +73,45 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
     }
   : (arg0, arg1) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      [tmp2, _slicedToArray] = noop.useState(false);
-      const tmp3 = _slicedToArray(noop.useState(undefined), 2);
-      noop = tmp3[1];
-      const obj = { isLoading: tmp2, error: tmp3[0], onToggle: null };
-      const items = [arg0, arg1];
-      obj.onToggle = noop.useCallback((arg0) => {
-        if (null == closure_1) {
-          return Promise.resolve();
-        } else {
-          const tmp5 = GuildPowerupsActionCreators;
-          _slicedToArray(true);
-          closure_3(undefined);
-          const tmp6 = arg0 ? tmp5.enablePowerupForGuild : tmp5.disablePowerupForGuild;
-          const tmp6Result = arg0 ? tmp5.enablePowerupForGuild : tmp5.disablePowerupForGuild(closure_0, tmp.skuId);
-          return arg0
-            ? tmp5.enablePowerupForGuild
-            : tmp5
-                .disablePowerupForGuild(closure_0, tmp.skuId)
-                .catch((error) => {
-                  const body = error.body;
-                  let message;
-                  if (body != null) {
-                    message = body.message;
-                  }
-                  closure_1_3(message);
-                  throw error;
-                })
-                .finally(() => {
-                  closure_1_2(false);
-                });
-        }
-      }, items);
+      let closure_3;
+      let items;
+      let tmp2;
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      const tmp = _slicedToArray(react.useState(false), 2);
+      [tmp2, _slicedToArray] = tmp;
+      const tmp3 = _slicedToArray(react.useState(undefined), 2);
+      react = tmp3[1];
+      const obj = {
+        isLoading: tmp2,
+        error: tmp3[0],
+        onToggle: react.useCallback((arg0) => {
+          if (null == closure_1) {
+            return Promise.resolve();
+          } else {
+            const tmp5 = GuildPowerupsActionCreators;
+            const tmp6 = arg0 ? tmp5.enablePowerupForGuild : tmp5.disablePowerupForGuild;
+            _slicedToArray(true);
+            closure_3(undefined);
+            const tmp6Result = tmp6(closure_0, tmp.skuId);
+            const catchPromise = tmp6Result.catch((error) => {
+              const body = error.body;
+              let message;
+              if (body != null) {
+                message = body.message;
+              }
+              closure_1_3(message);
+              throw error;
+            });
+            return catchPromise.finally(() => {
+              closure_1_2(false);
+            });
+          }
+        }, items),
+      };
+      items = [arg0, arg1];
       return obj;
     };
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupOnToggle.tsx");
+
+export default tmp2;

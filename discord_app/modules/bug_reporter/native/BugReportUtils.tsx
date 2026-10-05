@@ -1,8 +1,10 @@
 // discord_app/modules/bug_reporter/native/BugReportUtils.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const require = fn;
+let closure_1, error, file, name, value;
+
 function uriScheme(str) {
   if (null == str) {
     return "none";
@@ -10,140 +12,124 @@ function uriScheme(str) {
     const match = str.match(/^([a-z][a-z0-9+.-]*):/i);
     str = "unknown";
     if (null != match) {
-      str = match[1].toLowerCase();
+      const str2 = match[1];
+      str = str2.toLowerCase();
     }
     return str;
   }
 }
-let closure_6 = async function _getAttachments(arg0) {
-  dependencyMap = arg0;
-  c7 = 0;
-  c8 = 0;
-  c6 = 0;
-  return (async (arg0) => {
-    if (c8 === 2) {
-      c8 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+let obj = function _getAttachments() {
+  obj = _asyncToGenerator(async (value) => {
+    let c7 = 0;
+    let c8 = 0;
+    let c6 = 0;
+    return (async function (arg0) {
+      let obj7;
+      if (c8 === 2) {
+        c8 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          return { value, done: true };
+        } else {
+          return { value: "IconComponent", done: null };
+        }
       } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      while (true) {
-        c8 = 2;
-        let tmp5 = c7;
-        if (0 === c7) {
-          if (arg0 === 1) {
+        while (true) {
+          let c1;
+          let tmp;
+          c8 = 2;
+          let tmp5 = c7;
+          if (0 === c7) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              let obj3 = { value, done: true };
+              return obj3;
+            } else {
+              c1 = undefined;
+              file = undefined;
+              tmp = undefined;
+              error = undefined;
+              value = [];
+              name = value;
+              closure_1 = value[Symbol.iterator]();
+            }
+          } else if (1 === tmp5) {
+            let c6 = 0;
+            closure_1.return();
+            throw closure_1_5;
+          } else if (2 === tmp5) {
+            c6 = 1;
+            error = closure_1_5;
+            let uri;
+            if ("uri" in c1.item) {
+              uri = c1.item.uri;
+            }
+            tmp = closure_132_5(uri);
+            let obj5 = { scheme: tmp, filename: c1.filename, mimeType: c1.mimeType, isImage: c1.isImage, error };
+            let errorResult = closure_132_4.error("Failed to resolve bug report attachment", obj5);
+            let _Error = Error;
+            if (!(error instanceof Error)) {
+              let _Error2 = Error;
+              let _String = String;
+              let self = this;
+              let self2 = this;
+              error = new Error(String(error));
+            }
+            let obj4 = closure_132_1(closure_132_2[4]);
+            let obj6 = { tags: obj7 };
+            obj7 = { feature: "bug_reporter", attachment_uri_scheme: tmp };
+            let captureExceptionResult = obj4.captureException(error, obj6);
+            c6 = 0;
+            closure_1.return();
+            c8 = 3;
+            let obj10 = { value: undefined, done: true };
+            return obj10;
+          } else if (arg0 === 1) {
             c8 = 3;
             throw value;
           } else if (arg0 === 2) {
+            c6 = 0;
+            closure_1.return();
             c8 = 3;
-            let obj3 = { value, done: true };
-            return obj3;
+            let obj11 = { value, done: true };
+            return obj11;
           } else {
-            closure_4 = tmp;
-            closure_3 = tmp2;
-            closure_131_1 = undefined;
-            closure_131_2 = undefined;
-            closure_131_3 = undefined;
-            closure_131_4 = undefined;
-            closure_131_5 = undefined;
-            closure_131_0 = [];
-            closure_2 = dependencyMap;
-            closure_1 = dependencyMap[Symbol.iterator]();
+            file = value;
+            obj = { file, name, filename: file.name };
+            let arr = value.push(obj);
+            c6 = 0;
           }
-        } else if (1 === tmp5) {
-          c6 = 0;
-          closure_1.return();
-          throw closure_1_5;
-        } else if (2 === tmp5) {
-          c6 = 1;
-          closure_131_6 = closure_1_5;
-          let uri;
-          if ("uri" in closure_131_1.item) {
-            uri = closure_131_1.item.uri;
-          }
-          closure_131_4 = closure_132_5(uri);
-          let obj5 = { scheme: null, filename: null, mimeType: null, isImage: null, error: null };
-          obj5.scheme = closure_131_4;
-          obj5.filename = closure_131_1.filename;
-          obj5.mimeType = closure_131_1.mimeType;
-          obj5.isImage = closure_131_1.isImage;
-          obj5.error = closure_131_6;
-          let errorResult = closure_132_4.error("Failed to resolve bug report attachment", obj5);
-          let _Error = Error;
-          if (closure_131_6 instanceof Error) {
-            let error = closure_131_6;
+          if (closure_1 === undefined) {
+            c8 = 3;
+            let obj12 = { value, done: true };
+            return obj12;
           } else {
-            let _Error2 = Error;
-            let _String = String;
-            let tmp34 = new.target;
-            let tmp35 = new.target;
-            error = new Error(String(closure_131_6));
+            c1 = tmp48;
+            c6 = 2;
+            let obj8 = closure_132_0(closure_132_2[2]);
+            name = obj8.v4();
+            let obj9 = closure_132_0(closure_132_2[3]);
+            c7 = 3;
+            c8 = 1;
+            let obj13 = { value: obj9.getFileInfo(c1), done: false };
+            return obj13;
           }
-          closure_131_5 = error;
-          let obj4 = closure_132_1(closure_132_2[4]);
-          let obj6 = { tags: null };
-          let obj9 = { feature: "bug_reporter", attachment_uri_scheme: null };
-          obj9.attachment_uri_scheme = closure_131_4;
-          obj6.tags = obj9;
-          let captureExceptionResult = obj4.captureException(closure_131_5, obj6);
-          c6 = 0;
-          closure_1.return();
-          c8 = 3;
-        } else if (arg0 === 1) {
-          c8 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 0;
-          closure_1.return();
-          c8 = 3;
-          let obj10 = { value, done: true };
-          return obj10;
-        } else {
-          closure_131_3 = value;
-          let obj = { file: null, name: null, filename: null };
-          obj.file = closure_131_3;
-          obj.name = closure_131_2;
-          obj.filename = closure_131_3.name;
-          let arr = closure_131_0.push(obj);
-          c6 = 0;
-        }
-        if (closure_1 === undefined) {
-          c8 = 3;
-          let obj11 = { value: closure_131_0, done: true };
-          return obj11;
-        } else {
-          closure_131_1 = tmp50;
-          c6 = 2;
-          let obj7 = closure_132_0(closure_132_2[2]);
-          closure_131_2 = obj7.v4();
-          let obj8 = closure_132_0(closure_132_2[3]);
-          c7 = 3;
-          c8 = 1;
-          let obj12 = { value: obj8.getFileInfo(closure_131_1), done: false };
-          return obj12;
         }
       }
-    }
-  })();
+    })();
+  });
+  return obj(...arguments);
 };
-let closure_4 = new LoggerDefault("BugReportUtils.tsx");
-const size = fn(2);
+const tmp2 = new LoggerDefault("BugReportUtils.tsx");
+let closure_4 = tmp2;
 const result = size.fileFinishedImporting("modules/bug_reporter/native/BugReportUtils.tsx");
 
 export const getAttachments = function getAttachments() {
-  const self = this;
-  const apply = closure_6.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

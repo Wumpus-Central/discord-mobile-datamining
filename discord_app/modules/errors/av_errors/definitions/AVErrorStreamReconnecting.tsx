@@ -6,16 +6,16 @@ import AVErrorContext from "../AVErrorContext.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const ApplicationStreamStates = Constants.ApplicationStreamStates;
-const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamReconnecting.tsx");
-
-export const AVErrorStreamReconnectingDefinition = {
+let obj = {
   getActiveErrors(activeStreams) {
     activeStreams = activeStreams.activeStreams;
     const found = activeStreams.filter((state) => state.state === constants.RECONNECTING);
     return found.map((item) => {
       const obj = { type: AVError.AVError.STREAM_RECONNECTING };
-      const obj2 = AVErrorContext;
-      const merged = Object.assign(obj2.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(item)));
+      const getStreamErrorContext = AVErrorContext.getStreamErrorContext;
+      AVErrorContext;
+      const obj2 = StreamKeyUtils;
+      const merged = Object.assign(getStreamErrorContext(obj2.encodeStreamKey(item)));
       return obj;
     });
   },
@@ -23,3 +23,6 @@ export const AVErrorStreamReconnectingDefinition = {
     return "" + streamKey.streamKey + ":" + streamKey.mediaSessionId;
   },
 };
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamReconnecting.tsx");
+
+export const AVErrorStreamReconnectingDefinition = obj;

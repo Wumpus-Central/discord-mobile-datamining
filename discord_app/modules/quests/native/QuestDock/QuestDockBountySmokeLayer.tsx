@@ -1,106 +1,169 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockBountySmokeLayer.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../../_runtime/00576_react.js";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import QuestConstants from "../../QuestConstants.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import QuestDockUtils from "QuestDockUtils.tsx";
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext.tsx";
+import reactDefault from "QuestDockVisibilityContext.tsx";
 import BountiesAndroidQuestBarSmokeAnimationExperiment from "../../experiments/BountiesAndroidQuestBarSmokeAnimationExperiment.tsx";
 import _modDef15008 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Full_FigmaMatched_Frame0.png.js";
 import _modDef15009 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Baked_Android_Frame0.png.js";
 import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible.tsx";
 import _modDef15011 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Full_FigmaMatched.mov.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
+let _require, dependencyMap, importDefault, paused;
+
+let c10;
+let c9;
+let metroImportAll;
+let obj3;
+let tmp9;
 const _modDef15012 = tmp9(15012);
-require = fn;
-const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(5623).QuestsExperimentLocations;
-const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
+let _slicedToArray = _slicedToArray_mod;
+const StyleSheet = react_native.StyleSheet;
+const QuestsExperimentLocations = QuestConstants.QuestsExperimentLocations;
+({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = Fragment);
 let c11 = 3.75;
 const QuestDockBountySmokeSurface = { COLLAPSED: "collapsed", EXPANDED: "expanded" };
-fn(558);
-let ReactCompilerGating = fn(558);
-let obj2 = { video: StyleSheet.absoluteFillObject, hiddenVideo: null };
-let obj5 = {};
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const isBountiesAndroidQuestBarSmokeAnimationEnabled =
-        BountiesAndroidQuestBarSmokeAnimationExperiment.useIsBountiesAndroidQuestBarSmokeAnimationEnabled(
-          QuestsExperimentLocations.QUESTS_BAR_MOBILE,
-        );
+      const obj = BountiesAndroidQuestBarSmokeAnimationExperiment;
+      const isBountiesAndroidQuestBarSmokeAnimationEnabled = obj.useIsBountiesAndroidQuestBarSmokeAnimationEnabled(
+        QuestsExperimentLocations.QUESTS_BAR_MOBILE,
+      );
+      const obj2 = PlatformUtils;
       if (obj2.isAndroid()) {
+        let tmp3;
         if (isBountiesAndroidQuestBarSmokeAnimationEnabled) {
-          let tmp3 = _modDef15009;
+          tmp3 = _modDef15009;
         }
         return tmp3;
       }
       tmp3 = _modDef15008;
-      obj2 = PlatformUtils;
     }
   : () => {
-      const isBountiesAndroidQuestBarSmokeAnimationEnabled =
-        BountiesAndroidQuestBarSmokeAnimationExperiment.useIsBountiesAndroidQuestBarSmokeAnimationEnabled(
-          QuestsExperimentLocations.QUESTS_BAR_MOBILE,
-        );
+      const obj = BountiesAndroidQuestBarSmokeAnimationExperiment;
+      const isBountiesAndroidQuestBarSmokeAnimationEnabled = obj.useIsBountiesAndroidQuestBarSmokeAnimationEnabled(
+        QuestsExperimentLocations.QUESTS_BAR_MOBILE,
+      );
+      const obj2 = PlatformUtils;
       if (obj2.isAndroid()) {
+        let tmp3;
         if (isBountiesAndroidQuestBarSmokeAnimationEnabled) {
-          let tmp3 = _modDef15009;
+          tmp3 = _modDef15009;
         }
         return tmp3;
       }
       tmp3 = _modDef15008;
-      obj2 = PlatformUtils;
     };
+ReactCompilerGating = ReactCompilerGating_mod;
+let obj2 = { video: StyleSheet.absoluteFillObject, hiddenVideo: obj3 };
+obj3 = { opacity: 0 };
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      let left;
+      let right;
+      const obj = react2;
+      const cResult = obj.c(3);
+      const width = useWindowDimensionsDefault().width;
+      ({ left, right } = useSafeAreaInsetsDefault());
+      useSafeAreaInsetsDefault();
+      const obj2 = QuestDockUtils;
+      const questDockExpandedWidth = obj2.getQuestDockExpandedWidth(width, left, right);
+      const result = questDockExpandedWidth / c11;
+      if (cResult[0] === result) {
+        let tmp5;
+        if (cResult[1] === questDockExpandedWidth) {
+          tmp5 = cResult[2];
+        }
+        return tmp5;
+      }
+      size = { width: questDockExpandedWidth, height: result };
+      cResult[0] = result;
+      cResult[1] = questDockExpandedWidth;
+      cResult[2] = size;
+      tmp5 = size;
+    }
+  : () => {
+      let left;
+      let right;
+      const width = left(right[12])().width;
+      const rect = left(right[13])();
+      left = rect.left;
+      right = rect.right;
+      const items = [width, left, right];
+      return react.useMemo(() => {
+        const obj = QuestDockUtils;
+        const questDockExpandedWidth = obj.getQuestDockExpandedWidth(width, left, right);
+        size = { width: questDockExpandedWidth, height: questDockExpandedWidth / c11 };
+        return size;
+      }, items);
+    };
+const create = StyleSheet.create;
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj5.opacity = 0;
-obj2.hiddenVideo = obj5;
-const styles = StyleSheet.create(obj2);
-ReactCompilerGating = fn(558);
+let closure_13 = create(obj2);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(1);
+      let first;
+      let obj3;
+      const obj = react2;
+      const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = {
-          source: null,
-          style: null,
+          source: obj3,
+          style: StyleSheet.absoluteFillObject,
           resizeMode: "cover",
           accessible: false,
           importantForAccessibility: "no-hide-descendants",
         };
-        const obj3 = { uri: _modDef15008 };
-        obj2.source = obj3;
-        obj2.style = StyleSheet.absoluteFillObject;
-        const tmp8 = closure_1_8(FastImageDefault, obj2);
+        obj3 = { uri: _modDef15008 };
+        const tmp6 = FastImageDefault;
+        const tmp8 = metroImportAll(tmp6, obj2);
         cResult[0] = tmp8;
-        let first = tmp8;
+        first = tmp8;
       } else {
         first = cResult[0];
       }
       return first;
     }
   : () => {
+      let obj2;
       const obj = {
-        source: null,
-        style: null,
+        source: obj2,
+        style: StyleSheet.absoluteFillObject,
         resizeMode: "cover",
         accessible: false,
         importantForAccessibility: "no-hide-descendants",
       };
-      const obj2 = { uri: _modDef15008 };
-      obj.source = obj2;
-      obj.style = StyleSheet.absoluteFillObject;
-      return closure_1_8(FastImageDefault, obj);
+      obj2 = { uri: _modDef15008 };
+      const tmp = FastImageDefault;
+      return metroImportAll(tmp, obj);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? (paused) => {
-      const cResult = c.c(14);
+      let closure_0;
+      let obj3;
+      let tmp12;
+      let tmp13;
+      let tmp18;
+      let tmp5;
+      let tmp6;
+      let useReducedMotion;
+      const obj = react2;
+      const cResult = obj.c(14);
       paused = paused.paused;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
@@ -114,18 +177,16 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp5, tmp6);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
       const tmp10 = useIsQuestDockContentVisibleDefault();
-      const tmpResult = initialize;
-      [tmp12, tmp13] = noop.useState(false);
+      [tmp12, tmp13] = react.useState(false);
       const require = tmp13;
-      const tmp14 = _slicedToArray(noop.useState(stateFromStores), 2);
+      _slicedToArray(react.useState(false), 2);
+      const tmp14 = _slicedToArray(react.useState(stateFromStores), 2);
       if (tmp14[0] !== stateFromStores) {
         tmp14[1](stateFromStores);
-        let tmp16 = stateFromStores;
-        if (stateFromStores) {
-          tmp16 = tmp12;
-        }
+        const tmp16 = stateFromStores && tmp12;
         if (tmp16) {
           tmp13(false);
         }
@@ -135,139 +196,138 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           tmp13(true);
         };
         cResult[2] = fn2;
-        let tmp18 = fn2;
+        tmp18 = fn2;
       } else {
         tmp18 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class O {
           constructor() {
-            tmp = closure_0(false);
-            return;
+            tmp13(false);
           }
         }
         cResult[3] = O;
       } else {
         class O {
           constructor() {
-            tmp = closure_0(false);
-            return;
+            tmp13(false);
           }
         }
       }
       if (cResult[4] === tmp10) {
         class O {
           constructor() {
-            tmp = closure_0(false);
-            return;
+            tmp13(false);
           }
         }
       }
       let tmp21Result = !stateFromStores;
-      if (!stateFromStores) {
+      if (tmp21Result) {
         class O {
           constructor() {
-            tmp = closure_0(false);
-            return;
+            tmp13(false);
           }
         }
         const obj2 = {
           style: tmp12 ? closure_13.video : closure_13.hiddenVideo,
-          source: null,
+          source: obj3,
           resizeMode: "cover",
-          paused: null,
+          paused: (undefined !== paused && paused) || !tmp10,
           muted: true,
           disableFocus: true,
           preventsDisplaySleepDuringVideoPlayback: false,
           importantForAccessibility: "no-hide-descendants",
-          onReadyForDisplay: null,
-          onError: null,
+          onReadyForDisplay: tmp18,
+          onError: O,
         };
-        const obj3 = { uri: _modDef15011 };
-        obj2.source = obj3;
-        if (!tmp4) {
-          class O {
-            constructor() {
-              tmp = closure_0(false);
-              return;
-            }
-          }
-        }
-        obj2.paused = tmp4;
-        obj2.onReadyForDisplay = tmp18;
-        obj2.onError = O;
-        tmp21Result = tmp21(tmp(7983).VideoComponent, obj2);
+        obj3 = { uri: _modDef15011 };
+        const VideoComponent = tmp(7983).VideoComponent;
+        tmp21Result = tmp21(VideoComponent, obj2);
       }
       cResult[4] = tmp10;
       cResult[5] = tmp12;
       cResult[6] = undefined !== paused && paused;
       cResult[7] = stateFromStores;
       cResult[8] = tmp21Result;
-      const tmp11 = _slicedToArray(noop.useState(false), 2);
     }
   : (paused) => {
+      let _undefined;
+      let obj4;
+      let tmp7;
+      let tmp8;
+      let useReducedMotion;
       let flag = paused.paused;
       if (flag === undefined) {
         flag = false;
       }
       _require = undefined;
       const items = [AccessibilityStore];
-      const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-      const obj = require("initialize");
-      const tmp = _require;
+      const obj = require("get initialized");
+      const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
       const tmp5 = useIsQuestDockContentVisibleDefault();
-      [tmp7, tmp8] = noop.useState(false);
+      [tmp7, tmp8] = react.useState(false);
+      const tmp = _require;
       _require = tmp8;
-      const tmp9 = _slicedToArray(noop.useState(stateFromStores), 2);
+      _slicedToArray(react.useState(false), 2);
+      const tmp9 = _slicedToArray(react.useState(stateFromStores), 2);
       if (tmp9[0] !== stateFromStores) {
         tmp9[1](stateFromStores);
-        let tmp11 = stateFromStores;
-        if (stateFromStores) {
-          tmp11 = tmp7;
-        }
+        const tmp11 = stateFromStores && tmp7;
         if (tmp11) {
           tmp8(false);
         }
       }
-      const callback = noop.useCallback(() => {
+      const callback = react.useCallback(() => {
         _undefined(true);
       }, []);
       let tmp18Result = !stateFromStores;
-      if (!stateFromStores) {
+      if (tmp18Result) {
         const obj3 = {
           style: tmp7 ? closure_13.video : closure_13.hiddenVideo,
-          source: null,
+          source: obj4,
           resizeMode: "cover",
-          paused: null,
+          paused: flag,
           muted: true,
           disableFocus: true,
           preventsDisplaySleepDuringVideoPlayback: false,
           importantForAccessibility: "no-hide-descendants",
-          onReadyForDisplay: null,
-          onError: null,
+          onReadyForDisplay: callback,
+          onError: tmp14,
         };
-        const obj4 = { uri: _modDef15011 };
-        obj3.source = obj4;
+        obj4 = { uri: _modDef15011 };
+        const VideoComponent = tmp(7983).VideoComponent;
         if (!flag) {
           flag = !tmp5;
         }
-        obj3.paused = flag;
-        obj3.onReadyForDisplay = callback;
-        obj3.onError = tmp14;
-        tmp18Result = closure_8(tmp(7983).VideoComponent, obj3);
+        tmp18Result = closure_8(VideoComponent, obj3);
       }
       const children = [tmp18Result];
-      let tmp20 = !tmp7;
-      if (!tmp7) {
-        tmp20 = closure_8(closure_14, {});
-      }
-      children[1] = tmp20;
+      children[1] = !tmp7 && closure_8(closure_14, {});
+      const tmp20 = !tmp7 && closure_8(closure_14, {});
       return closure_10(closure_9, { children });
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   ? (paused) => {
-      const cResult = isRendered(576).c(19);
+      let closure_1;
+      let closure_3;
+      let isRendered;
+      let obj4;
+      let ref;
+      let tmp13;
+      let tmp14;
+      let tmp16;
+      let tmp17;
+      let tmp22;
+      let tmp23;
+      let tmp29;
+      let tmp30;
+      let tmp5;
+      let tmp6;
+      let useReducedMotion;
+      const tmp = isRendered;
+      const obj = isRendered(576);
+      const cResult = obj.c(19);
       paused = paused.paused;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
@@ -281,31 +341,30 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const obj = isRendered(576);
-      const stateFromStores = isRendered(504).useStateFromStores(tmp5, tmp6);
+      const tmpResult = tmp(504);
+      const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
       const tmp10 = useIsQuestDockContentVisibleDefault();
-      isRendered = noop.useContext(QuestDockVisibilityContextDefault).isRendered;
-      const tmp11 = _slicedToArray;
-      const tmpResult = isRendered(504);
-      [tmp13, tmp14] = noop.useState(false);
+      isRendered = react.useContext(reactDefault).isRendered;
+      [tmp13, tmp14] = react.useState(false);
       importDefault = tmp14;
-      dependencyMap = noop.useRef(null);
-      const tmp12 = _slicedToArray(noop.useState(false), 2);
-      [tmp16, tmp17] = noop.useState(false);
+      _slicedToArray(react.useState(false), 2);
+      dependencyMap = react.useRef(null);
+      [tmp16, tmp17] = react.useState(false);
+      _slicedToArray(react.useState(false), 2);
+      const tmp11 = _slicedToArray;
       _slicedToArray = tmp17;
-      const tmp18 = _slicedToArray(noop.useState(isRendered), 2);
+      const tmp18 = _slicedToArray(react.useState(isRendered), 2);
       if (tmp18[0] !== isRendered) {
         tmp18[1](isRendered);
-        let tmp20 = !isRendered;
-        if (!isRendered) {
-          tmp20 = tmp16;
-        }
+        const tmp20 = !isRendered && tmp16;
         if (tmp20) {
           tmp17(false);
         }
       }
       if (cResult[2] !== isRendered) {
         const fn2 = function h() {
+          let closure_0;
+          let timeout;
           if (timeout) {
             const _setTimeout = setTimeout;
             timeout = setTimeout(() => {
@@ -320,13 +379,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = isRendered;
         cResult[3] = fn2;
         cResult[4] = items1;
-        let tmp23 = items1;
-        let tmp22 = fn2;
+        tmp23 = items1;
+        tmp22 = fn2;
       } else {
         tmp22 = cResult[3];
         tmp23 = cResult[4];
       }
-      const effect = noop.useEffect(tmp22, tmp23);
+      const effect = react.useEffect(tmp22, tmp23);
       let tmp9Result = null;
       if (!stateFromStores) {
         tmp9Result = null;
@@ -334,7 +393,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           tmp9Result = _modDef15012;
         }
       }
-      const tmp11Result = tmp11(noop.useState(tmp9Result), 2);
+      const tmp11Result = tmp11(react.useState(tmp9Result), 2);
       if (tmp11Result[0] !== tmp9Result) {
         tmp11Result[1](tmp9Result);
         if (tmp13) {
@@ -352,7 +411,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           };
         };
         cResult[5] = fn3;
-        let tmp29 = fn3;
+        tmp29 = fn3;
       } else {
         tmp29 = cResult[5];
       }
@@ -360,93 +419,78 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const items2 = [tmp9Result];
         cResult[6] = tmp9Result;
         cResult[7] = items2;
-        let tmp30 = items2;
+        tmp30 = items2;
       } else {
         tmp30 = cResult[7];
       }
-      const effect1 = noop.useEffect(tmp29, tmp30);
+      const effect1 = react.useEffect(tmp29, tmp30);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         class U {
           constructor() {
-            tmp = closure_2;
-            if (null != closure_2.current) {
-              tmp2 = globalThis;
-              _clearTimeout = clearTimeout;
-              clearTimeoutResult = clearTimeout(tmp.current);
+            if (null != ref.current) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(ref.current);
             }
-            tmp.current = setTimeout(() => {
+            ref.current = setTimeout(() => {
               closure_1_1(true);
               ref.current = null;
             }, 150);
-            return;
           }
         }
         cResult[8] = U;
       } else {
         class U {
           constructor() {
-            tmp = closure_2;
-            if (null != closure_2.current) {
-              tmp2 = globalThis;
-              _clearTimeout = clearTimeout;
-              clearTimeoutResult = clearTimeout(tmp.current);
+            if (null != ref.current) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(ref.current);
             }
-            tmp.current = setTimeout(() => {
+            ref.current = setTimeout(() => {
               closure_1_1(true);
               ref.current = null;
             }, 150);
-            return;
           }
         }
       }
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
         class U {
           constructor() {
-            tmp = closure_2;
-            if (null != closure_2.current) {
-              tmp2 = globalThis;
-              _clearTimeout = clearTimeout;
-              clearTimeoutResult = clearTimeout(tmp.current);
+            if (null != ref.current) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(ref.current);
             }
-            tmp.current = setTimeout(() => {
+            ref.current = setTimeout(() => {
               closure_1_1(true);
               ref.current = null;
             }, 150);
-            return;
           }
         }
         cResult[9] = tmp34;
       } else {
         class U {
           constructor() {
-            tmp = closure_2;
-            if (null != closure_2.current) {
-              tmp2 = globalThis;
-              _clearTimeout = clearTimeout;
-              clearTimeoutResult = clearTimeout(tmp.current);
+            if (null != ref.current) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(ref.current);
             }
-            tmp.current = setTimeout(() => {
+            ref.current = setTimeout(() => {
               closure_1_1(true);
               ref.current = null;
             }, 150);
-            return;
           }
         }
       }
       if (cResult[10] === tmp10) {
         class U {
           constructor() {
-            tmp = closure_2;
-            if (null != closure_2.current) {
-              tmp2 = globalThis;
-              _clearTimeout = clearTimeout;
-              clearTimeoutResult = clearTimeout(tmp.current);
+            if (null != ref.current) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(ref.current);
             }
-            tmp.current = setTimeout(() => {
+            ref.current = setTimeout(() => {
               closure_1_1(true);
               ref.current = null;
             }, 150);
-            return;
           }
         }
       }
@@ -454,94 +498,94 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp36Result) {
         class U {
           constructor() {
-            tmp = closure_2;
-            if (null != closure_2.current) {
-              tmp2 = globalThis;
-              _clearTimeout = clearTimeout;
-              clearTimeoutResult = clearTimeout(tmp.current);
+            if (null != ref.current) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(ref.current);
             }
-            tmp.current = setTimeout(() => {
+            ref.current = setTimeout(() => {
               closure_1_1(true);
               ref.current = null;
             }, 150);
-            return;
           }
         }
         const obj2 = {
           style: closure_13.video,
-          source: null,
+          source: obj4,
           resizeMode: "cover",
-          paused: null,
+          paused: tmp38,
           muted: true,
           disableFocus: true,
           preventsDisplaySleepDuringVideoPlayback: false,
           importantForAccessibility: "no-hide-descendants",
-          onLoad: null,
-          onError: null,
+          onLoad: U,
+          onError: tmp34,
         };
-        const obj4 = { uri: tmp9Result };
-        obj2.source = obj4;
-        if (!tmp4) {
+        obj4 = { uri: tmp9Result };
+        const VideoComponent = tmp(7983).VideoComponent;
+        if (!(undefined !== paused && paused)) {
           class U {
             constructor() {
-              tmp = closure_2;
-              if (null != closure_2.current) {
-                tmp2 = globalThis;
-                _clearTimeout = clearTimeout;
-                clearTimeoutResult = clearTimeout(tmp.current);
+              if (null != ref.current) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(ref.current);
               }
-              tmp.current = setTimeout(() => {
+              ref.current = setTimeout(() => {
                 closure_1_1(true);
                 ref.current = null;
               }, 150);
-              return;
             }
           }
         }
-        obj2.paused = tmp4;
-        obj2.onLoad = U;
-        obj2.onError = tmp34;
-        tmp36Result = tmp36(tmp(7983).VideoComponent, obj2);
+        tmp36Result = tmp36(VideoComponent, obj2);
       }
       cResult[10] = tmp10;
       cResult[11] = undefined !== paused && paused;
       cResult[12] = tmp9Result;
       cResult[13] = tmp36Result;
-      const tmp15 = _slicedToArray(noop.useState(false), 2);
     }
   : (paused) => {
+      let _undefined;
+      let c3;
+      let obj4;
+      let obj6;
+      let ref;
+      let tmp11;
+      let tmp12;
+      let tmp8;
+      let tmp9;
+      let useReducedMotion;
       let flag = paused.paused;
       if (flag === undefined) {
         flag = false;
       }
       let isRendered;
       _slicedToArray = undefined;
-      const items = [AccessibilityStore];
-      const stateFromStores = isRendered(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-      const obj = isRendered(504);
       const tmp = isRendered;
-      isRendered = noop.useContext(QuestDockVisibilityContextDefault).isRendered;
+      const items = [AccessibilityStore];
+      const obj = isRendered(504);
+      const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
       const tmp5 = useIsQuestDockContentVisibleDefault();
-      const tmp6 = _slicedToArray;
-      [tmp8, tmp9] = noop.useState(false);
+      isRendered = react.useContext(reactDefault).isRendered;
+      [tmp8, tmp9] = react.useState(false);
       importDefault = tmp9;
-      dependencyMap = noop.useRef(null);
-      const tmp7 = _slicedToArray(noop.useState(false), 2);
-      [tmp11, tmp12] = noop.useState(false);
+      _slicedToArray(react.useState(false), 2);
+      dependencyMap = react.useRef(null);
+      [tmp11, tmp12] = react.useState(false);
+      _slicedToArray(react.useState(false), 2);
+      const tmp6 = _slicedToArray;
       _slicedToArray = tmp12;
-      const tmp13 = _slicedToArray(noop.useState(isRendered), 2);
+      const tmp13 = _slicedToArray(react.useState(isRendered), 2);
       if (tmp13[0] !== isRendered) {
         tmp13[1](isRendered);
-        let tmp15 = !isRendered;
-        if (!isRendered) {
-          tmp15 = tmp11;
-        }
+        const tmp15 = !isRendered && tmp11;
         if (tmp15) {
           tmp12(false);
         }
       }
       const items1 = [isRendered];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
+        let closure_0;
+        let timeout;
         if (timeout) {
           const _setTimeout = setTimeout;
           timeout = setTimeout(() => {
@@ -559,7 +603,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           tmp4Result = tmp4(15012);
         }
       }
-      const tmp6Result = tmp6(noop.useState(tmp4Result), 2);
+      const tmp6Result = tmp6(react.useState(tmp4Result), 2);
       if (tmp6Result[0] !== tmp4Result) {
         tmp6Result[1](tmp4Result);
         if (tmp8) {
@@ -567,7 +611,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const items2 = [tmp4Result];
-      const effect1 = noop.useEffect(
+      const effect1 = react.useEffect(
         () => () => {
           if (null != ref.current) {
             const _clearTimeout = clearTimeout;
@@ -577,7 +621,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         },
         items2,
       );
-      const callback = noop.useCallback(() => {
+      const callback = react.useCallback(() => {
         if (null != ref.current) {
           const _clearTimeout = clearTimeout;
           clearTimeout(ref.current);
@@ -591,155 +635,131 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp28Result) {
         const obj3 = {
           style: closure_13.video,
-          source: null,
+          source: obj4,
           resizeMode: "cover",
-          paused: null,
+          paused: flag,
           muted: true,
           disableFocus: true,
           preventsDisplaySleepDuringVideoPlayback: false,
           importantForAccessibility: "no-hide-descendants",
-          onLoad: null,
-          onError: null,
+          onLoad: callback,
+          onError: tmp24,
         };
-        const obj4 = { uri: tmp4Result };
-        obj3.source = obj4;
+        obj4 = { uri: tmp4Result };
+        const VideoComponent = tmp(7983).VideoComponent;
         if (!flag) {
           flag = !tmp5;
         }
-        obj3.paused = flag;
-        obj3.onLoad = callback;
-        obj3.onError = tmp24;
-        tmp28Result = closure_8(tmp(7983).VideoComponent, obj3);
+        tmp28Result = closure_8(VideoComponent, obj3);
       }
       const children = [tmp28Result];
       let tmp30 = !tmp8;
-      if (!tmp8) {
+      if (tmp30) {
         const obj5 = {
-          source: null,
-          style: null,
+          source: obj6,
+          style: StyleSheet.absoluteFillObject,
           resizeMode: "cover",
           accessible: false,
           importantForAccessibility: "no-hide-descendants",
         };
-        const obj6 = { uri: tmp4(15009) };
-        obj5.source = obj6;
-        obj5.style = StyleSheet.absoluteFillObject;
-        tmp30 = closure_8(tmp4(5974), obj5);
-        const tmp4Result2 = tmp4(5974);
+        obj6 = { uri: _modDef15009 };
+        const tmp4Result2 = FastImageDefault;
+        tmp30 = closure_8(tmp4Result2, obj5);
       }
       children[1] = tmp30;
       return closure_10(closure_9, { children });
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
   ? (surface) => {
-      const obj = c;
+      let first;
+      const obj = react2;
       const cResult = obj.c(3);
+      const obj2 = BountiesAndroidQuestBarSmokeAnimationExperiment;
       if (obj2.useIsBountiesAndroidQuestBarSmokeAnimationEnabled(QuestsExperimentLocations.QUESTS_BAR_MOBILE)) {
         if (surface.surface !== obj.EXPANDED) {
+          let tmp8;
           if (cResult[1] !== surface) {
             const obj3 = {};
             const merged = Object.assign(surface);
-            const tmp14 = closure_1_8(closure_16, obj3);
+            const tmp14 = metroImportAll(closure_16, obj3);
             cResult[1] = surface;
             cResult[2] = tmp14;
+            tmp8 = tmp14;
+          } else {
+            tmp8 = cResult[2];
           }
+          first = tmp8;
         }
+        return first;
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = closure_1_8(closure_14, {});
+        const tmp7 = metroImportAll(closure_14, {});
         cResult[0] = tmp7;
-        let first = tmp7;
+        first = tmp7;
       } else {
         first = cResult[0];
       }
-      return first;
     }
   : (surface) => {
       const obj = BountiesAndroidQuestBarSmokeAnimationExperiment;
       if (obj.useIsBountiesAndroidQuestBarSmokeAnimationEnabled(QuestsExperimentLocations.QUESTS_BAR_MOBILE)) {
+        let tmp3;
         if (surface.surface !== obj.EXPANDED) {
           const obj2 = {};
           const merged = Object.assign(surface);
-          let tmp3 = closure_1_8(closure_16, obj2);
+          tmp3 = metroImportAll(closure_16, obj2);
         }
         return tmp3;
       }
-      tmp3 = closure_1_8(closure_14, {});
+      tmp3 = metroImportAll(closure_14, {});
     };
-ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      const cResult = c.c(3);
-      ({ left, right } = useSafeAreaInsetsDefault());
-      const tmp2 = useSafeAreaInsetsDefault();
-      const questDockExpandedWidth = QuestDockUtils.getQuestDockExpandedWidth(
-        useWindowDimensionsDefault().width,
-        left,
-        right,
-      );
-      const result = questDockExpandedWidth / c11;
-      if (cResult[0] === result) {
-        if (cResult[1] === questDockExpandedWidth) {
-          let tmp5 = cResult[2];
-        }
-        return tmp5;
-      }
-      const size = { width: questDockExpandedWidth, height: result };
-      cResult[0] = result;
-      cResult[1] = questDockExpandedWidth;
-      cResult[2] = size;
-      tmp5 = size;
-    }
-  : () => {
-      const width = left(right[12])().width;
-      const rect = left(right[13])();
-      left = rect.left;
-      right = rect.right;
-      const items = [width, left, right];
-      return noop.useMemo(() => {
-        const questDockExpandedWidth = QuestDockUtils.getQuestDockExpandedWidth(width, left, right);
-        const size = { width: questDockExpandedWidth, height: questDockExpandedWidth / c11 };
-        return size;
-      }, items);
-    };
-let size = fn(2);
-let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountySmokeLayer.tsx");
-
-export default noop.memo(
+ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        const cResult = c.c(2);
+        let tmp4;
+        const obj = react2;
+        const cResult = obj.c(2);
         if (cResult[0] !== arg0) {
+          let tmp5Result;
+          const tmpResult = PlatformUtils;
           if (tmpResult.isAndroid()) {
             const obj2 = {};
             const merged = Object.assign(arg0);
-            let tmp4Result = closure_1_8(closure_17, obj2);
+            tmp5Result = metroImportAll(closure_17, obj2);
           } else {
             const obj3 = {};
             const merged1 = Object.assign(arg0);
-            tmp4Result = closure_1_8(closure_15, obj3);
+            tmp5Result = metroImportAll(closure_15, obj3);
           }
           cResult[0] = arg0;
-          cResult[1] = tmp4Result;
-          tmpResult = PlatformUtils;
+          cResult[1] = tmp5Result;
+          tmp4 = tmp5Result;
         } else {
-          return cResult[1];
+          tmp4 = cResult[1];
         }
+        return tmp4;
       }
     : (arg0) => {
+        let tmpResult;
+        const obj = PlatformUtils;
         if (obj.isAndroid()) {
           const obj2 = {};
           const merged = Object.assign(arg0);
-          let tmpResult = closure_1_8(closure_17, obj2);
+          tmpResult = metroImportAll(closure_17, obj2);
         } else {
           const obj3 = {};
           const merged1 = Object.assign(arg0);
-          tmpResult = closure_1_8(closure_15, obj3);
+          tmpResult = metroImportAll(closure_15, obj3);
         }
         return tmpResult;
       },
 );
+let size = size_mod;
+let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountySmokeLayer.tsx");
+
+export default memoResult;
 export const QUEST_DOCK_BOUNTY_SMOKE_ART_ASPECT_RATIO = 3.75;
 export { QuestDockBountySmokeSurface };
 export const useQuestDockBountySmokeCollapsedPlaceholderUrl = tmp3;

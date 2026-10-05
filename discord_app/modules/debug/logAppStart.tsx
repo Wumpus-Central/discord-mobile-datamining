@@ -5,12 +5,13 @@ import size_mod from "../../../_runtime/metro/00002__.js";
 
 let size = size_mod;
 size.clear();
-new Logger.default("app").log("Initializing app");
+const _default = new Logger.default("app");
+_default.log("Initializing app");
 const loadIndex = TTITracker.default.loadIndex;
 loadIndex.recordStart();
 const loadImports = TTITracker.default.loadImports;
 loadImports.recordStart();
-let size = size_mod;
+size = size_mod;
 const result = size.fileFinishedImporting("modules/debug/logAppStart.tsx");
 
 export default null;

@@ -1,14 +1,16 @@
 // discord_app/modules/favorites/analytics/FavoritesGuildAnalytics.tsx
+import Constants from "../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import FavoritesUtils from "../FavoritesUtils.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = Constants.AnalyticEvents;
 let manual_browsing = "manual_browsing";
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/analytics/FavoritesGuildAnalytics.tsx");
 
 export const setNextFavoritesGuildViewSource = function setNextFavoritesGuildViewSource(intro_dc) {
+  const obj = FavoritesUtils;
   if (!obj.isFavoritesGuildId(SelectedGuildStore.getGuildId())) {
     manual_browsing = intro_dc;
   }
@@ -22,24 +24,24 @@ export const trackFavoritesGuildAddToFavorites = function trackFavoritesGuildAdd
   type,
   total_favorites,
 ) {
-  AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_ADD_TO_FAVORITES, {
-    source,
-    channel_type: type,
-    total_favorites,
-  });
+  const obj = AnalyticsUtilsDefault;
+  const obj2 = { source, channel_type: type, total_favorites };
+  obj.track(AnalyticEvents.FAVORITES_GUILD_ADD_TO_FAVORITES, obj2);
 };
 export const trackFavoritesGuildRemoveFromFavorites = function trackFavoritesGuildRemoveFromFavorites(type, length) {
-  AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_REMOVE_FROM_FAVORITES, {
-    channel_type: type,
-    total_favorites: length,
-  });
+  const obj = AnalyticsUtilsDefault;
+  const obj2 = { channel_type: type, total_favorites: length };
+  obj.track(AnalyticEvents.FAVORITES_GUILD_REMOVE_FROM_FAVORITES, obj2);
 };
 export const trackFavoritesGuildOrderUpdated = function trackFavoritesGuildOrderUpdated() {
-  AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_ORDER_UPDATED);
+  const obj = AnalyticsUtilsDefault;
+  obj.track(AnalyticEvents.FAVORITES_GUILD_ORDER_UPDATED);
 };
 export const trackFavoritesGuildVisibilitySettingToggled = function trackFavoritesGuildVisibilitySettingToggled(
   auto,
   is_visible,
 ) {
-  AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_SETTING_TOGGLED, { source: auto, is_visible });
+  const obj = AnalyticsUtilsDefault;
+  const obj2 = { source: auto, is_visible };
+  obj.track(AnalyticEvents.FAVORITES_GUILD_SETTING_TOGGLED, obj2);
 };

@@ -3,6 +3,8 @@ import StickersTypes from "../StickersTypes.tsx";
 import ExpressionPickerConstants from "../../expression_picker/ExpressionPickerConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+let MIN_MARGIN;
+let PADDING_HORIZONTAL;
 const PADDING_VERTICAL = ExpressionPickerConstants.PADDING_VERTICAL;
 ({ PADDING_HORIZONTAL, MIN_MARGIN } = ExpressionPickerConstants);
 const result = 2 * PADDING_VERTICAL;

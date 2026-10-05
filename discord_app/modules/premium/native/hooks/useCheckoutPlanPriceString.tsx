@@ -1,138 +1,174 @@
 // discord_app/modules/premium/native/hooks/useCheckoutPlanPriceString.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import PremiumBundledPlansUtils from "../PremiumBundledPlansUtils.tsx";
+import NativeCheckoutStore from "../../../checkout/native/NativeCheckoutStore.tsx";
+import react_mod from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const PlatformUtils = obj(1369);
-const PremiumBundledPlansUtils = obj(6915);
-require = fn;
-const useNativeCheckoutStore = fn(6930).useNativeCheckoutStore;
-let ReactCompilerGating = fn(558);
+const require = globalThis.__r;
+let _require, dependencyMap;
+
+let react = react_mod;
+const useNativeCheckoutStore = NativeCheckoutStore.useNativeCheckoutStore;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (productId) => {
-      let obj = require;
-      let availablePlanForItems = dependencyMap;
-      const cResult = c.c(10);
+      let first;
+      let tmp7;
+      let tmp9;
+      const obj = react2;
+      const cResult = obj.c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function u(orderRequired) {
           return orderRequired.orderRequired;
         };
         cResult[0] = fn;
-        let first = fn;
+        first = fn;
       } else {
         first = cResult[0];
       }
-      const tmp5 = useNativeCheckoutStore(first);
+      const tmp6 = useNativeCheckoutStore(first);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function c(getCheckoutContextRecord) {
           return getCheckoutContextRecord.getCheckoutContextRecord();
         };
         cResult[1] = fn2;
-        let tmp6 = fn2;
+        tmp7 = fn2;
       } else {
-        tmp6 = cResult[1];
+        tmp7 = cResult[1];
       }
-      const tmp4Result = useNativeCheckoutStore(tmp6);
-      if (cResult[2] !== tmp5) {
-        const tmp8 = PlatformUtils.isIOS() && tmp5;
-        cResult[2] = tmp5;
-        cResult[3] = tmp8;
-        let tmp7 = tmp8;
-        const objResult = PlatformUtils;
+      const tmp5Result = useNativeCheckoutStore(tmp7);
+      if (cResult[2] !== tmp6) {
+        const tmpResult = PlatformUtils;
+        const tmp10 = tmpResult.isIOS() && tmp6;
+        cResult[2] = tmp6;
+        cResult[3] = tmp10;
+        tmp9 = tmp10;
       } else {
-        tmp7 = cResult[3];
+        tmp9 = cResult[3];
       }
-      let tmp9 = null;
-      if (tmp7) {
-        tmp9 = null;
-        if (null != tmp4Result) {
-          tmp9 = null;
+      let tmp11 = null;
+      if (tmp9) {
+        tmp11 = null;
+        if (null != tmp5Result) {
+          tmp11 = null;
           if (null != productId) {
-            if (cResult[4] === tmp4Result) {
+            if (cResult[4] === tmp5Result) {
+              let tmp13;
+              if (cResult[5] === productId) {
+                tmp13 = cResult[6];
+              }
+              tmp11 = tmp13;
             }
-            obj = PremiumBundledPlansUtils;
-            availablePlanForItems = tmp4Result.getAvailablePlanForItems(obj.getSubscriptionItemsForProduct(productId));
-            cResult[4] = tmp4Result;
+            const getAvailablePlanForItems = tmp5Result.getAvailablePlanForItems;
+            const tmpResult2 = PremiumBundledPlansUtils;
+            const availablePlanForItems = getAvailablePlanForItems(
+              tmpResult2.getSubscriptionItemsForProduct(productId),
+            );
+            cResult[4] = tmp5Result;
             cResult[5] = productId;
             cResult[6] = availablePlanForItems;
+            tmp13 = availablePlanForItems;
           }
         }
       }
-      if (cResult[7] === tmp9) {
-        if (cResult[8] === tmp7) {
-          let tmp13 = cResult[9];
+      if (cResult[7] === tmp11) {
+        let tmp15;
+        if (cResult[8] === tmp9) {
+          tmp15 = cResult[9];
         }
-        return tmp13;
+        return tmp15;
       }
-      const obj3 = { plan: tmp9, useOrderPricing: tmp7 };
-      cResult[7] = tmp9;
-      cResult[8] = tmp7;
-      cResult[9] = obj3;
-      tmp13 = obj3;
+      const obj2 = { plan: tmp11, useOrderPricing: tmp9 };
+      cResult[7] = tmp11;
+      cResult[8] = tmp9;
+      cResult[9] = obj2;
+      tmp15 = obj2;
     }
   : (arg0) => {
+      let closure_0;
+      let closure_1;
+      let closure_2;
+      let items;
       _require = arg0;
+      const tmp = useNativeCheckoutStore((orderRequired) => orderRequired.orderRequired);
       const tmp2 = useNativeCheckoutStore((getCheckoutContextRecord) =>
         getCheckoutContextRecord.getCheckoutContextRecord(),
       );
       dependencyMap = tmp2;
-      const tmp = useNativeCheckoutStore((orderRequired) => orderRequired.orderRequired);
-      const tmp3 = require("PlatformUtils").isIOS() && tmp;
-      noop = tmp3;
-      let obj2 = { plan: null, useOrderPricing: tmp3 };
-      const items = [tmp2, arg0, tmp3];
-      obj2.plan = noop.useMemo(() => {
-        availablePlanForItems = null;
-        if (closure_2) {
-          availablePlanForItems = null;
-          if (null != availablePlanForItems) {
+      let obj = require("PlatformUtils");
+      const tmp3 = obj.isIOS() && tmp;
+      react = tmp3;
+      const obj2 = {
+        plan: react.useMemo(() => {
+          let availablePlanForItems = null;
+          if (closure_2) {
             availablePlanForItems = null;
-            if (null != closure_0) {
-              availablePlanForItems = availablePlanForItems.getAvailablePlanForItems(
-                PremiumBundledPlansUtils.getSubscriptionItemsForProduct(tmp2),
-              );
+            if (null != closure_1) {
+              availablePlanForItems = null;
+              if (null != closure_0) {
+                const getAvailablePlanForItems = closure_1.getAvailablePlanForItems;
+                const obj = PremiumBundledPlansUtils;
+                availablePlanForItems = getAvailablePlanForItems(obj.getSubscriptionItemsForProduct(tmp3));
+              }
             }
           }
-        }
-        return availablePlanForItems;
-      }, items);
+          return availablePlanForItems;
+        }, items),
+        useOrderPricing: tmp3,
+      };
+      items = [tmp2, arg0, tmp3];
       return obj2;
     };
 let closure_4 = tmp2;
-fn(558);
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      const cResult = c.c(10);
+      let discountedPriceString;
+      let regularPriceString;
+      let tmp3;
+      const obj = react2;
+      const cResult = obj.c(10);
       const tmp2 = closure_4(arg0);
       const plan = tmp2.plan;
       ({ discountedPriceString, regularPriceString } = arg1);
       if (tmp2.useOrderPricing) {
-        let tmp3 = null;
+        tmp3 = null;
         if (null != plan) {
+          let tmp5;
           if (cResult[0] !== plan) {
             const discountedPriceString1 = plan.getDiscountedPriceString();
             cResult[0] = plan;
             cResult[1] = discountedPriceString1;
-            let tmp5 = discountedPriceString1;
+            tmp5 = discountedPriceString1;
           } else {
             tmp5 = cResult[1];
           }
           tmp3 = null;
           if (null != tmp5) {
+            let tmp7;
             if (cResult[2] !== plan) {
               const regularPriceString1 = plan.getRegularPriceString();
               cResult[2] = plan;
               cResult[3] = regularPriceString1;
-              let tmp7 = regularPriceString1;
+              tmp7 = regularPriceString1;
             } else {
               tmp7 = cResult[3];
             }
             if (cResult[4] === tmp5) {
+              let tmp9;
+              if (cResult[5] === tmp7) {
+                tmp9 = cResult[6];
+              }
+              tmp3 = tmp9;
             }
             const obj2 = { discountedPrice: tmp5, regularPrice: tmp7 };
             cResult[4] = tmp5;
             cResult[5] = tmp7;
             cResult[6] = obj2;
+            tmp9 = obj2;
           }
         }
       } else {
@@ -141,8 +177,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           tmp3 = null;
           if (null != regularPriceString) {
             if (cResult[7] === discountedPriceString) {
+              let tmp4;
               if (cResult[8] === regularPriceString) {
-                let tmp4 = cResult[9];
+                tmp4 = cResult[9];
               }
               tmp3 = tmp4;
             }
@@ -163,40 +200,37 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       discountedPriceString = discountedPriceString.discountedPriceString;
       const regularPriceString = discountedPriceString.regularPriceString;
       const items = [discountedPriceString, plan, regularPriceString, useOrderPricing];
-      return noop.useMemo(() => {
+      return react.useMemo(() => {
         if (useOrderPricing) {
           if (null == plan) {
             return null;
           } else {
             discountedPriceString = plan.getDiscountedPriceString();
-            let tmp7 = null;
+            let tmp8 = null;
             if (null != discountedPriceString) {
+              tmp8 = { discountedPrice: discountedPriceString, regularPrice: plan.getRegularPriceString() };
               const obj3 = { discountedPrice: discountedPriceString, regularPrice: plan.getRegularPriceString() };
-              tmp7 = obj3;
             }
-            return tmp7;
+            return tmp8;
           }
         } else {
-          let tmp3 = null;
+          let tmp4 = null;
           if (null != discountedPriceString) {
-            tmp3 = null;
+            tmp4 = null;
             if (null != regularPriceString) {
-              const obj = { discountedPrice: tmp, regularPrice: tmp4 };
-              tmp3 = obj;
+              tmp4 = { discountedPrice: tmp2, regularPrice: tmp5 };
+              const obj = { discountedPrice: tmp2, regularPrice: tmp5 };
             }
           }
-          return tmp3;
+          return tmp4;
         }
       }, items);
     };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/native/hooks/useCheckoutPlanPriceString.tsx");
-
-export const useCheckoutPlan = tmp2;
-export const useCheckoutPlanDiscountPrices = tmp3;
-export const useCheckoutPlanPriceString = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, priceString) => {
-      const cResult = c.c(2);
+      const obj = react2;
+      const cResult = obj.c(2);
       priceString = undefined;
       if (priceString != null) {
         priceString = priceString.priceString;
@@ -206,19 +240,25 @@ export const useCheckoutPlanPriceString = ReactCompilerGating.isReactCompilerEna
       }
       const tmp3 = closure_4(arg0);
       const plan = tmp3.plan;
-      if (!tmp3.useOrderPricing) {
-        return priceString;
-      } else if (cResult[0] !== plan) {
-        let priceString1;
-        if (plan != null) {
-          priceString1 = plan.getPriceString();
+      if (tmp3.useOrderPricing) {
+        let tmp4;
+        if (cResult[0] !== plan) {
+          let priceString1;
+          if (plan != null) {
+            priceString1 = plan.getPriceString();
+          }
+          if (priceString1 == null) {
+            priceString1 = null;
+          }
+          cResult[0] = plan;
+          cResult[1] = priceString1;
+          tmp4 = priceString1;
+        } else {
+          tmp4 = cResult[1];
         }
-        if (priceString1 == null) {
-          priceString1 = null;
-        }
-        cResult[0] = plan;
-        cResult[1] = priceString1;
+        priceString = tmp4;
       }
+      return priceString;
     }
   : (arg0, priceString) => {
       priceString = undefined;
@@ -242,3 +282,8 @@ export const useCheckoutPlanPriceString = ReactCompilerGating.isReactCompilerEna
       }
       return priceString;
     };
+const result = size.fileFinishedImporting("modules/premium/native/hooks/useCheckoutPlanPriceString.tsx");
+
+export const useCheckoutPlan = tmp2;
+export const useCheckoutPlanDiscountPrices = tmp3;
+export const useCheckoutPlanPriceString = tmp4;

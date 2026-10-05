@@ -1,10 +1,12 @@
 // discord_app/modules/billing/native/subscription/useStoreFrontPrice.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import Constants from "../../../../Constants.tsx";
 import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const constants = fn(1085).PriceSetAssignmentPurchaseTypes;
+const constants = Constants.PriceSetAssignmentPurchaseTypes;
 const PriceStates = {
   PRICE_AVAILABLE: "PRICE_AVAILABLE",
   SUBSCRIPTION_PLAN_UNAVAILABLE: "SUBSCRIPTION_PLAN_UNAVAILABLE",
@@ -12,16 +14,14 @@ const PriceStates = {
   MISMATCHING_COUNTRIES: "MISMATCHING_COUNTRIES",
   COUNTRY_PRICE_UNAVAILABLE: "COUNTRY_PRICE_UNAVAILABLE",
 };
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/billing/native/subscription/useStoreFrontPrice.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (prices, currency) => {
-      const obj = c;
+      let PRICE_AVAILABLE;
+      let tmp6;
+      const obj = react2;
       const cResult = obj.c(6);
       if (null == prices) {
-        let PRICE_AVAILABLE = obj.SUBSCRIPTION_PLAN_UNAVAILABLE;
+        PRICE_AVAILABLE = obj.SUBSCRIPTION_PLAN_UNAVAILABLE;
       } else if (null == currency) {
         PRICE_AVAILABLE = obj.STOREFRONT_UNAVAILABLE;
       } else {
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           PremiumUtils;
           if (cResult[0] === currency.currency) {
             if (cResult[1] === prices.id) {
-              let tmp6 = cResult[2];
+              tmp6 = cResult[2];
             }
             if (tmp18.countryCode !== currency.country) {
               PRICE_AVAILABLE = obj.MISMATCHING_COUNTRIES;
@@ -47,17 +47,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { purchaseType: constants.MOBILE, currency: currency.currency };
-          const experimentalGetPriceResult = PremiumUtils.experimentalGetPrice(prices.id, obj2);
+          const tmpResult2 = PremiumUtils;
+          const experimentalGetPriceResult = tmpResult2.experimentalGetPrice(prices.id, obj2);
           cResult[0] = currency.currency;
           cResult[1] = prices.id;
           cResult[2] = experimentalGetPriceResult;
           tmp6 = experimentalGetPriceResult;
-          const tmpResult2 = PremiumUtils;
         }
       }
       if (cResult[3] === tmp6) {
+        let tmp14;
         if (cResult[4] === PRICE_AVAILABLE) {
-          let tmp14 = cResult[5];
+          tmp14 = cResult[5];
         }
         return tmp14;
       }
@@ -69,11 +70,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : (arg0, arg1) => {
       const user = arg0;
-      closure_1 = arg1;
+      let closure_1 = arg1;
       const items = [arg0, arg1];
-      return noop.useMemo(() => {
+      return react.useMemo(() => {
+        let obj;
+        let price;
+        let priceState;
         if (null == user) {
-          let priceState = obj.SUBSCRIPTION_PLAN_UNAVAILABLE;
+          priceState = obj.SUBSCRIPTION_PLAN_UNAVAILABLE;
         } else if (null == closure_1) {
           priceState = obj.STOREFRONT_UNAVAILABLE;
         } else {
@@ -88,7 +92,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj = PremiumUtils;
             const countryPrices = obj.getCountryPrices(user.id, constants.MOBILE);
             const obj3 = { purchaseType: constants.MOBILE, currency: closure_1.currency };
-            const experimentalGetPriceResult = PremiumUtils.experimentalGetPrice(user.id, obj3);
+            const obj2 = PremiumUtils;
+            const experimentalGetPriceResult = obj2.experimentalGetPrice(user.id, obj3);
             if (countryPrices.countryCode !== closure_1.country) {
               priceState = obj.MISMATCHING_COUNTRIES;
             } else if (null == experimentalGetPriceResult) {
@@ -96,10 +101,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               priceState = obj.PRICE_AVAILABLE;
             }
-            const price = experimentalGetPriceResult;
+            price = experimentalGetPriceResult;
           }
         }
         return { price, priceState };
       }, items);
     };
+const result = size.fileFinishedImporting("modules/billing/native/subscription/useStoreFrontPrice.tsx");
+
+export default tmp2;
 export { PriceStates };

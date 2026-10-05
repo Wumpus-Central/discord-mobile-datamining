@@ -9,37 +9,45 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 let c3 = "#000000";
 let ColorUtils = ColorUtils_mod;
 let items = [ColorUtils.hexToRgba(nativeDefault.unsafe_rawColors.PRIMARY_760)];
-let ColorUtils = ColorUtils_mod;
+ColorUtils = ColorUtils_mod;
 items[1] = ColorUtils.hexToRgba(nativeDefault.unsafe_rawColors.PRIMARY_760);
 const result = size.fileFinishedImporting(
   "modules/applications/message_embed/native/utils/nativeAppMessageEmbedUtil.tsx",
 );
 
 export const getAppGradientColors = function getAppGradientColors(appIconSrc) {
+  let primaryColor;
+  let secondaryColor;
   if (null == appIconSrc) {
-    return tmp;
+    return items;
   } else {
+    const obj5 = useAvatarColor;
     if (obj5.hasFetchedColors(appIconSrc)) {
-      const heroColors = useHeroColors.getHeroColors(appIconSrc);
+      const tmp6Result = useHeroColors;
+      const heroColors = tmp6Result.getHeroColors(appIconSrc);
       ({ primaryColor, secondaryColor } = heroColors);
       let tmp5 = tmp;
+      const tmp4 = primaryColor === c3 && secondaryColor === c3;
       if (false === tmp4) {
-        items = [ColorUtils.hexToRgba(primaryColor)];
+        items = [,];
         const tmp6Result4 = ColorUtils;
-        items[1] = ColorUtils.hexToRgba(secondaryColor);
-        tmp5 = items;
+        items[0] = tmp6Result4.hexToRgba(primaryColor);
         const tmp6Result5 = ColorUtils;
+        items[1] = tmp6Result5.hexToRgba(secondaryColor);
+        tmp5 = items;
       }
       return tmp5;
     } else {
-      useAvatarColor.maybeFetchColors(appIconSrc);
-      return tmp;
+      const tmp6Result6 = useAvatarColor;
+      tmp6Result6.maybeFetchColors(appIconSrc);
+      return items;
     }
-    obj5 = useAvatarColor;
   }
 };
 export const getAppIconSrc = function getAppIconSrc(id, icon, bot) {
-  let applicationIconURL = AvatarUtilsDefault.getApplicationIconURL({ id, icon, bot, fallbackAvatar: false });
+  const obj = AvatarUtilsDefault;
+  const obj2 = { id, icon, bot, fallbackAvatar: false };
+  let applicationIconURL = obj.getApplicationIconURL(obj2);
   if (applicationIconURL == null) {
     applicationIconURL = null;
   }

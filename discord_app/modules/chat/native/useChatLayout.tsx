@@ -1,24 +1,23 @@
 // discord_app/modules/chat/native/useChatLayout.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import useWindowSizeClassifier from "../../screen/native/useWindowSizeClassifier.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const useWindowSizeClassifierDefault = useWindowSizeClassifier;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/chat/native/useChatLayout.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(3);
+      const obj = react2;
+      const cResult = obj.c(3);
       const tmp2 = useWindowSizeClassifierDefault();
       const tmp3 = tmp2 >= useWindowSizeClassifier.WindowSizeClassifier.LARGE;
       const tmp4 = tmp2 >= useWindowSizeClassifier.WindowSizeClassifier.XLARGE;
       if (cResult[0] === tmp3) {
+        let tmp5;
         if (cResult[1] === tmp4) {
-          let tmp5 = cResult[2];
+          tmp5 = cResult[2];
         }
         return tmp5;
       }
@@ -30,20 +29,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       const tmp = useWindowSizeClassifierDefault();
-      closure_0 = tmp;
+      let closure_0 = tmp;
       const items = [tmp];
-      return noop.useMemo(
-        () => ({
+      return react.useMemo(() => {
+        const obj = {
           isChatBesideChannelList: closure_0 >= useWindowSizeClassifier.WindowSizeClassifier.LARGE,
           isChatLockedOpen: closure_0 >= useWindowSizeClassifier.WindowSizeClassifier.XLARGE,
-        }),
-        items,
-      );
+        };
+        return obj;
+      }, items);
     };
+const result = size.fileFinishedImporting("modules/chat/native/useChatLayout.tsx");
+
+export default tmp2;
 export const getChatLayout = function getChatLayout() {
-  const windowSizeClassifier = useWindowSizeClassifier.getWindowSizeClassifier();
-  return {
+  const obj = useWindowSizeClassifier;
+  const windowSizeClassifier = obj.getWindowSizeClassifier();
+  const obj2 = {
     isChatBesideChannelList: windowSizeClassifier >= useWindowSizeClassifier.WindowSizeClassifier.LARGE,
     isChatLockedOpen: windowSizeClassifier >= useWindowSizeClassifier.WindowSizeClassifier.XLARGE,
   };
+  return obj2;
 };

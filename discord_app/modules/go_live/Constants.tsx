@@ -2,6 +2,8 @@
 import Notifications from "../../../discord_common/js/shared/shared-constants/Notifications.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const StreamNotificationsGuildMaxSize = Notifications.Notifications.StreamNotificationsGuildMaxSize;
+const set = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);
 const result = size.fileFinishedImporting("modules/go_live/Constants.tsx");
 
 export const StreamIssueReportReasons = {
@@ -29,6 +31,6 @@ export const WINDOWS_GRAPHICS_CAPTURE_NEW_APIS_BUILD = 26100;
 export const WINDOWS_GRAPHICS_CAPTURE_SEMVER = ">=10.0.22000";
 export const WINDOWS_GRAPHICS_CAPTURE_BUILD = 22000;
 export const StreamTypes = { GUILD: "guild", CALL: "call" };
-export const STREAM_NOTIFY_GUILD_MAX_SIZE = Notifications.Notifications.StreamNotificationsGuildMaxSize;
+export const STREAM_NOTIFY_GUILD_MAX_SIZE = StreamNotificationsGuildMaxSize;
 export const GO_LIVE_NOTIFY_FRIENDS_MIN_MEMBER_COUNT = 30;
-export const BROWSER_EXECUTABLES = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);
+export const BROWSER_EXECUTABLES = set;

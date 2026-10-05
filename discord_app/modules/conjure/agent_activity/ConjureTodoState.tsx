@@ -3,12 +3,15 @@ import ConjureChatStore from "../chat/ConjureChatStore.tsx";
 import ConjureTimelineTree from "ConjureTimelineTree.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+let map;
+
 const turnSettled = ConjureChatStore.turnSettled;
 let result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTodoState.tsx");
 
 export function todoMark(status, flag2) {
+  let str;
   if ("completed" === status) {
-    let str = status;
+    str = status;
   } else {
     str = "unfinished";
   }
@@ -17,8 +20,9 @@ export function todoMark(status, flag2) {
 export const todoLabel = function todoLabel(activeForm, todoMarkResult) {
   if ("in_progress" === todoMarkResult) {
     if (null != activeForm.activeForm) {
+      let text;
       if ("" !== activeForm.activeForm) {
-        let text = activeForm.activeForm;
+        text = activeForm.activeForm;
       }
       return text;
     }
@@ -26,9 +30,9 @@ export const todoLabel = function todoLabel(activeForm, todoMarkResult) {
   text = activeForm.text;
 };
 export const checklistLive = function checklistLive(memo) {
-  const tmp = turnSettled(memo);
-  let tmp2 = !tmp;
-  if (!tmp) {
+  let tmp2 = !turnSettled(memo);
+  turnSettled(memo);
+  if (tmp2) {
     tmp2 = true !== memo.stopRequested;
   }
   return tmp2;
@@ -40,7 +44,8 @@ export const messageChecklist = function messageChecklist(role) {
   if ("assistant" !== role.role) {
     return null;
   } else {
-    let latestTodosResult = ConjureTimelineTree.latestTodos(role.steps);
+    const obj = ConjureTimelineTree;
+    let latestTodosResult = obj.latestTodos(role.steps);
     if (null == latestTodosResult) {
       let todos = null;
       if (null != role.todos) {
@@ -55,7 +60,7 @@ export const messageChecklist = function messageChecklist(role) {
   }
 };
 export const supersededChecklists = function supersededChecklists(memo) {
-  const set = new Set();
+  set = new Set();
   let diff = memo.length - 1;
   let flag = false;
   if (0 <= diff) {
@@ -96,18 +101,19 @@ export const supersededChecklists = function supersededChecklists(memo) {
   return set;
 };
 export const checklistExpanded = function checklistExpanded(c15, render_id, set) {
-  value = c15.get(render_id);
+  let value = c15.get(render_id);
   if (value == null) {
     value = !set;
   }
   return value;
 };
 export const toggleChecklist = function toggleChecklist(get, arg1, arg2) {
-  const map = new Map(get);
-  value = get.get(arg1);
+  map = new Map(get);
+  set = map.set;
+  let value = get.get(arg1);
   if (value == null) {
     value = !arg2;
   }
-  const result = map.set(arg1, !value);
+  const result = set(arg1, !value);
   return map;
 };

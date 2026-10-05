@@ -7,26 +7,33 @@ import useDrawerWidth from "../../screen/native/drawer/useDrawerWidth.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const result = size.fileFinishedImporting("modules/channel_list_v2/native/useChannelListWidth.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const drawerWidth = useDrawerWidth.useDrawerWidth();
-      const token = useToken.useToken(nativeDefault.modules.mobile.CHANNEL_DRAWER_SPACING);
+      const obj = useDrawerWidth;
+      const drawerWidth = obj.useDrawerWidth();
+      const isChatBesideChannelList = useChatLayoutDefault().isChatBesideChannelList;
+      const obj2 = useToken;
+      const token = obj2.useToken(nativeDefault.modules.mobile.CHANNEL_DRAWER_SPACING);
       let num = 0;
       const diff = drawerWidth - ConstantsIOS.DM_WIDTH;
-      if (useChatLayoutDefault().isChatBesideChannelList) {
+      if (isChatBesideChannelList) {
         num = token;
       }
       return diff - num;
     }
   : () => {
-      const drawerWidth = useDrawerWidth.useDrawerWidth();
-      const token = useToken.useToken(nativeDefault.modules.mobile.CHANNEL_DRAWER_SPACING);
+      const obj = useDrawerWidth;
+      const drawerWidth = obj.useDrawerWidth();
+      const isChatBesideChannelList = useChatLayoutDefault().isChatBesideChannelList;
+      const obj2 = useToken;
+      const token = obj2.useToken(nativeDefault.modules.mobile.CHANNEL_DRAWER_SPACING);
       let num = 0;
       const diff = drawerWidth - ConstantsIOS.DM_WIDTH;
-      if (useChatLayoutDefault().isChatBesideChannelList) {
+      if (isChatBesideChannelList) {
         num = token;
       }
       return diff - num;
     };
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/useChannelListWidth.tsx");
+
+export default tmp2;

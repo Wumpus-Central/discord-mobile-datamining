@@ -1,85 +1,56 @@
 // discord_app/modules/game_profile/native/components/GameProfileSkeleton.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import GameProfileSkeletonPulse from "GameProfileSkeletonPulse.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = {
-  placeholder: { backgroundColor: nativeDefault.colors.ICON_MUTED },
-  button: null,
-  buttonSm: null,
-  buttonMd: null,
-};
-const obj3 = { backgroundColor: nativeDefault.colors.ICON_MUTED };
-obj2.button = { borderRadius: nativeDefault.radii.sm };
-let size = { width: 92, height: nativeDefault.space.PX_32, flexShrink: 0 };
-obj2.buttonSm = size;
-const size1 = { width: "100%", height: nativeDefault.space.PX_40 };
-obj2.buttonMd = size1;
-let closure_5 = createStyles.createStyles(obj2);
-const dependencyMap = { sm: "buttonSm", md: "buttonMd" };
-fn(558);
-const obj4 = { borderRadius: nativeDefault.radii.sm };
-let ReactCompilerGating = fn(558);
+let obj2;
+let size;
+let size1;
+const View = react_native.View;
+const jsx = Fragment.jsx;
+let createStyles = createStyles_mod;
+let obj = { placeholder: obj2, button: { borderRadius: nativeDefault.radii.sm }, buttonSm: size, buttonMd: size1 };
+createStyles = createStyles.createStyles;
+obj2 = { backgroundColor: nativeDefault.colors.ICON_MUTED };
+({ borderRadius: nativeDefault.radii.sm });
+size = { width: 92, height: nativeDefault.space.PX_32, flexShrink: 0 };
+size1 = { width: "100%", height: nativeDefault.space.PX_40 };
+let closure_5 = createStyles(obj);
+let closure_6 = { sm: "buttonSm", md: "buttonMd" };
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (style) => {
-      const cResult = c.c(3);
-      style = style.style;
-      const tmp2 = closure_5();
-      if (cResult[0] === style) {
-        if (cResult[1] === tmp2.placeholder) {
-          let tmp3 = cResult[2];
-        }
-        return tmp3;
-      }
-      const obj2 = { style: null };
-      const items = [tmp2.placeholder, style];
-      obj2.style = items;
-      const tmp4 = <View style={null} />;
-      cResult[0] = style;
-      cResult[1] = tmp2.placeholder;
-      cResult[2] = tmp4;
-      tmp3 = tmp4;
-    }
-  : (style) => {
-      const obj = { style: null };
-      const items = [closure_5().placeholder, style.style];
-      obj.style = items;
-      return <View style={null} />;
-    };
-let closure_7 = tmp4;
-ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(6);
+      let animationDelayMs;
+      let children;
+      let style;
+      const obj = react2;
+      const cResult = obj.c(6);
       ({ animationDelayMs, children, style } = arg0);
       let num = 0;
       if (undefined !== animationDelayMs) {
         num = animationDelayMs;
       }
-      const skeletonPulseStyle = GameProfileSkeletonPulse.useSkeletonPulseStyle(num);
+      const tmpResult = GameProfileSkeletonPulse;
+      const skeletonPulseStyle = tmpResult.useSkeletonPulseStyle(num);
       if (cResult[0] === skeletonPulseStyle) {
+        let tmp5;
         if (cResult[1] === style) {
-          let tmp5 = cResult[2];
+          tmp5 = cResult[2];
         }
         if (cResult[3] === children) {
+          let tmp6;
           if (cResult[4] === tmp5) {
-            let tmp6 = cResult[5];
+            tmp6 = cResult[5];
           }
           return tmp6;
         }
-        const obj2 = {
-          style: tmp5,
-          accessible: false,
-          accessibilityElementsHidden: true,
-          importantForAccessibility: "no-hide-descendants",
-          children,
-        };
         const tmp9 = jsx(ReanimatedRexportDefault.View, {
           style: tmp5,
           accessible: false,
@@ -97,41 +68,59 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = style;
       cResult[2] = items;
       tmp5 = items;
-      const tmpResult = GameProfileSkeletonPulse;
     }
   : (animationDelayMs) => {
+      let children;
+      let style;
       let num = animationDelayMs.animationDelayMs;
       if (num === undefined) {
         num = 0;
       }
       ({ children, style } = animationDelayMs);
-      const skeletonPulseStyle = GameProfileSkeletonPulse.useSkeletonPulseStyle(num);
-      const obj2 = {
-        style: null,
-        accessible: false,
-        accessibilityElementsHidden: true,
-        importantForAccessibility: "no-hide-descendants",
-        children,
-      };
+      const obj = GameProfileSkeletonPulse;
+      const skeletonPulseStyle = obj.useSkeletonPulseStyle(num);
       const items = [style, skeletonPulseStyle];
-      obj2.style = items;
       return jsx(ReanimatedRexportDefault.View, {
-        style: null,
+        style: items,
         accessible: false,
         accessibilityElementsHidden: true,
         importantForAccessibility: "no-hide-descendants",
         children,
       });
     };
-size = fn(2);
-const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSkeleton.tsx");
-
-export default tmp4;
-export const SKELETON_CARD_ANIMATION_DELAY_MS = 150;
-export const GameProfileSkeletonContainer = tmp3;
-export const GameProfileSkeletonButton = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (style) => {
+      const obj = react2;
+      const cResult = obj.c(3);
+      style = style.style;
+      const tmp2 = closure_5();
+      if (cResult[0] === style) {
+        let tmp3;
+        if (cResult[1] === tmp2.placeholder) {
+          tmp3 = cResult[2];
+        }
+        return tmp3;
+      }
+      const items = [tmp2.placeholder, style];
+      const tmp4 = <View style={items} />;
+      cResult[0] = style;
+      cResult[1] = tmp2.placeholder;
+      cResult[2] = tmp4;
+      tmp3 = tmp4;
+    }
+  : (style) => {
+      style = style.style;
+      const items = [closure_5().placeholder, style];
+      return <View style={items} />;
+    };
+let closure_7 = tmp5;
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(4);
+      let style;
+      const obj = react2;
+      const cResult = obj.c(4);
       ({ size, style } = arg0);
       let str = "md";
       if (undefined !== size) {
@@ -140,19 +129,18 @@ export const GameProfileSkeletonButton = ReactCompilerGating.isReactCompilerEnab
       const tmp2 = closure_5();
       if (cResult[0] === style) {
         if (cResult[1] === tmp2.button) {
-          if (cResult[2] === tmp3) {
-            let tmp4 = cResult[3];
+          let tmp4;
+          if (cResult[2] === tmp2[closure_6[str]]) {
+            tmp4 = cResult[3];
           }
           return tmp4;
         }
       }
-      const obj2 = { style: null };
-      const items = [tmp2.button, tmp2[dependencyMap[str]], style];
-      obj2.style = items;
-      const tmp5 = <closure_7 style={null} />;
+      const items = [tmp2.button, tmp2[closure_6[str]], style];
+      const tmp5 = <closure_7 style={items} />;
       cResult[0] = style;
       cResult[1] = tmp2.button;
-      cResult[2] = tmp2[dependencyMap[str]];
+      cResult[2] = tmp2[closure_6[str]];
       cResult[3] = tmp5;
       tmp4 = tmp5;
     }
@@ -161,9 +149,15 @@ export const GameProfileSkeletonButton = ReactCompilerGating.isReactCompilerEnab
       if (str === undefined) {
         str = "md";
       }
+      const style = size.style;
       const tmp = closure_5();
-      const obj = { style: null };
-      const items = [tmp.button, tmp[dependencyMap[str]], size.style];
-      obj.style = items;
-      return <closure_7 style={null} />;
+      const items = [tmp.button, tmp[closure_6[str]], style];
+      return <closure_7 style={items} />;
     };
+size = size_mod;
+const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSkeleton.tsx");
+
+export default tmp5;
+export const SKELETON_CARD_ANIMATION_DELAY_MS = 150;
+export const GameProfileSkeletonContainer = tmp4;
+export const GameProfileSkeletonButton = tmp6;

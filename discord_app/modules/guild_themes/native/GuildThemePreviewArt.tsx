@@ -1,42 +1,53 @@
 // discord_app/modules/guild_themes/native/GuildThemePreviewArt.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import GuildThemePresets from "../GuildThemePresets.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
 import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const GuildThemePresets = obj(4733);
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = {
-  previewArt: {
-    position: "relative",
-    width: 256,
-    aspectRatio: 1.5705521472392638,
-    overflow: "hidden",
-    borderRadius: nativeDefault.radii.md,
-    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
-  },
+let importDefault;
+
+let obj2;
+const f122942 = (hex) => hex.hex;
+const f122943 = (stop) => stop.stop / 100;
+const View = react_native.View;
+const jsx = Fragment.jsx;
+let obj = {
+  previewArt: obj2,
   previewOverlay: { position: "absolute", top: 7.314, left: 7.461, width: 259.862, height: 154.514 },
 };
-let closure_6 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
+obj2 = {
+  position: "relative",
+  width: 256,
+  aspectRatio: 1.5705521472392638,
+  overflow: "hidden",
+  borderRadius: nativeDefault.radii.md,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
+let closure_6 = createStyles.createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(3);
+      let first;
+      let tmp8;
+      const obj = react2;
+      const cResult = obj.c(3);
       const tmp3 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp7 = jsx(GuildThemePreviewOverlayDefault, {});
         cResult[0] = tmp7;
-        let first = tmp7;
+        first = tmp7;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== tmp3.previewOverlay) {
-        const obj2 = { pointerEvents: "none", style: tmp3.previewOverlay, children: first };
         const tmp11 = (
           <View pointerEvents="none" style={tmp3.previewOverlay}>
             {first}
@@ -44,7 +55,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         );
         cResult[1] = tmp3.previewOverlay;
         cResult[2] = tmp11;
-        let tmp8 = tmp11;
+        tmp8 = tmp11;
       } else {
         tmp8 = cResult[2];
       }
@@ -55,192 +66,201 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         {jsx(GuildThemePreviewOverlayDefault, {})}
       </View>
     );
-ReactCompilerGating = fn(558);
-let obj3 = {
-  position: "relative",
-  width: 256,
-  aspectRatio: 1.5705521472392638,
-  overflow: "hidden",
-  borderRadius: nativeDefault.radii.md,
-  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
-};
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_themes/native/GuildThemePreviewArt.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let obj = require;
-      const cResult = c.c(15);
+      let colors;
+      let colors1;
+      let items1;
+      let num2;
+      let style;
+      let themeSettings;
+      const obj = react2;
+      const cResult = obj.c(15);
       ({ themeSettings, style } = arg0);
-      const tmp3 = closure_6();
-      const tmp5 = useThemeDefault();
-      if (cResult[0] === tmp5) {
+      const tmp5 = closure_6();
+      const tmp7 = useThemeDefault();
+      if (cResult[0] === tmp7) {
+        let tmp8;
         if (cResult[1] === themeSettings) {
-          if (cResult[3] === style) {
-            if (cResult[4] === tmp3.previewArt) {
-              let tmp13 = cResult[5];
-            }
-            if (null == tmp6) {
-              const _Symbol = Symbol;
-              if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmp26 = <closure_7 />;
-                cResult[6] = tmp26;
-                let tmp23 = tmp26;
-              } else {
-                tmp23 = cResult[6];
-              }
-              if (cResult[7] !== tmp13) {
-                const obj3 = { style: tmp13, children: tmp23 };
-                const tmp30 = <View style={tmp13}>{tmp23}</View>;
-                cResult[7] = tmp13;
-                cResult[8] = tmp30;
-              }
+          tmp8 = cResult[2];
+        }
+        if (cResult[3] === style) {
+          let tmp15;
+          let tmp21;
+          if (cResult[4] === tmp5.previewArt) {
+            tmp15 = cResult[5];
+          }
+          if (null == tmp8) {
+            let tmp25;
+            let tmp29;
+            const _Symbol = Symbol;
+            if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+              const tmp28 = <closure_7 />;
+              cResult[6] = tmp28;
+              tmp25 = tmp28;
             } else {
-              const _Symbol2 = Symbol;
-              if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmp18 = <closure_7 />;
-                cResult[9] = tmp18;
-                let tmp15 = tmp18;
-              } else {
-                tmp15 = cResult[9];
-              }
-              if (cResult[10] === tmp6.angle) {
-                if (cResult[11] === tmp6.colors) {
-                  if (cResult[12] === tmp6.locations) {
-                    if (cResult[13] === tmp13) {
-                      let tmp19 = cResult[14];
-                    }
-                    return tmp19;
+              tmp25 = cResult[6];
+            }
+            if (cResult[7] !== tmp15) {
+              const tmp32 = <View style={tmp15}>{tmp25}</View>;
+              cResult[7] = tmp15;
+              cResult[8] = tmp32;
+              tmp29 = tmp32;
+            } else {
+              tmp29 = cResult[8];
+            }
+            tmp21 = tmp29;
+          } else {
+            let tmp17;
+            const _Symbol2 = Symbol;
+            if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+              const tmp20 = <closure_7 />;
+              cResult[9] = tmp20;
+              tmp17 = tmp20;
+            } else {
+              tmp17 = cResult[9];
+            }
+            if (cResult[10] === tmp8.angle) {
+              if (cResult[11] === tmp8.colors) {
+                if (cResult[12] === tmp8.locations) {
+                  if (cResult[13] === tmp15) {
+                    tmp21 = cResult[14];
                   }
                 }
               }
-              const obj4 = { colors: null, locations: null, useAngle: true, angle: null, style: null, children: null };
-              ({ colors: obj7.colors, locations: obj7.locations, angle: obj7.angle } = tmp6);
-              obj4.style = tmp13;
-              obj4.children = tmp15;
-              const tmp21 = jsx(LinearGradientDefault, {
-                colors: null,
-                locations: null,
-                useAngle: true,
-                angle: null,
-                style: null,
-                children: null,
-              });
-              cResult[10] = tmp6.angle;
-              cResult[11] = tmp6.colors;
-              cResult[12] = tmp6.locations;
-              cResult[13] = tmp13;
-              cResult[14] = tmp21;
-              tmp19 = tmp21;
             }
+            ({ colors: obj7.colors, locations: obj7.locations, angle: obj7.angle } = tmp8);
+            const tmp23 = jsx(LinearGradientDefault, {
+              colors: null,
+              locations: null,
+              useAngle: true,
+              angle: null,
+              style: tmp15,
+              children: tmp17,
+            });
+            cResult[10] = tmp8.angle;
+            cResult[11] = tmp8.colors;
+            cResult[12] = tmp8.locations;
+            cResult[13] = tmp15;
+            cResult[14] = tmp23;
+            tmp21 = tmp23;
           }
-          const items = [tmp3.previewArt, style];
-          cResult[3] = style;
-          cResult[4] = tmp3.previewArt;
-          cResult[5] = items;
-          tmp13 = items;
+          return tmp21;
         }
+        const items = [tmp5.previewArt, style];
+        cResult[3] = style;
+        cResult[4] = tmp5.previewArt;
+        cResult[5] = items;
+        tmp15 = items;
       }
-      let tmp7 = null;
+      let tmp9 = null;
       if (null != themeSettings) {
-        let num = themeSettings.customUserThemeSettings;
-        if (null == num) {
-          const guildThemePreset = GuildThemePresets.getGuildThemePreset(themeSettings.presetId);
-          tmp7 = null;
-          if (null != guildThemePreset) {
-            const guildThemePresetAppearance = GuildThemePresets.getGuildThemePresetAppearance(guildThemePreset, tmp5);
-            const obj5 = { colors: null, locations: null, angle: null };
-            const colors = guildThemePresetAppearance.colors;
-            obj5.colors = colors.map((hex) => hex.hex);
-            const colors1 = guildThemePresetAppearance.colors;
-            obj5.locations = colors1.map((stop) => stop.stop / 100);
-            obj5.angle = guildThemePresetAppearance.angle;
-            tmp7 = obj5;
-            const objResult2 = GuildThemePresets;
+        const customUserThemeSettings = themeSettings.customUserThemeSettings;
+        if (null != customUserThemeSettings) {
+          const first = customUserThemeSettings.colors[0];
+          if (null != first) {
+            const obj4 = { colors: items1, angle: num2 };
+            items1 = [];
+            const tmp2Result = GuildThemePresets;
+            HermesBuiltin.arraySpread(items1, tmp2Result.getSingleColorGuildThemeGradientColors(first, tmp7), 0);
+            num2 = customUserThemeSettings.gradientAngle;
+            if (num2 == null) {
+              num2 = 0;
+            }
+            tmp9 = obj4;
           }
-          const objResult = GuildThemePresets;
         }
-        const obj6 = { colors: null, angle: null };
-        obj = GuildThemePresets;
-        const items1 = [];
-        HermesBuiltin.arraySpread(obj.getSingleColorGuildThemeGradientColors(tmp8, tmp5), 0);
-        obj6.colors = items1;
-        num = num.gradientAngle;
-        if (num == null) {
-          num = 0;
+        const tmp2Result3 = GuildThemePresets;
+        const guildThemePreset = tmp2Result3.getGuildThemePreset(themeSettings.presetId);
+        tmp9 = null;
+        if (null != guildThemePreset) {
+          const tmp2Result4 = GuildThemePresets;
+          const guildThemePresetAppearance = tmp2Result4.getGuildThemePresetAppearance(guildThemePreset, tmp7);
+          const obj5 = {
+            colors: colors.map(f122942),
+            locations: colors1.map(f122943),
+            angle: guildThemePresetAppearance.angle,
+          };
+          colors = guildThemePresetAppearance.colors;
+          colors1 = guildThemePresetAppearance.colors;
+          tmp9 = obj5;
         }
-        obj6.angle = num;
-        tmp7 = obj6;
       }
-      cResult[0] = tmp5;
+      cResult[0] = tmp7;
       cResult[1] = themeSettings;
-      cResult[2] = tmp7;
+      cResult[2] = tmp9;
+      tmp8 = tmp9;
     }
   : (themeSettings) => {
+      let closure_1;
+      let tmp9;
       themeSettings = themeSettings.themeSettings;
-      const tmp4 = useThemeDefault();
+      importDefault = undefined;
+      const style = themeSettings.style;
+      const tmp = closure_6();
+      let tmp4 = useThemeDefault();
       importDefault = tmp4;
       let items = [themeSettings, tmp4];
-      const memo = noop.useMemo(() => {
-        let tmp3 = null;
+      const memo = react.useMemo(() => {
+        let colors;
+        let colors1;
+        let items;
+        let num2;
+        let tmp4 = null;
         if (null != themeSettings) {
           const customUserThemeSettings = themeSettings.customUserThemeSettings;
           if (null != customUserThemeSettings) {
             const first = customUserThemeSettings.colors[0];
             if (null != first) {
-              const obj2 = { colors: null, angle: null };
-              const items = [];
-              HermesBuiltin.arraySpread(GuildThemePresets.getSingleColorGuildThemeGradientColors(first, closure_1), 0);
-              obj2.colors = items;
-              let num2 = customUserThemeSettings.gradientAngle;
+              const obj2 = { colors: items, angle: num2 };
+              items = [];
+              const obj5 = GuildThemePresets;
+              HermesBuiltin.arraySpread(items, obj5.getSingleColorGuildThemeGradientColors(first, closure_1), 0);
+              num2 = customUserThemeSettings.gradientAngle;
               if (num2 == null) {
                 num2 = 0;
               }
-              obj2.angle = num2;
-              tmp3 = obj2;
+              tmp4 = obj2;
             }
           }
-          const guildThemePreset = GuildThemePresets.getGuildThemePreset(themeSettings.presetId);
-          tmp3 = null;
+          const obj = GuildThemePresets;
+          const guildThemePreset = obj.getGuildThemePreset(themeSettings.presetId);
+          tmp4 = null;
           if (null != guildThemePreset) {
-            const guildThemePresetAppearance = GuildThemePresets.getGuildThemePresetAppearance(
-              guildThemePreset,
-              closure_1,
-            );
-            const obj3 = { colors: null, locations: null, angle: null };
-            const colors = guildThemePresetAppearance.colors;
-            obj3.colors = colors.map((hex) => hex.hex);
-            const colors1 = guildThemePresetAppearance.colors;
-            obj3.locations = colors1.map((stop) => stop.stop / 100);
-            obj3.angle = guildThemePresetAppearance.angle;
-            tmp3 = obj3;
-            const tmp5Result = GuildThemePresets;
+            const tmp6Result = GuildThemePresets;
+            const guildThemePresetAppearance = tmp6Result.getGuildThemePresetAppearance(guildThemePreset, closure_1);
+            const obj3 = {
+              colors: colors.map(f122942),
+              locations: colors1.map(f122943),
+              angle: guildThemePresetAppearance.angle,
+            };
+            colors = guildThemePresetAppearance.colors;
+            colors1 = guildThemePresetAppearance.colors;
+            tmp4 = obj3;
           }
         }
-        return tmp3;
+        return tmp4;
       }, items);
-      const items1 = [closure_6().previewArt, themeSettings.style];
+      const items1 = [tmp.previewArt, style];
       if (null == memo) {
-        let obj2 = { style: items1, children: <closure_7 /> };
-        let tmp9 = (
+        tmp9 = (
           <View style={items1}>
             <closure_7 />
           </View>
         );
       } else {
-        let obj = { colors: null, locations: null, useAngle: true, angle: null, style: null, children: null };
+        let obj = { colors: null, locations: null, useAngle: true, angle: null, style: items1, children: null };
         ({ colors: obj.colors, locations: obj.locations, angle: obj.angle } = memo);
-        obj.style = items1;
-        obj.children = <closure_7 />;
-        tmp9 = jsx(LinearGradientDefault, {
-          colors: null,
-          locations: null,
-          useAngle: true,
-          angle: null,
-          style: null,
-          children: null,
-        });
-        const tmp2Result = LinearGradientDefault;
+        LinearGradientDefault;
+        tmp9 = (
+          <tmp2Result colors={null} locations={null} useAngle angle={null} style={items1}>
+            {null}
+          </tmp2Result>
+        );
       }
       return tmp9;
     };
+const result = size.fileFinishedImporting("modules/guild_themes/native/GuildThemePreviewArt.tsx");
+
+export default tmp2;

@@ -1,97 +1,111 @@
 // discord_app/modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx
 import GuildIncidentsStore from "../../guild_antiraid/GuildIncidentsStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
+import Constants from "../../../Constants.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const Constants = fn(1085);
+const require = globalThis.__r;
+let _require;
+
+let closure_4;
+let hasOwnProperty;
 ({ GuildFeatures: closure_4, Permissions: hasOwnProperty } = Constants);
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
+      let tmp7;
       _require = arg0;
-      const cResult = require("c").c(4);
+      const tmp = _require;
+      const obj = require("react");
+      const cResult = obj.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PermissionStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         const fn = function l() {
-          let canResult = null != closure_0;
-          if (canResult) {
-            canResult = PermissionStore.can(constants2.MANAGE_GUILD, tmp);
-          }
+          const canResult = null != closure_0 && PermissionStore.can(hasOwnProperty.MANAGE_GUILD, tmp);
           return canResult;
         };
         const items1 = [arg0];
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6, tmp7);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6, tmp7);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       const items = [PermissionStore];
       const items1 = [arg0];
-      return require("initialize").useStateFromStores(
+      const obj = require("get initialized");
+      return obj.useStateFromStores(
         items,
         () => {
-          let canResult = null != closure_0;
-          if (canResult) {
-            canResult = PermissionStore.can(constants2.MANAGE_GUILD, tmp);
-          }
+          const canResult = null != closure_0 && PermissionStore.can(hasOwnProperty.MANAGE_GUILD, tmp);
           return canResult;
         },
         items1,
       );
     };
 let closure_6 = tmp3;
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (features) => {
+  ? function (features) {
+      let first;
+      let tmp6;
       _require = features;
-      const cResult = require("c").c(6);
+      const tmp = _require;
+      const obj = require("react");
+      const cResult = obj.c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildIncidentsStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== features) {
         const fn = function u() {
           let guildIncident = null;
-          if (null != closure_0) {
+          if (null != features) {
             guildIncident = GuildIncidentsStore.getGuildIncident(tmp.id);
           }
           return guildIncident;
         };
         cResult[1] = features;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
+      const tmpResult = tmp(504);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
       let features1;
+      const tmp8 = cResult[3];
       if (features != null) {
         features1 = features.features;
       }
-      if (cResult[3] === features1) {
+      if (tmp8 === features1) {
+        let tmp10;
         if (cResult[4] === stateFromStores) {
-          let tmp9 = cResult[5];
+          tmp10 = cResult[5];
         }
-        return tmp9;
+        return tmp10;
       }
       let hasItem;
       if (features != null) {
@@ -103,15 +117,19 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (stateFromStores != null) {
           invitesDisabledUntil = stateFromStores.invitesDisabledUntil;
         }
-        let tmp13 = null != invitesDisabledUntil;
-        if (tmp13) {
+        let tmp14 = null != invitesDisabledUntil;
+        if (tmp14) {
           const _Date = Date;
-          const date = new Date(stateFromStores.invitesDisabledUntil);
+          const self = this;
+          const self2 = this;
           const _Date2 = Date;
+          const self3 = this;
+          const self4 = this;
+          const date = new Date(stateFromStores.invitesDisabledUntil);
+          tmp14 = date > new Date();
           const date1 = new Date();
-          tmp13 = date > date1;
         }
-        hasItem = tmp13;
+        hasItem = tmp14;
       }
       let features2;
       if (features != null) {
@@ -120,15 +138,15 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = features2;
       cResult[4] = stateFromStores;
       cResult[5] = hasItem;
-      tmp9 = hasItem;
-      const tmpResult = require("initialize");
+      tmp10 = hasItem;
     }
-  : (features) => {
+  : function (features) {
       _require = features;
       const items = [GuildIncidentsStore];
-      const stateFromStores = require("initialize").useStateFromStores(items, () => {
+      const obj = require("get initialized");
+      const stateFromStores = obj.useStateFromStores(items, () => {
         let guildIncident = null;
-        if (null != closure_0) {
+        if (null != features) {
           guildIncident = GuildIncidentsStore.getGuildIncident(tmp.id);
         }
         return guildIncident;
@@ -146,34 +164,32 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp5 = null != invitesDisabledUntil;
         if (tmp5) {
           const _Date = Date;
-          const date = new Date(stateFromStores.invitesDisabledUntil);
+          const self = this;
+          const self2 = this;
           const _Date2 = Date;
+          const self3 = this;
+          const self4 = this;
+          const date = new Date(stateFromStores.invitesDisabledUntil);
+          tmp5 = date > new Date();
           const date1 = new Date();
-          tmp5 = date > date1;
         }
         hasItem = tmp5;
       }
       return hasItem;
     };
 let closure_7 = tmp4;
-ReactCompilerGating = fn(558);
-const size = fn(2);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const tmp = closure_6(arg0) && closure_7(arg0);
+      return tmp;
+    }
+  : (arg0) => {
+      const tmp = closure_6(arg0) && closure_7(arg0);
+      return tmp;
+    };
 const result = size.fileFinishedImporting("modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx");
 
 export const useInvitesDisabledPermission = tmp3;
 export const useInvitesDisabled = tmp4;
-export const useShouldShowInvitesDisabledNotif = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      let tmp = closure_6(arg0);
-      if (tmp) {
-        tmp = closure_7(arg0);
-      }
-      return tmp;
-    }
-  : (arg0) => {
-      let tmp = closure_6(arg0);
-      if (tmp) {
-        tmp = closure_7(arg0);
-      }
-      return tmp;
-    };
+export const useShouldShowInvitesDisabledNotif = tmp5;

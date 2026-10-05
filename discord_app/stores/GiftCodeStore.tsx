@@ -1,120 +1,73 @@
 // discord_app/stores/GiftCodeStore.tsx
-import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import _modDef4461 from "../../_runtime/metro/04461__.js";
 import GiftCodeUtils from "../utils/GiftCodeUtils.tsx";
 import GiftCodeActionCreatorsDefault from "../actions/GiftCodeActionCreators.tsx";
 import GiftCodeRecord from "../records/GiftCodeRecord.tsx";
+import Constants from "../Constants.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-require = fn;
+let closure_10, closure_9, first_message;
+
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
 function updateGiftCode(giftCode) {
+  const f106357 = () => {
+    let closure_0 = code;
+    const value = map.get(code);
+    if (null != value) {
+      if (null != value.expiresAt) {
+        const expiresAt = value.expiresAt;
+        const valueOfResult = expiresAt.valueOf();
+        const obj3 = _modDef4461();
+        const diff = valueOfResult - obj3.valueOf();
+        if (diff <= 0) {
+          map.delete(code);
+          delete closure_7[code];
+          giftCodeStore.emitChange();
+        } else if (null != closure_7[code]) {
+          const _Math = Math;
+          closure_7[code].start(Math.min(hasOwnProperty, diff), f106357);
+        }
+      }
+    }
+  };
   const fromServer = GiftCodeRecord.createFromServer(giftCode);
   const code = fromServer.code;
   if (map.has(code)) {
-    value = map.get(code);
+    let value = map.get(code);
     const result = set(code, value.merge(fromServer));
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
+      const self = this;
+      const self2 = this;
       const timeout = new code(2046).Timeout();
-      dependencyMap[code] = timeout;
-      value2 = map.get(code);
+      closure_7[code] = timeout;
+      const value2 = map.get(code);
       if (null != value2) {
         if (null != value2.expiresAt) {
-          const expiresAt = value2.expiresAt;
-          const valueOfResult = expiresAt.valueOf();
-          const diff = valueOfResult - _modDef4461().valueOf();
+          let expiresAt = value2.expiresAt;
+          let valueOfResult = expiresAt.valueOf();
+          const obj4 = _modDef4461();
+          let diff = valueOfResult - obj4.valueOf();
           if (diff <= 0) {
             map.delete(code);
-            delete tmp2[tmp];
+            delete closure_7[code];
             giftCodeStore.emitChange();
-          } else if (null != dependencyMap[code]) {
-            const _Math = Math;
-            obj2.start(Math.min(closure_5, diff), () => {
-              closure_0 = closure_1_0;
-              let value = closure_2_8.get(closure_1_0);
-              if (null != value) {
-                if (null != value.expiresAt) {
-                  let expiresAt = value.expiresAt;
-                  let valueOfResult = expiresAt.valueOf();
-                  let diff = valueOfResult - closure_2_1(closure_2_2[3])().valueOf();
-                  if (diff <= 0) {
-                    closure_2_8.delete(closure_1_0);
-                    delete tmp[tmp2];
-                    closure_2_18.emitChange();
-                  } else if (null != closure_2_7[closure_1_0]) {
-                    let _Math = Math;
-                    obj2.start(Math.min(closure_2_5, diff), () => {
-                      closure_0 = closure_1_0;
-                      let value = closure_2_8.get(closure_1_0);
-                      if (null != value) {
-                        if (null != value.expiresAt) {
-                          let expiresAt = value.expiresAt;
-                          let valueOfResult = expiresAt.valueOf();
-                          let diff = valueOfResult - closure_2_1(closure_2_2[3])().valueOf();
-                          if (diff <= 0) {
-                            closure_2_8.delete(closure_1_0);
-                            delete tmp[tmp2];
-                            closure_2_18.emitChange();
-                          } else if (null != closure_2_7[closure_1_0]) {
-                            let _Math = Math;
-                            obj2.start(Math.min(closure_2_5, diff), () => {
-                              closure_0 = closure_1_0;
-                              let value = closure_2_8.get(closure_1_0);
-                              if (null != value) {
-                                if (null != value.expiresAt) {
-                                  let expiresAt = value.expiresAt;
-                                  let valueOfResult = expiresAt.valueOf();
-                                  let diff = valueOfResult - closure_2_1(closure_2_2[3])().valueOf();
-                                  if (diff <= 0) {
-                                    closure_2_8.delete(closure_1_0);
-                                    delete tmp[tmp2];
-                                    closure_2_18.emitChange();
-                                  } else if (null != closure_2_7[closure_1_0]) {
-                                    let _Math = Math;
-                                    obj2.start(Math.min(closure_2_5, diff), () => {
-                                      closure_0 = closure_1_0;
-                                      let value = closure_2_8.get(closure_1_0);
-                                      if (null != value) {
-                                        if (null != value.expiresAt) {
-                                          let expiresAt = value.expiresAt;
-                                          let valueOfResult = expiresAt.valueOf();
-                                          let diff = valueOfResult - closure_2_1(closure_2_2[3])().valueOf();
-                                          if (diff <= 0) {
-                                            closure_2_8.delete(closure_1_0);
-                                            delete tmp[tmp2];
-                                            closure_2_18.emitChange();
-                                          } else if (null != closure_2_7[closure_1_0]) {
-                                            let _Math = Math;
-                                            obj2.start(Math.min(closure_2_5, diff), () => { ... });
-                                          }
-                                          let obj3 = closure_2_1(closure_2_2[3])();
-                                        }
-                                      }
-                                    });
-                                  }
-                                  let obj3 = closure_2_1(closure_2_2[3])();
-                                }
-                              }
-                            });
-                          }
-                          let obj3 = closure_2_1(closure_2_2[3])();
-                        }
-                      }
-                    });
-                  }
-                  let obj3 = closure_2_1(closure_2_2[3])();
-                }
-              }
-            });
+          } else if (null != closure_7[code]) {
+            let _Math = Math;
+            closure_7[code].start(Math.min(closure_5, diff), f106357);
           }
-          const obj4 = _modDef4461();
         }
       }
     }
   }
 }
 function resolveMessageGiftCodes(message, arg1) {
+  let findGiftCodesResult;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -124,8 +77,10 @@ function resolveMessageGiftCodes(message, arg1) {
       return false;
     }
   }
-  const isGiftCodeEmbedResult = GiftCodeUtils.isGiftCodeEmbed(message);
+  let obj = GiftCodeUtils;
+  const isGiftCodeEmbedResult = obj.isGiftCodeEmbed(message);
   const findGiftCodes = GiftCodeUtils.findGiftCodes;
+  GiftCodeUtils;
   if (isGiftCodeEmbedResult) {
     let embeds;
     if (message != null) {
@@ -139,27 +94,25 @@ function resolveMessageGiftCodes(message, arg1) {
       }
       tmp6 = url;
     }
-    let findGiftCodesResult = findGiftCodes(tmp6);
+    findGiftCodesResult = findGiftCodes(tmp6);
   } else {
     findGiftCodesResult = findGiftCodes(message.content);
   }
   if (0 !== findGiftCodesResult.length) {
     const item = findGiftCodesResult.forEach((item) => {
-      closure_0 = item;
-      let hasItem = items.includes(item);
-      if (!hasItem) {
-        hasItem = closure_11.includes(item);
-      }
+      let closure_0 = item;
+      const hasItem = items.includes(item) || closure_11.includes(item);
       if (!hasItem) {
         if (!items.includes(item)) {
           items = [];
-          items[HermesBuiltin.arraySpread(items, 0)] = item;
+          items[HermesBuiltin.arraySpread(items, items, 0)] = item;
         }
-        closure_1(584).wait(() => {
-          const giftCode = GiftCodeActionCreatorsDefault.resolveGiftCode(closure_0, false, true);
+        let obj = closure_1(closure_2[5]);
+        obj.wait(() => {
+          const obj = GiftCodeActionCreatorsDefault;
+          const giftCode = obj.resolveGiftCode(item, false, true);
           return giftCode.catch(closure_2_6);
         });
-        const obj = closure_1(584);
       }
     });
   }
@@ -188,85 +141,82 @@ function handleLoadThreadsSuccess(firstMessages) {
     });
   }
 }
-const Constants = fn(1085);
 ({ AbortCodes: closure_4, MAX_TIMEOUT_MS: hasOwnProperty, NOOP_NULL: metroRequire } = Constants);
-const dependencyMap = {};
+let closure_7 = {};
 const map = new Map();
-let closure_9 = [];
-let closure_10 = [];
+const React4 = [];
+const authStore = [];
 let items = [];
 const set = new Set();
-let closure_13 = {};
-let closure_14 = {};
+const authStore2 = {};
 const set1 = new Set();
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class GiftCodeStore extends Store {
-}
-const prototype = GiftCodeStore.prototype;
-prototype["get"] = function get(arg0) {
-  value = map.get(arg0);
-  let tmp = null;
-  if (null != value) {
-    tmp = null;
-    if (!value.isExpired()) {
-      tmp = value;
-    }
-  }
-  return tmp;
-};
-prototype["getError"] = function getError(arg0) {
-  let tmp = null;
-  if (null != arg0) {
-    tmp = closure_14[arg0];
-  }
-  return tmp;
-};
-prototype["getForGifterSKUAndPlan"] = function getForGifterSKUAndPlan(id, skuId, subscriptionPlanId) {
-  closure_0 = id;
-  closure_1 = skuId;
-  closure_2 = subscriptionPlanId;
-  return Array.from(map.values()).filter((userId) => {
-    let tmp = userId.userId === closure_0;
-    if (tmp) {
-      tmp = userId.skuId === closure_1;
-    }
-    if (tmp) {
-      tmp = null == closure_2 || userId.subscriptionPlanId === tmp3;
-      const tmp5 = null == closure_2 || userId.subscriptionPlanId === tmp3;
-    }
-    if (tmp) {
-      tmp = !userId.isExpired();
+  get(arg0) {
+    const value = map.get(arg0);
+    let tmp = null;
+    if (null != value) {
+      tmp = null;
+      if (!value.isExpired()) {
+        tmp = value;
+      }
     }
     return tmp;
-  });
-};
-prototype["getIsResolving"] = function getIsResolving(arg0) {
-  return closure_9.includes(arg0);
-};
-prototype["getIsResolved"] = function getIsResolved(giftCode) {
-  return items.includes(giftCode);
-};
-prototype["getIsAccepting"] = function getIsAccepting(code) {
-  return closure_10.includes(code);
-};
-prototype["getUserGiftCodesFetchingForSKUAndPlan"] = function getUserGiftCodesFetchingForSKUAndPlan(skuId, subscriptionPlanId) {
-  return set.has(GiftCodeUtils.makeComboId(skuId, subscriptionPlanId));
-};
-prototype["getUserGiftCodesLoadedAtForSKUAndPlan"] = function getUserGiftCodesLoadedAtForSKUAndPlan(skuId, subscriptionPlanId) {
-  const obj = GiftCodeUtils;
-  return closure_13[obj.makeComboId(obj, skuId, subscriptionPlanId)];
-};
-prototype["getResolvingCodes"] = function getResolvingCodes() {
-  return closure_9;
-};
-prototype["getResolvedCodes"] = function getResolvedCodes() {
-  return items;
-};
-prototype["getAcceptingCodes"] = function getAcceptingCodes() {
-  return closure_10;
-};
+  }
+  getError(arg0) {
+    let tmp = null;
+    if (null != arg0) {
+      tmp = closure_14[arg0];
+    }
+    return tmp;
+  }
+  getForGifterSKUAndPlan(id, skuId, subscriptionPlanId) {
+    let closure_0 = id;
+    let closure_1 = skuId;
+    let closure_2 = subscriptionPlanId;
+    const arr = Array.from(map.values());
+    return arr.filter((userId) => {
+      let tmp = userId.userId === closure_0 && userId.skuId === closure_1;
+      if (tmp) {
+        tmp = null == closure_2 || userId.subscriptionPlanId === tmp3;
+      }
+      if (tmp) {
+        tmp = !userId.isExpired();
+      }
+      return tmp;
+    });
+  }
+  getIsResolving(arg0) {
+    return closure_9.includes(arg0);
+  }
+  getIsResolved(giftCode) {
+    return items.includes(giftCode);
+  }
+  getIsAccepting(code) {
+    return closure_10.includes(code);
+  }
+  getUserGiftCodesFetchingForSKUAndPlan(skuId, subscriptionPlanId) {
+    const has = set.has;
+    const obj = GiftCodeUtils;
+    return has(obj.makeComboId(skuId, subscriptionPlanId));
+  }
+  getUserGiftCodesLoadedAtForSKUAndPlan(skuId, subscriptionPlanId) {
+    const obj = GiftCodeUtils;
+    return closure_13[obj.makeComboId(obj, skuId, subscriptionPlanId)];
+  }
+  getResolvingCodes() {
+    return closure_9;
+  }
+  getResolvedCodes() {
+    return items;
+  }
+  getAcceptingCodes() {
+    return closure_10;
+  }
+}
+const prototype = GiftCodeStore.prototype;
 GiftCodeStore.displayName = "GiftCodeStore";
-const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
+let obj = {
   CONNECTION_OPEN: function handleConnectionOpen() {
     set1.clear();
     return false;
@@ -282,7 +232,7 @@ const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
     code = code.code;
     if (!closure_9.includes(code)) {
       items = [];
-      items[HermesBuiltin.arraySpread(closure_9, 0)] = code;
+      items[HermesBuiltin.arraySpread(items, closure_9, 0)] = code;
       closure_9 = items;
     }
   },
@@ -291,7 +241,7 @@ const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
     closure_9 = closure_9.filter((item) => item !== giftCode.code);
     if (!items.includes(giftCode.code)) {
       items = [];
-      items[HermesBuiltin.arraySpread(items, 0)] = giftCode.code;
+      items[HermesBuiltin.arraySpread(items, items, 0)] = giftCode.code;
     }
     updateGiftCode(giftCode);
   },
@@ -301,7 +251,7 @@ const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
     closure_9 = closure_9.filter((item) => item !== code);
     if (!items.includes(code)) {
       items = [];
-      items[HermesBuiltin.arraySpread(items, 0)] = code;
+      items[HermesBuiltin.arraySpread(items, items, 0)] = code;
     }
     if (null != error) {
       closure_14[code] = error;
@@ -311,14 +261,14 @@ const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
     code = code.code;
     if (!closure_10.includes(code)) {
       items = [];
-      items[HermesBuiltin.arraySpread(closure_10, 0)] = code;
+      items[HermesBuiltin.arraySpread(items, closure_10, 0)] = code;
       closure_10 = items;
     }
   },
   GIFT_CODE_REDEEM_SUCCESS: function handleGiftCodeAcceptSuccess(code) {
     code = code.code;
     closure_10 = closure_10.filter((item) => item !== code);
-    value = map.get(code);
+    const value = map.get(code);
     if (null != value) {
       const obj2 = { redeemed: true, uses: value.uses + 1 };
       const result = map.set(code, value.merge(obj2));
@@ -328,7 +278,7 @@ const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
     code = code.code;
     const error = code.error;
     closure_10 = closure_10.filter((item) => item !== code);
-    value = map.get(code);
+    const value = map.get(code);
     closure_14[code] = error;
     if (null != value) {
       const code2 = error.code;
@@ -342,33 +292,44 @@ const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
   GIFT_CODE_REVOKE_SUCCESS: function handleGiftCodeRevoke(code) {
     code = code.code;
     map.delete(code);
-    if (null != dependencyMap[code]) {
-      obj.stop();
-      delete tmp[tmp2];
+    if (null != closure_7[code]) {
+      closure_7[code].stop();
+      delete tmp3[code];
     }
     if (!items.includes(code)) {
       items = [];
-      items[HermesBuiltin.arraySpread(items, 0)] = code;
+      items[HermesBuiltin.arraySpread(items, items, 0)] = code;
     }
   },
   GIFT_CODE_CREATE_SUCCESS: function handleGiftCodeCreate(giftCode) {
     updateGiftCode(giftCode.giftCode);
   },
   GIFT_CODES_FETCH: function handleGiftCodesFetch(arg0) {
+    let skuId;
+    let subscriptionPlanId;
     ({ skuId, subscriptionPlanId } = arg0);
-    set.add(GiftCodeUtils.makeComboId(skuId, subscriptionPlanId));
+    const add = set.add;
+    const obj = GiftCodeUtils;
+    add(obj.makeComboId(skuId, subscriptionPlanId));
   },
   GIFT_CODES_FETCH_SUCCESS: function handleGiftCodesFetchSuccess(giftCodes) {
+    let skuId;
+    let subscriptionPlanId;
     giftCodes = giftCodes.giftCodes;
     ({ skuId, subscriptionPlanId } = giftCodes);
     const item = giftCodes.forEach(updateGiftCode);
-    const comboId = GiftCodeUtils.makeComboId(skuId, subscriptionPlanId);
+    const obj = GiftCodeUtils;
+    const comboId = obj.makeComboId(skuId, subscriptionPlanId);
     closure_13[comboId] = Date.now();
     set.delete(comboId);
   },
   GIFT_CODES_FETCH_FAILURE: function handleGiftCodesFetchFail(arg0) {
+    let skuId;
+    let subscriptionPlanId;
     ({ skuId, subscriptionPlanId } = arg0);
-    set.delete(GiftCodeUtils.makeComboId(skuId, subscriptionPlanId));
+    const _delete = set.delete;
+    const obj = GiftCodeUtils;
+    _delete(obj.makeComboId(skuId, subscriptionPlanId));
   },
   MESSAGE_CREATE: handleMessage,
   MESSAGE_UPDATE: handleMessage,
@@ -403,10 +364,11 @@ const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
   },
   GIFT_CODE_UPDATE: function handleGiftCodeUpdate(code) {
     code = code.code;
-    value = map.get(code);
+    const uses = code.uses;
+    const value = map.get(code);
     if (null != value) {
       const _Math = Math;
-      const result = map.set(code, value.set("uses", Math.max(value.uses, code.uses)));
+      const result = map.set(code, value.set("uses", Math.max(value.uses, uses)));
     }
   },
   LOAD_THREADS_SUCCESS: handleLoadThreadsSuccess,
@@ -422,9 +384,9 @@ const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
       }
       return flag;
     });
-  }
-});
-const size = fn(2);
+  },
+};
+const giftCodeStore = new GiftCodeStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("stores/GiftCodeStore.tsx");
 
 export default giftCodeStore;

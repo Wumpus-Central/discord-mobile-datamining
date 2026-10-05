@@ -2,29 +2,28 @@
 import useChatLayout from "useChatLayout.tsx";
 import useBaseAppContainerDimensions from "../../screen/native/useBaseAppContainerDimensions.tsx";
 import useDrawerWidth from "../../screen/native/drawer/useDrawerWidth.tsx";
-import ChatViewWidthContextDefault from "ChatViewWidthContext.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import reactDefault from "ChatViewWidthContext.tsx";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const useChatLayoutDefault = useChatLayout;
 const useBaseAppContainerDimensionsDefault = useBaseAppContainerDimensions;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/chat/native/useChatWidth.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let context = noop.useContext(ChatViewWidthContextDefault);
+      let context = react.useContext(reactDefault);
+      const isChatLockedOpen = useChatLayoutDefault().isChatLockedOpen;
       const width = useBaseAppContainerDimensionsDefault().width;
       useDrawerWidth;
       if (null == context) {
+        let tmp5;
         if (null == arg0) {
           let diff = width;
-          if (useChatLayoutDefault().isChatLockedOpen) {
+          if (isChatLockedOpen) {
             diff = width - tmp3;
           }
-          let tmp5 = diff;
+          tmp5 = diff;
         } else {
           tmp5 = width;
         }
@@ -33,16 +32,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return context;
     }
   : (arg0) => {
-      let context = noop.useContext(ChatViewWidthContextDefault);
+      let context = react.useContext(reactDefault);
+      const isChatLockedOpen = useChatLayoutDefault().isChatLockedOpen;
       const width = useBaseAppContainerDimensionsDefault().width;
       useDrawerWidth;
       if (null == context) {
+        let tmp5;
         if (null == arg0) {
           let diff = width;
-          if (useChatLayoutDefault().isChatLockedOpen) {
+          if (isChatLockedOpen) {
             diff = width - tmp3;
           }
-          let tmp5 = diff;
+          tmp5 = diff;
         } else {
           tmp5 = width;
         }
@@ -50,16 +51,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return context;
     };
+const result = size.fileFinishedImporting("modules/chat/native/useChatWidth.tsx");
+
+export default tmp2;
 export const getChatWidth = function getChatWidth(arg0) {
+  let tmp3;
   const obj = useChatLayout;
-  const width = useBaseAppContainerDimensions.getBaseAppContainerDimensions().width;
+  const isChatLockedOpen = obj.getChatLayout().isChatLockedOpen;
+  const obj2 = useBaseAppContainerDimensions;
+  const width = obj2.getBaseAppContainerDimensions().width;
   if (null == arg0) {
     let diff = width;
-    if (obj.getChatLayout().isChatLockedOpen) {
-      diff = width - useDrawerWidth.getDrawerWidth();
+    if (isChatLockedOpen) {
       const tmpResult = useDrawerWidth;
+      diff = width - tmpResult.getDrawerWidth();
     }
-    let tmp3 = diff;
+    tmp3 = diff;
   } else {
     tmp3 = width;
   }

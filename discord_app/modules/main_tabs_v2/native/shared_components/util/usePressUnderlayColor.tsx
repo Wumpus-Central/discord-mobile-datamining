@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/util/usePressUnderlayColor.tsx
-import c from "../../../../../../_runtime/00576_c.js";
+import react from "../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import ColorUtils from "../../../../../utils/ColorUtils.tsx";
@@ -10,19 +10,18 @@ import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 let closure_3 = ChannelEmojiConstants.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR;
-const result = size.fileFinishedImporting(
-  "modules/main_tabs_v2/native/shared_components/util/usePressUnderlayColor.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arr) => {
-      const cResult = c.c(4);
+      const obj = react;
+      const cResult = obj.c(4);
       const tmp4 = useThemeDefault();
-      const token = useToken.useToken(nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE);
+      const obj2 = useToken;
+      const token = obj2.useToken(nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE);
       if (cResult[0] === arr) {
         if (cResult[1] === token) {
+          let tmp6;
           if (cResult[2] === tmp4) {
-            let tmp6 = cResult[3];
+            tmp6 = cResult[3];
           }
           return tmp6;
         }
@@ -35,13 +34,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != substr) {
         hexWithOpacityResult = token;
         if (arr !== closure_3) {
-          const tmpResult = ColorUtils;
+          const hexWithOpacity = ColorUtils.hexWithOpacity;
+          ColorUtils;
           let num3 = 0.08;
+          const tmpResult2 = shared;
           if (tmpResult2.isThemeDark(tmp4)) {
             num3 = 0.12;
           }
-          hexWithOpacityResult = tmpResult.hexWithOpacity(substr, num3);
-          tmpResult2 = shared;
+          hexWithOpacityResult = hexWithOpacity(substr, num3);
         }
       }
       cResult[0] = arr;
@@ -52,7 +52,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : (arr) => {
       const tmp2 = useThemeDefault();
-      const token = useToken.useToken(nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE);
+      const obj = useToken;
+      const token = obj.useToken(nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE);
       let substr;
       if (arr != null) {
         substr = arr.slice(0, arr.length - 2);
@@ -61,14 +62,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != substr) {
         hexWithOpacityResult = token;
         if (arr !== closure_3) {
-          const tmp3Result = ColorUtils;
+          const hexWithOpacity = ColorUtils.hexWithOpacity;
+          ColorUtils;
           let num3 = 0.08;
+          const tmp3Result2 = shared;
           if (tmp3Result2.isThemeDark(tmp2)) {
             num3 = 0.12;
           }
-          hexWithOpacityResult = tmp3Result.hexWithOpacity(substr, num3);
-          tmp3Result2 = shared;
+          hexWithOpacityResult = hexWithOpacity(substr, num3);
         }
       }
       return hexWithOpacityResult;
     };
+const result = size.fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/util/usePressUnderlayColor.tsx",
+);
+
+export default tmp2;

@@ -5,14 +5,12 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/errors/VideoStreamReadyActionCreators.tsx");
 
 export const videoStreamTimedOut = function videoStreamTimedOut(current, userId, mediaContext, streamKey) {
-  DispatcherDefault.dispatch({
-    type: "VIDEO_STREAM_READY_TIMEOUT",
-    videoStreamId: current,
-    mediaContext,
-    userId,
-    streamKey,
-  });
+  const obj = DispatcherDefault;
+  const obj2 = { type: "VIDEO_STREAM_READY_TIMEOUT", videoStreamId: current, mediaContext, userId, streamKey };
+  obj.dispatch(obj2);
 };
 export const clearVideoStreamTimeout = function clearVideoStreamTimeout(DEFAULT, userId) {
-  DispatcherDefault.dispatch({ type: "CLEAR_VIDEO_STREAM_READY_TIMEOUT", mediaContext: DEFAULT, userId });
+  const obj = DispatcherDefault;
+  const obj2 = { type: "CLEAR_VIDEO_STREAM_READY_TIMEOUT", mediaContext: DEFAULT, userId };
+  obj.dispatch(obj2);
 };

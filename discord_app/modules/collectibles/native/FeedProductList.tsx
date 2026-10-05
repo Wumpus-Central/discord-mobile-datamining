@@ -1,63 +1,70 @@
 // discord_app/modules/collectibles/native/FeedProductList.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import CollectiblesShopCardV2 from "CollectiblesShopCardV2.tsx";
+import SkeletonCardDefault from "SkeletonCard.tsx";
 import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = {
-  skeletonGrid: { flex: 1, alignItems: "center" },
-  skeletonRow: {
-    flexDirection: "row",
-    gap: fn(8418).COLLECTIBLES_SHOP_CARD_GAP,
-    paddingBottom: fn(8418).COLLECTIBLES_SHOP_CARD_GAP,
-  },
+const require = globalThis.__r;
+let _require;
+
+let obj2;
+const View = react_native.View;
+const jsx = Fragment.jsx;
+let obj = { skeletonGrid: { flex: 1, alignItems: "center" }, skeletonRow: obj2 };
+obj2 = {
+  flexDirection: "row",
+  gap: CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_GAP,
+  paddingBottom: CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_GAP,
 };
-let closure_5 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
+let closure_5 = createStyles.createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = num(576).c(11);
+      let accessibilityLabel;
+      let cardWidth;
+      let columns;
+      let loadingCardsNum;
+      let num;
+      const obj = cardWidth(576);
+      const cResult = obj.c(11);
       ({ loadingCardsNum, accessibilityLabel } = arg0);
       const tmp2 = closure_5();
-      let obj = num(576);
-      const cardLayout = num(15733).useCardLayout();
+      let obj2 = cardWidth(15733);
+      const cardLayout = obj2.useCardLayout();
       ({ columns, cardWidth } = cardLayout);
-      num = cardWidth;
       const rowWidth = cardLayout.rowWidth;
       if (cResult[0] === cardWidth) {
         if (cResult[1] === columns) {
           if (cResult[2] === loadingCardsNum) {
             if (cResult[3] === rowWidth) {
+              let tmp4;
+              let tmp9;
               if (cResult[4] === tmp2.skeletonRow) {
-                let tmp4 = cResult[5];
+                tmp4 = cResult[5];
               }
               const _Symbol = Symbol;
               if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
                 const obj3 = { busy: true };
                 cResult[6] = obj3;
-                let tmp9 = obj3;
+                tmp9 = obj3;
               } else {
                 tmp9 = cResult[6];
               }
               if (cResult[7] === accessibilityLabel) {
                 if (cResult[8] === tmp4) {
+                  let tmp10;
                   if (cResult[9] === tmp2.skeletonGrid) {
-                    let tmp10 = cResult[10];
+                    tmp10 = cResult[10];
                   }
                   return tmp10;
                 }
               }
-              const obj4 = {
-                style: tmp2.skeletonGrid,
-                accessibilityRole: "list",
-                accessibilityLabel,
-                accessibilityState: tmp9,
-                accessible: true,
-                children: tmp4,
-              };
               const tmp13 = (
                 <View
                   style={tmp2.skeletonGrid}
@@ -81,25 +88,20 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [];
       for (let num = 0; num < loadingCardsNum; num = num + columns) {
         let _Array = Array;
-        let obj5 = { length: null };
+        let obj5 = { length: Math.min(columns, loadingCardsNum - num) };
         let _Math = Math;
-        obj5.length = Math.min(columns, loadingCardsNum - num);
-        let arr = Array.from(obj5);
-        let obj6 = { style: null, children: null };
+        let fromResult = from(obj5);
         let items1 = [tmp2.skeletonRow];
         let obj7 = { width: rowWidth };
         items1[1] = obj7;
-        obj6.style = items1;
-        obj6.children = arr.map((item, index) => {
-          const obj = { width: require, style: null };
-          const obj2 = { marginBottom: num(8418).COLLECTIBLES_SHOP_CARD_GAP };
-          obj.style = obj2;
-          return closure_4(closure_1(8534), obj, "" + num + "-" + index);
-        });
         let _HermesInternal = HermesInternal;
-        let arr2 = items.push(
-          <View key={"row-" + num} style={null}>
-            {null}
+        let arr = items.push(
+          <View key={"row-" + num} style={items1}>
+            {fromResult.map((item, index) => {
+              const obj2 = { marginBottom: CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_GAP };
+              SkeletonCardDefault;
+              return <tmp key={"" + num + "-" + index} width={cardWidth} style={obj2} />;
+            })}
           </View>,
         );
       }
@@ -110,36 +112,35 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp2.skeletonRow;
       cResult[5] = items;
       tmp4 = items;
-      let obj2 = num(15733);
     }
-  : function SkeletonGrid(accessibilityLabel) {
-      const loadingCardsNum = accessibilityLabel.loadingCardsNum;
-      num = undefined;
+  : function SkeletonGrid(loadingCardsNum) {
+      let c0;
+      let columns;
+      let num;
+      loadingCardsNum = loadingCardsNum.loadingCardsNum;
+      _require = undefined;
+      const accessibilityLabel = loadingCardsNum.accessibilityLabel;
       const tmp = closure_5();
-      const cardLayout = num(15733).useCardLayout();
-      ({ columns, cardWidth: num } = cardLayout);
+      const obj = require("useCardLayout");
+      const cardLayout = obj.useCardLayout();
+      ({ columns, cardWidth: c0 } = cardLayout);
       const items = [];
       for (let num = 0; num < loadingCardsNum; num = num + columns) {
         let _Array = Array;
-        let obj2 = { length: null };
+        let obj2 = { length: Math.min(columns, loadingCardsNum - num) };
         let _Math = Math;
-        obj2.length = Math.min(columns, loadingCardsNum - num);
-        let arr = Array.from(obj2);
-        let obj3 = { style: null, children: null };
+        let fromResult = from(obj2);
         let items1 = [tmp.skeletonRow];
         let obj4 = { width: tmp3 };
         items1[1] = obj4;
-        obj3.style = items1;
-        obj3.children = arr.map((item, index) => {
-          const obj = { width: require, style: null };
-          const obj2 = { marginBottom: num(8418).COLLECTIBLES_SHOP_CARD_GAP };
-          obj.style = obj2;
-          return closure_4(closure_1(8534), obj, "" + num + "-" + index);
-        });
         let _HermesInternal = HermesInternal;
-        let arr2 = items.push(
-          <View key={"row-" + num} style={null}>
-            {null}
+        let arr = items.push(
+          <View key={"row-" + num} style={items1}>
+            {fromResult.map((item, index) => {
+              const obj2 = { marginBottom: CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_GAP };
+              SkeletonCardDefault;
+              return <tmp key={"" + num + "-" + index} width={width} style={obj2} />;
+            })}
           </View>,
         );
       }
@@ -147,7 +148,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         <View
           style={tmp.skeletonGrid}
           accessibilityRole="list"
-          accessibilityLabel={accessibilityLabel.accessibilityLabel}
+          accessibilityLabel={accessibilityLabel}
           accessibilityState={{ busy: true }}
           accessible
         >
@@ -155,41 +156,41 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         </View>
       );
     };
-ReactCompilerGating = fn(558);
-let obj3 = {
-  flexDirection: "row",
-  gap: fn(8418).COLLECTIBLES_SHOP_CARD_GAP,
-  paddingBottom: fn(8418).COLLECTIBLES_SHOP_CARD_GAP,
-};
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/collectibles/native/FeedProductList.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function FeedProductList(arg0) {
-      const cResult = c.c(8);
+      let accessibilityLabel;
+      let disableBundleStaticBackground;
+      let loadingCardsNum;
+      let preferVCPrice;
+      let products;
+      let tmp3;
+      const obj = react2;
+      const cResult = obj.c(8);
       ({ products, loadingCardsNum, preferVCPrice, accessibilityLabel, disableBundleStaticBackground } = arg0);
-      let num = 0;
       if (0 === products.length) {
         if (cResult[0] === accessibilityLabel) {
+          let tmp7;
+          if (cResult[1] === loadingCardsNum) {
+            tmp7 = cResult[2];
+          }
+          tmp3 = tmp7;
         }
-        const obj2 = { loadingCardsNum, accessibilityLabel };
         const tmp10 = <closure_6 loadingCardsNum={loadingCardsNum} accessibilityLabel={accessibilityLabel} />;
-        cResult[num] = accessibilityLabel;
+        cResult[0] = accessibilityLabel;
         cResult[1] = loadingCardsNum;
-        num = 2;
         cResult[2] = tmp10;
+        tmp7 = tmp10;
       } else {
         if (cResult[3] === accessibilityLabel) {
           if (cResult[4] === disableBundleStaticBackground) {
             if (cResult[5] === preferVCPrice) {
               if (cResult[6] === products) {
-                let tmp3 = cResult[7];
+                tmp3 = cResult[7];
               }
-              return tmp3;
             }
           }
         }
-        const obj3 = { products, preferVCPrice, accessibilityLabel, disableBundleStaticBackground };
         const tmp6 = jsx(CollectiblesShopCardsGridDefault, {
           products,
           preferVCPrice,
@@ -203,14 +204,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = tmp6;
         tmp3 = tmp6;
       }
+      return tmp3;
     }
   : function FeedProductList(arg0) {
+      let accessibilityLabel;
+      let products;
+      let tmp7;
       ({ products, accessibilityLabel } = arg0);
       if (0 === products.length) {
-        const obj2 = { loadingCardsNum: tmp, accessibilityLabel };
-        let tmp7 = <closure_6 loadingCardsNum={tmp} accessibilityLabel={accessibilityLabel} />;
+        tmp7 = <closure_6 loadingCardsNum={tmp} accessibilityLabel={accessibilityLabel} />;
       } else {
-        const obj = { products, preferVCPrice: tmp2, accessibilityLabel, disableBundleStaticBackground: tmp3 };
         tmp7 = jsx(CollectiblesShopCardsGridDefault, {
           products,
           preferVCPrice: tmp2,
@@ -220,3 +223,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp7;
     };
+const result = size.fileFinishedImporting("modules/collectibles/native/FeedProductList.tsx");
+
+export default tmp3;

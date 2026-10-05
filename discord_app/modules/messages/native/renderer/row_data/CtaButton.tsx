@@ -1,65 +1,68 @@
 // discord_app/modules/messages/native/renderer/row_data/CtaButton.tsx
-import util from "../../../../../intl/index.native.tsx";
+import intl5 from "../../../../../intl/index.native.tsx";
 import _modDef3109 from "../../../../age_assurance/ManualReview.messages.js";
 import AgeVerificationUtils from "../../../../age_assurance/AgeVerificationUtils.tsx";
 import CtaButtonUtils from "../../../CtaButtonUtils.tsx";
 import ExplicitMediaStore from "../../../../explicit_media_redaction/ExplicitMediaStore.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/CtaButton.tsx");
 
 export const createCtaButtons = function createCtaButtons(id, channel_id, arg2) {
-  const ctaButtonType = CtaButtonUtils.getCtaButtonType(id, channel_id);
-  const result = AgeVerificationUtils.shouldShowTiggerPawtect();
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let obj19;
+  let prop;
+  let prop1;
+  let prop2;
+  let tmp6;
+  const obj = CtaButtonUtils;
+  const ctaButtonType = obj.getCtaButtonType(id, channel_id);
+  const obj2 = AgeVerificationUtils;
+  const result = obj2.shouldShowTiggerPawtect();
   if (CtaButtonUtils.CtaButtonType.MARK_AS_FALSE_POSITIVE === ctaButtonType) {
-    const obj3 = { text: null, textColor: null, backgroundColor: null, callback: null };
-    const intl4 = util.intl;
-    obj3.text = intl4.string(util.t["4q1Elf"]);
+    const obj3 = { text: intl4.string(intl5.t["4q1Elf"]), textColor: null, backgroundColor: null, callback: prop };
+    intl4 = intl5.intl;
     ({ reportFpTextColor: obj9.textColor, reportFpBackgroundColor: obj9.backgroundColor } = arg2);
-    let prop;
+    prop = undefined;
     if (ExplicitMediaStore.canSubmitFpReport(id)) {
       prop = CtaButtonUtils.CtaButtonType.MARK_AS_FALSE_POSITIVE;
     }
-    const obj6 = { ctaButton: null };
-    obj3.callback = prop;
-    obj6.ctaButton = obj3;
-    return obj6;
+    return { ctaButton: obj3 };
   } else if (CtaButtonUtils.CtaButtonType.AGE_VERIFICATION_RETRY === ctaButtonType) {
-    const obj7 = { text: null, textColor: null, backgroundColor: null, callback: null };
-    const intl2 = util.intl;
-    obj7.text = intl2.string(util.t["/nicWo"]);
+    const obj7 = { text: intl2.string(intl5.t["/nicWo"]), textColor: null, backgroundColor: null, callback: prop1 };
+    intl2 = intl5.intl;
     ({ retryTextColor: obj5.textColor, retryBackgroundColor: obj5.backgroundColor } = arg2);
-    let prop1;
+    prop1 = undefined;
     if (result) {
       prop1 = CtaButtonUtils.CtaButtonType.AGE_VERIFICATION_RETRY;
     }
-    const obj10 = { ctaButton: null, secondaryCtaButton: null };
-    obj7.callback = prop1;
-    obj10.ctaButton = obj7;
-    let tmp6;
+    const obj10 = { ctaButton: obj7, secondaryCtaButton: tmp6 };
+    tmp6 = undefined;
+    const tmpResult = AgeVerificationUtils;
     if (tmpResult.isAgeVerificationMessageWithManualReviewCta(channel_id, id)) {
-      const obj17 = { text: null, textColor: null, backgroundColor: null, callback: null };
-      const intl3 = util.intl;
-      obj17.text = intl3.string(_modDef3109.Z61nkt);
+      const obj17 = { text: intl3.string(_modDef3109.Z61nkt), textColor: null, backgroundColor: null, callback: prop2 };
+      intl3 = intl5.intl;
       ({ reportFpTextColor: obj8.textColor, reportFpBackgroundColor: obj8.backgroundColor } = arg2);
-      let prop2;
+      prop2 = undefined;
       if (result) {
         prop2 = CtaButtonUtils.CtaButtonType.AGE_VERIFICATION_MANUAL_REVIEW;
       }
-      obj17.callback = prop2;
       tmp6 = obj17;
     }
-    obj10.secondaryCtaButton = tmp6;
     return obj10;
   } else if (CtaButtonUtils.CtaButtonType.CONNECT_TO_TEEN === ctaButtonType) {
-    const obj18 = { ctaButton: null };
-    const obj19 = { text: null, textColor: null, backgroundColor: null, callback: null };
-    const intl = util.intl;
-    obj19.text = intl.string(util.t.n8a49k);
+    const obj18 = { ctaButton: obj19 };
+    obj19 = {
+      text: intl.string(intl5.t.n8a49k),
+      textColor: null,
+      backgroundColor: null,
+      callback: CtaButtonUtils.CtaButtonType.CONNECT_TO_TEEN,
+    };
+    intl = intl5.intl;
     ({ retryTextColor: obj4.textColor, retryBackgroundColor: obj4.backgroundColor } = arg2);
-    obj19.callback = CtaButtonUtils.CtaButtonType.CONNECT_TO_TEEN;
-    obj18.ctaButton = obj19;
     return obj18;
   } else {
     return {};

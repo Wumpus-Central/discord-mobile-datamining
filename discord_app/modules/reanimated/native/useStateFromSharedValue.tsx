@@ -1,10 +1,14 @@
 // discord_app/modules/reanimated/native/useStateFromSharedValue.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import ReanimatedRexport from "../ReanimatedRexport.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+const require = globalThis.__r;
+let _require, dependencyMap, set, sum;
+
 let c4 = 9999999;
 const map = new Map();
 let closure_6 = {
@@ -19,70 +23,80 @@ let closure_8 = {
 let closure_9 = {
   code: "function useStateFromSharedValueTsx4(id_0,sharedValue_1){sharedValue_1.removeListener(id_0);}",
 };
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
+      let closure_1;
       _require = arg0;
       dependencyMap = arg1;
-      const cResult = require("c").c(4);
+      let obj = require("react");
+      const cResult = obj.c(4);
       if (cResult[0] === arg1) {
+        let tmp2;
+        let tmp3;
         if (cResult[1] === arg0) {
-          let tmp2 = cResult[2];
-          let tmp3 = cResult[3];
+          tmp2 = cResult[2];
+          tmp3 = cResult[3];
         }
-        const layoutEffect = noop.useLayoutEffect(tmp2, tmp3);
+        const layoutEffect = react.useLayoutEffect(tmp2, tmp3);
       }
       let fn = function c() {
-        value = map.get(set);
+        let value;
+        value = map.get(value);
         if (value == null) {
           const _Set = Set;
-          set = new Set();
+          const self = this;
+          const self2 = this;
           const obj2 = {
-            sharedValue: tmp,
-            listeners: set,
+            sharedValue: value,
+            listeners: new Set(),
             valueListener(arg0) {
               closure_0 = arg0;
-              set(1259).batchUpdates(() => {
+              const obj = set(closure_1_1[2]);
+              obj.batchUpdates(() => {
                 for (const item10005 of set) {
                   let item10005Result = item10005(closure_0);
                   continue;
                 }
               });
             },
-            listenerId: null,
+            listenerId: sum,
           };
           sum = sum + 1;
-          obj2.listenerId = sum;
           value = obj2;
         }
-        set = value;
         let listeners = value.listeners;
-        listeners.add(dependencyMap);
+        listeners.add(closure_1);
         if (1 === value.listeners.size) {
           const result = map.set(tmp, value);
           let fn = function n(arg0, arg1, addListener) {
             closure_0 = arg1;
-            addListener.addListener(arg0, (arg0) => set(dependencyMap[5]).runOnJS(closure_0)(arg0));
+            addListener.addListener(arg0, (arg0) => {
+              const obj = closure_0(closure_2_1[5]);
+              return obj.runOnJS(closure_0)(arg0);
+            });
           };
-          const obj4 = { runOnJS: closure_0(4612).runOnJS };
-          fn.__closure = obj4;
+          const obj3 = { runOnJS: value(closure_1[5]).runOnJS };
+          const runOnUI = value(closure_1[5]).runOnUI;
+          value(closure_1[5]);
+          fn.__closure = obj3;
           fn.__workletHash = 580393174787;
           fn.__initData = __initData;
-          closure_0(4612).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
-          const obj3 = closure_0(4612);
+          runOnUI(fn)(value.listenerId, value.valueListener, value);
         }
         return () => {
-          const listeners = set.listeners;
+          const listeners = value.listeners;
           listeners.delete(closure_1);
-          if (0 === set.listeners.size) {
+          if (0 === value.listeners.size) {
             const fn = function n(arg0, removeListener) {
               removeListener.removeListener(arg0);
             };
             fn.__closure = {};
             fn.__workletHash = 6985202571919;
             fn.__initData = __initData;
-            ReanimatedRexport.runOnUI(fn)(set.listenerId, closure_0);
-            map.delete(closure_0);
+            const obj = ReanimatedRexport;
+            obj.runOnUI(fn)(value.listenerId, value);
+            map.delete(value);
           }
         };
       };
@@ -93,129 +107,144 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp3 = items;
       tmp2 = fn;
-      let obj = require("c");
     }
   : (arg0, arg1) => {
-      closure_0 = arg0;
-      dependencyMap = arg1;
+      let closure_0 = arg0;
+      let closure_1 = arg1;
       const items = [arg0, arg1];
-      const layoutEffect = noop.useLayoutEffect(() => {
-        value = map.get(set);
+      const layoutEffect = react.useLayoutEffect(function () {
+        let value;
+        value = map.get(value);
         if (value == null) {
           const _Set = Set;
+          const self = this;
+          const self2 = this;
           set = new Set();
           const obj2 = {
-            sharedValue: tmp,
+            sharedValue: value,
             listeners: set,
             valueListener(arg0) {
               closure_0 = arg0;
-              set(1259).batchUpdates(() => {
+              const obj = set(closure_1_1[2]);
+              obj.batchUpdates(() => {
                 for (const item10005 of set) {
                   let item10005Result = item10005(closure_0);
                   continue;
                 }
               });
             },
-            listenerId: null,
+            listenerId: sum,
           };
           sum = sum + 1;
-          obj2.listenerId = sum;
           value = obj2;
         }
-        set = value;
         let listeners = value.listeners;
-        listeners.add(dependencyMap);
+        listeners.add(closure_1);
         if (1 === value.listeners.size) {
           const result = map.set(tmp, value);
           let fn = function n(arg0, arg1, addListener) {
             closure_0 = arg1;
-            addListener.addListener(arg0, (arg0) => set(4612).runOnJS(closure_0)(arg0));
+            addListener.addListener(arg0, (arg0) => {
+              const obj = closure_0(closure_2_1[5]);
+              return obj.runOnJS(closure_0)(arg0);
+            });
           };
-          const obj4 = { runOnJS: closure_0(4612).runOnJS };
-          fn.__closure = obj4;
+          const obj3 = { runOnJS: value(closure_1[5]).runOnJS };
+          const runOnUI = value(closure_1[5]).runOnUI;
+          value(closure_1[5]);
+          fn.__closure = obj3;
           fn.__workletHash = 4734743082561;
           fn.__initData = __initData;
-          closure_0(4612).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
-          const obj3 = closure_0(4612);
+          runOnUI(fn)(value.listenerId, value.valueListener, value);
         }
         return () => {
-          const listeners = set.listeners;
+          const listeners = value.listeners;
           listeners.delete(closure_1);
-          if (0 === set.listeners.size) {
+          if (0 === value.listeners.size) {
             const fn = function n(arg0, removeListener) {
               removeListener.removeListener(arg0);
             };
             fn.__closure = {};
             fn.__workletHash = 12630924966217;
             fn.__initData = __initData;
-            ReanimatedRexport.runOnUI(fn)(set.listenerId, closure_0);
-            map.delete(closure_0);
+            const obj = ReanimatedRexport;
+            obj.runOnUI(fn)(value.listenerId, value);
+            map.delete(value);
           }
         };
       }, items);
     };
-fn(558);
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      closure_0 = arg0;
-      const cResult = c.c(2);
+      let tmp2;
+      let closure_0 = arg0;
+      const obj = react2;
+      const cResult = obj.c(2);
       if (cResult[0] !== arg0) {
         const fn = function u() {
           return closure_0.get();
         };
         cResult[0] = arg0;
         cResult[1] = fn;
-        let tmp2 = fn;
+        tmp2 = fn;
       } else {
         tmp2 = cResult[1];
       }
-      const tmp3 = _slicedToArray(noop.useState(tmp2), 2);
+      const tmp3 = _slicedToArray(react.useState(tmp2), 2);
+      const first = tmp3[0];
       closure_10(arg0, tmp3[1]);
-      return tmp3[0];
+      return first;
     }
   : (arg0) => {
-      closure_0 = arg0;
+      let closure_0 = arg0;
       const tmp = _slicedToArray(
-        noop.useState(() => closure_0.get()),
+        react.useState(() => closure_0.get()),
         2,
       );
+      const first = tmp[0];
       closure_10(arg0, tmp[1]);
-      return tmp[0];
+      return first;
     };
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/reanimated/native/useStateFromSharedValue.tsx");
-
-export default tmp3;
-export const useDerivedStateFromSharedValue = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, current) => {
-      closure_0 = arg0;
-      const cResult = c.c(6);
-      if (cResult[0] === current) {
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1) => {
+      let closure_129_2;
+      let tmp5;
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      const obj = react2;
+      const cResult = obj.c(6);
+      if (cResult[0] === arg1) {
+        let tmp2;
+        let tmp6;
+        let tmp9;
         if (cResult[1] === arg0) {
-          let tmp2 = cResult[2];
+          tmp2 = cResult[2];
         }
-        [tmp5, _slicedToArray] = noop.useState(tmp2);
-        closure_3 = noop.useRef(current);
-        if (cResult[3] !== current) {
+        [tmp5, closure_129_2] = react.useState(tmp2);
+        _slicedToArray(react.useState(tmp2), 2);
+        let closure_3 = react.useRef(arg1);
+        if (cResult[3] !== arg1) {
           const fn2 = function c() {
             closure_3.current = current;
           };
-          cResult[3] = current;
+          cResult[3] = arg1;
           cResult[4] = fn2;
-          let tmp6 = fn2;
+          tmp6 = fn2;
         } else {
           tmp6 = cResult[4];
         }
-        const layoutEffect = noop.useLayoutEffect(tmp6);
+        const layoutEffect = react.useLayoutEffect(tmp6);
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const fn3 = function _(arg0) {
+            let ref;
             closure_0 = arg0;
             return closure_2((current) => ref.current(closure_0, current));
           };
           cResult[5] = fn3;
-          let tmp9 = fn3;
+          tmp9 = fn3;
         } else {
           tmp9 = cResult[5];
         }
@@ -225,24 +254,34 @@ export const useDerivedStateFromSharedValue = ReactCompilerGating.isReactCompile
       const fn = function l() {
         return current(closure_0.get(), undefined);
       };
-      cResult[0] = current;
+      cResult[0] = arg1;
       cResult[1] = arg0;
       cResult[2] = fn;
       tmp2 = fn;
     }
-  : (arg0, current) => {
-      closure_0 = arg0;
-      [tmp2, _slicedToArray] = noop.useState(() => current(closure_0.get(), undefined));
-      closure_3 = noop.useRef(current);
-      const layoutEffect = noop.useLayoutEffect(() => {
+  : (arg0, arg1) => {
+      let closure_129_2;
+      let tmp2;
+      const f95993 = () => current(closure_0.get(), undefined);
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      [tmp2, closure_129_2] = react.useState(f95993);
+      _slicedToArray(react.useState(f95993), 2);
+      let closure_3 = react.useRef(arg1);
+      const layoutEffect = react.useLayoutEffect(() => {
         closure_3.current = current;
       });
       closure_10(
         arg0,
-        noop.useCallback((arg0) => {
+        react.useCallback((arg0) => {
+          let ref;
           closure_0 = arg0;
           return closure_2((current) => ref.current(closure_0, current));
         }, []),
       );
       return tmp2;
     };
+let result = size.fileFinishedImporting("modules/reanimated/native/useStateFromSharedValue.tsx");
+
+export default tmp3;
+export const useDerivedStateFromSharedValue = tmp4;

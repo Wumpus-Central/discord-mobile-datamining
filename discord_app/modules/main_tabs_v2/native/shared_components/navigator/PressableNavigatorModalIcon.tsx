@@ -1,16 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import util from "../../../../../intl/index.native.tsx";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import intl2 from "../../../../../intl/index.native.tsx";
 import HeaderShared from "../HeaderShared.tsx";
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-const jsx = jsxProd.jsx;
+const jsx = Fragment.jsx;
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx",
 );
 
 export default function PressableNavigatorModalIcon(onPress) {
+  let stringResult;
   let goBack = onPress.onPress;
   if (goBack === undefined) {
     goBack = onPress.navigation.goBack;
@@ -19,23 +20,23 @@ export default function PressableNavigatorModalIcon(onPress) {
   if (str === undefined) {
     str = "back";
   }
-  const obj = { source: importDefault("back" === str ? 7501 : 7506), onPress: goBack, accessibilityLabel: null };
-  const intl = util.intl;
+  PressableNavigatorButtonWrapperDefault;
+  const HeaderIconButton = HeaderShared.HeaderIconButton;
+  const intl = intl2.intl;
   const string = intl.string;
-  const t = util.t;
+  const t = intl2.t;
   if ("back" === str) {
-    let stringResult = string(t["13/7kX"]);
+    stringResult = string(t["13/7kX"]);
   } else {
     stringResult = string(t.cpT0Cq);
   }
-  obj.accessibilityLabel = stringResult;
   return (
     <tmp4 isModal>
-      {jsx(HeaderShared.HeaderIconButton, {
-        source: importDefault("back" === str ? 7501 : 7506),
-        onPress: goBack,
-        accessibilityLabel: null,
-      })}
+      <HeaderIconButton
+        source={importDefault("back" === str ? 7501 : 7506)}
+        onPress={goBack}
+        accessibilityLabel={stringResult}
+      />
     </tmp4>
   );
 }

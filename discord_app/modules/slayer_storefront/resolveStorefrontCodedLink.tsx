@@ -1,15 +1,19 @@
 // discord_app/modules/slayer_storefront/resolveStorefrontCodedLink.tsx
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import SKUStore from "../../stores/game_store/SKUStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const require = fn;
+let c1, c4, closure_2;
+
 const set = new Set();
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/resolveStorefrontCodedLink.tsx");
 
 export default function resolveStorefrontCodedLink(arg0, code) {
-  const result = obj3(11149).parseStorefrontCodedLink(code);
+  let obj3;
+  const tmp = obj3;
+  let obj = obj3(11149);
+  const result = obj.parseStorefrontCodedLink(code);
   if (null != result) {
     if (arg0 === tmp(4875).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
       let obj2 = { type: "application", applicationId: result.scopeId };
@@ -18,19 +22,22 @@ export default function resolveStorefrontCodedLink(arg0, code) {
       obj3 = { type: "guild", guildId: result.scopeId };
     }
     if (result.skuIds.length <= 1) {
-      const skuId = _slicedToArray(result.skuIds, 1)[0];
+      let skuId = _slicedToArray(result.skuIds, 1)[0];
+      const tmp4 = null != SKUStore.get(skuId) || SKUStore.isFetching(skuId) || SKUStore.didFetchingSkuFail(skuId);
       if (!tmp4) {
-        const obj5 = { type: "STORE_LISTINGS_FETCH_START", skuId };
-        skuId(584).dispatch(obj5);
         let obj4 = skuId(584);
+        let obj5 = { type: "STORE_LISTINGS_FETCH_START", skuId };
+        obj4.dispatch(obj5);
         const items = [skuId];
-        const storefrontCodedLink = tmp(11149).makeStorefrontCodedLink(items, result.scopeId);
-        closure_129_0 = storefrontCodedLink;
-        closure_129_1 = asyncGeneratorStep(async () => {
+        const tmpResult = tmp(11149);
+        const storefrontCodedLink = tmpResult.makeStorefrontCodedLink(items, result.scopeId);
+        skuId = _asyncToGenerator(async () => {
+          let v1;
+          let v3;
           if (v3 === 2) {
             v3 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
+          } else if (tmp2 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -51,16 +58,13 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  const tmp16 = v1(dependencyMap[7])();
+                  const tmp14 = v1(dependencyMap[7])();
                   if ("application" === obj3.type) {
                     v1 = 2;
+                    const obj5 = v3(dependencyMap[8]);
                     v3 = 1;
                     const obj6 = {
-                      value: v3(dependencyMap[8]).fetchSocialLayerStorefrontSkuForApplication(
-                        tmp17.applicationId,
-                        first,
-                        tmp16,
-                      ),
+                      value: obj5.fetchSocialLayerStorefrontSkuForApplication(obj3.applicationId, first, tmp14),
                       done: false,
                     };
                     return obj6;
@@ -68,15 +72,12 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                     obj3 = v3(dependencyMap[8]);
                     v1 = 1;
                     v3 = 1;
-                    const obj7 = {
-                      value: obj3.fetchSocialLayerStorefrontSku(tmp17.guildId, first, tmp16),
-                      done: false,
-                    };
+                    const obj7 = { value: obj3.fetchSocialLayerStorefrontSku(obj3.guildId, first, tmp14), done: false };
                     return obj7;
                   }
                 }
               } else {
-                if (1 === tmp4) {
+                if (1 === tmp3) {
                   if (arg0 === 1) {
                     v3 = 3;
                     throw value;
@@ -96,20 +97,21 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                 v3 = 3;
                 return { value: "IconComponent", done: null };
               }
-            } catch (tmp9) {
-              v3 = tmp;
-              throw tmp9;
+            } catch (tmp8) {
+              v3 = 3;
+              throw tmp8;
             }
           }
         });
         if (!set.has(storefrontCodedLink)) {
           set.add(storefrontCodedLink);
-          const result1 = tmp(17547).queueMessageLinkFetch(
-            asyncGeneratorStep(async () => {
+          const tmpResult2 = tmp(17547);
+          const result1 = tmpResult2.queueMessageLinkFetch(
+            _asyncToGenerator(async () => {
               if (c4 === 2) {
                 c4 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
-              } else if (tmp6 === 3) {
+              } else if (tmp3 === 3) {
                 if (arg0 === 1) {
                   throw value;
                 } else if (arg0 === 2) {
@@ -119,6 +121,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                   return { value: "IconComponent", done: null };
                 }
               } else {
+                let c3;
                 try {
                   c4 = 2;
                   if (0 === c1) {
@@ -130,14 +133,14 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                       obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      closure_0 = tmp3;
+                      let closure_0 = tmp;
                       c3 = 1;
                       c1 = 2;
                       c4 = 1;
-                      const obj4 = { value: first(), done: false };
+                      const obj4 = { value: v1(), done: false };
                       return obj4;
                     }
-                  } else if (1 === tmp7) {
+                  } else if (1 === tmp4) {
                     c3 = 0;
                     set.delete(closure_128_0);
                     throw closure_2;
@@ -156,24 +159,20 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                     c4 = 3;
                     return { value: "IconComponent", done: null };
                   }
-                } catch (tmp23) {
-                  closure_2 = tmp23;
-                  if (tmp4 === c3) {
-                    c4 = tmp2;
-                    throw tmp23;
+                } catch (tmp20) {
+                  closure_2 = tmp20;
+                  if (0 === c3) {
+                    c4 = 3;
+                    throw tmp20;
                   } else {
-                    c1 = tmp;
+                    c1 = 1;
                   }
                 }
               }
             }),
           );
-          const tmpResult2 = tmp(17547);
         }
-        const tmpResult = tmp(11149);
       }
-      tmp4 = null != SKUStore.get(skuId) || SKUStore.isFetching(skuId) || SKUStore.didFetchingSkuFail(skuId);
     }
   }
-  let obj = obj3(11149);
 }

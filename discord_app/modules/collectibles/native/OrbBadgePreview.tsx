@@ -1,39 +1,44 @@
 // discord_app/modules/collectibles/native/OrbBadgePreview.tsx
-import c from "../../../../_runtime/00576_c.js";
-import util from "../../../intl/index.native.tsx";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import intl2 from "../../../intl/index.native.tsx";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
 import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
 import UserProfilePreviewDefault from "../../user_profile/native/UserProfilePreview.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const View = react_native.View;
+const jsx = Fragment.jsx;
 let closure_5 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/collectibles/native/OrbBadgePreview.tsx");
-
-export const OrbBadgePreview = ReactCompilerGating.isReactCompilerEnabled()
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(7);
+      let tmp6;
+      let tmp7;
+      let tmp9;
+      const obj = react2;
+      const cResult = obj.c(7);
       const tmp4 = closure_5();
-      const currentUser = useCurrentUser.useCurrentUser();
+      const obj2 = useCurrentUser;
+      const currentUser = obj2.useCurrentUser();
+      const container = tmp4.container;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [collectibles_CollectiblesUtils.createOrbProfileBadge()];
-        const intl = util.intl;
-        const stringResult = intl.string(util.t.bxcI6Y);
+        const items = [];
+        const tmpResult = collectibles_CollectiblesUtils;
+        items[0] = tmpResult.createOrbProfileBadge();
+        const intl = intl2.intl;
+        const stringResult = intl.string(intl2.t.bxcI6Y);
         cResult[0] = items;
         cResult[1] = stringResult;
         tmp6 = items;
         tmp7 = stringResult;
-        const tmpResult = collectibles_CollectiblesUtils;
       } else {
         [tmp6, tmp7] = cResult;
       }
       if (cResult[2] !== currentUser) {
-        const obj3 = { compact: true, user: currentUser, additionalBadges: tmp6, accessibilityLabel: tmp7 };
         const tmp12 = jsx(UserProfilePreviewDefault, {
           compact: true,
           user: currentUser,
@@ -42,31 +47,37 @@ export const OrbBadgePreview = ReactCompilerGating.isReactCompilerEnabled()
         });
         cResult[2] = currentUser;
         cResult[3] = tmp12;
-        let tmp9 = tmp12;
+        tmp9 = tmp12;
       } else {
         tmp9 = cResult[3];
       }
       if (cResult[4] === tmp4.container) {
+        let tmp13;
         if (cResult[5] === tmp9) {
-          let tmp13 = cResult[6];
+          tmp13 = cResult[6];
         }
         return tmp13;
       }
-      const tmp14 = <View style={tmp4.container}>{tmp9}</View>;
+      const tmp14 = <View style={container}>{tmp9}</View>;
       cResult[4] = tmp4.container;
       cResult[5] = tmp9;
       cResult[6] = tmp14;
       tmp13 = tmp14;
     }
   : () => {
+      let intl;
+      let items;
       const tmp = closure_5();
-      const obj2 = { style: tmp.container, children: null };
-      const currentUser = useCurrentUser.useCurrentUser();
-      const obj3 = { compact: true, user: currentUser, additionalBadges: null, accessibilityLabel: null };
-      const items = [collectibles_CollectiblesUtils.createOrbProfileBadge()];
-      obj3.additionalBadges = items;
-      const intl = util.intl;
-      obj3.accessibilityLabel = intl.string(util.t.bxcI6Y);
-      obj2.children = <tmp3 compact user={currentUser} additionalBadges={null} accessibilityLabel={null} />;
+      const obj = useCurrentUser;
+      const currentUser = obj.useCurrentUser();
+      ({ compact: true, user: currentUser, additionalBadges: items, accessibilityLabel: intl.string(intl2.t.bxcI6Y) });
+      UserProfilePreviewDefault;
+      items = [];
+      const obj4 = collectibles_CollectiblesUtils;
+      items[0] = obj4.createOrbProfileBadge();
+      intl = intl2.intl;
       return <View style={tmp.container}>{null}</View>;
     };
+const result = size.fileFinishedImporting("modules/collectibles/native/OrbBadgePreview.tsx");
+
+export const OrbBadgePreview = tmp3;

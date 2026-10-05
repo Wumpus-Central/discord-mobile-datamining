@@ -1,23 +1,35 @@
 // discord_app/design/components/LottieIcon/native/LottieIcon.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../tokens/native/useToken.tsx";
-import AccessibilityPreferencesContext from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
-import _modDef5921 from "../../../../../_runtime/metro/05921__.js";
+import react3 from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
+import LottieViewDefault from "../../../../../_runtime/05921_LottieView.js";
 import IconSize from "../../Icon/IconSize.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/LottieIcon/native/LottieIcon.tsx");
+let animation, playResult, playResult1, playResult2, tmp10, tmp11, tmp13, tmp14, tmp15, tmp2, tmp4, tmp7, tmp9;
 
-export const LottieIcon = noop.forwardRef(
+const View = react_native.View;
+const jsx = Fragment.jsx;
+const forwardRef = react.forwardRef;
+const forwardRefResult = forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (animation, arg1) => {
-        const cResult = c.c(40);
+        let autoPlay;
+        let color;
+        let dotLottie;
+        let height;
+        let layers;
+        let markers;
+        let opacity;
+        let useLottieDefaultColors;
+        let width;
+        const obj = react2;
+        const cResult = obj.c(40);
         animation = animation.animation;
         ({ dotLottie, size, color, opacity, markers, layers, autoPlay } = animation);
         let str = "md";
@@ -29,184 +41,184 @@ export const LottieIcon = noop.forwardRef(
           color = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
         }
         let num = 1;
-        let num2 = 1;
         if (undefined !== opacity) {
-          num2 = opacity;
+          num = opacity;
         }
         const tmp5 = IconSize.ICON_SIZE[str];
         if (cResult[0] === animation) {
+          let tmp6;
           if (cResult[1] === markers) {
-            const start = tmp6.start;
-            const sum = start + tmp6.duration;
-            noop = sum;
-            if (cResult[5] !== markers) {
-              const _Symbol = Symbol;
-              if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-                class R {
-                  constructor(arg0) {
-                    return "easteregg" === animation.name;
-                  }
-                }
-                cResult[7] = R;
-              } else {
-                class R {
-                  constructor(arg0) {
-                    return "easteregg" === animation.name;
-                  }
+            tmp6 = cResult[2];
+          }
+          const start = tmp6.start;
+          const sum = start + tmp6.duration;
+          if (cResult[5] !== markers) {
+            const _Symbol = Symbol;
+            if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+              class R {
+                constructor(arg0) {
+                  return "easteregg" === animation.name;
                 }
               }
-              const found = markers.find(R);
-              cResult[5] = markers;
-              cResult[6] = found;
+              cResult[7] = R;
             } else {
               class R {
                 constructor(arg0) {
                   return "easteregg" === animation.name;
                 }
               }
-              if (tmp11 != null) {
-                class R {
-                  constructor(arg0) {
-                    return "easteregg" === animation.name;
-                  }
-                }
+            }
+            const found = markers.find(R);
+            cResult[5] = markers;
+            cResult[6] = found;
+          } else {
+            class R {
+              constructor(arg0) {
+                return "easteregg" === animation.name;
               }
-              if (undefined == null) {
-                class R {
-                  constructor(arg0) {
-                    return "easteregg" === animation.name;
-                  }
-                }
-              }
-              c4 = tmp17;
-              if (tmp11 != null) {
-                class R {
-                  constructor(arg0) {
-                    return "easteregg" === animation.name;
-                  }
-                }
-              }
-              if (undefined == null) {
-                class R {
-                  constructor(arg0) {
-                    return "easteregg" === animation.name;
-                  }
-                }
-              }
-              const sum1 = tmp17 + tmp18;
-              noop.useRef(null);
-              const enabled = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext)
-                .reducedMotion.enabled;
-              if ("custom" === str) {
-                class R {
-                  constructor(arg0) {
-                    return "easteregg" === animation.name;
-                  }
-                }
-              }
-              if ("custom" === str) {
-                class R {
-                  constructor(arg0) {
-                    return "easteregg" === animation.name;
-                  }
-                }
-              }
-              if (cResult[8] === tmp5) {
-                class R {
-                  constructor(arg0) {
-                    return "easteregg" === animation.name;
-                  }
-                }
-                if (cResult[11] !== num2) {
-                  class R {
-                    constructor(arg0) {
-                      return "easteregg" === animation.name;
-                    }
-                  }
-                  tmp26[0] = num2;
-                  cResult[11] = num2;
-                  cResult[12] = tmp26;
-                } else {
-                  class R {
-                    constructor(arg0) {
-                      return "easteregg" === animation.name;
-                    }
-                  }
-                }
-                const token = useToken.useToken(color);
-                if (cResult[13] === layers) {
-                  class R {
-                    constructor(arg0) {
-                      return "easteregg" === animation.name;
-                    }
-                  }
-                  if (cResult[16] === sum) {
-                    class R {
-                      constructor(arg0) {
-                        return "easteregg" === animation.name;
-                      }
-                    }
-                  }
-                  class K {
-                    constructor() {
-                      if (enabled) {
-                        tmp12 = closure_6;
-                        current3 = closure_6.current;
-                        tmp13 = null;
-                        if (current3 != null) {
-                          tmp14 = closure_3;
-                          playResult = current3.play(closure_3, closure_3);
-                        }
-                      } else {
-                        if (tmp) {
-                          num = 0;
-                          if (c4 >= 0) {
-                            tmp8 = closure_6;
-                            current2 = closure_6.current;
-                            tmp9 = null;
-                            if (current2 != null) {
-                              tmp10 = closure_5;
-                              playResult1 = current2.play(tmp2, closure_5);
-                            }
-                          }
-                        }
-                        tmp3 = closure_6;
-                        current = closure_6.current;
-                        tmp4 = null;
-                        if (current != null) {
-                          tmp5 = start;
-                          tmp6 = closure_3;
-                          playResult2 = current.play(start, closure_3);
-                        }
-                      }
-                      return;
-                    }
-                  }
-                  cResult[16] = sum;
-                  cResult[17] = start;
-                  cResult[18] = sum1;
-                  cResult[19] = tmp17;
-                  cResult[20] = enabled;
-                  cResult[21] = K;
-                }
-                if (null != token) {
-                  class R {
-                    constructor(arg0) {
-                      return "easteregg" === animation.name;
-                    }
-                  }
-                }
-                cResult[13] = layers;
-                cResult[14] = token;
-                cResult[15] = undefined;
-                const tmpResult = useToken;
-              }
-              const size1 = { width: tmp5, height: tmp5 };
-              cResult[8] = tmp5;
-              cResult[9] = tmp5;
-              cResult[10] = size1;
             }
           }
+          if (tmp11 != null) {
+            class R {
+              constructor(arg0) {
+                return "easteregg" === animation.name;
+              }
+            }
+          }
+          if (undefined == null) {
+            class R {
+              constructor(arg0) {
+                return "easteregg" === animation.name;
+              }
+            }
+          }
+          let c4 = tmp16;
+          if (tmp11 != null) {
+            class R {
+              constructor(arg0) {
+                return "easteregg" === animation.name;
+              }
+            }
+          }
+          if (undefined == null) {
+            class R {
+              constructor(arg0) {
+                return "easteregg" === animation.name;
+              }
+            }
+          }
+          const sum1 = tmp16 + tmp17;
+          const ref = react.useRef(null);
+          const enabled = react.useContext(react3.AccessibilityPreferencesContext).reducedMotion.enabled;
+          if ("custom" === str) {
+            class R {
+              constructor(arg0) {
+                return "easteregg" === animation.name;
+              }
+            }
+          }
+          if ("custom" === str) {
+            class R {
+              constructor(arg0) {
+                return "easteregg" === animation.name;
+              }
+            }
+          }
+          if (cResult[8] === tmp5) {
+            class R {
+              constructor(arg0) {
+                return "easteregg" === animation.name;
+              }
+            }
+            if (cResult[11] !== num) {
+              class R {
+                constructor(arg0) {
+                  return "easteregg" === animation.name;
+                }
+              }
+              tmp25[0] = num;
+              cResult[11] = num;
+              cResult[12] = tmp25;
+            } else {
+              class R {
+                constructor(arg0) {
+                  return "easteregg" === animation.name;
+                }
+              }
+            }
+            const tmpResult = useToken;
+            const token = tmpResult.useToken(color);
+            if (cResult[13] === layers) {
+              class R {
+                constructor(arg0) {
+                  return "easteregg" === animation.name;
+                }
+              }
+              if (cResult[16] === sum) {
+                class R {
+                  constructor(arg0) {
+                    return "easteregg" === animation.name;
+                  }
+                }
+              }
+              class K {
+                constructor() {
+                  tmp2 = enabled;
+                  if (tmp2) {
+                    tmp13 = closure_6;
+                    current3 = closure_6.current;
+                    tmp14 = null;
+                    if (current3 != null) {
+                      tmp15 = closure_3;
+                      playResult = current3.play(closure_3, closure_3);
+                    }
+                  } else {
+                    if (tmp) {
+                      num = 0;
+                      if (c4 >= 0) {
+                        tmp9 = closure_6;
+                        current2 = closure_6.current;
+                        tmp10 = null;
+                        if (current2 != null) {
+                          tmp11 = closure_5;
+                          playResult1 = current2.play(tmp3, closure_5);
+                        }
+                      }
+                    }
+                    tmp4 = closure_6;
+                    current = closure_6.current;
+                    tmp5 = null;
+                    if (current != null) {
+                      tmp6 = start;
+                      tmp7 = closure_3;
+                      playResult2 = current.play(start, closure_3);
+                    }
+                  }
+                  return;
+                }
+              }
+              cResult[16] = sum;
+              cResult[17] = start;
+              cResult[18] = sum1;
+              cResult[19] = undefined;
+              cResult[20] = enabled;
+              cResult[21] = K;
+            }
+            if (null != token) {
+              class R {
+                constructor(arg0) {
+                  return "easteregg" === animation.name;
+                }
+              }
+            }
+            cResult[13] = layers;
+            cResult[14] = token;
+            cResult[15] = undefined;
+          }
+          const size1 = { width: tmp5, height: tmp5 };
+          cResult[8] = tmp5;
+          cResult[9] = tmp5;
+          cResult[10] = size1;
         }
         if (cResult[3] !== animation) {
           class R {
@@ -216,33 +228,34 @@ export const LottieIcon = noop.forwardRef(
           }
           class K {
             constructor() {
-              if (enabled) {
-                tmp12 = closure_6;
+              tmp2 = enabled;
+              if (tmp2) {
+                tmp13 = closure_6;
                 current3 = closure_6.current;
-                tmp13 = null;
+                tmp14 = null;
                 if (current3 != null) {
-                  tmp14 = closure_3;
+                  tmp15 = closure_3;
                   playResult = current3.play(closure_3, closure_3);
                 }
               } else {
                 if (tmp) {
                   num = 0;
                   if (c4 >= 0) {
-                    tmp8 = closure_6;
+                    tmp9 = closure_6;
                     current2 = closure_6.current;
-                    tmp9 = null;
+                    tmp10 = null;
                     if (current2 != null) {
-                      tmp10 = closure_5;
-                      playResult1 = current2.play(tmp2, closure_5);
+                      tmp11 = closure_5;
+                      playResult1 = current2.play(tmp3, closure_5);
                     }
                   }
                 }
-                tmp3 = closure_6;
+                tmp4 = closure_6;
                 current = closure_6.current;
-                tmp4 = null;
+                tmp5 = null;
                 if (current != null) {
-                  tmp5 = start;
-                  tmp6 = closure_3;
+                  tmp6 = start;
+                  tmp7 = closure_3;
                   playResult2 = current.play(start, closure_3);
                 }
               }
@@ -259,36 +272,43 @@ export const LottieIcon = noop.forwardRef(
         }
         const found1 = markers.find(tmp8);
         cResult[0] = animation;
-        cResult[num] = markers;
-        num = 2;
+        cResult[1] = markers;
         cResult[2] = found1;
+        tmp6 = found1;
       }
-    : (color, arg1) => {
-        ({ animation: require, size } = color);
+    : (dotLottie, arg1) => {
+        let closure_129_0;
+        let height;
+        let layers;
+        let markers;
+        let useLottieDefaultColors;
+        let width;
+        ({ animation: closure_129_0, size } = dotLottie);
+        dotLottie = dotLottie.dotLottie;
         if (size === undefined) {
           size = "md";
         }
-        let INTERACTIVE_TEXT_DEFAULT = color.color;
+        let INTERACTIVE_TEXT_DEFAULT = dotLottie.color;
         if (INTERACTIVE_TEXT_DEFAULT === undefined) {
           INTERACTIVE_TEXT_DEFAULT = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
         }
-        let num = color.opacity;
+        let num = dotLottie.opacity;
         if (num === undefined) {
           num = 1;
         }
-        ({ markers, layers } = color);
-        const autoPlay = color.autoPlay;
+        ({ markers, layers } = dotLottie);
+        const autoPlay = dotLottie.autoPlay;
         let sum1;
         let ref;
         let enabled;
         let token;
         let callback;
-        ({ width, height, useLottieDefaultColors } = color);
+        ({ width, height, useLottieDefaultColors } = dotLottie);
         let tmp5 = IconSize.ICON_SIZE[size];
-        const found = markers.find((name) => name.name === require);
+        const found = markers.find((name) => name.name === closure_1_0);
         const start = found.start;
         const sum = start + found.duration;
-        c4 = sum;
+        let c4 = sum;
         const found1 = markers.find((name) => "easteregg" === name.name);
         let num2;
         if (found1 != null) {
@@ -305,29 +325,29 @@ export const LottieIcon = noop.forwardRef(
           num3 = -1;
         }
         sum1 = num2 + num3;
-        ref = noop.useRef(null);
-        enabled = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion
-          .enabled;
+        ref = react.useRef(null);
+        enabled = react.useContext(react3.AccessibilityPreferencesContext).reducedMotion.enabled;
         let tmp12 = tmp5;
         if ("custom" === size) {
           tmp12 = width;
         }
-        const size1 = { width: tmp12, height: null };
+        const size1 = { width: tmp12, height: tmp5 };
         if ("custom" === size) {
           tmp5 = height;
         }
-        size1.height = tmp5;
-        token = useToken.useToken(INTERACTIVE_TEXT_DEFAULT);
+        const tmp3Result = useToken;
+        token = tmp3Result.useToken(INTERACTIVE_TEXT_DEFAULT);
         const items = [token, layers];
         const items1 = [enabled, start, sum, num2, sum1];
-        const memo = noop.useMemo(() => {
+        const memo = react.useMemo(() => {
+          let color;
           let mapped;
           if (null != token) {
             mapped = layers.map((keypath) => ({ keypath, color }));
           }
           return mapped;
         }, items);
-        callback = noop.useCallback(() => {
+        callback = react.useCallback(() => {
           if (enabled) {
             const current3 = ref.current;
             if (current3 != null) {
@@ -338,7 +358,7 @@ export const LottieIcon = noop.forwardRef(
               if (num2 >= 0) {
                 const current2 = ref.current;
                 if (current2 != null) {
-                  current2.play(tmp2, sum1);
+                  current2.play(tmp3, sum1);
                 }
               }
             }
@@ -349,7 +369,7 @@ export const LottieIcon = noop.forwardRef(
           }
         }, items1);
         const items2 = [callback];
-        const imperativeHandle = noop.useImperativeHandle(
+        const imperativeHandle = react.useImperativeHandle(
           arg1,
           () => ({
             play() {
@@ -359,8 +379,7 @@ export const LottieIcon = noop.forwardRef(
           items2,
         );
         const items3 = [start, autoPlay, callback];
-        const obj2 = { style: size1, children: null };
-        const callback1 = noop.useCallback(() => {
+        const callback1 = react.useCallback(() => {
           if (autoPlay) {
             callback();
           } else {
@@ -370,35 +389,12 @@ export const LottieIcon = noop.forwardRef(
             }
           }
         }, items3);
-        const obj3 = {
-          ref,
-          source: color.dotLottie,
-          colorFilters: null,
-          hardwareAccelerationAndroid: true,
-          loop: false,
-          onAnimationLoaded: null,
-          resizeMode: "cover",
-          style: null,
-        };
-        let tmp21;
-        const tmp3Result = useToken;
-        if (!useLottieDefaultColors) {
-          tmp21 = memo;
-        }
-        obj3.colorFilters = tmp21;
-        obj3.onAnimationLoaded = callback1;
+        LottieViewDefault;
         const items4 = [size1, { opacity: num }];
-        obj3.style = items4;
-        obj2.children = jsx(_modDef5921, {
-          ref,
-          source: color.dotLottie,
-          colorFilters: null,
-          hardwareAccelerationAndroid: true,
-          loop: false,
-          onAnimationLoaded: null,
-          resizeMode: "cover",
-          style: null,
-        });
         return <View style={size1}>{null}</View>;
       },
 );
+let size = size_mod;
+const result = size.fileFinishedImporting("design/components/LottieIcon/native/LottieIcon.tsx");
+
+export const LottieIcon = forwardRefResult;

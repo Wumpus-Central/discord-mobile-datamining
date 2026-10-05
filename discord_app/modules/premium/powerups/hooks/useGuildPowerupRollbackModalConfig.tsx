@@ -1,55 +1,63 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx
-import util from "../../../../intl/index.native.tsx";
+import intl3 from "../../../../intl/index.native.tsx";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import _modDef2525 from "../GuildPowerups.messages.js";
 import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
 import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, importDefault;
 
-require = fn;
 function getGuildThemeRollbackModalConfig(allPowerups) {
+  let intl;
+  let items;
+  let obj2;
+  let storeRemovalDate;
+  let title;
   if (allPowerups != null) {
-    const storeRemovalDate = allPowerups.storeRemovalDate;
+    storeRemovalDate = allPowerups.storeRemovalDate;
   }
   if (null != allPowerups) {
     if (null != storeRemovalDate) {
       const tmp3 = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
       const obj = {
         dismissibleContent: dismissible_content.DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_MODAL,
-        header: null,
-        bodies: null,
+        header: "" + title + " " + intl.formatToPlainString(_modDef2525["6e2ry1"], obj2),
+        bodies: items,
         hasCancelButton: false,
       };
-      const intl = util.intl;
-      const obj2 = { dateString: tmp3 };
+      title = allPowerups.title;
+      intl = intl3.intl;
       const _HermesInternal = HermesInternal;
-      obj.header = "" + allPowerups.title + " " + intl.formatToPlainString(_modDef2525["6e2ry1"], obj2);
-      const intl2 = util.intl;
+      obj2 = { dateString: tmp3 };
+      const intl2 = intl3.intl;
       const obj5 = { startDate: tmp3, endDate: tmp3, perkName: null, boostCount: null };
       ({ title: obj3.perkName, cost: obj3.boostCount } = allPowerups);
-      const items = [intl2.formatToPlainString(_modDef2525.jd8fki, obj5)];
-      obj.bodies = items;
+      items = [intl2.formatToPlainString(_modDef2525.jd8fki, obj5)];
       return obj;
     }
   }
   return null;
 }
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
+      let closure_0;
+      let first;
+      let tmp10;
+      let tmp6;
+      let tmp8;
       _require = arg0;
-      const cResult = require("c").c(12);
+      const obj = require("react");
+      const cResult = obj.c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -59,12 +67,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
+      const tmpResult = require("get initialized");
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
       let flag = useHasAllocateBoostPermissionDefault(arg0);
       if (flag == null) {
         flag = false;
@@ -72,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [GuildPowerupsStore];
         cResult[3] = items1;
-        let tmp8 = items1;
+        tmp8 = items1;
       } else {
         tmp8 = cResult[3];
       }
@@ -82,12 +90,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[4] = arg0;
         cResult[5] = fn2;
-        let tmp10 = fn2;
+        tmp10 = fn2;
       } else {
         tmp10 = cResult[5];
       }
-      const tmpResult = require("initialize");
-      const stateFromStores1 = require("initialize").useStateFromStores(tmp8, tmp10);
+      const tmpResult3 = require("get initialized");
+      const stateFromStores1 = tmpResult3.useStateFromStores(tmp8, tmp10);
       let tmp12;
       if (stateFromStores1 != null) {
         const allPowerups = stateFromStores1.allPowerups;
@@ -95,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp12 = allPowerups[tmp(undefined, 4771).GUILD_POWERUP_GUILD_THEME_SKU_ID];
         }
       }
-      const tmpResult3 = require("initialize");
+      const tmpResult4 = require("guildTheme");
       if (flag) {
         flag = tmpResult4.useShouldShowGuildThemeRollback(arg0, arg1);
       }
@@ -103,12 +111,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flag = null != stateFromStores;
       }
       if (cResult[6] === tmp12) {
+        let tmp13;
         if (cResult[7] === flag) {
-          let tmp13 = cResult[8];
+          tmp13 = cResult[8];
         }
         if (cResult[9] === tmp13) {
+          let tmp16;
           if (cResult[10] === flag) {
-            let tmp16 = cResult[11];
+            tmp16 = cResult[11];
           }
           return tmp16;
         }
@@ -126,19 +136,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = flag;
       cResult[8] = tmp14;
       tmp13 = tmp14;
-      tmpResult4 = require("guildTheme");
     }
   : (arg0, arg1) => {
+      let closure_0;
+      let closure_1;
+      let flag;
       _require = arg0;
+      let tmp = _require;
       const items = [GuildStore];
-      const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
+      const obj = require("get initialized");
+      const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(closure_0));
       flag = require("useHasAllocateBoostPermission")(arg0);
       if (flag == null) {
         flag = false;
       }
-      const obj = require("initialize");
       const items1 = [GuildPowerupsStore];
-      const stateFromStores1 = require("initialize").useStateFromStores(items1, () =>
+      const tmpResult = tmp(flag[9]);
+      const stateFromStores1 = tmpResult.useStateFromStores(items1, () =>
         GuildPowerupsStore.getStateForGuild(closure_0),
       );
       let tmp5;
@@ -149,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       importDefault = tmp5;
-      const tmpResult = require("initialize");
+      const tmpResult2 = tmp(flag[12]);
       if (flag) {
         flag = tmpResult2.useShouldShowGuildThemeRollback(arg0, arg1);
       }
@@ -157,10 +171,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flag = null != stateFromStores;
       }
       const items2 = [flag, tmp5];
-      tmpResult2 = require("guildTheme");
-      return {
+      const obj2 = {
         shouldShow: flag,
-        modalConfig: noop.useMemo(() => {
+        modalConfig: react.useMemo(() => {
           let tmp = null;
           if (flag) {
             tmp = getGuildThemeRollbackModalConfig(closure_1);
@@ -168,5 +181,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp;
         }, items2),
       };
+      return obj2;
     };
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx");
+
+export default tmp2;
 export { getGuildThemeRollbackModalConfig };

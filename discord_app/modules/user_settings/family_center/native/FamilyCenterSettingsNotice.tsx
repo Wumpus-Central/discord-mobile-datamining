@@ -1,61 +1,79 @@
 // discord_app/modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import _modDef2493 from "../../../parent_tools/FamilyCenter.messages.js";
 import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
 import LayerActionCreators from "../../../../actions/LayerActionCreators.tsx";
+import Constants from "../../../safety_common/Constants.tsx";
 import SafetySettingsNoticeDefault from "../../../safety_common/native/SafetySettingsNotice.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const SafetySettingsNoticeType = fn(8075).SafetySettingsNoticeType;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const SafetySettingsNoticeType = Constants.SafetySettingsNoticeType;
+const jsx = Fragment.jsx;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = activeLinkUserIds(576).c(5);
+      let activeLinkUserIds;
+      let tmp3;
       let obj = activeLinkUserIds(576);
-      activeLinkUserIds = activeLinkUserIds(8295).useActiveLinkUserIds();
+      const cResult = obj.c(5);
+      let obj2 = activeLinkUserIds(8295);
+      activeLinkUserIds = obj2.useActiveLinkUserIds();
       if (cResult[0] !== activeLinkUserIds) {
         const fn = function o() {
-          LayerActionCreators.popLayer();
-          ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: activeLinkUserIds });
+          const obj = LayerActionCreators;
+          obj.popLayer();
+          const obj2 = ChannelActionCreatorsDefault;
+          const obj3 = { recipientIds: activeLinkUserIds };
+          obj2.openPrivateChannel(obj3);
         };
         cResult[0] = activeLinkUserIds;
         cResult[1] = fn;
-        let tmp3 = fn;
+        tmp3 = fn;
       } else {
         tmp3 = cResult[1];
       }
       if (cResult[2] === tmp3) {
+        let tmp4;
         if (cResult[3] === activeLinkUserIds.length) {
-          let tmp4 = cResult[4];
+          tmp4 = cResult[4];
         }
         return tmp4;
       }
-      const obj3 = { label: null, noticeType: null, labelHook: null, count: null };
-      const obj2 = activeLinkUserIds(8295);
-      obj3.label = _modDef2493.i284fU;
-      obj3.noticeType = SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE;
-      obj3.labelHook = tmp3;
-      obj3.count = activeLinkUserIds.length;
-      const tmp6 = jsx(SafetySettingsNoticeDefault, { label: null, noticeType: null, labelHook: null, count: null });
+      SafetySettingsNoticeDefault;
+      const tmp6 = (
+        <tmp5
+          label={_modDef2493.i284fU}
+          noticeType={SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE}
+          labelHook={tmp3}
+          count={activeLinkUserIds.length}
+        />
+      );
       cResult[2] = tmp3;
       cResult[3] = activeLinkUserIds.length;
       cResult[4] = tmp6;
       tmp4 = tmp6;
     }
   : () => {
-      activeLinkUserIds = activeLinkUserIds(8295).useActiveLinkUserIds();
-      const obj2 = { label: null, noticeType: null, labelHook: null, count: null };
+      let activeLinkUserIds;
       let obj = activeLinkUserIds(8295);
-      obj2.label = _modDef2493.i284fU;
-      obj2.noticeType = SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE;
-      obj2.labelHook = function labelHook() {
-        LayerActionCreators.popLayer();
-        ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: activeLinkUserIds });
-      };
-      obj2.count = activeLinkUserIds.length;
-      return jsx(SafetySettingsNoticeDefault, { label: null, noticeType: null, labelHook: null, count: null });
+      activeLinkUserIds = obj.useActiveLinkUserIds();
+      SafetySettingsNoticeDefault;
+      return (
+        <tmp
+          label={_modDef2493.i284fU}
+          noticeType={SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE}
+          labelHook={function labelHook() {
+            const obj = LayerActionCreators;
+            obj.popLayer();
+            const obj2 = ChannelActionCreatorsDefault;
+            const obj3 = { recipientIds: activeLinkUserIds };
+            obj2.openPrivateChannel(obj3);
+          }}
+          count={activeLinkUserIds.length}
+        />
+      );
     };
+const result = size.fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
+
+export default tmp3;

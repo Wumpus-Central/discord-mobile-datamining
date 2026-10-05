@@ -1,27 +1,51 @@
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import useStateFromStores from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import c from "../../../../../_runtime/00576_c.js";
-import util from "../../../../intl/index.native.tsx";
+import react2 from "../../../../../_runtime/00576_react.js";
+import Constants from "../../../../Constants.tsx";
+import intl6 from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import _modDef3367 from "../../../favorites/intl/FavoritesGuild.messages.js";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import HeaderShared from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import ClientThemesBackgroundStore from "../../../client_themes/ClientThemesBackgroundStore.tsx";
 import SelectivelySyncedUserSettingsStore from "../../SelectivelySyncedUserSettingsStore.tsx";
 import ThemeStore from "../../ThemeStore.tsx";
+import FontScaleStore from "FontScaleStore.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, gradientPreset;
 
-require = fn;
+let metroImportAll;
+let metroImportDefault;
 function getAppearanceSettings() {
-  const obj = { label: null, settings: null };
-  const intl = util.intl;
-  obj.label = intl.string(util.t.Ksh3ik);
-  const items = [, , , ,];
+  let GR2KOG;
+  let format;
+  let intl;
+  let intl2;
+  let intl4;
+  let intl5;
+  let items;
+  let items2;
+  let items3;
+  let items4;
+  let items5;
+  let items6;
+  let items7;
+  let items8;
+  let items9;
+  let obj7;
+  let obj8;
+  const obj = { label: intl.string(intl6.t.Ksh3ik), settings: items };
+  intl = intl6.intl;
+  items = [, , , ,];
   ({
     SAME_AS_DEVICE_THEME: arr[0],
     APPEARANCE_THEME_PICKER: arr[1],
@@ -29,114 +53,114 @@ function getAppearanceSettings() {
     DARK_MODE_THEME_PICKER: arr[3],
     SYNC_THEME: arr[4],
   } = MobileUserSettings);
-  obj.settings = items;
   const items1 = [obj, , , , , , , ,];
-  const obj2 = { settings: null };
-  const items2 = [MobileUserSettings.DEFAULT_GUILD_THEME_PREFERENCE];
-  obj2.settings = items2;
+  const obj2 = { settings: items2 };
+  items2 = [MobileUserSettings.DEFAULT_GUILD_THEME_PREFERENCE];
   items1[1] = obj2;
-  const obj3 = { label: null, settings: null };
-  const intl2 = util.intl;
-  obj3.label = intl2.string(util.t.i19n5L);
-  const items3 = [,];
+  const obj3 = { label: intl2.string(intl6.t.i19n5L), settings: items3 };
+  intl2 = intl6.intl;
+  items3 = [,];
   ({ ANDROID_FONT_SCALE: arr4[0], ANDROID_CLASSIC_CHAT_FONT_SCALE: arr4[1] } = MobileUserSettings);
-  obj3.settings = items3;
   items1[2] = obj3;
-  const obj4 = { settings: null };
-  const items4 = [MobileUserSettings.DMS_MESSAGE_PREVIEWS];
-  obj4.settings = items4;
+  const obj4 = { settings: items4 };
+  items4 = [MobileUserSettings.DMS_MESSAGE_PREVIEWS];
   items1[3] = obj4;
-  const obj5 = { settings: null };
-  const items5 = [MobileUserSettings.GAME_MENTIONS_AUTOCOMPLETE];
-  obj5.settings = items5;
+  const obj5 = { settings: items5 };
+  items5 = [MobileUserSettings.GAME_MENTIONS_AUTOCOMPLETE];
   items1[4] = obj5;
-  const obj6 = { settings: null, subLabel: null };
-  const items6 = [MobileUserSettings.FAVORITES_GUILD_TOGGLE];
-  obj6.settings = items6;
-  const intl3 = util.intl;
-  const obj7 = { helpCenterLink: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.FAVORITES_GUILD) };
-  obj6.subLabel = intl3.format(_modDef3367.GR2KOG, obj7);
+  const obj6 = { settings: items6, subLabel: format(GR2KOG, obj7) };
+  items6 = [MobileUserSettings.FAVORITES_GUILD_TOGGLE];
+  const intl3 = intl6.intl;
+  format = intl3.format;
+  obj7 = { helpCenterLink: obj8.getArticleURL(HelpdeskArticles.FAVORITES_GUILD) };
+  GR2KOG = _modDef3367.GR2KOG;
   items1[5] = obj6;
-  const obj9 = { label: null, settings: null };
-  const intl4 = util.intl;
-  obj9.label = intl4.string(util.t.lEde7i);
-  const items7 = [MobileUserSettings.DMS_HAPPENING_NOW_CARDS];
-  obj9.settings = items7;
+  obj8 = HelpdeskUtilsDefault;
+  const obj9 = { label: intl4.string(intl6.t.lEde7i), settings: items7 };
+  intl4 = intl6.intl;
+  items7 = [MobileUserSettings.DMS_HAPPENING_NOW_CARDS];
   items1[6] = obj9;
-  const obj10 = { label: null, settings: null };
-  const intl5 = util.intl;
-  obj10.label = intl5.string(util.t["5h0QOP"]);
-  const items8 = [MobileUserSettings.EXACT_SEARCH_RESULT_COUNTS];
-  obj10.settings = items8;
+  const obj10 = { label: intl5.string(intl6.t["5h0QOP"]), settings: items8 };
+  intl5 = intl6.intl;
+  items8 = [MobileUserSettings.EXACT_SEARCH_RESULT_COUNTS];
   items1[7] = obj10;
-  const obj11 = { settings: null };
-  const items9 = [MobileUserSettings.TIMESTAMP_HOUR_CYCLE];
-  obj11.settings = items9;
+  const obj11 = { settings: items9 };
+  items9 = [MobileUserSettings.TIMESTAMP_HOUR_CYCLE];
   items1[8] = obj11;
   return items1;
 }
-const FontScaleStore = fn(15083);
-({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
-const MobileUserSettings = fn(7634).MobileUserSettings;
-const HelpdeskArticles = fn(1085).HelpdeskArticles;
-const jsx = fn(21).jsx;
-let ReactCompilerGating = fn(558);
+({ DEFAULT_FONT_SCALE_STORE_STATE: metroImportDefault, useFontScaleStore: metroImportAll } = FontScaleStore);
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const HelpdeskArticles = Constants.HelpdeskArticles;
+const jsx = Fragment.jsx;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = require("c").c(9);
+      let closure_0;
+      let obj = require("react");
+      const cResult = obj.c(9);
       const tmp2 = closure_8();
       _require = tmp2;
-      let obj = require("c");
-      const nativeStackNavigation = require("useNavigation").useNativeStackNavigation();
+      let obj2 = require("useNavigation");
+      const nativeStackNavigation = obj2.useNativeStackNavigation();
       if (cResult[0] === nativeStackNavigation) {
         if (cResult[1] === tmp2.fontScale) {
           if (cResult[2] === tmp2.isClassicChatFontScaleEnabled) {
             if (cResult[3] === tmp2.persistedFontScale) {
+              let tmp4;
+              let tmp5;
+              let tmp9;
+              let tmp8;
               if (cResult[4] === tmp2.persistedIsClassicChatFontScaleEnabled) {
-                let tmp4 = cResult[5];
-                let tmp5 = cResult[6];
+                tmp4 = cResult[5];
+                tmp5 = cResult[6];
               }
-              const effect = noop.useEffect(tmp4, tmp5);
+              const effect = react.useEffect(tmp4, tmp5);
               const _Symbol = Symbol;
               if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
                 const fn2 = function l() {
                   return () => {
-                    closure_1_0(closure_1_2[15]).batchUpdates(() => state.setState(closure_1_7));
+                    let state;
+                    const obj = closure_1_0(closure_1_2[15]);
+                    obj.batchUpdates(() => state.setState(closure_1_7));
                   };
                 };
                 const items = [];
                 cResult[7] = fn2;
                 cResult[8] = items;
-                let tmp9 = items;
-                let tmp8 = fn2;
+                tmp9 = items;
+                tmp8 = fn2;
               } else {
                 tmp8 = cResult[7];
                 tmp9 = cResult[8];
               }
-              const effect1 = noop.useEffect(tmp8, tmp9);
+              const effect1 = react.useEffect(tmp8, tmp9);
             }
           }
         }
       }
       const fn = function s() {
+        let getRenderHeaderTextButton;
+        let intl;
+        let obj = PlatformUtils;
         if (obj.isAndroid()) {
           if (closure_0.persistedFontScale === closure_0.fontScale) {
             if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
               nativeStackNavigation.setOptions({ headerRight: "r" });
             }
           }
-          const obj2 = { headerRight: null };
-          const intl = util.intl;
-          obj2.headerRight = HeaderShared.getRenderHeaderTextButton(intl.string(util.t["R3BPH+"]), () =>
-            nativeStackNavigation(dependencyMap[14]).setCustomFontScale(
-              closure_1_0.fontScale,
-              closure_1_0.isClassicChatFontScaleEnabled,
-            ),
-          );
-          nativeStackNavigation.setOptions(obj2);
-          const tmpResult = HeaderShared;
+          const setOptions = nativeStackNavigation.setOptions;
+          const obj2 = {
+            headerRight: getRenderHeaderTextButton(intl.string(intl6.t["R3BPH+"]), () => {
+              const obj = nativeStackNavigation(dependencyMap[14]);
+              return obj.setCustomFontScale(closure_1_0.fontScale, closure_1_0.isClassicChatFontScaleEnabled);
+            }),
+          };
+          getRenderHeaderTextButton = HeaderShared.getRenderHeaderTextButton;
+          HeaderShared;
+          intl = intl6.intl;
+          setOptions(obj2);
         }
-        obj = PlatformUtils;
       };
       const items1 = [nativeStackNavigation, , , ,];
       ({
@@ -154,12 +178,13 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = items1;
       tmp5 = items1;
       tmp4 = fn;
-      let obj2 = require("useNavigation");
     }
   : () => {
+      let closure_0;
       const tmp = closure_8();
       _require = tmp;
-      const nativeStackNavigation = require("useNavigation").useNativeStackNavigation();
+      let obj = require("useNavigation");
+      const nativeStackNavigation = obj.useNativeStackNavigation();
       const items = [nativeStackNavigation, , , ,];
       ({
         fontScale: arr[1],
@@ -167,50 +192,61 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         persistedFontScale: arr[3],
         persistedIsClassicChatFontScaleEnabled: arr[4],
       } = tmp);
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
+        let getRenderHeaderTextButton;
+        let intl;
+        let obj = PlatformUtils;
         if (obj.isAndroid()) {
           if (closure_0.persistedFontScale === closure_0.fontScale) {
             if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
               nativeStackNavigation.setOptions({ headerRight: "r" });
             }
           }
-          const obj2 = { headerRight: null };
-          const intl = util.intl;
-          obj2.headerRight = HeaderShared.getRenderHeaderTextButton(intl.string(util.t["R3BPH+"]), () =>
-            nativeStackNavigation(dependencyMap[14]).setCustomFontScale(
-              closure_1_0.fontScale,
-              closure_1_0.isClassicChatFontScaleEnabled,
-            ),
-          );
-          nativeStackNavigation.setOptions(obj2);
-          const tmpResult = HeaderShared;
+          const setOptions = nativeStackNavigation.setOptions;
+          const obj2 = {
+            headerRight: getRenderHeaderTextButton(intl.string(intl6.t["R3BPH+"]), () => {
+              const obj = nativeStackNavigation(dependencyMap[14]);
+              return obj.setCustomFontScale(closure_1_0.fontScale, closure_1_0.isClassicChatFontScaleEnabled);
+            }),
+          };
+          getRenderHeaderTextButton = HeaderShared.getRenderHeaderTextButton;
+          HeaderShared;
+          intl = intl6.intl;
+          setOptions(obj2);
         }
-        obj = PlatformUtils;
       }, items);
-      const effect1 = noop.useEffect(
+      const effect1 = react.useEffect(
         () => () => {
-          closure_1_0(closure_1_2[15]).batchUpdates(() => state.setState(closure_1_7));
+          let state;
+          const obj = closure_1_0(closure_1_2[15]);
+          obj.batchUpdates(() => state.setState(closure_1_7));
         },
         [],
       );
     };
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");
-
-export default noop.memo(
+const memo = react.memo;
+ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
-        const cResult = c.c(6);
+        let first;
+        let gradientPresetId;
+        let theme;
+        let tmp13;
+        let tmp18;
+        let tmp7;
+        let tmp8;
+        let obj = react2;
+        const cResult = obj.c(6);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function t() {
             if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
-              const userCustomThemes = require("SavedCustomThemeActionCreators").fetchUserCustomThemes();
               const obj = require("SavedCustomThemeActionCreators");
+              const userCustomThemes = obj.fetchUserCustomThemes();
             }
           };
           cResult[0] = fn;
-          let first = fn;
+          first = fn;
         } else {
           first = cResult[0];
         }
@@ -218,77 +254,86 @@ export default noop.memo(
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ThemeStore, ClientThemesBackgroundStore];
           const fn2 = function o() {
-            const obj = { theme: theme.theme, gradientPresetId: null };
-            gradientPreset = gradientPreset.gradientPreset;
             let str;
+            gradientPreset = gradientPreset.gradientPreset;
+            const obj = { theme: theme.theme, gradientPresetId: str };
+            str = undefined;
             if (gradientPreset != null) {
               str = gradientPreset.id;
             }
             if (str == null) {
               str = "";
             }
-            obj.gradientPresetId = str;
             return obj;
           };
           cResult[1] = items;
           cResult[2] = fn2;
-          let tmp8 = fn2;
-          let tmp7 = items;
+          tmp8 = fn2;
+          tmp7 = items;
         } else {
           tmp7 = cResult[1];
           tmp8 = cResult[2];
         }
-        const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(tmp7, tmp8);
+        const tmpResult = useStateFromStores;
+        const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp7, tmp8);
         ({ theme, gradientPresetId } = stateFromStoresObject);
         closure_12();
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { sections: getAppearanceSettings() };
-          const list = SettingBuilders.createList(obj2);
+          const createList = SettingBuilders.createList;
+          SettingBuilders;
+          const list = createList(obj2);
           cResult[3] = list;
-          let tmp13 = list;
-          const tmpResult2 = SettingBuilders;
+          tmp13 = list;
         } else {
           tmp13 = cResult[3];
         }
         const combined = "" + theme + "-" + gradientPresetId;
         if (cResult[4] !== combined) {
-          const obj3 = { node: tmp13 };
-          const tmp19 = jsx(SettingLayoutDefault, { node: tmp13 }, combined);
+          const tmp20 = jsx(SettingLayoutDefault, { node: tmp13 }, combined);
           cResult[4] = combined;
-          cResult[5] = tmp19;
-          let tmp17 = tmp19;
+          cResult[5] = tmp20;
+          tmp18 = tmp20;
         } else {
-          tmp17 = cResult[5];
+          tmp18 = cResult[5];
         }
-        return tmp17;
+        return tmp18;
       }
     : () => {
+        let gradientPresetId;
+        let theme;
         useMountEffectDefault(() => {
           if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
-            const userCustomThemes = require("SavedCustomThemeActionCreators").fetchUserCustomThemes();
             const obj = require("SavedCustomThemeActionCreators");
+            const userCustomThemes = obj.fetchUserCustomThemes();
           }
         });
+        let obj = useStateFromStores;
         const items = [ThemeStore, ClientThemesBackgroundStore];
-        const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(items, () => {
-          const obj = { theme: theme.theme, gradientPresetId: null };
-          gradientPreset = gradientPreset.gradientPreset;
+        const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
           let str;
+          gradientPreset = gradientPreset.gradientPreset;
+          const obj = { theme: theme.theme, gradientPresetId: str };
+          str = undefined;
           if (gradientPreset != null) {
             str = gradientPreset.id;
           }
           if (str == null) {
             str = "";
           }
-          obj.gradientPresetId = str;
           return obj;
         });
         ({ theme, gradientPresetId } = stateFromStoresObject);
         closure_12();
-        const node = noop.useMemo(() => {
+        const node = react.useMemo(() => {
           const obj = require("SettingBuilders");
-          return obj.createList({ sections: getAppearanceSettings() });
+          const obj2 = { sections: getAppearanceSettings() };
+          return obj.createList(obj2);
         }, []);
-        return jsx(SettingLayoutDefault, { node }, "" + theme + "-" + gradientPresetId);
+        SettingLayoutDefault;
+        return <tmp5 key={"" + theme + "-" + gradientPresetId} node={node} />;
       },
 );
+const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");
+
+export default memoResult;

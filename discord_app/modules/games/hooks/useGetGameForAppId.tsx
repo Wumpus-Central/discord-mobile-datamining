@@ -1,21 +1,25 @@
 // discord_app/modules/games/hooks/useGetGameForAppId.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import useGetOrFetchApplications from "../../applications/useGetOrFetchApplications.tsx";
 import useGame from "useGame.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import GameStore from "../GameStore.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 const useGetOrFetchApplicationsDefault = useGetOrFetchApplications;
+let _require;
 
-require = fn;
-fn(558);
-const ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(6);
-      const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(arg0);
+      let tmp4;
+      const obj = react2;
+      const cResult = obj.c(6);
+      const obj2 = useGetOrFetchApplications;
+      const getOrFetchApplication = obj2.useGetOrFetchApplication(arg0);
       if (cResult[0] !== getOrFetchApplication) {
         let canonicalGameId;
         if (getOrFetchApplication != null) {
@@ -26,19 +30,22 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[0] = getOrFetchApplication;
         cResult[1] = canonicalGameId;
-        let tmp4 = canonicalGameId;
+        tmp4 = canonicalGameId;
       } else {
         tmp4 = cResult[1];
       }
-      const game = useGame.useGame(tmp4);
+      const tmpResult = useGame;
+      const game = tmpResult.useGame(tmp4);
       let data = game.data;
+      const isLoading = game.isLoading;
       if (data == null) {
         data = null;
       }
       if (cResult[2] === tmp4) {
         if (cResult[3] === data) {
-          if (cResult[4] === tmp9) {
-            let tmp10 = cResult[5];
+          let tmp10;
+          if (cResult[4] === ((null != arg0 && null == getOrFetchApplication) || isLoading)) {
+            tmp10 = cResult[5];
           }
           return tmp10;
         }
@@ -46,17 +53,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = {
         gameId: tmp4,
         gameRecord: data,
-        isLoading: (null != arg0 && null == getOrFetchApplication) || game.isLoading,
+        isLoading: (null != arg0 && null == getOrFetchApplication) || isLoading,
       };
       cResult[2] = tmp4;
       cResult[3] = data;
-      cResult[4] = (null != arg0 && null == getOrFetchApplication) || game.isLoading;
+      cResult[4] = (null != arg0 && null == getOrFetchApplication) || isLoading;
       cResult[5] = obj3;
       tmp10 = obj3;
-      const tmpResult = useGame;
     }
   : (arg0) => {
-      const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(arg0);
+      let isLoading;
+      const obj = useGetOrFetchApplications;
+      const getOrFetchApplication = obj.useGetOrFetchApplication(arg0);
       let canonicalGameId;
       if (getOrFetchApplication != null) {
         canonicalGameId = getOrFetchApplication.getCanonicalGameId();
@@ -64,32 +72,39 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (canonicalGameId == null) {
         canonicalGameId = null;
       }
-      const game = useGame.useGame(canonicalGameId);
+      const tmpResult = useGame;
+      const game = tmpResult.useGame(canonicalGameId);
       let data = game.data;
-      const obj2 = { gameId: canonicalGameId, gameRecord: null, isLoading: null };
+      const obj2 = {
+        gameId: canonicalGameId,
+        gameRecord: data,
+        isLoading: (null != arg0 && null == getOrFetchApplication) || isLoading,
+      };
+      isLoading = game.isLoading;
       if (data == null) {
         data = null;
       }
-      obj2.gameRecord = data;
-      obj2.isLoading = (null != arg0 && null == getOrFetchApplication) || game.isLoading;
       return obj2;
     };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/games/hooks/useGetGameForAppId.tsx");
-
-export default tmp2;
-export const useGetGamesForAppIds = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = require("c").c(6);
+      let closure_0;
+      let tmp11;
+      let tmp4;
+      let tmp9;
+      const obj = require("react");
+      const cResult = obj.c(6);
       const arr = useGetOrFetchApplicationsDefault(arg0);
       if (cResult[0] !== arr) {
+        let tmp6;
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function s(getCanonicalGameId) {
             return getCanonicalGameId.getCanonicalGameId();
           };
           cResult[2] = fn;
-          let tmp6 = fn;
+          tmp6 = fn;
         } else {
           tmp6 = cResult[2];
         }
@@ -98,47 +113,57 @@ export const useGetGamesForAppIds = ReactCompilerGating.isReactCompilerEnabled()
         const found1 = mapped.filter(tmp(1375).isNotNullish);
         cResult[0] = arr;
         cResult[1] = found1;
+        tmp4 = found1;
       } else {
-        _require = tmp4;
-        const games = tmp(6812).useGames(tmp4);
-        const _Symbol2 = Symbol;
-        if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const items = [GameStore];
-          cResult[3] = items;
-          let tmp11 = items;
-        } else {
-          tmp11 = cResult[3];
-        }
-        if (cResult[4] !== cResult[1]) {
-          const fn2 = function f() {
-            const mapped = closure_0.map((item) => game.getGame(item));
-            return mapped.filter(GlobalUtils.isNotNullish);
-          };
-          cResult[4] = tmp4;
-          cResult[5] = fn2;
-          let tmp13 = fn2;
-        } else {
-          tmp13 = cResult[5];
-        }
-        const tmpResult = tmp(6812);
-        return tmp(504).useStateFromStoresArray(tmp11, tmp13);
+        tmp4 = cResult[1];
       }
-      const obj = require("c");
+      _require = tmp4;
+      const tmpResult = require("useGame");
+      const games = tmpResult.useGames(tmp4);
+      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [GameStore];
+        cResult[3] = items;
+        tmp9 = items;
+      } else {
+        tmp9 = cResult[3];
+      }
+      if (cResult[4] !== tmp4) {
+        const fn2 = function f() {
+          let game;
+          const mapped = closure_0.map((item) => game.getGame(item));
+          return mapped.filter(GlobalUtils.isNotNullish);
+        };
+        cResult[4] = tmp4;
+        cResult[5] = fn2;
+        tmp11 = fn2;
+      } else {
+        tmp11 = cResult[5];
+      }
+      const tmpResult2 = require("get initialized");
+      return tmpResult2.useStateFromStoresArray(tmp9, tmp11);
     }
   : (arg0) => {
+      let closure_0;
+      let memo;
       const tmp = memo(6663)(arg0);
       _require = tmp;
       const items = [tmp];
-      memo = noop.useMemo(() => {
+      memo = react.useMemo(() => {
         const found = closure_0.filter(GlobalUtils.isNotNullish);
         const mapped = found.map((getCanonicalGameId) => getCanonicalGameId.getCanonicalGameId());
         return mapped.filter(GlobalUtils.isNotNullish);
       }, items);
-      const games = require("useGame").useGames(memo);
       const obj = require("useGame");
+      const games = obj.useGames(memo);
       const items1 = [GameStore];
-      return require("initialize").useStateFromStoresArray(items1, () => {
+      const obj2 = require("get initialized");
+      return obj2.useStateFromStoresArray(items1, () => {
+        let game;
         const mapped = memo.map((item) => game.getGame(item));
         return mapped.filter(GlobalUtils.isNotNullish);
       });
     };
+const result = size.fileFinishedImporting("modules/games/hooks/useGetGameForAppId.tsx");
+
+export default tmp2;
+export const useGetGamesForAppIds = tmp3;

@@ -1,24 +1,31 @@
 // discord_app/modules/notification_center/native/ForYouUnreadClearedState.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl3 from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef10383 from "../../../../_runtime/metro/10383__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import AssetRegistryDefault from "../../../../_runtime/10383_AssetRegistry.js";
+import react from "../../../../_runtime/00019_react.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+let closure_4;
+let hasOwnProperty;
+let obj2;
+let size;
+const View = react_native.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
   container: { marginBottom: 4, marginHorizontal: 24, alignItems: "center", flexDirection: "row" },
-  imageContainer: null,
-  icon: null,
-  headerText: null,
+  imageContainer: size,
+  icon: obj2,
+  headerText: { marginBottom: 2 },
 };
-let size = {
+size = {
   width: 48,
   height: 48,
   backgroundColor: nativeDefault.unsafe_rawColors.GREEN_400,
@@ -28,42 +35,49 @@ let size = {
   justifyContent: "center",
   alignItems: "center",
 };
-obj2.imageContainer = size;
-obj2.icon = { margin: 12, position: "absolute", color: nativeDefault.unsafe_rawColors.GREEN_400 };
-obj2.headerText = { marginBottom: 2 };
-let closure_6 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { margin: 12, position: "absolute", color: nativeDefault.unsafe_rawColors.GREEN_400 };
-size = fn(2);
-const result = size.fileFinishedImporting("modules/notification_center/native/ForYouUnreadClearedState.tsx");
-
-export const ForYouUnreadClearedState = ReactCompilerGating.isReactCompilerEnabled()
+createStyles = createStyles.createStyles;
+obj2 = { margin: 12, position: "absolute", color: nativeDefault.unsafe_rawColors.GREEN_400 };
+let closure_6 = createStyles(obj);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(15);
+      let intl2;
+      let items;
+      let items1;
+      let tmp13;
+      let tmp15;
+      let tmp18;
+      let tmp21;
+      let tmp5;
+      let tmp9;
+      const obj = react2;
+      const cResult = obj.c(15);
       const tmp4 = closure_6();
+      const container = tmp4.container;
       if (cResult[0] !== tmp4.imageContainer) {
         const obj2 = { style: tmp4.imageContainer };
-        const tmp8 = React4(View, obj2);
+        const tmp8 = React3(View, obj2);
         cResult[0] = tmp4.imageContainer;
         cResult[1] = tmp8;
-        let tmp5 = tmp8;
+        tmp5 = tmp8;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] !== tmp4.icon) {
-        const obj3 = { source: _modDef10383, style: tmp4.icon, color: tmp4.icon.color };
-        const tmp12 = React4(native.Icon, obj3);
+        const obj3 = { source: AssetRegistryDefault, style: tmp4.icon, color: tmp4.icon.color };
+        const Icon = native.Icon;
+        const tmp12 = React3(Icon, obj3);
         cResult[2] = tmp4.icon;
         cResult[3] = tmp12;
-        let tmp9 = tmp12;
+        tmp9 = tmp12;
       } else {
         tmp9 = cResult[3];
       }
+      const headerText = tmp4.headerText;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = util.intl;
-        const stringResult = intl.string(util.t.DonStq);
+        const intl = intl3.intl;
+        const stringResult = intl.string(intl3.t.DonStq);
         cResult[4] = stringResult;
-        let tmp13 = stringResult;
+        tmp13 = stringResult;
       } else {
         tmp13 = cResult[4];
       }
@@ -71,50 +85,49 @@ export const ForYouUnreadClearedState = ReactCompilerGating.isReactCompilerEnabl
         const obj4 = {
           color: "mobile-text-heading-primary",
           variant: "text-md/semibold",
-          style: tmp4.headerText,
+          style: headerText,
           children: tmp13,
         };
-        const tmp17 = React4(Text_Text.Text, obj4);
+        const tmp17 = React3(Text_Text.Text, obj4);
         cResult[5] = tmp4.headerText;
         cResult[6] = tmp17;
-        let tmp15 = tmp17;
+        tmp15 = tmp17;
       } else {
         tmp15 = cResult[6];
       }
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { color: "text-default", variant: "text-md/medium", children: null };
-        const intl2 = util.intl;
-        obj5.children = intl2.string(util.t.jXFsai);
-        const tmp20 = React4(Text_Text.Text, obj5);
+        const obj5 = { color: "text-default", variant: "text-md/medium", children: intl2.string(intl3.t.jXFsai) };
+        const Text = Text_Text.Text;
+        intl2 = intl3.intl;
+        const tmp20 = React3(Text, obj5);
         cResult[7] = tmp20;
-        let tmp18 = tmp20;
+        tmp18 = tmp20;
       } else {
         tmp18 = cResult[7];
       }
       if (cResult[8] !== tmp15) {
-        const obj6 = { children: null };
-        const items = [tmp15, tmp18];
-        obj6.children = items;
+        const obj6 = { children: items };
+        items = [tmp15, tmp18];
         const tmp24 = hasOwnProperty(View, obj6);
         cResult[8] = tmp15;
         cResult[9] = tmp24;
-        let tmp21 = tmp24;
+        tmp21 = tmp24;
       } else {
         tmp21 = cResult[9];
       }
       if (cResult[10] === tmp4.container) {
         if (cResult[11] === tmp5) {
           if (cResult[12] === tmp9) {
+            let tmp25;
             if (cResult[13] === tmp21) {
-              let tmp25 = cResult[14];
+              tmp25 = cResult[14];
             }
             return tmp25;
           }
         }
       }
-      const obj7 = { style: tmp4.container, children: null };
-      const items1 = [tmp5, tmp9, tmp21];
-      obj7.children = items1;
+      const obj7 = { style: container, children: items1 };
+      items1 = [tmp5, tmp9, tmp21];
       const tmp26 = hasOwnProperty(View, obj7);
       cResult[10] = tmp4.container;
       cResult[11] = tmp5;
@@ -124,28 +137,36 @@ export const ForYouUnreadClearedState = ReactCompilerGating.isReactCompilerEnabl
       tmp25 = tmp26;
     }
   : () => {
+      let intl;
+      let intl2;
+      let items;
+      let items1;
       const tmp = closure_6();
-      const obj = { style: tmp.container, children: null };
-      const items = [
-        React4(View, { style: tmp.imageContainer }),
-        React4(native.Icon, { source: _modDef10383, style: tmp.icon, color: tmp.icon.color }),
-      ];
-      const obj4 = { children: null };
+      const obj = { style: tmp.container, children: items };
+      items = [, ,];
+      const obj2 = { style: tmp.imageContainer };
+      items[0] = React3(View, obj2);
+      const obj3 = { source: AssetRegistryDefault, style: tmp.icon, color: tmp.icon.color };
+      const Icon = native.Icon;
+      items[1] = React3(Icon, obj3);
+      const obj4 = { children: items1 };
       const obj5 = {
         color: "mobile-text-heading-primary",
         variant: "text-md/semibold",
         style: tmp.headerText,
-        children: null,
+        children: intl.string(intl3.t.DonStq),
       };
-      const intl = util.intl;
-      obj5.children = intl.string(util.t.DonStq);
-      const items1 = [React4(Text_Text.Text, obj5)];
-      const obj6 = { color: "text-default", variant: "text-md/medium", children: null };
-      const intl2 = util.intl;
-      obj6.children = intl2.string(util.t.jXFsai);
-      items1[1] = React4(Text_Text.Text, obj6);
-      obj4.children = items1;
+      const Text = Text_Text.Text;
+      intl = intl3.intl;
+      items1 = [React3(Text, obj5)];
+      const obj6 = { color: "text-default", variant: "text-md/medium", children: intl2.string(intl3.t.jXFsai) };
+      const Text2 = Text_Text.Text;
+      intl2 = intl3.intl;
+      items1[1] = React3(Text2, obj6);
       items[2] = hasOwnProperty(View, obj4);
-      obj.children = items;
       return hasOwnProperty(View, obj);
     };
+size = size_mod;
+const result = size.fileFinishedImporting("modules/notification_center/native/ForYouUnreadClearedState.tsx");
+
+export const ForYouUnreadClearedState = tmp5;

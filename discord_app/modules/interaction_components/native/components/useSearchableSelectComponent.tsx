@@ -1,236 +1,247 @@
 // discord_app/modules/interaction_components/native/components/useSearchableSelectComponent.tsx
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting(
-  "modules/interaction_components/native/components/useSearchableSelectComponent.tsx",
-);
+let dependencyMap, map, selectActionComponent;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+let react = react_mod;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (selectActionComponent) => {
-      const cResult = selectActionComponent(576).c(29);
+      let closure_2;
+      let closure_4;
+      let containerId;
+      let first1;
+      let guildId;
+      let onSubmit;
+      let queryOptions;
+      let obj = selectActionComponent(576);
+      const cResult = obj.c(29);
+      const tmp2 = selectActionComponent;
       selectActionComponent = selectActionComponent.selectActionComponent;
       ({ containerId, guildId, queryOptions, onSubmit } = selectActionComponent);
-      let obj = selectActionComponent(576);
-      const obj2 = noop;
-      const tmp = selectActionComponent;
-      const tmp4 = first1;
-      const first = first1(noop.useState(""), 2)[0];
+      let obj2 = react;
+      const first = first1(react.useState(""), 2)[0];
+      const tmp5 = first1;
+      const tmp6 = first1(react.useState(""), 2);
       if (cResult[0] === containerId) {
         if (cResult[1] === guildId) {
+          let tmp9;
+          let tmp11;
           if (cResult[2] === selectActionComponent) {
-            let tmp8 = cResult[3];
+            tmp9 = cResult[3];
           }
-          dependencyMap = tmp8;
-          if (cResult[4] !== tmp8) {
+          dependencyMap = tmp9;
+          if (cResult[4] !== tmp9) {
             const fn = function h() {
-              return new Map(
+              map = new Map(
                 closure_2.map((value) => {
                   const items = [value.value, value];
                   return items;
                 }),
               );
+              return map;
             };
-            cResult[4] = tmp8;
+            cResult[4] = tmp9;
             cResult[5] = fn;
-            let tmp10 = fn;
+            tmp11 = fn;
           } else {
-            tmp10 = cResult[5];
+            tmp11 = cResult[5];
           }
-          const tmp4Result = tmp4(obj2.useState(tmp10), 2);
-          first1 = tmp4Result[0];
-          noop = tmp4Result[1];
+          const tmp5Result = tmp5(obj2.useState(tmp11), 2);
+          first1 = tmp5Result[0];
+          react = tmp5Result[1];
           if (cResult[6] === first) {
+            let tmp13;
             if (cResult[7] === queryOptions) {
-              let tmp12 = cResult[8];
+              tmp13 = cResult[8];
             }
-            closure_5 = tmp14;
+            let closure_5 = tmp15;
             if (cResult[9] === onSubmit) {
+              let tmp16;
               if (cResult[10] === selectActionComponent.type) {
-                let tmp15 = cResult[11];
+                tmp16 = cResult[11];
               }
-              closure_6 = tmp15;
-              if (cResult[12] === tmp14) {
+              let closure_6 = tmp16;
+              if (cResult[12] === selectActionComponent.maxValues > 1) {
                 if (cResult[13] === selectActionComponent.maxValues) {
                   if (cResult[14] === first1) {
-                    if (cResult[15] === tmp15) {
-                      let tmp16 = cResult[16];
+                    let tmp17;
+                    let tmp19;
+                    let tmp18;
+                    if (cResult[15] === tmp16) {
+                      tmp17 = cResult[16];
                     }
                     if (cResult[17] !== first1) {
                       let items = [];
-                      HermesBuiltin.arraySpread(first1.values(), 0);
+                      HermesBuiltin.arraySpread(items, first1.values(), 0);
                       class Q {
-                        constructor(arg0) {
-                          return closure_3.has(selectActionComponent.value);
+                        constructor(value) {
+                          return first1.has(value.value);
                         }
                       }
                       class A {
-                        constructor(arg0) {
-                          obj = { type: selectActionComponent.type, selectedOptions: null };
-                          items = [...selectActionComponent.values()];
-                          obj.selectedOptions = items;
-                          tmp = onSubmit(obj);
-                          obj2 = closure_1(closure_2[5]);
-                          hideActionSheetResult = obj2.hideActionSheet();
-                          return;
+                        constructor(arr) {
+                          let items;
+                          const obj = { type: selectActionComponent.type, selectedOptions: items };
+                          items = [...arr.values()];
+                          onSubmit(obj);
+                          const obj2 = ActionSheetActionCreatorsDefault;
+                          obj2.hideActionSheet();
                         }
                       }
                       cResult[17] = first1;
                       cResult[18] = items;
                       cResult[19] = Q;
-                      let tmp18 = Q;
-                      let tmp17 = items;
+                      tmp19 = Q;
+                      tmp18 = items;
                     } else {
-                      tmp17 = cResult[18];
-                      tmp18 = cResult[19];
+                      tmp18 = cResult[18];
+                      tmp19 = cResult[19];
                     }
                     if (cResult[20] === first1) {
-                      if (cResult[21] === tmp15) {
-                        let tmp21 = cResult[22];
+                      let tmp22;
+                      if (cResult[21] === tmp16) {
+                        tmp22 = cResult[22];
                       }
-                      if (cResult[23] === tmp16) {
-                        if (cResult[24] === tmp12) {
-                          if (cResult[25] === tmp17) {
-                            if (cResult[26] === tmp18) {
-                              if (cResult[27] === tmp21) {
-                                let tmp22 = cResult[28];
+                      if (cResult[23] === tmp17) {
+                        if (cResult[24] === tmp13) {
+                          if (cResult[25] === tmp18) {
+                            if (cResult[26] === tmp19) {
+                              let tmp23;
+                              if (cResult[27] === tmp22) {
+                                tmp23 = cResult[28];
                               }
-                              return tmp22;
+                              return tmp23;
                             }
                           }
                         }
                       }
                       const obj3 = {
-                        options: tmp12,
+                        options: tmp13,
                         selectedOptions: null,
                         isSelected: null,
-                        onPressOptionItem: null,
-                        submitSelection: null,
-                        setQuery: null,
+                        onPressOptionItem: tmp17,
+                        submitSelection: tmp22,
+                        setQuery: tmp8,
                       };
                       class Q {
-                        constructor(arg0) {
-                          return closure_3.has(selectActionComponent.value);
+                        constructor(value) {
+                          return first1.has(value.value);
                         }
                       }
                       class A {
-                        constructor(arg0) {
-                          obj = { type: selectActionComponent.type, selectedOptions: null };
-                          items = [...selectActionComponent.values()];
-                          obj.selectedOptions = items;
-                          tmp = onSubmit(obj);
-                          obj2 = closure_1(closure_2[5]);
-                          hideActionSheetResult = obj2.hideActionSheet();
-                          return;
+                        constructor(arr) {
+                          let items;
+                          const obj = { type: selectActionComponent.type, selectedOptions: items };
+                          items = [...arr.values()];
+                          onSubmit(obj);
+                          const obj2 = ActionSheetActionCreatorsDefault;
+                          obj2.hideActionSheet();
                         }
                       }
-                      obj3.onPressOptionItem = tmp16;
-                      obj3.submitSelection = tmp21;
-                      obj3.setQuery = tmp7;
-                      cResult[23] = tmp16;
-                      cResult[24] = tmp12;
-                      cResult[25] = tmp17;
-                      cResult[26] = tmp18;
-                      cResult[27] = tmp21;
+                      cResult[23] = tmp17;
+                      cResult[24] = tmp13;
+                      cResult[25] = tmp18;
+                      cResult[26] = tmp19;
+                      cResult[27] = tmp22;
                       cResult[28] = obj3;
-                      tmp22 = obj3;
+                      tmp23 = obj3;
                     }
                     const fn3 = function j() {
                       return closure_6(first1);
                     };
                     class A {
-                      constructor(arg0) {
-                        obj = { type: selectActionComponent.type, selectedOptions: null };
-                        items = [...selectActionComponent.values()];
-                        obj.selectedOptions = items;
-                        tmp = onSubmit(obj);
-                        obj2 = closure_1(closure_2[5]);
-                        hideActionSheetResult = obj2.hideActionSheet();
-                        return;
+                      constructor(arr) {
+                        let items;
+                        const obj = { type: selectActionComponent.type, selectedOptions: items };
+                        items = [...arr.values()];
+                        onSubmit(obj);
+                        const obj2 = ActionSheetActionCreatorsDefault;
+                        obj2.hideActionSheet();
                       }
                     }
-                    cResult[21] = tmp15;
+                    cResult[21] = tmp16;
                     cResult[22] = fn3;
-                    tmp21 = fn3;
+                    tmp22 = fn3;
                   }
                 }
               }
               const fn2 = function k(arg0, value) {
+                let closure_0 = value;
                 const hasItem = first1.has(value.value);
                 if (closure_5) {
-                  let tmp12 = !hasItem;
-                  if (!hasItem) {
-                    tmp12 = first1.size >= selectActionComponent.maxValues;
-                  }
-                  if (!tmp12) {
+                  const tmp9 = !hasItem && first1.size >= selectActionComponent.maxValues;
+                  if (!tmp9) {
                     closure_4((arg0) => {
-                      const map = new Map(arg0);
+                      map = new Map(arg0);
                       if (hasItem) {
-                        map.delete(value.value);
+                        map.delete(closure_0.value);
                       } else {
-                        const result = map.set(value.value, value);
+                        const result = map.set(closure_0.value, closure_0);
                       }
                       return map;
                     });
                   }
                 } else {
+                  let _Map1;
                   const _Map = Map;
                   if (hasItem) {
-                    let _Map1 = new _Map();
+                    const self3 = this;
+                    const self4 = this;
+                    _Map1 = new _Map();
                   } else {
                     const items = [value.value, value];
                     const items1 = [items];
+                    const self = this;
+                    const self2 = this;
                     _Map1 = new _Map(items1);
                   }
                   closure_6(_Map1);
                 }
               };
               class A {
-                constructor(arg0) {
-                  obj = { type: selectActionComponent.type, selectedOptions: null };
-                  items = [...selectActionComponent.values()];
-                  obj.selectedOptions = items;
-                  tmp = onSubmit(obj);
-                  obj2 = closure_1(closure_2[5]);
-                  hideActionSheetResult = obj2.hideActionSheet();
-                  return;
+                constructor(arr) {
+                  let items;
+                  const obj = { type: selectActionComponent.type, selectedOptions: items };
+                  items = [...arr.values()];
+                  onSubmit(obj);
+                  const obj2 = ActionSheetActionCreatorsDefault;
+                  obj2.hideActionSheet();
                 }
               }
               cResult[13] = selectActionComponent.maxValues;
               cResult[14] = first1;
-              cResult[15] = tmp15;
+              cResult[15] = tmp16;
               cResult[16] = fn2;
-              tmp16 = fn2;
+              tmp17 = fn2;
             }
             class A {
-              constructor(arg0) {
-                obj = { type: selectActionComponent.type, selectedOptions: null };
-                items = [...selectActionComponent.values()];
-                obj.selectedOptions = items;
-                tmp = onSubmit(obj);
-                obj2 = closure_1(closure_2[5]);
-                hideActionSheetResult = obj2.hideActionSheet();
-                return;
+              constructor(arr) {
+                let items;
+                const obj = { type: selectActionComponent.type, selectedOptions: items };
+                items = [...arr.values()];
+                onSubmit(obj);
+                const obj2 = ActionSheetActionCreatorsDefault;
+                obj2.hideActionSheet();
               }
             }
             cResult[9] = onSubmit;
             cResult[10] = selectActionComponent.type;
             cResult[11] = A;
-            tmp15 = A;
+            tmp16 = A;
           }
           const queryOptionsResult = queryOptions(first);
           cResult[6] = first;
           cResult[7] = queryOptions;
           cResult[8] = queryOptionsResult;
-          tmp12 = queryOptionsResult;
+          tmp13 = queryOptionsResult;
         }
       }
-      const tmp5 = first1(noop.useState(""), 2);
-      const initialSnowflakeSelectOptions = tmp(7803).getInitialSnowflakeSelectOptions(
+      const tmp2Result = tmp2(7803);
+      const initialSnowflakeSelectOptions = tmp2Result.getInitialSnowflakeSelectOptions(
         selectActionComponent,
         containerId,
         guildId,
@@ -239,89 +250,100 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = guildId;
       cResult[2] = selectActionComponent;
       cResult[3] = initialSnowflakeSelectOptions;
-      tmp8 = initialSnowflakeSelectOptions;
+      tmp9 = initialSnowflakeSelectOptions;
     }
   : (selectActionComponent) => {
+      let closure_4;
+      let containerId;
+      let guildId;
+      let items1;
       selectActionComponent = selectActionComponent.selectActionComponent;
       const queryOptions = selectActionComponent.queryOptions;
       const onSubmit = selectActionComponent.onSubmit;
       let first;
-      noop = undefined;
+      react = undefined;
       ({ containerId, guildId } = selectActionComponent);
-      const tmp = first(noop.useState(""), 2);
+      const tmp = first(react.useState(""), 2);
       first = tmp[0];
-      noop = selectActionComponent(onSubmit[4]).getInitialSnowflakeSelectOptions(
-        selectActionComponent,
-        containerId,
-        guildId,
-      );
-      const tmp3 = first(
-        noop.useState(
-          () =>
-            new Map(
-              closure_4.map((value) => {
-                const items = [value.value, value];
-                return items;
-              }),
-            ),
-        ),
+      const tmp3 = tmp[1];
+      let obj = selectActionComponent(onSubmit[4]);
+      react = obj.getInitialSnowflakeSelectOptions(selectActionComponent, containerId, guildId);
+      const tmp4 = first(
+        react.useState(() => {
+          map = new Map(
+            closure_4.map((value) => {
+              const items = [value.value, value];
+              return items;
+            }),
+          );
+          return map;
+        }),
         2,
       );
-      const first1 = tmp3[0];
-      closure_6 = tmp3[1];
+      const first1 = tmp4[0];
+      let closure_6 = tmp4[1];
       let items = [first, queryOptions];
-      closure_7 = selectActionComponent.maxValues > 1;
-      const obj2 = {
-        options: noop.useMemo(() => queryOptions(first), items),
-        selectedOptions: null,
+      let closure_7 = selectActionComponent.maxValues > 1;
+      let obj2 = {
+        options: react.useMemo(() => queryOptions(first), items),
+        selectedOptions: items1,
         isSelected(value) {
           return first1.has(value.value);
         },
         onPressOptionItem(arg0, value) {
+          let items2;
+          let closure_0 = value;
           const hasItem = first1.has(value.value);
           if (closure_7) {
-            let tmp17 = !hasItem;
-            if (!hasItem) {
-              tmp17 = first1.size >= selectActionComponent.maxValues;
-            }
-            if (!tmp17) {
+            const tmp14 = !hasItem && first1.size >= selectActionComponent.maxValues;
+            if (!tmp14) {
               closure_6((arg0) => {
-                const map = new Map(arg0);
+                map = new Map(arg0);
                 if (hasItem) {
-                  map.delete(value.value);
+                  map.delete(closure_0.value);
                 } else {
-                  const result = map.set(value.value, value);
+                  const result = map.set(closure_0.value, closure_0);
                 }
                 return map;
               });
             }
           } else {
+            let _Map1;
             const _Map = Map;
             if (hasItem) {
-              let _Map1 = new _Map();
+              const self3 = this;
+              let self2 = this;
+              _Map1 = new _Map();
             } else {
               const items = [value.value, value];
               const items1 = [items];
+              const self = this;
+              self2 = this;
               _Map1 = new _Map(items1);
             }
-            const obj = { type: selectActionComponent.type, selectedOptions: null };
-            const items2 = [];
-            HermesBuiltin.arraySpread(_Map1.values(), 0);
-            obj.selectedOptions = items2;
+            const obj = { type: selectActionComponent.type, selectedOptions: items2 };
+            items2 = [];
+            HermesBuiltin.arraySpread(items2, _Map1.values(), 0);
             onSubmit(obj);
-            ActionSheetActionCreatorsDefault.hideActionSheet();
+            const obj3 = ActionSheetActionCreatorsDefault;
+            obj3.hideActionSheet();
           }
         },
         submitSelection() {
-          const obj = { type: selectActionComponent.type, selectedOptions: null };
-          const items = [...first1.values()];
-          obj.selectedOptions = items;
+          let items;
+          const obj = { type: selectActionComponent.type, selectedOptions: items };
+          items = [...first1.values()];
           onSubmit(obj);
-          ActionSheetActionCreatorsDefault.hideActionSheet();
+          const obj2 = ActionSheetActionCreatorsDefault;
+          obj2.hideActionSheet();
         },
-        setQuery: tmp[1],
+        setQuery: tmp3,
       };
-      let items1 = [...first1.values()];
-      obj2.selectedOptions = items1;
+      items1 = [...first1.values()];
       return obj2;
     };
+let result = size.fileFinishedImporting(
+  "modules/interaction_components/native/components/useSearchableSelectComponent.tsx",
+);
+
+export default tmp2;

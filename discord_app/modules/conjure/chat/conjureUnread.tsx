@@ -1,45 +1,55 @@
 // discord_app/modules/conjure/chat/conjureUnread.tsx
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../_runtime/00576_react.js";
 import DispatcherDefault from "../../../Dispatcher.tsx";
+import ReadStateConstants from "../../read_states/ReadStateConstants.tsx";
 import conjureProjectMute from "../projects/conjureProjectMute.tsx";
-import VibegrationsReadStateFlags2 from "../../../../discord_common/js/shared/shared-constants/VibegrationsReadStateFlags.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import VibegrationsReadStateFlags from "../../../../discord_common/js/shared/shared-constants/VibegrationsReadStateFlags.tsx";
+import react from "../../../../_runtime/00019_react.js";
 import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-require = fn;
 function unreadStatus(mentionCount, ackMessageIdResult, arg2) {
-  let tmp2 = null;
+  let tmp = null;
   if (!arg2) {
-    tmp2 = null;
+    tmp = null;
     if (0 !== mentionCount) {
-      if (tmp == ackMessageIdResult) {
-        const FINISHED = VibegrationsReadStateFlags2.VibegrationsReadStateFlags.FINISHED;
-      } else {
-        let VibegrationsReadStateFlags = dependencyMap;
-        const nonTimestampBits = SnowflakeUtilsDefault.getNonTimestampBits(ackMessageIdResult);
+      if (null != ackMessageIdResult) {
+        let FINISHED;
+        const obj = SnowflakeUtilsDefault;
+        const nonTimestampBits = obj.getNonTimestampBits(ackMessageIdResult);
+        if (nonTimestampBits & VibegrationsReadStateFlags.VibegrationsReadStateFlags.NEEDS_INPUT) {
+          FINISHED = VibegrationsReadStateFlags.VibegrationsReadStateFlags.NEEDS_INPUT;
+        }
+        tmp = FINISHED;
       }
-      VibegrationsReadStateFlags = VibegrationsReadStateFlags2.VibegrationsReadStateFlags;
-      const NEEDS_INPUT = VibegrationsReadStateFlags.NEEDS_INPUT;
+      FINISHED = VibegrationsReadStateFlags.VibegrationsReadStateFlags.FINISHED;
     }
   }
-  return tmp2;
+  return tmp;
 }
-const ReadStateTypes = fn(5072).ReadStateTypes;
-fn(558);
-let ReactCompilerGating = fn(558);
+const ReadStateTypes = ReadStateConstants.ReadStateTypes;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp7;
+      let tmp8;
       _require = arg0;
-      const cResult = require("c").c(4);
+      let obj = require("react");
+      const cResult = obj.c(4);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReadStateStore, UserSettingsProtoStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -49,22 +59,24 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (null != closure_0) {
             const mentionCount = ReadStateStore.getMentionCount(closure_0, ReadStateTypes.CONJURING_PROJECT);
             const ackMessageIdResult = ReadStateStore.ackMessageId(closure_0, ReadStateTypes.CONJURING_PROJECT);
-            let VibegrationsReadStateFlags = dependencyMap;
-            let tmp9 = null;
+            let tmp10 = null;
+            const obj = conjureProjectMute;
             if (!obj.isConjureProjectMuted(UserSettingsProtoStore.settings, closure_0)) {
-              tmp9 = null;
+              tmp10 = null;
               if (0 !== mentionCount) {
-                if (null == ackMessageIdResult) {
-                  const FINISHED = VibegrationsReadStateFlags2.VibegrationsReadStateFlags.FINISHED;
-                } else {
-                  const nonTimestampBits = SnowflakeUtilsDefault.getNonTimestampBits(ackMessageIdResult);
+                if (null != ackMessageIdResult) {
+                  let FINISHED;
+                  const obj2 = SnowflakeUtilsDefault;
+                  const nonTimestampBits = obj2.getNonTimestampBits(ackMessageIdResult);
+                  if (nonTimestampBits & VibegrationsReadStateFlags.VibegrationsReadStateFlags.NEEDS_INPUT) {
+                    FINISHED = VibegrationsReadStateFlags.VibegrationsReadStateFlags.NEEDS_INPUT;
+                  }
+                  tmp10 = FINISHED;
                 }
-                VibegrationsReadStateFlags = VibegrationsReadStateFlags2.VibegrationsReadStateFlags;
-                const NEEDS_INPUT = VibegrationsReadStateFlags.NEEDS_INPUT;
+                FINISHED = VibegrationsReadStateFlags.VibegrationsReadStateFlags.FINISHED;
               }
             }
-            tmp2 = tmp9;
-            obj = conjureProjectMute;
+            tmp2 = tmp10;
           }
           return tmp2;
         };
@@ -72,52 +84,60 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp8 = items1;
-        let tmp7 = fn;
+        tmp8 = items1;
+        tmp7 = fn;
       } else {
         tmp7 = cResult[2];
         tmp8 = cResult[3];
       }
-      let obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp7, tmp8);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp7, tmp8);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
+      let obj = require("get initialized");
       const items = [ReadStateStore, UserSettingsProtoStore];
       const items1 = [arg0];
-      return require("initialize").useStateFromStores(
+      return obj.useStateFromStores(
         items,
         () => {
           let tmp2 = null;
           if (null != closure_0) {
             const mentionCount = ReadStateStore.getMentionCount(closure_0, ReadStateTypes.CONJURING_PROJECT);
             const ackMessageIdResult = ReadStateStore.ackMessageId(closure_0, ReadStateTypes.CONJURING_PROJECT);
-            let VibegrationsReadStateFlags = dependencyMap;
-            let tmp9 = null;
+            let tmp10 = null;
+            const obj = conjureProjectMute;
             if (!obj.isConjureProjectMuted(UserSettingsProtoStore.settings, closure_0)) {
-              tmp9 = null;
+              tmp10 = null;
               if (0 !== mentionCount) {
-                if (null == ackMessageIdResult) {
-                  const FINISHED = VibegrationsReadStateFlags2.VibegrationsReadStateFlags.FINISHED;
-                } else {
-                  const nonTimestampBits = SnowflakeUtilsDefault.getNonTimestampBits(ackMessageIdResult);
+                if (null != ackMessageIdResult) {
+                  let FINISHED;
+                  const obj2 = SnowflakeUtilsDefault;
+                  const nonTimestampBits = obj2.getNonTimestampBits(ackMessageIdResult);
+                  if (nonTimestampBits & VibegrationsReadStateFlags.VibegrationsReadStateFlags.NEEDS_INPUT) {
+                    FINISHED = VibegrationsReadStateFlags.VibegrationsReadStateFlags.NEEDS_INPUT;
+                  }
+                  tmp10 = FINISHED;
                 }
-                VibegrationsReadStateFlags = VibegrationsReadStateFlags2.VibegrationsReadStateFlags;
-                const NEEDS_INPUT = VibegrationsReadStateFlags.NEEDS_INPUT;
+                FINISHED = VibegrationsReadStateFlags.VibegrationsReadStateFlags.FINISHED;
               }
             }
-            tmp2 = tmp9;
-            obj = conjureProjectMute;
+            tmp2 = tmp10;
           }
           return tmp2;
         },
         items1,
       );
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let settings;
+      let tmp4;
+      let tmp5;
+      let obj = react2;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReadStateStore, UserSettingsProtoStore];
         const fn = function s() {
@@ -152,11 +172,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      return initialize.useStateFromStoresObject(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStoresObject(tmp4, tmp5);
     }
   : () => {
+      let settings;
+      let obj = get_initialized;
       const items = [ReadStateStore, UserSettingsProtoStore];
-      return initialize.useStateFromStoresObject(items, () => {
+      return obj.useStateFromStoresObject(items, () => {
         let hasUnread = false;
         let badgeCount = 0;
         const resourceIds = ReadStateStore.getResourceIds(constants.CONJURING_PROJECT);
@@ -182,76 +205,63 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         return { hasUnread, badgeCount };
       });
     };
-function ackConjureProject(projectId) {
-  DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_ACK", projectId });
-}
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/chat/conjureUnread.tsx");
-
-export { ackConjureProject };
-export const useConjureProjectUnreadStatus = tmp2;
-export const useConjureUnreadSummary = tmp3;
-export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (projectId) => {
+      let closure_2;
+      let first;
+      let tmp6;
+      let tmp7;
       _require = projectId;
-      const cResult = require("c").c(9);
+      let tmp2 = dependencyMap;
+      const tmp = _require;
+      let obj = require("react");
+      const cResult = obj.c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReadStateStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== projectId) {
         const fn = function c() {
-          let tmp2 = null != closure_0;
-          if (tmp2) {
-            tmp2 = ReadStateStore.getMentionCount(tmp, ReadStateTypes.CONJURING_PROJECT) > 0;
-          }
+          const tmp2 = null != projectId && ReadStateStore.getMentionCount(tmp, ReadStateTypes.CONJURING_PROJECT) > 0;
           return tmp2;
         };
         const items1 = [projectId];
         cResult[1] = projectId;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      let obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
+      const tmpResult = tmp(504);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
       const tmp9 = stateFromStores(16144)();
       dependencyMap = tmp9;
       if (cResult[4] === tmp9) {
         if (cResult[5] === projectId) {
+          let tmp10;
+          let tmp11;
           if (cResult[6] === stateFromStores) {
-            let tmp10 = cResult[7];
-            let tmp11 = cResult[8];
+            tmp10 = cResult[7];
+            tmp11 = cResult[8];
           }
-          const effect = noop.useEffect(tmp10, tmp11);
+          const effect = react.useEffect(tmp10, tmp11);
         }
       }
       class R {
         constructor() {
-          tmp2 = null != closure_0;
-          tmp = closure_0;
+          const tmp2 = null != projectId && stateFromStores && closure_2;
           if (tmp2) {
-            tmp2 = closure_1;
+            const obj2 = { type: "CONJURE_PROJECT_ACK", projectId };
+            const obj = DispatcherDefault;
+            obj.dispatch(obj2);
           }
-          if (tmp2) {
-            tmp2 = closure_2;
-          }
-          if (tmp2) {
-            tmp3 = closure_1;
-            tmp4 = closure_2;
-            obj = closure_1(closure_2[4]);
-            obj1 = { type: "CONJURE_PROJECT_ACK", projectId: null };
-            obj1.projectId = tmp;
-            dispatchResult = obj.dispatch(obj1);
-          }
-          return;
         }
       }
       const items2 = [projectId, stateFromStores, tmp9];
@@ -262,19 +272,17 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
       cResult[8] = items2;
       tmp11 = items2;
       tmp10 = R;
-      const tmpResult = require("initialize");
     }
   : (projectId) => {
+      let closure_2;
       _require = projectId;
+      let obj = require("get initialized");
       const items = [ReadStateStore];
       const items1 = [projectId];
-      const stateFromStores = require("initialize").useStateFromStores(
+      const stateFromStores = obj.useStateFromStores(
         items,
         () => {
-          let tmp2 = null != closure_0;
-          if (tmp2) {
-            tmp2 = ReadStateStore.getMentionCount(tmp, ReadStateTypes.CONJURING_PROJECT) > 0;
-          }
+          const tmp2 = null != projectId && ReadStateStore.getMentionCount(tmp, ReadStateTypes.CONJURING_PROJECT) > 0;
           return tmp2;
         },
         items1,
@@ -282,17 +290,23 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
       let tmp2 = stateFromStores(16144)();
       dependencyMap = tmp2;
       const items2 = [projectId, stateFromStores, tmp2];
-      const effect = noop.useEffect(() => {
-        let tmp2 = null != projectId;
-        if (tmp2) {
-          tmp2 = stateFromStores;
-        }
-        if (tmp2) {
-          tmp2 = closure_2;
-        }
+      const effect = react.useEffect(() => {
+        const tmp2 = null != projectId && stateFromStores && closure_2;
         if (tmp2) {
           const obj2 = { type: "CONJURE_PROJECT_ACK", projectId };
-          DispatcherDefault.dispatch(obj2);
+          const obj = DispatcherDefault;
+          obj.dispatch(obj2);
         }
       }, items2);
     };
+function ackConjureProject(projectId) {
+  const obj = DispatcherDefault;
+  const obj2 = { type: "CONJURE_PROJECT_ACK", projectId };
+  obj.dispatch(obj2);
+}
+const result = size.fileFinishedImporting("modules/conjure/chat/conjureUnread.tsx");
+
+export { ackConjureProject };
+export const useConjureProjectUnreadStatus = tmp2;
+export const useConjureUnreadSummary = tmp3;
+export const useAckConjureProjectWhileViewing = tmp4;

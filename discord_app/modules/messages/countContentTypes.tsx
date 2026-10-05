@@ -13,6 +13,7 @@ export default function countContentTypes(content) {
     sum = num + 1;
   }
   let sum1 = sum;
+  const tmp2 = content.stickers.length > 0 || content.stickerItems.length > 0;
   if (tmp2) {
     sum1 = sum + 1;
   }

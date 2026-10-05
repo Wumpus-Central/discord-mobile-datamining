@@ -2,6 +2,8 @@
 import ApexExperiment from "../experiments/apex/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let obj3;
+let obj4;
 const obj = {
   CONTROL: 0,
   [0]: "CONTROL",
@@ -14,11 +16,10 @@ const obj2 = {
   name: "2026-01-mobile-go-live-entrypoint",
   kind: "user",
   defaultConfig: { treatment: obj.CONTROL },
-  variations: {
-    [obj.SCREENSHARE_REPLACES_CHAT]: { treatment: obj.SCREENSHARE_REPLACES_CHAT },
-    [obj.SCREENSHARE_REPLACES_SOUNDBOARD]: { treatment: obj.SCREENSHARE_REPLACES_SOUNDBOARD },
-  },
+  variations: { [obj.SCREENSHARE_REPLACES_CHAT]: obj3, [obj.SCREENSHARE_REPLACES_SOUNDBOARD]: obj4 },
 };
+obj3 = { treatment: obj.SCREENSHARE_REPLACES_CHAT };
+obj4 = { treatment: obj.SCREENSHARE_REPLACES_SOUNDBOARD };
 const apexExperiment = ApexExperiment.createApexExperiment(obj2);
 const result = size.fileFinishedImporting("modules/go_live/MobileGoLiveEntrypointExperiment.tsx");
 

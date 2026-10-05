@@ -1,18 +1,19 @@
 // discord_app/modules/game_console/useGameConsoleAccounts.tsx
-import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../_runtime/00576_c.js";
+import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../_runtime/00576_react.js";
+import Constants from "../../Constants.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import ConnectedAccountsStore from "../../stores/ConnectedAccountsStore.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const PlatformTypes = fn(1085).PlatformTypes;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const PlatformTypes = Constants.PlatformTypes;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let tmp4;
+      let tmp5;
+      const obj = react;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [ConnectedAccountsStore];
         const fn = function o() {
@@ -30,11 +31,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      return initialize.useStateFromStoresArray(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStoresArray(tmp4, tmp5);
     }
   : () => {
       let items = [ConnectedAccountsStore];
-      return initialize.useStateFromStoresArray(items, () => {
+      const obj = get_initialized;
+      return obj.useStateFromStoresArray(items, () => {
         const items = [
           ConnectedAccountsStore.getAccount(null, constants.XBOX),
           ConnectedAccountsStore.getAccount(null, constants.PLAYSTATION),
@@ -43,3 +46,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return items.filter(GlobalUtils.isNotNullish);
       });
     };
+const result = size.fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");
+
+export default tmp2;

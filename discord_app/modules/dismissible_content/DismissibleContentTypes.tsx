@@ -3,13 +3,7 @@ import dismissible_content from "../../../discord_common/js/packages/protos/disc
 import size from "../../../_runtime/metro/00002__.js";
 
 function isSingleUseDismissibleContent(item10020) {
-  let hasItem = items1.includes(item10020);
-  if (!hasItem) {
-    hasItem = items.includes(item10020);
-  }
-  if (!hasItem) {
-    hasItem = items2.includes(item10020);
-  }
+  const hasItem = items1.includes(item10020) || items.includes(item10020) || items2.includes(item10020);
   return !hasItem;
 }
 const items = [
@@ -118,13 +112,7 @@ export const isSnowflakeBoundDismissibleContent = function isSnowflakeBoundDismi
   return items2.includes(id);
 };
 export const isRecurringDismissibleContent = function isRecurringDismissibleContent(arg0) {
-  let hasItem = items1.includes(arg0);
-  if (!hasItem) {
-    hasItem = items.includes(arg0);
-  }
-  if (!hasItem) {
-    hasItem = items2.includes(arg0);
-  }
+  const hasItem = items1.includes(arg0) || items.includes(arg0) || items2.includes(arg0);
   return hasItem;
 };
 export { isSingleUseDismissibleContent };
@@ -142,13 +130,8 @@ export const isSnowflakeBoundGuildDismissibleContent = function isSnowflakeBound
   return items3.includes(GDM_INVITE_REMINDER);
 };
 export const isGuildDismissibleContent = function isGuildDismissibleContent(dismissibleContent) {
-  let hasItem = items4.includes(dismissibleContent);
-  if (!hasItem) {
-    hasItem = items5.includes(dismissibleContent);
-  }
-  if (!hasItem) {
-    hasItem = items3.includes(dismissibleContent);
-  }
+  const hasItem =
+    items4.includes(dismissibleContent) || items5.includes(dismissibleContent) || items3.includes(dismissibleContent);
   return hasItem;
 };
 export const ALL_DISMISSIBLE_CONTENT = found;

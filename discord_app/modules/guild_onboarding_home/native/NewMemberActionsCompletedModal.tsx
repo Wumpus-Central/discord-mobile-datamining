@@ -1,17 +1,24 @@
 // discord_app/modules/guild_onboarding_home/native/NewMemberActionsCompletedModal.tsx
+import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+let hasOwnProperty;
+let metroRequire;
+let obj2;
+let size;
+const View = react_native.View;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
   screen: {
     flex: 1,
     position: "absolute",
@@ -23,44 +30,46 @@ let obj2 = {
     justifyContent: "center",
   },
   text: { marginBottom: 16 },
-  progressBackground: null,
-  progressForeground: null,
+  progressBackground: size,
+  progressForeground: obj2,
 };
-let size = {
+size = {
   borderRadius: nativeDefault.radii.round,
   height: 8,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
   width: "60%",
 };
-obj2.progressBackground = size;
-obj2.progressForeground = {
+createStyles = createStyles.createStyles;
+obj2 = {
   backgroundColor: nativeDefault.unsafe_rawColors.GREEN_330,
   borderRadius: nativeDefault.radii.round,
   height: 8,
 };
-let closure_7 = createStyles.createStyles(obj2);
+let closure_7 = createStyles(obj);
 const __initData = {
   code: 'function NewMemberActionsCompletedModalTsx1(){const{withDelay,withTiming,barWidth}=this.__closure;return{width:withDelay(500,withTiming(barWidth.get()*100+"%",{duration:700}))};}',
 };
 const __initData2 = {
   code: 'function NewMemberActionsCompletedModalTsx2(){const{withDelay,withTiming,barWidth}=this.__closure;return{width:withDelay(500,withTiming(barWidth.get()*100+"%",{duration:700}))};}',
 };
-const ReactCompilerGating = fn(558);
-const obj3 = {
-  backgroundColor: nativeDefault.unsafe_rawColors.GREEN_330,
-  borderRadius: nativeDefault.radii.round,
-  height: 8,
-};
-size = fn(2);
-let result = size.fileFinishedImporting("modules/guild_onboarding_home/native/NewMemberActionsCompletedModal.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (numActions) => {
-      const cResult = sharedValue(576).c(20);
-      numActions = numActions.numActions;
-      const tmp4 = closure_7();
+      let items2;
+      let items3;
+      let screen;
+      let sharedValue;
+      let text;
+      let tmp11;
+      let tmp6;
+      let tmp7;
+      const tmp = sharedValue;
       let obj = sharedValue(576);
-      sharedValue = sharedValue(4612).useSharedValue(numActions.initialPercent);
+      const cResult = obj.c(20);
+      numActions = numActions.numActions;
+      const initialPercent = numActions.initialPercent;
+      const tmp4 = closure_7();
+      let obj2 = sharedValue(4612);
+      sharedValue = obj2.useSharedValue(initialPercent);
       if (cResult[0] !== sharedValue) {
         const fn = function h() {
           const result = sharedValue.set(1);
@@ -69,81 +78,79 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = sharedValue;
         cResult[1] = fn;
         cResult[2] = items;
-        let tmp7 = items;
-        let tmp6 = fn;
+        tmp7 = items;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[1];
         tmp7 = cResult[2];
       }
-      const effect = noop.useEffect(tmp6, tmp7);
-      let obj2 = sharedValue(4612);
+      const effect = react.useEffect(tmp6, tmp7);
+      const tmpResult = tmp(4612);
       class T {
         constructor() {
-          obj = { width: null };
-          obj2 = closure_0(closure_2[7]);
-          obj3 = closure_0(closure_2[8]);
-          obj.width = obj2.withDelay(500, obj3.withTiming(`${100 * closure_0.get()}%`, { duration: 700 }));
+          let obj2;
+          let withDelay;
+          const obj = { width: withDelay(500, obj2.withTiming(`${100 * sharedValue.get()}%`, { duration: 700 })) };
+          withDelay = ReanimatedRexport.withDelay;
+          ReanimatedRexport;
+          obj2 = timing;
           return obj;
         }
       }
-      const tmpResult = sharedValue(4612);
-      T.__closure = {
-        withDelay: sharedValue(4612).withDelay,
-        withTiming: sharedValue(4891).withTiming,
-        barWidth: sharedValue,
-      };
+      T.__closure = { withDelay: tmp(4612).withDelay, withTiming: tmp(4891).withTiming, barWidth: sharedValue };
       T.__workletHash = 7643178959760;
       T.__initData = __initData;
+      ({ withDelay: tmp(4612).withDelay, withTiming: tmp(4891).withTiming, barWidth: sharedValue });
       const animatedStyle = tmpResult.useAnimatedStyle(T);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class E {
           constructor() {
-            timerId = setTimeout(
-              () => closure_1_1(5093).popWithKey(sharedValue(7522).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
-              2500,
-            );
+            timerId = setTimeout(() => {
+              const obj = closure_1_1(closure_1_2[9]);
+              return obj.popWithKey(sharedValue(closure_1_2[10]).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY);
+            }, 2500);
             return;
           }
         }
         const items1 = [];
         cResult[3] = E;
         cResult[4] = items1;
-        let tmp11 = items1;
+        tmp11 = items1;
       } else {
         class E {
           constructor() {
-            timerId = setTimeout(
-              () => closure_1_1(5093).popWithKey(sharedValue(7522).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
-              2500,
-            );
+            timerId = setTimeout(() => {
+              const obj = closure_1_1(closure_1_2[9]);
+              return obj.popWithKey(sharedValue(closure_1_2[10]).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY);
+            }, 2500);
             return;
           }
         }
         tmp11 = cResult[4];
       }
-      const effect1 = noop.useEffect(E, tmp11);
+      const effect1 = react.useEffect(E, tmp11);
       ({ screen, text } = tmp4);
       if (cResult[5] !== numActions) {
         class E {
           constructor() {
-            timerId = setTimeout(
-              () => closure_1_1(5093).popWithKey(sharedValue(7522).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
-              2500,
-            );
+            timerId = setTimeout(() => {
+              const obj = closure_1_1(closure_1_2[9]);
+              return obj.popWithKey(sharedValue(closure_1_2[10]).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY);
+            }, 2500);
             return;
           }
         }
         const obj5 = { count: numActions };
-        const formatResult = obj6.format(tmp(1126).t.pGj5u2, obj5);
         cResult[5] = numActions;
-        cResult[6] = formatResult;
+        cResult[6] = obj6.format(tmp(1126).t.pGj5u2, obj5);
+        const formatResult = obj6.format(tmp(1126).t.pGj5u2, obj5);
       } else {
         class E {
           constructor() {
-            timerId = setTimeout(
-              () => closure_1_1(5093).popWithKey(sharedValue(7522).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
-              2500,
-            );
+            timerId = setTimeout(() => {
+              const obj = closure_1_1(closure_1_2[9]);
+              return obj.popWithKey(sharedValue(closure_1_2[10]).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY);
+            }, 2500);
             return;
           }
         }
@@ -151,107 +158,118 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[7] === tmp4.text) {
         class E {
           constructor() {
-            timerId = setTimeout(
-              () => closure_1_1(5093).popWithKey(sharedValue(7522).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
-              2500,
-            );
+            timerId = setTimeout(() => {
+              const obj = closure_1_1(closure_1_2[9]);
+              return obj.popWithKey(sharedValue(closure_1_2[10]).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY);
+            }, 2500);
             return;
           }
         }
         if (cResult[10] === animatedStyle) {
           class E {
             constructor() {
-              timerId = setTimeout(
-                () => closure_1_1(5093).popWithKey(sharedValue(7522).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
-                2500,
-              );
+              timerId = setTimeout(() => {
+                const obj = closure_1_1(closure_1_2[9]);
+                return obj.popWithKey(sharedValue(closure_1_2[10]).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY);
+              }, 2500);
               return;
             }
           }
           if (cResult[13] === tmp4.progressBackground) {
             class E {
               constructor() {
-                timerId = setTimeout(
-                  () => closure_1_1(5093).popWithKey(sharedValue(7522).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
-                  2500,
-                );
+                timerId = setTimeout(() => {
+                  const obj = closure_1_1(closure_1_2[9]);
+                  return obj.popWithKey(sharedValue(closure_1_2[10]).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY);
+                }, 2500);
                 return;
               }
             }
             if (cResult[16] === tmp4.screen) {
               class E {
                 constructor() {
-                  timerId = setTimeout(
-                    () => closure_1_1(5093).popWithKey(sharedValue(7522).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
-                    2500,
-                  );
+                  timerId = setTimeout(() => {
+                    const obj = closure_1_1(closure_1_2[9]);
+                    return obj.popWithKey(sharedValue(closure_1_2[10]).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY);
+                  }, 2500);
                   return;
                 }
               }
             }
-            const obj7 = { style: screen, children: null };
-            const items2 = [tmp15, tmp21];
-            obj7.children = items2;
+            const obj7 = { style: screen, children: items2 };
+            items2 = [tmp15, tmp21];
             cResult[16] = tmp4.screen;
             cResult[17] = tmp21;
             cResult[18] = tmp15;
+            closure_6(View, obj7);
             class T {
               constructor() {
-                obj = { width: null };
-                obj2 = closure_0(closure_2[7]);
-                obj3 = closure_0(closure_2[8]);
-                obj.width = obj2.withDelay(500, obj3.withTiming(`${100 * closure_0.get()}%`, { duration: 700 }));
+                let obj2;
+                let withDelay;
+                const obj = {
+                  width: withDelay(500, obj2.withTiming(`${100 * sharedValue.get()}%`, { duration: 700 })),
+                };
+                withDelay = ReanimatedRexport.withDelay;
+                ReanimatedRexport;
+                obj2 = timing;
                 return obj;
               }
             }
-            const tmp28 = closure_6(View, obj7);
           }
           const obj8 = { style: tmp4.progressBackground, children: tmp17 };
-          const tmp24 = closure_5(View, obj8);
           cResult[13] = tmp4.progressBackground;
           cResult[14] = tmp17;
-          cResult[15] = tmp24;
+          cResult[15] = closure_5(View, obj8);
+          const tmp24 = closure_5(View, obj8);
         }
-        const obj9 = { style: null };
-        const items3 = [tmp4.progressForeground, animatedStyle];
-        obj9.style = items3;
-        const tmp20 = closure_5(ReanimatedRexportDefault.View, obj9);
+        const obj9 = { style: items3 };
+        items3 = [tmp4.progressForeground, animatedStyle];
         cResult[10] = animatedStyle;
         cResult[11] = tmp4.progressForeground;
-        cResult[12] = tmp20;
+        cResult[12] = closure_5(ReanimatedRexportDefault.View, obj9);
+        const tmp20 = closure_5(ReanimatedRexportDefault.View, obj9);
       }
-      const tmp16 = closure_5(sharedValue(4886).Text, {
+      cResult[7] = tmp4.text;
+      cResult[8] = tmp13;
+      cResult[9] = closure_5(tmp(4886).Text, {
         style: text,
         variant: "heading-xl/semibold",
         color: "text-overlay-light",
         children: tmp13,
       });
-      cResult[7] = tmp4.text;
-      cResult[8] = tmp13;
-      cResult[9] = tmp16;
-      const obj4 = {
-        withDelay: sharedValue(4612).withDelay,
-        withTiming: sharedValue(4891).withTiming,
-        barWidth: sharedValue,
-      };
+      const tmp16 = closure_5(tmp(4886).Text, {
+        style: text,
+        variant: "heading-xl/semibold",
+        color: "text-overlay-light",
+        children: tmp13,
+      });
     }
   : (arg0) => {
+      let initialPercent;
+      let intl;
+      let items1;
+      let items2;
+      let numActions;
+      let obj7;
       let sharedValue;
       ({ initialPercent, numActions } = arg0);
       const tmp = closure_7();
-      sharedValue = sharedValue(4612).useSharedValue(initialPercent);
+      let obj = sharedValue(4612);
+      sharedValue = obj.useSharedValue(initialPercent);
       const items = [sharedValue];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
         const result = sharedValue.set(1);
       }, items);
-      let obj = sharedValue(4612);
+      let obj2 = sharedValue(4612);
       const fn = function y() {
-        const obj = { width: null };
-        const obj2 = ReanimatedRexport;
-        obj.width = obj2.withDelay(500, timing.withTiming(`${100 * sharedValue.get()}%`, { duration: 700 }));
+        let obj2;
+        let withDelay;
+        const obj = { width: withDelay(500, obj2.withTiming(`${100 * sharedValue.get()}%`, { duration: 700 })) };
+        withDelay = ReanimatedRexport.withDelay;
+        ReanimatedRexport;
+        obj2 = timing;
         return obj;
       };
-      let obj2 = sharedValue(4612);
       fn.__closure = {
         withDelay: sharedValue(4612).withDelay,
         withTiming: sharedValue(4891).withTiming,
@@ -259,24 +277,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       fn.__workletHash = 8771000018451;
       fn.__initData = __initData2;
+      ({ withDelay: sharedValue(4612).withDelay, withTiming: sharedValue(4891).withTiming, barWidth: sharedValue });
       const animatedStyle = obj2.useAnimatedStyle(fn);
-      const effect1 = noop.useEffect(() => {
-        const timerId = setTimeout(
-          () => closure_1_1(5093).popWithKey(sharedValue(7522).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
-          2500,
-        );
+      const effect1 = react.useEffect(() => {
+        const timerId = setTimeout(() => {
+          const obj = closure_1_1(closure_1_2[9]);
+          return obj.popWithKey(sharedValue(closure_1_2[10]).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY);
+        }, 2500);
       }, []);
-      const obj4 = { style: tmp.screen, children: null };
-      const obj5 = { style: tmp.text, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };
-      const intl = sharedValue(1126).intl;
-      obj5.children = intl.format(sharedValue(1126).t.pGj5u2, { count: numActions });
-      const items1 = [closure_5(sharedValue(4886).Text, obj5)];
-      const obj6 = { style: tmp.progressBackground, children: null };
-      const obj7 = { style: null };
-      const items2 = [tmp.progressForeground, animatedStyle];
-      obj7.style = items2;
-      obj6.children = closure_5(ReanimatedRexportDefault.View, obj7);
+      const obj4 = { style: tmp.screen, children: items1 };
+      const obj5 = {
+        style: tmp.text,
+        variant: "heading-xl/semibold",
+        color: "text-overlay-light",
+        children: intl.format(sharedValue(1126).t.pGj5u2, { count: numActions }),
+      };
+      const Text = sharedValue(4886).Text;
+      intl = sharedValue(1126).intl;
+      items1 = [closure_5(Text, obj5)];
+      const obj6 = { style: tmp.progressBackground, children: closure_5(ReanimatedRexportDefault.View, obj7) };
+      obj7 = { style: items2 };
+      items2 = [tmp.progressForeground, animatedStyle];
       items1[1] = closure_5(View, obj6);
-      obj4.children = items1;
       return closure_6(View, obj4);
     };
+size = size_mod;
+let result = size.fileFinishedImporting("modules/guild_onboarding_home/native/NewMemberActionsCompletedModal.tsx");
+
+export default tmp4;

@@ -1,13 +1,12 @@
 // discord_app/modules/user_settings/UserSettingsManager.tsx
 import UserSettings from "UserSettings.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
 let c2 = false;
-class UserSettingsManager extends tmp2 {
+class UserSettingsManager extends AutomaticLifecycleManager {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    closure_0 = applyArgumentsResult;
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
     applyArgumentsResult.actions = {
       POST_CONNECTION_OPEN() {
         applyArgumentsResult.setVerifyTimezone();
@@ -17,29 +16,31 @@ class UserSettingsManager extends tmp2 {
     };
     return applyArgumentsResult;
   }
-}
-const prototype = UserSettingsManager.prototype;
-prototype["setVerifyTimezone"] = function setVerifyTimezone() {
-  c2 = true;
-};
-prototype["ensureTimezoneUpdated"] = function ensureTimezoneUpdated() {
-  if (c2) {
-    c2 = false;
-    const _Date = Date;
-    const date = new Date();
-    const timezoneOffset = date.getTimezoneOffset();
-    let TimezoneOffset = timezoneOffset(2028).TimezoneOffset;
-    if (TimezoneOffset.getSetting() !== timezoneOffset) {
-      const _setImmediate = setImmediate;
-      setImmediate(() => {
-        const TimezoneOffset = UserSettings.TimezoneOffset;
-        return TimezoneOffset.updateSetting(timezoneOffset);
-      });
+  setVerifyTimezone() {
+    c2 = true;
+  }
+  ensureTimezoneUpdated() {
+    const tmp = c2;
+    if (tmp) {
+      c2 = false;
+      const _Date = Date;
+      const self = this;
+      const self2 = this;
+      const date = new Date();
+      const timezoneOffset = date.getTimezoneOffset();
+      let TimezoneOffset = timezoneOffset(2028).TimezoneOffset;
+      if (TimezoneOffset.getSetting() !== timezoneOffset) {
+        const _setImmediate = setImmediate;
+        setImmediate(() => {
+          const TimezoneOffset = UserSettings.TimezoneOffset;
+          return TimezoneOffset.updateSetting(timezoneOffset);
+        });
+      }
     }
   }
-};
+}
+const prototype = UserSettingsManager.prototype;
 const userSettingsManager = new UserSettingsManager();
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/UserSettingsManager.tsx");
 
 export default userSettingsManager;

@@ -1,7 +1,8 @@
 // discord_app/modules/premium/gifting/native/views/GiftingBadgesCoachmarkActionSheet.tsx
-import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../../_runtime/00576_c.js";
+import get_initialized from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import DismissibleContentConstants from "../../../../dismissible_content/DismissibleContentConstants.tsx";
 import _modDef2589 from "../../GiftingBadge.messages.js";
 import RootNavigationRef from "../../../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -9,54 +10,63 @@ import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocatio
 import utils_openGiftModal from "../../../native/utils/openGiftModal.tsx";
 import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
 import _modDef17120 from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../../_runtime/00017_react-native.js";
 import BadgeDirectoryStore from "../../../../badges/BadgeDirectoryStore.tsx";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let BottomSheet, hideActionSheetResult, navigateResult, tmp2;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  container: { alignItems: "center", paddingHorizontal: 20, paddingBottom: 20, gap: nativeDefault.space.PX_24 },
-  graphicContainer: null,
-  newBadgeImage: null,
-  textContainer: null,
-  text: null,
-  footer: null,
+let c9;
+let closure_4;
+let hasOwnProperty;
+let metroImportAll;
+let obj2;
+let obj3;
+let size;
+({ Image: closure_4, View: hasOwnProperty } = react_native);
+const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
+({ jsx: metroImportAll, jsxs: c9 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
+  container: obj2,
+  graphicContainer: size,
+  newBadgeImage: { width: "100%", height: "100%", objectFit: "contain" },
+  textContainer: obj3,
+  text: { textAlign: "center" },
+  footer: { width: "100%" },
 };
-let size = {
-  height: 188,
-  width: 335,
-  alignItems: "center",
-  justifyContent: "center",
-  padding: nativeDefault.space.PX_16,
-};
-obj2.graphicContainer = size;
-obj2.newBadgeImage = { width: "100%", height: "100%", objectFit: "contain" };
-let obj3 = { alignItems: "center", paddingHorizontal: 20, paddingBottom: 20, gap: nativeDefault.space.PX_24 };
-obj2.textContainer = { gap: nativeDefault.space.PX_8 };
-obj2.text = { textAlign: "center" };
-obj2.footer = { width: "100%" };
-let closure_10 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
+obj2 = { alignItems: "center", paddingHorizontal: 20, paddingBottom: 20, gap: nativeDefault.space.PX_24 };
+createStyles = createStyles.createStyles;
+size = { height: 188, width: 335, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_16 };
+obj3 = { gap: nativeDefault.space.PX_8 };
+let closure_10 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? (markAsDismissed) => {
-      const cResult = markAsDismissed(576).c(41);
+      let currentTier;
+      let giftCount;
+      let items;
+      let text;
+      let textContainer;
+      let variant;
+      let obj = markAsDismissed(576);
+      const cResult = obj.c(41);
       markAsDismissed = markAsDismissed.markAsDismissed;
       ({ currentTier, giftCount, variant } = markAsDismissed);
       const tmp4 = closure_10();
-      let obj = markAsDismissed(576);
-      const isGiftingBadgeComplexArtEnabled = markAsDismissed(10475).useIsGiftingBadgeComplexArtEnabled(
+      let obj2 = markAsDismissed(10475);
+      const isGiftingBadgeComplexArtEnabled = obj2.useIsGiftingBadgeComplexArtEnabled(
         "GiftingBadgesCoachmarkActionSheet",
       );
       if (cResult[0] === currentTier) {
+        let tmp6;
         if (cResult[1] === isGiftingBadgeComplexArtEnabled) {
-          let tmp6 = cResult[2];
+          tmp6 = cResult[2];
         }
         if (cResult[3] !== markAsDismissed) {
           class S {
@@ -208,7 +218,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
+            const format = tmp19.format;
             const name = currentTier.name;
+            const prop = _modDef2589["a+jfuy"];
             if (name == null) {
               class S {
                 constructor() {
@@ -226,9 +238,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj4 = { tierName: name };
-            const formatResult = obj6.format(_modDef2589["a+jfuy"], obj4);
             cResult[12] = currentTier.name;
-            cResult[13] = formatResult;
+            cResult[13] = format(prop, obj4);
+            const formatResult = format(prop, obj4);
           } else {
             class S {
               constructor() {
@@ -246,6 +258,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[14] === tmp4.text) {
+            let stringResult;
             class S {
               constructor() {
                 obj = closure_1(closure_2[10]);
@@ -275,6 +288,50 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
+              if (cResult[20] === tmp4.text) {
+                class S {
+                  constructor() {
+                    obj = closure_1(closure_2[10]);
+                    hideActionSheetResult = obj.hideActionSheet();
+                    tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+                    obj2 = closure_0(closure_2[11]);
+                    rootNavigationRef = obj2.getRootNavigationRef();
+                    if (rootNavigationRef != null) {
+                      str = "you";
+                      navigateResult = rootNavigationRef.navigate("you");
+                    }
+                    return;
+                  }
+                }
+                if (cResult[23] === tmp4.textContainer) {
+                  class S {
+                    constructor() {
+                      obj = closure_1(closure_2[10]);
+                      hideActionSheetResult = obj.hideActionSheet();
+                      tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+                      obj2 = closure_0(closure_2[11]);
+                      rootNavigationRef = obj2.getRootNavigationRef();
+                      if (rootNavigationRef != null) {
+                        str = "you";
+                        navigateResult = rootNavigationRef.navigate("you");
+                      }
+                      return;
+                    }
+                  }
+                }
+                const obj5 = { style: textContainer, children: items };
+                items = [tmp24, tmp34];
+                cResult[23] = tmp4.textContainer;
+                cResult[24] = tmp24;
+                cResult[25] = tmp34;
+                cResult[26] = closure_9(closure_5, obj5);
+                const tmp40 = closure_9(closure_5, obj5);
+              }
+              const obj6 = { style: tmp4.text, variant: "text-sm/medium", color: "text-default", children: tmp27 };
+              cResult[20] = tmp4.text;
+              cResult[21] = tmp27;
+              cResult[22] = closure_8(markAsDismissed(4886).Text, obj6);
+              const tmp36 = closure_8(markAsDismissed(4886).Text, obj6);
             }
             if ("noCount" === variant) {
               class S {
@@ -291,7 +348,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              let stringResult = obj11.string(_modDef2589["0N8fCf"]);
+              stringResult = obj9.string(_modDef2589["0N8fCf"]);
             } else {
               class S {
                 constructor() {
@@ -307,6 +364,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
+              const formatToPlainString = tmp28.formatToPlainString;
+              const QxRA6w = _modDef2589.QxRA6w;
               if (giftCount == null) {
                 class S {
                   constructor() {
@@ -323,27 +382,27 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              const obj5 = { giftCount };
-              stringResult = obj9.formatToPlainString(_modDef2589.QxRA6w, obj5);
+              const obj7 = { giftCount };
+              stringResult = formatToPlainString(QxRA6w, obj7);
             }
             cResult[17] = giftCount;
             cResult[18] = variant;
             cResult[19] = stringResult;
           }
-          const obj7 = { style: text, variant: "heading-xl/bold", color: "text-strong", children: tmp18 };
-          const tmp24 = closure_8(tmp(4886).Text, obj7);
+          const obj8 = { style: text, variant: "heading-xl/bold", color: "text-strong", children: tmp18 };
           cResult[14] = tmp4.text;
           cResult[15] = tmp18;
-          cResult[16] = tmp24;
+          cResult[16] = closure_8(markAsDismissed(4886).Text, obj8);
+          const tmp26 = closure_8(markAsDismissed(4886).Text, obj8);
         }
-        const obj8 = { style: tmp4.graphicContainer, children: tmp11 };
-        const tmp17 = closure_8(closure_5, obj8);
+        const obj10 = { style: tmp4.graphicContainer, children: tmp11 };
         cResult[9] = tmp4.graphicContainer;
         cResult[10] = tmp11;
-        cResult[11] = tmp17;
+        cResult[11] = closure_8(closure_5, obj10);
+        const tmp17 = closure_8(closure_5, obj10);
       }
-      const obj2 = markAsDismissed(10475);
-      const giftingBadgeTierIconUrl = markAsDismissed(10475).getGiftingBadgeTierIconUrl(
+      const tmpResult = markAsDismissed(10475);
+      const giftingBadgeTierIconUrl = tmpResult.getGiftingBadgeTierIconUrl(
         currentTier,
         isGiftingBadgeComplexArtEnabled,
       );
@@ -351,93 +410,118 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = isGiftingBadgeComplexArtEnabled;
       cResult[2] = giftingBadgeTierIconUrl;
       tmp6 = giftingBadgeTierIconUrl;
-      const tmpResult = markAsDismissed(10475);
     }
   : (markAsDismissed) => {
+      let Button;
+      let currentTier;
+      let format;
+      let giftCount;
+      let intl4;
+      let items2;
+      let items3;
+      let obj12;
+      let obj4;
+      let prop;
+      let str;
+      let stringResult;
+      let tmp8Result;
       markAsDismissed = markAsDismissed.markAsDismissed;
       ({ currentTier, giftCount } = markAsDismissed);
+      const variant = markAsDismissed.variant;
       const tmp = closure_10();
-      const isGiftingBadgeComplexArtEnabled = markAsDismissed(10475).useIsGiftingBadgeComplexArtEnabled(
+      let obj = markAsDismissed(10475);
+      const isGiftingBadgeComplexArtEnabled = obj.useIsGiftingBadgeComplexArtEnabled(
         "GiftingBadgesCoachmarkActionSheet",
       );
-      let obj = markAsDismissed(10475);
-      const giftingBadgeTierIconUrl = markAsDismissed(10475).getGiftingBadgeTierIconUrl(
-        currentTier,
-        isGiftingBadgeComplexArtEnabled,
-      );
+      let obj2 = markAsDismissed(10475);
+      const giftingBadgeTierIconUrl = obj2.getGiftingBadgeTierIconUrl(currentTier, isGiftingBadgeComplexArtEnabled);
       const items = [markAsDismissed];
       const items1 = [markAsDismissed];
-      const callback = noop.useCallback(() => {
-        ActionSheetActionCreatorsDefault.hideActionSheet();
+      const callback = react.useCallback(() => {
+        const obj = ActionSheetActionCreatorsDefault;
+        obj.hideActionSheet();
         markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-        const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+        const obj2 = RootNavigationRef;
+        const rootNavigationRef = obj2.getRootNavigationRef();
         if (rootNavigationRef != null) {
           rootNavigationRef.navigate("you");
         }
       }, items);
-      const callback1 = noop.useCallback(() => {
+      const callback1 = react.useCallback(() => {
         markAsDismissed(ContentDismissActionType.USER_DISMISS);
       }, items1);
-      const obj3 = { startExpanded: true, onDismiss: callback1, children: null };
-      const obj4 = { style: tmp.container, children: null };
-      const obj5 = { style: tmp.graphicContainer, children: null };
-      let tmp8Result = null != giftingBadgeTierIconUrl;
+      const obj3 = { startExpanded: true, onDismiss: callback1, children: closure_9(closure_5, obj4) };
+      const obj5 = { style: tmp.graphicContainer, children: tmp8Result };
+      tmp8Result = null != giftingBadgeTierIconUrl;
+      obj4 = { style: tmp.container, children: items2 };
+      BottomSheet = markAsDismissed(6645).BottomSheet;
       if (tmp8Result) {
         const obj6 = { icon: giftingBadgeTierIconUrl, size: 120 };
         tmp8Result = closure_8(GiftingBadgeIconDefault, obj6);
       }
-      obj5.children = tmp8Result;
-      const items2 = [closure_8(closure_5, obj5), ,];
-      const obj7 = { style: tmp.textContainer, children: null };
-      const obj8 = { style: tmp.text, variant: "heading-xl/bold", color: "text-strong", children: null };
+      items2 = [closure_8(closure_5, obj5), ,];
+      const obj7 = { style: tmp.textContainer, children: items3 };
+      const obj8 = {
+        style: tmp.text,
+        variant: "heading-xl/bold",
+        color: "text-strong",
+        children: format(prop, { tierName: str }),
+      };
+      const Text = tmp2(4886).Text;
       const intl = tmp2(1126).intl;
-      let str = currentTier.name;
+      format = intl.format;
+      str = currentTier.name;
+      prop = _modDef2589["a+jfuy"];
       if (str == null) {
         str = "";
       }
-      obj8.children = intl.format(_modDef2589["a+jfuy"], { tierName: str });
-      const items3 = [closure_8(markAsDismissed(4886).Text, obj8)];
-      const obj9 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
-      if ("noCount" === markAsDismissed.variant) {
+      items3 = [closure_8(Text, obj8)];
+      const obj9 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: stringResult };
+      const Text2 = tmp2(4886).Text;
+      if ("noCount" === variant) {
         const intl3 = tmp2(1126).intl;
-        let stringResult = intl3.string(_modDef2589["0N8fCf"]);
+        stringResult = intl3.string(_modDef2589["0N8fCf"]);
       } else {
         const intl2 = tmp2(1126).intl;
+        const formatToPlainString = intl2.formatToPlainString;
+        const QxRA6w = _modDef2589.QxRA6w;
         if (giftCount == null) {
           giftCount = 0;
         }
         const obj10 = { giftCount };
-        stringResult = intl2.formatToPlainString(_modDef2589.QxRA6w, obj10);
+        stringResult = formatToPlainString(QxRA6w, obj10);
       }
-      obj9.children = stringResult;
-      items3[1] = closure_8(markAsDismissed(4886).Text, obj9);
-      obj7.children = items3;
+      items3[1] = closure_8(Text2, obj9);
       items2[1] = closure_9(closure_5, obj7);
-      const obj11 = { style: tmp.footer, children: null };
-      const obj12 = { grow: true, text: null, onPress: null };
-      const intl4 = tmp2(1126).intl;
-      obj12.text = intl4.string(markAsDismissed(1126).t.RzWDqY);
-      obj12.onPress = callback;
-      obj11.children = closure_8(markAsDismissed(5594).Button, obj12);
+      const obj11 = { style: tmp.footer, children: closure_8(Button, obj12) };
+      obj12 = { grow: true, text: intl4.string(markAsDismissed(1126).t.RzWDqY), onPress: callback };
+      Button = tmp2(5594).Button;
+      intl4 = tmp2(1126).intl;
       items2[2] = closure_8(closure_5, obj11);
-      obj4.children = items2;
-      obj3.children = closure_9(closure_5, obj4);
-      return closure_8(markAsDismissed(6645).BottomSheet, obj3);
+      return closure_8(BottomSheet, obj3);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? (markAsDismissed) => {
-      const cResult = markAsDismissed(576).c(35);
+      let items;
+      let text;
+      let textContainer;
+      let obj = markAsDismissed(576);
+      const cResult = obj.c(35);
       markAsDismissed = markAsDismissed.markAsDismissed;
       const tmp4 = closure_10();
       if (cResult[0] !== markAsDismissed) {
         const fn = function n() {
-          ActionSheetActionCreatorsDefault.hideActionSheet();
+          let items;
+          const obj = ActionSheetActionCreatorsDefault;
+          obj.hideActionSheet();
           markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-          const obj3 = { analyticsLocations: null };
-          const items = [AnalyticsLocationDefault.GIFTING_BADGE_COACHMARK];
-          obj3.analyticsLocations = items;
-          utils_openGiftModal.openGiftModal(obj3);
+          const obj2 = { analyticsLocations: items };
+          const openGiftModal = utils_openGiftModal.openGiftModal;
+          items = [];
+          utils_openGiftModal;
+          items[0] = AnalyticsLocationDefault.GIFTING_BADGE_COACHMARK;
+          openGiftModal(obj2);
         };
         cResult[0] = markAsDismissed;
         cResult[1] = fn;
@@ -445,8 +529,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] !== markAsDismissed) {
         class I {
           constructor() {
-            tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
-            return;
+            markAsDismissed(ContentDismissActionType.USER_DISMISS);
           }
         }
         cResult[2] = markAsDismissed;
@@ -454,16 +537,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class I {
           constructor() {
-            tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
-            return;
+            markAsDismissed(ContentDismissActionType.USER_DISMISS);
           }
         }
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         class I {
           constructor() {
-            tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
-            return;
+            markAsDismissed(ContentDismissActionType.USER_DISMISS);
           }
         }
         tmp8[0] = _modDef17120;
@@ -471,35 +552,33 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class I {
           constructor() {
-            tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
-            return;
+            markAsDismissed(ContentDismissActionType.USER_DISMISS);
           }
         }
       }
       if (cResult[5] !== tmp4.newBadgeImage) {
         class I {
           constructor() {
-            tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
-            return;
+            markAsDismissed(ContentDismissActionType.USER_DISMISS);
           }
         }
-        const obj2 = { source: tmp8, style: tmp4.newBadgeImage };
-        const tmp12 = closure_8(closure_4, obj2);
+        let obj2 = { source: tmp8, style: tmp4.newBadgeImage };
         cResult[5] = tmp4.newBadgeImage;
-        cResult[6] = tmp12;
+        cResult[6] = closure_8(closure_4, obj2);
+        const tmp12 = closure_8(closure_4, obj2);
       } else {
         class I {
           constructor() {
-            tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
-            return;
+            markAsDismissed(ContentDismissActionType.USER_DISMISS);
           }
         }
       }
       if (cResult[7] === tmp4.graphicContainer) {
+        let tmp14;
+        let tmp19;
         class I {
           constructor() {
-            tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
-            return;
+            markAsDismissed(ContentDismissActionType.USER_DISMISS);
           }
         }
         const _Symbol = Symbol;
@@ -507,180 +586,198 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           class I {
             constructor() {
-              tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
-              return;
+              markAsDismissed(ContentDismissActionType.USER_DISMISS);
             }
           }
           const stringResult = obj4.string(_modDef2589.Q2RQka);
           cResult[10] = stringResult;
-          const tmp14 = stringResult;
+          tmp14 = stringResult;
         } else {
           class I {
             constructor() {
-              tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
-              return;
+              markAsDismissed(ContentDismissActionType.USER_DISMISS);
             }
           }
         }
         if (cResult[11] !== tmp4.text) {
           class I {
             constructor() {
-              tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
-              return;
+              markAsDismissed(ContentDismissActionType.USER_DISMISS);
             }
           }
-          let obj3 = { style: text, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: tmp14 };
-          const tmp18 = closure_8(tmp(4886).Text, obj3);
+          const obj3 = {
+            style: text,
+            variant: "heading-xl/bold",
+            color: "mobile-text-heading-primary",
+            children: tmp14,
+          };
           cResult[11] = tmp4.text;
-          cResult[12] = tmp18;
+          cResult[12] = closure_8(markAsDismissed(4886).Text, obj3);
+          const tmp18 = closure_8(markAsDismissed(4886).Text, obj3);
         } else {
           class I {
             constructor() {
-              tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
-              return;
+              markAsDismissed(ContentDismissActionType.USER_DISMISS);
             }
           }
         }
         const _Symbol2 = Symbol;
+        const text2 = tmp4.text;
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
           class I {
             constructor() {
-              tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
-              return;
+              markAsDismissed(ContentDismissActionType.USER_DISMISS);
             }
           }
           const stringResult1 = obj6.string(_modDef2589["3EQnkg"]);
           cResult[13] = stringResult1;
-          const tmp19 = stringResult1;
+          tmp19 = stringResult1;
         } else {
           class I {
             constructor() {
-              tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
-              return;
+              markAsDismissed(ContentDismissActionType.USER_DISMISS);
             }
           }
         }
         if (cResult[14] !== tmp4.text) {
           class I {
             constructor() {
-              tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
-              return;
+              markAsDismissed(ContentDismissActionType.USER_DISMISS);
             }
           }
-          const obj5 = { style: tmp4.text, variant: "text-sm/medium", color: "text-muted", children: tmp19 };
-          const tmp23 = closure_8(tmp(4886).Text, obj5);
+          const obj5 = { style: text2, variant: "text-sm/medium", color: "text-muted", children: tmp19 };
           cResult[14] = tmp4.text;
-          cResult[15] = tmp23;
+          cResult[15] = closure_8(markAsDismissed(4886).Text, obj5);
+          const tmp23 = closure_8(markAsDismissed(4886).Text, obj5);
         } else {
           class I {
             constructor() {
-              tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
-              return;
+              markAsDismissed(ContentDismissActionType.USER_DISMISS);
             }
           }
         }
         if (cResult[16] === tmp4.textContainer) {
           class I {
             constructor() {
-              tmp = markAsDismissed(ContentDismissActionType.USER_DISMISS);
-              return;
+              markAsDismissed(ContentDismissActionType.USER_DISMISS);
             }
           }
         }
-        const obj7 = { style: textContainer, children: null };
-        let items = [tmp17, tmp22];
-        obj7.children = items;
-        const tmp27 = closure_9(closure_5, obj7);
+        const obj7 = { style: textContainer, children: items };
+        items = [tmp17, tmp22];
         cResult[16] = tmp4.textContainer;
         cResult[17] = tmp17;
         cResult[18] = tmp22;
-        cResult[19] = tmp27;
+        cResult[19] = closure_9(closure_5, obj7);
+        const tmp27 = closure_9(closure_5, obj7);
       }
-      let obj = markAsDismissed(576);
       const obj8 = { style: tmp4.graphicContainer, children: tmp10 };
       cResult[7] = tmp4.graphicContainer;
       cResult[8] = tmp10;
-      cResult[9] = closure_8(closure_5, { style: tmp4.graphicContainer, children: tmp10 });
-      const tmp13 = closure_8(closure_5, { style: tmp4.graphicContainer, children: tmp10 });
+      cResult[9] = closure_8(closure_5, obj8);
+      closure_8(closure_5, obj8);
     }
   : (markAsDismissed) => {
+      let Button;
+      let GiftIcon;
+      let intl;
+      let intl2;
+      let intl3;
+      let items2;
+      let items3;
+      let obj10;
+      let obj11;
+      let obj2;
+      let obj4;
+      let obj5;
       markAsDismissed = markAsDismissed.markAsDismissed;
       const tmp = closure_10();
       let items = [markAsDismissed];
       const items1 = [markAsDismissed];
-      const callback = noop.useCallback(() => {
-        ActionSheetActionCreatorsDefault.hideActionSheet();
+      const callback = react.useCallback(() => {
+        let items;
+        const obj = ActionSheetActionCreatorsDefault;
+        obj.hideActionSheet();
         markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-        const obj3 = { analyticsLocations: null };
-        const items = [AnalyticsLocationDefault.GIFTING_BADGE_COACHMARK];
-        obj3.analyticsLocations = items;
-        utils_openGiftModal.openGiftModal(obj3);
+        const obj2 = { analyticsLocations: items };
+        const openGiftModal = utils_openGiftModal.openGiftModal;
+        items = [];
+        utils_openGiftModal;
+        items[0] = AnalyticsLocationDefault.GIFTING_BADGE_COACHMARK;
+        openGiftModal(obj2);
       }, items);
-      const callback1 = noop.useCallback(() => {
+      const callback1 = react.useCallback(() => {
         markAsDismissed(ContentDismissActionType.USER_DISMISS);
       }, items1);
-      let obj = { startExpanded: true, onDismiss: callback1, children: null };
-      const obj2 = { style: tmp.container, children: null };
-      let obj3 = { style: tmp.graphicContainer, children: null };
-      const obj4 = { source: { uri: _modDef17120 }, style: tmp.newBadgeImage };
-      obj3.children = closure_8(closure_4, obj4);
-      const items2 = [closure_8(closure_5, obj3), ,];
-      const obj6 = { style: tmp.textContainer, children: null };
+      let obj = { startExpanded: true, onDismiss: callback1, children: closure_9(closure_5, obj2) };
+      obj2 = { style: tmp.container, children: items2 };
+      const obj3 = { style: tmp.graphicContainer, children: closure_8(closure_4, obj4) };
+      obj4 = { source: obj5, style: tmp.newBadgeImage };
+      obj5 = { uri: _modDef17120 };
+      BottomSheet = markAsDismissed(6645).BottomSheet;
+      items2 = [closure_8(closure_5, obj3), ,];
+      const obj6 = { style: tmp.textContainer, children: items3 };
       const obj7 = {
         style: tmp.text,
         variant: "heading-xl/bold",
         color: "mobile-text-heading-primary",
-        children: null,
+        children: intl.string(_modDef2589.Q2RQka),
       };
-      const intl = markAsDismissed(1126).intl;
-      obj7.children = intl.string(_modDef2589.Q2RQka);
-      const items3 = [closure_8(markAsDismissed(4886).Text, obj7)];
-      const obj8 = { style: tmp.text, variant: "text-sm/medium", color: "text-muted", children: null };
-      const intl2 = markAsDismissed(1126).intl;
-      obj8.children = intl2.string(_modDef2589["3EQnkg"]);
-      items3[1] = closure_8(markAsDismissed(4886).Text, obj8);
-      obj6.children = items3;
+      const Text = markAsDismissed(4886).Text;
+      intl = markAsDismissed(1126).intl;
+      items3 = [closure_8(Text, obj7)];
+      const obj8 = {
+        style: tmp.text,
+        variant: "text-sm/medium",
+        color: "text-muted",
+        children: intl2.string(_modDef2589["3EQnkg"]),
+      };
+      const Text2 = markAsDismissed(4886).Text;
+      intl2 = markAsDismissed(1126).intl;
+      items3[1] = closure_8(Text2, obj8);
       items2[1] = closure_9(closure_5, obj6);
-      const obj9 = { style: tmp.footer, children: null };
-      const obj10 = { grow: true, text: null, icon: null, onPress: null };
-      const intl3 = markAsDismissed(1126).intl;
-      obj10.text = intl3.string(_modDef2589.DZnomS);
-      const obj5 = { uri: _modDef17120 };
-      obj10.icon = closure_8(markAsDismissed(10766).GiftIcon, {
-        size: "sm",
-        color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
-      });
-      obj10.onPress = callback;
-      obj9.children = closure_8(markAsDismissed(5594).Button, obj10);
+      const obj9 = { style: tmp.footer, children: closure_8(Button, obj10) };
+      obj10 = {
+        grow: true,
+        text: intl3.string(_modDef2589.DZnomS),
+        icon: closure_8(GiftIcon, obj11),
+        onPress: callback,
+      };
+      Button = markAsDismissed(5594).Button;
+      intl3 = markAsDismissed(1126).intl;
+      obj11 = { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
+      GiftIcon = markAsDismissed(10766).GiftIcon;
       items2[2] = closure_8(closure_5, obj9);
-      obj2.children = items2;
-      obj.children = closure_9(closure_5, obj2);
-      return closure_8(markAsDismissed(6645).BottomSheet, obj);
+      return closure_8(BottomSheet, obj);
     };
-ReactCompilerGating = fn(558);
-let obj4 = { gap: nativeDefault.space.PX_8 };
-size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgesCoachmarkActionSheet.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(9);
+      let currentTier;
+      let giftCount;
+      let markAsDismissed;
+      let tmp4;
+      let tmp5;
+      let tmp8;
+      let variant;
+      let obj = react2;
+      const cResult = obj.c(9);
       ({ markAsDismissed, variant } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [BadgeDirectoryStore];
         const fn = function o() {
+          let current;
           const obj = {
             currentTier: BadgeDirectoryStore.getCurrentTier(require("BadgeId").BadgeId.GIFTING),
-            giftCount: null,
+            giftCount: current,
           };
           const singleRequirementProgress = BadgeDirectoryStore.getSingleRequirementProgress(
             require("BadgeId").BadgeId.GIFTING,
           );
-          let current;
+          current = undefined;
           if (singleRequirementProgress != null) {
             current = singleRequirementProgress.current;
           }
-          obj.giftCount = current;
           return obj;
         };
         cResult[0] = items;
@@ -690,61 +787,72 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const stateFromStoresObject = initialize.useStateFromStoresObject(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp4, tmp5);
       ({ currentTier, giftCount } = stateFromStoresObject);
       if (null != currentTier) {
         if (cResult[2] === currentTier) {
           if (cResult[3] === giftCount) {
             if (cResult[4] === markAsDismissed) {
+              let tmp12;
+              if (cResult[5] === variant) {
+                tmp12 = cResult[6];
+              }
+              tmp8 = tmp12;
             }
           }
         }
         const obj2 = { markAsDismissed, currentTier, giftCount, variant };
-        const tmp15 = closure_1_8(closure_11, obj2);
+        const tmp15 = metroImportAll(closure_11, obj2);
         cResult[2] = currentTier;
         cResult[3] = giftCount;
         cResult[4] = markAsDismissed;
         cResult[5] = variant;
         cResult[6] = tmp15;
+        tmp12 = tmp15;
+      } else if (cResult[7] !== markAsDismissed) {
+        const obj3 = { markAsDismissed };
+        const tmp11 = metroImportAll(closure_12, obj3);
+        cResult[7] = markAsDismissed;
+        cResult[8] = tmp11;
+        tmp8 = tmp11;
       } else {
-        if (cResult[7] !== markAsDismissed) {
-          const obj3 = { markAsDismissed };
-          const tmp11 = closure_1_8(closure_12, obj3);
-          cResult[7] = markAsDismissed;
-          cResult[8] = tmp11;
-          let tmp8 = tmp11;
-        } else {
-          tmp8 = cResult[8];
-        }
-        return tmp8;
+        tmp8 = cResult[8];
       }
-      const tmpResult = initialize;
+      return tmp8;
     }
   : (markAsDismissed) => {
+      let tmp5;
       markAsDismissed = markAsDismissed.markAsDismissed;
+      const variant = markAsDismissed.variant;
+      let obj = get_initialized;
       const items = [BadgeDirectoryStore];
-      const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
+      const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+        let current;
         const obj = {
           currentTier: BadgeDirectoryStore.getCurrentTier(require("BadgeId").BadgeId.GIFTING),
-          giftCount: null,
+          giftCount: current,
         };
         const singleRequirementProgress = BadgeDirectoryStore.getSingleRequirementProgress(
           require("BadgeId").BadgeId.GIFTING,
         );
-        let current;
+        current = undefined;
         if (singleRequirementProgress != null) {
           current = singleRequirementProgress.current;
         }
-        obj.giftCount = current;
         return obj;
       });
       const currentTier = stateFromStoresObject.currentTier;
       if (null != currentTier) {
-        const obj2 = { markAsDismissed, currentTier, giftCount: tmp2, variant: markAsDismissed.variant };
-        let tmp5 = closure_1_8(closure_11, obj2);
+        const obj2 = { markAsDismissed, currentTier, giftCount: tmp2, variant };
+        tmp5 = metroImportAll(closure_11, obj2);
       } else {
         const obj3 = { markAsDismissed };
-        tmp5 = closure_1_8(closure_12, obj3);
+        tmp5 = metroImportAll(closure_12, obj3);
       }
       return tmp5;
     };
+size = size_mod;
+const result = size.fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgesCoachmarkActionSheet.tsx");
+
+export default tmp5;

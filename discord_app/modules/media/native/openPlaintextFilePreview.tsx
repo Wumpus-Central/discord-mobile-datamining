@@ -1,5 +1,5 @@
 // discord_app/modules/media/native/openPlaintextFilePreview.tsx
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -8,9 +8,6 @@ const result = size.fileFinishedImporting("modules/media/native/openPlaintextFil
 
 export const PLAINTEXT_FILE_PREVIEW_MODAL_KEY = "PlaintextFilePreview";
 export const openPlaintextFilePreview = function openPlaintextFilePreview(merged) {
-  return ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(11205, dependencyMap.paths),
-    merged,
-    PlaintextFilePreview,
-  );
+  const obj = ModalActionCreatorsDefault;
+  return obj.pushLazy(asyncRequire(11205, dependencyMap.paths), merged, PlaintextFilePreview);
 };

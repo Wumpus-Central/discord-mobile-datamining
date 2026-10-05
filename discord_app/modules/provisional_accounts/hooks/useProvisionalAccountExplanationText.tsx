@@ -1,82 +1,101 @@
 // discord_app/modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import Constants from "../../../Constants.tsx";
+import intl3 from "../../../intl/index.native.tsx";
+import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const util = rSUACb(1126);
-const HelpdeskUtilsDefault = tmp2(2115);
-require = fn;
-const HelpdeskArticles = fn(1085).HelpdeskArticles;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx",
-);
+let importDefault, renderApplicationName;
 
-export const useProvisionalAccountExplanationText = ReactCompilerGating.isReactCompilerEnabled()
+const HelpdeskArticles = Constants.HelpdeskArticles;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (renderApplicationName) => {
-      let rSUACb = require;
-      let getArticleURL = dependencyMap;
-      const cResult = c.c(4);
+      let tmp4Result;
+      let tmp4Result2;
+      let tmp6;
+      const obj = react2;
+      const cResult = obj.c(4);
       renderApplicationName = renderApplicationName.renderApplicationName;
-      let tmp2 = importDefault;
-      const tmp3 = useProvisionalAccountApplicationDefault(renderApplicationName.userId);
-      closure_1 = tmp3;
-      if (null != tmp3) {
-        if (cResult[0] === tmp3) {
+      const tmp5 = useProvisionalAccountApplicationDefault(renderApplicationName.userId);
+      let closure_1 = tmp5;
+      if (null != tmp5) {
+        if (cResult[0] === tmp5) {
+          let tmp10;
+          if (cResult[1] === renderApplicationName) {
+            tmp10 = cResult[2];
+          }
+          tmp6 = tmp10;
         }
-        const intl2 = util.intl;
-        rSUACb = util.t.rSUACb;
-        const obj2 = { helpdeskArticle: null, applicationName: null };
-        tmp2 = HelpdeskUtilsDefault;
-        getArticleURL = tmp2.getArticleURL;
-        obj2.helpdeskArticle = getArticleURL(HelpdeskArticles.SLAYER_PROVISIONAL_ACCOUNTS);
-        obj2.applicationName = function applicationName() {
-          return renderApplicationName(closure_1);
+        const intl2 = intl3.intl;
+        const format2 = intl2.format;
+        const obj2 = {
+          helpdeskArticle: tmp4Result.getArticleURL(HelpdeskArticles.SLAYER_PROVISIONAL_ACCOUNTS),
+          applicationName() {
+            return renderApplicationName(closure_1);
+          },
         };
-        const formatResult = intl2.format(rSUACb, obj2);
-        cResult[0] = tmp3;
+        const rSUACb = intl3.t.rSUACb;
+        tmp4Result = HelpdeskUtilsDefault;
+        const format2Result = format2(rSUACb, obj2);
+        cResult[0] = tmp5;
         cResult[1] = renderApplicationName;
-        cResult[2] = formatResult;
+        cResult[2] = format2Result;
+        tmp10 = format2Result;
       } else {
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = util.intl;
-          const obj3 = {
-            helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SLAYER_PROVISIONAL_ACCOUNTS),
-          };
-          const formatResult1 = intl.format(util.t["q+N8L6"], obj3);
-          cResult[3] = formatResult1;
-          let tmp4 = formatResult1;
-          const tmp2Result = HelpdeskUtilsDefault;
+          const intl = intl3.intl;
+          const format = intl.format;
+          const obj3 = { helpdeskArticle: tmp4Result2.getArticleURL(HelpdeskArticles.SLAYER_PROVISIONAL_ACCOUNTS) };
+          const prop = intl3.t["q+N8L6"];
+          tmp4Result2 = HelpdeskUtilsDefault;
+          const formatResult = format(prop, obj3);
+          cResult[3] = formatResult;
+          tmp6 = formatResult;
         } else {
-          tmp4 = cResult[3];
+          tmp6 = cResult[3];
         }
-        return tmp4;
       }
+      return tmp6;
     }
   : (renderApplicationName) => {
+      let closure_1;
       renderApplicationName = renderApplicationName.renderApplicationName;
       const tmp = useProvisionalAccountApplicationDefault(renderApplicationName.userId);
       importDefault = tmp;
       const items = [tmp, renderApplicationName];
-      return noop.useMemo(() => {
+      return react.useMemo(() => {
+        let formatResult;
+        let obj2;
+        let obj4;
         if (null != closure_1) {
-          const intl = util.intl;
+          const intl = intl3.intl;
+          const format = intl.format;
           const obj = {
-            helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SLAYER_PROVISIONAL_ACCOUNTS),
+            helpdeskArticle: obj2.getArticleURL(HelpdeskArticles.SLAYER_PROVISIONAL_ACCOUNTS),
             applicationName() {
               return renderApplicationName(closure_1_1);
             },
           };
-          let formatResult = intl.format(util.t.rSUACb, obj);
+          const rSUACb = intl3.t.rSUACb;
+          obj2 = HelpdeskUtilsDefault;
+          formatResult = format(rSUACb, obj);
         } else {
-          const intl2 = util.intl;
-          const obj3 = {
-            helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SLAYER_PROVISIONAL_ACCOUNTS),
-          };
-          formatResult = intl2.format(util.t["q+N8L6"], obj3);
+          const intl2 = intl3.intl;
+          const format2 = intl2.format;
+          const obj3 = { helpdeskArticle: obj4.getArticleURL(HelpdeskArticles.SLAYER_PROVISIONAL_ACCOUNTS) };
+          const prop = intl3.t["q+N8L6"];
+          obj4 = HelpdeskUtilsDefault;
+          formatResult = format2(prop, obj3);
         }
         return formatResult;
       }, items);
     };
+const result = size.fileFinishedImporting(
+  "modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx",
+);
+
+export const useProvisionalAccountExplanationText = tmp2;

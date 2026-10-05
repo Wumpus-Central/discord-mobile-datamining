@@ -13,11 +13,7 @@ export const shouldSuppressAutocompleteFetch = function shouldSuppressAutocomple
     while (null == arr) {
       diff = diff - 1;
     }
-    let tmp3 = arr.length <= 0;
-    if (tmp3) {
-      tmp3 = diff >= 7;
-    }
-    return tmp3;
+    return arr.length <= 0 && diff >= 7;
   }
   return false;
 };
@@ -25,7 +21,8 @@ export const normalizeGameAutocompleteQuery = function normalizeGameAutocomplete
   if (null == query) {
     return null;
   } else {
-    const formatted = query.trim().toLowerCase();
+    const str = query.trim();
+    const formatted = str.toLowerCase();
     const replaced = formatted.replaceAll("_", " ");
     const substr = replaced.slice(0, 100);
     let tmp = null;

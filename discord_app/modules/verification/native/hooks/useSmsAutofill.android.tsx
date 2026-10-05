@@ -1,27 +1,30 @@
 // discord_app/modules/verification/native/hooks/useSmsAutofill.android.tsx
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-const require = fn;
-get_ActivityIndicator = fn(17);
-const SmsAutofillManager = get_ActivityIndicator.NativeModules.SmsAutofillManager;
-const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(SmsAutofillManager);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/verification/native/hooks/useSmsAutofill.android.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const SmsAutofillManager = react_native.NativeModules.SmsAutofillManager;
+const nativeEventEmitter = new react_native.NativeEventEmitter(SmsAutofillManager);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_1;
+      let tmp2;
+      let tmp3;
+      let tmp4;
       _require = arg0;
-      const cResult = require("c").c(5);
+      const obj = require("react");
+      const cResult = obj.c(5);
       if (cResult[0] !== arg0) {
         const fn = function o(code) {
           return closure_0(code.code);
         };
         cResult[0] = arg0;
         cResult[1] = fn;
-        let tmp2 = fn;
+        tmp2 = fn;
       } else {
         tmp2 = cResult[1];
       }
@@ -38,20 +41,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = tmp2;
         cResult[3] = fn2;
         cResult[4] = items;
-        let tmp4 = items;
-        let tmp3 = fn2;
+        tmp4 = items;
+        tmp3 = fn2;
       } else {
         tmp3 = cResult[3];
         tmp4 = cResult[4];
       }
-      return noop.useEffect(tmp3, tmp4);
+      return react.useEffect(tmp3, tmp4);
     }
   : (arg0) => {
-      closure_0 = arg0;
+      let closure_0 = arg0;
       const items = [arg0];
-      const callback = noop.useCallback((code) => closure_0(code.code), items);
+      const callback = react.useCallback((code) => closure_0(code.code), items);
       const items1 = [callback];
-      return noop.useEffect(() => {
+      return react.useEffect(() => {
         closure_0 = nativeEventEmitter.addListener("verificationCodeReceived", callback);
         SmsAutofillManager.startSmsRetriever();
         return () => {
@@ -59,3 +62,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
       }, items1);
     };
+const result = size.fileFinishedImporting("modules/verification/native/hooks/useSmsAutofill.android.tsx");
+
+export default tmp4;

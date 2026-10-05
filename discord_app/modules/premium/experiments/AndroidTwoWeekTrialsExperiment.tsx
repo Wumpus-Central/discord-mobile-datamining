@@ -2,22 +2,24 @@
 import ApexExperiment from "../../experiments/apex/index.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = {
+let obj2;
+let obj = {
   name: "2026-06-android-two-week-trials",
   kind: "user",
   defaultConfig: { enabled: false, trialCTAEnabled: false },
-  variations: null,
+  variations: obj2,
 };
-const obj2 = { 1: null, 2: { enabled: true, trialCTAEnabled: true } };
+obj2 = { 1: null, 2: { enabled: true, trialCTAEnabled: true } };
 obj2[2] = { enabled: true, trialCTAEnabled: false };
-obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/premium/experiments/AndroidTwoWeekTrialsExperiment.tsx");
 
 export const AndroidTwoWeekTrialsExperiment = apexExperiment;
 export const isAndroidTwoWeekTrialsExperimentEnabled = function isAndroidTwoWeekTrialsExperimentEnabled(location) {
-  return apexExperiment.getConfig({ location: location.location }).enabled;
+  const obj = { location: location.location };
+  return apexExperiment.getConfig(obj).enabled;
 };
 export const isAndroidTwoWeekTrialsTrialCTAEnabled = function isAndroidTwoWeekTrialsTrialCTAEnabled(location) {
-  return apexExperiment.getConfig({ location: location.location }).trialCTAEnabled;
+  const obj = { location: location.location };
+  return apexExperiment.getConfig(obj).trialCTAEnabled;
 };

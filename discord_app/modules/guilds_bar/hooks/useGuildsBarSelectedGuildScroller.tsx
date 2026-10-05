@@ -1,21 +1,24 @@
 // discord_app/modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let tmp2;
+      let tmp3;
       _require = arg0;
-      const cResult = require("c").c(3);
+      const obj = require("react");
+      const cResult = obj.c(3);
       if (cResult[0] !== arg0) {
         const fn = function t() {
-          c0 = null;
+          let _null;
+          let c0 = null;
           function handleSelectedGuildChange() {
             let guildId = SelectedGuildStore.getGuildId();
             if (guildId !== c0) {
@@ -39,18 +42,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = arg0;
         cResult[1] = fn;
         cResult[2] = items;
-        let tmp3 = items;
-        let tmp2 = fn;
+        tmp3 = items;
+        tmp2 = fn;
       } else {
         tmp2 = cResult[1];
         tmp3 = cResult[2];
       }
-      const effect = noop.useEffect(tmp2, tmp3);
+      const effect = react.useEffect(tmp2, tmp3);
     }
   : (arg0) => {
-      closure_0 = arg0;
+      let closure_0 = arg0;
       const items = [arg0];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
+        let _null;
         function handleSelectedGuildChange() {
           let guildId = SelectedGuildStore.getGuildId();
           if (guildId !== c0) {
@@ -65,10 +69,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             _null(guildId, false);
           }
         }
-        c0 = null;
+        let c0 = null;
         SelectedGuildStore.addChangeListener(handleSelectedGuildChange);
         return () => {
           SelectedGuildStore.removeChangeListener(handleSelectedGuildChange);
         };
       }, items);
     };
+const result = size.fileFinishedImporting("modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx");
+
+export default tmp2;

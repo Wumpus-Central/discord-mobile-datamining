@@ -1,21 +1,26 @@
 // discord_app/modules/themes/native/useNativeThemeUpdater.tsx
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/themes/native/useNativeThemeUpdater.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = require("c").c(4);
-      _require = noop.useRef(ThemeStore.theme);
+      let closure_0;
+      let tmp2;
+      let tmp3;
+      let tmp5;
+      let tmp6;
+      let obj = require("react");
+      const cResult = obj.c(4);
+      _require = react.useRef(ThemeStore.theme);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function u() {
-          closure_0(17143).updateVisualRefresh(true);
+          const obj = closure_0(dependencyMap[4]);
+          obj.updateVisualRefresh(true);
         };
         const items = [];
         cResult[0] = fn;
@@ -25,16 +30,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp2, tmp3] = cResult;
       }
-      const layoutEffect = noop.useLayoutEffect(tmp2, tmp3);
+      const layoutEffect = react.useLayoutEffect(tmp2, tmp3);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function s() {
-          handleThemeUpdate(17144).updateTheme(ThemeStore.theme);
+          let handleThemeUpdate;
+          let obj = handleThemeUpdate(dependencyMap[5]);
+          obj.updateTheme(ThemeStore.theme);
           handleThemeUpdate = function handleThemeUpdate() {
             const theme = ThemeStore.theme;
             if (theme !== handleThemeUpdate.current) {
               handleThemeUpdate.current = theme;
-              handleThemeUpdate(17144).updateTheme(theme);
-              const obj = handleThemeUpdate(17144);
+              const obj = handleThemeUpdate(dependencyMap[5]);
+              obj.updateTheme(theme);
             }
           };
           ThemeStore.addChangeListener(handleThemeUpdate);
@@ -45,33 +52,37 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [];
         cResult[2] = fn2;
         cResult[3] = items1;
-        let tmp6 = items1;
-        let tmp5 = fn2;
+        tmp6 = items1;
+        tmp5 = fn2;
       } else {
         tmp5 = cResult[2];
         tmp6 = cResult[3];
       }
-      const layoutEffect1 = noop.useLayoutEffect(tmp5, tmp6);
-      let obj = require("c");
+      const layoutEffect1 = react.useLayoutEffect(tmp5, tmp6);
     }
   : () => {
-      closure_0 = noop.useRef(ThemeStore.theme);
-      const layoutEffect = noop.useLayoutEffect(() => {
-        closure_0(17143).updateVisualRefresh(true);
+      let closure_0 = react.useRef(ThemeStore.theme);
+      const layoutEffect = react.useLayoutEffect(() => {
+        const obj = closure_0(dependencyMap[4]);
+        obj.updateVisualRefresh(true);
       }, []);
-      const layoutEffect1 = noop.useLayoutEffect(() => {
+      const layoutEffect1 = react.useLayoutEffect(() => {
         function handleThemeUpdate() {
           const theme = ThemeStore.theme;
           if (theme !== handleThemeUpdate.current) {
             handleThemeUpdate.current = theme;
-            handleThemeUpdate(17144).updateTheme(theme);
-            const obj = handleThemeUpdate(17144);
+            const obj = handleThemeUpdate(dependencyMap[5]);
+            obj.updateTheme(theme);
           }
         }
-        handleThemeUpdate(17144).updateTheme(ThemeStore.theme);
+        let obj = handleThemeUpdate(dependencyMap[5]);
+        obj.updateTheme(ThemeStore.theme);
         ThemeStore.addChangeListener(handleThemeUpdate);
         return () => {
           ThemeStore.removeChangeListener(handleThemeUpdate);
         };
       }, []);
     };
+const result = size.fileFinishedImporting("modules/themes/native/useNativeThemeUpdater.tsx");
+
+export default tmp2;

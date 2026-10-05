@@ -9,79 +9,262 @@ const require = globalThis.__r;
 const PremiumTypes = PremiumConstants.PremiumTypes;
 const result = size.fileFinishedImporting("modules/user_profile/DisplayProfile.tsx");
 class DisplayProfile {
-  constructor(arg0, arg1) {
-    obj = Object.create(new.target.prototype);
-    obj.userId = global.userId;
+  constructor(userId, guildId) {
+    const obj = Object.create(new.target.prototype);
+    obj.userId = userId.userId;
     guildId = undefined;
-    if (require != null) {
-      guildId = require.guildId;
+    if (guildId != null) {
+      guildId = guildId.guildId;
     }
     obj.guildId = guildId;
-    banner = undefined;
-    if (require != null) {
-      banner = require.banner;
+    let banner;
+    if (guildId != null) {
+      banner = guildId.banner;
     }
     if (banner == null) {
-      banner = global.banner;
+      banner = userId.banner;
     }
     obj.banner = banner;
-    bio = undefined;
-    if (require != null) {
-      bio = require.bio;
+    let bio1;
+    const bio = userId.bio;
+    if (guildId != null) {
+      bio1 = guildId.bio;
     }
-    if (null == bio) {
-      bio = global.bio;
-    } else {
-      str = "";
+    if (null == bio1) {
+      bio1 = bio;
     }
-    obj.bio = bio;
-    pronouns = undefined;
-    if (require != null) {
-      pronouns = require.pronouns;
+    obj.bio = bio1;
+    let pronouns1;
+    const pronouns = userId.pronouns;
+    if (guildId != null) {
+      pronouns1 = guildId.pronouns;
     }
-    if (null == pronouns) {
-      pronouns = global.pronouns;
-    } else {
-      str2 = "";
+    if (null == pronouns1) {
+      pronouns1 = pronouns;
     }
-    obj.pronouns = pronouns;
-    obj.accentColor = global.accentColor;
-    themeColors = undefined;
-    if (require != null) {
-      themeColors = require.themeColors;
+    obj.pronouns = pronouns1;
+    obj.accentColor = userId.accentColor;
+    let themeColors;
+    if (guildId != null) {
+      themeColors = guildId.themeColors;
     }
     if (themeColors == null) {
-      themeColors = global.themeColors;
+      themeColors = userId.themeColors;
     }
     obj.themeColors = themeColors;
-    profileEffect = undefined;
-    if (require != null) {
-      profileEffect = require.profileEffect;
+    let profileEffect;
+    if (guildId != null) {
+      profileEffect = guildId.profileEffect;
     }
     if (profileEffect == null) {
-      profileEffect = global.profileEffect;
+      profileEffect = userId.profileEffect;
     }
     obj.profileEffect = profileEffect;
-    profileFrame = undefined;
-    if (require != null) {
-      profileFrame = require.profileFrame;
+    let profileFrame;
+    if (guildId != null) {
+      profileFrame = guildId.profileFrame;
     }
     if (profileFrame == null) {
-      profileFrame = global.profileFrame;
+      profileFrame = userId.profileFrame;
     }
     obj.profileFrame = profileFrame;
-    prop = undefined;
-    if (require != null) {
-      prop = require.popoutAnimationParticleType;
+    let prop;
+    if (guildId != null) {
+      prop = guildId.popoutAnimationParticleType;
     }
     if (prop == null) {
-      prop = global.popoutAnimationParticleType;
+      prop = userId.popoutAnimationParticleType;
     }
     obj.popoutAnimationParticleType = prop;
-    ({ fetchStartedAt: tmp.fetchStartedAt, fetchEndedAt: tmp.fetchEndedAt } = global);
-    obj._userProfile = global;
-    obj._guildMemberProfile = require;
+    ({ fetchStartedAt: tmp.fetchStartedAt, fetchEndedAt: tmp.fetchEndedAt } = userId);
+    obj._userProfile = userId;
+    obj._guildMemberProfile = guildId;
     return obj;
+  }
+  hasThemeColors() {
+    const themeColors = this.themeColors;
+    let first;
+    if (themeColors != null) {
+      first = themeColors[0];
+    }
+    let tmp2 = null != first;
+    if (!tmp2) {
+      const themeColors2 = this.themeColors;
+      let tmp3;
+      if (themeColors2 != null) {
+        tmp3 = themeColors2[1];
+      }
+      tmp2 = null != tmp3;
+    }
+    return tmp2;
+  }
+  hasPremiumCustomization() {
+    const self = this;
+    const hasThemeColorsResult =
+      this.isUsingGuildMemberBanner() ||
+      self.isUsingGuildMemberBio() ||
+      null != self.banner ||
+      self.hasThemeColors() ||
+      null != self.popoutAnimationParticleType;
+    return hasThemeColorsResult;
+  }
+  isUsingGuildMemberBanner() {
+    const _guildMemberProfile = this._guildMemberProfile;
+    let banner;
+    if (_guildMemberProfile != null) {
+      banner = _guildMemberProfile.banner;
+    }
+    return null != banner;
+  }
+  isUsingGuildMemberBio() {
+    const _guildMemberProfile = this._guildMemberProfile;
+    let bio;
+    if (_guildMemberProfile != null) {
+      bio = _guildMemberProfile.bio;
+    }
+    let tmp2 = null != bio;
+    if (tmp2) {
+      const _guildMemberProfile2 = this._guildMemberProfile;
+      let bio1;
+      if (_guildMemberProfile2 != null) {
+        bio1 = _guildMemberProfile2.bio;
+      }
+      tmp2 = "" !== bio1;
+    }
+    return tmp2;
+  }
+  isUsingGuildMemberPronouns() {
+    const _guildMemberProfile = this._guildMemberProfile;
+    let pronouns;
+    if (_guildMemberProfile != null) {
+      pronouns = _guildMemberProfile.pronouns;
+    }
+    let tmp2 = null != pronouns;
+    if (tmp2) {
+      const _guildMemberProfile2 = this._guildMemberProfile;
+      let pronouns1;
+      if (_guildMemberProfile2 != null) {
+        pronouns1 = _guildMemberProfile2.pronouns;
+      }
+      tmp2 = "" !== pronouns1;
+    }
+    return tmp2;
+  }
+  getBannerURL(arg0) {
+    let canAnimate;
+    const self = this;
+    ({ canAnimate, size } = arg0);
+    if (null != this.guildId) {
+      let guildMemberBannerURL;
+      if (self.isUsingGuildMemberBanner()) {
+        const obj2 = { id: null, guildId: null, banner: null, canAnimate, size };
+        ({ userId: obj4.id, guildId: obj4.guildId, banner: obj4.banner } = self);
+        const obj3 = AvatarUtils;
+        guildMemberBannerURL = obj3.getGuildMemberBannerURL(obj2);
+      }
+      return guildMemberBannerURL;
+    }
+    const obj = AvatarUtils;
+    const obj6 = { id: self.userId, banner: self.banner, canAnimate, size };
+    guildMemberBannerURL = obj.getUserBannerURL(obj6);
+  }
+  getPreviewBanner(pendingBanner, canAnimate, arg2) {
+    let bannerURL;
+    let num = arg2;
+    if (arg2 === undefined) {
+      num = 480;
+    }
+    if (null != pendingBanner) {
+      let imageUri;
+      if (canAnimate) {
+        imageUri = pendingBanner.imageUri;
+      } else {
+        imageUri = pendingBanner.staticImageUri;
+        if (imageUri == null) {
+          imageUri = pendingBanner.imageUri;
+        }
+      }
+      bannerURL = imageUri;
+    } else {
+      const self = this;
+      if (null === pendingBanner) {
+        let userBannerURL = null;
+        if (self.isUsingGuildMemberBanner()) {
+          const obj3 = { id: self.userId, banner: self._userProfile.banner, canAnimate, size: num };
+          const obj2 = AvatarUtils;
+          userBannerURL = obj2.getUserBannerURL(obj3);
+        }
+        bannerURL = userBannerURL;
+      } else {
+        const obj = { canAnimate, size: num };
+        bannerURL = self.getBannerURL(obj);
+      }
+    }
+    return bannerURL;
+  }
+  getPreviewBio(pendingBio) {
+    let bio;
+    const _guildMemberProfile = this._guildMemberProfile;
+    const obj = { pendingValue: pendingBio, userValue: this._userProfile.bio, guildValue: bio, guildId: this.guildId };
+    bio = undefined;
+    const getProfilePreviewValue = ProfileCustomizationUtils.getProfilePreviewValue;
+    ProfileCustomizationUtils;
+    if (_guildMemberProfile != null) {
+      bio = _guildMemberProfile.bio;
+    }
+    return getProfilePreviewValue(obj);
+  }
+  getPreviewPronouns(pendingValue) {
+    let pronouns;
+    const _guildMemberProfile = this._guildMemberProfile;
+    const obj = { pendingValue, userValue: this._userProfile.pronouns, guildValue: pronouns, guildId: this.guildId };
+    pronouns = undefined;
+    const getProfilePreviewValue = ProfileCustomizationUtils.getProfilePreviewValue;
+    ProfileCustomizationUtils;
+    if (_guildMemberProfile != null) {
+      pronouns = _guildMemberProfile.pronouns;
+    }
+    return getProfilePreviewValue(obj);
+  }
+  getPreviewThemeColors(pendingThemeColors) {
+    let tmp3;
+    let first;
+    if (pendingThemeColors != null) {
+      first = pendingThemeColors[0];
+    }
+    if (null == first) {
+      let themeColors;
+      const self = this;
+      if (undefined !== pendingThemeColors) {
+        themeColors = self._userProfile.themeColors;
+      } else {
+        themeColors = self.themeColors;
+      }
+      tmp3 = themeColors;
+    } else {
+      tmp3 = pendingThemeColors;
+    }
+    return tmp3;
+  }
+  getBadges() {
+    let badges = this._userProfile.badges;
+    if (badges == null) {
+      badges = [];
+    }
+    const items = [...badges];
+    const _guildMemberProfile = this._guildMemberProfile;
+    let badges1;
+    if (_guildMemberProfile != null) {
+      badges1 = _guildMemberProfile.badges;
+    }
+    if (badges1 == null) {
+      badges1 = [];
+    }
+    HermesBuiltin.arraySpread(items, badges1, tmp2);
+    return items;
+  }
+  getLegacyUsername() {
+    return this._userProfile.legacyUsername;
   }
 }
 const prototype = DisplayProfile.prototype;
@@ -89,31 +272,31 @@ Object.defineProperty(prototype, "premiumSince", {
   get: function premiumSince() {
     return this._userProfile.premiumSince;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "premiumGuildSince", {
   get: function premiumGuildSince() {
     return this._userProfile.premiumGuildSince;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "premiumType", {
   get: function premiumType() {
     return this._userProfile.premiumType;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "private", {
-  get: function private() {
+  get: function () {
     return this._userProfile.private;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "widgets", {
   get: function widgets() {
     return this._userProfile.widgets;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "gameWidgets", {
   get: function gameWidgets() {
@@ -124,7 +307,7 @@ Object.defineProperty(prototype, "gameWidgets", {
     }
     return found;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "primaryColor", {
   get: function primaryColor() {
@@ -138,25 +321,26 @@ Object.defineProperty(prototype, "primaryColor", {
     }
     return first;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "canUsePremiumProfileCustomization", {
   get: function canUsePremiumProfileCustomization() {
-    return require("PremiumUtils").isPremiumAtLeast(this.premiumType, PremiumTypes.TIER_2);
+    const obj = require("PremiumUtils");
+    return obj.isPremiumAtLeast(this.premiumType, PremiumTypes.TIER_2);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "canEditThemes", {
   get: function canEditThemes() {
     return this.canUsePremiumProfileCustomization;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "application", {
   get: function application() {
     return this._userProfile.application;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isLoaded", {
   get: function isLoaded() {
@@ -164,193 +348,10 @@ Object.defineProperty(prototype, "isLoaded", {
     let tmp = undefined !== this._userProfile;
     if (tmp) {
       tmp = null == self.guildId || undefined !== self._guildMemberProfile;
-      const tmp3 = null == self.guildId || undefined !== self._guildMemberProfile;
     }
     return tmp;
   },
-  set: undefined
+  set: undefined,
 });
-prototype["hasThemeColors"] = function hasThemeColors() {
-  const themeColors = this.themeColors;
-  let first;
-  if (themeColors != null) {
-    first = themeColors[0];
-  }
-  let tmp2 = null != first;
-  if (!tmp2) {
-    const themeColors2 = this.themeColors;
-    let tmp3;
-    if (themeColors2 != null) {
-      tmp3 = themeColors2[1];
-    }
-    tmp2 = null != tmp3;
-  }
-  return tmp2;
-};
-prototype["hasPremiumCustomization"] = function hasPremiumCustomization() {
-  const self = this;
-  let hasThemeColorsResult = this.isUsingGuildMemberBanner() || self.isUsingGuildMemberBio();
-  if (!hasThemeColorsResult) {
-    hasThemeColorsResult = null != self.banner;
-  }
-  if (!hasThemeColorsResult) {
-    hasThemeColorsResult = self.hasThemeColors();
-  }
-  if (!hasThemeColorsResult) {
-    hasThemeColorsResult = null != self.popoutAnimationParticleType;
-  }
-  return hasThemeColorsResult;
-};
-prototype["isUsingGuildMemberBanner"] = function isUsingGuildMemberBanner() {
-  const _guildMemberProfile = this._guildMemberProfile;
-  let banner;
-  if (_guildMemberProfile != null) {
-    banner = _guildMemberProfile.banner;
-  }
-  return null != banner;
-};
-prototype["isUsingGuildMemberBio"] = function isUsingGuildMemberBio() {
-  const _guildMemberProfile = this._guildMemberProfile;
-  let bio;
-  if (_guildMemberProfile != null) {
-    bio = _guildMemberProfile.bio;
-  }
-  let tmp2 = null != bio;
-  if (tmp2) {
-    const _guildMemberProfile2 = this._guildMemberProfile;
-    let bio1;
-    if (_guildMemberProfile2 != null) {
-      bio1 = _guildMemberProfile2.bio;
-    }
-    tmp2 = "" !== bio1;
-  }
-  return tmp2;
-};
-prototype["isUsingGuildMemberPronouns"] = function isUsingGuildMemberPronouns() {
-  const _guildMemberProfile = this._guildMemberProfile;
-  let pronouns;
-  if (_guildMemberProfile != null) {
-    pronouns = _guildMemberProfile.pronouns;
-  }
-  let tmp2 = null != pronouns;
-  if (tmp2) {
-    const _guildMemberProfile2 = this._guildMemberProfile;
-    let pronouns1;
-    if (_guildMemberProfile2 != null) {
-      pronouns1 = _guildMemberProfile2.pronouns;
-    }
-    tmp2 = "" !== pronouns1;
-  }
-  return tmp2;
-};
-prototype["getBannerURL"] = function getBannerURL(arg0) {
-  const self = this;
-  ({ canAnimate, size } = arg0);
-  if (null != this.guildId) {
-    if (self.isUsingGuildMemberBanner()) {
-      const obj2 = { id: null, guildId: null, banner: null, canAnimate: null, size: null };
-      ({ userId: obj4.id, guildId: obj4.guildId, banner: obj4.banner } = self);
-      obj2.canAnimate = canAnimate;
-      obj2.size = size;
-      let guildMemberBannerURL = AvatarUtils.getGuildMemberBannerURL(obj2);
-    }
-    return guildMemberBannerURL;
-  }
-  guildMemberBannerURL = AvatarUtils.getUserBannerURL({ id: self.userId, banner: self.banner, canAnimate, size });
-  const obj6 = { id: self.userId, banner: self.banner, canAnimate, size };
-};
-prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, canAnimate, arg2) {
-  let num = arg2;
-  if (arg2 === undefined) {
-    num = 480;
-  }
-  if (null != pendingBanner) {
-    if (canAnimate) {
-      let imageUri = pendingBanner.imageUri;
-    } else {
-      imageUri = pendingBanner.staticImageUri;
-      if (imageUri == null) {
-        imageUri = pendingBanner.imageUri;
-      }
-    }
-  } else {
-    const self = this;
-    if (null === pendingBanner) {
-      let userBannerURL = null;
-      if (self.isUsingGuildMemberBanner()) {
-        const obj3 = { id: self.userId, banner: self._userProfile.banner, canAnimate, size: num };
-        userBannerURL = AvatarUtils.getUserBannerURL(obj3);
-      }
-      let bannerURL = userBannerURL;
-    } else {
-      const obj = { canAnimate, size: num };
-      bannerURL = self.getBannerURL(obj);
-    }
-    return bannerURL;
-  }
-};
-prototype["getPreviewBio"] = function getPreviewBio(pendingBio) {
-  const obj2 = { pendingValue: pendingBio, userValue: this._userProfile.bio, guildValue: null, guildId: null };
-  const _guildMemberProfile = this._guildMemberProfile;
-  let bio;
-  if (_guildMemberProfile != null) {
-    bio = _guildMemberProfile.bio;
-  }
-  obj2.guildValue = bio;
-  obj2.guildId = this.guildId;
-  return ProfileCustomizationUtils.getProfilePreviewValue(obj2);
-};
-prototype["getPreviewPronouns"] = function getPreviewPronouns(pendingValue) {
-  const obj2 = { pendingValue, userValue: this._userProfile.pronouns, guildValue: null, guildId: null };
-  const _guildMemberProfile = this._guildMemberProfile;
-  let pronouns;
-  if (_guildMemberProfile != null) {
-    pronouns = _guildMemberProfile.pronouns;
-  }
-  obj2.guildValue = pronouns;
-  obj2.guildId = this.guildId;
-  return ProfileCustomizationUtils.getProfilePreviewValue(obj2);
-};
-prototype["getPreviewThemeColors"] = function getPreviewThemeColors(pendingThemeColors) {
-  let first;
-  if (pendingThemeColors != null) {
-    first = pendingThemeColors[0];
-  }
-  if (null != first) {
-    let tmp2;
-    if (pendingThemeColors != null) {
-      tmp2 = pendingThemeColors[1];
-    }
-    if (null != tmp2) {
-      return pendingThemeColors;
-    }
-  }
-  _userProfile = this;
-  if (undefined !== pendingThemeColors) {
-    ({ _userProfile, themeColors } = _userProfile);
-  } else {
-    themeColors = _userProfile.themeColors;
-  }
-};
-prototype["getBadges"] = function getBadges() {
-  let badges = this._userProfile.badges;
-  if (badges == null) {
-    badges = [];
-  }
-  const items = [...badges];
-  const _guildMemberProfile = this._guildMemberProfile;
-  let badges1;
-  if (_guildMemberProfile != null) {
-    badges1 = _guildMemberProfile.badges;
-  }
-  if (badges1 == null) {
-    badges1 = [];
-  }
-  HermesBuiltin.arraySpread(badges1, tmp);
-  return items;
-};
-prototype["getLegacyUsername"] = function getLegacyUsername() {
-  return this._userProfile.legacyUsername;
-};
 
 export default DisplayProfile;

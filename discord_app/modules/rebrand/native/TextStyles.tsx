@@ -21,7 +21,6 @@ export default function createTextStyle(fontFamily, color, arg2, uppercase) {
     let tmp3 = tmp <= 14;
     if (tmp3) {
       tmp3 = fontFamily === Fonts.DISPLAY_EXTRABOLD || fontFamily === Fonts.DISPLAY_SEMIBOLD;
-      const tmp4 = fontFamily === Fonts.DISPLAY_EXTRABOLD || fontFamily === Fonts.DISPLAY_SEMIBOLD;
     }
     if (tmp3) {
       obj.letterSpacing = 0.2;

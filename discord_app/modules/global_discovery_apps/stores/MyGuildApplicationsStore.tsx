@@ -1,18 +1,27 @@
 // discord_app/modules/global_discovery_apps/stores/MyGuildApplicationsStore.tsx
-import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import DurationsDefault from "../../../utils/Durations.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
+
+let set;
 
 function addToApplicationIdToGuildIds(applicationId) {
   applicationId = applicationId.applicationId;
+  const guildId = applicationId.guildId;
   if (null == closure_3.applicationIdToGuildIds[applicationId]) {
     const _Set = Set;
-    const set = new Set();
-    closure_3.applicationIdToGuildIds[applicationId] = set;
+    const self = this;
+    const self2 = this;
+    const applicationIdToGuildIds = closure_3.applicationIdToGuildIds;
+    applicationIdToGuildIds[applicationId] = new Set();
+    set = new Set();
   }
-  closure_3.applicationIdToGuildIds[applicationId].add(applicationId.guildId);
-  closure_3.applicationIdToGuildIds[applicationId] = new Set(closure_3.applicationIdToGuildIds[applicationId]);
-  const set1 = new Set(closure_3.applicationIdToGuildIds[applicationId]);
+  const obj = closure_3.applicationIdToGuildIds[applicationId];
+  obj.add(guildId);
+  const applicationIdToGuildIds2 = closure_3.applicationIdToGuildIds;
+  applicationIdToGuildIds2[applicationId] = new Set(closure_3.applicationIdToGuildIds[applicationId]);
+  new Set(closure_3.applicationIdToGuildIds[applicationId]);
 }
 const FetchState = {
   NOT_FETCHED: 0,
@@ -24,52 +33,54 @@ const FetchState = {
   ERROR: 3,
   [3]: "ERROR",
 };
-let closure_3 = {
+const _false = {
   applicationIdToGuildIds: {},
   lastFetchTimeMs: null,
   nextFetchRetryTimeMs: null,
   fetchState: FetchState.NOT_FETCHED,
 };
-const PersistedStore = initializeDefault.PersistedStore;
-class MyGuildApplicationsStore extends PersistedStore {}
-const prototype = MyGuildApplicationsStore.prototype;
-prototype["initialize"] = function initialize(applicationIdToGuildIds) {
-  if (null != applicationIdToGuildIds) {
-    ({
-      lastFetchTimeMs: closure_3.lastFetchTimeMs,
-      nextFetchRetryTimeMs: closure_3.nextFetchRetryTimeMs,
-      fetchState: closure_3.fetchState,
-    } = applicationIdToGuildIds);
-    for (const key10009 in arg0.applicationIdToGuildIds) {
-      let _Set = Set;
-      let tmp5 = new.target;
-      let tmp6 = new.target;
-      let set = new Set(arg0.applicationIdToGuildIds[key10009]);
-      closure_3.applicationIdToGuildIds[key10009] = set;
-      continue;
+const PersistedStore = get_initializedDefault.PersistedStore;
+class MyGuildApplicationsStore extends PersistedStore {
+  initialize(applicationIdToGuildIds) {
+    if (null != applicationIdToGuildIds) {
+      ({
+        lastFetchTimeMs: closure_3.lastFetchTimeMs,
+        nextFetchRetryTimeMs: closure_3.nextFetchRetryTimeMs,
+        fetchState: closure_3.fetchState,
+      } = applicationIdToGuildIds);
+      for (const key10009 in applicationIdToGuildIds.applicationIdToGuildIds) {
+        let _Set = Set;
+        let self = this;
+        let self2 = this;
+        applicationIdToGuildIds = closure_3.applicationIdToGuildIds;
+        set = new Set(applicationIdToGuildIds.applicationIdToGuildIds[key10009]);
+        applicationIdToGuildIds[key10009] = set;
+        continue;
+      }
     }
   }
-};
-prototype["getState"] = function getState() {
-  return closure_3;
-};
-prototype["getGuildIdsForApplication"] = function getGuildIdsForApplication(arg0) {
-  if (null != arg0) {
-    return closure_3.applicationIdToGuildIds[arg0];
+  getState() {
+    return closure_3;
   }
-};
-prototype["getLastFetchTimeMs"] = function getLastFetchTimeMs() {
-  return closure_3.lastFetchTimeMs;
-};
-prototype["getNextFetchRetryTimeMs"] = function getNextFetchRetryTimeMs() {
-  return closure_3.nextFetchRetryTimeMs;
-};
-prototype["getFetchState"] = function getFetchState() {
-  return closure_3.fetchState;
-};
+  getGuildIdsForApplication(arg0) {
+    if (null != arg0) {
+      return closure_3.applicationIdToGuildIds[arg0];
+    }
+  }
+  getLastFetchTimeMs() {
+    return closure_3.lastFetchTimeMs;
+  }
+  getNextFetchRetryTimeMs() {
+    return closure_3.nextFetchRetryTimeMs;
+  }
+  getFetchState() {
+    return closure_3.fetchState;
+  }
+}
+const prototype = MyGuildApplicationsStore.prototype;
 MyGuildApplicationsStore.displayName = "MyGuildApplicationsStore";
 MyGuildApplicationsStore.persistKey = "MyGuildApplicationsStore";
-const myGuildApplicationsStore = new MyGuildApplicationsStore(DispatcherDefault, {
+const obj2 = {
   LOGOUT: function handleLogout() {
     closure_3.applicationIdToGuildIds = {};
     closure_3.lastFetchTimeMs = null;
@@ -114,28 +125,39 @@ const myGuildApplicationsStore = new MyGuildApplicationsStore(DispatcherDefault,
       const id = application.id;
       if (null == closure_3.applicationIdToGuildIds[id]) {
         const _Set = Set;
-        const set = new Set();
-        closure_3.applicationIdToGuildIds[id] = set;
+        const self = this;
+        const self2 = this;
+        const applicationIdToGuildIds = closure_3.applicationIdToGuildIds;
+        applicationIdToGuildIds[id] = new Set();
+        set = new Set();
       }
-      closure_3.applicationIdToGuildIds[id].add(tmp);
+      const obj = closure_3.applicationIdToGuildIds[id];
+      obj.add(tmp);
       const _Set2 = Set;
+      const self3 = this;
+      const self4 = this;
+      const applicationIdToGuildIds2 = closure_3.applicationIdToGuildIds;
+      applicationIdToGuildIds2[id] = new Set(closure_3.applicationIdToGuildIds[id]);
       const set1 = new Set(closure_3.applicationIdToGuildIds[id]);
-      closure_3.applicationIdToGuildIds[id] = set1;
     }
   },
   INTEGRATION_DELETE: function handleIntegrationDelete(applicationId) {
     applicationId = applicationId.applicationId;
     if (null != applicationId) {
       if (null != closure_3.applicationIdToGuildIds[applicationId]) {
-        closure_3.applicationIdToGuildIds[applicationId].delete(tmp);
+        const obj = closure_3.applicationIdToGuildIds[applicationId];
+        obj.delete(tmp);
         const _Set = Set;
-        const set = new Set(closure_3.applicationIdToGuildIds[applicationId]);
-        closure_3.applicationIdToGuildIds[applicationId] = set;
+        const self = this;
+        const self2 = this;
+        const applicationIdToGuildIds = closure_3.applicationIdToGuildIds;
+        applicationIdToGuildIds[applicationId] = new Set(closure_3.applicationIdToGuildIds[applicationId]);
+        set = new Set(closure_3.applicationIdToGuildIds[applicationId]);
       }
     }
   },
-});
-const size = fn(2);
+};
+const myGuildApplicationsStore = new MyGuildApplicationsStore(DispatcherDefault, obj2);
 let result = size.fileFinishedImporting("modules/global_discovery_apps/stores/MyGuildApplicationsStore.tsx");
 
 export default myGuildApplicationsStore;

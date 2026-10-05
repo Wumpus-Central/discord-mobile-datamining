@@ -1,4 +1,5 @@
 // discord_app/modules/age_assurance/native/AgeVerificationGetStartedModal.tsx
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import AgeVerificationAnalyticsUtils from "../AgeVerificationAnalyticsUtils.tsx";
@@ -6,154 +7,157 @@ import GoogleWalletVerificationScreenDefault from "GoogleWalletVerificationScree
 import AgeVerificationIntroScreenDefault from "AgeVerificationIntroScreen.tsx";
 import AgeVerificationRetryScreenDefault from "AgeVerificationRetryScreen.tsx";
 import AgeVerificationEmbeddedIntroScreenDefault from "AgeVerificationEmbeddedIntroScreen.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+const require = globalThis.__r;
+let _require, dependencyMap;
+
+let obj2;
 function getScreens(headerStyle, modalSessionId, entryPoint, classificationId, arg4) {
+  let obj5;
+  let obj7;
+  let obj9;
   _require = modalSessionId;
   dependencyMap = classificationId;
-  closure_3 = arg4;
+  let closure_3 = arg4;
   function closeModal() {
-    return entryPoint(classificationId[4]).pop();
+    const arr = entryPoint(classificationId[4]);
+    return arr.pop();
   }
   function closeModalWithOnComplete() {
-    ModalActionCreatorsDefault.pop();
+    const arr = ModalActionCreatorsDefault;
+    arr.pop();
     if (closure_3 != null) {
       closure_3();
     }
   }
   const obj = {};
+  const INTRO = obj3.INTRO;
   const obj2 = {
     headerStyle: headerStyle.headerStyle,
     headerTitle() {
       return null;
     },
-    headerLeft: require("NavigatorHeader").getHeaderCloseButton(closeModal),
+    headerLeft: obj3.getHeaderCloseButton(closeModal),
     render() {
       return jsx(AgeVerificationIntroScreenDefault, { onClose: closeModal, modalSessionId, entryPoint });
     },
   };
-  obj[obj4.INTRO] = obj2;
-  obj4 = {
+  obj3 = require("NavigatorHeader");
+  obj[INTRO] = obj2;
+  const RETRY = obj3.RETRY;
+  const obj4 = {
     headerStyle: headerStyle.headerStyle,
     headerTitle() {
       return null;
     },
-    headerLeft: null,
-    render: null,
+    headerLeft: obj5.getHeaderCloseButton(closeModal),
+    render() {
+      return jsx(AgeVerificationRetryScreenDefault, { onClose: closeModal, modalSessionId });
+    },
   };
-  const obj3 = require("NavigatorHeader");
-  obj4.headerLeft = require("NavigatorHeader").getHeaderCloseButton(closeModal);
-  obj4.render = function render() {
-    return jsx(AgeVerificationRetryScreenDefault, { onClose: closeModal, modalSessionId });
-  };
-  obj[obj4.RETRY] = obj4;
+  obj[RETRY] = obj4;
+  obj5 = require("NavigatorHeader");
+  const EXPRESSIVE_INTRO = obj3.EXPRESSIVE_INTRO;
   const obj6 = {
     headerStyle: headerStyle.headerStyle,
     headerTitle() {
       return null;
     },
-    headerLeft: null,
-    render: null,
+    headerLeft: obj7.getHeaderCloseButton(closeModal),
+    render(arg0, navigation) {
+      return jsx(AgeVerificationEmbeddedIntroScreenDefault, {
+        onClose: closeModalWithOnComplete,
+        modalSessionId,
+        classificationId,
+        entryPoint,
+        navigation,
+      });
+    },
   };
-  const obj5 = require("NavigatorHeader");
-  obj6.headerLeft = require("NavigatorHeader").getHeaderCloseButton(closeModal);
-  obj6.render = function render(arg0, navigation) {
-    return jsx(AgeVerificationEmbeddedIntroScreenDefault, {
-      onClose: closeModalWithOnComplete,
-      modalSessionId,
-      classificationId,
-      entryPoint,
-      navigation,
-    });
-  };
-  obj[obj4.EXPRESSIVE_INTRO] = obj6;
+  obj[EXPRESSIVE_INTRO] = obj6;
+  obj7 = require("NavigatorHeader");
+  const GOOGLE_WALLET_VERIFICATION = obj3.GOOGLE_WALLET_VERIFICATION;
   const obj8 = {
     headerStyle: headerStyle.headerStyle,
     headerTitle() {
       return null;
     },
-    headerLeft: null,
-    render: null,
+    headerLeft: obj9.getHeaderBackButton(),
+    render() {
+      return jsx(GoogleWalletVerificationScreenDefault, { onClose: closeModalWithOnComplete, modalSessionId });
+    },
   };
-  const obj7 = require("NavigatorHeader");
-  obj8.headerLeft = require("NavigatorHeader").getHeaderBackButton();
-  obj8.render = function render() {
-    return jsx(GoogleWalletVerificationScreenDefault, { onClose: closeModalWithOnComplete, modalSessionId });
-  };
-  obj[obj4.GOOGLE_WALLET_VERIFICATION] = obj8;
+  obj[GOOGLE_WALLET_VERIFICATION] = obj8;
+  obj9 = require("NavigatorHeader");
   return obj;
 }
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" } };
-let closure_5 = createStyles.createStyles(obj2);
-let obj4 = {
+const jsx = Fragment.jsx;
+let obj = { headerStyle: obj2 };
+obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
+let closure_5 = createStyles.createStyles(obj);
+let obj3 = {
   INTRO: "INTRO",
   RETRY: "RETRY",
   EXPRESSIVE_INTRO: "EXPRESSIVE_INTRO",
   GOOGLE_WALLET_VERIFICATION: "GOOGLE_WALLET_VERIFICATION",
 };
-const ReactCompilerGating = fn(558);
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationGetStartedModal.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (entryPoint) => {
-      const cResult = entryPoint(EXPRESSIVE_PRIMARY[11]).c(17);
+      let EXPRESSIVE_PRIMARY;
+      let classificationId;
+      let first;
+      let isRetry;
+      let onComplete;
+      let useEmbeddedMethods;
+      let obj = entryPoint(EXPRESSIVE_PRIMARY[11]);
+      const cResult = obj.c(17);
       entryPoint = entryPoint.entryPoint;
       ({ isRetry, useEmbeddedMethods, classificationId, onComplete } = entryPoint);
       const tmp5 = closure_5();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const v4Result = tmp(tmp2[12]).v4();
+        const tmpResult = entryPoint(EXPRESSIVE_PRIMARY[12]);
+        const v4Result = tmpResult.v4();
         cResult[0] = v4Result;
-        let first = v4Result;
-        const tmpResult = tmp(tmp2[12]);
+        first = v4Result;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === classificationId) {
         if (cResult[2] === entryPoint) {
           if (cResult[3] === onComplete) {
+            let tmp8;
             if (cResult[4] === tmp5) {
-              let tmp8 = cResult[5];
+              tmp8 = cResult[5];
             }
             const AgeVerificationModalVersion = tmp(tmp2[13]).AgeVerificationModalVersion;
-            if (tmp4) {
+            if (undefined !== useEmbeddedMethods && useEmbeddedMethods) {
               EXPRESSIVE_PRIMARY = AgeVerificationModalVersion.EXPRESSIVE_PRIMARY;
             } else {
               EXPRESSIVE_PRIMARY = isRetry ? AgeVerificationModalVersion.RETRY : AgeVerificationModalVersion.PRIMARY;
             }
             if (cResult[6] === entryPoint) {
+              let tmp10;
+              let tmp11;
               if (cResult[7] === EXPRESSIVE_PRIMARY) {
-                let tmp10 = cResult[8];
-                let tmp11 = cResult[9];
+                tmp10 = cResult[8];
+                tmp11 = cResult[9];
               }
-              const effect = noop.useEffect(tmp10, tmp11);
+              const effect = react.useEffect(tmp10, tmp11);
               if (cResult[10] === isRetry) {
-                if (cResult[11] === tmp4) {
-                  const _Symbol = Symbol;
-                  if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-                    const intl = tmp(tmp2[14]).intl;
-                    cResult[13] = intl.string(tmp(tmp2[14]).t["13/7kX"]);
-                    class T {
-                      constructor() {
-                        obj = closure_0(closure_2[13]);
-                        result = obj.trackAgeVerificationModalViewed(closure_1, PRIMARY, entryPoint);
-                        return;
-                      }
-                    }
-                    const stringResult = intl.string(tmp(tmp2[14]).t["13/7kX"]);
-                  } else {
-                    const tmp18 = cResult[13];
-                  }
-                  if (cResult[14] === tmp8) {
-                    if (cResult[15] === tmp14) {
-                      let tmp20 = cResult[16];
-                    }
-                    return tmp20;
-                  }
+                let tmp14;
+                let tmp17;
+                if (cResult[11] === (undefined !== useEmbeddedMethods && useEmbeddedMethods)) {
+                  tmp14 = cResult[12];
+                }
+                const _Symbol = Symbol;
+                if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+                  const intl = tmp(tmp2[14]).intl;
+                  cResult[13] = intl.string(entryPoint(EXPRESSIVE_PRIMARY[14]).t["13/7kX"]);
+                  intl.string(entryPoint(EXPRESSIVE_PRIMARY[14]).t["13/7kX"]);
                   class T {
                     constructor() {
                       obj = closure_0(closure_2[13]);
@@ -161,17 +165,32 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       return;
                     }
                   }
-                  const obj2 = { screens: tmp8, initialRouteName: cResult[12], headerBackTitle: tmp18 };
-                  const tmp21 = jsx(tmp(tmp2[15]).Navigator, {
-                    screens: tmp8,
-                    initialRouteName: cResult[12],
-                    headerBackTitle: tmp18,
-                  });
-                  cResult[14] = tmp8;
-                  cResult[15] = cResult[12];
-                  cResult[16] = tmp21;
-                  tmp20 = tmp21;
+                } else {
+                  tmp17 = cResult[13];
                 }
+                if (cResult[14] === tmp8) {
+                  let tmp19;
+                  if (cResult[15] === tmp14) {
+                    tmp19 = cResult[16];
+                  }
+                  return tmp19;
+                }
+                class T {
+                  constructor() {
+                    obj = closure_0(closure_2[13]);
+                    result = obj.trackAgeVerificationModalViewed(closure_1, PRIMARY, entryPoint);
+                    return;
+                  }
+                }
+                const tmp20 = jsx(entryPoint(EXPRESSIVE_PRIMARY[15]).Navigator, {
+                  screens: tmp8,
+                  initialRouteName: tmp14,
+                  headerBackTitle: tmp17,
+                });
+                cResult[14] = tmp8;
+                cResult[15] = tmp14;
+                cResult[16] = tmp20;
+                tmp19 = tmp20;
               }
               class T {
                 constructor() {
@@ -181,8 +200,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               cResult[10] = isRetry;
-              cResult[11] = tmp4;
+              cResult[11] = undefined !== useEmbeddedMethods && useEmbeddedMethods;
               cResult[12] = tmp16;
+              tmp14 = tmp16;
             }
             class T {
               constructor() {
@@ -208,9 +228,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp5;
       cResult[5] = tmp9;
       tmp8 = tmp9;
-      const obj = entryPoint(EXPRESSIVE_PRIMARY[11]);
     }
   : (entryPoint) => {
+      let EXPRESSIVE_INTRO;
+      let intl;
       entryPoint = entryPoint.entryPoint;
       const isRetry = entryPoint.isRetry;
       let flag = entryPoint.useEmbeddedMethods;
@@ -222,7 +243,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_5 = undefined;
       const tmp = closure_5();
       closure_5 = tmp;
-      const memo = classificationId.useMemo(() => entryPoint(flag[12]).v4(), []);
+      const memo = classificationId.useMemo(() => {
+        const obj = entryPoint(flag[12]);
+        return obj.v4();
+      }, []);
       const items = [tmp, memo, classificationId, onComplete, entryPoint];
       const items1 = [flag, isRetry];
       const memo1 = classificationId.useMemo(
@@ -230,8 +254,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items,
       );
       const memo2 = classificationId.useMemo(() => {
+        let EXPRESSIVE_PRIMARY;
         if (flag) {
-          let EXPRESSIVE_PRIMARY = AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY;
+          EXPRESSIVE_PRIMARY = AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY;
         } else {
           const AgeVerificationModalVersion = AgeVerificationAnalyticsUtils.AgeVerificationModalVersion;
           EXPRESSIVE_PRIMARY = isRetry ? AgeVerificationModalVersion.RETRY : AgeVerificationModalVersion.PRIMARY;
@@ -240,17 +265,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items1);
       const items2 = [memo, entryPoint, memo2];
       const effect = classificationId.useEffect(() => {
-        const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed(memo, memo2, entryPoint);
+        const obj = AgeVerificationAnalyticsUtils;
+        const result = obj.trackAgeVerificationModalViewed(memo, memo2, entryPoint);
       }, items2);
-      const obj = { screens: memo1, initialRouteName: null, headerBackTitle: null };
+      let obj = {
+        screens: memo1,
+        initialRouteName: EXPRESSIVE_INTRO,
+        headerBackTitle: intl.string(entryPoint(flag[14]).t["13/7kX"]),
+      };
+      const Navigator = entryPoint(flag[15]).Navigator;
+      const tmp6 = onComplete;
       if (flag) {
-        let EXPRESSIVE_INTRO = tmp9.EXPRESSIVE_INTRO;
+        EXPRESSIVE_INTRO = tmp9.EXPRESSIVE_INTRO;
       } else {
         EXPRESSIVE_INTRO = isRetry ? tmp9.RETRY : tmp9.INTRO;
       }
-      obj.initialRouteName = EXPRESSIVE_INTRO;
-      const intl = tmp7(tmp8[14]).intl;
-      obj.headerBackTitle = intl.string(entryPoint(flag[14]).t["13/7kX"]);
-      return onComplete(entryPoint(flag[15]).Navigator, obj);
+      intl = tmp7(tmp8[14]).intl;
+      return tmp6(Navigator, obj);
     };
-export const AgeVerificationGetStartedModalScenes = obj4;
+let result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationGetStartedModal.tsx");
+
+export default tmp2;
+export const AgeVerificationGetStartedModalScenes = obj3;

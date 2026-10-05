@@ -1,8 +1,10 @@
 // discord_app/stores/channel_notices/GuildMFAWarningStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import Constants from "../../Constants.tsx";
 import GuildChannelStore from "../GuildChannelStore.tsx";
 import UserStore from "../UserStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function handleUserStoreUpdates() {
   const currentUser = UserStore.getCurrentUser();
@@ -13,37 +15,33 @@ function handleUserStoreUpdates() {
   }
   return false;
 }
-const MFALevels = fn(1085).MFALevels;
+const MFALevels = Constants.MFALevels;
 let mfaEnabled = null;
-const Store = initializeDefault.Store;
-class GuildMFAWarningStore extends Store {}
+const Store = get_initializedDefault.Store;
+class GuildMFAWarningStore extends Store {
+  initialize() {
+    this.waitFor(UserStore, GuildChannelStore);
+    const items = [UserStore, GuildChannelStore];
+    this.syncWith(items, handleUserStoreUpdates);
+  }
+  isVisible(mfaLevel) {
+    const result =
+      null != mfaLevel &&
+      mfaLevel.mfaLevel === MFALevels.ELEVATED &&
+      false === mfaEnabled &&
+      GuildChannelStore.hasElevatedPermissions(mfaLevel.id);
+    return result;
+  }
+}
 const prototype = GuildMFAWarningStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(UserStore, GuildChannelStore);
-  const items = [UserStore, GuildChannelStore];
-  this.syncWith(items, handleUserStoreUpdates);
-};
-prototype["isVisible"] = function isVisible(mfaLevel) {
-  let result = null != mfaLevel;
-  if (result) {
-    result = mfaLevel.mfaLevel === MFALevels.ELEVATED;
-  }
-  if (result) {
-    result = false === mfaEnabled;
-  }
-  if (result) {
-    result = GuildChannelStore.hasElevatedPermissions(mfaLevel.id);
-  }
-  return result;
-};
 GuildMFAWarningStore.displayName = "GuildMFAWarningStore";
-const guildMFAWarningStore = new GuildMFAWarningStore(DispatcherDefault, {
+const obj = {
   CONNECTION_OPEN: handleUserStoreUpdates,
   GUILD_UPDATE: function handleGuildPermissionsUpdate() {
     return true;
   },
-});
-const size = fn(2);
+};
+const guildMFAWarningStore = new GuildMFAWarningStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("stores/channel_notices/GuildMFAWarningStore.tsx");
 
 export default guildMFAWarningStore;

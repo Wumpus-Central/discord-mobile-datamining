@@ -1,18 +1,20 @@
 // discord_app/modules/guild_sidebar/native/ConnectedUserLimit.tsx
-import c from "../../../../_runtime/00576_c.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import useChannelVideoLimitDefault from "../../video_calls/useChannelVideoLimit.tsx";
 import VoiceChannelUserLimitDefault from "VoiceChannelUserLimit.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_sidebar/native/ConnectedUserLimit.tsx");
-
-export const ConnectedUserLimit = ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(4);
+      let channel;
+      let userCount;
+      let video;
+      const obj = react2;
+      const cResult = obj.c(4);
       ({ channel, video, userCount } = arg0);
       const limit = useChannelVideoLimitDefault(channel).limit;
       let num = -1;
@@ -26,18 +28,19 @@ export const ConnectedUserLimit = ReactCompilerGating.isReactCompilerEnabled()
       let tmp4 = num;
       if (video) {
         let bound = limit;
+        const tmp5 = num < 0 || limit < num;
         if (num > 0) {
           const _Math = Math;
           bound = Math.min(num, limit);
         }
         tmp4 = bound;
-        flag = num < 0 || limit < num;
-        const tmp5 = num < 0 || limit < num;
+        flag = tmp5;
       }
       if (cResult[0] === flag) {
         if (cResult[1] === tmp4) {
+          let tmp8;
           if (cResult[2] === userCount) {
-            let tmp8 = cResult[3];
+            tmp8 = cResult[3];
           }
           return tmp8;
         }
@@ -49,8 +52,11 @@ export const ConnectedUserLimit = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp9;
       tmp8 = tmp9;
     }
-  : (users) => {
-      ({ channel, video } = users);
+  : (userCount) => {
+      let channel;
+      let video;
+      ({ channel, video } = userCount);
+      const users = userCount.userCount;
       const limit = useChannelVideoLimitDefault(channel).limit;
       let num = -1;
       if (channel.userLimit > 0) {
@@ -63,13 +69,16 @@ export const ConnectedUserLimit = ReactCompilerGating.isReactCompilerEnabled()
       let total = num;
       if (video) {
         let bound = limit;
+        const tmp4 = num < 0 || limit < num;
         if (num > 0) {
           const _Math = Math;
           bound = Math.min(num, limit);
         }
         total = bound;
-        videoLimit = num < 0 || limit < num;
-        const tmp4 = num < 0 || limit < num;
+        videoLimit = tmp4;
       }
-      return jsx(VoiceChannelUserLimitDefault, { users: users.userCount, total, videoLimit });
+      return jsx(VoiceChannelUserLimitDefault, { users, total, videoLimit });
     };
+const result = size.fileFinishedImporting("modules/guild_sidebar/native/ConnectedUserLimit.tsx");
+
+export const ConnectedUserLimit = tmp3;

@@ -1,20 +1,25 @@
 // discord_app/modules/forums/native/posts/list/ForumPostListBody.tsx
-import c from "../../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../../_runtime/00576_react.js";
 import GameInvitesChannelUtils from "../../../../game_invite_channels/GameInvitesChannelUtils.tsx";
+import ForumConstants from "../../../ForumConstants.tsx";
 import ForumPostUsername from "../ForumPostUsername.tsx";
 import ForumPostMedia from "../ForumPostMedia.tsx";
 import ForumPostTimestampDefault from "../ForumPostTimestamp.tsx";
 import ForumPostNewTagDefault from "../ForumPostNewTag.tsx";
 import ForumPostTitleDefault from "../ForumPostTitle.tsx";
 import ForumPostMessageContentDefault from "../ForumPostMessageContent.tsx";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const ForumTimestampFormats = fn(6776).ForumTimestampFormats;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4890);
+let hasOwnProperty;
+let metroRequire;
+const View = react_native.View;
+const ForumTimestampFormats = ForumConstants.ForumTimestampFormats;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
 let closure_7 = createStyles.createStyles({
   body: { display: "flex", flexDirection: "row", alignItems: "flex-start" },
   contentContainer: { flex: 1 },
@@ -22,13 +27,25 @@ let closure_7 = createStyles.createStyles({
   details: { flexDirection: "row", alignItems: "center", marginBottom: 6 },
   newTagContainer: { marginEnd: 8 },
 });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/forums/native/posts/list/ForumPostListBody.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(42);
+      let containerStyle;
+      let firstMessage;
+      let firstMessageLoaded;
+      let hasUnreads;
+      let id1;
+      let isEmbed;
+      let isLocalDeviceMedia;
+      let isNew;
+      let items;
+      let items1;
+      let items2;
+      let media;
+      let messageContent;
+      let senderModifier;
+      let thread;
+      const obj = react2;
+      const cResult = obj.c(42);
       ({
         containerStyle,
         thread,
@@ -43,78 +60,90 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         senderModifier,
       } = arg0);
       const tmp4 = closure_7();
-      const isGameInvitesPost = GameInvitesChannelUtils.useIsGameInvitesPost(thread);
+      const obj2 = GameInvitesChannelUtils;
+      const isGameInvitesPost = obj2.useIsGameInvitesPost(thread);
       if (cResult[0] === containerStyle) {
+        let tmp6;
         if (cResult[1] === tmp4.body) {
-          let tmp6 = cResult[2];
+          tmp6 = cResult[2];
         }
         if (cResult[3] === isNew) {
+          let tmp7;
           if (cResult[4] === tmp4.newTagContainer) {
-            let tmp7 = cResult[5];
+            tmp7 = cResult[5];
           }
           if (cResult[6] === hasUnreads) {
+            let tmp11;
+            let tmp12;
             if (cResult[7] === thread) {
-              let tmp11 = cResult[8];
-              let tmp12 = cResult[9];
+              tmp11 = cResult[8];
+              tmp12 = cResult[9];
             }
             if (cResult[10] === tmp4.details) {
               if (cResult[11] === tmp7) {
                 if (cResult[12] === tmp11) {
+                  let tmp18;
                   if (cResult[13] === tmp12) {
-                    let tmp18 = cResult[14];
+                    tmp18 = cResult[14];
                   }
                   if (cResult[15] === hasUnreads) {
                     if (cResult[16] === isGameInvitesPost) {
+                      let tmp22;
                       if (cResult[17] === thread) {
-                        let tmp22 = cResult[18];
+                        tmp22 = cResult[18];
                       }
                       if (cResult[19] === firstMessage) {
                         if (cResult[20] === firstMessageLoaded) {
                           if (cResult[21] === hasUnreads) {
                             if (cResult[22] === messageContent) {
+                              let tmp26;
                               if (cResult[23] === senderModifier) {
-                                let tmp26 = cResult[24];
+                                tmp26 = cResult[24];
                               }
                               if (cResult[25] === tmp4.contentContainer) {
                                 if (cResult[26] === tmp18) {
                                   if (cResult[27] === tmp22) {
+                                    let tmp30;
                                     if (cResult[28] === tmp26) {
-                                      let tmp30 = cResult[29];
+                                      tmp30 = cResult[29];
                                     }
                                     let blocked;
+                                    const tmp34 = cResult[30];
                                     if (firstMessage != null) {
                                       blocked = firstMessage.blocked;
                                     }
-                                    if (cResult[30] === blocked) {
+                                    if (tmp34 === blocked) {
                                       let id;
+                                      const tmp37 = cResult[31];
                                       if (firstMessage != null) {
                                         id = firstMessage.id;
                                       }
-                                      if (cResult[31] === id) {
+                                      if (tmp37 === id) {
                                         if (cResult[32] === isEmbed) {
                                           if (cResult[33] === isLocalDeviceMedia) {
                                             if (cResult[34] === media) {
                                               if (cResult[35] === tmp4.thumbnailContainer) {
+                                                let tmp39;
                                                 if (cResult[36] === thread) {
-                                                  let tmp37 = cResult[37];
+                                                  tmp39 = cResult[37];
                                                 }
                                                 if (cResult[38] === tmp6) {
                                                   if (cResult[39] === tmp30) {
-                                                    if (cResult[40] === tmp37) {
-                                                      let tmp44 = cResult[41];
+                                                    let tmp46;
+                                                    if (cResult[40] === tmp39) {
+                                                      tmp46 = cResult[41];
                                                     }
-                                                    return tmp44;
+                                                    return tmp46;
                                                   }
                                                 }
-                                                const obj3 = { style: tmp6, children: null };
-                                                const items = [tmp30, tmp37];
-                                                obj3.children = items;
-                                                const tmp47 = timestampProducer(View, obj3);
+                                                const obj3 = { style: tmp6, children: items };
+                                                items = [tmp30, tmp39];
+                                                const tmp49 = metroRequire(View, obj3);
                                                 cResult[38] = tmp6;
                                                 cResult[39] = tmp30;
-                                                cResult[40] = tmp37;
-                                                cResult[41] = tmp47;
-                                                tmp44 = tmp47;
+                                                cResult[40] = tmp39;
+                                                cResult[41] = tmp49;
+                                                tmp46 = tmp49;
                                               }
                                             }
                                           }
@@ -125,25 +154,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     if (firstMessage != null) {
                                       blocked1 = firstMessage.blocked;
                                     }
-                                    let tmp40Result = null;
+                                    let tmp42Result = null;
                                     if (!blocked1) {
-                                      tmp40Result = null;
+                                      tmp42Result = null;
                                       if (null != media) {
                                         const obj4 = {
                                           channel: thread,
                                           media,
                                           isEmbed,
                                           isLocalDeviceMedia,
-                                          firstMessageId: null,
-                                          containerStyle: null,
+                                          firstMessageId: id1,
+                                          containerStyle: tmp4.thumbnailContainer,
                                         };
-                                        let id1;
+                                        id1 = undefined;
+                                        const ForumPostMediaThumbnail = ForumPostMedia.ForumPostMediaThumbnail;
                                         if (firstMessage != null) {
                                           id1 = firstMessage.id;
                                         }
-                                        obj4.firstMessageId = id1;
-                                        obj4.containerStyle = tmp4.thumbnailContainer;
-                                        tmp40Result = hasOwnProperty(ForumPostMedia.ForumPostMediaThumbnail, obj4);
+                                        tmp42Result = hasOwnProperty(ForumPostMediaThumbnail, obj4);
                                       }
                                     }
                                     let blocked2;
@@ -161,15 +189,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     cResult[34] = media;
                                     cResult[35] = tmp4.thumbnailContainer;
                                     cResult[36] = thread;
-                                    cResult[37] = tmp40Result;
-                                    tmp37 = tmp40Result;
+                                    cResult[37] = tmp42Result;
+                                    tmp39 = tmp42Result;
                                   }
                                 }
                               }
-                              const obj5 = { style: tmp4.contentContainer, children: null };
-                              const items1 = [tmp18, tmp22, tmp26];
-                              obj5.children = items1;
-                              const tmp33 = timestampProducer(View, obj5);
+                              const obj5 = { style: tmp4.contentContainer, children: items1 };
+                              items1 = [tmp18, tmp22, tmp26];
+                              const tmp33 = metroRequire(View, obj5);
                               cResult[25] = tmp4.contentContainer;
                               cResult[26] = tmp18;
                               cResult[27] = tmp22;
@@ -199,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   let tmp23 = !isGameInvitesPost;
-                  if (!isGameInvitesPost) {
+                  if (tmp23) {
                     const obj7 = { title: thread.name, lineClamp: 2, ellipsizeMode: "tail", hasUnreads };
                     tmp23 = hasOwnProperty(ForumPostTitleDefault, obj7);
                   }
@@ -211,10 +238,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            const obj8 = { style: tmp4.details, children: null };
-            const items2 = [tmp7, tmp11, tmp12];
-            obj8.children = items2;
-            const tmp21 = timestampProducer(View, obj8);
+            const obj8 = { style: tmp4.details, children: items2 };
+            items2 = [tmp7, tmp11, tmp12];
+            const tmp21 = metroRequire(View, obj8);
             cResult[10] = tmp4.details;
             cResult[11] = tmp7;
             cResult[12] = tmp11;
@@ -234,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp11 = tmp14;
         }
         let tmp8 = isNew;
-        if (isNew) {
+        if (tmp8) {
           const obj11 = { containerStyle: tmp4.newTagContainer };
           tmp8 = hasOwnProperty(ForumPostNewTagDefault, obj11);
         }
@@ -250,32 +276,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = items3;
     }
   : (arg0) => {
+      let containerStyle;
+      let firstMessage;
+      let firstMessageLoaded;
+      let hasUnreads;
+      let id;
+      let isEmbed;
+      let isLocalDeviceMedia;
+      let isNew;
+      let items;
+      let items1;
+      let items2;
+      let items3;
+      let media;
+      let messageContent;
+      let senderModifier;
+      let thread;
       ({ thread, firstMessage, hasUnreads, isNew, media } = arg0);
       ({ containerStyle, firstMessageLoaded, messageContent, isEmbed, isLocalDeviceMedia, senderModifier } = arg0);
       const tmp = closure_7();
-      const isGameInvitesPost = GameInvitesChannelUtils.useIsGameInvitesPost(thread);
-      const obj2 = { style: null, children: null };
-      const items = [tmp.body, containerStyle];
-      obj2.style = items;
-      const obj3 = { style: tmp.contentContainer, children: null };
-      const obj4 = { style: tmp.details, children: null };
+      const obj = GameInvitesChannelUtils;
+      const isGameInvitesPost = obj.useIsGameInvitesPost(thread);
+      const obj2 = { style: items, children: items3 };
+      items = [tmp.body, containerStyle];
+      const obj3 = { style: tmp.contentContainer, children: items2 };
+      const obj4 = { style: tmp.details, children: items1 };
       if (isNew) {
         const obj5 = { containerStyle: tmp.newTagContainer };
         isNew = hasOwnProperty(ForumPostNewTagDefault, obj5);
       }
-      const items1 = [
-        isNew,
-        hasOwnProperty(ForumPostUsername.ForumPostAuthor, { thread, hasUnreads }),
-        hasOwnProperty(ForumPostTimestampDefault, {
-          thread,
-          hasUnreads,
-          format: ForumTimestampFormats.POSTED_DURATION_AGO,
-        }),
-      ];
-      obj4.children = items1;
-      const items2 = [timestampProducer(View, obj4), ,];
+      items1 = [isNew, hasOwnProperty(ForumPostUsername.ForumPostAuthor, { thread, hasUnreads })];
+      const obj6 = { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO };
+      items1[2] = hasOwnProperty(ForumPostTimestampDefault, obj6);
+      items2 = [metroRequire(View, obj4), ,];
       let tmp9Result = !isGameInvitesPost;
-      if (!isGameInvitesPost) {
+      if (tmp9Result) {
         const obj7 = { title: thread.name, lineClamp: 2, ellipsizeMode: "tail", hasUnreads };
         tmp9Result = hasOwnProperty(ForumPostTitleDefault, obj7);
       }
@@ -288,8 +323,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         hasUnreads,
         senderModifier,
       });
-      obj3.children = items2;
-      const items3 = [timestampProducer(View, obj3)];
+      items3 = [metroRequire(View, obj3)];
       let blocked;
       if (firstMessage != null) {
         blocked = firstMessage.blocked;
@@ -303,19 +337,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             media,
             isEmbed,
             isLocalDeviceMedia,
-            firstMessageId: null,
-            containerStyle: null,
+            firstMessageId: id,
+            containerStyle: tmp.thumbnailContainer,
           };
-          let id;
+          id = undefined;
+          const ForumPostMediaThumbnail = ForumPostMedia.ForumPostMediaThumbnail;
           if (firstMessage != null) {
             id = firstMessage.id;
           }
-          obj8.firstMessageId = id;
-          obj8.containerStyle = tmp.thumbnailContainer;
-          tmp9Result2 = hasOwnProperty(ForumPostMedia.ForumPostMediaThumbnail, obj8);
+          tmp9Result2 = hasOwnProperty(ForumPostMediaThumbnail, obj8);
         }
       }
       items3[1] = tmp9Result2;
-      obj2.children = items3;
-      return timestampProducer(View, obj2);
+      return metroRequire(View, obj2);
     };
+const result = size.fileFinishedImporting("modules/forums/native/posts/list/ForumPostListBody.tsx");
+
+export default tmp4;

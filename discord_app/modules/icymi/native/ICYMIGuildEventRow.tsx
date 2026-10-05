@@ -1,271 +1,176 @@
 // discord_app/modules/icymi/native/ICYMIGuildEventRow.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl3 from "../../../intl/index.native.tsx";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
 import ICYMIActionCreatorsDefault from "../ICYMIActionCreators.tsx";
 import ScheduleUtils from "../../guild_scheduled_events/utils/ScheduleUtils.tsx";
 import guild_scheduled_events_GuildScheduledEventModalActionCreators from "../../guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react_mod from "../../../../_runtime/00019_react.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
 import GuildScheduledEventStore_mod from "../../guild_scheduled_events/GuildScheduledEventStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createICYMIStyles from "createICYMIStyles.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let GuildScheduledEventStore = fn(7037);
-({ isGuildEventEnded: metroRequire, isGuildScheduledEventActive: closure_7 } = GuildScheduledEventStore);
+let dependencyMap, event, eventId, feedItemActionedResult, itemInteractedResult, obj1, transitionToGuildResult;
+
+let closure_12;
+let closure_4;
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+let unpackModuleId;
+let react = react_mod;
+({ Pressable: closure_4, View: hasOwnProperty } = react_native);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(16394);
+({ isGuildEventEnded: metroRequire, isGuildScheduledEventActive: metroImportDefault } = GuildScheduledEventStore);
+GuildScheduledEventStore = GuildScheduledEventStore_mod;
+({ jsx: unpackModuleId, jsxs: closure_12 } = Fragment);
 let closure_13 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
-  const obj = { container: { marginHorizontal: marginHorizontal.margin, marginBottom: marginHorizontal.margin, marginLeft: marginHorizontal.margin + marginHorizontal.inset }, card: { marginTop: nativeDefault.space.PX_12 }, title: null, timeAndUserPillContainer: null, separator: null, eventsChannelIcon: null, infoContainer: null, locationContainer: null };
-  const obj2 = { marginTop: nativeDefault.space.PX_12 };
-  obj.title = { marginBottom: nativeDefault.space.PX_4 };
-  const obj3 = { marginBottom: nativeDefault.space.PX_4 };
-  obj.timeAndUserPillContainer = { flexDirection: "row", alignItems: "center", marginBottom: nativeDefault.space.PX_8, justifyContent: "space-between" };
-  const size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: nativeDefault.space.PX_12 };
-  obj.separator = size;
-  const obj4 = { flexDirection: "row", alignItems: "center", marginBottom: nativeDefault.space.PX_8, justifyContent: "space-between" };
-  obj.eventsChannelIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-  const obj5 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-  obj.infoContainer = { gap: nativeDefault.space.PX_4 };
-  const obj6 = { gap: nativeDefault.space.PX_4 };
-  obj.locationContainer = { alignItems: "center", flexDirection: "row", gap: nativeDefault.space.PX_8 };
+  const obj = {
+    container: {
+      marginHorizontal: marginHorizontal.margin,
+      marginBottom: marginHorizontal.margin,
+      marginLeft: marginHorizontal.margin + marginHorizontal.inset,
+    },
+    card: { marginTop: nativeDefault.space.PX_12 },
+    title: { marginBottom: nativeDefault.space.PX_4 },
+    timeAndUserPillContainer: {
+      flexDirection: "row",
+      alignItems: "center",
+      marginBottom: nativeDefault.space.PX_8,
+      justifyContent: "space-between",
+    },
+    separator: size,
+    eventsChannelIcon: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT },
+    infoContainer: { gap: nativeDefault.space.PX_4 },
+    locationContainer: { alignItems: "center", flexDirection: "row", gap: nativeDefault.space.PX_8 },
+  };
+  ({ marginTop: nativeDefault.space.PX_12 });
+  ({ marginBottom: nativeDefault.space.PX_4 });
+  ({
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: nativeDefault.space.PX_8,
+    justifyContent: "space-between",
+  });
+  size = {
+    height: 1,
+    width: "100%",
+    backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
+    marginVertical: nativeDefault.space.PX_12,
+  };
+  ({ tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT });
+  ({ gap: nativeDefault.space.PX_4 });
+  ({ alignItems: "center", flexDirection: "row", gap: nativeDefault.space.PX_8 });
   return obj;
 });
-let ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((event) => {
-  const cResult = event(576).c(82);
-  event = event.event;
-  ({ channel, guild } = event);
-  const tmp4 = closure_13();
-  const tmp6 = guild(9166)(event, null);
-  if (cResult[0] !== event) {
-    const tmp9 = closure_7(event);
-    cResult[0] = event;
-    cResult[1] = tmp9;
-    let tmp7 = tmp9;
-  } else {
-    tmp7 = cResult[1];
-  }
-  let startTime1;
-  if (tmp6 != null) {
-    startTime1 = tmp6.startTime;
-  }
-  if (cResult[2] !== startTime1) {
-    let toISOStringResult;
-    if (tmp6 != null) {
-      const startTime = tmp6.startTime;
-      toISOStringResult = startTime.toISOString();
-    }
-    let startTime2;
-    if (tmp6 != null) {
-      startTime2 = tmp6.startTime;
-    }
-    cResult[2] = startTime2;
-    cResult[3] = toISOStringResult;
-    let tmp11 = toISOStringResult;
-  } else {
-    tmp11 = cResult[3];
-  }
-  if (cResult[4] === tmp7) {
-    if (cResult[5] === tmp11) {
-      const startDateTimeString = cResult[6].startDateTimeString;
-      guild(5043)(channel);
-      const locationFromEvent = tmp(9180).getLocationFromEvent(event);
-      if (cResult[7] === channel) {
-        if (cResult[10] === channel) {
-          if (cResult[13] !== event) {
-            const nextRecurrenceIdInEvent = tmp(9163).getNextRecurrenceIdInEvent(event);
-            cResult[13] = event;
-            class X {
-              constructor() {
-                obj = closure_1(closure_2[16]);
-                itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                obj2 = closure_1(closure_2[16]);
-                obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
-                feedItemActionedResult = obj2.feedItemActioned(obj1);
-                obj4 = closure_0(closure_2[18]);
-                transitionToGuildResult = obj4.transitionToGuild(guild.id);
-                return;
-              }
-            }
-            cResult[14] = nextRecurrenceIdInEvent;
-            let tmp23 = nextRecurrenceIdInEvent;
-            const tmpResult4 = tmp(9163);
-          } else {
-            tmp23 = cResult[14];
-          }
-          if (cResult[15] !== event) {
-            class R {
-              constructor() {
-                obj = closure_1(closure_2[16]);
-                itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                obj2 = closure_1(closure_2[16]);
-                obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                feedItemActionedResult = obj2.feedItemActioned(obj1);
-                obj4 = closure_0(closure_2[17]);
-                obj6 = { eventId: event.id, event };
-                result = obj4.openGuildEventDetails(obj6);
-                return;
-              }
-            }
-            cResult[15] = event;
-            class X {
-              constructor() {
-                obj = closure_1(closure_2[16]);
-                itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                obj2 = closure_1(closure_2[16]);
-                obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
-                feedItemActionedResult = obj2.feedItemActioned(obj1);
-                obj4 = closure_0(closure_2[18]);
-                transitionToGuildResult = obj4.transitionToGuild(guild.id);
-                return;
-              }
-            }
-          } else {
-            class R {
-              constructor() {
-                obj = closure_1(closure_2[16]);
-                itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                obj2 = closure_1(closure_2[16]);
-                obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                feedItemActionedResult = obj2.feedItemActioned(obj1);
-                obj4 = closure_0(closure_2[17]);
-                obj6 = { eventId: event.id, event };
-                result = obj4.openGuildEventDetails(obj6);
-                return;
-              }
-            }
-          }
-          if (cResult[17] === event.id) {
-            class R {
-              constructor() {
-                obj = closure_1(closure_2[16]);
-                itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                obj2 = closure_1(closure_2[16]);
-                obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                feedItemActionedResult = obj2.feedItemActioned(obj1);
-                obj4 = closure_0(closure_2[17]);
-                obj6 = { eventId: event.id, event };
-                result = obj4.openGuildEventDetails(obj6);
-                return;
-              }
-            }
-            let tmp27 = null != event.description;
-            if (tmp27) {
-              class R {
-                constructor() {
-                  obj = closure_1(closure_2[16]);
-                  itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                  obj2 = closure_1(closure_2[16]);
-                  obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                  feedItemActionedResult = obj2.feedItemActioned(obj1);
-                  obj4 = closure_0(closure_2[17]);
-                  obj6 = { eventId: event.id, event };
-                  result = obj4.openGuildEventDetails(obj6);
-                  return;
-                }
-              }
-              tmp27 = event.description.length > 0;
-            }
-            class X {
-              constructor() {
-                obj = closure_1(closure_2[16]);
-                itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                obj2 = closure_1(closure_2[16]);
-                obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
-                feedItemActionedResult = obj2.feedItemActioned(obj1);
-                obj4 = closure_0(closure_2[18]);
-                transitionToGuildResult = obj4.transitionToGuild(guild.id);
-                return;
-              }
-            }
-            if (event != null) {
-              class R {
-                constructor() {
-                  obj = closure_1(closure_2[16]);
-                  itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                  obj2 = closure_1(closure_2[16]);
-                  obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                  feedItemActionedResult = obj2.feedItemActioned(obj1);
-                  obj4 = closure_0(closure_2[17]);
-                  obj6 = { eventId: event.id, event };
-                  result = obj4.openGuildEventDetails(obj6);
-                  return;
-                }
-              }
-            }
-            if (event != null) {
-              class R {
-                constructor() {
-                  obj = closure_1(closure_2[16]);
-                  itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                  obj2 = closure_1(closure_2[16]);
-                  obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                  feedItemActionedResult = obj2.feedItemActioned(obj1);
-                  obj4 = closure_0(closure_2[17]);
-                  obj6 = { eventId: event.id, event };
-                  result = obj4.openGuildEventDetails(obj6);
-                  return;
-                }
-              }
-            }
-            const tmp28Result = tmp28(undefined, undefined, tmp23);
-            guild(16442);
-            const _Symbol = Symbol;
-            if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-              class R {
-                constructor() {
-                  obj = closure_1(closure_2[16]);
-                  itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                  obj2 = closure_1(closure_2[16]);
-                  obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                  feedItemActionedResult = obj2.feedItemActioned(obj1);
-                  obj4 = closure_0(closure_2[17]);
-                  obj6 = { eventId: event.id, event };
-                  result = obj4.openGuildEventDetails(obj6);
-                  return;
-                }
-              }
+let ReactCompilerGating = ReactCompilerGating_mod;
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (event) => {
+      let channel;
+      let eventTimeData;
+      let guild;
+      let items;
+      let obj2;
+      let tmp12;
+      let tmp7;
+      let obj = event(576);
+      const cResult = obj.c(82);
+      event = event.event;
+      ({ channel, guild } = event);
+      const tmp4 = closure_13();
+      const tmp6 = guild(9166)(event, null);
+      if (cResult[0] !== event) {
+        const tmp9 = closure_7(event);
+        cResult[0] = event;
+        cResult[1] = tmp9;
+        tmp7 = tmp9;
+      } else {
+        tmp7 = cResult[1];
+      }
+      let startTime1;
+      const tmp10 = cResult[2];
+      if (tmp6 != null) {
+        startTime1 = tmp6.startTime;
+      }
+      if (tmp10 !== startTime1) {
+        let toISOStringResult;
+        if (tmp6 != null) {
+          const startTime = tmp6.startTime;
+          toISOStringResult = startTime.toISOString();
+        }
+        let startTime2;
+        if (tmp6 != null) {
+          startTime2 = tmp6.startTime;
+        }
+        cResult[2] = startTime2;
+        cResult[3] = toISOStringResult;
+        tmp12 = toISOStringResult;
+      } else {
+        tmp12 = cResult[3];
+      }
+      if (cResult[4] === tmp7) {
+        let tmp15;
+        if (cResult[5] === tmp12) {
+          tmp15 = cResult[6];
+        }
+        const startDateTimeString = tmp15.startDateTimeString;
+        guild(5043)(channel);
+        const tmpResult = event(9180);
+        const locationFromEvent = tmpResult.getLocationFromEvent(event);
+        if (cResult[7] === channel) {
+          if (cResult[10] === channel) {
+            let tmp25;
+            if (cResult[13] !== event) {
+              const tmpResult4 = event(9163);
+              const nextRecurrenceIdInEvent = tmpResult4.getNextRecurrenceIdInEvent(event);
+              cResult[13] = event;
               class X {
                 constructor() {
                   obj = closure_1(closure_2[16]);
                   itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
                   obj2 = closure_1(closure_2[16]);
-                  obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
+                  obj1 = {
+                    itemId: event.id,
+                    itemType: "guild_event",
+                    actionParameters: {
+                      actionGestureType: "press",
+                      actionTargetElement: "item_header",
+                      actionIntentType: "navigate",
+                      actionDestinationType: "guild",
+                    },
+                  };
                   feedItemActionedResult = obj2.feedItemActioned(obj1);
                   obj4 = closure_0(closure_2[18]);
                   transitionToGuildResult = obj4.transitionToGuild(guild.id);
                   return;
                 }
               }
-              const stringResult = obj6.string(tmp(1126).t["6pFsLQ"]);
+              cResult[14] = nextRecurrenceIdInEvent;
+              tmp25 = nextRecurrenceIdInEvent;
             } else {
-              class R {
-                constructor() {
-                  obj = closure_1(closure_2[16]);
-                  itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                  obj2 = closure_1(closure_2[16]);
-                  obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                  feedItemActionedResult = obj2.feedItemActioned(obj1);
-                  obj4 = closure_0(closure_2[17]);
-                  obj6 = { eventId: event.id, event };
-                  result = obj4.openGuildEventDetails(obj6);
-                  return;
-                }
-              }
+              tmp25 = cResult[14];
             }
-            const id = event.id;
-            if (channel != null) {
+            if (cResult[15] !== event) {
               class R {
                 constructor() {
                   obj = closure_1(closure_2[16]);
                   itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
                   obj2 = closure_1(closure_2[16]);
-                  obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
+                  obj1 = {
+                    itemId: event.id,
+                    itemType: "guild_event",
+                    actionParameters: {
+                      actionGestureType: "press",
+                      actionTargetElement: "item_body",
+                      actionIntentType: "navigate",
+                      actionDestinationType: "event",
+                    },
+                  };
                   feedItemActionedResult = obj2.feedItemActioned(obj1);
                   obj4 = closure_0(closure_2[17]);
                   obj6 = { eventId: event.id, event };
@@ -273,44 +178,44 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((event) => {
                   return;
                 }
               }
-            }
-            const id2 = guild.id;
-            if (cResult[21] !== event.id) {
-              class R {
-                constructor() {
-                  obj = closure_1(closure_2[16]);
-                  itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                  obj2 = closure_1(closure_2[16]);
-                  obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                  feedItemActionedResult = obj2.feedItemActioned(obj1);
-                  obj4 = closure_0(closure_2[17]);
-                  obj6 = { eventId: event.id, event };
-                  result = obj4.openGuildEventDetails(obj6);
-                  return;
-                }
-              }
-              const extractTimestampResult = obj7.extractTimestamp(event.id);
-              cResult[21] = event.id;
+              cResult[15] = event;
               class X {
                 constructor() {
                   obj = closure_1(closure_2[16]);
                   itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
                   obj2 = closure_1(closure_2[16]);
-                  obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
+                  obj1 = {
+                    itemId: event.id,
+                    itemType: "guild_event",
+                    actionParameters: {
+                      actionGestureType: "press",
+                      actionTargetElement: "item_header",
+                      actionIntentType: "navigate",
+                      actionDestinationType: "guild",
+                    },
+                  };
                   feedItemActionedResult = obj2.feedItemActioned(obj1);
                   obj4 = closure_0(closure_2[18]);
                   transitionToGuildResult = obj4.transitionToGuild(guild.id);
                   return;
                 }
               }
-              cResult[22] = extractTimestampResult;
             } else {
               class R {
                 constructor() {
                   obj = closure_1(closure_2[16]);
                   itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
                   obj2 = closure_1(closure_2[16]);
-                  obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
+                  obj1 = {
+                    itemId: event.id,
+                    itemType: "guild_event",
+                    actionParameters: {
+                      actionGestureType: "press",
+                      actionTargetElement: "item_body",
+                      actionIntentType: "navigate",
+                      actionDestinationType: "event",
+                    },
+                  };
                   feedItemActionedResult = obj2.feedItemActioned(obj1);
                   obj4 = closure_0(closure_2[17]);
                   obj6 = { eventId: event.id, event };
@@ -319,14 +224,22 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((event) => {
                 }
               }
             }
-            const container = tmp4.container;
-            if (tmp7) {
+            if (cResult[17] === event.id) {
               class R {
                 constructor() {
                   obj = closure_1(closure_2[16]);
                   itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
                   obj2 = closure_1(closure_2[16]);
-                  obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
+                  obj1 = {
+                    itemId: event.id,
+                    itemType: "guild_event",
+                    actionParameters: {
+                      actionGestureType: "press",
+                      actionTargetElement: "item_body",
+                      actionIntentType: "navigate",
+                      actionDestinationType: "event",
+                    },
+                  };
                   feedItemActionedResult = obj2.feedItemActioned(obj1);
                   obj4 = closure_0(closure_2[17]);
                   obj6 = { eventId: event.id, event };
@@ -334,28 +247,23 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((event) => {
                   return;
                 }
               }
-            }
-            if (cResult[23] === startDateTimeString) {
-              class R {
-                constructor() {
-                  obj = closure_1(closure_2[16]);
-                  itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                  obj2 = closure_1(closure_2[16]);
-                  obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                  feedItemActionedResult = obj2.feedItemActioned(obj1);
-                  obj4 = closure_0(closure_2[17]);
-                  obj6 = { eventId: event.id, event };
-                  result = obj4.openGuildEventDetails(obj6);
-                  return;
-                }
-              }
-              if (cResult[26] === tmp4.timeAndUserPillContainer) {
+              let tmp29 = null != event.description;
+              if (tmp29) {
                 class R {
                   constructor() {
                     obj = closure_1(closure_2[16]);
                     itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
                     obj2 = closure_1(closure_2[16]);
-                    obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
+                    obj1 = {
+                      itemId: event.id,
+                      itemType: "guild_event",
+                      actionParameters: {
+                        actionGestureType: "press",
+                        actionTargetElement: "item_body",
+                        actionIntentType: "navigate",
+                        actionDestinationType: "event",
+                      },
+                    };
                     feedItemActionedResult = obj2.feedItemActioned(obj1);
                     obj4 = closure_0(closure_2[17]);
                     obj6 = { eventId: event.id, event };
@@ -363,713 +271,1320 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((event) => {
                     return;
                   }
                 }
-                if (tmp27) {
-                  class R {
-                    constructor() {
-                      obj = closure_1(closure_2[16]);
-                      itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                      obj2 = closure_1(closure_2[16]);
-                      obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                      feedItemActionedResult = obj2.feedItemActioned(obj1);
-                      obj4 = closure_0(closure_2[17]);
-                      obj6 = { eventId: event.id, event };
-                      result = obj4.openGuildEventDetails(obj6);
-                      return;
-                    }
-                  }
-                }
-                if (cResult[29] === event.name) {
-                  class R {
-                    constructor() {
-                      obj = closure_1(closure_2[16]);
-                      itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                      obj2 = closure_1(closure_2[16]);
-                      obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                      feedItemActionedResult = obj2.feedItemActioned(obj1);
-                      obj4 = closure_0(closure_2[17]);
-                      obj6 = { eventId: event.id, event };
-                      result = obj4.openGuildEventDetails(obj6);
-                      return;
-                    }
-                  }
-                  if (cResult[32] === event.description) {
-                    class R {
-                      constructor() {
-                        obj = closure_1(closure_2[16]);
-                        itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                        obj2 = closure_1(closure_2[16]);
-                        obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                        feedItemActionedResult = obj2.feedItemActioned(obj1);
-                        obj4 = closure_0(closure_2[17]);
-                        obj6 = { eventId: event.id, event };
-                        result = obj4.openGuildEventDetails(obj6);
-                        return;
-                      }
-                    }
-                    if (cResult[35] !== tmp4.separator) {
-                      class R {
-                        constructor() {
-                          obj = closure_1(closure_2[16]);
-                          itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                          obj2 = closure_1(closure_2[16]);
-                          obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                          feedItemActionedResult = obj2.feedItemActioned(obj1);
-                          obj4 = closure_0(closure_2[17]);
-                          obj6 = { eventId: event.id, event };
-                          result = obj4.openGuildEventDetails(obj6);
-                          return;
-                        }
-                      }
-                      { style: null }.style = tmp4.separator;
-                      class X {
-                        constructor() {
-                          obj = closure_1(closure_2[16]);
-                          itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                          obj2 = closure_1(closure_2[16]);
-                          obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
-                          feedItemActionedResult = obj2.feedItemActioned(obj1);
-                          obj4 = closure_0(closure_2[18]);
-                          transitionToGuildResult = obj4.transitionToGuild(guild.id);
-                          return;
-                        }
-                      }
-                      cResult[35] = tmp4.separator;
-                      cResult[36] = tmp55;
-                      let obj3 = { style: null };
-                    } else {
-                      class R {
-                        constructor() {
-                          obj = closure_1(closure_2[16]);
-                          itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                          obj2 = closure_1(closure_2[16]);
-                          obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                          feedItemActionedResult = obj2.feedItemActioned(obj1);
-                          obj4 = closure_0(closure_2[17]);
-                          obj6 = { eventId: event.id, event };
-                          result = obj4.openGuildEventDetails(obj6);
-                          return;
-                        }
-                      }
-                    }
-                    const infoContainer = tmp4.infoContainer;
-                    class X {
-                      constructor() {
-                        obj = closure_1(closure_2[16]);
-                        itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                        obj2 = closure_1(closure_2[16]);
-                        obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
-                        feedItemActionedResult = obj2.feedItemActioned(obj1);
-                        obj4 = closure_0(closure_2[18]);
-                        transitionToGuildResult = obj4.transitionToGuild(guild.id);
-                        return;
-                      }
-                    }
-                    if (cResult[37] !== tmp4.eventsChannelIcon) {
-                      class R {
-                        constructor() {
-                          obj = closure_1(closure_2[16]);
-                          itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                          obj2 = closure_1(closure_2[16]);
-                          obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                          feedItemActionedResult = obj2.feedItemActioned(obj1);
-                          obj4 = closure_0(closure_2[17]);
-                          obj6 = { eventId: event.id, event };
-                          result = obj4.openGuildEventDetails(obj6);
-                          return;
-                        }
-                      }
-                      const obj4 = { size: "xs", style: tmp4.eventsChannelIcon };
-                      const tmp59 = closure_11(tmp(5873).GroupIcon, obj4);
-                      class X {
-                        constructor() {
-                          obj = closure_1(closure_2[16]);
-                          itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                          obj2 = closure_1(closure_2[16]);
-                          obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
-                          feedItemActionedResult = obj2.feedItemActioned(obj1);
-                          obj4 = closure_0(closure_2[18]);
-                          transitionToGuildResult = obj4.transitionToGuild(guild.id);
-                          return;
-                        }
-                      }
-                      cResult[37] = tmp4.eventsChannelIcon;
-                      cResult[38] = tmp59;
-                    } else {
-                      class R {
-                        constructor() {
-                          obj = closure_1(closure_2[16]);
-                          itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                          obj2 = closure_1(closure_2[16]);
-                          obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                          feedItemActionedResult = obj2.feedItemActioned(obj1);
-                          obj4 = closure_0(closure_2[17]);
-                          obj6 = { eventId: event.id, event };
-                          result = obj4.openGuildEventDetails(obj6);
-                          return;
-                        }
-                      }
-                    }
-                    if (cResult[39] !== tmp28Result) {
-                      class R {
-                        constructor() {
-                          obj = closure_1(closure_2[16]);
-                          itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                          obj2 = closure_1(closure_2[16]);
-                          obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                          feedItemActionedResult = obj2.feedItemActioned(obj1);
-                          obj4 = closure_0(closure_2[17]);
-                          obj6 = { eventId: event.id, event };
-                          result = obj4.openGuildEventDetails(obj6);
-                          return;
-                        }
-                      }
-                      const format = tmp61.format;
-                      { count: null }.count = tmp28Result;
-                      class X {
-                        constructor() {
-                          obj = closure_1(closure_2[16]);
-                          itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                          obj2 = closure_1(closure_2[16]);
-                          obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
-                          feedItemActionedResult = obj2.feedItemActioned(obj1);
-                          obj4 = closure_0(closure_2[18]);
-                          transitionToGuildResult = obj4.transitionToGuild(guild.id);
-                          return;
-                        }
-                      }
-                      cResult[39] = tmp28Result;
-                      cResult[40] = tmp62;
-                      const obj5 = { count: null };
-                    } else {
-                      class R {
-                        constructor() {
-                          obj = closure_1(closure_2[16]);
-                          itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                          obj2 = closure_1(closure_2[16]);
-                          obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                          feedItemActionedResult = obj2.feedItemActioned(obj1);
-                          obj4 = closure_0(closure_2[17]);
-                          obj6 = { eventId: event.id, event };
-                          result = obj4.openGuildEventDetails(obj6);
-                          return;
-                        }
-                      }
-                    }
-                    if (cResult[41] !== tmp62) {
-                      class R {
-                        constructor() {
-                          obj = closure_1(closure_2[16]);
-                          itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                          obj2 = closure_1(closure_2[16]);
-                          obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                          feedItemActionedResult = obj2.feedItemActioned(obj1);
-                          obj4 = closure_0(closure_2[17]);
-                          obj6 = { eventId: event.id, event };
-                          result = obj4.openGuildEventDetails(obj6);
-                          return;
-                        }
-                      }
-                      const obj8 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: tmp62 };
-                      const tmp64 = closure_11(tmp(4886).Text, obj8);
-                      class X {
-                        constructor() {
-                          obj = closure_1(closure_2[16]);
-                          itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                          obj2 = closure_1(closure_2[16]);
-                          obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
-                          feedItemActionedResult = obj2.feedItemActioned(obj1);
-                          obj4 = closure_0(closure_2[18]);
-                          transitionToGuildResult = obj4.transitionToGuild(guild.id);
-                          return;
-                        }
-                      }
-                      cResult[41] = tmp62;
-                      cResult[42] = tmp64;
-                    } else {
-                      class R {
-                        constructor() {
-                          obj = closure_1(closure_2[16]);
-                          itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                          obj2 = closure_1(closure_2[16]);
-                          obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                          feedItemActionedResult = obj2.feedItemActioned(obj1);
-                          obj4 = closure_0(closure_2[17]);
-                          obj6 = { eventId: event.id, event };
-                          result = obj4.openGuildEventDetails(obj6);
-                          return;
-                        }
-                      }
-                    }
-                    if (cResult[43] === tmp4.locationContainer) {
-                      class R {
-                        constructor() {
-                          obj = closure_1(closure_2[16]);
-                          itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                          obj2 = closure_1(closure_2[16]);
-                          obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                          feedItemActionedResult = obj2.feedItemActioned(obj1);
-                          obj4 = closure_0(closure_2[17]);
-                          obj6 = { eventId: event.id, event };
-                          result = obj4.openGuildEventDetails(obj6);
-                          return;
-                        }
-                      }
-                    }
-                    const obj9 = { style: tmp57, children: null };
-                    const items = [tmp58, tmp63];
-                    obj9.children = items;
-                    const tmp67 = closure_12(closure_5, obj9);
-                    cResult[43] = tmp4.locationContainer;
-                    cResult[44] = tmp58;
-                    cResult[45] = tmp63;
-                    cResult[46] = tmp67;
-                  }
-                  let tmp52 = null != event.description;
-                  if (tmp52) {
-                    class R {
-                      constructor() {
-                        obj = closure_1(closure_2[16]);
-                        itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                        obj2 = closure_1(closure_2[16]);
-                        obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-                        feedItemActionedResult = obj2.feedItemActioned(obj1);
-                        obj4 = closure_0(closure_2[17]);
-                        obj6 = { eventId: event.id, event };
-                        result = obj4.openGuildEventDetails(obj6);
-                        return;
-                      }
-                    }
-                    tmp52 = event.description.length > 0;
-                  }
-                  class X {
-                    constructor() {
-                      obj = closure_1(closure_2[16]);
-                      itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                      obj2 = closure_1(closure_2[16]);
-                      obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
-                      feedItemActionedResult = obj2.feedItemActioned(obj1);
-                      obj4 = closure_0(closure_2[18]);
-                      transitionToGuildResult = obj4.transitionToGuild(guild.id);
-                      return;
-                    }
-                  }
-                  cResult[32] = event.description;
-                  cResult[33] = guild.id;
-                  cResult[34] = tmp52;
-                }
-                class X {
-                  constructor() {
-                    obj = closure_1(closure_2[16]);
-                    itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-                    obj2 = closure_1(closure_2[16]);
-                    obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
-                    feedItemActionedResult = obj2.feedItemActioned(obj1);
-                    obj4 = closure_0(closure_2[18]);
-                    transitionToGuildResult = obj4.transitionToGuild(guild.id);
-                    return;
-                  }
-                }
-                tmp49[0] = tmp27;
-                tmp49[2] = event.name;
-                const tmp50 = closure_11(tmp(4886).Text, tmp49);
-                cResult[29] = event.name;
-                cResult[30] = tmp27;
-                cResult[31] = tmp50;
+                tmp29 = event.description.length > 0;
               }
               class X {
                 constructor() {
                   obj = closure_1(closure_2[16]);
                   itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
                   obj2 = closure_1(closure_2[16]);
-                  obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
+                  obj1 = {
+                    itemId: event.id,
+                    itemType: "guild_event",
+                    actionParameters: {
+                      actionGestureType: "press",
+                      actionTargetElement: "item_header",
+                      actionIntentType: "navigate",
+                      actionDestinationType: "guild",
+                    },
+                  };
                   feedItemActionedResult = obj2.feedItemActioned(obj1);
                   obj4 = closure_0(closure_2[18]);
                   transitionToGuildResult = obj4.transitionToGuild(guild.id);
                   return;
                 }
               }
-              tmp45[0] = tmp4.timeAndUserPillContainer;
-              tmp45[1] = tmp39;
-              const tmp46 = closure_11(closure_5, tmp45);
-              cResult[26] = tmp4.timeAndUserPillContainer;
-              cResult[27] = tmp39;
-              cResult[28] = tmp46;
+              if (event != null) {
+                class R {
+                  constructor() {
+                    obj = closure_1(closure_2[16]);
+                    itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                    obj2 = closure_1(closure_2[16]);
+                    obj1 = {
+                      itemId: event.id,
+                      itemType: "guild_event",
+                      actionParameters: {
+                        actionGestureType: "press",
+                        actionTargetElement: "item_body",
+                        actionIntentType: "navigate",
+                        actionDestinationType: "event",
+                      },
+                    };
+                    feedItemActionedResult = obj2.feedItemActioned(obj1);
+                    obj4 = closure_0(closure_2[17]);
+                    obj6 = { eventId: event.id, event };
+                    result = obj4.openGuildEventDetails(obj6);
+                    return;
+                  }
+                }
+              }
+              if (event != null) {
+                class R {
+                  constructor() {
+                    obj = closure_1(closure_2[16]);
+                    itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                    obj2 = closure_1(closure_2[16]);
+                    obj1 = {
+                      itemId: event.id,
+                      itemType: "guild_event",
+                      actionParameters: {
+                        actionGestureType: "press",
+                        actionTargetElement: "item_body",
+                        actionIntentType: "navigate",
+                        actionDestinationType: "event",
+                      },
+                    };
+                    feedItemActionedResult = obj2.feedItemActioned(obj1);
+                    obj4 = closure_0(closure_2[17]);
+                    obj6 = { eventId: event.id, event };
+                    result = obj4.openGuildEventDetails(obj6);
+                    return;
+                  }
+                }
+              }
+              const tmp30Result = tmp30(undefined, undefined, tmp25);
+              guild(16442);
+              const _Symbol = Symbol;
+              if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
+                class R {
+                  constructor() {
+                    obj = closure_1(closure_2[16]);
+                    itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                    obj2 = closure_1(closure_2[16]);
+                    obj1 = {
+                      itemId: event.id,
+                      itemType: "guild_event",
+                      actionParameters: {
+                        actionGestureType: "press",
+                        actionTargetElement: "item_body",
+                        actionIntentType: "navigate",
+                        actionDestinationType: "event",
+                      },
+                    };
+                    feedItemActionedResult = obj2.feedItemActioned(obj1);
+                    obj4 = closure_0(closure_2[17]);
+                    obj6 = { eventId: event.id, event };
+                    result = obj4.openGuildEventDetails(obj6);
+                    return;
+                  }
+                }
+                obj6.string(event(1126).t["6pFsLQ"]);
+                class X {
+                  constructor() {
+                    obj = closure_1(closure_2[16]);
+                    itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                    obj2 = closure_1(closure_2[16]);
+                    obj1 = {
+                      itemId: event.id,
+                      itemType: "guild_event",
+                      actionParameters: {
+                        actionGestureType: "press",
+                        actionTargetElement: "item_header",
+                        actionIntentType: "navigate",
+                        actionDestinationType: "guild",
+                      },
+                    };
+                    feedItemActionedResult = obj2.feedItemActioned(obj1);
+                    obj4 = closure_0(closure_2[18]);
+                    transitionToGuildResult = obj4.transitionToGuild(guild.id);
+                    return;
+                  }
+                }
+              } else {
+                class R {
+                  constructor() {
+                    obj = closure_1(closure_2[16]);
+                    itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                    obj2 = closure_1(closure_2[16]);
+                    obj1 = {
+                      itemId: event.id,
+                      itemType: "guild_event",
+                      actionParameters: {
+                        actionGestureType: "press",
+                        actionTargetElement: "item_body",
+                        actionIntentType: "navigate",
+                        actionDestinationType: "event",
+                      },
+                    };
+                    feedItemActionedResult = obj2.feedItemActioned(obj1);
+                    obj4 = closure_0(closure_2[17]);
+                    obj6 = { eventId: event.id, event };
+                    result = obj4.openGuildEventDetails(obj6);
+                    return;
+                  }
+                }
+              }
+              const id = event.id;
+              if (channel != null) {
+                class R {
+                  constructor() {
+                    obj = closure_1(closure_2[16]);
+                    itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                    obj2 = closure_1(closure_2[16]);
+                    obj1 = {
+                      itemId: event.id,
+                      itemType: "guild_event",
+                      actionParameters: {
+                        actionGestureType: "press",
+                        actionTargetElement: "item_body",
+                        actionIntentType: "navigate",
+                        actionDestinationType: "event",
+                      },
+                    };
+                    feedItemActionedResult = obj2.feedItemActioned(obj1);
+                    obj4 = closure_0(closure_2[17]);
+                    obj6 = { eventId: event.id, event };
+                    result = obj4.openGuildEventDetails(obj6);
+                    return;
+                  }
+                }
+              }
+              const id2 = guild.id;
+              if (cResult[21] !== event.id) {
+                class R {
+                  constructor() {
+                    obj = closure_1(closure_2[16]);
+                    itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                    obj2 = closure_1(closure_2[16]);
+                    obj1 = {
+                      itemId: event.id,
+                      itemType: "guild_event",
+                      actionParameters: {
+                        actionGestureType: "press",
+                        actionTargetElement: "item_body",
+                        actionIntentType: "navigate",
+                        actionDestinationType: "event",
+                      },
+                    };
+                    feedItemActionedResult = obj2.feedItemActioned(obj1);
+                    obj4 = closure_0(closure_2[17]);
+                    obj6 = { eventId: event.id, event };
+                    result = obj4.openGuildEventDetails(obj6);
+                    return;
+                  }
+                }
+                cResult[21] = event.id;
+                const extractTimestampResult = obj7.extractTimestamp(event.id);
+                class X {
+                  constructor() {
+                    obj = closure_1(closure_2[16]);
+                    itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                    obj2 = closure_1(closure_2[16]);
+                    obj1 = {
+                      itemId: event.id,
+                      itemType: "guild_event",
+                      actionParameters: {
+                        actionGestureType: "press",
+                        actionTargetElement: "item_header",
+                        actionIntentType: "navigate",
+                        actionDestinationType: "guild",
+                      },
+                    };
+                    feedItemActionedResult = obj2.feedItemActioned(obj1);
+                    obj4 = closure_0(closure_2[18]);
+                    transitionToGuildResult = obj4.transitionToGuild(guild.id);
+                    return;
+                  }
+                }
+                cResult[22] = extractTimestampResult;
+              } else {
+                class R {
+                  constructor() {
+                    obj = closure_1(closure_2[16]);
+                    itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                    obj2 = closure_1(closure_2[16]);
+                    obj1 = {
+                      itemId: event.id,
+                      itemType: "guild_event",
+                      actionParameters: {
+                        actionGestureType: "press",
+                        actionTargetElement: "item_body",
+                        actionIntentType: "navigate",
+                        actionDestinationType: "event",
+                      },
+                    };
+                    feedItemActionedResult = obj2.feedItemActioned(obj1);
+                    obj4 = closure_0(closure_2[17]);
+                    obj6 = { eventId: event.id, event };
+                    result = obj4.openGuildEventDetails(obj6);
+                    return;
+                  }
+                }
+              }
+              const container = tmp4.container;
+              if (tmp7) {
+                class R {
+                  constructor() {
+                    obj = closure_1(closure_2[16]);
+                    itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                    obj2 = closure_1(closure_2[16]);
+                    obj1 = {
+                      itemId: event.id,
+                      itemType: "guild_event",
+                      actionParameters: {
+                        actionGestureType: "press",
+                        actionTargetElement: "item_body",
+                        actionIntentType: "navigate",
+                        actionDestinationType: "event",
+                      },
+                    };
+                    feedItemActionedResult = obj2.feedItemActioned(obj1);
+                    obj4 = closure_0(closure_2[17]);
+                    obj6 = { eventId: event.id, event };
+                    result = obj4.openGuildEventDetails(obj6);
+                    return;
+                  }
+                }
+              }
+              if (cResult[23] === startDateTimeString) {
+                class R {
+                  constructor() {
+                    obj = closure_1(closure_2[16]);
+                    itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                    obj2 = closure_1(closure_2[16]);
+                    obj1 = {
+                      itemId: event.id,
+                      itemType: "guild_event",
+                      actionParameters: {
+                        actionGestureType: "press",
+                        actionTargetElement: "item_body",
+                        actionIntentType: "navigate",
+                        actionDestinationType: "event",
+                      },
+                    };
+                    feedItemActionedResult = obj2.feedItemActioned(obj1);
+                    obj4 = closure_0(closure_2[17]);
+                    obj6 = { eventId: event.id, event };
+                    result = obj4.openGuildEventDetails(obj6);
+                    return;
+                  }
+                }
+                if (cResult[26] === tmp4.timeAndUserPillContainer) {
+                  class R {
+                    constructor() {
+                      obj = closure_1(closure_2[16]);
+                      itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                      obj2 = closure_1(closure_2[16]);
+                      obj1 = {
+                        itemId: event.id,
+                        itemType: "guild_event",
+                        actionParameters: {
+                          actionGestureType: "press",
+                          actionTargetElement: "item_body",
+                          actionIntentType: "navigate",
+                          actionDestinationType: "event",
+                        },
+                      };
+                      feedItemActionedResult = obj2.feedItemActioned(obj1);
+                      obj4 = closure_0(closure_2[17]);
+                      obj6 = { eventId: event.id, event };
+                      result = obj4.openGuildEventDetails(obj6);
+                      return;
+                    }
+                  }
+                  if (tmp29) {
+                    class R {
+                      constructor() {
+                        obj = closure_1(closure_2[16]);
+                        itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                        obj2 = closure_1(closure_2[16]);
+                        obj1 = {
+                          itemId: event.id,
+                          itemType: "guild_event",
+                          actionParameters: {
+                            actionGestureType: "press",
+                            actionTargetElement: "item_body",
+                            actionIntentType: "navigate",
+                            actionDestinationType: "event",
+                          },
+                        };
+                        feedItemActionedResult = obj2.feedItemActioned(obj1);
+                        obj4 = closure_0(closure_2[17]);
+                        obj6 = { eventId: event.id, event };
+                        result = obj4.openGuildEventDetails(obj6);
+                        return;
+                      }
+                    }
+                  }
+                  if (cResult[29] === event.name) {
+                    class R {
+                      constructor() {
+                        obj = closure_1(closure_2[16]);
+                        itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                        obj2 = closure_1(closure_2[16]);
+                        obj1 = {
+                          itemId: event.id,
+                          itemType: "guild_event",
+                          actionParameters: {
+                            actionGestureType: "press",
+                            actionTargetElement: "item_body",
+                            actionIntentType: "navigate",
+                            actionDestinationType: "event",
+                          },
+                        };
+                        feedItemActionedResult = obj2.feedItemActioned(obj1);
+                        obj4 = closure_0(closure_2[17]);
+                        obj6 = { eventId: event.id, event };
+                        result = obj4.openGuildEventDetails(obj6);
+                        return;
+                      }
+                    }
+                    if (cResult[32] === event.description) {
+                      class R {
+                        constructor() {
+                          obj = closure_1(closure_2[16]);
+                          itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                          obj2 = closure_1(closure_2[16]);
+                          obj1 = {
+                            itemId: event.id,
+                            itemType: "guild_event",
+                            actionParameters: {
+                              actionGestureType: "press",
+                              actionTargetElement: "item_body",
+                              actionIntentType: "navigate",
+                              actionDestinationType: "event",
+                            },
+                          };
+                          feedItemActionedResult = obj2.feedItemActioned(obj1);
+                          obj4 = closure_0(closure_2[17]);
+                          obj6 = { eventId: event.id, event };
+                          result = obj4.openGuildEventDetails(obj6);
+                          return;
+                        }
+                      }
+                      if (cResult[35] !== tmp4.separator) {
+                        class R {
+                          constructor() {
+                            obj = closure_1(closure_2[16]);
+                            itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                            obj2 = closure_1(closure_2[16]);
+                            obj1 = {
+                              itemId: event.id,
+                              itemType: "guild_event",
+                              actionParameters: {
+                                actionGestureType: "press",
+                                actionTargetElement: "item_body",
+                                actionIntentType: "navigate",
+                                actionDestinationType: "event",
+                              },
+                            };
+                            feedItemActionedResult = obj2.feedItemActioned(obj1);
+                            obj4 = closure_0(closure_2[17]);
+                            obj6 = { eventId: event.id, event };
+                            result = obj4.openGuildEventDetails(obj6);
+                            return;
+                          }
+                        }
+                        let obj3 = { style: tmp4.separator };
+                        class X {
+                          constructor() {
+                            obj = closure_1(closure_2[16]);
+                            itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                            obj2 = closure_1(closure_2[16]);
+                            obj1 = {
+                              itemId: event.id,
+                              itemType: "guild_event",
+                              actionParameters: {
+                                actionGestureType: "press",
+                                actionTargetElement: "item_header",
+                                actionIntentType: "navigate",
+                                actionDestinationType: "guild",
+                              },
+                            };
+                            feedItemActionedResult = obj2.feedItemActioned(obj1);
+                            obj4 = closure_0(closure_2[18]);
+                            transitionToGuildResult = obj4.transitionToGuild(guild.id);
+                            return;
+                          }
+                        }
+                        cResult[35] = tmp4.separator;
+                        cResult[36] = tmp57;
+                      } else {
+                        class R {
+                          constructor() {
+                            obj = closure_1(closure_2[16]);
+                            itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                            obj2 = closure_1(closure_2[16]);
+                            obj1 = {
+                              itemId: event.id,
+                              itemType: "guild_event",
+                              actionParameters: {
+                                actionGestureType: "press",
+                                actionTargetElement: "item_body",
+                                actionIntentType: "navigate",
+                                actionDestinationType: "event",
+                              },
+                            };
+                            feedItemActionedResult = obj2.feedItemActioned(obj1);
+                            obj4 = closure_0(closure_2[17]);
+                            obj6 = { eventId: event.id, event };
+                            result = obj4.openGuildEventDetails(obj6);
+                            return;
+                          }
+                        }
+                      }
+                      const infoContainer = tmp4.infoContainer;
+                      class X {
+                        constructor() {
+                          obj = closure_1(closure_2[16]);
+                          itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                          obj2 = closure_1(closure_2[16]);
+                          obj1 = {
+                            itemId: event.id,
+                            itemType: "guild_event",
+                            actionParameters: {
+                              actionGestureType: "press",
+                              actionTargetElement: "item_header",
+                              actionIntentType: "navigate",
+                              actionDestinationType: "guild",
+                            },
+                          };
+                          feedItemActionedResult = obj2.feedItemActioned(obj1);
+                          obj4 = closure_0(closure_2[18]);
+                          transitionToGuildResult = obj4.transitionToGuild(guild.id);
+                          return;
+                        }
+                      }
+                      if (cResult[37] !== tmp4.eventsChannelIcon) {
+                        class R {
+                          constructor() {
+                            obj = closure_1(closure_2[16]);
+                            itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                            obj2 = closure_1(closure_2[16]);
+                            obj1 = {
+                              itemId: event.id,
+                              itemType: "guild_event",
+                              actionParameters: {
+                                actionGestureType: "press",
+                                actionTargetElement: "item_body",
+                                actionIntentType: "navigate",
+                                actionDestinationType: "event",
+                              },
+                            };
+                            feedItemActionedResult = obj2.feedItemActioned(obj1);
+                            obj4 = closure_0(closure_2[17]);
+                            obj6 = { eventId: event.id, event };
+                            result = obj4.openGuildEventDetails(obj6);
+                            return;
+                          }
+                        }
+                        let obj4 = { size: "xs", style: tmp4.eventsChannelIcon };
+                        const tmp61 = closure_11(event(5873).GroupIcon, obj4);
+                        class X {
+                          constructor() {
+                            obj = closure_1(closure_2[16]);
+                            itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                            obj2 = closure_1(closure_2[16]);
+                            obj1 = {
+                              itemId: event.id,
+                              itemType: "guild_event",
+                              actionParameters: {
+                                actionGestureType: "press",
+                                actionTargetElement: "item_header",
+                                actionIntentType: "navigate",
+                                actionDestinationType: "guild",
+                              },
+                            };
+                            feedItemActionedResult = obj2.feedItemActioned(obj1);
+                            obj4 = closure_0(closure_2[18]);
+                            transitionToGuildResult = obj4.transitionToGuild(guild.id);
+                            return;
+                          }
+                        }
+                        cResult[37] = tmp4.eventsChannelIcon;
+                        cResult[38] = tmp61;
+                      } else {
+                        class R {
+                          constructor() {
+                            obj = closure_1(closure_2[16]);
+                            itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                            obj2 = closure_1(closure_2[16]);
+                            obj1 = {
+                              itemId: event.id,
+                              itemType: "guild_event",
+                              actionParameters: {
+                                actionGestureType: "press",
+                                actionTargetElement: "item_body",
+                                actionIntentType: "navigate",
+                                actionDestinationType: "event",
+                              },
+                            };
+                            feedItemActionedResult = obj2.feedItemActioned(obj1);
+                            obj4 = closure_0(closure_2[17]);
+                            obj6 = { eventId: event.id, event };
+                            result = obj4.openGuildEventDetails(obj6);
+                            return;
+                          }
+                        }
+                      }
+                      if (cResult[39] !== tmp30Result) {
+                        class R {
+                          constructor() {
+                            obj = closure_1(closure_2[16]);
+                            itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                            obj2 = closure_1(closure_2[16]);
+                            obj1 = {
+                              itemId: event.id,
+                              itemType: "guild_event",
+                              actionParameters: {
+                                actionGestureType: "press",
+                                actionTargetElement: "item_body",
+                                actionIntentType: "navigate",
+                                actionDestinationType: "event",
+                              },
+                            };
+                            feedItemActionedResult = obj2.feedItemActioned(obj1);
+                            obj4 = closure_0(closure_2[17]);
+                            obj6 = { eventId: event.id, event };
+                            result = obj4.openGuildEventDetails(obj6);
+                            return;
+                          }
+                        }
+                        const format = tmp63.format;
+                        let obj5 = { count: tmp30Result };
+                        class X {
+                          constructor() {
+                            obj = closure_1(closure_2[16]);
+                            itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                            obj2 = closure_1(closure_2[16]);
+                            obj1 = {
+                              itemId: event.id,
+                              itemType: "guild_event",
+                              actionParameters: {
+                                actionGestureType: "press",
+                                actionTargetElement: "item_header",
+                                actionIntentType: "navigate",
+                                actionDestinationType: "guild",
+                              },
+                            };
+                            feedItemActionedResult = obj2.feedItemActioned(obj1);
+                            obj4 = closure_0(closure_2[18]);
+                            transitionToGuildResult = obj4.transitionToGuild(guild.id);
+                            return;
+                          }
+                        }
+                        cResult[39] = tmp30Result;
+                        cResult[40] = tmp64;
+                      } else {
+                        class R {
+                          constructor() {
+                            obj = closure_1(closure_2[16]);
+                            itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                            obj2 = closure_1(closure_2[16]);
+                            obj1 = {
+                              itemId: event.id,
+                              itemType: "guild_event",
+                              actionParameters: {
+                                actionGestureType: "press",
+                                actionTargetElement: "item_body",
+                                actionIntentType: "navigate",
+                                actionDestinationType: "event",
+                              },
+                            };
+                            feedItemActionedResult = obj2.feedItemActioned(obj1);
+                            obj4 = closure_0(closure_2[17]);
+                            obj6 = { eventId: event.id, event };
+                            result = obj4.openGuildEventDetails(obj6);
+                            return;
+                          }
+                        }
+                      }
+                      if (cResult[41] !== tmp64) {
+                        class R {
+                          constructor() {
+                            obj = closure_1(closure_2[16]);
+                            itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                            obj2 = closure_1(closure_2[16]);
+                            obj1 = {
+                              itemId: event.id,
+                              itemType: "guild_event",
+                              actionParameters: {
+                                actionGestureType: "press",
+                                actionTargetElement: "item_body",
+                                actionIntentType: "navigate",
+                                actionDestinationType: "event",
+                              },
+                            };
+                            feedItemActionedResult = obj2.feedItemActioned(obj1);
+                            obj4 = closure_0(closure_2[17]);
+                            obj6 = { eventId: event.id, event };
+                            result = obj4.openGuildEventDetails(obj6);
+                            return;
+                          }
+                        }
+                        const obj8 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: tmp64 };
+                        const tmp66 = closure_11(event(4886).Text, obj8);
+                        class X {
+                          constructor() {
+                            obj = closure_1(closure_2[16]);
+                            itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                            obj2 = closure_1(closure_2[16]);
+                            obj1 = {
+                              itemId: event.id,
+                              itemType: "guild_event",
+                              actionParameters: {
+                                actionGestureType: "press",
+                                actionTargetElement: "item_header",
+                                actionIntentType: "navigate",
+                                actionDestinationType: "guild",
+                              },
+                            };
+                            feedItemActionedResult = obj2.feedItemActioned(obj1);
+                            obj4 = closure_0(closure_2[18]);
+                            transitionToGuildResult = obj4.transitionToGuild(guild.id);
+                            return;
+                          }
+                        }
+                        cResult[41] = tmp64;
+                        cResult[42] = tmp66;
+                      } else {
+                        class R {
+                          constructor() {
+                            obj = closure_1(closure_2[16]);
+                            itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                            obj2 = closure_1(closure_2[16]);
+                            obj1 = {
+                              itemId: event.id,
+                              itemType: "guild_event",
+                              actionParameters: {
+                                actionGestureType: "press",
+                                actionTargetElement: "item_body",
+                                actionIntentType: "navigate",
+                                actionDestinationType: "event",
+                              },
+                            };
+                            feedItemActionedResult = obj2.feedItemActioned(obj1);
+                            obj4 = closure_0(closure_2[17]);
+                            obj6 = { eventId: event.id, event };
+                            result = obj4.openGuildEventDetails(obj6);
+                            return;
+                          }
+                        }
+                      }
+                      if (cResult[43] === tmp4.locationContainer) {
+                        class R {
+                          constructor() {
+                            obj = closure_1(closure_2[16]);
+                            itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                            obj2 = closure_1(closure_2[16]);
+                            obj1 = {
+                              itemId: event.id,
+                              itemType: "guild_event",
+                              actionParameters: {
+                                actionGestureType: "press",
+                                actionTargetElement: "item_body",
+                                actionIntentType: "navigate",
+                                actionDestinationType: "event",
+                              },
+                            };
+                            feedItemActionedResult = obj2.feedItemActioned(obj1);
+                            obj4 = closure_0(closure_2[17]);
+                            obj6 = { eventId: event.id, event };
+                            result = obj4.openGuildEventDetails(obj6);
+                            return;
+                          }
+                        }
+                      }
+                      const obj9 = { style: tmp59, children: items };
+                      items = [tmp60, tmp65];
+                      cResult[43] = tmp4.locationContainer;
+                      cResult[44] = tmp60;
+                      cResult[45] = tmp65;
+                      cResult[46] = closure_12(closure_5, obj9);
+                      const tmp69 = closure_12(closure_5, obj9);
+                    }
+                    let tmp54 = null != event.description;
+                    if (tmp54) {
+                      class R {
+                        constructor() {
+                          obj = closure_1(closure_2[16]);
+                          itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                          obj2 = closure_1(closure_2[16]);
+                          obj1 = {
+                            itemId: event.id,
+                            itemType: "guild_event",
+                            actionParameters: {
+                              actionGestureType: "press",
+                              actionTargetElement: "item_body",
+                              actionIntentType: "navigate",
+                              actionDestinationType: "event",
+                            },
+                          };
+                          feedItemActionedResult = obj2.feedItemActioned(obj1);
+                          obj4 = closure_0(closure_2[17]);
+                          obj6 = { eventId: event.id, event };
+                          result = obj4.openGuildEventDetails(obj6);
+                          return;
+                        }
+                      }
+                      tmp54 = event.description.length > 0;
+                    }
+                    class X {
+                      constructor() {
+                        obj = closure_1(closure_2[16]);
+                        itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                        obj2 = closure_1(closure_2[16]);
+                        obj1 = {
+                          itemId: event.id,
+                          itemType: "guild_event",
+                          actionParameters: {
+                            actionGestureType: "press",
+                            actionTargetElement: "item_header",
+                            actionIntentType: "navigate",
+                            actionDestinationType: "guild",
+                          },
+                        };
+                        feedItemActionedResult = obj2.feedItemActioned(obj1);
+                        obj4 = closure_0(closure_2[18]);
+                        transitionToGuildResult = obj4.transitionToGuild(guild.id);
+                        return;
+                      }
+                    }
+                    cResult[32] = event.description;
+                    cResult[33] = guild.id;
+                    cResult[34] = tmp54;
+                  }
+                  class X {
+                    constructor() {
+                      obj = closure_1(closure_2[16]);
+                      itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                      obj2 = closure_1(closure_2[16]);
+                      obj1 = {
+                        itemId: event.id,
+                        itemType: "guild_event",
+                        actionParameters: {
+                          actionGestureType: "press",
+                          actionTargetElement: "item_header",
+                          actionIntentType: "navigate",
+                          actionDestinationType: "guild",
+                        },
+                      };
+                      feedItemActionedResult = obj2.feedItemActioned(obj1);
+                      obj4 = closure_0(closure_2[18]);
+                      transitionToGuildResult = obj4.transitionToGuild(guild.id);
+                      return;
+                    }
+                  }
+                  tmp51[0] = tmp29;
+                  tmp51[2] = event.name;
+                  cResult[29] = event.name;
+                  cResult[30] = tmp29;
+                  cResult[31] = closure_11(event(4886).Text, tmp51);
+                  const tmp52 = closure_11(event(4886).Text, tmp51);
+                }
+                class X {
+                  constructor() {
+                    obj = closure_1(closure_2[16]);
+                    itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                    obj2 = closure_1(closure_2[16]);
+                    obj1 = {
+                      itemId: event.id,
+                      itemType: "guild_event",
+                      actionParameters: {
+                        actionGestureType: "press",
+                        actionTargetElement: "item_header",
+                        actionIntentType: "navigate",
+                        actionDestinationType: "guild",
+                      },
+                    };
+                    feedItemActionedResult = obj2.feedItemActioned(obj1);
+                    obj4 = closure_0(closure_2[18]);
+                    transitionToGuildResult = obj4.transitionToGuild(guild.id);
+                    return;
+                  }
+                }
+                tmp47[0] = tmp4.timeAndUserPillContainer;
+                tmp47[1] = tmp41;
+                cResult[26] = tmp4.timeAndUserPillContainer;
+                cResult[27] = tmp41;
+                cResult[28] = closure_11(closure_5, tmp47);
+                const tmp48 = closure_11(closure_5, tmp47);
+              }
+              const obj10 = { variant: "text-sm/semibold", color: "text-brand", children: startDateTimeString };
+              cResult[23] = startDateTimeString;
+              cResult[24] = "text-brand";
+              cResult[25] = closure_11(event(4886).Text, obj10);
+              const tmp43 = closure_11(event(4886).Text, obj10);
             }
-            const obj10 = { variant: "text-sm/semibold", color: "text-brand", children: startDateTimeString };
-            const tmp41 = closure_11(tmp(4886).Text, obj10);
-            cResult[23] = startDateTimeString;
-            cResult[24] = "text-brand";
-            cResult[25] = tmp41;
-          }
-          class X {
-            constructor() {
-              obj = closure_1(closure_2[16]);
-              itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-              obj2 = closure_1(closure_2[16]);
-              obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
-              feedItemActionedResult = obj2.feedItemActioned(obj1);
-              obj4 = closure_0(closure_2[18]);
-              transitionToGuildResult = obj4.transitionToGuild(guild.id);
-              return;
+            class X {
+              constructor() {
+                obj = closure_1(closure_2[16]);
+                itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+                obj2 = closure_1(closure_2[16]);
+                obj1 = {
+                  itemId: event.id,
+                  itemType: "guild_event",
+                  actionParameters: {
+                    actionGestureType: "press",
+                    actionTargetElement: "item_header",
+                    actionIntentType: "navigate",
+                    actionDestinationType: "guild",
+                  },
+                };
+                feedItemActionedResult = obj2.feedItemActioned(obj1);
+                obj4 = closure_0(closure_2[18]);
+                transitionToGuildResult = obj4.transitionToGuild(guild.id);
+                return;
+              }
             }
+            cResult[17] = event.id;
+            cResult[18] = guild.id;
+            cResult[19] = X;
           }
-          cResult[17] = event.id;
-          cResult[18] = guild.id;
-          cResult[19] = X;
+          event(9258);
+          cResult[10] = channel;
+          cResult[11] = event;
+          cResult[12] = tmp24;
         }
-        tmp(9258);
-        cResult[10] = channel;
-        cResult[11] = event;
-        cResult[12] = tmp22;
+        const tmpResult6 = event(9258);
+        const eventLocationIconSource = tmpResult6.getEventLocationIconSource(event, channel, true);
+        cResult[7] = channel;
+        cResult[8] = event;
+        cResult[9] = eventLocationIconSource;
       }
-      const tmpResult = tmp(9180);
-      const eventLocationIconSource = tmp(9258).getEventLocationIconSource(event, channel, true);
-      cResult[7] = channel;
-      cResult[8] = event;
-      cResult[9] = eventLocationIconSource;
-      const tmpResult6 = tmp(9258);
-    }
-  }
-  if (tmp7) {
-    class R {
-      constructor() {
-        obj = closure_1(closure_2[16]);
-        itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-        obj2 = closure_1(closure_2[16]);
-        obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-        feedItemActionedResult = obj2.feedItemActioned(obj1);
-        obj4 = closure_0(closure_2[17]);
-        obj6 = { eventId: event.id, event };
-        result = obj4.openGuildEventDetails(obj6);
-        return;
-      }
-    }
-    const intl = tmp(1126).intl;
-    tmp15[0] = intl.string(tmp(1126).t.TxqPQR);
-    class X {
-      constructor() {
-        obj = closure_1(closure_2[16]);
-        itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-        obj2 = closure_1(closure_2[16]);
-        obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
-        feedItemActionedResult = obj2.feedItemActioned(obj1);
-        obj4 = closure_0(closure_2[18]);
-        transitionToGuildResult = obj4.transitionToGuild(guild.id);
-        return;
-      }
-    }
-  } else {
-    class R {
-      constructor() {
-        obj = closure_1(closure_2[16]);
-        itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
-        obj2 = closure_1(closure_2[16]);
-        obj1 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-        feedItemActionedResult = obj2.feedItemActioned(obj1);
-        obj4 = closure_0(closure_2[17]);
-        obj6 = { eventId: event.id, event };
-        result = obj4.openGuildEventDetails(obj6);
-        return;
-      }
-    }
-    const eventTimeData = obj2.getEventTimeData(tmp11);
-  }
-  cResult[4] = tmp7;
-  cResult[5] = tmp11;
-  cResult[6] = eventTimeData;
-  let obj = event(576);
-}) : ((event) => {
-  event = event.event;
-  ({ channel, guild } = event);
-  noop = undefined;
-  const tmp = closure_13();
-  const tmp4 = guild(9166)(event, null);
-  const tmp5 = closure_7(event);
-  dependencyMap = tmp5;
-  let toISOStringResult;
-  if (tmp4 != null) {
-    const startTime = tmp4.startTime;
-    toISOStringResult = startTime.toISOString();
-  }
-  noop = toISOStringResult;
-  const items = [toISOStringResult, tmp5];
-  const tmp7 = guild(5043)(channel);
-  const locationFromEvent = event(9180).getLocationFromEvent(event);
-  let obj = event(9180);
-  const eventLocationIconSource = event(9258).getEventLocationIconSource(event, channel, true);
-  let obj2 = event(9258);
-  const eventLocationIconComponent = event(9258).getEventLocationIconComponent(event, channel, true);
-  let obj3 = event(9258);
-  const items1 = [event];
-  const nextRecurrenceIdInEvent = event(9163).getNextRecurrenceIdInEvent(event);
-  const items2 = [guild.id, event.id];
-  const callback = noop.useCallback(() => {
-    ICYMIActionCreatorsDefault.itemInteracted(event.id, "guild_event", "press_event");
-    ICYMIActionCreatorsDefault.feedItemActioned({ itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } });
-    const obj3 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-    const result = guild_scheduled_events_GuildScheduledEventModalActionCreators.openGuildEventDetails({ eventId: event.id, event });
-  }, items1);
-  const callback1 = noop.useCallback(() => {
-    ICYMIActionCreatorsDefault.itemInteracted(event.id, "guild_event", "press_event");
-    ICYMIActionCreatorsDefault.feedItemActioned({ itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } });
-    const obj3 = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
-    transitionToGuild.transitionToGuild(guild.id);
-  }, items2);
-  let title = null != event.description;
-  if (title) {
-    title = event.description.length > 0;
-  }
-  let guild_id;
-  const obj4 = event(9163);
-  if (event != null) {
-    guild_id = event.guild_id;
-  }
-  let id;
-  if (event != null) {
-    id = event.id;
-  }
-  const tmp2Result = guild(9270);
-  const obj5 = { actionLabel: null, id: null, interactionType: "guild_event", channelId: null, guildId: null, timestamp: null, onHeaderPress: null, onHeaderLongPress: null, children: null };
-  const tmp2ResultResult = guild(9270)(guild_id, id, nextRecurrenceIdInEvent);
-  let intl = tmp8(1126).intl;
-  obj5.actionLabel = intl.string(event(1126).t["6pFsLQ"]);
-  obj5.id = event.id;
-  let id1;
-  if (channel != null) {
-    id1 = channel.id;
-  }
-  obj5.channelId = id1;
-  obj5.guildId = guild.id;
-  const tmp2Result3 = guild(16442);
-  obj5.timestamp = guild(11).extractTimestamp(event.id);
-  obj5.onHeaderPress = callback1;
-  obj5.onHeaderLongPress = callback1;
-  const obj6 = { onPress: callback, style: tmp.container, children: null };
-  const obj7 = { style: tmp.timeAndUserPillContainer, children: null };
-  let str = "text-brand";
-  if (tmp5) {
-    str = "status-positive";
-  }
-  obj7.children = closure_11(event(4886).Text, {
-    variant: "text-sm/semibold",
-    color: str,
-    children: noop.useMemo(() => {
-      if (closure_2) {
-        const obj = { startDateTimeString: null };
-        const intl = util.intl;
-        obj.startDateTimeString = intl.string(util.t.TxqPQR);
-        let eventTimeData = obj;
+      if (tmp7) {
+        class R {
+          constructor() {
+            obj = closure_1(closure_2[16]);
+            itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+            obj2 = closure_1(closure_2[16]);
+            obj1 = {
+              itemId: event.id,
+              itemType: "guild_event",
+              actionParameters: {
+                actionGestureType: "press",
+                actionTargetElement: "item_body",
+                actionIntentType: "navigate",
+                actionDestinationType: "event",
+              },
+            };
+            feedItemActionedResult = obj2.feedItemActioned(obj1);
+            obj4 = closure_0(closure_2[17]);
+            obj6 = { eventId: event.id, event };
+            result = obj4.openGuildEventDetails(obj6);
+            return;
+          }
+        }
+        const intl = tmp(1126).intl;
+        tmp17[0] = intl.string(event(1126).t.TxqPQR);
+        class X {
+          constructor() {
+            obj = closure_1(closure_2[16]);
+            itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+            obj2 = closure_1(closure_2[16]);
+            obj1 = {
+              itemId: event.id,
+              itemType: "guild_event",
+              actionParameters: {
+                actionGestureType: "press",
+                actionTargetElement: "item_header",
+                actionIntentType: "navigate",
+                actionDestinationType: "guild",
+              },
+            };
+            feedItemActionedResult = obj2.feedItemActioned(obj1);
+            obj4 = closure_0(closure_2[18]);
+            transitionToGuildResult = obj4.transitionToGuild(guild.id);
+            return;
+          }
+        }
       } else {
-        eventTimeData = ScheduleUtils.getEventTimeData(c3);
-        const tmpResult = ScheduleUtils;
+        class R {
+          constructor() {
+            obj = closure_1(closure_2[16]);
+            itemInteractedResult = obj.itemInteracted(event.id, "guild_event", "press_event");
+            obj2 = closure_1(closure_2[16]);
+            obj1 = {
+              itemId: event.id,
+              itemType: "guild_event",
+              actionParameters: {
+                actionGestureType: "press",
+                actionTargetElement: "item_body",
+                actionIntentType: "navigate",
+                actionDestinationType: "event",
+              },
+            };
+            feedItemActionedResult = obj2.feedItemActioned(obj1);
+            obj4 = closure_0(closure_2[17]);
+            obj6 = { eventId: event.id, event };
+            result = obj4.openGuildEventDetails(obj6);
+            return;
+          }
+        }
+        eventTimeData = obj2.getEventTimeData(tmp12);
       }
-      return eventTimeData;
-    }, items).startDateTimeString
-  });
-  const items3 = [closure_11(closure_5, obj7), , , , ];
-  if (title) {
-    title = tmp.title;
-  }
-  items3[1] = closure_11(event(4886).Text, { style: title, variant: "text-lg/semibold", children: event.name });
-  let tmp19Result = null != event.description;
-  if (tmp19Result) {
-    tmp19Result = event.description.length > 0;
-  }
-  if (tmp19Result) {
-    const obj9 = { variant: "text-md/normal", color: "text-subtle", lineClamp: 5, children: null };
-    const obj10 = { guildId: guild.id };
-    obj9.children = tmp8(9259).guildEventDetailsParser(event.description, true, obj10);
-    tmp19Result = closure_11(tmp8(4886).Text, obj9);
-    const tmp8Result = tmp8(9259);
-  }
-  items3[2] = tmp19Result;
-  items3[3] = closure_11(closure_5, { style: tmp.separator });
-  const obj12 = { style: tmp.infoContainer, children: null };
-  const obj13 = { style: tmp.locationContainer, children: null };
-  const items4 = [closure_11(event(5873).GroupIcon, { size: "xs", style: tmp.eventsChannelIcon }), ];
-  const obj15 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: null };
-  const intl2 = tmp8(1126).intl;
-  obj15.children = intl2.format(event(1126).t["+DLsD8"], { count: tmp2ResultResult });
-  items4[1] = closure_11(event(4886).Text, obj15);
-  obj13.children = items4;
-  const items5 = [closure_12(closure_5, obj13), ];
-  const obj16 = { style: tmp.locationContainer, children: null };
-  if (null != eventLocationIconComponent) {
-    const obj17 = { size: "xs", style: tmp.eventsChannelIcon };
-    let tmp19Result2 = closure_11(eventLocationIconComponent, obj17);
-  } else {
-    tmp19Result2 = null != eventLocationIconSource;
-    if (tmp19Result2) {
-      const obj18 = { source: eventLocationIconSource, size: tmp8(1188).Icon.Sizes.EXTRA_SMALL, style: tmp.eventsChannelIcon, disableColor: true };
-      tmp19Result2 = closure_11(tmp8(1188).Icon, obj18);
+      cResult[4] = tmp7;
+      cResult[5] = tmp12;
+      cResult[6] = eventTimeData;
+      tmp15 = eventTimeData;
     }
-  }
-  const items6 = [tmp19Result2, ];
-  let tmp27 = tmp7;
-  if (tmp7 == null) {
-    let result = null;
-    if (null != locationFromEvent) {
-      result = tmp8(9259).guildEventLocationParser(locationFromEvent, true);
-      const tmp8Result2 = tmp8(9259);
+  : (event) => {
+      let Text;
+      let c3;
+      let channel;
+      let closure_2;
+      let guild;
+      let id1;
+      let intl;
+      let intl2;
+      let items3;
+      let items4;
+      let items5;
+      let items6;
+      let obj10;
+      let obj6;
+      let str;
+      let tmp19Result2;
+      let tmp2Result4;
+      let tmp8Result;
+      event = event.event;
+      ({ channel, guild } = event);
+      react = undefined;
+      const tmp = closure_13();
+      const tmp4 = guild(9166)(event, null);
+      const tmp5 = closure_7(event);
+      dependencyMap = tmp5;
+      let toISOStringResult;
+      if (tmp4 != null) {
+        const startTime = tmp4.startTime;
+        toISOStringResult = startTime.toISOString();
+      }
+      react = toISOStringResult;
+      const items = [toISOStringResult, tmp5];
+      const startDateTimeString = react.useMemo(() => {
+        let eventTimeData;
+        let intl;
+        if (closure_2) {
+          const obj = { startDateTimeString: intl.string(intl3.t.TxqPQR) };
+          intl = intl3.intl;
+          eventTimeData = obj;
+        } else {
+          const tmpResult = ScheduleUtils;
+          eventTimeData = tmpResult.getEventTimeData(c3);
+        }
+        return eventTimeData;
+      }, items).startDateTimeString;
+      const tmp7 = guild(5043)(channel);
+      let obj = event(9180);
+      const locationFromEvent = obj.getLocationFromEvent(event);
+      let obj2 = event(9258);
+      const eventLocationIconSource = obj2.getEventLocationIconSource(event, channel, true);
+      let obj3 = event(9258);
+      const eventLocationIconComponent = obj3.getEventLocationIconComponent(event, channel, true);
+      let obj4 = event(9163);
+      const items1 = [event];
+      const nextRecurrenceIdInEvent = obj4.getNextRecurrenceIdInEvent(event);
+      const items2 = [guild.id, event.id];
+      const callback = react.useCallback(() => {
+        const obj = ICYMIActionCreatorsDefault;
+        obj.itemInteracted(event.id, "guild_event", "press_event");
+        const obj2 = ICYMIActionCreatorsDefault;
+        const obj3 = {
+          itemId: event.id,
+          itemType: "guild_event",
+          actionParameters: {
+            actionGestureType: "press",
+            actionTargetElement: "item_body",
+            actionIntentType: "navigate",
+            actionDestinationType: "event",
+          },
+        };
+        obj2.feedItemActioned(obj3);
+        const obj4 = guild_scheduled_events_GuildScheduledEventModalActionCreators;
+        const obj5 = { eventId: event.id, event };
+        const result = obj4.openGuildEventDetails(obj5);
+      }, items1);
+      const callback1 = react.useCallback(() => {
+        const obj = ICYMIActionCreatorsDefault;
+        obj.itemInteracted(event.id, "guild_event", "press_event");
+        const obj2 = ICYMIActionCreatorsDefault;
+        const obj3 = {
+          itemId: event.id,
+          itemType: "guild_event",
+          actionParameters: {
+            actionGestureType: "press",
+            actionTargetElement: "item_header",
+            actionIntentType: "navigate",
+            actionDestinationType: "guild",
+          },
+        };
+        obj2.feedItemActioned(obj3);
+        const obj4 = transitionToGuild;
+        obj4.transitionToGuild(guild.id);
+      }, items2);
+      let title = null != event.description && event.description.length > 0;
+      let guild_id;
+      const tmp2Result = guild(9270);
+      if (event != null) {
+        guild_id = event.guild_id;
+      }
+      let id;
+      if (event != null) {
+        id = event.id;
+      }
+      let obj5 = {
+        actionLabel: intl.string(event(1126).t["6pFsLQ"]),
+        id: event.id,
+        interactionType: "guild_event",
+        channelId: id1,
+        guildId: guild.id,
+        timestamp: tmp2Result4.extractTimestamp(event.id),
+        onHeaderPress: callback1,
+        onHeaderLongPress: callback1,
+        children: closure_12(closure_4, obj6),
+      };
+      const tmp2ResultResult = tmp2Result(guild_id, id, nextRecurrenceIdInEvent);
+      const tmp2Result3 = guild(16442);
+      intl = tmp8(1126).intl;
+      id1 = undefined;
+      if (channel != null) {
+        id1 = channel.id;
+      }
+      obj6 = { onPress: callback, style: tmp.container, children: items3 };
+      tmp2Result4 = guild(11);
+      const obj7 = {
+        style: tmp.timeAndUserPillContainer,
+        children: closure_11(Text, { variant: "text-sm/semibold", color: str, children: startDateTimeString }),
+      };
+      str = "text-brand";
+      Text = tmp8(4886).Text;
+      if (tmp5) {
+        str = "status-positive";
+      }
+      items3 = [closure_11(closure_5, obj7), , , ,];
+      const Text2 = tmp8(4886).Text;
+      if (title) {
+        title = tmp.title;
+      }
+      const obj8 = { style: title, variant: "text-lg/semibold", children: event.name };
+      items3[1] = closure_11(Text2, obj8);
+      let tmp19Result = null != event.description && event.description.length > 0;
+      if (tmp19Result) {
+        const obj9 = {
+          variant: "text-md/normal",
+          color: "text-subtle",
+          lineClamp: 5,
+          children: tmp8Result.guildEventDetailsParser(event.description, true, obj10),
+        };
+        const Text3 = tmp8(4886).Text;
+        obj10 = { guildId: guild.id };
+        tmp8Result = event(9259);
+        tmp19Result = closure_11(Text3, obj9);
+      }
+      items3[2] = tmp19Result;
+      const obj11 = { style: tmp.separator };
+      items3[3] = closure_11(closure_5, obj11);
+      const obj13 = { style: tmp.locationContainer, children: items4 };
+      items4 = [,];
+      const obj12 = { style: tmp.infoContainer, children: items5 };
+      const obj14 = { size: "xs", style: tmp.eventsChannelIcon };
+      items4[0] = closure_11(event(5873).GroupIcon, obj14);
+      const obj15 = {
+        lineClamp: 1,
+        variant: "text-xs/normal",
+        color: "text-muted",
+        children: intl2.format(event(1126).t["+DLsD8"], { count: tmp2ResultResult }),
+      };
+      const Text4 = tmp8(4886).Text;
+      intl2 = tmp8(1126).intl;
+      items4[1] = closure_11(Text4, obj15);
+      items5 = [closure_12(closure_5, obj13)];
+      const obj16 = { style: tmp.locationContainer, children: items6 };
+      if (null != eventLocationIconComponent) {
+        const obj17 = { size: "xs", style: tmp.eventsChannelIcon };
+        tmp19Result2 = closure_11(eventLocationIconComponent, obj17);
+      } else {
+        tmp19Result2 = null != eventLocationIconSource;
+        if (tmp19Result2) {
+          const obj18 = {
+            source: eventLocationIconSource,
+            size: event(1188).Icon.Sizes.EXTRA_SMALL,
+            style: tmp.eventsChannelIcon,
+            disableColor: true,
+          };
+          const Icon = tmp8(1188).Icon;
+          tmp19Result2 = closure_11(Icon, obj18);
+        }
+      }
+      items6 = [tmp19Result2];
+      let tmp27 = tmp7;
+      const Text5 = tmp8(4886).Text;
+      if (tmp7 == null) {
+        let result = null;
+        if (null != locationFromEvent) {
+          const tmp8Result2 = event(9259);
+          result = tmp8Result2.guildEventLocationParser(locationFromEvent, true);
+        }
+        tmp27 = result;
+      }
+      items6[1] = closure_11(Text5, { lineClamp: 2, variant: "text-xs/normal", color: "text-muted", children: tmp27 });
+      items5[1] = closure_12(closure_5, obj16);
+      items3[4] = closure_12(closure_5, obj12);
+      return closure_11(tmp2Result3, obj5);
+    };
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (eventId) => {
+      let first;
+      let tmp12;
+      let tmp15;
+      let tmp19;
+      let tmp6;
+      let tmp8;
+      const obj = eventId(576);
+      const cResult = obj.c(13);
+      eventId = eventId.eventId;
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [GuildScheduledEventStore];
+        cResult[0] = items;
+        first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== eventId) {
+        const fn = function l() {
+          return GuildScheduledEventStore.getGuildScheduledEvent(eventId);
+        };
+        cResult[1] = eventId;
+        cResult[2] = fn;
+        tmp6 = fn;
+      } else {
+        tmp6 = cResult[2];
+      }
+      const tmpResult = eventId(504);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        const items1 = [GuildStore];
+        cResult[3] = items1;
+        tmp8 = items1;
+      } else {
+        tmp8 = cResult[3];
+      }
+      let guild_id;
+      const tmp10 = cResult[4];
+      if (stateFromStores != null) {
+        guild_id = stateFromStores.guild_id;
+      }
+      if (tmp10 !== guild_id) {
+        let guild_id1;
+        if (stateFromStores != null) {
+          guild_id1 = stateFromStores.guild_id;
+        }
+        class I {
+          constructor() {
+            let guild_id;
+            const getGuild = GuildStore.getGuild;
+            if (stateFromStores != null) {
+              guild_id = stateFromStores.guild_id;
+            }
+            return getGuild(guild_id);
+          }
+        }
+        cResult[4] = guild_id1;
+        cResult[5] = I;
+        tmp12 = I;
+      } else {
+        tmp12 = cResult[5];
+      }
+      const tmpResult3 = eventId(504);
+      const stateFromStores1 = tmpResult3.useStateFromStores(tmp8, tmp12);
+      if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+        const items2 = [];
+        class I {
+          constructor() {
+            let guild_id;
+            const getGuild = GuildStore.getGuild;
+            if (stateFromStores != null) {
+              guild_id = stateFromStores.guild_id;
+            }
+            return getGuild(guild_id);
+          }
+        }
+        cResult[6] = items2;
+        tmp15 = items2;
+      } else {
+        tmp15 = cResult[6];
+      }
+      let channel_id;
+      const tmp17 = cResult[7];
+      if (stateFromStores != null) {
+        channel_id = stateFromStores.channel_id;
+      }
+      if (tmp17 !== channel_id) {
+        let channel_id1;
+        if (stateFromStores != null) {
+          channel_id1 = stateFromStores.channel_id;
+        }
+        class I {
+          constructor() {
+            let guild_id;
+            const getGuild = GuildStore.getGuild;
+            if (stateFromStores != null) {
+              guild_id = stateFromStores.guild_id;
+            }
+            return getGuild(guild_id);
+          }
+        }
+        cResult[7] = channel_id1;
+        cResult[8] = tmp21;
+        tmp19 = tmp21;
+      } else {
+        tmp19 = cResult[8];
+      }
+      const tmpResult4 = eventId(504);
+      const stateFromStores2 = tmpResult4.useStateFromStores(tmp15, tmp19);
+      let tmp23 = null;
+      if (null != stateFromStores) {
+        tmp23 = null;
+        if (null != stateFromStores1) {
+          tmp23 = null;
+          class I {
+            constructor() {
+              let guild_id;
+              const getGuild = GuildStore.getGuild;
+              if (stateFromStores != null) {
+                guild_id = stateFromStores.guild_id;
+              }
+              return getGuild(guild_id);
+            }
+          }
+        }
+      }
+      return tmp23;
     }
-    tmp27 = result;
-  }
-  items6[1] = closure_11(event(4886).Text, { lineClamp: 2, variant: "text-xs/normal", color: "text-muted", children: tmp27 });
-  obj16.children = items6;
-  items5[1] = closure_12(closure_5, obj16);
-  obj12.children = items5;
-  items3[4] = closure_12(closure_5, obj12);
-  obj6.children = items3;
-  obj5.children = closure_12(closure_4, obj6);
-  return closure_11(tmp2Result3, obj5);
-});
-ReactCompilerGating = fn(558);
-let size = fn(2);
+  : (eventId) => {
+      eventId = eventId.eventId;
+      const items = [GuildScheduledEventStore];
+      const obj = eventId(504);
+      const stateFromStores = obj.useStateFromStores(items, () =>
+        GuildScheduledEventStore.getGuildScheduledEvent(eventId),
+      );
+      const items1 = [GuildStore];
+      const obj2 = eventId(504);
+      const stateFromStores1 = obj2.useStateFromStores(items1, () => {
+        let guild_id;
+        const getGuild = GuildStore.getGuild;
+        if (stateFromStores != null) {
+          guild_id = stateFromStores.guild_id;
+        }
+        return getGuild(guild_id);
+      });
+      eventId(504);
+      [][0] = ChannelStore;
+      let tmp5 = null;
+      if (null != stateFromStores) {
+        tmp5 = null;
+        if (null != stateFromStores1) {
+          tmp5 = null;
+          if (!closure_6(stateFromStores)) {
+            const obj3 = { event: stateFromStores, channel: tmp4, guild: stateFromStores1 };
+            tmp5 = closure_11(closure_14, obj3);
+          }
+        }
+      }
+      return tmp5;
+    };
+let size = size_mod;
 let result = size.fileFinishedImporting("modules/icymi/native/ICYMIGuildEventRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((eventId) => {
-  const cResult = eventId(576).c(13);
-  eventId = eventId.eventId;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildScheduledEventStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== eventId) {
-    const fn = function l() {
-      return GuildScheduledEventStore.getGuildScheduledEvent(eventId);
-    };
-    cResult[1] = eventId;
-    cResult[2] = fn;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[2];
-  }
-  const obj = eventId(576);
-  const stateFromStores = eventId(504).useStateFromStores(first, tmp6);
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [GuildStore];
-    cResult[3] = items1;
-    let tmp8 = items1;
-  } else {
-    tmp8 = cResult[3];
-  }
-  let guild_id;
-  if (stateFromStores != null) {
-    guild_id = stateFromStores.guild_id;
-  }
-  if (cResult[4] !== guild_id) {
-    let guild_id1;
-    if (stateFromStores != null) {
-      guild_id1 = stateFromStores.guild_id;
-    }
-    class I {
-      constructor() {
-        guild_id = undefined;
-        tmp = closure_10;
-        if (closure_1 != null) {
-          guild_id = closure_1.guild_id;
-        }
-        return closure_10.getGuild(guild_id);
-      }
-    }
-    cResult[4] = guild_id1;
-    cResult[5] = I;
-    let tmp11 = I;
-  } else {
-    tmp11 = cResult[5];
-  }
-  const tmpResult = eventId(504);
-  const stateFromStores1 = eventId(504).useStateFromStores(tmp8, tmp11);
-  if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const items2 = [];
-    class I {
-      constructor() {
-        guild_id = undefined;
-        tmp = closure_10;
-        if (closure_1 != null) {
-          guild_id = closure_1.guild_id;
-        }
-        return closure_10.getGuild(guild_id);
-      }
-    }
-    cResult[6] = items2;
-    let tmp14 = items2;
-  } else {
-    tmp14 = cResult[6];
-  }
-  let channel_id;
-  if (stateFromStores != null) {
-    channel_id = stateFromStores.channel_id;
-  }
-  if (cResult[7] !== channel_id) {
-    let channel_id1;
-    if (stateFromStores != null) {
-      channel_id1 = stateFromStores.channel_id;
-    }
-    class I {
-      constructor() {
-        guild_id = undefined;
-        tmp = closure_10;
-        if (closure_1 != null) {
-          guild_id = closure_1.guild_id;
-        }
-        return closure_10.getGuild(guild_id);
-      }
-    }
-    cResult[7] = channel_id1;
-    cResult[8] = tmp19;
-    let tmp17 = tmp19;
-  } else {
-    tmp17 = cResult[8];
-  }
-  const tmpResult3 = eventId(504);
-  const stateFromStores2 = eventId(504).useStateFromStores(tmp14, tmp17);
-  let tmp21 = null;
-  if (null != stateFromStores) {
-    tmp21 = null;
-    if (null != stateFromStores1) {
-      tmp21 = null;
-      class I {
-        constructor() {
-          guild_id = undefined;
-          tmp = closure_10;
-          if (closure_1 != null) {
-            guild_id = closure_1.guild_id;
-          }
-          return closure_10.getGuild(guild_id);
-        }
-      }
-    }
-  }
-  return tmp21;
-}) : ((eventId) => {
-  eventId = eventId.eventId;
-  const items = [GuildScheduledEventStore];
-  const stateFromStores = eventId(504).useStateFromStores(items, () => GuildScheduledEventStore.getGuildScheduledEvent(eventId));
-  const obj = eventId(504);
-  const items1 = [GuildStore];
-  const stateFromStores1 = eventId(504).useStateFromStores(items1, () => {
-    let guild_id;
-    if (stateFromStores != null) {
-      guild_id = stateFromStores.guild_id;
-    }
-    return GuildStore.getGuild(guild_id);
-  });
-  eventId(504);
-  [][0] = ChannelStore;
-  let tmp5 = null;
-  if (null != stateFromStores) {
-    tmp5 = null;
-    if (null != stateFromStores1) {
-      tmp5 = null;
-      if (!closure_6(stateFromStores)) {
-        const obj3 = { event: stateFromStores, channel: tmp4, guild: stateFromStores1 };
-        tmp5 = closure_11(closure_14, obj3);
-      }
-    }
-  }
-  return tmp5;
-});
+export default tmp5;

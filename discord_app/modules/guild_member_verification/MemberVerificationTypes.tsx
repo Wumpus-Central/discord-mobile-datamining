@@ -22,21 +22,11 @@ export const GuildJoinRequestApplicationStatuses = {
   APPROVED: "APPROVED",
 };
 export const isTermsFormField = function isTermsFormField(field_type) {
-  let tmp = null != field_type;
-  if (tmp) {
-    tmp = field_type.field_type === obj.TERMS;
-  }
-  return tmp;
+  return null != field_type && field_type.field_type === obj.TERMS;
 };
 export const hasNonTermsFormField = function hasNonTermsFormField(formFields) {
-  return (
+  const tmp =
     null != formFields &&
-    formFields.some((field_type) => {
-      let tmp = null != field_type;
-      if (tmp) {
-        tmp = field_type.field_type === constants.TERMS;
-      }
-      return !tmp;
-    })
-  );
+    formFields.some((field_type) => !(null != field_type && field_type.field_type === constants.TERMS));
+  return tmp;
 };

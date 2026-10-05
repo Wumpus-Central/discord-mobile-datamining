@@ -1,31 +1,45 @@
 // discord_app/modules/safety_flows/native/UpdateAppScreen.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl4 from "../../../intl/index.native.tsx";
 import _modDef2787 from "../SafetyFlows.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-({ NativeModules: c3, View: closure_4 } = get_ActivityIndicator);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = {
-  container: { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8 },
-  buttonContainer: null,
-};
-let obj2 = { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8 };
-obj.buttonContainer = { marginTop: nativeDefault.space.PX_8 };
-let closure_7 = createStyles.createStyles(obj);
-let obj3 = { marginTop: nativeDefault.space.PX_8 };
-const result = size.fileFinishedImporting("modules/safety_flows/native/UpdateAppScreen.tsx");
+let BundleUpdaterManager;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
+let obj2;
+let obj3;
+({ NativeModules: c3, View: closure_4 } = react_native);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { container: obj2, buttonContainer: obj3 };
+obj2 = { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8 };
+createStyles = createStyles.createStyles;
+obj3 = { marginTop: nativeDefault.space.PX_8 };
+let closure_7 = createStyles(obj);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(9);
+      let first;
+      let intl;
+      let intl2;
+      let intl3;
+      let items;
+      let tmp10;
+      let tmp14;
+      let tmp18;
+      let tmp6;
+      const obj = react;
+      const cResult = obj.c(9);
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t() {
@@ -33,89 +47,96 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           BundleUpdaterManager.reload();
         };
         cResult[0] = fn;
-        let first = fn;
+        first = fn;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { variant: "heading-lg/semibold", children: null };
-        const intl = util.intl;
-        obj2.children = intl.string(_modDef2787.yxqMCD);
-        const tmp9 = hasOwnProperty(Text_Text.Text, obj2);
+        const obj2 = { variant: "heading-lg/semibold", children: intl.string(_modDef2787.yxqMCD) };
+        const Text = Text_Text.Text;
+        intl = intl4.intl;
+        const tmp9 = hasOwnProperty(Text, obj2);
         cResult[1] = tmp9;
-        let tmp6 = tmp9;
+        tmp6 = tmp9;
       } else {
         tmp6 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
-        const intl2 = util.intl;
-        obj3.children = intl2.string(_modDef2787.VBZJJg);
-        const tmp13 = hasOwnProperty(Text_Text.Text, obj3);
+        const obj3 = { variant: "text-md/normal", color: "text-muted", children: intl2.string(_modDef2787.VBZJJg) };
+        const Text2 = Text_Text.Text;
+        intl2 = intl4.intl;
+        const tmp13 = hasOwnProperty(Text2, obj3);
         cResult[2] = tmp13;
-        let tmp10 = tmp13;
+        tmp10 = tmp13;
       } else {
         tmp10 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj4 = { onPress: first, text: null, variant: "primary", size: "md" };
-        const intl3 = util.intl;
-        obj4.text = intl3.string(_modDef2787.o4D6fm);
-        const tmp17 = hasOwnProperty(components_Button_Button.Button, obj4);
+        const obj4 = { onPress: first, text: intl3.string(_modDef2787.o4D6fm), variant: "primary", size: "md" };
+        const Button = components_Button_Button.Button;
+        intl3 = intl4.intl;
+        const tmp17 = hasOwnProperty(Button, obj4);
         cResult[3] = tmp17;
-        let tmp14 = tmp17;
+        tmp14 = tmp17;
       } else {
         tmp14 = cResult[3];
       }
       if (cResult[4] !== tmp4.buttonContainer) {
         const obj5 = { style: tmp4.buttonContainer, children: tmp14 };
-        const tmp21 = hasOwnProperty(React4, obj5);
+        const tmp21 = hasOwnProperty(React3, obj5);
         cResult[4] = tmp4.buttonContainer;
         cResult[5] = tmp21;
-        let tmp18 = tmp21;
+        tmp18 = tmp21;
       } else {
         tmp18 = cResult[5];
       }
       if (cResult[6] === tmp4.container) {
+        let tmp22;
         if (cResult[7] === tmp18) {
-          let tmp22 = cResult[8];
+          tmp22 = cResult[8];
         }
         return tmp22;
       }
-      const obj6 = { style: tmp4.container, children: null };
-      const items = [tmp6, tmp10, tmp18];
-      obj6.children = items;
-      const tmp23 = timestampProducer(React4, obj6);
+      const obj6 = { style: tmp4.container, children: items };
+      items = [tmp6, tmp10, tmp18];
+      const tmp23 = metroRequire(React3, obj6);
       cResult[6] = tmp4.container;
       cResult[7] = tmp18;
       cResult[8] = tmp23;
       tmp22 = tmp23;
     }
   : () => {
+      let Button;
+      let intl;
+      let intl2;
+      let intl3;
+      let items;
+      let obj5;
       const tmp = closure_7();
-      const obj = { style: tmp.container, children: null };
-      const obj2 = { variant: "heading-lg/semibold", children: null };
-      const intl = util.intl;
-      obj2.children = intl.string(_modDef2787.yxqMCD);
-      const items = [hasOwnProperty(Text_Text.Text, obj2), ,];
-      const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
-      const intl2 = util.intl;
-      obj3.children = intl2.string(_modDef2787.VBZJJg);
-      items[1] = hasOwnProperty(Text_Text.Text, obj3);
-      const obj4 = { style: tmp.buttonContainer, children: null };
-      const obj5 = {
+      const obj = { style: tmp.container, children: items };
+      const obj2 = { variant: "heading-lg/semibold", children: intl.string(_modDef2787.yxqMCD) };
+      const Text = Text_Text.Text;
+      intl = intl4.intl;
+      items = [hasOwnProperty(Text, obj2), ,];
+      const obj3 = { variant: "text-md/normal", color: "text-muted", children: intl2.string(_modDef2787.VBZJJg) };
+      const Text2 = Text_Text.Text;
+      intl2 = intl4.intl;
+      items[1] = hasOwnProperty(Text2, obj3);
+      const obj4 = { style: tmp.buttonContainer, children: hasOwnProperty(Button, obj5) };
+      obj5 = {
         onPress() {
           BundleUpdaterManager = BundleUpdaterManager.BundleUpdaterManager;
           BundleUpdaterManager.reload();
         },
-        text: null,
+        text: intl3.string(_modDef2787.o4D6fm),
         variant: "primary",
         size: "md",
       };
-      const intl3 = util.intl;
-      obj5.text = intl3.string(_modDef2787.o4D6fm);
-      obj4.children = hasOwnProperty(components_Button_Button.Button, obj5);
-      items[2] = hasOwnProperty(React4, obj4);
-      obj.children = items;
-      return timestampProducer(React4, obj);
+      Button = components_Button_Button.Button;
+      intl3 = intl4.intl;
+      items[2] = hasOwnProperty(React3, obj4);
+      return metroRequire(React3, obj);
     };
+const result = size.fileFinishedImporting("modules/safety_flows/native/UpdateAppScreen.tsx");
+
+export default tmp5;

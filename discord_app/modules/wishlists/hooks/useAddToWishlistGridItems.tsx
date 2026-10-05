@@ -1,35 +1,46 @@
 // discord_app/modules/wishlists/hooks/useAddToWishlistGridItems.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import PremiumConstants from "../../premium/PremiumConstants.tsx";
 import useWishlistRecommendations from "useWishlistRecommendations.tsx";
 import WishlistUtils from "../WishlistUtils.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const PremiumSubscriptionSKUs = fn(1379).PremiumSubscriptionSKUs;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");
-
-export const useAddToWishlistGridItems = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      const cResult = c.c(17);
+const PremiumSubscriptionSKUs = PremiumConstants.PremiumSubscriptionSKUs;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function (arg0) {
+      let maxWishlistItemsToShow;
+      let numWishlistItemsToRecommend;
+      let recommendations;
+      let source;
+      let status;
+      let userId;
+      let wishlist;
+      const obj = react2;
+      const cResult = obj.c(17);
       ({ userId, wishlist, numWishlistItemsToRecommend, maxWishlistItemsToShow, source } = arg0);
       if (undefined === maxWishlistItemsToShow) {
         maxWishlistItemsToShow = numWishlistItemsToRecommend;
       }
       if (cResult[0] === numWishlistItemsToRecommend) {
         if (cResult[1] === source) {
+          let tmp4;
+          let obj4;
           if (cResult[2] === userId) {
-            let tmp4 = cResult[3];
+            tmp4 = cResult[3];
           }
-          const recommendationsForSingleUser = useWishlistRecommendations.useRecommendationsForSingleUser(tmp4);
+          const tmpResult = useWishlistRecommendations;
+          const recommendationsForSingleUser = tmpResult.useRecommendationsForSingleUser(tmp4);
           ({ recommendations, status } = recommendationsForSingleUser);
           let items;
+          const tmp6 = cResult[4];
           if (wishlist != null) {
             items = wishlist.items;
           }
-          if (cResult[4] !== items) {
+          if (tmp6 !== items) {
             let mapped;
+            const _Set = Set;
             if (wishlist != null) {
               const items1 = wishlist.items;
               mapped = items1.map((skuId) => skuId.skuId);
@@ -37,94 +48,92 @@ export const useAddToWishlistGridItems = ReactCompilerGating.isReactCompilerEnab
             if (mapped == null) {
               mapped = [];
             }
-            set = new Set(mapped);
+            const self = this;
+            const self2 = this;
+            const _Set1 = new _Set(mapped);
             let items2;
             if (wishlist != null) {
               items2 = wishlist.items;
             }
             cResult[4] = items2;
-            cResult[5] = set;
-            let obj4 = set;
+            cResult[5] = _Set1;
+            obj4 = _Set1;
           } else {
             obj4 = cResult[5];
           }
-          let tmp15 = "success" === status;
-          if (tmp15) {
-            tmp15 = !obj4.has(PremiumSubscriptionSKUs.TIER_2);
-          }
+          const tmp14 = "success" === status && !obj4.has(PremiumSubscriptionSKUs.TIER_2);
           if (cResult[6] === maxWishlistItemsToShow) {
             if (cResult[7] === recommendations) {
-              if (cResult[8] === tmp15) {
+              if (cResult[8] === tmp14) {
+                let tmp16;
                 if (cResult[9] === obj4) {
-                  let tmp17 = cResult[10];
+                  tmp16 = cResult[10];
                 }
-                if (cResult[14] === tmp17) {
+                if (cResult[14] === tmp16) {
+                  let tmp23;
                   if (cResult[15] === status) {
-                    let tmp24 = cResult[16];
+                    tmp23 = cResult[16];
                   }
-                  return tmp24;
+                  return tmp23;
                 }
-                const obj2 = { items: tmp17, status };
-                cResult[14] = tmp17;
+                const obj2 = { items: tmp16, status };
+                cResult[14] = tmp16;
                 cResult[15] = status;
                 cResult[16] = obj2;
-                tmp24 = obj2;
+                tmp23 = obj2;
               }
             }
           }
           if (cResult[11] !== obj4) {
             class R {
-              constructor(arg0) {
-                return !closure_0.has(arg0.id);
+              constructor(id) {
+                return !obj4.has(id.id);
               }
             }
             cResult[11] = obj4;
             cResult[12] = R;
           } else {
             class R {
-              constructor(arg0) {
-                return !closure_0.has(arg0.id);
+              constructor(id) {
+                return !obj4.has(id.id);
               }
             }
           }
           const _Symbol = Symbol;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
             class W {
-              constructor(arg0) {
-                obj = { sku: arg0, itemSource: "recommendation" };
-                return obj;
+              constructor(sku) {
+                return { sku, itemSource: "recommendation" };
               }
             }
             cResult[13] = W;
           } else {
             class W {
-              constructor(arg0) {
-                obj = { sku: arg0, itemSource: "recommendation" };
-                return obj;
+              constructor(sku) {
+                return { sku, itemSource: "recommendation" };
               }
             }
           }
           const found = recommendations.filter(R);
           const mapped1 = found.map(W);
-          if (tmp15) {
+          if (tmp14) {
             class W {
-              constructor(arg0) {
-                obj = { sku: arg0, itemSource: "recommendation" };
-                return obj;
+              constructor(sku) {
+                return { sku, itemSource: "recommendation" };
               }
             }
-            tmp21[0] = WishlistUtils.createNitroSuggestedSku();
-            mapped1.unshift(tmp21);
+            const unshift = mapped1.unshift;
             const tmpResult2 = WishlistUtils;
+            tmp20[0] = tmpResult2.createNitroSuggestedSku();
+            unshift(tmp20);
           }
           const substr = mapped1.slice(0, maxWishlistItemsToShow);
           cResult[6] = maxWishlistItemsToShow;
           cResult[7] = recommendations;
-          cResult[8] = tmp15;
+          cResult[8] = tmp14;
           cResult[9] = obj4;
           cResult[10] = substr;
-          tmp17 = substr;
-          const tmpResult = useWishlistRecommendations;
+          tmp16 = substr;
         }
       }
       const obj3 = { userId, numItems: numWishlistItemsToRecommend, source };
@@ -134,23 +143,30 @@ export const useAddToWishlistGridItems = ReactCompilerGating.isReactCompilerEnab
       cResult[3] = obj3;
       tmp4 = obj3;
     }
-  : (userId) => {
-      const wishlist = userId.wishlist;
-      ({ numWishlistItemsToRecommend, maxWishlistItemsToShow } = userId);
+  : (wishlist) => {
+      let items1;
+      let maxWishlistItemsToShow;
+      let numWishlistItemsToRecommend;
+      wishlist = wishlist.wishlist;
+      ({ numWishlistItemsToRecommend, maxWishlistItemsToShow } = wishlist);
+      const userId = wishlist.userId;
       if (maxWishlistItemsToShow === undefined) {
         maxWishlistItemsToShow = numWishlistItemsToRecommend;
       }
-      closure_4 = undefined;
-      const recommendationsForSingleUser = wishlist(maxWishlistItemsToShow[4]).useRecommendationsForSingleUser({
-        userId: userId.userId,
+      const source = wishlist.source;
+      let obj = wishlist(maxWishlistItemsToShow[4]);
+      const recommendationsForSingleUser = obj.useRecommendationsForSingleUser({
+        userId,
         numItems: numWishlistItemsToRecommend,
-        source: userId.source,
+        source,
       });
       const recommendations = recommendationsForSingleUser.recommendations;
       const status = recommendationsForSingleUser.status;
+      let obj2 = recommendations;
       let items = [wishlist];
       const memo = recommendations.useMemo(() => {
         let mapped;
+        const _Set = Set;
         if (wishlist != null) {
           const items = wishlist.items;
           mapped = items.map((skuId) => skuId.skuId);
@@ -158,23 +174,29 @@ export const useAddToWishlistGridItems = ReactCompilerGating.isReactCompilerEnab
         if (mapped == null) {
           mapped = [];
         }
-        return new Set(mapped);
+        const _Set1 = new _Set(mapped);
+        return _Set1;
       }, items);
-      let tmp2 = "success" === status;
-      if (tmp2) {
-        tmp2 = !memo.has(memo.TIER_2);
-      }
-      closure_4 = tmp2;
-      const obj3 = { items: null, status };
-      const items1 = [recommendations, memo, tmp2, maxWishlistItemsToShow];
-      obj3.items = recommendations.useMemo(() => {
-        const found = recommendations.filter((id) => !set.has(id.id));
-        const mapped = found.map((sku) => ({ sku, itemSource: "recommendation" }));
-        if (closure_4) {
-          const obj = { sku: WishlistUtils.createNitroSuggestedSku(), itemSource: "takeover" };
-          mapped.unshift(obj);
-        }
-        return mapped.slice(0, maxWishlistItemsToShow);
-      }, items1);
+      const tmp2 = "success" === status && !memo.has(memo.TIER_2);
+      let closure_4 = tmp2;
+      const obj3 = {
+        items: obj2.useMemo(() => {
+          let obj2;
+          const found = recommendations.filter((id) => !set.has(id.id));
+          const mapped = found.map((sku) => ({ sku, itemSource: "recommendation" }));
+          if (closure_4) {
+            const unshift = mapped.unshift;
+            const obj = { sku: obj2.createNitroSuggestedSku(), itemSource: "takeover" };
+            obj2 = WishlistUtils;
+            unshift(obj);
+          }
+          return mapped.slice(0, maxWishlistItemsToShow);
+        }, items1),
+        status,
+      };
+      items1 = [recommendations, memo, tmp2, maxWishlistItemsToShow];
       return obj3;
     };
+const result = size.fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");
+
+export const useAddToWishlistGridItems = tmp2;

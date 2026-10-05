@@ -1,22 +1,26 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputActionButton.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const StyleSheet = fn(17).StyleSheet;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const StyleSheet = react_native.StyleSheet;
+const jsx = Fragment.jsx;
 let closure_5 = createStyles.createStyles((height, marginHorizontal) => {
+  let size1;
   const obj = {
-    actionButton: null,
-    actionButtonIcon: null,
-    actionButtonIconActive: null,
-    actionButtonIconDisabled: null,
+    actionButton: size,
+    actionButtonIcon: size1,
+    actionButtonIconActive: { tintColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT },
+    actionButtonIconDisabled: { tintColor: nativeDefault.colors.ICON_MUTED },
   };
-  const size = {
+  size = {
     borderRadius: nativeDefault.radii.sm,
     height,
     width: height,
@@ -26,27 +30,35 @@ let closure_5 = createStyles.createStyles((height, marginHorizontal) => {
     alignItems: "center",
     justifyContent: "center",
   };
-  obj.actionButton = size;
-  const size1 = {
+  size1 = {
     tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_BUTTON_ICON_DEFAULT_TINT,
     width: nativeDefault.modules.mobile.CHAT_INPUT_ACTION_ICON_PIXEL_SIZE,
     height: nativeDefault.modules.mobile.CHAT_INPUT_ACTION_ICON_PIXEL_SIZE,
   };
-  obj.actionButtonIcon = size1;
-  obj.actionButtonIconActive = { tintColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT };
-  const obj2 = { tintColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT };
-  obj.actionButtonIconDisabled = { tintColor: nativeDefault.colors.ICON_MUTED };
+  ({ tintColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT });
+  ({ tintColor: nativeDefault.colors.ICON_MUTED });
   return obj;
 });
-const ReactCompilerGating = fn(558);
-let size = fn(2);
-const result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButton.tsx");
-
-export default noop.memo(
-  noop.forwardRef(
+const forwardRef = react.forwardRef;
+const memoResult = react.memo(
+  forwardRef(
     ReactCompilerGating.isReactCompilerEnabled()
       ? (arg0, ref) => {
-          const cResult = c.c(28);
+          let IconComponent;
+          let accessibilityActions;
+          let accessibilityHint;
+          let accessibilityLabel;
+          let accessibilityState;
+          let accessible;
+          let active;
+          let activeIconStyle;
+          let activeStyle;
+          let disabled;
+          let onAccessibilityAction;
+          let onPress;
+          let style;
+          const obj = react2;
+          const cResult = obj.c(28);
           ({
             active,
             style,
@@ -65,11 +77,12 @@ export default noop.memo(
           if (tmp4) {
             tmp4 = active;
           }
-          const token = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
           const tmpResult = useToken;
-          const token1 = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+          const token = tmpResult.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
           const tmpResult3 = useToken;
-          const token2 = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
+          const token1 = tmpResult3.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+          const tmpResult4 = useToken;
+          const token2 = tmpResult4.useToken(nativeDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
           const tmp8 = closure_5(token, token1);
           const flattenResult = StyleSheet.flatten(style);
           let height;
@@ -81,42 +94,31 @@ export default noop.memo(
             tmp11 = height;
           }
           const bound = Math.max(0, (token2 - tmp11) / 2);
-          let tmp13 = tmp4;
-          if (tmp4) {
-            tmp13 = !disabled;
-          }
-          if (tmp13) {
-            tmp13 = activeStyle;
-          }
           if (cResult[0] === style) {
             if (cResult[1] === tmp8.actionButton) {
-              if (cResult[2] === tmp13) {
-                let tmp14 = cResult[3];
+              let tmp14;
+              if (cResult[2] === (tmp4 && !disabled && activeStyle)) {
+                tmp14 = cResult[3];
               }
               if (cResult[4] === accessibilityState) {
+                let tmp16;
                 if (cResult[5] === disabled) {
-                  let tmp16 = cResult[6];
-                }
-                let actionButtonIconActive = tmp4;
-                if (tmp4) {
-                  actionButtonIconActive = tmp8.actionButtonIconActive;
+                  tmp16 = cResult[6];
                 }
                 if (tmp4) {
                   tmp4 = activeIconStyle;
                 }
-                let actionButtonIconDisabled = disabled;
-                if (disabled) {
-                  actionButtonIconDisabled = tmp8.actionButtonIconDisabled;
-                }
                 if (cResult[7] === tmp8.actionButtonIcon) {
-                  if (cResult[8] === actionButtonIconActive) {
+                  if (cResult[8] === (tmp4 && tmp8.actionButtonIconActive)) {
                     if (cResult[9] === tmp4) {
-                      if (cResult[10] === actionButtonIconDisabled) {
-                        let tmp20 = cResult[11];
+                      let tmp22;
+                      if (cResult[10] === (disabled && tmp8.actionButtonIconDisabled)) {
+                        tmp22 = cResult[11];
                       }
                       if (cResult[12] === IconComponent) {
-                        if (cResult[13] === tmp20) {
-                          let tmp21 = cResult[14];
+                        let tmp23;
+                        if (cResult[13] === tmp22) {
+                          tmp23 = cResult[14];
                         }
                         if (cResult[15] === accessibilityActions) {
                           if (cResult[16] === accessibilityHint) {
@@ -126,13 +128,14 @@ export default noop.memo(
                                   if (cResult[20] === onAccessibilityAction) {
                                     if (cResult[21] === onPress) {
                                       if (cResult[22] === ref) {
-                                        if (cResult[23] === tmp21) {
+                                        if (cResult[23] === tmp23) {
                                           if (cResult[24] === tmp14) {
                                             if (cResult[25] === tmp15) {
+                                              let tmp27;
                                               if (cResult[26] === tmp16) {
-                                                let tmp25 = cResult[27];
+                                                tmp27 = cResult[27];
                                               }
-                                              return tmp25;
+                                              return tmp27;
                                             }
                                           }
                                         }
@@ -144,7 +147,7 @@ export default noop.memo(
                             }
                           }
                         }
-                        const obj2 = {
+                        const tmp29 = jsx(Pressables.PressableOpacity, {
                           ref,
                           style: tmp14,
                           hitSlop: tmp15,
@@ -157,22 +160,7 @@ export default noop.memo(
                           accessibilityActions,
                           onAccessibilityAction,
                           onPress,
-                          children: tmp21,
-                        };
-                        const tmp27 = jsx(Pressables.PressableOpacity, {
-                          ref,
-                          style: tmp14,
-                          hitSlop: tmp15,
-                          disabled,
-                          accessible,
-                          accessibilityRole: "button",
-                          accessibilityState: tmp16,
-                          accessibilityLabel,
-                          accessibilityHint,
-                          accessibilityActions,
-                          onAccessibilityAction,
-                          onPress,
-                          children: tmp21,
+                          children: tmp23,
                         });
                         cResult[15] = accessibilityActions;
                         cResult[16] = accessibilityHint;
@@ -182,29 +170,33 @@ export default noop.memo(
                         cResult[20] = onAccessibilityAction;
                         cResult[21] = onPress;
                         cResult[22] = ref;
-                        cResult[23] = tmp21;
+                        cResult[23] = tmp23;
                         cResult[24] = tmp14;
                         cResult[25] = tmp15;
                         cResult[26] = tmp16;
-                        cResult[27] = tmp27;
-                        tmp25 = tmp27;
+                        cResult[27] = tmp29;
+                        tmp27 = tmp29;
                       }
-                      const obj3 = { size: "custom", style: tmp20 };
-                      const tmp23 = <IconComponent size="custom" style={tmp20} />;
+                      const tmp25 = <IconComponent size="custom" style={tmp22} />;
                       cResult[12] = IconComponent;
-                      cResult[13] = tmp20;
-                      cResult[14] = tmp23;
-                      tmp21 = tmp23;
+                      cResult[13] = tmp22;
+                      cResult[14] = tmp25;
+                      tmp23 = tmp25;
                     }
                   }
                 }
-                const items = [tmp8.actionButtonIcon, actionButtonIconActive, tmp4, actionButtonIconDisabled];
+                const items = [
+                  tmp8.actionButtonIcon,
+                  tmp4 && tmp8.actionButtonIconActive,
+                  tmp4,
+                  disabled && tmp8.actionButtonIconDisabled,
+                ];
                 cResult[7] = tmp8.actionButtonIcon;
-                cResult[8] = actionButtonIconActive;
+                cResult[8] = tmp4 && tmp8.actionButtonIconActive;
                 cResult[9] = tmp4;
-                cResult[10] = actionButtonIconDisabled;
+                cResult[10] = disabled && tmp8.actionButtonIconDisabled;
                 cResult[11] = items;
-                tmp20 = items;
+                tmp22 = items;
               }
               const obj4 = { disabled };
               const merged = Object.assign(accessibilityState);
@@ -214,15 +206,26 @@ export default noop.memo(
               tmp16 = obj4;
             }
           }
-          const items1 = [tmp8.actionButton, style, tmp13];
+          const items1 = [tmp8.actionButton, style, tmp4 && !disabled && activeStyle];
           cResult[0] = style;
           cResult[1] = tmp8.actionButton;
-          cResult[2] = tmp13;
+          cResult[2] = tmp4 && !disabled && activeStyle;
           cResult[3] = items1;
           tmp14 = items1;
-          const tmpResult4 = useToken;
         }
       : (active, ref) => {
+          let IconComponent;
+          let accessibilityActions;
+          let accessibilityHint;
+          let accessibilityLabel;
+          let accessibilityState;
+          let accessible;
+          let activeIconStyle;
+          let activeStyle;
+          let disabled;
+          let onAccessibilityAction;
+          let onPress;
+          let style;
           let flag = active.active;
           if (flag === undefined) {
             flag = false;
@@ -241,9 +244,12 @@ export default noop.memo(
             onAccessibilityAction,
             IconComponent,
           } = active);
-          const token = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-          const token1 = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
-          const token2 = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
+          const obj = useToken;
+          const token = obj.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+          const obj2 = useToken;
+          const token1 = obj2.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+          const obj3 = useToken;
+          const token2 = obj3.useToken(nativeDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
           const tmp6 = closure_5(token, token1);
           const flattenResult = StyleSheet.flatten(style);
           let height;
@@ -255,23 +261,9 @@ export default noop.memo(
             tmp9 = height;
           }
           const bound = Math.max(0, (token2 - tmp9) / 2);
-          const obj4 = {
-            ref,
-            style: null,
-            hitSlop: null,
-            disabled: null,
-            accessible: null,
-            accessibilityRole: "button",
-            accessibilityState: null,
-            accessibilityLabel: null,
-            accessibilityHint: null,
-            accessibilityActions: null,
-            onAccessibilityAction: null,
-            onPress: null,
-            children: null,
-          };
           const items = [tmp6.actionButton, style];
           let tmp12 = flag;
+          const PressableOpacity = Pressables.PressableOpacity;
           if (flag) {
             tmp12 = !disabled;
           }
@@ -279,27 +271,13 @@ export default noop.memo(
             tmp12 = activeStyle;
           }
           items[2] = tmp12;
-          obj4.style = items;
           let tmp13;
           if (bound > 0) {
             tmp13 = bound;
           }
-          obj4.hitSlop = tmp13;
-          obj4.disabled = disabled;
-          obj4.accessible = accessible;
+          const obj5 = { disabled };
           const merged = Object.assign(accessibilityState);
-          obj4.accessibilityState = { disabled };
-          obj4.accessibilityLabel = accessibilityLabel;
-          obj4.accessibilityHint = accessibilityHint;
-          obj4.accessibilityActions = accessibilityActions;
-          obj4.onAccessibilityAction = onAccessibilityAction;
-          obj4.onPress = onPress;
-          const items1 = [tmp6.actionButtonIcon, , ,];
-          let actionButtonIconActive = flag;
-          if (flag) {
-            actionButtonIconActive = tmp6.actionButtonIconActive;
-          }
-          items1[1] = actionButtonIconActive;
+          const items1 = [tmp6.actionButtonIcon, flag && tmp6.actionButtonIconActive, ,];
           if (flag) {
             flag = activeIconStyle;
           }
@@ -308,22 +286,28 @@ export default noop.memo(
             disabled = tmp6.actionButtonIconDisabled;
           }
           items1[3] = disabled;
-          obj4.children = <IconComponent size="custom" style={items1} />;
-          return jsx(Pressables.PressableOpacity, {
-            ref,
-            style: null,
-            hitSlop: null,
-            disabled: null,
-            accessible: null,
-            accessibilityRole: "button",
-            accessibilityState: null,
-            accessibilityLabel: null,
-            accessibilityHint: null,
-            accessibilityActions: null,
-            onAccessibilityAction: null,
-            onPress: null,
-            children: null,
-          });
+          return (
+            <PressableOpacity
+              ref={ref}
+              style={items}
+              hitSlop={tmp13}
+              disabled={disabled}
+              accessible={accessible}
+              accessibilityRole="button"
+              accessibilityState={obj5}
+              accessibilityLabel={accessibilityLabel}
+              accessibilityHint={accessibilityHint}
+              accessibilityActions={accessibilityActions}
+              onAccessibilityAction={onAccessibilityAction}
+              onPress={onPress}
+            >
+              {null}
+            </PressableOpacity>
+          );
         },
   ),
 );
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButton.tsx");
+
+export default memoResult;

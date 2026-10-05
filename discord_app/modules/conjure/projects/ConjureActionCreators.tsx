@@ -1,703 +1,145 @@
 // discord_app/modules/conjure/projects/ConjureActionCreators.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
+import Constants from "../../../Constants.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ReadStateConstants from "../../read_states/ReadStateConstants.tsx";
 import ConjureTypes from "../ConjureTypes.tsx";
 import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
 import ConjurePlatformUtilsDefault from "../shared/ConjurePlatformUtils.native.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import ConjureProjectStore from "ConjureProjectStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let c7, closure_10, closure_11, closure_17, currentUser, projectsFetchState, resourceIds;
+
 function reloadConjureAppFrames(application_id) {
-  ConjurePlatformUtilsDefault.reloadAppFrames(application_id);
+  obj = ConjurePlatformUtilsDefault;
+  obj.reloadAppFrames(application_id);
 }
 function listProjects() {
-  const self = this;
-  const apply = closure_13.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }
-let closure_13 = async function _listProjects() {
-  c5 = 0;
-  c6 = 0;
-  c4 = 0;
-  return (async (arg0) => {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
+let obj = function _listProjects() {
+  obj = _asyncToGenerator(async (guildId) => {
+    let c5 = 0;
+    let c6 = 0;
+    let c4 = 0;
+    return (async (arg0) => {
+      let tmp44;
+      function forgetMissingProjects() {
+        return closure_1_15(...arguments);
       }
-    } else {
-      try {
-        c6 = 2;
-        let tmp7 = c5;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_3 = tmp3;
-            closure_2 = tmp7;
-            closure_130_0 = undefined;
-            let body;
-            closure_130_2 = undefined;
-            c1 = guild_id;
-            if (guild_id == null) {
-              c1 = null;
-            }
-            closure_130_0 = c1;
-            projectsFetchState = projectsFetchState.getProjectsFetchState();
-            let type;
-            if (projectsFetchState != null) {
-              type = projectsFetchState.type;
-            }
-            if ("loading" !== type) {
-              closure_10 = tmp33;
-              const obj5 = { type: "CONJURE_PROJECTS_FETCH_START", guildId: tmp33 };
-              DispatcherDefault.dispatch(obj5);
-              c4 = 1;
-              const HTTP = HTTPUtils.HTTP;
-              const request = { url: constants.CONJURE_PROJECTS, query: null, rejectWithError: true };
-              let tmp44;
-              if (null != guild_id) {
-                const obj7 = { guild_id };
-                tmp44 = obj7;
-              }
-              request.query = tmp44;
-              c5 = 2;
-              c6 = 1;
-              const obj8 = { value: HTTP.get(request), done: false };
-              return obj8;
-            } else {
-              tmp7 = null != tmp33;
-              if (tmp7) {
-                tmp7 = tmp33 !== closure_10;
-              }
-              if (tmp7) {
-                closure_11 = tmp33;
-              }
-            }
-          }
-        } else {
-          if (1 === tmp7) {
-            c4 = 0;
-            const obj9 = { type: "CONJURE_PROJECTS_FETCH_FAIL", guildId: closure_130_0 };
-            closure_131_1(closure_131_2[6]).dispatch(obj9);
-            const obj4 = closure_131_1(closure_131_2[6]);
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            const obj10 = { value, done: true };
-            return obj10;
-          } else {
-            body = value.body;
-            const obj11 = { type: "CONJURE_PROJECTS_FETCH_SUCCESS", projects: body, guildId: closure_130_0 };
-            closure_131_1(closure_131_2[6]).dispatch(obj11);
-            (function forgetMissingProjects() {
-              const self = this;
-              const apply = closure_1_15.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            })();
-            c4 = 0;
-            const obj = closure_131_1(closure_131_2[6]);
-          }
-          closure_130_2 = closure_131_11;
-          closure_131_11 = null;
-          tmp7 = null != closure_130_2;
-          if (tmp7) {
-            tmp7 = closure_130_2 !== closure_130_0;
-          }
-          if (tmp7) {
-            tmp7 = closure_131_12(closure_130_2);
-          }
-        }
+      if (c6 === 2) {
         c6 = 3;
-      } catch (tmp45) {
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp45;
-        } else {
-          c5 = tmp;
-        }
-      }
-    }
-  })();
-};
-let closure_15 = async function _forgetMissingProjects() {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj3 = { value, done: true };
-      return obj3;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    while (true) {
-      c7 = 2;
-      let tmp4 = c6;
-      if (0 === c6) {
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          c7 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c7 = 3;
-          let obj4 = { value, done: true };
-          return obj4;
+          return { value, done: true };
         } else {
-          closure_3 = tmp;
-          closure_2 = tmp4;
-          closure_130_0 = undefined;
-          closure_130_1 = undefined;
-          if (!c14) {
-            c14 = true;
-            resourceIds = resourceIds.getResourceIds(constants.CONJURING_PROJECT);
-            _require = resourceIds[Symbol.iterator]();
-            if (_require !== undefined) {
-              c5 = 1;
-              closure_130_0 = tmp36;
-              if (null == closure_131_6.getProject(closure_130_0)) {
-                if (0 !== closure_131_4.getMentionCount(closure_130_0, closure_131_8.CONJURING_PROJECT)) {
-                  let obj5 = closure_131_0(closure_131_2[10]);
-                  let _Math = Math;
-                  c6 = 2;
-                  c7 = 1;
-                  let obj6 = { value: obj5.sleep(5000 * Math.random()), done: false };
-                  return obj6;
-                } else {
-                  let tmp46 = closure_131_16(closure_130_0);
-                }
-              }
-            }
-          }
-          c7 = 3;
           return { value: "IconComponent", done: null };
         }
-      } else if (1 === tmp4) {
-        c5 = 0;
-        _require.return();
-        throw ReadStateStore;
-      } else if (2 === tmp4) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 0;
-          _require.return();
-          c7 = 3;
-          let obj7 = { value, done: true };
-          return obj7;
-        } else if (null == closure_131_6.getProject(closure_130_0)) {
-          c5 = 2;
-          c6 = 4;
-          c7 = 1;
-          let obj8 = { value: closure_131_19(closure_130_0), done: false };
-          return obj8;
-        }
-      } else if (3 === tmp4) {
-        c5 = 1;
-        closure_130_2 = ReadStateStore;
-        let obj2 = closure_131_0(closure_131_2[11]);
-        closure_130_1 = obj2.createFailureStatus(closure_130_2);
-        let tmp14 = 403 !== closure_130_1;
-        if (tmp14) {
-          tmp14 = 404 !== closure_130_1;
-        }
-        if (!tmp14) {
-          let tmp21 = closure_131_16(closure_130_0);
-        }
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 0;
-        _require.return();
-        c7 = 3;
-        let obj = { value, done: true };
-        return obj;
       } else {
-        c5 = 1;
-      }
-      c5 = 0;
-    }
-  }
-};
-function forgetProject(projectId) {
-  DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_DELETE_SUCCESS", projectId });
-}
-let closure_18 = async function _fetchProjectLimit() {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      let dispatchResult = c4;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp3;
-          closure_129_0 = undefined;
-          let max_projects;
-          currentUser = currentUser.getCurrentUser();
-          let id;
-          if (currentUser != null) {
-            id = currentUser.id;
-          }
-          c0 = id;
-          if (id == null) {
-            c0 = null;
-          }
-          closure_129_0 = c0;
-          if (null != c0) {
-            if (closure_17 !== tmp18) {
-              if (!ConjureProjectStore.hasFetchedProjectLimit()) {
-                closure_17 = tmp18;
-                max_projects = null;
-                c3 = 1;
-                const HTTP = HTTPUtils.HTTP;
-                const obj4 = { url: constants.CONJURE_PROJECT_LIMIT, rejectWithError: true };
-                c4 = 2;
-                c5 = 1;
-                const obj5 = { value: HTTP.get(obj4), done: false };
-                return obj5;
-              }
-            }
-          }
-        }
-      } else {
-        if (1 === dispatchResult) {
-          c3 = 0;
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c3 = 0;
-          c5 = 3;
-          const obj = { value, done: true };
-          return obj;
-        } else {
-          max_projects = value.body.max_projects;
-          c3 = 0;
-        }
-        if (closure_130_17 === closure_129_0) {
-          closure_130_17 = null;
-        }
-        const currentUser1 = closure_130_5.getCurrentUser();
-        let id1;
-        if (currentUser1 != null) {
-          id1 = currentUser1.id;
-        }
-        dispatchResult = closure_129_0;
-        if (id1 === closure_129_0) {
-          const obj7 = { type: "CONJURE_PROJECT_LIMIT_FETCH_SETTLE", maxProjects: max_projects };
-          dispatchResult = closure_130_1(closure_130_2[6]).dispatch(obj7);
-          const obj6 = closure_130_1(closure_130_2[6]);
-        }
-      }
-      c5 = 3;
-    } catch (tmp23) {
-      if (tmp4 === c3) {
-        c5 = tmp2;
-        throw tmp23;
-      } else {
-        c4 = tmp;
-      }
-    }
-  }
-};
-function getProject() {
-  const self = this;
-  const apply = closure_20.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let closure_20 = async function _getProject(arg0) {
-  closure_0 = arg0;
-  c4 = 0;
-  c5 = 0;
-  return (async (arg0, value) => {
-    closure_3 = tmp3;
-    closure_2 = tmp2;
-    closure_130_0 = closure_0;
-    closure_130_1 = signal;
-    const HTTP = HTTPUtils.HTTP;
-    await HTTP.get({ url: Endpoints.CONJURE_PROJECT(closure_0), rejectWithError: false, signal });
-    closure_130_2 = value;
-    if (closure_130_1 != null) {
-      const aborted = closure_130_1.aborted;
-    }
-    let ok = true !== aborted;
-    if (ok) {
-      ok = closure_130_2.ok;
-    }
-    if (ok) {
-      closure_131_1(closure_131_2[6]).dispatch({
-        type: "CONJURE_PROJECT_UPDATE_SUCCESS",
-        project: closure_130_2.body.project,
-      });
-      (function updateIntegrationStatus(projectId, integrationStatus) {
-        signal(closure_1_2[6]).dispatch({
-          type: "CONJURE_PROJECT_INTEGRATION_STATUS_UPDATE",
-          projectId,
-          integrationStatus,
-        });
-      })(closure_130_0, {
-        bot_permissions_changed: closure_130_2.body.bot_permissions_changed,
-        integration_installed: closure_130_2.body.integration_installed,
-        preview_ready: closure_130_2.body.preview_ready,
-        has_activity: closure_130_2.body.has_activity,
-        owner_authorization_revoked: closure_130_2.body.owner_authorization_revoked,
-      });
-      closure_131_1(closure_131_2[6]);
-    }
-    return closure_130_2;
-  })();
-};
-let closure_21 = async function _createProject(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp3;
-          closure_1 = tmp7;
+        try {
           let body;
-          c4 = 1;
-          const HTTP = HTTPUtils.HTTP;
-          const request = { url: constants.CONJURE_PROJECTS, body: null, rejectWithError: false };
-          const obj4 = { flags: ConjureTypes.ConjureProjectFlags.PUBLIC };
-          const merged = Object.assign(closure_0);
-          request.body = obj4;
-          c5 = 2;
-          c6 = 1;
-          const obj7 = { value: HTTP.post(request), done: false };
-          return obj7;
-        }
-      } else if (1 === tmp7) {
-        c4 = 0;
-        closure_129_1 = closure_3;
-        const result = closure_130_0(closure_130_2[11]).classifyCreateFailure(closure_129_1);
-        const obj5 = closure_130_0(closure_130_2[11]);
-        const conjureCreateError = new closure_130_0(closure_130_2[11]).ConjureCreateError(
-          result,
-          closure_130_0(closure_130_2[11]).createFailureStatus(closure_129_1),
-        );
-        throw conjureCreateError;
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 0;
-        c6 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
-      } else {
-        body = value.body;
-        c4 = 0;
-        const obj9 = { type: "CONJURE_PROJECT_CREATE_SUCCESS", project: body };
-        closure_130_1(closure_130_2[6]).dispatch(obj9);
-        c6 = 3;
-        const obj10 = { value: body.id, done: true };
-        return obj10;
-      }
-    } catch (tmp34) {
-      closure_3 = tmp34;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp34;
-      } else {
-        c5 = tmp;
-      }
-    }
-  }
-};
-function patchProject() {
-  const self = this;
-  const apply = closure_23.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let closure_23 = async function _patchProject(arg0) {
-  closure_0 = arg0;
-  c4 = 0;
-  c5 = 0;
-  return (async (arg0, value) => {
-    closure_3 = tmp2;
-    closure_2 = tmp5;
-    const HTTP = HTTPUtils.HTTP;
-    const request = { url: Endpoints.CONJURE_PROJECT(closure_0), body, rejectWithError: false };
-    await HTTP.patch(request);
-    closure_130_0 = value;
-    if (closure_130_0.ok) {
-      closure_131_1(closure_131_2[6]).dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: closure_130_0.body });
-      closure_131_1(closure_131_2[6]);
-    }
-    return closure_130_0;
-  })();
-};
-let closure_24 = async function _setProjectIcon(arg0) {
-  closure_0 = arg0;
-  c5 = 0;
-  c6 = 0;
-  c4 = 0;
-  return (async (arg0, value) => {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_3 = tmp3;
-            closure_2 = tmp7;
-            closure_130_0 = undefined;
-            closure_130_1 = undefined;
-            const obj5 = { icon };
-            c5 = 1;
-            c6 = 1;
-            const obj6 = { value: patchProject(closure_0, obj5), done: false };
-            return obj6;
-          }
-        } else {
-          if (1 === tmp7) {
+          c6 = 2;
+          if (0 === c5) {
             if (arg0 === 1) {
               c6 = 3;
               throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj7 = { value, done: true };
-              return obj7;
+              return { value, done: true };
             } else {
-              closure_130_0 = value;
-              if (closure_130_0.ok) {
-                closure_130_1 = closure_130_0.body.preview_application_id;
-                if (null != closure_130_1) {
-                  c4 = 1;
-                  c5 = 3;
-                  c6 = 1;
-                  const obj8 = { value: closure_131_0(closure_131_2[13]).fetchApplication(closure_130_1), done: false };
-                  return obj8;
+              closure_3 = tmp;
+              guildId = undefined;
+              body = undefined;
+              closure_2 = undefined;
+              if (guildId == null) {
+                guildId = null;
+              }
+              projectsFetchState = projectsFetchState.getProjectsFetchState();
+              let type;
+              if (projectsFetchState != null) {
+                type = projectsFetchState.type;
+              }
+              if ("loading" !== type) {
+                closure_10 = tmp32;
+                const obj5 = { type: "CONJURE_PROJECTS_FETCH_START", guildId };
+                const obj6 = DispatcherDefault;
+                obj6.dispatch(obj5);
+                c4 = 1;
+                const HTTP = HTTPUtils.HTTP;
+                const request = { url: constants.CONJURE_PROJECTS, query: tmp44, rejectWithError: true };
+                tmp44 = undefined;
+                const get = HTTP.get;
+                if (null != guildId) {
+                  tmp44 = { guild_id: guildId };
+                  const obj7 = { guild_id: guildId };
+                }
+                c5 = 2;
+                c6 = 1;
+                const obj8 = { value: get(request), done: false };
+                return obj8;
+              } else {
+                const tmp36 = null != tmp32 && tmp32 !== closure_10;
+                if (tmp36) {
+                  closure_11 = tmp32;
                 }
               }
             }
           } else {
-            if (2 === tmp7) {
+            if (1 === c5) {
               c4 = 0;
+              const obj9 = { type: "CONJURE_PROJECTS_FETCH_FAIL", guildId };
+              const obj4 = closure_131_1(closure_131_2[6]);
+              obj4.dispatch(obj9);
             } else if (arg0 === 1) {
               c6 = 3;
               throw value;
-            } else if (arg0 !== 2) {
+            } else if (arg0 === 2) {
+              c4 = 0;
+              c6 = 3;
+              return { value, done: true };
+            } else {
+              body = value.body;
+              const obj11 = { type: "CONJURE_PROJECTS_FETCH_SUCCESS", projects: body, guildId };
+              obj = closure_131_1(closure_131_2[6]);
+              obj.dispatch(obj11);
+              forgetMissingProjects();
               c4 = 0;
             }
-            c4 = 0;
-            c6 = 3;
-            const obj = { value, done: true };
-            return obj;
+            closure_2 = c11;
+            c11 = null;
+            const tmp23 = null != closure_2 && closure_2 !== guildId;
+            if (tmp23) {
+              closure_131_12(closure_2);
+            }
           }
           c6 = 3;
-        }
-      } catch (tmp21) {
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp21;
-        } else {
-          c5 = tmp;
-        }
-      }
-    }
-  })();
-};
-function deleteProject() {
-  const self = this;
-  const apply = closure_26.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let closure_26 = async function _deleteProject() {
-  c5 = 0;
-  c6 = 0;
-  c4 = 0;
-  return (async (arg0) => {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
+          return { value: "IconComponent", done: null };
+        } catch (tmp45) {
+          if (0 === c4) {
             c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            throw tmp45;
           } else {
-            closure_2 = tmp3;
-            closure_1 = tmp7;
-            closure_129_0 = projectId;
-            closure_129_1 = undefined;
-            const obj4 = { type: "CONJURE_PROJECT_DELETE_START", projectId };
-            DispatcherDefault.dispatch(obj4);
-            c4 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            const obj6 = { url: Endpoints.CONJURE_PROJECT(projectId), rejectWithError: false };
-            c5 = 2;
-            c6 = 1;
-            const obj7 = { value: HTTP.del(obj6), done: false };
-            return obj7;
+            c5 = 1;
           }
-        } else if (1 === tmp7) {
-          c4 = 0;
-          closure_129_2 = closure_3;
-          const obj8 = { type: "CONJURE_PROJECT_DELETE_FAIL", projectId: closure_129_0 };
-          closure_130_1(closure_130_2[6]).dispatch(obj8);
-          throw closure_129_2;
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c6 = 3;
-          const obj9 = { value, done: true };
-          return obj9;
-        } else {
-          closure_129_1 = value;
-          c4 = 0;
-          let str = "CONJURE_PROJECT_DELETE_FAIL";
-          if (closure_129_1.ok) {
-            str = "CONJURE_PROJECT_DELETE_SUCCESS";
-          }
-          const obj11 = { type: str, projectId: closure_129_0 };
-          closure_130_1(closure_130_2[6]).dispatch(obj11);
-          c6 = 3;
-          const obj12 = { value: closure_129_1, done: true };
-          return obj12;
-        }
-      } catch (tmp25) {
-        closure_3 = tmp25;
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp25;
-        } else {
-          c5 = tmp;
         }
       }
-    }
-  })();
+    })();
+  });
+  return obj(...arguments);
 };
-let closure_27 = async function _refreshPublishedProject(arg0, arg1) {
-  closure_0 = arg0;
-  let isPreview = arg1;
-  c4 = 0;
-  c5 = 0;
-  let iter = (async (arg0, value) => {
-    if (c5 === 2) {
-      c5 = 3;
+obj = function _forgetMissingProjects() {
+  obj = _asyncToGenerator(async () => {
+    if (c7 === 2) {
+      c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -707,7 +149,126 @@ let closure_27 = async function _refreshPublishedProject(arg0, arg1) {
         return { value: "IconComponent", done: null };
       }
     } else {
+      while (true) {
+        let closure_2;
+        let c0;
+        let closure_1;
+        let closure_0;
+        c7 = 2;
+        let tmp4 = c6;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            let obj4 = { value, done: true };
+            return obj4;
+          } else {
+            let closure_3 = tmp;
+            closure_2 = tmp4;
+            c0 = undefined;
+            closure_1 = undefined;
+            let tmp59 = c14;
+            if (!tmp59) {
+              c14 = true;
+              resourceIds = resourceIds.getResourceIds(constants.CONJURING_PROJECT);
+              closure_0 = resourceIds[Symbol.iterator]();
+              if (closure_0 !== undefined) {
+                let c5 = 1;
+                c0 = tmp36;
+                if (null == closure_131_6.getProject(c0)) {
+                  if (0 !== closure_131_4.getMentionCount(c0, closure_131_8.CONJURING_PROJECT)) {
+                    let obj5 = closure_131_0(closure_131_2[10]);
+                    let _Math = Math;
+                    c6 = 2;
+                    c7 = 1;
+                    let obj6 = { value: obj5.sleep(5000 * Math.random()), done: false };
+                    return obj6;
+                  } else {
+                    let tmp46 = closure_131_16(c0);
+                  }
+                }
+              }
+            }
+            c7 = 3;
+            return { value: "IconComponent", done: null };
+          }
+        } else if (1 === tmp4) {
+          c5 = 0;
+          closure_0.return();
+          throw closure_1_4;
+        } else if (2 === tmp4) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 0;
+            closure_0.return();
+            c7 = 3;
+            let obj7 = { value, done: true };
+            return obj7;
+          } else if (null == closure_131_6.getProject(c0)) {
+            c5 = 2;
+            c6 = 4;
+            c7 = 1;
+            let obj8 = { value: closure_131_19(c0), done: false };
+            return obj8;
+          }
+        } else if (3 === tmp4) {
+          c5 = 1;
+          closure_2 = closure_1_4;
+          let obj2 = closure_131_0(closure_131_2[11]);
+          closure_1 = obj2.createFailureStatus(closure_2);
+          let tmp14 = 403 !== closure_1;
+          if (tmp14) {
+            tmp14 = 404 !== closure_1;
+          }
+          if (!tmp14) {
+            let tmp21 = closure_131_16(c0);
+          }
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          closure_0.return();
+          c7 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          c5 = 1;
+        }
+        c5 = 0;
+      }
+    }
+  });
+  return obj(...arguments);
+};
+function forgetProject(projectId) {
+  obj = DispatcherDefault;
+  const obj2 = { type: "CONJURE_PROJECT_DELETE_SUCCESS", projectId };
+  obj.dispatch(obj2);
+}
+obj = function _fetchProjectLimit() {
+  obj = _asyncToGenerator(async () => {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      let c3;
       try {
+        let closure_0;
+        let max_projects;
         c5 = 2;
         if (0 === c4) {
           if (arg0 === 1) {
@@ -715,233 +276,559 @@ let closure_27 = async function _refreshPublishedProject(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            closure_3 = tmp5;
-            closure_2 = tmp2;
-            let isPreview2;
-            closure_130_0 = closure_0;
-            isPreview2 = isPreview.isPreview;
-            let body;
-            closure_130_3 = undefined;
-            closure_130_4 = undefined;
-            let project;
-            closure_130_6 = undefined;
-            c4 = 1;
-            c5 = 1;
-            return { value: "Set", done: true };
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
-          } else {
-            c4 = 2;
-            c5 = 1;
-            const obj8 = { value: closure_131_19(closure_130_0), done: false };
-            return obj8;
+            let closure_2 = tmp;
+            let closure_1 = tmp4;
+            closure_0 = undefined;
+            max_projects = undefined;
+            currentUser = currentUser.getCurrentUser();
+            let id;
+            if (currentUser != null) {
+              id = currentUser.id;
+            }
+            let c0 = id;
+            if (id == null) {
+              c0 = null;
+            }
+            closure_0 = c0;
+            if (null != c0) {
+              if (closure_17 !== c0) {
+                if (!ConjureProjectStore.hasFetchedProjectLimit()) {
+                  closure_17 = tmp16;
+                  max_projects = null;
+                  c3 = 1;
+                  const HTTP = HTTPUtils.HTTP;
+                  const obj4 = { url: constants.CONJURE_PROJECT_LIMIT, rejectWithError: true };
+                  c4 = 2;
+                  c5 = 1;
+                  const obj5 = { value: HTTP.get(obj4), done: false };
+                  return obj5;
+                }
+              }
+            }
           }
         } else {
-          if (2 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj9 = { value, done: true };
-              return obj9;
-            } else {
-              body = value.body;
-              closure_130_3 = body.bot_permissions_changed;
-              closure_130_4 = body.integration_installed;
-              project = body.project;
-              if (isPreview2) {
-                let application_id = tmp54.preview_application_id;
-              } else {
-                application_id = tmp54.application_id;
-              }
-              closure_130_6 = application_id;
-              if (null != closure_130_6) {
-                c4 = 3;
-                c5 = 1;
-                const obj10 = { value: closure_131_0(closure_131_2[13]).fetchApplication(closure_130_6), done: false };
-                return obj10;
-              } else {
-                const obj11 = { isPreview: isPreview2 };
-                closure_131_0(closure_131_2[7]).trackConjureDeployed(closure_130_0, obj11);
-                c5 = 3;
-                const obj5 = closure_131_0(closure_131_2[7]);
-              }
-            }
-          } else if (3 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj12 = { value, done: true };
-              return obj12;
-            } else {
-              const widgetConfigs = closure_131_0(closure_131_2[14]).fetchWidgetConfigs(closure_130_6, { force: true });
-              c4 = 4;
-              c5 = 1;
-              const obj13 = {
-                value: widgetConfigs.catch(() => {}),
-                done: false,
-              };
-              return obj13;
-            }
+          if (1 === c4) {
+            c3 = 0;
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
-          } else if (arg0 !== 2) {
-            let tmp8 = !isPreview2;
-            if (isPreview2) {
-              let tmp10 = closure_130_4;
-              if (closure_130_4) {
-                tmp10 = !closure_130_3;
-              }
-              tmp8 = tmp10;
-            }
-            if (tmp8) {
-              closure_131_9(closure_130_6);
-            }
+          } else if (arg0 === 2) {
+            c3 = 0;
+            c5 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            max_projects = value.body.max_projects;
+            c3 = 0;
           }
-          c5 = 3;
-          const obj = { value, done: true };
-          return obj;
+          if (c17 === closure_0) {
+            c17 = null;
+          }
+          const currentUser1 = currentUser.getCurrentUser();
+          let id1;
+          if (currentUser1 != null) {
+            id1 = currentUser1.id;
+          }
+          if (id1 === closure_0) {
+            const obj7 = { type: "CONJURE_PROJECT_LIMIT_FETCH_SETTLE", maxProjects: max_projects };
+            const obj6 = closure_130_1(closure_130_2[6]);
+            obj6.dispatch(obj7);
+          }
         }
-      } catch (tmp43) {
-        c5 = tmp;
-        throw tmp43;
+        c5 = 3;
+        return { value: "IconComponent", done: null };
+      } catch (tmp21) {
+        if (0 === c3) {
+          c5 = 3;
+          throw tmp21;
+        } else {
+          c4 = 1;
+        }
       }
     }
-  })();
-  iter.next();
-  return iter;
+  });
+  return obj(...arguments);
 };
-const Endpoints = fn(1085).Endpoints;
-const ReadStateTypes = fn(5072).ReadStateTypes;
+function getProject() {
+  return obj(...arguments);
+}
+obj = function _getProject() {
+  obj = _asyncToGenerator(async (arg0, signal) => {
+    let closure_3;
+    let closure_0 = arg0;
+    let c4 = 0;
+    let c5 = 0;
+    return (async (arg0, value) => {
+      let aborted;
+      function updateIntegrationStatus(projectId, integrationStatus) {
+        obj = signal(closure_1_2[6]);
+        const obj2 = { type: "CONJURE_PROJECT_INTEGRATION_STATUS_UPDATE", projectId, integrationStatus };
+        obj.dispatch(obj2);
+      }
+      value = tmp;
+      const HTTP = HTTPUtils.HTTP;
+      const get = HTTP.get;
+      const obj4 = { url: Endpoints.CONJURE_PROJECT(closure_0), rejectWithError: false, signal };
+      await get(obj4);
+      if (signal != null) {
+        aborted = signal.aborted;
+      }
+      const ok = true !== aborted && value.ok;
+      if (ok) {
+        obj = closure_131_1(closure_131_2[6]);
+        const obj7 = { type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: value.body.project };
+        obj.dispatch(obj7);
+        const obj8 = {
+          bot_permissions_changed: value.body.bot_permissions_changed,
+          integration_installed: value.body.integration_installed,
+          preview_ready: value.body.preview_ready,
+          has_activity: value.body.has_activity,
+          owner_authorization_revoked: value.body.owner_authorization_revoked,
+        };
+        updateIntegrationStatus(closure_0, obj8);
+      }
+      return value;
+    })();
+  });
+  return obj(...arguments);
+};
+obj = function _createProject() {
+  obj = _asyncToGenerator(async function (arg0) {
+    let obj4;
+    let closure_0 = arg0;
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      let c4;
+      try {
+        let closure_1;
+        let body;
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let closure_2 = tmp;
+            closure_1 = tmp4;
+            body = undefined;
+            c4 = 1;
+            const HTTP = HTTPUtils.HTTP;
+            const request = { url: constants.CONJURE_PROJECTS, body: obj4, rejectWithError: false };
+            obj4 = { flags: ConjureTypes.ConjureProjectFlags.PUBLIC };
+            const post = HTTP.post;
+            const merged = Object.assign(closure_0);
+            c5 = 2;
+            c6 = 1;
+            const obj7 = { value: post(request), done: false };
+            return obj7;
+          }
+        } else if (1 === c5) {
+          c4 = 0;
+          closure_1 = closure_3;
+          const ConjureCreateError = closure_130_0(closure_130_2[11]).ConjureCreateError;
+          const obj5 = closure_130_0(closure_130_2[11]);
+          const result = obj5.classifyCreateFailure(closure_1);
+          const self = this;
+          const self2 = this;
+          const obj6 = closure_130_0(closure_130_2[11]);
+          const conjureCreateError = new ConjureCreateError(result, obj6.createFailureStatus(closure_1));
+          throw conjureCreateError;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          c6 = 3;
+          const obj8 = { value, done: true };
+          return obj8;
+        } else {
+          body = value.body;
+          c4 = 0;
+          const obj9 = { type: "CONJURE_PROJECT_CREATE_SUCCESS", project: body };
+          obj = closure_130_1(closure_130_2[6]);
+          obj.dispatch(obj9);
+          c6 = 3;
+          const obj10 = { value: body.id, done: true };
+          return obj10;
+        }
+      } catch (tmp29) {
+        closure_3 = tmp29;
+        if (0 === c4) {
+          c6 = 3;
+          throw tmp29;
+        } else {
+          c5 = 1;
+        }
+      }
+    }
+  });
+  return obj(...arguments);
+};
+function patchProject() {
+  return obj(...arguments);
+}
+obj = function _patchProject() {
+  obj = _asyncToGenerator(async (value, body) => {
+    let closure_2;
+    let closure_3;
+    let c4 = 0;
+    let c5 = 0;
+    return (async (arg0, value) => {
+      const HTTP = HTTPUtils.HTTP;
+      const request = { url: Endpoints.CONJURE_PROJECT(value), body, rejectWithError: false };
+      const patch = HTTP.patch;
+      await patch(request);
+      if (value.ok) {
+        const obj6 = { type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: value.body };
+        obj = closure_131_1(closure_131_2[6]);
+        obj.dispatch(obj6);
+      }
+      return value;
+    })();
+  });
+  return obj(...arguments);
+};
+obj = function _setProjectIcon() {
+  obj = _asyncToGenerator(async (value, icon) => {
+    let closure_2;
+    let closure_3;
+    let c5 = 0;
+    let c6 = 0;
+    let c4 = 0;
+    return (async (arg0, value) => {
+      let obj3;
+      const obj5 = { icon };
+      await patchProject(value, obj5);
+      if (1 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          return { value, done: true };
+        } else if (value.ok) {
+          const preview_application_id = value.body.preview_application_id;
+          if (null != preview_application_id) {
+            c4 = 1;
+            c5 = 3;
+            c6 = 1;
+            const obj8 = { value: obj3.fetchApplication(preview_application_id), done: false };
+            obj3 = closure_131_0(closure_131_2[13]);
+            return obj8;
+          }
+        }
+      } else if (2 === c5) {
+        c4 = 0;
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        return { value, done: true };
+      } else {
+        c4 = 0;
+      }
+      return value;
+    })();
+  });
+  return obj(...arguments);
+};
+function deleteProject() {
+  return obj(...arguments);
+}
+obj = function _deleteProject() {
+  obj = _asyncToGenerator(async (projectId) => {
+    let c5 = 0;
+    let c6 = 0;
+    let c4 = 0;
+    return (async (arg0) => {
+      if (c6 === 2) {
+        c6 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          return { value, done: true };
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              return { value, done: true };
+            } else {
+              closure_2 = tmp;
+              value = undefined;
+              const obj5 = { type: "CONJURE_PROJECT_DELETE_START", projectId };
+              const obj9 = DispatcherDefault;
+              obj9.dispatch(obj5);
+              c4 = 1;
+              const HTTP = HTTPUtils.HTTP;
+              const del = HTTP.del;
+              c5 = 2;
+              c6 = 1;
+              const obj6 = { url: Endpoints.CONJURE_PROJECT(projectId), rejectWithError: false };
+              const obj7 = { value: del(obj6), done: false };
+              return obj7;
+            }
+          } else if (1 === c5) {
+            c4 = 0;
+            closure_2 = closure_3;
+            const obj8 = { type: "CONJURE_PROJECT_DELETE_FAIL", projectId };
+            const obj4 = closure_130_1(closure_130_2[6]);
+            obj4.dispatch(obj8);
+            throw closure_2;
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            c6 = 3;
+            return { value, done: true };
+          } else {
+            c4 = 0;
+            let str = "CONJURE_PROJECT_DELETE_FAIL";
+            const dispatch = closure_130_1(closure_130_2[6]).dispatch;
+            closure_130_1(closure_130_2[6]);
+            if (value.ok) {
+              str = "CONJURE_PROJECT_DELETE_SUCCESS";
+            }
+            obj = { type: str, projectId };
+            dispatch(obj);
+            c6 = 3;
+            return { value, done: true };
+          }
+        } catch (tmp23) {
+          closure_3 = tmp23;
+          if (0 === c4) {
+            c6 = 3;
+            throw tmp23;
+          } else {
+            c5 = 1;
+          }
+        }
+      }
+    })();
+  });
+  return obj(...arguments);
+};
+obj = function _refreshPublishedProject() {
+  obj = _asyncToGenerator(async (arg0, arg1) => {
+    let closure_2;
+    let closure_3;
+    let closure_0 = arg0;
+    let isPreview = arg1;
+    let c4 = 0;
+    let c5 = 0;
+    const iter = (async (arg0, value) => {
+      let application_id;
+      let bot_permissions_changed;
+      let integration_installed;
+      let obj7;
+      await closure_131_19(closure_0);
+      if (2 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          return { value, done: true };
+        } else {
+          const body = value.body;
+          bot_permissions_changed = body.bot_permissions_changed;
+          integration_installed = body.integration_installed;
+          const project = body.project;
+          if (isPreview) {
+            application_id = tmp52.preview_application_id;
+          } else {
+            application_id = tmp52.application_id;
+          }
+          if (null != application_id) {
+            c4 = 3;
+            c5 = 1;
+            const obj10 = { value: obj7.fetchApplication(application_id), done: false };
+            obj7 = closure_131_0(closure_131_2[13]);
+            return obj10;
+          }
+        }
+      } else if (3 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          return { value, done: true };
+        } else {
+          const obj2 = closure_131_0(closure_131_2[14]);
+          const widgetConfigs = obj2.fetchWidgetConfigs(application_id, { force: true });
+          c4 = 4;
+          c5 = 1;
+          const obj12 = {
+            value: widgetConfigs.catch(() => {}),
+            done: false,
+          };
+          return obj12;
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        return { value, done: true };
+      } else {
+        let tmp7 = !isPreview;
+        if (!tmp7) {
+          tmp7 = integration_installed && !bot_permissions_changed;
+          const tmp9 = integration_installed && !bot_permissions_changed;
+        }
+        if (tmp7) {
+          closure_131_9(application_id);
+        }
+      }
+      const obj13 = { isPreview };
+      const obj5 = closure_131_0(closure_131_2[7]);
+      obj5.trackConjureDeployed(closure_0, obj13);
+      await "IconComponent";
+      isPreview = isPreview.isPreview;
+      return "Set";
+    })();
+    iter.next();
+    return iter;
+  });
+  return obj(...arguments);
+};
+const Endpoints = Constants.Endpoints;
+const ReadStateTypes = ReadStateConstants.ReadStateTypes;
 let c10 = null;
 let c11 = null;
 let c14 = false;
 let c17 = null;
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/ConjureActionCreators.tsx");
 
 export const trackPublishFailed = function trackPublishFailed(projectId, message, isPreview) {
-  const obj2 = {
+  let str;
+  const tmp = ConjureAnalytics;
+  const trackConjureErrored = tmp.trackConjureErrored;
+  obj = {
     location: "publish",
     code: ConjureAnalytics.ConjureErrorCodes.PUBLISH_FAILED,
-    message: null,
-    details: null,
-    isPreview: null,
+    message: "publish" + str + " failed",
+    details: message,
+    isPreview,
   };
-  let str = "";
+  str = "";
   if (isPreview) {
     str = "-preview";
   }
-  obj2.message = "publish" + str + " failed";
-  obj2.details = message;
-  obj2.isPreview = isPreview;
-  ConjureAnalytics.trackConjureErrored(projectId, obj2);
+  trackConjureErrored(projectId, obj);
 };
 export { reloadConjureAppFrames };
 export const reloadConjureProjectFrames = function reloadConjureProjectFrames(arg0) {
   const project = ConjureProjectStore.getProject(arg0);
   if (null != project) {
-    ConjurePlatformUtilsDefault.reloadAppFrames(project.application_id);
+    const application_id = project.application_id;
+    obj = ConjurePlatformUtilsDefault;
+    obj.reloadAppFrames(application_id);
     let prop = project.preview_application_id;
     if (prop == null) {
       prop = null;
     }
-    ConjurePlatformUtilsDefault.reloadAppFrames(prop);
     const tmp2Result = ConjurePlatformUtilsDefault;
+    tmp2Result.reloadAppFrames(prop);
   }
 };
 export { listProjects };
 export const fetchProjectLimit = function fetchProjectLimit() {
-  const self = this;
-  const apply = closure_18.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export { getProject };
 export const createProject = function createProject() {
-  const self = this;
-  const apply = closure_21.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const renameProject = function renameProject(projectId, name) {
-  return patchProject(projectId, { name });
+  obj = { name };
+  return patchProject(projectId, obj);
 };
-export const updateProjectSettings = function updateProjectSettings(first1, arg1) {
-  return patchProject(first1, arg1);
+export const updateProjectSettings = function updateProjectSettings(first2, arg1) {
+  return patchProject(first2, arg1);
 };
 export const setProjectIcon = function setProjectIcon() {
-  const self = this;
-  const apply = closure_24.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
-export const setGuildHints = function setGuildHints(first1, arg1) {
-  return patchProject(first1, arg1);
+export const setGuildHints = function setGuildHints(first2, arg1) {
+  return patchProject(first2, arg1);
 };
 export { deleteProject };
 export const deleteProjectInBackground = function deleteProjectInBackground(id, arg1) {
-  closure_0 = arg1;
-  deleteProject(id).then((ok) => {
+  let closure_0 = arg1;
+  const promise = deleteProject(id);
+  promise.then((ok) => {
     if (!ok.ok) {
       closure_0();
     }
   }, arg1);
 };
 export const setSelectedProjectForGuild = function setSelectedProjectForGuild(guildId, projectId) {
-  DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_SELECT", guildId, projectId });
+  obj = DispatcherDefault;
+  const obj2 = { type: "CONJURE_PROJECT_SELECT", guildId, projectId };
+  obj.dispatch(obj2);
 };
 export const refreshPublishedProject = function refreshPublishedProject() {
-  const self = this;
-  const apply = closure_27.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const setComposerDraft = function setComposerDraft(projectId, draft) {
-  DispatcherDefault.dispatch({ type: "CONJURE_COMPOSER_DRAFT_SET", projectId, draft });
+  obj = DispatcherDefault;
+  const obj2 = { type: "CONJURE_COMPOSER_DRAFT_SET", projectId, draft };
+  obj.dispatch(obj2);
 };
 export const setChatSidebarWidth = function setChatSidebarWidth(width) {
-  DispatcherDefault.dispatch({ type: "CONJURE_CHAT_SIDEBAR_WIDTH_SET", width });
+  obj = DispatcherDefault;
+  const obj2 = { type: "CONJURE_CHAT_SIDEBAR_WIDTH_SET", width };
+  obj.dispatch(obj2);
 };
 export const setBuilderPreviewApplicationId = function setBuilderPreviewApplicationId(applicationId) {
-  DispatcherDefault.dispatch({ type: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET", applicationId });
+  obj = DispatcherDefault;
+  const obj2 = { type: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET", applicationId };
+  obj.dispatch(obj2);
 };
 export const setBuilderPreviewMobile = function setBuilderPreviewMobile(enabled) {
-  DispatcherDefault.dispatch({ type: "CONJURE_BUILDER_PREVIEW_MOBILE_SET", enabled });
+  obj = DispatcherDefault;
+  const obj2 = { type: "CONJURE_BUILDER_PREVIEW_MOBILE_SET", enabled };
+  obj.dispatch(obj2);
 };
 export const setBuilderPreviewLandscape = function setBuilderPreviewLandscape(landscape) {
-  DispatcherDefault.dispatch({ type: "CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET", landscape });
+  obj = DispatcherDefault;
+  const obj2 = { type: "CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET", landscape };
+  obj.dispatch(obj2);
 };
 export const markLogsSeen = function markLogsSeen(projectId) {
-  DispatcherDefault.dispatch({ type: "CONJURE_LOGS_SEEN", projectId });
+  obj = DispatcherDefault;
+  const obj2 = { type: "CONJURE_LOGS_SEEN", projectId };
+  obj.dispatch(obj2);
 };

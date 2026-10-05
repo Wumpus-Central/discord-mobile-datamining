@@ -1,29 +1,35 @@
 // discord_app/components_native/warnings/GuildNSFW.tsx
+import Fragment from "../../../_runtime/react/00021_Fragment.js";
 import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import AgeVerificationActionCreatorsDefault from "../../modules/age_assurance/AgeVerificationActionCreators.native.tsx";
 import GatedContentDefault from "GatedContent.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../_runtime/metro/00019__.js";
+import react from "../../../_runtime/00019_react.js";
 import GuildStore from "../../stores/GuildStore.tsx";
+import ReactCompilerGating from "../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
 let closure_3 = ["modalType", "emphasiseDisagree"];
 let closure_4 = ["modalType", "emphasiseDisagree"];
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("components_native/warnings/GuildNSFW.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
+      let emphasiseDisagree;
+      let first;
+      let modalType;
+      let tmp19;
+      let tmp6;
+      let tmp9;
       _require = guildId;
-      const cResult = require("c").c(32);
+      let obj = require("react");
+      const cResult = obj.c(32);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -33,14 +39,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = guildId.guildId;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      let obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
-      const tmpResult = require("initialize");
-      const ageGateVerifyContentForGuild = require("AgeGateUtils").useAgeGateVerifyContentForGuild(stateFromStores);
+      const tmpResult = require("get initialized");
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+      const tmpResult2 = require("AgeGateUtils");
+      const ageGateVerifyContentForGuild = tmpResult2.useAgeGateVerifyContentForGuild(stateFromStores);
       if (cResult[3] !== ageGateVerifyContentForGuild) {
         ({ modalType, emphasiseDisagree } = ageGateVerifyContentForGuild);
         const tmp14 = _objectWithoutProperties(ageGateVerifyContentForGuild, closure_3);
@@ -48,15 +54,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = tmp14;
         cResult[5] = emphasiseDisagree;
         cResult[6] = modalType;
-        let tmp9 = tmp14;
+        tmp9 = tmp14;
       } else {
         tmp9 = cResult[4];
       }
       if (cResult[7] !== guildId) {
         const fn2 = function _() {
-          GuildActionCreatorsDefault.nsfwReturnToSafety(guildId.guildId);
+          const obj = GuildActionCreatorsDefault;
+          obj.nsfwReturnToSafety(guildId.guildId);
           if (guildId.onReturnToSafety != null) {
-            onReturnToSafety();
+            guildId.onReturnToSafety();
           }
         };
         cResult[7] = guildId;
@@ -65,9 +72,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[9] !== guildId.guildId) {
         class A {
           constructor() {
-            obj = closure_1(closure_2[8]);
-            nsfwAgreeResult = obj.nsfwAgree(closure_0.guildId);
-            return;
+            const obj = GuildActionCreatorsDefault;
+            obj.nsfwAgree(guildId.guildId);
           }
         }
         cResult[9] = guildId.guildId;
@@ -75,170 +81,152 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class A {
           constructor() {
-            obj = closure_1(closure_2[8]);
-            nsfwAgreeResult = obj.nsfwAgree(closure_0.guildId);
-            return;
+            const obj = GuildActionCreatorsDefault;
+            obj.nsfwAgree(guildId.guildId);
           }
         }
       }
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
         class E {
           constructor() {
-            obj = closure_1_1(closure_1_2[9]);
-            obj1 = { entryPoint: closure_0(closure_1_2[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
-            result = obj.showAgeVerificationGetStartedModal(obj1);
-            return;
+            const obj = AgeVerificationActionCreatorsDefault;
+            const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
+            const result = obj.showAgeVerificationGetStartedModal(obj2);
           }
         }
         cResult[11] = E;
       } else {
         class E {
           constructor() {
-            obj = closure_1_1(closure_1_2[9]);
-            obj1 = { entryPoint: closure_0(closure_1_2[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
-            result = obj.showAgeVerificationGetStartedModal(obj1);
-            return;
+            const obj = AgeVerificationActionCreatorsDefault;
+            const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
+            const result = obj.showAgeVerificationGetStartedModal(obj2);
           }
         }
       }
       if (stateFromStores != null) {
         class E {
           constructor() {
-            obj = closure_1_1(closure_1_2[9]);
-            obj1 = { entryPoint: closure_0(closure_1_2[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
-            result = obj.showAgeVerificationGetStartedModal(obj1);
-            return;
+            const obj = AgeVerificationActionCreatorsDefault;
+            const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
+            const result = obj.showAgeVerificationGetStartedModal(obj2);
           }
         }
       }
+      const channelId = guildId.channelId;
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
         class E {
           constructor() {
-            obj = closure_1_1(closure_1_2[9]);
-            obj1 = { entryPoint: closure_0(closure_1_2[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
-            result = obj.showAgeVerificationGetStartedModal(obj1);
-            return;
+            const obj = AgeVerificationActionCreatorsDefault;
+            const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
+            const result = obj.showAgeVerificationGetStartedModal(obj2);
           }
         }
-        const stringResult = obj4.string(tmp(1126).t["/g10LC"]);
+        const stringResult = obj4.string(require("intl").t["/g10LC"]);
         cResult[12] = stringResult;
-        const tmp19 = stringResult;
+        tmp19 = stringResult;
       } else {
         class E {
           constructor() {
-            obj = closure_1_1(closure_1_2[9]);
-            obj1 = { entryPoint: closure_0(closure_1_2[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
-            result = obj.showAgeVerificationGetStartedModal(obj1);
-            return;
+            const obj = AgeVerificationActionCreatorsDefault;
+            const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
+            const result = obj.showAgeVerificationGetStartedModal(obj2);
           }
         }
       }
       if (cResult[13] === tmp9) {
         class E {
           constructor() {
-            obj = closure_1_1(closure_1_2[9]);
-            obj1 = { entryPoint: closure_0(closure_1_2[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
-            result = obj.showAgeVerificationGetStartedModal(obj1);
-            return;
+            const obj = AgeVerificationActionCreatorsDefault;
+            const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
+            const result = obj.showAgeVerificationGetStartedModal(obj2);
           }
         }
       }
-      const obj2 = {};
+      let obj2 = { guildId: undefined, channelId, disagreement: tmp19 };
       const merged = Object.assign(tmp9);
-      obj2.guildId = undefined;
-      obj2.channelId = guildId.channelId;
-      obj2.disagreement = tmp19;
       cResult[13] = tmp9;
       cResult[14] = guildId.channelId;
       cResult[15] = undefined;
       cResult[16] = obj2;
-      const tmpResult2 = require("AgeGateUtils");
     }
   : (channelId) => {
-      _require = channelId;
-      const items = [GuildStore];
-      const stateFromStores = require("initialize").useStateFromStores(items, () =>
-        GuildStore.getGuild(channelId.guildId),
-      );
-      let obj = require("initialize");
-      const ageGateVerifyContentForGuild = require("AgeGateUtils").useAgeGateVerifyContentForGuild(stateFromStores);
-      const modalType = ageGateVerifyContentForGuild.modalType;
-      const obj2 = require("AgeGateUtils");
-      const obj3 = {};
-      const callback = noop.useCallback(() => {
-        const obj = AgeVerificationActionCreatorsDefault;
-        const result = obj.showAgeVerificationGetStartedModal({
-          entryPoint: channelId(8086).AgeVerificationModalEntryPoint.NSFW_GUILD,
-        });
-      }, []);
-      const merged = Object.assign(_objectWithoutProperties(ageGateVerifyContentForGuild, closure_4));
       let id;
+      let intl;
+      _require = channelId;
+      let obj = require("get initialized");
+      const items = [GuildStore];
+      const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(channelId.guildId));
+      let obj2 = require("AgeGateUtils");
+      const ageGateVerifyContentForGuild = obj2.useAgeGateVerifyContentForGuild(stateFromStores);
+      const modalType = ageGateVerifyContentForGuild.modalType;
+      const emphasiseDisagree = ageGateVerifyContentForGuild.emphasiseDisagree;
+      const obj3 = {
+        guildId: id,
+        channelId: channelId.channelId,
+        disagreement: intl.string(require("intl").t["/g10LC"]),
+      };
+      const tmp5 = _objectWithoutProperties(ageGateVerifyContentForGuild, closure_4);
+      const callback = react.useCallback(() => {
+        const obj = AgeVerificationActionCreatorsDefault;
+        const obj2 = { entryPoint: channelId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
+        const result = obj.showAgeVerificationGetStartedModal(obj2);
+      }, []);
+      const merged = Object.assign(tmp5);
+      id = undefined;
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
       function handleDisagree() {
-        GuildActionCreatorsDefault.nsfwReturnToSafety(channelId.guildId);
+        const obj = GuildActionCreatorsDefault;
+        obj.nsfwReturnToSafety(channelId.guildId);
         if (channelId.onReturnToSafety != null) {
-          onReturnToSafety();
+          channelId.onReturnToSafety();
         }
       }
-      obj3.guildId = id;
-      obj3.channelId = channelId.channelId;
-      const intl = tmp(1126).intl;
-      obj3.disagreement = intl.string(require("util").t["/g10LC"]);
+      intl = tmp(1126).intl;
       if (require("AgeVerificationAnalyticsUtils").NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY !== modalType) {
-        if (tmp(8086).NsfwSpaceWarningModalType.GUILD_LARGE_SERVER !== modalType) {
-          if (tmp(8086).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE === modalType) {
-            const obj4 = { modalType, disagreementButtonVariant: "primary", onDisagree: handleDisagree };
+        if (require("AgeVerificationAnalyticsUtils").NsfwSpaceWarningModalType.GUILD_LARGE_SERVER !== modalType) {
+          if (require("AgeVerificationAnalyticsUtils").NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE === modalType) {
+            GatedContentDefault;
             const merged1 = Object.assign(obj3);
-            return jsx(GatedContentDefault, {
-              modalType,
-              disagreementButtonVariant: "primary",
-              onDisagree: handleDisagree,
-            });
+            return <tmp17 modalType={modalType} disagreementButtonVariant="primary" onDisagree={handleDisagree} />;
           } else {
-            const obj5 = {
-              modalType,
-              onAgree: function handleAgree() {
-                GuildActionCreatorsDefault.nsfwAgree(channelId.guildId);
-              },
-              onDisagree: handleDisagree,
-            };
+            GatedContentDefault;
             const merged2 = Object.assign(obj3);
-            return jsx(GatedContentDefault, {
-              modalType,
-              onAgree: function handleAgree() {
-                GuildActionCreatorsDefault.nsfwAgree(channelId.guildId);
-              },
-              onDisagree: handleDisagree,
-            });
+            return (
+              <tmp11
+                modalType={modalType}
+                onAgree={function handleAgree() {
+                  const obj = GuildActionCreatorsDefault;
+                  obj.nsfwAgree(channelId.guildId);
+                }}
+                onDisagree={handleDisagree}
+              />
+            );
           }
         }
       }
-      const obj6 = {
-        modalType,
-        onAgree: callback,
-        onDisagree: handleDisagree,
-        agreementButtonVariant: null,
-        disagreementButtonVariant: null,
-      };
       let str = "primary";
-      const tmp5 = _objectWithoutProperties(ageGateVerifyContentForGuild, closure_4);
-      if (true === ageGateVerifyContentForGuild.emphasiseDisagree) {
+      GatedContentDefault;
+      if (true === emphasiseDisagree) {
         str = "secondary";
       }
-      obj6.agreementButtonVariant = str;
       let str2 = "secondary";
-      if (true === ageGateVerifyContentForGuild.emphasiseDisagree) {
+      if (true === emphasiseDisagree) {
         str2 = "primary";
       }
-      obj6.disagreementButtonVariant = str2;
       const merged3 = Object.assign(obj3);
-      return jsx(GatedContentDefault, {
-        modalType,
-        onAgree: callback,
-        onDisagree: handleDisagree,
-        agreementButtonVariant: null,
-        disagreementButtonVariant: null,
-      });
+      return (
+        <tmp22
+          modalType={modalType}
+          onAgree={callback}
+          onDisagree={handleDisagree}
+          agreementButtonVariant={str}
+          disagreementButtonVariant={str2}
+        />
+      );
     };
+let result = size.fileFinishedImporting("components_native/warnings/GuildNSFW.tsx");
+
+export default tmp2;

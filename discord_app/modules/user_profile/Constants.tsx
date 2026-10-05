@@ -8,9 +8,10 @@ const result = size.fileFinishedImporting("modules/user_profile/Constants.tsx");
 
 export const USER_PROFILE_TOOLTIP_DELAY = 300;
 export const getBadgeName = function getBadgeName(GIFTING) {
+  let formatted;
   const str = BadgeId.BadgeId[GIFTING];
   if (null != str) {
-    let formatted = str.toLowerCase();
+    formatted = str.toLowerCase();
   } else {
     const _String = String;
     formatted = String(GIFTING);
@@ -304,9 +305,10 @@ export const TrackUserProfileWishlistActions = {
 };
 export const TrackUserProfileUi = { USER_PROFILE: "USER_PROFILE", PROFILE_FRAME: "PROFILE_FRAME" };
 export const getBadgeAssetFromCDN = function getBadgeAssetFromCDN(icon) {
+  let combined;
   if (null != CDN_HOST) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "https://" + CDN_HOST + "/badge-icons/" + icon + ".png";
+    combined = "https://" + CDN_HOST + "/badge-icons/" + icon + ".png";
   } else {
     const _location = location;
     const _HermesInternal = HermesInternal;

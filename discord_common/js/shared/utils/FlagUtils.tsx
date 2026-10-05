@@ -3,8 +3,8 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/FlagUtils.tsx");
 
-export const hasFlag = function hasFlag(flags, IS_ANIMATED) {
-  return (flags & IS_ANIMATED) === IS_ANIMATED;
+export const hasFlag = function hasFlag(flags, FIND_BY_EMAIL) {
+  return (flags & FIND_BY_EMAIL) === FIND_BY_EMAIL;
 };
 export const hasAnyFlag = function hasAnyFlag(flags, arg1) {
   return flags & arg1;
@@ -20,16 +20,19 @@ export const removeFlags = function removeFlags(setting) {
   return substr.reduce((acc, item) => acc & ~item, setting);
 };
 export const setFlag = function setFlag(channelIdFlags, OPT_IN_ENABLED, setting) {
-  if (setting) {
-    let tmp = channelIdFlags | OPT_IN_ENABLED;
+  let tmp2;
+  const tmp = setting;
+  if (tmp) {
+    tmp2 = channelIdFlags | OPT_IN_ENABLED;
   } else {
-    tmp = channelIdFlags & ~OPT_IN_ENABLED;
+    tmp2 = channelIdFlags & ~OPT_IN_ENABLED;
   }
-  return tmp;
+  return tmp2;
 };
 export const toggleFlag = function toggleFlag(arg0, arg1) {
+  let tmp;
   if ((arg0 & arg1) === arg1) {
-    let tmp = arg0 & ~arg1;
+    tmp = arg0 & ~arg1;
   } else {
     tmp = arg0 | arg1;
   }

@@ -1,23 +1,27 @@
 // discord_app/modules/guild_config_gates/GuildConfigGatesStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const dependencyMap = {};
-const Store = initializeDefault.Store;
-class GuildConfigGatesStore extends Store {}
-const prototype = GuildConfigGatesStore.prototype;
-prototype["hasLoaded"] = function hasLoaded(arg0) {
-  return null != dependencyMap[arg0];
-};
-prototype["getGates"] = function getGates(arg0) {
-  let obj = dependencyMap[arg0];
-  if (obj == null) {
-    obj = { guildVerificationRoleEnabled: false, applicationIdentityLinkedRolesEnabled: false };
+let closure_0;
+
+const React = {};
+const Store = get_initializedDefault.Store;
+class GuildConfigGatesStore extends Store {
+  hasLoaded(arg0) {
+    return null != closure_0[arg0];
   }
-  return obj;
-};
+  getGates(arg0) {
+    let obj = closure_0[arg0];
+    if (obj == null) {
+      obj = { guildVerificationRoleEnabled: false, applicationIdentityLinkedRolesEnabled: false };
+    }
+    return obj;
+  }
+}
+const prototype = GuildConfigGatesStore.prototype;
 GuildConfigGatesStore.displayName = "GuildConfigGatesStore";
-const guildConfigGatesStore = new GuildConfigGatesStore(DispatcherDefault, {
+let obj = {
   GUILD_CONFIG_GATES_FETCH_SUCCESS: function handleFetchSuccess(guildId) {
     closure_0[guildId.guildId] = {
       guildVerificationRoleEnabled: guildId.guildVerificationRoleEnabled,
@@ -27,8 +31,8 @@ const guildConfigGatesStore = new GuildConfigGatesStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     closure_0 = {};
   },
-});
-const size = fn(2);
+};
+const guildConfigGatesStore = new GuildConfigGatesStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/guild_config_gates/GuildConfigGatesStore.tsx");
 
 export default guildConfigGatesStore;

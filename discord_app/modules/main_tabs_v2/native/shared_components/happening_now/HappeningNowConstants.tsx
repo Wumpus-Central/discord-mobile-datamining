@@ -2,6 +2,7 @@
 import native from "../../../../../design/void/native.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
+const obj = { padding: native.STATUS_PADDING - 1 };
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowConstants.tsx",
 );
@@ -94,4 +95,4 @@ export const HappeningNowCardTrackingType = {
   GUILD_ACTION_STUDENT_HUB_ADD_SERVER: "GUILD_ACTION_STUDENT_HUB_ADD_SERVER",
   EMBEDDED_ACTIVITY_CARD: "EMBEDDED_ACTIVITY_CARD",
 };
-export const STATUS_CUTOUT_SMALL = { padding: native.STATUS_PADDING - 1 };
+export const STATUS_CUTOUT_SMALL = obj;

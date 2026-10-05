@@ -1,34 +1,39 @@
 // discord_app/modules/user_settings/defs/native/ImageDescriptionsSetting.tsx
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import UserSettingsText from "../../chat/native/UserSettingsText.tsx";
 import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
 function onImageDescriptionSettingValueChange(viewImageDescriptions) {
-  UserSettingsText.setImageDescriptions({
+  const obj = UserSettingsText;
+  const obj2 = {
     videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality,
     viewImageDescriptions,
     lowQualityImageMode: UnsyncedUserSettingsStore.lowQualityImageMode,
     dataSavingMode: UnsyncedUserSettingsStore.dataSavingMode,
-  });
+  };
+  obj.setImageDescriptions(obj2);
 }
-let ReactCompilerGating = fn(558);
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11129);
-const toggle = SettingBuilders.createToggle({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t["w8j+yW"]);
+    const intl = intl2.intl;
+    return intl.string(intl2.t["w8j+yW"]);
   },
-  parent: fn(7634).MobileUserSettings.CHAT,
+  parent: MobileUserSettings.CHAT,
   useValue: () => {
     const ViewImageDescriptions = UserSettings.ViewImageDescriptions;
     return ViewImageDescriptions.useSetting();
   },
   onValueChange: onImageDescriptionSettingValueChange,
-});
-const size = fn(2);
+};
+const toggle = SettingBuilders.createToggle(obj);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/ImageDescriptionsSetting.tsx");
 
 export default toggle;

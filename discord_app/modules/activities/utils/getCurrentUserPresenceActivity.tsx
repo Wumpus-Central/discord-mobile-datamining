@@ -8,7 +8,7 @@ export default function getCurrentUserPresenceActivity(
   getApplicationActivity2,
   application_id1,
 ) {
-  closure_0 = application_id1;
+  let closure_0 = application_id1;
   let tmp = null;
   if (null != application_id1) {
     let applicationActivity = getApplicationActivity.getApplicationActivity(application_id1);
@@ -17,7 +17,9 @@ export default function getCurrentUserPresenceActivity(
     }
     if (applicationActivity == null) {
       const hiddenActivities = getApplicationActivity2.getHiddenActivities();
-      applicationActivity = hiddenActivities.find((application_id) => application_id.application_id === closure_0);
+      applicationActivity = hiddenActivities.find(
+        (application_id) => application_id.application_id === application_id1,
+      );
     }
     tmp = applicationActivity;
   }

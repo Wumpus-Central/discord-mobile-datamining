@@ -8,17 +8,17 @@ import QuestsEligibility from "../lib/QuestsEligibility.tsx";
 import QuestFetchReconnectJitterExperiment from "../experiments/QuestFetchReconnectJitterExperiment.tsx";
 import QuestStore from "../QuestStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
 const DAY = DurationsDefault.Millis.DAY;
 let closure_5 = 30 * DurationsDefault.Millis.MINUTE;
 let closure_6 = 5 * DurationsDefault.Millis.MINUTE;
 const HOUR = DurationsDefault.Millis.HOUR;
 let closure_7 = 5 * DurationsDefault.Millis.MINUTE;
-class QuestFetchManager extends tmp2 {
+class QuestFetchManager extends AutomaticLifecycleManager {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    closure_0 = applyArgumentsResult;
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    require = applyArgumentsResult;
     applyArgumentsResult.instantiatedAt = Date.now();
     applyArgumentsResult.initialFetchTimerId = null;
     applyArgumentsResult.initialQuestHomeHeroFetchTimerId = null;
@@ -27,31 +27,36 @@ class QuestFetchManager extends tmp2 {
     applyArgumentsResult.lastFetchedQuestForLocaleChangeAt = 0;
     applyArgumentsResult.hasHandledConnectionOpen = false;
     applyArgumentsResult.handleQuestsFetchCurrentQuestsBegin = function handleQuestsFetchCurrentQuestsBegin() {
-      applyArgumentsResult.lastFetchAttemptedAt = Date.now();
+      require.lastFetchAttemptedAt = Date.now();
     };
     applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
-      window.clearTimeout(applyArgumentsResult.initialFetchTimerId);
-      window.clearTimeout(applyArgumentsResult.initialQuestHomeHeroFetchTimerId);
-      window.clearTimeout(applyArgumentsResult.recurringFetchTimerId);
-      applyArgumentsResult.recurringFetchTimerId = window.setInterval(() => {
+      let questFetchJitterMs;
+      let questHomeHeroJitterMs;
+      window.clearTimeout(require.initialFetchTimerId);
+      window.clearTimeout(require.initialQuestHomeHeroFetchTimerId);
+      window.clearTimeout(require.recurringFetchTimerId);
+      require.recurringFetchTimerId = window.setInterval(() => {
         if (Date.now() - closure_1_0.lastFetchAttemptedAt > DAY) {
           closure_1_0._fetch("post_connect_recurring");
         }
       }, closure_5);
-      const isEligibleForQuests = QuestsEligibility.getIsEligibleForQuests();
-      applyArgumentsResult.hasHandledConnectionOpen = true;
-      if (applyArgumentsResult.hasHandledConnectionOpen) {
+      let obj = QuestsEligibility;
+      const isEligibleForQuests = obj.getIsEligibleForQuests();
+      require.hasHandledConnectionOpen = true;
+      if (require.hasHandledConnectionOpen) {
+        let DEFAULT_QUEST_FETCH_JITTER_CONFIG;
         if (isEligibleForQuests) {
-          let DEFAULT_QUEST_FETCH_JITTER_CONFIG =
-            QuestFetchReconnectJitterExperiment.getQuestFetchReconnectJitterConfig({ location: "QuestFetchManager" });
           const tmp5Result = QuestFetchReconnectJitterExperiment;
+          DEFAULT_QUEST_FETCH_JITTER_CONFIG = tmp5Result.getQuestFetchReconnectJitterConfig({
+            location: "QuestFetchManager",
+          });
         }
         const _Math = Math;
         const _Math2 = Math;
         ({ questFetchJitterMs, questHomeHeroJitterMs } = DEFAULT_QUEST_FETCH_JITTER_CONFIG);
         const rounded = Math.floor(Math.random() * questFetchJitterMs);
         const _window = window;
-        applyArgumentsResult.initialFetchTimerId = window.setTimeout(() => {
+        require.initialFetchTimerId = window.setTimeout(() => {
           if (Date.now() - QuestStore.lastFetchedCurrentQuests > closure_2_7) {
             closure_1_0._fetch("post_connect_initial");
           }
@@ -60,11 +65,11 @@ class QuestFetchManager extends tmp2 {
           const _Math3 = Math;
           const _Math4 = Math;
           const _window2 = window;
-          applyArgumentsResult.initialQuestHomeHeroFetchTimerId = window.setTimeout(
+          require.initialQuestHomeHeroFetchTimerId = window.setTimeout(
             () => {
               try {
-                const questHomeHero = closure_1_0(dependencyMap[5]).fetchQuestHomeHero();
-                const obj = closure_1_0(dependencyMap[5]);
+                const obj = closure_1_0(closure_1_2[5]);
+                const questHomeHero = obj.fetchQuestHomeHero();
               } catch (err) {}
             },
             rounded + Math.floor(Math.random() * questHomeHeroJitterMs),
@@ -75,33 +80,34 @@ class QuestFetchManager extends tmp2 {
     };
     applyArgumentsResult.handleRunningGamesChange = function handleRunningGamesChange() {};
     applyArgumentsResult.handleUserSettingsProtoUpdate = function handleUserSettingsProtoUpdate(settings) {
-      let wasSaved = !("localization" in settings.settings.proto);
-      if (!wasSaved) {
-        wasSaved = !settings.partial;
+      let tmp = !("localization" in settings.settings.proto);
+      const wasSaved = settings.wasSaved;
+      if (!tmp) {
+        tmp = !settings.partial;
       }
-      if (!wasSaved) {
-        wasSaved = settings.wasSaved;
+      if (!tmp) {
+        tmp = wasSaved;
       }
-      if (!wasSaved) {
+      if (!tmp) {
         const _Date = Date;
-        wasSaved = Date.now() - applyArgumentsResult.lastFetchedQuestForLocaleChangeAt <= closure_6;
+        tmp = Date.now() - require.lastFetchedQuestForLocaleChangeAt <= closure_6;
       }
-      if (!wasSaved) {
+      if (!tmp) {
         const _Date2 = Date;
-        applyArgumentsResult.lastFetchedQuestForLocaleChangeAt = Date.now();
-        applyArgumentsResult._fetch("user_settings");
+        require.lastFetchedQuestForLocaleChangeAt = Date.now();
+        require._fetch("user_settings");
       }
     };
     applyArgumentsResult.handleStartSession = function handleStartSession() {
-      applyArgumentsResult.hasHandledConnectionOpen = false;
+      require.hasHandledConnectionOpen = false;
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
-      window.clearTimeout(applyArgumentsResult.initialFetchTimerId);
-      window.clearTimeout(applyArgumentsResult.initialQuestHomeHeroFetchTimerId);
-      window.clearTimeout(applyArgumentsResult.recurringFetchTimerId);
-      applyArgumentsResult.lastFetchAttemptedAt = 0;
-      applyArgumentsResult.lastFetchedQuestForLocaleChangeAt = 0;
-      applyArgumentsResult.hasHandledConnectionOpen = false;
+      window.clearTimeout(require.initialFetchTimerId);
+      window.clearTimeout(require.initialQuestHomeHeroFetchTimerId);
+      window.clearTimeout(require.recurringFetchTimerId);
+      require.lastFetchAttemptedAt = 0;
+      require.lastFetchedQuestForLocaleChangeAt = 0;
+      require.hasHandledConnectionOpen = false;
     };
     applyArgumentsResult.actions = {
       QUESTS_FETCH_CURRENT_QUESTS_BEGIN: applyArgumentsResult.handleQuestsFetchCurrentQuestsBegin,
@@ -114,37 +120,35 @@ class QuestFetchManager extends tmp2 {
     };
     return applyArgumentsResult;
   }
-}
-QuestFetchManager.prototype["_fetch"] = function _fetch(post_connect_initial) {
-  let isEligibleForQuests = QuestsEligibility.getIsEligibleForQuests();
-  if (isEligibleForQuests) {
-    isEligibleForQuests = !QuestStore.isFetchingCurrentQuests;
-  }
-  if (isEligibleForQuests) {
-    const obj3 = { category: "quests.fetch", message: "QuestFetchManager._fetch triggered", data: null };
-    const obj4 = {
-      callerSource: post_connect_initial,
-      storeSize: QuestStore.quests.size,
-      lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests,
-      msSinceLastFetch: null,
-      isFetchingCurrentQuests: null,
-    };
-    const _Date = Date;
-    obj4.msSinceLastFetch = Date.now() - QuestStore.lastFetchedCurrentQuests;
-    obj4.isFetchingCurrentQuests = QuestStore.isFetchingCurrentQuests;
-    obj3.data = obj4;
-    SentryUtilsDefault.addBreadcrumb(obj3);
-    const currentQuests = QuestActionCreators.fetchCurrentQuests();
-    const tmpResult = QuestActionCreators;
-    if (tmpResult2.isMac()) {
-      state = DiscordAppStateDefault.getState();
-      const tmp6Result = DiscordAppStateDefault;
+  _fetch(combined) {
+    let obj3;
+    const obj = QuestsEligibility;
+    const isEligibleForQuests = obj.getIsEligibleForQuests() && !QuestStore.isFetchingCurrentQuests;
+    if (isEligibleForQuests) {
+      const obj2 = { category: "quests.fetch", message: "QuestFetchManager._fetch triggered", data: obj3 };
+      const _Date = Date;
+      obj3 = {
+        callerSource: combined,
+        storeSize: QuestStore.quests.size,
+        lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests,
+        msSinceLastFetch: Date.now() - QuestStore.lastFetchedCurrentQuests,
+        isFetchingCurrentQuests: QuestStore.isFetchingCurrentQuests,
+      };
+      const addBreadcrumb = SentryUtilsDefault.addBreadcrumb;
+      SentryUtilsDefault;
+      addBreadcrumb(obj2);
+      const tmpResult = QuestActionCreators;
+      const currentQuests = tmpResult.fetchCurrentQuests();
+      const tmpResult2 = PlatformUtils;
+      if (tmpResult2.isMac()) {
+        const tmp6Result = DiscordAppStateDefault;
+        const state = tmp6Result.getState();
+      }
     }
-    tmpResult2 = PlatformUtils;
   }
-};
+}
+const prototype = QuestFetchManager.prototype;
 const questFetchManager = new QuestFetchManager();
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/managers/QuestFetchManager.tsx");
 
 export default questFetchManager;

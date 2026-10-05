@@ -1,45 +1,53 @@
 // discord_app/modules/user_settings/account/native/AccountEditPassword.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import UserSettingsAccountEditPasswordDefault from "UserSettingsAccountEditPassword.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c3, StyleSheet } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-const obj = { container: null };
+let StyleSheet;
+let c3;
+let obj2;
+({ View: c3, StyleSheet } = react_native);
+const jsx = Fragment.jsx;
+let createStyles = createStyles_mod;
+let obj = { container: obj2 };
+createStyles = createStyles.createStyles;
+obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-let closure_5 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/account/native/AccountEditPassword.tsx");
-
-export default noop.memo(
+let closure_5 = createStyles(obj);
+const memo = react.memo;
+const memoResult = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
-        const cResult = c.c(3);
+        let first;
+        let tmp8;
+        const obj = react2;
+        const cResult = obj.c(3);
         const tmp3 = closure_5();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const tmp7 = jsx(UserSettingsAccountEditPasswordDefault, {});
           cResult[0] = tmp7;
-          let first = tmp7;
+          first = tmp7;
         } else {
           first = cResult[0];
         }
         if (cResult[1] !== tmp3.container) {
-          const obj2 = { style: tmp3.container, children: first };
-          const tmp11 = <React3 style={tmp3.container}>{first}</React3>;
+          const tmp11 = <_false style={tmp3.container}>{first}</_false>;
           cResult[1] = tmp3.container;
           cResult[2] = tmp11;
-          let tmp8 = tmp11;
+          tmp8 = tmp11;
         } else {
           tmp8 = cResult[2];
         }
         return tmp8;
       }
-    : () => <React3 style={closure_5().container}>{jsx(UserSettingsAccountEditPasswordDefault, {})}</React3>,
+    : () => <_false style={closure_5().container}>{jsx(UserSettingsAccountEditPasswordDefault, {})}</_false>,
 );
+const result = size.fileFinishedImporting("modules/user_settings/account/native/AccountEditPassword.tsx");
+
+export default memoResult;

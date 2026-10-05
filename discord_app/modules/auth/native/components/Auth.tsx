@@ -1,53 +1,92 @@
 // discord_app/modules/auth/native/components/Auth.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../../Constants.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
+import utils_PlatformUtils from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import KeyboardChatScrollView from "../../../../../_runtime/01632_KeyboardChatScrollView.js";
 import useWideAuthViewDefault from "../useWideAuthView.tsx";
+import MFAUtils from "../../../../utils/MFAUtils.tsx";
+import react3 from "WideAuthScrollContext.tsx";
 import BackgroundImageDefault from "atoms/BackgroundImage.tsx";
-import StackNavigator from "../../../../../_runtime/06498_StackNavigator.js";
+import Navigator3 from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import _mod6498 from "../../../../../_runtime/metro/06498__.js";
 import RegistrationHandoff from "../RegistrationHandoff.tsx";
 import RegistrationUtils from "../RegistrationUtils.tsx";
 import useIsHCaptchaModalOpenTracking from "utils/useIsHCaptchaModalOpenTracking.tsx";
+import AssetRegistry from "../../../../../_runtime/15918_AssetRegistry.js";
 import AuthManagerDefault from "../AuthManager.tsx";
 import useOrientationLockDefault from "../useOrientationLock.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import MultiAccountStore from "../../../multi_account/MultiAccountStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import RegistrationStepsUtils_mod from "../RegistrationStepsUtils.tsx";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-const util = PX_24(1126);
-const utils_PlatformUtils = PX_24(1370);
-const KeyboardChatScrollView = PX_24(1632);
-const WideAuthScrollContext = PX_24(6461);
-const Navigator = PX_24(6496);
-const _mod15918 = PX_24(15918);
-require = fn;
+const require = globalThis.__r;
+let importDefault, set;
+
+let StyleSheet;
+let c10;
+let c9;
+let hasOwnProperty;
+let metroRequire;
+let obj3;
+let obj4;
+let size;
+let unpackModuleId;
 function getInitialAuthRouteStack() {
+  let items1;
+  obj = RegistrationHandoff;
   if (!obj.hasRegistrationHandoff()) {
+    const items = [{ name: AuthStates.WELCOME }];
+    items1 = items;
     const obj3 = { name: AuthStates.WELCOME };
-    const items = [obj3];
-    let items1 = items;
   } else {
+    items1 = [{ name: AuthStates.WELCOME }];
     const obj4 = { name: AuthStates.WELCOME };
-    items1 = [obj4];
     const obj5 = { name: AuthStates.LOGIN };
     items1[1] = obj5;
   }
   return items1;
 }
-get_ActivityIndicator = fn(17);
-({ Keyboard: hasOwnProperty, View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const AuthStates = fn(1085).AuthStates;
-const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(15866);
+({ Keyboard: hasOwnProperty, View: metroRequire, StyleSheet } = react_native);
+const AuthStates = Constants.AuthStates;
+({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = Fragment);
+let RegistrationStepsUtils = RegistrationStepsUtils_mod;
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
-const screens = Object.fromEntries(
+const screens = fromEntries(
   RegistrationStepsUtils.map((item) => {
+    let tmp;
+    let tmp2;
+    const headerLeft2 = function headerLeft(arg0) {
+      let headerLeftResult;
+      function backImage() {
+        return closure_1_9(headerLeft(closure_1_2[8]).HeaderBackImage, {});
+      }
+      const tmp = headerLeft;
+      if (null != headerLeft.headerLeft) {
+        headerLeft = tmp.headerLeft;
+        const obj2 = { backImage };
+        const merged = Object.assign(arg0);
+        headerLeftResult = headerLeft(obj2);
+      } else {
+        obj = { backImage };
+        const BackButtonWithTracking = RegistrationUtils.BackButtonWithTracking;
+        const merged1 = Object.assign(arg0);
+        headerLeftResult = React4(BackButtonWithTracking, obj);
+      }
+      return headerLeftResult;
+    };
     [tmp, tmp2] = item;
     const items = [tmp];
-    obj = {};
+    obj = { headerMode: "screen" };
     let merged = Object.assign(tmp2);
-    obj.headerMode = "screen";
     let obj2 = null;
     if (tmp2.fullscreen) {
       obj2 = { fullscreen: false, headerTransparent: false };
@@ -57,58 +96,42 @@ const screens = Object.fromEntries(
     if (tmp !== AuthStates.MFA) {
       tmp6 = null;
       if (tmp !== AuthStates.WELCOME) {
-        let obj3 = {
-          headerLeft(arg0) {
-            function backImage() {
-              return closure_1_9(headerLeft(closure_1_2[8]).HeaderBackImage, {});
-            }
-            if (null != headerLeft.headerLeft) {
-              const obj2 = {};
-              const merged = Object.assign(arg0);
-              obj2.backImage = backImage;
-              let headerLeftResult = headerLeft.headerLeft(obj2);
-            } else {
-              const obj3 = {};
-              const merged1 = Object.assign(arg0);
-              obj3.backImage = backImage;
-              headerLeftResult = options(RegistrationUtils.BackButtonWithTracking, obj3);
-            }
-            return headerLeftResult;
-          },
-        };
-        tmp6 = obj3;
+        tmp6 = { headerLeft: headerLeft2 };
+        const obj3 = { headerLeft: headerLeft2 };
       }
     }
     const merged2 = Object.assign(tmp6);
     const items1 = [, ,];
     ({ REGISTER_IDENTITY: arr2[0], LOGIN: arr2[1], AGE_GATE_UNDERAGE: arr2[2] } = AuthStates);
     let tmp8 = null;
+    set = new Set(items1);
     if (set.has(tmp)) {
-      const obj4 = { cardStyleInterpolator: StackNavigator.CardStyleInterpolators.forFadeFromCenter };
-      tmp8 = obj4;
+      tmp8 = { cardStyleInterpolator: _mod6498.CardStyleInterpolators.forFadeFromCenter };
+      const obj4 = { cardStyleInterpolator: _mod6498.CardStyleInterpolators.forFadeFromCenter };
     }
     const merged3 = Object.assign(tmp8);
     items[1] = obj;
     return items;
   }),
 );
+const LOGIN = AuthStates.LOGIN;
 let num = 540;
-if (fn(6439).hasWebAuthn) {
+if (MFAUtils.hasWebAuthn) {
   num = 600;
 }
 let obj = {};
-obj[AuthStates.LOGIN] = num;
+obj[LOGIN] = num;
 obj[AuthStates.MFA] = 600;
-const createStyles = fn(4890);
-let obj3 = {
+let createStyles = createStyles_mod;
+let obj2 = {
   transparent: { backgroundColor: "transparent" },
   cardContainer: { flex: 1, position: "relative", backgroundColor: "transparent" },
   wideOuterContainer: { flex: 1, justifyContent: "center" },
-  wideCard: null,
-  wideHeaderFlat: null,
-  wideHeader: null,
+  wideCard: size,
+  wideHeaderFlat: obj3,
+  wideHeader: obj4,
 };
-let size = {
+size = {
   backgroundColor: "transparent",
   borderRadius: nativeDefault.radii.lg,
   maxWidth: 600,
@@ -118,243 +141,252 @@ let size = {
   overflow: "hidden",
   height: 520,
 };
-obj3.wideCard = size;
-obj3.wideHeaderFlat = { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-let obj5 = { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj3.wideHeader = {
+createStyles = createStyles.createStyles;
+obj3 = { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj4 = {
   borderBottomWidth: StyleSheet.hairlineWidth,
   borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-let closure_16 = createStyles.createStyles(obj3);
-const ReactCompilerGating = fn(558);
+let closure_16 = createStyles(obj2);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let PX_24 = require;
-      let PX_16 = dependencyMap;
-      obj = c;
+      let Navigator2;
+      let closure_1;
+      let obj7;
+      let obj8;
+      let obj9;
+      let tmp10;
+      let tmp11;
+      let tmp12;
+      let tmp15;
+      let tmp16;
+      let tmp22;
+      let tmp27Result;
+      obj = react2;
       const cResult = obj.c(18);
-      const isHCaptchaModalOpenTracking = useIsHCaptchaModalOpenTracking.useIsHCaptchaModalOpenTracking();
-      const tmp4 = useWideAuthViewDefault();
-      let wideOuterContainer = closure_16();
-      const first = _slicedToArray(noop.useState(getInitialAuthRouteStack), 1)[0];
-      [tmp7, require] = noop.useState(first[first.length - 1].name);
+      const obj2 = useIsHCaptchaModalOpenTracking;
+      const isHCaptchaModalOpenTracking = obj2.useIsHCaptchaModalOpenTracking();
+      const tmp6 = useWideAuthViewDefault();
+      const tmp7 = closure_16();
+      const first = _slicedToArray(react.useState(getInitialAuthRouteStack), 1)[0];
+      [tmp10, require] = react.useState(first[first.length - 1].name);
+      _slicedToArray(react.useState(first[first.length - 1].name), 2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function c() {
-          const result = RegistrationHandoff.clearRegistrationHandoff();
+          obj = RegistrationHandoff;
+          const result = obj.clearRegistrationHandoff();
         };
         const items = [];
         cResult[0] = fn;
         cResult[1] = items;
-        tmp8 = fn;
-        tmp9 = items;
+        tmp11 = fn;
+        tmp12 = items;
       } else {
-        [tmp8, tmp9] = cResult;
+        [tmp11, tmp12] = cResult;
       }
-      const effect = noop.useEffect(tmp8, tmp9);
-      const tmp6 = _slicedToArray(noop.useState(first[first.length - 1].name), 2);
-      [tmp12, tmp13] = noop.useState(false);
-      importDefault = tmp22Result;
+      const effect = react.useEffect(tmp11, tmp12);
+      [tmp15, tmp16] = react.useState(false);
+      importDefault = tmp16;
+      _slicedToArray(react.useState(false), 2);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         class O {
-          constructor(arg0) {
-            return arg0.height;
+          constructor(height) {
+            return height.height;
           }
         }
         cResult[2] = O;
       } else {
         class O {
-          constructor(arg0) {
-            return arg0.height;
+          constructor(height) {
+            return height.height;
           }
         }
       }
-      const tmp5Result = _slicedToArray(noop.useState(false), 2);
-      wideHeaderFlat = KeyboardChatScrollView.useKeyboardState(O);
+      const tmpResult = KeyboardChatScrollView;
+      const keyboardState = tmpResult.useKeyboardState(O);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class O {
-          constructor(arg0) {
-            return arg0.height;
+          constructor(height) {
+            return height.height;
           }
         }
-        cResult[3] = tmp16;
-        let obj9 = tmp16;
+        cResult[3] = tmp21;
       } else {
         class O {
-          constructor(arg0) {
-            return arg0.height;
+          constructor(height) {
+            return height.height;
           }
         }
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         class O {
-          constructor(arg0) {
-            return arg0.height;
+          constructor(height) {
+            return height.height;
           }
         }
-        const obj4 = { backgroundImageSource: _mod15918, backgroundImageCover: true };
-        const tmp19 = closure_9(tmp3(6463), obj4);
-        cResult[4] = tmp19;
-        const tmp17 = tmp19;
-        const tmp3Result = tmp3(6463);
+        const obj4 = { backgroundImageSource: AssetRegistry, backgroundImageCover: true };
+        const tmp5Result = BackgroundImageDefault;
+        const tmp24 = closure_9(tmp5Result, obj4);
+        cResult[4] = tmp24;
+        tmp22 = tmp24;
       } else {
         class O {
-          constructor(arg0) {
-            return arg0.height;
+          constructor(height) {
+            return height.height;
           }
         }
       }
-      if (cResult[5] === wideHeaderFlat > 200) {
+      if (cResult[5] === keyboardState > 200) {
         class O {
-          constructor(arg0) {
-            return arg0.height;
+          constructor(height) {
+            return height.height;
           }
         }
       }
-      const items1 = [tmp17];
-      if (tmp4) {
+      const items1 = [tmp22];
+      if (tmp6) {
         class O {
-          constructor(arg0) {
-            return arg0.height;
+          constructor(height) {
+            return height.height;
           }
         }
-        tmp27[0] = tmp22Result;
-        const items2 = [wideOuterContainer.wideOuterContainer];
-        let tmp30 = null;
-        if (tmp15) {
+        tmp32[0] = tmp16;
+        const items2 = [tmp7.wideOuterContainer];
+        let tmp35 = null;
+        const Provider = react3.WideAuthScrollContext.Provider;
+        if (keyboardState > 200) {
           class O {
-            constructor(arg0) {
-              return arg0.height;
+            constructor(height) {
+              return height.height;
             }
           }
-          tmp31[0] = wideHeaderFlat;
-          tmp30 = tmp31;
+          tmp36[0] = keyboardState;
+          tmp35 = tmp36;
         }
-        const obj5 = { style: null, children: null };
-        items2[1] = tmp30;
-        obj5.style = items2;
-        const items3 = [wideOuterContainer.wideCard, ,];
-        let tmp32 = null;
-        if (null != tmp7) {
+        items2[1] = tmp35;
+        const items3 = [tmp7.wideCard, ,];
+        let tmp37 = null;
+        const obj5 = { style: items2, children: closure_9(closure_6, obj7) };
+        if (null != tmp10) {
           class O {
-            constructor(arg0) {
-              return arg0.height;
+            constructor(height) {
+              return height.height;
             }
           }
-          if (obj[tmp7] == null) {
+          if (obj[tmp10] == null) {
             class O {
-              constructor(arg0) {
-                return arg0.height;
+              constructor(height) {
+                return height.height;
               }
             }
           }
-          const obj6 = { height: obj[tmp7] };
-          tmp32 = obj6;
+          tmp37 = { height: obj[tmp10] };
+          const obj6 = { height: obj[tmp10] };
         }
-        items3[1] = tmp32;
-        if (tmp15) {
+        items3[1] = tmp37;
+        if (keyboardState > 200) {
           class O {
-            constructor(arg0) {
-              return arg0.height;
+            constructor(height) {
+              return height.height;
             }
           }
         }
-        const obj7 = { style: null, children: null };
         items3[2] = null;
-        obj7.style = items3;
-        const obj8 = {
+        obj7 = { style: items3, children: closure_9(Navigator2, obj8) };
+        obj8 = {
           screens,
-          containerStyle: wideOuterContainer.cardContainer,
+          containerStyle: tmp7.cardContainer,
           viewStyle: null,
           headerStatusBarHeight: 0,
           cardOverlayEnabled: false,
           cardShadowEnabled: false,
-          initialRouteStack: null,
-          onWillFocus: null,
-          onStateChange: null,
-          headerStyle: null,
-          headerLeftContainerStyle: null,
+          initialRouteStack: first,
+          onWillFocus: closure_5.dismiss,
+          onStateChange: tmp21,
+          headerStyle: tmp15 ? tmp7.wideHeader : tmp7.wideHeaderFlat,
+          headerLeftContainerStyle: obj9,
           disableHeaderAnimation: true,
         };
-        if (tmp7 === AuthStates.WELCOME) {
+        Navigator2 = Navigator3.Navigator;
+        if (tmp10 === AuthStates.WELCOME) {
           class O {
-            constructor(arg0) {
-              return arg0.height;
+            constructor(height) {
+              return height.height;
             }
           }
         }
-        obj8.viewStyle = null;
-        obj8.initialRouteStack = first;
-        obj8.onWillFocus = closure_5.dismiss;
-        obj8.onStateChange = obj9;
-        obj8.headerStyle = tmp12 ? wideOuterContainer.wideHeader : wideOuterContainer.wideHeaderFlat;
-        if (PX_24Result1.isAndroid()) {
+        const tmpResult2 = utils_PlatformUtils;
+        if (tmpResult2.isAndroid()) {
           class O {
-            constructor(arg0) {
-              return arg0.height;
+            constructor(height) {
+              return height.height;
             }
           }
         }
-        obj9 = { paddingLeft: 20, paddingTop: null, paddingBottom: null };
-        PX_24 = tmp3(587).space.PX_24;
-        obj9.paddingTop = PX_24;
-        PX_16 = tmp3(587).space.PX_16;
-        obj9.paddingBottom = PX_16;
-        obj8.headerLeftContainerStyle = obj9;
-        obj7.children = closure_9(Navigator.Navigator, obj8);
-        obj5.children = closure_9(closure_6, obj7);
-        tmp22Result = closure_9(closure_6, obj5);
-        tmp27[1] = tmp22Result;
-        let tmp22Result2 = closure_9(WideAuthScrollContext.WideAuthScrollContext.Provider, tmp27);
-        PX_24Result1 = utils_PlatformUtils;
+        obj9 = { paddingLeft: 20, paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16 };
+        tmp32[1] = closure_9(closure_6, obj5);
+        tmp27Result = closure_9(Provider, tmp32);
       } else {
         class O {
-          constructor(arg0) {
-            return arg0.height;
+          constructor(height) {
+            return height.height;
           }
         }
-        tmp23[0] = RegistrationStepsUtils;
-        ({ transparent: tmp23[1], transparent: tmp23[2] } = wideOuterContainer);
-        const intl = util.intl;
-        tmp23[3] = intl.string(util.t["13/7kX"]);
-        tmp23[4] = first;
-        tmp23[5] = closure_5.dismiss;
-        tmp23[6] = { borderBottomWidth: 0 };
-        tmp22Result2 = closure_9(Navigator.Navigator, tmp23);
+        tmp28[0] = RegistrationStepsUtils;
+        ({ transparent: tmp28[1], transparent: tmp28[2] } = tmp7);
+        const Navigator = Navigator3.Navigator;
+        const intl = intl2.intl;
+        tmp28[3] = intl.string(intl2.t["13/7kX"]);
+        tmp28[4] = first;
+        tmp28[5] = closure_5.dismiss;
+        tmp28[6] = { borderBottomWidth: 0 };
+        tmp27Result = closure_9(Navigator, tmp28);
       }
-      items1[1] = tmp22Result2;
-      const PX_24Result = KeyboardChatScrollView;
-      cResult[5] = wideHeaderFlat > 200;
-      cResult[6] = tmp7;
+      items1[1] = tmp27Result;
+      cResult[5] = keyboardState > 200;
+      cResult[6] = tmp10;
       cResult[7] = first;
-      cResult[8] = tmp12;
-      cResult[9] = tmp4;
-      cResult[10] = wideHeaderFlat;
-      cResult[11] = wideOuterContainer.cardContainer;
-      cResult[12] = wideOuterContainer.transparent;
-      cResult[13] = wideOuterContainer.wideCard;
-      ({ wideHeader: tmp[14], wideHeaderFlat } = wideOuterContainer);
-      cResult[15] = wideHeaderFlat;
-      wideOuterContainer = wideOuterContainer.wideOuterContainer;
-      cResult[16] = wideOuterContainer;
+      cResult[8] = tmp15;
+      cResult[9] = tmp6;
+      cResult[10] = keyboardState;
+      cResult[11] = tmp7.cardContainer;
+      cResult[12] = tmp7.transparent;
+      cResult[13] = tmp7.wideCard;
+      cResult[14] = tmp7.wideHeader;
+      cResult[15] = tmp7.wideHeaderFlat;
+      cResult[16] = tmp7.wideOuterContainer;
       cResult[17] = closure_11(closure_10, { children: items1 });
-      const tmp20Result = closure_11(closure_10, { children: items1 });
+      closure_11(closure_10, { children: items1 });
     }
   : () => {
+      let Navigator2;
+      let closure_1;
+      let intl;
+      let obj10;
+      let obj11;
+      let obj12;
+      let obj7;
+      let tmp18Result;
+      let tmp8;
+      let transparent;
       obj = useIsHCaptchaModalOpenTracking;
       const isHCaptchaModalOpenTracking = obj.useIsHCaptchaModalOpenTracking();
-      const tmp6 = closure_16();
-      const first = _slicedToArray(noop.useState(getInitialAuthRouteStack), 1)[0];
       const tmp5 = useWideAuthViewDefault();
-      [tmp8, require] = noop.useState(first[first.length - 1].name);
-      const effect = noop.useEffect(() => {
-        const result = RegistrationHandoff.clearRegistrationHandoff();
+      const tmp6 = closure_16();
+      const first = _slicedToArray(react.useState(getInitialAuthRouteStack), 1)[0];
+      [tmp8, require] = react.useState(first[first.length - 1].name);
+      _slicedToArray(react.useState(first[first.length - 1].name), 2);
+      const effect = react.useEffect(() => {
+        obj = RegistrationHandoff;
+        const result = obj.clearRegistrationHandoff();
       }, []);
-      const tmp10 = _slicedToArray(noop.useState(false), 2);
-      importDefault = tmp11;
-      const tmp7 = _slicedToArray(noop.useState(first[first.length - 1].name), 2);
-      const keyboardState = KeyboardChatScrollView.useKeyboardState((height) => height.height);
-      const callback = noop.useCallback((arg0) => {
+      const tmp10 = _slicedToArray(react.useState(false), 2);
+      importDefault = tmp12;
+      const first1 = tmp10[0];
+      const obj2 = KeyboardChatScrollView;
+      const keyboardState = obj2.useKeyboardState((height) => height.height);
+      const callback = react.useCallback((arg0) => {
         let name;
         if (arg0 != null) {
           if (arg0.routes[arg0.index] != null) {
@@ -367,33 +399,33 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         require(name);
         closure_1(false);
       }, []);
-      const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-      obj3.backgroundImageSource = _mod15918;
-      const children = [closure_9(BackgroundImageDefault, obj3)];
+      const obj3 = { backgroundImageSource: AssetRegistry, backgroundImageCover: true };
+      const tmp19 = BackgroundImageDefault;
+      const children = [closure_9(tmp19, obj3)];
       if (tmp5) {
-        const obj5 = { value: tmp11, children: null };
         const items1 = [tmp6.wideOuterContainer];
-        let tmp24 = null;
-        if (tmp13) {
-          const obj6 = { paddingBottom: keyboardState };
-          tmp24 = obj6;
-        }
-        const obj7 = { style: null, children: null };
-        items1[1] = tmp24;
-        obj7.style = items1;
-        const items2 = [tmp6.wideCard, ,];
         let tmp25 = null;
+        const obj5 = { value: tmp10[1], children: closure_9(closure_6, obj7) };
+        const Provider = react3.WideAuthScrollContext.Provider;
+        if (keyboardState > 200) {
+          tmp25 = { paddingBottom: keyboardState };
+          const obj6 = { paddingBottom: keyboardState };
+        }
+        items1[1] = tmp25;
+        const items2 = [tmp6.wideCard, ,];
+        let tmp26 = null;
+        obj7 = { style: items1, children: closure_9(closure_6, obj10) };
         if (null != tmp8) {
           let num = obj[tmp8];
           if (num == null) {
             num = 520;
           }
+          tmp26 = { height: num };
           const obj8 = { height: num };
-          tmp25 = obj8;
         }
-        items2[1] = tmp25;
+        items2[1] = tmp26;
         let obj9 = null;
-        if (tmp13) {
+        if (keyboardState > 200) {
           obj9 = {
             maxHeight: "100%",
             height: "100%",
@@ -402,84 +434,79 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             borderBottomRightRadius: 0,
           };
         }
-        const obj10 = { style: null, children: null };
         items2[2] = obj9;
-        obj10.style = items2;
-        const obj11 = {
+        obj10 = { style: items2, children: closure_9(Navigator2, obj11) };
+        obj11 = {
           screens,
           containerStyle: tmp6.cardContainer,
-          viewStyle: null,
+          viewStyle: transparent,
           headerStatusBarHeight: 0,
           cardOverlayEnabled: false,
           cardShadowEnabled: false,
-          initialRouteStack: null,
-          onWillFocus: null,
-          onStateChange: null,
-          headerStyle: null,
-          headerLeftContainerStyle: null,
+          initialRouteStack: first,
+          onWillFocus: closure_5.dismiss,
+          onStateChange: callback,
+          headerStyle: first1 ? tmp6.wideHeader : tmp6.wideHeaderFlat,
+          headerLeftContainerStyle: obj12,
           disableHeaderAnimation: true,
         };
-        let transparent = null;
+        transparent = null;
+        Navigator2 = Navigator3.Navigator;
         if (tmp8 === AuthStates.WELCOME) {
           transparent = tmp6.transparent;
         }
-        obj11.viewStyle = transparent;
-        obj11.initialRouteStack = first;
-        obj11.onWillFocus = closure_5.dismiss;
-        obj11.onStateChange = callback;
-        obj11.headerStyle = tmp10[0] ? tmp6.wideHeader : tmp6.wideHeaderFlat;
         let num2 = 20;
+        const tmpResult = utils_PlatformUtils;
         if (tmpResult.isAndroid()) {
           num2 = tmp4(587).space.PX_12;
         }
-        const obj12 = { paddingLeft: num2, paddingTop: tmp4(587).space.PX_24, paddingBottom: tmp4(587).space.PX_16 };
-        obj11.headerLeftContainerStyle = obj12;
-        obj10.children = closure_9(Navigator.Navigator, obj11);
-        obj7.children = closure_9(closure_6, obj10);
-        obj5.children = closure_9(closure_6, obj7);
-        let tmp17Result = closure_9(WideAuthScrollContext.WideAuthScrollContext.Provider, obj5);
-        tmpResult = utils_PlatformUtils;
+        obj12 = { paddingLeft: num2, paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16 };
+        tmp18Result = closure_9(Provider, obj5);
       } else {
+        ({ transparent: obj4.viewStyle, transparent: obj4.containerStyle } = tmp6);
         const obj13 = {
           screens: RegistrationStepsUtils,
           viewStyle: null,
           containerStyle: null,
-          headerBackTitle: null,
-          initialRouteStack: null,
-          onWillFocus: null,
-          headerStyle: null,
+          headerBackTitle: intl.string(intl2.t["13/7kX"]),
+          initialRouteStack: first,
+          onWillFocus: closure_5.dismiss,
+          headerStyle: { borderBottomWidth: 0 },
         };
-        ({ transparent: obj4.viewStyle, transparent: obj4.containerStyle } = tmp6);
-        const intl = util.intl;
-        obj13.headerBackTitle = intl.string(util.t["13/7kX"]);
-        obj13.initialRouteStack = first;
-        obj13.onWillFocus = closure_5.dismiss;
-        obj13.headerStyle = { borderBottomWidth: 0 };
-        tmp17Result = closure_9(Navigator.Navigator, obj13);
+        const Navigator = Navigator3.Navigator;
+        intl = intl2.intl;
+        tmp18Result = closure_9(Navigator, obj13);
       }
-      children[1] = tmp17Result;
+      children[1] = tmp18Result;
       return closure_11(closure_10, { children });
     };
-const context = noop.createContext(() => {});
-let obj6 = {
-  borderBottomWidth: StyleSheet.hairlineWidth,
-  borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-};
-size = fn(2);
+const context = react.createContext(() => {});
+const memoResult = react.memo(function Auth() {
+  const effect = react.useEffect(() => {
+    obj = AuthManagerDefault;
+    obj.initialize();
+    return () => {
+      obj = closure_1_1(closure_1_2[25]);
+      return obj.terminate();
+    };
+  }, []);
+  const layoutEffect = react.useLayoutEffect(() => {
+    obj = closure_0(dependencyMap[26]);
+    return obj.trackAppUIViewed();
+  }, []);
+  useOrientationLockDefault();
+  let closure_0 = react.useRef(undefined);
+  obj = {
+    value: react.useCallback(() => {
+      obj = RegistrationUtils;
+      return obj.getTrackRegTransition(closure_0);
+    }, [])(),
+    children: closure_9(closure_17, {}),
+  };
+  return closure_9(context.Provider, obj);
+});
+size = size_mod;
 let result = size.fileFinishedImporting("modules/auth/native/components/Auth.tsx");
 
-export default noop.memo(function Auth() {
-  const effect = noop.useEffect(() => {
-    AuthManagerDefault.initialize();
-    return () => closure_1_1(dependencyMap[25]).terminate();
-  }, []);
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(6984).trackAppUIViewed(), []);
-  useOrientationLockDefault();
-  closure_0 = noop.useRef(undefined);
-  return closure_9(context.Provider, {
-    value: noop.useCallback(() => RegistrationUtils.getTrackRegTransition(closure_0), [])(),
-    children: closure_9(closure_17, {}),
-  });
-});
+export default memoResult;
 export const TrackRegistrationContext = context;

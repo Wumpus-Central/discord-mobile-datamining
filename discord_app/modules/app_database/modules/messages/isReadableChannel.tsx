@@ -5,6 +5,8 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 import Constants from "../../../../Constants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+let BasicPermissions;
+let c3;
 const isTextChannel = ChannelRecord.isTextChannel;
 ({ ChannelTypes: c3, BasicPermissions } = Constants);
 let closure_4 = BasicPermissions.VIEW_CHANNEL | BasicPermissions.READ_MESSAGE_HISTORY;
@@ -15,11 +17,9 @@ export const isReadableChannel = function isReadableChannel(basicChannel) {
   if (tmp) {
     let tmp3 = basicChannel.type === constants.DM || basicChannel.type === tmp2.GROUP_DM;
     if (!tmp3) {
-      let canBasicChannelResult = isTextChannel(basicChannel.type);
-      if (canBasicChannelResult) {
-        canBasicChannelResult = PermissionStore.canBasicChannel(closure_4, basicChannel);
-      }
-      tmp3 = canBasicChannelResult;
+      tmp3 = isTextChannel(basicChannel.type) && PermissionStore.canBasicChannel(closure_4, basicChannel);
+      const canBasicChannelResult =
+        isTextChannel(basicChannel.type) && PermissionStore.canBasicChannel(closure_4, basicChannel);
     }
     tmp = tmp3;
   }
@@ -33,11 +33,9 @@ export const isReadableChannelId = function isReadableChannelId(channelId) {
     if (tmp4) {
       let tmp6 = basicChannel.type === constants.DM || basicChannel.type === tmp5.GROUP_DM;
       if (!tmp6) {
-        let canBasicChannelResult = isTextChannel(basicChannel.type);
-        if (canBasicChannelResult) {
-          canBasicChannelResult = PermissionStore.canBasicChannel(closure_4, basicChannel);
-        }
-        tmp6 = canBasicChannelResult;
+        tmp6 = isTextChannel(basicChannel.type) && PermissionStore.canBasicChannel(closure_4, basicChannel);
+        const canBasicChannelResult =
+          isTextChannel(basicChannel.type) && PermissionStore.canBasicChannel(closure_4, basicChannel);
       }
       tmp4 = tmp6;
     }

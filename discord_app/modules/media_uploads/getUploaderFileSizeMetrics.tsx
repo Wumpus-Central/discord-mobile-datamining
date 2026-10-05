@@ -18,6 +18,7 @@ export const getUploaderChannelId = function getUploaderChannelId(file) {
   return channelId;
 };
 export const getUploaderFileSizeMetrics = function getUploaderFileSizeMetrics(totalPreCompressionSize) {
+  const f98679 = (acc, item) => acc + item;
   let items = totalPreCompressionSize.items;
   if (items == null) {
     items = [];
@@ -33,24 +34,24 @@ export const getUploaderFileSizeMetrics = function getUploaderFileSizeMetrics(to
   const obj = {
     preCompressionFileSizes: mapped,
     postCompressionFileSizes: mapped1,
-    preCompressionAggregateSize: null,
+    preCompressionAggregateSize: totalPreCompressionSize,
     postCompressionAggregateSize: null,
     numAttachments: null,
   };
   if (totalPreCompressionSize.totalPreCompressionSize > 0) {
     totalPreCompressionSize = totalPreCompressionSize.totalPreCompressionSize;
   } else {
-    totalPreCompressionSize = mapped.reduce((acc, item) => acc + item, 0);
+    totalPreCompressionSize = mapped.reduce(f98679, 0);
   }
-  obj.preCompressionAggregateSize = totalPreCompressionSize;
   if (null != totalPreCompressionSize.totalPostCompressionSize) {
+    let totalPostCompressionSize;
     if (totalPreCompressionSize.totalPostCompressionSize > 0) {
-      let totalPostCompressionSize = totalPreCompressionSize.totalPostCompressionSize;
+      totalPostCompressionSize = totalPreCompressionSize.totalPostCompressionSize;
     }
     obj.postCompressionAggregateSize = totalPostCompressionSize;
     obj.numAttachments =
       totalPreCompressionSize.attachmentsCount > 0 ? totalPreCompressionSize.attachmentsCount : items.length;
     return obj;
   }
-  totalPostCompressionSize = mapped1.reduce((acc, item) => acc + item, 0);
+  totalPostCompressionSize = mapped1.reduce(f98679, 0);
 };

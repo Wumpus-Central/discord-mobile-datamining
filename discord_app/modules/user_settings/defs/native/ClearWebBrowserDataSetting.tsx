@@ -1,32 +1,50 @@
 // discord_app/modules/user_settings/defs/native/ClearWebBrowserDataSetting.tsx
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl4 from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import BrowserManager from "../../../links/native/BrowserManager.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const SettingBuilders = fn(11129);
-const pressable = SettingBuilders.createPressable({
+const require = globalThis.__r;
+let _require, c2;
+
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.HNqvOh);
+    const intl = intl4.intl;
+    return intl.string(intl4.t.HNqvOh);
   },
-  parent: fn(7634).MobileUserSettings.WEB_BROWSER,
+  parent: MobileUserSettings.WEB_BROWSER,
   variant: "danger",
   onPress: function showClearWebBrowserDataAlert() {
-    const obj2 = { key: "clear-web-browser-data", title: null, content: null, confirmText: null, onConfirm: null };
-    let intl = require("util").intl;
-    obj2.title = intl.string(require("util").t.HNqvOh);
-    const intl2 = require("util").intl;
-    obj2.content = intl2.string(require("util").t.IyXIFu);
-    const intl3 = require("util").intl;
-    obj2.confirmText = intl3.string(require("util").t.HNqvOh);
-    _require = asyncGeneratorStep(async () => {
-      if (dependencyMap === 2) {
-        dependencyMap = 3;
+    let closure_0;
+    let intl;
+    let intl2;
+    let intl3;
+    let obj = {
+      key: "clear-web-browser-data",
+      title: intl.string(require("intl").t.HNqvOh),
+      content: intl2.string(require("intl").t.IyXIFu),
+      confirmText: intl3.string(require("intl").t.HNqvOh),
+      onConfirm: function () {
+        return closure_0(...arguments);
+      },
+    };
+    const showConfirmModal = require("AlertModal").showConfirmModal;
+    require("AlertModal");
+    intl = require("intl").intl;
+    intl2 = require("intl").intl;
+    intl3 = require("intl").intl;
+    _require = _asyncToGenerator(async () => {
+      let intl;
+      let v1;
+      if (c2 === 2) {
+        c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp2 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -37,60 +55,55 @@ const pressable = SettingBuilders.createPressable({
         }
       } else {
         try {
-          dependencyMap = 2;
+          c2 = 2;
           if (0 === v1) {
             if (arg0 === 1) {
-              dependencyMap = 3;
+              c2 = 3;
               throw value;
             } else if (arg0 === 2) {
-              dependencyMap = 3;
+              c2 = 3;
               const obj4 = { value, done: true };
               return obj4;
             } else {
               v1 = 1;
-              dependencyMap = 1;
-              const obj5 = { value: tmp4(4851).browserManagerClearWebsiteData(), done: false };
+              const obj2 = tmp3(c2[4]);
+              c2 = 1;
+              const obj5 = { value: obj2.browserManagerClearWebsiteData(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
-            dependencyMap = 3;
+            c2 = 3;
             throw value;
           } else if (arg0 === 2) {
-            dependencyMap = 3;
+            c2 = 3;
             const obj = { value, done: true };
             return obj;
           } else {
-            const obj7 = { key: "web-browser-data-cleared", content: null };
-            const intl = tmp4(1126).intl;
-            obj7.content = intl.string(tmp4(1126).t["zaEQz+"]);
-            v1(4568).open(obj7);
-            dependencyMap = 3;
+            const obj6 = { key: "web-browser-data-cleared", content: intl.string(tmp3(c2[3]).t["zaEQz+"]) };
+            const open = v1(c2[5]).open;
+            const tmp13 = v1(c2[5]);
+            intl = tmp3(c2[3]).intl;
+            open(obj6);
+            c2 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp7) {
-          dependencyMap = tmp;
-          throw tmp7;
+        } catch (tmp6) {
+          c2 = 3;
+          throw tmp6;
         }
       }
     });
-    obj2.onConfirm = function () {
-      const self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    };
-    require("AlertModal").showConfirmModal(obj2);
+    showConfirmModal(obj);
   },
   usePredicate() {
-    const browserManagerSelectedBrowser = BrowserManager.useBrowserManagerSelectedBrowser();
-    return PlatformUtils.isIOS() && browserManagerSelectedBrowser === ConstantsIOS.WebBrowserType.IN_APP;
+    const obj = BrowserManager;
+    const browserManagerSelectedBrowser = obj.useBrowserManagerSelectedBrowser();
+    const obj2 = PlatformUtils;
+    const tmp4 = obj2.isIOS() && browserManagerSelectedBrowser === ConstantsIOS.WebBrowserType.IN_APP;
+    return tmp4;
   },
-});
-const size = fn(2);
+};
+const pressable = SettingBuilders.createPressable(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ClearWebBrowserDataSetting.tsx");
 
 export default pressable;

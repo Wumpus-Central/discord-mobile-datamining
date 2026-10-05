@@ -1,31 +1,38 @@
 // discord_app/modules/forums/native/posts/ForumPostTitle.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import PlatformUtils from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-const PlatformUtils = fn(1370);
-let obj3 = null;
+let obj3;
+const jsx = Fragment.jsx;
+let createStyles = createStyles_mod;
+createStyles = createStyles.createStyles;
+let obj = null;
 if (PlatformUtils.isIOS()) {
-  obj3 = { lineHeight: 22 };
+  obj = { lineHeight: 22 };
 }
-const obj4 = { title: null };
-const merged = Object.assign(obj3);
-obj4.title = { marginBottom: 6 };
-let closure_3 = createStyles.createStyles(obj4);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostTitle.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const obj2 = { title: obj3 };
+obj3 = { marginBottom: 6 };
+const merged = Object.assign(obj);
+let closure_3 = createStyles(obj2);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (hasUnreads) => {
-      const cResult = c.c(7);
+      let ellipsizeMode;
+      let lineClamp;
+      let onTextLayout;
+      let title;
+      const obj = react2;
+      const cResult = obj.c(7);
       ({ title, lineClamp, ellipsizeMode, onTextLayout } = hasUnreads);
+      hasUnreads = hasUnreads.hasUnreads;
       const tmp4 = closure_3();
       let str = "text-muted";
-      if (hasUnreads.hasUnreads) {
+      if (hasUnreads) {
         str = "mobile-text-heading-primary";
       }
       if (cResult[0] === str) {
@@ -33,8 +40,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[2] === lineClamp) {
             if (cResult[3] === onTextLayout) {
               if (cResult[4] === tmp4.title) {
+                let tmp5;
                 if (cResult[5] === title) {
-                  let tmp5 = cResult[6];
+                  tmp5 = cResult[6];
                 }
                 return tmp5;
               }
@@ -59,30 +67,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = title;
       cResult[6] = tmp6;
       tmp5 = tmp6;
-      const obj2 = {
-        variant: "text-md/semibold",
-        color: str,
-        lineClamp,
-        ellipsizeMode,
-        style: tmp4.title,
-        onTextLayout,
-        children: title,
-      };
     }
   : (arg0) => {
+      let ellipsizeMode;
+      let hasUnreads;
+      let lineClamp;
+      let onTextLayout;
+      let title;
       ({ title, lineClamp, ellipsizeMode, hasUnreads, onTextLayout } = arg0);
       let str = "text-muted";
+      const tmp = closure_3();
       if (hasUnreads) {
         str = "mobile-text-heading-primary";
       }
-      const tmp = closure_3();
       return jsx(Text_Text.Text, {
         variant: "text-md/semibold",
         color: str,
         lineClamp,
         ellipsizeMode,
-        style: closure_3().title,
+        style: tmp.title,
         onTextLayout,
         children: title,
       });
     };
+const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostTitle.tsx");
+
+export default tmp5;

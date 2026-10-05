@@ -1,19 +1,23 @@
 // discord_app/modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx
-import noop from "../../../../_runtime/metro/00019__.js";
+import UserApplicationIdentityConstants from "../UserApplicationIdentityConstants.tsx";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, closure_0;
 
-const require = fn;
-let closure_3 = fn(2013).APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_3 = UserApplicationIdentityConstants.APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      const cResult = require("c").c(12);
+      let arr;
+      let data;
+      let isLoading;
+      let tmp4;
+      let tmp9;
+      const obj = require("react");
+      const cResult = obj.c(12);
+      const tmp = _require;
       if (cResult[0] !== arg1) {
         let obj2 = arg1;
         if (undefined === arg1) {
@@ -21,16 +25,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[0] = arg1;
         cResult[1] = obj2;
-        let tmp4 = obj2;
+        tmp4 = obj2;
       } else {
         tmp4 = cResult[1];
       }
       const includeHidden = tmp4.includeHidden;
       _require = tmp5;
-      const obj = require("c");
-      const userApplicationIdentities = require("UserApplicationIdentityActionCreators").useUserApplicationIdentities(
-        arg0,
-      );
+      const tmpResult = tmp(8692);
+      const userApplicationIdentities = tmpResult.useUserApplicationIdentities(arg0);
       ({ isLoading, data } = userApplicationIdentities);
       if (cResult[2] !== data) {
         let items = data;
@@ -39,51 +41,48 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[2] = data;
         cResult[3] = items;
-        let arr = items;
+        arr = items;
       } else {
         arr = cResult[3];
       }
       if (cResult[4] === (undefined !== includeHidden && includeHidden)) {
+        let tmp8;
         if (cResult[5] === arr) {
-          if (cResult[9] === cResult[6]) {
-            if (cResult[10] === isLoading) {
-              let tmp11 = cResult[11];
-            }
-            return tmp11;
-          }
-          const obj3 = { isLoading, filteredAppIdentities: cResult[6] };
-          cResult[9] = cResult[6];
-          cResult[10] = isLoading;
-          cResult[11] = obj3;
-          tmp11 = obj3;
+          tmp8 = cResult[6];
         }
+        if (cResult[9] === tmp8) {
+          let tmp11;
+          if (cResult[10] === isLoading) {
+            tmp11 = cResult[11];
+          }
+          return tmp11;
+        }
+        const obj3 = { isLoading, filteredAppIdentities: tmp8 };
+        cResult[9] = tmp8;
+        cResult[10] = isLoading;
+        cResult[11] = obj3;
+        tmp11 = obj3;
       }
       if (cResult[7] !== (undefined !== includeHidden && includeHidden)) {
         const fn = function c(profile) {
-          let someResult = closure_3.some((applicationId) => {
-            let migrationExperimentEnabled = applicationId.applicationId === profile.application_id;
-            if (migrationExperimentEnabled) {
-              migrationExperimentEnabled = applicationId.getMigrationExperimentEnabled(
-                "useConnectionFilteredAppIdentities",
-              );
-            }
-            return migrationExperimentEnabled;
-          });
+          closure_0 = profile;
+          let someResult =
+            closure_3.some((applicationId) => {
+              const migrationExperimentEnabled =
+                applicationId.applicationId === application_id.application_id &&
+                applicationId.getMigrationExperimentEnabled("useConnectionFilteredAppIdentities");
+              return migrationExperimentEnabled;
+            }) &&
+            null != profile.profile &&
+            null != profile.profile.username;
           if (someResult) {
-            someResult = null != profile.profile;
-          }
-          if (someResult) {
-            someResult = null != profile.profile.username;
-          }
-          if (someResult) {
-            someResult = true === profile.profile.connection_visible || profile;
-            const tmp4 = true === profile.profile.connection_visible || profile;
+            someResult = true === profile.profile.connection_visible || closure_0;
           }
           return someResult;
         };
-        cResult[7] = tmp5;
+        cResult[7] = undefined !== includeHidden && includeHidden;
         cResult[8] = fn;
-        let tmp9 = fn;
+        tmp9 = fn;
       } else {
         tmp9 = cResult[8];
       }
@@ -91,9 +90,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = undefined !== includeHidden && includeHidden;
       cResult[5] = arr;
       cResult[6] = found;
-      const tmpResult = require("UserApplicationIdentityActionCreators");
+      tmp8 = found;
     }
   : (arg0) => {
+      let items;
       let obj = arg1;
       if (arg1 === undefined) {
         obj = {};
@@ -101,39 +101,39 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let data;
       const includeHidden = obj.includeHidden;
       _require = tmp;
-      const userApplicationIdentities = require("UserApplicationIdentityActionCreators").useUserApplicationIdentities(
-        arg0,
-      );
+      const obj2 = require("UserApplicationIdentityActionCreators");
+      const userApplicationIdentities = obj2.useUserApplicationIdentities(arg0);
       data = userApplicationIdentities.data;
-      const obj3 = { isLoading: userApplicationIdentities.isLoading, filteredAppIdentities: null };
-      let items = [data, undefined !== includeHidden && includeHidden];
-      obj3.filteredAppIdentities = noop.useMemo(() => {
-        let items = data;
-        if (data == null) {
-          items = [];
-        }
-        return items.filter((profile) => {
-          let someResult = closure_2_3.some((applicationId) => {
-            let migrationExperimentEnabled = applicationId.applicationId === profile.application_id;
-            if (migrationExperimentEnabled) {
-              migrationExperimentEnabled = applicationId.getMigrationExperimentEnabled(
-                "useConnectionFilteredAppIdentities",
-              );
+      const obj3 = {
+        isLoading: userApplicationIdentities.isLoading,
+        filteredAppIdentities: react.useMemo(() => {
+          let items = data;
+          if (data == null) {
+            items = [];
+          }
+          return items.filter((profile) => {
+            closure_0 = profile;
+            let someResult =
+              closure_2_3.some((applicationId) => {
+                const migrationExperimentEnabled =
+                  applicationId.applicationId === application_id.application_id &&
+                  applicationId.getMigrationExperimentEnabled("useConnectionFilteredAppIdentities");
+                return migrationExperimentEnabled;
+              }) &&
+              null != profile.profile &&
+              null != profile.profile.username;
+            if (someResult) {
+              someResult = true === profile.profile.connection_visible || closure_1_0;
             }
-            return migrationExperimentEnabled;
+            return someResult;
           });
-          if (someResult) {
-            someResult = null != profile.profile;
-          }
-          if (someResult) {
-            someResult = null != profile.profile.username;
-          }
-          if (someResult) {
-            someResult = true === profile.profile.connection_visible || closure_1_0;
-            const tmp4 = true === profile.profile.connection_visible || closure_1_0;
-          }
-          return someResult;
-        });
-      }, items);
+        }, items),
+      };
+      items = [data, undefined !== includeHidden && includeHidden];
       return obj3;
     };
+const result = size.fileFinishedImporting(
+  "modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx",
+);
+
+export default tmp2;

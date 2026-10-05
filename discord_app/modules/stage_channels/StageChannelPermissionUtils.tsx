@@ -1,6 +1,7 @@
 // discord_app/modules/stage_channels/StageChannelPermissionUtils.tsx
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import StageChannelPermissions from "StageChannelPermissions.tsx";
+import GuildRecord from "../../records/GuildRecord.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import LurkingStore from "../lurker_mode/LurkingStore.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -8,23 +9,31 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import StageInstanceStore from "StageInstanceStore.tsx";
+import Constants from "../../Constants.tsx";
+import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, tmp10, tmp6;
 
-require = fn;
-const isGuildOwner = fn(2070).isGuildOwner;
-const Constants = fn(1085);
-({ GuildFeatures: c10, Permissions: closure_11 } = Constants);
-fn(558);
-let ReactCompilerGating = fn(558);
+let c10;
+let unpackModuleId;
+const isGuildOwner = GuildRecord.isGuildOwner;
+({ GuildFeatures: c10, Permissions: unpackModuleId } = Constants);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp9;
       _require = arg0;
-      const cResult = require("c").c(4);
+      const obj = require("react");
+      const cResult = obj.c(4);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PermissionStore, AuthenticationStore, GuildStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -58,7 +67,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = E;
         cResult[3] = items1;
-        let tmp9 = items1;
+        tmp9 = items1;
       } else {
         class E {
           constructor() {
@@ -87,28 +96,31 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp9 = cResult[3];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, E, tmp9);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, E, tmp9);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       const items = [PermissionStore, AuthenticationStore, GuildStore];
       const items1 = [arg0];
-      return require("initialize").useStateFromStores(
+      const obj = require("get initialized");
+      return obj.useStateFromStores(
         items,
         () => {
           const id = AuthenticationStore.getId();
-          guild = GuildStore.getGuild(closure_0);
+          const guild = GuildStore.getGuild(closure_0);
           let tmp3 = null != guild;
           if (tmp3) {
             const features = guild.features;
             let hasItem = features.has(constants.COMMUNITY);
             if (hasItem) {
-              let canResult = isGuildOwner(guild, id);
-              if (!canResult) {
-                canResult = PermissionStore.can(StageChannelPermissions.CREATE_STAGE_CHANNEL_PERMISSIONS, guild);
-              }
-              hasItem = canResult;
+              hasItem =
+                isGuildOwner(guild, id) ||
+                PermissionStore.can(StageChannelPermissions.CREATE_STAGE_CHANNEL_PERMISSIONS, guild);
+              const canResult =
+                isGuildOwner(guild, id) ||
+                PermissionStore.can(StageChannelPermissions.CREATE_STAGE_CHANNEL_PERMISSIONS, guild);
             }
             tmp3 = hasItem;
           }
@@ -117,15 +129,21 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp8;
+      let tmp9;
       _require = arg0;
-      const cResult = require("c").c(4);
+      const obj = require("react");
+      const cResult = obj.c(4);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PermissionStore, GuildStore, ChannelStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -133,13 +151,14 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const fn = function o() {
           const channel = ChannelStore.getChannel(closure_0);
           let guildId;
+          const getGuild = GuildStore.getGuild;
           if (channel != null) {
             guildId = channel.getGuildId();
           }
-          const canResult = PermissionStore.can(constants2.ADMINISTRATOR, GuildStore.getGuild(guildId));
-          let tmp5 = !canResult;
-          if (!canResult) {
-            tmp5 = !PermissionStore.can(constants2.MANAGE_ROLES, channel, undefined, undefined, true);
+          let tmp5 = !PermissionStore.can(unpackModuleId.ADMINISTRATOR, getGuild(guildId));
+          PermissionStore.can(unpackModuleId.ADMINISTRATOR, getGuild(guildId));
+          if (tmp5) {
+            tmp5 = !PermissionStore.can(unpackModuleId.MANAGE_ROLES, channel, undefined, undefined, true);
           }
           let canResult1 = !tmp5;
           if (tmp5) {
@@ -154,31 +173,34 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp9 = items1;
-        let tmp8 = fn;
+        tmp9 = items1;
+        tmp8 = fn;
       } else {
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp8, tmp9);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp8, tmp9);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       const items = [PermissionStore, GuildStore, ChannelStore];
       const items1 = [arg0];
-      return require("initialize").useStateFromStores(
+      const obj = require("get initialized");
+      return obj.useStateFromStores(
         items,
         () => {
           const channel = ChannelStore.getChannel(closure_0);
           let guildId;
+          const getGuild = GuildStore.getGuild;
           if (channel != null) {
             guildId = channel.getGuildId();
           }
-          const canResult = PermissionStore.can(constants2.ADMINISTRATOR, GuildStore.getGuild(guildId));
-          let tmp5 = !canResult;
-          if (!canResult) {
-            tmp5 = !PermissionStore.can(constants2.MANAGE_ROLES, channel, undefined, undefined, true);
+          let tmp5 = !PermissionStore.can(unpackModuleId.ADMINISTRATOR, getGuild(guildId));
+          PermissionStore.can(unpackModuleId.ADMINISTRATOR, getGuild(guildId));
+          if (tmp5) {
+            tmp5 = !PermissionStore.can(unpackModuleId.MANAGE_ROLES, channel, undefined, undefined, true);
           }
           let canResult1 = !tmp5;
           if (tmp5) {
@@ -192,148 +214,190 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp7;
+      let tmp8;
+      _require = arg0;
+      const tmp = _require;
+      const obj = require("react");
+      const cResult = obj.c(4);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [ChannelStore, PermissionStore];
+        cResult[0] = items;
+        first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== arg0) {
+        const fn = function o() {
+          const canResult =
+            null != closure_0 && PermissionStore.can(unpackModuleId.MUTE_MEMBERS, ChannelStore.getChannel(tmp));
+          return canResult;
+        };
+        const items1 = [arg0];
+        cResult[1] = arg0;
+        cResult[2] = fn;
+        cResult[3] = items1;
+        tmp8 = items1;
+        tmp7 = fn;
+      } else {
+        tmp7 = cResult[2];
+        tmp8 = cResult[3];
+      }
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp7, tmp8);
+    }
+  : (arg0) => {
+      let closure_0;
+      _require = arg0;
+      const items = [ChannelStore, PermissionStore];
+      const items1 = [arg0];
+      const obj = require("get initialized");
+      return obj.useStateFromStores(
+        items,
+        () => {
+          const canResult =
+            null != closure_0 && PermissionStore.can(unpackModuleId.MUTE_MEMBERS, ChannelStore.getChannel(tmp));
+          return canResult;
+        },
+        items1,
+      );
+    };
 function createOrUpdateModeratorOverwrite(id, type, deny) {
-  const obj = { id, type, deny: null, allow: null };
+  let MODERATE_STAGE_CHANNEL_PERMISSIONS;
+  let allow;
+  let combine;
+  let remove;
+  const obj = {
+    id,
+    type,
+    deny: remove(deny, StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS),
+    allow: combine(MODERATE_STAGE_CHANNEL_PERMISSIONS, allow),
+  };
   deny = undefined;
+  remove = BigFlagUtilsAll.remove;
+  BigFlagUtilsAll;
   if (deny != null) {
     deny = deny.deny;
   }
   if (deny == null) {
     deny = PermissionUtilsAll.NONE;
   }
-  obj.deny = BigFlagUtilsAll.remove(deny, StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
-  let allow;
+  combine = BigFlagUtilsAll.combine;
+  allow = undefined;
+  BigFlagUtilsAll;
+  MODERATE_STAGE_CHANNEL_PERMISSIONS = StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS;
   if (deny != null) {
     allow = deny.allow;
   }
   if (allow == null) {
     allow = PermissionUtilsAll.NONE;
   }
-  obj.allow = BigFlagUtilsAll.combine(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
   return obj;
 }
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelPermissionUtils.tsx");
 
 export const createModeratorOverwrite = function createModeratorOverwrite(id, MEMBER, arg2) {
+  let MODERATE_STAGE_CHANNEL_PERMISSIONS;
+  let allow;
+  let combine;
+  let deny;
+  let remove;
   let tmp;
   if (arg2 != null) {
     tmp = arg2.permissionOverwrites[id];
   }
-  const obj = { id, type: MEMBER, deny: null, allow: null };
-  let deny;
+  const obj = {
+    id,
+    type: MEMBER,
+    deny: remove(deny, StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS),
+    allow: combine(MODERATE_STAGE_CHANNEL_PERMISSIONS, allow),
+  };
+  deny = undefined;
+  remove = BigFlagUtilsAll.remove;
+  BigFlagUtilsAll;
   if (tmp != null) {
     deny = tmp.deny;
   }
   if (deny == null) {
     deny = PermissionUtilsAll.NONE;
   }
-  obj.deny = BigFlagUtilsAll.remove(deny, StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
-  let allow;
+  combine = BigFlagUtilsAll.combine;
+  allow = undefined;
+  BigFlagUtilsAll;
+  MODERATE_STAGE_CHANNEL_PERMISSIONS = StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS;
   if (tmp != null) {
     allow = tmp.allow;
   }
   if (allow == null) {
     allow = PermissionUtilsAll.NONE;
   }
-  obj.allow = BigFlagUtilsAll.combine(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
   return obj;
 };
 export { createOrUpdateModeratorOverwrite };
-export const removeModeratorOverwrite = function removeModeratorOverwrite(id, MEMBER, name) {
-  let tmp;
-  if (name != null) {
-    tmp = name.permissionOverwrites[id];
-  }
-  const obj = { id, type: MEMBER, deny: null, allow: null };
+export const removeModeratorOverwrite = function removeModeratorOverwrite(id, MEMBER, id2) {
+  let allow;
   let deny;
+  let remove;
+  let tmp;
+  if (id != null) {
+    tmp = id.permissionOverwrites[id];
+  }
+  const obj = {
+    id,
+    type: MEMBER,
+    deny,
+    allow: remove(allow, StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS),
+  };
+  deny = undefined;
   if (tmp != null) {
     deny = tmp.deny;
   }
   if (deny == null) {
     deny = PermissionUtilsAll.NONE;
   }
-  obj.deny = deny;
-  let allow;
+  allow = undefined;
+  remove = BigFlagUtilsAll.remove;
+  BigFlagUtilsAll;
   if (tmp != null) {
     allow = tmp.allow;
   }
   if (allow == null) {
     allow = PermissionUtilsAll.NONE;
   }
-  obj.allow = BigFlagUtilsAll.remove(allow, StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
   return obj;
 };
 export const isEmptyOverwrite = function isEmptyOverwrite(id) {
+  let allow;
+  let deny;
   ({ allow, deny } = id);
-  let equalsResult = BigFlagUtilsAll.equals(allow, PermissionUtilsAll.NONE);
+  const obj = BigFlagUtilsAll;
+  let equalsResult = obj.equals(allow, PermissionUtilsAll.NONE);
   if (equalsResult) {
-    equalsResult = BigFlagUtilsAll.equals(deny, PermissionUtilsAll.NONE);
     const tmpResult = BigFlagUtilsAll;
+    equalsResult = tmpResult.equals(deny, PermissionUtilsAll.NONE);
   }
   return equalsResult;
 };
 export const useCanCreateStageChannelByGuild = tmp3;
 export const useCanUpdateStageChannelModerators = tmp4;
-export const useCanModerateRequestToSpeak = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      _require = arg0;
-      const cResult = require("c").c(4);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ChannelStore, PermissionStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== arg0) {
-        const fn = function o() {
-          let canResult = null != closure_0;
-          if (canResult) {
-            canResult = PermissionStore.can(constants2.MUTE_MEMBERS, ChannelStore.getChannel(tmp));
-          }
-          return canResult;
-        };
-        const items1 = [arg0];
-        cResult[1] = arg0;
-        cResult[2] = fn;
-        cResult[3] = items1;
-        let tmp8 = items1;
-        let tmp7 = fn;
-      } else {
-        tmp7 = cResult[2];
-        tmp8 = cResult[3];
-      }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp7, tmp8);
-    }
-  : (arg0) => {
-      _require = arg0;
-      const items = [ChannelStore, PermissionStore];
-      const items1 = [arg0];
-      return require("initialize").useStateFromStores(
-        items,
-        () => {
-          let canResult = null != closure_0;
-          if (canResult) {
-            canResult = PermissionStore.can(constants2.MUTE_MEMBERS, ChannelStore.getChannel(tmp));
-          }
-          return canResult;
-        },
-        items1,
-      );
-    };
+export const useCanModerateRequestToSpeak = tmp5;
 export const canLurkerListen = function canLurkerListen(channel) {
-  const tmp = null == channel || !channel.isGuildStageVoice();
-  let tmp2 = !tmp;
-  if (!tmp) {
+  let tmp2 = !(null == channel || !channel.isGuildStageVoice());
+  null == channel || !channel.isGuildStageVoice();
+  if (tmp2) {
     let isLurkingResult = LurkingStore.isLurking(channel.guild_id);
     if (isLurkingResult) {
-      let canResult = StageInstanceStore.isPublic(channel.id);
-      if (canResult) {
-        canResult = PermissionStore.can(StageChannelPermissions.JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
-      }
-      isLurkingResult = canResult;
+      isLurkingResult =
+        StageInstanceStore.isPublic(channel.id) &&
+        PermissionStore.can(StageChannelPermissions.JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
+      const canResult =
+        StageInstanceStore.isPublic(channel.id) &&
+        PermissionStore.can(StageChannelPermissions.JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
     }
     tmp2 = isLurkingResult;
   }

@@ -10,99 +10,82 @@ import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 import SpeakingStore from "../../stores/SpeakingStore.tsx";
 import SortedVoiceStateStore from "../../stores/views/SortedVoiceStateStore.tsx";
+import Constants from "../../Constants.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const Constants = fn(1085);
-({ AnalyticEvents: closure_9, ActivityTypes: c10 } = Constants);
+let map;
+
+let c10;
+let c9;
+({ AnalyticEvents: c9, ActivityTypes: c10 } = Constants);
 const MINUTE = DurationsDefault.Millis.MINUTE;
-class AppAnalyticsManager extends tmp3 {
+class AppAnalyticsManager extends AutomaticLifecycleManager {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    closure_0 = applyArgumentsResult;
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    require = applyArgumentsResult;
     applyArgumentsResult._currentUserSpeaking = false;
     applyArgumentsResult._anyoneElseSpeaking = false;
     applyArgumentsResult._handleRTCConnectionStoreChanged = function _handleRTCConnectionStoreChanged() {
       const channelId = RTCConnectionStore.getChannelId();
-      if (applyArgumentsResult._voiceChannelId !== channelId) {
-        applyArgumentsResult._voiceChannelId = channelId;
+      if (require._voiceChannelId !== channelId) {
+        require._voiceChannelId = channelId;
         if (null != channelId) {
-          if (null == applyArgumentsResult._reportInterval) {
+          if (null == require._reportInterval) {
+            const self = this;
+            const self2 = this;
             const interval = new Timers.Interval();
-            applyArgumentsResult._reportInterval = interval;
-            const _reportInterval = applyArgumentsResult._reportInterval;
+            require._reportInterval = interval;
+            const _reportInterval = require._reportInterval;
             _reportInterval.start(MINUTE, () => {
               closure_1_0._trackStartSpeaking();
               closure_1_0._trackStartListening();
             });
           }
         } else {
-          applyArgumentsResult._reset();
+          require._reset();
         }
       }
     };
     applyArgumentsResult._handleSpeakingStoreChanged = function _handleSpeakingStoreChanged() {
       const result = SpeakingStore.isCurrentUserSpeaking();
-      if (applyArgumentsResult._currentUserSpeaking !== result) {
-        applyArgumentsResult._currentUserSpeaking = result;
-        applyArgumentsResult._trackStartSpeaking();
+      if (require._currentUserSpeaking !== result) {
+        require._currentUserSpeaking = result;
+        require._trackStartSpeaking();
       }
       const isAnyoneElseSpeakingResult = SpeakingStore.isAnyoneElseSpeaking();
-      if (applyArgumentsResult._anyoneElseSpeaking !== isAnyoneElseSpeakingResult) {
-        applyArgumentsResult._anyoneElseSpeaking = isAnyoneElseSpeakingResult;
-        applyArgumentsResult._trackStartListening();
+      if (require._anyoneElseSpeaking !== isAnyoneElseSpeakingResult) {
+        require._anyoneElseSpeaking = isAnyoneElseSpeakingResult;
+        require._trackStartListening();
       }
     };
     return applyArgumentsResult;
   }
-}
-const prototype = AppAnalyticsManager.prototype;
-prototype["_initialize"] = function _initialize() {
-  const self = this;
-  const result = new Map().set(SpeakingStore, () => self._handleSpeakingStoreChanged());
-  this.stores = result.set(RTCConnectionStore, () => self._handleRTCConnectionStoreChanged());
-  this._reset();
-};
-prototype["_reset"] = function _reset() {
-  const self = this;
-  this._currentUserSpeaking = false;
-  this._anyoneElseSpeaking = false;
-  if (null != this._reportInterval) {
-    const _reportInterval = self._reportInterval;
-    _reportInterval.stop();
-    self._reportInterval = null;
-  }
-};
-prototype["_trackStartSpeaking"] = function _trackStartSpeaking() {
-  const self = this;
-  if (this._currentUserSpeaking) {
-    const channelId = RTCConnectionStore.getChannelId();
-    const guildId = RTCConnectionStore.getGuildId();
-    const obj2 = {
-      mode: MediaEngineStore.getMode(),
-      priority: SpeakingStore.isCurrentUserPrioritySpeaking(),
-      channel: channelId,
-      server: guildId,
-      channel_id: channelId,
-      guild_id: guildId,
-      rtc_connection_id: RTCConnectionStore.getRTCConnectionId(),
-      media_session_id: RTCConnectionStore.getMediaSessionId(),
-      voice_state_count: SortedVoiceStateStore.countVoiceStatesForChannel(self._voiceChannelId),
-    };
-    const merged = Object.assign(self.getGameMetadata());
-    const merged1 = Object.assign(RTCConnectionStore.getPacketStats());
-    AppAnalyticsUtils.trackWithMetadata(constants.START_SPEAKING, obj2);
-  }
-};
-prototype["_trackStartListening"] = function _trackStartListening() {
-  if (!MediaEngineStore.isDeaf()) {
+  _initialize() {
     const self = this;
-    if (this._anyoneElseSpeaking) {
+    map = new Map();
+    const result = map.set(SpeakingStore, () => self._handleSpeakingStoreChanged());
+    this.stores = result.set(RTCConnectionStore, () => self._handleRTCConnectionStoreChanged());
+    this._reset();
+  }
+  _reset() {
+    const self = this;
+    this._currentUserSpeaking = false;
+    this._anyoneElseSpeaking = false;
+    if (null != this._reportInterval) {
+      const _reportInterval = self._reportInterval;
+      _reportInterval.stop();
+      self._reportInterval = null;
+    }
+  }
+  _trackStartSpeaking() {
+    const self = this;
+    if (this._currentUserSpeaking) {
       const channelId = RTCConnectionStore.getChannelId();
       const guildId = RTCConnectionStore.getGuildId();
-      const obj3 = {
-        mute: MediaEngineStore.isMute(),
-        anyone_priority: SpeakingStore.isAnyonePrioritySpeaking(),
+      const obj = {
+        mode: MediaEngineStore.getMode(),
+        priority: SpeakingStore.isCurrentUserPrioritySpeaking(),
         channel: channelId,
         server: guildId,
         channel_id: channelId,
@@ -111,62 +94,92 @@ prototype["_trackStartListening"] = function _trackStartListening() {
         media_session_id: RTCConnectionStore.getMediaSessionId(),
         voice_state_count: SortedVoiceStateStore.countVoiceStatesForChannel(self._voiceChannelId),
       };
+      const trackWithMetadata = AppAnalyticsUtils.trackWithMetadata;
+      const START_SPEAKING = constants.START_SPEAKING;
+      AppAnalyticsUtils;
       const merged = Object.assign(self.getGameMetadata());
-      AppAnalyticsUtils.trackWithMetadata(constants.START_LISTENING, obj3);
+      const merged1 = Object.assign(RTCConnectionStore.getPacketStats());
+      trackWithMetadata(START_SPEAKING, obj);
     }
   }
-};
-prototype["_terminate"] = function _terminate() {
-  this._reset();
-  SpeakingStore.removeChangeListener(this._handleSpeakingStoreChanged);
-  RTCConnectionStore.removeChangeListener(this._handleRTCConnectionStoreChanged);
-};
-prototype["getGameMetadata"] = function getGameMetadata() {
-  const findActivityResult = SelfPresenceStore.findActivity((type) => type.type === constants.PLAYING);
-  const currentGameForAnalytics = RunningGameStore.getCurrentGameForAnalytics();
-  const obj = {
-    game_platform: getGamePlatformDefault(findActivityResult),
-    game_name: null,
-    game_exe_name: null,
-    game_id: null,
-    game_distributor: null,
-    game_distributor_game_id: null,
-    game_metadata: null,
-  };
-  let name = null;
-  if (null != findActivityResult) {
-    name = findActivityResult.name;
+  _trackStartListening() {
+    if (!MediaEngineStore.isDeaf()) {
+      const self = this;
+      if (this._anyoneElseSpeaking) {
+        const channelId = RTCConnectionStore.getChannelId();
+        const guildId = RTCConnectionStore.getGuildId();
+        const obj2 = {
+          mute: MediaEngineStore.isMute(),
+          anyone_priority: SpeakingStore.isAnyonePrioritySpeaking(),
+          channel: channelId,
+          server: guildId,
+          channel_id: channelId,
+          guild_id: guildId,
+          rtc_connection_id: RTCConnectionStore.getRTCConnectionId(),
+          media_session_id: RTCConnectionStore.getMediaSessionId(),
+          voice_state_count: SortedVoiceStateStore.countVoiceStatesForChannel(self._voiceChannelId),
+        };
+        const trackWithMetadata = AppAnalyticsUtils.trackWithMetadata;
+        const START_LISTENING = constants.START_LISTENING;
+        AppAnalyticsUtils;
+        const merged = Object.assign(self.getGameMetadata());
+        trackWithMetadata(START_LISTENING, obj2);
+      }
+    }
   }
-  obj.game_name = name;
-  let exeName = null;
-  if (null != currentGameForAnalytics) {
-    exeName = currentGameForAnalytics.exeName;
+  _terminate() {
+    this._reset();
+    SpeakingStore.removeChangeListener(this._handleSpeakingStoreChanged);
+    RTCConnectionStore.removeChangeListener(this._handleRTCConnectionStoreChanged);
   }
-  obj.game_exe_name = exeName;
-  let application_id = null;
-  if (null != findActivityResult) {
-    application_id = findActivityResult.application_id;
+  getGameMetadata() {
+    let application_id;
+    let distributor;
+    let exeName;
+    let name;
+    let sku;
+    let subgameMetadata;
+    const findActivityResult = SelfPresenceStore.findActivity((type) => type.type === constants.PLAYING);
+    const currentGameForAnalytics = RunningGameStore.getCurrentGameForAnalytics();
+    const obj = {
+      game_platform: getGamePlatformDefault(findActivityResult),
+      game_name: name,
+      game_exe_name: exeName,
+      game_id: application_id,
+      game_distributor: distributor,
+      game_distributor_game_id: sku,
+      game_metadata: subgameMetadata,
+    };
+    name = null;
+    if (null != findActivityResult) {
+      name = findActivityResult.name;
+    }
+    exeName = null;
+    if (null != currentGameForAnalytics) {
+      exeName = currentGameForAnalytics.exeName;
+    }
+    application_id = null;
+    if (null != findActivityResult) {
+      application_id = findActivityResult.application_id;
+    }
+    distributor = null;
+    if (null != currentGameForAnalytics) {
+      distributor = currentGameForAnalytics.distributor;
+    }
+    sku = null;
+    if (null != currentGameForAnalytics) {
+      sku = currentGameForAnalytics.sku;
+    }
+    subgameMetadata = null;
+    if (null != currentGameForAnalytics) {
+      const obj2 = RobloxSubgameUtils;
+      subgameMetadata = obj2.getSubgameMetadata(currentGameForAnalytics);
+    }
+    return obj;
   }
-  obj.game_id = application_id;
-  let distributor = null;
-  if (null != currentGameForAnalytics) {
-    distributor = currentGameForAnalytics.distributor;
-  }
-  obj.game_distributor = distributor;
-  let sku = null;
-  if (null != currentGameForAnalytics) {
-    sku = currentGameForAnalytics.sku;
-  }
-  obj.game_distributor_game_id = sku;
-  let subgameMetadata = null;
-  if (null != currentGameForAnalytics) {
-    subgameMetadata = RobloxSubgameUtils.getSubgameMetadata(currentGameForAnalytics);
-  }
-  obj.game_metadata = subgameMetadata;
-  return obj;
-};
+}
+const prototype = AppAnalyticsManager.prototype;
 const appAnalyticsManager = new AppAnalyticsManager();
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_analytics/AppAnalyticsManager.tsx");
 
 export default appAnalyticsManager;

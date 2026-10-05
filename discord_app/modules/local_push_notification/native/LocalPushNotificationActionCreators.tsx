@@ -8,6 +8,8 @@ import Constants2 from "Constants.tsx";
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+let closure_4;
+let hasOwnProperty;
 const LocalNotificationTypes = Constants2.LocalNotificationTypes;
 ({ AnalyticEvents: closure_4, Routes: hasOwnProperty } = Constants);
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
@@ -16,54 +18,64 @@ let result = size.fileFinishedImporting(
 );
 
 export const receiveLocalNotification = function receiveLocalNotification(getData) {
+  let constants2;
+  let data;
   if (null != getData.getData) {
-    data(6984).trackAppOpened("notification");
+    let obj2 = data(6984);
+    obj2.trackAppOpened("notification");
     data = getData.getData();
     let type = data.type;
     function dispatch() {
-      DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_CLICK" });
-      const obj3 = { message: "Notification Clicked", data: { type: data.type } };
-      SentryUtilsDefault.addBreadcrumb(obj3);
-      const obj4 = { type: data.type };
-      const obj6 = { notif_type: data.type, guild_id: null };
-      let guildId = null;
+      let channelId;
+      let closure_1;
+      let guildId;
+      let obj4;
+      let obj = DispatcherDefault;
+      obj.dispatch({ type: "PUSH_NOTIFICATION_CLICK" });
+      const obj3 = { message: "Notification Clicked", data: obj4 };
+      obj4 = { type: data.type };
+      const obj2 = SentryUtilsDefault;
+      obj2.addBreadcrumb(obj3);
+      const obj5 = { notif_type: data.type, guild_id: guildId };
+      guildId = null;
+      const track = AnalyticsUtilsDefault.track;
+      const NOTIFICATION_CLICKED = constants2.NOTIFICATION_CLICKED;
+      AnalyticsUtilsDefault;
       if ("guildId" in data) {
         guildId = data.guildId;
       }
-      obj6.guild_id = guildId;
-      AnalyticsUtilsDefault.track(constants2.NOTIFICATION_CLICKED, obj6);
+      track(NOTIFICATION_CLICKED, obj5);
       const type = data.type;
       if (constants.GUILD_VERIFICATION === type) {
-        const result = GuildActionCreatorsDefault.transitionToGuildSync(data.guildId);
         const tmpResult = GuildActionCreatorsDefault;
+        const result = tmpResult.transitionToGuildSync(data.guildId);
       } else if (constants.CALL_RING === type) {
-        data(1987)(12695, dependencyMap.paths).then((result) => result.default(channelId.channelId));
-        const promise2 = data(1987)(12695, dependencyMap.paths);
+        const promise2 = data(dependencyMap[9])(dependencyMap[8], dependencyMap.paths);
+        promise2.then((result) => result.default(data.channelId));
       } else if (constants.MESSAGE_SEND_FAILED === type) {
-        data(1987)(4901, dependencyMap.paths).then((transitionToMessage) => {
-          ({ channelId, messageId } = closure_1_0);
-          return transitionToMessage.transitionToMessage(channelId, messageId, {
-            jumpType: data(4787).JumpType.INSTANT,
-          });
+        const promise = data(dependencyMap[9])(dependencyMap[10], dependencyMap.paths);
+        promise.then((transitionToMessage) => {
+          let messageId;
+          ({ channelId, messageId } = data);
+          const obj = { jumpType: data(dependencyMap[11]).JumpType.INSTANT };
+          return transitionToMessage.transitionToMessage(channelId, messageId, obj);
         });
-        const promise = data(1987)(4901, dependencyMap.paths);
       } else if (constants.CONJURE === type) {
         if (null != data.guildId) {
           ({ guildId: data, projectId: closure_1 } = data);
-          data(1987)(1112, dependencyMap.paths).then((transitionTo) =>
-            transitionTo.transitionTo(hasOwnProperty.CHANNEL(channelId, StaticChannelRoute.CONJURE, closure_1_1)),
+          const promise3 = data(dependencyMap[9])(dependencyMap[12], dependencyMap.paths);
+          promise3.then((transitionTo) =>
+            transitionTo.transitionTo(hasOwnProperty.CHANNEL(data, StaticChannelRoute.CONJURE, closure_1)),
           );
-          const promise3 = data(1987)(1112, dependencyMap.paths);
         }
       }
     }
-    let obj2 = data(6984);
+    let obj = DispatcherDefault;
     if (obj.isDispatching()) {
       const _setImmediate = setImmediate;
       setImmediate(dispatch);
     } else {
       dispatch();
     }
-    obj = DispatcherDefault;
   }
 };

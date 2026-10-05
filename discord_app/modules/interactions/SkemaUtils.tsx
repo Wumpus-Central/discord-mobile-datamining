@@ -1,11 +1,14 @@
 // discord_app/modules/interactions/SkemaUtils.tsx
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 function getFirstSkemaFieldError(errors, arg1) {
+  let first;
+  let tmp9;
   if (null != errors[_errors]) {
     const _Array = Array;
-    if (Array.isArray(tmp)) {
-      return tmp[0];
+    if (Array.isArray(errors[_errors])) {
+      return errors[_errors][0];
     }
   }
   const entries = Object.entries(errors);
@@ -30,7 +33,6 @@ function getFirstSkemaFieldError(errors, arg1) {
   return null;
 }
 const _errors = "_errors";
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/interactions/SkemaUtils.tsx");
 
 export const getFirstSkemaError = function getFirstSkemaError(errors) {

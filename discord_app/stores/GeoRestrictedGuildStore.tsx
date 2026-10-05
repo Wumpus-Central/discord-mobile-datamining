@@ -1,15 +1,18 @@
 // discord_app/stores/GeoRestrictedGuildStore.tsx
-import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
 let found = [];
-const Store = initializeDefault.Store;
-class GeoRestrictedGuildStore extends Store {}
-GeoRestrictedGuildStore.prototype["getGeoRestrictedGuilds"] = function getGeoRestrictedGuilds() {
-  return found;
-};
+const Store = get_initializedDefault.Store;
+class GeoRestrictedGuildStore extends Store {
+  getGeoRestrictedGuilds() {
+    return found;
+  }
+}
+const prototype = GeoRestrictedGuildStore.prototype;
 GeoRestrictedGuildStore.displayName = "GeoRestrictedGuildStore";
-const geoRestrictedGuildStore = new GeoRestrictedGuildStore(DispatcherDefault, {
+let obj = {
   CONNECTION_OPEN: function handleConnectionOpen(geoRestrictedGuilds) {
     found = geoRestrictedGuilds.geoRestrictedGuilds;
   },
@@ -22,17 +25,19 @@ const geoRestrictedGuildStore = new GeoRestrictedGuildStore(DispatcherDefault, {
     }
   },
   GUILD_GEO_RESTRICTED: function handleGeoRestrictGuild(guildId) {
+    let closure_0 = guildId;
     found = found.filter((id) => id.id !== guildId.guildId);
-    found.push({
+    const obj = {
       id: guildId.guildId,
       name: guildId.name,
       icon: guildId.icon,
       unavailable: true,
       geo_restricted: true,
-    });
+    };
+    found.push(obj);
   },
-});
-const size = fn(2);
+};
+const geoRestrictedGuildStore = new GeoRestrictedGuildStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("stores/GeoRestrictedGuildStore.tsx");
 
 export default geoRestrictedGuildStore;

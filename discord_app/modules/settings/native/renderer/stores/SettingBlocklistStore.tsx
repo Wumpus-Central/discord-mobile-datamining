@@ -4,6 +4,7 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 
 const zustandStore = ZustandStore.createZustandStore(() => {
   const obj = { blocklist: new Set() };
+  new Set();
   return obj;
 });
 const result = size.fileFinishedImporting("modules/settings/native/renderer/stores/SettingBlocklistStore.tsx");

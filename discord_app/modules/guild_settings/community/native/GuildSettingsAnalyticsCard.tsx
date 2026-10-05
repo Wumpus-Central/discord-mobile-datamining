@@ -1,51 +1,77 @@
 // discord_app/modules/guild_settings/community/native/GuildSettingsAnalyticsCard.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-get_ActivityIndicator = fn(17);
-({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { card: { gap: nativeDefault.space.PX_4 }, line: null };
-let obj3 = { gap: nativeDefault.space.PX_4 };
-obj2.line = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-let closure_8 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_settings/community/native/GuildSettingsAnalyticsCard.tsx");
+let metricKey;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_4;
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+({ Pressable: closure_4, View: hasOwnProperty } = react_native);
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { card: obj2, line: obj3 };
+obj2 = { gap: nativeDefault.space.PX_4 };
+createStyles = createStyles.createStyles;
+obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+let closure_8 = createStyles(obj);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (metricKey) => {
-      const cResult = metricKey(576).c(27);
+      let CircleInformationIcon;
+      let description;
+      let intl2;
+      let intl3;
+      let isTrendingDown;
+      let isTrendingUp;
+      let items;
+      let items1;
+      let items2;
+      let localizedNumber;
+      let obj11;
+      let subtext;
+      let title;
+      const tmp = metricKey;
+      let obj = metricKey(576);
+      const cResult = obj.c(27);
       metricKey = metricKey.metricKey;
       ({ title, description } = metricKey);
       ({ localizedNumber, subtext, isTrendingUp, isTrendingDown } = metricKey);
       const tmp4 = closure_8();
       if (cResult[0] === description) {
+        let tmp5;
+        let tmp6;
         if (cResult[1] === metricKey) {
-          let tmp5 = cResult[2];
+          tmp5 = cResult[2];
         }
         if (cResult[3] !== title) {
-          let obj2 = { variant: "text-md/medium", color: "text-subtle", children: title };
+          const obj2 = { variant: "text-md/medium", color: "text-subtle", children: title };
           const tmp8 = closure_6(tmp(4886).Text, obj2);
           cResult[3] = title;
           cResult[4] = tmp8;
-          let tmp6 = tmp8;
+          tmp6 = tmp8;
         } else {
           tmp6 = cResult[4];
         }
         if (cResult[5] === description) {
+          let tmp9;
           if (cResult[6] === tmp5) {
-            let tmp9 = cResult[7];
+            tmp9 = cResult[7];
           }
           if (cResult[8] === tmp4.line) {
             if (cResult[9] === tmp6) {
+              let tmp14;
+              let tmp19;
               if (cResult[10] === tmp9) {
-                let tmp14 = cResult[11];
+                tmp14 = cResult[11];
               }
               let str = "text-muted";
               if (null != localizedNumber) {
@@ -59,33 +85,35 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 cResult[12] = localizedNumber;
                 cResult[13] = stringResult;
-                let tmp19 = stringResult;
+                tmp19 = stringResult;
               } else {
                 tmp19 = cResult[13];
               }
               if (cResult[14] === str) {
+                let tmp21;
                 if (cResult[15] === tmp19) {
-                  let tmp21 = cResult[16];
+                  tmp21 = cResult[16];
                 }
                 if (cResult[17] === isTrendingDown) {
                   if (cResult[18] === isTrendingUp) {
                     if (cResult[19] === tmp4.line) {
+                      let tmp24;
                       if (cResult[20] === subtext) {
-                        let tmp24 = cResult[21];
+                        tmp24 = cResult[21];
                       }
                       if (cResult[22] === tmp4.card) {
                         if (cResult[23] === tmp14) {
                           if (cResult[24] === tmp21) {
+                            let tmp35;
                             if (cResult[25] === tmp24) {
-                              let tmp35 = cResult[26];
+                              tmp35 = cResult[26];
                             }
                             return tmp35;
                           }
                         }
                       }
-                      const obj3 = { variant: "secondary", border: "subtle", style: tmp4.card, children: null };
-                      const items = [tmp14, tmp21, tmp24];
-                      obj3.children = items;
+                      const obj3 = { variant: "secondary", border: "subtle", style: tmp4.card, children: items };
+                      items = [tmp14, tmp21, tmp24];
                       const tmp37 = closure_7(tmp(5995).Card, obj3);
                       cResult[22] = tmp4.card;
                       cResult[23] = tmp14;
@@ -98,36 +126,35 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 let tmp26Result = null;
                 if (null != subtext) {
-                  const obj4 = { style: tmp4.line, children: null };
                   let tmp28 = null;
+                  const obj4 = { style: tmp4.line, children: items1 };
                   if (isTrendingUp) {
                     const obj5 = {
                       size: "xxs",
                       color: description(587).colors.TEXT_FEEDBACK_POSITIVE,
                       accessible: true,
-                      accessibilityLabel: null,
+                      accessibilityLabel: intl2.string(tmp(1126).t["8mcccd"]),
                     };
-                    const intl2 = tmp(1126).intl;
-                    obj5.accessibilityLabel = intl2.string(tmp(1126).t["8mcccd"]);
-                    tmp28 = closure_6(tmp(11072).ArrowLargeUpIcon, obj5);
+                    const ArrowLargeUpIcon = tmp(11072).ArrowLargeUpIcon;
+                    intl2 = tmp(1126).intl;
+                    tmp28 = closure_6(ArrowLargeUpIcon, obj5);
                   }
-                  const items1 = [tmp28, ,];
+                  items1 = [tmp28, ,];
                   let tmp31 = null;
                   if (isTrendingDown) {
                     const obj6 = {
                       size: "xxs",
                       color: description(587).colors.TEXT_FEEDBACK_CRITICAL,
                       accessible: true,
-                      accessibilityLabel: null,
+                      accessibilityLabel: intl3.string(tmp(1126).t.NLl6Q3),
                     };
-                    const intl3 = tmp(1126).intl;
-                    obj6.accessibilityLabel = intl3.string(tmp(1126).t.NLl6Q3);
-                    tmp31 = closure_6(tmp(17874).ArrowLargeDownIcon, obj6);
+                    const ArrowLargeDownIcon = tmp(17874).ArrowLargeDownIcon;
+                    intl3 = tmp(1126).intl;
+                    tmp31 = closure_6(ArrowLargeDownIcon, obj6);
                   }
                   items1[1] = tmp31;
                   const obj7 = { variant: "text-xs/normal", color: "text-subtle", children: subtext };
                   items1[2] = closure_6(tmp(4886).Text, obj7);
-                  obj4.children = items1;
                   tmp26Result = closure_7(closure_5, obj4);
                 }
                 cResult[17] = isTrendingDown;
@@ -145,9 +172,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp21 = tmp23;
             }
           }
-          const obj9 = { style: tmp4.line, children: null };
-          const items2 = [tmp6, tmp9];
-          obj9.children = items2;
+          const obj9 = { style: tmp4.line, children: items2 };
+          items2 = [tmp6, tmp9];
           const tmp17 = closure_7(closure_5, obj9);
           cResult[8] = tmp4.line;
           cResult[9] = tmp6;
@@ -162,10 +188,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             hitSlop: 14,
             accessibilityRole: "button",
             accessibilityLabel: description,
-            children: null,
+            children: closure_6(CircleInformationIcon, obj11),
           };
-          const obj11 = { size: "xs", color: description(587).colors.INTERACTIVE_ICON_DEFAULT };
-          obj10.children = closure_6(tmp(4812).CircleInformationIcon, obj11);
+          obj11 = { size: "xs", color: description(587).colors.INTERACTIVE_ICON_DEFAULT };
+          CircleInformationIcon = tmp(4812).CircleInformationIcon;
           tmp10 = closure_6(closure_4, obj10);
         }
         cResult[5] = description;
@@ -175,40 +201,51 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const fn = function t() {
         if (null != description) {
-          const obj2 = { key: null, content: null };
           const _HermesInternal = HermesInternal;
-          obj2.key = "GUILD_ANALYTICS_METRIC_INFO_" + metricKey;
-          obj2.content = tmp;
-          ToastActionCreatorsDefault.open(obj2);
+          const obj = { key: "GUILD_ANALYTICS_METRIC_INFO_" + metricKey, content: tmp };
+          const open = ToastActionCreatorsDefault.open;
+          ToastActionCreatorsDefault;
+          open(obj);
         }
       };
       cResult[0] = description;
       cResult[1] = metricKey;
       cResult[2] = fn;
       tmp5 = fn;
-      let obj = metricKey(576);
     }
   : (metricKey) => {
+      let CircleInformationIcon;
+      let intl2;
+      let intl3;
+      let isTrendingDown;
+      let isTrendingUp;
+      let items1;
+      let items2;
+      let items3;
+      let localizedNumber;
+      let obj4;
+      let subtext;
+      let title;
       metricKey = metricKey.metricKey;
       const description = metricKey.description;
       ({ localizedNumber, subtext } = metricKey);
       ({ title, isTrendingUp, isTrendingDown } = metricKey);
       const tmp = closure_8();
       const items = [description, metricKey];
-      const callback = noop.useCallback(() => {
+      const tmp4 = metricKey;
+      const callback = react.useCallback(() => {
         if (null != description) {
-          const obj2 = { key: null, content: null };
           const _HermesInternal = HermesInternal;
-          obj2.key = "GUILD_ANALYTICS_METRIC_INFO_" + metricKey;
-          obj2.content = tmp;
-          ToastActionCreatorsDefault.open(obj2);
+          const obj = { key: "GUILD_ANALYTICS_METRIC_INFO_" + metricKey, content: tmp };
+          const open = ToastActionCreatorsDefault.open;
+          ToastActionCreatorsDefault;
+          open(obj);
         }
       }, items);
-      let obj = { variant: "secondary", border: "subtle", style: tmp.card, children: null };
-      let obj2 = { style: tmp.line, children: null };
-      const items1 = [
-        closure_6(metricKey(4886).Text, { variant: "text-md/medium", color: "text-subtle", children: title }),
-      ];
+      let obj = { variant: "secondary", border: "subtle", style: tmp.card, children: items2 };
+      const obj2 = { style: tmp.line, children: items1 };
+      const Card = metricKey(5995).Card;
+      items1 = [closure_6(metricKey(4886).Text, { variant: "text-md/medium", color: "text-subtle", children: title })];
       let tmp7Result = null;
       if (null != description) {
         const obj3 = {
@@ -216,61 +253,61 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           hitSlop: 14,
           accessibilityRole: "button",
           accessibilityLabel: description,
-          children: null,
+          children: closure_6(CircleInformationIcon, obj4),
         };
-        const obj4 = { size: "xs", color: description(587).colors.INTERACTIVE_ICON_DEFAULT };
-        obj3.children = closure_6(tmp4(4812).CircleInformationIcon, obj4);
+        obj4 = { size: "xs", color: description(587).colors.INTERACTIVE_ICON_DEFAULT };
+        CircleInformationIcon = tmp4(4812).CircleInformationIcon;
         tmp7Result = closure_6(closure_4, obj3);
       }
       items1[1] = tmp7Result;
-      obj2.children = items1;
-      const items2 = [closure_7(closure_5, obj2), ,];
+      items2 = [closure_7(closure_5, obj2), ,];
       let str = "text-muted";
+      const Text = tmp4(4886).Text;
       if (null != localizedNumber) {
         str = "text-strong";
       }
-      const obj5 = { variant: "text-lg/semibold", color: str, children: null };
+      const obj5 = { variant: "text-lg/semibold", color: str, children: localizedNumber };
       if (localizedNumber == null) {
         const intl = tmp4(1126).intl;
         localizedNumber = intl.string(tmp4(1126).t.jHpxwo);
       }
-      obj5.children = localizedNumber;
-      items2[1] = closure_6(metricKey(4886).Text, obj5);
+      items2[1] = closure_6(Text, obj5);
       let tmp3Result = null;
       if (null != subtext) {
-        const obj6 = { style: tmp.line, children: null };
         let tmp7Result3 = null;
+        const obj6 = { style: tmp.line, children: items3 };
         if (isTrendingUp) {
           const obj7 = {
             size: "xxs",
             color: description(587).colors.TEXT_FEEDBACK_POSITIVE,
             accessible: true,
-            accessibilityLabel: null,
+            accessibilityLabel: intl2.string(tmp4(1126).t["8mcccd"]),
           };
-          const intl2 = tmp4(1126).intl;
-          obj7.accessibilityLabel = intl2.string(tmp4(1126).t["8mcccd"]);
-          tmp7Result3 = closure_6(tmp4(11072).ArrowLargeUpIcon, obj7);
+          const ArrowLargeUpIcon = tmp4(11072).ArrowLargeUpIcon;
+          intl2 = tmp4(1126).intl;
+          tmp7Result3 = closure_6(ArrowLargeUpIcon, obj7);
         }
-        const items3 = [tmp7Result3, ,];
+        items3 = [tmp7Result3, ,];
         let tmp7Result4 = null;
         if (isTrendingDown) {
           const obj8 = {
             size: "xxs",
             color: description(587).colors.TEXT_FEEDBACK_CRITICAL,
             accessible: true,
-            accessibilityLabel: null,
+            accessibilityLabel: intl3.string(tmp4(1126).t.NLl6Q3),
           };
-          const intl3 = tmp4(1126).intl;
-          obj8.accessibilityLabel = intl3.string(tmp4(1126).t.NLl6Q3);
-          tmp7Result4 = closure_6(tmp4(17874).ArrowLargeDownIcon, obj8);
+          const ArrowLargeDownIcon = tmp4(17874).ArrowLargeDownIcon;
+          intl3 = tmp4(1126).intl;
+          tmp7Result4 = closure_6(ArrowLargeDownIcon, obj8);
         }
         items3[1] = tmp7Result4;
         const obj9 = { variant: "text-xs/normal", color: "text-subtle", children: subtext };
         items3[2] = closure_6(tmp4(4886).Text, obj9);
-        obj6.children = items3;
         tmp3Result = closure_7(closure_5, obj6);
       }
       items2[2] = tmp3Result;
-      obj.children = items2;
-      return closure_7(metricKey(5995).Card, obj);
+      return closure_7(Card, obj);
     };
+const result = size.fileFinishedImporting("modules/guild_settings/community/native/GuildSettingsAnalyticsCard.tsx");
+
+export default tmp5;

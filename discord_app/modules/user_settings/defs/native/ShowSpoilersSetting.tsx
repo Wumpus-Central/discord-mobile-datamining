@@ -1,116 +1,71 @@
 // discord_app/modules/user_settings/defs/native/ShowSpoilersSetting.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import util from "../../../../intl/index.native.tsx";
+import react2 from "../../../../../_runtime/00576_react.js";
+import Constants from "../../../../Constants.tsx";
+import intl4 from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const SpoilerRenderSetting = fn(1085).SpoilerRenderSetting;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11129);
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const SpoilerRenderSetting = Constants.SpoilerRenderSetting;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(1);
+      let first;
+      let intl;
+      let intl2;
+      let intl3;
+      const obj = react2;
+      const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { label: null, value: null };
-        const intl = util.intl;
-        obj2.label = intl.string(util.t["KFH/me"]);
-        obj2.value = SpoilerRenderSetting.ON_CLICK;
+        const obj2 = { label: intl.string(intl4.t["KFH/me"]), value: SpoilerRenderSetting.ON_CLICK };
+        intl = intl4.intl;
         const items = [obj2, ,];
-        const obj3 = { label: null, value: null };
-        const intl2 = util.intl;
-        obj3.label = intl2.string(util.t.Pe1RbL);
-        obj3.value = SpoilerRenderSetting.ALWAYS;
+        const obj3 = { label: intl2.string(intl4.t.Pe1RbL), value: SpoilerRenderSetting.ALWAYS };
+        intl2 = intl4.intl;
         items[1] = obj3;
-        const obj4 = { label: null, value: null };
-        const intl3 = util.intl;
-        obj4.label = intl3.string(util.t.K5VTBE);
-        obj4.value = SpoilerRenderSetting.IF_MODERATOR;
+        const obj4 = { label: intl3.string(intl4.t.K5VTBE), value: SpoilerRenderSetting.IF_MODERATOR };
+        intl3 = intl4.intl;
         items[2] = obj4;
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       return first;
     }
   : () =>
-      noop.useMemo(() => {
-        const obj = { label: null, value: null };
-        const intl = util.intl;
-        obj.label = intl.string(util.t["KFH/me"]);
-        obj.value = constants.ON_CLICK;
+      react.useMemo(() => {
+        let intl;
+        let intl2;
+        let intl3;
+        const obj = { label: intl.string(intl4.t["KFH/me"]), value: constants.ON_CLICK };
+        intl = intl4.intl;
         const items = [obj, ,];
-        const obj2 = { label: null, value: null };
-        const intl2 = util.intl;
-        obj2.label = intl2.string(util.t.Pe1RbL);
-        obj2.value = constants.ALWAYS;
+        const obj2 = { label: intl2.string(intl4.t.Pe1RbL), value: constants.ALWAYS };
+        intl2 = intl4.intl;
         items[1] = obj2;
-        const obj3 = { label: null, value: null };
-        const intl3 = util.intl;
-        obj3.label = intl3.string(util.t.K5VTBE);
-        obj3.value = constants.IF_MODERATOR;
+        const obj3 = { label: intl3.string(intl4.t.K5VTBE), value: constants.IF_MODERATOR };
+        intl3 = intl4.intl;
         items[2] = obj3;
         return items;
       }, []);
-const radio = SettingBuilders.createRadio({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.QgwmVz);
+    const intl = intl4.intl;
+    return intl.string(intl4.t.QgwmVz);
   },
-  parent: fn(7634).MobileUserSettings.CHAT,
-  useValue: fn(2028).RenderSpoilers.useSetting,
+  parent: MobileUserSettings.CHAT,
+  useValue: UserSettings.RenderSpoilers.useSetting,
   onValueChange: function onShowSpoilersChange(arg0) {
     const RenderSpoilers = UserSettings.RenderSpoilers;
     RenderSpoilers.updateSetting(arg0);
   },
-  useOptions: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
-        const cResult = c.c(1);
-        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { label: null, value: null };
-          const intl = util.intl;
-          obj2.label = intl.string(util.t["KFH/me"]);
-          obj2.value = SpoilerRenderSetting.ON_CLICK;
-          const items = [obj2, ,];
-          const obj3 = { label: null, value: null };
-          const intl2 = util.intl;
-          obj3.label = intl2.string(util.t.Pe1RbL);
-          obj3.value = SpoilerRenderSetting.ALWAYS;
-          items[1] = obj3;
-          const obj4 = { label: null, value: null };
-          const intl3 = util.intl;
-          obj4.label = intl3.string(util.t.K5VTBE);
-          obj4.value = SpoilerRenderSetting.IF_MODERATOR;
-          items[2] = obj4;
-          cResult[0] = items;
-          let first = items;
-        } else {
-          first = cResult[0];
-        }
-        return first;
-      }
-    : () =>
-        noop.useMemo(() => {
-          const obj = { label: null, value: null };
-          const intl = util.intl;
-          obj.label = intl.string(util.t["KFH/me"]);
-          obj.value = constants.ON_CLICK;
-          const items = [obj, ,];
-          const obj2 = { label: null, value: null };
-          const intl2 = util.intl;
-          obj2.label = intl2.string(util.t.Pe1RbL);
-          obj2.value = constants.ALWAYS;
-          items[1] = obj2;
-          const obj3 = { label: null, value: null };
-          const intl3 = util.intl;
-          obj3.label = intl3.string(util.t.K5VTBE);
-          obj3.value = constants.IF_MODERATOR;
-          items[2] = obj3;
-          return items;
-        }, []),
-});
-const size = fn(2);
+  useOptions: tmp2,
+};
+const radio = SettingBuilders.createRadio(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ShowSpoilersSetting.tsx");
 
 export default radio;

@@ -1,47 +1,64 @@
 // discord_app/modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx
+import SearchConstants from "../../SearchConstants.tsx";
 import search_tracking_TrackingDefault from "../tracking/Tracking.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const SearchTabs = fn(7513).SearchTabs;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx");
+let searchContext;
 
-export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.isReactCompilerEnabled()
+let react = react_mod;
+const SearchTabs = SearchConstants.SearchTabs;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (searchContext) => {
-      const cResult = searchContext(visibleTabs[3]).c(7);
+      let closure_3;
+      let tmp2;
+      let tmp3;
+      let visibleTabs;
+      let obj = searchContext(visibleTabs[3]);
+      const cResult = obj.c(7);
       searchContext = searchContext.searchContext;
       const visibleTabCounts = searchContext.visibleTabCounts;
       visibleTabs = searchContext.visibleTabs;
-      noop = noop.useRef(visibleTabs);
+      react = react.useRef(visibleTabs);
       if (cResult[0] !== visibleTabs) {
         const fn = function s() {
           closure_3.current = visibleTabs;
         };
         const items = [visibleTabs];
+        let num = 0;
         cResult[0] = visibleTabs;
         cResult[1] = fn;
         cResult[2] = items;
-        let tmp3 = items;
-        let tmp2 = fn;
+        tmp3 = items;
+        tmp2 = fn;
       } else {
         tmp2 = cResult[1];
         tmp3 = cResult[2];
       }
       const effect = obj2.useEffect(tmp2, tmp3);
       if (cResult[3] === searchContext) {
+        let tmp5;
+        let tmp6;
         if (cResult[4] === visibleTabCounts) {
-          let tmp5 = cResult[5];
-          let tmp6 = cResult[6];
+          tmp5 = cResult[5];
+          tmp6 = cResult[6];
         }
         const effect1 = obj2.useEffect(tmp5, tmp6);
       }
       const fn2 = function c() {
+        let tmp11;
+        let tmp14;
+        let tmp17;
+        let tmp20;
+        let tmp4;
+        let tmp5;
+        let tmp8;
         if (null != visibleTabCounts) {
           function getSearchTabCount(arg0) {}
           const _Object = Object;
           const keys = Object.keys(visibleTabCounts);
+          let num = 0;
           const reduced = keys.reduce((acc, item) => {
             if (typeof getSearchTabCount === "function") {
               let num = null;
@@ -62,19 +79,20 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
             }
           }, 0);
           if (reduced > 0) {
-            const obj2 = {
+            const MEMBERS = constants.MEMBERS;
+            const obj = {
               searchContext: getSearchTabCount,
               searchResultTotalCount: reduced,
-              numMemberTabReturnedResults: null,
-              numChannelTabReturnedResults: null,
-              numPeopleTabReturnedResults: null,
-              numMessageTabReturnedResults: null,
-              numMediaTabReturnedResults: null,
-              numFileTabReturnedResults: null,
-              numLinkTabReturnedResults: null,
+              numMemberTabReturnedResults: tmp4,
+              numChannelTabReturnedResults: tmp5,
+              numPeopleTabReturnedResults: tmp8,
+              numMessageTabReturnedResults: tmp11,
+              numMediaTabReturnedResults: tmp14,
+              numFileTabReturnedResults: tmp17,
+              numLinkTabReturnedResults: tmp20,
             };
-            const MEMBERS = constants.MEMBERS;
-            let tmp4 = null;
+            tmp4 = null;
+            const trackSearchResultReturned = visibleTabCounts(visibleTabs[4]).trackSearchResultReturned;
             if (null != visibleTabCounts) {
               let current = ref.current;
               let tmp3 = null;
@@ -83,9 +101,8 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
               }
               tmp4 = tmp3;
             }
-            obj2.numMemberTabReturnedResults = tmp4;
             const GUILD_CHANNELS = constants.GUILD_CHANNELS;
-            let tmp5 = null;
+            tmp5 = null;
             if (null != visibleTabCounts) {
               const current2 = ref.current;
               let tmp7 = null;
@@ -94,9 +111,8 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
               }
               tmp5 = tmp7;
             }
-            obj2.numChannelTabReturnedResults = tmp5;
             const PEOPLE = constants.PEOPLE;
-            let tmp8 = null;
+            tmp8 = null;
             if (null != visibleTabCounts) {
               const current3 = ref.current;
               let tmp10 = null;
@@ -105,9 +121,8 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
               }
               tmp8 = tmp10;
             }
-            obj2.numPeopleTabReturnedResults = tmp8;
             const MESSAGES = constants.MESSAGES;
-            let tmp11 = null;
+            tmp11 = null;
             if (null != visibleTabCounts) {
               const current4 = ref.current;
               let tmp13 = null;
@@ -116,9 +131,8 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
               }
               tmp11 = tmp13;
             }
-            obj2.numMessageTabReturnedResults = tmp11;
             const MEDIA = constants.MEDIA;
-            let tmp14 = null;
+            tmp14 = null;
             if (null != visibleTabCounts) {
               const current5 = ref.current;
               let tmp16 = null;
@@ -127,9 +141,8 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
               }
               tmp14 = tmp16;
             }
-            obj2.numMediaTabReturnedResults = tmp14;
             const FILES = constants.FILES;
-            let tmp17 = null;
+            tmp17 = null;
             if (null != visibleTabCounts) {
               const current6 = ref.current;
               let tmp19 = null;
@@ -138,9 +151,8 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
               }
               tmp17 = tmp19;
             }
-            obj2.numFileTabReturnedResults = tmp17;
             const LINKS = constants.LINKS;
-            let tmp20 = null;
+            tmp20 = null;
             if (null != visibleTabCounts) {
               const current7 = ref.current;
               let tmp22 = null;
@@ -149,9 +161,7 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
               }
               tmp20 = tmp22;
             }
-            obj2.numLinkTabReturnedResults = tmp20;
-            const result = visibleTabCounts(visibleTabs[4]).trackSearchResultReturned(obj2);
-            const obj = visibleTabCounts(visibleTabs[4]);
+            const result = trackSearchResultReturned(obj);
           }
         }
       };
@@ -164,20 +174,29 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
       tmp5 = fn2;
     }
   : (searchContext) => {
+      let closure_3;
       searchContext = searchContext.searchContext;
       const visibleTabCounts = searchContext.visibleTabCounts;
       const visibleTabs = searchContext.visibleTabs;
-      noop = undefined;
-      noop = noop.useRef(visibleTabs);
+      react = undefined;
+      react = react.useRef(visibleTabs);
       const items = [visibleTabs];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
         closure_3.current = visibleTabs;
       }, items);
       const items1 = [searchContext, visibleTabCounts];
-      const effect1 = noop.useEffect(() => {
+      const effect1 = react.useEffect(() => {
+        let tmp11;
+        let tmp14;
+        let tmp17;
+        let tmp20;
+        let tmp4;
+        let tmp5;
+        let tmp8;
         if (null != visibleTabCounts) {
           const _Object = Object;
           const keys = Object.keys(visibleTabCounts);
+          let num = 0;
           const reduced = keys.reduce((acc, item) => {
             let num = null;
             if (null != visibleTabCounts) {
@@ -194,19 +213,20 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
             return acc + num;
           }, 0);
           if (reduced > 0) {
-            const obj2 = {
+            const MEMBERS = SearchTabs.MEMBERS;
+            const obj = {
               searchContext,
               searchResultTotalCount: reduced,
-              numMemberTabReturnedResults: null,
-              numChannelTabReturnedResults: null,
-              numPeopleTabReturnedResults: null,
-              numMessageTabReturnedResults: null,
-              numMediaTabReturnedResults: null,
-              numFileTabReturnedResults: null,
-              numLinkTabReturnedResults: null,
+              numMemberTabReturnedResults: tmp4,
+              numChannelTabReturnedResults: tmp5,
+              numPeopleTabReturnedResults: tmp8,
+              numMessageTabReturnedResults: tmp11,
+              numMediaTabReturnedResults: tmp14,
+              numFileTabReturnedResults: tmp17,
+              numLinkTabReturnedResults: tmp20,
             };
-            const MEMBERS = SearchTabs.MEMBERS;
-            let tmp4 = null;
+            tmp4 = null;
+            const trackSearchResultReturned = search_tracking_TrackingDefault.trackSearchResultReturned;
             if (null != visibleTabCounts) {
               let current = ref.current;
               let tmp3 = null;
@@ -215,9 +235,8 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
               }
               tmp4 = tmp3;
             }
-            obj2.numMemberTabReturnedResults = tmp4;
             const GUILD_CHANNELS = SearchTabs.GUILD_CHANNELS;
-            let tmp5 = null;
+            tmp5 = null;
             if (null != visibleTabCounts) {
               const current2 = ref.current;
               let tmp7 = null;
@@ -226,9 +245,8 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
               }
               tmp5 = tmp7;
             }
-            obj2.numChannelTabReturnedResults = tmp5;
             const PEOPLE = SearchTabs.PEOPLE;
-            let tmp8 = null;
+            tmp8 = null;
             if (null != visibleTabCounts) {
               const current3 = ref.current;
               let tmp10 = null;
@@ -237,9 +255,8 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
               }
               tmp8 = tmp10;
             }
-            obj2.numPeopleTabReturnedResults = tmp8;
             const MESSAGES = SearchTabs.MESSAGES;
-            let tmp11 = null;
+            tmp11 = null;
             if (null != visibleTabCounts) {
               const current4 = ref.current;
               let tmp13 = null;
@@ -248,9 +265,8 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
               }
               tmp11 = tmp13;
             }
-            obj2.numMessageTabReturnedResults = tmp11;
             const MEDIA = SearchTabs.MEDIA;
-            let tmp14 = null;
+            tmp14 = null;
             if (null != visibleTabCounts) {
               const current5 = ref.current;
               let tmp16 = null;
@@ -259,9 +275,8 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
               }
               tmp14 = tmp16;
             }
-            obj2.numMediaTabReturnedResults = tmp14;
             const FILES = SearchTabs.FILES;
-            let tmp17 = null;
+            tmp17 = null;
             if (null != visibleTabCounts) {
               const current6 = ref.current;
               let tmp19 = null;
@@ -270,9 +285,8 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
               }
               tmp17 = tmp19;
             }
-            obj2.numFileTabReturnedResults = tmp17;
             const LINKS = SearchTabs.LINKS;
-            let tmp20 = null;
+            tmp20 = null;
             if (null != visibleTabCounts) {
               const current7 = ref.current;
               let tmp22 = null;
@@ -281,9 +295,11 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
               }
               tmp20 = tmp22;
             }
-            obj2.numLinkTabReturnedResults = tmp20;
-            const result = search_tracking_TrackingDefault.trackSearchResultReturned(obj2);
+            const result = trackSearchResultReturned(obj);
           }
         }
       }, items1);
     };
+let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx");
+
+export const useAutoTrackSearchTabCountsViewedAnalytics = tmp2;

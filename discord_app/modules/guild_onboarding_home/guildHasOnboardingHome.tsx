@@ -3,16 +3,16 @@ import FavoritesUtils from "../favorites/FavoritesUtils.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let c2;
+let c3;
 ({ GuildFeatures: c2, ME: c3 } = Constants);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/guildHasOnboardingHome.tsx");
 
 export default function guildHasOnboardingHome(id) {
-  let isFavoritesGuildIdResult = null == id;
+  let isFavoritesGuildIdResult = null == id || id.id === _false;
   if (!isFavoritesGuildIdResult) {
-    isFavoritesGuildIdResult = id.id === React3;
-  }
-  if (!isFavoritesGuildIdResult) {
-    isFavoritesGuildIdResult = FavoritesUtils.isFavoritesGuildId(id.id);
+    const obj = FavoritesUtils;
+    isFavoritesGuildIdResult = obj.isFavoritesGuildId(id.id);
   }
   if (!isFavoritesGuildIdResult) {
     const features = id.features;

@@ -1,31 +1,36 @@
 // discord_app/modules/media_viewer/native/useMediaItemHasSpoiler.tsx
 import MediaSourceUtil from "MediaSourceUtil.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/media_viewer/native/useMediaItemHasSpoiler.tsx");
-
-export const useMediaItemHasSpoiler = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let closure_1;
+      let tmp13;
+      let tmp4;
+      let tmp6;
+      let tmp8;
       _require = arg0;
-      const cResult = require("c").c(10);
+      const obj = require("react");
+      const cResult = obj.c(10);
       if (cResult[0] !== arg0) {
         const fn = function u(arg0) {
           return arg0.sources[closure_0];
         };
         cResult[0] = arg0;
         cResult[1] = fn;
-        let tmp4 = fn;
+        tmp4 = fn;
       } else {
         tmp4 = cResult[1];
       }
       const MediaViewerSourcesStore = tmp(7934).MediaViewerSourcesStore;
-      state = MediaViewerSourcesStore.useState(tmp4);
+      const state = MediaViewerSourcesStore.useState(tmp4);
       if (cResult[2] !== arg0) {
         const fn2 = function o(userRevealedIndexes) {
           userRevealedIndexes = userRevealedIndexes.userRevealedIndexes;
@@ -33,7 +38,7 @@ export const useMediaItemHasSpoiler = ReactCompilerGating.isReactCompilerEnabled
         };
         cResult[2] = arg0;
         cResult[3] = fn2;
-        let tmp6 = fn2;
+        tmp6 = fn2;
       } else {
         tmp6 = cResult[3];
       }
@@ -42,12 +47,12 @@ export const useMediaItemHasSpoiler = ReactCompilerGating.isReactCompilerEnabled
       if (cResult[4] !== state) {
         let flattenSourceResult;
         if (null != state) {
-          flattenSourceResult = tmp(7939).flattenSource(state);
-          const tmpResult = tmp(7939);
+          const tmpResult = require("MediaSourceUtil");
+          flattenSourceResult = tmpResult.flattenSource(state);
         }
         cResult[4] = state;
         cResult[5] = flattenSourceResult;
-        let tmp8 = flattenSourceResult;
+        tmp8 = flattenSourceResult;
       } else {
         tmp8 = cResult[5];
       }
@@ -57,22 +62,24 @@ export const useMediaItemHasSpoiler = ReactCompilerGating.isReactCompilerEnabled
         spoiler = tmp8.spoiler;
       }
       let tmp12 = true === spoiler;
-      closure_2 = tmp12;
+      let closure_2 = tmp12;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore];
         cResult[6] = items;
-        let tmp13 = items;
+        tmp13 = items;
       } else {
         tmp13 = cResult[6];
       }
       if (cResult[7] === tmp8) {
+        let tmp15;
         if (cResult[8] === tmp12) {
-          let tmp15 = cResult[9];
+          tmp15 = cResult[9];
         }
-        const stateFromStores = tmp(573).useStateFromStores(tmp13, tmp15);
-        tmp(7945);
+        const tmpResult3 = require("useStateFromStores");
+        const stateFromStores = tmpResult3.useStateFromStores(tmp13, tmp15);
+        require("computeGlobalSpoilerDisplay");
         let tmp19 = !state1;
-        if (!state1) {
+        if (tmp19) {
           let obscure;
           if (tmp8 != null) {
             obscure = tmp8.obscure;
@@ -106,10 +113,13 @@ export const useMediaItemHasSpoiler = ReactCompilerGating.isReactCompilerEnabled
       cResult[8] = tmp12;
       cResult[9] = fn3;
       tmp15 = fn3;
-      const obj = require("c");
     }
   : (arg0) => {
+      let closure_0;
+      let memo;
+      let state;
       _require = arg0;
+      const tmp = _require;
       const MediaViewerSourcesStore = require("useMediaViewerSources").MediaViewerSourcesStore;
       state = MediaViewerSourcesStore.useState((arg0) => arg0.sources[closure_0]);
       const MediaViewerSourcesStore2 = require("useMediaViewerSources").MediaViewerSourcesStore;
@@ -121,7 +131,8 @@ export const useMediaItemHasSpoiler = ReactCompilerGating.isReactCompilerEnabled
       memo = memo.useMemo(() => {
         let flattenSourceResult;
         if (null != state) {
-          flattenSourceResult = MediaSourceUtil.flattenSource(tmp);
+          const obj = MediaSourceUtil;
+          flattenSourceResult = obj.flattenSource(tmp);
         }
         return flattenSourceResult;
       }, items);
@@ -130,9 +141,10 @@ export const useMediaItemHasSpoiler = ReactCompilerGating.isReactCompilerEnabled
         spoiler = memo.spoiler;
       }
       let tmp7 = true === spoiler;
-      closure_3 = tmp7;
+      let closure_3 = tmp7;
       const items1 = [closure_3];
-      const stateFromStores = require("useStateFromStores").useStateFromStores(items1, () => {
+      const tmpResult = tmp(state[6]);
+      const stateFromStores = tmpResult.useStateFromStores(items1, () => {
         let channel = null;
         if (closure_3) {
           let channelId;
@@ -146,9 +158,9 @@ export const useMediaItemHasSpoiler = ReactCompilerGating.isReactCompilerEnabled
         }
         return channel;
       });
-      require("computeGlobalSpoilerDisplay");
+      tmp(state[7]);
       let tmp11 = !state1;
-      if (!state1) {
+      if (tmp11) {
         let obscure;
         if (memo != null) {
           obscure = memo.obscure;
@@ -164,3 +176,6 @@ export const useMediaItemHasSpoiler = ReactCompilerGating.isReactCompilerEnabled
       }
       return tmp11;
     };
+const result = size.fileFinishedImporting("modules/media_viewer/native/useMediaItemHasSpoiler.tsx");
+
+export const useMediaItemHasSpoiler = tmp2;

@@ -1,16 +1,17 @@
 // discord_app/modules/parent_tools/useParentalConsentWarning.tsx
-import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../_runtime/00576_c.js";
+import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../_runtime/00576_react.js";
 import ParentalConsentWarningStore from "ParentalConsentWarningStore.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/parent_tools/useParentalConsentWarning.tsx");
-
-export const useParentalConsentWarning = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let tmp4;
+      let tmp5;
+      let warning;
+      const obj = react;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ParentalConsentWarningStore];
         const fn = function o() {
@@ -23,9 +24,15 @@ export const useParentalConsentWarning = ReactCompilerGating.isReactCompilerEnab
       } else {
         [tmp4, tmp5] = cResult;
       }
-      return initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStores(tmp4, tmp5);
     }
   : () => {
+      let warning;
       const items = [ParentalConsentWarningStore];
-      return initialize.useStateFromStores(items, () => warning.getWarning());
+      const obj = get_initialized;
+      return obj.useStateFromStores(items, () => warning.getWarning());
     };
+const result = size.fileFinishedImporting("modules/parent_tools/useParentalConsentWarning.tsx");
+
+export const useParentalConsentWarning = tmp2;

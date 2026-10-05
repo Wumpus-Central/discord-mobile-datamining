@@ -2,6 +2,7 @@
 import ApexExperiment from "../../experiments/apex/index.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+let obj4;
 const obj = {
   CONTROL: 0,
   [0]: "CONTROL",
@@ -23,9 +24,9 @@ const obj3 = {
     ctrVariant: obj.CONTROL,
     hapticFeedbackOnRewardEarnedEnabled: false,
   },
-  variations: null,
+  variations: obj4,
 };
-const obj4 = {
+obj4 = {
   1: null,
   2: {
     enabled: true,
@@ -70,7 +71,6 @@ obj4[7] = {
   ctrVariant: obj.CONTROL,
   hapticFeedbackOnRewardEarnedEnabled: true,
 };
-obj3.variations = obj4;
 const apexExperiment = ApexExperiment.createApexExperiment(obj3);
 const result = size.fileFinishedImporting("modules/quests/experiments/BountiesMobileQuestBarExperiment.tsx");
 

@@ -1,24 +1,27 @@
 // discord_app/modules/guild_tag/useUserAvailableGuildsWithTags.tsx
-import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../_runtime/00576_c.js";
+import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../_runtime/00576_react.js";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
+let guildsArray, selfMember;
 
-export const useUserAvailableGuildsWithTags = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let tmp4;
+      let tmp5;
+      let obj = react;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore, GuildMemberStore];
         const fn = function u() {
           guildsArray = guildsArray.getGuildsArray();
           return guildsArray.filter((id) => {
             selfMember = selfMember.getSelfMember(id.id);
-            let guildSupportsTagsResult = closure_1_0(closure_1_1[4]).guildSupportsTags(id);
+            const obj = closure_1_0(closure_1_1[4]);
+            let guildSupportsTagsResult = obj.guildSupportsTags(id);
             if (guildSupportsTagsResult) {
               let joinedAt;
               if (selfMember != null) {
@@ -47,15 +50,18 @@ export const useUserAvailableGuildsWithTags = ReactCompilerGating.isReactCompile
       } else {
         [tmp4, tmp5] = cResult;
       }
-      return initialize.useStateFromStoresArray(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStoresArray(tmp4, tmp5);
     }
   : () => {
+      let obj = get_initialized;
       const items = [GuildStore, GuildMemberStore];
-      return initialize.useStateFromStoresArray(items, () => {
+      return obj.useStateFromStoresArray(items, () => {
         guildsArray = guildsArray.getGuildsArray();
         return guildsArray.filter((id) => {
           selfMember = selfMember.getSelfMember(id.id);
-          let guildSupportsTagsResult = closure_1_0(closure_1_1[4]).guildSupportsTags(id);
+          const obj = closure_1_0(closure_1_1[4]);
+          let guildSupportsTagsResult = obj.guildSupportsTags(id);
           if (guildSupportsTagsResult) {
             let joinedAt;
             if (selfMember != null) {
@@ -78,3 +84,6 @@ export const useUserAvailableGuildsWithTags = ReactCompilerGating.isReactCompile
         });
       });
     };
+const result = size.fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
+
+export const useUserAvailableGuildsWithTags = tmp2;

@@ -1,16 +1,20 @@
 // discord_app/modules/emojis/RawGuildEmojiStore.tsx
+import libdiscoreExperiments from "../libdiscore/libdiscoreExperiments.tsx";
+import js_shim_PlainRecord from "../../../discord_common/js/packages/libdiscore/js_shim/js/PlainRecord.tsx";
+import LibdiscoreStore2 from "../libdiscore/stores/LibdiscoreStore.tsx";
 import EmojiTypes from "EmojiTypes.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
+let set;
+
 function fromServer(guildId, arg1) {
   const obj = {};
   const iter = arg1[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let obj3 = {};
+    let obj3 = { guildId, type: EmojiTypes.EmojiTypes.GUILD };
     obj3[TypeTag] = "RawGuildEmoji";
-    obj3.guildId = guildId;
     ({
       id: obj2.id,
       animated: obj2.animated,
@@ -21,8 +25,8 @@ function fromServer(guildId, arg1) {
       managed: obj2.managed,
       version: obj2.version,
     } = nextResult);
-    obj3.type = EmojiTypes.EmojiTypes.GUILD;
-    obj[nextResult.id] = obj3;
+    let id = nextResult.id;
+    obj[id] = obj3;
     continue;
   }
   return obj;
@@ -39,14 +43,14 @@ function syncEmojis(id, emojis, setPartition) {
       const merged = Object.assign(nullablePartition);
       const deletes = emojis.deletes;
       for (const item10016 of deletes) {
-        delete tmp[tmp2];
+        delete obj[item10016];
         continue;
       }
       const writes = emojis.writes;
-      const tmp9 = writes[Symbol.iterator]();
-      while (tmp9 !== undefined) {
+      const tmp7 = writes[Symbol.iterator]();
+      while (tmp7 !== undefined) {
         let _Object = Object;
-        let items = [tmp12];
+        let items = [tmp10];
         let merged1 = Object.assign(obj, fromServer(id, items));
         continue;
       }
@@ -54,91 +58,94 @@ function syncEmojis(id, emojis, setPartition) {
     }
   }
 }
-const TypeTag = fn(2068).TypeTag;
-const LibdiscoreStore = fn(2075).LibdiscoreStore;
+const TypeTag = js_shim_PlainRecord.TypeTag;
+const LibdiscoreStore = LibdiscoreStore2.LibdiscoreStore;
 class RawGuildEmojiStore extends LibdiscoreStore {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
     applyArgumentsResult.database = applyArgumentsResult.addKKVDatabase("guild_emojis");
     return applyArgumentsResult;
   }
+  stateWrapper() {
+    return this.database;
+  }
+  getGuildEmojis(guildId) {
+    const database = this.database;
+    return database.getNullablePartition(guildId);
+  }
 }
 const prototype = RawGuildEmojiStore.prototype;
-prototype["stateWrapper"] = function stateWrapper() {
-  return this.database;
-};
-prototype["getGuildEmojis"] = function getGuildEmojis(guildId) {
-  const database = this.database;
-  return database.getNullablePartition(guildId);
-};
 RawGuildEmojiStore.displayName = "RawGuildEmojiStore";
-const LibdiscoreBatchStoreRefactorExperiment = fn(559).LibdiscoreBatchStoreRefactorExperiment;
-const rawGuildEmojiStore = new RawGuildEmojiStore(
-  {
-    LOGOUT(arg0, clear) {
-      return clear.clear();
-    },
-    BACKGROUND_SYNC(arg0, clear) {
-      return clear.clear();
-    },
-    RESET_SOCKET(arg0, clear) {
-      return clear.clear();
-    },
-    CONNECTION_OPEN(arg0, getPartitionKeys) {
-      ({ guilds, unavailableGuilds } = arg0);
-      const set = new Set(guilds.map((id) => id.id));
-      for (const item10017 of unavailableGuilds) {
-        let addResult = set.add(item10017);
-        continue;
-      }
-      const partitionKeys = getPartitionKeys.getPartitionKeys();
-      for (const item10028 of partitionKeys) {
-        if (!set.has(item10028)) {
-          let removePartitionResult = arg1.removePartition(item10028);
-        }
-        continue;
-      }
-      const iter = guilds[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        let tmp8 = syncEmojis(nextResult.id, nextResult.emojis, getPartitionKeys);
-        continue;
-      }
-    },
-    OVERLAY_INITIALIZE(emojis, clear) {
-      const partition = clear;
-      clear.clear();
-      const entries = Object.entries(emojis.emojis);
-      const item = entries.forEach((item) => {
-        [tmp, tmp2] = item;
-        partition.setPartition(tmp, fromServer(tmp, tmp2));
-      });
-    },
-    CACHED_EMOJIS_LOADED(arg0, setPartition) {
-      while (tmp !== undefined) {
-        let tmp4 = _slicedToArray(tmp2, 2);
-        let first = tmp4[0];
-        let setPartitionResult = setPartition.setPartition(first, fromServer(first, tmp4[1]));
-        continue;
-      }
-      tmp = arg0.emojis[Symbol.iterator]();
-    },
-    GUILD_CREATE(guild, setPartition) {
-      syncEmojis(guild.guild.id, guild.guild.emojis, setPartition);
-    },
-    GUILD_UPDATE(guild, setPartition) {
-      setPartition.setPartition(guild.guild.id, fromServer(guild.guild.id, guild.guild.emojis));
-    },
-    GUILD_EMOJIS_UPDATE(guildId, setPartition) {
-      setPartition.setPartition(guildId.guildId, fromServer(guildId.guildId, guildId.emojis));
-    },
-    GUILD_DELETE(guild, removePartition) {
-      removePartition.removePartition(guild.guild.id);
-    },
+let obj = {
+  LOGOUT(arg0, clear) {
+    return clear.clear();
   },
+  BACKGROUND_SYNC(arg0, clear) {
+    return clear.clear();
+  },
+  RESET_SOCKET(arg0, clear) {
+    return clear.clear();
+  },
+  CONNECTION_OPEN(arg0, getPartitionKeys) {
+    let guilds;
+    let unavailableGuilds;
+    ({ guilds, unavailableGuilds } = arg0);
+    set = new Set(guilds.map((id) => id.id));
+    for (const item10017 of unavailableGuilds) {
+      let addResult = set.add(item10017);
+      continue;
+    }
+    const partitionKeys = getPartitionKeys.getPartitionKeys();
+    for (const item10028 of partitionKeys) {
+      if (!set.has(item10028)) {
+        let removePartitionResult = getPartitionKeys.removePartition(item10028);
+      }
+      continue;
+    }
+    const iter = guilds[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp8 = syncEmojis(nextResult.id, nextResult.emojis, getPartitionKeys);
+      continue;
+    }
+  },
+  OVERLAY_INITIALIZE(emojis, clear) {
+    clear.clear();
+    const entries = Object.entries(emojis.emojis);
+    const item = entries.forEach((item) => {
+      let tmp;
+      let tmp2;
+      [tmp, tmp2] = item;
+      clear.setPartition(tmp, fromServer(tmp, tmp2));
+    });
+  },
+  CACHED_EMOJIS_LOADED(arg0, setPartition) {
+    const tmp = arg0.emojis[Symbol.iterator]();
+    while (tmp !== undefined) {
+      let tmp4 = _slicedToArray(tmp2, 2);
+      let first = tmp4[0];
+      let setPartitionResult = setPartition.setPartition(first, fromServer(first, tmp4[1]));
+      continue;
+    }
+  },
+  GUILD_CREATE(guild, setPartition) {
+    syncEmojis(guild.guild.id, guild.guild.emojis, setPartition);
+  },
+  GUILD_UPDATE(guild, setPartition) {
+    setPartition.setPartition(guild.guild.id, fromServer(guild.guild.id, guild.guild.emojis));
+  },
+  GUILD_EMOJIS_UPDATE(guildId, setPartition) {
+    setPartition.setPartition(guildId.guildId, fromServer(guildId.guildId, guildId.emojis));
+  },
+  GUILD_DELETE(guild, removePartition) {
+    removePartition.removePartition(guild.guild.id);
+  },
+};
+const LibdiscoreBatchStoreRefactorExperiment = libdiscoreExperiments.LibdiscoreBatchStoreRefactorExperiment;
+const rawGuildEmojiStore = new RawGuildEmojiStore(
+  obj,
   LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode(),
 );
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/RawGuildEmojiStore.tsx");
 
 export default rawGuildEmojiStore;

@@ -3,6 +3,8 @@ import ChannelListLayoutTypes from "../main_tabs_v2/ChannelListLayoutTypes.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let MessageEmbedTypes;
+let SearchTypes;
 ({ MessageEmbedTypes, SearchTypes } = Constants);
 const obj = {
   Messages: 0,
@@ -35,6 +37,14 @@ const items1 = [, ,];
 const items2 = [, , ,];
 ({ MEDIA: arr3[0], LINKS: arr3[1], PINS: arr3[2], FILES: arr3[3] } = obj2);
 const items3 = [, , , , ,];
+const obj3 = {
+  [obj2.RECENT]: obj.Media,
+  [obj2.MEDIA]: obj.Media,
+  [obj2.PINS]: obj.Pins,
+  [obj2.MESSAGES]: obj.Messages,
+  [obj2.LINKS]: obj.Link,
+  [obj2.FILES]: obj.File,
+};
 ({ RECENT: arr4[0], PEOPLE: arr4[1], MEDIA: arr4[2], PINS: arr4[3], LINKS: arr4[4], FILES: arr4[5] } = obj2);
 const items4 = [, , , , ,];
 ({ PEOPLE: arr5[0], MESSAGES: arr5[1], MEDIA: arr5[2], PINS: arr5[3], LINKS: arr5[4], FILES: arr5[5] } = obj2);
@@ -88,15 +98,10 @@ const items12 = [, , , , ,];
 ({ MEMBERS: arr13[0], MESSAGES: arr13[1], MEDIA: arr13[2], PINS: arr13[3], LINKS: arr13[4], FILES: arr13[5] } = obj2);
 const items13 = [, ,];
 ({ IMAGE: arr14[0], VIDEO: arr14[1], GIFV: arr14[2] } = MessageEmbedTypes);
-const obj3 = {
-  [obj2.RECENT]: obj.Media,
-  [obj2.MEDIA]: obj.Media,
-  [obj2.PINS]: obj.Pins,
-  [obj2.MESSAGES]: obj.Messages,
-  [obj2.LINKS]: obj.Link,
-  [obj2.FILES]: obj.File,
-};
 const set = new Set(items);
+const COZY = ChannelListLayoutTypes.ChannelListLayoutTypes.COZY;
+const FILES = obj2.FILES;
+const set1 = new Set(items13);
 const result = size.fileFinishedImporting("modules/search/SearchConstants.tsx");
 
 export const SearchAutocompleteSelectAnalyticsActions = { KEY_PRESS: "key_press", CLICK: "click" };
@@ -186,12 +191,12 @@ export const MESSAGE_ESTIMATED_ITEM_SIZE = 110;
 export const CARD_ESTIMATED_ITEM_SIZE = 150;
 export const RECENTS_ESTIMATED_ITEM_SIZE = 64;
 export const MESSAGE_PLACEHOLDER_ITEM_SIZE = 64;
-export const CHANNEL_LIST_SEARCH_LAYOUT = ChannelListLayoutTypes.ChannelListLayoutTypes.COZY;
+export const CHANNEL_LIST_SEARCH_LAYOUT = COZY;
 export const EMPTY_VOICE_STATES = [];
 export const EMPTY_SEARCH_TAB_COUNTS = {};
 export const FADE_LAYOUT_ANIMATION_DURATION = 350;
 export const EMPTY_SEARCH_QUERY_STRING = "";
-export const SEARCH_MESSAGE_TAB_SENTINEL = obj2.FILES;
+export const SEARCH_MESSAGE_TAB_SENTINEL = FILES;
 export const MAX_SEARCH_RESULTS_LIMIT = 25;
 export const SearchMediaTypes = { AUDIO: "audio", EMBED: "embed", ATTACHMENT: "attachment", COMPONENT: "component" };
 export const SearchLinkTypes = { TEXT: "text", EMBED: "embed" };
@@ -205,4 +210,4 @@ export const SearchQuerySource = {
   SEARCH_XDM_SETTINGS: "search_xdm_settings",
   SEARCH_RESULTS_HINT: "search_results_hint",
 };
-export const EMBED_TYPES_WITHOUT_DESCRIPTION = new Set(items13);
+export const EMBED_TYPES_WITHOUT_DESCRIPTION = set1;

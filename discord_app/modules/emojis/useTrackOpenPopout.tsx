@@ -1,40 +1,49 @@
 // discord_app/modules/emojis/useTrackOpenPopout.tsx
+import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import EmojiConstants from "EmojiConstants.tsx";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
 import useMountEffectDefault from "../../hooks/useMountEffect.tsx";
 import emojis_EmojiActionCreators from "EmojiActionCreators.tsx";
-import noop from "../../../_runtime/metro/00019__.js";
+import react from "../../../_runtime/00019_react.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const EmojiInteractionPoint = fn(1380).EmojiInteractionPoint;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const size = fn(2);
+const EmojiInteractionPoint = EmojiConstants.EmojiInteractionPoint;
+const AnalyticEvents = Constants.AnalyticEvents;
 let result = size.fileFinishedImporting("modules/emojis/useTrackOpenPopout.tsx");
 
 export const useTrackOpenPopout = (cResult) => {
+  let analyticsType;
+  let currentGuildId;
+  let nonce;
   ({ currentGuildId, popoutData: require, nonce: importDefault, demoMode: dependencyMap } = cResult);
   let current;
+  let obj = { guild_id: currentGuildId, emoji_id: cResult.emojiId };
+  const useRef = current.useRef;
+  let obj2 = AppAnalyticsUtils;
   let merged = Object.assign(
-    AppAnalyticsUtils.collectChannelAnalyticsMetadata(
-      ChannelStore.getChannel(SelectedChannelStore.getChannelId(currentGuildId)),
-    ),
+    obj2.collectChannelAnalyticsMetadata(ChannelStore.getChannel(SelectedChannelStore.getChannelId(currentGuildId))),
   );
-  current = current.useRef({ guild_id: currentGuildId, emoji_id: cResult.emojiId }).current;
+  current = useRef(obj).current;
   useMountEffectDefault(() => {
-    const result = emojis_EmojiActionCreators.initiateEmojiInteraction(EmojiInteractionPoint.TrackOpenPopoutUsed);
+    const obj = emojis_EmojiActionCreators;
+    const result = obj.initiateEmojiInteraction(EmojiInteractionPoint.TrackOpenPopoutUsed);
     if (!dependencyMap) {
       let str;
-      if (analyticsType != null) {
-        str = analyticsType.analyticsType;
+      const track = AnalyticsUtilsDefault.track;
+      const OPEN_POPOUT = AnalyticEvents.OPEN_POPOUT;
+      AnalyticsUtilsDefault;
+      if (require != null) {
+        str = require.analyticsType;
       }
       if (str == null) {
         str = "Standard Emoji Popout";
       }
-      const obj3 = { type: str, nonce };
+      const obj2 = { type: str, nonce: importDefault };
       const merged = Object.assign(current);
-      AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, obj3);
+      track(OPEN_POPOUT, obj2);
     }
   });
   return current;

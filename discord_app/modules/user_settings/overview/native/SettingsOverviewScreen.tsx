@@ -1,24 +1,43 @@
 // discord_app/modules/user_settings/overview/native/SettingsOverviewScreen.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import util from "../../../../intl/index.native.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import intl8 from "../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
 import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingListRenderer from "../../../settings/native/renderer/SettingListRenderer.tsx";
 import MobileNotifSettings from "../../notifications/native/codegen/MobileNotifSettings.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
 function getOverviewSettings(isPremiumUser) {
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let intl6;
+  let intl7;
+  let items;
+  let items10;
+  let items2;
+  let items3;
+  let items4;
+  let items5;
+  let items6;
+  let items7;
+  let items8;
+  let items9;
   isPremiumUser = isPremiumUser.isPremiumUser;
-  const obj = { label: null, settings: null };
-  const intl = util.intl;
-  obj.label = intl.string(util.t.C6COaT);
+  const obj = { label: intl.string(intl8.t.C6COaT), settings: items.filter(GlobalUtils.isNotNullish) };
+  intl = intl8.intl;
   let PREMIUM = null;
   if (!isPremiumUser) {
     PREMIUM = MobileUserSettings.PREMIUM;
   }
-  const items = [PREMIUM, , , , , , , , , ,];
+  items = [PREMIUM, , , , , , , , , ,];
   ({
     ACCOUNT: arr[1],
     CONTENT_AND_SOCIAL: arr[2],
@@ -31,12 +50,10 @@ function getOverviewSettings(isPremiumUser) {
     CLIPS: arr[9],
     SCAN_QR_CODE: arr[10],
   } = MobileUserSettings);
-  obj.settings = items.filter(GlobalUtils.isNotNullish);
   const items1 = [obj, , , , , , , , ,];
-  const obj2 = { label: null, settings: null };
-  const intl2 = util.intl;
-  obj2.label = intl2.string(util.t["SuS+RB"]);
-  const items2 = [, , , , , , ,];
+  const obj2 = { label: intl2.string(intl8.t["SuS+RB"]), settings: items2.filter(GlobalUtils.isNotNullish) };
+  intl2 = intl8.intl;
+  items2 = [, , , , , , ,];
   ({ COLLECTIBLES_SHOP: arr3[0], QUEST_HOME: arr3[1] } = MobileUserSettings);
   let PREMIUM1 = null;
   if (isPremiumUser) {
@@ -50,12 +67,10 @@ function getOverviewSettings(isPremiumUser) {
     GUILD_ROLE_SUBSCRIPTIONS: arr3[6],
     PREMIUM_RESTORE_SUBSCRIPTION: arr3[7],
   } = MobileUserSettings);
-  obj2.settings = items2.filter(GlobalUtils.isNotNullish);
   items1[1] = obj2;
-  const obj3 = { label: null, settings: null };
-  const intl3 = util.intl;
-  obj3.label = intl3.string(util.t.f2n1TP);
-  const items3 = [, , , , , , , , , ,];
+  const obj3 = { label: intl3.string(intl8.t.f2n1TP), settings: items3.filter(GlobalUtils.isNotNullish) };
+  intl3 = intl8.intl;
+  items3 = [, , , , , , , , , ,];
   ({
     VOICE: arr4[0],
     APPEARANCE: arr4[1],
@@ -68,29 +83,22 @@ function getOverviewSettings(isPremiumUser) {
   } = MobileUserSettings);
   items3[8] = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
   ({ APP_ICONS: arr4[9], ADVANCED: arr4[10] } = MobileUserSettings);
-  obj3.settings = items3.filter(GlobalUtils.isNotNullish);
   items1[2] = obj3;
-  const obj4 = { label: null, settings: null };
-  const intl4 = util.intl;
-  obj4.label = intl4.string(util.t["Yl/Riu"]);
-  const items4 = [, ,];
+  const obj4 = { label: intl4.string(intl8.t["Yl/Riu"]), settings: items4 };
+  intl4 = intl8.intl;
+  items4 = [, ,];
   ({ SUPPORT: arr5[0], UPLOAD_DEBUG_LOGS: arr5[1], ACKNOWLEDGEMENTS: arr5[2] } = MobileUserSettings);
-  obj4.settings = items4;
   items1[3] = obj4;
-  const obj5 = { label: null, settings: null };
-  const intl5 = util.intl;
-  obj5.label = intl5.string(util.t.LRmNAl);
-  const items5 = [MobileUserSettings.CHANGE_LOG];
-  obj5.settings = items5;
+  const obj5 = { label: intl5.string(intl8.t.LRmNAl), settings: items5 };
+  intl5 = intl8.intl;
+  items5 = [MobileUserSettings.CHANGE_LOG];
   items1[4] = obj5;
-  const obj6 = { settings: null };
-  const items6 = [MobileUserSettings.LOGOUT];
-  obj6.settings = items6;
+  const obj6 = { settings: items6 };
+  items6 = [MobileUserSettings.LOGOUT];
   items1[5] = obj6;
-  const obj7 = { label: null, settings: null };
-  const intl6 = util.intl;
-  obj7.label = intl6.string(util.t.CbItOL);
-  const items7 = [, , , , , ,];
+  const obj7 = { label: intl6.string(intl8.t.CbItOL), settings: items7 };
+  intl6 = intl8.intl;
+  items7 = [, , , , , ,];
   ({
     APP_VERSION: arr8[0],
     DEVICE_INFO: arr8[1],
@@ -100,71 +108,75 @@ function getOverviewSettings(isPremiumUser) {
     REACT_COMPILER: arr8[5],
     UPLOAD_INTL_DATA: arr8[6],
   } = MobileUserSettings);
-  obj7.settings = items7;
   items1[6] = obj7;
-  const obj8 = { label: null, settings: null };
-  const intl7 = util.intl;
-  obj8.label = intl7.string(util.t["/tZh0A"]);
-  const items8 = [,];
+  const obj8 = { label: intl7.string(intl8.t["/tZh0A"]), settings: items8 };
+  intl7 = intl8.intl;
+  items8 = [,];
   ({ BUG_REPORTER: arr9[0], CREATE_BUG_REPORT: arr9[1] } = MobileUserSettings);
-  obj8.settings = items8;
   items1[7] = obj8;
-  const obj9 = { label: "Build Status", settings: null };
-  const items9 = [, , ,];
+  const obj9 = { label: "Build Status", settings: items9 };
+  items9 = [, , ,];
   ({
     INTERNAL_BUILD_ACTIVE: arr10[0],
     INTERNAL_BUILD_UPDATE: arr10[1],
     BUILD_OVERRIDE_ACTIVE: arr10[2],
     EXPERIMENT_OVERRIDE_ACTIVE: arr10[3],
   } = MobileUserSettings);
-  obj9.settings = items9;
   items1[8] = obj9;
-  const obj10 = { label: "Staff Settings", settings: null };
-  const items10 = [, ,];
+  const obj10 = { label: "Staff Settings", settings: items10 };
+  items10 = [, ,];
   ({ SHOW_DEV_WIDGET: arr11[0], SHOW_DEV_TOOLS: arr11[1], DESIGN_SYSTEMS: arr11[2] } = MobileUserSettings);
-  obj10.settings = items10;
   items1[9] = obj10;
   return items1;
 }
-const MobileUserSettings = fn(7634).MobileUserSettings;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(4);
-      const hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
+      let obj4;
+      let tmp5;
+      let tmp9;
+      const obj = react2;
+      const cResult = obj.c(4);
+      const obj2 = PremiumUtils;
+      const hasPremiumSubscriptionToDisplay = obj2.useHasPremiumSubscriptionToDisplay();
       if (cResult[0] !== hasPremiumSubscriptionToDisplay) {
-        const obj3 = { sections: null };
-        const obj4 = { isPremiumUser: hasPremiumSubscriptionToDisplay };
-        obj3.sections = getOverviewSettings(obj4);
-        const list = SettingBuilders.createList(obj3);
+        const obj3 = { sections: getOverviewSettings(obj4) };
+        obj4 = { isPremiumUser: hasPremiumSubscriptionToDisplay };
+        const createList = SettingBuilders.createList;
+        SettingBuilders;
+        const list = createList(obj3);
         cResult[0] = hasPremiumSubscriptionToDisplay;
         cResult[1] = list;
-        let tmp5 = list;
-        const tmpResult = SettingBuilders;
+        tmp5 = list;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] !== tmp5) {
-        const obj5 = { node: tmp5 };
-        const tmp10 = jsx(SettingListRenderer.SearchableSettingsList, { node: tmp5 });
+        const tmp11 = jsx(SettingListRenderer.SearchableSettingsList, { node: tmp5 });
         cResult[2] = tmp5;
-        cResult[3] = tmp10;
-        let tmp8 = tmp10;
+        cResult[3] = tmp11;
+        tmp9 = tmp11;
       } else {
-        tmp8 = cResult[3];
+        tmp9 = cResult[3];
       }
-      return tmp8;
+      return tmp9;
     }
   : () => {
-      hasPremiumSubscriptionToDisplay = hasPremiumSubscriptionToDisplay(4528).useHasPremiumSubscriptionToDisplay();
+      let hasPremiumSubscriptionToDisplay;
+      let obj = hasPremiumSubscriptionToDisplay(4528);
+      hasPremiumSubscriptionToDisplay = obj.useHasPremiumSubscriptionToDisplay();
       const items = [hasPremiumSubscriptionToDisplay];
-      const node = noop.useMemo(() => {
-        const obj2 = { sections: getOverviewSettings({ isPremiumUser: hasPremiumSubscriptionToDisplay }) };
-        return SettingBuilders.createList(obj2);
+      const node = react.useMemo(() => {
+        let obj2;
+        const obj = { sections: getOverviewSettings(obj2) };
+        const createList = SettingBuilders.createList;
+        obj2 = { isPremiumUser: hasPremiumSubscriptionToDisplay };
+        SettingBuilders;
+        return createList(obj);
       }, items);
       return jsx(hasPremiumSubscriptionToDisplay(14500).SearchableSettingsList, { node });
     };
+const result = size.fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");
+
+export default tmp2;

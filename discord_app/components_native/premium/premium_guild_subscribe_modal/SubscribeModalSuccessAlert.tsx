@@ -1,119 +1,127 @@
 // discord_app/components_native/premium/premium_guild_subscribe_modal/SubscribeModalSuccessAlert.tsx
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl4 from "../../../intl/index.native.tsx";
+import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
-import BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
-import common_AlertDefault from "../../common/Alert.tsx";
+import AlertDefault from "../../common/Alert.tsx";
+import ColorConstants from "../../../modules/colors/native/ColorConstants.tsx";
 import _mod13430 from "../../../../_runtime/metro/13430__.js";
 import SequencedLottieAnimationViewDefault from "../../common/SequencedLottieAnimationView.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
-const Gradients = fn(6938).Gradients;
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+const require = globalThis.__r;
+let dependencyMap, guildId, importDefault;
+
+let c10;
+let c9;
+let hasOwnProperty;
+let metroRequire;
+let obj2;
+let obj3;
+({ View: hasOwnProperty, Image: metroRequire } = react_native);
+const Gradients = ColorConstants.Gradients;
+({ jsx: c9, jsxs: c10 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
   wrapper: { paddingHorizontal: 24, paddingBottom: 16, paddingTop: 4, alignItems: "stretch" },
   animation: { width: "auto", height: 112, alignSelf: "center" },
   text: { lineHeight: 18, textAlign: "center" },
-  activated: { padding: 2, borderRadius: nativeDefault.radii.xs, marginTop: 8 },
-  activatedBackground: null,
-  activatedImage: null,
-  successInfo: null,
+  activated: obj2,
+  activatedBackground: obj3,
+  activatedImage: { width: 220 },
+  successInfo: { marginTop: 24 },
 };
-let obj3 = { padding: 2, borderRadius: nativeDefault.radii.xs, marginTop: 8 };
-obj2.activatedBackground = {
+obj2 = { padding: 2, borderRadius: nativeDefault.radii.xs, marginTop: 8 };
+createStyles = createStyles.createStyles;
+obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   paddingVertical: 12,
   paddingHorizontal: 20,
   alignItems: "center",
 };
-obj2.activatedImage = { width: 220 };
-obj2.successInfo = { marginTop: 24 };
-let closure_11 = createStyles.createStyles(obj2);
-let obj5 = { ENTRY: "entry", IDLE: "idle" };
-const sceneSegments = { [obj5.ENTRY]: { BEG: 0, END: 180 }, [obj5.IDLE]: { BEG: 180, END: 360 } };
-let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_11 = createStyles(obj);
+let obj4 = { ENTRY: "entry", IDLE: "idle" };
+const sceneSegments = { [obj4.ENTRY]: { BEG: 0, END: 180 }, [obj4.IDLE]: { BEG: 180, END: 360 } };
+let ReactCompilerGating = ReactCompilerGating_mod;
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(6);
+      let first;
+      let loop;
+      let nextScene;
+      let onSceneComplete;
+      const obj = react2;
+      const cResult = obj.c(6);
       ({ nextScene, onSceneComplete, loop } = arg0);
       const tmp4 = closure_11();
+      const animation = tmp4.animation;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmpResult = _mod13430;
         cResult[0] = tmpResult;
-        let first = tmpResult;
+        first = tmpResult;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === loop) {
         if (cResult[2] === nextScene) {
           if (cResult[3] === onSceneComplete) {
+            let tmp7;
             if (cResult[4] === tmp4.animation) {
-              let tmp7 = cResult[5];
+              tmp7 = cResult[5];
             }
             return tmp7;
           }
         }
       }
-      const tmp8 = options(SequencedLottieAnimationViewDefault, {
-        nextScene,
-        onSceneComplete,
-        loop,
-        sceneSegments,
-        style: tmp4.animation,
-        source: first,
-      });
+      const obj2 = { nextScene, onSceneComplete, loop, sceneSegments, style: animation, source: first };
+      const tmp8 = React4(SequencedLottieAnimationViewDefault, obj2);
       cResult[1] = loop;
       cResult[2] = nextScene;
       cResult[3] = onSceneComplete;
       cResult[4] = tmp4.animation;
       cResult[5] = tmp8;
       tmp7 = tmp8;
-      const obj2 = { nextScene, onSceneComplete, loop, sceneSegments, style: tmp4.animation, source: first };
     }
   : (arg0) => {
+      let loop;
+      let nextScene;
+      let onSceneComplete;
       ({ nextScene, onSceneComplete, loop } = arg0);
-      const obj = { nextScene, onSceneComplete, loop, sceneSegments, style: closure_11().animation, source: null };
-      const tmp = closure_11();
-      obj.source = _mod13430;
-      return options(SequencedLottieAnimationViewDefault, obj);
+      const obj = { nextScene, onSceneComplete, loop, sceneSegments, style: closure_11().animation, source: _mod13430 };
+      const tmp2 = SequencedLottieAnimationViewDefault;
+      return React4(tmp2, obj);
     };
-let closure_13 = tmp4;
-tmp4.Scenes = obj5;
-ReactCompilerGating = fn(558);
-let obj4 = {
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-  paddingVertical: 12,
-  paddingHorizontal: 20,
-  alignItems: "center",
-};
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "components_native/premium/premium_guild_subscribe_modal/SubscribeModalSuccessAlert.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_13 = tmp5;
+tmp5.Scenes = obj4;
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      const cResult = guildId(576).c(42);
+      let first;
+      let tmp14;
+      let tmp16;
+      let tmp7;
+      const f114780 = (premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription;
+      let obj = guildId(576);
+      const cResult = obj.c(42);
       guildId = guildId.guildId;
       const guildBoostSlots = guildId.guildBoostSlots;
       const tmp4 = closure_11();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -123,18 +131,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = guildId;
         cResult[2] = fn;
-        let tmp7 = fn;
+        tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
-      let obj = guildId(576);
-      const stateFromStores = guildId(504).useStateFromStores(first, tmp7);
+      const tmpResult = guildId(504);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
       if (cResult[3] !== guildBoostSlots) {
-        const tmp11 =
-          null != guildBoostSlots &&
-          guildBoostSlots.some((premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription);
         cResult[3] = guildBoostSlots;
-        cResult[4] = tmp11;
+        cResult[4] = null != guildBoostSlots && guildBoostSlots.some(f114780);
+        const tmp11 = null != guildBoostSlots && guildBoostSlots.some(f114780);
       }
       let num6;
       if (guildBoostSlots != null) {
@@ -143,21 +149,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (num6 == null) {
         num6 = 1;
       }
-      const tmpResult = guildId(504);
-      [tmp14, importDefault] = noop.useState(Scenes.Scenes.ENTRY);
-      const tmp13 = _slicedToArray(noop.useState(Scenes.Scenes.ENTRY), 2);
-      [tmp16, dependencyMap] = noop.useState(false);
-      const tmp15 = _slicedToArray(noop.useState(false), 2);
+      [tmp14, importDefault] = react.useState(Scenes.Scenes.ENTRY);
+      _slicedToArray(react.useState(Scenes.Scenes.ENTRY), 2);
+      [tmp16, dependencyMap] = react.useState(false);
+      _slicedToArray(react.useState(false), 2);
+      const tmp17 = useThemeDefault();
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t.YKxJCI);
+        const stringResult = intl.string(guildId(1126).t.YKxJCI);
         class G {
           constructor() {
-            obj = closure_1(closure_2[15]);
-            closeResult = obj.close();
-            obj2 = guildId(closure_2[16]);
-            closeApplyBoostModalResult = obj2.closeApplyBoostModal();
-            return;
+            const obj = actions_AlertActionCreatorsDefault;
+            obj.close();
+            const obj2 = guildId(dependencyMap[16]);
+            obj2.closeApplyBoostModal();
           }
         }
         cResult[5] = stringResult;
@@ -166,42 +171,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         class R {
           constructor(arg0) {
-            tmp = f63899;
-            if (f63899.Scenes.ENTRY === guildId) {
-              tmp3 = closure_1;
-              return closure_1(tmp.Scenes.IDLE);
-            } else if (tmp.Scenes.IDLE === guildId) {
-              tmp2 = closure_2;
-              flag = true;
-              return closure_2(true);
-            } else {
-              return;
+            if (Scenes.Scenes.ENTRY === arg0) {
+              return importDefault(Scenes.Scenes.IDLE);
+            } else if (Scenes.Scenes.IDLE === arg0) {
+              return dependencyMap(true);
             }
           }
         }
         cResult[7] = R;
         class G {
           constructor() {
-            obj = closure_1(closure_2[15]);
-            closeResult = obj.close();
-            obj2 = guildId(closure_2[16]);
-            closeApplyBoostModalResult = obj2.closeApplyBoostModal();
-            return;
+            const obj = actions_AlertActionCreatorsDefault;
+            obj.close();
+            const obj2 = guildId(dependencyMap[16]);
+            obj2.closeApplyBoostModal();
           }
         }
       } else {
         class R {
           constructor(arg0) {
-            tmp = f63899;
-            if (f63899.Scenes.ENTRY === guildId) {
-              tmp3 = closure_1;
-              return closure_1(tmp.Scenes.IDLE);
-            } else if (tmp.Scenes.IDLE === guildId) {
-              tmp2 = closure_2;
-              flag = true;
-              return closure_2(true);
-            } else {
-              return;
+            if (Scenes.Scenes.ENTRY === arg0) {
+              return importDefault(Scenes.Scenes.IDLE);
+            } else if (Scenes.Scenes.IDLE === arg0) {
+              return dependencyMap(true);
             }
           }
         }
@@ -209,82 +201,77 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[8] === tmp14) {
         class R {
           constructor(arg0) {
-            tmp = f63899;
-            if (f63899.Scenes.ENTRY === guildId) {
-              tmp3 = closure_1;
-              return closure_1(tmp.Scenes.IDLE);
-            } else if (tmp.Scenes.IDLE === guildId) {
-              tmp2 = closure_2;
-              flag = true;
-              return closure_2(true);
-            } else {
-              return;
+            if (Scenes.Scenes.ENTRY === arg0) {
+              return importDefault(Scenes.Scenes.IDLE);
+            } else if (Scenes.Scenes.IDLE === arg0) {
+              return dependencyMap(true);
             }
           }
         }
+        const tmpResult2 = guildId(4729);
         if (tmpResult2.isThemeLight(tmp17)) {
           class R {
             constructor(arg0) {
-              tmp = f63899;
-              if (f63899.Scenes.ENTRY === guildId) {
-                tmp3 = closure_1;
-                return closure_1(tmp.Scenes.IDLE);
-              } else if (tmp.Scenes.IDLE === guildId) {
-                tmp2 = closure_2;
-                flag = true;
-                return closure_2(true);
-              } else {
-                return;
+              if (Scenes.Scenes.ENTRY === arg0) {
+                return importDefault(Scenes.Scenes.IDLE);
+              } else if (Scenes.Scenes.IDLE === arg0) {
+                return dependencyMap(true);
               }
             }
           }
         } else {
           class R {
             constructor(arg0) {
-              tmp = f63899;
-              if (f63899.Scenes.ENTRY === guildId) {
-                tmp3 = closure_1;
-                return closure_1(tmp.Scenes.IDLE);
-              } else if (tmp.Scenes.IDLE === guildId) {
-                tmp2 = closure_2;
-                flag = true;
-                return closure_2(true);
-              } else {
-                return;
+              if (Scenes.Scenes.ENTRY === arg0) {
+                return importDefault(Scenes.Scenes.IDLE);
+              } else if (Scenes.Scenes.IDLE === arg0) {
+                return dependencyMap(true);
               }
             }
           }
         }
         class G {
           constructor() {
-            obj = closure_1(closure_2[15]);
-            closeResult = obj.close();
-            obj2 = guildId(closure_2[16]);
-            closeApplyBoostModalResult = obj2.closeApplyBoostModal();
-            return;
+            const obj = actions_AlertActionCreatorsDefault;
+            obj.close();
+            const obj2 = guildId(dependencyMap[16]);
+            obj2.closeApplyBoostModal();
           }
         }
-        const obj2 = { style: tmp4.activatedImage, source: tmp23 };
-        const tmp27 = closure_9(closure_6, obj2);
+        let obj2 = { style: tmp4.activatedImage, source: tmp23 };
         cResult[11] = tmp4.activatedImage;
         cResult[12] = tmp23;
-        cResult[13] = tmp27;
-        tmpResult2 = tmp(4729);
+        cResult[13] = closure_9(closure_6, obj2);
+        const tmp27 = closure_9(closure_6, obj2);
       }
-      tmp17 = useThemeDefault();
       cResult[8] = tmp14;
       cResult[9] = tmp16;
       cResult[10] = closure_9(Scenes, { nextScene: tmp14, loop: tmp16, onSceneComplete: tmp21 });
-      const tmp22 = closure_9(Scenes, { nextScene: tmp14, loop: tmp16, onSceneComplete: tmp21 });
+      closure_9(Scenes, { nextScene: tmp14, loop: tmp16, onSceneComplete: tmp21 });
     }
   : (arg0) => {
+      let closure_1;
+      let closure_2;
+      let first;
+      let first1;
+      let guildBoostSlots;
+      let intl;
+      let intl3;
+      let items1;
+      let items3;
+      let obj11;
+      let obj5;
+      let obj6;
+      let stringResult;
+      let tmp10Result;
       ({ guildId: require, guildBoostSlots } = arg0);
       importDefault = undefined;
       dependencyMap = undefined;
       const tmp = closure_11();
+      let obj = get_initialized;
       const items = [GuildStore];
       let someResult = null != guildBoostSlots;
-      const stateFromStores = initialize.useStateFromStores(items, () => GuildStore.getGuild(require));
+      const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(require));
       if (someResult) {
         someResult = guildBoostSlots.some(
           (premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription,
@@ -297,81 +284,76 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (num == null) {
         num = 1;
       }
-      const tmp6 = _slicedToArray(noop.useState(Scenes.Scenes.ENTRY), 2);
-      importDefault = tmp6[1];
-      const tmp7 = _slicedToArray(noop.useState(false), 2);
-      dependencyMap = tmp7[1];
-      const obj2 = { style: tmp.wrapper, confirmText: null, onConfirm: null, children: null };
-      const tmp9 = useThemeDefault();
-      const intl = util.intl;
-      obj2.confirmText = intl.string(util.t.YKxJCI);
-      obj2.onConfirm = function onConfirm() {
-        closure_1(5708).close();
-        const obj = closure_1(5708);
-        BoostingActionCreators.closeApplyBoostModal();
+      [first, importDefault] = react.useState(Scenes.Scenes.ENTRY);
+      [first1, dependencyMap] = react.useState(false);
+      let obj2 = {
+        style: tmp.wrapper,
+        confirmText: intl.string(intl4.t.YKxJCI),
+        onConfirm() {
+          const obj = closure_1(closure_2[15]);
+          obj.close();
+          const obj2 = require("BoostingActionCreators");
+          obj2.closeApplyBoostModal();
+        },
+        children: items1,
       };
-      const items1 = [
-        closure_9(Scenes, {
-          nextScene: tmp6[0],
-          loop: tmp7[0],
-          onSceneComplete(currentScene) {
-            if (Scenes.Scenes.ENTRY === currentScene) {
-              return closure_1(Scenes.Scenes.IDLE);
-            } else if (Scenes.Scenes.IDLE === currentScene) {
-              return dependencyMap(true);
-            }
-          },
-        }),
-      ];
-      const obj4 = { style: tmp.activated, start: null, end: null, colors: null, children: null };
+      const tmp11 = useThemeDefault();
+      const tmp13 = AlertDefault;
+      intl = intl4.intl;
+      items1 = [,];
       const obj3 = {
-        nextScene: tmp6[0],
-        loop: tmp7[0],
+        nextScene: first,
+        loop: first1,
         onSceneComplete(currentScene) {
           if (Scenes.Scenes.ENTRY === currentScene) {
             return closure_1(Scenes.Scenes.IDLE);
           } else if (Scenes.Scenes.IDLE === currentScene) {
-            return dependencyMap(true);
+            return closure_2(true);
           }
         },
       };
-      const tmp11 = common_AlertDefault;
-      obj4.start = ConstantsIOS.HorizontalGradient.START;
-      obj4.end = ConstantsIOS.HorizontalGradient.END;
-      obj4.colors = Gradients.PREMIUM_GUILD;
-      const obj5 = { style: tmp.activatedBackground, children: null };
-      const obj6 = { style: tmp.activatedImage, source: null };
-      const tmp14 = LinearGradientDefault;
-      if (tmp2Result.isThemeLight(tmp9)) {
-        let tmp8Result = tmp8(13432);
+      items1[0] = closure_9(Scenes, obj3);
+      const obj4 = {
+        style: tmp.activated,
+        start: ConstantsIOS.HorizontalGradient.START,
+        end: ConstantsIOS.HorizontalGradient.END,
+        colors: Gradients.PREMIUM_GUILD,
+        children: closure_9(closure_5, obj5),
+      };
+      const tmp16 = LinearGradientDefault;
+      obj5 = { style: tmp.activatedBackground, children: closure_9(closure_6, obj6) };
+      obj6 = { style: tmp.activatedImage, source: tmp10Result };
+      const tmp2Result = shared;
+      if (tmp2Result.isThemeLight(tmp11)) {
+        tmp10Result = tmp10(13432);
       } else {
-        tmp8Result = tmp8(13433);
+        tmp10Result = tmp10(13433);
       }
-      obj6.source = tmp8Result;
-      obj5.children = closure_9(closure_6, obj6);
-      obj4.children = closure_9(closure_5, obj5);
-      const items2 = [closure_9(tmp14, obj4)];
-      const obj7 = { style: tmp.successInfo, children: null };
-      const obj8 = { style: tmp.text, variant: "text-sm/medium", children: null };
-      const intl2 = util.intl;
+      const items2 = [closure_9(tmp16, obj4)];
+      const obj7 = { style: tmp.successInfo, children: items3 };
+      const obj8 = { style: tmp.text, variant: "text-sm/medium", children: stringResult };
+      const Text = Text_Text.Text;
+      const intl2 = intl4.intl;
       const string = intl2.string;
-      const t = util.t;
+      const t = intl4.t;
       if (someResult) {
-        let stringResult = string(t.RMmWY3);
+        stringResult = string(t.RMmWY3);
       } else {
         stringResult = string(t.d81BkZ);
       }
-      const obj9 = { children: null };
-      obj8.children = stringResult;
-      const items3 = [closure_9(Text_Text.Text, obj8)];
-      const obj10 = { style: tmp.text, variant: "text-sm/medium", children: null };
-      const intl3 = util.intl;
-      obj10.children = intl3.format(util.t.r0IGsP, { guildName: stateFromStores.name, guildSubscriptionQuantity: num });
-      items3[1] = closure_9(Text_Text.Text, obj10);
-      obj7.children = items3;
+      const obj9 = { children: items2 };
+      items3 = [closure_9(Text, obj8)];
+      const obj10 = { style: tmp.text, variant: "text-sm/medium", children: intl3.format(intl4.t.r0IGsP, obj11) };
+      const Text2 = Text_Text.Text;
+      intl3 = intl4.intl;
+      obj11 = { guildName: stateFromStores.name, guildSubscriptionQuantity: num };
+      items3[1] = closure_9(Text2, obj10);
       items2[1] = closure_10(closure_5, obj7);
-      obj9.children = items2;
       items1[1] = closure_10(closure_5, obj9);
-      obj2.children = items1;
-      return closure_10(tmp11, obj2);
+      return closure_10(tmp13, obj2);
     };
+const result = size.fileFinishedImporting(
+  "components_native/premium/premium_guild_subscribe_modal/SubscribeModalSuccessAlert.tsx",
+);
+
+export default tmp6;

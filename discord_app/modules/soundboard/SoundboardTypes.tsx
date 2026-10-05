@@ -16,35 +16,39 @@ export const SoundButtonOverlay = {
 export const AnalyticsSoundType = { ENTRY: "entry_sound", EXIT: "exit_sound", DEFAULT: "default", ECHO: "echo" };
 export const AnalyticsChangeType = { ADDED: "added", UPDATED: "updated", REMOVED: "removed" };
 export const AnalyticsSoundSource = { DEFAULT: "default", CUSTOM: "custom" };
-export const soundboardSoundFromAPI = function soundboardSoundFromAPI(body, guild_id) {
+export const soundboardSoundFromAPI = function soundboardSoundFromAPI(body, c0) {
+  let emoji_id;
+  let emoji_name;
+  let sound_id;
+  let user_id;
   let flag = body.available;
   ({ sound_id, emoji_id, emoji_name, user_id } = body);
-  const obj = {};
+  const obj = {
+    soundId: sound_id,
+    guildId,
+    emojiId: emoji_id,
+    emojiName: emoji_name,
+    userId: user_id,
+    available: flag,
+  };
   const merged = Object.assign(
     Object.assign(body, Object.assign({ sound_id: 0, emoji_id: 0, emoji_name: 0, user_id: 0, available: 0 })),
   );
-  obj.soundId = sound_id;
-  obj.guildId = guild_id;
-  obj.emojiId = emoji_id;
-  obj.emojiName = emoji_name;
-  obj.userId = user_id;
   if (flag == null) {
     flag = true;
   }
-  obj.available = flag;
   return obj;
 };
 export const soundboardSoundToAPI = function soundboardSoundToAPI(item) {
+  let emojiId;
+  let emojiName;
+  let soundId;
+  let userId;
   ({ soundId, guildId, emojiId, emojiName, userId } = item);
-  const obj = {};
+  const obj = { sound_id: soundId, guild_id: guildId, emoji_id: emojiId, emoji_name: emojiName, user_id: userId };
   const merged = Object.assign(
     Object.assign(item, Object.assign({ soundId: 0, guildId: 0, emojiId: 0, emojiName: 0, userId: 0 })),
   );
-  obj.sound_id = soundId;
-  obj.guild_id = guildId;
-  obj.emoji_id = emojiId;
-  obj.emoji_name = emojiName;
-  obj.user_id = userId;
   return obj;
 };
 export const SoundboardSoundGridSectionType = {

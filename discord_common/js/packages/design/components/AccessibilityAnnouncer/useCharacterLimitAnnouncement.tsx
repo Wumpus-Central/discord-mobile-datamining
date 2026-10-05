@@ -1,28 +1,30 @@
 // discord_common/js/packages/design/components/AccessibilityAnnouncer/useCharacterLimitAnnouncement.tsx
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer.android.tsx";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../../../discord_app/modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "../discord_common/js/packages/design/components/AccessibilityAnnouncer/useCharacterLimitAnnouncement.tsx",
-);
+let currentLength;
 
-export const useCharacterLimitAnnouncement = ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (currentLength) => {
-      const cResult = currentLength(maxLength[2]).c(5);
+      let maxLength;
+      const obj = currentLength(maxLength[2]);
+      const cResult = obj.c(5);
       currentLength = currentLength.currentLength;
       maxLength = currentLength.maxLength;
       const message = currentLength.message;
-      message.useRef(false);
+      const ref = message.useRef(false);
+      const obj2 = message;
       if (cResult[0] === currentLength) {
         if (cResult[1] === maxLength) {
+          let tmp2;
+          let tmp3;
           if (cResult[2] === message) {
-            let tmp2 = cResult[3];
-            let tmp3 = cResult[4];
+            tmp2 = cResult[3];
+            tmp3 = cResult[4];
           }
-          const effect = message.useEffect(tmp2, tmp3);
+          const effect = obj2.useEffect(tmp2, tmp3);
         }
       }
       const fn = function t() {
@@ -52,7 +54,7 @@ export const useCharacterLimitAnnouncement = ReactCompilerGating.isReactCompiler
       currentLength = currentLength.currentLength;
       const maxLength = currentLength.maxLength;
       const message = currentLength.message;
-      message.useRef(false);
+      const ref = message.useRef(false);
       const items = [currentLength, maxLength, message];
       const effect = message.useEffect(() => {
         if (null != maxLength) {
@@ -69,3 +71,8 @@ export const useCharacterLimitAnnouncement = ReactCompilerGating.isReactCompiler
         }
       }, items);
     };
+const result = size.fileFinishedImporting(
+  "../discord_common/js/packages/design/components/AccessibilityAnnouncer/useCharacterLimitAnnouncement.tsx",
+);
+
+export const useCharacterLimitAnnouncement = tmp2;

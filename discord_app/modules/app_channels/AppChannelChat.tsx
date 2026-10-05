@@ -3,130 +3,141 @@ import SidebarActionTypes from "../sidebar/SidebarActionTypes.tsx";
 import SidebarActionCreatorsDefault from "../sidebar/SidebarActionCreators.tsx";
 import ChannelSectionStore from "../../stores/ChannelSectionStore.tsx";
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
+import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-fn(558);
-const ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
+      let tmp7;
       _require = arg0;
-      const cResult = require("c").c(4);
+      const obj = require("react");
+      const cResult = obj.c(4);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelSectionStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         const fn = function o() {
-          let tmp2 = null != closure_0;
-          if (tmp2) {
-            tmp2 = ChannelSectionStore.getCurrentSidebarChannelId(closure_0) === closure_0;
-          }
+          const tmp2 = null != closure_0 && ChannelSectionStore.getCurrentSidebarChannelId(closure_0) === closure_0;
           return tmp2;
         };
         const items1 = [arg0];
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6, tmp7);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6, tmp7);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       const items = [ChannelSectionStore];
       const items1 = [arg0];
-      return require("initialize").useStateFromStores(
+      const obj = require("get initialized");
+      return obj.useStateFromStores(
         items,
         () => {
-          let tmp2 = null != closure_0;
-          if (tmp2) {
-            tmp2 = ChannelSectionStore.getCurrentSidebarChannelId(closure_0) === closure_0;
-          }
+          const tmp2 = null != closure_0 && ChannelSectionStore.getCurrentSidebarChannelId(closure_0) === closure_0;
           return tmp2;
         },
         items1,
       );
     };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/app_channels/AppChannelChat.tsx");
-
-export const openAppChannelChat = function openAppChannelChat(guild_id, id, id2) {
-  const obj2 = { guildId: guild_id, channelId: id, baseChannelId: id, details: null };
-  const obj = SidebarActionCreatorsDefault;
-  obj2.details = { type: SidebarActionTypes.ViewChannelDetailType.CHAT, initialMessageId: id2 };
-  obj.openChannelAsSidebar(obj2);
-};
-export const closeAppChannelChat = function closeAppChannelChat(id) {
-  SidebarActionCreatorsDefault.closeChannelSidebar(id);
-};
-export const useIsAppChannelChatOpen = tmp2;
-export const useAppChannelChatUnread = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
+      let tmp7;
       _require = arg0;
-      const cResult = require("c").c(4);
+      let obj = require("react");
+      const cResult = obj.c(4);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReadStateStore];
+        let num = 0;
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         const fn = function o() {
-          let hasUnreadResult = null != closure_0;
-          if (hasUnreadResult) {
-            hasUnreadResult = ReadStateStore.hasUnread(closure_0);
-          }
-          const obj = { hasUnread: hasUnreadResult, mentionCount: null };
-          let num = 0;
+          let num;
+          const obj = { hasUnread: null != closure_0 && ReadStateStore.hasUnread(closure_0), mentionCount: num };
+          num = 0;
           if (null != closure_0) {
             num = ReadStateStore.getMentionCount(closure_0);
           }
-          obj.mentionCount = num;
           return obj;
         };
         const items1 = [arg0];
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      let obj = require("c");
-      return require("initialize").useStateFromStoresObject(first, tmp6, tmp7);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStoresObject(first, tmp6, tmp7);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
+      let obj = require("get initialized");
       const items = [ReadStateStore];
       const items1 = [arg0];
-      return require("initialize").useStateFromStoresObject(
+      return obj.useStateFromStoresObject(
         items,
         () => {
-          let hasUnreadResult = null != closure_0;
-          if (hasUnreadResult) {
-            hasUnreadResult = ReadStateStore.hasUnread(closure_0);
-          }
-          const obj = { hasUnread: hasUnreadResult, mentionCount: null };
-          let num = 0;
+          let num;
+          const obj = { hasUnread: null != closure_0 && ReadStateStore.hasUnread(closure_0), mentionCount: num };
+          num = 0;
           if (null != closure_0) {
             num = ReadStateStore.getMentionCount(closure_0);
           }
-          obj.mentionCount = num;
           return obj;
         },
         items1,
       );
     };
+const result = size.fileFinishedImporting("modules/app_channels/AppChannelChat.tsx");
+
+export const openAppChannelChat = function openAppChannelChat(guild_id, id, id2) {
+  const obj2 = {
+    guildId: guild_id,
+    channelId: id,
+    baseChannelId: id,
+    details: { type: SidebarActionTypes.ViewChannelDetailType.CHAT, initialMessageId: id2 },
+  };
+  const obj = SidebarActionCreatorsDefault;
+  ({ type: SidebarActionTypes.ViewChannelDetailType.CHAT, initialMessageId: id2 });
+  obj.openChannelAsSidebar(obj2);
+};
+export const closeAppChannelChat = function closeAppChannelChat(id) {
+  const obj = SidebarActionCreatorsDefault;
+  obj.closeChannelSidebar(id);
+};
+export const useIsAppChannelChatOpen = tmp2;
+export const useAppChannelChatUnread = tmp3;

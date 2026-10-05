@@ -27,10 +27,12 @@ export const calculateSteamReviewScoreDescription = function calculateSteamRevie
   }
   if (null != rating) {
     if (null != ratingCount) {
+      let NO_USER_REVIEWS;
       if (ratingCount >= 10) {
         if (rating >= 80) {
+          let VERY_POSITIVE;
           if (ratingCount < num2) {
-            let VERY_POSITIVE = GameDetectionTypes.SteamReviewScoreDescription.POSITIVE;
+            VERY_POSITIVE = GameDetectionTypes.SteamReviewScoreDescription.POSITIVE;
           } else {
             if (ratingCount >= num4) {
               if (rating >= 95) {
@@ -39,8 +41,9 @@ export const calculateSteamReviewScoreDescription = function calculateSteamRevie
             }
             VERY_POSITIVE = GameDetectionTypes.SteamReviewScoreDescription.VERY_POSITIVE;
           }
+          NO_USER_REVIEWS = VERY_POSITIVE;
         } else if (rating >= 70) {
-          let NO_USER_REVIEWS = GameDetectionTypes.SteamReviewScoreDescription.MOSTLY_POSITIVE;
+          NO_USER_REVIEWS = GameDetectionTypes.SteamReviewScoreDescription.MOSTLY_POSITIVE;
         } else if (rating >= 40) {
           NO_USER_REVIEWS = GameDetectionTypes.SteamReviewScoreDescription.MIXED;
         } else if (rating >= 20) {

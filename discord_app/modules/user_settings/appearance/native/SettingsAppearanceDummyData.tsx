@@ -1,188 +1,202 @@
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx
 import Constants from "../../../../Constants.tsx";
-import util from "../../../../intl/index.native.tsx";
-import _modDef12506 from "../../../../../_runtime/metro/12506__.js";
-import _modDef13772 from "../../../../../_runtime/metro/13772__.js";
-import _modDef15098 from "../../../../../_runtime/metro/15098__.js";
-import _modDef15099 from "../../../../../_runtime/metro/15099__.js";
-import _modDef15100 from "../../../../../_runtime/metro/15100__.js";
-import _modDef15101 from "../../../../../_runtime/metro/15101__.js";
-import _modDef15102 from "../../../../../_runtime/metro/15102__.js";
-import _modDef15103 from "../../../../../_runtime/metro/15103__.js";
-import _modDef15104 from "../../../../../_runtime/metro/15104__.js";
-import _modDef15105 from "../../../../../_runtime/metro/15105__.js";
-import _modDef15106 from "../../../../../_runtime/metro/15106__.js";
-import _modDef15107 from "../../../../../_runtime/metro/15107__.js";
-import _modDef15108 from "../../../../../_runtime/metro/15108__.js";
+import intl32 from "../../../../intl/index.native.tsx";
+import AssetRegistryDefault from "../../../../../_runtime/12506_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/13772_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../_runtime/15098_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../../../_runtime/15099_AssetRegistry.js";
+import AssetRegistryDefault5 from "../../../../../_runtime/15100_AssetRegistry.js";
+import AssetRegistryDefault6 from "../../../../../_runtime/15101_AssetRegistry.js";
+import AssetRegistryDefault7 from "../../../../../_runtime/15102_AssetRegistry.js";
+import AssetRegistryDefault8 from "../../../../../_runtime/15103_AssetRegistry.js";
+import AssetRegistryDefault9 from "../../../../../_runtime/15104_AssetRegistry.js";
+import AssetRegistryDefault10 from "../../../../../_runtime/15105_AssetRegistry.js";
+import AssetRegistryDefault11 from "../../../../../_runtime/15106_AssetRegistry.js";
+import AssetRegistryDefault12 from "../../../../../_runtime/15107_AssetRegistry.js";
+import AssetRegistryDefault13 from "../../../../../_runtime/15108_AssetRegistry.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const StatusTypes = Constants.StatusTypes;
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx");
 
 export default function _default() {
+  let intl;
+  let intl10;
+  let intl11;
+  let intl12;
+  let intl13;
+  let intl14;
+  let intl15;
+  let intl16;
+  let intl17;
+  let intl18;
+  let intl19;
+  let intl2;
+  let intl20;
+  let intl21;
+  let intl22;
+  let intl23;
+  let intl24;
+  let intl25;
+  let intl26;
+  let intl27;
+  let intl28;
+  let intl29;
+  let intl3;
+  let intl30;
+  let intl31;
+  let intl4;
+  let intl5;
+  let intl6;
+  let intl7;
+  let intl8;
+  let intl9;
+  let items1;
+  let items2;
   const items = [{ id: "1", kind: "messages-header" }, , , , , , , , , ,];
-  const obj = { id: "2", kind: "activity-cards", cards: null };
-  const obj2 = { title: null, subtitle: null, kind: "activity", image: null, avatars: null };
-  const intl = util.intl;
-  obj2.title = intl.string(util.t.B6GPzA);
-  const intl2 = util.intl;
-  obj2.subtitle = intl2.string(util.t["Tnrh/k"]);
-  obj2.image = _modDef15098;
-  const items1 = [_modDef15099, _modDef15100, _modDef15101, _modDef15102, _modDef15103];
-  obj2.avatars = items1;
-  const items2 = [obj2];
-  const obj3 = { title: null, subtitle: null, kind: "voice-chat", image: null };
-  const intl3 = util.intl;
-  obj3.title = intl3.string(util.t.YAgqmE);
-  const intl4 = util.intl;
-  obj3.subtitle = intl4.string(util.t["9YJgal"]);
-  obj3.image = _modDef15104;
+  const obj = { id: "2", kind: "activity-cards", cards: items2 };
+  const obj2 = {
+    title: intl.string(intl32.t.B6GPzA),
+    subtitle: intl2.string(intl32.t["Tnrh/k"]),
+    kind: "activity",
+    image: AssetRegistryDefault3,
+    avatars: items1,
+  };
+  intl = intl32.intl;
+  intl2 = intl32.intl;
+  items1 = [
+    AssetRegistryDefault4,
+    AssetRegistryDefault5,
+    AssetRegistryDefault6,
+    AssetRegistryDefault7,
+    AssetRegistryDefault8,
+  ];
+  items2 = [obj2];
+  const obj3 = {
+    title: intl3.string(intl32.t.YAgqmE),
+    subtitle: intl4.string(intl32.t["9YJgal"]),
+    kind: "voice-chat",
+    image: AssetRegistryDefault9,
+  };
+  intl3 = intl32.intl;
+  intl4 = intl32.intl;
   items2[1] = obj3;
-  obj.cards = items2;
   items[1] = obj;
   const obj4 = {
     id: "3",
     kind: "channel-row",
-    timestamp: null,
-    title: null,
-    preview: null,
+    timestamp: intl5.formatToPlainString(intl32.t["XIGt+W"], { minutes: 24 }),
+    title: intl6.string(intl32.t["mK5Zd+"]),
+    preview: intl7.string(intl32.t.cvvVUV),
     isUnread: true,
-    avatar1: null,
+    avatar1: AssetRegistryDefault10,
   };
-  const intl5 = util.intl;
-  obj4.timestamp = intl5.formatToPlainString(util.t["XIGt+W"], { minutes: 24 });
-  const intl6 = util.intl;
-  obj4.title = intl6.string(util.t["mK5Zd+"]);
-  const intl7 = util.intl;
-  obj4.preview = intl7.string(util.t.cvvVUV);
-  obj4.avatar1 = _modDef15105;
+  intl5 = intl32.intl;
+  intl6 = intl32.intl;
+  intl7 = intl32.intl;
   items[2] = obj4;
   const obj5 = {
     id: "4",
     kind: "channel-row",
-    timestamp: null,
-    title: null,
-    preview: null,
+    timestamp: intl8.formatToPlainString(intl32.t["XIGt+W"], { minutes: 32 }),
+    title: intl9.string(intl32.t.FpJH9k),
+    preview: intl10.string(intl32.t.F1WIrQ),
     isUnread: true,
-    avatar1: null,
-    avatar2: null,
+    avatar1: AssetRegistryDefault11,
+    avatar2: AssetRegistryDefault12,
   };
-  const intl8 = util.intl;
-  obj5.timestamp = intl8.formatToPlainString(util.t["XIGt+W"], { minutes: 32 });
-  const intl9 = util.intl;
-  obj5.title = intl9.string(util.t.FpJH9k);
-  const intl10 = util.intl;
-  obj5.preview = intl10.string(util.t.F1WIrQ);
-  obj5.avatar1 = _modDef15106;
-  obj5.avatar2 = _modDef15107;
+  intl8 = intl32.intl;
+  intl9 = intl32.intl;
+  intl10 = intl32.intl;
   items[3] = obj5;
   const obj6 = {
     id: "5",
     kind: "channel-row",
-    timestamp: null,
-    title: null,
-    preview: null,
-    avatar1: null,
-    status: null,
+    timestamp: intl11.formatToPlainString(intl32.t.rhY1Rs, { hours: 1 }),
+    title: intl12.string(intl32.t.PHbyD7),
+    preview: intl13.string(intl32.t.GSuP1s),
+    avatar1: AssetRegistryDefault2,
+    status: StatusTypes.IDLE,
   };
-  const intl11 = util.intl;
-  obj6.timestamp = intl11.formatToPlainString(util.t.rhY1Rs, { hours: 1 });
-  const intl12 = util.intl;
-  obj6.title = intl12.string(util.t.PHbyD7);
-  const intl13 = util.intl;
-  obj6.preview = intl13.string(util.t.GSuP1s);
-  obj6.avatar1 = _modDef13772;
-  obj6.status = StatusTypes.IDLE;
+  intl11 = intl32.intl;
+  intl12 = intl32.intl;
+  intl13 = intl32.intl;
   items[4] = obj6;
   const obj7 = {
     id: "7",
     kind: "channel-row",
-    timestamp: null,
-    title: null,
-    preview: null,
-    avatar1: null,
-    avatar2: null,
+    timestamp: intl14.formatToPlainString(intl32.t.rhY1Rs, { hours: 2 }),
+    title: intl15.string(intl32.t["0HGnUV"]),
+    preview: intl16.string(intl32.t["VYL+vm"]),
+    avatar1: AssetRegistryDefault,
+    avatar2: AssetRegistryDefault6,
   };
-  const intl14 = util.intl;
-  obj7.timestamp = intl14.formatToPlainString(util.t.rhY1Rs, { hours: 2 });
-  const intl15 = util.intl;
-  obj7.title = intl15.string(util.t["0HGnUV"]);
-  const intl16 = util.intl;
-  obj7.preview = intl16.string(util.t["VYL+vm"]);
-  obj7.avatar1 = _modDef12506;
-  obj7.avatar2 = _modDef15101;
+  intl14 = intl32.intl;
+  intl15 = intl32.intl;
+  intl16 = intl32.intl;
   items[5] = obj7;
-  const obj8 = { id: "10", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null };
-  const intl17 = util.intl;
-  obj8.timestamp = intl17.formatToPlainString(util.t.rhY1Rs, { hours: 2 });
-  const intl18 = util.intl;
-  obj8.title = intl18.string(util.t["z+f+zN"]);
-  const intl19 = util.intl;
-  obj8.preview = intl19.string(util.t.Wy2xnv);
-  obj8.avatar1 = _modDef15107;
+  const obj8 = {
+    id: "10",
+    kind: "channel-row",
+    timestamp: intl17.formatToPlainString(intl32.t.rhY1Rs, { hours: 2 }),
+    title: intl18.string(intl32.t["z+f+zN"]),
+    preview: intl19.string(intl32.t.Wy2xnv),
+    avatar1: AssetRegistryDefault12,
+  };
+  intl17 = intl32.intl;
+  intl18 = intl32.intl;
+  intl19 = intl32.intl;
   items[6] = obj8;
   const obj9 = {
     id: "11",
     kind: "channel-row",
-    timestamp: null,
-    title: null,
-    preview: null,
-    avatar1: null,
-    avatar2: null,
+    timestamp: intl20.formatToPlainString(intl32.t.rhY1Rs, { hours: 4 }),
+    title: intl21.string(intl32.t["AYOqO/"]),
+    preview: intl22.string(intl32.t.OrbvPP),
+    avatar1: AssetRegistryDefault7,
+    avatar2: AssetRegistryDefault,
   };
-  const intl20 = util.intl;
-  obj9.timestamp = intl20.formatToPlainString(util.t.rhY1Rs, { hours: 4 });
-  const intl21 = util.intl;
-  obj9.title = intl21.string(util.t["AYOqO/"]);
-  const intl22 = util.intl;
-  obj9.preview = intl22.string(util.t.OrbvPP);
-  obj9.avatar1 = _modDef15102;
-  obj9.avatar2 = _modDef12506;
+  intl20 = intl32.intl;
+  intl21 = intl32.intl;
+  intl22 = intl32.intl;
   items[7] = obj9;
   const obj10 = {
     id: "12",
     kind: "channel-row",
-    timestamp: null,
-    title: null,
-    preview: null,
-    avatar1: null,
-    status: null,
+    timestamp: intl23.formatToPlainString(intl32.t.rhY1Rs, { hours: 6 }),
+    title: intl24.string(intl32.t["86rWJp"]),
+    preview: intl25.string(intl32.t.dFT4dX),
+    avatar1: AssetRegistryDefault13,
+    status: StatusTypes.DND,
   };
-  const intl23 = util.intl;
-  obj10.timestamp = intl23.formatToPlainString(util.t.rhY1Rs, { hours: 6 });
-  const intl24 = util.intl;
-  obj10.title = intl24.string(util.t["86rWJp"]);
-  const intl25 = util.intl;
-  obj10.preview = intl25.string(util.t.dFT4dX);
-  obj10.avatar1 = _modDef15108;
-  obj10.status = StatusTypes.DND;
+  intl23 = intl32.intl;
+  intl24 = intl32.intl;
+  intl25 = intl32.intl;
   items[8] = obj10;
-  const obj11 = { id: "13", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null };
-  const intl26 = util.intl;
-  obj11.timestamp = intl26.formatToPlainString(util.t.rhY1Rs, { hours: 18 });
-  const intl27 = util.intl;
-  obj11.title = intl27.string(util.t["z3+vGV"]);
-  const intl28 = util.intl;
-  obj11.preview = intl28.string(util.t.Zj8Sl1);
-  obj11.avatar1 = _modDef15102;
+  const obj11 = {
+    id: "13",
+    kind: "channel-row",
+    timestamp: intl26.formatToPlainString(intl32.t.rhY1Rs, { hours: 18 }),
+    title: intl27.string(intl32.t["z3+vGV"]),
+    preview: intl28.string(intl32.t.Zj8Sl1),
+    avatar1: AssetRegistryDefault7,
+  };
+  intl26 = intl32.intl;
+  intl27 = intl32.intl;
+  intl28 = intl32.intl;
   items[9] = obj11;
   const obj12 = {
     id: "15",
     kind: "channel-row",
-    timestamp: null,
-    title: null,
-    preview: null,
-    avatar1: null,
-    status: null,
+    timestamp: intl29.formatToPlainString(intl32.t.rhY1Rs, { hours: 21 }),
+    title: intl30.string(intl32.t["8SENG2"]),
+    preview: intl31.string(intl32.t["2ziAWp"]),
+    avatar1: AssetRegistryDefault5,
+    status: StatusTypes.DND,
   };
-  const intl29 = util.intl;
-  obj12.timestamp = intl29.formatToPlainString(util.t.rhY1Rs, { hours: 21 });
-  const intl30 = util.intl;
-  obj12.title = intl30.string(util.t["8SENG2"]);
-  const intl31 = util.intl;
-  obj12.preview = intl31.string(util.t["2ziAWp"]);
-  obj12.avatar1 = _modDef15100;
-  obj12.status = StatusTypes.DND;
+  intl29 = intl32.intl;
+  intl30 = intl32.intl;
+  intl31 = intl32.intl;
   items[10] = obj12;
   return items;
 }

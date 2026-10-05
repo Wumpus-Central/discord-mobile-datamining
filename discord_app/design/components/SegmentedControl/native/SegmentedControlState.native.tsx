@@ -1,21 +1,28 @@
 // discord_app/design/components/SegmentedControl/native/SegmentedControlState.native.tsx
 import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
 let closure_4 = {
   code: "function SegmentedControlStateNativeTsx1(index_1,dimensions){const{itemDimensions,itemCount}=this.__closure;itemDimensions.get()[index_1]=dimensions;itemDimensions.set([...itemDimensions.get()].slice(0,itemCount));}",
 };
 let closure_5 = {
   code: "function SegmentedControlStateNativeTsx2(index_1,dimensions){const{itemDimensions,itemCount}=this.__closure;itemDimensions.get()[index_1]=dimensions;itemDimensions.set([...itemDimensions.get()].slice(0,itemCount));}",
 };
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlState.native.tsx");
-
-export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (onPageChangeStart) => {
-      const cResult = pageWidth(onPageChangeStart[2]).c(29);
+      let defaultIndex;
+      let itemSpacing;
+      let items;
+      let onPageChange;
+      let pageWidth;
+      let tmp14;
+      let tmp15;
+      const tmp = pageWidth;
+      let tmp2 = onPageChangeStart;
+      let obj = pageWidth(onPageChangeStart[2]);
+      const cResult = obj.c(29);
       ({ items, pageWidth } = onPageChangeStart);
       ({ defaultIndex, itemSpacing, onPageChange } = onPageChangeStart);
       onPageChangeStart = onPageChangeStart.onPageChangeStart;
@@ -27,25 +34,25 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
       if (undefined === itemSpacing) {
         itemSpacing = onPageChange(tmp2[3]).space.PX_24;
       }
-      const enabled = onSetActiveIndex.useContext(tmp(tmp2[4]).AccessibilityPreferencesContext).reducedMotion.enabled;
-      let obj = pageWidth(onPageChangeStart[2]);
       let obj2 = onSetActiveIndex;
-      const sharedValue = pageWidth(onPageChangeStart[5]).useSharedValue([]);
-      const tmpResult = pageWidth(onPageChangeStart[5]);
-      const sharedValue1 = pageWidth(onPageChangeStart[5]).useSharedValue(-1);
-      const tmpResult8 = pageWidth(onPageChangeStart[5]);
-      const sharedValue2 = pageWidth(onPageChangeStart[5]).useSharedValue(0);
-      const tmpResult9 = pageWidth(onPageChangeStart[5]);
-      const sharedValue3 = pageWidth(onPageChangeStart[5]).useSharedValue(0);
-      const tmpResult10 = pageWidth(onPageChangeStart[5]);
-      const sharedValue4 = pageWidth(onPageChangeStart[5]).useSharedValue(num);
-      const tmpResult11 = pageWidth(onPageChangeStart[5]);
+      const enabled = onSetActiveIndex.useContext(tmp(tmp2[4]).AccessibilityPreferencesContext).reducedMotion.enabled;
+      const tmpResult = tmp(tmp2[5]);
+      const sharedValue = tmpResult.useSharedValue([]);
+      const tmpResult8 = tmp(tmp2[5]);
+      const sharedValue1 = tmpResult8.useSharedValue(-1);
+      const tmpResult9 = tmp(tmp2[5]);
+      const sharedValue2 = tmpResult9.useSharedValue(0);
+      const tmpResult10 = tmp(tmp2[5]);
+      const sharedValue3 = tmpResult10.useSharedValue(0);
+      const tmpResult11 = tmp(tmp2[5]);
+      const sharedValue4 = tmpResult11.useSharedValue(num);
       const items1 = [num, num];
-      const sharedValue5 = pageWidth(onPageChangeStart[5]).useSharedValue(items1);
-      const tmpResult12 = pageWidth(onPageChangeStart[5]);
-      const animatedRef = pageWidth(onPageChangeStart[5]).useAnimatedRef();
-      const tmpResult13 = pageWidth(onPageChangeStart[5]);
-      const sharedValue6 = pageWidth(onPageChangeStart[5]).useSharedValue(-1);
+      const tmpResult12 = tmp(tmp2[5]);
+      const sharedValue5 = tmpResult12.useSharedValue(items1);
+      const tmpResult13 = tmp(tmp2[5]);
+      const animatedRef = tmpResult13.useAnimatedRef();
+      const tmpResult14 = tmp(tmp2[5]);
+      const sharedValue6 = tmpResult14.useSharedValue(-1);
       const ref = onSetActiveIndex.useRef(onPageChange);
       if (cResult[0] !== onPageChange) {
         const fn = function o() {
@@ -55,8 +62,8 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
         cResult[0] = onPageChange;
         cResult[1] = fn;
         cResult[2] = items2;
-        let tmp15 = items2;
-        let tmp14 = fn;
+        tmp15 = items2;
+        tmp14 = fn;
       } else {
         tmp14 = cResult[1];
         tmp15 = cResult[2];
@@ -68,13 +75,15 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
             if (cResult[6] === pageWidth) {
               if (cResult[7] === animatedRef) {
                 if (cResult[8] === sharedValue1) {
+                  let tmp17;
                   if (cResult[9] === enabled) {
-                    let tmp17 = cResult[10];
+                    tmp17 = cResult[10];
                   }
                   const length = items.length;
                   if (cResult[11] === length) {
+                    let tmp18;
                     if (cResult[12] === sharedValue) {
-                      let tmp18 = cResult[13];
+                      tmp18 = cResult[13];
                     }
                     if (cResult[14] === sharedValue4) {
                       if (cResult[15] === sharedValue) {
@@ -89,8 +98,9 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
                                         if (cResult[24] === tmp17) {
                                           if (cResult[25] === tmp18) {
                                             if (cResult[26] === enabled) {
+                                              let tmp20;
                                               if (cResult[27] === sharedValue5) {
-                                                let tmp20 = cResult[28];
+                                                tmp20 = cResult[28];
                                               }
                                               return tmp20;
                                             }
@@ -109,41 +119,27 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
                     let obj3 = {
                       activeIndex: sharedValue4,
                       visiblePageRange: null,
-                      pagerRef: null,
-                      scrollTarget: null,
-                      scrollOverflow: null,
-                      scrollOffset: null,
-                      items: null,
-                      itemDimensions: null,
-                      itemSpacing: null,
-                      pageWidth: null,
-                      pressedIndex: null,
-                      onPageChangeRef: null,
-                      setActiveIndex: null,
-                      setItemDimensions: null,
-                      useReducedMotion: null,
+                      pagerRef: animatedRef,
+                      scrollTarget: sharedValue1,
+                      scrollOverflow: sharedValue2,
+                      scrollOffset: sharedValue3,
+                      items,
+                      itemDimensions: sharedValue,
+                      itemSpacing,
+                      pageWidth,
+                      pressedIndex: sharedValue6,
+                      onPageChangeRef: ref,
+                      setActiveIndex: tmp17,
+                      setItemDimensions: tmp18,
+                      useReducedMotion: enabled,
                     };
                     class H {
                       constructor(arg0, arg1) {
-                        closure_5.get()[onPageChangeStart] = arg1;
-                        items = [...closure_5.get()];
-                        result = closure_5.set(items.slice(0, length));
-                        return;
+                        sharedValue.get()[arg0] = arg1;
+                        const items = [...sharedValue.get()];
+                        const result = sharedValue.set(items.slice(0, length));
                       }
                     }
-                    obj3.pagerRef = animatedRef;
-                    obj3.scrollTarget = sharedValue1;
-                    obj3.scrollOverflow = sharedValue2;
-                    obj3.scrollOffset = sharedValue3;
-                    obj3.items = items;
-                    obj3.itemDimensions = sharedValue;
-                    obj3.itemSpacing = itemSpacing;
-                    obj3.pageWidth = pageWidth;
-                    obj3.pressedIndex = sharedValue6;
-                    obj3.onPageChangeRef = ref;
-                    obj3.setActiveIndex = tmp17;
-                    obj3.setItemDimensions = tmp18;
-                    obj3.useReducedMotion = enabled;
                     cResult[14] = sharedValue4;
                     cResult[15] = sharedValue;
                     cResult[16] = itemSpacing;
@@ -163,10 +159,9 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
                   }
                   class H {
                     constructor(arg0, arg1) {
-                      closure_5.get()[onPageChangeStart] = arg1;
-                      items = [...closure_5.get()];
-                      result = closure_5.set(items.slice(0, length));
-                      return;
+                      sharedValue.get()[arg0] = arg1;
+                      const items = [...sharedValue.get()];
+                      const result = sharedValue.set(items.slice(0, length));
                     }
                   }
                   let obj4 = { itemDimensions: sharedValue, itemCount: length };
@@ -184,17 +179,12 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
         }
       }
       const fn2 = function c(arg0, arg1, arg2) {
-        closure_0 = arg0;
-        closure_1 = tmp;
-        let tmp2 = undefined === arg1 || arg1;
+        let closure_0 = arg0;
+        let closure_1 = tmp;
+        const tmp2 = (undefined === arg1 || arg1) && sharedValue4.get() !== arg0;
         if (tmp2) {
-          tmp2 = sharedValue4.get() !== arg0;
-        }
-        if (tmp2) {
-          let result = pageWidth(onPageChangeStart[6]).triggerHapticFeedback(
-            pageWidth(onPageChangeStart[6]).HapticFeedbackTypes.IMPACT_MEDIUM,
-          );
           let obj = pageWidth(onPageChangeStart[6]);
+          let result = obj.triggerHapticFeedback(pageWidth(onPageChangeStart[6]).HapticFeedbackTypes.IMPACT_MEDIUM);
         }
         if (arg0 !== sharedValue4.get()) {
           function updateIndex(arg0) {}
@@ -204,12 +194,10 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
                 const result = sharedValue4.set(closure_0);
                 const result1 = closure_0 * pageWidth;
                 const result2 = sharedValue1.set(result1);
-                let tmp9 = !closure_1;
-                if (!closure_1) {
-                  tmp9 = !enabled;
-                }
+                let tmp9 = !closure_1 && !enabled;
                 if (tmp9) {
-                  tmp9 = !useIsScreenReaderEnabled.getIsScreenReaderEnabled();
+                  const obj = useIsScreenReaderEnabled;
+                  tmp9 = !obj.getIsScreenReaderEnabled();
                 }
                 if (animatedRef != null) {
                   const current = animatedRef.current;
@@ -229,13 +217,10 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
             let result1 = sharedValue4.set(arg0);
             let result2 = arg0 * closure_0;
             const result3 = sharedValue1.set(result2);
-            let tmp10 = !tmp;
-            if (!tmp) {
-              tmp10 = !enabled;
-            }
+            let tmp10 = !tmp && !enabled;
             if (tmp10) {
-              tmp10 = !pageWidth(onPageChangeStart[7]).getIsScreenReaderEnabled();
               const obj3 = pageWidth(onPageChangeStart[7]);
+              tmp10 = !obj3.getIsScreenReaderEnabled();
             }
             if (animatedRef != null) {
               let current = animatedRef.current;
@@ -276,30 +261,31 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
       const onSetActiveIndex = pageWidth.onSetActiveIndex;
       let callback1;
       const enabled = onPageChange.useContext(items(PX_24[4]).AccessibilityPreferencesContext).reducedMotion.enabled;
-      const sharedValue = items(PX_24[5]).useSharedValue([]);
       let obj = items(PX_24[5]);
-      const sharedValue1 = items(PX_24[5]).useSharedValue(-1);
+      const sharedValue = obj.useSharedValue([]);
       let obj2 = items(PX_24[5]);
-      const sharedValue2 = items(PX_24[5]).useSharedValue(0);
+      const sharedValue1 = obj2.useSharedValue(-1);
       let obj3 = items(PX_24[5]);
-      const sharedValue3 = items(PX_24[5]).useSharedValue(0);
+      const sharedValue2 = obj3.useSharedValue(0);
       let obj4 = items(PX_24[5]);
-      const sharedValue4 = items(PX_24[5]).useSharedValue(num);
+      const sharedValue3 = obj4.useSharedValue(0);
       const obj5 = items(PX_24[5]);
+      const sharedValue4 = obj5.useSharedValue(num);
       const items1 = [num, num];
-      const sharedValue5 = items(PX_24[5]).useSharedValue(items1);
       const obj6 = items(PX_24[5]);
-      const animatedRef = items(PX_24[5]).useAnimatedRef();
+      const sharedValue5 = obj6.useSharedValue(items1);
       const obj7 = items(PX_24[5]);
-      const sharedValue6 = items(PX_24[5]).useSharedValue(-1);
+      const animatedRef = obj7.useAnimatedRef();
+      const obj8 = items(PX_24[5]);
+      const sharedValue6 = obj8.useSharedValue(-1);
       const onPageChangeRef = onPageChange.useRef(onPageChange);
       const items2 = [onPageChange];
       const layoutEffect = onPageChange.useLayoutEffect(() => {
-        closure_15.current = onPageChange;
+        onPageChangeRef.current = onPageChange;
       }, items2);
       const items3 = [sharedValue4, onPageChangeStart, pageWidth, sharedValue1, animatedRef, enabled, onSetActiveIndex];
       const setActiveIndex = onPageChange.useCallback((arg0) => {
-        closure_0 = arg0;
+        let closure_0 = arg0;
         let flag = arg1;
         if (arg1 === undefined) {
           flag = true;
@@ -312,8 +298,8 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
           flag = sharedValue4.get() !== arg0;
         }
         if (flag) {
-          let result = items(PX_24[6]).triggerHapticFeedback(items(PX_24[6]).HapticFeedbackTypes.IMPACT_MEDIUM);
           let obj = items(PX_24[6]);
+          let result = obj.triggerHapticFeedback(items(PX_24[6]).HapticFeedbackTypes.IMPACT_MEDIUM);
         }
         if (arg0 !== sharedValue4.get()) {
           if (null != onPageChangeStart) {
@@ -321,12 +307,10 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
               const result = sharedValue4.set(closure_0);
               const result1 = closure_0 * pageWidth;
               const result2 = sharedValue1.set(result1);
-              let tmp5 = !flag2;
-              if (!flag2) {
-                tmp5 = !enabled;
-              }
+              let tmp5 = !flag2 && !enabled;
               if (tmp5) {
-                tmp5 = !useIsScreenReaderEnabled.getIsScreenReaderEnabled();
+                const obj = useIsScreenReaderEnabled;
+                tmp5 = !obj.getIsScreenReaderEnabled();
               }
               if (animatedRef != null) {
                 const current = animatedRef.current;
@@ -343,13 +327,10 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
             let result1 = sharedValue4.set(arg0);
             let result2 = arg0 * flag2;
             const result3 = sharedValue1.set(result2);
-            let tmp8 = !flag2;
-            if (!flag2) {
-              tmp8 = !enabled;
-            }
+            let tmp8 = !flag2 && !enabled;
             if (tmp8) {
-              tmp8 = !items(PX_24[7]).getIsScreenReaderEnabled();
               const obj3 = items(PX_24[7]);
+              tmp8 = !obj3.getIsScreenReaderEnabled();
             }
             if (animatedRef != null) {
               let current = animatedRef.current;
@@ -367,10 +348,9 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
       const length = items.length;
       class R {
         constructor(arg0, arg1) {
-          closure_7.get()[pageWidth] = arg1;
-          items = [...closure_7.get()];
-          result = closure_7.set(items.slice(0, length));
-          return;
+          sharedValue.get()[arg0] = arg1;
+          items = [...sharedValue.get()];
+          const result = sharedValue.set(items.slice(0, length));
         }
       }
       R.__closure = { itemDimensions: sharedValue, itemCount: length };
@@ -415,3 +395,6 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
         items5,
       );
     };
+let result = size.fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlState.native.tsx");
+
+export const useSegmentedControlState = tmp2;

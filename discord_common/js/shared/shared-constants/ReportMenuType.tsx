@@ -15,11 +15,11 @@ const obj = {
     "user",
     "widget",
   ]),
-  REPORT_TO_MOD: null,
-  UNAUTHENTICATED: null,
-  CONSOLE: null,
+  REPORT_TO_MOD: new Set(["report_to_mod_message"]),
+  UNAUTHENTICATED: new Set(["guild_urf", "media_takedown", "message_urf", "user_urf"]),
+  CONSOLE: new Set(["playstation_console_voice", "xbox_console_voice"]),
 };
-const set = new Set([
+new Set([
   "application",
   "first_dm",
   "guild",
@@ -32,11 +32,9 @@ const set = new Set([
   "user",
   "widget",
 ]);
-obj.REPORT_TO_MOD = new Set(["report_to_mod_message"]);
-const set1 = new Set(["report_to_mod_message"]);
-obj.UNAUTHENTICATED = new Set(["guild_urf", "media_takedown", "message_urf", "user_urf"]);
-const set2 = new Set(["guild_urf", "media_takedown", "message_urf", "user_urf"]);
-obj.CONSOLE = new Set(["playstation_console_voice", "xbox_console_voice"]);
+new Set(["report_to_mod_message"]);
+new Set(["guild_urf", "media_takedown", "message_urf", "user_urf"]);
+new Set(["playstation_console_voice", "xbox_console_voice"]);
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ReportMenuType.tsx");
 
 export const ReportMenuType = {

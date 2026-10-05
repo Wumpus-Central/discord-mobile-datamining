@@ -4,15 +4,17 @@ import canUseStreamSettingDefault from "canUseStreamSetting.tsx";
 import StreamSettingsConstants from "../StreamSettingsConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+let c3;
+let closure_4;
 ({ ApplicationStreamSettingRequirements: c3, ApplicationStreamPresets: closure_4 } = StreamSettingsConstants);
 const result = size.fileFinishedImporting("modules/go_live/utils/canStreamWithSettings.tsx");
 
 export default function canStreamWithSettings(arg0, arg1, arg2, arg3, arg4, arg5) {
   if (arg0 === constants.PRESET_AUTO) {
-    return GoLiveAutoQualityExperiment.getGoLiveAutoQualityExperimentConfig({ location: "canStreamWithSettings" })
-      .allowAutoQuality;
+    const obj = GoLiveAutoQualityExperiment;
+    return obj.getGoLiveAutoQualityExperimentConfig({ location: "canStreamWithSettings" }).allowAutoQuality;
   } else {
-    const iter = dependencyMap[Symbol.iterator]();
+    const iter = _false[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp4 = nextResult;

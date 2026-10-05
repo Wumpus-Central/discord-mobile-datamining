@@ -1,68 +1,72 @@
 // discord_app/modules/game_profile/hooks/useGameAnnouncements.tsx
-import _mod19 from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import GameProfileHttpUtils from "../GameProfileHttpUtils.tsx";
 import GameProfileStore from "../GameProfileStore.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-const useEffect = _mod19.useEffect;
-let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameAnnouncements.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const useEffect = react.useEffect;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, limit) => {
+      let closure_0;
+      let data;
+      let first;
+      let hasFetched;
+      let tmp6;
       _require = arg0;
       dependencyMap = limit;
-      const cResult = require("c").c(16);
+      let obj = require("react");
+      const cResult = obj.c(16);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GameProfileStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         const fn = function u() {
+          let result;
+          let result1;
           let announcements;
           if (null != closure_0) {
             announcements = GameProfileStore.getAnnouncements(closure_0);
           }
-          const obj = { data: announcements, hasFetched: null, isFetching: null };
-          let result = null != closure_0;
-          if (result) {
-            result = GameProfileStore.hasAnnouncementsBeenFetched(closure_0);
-          }
-          obj.hasFetched = result;
-          let result1 = null != closure_0;
-          if (result1) {
-            result1 = GameProfileStore.isAnnouncementsFetching(closure_0);
-          }
-          obj.isFetching = result1;
+          const obj = { data: announcements, hasFetched: result, isFetching: result1 };
+          result = null != closure_0 && GameProfileStore.hasAnnouncementsBeenFetched(closure_0);
+          result1 = null != closure_0 && GameProfileStore.isAnnouncementsFetching(closure_0);
           return obj;
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      let obj = require("c");
-      const stateFromStoresObject = require("initialize").useStateFromStoresObject(first, tmp6);
+      const tmpResult = tmp(504);
+      const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, tmp6);
       ({ data, hasFetched } = stateFromStoresObject);
       const isFetching = stateFromStoresObject.isFetching;
       if (cResult[3] === arg0) {
         if (cResult[4] === hasFetched) {
+          let tmp8;
+          let tmp9;
+          let tmp15;
           if (cResult[5] === limit) {
-            let tmp8 = cResult[6];
-            let tmp9 = cResult[7];
+            tmp8 = cResult[6];
+            tmp9 = cResult[7];
           }
           hasFetched(tmp8, tmp9);
           let messages;
+          const tmp12 = cResult[8];
           if (data != null) {
             messages = data.messages;
           }
-          if (cResult[8] !== messages) {
+          if (tmp12 !== messages) {
             let messages1;
             if (data != null) {
               messages1 = data.messages;
@@ -76,9 +80,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             cResult[8] = messages2;
             cResult[9] = messages1;
-            let tmp14 = messages1;
+            tmp15 = messages1;
           } else {
-            tmp14 = cResult[9];
+            tmp15 = cResult[9];
           }
           let channelId;
           if (data != null) {
@@ -90,34 +94,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[10] === hasFetched) {
             if (cResult[11] === isFetching) {
-              if (cResult[12] === tmp14) {
+              if (cResult[12] === tmp15) {
                 if (cResult[13] === channelId) {
+                  let tmp19;
                   if (cResult[14] === guildId) {
-                    let tmp18 = cResult[15];
+                    tmp19 = cResult[15];
                   }
-                  return tmp18;
+                  return tmp19;
                 }
               }
             }
           }
-          let obj2 = { messages: tmp14, channelId, guildId, loading: isFetching, hasFetched };
+          let obj2 = { messages: tmp15, channelId, guildId, loading: isFetching, hasFetched };
           cResult[10] = hasFetched;
           cResult[11] = isFetching;
-          cResult[12] = tmp14;
+          cResult[12] = tmp15;
           cResult[13] = channelId;
           cResult[14] = guildId;
           cResult[15] = obj2;
-          tmp18 = obj2;
+          tmp19 = obj2;
         }
       }
       const fn2 = function h() {
-        let result = null == closure_0 || hasFetched;
-        if (!result) {
-          result = GameProfileStore.isAnnouncementsFetching(closure_0);
-        }
+        const result = null == closure_0 || hasFetched || GameProfileStore.isAnnouncementsFetching(closure_0);
         if (!result) {
           const obj2 = { limit };
-          const gameAnnouncements = GameProfileHttpUtils.getGameAnnouncements(closure_0, obj2);
+          const obj = GameProfileHttpUtils;
+          const gameAnnouncements = obj.getGameAnnouncements(closure_0, obj2);
         }
       };
       const items1 = [arg0, hasFetched, limit];
@@ -128,40 +131,38 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = items1;
       tmp9 = items1;
       tmp8 = fn2;
-      const tmpResult = require("initialize");
     }
   : (arg0, limit) => {
+      let channelId;
+      let closure_0;
+      let data;
+      let guildId;
+      let hasFetched;
       _require = arg0;
       dependencyMap = limit;
+      let obj = require("get initialized");
       const items = [GameProfileStore];
-      const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
+      const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+        let result;
+        let result1;
         let announcements;
         if (null != closure_0) {
           announcements = GameProfileStore.getAnnouncements(closure_0);
         }
-        const obj = { data: announcements, hasFetched: null, isFetching: null };
-        let result = null != closure_0;
-        if (result) {
-          result = GameProfileStore.hasAnnouncementsBeenFetched(closure_0);
-        }
-        obj.hasFetched = result;
-        let result1 = null != closure_0;
-        if (result1) {
-          result1 = GameProfileStore.isAnnouncementsFetching(closure_0);
-        }
-        obj.isFetching = result1;
+        const obj = { data: announcements, hasFetched: result, isFetching: result1 };
+        result = null != closure_0 && GameProfileStore.hasAnnouncementsBeenFetched(closure_0);
+        result1 = null != closure_0 && GameProfileStore.isAnnouncementsFetching(closure_0);
         return obj;
       });
       ({ data, hasFetched } = stateFromStoresObject);
       const items1 = [arg0, hasFetched, limit];
+      const isFetching = stateFromStoresObject.isFetching;
       hasFetched(() => {
-        let result = null == closure_0 || hasFetched;
-        if (!result) {
-          result = GameProfileStore.isAnnouncementsFetching(closure_0);
-        }
+        const result = null == closure_0 || hasFetched || GameProfileStore.isAnnouncementsFetching(closure_0);
         if (!result) {
           const obj2 = { limit };
-          const gameAnnouncements = GameProfileHttpUtils.getGameAnnouncements(closure_0, obj2);
+          const obj = GameProfileHttpUtils;
+          const gameAnnouncements = obj.getGameAnnouncements(closure_0, obj2);
         }
       }, items1);
       let messages;
@@ -171,18 +172,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (messages == null) {
         messages = [];
       }
-      let obj2 = { messages, channelId: null, guildId: null, loading: null, hasFetched: null };
-      let channelId;
+      let obj2 = { messages, channelId, guildId, loading: isFetching, hasFetched };
+      channelId = undefined;
       if (data != null) {
         channelId = data.channelId;
       }
-      obj2.channelId = channelId;
-      let guildId;
+      guildId = undefined;
       if (data != null) {
         guildId = data.guildId;
       }
-      obj2.guildId = guildId;
-      obj2.loading = stateFromStoresObject.isFetching;
-      obj2.hasFetched = hasFetched;
       return obj2;
     };
+let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameAnnouncements.tsx");
+
+export default tmp2;

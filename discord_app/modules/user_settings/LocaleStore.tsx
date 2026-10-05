@@ -1,97 +1,98 @@
 // discord_app/modules/user_settings/LocaleStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import intl from "../../intl/index.native.tsx";
+import IntlLoaderStore from "../../intl/IntlLoaderStore.tsx";
 import DiscordNativeDefault from "../../lib/DiscordNative.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import UserSettingsProtoStore from "UserSettingsProtoStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const require = fn;
-let closure_6 = async function _getSystemLocale() {
-  if (c3 === 2) {
-    c3 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp5 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+let c2, c3;
+
+function getSystemLocale() {
+  return obj(...arguments);
+}
+let obj = function _getSystemLocale() {
+  obj = _asyncToGenerator(async () => {
+    let value;
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c3 = 2;
-      if (0 === c2) {
-        if (arg0 === 1) {
+      try {
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let closure_1 = tmp;
+            value = undefined;
+            const tmp22 = DiscordNativeDefault;
+            let prop;
+            if (tmp22 != null) {
+              const app = tmp22.app;
+              if (app != null) {
+                prop = app.getPreferredSystemLanguages;
+              }
+            }
+            if (null != prop) {
+              const app2 = DiscordNativeDefault.app;
+              const preferredSystemLanguages = app2.getPreferredSystemLanguages();
+              c2 = 1;
+              c3 = 1;
+              const obj4 = { value: preferredSystemLanguages.then((result) => result[0]), done: false };
+              return obj4;
+            }
+          }
+        } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_1 = tmp2;
-          closure_0 = tmp3;
-          closure_128_0 = undefined;
-          const tmp24 = DiscordNativeDefault;
-          let prop;
-          if (tmp24 != null) {
-            const app = tmp24.app;
-            if (app != null) {
-              prop = app.getPreferredSystemLanguages;
-            }
-          }
-          if (null != prop) {
-            const app2 = DiscordNativeDefault.app;
-            const preferredSystemLanguages = app2.getPreferredSystemLanguages();
-            c2 = 1;
-            c3 = 1;
-            const obj4 = { value: preferredSystemLanguages.then((result) => result[0]), done: false };
-            return obj4;
-          }
-        }
-      } else if (arg0 === 1) {
-        c3 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
-      } else {
-        closure_128_0 = value;
-        if (null != closure_128_0) {
-          if ("" !== closure_128_0) {
+          const obj5 = { value, done: true };
+          return obj5;
+        } else if (null != value) {
+          if ("" !== value) {
             c3 = 3;
-            const obj = { value: closure_128_0, done: true };
+            obj = { value, done: true };
             return obj;
           }
         }
+        c3 = 3;
+        const obj6 = { value: closure_129_0(closure_129_2[4]).systemLocale, done: true };
+        return obj6;
+      } catch (tmp14) {
+        c3 = 3;
+        throw tmp14;
       }
-      c3 = 3;
-      const obj6 = { value: closure_129_0(closure_129_2[4]).systemLocale, done: true };
-      return obj6;
-    } catch (tmp15) {
-      c3 = tmp;
-      throw tmp15;
     }
-  }
+  });
+  return obj(...arguments);
 };
 function handleUpdate() {
   const localization = UserSettingsProtoStore.settings.localization;
-  value = undefined;
+  let value;
   if (localization != null) {
     if (localization.locale != null) {
       value = iter.value;
     }
   }
-  let flag = null != value;
-  if (flag) {
-    flag = "" !== value;
-  }
-  if (flag) {
-    flag = value !== locale;
-  }
+  let flag = null != value && "" !== value && value !== locale;
   if (flag) {
     locale = value;
     setAppLocale(value);
@@ -99,46 +100,33 @@ function handleUpdate() {
   }
   return flag;
 }
-const setAppLocale = fn(2117).setAppLocale;
-let locale = fn(1126).intl.currentLocale;
-let global = fn(1126).systemLocale;
-(function getSystemLocale() {
-  const self = this;
-  const apply = closure_6.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-})().then((result) => {
-  global = result;
+const setAppLocale = IntlLoaderStore.setAppLocale;
+let locale = intl.intl.currentLocale;
+let systemLocale = intl.systemLocale;
+const promise = getSystemLocale();
+promise.then((result) => {
+  systemLocale = result;
 });
-const Store = initializeDefault.Store;
-class LocaleStore extends Store {}
-const prototype = LocaleStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(UserSettingsProtoStore);
-  const localization = UserSettingsProtoStore.settings.localization;
-  value = undefined;
-  if (localization != null) {
-    if (localization.locale != null) {
-      value = iter.value;
+const Store = get_initializedDefault.Store;
+class LocaleStore extends Store {
+  initialize() {
+    this.waitFor(UserSettingsProtoStore);
+    const localization = UserSettingsProtoStore.settings.localization;
+    let value;
+    if (localization != null) {
+      if (localization.locale != null) {
+        value = iter.value;
+      }
     }
+    const tmp3 = null != value && "" !== value && value !== locale;
+    if (tmp3) {
+      locale = value;
+      setAppLocale(value);
+    }
+    setAppLocale(locale);
   }
-  let tmp3 = null != value;
-  if (tmp3) {
-    tmp3 = "" !== value;
-  }
-  if (tmp3) {
-    tmp3 = value !== locale;
-  }
-  if (tmp3) {
-    locale = value;
-    setAppLocale(value);
-  }
-  setAppLocale(locale);
-};
+}
+const prototype = LocaleStore.prototype;
 Object.defineProperty(prototype, "locale", {
   get: function locale() {
     return locale;
@@ -147,12 +135,12 @@ Object.defineProperty(prototype, "locale", {
 });
 Object.defineProperty(prototype, "systemLocale", {
   get: function systemLocale() {
-    return global;
+    return systemLocale;
   },
   set: undefined,
 });
 LocaleStore.displayName = "LocaleStore";
-const localeStore = new LocaleStore(DispatcherDefault, {
+obj = {
   OVERLAY_INITIALIZE: handleUpdate,
   CACHE_LOADED: handleUpdate,
   CONNECTION_OPEN: handleUpdate,
@@ -161,8 +149,8 @@ const localeStore = new LocaleStore(DispatcherDefault, {
     locale = locale.locale;
     setAppLocale(locale);
   },
-});
-const size = fn(2);
+};
+const localeStore = new LocaleStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/user_settings/LocaleStore.tsx");
 
 export default localeStore;

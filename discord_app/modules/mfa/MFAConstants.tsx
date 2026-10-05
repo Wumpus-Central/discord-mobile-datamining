@@ -6,36 +6,36 @@ const require = globalThis.__r;
 const obj = {};
 Object.defineProperty(obj, "webauthn", {
   get: () => {
-    const intl = require("util").intl;
-    return intl.string(require("util").t.gTH4Dp);
+    const intl = require("intl").intl;
+    return intl.string(require("intl").t.gTH4Dp);
   },
   set: undefined,
 });
 Object.defineProperty(obj, "totp", {
   get: () => {
-    const intl = require("util").intl;
-    return intl.string(require("util").t.nXKmyf);
+    const intl = require("intl").intl;
+    return intl.string(require("intl").t.nXKmyf);
   },
   set: undefined,
 });
 Object.defineProperty(obj, "sms", {
   get: () => {
-    const intl = require("util").intl;
-    return intl.string(require("util").t.ZbVwZW);
+    const intl = require("intl").intl;
+    return intl.string(require("intl").t.ZbVwZW);
   },
   set: undefined,
 });
 Object.defineProperty(obj, "password", {
   get: () => {
-    const intl = require("util").intl;
-    return intl.string(require("util").t["8F6hKS"]);
+    const intl = require("intl").intl;
+    return intl.string(require("intl").t["8F6hKS"]);
   },
   set: undefined,
 });
 Object.defineProperty(obj, "backup", {
   get: () => {
-    const intl = require("util").intl;
-    return intl.string(require("util").t.vhSRKf);
+    const intl = require("intl").intl;
+    return intl.string(require("intl").t.vhSRKf);
   },
   set: undefined,
 });

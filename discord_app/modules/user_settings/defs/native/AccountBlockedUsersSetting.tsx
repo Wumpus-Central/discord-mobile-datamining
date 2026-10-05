@@ -1,15 +1,27 @@
 // discord_app/modules/user_settings/defs/native/AccountBlockedUsersSetting.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
-import util from "../../../../intl/index.native.tsx";
+import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../../../_runtime/00576_react.js";
+import Constants from "../../../../Constants.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
+import DenyIcon from "../../../../design/components/Icon/native/redesign/generated/DenyIcon.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11129);
+const require = globalThis.__r;
+
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const UserSettingsSections = Constants.UserSettingsSections;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(4);
+      let blockedIDs;
+      let tmp4;
+      let tmp5;
+      let tmp8;
+      const obj = react;
+      const cResult = obj.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [RelationshipStore];
         const fn = function o() {
@@ -22,74 +34,44 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       if (cResult[2] !== stateFromStores) {
-        const intl = util.intl;
+        const intl = intl2.intl;
         const obj2 = { numberOfBlockedUsers: stateFromStores };
-        const formatResult = intl.format(util.t["r91W/h"], obj2);
+        const formatResult = intl.format(intl2.t["r91W/h"], obj2);
         cResult[2] = stateFromStores;
         cResult[3] = formatResult;
-        let tmp8 = formatResult;
+        tmp8 = formatResult;
       } else {
         tmp8 = cResult[3];
       }
       return tmp8;
     }
   : () => {
+      let blockedIDs;
       const items = [RelationshipStore];
-      const numberOfBlockedUsers = initialize.useStateFromStores(items, () => "" + blockedIDs.getBlockedIDs().length);
-      const intl = util.intl;
-      return intl.format(util.t["r91W/h"], { numberOfBlockedUsers });
+      const obj = get_initialized;
+      const numberOfBlockedUsers = obj.useStateFromStores(items, () => "" + blockedIDs.getBlockedIDs().length);
+      const intl = intl2.intl;
+      return intl.format(intl2.t["r91W/h"], { numberOfBlockedUsers });
     };
-const route = SettingBuilders.createRoute({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.PFOUKW);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.PFOUKW);
   },
-  useDescription: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
-        const cResult = c.c(4);
-        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const items = [RelationshipStore];
-          const fn = function o() {
-            return "" + blockedIDs.getBlockedIDs().length;
-          };
-          cResult[0] = items;
-          cResult[1] = fn;
-          tmp4 = items;
-          tmp5 = fn;
-        } else {
-          [tmp4, tmp5] = cResult;
-        }
-        const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
-        if (cResult[2] !== stateFromStores) {
-          const intl = util.intl;
-          const obj2 = { numberOfBlockedUsers: stateFromStores };
-          const formatResult = intl.format(util.t["r91W/h"], obj2);
-          cResult[2] = stateFromStores;
-          cResult[3] = formatResult;
-          let tmp8 = formatResult;
-        } else {
-          tmp8 = cResult[3];
-        }
-        return tmp8;
-      }
-    : () => {
-        const items = [RelationshipStore];
-        const numberOfBlockedUsers = initialize.useStateFromStores(items, () => "" + blockedIDs.getBlockedIDs().length);
-        const intl = util.intl;
-        return intl.format(util.t["r91W/h"], { numberOfBlockedUsers });
-      },
-  IconComponent: fn(7588).DenyIcon,
-  parent: fn(7634).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useDescription: tmp2,
+  IconComponent: DenyIcon.DenyIcon,
+  parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: {
-    route: fn(1085).UserSettingsSections.BLOCKED_USERS_V2,
+    route: UserSettingsSections.BLOCKED_USERS_V2,
     getComponent() {
       return require("BlockedUsersListV2").default;
     },
   },
-});
-const size = fn(2);
+};
+const route = SettingBuilders.createRoute(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountBlockedUsersSetting.tsx");
 
 export default route;

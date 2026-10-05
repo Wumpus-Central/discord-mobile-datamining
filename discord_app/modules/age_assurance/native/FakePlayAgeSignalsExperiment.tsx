@@ -2,7 +2,8 @@
 import ApexExperiment from "../../experiments/apex/index.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = {
+let obj3;
+let obj = {
   OFF: "off",
   ADULT: "adult",
   TEEN: "teen",
@@ -23,23 +24,24 @@ const obj2 = {
   kind: "user",
   name: "2026-08-fake-play-age-signals",
   defaultConfig: { enabled: false, scenario: obj.OFF },
-  variations: {
-    0: { enabled: false, scenario: obj.OFF },
-    1: { enabled: true, scenario: obj.ADULT },
-    2: { enabled: true, scenario: obj.TEEN },
-    3: { enabled: true, scenario: obj.UNDER_13 },
-    4: { enabled: true, scenario: obj.SUPERVISED_PENDING },
-    5: { enabled: true, scenario: obj.SUPERVISED_DECLINED },
-    6: { enabled: true, scenario: obj.NOT_SHARED },
-    7: { enabled: true, scenario: obj.ADULT_SELF_DECLARED },
-    8: { enabled: true, scenario: obj.EMPTY },
-    9: { enabled: true, scenario: obj.ERROR },
-    10: { enabled: true, scenario: obj.VERIFICATION_REQUIRED },
-    11: { enabled: true, scenario: obj.ADULT_ASSESSED },
-    12: { enabled: true, scenario: obj.SUPERVISED_APPROVED },
-    13: { enabled: true, scenario: obj.CHECK_ERROR },
-    14: { enabled: true, scenario: obj.UNDER_13_DECLINED },
-  },
+  variations: obj3,
+};
+obj3 = {
+  0: { enabled: false, scenario: obj.OFF },
+  1: { enabled: true, scenario: obj.ADULT },
+  2: { enabled: true, scenario: obj.TEEN },
+  3: { enabled: true, scenario: obj.UNDER_13 },
+  4: { enabled: true, scenario: obj.SUPERVISED_PENDING },
+  5: { enabled: true, scenario: obj.SUPERVISED_DECLINED },
+  6: { enabled: true, scenario: obj.NOT_SHARED },
+  7: { enabled: true, scenario: obj.ADULT_SELF_DECLARED },
+  8: { enabled: true, scenario: obj.EMPTY },
+  9: { enabled: true, scenario: obj.ERROR },
+  10: { enabled: true, scenario: obj.VERIFICATION_REQUIRED },
+  11: { enabled: true, scenario: obj.ADULT_ASSESSED },
+  12: { enabled: true, scenario: obj.SUPERVISED_APPROVED },
+  13: { enabled: true, scenario: obj.CHECK_ERROR },
+  14: { enabled: true, scenario: obj.UNDER_13_DECLINED },
 };
 const apexExperiment = ApexExperiment.createApexExperiment(obj2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/FakePlayAgeSignalsExperiment.tsx");
@@ -47,8 +49,10 @@ const result = size.fileFinishedImporting("modules/age_assurance/native/FakePlay
 export default apexExperiment;
 export const FakePlayAgeSignalsScenario = obj;
 export const getFakePlayAgeSignalsConfig = function getFakePlayAgeSignalsConfig(location) {
-  return apexExperiment.getConfig({ location });
+  const obj = { location };
+  return apexExperiment.getConfig(obj);
 };
 export const isFakePlayAgeSignalsEnabled = function isFakePlayAgeSignalsEnabled(location) {
-  return apexExperiment.getConfig({ location }).enabled;
+  const obj = { location };
+  return apexExperiment.getConfig(obj).enabled;
 };

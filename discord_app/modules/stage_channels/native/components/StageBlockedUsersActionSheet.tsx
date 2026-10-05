@@ -1,33 +1,40 @@
 // discord_app/modules/stage_channels/native/components/StageBlockedUsersActionSheet.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl7 from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import StageChannelsConstants from "../../StageChannelsConstants.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import StageChannelRoleStore from "../../StageChannelRoleStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-let closure_8 = fn(5571).STAGE_BLOCKED_USERS_SHEET_KEY;
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+let BottomSheet, channel, dependencyMap;
+
+let c10;
+let c9;
+let obj2;
+let obj3;
+let obj4;
+let size;
+const View = react_native.View;
+let closure_8 = StageChannelsConstants.STAGE_BLOCKED_USERS_SHEET_KEY;
+({ jsx: c9, jsxs: c10 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
   container: { paddingHorizontal: 16 },
   header: { padding: 16 },
   title: { marginTop: 16, marginBottom: 8, textAlign: "center" },
   description: { textAlign: "center", marginBottom: 16 },
-  buttons: {
-    width: "100%",
-    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-  },
+  buttons: obj2,
   userContainer: {
     display: "flex",
     flexDirection: "row",
@@ -38,13 +45,20 @@ let obj2 = {
   },
   avatarContainer: { position: "relative", padding: 8, paddingTop: 0, paddingBottom: 4, marginEnd: 12 },
   avatar: { opacity: 0.5 },
-  iconContainer: null,
-  icon: null,
-  flex: null,
-  blocked: null,
-  ignored: null,
+  iconContainer: size,
+  icon: { height: 12, width: 12 },
+  flex: { display: "flex", flexDirection: "row" },
+  blocked: obj3,
+  ignored: obj4,
 };
-let size = {
+obj2 = {
+  width: "100%",
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
+  paddingHorizontal: 16,
+  paddingVertical: 8,
+};
+createStyles = createStyles.createStyles;
+size = {
   position: "absolute",
   top: -4,
   right: 4,
@@ -57,23 +71,21 @@ let size = {
   borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
 };
-obj2.iconContainer = size;
-obj2.icon = { height: 12, width: 12 };
-obj2.flex = { display: "flex", flexDirection: "row" };
-let obj3 = {
-  width: "100%",
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
-  paddingHorizontal: 16,
-  paddingVertical: 8,
-};
-obj2.blocked = { color: nativeDefault.unsafe_rawColors.RED_400 };
-let obj4 = { color: nativeDefault.unsafe_rawColors.RED_400 };
-obj2.ignored = { color: nativeDefault.colors.TEXT_DEFAULT };
-let closure_11 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
+obj3 = { color: nativeDefault.unsafe_rawColors.RED_400 };
+obj4 = { color: nativeDefault.colors.TEXT_DEFAULT };
+let closure_11 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = channelId(576).c(52);
+      let Icon;
+      let channelId;
+      let first;
+      let guildId;
+      let items2;
+      let obj3;
+      let participant;
+      const obj = channelId(576);
+      const cResult = obj.c(52);
       ({ participant, guildId, channelId } = arg0);
       const tmp4 = closure_11();
       const user = participant.user;
@@ -81,27 +93,30 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [StageChannelRoleStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === channelId) {
+        let tmp7;
+        let tmp9;
         if (cResult[2] === user.id) {
-          let tmp7 = cResult[3];
+          tmp7 = cResult[3];
         }
         const _Symbol = Symbol;
-        const stateFromStores = channelId(504).useStateFromStores(first, tmp7);
+        const tmpResult = channelId(504);
+        const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [RelationshipStore];
           cResult[4] = items1;
-          let tmp9 = items1;
+          tmp9 = items1;
         } else {
           tmp9 = cResult[4];
         }
         if (cResult[5] !== user.id) {
           class T {
             constructor() {
-              return closure_6.isBlocked(user.id);
+              return RelationshipStore.isBlocked(user.id);
             }
           }
           cResult[5] = user.id;
@@ -109,44 +124,44 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class T {
             constructor() {
-              return closure_6.isBlocked(user.id);
+              return RelationshipStore.isBlocked(user.id);
             }
           }
         }
-        const tmpResult = channelId(504);
-        const stateFromStores1 = channelId(504).useStateFromStores(tmp9, T);
+        const tmpResult2 = channelId(504);
+        const stateFromStores1 = tmpResult2.useStateFromStores(tmp9, T);
         if (cResult[7] === guildId) {
           class T {
             constructor() {
-              return closure_6.isBlocked(user.id);
+              return RelationshipStore.isBlocked(user.id);
             }
           }
           const _Symbol2 = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
             class T {
               constructor() {
-                return closure_6.isBlocked(user.id);
+                return RelationshipStore.isBlocked(user.id);
               }
             }
+            cResult[10] = obj4.string(channelId(1126).t.suRApw);
             const stringResult = obj4.string(channelId(1126).t.suRApw);
-            cResult[10] = stringResult;
           } else {
             class T {
               constructor() {
-                return closure_6.isBlocked(user.id);
+                return RelationshipStore.isBlocked(user.id);
               }
             }
           }
           if (speaker) {
             class T {
               constructor() {
-                return closure_6.isBlocked(user.id);
+                return RelationshipStore.isBlocked(user.id);
               }
             }
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
               class T {
                 constructor() {
-                  return closure_6.isBlocked(user.id);
+                  return RelationshipStore.isBlocked(user.id);
                 }
               }
               const stringResult1 = obj5.string(channelId(1126).t.LqMmG2);
@@ -154,60 +169,59 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             } else {
               class T {
                 constructor() {
-                  return closure_6.isBlocked(user.id);
+                  return RelationshipStore.isBlocked(user.id);
                 }
               }
             }
           } else {
             class T {
               constructor() {
-                return closure_6.isBlocked(user.id);
+                return RelationshipStore.isBlocked(user.id);
               }
             }
-            if (cResult[13] === tmp13) {
+          }
+          if (cResult[13] === tmp13) {
+            class T {
+              constructor() {
+                return RelationshipStore.isBlocked(user.id);
+              }
+            }
+            if (cResult[16] === speaker) {
               class T {
                 constructor() {
-                  return closure_6.isBlocked(user.id);
+                  return RelationshipStore.isBlocked(user.id);
                 }
               }
-              if (cResult[16] === speaker) {
-                class T {
-                  constructor() {
-                    return closure_6.isBlocked(user.id);
-                  }
-                }
-              }
-              let tmp24 = speaker;
-              if (speaker) {
-                class T {
-                  constructor() {
-                    return closure_6.isBlocked(user.id);
-                  }
-                }
-                const obj2 = { style: null, children: null };
-                const items2 = [tmp4.iconContainer];
-                obj2.style = items2;
-                const obj3 = { style: tmp4.icon, source: user(8276), color: user(587).unsafe_rawColors.WHITE };
-                obj2.children = closure_9(channelId(1188).Icon, obj3);
-                tmp24 = closure_9(View, obj2);
-              }
-              cResult[16] = speaker;
-              cResult[17] = tmp4.icon;
-              cResult[18] = tmp4.iconContainer;
-              cResult[19] = tmp24;
             }
-            const obj6 = { source: tmp13, size: channelId(1188).AvatarSizes.REFRESH_MEDIUM_32, style: tmp4.avatar };
-            const tmp22 = closure_9(channelId(1188).CutoutableAvatarImage, obj6);
-            cResult[13] = tmp13;
-            cResult[14] = tmp4.avatar;
-            cResult[15] = tmp22;
+            let tmp23 = speaker;
+            if (tmp23) {
+              class T {
+                constructor() {
+                  return RelationshipStore.isBlocked(user.id);
+                }
+              }
+              const obj2 = { style: items2, children: closure_9(Icon, obj3) };
+              items2 = [tmp4.iconContainer];
+              obj3 = { style: tmp4.icon, source: user(8276), color: user(587).unsafe_rawColors.WHITE };
+              Icon = channelId(1188).Icon;
+              tmp23 = closure_9(View, obj2);
+            }
+            cResult[16] = speaker;
+            cResult[17] = tmp4.icon;
+            cResult[18] = tmp4.iconContainer;
+            cResult[19] = tmp23;
           }
+          const obj6 = { source: tmp13, size: channelId(1188).AvatarSizes.REFRESH_MEDIUM_32, style: tmp4.avatar };
+          const CutoutableAvatarImage = channelId(1188).CutoutableAvatarImage;
+          cResult[13] = tmp13;
+          cResult[14] = tmp4.avatar;
+          cResult[15] = closure_9(CutoutableAvatarImage, obj6);
+          const tmp21 = closure_9(CutoutableAvatarImage, obj6);
         }
         const avatarSource = user.getAvatarSource(guildId);
         cResult[7] = guildId;
         cResult[8] = user;
         cResult[9] = avatarSource;
-        const tmpResult2 = channelId(504);
       }
       const fn = function c() {
         return StageChannelRoleStore.isModerator(user.id, channelId);
@@ -216,109 +230,124 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = user.id;
       cResult[3] = fn;
       tmp7 = fn;
-      const obj = channelId(576);
     }
   : (guildId) => {
+      let Icon;
+      let items2;
+      let items3;
+      let items4;
+      let items5;
+      let items6;
+      let items8;
+      let items9;
+      let obj7;
+      let participant;
+      let str;
+      let stringResult;
+      let stringResult1;
       ({ participant, channelId: require } = guildId);
+      guildId = guildId.guildId;
       const tmp = closure_11();
       const user = participant.user;
       let speaker = participant.speaker;
       const items = [StageChannelRoleStore];
-      const stateFromStores = initialize.useStateFromStores(items, () =>
-        StageChannelRoleStore.isModerator(user.id, require),
-      );
+      const obj = get_initialized;
+      const stateFromStores = obj.useStateFromStores(items, () => StageChannelRoleStore.isModerator(user.id, require));
       const items1 = [RelationshipStore];
-      const stateFromStores1 = initialize.useStateFromStores(items1, () => RelationshipStore.isBlocked(user.id));
-      const avatarSource = user.getAvatarSource(guildId.guildId);
-      const intl = util.intl;
+      const obj2 = get_initialized;
+      const stateFromStores1 = obj2.useStateFromStores(items1, () => RelationshipStore.isBlocked(user.id));
+      const avatarSource = user.getAvatarSource(guildId);
+      const intl = intl7.intl;
       if (speaker) {
-        const intl3 = util.intl;
-        let stringResult = intl3.string(util.t.LqMmG2);
+        const intl3 = intl7.intl;
+        stringResult = intl3.string(intl7.t.LqMmG2);
       } else {
         stringResult = tmp7;
         if (stateFromStores) {
-          const intl2 = util.intl;
-          stringResult = intl2.string(util.t.GMZqSi);
+          const intl2 = intl7.intl;
+          stringResult = intl2.string(intl7.t.GMZqSi);
         }
       }
-      const obj3 = { style: tmp.userContainer, children: null };
-      const obj4 = { style: tmp.avatarContainer, children: null };
-      const items2 = [
-        closure_9(native.CutoutableAvatarImage, {
-          source: avatarSource,
-          size: native.AvatarSizes.REFRESH_MEDIUM_32,
-          style: tmp.avatar,
-        }),
-      ];
+      const obj3 = { style: tmp.userContainer, children: items4 };
+      const obj4 = { style: tmp.avatarContainer, children: items2 };
+      const obj5 = { source: avatarSource, size: native.AvatarSizes.REFRESH_MEDIUM_32, style: tmp.avatar };
+      const CutoutableAvatarImage = native.CutoutableAvatarImage;
+      items2 = [closure_9(CutoutableAvatarImage, obj5)];
       if (speaker) {
-        const obj6 = { style: null, children: null };
-        const items3 = [tmp.iconContainer];
-        obj6.style = items3;
-        const obj7 = { style: tmp.icon, source: user(8276), color: user(587).unsafe_rawColors.WHITE };
-        obj6.children = closure_9(native.Icon, obj7);
+        const obj6 = { style: items3, children: closure_9(Icon, obj7) };
+        items3 = [tmp.iconContainer];
+        obj7 = { style: tmp.icon, source: user(8276), color: user(587).unsafe_rawColors.WHITE };
+        Icon = native.Icon;
         speaker = closure_9(View, obj6);
       }
       items2[1] = speaker;
-      obj4.children = items2;
-      const items4 = [closure_10(View, obj4)];
-      const obj8 = { style: tmp.flex, children: null };
-      const obj9 = {
-        variant: "text-sm/medium",
-        color: "mobile-text-heading-primary",
-        children: participant.user.toString(),
-      };
-      const items5 = [closure_9(Text_Text.Text, obj9)];
+      items4 = [closure_10(View, obj4)];
+      const obj8 = { style: tmp.flex, children: items5 };
+      const obj9 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: str.toString() };
+      str = participant.user;
+      const Text = Text_Text.Text;
+      items5 = [closure_9(Text, obj9)];
       const user2 = participant.user;
-      const hasUniqueUsernameResult = user2.hasUniqueUsername();
-      let tmp9Result = !hasUniqueUsernameResult;
-      if (!hasUniqueUsernameResult) {
-        const obj10 = { variant: "text-sm/medium", color: "text-default", children: null };
-        const items6 = ["#", participant.user.discriminator];
-        obj10.children = items6;
+      let tmp9Result = !user2.hasUniqueUsername();
+      user2.hasUniqueUsername();
+      if (tmp9Result) {
+        const obj10 = { variant: "text-sm/medium", color: "text-default", children: items6 };
+        items6 = ["#", participant.user.discriminator];
         tmp9Result = closure_10(Text_Text.Text, obj10);
       }
       items5[1] = tmp9Result;
-      obj8.children = items5;
       const items7 = [closure_10(View, obj8)];
-      const obj11 = { style: tmp.flex, children: null };
-      const obj12 = { style: stateFromStores1 ? tmp.blocked : tmp.ignored, children: null };
-      const intl4 = util.intl;
+      const obj11 = { style: tmp.flex, children: items8 };
+      const obj12 = { style: stateFromStores1 ? tmp.blocked : tmp.ignored, children: stringResult1 };
+      const LegacyText = native.LegacyText;
+      const intl4 = intl7.intl;
       const string = intl4.string;
-      const t = util.t;
+      const t = intl7.t;
       if (stateFromStores1) {
-        let stringResult1 = string(t["4bDptI"]);
+        stringResult1 = string(t["4bDptI"]);
       } else {
         stringResult1 = string(t.tFY5Zb);
       }
-      const obj13 = { children: null };
-      obj12.children = stringResult1;
-      const items8 = [closure_9(native.LegacyText, obj12)];
-      const obj14 = { variant: "text-sm/medium", color: "text-muted", children: null };
-      const items9 = [" ", "| ", stringResult];
-      obj14.children = items9;
+      const obj13 = { children: items7 };
+      items8 = [closure_9(LegacyText, obj12)];
+      const obj14 = { variant: "text-sm/medium", color: "text-muted", children: items9 };
+      items9 = [" ", "| ", stringResult];
       items8[1] = closure_10(Text_Text.Text, obj14);
-      obj11.children = items8;
       items7[1] = closure_10(View, obj11);
-      obj13.children = items7;
       items4[1] = closure_10(View, obj13);
-      obj3.children = items4;
       return closure_10(View, obj3);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(38);
+      let blockedUserCount;
+      let header;
+      let header2;
+      let header3;
+      let ignoredUserCount;
+      let items;
+      let items1;
+      let items2;
+      let title;
+      let title2;
+      let title3;
+      const obj = react2;
+      const cResult = obj.c(38);
       ({ blockedUserCount, ignoredUserCount } = arg0);
       const tmp4 = closure_11();
       if (blockedUserCount > 0) {
         if (ignoredUserCount > 0) {
+          let first;
+          let tmp36;
+          let tmp39;
+          let tmp41;
           const _Symbol = Symbol;
           ({ header: header2, title: title2 } = tmp4);
           if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl5 = util.intl;
-            const stringResult = intl5.string(util.t.Uzdyho);
+            const intl5 = intl7.intl;
+            const stringResult = intl5.string(intl7.t.Uzdyho);
             cResult[0] = stringResult;
-            let first = stringResult;
+            first = stringResult;
           } else {
             first = cResult[0];
           }
@@ -330,43 +359,44 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               color: "mobile-text-heading-primary",
               children: first,
             };
-            const tmp38 = options(Text_Text.Text, obj2);
+            const tmp38 = React4(Text_Text.Text, obj2);
             cResult[1] = tmp4.title;
             cResult[2] = tmp38;
-            let tmp36 = tmp38;
+            tmp36 = tmp38;
           } else {
             tmp36 = cResult[2];
           }
           const _Symbol2 = Symbol;
+          const description3 = tmp4.description;
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl6 = util.intl;
-            const stringResult1 = intl6.string(util.t["P/KFXz"]);
+            const intl6 = intl7.intl;
+            const stringResult1 = intl6.string(intl7.t["P/KFXz"]);
             cResult[3] = stringResult1;
-            let tmp39 = stringResult1;
+            tmp39 = stringResult1;
           } else {
             tmp39 = cResult[3];
           }
           if (cResult[4] !== tmp4.description) {
-            const obj3 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp39 };
-            const tmp43 = options(Text_Text.Text, obj3);
+            const obj3 = { style: description3, variant: "text-sm/medium", color: "text-default", children: tmp39 };
+            const tmp43 = React4(Text_Text.Text, obj3);
             cResult[4] = tmp4.description;
             cResult[5] = tmp43;
-            let tmp41 = tmp43;
+            tmp41 = tmp43;
           } else {
             tmp41 = cResult[5];
           }
           if (cResult[6] === tmp4.header) {
             if (cResult[7] === tmp36) {
+              let tmp44;
               if (cResult[8] === tmp41) {
-                let tmp44 = cResult[9];
+                tmp44 = cResult[9];
               }
               return tmp44;
             }
           }
-          const obj4 = { style: header2, children: null };
-          const items = [tmp36, tmp41];
-          obj4.children = items;
-          const tmp47 = v65535(View, obj4);
+          const obj4 = { style: header2, children: items };
+          items = [tmp36, tmp41];
+          const tmp47 = authStore(View, obj4);
           cResult[6] = tmp4.header;
           cResult[7] = tmp36;
           cResult[8] = tmp41;
@@ -375,55 +405,60 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (ignoredUserCount > 0) {
+        let tmp19;
         ({ header, title } = tmp4);
         if (cResult[10] !== ignoredUserCount) {
-          const intl3 = util.intl;
+          const intl3 = intl7.intl;
           const obj5 = { number: ignoredUserCount };
-          const formatResult = intl3.format(util.t.wvygk8, obj5);
+          const formatResult = intl3.format(intl7.t.wvygk8, obj5);
           cResult[10] = ignoredUserCount;
           cResult[11] = formatResult;
-          let tmp19 = formatResult;
+          tmp19 = formatResult;
         } else {
           tmp19 = cResult[11];
         }
         if (cResult[12] === tmp4.title) {
+          let tmp21;
+          let tmp24;
           if (cResult[13] === tmp19) {
-            let tmp21 = cResult[14];
+            tmp21 = cResult[14];
           }
+          const description2 = tmp4.description;
           if (cResult[15] !== ignoredUserCount) {
-            const intl4 = util.intl;
+            const intl4 = intl7.intl;
             const obj6 = { number: ignoredUserCount };
-            const formatResult1 = intl4.format(util.t.Ri3o33, obj6);
+            const formatResult1 = intl4.format(intl7.t.Ri3o33, obj6);
             cResult[15] = ignoredUserCount;
             cResult[16] = formatResult1;
-            let tmp24 = formatResult1;
+            tmp24 = formatResult1;
           } else {
             tmp24 = cResult[16];
           }
           if (cResult[17] === tmp4.description) {
+            let tmp26;
             if (cResult[18] === tmp24) {
-              let tmp26 = cResult[19];
+              tmp26 = cResult[19];
             }
             if (cResult[20] === tmp4.header) {
               if (cResult[21] === tmp21) {
+                let tmp29;
                 if (cResult[22] === tmp26) {
-                  let tmp29 = cResult[23];
+                  tmp29 = cResult[23];
                 }
                 return tmp29;
               }
             }
-            const obj7 = { style: header, children: null };
-            const items1 = [tmp21, tmp26];
-            obj7.children = items1;
-            const tmp32 = v65535(View, obj7);
+            const obj7 = { style: header, children: items1 };
+            items1 = [tmp21, tmp26];
+            const tmp32 = authStore(View, obj7);
             cResult[20] = tmp4.header;
             cResult[21] = tmp21;
             cResult[22] = tmp26;
             cResult[23] = tmp32;
             tmp29 = tmp32;
           }
-          const obj8 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp24 };
-          const tmp28 = options(Text_Text.Text, obj8);
+          const obj8 = { style: description2, variant: "text-sm/medium", color: "text-default", children: tmp24 };
+          const tmp28 = React4(Text_Text.Text, obj8);
           cResult[17] = tmp4.description;
           cResult[18] = tmp24;
           cResult[19] = tmp28;
@@ -436,61 +471,66 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: tmp19,
         };
-        const tmp23 = options(Text_Text.Text, obj9);
+        const tmp23 = React4(Text_Text.Text, obj9);
         cResult[12] = tmp4.title;
         cResult[13] = tmp19;
         cResult[14] = tmp23;
         tmp21 = tmp23;
       } else {
+        let tmp5;
         ({ header: header3, title: title3 } = tmp4);
         if (cResult[24] !== blockedUserCount) {
-          const intl = util.intl;
+          const intl = intl7.intl;
           const obj10 = { number: blockedUserCount };
-          const formatResult2 = intl.format(util.t.HviVA9, obj10);
+          const formatResult2 = intl.format(intl7.t.HviVA9, obj10);
           cResult[24] = blockedUserCount;
           cResult[25] = formatResult2;
-          let tmp5 = formatResult2;
+          tmp5 = formatResult2;
         } else {
           tmp5 = cResult[25];
         }
         if (cResult[26] === tmp4.title) {
+          let tmp7;
+          let tmp10;
           if (cResult[27] === tmp5) {
-            let tmp7 = cResult[28];
+            tmp7 = cResult[28];
           }
+          const description = tmp4.description;
           if (cResult[29] !== blockedUserCount) {
-            const intl2 = util.intl;
+            const intl2 = intl7.intl;
             const obj11 = { number: blockedUserCount };
-            const formatResult3 = intl2.format(util.t["28qZMU"], obj11);
+            const formatResult3 = intl2.format(intl7.t["28qZMU"], obj11);
             cResult[29] = blockedUserCount;
             cResult[30] = formatResult3;
-            let tmp10 = formatResult3;
+            tmp10 = formatResult3;
           } else {
             tmp10 = cResult[30];
           }
           if (cResult[31] === tmp4.description) {
+            let tmp12;
             if (cResult[32] === tmp10) {
-              let tmp12 = cResult[33];
+              tmp12 = cResult[33];
             }
             if (cResult[34] === tmp4.header) {
               if (cResult[35] === tmp7) {
+                let tmp15;
                 if (cResult[36] === tmp12) {
-                  let tmp15 = cResult[37];
+                  tmp15 = cResult[37];
                 }
                 return tmp15;
               }
             }
-            const obj12 = { style: header3, children: null };
-            const items2 = [tmp7, tmp12];
-            obj12.children = items2;
-            const tmp18 = v65535(View, obj12);
+            const obj12 = { style: header3, children: items2 };
+            items2 = [tmp7, tmp12];
+            const tmp18 = authStore(View, obj12);
             cResult[34] = tmp4.header;
             cResult[35] = tmp7;
             cResult[36] = tmp12;
             cResult[37] = tmp18;
             tmp15 = tmp18;
           }
-          const obj13 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp10 };
-          const tmp14 = options(Text_Text.Text, obj13);
+          const obj13 = { style: description, variant: "text-sm/medium", color: "text-default", children: tmp10 };
+          const tmp14 = React4(Text_Text.Text, obj13);
           cResult[31] = tmp4.description;
           cResult[32] = tmp10;
           cResult[33] = tmp14;
@@ -503,7 +543,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: tmp5,
         };
-        const tmp9 = options(Text_Text.Text, obj14);
+        const tmp9 = React4(Text_Text.Text, obj14);
         cResult[26] = tmp4.title;
         cResult[27] = tmp5;
         cResult[28] = tmp9;
@@ -511,87 +551,116 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
     }
   : (arg0) => {
+      let blockedUserCount;
+      let ignoredUserCount;
+      let intl;
+      let intl2;
+      let intl3;
+      let intl4;
+      let intl5;
+      let intl6;
+      let items;
+      let items1;
+      let items2;
+      let obj11;
+      let obj13;
+      let obj6;
+      let obj8;
+      let obj9;
       ({ blockedUserCount, ignoredUserCount } = arg0);
       const tmp = closure_11();
       if (blockedUserCount > 0) {
         if (ignoredUserCount > 0) {
-          const obj2 = { style: tmp.header, children: null };
+          const obj2 = { style: tmp.header, children: items };
           const obj3 = {
             style: tmp.title,
             accessibilityRole: "header",
             variant: "heading-lg/extrabold",
             color: "mobile-text-heading-primary",
-            children: null,
+            children: intl3.string(intl7.t.Uzdyho),
           };
-          const intl3 = util.intl;
-          obj3.children = intl3.string(util.t.Uzdyho);
-          const items = [options(Text_Text.Text, obj3)];
-          const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-          const intl4 = util.intl;
-          obj4.children = intl4.string(util.t["P/KFXz"]);
-          items[1] = options(Text_Text.Text, obj4);
-          obj2.children = items;
-          let obj9 = obj2;
+          const Text3 = Text_Text.Text;
+          intl3 = intl7.intl;
+          items = [React4(Text3, obj3)];
+          const obj4 = {
+            style: tmp.description,
+            variant: "text-sm/medium",
+            color: "text-default",
+            children: intl4.string(intl7.t["P/KFXz"]),
+          };
+          const Text4 = Text_Text.Text;
+          intl4 = intl7.intl;
+          items[1] = React4(Text4, obj4);
+          obj9 = obj2;
         }
         return tmp2(tmp3, obj9);
       }
       if (ignoredUserCount > 0) {
-        const obj = { style: tmp.header, children: null };
+        const obj = { style: tmp.header, children: items1 };
         const obj5 = {
           style: tmp.title,
           accessibilityRole: "header",
           variant: "heading-lg/extrabold",
           color: "mobile-text-heading-primary",
-          children: null,
+          children: intl.format(intl7.t.wvygk8, obj6),
         };
-        const intl = util.intl;
-        const obj6 = { number: ignoredUserCount };
-        obj5.children = intl.format(util.t.wvygk8, obj6);
-        const items1 = [options(Text_Text.Text, obj5)];
-        const obj7 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-        const intl2 = util.intl;
-        const obj8 = { number: ignoredUserCount };
-        obj7.children = intl2.format(util.t.Ri3o33, obj8);
-        items1[1] = options(Text_Text.Text, obj7);
-        obj.children = items1;
+        const Text = Text_Text.Text;
+        intl = intl7.intl;
+        obj6 = { number: ignoredUserCount };
+        items1 = [React4(Text, obj5)];
+        const obj7 = {
+          style: tmp.description,
+          variant: "text-sm/medium",
+          color: "text-default",
+          children: intl2.format(intl7.t.Ri3o33, obj8),
+        };
+        const Text2 = Text_Text.Text;
+        intl2 = intl7.intl;
+        obj8 = { number: ignoredUserCount };
+        items1[1] = React4(Text2, obj7);
         obj9 = obj;
       } else {
-        obj9 = { style: tmp.header, children: null };
+        obj9 = { style: tmp.header, children: items2 };
         const obj10 = {
           style: tmp.title,
           accessibilityRole: "header",
           variant: "heading-lg/extrabold",
           color: "mobile-text-heading-primary",
-          children: null,
+          children: intl5.format(intl7.t.HviVA9, obj11),
         };
-        const intl5 = util.intl;
-        const obj11 = { number: blockedUserCount };
-        obj10.children = intl5.format(util.t.HviVA9, obj11);
-        const items2 = [options(Text_Text.Text, obj10)];
-        const obj12 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-        const intl6 = util.intl;
-        const obj13 = { number: blockedUserCount };
-        obj12.children = intl6.format(util.t["28qZMU"], obj13);
-        items2[1] = options(Text_Text.Text, obj12);
-        obj9.children = items2;
+        const Text5 = Text_Text.Text;
+        intl5 = intl7.intl;
+        obj11 = { number: blockedUserCount };
+        items2 = [React4(Text5, obj10)];
+        const obj12 = {
+          style: tmp.description,
+          variant: "text-sm/medium",
+          color: "text-default",
+          children: intl6.format(intl7.t["28qZMU"], obj13),
+        };
+        const Text6 = Text_Text.Text;
+        intl6 = intl7.intl;
+        obj13 = { number: blockedUserCount };
+        items2[1] = React4(Text6, obj12);
       }
     };
-ReactCompilerGating = fn(558);
-let obj5 = { color: nativeDefault.colors.TEXT_DEFAULT };
-size = fn(2);
-const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageBlockedUsersActionSheet.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      const cResult = channel(576).c(36);
+      let arr4;
+      let intl;
+      let onPress;
+      let obj = channel(576);
+      const cResult = obj.c(36);
       channel = channel.channel;
       const onAccept = channel.onAccept;
-      const tmp4 = closure_11();
-      const obj = channel(576);
+      const tmp5 = closure_11();
       [r10020, dependencyMap] = onPress(arr4.useState(0), 2);
+      onPress(arr4.useState(0), 2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
-          onAccept(4854).hideActionSheet(closure_1_8);
+          const obj = onAccept(dependencyMap[16]);
+          obj.hideActionSheet(closure_1_8);
         };
         cResult[0] = fn;
         onPress = fn;
@@ -599,227 +668,214 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onPress = cResult[0];
       }
       if (cResult[1] === channel) {
+        let tmp8;
+        let tmp10;
+        let tmp14;
         if (cResult[2] === onAccept) {
-          let tmp7 = cResult[3];
+          tmp8 = cResult[3];
         }
-        const stageBlockedUsers = tmp(8277).useStageBlockedUsers(channel.id);
-        const tmpResult = tmp(8277);
-        const stageIgnoredUsers = tmp(8277).useStageIgnoredUsers(channel.id);
+        const tmp2Result = channel(8277);
+        const stageBlockedUsers = tmp2Result.useStageBlockedUsers(channel.id);
+        const tmp2Result2 = channel(8277);
+        const stageIgnoredUsers = tmp2Result2.useStageIgnoredUsers(channel.id);
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           class E {
-            constructor(arg0) {
-              tmp = closure_2(channel.nativeEvent.layout.height);
-              return;
+            constructor(nativeEvent) {
+              dependencyMap(nativeEvent.nativeEvent.layout.height);
             }
           }
           cResult[4] = E;
         } else {
           class E {
-            constructor(arg0) {
-              tmp = closure_2(channel.nativeEvent.layout.height);
-              return;
+            constructor(nativeEvent) {
+              dependencyMap(nativeEvent.nativeEvent.layout.height);
             }
           }
         }
         const _Symbol2 = Symbol;
+        const buttons = tmp5.buttons;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           class E {
-            constructor(arg0) {
-              tmp = closure_2(channel.nativeEvent.layout.height);
-              return;
+            constructor(nativeEvent) {
+              dependencyMap(nativeEvent.nativeEvent.layout.height);
             }
           }
-          const stringResult = obj4.string(tmp(1126).t.mbD50D);
+          const stringResult = obj4.string(channel(1126).t.mbD50D);
           cResult[5] = stringResult;
-          const tmp9 = stringResult;
+          tmp10 = stringResult;
         } else {
           class E {
-            constructor(arg0) {
-              tmp = closure_2(channel.nativeEvent.layout.height);
-              return;
+            constructor(nativeEvent) {
+              dependencyMap(nativeEvent.nativeEvent.layout.height);
             }
           }
         }
-        if (cResult[6] !== tmp7) {
+        if (cResult[6] !== tmp8) {
           class E {
-            constructor(arg0) {
-              tmp = closure_2(channel.nativeEvent.layout.height);
-              return;
+            constructor(nativeEvent) {
+              dependencyMap(nativeEvent.nativeEvent.layout.height);
             }
           }
-          const obj2 = { text: tmp9, onPress: tmp7 };
-          const tmp12 = closure_9(tmp(5594).Button, obj2);
-          cResult[6] = tmp7;
-          cResult[7] = tmp12;
+          const obj2 = { text: tmp10, onPress: tmp8 };
+          cResult[6] = tmp8;
+          cResult[7] = closure_9(channel(5594).Button, obj2);
+          const tmp13 = closure_9(channel(5594).Button, obj2);
         } else {
           class E {
-            constructor(arg0) {
-              tmp = closure_2(channel.nativeEvent.layout.height);
-              return;
+            constructor(nativeEvent) {
+              dependencyMap(nativeEvent.nativeEvent.layout.height);
             }
           }
         }
         const _Symbol3 = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           class E {
-            constructor(arg0) {
-              tmp = closure_2(channel.nativeEvent.layout.height);
-              return;
+            constructor(nativeEvent) {
+              dependencyMap(nativeEvent.nativeEvent.layout.height);
             }
           }
-          const obj3 = { variant: "secondary", text: null, onPress: null };
-          const intl = tmp(1126).intl;
-          obj3.text = intl.string(tmp(1126).t.CZGqeT);
-          obj3.onPress = onPress;
-          const tmp14 = closure_9(tmp(5594).Button, obj3);
-          cResult[8] = tmp14;
-          const tmp13 = tmp14;
+          const obj3 = { variant: "secondary", text: intl.string(channel(1126).t.CZGqeT), onPress };
+          const Button = tmp2(5594).Button;
+          intl = tmp2(1126).intl;
+          const tmp15 = closure_9(Button, obj3);
+          cResult[8] = tmp15;
+          tmp14 = tmp15;
         } else {
           class E {
-            constructor(arg0) {
-              tmp = closure_2(channel.nativeEvent.layout.height);
-              return;
+            constructor(nativeEvent) {
+              dependencyMap(nativeEvent.nativeEvent.layout.height);
             }
           }
         }
-        if (cResult[9] === tmp4.buttons) {
+        if (cResult[9] === tmp5.buttons) {
           class E {
-            constructor(arg0) {
-              tmp = closure_2(channel.nativeEvent.layout.height);
-              return;
+            constructor(nativeEvent) {
+              dependencyMap(nativeEvent.nativeEvent.layout.height);
             }
           }
           const _Symbol4 = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
             class E {
-              constructor(arg0) {
-                tmp = closure_2(channel.nativeEvent.layout.height);
-                return;
+              constructor(nativeEvent) {
+                dependencyMap(nativeEvent.nativeEvent.layout.height);
               }
             }
-            cResult[12] = tmp19;
+            cResult[12] = tmp20;
           } else {
             class E {
-              constructor(arg0) {
-                tmp = closure_2(channel.nativeEvent.layout.height);
-                return;
+              constructor(nativeEvent) {
+                dependencyMap(nativeEvent.nativeEvent.layout.height);
               }
             }
           }
           if (cResult[13] === stageBlockedUsers) {
             class E {
-              constructor(arg0) {
-                tmp = closure_2(channel.nativeEvent.layout.height);
-                return;
+              constructor(nativeEvent) {
+                dependencyMap(nativeEvent.nativeEvent.layout.height);
               }
             }
             if (cResult[16] === channel) {
               class E {
-                constructor(arg0) {
-                  tmp = closure_2(channel.nativeEvent.layout.height);
-                  return;
+                constructor(nativeEvent) {
+                  dependencyMap(nativeEvent.nativeEvent.layout.height);
                 }
               }
-              if (cResult[19] === length) {
+              if (cResult[19] === stageBlockedUsers.length) {
+                let tmp31;
                 class E {
-                  constructor(arg0) {
-                    tmp = closure_2(channel.nativeEvent.layout.height);
-                    return;
+                  constructor(nativeEvent) {
+                    dependencyMap(nativeEvent.nativeEvent.layout.height);
                   }
                 }
                 const _Symbol5 = Symbol;
+                const container = tmp5.container;
                 class Z {
                   constructor(arg0, arg1) {
-                    obj = { participant: closure_4[arg1], guildId: channel.getGuildId(), channelId: channel.id };
-                    return jsx(f46656, obj);
+                    const obj = { participant: arr4[arg1], guildId: channel.getGuildId(), channelId: channel.id };
+                    return React4(closure_12, obj);
                   }
                 }
-                if (tmp29 === Symbol.for("react.memo_cache_sentinel")) {
+                if (tmp30 === Symbol.for("react.memo_cache_sentinel")) {
                   class E {
-                    constructor(arg0) {
-                      tmp = closure_2(channel.nativeEvent.layout.height);
-                      return;
+                    constructor(nativeEvent) {
+                      dependencyMap(nativeEvent.nativeEvent.layout.height);
                     }
                   }
-                  const stringResult1 = obj9.string(tmp(1126).t["3VoRLH"]);
+                  const stringResult1 = obj9.string(channel(1126).t["3VoRLH"]);
                   class Z {
                     constructor(arg0, arg1) {
-                      obj = { participant: closure_4[arg1], guildId: channel.getGuildId(), channelId: channel.id };
-                      return jsx(f46656, obj);
+                      const obj = { participant: arr4[arg1], guildId: channel.getGuildId(), channelId: channel.id };
+                      return React4(closure_12, obj);
                     }
                   }
                   cResult[22] = stringResult1;
-                  const tmp30 = stringResult1;
+                  tmp31 = stringResult1;
                 } else {
                   class E {
-                    constructor(arg0) {
-                      tmp = closure_2(channel.nativeEvent.layout.height);
-                      return;
+                    constructor(nativeEvent) {
+                      dependencyMap(nativeEvent.nativeEvent.layout.height);
                     }
                   }
                 }
                 if (cResult[23] !== arr4.length) {
                   class E {
-                    constructor(arg0) {
-                      tmp = closure_2(channel.nativeEvent.layout.height);
-                      return;
+                    constructor(nativeEvent) {
+                      dependencyMap(nativeEvent.nativeEvent.layout.height);
                     }
                   }
-                  tmp33[0] = arr4.length;
+                  tmp34[0] = arr4.length;
                   class Z {
                     constructor(arg0, arg1) {
-                      obj = { participant: closure_4[arg1], guildId: channel.getGuildId(), channelId: channel.id };
-                      return jsx(f46656, obj);
+                      const obj = { participant: arr4[arg1], guildId: channel.getGuildId(), channelId: channel.id };
+                      return React4(closure_12, obj);
                     }
                   }
-                  cResult[24] = tmp33;
+                  cResult[24] = tmp34;
                 } else {
                   class E {
-                    constructor(arg0) {
-                      tmp = closure_2(channel.nativeEvent.layout.height);
-                      return;
+                    constructor(nativeEvent) {
+                      dependencyMap(nativeEvent.nativeEvent.layout.height);
                     }
                   }
                 }
                 if (cResult[25] === Z) {
                   class E {
-                    constructor(arg0) {
-                      tmp = closure_2(channel.nativeEvent.layout.height);
-                      return;
+                    constructor(nativeEvent) {
+                      dependencyMap(nativeEvent.nativeEvent.layout.height);
                     }
                   }
                 }
                 const obj5 = {
                   inActionSheet: true,
-                  contentContainerStyle: tmp4.container,
-                  accessibilityLabel: tmp30,
-                  sections: tmp33,
+                  contentContainerStyle: container,
+                  accessibilityLabel: tmp31,
+                  sections: tmp34,
                   renderItem: Z,
-                  itemSize: tmp19,
+                  itemSize: tmp20,
                 };
-                const tmp37 = closure_9(onAccept(6569), obj5);
                 cResult[25] = Z;
-                cResult[26] = tmp4.container;
-                cResult[27] = tmp33;
-                cResult[28] = tmp37;
+                cResult[26] = tmp5.container;
+                cResult[27] = tmp34;
+                cResult[28] = closure_9(onAccept(6569), obj5);
+                const tmp38 = closure_9(onAccept(6569), obj5);
               }
               class Z {
                 constructor(arg0, arg1) {
-                  obj = { participant: closure_4[arg1], guildId: channel.getGuildId(), channelId: channel.id };
-                  return jsx(f46656, obj);
+                  const obj = { participant: arr4[arg1], guildId: channel.getGuildId(), channelId: channel.id };
+                  return React4(closure_12, obj);
                 }
               }
-              const obj6 = { blockedUserCount: length, ignoredUserCount: length2 };
-              const tmp28 = closure_9(closure_13, obj6);
-              cResult[19] = length;
-              cResult[20] = length2;
-              cResult[21] = tmp28;
+              const obj6 = { blockedUserCount: stageBlockedUsers.length, ignoredUserCount: stageIgnoredUsers.length };
+              cResult[19] = stageBlockedUsers.length;
+              cResult[20] = stageIgnoredUsers.length;
+              cResult[21] = closure_9(closure_13, obj6);
+              const tmp29 = closure_9(closure_13, obj6);
             }
             class Z {
               constructor(arg0, arg1) {
-                obj = { participant: closure_4[arg1], guildId: channel.getGuildId(), channelId: channel.id };
-                return jsx(f46656, obj);
+                const obj = { participant: arr4[arg1], guildId: channel.getGuildId(), channelId: channel.id };
+                return React4(closure_12, obj);
               }
             }
             cResult[16] = channel;
@@ -827,101 +883,114 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[18] = Z;
           }
           const items = [];
-          HermesBuiltin.arraySpread(stageIgnoredUsers, HermesBuiltin.arraySpread(stageBlockedUsers, 0));
+          HermesBuiltin.arraySpread(items, stageIgnoredUsers, HermesBuiltin.arraySpread(items, stageBlockedUsers, 0));
           cResult[13] = stageBlockedUsers;
           cResult[14] = stageIgnoredUsers;
           cResult[15] = items;
+          arr4 = items;
         }
-        const obj7 = { bottom: true, style: tmp4.buttons, onLayout: E, children: null };
-        const items1 = [tmp11, tmp13];
-        obj7.children = items1;
+        const items1 = [tmp12, tmp14];
         class R {
           constructor() {
-            tmp = onAccept(channel);
-            tmp2 = closure_3();
-            return;
+            onAccept(channel);
+            first();
           }
         }
-        cResult[9] = tmp4.buttons;
-        cResult[10] = tmp11;
-        cResult[11] = tmp17;
-        const tmpResult2 = tmp(8277);
+        cResult[9] = tmp5.buttons;
+        cResult[10] = tmp12;
+        cResult[11] = tmp18;
       }
       class R {
         constructor() {
-          tmp = onAccept(channel);
-          tmp2 = closure_3();
-          return;
+          onAccept(channel);
+          first();
         }
       }
       cResult[1] = channel;
       cResult[2] = onAccept;
       cResult[3] = R;
-      tmp7 = R;
-      const tmp5 = onPress(arr4.useState(0), 2);
+      tmp8 = R;
     }
   : (channel) => {
+      let closure_2;
+      let intl;
+      let intl2;
+      let intl3;
+      let items;
+      let items2;
+      let items3;
       channel = channel.channel;
       const onAccept = channel.onAccept;
       let items1;
-      const tmp = closure_11();
-      const tmp2 = items1(noop.useState(0), 2);
-      dependencyMap = tmp2[1];
-      const stageBlockedUsers = channel(8277).useStageBlockedUsers(channel.id);
-      const obj = channel(8277);
-      const stageIgnoredUsers = channel(8277).useStageIgnoredUsers(channel.id);
-      const callback = noop.useCallback((nativeEvent) => {
-        dependencyMap(nativeEvent.nativeEvent.layout.height);
-      }, []);
-      const obj3 = { bottom: true, style: tmp.buttons, onLayout: callback, children: null };
-      const obj4 = { text: null, onPress: null };
-      const intl = channel(1126).intl;
-      obj4.text = intl.string(channel(1126).t.mbD50D);
-      obj4.onPress = function onPress() {
-        onAccept(channel);
-        ActionSheetActionCreatorsDefault.hideActionSheet(closure_8);
-      };
-      const items = [closure_9(channel(5594).Button, obj4)];
-      const obj5 = { variant: "secondary", text: null, onPress: null };
-      const intl2 = channel(1126).intl;
-      obj5.text = intl2.string(channel(1126).t.CZGqeT);
-      obj5.onPress = function handleDismiss() {
-        onAccept(4854).hideActionSheet(closure_1_8);
-      };
-      items[1] = closure_9(channel(5594).Button, obj5);
-      obj3.children = items;
-      items1 = [];
+      const tmp2 = closure_11();
+      const tmp3 = items1(react.useState(0), 2);
+      dependencyMap = tmp3[1];
+      const first = tmp3[0];
+      let obj = channel(8277);
+      const stageBlockedUsers = obj.useStageBlockedUsers(channel.id);
       const obj2 = channel(8277);
-      HermesBuiltin.arraySpread(stageIgnoredUsers, HermesBuiltin.arraySpread(stageBlockedUsers, 0));
+      const stageIgnoredUsers = obj2.useStageIgnoredUsers(channel.id);
+      const length = stageBlockedUsers.length;
+      const length2 = stageIgnoredUsers.length;
+      const callback = react.useCallback((nativeEvent) => {
+        closure_2(nativeEvent.nativeEvent.layout.height);
+      }, []);
+      const obj3 = { bottom: true, style: tmp2.buttons, onLayout: callback, children: items };
+      const SafeAreaPaddingView = channel(6619).SafeAreaPaddingView;
+      const obj4 = {
+        text: intl.string(channel(1126).t.mbD50D),
+        onPress() {
+          onAccept(channel);
+          const obj = ActionSheetActionCreatorsDefault;
+          obj.hideActionSheet(closure_8);
+        },
+      };
+      const Button = channel(5594).Button;
+      intl = channel(1126).intl;
+      items = [closure_9(Button, obj4)];
+      const obj5 = {
+        variant: "secondary",
+        text: intl2.string(channel(1126).t.CZGqeT),
+        onPress: function handleDismiss() {
+          const obj = onAccept(closure_2[16]);
+          obj.hideActionSheet(closure_1_8);
+        },
+      };
+      const Button2 = channel(5594).Button;
+      intl2 = channel(1126).intl;
+      items[1] = closure_9(Button2, obj5);
+      items1 = [];
+      const tmp6 = closure_10(SafeAreaPaddingView, obj3);
+      HermesBuiltin.arraySpread(items1, stageIgnoredUsers, HermesBuiltin.arraySpread(items1, stageBlockedUsers, 0));
       const obj6 = {
         scrollable: true,
-        header: closure_9(closure_13, {
-          blockedUserCount: stageBlockedUsers.length,
-          ignoredUserCount: stageIgnoredUsers.length,
-        }),
-        footer: closure_10(channel(6619).SafeAreaPaddingView, obj3),
-        children: null,
+        header: closure_9(closure_13, { blockedUserCount: length, ignoredUserCount: length2 }),
+        footer: tmp6,
+        children: items3,
       };
+      BottomSheet = channel(6645).BottomSheet;
       const obj7 = {
         inActionSheet: true,
-        contentContainerStyle: tmp.container,
-        accessibilityLabel: null,
-        sections: null,
-        renderItem: null,
-        itemSize: null,
+        contentContainerStyle: tmp2.container,
+        accessibilityLabel: intl3.string(channel(1126).t["3VoRLH"]),
+        sections: items2,
+        renderItem(arg0, arg1) {
+          const obj = { participant: items1[arg1], guildId: channel.getGuildId(), channelId: channel.id };
+          return React4(closure_12, obj);
+        },
+        itemSize() {
+          return 48;
+        },
       };
-      const tmp4 = closure_10(channel(6619).SafeAreaPaddingView, obj3);
-      const intl3 = channel(1126).intl;
-      obj7.accessibilityLabel = intl3.string(channel(1126).t["3VoRLH"]);
-      const items2 = [items1.length];
-      obj7.sections = items2;
-      obj7.renderItem = function renderItem(arg0, arg1) {
-        return options(closure_12, { participant: items1[arg1], guildId: channel.getGuildId(), channelId: channel.id });
-      };
-      obj7.itemSize = function itemSize() {
-        return 48;
-      };
-      const items3 = [closure_9(onAccept(6569), obj7), closure_9(View, { style: { height: tmp2[0] } })];
-      obj6.children = items3;
-      return closure_10(channel(6645).BottomSheet, obj6);
+      const tmp8 = onAccept(6569);
+      intl3 = channel(1126).intl;
+      items2 = [items1.length];
+      items3 = [closure_9(tmp8, obj7)];
+      const obj8 = { style: { height: first } };
+      items3[1] = closure_9(View, obj8);
+      return closure_10(BottomSheet, obj6);
     };
+size = size_mod;
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageBlockedUsersActionSheet.tsx");
+
+export default tmp4;

@@ -1,4 +1,6 @@
 // discord_app/modules/voice_panel/native/controls/useControlsButtons.tsx
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import Constants from "../../../../Constants.tsx";
 import VoicePanelControlsUtils from "../utils/VoicePanelControlsUtils.tsx";
 import VoicePanelMicButton from "buttons/VoicePanelMicButton.tsx";
 import VoicePanelConnectButtonDefault from "buttons/VoicePanelConnectButton.tsx";
@@ -8,110 +10,121 @@ import VoicePanelVideoButtonDefault from "buttons/VoicePanelVideoButton.tsx";
 import VoicePanelSoundboardButtonDefault from "buttons/VoicePanelSoundboardButton.tsx";
 import VoicePanelScreenshareButtonDefault from "buttons/VoicePanelScreenshareButton.tsx";
 import VoicePanelDrawerToggleButtonDefault from "buttons/VoicePanelDrawerToggleButton.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
+import VoicePanelControlsConstants from "VoicePanelControlsConstants.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const VoicePanelControlsConstants = fn(11900);
+let dependencyMap;
+
+let hasOwnProperty;
+let metroRequire;
 ({ CONTROLS_BUTTON_SIZE_LARGE: hasOwnProperty, CONTROLS_BUTTON_SIZE_NORMAL: metroRequire } =
   VoicePanelControlsConstants);
-const InputModes = fn(1085).InputModes;
-const jsx = fn(21).jsx;
+const InputModes = Constants.InputModes;
+const jsx = Fragment.jsx;
 let closure_9 = {
   mic(key, arg1) {
+    const MicButton = VoicePanelMicButton.MicButton;
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelMicButton.MicButton, {}, key);
+    return <MicButton key={key} />;
   },
   ptt(key, arg1) {
+    const PTTButton = VoicePanelMicButton.PTTButton;
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelMicButton.PTTButton, {}, key);
+    return <PTTButton key={key} />;
   },
   micConnected(key, arg1) {
+    const MicButton = VoicePanelMicButton.MicButton;
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelMicButton.MicButton, {}, key);
+    return <MicButton key={key} />;
   },
   connect(key, arg1) {
+    VoicePanelConnectButtonDefault;
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelConnectButtonDefault, {}, key);
+    return <tmp key={key} />;
   },
   chat(key, arg1) {
+    VoicePanelChatButtonDefault;
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelChatButtonDefault, {}, key);
+    return <tmp key={key} />;
   },
   disconnectCancel(key, arg1) {
+    VoicePanelDisconnectCancelButtonDefault;
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelDisconnectCancelButtonDefault, {}, key);
+    return <tmp key={key} />;
   },
   video(key, arg1) {
+    VoicePanelVideoButtonDefault;
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelVideoButtonDefault, {}, key);
+    return <tmp key={key} />;
   },
   soundboard(key, arg1) {
+    VoicePanelSoundboardButtonDefault;
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelSoundboardButtonDefault, {}, key);
+    return <tmp key={key} />;
   },
   screenshare(key, arg1) {
+    VoicePanelScreenshareButtonDefault;
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelScreenshareButtonDefault, {}, key);
+    return <tmp key={key} />;
   },
   drawerToggle(key, arg1) {
+    VoicePanelDrawerToggleButtonDefault;
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelDrawerToggleButtonDefault, {}, key);
+    return <tmp key={key} />;
   },
 };
 const __initData = {
   code: "function useControlsButtonsTsx1(){const{getControlsDefaultWidth,windowDimensions,safeArea}=this.__closure;return getControlsDefaultWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right);}",
 };
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/useControlsButtons.tsx");
 
 export default function useControlsButtons() {
+  let closure_2;
+  let safeArea;
+  let stateFromStores;
+  let treatment;
   const context = treatment.useContext(safeArea(11901));
   const windowDimensions = context.windowDimensions;
   safeArea = context.safeArea;
-  const tmp2 = safeArea(17190)(context.channelId);
+  let tmp2 = safeArea(17190)(context.channelId);
   dependencyMap = tmp2;
-  treatment = safeArea(17215).useConfig({ location: "VoicePanelControlButtons" }).treatment;
   let obj = safeArea(17215);
-  let items = [stateFromStores];
-  stateFromStores = windowDimensions(504).useStateFromStores(
-    items,
-    () => stateFromStores.getMode() === constants.PUSH_TO_TALK,
-  );
+  treatment = obj.useConfig({ location: "VoicePanelControlButtons" }).treatment;
   let obj2 = windowDimensions(504);
-  const fn = function o() {
-    return VoicePanelControlsUtils.getControlsDefaultWidth(
-      windowDimensions.get().width,
-      safeArea.get().left,
-      safeArea.get().right,
-    );
-  };
+  let items = [stateFromStores];
+  stateFromStores = obj2.useStateFromStores(items, () => stateFromStores.getMode() === constants.PUSH_TO_TALK);
   let obj3 = windowDimensions(4612);
-  fn.__closure = {
-    getControlsDefaultWidth: windowDimensions(11909).getControlsDefaultWidth,
-    windowDimensions,
-    safeArea,
+  const fn = function o() {
+    const getControlsDefaultWidth = VoicePanelControlsUtils.getControlsDefaultWidth;
+    VoicePanelControlsUtils;
+    const width = windowDimensions.get().width;
+    return getControlsDefaultWidth(width, safeArea.get().left, safeArea.get().right);
   };
+  let obj4 = { getControlsDefaultWidth: windowDimensions(11909).getControlsDefaultWidth, windowDimensions, safeArea };
+  fn.__closure = obj4;
   fn.__workletHash = 16456936876254;
   fn.__initData = __initData;
   const derivedValue = obj3.useDerivedValue(fn);
   const tmp5 = safeArea(7941)(derivedValue);
-  closure_5 = tmp5;
+  let closure_5 = tmp5;
   const items1 = [tmp2, stateFromStores, tmp5, treatment];
   return treatment.useMemo(() => {
-    c0 = false;
-    closure_1 = 0;
-    const mapped = (function getButtons(dependencyMap, stateFromStores, treatment) {
+    let redux;
+    function getButtons(arg0, stateFromStores, treatment) {
+      let tmp2;
       const items = [];
       const push = items.push;
-      if (dependencyMap) {
+      const tmp = arg0;
+      if (tmp) {
         const obj2 = { type: "icon-normal", key: "connected-video", render: redux.video };
         push(obj2);
         if (!stateFromStores) {
           const obj3 = { type: "icon-normal", key: "connected-mic", render: redux.micConnected };
           items.push(obj3);
         }
-        if (treatment === _true(17215).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
+        if (treatment === windowDimensions(closure_1_2[13]).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
           const obj4 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj4);
         } else {
@@ -122,7 +135,10 @@ export default function useControlsButtons() {
           const obj6 = { type: "icon-large", key: "connected-ptt", render: redux.ptt };
           items.push(obj6);
         }
-        if (treatment === _true(17215).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
+        if (
+          treatment ===
+          windowDimensions(closure_1_2[13]).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD
+        ) {
           const obj7 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj7);
         } else {
@@ -131,44 +147,50 @@ export default function useControlsButtons() {
         }
         const obj9 = { type: "icon-normal", key: "connected-disconnect", render: redux.disconnectCancel };
         items.push(obj9);
+        tmp2 = redux;
       } else {
+        tmp2 = redux;
         const obj = { type: "icon-normal", key: "disconnected-mute", render: redux.mic };
         push(obj);
         const obj10 = { type: "label", key: "disconnected-connect", render: redux.connect };
         items.push(obj10);
         const obj11 = { type: "icon-normal", key: "disconnected-chat", render: redux.chat };
         items.push(obj11);
-        if (obj12.isMetaQuest()) {
-          const obj13 = { type: "icon-normal", key: "drawer-toggle", render: redux.drawerToggle };
-          items.push(obj13);
-        }
-        return items;
       }
-    })(dependencyMap, stateFromStores, treatment).map((type) => {
+      const obj12 = windowDimensions(closure_1_2[14]);
+      if (obj12.isMetaQuest()) {
+        const obj13 = { type: "icon-normal", key: "drawer-toggle", render: tmp2.drawerToggle };
+        items.push(obj13);
+      }
+      return items;
+    }
+    let c0 = false;
+    let closure_1 = 0;
+    const arr = getButtons(closure_2, stateFromStores, treatment);
+    const mapped = arr.map((type) => {
+      let num2;
       if ("label" === type.type) {
         c0 = true;
       }
       let tmp = closure_2_6;
       if ("icon-large" === type.type) {
         closure_1 = closure_1 + 1;
-        tmp = closure_5;
+        tmp = closure_2_5;
       }
-      const obj = {};
+      const obj = { height: tmp, width: num2, x: 0, y: 0 };
       const merged = Object.assign(type);
-      obj.height = tmp;
-      let num2 = -1;
+      num2 = -1;
       if ("label" !== type.type) {
         num2 = tmp;
       }
-      obj.width = num2;
-      obj.x = 0;
-      obj.y = 0;
       return obj;
     });
     let num = 16;
     if (!c0) {
+      let tmp2 = closure_1;
+      let num2 = 1;
       num =
-        (closure_5 - closure_1 * hasOwnProperty - (mapped.length - closure_1) * timestampProducer - 32) /
+        (hasOwnProperty - closure_1 * hasOwnProperty - (mapped.length - closure_1) * metroRequire - 32) /
         (mapped.length - 1);
     }
     let num4 = 16;
@@ -179,11 +201,11 @@ export default function useControlsButtons() {
       let width = nextResult.width;
       let tmp8 = width;
       if (-1 === width) {
-        let diff = closure_5 - (32 + (mapped.length - 1) * timestampProducer + (mapped.length - 1) * num);
+        let diff = hasOwnProperty - (32 + (mapped.length - 1) * metroRequire + (mapped.length - 1) * num);
         tmp8 = diff;
         tmp7.width = diff;
       }
-      tmp7.x = num4 - closure_5 / 2 + tmp8 / 2;
+      tmp7.x = num4 - hasOwnProperty / 2 + tmp8 / 2;
       num4 = num4 + (tmp8 + num);
       continue;
     }

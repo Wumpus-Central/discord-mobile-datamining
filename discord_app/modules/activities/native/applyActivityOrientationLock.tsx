@@ -8,10 +8,13 @@ let result = size.fileFinishedImporting("modules/activities/native/applyActivity
 
 export default function applyActivityOrientationLock(arg0) {
   if (OrientationLockState.UNLOCKED === arg0) {
-    const result = applyOrientationLock.releaseOrientationLock({ unlockAfterRotatingToPreviousLock: true });
+    const obj3 = applyOrientationLock;
+    const result = obj3.releaseOrientationLock({ unlockAfterRotatingToPreviousLock: true });
   } else if (OrientationLockState.PORTRAIT === arg0) {
-    applyOrientationLock.applyOrientationLock("PORTRAIT");
+    const obj2 = applyOrientationLock;
+    obj2.applyOrientationLock("PORTRAIT");
   } else if (OrientationLockState.LANDSCAPE === arg0) {
-    applyOrientationLock.applyOrientationLock("LANDSCAPE");
+    const obj = applyOrientationLock;
+    obj.applyOrientationLock("LANDSCAPE");
   }
 }

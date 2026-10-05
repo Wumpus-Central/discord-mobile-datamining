@@ -1,22 +1,23 @@
 // discord_app/modules/auth/native/useLoginReset.tsx
-import c from "../../../../_runtime/00576_c.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import react from "../../../../_runtime/00019_react.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/auth/native/useLoginReset.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let tmp2;
+      let tmp3;
+      let obj = react2;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
+          let authenticated;
           return () => {
             if (!authenticated.isAuthenticated()) {
-              closure_1_1(dependencyMap[4]).loginReset();
-              const obj = closure_1_1(dependencyMap[4]);
+              const obj = closure_1_1(closure_1_2[4]);
+              obj.loginReset();
             }
           };
         };
@@ -28,16 +29,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp2, tmp3] = cResult;
       }
-      const effect = noop.useEffect(tmp2, tmp3);
+      const effect = react.useEffect(tmp2, tmp3);
     }
   : () => {
-      const effect = noop.useEffect(
-        () => () => {
+      const effect = react.useEffect(() => {
+        let authenticated;
+        return () => {
           if (!authenticated.isAuthenticated()) {
-            closure_1_1(dependencyMap[4]).loginReset();
-            const obj = closure_1_1(dependencyMap[4]);
+            const obj = closure_1_1(closure_1_2[4]);
+            obj.loginReset();
           }
-        },
-        [],
-      );
+        };
+      }, []);
     };
+const result = size.fileFinishedImporting("modules/auth/native/useLoginReset.tsx");
+
+export default tmp2;

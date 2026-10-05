@@ -1,15 +1,30 @@
 // discord_app/design/void/Form/native/FreeFormTextInput.tsx
 import _modDef38 from "../../../../../_runtime/metro/00038__.js";
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import native from "../../native.tsx";
 import Pressables from "../../Pressables/native/Pressables.tsx";
-import _modDef6427 from "../../../../../_runtime/metro/06427__.js";
+import AssetRegistryDefault from "../../../../../_runtime/06427_AssetRegistry.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let onFocus;
+
+let c10;
+let c9;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
 let closure_3 = [
   "style",
   "error",
@@ -27,30 +42,18 @@ let closure_3 = [
   "forceAccessibleContainer",
   "clearButtonVisibility",
 ];
-get_ActivityIndicator = fn(17);
-({ TouchableWithoutFeedback: metroRequire, View: closure_7, TouchableOpacity: closure_8 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4890);
+({ TouchableWithoutFeedback: metroRequire, View: metroImportDefault, TouchableOpacity: metroImportAll } = react_native);
+({ jsx: c9, jsxs: c10 } = Fragment);
+let createStyles = createStyles_mod;
 let obj = {
-  container: {
-    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-    height: 48,
-    borderWidth: 1,
-    borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-    borderRadius: nativeDefault.radii.xs,
-    paddingRight: 6,
-    paddingLeft: 12,
-    flexDirection: "row",
-    alignItems: "center",
-  },
+  container: obj2,
   onPress: { flexDirection: "row" },
-  input: null,
-  error: null,
-  closeIcon: null,
-  placeholder: null,
+  input: obj3,
+  error: obj4,
+  closeIcon: obj5,
+  placeholder: { color: nativeDefault.colors.TEXT_MUTED },
 };
-let obj3 = {
+obj2 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   height: 48,
   borderWidth: 1,
@@ -61,58 +64,63 @@ let obj3 = {
   flexDirection: "row",
   alignItems: "center",
 };
-obj.input = { flex: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-let obj4 = { flex: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-obj.error = { borderColor: nativeDefault.unsafe_rawColors.RED_400 };
-let obj5 = { borderColor: nativeDefault.unsafe_rawColors.RED_400 };
-obj.closeIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8, flexShrink: 0 };
-const obj6 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8, flexShrink: 0 };
-obj.placeholder = { color: nativeDefault.colors.TEXT_MUTED };
-let closure_11 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
+createStyles = createStyles.createStyles;
+obj3 = { flex: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj4 = { borderColor: nativeDefault.unsafe_rawColors.RED_400 };
+obj5 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8, flexShrink: 0 };
+({ color: nativeDefault.colors.TEXT_MUTED });
+let closure_11 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? (onPress) => {
-      const cResult = c.c(8);
+      let first;
+      let tmp6;
+      let tmp8;
+      let tmp9;
+      const obj = react2;
+      const cResult = obj.c(8);
       onPress = onPress.onPress;
       const tmp4 = closure_11();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { borderRadius: 20, padding: 8 };
         cResult[0] = obj2;
-        let first = obj2;
+        first = obj2;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = util.intl;
-        const stringResult = intl.string(util.t.VkKicb);
+        const intl = intl2.intl;
+        const stringResult = intl.string(intl2.t.VkKicb);
         cResult[1] = stringResult;
-        let tmp6 = stringResult;
+        tmp6 = stringResult;
       } else {
         tmp6 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const rect = { top: 8, bottom: 8, right: 8 };
         cResult[2] = rect;
-        let tmp8 = rect;
+        tmp8 = rect;
       } else {
         tmp8 = cResult[2];
       }
       if (cResult[3] !== tmp4.closeIcon) {
-        const obj3 = { source: _modDef6427, style: tmp4.closeIcon, size: native.Icon.Sizes.MEDIUM };
-        const tmp12 = options(native.Icon, obj3);
+        const obj3 = { source: AssetRegistryDefault, style: tmp4.closeIcon, size: native.Icon.Sizes.MEDIUM };
+        const Icon = native.Icon;
+        const tmp12 = React4(Icon, obj3);
         cResult[3] = tmp4.closeIcon;
         cResult[4] = tmp12;
-        let tmp9 = tmp12;
+        tmp9 = tmp12;
       } else {
         tmp9 = cResult[4];
       }
       if (cResult[5] === onPress) {
+        let tmp13;
         if (cResult[6] === tmp9) {
-          let tmp13 = cResult[7];
+          tmp13 = cResult[7];
         }
         return tmp13;
       }
-      const tmp14 = options(Pressables.PressableOpacity, {
+      const tmp14 = React4(Pressables.PressableOpacity, {
         style: first,
         accessibilityRole: "button",
         accessibilityLabel: tmp6,
@@ -126,47 +134,62 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = tmp14;
     }
   : (onPress) => {
+      let Icon;
+      let intl;
+      let obj2;
+      onPress = onPress.onPress;
       const obj = {
         style: { borderRadius: 20, padding: 8 },
         accessibilityRole: "button",
-        accessibilityLabel: null,
-        onPress: null,
-        hitSlop: null,
-        children: null,
+        accessibilityLabel: intl.string(intl2.t.VkKicb),
+        onPress,
+        hitSlop: { top: 8, bottom: 8, right: 8 },
+        children: React4(Icon, obj2),
       };
-      const intl = util.intl;
-      obj.accessibilityLabel = intl.string(util.t.VkKicb);
-      obj.onPress = onPress.onPress;
-      obj.hitSlop = { top: 8, bottom: 8, right: 8 };
       const tmp = closure_11();
-      obj.children = options(native.Icon, {
-        source: _modDef6427,
-        style: closure_11().closeIcon,
-        size: native.Icon.Sizes.MEDIUM,
-      });
-      return options(Pressables.PressableOpacity, obj);
+      const PressableOpacity = Pressables.PressableOpacity;
+      intl = intl2.intl;
+      obj2 = { source: AssetRegistryDefault, style: tmp.closeIcon, size: native.Icon.Sizes.MEDIUM };
+      Icon = native.Icon;
+      return React4(PressableOpacity, obj);
     };
-ReactCompilerGating = fn(558);
-const obj7 = { color: nativeDefault.colors.TEXT_MUTED };
-const size = fn(2);
-let result = size.fileFinishedImporting("design/void/Form/native/FreeFormTextInput.tsx");
-
-export default noop.forwardRef(
+const forwardRef = react.forwardRef;
+ReactCompilerGating = ReactCompilerGating_mod;
+const forwardRefResult = forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (onFocus, arg1) => {
-        const cResult = c.c(72);
+        let WITH_CONTENT;
+        let accessibilityHint;
+        let accessibilityLabel;
+        let accessibilityRole;
+        let clearButtonVisibility;
+        let editable;
+        let error;
+        let forceAccessibleContainer;
+        let onBlur;
+        let onChangeText;
+        let onPress;
+        let renderLeadingComponent;
+        let renderTrailingComponent;
+        let style;
+        let tmp15;
+        let tmp16;
+        let tmp18;
+        let tmp7;
+        let value;
+        const obj = react2;
+        const cResult = obj.c(72);
         if (cResult[0] !== onFocus) {
           ({ style, error, renderLeadingComponent, renderTrailingComponent, onChangeText } = onFocus);
-          closure_1 = onChangeText;
+          let closure_1 = onChangeText;
           onFocus = onFocus.onFocus;
-          closure_2 = onFocus;
+          let closure_2 = onFocus;
           ({ accessibilityRole, onBlur } = onFocus);
-          closure_0 = onBlur;
+          let closure_0 = onBlur;
           ({ value, onPress } = onFocus);
           closure_3 = onPress;
           ({ editable, accessibilityLabel, accessibilityHint, forceAccessibleContainer, clearButtonVisibility } =
             onFocus);
-          const tmp21 = _objectWithoutProperties(onFocus, closure_3);
           cResult[0] = onFocus;
           cResult[1] = accessibilityHint;
           cResult[2] = accessibilityLabel;
@@ -178,83 +201,143 @@ export default noop.forwardRef(
           cResult[8] = onPress;
           cResult[9] = renderLeadingComponent;
           cResult[10] = renderTrailingComponent;
-          cResult[11] = tmp21;
+          cResult[11] = _objectWithoutProperties(onFocus, closure_3);
           cResult[12] = style;
           cResult[13] = editable;
           cResult[14] = forceAccessibleContainer;
           cResult[15] = clearButtonVisibility;
           cResult[16] = value;
-          let tmp18 = value;
-          let WITH_CONTENT = clearButtonVisibility;
-          let tmp16 = editable;
+          tmp18 = value;
+          WITH_CONTENT = clearButtonVisibility;
+          tmp16 = editable;
+          tmp15 = style;
+          tmp7 = error;
+          let tmp5 = accessibilityLabel;
+          const tmp21 = _objectWithoutProperties(onFocus, closure_3);
         } else {
+          tmp5 = cResult[2];
+          tmp7 = cResult[4];
           closure_0 = cResult[5];
           closure_1 = cResult[6];
           closure_2 = cResult[7];
           closure_3 = cResult[8];
+          tmp15 = cResult[12];
           tmp16 = cResult[13];
           WITH_CONTENT = cResult[15];
           tmp18 = cResult[16];
         }
-        closure_4 = undefined === tmp16 || tmp16;
+        let closure_4 = tmp22;
         if (undefined === WITH_CONTENT) {
           WITH_CONTENT = native.ClearButtonVisibility.WITH_CONTENT;
         }
-        closure_11();
-        noop.useRef(null);
+        const tmp23 = closure_11();
+        const ref = react.useRef(null);
         if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
           class H {
             constructor() {
-              return closure_5.current;
+              return ref.current;
             }
           }
           cResult[17] = H;
         } else {
           class H {
             constructor() {
-              return closure_5.current;
+              return ref.current;
             }
           }
         }
-        const imperativeHandle = noop.useImperativeHandle(arg1, H);
+        const imperativeHandle = react.useImperativeHandle(arg1, H);
         if (cResult[18] === WITH_CONTENT) {
           class H {
             constructor() {
-              return closure_5.current;
+              return ref.current;
+            }
+          }
+          if (cResult[21] === (undefined === tmp16 || tmp16)) {
+            class H {
+              constructor() {
+                return ref.current;
+              }
+            }
+            const tmp29 = _modDef38;
+            if (null != onPress) {
+              class H {
+                constructor() {
+                  return ref.current;
+                }
+              }
+            }
+            tmp29(null == onPress, "Cannot have an editable input w/ onPress handler");
+            if (tmp7) {
+              class H {
+                constructor() {
+                  return ref.current;
+                }
+              }
+            }
+            if (cResult[24] === tmp15) {
+              class H {
+                constructor() {
+                  return ref.current;
+                }
+              }
+            }
+            const items = [tmp23.container, null, tmp15];
+            cResult[24] = tmp15;
+            cResult[25] = tmp23.container;
+            cResult[26] = null;
+            cResult[27] = items;
+          }
+          const fn = function k() {
+            if (closure_4) {
+              const current = ref.current;
+              if (current != null) {
+                current.focus();
+              }
+            }
+            if (closure_3 != null) {
+              tmp5();
+            }
+          };
+          cResult[21] = undefined === tmp16 || tmp16;
+          cResult[22] = onPress;
+          cResult[23] = fn;
+        }
+        if (native.ClearButtonVisibility.ALWAYS !== WITH_CONTENT) {
+          class H {
+            constructor() {
+              return ref.current;
             }
           }
         }
-        let flag = true;
-        if (native.ClearButtonVisibility.ALWAYS === WITH_CONTENT) {
-          class H {
-            constructor() {
-              return closure_5.current;
-            }
-          }
-          cResult[18] = WITH_CONTENT;
-          cResult[19] = tmp18;
-          cResult[20] = flag;
-        } else {
-          class H {
-            constructor() {
-              return closure_5.current;
-            }
-          }
-        }
-        let tmp26 = null != tmp18;
-        if (tmp26) {
-          class H {
-            constructor() {
-              return closure_5.current;
-            }
-          }
-          tmp26 = "" !== tmp18;
-        }
-        flag = tmp26;
+        cResult[18] = WITH_CONTENT;
+        cResult[19] = tmp18;
+        cResult[20] = true;
       }
     : (editable, arg1) => {
+        let accessibilityHint;
+        let accessibilityLabel;
+        let accessibilityRole;
+        let closure_129_1;
+        let closure_129_2;
+        let error;
+        let forceAccessibleContainer;
+        let items1;
+        let obj3;
+        let onChangeText;
+        let onPress;
+        let renderLeadingComponent;
+        let renderTrailingComponent;
+        let str2;
+        let str4;
+        let style;
+        let tmp17;
+        let tmp18;
+        let tmp19;
+        let tmp20;
+        let value;
         ({ renderLeadingComponent, renderTrailingComponent, onChangeText } = editable);
-        ({ onFocus: importDefault, onBlur: dependencyMap, value, onPress } = editable);
+        ({ onFocus: closure_129_1, onBlur: closure_129_2, value, onPress } = editable);
         let flag = editable.editable;
         ({ style, error, accessibilityRole } = editable);
         if (flag === undefined) {
@@ -289,8 +372,8 @@ export default noop.forwardRef(
           }),
         );
         const tmp4 = closure_11();
-        const ref = noop.useRef(null);
-        const imperativeHandle = noop.useImperativeHandle(arg1, () => ref.current);
+        const ref = react.useRef(null);
+        const imperativeHandle = react.useImperativeHandle(arg1, () => ref.current);
         let flag2 = true;
         if (native.ClearButtonVisibility.ALWAYS !== WITH_CONTENT) {
           if (native.ClearButtonVisibility.WITH_CONTENT === WITH_CONTENT) {
@@ -304,10 +387,11 @@ export default noop.forwardRef(
           }
         }
         let tmp11 = null != onPress;
+        const tmp10 = _modDef38;
         if (tmp11) {
           tmp11 = flag;
         }
-        _modDef38(!tmp11, "Cannot have an editable input w/ onPress handler");
+        tmp10(!tmp11, "Cannot have an editable input w/ onPress handler");
         let items = [tmp4.container, ,];
         let error1 = null;
         if (error) {
@@ -324,54 +408,50 @@ export default noop.forwardRef(
               }
             }
             if (onPress != null) {
-              tmp4();
+              tmp5();
             }
           },
-          style: null,
-          accessibilityRole: null,
-          accessible: null,
-          accessibilityLabel: null,
-          accessibilityValue: null,
-          accessibilityHint: null,
-          children: null,
+          style: tmp17,
+          accessibilityRole: str2,
+          accessible: forceAccessibleContainer,
+          accessibilityLabel: tmp18,
+          accessibilityValue: tmp19,
+          accessibilityHint: tmp20,
+          children: authStore(metroImportDefault, obj3),
         };
-        let tmp17 = null;
+        tmp17 = null;
+        const tmp16 = null != onPress ? metroImportAll : metroRequire;
         if (null != onPress) {
           tmp17 = items;
         }
-        obj.style = tmp17;
-        let str2;
+        str2 = undefined;
         if (forceAccessibleContainer) {
           str2 = "button";
         }
-        obj.accessibilityRole = str2;
-        obj.accessible = forceAccessibleContainer;
-        let tmp18;
+        tmp18 = undefined;
         if (forceAccessibleContainer) {
           tmp18 = accessibilityLabel;
         }
-        obj.accessibilityLabel = tmp18;
-        let tmp19;
+        tmp19 = undefined;
         if (forceAccessibleContainer) {
+          tmp19 = { text: value };
           const obj2 = { text: value };
-          tmp19 = obj2;
         }
-        obj.accessibilityValue = tmp19;
-        let tmp20;
+        tmp20 = undefined;
         if (forceAccessibleContainer) {
           tmp20 = accessibilityHint;
         }
-        obj.accessibilityHint = tmp20;
         if (null != onPress) {
           items = tmp4.onPress;
         }
-        const obj3 = { style: items, children: null };
         let result;
+        obj3 = { style: items, children: items1 };
         if (renderLeadingComponent != null) {
           result = renderLeadingComponent();
         }
-        const items1 = [result, , ,];
+        items1 = [result, , ,];
         let str3 = "auto";
+        const TextInput = native.TextInput;
         if (null != onPress) {
           str3 = "none";
         }
@@ -387,26 +467,26 @@ export default noop.forwardRef(
           value,
           onChangeText,
           onFocus(arg0) {
-            if (importDefault != null) {
+            if (closure_1_1 != null) {
               tmp(arg0);
             }
           },
           onBlur(arg0) {
-            if (dependencyMap != null) {
+            if (closure_1_2 != null) {
               tmp(arg0);
             }
           },
           placeholderTextColor: tmp4.placeholder.color,
           clearButtonMode: "never",
+          importantForAccessibility: str4,
+          accessibilityElementsHidden: !flag,
         };
         const merged1 = Object.assign(merged);
-        let str4 = "no-hide-descendants";
+        str4 = "no-hide-descendants";
         if (flag) {
           str4 = "yes";
         }
-        obj4.importantForAccessibility = str4;
-        obj4.accessibilityElementsHidden = !flag;
-        items1[1] = options(native.TextInput, obj4);
+        items1[1] = React4(TextInput, obj4);
         let result1;
         if (renderTrailingComponent != null) {
           result1 = renderTrailingComponent();
@@ -423,11 +503,12 @@ export default noop.forwardRef(
               return tmpResult;
             },
           };
-          tmp15Result = options(closure_12, obj5);
+          tmp15Result = React4(closure_12, obj5);
         }
         items1[3] = tmp15Result;
-        obj3.children = items1;
-        obj.children = v65535(React5, obj3);
-        return options(null != onPress ? closure_1_8 : timestampProducer, obj);
+        return React4(tmp16, obj);
       },
 );
+let result = size.fileFinishedImporting("design/void/Form/native/FreeFormTextInput.tsx");
+
+export default forwardRefResult;

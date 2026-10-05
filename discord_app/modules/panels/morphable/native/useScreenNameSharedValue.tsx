@@ -1,19 +1,24 @@
 // discord_app/modules/panels/morphable/native/useScreenNameSharedValue.tsx
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
+let set;
+
 const unknown = "unknown";
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/panels/morphable/native/useScreenNameSharedValue.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = sharedValue(576).c(3);
+      let sharedValue;
+      let tmp4;
+      let tmp8;
+      let tmp9;
       let obj = sharedValue(576);
-      let rootNavigationRef = sharedValue(4737).getRootNavigationRef();
+      const cResult = obj.c(3);
       const obj2 = sharedValue(4737);
+      let rootNavigationRef = obj2.getRootNavigationRef();
       let isReadyResult;
+      const useSharedValue = sharedValue(4612).useSharedValue;
+      sharedValue(4612);
       if (rootNavigationRef != null) {
         isReadyResult = rootNavigationRef.isReady();
       }
@@ -26,54 +31,60 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (name == null) {
           name = unknown;
         }
-        let tmp3 = name;
+        tmp4 = name;
       } else {
-        tmp3 = unknown;
+        tmp4 = unknown;
       }
-      sharedValue = sharedValue(4612).useSharedValue(tmp3);
+      sharedValue = useSharedValue(tmp4);
       if (cResult[0] !== sharedValue) {
         const fn = function u() {
-          const rootNavigationRef = sharedValue(dependencyMap[3]).getRootNavigationRef();
+          const obj = sharedValue(dependencyMap[3]);
+          const rootNavigationRef = obj.getRootNavigationRef();
           if (null != rootNavigationRef) {
             function handleStateChange() {
               if (null != rootNavigationRef) {
                 if (rootNavigationRef.isReady()) {
                   const currentRoute = rootNavigationRef.getCurrentRoute();
                   let str;
+                  set = sharedValue.set;
                   if (currentRoute != null) {
                     str = currentRoute.name;
                   }
                   if (str == null) {
                     str = "unknown";
                   }
-                  const result = sharedValue.set(str);
+                  const result = set(str);
                 }
               }
             }
+            let str = "state";
             rootNavigationRef.addListener("state", handleStateChange);
             return () => {
               rootNavigationRef.removeListener("state", handleStateChange);
             };
           }
-          const obj = sharedValue(dependencyMap[3]);
         };
         const items = [sharedValue];
         cResult[0] = sharedValue;
         cResult[1] = fn;
         cResult[2] = items;
-        let tmp8 = items;
-        let tmp7 = fn;
+        tmp9 = items;
+        tmp8 = fn;
       } else {
-        tmp7 = cResult[1];
-        tmp8 = cResult[2];
+        tmp8 = cResult[1];
+        tmp9 = cResult[2];
       }
-      const effect = noop.useEffect(tmp7, tmp8);
+      const effect = react.useEffect(tmp8, tmp9);
       return sharedValue;
     }
   : () => {
-      let rootNavigationRef = sharedValue(4737).getRootNavigationRef();
+      let sharedValue;
+      let tmp3;
       let obj = sharedValue(4737);
+      let rootNavigationRef = obj.getRootNavigationRef();
       let isReadyResult;
+      const useSharedValue = sharedValue(4612).useSharedValue;
+      sharedValue(4612);
       if (rootNavigationRef != null) {
         isReadyResult = rootNavigationRef.isReady();
       }
@@ -86,36 +97,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (name == null) {
           name = unknown;
         }
-        let tmp2 = name;
+        tmp3 = name;
       } else {
-        tmp2 = unknown;
+        tmp3 = unknown;
       }
-      sharedValue = sharedValue(4612).useSharedValue(tmp2);
+      sharedValue = useSharedValue(tmp3);
       const items = [sharedValue];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
         function handleStateChange() {
           if (null != rootNavigationRef) {
             if (rootNavigationRef.isReady()) {
               const currentRoute = rootNavigationRef.getCurrentRoute();
               let str;
+              set = sharedValue.set;
               if (currentRoute != null) {
                 str = currentRoute.name;
               }
               if (str == null) {
                 str = "unknown";
               }
-              const result = sharedValue.set(str);
+              const result = set(str);
             }
           }
         }
-        const rootNavigationRef = sharedValue(dependencyMap[3]).getRootNavigationRef();
+        const obj = sharedValue(dependencyMap[3]);
+        const rootNavigationRef = obj.getRootNavigationRef();
         if (null != rootNavigationRef) {
+          let str = "state";
           rootNavigationRef.addListener("state", handleStateChange);
           return () => {
             rootNavigationRef.removeListener("state", handleStateChange);
           };
         }
-        const obj = sharedValue(dependencyMap[3]);
       }, items);
       return sharedValue;
     };
+let result = size.fileFinishedImporting("modules/panels/morphable/native/useScreenNameSharedValue.tsx");
+
+export default tmp2;

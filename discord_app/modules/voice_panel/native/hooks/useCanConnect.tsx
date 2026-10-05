@@ -1,26 +1,30 @@
 // discord_app/modules/voice_panel/native/hooks/useCanConnect.tsx
+import Constants from "../../../../../discord_common/js/shared/Constants.tsx";
 import ChannelUtils from "../../../../utils/ChannelUtils.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, obj1, tmp3, tmp4, tmp6, tmp7, tmp8, tmp9;
 
-require = fn;
-const Permissions = fn(1096).Permissions;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useCanConnect.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const Permissions = Constants.Permissions;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp10;
       _require = arg0;
-      const cResult = require("c").c(4);
+      let tmp = _require;
+      let obj = require("react");
+      const cResult = obj.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore, PermissionStore, GuildStore, VoiceStateStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -56,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = C;
         cResult[3] = items1;
-        let tmp10 = items1;
+        tmp10 = items1;
       } else {
         class C {
           constructor() {
@@ -87,33 +91,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp10 = cResult[3];
       }
-      let obj = require("c");
-      return require("initialize").useStateFromStoresObject(first, C, tmp10);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStoresObject(first, C, tmp10);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
+      let obj = require("get initialized");
       const items = [ChannelStore, PermissionStore, GuildStore, VoiceStateStore];
       const items1 = [arg0];
-      return require("initialize").useStateFromStoresObject(
+      return obj.useStateFromStoresObject(
         items,
         () => {
+          let isChannelFullResult;
           const channel = ChannelStore.getChannel(closure_0);
           let tmp = null != channel;
           if (tmp) {
-            let isPrivateResult = channel.isPrivate();
-            if (!isPrivateResult) {
-              isPrivateResult = PermissionStore.can(Permissions.CONNECT, channel);
-            }
-            tmp = isPrivateResult;
+            tmp = channel.isPrivate() || PermissionStore.can(Permissions.CONNECT, channel);
+            const isPrivateResult = channel.isPrivate() || PermissionStore.can(Permissions.CONNECT, channel);
           }
-          const obj = { canConnect: tmp, isAtMaxCapacity: null };
-          let isChannelFullResult = null == channel;
+          const obj = { canConnect: tmp, isAtMaxCapacity: isChannelFullResult };
+          isChannelFullResult = null == channel;
           if (!isChannelFullResult) {
-            isChannelFullResult = ChannelUtils.isChannelFull(channel, VoiceStateStore, GuildStore);
+            const obj3 = ChannelUtils;
+            isChannelFullResult = obj3.isChannelFull(channel, VoiceStateStore, GuildStore);
           }
-          obj.isAtMaxCapacity = isChannelFullResult;
           return obj;
         },
         items1,
       );
     };
+const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useCanConnect.tsx");
+
+export default tmp2;

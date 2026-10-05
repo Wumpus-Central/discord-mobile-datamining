@@ -1,34 +1,32 @@
 // discord_app/modules/app_launcher/native/hooks/useAnimationDelayedAutoFocus.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import useAwaitAnimationComplete from "useAwaitAnimationComplete.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useAnimationDelayedAutoFocus.tsx");
-
-export const useAnimationDelayedAutoFocus = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      const cResult = c.c(5);
-      const awaitAnimationCompletion = useAwaitAnimationComplete.useAwaitAnimationCompletion();
-      noop.useRef(false);
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      const obj = react2;
+      const cResult = obj.c(5);
+      const obj2 = useAwaitAnimationComplete;
+      const awaitAnimationCompletion = obj2.useAwaitAnimationCompletion();
+      let closure_3 = react.useRef(false);
       if (cResult[0] === awaitAnimationCompletion) {
         if (cResult[1] === arg0) {
+          let tmp3;
+          let tmp4;
           if (cResult[2] === arg1) {
-            let tmp3 = cResult[3];
-            let tmp4 = cResult[4];
+            tmp3 = cResult[3];
+            tmp4 = cResult[4];
           }
-          const effect = noop.useEffect(tmp3, tmp4);
+          const effect = react.useEffect(tmp3, tmp4);
         }
       }
       const fn = function o() {
-        let tmp = closure_0;
-        if (closure_0) {
-          tmp = !ref.current;
-        }
+        const tmp = closure_0 && !ref.current;
         if (tmp) {
           awaitAnimationCompletion(() => {
             closure_1_1();
@@ -46,16 +44,14 @@ export const useAnimationDelayedAutoFocus = ReactCompilerGating.isReactCompilerE
       tmp3 = fn;
     }
   : (arg0, arg1) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      const awaitAnimationCompletion = useAwaitAnimationComplete.useAwaitAnimationCompletion();
-      noop.useRef(false);
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      const obj = useAwaitAnimationComplete;
+      const awaitAnimationCompletion = obj.useAwaitAnimationCompletion();
+      let closure_3 = react.useRef(false);
       const items = [arg0, arg1, awaitAnimationCompletion];
-      const effect = noop.useEffect(() => {
-        let tmp = closure_0;
-        if (closure_0) {
-          tmp = !ref.current;
-        }
+      const effect = react.useEffect(() => {
+        const tmp = closure_0 && !ref.current;
         if (tmp) {
           awaitAnimationCompletion(() => {
             closure_1_1();
@@ -64,3 +60,6 @@ export const useAnimationDelayedAutoFocus = ReactCompilerGating.isReactCompilerE
         ref.current = true;
       }, items);
     };
+const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useAnimationDelayedAutoFocus.tsx");
+
+export const useAnimationDelayedAutoFocus = tmp2;

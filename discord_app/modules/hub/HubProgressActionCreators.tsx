@@ -1,18 +1,33 @@
 // discord_app/modules/hub/HubProgressActionCreators.tsx
+import Constants from "../../Constants.tsx";
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import HubProgressBarConstants from "HubProgressBarConstants.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-const HUB_PROGRESS_STEP_ORDER = fn(9492).HUB_PROGRESS_STEP_ORDER;
-const GuildFeatures = fn(1085).GuildFeatures;
-const size = fn(2);
+const f100725 = (hubProgress) => {
+  let flag = false;
+  for (const item10008 of HUB_PROGRESS_STEP_ORDER) {
+    let obj = FlagUtils;
+    if (!obj.hasFlag(hubProgress.hubProgress, item10008)) {
+      let tmp2Result = FlagUtils;
+      hubProgress.hubProgress = tmp2Result.addFlag(hubProgress.hubProgress, item10008);
+      flag = true;
+    }
+    continue;
+  }
+  return flag;
+};
+const HUB_PROGRESS_STEP_ORDER = HubProgressBarConstants.HUB_PROGRESS_STEP_ORDER;
+const GuildFeatures = Constants.GuildFeatures;
 let result = size.fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");
 
 export const setHubProgressActionComplete = function setHubProgressActionComplete(guildId, INVITE_USER) {
   if (null != guildId) {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     let hasItem = null != guild;
     if (hasItem) {
       const features = guild.features;
@@ -20,44 +35,21 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
     }
     if (hasItem) {
       const items = [INVITE_USER];
-      const result = items(2033).updateUserGuildSettings(
+      const obj = items(2033);
+      const result = obj.updateUserGuildSettings(
         guildId,
-        (hubProgress) => {
-          let flag = false;
-          for (const item10008 of closure_0) {
-            let obj = FlagUtils;
-            if (!obj.hasFlag(arg0.hubProgress, item10008)) {
-              let tmp2Result = FlagUtils;
-              arg0.hubProgress = tmp2Result.addFlag(arg0.hubProgress, item10008);
-              flag = true;
-            }
-            continue;
-          }
-          return flag;
-        },
+        f100725,
         items(2033).UserSettingsDelay.INFREQUENT_USER_ACTION,
       );
-      const obj = items(2033);
     }
   }
 };
 export const skipHubProgress = function skipHubProgress(id) {
   _require = HUB_PROGRESS_STEP_ORDER;
-  const result = require("UserSettingsProtoActionCreators").updateUserGuildSettings(
+  let obj = require("UserSettingsProtoActionCreators");
+  const result = obj.updateUserGuildSettings(
     id,
-    (hubProgress) => {
-      let flag = false;
-      for (const item10008 of closure_0) {
-        let obj = FlagUtils;
-        if (!obj.hasFlag(arg0.hubProgress, item10008)) {
-          let tmp2Result = FlagUtils;
-          arg0.hubProgress = tmp2Result.addFlag(arg0.hubProgress, item10008);
-          flag = true;
-        }
-        continue;
-      }
-      return flag;
-    },
+    f100725,
     require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
 };

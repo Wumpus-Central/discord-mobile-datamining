@@ -1,22 +1,22 @@
 // discord_app/modules/billing/native/subscription/BillingInformation.tsx
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import Constants from "../../../../Constants.tsx";
+import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, c1;
 
-const require = fn;
-const SubscriptionStatusTypes = fn(1085).SubscriptionStatusTypes;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/billing/native/subscription/BillingInformation.tsx");
-
-export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEnabled()
+const SubscriptionStatusTypes = Constants.SubscriptionStatusTypes;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (isPurchasedViaApple, subscriptionPeriodStart, arg2, arg3, arg4) => {
-      let gknRR3 = _require;
-      let formatResult = dependencyMap;
-      const cResult = require("c").c(11);
-      let tmp3 = null;
+      let closure_0;
+      let tmp6;
+      let obj = require("react");
+      const cResult = obj.c(11);
+      let tmp4 = null;
       if (undefined !== arg2) {
-        tmp3 = arg2;
+        tmp4 = arg2;
       }
       if (cResult[0] !== arg4) {
         let obj2 = arg4;
@@ -25,35 +25,40 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
         }
         cResult[0] = arg4;
         cResult[1] = obj2;
-        let tmp5 = obj2;
+        tmp6 = obj2;
       } else {
-        tmp5 = cResult[1];
+        tmp6 = cResult[1];
       }
-      const fractionalPremiumInfo = tmp5.fractionalPremiumInfo;
-      let obj = require("c");
-      const appleSubscriptionOwnership = gknRR3(13191).useAppleSubscriptionOwnership(isPurchasedViaApple);
+      const fractionalPremiumInfo = tmp6.fractionalPremiumInfo;
+      const tmpResult = require("useAppleSubscriptionOwnership");
+      const appleSubscriptionOwnership = tmpResult.useAppleSubscriptionOwnership(isPurchasedViaApple);
       if (null == subscriptionPeriodStart) {
         return null;
       } else {
         if (cResult[2] === fractionalPremiumInfo) {
-          if (cResult[3] === tmp3) {
-            if (cResult[4] === tmp4) {
+          if (cResult[3] === tmp4) {
+            if (cResult[4] === (undefined !== arg3 && arg3)) {
               if (cResult[5] === subscriptionPeriodStart) {
+                let tmp7;
                 if (cResult[6] === isPurchasedViaApple) {
-                  let tmp6 = cResult[7];
+                  tmp7 = cResult[7];
                 }
-                if (gknRR3Result1.isIOS()) {
+                const tmpResult3 = require("utils/PlatformUtils");
+                if (tmpResult3.isIOS()) {
                   if (isPurchasedViaApple.isPurchasedViaApple) {
                     if (isPurchasedViaApple.status === SubscriptionStatusTypes.ACTIVE) {
                       if (!appleSubscriptionOwnership.isMismatch()) {
+                        let tmp16;
                         if (cResult[8] !== subscriptionPeriodStart.subscriptionPeriodStart) {
+                          let tmp18;
                           const _Symbol = Symbol;
                           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-                            _require = asyncGeneratorStep(async () => {
+                            _require = _asyncToGenerator(async () => {
+                              let v3;
                               if (v3 === 2) {
                                 v3 = 3;
                                 throw new TypeError("Generator functions may not be called on executing generators");
-                              } else if (tmp3 === 3) {
+                              } else if (tmp2 === 3) {
                                 if (arg0 === 1) {
                                   throw value;
                                 } else if (arg0 === 2) {
@@ -74,9 +79,10 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
                                       const obj4 = { value, done: true };
                                       return obj4;
                                     } else {
+                                      const obj2 = v3(c1[7]);
                                       c1 = 1;
                                       v3 = 1;
-                                      const obj5 = { value: v3(c1[7]).manageSubscription(), done: false };
+                                      const obj5 = { value: obj2.manageSubscription(), done: false };
                                       return obj5;
                                     }
                                   } else if (arg0 === 1) {
@@ -90,74 +96,64 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
                                     v3 = 3;
                                     return { value: "IconComponent", done: null };
                                   }
-                                } catch (tmp7) {
-                                  v3 = tmp;
-                                  throw tmp7;
+                                } catch (tmp6) {
+                                  v3 = 3;
+                                  throw tmp6;
                                 }
                               }
                             });
                             const fn = function () {
-                              const self = this;
-                              const apply = closure_0.apply;
-                              if (typeof apply === "unknown") {
-                                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                              } else {
-                                applyArgumentsResult = apply(self, arguments);
-                              }
-                              return applyArgumentsResult;
+                              return closure_0(...arguments);
                             };
                             cResult[10] = fn;
-                            let tmp16 = fn;
+                            tmp18 = fn;
                           } else {
-                            tmp16 = cResult[10];
+                            tmp18 = cResult[10];
                           }
-                          const intl = gknRR3(1126).intl;
-                          gknRR3 = gknRR3(1126).t.gknRR3;
+                          const intl = tmp(1126).intl;
                           let obj3 = {
                             renewalDate: subscriptionPeriodStart.subscriptionPeriodStart,
-                            onSubscriptionManagementClick: tmp16,
+                            onSubscriptionManagementClick: tmp18,
                           };
-                          formatResult = intl.format(gknRR3, obj3);
-                          subscriptionPeriodStart = subscriptionPeriodStart.subscriptionPeriodStart;
-                          cResult[8] = subscriptionPeriodStart;
+                          const formatResult = intl.format(require("intl").t.gknRR3, obj3);
+                          cResult[8] = subscriptionPeriodStart.subscriptionPeriodStart;
                           cResult[9] = formatResult;
+                          tmp16 = formatResult;
                         } else {
-                          return cResult[9];
+                          tmp16 = cResult[9];
                         }
+                        return tmp16;
                       }
                     }
                   }
                 }
-                return tmp6;
+                return tmp7;
               }
             }
           }
         }
-        const gknRR3Result2 = gknRR3(4528);
-        const billingInformationString = gknRR3Result2.getBillingInformationString(
+        const tmpResult4 = require("PremiumUtils");
+        const billingInformationString = tmpResult4.getBillingInformationString(
           isPurchasedViaApple,
           subscriptionPeriodStart,
-          tmp3,
           tmp4,
+          tmp5,
           fractionalPremiumInfo,
         );
         cResult[2] = fractionalPremiumInfo;
-        cResult[3] = tmp3;
-        cResult[4] = tmp4;
+        cResult[3] = tmp4;
+        cResult[4] = undefined !== arg3 && arg3;
         cResult[5] = subscriptionPeriodStart;
         cResult[6] = isPurchasedViaApple;
         cResult[7] = billingInformationString;
-        tmp6 = billingInformationString;
+        tmp7 = billingInformationString;
       }
-      const gknRR3Result = gknRR3(13191);
     }
   : (isPurchasedViaApple, subscriptionPeriodStart, arg2) => {
+      let closure_0;
       let tmp = arg2;
       if (arg2 === undefined) {
         tmp = null;
-      }
-      if (flag === undefined) {
-        flag = false;
       }
       let obj = arg4;
       if (arg4 === undefined) {
@@ -165,9 +161,9 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
       }
       const fractionalPremiumInfo = obj.fractionalPremiumInfo;
       _require = undefined;
-      const appleSubscriptionOwnership = require("useAppleSubscriptionOwnership").useAppleSubscriptionOwnership(
-        isPurchasedViaApple,
-      );
+      const tmp2 = _require;
+      let obj2 = require("useAppleSubscriptionOwnership");
+      const appleSubscriptionOwnership = obj2.useAppleSubscriptionOwnership(isPurchasedViaApple);
       if (null == subscriptionPeriodStart) {
         return null;
       } else {
@@ -180,6 +176,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
           fractionalPremiumInfo,
         );
         let formatResult = billingInformationString;
+        const tmp2Result2 = tmp2(1370);
         if (tmp2Result2.isIOS()) {
           formatResult = billingInformationString;
           if (isPurchasedViaApple.isPurchasedViaApple) {
@@ -188,15 +185,20 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
               formatResult = billingInformationString;
               if (!appleSubscriptionOwnership.isMismatch()) {
                 const intl = tmp2(1126).intl;
+                const format = intl.format;
                 let obj3 = {
                   renewalDate: subscriptionPeriodStart.subscriptionPeriodStart,
-                  onSubscriptionManagementClick: null,
+                  onSubscriptionManagementClick: function () {
+                    return closure_0(...arguments);
+                  },
                 };
-                _require = asyncGeneratorStep(async () => {
+                const gknRR3 = tmp2(1126).t.gknRR3;
+                _require = _asyncToGenerator(async () => {
+                  let v3;
                   if (v3 === 2) {
                     v3 = 3;
                     throw new TypeError("Generator functions may not be called on executing generators");
-                  } else if (tmp3 === 3) {
+                  } else if (tmp2 === 3) {
                     if (arg0 === 1) {
                       throw value;
                     } else if (arg0 === 2) {
@@ -217,9 +219,10 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
                           const obj4 = { value, done: true };
                           return obj4;
                         } else {
+                          const obj2 = v3(c1[7]);
                           c1 = 1;
                           v3 = 1;
-                          const obj5 = { value: v3(c1[7]).manageSubscription(), done: false };
+                          const obj5 = { value: obj2.manageSubscription(), done: false };
                           return obj5;
                         }
                       } else if (arg0 === 1) {
@@ -233,28 +236,20 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
                         v3 = 3;
                         return { value: "IconComponent", done: null };
                       }
-                    } catch (tmp7) {
-                      v3 = tmp;
-                      throw tmp7;
+                    } catch (tmp6) {
+                      v3 = 3;
+                      throw tmp6;
                     }
                   }
                 });
-                obj3.onSubscriptionManagementClick = function () {
-                  const self = this;
-                  const apply = closure_0.apply;
-                  if (typeof apply === "unknown") {
-                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                  } else {
-                    applyArgumentsResult = apply(self, arguments);
-                  }
-                  return applyArgumentsResult;
-                };
-                formatResult = intl.format(tmp2(1126).t.gknRR3, obj3);
+                formatResult = format(gknRR3, obj3);
               }
             }
           }
         }
         return formatResult;
       }
-      const obj2 = require("useAppleSubscriptionOwnership");
     };
+const result = size.fileFinishedImporting("modules/billing/native/subscription/BillingInformation.tsx");
+
+export const useBillingInformationNative = tmp2;

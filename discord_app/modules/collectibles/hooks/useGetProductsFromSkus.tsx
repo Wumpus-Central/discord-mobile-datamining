@@ -1,16 +1,22 @@
 // discord_app/modules/collectibles/hooks/useGetProductsFromSkus.tsx
-import _mod19 from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import uniqByDefault from "../../../../_runtime/15719_uniqBy.js";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-_mod19.useCallback;
-const result = size.fileFinishedImporting("modules/collectibles/hooks/useGetProductsFromSkus.tsx");
+let productByStoreListingId;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+const useCallback = react.useCallback;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = stateFromStores(576).c(4);
+      let stateFromStores;
+      let tmp4;
+      let tmp5;
+      let tmp8;
+      let tmp = stateFromStores;
+      const obj = stateFromStores(576);
+      const cResult = obj.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [CollectiblesCategoryStore];
         const fn = function n() {
@@ -23,12 +29,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const obj = stateFromStores(576);
-      stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
+      const tmpResult = tmp(504);
+      stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       if (cResult[2] !== stateFromStores) {
         const fn2 = function s(arr) {
+          const tmp = uniqByDefault;
           const mapped = arr.map((item) => {
-            value = stateFromStores.get(item);
+            const value = stateFromStores.get(item);
             productByStoreListingId = value;
             if (null != value) {
               productByStoreListingId = value;
@@ -40,26 +47,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             return productByStoreListingId;
           });
-          return uniqByDefault(
+          return tmp(
             mapped.filter((item) => null != item),
             "storeListingId",
           );
         };
         cResult[2] = stateFromStores;
         cResult[3] = fn2;
-        let tmp8 = fn2;
+        tmp8 = fn2;
       } else {
         tmp8 = cResult[3];
       }
       return tmp8;
     }
   : () => {
+      let stateFromStores;
       const items = [CollectiblesCategoryStore];
-      stateFromStores = stateFromStores(504).useStateFromStores(items, () => productByStoreListingId.products);
+      const obj = stateFromStores(504);
+      stateFromStores = obj.useStateFromStores(items, () => productByStoreListingId.products);
       const items1 = [stateFromStores];
       return useCallback((arr) => {
+        const tmp = uniqByDefault;
         const mapped = arr.map((item) => {
-          value = stateFromStores.get(item);
+          const value = stateFromStores.get(item);
           productByStoreListingId = value;
           if (null != value) {
             productByStoreListingId = value;
@@ -71,9 +81,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return productByStoreListingId;
         });
-        return uniqByDefault(
+        return tmp(
           mapped.filter((item) => null != item),
           "storeListingId",
         );
       }, items1);
     };
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useGetProductsFromSkus.tsx");
+
+export default tmp2;

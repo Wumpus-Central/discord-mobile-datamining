@@ -1,5 +1,5 @@
 // discord_app/modules/game_profile/hooks/useGameProfileOpenCritic.tsx
-import util from "../../../intl/index.native.tsx";
+import intl5 from "../../../intl/index.native.tsx";
 import OpenCriticTier from "../../../../discord_common/js/shared/shared-constants/OpenCriticTier.tsx";
 import _modDef8379 from "../../../../discord_assets/assets/game-profile/opencritic-mighty.png.js";
 import _modDef8380 from "../../../../discord_assets/assets/game-profile/opencritic-strong.png.js";
@@ -11,17 +11,17 @@ const result = size.fileFinishedImporting("modules/game_profile/hooks/useGamePro
 
 export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
   if (OpenCriticTier.OpenCriticTier.MIGHTY === tier) {
-    const intl4 = util.intl;
-    return intl4.string(util.t.aZej2g);
+    const intl4 = intl5.intl;
+    return intl4.string(intl5.t.aZej2g);
   } else if (OpenCriticTier.OpenCriticTier.STRONG === tier) {
-    const intl3 = util.intl;
-    return intl3.string(util.t.MLxnSg);
+    const intl3 = intl5.intl;
+    return intl3.string(intl5.t.MLxnSg);
   } else if (OpenCriticTier.OpenCriticTier.FAIR === tier) {
-    const intl2 = util.intl;
-    return intl2.string(util.t["3f19KA"]);
+    const intl2 = intl5.intl;
+    return intl2.string(intl5.t["3f19KA"]);
   } else if (OpenCriticTier.OpenCriticTier.WEAK === tier) {
-    const intl = util.intl;
-    return intl.string(util.t.jtVgSh);
+    const intl = intl5.intl;
+    return intl.string(intl5.t.jtVgSh);
   }
 };
 export const getOpenCriticTierImage = function getOpenCriticTierImage(tier) {

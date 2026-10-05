@@ -1,20 +1,19 @@
 // discord_app/modules/guild_role_subscriptions/useTrialActiveUserLimitOptions.tsx
-import c from "../../../_runtime/00576_c.js";
-import util from "../../intl/index.native.tsx";
-import noop from "../../../_runtime/metro/00019__.js";
+import react2 from "../../../_runtime/00576_react.js";
+import intl2 from "../../intl/index.native.tsx";
+import react from "../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useTrialActiveUserLimitOptions.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(1);
+      let first;
+      let intl;
+      const obj = react2;
+      const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { value: null, label: null };
-        const intl = util.intl;
-        obj2.label = intl.string(util.t.zHfL6o);
+        const obj2 = { value: null, label: intl.string(intl2.t.zHfL6o) };
+        intl = intl2.intl;
         const items = [
           obj2,
           { value: 10, label: "10" },
@@ -23,17 +22,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           { value: 100, label: "100" },
         ];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       return first;
     }
   : () =>
-      noop.useMemo(() => {
-        const obj = { value: null, label: null };
-        const intl = util.intl;
-        obj.label = intl.string(util.t.zHfL6o);
+      react.useMemo(() => {
+        let intl;
+        const obj = { value: null, label: intl.string(intl2.t.zHfL6o) };
+        intl = intl2.intl;
         const items = [
           obj,
           { value: 10, label: "10" },
@@ -43,3 +42,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ];
         return items;
       }, []);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useTrialActiveUserLimitOptions.tsx");
+
+export default tmp2;

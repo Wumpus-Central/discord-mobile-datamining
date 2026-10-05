@@ -1,33 +1,46 @@
 // discord_app/modules/video_calls/native/components/HideSelfStreamAndVideoConfirmDialog.tsx
-import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import AlertDefault from "../../../../components_native/common/Alert.tsx";
 import UserSettingsActionCreatorsDefault from "../../../../actions/UserSettingsActionCreators.tsx";
+import HideSelfStreamAndVideoConstants from "../../../calls/HideSelfStreamAndVideoConstants.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
+let metroImportAll;
+let metroImportDefault;
 let closure_3 = ["type", "onConfirm"];
-const View = fn(17).View;
-const constants = fn(17354).SelfStreamAndVideoAlertType;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
+const View = react_native.View;
+const constants = HideSelfStreamAndVideoConstants.SelfStreamAndVideoAlertType;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
 let closure_9 = createStyles.createStyles({
   wrapper: { padding: 16 },
   body: { paddingTop: 16 },
   description: { lineHeight: 18 },
   ctaLink: { paddingTop: 8, textAlign: "center", textDecorationLine: "underline" },
 });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting(
-  "modules/video_calls/native/components/HideSelfStreamAndVideoConfirmDialog.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = require("c").c(33);
+      let closure_0;
+      let items;
+      let onClose;
+      let onConfirm;
+      let tmp11;
+      let tmp12;
+      let tmp15;
+      let tmp18;
+      let tmp20;
+      let tmp4;
+      let tmp6;
+      let type;
+      let obj = require("react");
+      const cResult = obj.c(33);
       if (cResult[0] !== arg0) {
         ({ type, onConfirm } = arg0);
         _require = onConfirm;
@@ -36,8 +49,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = tmp9;
         cResult[2] = onConfirm;
         cResult[3] = type;
-        let tmp6 = type;
-        let tmp4 = tmp9;
+        tmp6 = type;
+        tmp4 = tmp9;
       } else {
         tmp4 = cResult[1];
         _require = cResult[2];
@@ -46,166 +59,190 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp10 = closure_9();
       if (cResult[4] !== onConfirm) {
         const fn = function v() {
-          const result = UserSettingsActionCreatorsDefault.updatedUnsyncedSettings({
-            disableHideSelfStreamAndVideoConfirmationAlert: true,
-          });
+          const obj = UserSettingsActionCreatorsDefault;
+          const result = obj.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: true });
           closure_0();
         };
         cResult[4] = onConfirm;
         cResult[5] = fn;
-        let tmp11 = fn;
+        tmp11 = fn;
       } else {
         tmp11 = cResult[5];
       }
       if (cResult[6] !== tmp6) {
+        let stringResult;
         if (tmp6 === constants.STREAM) {
           const intl2 = tmp(1126).intl;
-          let stringResult = intl2.string(tmp(1126).t["/lFMWr"]);
+          stringResult = intl2.string(tmp(1126).t["/lFMWr"]);
         } else {
           const intl = tmp(1126).intl;
           stringResult = intl.string(tmp(1126).t.xzxhZS);
         }
         cResult[6] = tmp6;
         cResult[7] = stringResult;
-      } else if (cResult[8] !== tmp6) {
+        tmp12 = stringResult;
+      } else {
+        tmp12 = cResult[7];
+      }
+      if (cResult[8] !== tmp6) {
+        let stringResult1;
         if (tmp6 === constants.STREAM) {
           const intl4 = tmp(1126).intl;
-          let stringResult1 = intl4.string(tmp(1126).t.xaOX7d);
+          stringResult1 = intl4.string(tmp(1126).t.xaOX7d);
         } else {
           const intl3 = tmp(1126).intl;
           stringResult1 = intl3.string(tmp(1126).t.oU1p9O);
         }
         cResult[8] = tmp6;
         cResult[9] = stringResult1;
+        tmp15 = stringResult1;
       } else {
-        const _Symbol = Symbol;
-        if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl5 = tmp(1126).intl;
-          const stringResult2 = intl5.string(tmp(1126).t["ETE/oC"]);
-          cResult[10] = stringResult2;
-          let tmp21 = stringResult2;
-        } else {
-          tmp21 = cResult[10];
+        tmp15 = cResult[9];
+      }
+      const wrapper = tmp10.wrapper;
+      if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl5 = tmp(1126).intl;
+        const stringResult2 = intl5.string(require("intl").t["ETE/oC"]);
+        cResult[10] = stringResult2;
+        tmp18 = stringResult2;
+      } else {
+        tmp18 = cResult[10];
+      }
+      if (tmp4 != null) {
+        onClose = tmp4.onClose;
+      }
+      if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl6 = tmp(1126).intl;
+        const stringResult3 = intl6.string(require("intl").t["cY+Oob"]);
+        cResult[11] = stringResult3;
+        tmp20 = stringResult3;
+      } else {
+        tmp20 = cResult[11];
+      }
+      if (cResult[12] === tmp15) {
+        let tmp23;
+        if (cResult[13] === tmp10.description) {
+          tmp23 = cResult[14];
         }
-        if (tmp4 != null) {
-          const onClose = tmp4.onClose;
-        }
-        const _Symbol2 = Symbol;
-        if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl6 = tmp(1126).intl;
-          const stringResult3 = intl6.string(tmp(1126).t["cY+Oob"]);
-          cResult[11] = stringResult3;
-          let tmp24 = stringResult3;
-        } else {
-          tmp24 = cResult[11];
-        }
-        if (cResult[12] === cResult[9]) {
-          if (cResult[13] === tmp10.description) {
-            let tmp27 = cResult[14];
+        if (cResult[15] === tmp10.ctaLink) {
+          let tmp25;
+          let tmp26;
+          if (cResult[16] === tmp10.description) {
+            tmp25 = cResult[17];
           }
-          if (cResult[15] === tmp10.ctaLink) {
-            if (cResult[16] === tmp10.description) {
-              let tmp30 = cResult[17];
+          const _Symbol = Symbol;
+          if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
+            const intl7 = tmp(1126).intl;
+            const stringResult4 = intl7.string(require("intl").t["JdIQ/Y"]);
+            cResult[18] = stringResult4;
+            tmp26 = stringResult4;
+          } else {
+            tmp26 = cResult[18];
+          }
+          if (cResult[19] === tmp11) {
+            let tmp28;
+            if (cResult[20] === tmp25) {
+              tmp28 = cResult[21];
             }
-            const _Symbol3 = Symbol;
-            if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl7 = tmp(1126).intl;
-              const stringResult4 = intl7.string(tmp(1126).t["JdIQ/Y"]);
-              cResult[18] = stringResult4;
-              let tmp31 = stringResult4;
-            } else {
-              tmp31 = cResult[18];
-            }
-            if (cResult[19] === tmp11) {
-              if (cResult[20] === tmp30) {
-                let tmp33 = cResult[21];
-              }
-              if (cResult[22] === tmp10.body) {
-                if (cResult[23] === tmp33) {
-                  if (cResult[24] === tmp27) {
-                    let tmp36 = cResult[25];
-                  }
-                  if (cResult[26] === tmp4) {
-                    if (cResult[27] === onConfirm) {
-                      if (cResult[28] === tmp10.wrapper) {
-                        if (cResult[29] === tmp36) {
-                          if (cResult[30] === onClose) {
-                            if (cResult[31] === tmp12) {
-                              let tmp40 = cResult[32];
-                            }
-                            return tmp40;
+            if (cResult[22] === tmp10.body) {
+              if (cResult[23] === tmp28) {
+                let tmp31;
+                if (cResult[24] === tmp23) {
+                  tmp31 = cResult[25];
+                }
+                if (cResult[26] === tmp4) {
+                  if (cResult[27] === onConfirm) {
+                    if (cResult[28] === tmp10.wrapper) {
+                      if (cResult[29] === tmp31) {
+                        if (cResult[30] === onClose) {
+                          let tmp35;
+                          if (cResult[31] === tmp12) {
+                            tmp35 = cResult[32];
                           }
+                          return tmp35;
                         }
                       }
                     }
                   }
-                  const obj2 = {};
-                  const merged = Object.assign(tmp4);
-                  obj2.title = tmp12;
-                  obj2.style = tmp10.wrapper;
-                  obj2.cancelText = tmp21;
-                  obj2.onCancel = onClose;
-                  obj2.confirmText = tmp24;
-                  obj2.onConfirm = onConfirm;
-                  obj2.children = tmp36;
-                  const tmp47 = closure_7(common_AlertDefault, obj2);
-                  cResult[26] = tmp4;
-                  cResult[27] = onConfirm;
-                  cResult[28] = tmp10.wrapper;
-                  cResult[29] = tmp36;
-                  cResult[30] = onClose;
-                  cResult[31] = tmp12;
-                  cResult[32] = tmp47;
-                  tmp40 = tmp47;
                 }
+                const obj2 = {
+                  title: tmp12,
+                  style: wrapper,
+                  cancelText: tmp18,
+                  onCancel: onClose,
+                  confirmText: tmp20,
+                  onConfirm,
+                  children: tmp31,
+                };
+                const tmp38 = AlertDefault;
+                const merged = Object.assign(tmp4);
+                const tmp42 = closure_7(tmp38, obj2);
+                cResult[26] = tmp4;
+                cResult[27] = onConfirm;
+                cResult[28] = tmp10.wrapper;
+                cResult[29] = tmp31;
+                cResult[30] = onClose;
+                cResult[31] = tmp12;
+                cResult[32] = tmp42;
+                tmp35 = tmp42;
               }
-              const obj3 = { style: tmp26, children: null };
-              const items = [tmp27, tmp33];
-              obj3.children = items;
-              const tmp39 = closure_8(View, obj3);
-              cResult[22] = tmp10.body;
-              cResult[23] = tmp33;
-              cResult[24] = tmp27;
-              cResult[25] = tmp39;
-              tmp36 = tmp39;
             }
-            const obj4 = {
-              accessibilityRole: "link",
-              style: tmp30,
-              onPress: tmp11,
-              variant: "text-sm/medium",
-              children: tmp31,
-            };
-            const tmp35 = closure_7(tmp(4886).Text, obj4);
-            cResult[19] = tmp11;
-            cResult[20] = tmp30;
-            cResult[21] = tmp35;
-            tmp33 = tmp35;
+            const obj3 = { style: tmp22, children: items };
+            items = [tmp23, tmp28];
+            const tmp34 = closure_8(View, obj3);
+            cResult[22] = tmp10.body;
+            cResult[23] = tmp28;
+            cResult[24] = tmp23;
+            cResult[25] = tmp34;
+            tmp31 = tmp34;
           }
-          const items1 = [,];
-          ({ ctaLink: arr[0], description: arr[1] } = tmp10);
-          cResult[15] = tmp10.ctaLink;
-          cResult[16] = tmp10.description;
-          cResult[17] = items1;
-          tmp30 = items1;
+          const obj4 = {
+            accessibilityRole: "link",
+            style: tmp25,
+            onPress: tmp11,
+            variant: "text-sm/medium",
+            children: tmp26,
+          };
+          const tmp30 = closure_7(require("Text/Text").Text, obj4);
+          cResult[19] = tmp11;
+          cResult[20] = tmp25;
+          cResult[21] = tmp30;
+          tmp28 = tmp30;
         }
-        const obj5 = { style: tmp10.description, variant: "text-sm/medium", children: cResult[9] };
-        const tmp29 = closure_7(tmp(4886).Text, obj5);
-        cResult[12] = cResult[9];
-        cResult[13] = tmp10.description;
-        cResult[14] = tmp29;
-        tmp27 = tmp29;
+        const items1 = [,];
+        ({ ctaLink: arr[0], description: arr[1] } = tmp10);
+        cResult[15] = tmp10.ctaLink;
+        cResult[16] = tmp10.description;
+        cResult[17] = items1;
+        tmp25 = items1;
       }
-      const obj = require("c");
+      const obj5 = { style: tmp10.description, variant: "text-sm/medium", children: tmp15 };
+      const tmp24 = closure_7(require("Text/Text").Text, obj5);
+      cResult[12] = tmp15;
+      cResult[13] = tmp10.description;
+      cResult[14] = tmp24;
+      tmp23 = tmp24;
     }
   : (arg0) => {
+      let intl5;
+      let intl6;
+      let intl7;
+      let items;
+      let items1;
+      let obj2;
+      let onClose;
+      let onConfirm;
+      let stringResult;
+      let stringResult1;
+      let tmp6;
+      let type;
       ({ type, onConfirm } = arg0);
       const merged = Object.assign(arg0, Object.assign({ type: 0, onConfirm: 0 }));
       const tmp2 = closure_9();
       if (type === constants.STREAM) {
         const intl2 = onConfirm(1126).intl;
-        let stringResult = intl2.string(onConfirm(1126).t["/lFMWr"]);
-        let tmp6 = onConfirm;
+        stringResult = intl2.string(onConfirm(1126).t["/lFMWr"]);
+        tmp6 = onConfirm;
       } else {
         const intl = onConfirm(1126).intl;
         tmp6 = onConfirm;
@@ -213,48 +250,52 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (type === constants.STREAM) {
         const intl4 = tmp6(1126).intl;
-        let stringResult1 = intl4.string(tmp6(1126).t.xaOX7d);
+        stringResult1 = intl4.string(tmp6(1126).t.xaOX7d);
       } else {
         const intl3 = tmp6(1126).intl;
         stringResult1 = intl3.string(tmp6(1126).t.oU1p9O);
       }
-      const obj = {};
+      let obj = {
+        title: stringResult,
+        style: tmp2.wrapper,
+        cancelText: intl5.string(tmp6(1126).t["ETE/oC"]),
+        onCancel: onClose,
+        confirmText: intl6.string(tmp6(1126).t["cY+Oob"]),
+        onConfirm,
+        children: closure_8(View, obj2),
+      };
+      const tmp12 = AlertDefault;
       const merged1 = Object.assign(merged);
-      obj.title = stringResult;
-      obj.style = tmp2.wrapper;
-      const intl5 = tmp6(1126).intl;
-      obj.cancelText = intl5.string(tmp6(1126).t["ETE/oC"]);
-      let onClose;
+      intl5 = tmp6(1126).intl;
+      onClose = undefined;
       if (merged != null) {
         onClose = merged.onClose;
       }
-      obj.onCancel = onClose;
-      const intl6 = tmp6(1126).intl;
-      obj.confirmText = intl6.string(tmp6(1126).t["cY+Oob"]);
-      obj.onConfirm = onConfirm;
-      const obj2 = { style: tmp2.body, children: null };
-      const items = [
-        closure_7(tmp6(4886).Text, { style: tmp2.description, variant: "text-sm/medium", children: stringResult1 }),
-      ];
+      intl6 = tmp6(1126).intl;
+      obj2 = { style: tmp2.body, children: items };
+      items = [,];
+      const obj3 = { style: tmp2.description, variant: "text-sm/medium", children: stringResult1 };
+      items[0] = closure_7(tmp6(4886).Text, obj3);
       const obj4 = {
         accessibilityRole: "link",
-        style: null,
+        style: items1,
         onPress() {
-          const result = UserSettingsActionCreatorsDefault.updatedUnsyncedSettings({
-            disableHideSelfStreamAndVideoConfirmationAlert: true,
-          });
+          const obj = UserSettingsActionCreatorsDefault;
+          const result = obj.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: true });
           onConfirm();
         },
         variant: "text-sm/medium",
-        children: null,
+        children: intl7.string(tmp6(1126).t["JdIQ/Y"]),
       };
-      const items1 = [,];
+      items1 = [,];
       ({ ctaLink: arr2[0], description: arr2[1] } = tmp2);
-      obj4.style = items1;
-      const intl7 = tmp6(1126).intl;
-      obj4.children = intl7.string(tmp6(1126).t["JdIQ/Y"]);
-      items[1] = closure_7(tmp6(4886).Text, obj4);
-      obj2.children = items;
-      obj.children = closure_8(View, obj2);
-      return closure_7(common_AlertDefault, obj);
+      const Text = tmp6(4886).Text;
+      intl7 = tmp6(1126).intl;
+      items[1] = closure_7(Text, obj4);
+      return closure_7(tmp12, obj);
     };
+let result = size.fileFinishedImporting(
+  "modules/video_calls/native/components/HideSelfStreamAndVideoConfirmDialog.tsx",
+);
+
+export default tmp4;

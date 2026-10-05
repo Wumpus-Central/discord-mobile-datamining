@@ -1,5 +1,5 @@
 // discord_app/modules/premium/experiments/MobileNitroPreviewDirectCheckoutExperiment.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react from "../../../../_runtime/00576_react.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -10,19 +10,22 @@ const apexExperiment = ApexExperiment.createApexExperiment({
   defaultConfig: false,
   variations: { 0: false, 1: true },
 });
-const result = size.fileFinishedImporting("modules/premium/experiments/MobileNitroPreviewDirectCheckoutExperiment.tsx");
-
-export const MobileNitroPreviewDirectCheckoutExperiment = apexExperiment;
-export const useMobileNitroPreviewDirectCheckoutEnabled = ReactCompilerGating.isReactCompilerEnabled()
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(1);
+      let first;
+      const obj = react;
+      const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { location: "native.GetNitroCard" };
         cResult[0] = obj2;
-        let first = obj2;
+        first = obj2;
       } else {
         first = cResult[0];
       }
       return apexExperiment.useConfig(first);
     }
   : () => apexExperiment.useConfig({ location: "native.GetNitroCard" });
+const result = size.fileFinishedImporting("modules/premium/experiments/MobileNitroPreviewDirectCheckoutExperiment.tsx");
+
+export const MobileNitroPreviewDirectCheckoutExperiment = apexExperiment;
+export const useMobileNitroPreviewDirectCheckoutEnabled = tmp3;

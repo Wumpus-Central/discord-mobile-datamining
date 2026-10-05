@@ -1,11 +1,12 @@
 // discord_app/modules/conjure/projects/conjureProjectMute.tsx
 import preloaded_user_settings from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap, projects;
 
-require = fn;
-const ReactCompilerGating = fn(558);
 function isConjureProjectMuted(settings, id) {
   const vibegrations = settings.vibegrations;
   let muted;
@@ -16,18 +17,20 @@ function isConjureProjectMuted(settings, id) {
   }
   return true === muted;
 }
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/projects/conjureProjectMute.tsx");
-
-export { isConjureProjectMuted };
-export const useIsConjureProjectMuted = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
+      let tmp7;
       _require = arg0;
-      const cResult = require("c").c(4);
+      const tmp = _require;
+      const obj = require("react");
+      const cResult = obj.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserSettingsProtoStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -46,20 +49,22 @@ export const useIsConjureProjectMuted = ReactCompilerGating.isReactCompilerEnabl
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6, tmp7);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6, tmp7);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       const items = [UserSettingsProtoStore];
       const items1 = [arg0];
-      return require("initialize").useStateFromStores(
+      const obj = require("get initialized");
+      return obj.useStateFromStores(
         items,
         () => {
           const vibegrations = UserSettingsProtoStore.settings.vibegrations;
@@ -74,7 +79,12 @@ export const useIsConjureProjectMuted = ReactCompilerGating.isReactCompilerEnabl
         items1,
       );
     };
+const result = size.fileFinishedImporting("modules/conjure/projects/conjureProjectMute.tsx");
+
+export { isConjureProjectMuted };
+export const useIsConjureProjectMuted = tmp2;
 export const setConjureProjectMuted = function setConjureProjectMuted(id, arg1) {
+  let closure_1;
   _require = id;
   dependencyMap = arg1;
   const PreloadedUserSettingsActionCreators =
@@ -85,12 +95,11 @@ export const setConjureProjectMuted = function setConjureProjectMuted(id, arg1) 
       projects = projects.projects;
       if (closure_1) {
         const VibegrationsProjectSettings = preloaded_user_settings.VibegrationsProjectSettings;
-        projects[closure_0] = VibegrationsProjectSettings.create({ muted: true });
-      } else if (null == projects[closure_0]) {
+        projects[id] = VibegrationsProjectSettings.create({ muted: true });
+      } else if (null == projects[id]) {
         return false;
       } else {
-        const projects2 = projects.projects;
-        delete tmp[tmp2];
+        delete projects.projects[id];
       }
     },
     require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION,

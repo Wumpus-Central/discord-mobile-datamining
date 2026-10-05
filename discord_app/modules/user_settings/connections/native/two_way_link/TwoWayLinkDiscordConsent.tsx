@@ -1,64 +1,75 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx
 import LoggerDefault from "../../../../debug/Logger.tsx";
 import _modDef38 from "../../../../../../_runtime/metro/00038__.js";
-import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import _asyncToGenerator from "../../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
+let callbackCode, v0;
 
-const require = fn;
-get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsxs: closure_8, jsx: closure_9 } = jsxProd);
-let closure_10 = new LoggerDefault("TwoWayLinkDiscordConsentNative");
-const createStyles = fn(4890);
-let closure_11 = createStyles.createStyles({ scroller: { alignSelf: "stretch", flexShrink: 1 }, flex: { flex: 1 } });
-const ReactCompilerGating = fn(558);
+let c9;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let react = react_mod;
+({ View: metroRequire, ScrollView: metroImportDefault } = react_native);
+({ jsxs: metroImportAll, jsx: c9 } = Fragment);
 const tmp4 = new LoggerDefault("TwoWayLinkDiscordConsentNative");
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx",
-);
-
-export const TwoWayLinkDiscordConsent = ReactCompilerGating.isReactCompilerEnabled()
+let closure_10 = tmp4;
+let closure_11 = createStyles.createStyles({ scroller: { alignSelf: "stretch", flexShrink: 1 }, flex: { flex: 1 } });
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (callbackCode) => {
-      const cResult = require("c").c(39);
+      let appDetails;
+      let body;
+      let clientId;
+      let header;
+      let items;
+      let onNext;
+      let platformType;
+      let scopes;
+      let sendAuthorize;
+      const tmp = platformType;
+      const obj = callbackCode(platformType[8]);
+      const cResult = obj.c(39);
       callbackCode = callbackCode.callbackCode;
-      _require = callbackCode;
       const callbackState = callbackCode.callbackState;
       platformType = callbackCode.platformType;
       ({ clientId, scopes, onNext } = callbackCode);
       const onError = callbackCode.onError;
       const redirectUri = callbackCode.redirectUri;
-      closure_11();
-      let obj = require("c");
-      const tmp = platformType;
-      const twoWayLinkStyles = require("TwoWayLinkStyles").useTwoWayLinkStyles();
-      let obj2 = require("TwoWayLinkStyles");
-      [r10030, noop] = onError(noop.useState(false), 2);
+      const tmp3 = closure_11();
+      let obj2 = callbackCode(platformType[9]);
+      const twoWayLinkStyles = obj2.useTwoWayLinkStyles();
+      const tmp5 = onError(react.useState(false), 2);
+      [r10030, react] = tmp5;
       if (cResult[0] === callbackCode) {
         if (cResult[1] === callbackState) {
           if (cResult[2] === onError) {
             if (cResult[3] === onNext) {
+              let tmp6;
               if (cResult[4] === platformType) {
-                let tmp6 = cResult[5];
+                tmp6 = cResult[5];
               }
               if (cResult[6] === clientId) {
                 if (cResult[7] === tmp6) {
                   if (cResult[8] === redirectUri) {
+                    let tmp7;
                     if (cResult[9] === scopes) {
-                      let tmp7 = cResult[10];
+                      tmp7 = cResult[10];
                     }
                     ({ header, body, appDetails, sendAuthorize } = callbackState(tmp[11])(tmp7));
+                    callbackState(tmp[11])(tmp7);
                     if (cResult[11] !== sendAuthorize) {
                       class E {
                         constructor() {
-                          tmp = closure_1(closure_2[12])(null != sendAuthorize, "sendAuthorize not available");
-                          tmp2 = closure_5(true);
-                          tmp3 = sendAuthorize({ isAuthorized: true });
-                          return;
+                          _modDef38(null != sendAuthorize, "sendAuthorize not available");
+                          react(true);
+                          sendAuthorize({ isAuthorized: true });
                         }
                       }
                       cResult[11] = sendAuthorize;
@@ -66,36 +77,32 @@ export const TwoWayLinkDiscordConsent = ReactCompilerGating.isReactCompilerEnabl
                     } else {
                       class E {
                         constructor() {
-                          tmp = closure_1(closure_2[12])(null != sendAuthorize, "sendAuthorize not available");
-                          tmp2 = closure_5(true);
-                          tmp3 = sendAuthorize({ isAuthorized: true });
-                          return;
+                          _modDef38(null != sendAuthorize, "sendAuthorize not available");
+                          react(true);
+                          sendAuthorize({ isAuthorized: true });
                         }
                       }
                     }
                     if (cResult[13] === appDetails) {
                       class E {
                         constructor() {
-                          tmp = closure_1(closure_2[12])(null != sendAuthorize, "sendAuthorize not available");
-                          tmp2 = closure_5(true);
-                          tmp3 = sendAuthorize({ isAuthorized: true });
-                          return;
+                          _modDef38(null != sendAuthorize, "sendAuthorize not available");
+                          react(true);
+                          sendAuthorize({ isAuthorized: true });
                         }
                       }
                     }
-                    let obj3 = { style: twoWayLinkStyles.bodyContent, children: null };
-                    const items = [body, appDetails];
-                    obj3.children = items;
+                    const obj3 = { style: twoWayLinkStyles.bodyContent, children: items };
+                    items = [body, appDetails];
                     const tmp14 = closure_8(sendAuthorize, obj3);
                     cResult[13] = appDetails;
                     cResult[14] = body;
                     cResult[15] = twoWayLinkStyles.bodyContent;
                     cResult[16] = tmp14;
-                    const tmp9 = callbackState(tmp[11])(tmp7);
                   }
                 }
               }
-              let obj4 = {
+              const obj4 = {
                 clientId,
                 scopes,
                 responseType: "code",
@@ -115,26 +122,27 @@ export const TwoWayLinkDiscordConsent = ReactCompilerGating.isReactCompilerEnabl
           }
         }
       }
-      _require = onNext((arg0) => {
-        const _location = arg0;
-        c5 = 0;
-        c6 = 0;
-        c4 = 0;
+      let closure_0 = onNext((arg0) => {
+        let closure_3;
+        let _location = arg0;
+        let c5 = 0;
+        let c6 = 0;
+        let c4 = 0;
         return (function* (arg0) {
           if (c6 === 2) {
             c6 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp7 === 3) {
+          } else if (tmp3 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              const obj3 = { value, done: true };
-              return obj3;
+              return { value, done: true };
             } else {
               return { value: "IconComponent", done: null };
             }
           } else {
             try {
+              let code;
               c6 = 2;
               if (0 === c5) {
                 if (arg0 === 1) {
@@ -142,75 +150,63 @@ export const TwoWayLinkDiscordConsent = ReactCompilerGating.isReactCompilerEnabl
                   throw value;
                 } else if (arg0 === 2) {
                   c6 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
+                  return { value, done: true };
                 } else {
-                  closure_2 = tmp3;
-                  closure_1 = tmp5;
-                  closure_129_0 = undefined;
-                  closure_129_1 = undefined;
-                  closure_129_2 = undefined;
+                  _location = undefined;
+                  code = undefined;
+                  body = undefined;
                   v0 = 1;
+                  _location = _location.location;
                   const obj2 = callbackState(platformType[10]);
+                  body = obj2.completeTwoWayLink(body, _location, _location, body);
                   c5 = 2;
                   c6 = 1;
-                  const obj5 = {
-                    value: obj2.completeTwoWayLink(closure_2, _location.location, _location, closure_1),
-                    done: false,
-                  };
-                  return obj5;
+                  return { value: body, done: false };
                 }
               } else {
-                if (1 === tmp8) {
+                if (1 === tmp4) {
                   v0 = 0;
-                  closure_129_2 = tmp38;
+                  body = tmp32;
                   const _HermesInternal = HermesInternal;
-                  logger.error("" + closure_2 + " link error:", closure_129_2);
-                  const body = closure_129_2.body;
-                  let code;
+                  logger.error("" + body + " link error:", body);
+                  body = body.body;
+                  code = undefined;
                   if (body != null) {
                     code = body.code;
                   }
-                  closure_129_1 = code;
                 } else if (arg0 === 1) {
                   c6 = 3;
                   throw value;
                 } else if (arg0 === 2) {
                   v0 = 0;
                   c6 = 3;
-                  const obj = { value, done: true };
-                  return obj;
+                  return { value, done: true };
                 } else {
-                  closure_129_0 = value;
+                  _location = value;
                   v0 = 0;
                 }
-                if (null != closure_129_0) {
-                  tmp38();
+                if (null != _location) {
+                  tmp32();
                 } else {
-                  v0(closure_129_1);
+                  body = v0;
+                  v0(code);
                 }
                 c6 = 3;
+                return { value: "IconComponent", done: null };
               }
-            } catch (tmp38) {
-              if (tmp4 === v0) {
-                c6 = tmp2;
-                throw tmp38;
+            } catch (tmp32) {
+              if (0 === v0) {
+                c6 = 3;
+                throw tmp32;
               } else {
-                c5 = tmp;
+                c5 = 1;
               }
             }
           }
         })();
       });
       const fn = function () {
-        const self = this;
-        const apply = closure_0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
+        return closure_0(...arguments);
       };
       cResult[0] = callbackCode;
       cResult[1] = callbackState;
@@ -219,41 +215,61 @@ export const TwoWayLinkDiscordConsent = ReactCompilerGating.isReactCompilerEnabl
       cResult[4] = platformType;
       cResult[5] = fn;
       tmp6 = fn;
-      const tmp5 = onError(noop.useState(false), 2);
     }
   : (callbackCode) => {
+      let Button;
+      let appDetails;
+      let body;
+      let clientId;
+      let closure_5;
+      let header;
+      let intl;
+      let items2;
+      let items3;
+      let items4;
+      let obj3;
+      let obj4;
+      let obj9;
+      let redirectUri;
+      let scopes;
+      let tmp10Result;
+      let tmp12;
       callbackCode = callbackCode.callbackCode;
-      _require = callbackCode;
       const callbackState = callbackCode.callbackState;
       const platformType = callbackCode.platformType;
       const onNext = callbackCode.onNext;
       const onError = callbackCode.onError;
-      noop = undefined;
+      react = undefined;
       ({ clientId, scopes, redirectUri } = callbackCode);
       const tmp = closure_11();
-      const twoWayLinkStyles = require("TwoWayLinkStyles").useTwoWayLinkStyles();
-      const tmp5 = onError(noop.useState(false), 2);
-      noop = tmp5[1];
-      _require = onNext((arg0) => {
-        const _location = arg0;
-        c5 = 0;
-        c6 = 0;
-        c4 = 0;
+      const tmp3 = platformType;
+      const obj = callbackCode(platformType[9]);
+      const twoWayLinkStyles = obj.useTwoWayLinkStyles();
+      const tmp5 = onError(react.useState(false), 2);
+      react = tmp5[1];
+      const first = tmp5[0];
+      const useCallback = react.useCallback;
+      let closure_0 = onNext((arg0) => {
+        let closure_3;
+        let _location = arg0;
+        let c5 = 0;
+        let c6 = 0;
+        let c4 = 0;
         return (function* (arg0) {
           if (c6 === 2) {
             c6 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp7 === 3) {
+          } else if (tmp3 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              const obj3 = { value, done: true };
-              return obj3;
+              return { value, done: true };
             } else {
               return { value: "IconComponent", done: null };
             }
           } else {
             try {
+              let code;
               c6 = 2;
               if (0 === c5) {
                 if (arg0 === 1) {
@@ -261,77 +277,66 @@ export const TwoWayLinkDiscordConsent = ReactCompilerGating.isReactCompilerEnabl
                   throw value;
                 } else if (arg0 === 2) {
                   c6 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
+                  return { value, done: true };
                 } else {
-                  closure_2 = tmp3;
-                  closure_1 = tmp5;
-                  closure_129_0 = undefined;
-                  closure_129_1 = undefined;
+                  body = tmp;
+                  _location = undefined;
+                  code = undefined;
                   v0 = 1;
+                  _location = _location.location;
                   const obj2 = callbackState(platformType[10]);
+                  body = obj2.completeTwoWayLink(body, _location, _location, body);
                   c5 = 2;
                   c6 = 1;
-                  const obj5 = {
-                    value: obj2.completeTwoWayLink(closure_2, _location.location, _location, closure_1),
-                    done: false,
-                  };
-                  return obj5;
+                  return { value: body, done: false };
                 }
               } else {
-                if (1 === tmp8) {
+                if (1 === tmp4) {
                   v0 = 0;
-                  closure_129_2 = tmp38;
+                  body = tmp32;
                   const _HermesInternal = HermesInternal;
-                  logger.error("" + closure_2 + " link error:", closure_129_2);
-                  const body = closure_129_2.body;
-                  let code;
+                  logger.error("" + body + " link error:", body);
+                  body = body.body;
+                  code = undefined;
                   if (body != null) {
                     code = body.code;
                   }
-                  closure_129_1 = code;
                 } else if (arg0 === 1) {
                   c6 = 3;
                   throw value;
                 } else if (arg0 === 2) {
                   v0 = 0;
                   c6 = 3;
-                  const obj = { value, done: true };
-                  return obj;
+                  return { value, done: true };
                 } else {
-                  closure_129_0 = value;
+                  _location = value;
                   v0 = 0;
                 }
-                if (null != closure_129_0) {
-                  tmp38();
+                if (null != _location) {
+                  tmp32();
                 } else {
-                  v0(closure_129_1);
+                  body = v0;
+                  v0(code);
                 }
                 c6 = 3;
+                return { value: "IconComponent", done: null };
               }
-            } catch (tmp38) {
-              if (tmp4 === v0) {
-                c6 = tmp2;
-                throw tmp38;
+            } catch (tmp32) {
+              if (0 === v0) {
+                c6 = 3;
+                throw tmp32;
               } else {
-                c5 = tmp;
+                c5 = 1;
               }
             }
           }
         })();
       });
       const items = [callbackCode, callbackState, platformType, onNext, onError];
-      const callback = noop.useCallback(function () {
-        const self = this;
-        const apply = closure_0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
+      const callback = useCallback(function () {
+        return closure_0(...arguments);
       }, items);
-      const tmp7 = callbackState(platformType[11])({
+      const tmp8 = callbackState(platformType[11])({
         clientId,
         scopes,
         responseType: "code",
@@ -341,42 +346,45 @@ export const TwoWayLinkDiscordConsent = ReactCompilerGating.isReactCompilerEnabl
         redirectUri,
         withBackPressHandler: false,
       });
-      const sendAuthorize = tmp7.sendAuthorize;
+      const sendAuthorize = tmp8.sendAuthorize;
       const items1 = [sendAuthorize];
-      ({ header, body, appDetails } = tmp7);
-      let obj2 = { style: twoWayLinkStyles.container, children: null };
-      const callback1 = noop.useCallback(() => {
+      ({ header, body, appDetails } = tmp8);
+      let obj2 = { style: twoWayLinkStyles.container, children: closure_9(tmp12, obj3) };
+      const callback1 = react.useCallback(() => {
         _modDef38(null != sendAuthorize, "sendAuthorize not available");
         closure_5(true);
         sendAuthorize({ isAuthorized: true });
       }, items1);
-      let obj3 = { style: tmp.flex, children: null };
-      let obj4 = { style: tmp.scroller, children: null };
-      let obj5 = { style: twoWayLinkStyles.body, children: null };
-      const items2 = [header];
-      const obj6 = { style: twoWayLinkStyles.bodyContent, children: null };
-      const items3 = [body, appDetails];
-      obj6.children = items3;
-      let obj = require("TwoWayLinkStyles");
+      obj3 = { style: tmp.flex, children: closure_8(closure_7, obj4) };
+      obj4 = { style: tmp.scroller, children: items4 };
+      const obj5 = { style: twoWayLinkStyles.body, children: items2 };
+      items2 = [header];
+      const obj6 = { style: twoWayLinkStyles.bodyContent, children: items3 };
+      items3 = [body, appDetails];
+      tmp12 = callbackState(platformType[16]);
       items2[1] = closure_8(sendAuthorize, obj6);
-      obj5.children = items2;
-      const items4 = [closure_8(sendAuthorize, obj5)];
-      const obj7 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
-      let tmp9Result = null != sendAuthorize;
-      if (tmp9Result) {
-        const obj8 = { style: twoWayLinkStyles.footerButton, children: null };
-        const obj9 = { size: "lg", variant: "primary", text: null, onPress: null, loading: null };
-        const intl = tmp2(tmp3[14]).intl;
-        obj9.text = intl.string(tmp2(tmp3[14]).t.ZN4hkc);
-        obj9.onPress = callback1;
-        obj9.loading = tmp5[0];
-        obj8.children = closure_9(tmp2(tmp3[13]).Button, obj9);
-        tmp9Result = closure_9(tmp10, obj8);
+      items4 = [closure_8(sendAuthorize, obj5)];
+      const obj7 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: tmp10Result };
+      tmp10Result = null != sendAuthorize;
+      const SafeAreaPaddingView = callbackCode(platformType[15]).SafeAreaPaddingView;
+      if (tmp10Result) {
+        const obj8 = { style: twoWayLinkStyles.footerButton, children: closure_9(Button, obj9) };
+        obj9 = {
+          size: "lg",
+          variant: "primary",
+          text: intl.string(callbackCode(tmp3[14]).t.ZN4hkc),
+          onPress: callback1,
+          loading: first,
+        };
+        Button = tmp2(tmp3[13]).Button;
+        intl = tmp2(tmp3[14]).intl;
+        tmp10Result = closure_9(tmp11, obj8);
       }
-      obj7.children = tmp9Result;
-      items4[1] = closure_9(require("common/SafeAreaView").SafeAreaPaddingView, obj7);
-      obj4.children = items4;
-      obj3.children = closure_8(closure_7, obj4);
-      obj2.children = closure_9(callbackState(platformType[16]), obj3);
+      items4[1] = closure_9(SafeAreaPaddingView, obj7);
       return closure_9(sendAuthorize, obj2);
     };
+const result = size.fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx",
+);
+
+export const TwoWayLinkDiscordConsent = tmp5;

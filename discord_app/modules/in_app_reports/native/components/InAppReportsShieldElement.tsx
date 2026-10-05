@@ -1,44 +1,50 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsShieldElement.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import ShieldSpotIllustration from "../../../../design/components/mana-assets/native/generated/ShieldSpotIllustration.native.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+let element;
+
+const View = react_native.View;
+const jsx = Fragment.jsx;
 let closure_4 = createStyles.createStyles({ container: { flex: 0, alignSelf: "center", marginBottom: 16 } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (element) => {
-      const cResult = c.c(3);
+      const obj = react2;
+      const cResult = obj.c(3);
       element = element.element;
-      let container = closure_4();
-      let tmp4 = null;
+      const tmp4 = closure_4();
+      let tmp5 = null;
       if (null != element) {
-        tmp4 = null;
+        tmp5 = null;
         if ("success" === element.type) {
+          let first;
+          let tmp9;
           const _Symbol = Symbol;
           if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp7 = jsx(ShieldSpotIllustration.ShieldSpotIllustration, { width: 100, height: 100 });
-            cResult[0] = tmp7;
-            let first = tmp7;
+            const tmp8 = jsx(ShieldSpotIllustration.ShieldSpotIllustration, { width: 100, height: 100 });
+            cResult[0] = tmp8;
+            first = tmp8;
           } else {
             first = cResult[0];
           }
-          if (cResult[1] !== container.container) {
-            const obj2 = { style: container.container, children: first };
-            const tmp11 = <View style={container.container}>{first}</View>;
-            container = container.container;
-            cResult[1] = container;
-            cResult[2] = tmp11;
+          if (cResult[1] !== tmp4.container) {
+            const tmp12 = <View style={tmp4.container}>{first}</View>;
+            cResult[1] = tmp4.container;
+            cResult[2] = tmp12;
+            tmp9 = tmp12;
+          } else {
+            tmp9 = cResult[2];
           }
+          tmp5 = tmp9;
         }
       }
-      return tmp4;
+      return tmp5;
     }
   : (element) => {
       element = element.element;
@@ -46,10 +52,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != element) {
         tmp2 = null;
         if ("success" === element.type) {
-          const obj = {
-            style: tmp.container,
-            children: jsx(ShieldSpotIllustration.ShieldSpotIllustration, { width: 100, height: 100 }),
-          };
           tmp2 = (
             <View style={tmp.container}>
               {jsx(ShieldSpotIllustration.ShieldSpotIllustration, { width: 100, height: 100 })}
@@ -59,3 +61,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp2;
     };
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");
+
+export default tmp3;

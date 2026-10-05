@@ -1,14 +1,12 @@
 // discord_app/modules/samsung/native/SamsungManager.android.tsx
-import _mod17 from "../../../../_runtime/metro/00017__.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const NativeModules = _mod17.NativeModules;
-const result = size.fileFinishedImporting("modules/samsung/native/SamsungManager.android.tsx");
-
-export default {
-  checkIfOAuthRequest(arg0) {
+const NativeModules = react_native.NativeModules;
+const obj = {
+  checkIfOAuthRequest(clientId) {
     const Samsung = NativeModules.Samsung;
-    return Samsung.checkIfOAuthRequest(arg0);
+    return Samsung.checkIfOAuthRequest(clientId);
   },
   showConnectionDisclaimer() {
     const Samsung = NativeModules.Samsung;
@@ -18,8 +16,11 @@ export default {
     const Samsung = NativeModules.Samsung;
     return Samsung.getAccountUrlAndAuthCode();
   },
-  finishSamsungAuthorization(arg0, arg1, text1) {
+  finishSamsungAuthorization(arg0, arg1, state) {
     const Samsung = NativeModules.Samsung;
-    return Samsung.finishSamsungAuthorization(arg0, arg1, text1);
+    return Samsung.finishSamsungAuthorization(arg0, arg1, state);
   },
 };
+const result = size.fileFinishedImporting("modules/samsung/native/SamsungManager.android.tsx");
+
+export default obj;

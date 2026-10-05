@@ -1,5 +1,5 @@
 // discord_app/modules/forums/FormError.tsx
-import util from "../../intl/index.native.tsx";
+import intl2 from "../../intl/index.native.tsx";
 import AutomodErrorUtils from "../guild_automod/AutomodErrorUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -17,57 +17,61 @@ const result = size.fileFinishedImporting("modules/forums/FormError.tsx");
 
 export { FormSubmitErrorType };
 export const makeEmptyTitleError = function makeEmptyTitleError() {
-  const intl = util.intl;
-  let stringResult = intl.string(util.t["71wuR0"]);
-  obj = { type: obj.EmptyContent, message: null };
+  let obj;
+  const intl = intl2.intl;
+  let stringResult = intl.string(intl2.t["71wuR0"]);
+  obj = { type: obj.EmptyContent, message: stringResult };
   if (stringResult == null) {
     stringResult = null;
   }
-  obj.message = stringResult;
   return obj;
 };
 export const makeEmptyMessageError = function makeEmptyMessageError() {
-  const intl = util.intl;
-  let stringResult = intl.string(util.t["w/BT3G"]);
-  obj = { type: obj.EmptyContent, message: null };
+  let obj;
+  const intl = intl2.intl;
+  let stringResult = intl.string(intl2.t["w/BT3G"]);
+  obj = { type: obj.EmptyContent, message: stringResult };
   if (stringResult == null) {
     stringResult = null;
   }
-  obj.message = stringResult;
   return obj;
 };
 export const makeAutomodViolationError = function makeAutomodViolationError(errorResponseBody, id) {
-  const obj = AutomodErrorUtils;
+  let obj;
+  const AutomodViolation = obj.AutomodViolation;
   id = undefined;
+  const getAutomodErrorMessageFromErrorResponse = AutomodErrorUtils.getAutomodErrorMessageFromErrorResponse;
+  AutomodErrorUtils;
   if (id != null) {
     id = id.id;
   }
-  let automodErrorMessageFromErrorResponse = obj.getAutomodErrorMessageFromErrorResponse(errorResponseBody, id);
-  const obj2 = { type: obj.AutomodViolation, message: null };
+  let automodErrorMessageFromErrorResponse = getAutomodErrorMessageFromErrorResponse(errorResponseBody, id);
+  obj = { type: AutomodViolation, message: automodErrorMessageFromErrorResponse };
   if (automodErrorMessageFromErrorResponse == null) {
     automodErrorMessageFromErrorResponse = null;
   }
-  obj2.message = automodErrorMessageFromErrorResponse;
-  return obj2;
+  return obj;
 };
 export const makeApiNameValidationError = function makeApiNameValidationError() {
-  const intl = util.intl;
-  let stringResult = intl.string(util.t["71wuR0"]);
-  obj = { type: obj.ApiValidation, message: null };
+  let obj;
+  const ApiValidation = obj.ApiValidation;
+  const intl = intl2.intl;
+  let stringResult = intl.string(intl2.t["71wuR0"]);
+  obj = { type: ApiValidation, message: stringResult };
   if (stringResult == null) {
     stringResult = null;
   }
-  obj.message = stringResult;
   return obj;
 };
 export const makeEmptyTagsError = function makeEmptyTagsError() {
-  const intl = util.intl;
-  let stringResult = intl.string(util.t.xPfNQi);
-  obj = { type: obj.EmptyTags, message: null };
+  let obj;
+  const EmptyTags = obj.EmptyTags;
+  const intl = intl2.intl;
+  let stringResult = intl.string(intl2.t.xPfNQi);
+  obj = { type: EmptyTags, message: stringResult };
   if (stringResult == null) {
     stringResult = null;
   }
-  obj.message = stringResult;
   return obj;
 };
 export const renderError = function renderError(type, content) {

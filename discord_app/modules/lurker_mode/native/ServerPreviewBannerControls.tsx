@@ -1,21 +1,27 @@
 // discord_app/modules/lurker_mode/native/ServerPreviewBannerControls.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
-import _modDef6015 from "../../../../_runtime/metro/06015__.js";
+import Constants from "../../../Constants.tsx";
+import intl2 from "../../../intl/index.native.tsx";
+import AssetRegistryDefault from "../../../../_runtime/06015_AssetRegistry.js";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
-import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
+import IconButton2 from "../../../design/components/Button/native/IconButton.native.tsx";
 import ServerPreviewPillDefault from "ServerPreviewPill.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const MOBILE_GUILD_UPSELL_LIST = fn(1085).MOBILE_GUILD_UPSELL_LIST;
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { row: null };
-const rect = {
+let metroImportDefault;
+let metroRequire;
+let rect;
+const View = react_native.View;
+const MOBILE_GUILD_UPSELL_LIST = Constants.MOBILE_GUILD_UPSELL_LIST;
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let obj = { row: rect };
+rect = {
   position: "absolute",
   top: nativeDefault.space.PX_16,
   left: nativeDefault.space.PX_16,
@@ -23,22 +29,25 @@ const rect = {
   alignItems: "center",
   gap: nativeDefault.space.PX_8,
 };
-obj2.row = rect;
-let closure_8 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/lurker_mode/native/ServerPreviewBannerControls.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_8 = createStyles.createStyles(obj);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(5);
+      let first;
+      let intl;
+      let items;
+      let tmp12;
+      let tmp6;
+      let tmp7;
+      let obj = react2;
+      const cResult = obj.c(5);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t() {
-          transitionToGuild.transitionToGuild(MOBILE_GUILD_UPSELL_LIST);
+          const obj = transitionToGuild;
+          obj.transitionToGuild(MOBILE_GUILD_UPSELL_LIST);
         };
         cResult[0] = fn;
-        let first = fn;
+        first = fn;
       } else {
         first = cResult[0];
       }
@@ -46,52 +55,57 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {
           size: "md",
           variant: "secondary-overlay",
-          icon: _modDef6015,
+          icon: AssetRegistryDefault,
           onPress: first,
-          accessibilityLabel: null,
+          accessibilityLabel: intl.string(intl2.t["13/7kX"]),
           maxFontSizeMultiplier: 1.5,
         };
-        const intl = util.intl;
-        obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
-        const tmp10 = timestampProducer(IconButton.IconButton, obj2);
-        const tmp11 = timestampProducer(ServerPreviewPillDefault, {});
+        const IconButton = IconButton2.IconButton;
+        intl = intl2.intl;
+        const tmp10 = metroRequire(IconButton, obj2);
+        const tmp11 = metroRequire(ServerPreviewPillDefault, {});
         cResult[1] = tmp10;
         cResult[2] = tmp11;
-        let tmp7 = tmp11;
-        let tmp6 = tmp10;
+        tmp7 = tmp11;
+        tmp6 = tmp10;
       } else {
         tmp6 = cResult[1];
         tmp7 = cResult[2];
       }
       if (cResult[3] !== tmp4.row) {
-        const obj3 = { style: tmp4.row, children: null };
-        const items = [tmp6, tmp7];
-        obj3.children = items;
-        const tmp15 = React5(View, obj3);
+        const obj3 = { style: tmp4.row, children: items };
+        items = [tmp6, tmp7];
+        const tmp15 = metroImportDefault(View, obj3);
         cResult[3] = tmp4.row;
         cResult[4] = tmp15;
-        let tmp12 = tmp15;
+        tmp12 = tmp15;
       } else {
         tmp12 = cResult[4];
       }
       return tmp12;
     }
   : () => {
-      const obj = { style: closure_8().row, children: null };
-      const callback = noop.useCallback(() => {
-        transitionToGuild.transitionToGuild(MOBILE_GUILD_UPSELL_LIST);
+      let intl;
+      let items;
+      let obj = { style: closure_8().row, children: items };
+      closure_8();
+      const callback = react.useCallback(() => {
+        const obj = transitionToGuild;
+        obj.transitionToGuild(MOBILE_GUILD_UPSELL_LIST);
       }, []);
       const obj2 = {
         size: "md",
         variant: "secondary-overlay",
-        icon: _modDef6015,
+        icon: AssetRegistryDefault,
         onPress: callback,
-        accessibilityLabel: null,
+        accessibilityLabel: intl.string(intl2.t["13/7kX"]),
         maxFontSizeMultiplier: 1.5,
       };
-      const intl = util.intl;
-      obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
-      const items = [timestampProducer(IconButton.IconButton, obj2), timestampProducer(ServerPreviewPillDefault, {})];
-      obj.children = items;
-      return React5(View, obj);
+      const IconButton = IconButton2.IconButton;
+      intl = intl2.intl;
+      items = [metroRequire(IconButton, obj2), metroRequire(ServerPreviewPillDefault, {})];
+      return metroImportDefault(View, obj);
     };
+const result = size.fileFinishedImporting("modules/lurker_mode/native/ServerPreviewBannerControls.tsx");
+
+export default tmp3;

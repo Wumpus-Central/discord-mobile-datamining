@@ -1,60 +1,86 @@
 // discord_app/modules/video_calls/native/components/VideoRenderer.tsx
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useWindowDimensions from "../../../screen/useWindowDimensions.native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let dependencyMap, ref;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, StyleSheet: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4890);
-createStyles.createStyles({
+let c9;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let react = react_mod;
+({ View: hasOwnProperty, StyleSheet: metroRequire, ScrollView: metroImportDefault } = react_native);
+({ jsx: metroImportAll, jsxs: c9 } = Fragment);
+let ref2 = createStyles.createStyles({
   spinner: { height: 32, width: 32 },
   center: { alignItems: "center", justifyContent: "center" },
   zoomLayoutAndroid: { flex: 1 },
 });
 const ResizeMode = { COVER: 0, [0]: "COVER", CONTAIN: 1, [1]: "CONTAIN", AUTO: 2, [2]: "AUTO" };
-const ReactCompilerGating = fn(558);
-let size = fn(2);
-let result = size.fileFinishedImporting("modules/video_calls/native/components/VideoRenderer.tsx");
-
-export default noop.memo(
+let memo = react.memo;
+const memoResult = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        let obj = require("c");
+        let COVER;
+        let closure_3;
+        let closure_5;
+        let closure_6;
+        let first;
+        let first1;
+        let first2;
+        let gestureEnabled;
+        let paused;
+        let renderTag;
+        let require;
+        let resizeMode;
+        let streamId;
+        let streamKey;
+        let tmp10;
+        let tmp12;
+        let tmp18;
+        let userId;
+        let videoSpinnerContext;
+        let obj = require("react");
         const cResult = obj.c(116);
         ({ streamId, resizeMode, gestureEnabled, renderTag, videoSpinnerContext, userId, streamKey, paused } = arg0);
         if (undefined === resizeMode) {
           resizeMode = obj.CONTAIN;
         }
-        ref2();
+        let tmp5 = undefined !== paused && paused;
+        let tmp6 = ref2();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { location: "VideoRenderer" };
           cResult[0] = obj2;
-          let first = obj2;
+          first = obj2;
         } else {
           first = cResult[0];
         }
-        const surfaceDirectRendererExperiment =
-          require("SurfaceDirectRendererExperiment").useSurfaceDirectRendererExperiment(userId, first);
         const tmpResult = require("SurfaceDirectRendererExperiment");
+        const surfaceDirectRendererExperiment = tmpResult.useSurfaceDirectRendererExperiment(userId, first);
         [tmp10, require] = first2.useState(0);
-        const tmp9 = _slicedToArray(first2.useState(0), 2);
+        _slicedToArray(first2.useState(0), 2);
         [tmp12, importDefault] = first2.useState(0);
+        _slicedToArray(first2.useState(0), 2);
         [first1, _slicedToArray] = first2.useState(0);
         [first2, closure_5] = first2.useState(0);
-        const tmp11 = _slicedToArray(first2.useState(0), 2);
         [tmp18, closure_6] = first2.useState(true);
+        _slicedToArray(first2.useState(true), 2);
         if (cResult[1] === tmp18) {
           if (cResult[2] === tmp5) {
             if (cResult[3] === streamId) {
               if (cResult[4] === userId) {
+                let tmp19;
                 if (cResult[5] === videoSpinnerContext) {
-                  let tmp19 = cResult[6];
+                  tmp19 = cResult[6];
                 }
                 require("useVideoSpinnerTimer")(tmp19);
                 if (cResult[7] === tmp18) {
@@ -62,25 +88,33 @@ export default noop.memo(
                     if (cResult[9] === streamId) {
                       if (cResult[10] === streamKey) {
                         if (cResult[11] === userId) {
+                          let tmp22;
+                          let tmp26;
+                          let tmp34;
+                          let tmp36;
                           if (cResult[12] === videoSpinnerContext) {
-                            let tmp22 = cResult[13];
+                            tmp22 = cResult[13];
                           }
                           const onReady = require("useVideoReadyTimeout")(tmp22).onReady;
-                          obj4.useRef(null);
-                          obj4.useRef(null);
+                          ref = obj4.useRef(null);
+                          const ref1 = obj4.useRef(null);
                           const _Symbol = Symbol;
                           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-                            let size = { width: 0, height: 0 };
+                            size = { width: 0, height: 0 };
                             cResult[14] = size;
-                            let tmp26 = size;
+                            tmp26 = size;
                           } else {
                             tmp26 = cResult[14];
                           }
                           const _Symbol2 = Symbol;
+                          ref2 = first2.useRef(tmp26);
                           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
                             function ie(nativeEvent) {
+                              let height;
+                              let width;
                               ({ width, height } = nativeEvent.nativeEvent);
-                              const size = useWindowDimensions.getWindowDimensions();
+                              const obj = useWindowDimensions;
+                              size = obj.getWindowDimensions();
                               const bound = Math.min(Math.sqrt((size.width * size.height * 4) / (width * height)), 1);
                               closure_3(width * bound);
                               closure_5(height * bound);
@@ -89,7 +123,7 @@ export default noop.memo(
                           }
                           if (cResult[16] !== onReady) {
                             function le() {
-                              closure_1_6(false);
+                              closure_6(false);
                               onReady();
                             }
                             cResult[16] = onReady;
@@ -98,10 +132,12 @@ export default noop.memo(
                           const _Symbol3 = Symbol;
                           if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
                             function se(nativeEvent) {
+                              let height;
+                              let width;
                               ({ width, height } = nativeEvent.nativeEvent.layout);
                               _require(width);
                               importDefault(height);
-                              closure_10.current = { width, height };
+                              ref.current = { width, height };
                             }
                             cResult[18] = se;
                           }
@@ -111,14 +147,17 @@ export default noop.memo(
                               const layout = nativeEvent.nativeEvent.layout;
                               const width = layout.width;
                               const height = layout.height;
-                              let isAndroidResult = require("PlatformUtils").isAndroid();
+                              const obj = require("PlatformUtils");
+                              let isAndroidResult = obj.isAndroid();
                               if (!isAndroidResult) {
+                                let tmp3 = null;
                                 isAndroidResult = null == ref.current;
                               }
                               if (!isAndroidResult) {
                                 let current = ref.current;
+                                const tmp5 = width <= 0 || height <= 0;
                                 if (!tmp5) {
-                                  let size = { x: 0, y: 0, width, height, animated: false };
+                                  size = { x: 0, y: 0, width, height, animated: false };
                                   let result = current.scrollResponderZoomTo(size);
                                   current.scrollTo({ x: 0, y: 0, animated: false });
                                 }
@@ -126,20 +165,15 @@ export default noop.memo(
                                 const animationFrame = requestAnimationFrame(() => {
                                   if (null != ref.current) {
                                     const current = ref.current;
-                                    let tmp3 = width <= 0;
+                                    const tmp3 = width <= 0 || height <= 0;
                                     if (!tmp3) {
-                                      tmp3 = height <= 0;
-                                    }
-                                    if (!tmp3) {
-                                      const size = { x: 0, y: 0, width, height, animated: false };
+                                      size = { x: 0, y: 0, width, height, animated: false };
                                       const result = current.scrollResponderZoomTo(size);
                                       current.scrollTo({ x: 0, y: 0, animated: false });
                                     }
                                   }
                                 });
-                                tmp5 = width <= 0 || height <= 0;
                               }
-                              const obj = require("PlatformUtils");
                             }
                             cResult[19] = de;
                           }
@@ -153,22 +187,22 @@ export default noop.memo(
                                 if (0 !== first2) {
                                   let result = tmp10 / tmp12;
                                   const result1 = first1 / first2;
-                                  if (resizeMode !== obj.AUTO) {
-                                    if (resizeMode !== tmp33.CONTAIN) {
-                                      num15 = 0;
-                                      if (resizeMode === tmp33.COVER) {
-                                        num15 = result1 > result ? tmp12 / first2 : tmp10 / first1;
+                                  if (resizeMode === obj.AUTO) {
+                                    if (result <= 1) {
+                                      if (result < 1) {
+                                        resizeMode = COVER;
                                       }
-                                    } else {
-                                      num15 = result > result1 ? tmp12 / first2 : tmp10 / first1;
+                                      COVER = tmp33.CONTAIN;
+                                    }
+                                    COVER = tmp33.COVER;
+                                  }
+                                  if (resizeMode !== obj.CONTAIN) {
+                                    num15 = 0;
+                                    if (resizeMode === obj.COVER) {
+                                      num15 = result1 > result ? tmp12 / first2 : tmp10 / first1;
                                     }
                                   } else {
-                                    if (result <= 1) {
-                                      if (result >= 1) {
-                                        const CONTAIN = tmp33.CONTAIN;
-                                      }
-                                    }
-                                    const COVER = tmp33.COVER;
+                                    num15 = result > result1 ? tmp12 / first2 : tmp10 / first1;
                                   }
                                 }
                               }
@@ -180,19 +214,17 @@ export default noop.memo(
                               return orientation.orientation;
                             }
                             cResult[20] = ve;
-                            let tmp34 = ve;
+                            tmp34 = ve;
                           } else {
                             tmp34 = cResult[20];
                           }
-                          ref2 = obj4.useRef(tmp26);
                           const _Symbol6 = Symbol;
-                          const store = require("DeviceOrientation").useStore(tmp34);
+                          const tmpResult2 = require("DeviceOrientation");
+                          const store = tmpResult2.useStore(tmp34);
                           if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
                             function ge() {
-                              let isAndroidResult = PlatformUtils.isAndroid();
-                              if (isAndroidResult) {
-                                isAndroidResult = null != ref1.current;
-                              }
+                              const obj = PlatformUtils;
+                              const isAndroidResult = obj.isAndroid() && null != ref1.current;
                               if (isAndroidResult) {
                                 const current = ref1.current;
                                 if (current != null) {
@@ -201,7 +233,7 @@ export default noop.memo(
                               }
                             }
                             cResult[21] = ge;
-                            let tmp36 = ge;
+                            tmp36 = ge;
                           } else {
                             tmp36 = cResult[21];
                           }
@@ -209,44 +241,41 @@ export default noop.memo(
                             if (cResult[23] === tmp10) {
                               if (cResult[24] === num15) {
                                 if (cResult[25] === first2) {
+                                  let tmp37;
                                   if (cResult[26] === first1) {
-                                    let tmp37 = cResult[27];
+                                    tmp37 = cResult[27];
                                   }
                                   const layoutEffect = obj4.useLayoutEffect(tmp36, tmp37);
                                   if (cResult[28] === first2) {
+                                    let tmp39;
+                                    let tmp40;
                                     if (cResult[29] === first1) {
-                                      let tmp39 = cResult[30];
-                                      let tmp40 = cResult[31];
+                                      tmp39 = cResult[30];
+                                      tmp40 = cResult[31];
                                     }
                                     const layoutEffect1 = obj4.useLayoutEffect(tmp39, tmp40);
                                     const result2 = first1 * num15;
                                     class Re {
                                       constructor() {
-                                        obj = closure_0(closure_2[11]);
+                                        let height;
+                                        let width;
+                                        const obj = PlatformUtils;
                                         if (!obj.isAndroid()) {
-                                          tmp2 = null;
-                                          if (null != closure_8.current) {
-                                            tmp3 = closure_2;
-                                            num = 0;
-                                            if (closure_2 > 0) {
-                                              tmp4 = closure_4;
-                                              if (closure_4 > 0) {
-                                                tmp5 = closure_10;
-                                                ({ width, height } = closure_10.current);
-                                                current = tmp.current;
-                                                tmp6 = width <= 0 || height <= 0;
+                                          if (null != ref.current) {
+                                            if (first1 > 0) {
+                                              if (first2 > 0) {
+                                                ({ width, height } = ref.current);
+                                                const current = tmp.current;
+                                                const tmp6 = width <= 0 || height <= 0;
                                                 if (!tmp6) {
-                                                  size = { x: 0, y: 0, width: null, height: null, animated: false };
-                                                  size.width = width;
-                                                  size.height = height;
-                                                  result = current.scrollResponderZoomTo(size);
-                                                  scrollToResult = current.scrollTo({ x: 0, y: 0, animated: false });
+                                                  size = { x: 0, y: 0, width, height, animated: false };
+                                                  const result = current.scrollResponderZoomTo(size);
+                                                  current.scrollTo({ x: 0, y: 0, animated: false });
                                                 }
                                               }
                                             }
                                           }
                                         }
-                                        return;
                                       }
                                     }
                                     if (cResult[32] === result2) {
@@ -254,31 +283,25 @@ export default noop.memo(
                                       const result4 = first2 * num15;
                                       class Re {
                                         constructor() {
-                                          obj = closure_0(closure_2[11]);
+                                          let height;
+                                          let width;
+                                          const obj = PlatformUtils;
                                           if (!obj.isAndroid()) {
-                                            tmp2 = null;
-                                            if (null != closure_8.current) {
-                                              tmp3 = closure_2;
-                                              num = 0;
-                                              if (closure_2 > 0) {
-                                                tmp4 = closure_4;
-                                                if (closure_4 > 0) {
-                                                  tmp5 = closure_10;
-                                                  ({ width, height } = closure_10.current);
-                                                  current = tmp.current;
-                                                  tmp6 = width <= 0 || height <= 0;
+                                            if (null != ref.current) {
+                                              if (first1 > 0) {
+                                                if (first2 > 0) {
+                                                  ({ width, height } = ref.current);
+                                                  const current = tmp.current;
+                                                  const tmp6 = width <= 0 || height <= 0;
                                                   if (!tmp6) {
-                                                    size = { x: 0, y: 0, width: null, height: null, animated: false };
-                                                    size.width = width;
-                                                    size.height = height;
-                                                    result = current.scrollResponderZoomTo(size);
-                                                    scrollToResult = current.scrollTo({ x: 0, y: 0, animated: false });
+                                                    size = { x: 0, y: 0, width, height, animated: false };
+                                                    const result = current.scrollResponderZoomTo(size);
+                                                    current.scrollTo({ x: 0, y: 0, animated: false });
                                                   }
                                                 }
                                               }
                                             }
                                           }
-                                          return;
                                         }
                                       }
                                       const size1 = { width: result3, height: result4 };
@@ -293,31 +316,25 @@ export default noop.memo(
                                   }
                                   class Re {
                                     constructor() {
-                                      obj = closure_0(closure_2[11]);
+                                      let height;
+                                      let width;
+                                      const obj = PlatformUtils;
                                       if (!obj.isAndroid()) {
-                                        tmp2 = null;
-                                        if (null != closure_8.current) {
-                                          tmp3 = closure_2;
-                                          num = 0;
-                                          if (closure_2 > 0) {
-                                            tmp4 = closure_4;
-                                            if (closure_4 > 0) {
-                                              tmp5 = closure_10;
-                                              ({ width, height } = closure_10.current);
-                                              current = tmp.current;
-                                              tmp6 = width <= 0 || height <= 0;
+                                        if (null != ref.current) {
+                                          if (first1 > 0) {
+                                            if (first2 > 0) {
+                                              ({ width, height } = ref.current);
+                                              const current = tmp.current;
+                                              const tmp6 = width <= 0 || height <= 0;
                                               if (!tmp6) {
-                                                size = { x: 0, y: 0, width: null, height: null, animated: false };
-                                                size.width = width;
-                                                size.height = height;
-                                                result = current.scrollResponderZoomTo(size);
-                                                scrollToResult = current.scrollTo({ x: 0, y: 0, animated: false });
+                                                size = { x: 0, y: 0, width, height, animated: false };
+                                                const result = current.scrollResponderZoomTo(size);
+                                                current.scrollTo({ x: 0, y: 0, animated: false });
                                               }
                                             }
                                           }
                                         }
                                       }
-                                      return;
                                     }
                                   }
                                   const items = [first1, first2];
@@ -339,7 +356,6 @@ export default noop.memo(
                           cResult[26] = first1;
                           cResult[27] = items1;
                           tmp37 = items1;
-                          const tmpResult2 = require("DeviceOrientation");
                         }
                       }
                     }
@@ -358,26 +374,44 @@ export default noop.memo(
             }
           }
         }
-        const obj5 = {
-          location: "VideoRenderer",
-          videoSpinnerContext,
-          userId,
-          streamId,
-          paused: undefined !== paused && paused,
-          loading: tmp18,
-        };
+        const obj5 = { location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused: tmp5, loading: tmp18 };
         cResult[1] = tmp18;
-        cResult[2] = undefined !== paused && paused;
+        cResult[2] = tmp5;
         cResult[3] = streamId;
         cResult[4] = userId;
         cResult[5] = videoSpinnerContext;
         cResult[6] = obj5;
         tmp19 = obj5;
-        const tmp17 = _slicedToArray(first2.useState(true), 2);
       }
     : (gestureEnabled) => {
+        let _undefined;
+        let c9;
+        let closure_2;
+        let closure_4;
+        let closure_8;
+        let items10;
+        let items11;
+        let items12;
+        let items13;
+        let items14;
+        let items15;
+        let items16;
+        let items17;
+        let obj10;
+        let obj6;
+        let paused;
+        let renderTag;
+        let resizeMode;
+        let streamId;
+        let streamKey;
+        let tmp17;
+        let tmp43Result1;
+        let tmp56;
+        let userId;
+        let videoSpinnerContext;
         ({ streamId, resizeMode } = gestureEnabled);
         if (resizeMode === undefined) {
+          const tmp = ref;
           resizeMode = ref.CONTAIN;
         }
         let flag = gestureEnabled.gestureEnabled;
@@ -389,63 +423,71 @@ export default noop.memo(
           paused = false;
         }
         let first1;
-        noop = undefined;
+        react = undefined;
         c9 = undefined;
         let onReady;
-        const tmp2 = onReady();
-        const surfaceDirectRendererExperiment = resizeMode(9106).useSurfaceDirectRendererExperiment(userId, {
+        let tmp2 = onReady();
+        let tmp3 = resizeMode;
+        let obj = resizeMode(9106);
+        const surfaceDirectRendererExperiment = obj.useSurfaceDirectRendererExperiment(userId, {
           location: "VideoRenderer",
         });
-        let tmp6 = first1(noop.useState(0), 2);
+        let tmp6 = first1(react.useState(0), 2);
         let width = tmp6[0];
         dependencyMap = tmp6[1];
-        const tmp8 = first1(noop.useState(0), 2);
+        const tmp8 = first1(react.useState(0), 2);
         first1 = tmp8[0];
-        noop = tmp8[1];
-        const tmp10 = first1(noop.useState(0), 2);
+        react = tmp8[1];
+        const tmp10 = first1(react.useState(0), 2);
         const first2 = tmp10[0];
-        closure_6 = tmp12;
-        const tmp13 = first1(noop.useState(0), 2);
+        let closure_6 = tmp12;
+        const tmp13 = first1(react.useState(0), 2);
         const first3 = tmp13[0];
-        let obj = resizeMode(9106);
-        [tmp17, c9] = first1(noop.useState(true), 2);
+        [tmp17, c9] = first1(react.useState(true), 2);
+        first1(react.useState(true), 2);
         width(9107)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
         onReady = width(9108)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
-        noop.useRef(null);
-        const ref1 = noop.useRef(null);
-        ref = noop.useRef({ width: 0, height: 0 });
+        react.useRef(null);
+        const ref1 = react.useRef(null);
+        ref = react.useRef({ width: 0, height: 0 });
         const items = [tmp10[1], tmp13[1]];
-        const callback = noop.useCallback((nativeEvent) => {
+        const callback = react.useCallback((nativeEvent) => {
+          let height;
           ({ width, height } = nativeEvent.nativeEvent);
-          const size = useWindowDimensions.getWindowDimensions();
+          const obj = useWindowDimensions;
+          size = obj.getWindowDimensions();
           const bound = Math.min(Math.sqrt((size.width * size.height * 4) / (width * height)), 1);
           closure_6(width * bound);
           closure_8(height * bound);
         }, items);
         const items1 = [onReady];
-        const callback1 = noop.useCallback(() => {
+        const callback1 = react.useCallback(() => {
           _undefined(false);
           onReady();
         }, items1);
-        const callback2 = noop.useCallback((nativeEvent) => {
+        const callback2 = react.useCallback((nativeEvent) => {
+          let height;
           ({ width, height } = nativeEvent.nativeEvent.layout);
-          dependencyMap(width);
+          closure_2(width);
           closure_4(height);
-          closure_13.current = { width, height };
+          ref.current = { width, height };
         }, []);
         const items2 = [width, first1, first2, first3, resizeMode];
-        const callback3 = noop.useCallback((nativeEvent) => {
+        const callback3 = react.useCallback((nativeEvent) => {
           const layout = nativeEvent.nativeEvent.layout;
           width = layout.width;
           const height = layout.height;
-          let isAndroidResult = resizeMode(1369).isAndroid();
+          const obj = resizeMode(closure_2[11]);
+          let isAndroidResult = obj.isAndroid();
           if (!isAndroidResult) {
+            let tmp3 = null;
             isAndroidResult = null == ref.current;
           }
           if (!isAndroidResult) {
             let current = ref.current;
+            const tmp5 = width <= 0 || height <= 0;
             if (!tmp5) {
-              let size = { x: 0, y: 0, width, height, animated: false };
+              size = { x: 0, y: 0, width, height, animated: false };
               let result = current.scrollResponderZoomTo(size);
               current.scrollTo({ x: 0, y: 0, animated: false });
             }
@@ -453,56 +495,56 @@ export default noop.memo(
             const animationFrame = requestAnimationFrame(() => {
               if (null != ref.current) {
                 const current = ref.current;
-                let tmp3 = width <= 0;
+                const tmp3 = width <= 0 || height <= 0;
                 if (!tmp3) {
-                  tmp3 = height <= 0;
-                }
-                if (!tmp3) {
-                  const size = { x: 0, y: 0, width, height, animated: false };
+                  size = { x: 0, y: 0, width, height, animated: false };
                   const result = current.scrollResponderZoomTo(size);
                   current.scrollTo({ x: 0, y: 0, animated: false });
                 }
               }
             });
-            tmp5 = width <= 0 || height <= 0;
           }
-          const obj = resizeMode(1369);
         }, []);
-        const memo = noop.useMemo(() => {
+        const memo = react.useMemo(() => {
+          let COVER;
           if (0 !== first) {
             if (0 !== first1) {
               if (0 !== first2) {
                 if (0 !== first3) {
+                  let num2;
+                  let tmp2 = resizeMode;
                   const result = first / first1;
                   const result1 = first2 / first3;
-                  if (resizeMode !== obj.AUTO) {
-                    if (resizeMode !== obj.CONTAIN) {
-                      if (resizeMode !== obj.COVER) {
-                        return 0;
-                      }
-                    }
-                  } else {
+                  if (resizeMode === obj.AUTO) {
                     if (result <= 1) {
-                      if (result >= 1) {
-                        const CONTAIN = obj.CONTAIN;
+                      if (result < 1) {
+                        tmp2 = COVER;
                       }
+                      COVER = obj.CONTAIN;
                     }
-                    const COVER = obj.COVER;
+                    COVER = obj.COVER;
                   }
+                  if (tmp2 === obj.CONTAIN) {
+                    num2 = result > result1 ? first1 / first3 : first / first2;
+                  } else {
+                    num2 = 0;
+                    if (tmp2 === obj.COVER) {
+                      num2 = result1 > result ? first1 / first3 : first / first2;
+                    }
+                  }
+                  return num2;
                 }
               }
             }
           }
           return 0;
         }, items2);
-        const tmp16 = first1(noop.useState(true), 2);
         const items3 = [width, first1, first2, first3, memo];
-        const store = resizeMode(8008).useStore((orientation) => orientation.orientation);
-        const layoutEffect = noop.useLayoutEffect(() => {
-          let isAndroidResult = PlatformUtils.isAndroid();
-          if (isAndroidResult) {
-            isAndroidResult = null != ref1.current;
-          }
+        const obj2 = resizeMode(8008);
+        const store = obj2.useStore((orientation) => orientation.orientation);
+        const layoutEffect = react.useLayoutEffect(() => {
+          const obj = PlatformUtils;
+          const isAndroidResult = obj.isAndroid() && null != ref1.current;
           if (isAndroidResult) {
             const current = ref1.current;
             if (current != null) {
@@ -511,41 +553,42 @@ export default noop.memo(
           }
         }, items3);
         const items4 = [first2, first3];
-        const layoutEffect1 = noop.useLayoutEffect(() => {
+        const layoutEffect1 = react.useLayoutEffect(() => {
+          let height;
+          const obj = PlatformUtils;
           if (!obj.isAndroid()) {
             if (null != ref.current) {
               if (first2 > 0) {
                 if (first3 > 0) {
                   ({ width, height } = ref.current);
                   const current = tmp.current;
+                  const tmp6 = width <= 0 || height <= 0;
                   if (!tmp6) {
-                    const size = { x: 0, y: 0, width, height, animated: false };
+                    size = { x: 0, y: 0, width, height, animated: false };
                     const result = current.scrollResponderZoomTo(size);
                     current.scrollTo({ x: 0, y: 0, animated: false });
                   }
-                  tmp6 = width <= 0 || height <= 0;
                 }
               }
             }
           }
-          obj = PlatformUtils;
         }, items4);
         const items5 = [memo, first2, first3];
-        const memo1 = noop.useMemo(() => {
-          const size = { width: first2 * memo, height: first3 * memo };
+        const memo1 = react.useMemo(() => {
+          size = { width: first2 * memo, height: first3 * memo };
           return size;
         }, items5);
         const items6 = [memo, first2, first3];
         const items7 = [first2, memo, width, first3, first1];
-        const memo2 = noop.useMemo(() => {
-          const size = { width: first2 * memo, height: first3 * memo };
+        const memo2 = react.useMemo(() => {
+          size = { width: first2 * memo, height: first3 * memo };
           return size;
         }, items6);
         const items8 = [width, first1];
-        const memo3 = noop.useMemo(() => {
+        const memo3 = react.useMemo(() => {
           const bound = Math.min(first2 * memo, first);
           const bound1 = Math.min(first3 * memo, first1);
-          const size = {
+          size = {
             position: "absolute",
             left: (first - bound) / 2,
             top: (first1 - bound1) / 2,
@@ -557,13 +600,13 @@ export default noop.memo(
           };
           return size;
         }, items7);
-        const memo4 = noop.useMemo(() => {
-          const size = { width, height: first1 };
+        const memo4 = react.useMemo(() => {
+          size = { width, height: first1 };
           return size;
         }, items8);
         const items9 = [first2, memo, width, first3, first1];
         let tmp35 = null;
-        const memo5 = noop.useMemo(() => {
+        const memo5 = react.useMemo(() => {
           const bound = Math.min(first3 * memo, first1);
           const rect = {
             position: "absolute",
@@ -576,22 +619,21 @@ export default noop.memo(
           const obj3 = { animate: true, style: tmp2.spinner };
           tmp35 = ref(tmp18(9113), obj3);
         }
-        const tmp37 = store === resizeMode(8008).OrientationType.PORTRAIT;
-        const obj2 = resizeMode(8008);
+        const tmp37 = store === tmp3(8008).OrientationType.PORTRAIT;
+        const tmp3Result = tmp3(1369);
         if (tmp3Result.isAndroid()) {
-          const obj4 = { onLayout: callback2, style: null, children: null };
-          const items10 = [tmp2.center, closure_6.absoluteFillObject];
-          obj4.style = items10;
+          const obj4 = { onLayout: callback2, style: items10, children: items12 };
+          items10 = [tmp2.center, closure_6.absoluteFillObject];
           const obj5 = {
             ref: ref1,
             style: tmp2.zoomLayoutAndroid,
             minimumZoomScale: 1,
             gestureEnabled: flag,
-            children: null,
+            children: c9(first2, obj6),
           };
-          const obj6 = { collapsable: false, style: null, children: null };
-          let size = { width, height: first1, alignItems: "center", justifyContent: "center" };
-          obj6.style = size;
+          obj6 = { collapsable: false, style: size, children: items11 };
+          size = { width, height: first1, alignItems: "center", justifyContent: "center" };
+          items11 = [,];
           const obj7 = {
             useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
             streamId,
@@ -599,12 +641,14 @@ export default noop.memo(
             onReady: callback1,
             style: memo2,
           };
-          const items11 = [ref(tmp18(9114), obj7), tmp35];
-          obj6.children = items11;
-          obj5.children = c9(first2, obj6);
-          const items12 = [ref(tmp18(9116), obj5)];
-          const obj8 = { style: memo5, children: null };
-          let tmp56 = null;
+          const tmp18Result = width(9116);
+          items11[0] = ref(width(9114), obj7);
+          items11[1] = tmp35;
+          items12 = [ref(tmp18Result, obj5)];
+          const obj8 = { style: memo5, children: tmp56 };
+          tmp56 = null;
+          const tmp51 = c9;
+          const tmp54 = ref;
           if (!tmp17) {
             tmp56 = null;
             if (flag) {
@@ -618,11 +662,8 @@ export default noop.memo(
               }
             }
           }
-          obj8.children = tmp56;
-          items12[1] = ref(first2, obj8);
-          obj4.children = items12;
-          let tmp43Result1 = c9(tmp52, obj4);
-          const tmp18Result = tmp18(9116);
+          items12[1] = tmp54(first2, obj8);
+          tmp43Result1 = tmp51(tmp52, obj4);
         } else if (flag) {
           const obj9 = {
             ref,
@@ -636,10 +677,10 @@ export default noop.memo(
             showsVerticalScrollIndicator: false,
             showsHorizontalScrollIndicator: false,
             scrollEventThrottle: 16,
-            children: null,
+            children: c9(first2, obj10),
           };
-          const obj10 = { collapsable: false, style: memo4, onLayout: callback3, children: null };
-          const obj11 = { style: memo3, children: null };
+          obj10 = { collapsable: false, style: memo4, onLayout: callback3, children: items14 };
+          const obj11 = { style: memo3, children: items13 };
           const obj12 = {
             useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
             streamId,
@@ -647,8 +688,10 @@ export default noop.memo(
             onReady: callback1,
             style: memo1,
           };
-          const items13 = [ref(tmp18(9114), obj12)];
+          items13 = [ref(width(9114), obj12)];
           let tmp48 = null;
+          const tmp44 = first3;
+          const tmp45 = closure_6;
           if (tmp37) {
             let renderTagResult1;
             if (renderTag != null) {
@@ -657,25 +700,18 @@ export default noop.memo(
             tmp48 = renderTagResult1;
           }
           items13[1] = tmp48;
-          obj11.children = items13;
-          const items14 = [c9(first2, obj11)];
+          items14 = [c9(first2, obj11)];
           let tmp43Result = null;
           if (null != tmp35) {
-            const obj13 = { style: null, children: null };
-            const items15 = [tmp45.absoluteFillObject, tmp2.center];
-            obj13.style = items15;
-            obj13.children = tmp35;
+            const obj13 = { style: items15, children: tmp35 };
+            items15 = [tmp45.absoluteFillObject, tmp2.center];
             tmp43Result = tmp43(tmp47, obj13);
           }
           items14[1] = tmp43Result;
-          obj10.children = items14;
-          obj9.children = c9(first2, obj10);
-          tmp43Result1 = tmp43(first3, obj9);
-          tmp45 = closure_6;
+          tmp43Result1 = tmp43(tmp44, obj9);
         } else {
-          const obj14 = { onLayout: callback2, style: null, children: null };
-          const items16 = [tmp2.center, closure_6.absoluteFillObject];
-          obj14.style = items16;
+          const obj14 = { onLayout: callback2, style: items16, children: items17 };
+          items16 = [tmp2.center, closure_6.absoluteFillObject];
           const obj15 = {
             useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
             streamId,
@@ -683,11 +719,14 @@ export default noop.memo(
             onReady: callback1,
             style: memo1,
           };
-          const items17 = [ref(tmp18(9114), obj15), tmp35];
-          obj14.children = items17;
+          items17 = [ref(width(9114), obj15), tmp35];
           tmp43Result1 = c9(first2, obj14);
         }
         return tmp43Result1;
       },
 );
+let size = size_mod;
+let result = size.fileFinishedImporting("modules/video_calls/native/components/VideoRenderer.tsx");
+
+export default memoResult;
 export { ResizeMode };

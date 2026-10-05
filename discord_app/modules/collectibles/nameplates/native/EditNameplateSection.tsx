@@ -1,47 +1,57 @@
 // discord_app/modules/collectibles/nameplates/native/EditNameplateSection.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import utils from "../utils.tsx";
+import NameplateRecord from "../../records/NameplateRecord.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import NameplateDefault from "Nameplate.tsx";
 import useCollectibleListLayout from "../../native/useCollectibleListLayout.tsx";
 import CollectiblesEditUserProfileListItems from "../../native/CollectiblesEditUserProfileListItems.tsx";
 import useNameplateSections from "../useNameplateSections.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const isNameplateRecord = fn(1978).isNameplateRecord;
-const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
-let obj = {
-  row: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: fn(13009).GUTTER_SIZE,
-  },
-  rowSpacer: null,
-  nameplate: null,
-};
-let obj3 = {
+let nameplate;
+
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+const View = react_native.View;
+const isNameplateRecord = NameplateRecord.isNameplateRecord;
+({ jsx: metroRequire, Fragment: metroImportDefault, jsxs: metroImportAll } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { row: obj2, rowSpacer: obj3, nameplate: { overflow: "hidden" } };
+obj2 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(13009).GUTTER_SIZE,
+  paddingHorizontal: useCollectibleListLayout.GUTTER_SIZE,
 };
-obj.rowSpacer = { height: fn(13009).GUTTER_SIZE };
-obj.nameplate = { overflow: "hidden" };
-let closure_9 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
-const memoResult = noop.memo(
+createStyles = createStyles.createStyles;
+obj3 = { height: useCollectibleListLayout.GUTTER_SIZE };
+let closure_9 = createStyles(obj);
+let memo = react.memo;
+let ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (setSelectedNameplate) => {
-        const cResult = selectedSkuId(guildId[7]).c(18);
+        let guildId;
+        let items;
+        let items1;
+        let selectedSkuId;
+        let tmp5;
+        let obj = selectedSkuId(guildId[7]);
+        const cResult = obj.c(18);
         ({ items, selectedSkuId } = setSelectedNameplate);
         setSelectedNameplate = setSelectedNameplate.setSelectedNameplate;
+        const tmp2 = guildId;
         guildId = setSelectedNameplate.guildId;
-        let size = setSelectedNameplate.size;
+        size = setSelectedNameplate.size;
         const tmp4 = closure_9();
         if (cResult[0] !== setSelectedNameplate) {
           const fn = function n() {
@@ -49,43 +59,46 @@ const memoResult = noop.memo(
           };
           cResult[0] = setSelectedNameplate;
           cResult[1] = fn;
-          let tmp5 = fn;
+          tmp5 = fn;
         } else {
           tmp5 = cResult[1];
         }
         const onPress = tmp5;
         const isSelected = tmp6;
         if (cResult[2] === guildId) {
-          if (cResult[3] === tmp6) {
+          if ((cResult[3] === null) == selectedSkuId) {
             if (cResult[4] === items) {
               if (cResult[5] === tmp5) {
                 if (cResult[6] === selectedSkuId) {
                   if (cResult[7] === setSelectedNameplate) {
+                    let tmp8;
                     if (cResult[8] === size) {
-                      let tmp8 = cResult[9];
+                      tmp8 = cResult[9];
                     }
                     if (cResult[10] === tmp4.row) {
+                      let tmp10;
+                      let tmp14;
                       if (cResult[11] === tmp8) {
-                        let tmp10 = cResult[12];
+                        tmp10 = cResult[12];
                       }
                       if (cResult[13] !== tmp4.rowSpacer) {
                         let obj2 = { style: tmp4.rowSpacer };
                         const tmp17 = closure_6(onPress, obj2);
                         cResult[13] = tmp4.rowSpacer;
                         cResult[14] = tmp17;
-                        let tmp14 = tmp17;
+                        tmp14 = tmp17;
                       } else {
                         tmp14 = cResult[14];
                       }
                       if (cResult[15] === tmp10) {
+                        let tmp18;
                         if (cResult[16] === tmp14) {
-                          let tmp18 = cResult[17];
+                          tmp18 = cResult[17];
                         }
                         return tmp18;
                       }
-                      let obj3 = { children: null };
-                      const items1 = [tmp10, tmp14];
-                      obj3.children = items1;
+                      let obj3 = { children: items1 };
+                      items1 = [tmp10, tmp14];
                       const tmp21 = closure_8(closure_7, obj3);
                       cResult[15] = tmp10;
                       cResult[16] = tmp14;
@@ -105,24 +118,22 @@ const memoResult = noop.memo(
           }
         }
         const items2 = [...items, null, null];
-        const substr = items2.slice(0, selectedSkuId(guildId[5]).ROW_SIZE);
+        const substr = items2.slice(0, selectedSkuId(tmp2[5]).ROW_SIZE);
         const mapped = substr.map((nameplate, index) => {
           if (nameplate === useNameplateSections.NONE_ITEM) {
             const obj2 = { size, onPress, isSelected, asDefault: null != guildId };
-            return timestampProducer(CollectiblesEditUserProfileListItems.EditCollectiblesListItemNone, obj2, "none");
+            return metroRequire(CollectiblesEditUserProfileListItems.EditCollectiblesListItemNone, obj2, "none");
           } else if (nameplate === useNameplateSections.SHOP_ITEM) {
             const obj3 = { size, analyticsSource: AnalyticsLocationDefault.EDIT_NAMEPLATE_SHEET };
-            return timestampProducer(CollectiblesEditUserProfileListItems.EditCollectiblesListItemShop, obj3, "shop");
+            const EditCollectiblesListItemShop = CollectiblesEditUserProfileListItems.EditCollectiblesListItemShop;
+            return metroRequire(EditCollectiblesListItemShop, obj3, "shop");
           } else if (isNameplateRecord(nameplate)) {
             const obj4 = { nameplate, isSelected: selectedSkuId === nameplate.skuId, setSelectedNameplate, size };
-            return timestampProducer(memoResult1, obj4, nameplate.skuId);
+            return metroRequire(c10, obj4, nameplate.skuId);
           } else {
-            const obj = { style: null };
-            size = { height: null, width: null };
-            size.height = size;
-            size.width = size;
-            obj.style = size;
-            return timestampProducer(View, obj, index);
+            const obj = { style: size };
+            size = { height: size, width: size };
+            return metroRequire(View, obj, index);
           }
         });
         cResult[2] = guildId;
@@ -134,70 +145,84 @@ const memoResult = noop.memo(
         cResult[8] = size;
         cResult[9] = mapped;
         tmp8 = mapped;
-        let obj = selectedSkuId(guildId[7]);
       }
     : (arg0) => {
+        let items;
+        let items3;
+        let setSelectedNameplate;
+        let substr;
         ({ items, selectedSkuId: require, setSelectedNameplate } = arg0);
-        ({ guildId: dependencyMap, size: noop } = arg0);
+        ({ guildId: dependencyMap, size: react } = arg0);
         const tmp = closure_9();
         const items1 = [setSelectedNameplate];
-        const onPress = noop.useCallback(() => {
+        const onPress = react.useCallback(() => {
           setSelectedNameplate(null);
         }, items1);
-        let obj = { children: null };
-        let obj2 = { style: tmp.row, children: null };
+        let obj = { children: items3 };
+        let obj2 = {
+          style: tmp.row,
+          children: substr.map((nameplate, index) => {
+            if (nameplate === useNameplateSections.NONE_ITEM) {
+              const obj2 = { size: width, onPress, isSelected: null == require, asDefault: null != dependencyMap };
+              return metroRequire(CollectiblesEditUserProfileListItems.EditCollectiblesListItemNone, obj2, "none");
+            } else if (nameplate === useNameplateSections.SHOP_ITEM) {
+              const obj3 = { size: width, analyticsSource: AnalyticsLocationDefault.EDIT_NAMEPLATE_SHEET };
+              const EditCollectiblesListItemShop = CollectiblesEditUserProfileListItems.EditCollectiblesListItemShop;
+              return metroRequire(EditCollectiblesListItemShop, obj3, "shop");
+            } else if (isNameplateRecord(nameplate)) {
+              const obj4 = { nameplate, isSelected: require === nameplate.skuId, setSelectedNameplate, size: width };
+              return metroRequire(c10, obj4, nameplate.skuId);
+            } else {
+              const obj = { style: size };
+              size = { height: width, width };
+              return metroRequire(View, obj, index);
+            }
+          }),
+        };
         const items2 = [...items, null, null];
-        const substr = items2.slice(0, useCollectibleListLayout.ROW_SIZE);
-        obj2.children = substr.map((nameplate, index) => {
-          if (nameplate === useNameplateSections.NONE_ITEM) {
-            const obj2 = { size: width, onPress, isSelected: null == closure_1_0, asDefault: null != dependencyMap };
-            return timestampProducer(CollectiblesEditUserProfileListItems.EditCollectiblesListItemNone, obj2, "none");
-          } else if (nameplate === useNameplateSections.SHOP_ITEM) {
-            const obj3 = { size: width, analyticsSource: AnalyticsLocationDefault.EDIT_NAMEPLATE_SHEET };
-            return timestampProducer(CollectiblesEditUserProfileListItems.EditCollectiblesListItemShop, obj3, "shop");
-          } else if (isNameplateRecord(nameplate)) {
-            const obj4 = { nameplate, isSelected: closure_1_0 === nameplate.skuId, setSelectedNameplate, size: width };
-            return timestampProducer(memoResult1, obj4, nameplate.skuId);
-          } else {
-            const obj = { style: null };
-            const size = { height: width, width };
-            obj.style = size;
-            return timestampProducer(View, obj, index);
-          }
-        });
-        const items3 = [closure_6(onPress, obj2), closure_6(onPress, { style: tmp.rowSpacer })];
-        obj.children = items3;
+        substr = items2.slice(0, useCollectibleListLayout.ROW_SIZE);
+        items3 = [closure_6(onPress, obj2)];
+        let obj3 = { style: tmp.rowSpacer };
+        items3[1] = closure_6(onPress, obj3);
         return closure_8(closure_7, obj);
       },
 );
 memoResult.displayName = "EditNameplateRow";
-ReactCompilerGating = fn(558);
-const memoResult1 = noop.memo(
+const memo2 = react.memo;
+ReactCompilerGating = ReactCompilerGating_mod;
+const memo2Result = memo2(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (nameplate) => {
-        const cResult = c.c(18);
+        let isSelected;
+        let setSelectedNameplate;
+        let tmp5;
+        const obj = react2;
+        const cResult = obj.c(18);
         nameplate = nameplate.nameplate;
         ({ isSelected, setSelectedNameplate } = nameplate);
-        const size = nameplate.size;
+        size = nameplate.size;
         const tmp4 = closure_9();
         if (cResult[0] !== nameplate) {
-          const nameplateData = utils.getNameplateData(nameplate);
+          const tmpResult = utils;
+          const nameplateData = tmpResult.getNameplateData(nameplate);
           cResult[0] = nameplate;
           cResult[1] = nameplateData;
-          let tmp5 = nameplateData;
-          const tmpResult = utils;
+          tmp5 = nameplateData;
         } else {
           tmp5 = cResult[1];
         }
         if (cResult[2] === nameplate) {
+          let tmp7;
+          let tmp9;
+          let tmp10;
           if (cResult[3] === setSelectedNameplate) {
-            let tmp7 = cResult[4];
+            tmp7 = cResult[4];
           }
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
             const obj2 = { borderRadius: 6 };
             cResult[5] = obj2;
-            let tmp9 = obj2;
+            tmp9 = obj2;
           } else {
             tmp9 = cResult[5];
           }
@@ -205,21 +230,23 @@ const memoResult1 = noop.memo(
             const items = [tmp4.nameplate, tmp9];
             cResult[6] = tmp4.nameplate;
             cResult[7] = items;
-            let tmp10 = items;
+            tmp10 = items;
           } else {
             tmp10 = cResult[7];
           }
           if (cResult[8] === tmp5) {
+            let tmp11;
             if (cResult[9] === tmp10) {
-              let tmp11 = cResult[10];
+              tmp11 = cResult[10];
             }
             if (cResult[11] === isSelected) {
               if (cResult[12] === nameplate.label) {
                 if (cResult[13] === nameplate.skuId) {
                   if (cResult[14] === tmp7) {
                     if (cResult[15] === size) {
+                      let tmp15;
                       if (cResult[16] === tmp11) {
-                        let tmp15 = cResult[17];
+                        tmp15 = cResult[17];
                       }
                       return tmp15;
                     }
@@ -235,7 +262,7 @@ const memoResult1 = noop.memo(
               accessibilityLabel: nameplate.label,
               children: tmp11,
             };
-            const tmp17 = timestampProducer(CollectiblesEditUserProfileListItems.EditCollectiblesListItemProduct, obj3);
+            const tmp17 = metroRequire(CollectiblesEditUserProfileListItems.EditCollectiblesListItemProduct, obj3);
             cResult[11] = isSelected;
             cResult[12] = nameplate.label;
             cResult[13] = nameplate.skuId;
@@ -252,7 +279,7 @@ const memoResult1 = noop.memo(
             tmp15 = tmp17;
           }
           const obj4 = { nameplate: tmp5, fullOpacity: true, isSquarePreview: true, style: tmp10 };
-          const tmp14 = timestampProducer(NameplateDefault, obj4);
+          const tmp14 = metroRequire(NameplateDefault, obj4);
           cResult[8] = tmp5;
           class I {
             constructor() {
@@ -275,32 +302,39 @@ const memoResult1 = noop.memo(
         tmp7 = I;
       }
     : (nameplate) => {
+        let isSelected;
+        let items2;
+        let obj2;
         nameplate = nameplate.nameplate;
         const setSelectedNameplate = nameplate.setSelectedNameplate;
         ({ isSelected, size } = nameplate);
         const items = [nameplate];
         const items1 = [setSelectedNameplate, nameplate];
-        const memo = noop.useMemo(() => utils.getNameplateData(nameplate), items);
-        const callback = noop.useCallback(() => {
+        const tmp = closure_9();
+        const memo = react.useMemo(() => {
+          const obj = utils;
+          return obj.getNameplateData(nameplate);
+        }, items);
+        const callback = react.useCallback(() => {
           setSelectedNameplate(nameplate);
         }, items1);
-        const obj = {
+        let obj = {
           skuId: nameplate.skuId,
           isSelected,
           onPress: callback,
           size,
           accessibilityLabel: nameplate.label,
-          children: null,
+          children: closure_6(setSelectedNameplate(8474), obj2),
         };
-        const obj2 = { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: null };
-        const items2 = [closure_9().nameplate, { borderRadius: 6 }];
-        obj2.style = items2;
-        obj.children = closure_6(setSelectedNameplate(8474), obj2);
-        return closure_6(nameplate(13010).EditCollectiblesListItemProduct, obj);
+        const EditCollectiblesListItemProduct = nameplate(13010).EditCollectiblesListItemProduct;
+        obj2 = { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: items2 };
+        items2 = [tmp.nameplate, { borderRadius: 6 }];
+        return closure_6(EditCollectiblesListItemProduct, obj);
       },
 );
-memoResult1.displayName = "EditNameplateItem";
-let size = fn(2);
+let c10 = memo2Result;
+memo2Result.displayName = "EditNameplateItem";
+let size = size_mod;
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/native/EditNameplateSection.tsx");
 
 export const EditNameplateRow = memoResult;

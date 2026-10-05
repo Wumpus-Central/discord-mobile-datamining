@@ -1,24 +1,33 @@
 // discord_app/modules/premium/native/gift_code_modal/GiftCodeRedeemError.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl3 from "../../../../intl/index.native.tsx";
 import Link from "../../../../../_runtime/01491_Link.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef11113 from "../../../../../_runtime/metro/11113__.js";
-import _modDef11114 from "../../../../../_runtime/metro/11114__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import AssetRegistryDefault from "../../../../../_runtime/11113_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/11114_AssetRegistry.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
+let message;
+
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+({ Image: c3, View: closure_4, ScrollView: hasOwnProperty } = react_native);
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let obj = {
+  container: obj2,
   body: {
     flex: 1,
     alignItems: "center",
@@ -31,65 +40,78 @@ let obj2 = {
   message: { marginTop: 8, textAlign: "center" },
   footer: { paddingHorizontal: 24 },
 };
-let closure_8 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/premium/native/gift_code_modal/GiftCodeRedeemError.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+obj2 = { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let closure_8 = createStyles.createStyles(obj);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (message) => {
-      const cResult = c.c(21);
+      let body;
+      let container;
+      let items;
+      let items1;
+      let tmp11;
+      let tmp13;
+      let tmp5Result;
+      let tmp7;
+      const obj = react2;
+      const cResult = obj.c(21);
       message = message.message;
       const tmp4 = closure_8();
       ({ container, body } = tmp4);
+      const obj2 = Link;
       if (obj2.useTheme().dark) {
-        let tmp5Result = _modDef11113;
+        tmp5Result = AssetRegistryDefault;
       } else {
-        tmp5Result = _modDef11114;
+        tmp5Result = AssetRegistryDefault2;
       }
       if (cResult[0] !== tmp5Result) {
         const obj3 = { source: tmp5Result };
-        const tmp10 = timestampProducer(React3, obj3);
+        const tmp10 = metroRequire(_false, obj3);
         cResult[0] = tmp5Result;
         cResult[1] = tmp10;
-        let tmp7 = tmp10;
+        tmp7 = tmp10;
       } else {
         tmp7 = cResult[1];
       }
+      const header = tmp4.header;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = util.intl;
-        const result = intl.formatToMarkdownString(util.t.JUvC0s, {});
+        const intl = intl3.intl;
+        const result = intl.formatToMarkdownString(intl3.t.JUvC0s, {});
         cResult[2] = result;
-        let tmp11 = result;
+        tmp11 = result;
       } else {
         tmp11 = cResult[2];
       }
       if (cResult[3] !== tmp4.header) {
-        const obj4 = { variant: "heading-xl/bold", style: tmp4.header, children: tmp11 };
-        const tmp15 = timestampProducer(Text_Text.Text, obj4);
+        const obj4 = { variant: "heading-xl/bold", style: header, children: tmp11 };
+        const tmp15 = metroRequire(Text_Text.Text, obj4);
         cResult[3] = tmp4.header;
         cResult[4] = tmp15;
-        let tmp13 = tmp15;
+        tmp13 = tmp15;
       } else {
         tmp13 = cResult[4];
       }
       if (cResult[5] === message) {
+        let tmp16;
         if (cResult[6] === tmp4.message) {
-          let tmp16 = cResult[7];
+          tmp16 = cResult[7];
         }
         if (cResult[8] === tmp4.body) {
           if (cResult[9] === tmp7) {
             if (cResult[10] === tmp13) {
+              let tmp18;
+              let tmp22;
+              let tmp24;
+              let tmp27;
               if (cResult[11] === tmp16) {
-                let tmp18 = cResult[12];
+                tmp18 = cResult[12];
               }
               const _Symbol = Symbol;
+              const footer = tmp4.footer;
               if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl2 = util.intl;
-                const stringResult = intl2.string(util.t.cpT0Cq);
+                const intl2 = intl3.intl;
+                const stringResult = intl2.string(intl3.t.cpT0Cq);
                 cResult[13] = stringResult;
-                let tmp22 = stringResult;
+                tmp22 = stringResult;
               } else {
                 tmp22 = cResult[13];
               }
@@ -99,36 +121,37 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   text: tmp22,
                   size: "md",
                   onPress() {
-                    return ModalActionCreatorsDefault.pop();
+                    const arr = ModalActionCreatorsDefault;
+                    return arr.pop();
                   },
                 };
-                const tmp26 = timestampProducer(components_Button_Button.Button, obj5);
+                const tmp26 = metroRequire(components_Button_Button.Button, obj5);
                 cResult[14] = tmp26;
-                let tmp24 = tmp26;
+                tmp24 = tmp26;
               } else {
                 tmp24 = cResult[14];
               }
               if (cResult[15] !== tmp4.footer) {
-                const obj6 = { style: tmp4.footer, children: tmp24 };
-                const tmp30 = timestampProducer(React4, obj6);
+                const obj6 = { style: footer, children: tmp24 };
+                const tmp30 = metroRequire(React3, obj6);
                 cResult[15] = tmp4.footer;
                 cResult[16] = tmp30;
-                let tmp27 = tmp30;
+                tmp27 = tmp30;
               } else {
                 tmp27 = cResult[16];
               }
               if (cResult[17] === tmp4.container) {
                 if (cResult[18] === tmp27) {
+                  let tmp31;
                   if (cResult[19] === tmp18) {
-                    let tmp31 = cResult[20];
+                    tmp31 = cResult[20];
                   }
                   return tmp31;
                 }
               }
-              const obj7 = { bottom: true, style: container, children: null };
-              const items = [tmp18, tmp27];
-              obj7.children = items;
-              const tmp33 = React5(common_SafeAreaView.SafeAreaPaddingView, obj7);
+              const obj7 = { bottom: true, style: container, children: items };
+              items = [tmp18, tmp27];
+              const tmp33 = metroImportDefault(common_SafeAreaView.SafeAreaPaddingView, obj7);
               cResult[17] = tmp4.container;
               cResult[18] = tmp27;
               cResult[19] = tmp18;
@@ -137,10 +160,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const obj8 = { contentContainerStyle: body, alwaysBounceVertical: false, children: null };
-        const items1 = [tmp7, tmp13, tmp16];
-        obj8.children = items1;
-        const tmp21 = React5(hasOwnProperty, obj8);
+        const obj8 = { contentContainerStyle: body, alwaysBounceVertical: false, children: items1 };
+        items1 = [tmp7, tmp13, tmp16];
+        const tmp21 = metroImportDefault(hasOwnProperty, obj8);
         cResult[8] = tmp4.body;
         cResult[9] = tmp7;
         cResult[10] = tmp13;
@@ -148,49 +170,59 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[12] = tmp21;
         tmp18 = tmp21;
       }
-      const tmp17 = timestampProducer(Text_Text.Text, {
-        variant: "text-lg/medium",
-        style: tmp4.message,
-        children: message,
-      });
+      const obj9 = { variant: "text-lg/medium", style: tmp4.message, children: message };
+      const tmp17 = metroRequire(Text_Text.Text, obj9);
       cResult[5] = message;
       cResult[6] = tmp4.message;
       cResult[7] = tmp17;
       tmp16 = tmp17;
-      obj2 = Link;
-      const obj9 = { variant: "text-lg/medium", style: tmp4.message, children: message };
     }
-  : (children) => {
+  : (message) => {
+      let Button;
+      let intl;
+      let intl2;
+      let items;
+      let items1;
+      let obj7;
+      let tmp9Result;
+      message = message.message;
       const tmp = closure_8();
-      const theme = Link.useTheme();
-      const obj2 = { bottom: true, style: tmp.container, children: null };
-      const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
+      const obj = Link;
+      const theme = obj.useTheme();
+      const obj2 = { bottom: true, style: tmp.container, children: items1 };
+      const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: items };
+      const SafeAreaPaddingView = common_SafeAreaView.SafeAreaPaddingView;
       if (theme.dark) {
-        let tmp9Result = _modDef11113;
+        tmp9Result = AssetRegistryDefault;
       } else {
-        tmp9Result = _modDef11114;
+        tmp9Result = AssetRegistryDefault2;
       }
-      const items = [timestampProducer(React3, { source: tmp9Result }), ,];
-      const obj4 = { variant: "heading-xl/bold", style: tmp.header, children: null };
-      const intl = util.intl;
-      obj4.children = intl.formatToMarkdownString(util.t.JUvC0s, {});
-      items[1] = timestampProducer(Text_Text.Text, obj4);
-      items[2] = timestampProducer(Text_Text.Text, {
-        variant: "text-lg/medium",
-        style: tmp.message,
-        children: children.message,
-      });
-      obj3.children = items;
-      const items1 = [React5(hasOwnProperty, obj3)];
-      const obj6 = { style: tmp.footer, children: null };
-      const obj7 = { text: null, size: "md", onPress: null };
-      const intl2 = util.intl;
-      obj7.text = intl2.string(util.t.cpT0Cq);
-      obj7.onPress = function onPress() {
-        return ModalActionCreatorsDefault.pop();
+      items = [metroRequire(_false, { source: tmp9Result }), ,];
+      const obj4 = {
+        variant: "heading-xl/bold",
+        style: tmp.header,
+        children: intl.formatToMarkdownString(intl3.t.JUvC0s, {}),
       };
-      obj6.children = timestampProducer(components_Button_Button.Button, obj7);
-      items1[1] = timestampProducer(React4, obj6);
-      obj2.children = items1;
-      return React5(common_SafeAreaView.SafeAreaPaddingView, obj2);
+      const Text = Text_Text.Text;
+      intl = intl3.intl;
+      items[1] = metroRequire(Text, obj4);
+      const obj5 = { variant: "text-lg/medium", style: tmp.message, children: message };
+      items[2] = metroRequire(Text_Text.Text, obj5);
+      items1 = [metroImportDefault(hasOwnProperty, obj3)];
+      const obj6 = { style: tmp.footer, children: metroRequire(Button, obj7) };
+      obj7 = {
+        text: intl2.string(intl3.t.cpT0Cq),
+        size: "md",
+        onPress() {
+          const arr = ModalActionCreatorsDefault;
+          return arr.pop();
+        },
+      };
+      Button = components_Button_Button.Button;
+      intl2 = intl3.intl;
+      items1[1] = metroRequire(React3, obj6);
+      return metroImportDefault(SafeAreaPaddingView, obj2);
     };
+let result = size.fileFinishedImporting("modules/premium/native/gift_code_modal/GiftCodeRedeemError.tsx");
+
+export default tmp5;

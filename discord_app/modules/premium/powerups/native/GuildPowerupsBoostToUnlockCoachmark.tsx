@@ -1,21 +1,22 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsBoostToUnlockCoachmark.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import GuildPowerupsNotification from "../constants/GuildPowerupsNotification.tsx";
 import useGuildPowerupsCoachmarkDefault from "hooks/useGuildPowerupsCoachmark.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostToUnlockCoachmark.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(3);
+      let markAsDismissed;
+      let powerup;
+      const obj = react2;
+      const cResult = obj.c(3);
       ({ powerup, markAsDismissed } = arg0);
       if (cResult[0] === markAsDismissed) {
+        let tmp6;
         if (cResult[1] === powerup) {
-          let tmp6 = cResult[2];
+          tmp6 = cResult[2];
         }
         useGuildPowerupsCoachmarkDefault(tmp5, tmp4, tmp6);
         return null;
@@ -31,18 +32,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = obj2;
     }
   : (powerup) => {
+      let guildId;
+      let targetRef;
       powerup = powerup.powerup;
       const markAsDismissed = powerup.markAsDismissed;
       const items = [powerup, markAsDismissed];
       ({ guildId, targetRef } = powerup);
-      const memo = noop.useMemo(
-        () => ({
+      const memo = react.useMemo(() => {
+        const obj = {
           type: GuildPowerupsNotification.GuildPowerupNotificationPopoutType.BOOST_TO_UNLOCK,
           powerup,
           markAsDismissed,
-        }),
-        items,
-      );
+        };
+        return obj;
+      }, items);
       markAsDismissed(16096)(targetRef, guildId, memo);
       return null;
     };
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostToUnlockCoachmark.tsx");
+
+export default tmp2;

@@ -3,14 +3,13 @@ import 00570__ from "../../../../_runtime/metro/00570__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let c0 = null;
-const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerSubtitleStore.tsx");
-
-export default module_570.create((arg0, arg1) => {
-  closure_0 = arg0;
-  closure_1 = arg1;
+const obj = module_570.create((arg0, arg1) => {
+  let closure_0 = arg0;
+  let closure_1 = arg1;
   return {
     currentType: "voice",
     startTimer() {
+      let interval;
       if (null != interval) {
         const _clearInterval = clearInterval;
         clearInterval(interval);
@@ -33,3 +32,6 @@ export default module_570.create((arg0, arg1) => {
     }
   };
 });
+const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerSubtitleStore.tsx");
+
+export default obj;

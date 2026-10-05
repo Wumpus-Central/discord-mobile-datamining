@@ -1,79 +1,196 @@
 // discord_app/lib/uploader/UploadUtils.tsx
-import js_shim_shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import UploadPlatform from "../../modules/media_uploads/UploadPlatform.tsx";
 import AttachmentFile from "../../utils/AttachmentFile.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("lib/uploader/UploadUtils.tsx");
-class DefaultHttpClient {}
-const prototype = DefaultHttpClient.prototype;
-prototype["sliceBody"] = function sliceBody(body, start) {
-  let substr = body;
-  if (body instanceof File) {
-    substr = body.slice(start);
+class DefaultHttpClient {
+  sliceBody(body, start) {
+    let substr = body;
+    if (body instanceof File) {
+      substr = body.slice(start);
+    }
+    return substr;
   }
-  return substr;
-};
-prototype["doUpload"] = function doUpload(body, fileByteRange) {
-  fileByteRange = undefined;
-  if (fileByteRange != null) {
-    fileByteRange = fileByteRange.fileByteRange;
+  doUpload(body, fileByteRange) {
+    fileByteRange = undefined;
+    if (fileByteRange != null) {
+      fileByteRange = fileByteRange.fileByteRange;
+    }
+    if (null != fileByteRange) {
+      const self = this;
+      body.body = this.sliceBody(body.body, fileByteRange.fileByteRange.start);
+    }
+    const HTTP = HTTPUtils.HTTP;
+    return HTTP.put(body);
   }
-  if (null != fileByteRange) {
-    const self = this;
-    body.body = this.sliceBody(body.body, fileByteRange.fileByteRange.start);
-  }
-  const HTTP = HTTPUtils.HTTP;
-  return HTTP.put(body);
-};
+}
+let prototype = DefaultHttpClient.prototype;
 class LibdiscoreHttpClient {
   constructor() {
-    obj = closure_0(closure_1[3]);
+    const prototype = new.target.prototype;
+    const obj = shim;
     if (obj.isLibdiscoreInitialized()) {
-      return Object.create(new.target.prototype);
+      return Object.create(prototype);
     } else {
-      tmp = globalThis;
-      _Error = Error;
-      tmp2 = new.target;
-      str = "Libdiscore is not loaded";
-      tmp3 = new.target;
-      error = new Error("Libdiscore is not loaded");
-      tmp5 = error;
+      const _Error = Error;
+      const self = this;
+      const self2 = this;
+      const error = new Error("Libdiscore is not loaded");
       throw error;
     }
   }
-}
-LibdiscoreHttpClient.prototype["doUpload"] = function doUpload(body, arg1) {
-  closure_0 = body;
-  const httpClientAPI = js_shim_shim.getHttpClientAPI();
-  if (null == httpClientAPI) {
-    let _Error2 = Error;
-    let error = new Error("Libdiscore client is not available");
-    throw error;
-  } else {
-    body = body.body;
-    let uri1;
-    if (body != null) {
-      uri1 = body.uri;
-    }
-    if (!tmp3) {
-      // // eliminated: always false
+  doUpload(body, fileByteRange) {
+    let end;
+    let start;
+    let closure_0 = body;
+    const obj = shim;
+    const httpClientAPI = obj.getHttpClientAPI();
+    if (null == httpClientAPI) {
+      let _Error2 = Error;
+      let self5 = this;
+      let self6 = this;
+      let error = new Error("Libdiscore client is not available");
+      throw error;
+    } else {
+      body = body.body;
+      let uri1;
+      if (body != null) {
+        uri1 = body.uri;
+      }
+      let tmp3;
+      const tmp2 = undefined !== uri1 && typeof body.body.uri === "string";
+      if (tmp2) {
+        let substr;
+        const uri = body.body.uri;
+        const uri2 = body.body.uri;
+        if (uri.startsWith("file://")) {
+          substr = uri2.slice(7);
+        } else {
+          substr = uri2;
+        }
+        tmp3 = substr;
+      }
+      if (undefined !== tmp3) {
+        if ("" !== tmp3) {
+          const obj2 = { path: tmp3, byteRangeStart: start, byteRangeEnd: end };
+          start = undefined;
+          if (fileByteRange != null) {
+            fileByteRange = fileByteRange.fileByteRange;
+            if (fileByteRange != null) {
+              start = fileByteRange.start;
+            }
+          }
+          end = undefined;
+          if (fileByteRange != null) {
+            const fileByteRange2 = fileByteRange.fileByteRange;
+            if (fileByteRange2 != null) {
+              end = fileByteRange2.end;
+            }
+          }
+          const request = { method: "PUT", body: obj2, headers: body.headers };
+          let closure_2 = httpClientAPI.httpRequest(body.url, request);
+          let self = this;
+          let self2 = this;
+          const promise = new Promise((arg0, arg1) => {
+            let signal = arg0;
+            let closure_1 = arg1;
+            function pollStatus() {
+              let body;
+              let headers;
+              if (null != httpClientAPI) {
+                signal = signal.signal;
+                let aborted;
+                if (signal != null) {
+                  aborted = signal.aborted;
+                }
+                if (aborted) {
+                  const _Error3 = Error;
+                  const self5 = this;
+                  const self6 = this;
+                  const error = new Error("Request cancelled");
+                  closure_1(error);
+                  httpClientAPI.cancelHttpRequest(closure_2);
+                } else {
+                  const httpRequestStatus = httpClientAPI.getHttpRequestStatus(closure_2);
+                  let status;
+                  if (httpRequestStatus != null) {
+                    status = httpRequestStatus.status;
+                  }
+                  if ("success" === status) {
+                    const response = httpRequestStatus.response;
+                    let status1;
+                    const tmp21 = signal;
+                    if (response != null) {
+                      status1 = response.status;
+                    }
+                    const response1 = { status: status1, headers, text: body };
+                    const response2 = httpRequestStatus.response;
+                    headers = undefined;
+                    if (response2 != null) {
+                      headers = response2.headers;
+                    }
+                    const response3 = httpRequestStatus.response;
+                    body = undefined;
+                    if (response3 != null) {
+                      body = response3.body;
+                    }
+                    tmp21(response1);
+                  } else {
+                    let status2;
+                    if (httpRequestStatus != null) {
+                      status2 = httpRequestStatus.status;
+                    }
+                    if ("error" === status2) {
+                      const _Error2 = Error;
+                      const self3 = this;
+                      const self4 = this;
+                      const error1 = new Error(httpRequestStatus.error);
+                      closure_1(error1);
+                    } else {
+                      let status3;
+                      if (httpRequestStatus != null) {
+                        status3 = httpRequestStatus.status;
+                      }
+                      if ("progressing" === status3) {
+                        if (undefined !== signal.onRequestProgress) {
+                          if (null != httpRequestStatus.uploaded_bytes) {
+                            if (httpRequestStatus.uploaded_bytes > 0) {
+                              const obj3 = { loaded: null, total: null };
+                              ({ uploaded_bytes: obj2.loaded, total_bytes: obj2.total } = httpRequestStatus);
+                              signal.onRequestProgress(obj3);
+                            }
+                          }
+                        }
+                        const _setTimeout = setTimeout;
+                        const timerId = setTimeout(pollStatus, 50);
+                      } else {
+                        const _Error = Error;
+                        const self = this;
+                        const self2 = this;
+                        const error2 = new Error("Unknown upload status");
+                        closure_1(error2);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            pollStatus();
+          });
+          return promise;
+        }
+      }
       let _Error = Error;
+      let self3 = this;
+      let self4 = this;
       let error1 = new Error("No file path found in request body");
       throw error1;
-    } else {
-      const uri = body.body.uri;
-      const uri2 = body.body.uri;
-      if (uri.startsWith("file://")) {
-        let substr = uri2.slice(7);
-      } else {
-        substr = uri2;
-      }
     }
-    tmp3 = undefined !== uri1 && typeof body.body.uri === "string";
   }
-};
+}
 
 export const doesImageMatchUpload = function doesImageMatchUpload(image, id) {
   if (id.id !== image.uri) {
@@ -111,17 +228,14 @@ export const calculateProgress = function calculateProgress(loaded, currentSize)
 };
 export { DefaultHttpClient };
 export const canUploadNatively = function canUploadNatively(platform) {
-  let fileIsInAppDirResult = platform.platform === UploadPlatform.UploadPlatform.REACT_NATIVE;
+  let fileIsInAppDirResult = platform.platform === UploadPlatform.UploadPlatform.REACT_NATIVE && null != platform.uri;
   if (fileIsInAppDirResult) {
-    fileIsInAppDirResult = null != platform.uri;
-  }
-  if (fileIsInAppDirResult) {
-    fileIsInAppDirResult = AttachmentFile.fileIsInAppDir(platform.uri);
     const tmpResult = AttachmentFile;
+    fileIsInAppDirResult = tmpResult.fileIsInAppDir(platform.uri);
   }
   if (fileIsInAppDirResult) {
-    fileIsInAppDirResult = js_shim_shim.isLibdiscoreInitialized();
-    const tmpResult2 = js_shim_shim;
+    const tmpResult2 = shim;
+    fileIsInAppDirResult = tmpResult2.isLibdiscoreInitialized();
   }
   return fileIsInAppDirResult;
 };

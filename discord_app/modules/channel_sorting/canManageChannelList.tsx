@@ -1,17 +1,20 @@
 // discord_app/modules/channel_sorting/canManageChannelList.tsx
+import Constants from "../../Constants.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const Permissions = fn(1085).Permissions;
-const size = fn(2);
+const Permissions = Constants.Permissions;
 const result = size.fileFinishedImporting("modules/channel_sorting/canManageChannelList.tsx");
 
 export default function canManageChannelList(containingCategory, guild) {
   let tmp = containingCategory;
+  const can = PermissionStore.can;
+  const MANAGE_CHANNELS = Permissions.MANAGE_CHANNELS;
   if (containingCategory == null) {
     tmp = guild;
   }
-  return PermissionStore.can(Permissions.MANAGE_CHANNELS, tmp);
+  return can(MANAGE_CHANNELS, tmp);
 }
 export const getContainingCategory = function getContainingCategory(parent_id) {
   if (null == parent_id.parent_id) {
@@ -29,9 +32,6 @@ export const getContainingCategory = function getContainingCategory(parent_id) {
   }
 };
 export const canViewChannelList = function canViewChannelList(channel) {
-  let canResult = null == channel;
-  if (!canResult) {
-    canResult = PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
-  }
+  const canResult = null == channel || PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
   return canResult;
 };

@@ -1,17 +1,19 @@
 // discord_app/modules/parent_tools/hooks/useFormattedEndTime.tsx
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../_runtime/00576_c.js";
-import util from "../../../intl/index.native.tsx";
+import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../../_runtime/00576_react.js";
+import intl from "../../../intl/index.native.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/parent_tools/hooks/useFormattedEndTime.tsx");
+let currentUser;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let tmp4;
+      let tmp5;
+      const obj = react;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         const fn = function o() {
@@ -26,7 +28,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let formatResult = null;
           if (null != nextEndTime) {
             const _Intl = Intl;
-            const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, {
+            const self = this;
+            const self2 = this;
+            const dateTimeFormat = new Intl.DateTimeFormat(intl.intl.currentLocale, {
               hour: "numeric",
               minute: "2-digit",
               weekday: "long",
@@ -42,11 +46,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      return initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStores(tmp4, tmp5);
     }
   : () => {
       const items = [UserStore];
-      return initialize.useStateFromStores(items, () => {
+      const obj = get_initialized;
+      return obj.useStateFromStores(items, function () {
         currentUser = currentUser.getCurrentUser();
         let nextEndTime;
         if (currentUser != null) {
@@ -58,7 +64,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let formatResult = null;
         if (null != nextEndTime) {
           const _Intl = Intl;
-          const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, {
+          const self = this;
+          const self2 = this;
+          const dateTimeFormat = new Intl.DateTimeFormat(intl.intl.currentLocale, {
             hour: "numeric",
             minute: "2-digit",
             weekday: "long",
@@ -68,3 +76,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return formatResult;
       });
     };
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useFormattedEndTime.tsx");
+
+export default tmp2;

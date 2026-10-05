@@ -1,42 +1,51 @@
 // discord_app/modules/conversations/components/native/ConversationListItem.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../../Constants.tsx";
+import ConversationConstants from "../../ConversationConstants.tsx";
 import ConversationsActionCreators from "../../ConversationsActionCreators.tsx";
 import ConversationsAnalytics2 from "../../ConversationsAnalytics.tsx";
 import ConversationNavigatorUtils from "ConversationNavigatorUtils.tsx";
 import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage.tsx";
 import ConversationPreviewMessageDefault from "ConversationPreviewMessage.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import ChannelConversationsStore from "../../ChannelConversationsStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(7105).MOBILE_PREVIEW_MESSAGE_COUNT;
-const VerticalGradient = fn(1085).VerticalGradient;
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let channelId, navigation;
+
+let StyleSheet;
+let c9;
+let closure_4;
+let metroImportAll;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+let obj7;
+({ View: closure_4, StyleSheet } = react_native);
+let closure_6 = ConversationConstants.MOBILE_PREVIEW_MESSAGE_COUNT;
+const VerticalGradient = Constants.VerticalGradient;
+({ jsx: metroImportAll, jsxs: c9 } = Fragment);
 const colors = ["black", "black"];
 const colors2 = ["black", "transparent"];
-const createStyles = fn(4890);
+let createStyles = createStyles_mod;
 let obj = {
-  card: {
-    marginBottom: nativeDefault.space.PX_12,
-    borderWidth: 1,
-    borderColor: nativeDefault.colors.BORDER_MUTED,
-    height: 232,
-    overflow: "hidden",
-    paddingBottom: 0,
-  },
+  card: obj2,
   title: { flexShrink: 1, minWidth: 0 },
   timestamp: { flexShrink: 0 },
-  headerContainer: null,
-  previewsMask: null,
-  previews: null,
-  maskColumn: null,
-  maskOpaque: null,
-  maskFade: null,
+  headerContainer: obj3,
+  previewsMask: obj4,
+  previews: obj5,
+  maskColumn: obj6,
+  maskOpaque: { flex: 1 },
+  maskFade: obj7,
 };
-let obj3 = {
+obj2 = {
   marginBottom: nativeDefault.space.PX_12,
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_MUTED,
@@ -44,51 +53,50 @@ let obj3 = {
   overflow: "hidden",
   paddingBottom: 0,
 };
-obj.headerContainer = {
+createStyles = createStyles.createStyles;
+obj3 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
   gap: nativeDefault.space.PX_8,
   paddingBottom: nativeDefault.space.PX_8,
 };
-let obj4 = {
-  flexDirection: "row",
-  alignItems: "center",
-  justifyContent: "space-between",
-  gap: nativeDefault.space.PX_8,
-  paddingBottom: nativeDefault.space.PX_8,
-};
-obj.previewsMask = { flex: 1, marginTop: nativeDefault.space.PX_8 };
-let obj5 = { flex: 1, marginTop: nativeDefault.space.PX_8 };
-obj.previews = { gap: nativeDefault.space.PX_16 };
+obj4 = { flex: 1, marginTop: nativeDefault.space.PX_8 };
+obj5 = { gap: nativeDefault.space.PX_16 };
+obj6 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.maskColumn = {};
-obj.maskOpaque = { flex: 1 };
-let obj6 = { gap: nativeDefault.space.PX_16 };
-let obj7 = {};
-obj.maskFade = { height: nativeDefault.space.PX_64 };
-let closure_12 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
+obj7 = { height: nativeDefault.space.PX_64 };
+let closure_12 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   ? (conversation) => {
-      const cResult = conversation(576).c(50);
+      let first;
+      let items1;
+      let items2;
+      let items3;
+      let obj = conversation(576);
+      const cResult = obj.c(50);
       conversation = conversation.conversation;
       const tmp4 = closure_12();
-      let obj = conversation(576);
-      const navigation = conversation(1490).useNavigation();
+      let obj2 = conversation(1490);
+      navigation = obj2.useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelConversationsStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === conversation.channelId) {
+        let tmp8;
+        let tmp9;
+        let arr4;
         if (cResult[2] === conversation.id) {
-          let tmp8 = cResult[3];
-          let tmp9 = cResult[4];
+          tmp8 = cResult[3];
+          tmp9 = cResult[4];
         }
-        const stateFromStores = tmp(504).useStateFromStores(first, tmp8, tmp9);
+        const tmpResult = conversation(504);
+        const stateFromStores = tmpResult.useStateFromStores(first, tmp8, tmp9);
         if (cResult[5] !== stateFromStores) {
           let substr;
           if (stateFromStores != null) {
@@ -99,7 +107,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[5] = stateFromStores;
           cResult[6] = substr;
-          let arr4 = substr;
+          arr4 = substr;
         } else {
           arr4 = cResult[6];
         }
@@ -107,148 +115,159 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[8] === conversation.guildId) {
             if (cResult[9] === conversation.id) {
               if (cResult[10] === conversation.title) {
+                let tmp13;
                 if (cResult[11] === navigation) {
-                  let tmp13 = cResult[12];
+                  tmp13 = cResult[12];
                 }
                 if (cResult[13] === conversation.title) {
+                  let tmp17;
+                  let tmp20;
                   if (cResult[14] === tmp4.title) {
-                    let tmp17 = cResult[15];
+                    tmp17 = cResult[15];
                   }
+                  const timestamp = tmp4.timestamp;
                   if (cResult[16] !== conversation.messageCount) {
                     const intl = tmp(1126).intl;
-                    const obj3 = { count: conversation.messageCount };
-                    const formatToPlainStringResult = intl.formatToPlainString(tmp(1126).t.poZZGL, obj3);
+                    let obj3 = { count: conversation.messageCount };
+                    const formatToPlainStringResult = intl.formatToPlainString(conversation(1126).t.poZZGL, obj3);
                     cResult[16] = conversation.messageCount;
                     cResult[17] = formatToPlainStringResult;
-                    let tmp20 = formatToPlainStringResult;
+                    tmp20 = formatToPlainStringResult;
                   } else {
                     tmp20 = cResult[17];
                   }
                   if (cResult[18] === tmp4.timestamp) {
+                    let tmp22;
                     if (cResult[19] === tmp20) {
-                      let tmp22 = cResult[20];
+                      tmp22 = cResult[20];
                     }
                     if (cResult[21] === tmp4.headerContainer) {
                       if (cResult[22] === tmp22) {
+                        let tmp25;
+                        let tmp29;
+                        let tmp34;
                         if (cResult[23] === tmp17) {
-                          let tmp25 = cResult[24];
+                          tmp25 = cResult[24];
                         }
                         if (cResult[25] !== tmp4.maskOpaque) {
                           const obj4 = { colors, style: tmp4.maskOpaque };
                           const tmp33 = closure_8(navigation(5605), obj4);
                           cResult[25] = tmp4.maskOpaque;
                           cResult[26] = tmp33;
-                          let tmp29 = tmp33;
+                          tmp29 = tmp33;
                         } else {
                           tmp29 = cResult[26];
                         }
                         if (cResult[27] !== tmp4.maskFade) {
-                          const obj5 = { colors: colors2, start: null, end: null, style: null };
+                          const obj5 = { colors: colors2, start: null, end: null, style: tmp4.maskFade };
                           ({ START: obj9.start, END: obj9.end } = VerticalGradient);
-                          obj5.style = tmp4.maskFade;
                           const tmp39 = closure_8(navigation(5605), obj5);
                           cResult[27] = tmp4.maskFade;
                           cResult[28] = tmp39;
-                          let tmp34 = tmp39;
+                          tmp34 = tmp39;
                         } else {
                           tmp34 = cResult[28];
                         }
                         if (cResult[29] === tmp4.maskColumn) {
                           if (cResult[30] === tmp29) {
+                            let tmp40;
+                            let mapped;
                             if (cResult[31] === tmp34) {
-                              let tmp40 = cResult[32];
+                              tmp40 = cResult[32];
                             }
                             if (cResult[33] === conversation.channelId) {
                               if (cResult[34] === conversation.guildId) {
+                                let tmp44;
                                 if (cResult[35] === arr4) {
-                                  if (cResult[37] === tmp4.previews) {
-                                    if (cResult[38] === tmp44) {
-                                      let tmp50 = cResult[39];
-                                    }
-                                    if (cResult[40] === tmp4.previewsMask) {
-                                      if (cResult[41] === tmp40) {
-                                        if (cResult[42] === tmp50) {
-                                          let tmp54 = cResult[43];
-                                        }
-                                        if (cResult[44] === conversation.title) {
-                                          if (cResult[45] === tmp13) {
-                                            if (cResult[46] === tmp4.card) {
-                                              if (cResult[47] === tmp25) {
-                                                if (cResult[48] === tmp54) {
-                                                  let tmp58 = cResult[49];
-                                                }
-                                                return tmp58;
+                                  tmp44 = cResult[36];
+                                }
+                                if (cResult[37] === tmp4.previews) {
+                                  let tmp49;
+                                  if (cResult[38] === tmp44) {
+                                    tmp49 = cResult[39];
+                                  }
+                                  if (cResult[40] === tmp4.previewsMask) {
+                                    if (cResult[41] === tmp40) {
+                                      let tmp53;
+                                      if (cResult[42] === tmp49) {
+                                        tmp53 = cResult[43];
+                                      }
+                                      if (cResult[44] === conversation.title) {
+                                        if (cResult[45] === tmp13) {
+                                          if (cResult[46] === tmp4.card) {
+                                            if (cResult[47] === tmp25) {
+                                              let tmp57;
+                                              if (cResult[48] === tmp53) {
+                                                tmp57 = cResult[49];
                                               }
+                                              return tmp57;
                                             }
                                           }
                                         }
-                                        const obj6 = {
-                                          style: tmp14,
-                                          onPress: tmp13,
-                                          accessibilityLabel: tmp15,
-                                          children: null,
-                                        };
-                                        const items1 = [tmp25, tmp54];
-                                        obj6.children = items1;
-                                        const tmp60 = closure_9(tmp(5995).Card, obj6);
-                                        cResult[44] = conversation.title;
-                                        cResult[45] = tmp13;
-                                        cResult[46] = tmp4.card;
-                                        cResult[47] = tmp25;
-                                        cResult[48] = tmp54;
-                                        cResult[49] = tmp60;
-                                        tmp58 = tmp60;
                                       }
+                                      const obj6 = {
+                                        style: tmp14,
+                                        onPress: tmp13,
+                                        accessibilityLabel: tmp15,
+                                        children: items1,
+                                      };
+                                      items1 = [tmp25, tmp53];
+                                      const tmp59 = closure_9(conversation(5995).Card, obj6);
+                                      cResult[44] = conversation.title;
+                                      cResult[45] = tmp13;
+                                      cResult[46] = tmp4.card;
+                                      cResult[47] = tmp25;
+                                      cResult[48] = tmp53;
+                                      cResult[49] = tmp59;
+                                      tmp57 = tmp59;
                                     }
-                                    const obj7 = { style: tmp4.previewsMask, maskElement: tmp40, children: tmp50 };
-                                    const tmp57 = closure_8(navigation(6052), obj7);
-                                    cResult[40] = tmp4.previewsMask;
-                                    cResult[41] = tmp40;
-                                    cResult[42] = tmp50;
-                                    cResult[43] = tmp57;
-                                    tmp54 = tmp57;
                                   }
-                                  const obj8 = { style: tmp4.previews, children: cResult[36] };
-                                  const tmp53 = closure_8(closure_4, obj8);
-                                  cResult[37] = tmp4.previews;
-                                  cResult[38] = cResult[36];
-                                  cResult[39] = tmp53;
-                                  tmp50 = tmp53;
+                                  const obj7 = { style: tmp4.previewsMask, maskElement: tmp40, children: tmp49 };
+                                  const tmp56 = closure_8(navigation(6052), obj7);
+                                  cResult[40] = tmp4.previewsMask;
+                                  cResult[41] = tmp40;
+                                  cResult[42] = tmp49;
+                                  cResult[43] = tmp56;
+                                  tmp53 = tmp56;
                                 }
+                                const obj8 = { style: tmp4.previews, children: tmp44 };
+                                const tmp52 = closure_8(closure_4, obj8);
+                                cResult[37] = tmp4.previews;
+                                cResult[38] = tmp44;
+                                cResult[39] = tmp52;
+                                tmp49 = tmp52;
                               }
                             }
                             if (null == arr4) {
-                              let mapped = closure_8(navigation(7586), {});
+                              mapped = closure_8(navigation(7586), {});
                             } else {
                               mapped = arr4.map((blocked) => {
                                 if (!blocked.blocked) {
+                                  let tmp6Result;
                                   if (!blocked.ignored) {
                                     const obj = { message: blocked, guildId: null, channelId: null };
                                     ({ guildId: obj.guildId, channelId: obj.channelId } = conversation);
-                                    let tmp6Result = closure_2_8(ConversationPreviewMessageDefault, obj, blocked.id);
+                                    tmp6Result = metroImportAll(ConversationPreviewMessageDefault, obj, blocked.id);
                                   }
                                   return tmp6Result;
                                 }
                                 let str = "ignored";
+                                const tmp7 = ConversationPreviewBlockedMessageDefault;
                                 if (blocked.blocked) {
                                   str = "blocked";
                                 }
-                                tmp6Result = closure_2_8(
-                                  ConversationPreviewBlockedMessageDefault,
-                                  { reason: str },
-                                  blocked.id,
-                                );
+                                tmp6Result = metroImportAll(tmp7, { reason: str }, blocked.id);
                               });
                             }
                             cResult[33] = conversation.channelId;
                             cResult[34] = conversation.guildId;
                             cResult[35] = arr4;
                             cResult[36] = mapped;
+                            tmp44 = mapped;
                           }
                         }
-                        const obj10 = { style: tmp4.maskColumn, children: null };
-                        const items2 = [tmp29, tmp34];
-                        obj10.children = items2;
+                        const obj10 = { style: tmp4.maskColumn, children: items2 };
+                        items2 = [tmp29, tmp34];
                         const tmp43 = closure_9(closure_4, obj10);
                         cResult[29] = tmp4.maskColumn;
                         cResult[30] = tmp29;
@@ -257,9 +276,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                         tmp40 = tmp43;
                       }
                     }
-                    const obj11 = { style: tmp16, children: null };
-                    const items3 = [tmp17, tmp22];
-                    obj11.children = items3;
+                    const obj11 = { style: tmp16, children: items3 };
+                    items3 = [tmp17, tmp22];
                     const tmp28 = closure_9(closure_4, obj11);
                     cResult[21] = tmp4.headerContainer;
                     cResult[22] = tmp22;
@@ -271,10 +289,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     variant: "text-sm/medium",
                     color: "text-muted",
                     lineClamp: 1,
-                    style: tmp4.timestamp,
+                    style: timestamp,
                     children: tmp20,
                   };
-                  const tmp24 = closure_8(tmp(4886).Text, obj12);
+                  const tmp24 = closure_8(conversation(4886).Text, obj12);
                   cResult[18] = tmp4.timestamp;
                   cResult[19] = tmp20;
                   cResult[20] = tmp24;
@@ -287,7 +305,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   style: tmp4.title,
                   children: conversation.title,
                 };
-                const tmp19 = closure_8(tmp(4886).Text, obj13);
+                const tmp19 = closure_8(conversation(4886).Text, obj13);
                 cResult[13] = conversation.title;
                 cResult[14] = tmp4.title;
                 cResult[15] = tmp19;
@@ -297,23 +315,21 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const fn2 = function _() {
-          const conversationMessages = ConversationsActionCreators.fetchConversationMessages(
-            conversation.channelId,
-            conversation.id,
-            { includeReactions: true, includeMessageReferences: true },
-          );
-          navigation.navigate(ConversationNavigatorUtils.ConversationNavigatorScreens.FOCUS, {
+          const obj = ConversationsActionCreators;
+          const conversationMessages = obj.fetchConversationMessages(conversation.channelId, conversation.id, {
+            includeReactions: true,
+            includeMessageReferences: true,
+          });
+          const obj2 = {
             channelId: conversation.channelId,
             guildId: conversation.guildId,
             conversationId: conversation.id,
             title: conversation.title,
-          });
+          };
+          navigation.navigate(ConversationNavigatorUtils.ConversationNavigatorScreens.FOCUS, obj2);
           const ConversationsAnalytics = ConversationsAnalytics2.ConversationsAnalytics;
-          const result = ConversationsAnalytics.trackTopicsUnitClicked({
-            channelId: conversation.channelId,
-            conversationId: conversation.id,
-            isFocusMode: false,
-          });
+          const obj3 = { channelId: conversation.channelId, conversationId: conversation.id, isFocusMode: false };
+          const result = ConversationsAnalytics.trackTopicsUnitClicked(obj3);
         };
         cResult[7] = conversation.channelId;
         cResult[8] = conversation.guildId;
@@ -322,7 +338,6 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[11] = navigation;
         cResult[12] = fn2;
         tmp13 = fn2;
-        const tmpResult = tmp(504);
       }
       const fn = function l() {
         return ChannelConversationsStore.getHydratedMessages(conversation.channelId, conversation.id);
@@ -335,25 +350,33 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items4;
       tmp9 = items4;
       tmp8 = fn;
-      const obj2 = conversation(1490);
     }
   : (conversation) => {
+      let intl;
+      let items4;
+      let items5;
+      let items6;
+      let mapped;
+      let obj12;
+      let obj7;
+      let obj9;
       conversation = conversation.conversation;
       let stateFromStores;
       const tmp = closure_12();
-      const navigation = conversation(stateFromStores[10]).useNavigation();
       let obj = conversation(stateFromStores[10]);
-      const tmp2 = stateFromStores;
+      navigation = obj.useNavigation();
+      let obj2 = conversation(stateFromStores[11]);
       const items = [ChannelConversationsStore];
       const items1 = [,];
       ({ channelId: arr2[0], id: arr2[1] } = conversation);
-      stateFromStores = conversation(stateFromStores[11]).useStateFromStores(
+      const tmp2 = stateFromStores;
+      stateFromStores = obj2.useStateFromStores(
         items,
         () => ChannelConversationsStore.getHydratedMessages(conversation.channelId, conversation.id),
         items1,
       );
       const items2 = [stateFromStores];
-      const memo = noop.useMemo(() => {
+      const memo = react.useMemo(() => {
         let substr;
         if (stateFromStores != null) {
           substr = stateFromStores.slice(0, closure_6);
@@ -365,53 +388,27 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }, items2);
       const items3 = [navigation, , , ,];
       ({ channelId: arr5[1], guildId: arr5[2], id: arr5[3], title: arr5[4] } = conversation);
-      const callback = noop.useCallback(() => {
-        const conversationMessages = ConversationsActionCreators.fetchConversationMessages(
-          conversation.channelId,
-          conversation.id,
-          { includeReactions: true, includeMessageReferences: true },
-        );
-        navigation.navigate(ConversationNavigatorUtils.ConversationNavigatorScreens.FOCUS, {
+      const callback = react.useCallback(() => {
+        const obj = ConversationsActionCreators;
+        const conversationMessages = obj.fetchConversationMessages(conversation.channelId, conversation.id, {
+          includeReactions: true,
+          includeMessageReferences: true,
+        });
+        const obj2 = {
           channelId: conversation.channelId,
           guildId: conversation.guildId,
           conversationId: conversation.id,
           title: conversation.title,
-        });
+        };
+        navigation.navigate(ConversationNavigatorUtils.ConversationNavigatorScreens.FOCUS, obj2);
         const ConversationsAnalytics = ConversationsAnalytics2.ConversationsAnalytics;
-        const result = ConversationsAnalytics.trackTopicsUnitClicked({
-          channelId: conversation.channelId,
-          conversationId: conversation.id,
-          isFocusMode: false,
-        });
+        const obj3 = { channelId: conversation.channelId, conversationId: conversation.id, isFocusMode: false };
+        const result = ConversationsAnalytics.trackTopicsUnitClicked(obj3);
       }, items3);
-      const obj3 = { style: tmp.card, onPress: callback, accessibilityLabel: conversation.title, children: null };
-      const obj4 = { style: tmp.headerContainer, children: null };
-      const items4 = [
-        closure_8(conversation(stateFromStores[15]).Text, {
-          variant: "text-md/semibold",
-          color: "text-default",
-          lineClamp: 1,
-          style: tmp.title,
-          children: conversation.title,
-        }),
-      ];
-      const obj6 = {
-        variant: "text-sm/medium",
-        color: "text-muted",
-        lineClamp: 1,
-        style: tmp.timestamp,
-        children: null,
-      };
-      const intl = conversation(stateFromStores[16]).intl;
-      obj6.children = intl.formatToPlainString(conversation(stateFromStores[16]).t.poZZGL, {
-        count: conversation.messageCount,
-      });
-      items4[1] = closure_8(conversation(stateFromStores[15]).Text, obj6);
-      obj4.children = items4;
-      const items5 = [closure_9(closure_4, obj4)];
-      const obj8 = { style: tmp.previewsMask, maskElement: null, children: null };
-      const obj9 = { style: tmp.maskColumn, children: null };
-      const obj2 = conversation(stateFromStores[11]);
+      let obj3 = { style: tmp.card, onPress: callback, accessibilityLabel: conversation.title, children: items5 };
+      const obj4 = { style: tmp.headerContainer, children: items4 };
+      const Card = conversation(stateFromStores[22]).Card;
+      items4 = [,];
       const obj5 = {
         variant: "text-md/semibold",
         color: "text-default",
@@ -419,69 +416,84 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp.title,
         children: conversation.title,
       };
-      const obj7 = { count: conversation.messageCount };
+      items4[0] = closure_8(conversation(stateFromStores[15]).Text, obj5);
+      const obj6 = {
+        variant: "text-sm/medium",
+        color: "text-muted",
+        lineClamp: 1,
+        style: tmp.timestamp,
+        children: intl.formatToPlainString(conversation(stateFromStores[16]).t.poZZGL, obj7),
+      };
+      const Text = conversation(stateFromStores[15]).Text;
+      intl = conversation(stateFromStores[16]).intl;
+      obj7 = { count: conversation.messageCount };
+      items4[1] = closure_8(Text, obj6);
+      items5 = [closure_9(closure_4, obj4)];
+      const obj8 = {
+        style: tmp.previewsMask,
+        maskElement: closure_9(closure_4, obj9),
+        children: closure_8(closure_4, obj12),
+      };
+      obj9 = { style: tmp.maskColumn, children: items6 };
+      items6 = [,];
+      const obj10 = { colors, style: tmp.maskOpaque };
+      const tmp10 = navigation(stateFromStores[21]);
+      items6[0] = closure_8(navigation(stateFromStores[17]), obj10);
+      const obj11 = { colors: colors2, start: VerticalGradient.START, end: VerticalGradient.END, style: tmp.maskFade };
+      items6[1] = closure_8(navigation(stateFromStores[17]), obj11);
+      obj12 = { style: tmp.previews, children: mapped };
       const tmp9 = navigation;
-      const items6 = [
-        closure_8(navigation(stateFromStores[17]), { colors, style: tmp.maskOpaque }),
-        closure_8(navigation(stateFromStores[17]), {
-          colors: colors2,
-          start: VerticalGradient.START,
-          end: VerticalGradient.END,
-          style: tmp.maskFade,
-        }),
-      ];
-      obj9.children = items6;
-      obj8.maskElement = closure_9(closure_4, obj9);
-      const obj12 = { style: tmp.previews, children: null };
       if (null == memo) {
-        let mapped = closure_8(tmp9(tmp2[18]), {});
+        mapped = closure_8(tmp9(tmp2[18]), {});
       } else {
         mapped = memo.map((blocked) => {
           if (!blocked.blocked) {
+            let tmp6Result;
             if (!blocked.ignored) {
               const obj = { message: blocked, guildId: null, channelId: null };
               ({ guildId: obj.guildId, channelId: obj.channelId } = conversation);
-              let tmp6Result = closure_2_8(ConversationPreviewMessageDefault, obj, blocked.id);
+              tmp6Result = metroImportAll(ConversationPreviewMessageDefault, obj, blocked.id);
             }
             return tmp6Result;
           }
           let str = "ignored";
+          const tmp7 = ConversationPreviewBlockedMessageDefault;
           if (blocked.blocked) {
             str = "blocked";
           }
-          tmp6Result = closure_2_8(ConversationPreviewBlockedMessageDefault, { reason: str }, blocked.id);
+          tmp6Result = metroImportAll(tmp7, { reason: str }, blocked.id);
         });
       }
-      obj12.children = mapped;
-      obj8.children = closure_8(closure_4, obj12);
-      items5[1] = closure_8(navigation(stateFromStores[21]), obj8);
-      obj3.children = items5;
-      return closure_9(conversation(stateFromStores[22]).Card, obj3);
+      items5[1] = closure_8(tmp10, obj8);
+      return closure_9(Card, obj3);
     };
-ReactCompilerGating = fn(558);
-let obj8 = { height: nativeDefault.space.PX_64 };
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationListItem.tsx");
-
-export default noop.memo(
+ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (channelId) => {
-        const cResult = channelId(576).c(7);
+        let first;
+        const obj = channelId(576);
+        const cResult = obj.c(7);
+        const tmp = channelId;
         channelId = channelId.channelId;
         const conversationId = channelId.conversationId;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ChannelConversationsStore];
           cResult[0] = items;
-          let first = items;
+          first = items;
         } else {
           first = cResult[0];
         }
         if (cResult[1] === channelId) {
+          let tmp6;
+          let tmp7;
+          let tmp9;
           if (cResult[2] === conversationId) {
-            let tmp6 = cResult[3];
-            let tmp7 = cResult[4];
+            tmp6 = cResult[3];
+            tmp7 = cResult[4];
           }
-          const stateFromStores = tmp(504).useStateFromStores(first, tmp6, tmp7);
+          const tmpResult = tmp(504);
+          const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
           if (cResult[5] !== stateFromStores) {
             let tmp10 = null;
             if (null != stateFromStores) {
@@ -490,7 +502,7 @@ export default noop.memo(
             }
             cResult[5] = stateFromStores;
             cResult[6] = tmp10;
-            let tmp9 = tmp10;
+            tmp9 = tmp10;
           } else {
             tmp9 = cResult[6];
           }
@@ -511,15 +523,14 @@ export default noop.memo(
         cResult[4] = items1;
         tmp7 = items1;
         tmp6 = fn;
-        const obj = channelId(576);
-        tmp = channelId;
       }
     : (channelId) => {
         channelId = channelId.channelId;
         const conversationId = channelId.conversationId;
         const items = [ChannelConversationsStore];
         const items1 = [channelId, conversationId];
-        const stateFromStores = channelId(504).useStateFromStores(
+        const obj = channelId(504);
+        const stateFromStores = obj.useStateFromStores(
           items,
           () => {
             const conversationMetadata = ChannelConversationsStore.getConversationMetadata(channelId, conversationId);
@@ -539,3 +550,6 @@ export default noop.memo(
         return tmp2;
       },
 );
+let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationListItem.tsx");
+
+export default memoResult;

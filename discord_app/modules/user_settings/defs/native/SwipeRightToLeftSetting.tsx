@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/SwipeRightToLeftSetting.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react from "../../../../../_runtime/00576_react.js";
 import Constants from "../../../../Constants.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl3 from "../../../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
@@ -11,103 +11,76 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const UserSettingsSections = Constants.UserSettingsSections;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let stringResult = dependencyMap;
-      const cResult = c.c(2);
+      let tmp8;
+      const obj = react;
+      const cResult = obj.c(2);
       const SwipeRightToLeftModeSetting = UserSettings.SwipeRightToLeftModeSetting;
       const setting = SwipeRightToLeftModeSetting.useSetting();
       if (setting === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY) {
+        let first;
         const _Symbol2 = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl2 = util.intl;
-          stringResult = intl2.string(util.t["3tYNDS"]);
+          const intl2 = intl3.intl;
+          const stringResult = intl2.string(intl3.t["3tYNDS"]);
           cResult[0] = stringResult;
-          let first = stringResult;
+          first = stringResult;
         } else {
           first = cResult[0];
         }
-      } else if (setting !== preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS) {
-        return null;
+        tmp8 = first;
       } else {
-        const _Symbol = Symbol;
-        if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = util.intl;
-          const stringResult1 = intl.string(util.t["6eXLcJ"]);
-          cResult[1] = stringResult1;
+        tmp8 = null;
+        if (setting === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS) {
+          let tmp6;
+          const _Symbol = Symbol;
+          if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+            const intl = intl3.intl;
+            const stringResult1 = intl.string(intl3.t["6eXLcJ"]);
+            cResult[1] = stringResult1;
+            tmp6 = stringResult1;
+          } else {
+            tmp6 = cResult[1];
+          }
+          tmp8 = tmp6;
         }
       }
+      return tmp8;
     }
   : () => {
+      let stringResult;
       const SwipeRightToLeftModeSetting = UserSettings.SwipeRightToLeftModeSetting;
       const setting = SwipeRightToLeftModeSetting.useSetting();
       if (setting === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY) {
-        const intl2 = util.intl;
-        let stringResult = intl2.string(util.t["3tYNDS"]);
+        const intl2 = intl3.intl;
+        stringResult = intl2.string(intl3.t["3tYNDS"]);
       } else {
         stringResult = null;
         if (setting === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS) {
-          const intl = util.intl;
-          stringResult = intl.string(util.t["6eXLcJ"]);
+          const intl = intl3.intl;
+          stringResult = intl.string(intl3.t["6eXLcJ"]);
         }
       }
       return stringResult;
     };
-const route = SettingBuilders.createRoute({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t["D/Dkcd"]);
+    const intl = intl3.intl;
+    return intl.string(intl3.t["D/Dkcd"]);
   },
-  parent: SettingsConstants.MobileUserSettings.CHAT,
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
-        let stringResult = dependencyMap;
-        const cResult = c.c(2);
-        const SwipeRightToLeftModeSetting = UserSettings.SwipeRightToLeftModeSetting;
-        const setting = SwipeRightToLeftModeSetting.useSetting();
-        if (setting === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY) {
-          const _Symbol2 = Symbol;
-          if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl2 = util.intl;
-            stringResult = intl2.string(util.t["3tYNDS"]);
-            cResult[0] = stringResult;
-            let first = stringResult;
-          } else {
-            first = cResult[0];
-          }
-        } else if (setting !== preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS) {
-          return null;
-        } else {
-          const _Symbol = Symbol;
-          if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = util.intl;
-            const stringResult1 = intl.string(util.t["6eXLcJ"]);
-            cResult[1] = stringResult1;
-          }
-        }
-      }
-    : () => {
-        const SwipeRightToLeftModeSetting = UserSettings.SwipeRightToLeftModeSetting;
-        const setting = SwipeRightToLeftModeSetting.useSetting();
-        if (setting === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY) {
-          const intl2 = util.intl;
-          let stringResult = intl2.string(util.t["3tYNDS"]);
-        } else {
-          stringResult = null;
-          if (setting === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS) {
-            const intl = util.intl;
-            stringResult = intl.string(util.t["6eXLcJ"]);
-          }
-        }
-        return stringResult;
-      },
+  parent: MobileUserSettings.CHAT,
+  useTrailing: tmp2,
   screen: {
-    route: Constants.UserSettingsSections.SWIPE_RIGHT_TO_LEFT,
+    route: UserSettingsSections.SWIPE_RIGHT_TO_LEFT,
     getComponent() {
       return require("SwipeRightToLeftScreen").default;
     },
   },
-});
+};
+const route = SettingBuilders.createRoute(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/SwipeRightToLeftSetting.tsx");
 
 export default route;

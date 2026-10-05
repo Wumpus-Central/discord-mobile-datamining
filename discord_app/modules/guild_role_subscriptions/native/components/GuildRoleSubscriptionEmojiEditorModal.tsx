@@ -1,92 +1,91 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionEmojiEditorModal.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl5 from "../../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
-import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
+import AlertDefault from "../../../../components_native/common/Alert.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import EmojiAliasDefault from "EmojiAlias.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
-import SubscriptionRoleStore from "../../SubscriptionRoleStore.tsx";
+import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import SubscriptionRoleStore_mod from "../../SubscriptionRoleStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
+let c1, c4, guildId, roles, set;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  container: {
-    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "flex-start",
-    height: "100%",
-  },
-  emojiList: null,
-  row: null,
-  emojiImage: null,
-  emojiAlias: null,
+let c10;
+let c9;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+let unpackModuleId;
+let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
+({ View: metroRequire, SectionList: metroImportDefault } = react_native);
+let SubscriptionRoleStore = SubscriptionRoleStore_mod;
+({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
+  container: obj2,
+  emojiList: obj3,
+  row: { alignItems: "flex-start", paddingTop: 16, paddingBottom: 14 },
+  emojiImage: { width: 24, height: 24, marginBottom: 2 },
+  emojiAlias: { marginBottom: 2 },
 };
-let obj3 = {
+obj2 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   display: "flex",
   flexDirection: "column",
   justifyContent: "flex-start",
   height: "100%",
 };
-obj2.emojiList = {
+createStyles = createStyles.createStyles;
+obj3 = {
   flexGrow: 0,
   marginVertical: 24,
   marginHorizontal: 16,
   borderRadius: nativeDefault.radii.sm,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj2.row = { alignItems: "flex-start", paddingTop: 16, paddingBottom: 14 };
-obj2.emojiImage = { width: 24, height: 24, marginBottom: 2 };
-obj2.emojiAlias = { marginBottom: 2 };
-let closure_12 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj4 = {
-  flexGrow: 0,
-  marginVertical: 24,
-  marginHorizontal: 16,
-  borderRadius: nativeDefault.radii.sm,
-  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
-};
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionEmojiEditorModal.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_12 = createStyles(obj);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      const cResult = require("c").c(49);
+      let closure_7;
+      let emojiImage;
+      let first;
+      let first1;
+      let listingId;
+      let onClose;
+      let onConfirm;
+      let tmp = guildId;
+      let obj = guildId(onClose[9]);
+      const cResult = obj.c(49);
       guildId = guildId.guildId;
-      _require = guildId;
       const subscriptionRoleId = guildId.subscriptionRoleId;
       ({ listingId, onClose } = guildId);
       const onSave = guildId.onSave;
-      let obj = require("c");
-      let tmp = _require;
-      _slicedToArray = closure_12();
+      const initialTierEmojiIds = guildId.initialTierEmojiIds;
+      const tmp4 = closure_12();
+      _slicedToArray = tmp4;
       subscriptionRoleId(onClose[10])(guildId);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SubscriptionRoleStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== guildId) {
         class S {
           constructor() {
-            return closure_8.getSubscriptionRoles(closure_0);
+            return SubscriptionRoleStore.getSubscriptionRoles(guildId);
           }
         }
         cResult[1] = guildId;
@@ -94,23 +93,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class S {
           constructor() {
-            return closure_8.getSubscriptionRoles(closure_0);
+            return SubscriptionRoleStore.getSubscriptionRoles(guildId);
           }
         }
       }
-      const tmp4 = closure_12();
-      const stateFromStores = tmp(onClose[11]).useStateFromStores(first, S);
-      [first1, closure_7] = stateFromStores.useState(guildId.initialTierEmojiIds);
+      let tmpResult = tmp(onClose[11]);
+      const stateFromStores = tmpResult.useStateFromStores(first, S);
+      [first1, closure_7] = stateFromStores.useState(initialTierEmojiIds);
       if (null != subscriptionRoleId) {
         class S {
           constructor() {
-            return closure_8.getSubscriptionRoles(closure_0);
+            return SubscriptionRoleStore.getSubscriptionRoles(guildId);
           }
         }
         if (cResult[9] === stateFromStores) {
           class S {
             constructor() {
-              return closure_8.getSubscriptionRoles(closure_0);
+              return SubscriptionRoleStore.getSubscriptionRoles(guildId);
             }
           }
         }
@@ -121,14 +120,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return (
               0 ===
               roles.filter((item) => {
-                let tmp = item === subscriptionRoleId;
-                if (tmp) {
-                  tmp = !first1.has(id.id);
-                }
-                let hasItem = !tmp;
-                if (!tmp) {
-                  hasItem = stateFromStores.has(item);
-                }
+                const tmp = item === subscriptionRoleId && !first1.has(roles.id);
+                const hasItem = !tmp && stateFromStores.has(item);
                 return hasItem;
               }).length
             );
@@ -141,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class S {
           constructor() {
-            return closure_8.getSubscriptionRoles(closure_0);
+            return SubscriptionRoleStore.getSubscriptionRoles(guildId);
           }
         }
         class D {
@@ -151,62 +144,103 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return (
               0 ===
               roles.filter((item) => {
-                let tmp = item === subscriptionRoleId;
-                if (tmp) {
-                  tmp = !first1.has(id.id);
-                }
-                let hasItem = !tmp;
-                if (!tmp) {
-                  hasItem = stateFromStores.has(item);
-                }
+                const tmp = item === subscriptionRoleId && !first1.has(roles.id);
+                const hasItem = !tmp && stateFromStores.has(item);
                 return hasItem;
               }).length
             );
           }
         }
-        SubscriptionRoleStore = tmp13;
-        if (cResult[14] === onClose) {
-          class S {
-            constructor() {
-              return closure_8.getSubscriptionRoles(closure_0);
+      }
+      SubscriptionRoleStore = tmp13;
+      if (cResult[14] === onClose) {
+        class S {
+          constructor() {
+            return SubscriptionRoleStore.getSubscriptionRoles(guildId);
+          }
+        }
+      }
+      let closure_0 = onSave(function* () {
+        let closure_2;
+        if (c4 === 2) {
+          c4 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp3 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "IconComponent", done: null };
+          }
+        } else {
+          let v0;
+          try {
+            c4 = 2;
+            if (0 === c1) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                closure_0 = tmp;
+                v0 = 1;
+                c1 = 2;
+                c4 = 1;
+                const obj4 = { value: v0(first1), done: false };
+                return obj4;
+              }
+            } else {
+              if (1 === tmp4) {
+                v0 = 0;
+              } else if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                v0 = 0;
+                c4 = 3;
+                const obj = { value, done: true };
+                return obj;
+              } else {
+                tmp11();
+                v0 = 0;
+              }
+              c4 = 3;
+              return { value: "IconComponent", done: null };
+            }
+          } catch (tmp11) {
+            if (0 === v0) {
+              c4 = 3;
+              throw tmp11;
+            } else {
+              c1 = 1;
             }
           }
         }
-        _require = onSave(function* () {
-          closure_0 = tmp3;
-          let v0 = 1;
-          yield v0(first1);
-          if (1 === tmp7) {
-            v0 = 0;
-            c4 = 3;
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            tmp14();
-            v0 = 0;
-          }
-          v0 = 0;
-          return value;
-        });
-        function handleSave() {
-          const self = this;
-          const apply = closure_0.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
-        }
-        cResult[14] = onClose;
-        cResult[15] = onSave;
-        cResult[16] = first1;
-        cResult[17] = handleSave;
+      });
+      function handleSave() {
+        return closure_0(...arguments);
       }
-      let tmpResult = tmp(onClose[11]);
+      cResult[14] = onClose;
+      cResult[15] = onSave;
+      cResult[16] = first1;
+      cResult[17] = handleSave;
     }
   : (guildId) => {
+      let closure_4;
+      let closure_5;
+      let closure_8;
+      let first;
+      let initialTierEmojiIds;
+      let intl;
+      let intl2;
+      let items2;
+      let items3;
+      let listingId;
       guildId = guildId.guildId;
       const subscriptionRoleId = guildId.subscriptionRoleId;
       const onClose = guildId.onClose;
@@ -214,163 +248,225 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       first = undefined;
       closure_8 = undefined;
       function handleSave() {
-        const self = this;
-        const apply = closure_11.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
+        return obj(...arguments);
       }
-      closure_11 = async function _handleSave2(stateFromStores) {
-        closure_0 = tmp3;
-        await onSave(first);
-        if (1 === tmp7) {
-          c3 = 0;
-          c4 = 3;
-        } else if (stateFromStores === 1) {
-          c4 = 3;
-          throw value;
-        } else if (stateFromStores !== 2) {
-          closure_128_2();
-          c3 = 0;
-        }
-        return value;
+      let obj = function _handleSave2() {
+        obj = _asyncToGenerator(async () => {
+          if (c4 === 2) {
+            c4 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj2 = { value, done: true };
+              return obj2;
+            } else {
+              return { value: "IconComponent", done: null };
+            }
+          } else {
+            let c3;
+            try {
+              c4 = 2;
+              if (0 === c1) {
+                if (arg0 === 1) {
+                  c4 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c4 = 3;
+                  const obj3 = { value, done: true };
+                  return obj3;
+                } else {
+                  let closure_0 = tmp;
+                  c3 = 1;
+                  c1 = 2;
+                  c4 = 1;
+                  const obj4 = { value: onSave(first), done: false };
+                  return obj4;
+                }
+              } else {
+                if (1 === tmp4) {
+                  c3 = 0;
+                } else if (arg0 === 1) {
+                  c4 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c3 = 0;
+                  c4 = 3;
+                  obj = { value, done: true };
+                  return obj;
+                } else {
+                  closure_128_2();
+                  c3 = 0;
+                }
+                c4 = 3;
+                return { value: "IconComponent", done: null };
+              }
+            } catch (tmp11) {
+              let closure_2 = tmp11;
+              if (0 === c3) {
+                c4 = 3;
+                throw tmp11;
+              } else {
+                c1 = 1;
+              }
+            }
+          }
+        });
+        return obj(...arguments);
       };
       ({ initialTierEmojiIds, listingId } = guildId);
       let tmp = closure_12();
       _slicedToArray = tmp;
       let tmp2 = subscriptionRoleId(onClose[10])(guildId);
-      noop = tmp2;
+      react = tmp2;
+      obj = guildId(onClose[11]);
       const items = [closure_8];
-      const stateFromStores = guildId(onClose[11]).useStateFromStores(items, () =>
-        SubscriptionRoleStore.getSubscriptionRoles(guildId),
-      );
-      [first, closure_8] = noop.useState(initialTierEmojiIds);
+      const stateFromStores = obj.useStateFromStores(items, () => SubscriptionRoleStore.getSubscriptionRoles(guildId));
+      [first, closure_8] = react.useState(initialTierEmojiIds);
       let items1 = [stateFromStores, tmp2, subscriptionRoleId, first];
-      let set = noop.useMemo(() => {
+      set = react.useMemo(function () {
         if (null == subscriptionRoleId) {
           const _Set2 = Set;
+          const self3 = this;
+          const self4 = this;
           set = new Set();
           return set;
         } else {
           const found = closure_5.filter((roles) => {
-            const id = roles;
             roles = roles.roles;
             return (
               0 ===
               roles.filter((item) => {
-                let tmp = item === subscriptionRoleId;
-                if (tmp) {
-                  tmp = !set2.has(id.id);
-                }
-                let hasItem = !tmp;
-                if (!tmp) {
-                  hasItem = set.has(item);
-                }
+                const tmp = item === subscriptionRoleId && !set2.has(roles.id);
+                const hasItem = !tmp && set.has(item);
                 return hasItem;
               }).length
             );
           });
           const _Set = Set;
+          const self = this;
+          const self2 = this;
           const set1 = new Set(found.map((id) => id.id));
           return set1;
         }
       }, items1);
-      let obj2 = { style: tmp.container, children: null };
-      let obj3 = { title: null, onClose: null, onSave: null, listingId: null, canSave: true };
-      let obj = guildId(onClose[11]);
-      let intl = guildId(onClose[13]).intl;
-      obj3.title = intl.string(guildId(onClose[13]).t.W4XhnR);
-      obj3.onClose = onClose;
-      obj3.onSave = function onSave() {
-        if (0 === set.size) {
-          handleSave();
-        } else {
-          const obj2 = {
-            title: null,
-            body: null,
-            cancelText: null,
-            confirmText: null,
-            onConfirm: null,
-            confirmColor: null,
-          };
-          const intl = util.intl;
-          obj2.title = intl.string(util.t["30V0t5"]);
-          const intl2 = util.intl;
-          const obj3 = { numberOfEmojiSlatedForDeletion: tmp.size };
-          obj2.body = intl2.formatToPlainString(util.t["o6j/wN"], obj3);
-          const intl3 = util.intl;
-          obj2.cancelText = intl3.string(util.t["ETE/oC"]);
-          const intl4 = util.intl;
-          obj2.confirmText = intl4.string(util.t["cY+Oob"]);
-          obj2.onConfirm = handleSave;
-          obj2.confirmColor = common_AlertDefault.Colors.RED;
-          AlertActionCreatorsDefault.show(obj2);
-        }
+      let obj2 = { style: tmp.container, children: items2 };
+      let obj3 = {
+        title: intl.string(guildId(onClose[13]).t.W4XhnR),
+        onClose,
+        onSave() {
+          let intl;
+          let intl2;
+          let intl3;
+          let intl4;
+          let obj2;
+          if (0 === set.size) {
+            handleSave();
+          } else {
+            obj = {
+              title: intl.string(intl5.t["30V0t5"]),
+              body: intl2.formatToPlainString(intl5.t["o6j/wN"], obj2),
+              cancelText: intl3.string(intl5.t["ETE/oC"]),
+              confirmText: intl4.string(intl5.t["cY+Oob"]),
+              onConfirm: handleSave,
+              confirmColor: AlertDefault.Colors.RED,
+            };
+            const show = AlertActionCreatorsDefault.show;
+            AlertActionCreatorsDefault;
+            intl = intl5.intl;
+            intl2 = intl5.intl;
+            obj2 = { numberOfEmojiSlatedForDeletion: tmp.size };
+            intl3 = intl5.intl;
+            intl4 = intl5.intl;
+            show(obj);
+          }
+        },
+        listingId,
+        canSave: true,
       };
-      obj3.listingId = listingId;
-      const items2 = [set(subscriptionRoleId(onClose[20]), obj3)];
+      const tmp6 = subscriptionRoleId(onClose[20]);
+      intl = guildId(onClose[13]).intl;
+      items2 = [set(tmp6, obj3)];
       let obj4 = {
         style: tmp.emojiList,
         renderItem(item) {
+          let obj2;
+          let obj3;
+          let obj4;
+          let obj5;
+          let tmp2;
           item = item.item;
           const hasItem = first.has(item.id);
-          closure_1 = set.has(item.id);
-          const obj = { style: emojiAlias.row, leading: null, label: null, onPress: null, trailing: null };
-          let obj2 = { style: emojiAlias.emojiImage, source: null };
-          let obj3 = { uri: null };
-          const tmp2 = subscriptionRoleId(onClose[15]);
-          obj3.uri = subscriptionRoleId(onClose[16]).getEmojiURL({ id: item.id, animated: item.animated, size: 48 });
-          obj2.source = obj3;
-          obj.leading = set(tmp2, obj2);
-          obj.label = function label() {
-            const children = [options(EmojiAliasDefault, { name: item.name, style: emojiAlias.emojiAlias })];
-            let tmpResult = closure_1;
-            if (closure_1) {
-              const obj2 = { children: null };
-              const obj3 = { variant: "text-sm/normal", color: "interactive-text-active", children: null };
-              const intl = util.intl;
-              obj3.children = intl.string(util.t["1GlN06"]);
-              const items1 = [options(Text_Text.Text, obj3)];
-              const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
-              const intl2 = util.intl;
-              obj4.children = intl2.string(util.t.J0XdJ4);
-              items1[1] = options(Text_Text.Text, obj4);
-              obj2.children = items1;
-              tmpResult = closure_3_11(v65535, obj2);
-            }
-            children[1] = tmpResult;
-            return closure_3_11(v65535, { children });
+          let closure_1 = set.has(item.id);
+          obj = {
+            style: emojiAlias.row,
+            leading: set(tmp2, obj2),
+            label() {
+              let intl;
+              let intl2;
+              let items1;
+              const children = [,];
+              obj = { name: item.name, style: emojiAlias.emojiAlias };
+              children[0] = React4(EmojiAliasDefault, obj);
+              let tmpResult = closure_1;
+              if (tmpResult) {
+                const obj2 = { children: items1 };
+                const obj3 = {
+                  variant: "text-sm/normal",
+                  color: "interactive-text-active",
+                  children: intl.string(intl5.t["1GlN06"]),
+                };
+                const Text = Text_Text.Text;
+                intl = intl5.intl;
+                items1 = [React4(Text, obj3)];
+                const obj4 = {
+                  variant: "text-sm/normal",
+                  color: "text-feedback-critical",
+                  children: intl2.string(intl5.t.J0XdJ4),
+                };
+                const Text2 = Text_Text.Text;
+                intl2 = intl5.intl;
+                items1[1] = React4(Text2, obj4);
+                tmpResult = unpackModuleId(authStore, obj2);
+              }
+              children[1] = tmpResult;
+              return unpackModuleId(authStore, { children });
+            },
+            onPress() {
+              const id = item.id;
+              set = new Set(first);
+              if (set.has(id)) {
+                set.delete(id);
+              } else {
+                set.add(id);
+              }
+              closure_8(set);
+            },
+            trailing: set(guildId(onClose[17]).FormRow.Checkbox, { selected: hasItem }),
           };
-          obj.onPress = function onPress() {
-            const id = item.id;
-            set = new Set(first);
-            if (set.has(id)) {
-              set.delete(id);
-            } else {
-              set.add(id);
-            }
-            closure_8(set);
-          };
-          obj.trailing = set(guildId(onClose[17]).FormRow.Checkbox, { selected: hasItem });
-          return set(guildId(onClose[17]).FormRow, obj);
+          const FormRow = guildId(onClose[17]).FormRow;
+          obj2 = { style: emojiAlias.emojiImage, source: obj3 };
+          obj3 = { uri: obj4.getEmojiURL(obj5) };
+          tmp2 = subscriptionRoleId(onClose[15]);
+          obj4 = subscriptionRoleId(onClose[16]);
+          obj5 = { id: item.id, animated: item.animated, size: 48 };
+          return set(FormRow, obj);
         },
-        sections: null,
-        ItemSeparatorComponent: null,
+        sections: items3,
+        ItemSeparatorComponent() {
+          return set(guildId(onClose[17]).FormDivider, { iconPush: true });
+        },
         keyboardShouldPersistTaps: "always",
       };
-      const obj5 = { title: null, data: null };
-      let intl2 = guildId(onClose[13]).intl;
-      obj5.title = intl2.string(guildId(onClose[13]).t["9Oq93m"]);
-      obj5.data = tmp2;
-      const items3 = [obj5];
-      obj4.sections = items3;
-      obj4.ItemSeparatorComponent = function ItemSeparatorComponent() {
-        return set(guildId(onClose[17]).FormDivider, { iconPush: true });
-      };
+      let obj5 = { title: intl2.string(guildId(onClose[13]).t["9Oq93m"]), data: tmp2 };
+      intl2 = guildId(onClose[13]).intl;
+      items3 = [obj5];
       items2[1] = set(first, obj4);
-      obj2.children = items2;
-      return closure_11(stateFromStores, obj2);
+      return obj(stateFromStores, obj2);
     };
+const result = size.fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionEmojiEditorModal.tsx",
+);
+
+export default tmp5;

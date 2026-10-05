@@ -1,11 +1,11 @@
 // discord_app/utils/native/StringUtils.tsx
-import rawDefault from "../../../_runtime/10639_raw.js";
+import _modDef10639 from "../../../_runtime/metro/10639__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("utils/native/StringUtils.tsx");
 
 export const splitGraphemes = function splitGraphemes(name) {
-  const obj = rawDefault();
+  const obj = _modDef10639();
   const items = [];
   let match = obj.exec(name);
   let num = 0;
@@ -16,8 +16,8 @@ export const splitGraphemes = function splitGraphemes(name) {
         let push = items.push;
         let _Array = Array;
         let items1 = [];
-        let arraySpreadResult = HermesBuiltin.arraySpread(Array.from(name.slice(num, match.index)), 0);
-        let applyResult = HermesBuiltin.apply(items1, items);
+        let arraySpreadResult = HermesBuiltin.arraySpread(items1, Array.from(name.slice(num, match.index)), 0);
+        let applyResult = HermesBuiltin.apply(push, items1, items);
       }
       let arr = items.push(match[0]);
       num = obj.lastIndex;
@@ -29,8 +29,8 @@ export const splitGraphemes = function splitGraphemes(name) {
     const push2 = items.push;
     const _Array2 = Array;
     const items2 = [];
-    HermesBuiltin.arraySpread(Array.from(name.slice(num2)), 0);
-    HermesBuiltin.apply(items2, items);
+    HermesBuiltin.arraySpread(items2, Array.from(name.slice(num2)), 0);
+    HermesBuiltin.apply(push2, items2, items);
   }
   return items;
 };

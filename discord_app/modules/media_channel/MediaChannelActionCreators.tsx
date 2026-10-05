@@ -1,136 +1,177 @@
 // discord_app/modules/media_channel/MediaChannelActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
+import Constants from "../../Constants.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-let closure_5 = async function _fetchMediaPostEmbed() {
-  c5 = 0;
-  c6 = 0;
-  c4 = 0;
-  return (async (arg0) => {
-    closure_2 = tmp3;
-    closure_129_0 = threadId;
-    DispatcherDefault.dispatch({ type: "MEDIA_POST_EMBED_FETCH", threadId });
-    const HTTP = HTTPUtils.HTTP;
-    await HTTP.get({ url: Endpoints.MEDIA_POST_RESHARE_GET_PREVIEW(threadId), rejectWithError: true });
-    if (1 === tmp7) {
-      c4 = 0;
-      closure_130_1(closure_130_2[2]).dispatch({ type: "MEDIA_POST_EMBED_FETCH_FAILURE", threadId: closure_129_0 });
-      c6 = 3;
-      closure_130_1(closure_130_2[2]);
-    } else if (arg0 === 1) {
-      c6 = 3;
-      throw value;
-    } else if (arg0 !== 2) {
-      const body = value.body;
-      closure_130_1(closure_130_2[2]).dispatch({
-        type: "MEDIA_POST_EMBED_FETCH_SUCCESS",
-        threadId: closure_129_0,
-        mediaPostEmbed: body,
-      });
-      c4 = 0;
-      closure_130_1(closure_130_2[2]);
-    }
-    return value;
-  })();
-};
-let closure_6 = async function _unfurlEmbedUrl() {
-  c5 = 0;
-  c6 = 0;
-  c4 = 0;
-  return (async (arg0) => {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+let closure_1, closure_2, closure_3, urls;
+
+let obj = function _fetchMediaPostEmbed() {
+  obj = _asyncToGenerator(async (threadId) => {
+    let c5 = 0;
+    let c6 = 0;
+    let c4 = 0;
+    return (async (arg0) => {
+      if (c6 === 2) {
+        c6 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          return { value, done: true };
+        } else {
+          return { value: "IconComponent", done: null };
+        }
       } else {
-        return { value: "IconComponent", done: null };
+        try {
+          let body;
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              return { value, done: true };
+            } else {
+              closure_2 = tmp;
+              closure_1 = tmp4;
+              body = undefined;
+              const obj5 = { type: "MEDIA_POST_EMBED_FETCH", threadId };
+              const obj9 = DispatcherDefault;
+              obj9.dispatch(obj5);
+              c4 = 1;
+              const HTTP = HTTPUtils.HTTP;
+              const get = HTTP.get;
+              c5 = 2;
+              c6 = 1;
+              const obj6 = { url: Endpoints.MEDIA_POST_RESHARE_GET_PREVIEW(threadId), rejectWithError: true };
+              const obj7 = { value: get(obj6), done: false };
+              return obj7;
+            }
+          } else {
+            if (1 === c5) {
+              c4 = 0;
+              const obj8 = { type: "MEDIA_POST_EMBED_FETCH_FAILURE", threadId };
+              const obj4 = closure_130_1(closure_130_2[2]);
+              obj4.dispatch(obj8);
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 0;
+              c6 = 3;
+              return { value, done: true };
+            } else {
+              body = value.body;
+              const obj11 = { type: "MEDIA_POST_EMBED_FETCH_SUCCESS", threadId, mediaPostEmbed: body };
+              obj = closure_130_1(closure_130_2[2]);
+              obj.dispatch(obj11);
+              c4 = 0;
+            }
+            c6 = 3;
+            return { value: "IconComponent", done: null };
+          }
+        } catch (tmp19) {
+          closure_3 = tmp19;
+          if (0 === c4) {
+            c6 = 3;
+            throw tmp19;
+          } else {
+            c5 = 1;
+          }
+        }
       }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
+    })();
+  });
+  return obj(...arguments);
+};
+obj = function _unfurlEmbedUrl() {
+  obj = _asyncToGenerator(async (urls) => {
+    let c5 = 0;
+    let c6 = 0;
+    let c4 = 0;
+    return (async function (arg0) {
+      let obj4;
+      if (c6 === 2) {
+        c6 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          return { value, done: true };
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              return { value, done: true };
+            } else {
+              closure_2 = tmp;
+              closure_1 = tmp4;
+              c4 = 1;
+              const HTTP = HTTPUtils.HTTP;
+              const request = { url: constants.UNFURL_EMBED_URLS, body: obj4, rejectWithError: false };
+              c5 = 2;
+              c6 = 1;
+              obj4 = { urls };
+              const obj5 = { value: HTTP.post(request), done: false };
+              return obj5;
+            }
+          } else if (1 === c5) {
+            c4 = 0;
+            urls = closure_3;
+            const self = this;
+            const self2 = this;
+            const aPIError = new closure_130_0(closure_130_2[4]).APIError(urls);
+            throw aPIError;
+          } else if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 === 2) {
+            c4 = 0;
             c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            return { value, done: true };
           } else {
-            closure_2 = tmp3;
-            closure_1 = tmp7;
-            c4 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            const request = { url: constants.UNFURL_EMBED_URLS, body: null, rejectWithError: false };
-            const obj4 = { urls };
-            request.body = obj4;
-            c5 = 2;
-            c6 = 1;
-            const obj5 = { value: HTTP.post(request), done: false };
-            return obj5;
+            c4 = 0;
+            c6 = 3;
+            return { value: value.body, done: true };
           }
-        } else if (1 === tmp7) {
-          c4 = 0;
-          closure_129_0 = closure_3;
-          const aPIError = new closure_130_0(closure_130_2[4]).APIError(closure_129_0);
-          throw aPIError;
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c6 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          c4 = 0;
-          c6 = 3;
-          const obj = { value: value.body, done: true };
-          return obj;
-        }
-      } catch (tmp19) {
-        closure_3 = tmp19;
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp19;
-        } else {
-          c5 = tmp;
+        } catch (tmp14) {
+          closure_3 = tmp14;
+          if (0 === c4) {
+            c6 = 3;
+            throw tmp14;
+          } else {
+            c5 = 1;
+          }
         }
       }
-    }
-  })();
+    })();
+  });
+  return obj(...arguments);
 };
-const Endpoints = fn(1085).Endpoints;
-const size = fn(2);
+const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("modules/media_channel/MediaChannelActionCreators.tsx");
 
 export const dismissMediaPostSharePrompt = function dismissMediaPostSharePrompt(threadId) {
-  DispatcherDefault.dispatch({ type: "DISMISS_MEDIA_POST_SHARE_PROMPT", threadId });
+  obj = DispatcherDefault;
+  const obj2 = { type: "DISMISS_MEDIA_POST_SHARE_PROMPT", threadId };
+  obj.dispatch(obj2);
 };
 export const fetchMediaPostEmbed = function fetchMediaPostEmbed() {
-  const self = this;
-  const apply = closure_5.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const unfurlEmbedUrl = function unfurlEmbedUrl() {
-  const self = this;
-  const apply = closure_6.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

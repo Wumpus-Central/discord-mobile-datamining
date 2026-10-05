@@ -1,27 +1,33 @@
 // discord_app/modules/auth/native/components/utils/useAuthFlowBackHandler.tsx
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import RegistrationConstants from "../../../RegistrationConstants.tsx";
+import react from "../../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-const require = fn;
-let closure_3 = fn(15868).RegistrationTransitionActionTypes;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/auth/native/components/utils/useAuthFlowBackHandler.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_3 = RegistrationConstants.RegistrationTransitionActionTypes;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (step) => {
+      let context;
       _require = step;
-      const cResult = require("c").c(3);
-      context = noop.useContext(require("Auth").TrackRegistrationContext);
+      let obj = require("react");
+      const cResult = obj.c(3);
+      const tmp2 = context;
+      context = react.useContext(require("Auth").TrackRegistrationContext);
+      const tmp = _require;
       if (cResult[0] === step) {
+        let tmp5;
         if (cResult[1] === context) {
-          let tmp5 = cResult[2];
+          tmp5 = cResult[2];
         }
-        require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(tmp5);
+        const tmpResult = tmp(tmp2[5]);
+        tmpResult.useNavigatorBackPressHandler(tmp5);
       }
       const fn = function o() {
-        context({ step, actionType: constants.VIEWED });
+        const obj = { step, actionType: constants.VIEWED };
+        context(obj);
         return false;
       };
       cResult[0] = step;
@@ -30,10 +36,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
     }
   : (step) => {
+      let closure_1;
       _require = step;
-      dependencyMap = noop.useContext(require("Auth").TrackRegistrationContext);
-      require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(() => {
-        closure_1({ step, actionType: constants.VIEWED });
+      dependencyMap = react.useContext(require("Auth").TrackRegistrationContext);
+      let obj = require("useNavigatorBackPressHandler");
+      obj.useNavigatorBackPressHandler(() => {
+        const obj = { step, actionType: constants.VIEWED };
+        closure_1(obj);
         return false;
       });
     };
+const result = size.fileFinishedImporting("modules/auth/native/components/utils/useAuthFlowBackHandler.tsx");
+
+export default tmp2;

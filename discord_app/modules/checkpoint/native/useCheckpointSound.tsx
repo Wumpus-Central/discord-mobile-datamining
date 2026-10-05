@@ -1,19 +1,31 @@
 // discord_app/modules/checkpoint/native/useCheckpointSound.tsx
 import SoundUtils from "../../sound_playback/SoundUtils.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import CheckpointStore from "../CheckpointStore.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-({ useCallback: c2, useEffect: c3, useRef: closure_4 } = noop);
-const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpointSound.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let c2;
+let c3;
+let closure_4;
+({ useCallback: c2, useEffect: c3, useRef: closure_4 } = react);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let isMuted;
+      let stateFromStores;
+      let tmp4;
+      let tmp5;
+      let tmp8;
+      let tmp9;
       _require = arg0;
-      const cResult = require("c").c(7);
+      let obj = require("react");
+      const cResult = obj.c(7);
+      const tmp = _require;
+      const tmp2 = stateFromStores;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [CheckpointStore];
         const fn = function s() {
@@ -26,9 +38,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      let obj = require("c");
-      stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
-      closure_4(null);
+      const tmpResult = tmp(tmp2[4]);
+      stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+      const ref = closure_4(null);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function p() {
           return () => {
@@ -43,16 +55,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [];
         cResult[2] = fn2;
         cResult[3] = items1;
-        let tmp9 = items1;
-        let tmp8 = fn2;
+        tmp9 = items1;
+        tmp8 = fn2;
       } else {
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
       closure_3(tmp8, tmp9);
       if (cResult[4] === stateFromStores) {
+        let tmp11;
         if (cResult[5] === arg0) {
-          let tmp11 = cResult[6];
+          tmp11 = cResult[6];
         }
         return tmp11;
       }
@@ -62,7 +75,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (current != null) {
             current.stop();
           }
-          ref.current = SoundUtils.createSound(closure_0, "vibing_wumpus");
+          const obj = SoundUtils;
+          ref.current = obj.createSound(closure_0, "vibing_wumpus");
           const current2 = ref.current;
           current2.play();
         }
@@ -71,13 +85,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = arg0;
       cResult[6] = fn3;
       tmp11 = fn3;
-      const tmpResult = require("initialize");
     }
   : (arg0) => {
+      let closure_0;
+      let isMuted;
+      let stateFromStores;
       _require = arg0;
+      let obj = require("get initialized");
       const items = [CheckpointStore];
-      stateFromStores = require("initialize").useStateFromStores(items, () => isMuted.isMuted);
-      let obj = require("initialize");
+      stateFromStores = obj.useStateFromStores(items, () => isMuted.isMuted);
+      const ref = closure_4(null);
       closure_3(
         () => () => {
           const current = ref.current;
@@ -90,15 +107,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         [],
       );
       const items1 = [stateFromStores, arg0];
-      return closure_4(null)(() => {
+      return ref(() => {
         if (!stateFromStores) {
           const current = ref.current;
           if (current != null) {
             current.stop();
           }
-          ref.current = SoundUtils.createSound(closure_0, "vibing_wumpus");
+          const obj = SoundUtils;
+          ref.current = obj.createSound(closure_0, "vibing_wumpus");
           const current2 = ref.current;
           current2.play();
         }
       }, items1);
     };
+const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpointSound.tsx");
+
+export default tmp3;

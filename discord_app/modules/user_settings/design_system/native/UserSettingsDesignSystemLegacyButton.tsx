@@ -1,15 +1,25 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemLegacyButton.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../design/void/native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const native = Button(1188);
-const Text_Text = Button(4886);
-const components_Button_Button = Button(5594);
-require = fn;
+let combo, entry;
+
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
 function getUniqueComparisons() {
   set = new Set();
   items = [];
@@ -47,924 +57,830 @@ function groupByLook(items) {
   }
   return obj;
 }
-get_ActivityIndicator = fn(17);
-({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
-let items = [
-  {
-    look: fn(1188).ButtonLooks.FILLED,
-    color: fn(1188).ButtonColors.BRAND,
-    size: fn(1188).ButtonSizes.LARGE,
-    shrink: false,
-    count: 1,
-  },
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-];
+({ ScrollView: c3, View: closure_4 } = react_native);
+({ jsxs: hasOwnProperty, jsx: metroRequire } = Fragment);
 let obj = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.LARGE,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.BRAND,
+  size: native.ButtonSizes.LARGE,
   shrink: false,
   count: 1,
 };
-items[1] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.MEDIUM,
-  shrink: false,
-  count: 116,
-};
+let items = [obj, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
 let obj2 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.BRAND,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 116,
 };
-items[2] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.MEDIUM,
-  shrink: true,
-  count: 12,
-};
+items[1] = obj2;
 let obj3 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.BRAND,
+  size: native.ButtonSizes.MEDIUM,
   shrink: true,
   count: 12,
 };
-items[3] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.SMALL,
-  shrink: false,
-  count: 5,
-};
+items[2] = obj3;
 let obj4 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.SMALL,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.BRAND,
+  size: native.ButtonSizes.SMALL,
   shrink: false,
   count: 5,
 };
-items[4] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.SMALL,
-  shrink: true,
-  count: 2,
-};
+items[3] = obj4;
 let obj5 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.SMALL,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.BRAND,
+  size: native.ButtonSizes.SMALL,
   shrink: true,
   count: 2,
 };
-items[5] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.XSMALL,
-  shrink: false,
-  count: 4,
-};
+items[4] = obj5;
 let obj6 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.XSMALL,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.BRAND,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 4,
 };
-items[6] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.XSMALL,
-  shrink: true,
-  count: 1,
-};
+items[5] = obj6;
 let obj7 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.XSMALL,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.BRAND,
+  size: native.ButtonSizes.XSMALL,
   shrink: true,
   count: 1,
 };
-items[7] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREEN,
-  size: fn(1188).ButtonSizes.MEDIUM,
-  shrink: false,
-  count: 1,
-};
+items[6] = obj7;
 let obj8 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREEN,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.GREEN,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 1,
 };
-items[8] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREEN,
-  size: fn(1188).ButtonSizes.MEDIUM,
-  shrink: true,
-  count: 1,
-};
+items[7] = obj8;
 let obj9 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREEN,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.GREEN,
+  size: native.ButtonSizes.MEDIUM,
   shrink: true,
   count: 1,
 };
-items[9] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREEN,
-  size: fn(1188).ButtonSizes.SMALL,
-  shrink: false,
-  count: 1,
-};
+items[8] = obj9;
 let obj10 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREEN,
-  size: fn(1188).ButtonSizes.SMALL,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.GREEN,
+  size: native.ButtonSizes.SMALL,
   shrink: false,
   count: 1,
 };
+items[9] = obj10;
 items[10] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREEN,
-  size: fn(1188).ButtonSizes.XSMALL,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.GREEN,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 1,
 };
-const obj11 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREEN,
-  size: fn(1188).ButtonSizes.XSMALL,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.GREEN,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 1,
-};
+});
 items[11] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREY,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.GREY,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 10,
 };
-const obj12 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREY,
-  size: fn(1188).ButtonSizes.MEDIUM,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.GREY,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 10,
-};
+});
 items[12] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREY,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.GREY,
+  size: native.ButtonSizes.MEDIUM,
   shrink: true,
   count: 1,
 };
-const obj13 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREY,
-  size: fn(1188).ButtonSizes.MEDIUM,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.GREY,
+  size: native.ButtonSizes.MEDIUM,
   shrink: true,
   count: 1,
-};
+});
 items[13] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREY,
-  size: fn(1188).ButtonSizes.SMALL,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.GREY,
+  size: native.ButtonSizes.SMALL,
   shrink: false,
   count: 2,
 };
-const obj14 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREY,
-  size: fn(1188).ButtonSizes.SMALL,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.GREY,
+  size: native.ButtonSizes.SMALL,
   shrink: false,
   count: 2,
-};
+});
 items[14] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREY,
-  size: fn(1188).ButtonSizes.SMALL,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.GREY,
+  size: native.ButtonSizes.SMALL,
   shrink: true,
   count: 1,
 };
-const obj15 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREY,
-  size: fn(1188).ButtonSizes.SMALL,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.GREY,
+  size: native.ButtonSizes.SMALL,
   shrink: true,
   count: 1,
-};
+});
 items[15] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREY,
-  size: fn(1188).ButtonSizes.XSMALL,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.GREY,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 1,
 };
-const obj16 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.GREY,
-  size: fn(1188).ButtonSizes.XSMALL,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.GREY,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 1,
-};
+});
 items[16] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.LIGHTGREY,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.LIGHTGREY,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 2,
 };
-const obj17 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.LIGHTGREY,
-  size: fn(1188).ButtonSizes.MEDIUM,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.LIGHTGREY,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 2,
-};
+});
 items[17] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.LIGHTGREY,
-  size: fn(1188).ButtonSizes.XSMALL,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.LIGHTGREY,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 1,
 };
-const obj18 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.LIGHTGREY,
-  size: fn(1188).ButtonSizes.XSMALL,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.LIGHTGREY,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 1,
-};
+});
 items[18] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.PRIMARY,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.PRIMARY,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 2,
 };
-const obj19 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.PRIMARY,
-  size: fn(1188).ButtonSizes.MEDIUM,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.PRIMARY,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 2,
-};
+});
 items[19] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.PRIMARY,
-  size: fn(1188).ButtonSizes.SMALL,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.PRIMARY,
+  size: native.ButtonSizes.SMALL,
   shrink: true,
   count: 2,
 };
-const obj20 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.PRIMARY,
-  size: fn(1188).ButtonSizes.SMALL,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.PRIMARY,
+  size: native.ButtonSizes.SMALL,
   shrink: true,
   count: 2,
-};
+});
 items[20] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.PRIMARY,
-  size: fn(1188).ButtonSizes.XSMALL,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.PRIMARY,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 2,
 };
-const obj21 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.PRIMARY,
-  size: fn(1188).ButtonSizes.XSMALL,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.PRIMARY,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 2,
-};
+});
 items[21] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.RED,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.RED,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 8,
 };
-const obj22 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.RED,
-  size: fn(1188).ButtonSizes.MEDIUM,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.RED,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 8,
-};
+});
 items[22] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.RED,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.RED,
+  size: native.ButtonSizes.MEDIUM,
   shrink: true,
   count: 1,
 };
-const obj23 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.RED,
-  size: fn(1188).ButtonSizes.MEDIUM,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.RED,
+  size: native.ButtonSizes.MEDIUM,
   shrink: true,
   count: 1,
-};
+});
 items[23] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.RED,
-  size: fn(1188).ButtonSizes.XSMALL,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.RED,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 1,
 };
-const obj24 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.RED,
-  size: fn(1188).ButtonSizes.XSMALL,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.RED,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 1,
-};
+});
 items[24] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.TRANSPARENT,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.TRANSPARENT,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 8,
 };
-const obj25 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.TRANSPARENT,
-  size: fn(1188).ButtonSizes.MEDIUM,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.TRANSPARENT,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 8,
-};
+});
 items[25] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.TRANSPARENT,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.TRANSPARENT,
+  size: native.ButtonSizes.MEDIUM,
   shrink: true,
   count: 3,
 };
-const obj26 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.TRANSPARENT,
-  size: fn(1188).ButtonSizes.MEDIUM,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.TRANSPARENT,
+  size: native.ButtonSizes.MEDIUM,
   shrink: true,
   count: 3,
-};
+});
 items[26] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.TRANSPARENT,
-  size: fn(1188).ButtonSizes.XSMALL,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.TRANSPARENT,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 1,
 };
-const obj27 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.TRANSPARENT,
-  size: fn(1188).ButtonSizes.XSMALL,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.TRANSPARENT,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 1,
-};
+});
 items[27] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.TRANSPARENT,
-  size: fn(1188).ButtonSizes.XSMALL,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.TRANSPARENT,
+  size: native.ButtonSizes.XSMALL,
   shrink: true,
   count: 1,
 };
-const obj28 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.TRANSPARENT,
-  size: fn(1188).ButtonSizes.XSMALL,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.TRANSPARENT,
+  size: native.ButtonSizes.XSMALL,
   shrink: true,
   count: 1,
-};
+});
 items[28] = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.WHITE,
-  size: fn(1188).ButtonSizes.SMALL,
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.WHITE,
+  size: native.ButtonSizes.SMALL,
   shrink: false,
   count: 1,
 };
-const obj29 = {
-  look: fn(1188).ButtonLooks.FILLED,
-  color: fn(1188).ButtonColors.WHITE,
-  size: fn(1188).ButtonSizes.SMALL,
+({
+  look: native.ButtonLooks.FILLED,
+  color: native.ButtonColors.WHITE,
+  size: native.ButtonSizes.SMALL,
   shrink: false,
   count: 1,
-};
+});
 items[29] = {
-  look: fn(1188).ButtonLooks.LINK,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.XSMALL,
+  look: native.ButtonLooks.LINK,
+  color: native.ButtonColors.BRAND,
+  size: native.ButtonSizes.XSMALL,
   shrink: true,
   count: 1,
 };
-const obj30 = {
-  look: fn(1188).ButtonLooks.LINK,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.XSMALL,
+({
+  look: native.ButtonLooks.LINK,
+  color: native.ButtonColors.BRAND,
+  size: native.ButtonSizes.XSMALL,
   shrink: true,
   count: 1,
-};
+});
 items[30] = {
-  look: fn(1188).ButtonLooks.LINK,
-  color: fn(1188).ButtonColors.LINK,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.LINK,
+  color: native.ButtonColors.LINK,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 3,
 };
-const obj31 = {
-  look: fn(1188).ButtonLooks.LINK,
-  color: fn(1188).ButtonColors.LINK,
-  size: fn(1188).ButtonSizes.MEDIUM,
+({
+  look: native.ButtonLooks.LINK,
+  color: native.ButtonColors.LINK,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 3,
-};
+});
 items[31] = {
-  look: fn(1188).ButtonLooks.LINK,
-  color: fn(1188).ButtonColors.LINK,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.LINK,
+  color: native.ButtonColors.LINK,
+  size: native.ButtonSizes.MEDIUM,
   shrink: true,
   count: 1,
 };
-const obj32 = {
-  look: fn(1188).ButtonLooks.LINK,
-  color: fn(1188).ButtonColors.LINK,
-  size: fn(1188).ButtonSizes.MEDIUM,
+({
+  look: native.ButtonLooks.LINK,
+  color: native.ButtonColors.LINK,
+  size: native.ButtonSizes.MEDIUM,
   shrink: true,
   count: 1,
-};
+});
 items[32] = {
-  look: fn(1188).ButtonLooks.LINK,
-  color: fn(1188).ButtonColors.LINK,
-  size: fn(1188).ButtonSizes.SMALL,
+  look: native.ButtonLooks.LINK,
+  color: native.ButtonColors.LINK,
+  size: native.ButtonSizes.SMALL,
   shrink: false,
   count: 2,
 };
-const obj33 = {
-  look: fn(1188).ButtonLooks.LINK,
-  color: fn(1188).ButtonColors.LINK,
-  size: fn(1188).ButtonSizes.SMALL,
+({
+  look: native.ButtonLooks.LINK,
+  color: native.ButtonColors.LINK,
+  size: native.ButtonSizes.SMALL,
   shrink: false,
   count: 2,
-};
+});
 items[33] = {
-  look: fn(1188).ButtonLooks.LINK,
-  color: fn(1188).ButtonColors.LINK,
-  size: fn(1188).ButtonSizes.SMALL,
+  look: native.ButtonLooks.LINK,
+  color: native.ButtonColors.LINK,
+  size: native.ButtonSizes.SMALL,
   shrink: true,
   count: 1,
 };
-const obj34 = {
-  look: fn(1188).ButtonLooks.LINK,
-  color: fn(1188).ButtonColors.LINK,
-  size: fn(1188).ButtonSizes.SMALL,
+({
+  look: native.ButtonLooks.LINK,
+  color: native.ButtonColors.LINK,
+  size: native.ButtonSizes.SMALL,
   shrink: true,
   count: 1,
-};
+});
 items[34] = {
-  look: fn(1188).ButtonLooks.LINK,
-  color: fn(1188).ButtonColors.LINK,
-  size: fn(1188).ButtonSizes.XSMALL,
+  look: native.ButtonLooks.LINK,
+  color: native.ButtonColors.LINK,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 1,
 };
-const obj35 = {
-  look: fn(1188).ButtonLooks.LINK,
-  color: fn(1188).ButtonColors.LINK,
-  size: fn(1188).ButtonSizes.XSMALL,
+({
+  look: native.ButtonLooks.LINK,
+  color: native.ButtonColors.LINK,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 1,
-};
+});
 items[35] = {
-  look: fn(1188).ButtonLooks.LINK,
-  color: fn(1188).ButtonColors.TRANSPARENT,
-  size: fn(1188).ButtonSizes.XSMALL,
+  look: native.ButtonLooks.LINK,
+  color: native.ButtonColors.TRANSPARENT,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 1,
 };
-const obj36 = {
-  look: fn(1188).ButtonLooks.LINK,
-  color: fn(1188).ButtonColors.TRANSPARENT,
-  size: fn(1188).ButtonSizes.XSMALL,
+({
+  look: native.ButtonLooks.LINK,
+  color: native.ButtonColors.TRANSPARENT,
+  size: native.ButtonSizes.XSMALL,
   shrink: false,
   count: 1,
-};
+});
 items[36] = {
-  look: fn(1188).ButtonLooks.OUTLINED,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.OUTLINED,
+  color: native.ButtonColors.BRAND,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 2,
 };
-const obj37 = {
-  look: fn(1188).ButtonLooks.OUTLINED,
-  color: fn(1188).ButtonColors.BRAND,
-  size: fn(1188).ButtonSizes.MEDIUM,
+({
+  look: native.ButtonLooks.OUTLINED,
+  color: native.ButtonColors.BRAND,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 2,
-};
+});
 items[37] = {
-  look: fn(1188).ButtonLooks.OUTLINED,
-  color: fn(1188).ButtonColors.GREY,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.OUTLINED,
+  color: native.ButtonColors.GREY,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 1,
 };
-const obj38 = {
-  look: fn(1188).ButtonLooks.OUTLINED,
-  color: fn(1188).ButtonColors.GREY,
-  size: fn(1188).ButtonSizes.MEDIUM,
+({
+  look: native.ButtonLooks.OUTLINED,
+  color: native.ButtonColors.GREY,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 1,
-};
+});
 items[38] = {
-  look: fn(1188).ButtonLooks.OUTLINED,
-  color: fn(1188).ButtonColors.PRIMARY,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.OUTLINED,
+  color: native.ButtonColors.PRIMARY,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 1,
 };
-const obj39 = {
-  look: fn(1188).ButtonLooks.OUTLINED,
-  color: fn(1188).ButtonColors.PRIMARY,
-  size: fn(1188).ButtonSizes.MEDIUM,
+({
+  look: native.ButtonLooks.OUTLINED,
+  color: native.ButtonColors.PRIMARY,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 1,
-};
+});
 items[39] = {
-  look: fn(1188).ButtonLooks.OUTLINED,
-  color: fn(1188).ButtonColors.TRANSPARENT,
-  size: fn(1188).ButtonSizes.MEDIUM,
+  look: native.ButtonLooks.OUTLINED,
+  color: native.ButtonColors.TRANSPARENT,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 1,
 };
-const obj40 = {
-  look: fn(1188).ButtonLooks.OUTLINED,
-  color: fn(1188).ButtonColors.TRANSPARENT,
-  size: fn(1188).ButtonSizes.MEDIUM,
+({
+  look: native.ButtonLooks.OUTLINED,
+  color: native.ButtonColors.TRANSPARENT,
+  size: native.ButtonSizes.MEDIUM,
   shrink: false,
   count: 1,
-};
+});
 items[40] = {
-  look: fn(1188).ButtonLooks.OUTLINED,
-  color: fn(1188).ButtonColors.WHITE,
-  size: fn(1188).ButtonSizes.SMALL,
+  look: native.ButtonLooks.OUTLINED,
+  color: native.ButtonColors.WHITE,
+  size: native.ButtonSizes.SMALL,
   shrink: false,
   count: 1,
 };
-let items1 = [fn(1188).ButtonColors.WHITE];
+let items1 = [];
+({
+  look: native.ButtonLooks.OUTLINED,
+  color: native.ButtonColors.WHITE,
+  size: native.ButtonSizes.SMALL,
+  shrink: false,
+  count: 1,
+});
+items1[0] = native.ButtonColors.WHITE;
 let set = new Set(items1);
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   ? (entry) => {
-      let Button = require;
-      let tmp = dependencyMap;
-      const cResult = c.c(33);
+      let items1;
+      let items2;
+      let items3;
+      let items4;
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(33);
       entry = entry.entry;
-      const tmp3 = closure_13();
+      const tmp4 = closure_13();
       if (cResult[0] !== entry.color) {
         const hasItem = set.has(entry.color);
         cResult[0] = entry.color;
         cResult[1] = hasItem;
-        let tmp4 = hasItem;
+        tmp5 = hasItem;
       } else {
-        tmp4 = cResult[1];
+        tmp5 = cResult[1];
       }
       const combined = "" + entry.color;
-      const tmp8 = entry.look === native.ButtonLooks.LINK;
+      const tmp9 = entry.look === native.ButtonLooks.LINK;
       if (cResult[2] === entry.color) {
-        if (cResult[3] === tmp8) {
-          let comparisonSide = cResult[4];
+        let tmp10;
+        if (cResult[3] === tmp9) {
+          tmp10 = cResult[4];
         }
-        let darkBg = tmp4;
-        if (tmp4) {
-          darkBg = tmp3.darkBg;
-        }
-        if (cResult[5] === tmp3.comparisonRow) {
-          if (cResult[6] === darkBg) {
-            let tmp10 = cResult[7];
+        if (cResult[5] === tmp4.comparisonRow) {
+          let tmp13;
+          if (cResult[6] === (tmp5 && tmp4.darkBg)) {
+            tmp13 = cResult[7];
           }
           let str = "text-muted";
-          if (tmp4) {
+          if (tmp5) {
             str = "text-default";
           }
-          let str2 = comparisonSide;
-          if (comparisonSide == null) {
+          let str2 = tmp10;
+          if (tmp10 == null) {
             str2 = "unmapped";
           }
           if (cResult[8] === combined) {
             if (cResult[9] === str) {
+              let tmp15;
+              let tmp18;
+              let tmp22;
               if (cResult[10] === str2) {
-                let tmp12 = cResult[11];
+                tmp15 = cResult[11];
               }
               const _Symbol = Symbol;
               if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmp17 = timestampProducer(Text_Text.Text, {
+                const tmp20 = metroRequire(Text_Text.Text, {
                   variant: "text-xxs/medium",
                   color: "text-muted",
                   children: "legacy",
                 });
-                cResult[12] = tmp17;
-                let tmp15 = tmp17;
+                cResult[12] = tmp20;
+                tmp18 = tmp20;
               } else {
-                tmp15 = cResult[12];
+                tmp18 = cResult[12];
               }
               let darkText = null;
-              if (tmp4) {
+              if (tmp5) {
                 darkText = null;
                 if (entry.look === native.ButtonLooks.FILLED) {
-                  darkText = tmp3.darkText;
+                  darkText = tmp4.darkText;
                 }
               }
               const _Symbol2 = Symbol;
               if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
                 const fn = function v() {};
                 cResult[13] = fn;
-                let tmp19 = fn;
+                tmp22 = fn;
               } else {
-                tmp19 = cResult[13];
+                tmp22 = cResult[13];
               }
               if (cResult[14] === entry.color) {
                 if (cResult[15] === entry.look) {
                   if (cResult[16] === combined) {
+                    let tmp23;
                     if (cResult[17] === darkText) {
-                      let tmp20 = cResult[18];
+                      tmp23 = cResult[18];
                     }
-                    if (cResult[19] === tmp3.comparisonSide) {
-                      if (cResult[20] === tmp20) {
-                        let tmp23 = cResult[21];
+                    if (cResult[19] === tmp4.comparisonSide) {
+                      let tmp26;
+                      let tmp33;
+                      if (cResult[20] === tmp23) {
+                        tmp26 = cResult[21];
                       }
-                      if (cResult[22] === comparisonSide) {
-                        if (cResult[23] === tmp3.comparisonSide) {
-                          if (cResult[25] === tmp3.comparisonButtons) {
-                            if (cResult[26] === tmp23) {
-                              if (cResult[27] === tmp27) {
-                                let tmp35 = cResult[28];
-                              }
-                              if (cResult[29] === tmp35) {
-                                if (cResult[30] === tmp10) {
-                                  if (cResult[31] === tmp12) {
-                                    let tmp39 = cResult[32];
-                                  }
-                                  return tmp39;
-                                }
-                              }
-                              const obj2 = { style: tmp10, children: null };
-                              items = [tmp12, tmp35];
-                              obj2.children = items;
-                              const tmp42 = hasOwnProperty(React4, obj2);
-                              cResult[29] = tmp35;
-                              cResult[30] = tmp10;
-                              cResult[31] = tmp12;
-                              cResult[32] = tmp42;
-                              tmp39 = tmp42;
-                            }
-                          }
-                          const obj3 = { style: tmp3.comparisonButtons, children: null };
-                          const items1 = [tmp23, cResult[24]];
-                          obj3.children = items1;
-                          const tmp38 = hasOwnProperty(React4, obj3);
-                          cResult[25] = tmp3.comparisonButtons;
-                          cResult[26] = tmp23;
-                          cResult[27] = cResult[24];
-                          cResult[28] = tmp38;
-                          tmp35 = tmp38;
+                      if (cResult[22] === tmp10) {
+                        let tmp30;
+                        if (cResult[23] === tmp4.comparisonSide) {
+                          tmp30 = cResult[24];
                         }
+                        if (cResult[25] === tmp4.comparisonButtons) {
+                          if (cResult[26] === tmp26) {
+                            let tmp37;
+                            if (cResult[27] === tmp30) {
+                              tmp37 = cResult[28];
+                            }
+                            if (cResult[29] === tmp37) {
+                              if (cResult[30] === tmp13) {
+                                let tmp41;
+                                if (cResult[31] === tmp15) {
+                                  tmp41 = cResult[32];
+                                }
+                                return tmp41;
+                              }
+                            }
+                            const obj2 = { style: tmp13, children: items };
+                            items = [tmp15, tmp37];
+                            const tmp44 = hasOwnProperty(React3, obj2);
+                            cResult[29] = tmp37;
+                            cResult[30] = tmp13;
+                            cResult[31] = tmp15;
+                            cResult[32] = tmp44;
+                            tmp41 = tmp44;
+                          }
+                        }
+                        const obj3 = { style: tmp4.comparisonButtons, children: items1 };
+                        items1 = [tmp26, tmp30];
+                        const tmp40 = hasOwnProperty(React3, obj3);
+                        cResult[25] = tmp4.comparisonButtons;
+                        cResult[26] = tmp26;
+                        cResult[27] = tmp30;
+                        cResult[28] = tmp40;
+                        tmp37 = tmp40;
                       }
-                      if (null != comparisonSide) {
-                        const obj5 = { style: tmp3.comparisonSide, children: null };
-                        const items2 = [
-                          timestampProducer(Text_Text.Text, {
+                      if (null != tmp10) {
+                        const obj5 = { style: tmp4.comparisonSide, children: items2 };
+                        items2 = [
+                          metroRequire(Text_Text.Text, {
                             variant: "text-xxs/medium",
                             color: "text-muted",
                             children: "mana",
                           }),
                         ];
-                        Button = components_Button_Button.Button;
                         const obj6 = {
-                          variant: comparisonSide,
+                          variant: tmp10,
                           size: "md",
-                          text: comparisonSide,
+                          text: tmp10,
                           onPress() {},
                         };
-                        tmp = timestampProducer(Button, obj6);
-                        items2[1] = tmp;
-                        obj5.children = items2;
-                        let tmp30 = hasOwnProperty(React4, obj5);
+                        items2[1] = metroRequire(components_Button_Button.Button, obj6);
+                        tmp33 = hasOwnProperty(React3, obj5);
                       } else {
                         const obj7 = {
-                          style: tmp3.comparisonSide,
-                          children: timestampProducer(Text_Text.Text, {
+                          style: tmp4.comparisonSide,
+                          children: metroRequire(Text_Text.Text, {
                             variant: "text-xs/medium",
                             color: "text-muted",
                             children: "no mapping",
                           }),
                         };
-                        tmp30 = timestampProducer(React4, obj7);
+                        tmp33 = metroRequire(React3, obj7);
                       }
-                      cResult[22] = comparisonSide;
-                      comparisonSide = tmp3.comparisonSide;
-                      cResult[23] = comparisonSide;
-                      cResult[24] = tmp30;
+                      cResult[22] = tmp10;
+                      cResult[23] = tmp4.comparisonSide;
+                      cResult[24] = tmp33;
+                      tmp30 = tmp33;
                     }
-                    const obj8 = { style: tmp3.comparisonSide, children: null };
-                    const items3 = [tmp15, tmp20];
-                    obj8.children = items3;
-                    const tmp26 = hasOwnProperty(React4, obj8);
-                    cResult[19] = tmp3.comparisonSide;
-                    cResult[20] = tmp20;
-                    cResult[21] = tmp26;
-                    tmp23 = tmp26;
+                    const obj8 = { style: tmp4.comparisonSide, children: items3 };
+                    items3 = [tmp18, tmp23];
+                    const tmp29 = hasOwnProperty(React3, obj8);
+                    cResult[19] = tmp4.comparisonSide;
+                    cResult[20] = tmp23;
+                    cResult[21] = tmp29;
+                    tmp26 = tmp29;
                   }
                 }
               }
+              ({ look: obj4.look, color: obj4.color } = entry);
               const obj9 = {
                 look: null,
                 color: null,
-                size: null,
+                size: native.ButtonSizes.MEDIUM,
                 shrink: true,
-                text: null,
-                textStyle: null,
-                onPress: null,
+                text: combined,
+                textStyle: darkText,
+                onPress: tmp22,
               };
-              ({ look: obj4.look, color: obj4.color } = entry);
-              obj9.size = native.ButtonSizes.MEDIUM;
-              obj9.text = combined;
-              obj9.textStyle = darkText;
-              obj9.onPress = tmp19;
-              const tmp22 = timestampProducer(native.Button, obj9);
+              const Button = native.Button;
+              const tmp25 = metroRequire(Button, obj9);
               cResult[14] = entry.color;
               cResult[15] = entry.look;
               cResult[16] = combined;
               cResult[17] = darkText;
-              cResult[18] = tmp22;
-              tmp20 = tmp22;
+              cResult[18] = tmp25;
+              tmp23 = tmp25;
             }
           }
-          const obj10 = { variant: "text-xs/medium", color: str, children: null };
-          const items4 = [combined, " \u2192 ", str2];
-          obj10.children = items4;
-          const tmp14 = hasOwnProperty(Text_Text.Text, obj10);
+          const obj10 = { variant: "text-xs/medium", color: str, children: items4 };
+          items4 = [combined, " \u2192 ", str2];
+          const tmp17 = hasOwnProperty(Text_Text.Text, obj10);
           cResult[8] = combined;
           cResult[9] = str;
           cResult[10] = str2;
-          cResult[11] = tmp14;
-          tmp12 = tmp14;
+          cResult[11] = tmp17;
+          tmp15 = tmp17;
         }
-        const items5 = [tmp3.comparisonRow, darkBg];
-        cResult[5] = tmp3.comparisonRow;
-        cResult[6] = darkBg;
+        const items5 = [tmp4.comparisonRow, tmp5 && tmp4.darkBg];
+        cResult[5] = tmp4.comparisonRow;
+        cResult[6] = tmp5 && tmp4.darkBg;
         cResult[7] = items5;
-        tmp10 = items5;
+        tmp13 = items5;
       }
       let redesignVariant = null;
-      if (!tmp8) {
-        redesignVariant = native.getRedesignVariant(entry.color);
-        const ButtonResult = native;
+      if (!tmp9) {
+        const tmpResult = native;
+        redesignVariant = tmpResult.getRedesignVariant(entry.color);
       }
       cResult[2] = entry.color;
-      cResult[3] = tmp8;
+      cResult[3] = tmp9;
       cResult[4] = redesignVariant;
-      comparisonSide = redesignVariant;
+      tmp10 = redesignVariant;
     }
   : (entry) => {
+      let darkText;
+      let items1;
+      let items2;
+      let items3;
+      let items4;
+      let items5;
+      let tmp10Result;
       entry = entry.entry;
       const tmp = closure_13();
       const hasItem = set.has(entry.color);
       const combined = "" + entry.color;
       let redesignVariant = null;
       if (entry.look !== native.ButtonLooks.LINK) {
-        redesignVariant = native.getRedesignVariant(entry.color);
         const tmp4Result = native;
+        redesignVariant = tmp4Result.getRedesignVariant(entry.color);
       }
       items = [tmp.comparisonRow];
-      let darkBg = hasItem;
-      if (hasItem) {
-        darkBg = tmp.darkBg;
-      }
-      const obj = { style: items, children: null };
-      items[1] = darkBg;
+      const obj = { style: items, children: items2 };
+      const tmp9 = hasItem && tmp.darkBg;
+      items[1] = tmp9;
       let str = "text-muted";
+      const Text = Text_Text.Text;
       if (hasItem) {
         str = "text-default";
       }
-      const obj2 = { variant: "text-xs/medium", color: str, children: null };
-      const items1 = [combined, " \u2192 "];
+      const obj2 = { variant: "text-xs/medium", color: str, children: items1 };
+      items1 = [combined, " \u2192 "];
       let str2 = redesignVariant;
       if (redesignVariant == null) {
         str2 = "unmapped";
       }
       items1[2] = str2;
-      obj2.children = items1;
-      const items2 = [hasOwnProperty(Text_Text.Text, obj2)];
-      const obj3 = { style: tmp.comparisonButtons, children: null };
-      const obj4 = { style: tmp.comparisonSide, children: null };
-      const items3 = [
-        timestampProducer(Text_Text.Text, { variant: "text-xxs/medium", color: "text-muted", children: "legacy" }),
-      ];
+      items2 = [hasOwnProperty(Text, obj2)];
+      const obj3 = { style: tmp.comparisonButtons, children: items4 };
+      const obj4 = { style: tmp.comparisonSide, children: items3 };
+      items3 = [metroRequire(Text_Text.Text, { variant: "text-xxs/medium", color: "text-muted", children: "legacy" })];
       const obj5 = {
         look: entry.look,
         color: entry.color,
         size: native.ButtonSizes.MEDIUM,
         shrink: true,
         text: combined,
-        textStyle: null,
-        onPress: null,
+        textStyle: darkText,
+        onPress() {},
       };
-      let darkText = null;
+      const Button = native.Button;
+      darkText = null;
       if (hasItem) {
         darkText = null;
         if (entry.look === native.ButtonLooks.FILLED) {
           darkText = tmp.darkText;
         }
       }
-      obj5.textStyle = darkText;
-      obj5.onPress = function onPress() {};
-      items3[1] = timestampProducer(native.Button, obj5);
-      obj4.children = items3;
-      const items4 = [hasOwnProperty(React4, obj4)];
+      items3[1] = metroRequire(Button, obj5);
+      items4 = [hasOwnProperty(React3, obj4)];
       if (null != redesignVariant) {
-        const obj6 = { style: tmp.comparisonSide, children: null };
-        const items5 = [
-          timestampProducer(Text_Text.Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" }),
-        ];
+        const obj6 = { style: tmp.comparisonSide, children: items5 };
+        items5 = [metroRequire(Text_Text.Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" })];
         const obj7 = {
           variant: redesignVariant,
           size: "md",
           text: redesignVariant,
           onPress() {},
         };
-        items5[1] = timestampProducer(components_Button_Button.Button, obj7);
-        obj6.children = items5;
-        let tmp9Result = hasOwnProperty(React4, obj6);
+        items5[1] = metroRequire(components_Button_Button.Button, obj7);
+        tmp10Result = hasOwnProperty(React3, obj6);
       } else {
         const obj8 = {
           style: tmp.comparisonSide,
-          children: timestampProducer(Text_Text.Text, {
+          children: metroRequire(Text_Text.Text, {
             variant: "text-xs/medium",
             color: "text-muted",
             children: "no mapping",
           }),
         };
-        tmp9Result = timestampProducer(React4, obj8);
+        tmp10Result = metroRequire(React3, obj8);
       }
-      items4[1] = tmp9Result;
-      obj3.children = items4;
-      items2[1] = hasOwnProperty(React4, obj3);
-      obj.children = items2;
-      return hasOwnProperty(React4, obj);
+      items4[1] = tmp10Result;
+      items2[1] = hasOwnProperty(React3, obj3);
+      return hasOwnProperty(React3, obj);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? (combo) => {
-      const cResult = c.c(21);
+      let color;
+      let items1;
+      let tmp6;
+      const obj = react2;
+      const cResult = obj.c(21);
       combo = combo.combo;
       const tmp4 = closure_13();
       ({ color, size } = combo);
@@ -977,17 +893,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         const hasItem = set.has(combo.color);
         cResult[0] = combo.color;
         cResult[1] = hasItem;
-        let tmp6 = hasItem;
+        tmp6 = hasItem;
       } else {
         tmp6 = cResult[1];
       }
-      let darkBg = tmp6;
-      if (tmp6) {
-        darkBg = tmp4.darkBg;
-      }
       if (cResult[2] === tmp4.comboRow) {
-        if (cResult[3] === darkBg) {
-          let tmp9 = cResult[4];
+        let tmp10;
+        if (cResult[3] === (tmp6 && tmp4.darkBg)) {
+          tmp10 = cResult[4];
         }
         let str2 = "text-muted";
         if (tmp6) {
@@ -995,8 +908,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[5] === combo.count) {
           if (cResult[6] === combined) {
+            let tmp11;
+            let tmp15;
             if (cResult[7] === str2) {
-              let tmp10 = cResult[8];
+              tmp11 = cResult[8];
             }
             let darkText = null;
             if (tmp6) {
@@ -1009,35 +924,36 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
               const fn = function x() {};
               cResult[9] = fn;
-              let tmp14 = fn;
+              tmp15 = fn;
             } else {
-              tmp14 = cResult[9];
+              tmp15 = cResult[9];
             }
             if (cResult[10] === combo.color) {
               if (cResult[11] === combo.look) {
                 if (cResult[12] === combo.shrink) {
                   if (cResult[13] === combo.size) {
                     if (cResult[14] === combined) {
+                      let tmp16;
                       if (cResult[15] === darkText) {
-                        let tmp15 = cResult[16];
+                        tmp16 = cResult[16];
                       }
-                      if (cResult[17] === tmp9) {
-                        if (cResult[18] === tmp10) {
-                          if (cResult[19] === tmp15) {
-                            let tmp18 = cResult[20];
+                      if (cResult[17] === tmp10) {
+                        if (cResult[18] === tmp11) {
+                          let tmp19;
+                          if (cResult[19] === tmp16) {
+                            tmp19 = cResult[20];
                           }
-                          return tmp18;
+                          return tmp19;
                         }
                       }
-                      const obj2 = { style: tmp9, children: null };
-                      items = [tmp10, tmp15];
-                      obj2.children = items;
-                      const tmp21 = hasOwnProperty(React4, obj2);
-                      cResult[17] = tmp9;
-                      cResult[18] = tmp10;
-                      cResult[19] = tmp15;
-                      cResult[20] = tmp21;
-                      tmp18 = tmp21;
+                      const obj2 = { style: tmp10, children: items };
+                      items = [tmp11, tmp16];
+                      const tmp22 = hasOwnProperty(React3, obj2);
+                      cResult[17] = tmp10;
+                      cResult[18] = tmp11;
+                      cResult[19] = tmp16;
+                      cResult[20] = tmp22;
+                      tmp19 = tmp22;
                     }
                   }
                 }
@@ -1048,42 +964,42 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               color: null,
               size: null,
               shrink: null,
-              text: null,
-              textStyle: null,
-              onPress: null,
+              text: combined,
+              textStyle: darkText,
+              onPress: tmp15,
             };
             ({ look: obj3.look, color: obj3.color, size: obj3.size, shrink: obj3.shrink } = combo);
-            obj4.text = combined;
-            obj4.textStyle = darkText;
-            obj4.onPress = tmp14;
-            const tmp17 = timestampProducer(native.Button, obj4);
+            const tmp18 = metroRequire(native.Button, obj4);
             cResult[10] = combo.color;
             cResult[11] = combo.look;
             cResult[12] = combo.shrink;
             cResult[13] = combo.size;
             cResult[14] = combined;
             cResult[15] = darkText;
-            cResult[16] = tmp17;
-            tmp15 = tmp17;
+            cResult[16] = tmp18;
+            tmp16 = tmp18;
           }
         }
-        const obj7 = { variant: "text-xs/medium", color: str2, children: null };
-        const items1 = [combined, " (", combo.count, ")"];
-        obj7.children = items1;
-        const tmp12 = hasOwnProperty(Text_Text.Text, obj7);
+        const obj7 = { variant: "text-xs/medium", color: str2, children: items1 };
+        items1 = [combined, " (", combo.count, ")"];
+        const tmp13 = hasOwnProperty(Text_Text.Text, obj7);
         cResult[5] = combo.count;
         cResult[6] = combined;
         cResult[7] = str2;
-        cResult[8] = tmp12;
-        tmp10 = tmp12;
+        cResult[8] = tmp13;
+        tmp11 = tmp13;
       }
-      const items2 = [tmp4.comboRow, darkBg];
+      const items2 = [tmp4.comboRow, tmp6 && tmp4.darkBg];
       cResult[2] = tmp4.comboRow;
-      cResult[3] = darkBg;
+      cResult[3] = tmp6 && tmp4.darkBg;
       cResult[4] = items2;
-      tmp9 = items2;
+      tmp10 = items2;
     }
   : (combo) => {
+      let color;
+      let darkText;
+      let items1;
+      let items2;
       combo = combo.combo;
       const tmp = closure_13();
       ({ color, size } = combo);
@@ -1094,232 +1010,213 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const combined = "" + color + " / " + size + str;
       const hasItem = set.has(combo.color);
       items = [tmp.comboRow];
-      let darkBg = hasItem;
-      if (hasItem) {
-        darkBg = tmp.darkBg;
-      }
-      const obj = { style: items, children: null };
+      const darkBg = hasItem && tmp.darkBg;
+      const obj = { style: items, children: items2 };
       items[1] = darkBg;
       let str2 = "text-muted";
+      const Text = Text_Text.Text;
       if (hasItem) {
         str2 = "text-default";
       }
-      const obj2 = { variant: "text-xs/medium", color: str2, children: null };
-      const items1 = [combined, " (", combo.count, ")"];
-      obj2.children = items1;
-      const items2 = [hasOwnProperty(Text_Text.Text, obj2)];
+      const obj2 = { variant: "text-xs/medium", color: str2, children: items1 };
+      items1 = [combined, " (", combo.count, ")"];
+      items2 = [hasOwnProperty(Text, obj2)];
       const obj3 = {
         look: combo.look,
         color: combo.color,
         size: combo.size,
         shrink: combo.shrink,
         text: combined,
-        textStyle: null,
-        onPress: null,
+        textStyle: darkText,
+        onPress() {},
       };
-      let darkText = null;
+      darkText = null;
+      const Button = native.Button;
       if (hasItem) {
         darkText = null;
         if (combo.look === native.ButtonLooks.FILLED) {
           darkText = tmp.darkText;
         }
       }
-      obj3.textStyle = darkText;
-      obj3.onPress = function onPress() {};
-      items2[1] = timestampProducer(native.Button, obj3);
-      obj.children = items2;
-      return hasOwnProperty(React4, obj);
+      items2[1] = metroRequire(Button, obj3);
+      return hasOwnProperty(React3, obj);
     };
-const createStyles = fn(4890);
-const obj45 = {
-  comboRow: null,
-  darkText: null,
-  darkBg: null,
-  comparisonRow: null,
-  comparisonButtons: null,
-  comparisonSide: null,
-  container: null,
-  header: null,
+let createStyles = createStyles_mod;
+createStyles = createStyles.createStyles;
+const obj42 = {
+  comboRow: { gap: 4, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4 },
+  darkText: { color: nativeDefault.unsafe_rawColors.GREEN_360 },
+  darkBg: {
+    backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600,
+    borderRadius: nativeDefault.radii.sm,
+    marginHorizontal: nativeDefault.space.PX_8,
+    paddingHorizontal: nativeDefault.space.PX_8,
+    paddingVertical: nativeDefault.space.PX_8,
+  },
+  comparisonRow: { gap: 4, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_8 },
+  comparisonButtons: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "flex-end" },
+  comparisonSide: { flex: 1, gap: 2 },
+  container: { paddingBottom: nativeDefault.space.PX_48 },
+  header: {
+    paddingHorizontal: nativeDefault.space.PX_16,
+    paddingTop: nativeDefault.space.PX_16,
+    paddingBottom: nativeDefault.space.PX_8,
+  },
 };
-const obj41 = {
-  look: fn(1188).ButtonLooks.OUTLINED,
-  color: fn(1188).ButtonColors.WHITE,
-  size: fn(1188).ButtonSizes.SMALL,
-  shrink: false,
-  count: 1,
-};
-obj45.comboRow = { gap: 4, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4 };
-const obj46 = { gap: 4, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4 };
-obj45.darkText = { color: nativeDefault.unsafe_rawColors.GREEN_360 };
-const obj47 = { color: nativeDefault.unsafe_rawColors.GREEN_360 };
-obj45.darkBg = {
+({ gap: 4, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4 });
+({ color: nativeDefault.unsafe_rawColors.GREEN_360 });
+({
   backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600,
   borderRadius: nativeDefault.radii.sm,
   marginHorizontal: nativeDefault.space.PX_8,
   paddingHorizontal: nativeDefault.space.PX_8,
   paddingVertical: nativeDefault.space.PX_8,
-};
-const obj48 = {
-  backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600,
-  borderRadius: nativeDefault.radii.sm,
-  marginHorizontal: nativeDefault.space.PX_8,
-  paddingHorizontal: nativeDefault.space.PX_8,
-  paddingVertical: nativeDefault.space.PX_8,
-};
-obj45.comparisonRow = {
-  gap: 4,
-  paddingHorizontal: nativeDefault.space.PX_16,
-  paddingVertical: nativeDefault.space.PX_8,
-};
-const obj49 = { gap: 4, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_8 };
-obj45.comparisonButtons = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "flex-end" };
-obj45.comparisonSide = { flex: 1, gap: 2 };
-const obj50 = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "flex-end" };
-obj45.container = { paddingBottom: nativeDefault.space.PX_48 };
-const obj51 = { paddingBottom: nativeDefault.space.PX_48 };
-obj45.header = {
+});
+({ gap: 4, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_8 });
+({ flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "flex-end" });
+({ paddingBottom: nativeDefault.space.PX_48 });
+({
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingTop: nativeDefault.space.PX_16,
   paddingBottom: nativeDefault.space.PX_8,
-};
-let closure_13 = createStyles.createStyles(obj45);
-ReactCompilerGating = fn(558);
-const obj52 = {
-  paddingHorizontal: nativeDefault.space.PX_16,
-  paddingTop: nativeDefault.space.PX_16,
-  paddingBottom: nativeDefault.space.PX_8,
-};
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/user_settings/design_system/native/UserSettingsDesignSystemLegacyButton.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+});
+let closure_13 = createStyles(obj42);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(10);
+      let items1;
+      let items2;
+      let tmp3;
+      let obj = react2;
+      const cResult = obj.c(10);
       const tmp2 = closure_13();
       if (cResult[0] !== tmp2) {
-        let num = 0;
-        const tmp7 = getUniqueComparisons();
-        let obj2 = {};
-        const iter = tmp7[Symbol.iterator]();
+        let tmp20;
+        let tmp19;
+        let tmp26;
+        let tmp32;
+        let tmp31;
+        let tmp38;
+        const tmp6 = groupByLook(items);
+        const obj2 = {};
+        const tmp8 = getUniqueComparisons();
+        const iter = tmp8[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
-          let tmp13 = nextResult;
+          let tmp14 = nextResult;
           if (null == obj2[nextResult.look]) {
-            obj2[tmp13.look] = [];
+            obj2[tmp14.look] = [];
           }
-          let arr = obj2[tmp13.look];
-          let arr2 = arr.push(tmp13);
+          let arr = obj2[tmp14.look];
+          let arr2 = arr.push(tmp14);
           continue;
         }
-        let map = globalThis;
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp22 = timestampProducer(Text_Text.Text, {
-            variant: "heading-xl/bold",
-            children: "Migration Mapping",
-          });
-          const tmp23 = timestampProducer(Text_Text.Text, {
+          const tmp24 = metroRequire(Text_Text.Text, { variant: "heading-xl/bold", children: "Migration Mapping" });
+          const tmp25 = metroRequire(Text_Text.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
             children: "Legacy (uikit-native) \u2192 Mana side-by-side",
           });
-          cResult[2] = tmp22;
-          cResult[3] = tmp23;
-          let tmp18 = tmp23;
-          let tmp17 = tmp22;
+          cResult[2] = tmp24;
+          cResult[3] = tmp25;
+          tmp20 = tmp25;
+          tmp19 = tmp24;
         } else {
-          tmp17 = cResult[2];
-          tmp18 = cResult[3];
+          tmp19 = cResult[2];
+          tmp20 = cResult[3];
         }
         if (cResult[4] !== tmp2.header) {
-          const obj3 = { spacing: 4, style: tmp2.header, children: null };
-          items = [tmp17, tmp18];
-          obj3.children = items;
-          const tmp28 = hasOwnProperty(Stack_Stack.Stack, obj3);
+          const obj3 = { spacing: 4, style: tmp2.header, children: items };
+          items = [tmp19, tmp20];
+          const tmp30 = hasOwnProperty(Stack_Stack.Stack, obj3);
           cResult[4] = tmp2.header;
-          cResult[5] = tmp28;
-          let map2Result = tmp28;
+          cResult[5] = tmp30;
+          tmp26 = tmp30;
         } else {
-          map2Result = cResult[5];
+          tmp26 = cResult[5];
         }
         const _Symbol2 = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp33 = timestampProducer(Text_Text.Text, {
-            variant: "heading-xl/bold",
-            children: "Legacy Button Audit",
-          });
-          const tmp34 = timestampProducer(Text_Text.Text, {
+          const tmp36 = metroRequire(Text_Text.Text, { variant: "heading-xl/bold", children: "Legacy Button Audit" });
+          const tmp37 = metroRequire(Text_Text.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
             children: "41 combinations across 185 importers",
           });
-          cResult[6] = tmp33;
-          cResult[7] = tmp34;
-          let map2 = tmp34;
-          let tmp29 = tmp33;
+          cResult[6] = tmp36;
+          cResult[7] = tmp37;
+          tmp32 = tmp37;
+          tmp31 = tmp36;
         } else {
-          tmp29 = cResult[6];
-          map2 = cResult[7];
+          tmp31 = cResult[6];
+          tmp32 = cResult[7];
         }
         if (cResult[8] !== tmp2.header) {
-          const obj4 = { spacing: 4, style: tmp2.header, children: null };
-          const items1 = [tmp29, map2];
-          obj4.children = items1;
-          const tmp39 = hasOwnProperty(Stack_Stack.Stack, obj4);
+          const obj4 = { spacing: 4, style: tmp2.header, children: items1 };
+          items1 = [tmp31, tmp32];
+          const tmp42 = hasOwnProperty(Stack_Stack.Stack, obj4);
           cResult[8] = tmp2.header;
-          cResult[9] = tmp39;
-          let tmp35 = tmp39;
+          cResult[9] = tmp42;
+          tmp38 = tmp42;
         } else {
-          tmp35 = cResult[9];
+          tmp38 = cResult[9];
         }
-        const obj5 = { style: tmp2.container, children: null };
-        const items2 = [map2Result, , ,];
-        const _Object = map.Object;
-        obj2 = _Object.entries(obj2);
-        map2 = obj2.map;
-        map2Result = map2((arg0) => {
-          [tmp2, arr] = arg0;
-          const tmp = _slicedToArray(arg0, 2);
-          return closure_1_6(
-            Form.FormSection,
-            { title: tmp2, children: arr.map((entry, index) => closure_1_6(closure_1_10, { entry }, index)) },
-            "cmp-" + tmp2,
-          );
+        const obj5 = { style: tmp2.container, children: items2 };
+        items2 = [tmp26, , ,];
+        const _Object = Object;
+        const entries = Object.entries(obj2);
+        items2[1] = entries.map((item) => {
+          let arr;
+          let tmp2;
+          [tmp2, arr] = item;
+          let obj = {
+            title: tmp2,
+            children: arr.map((entry, index) => {
+              const obj = { entry };
+              return closure_1_6(closure_1_10, obj, index);
+            }),
+          };
+          _slicedToArray(item, 2);
+          const FormSection = Form.FormSection;
+          return closure_1_6(FormSection, obj, "cmp-" + tmp2);
         });
-        items2[1] = map2Result;
-        items2[2] = tmp35;
-        const _Object2 = map.Object;
-        const entries = _Object2.entries(groupByLook(items));
-        map = entries.map;
-        items2[3] = map((arg0) => {
-          [tmp2, arr] = arg0;
-          const tmp = _slicedToArray(arg0, 2);
-          return closure_1_6(
-            Form.FormSection,
-            {
-              title: "" + tmp2 + " (" + arr.reduce((acc, count) => acc + count.count, 0) + " usages)",
-              children: arr.map((combo, index) => closure_1_6(closure_1_11, { combo }, index)),
-            },
-            tmp2,
-          );
+        items2[2] = tmp38;
+        const _Object2 = Object;
+        const entries1 = Object.entries(tmp6);
+        items2[3] = entries1.map((item) => {
+          let arr;
+          let tmp2;
+          [tmp2, arr] = item;
+          let obj = {
+            title: "" + tmp2 + " (" + arr.reduce((acc, count) => acc + count.count, 0) + " usages)",
+            children: arr.map((combo, index) => {
+              const obj = { combo };
+              return closure_1_6(closure_1_11, obj, index);
+            }),
+          };
+          _slicedToArray(item, 2);
+          const FormSection = Form.FormSection;
+          return closure_1_6(FormSection, obj, tmp2);
         });
-        obj5.children = items2;
-        const tmp42 = hasOwnProperty(React3, obj5);
-        cResult[num] = tmp2;
-        num = 1;
-        cResult[1] = tmp42;
-        const tmp5 = groupByLook(items);
+        const tmp45 = hasOwnProperty(_false, obj5);
+        cResult[0] = tmp2;
+        cResult[1] = tmp45;
+        tmp3 = tmp45;
       } else {
-        return cResult[1];
+        tmp3 = cResult[1];
       }
+      return tmp3;
     }
   : () => {
+      let items1;
+      let items2;
       const tmp = closure_13();
+      let obj = {};
       const tmp2 = groupByLook(items);
-      const obj = {};
-      const iter = getUniqueComparisons()[Symbol.iterator]();
+      const tmp3 = getUniqueComparisons();
+      const iter = tmp3[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp5 = nextResult;
@@ -1330,50 +1227,63 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let arr2 = arr.push(tmp5);
         continue;
       }
-      const obj2 = { style: tmp.container, children: null };
-      const obj3 = { spacing: 4, style: tmp.header, children: null };
+      const obj2 = { style: tmp.container, children: items1 };
+      const obj3 = { spacing: 4, style: tmp.header, children: items };
+      const Stack = Stack_Stack.Stack;
       items = [
-        timestampProducer(Text_Text.Text, { variant: "heading-xl/bold", children: "Migration Mapping" }),
-        timestampProducer(Text_Text.Text, {
+        metroRequire(Text_Text.Text, { variant: "heading-xl/bold", children: "Migration Mapping" }),
+        metroRequire(Text_Text.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           children: "Legacy (uikit-native) \u2192 Mana side-by-side",
         }),
       ];
-      obj3.children = items;
-      const items1 = [hasOwnProperty(Stack_Stack.Stack, obj3), , ,];
+      items1 = [hasOwnProperty(Stack, obj3), , ,];
       const entries = Object.entries(obj);
       items1[1] = entries.map((item) => {
+        let arr;
+        let tmp;
         [tmp, arr] = item;
-        return closure_1_6(
-          Form.FormSection,
-          { title: tmp, children: arr.map((entry, index) => closure_1_6(closure_1_10, { entry }, index)) },
-          "cmp-" + tmp,
-        );
+        let obj = {
+          title: tmp,
+          children: arr.map((entry, index) => {
+            const obj = { entry };
+            return closure_1_6(closure_1_10, obj, index);
+          }),
+        };
+        const FormSection = Form.FormSection;
+        return closure_1_6(FormSection, obj, "cmp-" + tmp);
       });
-      const obj4 = { spacing: 4, style: tmp.header, children: null };
-      const items2 = [
-        timestampProducer(Text_Text.Text, { variant: "heading-xl/bold", children: "Legacy Button Audit" }),
-        timestampProducer(Text_Text.Text, {
+      const obj4 = { spacing: 4, style: tmp.header, children: items2 };
+      const Stack2 = Stack_Stack.Stack;
+      items2 = [
+        metroRequire(Text_Text.Text, { variant: "heading-xl/bold", children: "Legacy Button Audit" }),
+        metroRequire(Text_Text.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           children: "41 combinations across 185 importers",
         }),
       ];
-      obj4.children = items2;
-      items1[2] = hasOwnProperty(Stack_Stack.Stack, obj4);
+      items1[2] = hasOwnProperty(Stack2, obj4);
       const entries1 = Object.entries(tmp2);
       items1[3] = entries1.map((item) => {
+        let arr;
+        let tmp;
         [tmp, arr] = item;
-        return closure_1_6(
-          Form.FormSection,
-          {
-            title: "" + tmp + " (" + arr.reduce((acc, count) => acc + count.count, 0) + " usages)",
-            children: arr.map((combo, index) => closure_1_6(closure_1_11, { combo }, index)),
-          },
-          tmp,
-        );
+        let obj = {
+          title: "" + tmp + " (" + arr.reduce((acc, count) => acc + count.count, 0) + " usages)",
+          children: arr.map((combo, index) => {
+            const obj = { combo };
+            return closure_1_6(closure_1_11, obj, index);
+          }),
+        };
+        const FormSection = Form.FormSection;
+        return closure_1_6(FormSection, obj, tmp);
       });
-      obj2.children = items1;
-      return hasOwnProperty(React3, obj2);
+      return hasOwnProperty(_false, obj2);
     };
+const result = size.fileFinishedImporting(
+  "modules/user_settings/design_system/native/UserSettingsDesignSystemLegacyButton.tsx",
+);
+
+export default tmp7;

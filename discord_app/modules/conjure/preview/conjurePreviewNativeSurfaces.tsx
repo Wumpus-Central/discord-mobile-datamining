@@ -44,44 +44,49 @@ function menuOptionIds(items) {
   }
 }
 function answerFor(cmd) {
-  const iframeId = cmd;
+  let options;
+  let subject;
+  let closure_0 = cmd;
   const found = closure_6.find((iframeId) => iframeId.iframeId === iframeId.iframeId);
   if (null == found) {
     return null;
   } else if (null == obj[cmd.cmd]) {
     return null;
   } else {
-    ({ options, subject } = tmp10(cmd, found.answers));
-    if (found.recorded.length >= 20) {
-      obj = { result: tmp12 };
-      return obj;
-    } else {
-      let obj2 = { command: cmd.cmd, answered: tmp13 };
+    const tmp11Result = obj[cmd.cmd](cmd, found.answers);
+    ({ options, subject } = tmp11Result);
+    const result = tmp11Result.result;
+    if (found.recorded.length < 20) {
+      const recorded = found.recorded;
+      obj = { command: cmd.cmd, answered: tmp13 };
       if (null != options) {
+        let obj5;
+        let obj4;
         if (options.length > 0) {
-          const obj3 = { options };
-          let obj6 = obj3;
+          obj5 = { options };
+          const obj2 = { options };
         }
-        const merged = Object.assign(obj6);
+        const merged = Object.assign(obj5);
         if (null != subject) {
-          const obj4 = { subject };
-          let obj5 = obj4;
+          obj4 = { subject };
+          const obj3 = { subject };
         } else {
-          obj5 = {};
+          obj4 = {};
         }
-        const merged1 = Object.assign(obj5);
-        obj2 = tmp2(obj2);
+        const merged1 = Object.assign(obj4);
+        tmp2(obj);
       }
-      obj6 = {};
+      obj5 = {};
     }
-    const tmp10Result = tmp10(cmd, found.answers);
+    return { result };
   }
 }
 const RPCCommands = Constants.RPCCommands;
 let obj = {
   [RPCCommands.OPEN_CONTEXT_MENU]: (args, contextMenuSelect) => {
+    let items;
     if ("custom" === args.args.type) {
-      let items = menuOptionIds(args.args.items);
+      items = menuOptionIds(args.args.items);
     } else {
       items = [];
     }
@@ -89,7 +94,9 @@ let obj = {
       contextMenuSelect = contextMenuSelect.contextMenuSelect;
     }
     if ("custom" === args.args.type) {
+      let tmp6;
       if (null == contextMenuSelect) {
+        tmp6 = { result: { opened: true, selected_id: null }, answered: "dismissed", options: items };
         const obj2 = { result: { opened: true, selected_id: null }, answered: "dismissed", options: items };
       } else {
         const obj3 = { result: null, answered: null, options: null };
@@ -100,65 +107,70 @@ let obj = {
           const _HermesInternal2 = HermesInternal;
           obj3.answered = 'selected "' + contextMenuSelect + '"';
           obj3.options = items;
+          tmp6 = obj3;
         } else {
           obj3.result = obj4;
           const _HermesInternal = HermesInternal;
           obj3.answered = 'dismissed \u2014 no item with id "' + contextMenuSelect + '"';
           obj3.options = items;
+          tmp6 = obj3;
         }
       }
+      obj = tmp6;
     } else {
       obj = { result: { opened: true }, answered: "opened, no selection to make" };
-      return obj;
     }
+    return obj;
   },
   [RPCCommands.SHOW_CONFIRM_MODAL]: (args, confirm) => {
+    let result;
+    let str;
     const title = args.args.title;
     let tmp;
+    const _confirm = confirm.confirm;
     if (typeof title === "string") {
       if ("" !== title) {
         tmp = title;
       }
     }
     if ("confirm" === args.args.type) {
-      const obj2 = { confirmed: tmp2 };
-      let result = obj2;
+      result = { confirmed: true === _confirm };
+      const obj2 = { confirmed: true === _confirm };
     } else {
-      result = { acknowledged: tmp2 };
+      result = { acknowledged: true === _confirm };
     }
-    const obj3 = { result, answered: null, subject: null };
-    let str = "dismissed";
-    if (true === confirm.confirm) {
+    const obj3 = { result, answered: str, subject: tmp };
+    str = "dismissed";
+    if (true === _confirm) {
       str = "confirmed";
     }
-    obj3.answered = str;
-    obj3.subject = tmp;
     return obj3;
   },
   [RPCCommands.OPEN_EXTERNAL_LINK]: (args) => {
+    let tmp;
+    const url = args.args.url;
     obj = {
       result: { opened: false },
       answered: "cancelled \u2014 an agent may not open external links",
-      subject: null,
+      subject: tmp,
     };
-    const url = args.args.url;
-    let tmp;
+    tmp = undefined;
     if (typeof url === "string") {
       if ("" !== url) {
         tmp = url;
       }
     }
-    obj.subject = tmp;
     return obj;
   },
   [RPCCommands.SHARE_CONTENT]: (args) => {
+    let tmp;
+    const preview_title = args.args.preview_title;
     obj = {
       result: { success: false, didCopyLink: false, didSendMessage: false },
       answered: "closed without sharing \u2014 an agent may not send a message for the user",
-      subject: null,
+      subject: tmp,
     };
-    const preview_title = args.args.preview_title;
-    let tmp;
+    tmp = undefined;
     if (typeof preview_title === "string") {
       if ("" !== preview_title) {
         tmp = preview_title;
@@ -174,7 +186,6 @@ let obj = {
       }
       tmp = tmp2;
     }
-    obj.subject = tmp;
     return obj;
   },
   [RPCCommands.OPEN_USER_PROFILE]: () => ({ result: { opened: true }, answered: "opened" }),
@@ -206,29 +217,28 @@ export const beginNativeSurfaceSessionForFrame = function beginNativeSurfaceSess
   if (null == iframeId) {
     return closure_5;
   } else {
+    let arr;
     let answers = native;
-    const obj3 = { iframeId, answers: null, recorded: null };
+    const obj3 = { iframeId, answers, recorded: [] };
     if (native == null) {
       answers = {};
     }
-    obj3.answers = answers;
-    obj3.recorded = [];
     beneathBatches = undefined;
     if (beneathBatches != null) {
       beneathBatches = beneathBatches.beneathBatches;
     }
     if (true === beneathBatches) {
       closure_6.push(obj3);
-      let arr = closure_6;
+      arr = closure_6;
     } else {
       arr = closure_6;
       closure_6.unshift(obj3);
     }
     if (1 === arr.length) {
-      let result = obj3(8975).setRpcCommandInterceptor(answerFor);
       const obj2 = obj3(8975);
+      let result = obj2.setRpcCommandInterceptor(answerFor);
     }
-    const obj4 = {
+    return {
       iframeId,
       drain() {
         const recorded = obj3.recorded;
@@ -239,11 +249,11 @@ export const beginNativeSurfaceSessionForFrame = function beginNativeSurfaceSess
         if (-1 !== index) {
           closure_6.splice(index, 1);
           if (0 === closure_6.length) {
-            const result = RpcCommandInterception.setRpcCommandInterceptor(null);
+            obj = RpcCommandInterception;
+            const result = obj.setRpcCommandInterceptor(null);
           }
         }
       },
     };
-    return obj4;
   }
 };

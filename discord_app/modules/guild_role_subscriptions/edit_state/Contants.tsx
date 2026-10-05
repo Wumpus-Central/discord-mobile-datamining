@@ -3,7 +3,8 @@ import Constants from "../../../Constants.tsx";
 import GuildRoleRecordUtils from "../../../utils/GuildRoleRecordUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const result = GuildRoleRecordUtils.constructGuildRoleInPlace({
+const Permissions = Constants.Permissions;
+const obj = {
   id: "0",
   guildId: "0",
   name: "",
@@ -11,7 +12,7 @@ const result = GuildRoleRecordUtils.constructGuildRoleInPlace({
   managed: false,
   position: 0,
   hoist: false,
-  permissions: Constants.Permissions.SEND_MESSAGES,
+  permissions: Permissions.SEND_MESSAGES,
   color: 0,
   colors: { primary_color: 0, secondary_color: null, tertiary_color: null },
   colorString: "0",
@@ -22,7 +23,8 @@ const result = GuildRoleRecordUtils.constructGuildRoleInPlace({
   description: null,
   tags: {},
   version: 0,
-});
+};
+const result = GuildRoleRecordUtils.constructGuildRoleInPlace(obj);
 const result1 = size.fileFinishedImporting("modules/guild_role_subscriptions/edit_state/Contants.tsx");
 
 export const DEFAULT_PREVIEW_ROLE = result;

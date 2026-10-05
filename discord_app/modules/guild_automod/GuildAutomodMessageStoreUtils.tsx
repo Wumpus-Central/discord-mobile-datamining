@@ -6,8 +6,8 @@ const result = size.fileFinishedImporting("modules/guild_automod/GuildAutomodMes
 
 export const isNotAutomodEmbed = function isNotAutomodEmbed(type) {
   type = type.type;
-  return (
+  const tmp3 =
     type !== MessageEmbedTypes.MessageEmbedTypes.AUTO_MODERATION_MESSAGE &&
-    type !== MessageEmbedTypes.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION
-  );
+    type !== MessageEmbedTypes.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION;
+  return tmp3;
 };

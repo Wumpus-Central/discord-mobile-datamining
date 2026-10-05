@@ -1,62 +1,65 @@
 // discord_app/lib/intlFormatDate.tsx
 import LocaleStore from "../modules/user_settings/LocaleStore.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const require = fn;
 function makeIntlFormatter(locale, arg1) {
   try {
     const _Intl = Intl;
     return Intl.DateTimeFormat(locale, arg1).format;
   } catch (err) {
     const _Intl2 = Intl;
-    return Intl.DateTimeFormat(undefined, tmp).format;
+    return Intl.DateTimeFormat(undefined, arg1).format;
   }
 }
-const size = fn(2);
 const result = size.fileFinishedImporting("lib/intlFormatDate.tsx");
 
 export const makeFormatter = function makeFormatter(arg0) {
-  locale = LocaleStore.locale;
-  let tmp = (function tryMakeNativeFormatter(locale, arg1) {
-    closure_0 = locale;
-    closure_1 = arg1;
+  function tryMakeNativeFormatter(locale, arg1) {
+    let closure_0 = locale;
+    let closure_1 = arg1;
     if (null == closure_0(closure_1[1]).makeFormatter) {
       return null;
     } else {
       try {
-        let tmp4 = null != locale;
-        if (tmp4) {
-          const str2 = tmp2(tmp3[2]).systemLocale;
-          let first;
+        let tmp8;
+        let tmp3 = null != locale;
+        if (tmp3) {
+          const first = locale.split("-")[0];
+          const str2 = closure_0(closure_1[2]).systemLocale;
+          let first1;
           if (str2 != null) {
-            first = str2.split("-")[0];
+            first1 = str2.split("-")[0];
           }
-          tmp4 = locale.split("-")[0] === first;
+          tmp3 = first === first1;
         }
-        if (locale !== tmp2(tmp3[2]).initialLocale) {
-          const tmp7 = locale;
+        const makeFormatter = closure_0(tmp2[1]).makeFormatter;
+        closure_0(closure_1[1]);
+        if (locale !== closure_0(closure_1[2]).initialLocale) {
+          tmp8 = locale;
         }
-        const formatter = tmp2(tmp3[1]).makeFormatter(tmp7, arg1);
+        const formatter = makeFormatter(tmp8, arg1);
         if (null == formatter) {
           return null;
         } else {
-          closure_3 = null;
+          let closure_3 = null;
           return (arg0) => {
             try {
               return formatter(arg0);
             } catch (err) {
               if (null == closure_3) {
-                closure_3 = makeIntlFormatter(closure_0, closure_1);
+                closure_3 = makeIntlFormatter(locale, closure_1);
               }
-              return closure_3(tmp);
+              return closure_3(arg0);
             }
           };
         }
-        const tmp2Result = tmp2(tmp3[1]);
       } catch (err) {
-        return tmp;
+        return null;
       }
     }
-  })(locale, arg0);
+  }
+  const locale = LocaleStore.locale;
+  let tmp = tryMakeNativeFormatter(locale, arg0);
   if (null == tmp) {
     tmp = makeIntlFormatter(locale, arg0);
   }

@@ -1,16 +1,17 @@
 // discord_app/hooks/useGetIsMounted.tsx
-import c from "../../_runtime/00576_c.js";
-import noop from "../../_runtime/metro/00019__.js";
+import react2 from "../../_runtime/00576_react.js";
+import react from "../../_runtime/00019_react.js";
+import ReactCompilerGating from "../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("hooks/useGetIsMounted.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(3);
-      noop.useRef(true);
+      let tmp2;
+      let tmp3;
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(3);
+      let closure_0 = react.useRef(true);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n() {
           return () => {
@@ -25,25 +26,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp2, tmp3] = cResult;
       }
-      const effect = noop.useEffect(tmp2, tmp3);
+      const effect = react.useEffect(tmp2, tmp3);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function u() {
           return ref.current;
         };
         cResult[2] = fn2;
-        let tmp5 = fn2;
+        tmp5 = fn2;
       } else {
         tmp5 = cResult[2];
       }
       return tmp5;
     }
   : () => {
-      noop.useRef(true);
-      const effect = noop.useEffect(
+      let closure_0 = react.useRef(true);
+      const effect = react.useEffect(
         () => () => {
           ref.current = false;
         },
         [],
       );
-      return noop.useCallback(() => ref.current, []);
+      return react.useCallback(() => ref.current, []);
     };
+const result = size.fileFinishedImporting("hooks/useGetIsMounted.tsx");
+
+export default tmp2;

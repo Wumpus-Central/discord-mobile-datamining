@@ -1,53 +1,57 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/NewMessagesTagListInput.tsx
+import react_native from "../../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../../intl/index.native.tsx";
+import intl4 from "../../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
 import AccessibilityAnnouncer2 from "../../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import makeUserListPillDataDefault from "makeUserListPillData.tsx";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../_runtime/00019_react.js";
 import UserStore from "../../../../../stores/UserStore.tsx";
+import createStyles_mod from "../../../../../design/components/Styles/native/createStyles.tsx";
+import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let announceResult, tmp3, tmp5, tmp6;
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj = {
-  searchBarContainer: {
-    paddingHorizontal: nativeDefault.space.PX_16,
-    paddingBottom: nativeDefault.space.PX_8,
-    backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
-  },
-  header: null,
-  showSearchButton: null,
-};
-let obj4 = { marginLeft: nativeDefault.space.PX_12, marginBottom: null };
-const PlatformUtils = fn(1369);
-let num = 0;
-if (PlatformUtils.isAndroid()) {
-  num = 2;
-}
-obj4.marginBottom = num;
-obj.header = obj4;
-let obj3 = {
+let num;
+let obj2;
+let obj3;
+let obj4;
+const View = react_native.View;
+const jsx = Fragment.jsx;
+let createStyles = createStyles_mod;
+let obj = { searchBarContainer: obj2, header: obj3, showSearchButton: obj4 };
+obj2 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingBottom: nativeDefault.space.PX_8,
   backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
 };
-obj.showSearchButton = { marginHorizontal: nativeDefault.space.PX_12 };
-let closure_7 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-let obj5 = { marginHorizontal: nativeDefault.space.PX_12 };
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/main_tabs_v2/native/shared_components/user_list/NewMessagesTagListInput.tsx",
-);
-
-export default noop.memo(
+createStyles = createStyles.createStyles;
+obj3 = { marginLeft: nativeDefault.space.PX_12, marginBottom: num };
+num = 0;
+if (PlatformUtils.isAndroid()) {
+  num = 2;
+}
+obj4 = { marginHorizontal: nativeDefault.space.PX_12 };
+let closure_7 = createStyles(obj);
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        const cResult = onSelectUser(576).c(27);
+        let autoFocus;
+        let forceSearchResults;
+        let hasQuery;
+        let onChangeText;
+        let onFocus;
+        let onForceSearchResults;
+        let onSelectUser;
+        let selectedUserIds;
+        let tagListInputRef;
+        let tags;
+        let obj = onSelectUser(576);
+        const cResult = obj.c(27);
         ({ autoFocus, onChangeText, onFocus, onSelectUser } = arg0);
         ({ selectedUserIds, hasQuery, onForceSearchResults, forceSearchResults, tagListInputRef } = arg0);
         const tmp4 = closure_7();
@@ -69,33 +73,36 @@ export default noop.memo(
           if (cResult[3] === hasQuery) {
             if (cResult[4] === onForceSearchResults) {
               if (cResult[5] === tmp4.showSearchButton) {
+                let tmp10;
+                let tmp15;
                 if (cResult[6] === tags.length) {
-                  let tmp10 = cResult[7];
+                  tmp10 = cResult[7];
                 }
                 const _Symbol = Symbol;
+                const header = tmp4.header;
                 if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
                   const intl2 = onSelectUser(1126).intl;
                   const stringResult = intl2.string(onSelectUser(1126).t.kHyiXs);
                   cResult[8] = stringResult;
-                  let tmp16 = stringResult;
+                  tmp15 = stringResult;
                 } else {
-                  tmp16 = cResult[8];
+                  tmp15 = cResult[8];
                 }
                 if (cResult[9] !== tmp4.header) {
-                  const obj2 = {
-                    style: tmp4.header,
-                    variant: "text-sm/medium",
-                    color: "text-muted",
-                    accessible: false,
-                    children: tmp16,
-                  };
                   cResult[9] = tmp4.header;
                   cResult[10] = jsx(onSelectUser(4886).Text, {
-                    style: tmp4.header,
+                    style: header,
                     variant: "text-sm/medium",
                     color: "text-muted",
                     accessible: false,
-                    children: tmp16,
+                    children: tmp15,
+                  });
+                  jsx(onSelectUser(4886).Text, {
+                    style: header,
+                    variant: "text-sm/medium",
+                    color: "text-muted",
+                    accessible: false,
+                    children: tmp15,
                   });
                   class F {
                     constructor(arg0) {
@@ -107,55 +114,50 @@ export default noop.memo(
                         tmp5 = closure_0;
                         tmp6 = closure_2;
                         AccessibilityAnnouncer = closure_0(closure_2[16]).AccessibilityAnnouncer;
+                        announce = AccessibilityAnnouncer.announce;
                         intl = closure_0(closure_2[12]).intl;
                         obj = { text: null };
                         obj.text = tmp.text;
-                        announceResult = AccessibilityAnnouncer.announce(
-                          intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj),
-                        );
+                        announceResult = announce(intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj));
                       }
                       return;
                     }
                   }
-                  const tmp20 = jsx(onSelectUser(4886).Text, {
-                    style: tmp4.header,
-                    variant: "text-sm/medium",
-                    color: "text-muted",
-                    accessible: false,
-                    children: tmp16,
-                  });
                 }
                 if (cResult[11] === onSelectUser) {
+                  let tmp20;
+                  let tmp21;
                   if (cResult[12] === tags) {
-                    let tmp21 = cResult[13];
+                    tmp20 = cResult[13];
                   }
                   const _Symbol2 = Symbol;
                   if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
                     const intl3 = onSelectUser(1126).intl;
                     const stringResult1 = intl3.string(onSelectUser(1126).t.CaEER6);
                     cResult[14] = stringResult1;
-                    let tmp22 = stringResult1;
+                    tmp21 = stringResult1;
                   } else {
-                    tmp22 = cResult[14];
+                    tmp21 = cResult[14];
                   }
                   if (cResult[15] === autoFocus) {
                     if (cResult[16] === onChangeText) {
                       if (cResult[17] === onFocus) {
                         if (cResult[18] === tmp10) {
-                          if (cResult[19] === tmp18) {
-                            if (cResult[20] === tmp21) {
+                          if (cResult[19] === tmp17) {
+                            if (cResult[20] === tmp20) {
                               if (cResult[21] === tagListInputRef) {
+                                let tmp23;
                                 if (cResult[22] === tags) {
-                                  let tmp24 = cResult[23];
+                                  tmp23 = cResult[23];
                                 }
                                 if (cResult[24] === tmp4.searchBarContainer) {
-                                  if (cResult[25] === tmp24) {
-                                    let tmp28 = cResult[26];
+                                  let tmp27;
+                                  if (cResult[25] === tmp23) {
+                                    tmp27 = cResult[26];
                                   }
-                                  return tmp28;
+                                  return tmp27;
                                 }
-                                const obj3 = { style: tmp9, children: tmp24 };
-                                const tmp31 = <View style={tmp9}>{tmp24}</View>;
+                                const tmp30 = <View style={tmp9}>{tmp23}</View>;
                                 class F {
                                   constructor(arg0) {
                                     tmp = closure_1[arg0];
@@ -166,19 +168,20 @@ export default noop.memo(
                                       tmp5 = closure_0;
                                       tmp6 = closure_2;
                                       AccessibilityAnnouncer = closure_0(closure_2[16]).AccessibilityAnnouncer;
+                                      announce = AccessibilityAnnouncer.announce;
                                       intl = closure_0(closure_2[12]).intl;
                                       obj = { text: null };
                                       obj.text = tmp.text;
-                                      announceResult = AccessibilityAnnouncer.announce(
+                                      announceResult = announce(
                                         intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj),
                                       );
                                     }
                                     return;
                                   }
                                 }
-                                cResult[25] = tmp24;
-                                cResult[26] = tmp31;
-                                tmp28 = tmp31;
+                                cResult[25] = tmp23;
+                                cResult[26] = tmp30;
+                                tmp27 = tmp30;
                               }
                             }
                           }
@@ -186,18 +189,6 @@ export default noop.memo(
                       }
                     }
                   }
-                  const obj4 = {
-                    autoFocus,
-                    focusOnAdd: true,
-                    footer: null,
-                    icon: null,
-                    onChangeText: null,
-                    onFocus: null,
-                    onRemove: null,
-                    placeholder: null,
-                    tags: null,
-                    ref: null,
-                  };
                   class F {
                     constructor(arg0) {
                       tmp = closure_1[arg0];
@@ -208,45 +199,37 @@ export default noop.memo(
                         tmp5 = closure_0;
                         tmp6 = closure_2;
                         AccessibilityAnnouncer = closure_0(closure_2[16]).AccessibilityAnnouncer;
+                        announce = AccessibilityAnnouncer.announce;
                         intl = closure_0(closure_2[12]).intl;
                         obj = { text: null };
                         obj.text = tmp.text;
-                        announceResult = AccessibilityAnnouncer.announce(
-                          intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj),
-                        );
+                        announceResult = announce(intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj));
                       }
                       return;
                     }
                   }
-                  obj4.icon = tmp18;
-                  obj4.onChangeText = onChangeText;
-                  obj4.onFocus = onFocus;
-                  obj4.onRemove = tmp21;
-                  obj4.placeholder = tmp22;
-                  obj4.tags = tags;
-                  obj4.ref = tagListInputRef;
-                  const tmp27 = jsx(tags(9235), {
+                  const tmp26 = jsx(tags(9235), {
                     autoFocus,
                     focusOnAdd: true,
                     footer: null,
-                    icon: null,
-                    onChangeText: null,
-                    onFocus: null,
-                    onRemove: null,
-                    placeholder: null,
-                    tags: null,
-                    ref: null,
+                    icon: tmp17,
+                    onChangeText,
+                    onFocus,
+                    onRemove: tmp20,
+                    placeholder: tmp21,
+                    tags,
+                    ref: tagListInputRef,
                   });
                   cResult[15] = autoFocus;
                   cResult[16] = onChangeText;
                   cResult[17] = onFocus;
                   cResult[18] = tmp10;
-                  cResult[19] = tmp18;
-                  cResult[20] = tmp21;
+                  cResult[19] = tmp17;
+                  cResult[20] = tmp20;
                   cResult[21] = tagListInputRef;
                   cResult[22] = tags;
-                  cResult[23] = tmp27;
-                  tmp24 = tmp27;
+                  cResult[23] = tmp26;
+                  tmp23 = tmp26;
                 }
                 class F {
                   constructor(arg0) {
@@ -258,12 +241,11 @@ export default noop.memo(
                       tmp5 = closure_0;
                       tmp6 = closure_2;
                       AccessibilityAnnouncer = closure_0(closure_2[16]).AccessibilityAnnouncer;
+                      announce = AccessibilityAnnouncer.announce;
                       intl = closure_0(closure_2[12]).intl;
                       obj = { text: null };
                       obj.text = tmp.text;
-                      announceResult = AccessibilityAnnouncer.announce(
-                        intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj),
-                      );
+                      announceResult = announce(intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj));
                     }
                     return;
                   }
@@ -271,30 +253,25 @@ export default noop.memo(
                 cResult[11] = onSelectUser;
                 cResult[12] = tags;
                 cResult[13] = F;
-                tmp21 = F;
+                tmp20 = F;
               }
             }
           }
         }
-        let tmp11 = null;
+        let tmp12Result = null;
         if (!hasQuery) {
-          tmp11 = null;
+          tmp12Result = null;
           if (tags.length > 0) {
+            let stringResult2;
+            const PressableOpacity = onSelectUser(5909).PressableOpacity;
             let intl = onSelectUser(1126).intl;
             const string = intl.string;
             const t = onSelectUser(1126).t;
             if (forceSearchResults) {
-              let stringResult2 = string(t["4wv+DE"]);
+              stringResult2 = string(t["4wv+DE"]);
             } else {
               stringResult2 = string(t.fTcQm2);
             }
-            const obj5 = {
-              accessibilityRole: "button",
-              accessibilityLabel: stringResult2,
-              onPress: onForceSearchResults,
-              style: null,
-              children: null,
-            };
             class F {
               constructor(arg0) {
                 tmp = closure_1[arg0];
@@ -305,12 +282,11 @@ export default noop.memo(
                   tmp5 = closure_0;
                   tmp6 = closure_2;
                   AccessibilityAnnouncer = closure_0(closure_2[16]).AccessibilityAnnouncer;
+                  announce = AccessibilityAnnouncer.announce;
                   intl = closure_0(closure_2[12]).intl;
                   obj = { text: null };
                   obj.text = tmp.text;
-                  announceResult = AccessibilityAnnouncer.announce(
-                    intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj),
-                  );
+                  announceResult = announce(intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj));
                 }
                 return;
               }
@@ -320,14 +296,16 @@ export default noop.memo(
             } else {
               CirclePlusIcon = onSelectUser(10983).CirclePlusIcon;
             }
-            obj5.children = <CirclePlusIcon size="xs" />;
-            jsx(onSelectUser(5909).PressableOpacity, {
-              accessibilityRole: "button",
-              accessibilityLabel: stringResult2,
-              onPress: onForceSearchResults,
-              style: null,
-              children: null,
-            });
+            tmp12Result = (
+              <PressableOpacity
+                accessibilityRole="button"
+                accessibilityLabel={stringResult2}
+                onPress={onForceSearchResults}
+                style={null}
+              >
+                {null}
+              </PressableOpacity>
+            );
           }
         }
         cResult[2] = forceSearchResults;
@@ -335,17 +313,27 @@ export default noop.memo(
         cResult[4] = onForceSearchResults;
         cResult[5] = tmp4.showSearchButton;
         cResult[6] = tags.length;
-        cResult[7] = tmp11;
-        tmp10 = tmp11;
-        let obj = onSelectUser(576);
+        cResult[7] = tmp12Result;
+        tmp10 = tmp12Result;
       }
     : (forceSearchResults) => {
+        let autoFocus;
+        let hasQuery;
+        let intl2;
+        let intl3;
+        let onChangeText;
+        let onFocus;
+        let onForceSearchResults;
+        let require;
+        let selectedUserIds;
+        let tagListInputRef;
+        let tmp2Result;
         ({ onSelectUser: require, selectedUserIds } = forceSearchResults);
         ({ autoFocus, onChangeText, onFocus, hasQuery, onForceSearchResults, tagListInputRef } =
           forceSearchResults.forceSearchResults);
         const tmp = closure_7();
         let items = [selectedUserIds];
-        const memo = noop.useMemo(() => {
+        const memo = react.useMemo(() => {
           let items = selectedUserIds;
           if (selectedUserIds == null) {
             items = [];
@@ -354,98 +342,75 @@ export default noop.memo(
           const found = mapped.filter(GlobalUtils.isNotNullish);
           return found.map(makeUserListPillDataDefault);
         }, items);
-        let obj = { style: tmp.searchBarContainer, children: null };
-        const obj2 = {
+        ({
           autoFocus,
           focusOnAdd: true,
-          footer: null,
+          footer: tmp2Result,
           icon: null,
-          onChangeText: null,
-          onFocus: null,
-          onRemove: null,
-          placeholder: null,
-          tags: null,
-          ref: null,
-        };
-        let tmp6 = null;
+          onChangeText,
+          onFocus,
+          onRemove(arg0) {
+            const user = UserStore.getUser(tmp.id);
+            if (null != user) {
+              _require(user);
+              const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+              const announce = AccessibilityAnnouncer.announce;
+              const intl = intl4.intl;
+              const obj = { text: memo[arg0].text };
+              announce(intl.formatToPlainString(intl4.t.srlxB8, obj));
+            }
+          },
+          placeholder: intl3.string(require("intl").t.CaEER6),
+          tags: memo,
+          ref: tagListInputRef,
+        });
+        tmp2Result = null;
+        selectedUserIds(memo[17]);
         if (!hasQuery) {
-          tmp6 = null;
+          tmp2Result = null;
           if (memo.length > 0) {
-            let intl = require("util").intl;
+            let stringResult;
+            const PressableOpacity = require("Pressables").PressableOpacity;
+            let intl = require("intl").intl;
             const string = intl.string;
-            const t = require("util").t;
-            if (forceSearchResults) {
-              let stringResult = string(t["4wv+DE"]);
+            const t = require("intl").t;
+            if (forceSearchResults.forceSearchResults) {
+              stringResult = string(t["4wv+DE"]);
             } else {
               stringResult = string(t.fTcQm2);
             }
-            const obj3 = {
-              accessibilityRole: "button",
-              accessibilityLabel: stringResult,
-              onPress: onForceSearchResults,
-              style: tmp.showSearchButton,
-              children: null,
-            };
-            if (forceSearchResults) {
+            if (forceSearchResults.forceSearchResults) {
               let CirclePlusIcon = require("ChevronLargeRightIcon").ChevronLargeRightIcon;
             } else {
               CirclePlusIcon = require("CirclePlusIcon").CirclePlusIcon;
             }
-            obj3.children = <CirclePlusIcon size="xs" />;
-            jsx(require("Pressables").PressableOpacity, {
-              accessibilityRole: "button",
-              accessibilityLabel: stringResult,
-              onPress: onForceSearchResults,
-              style: tmp.showSearchButton,
-              children: null,
-            });
+            tmp2Result = (
+              <PressableOpacity
+                accessibilityRole="button"
+                accessibilityLabel={stringResult}
+                onPress={onForceSearchResults}
+                style={tmp.showSearchButton}
+              >
+                {null}
+              </PressableOpacity>
+            );
           }
         }
-        obj2.footer = tmp6;
-        const obj4 = {
+        ({
           style: tmp.header,
           variant: "text-sm/medium",
           color: "text-muted",
           accessible: false,
-          children: null,
-        };
-        const intl2 = require("util").intl;
-        obj4.children = intl2.string(require("util").t.kHyiXs);
-        obj2.icon = jsx(require("Text/Text").Text, {
-          style: tmp.header,
-          variant: "text-sm/medium",
-          color: "text-muted",
-          accessible: false,
-          children: null,
+          children: intl2.string(require("intl").t.kHyiXs),
         });
-        obj2.onChangeText = onChangeText;
-        obj2.onFocus = onFocus;
-        obj2.onRemove = function onRemove(arg0) {
-          const user = UserStore.getUser(tmp.id);
-          if (null != user) {
-            _require(user);
-            const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
-            const intl = util.intl;
-            const obj = { text: tmp.text };
-            AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.srlxB8, obj));
-          }
-        };
-        const intl3 = require("util").intl;
-        obj2.placeholder = intl3.string(require("util").t.CaEER6);
-        obj2.tags = memo;
-        obj2.ref = tagListInputRef;
-        obj.children = jsx(selectedUserIds(memo[17]), {
-          autoFocus,
-          focusOnAdd: true,
-          footer: null,
-          icon: null,
-          onChangeText: null,
-          onFocus: null,
-          onRemove: null,
-          placeholder: null,
-          tags: null,
-          ref: null,
-        });
+        const Text = require("Text/Text").Text;
+        intl2 = require("intl").intl;
+        intl3 = require("intl").intl;
         return <View style={tmp.searchBarContainer}>{null}</View>;
       },
 );
+const result = size.fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/NewMessagesTagListInput.tsx",
+);
+
+export default memoResult;

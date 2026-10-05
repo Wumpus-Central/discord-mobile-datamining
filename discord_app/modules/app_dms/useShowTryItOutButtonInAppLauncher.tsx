@@ -1,32 +1,37 @@
 // discord_app/modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx
-import c from "../../../_runtime/00576_c.js";
+import react from "../../../_runtime/00576_react.js";
 import canLaunchContextlessFrame from "../frames/utils/canLaunchContextlessFrame.tsx";
 import getPrimaryAppCommand from "../application_commands/getPrimaryAppCommand.tsx";
 import useIsAppDMDefault from "useIsAppDM.tsx";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let result = size.fileFinishedImporting("modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(4);
+      let application;
+      let botUserId;
+      let context;
+      const obj = react;
+      const cResult = obj.c(4);
       ({ context, application, botUserId } = arg0);
       if (cResult[0] === application.id) {
         if (cResult[1] === botUserId) {
+          let tmp4;
           if (cResult[2] === context) {
-            let tmp4 = cResult[3];
+            tmp4 = cResult[3];
           }
-          let isPrimaryAppCommandUsableInAppDM = getPrimaryAppCommand.useIsPrimaryAppCommandUsableInAppDM(tmp4);
-          let channel;
           const tmpResult = getPrimaryAppCommand;
+          let isPrimaryAppCommandUsableInAppDM = tmpResult.useIsPrimaryAppCommandUsableInAppDM(tmp4);
+          let channel;
+          const tmp7 = useIsAppDMDefault;
           if ("channel" === context.type) {
             channel = context.channel;
           }
-          const tmp7Result = useIsAppDMDefault(channel);
-          const result = canLaunchContextlessFrame.canLaunchContextlessFrame(application);
+          const tmp7Result = tmp7(channel);
+          const tmpResult2 = canLaunchContextlessFrame;
+          const result = tmpResult2.canLaunchContextlessFrame(application);
           let tmp11 = !result;
-          if (!result) {
+          if (tmp11) {
             if (isPrimaryAppCommandUsableInAppDM) {
               isPrimaryAppCommandUsableInAppDM = null != botUserId;
             }
@@ -46,21 +51,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = obj2;
     }
   : (arg0) => {
+      let application;
+      let botUserId;
+      let context;
       ({ context, application, botUserId } = arg0);
-      let isPrimaryAppCommandUsableInAppDM = getPrimaryAppCommand.useIsPrimaryAppCommandUsableInAppDM({
-        context,
-        applicationId: application.id,
-        botUserId,
-      });
-      let channel;
+      const obj = getPrimaryAppCommand;
       const obj2 = { context, applicationId: application.id, botUserId };
+      let isPrimaryAppCommandUsableInAppDM = obj.useIsPrimaryAppCommandUsableInAppDM(obj2);
+      let channel;
+      const tmp4 = useIsAppDMDefault;
       if ("channel" === context.type) {
         channel = context.channel;
       }
-      const tmp4Result = useIsAppDMDefault(channel);
-      const result = canLaunchContextlessFrame.canLaunchContextlessFrame(application);
+      const tmp4Result = tmp4(channel);
+      const tmpResult = canLaunchContextlessFrame;
+      const result = tmpResult.canLaunchContextlessFrame(application);
       let tmp8 = !result;
-      if (!result) {
+      if (tmp8) {
         if (isPrimaryAppCommandUsableInAppDM) {
           isPrimaryAppCommandUsableInAppDM = null != botUserId;
         }
@@ -71,3 +78,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     };
+let result = size.fileFinishedImporting("modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx");
+
+export default tmp2;

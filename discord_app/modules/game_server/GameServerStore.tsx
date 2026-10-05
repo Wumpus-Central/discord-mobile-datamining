@@ -1,9 +1,16 @@
 // discord_app/modules/game_server/GameServerStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import getPowerupEntitlementPriceDefault from "../premium/powerups/utils/getPowerupEntitlementPrice.tsx";
 import gameServerResponseToInstanceDefault from "utils/gameServerResponseToInstance.tsx";
+import size from "../../../_runtime/metro/00002__.js";
+
+let sku;
 
 function handleGameServerInstanceCreated(arg0) {
+  let gameServer;
+  let guildId;
+  let obj4;
   ({ guildId, gameServer } = arg0);
   if (null != guildId) {
     if (null == obj2[guildId]) {
@@ -12,123 +19,126 @@ function handleGameServerInstanceCreated(arg0) {
     }
     obj2 = {};
     const merged = Object.assign(obj2);
-    const obj3 = {};
+    const obj3 = { instances: obj4 };
     const merged1 = Object.assign(tmp3);
-    const obj4 = {};
+    obj4 = {};
     const merged2 = Object.assign(tmp3.instances);
     obj4[gameServer.id] = gameServerResponseToInstanceDefault(gameServer);
-    obj3.instances = obj4;
     obj2[guildId] = obj3;
   }
 }
 let c2 = 86400000;
+let obj2 = {};
 let obj = { catalog: {}, hasFetchedCatalog: false, catalogLastFetchedAt: "r" };
-const PersistedStore = initializeDefault.PersistedStore;
-class GameServerStore extends PersistedStore {}
+const PersistedStore = get_initializedDefault.PersistedStore;
+class GameServerStore extends PersistedStore {
+  initialize(arg0) {}
+  getState() {
+    return obj2;
+  }
+  getStateForGuild(arg0) {
+    let tmp;
+    if (null != arg0) {
+      tmp = obj2[arg0];
+    }
+    return tmp;
+  }
+  getGlobalCatalogState() {
+    return obj;
+  }
+  getGlobalCatalogGame(arg0) {
+    let closure_0 = arg0;
+    const values = Object.values(obj.catalog);
+    return values.find((gameId) => gameId.gameId === closure_0);
+  }
+  getLowestGameCostForGuild(arg0) {
+    if (null == arg0) {
+      return null;
+    } else {
+      let catalog;
+      const _Object = Object;
+      if (obj2[arg0] != null) {
+        catalog = tmp8.catalog;
+      }
+      if (catalog == null) {
+        catalog = {};
+      }
+      const values2 = values(catalog);
+      let applyResult = null;
+      if (0 !== values2.length) {
+        const _Math = Math;
+        const items = [];
+        HermesBuiltin.arraySpread(
+          items,
+          values2.map((baseCost) => baseCost.baseCost),
+          0,
+        );
+        const _Math2 = Math;
+        applyResult = HermesBuiltin.apply(min, items, Math);
+      }
+      return applyResult;
+    }
+  }
+  hasFetchedCatalog(arg0) {
+    let tmp = null != arg0;
+    if (tmp) {
+      let hasFetchedCatalog;
+      if (obj2[arg0] != null) {
+        hasFetchedCatalog = tmp3.hasFetchedCatalog;
+      }
+      tmp = true === hasFetchedCatalog;
+    }
+    return tmp;
+  }
+  hasFetchedInstances(arg0) {
+    let tmp = null != arg0;
+    if (tmp) {
+      let hasFetchedInstances;
+      if (obj2[arg0] != null) {
+        hasFetchedInstances = tmp3.hasFetchedInstances;
+      }
+      tmp = true === hasFetchedInstances;
+    }
+    return tmp;
+  }
+  shouldFetchCatalogForGuild(arg0) {
+    let catalogLastFetchedAt;
+    if (obj2[arg0] != null) {
+      catalogLastFetchedAt = tmp.catalogLastFetchedAt;
+    }
+    let tmp3 = null == catalogLastFetchedAt;
+    if (!tmp3) {
+      const _Date = Date;
+      const sum = catalogLastFetchedAt + c2;
+      tmp3 = sum < Date.now();
+    }
+    return tmp3;
+  }
+  shouldFetchInstancesForGuild(arg0) {
+    let prop;
+    if (obj2[arg0] != null) {
+      prop = tmp.instancesLastFetchedAt;
+    }
+    let tmp3 = null == prop;
+    if (!tmp3) {
+      const _Date = Date;
+      const sum = prop + 300000;
+      tmp3 = sum < Date.now();
+    }
+    return tmp3;
+  }
+  shouldFetchGlobalCatalog() {
+    const catalogLastFetchedAt = obj.catalogLastFetchedAt;
+    let tmp = null == catalogLastFetchedAt;
+    if (!tmp) {
+      const _Date = Date;
+      const sum = catalogLastFetchedAt + c2;
+      tmp = sum < Date.now();
+    }
+    return tmp;
+  }
+}
 const prototype = GameServerStore.prototype;
-prototype["initialize"] = function initialize(arg0) {};
-prototype["getState"] = function getState() {
-  return obj2;
-};
-prototype["getStateForGuild"] = function getStateForGuild(arg0) {
-  let tmp;
-  if (null != arg0) {
-    tmp = obj2[arg0];
-  }
-  return tmp;
-};
-prototype["getGlobalCatalogState"] = function getGlobalCatalogState() {
-  return obj;
-};
-prototype["getGlobalCatalogGame"] = function getGlobalCatalogGame(arg0) {
-  closure_0 = arg0;
-  const values = Object.values(obj.catalog);
-  return values.find((gameId) => gameId.gameId === closure_0);
-};
-prototype["getLowestGameCostForGuild"] = function getLowestGameCostForGuild(arg0) {
-  if (null == arg0) {
-    return null;
-  } else {
-    let catalog;
-    if (obj2[arg0] != null) {
-      catalog = tmp7.catalog;
-    }
-    if (catalog == null) {
-      catalog = {};
-    }
-    const values = Object.values(catalog);
-    let applyResult = null;
-    if (0 !== values.length) {
-      const _Math = Math;
-      const items = [];
-      HermesBuiltin.arraySpread(
-        values.map((baseCost) => baseCost.baseCost),
-        0,
-      );
-      const _Math2 = Math;
-      applyResult = HermesBuiltin.apply(items, Math);
-    }
-    return applyResult;
-  }
-};
-prototype["hasFetchedCatalog"] = function hasFetchedCatalog(arg0) {
-  let tmp = null != arg0;
-  if (tmp) {
-    let hasFetchedCatalog;
-    if (obj2[arg0] != null) {
-      hasFetchedCatalog = tmp3.hasFetchedCatalog;
-    }
-    tmp = true === hasFetchedCatalog;
-  }
-  return tmp;
-};
-prototype["hasFetchedInstances"] = function hasFetchedInstances(arg0) {
-  let tmp = null != arg0;
-  if (tmp) {
-    let hasFetchedInstances;
-    if (obj2[arg0] != null) {
-      hasFetchedInstances = tmp3.hasFetchedInstances;
-    }
-    tmp = true === hasFetchedInstances;
-  }
-  return tmp;
-};
-prototype["shouldFetchCatalogForGuild"] = function shouldFetchCatalogForGuild(arg0) {
-  let catalogLastFetchedAt;
-  if (obj2[arg0] != null) {
-    catalogLastFetchedAt = tmp.catalogLastFetchedAt;
-  }
-  let tmp3 = null == catalogLastFetchedAt;
-  if (!tmp3) {
-    const _Date = Date;
-    const sum = catalogLastFetchedAt + c2;
-    tmp3 = sum < Date.now();
-  }
-  return tmp3;
-};
-prototype["shouldFetchInstancesForGuild"] = function shouldFetchInstancesForGuild(arg0) {
-  let prop;
-  if (obj2[arg0] != null) {
-    prop = tmp.instancesLastFetchedAt;
-  }
-  let tmp3 = null == prop;
-  if (!tmp3) {
-    const _Date = Date;
-    const sum = prop + 300000;
-    tmp3 = sum < Date.now();
-  }
-  return tmp3;
-};
-prototype["shouldFetchGlobalCatalog"] = function shouldFetchGlobalCatalog() {
-  const catalogLastFetchedAt = obj.catalogLastFetchedAt;
-  let tmp = null == catalogLastFetchedAt;
-  if (!tmp) {
-    const _Date = Date;
-    const sum = catalogLastFetchedAt + c2;
-    tmp = sum < Date.now();
-  }
-  return tmp;
-};
 GameServerStore.displayName = "GameServerStore";
 GameServerStore.persistKey = "GameServerStore";
 obj = {
@@ -136,16 +146,14 @@ obj = {
   GAME_SERVER_FETCH_CATALOG_SUCCESS: function handleFetchCatalogSuccess(guildId) {
     guildId = guildId.guildId;
     obj = {};
+    const catalog = guildId.catalog;
     const merged = Object.assign(obj2);
     if (null == obj2[guildId]) {
       obj2 = { catalog: {}, instances: {}, instructions: {}, entitlements: {} };
       obj2[guildId] = obj2;
     }
-    const obj3 = {};
+    const obj3 = { catalog, hasFetchedCatalog: true, catalogLastFetchedAt: Date.now() };
     const merged1 = Object.assign(obj2[guildId]);
-    obj3.catalog = guildId.catalog;
-    obj3.hasFetchedCatalog = true;
-    obj3.catalogLastFetchedAt = Date.now();
     obj[guildId] = obj3;
     obj2 = obj;
   },
@@ -155,20 +163,21 @@ obj = {
   GAME_SERVER_FETCH_INSTANCES_SUCCESS: function handleFetchInstancesSuccess(guildId) {
     guildId = guildId.guildId;
     obj = {};
+    const instances = guildId.instances;
     const merged = Object.assign(obj2);
     if (null == obj2[guildId]) {
       obj2 = { catalog: {}, instances: {}, instructions: {}, entitlements: {} };
       obj2[guildId] = obj2;
     }
-    const obj3 = {};
+    const obj3 = { instances, hasFetchedInstances: true, instancesLastFetchedAt: Date.now() };
     const merged1 = Object.assign(obj2[guildId]);
-    obj3.instances = guildId.instances;
-    obj3.hasFetchedInstances = true;
-    obj3.instancesLastFetchedAt = Date.now();
     obj[guildId] = obj3;
     obj2 = obj;
   },
   GAME_SERVER_FETCH_GAME_INSTRUCTIONS_SUCCESS: function handleFetchProductSuccess(guildId) {
+    let instructions;
+    let obj5;
+    let skuId;
     guildId = guildId.guildId;
     obj = {};
     ({ skuId, instructions } = guildId);
@@ -177,20 +186,22 @@ obj = {
       obj2 = { catalog: {}, instances: {}, instructions: {}, entitlements: {} };
       obj2[guildId] = obj2;
     }
-    const obj3 = {};
+    const obj3 = { instructions: obj5 };
     const merged1 = Object.assign(obj2[guildId]);
     if (null == obj2[guildId]) {
       const obj4 = { catalog: {}, instances: {}, instructions: {}, entitlements: {} };
       obj2[guildId] = obj4;
     }
-    const obj5 = {};
+    obj5 = {};
     const merged2 = Object.assign(obj2[guildId].instructions);
     obj5[skuId] = instructions;
-    obj3.instructions = obj5;
     obj[guildId] = obj3;
     obj2 = obj;
   },
   GAME_SERVER_UPDATE_INSTANCE_SUCCESS: function handleUpdateInstanceSuccess(arg0) {
+    let guildId;
+    let instance;
+    let obj4;
     ({ guildId, instance } = arg0);
     if (null == obj2[guildId]) {
       obj = { catalog: {}, instances: {}, instructions: {}, entitlements: {} };
@@ -198,20 +209,21 @@ obj = {
     }
     obj2 = {};
     const merged = Object.assign(obj2);
-    const obj3 = {};
+    const obj3 = { instances: obj4 };
     const merged1 = Object.assign(tmp2);
-    const obj4 = {};
+    obj4 = {};
     const merged2 = Object.assign(tmp2.instances);
     obj4[instance.id] = instance;
-    obj3.instances = obj4;
     obj2[guildId] = obj3;
   },
   GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS: function handleFetchBoostEntitlementsSuccess(arg0) {
+    let guildId;
+    let unlockedGameServers;
     ({ guildId, unlockedGameServers } = arg0);
     const values = Object.values(unlockedGameServers);
     obj = {};
     const reduced = values.reduce((acc, item) => {
-      let num = closure_0(dependencyMap[0])(item);
+      let num = getPowerupEntitlementPriceDefault(item);
       if (num == null) {
         num = 0;
       }
@@ -222,39 +234,38 @@ obj = {
       obj2 = { catalog: {}, instances: {}, instructions: {}, entitlements: {} };
       obj2[guildId] = obj2;
     }
-    const obj3 = {};
+    const obj3 = { entitlements: unlockedGameServers, appliedBoosts: reduced };
     const merged1 = Object.assign(obj2[guildId]);
-    obj3.entitlements = unlockedGameServers;
-    obj3.appliedBoosts = reduced;
     obj[guildId] = obj3;
     obj2 = obj;
   },
   GAME_SERVER_CREATE: handleGameServerInstanceCreated,
   GAME_SERVER_UPDATE: handleGameServerInstanceCreated,
-  GAME_SERVER_DELETE: function handleGameServerInstanceDeleted(arg0) {
-    ({ guildId, gameServerId } = arg0);
+  GAME_SERVER_DELETE: function handleGameServerInstanceDeleted(guildId) {
+    guildId = guildId.guildId;
     if (null != guildId) {
       if (null == obj2[guildId]) {
         obj = { catalog: {}, instances: {}, instructions: {}, entitlements: {} };
         obj2[guildId] = obj;
       }
-      const instances = tmp6.instances;
-      delete tmp[tmp2];
+      delete obj2[guildId].instances[tmp];
       obj2 = {};
       const merged = Object.assign(obj2);
       const obj3 = {};
-      const merged1 = Object.assign(tmp6);
+      const merged1 = Object.assign(tmp5);
       obj2[guildId] = obj3;
     }
   },
   GUILD_POWERUP_ENTITLEMENTS_CREATE: function handleGameServerEntitlementCreated(arg0) {
+    let entitlements;
+    let guildId;
     ({ guildId, entitlements } = arg0);
-    entitlements = undefined;
+    let closure_0;
     if (null == obj2[guildId]) {
       obj = { catalog: {}, instances: {}, instructions: {}, entitlements: {} };
       obj2[guildId] = obj;
     }
-    entitlements = tmp2;
+    closure_0 = tmp2;
     const found = entitlements.filter((sku) => {
       sku = sku.sku;
       let game_server;
@@ -275,47 +286,46 @@ obj = {
     const values = Object.values(tmp2.entitlements);
     obj2 = {};
     const reduced = values.reduce((acc, item) => {
-      let num = closure_0(dependencyMap[0])(item);
+      let num = getPowerupEntitlementPriceDefault(item);
       if (num == null) {
         num = 0;
       }
       return acc + num;
     }, 0);
     const merged = Object.assign(obj2);
-    const obj3 = {};
+    const obj3 = { appliedBoosts: reduced };
     const merged1 = Object.assign(tmp2);
-    obj3.appliedBoosts = reduced;
     obj2[guildId] = obj3;
   },
   GUILD_POWERUP_ENTITLEMENTS_DELETE: function handleGameServerEntitlementDeleted(arg0) {
+    let entitlements;
+    let guildId;
     ({ guildId, entitlements } = arg0);
-    closure_0 = undefined;
+    let closure_0;
     if (null == obj2[guildId]) {
       obj = { catalog: {}, instances: {}, instructions: {}, entitlements: {} };
       obj2[guildId] = obj;
     }
     closure_0 = tmp2;
     const item = entitlements.forEach((item) => {
-      delete tmp2[tmp];
+      delete closure_0.entitlements[item.id];
     });
     const values = Object.values(tmp2.entitlements);
     obj2 = {};
     const reduced = values.reduce((acc, item) => {
-      let num = closure_0(dependencyMap[0])(item);
+      let num = getPowerupEntitlementPriceDefault(item);
       if (num == null) {
         num = 0;
       }
       return acc + num;
     }, 0);
     const merged = Object.assign(obj2);
-    const obj3 = {};
+    const obj3 = { appliedBoosts: reduced };
     const merged1 = Object.assign(tmp2);
-    obj3.appliedBoosts = reduced;
     obj2[guildId] = obj3;
   },
 };
 const gameServerStore = new GameServerStore(DispatcherDefault, obj);
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_server/GameServerStore.tsx");
 
 export default gameServerStore;

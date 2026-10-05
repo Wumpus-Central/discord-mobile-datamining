@@ -1,80 +1,95 @@
 // discord_app/modules/forums/native/posts/list/ForumPostListFooter.tsx
-import c from "../../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../../../Constants.tsx";
 import GameInvitesChannelUtils from "../../../../game_invite_channels/GameInvitesChannelUtils.tsx";
 import ForumPostReactions from "../reactions/ForumPostReactions.tsx";
 import useTypingUsersIds from "../../../../chat/useTypingUsersIds.tsx";
 import ForumPostMessageCountDefault from "../ForumPostMessageCount.tsx";
 import ForumPostTypingUsersDefault from "../ForumPostTypingUsers.tsx";
 import GameInviteVoiceCountDefault from "../../../../game_invite_channels/native/GameInviteVoiceCount.tsx";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const AnalyticsObjects = fn(1085).AnalyticsObjects;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+let size;
+const View = react_native.View;
+const AnalyticsObjects = Constants.AnalyticsObjects;
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: metroImportDefault } = Fragment);
+let obj = {
   footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start" },
-  dot: null,
+  dot: size,
 };
-let size = {
+size = {
   height: 4,
   width: 4,
   borderRadius: 2,
   backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
   marginHorizontal: 8,
 };
-obj2.dot = size;
-let closure_8 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-size = fn(2);
-const result = size.fileFinishedImporting("modules/forums/native/posts/list/ForumPostListFooter.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_8 = createStyles.createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(22);
+      let firstMessage;
+      let hasUnreads;
+      let items;
+      let items1;
+      let parentChannel;
+      let thread;
+      const obj = react2;
+      const cResult = obj.c(22);
       ({ thread, firstMessage, hasUnreads, parentChannel } = arg0);
       const tmp4 = closure_8();
-      const typingUserIds = useTypingUsersIds.useTypingUserIds(thread.id);
-      const isGameInvitesPost = GameInvitesChannelUtils.useIsGameInvitesPost(thread);
+      const obj2 = useTypingUsersIds;
+      const typingUserIds = obj2.useTypingUserIds(thread.id);
+      const obj3 = GameInvitesChannelUtils;
+      const isGameInvitesPost = obj3.useIsGameInvitesPost(thread);
       if (cResult[0] === hasUnreads) {
+        let tmp7;
         if (cResult[1] === thread) {
-          let tmp7 = cResult[2];
+          tmp7 = cResult[2];
         }
         if (cResult[3] === isGameInvitesPost) {
+          let tmp9;
           if (cResult[4] === thread) {
-            let tmp9 = cResult[5];
+            tmp9 = cResult[5];
           }
           if (cResult[6] === hasUnreads) {
-            if (cResult[7] === tmp5) {
+            if (cResult[7] === typingUserIds.length > 0) {
               if (cResult[8] === tmp4.dot) {
                 if (cResult[9] === thread) {
+                  let tmp13;
                   if (cResult[10] === typingUserIds) {
-                    let tmp13 = cResult[11];
+                    tmp13 = cResult[11];
                   }
                   if (cResult[12] === firstMessage) {
                     if (cResult[13] === parentChannel) {
+                      let tmp20;
                       if (cResult[14] === thread) {
-                        let tmp20 = cResult[15];
+                        tmp20 = cResult[15];
                       }
                       if (cResult[16] === tmp4.footer) {
                         if (cResult[17] === tmp7) {
                           if (cResult[18] === tmp9) {
                             if (cResult[19] === tmp13) {
+                              let tmp25;
                               if (cResult[20] === tmp20) {
-                                let tmp25 = cResult[21];
+                                tmp25 = cResult[21];
                               }
                               return tmp25;
                             }
                           }
                         }
                       }
-                      const obj4 = { style: tmp4.footer, children: null };
-                      const items = [tmp7, tmp9, tmp13, tmp20];
-                      obj4.children = items;
-                      const tmp28 = React5(View, obj4);
+                      const obj4 = { style: tmp4.footer, children: items };
+                      items = [tmp7, tmp9, tmp13, tmp20];
+                      const tmp28 = metroImportDefault(View, obj4);
                       cResult[16] = tmp4.footer;
                       cResult[17] = tmp7;
                       cResult[18] = tmp9;
@@ -104,17 +119,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let tmp14 = tmp5;
-          if (tmp5) {
-            const obj6 = { children: null };
+          if (tmp14) {
+            const obj6 = { children: items1 };
             const obj7 = { style: tmp4.dot };
-            const items1 = [hasOwnProperty(View, obj7)];
+            items1 = [hasOwnProperty(View, obj7)];
             const obj8 = { thread, typingUserIds, hasUnreads };
             items1[1] = hasOwnProperty(ForumPostTypingUsersDefault, obj8);
-            obj6.children = items1;
-            tmp14 = React5(timestampProducer, obj6);
+            tmp14 = metroImportDefault(metroRequire, obj6);
           }
           cResult[6] = hasUnreads;
-          cResult[7] = tmp5;
+          cResult[7] = typingUserIds.length > 0;
           cResult[8] = tmp4.dot;
           cResult[9] = thread;
           cResult[10] = typingUserIds;
@@ -122,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp13 = tmp14;
         }
         let tmp10 = isGameInvitesPost;
-        if (isGameInvitesPost) {
+        if (tmp10) {
           const obj9 = { channel: thread };
           tmp10 = hasOwnProperty(GameInviteVoiceCountDefault, obj9);
         }
@@ -138,26 +152,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = tmp8;
     }
   : (parentChannel) => {
+      let firstMessage;
+      let hasUnreads;
+      let items;
+      let items1;
+      let thread;
       ({ thread, firstMessage, hasUnreads } = parentChannel);
+      parentChannel = parentChannel.parentChannel;
       const tmp = closure_8();
-      const typingUserIds = useTypingUsersIds.useTypingUserIds(thread.id);
+      const obj = useTypingUsersIds;
+      const typingUserIds = obj.useTypingUserIds(thread.id);
       let tmp6Result = typingUserIds.length > 0;
-      let isGameInvitesPost = GameInvitesChannelUtils.useIsGameInvitesPost(thread);
-      const obj3 = { style: tmp.footer, children: null };
-      const items = [hasOwnProperty(ForumPostMessageCountDefault, { thread, hasUnreads }), , ,];
+      const obj2 = GameInvitesChannelUtils;
+      let isGameInvitesPost = obj2.useIsGameInvitesPost(thread);
+      const obj3 = { style: tmp.footer, children: items };
+      items = [hasOwnProperty(ForumPostMessageCountDefault, { thread, hasUnreads }), , ,];
       if (isGameInvitesPost) {
         const obj4 = { channel: thread };
         isGameInvitesPost = hasOwnProperty(GameInviteVoiceCountDefault, obj4);
       }
       items[1] = isGameInvitesPost;
       if (tmp6Result) {
-        const obj5 = { children: null };
+        const obj5 = { children: items1 };
         const obj6 = { style: tmp.dot };
-        const items1 = [hasOwnProperty(View, obj6)];
+        items1 = [hasOwnProperty(View, obj6)];
         const obj7 = { thread, typingUserIds, hasUnreads };
         items1[1] = hasOwnProperty(ForumPostTypingUsersDefault, obj7);
-        obj5.children = items1;
-        tmp6Result = React5(timestampProducer, obj5);
+        tmp6Result = metroImportDefault(metroRequire, obj5);
       }
       items[2] = tmp6Result;
       let tmp8Result = null != firstMessage;
@@ -165,12 +186,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = {
           thread,
           firstMessage,
-          parentChannel: parentChannel.parentChannel,
+          parentChannel,
           locationAnalyticsObject: AnalyticsObjects.FORUM_LIST_ITEM_FOOTER,
         };
         tmp8Result = hasOwnProperty(ForumPostReactions.MostCommonForumPostReaction, obj8);
       }
       items[3] = tmp8Result;
-      obj3.children = items;
-      return React5(View, obj3);
+      return metroImportDefault(View, obj3);
     };
+size = size_mod;
+const result = size.fileFinishedImporting("modules/forums/native/posts/list/ForumPostListFooter.tsx");
+
+export default tmp4;

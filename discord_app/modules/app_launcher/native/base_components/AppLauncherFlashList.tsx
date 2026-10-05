@@ -1,58 +1,68 @@
 // discord_app/modules/app_launcher/native/base_components/AppLauncherFlashList.tsx
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import useAnimatedScrollLock from "../../../voice_panel/native/controls/utils/useAnimatedScrollLock.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ScrollView = fn(17).ScrollView;
-const jsx = fn(21).jsx;
-let ReactCompilerGating = fn(558);
+let simultaneousHandlers;
+
+const ScrollView = react_native.ScrollView;
+const jsx = Fragment.jsx;
+let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = fn(558);
-fn = (arg0) => useAnimatedScrollLock.useAnimatedScrollLock(arg0);
-const forwardRefResult = noop.forwardRef(
+const forwardRef = react.forwardRef;
+ReactCompilerGating = ReactCompilerGating_mod;
+const fn = (arg0) => {
+  const obj = useAnimatedScrollLock;
+  return obj.useAnimatedScrollLock(arg0);
+};
+const forwardRefResult = forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (simultaneousHandlers, ref) => {
-        let viewabilityConfigCallbackPairs = simultaneousHandlers;
-        let AnimatedFlashList = simultaneousHandlers;
-        let tmp = dependencyMap;
-        const cResult = simultaneousHandlers(576).c(35);
+        let tmp5;
         const obj = simultaneousHandlers(576);
-        const items = [simultaneousHandlers.simultaneousHandlers];
-        showsVerticalScrollIndicator = noop.useMemo(
+        const cResult = obj.c(35);
+        const obj2 = simultaneousHandlers(10994);
+        simultaneousHandlers = simultaneousHandlers.simultaneousHandlers;
+        const items = [simultaneousHandlers];
+        const entrypoint = obj2.useAppLauncherContext().entrypoint;
+        const memo = react.useMemo(
           () =>
-            noop.forwardRef((arg0, ref) => {
+            react.forwardRef((arg0, ref) => {
               const memo = React.useMemo(() => {
                 const Gesture = simultaneousHandlers(closure_2_1[3]).Gesture;
-                return Gesture.Native().simultaneousWithExternalGesture(closure_1_0);
+                const NativeResult = Gesture.Native();
+                return NativeResult.simultaneousWithExternalGesture(closure_1_0);
               }, []);
-              const obj = { gesture: memo, children: null };
+              const GestureDetector = simultaneousHandlers(dependencyMap[3]).GestureDetector;
               const merged = Object.assign(arg0);
-              obj.children = <ScrollView ref={ref} />;
-              return jsx(simultaneousHandlers(dependencyMap[3]).GestureDetector, { gesture: memo, children: null });
+              return <GestureDetector gesture={memo}>{null}</GestureDetector>;
             }),
           items,
         );
-        if (
-          obj2.useAppLauncherContext().entrypoint ===
-          simultaneousHandlers.simultaneousHandlers(8932).AppLauncherEntrypoint.VOICE
-        ) {
-          if (cResult[0] === showsVerticalScrollIndicator) {
-            if (cResult[1] === viewabilityConfigCallbackPairs.ListHeaderComponent) {
-              if (cResult[2] === viewabilityConfigCallbackPairs.animatedOnScroll) {
-                if (cResult[3] === viewabilityConfigCallbackPairs.animatedProps) {
-                  if (cResult[4] === viewabilityConfigCallbackPairs.automaticallyAdjustsScrollIndicatorInsets) {
-                    if (cResult[5] === viewabilityConfigCallbackPairs.contentContainerStyle) {
-                      if (cResult[6] === viewabilityConfigCallbackPairs.data) {
-                        if (cResult[7] === viewabilityConfigCallbackPairs.getItemType) {
-                          if (cResult[8] === viewabilityConfigCallbackPairs.keyboardDismissMode) {
-                            if (cResult[9] === viewabilityConfigCallbackPairs.keyboardShouldPersistTaps) {
-                              if (cResult[10] === viewabilityConfigCallbackPairs.onViewableItemsChanged) {
-                                if (cResult[11] === viewabilityConfigCallbackPairs.renderItem) {
-                                  if (cResult[12] === viewabilityConfigCallbackPairs.scrollIndicatorInsets) {
-                                    if (cResult[13] === viewabilityConfigCallbackPairs.showsVerticalScrollIndicator) {
-                                      if (
-                                        cResult[14] === viewabilityConfigCallbackPairs.viewabilityConfigCallbackPairs
-                                      ) {
+        if (entrypoint === simultaneousHandlers(8932).AppLauncherEntrypoint.VOICE) {
+          if (cResult[0] === memo) {
+            if (cResult[1] === simultaneousHandlers.ListHeaderComponent) {
+              if (cResult[2] === simultaneousHandlers.animatedOnScroll) {
+                if (cResult[3] === simultaneousHandlers.animatedProps) {
+                  if (cResult[4] === simultaneousHandlers.automaticallyAdjustsScrollIndicatorInsets) {
+                    if (cResult[5] === simultaneousHandlers.contentContainerStyle) {
+                      if (cResult[6] === simultaneousHandlers.data) {
+                        if (cResult[7] === simultaneousHandlers.getItemType) {
+                          if (cResult[8] === simultaneousHandlers.keyboardDismissMode) {
+                            if (cResult[9] === simultaneousHandlers.keyboardShouldPersistTaps) {
+                              if (cResult[10] === simultaneousHandlers.onViewableItemsChanged) {
+                                if (cResult[11] === simultaneousHandlers.renderItem) {
+                                  if (cResult[12] === simultaneousHandlers.scrollIndicatorInsets) {
+                                    if (cResult[13] === simultaneousHandlers.showsVerticalScrollIndicator) {
+                                      if (cResult[14] === simultaneousHandlers.viewabilityConfigCallbackPairs) {
+                                        let tmp8;
+                                        if (cResult[15] === ref) {
+                                          tmp8 = cResult[16];
+                                        }
+                                        tmp5 = tmp8;
                                       }
                                     }
                                   }
@@ -68,26 +78,6 @@ const forwardRefResult = noop.forwardRef(
               }
             }
           }
-          AnimatedFlashList = AnimatedFlashList(8371).AnimatedFlashList;
-          const obj6 = {
-            renderScrollComponent: showsVerticalScrollIndicator,
-            ListHeaderComponent: null,
-            onScroll: null,
-            contentContainerStyle: null,
-            scrollIndicatorInsets: null,
-            renderItem: null,
-            getItemType: null,
-            data: null,
-            automaticallyAdjustsScrollIndicatorInsets: null,
-            keyboardDismissMode: null,
-            keyboardShouldPersistTaps: null,
-            showsVerticalScrollIndicator: null,
-            onViewableItemsChanged: null,
-            viewabilityConfigCallbackPairs: null,
-            animatedProps: null,
-            overScrollMode: "never",
-            ref: null,
-          };
           ({
             ListHeaderComponent: obj4.ListHeaderComponent,
             animatedOnScroll: obj4.onScroll,
@@ -103,70 +93,64 @@ const forwardRefResult = noop.forwardRef(
             onViewableItemsChanged: obj4.onViewableItemsChanged,
             viewabilityConfigCallbackPairs: obj4.viewabilityConfigCallbackPairs,
             animatedProps: obj4.animatedProps,
-          } = viewabilityConfigCallbackPairs);
-          obj6.ref = ref;
-          tmp = (
-            <AnimatedFlashList
-              renderScrollComponent={showsVerticalScrollIndicator}
-              ListHeaderComponent={null}
-              onScroll={null}
-              contentContainerStyle={null}
-              scrollIndicatorInsets={null}
-              renderItem={null}
-              getItemType={null}
-              data={null}
-              automaticallyAdjustsScrollIndicatorInsets={null}
-              keyboardDismissMode={null}
-              keyboardShouldPersistTaps={null}
-              showsVerticalScrollIndicator={null}
-              onViewableItemsChanged={null}
-              viewabilityConfigCallbackPairs={null}
-              animatedProps={null}
-              overScrollMode="never"
-              ref={null}
-            />
-          );
-          cResult[0] = showsVerticalScrollIndicator;
-          cResult[1] = viewabilityConfigCallbackPairs.ListHeaderComponent;
-          cResult[2] = viewabilityConfigCallbackPairs.animatedOnScroll;
-          cResult[3] = viewabilityConfigCallbackPairs.animatedProps;
-          cResult[4] = viewabilityConfigCallbackPairs.automaticallyAdjustsScrollIndicatorInsets;
-          cResult[5] = viewabilityConfigCallbackPairs.contentContainerStyle;
-          cResult[6] = viewabilityConfigCallbackPairs.data;
-          cResult[7] = viewabilityConfigCallbackPairs.getItemType;
-          cResult[8] = viewabilityConfigCallbackPairs.keyboardDismissMode;
-          cResult[9] = viewabilityConfigCallbackPairs.keyboardShouldPersistTaps;
-          cResult[10] = viewabilityConfigCallbackPairs.onViewableItemsChanged;
-          cResult[11] = viewabilityConfigCallbackPairs.renderItem;
-          ({ scrollIndicatorInsets: tmp2[12], showsVerticalScrollIndicator } = viewabilityConfigCallbackPairs);
-          cResult[13] = showsVerticalScrollIndicator;
-          viewabilityConfigCallbackPairs = viewabilityConfigCallbackPairs.viewabilityConfigCallbackPairs;
-          cResult[14] = viewabilityConfigCallbackPairs;
+          } = simultaneousHandlers);
+          const tmp10 = jsx(simultaneousHandlers(8371).AnimatedFlashList, {
+            renderScrollComponent: memo,
+            ListHeaderComponent: null,
+            onScroll: null,
+            contentContainerStyle: null,
+            scrollIndicatorInsets: null,
+            renderItem: null,
+            getItemType: null,
+            data: null,
+            automaticallyAdjustsScrollIndicatorInsets: null,
+            keyboardDismissMode: null,
+            keyboardShouldPersistTaps: null,
+            showsVerticalScrollIndicator: null,
+            onViewableItemsChanged: null,
+            viewabilityConfigCallbackPairs: null,
+            animatedProps: null,
+            overScrollMode: "never",
+            ref,
+          });
+          cResult[0] = memo;
+          cResult[1] = simultaneousHandlers.ListHeaderComponent;
+          cResult[2] = simultaneousHandlers.animatedOnScroll;
+          cResult[3] = simultaneousHandlers.animatedProps;
+          cResult[4] = simultaneousHandlers.automaticallyAdjustsScrollIndicatorInsets;
+          cResult[5] = simultaneousHandlers.contentContainerStyle;
+          cResult[6] = simultaneousHandlers.data;
+          cResult[7] = simultaneousHandlers.getItemType;
+          cResult[8] = simultaneousHandlers.keyboardDismissMode;
+          cResult[9] = simultaneousHandlers.keyboardShouldPersistTaps;
+          cResult[10] = simultaneousHandlers.onViewableItemsChanged;
+          cResult[11] = simultaneousHandlers.renderItem;
+          cResult[12] = simultaneousHandlers.scrollIndicatorInsets;
+          cResult[13] = simultaneousHandlers.showsVerticalScrollIndicator;
+          cResult[14] = simultaneousHandlers.viewabilityConfigCallbackPairs;
           cResult[15] = ref;
-          cResult[16] = tmp;
+          cResult[16] = tmp10;
+          tmp8 = tmp10;
         } else {
-          if (cResult[17] === viewabilityConfigCallbackPairs.ListHeaderComponent) {
-            if (cResult[18] === viewabilityConfigCallbackPairs.automaticallyAdjustsScrollIndicatorInsets) {
-              if (cResult[19] === viewabilityConfigCallbackPairs.bottomViewabilityInsetRef) {
-                if (cResult[20] === viewabilityConfigCallbackPairs.contentContainerStyle) {
-                  if (cResult[21] === viewabilityConfigCallbackPairs.data) {
-                    if (cResult[22] === viewabilityConfigCallbackPairs.getItemType) {
-                      if (cResult[23] === viewabilityConfigCallbackPairs.keyboardDismissMode) {
-                        if (cResult[24] === viewabilityConfigCallbackPairs.keyboardShouldPersistTaps) {
-                          if (cResult[25] === viewabilityConfigCallbackPairs.lockableScrollableContentOffsetY) {
-                            if (cResult[26] === viewabilityConfigCallbackPairs.onScroll) {
-                              if (cResult[27] === viewabilityConfigCallbackPairs.onViewableItemsChanged) {
-                                if (cResult[28] === viewabilityConfigCallbackPairs.preserveScrollMomentum) {
-                                  if (cResult[29] === viewabilityConfigCallbackPairs.renderItem) {
-                                    if (cResult[30] === viewabilityConfigCallbackPairs.scrollIndicatorInsets) {
-                                      if (cResult[31] === viewabilityConfigCallbackPairs.showsVerticalScrollIndicator) {
-                                        if (
-                                          cResult[32] === viewabilityConfigCallbackPairs.viewabilityConfigCallbackPairs
-                                        ) {
+          if (cResult[17] === simultaneousHandlers.ListHeaderComponent) {
+            if (cResult[18] === simultaneousHandlers.automaticallyAdjustsScrollIndicatorInsets) {
+              if (cResult[19] === simultaneousHandlers.bottomViewabilityInsetRef) {
+                if (cResult[20] === simultaneousHandlers.contentContainerStyle) {
+                  if (cResult[21] === simultaneousHandlers.data) {
+                    if (cResult[22] === simultaneousHandlers.getItemType) {
+                      if (cResult[23] === simultaneousHandlers.keyboardDismissMode) {
+                        if (cResult[24] === simultaneousHandlers.keyboardShouldPersistTaps) {
+                          if (cResult[25] === simultaneousHandlers.lockableScrollableContentOffsetY) {
+                            if (cResult[26] === simultaneousHandlers.onScroll) {
+                              if (cResult[27] === simultaneousHandlers.onViewableItemsChanged) {
+                                if (cResult[28] === simultaneousHandlers.preserveScrollMomentum) {
+                                  if (cResult[29] === simultaneousHandlers.renderItem) {
+                                    if (cResult[30] === simultaneousHandlers.scrollIndicatorInsets) {
+                                      if (cResult[31] === simultaneousHandlers.showsVerticalScrollIndicator) {
+                                        if (cResult[32] === simultaneousHandlers.viewabilityConfigCallbackPairs) {
                                           if (cResult[33] === ref) {
-                                            let tmp3 = cResult[34];
+                                            tmp5 = cResult[34];
                                           }
-                                          return tmp3;
                                         }
                                       }
                                     }
@@ -183,25 +167,6 @@ const forwardRefResult = noop.forwardRef(
               }
             }
           }
-          const obj7 = {
-            ListHeaderComponent: null,
-            onScroll: null,
-            contentContainerStyle: null,
-            scrollIndicatorInsets: null,
-            renderItem: null,
-            getItemType: null,
-            data: null,
-            preserveScrollMomentum: null,
-            automaticallyAdjustsScrollIndicatorInsets: null,
-            keyboardDismissMode: null,
-            keyboardShouldPersistTaps: null,
-            showsVerticalScrollIndicator: null,
-            lockableScrollableContentOffsetY: null,
-            bottomViewabilityInsetRef: null,
-            onViewableItemsChanged: null,
-            viewabilityConfigCallbackPairs: null,
-            ref: null,
-          };
           ({
             ListHeaderComponent: obj3.ListHeaderComponent,
             onScroll: obj3.onScroll,
@@ -219,9 +184,8 @@ const forwardRefResult = noop.forwardRef(
             bottomViewabilityInsetRef: obj3.bottomViewabilityInsetRef,
             onViewableItemsChanged: obj3.onViewableItemsChanged,
             viewabilityConfigCallbackPairs: obj3.viewabilityConfigCallbackPairs,
-          } = viewabilityConfigCallbackPairs);
-          obj7.ref = ref;
-          const tmp5 = jsx(AnimatedFlashList(8371).BottomSheetFlashList, {
+          } = simultaneousHandlers);
+          const tmp7 = jsx(simultaneousHandlers(8371).BottomSheetFlashList, {
             ListHeaderComponent: null,
             onScroll: null,
             contentContainerStyle: null,
@@ -238,69 +202,51 @@ const forwardRefResult = noop.forwardRef(
             bottomViewabilityInsetRef: null,
             onViewableItemsChanged: null,
             viewabilityConfigCallbackPairs: null,
-            ref: null,
+            ref,
           });
-          cResult[17] = viewabilityConfigCallbackPairs.ListHeaderComponent;
-          cResult[18] = viewabilityConfigCallbackPairs.automaticallyAdjustsScrollIndicatorInsets;
-          cResult[19] = viewabilityConfigCallbackPairs.bottomViewabilityInsetRef;
-          cResult[20] = viewabilityConfigCallbackPairs.contentContainerStyle;
-          cResult[21] = viewabilityConfigCallbackPairs.data;
-          cResult[22] = viewabilityConfigCallbackPairs.getItemType;
-          cResult[23] = viewabilityConfigCallbackPairs.keyboardDismissMode;
-          cResult[24] = viewabilityConfigCallbackPairs.keyboardShouldPersistTaps;
-          cResult[25] = viewabilityConfigCallbackPairs.lockableScrollableContentOffsetY;
-          cResult[26] = viewabilityConfigCallbackPairs.onScroll;
-          cResult[27] = viewabilityConfigCallbackPairs.onViewableItemsChanged;
-          cResult[28] = viewabilityConfigCallbackPairs.preserveScrollMomentum;
-          cResult[29] = viewabilityConfigCallbackPairs.renderItem;
-          cResult[30] = viewabilityConfigCallbackPairs.scrollIndicatorInsets;
-          cResult[31] = viewabilityConfigCallbackPairs.showsVerticalScrollIndicator;
-          cResult[32] = viewabilityConfigCallbackPairs.viewabilityConfigCallbackPairs;
+          cResult[17] = simultaneousHandlers.ListHeaderComponent;
+          cResult[18] = simultaneousHandlers.automaticallyAdjustsScrollIndicatorInsets;
+          cResult[19] = simultaneousHandlers.bottomViewabilityInsetRef;
+          cResult[20] = simultaneousHandlers.contentContainerStyle;
+          cResult[21] = simultaneousHandlers.data;
+          cResult[22] = simultaneousHandlers.getItemType;
+          cResult[23] = simultaneousHandlers.keyboardDismissMode;
+          cResult[24] = simultaneousHandlers.keyboardShouldPersistTaps;
+          cResult[25] = simultaneousHandlers.lockableScrollableContentOffsetY;
+          cResult[26] = simultaneousHandlers.onScroll;
+          cResult[27] = simultaneousHandlers.onViewableItemsChanged;
+          cResult[28] = simultaneousHandlers.preserveScrollMomentum;
+          cResult[29] = simultaneousHandlers.renderItem;
+          cResult[30] = simultaneousHandlers.scrollIndicatorInsets;
+          cResult[31] = simultaneousHandlers.showsVerticalScrollIndicator;
+          cResult[32] = simultaneousHandlers.viewabilityConfigCallbackPairs;
           cResult[33] = ref;
-          cResult[34] = tmp5;
-          tmp3 = tmp5;
+          cResult[34] = tmp7;
+          tmp5 = tmp7;
         }
-        obj2 = simultaneousHandlers(10994);
+        return tmp5;
       }
     : (simultaneousHandlers, ref) => {
-        const items = [simultaneousHandlers.simultaneousHandlers];
-        let memo = noop.useMemo(
+        let tmp5;
+        const obj = simultaneousHandlers(10994);
+        simultaneousHandlers = simultaneousHandlers.simultaneousHandlers;
+        const items = [simultaneousHandlers];
+        const entrypoint = obj.useAppLauncherContext().entrypoint;
+        let memo = react.useMemo(
           () =>
-            noop.forwardRef((arg0, ref) => {
+            react.forwardRef((arg0, ref) => {
               const memo = React.useMemo(() => {
                 const Gesture = simultaneousHandlers(closure_2_1[3]).Gesture;
-                return Gesture.Native().simultaneousWithExternalGesture(closure_1_0);
+                const NativeResult = Gesture.Native();
+                return NativeResult.simultaneousWithExternalGesture(closure_1_0);
               }, []);
-              const obj = { gesture: memo, children: null };
+              const GestureDetector = simultaneousHandlers(dependencyMap[3]).GestureDetector;
               const merged = Object.assign(arg0);
-              obj.children = <ScrollView ref={ref} />;
-              return jsx(simultaneousHandlers(dependencyMap[3]).GestureDetector, { gesture: memo, children: null });
+              return <GestureDetector gesture={memo}>{null}</GestureDetector>;
             }),
           items,
         );
-        if (
-          obj.useAppLauncherContext().entrypoint ===
-          simultaneousHandlers.simultaneousHandlers(8932).AppLauncherEntrypoint.VOICE
-        ) {
-          const obj5 = {
-            renderScrollComponent: memo,
-            ListHeaderComponent: null,
-            onScroll: null,
-            contentContainerStyle: null,
-            scrollIndicatorInsets: null,
-            renderItem: null,
-            getItemType: null,
-            data: null,
-            automaticallyAdjustsScrollIndicatorInsets: null,
-            keyboardDismissMode: null,
-            keyboardShouldPersistTaps: null,
-            showsVerticalScrollIndicator: null,
-            onViewableItemsChanged: null,
-            viewabilityConfigCallbackPairs: null,
-            animatedProps: null,
-            overScrollMode: "never",
-            ref: null,
-          };
+        if (entrypoint === simultaneousHandlers(8932).AppLauncherEntrypoint.VOICE) {
           ({
             ListHeaderComponent: obj2.ListHeaderComponent,
             animatedOnScroll: obj2.onScroll,
@@ -317,8 +263,7 @@ const forwardRefResult = noop.forwardRef(
             viewabilityConfigCallbackPairs: obj2.viewabilityConfigCallbackPairs,
             animatedProps: obj2.animatedProps,
           } = simultaneousHandlers);
-          obj5.ref = ref;
-          let tmp5 = jsx(tmp(8371).AnimatedFlashList, {
+          tmp5 = jsx(tmp(8371).AnimatedFlashList, {
             renderScrollComponent: memo,
             ListHeaderComponent: null,
             onScroll: null,
@@ -335,28 +280,9 @@ const forwardRefResult = noop.forwardRef(
             viewabilityConfigCallbackPairs: null,
             animatedProps: null,
             overScrollMode: "never",
-            ref: null,
+            ref,
           });
         } else {
-          const obj6 = {
-            ListHeaderComponent: null,
-            onScroll: null,
-            contentContainerStyle: null,
-            scrollIndicatorInsets: null,
-            renderItem: null,
-            getItemType: null,
-            data: null,
-            preserveScrollMomentum: null,
-            automaticallyAdjustsScrollIndicatorInsets: null,
-            keyboardDismissMode: null,
-            keyboardShouldPersistTaps: null,
-            showsVerticalScrollIndicator: null,
-            lockableScrollableContentOffsetY: null,
-            bottomViewabilityInsetRef: null,
-            onViewableItemsChanged: null,
-            viewabilityConfigCallbackPairs: null,
-            ref: null,
-          };
           ({
             ListHeaderComponent: obj3.ListHeaderComponent,
             onScroll: obj3.onScroll,
@@ -375,7 +301,6 @@ const forwardRefResult = noop.forwardRef(
             onViewableItemsChanged: obj3.onViewableItemsChanged,
             viewabilityConfigCallbackPairs: obj3.viewabilityConfigCallbackPairs,
           } = simultaneousHandlers);
-          obj6.ref = ref;
           tmp5 = jsx(tmp(8371).BottomSheetFlashList, {
             ListHeaderComponent: null,
             onScroll: null,
@@ -393,14 +318,13 @@ const forwardRefResult = noop.forwardRef(
             bottomViewabilityInsetRef: null,
             onViewableItemsChanged: null,
             viewabilityConfigCallbackPairs: null,
-            ref: null,
+            ref,
           });
         }
         return tmp5;
       },
 );
 forwardRefResult.displayName = "AppLauncherFlashList";
-const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherFlashList.tsx");
 
 export default forwardRefResult;

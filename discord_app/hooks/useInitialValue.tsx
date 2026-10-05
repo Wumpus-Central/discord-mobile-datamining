@@ -1,9 +1,10 @@
 // discord_app/hooks/useInitialValue.tsx
-import noop from "../../_runtime/metro/00019__.js";
+import react from "../../_runtime/00019_react.js";
+import ReactCompilerGating_mod from "../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const size = fn(2);
 const result1 = size.fileFinishedImporting("hooks/useInitialValue.tsx");
 
-export default (flag) => noop.useState(flag)[0];
+export default (flag) => react.useState(flag)[0];

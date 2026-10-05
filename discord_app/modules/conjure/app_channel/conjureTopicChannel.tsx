@@ -24,6 +24,8 @@ export const conjureTopicForApp = function conjureTopicForApp(arg0) {
   return "" + c1 + arg0;
 };
 export const normalizeConjureTopicChannel = function normalizeConjureTopicChannel(arg0) {
+  let topic;
+  let type;
   ({ type, topic } = arg0);
   if (type == null) {
     type = ChannelTypes.GUILD_TEXT;
@@ -46,15 +48,15 @@ export const normalizeConjureTopicChannel = function normalizeConjureTopicChanne
   }
   let tmp9 = arg0;
   if (null != tmp3) {
-    const obj = {};
+    const obj = { type: ChannelTypes.GUILD_APP, application_id: tmp3 };
     const merged = Object.assign(arg0);
-    obj.type = ChannelTypes.GUILD_APP;
-    obj.application_id = tmp3;
     tmp9 = obj;
   }
   return tmp9;
 };
 export const normalizeConjureTopicChannelRecord = function normalizeConjureTopicChannelRecord(arg0) {
+  let topic_;
+  let type;
   ({ type, topic_ } = arg0);
   if (type == null) {
     type = ChannelTypes.GUILD_TEXT;
@@ -77,10 +79,8 @@ export const normalizeConjureTopicChannelRecord = function normalizeConjureTopic
   }
   let tmp9 = arg0;
   if (null != tmp3) {
-    const obj = {};
+    const obj = { type: ChannelTypes.GUILD_APP, application_id: tmp3 };
     const merged = Object.assign(arg0);
-    obj.type = ChannelTypes.GUILD_APP;
-    obj.application_id = tmp3;
     tmp9 = obj;
   }
   return tmp9;

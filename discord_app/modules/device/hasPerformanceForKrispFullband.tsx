@@ -6,9 +6,5 @@ const result = size.fileFinishedImporting("modules/device/hasPerformanceForKrisp
 
 export default function hasPerformanceForKrispFullband() {
   const tmp = getMediaPerformanceClassDefault();
-  let tmp2 = null === tmp;
-  if (!tmp2) {
-    tmp2 = tmp >= 31;
-  }
-  return tmp2;
+  return null === tmp || tmp >= 31;
 }

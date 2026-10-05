@@ -1,26 +1,28 @@
 // discord_app/modules/user_settings/defs/native/ContentAndSocialSetting.tsx
 import Constants from "../../../../Constants.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import FriendsIcon from "../../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const route = SettingBuilders.createRoute({
+const UserSettingsSections = Constants.UserSettingsSections;
+const obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t["+o1pDZ"]);
+    const intl = intl2.intl;
+    return intl.string(intl2.t["+o1pDZ"]);
   },
   parent: null,
   IconComponent: FriendsIcon.FriendsIcon,
   screen: {
-    route: Constants.UserSettingsSections.CONTENT_AND_SOCIAL,
+    route: UserSettingsSections.CONTENT_AND_SOCIAL,
     getComponent() {
       return require("ContentAndSocialScreen").default;
     },
   },
-});
+};
+const route = SettingBuilders.createRoute(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ContentAndSocialSetting.tsx");
 
 export default route;

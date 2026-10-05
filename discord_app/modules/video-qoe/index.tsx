@@ -8,10 +8,14 @@ import VideoQoEMetricsExperiment from "experiments/VideoQoEMetricsExperiment.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/video-qoe/index.tsx");
+const MobileMuxWrapper_export = MobileMuxWrapper.MobileMuxWrapper;
+const MuxIntegration_export = MuxIntegration.MuxIntegration;
+const MobileCustomMuxIntegration_export = MobileCustomMuxIntegration.MobileCustomMuxIntegration;
+const SessionManager_export = SessionManager.SessionManager;
 
 export const SimpleMuxWrapper = modules_SimpleMuxWrapper.SimpleMuxWrapper;
-export const MobileMuxWrapper = MobileMuxWrapper.MobileMuxWrapper;
-export const MuxIntegration = MuxIntegration.MuxIntegration;
-export const MobileCustomMuxIntegration = MobileCustomMuxIntegration.MobileCustomMuxIntegration;
-export const SessionManager = SessionManager.SessionManager;
+export { MobileMuxWrapper_export as MobileMuxWrapper };
+export { MuxIntegration_export as MuxIntegration };
+export { MobileCustomMuxIntegration_export as MobileCustomMuxIntegration };
+export { SessionManager_export as SessionManager };
 export const getVideoQoEMetricsConfig = VideoQoEMetricsExperiment.getVideoQoEMetricsConfig;

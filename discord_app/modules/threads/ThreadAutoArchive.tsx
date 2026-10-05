@@ -2,30 +2,26 @@
 import memoizeDefault from "../../../_runtime/00606_memoize.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import ThreadConstants from "ThreadConstants.tsx";
-import util from "../../intl/index.native.tsx";
+import intl5 from "../../intl/index.native.tsx";
 import _modDef4461 from "../../../_runtime/metro/04461__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function getAutoArchiveOptions() {
-  const obj = { id: "1hour", label: null, value: null };
-  const intl = util.intl;
-  obj.label = intl.string(util.t.cs8A1c);
-  obj.value = DurationsDefault.Minutes.HOUR;
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  const obj = { id: "1hour", label: intl.string(intl5.t.cs8A1c), value: DurationsDefault.Minutes.HOUR };
+  intl = intl5.intl;
   const items = [obj, , ,];
-  const obj2 = { id: "24hours", label: null, value: null };
-  const intl2 = util.intl;
-  obj2.label = intl2.string(util.t.zFKbrF);
-  obj2.value = DurationsDefault.Minutes.DAY;
+  const obj2 = { id: "24hours", label: intl2.string(intl5.t.zFKbrF), value: DurationsDefault.Minutes.DAY };
+  intl2 = intl5.intl;
   items[1] = obj2;
-  const obj3 = { id: "3days", label: null, value: null };
-  const intl3 = util.intl;
-  obj3.label = intl3.string(util.t.TmPIZX);
-  obj3.value = 3 * DurationsDefault.Minutes.DAY;
+  const obj3 = { id: "3days", label: intl3.string(intl5.t.TmPIZX), value: 3 * DurationsDefault.Minutes.DAY };
+  intl3 = intl5.intl;
   items[2] = obj3;
-  const obj4 = { id: "1week", label: null, value: null };
-  const intl4 = util.intl;
-  obj4.label = intl4.string(util.t["/7i2el"]);
-  obj4.value = DurationsDefault.Minutes.WEEK;
+  const obj4 = { id: "1week", label: intl4.string(intl5.t["/7i2el"]), value: DurationsDefault.Minutes.WEEK };
+  intl4 = intl5.intl;
   items[3] = obj4;
   return items;
 }
@@ -36,21 +32,27 @@ let items = [
   3 * DurationsDefault.Minutes.DAY,
   DurationsDefault.Minutes.WEEK,
 ];
+const tmp2 = memoizeDefault(() => {
+  const arr = getAutoArchiveOptions();
+  return arr.map((value) => value.value);
+});
 const result = size.fileFinishedImporting("modules/threads/ThreadAutoArchive.tsx");
 
 export const AUTO_ARCHIVE_OPTION_VALUES = items;
 export { getAutoArchiveOptions };
-export const getAutoArchiveDurations = memoizeDefault(() => getAutoArchiveOptions().map((value) => value.value));
+export const getAutoArchiveDurations = tmp2;
 export const getAutoArchiveDurationText = function getAutoArchiveDurationText(arg0) {
-  closure_0 = arg0;
-  const found = getAutoArchiveOptions().find((value) => value.value === closure_0);
+  let closure_0 = arg0;
+  const arr = getAutoArchiveOptions();
+  const found = arr.find((value) => value.value === closure_0);
   let label;
   if (found != null) {
     label = found.label;
   }
   if (label == null) {
-    label = _modDef4461.duration(arg0, "minutes").humanize();
-    const durationResult = _modDef4461.duration(arg0, "minutes");
+    const obj = _modDef4461;
+    const durationResult = obj.duration(arg0, "minutes");
+    label = durationResult.humanize();
   }
   return label;
 };

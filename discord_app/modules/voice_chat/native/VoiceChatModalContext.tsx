@@ -1,11 +1,12 @@
 // discord_app/modules/voice_chat/native/VoiceChatModalContext.tsx
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const context = noop.createContext(null);
-let ReactCompilerGating = fn(558);
+const context = react.createContext(null);
+let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/voice_chat/native/VoiceChatModalContext.tsx");
 
 export const VoiceChatNavigationContext = context;
-export const useVoiceChatNavigationContext = () => noop.useContext(context);
+export const useVoiceChatNavigationContext = () => react.useContext(context);

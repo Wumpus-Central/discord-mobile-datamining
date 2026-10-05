@@ -7,8 +7,8 @@ const result = size.fileFinishedImporting("modules/auth/native/experiment/isDate
 export default function isDateValidDateOfBirth(arg0) {
   let tmp = null != arg0;
   if (tmp) {
-    tmp = _modDef4461().diff(arg0, "days") >= 1;
     const obj = _modDef4461();
+    tmp = obj.diff(arg0, "days") >= 1;
   }
   return tmp;
 }

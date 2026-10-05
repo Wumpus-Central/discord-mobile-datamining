@@ -4,14 +4,15 @@ import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const TOKEN_KEY = Constants.TOKEN_KEY;
-const result = size.fileFinishedImporting("modules/headless_tasks/HeadlessTaskUtils.tsx");
-
-export default {
+const obj = {
   awaitStorage(arg0) {
-    closure_0 = arg0;
+    let closure_0 = arg0;
     const Storage = Storage2.Storage;
     Storage.asyncGet(TOKEN_KEY, async () => {
       closure_0();
     });
   },
 };
+const result = size.fileFinishedImporting("modules/headless_tasks/HeadlessTaskUtils.tsx");
+
+export default obj;

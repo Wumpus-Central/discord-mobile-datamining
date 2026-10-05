@@ -1,23 +1,27 @@
 // discord_app/stores/native/DisplayedInviteStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
+
+let c0;
 
 let c1 = null;
 let c2 = null;
-const Store = initializeDefault.Store;
-class DisplayedInviteStore extends Store {}
+const Store = get_initializedDefault.Store;
+class DisplayedInviteStore extends Store {
+  getDisplayedInviteCode() {
+    return c0;
+  }
+  getDisplayedUsername() {
+    return c1;
+  }
+  getDeeplinkAttemptId() {
+    return c2;
+  }
+}
 const prototype = DisplayedInviteStore.prototype;
-prototype["getDisplayedInviteCode"] = function getDisplayedInviteCode() {
-  return c0;
-};
-prototype["getDisplayedUsername"] = function getDisplayedUsername() {
-  return c1;
-};
-prototype["getDeeplinkAttemptId"] = function getDeeplinkAttemptId() {
-  return c2;
-};
 DisplayedInviteStore.displayName = "DisplayedInviteStore";
-const displayedInviteStore = new DisplayedInviteStore(DispatcherDefault, {
+const obj = {
   DISPLAYED_INVITE_SHOW: function handleInviteShow(arg0) {
     ({ code: c0, username: c1, deeplinkAttemptId: c2 } = arg0);
   },
@@ -25,8 +29,8 @@ const displayedInviteStore = new DisplayedInviteStore(DispatcherDefault, {
     c0 = null;
     c2 = null;
   },
-});
-const size = fn(2);
+};
+const displayedInviteStore = new DisplayedInviteStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("stores/native/DisplayedInviteStore.tsx");
 
 export default displayedInviteStore;

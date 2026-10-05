@@ -1,437 +1,447 @@
 // discord_app/modules/safety_flows/native/tasks/AgeVerificationScreen.tsx
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import Constants from "../../../../Constants.tsx";
 import Server from "../../../../flow/Server.tsx";
 import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import types from "../../types.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import UserStore from "../../../../stores/UserStore.tsx";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const Pressable = fn(17).Pressable;
-const HelpdeskArticles = fn(1085).HelpdeskArticles;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const Pressable = react_native.Pressable;
+const HelpdeskArticles = Constants.HelpdeskArticles;
+const jsx = Fragment.jsx;
 let closure_8 = createStyles.createStyles({ helpLink: { textAlign: "center" } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/safety_flows/native/tasks/AgeVerificationScreen.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = first(stateFromStores[7]).c(26);
+      let ageVerificationMethods;
+      let currentUser;
+      let first;
+      let loading;
+      let stateFromStores;
+      let tmp12;
+      let tmp8;
+      let tmp9;
+      const tmp = first;
+      let obj = first(stateFromStores[7]);
+      const cResult = obj.c(26);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const v4Result = tmp(tmp2[8]).v4();
+        const tmpResult = tmp(stateFromStores[8]);
+        const v4Result = tmpResult.v4();
         cResult[0] = v4Result;
         first = v4Result;
-        const tmpResult = tmp(tmp2[8]);
       } else {
         first = cResult[0];
       }
       const tmp6 = closure_8();
-      let obj = first(stateFromStores[7]);
-      const onTaskComplete = first(stateFromStores[9]).useOnTaskComplete();
+      const tmpResult3 = tmp(stateFromStores[9]);
+      const onTaskComplete = tmpResult3.useOnTaskComplete();
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         class S {
           constructor() {
-            return closure_1_5.getCurrentUser();
+            return currentUser.getCurrentUser();
           }
         }
         cResult[1] = items;
         cResult[2] = S;
-        let tmp9 = S;
-        let tmp8 = items;
+        tmp9 = S;
+        tmp8 = items;
       } else {
         tmp8 = cResult[1];
         tmp9 = cResult[2];
       }
-      const tmpResult3 = first(stateFromStores[9]);
-      stateFromStores = first(stateFromStores[10]).useStateFromStores(tmp8, tmp9);
+      const tmpResult4 = tmp(stateFromStores[10]);
+      stateFromStores = tmpResult4.useStateFromStores(tmp8, tmp9);
       if (cResult[3] !== onTaskComplete) {
         const obj2 = {
           onClose() {
-            return onTaskComplete({ type: types.TaskInputType.Empty });
+            const obj = { type: types.TaskInputType.Empty };
+            return onTaskComplete(obj);
           },
         };
         class S {
           constructor() {
-            return closure_1_5.getCurrentUser();
+            return currentUser.getCurrentUser();
           }
         }
         cResult[4] = obj2;
-        let tmp12 = obj2;
+        tmp12 = obj2;
       } else {
         tmp12 = cResult[4];
       }
-      const tmpResult4 = first(stateFromStores[10]);
       ({ loading, ageVerificationMethods } = onTaskComplete(stateFromStores[12])(tmp12));
       let prop;
+      onTaskComplete(stateFromStores[12])(tmp12);
+      const tmp15 = cResult[5];
       if (stateFromStores != null) {
         prop = stateFromStores.ageVerificationStatus;
       }
-      if (cResult[5] === prop) {
+      if (tmp15 === prop) {
+        let tmp17;
         if (cResult[6] === onTaskComplete) {
-          let tmp16 = cResult[7];
+          tmp17 = cResult[7];
         }
         if (cResult[8] === stateFromStores) {
+          let tmp18;
+          let tmp21;
+          let tmp25;
+          let tmp24;
+          let tmp23;
+          let tmp32;
           if (cResult[9] === onTaskComplete) {
-            let tmp17 = cResult[10];
+            tmp18 = cResult[10];
           }
-          const effect = noop.useEffect(tmp16, tmp17);
+          const effect = react.useEffect(tmp17, tmp18);
           class S {
             constructor() {
-              return closure_1_5.getCurrentUser();
+              return currentUser.getCurrentUser();
             }
           }
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
             class I {
               constructor() {
-                obj = closure_0(closure_2[14]);
-                result = obj.trackAgeVerificationModalViewed(
-                  closure_0,
-                  closure_0(closure_2[14]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                  closure_0(closure_2[14]).AgeVerificationModalEntryPoint.SAFETY_FLOWS,
+                const trackAgeVerificationModalViewed = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed;
+                AgeVerificationAnalyticsUtils;
+                const result = trackAgeVerificationModalViewed(
+                  first,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS,
                 );
-                return;
               }
             }
             const items1 = [first];
             class S {
               constructor() {
-                return closure_1_5.getCurrentUser();
+                return currentUser.getCurrentUser();
               }
             }
             cResult[11] = I;
             cResult[12] = items1;
-            let tmp20 = items1;
+            tmp21 = items1;
           } else {
             class I {
               constructor() {
-                obj = closure_0(closure_2[14]);
-                result = obj.trackAgeVerificationModalViewed(
-                  closure_0,
-                  closure_0(closure_2[14]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                  closure_0(closure_2[14]).AgeVerificationModalEntryPoint.SAFETY_FLOWS,
+                const trackAgeVerificationModalViewed = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed;
+                AgeVerificationAnalyticsUtils;
+                const result = trackAgeVerificationModalViewed(
+                  first,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS,
                 );
-                return;
               }
             }
-            tmp20 = cResult[12];
+            tmp21 = cResult[12];
           }
-          const effect1 = noop.useEffect(I, tmp20);
+          const effect1 = react.useEffect(I, tmp21);
           const _Symbol = Symbol;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
             class I {
               constructor() {
-                obj = closure_0(closure_2[14]);
-                result = obj.trackAgeVerificationModalViewed(
-                  closure_0,
-                  closure_0(closure_2[14]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                  closure_0(closure_2[14]).AgeVerificationModalEntryPoint.SAFETY_FLOWS,
+                const trackAgeVerificationModalViewed = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed;
+                AgeVerificationAnalyticsUtils;
+                const result = trackAgeVerificationModalViewed(
+                  first,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS,
                 );
-                return;
               }
             }
-            const tmp25 = jsx(tmp(tmp2[15]).ShieldSpotIllustration, {});
+            const tmp26 = jsx(tmp(stateFromStores[15]).ShieldSpotIllustration, {});
+            const intl = tmp(tmp2[16]).intl;
             class S {
               constructor() {
-                return closure_1_5.getCurrentUser();
+                return currentUser.getCurrentUser();
               }
             }
-            const tmp26Result = tmp26(tmp13(tmp2[17])["dSkE/A"]);
-            const intl = tmp(tmp2[16]).intl;
+            const tmp27Result = tmp27(onTaskComplete(stateFromStores[17])["dSkE/A"]);
+            const intl2 = tmp(tmp2[16]).intl;
             const obj3 = {
               handleOnHelpUrlHook() {
-                const obj = onTaskComplete(stateFromStores[19]);
-                obj.openUrl(onTaskComplete(stateFromStores[20]).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
+                const openUrl = onTaskComplete(stateFromStores[19]).openUrl;
+                onTaskComplete(stateFromStores[19]);
+                const obj = onTaskComplete(stateFromStores[20]);
+                openUrl(obj.getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
               },
             };
-            const formatResult = intl.format(tmp13(tmp2[18]).RpMIT0, obj3);
+            const formatResult = intl2.format(onTaskComplete(stateFromStores[18]).RpMIT0, obj3);
             cResult[13] = formatResult;
-            cResult[14] = tmp25;
-            cResult[15] = tmp26Result;
-            let tmp24 = tmp26Result;
-            let tmp23 = tmp25;
-            const tmp22 = formatResult;
+            cResult[14] = tmp26;
+            cResult[15] = tmp27Result;
+            tmp25 = tmp27Result;
+            tmp24 = tmp26;
+            tmp23 = formatResult;
           } else {
             class I {
               constructor() {
-                obj = closure_0(closure_2[14]);
-                result = obj.trackAgeVerificationModalViewed(
-                  closure_0,
-                  closure_0(closure_2[14]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                  closure_0(closure_2[14]).AgeVerificationModalEntryPoint.SAFETY_FLOWS,
+                const trackAgeVerificationModalViewed = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed;
+                AgeVerificationAnalyticsUtils;
+                const result = trackAgeVerificationModalViewed(
+                  first,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS,
                 );
-                return;
               }
             }
-            tmp23 = cResult[14];
-            tmp24 = cResult[15];
+            tmp24 = cResult[14];
+            tmp25 = cResult[15];
           }
           const _Symbol2 = Symbol;
           if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
             class I {
               constructor() {
-                obj = closure_0(closure_2[14]);
-                result = obj.trackAgeVerificationModalViewed(
-                  closure_0,
-                  closure_0(closure_2[14]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                  closure_0(closure_2[14]).AgeVerificationModalEntryPoint.SAFETY_FLOWS,
+                const trackAgeVerificationModalViewed = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed;
+                AgeVerificationAnalyticsUtils;
+                const result = trackAgeVerificationModalViewed(
+                  first,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS,
                 );
-                return;
               }
             }
-            cResult[16] = tmp30;
+            cResult[16] = tmp31;
             class S {
               constructor() {
-                return closure_1_5.getCurrentUser();
+                return currentUser.getCurrentUser();
               }
             }
           } else {
             class I {
               constructor() {
-                obj = closure_0(closure_2[14]);
-                result = obj.trackAgeVerificationModalViewed(
-                  closure_0,
-                  closure_0(closure_2[14]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                  closure_0(closure_2[14]).AgeVerificationModalEntryPoint.SAFETY_FLOWS,
+                const trackAgeVerificationModalViewed = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed;
+                AgeVerificationAnalyticsUtils;
+                const result = trackAgeVerificationModalViewed(
+                  first,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS,
                 );
-                return;
               }
             }
           }
           const _Symbol3 = Symbol;
+          const helpLink = tmp6.helpLink;
           if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
             class I {
               constructor() {
-                obj = closure_0(closure_2[14]);
-                result = obj.trackAgeVerificationModalViewed(
-                  closure_0,
-                  closure_0(closure_2[14]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                  closure_0(closure_2[14]).AgeVerificationModalEntryPoint.SAFETY_FLOWS,
+                const trackAgeVerificationModalViewed = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed;
+                AgeVerificationAnalyticsUtils;
+                const result = trackAgeVerificationModalViewed(
+                  first,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS,
                 );
-                return;
               }
             }
-            const stringResult = obj8.string(tmp(tmp2[16]).t["2jxGer"]);
+            const stringResult = obj8.string(tmp(stateFromStores[16]).t["2jxGer"]);
             class S {
               constructor() {
-                return closure_1_5.getCurrentUser();
+                return currentUser.getCurrentUser();
               }
             }
             cResult[17] = stringResult;
-            const tmp31 = stringResult;
+            tmp32 = stringResult;
           } else {
             class I {
               constructor() {
-                obj = closure_0(closure_2[14]);
-                result = obj.trackAgeVerificationModalViewed(
-                  closure_0,
-                  closure_0(closure_2[14]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                  closure_0(closure_2[14]).AgeVerificationModalEntryPoint.SAFETY_FLOWS,
+                const trackAgeVerificationModalViewed = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed;
+                AgeVerificationAnalyticsUtils;
+                const result = trackAgeVerificationModalViewed(
+                  first,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS,
                 );
-                return;
               }
             }
           }
           if (cResult[18] !== tmp6.helpLink) {
             class I {
               constructor() {
-                obj = closure_0(closure_2[14]);
-                result = obj.trackAgeVerificationModalViewed(
-                  closure_0,
-                  closure_0(closure_2[14]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                  closure_0(closure_2[14]).AgeVerificationModalEntryPoint.SAFETY_FLOWS,
+                const trackAgeVerificationModalViewed = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed;
+                AgeVerificationAnalyticsUtils;
+                const result = trackAgeVerificationModalViewed(
+                  first,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS,
                 );
-                return;
               }
             }
-            const obj4 = { children: null };
             class S {
               constructor() {
-                return closure_1_5.getCurrentUser();
+                return currentUser.getCurrentUser();
               }
             }
-            tmp35[1] = tmp29;
-            const obj5 = { variant: "text-sm/medium", color: "text-link", style: tmp6.helpLink, children: tmp31 };
-            tmp35[2] = jsx(tmp(tmp2[23]).Text, {
+            tmp36[1] = tmp30;
+            const ModalDisclaimer = tmp(tmp2[22]).ModalDisclaimer;
+            tmp36[2] = jsx(tmp(stateFromStores[23]).Text, {
               variant: "text-sm/medium",
               color: "text-link",
-              style: tmp6.helpLink,
-              children: tmp31,
+              style: helpLink,
+              children: tmp32,
             });
-            obj4.children = <Pressable {...tmp35} />;
-            const tmp36 = jsx(tmp(tmp2[22]).ModalDisclaimer, { children: null });
+            const tmp37 = <ModalDisclaimer>{null}</ModalDisclaimer>;
             cResult[18] = tmp6.helpLink;
-            cResult[19] = tmp36;
+            cResult[19] = tmp37;
           } else {
             class I {
               constructor() {
-                obj = closure_0(closure_2[14]);
-                result = obj.trackAgeVerificationModalViewed(
-                  closure_0,
-                  closure_0(closure_2[14]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                  closure_0(closure_2[14]).AgeVerificationModalEntryPoint.SAFETY_FLOWS,
+                const trackAgeVerificationModalViewed = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed;
+                AgeVerificationAnalyticsUtils;
+                const result = trackAgeVerificationModalViewed(
+                  first,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS,
                 );
-                return;
               }
             }
           }
           if (cResult[20] !== ageVerificationMethods) {
             class I {
               constructor() {
-                obj = closure_0(closure_2[14]);
-                result = obj.trackAgeVerificationModalViewed(
-                  closure_0,
-                  closure_0(closure_2[14]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                  closure_0(closure_2[14]).AgeVerificationModalEntryPoint.SAFETY_FLOWS,
+                const trackAgeVerificationModalViewed = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed;
+                AgeVerificationAnalyticsUtils;
+                const result = trackAgeVerificationModalViewed(
+                  first,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS,
                 );
-                return;
               }
             }
-            const obj7 = { ageVerificationMethods, modalSessionId: null };
             class S {
               constructor() {
-                return closure_1_5.getCurrentUser();
+                return currentUser.getCurrentUser();
               }
             }
-            const tmp38 = jsx(tmp(tmp2[24]).AgeVerificationMethodsContainer, {
+            cResult[20] = ageVerificationMethods;
+            cResult[21] = jsx(tmp(stateFromStores[24]).AgeVerificationMethodsContainer, {
               ageVerificationMethods,
               modalSessionId: null,
             });
-            cResult[20] = ageVerificationMethods;
-            cResult[21] = tmp38;
+            const tmp39 = jsx(tmp(stateFromStores[24]).AgeVerificationMethodsContainer, {
+              ageVerificationMethods,
+              modalSessionId: null,
+            });
           } else {
             class I {
               constructor() {
-                obj = closure_0(closure_2[14]);
-                result = obj.trackAgeVerificationModalViewed(
-                  closure_0,
-                  closure_0(closure_2[14]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                  closure_0(closure_2[14]).AgeVerificationModalEntryPoint.SAFETY_FLOWS,
+                const trackAgeVerificationModalViewed = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed;
+                AgeVerificationAnalyticsUtils;
+                const result = trackAgeVerificationModalViewed(
+                  first,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS,
                 );
-                return;
               }
             }
           }
           if (cResult[22] === loading) {
             class I {
               constructor() {
-                obj = closure_0(closure_2[14]);
-                result = obj.trackAgeVerificationModalViewed(
-                  closure_0,
-                  closure_0(closure_2[14]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                  closure_0(closure_2[14]).AgeVerificationModalEntryPoint.SAFETY_FLOWS,
+                const trackAgeVerificationModalViewed = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed;
+                AgeVerificationAnalyticsUtils;
+                const result = trackAgeVerificationModalViewed(
+                  first,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                  AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS,
                 );
-                return;
               }
             }
           }
-          const obj9 = {
-            ImageComponent: tmp23,
-            title: tmp24,
-            subtitle: tmp22,
-            footer: tmp33,
-            submitting: loading,
-            children: tmp37,
-          };
-          const tmp41 = jsx(tmp13(tmp2[25]), {
-            ImageComponent: tmp23,
-            title: tmp24,
-            subtitle: tmp22,
-            footer: tmp33,
-            submitting: loading,
-            children: tmp37,
-          });
           cResult[22] = loading;
-          cResult[23] = tmp33;
-          cResult[24] = tmp37;
+          cResult[23] = tmp34;
+          cResult[24] = tmp38;
+          const tmp42 = jsx(onTaskComplete(stateFromStores[25]), {
+            ImageComponent: tmp24,
+            title: tmp25,
+            subtitle: tmp23,
+            footer: tmp34,
+            submitting: loading,
+            children: tmp38,
+          });
           class V {
             constructor() {
-              prop = undefined;
-              if (closure_2 != null) {
-                prop = closure_2.ageVerificationStatus;
+              let prop;
+              if (stateFromStores != null) {
+                prop = stateFromStores.ageVerificationStatus;
               }
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              if (prop !== closure_0(closure_2[13]).AgeVerificationStatusUkAndAusOnly.UNVERIFIED) {
-                tmp4 = closure_1;
-                obj = { type: null };
-                obj.type = tmp2(tmp3[11]).TaskInputType.Empty;
-                tmp5 = closure_1(obj);
+              if (prop !== Server.AgeVerificationStatusUkAndAusOnly.UNVERIFIED) {
+                const obj = { type: types.TaskInputType.Empty };
+                onTaskComplete(obj);
               }
-              return;
             }
           }
-          cResult[25] = tmp41;
+          cResult[25] = tmp42;
         }
         const items2 = [,];
         class S {
           constructor() {
-            return closure_1_5.getCurrentUser();
+            return currentUser.getCurrentUser();
           }
         }
         items2[1] = stateFromStores;
         cResult[8] = stateFromStores;
         cResult[9] = onTaskComplete;
         cResult[10] = items2;
-        tmp17 = items2;
+        tmp18 = items2;
       }
       if (stateFromStores != null) {
         class I {
           constructor() {
-            obj = closure_0(closure_2[14]);
-            result = obj.trackAgeVerificationModalViewed(
-              closure_0,
-              closure_0(closure_2[14]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-              closure_0(closure_2[14]).AgeVerificationModalEntryPoint.SAFETY_FLOWS,
+            const trackAgeVerificationModalViewed = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed;
+            AgeVerificationAnalyticsUtils;
+            const result = trackAgeVerificationModalViewed(
+              first,
+              AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+              AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS,
             );
-            return;
           }
         }
       }
       class V {
         constructor() {
-          prop = undefined;
-          if (closure_2 != null) {
-            prop = closure_2.ageVerificationStatus;
+          let prop;
+          if (stateFromStores != null) {
+            prop = stateFromStores.ageVerificationStatus;
           }
-          tmp2 = closure_0;
-          tmp3 = closure_2;
-          if (prop !== closure_0(closure_2[13]).AgeVerificationStatusUkAndAusOnly.UNVERIFIED) {
-            tmp4 = closure_1;
-            obj = { type: null };
-            obj.type = tmp2(tmp3[11]).TaskInputType.Empty;
-            tmp5 = closure_1(obj);
+          if (prop !== Server.AgeVerificationStatusUkAndAusOnly.UNVERIFIED) {
+            const obj = { type: types.TaskInputType.Empty };
+            onTaskComplete(obj);
           }
-          return;
         }
       }
       cResult[5] = undefined;
       cResult[6] = onTaskComplete;
       cResult[7] = V;
-      tmp16 = V;
-      const tmp14 = onTaskComplete(stateFromStores[12])(tmp12);
+      tmp17 = V;
     }
   : () => {
-      const memo = noop.useMemo(() => memo(stateFromStores[8]).v4(), []);
+      let ageVerificationMethods;
+      let currentUser;
+      let intl3;
+      let loading;
+      let stateFromStores;
+      const memo = react.useMemo(() => {
+        const obj = memo(stateFromStores[8]);
+        return obj.v4();
+      }, []);
       const tmp2 = closure_8();
-      const onTaskComplete = memo(stateFromStores[9]).useOnTaskComplete();
       let obj = memo(stateFromStores[9]);
+      const onTaskComplete = obj.useOnTaskComplete();
       const items = [UserStore];
-      stateFromStores = memo(stateFromStores[10]).useStateFromStores(items, () => currentUser.getCurrentUser());
       const obj2 = memo(stateFromStores[10]);
+      stateFromStores = obj2.useStateFromStores(items, () => currentUser.getCurrentUser());
       const obj3 = {
         onClose() {
-          return onTaskComplete({ type: types.TaskInputType.Empty });
+          const obj = { type: types.TaskInputType.Empty };
+          return onTaskComplete(obj);
         },
       };
       const items1 = [onTaskComplete, stateFromStores];
-      ({ loading, ageVerificationMethods } = onTaskComplete(stateFromStores[12])({
-        onClose() {
-          return onTaskComplete({ type: types.TaskInputType.Empty });
-        },
-      }));
-      const effect = noop.useEffect(() => {
+      ({ loading, ageVerificationMethods } = onTaskComplete(stateFromStores[12])(obj3));
+      const tmp5 = onTaskComplete(stateFromStores[12])(obj3);
+      const effect = react.useEffect(() => {
         let prop;
         if (stateFromStores != null) {
           prop = stateFromStores.ageVerificationStatus;
@@ -442,75 +452,47 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       const items2 = [memo];
-      const effect1 = noop.useEffect(() => {
-        const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed(
+      const effect1 = react.useEffect(() => {
+        const trackAgeVerificationModalViewed = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed;
+        AgeVerificationAnalyticsUtils;
+        const result = trackAgeVerificationModalViewed(
           memo,
           AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
           AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS,
         );
       }, items2);
-      const obj4 = {
-        ImageComponent: null,
-        title: null,
-        subtitle: null,
-        footer: null,
-        submitting: null,
-        children: null,
-      };
-      const tmp5 = onTaskComplete(stateFromStores[12])({
-        onClose() {
-          return onTaskComplete({ type: types.TaskInputType.Empty });
-        },
-      });
-      obj4.ImageComponent = jsx(memo(stateFromStores[15]).ShieldSpotIllustration, {});
+      onTaskComplete(stateFromStores[25]);
       const intl = memo(stateFromStores[16]).intl;
-      obj4.title = intl.string(onTaskComplete(stateFromStores[17])["dSkE/A"]);
       const intl2 = memo(stateFromStores[16]).intl;
-      obj4.subtitle = intl2.format(onTaskComplete(stateFromStores[18]).RpMIT0, {
+      const obj5 = {
         handleOnHelpUrlHook() {
-          const obj = onTaskComplete(stateFromStores[19]);
-          obj.openUrl(onTaskComplete(stateFromStores[20]).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
+          const openUrl = onTaskComplete(stateFromStores[19]).openUrl;
+          onTaskComplete(stateFromStores[19]);
+          const obj = onTaskComplete(stateFromStores[20]);
+          openUrl(obj.getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
         },
-      });
-      const obj6 = { children: null };
-      const obj7 = {
-        accessibilityRole: "button",
-        onPress() {
-          onTaskComplete(stateFromStores[21]).logout("age_verification_screen");
-        },
-        children: null,
       };
-      const obj8 = { variant: "text-sm/medium", color: "text-link", style: tmp2.helpLink, children: null };
-      const intl3 = memo(stateFromStores[16]).intl;
-      obj8.children = intl3.string(memo(stateFromStores[16]).t["2jxGer"]);
-      obj7.children = jsx(memo(stateFromStores[23]).Text, {
+      const ModalDisclaimer = memo(stateFromStores[22]).ModalDisclaimer;
+      ({
         variant: "text-sm/medium",
         color: "text-link",
         style: tmp2.helpLink,
-        children: null,
+        children: intl3.string(memo(stateFromStores[16]).t["2jxGer"]),
       });
-      obj6.children = (
-        <Pressable
-          accessibilityRole="button"
-          onPress={function onPress() {
-            onTaskComplete(stateFromStores[21]).logout("age_verification_screen");
-          }}
+      const Text = memo(stateFromStores[23]).Text;
+      intl3 = memo(stateFromStores[16]).intl;
+      return (
+        <tmp8
+          ImageComponent={null}
+          title={intl.string(onTaskComplete(stateFromStores[17])["dSkE/A"])}
+          subtitle={intl2.format(onTaskComplete(stateFromStores[18]).RpMIT0, obj5)}
+          footer={null}
+          submitting={loading}
         >
           {null}
-        </Pressable>
+        </tmp8>
       );
-      obj4.footer = jsx(memo(stateFromStores[22]).ModalDisclaimer, { children: null });
-      obj4.submitting = loading;
-      obj4.children = jsx(memo(stateFromStores[24]).AgeVerificationMethodsContainer, {
-        ageVerificationMethods,
-        modalSessionId: memo,
-      });
-      return jsx(onTaskComplete(stateFromStores[25]), {
-        ImageComponent: null,
-        title: null,
-        subtitle: null,
-        footer: null,
-        submitting: null,
-        children: null,
-      });
     };
+let result = size.fileFinishedImporting("modules/safety_flows/native/tasks/AgeVerificationScreen.tsx");
+
+export default tmp2;

@@ -1,18 +1,22 @@
 // discord_app/modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx
+import Constants from "../../../../discord_common/js/shared/Constants.tsx";
 import getPlatformDefault from "../../activities/utils/getPlatform.tsx";
 import ApplicationRecord from "../../../records/ApplicationRecord.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const Permissions = fn(1096).Permissions;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const Permissions = Constants.Permissions;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let stringResult2 = dependencyMap;
-      const cResult = channel(576).c(9);
+      let activityAction;
+      let application;
+      let channel;
+      let context;
+      let first;
+      let tmp7;
+      const obj = channel(576);
+      const cResult = obj.c(9);
       ({ context, application, activityAction } = arg0);
       channel = undefined;
       if ("channel" === context.type) {
@@ -21,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PermissionStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -31,21 +35,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = channel;
         cResult[2] = fn;
-        let tmp7 = fn;
+        tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
-      const obj = channel(576);
-      const stateFromStores = channel(504).useStateFromStores(first, tmp7);
       const tmpResult = channel(504);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
       let id;
+      const useEmbeddedActivityLaunchability = channel(9011).useEmbeddedActivityLaunchability;
+      channel(9011);
       if (channel != null) {
         id = channel.id;
       }
-      const embeddedActivityLaunchability = channel(9011).useEmbeddedActivityLaunchability(id);
+      const embeddedActivityLaunchability = useEmbeddedActivityLaunchability(id);
       let flag = false;
       if (channel(11671).ActivityAction.LEAVE !== activityAction) {
-        if (tmp(11671).ActivityAction.START === activityAction) {
+        if (channel(11671).ActivityAction.START === activityAction) {
           flag = false;
           if (null != channel) {
             let isGuildVoiceResult;
@@ -54,20 +59,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (isGuildVoiceResult) {
               flag = false;
-              if (embeddedActivityLaunchability !== tmp(9011).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+              if (embeddedActivityLaunchability !== channel(9011).EmbeddedActivityLaunchability.CAN_LAUNCH) {
                 flag = true;
               }
             } else {
               flag = false;
+              const tmpResult6 = channel(9000);
               if (!tmpResult6.isActivitiesInTextEnabled(channel)) {
                 flag = true;
               }
-              tmpResult6 = tmp(9000);
             }
           }
         } else {
           flag = false;
-          if (tmp(11671).ActivityAction.JOIN === activityAction) {
+          if (channel(11671).ActivityAction.JOIN === activityAction) {
             let isGuildVoiceResult1;
             if (channel != null) {
               isGuildVoiceResult1 = channel.isGuildVoice();
@@ -76,31 +81,37 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               flag = !stateFromStores;
             } else {
               flag = false;
+              const tmpResult7 = channel(9000);
               if (!tmpResult7.isActivitiesInTextEnabled(channel)) {
                 flag = true;
               }
-              tmpResult7 = tmp(9000);
             }
           }
         }
       }
       let flag2 = flag;
+      let tmp14;
       if (activityAction !== channel(11671).ActivityAction.LEAVE) {
-        const tmp14 =
+        const tmp15 =
           application instanceof ApplicationRecord
             ? application.embeddedActivityConfig
             : application.embedded_activity_config;
         getPlatformDefault;
-        tmp(1369);
-        if (null != tmp14) {
-          const supported_platforms = tmp14.supported_platforms;
-          if (!supported_platforms.includes(tmp18)) {
+        channel(1369);
+        if (null != tmp15) {
+          const supported_platforms = tmp15.supported_platforms;
+          if (!supported_platforms.includes(tmp19)) {
+            let tmp20;
             const _Symbol = Symbol;
             if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
               const intl = tmp(1126).intl;
-              const stringResult = intl.string(tmp(1126).t.z2YTgJ);
+              const stringResult = intl.string(channel(1126).t.z2YTgJ);
               cResult[3] = stringResult;
+              tmp20 = stringResult;
+            } else {
+              tmp20 = cResult[3];
             }
+            tmp14 = tmp20;
             flag2 = false;
           }
         }
@@ -110,59 +121,71 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         flag2 = flag;
         if (isThreadResult) {
+          let tmp23;
           const _Symbol2 = Symbol;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             const intl2 = tmp(1126).intl;
-            const stringResult1 = intl2.string(tmp(1126).t.ddSR3v);
+            const stringResult1 = intl2.string(channel(1126).t.ddSR3v);
             cResult[4] = stringResult1;
+            tmp23 = stringResult1;
+          } else {
+            tmp23 = cResult[4];
           }
+          flag2 = true;
+          tmp14 = tmp23;
         }
       }
-      let tmp25 = flag2;
-      if (flag2) {
-        tmp25 = null == tmp13;
-      }
-      if (!tmp25) {
-        if (cResult[6] === flag2) {
-          if (cResult[7] === tmp13) {
-            let tmp28 = cResult[8];
-          }
-          return tmp28;
-        }
-        const obj2 = { disabled: flag2, reason: tmp13 };
-        cResult[6] = flag2;
-        cResult[7] = tmp13;
-        cResult[8] = obj2;
-        tmp28 = obj2;
-      } else {
+      const tmp25 = flag2 && null == tmp14;
+      if (tmp25) {
+        let tmp26;
         const _Symbol3 = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const intl3 = tmp(1126).intl;
-          stringResult2 = intl3.string(tmp(1126).t.f41E1g);
+          const stringResult2 = intl3.string(channel(1126).t.f41E1g);
           cResult[5] = stringResult2;
+          tmp26 = stringResult2;
+        } else {
+          tmp26 = cResult[5];
         }
+        tmp14 = tmp26;
       }
-      const tmpResult5 = channel(9011);
+      if (cResult[6] === flag2) {
+        let tmp28;
+        if (cResult[7] === tmp14) {
+          tmp28 = cResult[8];
+        }
+        return tmp28;
+      }
+      const obj2 = { disabled: flag2, reason: tmp14 };
+      cResult[6] = flag2;
+      cResult[7] = tmp14;
+      cResult[8] = obj2;
+      tmp28 = obj2;
     }
   : (arg0) => {
+      let activityAction;
+      let application;
+      let context;
       ({ context, application, activityAction } = arg0);
       let channel;
       if ("channel" === context.type) {
         channel = context.channel;
       }
       const items = [PermissionStore];
-      const stateFromStores = channel(504).useStateFromStores(items, () =>
+      const obj = channel(504);
+      const stateFromStores = obj.useStateFromStores(items, () =>
         PermissionStore.can(Permissions.USE_EMBEDDED_ACTIVITIES, channel),
       );
-      const obj = channel(504);
       let id;
+      const useEmbeddedActivityLaunchability = channel(9011).useEmbeddedActivityLaunchability;
+      channel(9011);
       if (channel != null) {
         id = channel.id;
       }
-      const embeddedActivityLaunchability = channel(9011).useEmbeddedActivityLaunchability(id);
+      const embeddedActivityLaunchability = useEmbeddedActivityLaunchability(id);
       let flag = false;
       if (channel(11671).ActivityAction.LEAVE !== activityAction) {
-        if (tmp2(11671).ActivityAction.START === activityAction) {
+        if (channel(11671).ActivityAction.START === activityAction) {
           flag = false;
           if (null != channel) {
             let isGuildVoiceResult;
@@ -171,20 +194,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (isGuildVoiceResult) {
               flag = false;
-              if (embeddedActivityLaunchability !== tmp2(9011).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+              if (embeddedActivityLaunchability !== channel(9011).EmbeddedActivityLaunchability.CAN_LAUNCH) {
                 flag = true;
               }
             } else {
               flag = false;
+              const tmp2Result = channel(9000);
               if (!tmp2Result.isActivitiesInTextEnabled(channel)) {
                 flag = true;
               }
-              tmp2Result = tmp2(9000);
             }
           }
         } else {
           flag = false;
-          if (tmp2(11671).ActivityAction.JOIN === activityAction) {
+          if (channel(11671).ActivityAction.JOIN === activityAction) {
             let isGuildVoiceResult1;
             if (channel != null) {
               isGuildVoiceResult1 = channel.isGuildVoice();
@@ -193,10 +216,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               flag = !stateFromStores;
             } else {
               flag = false;
+              const tmp2Result3 = channel(9000);
               if (!tmp2Result3.isActivitiesInTextEnabled(channel)) {
                 flag = true;
               }
-              tmp2Result3 = tmp2(9000);
             }
           }
         }
@@ -204,15 +227,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let disabled = flag;
       let reason;
       if (activityAction !== channel(11671).ActivityAction.LEAVE) {
-        const tmp10 =
+        const tmp11 =
           application instanceof ApplicationRecord
             ? application.embeddedActivityConfig
             : application.embedded_activity_config;
         getPlatformDefault;
-        tmp2(1369);
-        if (null != tmp10) {
-          const supported_platforms = tmp10.supported_platforms;
-          if (!supported_platforms.includes(tmp14)) {
+        channel(1369);
+        if (null != tmp11) {
+          const supported_platforms = tmp11.supported_platforms;
+          if (!supported_platforms.includes(tmp15)) {
             const intl = tmp2(1126).intl;
             reason = intl.string(tmp2(1126).t.z2YTgJ);
             disabled = false;
@@ -229,13 +252,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           disabled = true;
         }
       }
-      let tmp16 = disabled;
-      if (disabled) {
-        tmp16 = null == reason;
-      }
-      if (tmp16) {
+      const tmp17 = disabled && null == reason;
+      if (tmp17) {
         const intl3 = tmp2(1126).intl;
         reason = intl3.string(tmp2(1126).t.f41E1g);
       }
       return { disabled, reason };
     };
+const result = size.fileFinishedImporting("modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx");
+
+export default tmp2;

@@ -1,12 +1,16 @@
 // discord_app/modules/global_discovery_servers/GuildDiscoveryCategoryStore.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import util from "../../intl/index.native.tsx";
+import intl2 from "../../intl/index.native.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
 ({
   DEFAULT_DISCOVERY_CATEGORY_ID: c3,
   OTHER_DISCOVERY_CATEGORY_ID: closure_4,
@@ -16,59 +20,63 @@ import size from "../../../_runtime/metro/00002__.js";
 let c7 = null;
 let closure_8 = [];
 let closure_9 = [];
-let closure_10 = {};
-const Store = initializeDefault.Store;
-class GuildDiscoveryCategoryStore extends Store {}
-const prototype = GuildDiscoveryCategoryStore.prototype;
-prototype["getPrimaryCategories"] = function getPrimaryCategories() {
-  return closure_8;
-};
-prototype["getDiscoveryCategories"] = function getDiscoveryCategories() {
-  const mapped = timestampProducer.map((item) => {
-    closure_0 = item;
-    return closure_1_9.find((categoryId) => categoryId.categoryId === closure_0);
-  });
-  const obj = { categoryId, name: null };
-  const found = mapped.filter(GlobalUtils.isNotNullish);
-  const intl = util.intl;
-  obj.name = intl.string(util.t.Ym2Ri6);
-  const items = [obj, ...found];
-  return items;
-};
-prototype["getClanDiscoveryCategories"] = function getClanDiscoveryCategories() {
-  const mapped = timestampProducer.map((item) => {
-    closure_0 = item;
-    return closure_1_9.find((categoryId) => categoryId.categoryId === closure_0);
-  });
-  const obj = { categoryId, name: null };
-  const found = mapped.filter(GlobalUtils.isNotNullish);
-  const intl = util.intl;
-  obj.name = intl.string(util.t.QToH29);
-  const items = [obj, ...found];
-  return items;
-};
-prototype["getAllCategories"] = function getAllCategories() {
-  return closure_9;
-};
-prototype["getFetchedLocale"] = function getFetchedLocale() {
-  return c7;
-};
-prototype["getCategoryName"] = function getCategoryName(arg0) {
-  if (arg0 === categoryId) {
-    const intl = util.intl;
-    let stringResult = intl.string(util.t.Ym2Ri6);
-  } else {
-    stringResult = closure_10[arg0];
+const authStore = {};
+const Store = get_initializedDefault.Store;
+class GuildDiscoveryCategoryStore extends Store {
+  getPrimaryCategories() {
+    return closure_8;
   }
-  return stringResult;
-};
+  getDiscoveryCategories() {
+    let intl;
+    const mapped = metroRequire.map((item) => {
+      let closure_0 = item;
+      return closure_1_9.find((categoryId) => categoryId.categoryId === closure_0);
+    });
+    const obj = { categoryId: hasOwnProperty, name: intl.string(intl2.t.Ym2Ri6) };
+    const found = mapped.filter(GlobalUtils.isNotNullish);
+    intl = intl2.intl;
+    const items = [obj, ...found];
+    return items;
+  }
+  getClanDiscoveryCategories() {
+    let intl;
+    const mapped = metroRequire.map((item) => {
+      let closure_0 = item;
+      return closure_1_9.find((categoryId) => categoryId.categoryId === closure_0);
+    });
+    const obj = { categoryId: hasOwnProperty, name: intl.string(intl2.t.QToH29) };
+    const found = mapped.filter(GlobalUtils.isNotNullish);
+    intl = intl2.intl;
+    const items = [obj, ...found];
+    return items;
+  }
+  getAllCategories() {
+    return closure_9;
+  }
+  getFetchedLocale() {
+    return c7;
+  }
+  getCategoryName(arg0) {
+    let stringResult;
+    if (arg0 === hasOwnProperty) {
+      const intl = intl2.intl;
+      stringResult = intl.string(intl2.t.Ym2Ri6);
+    } else {
+      stringResult = closure_10[arg0];
+    }
+    return stringResult;
+  }
+}
+const prototype = GuildDiscoveryCategoryStore.prototype;
 GuildDiscoveryCategoryStore.displayName = "GuildDiscoveryCategoryStore";
-const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(DispatcherDefault, {
+let obj = {
   GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function handleCategoryFetchSuccess(categories) {
+    let name;
     categories = categories.categories;
     let obj;
     const items = [];
     const items1 = [];
+    const locale = categories.locale;
     const sorted = categories.sort((name, name2) => {
       let num = 1;
       if (name.name < name2.name) {
@@ -77,9 +85,11 @@ const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(DispatcherDe
       return num;
     });
     const item = sorted.forEach((item) => {
+      let id;
+      let name;
       ({ id, name } = item);
-      if (id !== React3) {
-        if (id !== React4) {
+      if (id !== _false) {
+        if (id !== React3) {
           if (true === tmp) {
             const obj2 = { categoryId: id, name };
             items.push(obj2);
@@ -87,8 +97,6 @@ const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(DispatcherDe
           const obj3 = { categoryId: id, name };
           items1.push(obj3);
           closure_10[id] = name;
-        } else {
-          obj = { categoryId: id, name };
         }
       }
     });
@@ -98,19 +106,21 @@ const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(DispatcherDe
       items.push(obj);
       closure_10[categoryId] = name;
     }
-    locale = categories.locale;
   },
-});
+};
+const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GuildDiscoveryCategoryStore.tsx");
 
 export default guildDiscoveryCategoryStore;
 export const areDiscoveryCategoriesEqual = function areDiscoveryCategoriesEqual(arr, arr2) {
+  const isEqual = _modDef12.isEqual;
+  _modDef12;
   const mapped = arr.map((item) => {
     const items = [,];
     ({ categoryId: arr[0], name: arr[1] } = item);
     return items;
   });
-  return _modDef12.isEqual(
+  return isEqual(
     mapped,
     arr2.map((item) => {
       const items = [,];

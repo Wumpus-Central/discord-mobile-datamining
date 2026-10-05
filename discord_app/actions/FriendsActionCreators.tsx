@@ -6,9 +6,7 @@ import trackFriendListClickedDefault from "../modules/app_analytics/track/friend
 import size from "../../_runtime/metro/00002__.js";
 
 const Routes = Constants.Routes;
-const result = size.fileFinishedImporting("actions/FriendsActionCreators.tsx");
-
-export default {
+let obj = {
   transitionToSection(PENDING, arg1) {
     let obj = arg1;
     if (arg1 === undefined) {
@@ -18,22 +16,30 @@ export default {
     if (flag === undefined) {
       flag = false;
     }
+    const obj2 = router_utils;
     if (obj2.getHistory().location.pathname !== Routes.FRIENDS) {
-      router_utils.transitionTo(tmp3.FRIENDS);
       const tmpResult = router_utils;
+      tmpResult.transitionTo(tmp3.FRIENDS);
     }
-    obj2 = router_utils;
-    DispatcherDefault.dispatch({ type: "FRIENDS_SET_SECTION", section: PENDING });
+    const obj3 = { type: "FRIENDS_SET_SECTION", section: PENDING };
+    const obj4 = DispatcherDefault;
+    obj4.dispatch(obj3);
     if (flag) {
       const obj5 = { tab_opened: PENDING };
       trackFriendListClickedDefault(obj5);
     }
-    const obj3 = { type: "FRIENDS_SET_SECTION", section: PENDING };
   },
   setSection(section) {
-    DispatcherDefault.dispatch({ type: "FRIENDS_SET_SECTION", section });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "FRIENDS_SET_SECTION", section };
+    obj.dispatch(obj2);
   },
   setInitialSection(section) {
-    DispatcherDefault.dispatch({ type: "FRIENDS_SET_INITIAL_SECTION", section });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "FRIENDS_SET_INITIAL_SECTION", section };
+    obj.dispatch(obj2);
   },
 };
+const result = size.fileFinishedImporting("actions/FriendsActionCreators.tsx");
+
+export default obj;

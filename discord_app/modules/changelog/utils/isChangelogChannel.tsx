@@ -1,14 +1,12 @@
 // discord_app/modules/changelog/utils/isChangelogChannel.tsx
+import ChangelogConstants from "../ChangelogConstants.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const SYSTEM_UPDATES_USER_ID = fn(2102).SYSTEM_UPDATES_USER_ID;
-const size = fn(2);
+const SYSTEM_UPDATES_USER_ID = ChangelogConstants.SYSTEM_UPDATES_USER_ID;
 const result = size.fileFinishedImporting("modules/changelog/utils/isChangelogChannel.tsx");
 
 export default function isChangelogChannel(arg0) {
-  let tmp = null != arg0;
-  if (tmp) {
-    tmp = arg0 === ChannelStore.getDMFromUserId(SYSTEM_UPDATES_USER_ID);
-  }
+  const tmp = null != arg0 && arg0 === ChannelStore.getDMFromUserId(SYSTEM_UPDATES_USER_ID);
   return tmp;
 }

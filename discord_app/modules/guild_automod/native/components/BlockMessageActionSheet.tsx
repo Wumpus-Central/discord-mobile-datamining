@@ -1,43 +1,64 @@
 // discord_app/modules/guild_automod/native/components/BlockMessageActionSheet.tsx
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
+import Constants from "../../Constants.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let hideActionSheetResult, onRemove, tmp2;
 
-const require = fn;
-const Constants = fn(11474);
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
 ({ AutomodActionType: hasOwnProperty, MAX_BLOCK_ACTION_CUSTOM_MESSAGE_LENGTH: metroRequire } = Constants);
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_automod/native/components/BlockMessageActionSheet.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (onRemove) => {
-      const cResult = onConfirm(first[5]).c(27);
+      let action;
+      let first;
+      let intl6;
+      let intl7;
+      let items;
+      let onConfirm;
+      let triggerType;
+      let obj = onConfirm(first[5]);
+      const cResult = obj.c(27);
       ({ triggerType, action, onConfirm } = onRemove);
       onRemove = onRemove.onRemove;
       let str;
+      const useState = react.useState;
       if (action != null) {
         str = action.metadata.customMessage;
       }
       if (str == null) {
         str = "";
       }
-      const obj = onConfirm(first[5]);
-      first = _slicedToArray(noop.useState(str), 2)[0];
+      first = _slicedToArray(useState(str), 2)[0];
+      _slicedToArray(useState(str), 2);
       if (cResult[0] === action) {
+        let tmp8;
         if (cResult[1] === triggerType) {
-          let tmp8 = cResult[2];
+          tmp8 = cResult[2];
         }
         if (null == tmp8) {
           return null;
         } else {
           if (cResult[3] === first) {
+            let tmp10;
+            let tmp12;
+            let tmp16;
+            let tmp21;
+            let tmp27;
+            let tmp25;
+            let tmp26;
+            let tmp32;
+            let tmp40;
             if (cResult[4] === onConfirm) {
-              let tmp10 = cResult[5];
+              tmp10 = cResult[5];
             }
             class C {
               constructor() {
@@ -57,10 +78,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               tmp14[0] = tmp8.headerText;
-              const tmp15 = closure_7(onConfirm(tmp2[8]).BottomSheetTitleHeader, tmp14);
+              const tmp15 = closure_7(onConfirm(first[8]).BottomSheetTitleHeader, tmp14);
               cResult[8] = tmp8.headerText;
               cResult[9] = tmp15;
-              let tmp12 = tmp15;
+              tmp12 = tmp15;
             } else {
               tmp12 = cResult[9];
             }
@@ -74,10 +95,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               tmp18[2] = tmp8.descriptionText;
-              const tmp19 = closure_7(onConfirm(tmp2[9]).Text, tmp18);
+              const tmp19 = closure_7(onConfirm(first[9]).Text, tmp18);
               cResult[10] = tmp8.descriptionText;
               cResult[11] = tmp19;
-              let tmp16 = tmp19;
+              tmp16 = tmp19;
             } else {
               tmp16 = cResult[11];
             }
@@ -91,16 +112,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
+              const Text = onConfirm(tmp2[9]).Text;
               const intl = onConfirm(tmp2[10]).intl;
-              tmp23[2] = intl.string(onConfirm(tmp2[10]).t.Oa9oWJ);
-              const tmp24 = closure_7(onConfirm(tmp2[9]).Text, tmp23);
+              tmp23[2] = intl.string(onConfirm(first[10]).t.Oa9oWJ);
+              const tmp24 = closure_7(Text, tmp23);
               cResult[12] = tmp24;
-              let tmp21 = tmp24;
+              tmp21 = tmp24;
             } else {
               tmp21 = cResult[12];
             }
             const _Symbol2 = Symbol;
             if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+              const intl2 = onConfirm(tmp2[10]).intl;
               class C {
                 constructor() {
                   obj = closure_1(closure_2[7]);
@@ -109,17 +132,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const tmp28Result = tmp28(onConfirm(tmp2[10]).t.Df4aUN);
-              const intl2 = onConfirm(tmp2[10]).intl;
-              const stringResult = intl2.string(onConfirm(tmp2[10]).t.eOWEmL);
+              const tmp28Result = tmp28(onConfirm(first[10]).t.Df4aUN);
               const intl3 = onConfirm(tmp2[10]).intl;
-              const stringResult1 = intl3.string(onConfirm(tmp2[10]).t.gDZw7A);
+              const stringResult = intl3.string(onConfirm(first[10]).t.eOWEmL);
+              const intl4 = onConfirm(tmp2[10]).intl;
+              const stringResult1 = intl4.string(onConfirm(first[10]).t.gDZw7A);
               cResult[13] = tmp28Result;
               cResult[14] = stringResult;
               cResult[15] = stringResult1;
-              let tmp27 = stringResult1;
-              let tmp25 = tmp28Result;
-              const tmp26 = stringResult;
+              tmp27 = stringResult1;
+              tmp25 = tmp28Result;
+              tmp26 = stringResult;
             } else {
               tmp25 = cResult[13];
               class C {
@@ -147,34 +170,35 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp34[3] = closure_6;
               tmp34[4] = first;
               tmp34[5] = tmp7;
-              const tmp36 = closure_7(onConfirm(tmp2[11]).TextArea, tmp34);
+              const tmp36 = closure_7(onConfirm(first[11]).TextArea, tmp34);
               cResult[16] = first;
               cResult[17] = tmp36;
-              let tmp32 = tmp36;
+              tmp32 = tmp36;
             } else {
               tmp32 = cResult[17];
             }
             if (cResult[18] === action) {
               if (cResult[19] === tmp10) {
+                let tmp37;
                 if (cResult[20] === tmp11) {
-                  class C {
-                    constructor() {
-                      obj = closure_1(closure_2[7]);
-                      hideActionSheetResult = obj.hideActionSheet();
-                      tmp2 = onConfirm(closure_2);
-                      return;
-                    }
-                  }
-                  const obj2 = { keyboardShouldPersistTaps: "handled", header: tmp12, children: null };
-                  const items = [tmp16, tmp21, tmp32, cResult[21]];
-                  obj2.children = items;
-                  const tmp44 = closure_8(onConfirm(tmp2[14]).ActionSheet, obj2);
-                  cResult[22] = tmp32;
-                  cResult[23] = cResult[21];
-                  cResult[24] = tmp12;
-                  cResult[25] = tmp16;
-                  cResult[26] = tmp44;
+                  tmp37 = cResult[21];
                 }
+                class C {
+                  constructor() {
+                    obj = closure_1(closure_2[7]);
+                    hideActionSheetResult = obj.hideActionSheet();
+                    tmp2 = onConfirm(closure_2);
+                    return;
+                  }
+                }
+                const obj2 = { keyboardShouldPersistTaps: "handled", header: tmp12, children: items };
+                items = [tmp16, tmp21, tmp32, tmp37];
+                cResult[22] = tmp32;
+                cResult[23] = tmp37;
+                cResult[24] = tmp12;
+                cResult[25] = tmp16;
+                cResult[26] = closure_8(onConfirm(first[14]).ActionSheet, obj2);
+                const tmp43 = closure_8(onConfirm(first[14]).ActionSheet, obj2);
               }
             }
             if (null == action) {
@@ -186,10 +210,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const intl4 = onConfirm(tmp2[10]).intl;
-              tmp39[1] = intl4.string(onConfirm(tmp2[10]).t.JFfins);
+              const Button = onConfirm(tmp2[12]).Button;
+              const intl5 = onConfirm(tmp2[10]).intl;
+              tmp39[1] = intl5.string(onConfirm(first[10]).t.JFfins);
               tmp39[2] = tmp10;
-              let tmp40 = closure_7(onConfirm(tmp2[12]).Button, tmp39);
+              tmp40 = closure_7(Button, tmp39);
             } else {
               class C {
                 constructor() {
@@ -199,23 +224,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const obj3 = { grow: true, variant: "secondary", text: null, onPress: null };
-              const intl5 = onConfirm(tmp2[10]).intl;
-              obj3.text = intl5.string(onConfirm(tmp2[10]).t.R9GHya);
-              obj3.onPress = tmp11;
-              const items1 = [closure_7(onConfirm(tmp2[12]).Button, obj3)];
-              const obj4 = { grow: true, text: null, onPress: null };
-              const intl6 = onConfirm(tmp2[10]).intl;
-              obj4.text = intl6.string(onConfirm(tmp2[10]).t["R3BPH+"]);
-              obj4.onPress = tmp10;
-              items1[1] = closure_7(onConfirm(tmp2[12]).Button, obj4);
-              tmp46[0] = items1;
-              tmp40 = closure_8(onConfirm(tmp2[13]).TwinButtons, tmp46);
+              const TwinButtons = onConfirm(tmp2[13]).TwinButtons;
+              const obj3 = {
+                grow: true,
+                variant: "secondary",
+                text: intl6.string(onConfirm(first[10]).t.R9GHya),
+                onPress: tmp11,
+              };
+              const Button2 = onConfirm(tmp2[12]).Button;
+              intl6 = onConfirm(tmp2[10]).intl;
+              const items1 = [closure_7(Button2, obj3)];
+              const obj4 = { grow: true, text: intl7.string(onConfirm(first[10]).t["R3BPH+"]), onPress: tmp10 };
+              const Button3 = onConfirm(tmp2[12]).Button;
+              intl7 = onConfirm(tmp2[10]).intl;
+              items1[1] = closure_7(Button3, obj4);
+              tmp45[0] = items1;
+              tmp40 = closure_8(TwinButtons, tmp45);
             }
             cResult[18] = action;
             cResult[19] = tmp10;
             cResult[20] = tmp11;
             cResult[21] = tmp40;
+            tmp37 = tmp40;
           }
           class C {
             constructor() {
@@ -231,92 +261,111 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp10 = C;
         }
       }
-      const tmp5 = _slicedToArray(noop.useState(str), 2);
-      const actionInfo = onConfirm(first[6]).getActionInfo(constants.BLOCK_MESSAGE, action, triggerType);
+      const tmpResult = onConfirm(first[6]);
+      const actionInfo = tmpResult.getActionInfo(constants.BLOCK_MESSAGE, action, triggerType);
       cResult[0] = action;
       cResult[1] = triggerType;
       cResult[2] = actionInfo;
       tmp8 = actionInfo;
-      const tmpResult = onConfirm(first[6]);
     }
   : (triggerType) => {
+      let action;
+      let intl;
+      let intl2;
+      let intl3;
+      let intl4;
+      let intl5;
+      let intl6;
+      let intl7;
+      let items;
+      let items1;
+      let obj3;
+      let tmp4;
+      let value;
       ({ action, onConfirm: require, onRemove: importDefault } = triggerType);
       value = undefined;
       let str;
+      triggerType = triggerType.triggerType;
+      const useState = react.useState;
       if (action != null) {
         str = action.metadata.customMessage;
       }
       if (str == null) {
         str = "";
       }
-      const tmp2 = _slicedToArray(noop.useState(str), 2);
-      value = tmp2[0];
-      const actionInfo = require("getActionInfo").getActionInfo(
-        constants.BLOCK_MESSAGE,
-        action,
-        triggerType.triggerType,
-      );
+      [value, tmp4] = useState(str);
+      let obj = require("getActionInfo");
+      const actionInfo = obj.getActionInfo(constants.BLOCK_MESSAGE, action, triggerType);
       if (null == actionInfo) {
         return null;
       } else {
+        let tmp9Result;
         function handleConfirm() {
-          ActionSheetActionCreatorsDefault.hideActionSheet();
+          const obj = ActionSheetActionCreatorsDefault;
+          obj.hideActionSheet();
           require(first);
         }
-        const obj2 = { keyboardShouldPersistTaps: "handled", header: null, children: null };
-        const obj3 = { title: actionInfo.headerText };
-        obj2.header = closure_7(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj3);
-        const obj4 = { variant: "text-md/normal", color: "text-default", children: actionInfo.descriptionText };
-        const items = [closure_7(require("Text/Text").Text, obj4), , ,];
-        const obj5 = { variant: "text-md/normal", color: "text-default", children: null };
-        const intl2 = require("util").intl;
-        obj5.children = intl2.string(require("util").t.Oa9oWJ);
-        items[1] = closure_7(require("Text/Text").Text, obj5);
-        const obj6 = {
-          label: null,
-          description: null,
-          placeholder: null,
-          maxLength: null,
-          value: null,
-          onChange: null,
+        const obj2 = {
+          keyboardShouldPersistTaps: "handled",
+          header: closure_7(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj3),
+          children: items,
         };
-        const intl3 = require("util").intl;
-        obj6.label = intl3.string(require("util").t.Df4aUN);
-        const intl4 = require("util").intl;
-        obj6.description = intl4.string(require("util").t.eOWEmL);
-        const intl5 = require("util").intl;
-        obj6.placeholder = intl5.string(require("util").t.gDZw7A);
-        obj6.maxLength = maxLength;
-        obj6.value = value;
-        obj6.onChange = tmp2[1];
-        items[2] = closure_7(require("TextArea").TextArea, obj6);
+        const ActionSheet = require("ActionSheet").ActionSheet;
+        obj3 = { title: actionInfo.headerText };
+        const obj4 = { variant: "text-md/normal", color: "text-default", children: actionInfo.descriptionText };
+        items = [closure_7(require("Text/Text").Text, obj4), , ,];
+        const obj5 = {
+          variant: "text-md/normal",
+          color: "text-default",
+          children: intl2.string(require("intl").t.Oa9oWJ),
+        };
+        const Text = require("Text/Text").Text;
+        intl2 = require("intl").intl;
+        items[1] = closure_7(Text, obj5);
+        const obj6 = {
+          label: intl3.string(require("intl").t.Df4aUN),
+          description: intl4.string(require("intl").t.eOWEmL),
+          placeholder: intl5.string(require("intl").t.gDZw7A),
+          maxLength,
+          value,
+          onChange: tmp4,
+        };
+        const TextArea = require("TextArea").TextArea;
+        intl3 = require("intl").intl;
+        intl4 = require("intl").intl;
+        intl5 = require("intl").intl;
+        items[2] = closure_7(TextArea, obj6);
         if (null == action) {
-          const obj7 = { grow: true, text: null, onPress: null };
-          const intl = require("util").intl;
-          obj7.text = intl.string(require("util").t.JFfins);
-          obj7.onPress = handleConfirm;
-          let tmp8Result = closure_7(require("components/Button/Button").Button, obj7);
+          const obj7 = { grow: true, text: intl.string(require("intl").t.JFfins), onPress: handleConfirm };
+          const Button = require("components/Button/Button").Button;
+          intl = require("intl").intl;
+          tmp9Result = closure_7(Button, obj7);
         } else {
-          const obj8 = { children: null };
-          const obj9 = { grow: true, variant: "secondary", text: null, onPress: null };
-          const intl6 = require("util").intl;
-          obj9.text = intl6.string(require("util").t.R9GHya);
-          obj9.onPress = function onPress() {
-            ActionSheetActionCreatorsDefault.hideActionSheet();
-            closure_1_1();
+          const obj8 = { children: items1 };
+          const TwinButtons = require("native").TwinButtons;
+          const obj9 = {
+            grow: true,
+            variant: "secondary",
+            text: intl6.string(require("intl").t.R9GHya),
+            onPress() {
+              const obj = ActionSheetActionCreatorsDefault;
+              obj.hideActionSheet();
+              importDefault();
+            },
           };
-          const items1 = [closure_7(require("components/Button/Button").Button, obj9)];
-          const obj10 = { grow: true, text: null, onPress: null };
-          const intl7 = require("util").intl;
-          obj10.text = intl7.string(require("util").t["R3BPH+"]);
-          obj10.onPress = handleConfirm;
-          items1[1] = closure_7(require("components/Button/Button").Button, obj10);
-          obj8.children = items1;
-          tmp8Result = closure_8(require("native").TwinButtons, obj8);
+          const Button2 = require("components/Button/Button").Button;
+          intl6 = require("intl").intl;
+          items1 = [closure_7(Button2, obj9)];
+          const obj10 = { grow: true, text: intl7.string(require("intl").t["R3BPH+"]), onPress: handleConfirm };
+          const Button3 = require("components/Button/Button").Button;
+          intl7 = require("intl").intl;
+          items1[1] = closure_7(Button3, obj10);
+          tmp9Result = closure_8(TwinButtons, obj8);
         }
-        items[3] = tmp8Result;
-        obj2.children = items;
-        return closure_8(require("ActionSheet").ActionSheet, obj2);
+        items[3] = tmp9Result;
+        return closure_8(ActionSheet, obj2);
       }
-      const obj = require("getActionInfo");
     };
+const result = size.fileFinishedImporting("modules/guild_automod/native/components/BlockMessageActionSheet.tsx");
+
+export default tmp4;

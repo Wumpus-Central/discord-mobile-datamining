@@ -1,56 +1,71 @@
 // discord_app/modules/guild_templates/AcceptGuildTemplateActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
+import Constants from "../../Constants.tsx";
 import transitionToGuild from "../routing/transitionToGuild.native.tsx";
 import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const Endpoints = fn(1085).Endpoints;
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/guild_templates/AcceptGuildTemplateActionCreators.tsx");
+let dependencyMap, importDefault, name;
 
-export default {
+const Endpoints = Constants.Endpoints;
+let obj = {
   acceptGuildTemplate(code, first1, first12) {
+    let connected;
+    let icon;
     importDefault = first1;
     dependencyMap = first12;
-    DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_ACCEPT", code });
+    let obj = DispatcherDefault;
     let obj2 = { type: "GUILD_TEMPLATE_ACCEPT", code };
-    return new Promise((code, arg1) => {
+    obj.dispatch(obj2);
+    const promise = new Promise((code, arg1) => {
+      let closure_1;
+      let obj;
+      let obj3;
       name = arg1;
       const HTTP = code(icon[4]).HTTP;
       const request = {
         url: Endpoints.UNRESOLVED_GUILD_TEMPLATE(code),
-        body: { name, icon },
+        body: obj,
         oldFormErrors: true,
-        rejectWithError: code(icon[4]).rejectWithMigratedError(),
+        rejectWithError: obj3.rejectWithMigratedError(),
       };
-      let obj = { name, icon };
-      let obj3 = code(icon[4]);
-      HTTP.post(request).then(
+      const post = HTTP.post;
+      obj = { name, icon };
+      obj3 = code(icon[4]);
+      const postResult = post(request);
+      postResult.then(
         (body) => {
           body = body.body;
-          closure_1(dependencyMap[3]).dispatch({ type: "GUILD_TEMPLATE_ACCEPT_SUCCESS", code, guild: body });
+          let obj = name(icon[3]);
+          const obj2 = { type: "GUILD_TEMPLATE_ACCEPT_SUCCESS", code, guild: body };
+          obj.dispatch(obj2);
           if (connected.isConnected()) {
             const result = GuildStore.addConditionalChangeListener(() => {
               if (null != GuildStore.getGuild(body.id)) {
-                transitionToGuild.transitionToGuild(body.id);
+                const obj = transitionToGuild;
+                obj.transitionToGuild(body.id);
                 body(body);
                 return false;
               }
             });
           } else {
-            code(dependencyMap[5]).transitionToGuild(body.id);
+            const obj3 = code(icon[5]);
+            obj3.transitionToGuild(body.id);
             body(body);
-            const obj3 = code(dependencyMap[5]);
           }
-          const obj = closure_1(dependencyMap[3]);
-          const obj2 = { type: "GUILD_TEMPLATE_ACCEPT_SUCCESS", code, guild: body };
         },
         (body) => {
-          DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_ACCEPT_FAILURE", code });
+          const obj = DispatcherDefault;
+          const obj2 = { type: "GUILD_TEMPLATE_ACCEPT_FAILURE", code };
+          obj.dispatch(obj2);
           closure_1(body.body);
         },
       );
     });
+    return promise;
   },
 };
+let result = size.fileFinishedImporting("modules/guild_templates/AcceptGuildTemplateActionCreators.tsx");
+
+export default obj;

@@ -4,7 +4,7 @@ import size from "../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-inject.inject({
+const obj = {
   supported() {
     return true;
   },
@@ -17,5 +17,6 @@ inject.inject({
     return require("VoiceEngine").default;
   },
   getOpenH264LibraryPath() {},
-});
+};
+inject.inject(obj);
 const result = size.fileFinishedImporting("lib/injectMediaEngine.native.tsx");

@@ -1,42 +1,55 @@
 // discord_app/modules/notifications/native/GuildHighlightsNotificationsActionSheet.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import NotificationSettingsUtils from "../../../utils/NotificationSettingsUtils.tsx";
 import NotificationSettingsModalActionCreatorsDefault from "../../../actions/NotificationSettingsModalActionCreators.tsx";
+import Constants2 from "../../feedback/Constants.tsx";
 import PushFeedbackActions from "../../push_feedback/PushFeedbackActions.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
-import GuildStore from "../../../stores/GuildStore.tsx";
-import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../_runtime/00019_react.js";
+import GuildStore_mod from "../../../stores/GuildStore.tsx";
+import UserGuildSettingsStore_mod from "../../../stores/UserGuildSettingsStore.tsx";
+import Constants from "../../../Constants.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const GuildIconDefault = GuildIcon;
+let BottomSheet, guildId;
 
-require = fn;
-const View = fn(17).View;
-const Constants = fn(1085);
-({ HelpdeskArticles: closure_8, HighlightSettings: closure_9 } = Constants);
-const FeedbackRating = fn(11249).FeedbackRating;
-const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(4890);
-let obj2 = {
+let c9;
+let closure_12;
+let metroImportAll;
+let obj2;
+let obj4;
+let unpackModuleId;
+let react = react_mod;
+const View = react_native.View;
+let GuildStore = GuildStore_mod;
+let UserGuildSettingsStore = UserGuildSettingsStore_mod;
+({ HelpdeskArticles: metroImportAll, HighlightSettings: c9 } = Constants);
+const FeedbackRating = Constants2.FeedbackRating;
+({ jsx: unpackModuleId, jsxs: closure_12 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
   contentContainer: { padding: 24, alignItems: "center", justifyContent: "center" },
   header: { alignItems: "center", paddingBottom: 24 },
   headerTitle: { marginBottom: 4 },
   centerText: { textAlign: "center" },
   feedback: { marginTop: 16, alignItems: "stretch", alignSelf: "stretch", paddingBottom: 16 },
   thanks: { height: 40, textAlign: "center", textAlignVertical: "center" },
-  settings: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginVertical: 8, padding: 0 },
+  settings: obj2,
 };
-let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(4890);
-let obj5 = { guildPill: null, guildName: null };
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginVertical: 8, padding: 0 };
-const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
-obj5.guildPill = {
+obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginVertical: 8, padding: 0 };
+let closure_13 = createStyles.createStyles(obj);
+createStyles = createStyles_mod;
+let obj3 = { guildPill: obj4, guildName: { paddingHorizontal: 8 } };
+obj4 = {
   flexDirection: "row",
   padding: 8,
   marginBottom: 16,
@@ -45,20 +58,25 @@ obj5.guildPill = {
   justifyContent: "center",
   borderRadius: nativeDefault.radii.round,
 };
-obj5.guildName = { paddingHorizontal: 8 };
-let closure_14 = createStyles.createStyles(obj5);
-let ReactCompilerGating = fn(558);
+createStyles = createStyles.createStyles;
+const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
+let closure_14 = createStyles(obj3);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guild) => {
-      const cResult = c.c(9);
+      let items;
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(9);
       guild = guild.guild;
       const tmp4 = closure_14();
       if (cResult[0] !== guild) {
         const obj2 = { guild, size: GuildIcon.GuildIconSizes.SMALL_32, animate: true };
-        const tmp9 = closure_1_11(GuildIconDefault, obj2);
+        const tmp8 = GuildIconDefault;
+        const tmp9 = unpackModuleId(tmp8, obj2);
         cResult[0] = guild;
         cResult[1] = tmp9;
-        let tmp5 = tmp9;
+        tmp5 = tmp9;
       } else {
         tmp5 = cResult[1];
       }
@@ -67,128 +85,124 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         name = guild.name;
       }
       if (cResult[2] === tmp4.guildName) {
+        let tmp11;
         if (cResult[3] === name) {
-          let tmp11 = cResult[4];
+          tmp11 = cResult[4];
         }
         if (cResult[5] === tmp4.guildPill) {
           if (cResult[6] === tmp5) {
+            let tmp13;
             if (cResult[7] === tmp11) {
-              let tmp13 = cResult[8];
+              tmp13 = cResult[8];
             }
             return tmp13;
           }
         }
-        const obj3 = { style: tmp4.guildPill, children: null };
-        const items = [tmp5, tmp11];
-        obj3.children = items;
-        const tmp16 = __initData(View, obj3);
+        const obj3 = { style: tmp4.guildPill, children: items };
+        items = [tmp5, tmp11];
+        const tmp16 = closure_12(View, obj3);
         cResult[5] = tmp4.guildPill;
         cResult[6] = tmp5;
         cResult[7] = tmp11;
         cResult[8] = tmp16;
         tmp13 = tmp16;
       }
-      const tmp12 = closure_1_11(Text_Text.Text, {
-        style: tmp4.guildName,
-        variant: "heading-md/semibold",
-        color: "mobile-text-heading-primary",
-        children: name,
-      });
-      cResult[2] = tmp4.guildName;
-      cResult[3] = name;
-      cResult[4] = tmp12;
-      tmp11 = tmp12;
       const obj4 = {
         style: tmp4.guildName,
         variant: "heading-md/semibold",
         color: "mobile-text-heading-primary",
         children: name,
       };
+      const tmp12 = unpackModuleId(Text_Text.Text, obj4);
+      cResult[2] = tmp4.guildName;
+      cResult[3] = name;
+      cResult[4] = tmp12;
+      tmp11 = tmp12;
     }
   : (guild) => {
+      let items;
+      let name;
       guild = guild.guild;
       const tmp = closure_14();
-      const obj = { style: tmp.guildPill, children: null };
+      const obj = { style: tmp.guildPill, children: items };
       const obj2 = { guild, size: GuildIcon.GuildIconSizes.SMALL_32, animate: true };
-      const items = [closure_1_11(GuildIconDefault, obj2)];
+      const tmp5 = GuildIconDefault;
+      items = [unpackModuleId(tmp5, obj2)];
       const obj3 = {
         style: tmp.guildName,
         variant: "heading-md/semibold",
         color: "mobile-text-heading-primary",
-        children: null,
+        children: name,
       };
-      let name;
+      name = undefined;
+      const Text = Text_Text.Text;
       if (guild != null) {
         name = guild.name;
       }
-      obj3.children = name;
-      items[1] = closure_1_11(Text_Text.Text, obj3);
-      obj.children = items;
-      return __initData(View, obj);
+      items[1] = unpackModuleId(Text, obj3);
+      return closure_12(View, obj);
     };
-ReactCompilerGating = fn(558);
-let obj6 = {
-  flexDirection: "row",
-  padding: 8,
-  marginBottom: 16,
-  backgroundColor: nativeDefault.colors.GUILD_NOTIFICATIONS_BOTTOM_SHEET_PILL_BACKGROUND,
-  alignItems: "center",
-  justifyContent: "center",
-  borderRadius: nativeDefault.radii.round,
-};
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/notifications/native/GuildHighlightsNotificationsActionSheet.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      const cResult = guildId(ref[11]).c(61);
+      let closure_4;
+      let closure_6;
+      let closure_7;
+      let first;
+      let guild;
+      let muted;
+      let notifyHighlights;
+      let ref;
+      let tmp = guildId;
+      let tmp2 = ref;
+      let obj = guildId(ref[11]);
+      const cResult = obj.c(61);
       guildId = guildId.guildId;
       const feedbackSettings = guildId.feedbackSettings;
       const tmp4 = closure_13();
-      ref = noop.useRef(null);
-      const tmp6 = first(noop.useState(undefined), 2);
+      let obj2 = react;
+      ref = react.useRef(null);
+      const tmp6 = first(react.useState(undefined), 2);
       first = tmp6[0];
-      noop = tmp6[1];
-      const tmp8 = first(noop.useState(false), 2);
+      react = tmp6[1];
+      const tmp8 = first(react.useState(false), 2);
       const first1 = tmp8[0];
       GuildStore = tmp8[1];
-      let obj = guildId(ref[11]);
-      let obj2 = noop;
-      UserGuildSettingsStore = first(noop.useState(false), 2)[1];
+      UserGuildSettingsStore = first(react.useState(false), 2)[1];
+      first(react.useState(false), 2);
       if (cResult[0] === feedbackSettings) {
+        let tmp11;
         if (cResult[1] === first1) {
-          let tmp11 = cResult[2];
+          tmp11 = cResult[2];
         }
-        closure_8 = tmp11;
+        let closure_8 = tmp11;
         if (cResult[3] === first) {
+          let tmp12;
+          let tmp13;
+          let tmp16;
+          let tmp18;
           if (cResult[4] === tmp11) {
-            let tmp12 = cResult[5];
-            let tmp13 = cResult[6];
+            tmp12 = cResult[5];
+            tmp13 = cResult[6];
           }
           const effect = obj2.useEffect(tmp12, tmp13);
           if (cResult[7] !== tmp11) {
             class V {
               constructor(arg0) {
-                tmp = closure_4(guildId);
-                obj = guildId;
-                if (guildId == null) {
+                closure_4(arg0);
+                let obj = arg0;
+                if (arg0 == null) {
                   obj = {};
                 }
-                tmp2 = obj.rating === FeedbackRating.GOOD || null != obj.reason;
+                const tmp2 = obj.rating === FeedbackRating.GOOD || null != obj.reason;
                 if (tmp2) {
-                  tmp5 = closure_8;
-                  tmp6 = closure_8(guildId);
-                  tmp7 = closure_7;
-                  flag2 = false;
-                  tmp8 = closure_7(false);
+                  closure_8(arg0);
+                  closure_7(false);
                 } else {
-                  tmp3 = closure_7;
-                  flag = true;
-                  tmp4 = closure_7(true);
+                  closure_7(true);
                 }
-                obj2 = closure_0(closure_2[14]);
-                handleSurveyCleanupResult = obj2.handleSurveyCleanup();
-                return;
+                const obj2 = PushFeedbackActions;
+                obj2.handleSurveyCleanup();
               }
             }
             cResult[7] = tmp11;
@@ -203,26 +217,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else {
             class V {
               constructor(arg0) {
-                tmp = closure_4(guildId);
-                obj = guildId;
-                if (guildId == null) {
+                closure_4(arg0);
+                let obj = arg0;
+                if (arg0 == null) {
                   obj = {};
                 }
-                tmp2 = obj.rating === FeedbackRating.GOOD || null != obj.reason;
+                const tmp2 = obj.rating === FeedbackRating.GOOD || null != obj.reason;
                 if (tmp2) {
-                  tmp5 = closure_8;
-                  tmp6 = closure_8(guildId);
-                  tmp7 = closure_7;
-                  flag2 = false;
-                  tmp8 = closure_7(false);
+                  closure_8(arg0);
+                  closure_7(false);
                 } else {
-                  tmp3 = closure_7;
-                  flag = true;
-                  tmp4 = closure_7(true);
+                  closure_7(true);
                 }
-                obj2 = closure_0(closure_2[14]);
-                handleSurveyCleanupResult = obj2.handleSurveyCleanup();
-                return;
+                const obj2 = PushFeedbackActions;
+                obj2.handleSurveyCleanup();
               }
             }
           }
@@ -237,12 +245,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
             class U {
               constructor() {
-                current = closure_2.current;
+                const current = ref.current;
                 if (current != null) {
-                  expandActionSheetResult = current.expandActionSheet();
+                  current.expandActionSheet();
                 }
-                tmp2 = closure_7(false);
-                return;
+                closure_7(false);
               }
             }
             cResult[9] = U;
@@ -256,12 +263,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else {
             class U {
               constructor() {
-                current = closure_2.current;
+                const current = ref.current;
                 if (current != null) {
-                  expandActionSheetResult = current.expandActionSheet();
+                  current.expandActionSheet();
                 }
-                tmp2 = closure_7(false);
-                return;
+                closure_7(false);
               }
             }
           }
@@ -269,12 +275,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
             class U {
               constructor() {
-                current = closure_2.current;
+                const current = ref.current;
                 if (current != null) {
-                  expandActionSheetResult = current.expandActionSheet();
+                  current.expandActionSheet();
                 }
-                tmp2 = closure_7(false);
-                return;
+                closure_7(false);
               }
             }
             const items = [UserGuildSettingsStore];
@@ -287,26 +292,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             items[1] = GuildStore;
             cResult[10] = items;
-            const tmp16 = items;
+            tmp16 = items;
           } else {
             class U {
               constructor() {
-                current = closure_2.current;
+                const current = ref.current;
                 if (current != null) {
-                  expandActionSheetResult = current.expandActionSheet();
+                  current.expandActionSheet();
                 }
-                tmp2 = closure_7(false);
-                return;
+                closure_7(false);
               }
             }
           }
           if (cResult[11] !== guildId) {
             class P {
               constructor() {
-                obj = {
-                  guild: closure_6.getGuild(guildId),
-                  muted: closure_7.isMuted(guildId),
-                  notifyHighlights: closure_7.getNotifyHighlights(guildId),
+                const obj = {
+                  guild: GuildStore.getGuild(guildId),
+                  muted: UserGuildSettingsStore.isMuted(guildId),
+                  notifyHighlights: UserGuildSettingsStore.getNotifyHighlights(guildId),
                 };
                 return obj;
               }
@@ -322,29 +326,30 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[11] = guildId;
             cResult[12] = P;
             cResult[13] = items1;
-            let tmp18 = items1;
+            tmp18 = items1;
           } else {
             class P {
               constructor() {
-                obj = {
-                  guild: closure_6.getGuild(guildId),
-                  muted: closure_7.isMuted(guildId),
-                  notifyHighlights: closure_7.getNotifyHighlights(guildId),
+                const obj = {
+                  guild: GuildStore.getGuild(guildId),
+                  muted: UserGuildSettingsStore.isMuted(guildId),
+                  notifyHighlights: UserGuildSettingsStore.getNotifyHighlights(guildId),
                 };
                 return obj;
               }
             }
             tmp18 = cResult[13];
           }
-          const stateFromStoresObject = tmp(tmp2[15]).useStateFromStoresObject(tmp16, P, tmp18);
+          const tmpResult = tmp(tmp2[15]);
+          const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp16, P, tmp18);
           ({ guild, muted, notifyHighlights } = stateFromStoresObject);
           if (feedbackSettings != null) {
             class P {
               constructor() {
-                obj = {
-                  guild: closure_6.getGuild(guildId),
-                  muted: closure_7.isMuted(guildId),
-                  notifyHighlights: closure_7.getNotifyHighlights(guildId),
+                const obj = {
+                  guild: GuildStore.getGuild(guildId),
+                  muted: UserGuildSettingsStore.isMuted(guildId),
+                  notifyHighlights: UserGuildSettingsStore.getNotifyHighlights(guildId),
                 };
                 return obj;
               }
@@ -353,46 +358,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[14] === first) {
             class P {
               constructor() {
-                obj = {
-                  guild: closure_6.getGuild(guildId),
-                  muted: closure_7.isMuted(guildId),
-                  notifyHighlights: closure_7.getNotifyHighlights(guildId),
+                const obj = {
+                  guild: GuildStore.getGuild(guildId),
+                  muted: UserGuildSettingsStore.isMuted(guildId),
+                  notifyHighlights: UserGuildSettingsStore.getNotifyHighlights(guildId),
                 };
                 return obj;
               }
             }
           }
-          if (null == undefined) {
+          let tmp23 = null;
+          if (null != undefined) {
+            let tmp26Result;
             class P {
               constructor() {
-                obj = {
-                  guild: closure_6.getGuild(guildId),
-                  muted: closure_7.isMuted(guildId),
-                  notifyHighlights: closure_7.getNotifyHighlights(guildId),
-                };
-                return obj;
-              }
-            }
-            cResult[14] = first;
-            class E {
-              constructor() {
-                return () => {
-                  closure_1_8(first);
-                };
-              }
-            }
-            cResult[16] = tmp21;
-            cResult[17] = V;
-            cResult[18] = tmp4.centerText;
-            cResult[19] = tmp4.thanks;
-            cResult[20] = null;
-          } else {
-            class P {
-              constructor() {
-                obj = {
-                  guild: closure_6.getGuild(guildId),
-                  muted: closure_7.isMuted(guildId),
-                  notifyHighlights: closure_7.getNotifyHighlights(guildId),
+                const obj = {
+                  guild: GuildStore.getGuild(guildId),
+                  muted: UserGuildSettingsStore.isMuted(guildId),
+                  notifyHighlights: UserGuildSettingsStore.getNotifyHighlights(guildId),
                 };
                 return obj;
               }
@@ -400,10 +383,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (first == null) {
               class P {
                 constructor() {
-                  obj = {
-                    guild: closure_6.getGuild(guildId),
-                    muted: closure_7.isMuted(guildId),
-                    notifyHighlights: closure_7.getNotifyHighlights(guildId),
+                  const obj = {
+                    guild: GuildStore.getGuild(guildId),
+                    muted: UserGuildSettingsStore.isMuted(guildId),
+                    notifyHighlights: UserGuildSettingsStore.getNotifyHighlights(guildId),
                   };
                   return obj;
                 }
@@ -419,10 +402,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (tmp25) {
               class P {
                 constructor() {
-                  obj = {
-                    guild: closure_6.getGuild(guildId),
-                    muted: closure_7.isMuted(guildId),
-                    notifyHighlights: closure_7.getNotifyHighlights(guildId),
+                  const obj = {
+                    guild: GuildStore.getGuild(guildId),
+                    muted: UserGuildSettingsStore.isMuted(guildId),
+                    notifyHighlights: UserGuildSettingsStore.getNotifyHighlights(guildId),
                   };
                   return obj;
                 }
@@ -436,20 +419,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               tmp31[0] = items2;
-              const intl2 = tmp(tmp2[16]).intl;
-              tmp31[3] = intl2.string(tmp(tmp2[16]).t.kZbFIO);
-              let tmp26Result = closure_11(tmp(tmp2[13]).Text, tmp31);
+              const Text = tmp(tmp2[13]).Text;
+              const intl3 = tmp(tmp2[16]).intl;
+              tmp31[3] = intl3.string(tmp(tmp2[16]).t.kZbFIO);
+              tmp26Result = closure_11(Text, tmp31);
             } else {
               class P {
                 constructor() {
-                  obj = {
-                    guild: closure_6.getGuild(guildId),
-                    muted: closure_7.isMuted(guildId),
-                    notifyHighlights: closure_7.getNotifyHighlights(guildId),
+                  const obj = {
+                    guild: GuildStore.getGuild(guildId),
+                    muted: UserGuildSettingsStore.isMuted(guildId),
+                    notifyHighlights: UserGuildSettingsStore.getNotifyHighlights(guildId),
                   };
                   return obj;
                 }
               }
+              const FeedbackForm = tmp(tmp2[17]).FeedbackForm;
+              const intl = tmp(tmp2[16]).intl;
               class E {
                 constructor() {
                   return () => {
@@ -458,15 +444,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               tmp27[0] = tmp28(tmp(tmp2[16]).t.Yzl7Or);
-              const intl = tmp(tmp2[16]).intl;
-              tmp27[1] = intl.string(tmp(tmp2[16]).t.g1q5fr);
+              const intl2 = tmp(tmp2[16]).intl;
+              tmp27[1] = intl2.string(tmp(tmp2[16]).t.g1q5fr);
               if (feedbackSettings != null) {
                 class P {
                   constructor() {
-                    obj = {
-                      guild: closure_6.getGuild(guildId),
-                      muted: closure_7.isMuted(guildId),
-                      notifyHighlights: closure_7.getNotifyHighlights(guildId),
+                    const obj = {
+                      guild: GuildStore.getGuild(guildId),
+                      muted: UserGuildSettingsStore.isMuted(guildId),
+                      notifyHighlights: UserGuildSettingsStore.getNotifyHighlights(guildId),
                     };
                     return obj;
                   }
@@ -475,10 +461,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (undefined == null) {
                 class P {
                   constructor() {
-                    obj = {
-                      guild: closure_6.getGuild(guildId),
-                      muted: closure_7.isMuted(guildId),
-                      notifyHighlights: closure_7.getNotifyHighlights(guildId),
+                    const obj = {
+                      guild: GuildStore.getGuild(guildId),
+                      muted: UserGuildSettingsStore.isMuted(guildId),
+                      notifyHighlights: UserGuildSettingsStore.getNotifyHighlights(guildId),
                     };
                     return obj;
                   }
@@ -487,10 +473,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp27[2] = undefined;
               tmp27[3] = null != feedbackSettings ? feedbackSettings.onFeedbackShown : () => {};
               tmp27[4] = V;
-              tmp26Result = closure_11(tmp(tmp2[17]).FeedbackForm, tmp27);
+              tmp26Result = closure_11(FeedbackForm, tmp27);
             }
+            tmp23 = tmp26Result;
           }
-          const tmpResult = tmp(tmp2[15]);
+          cResult[14] = first;
+          cResult[15] = feedbackSettings;
+          cResult[16] = null != undefined;
+          cResult[17] = V;
+          cResult[18] = tmp4.centerText;
+          cResult[19] = tmp4.thanks;
+          cResult[20] = tmp23;
         }
         class E {
           constructor() {
@@ -509,7 +502,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const fn = function b(rating) {
         let tmp = first1;
-        if (!first1) {
+        if (!tmp) {
           rating = undefined;
           if (rating != null) {
             rating = rating.rating;
@@ -523,7 +516,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               onFeedbackCompleted(rating);
             }
           }
-          PushFeedbackActions.handleSurveyCleanup();
+          const obj = PushFeedbackActions;
+          obj.handleSurveyCleanup();
           closure_6(true);
         }
       };
@@ -531,27 +525,51 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = first1;
       cResult[2] = fn;
       tmp11 = fn;
-      const tmp10 = first(noop.useState(false), 2);
     }
   : (guildId) => {
+      let BottomSheetScrollView;
+      let FormSwitchRow;
+      let closure_4;
+      let enfuur;
+      let format;
+      let guild;
+      let intl;
+      let intl2;
+      let intl3;
+      let intl4;
+      let intl6;
+      let intl7;
+      let items5;
+      let items6;
+      let notifyHighlights;
+      let obj11;
+      let obj14;
+      let obj15;
+      let obj17;
+      let obj7;
+      let reasons1;
+      let tmp22Result;
+      let tmp29;
+      let tmp30;
       guildId = guildId.guildId;
       const feedbackSettings = guildId.feedbackSettings;
       let first;
-      noop = undefined;
+      react = undefined;
       let tmp = closure_13();
-      const ref = noop.useRef(null);
-      const tmp3 = first(noop.useState(undefined), 2);
+      const ref = react.useRef(null);
+      const tmp3 = first(react.useState(undefined), 2);
       first = tmp3[0];
-      noop = tmp3[1];
-      const tmp4 = first(noop.useState(false), 2);
+      react = tmp3[1];
+      const tmp4 = first(react.useState(false), 2);
       const first1 = tmp4[0];
-      closure_6 = tmp4[1];
-      const tmp6 = first(noop.useState(false), 2);
-      closure_7 = tmp6[1];
+      let closure_6 = tmp4[1];
+      const tmp6 = first(react.useState(false), 2);
+      let closure_7 = tmp6[1];
       const items = [first1, feedbackSettings];
-      const callback = noop.useCallback((rating) => {
+      const first2 = tmp6[0];
+      const callback = react.useCallback((rating) => {
         let tmp = first1;
-        if (!first1) {
+        if (!tmp) {
           rating = undefined;
           if (rating != null) {
             rating = rating.rating;
@@ -565,49 +583,55 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               onFeedbackCompleted(rating);
             }
           }
-          PushFeedbackActions.handleSurveyCleanup();
+          const obj = PushFeedbackActions;
+          obj.handleSurveyCleanup();
           closure_6(true);
         }
       }, items);
       const items1 = [first, callback];
-      const effect = noop.useEffect(
+      const effect = react.useEffect(
         () => () => {
           callback(first);
         },
         items1,
       );
       const items2 = [callback];
-      const callback1 = noop.useCallback((arg0) => {
+      const callback1 = react.useCallback((arg0) => {
         closure_4(arg0);
         let obj = arg0;
         if (arg0 == null) {
           obj = {};
         }
+        const tmp2 = obj.rating === FeedbackRating.GOOD || null != obj.reason;
         if (tmp2) {
           callback(arg0);
           closure_7(false);
         } else {
           closure_7(true);
         }
-        PushFeedbackActions.handleSurveyCleanup();
-        tmp2 = obj.rating === FeedbackRating.GOOD || null != obj.reason;
+        const obj2 = PushFeedbackActions;
+        obj2.handleSurveyCleanup();
       }, items2);
-      const callback2 = noop.useCallback(() => {
+      const callback2 = react.useCallback(() => {
         const current = ref.current;
         if (current != null) {
           current.expandActionSheet();
         }
         closure_7(false);
       }, []);
+      let obj2 = guildId(ref[15]);
       const items3 = [closure_7, closure_6];
       const items4 = [guildId];
-      const stateFromStoresObject = guildId(ref[15]).useStateFromStoresObject(
+      const stateFromStoresObject = obj2.useStateFromStoresObject(
         items3,
-        () => ({
-          guild: GuildStore.getGuild(guildId),
-          muted: UserGuildSettingsStore.isMuted(guildId),
-          notifyHighlights: UserGuildSettingsStore.getNotifyHighlights(guildId),
-        }),
+        () => {
+          const obj = {
+            guild: GuildStore.getGuild(guildId),
+            muted: UserGuildSettingsStore.isMuted(guildId),
+            notifyHighlights: UserGuildSettingsStore.getNotifyHighlights(guildId),
+          };
+          return obj;
+        },
         items4,
       );
       let muted = stateFromStoresObject.muted;
@@ -616,149 +640,176 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (feedbackSettings != null) {
         reasons = feedbackSettings.reasons;
       }
-      if (null == reasons) {
-        let num = 0;
-        if (tmp15) {
-          let num2 = 148;
-          if (first1) {
-            num2 = 64;
-          }
-          num = num2;
-        }
-        const sum = 316 + num + feedbackSettings(tmp12[18])().bottom;
-        let tmp23 = !tmp15;
-        if (tmp15) {
-          let obj = first;
-          if (first == null) {
-            obj = {};
-          }
-          tmp23 = obj.rating === FeedbackRating.GOOD || null != obj.reason;
-          const tmp25 = obj.rating === FeedbackRating.GOOD || null != obj.reason;
-        }
-        if (!tmp23) {
-          let rating;
-          if (first != null) {
-            rating = first.rating;
-          }
-          tmp23 = null == rating;
-        }
-        const obj3 = { scrollable: true, ref, contentHeight: null, startHeight: null, children: null };
-        let tmp28;
-        if (tmp23) {
-          tmp28 = sum;
-        }
-        obj3.contentHeight = tmp28;
-        obj3.startHeight = sum;
-        const obj4 = { contentContainerStyle: tmp.contentContainer, onLayout: null, children: null };
-        let tmp29;
-        if (tmp6[0]) {
-          tmp29 = callback2;
-        }
-        obj4.onLayout = tmp29;
-        const obj5 = { style: tmp.header, children: null };
-        const obj6 = { guild };
-        const items5 = [closure_11(closure_15, obj6), ,];
-        const obj7 = {
-          style: tmp.headerTitle,
-          variant: "heading-lg/semibold",
-          color: "mobile-text-heading-primary",
-          children: null,
-        };
-        const intl4 = tmp11(tmp12[16]).intl;
-        obj7.children = intl4.string(tmp11(tmp12[16]).t.o8Bypv);
-        items5[1] = closure_11(tmp11(tmp12[13]).Text, obj7);
-        const obj8 = { style: tmp.centerText, variant: "text-md/medium", color: "text-default", children: null };
-        const intl5 = tmp11(tmp12[16]).intl;
-        const obj9 = { helpUrl: feedbackSettings(tmp12[19]).getArticleURL(callback.HIGHLIGHTS_NOTIFICATIONS) };
-        obj8.children = intl5.format(tmp11(tmp12[16]).t.enfuur, obj9);
-        items5[2] = closure_11(tmp11(tmp12[13]).Text, obj8);
-        obj5.children = items5;
-        const items6 = [closure_12(first1, obj5), , ,];
-        let tmp27Result = null != null;
-        if (tmp27Result) {
-          const obj10 = { style: tmp.feedback, children: null };
-          tmp27Result = closure_11(tmp31, obj10);
-        }
-        items6[1] = tmp27Result;
+      let tmp17 = null;
+      if (null != reasons) {
+        let tmp20Result;
+        let obj = first;
         if (first == null) {
-          first = {};
+          obj = {};
         }
-        let tmp27Result2 = !tmp36;
-        if (first.rating !== FeedbackRating.GOOD) {
-          const obj11 = { style: tmp.settings, shadow: "low", border: "subtle", children: null };
-          const obj12 = { disabled: muted, label: null, value: null, onValueChange: null };
-          const intl6 = tmp11(tmp12[16]).intl;
-          obj12.label = intl6.string(tmp11(tmp12[16]).t.MVi7LQ);
-          if (!muted) {
-            muted = notifyHighlights === constants.DISABLED;
-          }
-          obj12.value = muted;
-          obj12.onValueChange = function onValueChange(arg0) {
-            const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
-            const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(
-              guildId,
-              { notify_highlights: arg0 ? constants.DISABLED : constants.ENABLED },
-              NotificationLabel.highlights(!arg0),
-            );
-            const obj2 = { notify_highlights: arg0 ? constants.DISABLED : constants.ENABLED };
+        const tmp19 = obj.rating === FeedbackRating.GOOD || null != obj.reason;
+        if (tmp19) {
+          const obj3 = {
+            style: items5,
+            variant: "heading-md/semibold",
+            color: "text-brand",
+            children: intl3.string(guildId(ref[16]).t.kZbFIO),
           };
-          obj11.children = closure_11(tmp11(tmp12[21]).FormSwitchRow, obj12);
-          tmp27Result2 = closure_11(tmp11(tmp12[20]).Card, obj11);
-        }
-        const obj13 = { children: null };
-        items6[2] = tmp27Result2;
-        const obj14 = { style: tmp.centerText, variant: "text-sm/medium", color: "text-default", children: null };
-        const intl7 = tmp11(tmp12[16]).intl;
-        const obj15 = {
-          notifSettingsHook() {
-            ActionSheetActionCreatorsDefault.hideActionSheet();
-            NotificationSettingsModalActionCreatorsDefault.open(guildId);
-          },
-        };
-        obj14.children = intl7.format(tmp11(tmp12[16]).t.F9rfLX, obj15);
-        items6[3] = closure_11(tmp11(tmp12[13]).Text, obj14);
-        obj13.children = items6;
-        obj4.children = closure_12(first1, obj13);
-        obj3.children = closure_11(tmp11(tmp12[25]).BottomSheetScrollView, obj4);
-        return closure_11(tmp11(tmp12[26]).BottomSheet, obj3);
-      } else {
-        let obj16 = first;
-        if (first == null) {
-          obj16 = {};
-        }
-        if (tmp17) {
-          const obj17 = { style: null, variant: "heading-md/semibold", color: "text-brand", children: null };
-          const items7 = [,];
+          items5 = [,];
           ({ centerText: arr7[0], thanks: arr7[1] } = tmp);
-          obj17.style = items7;
-          const intl3 = tmp11(tmp12[16]).intl;
-          obj17.children = intl3.string(tmp11(tmp12[16]).t.kZbFIO);
-          let tmp18Result = closure_11(tmp11(tmp12[13]).Text, obj17);
+          const Text = tmp12(tmp13[13]).Text;
+          intl3 = tmp12(tmp13[16]).intl;
+          tmp20Result = closure_11(Text, obj3);
         } else {
-          const obj18 = {
-            ratingsBodyLabel: null,
-            reasonsHeaderLabel: null,
-            reasons: null,
-            trackOpen: null,
-            onFeedbackChanged: null,
+          const obj4 = {
+            ratingsBodyLabel: intl.string(guildId(ref[16]).t.Yzl7Or),
+            reasonsHeaderLabel: intl2.string(guildId(ref[16]).t.g1q5fr),
+            reasons: reasons1,
+            trackOpen: null != feedbackSettings ? feedbackSettings.onFeedbackShown : () => {},
+            onFeedbackChanged: callback1,
           };
-          const intl = tmp11(tmp12[16]).intl;
-          obj18.ratingsBodyLabel = intl.string(tmp11(tmp12[16]).t.Yzl7Or);
-          const intl2 = tmp11(tmp12[16]).intl;
-          obj18.reasonsHeaderLabel = intl2.string(tmp11(tmp12[16]).t.g1q5fr);
-          let reasons1;
+          const FeedbackForm = tmp12(tmp13[17]).FeedbackForm;
+          intl = tmp12(tmp13[16]).intl;
+          intl2 = tmp12(tmp13[16]).intl;
+          reasons1 = undefined;
           if (feedbackSettings != null) {
             reasons1 = feedbackSettings.reasons;
           }
           if (reasons1 == null) {
             reasons1 = [];
           }
-          obj18.reasons = reasons1;
-          obj18.trackOpen = null != feedbackSettings ? feedbackSettings.onFeedbackShown : () => {};
-          obj18.onFeedbackChanged = callback1;
-          tmp18Result = closure_11(tmp11(tmp12[17]).FeedbackForm, obj18);
+          tmp20Result = closure_11(FeedbackForm, obj4);
         }
-        tmp17 = obj16.rating === FeedbackRating.GOOD || null != obj16.reason;
+        tmp17 = tmp20Result;
       }
-      let obj2 = guildId(ref[15]);
+      let num = 0;
+      const bottom = feedbackSettings(tmp13[18])().bottom;
+      const tmp22 = feedbackSettings;
+      if (null != reasons) {
+        let num2 = 148;
+        if (first1) {
+          num2 = 64;
+        }
+        num = num2;
+      }
+      const sum = 316 + num + bottom;
+      let tmp24 = !tmp16;
+      if (null != reasons) {
+        let obj5 = first;
+        if (first == null) {
+          obj5 = {};
+        }
+        tmp24 = obj5.rating === FeedbackRating.GOOD || null != obj5.reason;
+      }
+      if (!tmp24) {
+        let rating;
+        if (first != null) {
+          rating = first.rating;
+        }
+        tmp24 = null == rating;
+      }
+      const obj6 = {
+        scrollable: true,
+        ref,
+        contentHeight: tmp29,
+        startHeight: sum,
+        children: closure_11(BottomSheetScrollView, obj7),
+      };
+      tmp29 = undefined;
+      BottomSheet = tmp12(tmp13[26]).BottomSheet;
+      if (tmp24) {
+        tmp29 = sum;
+      }
+      obj7 = { contentContainerStyle: tmp.contentContainer, onLayout: tmp30, children: closure_12(first1, obj15) };
+      tmp30 = undefined;
+      BottomSheetScrollView = tmp12(tmp13[25]).BottomSheetScrollView;
+      if (first2) {
+        tmp30 = callback2;
+      }
+      const obj8 = { style: tmp.header, children: items6 };
+      items6 = [closure_11(closure_15, { guild }), ,];
+      const obj9 = {
+        style: tmp.headerTitle,
+        variant: "heading-lg/semibold",
+        color: "mobile-text-heading-primary",
+        children: intl4.string(guildId(ref[16]).t.o8Bypv),
+      };
+      const Text2 = tmp12(tmp13[13]).Text;
+      intl4 = tmp12(tmp13[16]).intl;
+      items6[1] = closure_11(Text2, obj9);
+      const obj10 = {
+        style: tmp.centerText,
+        variant: "text-md/medium",
+        color: "text-default",
+        children: format(enfuur, obj11),
+      };
+      const Text3 = tmp12(tmp13[13]).Text;
+      const intl5 = tmp12(tmp13[16]).intl;
+      format = intl5.format;
+      obj11 = { helpUrl: tmp22Result.getArticleURL(callback.HIGHLIGHTS_NOTIFICATIONS) };
+      enfuur = tmp12(tmp13[16]).t.enfuur;
+      tmp22Result = tmp22(ref[19]);
+      items6[2] = closure_11(Text3, obj10);
+      const items7 = [closure_12(first1, obj8), , ,];
+      let tmp28Result = null != tmp17;
+      if (tmp28Result) {
+        const obj12 = { style: tmp.feedback, children: tmp17 };
+        tmp28Result = closure_11(tmp32, obj12);
+      }
+      items7[1] = tmp28Result;
+      if (first == null) {
+        first = {};
+      }
+      let tmp28Result2 = first.rating !== FeedbackRating.GOOD;
+      if (tmp28Result2) {
+        const obj13 = {
+          style: tmp.settings,
+          shadow: "low",
+          border: "subtle",
+          children: closure_11(FormSwitchRow, obj14),
+        };
+        const Card = tmp12(tmp13[20]).Card;
+        obj14 = {
+          disabled: muted,
+          label: intl6.string(guildId(ref[16]).t.MVi7LQ),
+          value: muted,
+          onValueChange(arg0) {
+            const updateGuildNotificationSettings =
+              NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings;
+            const obj = { notify_highlights: arg0 ? constants.DISABLED : constants.ENABLED };
+            NotificationSettingsModalActionCreatorsDefault;
+            const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
+            const result = updateGuildNotificationSettings(guildId, obj, NotificationLabel.highlights(!arg0));
+          },
+        };
+        FormSwitchRow = tmp12(tmp13[21]).FormSwitchRow;
+        intl6 = tmp12(tmp13[16]).intl;
+        if (!muted) {
+          muted = notifyHighlights === constants.DISABLED;
+        }
+        tmp28Result2 = closure_11(Card, obj13);
+      }
+      obj15 = { children: items7 };
+      items7[2] = tmp28Result2;
+      const obj16 = {
+        style: tmp.centerText,
+        variant: "text-sm/medium",
+        color: "text-default",
+        children: intl7.format(guildId(ref[16]).t.F9rfLX, obj17),
+      };
+      const Text4 = tmp12(tmp13[13]).Text;
+      intl7 = tmp12(tmp13[16]).intl;
+      obj17 = {
+        notifSettingsHook() {
+          const obj = ActionSheetActionCreatorsDefault;
+          obj.hideActionSheet();
+          const obj2 = NotificationSettingsModalActionCreatorsDefault;
+          obj2.open(guildId);
+        },
+      };
+      items7[3] = closure_11(Text4, obj16);
+      return closure_11(BottomSheet, obj6);
     };
+let result = size.fileFinishedImporting("modules/notifications/native/GuildHighlightsNotificationsActionSheet.tsx");
+
+export default tmp6;

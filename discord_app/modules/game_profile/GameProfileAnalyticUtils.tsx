@@ -1,13 +1,15 @@
 // discord_app/modules/game_profile/GameProfileAnalyticUtils.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import v1 from "../../../_runtime/01266_v1.js";
+import ContentInventoryConstants from "../content_inventory/ContentInventoryConstants.tsx";
 import ContentInventoryStore from "../content_inventory/ContentInventoryStore.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const Constants = fn(1085);
+let closure_4;
+let hasOwnProperty;
 ({ AnalyticEvents: closure_4, GuildFeatures: hasOwnProperty } = Constants);
-const ContentInventoryFeedKey = fn(8027).ContentInventoryFeedKey;
-const size = fn(2);
+const ContentInventoryFeedKey = ContentInventoryConstants.ContentInventoryFeedKey;
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileAnalyticUtils.tsx");
 
 export const GameProfileEmbedAction = { CopyLink: 0, [0]: "CopyLink" };
@@ -133,9 +135,10 @@ export const GameProfileSources = {
 };
 export const GameProfileTypes = { FullProfile: "full_profile", MiniProfile: "mini_profile" };
 export const getGuildIdAndVerifiedFromInvite = function getGuildIdAndVerifiedFromInvite(current) {
+  let flag;
   let id;
   if (current != null) {
-    guild = current.guild;
+    const guild = current.guild;
     if (guild != null) {
       id = guild.id;
     }
@@ -143,29 +146,34 @@ export const getGuildIdAndVerifiedFromInvite = function getGuildIdAndVerifiedFro
   if (id == null) {
     id = null;
   }
-  const obj = { guildId: id, isVerified: null };
-  let flag;
+  const obj = { guildId: id, isVerified: flag };
+  flag = undefined;
   if (current != null) {
     const guild2 = current.guild;
     if (guild2 != null) {
       const features = guild2.features;
-      flag = features.includes(constants2.VERIFIED);
+      flag = features.includes(hasOwnProperty.VERIFIED);
     }
   }
   if (flag == null) {
     flag = false;
   }
-  obj.isVerified = flag;
   return obj;
 };
 export const generateViewId = function generateViewId() {
-  return v1.v4();
+  const obj = v1;
+  return obj.v4();
 };
 export const trackGameProfileOpen = function trackGameProfileOpen(viewId) {
+  let authorId;
+  let gameId;
+  let gameName;
+  let profileType;
+  let source;
   viewId = viewId.viewId;
   ({ source, gameName, gameId, authorId, profileType } = viewId);
   const obj = AnalyticsUtilsDefault;
-  obj.track(constants.GAME_PROFILE_OPEN, {
+  const obj2 = {
     view_id: viewId,
     source,
     game_name: gameName,
@@ -173,13 +181,25 @@ export const trackGameProfileOpen = function trackGameProfileOpen(viewId) {
     author_id: authorId,
     request_id: ContentInventoryStore.getFeedRequestId(ContentInventoryFeedKey.GLOBAL_FEED),
     profile_type: profileType,
-  });
+  };
+  obj.track(constants.GAME_PROFILE_OPEN, obj2);
   return viewId;
 };
 export const trackGameProfileClose = function trackGameProfileClose(guildId) {
+  let gameId;
+  let gameName;
+  let isVerified;
+  let playedFriendIds;
+  let playedFriendsData;
+  let similarGames;
+  let tmp2;
+  let viewId;
   guildId = guildId.guildId;
   ({ viewId, gameName, gameId, playedFriendIds, playedFriendsData, similarGames, isVerified } = guildId);
-  const obj2 = {
+  const tmp = AnalyticsUtilsDefault;
+  const track = tmp.track;
+  const GAME_PROFILE_CLOSE = constants.GAME_PROFILE_CLOSE;
+  const obj = {
     view_id: viewId,
     game_name: gameName,
     application_id: gameId,
@@ -187,51 +207,65 @@ export const trackGameProfileClose = function trackGameProfileClose(guildId) {
     played_friends_data: playedFriendsData,
     similar_games: similarGames,
     request_id: ContentInventoryStore.getFeedRequestId(ContentInventoryFeedKey.GLOBAL_FEED),
-    official_guild_id: null,
-    guild_id: null,
+    official_guild_id: tmp2,
+    guild_id: guildId,
   };
-  let tmp;
+  tmp2 = undefined;
   if (isVerified) {
-    tmp = guildId;
+    tmp2 = guildId;
   }
-  obj2.official_guild_id = tmp;
-  obj2.guild_id = guildId;
-  AnalyticsUtilsDefault.track(constants.GAME_PROFILE_CLOSE, obj2);
+  track(GAME_PROFILE_CLOSE, obj);
 };
 export const trackGameProfileAction = function trackGameProfileAction(guildId) {
+  let action;
+  let gameId;
+  let gameName;
+  let isVerified;
+  let recipientUserId;
+  let similarGameId;
+  let source;
+  let tmp2;
+  let viewId;
   guildId = guildId.guildId;
   ({ gameName, gameId, action, recipientUserId, similarGameId, viewId, isVerified, source } = guildId);
-  const obj2 = {
+  const obj = {
     game_name: gameName,
     application_id: gameId,
     action,
     recipient_user_id: recipientUserId,
     similar_game_id: similarGameId,
     view_id: viewId,
-    official_guild_id: null,
-    guild_id: null,
-    source: null,
+    official_guild_id: tmp2,
+    guild_id: guildId,
+    source,
   };
-  let tmp;
+  tmp2 = undefined;
+  const track = AnalyticsUtilsDefault.track;
+  const GAME_PROFILE_ACTION = constants.GAME_PROFILE_ACTION;
+  AnalyticsUtilsDefault;
   if (isVerified) {
-    tmp = guildId;
+    tmp2 = guildId;
   }
-  obj2.official_guild_id = tmp;
-  obj2.guild_id = guildId;
-  obj2.source = source;
-  AnalyticsUtilsDefault.track(constants.GAME_PROFILE_ACTION, obj2);
+  track(GAME_PROFILE_ACTION, obj);
 };
 export const trackGameProfileEmbedAction = function trackGameProfileEmbedAction(arg0) {
+  let action;
+  let gameId;
+  let gameName;
   ({ gameName, gameId, action } = arg0);
-  AnalyticsUtilsDefault.track(constants.GAME_PROFILE_EMBED_ACTION, {
-    game_name: gameName,
-    application_id: gameId,
-    action,
-  });
+  const obj = AnalyticsUtilsDefault;
+  obj.track(constants.GAME_PROFILE_EMBED_ACTION, { game_name: gameName, application_id: gameId, action });
 };
 export const trackGameProfileFeedback = function trackGameProfileFeedback(arg0) {
+  let applicationId;
+  let feedback;
+  let submitted;
+  let suggestedGameApplicationId;
+  let suggestedGameName;
+  let viewId;
   ({ viewId, applicationId, suggestedGameName, suggestedGameApplicationId, feedback, submitted } = arg0);
-  return AnalyticsUtilsDefault.track(constants.GAME_PROFILE_FEEDBACK, {
+  const obj = AnalyticsUtilsDefault;
+  return obj.track(constants.GAME_PROFILE_FEEDBACK, {
     view_id,
     application_id,
     suggested_game_name,

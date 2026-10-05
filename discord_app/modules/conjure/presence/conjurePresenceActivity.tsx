@@ -20,12 +20,5 @@ export const isConjurePresenceActivity = function isConjurePresenceActivity(acti
   if (activity != null) {
     type = activity.type;
   }
-  let tmp2 = type === ActivityTypes.PLAYING;
-  if (tmp2) {
-    tmp2 = activity.name === Conjuring;
-  }
-  if (tmp2) {
-    tmp2 = null == activity.application_id;
-  }
-  return tmp2;
+  return type === ActivityTypes.PLAYING && activity.name === Conjuring && null == activity.application_id;
 };

@@ -1,27 +1,35 @@
 // discord_app/design/components/Button/native/BaseButton.native.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import Constants from "../../../../Constants.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ButtonHooks from "ButtonHooks.native.tsx";
+import styleConstants from "../../Styles/native/styleConstants.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import ReactCompilerGating_mod from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import createStyles from "../../Styles/native/createStyles.tsx";
 import ReanimatedRexport_mod from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let Pressable;
+let TouchableOpacity;
 let closure_2 = ["style"];
 let closure_3 = ["style"];
-get_ActivityIndicator = fn(17);
-({ Pressable, TouchableOpacity } = get_ActivityIndicator);
-const ThemeTypes = fn(1085).ThemeTypes;
-const IOS_POINTER_STYLE = fn(5611).IOS_POINTER_STYLE;
-const jsx = fn(21).jsx;
-let ReactCompilerGating = fn(558);
+({ Pressable, TouchableOpacity } = react_native);
+const ThemeTypes = Constants.ThemeTypes;
+const IOS_POINTER_STYLE = styleConstants.IOS_POINTER_STYLE;
+const jsx = Fragment.jsx;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let DARK;
       native;
       if ("primary-overlay" === arg0) {
-        let DARK = ThemeTypes.LIGHT;
+        DARK = ThemeTypes.LIGHT;
       } else if ("secondary-overlay" === arg0) {
         if (tmp2 === ThemeTypes.LIGHT) {
           DARK = ThemeTypes.DARK;
@@ -30,9 +38,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       return DARK;
     }
   : (arg0) => {
+      let DARK;
       native;
       if ("primary-overlay" === arg0) {
-        let DARK = ThemeTypes.LIGHT;
+        DARK = ThemeTypes.LIGHT;
       } else if ("secondary-overlay" === arg0) {
         if (tmp2 === ThemeTypes.LIGHT) {
           DARK = ThemeTypes.DARK;
@@ -40,27 +49,26 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return DARK;
     };
-const createStyles = fn(4890);
 let closure_10 = createStyles.createStyles({ disabled: { opacity: 0.5 } });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1, onLayout, onPressIn, onPressOut) => {
-      const cResult = c.c(10);
-      const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(
-        arg0,
-        arg1,
-        onLayout,
-        onPressIn,
-        onPressOut,
-      );
+      let obj4;
+      let tmp3;
+      let tmp4;
+      let tmp8;
+      const obj = react2;
+      const cResult = obj.c(10);
+      const obj2 = ButtonHooks;
+      const buttonPressAnimationProps = obj2.useButtonPressAnimationProps(arg0, arg1, onLayout, onPressIn, onPressOut);
       if (cResult[0] !== buttonPressAnimationProps) {
         const style = buttonPressAnimationProps.style;
         const tmp7 = _objectWithoutProperties(buttonPressAnimationProps, closure_2);
         cResult[0] = buttonPressAnimationProps;
         cResult[1] = style;
         cResult[2] = tmp7;
-        let tmp4 = tmp7;
-        let tmp3 = style;
+        tmp4 = tmp7;
+        tmp3 = style;
       } else {
         tmp3 = cResult[1];
         tmp4 = cResult[2];
@@ -68,21 +76,25 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       if (null == arg0) {
         if (cResult[3] === onLayout) {
           if (cResult[4] === onPressIn) {
+            let tmp9;
+            if (cResult[5] === onPressOut) {
+              tmp9 = cResult[6];
+            }
+            tmp8 = tmp9;
           }
         }
-        const obj3 = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
-        const obj4 = { onLayout, onPressIn, onPressOut };
-        obj3.buttonAnimationProps = obj4;
+        const obj3 = { animatedScaleStyles: "Array", buttonAnimationProps: obj4 };
+        obj4 = { onLayout, onPressIn, onPressOut };
         cResult[3] = onLayout;
         cResult[4] = onPressIn;
         cResult[5] = onPressOut;
         cResult[6] = obj3;
+        tmp9 = obj3;
       } else {
         if (cResult[7] === tmp3) {
           if (cResult[8] === tmp4) {
-            let tmp8 = cResult[9];
+            tmp8 = cResult[9];
           }
-          return tmp8;
         }
         const obj5 = { animatedScaleStyles: tmp3, buttonAnimationProps: tmp4 };
         cResult[7] = tmp3;
@@ -90,37 +102,61 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = obj5;
         tmp8 = obj5;
       }
+      return tmp8;
     }
   : (arg0, arg1, onLayout, onPressIn, onPressOut) => {
-      const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(
-        arg0,
-        arg1,
-        onLayout,
-        onPressIn,
-        onPressOut,
-      );
+      let obj3;
+      let obj4;
+      const obj = ButtonHooks;
+      const buttonPressAnimationProps = obj.useButtonPressAnimationProps(arg0, arg1, onLayout, onPressIn, onPressOut);
+      const style = buttonPressAnimationProps.style;
       if (null == arg0) {
-        const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
-        const obj3 = { onLayout, onPressIn, onPressOut };
-        obj2.buttonAnimationProps = obj3;
-        let obj4 = obj2;
+        const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: obj3 };
+        obj4 = obj2;
+        obj3 = { onLayout, onPressIn, onPressOut };
       } else {
-        obj4 = { animatedScaleStyles: buttonPressAnimationProps.style, buttonAnimationProps: tmp2 };
+        obj4 = { animatedScaleStyles: style, buttonAnimationProps: tmp2 };
       }
       return obj4;
     };
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_12 = ReanimatedRexport.createAnimatedComponent(Pressable);
-let ReanimatedRexport = ReanimatedRexport_mod;
+ReanimatedRexport = ReanimatedRexport_mod;
 let closure_13 = ReanimatedRexport.createAnimatedComponent(TouchableOpacity);
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/Button/native/BaseButton.native.tsx");
-
-export const BaseButton = noop.forwardRef(
+const forwardRef = react.forwardRef;
+ReactCompilerGating = ReactCompilerGating_mod;
+const forwardRefResult = forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0, ref) => {
-        const cResult = c.c(51);
+        let accessibilityActions;
+        let accessibilityElementsHidden;
+        let accessibilityHint;
+        let accessibilityLabel;
+        let accessibilityRole;
+        let accessibilityState;
+        let accessibilityValue;
+        let accessible;
+        let animatedScaleStyles;
+        let buttonAnimationProps;
+        let children;
+        let disabled;
+        let hitSlop;
+        let importantForAccessibility;
+        let loading;
+        let onAccessibilityAction;
+        let onLayout;
+        let onLongPress;
+        let onPress;
+        let onPressDisabled;
+        let onPressIn;
+        let onPressOut;
+        let pointerEvents;
+        let pressed;
+        let scaleAmountInPx;
+        let style;
+        let variant;
+        const obj = react2;
+        const cResult = obj.c(51);
         ({
           children,
           style,
@@ -154,13 +190,13 @@ export const BaseButton = noop.forwardRef(
         }
         let disabled2 = undefined !== disabled && disabled;
         let tmp6 = disabled2;
+        const tmp5 = closure_10();
         if (disabled2) {
           tmp6 = null == onPressDisabled;
         }
         if (disabled2) {
           onPress = onPressDisabled;
         }
-        const tmp5 = closure_10();
         ({ animatedScaleStyles, buttonAnimationProps } = closure_11(
           pressed,
           scaleAmountInPx,
@@ -168,23 +204,27 @@ export const BaseButton = noop.forwardRef(
           onPressIn,
           onPressOut,
         ));
+        closure_11(pressed, scaleAmountInPx, onLayout, onPressIn, onPressOut);
         if (cResult[0] === accessibilityState) {
           if (cResult[1] === tmp6) {
-            if (cResult[2] === tmp4) {
-              let tmp9 = cResult[3];
+            let tmp9;
+            if (cResult[2] === (undefined !== loading && loading)) {
+              tmp9 = cResult[3];
             }
             const tmp12 = closure_9(str);
             if (cResult[4] === children) {
+              let tmp13;
               if (cResult[5] === tmp12) {
-                let tmp13 = cResult[6];
+                tmp13 = cResult[6];
               }
               if (disabled2) {
                 disabled2 = tmp5.disabled;
               }
               if (cResult[7] === animatedScaleStyles) {
                 if (cResult[8] === style) {
+                  let tmp16;
                   if (cResult[9] === disabled2) {
-                    let tmp16 = cResult[10];
+                    tmp16 = cResult[10];
                   }
                   if ("none" !== accessibilityRole) {
                     if (accessibilityRole == null) {
@@ -208,8 +248,9 @@ export const BaseButton = noop.forwardRef(
                                                   if (cResult[26] === pointerEvents) {
                                                     if (cResult[27] === ref) {
                                                       if (cResult[28] === accessibilityRole) {
+                                                        let tmp31;
                                                         if (cResult[29] === tmp13) {
-                                                          let tmp31 = cResult[30];
+                                                          tmp31 = cResult[30];
                                                         }
                                                         return tmp31;
                                                       }
@@ -230,27 +271,30 @@ export const BaseButton = noop.forwardRef(
                         }
                       }
                     }
-                    const obj2 = {};
                     const merged = Object.assign(buttonAnimationProps);
-                    obj2.ref = ref;
-                    obj2.accessible = accessible;
-                    obj2.accessibilityRole = accessibilityRole;
-                    obj2.accessibilityLabel = accessibilityLabel;
-                    obj2.accessibilityHint = accessibilityHint;
-                    obj2.accessibilityValue = accessibilityValue;
-                    obj2.accessibilityState = tmp9;
-                    obj2.accessibilityActions = accessibilityActions;
-                    obj2.onAccessibilityAction = onAccessibilityAction;
-                    obj2.accessibilityElementsHidden = accessibilityElementsHidden;
-                    obj2.importantForAccessibility = importantForAccessibility;
-                    obj2.pointerEvents = pointerEvents;
-                    obj2.style = tmp16;
-                    obj2.onPress = onPress;
-                    obj2.onLongPress = onLongPress;
-                    obj2.disabled = tmp6;
-                    obj2.hitSlop = hitSlop;
-                    obj2.children = tmp13;
-                    const tmp37 = <closure_12 />;
+                    const tmp37 = (
+                      <closure_12
+                        ref={ref}
+                        accessible={accessible}
+                        accessibilityRole={accessibilityRole}
+                        accessibilityLabel={accessibilityLabel}
+                        accessibilityHint={accessibilityHint}
+                        accessibilityValue={accessibilityValue}
+                        accessibilityState={tmp9}
+                        accessibilityActions={accessibilityActions}
+                        onAccessibilityAction={onAccessibilityAction}
+                        accessibilityElementsHidden={accessibilityElementsHidden}
+                        importantForAccessibility={importantForAccessibility}
+                        pointerEvents={pointerEvents}
+                        style={tmp16}
+                        onPress={onPress}
+                        onLongPress={onLongPress}
+                        disabled={tmp6}
+                        hitSlop={hitSlop}
+                      >
+                        {tmp13}
+                      </closure_12>
+                    );
                     cResult[11] = accessibilityActions;
                     cResult[12] = accessibilityElementsHidden;
                     cResult[13] = accessibilityHint;
@@ -275,13 +319,16 @@ export const BaseButton = noop.forwardRef(
                   } else {
                     if (cResult[31] === accessibilityElementsHidden) {
                       if (cResult[32] === accessibilityHint) {
+                        let tmp19;
+                        let tmp23;
+                        let tmp22;
                         if (cResult[33] === accessibilityLabel) {
-                          let tmp19 = cResult[34];
+                          tmp19 = cResult[34];
                         }
                         let isAndroidResult = accessible;
                         if (accessible == null) {
-                          isAndroidResult = PlatformUtils.isAndroid();
                           const tmpResult = PlatformUtils;
+                          isAndroidResult = tmpResult.isAndroid();
                         }
                         if (cResult[35] !== buttonAnimationProps) {
                           function ce(arg0) {
@@ -299,8 +346,8 @@ export const BaseButton = noop.forwardRef(
                           cResult[35] = buttonAnimationProps;
                           cResult[36] = ce;
                           cResult[37] = re;
-                          let tmp23 = re;
-                          let tmp22 = ce;
+                          tmp23 = re;
+                          tmp22 = ce;
                         } else {
                           tmp22 = cResult[36];
                           tmp23 = cResult[37];
@@ -315,9 +362,10 @@ export const BaseButton = noop.forwardRef(
                                       if (cResult[45] === ref) {
                                         if (cResult[46] === tmp22) {
                                           if (cResult[47] === tmp23) {
-                                            if (cResult[48] === tmp21) {
+                                            if (cResult[48] === (!isAndroidResult && undefined)) {
+                                              let tmp24;
                                               if (cResult[49] === tmp13) {
-                                                let tmp24 = cResult[50];
+                                                tmp24 = cResult[50];
                                               }
                                               return tmp24;
                                             }
@@ -331,22 +379,25 @@ export const BaseButton = noop.forwardRef(
                             }
                           }
                         }
-                        const obj3 = {};
                         const merged1 = Object.assign(buttonAnimationProps);
-                        obj3.ref = ref;
-                        obj3.accessible = !isAndroidResult;
-                        obj3.accessibilityRole = "none";
-                        obj3.accessibilityLabel = tmp19;
-                        obj3.accessibilityElementsHidden = accessibilityElementsHidden;
-                        obj3.activeOpacity = 1;
-                        obj3.importantForAccessibility = importantForAccessibility;
-                        obj3.style = tmp16;
-                        obj3.onPress = onPress;
-                        obj3.onPressIn = tmp22;
-                        obj3.onPressOut = tmp23;
-                        obj3.hitSlop = hitSlop;
-                        obj3.children = tmp13;
-                        const tmp30 = <closure_13 />;
+                        const tmp30 = (
+                          <closure_13
+                            ref={ref}
+                            accessible={!isAndroidResult && undefined}
+                            accessibilityRole="none"
+                            accessibilityLabel={tmp19}
+                            accessibilityElementsHidden={accessibilityElementsHidden}
+                            activeOpacity={1}
+                            importantForAccessibility={importantForAccessibility}
+                            style={tmp16}
+                            onPress={onPress}
+                            onPressIn={tmp22}
+                            onPressOut={tmp23}
+                            hitSlop={hitSlop}
+                          >
+                            {tmp13}
+                          </closure_13>
+                        );
                         cResult[38] = accessibilityElementsHidden;
                         cResult[39] = buttonAnimationProps;
                         cResult[40] = tmp16;
@@ -357,7 +408,7 @@ export const BaseButton = noop.forwardRef(
                         cResult[45] = ref;
                         cResult[46] = tmp22;
                         cResult[47] = tmp23;
-                        cResult[48] = !isAndroidResult;
+                        cResult[48] = !isAndroidResult && undefined;
                         cResult[49] = tmp13;
                         cResult[50] = tmp30;
                         tmp24 = tmp30;
@@ -386,7 +437,6 @@ export const BaseButton = noop.forwardRef(
             }
             let tmp14 = children;
             if (null != tmp12) {
-              const obj4 = { theme: tmp12, children };
               tmp14 = jsx(native.ThemeContextProvider, { theme: tmp12, children });
             }
             cResult[4] = children;
@@ -395,27 +445,47 @@ export const BaseButton = noop.forwardRef(
             tmp13 = tmp14;
           }
         }
-        const obj5 = {};
+        const obj5 = { disabled: tmp6, busy: undefined !== loading && loading };
         const merged2 = Object.assign(accessibilityState);
-        obj5.disabled = tmp6;
-        obj5.busy = undefined !== loading && loading;
         cResult[0] = accessibilityState;
         cResult[1] = tmp6;
         cResult[2] = undefined !== loading && loading;
         cResult[3] = obj5;
         tmp9 = obj5;
-        const tmp8 = closure_11(pressed, scaleAmountInPx, onLayout, onPressIn, onPressOut);
       }
-    : (disabled, ref) => {
-        ({ children, variant } = disabled);
+    : (style, ref) => {
+        let accessibilityActions;
+        let accessibilityElementsHidden;
+        let accessibilityHint;
+        let accessibilityLabel;
+        let accessibilityRole;
+        let accessibilityState;
+        let accessibilityValue;
+        let accessible;
+        let children;
+        let hitSlop;
+        let importantForAccessibility;
+        let onAccessibilityAction;
+        let onLayout;
+        let onLongPress;
+        let onPress;
+        let onPressDisabled;
+        let onPressIn;
+        let onPressOut;
+        let pointerEvents;
+        let pressed;
+        let scaleAmountInPx;
+        let variant;
+        ({ children, variant } = style);
+        style = style.style;
         if (variant === undefined) {
           variant = "primary";
         }
-        let flag = disabled.disabled;
+        let flag = style.disabled;
         if (flag === undefined) {
           flag = false;
         }
-        let flag2 = disabled.loading;
+        let flag2 = style.loading;
         if (flag2 === undefined) {
           flag2 = false;
         }
@@ -431,67 +501,69 @@ export const BaseButton = noop.forwardRef(
           accessibilityLabel,
           accessibilityHint,
           accessibilityState,
-        } = disabled);
-        ({ accessibilityElementsHidden, importantForAccessibility, hitSlop, scaleAmountInPx } = disabled);
-        disabled = undefined;
+        } = style);
+        ({ accessibilityElementsHidden, importantForAccessibility, hitSlop, scaleAmountInPx } = style);
+        closure_2 = undefined;
         let buttonAnimationProps;
-        ({ onLongPress, accessibilityValue, accessibilityActions, onAccessibilityAction, pointerEvents } = disabled);
+        ({ onLongPress, accessibilityValue, accessibilityActions, onAccessibilityAction, pointerEvents } = style);
         let tmp2 = flag;
+        const tmp = closure_10();
         if (flag) {
           tmp2 = null == onPressDisabled;
         }
-        disabled = tmp2;
+        closure_2 = tmp2;
         if (flag) {
           onPress = onPressDisabled;
         }
         const tmp4 = closure_11(pressed, scaleAmountInPx, onLayout, onPressIn, onPressOut);
         buttonAnimationProps = tmp4.buttonAnimationProps;
         const items = [accessibilityState, tmp2, flag2];
-        const memo = noop.useMemo(() => {
-          const obj = {};
+        const animatedScaleStyles = tmp4.animatedScaleStyles;
+        const memo = react.useMemo(() => {
+          const obj = { disabled, busy: flag2 };
           const merged = Object.assign(accessibilityState);
-          obj.disabled = disabled;
-          obj.busy = flag2;
           return obj;
         }, items);
         const tmp6 = closure_9(variant);
         let tmp7 = children;
         if (null != tmp6) {
-          let obj = { theme: tmp6, children };
           tmp7 = jsx(native.ThemeContextProvider, { theme: tmp6, children });
         }
-        const items1 = [disabled.style, , ,];
+        const items1 = [style, , ,];
         if (flag) {
           flag = tmp.disabled;
         }
         items1[1] = flag;
-        items1[2] = tmp4.animatedScaleStyles;
+        items1[2] = animatedScaleStyles;
         items1[3] = IOS_POINTER_STYLE;
         if ("none" !== accessibilityRole) {
-          const obj2 = {};
           let merged = Object.assign(buttonAnimationProps);
-          obj2.ref = ref;
-          obj2.accessible = accessible;
           if (accessibilityRole == null) {
             accessibilityRole = "button";
           }
-          obj2.accessibilityRole = accessibilityRole;
-          obj2.accessibilityLabel = accessibilityLabel;
-          obj2.accessibilityHint = accessibilityHint;
-          obj2.accessibilityValue = accessibilityValue;
-          obj2.accessibilityState = memo;
-          obj2.accessibilityActions = accessibilityActions;
-          obj2.onAccessibilityAction = onAccessibilityAction;
-          obj2.accessibilityElementsHidden = accessibilityElementsHidden;
-          obj2.importantForAccessibility = importantForAccessibility;
-          obj2.pointerEvents = pointerEvents;
-          obj2.style = items1;
-          obj2.onPress = onPress;
-          obj2.onLongPress = onLongPress;
-          obj2.disabled = tmp2;
-          obj2.hitSlop = hitSlop;
-          obj2.children = tmp7;
-          return <closure_12 />;
+          return (
+            <closure_12
+              ref={ref}
+              accessible={accessible}
+              accessibilityRole={accessibilityRole}
+              accessibilityLabel={accessibilityLabel}
+              accessibilityHint={accessibilityHint}
+              accessibilityValue={accessibilityValue}
+              accessibilityState={memo}
+              accessibilityActions={accessibilityActions}
+              onAccessibilityAction={onAccessibilityAction}
+              accessibilityElementsHidden={accessibilityElementsHidden}
+              importantForAccessibility={importantForAccessibility}
+              pointerEvents={pointerEvents}
+              style={items1}
+              onPress={onPress}
+              onLongPress={onLongPress}
+              disabled={tmp2}
+              hitSlop={hitSlop}
+            >
+              {tmp7}
+            </closure_12>
+          );
         } else {
           let str2 = "";
           if (!accessibilityElementsHidden) {
@@ -499,37 +571,43 @@ export const BaseButton = noop.forwardRef(
             const found = items2.filter(GlobalUtils.isNotNullish);
             str2 = found.join(", ");
           }
-          const obj3 = {};
           const merged1 = Object.assign(buttonAnimationProps);
-          obj3.ref = ref;
           let isAndroidResult = accessible;
           if (accessible == null) {
-            isAndroidResult = PlatformUtils.isAndroid();
+            const obj4 = PlatformUtils;
+            isAndroidResult = obj4.isAndroid();
           }
-          obj3.accessible = !isAndroidResult;
-          obj3.accessibilityRole = "none";
-          obj3.accessibilityLabel = str2;
-          obj3.accessibilityElementsHidden = accessibilityElementsHidden;
-          obj3.activeOpacity = 1;
-          obj3.importantForAccessibility = importantForAccessibility;
-          obj3.style = items1;
-          obj3.onPress = onPress;
-          obj3.onPressIn = function onPressIn(arg0) {
-            const onPressIn = buttonAnimationProps.onPressIn;
-            if (onPressIn != null) {
-              onPressIn(arg0);
-            }
-          };
-          obj3.onPressOut = function onPressOut(arg0) {
-            const onPressOut = buttonAnimationProps.onPressOut;
-            if (onPressOut != null) {
-              onPressOut(arg0);
-            }
-          };
-          obj3.hitSlop = hitSlop;
-          obj3.children = tmp7;
-          return <closure_13 />;
+          return (
+            <closure_13
+              ref={ref}
+              accessible={!isAndroidResult && undefined}
+              accessibilityRole="none"
+              accessibilityLabel={str2}
+              accessibilityElementsHidden={accessibilityElementsHidden}
+              activeOpacity={1}
+              importantForAccessibility={importantForAccessibility}
+              style={items1}
+              onPress={onPress}
+              onPressIn={function onPressIn(arg0) {
+                const onPressIn = buttonAnimationProps.onPressIn;
+                if (onPressIn != null) {
+                  onPressIn(arg0);
+                }
+              }}
+              onPressOut={function onPressOut(arg0) {
+                const onPressOut = buttonAnimationProps.onPressOut;
+                if (onPressOut != null) {
+                  onPressOut(arg0);
+                }
+              }}
+              hitSlop={hitSlop}
+            >
+              {tmp7}
+            </closure_13>
+          );
         }
-        tmp = closure_10();
       },
 );
+const result = size.fileFinishedImporting("design/components/Button/native/BaseButton.native.tsx");
+
+export const BaseButton = forwardRefResult;

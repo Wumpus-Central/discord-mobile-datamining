@@ -1,24 +1,33 @@
 // discord_app/modules/activities/panel/native/LeaveActivityButton.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import util from "../../../../intl/index.native.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import intl3 from "../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import ActivityPanelConstants from "../ActivityPanelConstants.tsx";
 import EmbeddedActivitiesNativeManagerDefault from "../../native/EmbeddedActivitiesNativeManager.tsx";
-import _modDef9577 from "../../../../../_runtime/metro/09577__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import AssetRegistryDefault from "../../../../../_runtime/09577_AssetRegistry.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ActivityPanelModes = fn(8705).ActivityPanelModes;
-const jsx = fn(21).jsx;
-let ReactCompilerGating = fn(558);
+let selfEmbeddedActivity;
+
+const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
+const jsx = Fragment.jsx;
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (onPress) => {
-      const cResult = c.c(4);
+      let tmp4;
+      let tmp5;
+      let tmp8;
+      const obj = react2;
+      const cResult = obj.c(4);
       onPress = onPress.onPress;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = util.intl;
-        const stringResult = intl.string(util.t["Hi1/aQ"]);
-        const intl2 = util.intl;
-        const stringResult1 = intl2.string(util.t.k0Aph0);
+        const intl = intl3.intl;
+        const stringResult = intl.string(intl3.t["Hi1/aQ"]);
+        const intl2 = intl3.intl;
+        const stringResult1 = intl2.string(intl3.t.k0Aph0);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp4 = stringResult;
@@ -27,100 +36,88 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp4, tmp5] = cResult;
       }
       if (cResult[2] !== onPress) {
-        const obj2 = {
-          onPress,
-          icon: _modDef9577,
-          text: tmp4,
-          accessibilityLabel: tmp5,
-          variant: "destructive",
-          size: "sm",
-          maxFontSizeMultiplier: 1,
-        };
-        const tmp11 = jsx(components_Button_Button.Button, {
-          onPress,
-          icon: _modDef9577,
-          text: tmp4,
-          accessibilityLabel: tmp5,
-          variant: "destructive",
-          size: "sm",
-          maxFontSizeMultiplier: 1,
-        });
+        const Button = components_Button_Button.Button;
+        const tmp11 = (
+          <Button
+            onPress={onPress}
+            icon={AssetRegistryDefault}
+            text={tmp4}
+            accessibilityLabel={tmp5}
+            variant="destructive"
+            size="sm"
+            maxFontSizeMultiplier={1}
+          />
+        );
         cResult[2] = onPress;
         cResult[3] = tmp11;
-        let tmp8 = tmp11;
+        tmp8 = tmp11;
       } else {
         tmp8 = cResult[3];
       }
       return tmp8;
     }
   : (onPress) => {
-      const obj = {
-        onPress: onPress.onPress,
-        icon: _modDef9577,
-        text: null,
-        accessibilityLabel: null,
-        variant: "destructive",
-        size: "sm",
-        maxFontSizeMultiplier: 1,
-      };
-      const intl = util.intl;
-      obj.text = intl.string(util.t["Hi1/aQ"]);
-      const intl2 = util.intl;
-      obj.accessibilityLabel = intl2.string(util.t.k0Aph0);
-      return jsx(components_Button_Button.Button, {
-        onPress: onPress.onPress,
-        icon: _modDef9577,
-        text: null,
-        accessibilityLabel: null,
-        variant: "destructive",
-        size: "sm",
-        maxFontSizeMultiplier: 1,
-      });
+      const Button = components_Button_Button.Button;
+      const intl = intl3.intl;
+      const intl2 = intl3.intl;
+      return (
+        <Button
+          onPress={onPress.onPress}
+          icon={AssetRegistryDefault}
+          text={intl.string(intl3.t["Hi1/aQ"])}
+          accessibilityLabel={intl2.string(intl3.t.k0Aph0)}
+          variant="destructive"
+          size="sm"
+          maxFontSizeMultiplier={1}
+        />
+      );
     };
 let closure_5 = tmp2;
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/activities/panel/native/LeaveActivityButton.tsx");
-
-export default noop.memo(
+ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (selfEmbeddedActivity) => {
-        const cResult = selfEmbeddedActivity(576).c(4);
+        let obj = selfEmbeddedActivity(576);
+        const cResult = obj.c(4);
         selfEmbeddedActivity = selfEmbeddedActivity.selfEmbeddedActivity;
         const setMode = selfEmbeddedActivity.setMode;
         let applicationId;
+        const first = cResult[0];
         if (selfEmbeddedActivity != null) {
           applicationId = selfEmbeddedActivity.applicationId;
         }
-        if (cResult[0] === applicationId) {
+        if (first === applicationId) {
           let _location;
+          const tmp4 = cResult[1];
           if (selfEmbeddedActivity != null) {
             _location = selfEmbeddedActivity.location;
           }
-          if (cResult[1] === _location) {
+          if (tmp4 === _location) {
+            let tmp6;
             if (cResult[2] === setMode) {
-              let tmp4 = cResult[3];
+              tmp6 = cResult[3];
             }
-            return tmp4;
+            return tmp6;
           }
         }
-        const tmp5 = (
+        const tmp7 = (
           <closure_5
             onPress={function onPress() {
-              setMode(ActivityPanelModes.DISCONNECTED);
+              const tmp = setMode(ActivityPanelModes.DISCONNECTED);
               const timerId = setTimeout(() => {
+                let applicationId;
                 let _location;
+                const leaveActivity = setMode(dependencyMap[8]).leaveActivity;
+                setMode(dependencyMap[8]);
                 if (selfEmbeddedActivity != null) {
                   _location = selfEmbeddedActivity.location;
                 }
-                const obj2 = { location: _location, applicationId: null };
-                let applicationId;
+                const obj = { location: _location, applicationId };
+                applicationId = undefined;
                 if (selfEmbeddedActivity != null) {
                   applicationId = selfEmbeddedActivity.applicationId;
                 }
-                obj2.applicationId = applicationId;
-                setMode(dependencyMap[8]).leaveActivity(obj2);
-                const obj = setMode(dependencyMap[8]);
+                leaveActivity(obj);
               }, 400);
             }}
           />
@@ -136,31 +133,36 @@ export default noop.memo(
         }
         cResult[1] = _location1;
         cResult[2] = setMode;
-        cResult[3] = tmp5;
-        tmp4 = tmp5;
+        cResult[3] = tmp7;
+        tmp6 = tmp7;
       }
     : (arg0) => {
         ({ selfEmbeddedActivity: require, setMode: importDefault } = arg0);
         return (
           <closure_5
             onPress={function onPress() {
-              importDefault(ActivityPanelModes.DISCONNECTED);
+              const tmp = importDefault(ActivityPanelModes.DISCONNECTED);
               const timerId = setTimeout(() => {
+                let applicationId;
                 let _location;
+                const leaveActivity = EmbeddedActivitiesNativeManagerDefault.leaveActivity;
+                EmbeddedActivitiesNativeManagerDefault;
                 if (closure_1_0 != null) {
                   _location = closure_1_0.location;
                 }
-                const obj2 = { location: _location, applicationId: null };
-                let applicationId;
+                const obj = { location: _location, applicationId };
+                applicationId = undefined;
                 if (closure_1_0 != null) {
                   applicationId = closure_1_0.applicationId;
                 }
-                obj2.applicationId = applicationId;
-                EmbeddedActivitiesNativeManagerDefault.leaveActivity(obj2);
+                leaveActivity(obj);
               }, 400);
             }}
           />
         );
       },
 );
+const result = size.fileFinishedImporting("modules/activities/panel/native/LeaveActivityButton.tsx");
+
+export default memoResult;
 export const BaseLeaveActivityButton = tmp2;

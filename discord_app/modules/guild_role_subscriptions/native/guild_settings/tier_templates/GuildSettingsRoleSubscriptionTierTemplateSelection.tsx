@@ -1,92 +1,118 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildSettingsRoleSubscriptionTierTemplateSelection.tsx
-import c from "../../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import AppAnalyticsUtils from "../../../../app_analytics/AppAnalyticsUtils.tsx";
 import NavigatorHeader from "../../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import GroupListingsFetchContext from "../../../GroupListingsFetchContext.tsx";
+import RoleTierEditStore from "../../RoleTierEditStore.tsx";
 import GuildRoleSubscriptionsActionCreatorExtrasAll from "../../../GuildRoleSubscriptionsActionCreatorExtras.native.tsx";
 import GuildRoleSubscriptionTierTemplatePreviewCardDefault from "GuildRoleSubscriptionTierTemplatePreviewCard.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../../_runtime/00017_react-native.js";
 import GuildRoleSubscriptionTierTemplatesStore from "../../../tier_templates/GuildRoleSubscriptionTierTemplatesStore.tsx";
+import Constants from "../../../../../Constants.tsx";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
+const require = globalThis.__r;
+let importDefault, navigation;
+
+let c9;
+let closure_12;
+let closure_14;
+let closure_15;
+let map1;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
 ({
   ActivityIndicator: metroRequire,
-  TouchableOpacity: closure_7,
-  View: closure_8,
-  FlatList: closure_9,
-} = get_ActivityIndicator);
-const usePriceTiers = fn(17926).usePriceTiers;
-const Constants = fn(1085);
+  TouchableOpacity: metroImportDefault,
+  View: metroImportAll,
+  FlatList: c9,
+} = react_native);
+const usePriceTiers = RoleTierEditStore.usePriceTiers;
 ({ AnalyticEvents: closure_12, GuildSettingsSections: map1 } = Constants);
-const jsxProd = fn(21);
-({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
+({ jsx: closure_14, jsxs: closure_15 } = Fragment);
 let c16 = 16;
-const createStyles = fn(4890);
-let obj2 = {
+let createStyles = createStyles_mod;
+let obj = {
   container: { marginTop: 16 },
-  title: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
+  title: obj2,
   text: { marginLeft: 16, marginRight: 16 },
-  activityIndicator: null,
-  editIcon: null,
-  startFromScratch: null,
+  activityIndicator: obj3,
+  editIcon: obj4,
+  startFromScratch: { display: "flex", flexDirection: "row", alignItems: "center", marginRight: 12 },
 };
-let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-obj2.activityIndicator = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let obj4 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj2.editIcon = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, marginRight: 4 };
-obj2.startFromScratch = { display: "flex", flexDirection: "row", alignItems: "center", marginRight: 12 };
-let closure_17 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
+obj2 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createStyles = createStyles.createStyles;
+obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+obj4 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, marginRight: 4 };
+let closure_17 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
   ? (groupListingId) => {
-      let Text = guildId;
-      let tmp = dependencyMap;
-      const cResult = guildId(576).c(14);
+      let error;
+      let guildId;
+      let items;
+      let templates;
+      let tmp6;
+      let obj = guildId(576);
+      const cResult = obj.c(14);
       ({ templates, error, guildId } = groupListingId);
       groupListingId = groupListingId.groupListingId;
-      let color = closure_17();
+      const loading = groupListingId.loading;
+      const tmp4 = closure_17();
       const tiers = usePriceTiers(guildId).tiers;
-      if (groupListingId.loading) {
-        if (cResult[0] !== color.activityIndicator.color) {
-          const obj2 = { color: color.activityIndicator.color };
-          const tmp16 = closure_14(closure_6, obj2);
-          color = color.activityIndicator.color;
-          cResult[0] = color;
-          cResult[1] = tmp16;
+      if (loading) {
+        let tmp15;
+        if (cResult[0] !== tmp4.activityIndicator.color) {
+          const obj2 = { color: tmp4.activityIndicator.color };
+          const tmp18 = closure_14(closure_6, obj2);
+          cResult[0] = tmp4.activityIndicator.color;
+          cResult[1] = tmp18;
+          tmp15 = tmp18;
+        } else {
+          tmp15 = cResult[1];
         }
+        tmp6 = tmp15;
       } else if (null != error) {
+        let tmp12;
         if (cResult[2] !== error.message) {
-          Text = Text(4886).Text;
-          const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
-          const items = ["Error: ", error.message];
-          obj3.children = items;
-          tmp = closure_15(Text, obj3);
-          error = error.message;
-          cResult[2] = error;
-          cResult[3] = tmp;
+          const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: items };
+          items = ["Error: ", error.message];
+          const tmp14 = closure_15(guildId(4886).Text, obj3);
+          cResult[2] = error.message;
+          cResult[3] = tmp14;
+          tmp12 = tmp14;
+        } else {
+          tmp12 = cResult[3];
         }
+        tmp6 = tmp12;
       } else {
-        let tmp4 = null;
+        tmp6 = null;
         if (null != templates) {
-          tmp4 = null;
+          tmp6 = null;
           if (0 !== templates.length) {
             const _Symbol = Symbol;
             if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
               const obj4 = { paddingLeft: v16, paddingRight: v16 };
               class I {
-                constructor(arg0) {
-                  return groupListingId.category;
+                constructor(category) {
+                  return category.category;
                 }
               }
               class T {
                 constructor() {
-                  obj = { style: null };
-                  size = { height: "100%", width: closure_1_16 };
-                  obj.style = size;
+                  const obj = { style: size };
+                  size = { height: "100%", width };
                   return closure_1_14(closure_1_8, obj);
                 }
               }
@@ -95,13 +121,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[6] = T;
             }
             const fn = function _(template) {
-              return state(GuildRoleSubscriptionTierTemplatePreviewCardDefault, {
-                template: template.item,
-                priceTiers: tiers,
-                guildId,
-                groupListingId,
-                editGroupId: guildId,
-              });
+              const obj = { template: template.item, priceTiers: tiers, guildId, groupListingId, editGroupId: guildId };
+              return authStore2(GuildRoleSubscriptionTierTemplatePreviewCardDefault, obj);
             };
             cResult[7] = groupListingId;
             cResult[8] = guildId;
@@ -109,21 +130,27 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[10] = fn;
           }
         }
-        return tmp4;
       }
-      let obj = guildId(576);
+      return tmp6;
     }
   : (groupListingId) => {
+      let error;
+      let guildId;
+      let items;
+      let obj4;
+      let templates;
+      let tmp3;
       ({ templates, error, guildId } = groupListingId);
       groupListingId = groupListingId.groupListingId;
+      const loading = groupListingId.loading;
+      const tmp = closure_17();
       const tiers = usePriceTiers(guildId).tiers;
-      if (groupListingId.loading) {
+      if (loading) {
         const obj2 = { color: tmp.activityIndicator.color };
-        let tmp3 = closure_14(closure_6, obj2);
+        tmp3 = closure_14(closure_6, obj2);
       } else if (null != error) {
-        const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
-        const items = ["Error: ", error.message];
-        obj3.children = items;
+        const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: items };
+        items = ["Error: ", error.message];
         tmp3 = closure_15(guildId(4886).Text, obj3);
       } else {
         tmp3 = null;
@@ -133,52 +160,56 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             let obj = {
               data: templates,
               horizontal: true,
-              contentContainerStyle: null,
-              keyExtractor: null,
-              ItemSeparatorComponent: null,
+              contentContainerStyle: obj4,
+              keyExtractor(category) {
+                return category.category;
+              },
+              ItemSeparatorComponent() {
+                const obj = { style: size };
+                size = { height: "100%", width };
+                return closure_1_14(closure_1_8, obj);
+              },
               decelerationRate: "fast",
-              snapToInterval: null,
-              renderItem: null,
+              snapToInterval: guildId(17978).CARD_WIDTH + v16,
+              renderItem(template) {
+                const obj = {
+                  template: template.item,
+                  priceTiers: tiers,
+                  guildId,
+                  groupListingId,
+                  editGroupId: guildId,
+                };
+                return authStore2(GuildRoleSubscriptionTierTemplatePreviewCardDefault, obj);
+              },
             };
-            const obj4 = { paddingLeft: v16, paddingRight: v16 };
-            obj.contentContainerStyle = obj4;
-            obj.keyExtractor = function keyExtractor(category) {
-              return category.category;
-            };
-            obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
-              const obj = { style: null };
-              const size = { height: "100%", width };
-              obj.style = size;
-              return closure_1_14(closure_1_8, obj);
-            };
-            obj.snapToInterval = guildId(17978).CARD_WIDTH + v16;
-            obj.renderItem = function renderItem(template) {
-              return state(GuildRoleSubscriptionTierTemplatePreviewCardDefault, {
-                template: template.item,
-                priceTiers: tiers,
-                guildId,
-                groupListingId,
-                editGroupId: guildId,
-              });
-            };
+            obj4 = { paddingLeft: v16, paddingRight: v16 };
             tmp3 = closure_14(closure_9, obj);
           }
         }
       }
       return tmp3;
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      const cResult = guildId(groupListingId[10]).c(62);
+      let closure_1;
+      let error;
+      let first;
+      let first2;
+      let groupListingId;
+      let loading;
+      let tmp7;
+      let tmp = guildId;
+      let obj = guildId(groupListingId[10]);
+      const cResult = obj.c(62);
       guildId = guildId.guildId;
       groupListingId = guildId.groupListingId;
-      let obj = guildId(groupListingId[10]);
       importDefault = closure_17();
+      const tmp4 = closure_17();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [GuildRoleSubscriptionTierTemplatesStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -188,16 +219,16 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = guildId;
         cResult[2] = fn;
-        let tmp7 = fn;
+        tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
-      const tmp4 = closure_17();
-      const stateFromStores = guildId(groupListingId[13]).useStateFromStores(first, tmp7);
-      const tmpResult = guildId(groupListingId[13]);
-      const first1 = guildId(groupListingId[14]).useGroupListingsForGuild(guildId)[0];
-      const tmpResult4 = guildId(groupListingId[14]);
-      const groupListingsFetchContext = guildId(groupListingId[15]).useGroupListingsFetchContext();
+      const tmpResult = tmp(groupListingId[13]);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
+      const tmpResult4 = tmp(groupListingId[14]);
+      const first1 = tmpResult4.useGroupListingsForGuild(guildId)[0];
+      const tmpResult5 = tmp(groupListingId[15]);
+      const groupListingsFetchContext = tmpResult5.useGroupListingsFetchContext();
       if (groupListingId == null) {
         let id;
         if (first1 != null) {
@@ -205,70 +236,86 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         }
         groupListingId = id;
       }
-      const tmpResult5 = guildId(groupListingId[15]);
-      const tmp13 = first2(require("useRequest")(stateFromStores(groupListingId[17]).getTemplates), 2);
+      const tmp12 = require("useRequest");
+      const tmp13 = first2(tmp12(stateFromStores(groupListingId[17]).getTemplates), 2);
       first2 = tmp13[0];
       ({ loading, error } = tmp13[1]);
       const bottom = require("useSafeAreaInsets")().bottom;
-      const tmp12 = require("useRequest");
-      const navigation = guildId(groupListingId[19]).useNavigation();
+      const tmpResult6 = tmp(groupListingId[19]);
+      navigation = tmpResult6.useNavigation();
       if (cResult[3] === first2) {
         if (cResult[4] === guildId) {
+          let tmp16;
+          let tmp17;
+          let tmp20;
           if (cResult[5] === stateFromStores) {
-            let tmp16 = cResult[6];
-            let tmp17 = cResult[7];
+            tmp16 = cResult[6];
+            tmp17 = cResult[7];
           }
           const effect = navigation.useEffect(tmp16, tmp17);
           if (cResult[8] !== guildId) {
             class C {
               constructor() {
-                obj = closure_1(closure_3[20]);
-                obj1 = { exit_reason: "voluntarily_exit" };
-                obj3 = closure_0(closure_3[21]);
-                merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
-                trackResult = obj.track(AnalyticEvents.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj1);
-                return;
+                const track = AnalyticsUtilsDefault.track;
+                const ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED =
+                  constants.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED;
+                const obj = { exit_reason: "voluntarily_exit" };
+                AnalyticsUtilsDefault;
+                const obj2 = AppAnalyticsUtils;
+                const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(guildId));
+                track(ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj);
               }
             }
             cResult[8] = guildId;
             cResult[9] = C;
+            tmp20 = C;
           } else {
             class C {
               constructor() {
-                obj = closure_1(closure_3[20]);
-                obj1 = { exit_reason: "voluntarily_exit" };
-                obj3 = closure_0(closure_3[21]);
-                merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
-                trackResult = obj.track(AnalyticEvents.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj1);
-                return;
+                const track = AnalyticsUtilsDefault.track;
+                const ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED =
+                  constants.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED;
+                const obj = { exit_reason: "voluntarily_exit" };
+                AnalyticsUtilsDefault;
+                const obj2 = AppAnalyticsUtils;
+                const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(guildId));
+                track(ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj);
               }
             }
           }
-          closure_6 = C;
+          C = tmp20;
           if (cResult[10] === groupListingId) {
             class C {
               constructor() {
-                obj = closure_1(closure_3[20]);
-                obj1 = { exit_reason: "voluntarily_exit" };
-                obj3 = closure_0(closure_3[21]);
-                merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
-                trackResult = obj.track(AnalyticEvents.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj1);
-                return;
+                const track = AnalyticsUtilsDefault.track;
+                const ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED =
+                  constants.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED;
+                const obj = { exit_reason: "voluntarily_exit" };
+                AnalyticsUtilsDefault;
+                const obj2 = AppAnalyticsUtils;
+                const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(guildId));
+                track(ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj);
               }
             }
           }
           const fn3 = function z() {
-            const obj = AnalyticsUtilsDefault;
-            const obj2 = { exit_reason: "create_from_scratch" };
-            const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
-            obj.track(constants.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj2);
-            const result = GuildRoleSubscriptionsActionCreatorExtrasAll.openTierCreationModal({
+            const track = AnalyticsUtilsDefault.track;
+            const ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED =
+              constants.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED;
+            const obj = { exit_reason: "create_from_scratch" };
+            AnalyticsUtilsDefault;
+            const obj2 = AppAnalyticsUtils;
+            const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(guildId));
+            track(ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj);
+            const obj3 = GuildRoleSubscriptionsActionCreatorExtrasAll;
+            const obj4 = {
               guildId,
               groupListingId,
               onAfterTierCreation() {
                 navigation.navigate(constants.ROLE_SUBSCRIPTIONS_TIERS);
               },
-            });
+            };
+            const result = obj3.openTierCreationModal(obj4);
           };
           cResult[10] = groupListingId;
           cResult[11] = guildId;
@@ -277,10 +324,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const fn2 = function f() {
-        let tmp = null != stateFromStores;
-        if (tmp) {
-          tmp = 0 !== stateFromStores.length;
-        }
+        const tmp = null != stateFromStores && 0 !== stateFromStores.length;
         if (!tmp) {
           first2(guildId);
         }
@@ -293,25 +337,35 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = items1;
       tmp17 = items1;
       tmp16 = fn2;
-      const tmpResult6 = guildId(groupListingId[19]);
     }
   : (guildId) => {
+      let closure_1;
+      let error;
+      let intl;
+      let intl2;
+      let intl3;
+      let items5;
+      let items6;
+      let items7;
+      let loading;
+      let obj6;
       guildId = guildId.guildId;
       let groupListingId;
       let first1;
-      let navigation;
+      navigation = undefined;
       let callback;
       let callback1;
       let tmp = closure_17();
       importDefault = tmp;
+      let obj = guildId(groupListingId[13]);
       let items = [GuildRoleSubscriptionTierTemplatesStore];
-      const stateFromStores = guildId(groupListingId[13]).useStateFromStores(items, () =>
+      const stateFromStores = obj.useStateFromStores(items, () =>
         GuildRoleSubscriptionTierTemplatesStore.getTemplates(guildId),
       );
-      let obj = guildId(groupListingId[13]);
-      const first = guildId(groupListingId[14]).useGroupListingsForGuild(guildId)[0];
       let obj2 = guildId(groupListingId[14]);
-      const groupListingsFetchContext = guildId(groupListingId[15]).useGroupListingsFetchContext();
+      const first = obj2.useGroupListingsForGuild(guildId)[0];
+      let obj3 = guildId(groupListingId[15]);
+      const groupListingsFetchContext = obj3.useGroupListingsFetchContext();
       if (groupListingId == null) {
         let id;
         if (first != null) {
@@ -319,160 +373,180 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         }
         groupListingId = id;
       }
-      let obj3 = guildId(groupListingId[15]);
-      const tmp9 = first1(require("useRequest")(stateFromStores(groupListingId[17]).getTemplates), 2);
+      const tmp8 = require("useRequest");
+      const tmp9 = first1(tmp8(stateFromStores(groupListingId[17]).getTemplates), 2);
       first1 = tmp9[0];
       ({ loading, error } = tmp9[1]);
-      const tmp8 = require("useRequest");
-      navigation = guildId(groupListingId[19]).useNavigation();
+      const bottom = require("useSafeAreaInsets")().bottom;
+      const tmp2Result = guildId(groupListingId[19]);
+      navigation = tmp2Result.useNavigation();
       const items1 = [first1, guildId, stateFromStores];
       const effect = navigation.useEffect(() => {
-        let tmp = null != stateFromStores;
-        if (tmp) {
-          tmp = 0 !== stateFromStores.length;
-        }
+        const tmp = null != stateFromStores && 0 !== stateFromStores.length;
         if (!tmp) {
           first1(guildId);
         }
       }, items1);
       const items2 = [guildId];
       callback = navigation.useCallback(() => {
-        const obj = AnalyticsUtilsDefault;
-        const obj2 = { exit_reason: "voluntarily_exit" };
-        const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
-        obj.track(constants.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj2);
+        const track = AnalyticsUtilsDefault.track;
+        const ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED =
+          constants.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED;
+        const obj = { exit_reason: "voluntarily_exit" };
+        AnalyticsUtilsDefault;
+        const obj2 = AppAnalyticsUtils;
+        const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(guildId));
+        track(ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj);
       }, items2);
       const items3 = [guildId, groupListingId, navigation];
       callback1 = navigation.useCallback(() => {
-        const obj = AnalyticsUtilsDefault;
-        const obj2 = { exit_reason: "create_from_scratch" };
-        const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
-        obj.track(constants.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj2);
-        const result = GuildRoleSubscriptionsActionCreatorExtrasAll.openTierCreationModal({
+        const track = AnalyticsUtilsDefault.track;
+        const ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED =
+          constants.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED;
+        const obj = { exit_reason: "create_from_scratch" };
+        AnalyticsUtilsDefault;
+        const obj2 = AppAnalyticsUtils;
+        const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(guildId));
+        track(ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj);
+        const obj3 = GuildRoleSubscriptionsActionCreatorExtrasAll;
+        const obj4 = {
           guildId,
           groupListingId,
           onAfterTierCreation() {
             navigation.navigate(constants.ROLE_SUBSCRIPTIONS_TIERS);
           },
-        });
+        };
+        const result = obj3.openTierCreationModal(obj4);
       }, items3);
       const items4 = [navigation, callback1, callback, tmp];
       const layoutEffect = navigation.useLayoutEffect(() => {
+        let obj2;
+        let onPress;
         let obj = {
           headerRight() {
-            const obj = { onPress, style: closure_1_1.startFromScratch, activeOpacity: 0.5, children: null };
+            let Text;
+            let intl;
+            let items;
+            let obj3;
+            let obj5;
+            const obj = { onPress, style: closure_1_1.startFromScratch, activeOpacity: 0.5, children: items };
             const obj2 = {
               style: closure_1_1.editIcon,
-              children: closure_2_14(guildId(groupListingId[23]).PencilIcon, {
-                color: closure_1_1.editIcon.color,
-                size: "xs",
-              }),
+              children: closure_2_14(guildId(groupListingId[23]).PencilIcon, obj3),
             };
-            const items = [closure_2_14(closure_2_8, obj2)];
-            const obj4 = { children: null };
-            const obj5 = { variant: "text-md/medium", color: "interactive-text-active", children: null };
-            const intl = guildId(groupListingId[24]).intl;
-            obj5.children = intl.string(guildId(groupListingId[24]).t.WNWtkB);
-            obj4.children = closure_2_14(guildId(groupListingId[11]).Text, obj5);
+            obj3 = { color: closure_1_1.editIcon.color, size: "xs" };
+            items = [closure_2_14(closure_2_8, obj2)];
+            const obj4 = { children: closure_2_14(Text, obj5) };
+            obj5 = {
+              variant: "text-md/medium",
+              color: "interactive-text-active",
+              children: intl.string(guildId(groupListingId[24]).t.WNWtkB),
+            };
+            Text = guildId(groupListingId[11]).Text;
+            intl = guildId(groupListingId[24]).intl;
             items[1] = closure_2_14(closure_2_8, obj4);
-            obj.children = items;
             return closure_2_15(callback1, obj);
           },
           headerTitle() {
             return closure_1_14(closure_1_8, {});
           },
-          headerLeft: NavigatorHeader.getHeaderBackButton(callback),
+          headerLeft: obj2.getHeaderBackButton(callback),
         };
-        navigation.setOptions(obj);
+        const setOptions = navigation.setOptions;
+        obj2 = NavigatorHeader;
+        setOptions(obj);
       }, items4);
-      let obj4 = { type: null, name: null, properties: null };
-      const tmp2Result = guildId(groupListingId[19]);
-      obj4.type = guildId(groupListingId[26]).ImpressionTypes.PAGE;
-      obj4.name = guildId(groupListingId[26]).ImpressionNames.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR;
-      obj4.properties = { guild_id: guildId };
-      require("useTrackImpression")(obj4);
-      let obj5 = { guildId, children: null };
-      const obj6 = { style: null, children: null };
-      const items5 = [tmp.container, { paddingBottom: require("useSafeAreaInsets")().bottom }];
-      obj6.style = items5;
-      const obj7 = { variant: "heading-xl/semibold", style: null, children: null };
-      const items6 = [,];
+      let obj4 = {
+        type: guildId(groupListingId[26]).ImpressionTypes.PAGE,
+        name: guildId(groupListingId[26]).ImpressionNames.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR,
+        properties: { guild_id: guildId },
+      };
+      const tmp16 = require("useTrackImpression");
+      tmp16(obj4);
+      let obj5 = { guildId, children: closure_15(closure_8, obj6) };
+      obj6 = { style: items5, children: items7 };
+      items5 = [tmp.container, { paddingBottom: bottom }];
+      const RoleSubscriptionSettingsDisabledContextProvider = tmp2(
+        tmp3[29],
+      ).RoleSubscriptionSettingsDisabledContextProvider;
+      const obj7 = {
+        variant: "heading-xl/semibold",
+        style: items6,
+        children: intl.string(guildId(groupListingId[24]).t.uYFiKr),
+      };
+      items6 = [,];
       ({ title: arr7[0], text: arr7[1] } = tmp);
-      obj7.style = items6;
-      let intl = tmp2(tmp3[24]).intl;
-      obj7.children = intl.string(guildId(groupListingId[24]).t.uYFiKr);
-      const items7 = [
-        closure_14(guildId(groupListingId[11]).Text, obj7),
-        closure_14(guildId(groupListingId[28]).Spacer, { size: 8 }),
-        ,
-        ,
-        ,
-        ,
-      ];
-      const obj8 = { variant: "text-sm/medium", style: tmp.text, children: null };
-      const intl2 = tmp2(tmp3[24]).intl;
-      obj8.children = intl2.string(guildId(groupListingId[24]).t["ne+rg6"]);
-      items7[2] = closure_14(guildId(groupListingId[11]).Text, obj8);
+      let Text = tmp2(tmp3[11]).Text;
+      intl = tmp2(tmp3[24]).intl;
+      items7 = [closure_14(Text, obj7), closure_14(guildId(groupListingId[28]).Spacer, { size: 8 }), , , , ,];
+      const obj8 = {
+        variant: "text-sm/medium",
+        style: tmp.text,
+        children: intl2.string(guildId(groupListingId[24]).t["ne+rg6"]),
+      };
+      const Text2 = tmp2(tmp3[11]).Text;
+      intl2 = tmp2(tmp3[24]).intl;
+      items7[2] = closure_14(Text2, obj8);
       items7[3] = closure_14(guildId(groupListingId[28]).Spacer, { size: 8 });
-      const obj9 = { variant: "text-sm/medium", style: tmp.text, children: null };
-      const intl3 = tmp2(tmp3[24]).intl;
-      obj9.children = intl3.format(guildId(groupListingId[24]).t.iQML2g, {
-        creatorPortalUrl: "https://discord.com/creator-portal/learn-from-creators?tab=lightning-lessons",
-      });
-      items7[4] = closure_14(guildId(groupListingId[11]).Text, obj9);
+      const obj9 = {
+        variant: "text-sm/medium",
+        style: tmp.text,
+        children: intl3.format(guildId(groupListingId[24]).t.iQML2g, {
+          creatorPortalUrl: "https://discord.com/creator-portal/learn-from-creators?tab=lightning-lessons",
+        }),
+      };
+      const Text3 = tmp2(tmp3[11]).Text;
+      intl3 = tmp2(tmp3[24]).intl;
+      items7[4] = closure_14(Text3, obj9);
       items7[5] = closure_14(guildId(groupListingId[28]).Spacer, { size: 24 });
-      const obj10 = { templates: stateFromStores, loading: null, error: null, guildId: null, groupListingId: null };
+      const obj10 = { templates: stateFromStores, loading, error, guildId, groupListingId };
       if (!loading) {
         loading = !groupListingsFetchContext;
       }
-      obj10.loading = loading;
-      obj10.error = error;
-      obj10.guildId = guildId;
-      obj10.groupListingId = groupListingId;
       items7[6] = closure_14(closure_18, obj10);
-      obj6.children = items7;
-      obj5.children = closure_15(closure_8, obj6);
-      return closure_14(guildId(groupListingId[29]).RoleSubscriptionSettingsDisabledContextProvider, obj5);
+      return closure_14(RoleSubscriptionSettingsDisabledContextProvider, obj5);
     };
-ReactCompilerGating = fn(558);
-let obj5 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, marginRight: 4 };
-let size = fn(2);
-let result = size.fileFinishedImporting(
-  "modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildSettingsRoleSubscriptionTierTemplateSelection.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      const cResult = c.c(5);
+      let tmp4;
+      const obj = react2;
+      const cResult = obj.c(5);
       if (cResult[0] !== guildId) {
         const obj2 = {};
         const merged = Object.assign(guildId);
-        const tmp10 = state(closure_19, obj2);
+        const tmp10 = authStore2(closure_19, obj2);
         cResult[0] = guildId;
         cResult[1] = tmp10;
-        let tmp4 = tmp10;
+        tmp4 = tmp10;
       } else {
         tmp4 = cResult[1];
       }
       if (cResult[2] === guildId.guildId) {
+        let tmp11;
         if (cResult[3] === tmp4) {
-          let tmp11 = cResult[4];
+          tmp11 = cResult[4];
         }
         return tmp11;
       }
-      const tmp12 = state(GroupListingsFetchContext.GroupListingsFetchContextProvider, {
-        guildId: guildId.guildId,
-        children: tmp4,
-      });
+      const obj3 = { guildId: guildId.guildId, children: tmp4 };
+      const tmp12 = authStore2(GroupListingsFetchContext.GroupListingsFetchContextProvider, obj3);
       cResult[2] = guildId.guildId;
       cResult[3] = tmp4;
       cResult[4] = tmp12;
       tmp11 = tmp12;
-      const obj3 = { guildId: guildId.guildId, children: tmp4 };
     }
   : (guildId) => {
-      const obj = { guildId: guildId.guildId, children: null };
+      let obj2;
+      const obj = { guildId: guildId.guildId, children: authStore2(closure_19, obj2) };
+      obj2 = {};
+      const GroupListingsFetchContextProvider = GroupListingsFetchContext.GroupListingsFetchContextProvider;
       const merged = Object.assign(guildId);
-      obj.children = state(closure_19, {});
-      return state(GroupListingsFetchContext.GroupListingsFetchContextProvider, obj);
+      return authStore2(GroupListingsFetchContextProvider, obj);
     };
+let size = size_mod;
+let result = size.fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildSettingsRoleSubscriptionTierTemplateSelection.tsx",
+);
+
+export default tmp6;

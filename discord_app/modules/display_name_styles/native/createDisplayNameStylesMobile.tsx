@@ -3,14 +3,15 @@ import DisplayNameFont from "../../../../discord_common/js/shared/shared-constan
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/native/createDisplayNameStylesMobile.tsx");
 
 export const createDisplayNameStylesMobile = function createDisplayNameStylesMobile(author, member) {
+  const displayNameStylesEnabled = AccessibilityStore.displayNameStylesEnabled;
   const currentUser = UserStore.getCurrentUser();
   let displayNameStyles = author.displayNameStyles;
+  const tmp2 = null != currentUser && currentUser.id === author.id;
   if (tmp2) {
     displayNameStyles = currentUser.displayNameStyles;
   }
@@ -29,20 +30,21 @@ export const createDisplayNameStylesMobile = function createDisplayNameStylesMob
     fontId = fontId1;
   }
   if (null != fontId) {
-    if (AccessibilityStore.displayNameStylesEnabled) {
-      const obj = { fontId };
-      return obj;
+    if (displayNameStylesEnabled) {
+      return { fontId };
     }
   }
 };
-export const getDisplayNameFontIdForMobileUser = function getDisplayNameFontIdForMobileUser(user, guildId) {
+export const getDisplayNameFontIdForMobileUser = function getDisplayNameFontIdForMobileUser(user, guildId1) {
   if (null != user) {
     let member = null;
-    if (null != guildId) {
-      member = GuildMemberStore.getMember(guildId, user.id);
+    if (null != guildId1) {
+      member = GuildMemberStore.getMember(guildId1, user.id);
     }
+    const displayNameStylesEnabled = AccessibilityStore.displayNameStylesEnabled;
     const currentUser = UserStore.getCurrentUser();
     let displayNameStyles = user.displayNameStyles;
+    const tmp6 = null != currentUser && currentUser.id === user.id;
     if (tmp6) {
       displayNameStyles = currentUser.displayNameStyles;
     }
@@ -62,9 +64,9 @@ export const getDisplayNameFontIdForMobileUser = function getDisplayNameFontIdFo
     }
     let tmp9;
     if (null != fontId) {
-      if (AccessibilityStore.displayNameStylesEnabled) {
+      if (displayNameStylesEnabled) {
+        tmp9 = { fontId };
         const obj = { fontId };
-        tmp9 = obj;
       }
     }
     let fontId2;
@@ -76,6 +78,5 @@ export const getDisplayNameFontIdForMobileUser = function getDisplayNameFontIdFo
         return fontId2;
       }
     }
-    tmp6 = null != currentUser && currentUser.id === user.id;
   }
 };

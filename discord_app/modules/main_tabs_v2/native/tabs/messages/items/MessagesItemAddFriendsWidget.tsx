@@ -1,288 +1,281 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemAddFriendsWidget.tsx
-import c from "../../../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../../../intl/index.native.tsx";
+import Constants from "../../../../../../Constants.tsx";
+import intl5 from "../../../../../../intl/index.native.tsx";
 import RootNavigationRef from "../../../../RootNavigationRef.native.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import InstantInviteActionCreatorsDefault from "../../../../../../actions/InstantInviteActionCreators.tsx";
-import IconActionButtonDefault from "../../../shared_components/IconActionButton.tsx";
-import _modDef13667 from "../../../../../../../_runtime/metro/13667__.js";
-import _modDef16023 from "../../../../../../../_runtime/metro/16023__.js";
-import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../../../../_runtime/metro/00019__.js";
+import IconActionButton from "../../../shared_components/IconActionButton.tsx";
+import AssetRegistryDefault from "../../../../../../../_runtime/13667_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../../_runtime/16023_AssetRegistry.js";
+import _asyncToGenerator from "../../../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import react from "../../../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+const IconActionButtonDefault = IconActionButton;
+let c2, c4, c5;
+
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
 function getFriendInviteCode() {
-  const self = this;
-  const apply = closure_11.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }
-let closure_11 = async function _getFriendInviteCode() {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+let obj = function _getFriendInviteCode() {
+  obj = _asyncToGenerator(async () => {
+    let obj4;
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
+      let c3;
+      try {
+        let code;
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let closure_1 = tmp;
+            let closure_0 = tmp4;
+            code = undefined;
+            c3 = 1;
+            c4 = 2;
+            c5 = 1;
+            const obj5 = { value: obj4.createFriendInvite(null, constants.ADD_FRIENDS_WIDGET), done: false };
+            obj4 = InstantInviteActionCreatorsDefault;
+            return obj5;
+          }
+        } else if (1 === c4) {
+          c3 = 0;
+          const presentError = closure_129_0(closure_129_2[9]).presentError;
+          const tmp11 = closure_129_0(closure_129_2[9]);
+          const intl = closure_129_0(closure_129_2[10]).intl;
+          presentError(intl.string(closure_129_0(closure_129_2[10]).t.R0RpRX));
+          c5 = 3;
+          const obj6 = { value: undefined, done: true };
+          return obj6;
+        } else if (arg0 === 1) {
           c5 = 3;
           throw value;
         } else if (arg0 === 2) {
+          c3 = 0;
           c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
-          closure_1 = tmp3;
-          closure_0 = tmp7;
-          let code;
-          c3 = 1;
-          c4 = 2;
-          c5 = 1;
-          const obj6 = {
-            value: InstantInviteActionCreatorsDefault.createFriendInvite(null, constants.ADD_FRIENDS_WIDGET),
-            done: false,
-          };
-          return obj6;
+          code = value.code;
+          c3 = 0;
+          c5 = 3;
+          obj = { value: code, done: true };
+          return obj;
         }
-      } else if (1 === tmp7) {
-        c3 = 0;
-        const intl = closure_129_0(closure_129_2[10]).intl;
-        closure_129_0(closure_129_2[9]).presentError(intl.string(closure_129_0(closure_129_2[10]).t.R0RpRX));
-        c5 = 3;
-        const obj7 = { value: undefined, done: true };
-        return obj7;
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 0;
-        c5 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
-      } else {
-        code = value.code;
-        c3 = 0;
-        c5 = 3;
-        const obj = { value: code, done: true };
-        return obj;
-      }
-    } catch (tmp20) {
-      closure_2 = tmp20;
-      if (tmp4 === c3) {
-        c5 = tmp2;
-        throw tmp20;
-      } else {
-        c4 = tmp;
+      } catch (tmp18) {
+        let closure_2 = tmp18;
+        if (0 === c3) {
+          c5 = 3;
+          throw tmp18;
+        } else {
+          c4 = 1;
+        }
       }
     }
-  }
+  });
+  return obj(...arguments);
 };
 function handleShare() {
-  const self = this;
-  const apply = closure_13.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }
-let closure_13 = async function _handleShare() {
-  if (c3 === 2) {
-    c3 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+obj = function _handleShare() {
+  obj = _asyncToGenerator(async () => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c3 = 2;
-      if (0 === c2) {
-        if (arg0 === 1) {
+      try {
+        let closure_0;
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let closure_1 = tmp4;
+            closure_0 = undefined;
+            c2 = 1;
+            c3 = 1;
+            const obj4 = { value: getFriendInviteCode(), done: false };
+            return obj4;
+          }
+        } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          obj = { value, done: true };
+          return obj;
         } else {
-          closure_1 = tmp5;
-          closure_0 = tmp2;
-          closure_128_0 = undefined;
-          c2 = 1;
-          c3 = 1;
-          const obj4 = { value: getFriendInviteCode(), done: false };
-          return obj4;
+          closure_0 = value;
+          const tmp14 = closure_129_0(closure_129_2[11]);
+          const handleOpenShareSheet = tmp14.handleOpenShareSheet;
+          const intl = closure_129_0(closure_129_2[10]).intl;
+          const formatToPlainString = intl.formatToPlainString;
+          const obj5 = { link: closure_129_1(closure_129_2[12])(closure_0) };
+          const PJf9P9 = closure_129_0(closure_129_2[10]).t.PJf9P9;
+          handleOpenShareSheet(closure_0, null, formatToPlainString(PJf9P9, obj5), closure_129_6.ADD_FRIENDS_WIDGET);
+          c3 = 3;
+          return { value: "IconComponent", done: null };
         }
-      } else if (arg0 === 1) {
+      } catch (tmp6) {
         c3 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 3;
-        const obj = { value, done: true };
-        return obj;
-      } else {
-        closure_128_0 = value;
-        const obj5 = closure_129_0(closure_129_2[11]);
-        const intl = closure_129_0(closure_129_2[10]).intl;
-        const obj6 = { link: closure_129_1(closure_129_2[12])(closure_128_0) };
-        obj5.handleOpenShareSheet(
-          closure_128_0,
-          null,
-          intl.formatToPlainString(closure_129_0(closure_129_2[10]).t.PJf9P9, obj6),
-          closure_129_6.ADD_FRIENDS_WIDGET,
-        );
-        c3 = 3;
-        return { value: "IconComponent", done: null };
+        throw tmp6;
       }
-    } catch (tmp7) {
-      c3 = tmp;
-      throw tmp7;
     }
-  }
+  });
+  return obj(...arguments);
 };
 function handleLink() {
-  const self = this;
-  const apply = closure_15.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }
-let closure_15 = async function _handleLink() {
-  if (c3 === 2) {
-    c3 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+obj = function _handleLink() {
+  obj = _asyncToGenerator(async () => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c3 = 2;
-      if (0 === c2) {
-        if (arg0 === 1) {
+      try {
+        let closure_0;
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let closure_1 = tmp4;
+            closure_0 = undefined;
+            c2 = 1;
+            c3 = 1;
+            const obj4 = { value: getFriendInviteCode(), done: false };
+            return obj4;
+          }
+        } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          closure_1 = tmp5;
-          closure_0 = tmp2;
-          closure_128_0 = undefined;
-          c2 = 1;
-          c3 = 1;
-          const obj4 = { value: getFriendInviteCode(), done: false };
-          return obj4;
+          closure_0 = value;
+          obj = closure_129_0(closure_129_2[11]);
+          obj.handleCopy(closure_0, null, closure_129_6.ADD_FRIENDS_WIDGET);
+          c3 = 3;
+          return { value: "IconComponent", done: null };
         }
-      } else if (arg0 === 1) {
+      } catch (tmp14) {
         c3 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
-      } else {
-        closure_128_0 = value;
-        closure_129_0(closure_129_2[11]).handleCopy(closure_128_0, null, closure_129_6.ADD_FRIENDS_WIDGET);
-        c3 = 3;
-        return { value: "IconComponent", done: null };
+        throw tmp14;
       }
-    } catch (tmp15) {
-      c3 = tmp;
-      throw tmp15;
     }
-  }
+  });
+  return obj(...arguments);
 };
-const View = fn(17).View;
-const InstantInviteSources = fn(1085).InstantInviteSources;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const sum = fn(13097).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(4890);
-let obj = {
-  container: {
-    height: sum,
-    paddingHorizontal: nativeDefault.space.PX_8,
-    justifyContent: "space-between",
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  title: null,
-  actions: null,
-  actionIcon: null,
-};
-let obj3 = {
+const View = react_native.View;
+const InstantInviteSources = Constants.InstantInviteSources;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+const sum = IconActionButton.ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+let createStyles = createStyles_mod;
+obj = { container: obj2, title: obj3, actions: obj4, actionIcon: obj5 };
+obj2 = {
   height: sum,
   paddingHorizontal: nativeDefault.space.PX_8,
   justifyContent: "space-between",
   flexDirection: "row",
   alignItems: "center",
 };
-obj.title = {
+createStyles = createStyles.createStyles;
+obj3 = {
   flexDirection: "row",
   alignItems: "center",
   borderRadius: nativeDefault.radii.md,
   paddingHorizontal: nativeDefault.space.PX_8,
   paddingVertical: nativeDefault.space.PX_12,
 };
-let obj4 = {
-  flexDirection: "row",
-  alignItems: "center",
-  borderRadius: nativeDefault.radii.md,
-  paddingHorizontal: nativeDefault.space.PX_8,
-  paddingVertical: nativeDefault.space.PX_12,
-};
-obj.actions = { paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", justifyContent: "flex-end" };
-let obj5 = { paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", justifyContent: "flex-end" };
-obj.actionIcon = { marginEnd: 0, marginStart: nativeDefault.space.PX_8 };
-let closure_9 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-let obj6 = { marginEnd: 0, marginStart: nativeDefault.space.PX_8 };
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/main_tabs_v2/native/tabs/messages/items/MessagesItemAddFriendsWidget.tsx",
-);
-
-export default noop.memo(
+obj4 = { paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", justifyContent: "flex-end" };
+obj5 = { marginEnd: 0, marginStart: nativeDefault.space.PX_8 };
+let closure_9 = createStyles(obj);
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
-        const cResult = c.c(19);
+        let actionIcon;
+        let actions;
+        let first;
+        let intl2;
+        let items;
+        let items1;
+        let tmp11;
+        let tmp14;
+        let tmp16;
+        let tmp22;
+        let tmp24;
+        let tmp6;
+        let tmp8;
+        obj = react2;
+        const cResult = obj.c(19);
         const tmp4 = closure_9();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function t() {
-            const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+            obj = RootNavigationRef;
+            const rootNavigationRef = obj.getRootNavigationRef();
             if (rootNavigationRef != null) {
               const current = rootNavigationRef.current;
               if (current != null) {
@@ -295,15 +288,16 @@ export default noop.memo(
             }
           };
           cResult[0] = fn;
-          let first = fn;
+          first = fn;
         } else {
           first = cResult[0];
         }
+        const container = tmp4.container;
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = util.intl;
-          const stringResult = intl.string(util.t.afcl67);
+          const intl = intl5.intl;
+          const stringResult = intl.string(intl5.t.afcl67);
           cResult[1] = stringResult;
-          let tmp6 = stringResult;
+          tmp6 = stringResult;
         } else {
           tmp6 = cResult[1];
         }
@@ -313,13 +307,13 @@ export default noop.memo(
             color: "text-default",
             lineClamp: 1,
             maxFontSizeMultiplier: 2,
-            children: null,
+            children: intl2.string(intl5.t.afcl67),
           };
-          const intl2 = util.intl;
-          obj2.children = intl2.string(util.t.afcl67);
-          const tmp10 = React5(Text_Text.Text, obj2);
+          const Text = Text_Text.Text;
+          intl2 = intl5.intl;
+          const tmp10 = metroImportDefault(Text, obj2);
           cResult[2] = tmp10;
-          let tmp8 = tmp10;
+          tmp8 = tmp10;
         } else {
           tmp8 = cResult[2];
         }
@@ -331,19 +325,19 @@ export default noop.memo(
             style: tmp4.title,
             children: tmp8,
           };
-          const tmp13 = React5(Pressables.PressableHighlight, obj3);
+          const tmp13 = metroImportDefault(Pressables.PressableHighlight, obj3);
           cResult[3] = tmp4.title;
           cResult[4] = tmp13;
-          let tmp11 = tmp13;
+          tmp11 = tmp13;
         } else {
           tmp11 = cResult[4];
         }
         ({ actions, actionIcon } = tmp4);
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl3 = util.intl;
-          const stringResult1 = intl3.string(util.t.Ej3B3Y);
+          const intl3 = intl5.intl;
+          const stringResult1 = intl3.string(intl5.t.Ej3B3Y);
           cResult[5] = stringResult1;
-          let tmp14 = stringResult1;
+          tmp14 = stringResult1;
         } else {
           tmp14 = cResult[5];
         }
@@ -351,57 +345,61 @@ export default noop.memo(
           const obj4 = {
             style: actionIcon,
             variant: "filled",
-            source: _modDef13667,
+            source: AssetRegistryDefault,
             onPress: handleShare,
             accessibilityLabel: tmp14,
           };
-          const tmp21 = React5(IconActionButtonDefault, obj4);
+          const tmp19 = IconActionButtonDefault;
+          const tmp21 = metroImportDefault(tmp19, obj4);
           cResult[6] = tmp4.actionIcon;
           cResult[7] = tmp21;
-          let tmp16 = tmp21;
+          tmp16 = tmp21;
         } else {
           tmp16 = cResult[7];
         }
+        const actionIcon2 = tmp4.actionIcon;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl4 = util.intl;
-          const stringResult2 = intl4.string(util.t.WqhZss);
+          const intl4 = intl5.intl;
+          const stringResult2 = intl4.string(intl5.t.WqhZss);
           cResult[8] = stringResult2;
-          let tmp22 = stringResult2;
+          tmp22 = stringResult2;
         } else {
           tmp22 = cResult[8];
         }
         if (cResult[9] !== tmp4.actionIcon) {
           const obj5 = {
-            style: tmp4.actionIcon,
+            style: actionIcon2,
             variant: "filled",
-            source: _modDef16023,
+            source: AssetRegistryDefault2,
             onPress: handleLink,
             accessibilityLabel: tmp22,
           };
-          const tmp29 = React5(IconActionButtonDefault, obj5);
+          const tmp27 = IconActionButtonDefault;
+          const tmp29 = metroImportDefault(tmp27, obj5);
           cResult[9] = tmp4.actionIcon;
           cResult[10] = tmp29;
-          let tmp24 = tmp29;
+          tmp24 = tmp29;
         } else {
           tmp24 = cResult[10];
         }
         if (cResult[11] === tmp4.actions) {
           if (cResult[12] === tmp24) {
+            let tmp30;
             if (cResult[13] === tmp16) {
-              let tmp30 = cResult[14];
+              tmp30 = cResult[14];
             }
             if (cResult[15] === tmp4.container) {
               if (cResult[16] === tmp30) {
+                let tmp32;
                 if (cResult[17] === tmp11) {
-                  let tmp32 = cResult[18];
+                  tmp32 = cResult[18];
                 }
                 return tmp32;
               }
             }
-            const obj6 = { style: tmp4.container, collapsable: false, children: null };
-            const items = [tmp11, tmp30];
-            obj6.children = items;
-            const tmp35 = closure_1_8(View, obj6);
+            const obj6 = { style: container, collapsable: false, children: items };
+            items = [tmp11, tmp30];
+            const tmp35 = metroImportAll(View, obj6);
             cResult[15] = tmp4.container;
             cResult[16] = tmp30;
             cResult[17] = tmp11;
@@ -409,10 +407,9 @@ export default noop.memo(
             tmp32 = tmp35;
           }
         }
-        const obj7 = { style: actions, children: null };
-        const items1 = [tmp16, tmp24];
-        obj7.children = items1;
-        const tmp31 = closure_1_8(View, obj7);
+        const obj7 = { style: actions, children: items1 };
+        items1 = [tmp16, tmp24];
+        const tmp31 = metroImportAll(View, obj7);
         cResult[11] = tmp4.actions;
         cResult[12] = tmp24;
         cResult[13] = tmp16;
@@ -420,10 +417,19 @@ export default noop.memo(
         tmp30 = tmp31;
       }
     : () => {
+        let Text;
+        let intl;
+        let intl2;
+        let intl3;
+        let intl4;
+        let items;
+        let items1;
+        let obj3;
         const tmp = closure_9();
-        const obj = { style: tmp.container, collapsable: false, children: null };
-        const callback = noop.useCallback(() => {
-          const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+        obj = { style: tmp.container, collapsable: false, children: items };
+        const callback = react.useCallback(() => {
+          obj = RootNavigationRef;
+          const rootNavigationRef = obj.getRootNavigationRef();
           if (rootNavigationRef != null) {
             const current = rootNavigationRef.current;
             if (current != null) {
@@ -436,54 +442,52 @@ export default noop.memo(
           }
         }, []);
         let obj2 = {
-          accessibilityLabel: null,
+          accessibilityLabel: intl.string(intl5.t.afcl67),
           accessibilityRole: "button",
-          onPress: null,
-          style: null,
-          children: null,
+          onPress: callback,
+          style: tmp.title,
+          children: metroImportDefault(Text, obj3),
         };
-        const intl = util.intl;
-        obj2.accessibilityLabel = intl.string(util.t.afcl67);
-        obj2.onPress = callback;
-        obj2.style = tmp.title;
-        const obj3 = {
+        const PressableHighlight = Pressables.PressableHighlight;
+        intl = intl5.intl;
+        obj3 = {
           variant: "text-md/semibold",
           color: "text-default",
           lineClamp: 1,
           maxFontSizeMultiplier: 2,
-          children: null,
+          children: intl2.string(intl5.t.afcl67),
         };
-        const intl2 = util.intl;
-        obj3.children = intl2.string(util.t.afcl67);
-        obj2.children = React5(Text_Text.Text, obj3);
-        const items = [React5(Pressables.PressableHighlight, obj2)];
-        const obj4 = { style: tmp.actions, children: null };
+        Text = Text_Text.Text;
+        intl2 = intl5.intl;
+        items = [metroImportDefault(PressableHighlight, obj2)];
+        const obj4 = { style: tmp.actions, children: items1 };
         const obj5 = {
           style: tmp.actionIcon,
           variant: "filled",
-          source: _modDef13667,
+          source: AssetRegistryDefault,
           onPress: handleShare,
-          accessibilityLabel: null,
+          accessibilityLabel: intl3.string(intl5.t.Ej3B3Y),
         };
-        const intl3 = util.intl;
-        obj5.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
-        const items1 = [React5(IconActionButtonDefault, obj5)];
+        const tmp3 = IconActionButtonDefault;
+        intl3 = intl5.intl;
+        items1 = [metroImportDefault(tmp3, obj5)];
         const obj6 = {
           style: tmp.actionIcon,
           variant: "filled",
-          source: null,
-          onPress: null,
-          accessibilityLabel: null,
+          source: AssetRegistryDefault2,
+          onPress: handleLink,
+          accessibilityLabel: intl4.string(intl5.t.WqhZss),
         };
-        obj6.source = _modDef16023;
-        obj6.onPress = handleLink;
-        const intl4 = util.intl;
-        obj6.accessibilityLabel = intl4.string(util.t.WqhZss);
-        items1[1] = React5(IconActionButtonDefault, obj6);
-        obj4.children = items1;
-        items[1] = closure_1_8(View, obj4);
-        obj.children = items;
-        return closure_1_8(View, obj);
+        const tmp4 = IconActionButtonDefault;
+        intl4 = intl5.intl;
+        items1[1] = metroImportDefault(tmp4, obj6);
+        items[1] = metroImportAll(View, obj4);
+        return metroImportAll(View, obj);
       },
 );
+const result = size.fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/items/MessagesItemAddFriendsWidget.tsx",
+);
+
+export default memoResult;
 export const MESSAGES_ITEM_ADD_FRIENDS_WIDGET_HEIGHT = sum;

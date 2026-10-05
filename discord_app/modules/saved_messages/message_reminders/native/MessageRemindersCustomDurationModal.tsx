@@ -1,56 +1,63 @@
 // discord_app/modules/saved_messages/message_reminders/native/MessageRemindersCustomDurationModal.tsx
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl5 from "../../../../intl/index.native.tsx";
 import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import HeaderShared from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
+let onClose;
+
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+const View = react_native.View;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+let createStyles = createStyles_mod;
 let obj = {
-  modal: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
-  headerLeftContainer: null,
-  headerRightContainer: null,
-  container: null,
-  formHeader: null,
-  inputContainer: null,
-  error: null,
+  modal: obj2,
+  headerLeftContainer: obj3,
+  headerRightContainer: obj4,
+  container: { paddingHorizontal: 16, paddingTop: 24, gap: 24 },
+  formHeader: { marginBottom: 8 },
+  inputContainer: obj5,
+  error: { marginTop: 8 },
 };
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-obj.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
-const obj4 = { paddingLeft: nativeDefault.space.PX_16 };
-obj.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
-obj.container = { paddingHorizontal: 16, paddingTop: 24, gap: 24 };
-obj.formHeader = { marginBottom: 8 };
-let obj5 = { paddingRight: nativeDefault.space.PX_16 };
-obj.inputContainer = {
+obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+createStyles = createStyles.createStyles;
+obj3 = { paddingLeft: nativeDefault.space.PX_16 };
+obj4 = { paddingRight: nativeDefault.space.PX_16 };
+obj5 = {
   paddingHorizontal: 16,
   paddingVertical: 12,
   borderRadius: nativeDefault.radii.lg,
   backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
 };
-obj.error = { marginTop: 8 };
-let closure_9 = createStyles.createStyles(obj);
-let obj6 = {
-  paddingHorizontal: 16,
-  paddingVertical: 12,
-  borderRadius: nativeDefault.radii.lg,
-  backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
-};
-const size = fn(2);
-let result = size.fileFinishedImporting(
-  "modules/saved_messages/message_reminders/native/MessageRemindersCustomDurationModal.tsx",
-);
-
-export default noop.memo((onClose) => {
+let closure_9 = createStyles(obj);
+const memoResult = react.memo((onClose) => {
+  let first;
+  let getError;
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let items1;
+  let items2;
+  let items3;
+  let num;
+  let onSubmit;
+  let tmp11Result;
   onClose = onClose.onClose;
   const createReminder = onClose.createReminder;
   const title = onClose.title;
@@ -59,43 +66,48 @@ export default noop.memo((onClose) => {
   onSubmit = undefined;
   let onPress;
   function handleOpenDatePicker(date) {
-    const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
-    const obj2 = ActionSheetActionCreatorsDefault;
-    const intl = util.intl;
-    const t = util.t;
-    const obj3 = {
-      title: intl.string("date" === date ? t.pSZKvM : t.GOmEb8),
+    let startOfResult;
+    let toDateResult;
+    const obj = KeyboardManagerUtilsAll;
+    const result = obj.dismissGlobalKeyboard();
+    const openLazy = ActionSheetActionCreatorsDefault.openLazy;
+    ActionSheetActionCreatorsDefault;
+    const tmp4 = asyncRequire(9194, dependencyMap.paths);
+    const intl = intl5.intl;
+    const string = intl.string;
+    const t = intl5.t;
+    const obj2 = {
+      title: string("date" === date ? t.pSZKvM : t.GOmEb8),
       startDate: first.toDate(),
-      minimumDate: null,
-      maximumDate: null,
-      mode: null,
-      onSubmit: null,
+      minimumDate: startOfResult.toDate(),
+      maximumDate: toDateResult,
+      mode: date,
+      onSubmit,
     };
     if ("date" === date) {
-      let startOfResult = closure_1_3.clone().startOf("day");
-      const cloneResult = closure_1_3.clone();
+      const cloneResult = dependencyMap.clone();
+      startOfResult = cloneResult.startOf("day");
     } else {
-      startOfResult = closure_1_3;
+      startOfResult = dependencyMap;
     }
-    obj3.minimumDate = startOfResult.toDate();
-    let toDateResult;
+    toDateResult = undefined;
     if (null != _slicedToArray) {
       let endOfResult = _slicedToArray;
-      if (tmp2) {
-        endOfResult = _slicedToArray.clone().endOf("day");
+      if ("date" === date) {
         const cloneResult1 = _slicedToArray.clone();
+        endOfResult = cloneResult1.endOf("day");
       }
       toDateResult = endOfResult.toDate();
     }
-    obj3.maximumDate = toDateResult;
-    obj3.mode = date;
-    obj3.onSubmit = onSubmit;
-    obj2.openLazy(asyncRequireImpl(9194, dependencyMap.paths), "DatePicker", obj3);
-    const tmp3 = asyncRequireImpl(9194, dependencyMap.paths);
+    openLazy(tmp4, "DatePicker", obj2);
   }
+  const defaultValue = onClose.defaultValue;
   const tmp = onPress();
-  [first, onSubmit] = first.useState(onClose.defaultValue);
+  let obj = first;
+  const top = createReminder(1618)().top;
+  [first, onSubmit] = first.useState(defaultValue);
   let error;
+  const tmp2 = createReminder;
   if (getError != null) {
     error = getError(first);
   }
@@ -103,92 +115,101 @@ export default noop.memo((onClose) => {
     error = null;
   }
   const items = [createReminder, first, onClose];
-  onPress = first.useCallback(() => {
+  onPress = obj.useCallback(() => {
     createReminder(first.toDate());
     onClose();
   }, items);
   const formatResult = first.format("MMM Do YYYY");
   const formatResult1 = first.format("LT");
-  let obj2 = { style: tmp.modal, children: null };
-  let obj3 = {
+  let obj2 = { style: tmp.modal, children: items1 };
+  const obj3 = {
     title,
     headerTitle() {
-      return React5(HeaderShared.GenericHeaderTitle, { title });
+      const obj = { title };
+      return metroImportDefault(HeaderShared.GenericHeaderTitle, obj);
     },
     headerTitleAlign: "center",
-    headerStatusBarHeight: null,
-    headerLeft: null,
+    headerStatusBarHeight: num + tmp2(587).space.PX_8,
+    headerLeft: tmp11Result.getHeaderCloseButton(onClose),
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null,
-    headerRight: null,
+    headerRight() {
+      let Text;
+      let intl;
+      let obj2;
+      const obj = {
+        accessibilityRole: "button",
+        disabled: null != error,
+        onPress,
+        children: metroImportDefault(Text, obj2),
+      };
+      const PressableOpacity = Pressables.PressableOpacity;
+      let str = "control-brand-foreground";
+      Text = Text_Text.Text;
+      if (null != error) {
+        str = "text-muted";
+      }
+      obj2 = { variant: "text-md/semibold", color: str, children: intl.string(intl5.t["R3BPH+"]) };
+      intl = intl5.intl;
+      return metroImportDefault(PressableOpacity, obj);
+    },
   };
-  let num = 0;
+  const Header = onClose(6019).Header;
+  num = 0;
+  const obj5 = onClose(1369);
   if (!obj5.isIOS()) {
-    num = createReminder(1618)().top;
+    num = top;
   }
-  obj3.headerStatusBarHeight = num + createReminder(587).space.PX_8;
-  obj5 = onClose(1369);
-  obj3.headerLeft = onClose(6010).getHeaderCloseButton(onClose);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  obj3.headerRight = function headerRight() {
-    const obj = { accessibilityRole: "button", disabled: null != error, onPress, children: null };
-    let str = "control-brand-foreground";
-    if (null != error) {
-      str = "text-muted";
-    }
-    const obj2 = { variant: "text-md/semibold", color: str, children: null };
-    const intl = util.intl;
-    obj2.children = intl.string(util.t["R3BPH+"]);
-    obj.children = React5(Text_Text.Text, obj2);
-    return React5(Pressables.PressableOpacity, obj);
+  tmp11Result = onClose(6010);
+  items1 = [error(Header, obj3)];
+  const obj6 = { style: tmp.container, children: items3 };
+  const obj7 = { children: items2 };
+  const obj8 = {
+    style: tmp.formHeader,
+    variant: "text-sm/semibold",
+    color: "text-subtle",
+    children: intl.string(onClose(1126).t.pSZKvM),
   };
-  const items1 = [error(onClose(6019).Header, obj3)];
-  const obj6 = { style: tmp.container, children: null };
-  const obj7 = { children: null };
-  const obj8 = { style: tmp.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: null };
-  let intl = tmp11(1126).intl;
-  obj8.children = intl.string(onClose(1126).t.pSZKvM);
-  const items2 = [error(onClose(4886).Text, obj8)];
+  let Text = tmp11(4886).Text;
+  intl = tmp11(1126).intl;
+  items2 = [error(Text, obj8)];
   const obj9 = {
     accessibilityRole: "button",
-    accessibilityLabel: null,
-    accessibilityValue: null,
-    onPress: null,
-    style: null,
-    children: null,
+    accessibilityLabel: intl2.string(onClose(1126).t.pSZKvM),
+    accessibilityValue: { text: formatResult },
+    onPress() {
+      handleOpenDatePicker("date");
+    },
+    style: tmp.inputContainer,
+    children: error(onClose(4886).Text, { variant: "text-md/medium", children: formatResult }),
   };
-  const intl2 = tmp11(1126).intl;
-  obj9.accessibilityLabel = intl2.string(onClose(1126).t.pSZKvM);
-  obj9.accessibilityValue = { text: formatResult };
-  obj9.onPress = function onPress() {
-    handleOpenDatePicker("date");
+  let PressableOpacity = tmp11(5909).PressableOpacity;
+  intl2 = tmp11(1126).intl;
+  items2[1] = error(PressableOpacity, obj9);
+  items3 = [handleOpenDatePicker(onSubmit, obj7)];
+  const obj10 = {
+    style: tmp.formHeader,
+    variant: "text-sm/semibold",
+    color: "text-subtle",
+    children: intl3.string(onClose(1126).t.GOmEb8),
   };
-  obj9.style = tmp.inputContainer;
-  obj9.children = error(onClose(4886).Text, { variant: "text-md/medium", children: formatResult });
-  items2[1] = error(onClose(5909).PressableOpacity, obj9);
-  obj7.children = items2;
-  const items3 = [handleOpenDatePicker(onSubmit, obj7)];
-  const obj10 = { style: tmp.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: null };
-  const intl3 = tmp11(1126).intl;
-  obj10.children = intl3.string(onClose(1126).t.GOmEb8);
-  const items4 = [error(onClose(4886).Text, obj10), ,];
+  const Text2 = tmp11(4886).Text;
+  intl3 = tmp11(1126).intl;
+  const items4 = [error(Text2, obj10), ,];
   const obj11 = {
     accessibilityRole: "button",
-    accessibilityLabel: null,
-    accessibilityValue: null,
-    onPress: null,
-    style: null,
-    children: null,
+    accessibilityLabel: intl4.string(onClose(1126).t.GOmEb8),
+    accessibilityValue: { text: formatResult1 },
+    onPress() {
+      handleOpenDatePicker("time");
+    },
+    style: tmp.inputContainer,
+    children: error(onClose(4886).Text, { variant: "text-md/medium", children: formatResult1 }),
   };
-  const intl4 = tmp11(1126).intl;
-  obj11.accessibilityLabel = intl4.string(onClose(1126).t.GOmEb8);
-  obj11.accessibilityValue = { text: formatResult1 };
-  obj11.onPress = function onPress() {
-    handleOpenDatePicker("time");
-  };
-  obj11.style = tmp.inputContainer;
-  obj11.children = error(onClose(4886).Text, { variant: "text-md/medium", children: formatResult1 });
-  items4[1] = error(onClose(5909).PressableOpacity, obj11);
+  const PressableOpacity2 = tmp11(5909).PressableOpacity;
+  intl4 = tmp11(1126).intl;
+  items4[1] = error(PressableOpacity2, obj11);
   let tmp10Result = null != error;
   if (tmp10Result) {
     const obj12 = {
@@ -202,8 +223,11 @@ export default noop.memo((onClose) => {
   }
   items4[2] = tmp10Result;
   items3[1] = handleOpenDatePicker(onSubmit, { children: items4 });
-  obj6.children = items3;
   items1[1] = handleOpenDatePicker(onSubmit, obj6);
-  obj2.children = items1;
   return handleOpenDatePicker(onSubmit, obj2);
 });
+let result = size.fileFinishedImporting(
+  "modules/saved_messages/message_reminders/native/MessageRemindersCustomDurationModal.tsx",
+);
+
+export default memoResult;

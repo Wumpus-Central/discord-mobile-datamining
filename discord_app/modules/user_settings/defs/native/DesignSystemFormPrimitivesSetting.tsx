@@ -6,18 +6,21 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const route = SettingBuilders.createRoute({
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const UserSettingsSections = Constants.UserSettingsSections;
+const obj = {
   useTitle() {
     return "Form Primitives";
   },
-  parent: SettingsConstants.MobileUserSettings.DESIGN_SYSTEMS,
+  parent: MobileUserSettings.DESIGN_SYSTEMS,
   screen: {
-    route: Constants.UserSettingsSections.DESIGN_SYSTEM_FORM_PRIMITIVES,
+    route: UserSettingsSections.DESIGN_SYSTEM_FORM_PRIMITIVES,
     getComponent() {
       return require("UserSettingsDesignSystemFormPrimitives").default;
     },
   },
-});
+};
+const route = SettingBuilders.createRoute(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemFormPrimitivesSetting.tsx");
 
 export default route;

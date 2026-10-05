@@ -1,181 +1,137 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx
+import Constants from "../../../../../Constants.tsx";
+import MessageConstants from "../../../../messages/MessageConstants.tsx";
 import RelationshipActionCreatorsDefault from "../../../../../actions/RelationshipActionCreators.tsx";
 import PeopleUtilsDefault from "../../../../people/PeopleUtils.tsx";
-import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../../../../_runtime/metro/00005__asyncToGenerator.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-let closure_7 = async function _sendWave(arg0) {
-  if (c8 === 2) {
-    c8 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp7 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c8 = 2;
-      if (0 === c7) {
-        if (arg0 === 1) {
-          c8 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c8 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_4 = tmp4;
-          closure_3 = tmp8;
-          closure_131_1 = undefined;
-          closure_131_2 = undefined;
-          closure_131_0 = closure_0;
-          let flag = closure_1;
-          if (closure_1 === undefined) {
-            flag = true;
-          }
-          closure_131_1 = flag;
-          closure_131_2 = closure_2;
-          let dMFromUserId;
-          c7 = 1;
-          c8 = 1;
-          return { value: "Set", done: true };
-        }
+let c7;
+
+let obj = function _sendWave() {
+  obj = _asyncToGenerator(async (recipientIds, arg1) => {
+    let channelId;
+    let closure_4;
+    let closure_5;
+    let flag;
+    let obj11;
+    let closure_1 = arg1;
+    if (1 === c7) {
+      if (recipientIds === 1) {
+        let c8 = 3;
+        throw value;
+      } else if (recipientIds === 2) {
+        c8 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
-        if (1 === tmp8) {
-          if (arg0 === 1) {
-            c8 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c8 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            dMFromUserId = closure_132_4.getDMFromUserId(closure_131_0);
-            if (null == dMFromUserId) {
-              c6 = 1;
-              c7 = 4;
-              c8 = 1;
-              const obj7 = { value: closure_132_1(closure_132_2[5]).getDMChannel(closure_131_0), done: false };
-              return obj7;
-            } else {
-              c6 = 2;
-              if (null != dMFromUserId) {
-                const obj9 = { channelId: dMFromUserId, source: closure_131_2 };
-                closure_132_0(closure_132_2[8]).trackWaveCtaClicked(obj9);
-                const obj10 = closure_132_1(closure_132_2[9]);
-                const obj11 = { location: closure_132_6.SEND_WAVE };
-                c7 = 5;
-                c8 = 1;
-                const obj12 = {
-                  value: obj10.sendStickers(dMFromUserId, ["749054660769218631"], "", obj11),
-                  done: false,
-                };
-                return obj12;
-              } else {
-                c6 = 0;
-              }
-            }
-          }
+        channelId = closure_132_4.getDMFromUserId(recipientIds);
+        if (null == channelId) {
+          let c6 = 1;
+          c7 = 4;
+          c8 = 1;
+          const obj5 = { value: obj11.getDMChannel(recipientIds), done: false };
+          obj11 = closure_132_1(closure_132_2[5]);
+          return obj5;
         } else {
-          if (2 !== tmp8) {
-            if (3 === tmp8) {
-              c6 = 0;
-              const intl = closure_132_0(closure_132_2[7]).intl;
-              closure_132_0(closure_132_2[6]).presentError(intl.string(closure_132_0(closure_132_2[7]).t.iufib1));
-              c8 = 3;
-              const obj5 = closure_132_0(closure_132_2[6]);
-            } else if (4 === tmp8) {
-              if (arg0 === 1) {
-                c8 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c6 = 0;
-                c8 = 3;
-                const obj14 = { value, done: true };
-                return obj14;
-              } else {
-                dMFromUserId = value;
-                c6 = 0;
-              }
-            } else if (arg0 === 1) {
-              c8 = 3;
-              throw value;
-            } else if (arg0 !== 2) {
-              if (closure_131_1) {
-                const obj15 = { recipientIds: closure_131_0 };
-                closure_132_1(closure_132_2[5]).openPrivateChannel(obj15);
-                const obj = closure_132_1(closure_132_2[5]);
-              }
-            }
+          c6 = 2;
+          if (null != channelId) {
+            const obj7 = { channelId, source };
+            const obj6 = closure_132_0(closure_132_2[8]);
+            obj6.trackWaveCtaClicked(obj7);
+            const obj8 = closure_132_1(closure_132_2[9]);
+            const obj9 = { location: closure_132_6.SEND_WAVE };
+            c7 = 5;
+            c8 = 1;
+            const obj10 = { value: obj8.sendStickers(channelId, ["749054660769218631"], "", obj9), done: false };
+            return obj10;
+          } else {
+            c6 = 0;
           }
-          c6 = 0;
-          const intl2 = closure_132_0(closure_132_2[7]).intl;
-          closure_132_0(closure_132_2[6]).presentError(intl2.string(closure_132_0(closure_132_2[7]).t.iufib1));
-          c8 = 3;
-          const obj16 = { value: undefined, done: true };
-          return obj16;
         }
+      }
+    } else if (2 === c7) {
+      c6 = 0;
+      const presentError2 = closure_132_0(closure_132_2[6]).presentError;
+      const tmp27 = closure_132_0(closure_132_2[6]);
+      const intl2 = closure_132_0(closure_132_2[7]).intl;
+      presentError2(intl2.string(closure_132_0(closure_132_2[7]).t.iufib1));
+      c8 = 3;
+      const obj12 = { value: undefined, done: true };
+      return obj12;
+    } else if (3 === c7) {
+      c6 = 0;
+      const presentError = closure_132_0(closure_132_2[6]).presentError;
+      const tmp17 = closure_132_0(closure_132_2[6]);
+      const intl = closure_132_0(closure_132_2[7]).intl;
+      presentError(intl.string(closure_132_0(closure_132_2[7]).t.iufib1));
+    } else if (4 === c7) {
+      if (recipientIds === 1) {
+        c8 = 3;
+        throw value;
+      } else if (recipientIds === 2) {
         c6 = 0;
         c8 = 3;
-        const obj17 = { value, done: true };
-        return obj17;
-      }
-    } catch (tmp57) {
-      closure_5 = tmp57;
-      if (tmp5 === c6) {
-        c8 = tmp3;
-        throw tmp57;
-      } else if (tmp2 === tmp59) {
-        c7 = tmp;
+        const obj13 = { value, done: true };
+        return obj13;
       } else {
-        c7 = tmp3;
+        channelId = value;
+        c6 = 0;
+      }
+    } else if (recipientIds === 1) {
+      c8 = 3;
+      throw value;
+    } else if (recipientIds === 2) {
+      c6 = 0;
+      c8 = 3;
+      const obj14 = { value, done: true };
+      return obj14;
+    } else {
+      const tmp6 = flag;
+      if (tmp6) {
+        const obj15 = { recipientIds };
+        obj = closure_132_1(closure_132_2[5]);
+        obj.openPrivateChannel(obj15);
       }
     }
-  }
+    await "IconComponent";
+    channelId = tmp4;
+    flag = closure_1;
+    if (closure_1 === undefined) {
+      flag = true;
+    }
+    return "Set";
+  });
+  return obj(...arguments);
 };
-const AnalyticsSections = fn(1085).AnalyticsSections;
-const MessageSendLocation = fn(4883).MessageSendLocation;
-const size = fn(2);
+const AnalyticsSections = Constants.AnalyticsSections;
+const MessageSendLocation = MessageConstants.MessageSendLocation;
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx");
 
 export const dismissIncomingRequest = function dismissIncomingRequest(arg0) {
+  let applicationId;
+  let userId;
   ({ userId, applicationId } = arg0);
-  PeopleUtilsDefault.cancelFriendRequest({
-    userId,
-    applicationId,
-    location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL,
-  });
+  obj = PeopleUtilsDefault;
+  const obj2 = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
+  obj.cancelFriendRequest(obj2);
 };
 export const acceptIncomingRequest = function acceptIncomingRequest(arg0) {
+  let applicationId;
+  let userId;
   ({ userId, applicationId } = arg0);
-  const result = PeopleUtilsDefault.maybeConfirmFriendRequestAccept({
-    userId,
-    applicationId,
-    location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL,
-  });
+  obj = PeopleUtilsDefault;
+  const obj2 = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
+  const result = obj.maybeConfirmFriendRequestAccept(obj2);
 };
 export const sendWave = function sendWave() {
-  const self = this;
-  const apply = closure_7.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const addContactSuggestion = function addContactSuggestion(user) {
-  const obj2 = {
-    userId: user.id,
-    context: { location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL },
-    type: "IconComponent",
-    fromFriendSuggestion: null,
-  };
-  RelationshipActionCreatorsDefault.addRelationship(obj2);
+  let obj3;
+  const obj2 = { userId: user.id, context: obj3, type: "IconComponent", fromFriendSuggestion: null };
+  obj3 = { location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
+  obj = RelationshipActionCreatorsDefault;
+  obj.addRelationship(obj2);
 };

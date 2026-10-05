@@ -5,6 +5,8 @@ let closure_0 = {};
 const result = size.fileFinishedImporting("../discord_common/js/packages/shallow-equal/shallowEqual.tsx");
 
 export default function shallowEqual(activeMediaPlayerSource, _require, arr) {
+  let logCallback;
+  let shouldWarnLargeObjects;
   let tmp = arg3;
   if (arg3 === undefined) {
     tmp = closure_0;
@@ -40,17 +42,19 @@ export default function shallowEqual(activeMediaPlayerSource, _require, arr) {
         }
       }
     }
-    return tmp2;
+    return activeMediaPlayerSource === _require;
   }
 }
 export const areArraysShallowEqual = function areArraysShallowEqual(colors, current) {
+  let logCallback;
+  let shouldWarnLargeObjects;
   closure_0 = current;
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = closure_0;
   }
   ({ logCallback, shouldWarnLargeObjects } = tmp);
-  return (
-    null != current && colors.length === current.length && colors.every((item, index) => closure_0[index] === item)
-  );
+  const tmp2 =
+    null != current && colors.length === current.length && colors.every((item, index) => closure_0[index] === item);
+  return tmp2;
 };

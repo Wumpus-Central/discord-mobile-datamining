@@ -1,8 +1,8 @@
 // discord_app/modules/launchpad/native/LaunchPadGestureRefContext.tsx
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const context = noop.createContext({ current: "r" });
-const size = fn(2);
+const context = react.createContext({ current: "r" });
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadGestureRefContext.tsx");
 
 export default context;

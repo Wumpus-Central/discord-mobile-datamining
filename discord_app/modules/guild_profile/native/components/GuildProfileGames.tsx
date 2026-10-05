@@ -1,28 +1,34 @@
 // discord_app/modules/guild_profile/native/components/GuildProfileGames.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GameProfileAnalyticUtils from "../../../game_profile/GameProfileAnalyticUtils.tsx";
 import useOpenGameProfileModalDefault from "../../../game_profile/hooks/useOpenGameProfileModal.tsx";
 import components_GameIconDefault from "GameIcon.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+let hasOwnProperty;
+let metroRequire;
+let rect;
+let react = react_mod;
+const View = react_native.View;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+let obj = {
   container: { display: "flex", flexDirection: "row", gap: 8 },
   favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 },
   lastItem: { position: "relative", width: 32, height: 32 },
-  lastItemOverlay: null,
-  lastItemImage: null,
-  lastItemText: null,
+  lastItemOverlay: rect,
+  lastItemImage: { position: "absolute" },
+  lastItemText: { display: "flex", justifyContent: "center", alignItems: "center", width: 32, height: 32 },
 };
-const rect = {
+rect = {
   position: "absolute",
   top: 0,
   left: 0,
@@ -31,14 +37,17 @@ const rect = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM,
   borderRadius: nativeDefault.radii.xs,
 };
-obj2.lastItemOverlay = rect;
-obj2.lastItemImage = { position: "absolute" };
-obj2.lastItemText = { display: "flex", justifyContent: "center", alignItems: "center", width: 32, height: 32 };
-const styles = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
+const styles = createStyles.createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(12);
+      let activityLevel;
+      let game;
+      let onPressFallback;
+      let style;
+      let tmp4;
+      const obj = react2;
+      const cResult = obj.c(12);
       ({ style, game } = arg0);
       ({ activityLevel, onPressFallback } = arg0);
       if (cResult[0] !== game.id) {
@@ -49,21 +58,22 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = game.id;
         cResult[1] = obj2;
-        let tmp4 = obj2;
+        tmp4 = obj2;
       } else {
         tmp4 = cResult[1];
       }
       const tmp6 = useOpenGameProfileModalDefault(tmp4);
-      closure_2 = tmp6;
-      closure_3 = tmp7;
+      let closure_2 = tmp6;
+      let closure_3 = tmp7;
       if ((cResult[2] === null) != tmp6) {
         if (cResult[3] === game) {
           if (cResult[4] === onPressFallback) {
             if (cResult[7] === activityLevel) {
               if (cResult[8] === game) {
                 if (cResult[9] === tmp9) {
+                  let tmp10;
                   if (cResult[10] === style) {
-                    let tmp10 = cResult[11];
+                    tmp10 = cResult[11];
                   }
                   return tmp10;
                 }
@@ -84,7 +94,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         if (closure_3) {
           closure_2();
         } else if (onPressFallback != null) {
-          tmp(game);
+          tmp2(game);
         }
       };
       cResult[2] = null != tmp6;
@@ -94,6 +104,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = fn;
     }
   : (game) => {
+      let activityLevel;
+      let onPress;
+      let style;
       game = game.game;
       const onPressFallback = game.onPressFallback;
       ({ style, activityLevel } = game);
@@ -102,52 +115,59 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         source: GameProfileAnalyticUtils.GameProfileSources.GuildProfileGames,
         trackEntryPointImpression: true,
       };
-      const tmp3Result = useOpenGameProfileModalDefault(obj);
-      closure_2 = tmp3Result;
-      closure_3 = tmp5;
+      const tmp3 = useOpenGameProfileModalDefault;
+      const tmp3Result = tmp3(obj);
+      let closure_2 = tmp3Result;
+      let closure_3 = tmp5;
       const items = [null != tmp3Result, tmp3Result, onPressFallback, game];
       if (null != tmp3Result) {
-        const onPress = noop.useCallback(() => {
+        onPress = react.useCallback(() => {
           if (closure_3) {
             closure_2();
           } else if (onPressFallback != null) {
-            tmp(game);
+            tmp2(game);
           }
         }, items);
       }
       return hasOwnProperty(components_GameIconDefault, { style, game, activityLevel, onPress });
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(9);
+      let activityLevel;
+      let game;
+      let items;
+      const obj = react2;
+      const cResult = obj.c(9);
       ({ game, activityLevel } = arg0);
       const tmp4 = styles();
       if (cResult[0] === activityLevel) {
+        let tmp5;
+        let tmp7;
         if (cResult[1] === game) {
-          let tmp5 = cResult[2];
+          tmp5 = cResult[2];
         }
         if (cResult[3] !== game.name) {
           const obj2 = { variant: "text-sm/medium", color: "text-subtle", children: game.name };
           const tmp9 = hasOwnProperty(Text_Text.Text, obj2);
           cResult[3] = game.name;
           cResult[4] = tmp9;
-          let tmp7 = tmp9;
+          tmp7 = tmp9;
         } else {
           tmp7 = cResult[4];
         }
         if (cResult[5] === tmp4.favoriteGame) {
           if (cResult[6] === tmp5) {
+            let tmp10;
             if (cResult[7] === tmp7) {
-              let tmp10 = cResult[8];
+              tmp10 = cResult[8];
             }
             return tmp10;
           }
         }
-        const obj3 = { style: tmp4.favoriteGame, children: null };
-        const items = [tmp5, tmp7];
-        obj3.children = items;
-        const tmp13 = timestampProducer(View, obj3);
+        const obj3 = { style: tmp4.favoriteGame, children: items };
+        items = [tmp5, tmp7];
+        const tmp13 = metroRequire(View, obj3);
         cResult[5] = tmp4.favoriteGame;
         cResult[6] = tmp5;
         cResult[7] = tmp7;
@@ -160,30 +180,37 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp6;
       tmp5 = tmp6;
     }
-  : (activityLevel) => {
-      const game = activityLevel.game;
-      const obj = { style: styles().favoriteGame, children: null };
-      const items = [
-        hasOwnProperty(closure_8, { game, activityLevel: activityLevel.activityLevel }),
-        hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: game.name }),
-      ];
-      obj.children = items;
-      return timestampProducer(View, obj);
+  : (game) => {
+      let items;
+      game = game.game;
+      const activityLevel = game.activityLevel;
+      const obj = { style: styles().favoriteGame, children: items };
+      items = [hasOwnProperty(closure_8, { game, activityLevel })];
+      const obj2 = { variant: "text-sm/medium", color: "text-subtle", children: game.name };
+      items[1] = hasOwnProperty(Text_Text.Text, obj2);
+      return metroRequire(View, obj);
     };
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileGames.tsx");
 
 export default function GuildProfileGames(profile) {
+  let closure_3;
+  let gamesToDisplay;
+  let items1;
+  let items2;
+  let lastGameToDisplay;
+  let obj3;
+  let tmp8;
   profile = profile.profile;
   lastGameToDisplay = undefined;
   let remainingGames;
-  closure_5 = undefined;
+  let closure_5;
   let onPressFallback;
   let tmp2 = lastGameToDisplay(remainingGames[11])(profile);
   ({ gamesToDisplay, lastGameToDisplay } = tmp2);
+  const tmp = remainingGames;
   remainingGames = tmp2.remainingGames;
-  let tmp3 = styles();
-  noop = tmp3;
+  const tmp3 = styles();
+  react = tmp3;
   const gameActivity = profile.gameActivity;
   let iconURL;
   if (lastGameToDisplay != null) {
@@ -191,73 +218,80 @@ export default function GuildProfileGames(profile) {
   }
   closure_5 = tmp5;
   let items = [lastGameToDisplay, null != iconURL, remainingGames, gameActivity, tmp3];
-  const memo = noop.useMemo(() => {
-    let tmp = lastGameToDisplay;
+  const memo = react.useMemo(() => {
+    let Text;
+    let items;
+    let obj6;
     let tmp2 = null;
     if (null != lastGameToDisplay) {
-      if (!closure_5) {
-        tmp2 = null;
-      } else if (0 === remainingGames.length) {
-        const obj = { game: tmp, activityLevel: null };
-        tmp = gameActivity[tmp.id];
-        obj.activityLevel = tmp;
-        let tmp8 = hasOwnProperty(closure_8, obj);
-      } else {
-        const obj2 = { style: closure_3.lastItem, children: null };
-        const obj3 = { style: closure_3.lastItemImage, game: tmp, activityLevel: gameActivity[tmp.id] };
-        const items = [hasOwnProperty(components_GameIconDefault, obj3), ,];
-        const obj4 = { style: closure_3.lastItemOverlay };
-        items[1] = hasOwnProperty(View, obj4);
-        const obj5 = { style: closure_3.lastItemText, children: null };
-        const obj6 = { variant: "text-xs/medium", color: "text-overlay-light", children: null };
-        const _HermesInternal = HermesInternal;
-        obj6.children = "+" + arr.length;
-        obj5.children = hasOwnProperty(Text_Text.Text, obj6);
-        items[2] = hasOwnProperty(View, obj5);
-        obj2.children = items;
-        tmp8 = timestampProducer(View, obj2);
+      let tmp4 = null;
+      if (hasOwnProperty) {
+        let tmp8;
+        if (0 === remainingGames.length) {
+          const obj = { game: lastGameToDisplay, activityLevel: gameActivity[lastGameToDisplay.id] };
+          tmp8 = hasOwnProperty(closure_8, obj);
+        } else {
+          const obj2 = { style: closure_3.lastItem, children: items };
+          const obj3 = {
+            style: closure_3.lastItemImage,
+            game: lastGameToDisplay,
+            activityLevel: gameActivity[lastGameToDisplay.id],
+          };
+          items = [hasOwnProperty(components_GameIconDefault, obj3), ,];
+          const obj4 = { style: closure_3.lastItemOverlay };
+          items[1] = hasOwnProperty(View, obj4);
+          const obj5 = { style: closure_3.lastItemText, children: hasOwnProperty(Text, obj6) };
+          const _HermesInternal = HermesInternal;
+          obj6 = { variant: "text-xs/medium", color: "text-overlay-light", children: "+" + arr.length };
+          Text = Text_Text.Text;
+          items[2] = hasOwnProperty(View, obj5);
+          tmp8 = metroRequire(View, obj2);
+        }
+        tmp4 = tmp8;
       }
+      tmp2 = tmp4;
     }
     return tmp2;
   }, items);
-  onPressFallback = noop.useCallback((content) => {
+  onPressFallback = react.useCallback((content) => {
     const obj = lastGameToDisplay(remainingGames[12]);
-    obj.open({ key: "profile-game-" + content.id, content: content.name });
+    const obj2 = { key: "profile-game-" + content.id, content: content.name };
+    obj.open(obj2);
   }, []);
   [][0] = profile;
   let tmp9 = null;
+  const tmp7 = remainingGames.length > 0;
   if (null != gamesToDisplay) {
     tmp9 = null;
     if (0 !== gamesToDisplay.length) {
+      let tmp16Result;
       if (1 === gamesToDisplay.length) {
-        let obj2 = { style: tmp3.container, children: null };
-        tmp3 = closure_9;
-        let obj3 = { game: gamesToDisplay[0], activityLevel: null };
-        gamesToDisplay = gameActivity[gamesToDisplay[0].id];
-        obj3.activityLevel = gamesToDisplay;
-        obj2.children = closure_5(closure_9, obj3);
-        let tmp16Result = closure_5(gameActivity, obj2);
+        let obj2 = { style: tmp3.container, children: closure_5(closure_9, obj3) };
+        obj3 = { game: gamesToDisplay[0], activityLevel: gameActivity[gamesToDisplay[0].id] };
+        tmp16Result = closure_5(gameActivity, obj2);
       } else if (tmp7) {
-        let obj4 = { style: tmp3.container, onPress: tmp8, children: null };
-        const items1 = [
-          gamesToDisplay.map((game) =>
-            hasOwnProperty(components_GameIconDefault, { game, activityLevel: gameActivity[game.id] }, game.id),
-          ),
+        let obj4 = { style: tmp3.container, onPress: tmp8, children: items1 };
+        const PressableHighlight = profile(tmp[16]).PressableHighlight;
+        items1 = [
+          gamesToDisplay.map((game) => {
+            const obj = { game, activityLevel: gameActivity[game.id] };
+            return hasOwnProperty(components_GameIconDefault, obj, game.id);
+          }),
           memo,
         ];
-        obj4.children = items1;
-        tmp16Result = tmp16(profile(remainingGames[16]).PressableHighlight, obj4);
+        tmp16Result = tmp16(PressableHighlight, obj4);
       } else {
-        let obj = { style: tmp3.container, children: null };
-        const items2 = [
-          gamesToDisplay.map((game) =>
-            hasOwnProperty(closure_8, { game, activityLevel: gameActivity[game.id], onPressFallback }, game.id),
-          ),
+        let obj = { style: tmp3.container, children: items2 };
+        items2 = [
+          gamesToDisplay.map((game) => {
+            const obj = { game, activityLevel: gameActivity[game.id], onPressFallback };
+            return hasOwnProperty(closure_8, obj, game.id);
+          }),
           memo,
         ];
-        obj.children = items2;
         tmp16Result = tmp16(gameActivity, obj);
       }
+      tmp9 = tmp16Result;
     }
   }
   return tmp9;

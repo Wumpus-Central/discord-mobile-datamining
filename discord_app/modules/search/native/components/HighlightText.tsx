@@ -1,31 +1,41 @@
 // discord_app/modules/search/native/components/HighlightText.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../../Constants.tsx";
 import native from "../../../../design/void/native.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ColorUtils_mod from "../../../../utils/ColorUtils.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = { text: null };
-const obj3 = { fontFamily: fn(1085).Fonts.PRIMARY_BOLD, backgroundColor: null, color: null };
-const ColorUtils = fn(4727);
-obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.YELLOW_300, 0.3);
-obj3.color = nativeDefault.colors.TEXT_STRONG;
-obj2.text = obj3;
-let closure_3 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/search/native/components/HighlightText.tsx");
+let children;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+let ColorUtils;
+let obj2;
+const Fonts = Constants.Fonts;
+const jsx = Fragment.jsx;
+let createStyles = createStyles_mod;
+let obj = { text: obj2 };
+createStyles = createStyles.createStyles;
+obj2 = {
+  fontFamily: Fonts.PRIMARY_BOLD,
+  backgroundColor: ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.YELLOW_300, 0.3),
+  color: nativeDefault.colors.TEXT_STRONG,
+};
+ColorUtils = ColorUtils_mod;
+let closure_3 = createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (children) => {
-      const cResult = c.c(3);
+      const obj = react2;
+      const cResult = obj.c(3);
       children = children.children;
       const tmp4 = closure_3();
       if (cResult[0] === children) {
+        let tmp5;
         if (cResult[1] === tmp4.text) {
-          let tmp5 = cResult[2];
+          tmp5 = cResult[2];
         }
         return tmp5;
       }
@@ -34,9 +44,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = tmp4.text;
       cResult[2] = tmp6;
       tmp5 = tmp6;
-      const obj2 = { style: tmp4.text, children };
     }
   : (children) => {
-      const tmp = closure_3();
-      return jsx(native.LegacyText, { style: closure_3().text, children: children.children });
+      children = children.children;
+      return jsx(native.LegacyText, { style: closure_3().text, children });
     };
+const result = size.fileFinishedImporting("modules/search/native/components/HighlightText.tsx");
+
+export default tmp4;

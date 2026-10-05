@@ -1,8 +1,8 @@
 // discord_app/modules/gateway/WorkSchedulerTelemetry.tsx
 import _mod12 from "../../../_runtime/metro/00012__.js";
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
 let obj = {
   LONGER_DISPATCH: "longer_dispatch",
   EXCEEDED_MAX_CONSECUTIVE_FLUSHES: "exceeded_max_consecutive_flushes",
@@ -43,116 +43,123 @@ let closure_6 = Object.freeze({
   [obj.FIRED_DUE_TO_MAX_TIMEOUT]: 0,
   [obj.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED]: 0,
 });
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/gateway/WorkSchedulerTelemetry.tsx");
 class WorkSchedulerTelemetry {
   constructor() {
-    merged = Object.assign({
+    const merged = Object.assign({
       _timeTracking: null,
       _timingStats: null,
       _measurements: null,
       _eventCounts: null,
       _enabled: false,
     });
-    obj = closure_0(closure_1[1]);
+    const obj = _mod12;
     merged[0] = obj.cloneDeep(closure_3);
-    obj2 = closure_0(closure_1[1]);
+    const obj2 = _mod12;
     merged[1] = obj2.cloneDeep(closure_4);
-    obj3 = closure_0(closure_1[1]);
+    const obj3 = _mod12;
     merged[2] = obj3.cloneDeep(closure_5);
-    obj4 = closure_0(closure_1[1]);
+    const obj4 = _mod12;
     merged[3] = obj4.cloneDeep(closure_6);
     return merged;
   }
-}
-const prototype = WorkSchedulerTelemetry.prototype;
-prototype["reset"] = function reset() {
-  this._timeTracking = _mod12.cloneDeep(closure_3);
-  this._timingStats = _mod12.cloneDeep(closure_4);
-  this._measurements = _mod12.cloneDeep(closure_5);
-  this._eventCounts = _mod12.cloneDeep(closure_6);
-};
-prototype["clearTime"] = function clearTime(arg0) {
-  this._timeTracking[arg0] = null;
-};
-prototype["_storeTimeValue"] = function _storeTimeValue(TIME_OVER_DEADLINE, timeSinceExpiration) {
-  const tmp = _slicedToArray(this._timingStats[TIME_OVER_DEADLINE], 2);
-  const items = [(tmp[0] * tmp[1] + timeSinceExpiration) / (tmp[1] + 1), tmp[1] + 1];
-  this._timingStats[TIME_OVER_DEADLINE] = items;
-};
-prototype["time"] = function time(arg0) {
-  if (this._enabled) {
-    const _performance = performance;
-    tmp._timeTracking[arg0] = performance.now();
+  reset() {
+    const obj = _mod12;
+    this._timeTracking = obj.cloneDeep(closure_3);
+    const obj2 = _mod12;
+    this._timingStats = obj2.cloneDeep(closure_4);
+    const obj3 = _mod12;
+    this._measurements = obj3.cloneDeep(closure_5);
+    const obj4 = _mod12;
+    this._eventCounts = obj4.cloneDeep(closure_6);
   }
-};
-prototype["timeEnd"] = function timeEnd(TIME_TO_QUEUE_EMPTY) {
-  const self = this;
-  if (this._enabled) {
-    if (null != self._timeTracking[TIME_TO_QUEUE_EMPTY]) {
+  clearTime(arg0) {
+    this._timeTracking[arg0] = null;
+  }
+  _storeTimeValue(TIME_OVER_DEADLINE, timeSinceExpiration) {
+    const tmp = _slicedToArray(this._timingStats[TIME_OVER_DEADLINE], 2);
+    const items = [(tmp[0] * tmp[1] + timeSinceExpiration) / (tmp[1] + 1), tmp[1] + 1];
+    this._timingStats[TIME_OVER_DEADLINE] = items;
+  }
+  time(arg0) {
+    if (this._enabled) {
       const _performance = performance;
-      self._storeTimeValue(TIME_TO_QUEUE_EMPTY, performance.now() - tmp2);
-      self._timeTracking[TIME_TO_QUEUE_EMPTY] = null;
+      tmp._timeTracking[arg0] = performance.now();
     }
   }
-};
-prototype["timeTrack"] = function timeTrack(TIME_OVER_DEADLINE, timeSinceExpiration) {
-  const self = this;
-  if (this._enabled) {
-    self._storeTimeValue(TIME_OVER_DEADLINE, timeSinceExpiration);
+  timeEnd(TIME_TO_QUEUE_EMPTY) {
+    const self = this;
+    if (this._enabled) {
+      if (null != self._timeTracking[TIME_TO_QUEUE_EMPTY]) {
+        const _performance = performance;
+        self._storeTimeValue(TIME_TO_QUEUE_EMPTY, performance.now() - self._timeTracking[TIME_TO_QUEUE_EMPTY]);
+        self._timeTracking[TIME_TO_QUEUE_EMPTY] = null;
+      }
+    }
   }
-};
-prototype["measure"] = function measure(arg0, arg1) {
-  const self = this;
-  if (this._enabled) {
-    const tmp4 = _slicedToArray(self._measurements[arg0], 2);
-    const items = [(tmp4[0] * tmp4[1] + arg1) / (tmp4[1] + 1), tmp4[1] + 1];
-    self._measurements[arg0] = items;
+  timeTrack(TIME_OVER_DEADLINE, timeSinceExpiration) {
+    const self = this;
+    if (this._enabled) {
+      self._storeTimeValue(TIME_OVER_DEADLINE, timeSinceExpiration);
+    }
   }
-};
-prototype["track"] = function track(arg0) {
-  if (this._enabled) {
-    const _eventCounts = tmp._eventCounts;
-    _eventCounts[arg0] = _eventCounts[arg0] + 1;
+  measure(arg0, arg1) {
+    const self = this;
+    if (this._enabled) {
+      const tmp4 = _slicedToArray(self._measurements[arg0], 2);
+      const items = [(tmp4[0] * tmp4[1] + arg1) / (tmp4[1] + 1), tmp4[1] + 1];
+      self._measurements[arg0] = items;
+    }
   }
-};
-prototype["toggleTelemetry"] = function toggleTelemetry(_enabled) {
-  this._enabled = _enabled;
-};
-Object.defineProperty(prototype, "isTelemetryEnabled", {
+  track(arg0) {
+    if (this._enabled) {
+      const _eventCounts = tmp._eventCounts;
+      _eventCounts[arg0] = _eventCounts[arg0] + 1;
+    }
+  }
+  toggleTelemetry(_enabled) {
+    this._enabled = _enabled;
+  }
+  generateTelemetry() {
+    const entries = Object.entries(this._timingStats);
+    const reduced = entries.reduce((acc, item) => {
+      let tmp;
+      [tmp] = item;
+      const combined = "avg_" + tmp;
+      acc[combined] = "" + obj.toFixed(2) + "ms";
+      return acc;
+    }, {});
+    const entries1 = Object.entries(this._measurements);
+    const reduced1 = entries1.reduce((acc, item) => {
+      let tmp;
+      [tmp] = item;
+      const combined = "avg_" + tmp;
+      acc[combined] = "" + obj.toFixed(2);
+      return acc;
+    }, {});
+    const obj = {};
+    const entries2 = Object.entries(this._eventCounts);
+    const merged = Object.assign(
+      entries2.reduce((acc, item) => {
+        let tmp;
+        let tmp2;
+        [tmp, tmp2] = item;
+        const combined = "count_" + tmp;
+        acc[combined] = "" + tmp2;
+        return acc;
+      }, {}),
+    );
+    const merged1 = Object.assign(reduced);
+    const merged2 = Object.assign(reduced1);
+    return obj;
+  }
+}
+Object.defineProperty(WorkSchedulerTelemetry.prototype, "isTelemetryEnabled", {
   get: function isTelemetryEnabled() {
     return this._enabled;
   },
   set: undefined,
 });
-prototype["generateTelemetry"] = function generateTelemetry() {
-  const entries = Object.entries(this._timingStats);
-  const reduced = entries.reduce((acc, item) => {
-    [tmp] = item;
-    const combined = "avg_" + tmp;
-    acc[combined] = "" + obj.toFixed(2) + "ms";
-    return acc;
-  }, {});
-  const entries1 = Object.entries(this._measurements);
-  const reduced1 = entries1.reduce((acc, item) => {
-    [tmp] = item;
-    const combined = "avg_" + tmp;
-    acc[combined] = "" + obj.toFixed(2);
-    return acc;
-  }, {});
-  const entries2 = Object.entries(this._eventCounts);
-  const merged = Object.assign(
-    entries2.reduce((acc, item) => {
-      [tmp, tmp2] = item;
-      const combined = "count_" + tmp;
-      acc[combined] = "" + tmp2;
-      return acc;
-    }, {}),
-  );
-  const merged1 = Object.assign(reduced);
-  const merged2 = Object.assign(reduced1);
-  return {};
-};
 
 export const WorkSchedulerTelemetryEvent = obj;
 export const WorkSchedulerTelemetryTiming = obj2;

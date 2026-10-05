@@ -1,5 +1,6 @@
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOPropTintColor.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_ColorUtils from "../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
@@ -7,62 +8,81 @@ import FormSwitch from "../../../../design/components/Forms/native/FormSwitch.na
 import Form from "../../../../design/void/Form/native/index.tsx";
 import showCustomColorPickerActionSheetDefault from "../../../color_picker/native/showCustomColorPickerActionSheet.tsx";
 import VEVOO from "VEVOO.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
+import VEVOOStore from "VEVOOStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let dependencyMap;
 
-require = fn;
-const View = fn(17).View;
-const VEVOOStore = fn(5774);
-({ getVisualEffectViewOverrides: metroRequire, setVisualEffectViewOverides: closure_7 } = VEVOOStore);
-const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4890);
-let obj = { tintColor: null };
-let size = {
+let c10;
+let c9;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let size;
+let react = react_mod;
+const View = react_native.View;
+({ getVisualEffectViewOverrides: metroRequire, setVisualEffectViewOverides: metroImportDefault } = VEVOOStore);
+({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = Fragment);
+let obj = { tintColor: size };
+size = {
   width: nativeDefault.space.PX_32,
   height: nativeDefault.space.PX_32,
   backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_700,
   borderRadius: nativeDefault.radii.sm,
 };
-obj.tintColor = size;
 let closure_11 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-size = fn(2);
-const result = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropTintColor.tsx");
-
-export default noop.memo(
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
-        const cResult = c.c(45);
+        let closure_2;
+        let closure_4;
+        let first;
+        let first2;
+        let items1;
+        let items2;
+        let require;
+        let tmp14;
+        let tmp19;
+        let tmp20;
+        let tmp8;
+        let obj = react2;
+        const cResult = obj.c(45);
         const tmp4 = closure_11();
-        const visualEffectViewOverrideSharedStyles = VEVOO.useVisualEffectViewOverrideSharedStyles();
-        [tmp8, require] = first2(noop.useState(false), 2);
+        let obj2 = VEVOO;
+        const visualEffectViewOverrideSharedStyles = obj2.useVisualEffectViewOverrideSharedStyles();
+        let obj3 = react;
+        [tmp8, require] = first2(react.useState(false), 2);
+        first2(react.useState(false), 2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           let str = closure_6().tintColorOverrideHex;
           if (str == null) {
             str = "black";
           }
           cResult[0] = str;
-          let first = str;
+          first = str;
         } else {
           first = cResult[0];
         }
-        const tmp6Result = first2(noop.useState(first), 2);
+        const tmp6Result = first2(obj3.useState(first), 2);
         const first1 = tmp6Result[0];
         dependencyMap = tmp6Result[1];
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
           const tmp16 = closure_6();
           cResult[1] = tmp16;
-          let tmp14 = tmp16;
+          tmp14 = tmp16;
         } else {
           tmp14 = cResult[1];
         }
-        const tmp6Result2 = first2(noop.useState(tmp14.tintColorOverrideOpacity), 2);
+        const tmp6Result2 = first2(obj3.useState(tmp14.tintColorOverrideOpacity), 2);
         first2 = tmp6Result2[0];
-        noop = tmp6Result2[1];
-        const tmp7 = first2(noop.useState(false), 2);
+        react = tmp6Result2[1];
+        const ref = obj3.useRef(first2);
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function p(tintColorOverrideHex, tintColorOverrideOpacity) {
             if (null != tintColorOverrideHex) {
@@ -74,64 +94,68 @@ export default noop.memo(
             let hexToRgbaStringResult;
             if (null != tintColorOverrideHex) {
               if (null != tintColorOverrideOpacity) {
-                hexToRgbaStringResult = ColorUtils.hexToRgbaString(tintColorOverrideHex, tintColorOverrideOpacity);
+                const obj = ColorUtils;
+                hexToRgbaStringResult = obj.hexToRgbaString(tintColorOverrideHex, tintColorOverrideOpacity);
               }
             }
-            const obj2 = {};
-            const merged = Object.assign(timestampProducer());
-            obj2.tintColorOverrideOpacity = tintColorOverrideOpacity;
-            obj2.tintColorOverrideHex = tintColorOverrideHex;
-            obj2.tintColorOverride = hexToRgbaStringResult;
+            const obj2 = { tintColorOverrideOpacity, tintColorOverrideHex, tintColorOverride: hexToRgbaStringResult };
+            const merged = Object.assign(metroRequire());
             if (null == hexToRgbaStringResult) {
-              const obj3 = {};
+              const obj3 = { tintColorOverride: "rgba(0, 0, 0, 0)" };
               const merged1 = Object.assign(obj2);
-              obj3.tintColorOverride = "rgba(0, 0, 0, 0)";
-              React5(obj3);
+              metroImportDefault(obj3);
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => {
                 closure_2_7(obj2);
               });
             } else {
-              React5(obj2);
+              metroImportDefault(obj2);
             }
           };
           cResult[2] = fn;
-          let tmp19 = fn;
+          tmp19 = fn;
         } else {
           tmp19 = cResult[2];
         }
-        closure_5 = tmp19;
+        let closure_5 = tmp19;
         if (cResult[3] !== visualEffectViewOverrideSharedStyles.zeroPaddingVertical) {
           const items = [visualEffectViewOverrideSharedStyles.zeroPaddingVertical];
           cResult[3] = visualEffectViewOverrideSharedStyles.zeroPaddingVertical;
           cResult[4] = items;
-          let tmp20 = items;
+          tmp20 = items;
         } else {
           tmp20 = cResult[4];
         }
         if (cResult[5] === first1) {
+          let tmp21;
           if (cResult[6] === first2) {
-            let tmp21 = cResult[7];
+            tmp21 = cResult[7];
           }
           if (cResult[8] === tmp21) {
+            let tmp22;
+            let tmp26;
             if (cResult[9] === tmp8) {
-              let tmp22 = cResult[10];
+              tmp22 = cResult[10];
             }
             if (cResult[11] !== first1) {
               const obj4 = { backgroundColor: first1 };
               cResult[11] = first1;
               cResult[12] = obj4;
-              let tmp26 = obj4;
+              tmp26 = obj4;
             } else {
               tmp26 = cResult[12];
             }
             if (cResult[13] === tmp4.tintColor) {
+              let tmp27;
               if (cResult[14] === tmp26) {
-                let tmp27 = cResult[15];
+                tmp27 = cResult[15];
               }
               if (cResult[16] === visualEffectViewOverrideSharedStyles.zeroPadding) {
+                let tmp30;
+                let tmp35;
+                let tmp39;
                 if (cResult[17] === tmp27) {
-                  let tmp30 = cResult[18];
+                  tmp30 = cResult[18];
                 }
                 if (cResult[19] !== first2) {
                   let str2;
@@ -143,7 +167,7 @@ export default noop.memo(
                   }
                   cResult[19] = first2;
                   cResult[20] = str2;
-                  let tmp35 = str2;
+                  tmp35 = str2;
                 } else {
                   tmp35 = cResult[20];
                 }
@@ -155,36 +179,41 @@ export default noop.memo(
                   };
                   cResult[21] = first1;
                   cResult[22] = fn2;
-                  let tmp39 = fn2;
+                  tmp39 = fn2;
                 } else {
                   tmp39 = cResult[22];
                 }
                 if (cResult[23] === !tmp8) {
+                  let tmp40;
                   if (cResult[24] === tmp39) {
-                    let tmp40 = cResult[25];
+                    tmp40 = cResult[25];
                   }
                   if (cResult[26] === visualEffectViewOverrideSharedStyles.zeroPaddingHorizontal) {
                     if (cResult[27] === combined) {
                       if (cResult[28] === tmp40) {
-                        if (cResult[29] === tmp34) {
-                          let tmp44 = cResult[30];
+                        let tmp44;
+                        if (cResult[29] === !tmp8) {
+                          tmp44 = cResult[30];
                         }
                         if (cResult[31] === tmp44) {
+                          let tmp48;
                           if (cResult[32] === tmp30) {
-                            let tmp48 = cResult[33];
+                            tmp48 = cResult[33];
                           }
                           if (cResult[34] === first1) {
+                            let tmp52;
                             if (cResult[35] === first2) {
-                              let tmp52 = cResult[36];
+                              tmp52 = cResult[36];
                             }
                             if (cResult[37] === visualEffectViewOverrideSharedStyles.enabledSwitchStyle) {
                               if (cResult[38] === visualEffectViewOverrideSharedStyles.zeroHeight) {
                                 if (cResult[39] === tmp48) {
-                                  if (cResult[40] === tmp51) {
+                                  if (cResult[40] === !tmp8) {
                                     if (cResult[41] === tmp52) {
                                       if (cResult[42] === tmp20) {
+                                        let tmp53;
                                         if (cResult[43] === tmp22) {
-                                          let tmp53 = cResult[44];
+                                          tmp53 = cResult[44];
                                         }
                                         return tmp53;
                                       }
@@ -195,15 +224,17 @@ export default noop.memo(
                             }
                             class Q {
                               constructor() {
-                                obj = { color: null, onSelect: null };
-                                tmp = closure_1(closure_2[14]);
-                                obj2 = closure_0(closure_2[15]);
-                                obj.color = obj2.hex2int(closure_1);
-                                obj.onSelect = function onSelect(color) {
-                                  closure_1_5(require("utils/ColorUtils").int2hex(color), first2);
+                                let obj2;
+                                let obj = {
+                                  color: obj2.hex2int(first1),
+                                  onSelect(color) {
+                                    const obj = require("utils/ColorUtils");
+                                    closure_1_5(obj.int2hex(color), first2);
+                                  },
                                 };
-                                tmpResult = tmp(obj);
-                                return;
+                                const tmp = showCustomColorPickerActionSheetDefault;
+                                obj2 = utils_ColorUtils;
+                                tmp(obj);
                               }
                             }
                             tmp55[0] = tmp20;
@@ -211,13 +242,13 @@ export default noop.memo(
                               visualEffectViewOverrideSharedStyles);
                             tmp55[3] = tmp22;
                             tmp55[4] = tmp48;
-                            tmp55[5] = tmp51;
+                            tmp55[5] = !tmp8;
                             tmp55[6] = tmp52;
                             const tmp56 = closure_8(Form.FormRow, tmp55);
                             cResult[37] = visualEffectViewOverrideSharedStyles.enabledSwitchStyle;
                             cResult[38] = visualEffectViewOverrideSharedStyles.zeroHeight;
                             cResult[39] = tmp48;
-                            cResult[40] = tmp51;
+                            cResult[40] = !tmp8;
                             cResult[41] = tmp52;
                             cResult[42] = tmp20;
                             cResult[43] = tmp22;
@@ -226,15 +257,17 @@ export default noop.memo(
                           }
                           class Q {
                             constructor() {
-                              obj = { color: null, onSelect: null };
-                              tmp = closure_1(closure_2[14]);
-                              obj2 = closure_0(closure_2[15]);
-                              obj.color = obj2.hex2int(closure_1);
-                              obj.onSelect = function onSelect(color) {
-                                closure_1_5(require("utils/ColorUtils").int2hex(color), first2);
+                              let obj2;
+                              let obj = {
+                                color: obj2.hex2int(first1),
+                                onSelect(color) {
+                                  const obj = require("utils/ColorUtils");
+                                  closure_1_5(obj.int2hex(color), first2);
+                                },
                               };
-                              tmpResult = tmp(obj);
-                              return;
+                              const tmp = showCustomColorPickerActionSheetDefault;
+                              obj2 = utils_ColorUtils;
+                              tmp(obj);
                             }
                           }
                           cResult[34] = first1;
@@ -242,9 +275,8 @@ export default noop.memo(
                           cResult[36] = Q;
                           tmp52 = Q;
                         }
-                        const obj5 = { children: null };
-                        const items1 = [tmp30, tmp44];
-                        obj5.children = items1;
+                        const obj5 = { children: items1 };
+                        items1 = [tmp30, tmp44];
                         const tmp50 = closure_10(closure_9, obj5);
                         cResult[31] = tmp44;
                         cResult[32] = tmp30;
@@ -254,14 +286,14 @@ export default noop.memo(
                     }
                   }
                   tmp46[0] = visualEffectViewOverrideSharedStyles.zeroPaddingHorizontal;
-                  tmp46[1] = tmp34;
+                  tmp46[1] = !tmp8;
                   tmp46[2] = combined;
                   tmp46[3] = tmp40;
                   const tmp47 = closure_8(Form.FormRow, tmp46);
                   cResult[26] = visualEffectViewOverrideSharedStyles.zeroPaddingHorizontal;
                   cResult[27] = combined;
                   cResult[28] = tmp40;
-                  cResult[29] = tmp34;
+                  cResult[29] = !tmp8;
                   cResult[30] = tmp47;
                   tmp44 = tmp47;
                 }
@@ -280,9 +312,8 @@ export default noop.memo(
               cResult[18] = tmp33;
               tmp30 = tmp33;
             }
-            const obj7 = { style: null };
-            const items2 = [tmp4.tintColor, tmp26];
-            obj7.style = items2;
+            const obj7 = { style: items2 };
+            items2 = [tmp4.tintColor, tmp26];
             const tmp29 = closure_8(closure_5, obj7);
             cResult[13] = tmp4.tintColor;
             cResult[14] = tmp26;
@@ -299,40 +330,51 @@ export default noop.memo(
         }
         class L {
           constructor(arg0) {
-            tmp = closure_0(arg0);
-            tmp2 = closure_5;
+            _require(arg0);
             if (arg0) {
-              tmp4 = closure_1;
-              tmp5 = closure_3;
-              tmp2Result = tmp2(closure_1, closure_3);
+              closure_5(first1, first2);
             } else {
-              tmp2Result1 = tmp2(undefined, undefined);
+              closure_5(undefined, undefined);
             }
-            return;
           }
         }
         cResult[5] = first1;
         cResult[6] = first2;
         cResult[7] = L;
         tmp21 = L;
-        ref = noop.useRef(first2);
       }
     : () => {
+        let closure_2;
+        let closure_4;
+        let first1;
+        let items;
+        let items1;
+        let obj4;
+        let obj6;
+        let obj8;
+        let obj9;
+        let require;
+        let str2;
+        let tmp7;
         let tmp = closure_11();
-        const visualEffectViewOverrideSharedStyles = VEVOO.useVisualEffectViewOverrideSharedStyles();
-        [tmp7, require] = first1(noop.useState(false), 2);
+        let obj = VEVOO;
+        const visualEffectViewOverrideSharedStyles = obj.useVisualEffectViewOverrideSharedStyles();
+        let obj2 = react;
+        [tmp7, require] = first1(react.useState(false), 2);
+        const useState = react.useState;
+        first1(react.useState(false), 2);
         let str = closure_6().tintColorOverrideHex;
         if (str == null) {
           str = "black";
         }
-        const tmp5Result = first1(noop.useState(str), 2);
+        const tmp5Result = first1(useState(str), 2);
         const backgroundColor = tmp5Result[0];
         dependencyMap = tmp5Result[1];
-        const tmp5Result2 = first1(noop.useState(closure_6().tintColorOverrideOpacity), 2);
+        const tmp5Result2 = first1(obj2.useState(closure_6().tintColorOverrideOpacity), 2);
         first1 = tmp5Result2[0];
-        noop = tmp5Result2[1];
-        const tmp6 = first1(noop.useState(false), 2);
-        closure_5 = obj2.useCallback((tintColorOverrideHex, tintColorOverrideOpacity) => {
+        react = tmp5Result2[1];
+        const ref = obj2.useRef(first1);
+        let closure_5 = obj2.useCallback((tintColorOverrideHex, tintColorOverrideOpacity) => {
           if (null != tintColorOverrideHex) {
             closure_2(tintColorOverrideHex);
           }
@@ -342,70 +384,48 @@ export default noop.memo(
           let hexToRgbaStringResult;
           if (null != tintColorOverrideHex) {
             if (null != tintColorOverrideOpacity) {
-              hexToRgbaStringResult = ColorUtils.hexToRgbaString(tintColorOverrideHex, tintColorOverrideOpacity);
+              const obj = ColorUtils;
+              hexToRgbaStringResult = obj.hexToRgbaString(tintColorOverrideHex, tintColorOverrideOpacity);
             }
           }
-          const obj2 = {};
-          const merged = Object.assign(timestampProducer());
-          obj2.tintColorOverrideOpacity = tintColorOverrideOpacity;
-          obj2.tintColorOverrideHex = tintColorOverrideHex;
-          obj2.tintColorOverride = hexToRgbaStringResult;
+          const obj2 = { tintColorOverrideOpacity, tintColorOverrideHex, tintColorOverride: hexToRgbaStringResult };
+          const merged = Object.assign(metroRequire());
           if (null == hexToRgbaStringResult) {
-            const obj3 = {};
+            const obj3 = { tintColorOverride: "rgba(0, 0, 0, 0)" };
             const merged1 = Object.assign(obj2);
-            obj3.tintColorOverride = "rgba(0, 0, 0, 0)";
-            React5(obj3);
+            metroImportDefault(obj3);
             const _setTimeout = setTimeout;
             const timerId = setTimeout(() => {
               closure_2_7(obj2);
             });
           } else {
-            React5(obj2);
+            metroImportDefault(obj2);
           }
         }, []);
         let obj3 = {
-          style: null,
+          style: items,
           labelStyle: visualEffectViewOverrideSharedStyles.zeroHeight,
           leadingStyle: visualEffectViewOverrideSharedStyles.enabledSwitchStyle,
-          leading: closure_8(FormSwitch.FormSwitch, {
-            value: tmp7,
-            onValueChange(arg0) {
-              _require(arg0);
-              if (arg0) {
-                closure_5(first, first1);
-              } else {
-                closure_5(undefined, undefined);
-              }
-            },
-          }),
-          subLabel: null,
-          disabled: null,
-          onPress: null,
-        };
-        const items = [visualEffectViewOverrideSharedStyles.zeroPaddingVertical];
-        obj3.style = items;
-        const obj5 = { style: visualEffectViewOverrideSharedStyles.zeroPadding, label: "Blur Tint", trailing: null };
-        const obj6 = { style: null };
-        const items1 = [tmp.tintColor, { backgroundColor }];
-        obj6.style = items1;
-        obj5.trailing = closure_8(closure_5, obj6);
-        const items2 = [closure_8(Form.FormRow, obj5)];
-        const obj7 = {
-          style: visualEffectViewOverrideSharedStyles.zeroPaddingHorizontal,
+          leading: closure_8(FormSwitch.FormSwitch, obj4),
+          subLabel: closure_10(closure_9, obj8),
           disabled: !tmp7,
-          label: null,
-          subLabel: null,
+          onPress() {
+            let obj2;
+            let obj = {
+              color: obj2.hex2int(first),
+              onSelect(color) {
+                const obj = require("utils/ColorUtils");
+                closure_1_5(obj.int2hex(color), first1);
+              },
+            };
+            const tmp = showCustomColorPickerActionSheetDefault;
+            obj2 = utils_ColorUtils;
+            tmp(obj);
+          },
         };
-        let str2;
-        if (first1 != null) {
-          str2 = first1.toFixed(3);
-        }
-        if (str2 == null) {
-          str2 = "";
-        }
-        const obj8 = { children: null };
-        obj7.label = "Blur Tint Opacity " + str2;
-        const obj4 = {
+        items = [visualEffectViewOverrideSharedStyles.zeroPaddingVertical];
+        const FormRow = Form.FormRow;
+        obj4 = {
           value: tmp7,
           onValueChange(arg0) {
             _require(arg0);
@@ -416,27 +436,42 @@ export default noop.memo(
             }
           },
         };
-        const ref = noop.useRef(first1);
-        obj7.subLabel = closure_8(backgroundColor(15843), {
+        const obj5 = {
+          style: visualEffectViewOverrideSharedStyles.zeroPadding,
+          label: "Blur Tint",
+          trailing: closure_8(closure_5, obj6),
+        };
+        obj6 = { style: items1 };
+        items1 = [tmp.tintColor, { backgroundColor }];
+        const FormRow2 = Form.FormRow;
+        const items2 = [closure_8(FormRow2, obj5)];
+        const obj7 = {
+          style: visualEffectViewOverrideSharedStyles.zeroPaddingHorizontal,
           disabled: !tmp7,
-          initialValue: noop.useRef(first1),
+          label: "Blur Tint Opacity " + str2,
+          subLabel: closure_8(backgroundColor(15843), obj9),
+        };
+        str2 = undefined;
+        const FormRow3 = Form.FormRow;
+        if (first1 != null) {
+          str2 = first1.toFixed(3);
+        }
+        if (str2 == null) {
+          str2 = "";
+        }
+        obj8 = { children: items2 };
+        obj9 = {
+          disabled: !tmp7,
+          initialValue: ref,
           onValueChange(arg0) {
             closure_5(first, arg0);
           },
-        });
-        items2[1] = closure_8(Form.FormRow, obj7);
-        obj8.children = items2;
-        obj3.subLabel = closure_10(closure_9, obj8);
-        obj3.disabled = !tmp7;
-        obj3.onPress = function onPress() {
-          const obj = { color: null, onSelect: null };
-          const tmp = showCustomColorPickerActionSheetDefault;
-          obj.color = utils_ColorUtils.hex2int(first);
-          obj.onSelect = function onSelect(color) {
-            closure_1_5(require("utils/ColorUtils").int2hex(color), first1);
-          };
-          tmp(obj);
         };
-        return closure_8(Form.FormRow, obj3);
+        items2[1] = closure_8(FormRow3, obj7);
+        return closure_8(FormRow, obj3);
       },
 );
+size = size_mod;
+const result = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropTintColor.tsx");
+
+export default memoResult;

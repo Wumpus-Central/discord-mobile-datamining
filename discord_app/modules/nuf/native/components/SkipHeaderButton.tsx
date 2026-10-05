@@ -1,36 +1,36 @@
 // discord_app/modules/nuf/native/components/SkipHeaderButton.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import HeaderShared from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = {
-  button: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT },
-  insideNavigatorButton: { paddingRight: 16 },
-};
-let closure_3 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/nuf/native/components/SkipHeaderButton.tsx");
+let label;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+let obj2;
+const jsx = Fragment.jsx;
+let obj = { button: obj2, insideNavigatorButton: { paddingRight: 16 } };
+obj2 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let closure_3 = createStyles.createStyles(obj);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (label) => {
-      const cResult = c.c(9);
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(9);
       const tmp4 = closure_3();
       if (cResult[0] !== label.label) {
         label = label.label;
         if (label == null) {
-          const intl = util.intl;
-          label = intl.string(util.t["5Wxrcd"]);
+          const intl = intl2.intl;
+          label = intl.string(intl2.t["5Wxrcd"]);
         }
         cResult[0] = label.label;
         cResult[1] = label;
-        let tmp5 = label;
+        tmp5 = label;
       } else {
         tmp5 = cResult[1];
       }
@@ -39,23 +39,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         prop = tmp4.insideNavigatorButton;
       }
       if (cResult[2] === tmp4.button) {
+        let tmp8;
         if (cResult[3] === prop) {
-          let tmp8 = cResult[4];
+          tmp8 = cResult[4];
         }
         if (cResult[5] === tmp5) {
           if (cResult[6] === label) {
+            let tmp9;
             if (cResult[7] === tmp8) {
-              let tmp9 = cResult[8];
+              tmp9 = cResult[8];
             }
             return tmp9;
           }
         }
-        const obj2 = {};
+        const HeaderTextButton = HeaderShared.HeaderTextButton;
         const merged = Object.assign(label);
-        obj2.labelStyle = tmp8;
-        obj2.label = tmp5;
-        obj2.accessibilityLabel = tmp5;
-        const tmp14 = jsx(HeaderShared.HeaderTextButton, {});
+        const tmp14 = <HeaderTextButton labelStyle={tmp8} label={tmp5} accessibilityLabel={tmp5} />;
         cResult[5] = tmp5;
         cResult[6] = label;
         cResult[7] = tmp8;
@@ -72,10 +71,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_3();
       label = label.label;
       if (label == null) {
-        const intl = util.intl;
-        label = intl.string(util.t["5Wxrcd"]);
+        const intl = intl2.intl;
+        label = intl.string(intl2.t["5Wxrcd"]);
       }
-      const obj = {};
+      const HeaderTextButton = HeaderShared.HeaderTextButton;
       const merged = Object.assign(label);
       const items = [tmp.button];
       let prop;
@@ -83,8 +82,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         prop = tmp.insideNavigatorButton;
       }
       items[1] = prop;
-      obj.labelStyle = items;
-      obj.label = label;
-      obj.accessibilityLabel = label;
-      return jsx(HeaderShared.HeaderTextButton, {});
+      return <HeaderTextButton labelStyle={items} label={label} accessibilityLabel={label} />;
     };
+const result = size.fileFinishedImporting("modules/nuf/native/components/SkipHeaderButton.tsx");
+
+export default tmp3;

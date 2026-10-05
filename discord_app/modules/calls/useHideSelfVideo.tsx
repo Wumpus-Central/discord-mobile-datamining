@@ -1,20 +1,27 @@
 // discord_app/modules/calls/useHideSelfVideo.tsx
+import Constants2 from "../../Constants.tsx";
 import AudioActionCreatorsDefault from "../../actions/AudioActionCreators.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
+import Constants from "../../../discord_common/js/packages/media-engine/Constants.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const VideoToggleState = fn(1085).VideoToggleState;
-const Constants = fn(4915);
-({ MediaEngineContextTypes: metroRequire, Features: closure_7 } = Constants);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/calls/useHideSelfVideo.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let metroImportDefault;
+let metroRequire;
+const VideoToggleState = Constants2.VideoToggleState;
+({ MediaEngineContextTypes: metroRequire, Features: metroImportDefault } = Constants);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
+      let id;
+      let tmp10;
+      let tmp14;
+      let tmp5;
+      let tmp6;
+      let tmp9;
       let DEFAULT = arg1;
-      const cResult = DEFAULT(576).c(16);
+      let obj = DEFAULT(576);
+      const cResult = obj.c(16);
       if (undefined === arg1) {
         DEFAULT = constants.DEFAULT;
       }
@@ -22,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [AuthenticationStore];
         class D {
           constructor() {
-            return closure_1_3.getId();
+            return id.getId();
           }
         }
         cResult[0] = items;
@@ -31,64 +38,63 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      let obj = DEFAULT(576);
-      const stateFromStores = DEFAULT(504).useStateFromStores(tmp5, D);
+      const tmpResult = DEFAULT(504);
+      const stateFromStores = tmpResult.useStateFromStores(tmp5, D);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [MediaEngineStore];
         class D {
           constructor() {
-            return closure_1_3.getId();
+            return id.getId();
           }
         }
         cResult[2] = items1;
         cResult[3] = tmp12;
-        let tmp10 = tmp12;
-        let tmp9 = items1;
+        tmp10 = tmp12;
+        tmp9 = items1;
       } else {
         tmp9 = cResult[2];
         tmp10 = cResult[3];
       }
-      const tmpResult = DEFAULT(504);
-      const stateFromStores1 = DEFAULT(504).useStateFromStores(tmp9, tmp10);
+      const tmpResult3 = DEFAULT(504);
+      const stateFromStores1 = tmpResult3.useStateFromStores(tmp9, tmp10);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [MediaEngineStore];
         class D {
           constructor() {
-            return closure_1_3.getId();
+            return id.getId();
           }
         }
         cResult[4] = items2;
-        let tmp14 = items2;
+        tmp14 = items2;
       } else {
         tmp14 = cResult[4];
       }
       if (cResult[5] === stateFromStores) {
+        let tmp16;
+        let tmp17;
         if (cResult[6] === DEFAULT) {
-          let tmp16 = cResult[7];
-          let tmp17 = cResult[8];
+          tmp16 = cResult[7];
+          tmp17 = cResult[8];
         }
-        const stateFromStores2 = tmp(504).useStateFromStores(tmp14, tmp16, tmp17);
+        const tmpResult4 = DEFAULT(504);
+        const stateFromStores2 = tmpResult4.useStateFromStores(tmp14, tmp16, tmp17);
         class D {
           constructor() {
-            return closure_1_3.getId();
+            return id.getId();
           }
         }
         const fn = function p(arg0) {
-          AudioActionCreatorsDefault.setDisableLocalVideo(
-            stateFromStores,
-            arg0 ? VideoToggleState.DISABLED : VideoToggleState.MANUAL_ENABLED,
-            DEFAULT,
-          );
           const tmp2 = arg0 ? VideoToggleState.DISABLED : VideoToggleState.MANUAL_ENABLED;
+          const obj = AudioActionCreatorsDefault;
+          obj.setDisableLocalVideo(stateFromStores, tmp2, DEFAULT);
         };
         cResult[9] = stateFromStores;
         cResult[10] = DEFAULT;
         cResult[11] = fn;
-        const tmpResult4 = tmp(504);
       }
       class F {
         constructor() {
-          return closure_4.isLocalVideoDisabled(closure_1, DEFAULT);
+          return MediaEngineStore.isLocalVideoDisabled(stateFromStores, DEFAULT);
         }
       }
       const items3 = [stateFromStores, DEFAULT];
@@ -98,25 +104,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = items3;
       tmp17 = items3;
       tmp16 = F;
-      const tmpResult3 = DEFAULT(504);
     }
   : (arg0) => {
+      let id;
       let DEFAULT = arg1;
       if (arg1 === undefined) {
         DEFAULT = constants.DEFAULT;
       }
-      const items = [AuthenticationStore];
-      const stateFromStores = DEFAULT(504).useStateFromStores(items, () => id.getId());
       let obj = DEFAULT(504);
+      const items = [AuthenticationStore];
+      const stateFromStores = obj.useStateFromStores(items, () => id.getId());
       const items1 = [MediaEngineStore];
-      const stateFromStores1 = DEFAULT(504).useStateFromStores(items1, () =>
+      const obj2 = DEFAULT(504);
+      const stateFromStores1 = obj2.useStateFromStores(items1, () =>
         MediaEngineStore.supports(constants.DISABLE_VIDEO),
       );
-      const obj2 = DEFAULT(504);
       const items2 = [MediaEngineStore];
       const items3 = [stateFromStores, DEFAULT];
       let tmp5 = null == arg0;
-      const stateFromStores2 = DEFAULT(504).useStateFromStores(
+      const obj3 = DEFAULT(504);
+      const stateFromStores2 = obj3.useStateFromStores(
         items2,
         () => MediaEngineStore.isLocalVideoDisabled(stateFromStores, DEFAULT),
         items3,
@@ -131,13 +138,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp5,
         stateFromStores2,
         (arg0) => {
-          AudioActionCreatorsDefault.setDisableLocalVideo(
-            stateFromStores,
-            arg0 ? VideoToggleState.DISABLED : VideoToggleState.MANUAL_ENABLED,
-            DEFAULT,
-          );
           const tmp2 = arg0 ? VideoToggleState.DISABLED : VideoToggleState.MANUAL_ENABLED;
+          const obj = AudioActionCreatorsDefault;
+          obj.setDisableLocalVideo(stateFromStores, tmp2, DEFAULT);
         },
       ];
       return items4;
     };
+const result = size.fileFinishedImporting("modules/calls/useHideSelfVideo.tsx");
+
+export default tmp3;

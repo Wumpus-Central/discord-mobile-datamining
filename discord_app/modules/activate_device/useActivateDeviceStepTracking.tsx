@@ -1,46 +1,50 @@
 // discord_app/modules/activate_device/useActivateDeviceStepTracking.tsx
+import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import usePreviousDefault from "../../hooks/usePrevious.tsx";
 import ActivateDeviceUtils from "ActivateDeviceUtils.tsx";
-import noop from "../../../_runtime/metro/00019__.js";
+import react from "../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, importDefault, type;
 
-require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/activate_device/useActivateDeviceStepTracking.tsx");
-
-export const useActivateDeviceStepTracking = ReactCompilerGating.isReactCompilerEnabled()
+const AnalyticEvents = Constants.AnalyticEvents;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
       _require = arg0;
-      const cResult = require("c").c(4);
+      let obj = require("react");
+      const cResult = obj.c(4);
       const tmp2 = usePreviousDefault(arg0);
       importDefault = tmp2;
       if (cResult[0] === tmp2) {
+        let tmp3;
+        let tmp4;
         if (cResult[1] === arg0) {
-          let tmp3 = cResult[2];
-          let tmp4 = cResult[3];
+          tmp3 = cResult[2];
+          tmp4 = cResult[3];
         }
-        const effect = noop.useEffect(tmp3, tmp4);
+        const effect = react.useEffect(tmp3, tmp4);
       }
       const fn = function p() {
         if (closure_0 !== type) {
-          let tmp3 = "user-code-input" !== closure_0.type;
-          if (tmp3) {
-            tmp3 = "handoff" !== closure_0.type;
-          }
           let result = null;
+          const tmp3 = "user-code-input" !== closure_0.type && "handoff" !== closure_0.type;
           if (tmp3) {
-            result = ActivateDeviceUtils.clientIdToActivateDevicePlatform(closure_0.userCodeData.clientId);
+            const obj = ActivateDeviceUtils;
+            result = obj.clientIdToActivateDevicePlatform(closure_0.userCodeData.clientId);
           }
           type = undefined;
+          const track = AnalyticsUtilsDefault.track;
+          const DEVICE_LINK_STEP = AnalyticEvents.DEVICE_LINK_STEP;
+          AnalyticsUtilsDefault;
           if (type != null) {
             type = type.type;
           }
-          const obj3 = { previous_step: type, current_step: closure_0.type, platform_type: result };
-          AnalyticsUtilsDefault.track(AnalyticEvents.DEVICE_LINK_STEP, obj3);
+          const obj2 = { previous_step: type, current_step: closure_0.type, platform_type: result };
+          track(DEVICE_LINK_STEP, obj2);
         }
       };
       const items = [tmp2, arg0];
@@ -50,29 +54,32 @@ export const useActivateDeviceStepTracking = ReactCompilerGating.isReactCompiler
       cResult[3] = items;
       tmp4 = items;
       tmp3 = fn;
-      let obj = require("c");
     }
   : (arg0) => {
-      closure_0 = arg0;
+      let closure_0 = arg0;
       const tmp = usePreviousDefault(arg0);
       importDefault = tmp;
       const items = [tmp, arg0];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
         if (closure_0 !== type) {
-          let tmp3 = "user-code-input" !== closure_0.type;
-          if (tmp3) {
-            tmp3 = "handoff" !== closure_0.type;
-          }
           let result = null;
+          const tmp3 = "user-code-input" !== closure_0.type && "handoff" !== closure_0.type;
           if (tmp3) {
-            result = ActivateDeviceUtils.clientIdToActivateDevicePlatform(closure_0.userCodeData.clientId);
+            const obj = ActivateDeviceUtils;
+            result = obj.clientIdToActivateDevicePlatform(closure_0.userCodeData.clientId);
           }
           type = undefined;
+          const track = AnalyticsUtilsDefault.track;
+          const DEVICE_LINK_STEP = AnalyticEvents.DEVICE_LINK_STEP;
+          AnalyticsUtilsDefault;
           if (type != null) {
             type = type.type;
           }
-          const obj3 = { previous_step: type, current_step: closure_0.type, platform_type: result };
-          AnalyticsUtilsDefault.track(AnalyticEvents.DEVICE_LINK_STEP, obj3);
+          const obj2 = { previous_step: type, current_step: closure_0.type, platform_type: result };
+          track(DEVICE_LINK_STEP, obj2);
         }
       }, items);
     };
+let result = size.fileFinishedImporting("modules/activate_device/useActivateDeviceStepTracking.tsx");
+
+export const useActivateDeviceStepTracking = tmp2;

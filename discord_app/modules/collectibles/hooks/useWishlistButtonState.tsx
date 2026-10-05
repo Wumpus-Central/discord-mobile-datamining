@@ -1,16 +1,23 @@
 // discord_app/modules/collectibles/hooks/useWishlistButtonState.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
 import UserProfileStore from "../../user_profile/UserProfileStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let c4, c5;
 
-const require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useWishlistButtonState.tsx");
 
 export const useWishlistButtonState = function useWishlistButtonState(onRemoveSuccess) {
+  let _location;
+  let _undefined;
+  let c8;
+  let items;
+  let onAddSuccess;
+  let skuId;
+  let tmp7;
   ({ userId: require, skuId } = onRemoveSuccess);
   ({ location: _location, onAddSuccess } = onRemoveSuccess);
   onRemoveSuccess = onRemoveSuccess.onRemoveSuccess;
@@ -20,24 +27,24 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
   let stateFromStores;
   c8 = undefined;
   let isBusy;
-  closure_10 = undefined;
+  let closure_10;
   let isSkuInWishlist;
   const tmp2 = skuId(onAddSuccess[4]);
+  let obj = require("StringUtils");
   if (obj.isNullOrEmpty(_location)) {
-    let items = [];
+    items = [];
   } else {
     items = [_location];
   }
   analyticsLocations = tmp2(items).analyticsLocations;
-  obj = require("StringUtils");
   const items1 = [analyticsLocations];
-  stateFromStores = require("initialize").useStateFromStores(items1, () =>
-    UserProfileStore.getFirstWishlistId(require),
-  );
-  const tmp3Result = require("initialize");
-  isSkuInWishlist = require("useWishlistHooks").useIsSkuInWishlist(stateFromStores, skuId);
+  const tmp3Result = require("get initialized");
+  stateFromStores = tmp3Result.useStateFromStores(items1, () => UserProfileStore.getFirstWishlistId(require));
   const tmp3Result2 = require("useWishlistHooks");
+  isSkuInWishlist = tmp3Result2.useIsSkuInWishlist(stateFromStores, skuId);
+  let obj4 = skipAddAnnouncement;
   [tmp7, c8] = onError(skipAddAnnouncement.useState(null), 2);
+  const tmp6 = onError(skipAddAnnouncement.useState(null), 2);
   const tmp8 = onError(skipAddAnnouncement.useState(false), 2);
   isBusy = tmp8[0];
   closure_10 = tmp8[1];
@@ -60,16 +67,19 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
     onError,
     skipAddAnnouncement,
   ];
-  const tmp6 = onError(skipAddAnnouncement.useState(null), 2);
-  return {
+  let obj2 = {
     isWishlisted: isSkuInWishlist,
     isBusy,
-    handleToggle: skipAddAnnouncement.useCallback(
+    handleToggle: obj4.useCallback(
       onRemoveSuccess(function* () {
+        let closure_1;
+        let closure_2;
+        let obj3;
+        let obj5;
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp8 === 3) {
+        } else if (tmp3 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -79,7 +89,9 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
             return { value: "IconComponent", done: null };
           }
         } else {
+          let c3;
           try {
+            let closure_0;
             c5 = 2;
             if (0 === c4) {
               if (arg0 === 1) {
@@ -90,29 +102,8 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                closure_0 = tmp9;
-                if (first) {
-                  c5 = 3;
-                  if (arg0 === 1) {
-                    c5 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c3 = 0;
-                    closure_129_8(null);
-                    closure_129_10(false);
-                    c5 = 3;
-                    const obj6 = { value, done: true };
-                    return obj6;
-                  } else {
-                    const AccessibilityAnnouncer2 = closure_0(tmp86[9]).AccessibilityAnnouncer;
-                    const intl2 = closure_0(tmp86[10]).intl;
-                    AccessibilityAnnouncer2.announce(intl2.string(closure_0(tmp86[10]).t.DSXOiP));
-                    if (closure_129_3 != null) {
-                      closure_129_3();
-                    }
-                    c3 = 1;
-                  }
-                } else {
+                closure_0 = tmp4;
+                if (!first) {
                   closure_10(true);
                   if (isSkuInWishlist) {
                     if (null != stateFromStores) {
@@ -120,43 +111,65 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
                       c3 = 3;
                       c4 = 4;
                       c5 = 1;
-                      const obj7 = {
-                        value: tmp4(tmp86[8]).removeSkuFromWishlist(tmp73, skuId, analyticsLocations),
-                        done: false,
-                      };
-                      return obj7;
+                      const obj6 = { value: obj5.removeSkuFromWishlist(tmp68, skuId, analyticsLocations), done: false };
+                      obj5 = tmp(onAddSuccess[8]);
+                      return obj6;
                     }
                   }
                   _undefined(true);
                   c3 = 4;
                   c4 = 6;
                   c5 = 1;
-                  const obj8 = { value: tmp4(tmp86[8]).addSkuToWishlist(skuId, analyticsLocations), done: false };
-                  return obj8;
+                  const obj7 = { value: obj3.addSkuToWishlist(skuId, analyticsLocations), done: false };
+                  obj3 = tmp(onAddSuccess[8]);
+                  return obj7;
                 }
               }
-            } else if (1 === tmp9) {
+            } else if (1 === c4) {
               c3 = 0;
               closure_129_8(null);
               closure_129_10(false);
-              throw tmp86;
-            } else if (2 === tmp9) {
+              throw onAddSuccess;
+            } else if (2 === c4) {
               c3 = 0;
               closure_129_8(null);
               closure_129_10(false);
-              throw tmp86;
-            } else if (3 === tmp9) {
+              throw onAddSuccess;
+            } else if (3 === c4) {
               c3 = 1;
-              closure_128_0 = tmp86;
+              closure_0 = onAddSuccess;
               if (closure_129_4 != null) {
-                tmp47(closure_128_0);
+                tmp42(closure_0);
               }
-            } else if (4 !== tmp9) {
-              if (5 === tmp9) {
+              c3 = 0;
+              closure_129_8(null);
+              closure_129_10(false);
+            } else if (4 === c4) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c3 = 0;
+                closure_129_8(null);
+                closure_129_10(false);
+                c5 = 3;
+                const obj8 = { value, done: true };
+                return obj8;
+              } else {
+                const AccessibilityAnnouncer2 = closure_0(onAddSuccess[9]).AccessibilityAnnouncer;
+                const announce2 = AccessibilityAnnouncer2.announce;
+                const intl2 = closure_0(onAddSuccess[10]).intl;
+                announce2(intl2.string(closure_0(onAddSuccess[10]).t.DSXOiP));
+                if (closure_129_3 != null) {
+                  closure_129_3();
+                }
+                c3 = 1;
+              }
+            } else {
+              if (5 === c4) {
                 c3 = 2;
-                closure_128_1 = tmp86;
                 if (closure_129_4 != null) {
-                  tmp28(closure_128_1);
+                  tmp23(onAddSuccess);
                 }
               } else if (arg0 === 1) {
                 c5 = 3;
@@ -170,9 +183,10 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
                 return obj;
               } else {
                 if (!closure_129_5) {
-                  const AccessibilityAnnouncer = closure_0(tmp86[9]).AccessibilityAnnouncer;
-                  const intl = closure_0(tmp86[10]).intl;
-                  AccessibilityAnnouncer.announce(intl.string(closure_0(tmp86[10]).t["3T2jbf"]));
+                  const AccessibilityAnnouncer = closure_0(onAddSuccess[9]).AccessibilityAnnouncer;
+                  const announce = AccessibilityAnnouncer.announce;
+                  const intl = closure_0(onAddSuccess[10]).intl;
+                  announce(intl.string(closure_0(onAddSuccess[10]).t["3T2jbf"]));
                 }
                 if (closure_129_2 != null) {
                   closure_129_2();
@@ -183,21 +197,21 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
               closure_129_8(null);
               closure_129_10(false);
             }
-            c3 = 0;
-            closure_129_8(null);
-            closure_129_10(false);
-          } catch (tmp86) {
-            if (tmp5 === c3) {
-              c5 = tmp3;
-              throw tmp86;
-            } else if (tmp2 === tmp88) {
-              c4 = tmp2;
-            } else if (tmp === tmp88) {
-              c4 = tmp;
-            } else if (tmp3 === tmp88) {
-              c4 = tmp3;
+            c5 = 3;
+            return { value: "IconComponent", done: null };
+          } catch (tmp81) {
+            onAddSuccess = tmp81;
+            if (0 === c3) {
+              c5 = 3;
+              throw tmp81;
+            } else if (1 === c3) {
+              c4 = 1;
+            } else if (2 === c3) {
+              c4 = 2;
+            } else if (3 === c3) {
+              c4 = 3;
             } else {
-              c4 = tmp6;
+              c4 = 5;
             }
           }
         }
@@ -205,4 +219,5 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
       items3,
     ),
   };
+  return obj2;
 };

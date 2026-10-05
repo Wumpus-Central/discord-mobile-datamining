@@ -1,20 +1,24 @@
 // discord_app/design/components/ActivityIndicator/native/ActivityIndicator.native.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useToken from "../../../tokens/native/useToken.tsx";
+import useToken2 from "../../../tokens/native/useToken.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
 let closure_3 = ["size", "animating"];
-const ActivityIndicator = fn(17).ActivityIndicator;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/ActivityIndicator/native/ActivityIndicator.native.tsx");
-
-export const ActivityIndicator = ReactCompilerGating.isReactCompilerEnabled()
+const ActivityIndicator = react_native.ActivityIndicator;
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(9);
+      let animating;
+      let tmp4;
+      let tmp5;
+      let tmp6;
+      const obj = react;
+      const cResult = obj.c(9);
       if (cResult[0] !== arg0) {
         ({ size, animating } = arg0);
         const tmp9 = _objectWithoutProperties(arg0, closure_3);
@@ -22,9 +26,9 @@ export const ActivityIndicator = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = tmp9;
         cResult[2] = size;
         cResult[3] = animating;
-        let tmp6 = animating;
-        let tmp5 = size;
-        let tmp4 = tmp9;
+        tmp6 = animating;
+        tmp5 = size;
+        tmp4 = tmp9;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
@@ -34,33 +38,31 @@ export const ActivityIndicator = ReactCompilerGating.isReactCompilerEnabled()
       if (undefined !== tmp5) {
         str = tmp5;
       }
+      const useToken = useToken2.useToken;
       let color = tmp4.color;
+      useToken2;
       if (color == null) {
-        color = tmpResult.useToken(nativeDefault.colors.BACKGROUND_BRAND);
+        color = useToken(nativeDefault.colors.BACKGROUND_BRAND);
       }
       if (cResult[4] === (undefined === tmp6 || tmp6)) {
         if (cResult[5] === color) {
           if (cResult[6] === tmp4) {
+            let tmp12;
             if (cResult[7] === str) {
-              let tmp11 = cResult[8];
+              tmp12 = cResult[8];
             }
-            return tmp11;
+            return tmp12;
           }
         }
       }
-      const obj2 = {};
       const merged = Object.assign(tmp4);
-      obj2.size = str;
-      obj2.animating = undefined === tmp6 || tmp6;
-      obj2.color = color;
-      const tmp13 = <ActivityIndicator />;
+      const tmp14 = <ActivityIndicator size={str} animating={undefined === tmp6 || tmp6} color={color} />;
       cResult[4] = undefined === tmp6 || tmp6;
       cResult[5] = color;
       cResult[6] = tmp4;
       cResult[7] = str;
-      cResult[8] = tmp13;
-      tmp11 = tmp13;
-      tmpResult = useToken;
+      cResult[8] = tmp14;
+      tmp12 = tmp14;
     }
   : (size) => {
       let str = size.size;
@@ -72,14 +74,16 @@ export const ActivityIndicator = ReactCompilerGating.isReactCompilerEnabled()
         flag = true;
       }
       const merged = Object.assign(size, Object.assign({ size: 0, animating: 0 }));
+      const useToken = useToken2.useToken;
       let color = merged.color;
+      useToken2;
       if (color == null) {
-        color = obj.useToken(nativeDefault.colors.BACKGROUND_BRAND);
+        color = useToken(nativeDefault.colors.BACKGROUND_BRAND);
       }
-      const obj2 = {};
       const merged1 = Object.assign(merged);
-      obj2.size = str;
-      obj2.animating = flag;
-      obj2.color = color;
-      return <ActivityIndicator />;
+      return <ActivityIndicator size={str} animating={flag} color={color} />;
     };
+const result = size.fileFinishedImporting("design/components/ActivityIndicator/native/ActivityIndicator.native.tsx");
+const ActivityIndicator_export = tmp2;
+
+export { ActivityIndicator_export as ActivityIndicator };

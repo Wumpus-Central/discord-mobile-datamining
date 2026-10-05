@@ -1,99 +1,110 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import ApplicationConstants from "../../../applications/ApplicationConstants.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import useGuildApplicationDefault from "../../../applications/useGuildApplication.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import PlaceholderDefault from "../components/Placeholder.tsx";
+import GuildSettingsRoleSubscriptionWelcomeViewDefault from "welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx";
+import react from "../../../../../_runtime/00019_react.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
+import Constants from "../../../../Constants.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const PlaceholderDefault = tmp3(17877);
-const GuildSettingsRoleSubscriptionWelcomeViewDefault = tmp3(17878);
-require = fn;
-const Constants = fn(1085);
+let guild, guildId;
+
+let closure_4;
+let hasOwnProperty;
 ({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);
-const ApplicationTypes = fn(1360).ApplicationTypes;
-const jsx = fn(21).jsx;
-let ReactCompilerGating = fn(558);
+const ApplicationTypes = ApplicationConstants.ApplicationTypes;
+const jsx = Fragment.jsx;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guild) => {
-      let tmp = dependencyMap;
-      const cResult = c.c(3);
+      let tmp7;
+      const obj = react2;
+      const cResult = obj.c(3);
       guild = guild.guild;
-      const str = useNavigation.useNavigation();
+      const obj2 = useNavigation;
+      const str = obj2.useNavigation();
+      const tmp4 = useGuildApplicationDefault(guild.id, ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS);
       if (tmp4.loading) {
+        let first;
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          tmp = <tmp3 />;
-          cResult[0] = tmp;
-          let first = tmp;
+          const tmp18 = jsx(PlaceholderDefault, {});
+          cResult[0] = tmp18;
+          first = tmp18;
         } else {
           first = cResult[0];
         }
+        tmp7 = first;
       } else {
         const features = guild.features;
         if (!features.has(constants.CREATOR_MONETIZABLE)) {
           const features2 = guild.features;
           if (!features2.has(constants.CREATOR_MONETIZABLE_PROVISIONAL)) {
             if (cResult[1] !== guild) {
-              const obj3 = { guild };
               const tmp9 = jsx(GuildSettingsRoleSubscriptionWelcomeViewDefault, { guild });
               cResult[1] = guild;
               cResult[2] = tmp9;
-              let tmp7 = tmp9;
+              tmp7 = tmp9;
             } else {
               tmp7 = cResult[2];
             }
           }
-          return tmp7;
         }
         if (null == tmp5) {
-          const replaced = str.replace(constants2.ROLE_SUBSCRIPTIONS_ENABLE_MONETIZATION);
+          const replaced = str.replace(hasOwnProperty.ROLE_SUBSCRIPTIONS_ENABLE_MONETIZATION);
           tmp7 = null;
         } else {
-          const replaced1 = str.replace(constants2.ROLE_SUBSCRIPTIONS_TIERS);
+          const replaced1 = str.replace(hasOwnProperty.ROLE_SUBSCRIPTIONS_TIERS);
           tmp7 = null;
         }
       }
-      tmp4 = useGuildApplicationDefault(guild.id, ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS);
+      return tmp7;
     }
   : (guild) => {
+      let tmp7;
       guild = guild.guild;
-      const str = useNavigation.useNavigation();
+      const obj = useNavigation;
+      const str = obj.useNavigation();
+      const tmp3 = useGuildApplicationDefault(guild.id, ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS);
       if (tmp3.loading) {
-        let tmp7 = jsx(PlaceholderDefault, {});
+        tmp7 = jsx(PlaceholderDefault, {});
       } else {
         const features = guild.features;
         if (!features.has(constants.CREATOR_MONETIZABLE)) {
           const features2 = guild.features;
           if (!features2.has(constants.CREATOR_MONETIZABLE_PROVISIONAL)) {
-            const obj2 = { guild };
             tmp7 = jsx(GuildSettingsRoleSubscriptionWelcomeViewDefault, { guild });
           }
         }
         if (null == tmp4) {
-          const replaced = str.replace(constants2.ROLE_SUBSCRIPTIONS_ENABLE_MONETIZATION);
+          const replaced = str.replace(hasOwnProperty.ROLE_SUBSCRIPTIONS_ENABLE_MONETIZATION);
           tmp7 = null;
         } else {
-          const replaced1 = str.replace(constants2.ROLE_SUBSCRIPTIONS_TIERS);
+          const replaced1 = str.replace(hasOwnProperty.ROLE_SUBSCRIPTIONS_TIERS);
           tmp7 = null;
         }
       }
       return tmp7;
     };
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      let tmp2 = dependencyMap;
-      const cResult = guildId(576).c(6);
+      let first;
+      let tmp6;
+      let tmp8;
+      const obj = guildId(576);
+      const cResult = obj.c(6);
+      const tmp = guildId;
       guildId = guildId.guildId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -103,41 +114,48 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = guildId;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const obj = guildId(576);
-      const stateFromStores = guildId(504).useStateFromStores(first, tmp6);
+      const tmpResult = tmp(504);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
       if (null == stateFromStores) {
+        let tmp12;
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          tmp2 = jsx(PlaceholderDefault, {});
-          cResult[3] = tmp2;
-        }
-      } else {
-        if (cResult[4] !== stateFromStores) {
-          const obj2 = { guild: stateFromStores };
-          const tmp11 = <closure_8 guild={stateFromStores} />;
-          cResult[4] = stateFromStores;
-          cResult[5] = tmp11;
-          let tmp8 = tmp11;
+          const tmp15 = jsx(PlaceholderDefault, {});
+          cResult[3] = tmp15;
+          tmp12 = tmp15;
         } else {
-          tmp8 = cResult[5];
+          tmp12 = cResult[3];
         }
-        return tmp8;
+        tmp8 = tmp12;
+      } else if (cResult[4] !== stateFromStores) {
+        const tmp11 = <closure_8 guild={stateFromStores} />;
+        cResult[4] = stateFromStores;
+        cResult[5] = tmp11;
+        tmp8 = tmp11;
+      } else {
+        tmp8 = cResult[5];
       }
-      const tmpResult = guildId(504);
+      return tmp8;
     }
   : (guildId) => {
+      let tmp5;
       guildId = guildId.guildId;
       const items = [GuildStore];
-      const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
+      const obj = guildId(504);
+      const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
       if (null == stateFromStores) {
-        let tmp5 = jsx(PlaceholderDefault, {});
+        tmp5 = jsx(PlaceholderDefault, {});
       } else {
-        const obj2 = { guild: stateFromStores };
         tmp5 = <closure_8 guild={stateFromStores} />;
       }
       return tmp5;
     };
+const result = size.fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx",
+);
+
+export default tmp4;

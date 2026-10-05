@@ -1,46 +1,47 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidConstants.tsx
 import Constants from "../../../discord_common/js/shared/Constants.tsx";
-import util from "../../intl/index.native.tsx";
+import intl7 from "../../intl/index.native.tsx";
 import BigFlagUtils from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const Permissions = Constants.Permissions;
-const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidConstants.tsx");
-
-export const GUILD_REPORT_RAID_MOBILE_KEY = "guild_report_raid_mobile";
-export const NAGBAR_DISPLAY_MAX_HOURS = 2;
-export const DEFAULT_LOCKDOWN_DURATION = 2;
-export const getTimeframes = () => {
-  const obj = { id: "1", value: 1, label: null };
-  const intl = util.intl;
-  obj.label = intl.string(util.t["GA/d4I"]);
-  const items = [obj, , , , ,];
-  const obj2 = { id: "2", value: 2, label: null };
-  const intl2 = util.intl;
-  obj2.label = intl2.string(util.t["+rHFej"]);
-  items[1] = obj2;
-  const obj3 = { id: "4", value: 4, label: null };
-  const intl3 = util.intl;
-  obj3.label = intl3.string(util.t["5CNt/M"]);
-  items[2] = obj3;
-  const obj4 = { id: "6", value: 6, label: null };
-  const intl4 = util.intl;
-  obj4.label = intl4.string(util.t.oQ4PNE);
-  items[3] = obj4;
-  const obj5 = { id: "12", value: 12, label: null };
-  const intl5 = util.intl;
-  obj5.label = intl5.string(util.t.LOQ0j6);
-  items[4] = obj5;
-  const obj6 = { id: "24", value: 24, label: null };
-  const intl6 = util.intl;
-  obj6.label = intl6.string(util.t["W0+LsV"]);
-  items[5] = obj6;
-  return items;
-};
-export const IncidentAlertModeratorPermissions = BigFlagUtils.combine(
+const combineResult = BigFlagUtils.combine(
   Permissions.ADMINISTRATOR,
   Permissions.MANAGE_GUILD,
   Permissions.BAN_MEMBERS,
   Permissions.KICK_MEMBERS,
   Permissions.MODERATE_MEMBERS,
 );
+const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidConstants.tsx");
+
+export const GUILD_REPORT_RAID_MOBILE_KEY = "guild_report_raid_mobile";
+export const NAGBAR_DISPLAY_MAX_HOURS = 2;
+export const DEFAULT_LOCKDOWN_DURATION = 2;
+export const getTimeframes = () => {
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let intl6;
+  const obj = { id: "1", value: 1, label: intl.string(intl7.t["GA/d4I"]) };
+  intl = intl7.intl;
+  const items = [obj, , , , ,];
+  const obj2 = { id: "2", value: 2, label: intl2.string(intl7.t["+rHFej"]) };
+  intl2 = intl7.intl;
+  items[1] = obj2;
+  const obj3 = { id: "4", value: 4, label: intl3.string(intl7.t["5CNt/M"]) };
+  intl3 = intl7.intl;
+  items[2] = obj3;
+  const obj4 = { id: "6", value: 6, label: intl4.string(intl7.t.oQ4PNE) };
+  intl4 = intl7.intl;
+  items[3] = obj4;
+  const obj5 = { id: "12", value: 12, label: intl5.string(intl7.t.LOQ0j6) };
+  intl5 = intl7.intl;
+  items[4] = obj5;
+  const obj6 = { id: "24", value: 24, label: intl6.string(intl7.t["W0+LsV"]) };
+  intl6 = intl7.intl;
+  items[5] = obj6;
+  return items;
+};
+export const IncidentAlertModeratorPermissions = combineResult;

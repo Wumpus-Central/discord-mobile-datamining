@@ -1,34 +1,41 @@
 // discord_app/design/components/Illustration/native/redesign/generated/WhatYouLoseProfileTier1.tsx
-import c from "../../../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../../../_runtime/00576_react.js";
 import shared from "../../../../../shared.tsx";
 import _mod7905 from "../../index.tsx";
-import noop from "../../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../../_runtime/00019_react.js";
+import ReactCompilerGating_mod from "../../../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const Image = fn(17).Image;
-const jsx = fn(21).jsx;
-let ReactCompilerGating = fn(558);
+const require = globalThis.__r;
+
+function dark() {
+  return require("AssetRegistry");
+}
+function darker() {
+  return require("AssetRegistry");
+}
+function light() {
+  return require("AssetRegistry");
+}
+const Image = react_native.Image;
+const jsx = Fragment.jsx;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
-      const theme = shared.useThemeContext().theme;
+      let tmp4;
+      const obj = react2;
+      const cResult = obj.c(2);
+      const obj2 = shared;
+      const theme = obj2.useThemeContext().theme;
       if (cResult[0] !== theme) {
-        const obj3 = {
-          dark() {
-            return require("../../../../../../../_runtime/metro/13184__.js");
-          },
-          darker() {
-            return require("../../../../../../../_runtime/metro/13185__.js");
-          },
-          light() {
-            return require("../../../../../../../_runtime/metro/13186__.js");
-          },
-        };
-        const illustrationSource = _mod7905.getIllustrationSource(theme, obj3);
+        const obj3 = { dark, darker, light };
+        const tmpResult = _mod7905;
+        const illustrationSource = tmpResult.getIllustrationSource(theme, obj3);
         cResult[0] = theme;
         cResult[1] = illustrationSource;
-        let tmp4 = illustrationSource;
-        const tmpResult = _mod7905;
+        tmp4 = illustrationSource;
       } else {
         tmp4 = cResult[1];
       }
@@ -36,62 +43,46 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       const obj = shared;
-      return _mod7905.getIllustrationSource(obj.useThemeContext().theme, {
-        dark() {
-          return require("../../../../../../../_runtime/metro/13184__.js");
-        },
-        darker() {
-          return require("../../../../../../../_runtime/metro/13185__.js");
-        },
-        light() {
-          return require("../../../../../../../_runtime/metro/13186__.js");
-        },
-      });
+      const theme = obj.useThemeContext().theme;
+      const obj2 = _mod7905;
+      const obj3 = { dark, darker, light };
+      return obj2.getIllustrationSource(theme, obj3);
     };
 let closure_4 = tmp3;
-ReactCompilerGating = fn(558);
-function getWhatYouLoseProfileTier1Source(theme) {
-  return _mod7905.getIllustrationSource(theme, {
-    dark() {
-      return require("../../../../../../../_runtime/metro/13184__.js");
-    },
-    darker() {
-      return require("../../../../../../../_runtime/metro/13185__.js");
-    },
-    light() {
-      return require("../../../../../../../_runtime/metro/13186__.js");
-    },
-  });
-}
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "design/components/Illustration/native/redesign/generated/WhatYouLoseProfileTier1.tsx",
-);
-
-export { getWhatYouLoseProfileTier1Source };
-export const useWhatYouLoseProfileTier1Source = tmp3;
-export const WhatYouLoseProfileTier1 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(3);
+      const obj = react2;
+      const cResult = obj.c(3);
       const tmp2 = closure_4();
       if (cResult[0] === arg0) {
+        let tmp3;
         if (cResult[1] === tmp2) {
-          let tmp3 = cResult[2];
+          tmp3 = cResult[2];
         }
         return tmp3;
       }
-      const obj2 = {};
       const merged = Object.assign(arg0);
-      obj2.source = tmp2;
-      const tmp5 = <Image />;
+      const tmp5 = <Image source={tmp2} />;
       cResult[0] = arg0;
       cResult[1] = tmp2;
       cResult[2] = tmp5;
       tmp3 = tmp5;
     }
   : (arg0) => {
-      const obj = {};
+      const tmp = closure_4();
       const merged = Object.assign(arg0);
-      obj.source = closure_4();
-      return <Image />;
+      return <Image source={tmp} />;
     };
+function getWhatYouLoseProfileTier1Source(theme) {
+  const obj = _mod7905;
+  const obj2 = { dark, darker, light };
+  return obj.getIllustrationSource(theme, obj2);
+}
+const result = size.fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/WhatYouLoseProfileTier1.tsx",
+);
+
+export { getWhatYouLoseProfileTier1Source };
+export const useWhatYouLoseProfileTier1Source = tmp3;
+export const WhatYouLoseProfileTier1 = tmp4;

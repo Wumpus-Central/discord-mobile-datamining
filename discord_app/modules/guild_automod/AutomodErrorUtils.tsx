@@ -1,9 +1,13 @@
 // discord_app/modules/guild_automod/AutomodErrorUtils.tsx
-import util from "../../intl/index.native.tsx";
+import Constants from "../../Constants.tsx";
+import intl5 from "../../intl/index.native.tsx";
+import MessageQueue from "../../lib/MessageQueue.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
 function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
+  let code;
+  let message;
   if (null == errorResponseBody) {
     return null;
   } else {
@@ -20,8 +24,8 @@ function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
           isThreadResult = channel.isThread();
         }
         if (isThreadResult) {
-          const intl3 = util.intl;
-          return intl3.string(util.t.DVdG9E);
+          const intl3 = intl5.intl;
+          return intl3.string(intl5.t.DVdG9E);
         } else {
           let isForumPostResult;
           if (channel != null) {
@@ -29,11 +33,11 @@ function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
           }
           if (isForumPostResult) {
             if (code === AbortCodes.AUTOMOD_TITLE_BLOCKED) {
-              const intl2 = util.intl;
-              return intl2.string(util.t.ipgKDg);
+              const intl2 = intl5.intl;
+              return intl2.string(intl5.t.ipgKDg);
             } else if (code === tmp4.AUTOMOD_MESSAGE_BLOCKED) {
-              const intl = util.intl;
-              return intl.string(util.t.ipgKDg);
+              const intl = intl5.intl;
+              return intl.string(intl5.t.ipgKDg);
             }
           } else if (channel != null) {
             channel.isForumLikeChannel();
@@ -47,18 +51,20 @@ function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
   }
 }
 function getAutomodErrorMessageFromMessageData(message) {
+  let stringResult;
   const channel = ChannelStore.getChannel(message.message.channelId);
+  const obj2 = MessageQueue;
   if (obj2.isMessageDataEdit(message)) {
-    const intl4 = util.intl;
-    let stringResult = intl4.string(util.t.bU6o0z);
+    const intl4 = intl5.intl;
+    stringResult = intl4.string(intl5.t.bU6o0z);
   } else {
     let isThreadResult;
     if (channel != null) {
       isThreadResult = channel.isThread();
     }
     if (isThreadResult) {
-      const intl3 = util.intl;
-      stringResult = intl3.string(util.t.DVdG9E);
+      const intl3 = intl5.intl;
+      stringResult = intl3.string(intl5.t.DVdG9E);
     } else {
       let isForumPostResult;
       if (channel != null) {
@@ -70,22 +76,19 @@ function getAutomodErrorMessageFromMessageData(message) {
           isForumLikeChannelResult = channel.isForumLikeChannel();
         }
         if (!isForumLikeChannelResult) {
-          const intl = util.intl;
-          stringResult = intl.string(util.t.zQ69pv);
+          const intl = intl5.intl;
+          stringResult = intl.string(intl5.t.zQ69pv);
         }
       }
-      const intl2 = util.intl;
-      stringResult = intl2.string(util.t.ipgKDg);
+      const intl2 = intl5.intl;
+      stringResult = intl2.string(intl5.t.ipgKDg);
     }
   }
   return stringResult;
 }
-const AbortCodes = fn(1085).AbortCodes;
+const AbortCodes = Constants.AbortCodes;
 class InvalidKeywordError extends Error {}
-const prototype = function InvalidRegexPatternError() {
-  return HermesBuiltin.applyArguments(new.target, new.target);
-}.prototype;
-class prototype extends Error {}
+class InvalidRegexPatternError extends Error {}
 const items = [, ,];
 ({
   AUTOMOD_MESSAGE_BLOCKED: arr[0],
@@ -93,22 +96,24 @@ const items = [, ,];
   AUTOMOD_INVALID_RUST_SERVICE_RESPONSE: arr[2],
 } = AbortCodes);
 const set = new Set(items);
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodErrorUtils.tsx");
 
 export { InvalidKeywordError };
-export const InvalidRegexPatternError = prototype;
+export { InvalidRegexPatternError };
 export const AUTOMOD_ERROR_CODES = set;
 export { getAutomodErrorMessageFromErrorResponse };
 export { getAutomodErrorMessageFromMessageData };
 export const getAutomodErrorMessage = function getAutomodErrorMessage(messageData, errorResponseBody) {
-  const tmp = getAutomodErrorMessageFromErrorResponse(errorResponseBody);
-  if (null != tmp) {
-    return tmp;
-  } else if (null == messageData) {
-    const intl = util.intl;
-    let stringResult = intl.string(util.t.zQ69pv);
-  } else {
-    stringResult = getAutomodErrorMessageFromMessageData(messageData);
+  let tmp = getAutomodErrorMessageFromErrorResponse(errorResponseBody);
+  if (null == tmp) {
+    let stringResult;
+    if (null == messageData) {
+      const intl = intl5.intl;
+      stringResult = intl.string(intl5.t.zQ69pv);
+    } else {
+      stringResult = getAutomodErrorMessageFromMessageData(messageData);
+    }
+    tmp = stringResult;
   }
+  return tmp;
 };

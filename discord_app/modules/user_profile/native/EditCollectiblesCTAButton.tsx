@@ -1,5 +1,8 @@
 // discord_app/modules/user_profile/native/EditCollectiblesCTAButton.tsx
-import util from "../../../intl/index.native.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import CollectiblesShopConstants from "../../collectibles/CollectiblesShopConstants.tsx";
+import intl4 from "../../../intl/index.native.tsx";
+import MediaKeyboardConstants from "../../media_keyboard/native/MediaKeyboardConstants.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
@@ -7,15 +10,16 @@ import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import CollectiblesActionCreators from "../../collectibles/CollectiblesActionCreators.tsx";
 import EditCollectiblesActionCreators from "EditCollectiblesActionCreators.tsx";
 import openProductDetailsActionSheet from "../../collectibles/native/openProductDetailsActionSheet.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-let closure_5 = fn(1087).CollectiblesMobileShopScreen;
-let closure_6 = fn(1614).MEDIA_PICKER_SEND_BUTTON_SPRING;
-const jsx = fn(21).jsx;
+let closure_5 = CollectiblesShopConstants.CollectiblesMobileShopScreen;
+let closure_6 = MediaKeyboardConstants.MEDIA_PICKER_SEND_BUTTON_SPRING;
+let jsx = Fragment.jsx;
 let c8 = 0.9;
-const createStyles = fn(4890);
 let closure_9 = createStyles.createStyles({
   buttonRowContainer: {
     flexGrow: 0,
@@ -53,14 +57,23 @@ const __initData5 = {
 const __initData6 = {
   code: "function EditCollectiblesCTAButtonTsx6(){const{shouldShowButton,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetOpacity=shouldShowButton.get()?1:0;return{opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,{...MEDIA_PICKER_SEND_BUTTON_SPRING,overshootClamping:true})};}",
 };
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/user_profile/native/EditCollectiblesCTAButton.tsx");
-
-export default noop.memo(
+let memo = react.memo;
+const memoResult = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (selectedSkuId) => {
-        const cResult = currentSkuId(onApply[7]).c(47);
+        let closure_7;
+        let closure_8;
+        let currentSkuId;
+        let isShopStandalonePdpMobileEnabled;
+        let isTryItOut;
+        let onApply;
+        let product;
+        let purchase;
+        let tmp6;
+        let tmp7;
+        let user;
+        let obj = currentSkuId(onApply[7]);
+        const cResult = obj.c(47);
         ({ user, currentSkuId } = selectedSkuId);
         selectedSkuId = selectedSkuId.selectedSkuId;
         ({ isTryItOut, onApply } = selectedSkuId);
@@ -75,23 +88,28 @@ export default noop.memo(
               return analyticsSource.useReducedMotion;
             }
           }
+          let num = 0;
           cResult[0] = items;
+          let num2 = 1;
           cResult[1] = E;
           tmp6 = items;
         } else {
           [tmp6, tmp7] = cResult;
         }
-        let obj = currentSkuId(onApply[7]);
-        const stateFromStores = currentSkuId(onApply[9]).useStateFromStores(tmp6, E);
         const tmpResult = currentSkuId(onApply[9]);
+        const stateFromStores = tmpResult.useStateFromStores(tmp6, E);
         ({ product, purchase } = selectedSkuId(onApply[10])(selectedSkuId));
-        const tmp10 = selectedSkuId(onApply[10])(selectedSkuId);
-        const sharedValue = currentSkuId(onApply[11]).useSharedValue(false);
+        selectedSkuId(onApply[10])(selectedSkuId);
+        const tmpResult7 = currentSkuId(onApply[11]);
+        const sharedValue = tmpResult7.useSharedValue(false);
         if (cResult[2] === currentSkuId) {
           if (cResult[3] === selectedSkuId) {
+            let tmp12;
+            let tmp13;
+            let tmp26;
             if (cResult[4] === sharedValue) {
-              let tmp12 = cResult[5];
-              let tmp13 = cResult[6];
+              tmp12 = cResult[5];
+              tmp13 = cResult[6];
             }
             const effect = analyticsLocations.useEffect(tmp12, tmp13);
             class E {
@@ -110,12 +128,14 @@ export default noop.memo(
               }
               let withSpringResult = num;
               if (!stateFromStores) {
-                withSpringResult = spring.withSpring(num, closure_6);
+                const obj2 = spring;
+                withSpringResult = obj2.withSpring(num, closure_6);
               }
               const transform = [{ translateY: withSpringResult }];
               let withSpringResult1 = num2;
               if (!stateFromStores) {
-                withSpringResult1 = spring.withSpring(num2, closure_6);
+                const obj3 = spring;
+                withSpringResult1 = obj3.withSpring(num2, closure_6);
               }
               transform[1] = { scale: withSpringResult1 };
               return { transform };
@@ -128,14 +148,16 @@ export default noop.memo(
               withSpring: currentSkuId(onApply[12]).withSpring,
               MEDIA_PICKER_SEND_BUTTON_SPRING: sharedValue,
             };
+            const useAnimatedStyle = tmp16.useAnimatedStyle;
             fn.__closure = obj2;
             fn.__workletHash = 15594859424201;
             fn.__initData = __initData;
-            const animatedStyle = obj4.useAnimatedStyle(fn);
+            const animatedStyle = useAnimatedStyle(fn);
+            const tmpResult8 = currentSkuId(onApply[11]);
             class Y {
               constructor() {
-                pointerEvents = "none";
-                if (closure_6.get()) {
+                let pointerEvents = "none";
+                if (sharedValue.get()) {
                   pointerEvents = "box-none";
                 }
                 return { pointerEvents };
@@ -145,8 +167,7 @@ export default noop.memo(
             Y.__closure = obj3;
             Y.__workletHash = 9374262739789;
             Y.__initData = __initData2;
-            const animatedProps = currentSkuId(onApply[11]).useAnimatedProps(Y);
-            const tmpResult8 = currentSkuId(onApply[11]);
+            const animatedProps = tmpResult8.useAnimatedProps(Y);
             const fn2 = function k() {
               let num = 0;
               if (sharedValue.get()) {
@@ -154,72 +175,72 @@ export default noop.memo(
               }
               let opacity = num;
               if (!stateFromStores) {
-                const obj2 = {};
+                const obj = { overshootClamping: true };
+                const withSpring = spring.withSpring;
+                spring;
                 const merged = Object.assign(closure_6);
-                obj2.overshootClamping = true;
-                opacity = spring.withSpring(num, obj2);
+                opacity = withSpring(num, obj);
               }
               return { opacity };
             };
-            let obj5 = {
+            let obj4 = {
               shouldShowButton: sharedValue,
               reducedMotion: stateFromStores,
               withSpring: currentSkuId(onApply[12]).withSpring,
               MEDIA_PICKER_SEND_BUTTON_SPRING: sharedValue,
             };
-            fn2.__closure = obj5;
+            const useAnimatedStyle2 = currentSkuId(onApply[11]).useAnimatedStyle;
+            currentSkuId(onApply[11]);
+            fn2.__closure = obj4;
             class O {
               constructor() {
-                result = closure_6.set(selectedSkuId !== currentSkuId);
-                return;
+                const result = sharedValue.set(selectedSkuId !== currentSkuId);
               }
             }
             fn2.__workletHash = 13351061137085;
             fn2.__initData = __initData3;
-            const animatedStyle1 = currentSkuId(onApply[11]).useAnimatedStyle(fn2);
+            const animatedStyle2 = useAnimatedStyle2(fn2);
             if (cResult[7] !== user) {
-              const canUseCollectiblesResult = tmp5(onApply[13]).canUseCollectibles(user);
+              const tmp5Result = selectedSkuId(onApply[13]);
+              const canUseCollectiblesResult = tmp5Result.canUseCollectibles(user);
               class E {
                 constructor() {
                   return analyticsSource.useReducedMotion;
                 }
               }
               cResult[8] = canUseCollectiblesResult;
-              let tmp24 = canUseCollectiblesResult;
-              const tmp5Result = tmp5(onApply[13]);
+              tmp26 = canUseCollectiblesResult;
             } else {
-              tmp24 = cResult[8];
+              tmp26 = cResult[8];
             }
             if (cResult[9] === product) {
+              let tmp28;
               if (cResult[10] === purchase) {
-                let tmp26 = cResult[11];
+                tmp28 = cResult[11];
               }
-              if (cResult[12] === tmp24) {
-                let tmp31 = null == selectedSkuId;
+              if (cResult[12] === tmp26) {
+                let tmp36;
+                let tmp33 = null == selectedSkuId;
                 class E {
                   constructor() {
                     return analyticsSource.useReducedMotion;
                   }
                 }
-                if (!tmp31) {
-                  let tmp32 = tmp26;
-                  if (tmp26) {
-                    tmp32 = isTryItOut;
-                  }
-                  tmp31 = tmp32;
+                if (!tmp33) {
+                  tmp33 = tmp28 && isTryItOut;
                 }
-                isTryItOut = tmp31;
-                if (tmp26) {
-                  tmp26 = !tmp24;
+                jsx = tmp33;
+                if (tmp28) {
+                  tmp28 = !tmp26;
                 }
-                if (tmp26) {
-                  tmp26 = !isTryItOut;
+                if (tmp28) {
+                  tmp28 = !isTryItOut;
                 }
-                APPLY_BUTTON_SCALE_TRANSITION = tmp26;
-                isShopStandalonePdpMobileEnabled = currentSkuId(onApply[15]).useIsShopStandalonePdpMobileEnabled(
-                  "edit_collectibles_cta_button",
-                );
-                if (tmp31) {
+                APPLY_BUTTON_SCALE_TRANSITION = tmp28;
+                const tmpResult10 = currentSkuId(onApply[15]);
+                isShopStandalonePdpMobileEnabled =
+                  tmpResult10.useIsShopStandalonePdpMobileEnabled("edit_collectibles_cta_button");
+                if (tmp33) {
                   const _Symbol2 = Symbol;
                   if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
                     const intl3 = currentSkuId(onApply[16]).intl;
@@ -236,188 +257,200 @@ export default noop.memo(
                       return analyticsSource.useReducedMotion;
                     }
                   }
-                } else {
-                  if (tmp26) {
-                    if (cResult[16] !== user) {
-                      const tmp5Result2 = tmp5(onApply[13]);
-                      const intl2 = currentSkuId(onApply[16]).intl;
-                      class E {
-                        constructor() {
-                          return analyticsSource.useReducedMotion;
-                        }
+                } else if (tmp28) {
+                  let tmp38;
+                  if (cResult[16] !== user) {
+                    let tmp40Result;
+                    const tmp5Result2 = selectedSkuId(onApply[13]);
+                    const isPremiumResult = tmp5Result2.isPremium(user);
+                    const intl2 = currentSkuId(onApply[16]).intl;
+                    class E {
+                      constructor() {
+                        return analyticsSource.useReducedMotion;
                       }
-                      let KXLX7l = currentSkuId(onApply[16]).t;
-                      if (isPremiumResult) {
-                        KXLX7l = KXLX7l.KXLX7l;
-                        let tmp37Result = tmp37(KXLX7l);
-                      } else {
-                        tmp37Result = tmp37(KXLX7l.mr4K7D);
-                      }
-                      cResult[16] = user;
-                      cResult[17] = tmp37Result;
-                      isPremiumResult = tmp5(onApply[13]).isPremium(user);
-                    } else {
-                      let tmp34 = cResult[17];
                     }
+                    const t = currentSkuId(onApply[16]).t;
+                    if (isPremiumResult) {
+                      tmp40Result = tmp40(t.KXLX7l);
+                    } else {
+                      tmp40Result = tmp40(t.mr4K7D);
+                    }
+                    cResult[16] = user;
+                    cResult[17] = tmp40Result;
+                    tmp38 = tmp40Result;
                   } else {
-                    const _Symbol = Symbol;
-                    if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-                      const intl = currentSkuId(onApply[16]).intl;
-                      const stringResult1 = intl.string(currentSkuId(onApply[16]).t.fYfGgK);
-                      class E {
-                        constructor() {
-                          return analyticsSource.useReducedMotion;
-                        }
-                      }
-                      cResult[18] = stringResult1;
-                      tmp34 = stringResult1;
-                    } else {
-                      tmp34 = cResult[18];
-                    }
+                    tmp38 = cResult[17];
                   }
-                  if (cResult[19] === analyticsLocations) {
-                    if (cResult[20] === analyticsSource) {
-                      if (cResult[21] === tmp31) {
-                        if (cResult[22] === isShopStandalonePdpMobileEnabled) {
-                          if (cResult[23] === tmp26) {
-                            if (cResult[24] === onApply) {
-                              if (cResult[25] === selectedSkuId) {
-                                let tmp42 = cResult[26];
-                              }
-                              if (cResult[27] === animatedStyle1) {
-                                if (cResult[30] !== bottom) {
-                                  let obj6 = { marginBottom: bottom };
-                                  class E {
-                                    constructor() {
-                                      return analyticsSource.useReducedMotion;
-                                    }
-                                  }
-                                  cResult[31] = obj6;
-                                  let tmp44 = obj6;
-                                } else {
-                                  tmp44 = cResult[31];
-                                }
-                                if (cResult[32] === animatedStyle) {
-                                  if (cResult[33] === tmp4.buttonRowContainer) {
-                                    let str2 = "primary";
-                                    if (tmp26) {
-                                      str2 = "active";
-                                    }
-                                    class E {
-                                      constructor() {
-                                        return analyticsSource.useReducedMotion;
-                                      }
-                                    }
-                                    let obj7 = { variant: str2, onPress: tmp42, size: "md", text: tmp34, grow: true };
-                                    const tmp49 = isTryItOut(currentSkuId(onApply[22]).Button, obj7);
-                                    cResult[36] = tmp34;
-                                    cResult[37] = tmp42;
-                                    cResult[38] = str2;
-                                    cResult[39] = tmp49;
-                                  }
-                                }
+                  tmp36 = tmp38;
+                } else {
+                  const _Symbol = Symbol;
+                  if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
+                    const intl = currentSkuId(onApply[16]).intl;
+                    const stringResult1 = intl.string(currentSkuId(onApply[16]).t.fYfGgK);
+                    class E {
+                      constructor() {
+                        return analyticsSource.useReducedMotion;
+                      }
+                    }
+                    cResult[18] = stringResult1;
+                    tmp36 = stringResult1;
+                  } else {
+                    tmp36 = cResult[18];
+                  }
+                }
+                if (cResult[19] === analyticsLocations) {
+                  if (cResult[20] === analyticsSource) {
+                    if (cResult[21] === tmp33) {
+                      if (cResult[22] === isShopStandalonePdpMobileEnabled) {
+                        if (cResult[23] === tmp28) {
+                          if (cResult[24] === onApply) {
+                            let tmp44;
+                            if (cResult[25] === selectedSkuId) {
+                              tmp44 = cResult[26];
+                            }
+                            if (cResult[27] === animatedStyle2) {
+                              let tmp46;
+                              if (cResult[30] !== bottom) {
+                                let obj5 = { marginBottom: bottom };
                                 class E {
                                   constructor() {
                                     return analyticsSource.useReducedMotion;
                                   }
                                 }
-                                tmp46[0] = tmp4.buttonRowContainer;
-                                tmp46[1] = animatedStyle;
-                                tmp46[2] = tmp44;
-                                cResult[32] = animatedStyle;
-                                cResult[33] = tmp4.buttonRowContainer;
-                                cResult[34] = tmp44;
-                                cResult[35] = tmp46;
+                                cResult[31] = obj5;
+                                tmp46 = obj5;
+                              } else {
+                                tmp46 = cResult[31];
                               }
-                              const items1 = [,];
+                              if (cResult[32] === animatedStyle) {
+                                if (cResult[33] === tmp4.buttonRowContainer) {
+                                  let str2 = "primary";
+                                  if (tmp28) {
+                                    str2 = "active";
+                                  }
+                                  class E {
+                                    constructor() {
+                                      return analyticsSource.useReducedMotion;
+                                    }
+                                  }
+                                  cResult[36] = tmp36;
+                                  cResult[37] = tmp44;
+                                  cResult[38] = str2;
+                                  cResult[39] = jsx(currentSkuId(onApply[22]).Button, {
+                                    variant: str2,
+                                    onPress: tmp44,
+                                    size: "md",
+                                    text: tmp36,
+                                    grow: true,
+                                  });
+                                  const tmp51 = jsx(currentSkuId(onApply[22]).Button, {
+                                    variant: str2,
+                                    onPress: tmp44,
+                                    size: "md",
+                                    text: tmp36,
+                                    grow: true,
+                                  });
+                                }
+                              }
                               class E {
                                 constructor() {
                                   return analyticsSource.useReducedMotion;
                                 }
                               }
-                              items1[1] = animatedStyle1;
-                              cResult[27] = animatedStyle1;
-                              cResult[28] = tmp4.buttonContainer;
-                              cResult[29] = items1;
+                              tmp48[0] = tmp4.buttonRowContainer;
+                              tmp48[1] = animatedStyle;
+                              tmp48[2] = tmp46;
+                              cResult[32] = animatedStyle;
+                              cResult[33] = tmp4.buttonRowContainer;
+                              cResult[34] = tmp46;
+                              cResult[35] = tmp48;
                             }
+                            const items1 = [,];
+                            class E {
+                              constructor() {
+                                return analyticsSource.useReducedMotion;
+                              }
+                            }
+                            items1[1] = animatedStyle2;
+                            cResult[27] = animatedStyle2;
+                            cResult[28] = tmp4.buttonContainer;
+                            cResult[29] = items1;
                           }
                         }
                       }
                     }
                   }
-                  function et() {
-                    if (isTryItOut) {
-                      const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
-                      onApply();
-                    } else if (closure_8) {
-                      const result1 = EditCollectiblesActionCreators.navigateToNitroManagement();
-                    } else {
-                      if (isShopStandalonePdpMobileEnabled) {
-                        if (null != selectedSkuId) {
-                          const obj2 = {
-                            skuId: tmp3,
-                            analyticsLocations,
-                            stageCollectibleChangeForEditProfile: onApply,
-                          };
-                          const result2 = openProductDetailsActionSheet.openProductDetailsActionSheetForSku(
-                            obj2,
-                            "stack",
-                          );
-                        }
-                      }
-                      const obj4 = {
-                        analyticsLocations,
-                        analyticsSource,
-                        initialProductSkuId: selectedSkuId,
-                        screen: stateFromStores.SHOP_ALL,
-                      };
-                      const result3 = CollectiblesActionCreators.openCollectiblesShopMobile(obj4);
-                    }
-                    ActionSheetActionCreatorsDefault.hideActionSheet();
-                  }
-                  class E {
-                    constructor() {
-                      return analyticsSource.useReducedMotion;
-                    }
-                  }
-                  cResult[19] = analyticsLocations;
-                  cResult[20] = analyticsSource;
-                  cResult[21] = tmp31;
-                  cResult[22] = isShopStandalonePdpMobileEnabled;
-                  cResult[23] = tmp26;
-                  cResult[24] = onApply;
-                  cResult[25] = selectedSkuId;
-                  cResult[26] = et;
-                  tmp42 = et;
                 }
-                const tmpResult10 = currentSkuId(onApply[15]);
+                function et() {
+                  if (closure_7) {
+                    const obj6 = HapticUtils;
+                    const result = obj6.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
+                    onApply();
+                  } else if (closure_8) {
+                    const obj5 = EditCollectiblesActionCreators;
+                    const result1 = obj5.navigateToNitroManagement();
+                  } else {
+                    if (isShopStandalonePdpMobileEnabled) {
+                      if (null != selectedSkuId) {
+                        const obj2 = { skuId: tmp4, analyticsLocations, stageCollectibleChangeForEditProfile: onApply };
+                        const obj3 = openProductDetailsActionSheet;
+                        const result2 = obj3.openProductDetailsActionSheetForSku(obj2, "stack");
+                      }
+                    }
+                    const obj4 = {
+                      analyticsLocations,
+                      analyticsSource,
+                      initialProductSkuId: selectedSkuId,
+                      screen: stateFromStores.SHOP_ALL,
+                    };
+                    const obj = CollectiblesActionCreators;
+                    const result3 = obj.openCollectiblesShopMobile(obj4);
+                  }
+                  const obj7 = ActionSheetActionCreatorsDefault;
+                  obj7.hideActionSheet();
+                }
+                cResult[19] = analyticsLocations;
+                cResult[20] = analyticsSource;
+                class Y {
+                  constructor() {
+                    let pointerEvents = "none";
+                    if (sharedValue.get()) {
+                      pointerEvents = "box-none";
+                    }
+                    return { pointerEvents };
+                  }
+                }
+                cResult[22] = isShopStandalonePdpMobileEnabled;
+                cResult[23] = tmp28;
+                cResult[24] = onApply;
+                cResult[25] = selectedSkuId;
+                cResult[26] = et;
+                tmp44 = et;
               }
               class E {
                 constructor() {
                   return analyticsSource.useReducedMotion;
                 }
               }
-              cResult[12] = tmp24;
+              cResult[12] = tmp26;
               cResult[13] = purchase;
-              cResult[14] = !tmp24;
+              cResult[14] = !tmp26;
             }
-            const tmpResult9 = currentSkuId(onApply[11]);
-            let result = currentSkuId(onApply[14]).isPremiumCollectiblesProduct(product);
+            const tmpResult11 = currentSkuId(onApply[14]);
+            let result = tmpResult11.isPremiumCollectiblesProduct(product);
             if (!result) {
-              result = currentSkuId(onApply[14]).isPremiumCollectiblesPurchase(purchase);
               const tmpResult12 = currentSkuId(onApply[14]);
+              result = tmpResult12.isPremiumCollectiblesPurchase(purchase);
             }
             cResult[9] = product;
             cResult[10] = purchase;
             cResult[11] = result;
-            tmp26 = result;
-            const tmpResult11 = currentSkuId(onApply[14]);
+            tmp28 = result;
           }
         }
         class O {
           constructor() {
-            result = closure_6.set(selectedSkuId !== currentSkuId);
-            return;
+            const result = sharedValue.set(selectedSkuId !== currentSkuId);
           }
         }
         const items2 = [selectedSkuId, currentSkuId, sharedValue];
@@ -428,91 +461,86 @@ export default noop.memo(
         cResult[6] = items2;
         tmp13 = items2;
         tmp12 = O;
-        const tmpResult7 = currentSkuId(onApply[11]);
       }
     : (user) => {
+        let Button;
+        let View2;
+        let closure_8;
+        let isTryItOut;
+        let items4;
+        let items5;
+        let obj12;
+        let onApply;
+        let product;
+        let purchase;
+        let str;
         user = user.user;
         const currentSkuId = user.currentSkuId;
         const selectedSkuId = user.selectedSkuId;
         ({ isTryItOut, onApply } = user);
         const analyticsLocations = user.analyticsLocations;
         const analyticsSource = user.analyticsSource;
-        isTryItOut = undefined;
-        c9 = undefined;
+        APPLY_BUTTON_SCALE_TRANSITION = undefined;
+        let c9;
         let isShopStandalonePdpMobileEnabled;
         const tmp = c9();
-        const items = [analyticsLocations];
-        const stateFromStores = user(selectedSkuId[9]).useStateFromStores(
-          items,
-          () => analyticsLocations.useReducedMotion,
-        );
+        const tmp4 = user;
+        const bottom = currentSkuId(selectedSkuId[8])().bottom;
         let obj = user(selectedSkuId[9]);
+        const items = [analyticsLocations];
+        const stateFromStores = obj.useStateFromStores(items, () => analyticsLocations.useReducedMotion);
         ({ purchase, product } = currentSkuId(selectedSkuId[10])(selectedSkuId));
         const tmp6 = currentSkuId(selectedSkuId[10])(selectedSkuId);
-        const sharedValue = user(selectedSkuId[11]).useSharedValue(false);
+        let obj2 = user(selectedSkuId[11]);
+        const sharedValue = obj2.useSharedValue(false);
+        let obj3 = onApply;
         const items1 = [selectedSkuId, currentSkuId, sharedValue];
         const effect = onApply.useEffect(() => {
           const result = sharedValue.set(selectedSkuId !== currentSkuId);
         }, items1);
-        let obj2 = user(selectedSkuId[11]);
+        let obj4 = user(selectedSkuId[11]);
         class M {
           constructor() {
-            obj = closure_7;
-            num = 60;
-            if (closure_7.get()) {
+            let num = 60;
+            if (sharedValue.get()) {
               num = 0;
             }
-            num2 = 1;
-            if (!obj.get()) {
+            let num2 = 1;
+            if (!sharedValue.get()) {
               num2 = c8;
             }
-            withSpringResult = num;
-            tmp = closure_6;
-            if (!closure_6) {
-              tmp3 = closure_0;
-              tmp4 = closure_2;
-              obj2 = closure_0(closure_2[12]);
-              tmp5 = closure_6;
+            let withSpringResult = num;
+            if (!stateFromStores) {
+              const obj2 = spring;
               withSpringResult = obj2.withSpring(num, closure_6);
             }
-            items = [,];
-            items[0] = { translateY: withSpringResult };
-            withSpringResult1 = num2;
-            if (!tmp) {
-              tmp7 = closure_0;
-              tmp8 = closure_2;
-              obj3 = closure_0(closure_2[12]);
-              tmp9 = closure_6;
+            const transform = [{ translateY: withSpringResult }];
+            let withSpringResult1 = num2;
+            if (!stateFromStores) {
+              const obj3 = spring;
               withSpringResult1 = obj3.withSpring(num2, closure_6);
             }
-            items[1] = { scale: withSpringResult1 };
-            return { transform: items };
+            transform[1] = { scale: withSpringResult1 };
+            return { transform };
           }
         }
-        let obj4 = user(selectedSkuId[11]);
-        M.__closure = {
-          shouldShowButton: sharedValue,
-          APPLY_BUTTON_BOUNCE_DISTANCE: 60,
-          APPLY_BUTTON_SCALE_TRANSITION: isTryItOut,
-          reducedMotion: stateFromStores,
-          withSpring: user(selectedSkuId[12]).withSpring,
-          MEDIA_PICKER_SEND_BUTTON_SPRING: stateFromStores,
-        };
-        M.__workletHash = 4576122937516;
-        M.__initData = __initData4;
-        const animatedStyle = obj4.useAnimatedStyle(M);
         let obj5 = {
           shouldShowButton: sharedValue,
           APPLY_BUTTON_BOUNCE_DISTANCE: 60,
-          APPLY_BUTTON_SCALE_TRANSITION: isTryItOut,
+          APPLY_BUTTON_SCALE_TRANSITION,
           reducedMotion: stateFromStores,
           withSpring: user(selectedSkuId[12]).withSpring,
           MEDIA_PICKER_SEND_BUTTON_SPRING: stateFromStores,
         };
+        M.__closure = obj5;
+        M.__workletHash = 4576122937516;
+        M.__initData = __initData4;
+        const animatedStyle = obj4.useAnimatedStyle(M);
+        let obj6 = user(selectedSkuId[11]);
         class R {
           constructor() {
-            pointerEvents = "none";
-            if (closure_7.get()) {
+            let pointerEvents = "none";
+            if (sharedValue.get()) {
               pointerEvents = "box-none";
             }
             return { pointerEvents };
@@ -521,8 +549,8 @@ export default noop.memo(
         R.__closure = { shouldShowButton: sharedValue };
         R.__workletHash = 8246199558634;
         R.__initData = __initData5;
-        const animatedProps = user(selectedSkuId[11]).useAnimatedProps(R);
-        let obj6 = user(selectedSkuId[11]);
+        const animatedProps = obj6.useAnimatedProps(R);
+        let obj7 = user(selectedSkuId[11]);
         const fn = function y() {
           let num = 0;
           if (sharedValue.get()) {
@@ -530,14 +558,14 @@ export default noop.memo(
           }
           let opacity = num;
           if (!stateFromStores) {
-            const obj2 = {};
+            const obj = { overshootClamping: true };
+            const withSpring = spring.withSpring;
+            spring;
             const merged = Object.assign(closure_6);
-            obj2.overshootClamping = true;
-            opacity = spring.withSpring(num, obj2);
+            opacity = withSpring(num, obj);
           }
           return { opacity };
         };
-        let obj7 = user(selectedSkuId[11]);
         fn.__closure = {
           shouldShowButton: sharedValue,
           reducedMotion: stateFromStores,
@@ -546,38 +574,34 @@ export default noop.memo(
         };
         fn.__workletHash = 15978550903192;
         fn.__initData = __initData6;
-        const animatedStyle1 = obj7.useAnimatedStyle(fn);
-        const obj8 = {
+        ({
           shouldShowButton: sharedValue,
           reducedMotion: stateFromStores,
           withSpring: user(selectedSkuId[12]).withSpring,
           MEDIA_PICKER_SEND_BUTTON_SPRING: stateFromStores,
-        };
-        const canUseCollectiblesResult = currentSkuId(selectedSkuId[13]).canUseCollectibles(user);
+        });
+        const animatedStyle1 = obj7.useAnimatedStyle(fn);
         const obj9 = currentSkuId(selectedSkuId[13]);
-        let result = user(selectedSkuId[14]).isPremiumCollectiblesProduct(product);
+        const canUseCollectiblesResult = obj9.canUseCollectibles(user);
+        const obj10 = user(selectedSkuId[14]);
+        let result = obj10.isPremiumCollectiblesProduct(product);
         if (!result) {
-          result = tmp4(tmp3[14]).isPremiumCollectiblesPurchase(purchase);
-          const tmp4Result = tmp4(tmp3[14]);
+          const tmp4Result = tmp4(selectedSkuId[14]);
+          result = tmp4Result.isPremiumCollectiblesPurchase(purchase);
         }
         let result1 = !canUseCollectiblesResult;
-        if (!canUseCollectiblesResult) {
-          result1 = tmp4(tmp3[14]).isPremiumCollectiblesPurchase(purchase);
-          const tmp4Result3 = tmp4(tmp3[14]);
+        if (result1) {
+          const tmp4Result3 = tmp4(selectedSkuId[14]);
+          result1 = tmp4Result3.isPremiumCollectiblesPurchase(purchase);
         }
         let tmp15 = null == selectedSkuId;
         if (!tmp15) {
           tmp15 = null != purchase && !result1;
-          const tmp16 = null != purchase && !result1;
         }
         if (!tmp15) {
-          let tmp17 = result;
-          if (result) {
-            tmp17 = isTryItOut;
-          }
-          tmp15 = tmp17;
+          tmp15 = result && isTryItOut;
         }
-        isTryItOut = tmp15;
+        APPLY_BUTTON_SCALE_TRANSITION = tmp15;
         if (result) {
           result = !canUseCollectiblesResult;
         }
@@ -585,10 +609,9 @@ export default noop.memo(
           result = !isTryItOut;
         }
         c9 = result;
-        const obj10 = user(selectedSkuId[14]);
-        isShopStandalonePdpMobileEnabled = user(selectedSkuId[15]).useIsShopStandalonePdpMobileEnabled(
-          "edit_collectibles_cta_button",
-        );
+        const tmp4Result4 = tmp4(selectedSkuId[15]);
+        isShopStandalonePdpMobileEnabled =
+          tmp4Result4.useIsShopStandalonePdpMobileEnabled("edit_collectibles_cta_button");
         const items2 = [tmp15, result, user];
         const items3 = [
           tmp15,
@@ -600,37 +623,43 @@ export default noop.memo(
           selectedSkuId,
         ];
         const memo = obj3.useMemo(() => {
-          if (isTryItOut) {
-            const intl3 = util.intl;
-            let stringResult = intl3.string(util.t.Jh8fJz);
+          let stringResult;
+          if (closure_8) {
+            const intl3 = intl4.intl;
+            stringResult = intl3.string(intl4.t.Jh8fJz);
           } else if (c9) {
-            const intl2 = util.intl;
+            let stringResult1;
+            const obj = PremiumUtilsDefault;
+            const isPremiumResult = obj.isPremium(user);
+            const intl2 = intl4.intl;
             const string = intl2.string;
-            let KXLX7l = util.t;
+            const t = intl4.t;
             if (isPremiumResult) {
-              KXLX7l = KXLX7l.KXLX7l;
-              let stringResult1 = string(KXLX7l);
+              stringResult1 = string(t.KXLX7l);
             } else {
-              stringResult1 = string(KXLX7l.mr4K7D);
+              stringResult1 = string(t.mr4K7D);
             }
-            isPremiumResult = PremiumUtilsDefault.isPremium(user);
+            stringResult = stringResult1;
           } else {
-            const intl = util.intl;
-            stringResult = intl.string(util.t.fYfGgK);
+            const intl = intl4.intl;
+            stringResult = intl.string(intl4.t.fYfGgK);
           }
           return stringResult;
         }, items2);
         const callback = obj3.useCallback(() => {
-          if (isTryItOut) {
-            const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
+          if (closure_8) {
+            const obj6 = HapticUtils;
+            const result = obj6.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
             onApply();
           } else if (c9) {
-            const result1 = EditCollectiblesActionCreators.navigateToNitroManagement();
+            const obj5 = EditCollectiblesActionCreators;
+            const result1 = obj5.navigateToNitroManagement();
           } else {
             if (isShopStandalonePdpMobileEnabled) {
               if (null != selectedSkuId) {
-                const obj2 = { skuId: tmp3, analyticsLocations, stageCollectibleChangeForEditProfile: onApply };
-                const result2 = openProductDetailsActionSheet.openProductDetailsActionSheetForSku(obj2, "stack");
+                const obj2 = { skuId: tmp4, analyticsLocations, stageCollectibleChangeForEditProfile: onApply };
+                const obj3 = openProductDetailsActionSheet;
+                const result2 = obj3.openProductDetailsActionSheetForSku(obj2, "stack");
               }
             }
             const obj4 = {
@@ -639,32 +668,30 @@ export default noop.memo(
               initialProductSkuId: selectedSkuId,
               screen: analyticsSource.SHOP_ALL,
             };
-            const result3 = CollectiblesActionCreators.openCollectiblesShopMobile(obj4);
+            const obj = CollectiblesActionCreators;
+            const result3 = obj.openCollectiblesShopMobile(obj4);
           }
-          ActionSheetActionCreatorsDefault.hideActionSheet();
+          const obj7 = ActionSheetActionCreatorsDefault;
+          obj7.hideActionSheet();
         }, items3);
-        const obj11 = { style: null, animatedProps, children: null };
-        const items4 = [tmp.buttonContainer, animatedStyle1];
-        obj11.style = items4;
-        const obj12 = { style: null, pointerEvents: "box-none", children: null };
-        const items5 = [
-          tmp.buttonRowContainer,
-          animatedStyle,
-          { marginBottom: currentSkuId(selectedSkuId[8])().bottom },
-        ];
-        obj12.style = items5;
-        let str = "primary";
+        const obj11 = { style: items4, animatedProps, children: sharedValue(View2, obj12) };
+        items4 = [tmp.buttonContainer, animatedStyle1];
+        const View = tmp2(tmp3[11]).View;
+        obj12 = {
+          style: items5,
+          pointerEvents: "box-none",
+          children: sharedValue(Button, { variant: str, onPress: callback, size: "md", text: memo, grow: true }),
+        };
+        items5 = [tmp.buttonRowContainer, animatedStyle, { marginBottom: bottom }];
+        View2 = tmp2(tmp3[11]).View;
+        str = "primary";
+        Button = tmp4(tmp3[22]).Button;
         if (result) {
           str = "active";
         }
-        obj12.children = sharedValue(user(selectedSkuId[22]).Button, {
-          variant: str,
-          onPress: callback,
-          size: "md",
-          text: memo,
-          grow: true,
-        });
-        obj11.children = sharedValue(currentSkuId(selectedSkuId[11]).View, obj12);
-        return sharedValue(currentSkuId(selectedSkuId[11]).View, obj11);
+        return sharedValue(View, obj11);
       },
 );
+let result = size.fileFinishedImporting("modules/user_profile/native/EditCollectiblesCTAButton.tsx");
+
+export default memoResult;

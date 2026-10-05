@@ -1,40 +1,38 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncNameInput.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl7 from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import ContactSyncErrorDefault from "ContactSyncError.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+const View = react_native.View;
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
   flex: { flex: 1 },
   content: { flex: 1, padding: 16, paddingBottom: 0 },
   title: { marginBottom: 8, textAlign: "center" },
   subtitle: { lineHeight: 18, textAlign: "center", marginBottom: 16 },
-  input: {
-    width: "100%",
-    marginTop: 8,
-    marginBottom: 12,
-    padding: 12,
-    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-    borderRadius: nativeDefault.radii.lg,
-  },
+  input: obj2,
   formSubtitle: { lineHeight: 16 },
-  button: null,
-  error: null,
+  button: obj3,
+  error: { marginTop: 8 },
 };
-let obj3 = {
+obj2 = {
   width: "100%",
   marginTop: 8,
   marginBottom: 12,
@@ -42,452 +40,516 @@ let obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   borderRadius: nativeDefault.radii.lg,
 };
-obj2.button = { flexGrow: 0, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12 };
-obj2.error = { marginTop: 8 };
-let closure_8 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj4 = { flexGrow: 0, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameInput.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+createStyles = createStyles.createStyles;
+obj3 = { flexGrow: 0, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12 };
+let closure_8 = createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (onRemoveName) => {
-      const cResult = c.c(53);
+      let Button;
+      let error;
+      let first;
+      let first1;
+      let intl5;
+      let loading;
+      let onNext;
+      let prefilledFromContactBook;
+      let tmp12;
+      let tmp16;
+      let tmp8;
+      const obj = react2;
+      const cResult = obj.c(53);
       ({ loading, error, prefilledFromContactBook, onNext } = onRemoveName);
       onRemoveName = onRemoveName.onRemoveName;
       let tmp4 = undefined !== prefilledFromContactBook;
+      const initialName = onRemoveName.initialName;
       if (tmp4) {
         tmp4 = prefilledFromContactBook;
       }
       const tmp5 = closure_8();
-      const tmp6 = _slicedToArray(noop.useState(onRemoveName.initialName), 2);
-      value = tmp6[0];
+      [first, tmp8] = react.useState(initialName);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { includeKeyboardHeight: true };
         cResult[0] = obj2;
-        let first1 = obj2;
+        first1 = obj2;
       } else {
         first1 = cResult[0];
       }
       const insets = useSafeAreaInsetsKeyboardAwareDefault(first1).insets;
       if (null != onRemoveName) {
+        let tmp14;
         const _Symbol2 = Symbol;
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl2 = util.intl;
-          const stringResult = intl2.string(util.t.i4jeWR);
+          const intl2 = intl7.intl;
+          const stringResult = intl2.string(intl7.t.i4jeWR);
           cResult[1] = stringResult;
+          tmp14 = stringResult;
+        } else {
+          tmp14 = cResult[1];
         }
+        tmp12 = tmp14;
       } else {
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = util.intl;
-          const stringResult1 = intl.string(util.t.PDTjLN);
+          const intl = intl7.intl;
+          const stringResult1 = intl.string(intl7.t.PDTjLN);
           cResult[2] = stringResult1;
-          let tmp11 = stringResult1;
+          tmp12 = stringResult1;
         } else {
-          tmp11 = cResult[2];
+          tmp12 = cResult[2];
         }
-        if (cResult[3] !== insets.bottom) {
-          const obj3 = { paddingBottom: insets.bottom };
-          cResult[3] = insets.bottom;
-          cResult[4] = obj3;
-          let tmp16 = obj3;
-        } else {
-          tmp16 = cResult[4];
+      }
+      if (cResult[3] !== insets.bottom) {
+        const obj3 = { paddingBottom: insets.bottom };
+        cResult[3] = insets.bottom;
+        cResult[4] = obj3;
+        tmp16 = obj3;
+      } else {
+        tmp16 = cResult[4];
+      }
+      if (cResult[5] === tmp5.content) {
+        let tmp17;
+        let tmp18;
+        if (cResult[6] === tmp16) {
+          tmp17 = cResult[7];
         }
-        if (cResult[5] === tmp5.content) {
-          if (cResult[6] === tmp16) {
-            let tmp17 = cResult[7];
-          }
-          if (cResult[8] !== tmp10) {
-            const intl3 = util.intl;
-            const string = intl3.string;
-            let t = util.t;
-            if (tmp10) {
-              t = t["/OywGQ"];
-              let stringResult2 = string(t);
-            } else {
-              stringResult2 = string(t["sO+NI5"]);
-            }
-            cResult[8] = tmp10;
-            cResult[9] = stringResult2;
+        if (cResult[8] !== (null != onRemoveName)) {
+          let stringResult2;
+          const intl3 = intl7.intl;
+          const string = intl3.string;
+          const t = intl7.t;
+          if (null != onRemoveName) {
+            stringResult2 = string(t["/OywGQ"]);
           } else {
-            if (cResult[10] === tmp5.title) {
-              if (cResult[11] === tmp18) {
-                let tmp22 = cResult[12];
+            stringResult2 = string(t["sO+NI5"]);
+          }
+          cResult[8] = null != onRemoveName;
+          cResult[9] = stringResult2;
+          tmp18 = stringResult2;
+        } else {
+          tmp18 = cResult[9];
+        }
+        if (cResult[10] === tmp5.title) {
+          let tmp20;
+          let tmp24;
+          if (cResult[11] === tmp18) {
+            tmp20 = cResult[12];
+          }
+          if (cResult[13] !== (null != onRemoveName)) {
+            let string2Result;
+            const intl4 = intl7.intl;
+            const string2 = intl4.string;
+            const t2 = intl7.t;
+            if (null != onRemoveName) {
+              string2Result = string2(t2["xCHh/t"]);
+            } else {
+              string2Result = string2(t2.xI496M);
+            }
+            cResult[13] = null != onRemoveName;
+            cResult[14] = string2Result;
+            tmp24 = string2Result;
+          } else {
+            tmp24 = cResult[14];
+          }
+          if (cResult[15] === tmp5.subtitle) {
+            let tmp26;
+            let tmp30;
+            if (cResult[16] === tmp24) {
+              tmp26 = cResult[17];
+            }
+            const _Symbol3 = Symbol;
+            if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
+              const obj4 = {
+                variant: "eyebrow",
+                color: "interactive-text-default",
+                children: intl5.string(intl7.t["42/D2U"]),
+              };
+              const Text = Text_Text.Text;
+              intl5 = intl7.intl;
+              const tmp32 = metroRequire(Text, obj4);
+              cResult[18] = tmp32;
+              tmp30 = tmp32;
+            } else {
+              tmp30 = cResult[18];
+            }
+            if (cResult[19] === first) {
+              let tmp33;
+              if (cResult[20] === tmp5.input) {
+                tmp33 = cResult[21];
               }
-              if (cResult[13] !== tmp10) {
-                const intl4 = util.intl;
-                const string2 = intl4.string;
-                let t1 = util.t;
-                if (tmp10) {
-                  t1 = t1["xCHh/t"];
-                  let string2Result = string2(t1);
-                } else {
-                  string2Result = string2(t1.xI496M);
+              if (cResult[22] === tmp4) {
+                let tmp36;
+                if (cResult[23] === tmp5.formSubtitle) {
+                  tmp36 = cResult[24];
                 }
-                cResult[13] = tmp10;
-                cResult[14] = string2Result;
-              } else {
-                if (cResult[15] === tmp5.subtitle) {
-                  if (cResult[16] === tmp25) {
-                    let tmp29 = cResult[17];
-                  }
-                  const _Symbol3 = Symbol;
-                  if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-                    const obj4 = { variant: "eyebrow", color: "interactive-text-default", children: null };
-                    const intl5 = util.intl;
-                    obj4.children = intl5.string(util.t["42/D2U"]);
-                    const tmp34 = timestampProducer(Text_Text.Text, obj4);
-                    cResult[18] = tmp34;
-                    let tmp32 = tmp34;
-                  } else {
-                    tmp32 = cResult[18];
-                  }
-                  if (cResult[19] === value) {
-                    if (cResult[20] === tmp5.input) {
-                      let tmp35 = cResult[21];
-                    }
-                    if (cResult[22] === tmp4) {
-                      if (cResult[23] === tmp5.formSubtitle) {
-                        let tmp38 = cResult[24];
-                      }
-                      if (cResult[25] === tmp5.flex) {
-                        if (cResult[26] === tmp35) {
-                          if (cResult[27] === tmp38) {
-                            if (cResult[28] === tmp22) {
-                              if (cResult[29] === tmp29) {
-                                let tmp41 = cResult[30];
-                              }
-                              let str = "lg";
-                              if (tmp10) {
-                                str = "md";
-                              }
-                              if (cResult[31] === value) {
-                                if (cResult[32] === onNext) {
-                                  let tmp46 = cResult[33];
-                                }
-                                if (cResult[34] === loading) {
-                                  if (cResult[35] === tmp11) {
-                                    if (cResult[36] === str) {
-                                      if (cResult[37] === tmp46) {
-                                        if (cResult[38] === tmp47) {
-                                          let tmp48 = cResult[39];
+                if (cResult[25] === tmp5.flex) {
+                  if (cResult[26] === tmp33) {
+                    if (cResult[27] === tmp36) {
+                      if (cResult[28] === tmp20) {
+                        let tmp39;
+                        if (cResult[29] === tmp26) {
+                          tmp39 = cResult[30];
+                        }
+                        let str = "lg";
+                        if (null != onRemoveName) {
+                          str = "md";
+                        }
+                        if (cResult[31] === first) {
+                          let tmp44;
+                          if (cResult[32] === onNext) {
+                            tmp44 = cResult[33];
+                          }
+                          if (cResult[34] === loading) {
+                            if (cResult[35] === tmp12) {
+                              if (cResult[36] === str) {
+                                if (cResult[37] === tmp44) {
+                                  let tmp46;
+                                  if ((cResult[38] === "") === first) {
+                                    tmp46 = cResult[39];
+                                  }
+                                  if ((cResult[40] === null) != onRemoveName) {
+                                    if (cResult[41] === onRemoveName) {
+                                      let tmp48;
+                                      if (cResult[42] === tmp5.button) {
+                                        tmp48 = cResult[43];
+                                      }
+                                      if (cResult[44] === error) {
+                                        let tmp53;
+                                        if (cResult[45] === tmp5.error) {
+                                          tmp53 = cResult[46];
                                         }
-                                        if (cResult[40] === tmp10) {
-                                          if (cResult[41] === onRemoveName) {
-                                            if (cResult[42] === tmp5.button) {
-                                              let tmp50 = cResult[43];
-                                            }
-                                            if (cResult[44] === error) {
-                                              if (cResult[45] === tmp5.error) {
-                                                let tmp55 = cResult[46];
-                                              }
-                                              if (cResult[47] === tmp41) {
-                                                if (cResult[48] === tmp48) {
-                                                  if (cResult[49] === tmp50) {
-                                                    if (cResult[50] === tmp55) {
-                                                      if (cResult[51] === tmp17) {
-                                                        let tmp58 = cResult[52];
-                                                      }
-                                                      return tmp58;
-                                                    }
-                                                  }
+                                        if (cResult[47] === tmp39) {
+                                          if (cResult[48] === tmp46) {
+                                            if (cResult[49] === tmp48) {
+                                              if (cResult[50] === tmp53) {
+                                                let tmp56;
+                                                if (cResult[51] === tmp17) {
+                                                  tmp56 = cResult[52];
                                                 }
+                                                return tmp56;
                                               }
-                                              class Q {
-                                                constructor() {
-                                                  return onNext(closure_2);
-                                                }
-                                              }
-                                              tmp61[0] = tmp17;
-                                              const items = [tmp41, tmp48, tmp50, tmp55];
-                                              tmp61[1] = items;
-                                              const tmp62 = React5(View, tmp61);
-                                              cResult[47] = tmp41;
-                                              cResult[48] = tmp48;
-                                              cResult[49] = tmp50;
-                                              cResult[50] = tmp55;
-                                              cResult[51] = tmp17;
-                                              cResult[52] = tmp62;
-                                              tmp58 = tmp62;
-                                            }
-                                            const obj5 = { style: null, error: null };
-                                            class Q {
-                                              constructor() {
-                                                return onNext(closure_2);
-                                              }
-                                            }
-                                            obj5.error = error;
-                                            const tmp57 = timestampProducer(ContactSyncErrorDefault, obj5);
-                                            cResult[44] = error;
-                                            cResult[45] = tmp5.error;
-                                            cResult[46] = tmp57;
-                                            tmp55 = tmp57;
-                                          }
-                                        }
-                                        let tmp51 = null;
-                                        if (tmp10) {
-                                          const obj6 = { style: tmp5.button, children: null };
-                                          class Q {
-                                            constructor() {
-                                              return onNext(closure_2);
                                             }
                                           }
-                                          const intl6 = util.intl;
-                                          tmp54[2] = intl6.string(util.t["91RssO"]);
-                                          tmp54[3] = function onPress() {
-                                            let tmp;
-                                            if (onRemoveName != null) {
-                                              tmp = onRemoveName();
-                                            }
-                                            return tmp;
-                                          };
-                                          obj6.children = timestampProducer(components_Button_Button.Button, tmp54);
-                                          tmp51 = timestampProducer(View, obj6);
                                         }
                                         class Q {
                                           constructor() {
-                                            return onNext(closure_2);
+                                            return onNext(first);
                                           }
                                         }
-                                        cResult[40] = tmp10;
-                                        cResult[41] = onRemoveName;
-                                        cResult[42] = tmp5.button;
-                                        cResult[43] = tmp51;
-                                        tmp50 = tmp51;
+                                        tmp59[0] = tmp17;
+                                        const items = [tmp39, tmp46, tmp48, tmp53];
+                                        tmp59[1] = items;
+                                        const tmp60 = metroImportDefault(View, tmp59);
+                                        cResult[47] = tmp39;
+                                        cResult[48] = tmp46;
+                                        cResult[49] = tmp48;
+                                        cResult[50] = tmp53;
+                                        cResult[51] = tmp17;
+                                        cResult[52] = tmp60;
+                                        tmp56 = tmp60;
                                       }
+                                      const obj5 = { style: null, error };
+                                      class Q {
+                                        constructor() {
+                                          return onNext(first);
+                                        }
+                                      }
+                                      const tmp55 = metroRequire(ContactSyncErrorDefault, obj5);
+                                      cResult[44] = error;
+                                      cResult[45] = tmp5.error;
+                                      cResult[46] = tmp55;
+                                      tmp53 = tmp55;
                                     }
                                   }
-                                }
-                                class Q {
-                                  constructor() {
-                                    return onNext(closure_2);
+                                  let tmp49 = null;
+                                  if (null != onRemoveName) {
+                                    const obj6 = { style: tmp5.button, children: metroRequire(Button, tmp52) };
+                                    class Q {
+                                      constructor() {
+                                        return onNext(first);
+                                      }
+                                    }
+                                    Button = components_Button_Button.Button;
+                                    const intl6 = intl7.intl;
+                                    tmp52[2] = intl6.string(intl7.t["91RssO"]);
+                                    tmp52[3] = function onPress() {
+                                      let tmp;
+                                      if (onRemoveName != null) {
+                                        tmp = onRemoveName();
+                                      }
+                                      return tmp;
+                                    };
+                                    tmp49 = metroRequire(View, obj6);
                                   }
-                                }
-                                const obj7 = {
-                                  variant: "primary",
-                                  size: str,
-                                  text: tmp11,
-                                  onPress: tmp46,
-                                  loading,
-                                  disabled: "" === value,
-                                };
-                                const tmp49 = timestampProducer(components_Button_Button.Button, obj7);
-                                cResult[34] = loading;
-                                cResult[35] = tmp11;
-                                cResult[36] = str;
-                                cResult[37] = tmp46;
-                                cResult[38] = "" === value;
-                                cResult[39] = tmp49;
-                                tmp48 = tmp49;
-                              }
-                              class Q {
-                                constructor() {
-                                  return onNext(closure_2);
+                                  class Q {
+                                    constructor() {
+                                      return onNext(first);
+                                    }
+                                  }
+                                  cResult[40] = null != onRemoveName;
+                                  cResult[41] = onRemoveName;
+                                  cResult[42] = tmp5.button;
+                                  cResult[43] = tmp49;
+                                  tmp48 = tmp49;
                                 }
                               }
-                              cResult[31] = value;
-                              cResult[32] = onNext;
-                              cResult[33] = Q;
-                              tmp46 = Q;
                             }
                           }
+                          class Q {
+                            constructor() {
+                              return onNext(first);
+                            }
+                          }
+                          const obj8 = {
+                            variant: "primary",
+                            size: str,
+                            text: tmp12,
+                            onPress: tmp44,
+                            loading,
+                            disabled: "" === first,
+                          };
+                          const tmp47 = metroRequire(components_Button_Button.Button, obj8);
+                          cResult[34] = loading;
+                          cResult[35] = tmp12;
+                          cResult[36] = str;
+                          cResult[37] = tmp44;
+                          cResult[38] = "" === first;
+                          cResult[39] = tmp47;
+                          tmp46 = tmp47;
                         }
-                      }
-                      tmp44[0] = tmp5.flex;
-                      const items1 = [tmp22, tmp29, tmp32, tmp35, tmp38];
-                      tmp44[1] = items1;
-                      const tmp45 = React5(View, tmp44);
-                      cResult[25] = tmp5.flex;
-                      cResult[26] = tmp35;
-                      cResult[27] = tmp38;
-                      cResult[28] = tmp22;
-                      cResult[29] = tmp29;
-                      cResult[30] = tmp45;
-                      tmp41 = tmp45;
-                    }
-                    let tmp39 = null;
-                    if (tmp4) {
-                      const obj8 = {
-                        style: tmp5.formSubtitle,
-                        variant: "text-xs/medium",
-                        color: "text-default",
-                        children: null,
-                      };
-                      class Q {
-                        constructor() {
-                          return onNext(closure_2);
+                        class Q {
+                          constructor() {
+                            return onNext(first);
+                          }
                         }
+                        cResult[31] = first;
+                        cResult[32] = onNext;
+                        cResult[33] = Q;
+                        tmp44 = Q;
                       }
-                      obj8.children = obj9.string(util.t.bCQt9K);
-                      tmp39 = timestampProducer(Text_Text.Text, obj8);
                     }
-                    cResult[22] = tmp4;
-                    cResult[23] = tmp5.formSubtitle;
-                    cResult[24] = tmp39;
-                    tmp38 = tmp39;
                   }
-                  const obj10 = {
-                    value,
-                    onChangeText: tmp6[1],
-                    style: tmp5.input,
-                    autoFocus: true,
-                    showBorder: false,
-                    showTopContainer: false,
-                    clearButtonVisibility: native.ClearButtonVisibility.WITH_CONTENT,
-                    autoCorrect: true,
-                    autoComplete: "name",
-                    textContentType: "name",
-                  };
-                  const tmp37 = timestampProducer(native.InputView, obj10);
-                  cResult[19] = value;
-                  cResult[20] = tmp5.input;
-                  cResult[21] = tmp37;
-                  tmp35 = tmp37;
                 }
-                const obj11 = { style: null, variant: "text-sm/medium", color: "text-default", children: cResult[14] };
-                const tmp31 = timestampProducer(Text_Text.Text, obj11);
-                cResult[15] = tmp5.subtitle;
-                cResult[16] = cResult[14];
-                cResult[17] = tmp31;
-                tmp29 = tmp31;
+                tmp42[0] = tmp5.flex;
+                const items1 = [tmp20, tmp26, tmp30, tmp33, tmp36];
+                tmp42[1] = items1;
+                const tmp43 = metroImportDefault(View, tmp42);
+                cResult[25] = tmp5.flex;
+                cResult[26] = tmp33;
+                cResult[27] = tmp36;
+                cResult[28] = tmp20;
+                cResult[29] = tmp26;
+                cResult[30] = tmp43;
+                tmp39 = tmp43;
               }
+              let tmp37 = null;
+              if (tmp4) {
+                const obj9 = {
+                  style: tmp5.formSubtitle,
+                  variant: "text-xs/medium",
+                  color: "text-default",
+                  children: obj7.string(intl7.t.bCQt9K),
+                };
+                const Text2 = Text_Text.Text;
+                class Q {
+                  constructor() {
+                    return onNext(first);
+                  }
+                }
+                tmp37 = metroRequire(Text2, obj9);
+              }
+              cResult[22] = tmp4;
+              cResult[23] = tmp5.formSubtitle;
+              cResult[24] = tmp37;
+              tmp36 = tmp37;
             }
-            const obj12 = {
-              style: null,
-              accessibilityRole: "header",
-              variant: "heading-xl/extrabold",
-              color: "mobile-text-heading-primary",
-              children: cResult[9],
+            const obj10 = {
+              value: first,
+              onChangeText: tmp8,
+              style: tmp5.input,
+              autoFocus: true,
+              showBorder: false,
+              showTopContainer: false,
+              clearButtonVisibility: native.ClearButtonVisibility.WITH_CONTENT,
+              autoCorrect: true,
+              autoComplete: "name",
+              textContentType: "name",
             };
-            const tmp24 = timestampProducer(Text_Text.Text, obj12);
-            cResult[10] = tmp5.title;
-            cResult[11] = cResult[9];
-            cResult[12] = tmp24;
-            tmp22 = tmp24;
+            const InputView = native.InputView;
+            const tmp35 = metroRequire(InputView, obj10);
+            cResult[19] = first;
+            cResult[20] = tmp5.input;
+            cResult[21] = tmp35;
+            tmp33 = tmp35;
           }
+          tmp28[0] = tmp5.subtitle;
+          tmp28[3] = tmp24;
+          const tmp29 = metroRequire(Text_Text.Text, tmp28);
+          cResult[15] = tmp5.subtitle;
+          cResult[16] = tmp24;
+          cResult[17] = tmp29;
+          tmp26 = tmp29;
         }
-        const items2 = [tmp5.content, tmp16];
-        cResult[5] = tmp5.content;
-        cResult[6] = tmp16;
-        cResult[7] = items2;
-        tmp17 = items2;
+        tmp22[0] = tmp5.title;
+        tmp22[4] = tmp18;
+        const tmp23 = metroRequire(Text_Text.Text, tmp22);
+        cResult[10] = tmp5.title;
+        cResult[11] = tmp18;
+        cResult[12] = tmp23;
+        tmp20 = tmp23;
       }
+      const items2 = [tmp5.content, tmp16];
+      cResult[5] = tmp5.content;
+      cResult[6] = tmp16;
+      cResult[7] = items2;
+      tmp17 = items2;
     }
   : (prefilledFromContactBook) => {
+      let Button2;
+      let closure_129_0;
+      let error;
+      let first;
+      let initialName;
+      let intl4;
+      let intl5;
+      let intl6;
+      let items;
+      let items1;
+      let items2;
+      let loading;
+      let obj10;
+      let onRemoveName;
+      let string2Result;
+      let string3Result;
+      let stringResult;
+      let tmp10;
+      let tmp4;
       let flag = prefilledFromContactBook.prefilledFromContactBook;
       ({ loading, error, initialName } = prefilledFromContactBook);
       if (flag === undefined) {
         flag = false;
       }
-      ({ onNext: require, onRemoveName } = prefilledFromContactBook);
+      ({ onNext: closure_129_0, onRemoveName } = prefilledFromContactBook);
+      first = undefined;
       let tmp = closure_8();
-      const tmp2 = _slicedToArray(noop.useState(initialName), 2);
-      value = tmp2[0];
-      const intl = util.intl;
+      [first, tmp4] = react.useState(initialName);
+      const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
+      const intl = intl7.intl;
       const string = intl.string;
-      const t = util.t;
+      const t = intl7.t;
       if (null != onRemoveName) {
-        let stringResult = string(t.i4jeWR);
-        let tmp9 = require;
+        stringResult = string(t.i4jeWR);
+        tmp10 = require;
       } else {
         stringResult = string(t.PDTjLN);
-        tmp9 = require;
+        tmp10 = require;
       }
-      const obj = { style: null, children: null };
-      const items = [
-        tmp.content,
-        { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom },
-      ];
-      obj.style = items;
-      const obj2 = { style: tmp.flex, children: null };
+      const obj = { style: items, children: items2 };
+      items = [tmp.content, { paddingBottom: insets.bottom }];
+      const obj2 = { style: tmp.flex, children: items1 };
       const obj3 = {
         style: tmp.title,
         accessibilityRole: "header",
         variant: "heading-xl/extrabold",
         color: "mobile-text-heading-primary",
-        children: null,
+        children: string2Result,
       };
-      const intl2 = tmp9(1126).intl;
+      const Text = tmp10(4886).Text;
+      const intl2 = tmp10(1126).intl;
       const string2 = intl2.string;
-      const t2 = tmp9(1126).t;
+      const t2 = tmp10(1126).t;
       if (null != onRemoveName) {
-        let string2Result = string2(t2["/OywGQ"]);
+        string2Result = string2(t2["/OywGQ"]);
       } else {
         string2Result = string2(t2["sO+NI5"]);
       }
-      obj3.children = string2Result;
-      const items1 = [timestampProducer(tmp9(4886).Text, obj3), , , ,];
-      const obj4 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
-      const intl3 = tmp9(1126).intl;
+      items1 = [metroRequire(Text, obj3), , , ,];
+      const obj4 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: string3Result };
+      const Text2 = tmp10(4886).Text;
+      const intl3 = tmp10(1126).intl;
       const string3 = intl3.string;
-      const t3 = tmp9(1126).t;
+      const t3 = tmp10(1126).t;
       if (null != onRemoveName) {
-        let string3Result = string3(t3["xCHh/t"]);
+        string3Result = string3(t3["xCHh/t"]);
       } else {
         string3Result = string3(t3.xI496M);
       }
-      obj4.children = string3Result;
-      items1[1] = timestampProducer(tmp9(4886).Text, obj4);
-      const obj5 = { variant: "eyebrow", color: "interactive-text-default", children: null };
-      const intl4 = tmp9(1126).intl;
-      obj5.children = intl4.string(tmp9(1126).t["42/D2U"]);
-      items1[2] = timestampProducer(tmp9(4886).Text, obj5);
-      items1[3] = timestampProducer(tmp9(1188).InputView, {
-        value,
-        onChangeText: tmp2[1],
+      items1[1] = metroRequire(Text2, obj4);
+      const obj5 = {
+        variant: "eyebrow",
+        color: "interactive-text-default",
+        children: intl4.string(tmp10(1126).t["42/D2U"]),
+      };
+      const Text3 = tmp10(4886).Text;
+      intl4 = tmp10(1126).intl;
+      items1[2] = metroRequire(Text3, obj5);
+      const obj6 = {
+        value: first,
+        onChangeText: tmp4,
         style: tmp.input,
         autoFocus: true,
         showBorder: false,
         showTopContainer: false,
-        clearButtonVisibility: tmp9(1188).ClearButtonVisibility.WITH_CONTENT,
+        clearButtonVisibility: tmp10(1188).ClearButtonVisibility.WITH_CONTENT,
         autoCorrect: true,
         autoComplete: "name",
         textContentType: "name",
-      });
-      let tmp12Result = null;
+      };
+      const InputView = tmp10(1188).InputView;
+      items1[3] = metroRequire(InputView, obj6);
+      let tmp13Result = null;
       if (flag) {
-        const obj7 = { style: tmp.formSubtitle, variant: "text-xs/medium", color: "text-default", children: null };
-        const intl5 = tmp9(1126).intl;
-        obj7.children = intl5.string(tmp9(1126).t.bCQt9K);
-        tmp12Result = timestampProducer(tmp9(4886).Text, obj7);
+        const obj7 = {
+          style: tmp.formSubtitle,
+          variant: "text-xs/medium",
+          color: "text-default",
+          children: intl5.string(tmp10(1126).t.bCQt9K),
+        };
+        const Text4 = tmp10(4886).Text;
+        intl5 = tmp10(1126).intl;
+        tmp13Result = metroRequire(Text4, obj7);
       }
-      items1[4] = tmp12Result;
-      obj2.children = items1;
-      const items2 = [React5(View, obj2), , ,];
+      items1[4] = tmp13Result;
+      items2 = [metroImportDefault(View, obj2), , ,];
       let str = "lg";
+      const Button = tmp10(5594).Button;
       if (null != onRemoveName) {
         str = "md";
       }
-      items2[1] = timestampProducer(tmp9(5594).Button, {
+      const obj8 = {
         variant: "primary",
         size: str,
         text: stringResult,
         onPress() {
-          return require(first);
+          return closure_1_0(first);
         },
         loading,
-        disabled: "" === value,
-      });
-      let tmp12Result2 = null;
+        disabled: "" === first,
+      };
+      items2[1] = metroRequire(Button, obj8);
+      let tmp13Result2 = null;
       if (null != onRemoveName) {
-        const obj9 = { style: tmp.button, children: null };
-        const obj10 = { variant: "secondary", size: "md", text: null, onPress: null };
-        const intl6 = tmp9(1126).intl;
-        obj10.text = intl6.string(tmp9(1126).t["91RssO"]);
-        obj10.onPress = function onPress() {
-          let tmp;
-          if (onRemoveName != null) {
-            tmp = onRemoveName();
-          }
-          return tmp;
+        const obj9 = { style: tmp.button, children: metroRequire(Button2, obj10) };
+        obj10 = {
+          variant: "secondary",
+          size: "md",
+          text: intl6.string(tmp10(1126).t["91RssO"]),
+          onPress() {
+            let tmp;
+            if (onRemoveName != null) {
+              tmp = onRemoveName();
+            }
+            return tmp;
+          },
         };
-        obj9.children = timestampProducer(tmp9(5594).Button, obj10);
-        tmp12Result2 = timestampProducer(View, obj9);
+        Button2 = tmp10(5594).Button;
+        intl6 = tmp10(1126).intl;
+        tmp13Result2 = metroRequire(View, obj9);
       }
-      items2[2] = tmp12Result2;
-      items2[3] = timestampProducer(ContactSyncErrorDefault, { style: tmp.error, error });
-      obj.children = items2;
-      return React5(View, obj);
+      items2[2] = tmp13Result2;
+      const obj11 = { style: tmp.error, error };
+      items2[3] = metroRequire(ContactSyncErrorDefault, obj11);
+      return metroImportDefault(View, obj);
     };
+const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameInput.tsx");
+
+export default tmp4;

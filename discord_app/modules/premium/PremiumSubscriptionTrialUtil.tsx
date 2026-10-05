@@ -1,24 +1,33 @@
 // discord_app/modules/premium/PremiumSubscriptionTrialUtil.tsx
-import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../_runtime/00576_c.js";
+import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../_runtime/00576_react.js";
 import UserStore from "../../stores/UserStore.tsx";
 import SubscriptionStore from "../../stores/billing/SubscriptionStore.tsx";
 import UserOfferStore from "../../stores/billing/UserOfferStore.tsx";
+import PremiumConstants from "PremiumConstants.tsx";
+import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const PremiumConstants = fn(1379);
+let c9;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
 ({
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: hasOwnProperty,
   PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: metroRequire,
-  PREMIUM_TIER_2_3P_ONE_MONTH_TRIAL_ID: closure_7,
-  PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_8,
-  PREMIUM_TRIAL_IDS_ALL: closure_9,
+  PREMIUM_TIER_2_3P_ONE_MONTH_TRIAL_ID: metroImportDefault,
+  PREMIUM_TIER_2_REFERRAL_TRIAL_ID: metroImportAll,
+  PREMIUM_TRIAL_IDS_ALL: c9,
 } = PremiumConstants);
-fn(558);
-const ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let premiumTypeSubscription;
+      let tmp4;
+      let tmp5;
+      const obj = react;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SubscriptionStore];
         const fn = function l() {
@@ -31,7 +40,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       let hasActiveTrial;
       if (stateFromStores != null) {
         hasActiveTrial = stateFromStores.hasActiveTrial;
@@ -39,52 +49,27 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       return hasActiveTrial;
     }
   : () => {
+      let premiumTypeSubscription;
       const items = [SubscriptionStore];
-      const stateFromStores = initialize.useStateFromStores(items, () =>
-        premiumTypeSubscription.getPremiumTypeSubscription(),
-      );
+      const obj = get_initialized;
+      const stateFromStores = obj.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
       let hasActiveTrial;
       if (stateFromStores != null) {
         hasActiveTrial = stateFromStores.hasActiveTrial;
       }
       return hasActiveTrial;
     };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionTrialUtil.tsx");
-
-export const useHasActiveTrial = tmp3;
-export const hasActiveTrial = function hasActiveTrial() {
-  const premiumTypeSubscription = SubscriptionStore.getPremiumTypeSubscription();
-  let trialId;
-  if (premiumTypeSubscription != null) {
-    trialId = premiumTypeSubscription.trialId;
-  }
-  return null != trialId;
-};
-export const isEligibleTrialSub = function isEligibleTrialSub(trialId) {
-  trialId = undefined;
-  if (trialId != null) {
-    trialId = trialId.trialId;
-  }
-  let tmp2 = null != trialId;
-  if (tmp2) {
-    let tmp4 = trialId.trialId === hasOwnProperty;
-    if (!tmp4) {
-      tmp4 = trialId.trialId === timestampProducer;
-    }
-    if (!tmp4) {
-      tmp4 = trialId.trialId === React5;
-    }
-    if (!tmp4) {
-      tmp4 = trialId.trialId === closure_1_8;
-    }
-    tmp2 = tmp4;
-  }
-  return tmp2;
-};
-export const useCurrentPremiumTrialTier = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(4);
+      let currentUser;
+      let premiumTypeSubscription;
+      let tmp4;
+      let tmp5;
+      let tmp8;
+      let tmp9;
+      const obj = react;
+      const cResult = obj.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SubscriptionStore];
         const fn = function n() {
@@ -97,7 +82,8 @@ export const useCurrentPremiumTrialTier = ReactCompilerGating.isReactCompilerEna
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [UserStore];
         const fn2 = function c() {
@@ -105,14 +91,14 @@ export const useCurrentPremiumTrialTier = ReactCompilerGating.isReactCompilerEna
         };
         cResult[2] = items1;
         cResult[3] = fn2;
-        let tmp9 = fn2;
-        let tmp8 = items1;
+        tmp9 = fn2;
+        tmp8 = items1;
       } else {
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const tmpResult = initialize;
-      const stateFromStores1 = initialize.useStateFromStores(tmp8, tmp9);
+      const tmpResult2 = get_initialized;
+      const stateFromStores1 = tmpResult2.useStateFromStores(tmp8, tmp9);
       let hasActiveTrial;
       if (stateFromStores != null) {
         hasActiveTrial = stateFromStores.hasActiveTrial;
@@ -128,12 +114,14 @@ export const useCurrentPremiumTrialTier = ReactCompilerGating.isReactCompilerEna
       return tmp13;
     }
   : () => {
+      let currentUser;
+      let premiumTypeSubscription;
       const items = [SubscriptionStore];
-      const stateFromStores = initialize.useStateFromStores(items, () =>
-        premiumTypeSubscription.getPremiumTypeSubscription(),
-      );
+      const obj = get_initialized;
+      const stateFromStores = obj.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
       const items1 = [UserStore];
-      const stateFromStores1 = initialize.useStateFromStores(items1, () => currentUser.getCurrentUser());
+      const obj2 = get_initialized;
+      const stateFromStores1 = obj2.useStateFromStores(items1, () => currentUser.getCurrentUser());
       let hasActiveTrial;
       if (stateFromStores != null) {
         hasActiveTrial = stateFromStores.hasActiveTrial;
@@ -148,8 +136,42 @@ export const useCurrentPremiumTrialTier = ReactCompilerGating.isReactCompilerEna
       }
       return tmp4;
     };
+const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionTrialUtil.tsx");
+const hasActiveTrial_export = function hasActiveTrial() {
+  const premiumTypeSubscription = SubscriptionStore.getPremiumTypeSubscription();
+  let trialId;
+  if (premiumTypeSubscription != null) {
+    trialId = premiumTypeSubscription.trialId;
+  }
+  return null != trialId;
+};
+
+export const useHasActiveTrial = tmp3;
+export { hasActiveTrial_export as hasActiveTrial };
+export const isEligibleTrialSub = function isEligibleTrialSub(trialId) {
+  trialId = undefined;
+  if (trialId != null) {
+    trialId = trialId.trialId;
+  }
+  let tmp2 = null != trialId;
+  if (tmp2) {
+    tmp2 =
+      trialId.trialId === hasOwnProperty ||
+      trialId.trialId === metroRequire ||
+      trialId.trialId === metroImportDefault ||
+      trialId.trialId === metroImportAll;
+    const tmp4 =
+      trialId.trialId === hasOwnProperty ||
+      trialId.trialId === metroRequire ||
+      trialId.trialId === metroImportDefault ||
+      trialId.trialId === metroImportAll;
+  }
+  return tmp2;
+};
+export const useCurrentPremiumTrialTier = tmp4;
 export const getPremiumTrialOffer = function getPremiumTrialOffer() {
-  const mapped = options.map((item) => userTrialOffer.getUserTrialOffer(item));
+  let userTrialOffer;
+  const mapped = React4.map((item) => userTrialOffer.getUserTrialOffer(item));
   const found = mapped.filter((hasExpired) => null != hasExpired && !hasExpired.hasExpired);
   return found.shift();
 };

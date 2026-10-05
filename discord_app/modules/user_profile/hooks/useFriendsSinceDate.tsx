@@ -1,19 +1,26 @@
 // discord_app/modules/user_profile/hooks/useFriendsSinceDate.tsx
+import Constants from "../../../Constants.tsx";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const RelationshipTypes = fn(1085).RelationshipTypes;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/hooks/useFriendsSinceDate.tsx");
-
-export const useFriendsSinceDate = ReactCompilerGating.isReactCompilerEnabled()
+const RelationshipTypes = Constants.RelationshipTypes;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let locale;
+      let tmp10;
+      let tmp11;
+      let tmp4;
+      let tmp5;
+      let tmp8;
       _require = arg0;
-      const cResult = require("c").c(9);
+      const obj = require("react");
+      const cResult = obj.c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [LocaleStore];
         const fn = function c() {
@@ -26,12 +33,12 @@ export const useFriendsSinceDate = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const obj = require("c");
-      const stateFromStores = require("useStateFromStores").useStateFromStores(tmp4, tmp5);
+      const tmpResult = require("useStateFromStores");
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [RelationshipStore];
         cResult[2] = items1;
-        let tmp8 = items1;
+        tmp8 = items1;
       } else {
         tmp8 = cResult[2];
       }
@@ -47,36 +54,39 @@ export const useFriendsSinceDate = ReactCompilerGating.isReactCompilerEnabled()
         cResult[3] = arg0;
         cResult[4] = fn2;
         cResult[5] = items2;
-        let tmp11 = items2;
-        let tmp10 = fn2;
+        tmp11 = items2;
+        tmp10 = fn2;
       } else {
         tmp10 = cResult[4];
         tmp11 = cResult[5];
       }
-      const tmpResult = require("useStateFromStores");
-      const stateFromStores1 = require("useStateFromStores").useStateFromStores(tmp8, tmp10, tmp11);
+      const tmpResult3 = require("useStateFromStores");
+      const stateFromStores1 = tmpResult3.useStateFromStores(tmp8, tmp10, tmp11);
       if (cResult[6] === stateFromStores1) {
+        let tmp13;
         if (cResult[7] === stateFromStores) {
-          let tmp13 = cResult[8];
+          tmp13 = cResult[8];
         }
         return tmp13;
       }
-      const tmpResult3 = require("useStateFromStores");
-      const createdAtDate = require("ConnectionsUtils").getCreatedAtDate(stateFromStores1, stateFromStores);
+      const tmpResult4 = require("ConnectionsUtils");
+      const createdAtDate = tmpResult4.getCreatedAtDate(stateFromStores1, stateFromStores);
       cResult[6] = stateFromStores1;
       cResult[7] = stateFromStores;
       cResult[8] = createdAtDate;
       tmp13 = createdAtDate;
-      const tmpResult4 = require("ConnectionsUtils");
     }
   : (arg0) => {
+      let closure_0;
+      let locale;
       _require = arg0;
       const items = [LocaleStore];
-      const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => locale.locale);
       const obj = require("useStateFromStores");
+      const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
       const items1 = [RelationshipStore];
       const items2 = [arg0];
-      const stateFromStores1 = require("useStateFromStores").useStateFromStores(
+      const obj2 = require("useStateFromStores");
+      const stateFromStores1 = obj2.useStateFromStores(
         items1,
         () => {
           let since = null;
@@ -87,6 +97,9 @@ export const useFriendsSinceDate = ReactCompilerGating.isReactCompilerEnabled()
         },
         items2,
       );
-      const obj2 = require("useStateFromStores");
-      return require("ConnectionsUtils").getCreatedAtDate(stateFromStores1, stateFromStores);
+      const obj3 = require("ConnectionsUtils");
+      return obj3.getCreatedAtDate(stateFromStores1, stateFromStores);
     };
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useFriendsSinceDate.tsx");
+
+export const useFriendsSinceDate = tmp2;

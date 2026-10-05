@@ -1,140 +1,129 @@
 // discord_app/components_native/common/SwipeableFastList.tsx
+import Fragment from "../../../_runtime/react/00021_Fragment.js";
 import FastListDefault from "../../lib/native/FastList.tsx";
-import noop from "../../../_runtime/metro/00019__.js";
+import SwipeDirectionDefault from "../../../_runtime/09982_SwipeDirection.js";
+import react from "../../../_runtime/00019_react.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const jsx = fn(21).jsx;
-const Component = noop.Component;
+let importDefault;
+
+const jsx = Fragment.jsx;
+const Component = react.Component;
 class SwipeableFastList extends Component {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    closure_0 = applyArgumentsResult;
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    importDefault = applyArgumentsResult;
     applyArgumentsResult._shouldBounceFirstRowOnMount = applyArgumentsResult.props.bounceFirstRowOnMount;
     applyArgumentsResult._openRowKey = null;
     applyArgumentsResult._refs = {};
     applyArgumentsResult._bounceTimeout = null;
     applyArgumentsResult.renderRow = function renderRow(arg0, arg1, arg2) {
-      closure_1 = arg1;
-      let props = applyArgumentsResult.props;
+      let closure_0;
+      importDefault = arg0;
+      let closure_1 = arg1;
+      let props = importDefault.props;
       const renderQuickActions = props.renderQuickActions;
-      closure_3 = "" + arg0 + ":" + arg1;
-      c4 = false;
-      if (arg0._shouldBounceFirstRowOnMount) {
-        arg0._shouldBounceFirstRowOnMount = false;
+      let tmp = importDefault;
+      const renderItem = props.renderItem;
+      let closure_3 = "" + arg0 + ":" + arg1;
+      let c4 = false;
+      if (importDefault._shouldBounceFirstRowOnMount) {
+        tmp._shouldBounceFirstRowOnMount = false;
         c4 = true;
       }
-      const obj = {
-        renderRightActions() {
-          return renderQuickActions(closure_0, closure_1);
-        },
-        ref(arg0) {
-          applyArgumentsResult._refs[closure_3] = arg0;
-          if (tmp) {
-            applyArgumentsResult.bounceSwipeable(arg0);
-            const props = applyArgumentsResult.props;
-            const onBounceSwipable = props.onBounceSwipable;
-            if (onBounceSwipable != null) {
-              onBounceSwipable();
+      SwipeDirectionDefault;
+      return (
+        <tmp2
+          renderRightActions={function renderRightActions() {
+            return renderQuickActions(closure_0, closure_1);
+          }}
+          ref={function ref(arg0) {
+            importDefault._refs[closure_3] = arg0;
+            const tmp = null != arg0 && c4;
+            if (tmp) {
+              importDefault.bounceSwipeable(arg0);
+              const props = importDefault.props;
+              const onBounceSwipable = props.onBounceSwipable;
+              if (onBounceSwipable != null) {
+                onBounceSwipable();
+              }
             }
-          }
-          tmp = null != arg0 && c4;
-        },
-        overshootFriction: 8,
-        onSwipeableWillOpen() {
-          return applyArgumentsResult.handleOpen(closure_3);
-        },
-        onSwipeableClose() {
-          return applyArgumentsResult.handleClose(closure_3);
-        },
-        children: props.renderItem(arg0, arg1, arg2),
-      };
-      return jsx(arg0(dependencyMap[2]), {
-        renderRightActions() {
-          return renderQuickActions(closure_0, closure_1);
-        },
-        ref(arg0) {
-          applyArgumentsResult._refs[closure_3] = arg0;
-          if (tmp) {
-            applyArgumentsResult.bounceSwipeable(arg0);
-            const props = applyArgumentsResult.props;
-            const onBounceSwipable = props.onBounceSwipable;
-            if (onBounceSwipable != null) {
-              onBounceSwipable();
-            }
-          }
-          tmp = null != arg0 && c4;
-        },
-        overshootFriction: 8,
-        onSwipeableWillOpen() {
-          return applyArgumentsResult.handleOpen(closure_3);
-        },
-        onSwipeableClose() {
-          return applyArgumentsResult.handleClose(closure_3);
-        },
-        children: props.renderItem(arg0, arg1, arg2),
-      });
+          }}
+          overshootFriction={8}
+          onSwipeableWillOpen={function onSwipeableWillOpen() {
+            return importDefault.handleOpen(closure_3);
+          }}
+          onSwipeableClose={function onSwipeableClose() {
+            return importDefault.handleClose(closure_3);
+          }}
+        >
+          {renderItem(arg0, arg1, arg2)}
+        </tmp2>
+      );
     };
     applyArgumentsResult.handleScroll = function handleScroll(arg0) {
-      applyArgumentsResult.closeOpenRow();
-      const onScroll = applyArgumentsResult.props.onScroll;
+      importDefault.closeOpenRow();
+      const onScroll = importDefault.props.onScroll;
       if (onScroll != null) {
         onScroll(arg0);
       }
     };
     return applyArgumentsResult;
   }
+  componentWillUnmount() {
+    if (null != this._bounceTimeout) {
+      const _clearTimeout = clearTimeout;
+      clearTimeout(tmp._bounceTimeout);
+    }
+  }
+  bounceSwipeable(arg0) {
+    const self = this;
+    let closure_0 = arg0;
+    if (null != this._bounceTimeout) {
+      const _clearTimeout = clearTimeout;
+      clearTimeout(self._bounceTimeout);
+    }
+    self._bounceTimeout = setTimeout(() => {
+      closure_0.openRight();
+      self._bounceTimeout = setTimeout(() => {
+        closure_1_0.close();
+      }, 400);
+    }, 700);
+  }
+  closeOpenRow() {
+    const self = this;
+    if (null != this._openRowKey) {
+      if (null != self._refs[self._openRowKey]) {
+        const obj = self._refs[self._openRowKey];
+        obj.close();
+      }
+      self._openRowKey = null;
+    }
+  }
+  handleOpen(_openRowKey) {
+    this.closeOpenRow();
+    this._openRowKey = _openRowKey;
+  }
+  handleClose(arg0) {
+    if (this._openRowKey === arg0) {
+      tmp._openRowKey = null;
+    }
+  }
+  render() {
+    const obj = {};
+    FastListDefault;
+    const merged = Object.assign(this.props);
+    ({ handleScroll: obj.onScroll, renderRow: obj.renderItem } = this);
+    return <tmp />;
+  }
 }
 const prototype = SwipeableFastList.prototype;
-prototype["componentWillUnmount"] = function componentWillUnmount() {
-  if (null != this._bounceTimeout) {
-    const _clearTimeout = clearTimeout;
-    clearTimeout(tmp._bounceTimeout);
-  }
-};
-prototype["bounceSwipeable"] = function bounceSwipeable(arg0) {
-  const self = this;
-  closure_0 = arg0;
-  if (null != this._bounceTimeout) {
-    const _clearTimeout = clearTimeout;
-    clearTimeout(self._bounceTimeout);
-  }
-  self._bounceTimeout = setTimeout(() => {
-    closure_0.openRight();
-    self._bounceTimeout = setTimeout(() => {
-      closure_1_0.close();
-    }, 400);
-  }, 700);
-};
-prototype["closeOpenRow"] = function closeOpenRow() {
-  const self = this;
-  if (null != this._openRowKey) {
-    if (null != self._refs[self._openRowKey]) {
-      self._refs[self._openRowKey].close();
-    }
-    self._openRowKey = null;
-  }
-};
-prototype["handleOpen"] = function handleOpen(_openRowKey) {
-  this.closeOpenRow();
-  this._openRowKey = _openRowKey;
-};
-prototype["handleClose"] = function handleClose(arg0) {
-  if (this._openRowKey === arg0) {
-    tmp._openRowKey = null;
-  }
-};
-prototype["render"] = function render() {
-  const obj = {};
-  const merged = Object.assign(this.props);
-  ({ handleScroll: obj.onScroll, renderRow: obj.renderItem } = this);
-  return jsx(FastListDefault, {});
-};
 SwipeableFastList.defaultProps = {
   bounceFirstRowOnMount: true,
   renderQuickActions() {
     return null;
   },
 };
-const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/SwipeableFastList.tsx");
 
 export default SwipeableFastList;

@@ -1,7 +1,7 @@
 // discord_app/modules/checkpoint/native/components/openCheckpointModal.tsx
 import Constants from "../../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -13,11 +13,9 @@ export default function openCheckpointModal(source) {
   if (arg1 === undefined) {
     flag = true;
   }
-  AnalyticsUtilsDefault.track(AnalyticEvents.CHECKPOINT_STARTED, { source });
+  const obj = AnalyticsUtilsDefault;
   const obj2 = { source };
-  ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(15523, dependencyMap.paths),
-    { didPlayerShareDataWithDiscord: flag },
-    "CHECKPOINT_MODAL",
-  );
+  obj.track(AnalyticEvents.CHECKPOINT_STARTED, obj2);
+  const obj3 = ModalActionCreatorsDefault;
+  obj3.pushLazy(asyncRequire(15523, dependencyMap.paths), { didPlayerShareDataWithDiscord: flag }, "CHECKPOINT_MODAL");
 }

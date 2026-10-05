@@ -1,27 +1,31 @@
 // discord_app/modules/auth/AuthInviteStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import GuildRecordUtils from "../../utils/GuildRecordUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-let closure_2 = {};
-const Store = initializeDefault.Store;
-class AuthInviteStore extends Store {}
-AuthInviteStore.prototype["getGuild"] = function getGuild(arg0) {
-  return closure_2[arg0];
-};
+const React2 = {};
+const Store = get_initializedDefault.Store;
+class AuthInviteStore extends Store {
+  getGuild(arg0) {
+    return closure_2[arg0];
+  }
+}
+const prototype = AuthInviteStore.prototype;
 AuthInviteStore.displayName = "AuthInviteStore";
-const authInviteStore = new AuthInviteStore(DispatcherDefault, {
+let obj = {
   AUTH_INVITE_UPDATE: function handleAuthInviteUpdate(invite) {
-    guild = invite.invite.guild;
+    const guild = invite.invite.guild;
     if (null == guild) {
       return false;
     } else {
-      closure_2[guild.id] = GuildRecordUtils.fromInviteGuild(guild);
+      const id = guild.id;
+      const obj = GuildRecordUtils;
+      closure_2[id] = obj.fromInviteGuild(guild);
     }
   },
-});
-const size = fn(2);
+};
+const authInviteStore = new AuthInviteStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/auth/AuthInviteStore.tsx");
 
 export default authInviteStore;

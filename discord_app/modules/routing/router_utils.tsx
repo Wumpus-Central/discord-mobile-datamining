@@ -3,23 +3,27 @@ import LoggerDefault from "../debug/Logger.tsx";
 import ComponentDispatchUtils from "../../utils/ComponentDispatchUtils.tsx";
 import RoutingSources from "RoutingSources.tsx";
 import Constants from "../../Constants.tsx";
-import _extends_mod from "../../../_runtime/metro/01113__.js";
+import module_1113_mod from "../../../_runtime/metro/01113__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-function transitionTo(Routes, guildScheduledEvent2) {
-  closure_0 = Routes;
-  let tmp = typeof Routes !== "string";
-  if (typeof Routes === "string") {
-    tmp = !items.some((item) => ME.startsWith(item));
-  }
-  let flag = !tmp;
-  if (!tmp) {
+let c3, sourceLocationStack;
+
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+function transitionTo(Routes, source) {
+  let closure_0 = Routes;
+  let flag = !(typeof Routes !== "string" || !items.some((item) => closure_0.startsWith(item)));
+  const tmp = typeof Routes !== "string" || !items.some((item) => closure_0.startsWith(item));
+  if (flag) {
     const _HermesInternal = HermesInternal;
     logger.log("" + "assign" + " - route to external path " + Routes);
     const _window = window;
     const _Event = Event;
+    const self = this;
+    const self2 = this;
     const event = new Event("beforeunload");
-    window.dispatchEvent(event);
+    dispatchEvent(event);
     const _window2 = window;
     const _location = window.location;
     _location.assign(Routes);
@@ -29,71 +33,80 @@ function transitionTo(Routes, guildScheduledEvent2) {
     const _URL = URL;
     const _window3 = window;
     const _HermesInternal2 = HermesInternal;
+    const self3 = this;
+    const self4 = this;
     const uRL = new URL(Routes, "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT);
     const obj = { pathname: null, search: null, hash: null };
     ({ pathname: obj.pathname, search: obj.search, hash: obj.hash } = uRL);
-    const merged = Object.assign(guildScheduledEvent2);
+    const merged = Object.assign(source);
     const _HermesInternal3 = HermesInternal;
     logger.log("transitionTo - Transitioning to " + Routes);
-    if (guildScheduledEvent2 != null) {
-      const source = guildScheduledEvent2.source;
+    source = undefined;
+    if (source != null) {
+      source = source.source;
     }
-    if (guildScheduledEvent2 != null) {
-      sourceLocationStack = guildScheduledEvent2.sourceLocationStack;
+    sourceLocationStack = undefined;
+    if (source != null) {
+      sourceLocationStack = source.sourceLocationStack;
     }
-    const _location2 = _extends.location;
-    let tmp24 = _location2.pathname === obj.pathname;
-    if (tmp24) {
-      const search = obj.search;
+    const _location2 = module_1113.location;
+    let tmp22 = _location2.pathname === obj.pathname;
+    if (tmp22) {
+      const search2 = obj.search;
       let str9 = "";
-      if (null != search) {
+      const search = _location2.search;
+      if (null != search2) {
         str9 = "";
-        if ("" !== search) {
+        if ("" !== search2) {
           str9 = "";
-          if (search !== "?") {
-            let text = search;
-            if (!search.startsWith("?")) {
-              text = `?${search}`;
+          if (search2 !== "?") {
+            let text = search2;
+            if (!search2.startsWith("?")) {
+              text = `?${search2}`;
             }
             str9 = text;
           }
         }
       }
-      tmp24 = _location2.search === str9;
+      tmp22 = search === str9;
     }
-    if (tmp24) {
-      const hash = obj.hash;
+    if (tmp22) {
+      const hash2 = obj.hash;
       let str12 = "";
-      if (null != hash) {
+      const hash = _location2.hash;
+      if (null != hash2) {
         str12 = "";
-        if ("" !== hash) {
+        if ("" !== hash2) {
           str12 = "";
-          if (hash !== "#") {
-            let text1 = hash;
-            if (!hash.startsWith("#")) {
-              text1 = `#${hash}`;
+          if (hash2 !== "#") {
+            let text1 = hash2;
+            if (!hash2.startsWith("#")) {
+              text1 = `#${hash2}`;
             }
             str12 = text1;
           }
         }
       }
-      tmp24 = _location2.hash === str12;
+      tmp22 = hash === str12;
     }
-    if (tmp24) {
-      const replaced = _extends.replace(obj);
-      c3 = source;
-    } else if (null != guildScheduledEvent2) {
-      _extends.push(obj);
+    if (tmp22) {
+      const replaced = module_1113.replace(obj);
+    } else if (null == source) {
+      module_1113.push(Routes);
+    } else {
+      module_1113.push(obj);
     }
-    _extends.push(Routes);
+    c3 = source;
   }
 }
-({ Routes: hasOwnProperty, PageAnalyticsLocations: metroRequire, ComponentActions: closure_7 } = Constants);
+({ Routes: hasOwnProperty, PageAnalyticsLocations: metroRequire, ComponentActions: metroImportDefault } = Constants);
+const RelativeMarketingURLs = Constants.RelativeMarketingURLs;
 const logger = new LoggerDefault("Routing/Utils");
-const items = [Constants.RelativeMarketingURLs.DEVELOPER_PORTAL];
-let _extends = _extends_mod;
-_extends = _extends.createMemoryHistory();
-let closure_10 = _extends.listen((arg0, arg1) => {
+const items = [RelativeMarketingURLs.DEVELOPER_PORTAL];
+const tmp3 = new LoggerDefault("Routing/Utils");
+let module_1113 = module_1113_mod;
+module_1113 = module_1113.createMemoryHistory();
+let closure_10 = module_1113.listen((arg0, arg1) => {
   if ("REPLACE" !== arg1) {
     closure_10();
   }
@@ -102,12 +115,13 @@ const result = size.fileFinishedImporting("modules/routing/router_utils.tsx");
 
 export const shouldNavigate = function shouldNavigate() {
   const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-  return !ComponentDispatch.hasSubscribers(constants2.MODAL_CLOSE);
+  return !ComponentDispatch.hasSubscribers(metroImportDefault.MODAL_CLOSE);
 };
 export { transitionTo };
-export const transitionToGuild = function transitionToGuild(guildId, channelId, messageId, guildScheduledEvent2) {
-  logger.log("transitionToGuild - Transitioning to " + JSON.stringify({ guildId, channelId, messageId }));
-  transitionTo(hasOwnProperty.CHANNEL(guildId, channelId, messageId), guildScheduledEvent2);
+export const transitionToGuild = function transitionToGuild(guildId, channelId, messageId, source) {
+  const obj = { guildId, channelId, messageId };
+  logger.log("transitionToGuild - Transitioning to " + JSON.stringify(obj));
+  transitionTo(hasOwnProperty.CHANNEL(guildId, channelId, messageId), source);
 };
 export const currentRouteHasBackNavigation = function currentRouteHasBackNavigation() {
   let hasItem = null != c3;
@@ -118,36 +132,36 @@ export const currentRouteHasBackNavigation = function currentRouteHasBackNavigat
   return hasItem;
 };
 export const replaceWith = function replaceWith(ME, state, arg2) {
-  let tmp = typeof ME !== "string";
-  if (typeof ME === "string") {
-    tmp = !items.some((item) => ME.startsWith(item));
-  }
-  let flag = !tmp;
-  if (!tmp) {
+  let closure_0 = ME;
+  let flag = !(typeof ME !== "string" || !items.some((item) => closure_0.startsWith(item)));
+  const tmp = typeof ME !== "string" || !items.some((item) => closure_0.startsWith(item));
+  if (flag) {
     const _HermesInternal = HermesInternal;
     logger.log("" + "replace" + " - route to external path " + ME);
     const _window = window;
     const _Event = Event;
+    const self = this;
+    const self2 = this;
     const event = new Event("beforeunload");
-    window.dispatchEvent(event);
+    dispatchEvent(event);
     const _window2 = window;
-    const replaced = window.location.replace(ME);
-    flag = true;
     const str5 = window.location;
+    const replaced = str5.replace(ME);
+    flag = true;
   }
   if (!flag) {
     const _HermesInternal2 = HermesInternal;
     logger.log("Replacing route with " + ME);
     if (typeof ME === "string") {
-      const replaced1 = _extends.replace(ME, state);
+      const replaced1 = module_1113.replace(ME, state);
     } else {
-      const replaced2 = _extends.replace(ME);
+      const replaced2 = module_1113.replace(ME);
     }
     c3 = arg2;
   }
 };
 export function getHistory() {
-  return _extends;
+  return module_1113;
 }
 export function getLastRouteChangeSource() {
   return c3;
@@ -161,40 +175,40 @@ export const isValidFingerprintRoute = function isValidFingerprintRoute(arg0) {
 export const getFingerprintLocation = function getFingerprintLocation(arg0) {
   let ACCOUNT_REVERT = arg0;
   if (null == arg0) {
-    let str = _extends.location.pathname;
+    let str = module_1113.location.pathname;
     if (str == null) {
       str = "";
     }
     ACCOUNT_REVERT = str;
   }
   if (ACCOUNT_REVERT.startsWith(hasOwnProperty.LOGIN)) {
-    ACCOUNT_REVERT = constants.LOGIN;
+    ACCOUNT_REVERT = metroRequire.LOGIN;
   } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.REGISTER)) {
-    ACCOUNT_REVERT = constants.REGISTER;
+    ACCOUNT_REVERT = metroRequire.REGISTER;
   } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.INVITE(""))) {
-    ACCOUNT_REVERT = constants.INVITE;
+    ACCOUNT_REVERT = metroRequire.INVITE;
   } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.VERIFY)) {
-    ACCOUNT_REVERT = constants.VERIFY;
+    ACCOUNT_REVERT = metroRequire.VERIFY;
   } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.DISABLE_EMAIL_NOTIFICATIONS)) {
-    ACCOUNT_REVERT = constants.DISABLE_EMAIL_NOTIFICATIONS;
+    ACCOUNT_REVERT = metroRequire.DISABLE_EMAIL_NOTIFICATIONS;
   } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS)) {
-    ACCOUNT_REVERT = constants.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS;
+    ACCOUNT_REVERT = metroRequire.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS;
   } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.REJECT_IP)) {
-    ACCOUNT_REVERT = constants.REJECT_IP;
+    ACCOUNT_REVERT = metroRequire.REJECT_IP;
   } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.REJECT_MFA)) {
-    ACCOUNT_REVERT = constants.REJECT_MFA;
+    ACCOUNT_REVERT = metroRequire.REJECT_MFA;
   } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.AUTHORIZE_IP)) {
-    ACCOUNT_REVERT = constants.AUTHORIZE_IP;
+    ACCOUNT_REVERT = metroRequire.AUTHORIZE_IP;
   } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.AUTHORIZE_PAYMENT)) {
-    ACCOUNT_REVERT = constants.AUTHORIZE_PAYMENT;
+    ACCOUNT_REVERT = metroRequire.AUTHORIZE_PAYMENT;
   } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.RESET)) {
-    ACCOUNT_REVERT = constants.RESET;
+    ACCOUNT_REVERT = metroRequire.RESET;
   } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.REPORT)) {
-    ACCOUNT_REVERT = constants.REPORT;
+    ACCOUNT_REVERT = metroRequire.REPORT;
   } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.REPORT_SECOND_LOOK)) {
-    ACCOUNT_REVERT = constants.REPORT_SECOND_LOOK;
+    ACCOUNT_REVERT = metroRequire.REPORT_SECOND_LOOK;
   } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.ACCOUNT_REVERT(""))) {
-    ACCOUNT_REVERT = constants.ACCOUNT_REVERT;
+    ACCOUNT_REVERT = metroRequire.ACCOUNT_REVERT;
   }
   return ACCOUNT_REVERT;
 };
@@ -203,17 +217,17 @@ export function hasNavigated() {
 }
 export const back = function back() {
   const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-  if (!hasSubscribersResult) {
+  const tmp2 = !ComponentDispatch.hasSubscribers(metroImportDefault.MODAL_CLOSE);
+  if (tmp2) {
     c3 = null;
-    _extends.goBack();
+    module_1113.goBack();
   }
-  hasSubscribersResult = ComponentDispatch.hasSubscribers(constants2.MODAL_CLOSE);
 };
 export const forward = function forward() {
   const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-  if (!hasSubscribersResult) {
+  const tmp2 = !ComponentDispatch.hasSubscribers(metroImportDefault.MODAL_CLOSE);
+  if (tmp2) {
     c3 = null;
-    _extends.goForward();
+    module_1113.goForward();
   }
-  hasSubscribersResult = ComponentDispatch.hasSubscribers(constants2.MODAL_CLOSE);
 };

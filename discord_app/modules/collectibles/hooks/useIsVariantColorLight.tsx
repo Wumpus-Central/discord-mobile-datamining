@@ -1,27 +1,27 @@
 // discord_app/modules/collectibles/hooks/useIsVariantColorLight.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/collectibles/hooks/useIsVariantColorLight.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (variantValue) => {
-      const cResult = c.c(2);
+      let tmp4;
+      const obj = react2;
+      const cResult = obj.c(2);
       if (cResult[0] !== variantValue.variantValue) {
-        let isValidHexResult = utils_ColorUtils.isValidHex(variantValue.variantValue);
+        const tmpResult = utils_ColorUtils;
+        let isValidHexResult = tmpResult.isValidHex(variantValue.variantValue);
         if (isValidHexResult) {
-          const tmpResult3 = utils_ColorUtils;
-          isValidHexResult = tmpResult3.getDarkness(utils_ColorUtils.hex2int(variantValue.variantValue)) < 0.3;
+          const getDarkness = utils_ColorUtils.getDarkness;
+          utils_ColorUtils;
           const tmpResult4 = utils_ColorUtils;
+          isValidHexResult = getDarkness(tmpResult4.hex2int(variantValue.variantValue)) < 0.3;
         }
         cResult[0] = variantValue.variantValue;
         cResult[1] = isValidHexResult;
-        let tmp4 = isValidHexResult;
-        const tmpResult = utils_ColorUtils;
+        tmp4 = isValidHexResult;
       } else {
         tmp4 = cResult[1];
       }
@@ -29,13 +29,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : (variantValue) => {
       const items = [variantValue.variantValue];
-      return noop.useMemo(() => {
-        let isValidHexResult = utils_ColorUtils.isValidHex(variantValue.variantValue);
+      return react.useMemo(() => {
+        const obj = utils_ColorUtils;
+        let isValidHexResult = obj.isValidHex(variantValue.variantValue);
         if (isValidHexResult) {
-          const tmpResult = utils_ColorUtils;
-          isValidHexResult = tmpResult.getDarkness(utils_ColorUtils.hex2int(variantValue.variantValue)) < 0.3;
+          const getDarkness = utils_ColorUtils.getDarkness;
+          utils_ColorUtils;
           const tmpResult2 = utils_ColorUtils;
+          isValidHexResult = getDarkness(tmpResult2.hex2int(variantValue.variantValue)) < 0.3;
         }
         return isValidHexResult;
       }, items);
     };
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useIsVariantColorLight.tsx");
+
+export default tmp2;

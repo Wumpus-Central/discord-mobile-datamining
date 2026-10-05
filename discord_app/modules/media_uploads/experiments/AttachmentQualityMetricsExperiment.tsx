@@ -2,7 +2,7 @@
 import ApexExperiment from "../../experiments/apex/index.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const apexExperiment = ApexExperiment.createApexExperiment({
+const obj = {
   name: "2026-04-attachment-quality-metrics",
   kind: "user",
   defaultConfig: { enableQualityMetrics: false, enableOriginDetection: false },
@@ -10,7 +10,8 @@ const apexExperiment = ApexExperiment.createApexExperiment({
     0: { enableQualityMetrics: false, enableOriginDetection: false },
     1: { enableQualityMetrics: true, enableOriginDetection: true },
   },
-});
+};
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/media_uploads/experiments/AttachmentQualityMetricsExperiment.tsx");
 
 export const AttachmentQualityMetricsExperiment = apexExperiment;

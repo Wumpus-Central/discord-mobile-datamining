@@ -3,11 +3,14 @@ import _mod12 from "../../../../_runtime/metro/00012__.js";
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+let type;
+
 const ActivityTypes = Constants.ActivityTypes;
 const result = size.fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");
 
 export const getUserProfileLiveActivities = function getUserProfileLiveActivities(stateFromStores1) {
-  return _mod12.uniqWith(
+  const obj = _mod12;
+  return obj.uniqWith(
     stateFromStores1.filter((type) => {
       type = type.type;
       return type !== constants.CUSTOM_STATUS && type !== constants.HANG_STATUS;
@@ -20,14 +23,17 @@ export const getUserProfileLiveActivities = function getUserProfileLiveActivitie
       if (!tmp) {
         tmp =
           null != application_id.name && null != application_id2.name && application_id.name === application_id2.name;
-        const tmp2 =
-          null != application_id.name && null != application_id2.name && application_id.name === application_id2.name;
       }
       return tmp;
     },
   );
 };
 export const getUserProfileStackedActivityCards = function getUserProfileStackedActivityCards(arg0) {
+  let isPrivate;
+  let live;
+  let stream;
+  let voiceActivity;
+  let voiceChannel;
   ({ stream, live } = arg0);
   if (live === undefined) {
     live = [];

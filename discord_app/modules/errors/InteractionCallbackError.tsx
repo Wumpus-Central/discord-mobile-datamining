@@ -2,12 +2,14 @@
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/errors/InteractionCallbackError.tsx");
-const prototype = function InteractionCallbackError(reason) {
-  const obj = Object.create(new.target.prototype);
-  obj.reason = reason;
-  return obj;
-}.prototype;
-prototype.ReasonCodes = {
+class InteractionCallbackError {
+  constructor(reason) {
+    const obj = Object.create(new.target.prototype);
+    obj.reason = reason;
+    return obj;
+  }
+}
+InteractionCallbackError.ReasonCodes = {
   UNKNOWN: 1,
   [1]: "UNKNOWN",
   TIMEOUT: 2,
@@ -50,4 +52,4 @@ prototype.ReasonCodes = {
   [20]: "ACTIVITY_LAUNCH_INVALID_USER_REGION_FOR_APPLICATION",
 };
 
-export default prototype;
+export default InteractionCallbackError;

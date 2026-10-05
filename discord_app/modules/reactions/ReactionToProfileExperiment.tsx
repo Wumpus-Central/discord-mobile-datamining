@@ -1,16 +1,17 @@
 // discord_app/modules/reactions/ReactionToProfileExperiment.tsx
 import apex_ApexExperimentDefault from "../experiments/apex/ApexExperiment.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
+let obj2;
 const obj = {
   kind: "user",
   name: "2026-07-mobile-reaction-to-profile",
   defaultConfig: { reactionToProfileEnabled: false },
-  variations: null,
+  variations: obj2,
 };
-const obj2 = { 1: null };
+obj2 = { 1: null };
 obj2[1] = { reactionToProfileEnabled: true };
-obj.variations = obj2;
-const size = fn(2);
+const tmp2 = apex_ApexExperimentDefault(obj);
 const result = size.fileFinishedImporting("modules/reactions/ReactionToProfileExperiment.tsx");
 
-export default apex_ApexExperimentDefault(obj);
+export default tmp2;

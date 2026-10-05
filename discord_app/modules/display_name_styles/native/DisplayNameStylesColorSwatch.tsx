@@ -1,7 +1,7 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx
-import _mod17 from "../../../../_runtime/metro/00017__.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import DisplayNameEffect from "../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
@@ -11,125 +11,129 @@ import createStyles from "../../../design/components/Styles/native/createStyles.
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size_mod from "../../../../_runtime/metro/00002__.js";
 
-const View = _mod17.View;
-const jsx = jsxProd.jsx;
-let obj = { colorSwatch: null, gummySwatch: null };
-let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.xs };
-obj.colorSwatch = size;
-obj.gummySwatch = { flexDirection: "row", overflow: "hidden" };
-let closure_5 = createStyles.createStyles(obj);
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx");
+let colors;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+let size;
+const View = react_native.View;
+const jsx = Fragment.jsx;
+let obj = { colorSwatch: size, gummySwatch: { flexDirection: "row", overflow: "hidden" } };
+size = { width: 24, height: 24, borderRadius: nativeDefault.radii.xs };
+let closure_5 = createStyles.createStyles(obj);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (colors) => {
-      const cResult = c.c(24);
+      let obj = react;
+      const cResult = obj.c(24);
       colors = colors.colors;
+      const effectId = colors.effectId;
       const tmp4 = closure_5();
-      if (colors.effectId === DisplayNameEffect.DisplayNameEffect.GUMMY) {
+      if (effectId === DisplayNameEffect.DisplayNameEffect.GUMMY) {
         if (colors.length > 0) {
           if (cResult[0] === tmp4.colorSwatch) {
+            let tmp22;
+            let tmp23;
             if (cResult[1] === tmp4.gummySwatch) {
-              let tmp23 = cResult[2];
+              tmp22 = cResult[2];
             }
             if (cResult[3] !== colors) {
-              const obj2 = { colors };
-              const tmp27 = jsx(GummyStripesDefault, { colors });
+              const tmp26 = jsx(GummyStripesDefault, { colors });
               cResult[3] = colors;
-              cResult[4] = tmp27;
-              let tmp24 = tmp27;
+              cResult[4] = tmp26;
+              tmp23 = tmp26;
             } else {
-              tmp24 = cResult[4];
+              tmp23 = cResult[4];
             }
-            if (cResult[5] === tmp23) {
-              if (cResult[6] === tmp24) {
-                let tmp28 = cResult[7];
+            if (cResult[5] === tmp22) {
+              let tmp27;
+              if (cResult[6] === tmp23) {
+                tmp27 = cResult[7];
               }
-              return tmp28;
+              return tmp27;
             }
-            const obj3 = { style: tmp23, children: tmp24 };
-            const tmp31 = <View style={tmp23}>{tmp24}</View>;
-            cResult[5] = tmp23;
-            cResult[6] = tmp24;
-            cResult[7] = tmp31;
-            tmp28 = tmp31;
+            const tmp30 = <View style={tmp22}>{tmp23}</View>;
+            cResult[5] = tmp22;
+            cResult[6] = tmp23;
+            cResult[7] = tmp30;
+            tmp27 = tmp30;
           }
           const items = [,];
           ({ colorSwatch: arr3[0], gummySwatch: arr3[1], colorSwatch: tmp3[0] } = tmp4);
           cResult[1] = tmp4.gummySwatch;
           cResult[2] = items;
-          tmp23 = items;
+          tmp22 = items;
         }
       }
       if (colors.length >= 2) {
+        let tmp11;
+        let tmp17;
+        let tmp16;
         if (cResult[8] !== colors) {
+          let tmp13;
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
             const fn = function _(color) {
-              return utils_ColorUtils.int2hex(color);
+              const obj = utils_ColorUtils;
+              return obj.int2hex(color);
             };
             cResult[10] = fn;
-            let tmp13 = fn;
+            tmp13 = fn;
           } else {
             tmp13 = cResult[10];
           }
           const mapped = colors.map(tmp13);
           cResult[8] = colors;
           cResult[9] = mapped;
+          tmp11 = mapped;
         } else {
-          const _Symbol2 = Symbol;
-          if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-            const point = { x: 0, y: 0 };
-            const point1 = { x: 1, y: 0 };
-            cResult[11] = point;
-            cResult[12] = point1;
-            let tmp18 = point1;
-            let tmp17 = point;
-          } else {
-            tmp17 = cResult[11];
-            tmp18 = cResult[12];
-          }
-          if (cResult[13] === tmp4.colorSwatch) {
-            if (cResult[14] === tmp11) {
-              let tmp19 = cResult[15];
-            }
-            return tmp19;
-          }
-          const obj4 = { colors: cResult[9], start: tmp17, end: tmp18, style: tmp4.colorSwatch };
-          const tmp22 = jsx(LinearGradientDefault, {
-            colors: cResult[9],
-            start: tmp17,
-            end: tmp18,
-            style: tmp4.colorSwatch,
-          });
-          cResult[13] = tmp4.colorSwatch;
-          cResult[14] = cResult[9];
-          cResult[15] = tmp22;
-          tmp19 = tmp22;
+          tmp11 = cResult[9];
         }
+        const _Symbol2 = Symbol;
+        if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+          const point = { x: 0, y: 0 };
+          const point1 = { x: 1, y: 0 };
+          cResult[11] = point;
+          cResult[12] = point1;
+          tmp17 = point1;
+          tmp16 = point;
+        } else {
+          tmp16 = cResult[11];
+          tmp17 = cResult[12];
+        }
+        if (cResult[13] === tmp4.colorSwatch) {
+          let tmp18;
+          if (cResult[14] === tmp11) {
+            tmp18 = cResult[15];
+          }
+          return tmp18;
+        }
+        const tmp21 = jsx(LinearGradientDefault, { colors: tmp11, start: tmp16, end: tmp17, style: tmp4.colorSwatch });
+        cResult[13] = tmp4.colorSwatch;
+        cResult[14] = tmp11;
+        cResult[15] = tmp21;
+        tmp18 = tmp21;
       } else {
         if (cResult[16] === colors[0]) {
+          let tmp5;
+          let tmp6;
           if (cResult[17] === colors.length) {
-            let tmp5 = cResult[18];
+            tmp5 = cResult[18];
           }
           if (cResult[19] !== tmp5) {
             const obj5 = { backgroundColor: tmp5 };
             cResult[19] = tmp5;
             cResult[20] = obj5;
-            let tmp6 = obj5;
+            tmp6 = obj5;
           } else {
             tmp6 = cResult[20];
           }
           if (cResult[21] === tmp4.colorSwatch) {
+            let tmp7;
             if (cResult[22] === tmp6) {
-              let tmp7 = cResult[23];
+              tmp7 = cResult[23];
             }
             return tmp7;
           }
-          const obj6 = { style: null };
           const items1 = [tmp4.colorSwatch, tmp6];
-          obj6.style = items1;
-          const tmp10 = <View style={null} />;
+          const tmp10 = <View style={items1} />;
           cResult[21] = tmp4.colorSwatch;
           cResult[22] = tmp6;
           cResult[23] = tmp10;
@@ -137,8 +141,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         let str = "#000000";
         if (colors.length > 0) {
-          str = utils_ColorUtils.int2hex(colors[0]);
           const tmpResult = utils_ColorUtils;
+          str = tmpResult.int2hex(colors[0]);
         }
         cResult[16] = colors[0];
         cResult[17] = colors.length;
@@ -148,42 +152,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : (colors) => {
       colors = colors.colors;
+      const effectId = colors.effectId;
       const tmp = closure_5();
-      if (colors.effectId === DisplayNameEffect.DisplayNameEffect.GUMMY) {
+      if (effectId === DisplayNameEffect.DisplayNameEffect.GUMMY) {
         if (colors.length > 0) {
-          const obj = { style: null, children: null };
           const items = [,];
           ({ colorSwatch: arr3[0], gummySwatch: arr3[1] } = tmp);
-          obj.style = items;
-          const obj2 = { colors };
-          obj.children = jsx(GummyStripesDefault, { colors });
-          return <View style={null}>{null}</View>;
+          return <View style={items}>{null}</View>;
         }
       }
       if (colors.length >= 2) {
-        const obj3 = {
-          colors: colors.map((item) => utils_ColorUtils.int2hex(item)),
-          start: { x: 0, y: 0 },
-          end: { x: 1, y: 0 },
-          style: tmp.colorSwatch,
-        };
-        return jsx(LinearGradientDefault, {
-          colors: colors.map((item) => utils_ColorUtils.int2hex(item)),
-          start: { x: 0, y: 0 },
-          end: { x: 1, y: 0 },
-          style: tmp.colorSwatch,
-        });
+        LinearGradientDefault;
+        return (
+          <tmp8
+            colors={colors.map((item) => {
+              const obj = utils_ColorUtils;
+              return obj.int2hex(item);
+            })}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 0 }}
+            style={tmp.colorSwatch}
+          />
+        );
       } else {
         let str = "#000000";
         if (colors.length > 0) {
-          str = utils_ColorUtils.int2hex(colors[0]);
           const tmp2Result = utils_ColorUtils;
+          str = tmp2Result.int2hex(colors[0]);
         }
-        const obj4 = { style: null };
         const items1 = [tmp.colorSwatch];
         const obj5 = { backgroundColor: str };
         items1[1] = obj5;
-        obj4.style = items1;
-        return <View style={null} />;
+        return <View style={items1} />;
       }
     };
+size = size_mod;
+const result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx");
+
+export default tmp2;

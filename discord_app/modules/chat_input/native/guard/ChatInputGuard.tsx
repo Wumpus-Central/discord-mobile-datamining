@@ -1,102 +1,116 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuard.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Radius from "../../../../../discord_common/js/packages/tokens/radii/generated/generated-definitions.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
+import ButtonGroup2 from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ThemedGradientDefault from "../../../client_themes/native/ThemedGradient.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import useIsUsingClientThemeDefault from "../../../client_themes/native/useIsUsingClientTheme.tsx";
-import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
+import IconButton2 from "../../../../design/components/Button/native/IconButton.native.tsx";
 import native from "../../../../design/components/experimental/native.tsx";
+import useChatBottomManagerUIStore from "../useChatBottomManagerUIStore.tsx";
 import CountDownDefault from "../../../../components_native/common/CountDown.tsx";
-import ArrowSmallRightIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallRightIcon.tsx";
+import ArrowSmallRightIcon2 from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallRightIcon.tsx";
 import getChatInputPositionStyleDefault from "../getChatInputPositionStyle.tsx";
 import JumpToPresentButtonDefault from "../../../../components_native/chat/JumpToPresentButton.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(9064).updateChatInputContainerHeight;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
+let screenIndex;
+
+let closure_4;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+({ StyleSheet: closure_4, View: hasOwnProperty } = react_native);
+let closure_6 = useChatBottomManagerUIStore.updateChatInputContainerHeight;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
 let closure_9 = createStyles.createStyles((arg0) => {
+  let obj3;
+  let obj4;
+  let str;
+  let lg;
   const obj = {
     container: { paddingHorizontal: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_8 },
-    content: null,
-    underlay: null,
-    wrapper: null,
-    floating: null,
-    text: null,
-    subtext: null,
-    spacing: null,
+    content: obj3,
+    underlay: obj4,
+    wrapper: {
+      borderColor: nativeDefault.colors.BORDER_MUTED,
+      paddingHorizontal: nativeDefault.space.PX_12,
+      paddingTop: nativeDefault.space.PX_16,
+      backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+      borderRadius: nativeDefault.radii.lg,
+      borderWidth: 1,
+    },
+    floating: {
+      backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+      borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+      borderColor: nativeDefault.colors.BORDER_MUTED,
+      borderWidth: 1,
+    },
+    text: { textAlign: "center" },
+    subtext: { marginTop: nativeDefault.space.PX_4, textAlign: "center" },
+    spacing: { marginTop: nativeDefault.space.PX_8 },
   };
-  let lg;
+  ({ paddingHorizontal: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_8 });
   if (arg0) {
     lg = nativeDefault.radii.lg;
   }
-  const obj3 = { borderRadius: lg, overflow: null };
-  let str;
+  obj3 = { borderRadius: lg, overflow: str };
+  str = undefined;
   if (arg0) {
     str = "hidden";
   }
-  obj3.overflow = str;
-  obj.content = obj3;
-  const obj4 = {
+  obj4 = {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
     height: nativeDefault.space.PX_8 + Radius.Radius.lg,
+    top: undefined,
   };
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj4.top = undefined;
-  obj.underlay = obj4;
-  const obj2 = { paddingHorizontal: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_8 };
-  obj.wrapper = {
+  ({
     borderColor: nativeDefault.colors.BORDER_MUTED,
     paddingHorizontal: nativeDefault.space.PX_12,
     paddingTop: nativeDefault.space.PX_16,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
     borderRadius: nativeDefault.radii.lg,
     borderWidth: 1,
-  };
-  const obj5 = {
-    borderColor: nativeDefault.colors.BORDER_MUTED,
-    paddingHorizontal: nativeDefault.space.PX_12,
-    paddingTop: nativeDefault.space.PX_16,
-    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
-    borderRadius: nativeDefault.radii.lg,
-    borderWidth: 1,
-  };
-  obj.floating = {
+  });
+  ({
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
     borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
     borderColor: nativeDefault.colors.BORDER_MUTED,
     borderWidth: 1,
-  };
-  obj.text = { textAlign: "center" };
-  const obj6 = {
-    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
-    borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
-    borderColor: nativeDefault.colors.BORDER_MUTED,
-    borderWidth: 1,
-  };
-  obj.subtext = { marginTop: nativeDefault.space.PX_4, textAlign: "center" };
-  const obj7 = { marginTop: nativeDefault.space.PX_4, textAlign: "center" };
-  obj.spacing = { marginTop: nativeDefault.space.PX_8 };
+  });
+  ({ marginTop: nativeDefault.space.PX_4, textAlign: "center" });
+  ({ marginTop: nativeDefault.space.PX_8 });
   return obj;
 });
-fn(558);
-const ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (screenIndex) => {
-      const cResult = screenIndex(576).c(28);
+      let channelId;
+      let children;
+      let items1;
+      let items2;
+      let items3;
+      let onJumpToPresent;
+      let tmp11;
+      let tmp12;
+      let tmp8;
+      let tmp9;
+      const obj = screenIndex(576);
+      const cResult = obj.c(28);
       screenIndex = screenIndex.screenIndex;
       ({ channelId, onJumpToPresent, children } = screenIndex);
       const tmp5 = useIsUsingClientThemeDefault();
-      const obj = screenIndex(576);
-      const chatInputFloatingOverlayStyle = screenIndex(11891).useChatInputFloatingOverlayStyle();
+      const obj2 = screenIndex(11891);
+      const chatInputFloatingOverlayStyle = obj2.useChatInputFloatingOverlayStyle();
       const tmp7 = closure_9(tmp5);
       if (cResult[0] !== screenIndex) {
         const fn = function n(nativeEvent) {
@@ -104,14 +118,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = screenIndex;
         cResult[1] = fn;
-        let tmp8 = fn;
+        tmp8 = fn;
       } else {
         tmp8 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp10 = getChatInputPositionStyleDefault({ isCreatingThread: false });
         cResult[2] = tmp10;
-        let tmp9 = tmp10;
+        tmp9 = tmp10;
       } else {
         tmp9 = cResult[2];
       }
@@ -119,20 +133,22 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const items = [tmp9, chatInputFloatingOverlayStyle];
         cResult[3] = chatInputFloatingOverlayStyle;
         cResult[4] = items;
-        let tmp11 = items;
+        tmp11 = items;
       } else {
         tmp11 = cResult[4];
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp14 = closure_7(tmp(11891).ChatInputScrimGradient, {});
+        const tmp14 = closure_7(screenIndex(11891).ChatInputScrimGradient, {});
         cResult[5] = tmp14;
-        let tmp12 = tmp14;
+        tmp12 = tmp14;
       } else {
         tmp12 = cResult[5];
       }
       if (cResult[6] === tmp5) {
+        let tmp15;
+        let tmp19;
         if (cResult[7] === tmp7.underlay) {
-          let tmp15 = cResult[8];
+          tmp15 = cResult[8];
         }
         if (cResult[9] !== tmp5) {
           let tmp20 = null;
@@ -141,37 +157,40 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[9] = tmp5;
           cResult[10] = tmp20;
-          let tmp19 = tmp20;
+          tmp19 = tmp20;
         } else {
           tmp19 = cResult[10];
         }
         if (cResult[11] === children) {
           if (cResult[12] === tmp7.content) {
+            let tmp22;
             if (cResult[13] === tmp19) {
-              let tmp22 = cResult[14];
+              tmp22 = cResult[14];
             }
             if (cResult[15] === channelId) {
               if (cResult[16] === onJumpToPresent) {
+                let tmp26;
                 if (cResult[17] === screenIndex) {
-                  let tmp26 = cResult[18];
+                  tmp26 = cResult[18];
                 }
                 if (cResult[19] === tmp7.container) {
                   if (cResult[20] === tmp15) {
                     if (cResult[21] === tmp22) {
+                      let tmp30;
                       if (cResult[22] === tmp26) {
-                        let tmp30 = cResult[23];
+                        tmp30 = cResult[23];
                       }
                       if (cResult[24] === tmp8) {
                         if (cResult[25] === tmp11) {
+                          let tmp34;
                           if (cResult[26] === tmp30) {
-                            let tmp34 = cResult[27];
+                            tmp34 = cResult[27];
                           }
                           return tmp34;
                         }
                       }
-                      const obj3 = { style: tmp11, onLayout: tmp8, collapsable: false, children: null };
-                      const items1 = [tmp12, tmp30];
-                      obj3.children = items1;
+                      const obj3 = { style: tmp11, onLayout: tmp8, collapsable: false, children: items1 };
+                      items1 = [tmp12, tmp30];
                       const tmp37 = closure_8(closure_5, obj3);
                       cResult[24] = tmp8;
                       cResult[25] = tmp11;
@@ -181,9 +200,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                const obj4 = { style: tmp7.container, children: null };
-                const items2 = [tmp15, tmp22, tmp26];
-                obj4.children = items2;
+                const obj4 = { style: tmp7.container, children: items2 };
+                items2 = [tmp15, tmp22, tmp26];
                 const tmp33 = closure_8(closure_5, obj4);
                 cResult[19] = tmp7.container;
                 cResult[20] = tmp15;
@@ -194,6 +212,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             let tmp28 = null;
+            const tmpResult = screenIndex(1369);
             if (tmpResult.isIOS()) {
               tmp28 = null;
               if (null != channelId) {
@@ -206,12 +225,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[17] = screenIndex;
             cResult[18] = tmp28;
             tmp26 = tmp28;
-            tmpResult = tmp(1369);
           }
         }
-        const obj6 = { style: tmp7.content, children: null };
-        const items3 = [tmp19, children];
-        obj6.children = items3;
+        const obj6 = { style: tmp7.content, children: items3 };
+        items3 = [tmp19, children];
         const tmp25 = closure_8(closure_5, obj6);
         cResult[11] = children;
         cResult[12] = tmp7.content;
@@ -228,41 +245,46 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp7.underlay;
       cResult[8] = tmp16;
       tmp15 = tmp16;
-      const obj2 = screenIndex(11891);
     }
   : (screenIndex) => {
+      let callback;
+      let children;
+      let items1;
+      let items2;
+      let items3;
+      let items4;
+      let onJumpToPresent;
       screenIndex = screenIndex.screenIndex;
       const channelId = screenIndex.channelId;
       ({ onJumpToPresent, children } = screenIndex);
       const tmp3 = useIsUsingClientThemeDefault();
-      const chatInputFloatingOverlayStyle = screenIndex(11891).useChatInputFloatingOverlayStyle();
+      const obj = screenIndex(11891);
+      const chatInputFloatingOverlayStyle = obj.useChatInputFloatingOverlayStyle();
       const tmp6 = closure_9(tmp3);
       const items = [screenIndex];
-      const obj2 = { style: null, onLayout: null, collapsable: false, children: null };
-      const callback = noop.useCallback((nativeEvent) => {
+      const obj2 = { style: items1, onLayout: callback, collapsable: false, children: items2 };
+      callback = react.useCallback((nativeEvent) => {
         closure_6(screenIndex, nativeEvent.nativeEvent.layout.height);
       }, items);
-      const items1 = [getChatInputPositionStyleDefault({ isCreatingThread: false }), chatInputFloatingOverlayStyle];
-      obj2.style = items1;
-      obj2.onLayout = callback;
-      const items2 = [closure_7(screenIndex(11891).ChatInputScrimGradient, {})];
-      const obj3 = { style: tmp6.container, children: null };
+      items1 = [getChatInputPositionStyleDefault({ isCreatingThread: false }), chatInputFloatingOverlayStyle];
+      items2 = [closure_7(screenIndex(11891).ChatInputScrimGradient, {})];
       let tmp10Result = null;
+      const obj3 = { style: tmp6.container, children: items3 };
+      const tmp4 = screenIndex;
       if (!tmp3) {
         const obj4 = { style: tmp6.underlay };
         tmp10Result = closure_7(closure_5, obj4);
       }
-      const items3 = [tmp10Result, ,];
-      const obj5 = { style: tmp6.content, children: null };
+      items3 = [tmp10Result, ,];
       let tmp10Result3 = null;
+      const obj5 = { style: tmp6.content, children: items4 };
       if (tmp3) {
         tmp10Result3 = closure_7(ThemedGradientDefault, { absolute: true, wide: true, tall: true, mix: true });
       }
-      const items4 = [tmp10Result3, children];
-      obj5.children = items4;
+      items4 = [tmp10Result3, children];
       items3[1] = closure_8(closure_5, obj5);
-      const obj = screenIndex(11891);
       let tmp10Result4 = null;
+      const tmp4Result = tmp4(1369);
       if (tmp4Result.isIOS()) {
         tmp10Result4 = null;
         if (null != channelId) {
@@ -271,110 +293,138 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       items3[2] = tmp10Result4;
-      obj3.children = items3;
       items2[1] = closure_8(closure_5, obj3);
-      obj2.children = items2;
       return closure_8(closure_5, obj2);
     };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuard.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (type) => {
-      const cResult = c.c(46);
+      let actionIcon;
+      let actionLabel;
+      let actionOnPress;
+      let buttonPrimaryDisabled;
+      let buttonPrimaryLoading;
+      let buttonPrimaryOnPress;
+      let buttonPrimaryText;
+      let buttonPrimaryVariant;
+      let buttonSecondaryDisabled;
+      let buttonSecondaryLoading;
+      let buttonSecondaryOnPress;
+      let buttonSecondaryText;
+      let countdown;
+      let countdown2;
+      let icon;
+      let items;
+      let items1;
+      let items2;
+      let items3;
+      let message;
+      let message2;
+      let subtext;
+      let subtext2;
+      let tmp33Result;
+      const obj = react2;
+      const cResult = obj.c(46);
       const tmp5 = closure_9(useIsUsingClientThemeDefault());
       if ("simple-action" === type.type) {
-        ({ icon, message, countdown: text, subtext, actionIcon, actionLabel, actionOnPress } = type);
+        let tmp29;
+        let tmp33Result2;
+        ({ icon, message, countdown, subtext, actionIcon, actionLabel, actionOnPress } = type);
         if (cResult[0] === actionIcon) {
           if (cResult[1] === actionLabel) {
             if (cResult[2] === actionOnPress) {
-              if (cResult[3] === text) {
+              if (cResult[3] === countdown) {
                 if (cResult[4] === tmp5.spacing) {
+                  let tmp35;
                   if (cResult[5] === tmp5.text) {
-                    if (cResult[7] !== message) {
-                      const obj2 = { variant: "text-sm/semibold", children: message };
-                      const tmp38 = React5(Text_Text.Text, obj2);
-                      cResult[7] = message;
-                      cResult[8] = tmp38;
-                      let tmp36 = tmp38;
-                    } else {
-                      tmp36 = cResult[8];
-                    }
-                    if (cResult[9] === actionOnPress) {
-                      if (cResult[10] === icon) {
-                        if (cResult[11] === subtext) {
-                          if (cResult[12] === tmp29) {
-                            if (cResult[13] === tmp36) {
-                              let tmp39 = cResult[14];
-                            }
-                            if (cResult[15] === tmp5.floating) {
-                              if (cResult[16] === tmp39) {
-                                let tmp42 = cResult[17];
-                              }
-                              return tmp42;
-                            }
-                            const obj3 = { style: tmp5.floating, children: tmp39 };
-                            const tmp45 = React5(hasOwnProperty, obj3);
-                            cResult[15] = tmp5.floating;
-                            cResult[16] = tmp39;
-                            cResult[17] = tmp45;
-                            tmp42 = tmp45;
+                    tmp29 = cResult[6];
+                  }
+                  if (cResult[7] !== message) {
+                    const obj2 = { variant: "text-sm/semibold", children: message };
+                    const tmp37 = metroImportDefault(Text_Text.Text, obj2);
+                    cResult[7] = message;
+                    cResult[8] = tmp37;
+                    tmp35 = tmp37;
+                  } else {
+                    tmp35 = cResult[8];
+                  }
+                  if (cResult[9] === actionOnPress) {
+                    if (cResult[10] === icon) {
+                      if (cResult[11] === subtext) {
+                        if (cResult[12] === tmp29) {
+                          let tmp38;
+                          if (cResult[13] === tmp35) {
+                            tmp38 = cResult[14];
                           }
+                          if (cResult[15] === tmp5.floating) {
+                            let tmp41;
+                            if (cResult[16] === tmp38) {
+                              tmp41 = cResult[17];
+                            }
+                            return tmp41;
+                          }
+                          const obj3 = { style: tmp5.floating, children: tmp38 };
+                          const tmp44 = metroImportDefault(hasOwnProperty, obj3);
+                          cResult[15] = tmp5.floating;
+                          cResult[16] = tmp38;
+                          cResult[17] = tmp44;
+                          tmp41 = tmp44;
                         }
                       }
                     }
-                    const obj4 = {
-                      arrow: false,
-                      accessibilityRole: "button",
-                      onPress: actionOnPress,
-                      icon,
-                      start: true,
-                      end: true,
-                      trailing: cResult[6],
-                      label: tmp36,
-                      subLabel: subtext,
-                    };
-                    const tmp41 = React5(TableRow.TableRow, obj4);
-                    cResult[9] = actionOnPress;
-                    cResult[10] = icon;
-                    cResult[11] = subtext;
-                    cResult[12] = cResult[6];
-                    cResult[13] = tmp36;
-                    cResult[14] = tmp41;
-                    tmp39 = tmp41;
                   }
+                  const obj4 = {
+                    arrow: false,
+                    accessibilityRole: "button",
+                    onPress: actionOnPress,
+                    icon,
+                    start: true,
+                    end: true,
+                    trailing: tmp29,
+                    label: tmp35,
+                    subLabel: subtext,
+                  };
+                  const tmp40 = metroImportDefault(TableRow.TableRow, obj4);
+                  cResult[9] = actionOnPress;
+                  cResult[10] = icon;
+                  cResult[11] = subtext;
+                  cResult[12] = tmp29;
+                  cResult[13] = tmp35;
+                  cResult[14] = tmp40;
+                  tmp38 = tmp40;
                 }
               }
             }
           }
         }
-        if (null == actionLabel) {
-          let tmp33Result2 = null;
-          if (null != text) {
-            const obj5 = { style: null, deadline: null };
-            const items = [,];
-            ({ text: arr4[0], spacing: arr4[1] } = tmp5);
-            obj5.style = items;
-            obj5.deadline = text;
-            tmp33Result2 = React5(CountDownDefault, obj5);
+        if (null != actionLabel) {
+          if (null != actionOnPress) {
+            const obj5 = { accessibilityLabel: actionLabel, icon: tmp33Result, size: "sm", onPress: actionOnPress };
+            tmp33Result = actionIcon;
+            const IconButton = IconButton2.IconButton;
+            if (actionIcon == null) {
+              const obj6 = { color: nativeDefault.colors.WHITE };
+              const ArrowSmallRightIcon = ArrowSmallRightIcon2.ArrowSmallRightIcon;
+              tmp33Result = metroImportDefault(ArrowSmallRightIcon, obj6);
+            }
+            tmp33Result2 = metroImportDefault(IconButton, obj5);
           }
           cResult[0] = actionIcon;
           cResult[1] = actionLabel;
           cResult[2] = actionOnPress;
-          cResult[3] = text;
-          ({ spacing: tmp3[4], text } = tmp5);
-          cResult[5] = text;
+          cResult[3] = countdown;
+          cResult[4] = tmp5.spacing;
+          cResult[5] = tmp5.text;
           cResult[6] = tmp33Result2;
+          tmp29 = tmp33Result2;
         }
-        const obj6 = { accessibilityLabel: actionLabel, icon: null, size: "sm", onPress: null };
-        let tmp33Result = actionIcon;
-        if (actionIcon == null) {
-          const obj7 = { color: nativeDefault.colors.WHITE };
-          tmp33Result = React5(ArrowSmallRightIcon.ArrowSmallRightIcon, obj7);
+        tmp33Result2 = null;
+        if (null != countdown) {
+          const obj7 = { style: items, deadline: countdown };
+          items = [,];
+          ({ text: arr4[0], spacing: arr4[1] } = tmp5);
+          tmp33Result2 = metroImportDefault(CountDownDefault, obj7);
         }
-        obj6.icon = tmp33Result;
-        obj6.onPress = actionOnPress;
-        tmp33Result2 = React5(IconButton.IconButton, obj6);
       } else {
         ({
           message: message2,
@@ -388,51 +438,56 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           buttonSecondaryOnPress,
           buttonSecondaryDisabled,
           buttonSecondaryLoading,
-          countdown,
+          countdown: countdown2,
         } = type);
         if (cResult[18] === buttonPrimaryDisabled) {
           if (cResult[19] === buttonPrimaryLoading) {
             if (cResult[20] === buttonPrimaryOnPress) {
               if (cResult[21] === buttonPrimaryText) {
+                let tmp6;
                 if (cResult[22] === buttonPrimaryVariant) {
-                  let tmp6 = cResult[23];
+                  tmp6 = cResult[23];
                 }
                 if (cResult[24] === message2) {
+                  let tmp9;
                   if (cResult[25] === tmp5.text) {
-                    let tmp9 = cResult[26];
+                    tmp9 = cResult[26];
                   }
                   if (cResult[27] === tmp5.subtext) {
+                    let tmp12;
                     if (cResult[28] === subtext2) {
-                      let tmp12 = cResult[29];
+                      tmp12 = cResult[29];
                     }
                     if (cResult[30] === tmp6) {
                       if (cResult[31] === buttonSecondaryDisabled) {
                         if (cResult[32] === buttonSecondaryLoading) {
                           if (cResult[33] === buttonSecondaryOnPress) {
+                            let tmp16;
                             if (cResult[34] === buttonSecondaryText) {
-                              let tmp16 = cResult[35];
+                              tmp16 = cResult[35];
                             }
-                            if (cResult[36] === countdown) {
+                            if (cResult[36] === countdown2) {
                               if (cResult[37] === tmp5.spacing) {
+                                let tmp22;
                                 if (cResult[38] === tmp5.text) {
-                                  let tmp22 = cResult[39];
+                                  tmp22 = cResult[39];
                                 }
                                 if (cResult[40] === tmp5.wrapper) {
                                   if (cResult[41] === tmp9) {
                                     if (cResult[42] === tmp12) {
                                       if (cResult[43] === tmp16) {
+                                        let tmp25;
                                         if (cResult[44] === tmp22) {
-                                          let tmp25 = cResult[45];
+                                          tmp25 = cResult[45];
                                         }
                                         return tmp25;
                                       }
                                     }
                                   }
                                 }
-                                const obj8 = { style: tmp5.wrapper, children: null };
-                                const items1 = [tmp9, tmp12, tmp16, tmp22];
-                                obj8.children = items1;
-                                const tmp28 = closure_1_8(hasOwnProperty, obj8);
+                                const obj8 = { style: tmp5.wrapper, children: items1 };
+                                items1 = [tmp9, tmp12, tmp16, tmp22];
+                                const tmp28 = metroImportAll(hasOwnProperty, obj8);
                                 cResult[40] = tmp5.wrapper;
                                 cResult[41] = tmp9;
                                 cResult[42] = tmp12;
@@ -443,15 +498,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                             let tmp23 = null;
-                            if (null != countdown) {
-                              const obj9 = { style: null, deadline: null };
-                              const items2 = [,];
+                            if (null != countdown2) {
+                              const obj9 = { style: items2, deadline: countdown2 };
+                              items2 = [,];
                               ({ text: arr2[0], spacing: arr2[1] } = tmp5);
-                              obj9.style = items2;
-                              obj9.deadline = countdown;
-                              tmp23 = React5(CountDownDefault, obj9);
+                              tmp23 = metroImportDefault(CountDownDefault, obj9);
                             }
-                            cResult[36] = countdown;
+                            cResult[36] = countdown2;
                             cResult[37] = tmp5.spacing;
                             cResult[38] = tmp5.text;
                             cResult[39] = tmp23;
@@ -461,11 +514,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                     let tmp19 = tmp6;
+                    const ButtonGroup = ButtonGroup2.ButtonGroup;
                     if (null != buttonSecondaryText) {
                       tmp19 = tmp6;
                       if (null != buttonSecondaryOnPress) {
-                        const obj10 = { children: null };
-                        const items3 = [tmp6];
+                        const obj10 = { children: items3 };
+                        items3 = [tmp6];
+                        const TwinButtons = native.TwinButtons;
                         const obj11 = {
                           disabled: buttonSecondaryDisabled,
                           loading: buttonSecondaryLoading,
@@ -474,13 +529,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           variant: "secondary",
                           size: "sm",
                         };
-                        items3[1] = React5(components_Button_Button.Button, obj11);
-                        obj10.children = items3;
-                        tmp19 = closure_1_8(native.TwinButtons, obj10);
+                        items3[1] = metroImportDefault(components_Button_Button.Button, obj11);
+                        tmp19 = metroImportAll(TwinButtons, obj10);
                       }
                     }
                     const obj12 = { children: tmp19 };
-                    const tmp17Result = React5(ButtonGroup.ButtonGroup, obj12);
+                    const tmp17Result = metroImportDefault(ButtonGroup, obj12);
                     cResult[30] = tmp6;
                     cResult[31] = buttonSecondaryDisabled;
                     cResult[32] = buttonSecondaryLoading;
@@ -501,7 +555,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           color: "text-muted",
                           children: subtext2,
                         };
-                        tmp14 = React5(Text_Text.Text, obj13);
+                        tmp14 = metroImportDefault(Text_Text.Text, obj13);
                       }
                     }
                   }
@@ -511,7 +565,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp12 = tmp14;
                 }
                 const obj14 = { style: tmp5.text, variant: "text-sm/semibold", children: message2 };
-                const tmp11 = React5(Text_Text.Text, obj14);
+                const tmp11 = metroImportDefault(Text_Text.Text, obj14);
                 cResult[24] = message2;
                 cResult[25] = tmp5.text;
                 cResult[26] = tmp11;
@@ -528,7 +582,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           size: "sm",
           variant: buttonPrimaryVariant,
         };
-        const tmp8 = React5(components_Button_Button.Button, obj15);
+        const tmp8 = metroImportDefault(components_Button_Button.Button, obj15);
         cResult[18] = buttonPrimaryDisabled;
         cResult[19] = buttonPrimaryLoading;
         cResult[20] = buttonPrimaryOnPress;
@@ -539,8 +593,32 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
     }
   : (type) => {
+      let actionIcon;
+      let actionLabel;
+      let actionOnPress;
+      let buttonPrimaryDisabled;
+      let buttonPrimaryLoading;
+      let buttonPrimaryOnPress;
+      let buttonPrimaryText;
+      let buttonPrimaryVariant;
+      let buttonSecondaryDisabled;
+      let buttonSecondaryLoading;
+      let buttonSecondaryOnPress;
+      let buttonSecondaryText;
+      let countdown;
+      let countdown2;
+      let icon;
+      let items;
+      let items1;
+      let items2;
+      let items3;
+      let message;
+      let message2;
+      let subtext;
+      let subtext2;
       const tmp3 = closure_9(useIsUsingClientThemeDefault());
       if ("simple-action" === type.type) {
+        let tmp7Result;
         ({ countdown, actionIcon, actionLabel, actionOnPress } = type);
         const obj2 = { style: tmp3.floating, children: null };
         ({ icon, message, subtext } = type);
@@ -557,30 +635,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         if (null != actionLabel) {
           if (null != actionOnPress) {
-            const obj4 = { accessibilityLabel: actionLabel, icon: null, size: "sm", onPress: null };
+            const obj4 = { accessibilityLabel: actionLabel, icon: actionIcon, size: "sm", onPress: actionOnPress };
+            const IconButton = IconButton2.IconButton;
             if (actionIcon == null) {
               const obj5 = { color: nativeDefault.colors.WHITE };
-              actionIcon = React5(ArrowSmallRightIcon.ArrowSmallRightIcon, obj5);
+              const ArrowSmallRightIcon = ArrowSmallRightIcon2.ArrowSmallRightIcon;
+              actionIcon = metroImportDefault(ArrowSmallRightIcon, obj5);
             }
-            obj4.icon = actionIcon;
-            obj4.onPress = actionOnPress;
-            let tmp7Result = React5(IconButton.IconButton, obj4);
+            tmp7Result = metroImportDefault(IconButton, obj4);
           }
           obj3.trailing = tmp7Result;
           const obj6 = { variant: "text-sm/semibold", children: message };
-          obj3.label = React5(Text_Text.Text, obj6);
+          obj3.label = metroImportDefault(Text_Text.Text, obj6);
           obj3.subLabel = subtext;
-          obj2.children = React5(tmp10, obj3);
-          return React5(hasOwnProperty, obj2);
+          obj2.children = metroImportDefault(tmp10, obj3);
+          return metroImportDefault(hasOwnProperty, obj2);
         }
         tmp7Result = null;
         if (null != countdown) {
-          const obj7 = { style: null, deadline: null };
-          const items = [,];
+          const obj7 = { style: items, deadline: countdown };
+          items = [,];
           ({ text: arr3[0], spacing: arr3[1] } = tmp3);
-          obj7.style = items;
-          obj7.deadline = countdown;
-          tmp7Result = React5(CountDownDefault, obj7);
+          tmp7Result = metroImportDefault(CountDownDefault, obj7);
         }
       } else {
         ({ subtext: subtext2, buttonSecondaryText, buttonSecondaryOnPress, countdown: countdown2 } = type);
@@ -602,10 +678,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           size: "sm",
           variant: buttonPrimaryVariant,
         };
-        const tmp15 = React5(components_Button_Button.Button, obj8);
-        const obj9 = { style: tmp3.wrapper, children: null };
+        const tmp15 = metroImportDefault(components_Button_Button.Button, obj8);
         const obj10 = { style: tmp3.text, variant: "text-sm/semibold", children: message2 };
-        const items1 = [React5(Text_Text.Text, obj10), , ,];
+        const obj9 = { style: tmp3.wrapper, children: items1 };
+        items1 = [metroImportDefault(Text_Text.Text, obj10), , ,];
         let tmp13Result = null;
         if (null != subtext2) {
           tmp13Result = null;
@@ -613,17 +689,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp13Result = null;
             if (subtext2.length > 0) {
               const obj = { style: tmp3.subtext, variant: "text-xs/medium", color: "text-muted", children: subtext2 };
-              tmp13Result = React5(Text_Text.Text, obj);
+              tmp13Result = metroImportDefault(Text_Text.Text, obj);
             }
           }
         }
         items1[1] = tmp13Result;
         let tmp16Result = tmp15;
+        const ButtonGroup = ButtonGroup2.ButtonGroup;
         if (null != buttonSecondaryText) {
           tmp16Result = tmp15;
           if (null != buttonSecondaryOnPress) {
-            const obj11 = { children: null };
-            const items2 = [tmp15];
+            const obj11 = { children: items2 };
+            items2 = [tmp15];
+            const TwinButtons = native.TwinButtons;
             const obj12 = {
               disabled: buttonSecondaryDisabled,
               loading: buttonSecondaryLoading,
@@ -632,25 +710,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               variant: "secondary",
               size: "sm",
             };
-            items2[1] = React5(components_Button_Button.Button, obj12);
-            obj11.children = items2;
-            tmp16Result = closure_1_8(native.TwinButtons, obj11);
+            items2[1] = metroImportDefault(components_Button_Button.Button, obj12);
+            tmp16Result = metroImportAll(TwinButtons, obj11);
           }
         }
         const obj13 = { children: tmp16Result };
-        items1[2] = React5(ButtonGroup.ButtonGroup, obj13);
+        items1[2] = metroImportDefault(ButtonGroup, obj13);
         let tmp13Result2 = null;
         if (null != countdown2) {
-          const obj14 = { style: null, deadline: null };
-          const items3 = [,];
+          const obj14 = { style: items3, deadline: countdown2 };
+          items3 = [,];
           ({ text: arr2[0], spacing: arr2[1] } = tmp3);
-          obj14.style = items3;
-          obj14.deadline = countdown2;
-          tmp13Result2 = React5(CountDownDefault, obj14);
+          tmp13Result2 = metroImportDefault(CountDownDefault, obj14);
         }
         items1[3] = tmp13Result2;
-        obj9.children = items1;
-        return closure_1_8(hasOwnProperty, obj9);
+        return metroImportAll(hasOwnProperty, obj9);
       }
     };
+const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuard.tsx");
+
+export default tmp5;
 export const ChatInputGuardContainer = tmp4;

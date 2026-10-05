@@ -1,222 +1,125 @@
 // discord_app/modules/activities/utils/fetchIsLinkTrusted.tsx
+import Constants from "../../../Constants.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import URLUtilsDefault from "../../../utils/URLUtils.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-let closure_6 = async function _requestIsLinkTrusted(arg0) {
-  closure_0 = arg0;
-  c3 = 0;
-  c5 = 0;
-  c4 = 0;
-  return (async (arg0, value) => {
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp5 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
+let obj = function _requestIsLinkTrusted() {
+  obj = _asyncToGenerator(async (arg0, url) => {
+    let closure_2;
+    let closure_0 = arg0;
+    let c3 = 0;
+    let c5 = 0;
+    let c4 = 0;
+    return (async (arg0, value) => {
+      let obj4;
+      const HTTP = HTTPUtils.HTTP;
+      const request = {
+        url: Endpoints.ACTIVITIES_TRUSTED_LINKS(closure_0),
+        rejectWithError: false,
+        query: obj4,
+        timeout: 500,
+      };
+      const get = HTTP.get;
+      obj4 = { url };
+      await get(request);
+      const body = value.body;
+      const _Boolean = Boolean;
+      return Boolean(body.trusted);
+    })();
+  });
+  return obj(...arguments);
+};
+obj = function _fetchIsLinkTrusted() {
+  obj = _asyncToGenerator(async (arg0, arg1) => {
+    let c4;
+    let closure_3;
+    let flag;
+    let protocol;
+    let tmp2;
+    let value;
+    function readCache(combined) {
+      const value = closure_1_5.get(combined);
+      let tmp2 = null;
+      if (null != value) {
+        let check;
+        const _Date = Date;
+        if (Date.now() >= value.expiresAt) {
+          closure_1_5.delete(combined);
+          check = null;
+        } else {
+          check = value.check;
+        }
+        tmp2 = check;
+      }
+      return tmp2;
+    }
+    function requestIsLinkTrusted() {
+      return closure_1_6(...arguments);
+    }
+    function writeCache(combined, check) {
+      if (closure_1_5.size >= 100) {
+        const iter = closure_1_5.keys();
+        const iter2 = iter.next();
+        if (!iter2.done) {
+          closure_1_5.delete(iter2.value);
+        }
+      }
+      const obj2 = { check, expiresAt: Date.now() + 300000 };
+      const result = closure_1_5.set(combined, obj2);
+    }
+    let closure_0 = arg0;
+    let closure_1 = arg1;
+    let closure_2 = tmp2;
+    if (undefined === closure_0) {
+      return false;
+    }
+    const obj6 = URLUtilsDefault;
+    const toURLSafeResult = obj6.toURLSafe(closure_1);
+    if (toURLSafeResult != null) {
+      protocol = toURLSafeResult.protocol;
+    }
+    if ("http:" !== protocol) {
+      if ("https:" !== protocol) {
+        let c5 = 3;
+        return { value: false, done: true };
+      }
+    }
+    const _HermesInternal = HermesInternal;
+    const combined = "" + closure_0 + ":" + tmp33;
+    let tmp22 = readCache(combined);
+    closure_1 = tmp22;
+    if (null == tmp22) {
+      const tmp23 = requestIsLinkTrusted(closure_0, closure_1);
+      closure_1 = tmp23;
+      writeCache(combined, tmp23);
+      tmp22 = tmp23;
+    }
+    await tmp22;
+    closure_2 = value;
+    if (null == closure_2) {
+      value = closure_131_5.get(combined);
+      let check;
+      if (value != null) {
+        check = value.check;
+      }
+      flag = false;
+      if (check === closure_1) {
+        const deleteResult = closure_131_5.delete(combined);
+        flag = false;
       }
     } else {
-      try {
-        c5 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_2 = tmp6;
-            let body;
-            c4 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            const request = {
-              url: Endpoints.ACTIVITIES_TRUSTED_LINKS(closure_0),
-              rejectWithError: false,
-              query: null,
-              timeout: 500,
-            };
-            const obj4 = { url };
-            request.query = obj4;
-            c3 = 2;
-            c5 = 1;
-            const obj5 = { value: HTTP.get(request), done: false };
-            return obj5;
-          }
-        } else if (1 === tmp6) {
-          c4 = 0;
-          c5 = 3;
-          return { value: null, done: true };
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c5 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          body = value.body;
-          const _Boolean = Boolean;
-          c4 = 0;
-          c5 = 3;
-          const obj = { value: Boolean(body.trusted), done: true };
-          return obj;
-        }
-      } catch (tmp9) {
-        if (tmp3 === c4) {
-          c5 = tmp2;
-          throw tmp9;
-        } else {
-          c3 = tmp;
-        }
-      }
+      flag = closure_2;
     }
-  })();
+    return flag;
+  });
+  return obj(...arguments);
 };
-let closure_7 = async function _fetchIsLinkTrusted(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp5 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_3 = tmp2;
-          closure_2 = tmp3;
-          closure_130_0 = undefined;
-          closure_130_1 = undefined;
-          closure_130_2 = undefined;
-          if (undefined === closure_0) {
-            c5 = 3;
-            return { value: false, done: true };
-          } else {
-            const toURLSafeResult = URLUtilsDefault.toURLSafe(closure_1);
-            let protocol;
-            if (toURLSafeResult != null) {
-              protocol = toURLSafeResult.protocol;
-            }
-            if ("http:" !== protocol) {
-              if ("https:" !== protocol) {
-                c5 = 3;
-                return { value: false, done: true };
-              }
-            }
-            const _HermesInternal = HermesInternal;
-            const combined = "" + closure_0 + ":" + closure_1;
-            closure_130_0 = combined;
-            let tmp23 = (function readCache(combined) {
-              value = closure_1_5.get(combined);
-              if (null == value) {
-                return null;
-              } else {
-                const _Date = Date;
-                if (Date.now() >= value.expiresAt) {
-                  closure_1_5.delete(combined);
-                  let check = null;
-                } else {
-                  check = value.check;
-                }
-              }
-            })(combined);
-            closure_130_1 = tmp23;
-            if (null == tmp23) {
-              const tmp24 = (function requestIsLinkTrusted() {
-                const self = this;
-                const apply = closure_1_6.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              })(closure_0, closure_1);
-              closure_130_1 = tmp24;
-              (function writeCache(combined, check) {
-                if (closure_1_5.size >= 100) {
-                  const iter2 = closure_1_5.keys().next();
-                  if (!iter2.done) {
-                    closure_1_5.delete(iter2.value);
-                  }
-                  const iter = closure_1_5.keys();
-                }
-                const result = closure_1_5.set(combined, { check, expiresAt: Date.now() + 300000 });
-                const obj2 = { check, expiresAt: Date.now() + 300000 };
-              })(combined, tmp24);
-              tmp23 = tmp24;
-            }
-            c4 = 1;
-            c5 = 1;
-            const obj4 = { value: tmp23, done: false };
-            return obj4;
-          }
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj = { value, done: true };
-        return obj;
-      } else {
-        closure_130_2 = value;
-        let deleteResult = null;
-        if (null == closure_130_2) {
-          value = closure_131_5.get(closure_130_0);
-          let check;
-          if (value != deleteResult) {
-            check = value.check;
-          }
-          deleteResult = closure_2;
-          if (check === closure_130_1) {
-            deleteResult = closure_131_5.delete(closure_130_0);
-          }
-        }
-        c5 = 3;
-      }
-    } catch (tmp26) {
-      c5 = tmp;
-      throw tmp26;
-    }
-  }
-};
-const Endpoints = fn(1085).Endpoints;
-const map = new Map();
-const size = fn(2);
+const Endpoints = Constants.Endpoints;
+new Map();
 let result = size.fileFinishedImporting("modules/activities/utils/fetchIsLinkTrusted.tsx");
 
 export const fetchIsLinkTrusted = function fetchIsLinkTrusted() {
-  const self = this;
-  const apply = closure_7.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

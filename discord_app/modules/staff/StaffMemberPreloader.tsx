@@ -1,10 +1,11 @@
 // discord_app/modules/staff/StaffMemberPreloader.tsx
 import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
+import StaffMemberConstants from "StaffMemberConstants.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const PRELOAD_SERVER_ID = fn(17630).PRELOAD_SERVER_ID;
-const size = fn(2);
+const PRELOAD_SERVER_ID = StaffMemberConstants.PRELOAD_SERVER_ID;
 const result = size.fileFinishedImporting("modules/staff/StaffMemberPreloader.tsx");
 
 export const preloadStaffMembers = function preloadStaffMembers() {

@@ -1,19 +1,23 @@
 // discord_app/design/void/AccessibilityFocusView/native/AccessibilityFocusView.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import AccessibilityFocusNativeComponentDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/AccessibilityFocusNativeComponent.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
 let closure_3 = ["onAccessibilityFocus", "onAccessibilityBlur"];
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/void/AccessibilityFocusView/native/AccessibilityFocusView.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(8);
+      let onAccessibilityBlur;
+      let onAccessibilityFocus;
+      let tmp3;
+      let tmp4;
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(8);
       if (cResult[0] !== arg0) {
         ({ onAccessibilityFocus, onAccessibilityBlur } = arg0);
         const tmp8 = _objectWithoutProperties(arg0, closure_3);
@@ -21,9 +25,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = onAccessibilityBlur;
         cResult[2] = onAccessibilityFocus;
         cResult[3] = tmp8;
-        let tmp5 = tmp8;
-        let tmp4 = onAccessibilityFocus;
-        let tmp3 = onAccessibilityBlur;
+        tmp5 = tmp8;
+        tmp4 = onAccessibilityFocus;
+        tmp3 = onAccessibilityBlur;
       } else {
         tmp3 = cResult[1];
         tmp4 = cResult[2];
@@ -31,17 +35,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] === tmp3) {
         if (cResult[5] === tmp4) {
+          let tmp9;
           if (cResult[6] === tmp5) {
-            let tmp9 = cResult[7];
+            tmp9 = cResult[7];
           }
           return tmp9;
         }
       }
-      const obj2 = {};
+      AccessibilityFocusNativeComponentDefault;
       const merged = Object.assign(tmp5);
-      obj2.onAccessibilityFocus = tmp4;
-      obj2.onAccessibilityBlur = tmp3;
-      const tmp12 = jsx(AccessibilityFocusNativeComponentDefault, {});
+      const tmp12 = <tmp10 onAccessibilityFocus={tmp4} onAccessibilityBlur={tmp3} />;
       cResult[4] = tmp3;
       cResult[5] = tmp4;
       cResult[6] = tmp5;
@@ -49,11 +52,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp12;
     }
   : (arg0) => {
+      let onAccessibilityBlur;
+      let onAccessibilityFocus;
       ({ onAccessibilityFocus, onAccessibilityBlur } = arg0);
       const merged = Object.assign(arg0, Object.assign({ onAccessibilityFocus: 0, onAccessibilityBlur: 0 }));
-      const obj = {};
+      AccessibilityFocusNativeComponentDefault;
       const merged1 = Object.assign(merged);
-      obj.onAccessibilityFocus = onAccessibilityFocus;
-      obj.onAccessibilityBlur = onAccessibilityBlur;
-      return jsx(AccessibilityFocusNativeComponentDefault, {});
+      return <tmp2 onAccessibilityFocus={onAccessibilityFocus} onAccessibilityBlur={onAccessibilityBlur} />;
     };
+const result = size.fileFinishedImporting("design/void/AccessibilityFocusView/native/AccessibilityFocusView.tsx");
+
+export default tmp3;

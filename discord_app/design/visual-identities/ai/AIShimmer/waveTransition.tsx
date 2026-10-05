@@ -2,11 +2,12 @@
 import size from "../../../../../_runtime/metro/00002__.js";
 
 function shiftChar(str, arg1) {
+  let fromCharCodeResult;
   const charCodeAtResult = str.charCodeAt(0);
   if (charCodeAtResult >= closure_6) {
     if (charCodeAtResult <= 90) {
       const _String3 = String;
-      let fromCharCodeResult = String.fromCharCode(closure_6 + ((charCodeAtResult - closure_6 + arg1) % 26));
+      fromCharCodeResult = String.fromCharCode(closure_6 + ((charCodeAtResult - closure_6 + arg1) % 26));
     }
     return fromCharCodeResult;
   }
@@ -284,17 +285,21 @@ bandEdgesAt.__initData = {
   code: "function bandEdgesAt_waveTransitionTsx7(progress,width,extraTravel){const{easeTail,waveFrontAt,WAVE_SCHEDULE,bandStartAt,bandEndAt}=this.__closure;const easedProgress=easeTail(progress);const travelDistance=width+2*extraTravel;return{incomingTextEnd:waveFrontAt(WAVE_SCHEDULE.length-1,easedProgress)*travelDistance-extraTravel,bandStart:bandStartAt(easedProgress)*travelDistance-extraTravel,bandEnd:bandEndAt(easedProgress)*travelDistance-extraTravel,outgoingTextStart:waveFrontAt(0,easedProgress)*travelDistance-extraTravel};}",
 };
 function bandGlyphsAt(result, slotCount, glyphChoices, overshootInSlots) {
+  let bandEnd;
+  let bandStart;
   if (slotCount > 0) {
     if (0 !== glyphChoices.length) {
       ({ bandStart, bandEnd } = bandEdgesAt(result, slotCount, overshootInSlots));
       let str = "";
       let num = 0;
       let str2 = "";
+      bandEdgesAt(result, slotCount, overshootInSlots);
       if (0 < slotCount) {
         while (true) {
           let charAtResult = glyphChoices.charAt(num % glyphChoices.length);
           let sum = num + 0.5;
           if (sum < bandEnd) {
+            let sum1;
             if (sum >= bandStart) {
               let _Math = Math;
               let _Math2 = Math;
@@ -304,7 +309,7 @@ function bandGlyphsAt(result, slotCount, glyphChoices, overshootInSlots) {
               if (bound < 6) {
                 charAtResult = v123456.charAt(bound);
               }
-              let sum1 = str + charAtResult;
+              sum1 = str + charAtResult;
             }
             num = num + 1;
             str = sum1;
@@ -498,9 +503,11 @@ export const charForState = function charForState(arg0, arg1, arg2, arg3) {
     }
     return str4;
   } else {
+    let fromCharCodeResult1;
     if (1 !== arg3) {
       if (2 !== arg3) {
         if (3 === arg3) {
+          let fromCharCodeResult;
           let str2 = arg1[arg2];
           if (str2 == null) {
             str2 = "";
@@ -509,7 +516,7 @@ export const charForState = function charForState(arg0, arg1, arg2, arg3) {
           if (charCodeAtResult >= closure_6) {
             if (charCodeAtResult <= 90) {
               const _String3 = String;
-              let fromCharCodeResult = String.fromCharCode(closure_6 + ((charCodeAtResult - closure_6 + 6) % 26));
+              fromCharCodeResult = String.fromCharCode(closure_6 + ((charCodeAtResult - closure_6 + 6) % 26));
             }
             return fromCharCodeResult;
           }
@@ -544,7 +551,7 @@ export const charForState = function charForState(arg0, arg1, arg2, arg3) {
     if (charCodeAtResult1 >= closure_6) {
       if (charCodeAtResult1 <= 90) {
         const _String6 = String;
-        let fromCharCodeResult1 = String.fromCharCode(closure_6 + ((charCodeAtResult1 - closure_6 + 6) % 26));
+        fromCharCodeResult1 = String.fromCharCode(closure_6 + ((charCodeAtResult1 - closure_6 + 6) % 26));
       }
       return fromCharCodeResult1;
     }
@@ -655,6 +662,7 @@ export const glyphRampIndexAt = function glyphRampIndexAt(arg0, arg1, arg2) {
 export { bandEdgesAt };
 export const shiftedLineFor = function shiftedLineFor(slotA) {
   let str = "";
+  const tmp = slotA[Symbol.iterator]();
   while (tmp !== undefined) {
     str = `${shiftChar(tmp2, 6)}`;
     continue;
@@ -668,16 +676,18 @@ export const slotCountFor = function slotCountFor(arg0, arg1, arg2) {
     num = 0;
   }
   if (0 !== arg0) {
+    let bound;
     if (0 !== arg1) {
       const _Math = Math;
       const _Math2 = Math;
-      let bound = Math.max(1, Math.ceil((arg0 + num) / arg1));
+      bound = Math.max(1, Math.ceil((arg0 + num) / arg1));
     }
     return bound;
   }
   bound = Math.max(1, arg2);
 };
 export const pickSlotFaces = function pickSlotFaces(arg0, fn) {
+  let num;
   const array = new Array(arg0);
   for (let num = 0; num < arg0; num = num + 1) {
     array[num] = v789ABC.charAt((6 * fn()) | 0);

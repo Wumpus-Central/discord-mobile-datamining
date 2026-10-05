@@ -5,6 +5,8 @@ import size from "../../../../../_runtime/metro/00002__.js";
 let PlatformUtils = PlatformUtils_mod;
 PlatformUtils = PlatformUtils.isAndroid();
 const fn = function t(arg0) {
+  let keyboardHeight;
+  let screenBottomOffset;
   ({ screenBottomOffset, keyboardHeight } = arg0);
   let bottomOffset = screenBottomOffset;
   if (keyboardHeight > 0) {

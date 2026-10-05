@@ -7,6 +7,10 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/quests/types/v2/Quest.tsx");
 
 export const questFromServerV2 = function questFromServerV2(id) {
+  let obj2;
+  let obj3;
+  let tmp3;
+  let tmpResult;
   const obj = {
     id: id.id,
     configVersion: 2,
@@ -32,16 +36,18 @@ export const questFromServerV2 = function questFromServerV2(id) {
       gameTitle: id.messages.game_title,
       gamePublisher: id.messages.game_publisher,
     },
-    taskConfigV2: Task.questTaskConfigV2FromServer(id.task_config_v2),
-    rewardsConfig: null,
-    cosponsorMetadata: null,
-    sharePolicy: null,
-    ctaConfig: null,
+    taskConfigV2: obj2.questTaskConfigV2FromServer(id.task_config_v2),
+    rewardsConfig: obj3.questRewardsConfigV2FromServer(id.rewards_config),
+    cosponsorMetadata: tmp3,
+    sharePolicy: id.share_policy,
+    ctaConfig: tmpResult.questCtaConfigFromServer(id.cta_config),
   };
-  obj.rewardsConfig = Reward.questRewardsConfigV2FromServer(id.rewards_config);
+  obj2 = Task;
   const cosponsor_metadata = id.cosponsor_metadata;
-  let tmp3;
+  tmp3 = undefined;
+  obj3 = Reward;
   if (null != cosponsor_metadata) {
+    const obj5 = { name: null, logotype: null, redemptionInstructions: null, logotypeLight: null, logotypeDark: null };
     ({
       name: obj4.name,
       logotype: obj4.logotype,
@@ -49,12 +55,9 @@ export const questFromServerV2 = function questFromServerV2(id) {
       logotype_light: obj4.logotypeLight,
       logotype_dark: obj4.logotypeDark,
     } = cosponsor_metadata);
-    tmp3 = { name: null, logotype: null, redemptionInstructions: null, logotypeLight: null, logotypeDark: null };
-    const obj5 = { name: null, logotype: null, redemptionInstructions: null, logotypeLight: null, logotypeDark: null };
+    tmp3 = obj5;
   }
-  obj.cosponsorMetadata = tmp3;
-  obj.sharePolicy = id.share_policy;
-  obj.ctaConfig = CTA.questCtaConfigFromServer(id.cta_config);
+  tmpResult = CTA;
   return obj;
 };
 export const questCosponsorMetadataFromServer = function questCosponsorMetadataFromServer(cosponsor_metadata) {

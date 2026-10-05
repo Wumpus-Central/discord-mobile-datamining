@@ -1,54 +1,56 @@
 // discord_app/modules/activities/confirmActivityChangeAlert.tsx
-import util from "../../intl/index.native.tsx";
+import intl7 from "../../intl/index.native.tsx";
 import StringUtils from "../../utils/StringUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/confirmActivityChangeAlert.tsx");
 
 export default function confirmActivityChangeModal(name, channel, onConfirm, onCancel) {
+  let format;
+  let intl;
+  let intl2;
+  let intl3;
+  let obj3;
+  let prop;
   let str = "";
   if (null != channel) {
-    str = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
+    const obj = useChannelName;
+    str = obj.computeChannelName(channel, UserStore, RelationshipStore);
   }
-  const obj3 = {
-    title: null,
-    cancelText: null,
-    confirmText: null,
-    onConfirm: null,
-    onCancel: null,
-    body: null,
+  const obj2 = {
+    title: intl.string(intl7.t.XkIWkk),
+    cancelText: intl2.string(intl7.t["ETE/oC"]),
+    confirmText: intl3.string(intl7.t["cY+Oob"]),
+    onConfirm,
+    onCancel,
+    body: format(prop, obj3),
     isDismissable: false,
   };
-  const intl = util.intl;
-  obj3.title = intl.string(util.t.XkIWkk);
-  const intl2 = util.intl;
-  obj3.cancelText = intl2.string(util.t["ETE/oC"]);
-  const intl3 = util.intl;
-  obj3.confirmText = intl3.string(util.t["cY+Oob"]);
-  obj3.onConfirm = onConfirm;
-  obj3.onCancel = onCancel;
-  const intl4 = util.intl;
+  const show = AlertActionCreatorsDefault.show;
+  AlertActionCreatorsDefault;
+  intl = intl7.intl;
+  intl2 = intl7.intl;
+  intl3 = intl7.intl;
+  const intl4 = intl7.intl;
+  format = intl4.format;
   name = undefined;
+  prop = intl7.t["5/Xort"];
   if (name != null) {
     name = name.name;
   }
   if (name == null) {
-    const intl5 = util.intl;
-    name = intl5.string(util.t.G99XFs);
+    const intl5 = intl7.intl;
+    name = intl5.string(intl7.t.G99XFs);
   }
-  const obj4 = { currentApplicationName: name, currentApplicationChannelName: null };
-  const obj2 = AlertActionCreatorsDefault;
-  if (tmp6Result.isNullOrEmpty(str)) {
-    const intl6 = util.intl;
-    str = intl6.string(util.t.OGUjmt);
+  obj3 = { currentApplicationName: name, currentApplicationChannelName: str };
+  const tmp7Result = StringUtils;
+  if (tmp7Result.isNullOrEmpty(str)) {
+    const intl6 = intl7.intl;
+    str = intl6.string(intl7.t.OGUjmt);
   }
-  obj4.currentApplicationChannelName = str;
-  obj3.body = intl4.format(util.t["5/Xort"], obj4);
-  obj2.show(obj3);
-  tmp6Result = StringUtils;
+  show(obj2);
 }

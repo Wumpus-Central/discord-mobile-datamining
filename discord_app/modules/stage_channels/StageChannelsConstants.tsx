@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/StageChannelsConstants.tsx
 import Constants from "../../Constants.tsx";
-import util from "../../intl/index.native.tsx";
+import intl5 from "../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -28,14 +28,18 @@ export const RequestToSpeakPermissionStates = {
   [3]: "ROLES",
 };
 export const getStagePublicInfoText = function getStagePublicInfoText() {
-  const intl = util.intl;
-  const items = [intl.string(util.t["9XlQ9W"]), , ,];
-  const intl2 = util.intl;
-  items[1] = intl2.string(util.t.lF0IbB);
-  const intl3 = util.intl;
-  const obj = { articleURL: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES) };
-  items[2] = intl3.format(util.t.q2jZ6N, obj);
-  const intl4 = util.intl;
-  items[3] = intl4.string(util.t.xfb7ZU);
+  let obj2;
+  const intl = intl5.intl;
+  const items = [intl.string(intl5.t["9XlQ9W"]), , ,];
+  const intl2 = intl5.intl;
+  items[1] = intl2.string(intl5.t.lF0IbB);
+  const intl3 = intl5.intl;
+  const format = intl3.format;
+  const obj = { articleURL: obj2.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES) };
+  const q2jZ6N = intl5.t.q2jZ6N;
+  obj2 = HelpdeskUtilsDefault;
+  items[2] = format(q2jZ6N, obj);
+  const intl4 = intl5.intl;
+  items[3] = intl4.string(intl5.t.xfb7ZU);
   return items;
 };

@@ -14,6 +14,7 @@ const items = [
   "1098316259562635386",
 ];
 const items1 = ["1211781489931452447", "1211780388607885393", "1166579889915310151"];
+const set = new Set(items1);
 const result = size.fileFinishedImporting("modules/applications/ApplicationConstants.tsx");
 
 export const ApplicationTypes = {
@@ -51,4 +52,4 @@ export const DISCORD_WAGONS_APPLICATION_ID = "1211781489931452447";
 export const DISCORD_WAGONS_QA_APPLICATION_ID = "1211780388607885393";
 export const DISCORD_WAGONS_DEV_APPLICATION_ID = "1166579889915310151";
 export const INSTALL_LESS_APP_IDS = items;
-export const OBEY_SILENT_HARDWARE_SWITCH_APP_IDS = new Set(items1);
+export const OBEY_SILENT_HARDWARE_SWITCH_APP_IDS = set;

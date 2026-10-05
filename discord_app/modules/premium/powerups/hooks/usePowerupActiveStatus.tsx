@@ -1,34 +1,54 @@
 // discord_app/modules/premium/powerups/hooks/usePowerupActiveStatus.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react from "../../../../../_runtime/00576_react.js";
+import Constants from "../../../../Constants.tsx";
+import GameServerConstants from "../../../game_server/GameServerConstants.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
+import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const GuildPowerupsConstants = fn(4768);
+const require = globalThis.__r;
+let _require;
+
+let closure_4;
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
 ({
   GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS: closure_4,
   PowerupActiveStatusType: hasOwnProperty,
   POWERUPS_INCLUDED_IN_LEVEL: metroRequire,
-  BOOSTING_TIER_TO_LEVEL_SKU_ID: closure_7,
+  BOOSTING_TIER_TO_LEVEL_SKU_ID: metroImportDefault,
 } = GuildPowerupsConstants);
-const GuildFeatures = fn(1085).GuildFeatures;
-let closure_9 = fn(4769).GAME_SERVER_POWERUP_SKU_ID;
-let ReactCompilerGating = fn(558);
+const GuildFeatures = Constants.GuildFeatures;
+let closure_9 = GameServerConstants.GAME_SERVER_POWERUP_SKU_ID;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arr) => {
+      let closure_0;
+      let first;
+      let hasItem;
+      let obj4;
+      let stateFromStores;
+      let stateFromStores1;
+      let tmp8;
       _require = arg0;
-      const cResult = require("c").c(10);
+      const tmp2 = stateFromStores;
+      let obj = require("react");
+      const cResult = obj.c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        let tmp5 = stateFromStores1;
         const items = [stateFromStores1];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         class I {
           constructor() {
-            return closure_2.getGuild(closure_0);
+            return GuildStore.getGuild(closure_0);
           }
         }
         cResult[1] = arg0;
@@ -36,32 +56,32 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class I {
           constructor() {
-            return closure_2.getGuild(closure_0);
+            return GuildStore.getGuild(closure_0);
           }
         }
       }
-      let obj = require("c");
-      stateFromStores = require("initialize").useStateFromStores(first, I);
+      const tmpResult = require("get initialized");
+      stateFromStores = tmpResult.useStateFromStores(first, I);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class I {
           constructor() {
-            return closure_2.getGuild(closure_0);
+            return GuildStore.getGuild(closure_0);
           }
         }
         const items1 = [hasItem];
         cResult[3] = items1;
-        const tmp8 = items1;
+        tmp8 = items1;
       } else {
         class I {
           constructor() {
-            return closure_2.getGuild(closure_0);
+            return GuildStore.getGuild(closure_0);
           }
         }
       }
       if (cResult[4] !== arg0) {
         class A {
           constructor() {
-            return closure_3.getStateForGuild(closure_0);
+            return GuildPowerupsStore.getStateForGuild(closure_0);
           }
         }
         cResult[4] = arg0;
@@ -69,16 +89,16 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class A {
           constructor() {
-            return closure_3.getStateForGuild(closure_0);
+            return GuildPowerupsStore.getStateForGuild(closure_0);
           }
         }
       }
-      const tmpResult = require("initialize");
-      stateFromStores1 = require("initialize").useStateFromStores(tmp8, A);
+      const tmpResult2 = require("get initialized");
+      stateFromStores1 = tmpResult2.useStateFromStores(tmp8, A);
       if (cResult[6] === stateFromStores) {
         class A {
           constructor() {
-            return closure_3.getStateForGuild(closure_0);
+            return GuildPowerupsStore.getStateForGuild(closure_0);
           }
         }
       }
@@ -86,13 +106,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores != null) {
         class A {
           constructor() {
-            return closure_3.getStateForGuild(closure_0);
+            return GuildPowerupsStore.getStateForGuild(closure_0);
           }
         }
         if (obj4 != null) {
           class A {
             constructor() {
-              return closure_3.getStateForGuild(closure_0);
+              return GuildPowerupsStore.getStateForGuild(closure_0);
             }
           }
           hasItem = obj4.has(GuildFeatures.PREMIUM_TIER_3_OVERRIDE);
@@ -101,11 +121,17 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (hasItem == null) {
         class A {
           constructor() {
-            return closure_3.getStateForGuild(closure_0);
+            return GuildPowerupsStore.getStateForGuild(closure_0);
           }
         }
       }
       const mapped = arr.map((skuId) => {
+        let isActiveFromLevel;
+        let levelEntitlement;
+        let levelPowerup;
+        let obj3;
+        let tmp3;
+        let tmp5;
         if (skuId.skuId === closure_9) {
           hasItem = undefined;
           if (stateFromStores != null) {
@@ -114,20 +140,33 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
           }
-          const obj2 = { type: null, powerup: null, sourceEntitlement: "r", sourcePowerup: "IconComponent" };
-          obj2.type = hasItem ? obj2.POWERUP_ACTIVATED : obj2.INACTIVE;
-          obj2.powerup = skuId;
-          const tmp14 = hasItem ? obj2.POWERUP_ACTIVATED : obj2.INACTIVE;
+          obj3 = {
+            type: hasItem ? hasOwnProperty.POWERUP_ACTIVATED : hasOwnProperty.INACTIVE,
+            powerup: skuId,
+            sourceEntitlement: "r",
+            sourcePowerup: "IconComponent",
+          };
+          const obj2 = {
+            type: hasItem ? hasOwnProperty.POWERUP_ACTIVATED : hasOwnProperty.INACTIVE,
+            powerup: skuId,
+            sourceEntitlement: "r",
+            sourcePowerup: "IconComponent",
+          };
         } else {
           if (null != skuId) {
             if (null != stateFromStores) {
+              let obj;
               if (null != stateFromStores1) {
-                if (null == dependencyMap[skuId.skuId]) {
-                  let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
+                if (null == metroRequire[skuId.skuId]) {
+                  obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
                 } else {
-                  obj = { isActiveFromLevel: tmp17.premiumTier >= tmp20, levelEntitlement: null, levelPowerup: null };
-                  let tmp3;
-                  if (null != dependencyMap2[tmp20]) {
+                  obj = {
+                    isActiveFromLevel: tmp16.premiumTier >= metroRequire[skuId.skuId],
+                    levelEntitlement: tmp3,
+                    levelPowerup: tmp5,
+                  };
+                  tmp3 = undefined;
+                  if (null != metroImportDefault[metroRequire[skuId.skuId]]) {
                     const unlockedPowerups = stateFromStores1.unlockedPowerups;
                     let tmp4;
                     if (unlockedPowerups != null) {
@@ -135,9 +174,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     tmp3 = tmp4;
                   }
-                  obj.levelEntitlement = tmp3;
-                  let tmp5;
-                  if (null != dependencyMap2[tmp20]) {
+                  tmp5 = undefined;
+                  if (null != metroImportDefault[metroRequire[skuId.skuId]]) {
                     const allPowerups = stateFromStores1.allPowerups;
                     let tmp6;
                     if (allPowerups != null) {
@@ -145,7 +183,6 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     tmp5 = tmp6;
                   }
-                  obj.levelPowerup = tmp5;
                 }
               }
               let hasItem1 = hasItem;
@@ -163,58 +200,75 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               if (tmp9 == null) {
                 tmp9 = null;
               }
-              let obj3 = {
-                type: constants.INACTIVE,
+              obj3 = {
+                type: hasOwnProperty.INACTIVE,
                 powerup: skuId,
                 sourceEntitlement: "r",
                 sourcePowerup: "IconComponent",
               };
               if (isActiveFromLevel) {
-                const obj4 = {
-                  type: constants.LEVEL_ACTIVATED,
+                obj3 = {
+                  type: hasOwnProperty.LEVEL_ACTIVATED,
                   powerup: skuId,
                   sourceEntitlement: levelEntitlement,
                   sourcePowerup: levelPowerup,
                 };
-                obj3 = obj4;
+                const obj4 = {
+                  type: hasOwnProperty.LEVEL_ACTIVATED,
+                  powerup: skuId,
+                  sourceEntitlement: levelEntitlement,
+                  sourcePowerup: levelPowerup,
+                };
               } else if (hasItem1) {
-                const obj5 = {
-                  type: constants.TIER_OVERRIDE_ACTIVATED,
+                obj3 = {
+                  type: hasOwnProperty.TIER_OVERRIDE_ACTIVATED,
                   powerup: skuId,
                   sourceEntitlement: "Array",
                   sourcePowerup: skuId,
                 };
-                obj3 = obj5;
+                const obj5 = {
+                  type: hasOwnProperty.TIER_OVERRIDE_ACTIVATED,
+                  powerup: skuId,
+                  sourceEntitlement: "Array",
+                  sourcePowerup: skuId,
+                };
               } else if (null != tmp9) {
-                const obj6 = {
-                  type: constants.POWERUP_ACTIVATED,
+                obj3 = {
+                  type: hasOwnProperty.POWERUP_ACTIVATED,
                   powerup: skuId,
                   sourceEntitlement: tmp9,
                   sourcePowerup: skuId,
                 };
-                obj3 = obj6;
+                const obj6 = {
+                  type: hasOwnProperty.POWERUP_ACTIVATED,
+                  powerup: skuId,
+                  sourceEntitlement: tmp9,
+                  sourcePowerup: skuId,
+                };
               }
-              return obj3;
             }
           }
           obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
         }
+        return obj3;
       });
       cResult[6] = stateFromStores;
       cResult[7] = stateFromStores1;
       cResult[8] = arr;
       cResult[9] = mapped;
-      const tmpResult2 = require("initialize");
     }
   : (arg0, arr) => {
+      let closure_0;
+      let flag;
+      let stateFromStores;
+      let unlockedPowerups;
       _require = arg0;
+      let obj = require("get initialized");
       const items = [unlockedPowerups];
-      stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
-      let obj = require("initialize");
+      stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(closure_0));
+      let obj2 = require("get initialized");
       const items1 = [flag];
-      unlockedPowerups = require("initialize").useStateFromStores(items1, () =>
-        GuildPowerupsStore.getStateForGuild(closure_0),
-      );
+      unlockedPowerups = obj2.useStateFromStores(items1, () => GuildPowerupsStore.getStateForGuild(closure_0));
       flag = undefined;
       if (stateFromStores != null) {
         let features = stateFromStores.features;
@@ -226,6 +280,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         flag = false;
       }
       return arr.map((skuId) => {
+        let isActiveFromLevel;
+        let levelEntitlement;
+        let levelPowerup;
+        let obj3;
         if (skuId.skuId === closure_9) {
           let hasItem;
           if (stateFromStores != null) {
@@ -235,22 +293,26 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (hasItem != null) {
+            let INACTIVE;
             if (hasItem) {
-              let INACTIVE = constants.POWERUP_ACTIVATED;
+              INACTIVE = hasOwnProperty.POWERUP_ACTIVATED;
             }
+            obj3 = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "IconComponent" };
             const obj2 = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "IconComponent" };
           }
-          INACTIVE = constants.INACTIVE;
+          INACTIVE = hasOwnProperty.INACTIVE;
         } else {
           if (null != skuId) {
             if (null != stateFromStores) {
+              let obj;
               if (null != unlockedPowerups) {
-                if (null == dependencyMap[skuId.skuId]) {
-                  let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
+                if (null == metroRequire[skuId.skuId]) {
+                  obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
                 } else {
                   let tmp4;
-                  if (null != dependencyMap2[tmp22]) {
-                    unlockedPowerups = tmp20.unlockedPowerups;
+                  const tmp = tmp18.premiumTier >= metroRequire[skuId.skuId];
+                  if (null != metroImportDefault[metroRequire[skuId.skuId]]) {
+                    unlockedPowerups = tmp19.unlockedPowerups;
                     let tmp5;
                     if (unlockedPowerups != null) {
                       tmp5 = unlockedPowerups[tmp3];
@@ -258,16 +320,15 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                     tmp4 = tmp5;
                   }
                   let tmp6;
-                  if (null != dependencyMap2[tmp22]) {
-                    const allPowerups = tmp20.allPowerups;
+                  if (null != metroImportDefault[metroRequire[skuId.skuId]]) {
+                    const allPowerups = tmp19.allPowerups;
                     let tmp7;
                     if (allPowerups != null) {
                       tmp7 = allPowerups[tmp3];
                     }
                     tmp6 = tmp7;
                   }
-                  obj = { isActiveFromLevel: tmp19.premiumTier >= tmp22, levelEntitlement: tmp4, levelPowerup: tmp6 };
-                  const tmp = tmp19.premiumTier >= tmp22;
+                  obj = { isActiveFromLevel: tmp, levelEntitlement: tmp4, levelPowerup: tmp6 };
                 }
               }
               let hasItem1 = flag;
@@ -285,93 +346,126 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               if (tmp10 == null) {
                 tmp10 = null;
               }
-              let obj3 = {
-                type: constants.INACTIVE,
+              obj3 = {
+                type: hasOwnProperty.INACTIVE,
                 powerup: skuId,
                 sourceEntitlement: "r",
                 sourcePowerup: "IconComponent",
               };
               if (isActiveFromLevel) {
-                const obj4 = {
-                  type: constants.LEVEL_ACTIVATED,
+                obj3 = {
+                  type: hasOwnProperty.LEVEL_ACTIVATED,
                   powerup: skuId,
                   sourceEntitlement: levelEntitlement,
                   sourcePowerup: levelPowerup,
                 };
-                obj3 = obj4;
+                const obj4 = {
+                  type: hasOwnProperty.LEVEL_ACTIVATED,
+                  powerup: skuId,
+                  sourceEntitlement: levelEntitlement,
+                  sourcePowerup: levelPowerup,
+                };
               } else if (hasItem1) {
-                const obj5 = {
-                  type: constants.TIER_OVERRIDE_ACTIVATED,
+                obj3 = {
+                  type: hasOwnProperty.TIER_OVERRIDE_ACTIVATED,
                   powerup: skuId,
                   sourceEntitlement: "Array",
                   sourcePowerup: skuId,
                 };
-                obj3 = obj5;
+                const obj5 = {
+                  type: hasOwnProperty.TIER_OVERRIDE_ACTIVATED,
+                  powerup: skuId,
+                  sourceEntitlement: "Array",
+                  sourcePowerup: skuId,
+                };
               } else if (null != tmp10) {
-                const obj6 = {
-                  type: constants.POWERUP_ACTIVATED,
+                obj3 = {
+                  type: hasOwnProperty.POWERUP_ACTIVATED,
                   powerup: skuId,
                   sourceEntitlement: tmp10,
                   sourcePowerup: skuId,
                 };
-                obj3 = obj6;
+                const obj6 = {
+                  type: hasOwnProperty.POWERUP_ACTIVATED,
+                  powerup: skuId,
+                  sourceEntitlement: tmp10,
+                  sourcePowerup: skuId,
+                };
               }
-              return obj3;
             }
           }
           obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
         }
+        return obj3;
       });
     };
 let closure_10 = tmp3;
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/powerups/hooks/usePowerupActiveStatus.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      const cResult = c.c(3);
+      let first;
+      let tmp2;
+      const obj = react;
+      const cResult = obj.c(3);
       if (cResult[0] !== arg1) {
+        let items;
         if (null == arg1) {
-          let items = [];
+          items = [];
         } else {
           items = [arg1];
         }
         cResult[0] = arg1;
         cResult[1] = items;
+        tmp2 = items;
       } else {
-        const arr2 = closure_10(arg0, cResult[1]);
-        if (arr2.length <= 0) {
-          const _Symbol = Symbol;
-          if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj2 = {
-              type: constants.INACTIVE,
-              sourceEntitlement: "Array",
-              sourcePowerup: "toCharArray$esjava$1",
-            };
-            cResult[2] = obj2;
-          }
-        } else {
-          return arr2[0];
-        }
+        tmp2 = cResult[1];
       }
+      const arr2 = closure_10(arg0, tmp2);
+      if (arr2.length <= 0) {
+        let tmp6;
+        const _Symbol = Symbol;
+        if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj2 = {
+            type: hasOwnProperty.INACTIVE,
+            sourceEntitlement: "Array",
+            sourcePowerup: "toCharArray$esjava$1",
+          };
+          cResult[2] = obj2;
+          tmp6 = obj2;
+        } else {
+          tmp6 = cResult[2];
+        }
+        first = tmp6;
+      } else {
+        first = arr2[0];
+      }
+      return first;
     }
   : (arg0, arg1) => {
+      let first;
+      let items;
       if (null == arg1) {
-        let items = [];
+        items = [];
       } else {
         items = [arg1];
       }
       const tmpResult = closure_10(arg0, items);
       if (tmpResult.length <= 0) {
-        const obj = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "toCharArray$esjava$1" };
-        let first = obj;
+        first = { type: hasOwnProperty.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "toCharArray$esjava$1" };
+        const obj = {
+          type: hasOwnProperty.INACTIVE,
+          sourceEntitlement: "Array",
+          sourcePowerup: "toCharArray$esjava$1",
+        };
       } else {
         first = tmpResult[0];
       }
       return first;
     };
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/usePowerupActiveStatus.tsx");
+
+export default tmp4;
 export const isPowerupActiveStatusActive = function isPowerupActiveStatusActive(type) {
-  return type.type !== constants.INACTIVE;
+  return type.type !== hasOwnProperty.INACTIVE;
 };
 export const usePowerupsActiveStatuses = tmp3;

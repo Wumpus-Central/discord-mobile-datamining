@@ -1,16 +1,31 @@
 // discord_app/modules/calls/native/VideoBackground.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import Constants from "../../../Constants.tsx";
 import native from "../../../design/void/native.tsx";
+import react_nativeDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
 import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
 import VideoBackgroundManagerDefault from "VideoBackgroundManager.tsx";
 import useProfileTileGradientDefault from "useProfileTileGradient.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
-import apply from "../../../../_runtime/metro/00012__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import 00012__ from "../../../../_runtime/metro/00012__.js";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+const require = globalThis.__r;
+let _require, dependencyMap;
+
+let c10;
+let metroImportAll;
+let metroImportDefault;
+let unpackModuleId;
 function useDominantRGBFromImage(assetImage, cResult) {
+  let closure_2;
+  let first1;
   _require = assetImage;
   let first = cResult;
   let tmp = cResult;
@@ -18,377 +33,399 @@ function useDominantRGBFromImage(assetImage, cResult) {
     first = cResult[0];
     tmp = first;
   }
+  const tmp3 = first;
   const tmp5 = first(7921)();
   dependencyMap = tmp5;
   let hexToRgbResult;
+  const useState = react.useState;
   if (null != assetImage) {
     hexToRgbResult = tmp3(7922).cachedDominantColors[assetImage];
   }
   if (hexToRgbResult == null) {
-    hexToRgbResult = require("ColorUtils").hexToRgb(tmp3(587).unsafe_rawColors.PRIMARY_800);
     const obj2 = require("ColorUtils");
+    hexToRgbResult = obj2.hexToRgb(tmp3(587).unsafe_rawColors.PRIMARY_800);
   }
-  const tmp8 = _slicedToArray(noop.useState(hexToRgbResult), 2);
-  closure_3 = tmp8[1];
+  [first1, closure_3] = useState(hexToRgbResult);
   const items = [tmp, assetImage, tmp5];
-  const effect = noop.useEffect(() => {
-    let tmp2 = null != first;
+  const effect = react.useEffect(() => {
+    const tmp2 = null != first && null != assetImage;
     if (tmp2) {
-      tmp2 = null != closure_0;
-    }
-    if (tmp2) {
-      let getDominantColorsLocalAsset = importDefault;
-      let nextPromise = dependencyMap;
-      if (null == VideoBackgroundManagerDefault.cachedDominantColors[closure_0]) {
+      if (null == VideoBackgroundManagerDefault.cachedDominantColors[assetImage]) {
+        let dominantColorsLocalAsset;
         if (typeof first === "number") {
-          const dominantColorsLocalAsset = getDominantColorsLocalAsset(1886);
-          getDominantColorsLocalAsset = dominantColorsLocalAsset.getDominantColorsLocalAsset;
-          let dominantColorsLocalAsset1 = getDominantColorsLocalAsset(closure_2_8.resolveAssetSource(first));
+          const tmp4Result = react_nativeDefault;
+          dominantColorsLocalAsset = tmp4Result.getDominantColorsLocalAsset(metroImportAll.resolveAssetSource(first));
         } else {
-          const dominantColorsLocalAsset2 = getDominantColorsLocalAsset(1886);
-          dominantColorsLocalAsset1 = dominantColorsLocalAsset2.getDominantColors(
-            closure_2_8.resolveAssetSource(first),
-          );
+          const tmp4Result2 = react_nativeDefault;
+          dominantColorsLocalAsset = tmp4Result2.getDominantColors(metroImportAll.resolveAssetSource(first));
         }
-        nextPromise = dominantColorsLocalAsset1.then((result) => {
-          if (dependencyMap()) {
+        const nextPromise = dominantColorsLocalAsset.then((result) => {
+          if (closure_1_2()) {
             const obj = { r: null, g: null, b: null };
             [obj.r, obj.g, obj.b] = result[0];
+            _slicedToArray(result[0], 3);
             closure_1_3(obj);
-            first(7922).cachedDominantColors[assetImage] = obj;
-            const tmp3 = _slicedToArray(result[0], 3);
+            first(closure_2[9]).cachedDominantColors[assetImage] = obj;
           }
         });
         nextPromise.catch(NOOP);
       } else {
-        closure_3(getDominantColorsLocalAsset(7922).cachedDominantColors[tmp4]);
+        closure_3(VideoBackgroundManagerDefault.cachedDominantColors[tmp6]);
       }
     }
   }, items);
-  return tmp8[0];
+  return first1;
 }
 let closure_3 = ["style", "url", "isStageCall", "avatarStyle", "user", "guildId", "renderVideoDetails"];
-get_ActivityIndicator = fn(17);
-({ View: closure_7, Image: closure_8 } = get_ActivityIndicator);
-const NOOP = fn(1085).NOOP;
-const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4890);
-let closure_12 = createStyles.createStyles({
-  videoBackground: { alignItems: "center" },
-  videoDetailsSpacer: { paddingTop: 12 },
-});
-const memoizeResult = apply.memoize((uri) => {
+({ View: metroImportDefault, Image: metroImportAll } = react_native);
+const NOOP = Constants.NOOP;
+({ jsx: c10, jsxs: unpackModuleId } = Fragment);
+let closure_12 = createStyles.createStyles({ videoBackground: { alignItems: "center" }, videoDetailsSpacer: { paddingTop: 12 } });
+const memoizeResult = module_12.memoize((uri) => {
   let tmp = null;
   if (null != uri) {
     tmp = null;
     if ("" !== uri) {
       let tmp2 = uri;
       if (typeof uri !== "number") {
+        tmp2 = { uri };
         const obj = { uri };
-        tmp2 = obj;
       }
       tmp = tmp2;
     }
   }
   return tmp;
 });
-let ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (assetImage, cResult) => {
-      const tmp = useDominantRGBFromImage(assetImage, cResult);
-      return "rgb(" + tmp.r + ", " + tmp.g + ", " + tmp.b + ")";
-    }
-  : (assetImage, cResult) => {
-      const tmp = useDominantRGBFromImage(assetImage, cResult);
-      return "rgb(" + tmp.r + ", " + tmp.g + ", " + tmp.b + ")";
-    };
+const map1 = memoizeResult;
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((assetImage, cResult) => {
+  const tmp = useDominantRGBFromImage(assetImage, cResult);
+  return "rgb(" + tmp.r + ", " + tmp.g + ", " + tmp.b + ")";
+}) : ((assetImage, cResult) => {
+  const tmp = useDominantRGBFromImage(assetImage, cResult);
+  return "rgb(" + tmp.r + ", " + tmp.g + ", " + tmp.b + ")";
+});
 let closure_15 = tmp5;
-ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      let tmp2 = dependencyMap;
-      const cResult = c.c(47);
-      if (cResult[0] !== arg0) {
-        ({ style, url, isStageCall, avatarStyle, user, guildId, renderVideoDetails } = arg0);
-        const tmp14 = _objectWithoutProperties(arg0, closure_3);
-        cResult[0] = arg0;
-        cResult[1] = tmp14;
-        cResult[2] = avatarStyle;
-        cResult[3] = guildId;
-        cResult[4] = renderVideoDetails;
-        cResult[5] = style;
-        cResult[6] = isStageCall;
-        cResult[7] = url;
-        cResult[8] = user;
-        let tmp11 = user;
-        let tmp10 = url;
-        let tmp8 = style;
-        let tmp7 = renderVideoDetails;
-        let tmp6 = guildId;
-        let tmp5 = avatarStyle;
-        let tmp4 = tmp14;
-      } else {
-        tmp4 = cResult[1];
-        tmp5 = cResult[2];
-        tmp6 = cResult[3];
-        tmp7 = cResult[4];
-        tmp8 = cResult[5];
-        tmp10 = cResult[7];
-        tmp11 = cResult[8];
-      }
-      const tmp16 = closure_12();
-      if (cResult[9] !== tmp10) {
-        const tmp19 = memoizeResult(tmp10);
-        cResult[9] = tmp10;
-        cResult[10] = tmp19;
-        let tmp17 = tmp19;
-      } else {
-        tmp17 = cResult[10];
-      }
-      const tmp20 = closure_15(tmp10, tmp17);
-      let id;
-      if (tmp11 != null) {
-        id = tmp11.id;
-      }
-      if (cResult[11] === tmp6) {
-        if (cResult[12] === id) {
-          let tmp22 = cResult[13];
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let avatarStyle;
+  let guildId;
+  let isStageCall;
+  let items;
+  let items1;
+  let renderVideoDetails;
+  let style;
+  let tmp10;
+  let tmp11;
+  let tmp17;
+  let tmp4;
+  let tmp5;
+  let tmp6;
+  let tmp7;
+  let tmp8;
+  let tmp9;
+  let url;
+  let user;
+  const obj = react2;
+  const cResult = obj.c(47);
+  if (cResult[0] !== arg0) {
+    ({ style, url, isStageCall, avatarStyle, user, guildId, renderVideoDetails } = arg0);
+    const tmp14 = _objectWithoutProperties(arg0, closure_3);
+    cResult[0] = arg0;
+    cResult[1] = tmp14;
+    cResult[2] = avatarStyle;
+    cResult[3] = guildId;
+    cResult[4] = renderVideoDetails;
+    cResult[5] = style;
+    cResult[6] = isStageCall;
+    cResult[7] = url;
+    cResult[8] = user;
+    tmp11 = user;
+    tmp10 = url;
+    tmp9 = isStageCall;
+    tmp8 = style;
+    tmp7 = renderVideoDetails;
+    tmp6 = guildId;
+    tmp5 = avatarStyle;
+    tmp4 = tmp14;
+  } else {
+    tmp4 = cResult[1];
+    tmp5 = cResult[2];
+    tmp6 = cResult[3];
+    tmp7 = cResult[4];
+    tmp8 = cResult[5];
+    tmp9 = cResult[6];
+    tmp10 = cResult[7];
+    tmp11 = cResult[8];
+  }
+  const tmp16 = closure_12();
+  if (cResult[9] !== tmp10) {
+    const tmp19 = map1(tmp10);
+    cResult[9] = tmp10;
+    cResult[10] = tmp19;
+    tmp17 = tmp19;
+  } else {
+    tmp17 = cResult[10];
+  }
+  const tmp20 = closure_15(tmp10, tmp17);
+  let id;
+  if (tmp11 != null) {
+    id = tmp11.id;
+  }
+  if (cResult[11] === tmp6) {
+    let tmp22;
+    if (cResult[12] === id) {
+      tmp22 = cResult[13];
+    }
+    const tmp24 = useProfileTileGradientDefault(tmp22);
+    if (null == tmp17) {
+      return null;
+    } else {
+      let tmp26;
+      if (cResult[14] !== tmp7) {
+        let tmp7Result;
+        if (tmp7 != null) {
+          tmp7Result = tmp7();
         }
-        let tmp23 = importDefault;
-        const tmp24 = useProfileTileGradientDefault(tmp22);
-        if (null == tmp17) {
-          return null;
-        } else {
-          if (cResult[14] !== tmp7) {
-            let tmp7Result;
-            if (tmp7 != null) {
-              tmp7Result = tmp7();
-            }
-            if (tmp7Result == null) {
-              tmp7Result = null;
-            }
-            cResult[14] = tmp7;
-            cResult[15] = tmp7Result;
-            let tmp26 = tmp7Result;
-          } else {
-            tmp26 = cResult[15];
-          }
-          if (cResult[16] === tmp20) {
-            if (cResult[17] === tmp25) {
-              let tmp28 = cResult[18];
-            }
-            let videoDetailsSpacer = null;
-            if (null != tmp26) {
-              videoDetailsSpacer = tmp16.videoDetailsSpacer;
-            }
-            if (cResult[19] === tmp8) {
-              if (cResult[20] === tmp16.videoBackground) {
-                if (cResult[21] === tmp28) {
-                  if (cResult[22] === videoDetailsSpacer) {
-                    let tmp31 = cResult[23];
+        if (tmp7Result == null) {
+          tmp7Result = null;
+        }
+        cResult[14] = tmp7;
+        cResult[15] = tmp7Result;
+        tmp26 = tmp7Result;
+      } else {
+        tmp26 = cResult[15];
+      }
+      if (cResult[16] === tmp20) {
+        let tmp28;
+        if (cResult[17] === null != tmp24) {
+          tmp28 = cResult[18];
+        }
+        let videoDetailsSpacer = null;
+        if (null != tmp26) {
+          videoDetailsSpacer = tmp16.videoDetailsSpacer;
+        }
+        if (cResult[19] === tmp8) {
+          if (cResult[20] === tmp16.videoBackground) {
+            if (cResult[21] === tmp28) {
+              let tmp31;
+              if (cResult[22] === videoDetailsSpacer) {
+                tmp31 = cResult[23];
+              }
+              if (cResult[24] === tmp20) {
+                if (cResult[25] === (undefined !== tmp9 && tmp9)) {
+                  let tmp32;
+                  if (cResult[26] === null != tmp24) {
+                    tmp32 = cResult[27];
                   }
-                  if (cResult[24] === tmp20) {
-                    if (cResult[25] === tmp15) {
-                      if (cResult[26] === tmp25) {
-                        let tmp32 = cResult[27];
-                      }
-                      if (cResult[28] === tmp5) {
-                        if (cResult[29] === tmp32) {
-                          let tmp34 = cResult[30];
-                        }
-                        if (cResult[31] === tmp4) {
-                          if (cResult[32] === tmp15) {
-                            if (cResult[33] === tmp17) {
-                              if (cResult[34] === tmp34) {
-                                let tmp35 = cResult[35];
-                              }
-                              if (null != tmp24) {
-                                const _Symbol = Symbol;
-                                if (cResult[36] === Symbol.for("react.memo_cache_sentinel")) {
-                                  const point = { x: 0, y: 0 };
-                                  const point1 = { x: 0, y: 1 };
-                                  cResult[36] = point;
-                                  cResult[37] = point1;
-                                  let items = point1;
-                                  let tmp46 = point;
-                                } else {
-                                  tmp46 = cResult[36];
-                                  items = cResult[37];
-                                }
-                                if (cResult[38] === tmp35) {
-                                  if (cResult[39] === tmp31) {
-                                    if (cResult[40] === tmp24) {
-                                    }
+                  if (cResult[28] === tmp5) {
+                    let tmp34;
+                    if (cResult[29] === tmp32) {
+                      tmp34 = cResult[30];
+                    }
+                    if (cResult[31] === tmp4) {
+                      if (cResult[32] === (undefined !== tmp9 && tmp9)) {
+                        if (cResult[33] === tmp17) {
+                          let tmp35;
+                          let tmp41;
+                          if (cResult[34] === tmp34) {
+                            tmp35 = cResult[35];
+                          }
+                          if (null != tmp24) {
+                            let tmp47;
+                            let tmp46;
+                            const _Symbol = Symbol;
+                            if (cResult[36] === Symbol.for("react.memo_cache_sentinel")) {
+                              const point = { x: 0, y: 0 };
+                              const point1 = { x: 0, y: 1 };
+                              cResult[36] = point;
+                              cResult[37] = point1;
+                              tmp47 = point1;
+                              tmp46 = point;
+                            } else {
+                              tmp46 = cResult[36];
+                              tmp47 = cResult[37];
+                            }
+                            if (cResult[38] === tmp35) {
+                              if (cResult[39] === tmp31) {
+                                if (cResult[40] === tmp24) {
+                                  let tmp48;
+                                  if (cResult[41] === tmp26) {
+                                    tmp48 = cResult[42];
                                   }
+                                  tmp41 = tmp48;
                                 }
-                                tmp23 = tmp23(5605);
-                                const obj2 = { colors: tmp24, start: tmp46, end: items, style: tmp31, children: null };
-                                items = [tmp35, tmp26];
-                                obj2.children = items;
-                                tmp2 = closure_1_11(tmp23, obj2);
-                                cResult[38] = tmp35;
-                                cResult[39] = tmp31;
-                                cResult[40] = tmp24;
-                                cResult[41] = tmp26;
-                                cResult[42] = tmp2;
-                              } else {
-                                if (cResult[43] === tmp35) {
-                                  if (cResult[44] === tmp31) {
-                                    if (cResult[45] === tmp26) {
-                                      let tmp41 = cResult[46];
-                                    }
-                                    return tmp41;
-                                  }
-                                }
-                                const obj3 = { style: tmp31, children: null };
-                                const items1 = [tmp35, tmp26];
-                                obj3.children = items1;
-                                const tmp44 = closure_1_11(React5, obj3);
-                                cResult[43] = tmp35;
-                                cResult[44] = tmp31;
-                                cResult[45] = tmp26;
-                                cResult[46] = tmp44;
-                                tmp41 = tmp44;
                               }
                             }
+                            const obj2 = { colors: tmp24, start: tmp46, end: tmp47, style: tmp31, children: items };
+                            items = [tmp35, tmp26];
+                            const tmp50 = unpackModuleId(LinearGradientDefault, obj2);
+                            cResult[38] = tmp35;
+                            cResult[39] = tmp31;
+                            cResult[40] = tmp24;
+                            cResult[41] = tmp26;
+                            cResult[42] = tmp50;
+                            tmp48 = tmp50;
+                          } else {
+                            if (cResult[43] === tmp35) {
+                              if (cResult[44] === tmp31) {
+                                if (cResult[45] === tmp26) {
+                                  tmp41 = cResult[46];
+                                }
+                              }
+                            }
+                            const obj3 = { style: tmp31, children: items1 };
+                            items1 = [tmp35, tmp26];
+                            const tmp44 = unpackModuleId(metroImportDefault, obj3);
+                            cResult[43] = tmp35;
+                            cResult[44] = tmp31;
+                            cResult[45] = tmp26;
+                            cResult[46] = tmp44;
+                            tmp41 = tmp44;
                           }
+                          return tmp41;
                         }
-                        const obj4 = { source: tmp17 };
-                        const merged = Object.assign(tmp4);
-                        obj4.avatarStyle = tmp34;
-                        obj4.isStageCall = tmp15;
-                        const tmp40 = v65535(native.Avatar, obj4);
-                        cResult[31] = tmp4;
-                        cResult[32] = tmp15;
-                        cResult[33] = tmp17;
-                        cResult[34] = tmp34;
-                        cResult[35] = tmp40;
-                        tmp35 = tmp40;
                       }
-                      const items2 = [tmp5, tmp32];
-                      cResult[28] = tmp5;
-                      cResult[29] = tmp32;
-                      cResult[30] = items2;
-                      tmp34 = items2;
                     }
+                    const obj4 = { source: tmp17, avatarStyle: tmp34, isStageCall: undefined !== tmp9 && tmp9 };
+                    const Avatar = native.Avatar;
+                    const merged = Object.assign(tmp4);
+                    const tmp40 = authStore(Avatar, obj4);
+                    cResult[31] = tmp4;
+                    cResult[32] = undefined !== tmp9 && tmp9;
+                    cResult[33] = tmp17;
+                    cResult[34] = tmp34;
+                    cResult[35] = tmp40;
+                    tmp35 = tmp40;
                   }
-                  let tmp33 = null;
-                  if (tmp15) {
-                    tmp33 = null;
-                    if (!tmp25) {
-                      const obj5 = { backgroundColor: tmp20 };
-                      tmp33 = obj5;
-                    }
-                  }
-                  cResult[24] = tmp20;
-                  cResult[25] = tmp15;
-                  cResult[26] = tmp25;
-                  cResult[27] = tmp33;
-                  tmp32 = tmp33;
+                  const items2 = [tmp5, tmp32];
+                  cResult[28] = tmp5;
+                  cResult[29] = tmp32;
+                  cResult[30] = items2;
+                  tmp34 = items2;
                 }
               }
+              let tmp33 = null;
+              if (undefined !== tmp9 && tmp9) {
+                tmp33 = null;
+                if (null == tmp24) {
+                  tmp33 = { backgroundColor: tmp20 };
+                  const obj5 = { backgroundColor: tmp20 };
+                }
+              }
+              cResult[24] = tmp20;
+              cResult[25] = undefined !== tmp9 && tmp9;
+              cResult[26] = null != tmp24;
+              cResult[27] = tmp33;
+              tmp32 = tmp33;
             }
-            const items3 = [tmp8, tmp16.videoBackground, tmp28, videoDetailsSpacer];
-            cResult[19] = tmp8;
-            cResult[20] = tmp16.videoBackground;
-            cResult[21] = tmp28;
-            cResult[22] = videoDetailsSpacer;
-            cResult[23] = items3;
-            tmp31 = items3;
           }
-          let tmp29 = null;
-          if (!tmp25) {
-            const obj6 = { backgroundColor: tmp20 };
-            tmp29 = obj6;
-          }
-          cResult[16] = tmp20;
-          cResult[17] = tmp25;
-          cResult[18] = tmp29;
-          tmp28 = tmp29;
         }
+        const items3 = [tmp8, tmp16.videoBackground, tmp28, videoDetailsSpacer];
+        cResult[19] = tmp8;
+        cResult[20] = tmp16.videoBackground;
+        cResult[21] = tmp28;
+        cResult[22] = videoDetailsSpacer;
+        cResult[23] = items3;
+        tmp31 = items3;
       }
-      const obj7 = { userId: id, guildId: tmp6, location: "VideoBackground-native" };
-      cResult[11] = tmp6;
-      cResult[12] = id;
-      cResult[13] = obj7;
-      tmp22 = obj7;
+      let tmp29 = null;
+      if (null == tmp24) {
+        tmp29 = { backgroundColor: tmp20 };
+        const obj6 = { backgroundColor: tmp20 };
+      }
+      cResult[16] = tmp20;
+      cResult[17] = null != tmp24;
+      cResult[18] = tmp29;
+      tmp28 = tmp29;
     }
-  : (style) => {
-      ({ url, isStageCall } = style);
-      if (isStageCall === undefined) {
-        isStageCall = false;
+  }
+  const obj7 = { userId: id, guildId: tmp6, location: "VideoBackground-native" };
+  cResult[11] = tmp6;
+  cResult[12] = id;
+  cResult[13] = obj7;
+  tmp22 = obj7;
+}) : ((style) => {
+  let avatarStyle;
+  let guildId;
+  let isStageCall;
+  let items1;
+  let items2;
+  let items3;
+  let renderVideoDetails;
+  let url;
+  let user;
+  ({ url, isStageCall } = style);
+  style = style.style;
+  if (isStageCall === undefined) {
+    isStageCall = false;
+  }
+  ({ user, renderVideoDetails } = style);
+  ({ avatarStyle, guildId } = style);
+  const merged = Object.assign(style, Object.assign({ style: 0, url: 0, isStageCall: 0, avatarStyle: 0, user: 0, guildId: 0, renderVideoDetails: 0 }));
+  const tmp2 = closure_12();
+  const tmp3 = map1(url);
+  const tmp4 = closure_15(url, tmp3);
+  let id;
+  const tmp7 = useProfileTileGradientDefault;
+  if (user != null) {
+    id = user.id;
+  }
+  const tmp7Result = tmp7({ userId: id, guildId, location: "VideoBackground-native" });
+  if (null == tmp3) {
+    return null;
+  } else {
+    let tmp23;
+    let renderVideoDetailsResult;
+    if (renderVideoDetails != null) {
+      renderVideoDetailsResult = renderVideoDetails();
+    }
+    if (renderVideoDetailsResult == null) {
+      renderVideoDetailsResult = null;
+    }
+    const items = [style, tmp2.videoBackground, , ];
+    let tmp12 = null;
+    if (null == tmp7Result) {
+      tmp12 = { backgroundColor: tmp4 };
+      const obj = { backgroundColor: tmp4 };
+    }
+    items[2] = tmp12;
+    let videoDetailsSpacer = null;
+    if (null != renderVideoDetailsResult) {
+      videoDetailsSpacer = tmp2.videoDetailsSpacer;
+    }
+    items[3] = videoDetailsSpacer;
+    let tmp14 = null;
+    if (isStageCall) {
+      tmp14 = null;
+      if (null == tmp7Result) {
+        tmp14 = { backgroundColor: tmp4 };
+        const obj2 = { backgroundColor: tmp4 };
       }
-      ({ user, renderVideoDetails } = style);
-      ({ avatarStyle, guildId } = style);
-      const merged = Object.assign(
-        style,
-        Object.assign({ style: 0, url: 0, isStageCall: 0, avatarStyle: 0, user: 0, guildId: 0, renderVideoDetails: 0 }),
-      );
-      const tmp2 = closure_12();
-      const tmp3 = memoizeResult(url);
-      const tmp4 = closure_15(url, tmp3);
-      let id;
-      if (user != null) {
-        id = user.id;
-      }
-      const tmp7Result = useProfileTileGradientDefault({ userId: id, guildId, location: "VideoBackground-native" });
-      if (null == tmp3) {
-        return null;
-      } else {
-        let renderVideoDetailsResult;
-        if (renderVideoDetails != null) {
-          renderVideoDetailsResult = renderVideoDetails();
-        }
-        if (renderVideoDetailsResult == null) {
-          renderVideoDetailsResult = null;
-        }
-        const items = [style.style, tmp2.videoBackground, ,];
-        let tmp12 = null;
-        if (!tmp10) {
-          const obj = { backgroundColor: tmp4 };
-          tmp12 = obj;
-        }
-        items[2] = tmp12;
-        let videoDetailsSpacer = null;
-        if (null != renderVideoDetailsResult) {
-          videoDetailsSpacer = tmp2.videoDetailsSpacer;
-        }
-        items[3] = videoDetailsSpacer;
-        let tmp14 = null;
-        if (isStageCall) {
-          tmp14 = null;
-          if (!tmp10) {
-            const obj2 = { backgroundColor: tmp4 };
-            tmp14 = obj2;
-          }
-        }
-        const obj3 = { source: tmp3 };
-        const merged1 = Object.assign(merged);
-        const items1 = [avatarStyle, tmp14];
-        obj3.avatarStyle = items1;
-        obj3.isStageCall = isStageCall;
-        const tmp20 = v65535(native.Avatar, obj3);
-        if (null != tmp7Result) {
-          const obj4 = { colors: tmp7Result, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, style: items, children: null };
-          const items2 = [tmp20, renderVideoDetailsResult];
-          obj4.children = items2;
-          let tmp23 = closure_1_11(LinearGradientDefault, obj4);
-        } else {
-          const obj5 = { style: items, children: null };
-          const items3 = [tmp20, renderVideoDetailsResult];
-          obj5.children = items3;
-          tmp23 = closure_1_11(React5, obj5);
-        }
-        return tmp23;
-      }
-    };
-tmp6.AvatarSizes = fn(1188).AvatarSizes;
-const size = fn(2);
+    }
+    const obj3 = { source: tmp3, avatarStyle: items1, isStageCall };
+    const Avatar = native.Avatar;
+    const merged1 = Object.assign(merged);
+    items1 = [avatarStyle, tmp14];
+    const tmp20 = authStore(Avatar, obj3);
+    if (null != tmp7Result) {
+      const obj4 = { colors: tmp7Result, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, style: items, children: items2 };
+      items2 = [tmp20, renderVideoDetailsResult];
+      tmp23 = unpackModuleId(LinearGradientDefault, obj4);
+    } else {
+      const obj5 = { style: items, children: items3 };
+      items3 = [tmp20, renderVideoDetailsResult];
+      tmp23 = unpackModuleId(metroImportDefault, obj5);
+    }
+    return tmp23;
+  }
+});
+tmp6.AvatarSizes = native.AvatarSizes;
+const memoResult = react.memo(tmp6);
 const result = size.fileFinishedImporting("modules/calls/native/VideoBackground.tsx");
 
-export default noop.memo(tmp6);
-export const AvatarSizes = fn(1188).AvatarSizes;
+export default memoResult;
+export const AvatarSizes = native.AvatarSizes;
 export const memoizedImageSource = memoizeResult;
 export { useDominantRGBFromImage };
 export const useDominantColorFromImage = tmp5;

@@ -7,9 +7,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const PSEUDO_GUILD_IDS = RouteConstants.PSEUDO_GUILD_IDS;
 const StaticChannelRoutes = ChannelConstants.StaticChannelRoutes;
-const result = size.fileFinishedImporting("modules/routing/RouteParam.tsx");
-
-export const RouteParam = {
+let obj = {
   guildId() {
     let obj = arg0;
     if (arg0 === undefined) {
@@ -29,13 +27,13 @@ export const RouteParam = {
     if (flag2 === undefined) {
       flag2 = false;
     }
+    const UnescapedPathParam = utils_PathUtils.UnescapedPathParam;
     let str2 = "";
+    const tmp4 = escapeRegExpDefault(str);
     if (flag2) {
       str2 = "?";
     }
-    const unescapedPathParam = new utils_PathUtils.UnescapedPathParam(
-      ":" + escapeRegExpDefault(str) + "(" + combined + ")" + str2,
-    );
+    const unescapedPathParam = new UnescapedPathParam(":" + tmp4 + "(" + combined + ")" + str2);
     return unescapedPathParam;
   },
   channelId() {
@@ -58,13 +56,16 @@ export const RouteParam = {
     if (flag2 === undefined) {
       flag2 = false;
     }
+    const UnescapedPathParam = utils_PathUtils.UnescapedPathParam;
     let str2 = "";
+    const tmp4 = escapeRegExpDefault(str);
     if (flag2) {
       str2 = "?";
     }
-    const unescapedPathParam = new utils_PathUtils.UnescapedPathParam(
-      ":" + escapeRegExpDefault(str) + "(" + combined + ")" + str2,
-    );
+    const unescapedPathParam = new UnescapedPathParam(":" + tmp4 + "(" + combined + ")" + str2);
     return unescapedPathParam;
   },
 };
+const result = size.fileFinishedImporting("modules/routing/RouteParam.tsx");
+
+export const RouteParam = obj;

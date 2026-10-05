@@ -1,32 +1,42 @@
 // discord_app/modules/stage_channels/StageChannelParticipantStoreHooks.tsx
 import StageChannelParticipants from "StageChannelParticipants.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import StageChannelParticipantStore from "StageChannelParticipantStore.tsx";
+import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-require = fn;
-fn(558);
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
+      let closure_0;
+      let closure_1;
+      let first;
       _require = arg0;
       dependencyMap = arg1;
-      const cResult = require("c").c(5);
+      const obj = require("react");
+      const cResult = obj.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [StageChannelParticipantStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === arg0) {
+        let tmp6;
+        let tmp7;
         if (cResult[2] === arg1) {
-          let tmp6 = cResult[3];
-          let tmp7 = cResult[4];
+          tmp6 = cResult[3];
+          tmp7 = cResult[4];
         }
-        const tmpResult = tmp(504);
-        return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(5589).isVersionEqual), 1)[0];
+        const tmpResult = require("get initialized");
+        return _slicedToArray(
+          tmpResult.useStateFromStores(first, tmp6, tmp7, require("SecondaryIndexMapUtils").isVersionEqual),
+          1,
+        )[0];
       }
       const fn = function u() {
         const items = [
@@ -42,15 +52,17 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp7 = items1;
       tmp6 = fn;
-      const obj = require("c");
     }
   : (arg0, arg1) => {
+      let closure_0;
+      let closure_1;
       _require = arg0;
       dependencyMap = arg1;
       let items = [StageChannelParticipantStore];
       const items1 = [arg0, arg1];
+      const obj = require("get initialized");
       return _slicedToArray(
-        require("initialize").useStateFromStores(
+        obj.useStateFromStores(
           items,
           () => {
             const items = [
@@ -65,25 +77,33 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         1,
       )[0];
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
+      let closure_0;
+      let closure_1;
+      let first;
       _require = arg0;
       dependencyMap = arg1;
-      const cResult = require("c").c(5);
+      const obj = require("react");
+      const cResult = obj.c(5);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [StageChannelParticipantStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === arg0) {
+        let tmp6;
+        let tmp7;
         if (cResult[2] === arg1) {
-          let tmp6 = cResult[3];
-          let tmp7 = cResult[4];
+          tmp6 = cResult[3];
+          tmp7 = cResult[4];
         }
-        return tmp(504).useStateFromStores(first, tmp6, tmp7);
+        const tmpResult = tmp(504);
+        return tmpResult.useStateFromStores(first, tmp6, tmp7);
       }
       const fn = function c() {
         return StageChannelParticipantStore.getParticipantCount(closure_0, closure_1);
@@ -95,29 +115,35 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp7 = items1;
       tmp6 = fn;
-      const obj = require("c");
-      tmp = _require;
     }
   : (arg0, arg1) => {
+      let closure_0;
+      let closure_1;
       _require = arg0;
       dependencyMap = arg1;
       const items = [StageChannelParticipantStore];
       const items1 = [arg0, arg1];
-      return require("initialize").useStateFromStores(
+      const obj = require("get initialized");
+      return obj.useStateFromStores(
         items,
         () => StageChannelParticipantStore.getParticipantCount(closure_0, closure_1),
         items1,
       );
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
+      let tmp7;
       _require = arg0;
-      const cResult = require("c").c(4);
+      const obj = require("react");
+      const cResult = obj.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [StageChannelParticipantStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -133,24 +159,26 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj = require("c");
+      const tmpResult = require("get initialized");
       return _slicedToArray(
-        require("initialize").useStateFromStores(first, tmp6, tmp7, require("SecondaryIndexMapUtils").isVersionEqual),
+        tmpResult.useStateFromStores(first, tmp6, tmp7, require("SecondaryIndexMapUtils").isVersionEqual),
         1,
       )[0];
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       let items = [StageChannelParticipantStore];
       const items1 = [arg0];
+      const obj = require("get initialized");
       return _slicedToArray(
-        require("initialize").useStateFromStores(
+        obj.useStateFromStores(
           items,
           () => {
             const items = [
@@ -165,20 +193,21 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         1,
       )[0];
     };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/stage_channels/StageChannelParticipantStoreHooks.tsx");
-
-export const useStageParticipants = tmp2;
-export const useStageParticipantsCount = tmp3;
-export const useSortedRequestToSpeakParticipants = tmp4;
-export const useActualStageSpeakerCount = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
+      let tmp7;
       _require = arg0;
-      const cResult = require("c").c(4);
+      const obj = require("react");
+      const cResult = obj.c(4);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [StageChannelParticipantStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -196,20 +225,22 @@ export const useActualStageSpeakerCount = ReactCompilerGating.isReactCompilerEna
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6, tmp7);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6, tmp7);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       const items = [StageChannelParticipantStore];
       const items1 = [arg0];
-      return require("initialize").useStateFromStores(
+      const obj = require("get initialized");
+      return obj.useStateFromStores(
         items,
         () => {
           const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(
@@ -223,3 +254,9 @@ export const useActualStageSpeakerCount = ReactCompilerGating.isReactCompilerEna
         items1,
       );
     };
+const result = size.fileFinishedImporting("modules/stage_channels/StageChannelParticipantStoreHooks.tsx");
+
+export const useStageParticipants = tmp2;
+export const useStageParticipantsCount = tmp3;
+export const useSortedRequestToSpeakParticipants = tmp4;
+export const useActualStageSpeakerCount = tmp5;

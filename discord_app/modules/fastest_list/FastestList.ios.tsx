@@ -1,13 +1,18 @@
 // discord_app/modules/fastest_list/FastestList.ios.tsx
+import react_native from "../../../_runtime/00017_react-native.js";
+import Fragment from "../../../_runtime/react/00021_Fragment.js";
+import useFastestListPropsEstimatedListSizeDefault from "props/useFastestListPropsEstimatedListSize.native.tsx";
 import FastestListItemTypeDefault from "FastestListItemType.tsx";
 import useFastestListPropsScrollReportingDefault from "props/useFastestListPropsScrollReporting.native.tsx";
 import FastList from "../../lib/native/FastList.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop_mod from "../../../_runtime/metro/00019__.js";
+import react from "../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap, importDefault;
 
-require = fn;
 function noop() {}
 let closure_3 = [
   "accessibilityLabel",
@@ -45,17 +50,86 @@ let closure_3 = [
   "showsVerticalScrollIndicator",
   "style",
 ];
-let noop = noop_mod;
-const RefreshControl = fn(17).RefreshControl;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/fastest_list/FastestList.ios.tsx");
-
-export default noop.forwardRef(
+const RefreshControl = react_native.RefreshControl;
+const jsx = Fragment.jsx;
+const forwardRef = react.forwardRef;
+const forwardRefResult = forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0, ref) => {
-        const cResult = require("c").c(91);
+        let accessibilityLabel;
+        let closure_0;
+        let closure_1;
+        let closure_2;
+        let enabled;
+        let estimatedListSize;
+        let horizontal;
+        let inActionSheet;
+        let insetEnd;
+        let insetStart;
+        let itemSize;
+        let keyExtractor;
+        let keyboardDismissMode;
+        let keyboardShouldPersistTaps;
+        let listFooterAlwaysMounted;
+        let listFooterSize;
+        let listHeaderAlwaysMounted;
+        let listHeaderSize;
+        let onContentLengthChange;
+        let onLayout;
+        let onScrollBeginDrag;
+        let onScrollEndDrag;
+        let preventNativeModalDismiss;
+        let renderAhead;
+        let renderItem;
+        let renderListFooter;
+        let renderListHeader;
+        let renderSectionFooter;
+        let renderSectionHeader;
+        let scrollEventThrottle;
+        let scrollIndicatorInsetEnd;
+        let scrollIndicatorInsetStart;
+        let sectionFooterSize;
+        let sectionHeaderIsSticky;
+        let sectionHeaderSize;
+        let sections;
+        let showsHorizontalScrollIndicator;
+        let showsVerticalScrollIndicator;
+        let style;
+        let tmp10;
+        let tmp11;
+        let tmp12;
+        let tmp13;
+        let tmp14;
+        let tmp15;
+        let tmp16;
+        let tmp17;
+        let tmp18;
+        let tmp19;
+        let tmp20;
+        let tmp21;
+        let tmp22;
+        let tmp23;
+        let tmp24;
+        let tmp25;
+        let tmp26;
+        let tmp27;
+        let tmp28;
+        let tmp30;
+        let tmp31;
+        let tmp32;
+        let tmp33;
+        let tmp35;
+        let tmp36;
+        let tmp37;
+        let tmp38;
+        let tmp39;
+        let tmp40;
+        let tmp8;
+        let tmp9;
+        let tmp2 = dependencyMap;
+        const tmp = _require;
+        const obj = require("react");
+        const cResult = obj.c(91);
         if (cResult[0] !== arg0) {
           ({
             accessibilityLabel,
@@ -98,6 +172,7 @@ export default noop.forwardRef(
           importDefault = onContentLengthChange;
           cResult[0] = arg0;
           cResult[1] = accessibilityLabel;
+          let num3 = 2;
           cResult[2] = estimatedListSize;
           cResult[3] = inActionSheet;
           cResult[4] = insetEnd;
@@ -132,37 +207,37 @@ export default noop.forwardRef(
           cResult[33] = renderAhead;
           cResult[34] = sectionHeaderIsSticky;
           let tmp7 = sectionHeaderIsSticky;
-          let tmp8 = renderAhead;
-          let tmp9 = listHeaderAlwaysMounted;
-          let tmp10 = listFooterAlwaysMounted;
-          let tmp11 = horizontal;
-          let tmp12 = style;
-          let tmp13 = showsVerticalScrollIndicator;
-          let tmp14 = showsHorizontalScrollIndicator;
-          let tmp15 = sections;
-          let tmp16 = sectionHeaderSize;
-          let tmp17 = sectionFooterSize;
-          let tmp18 = scrollIndicatorInsetStart;
-          let tmp19 = scrollIndicatorInsetEnd;
-          let tmp20 = scrollEventThrottle;
-          let tmp21 = renderSectionHeader;
-          let tmp22 = renderSectionFooter;
-          let tmp23 = renderListHeader;
-          let tmp24 = renderListFooter;
-          let tmp25 = renderItem;
-          let tmp26 = tmp6;
-          let tmp27 = preventNativeModalDismiss;
-          let tmp28 = onLayout;
-          let tmp30 = listHeaderSize;
-          let tmp31 = listFooterSize;
-          let tmp32 = keyboardShouldPersistTaps;
-          let tmp33 = keyboardDismissMode;
-          let tmp35 = itemSize;
-          let tmp36 = insetStart;
-          let tmp37 = insetEnd;
-          let tmp38 = inActionSheet;
-          let tmp39 = estimatedListSize;
-          let tmp40 = accessibilityLabel;
+          tmp8 = renderAhead;
+          tmp9 = listHeaderAlwaysMounted;
+          tmp10 = listFooterAlwaysMounted;
+          tmp11 = horizontal;
+          tmp12 = style;
+          tmp13 = showsVerticalScrollIndicator;
+          tmp14 = showsHorizontalScrollIndicator;
+          tmp15 = sections;
+          tmp16 = sectionHeaderSize;
+          tmp17 = sectionFooterSize;
+          tmp18 = scrollIndicatorInsetStart;
+          tmp19 = scrollIndicatorInsetEnd;
+          tmp20 = scrollEventThrottle;
+          tmp21 = renderSectionHeader;
+          tmp22 = renderSectionFooter;
+          tmp23 = renderListHeader;
+          tmp24 = renderListFooter;
+          tmp25 = renderItem;
+          tmp26 = tmp6;
+          tmp27 = preventNativeModalDismiss;
+          tmp28 = onLayout;
+          tmp30 = listHeaderSize;
+          tmp31 = listFooterSize;
+          tmp32 = keyboardShouldPersistTaps;
+          tmp33 = keyboardDismissMode;
+          tmp35 = itemSize;
+          tmp36 = insetStart;
+          tmp37 = insetEnd;
+          tmp38 = inActionSheet;
+          tmp39 = estimatedListSize;
+          tmp40 = accessibilityLabel;
         } else {
           tmp40 = cResult[1];
           tmp39 = cResult[2];
@@ -202,32 +277,33 @@ export default noop.forwardRef(
         dependencyMap = tmp41;
         let tmp43 = undefined !== tmp9 && tmp9;
         let str = "nominal";
+        const tmp42 = undefined !== tmp10 && tmp10;
         if (undefined !== tmp8) {
           str = tmp8;
         }
-        const obj = require("c");
-        const tmp = _require;
-        const tmp42 = undefined !== tmp10 && tmp10;
-        const tmp44 = undefined === tmp7 || tmp7;
         ({ onScrollBeginDrag, onScrollEndDrag } = useFastestListPropsScrollReportingDefault(
           tmp26,
           undefined !== tmp11 && tmp11,
         ));
+        useFastestListPropsScrollReportingDefault(tmp26, undefined !== tmp11 && tmp11);
         if (cResult[35] === tmp39) {
-          if (cResult[36] === tmp41) {
-            let tmp48 = cResult[37];
+          let tmp47;
+          let tmp49;
+          if (cResult[36] === (undefined !== tmp11 && tmp11)) {
+            tmp47 = cResult[37];
           }
-          const tmp49 = tmp45(6557)(tmp48);
+          const tmp48 = useFastestListPropsEstimatedListSizeDefault(tmp47);
           if (cResult[38] !== keyExtractor) {
             function _e(arg0, arg1, arg2) {
               if (FastList.FastListItemTypes.ITEM === arg0) {
                 let tmp11Result;
                 if (closure_0 != null) {
                   let num3 = arg2;
+                  const ITEM = FastestListItemTypeDefault.ITEM;
                   if (arg2 == null) {
                     num3 = -1;
                   }
-                  tmp11Result = tmp11(FastestListItemTypeDefault.ITEM, arg1, num3);
+                  tmp11Result = tmp11(ITEM, arg1, num3);
                 }
                 return tmp11Result;
               } else if (FastList.FastListItemTypes.SECTION === arg0) {
@@ -246,117 +322,135 @@ export default noop.forwardRef(
             }
             cResult[38] = keyExtractor;
             cResult[39] = _e;
-            let tmp50 = _e;
+            tmp49 = _e;
           } else {
-            tmp50 = cResult[39];
+            tmp49 = cResult[39];
           }
-          if (null == tmp18) {
-            if (null == tmp19) {
-              if (cResult[44] === tmp38) {
-                if (cResult[45] === tmp27) {
-                  let tmp54 = cResult[46];
-                }
-                if ("animatedCallbacks" === tmp26.scrollReporting) {
-                  let AnimatedFastList = tmp(6569).AnimatedFastList;
-                } else {
-                  AnimatedFastList = tmp45(6569);
-                }
-                if (cResult[47] === tmp41) {
-                  if (cResult[50] !== str) {
-                    if ("nominal" === str) {
-                      cResult[50] = str;
-                      class Ge {
-                        constructor(arg0, arg1) {
-                          if (closure_1 != null) {
-                            tmp2 = ref;
-                            tmp3 = closure_2;
-                            if (closure_2) {
-                              tmp2 = arg0;
-                            }
-                            tmpResult = tmp(tmp2);
-                          }
-                          return;
-                        }
-                      }
-                    }
+          if (null != tmp18) {
+            let rect1;
+            if (undefined !== tmp11 && tmp11) {
+              const rect = { left: tmp18, right: tmp19 };
+              rect1 = rect;
+            } else {
+              rect1 = { top: tmp18, bottom: tmp19 };
+            }
+            cResult[40] = undefined !== tmp11 && tmp11;
+            cResult[41] = tmp19;
+            cResult[42] = tmp18;
+            cResult[43] = rect1;
+          }
+          if (cResult[44] === tmp38) {
+            let tmp53;
+            let AnimatedFastList;
+            if (cResult[45] === tmp27) {
+              tmp53 = cResult[46];
+            }
+            if ("animatedCallbacks" === tmp26.scrollReporting) {
+              AnimatedFastList = tmp(6569).AnimatedFastList;
+            } else {
+              AnimatedFastList = tmp44(6569);
+            }
+            if (cResult[47] === (undefined !== tmp11 && tmp11)) {
+              let tmp58;
+              let tmp60;
+              if (cResult[48] === onContentLengthChange) {
+                tmp58 = cResult[49];
+              }
+              if (cResult[50] !== str) {
+                let num48;
+                if ("nominal" !== str) {
+                  if ("half" === str) {
+                    num48 = 14;
                   } else {
-                    let str5 = "disabled";
-                    if (tmp44) {
-                      str5 = "default";
-                    }
-                    class Ge {
-                      constructor(arg0, arg1) {
-                        if (closure_1 != null) {
-                          tmp2 = ref;
-                          tmp3 = closure_2;
-                          if (closure_2) {
-                            tmp2 = arg0;
-                          }
-                          tmpResult = tmp(tmp2);
-                        }
-                        return;
+                    num48 = 16;
+                  }
+                }
+                cResult[50] = str;
+                class Ge {
+                  constructor(arg0, arg1) {
+                    if (closure_1 != null) {
+                      let tmp2 = arg1;
+                      if (closure_2) {
+                        tmp2 = arg0;
                       }
+                      tmp(tmp2);
                     }
-                    let tmp64;
-                    if ("animatedScrollPosition" !== tmp26.scrollReporting) {
-                      tmp64 = tmp47;
+                  }
+                }
+                tmp60 = num48;
+              } else {
+                tmp60 = cResult[51];
+              }
+              class Ge {
+                constructor(arg0, arg1) {
+                  if (closure_1 != null) {
+                    let tmp2 = arg1;
+                    if (closure_2) {
+                      tmp2 = arg0;
                     }
-                    let scrollPosition;
-                    if ("animatedScrollPosition" === tmp26.scrollReporting) {
-                      scrollPosition = tmp26.scrollPosition;
-                    }
-                    if (!tmp43) {
-                      tmp43 = tmp42;
-                    }
-                    if (cResult[52] === AnimatedFastList) {
-                      if (cResult[53] === tmp40) {
-                        if (cResult[54] === tmp49) {
-                          if (cResult[55] === tmp50) {
-                            if (cResult[56] === tmp41) {
-                              if (cResult[57] === tmp38) {
-                                if (cResult[58] === tmp37) {
-                                  if (cResult[59] === tmp36) {
-                                    if (cResult[60] === tmp35) {
-                                      if (cResult[61] === tmp33) {
-                                        if (cResult[62] === tmp32) {
-                                          if (cResult[63] === tmp31) {
-                                            if (cResult[64] === tmp30) {
-                                              if (cResult[65] === tmp28) {
-                                                if (cResult[66] === onScrollBeginDrag) {
-                                                  if (cResult[67] === onScrollEndDrag) {
-                                                    if (cResult[68] === tmp54) {
-                                                      if (cResult[69] === tmp25) {
-                                                        if (cResult[70] === tmp24) {
-                                                          if (cResult[71] === tmp23) {
-                                                            if (cResult[72] === tmp22) {
-                                                              if (cResult[73] === tmp21) {
-                                                                if (cResult[74] === tmp20) {
-                                                                  if (cResult[75] === undefined) {
-                                                                    if (cResult[76] === tmp17) {
-                                                                      if (cResult[77] === tmp16) {
-                                                                        if (cResult[78] === tmp15) {
-                                                                          if (cResult[79] === tmp14) {
-                                                                            if (cResult[80] === tmp13) {
-                                                                              if (cResult[81] === tmp12) {
-                                                                                if (cResult[82] === tmp60) {
-                                                                                  if (cResult[83] === tmp61) {
-                                                                                    if (cResult[84] === str5) {
-                                                                                      if (cResult[85] === tmp63) {
-                                                                                        if (cResult[86] === tmp64) {
-                                                                                          if (cResult[87] === ref) {
-                                                                                            if (
-                                                                                              cResult[88] ===
-                                                                                              scrollPosition
-                                                                                            ) {
-                                                                                              if (
-                                                                                                cResult[89] === tmp43
-                                                                                              ) {
-                                                                                                let tmp67 = cResult[90];
-                                                                                              }
-                                                                                              return tmp67;
-                                                                                            }
-                                                                                          }
+                    tmp(tmp2);
+                  }
+                }
+              }
+              let tmp61;
+              if (null != onContentLengthChange) {
+                tmp61 = tmp58;
+              }
+              let tmp62;
+              if ("animatedScrollPosition" !== tmp26.scrollReporting) {
+                tmp62 = tmp46;
+              }
+              let scrollPosition;
+              if ("animatedScrollPosition" === tmp26.scrollReporting) {
+                scrollPosition = tmp26.scrollPosition;
+              }
+              if (!tmp43) {
+                tmp43 = tmp42;
+              }
+              if (cResult[52] === AnimatedFastList) {
+                if (cResult[53] === tmp40) {
+                  if (cResult[54] === tmp48) {
+                    if (cResult[55] === tmp49) {
+                      if (cResult[56] === (undefined !== tmp11 && tmp11)) {
+                        if (cResult[57] === tmp38) {
+                          if (cResult[58] === tmp37) {
+                            if (cResult[59] === tmp36) {
+                              if (cResult[60] === tmp35) {
+                                if (cResult[61] === tmp33) {
+                                  if (cResult[62] === tmp32) {
+                                    if (cResult[63] === tmp31) {
+                                      if (cResult[64] === tmp30) {
+                                        if (cResult[65] === tmp28) {
+                                          if (cResult[66] === onScrollBeginDrag) {
+                                            if (cResult[67] === onScrollEndDrag) {
+                                              if (cResult[68] === tmp53) {
+                                                if (cResult[69] === tmp25) {
+                                                  if (cResult[70] === tmp24) {
+                                                    if (cResult[71] === tmp23) {
+                                                      if (cResult[72] === tmp22) {
+                                                        if (cResult[73] === tmp21) {
+                                                          if (cResult[74] === tmp20) {
+                                                            if (cResult[75] === tmp51) {
+                                                              if (cResult[76] === tmp17) {
+                                                                if (cResult[77] === tmp16) {
+                                                                  if (cResult[78] === tmp15) {
+                                                                    if (cResult[79] === tmp14) {
+                                                                      if (cResult[80] === tmp13) {
+                                                                        if (cResult[81] === tmp12) {
+                                                                          if ((cResult[82] === null) == tmp51) {
+                                                                            if (cResult[83] === tmp60) {
+                                                                              if (cResult[84] === "disabled") {
+                                                                                if (cResult[85] === tmp61) {
+                                                                                  if (cResult[86] === tmp62) {
+                                                                                    if (cResult[87] === ref) {
+                                                                                      if (
+                                                                                        cResult[88] === scrollPosition
+                                                                                      ) {
+                                                                                        let tmp65;
+                                                                                        if (cResult[89] === tmp43) {
+                                                                                          tmp65 = cResult[90];
                                                                                         }
+                                                                                        return tmp65;
                                                                                       }
                                                                                     }
                                                                                   }
@@ -391,192 +485,169 @@ export default noop.forwardRef(
                         }
                       }
                     }
-                    const obj2 = {
-                      accessibilityLabel: tmp40,
-                      automaticallyAdjustsScrollIndicatorInsets: tmp60,
-                      batchesToRender: cResult[51],
-                      refreshControl: tmp54,
-                      chunkBase: tmp49,
-                      stickySectionsVariant: str5,
-                      footerSize: tmp31,
-                      getRecyclerKey: tmp50,
-                      headerSize: tmp30,
-                      horizontal: tmp41,
-                      inActionSheet: tmp38,
-                      insetStart: tmp36,
-                      insetEnd: tmp37,
-                      itemSize: tmp35,
-                      keyboardDismissMode: tmp33,
-                      keyboardShouldPersistTaps: tmp32,
-                      onContentSizeChange: undefined,
-                      onLayout: tmp28,
-                      onScroll: tmp64,
-                      onScrollBeginDrag,
-                      onScrollEndDrag,
-                      optimizeListItemRender: true,
-                      ref,
-                      renderItem: tmp25,
-                      renderFooter: tmp24,
-                      renderHeader: tmp23,
-                      renderSection: tmp21,
-                      renderSectionFooter: tmp22,
-                      scrollEventThrottle: tmp20,
-                      scrollIndicatorInsets: undefined,
-                      scrollPosValue: scrollPosition,
-                      sections: tmp15,
-                      sectionSize: tmp16,
-                      sectionFooterSize: tmp17,
-                      showsHorizontalScrollIndicator: tmp14,
-                      showsVerticalScrollIndicator: tmp13,
-                      stickyHeaderFooter: tmp43,
-                      style: tmp12,
-                    };
-                    const tmp69 = (
-                      <AnimatedFastList
-                        accessibilityLabel={tmp40}
-                        automaticallyAdjustsScrollIndicatorInsets={tmp60}
-                        batchesToRender={cResult[51]}
-                        refreshControl={tmp54}
-                        chunkBase={tmp49}
-                        stickySectionsVariant={str5}
-                        footerSize={tmp31}
-                        getRecyclerKey={tmp50}
-                        headerSize={tmp30}
-                        horizontal={tmp41}
-                        inActionSheet={tmp38}
-                        insetStart={tmp36}
-                        insetEnd={tmp37}
-                        itemSize={tmp35}
-                        keyboardDismissMode={tmp33}
-                        keyboardShouldPersistTaps={tmp32}
-                        onContentSizeChange={undefined}
-                        onLayout={tmp28}
-                        onScroll={tmp64}
-                        onScrollBeginDrag={onScrollBeginDrag}
-                        onScrollEndDrag={onScrollEndDrag}
-                        optimizeListItemRender
-                        ref={ref}
-                        renderItem={tmp25}
-                        renderFooter={tmp24}
-                        renderHeader={tmp23}
-                        renderSection={tmp21}
-                        renderSectionFooter={tmp22}
-                        scrollEventThrottle={tmp20}
-                        scrollIndicatorInsets={undefined}
-                        scrollPosValue={scrollPosition}
-                        sections={tmp15}
-                        sectionSize={tmp16}
-                        sectionFooterSize={tmp17}
-                        showsHorizontalScrollIndicator={tmp14}
-                        showsVerticalScrollIndicator={tmp13}
-                        stickyHeaderFooter={tmp43}
-                        style={tmp12}
-                      />
-                    );
-                    cResult[52] = AnimatedFastList;
-                    cResult[53] = tmp40;
-                    cResult[54] = tmp49;
-                    cResult[55] = tmp50;
-                    cResult[56] = tmp41;
-                    cResult[57] = tmp38;
-                    cResult[58] = tmp37;
-                    cResult[59] = tmp36;
-                    cResult[60] = tmp35;
-                    cResult[61] = tmp33;
-                    cResult[62] = tmp32;
-                    cResult[63] = tmp31;
-                    cResult[64] = tmp30;
-                    cResult[65] = tmp28;
-                    cResult[66] = onScrollBeginDrag;
-                    cResult[67] = onScrollEndDrag;
-                    cResult[68] = tmp54;
-                    cResult[69] = tmp25;
-                    cResult[70] = tmp24;
-                    cResult[71] = tmp23;
-                    cResult[72] = tmp22;
-                    cResult[73] = tmp21;
-                    cResult[74] = tmp20;
-                    cResult[75] = undefined;
-                    cResult[76] = tmp17;
-                    cResult[77] = tmp16;
-                    cResult[78] = tmp15;
-                    cResult[79] = tmp14;
-                    cResult[80] = tmp13;
-                    cResult[81] = tmp12;
-                    cResult[82] = tmp60;
-                    cResult[83] = cResult[51];
-                    cResult[84] = str5;
-                    cResult[85] = undefined;
-                    cResult[86] = tmp64;
-                    cResult[87] = ref;
-                    cResult[88] = scrollPosition;
-                    cResult[89] = tmp43;
-                    cResult[90] = tmp69;
-                    tmp67 = tmp69;
                   }
-                }
-                class Ge {
-                  constructor(arg0, arg1) {
-                    if (closure_1 != null) {
-                      tmp2 = ref;
-                      tmp3 = closure_2;
-                      if (closure_2) {
-                        tmp2 = arg0;
-                      }
-                      tmpResult = tmp(tmp2);
-                    }
-                    return;
-                  }
-                }
-                cResult[47] = tmp41;
-                cResult[48] = onContentLengthChange;
-                cResult[49] = Ge;
-              }
-              let tmp55;
-              if (true === tmp27) {
-                if (true === tmp38) {
-                  class Ge {
-                    constructor(arg0, arg1) {
-                      if (closure_1 != null) {
-                        tmp2 = ref;
-                        tmp3 = closure_2;
-                        if (closure_2) {
-                          tmp2 = arg0;
-                        }
-                        tmpResult = tmp(tmp2);
-                      }
-                      return;
-                    }
-                  }
-                  tmp55 = <RefreshControl refreshing={false} onRefresh={null} tintColor="transparent" />;
-                  const obj3 = { refreshing: false, onRefresh: null, tintColor: "transparent" };
                 }
               }
-              cResult[44] = tmp38;
-              cResult[45] = tmp27;
-              cResult[46] = tmp55;
-              tmp54 = tmp55;
+              const tmp67 = (
+                <AnimatedFastList
+                  accessibilityLabel={tmp40}
+                  automaticallyAdjustsScrollIndicatorInsets={null == tmp51}
+                  batchesToRender={tmp60}
+                  refreshControl={tmp53}
+                  chunkBase={tmp48}
+                  stickySectionsVariant="disabled"
+                  footerSize={tmp31}
+                  getRecyclerKey={tmp49}
+                  headerSize={tmp30}
+                  horizontal={undefined !== tmp11 && tmp11}
+                  inActionSheet={tmp38}
+                  insetStart={tmp36}
+                  insetEnd={tmp37}
+                  itemSize={tmp35}
+                  keyboardDismissMode={tmp33}
+                  keyboardShouldPersistTaps={tmp32}
+                  onContentSizeChange={tmp61}
+                  onLayout={tmp28}
+                  onScroll={tmp62}
+                  onScrollBeginDrag={onScrollBeginDrag}
+                  onScrollEndDrag={onScrollEndDrag}
+                  optimizeListItemRender
+                  ref={ref}
+                  renderItem={tmp25}
+                  renderFooter={tmp24}
+                  renderHeader={tmp23}
+                  renderSection={tmp21}
+                  renderSectionFooter={tmp22}
+                  scrollEventThrottle={tmp20}
+                  scrollIndicatorInsets={tmp51}
+                  scrollPosValue={scrollPosition}
+                  sections={tmp15}
+                  sectionSize={tmp16}
+                  sectionFooterSize={tmp17}
+                  showsHorizontalScrollIndicator={tmp14}
+                  showsVerticalScrollIndicator={tmp13}
+                  stickyHeaderFooter={tmp43}
+                  style={tmp12}
+                />
+              );
+              cResult[52] = AnimatedFastList;
+              cResult[53] = tmp40;
+              cResult[54] = tmp48;
+              cResult[55] = tmp49;
+              cResult[56] = undefined !== tmp11 && tmp11;
+              cResult[57] = tmp38;
+              cResult[58] = tmp37;
+              cResult[59] = tmp36;
+              cResult[60] = tmp35;
+              cResult[61] = tmp33;
+              cResult[62] = tmp32;
+              cResult[63] = tmp31;
+              cResult[64] = tmp30;
+              cResult[65] = tmp28;
+              cResult[66] = onScrollBeginDrag;
+              cResult[67] = onScrollEndDrag;
+              cResult[68] = tmp53;
+              cResult[69] = tmp25;
+              cResult[70] = tmp24;
+              cResult[71] = tmp23;
+              cResult[72] = tmp22;
+              cResult[73] = tmp21;
+              cResult[74] = tmp20;
+              cResult[75] = tmp51;
+              cResult[76] = tmp17;
+              cResult[77] = tmp16;
+              cResult[78] = tmp15;
+              cResult[79] = tmp14;
+              cResult[80] = tmp13;
+              cResult[81] = tmp12;
+              cResult[82] = null == tmp51;
+              cResult[83] = tmp60;
+              cResult[84] = "disabled";
+              cResult[85] = tmp61;
+              cResult[86] = tmp62;
+              cResult[87] = ref;
+              cResult[88] = scrollPosition;
+              cResult[89] = tmp43;
+              cResult[90] = tmp67;
+              tmp65 = tmp67;
+            }
+            class Ge {
+              constructor(arg0, arg1) {
+                if (closure_1 != null) {
+                  let tmp2 = arg1;
+                  if (closure_2) {
+                    tmp2 = arg0;
+                  }
+                  tmp(tmp2);
+                }
+              }
+            }
+            cResult[47] = undefined !== tmp11 && tmp11;
+            cResult[48] = onContentLengthChange;
+            cResult[49] = Ge;
+            tmp58 = Ge;
+          }
+          let tmp54;
+          if (true === tmp27) {
+            if (true === tmp38) {
+              class Ge {
+                constructor(arg0, arg1) {
+                  if (closure_1 != null) {
+                    let tmp2 = arg1;
+                    if (closure_2) {
+                      tmp2 = arg0;
+                    }
+                    tmp(tmp2);
+                  }
+                }
+              }
+              tmp54 = <RefreshControl refreshing={false} onRefresh={null} tintColor="transparent" />;
             }
           }
-          if (tmp41) {
-            const rect = { left: tmp18, right: tmp19 };
-            let rect1 = rect;
-          } else {
-            rect1 = { top: tmp18, bottom: tmp19 };
-          }
-          cResult[40] = tmp41;
-          cResult[41] = tmp19;
-          cResult[42] = tmp18;
-          cResult[43] = rect1;
+          cResult[44] = tmp38;
+          cResult[45] = tmp27;
+          cResult[46] = tmp54;
+          tmp53 = tmp54;
         }
         const obj4 = { estimatedListSize: tmp39, horizontal: undefined !== tmp11 && tmp11 };
         cResult[35] = tmp39;
         cResult[36] = undefined !== tmp11 && tmp11;
         cResult[37] = obj4;
-        tmp48 = obj4;
-        const tmp46 = useFastestListPropsScrollReportingDefault(tmp26, undefined !== tmp11 && tmp11);
+        tmp47 = obj4;
       }
     : (inActionSheet, ref) => {
+        let accessibilityLabel;
+        let enabled;
+        let estimatedListSize;
+        let horizontal;
+        let insetEnd;
+        let insetStart;
+        let itemSize;
+        let keyboardDismissMode;
+        let keyboardShouldPersistTaps;
+        let listFooterAlwaysMounted;
+        let listFooterSize;
+        let listHeaderAlwaysMounted;
+        let listHeaderSize;
+        let num;
+        let onLayout;
+        let onScroll;
+        let onScrollBeginDrag;
+        let onScrollEndDrag;
+        let renderAhead;
+        let renderItem;
+        let renderListFooter;
+        let renderListHeader;
+        let renderSectionFooter;
+        let renderSectionHeader;
+        let scrollEventThrottle;
+        let sectionFooterSize;
+        let sectionHeaderIsSticky;
+        let sectionHeaderSize;
+        let sections;
+        let showsHorizontalScrollIndicator;
+        let showsVerticalScrollIndicator;
+        let style;
         ({ enabled, horizontal } = inActionSheet);
         ({ accessibilityLabel, estimatedListSize } = inActionSheet);
         if (horizontal === undefined) {
@@ -662,21 +733,23 @@ export default noop.forwardRef(
             style: 0,
           }),
         );
+        let tmp3 = keyExtractor;
+        let tmp2 = inActionSheet;
         ({ onScroll, onScrollBeginDrag, onScrollEndDrag } = inActionSheet(keyExtractor[6])(merged, horizontal));
         const items = [keyExtractor];
-        let obj = scrollIndicatorInsetEnd;
-        let tmp2 = inActionSheet;
-        const tmp4 = inActionSheet(keyExtractor[6])(merged, horizontal);
         const items1 = [horizontal, scrollIndicatorInsetEnd, scrollIndicatorInsetStart];
+        const tmp4 = inActionSheet(keyExtractor[6])(merged, horizontal);
+        const tmp5 = inActionSheet(keyExtractor[7])({ estimatedListSize, horizontal });
         const callback = scrollIndicatorInsetEnd.useCallback((arg0, arg1, arg2) => {
           if (FastList.FastListItemTypes.ITEM === arg0) {
             let tmp11Result;
             if (keyExtractor != null) {
               let num3 = arg2;
+              const ITEM = FastestListItemTypeDefault.ITEM;
               if (arg2 == null) {
                 num3 = -1;
               }
-              tmp11Result = tmp11(FastestListItemTypeDefault.ITEM, arg1, num3);
+              tmp11Result = tmp11(ITEM, arg1, num3);
             }
             return tmp11Result;
           } else if (FastList.FastListItemTypes.SECTION === arg0) {
@@ -694,70 +767,36 @@ export default noop.forwardRef(
           }
         }, items);
         const memo = scrollIndicatorInsetEnd.useMemo(() => {
-          if (horizontal) {
-            const rect = { left: scrollIndicatorInsetStart, right: scrollIndicatorInsetEnd };
-            let rect1 = rect;
-          } else {
-            rect1 = { top: scrollIndicatorInsetStart, bottom: scrollIndicatorInsetEnd };
+          let tmp3;
+          if (null != scrollIndicatorInsetStart) {
+            let rect1;
+            if (horizontal) {
+              const rect = { left: scrollIndicatorInsetStart, right: scrollIndicatorInsetEnd };
+              rect1 = rect;
+            } else {
+              rect1 = { top: scrollIndicatorInsetStart, bottom: scrollIndicatorInsetEnd };
+            }
+            tmp3 = rect1;
           }
+          return tmp3;
         }, items1);
         const items2 = [preventNativeModalDismiss, inActionSheet];
         const memo1 = scrollIndicatorInsetEnd.useMemo(() => {
           let tmp;
           if (true === preventNativeModalDismiss) {
             if (true === inActionSheet) {
-              const obj = { refreshing: false, onRefresh: noop, tintColor: "transparent" };
               tmp = <RefreshControl refreshing={false} onRefresh={noop} tintColor="transparent" />;
             }
           }
           return tmp;
         }, items2);
+        const obj = scrollIndicatorInsetEnd;
         if ("animatedCallbacks" === merged.scrollReporting) {
           let AnimatedFastList = horizontal(tmp3[8]).AnimatedFastList;
         } else {
           AnimatedFastList = tmp2(tmp3[8]);
         }
         const items3 = [horizontal, onContentLengthChange];
-        const obj2 = {
-          accessibilityLabel,
-          automaticallyAdjustsScrollIndicatorInsets: null == memo,
-          batchesToRender: null,
-          refreshControl: null,
-          chunkBase: null,
-          stickySectionsVariant: null,
-          footerSize: null,
-          getRecyclerKey: null,
-          headerSize: null,
-          horizontal: null,
-          inActionSheet: null,
-          insetStart: null,
-          insetEnd: null,
-          itemSize: null,
-          keyboardDismissMode: null,
-          keyboardShouldPersistTaps: null,
-          onContentSizeChange: null,
-          onLayout: null,
-          onScroll: null,
-          onScrollBeginDrag: null,
-          onScrollEndDrag: null,
-          optimizeListItemRender: true,
-          ref: null,
-          renderItem: null,
-          renderFooter: null,
-          renderHeader: null,
-          renderSection: null,
-          renderSectionFooter: null,
-          scrollEventThrottle: null,
-          scrollIndicatorInsets: null,
-          scrollPosValue: null,
-          sections: null,
-          sectionSize: null,
-          sectionFooterSize: null,
-          showsHorizontalScrollIndicator: null,
-          showsVerticalScrollIndicator: null,
-          stickyHeaderFooter: null,
-          style: null,
-        };
         const callback1 = obj.useCallback((arg0, arg1) => {
           if (onContentLengthChange != null) {
             let tmp2 = arg1;
@@ -769,106 +808,74 @@ export default noop.forwardRef(
         }, items3);
         if ("nominal" !== renderAhead) {
           if ("half" === renderAhead) {
-            let num = 14;
+            num = 14;
           } else {
             num = 16;
           }
         }
-        obj2.batchesToRender = num;
-        obj2.refreshControl = memo1;
-        obj2.chunkBase = inActionSheet(keyExtractor[7])({ estimatedListSize, horizontal });
         let str3 = "disabled";
         if (sectionHeaderIsSticky) {
           str3 = "default";
         }
-        obj2.stickySectionsVariant = str3;
-        obj2.footerSize = listFooterSize;
-        obj2.getRecyclerKey = callback;
-        obj2.headerSize = listHeaderSize;
-        obj2.horizontal = horizontal;
-        obj2.inActionSheet = inActionSheet;
-        obj2.insetStart = insetStart;
-        obj2.insetEnd = insetEnd;
-        obj2.itemSize = itemSize;
-        obj2.keyboardDismissMode = keyboardDismissMode;
-        obj2.keyboardShouldPersistTaps = keyboardShouldPersistTaps;
         let tmp12;
         if (null != onContentLengthChange) {
           tmp12 = callback1;
         }
-        obj2.onContentSizeChange = tmp12;
-        obj2.onLayout = onLayout;
         let tmp13;
         if ("animatedScrollPosition" !== merged.scrollReporting) {
           tmp13 = onScroll;
         }
-        obj2.onScroll = tmp13;
-        obj2.onScrollBeginDrag = onScrollBeginDrag;
-        obj2.onScrollEndDrag = onScrollEndDrag;
-        obj2.ref = ref;
-        obj2.renderItem = renderItem;
-        obj2.renderFooter = renderListFooter;
-        obj2.renderHeader = renderListHeader;
-        obj2.renderSection = renderSectionHeader;
-        obj2.renderSectionFooter = renderSectionFooter;
-        obj2.scrollEventThrottle = scrollEventThrottle;
-        obj2.scrollIndicatorInsets = memo;
         let scrollPosition;
         if ("animatedScrollPosition" === merged.scrollReporting) {
           scrollPosition = merged.scrollPosition;
         }
-        obj2.scrollPosValue = scrollPosition;
-        obj2.sections = sections;
-        obj2.sectionSize = sectionHeaderSize;
-        obj2.sectionFooterSize = sectionFooterSize;
-        obj2.showsHorizontalScrollIndicator = showsHorizontalScrollIndicator;
-        obj2.showsVerticalScrollIndicator = showsVerticalScrollIndicator;
         if (!listHeaderAlwaysMounted) {
           listHeaderAlwaysMounted = listFooterAlwaysMounted;
         }
-        obj2.stickyHeaderFooter = listHeaderAlwaysMounted;
-        obj2.style = style;
         return (
           <AnimatedFastList
             accessibilityLabel={accessibilityLabel}
             automaticallyAdjustsScrollIndicatorInsets={null == memo}
-            batchesToRender={null}
-            refreshControl={null}
-            chunkBase={null}
-            stickySectionsVariant={null}
-            footerSize={null}
-            getRecyclerKey={null}
-            headerSize={null}
-            horizontal={null}
-            inActionSheet={null}
-            insetStart={null}
-            insetEnd={null}
-            itemSize={null}
-            keyboardDismissMode={null}
-            keyboardShouldPersistTaps={null}
-            onContentSizeChange={null}
-            onLayout={null}
-            onScroll={null}
-            onScrollBeginDrag={null}
-            onScrollEndDrag={null}
+            batchesToRender={num}
+            refreshControl={memo1}
+            chunkBase={tmp5}
+            stickySectionsVariant={str3}
+            footerSize={listFooterSize}
+            getRecyclerKey={callback}
+            headerSize={listHeaderSize}
+            horizontal={horizontal}
+            inActionSheet={inActionSheet}
+            insetStart={insetStart}
+            insetEnd={insetEnd}
+            itemSize={itemSize}
+            keyboardDismissMode={keyboardDismissMode}
+            keyboardShouldPersistTaps={keyboardShouldPersistTaps}
+            onContentSizeChange={tmp12}
+            onLayout={onLayout}
+            onScroll={tmp13}
+            onScrollBeginDrag={onScrollBeginDrag}
+            onScrollEndDrag={onScrollEndDrag}
             optimizeListItemRender
-            ref={null}
-            renderItem={null}
-            renderFooter={null}
-            renderHeader={null}
-            renderSection={null}
-            renderSectionFooter={null}
-            scrollEventThrottle={null}
-            scrollIndicatorInsets={null}
-            scrollPosValue={null}
-            sections={null}
-            sectionSize={null}
-            sectionFooterSize={null}
-            showsHorizontalScrollIndicator={null}
-            showsVerticalScrollIndicator={null}
-            stickyHeaderFooter={null}
-            style={null}
+            ref={ref}
+            renderItem={renderItem}
+            renderFooter={renderListFooter}
+            renderHeader={renderListHeader}
+            renderSection={renderSectionHeader}
+            renderSectionFooter={renderSectionFooter}
+            scrollEventThrottle={scrollEventThrottle}
+            scrollIndicatorInsets={memo}
+            scrollPosValue={scrollPosition}
+            sections={sections}
+            sectionSize={sectionHeaderSize}
+            sectionFooterSize={sectionFooterSize}
+            showsHorizontalScrollIndicator={showsHorizontalScrollIndicator}
+            showsVerticalScrollIndicator={showsVerticalScrollIndicator}
+            stickyHeaderFooter={listHeaderAlwaysMounted}
+            style={style}
           />
         );
       },
 );
+const result = size.fileFinishedImporting("modules/fastest_list/FastestList.ios.tsx");
+
+export default forwardRefResult;

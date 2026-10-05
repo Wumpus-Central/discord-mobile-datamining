@@ -1,141 +1,218 @@
 // discord_app/modules/media/useDownloadedFile.tsx
-import util from "../../intl/index.native.tsx";
+import intl2 from "../../intl/index.native.tsx";
 import FileSizeUtils from "../../utils/FileSizeUtils.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
-import noop from "../../../_runtime/metro/00019__.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../_runtime/00019_react.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
+let c0, c8, c9, closure_3, closure_4;
+
 let c5 = "utf-8";
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/media/useDownloadedFile.tsx");
 
 export const getBytesLeftNotice = function getBytesLeftNotice(bytesLeft) {
+  let obj2;
   let str = "";
   if (bytesLeft > 0) {
-    const intl = util.intl;
-    const obj = { formattedBytes: FileSizeUtils.formatKbSize(bytesLeft) };
+    const intl = intl2.intl;
+    const formatToPlainString = intl.formatToPlainString;
+    const obj = { formattedBytes: obj2.formatKbSize(bytesLeft) };
+    const prop = intl2.t["1+gGcK"];
     const _HermesInternal = HermesInternal;
-    str = "... " + intl.formatToPlainString(util.t["1+gGcK"], obj);
+    obj2 = FileSizeUtils;
+    str = "... " + formatToPlainString(prop, obj);
   }
   return str;
 };
 export const useDownloadedFile = function useDownloadedFile(url, arg1) {
-  dependencyMap = arg1;
-  const hadError = _slicedToArray(noop.useState(false), 2);
-  closure_2 = hadError[1];
-  const fileContents = _slicedToArray(noop.useState(null), 2);
-  _slicedToArray = fileContents[1];
-  const bytesLeft = _slicedToArray(noop.useState(1), 2);
-  noop = bytesLeft[1];
+  let bytesLeft;
+  let closure_2;
+  let fileContents;
+  let hadError;
+  let closure_0 = url;
+  let closure_1 = arg1;
+  [hadError, closure_2] = react.useState(false);
+  [fileContents, _slicedToArray] = react.useState(null);
+  [bytesLeft, react] = react.useState(1);
   const items = [url, arg1];
-  const effect = noop.useEffect(() => {
-    closure_0 = async function _download() {
-      closure_5 = tmp3;
-      const _fetch = fetch;
-      await fetch(c0, { headers: { Range: "bytes=0-50000", Accept: "text/plain" } });
-      if (1 === tmp7) {
-        c6 = 0;
-        closure_4(0);
-        decode(true);
-        c9 = 3;
-      } else if (2 === tmp7) {
-        if (arg0 === 1) {
-          c9 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 0;
-          c9 = 3;
-          return { value, done: true };
-        } else {
-          closure_132_0 = value;
-          closure_132_1 = (function getDecoder(c1) {
-            let first;
+  const effect = react.useEffect(() => {
+    function download() {
+      return obj(...arguments);
+    }
+    let obj = function _download() {
+      obj = _asyncToGenerator(async () => {
+        let value;
+        function getDecoder(c1) {
+          let first;
+          if (c1 != null) {
+            const parts = c1.split("charset=");
+            first = parts.slice(-1)[0];
+          }
+          if (first == null) {
+            first = closure_1_5;
+          }
+          try {
+            const _TextDecoder = TextDecoder;
+            const self = this;
+            const self2 = this;
+            const textDecoder = new TextDecoder(first);
+            return textDecoder;
+          } catch (tmp6) {
+            let startsWithResult;
             if (c1 != null) {
-              const parts = c1.split("charset=");
-              first = parts.slice(-1)[0];
+              startsWithResult = c1.startsWith("text");
             }
-            if (first == null) {
-              first = closure_1_5;
-            }
-            try {
-              const _TextDecoder = TextDecoder;
-              const textDecoder = new TextDecoder(first);
-              return textDecoder;
-            } catch (tmp9) {
-              let startsWithResult;
-              if (obj != tmp) {
-                startsWithResult = obj.startsWith("text");
+            if (!startsWithResult) {
+              const formatted = first.toLowerCase();
+              if (!formatted.includes("utf")) {
+                throw tmp6;
               }
-              if (!startsWithResult) {
-                const formatted = str.toLowerCase();
-                if (!formatted.includes("utf")) {
-                  throw tmp9;
-                }
-              }
-              const _TextDecoder2 = TextDecoder;
-              const textDecoder1 = new TextDecoder(closure_1_5);
-              return textDecoder1;
             }
-          })(c1);
-          closure_3 = closure_132_1;
-          decode = closure_132_1.decode;
-          c8 = 3;
-          c9 = 1;
-          return { value: closure_132_0.arrayBuffer(), done: false };
+            const _TextDecoder2 = TextDecoder;
+            const self3 = this;
+            const self4 = this;
+            const textDecoder1 = new TextDecoder(closure_1_5);
+            return textDecoder1;
+          }
         }
-      } else if (arg0 === 1) {
-        c9 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        closure_132_2 = decode(value);
-        const headers2 = closure_132_0.headers;
-        value = headers2.get("content-range");
-        c0 = value;
-        if (value == null) {
-          c0 = "0";
-        }
-        closure_132_3 = c0;
-        const headers = closure_132_0.headers;
-        value2 = headers.get("content-length");
-        c1 = value2;
-        if (value2 == null) {
-          c1 = "1";
-        }
-        closure_132_4 = c1;
-        const _parseInt = parseInt;
-        closure_132_5 = parseInt(closure_132_3.split("/")[1]);
-        const _Number = Number;
-        let num2 = 0;
-        if (!Number.isNaN(closure_132_5)) {
-          const _parseInt2 = parseInt;
-          num2 = closure_132_5 - parseInt(closure_132_4);
-        }
-        closure_132_6 = num2;
-        if (0 === closure_132_6) {
-          let substr = closure_132_2;
+        if (c9 === 2) {
+          c9 = 3;
+          const str = "Generator functions may not be called on executing generators";
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else {
-          substr = closure_132_2.slice(0, -1);
+          const str2 = "/";
+          const str3 = "1";
+          if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj2 = { value, done: true };
+              return obj2;
+            } else {
+              return { value: "IconComponent", done: null };
+            }
+          } else {
+            let c6;
+            try {
+              let v0;
+              let decode;
+              let decode2;
+              let closure_5;
+              let num2;
+              let substr;
+              c9 = 2;
+              if (0 === c8) {
+                if (arg0 === 1) {
+                  c9 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c9 = 3;
+                  const obj3 = { value, done: true };
+                  return obj3;
+                } else {
+                  v0 = undefined;
+                  decode = undefined;
+                  decode2 = undefined;
+                  closure_3 = undefined;
+                  closure_4 = undefined;
+                  closure_5 = undefined;
+                  num2 = undefined;
+                  substr = undefined;
+                  c6 = 1;
+                  const _fetch = fetch;
+                  const obj4 = { headers: { Range: "bytes=0-50000", Accept: "text/plain" } };
+                  c8 = 2;
+                  c9 = 1;
+                  const obj5 = { value: fetch(c0, obj4), done: false };
+                  return obj5;
+                }
+              } else {
+                if (1 === c8) {
+                  c6 = 0;
+                  closure_4(0);
+                  decode(true);
+                } else if (2 === c8) {
+                  if (arg0 === 1) {
+                    c9 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c6 = 0;
+                    c9 = 3;
+                    const obj6 = { value, done: true };
+                    return obj6;
+                  } else {
+                    v0 = value;
+                    decode = getDecoder(c1);
+                    closure_3 = decode;
+                    decode = decode.decode;
+                    c8 = 3;
+                    c9 = 1;
+                    const obj7 = { value: v0.arrayBuffer(), done: false };
+                    return obj7;
+                  }
+                } else if (arg0 === 1) {
+                  c9 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c6 = 0;
+                  c9 = 3;
+                  const obj8 = { value, done: true };
+                  return obj8;
+                } else {
+                  decode2 = decode(value);
+                  const headers2 = v0.headers;
+                  value = headers2.get("content-range");
+                  c0 = value;
+                  if (value == null) {
+                    c0 = "0";
+                  }
+                  const tmp6 = c0;
+                  closure_3 = c0;
+                  const headers = v0.headers;
+                  const value2 = headers.get("content-length");
+                  c1 = value2;
+                  if (value2 == null) {
+                    c1 = "1";
+                  }
+                  closure_4 = c1;
+                  const _parseInt = parseInt;
+                  closure_5 = parseInt(closure_3.split("/")[1]);
+                  const _Number = Number;
+                  num2 = 0;
+                  if (!Number.isNaN(closure_5)) {
+                    const _parseInt2 = parseInt;
+                    num2 = closure_5 - parseInt(closure_4);
+                  }
+                  if (0 === num2) {
+                    substr = decode2;
+                  } else {
+                    substr = decode2.slice(0, -1);
+                  }
+                  obj = closure_2_0(closure_2_1[5]);
+                  closure_3(obj.sanitizeWhitespaceExcludingTabs(substr));
+                  closure_4(num2);
+                  decode(false);
+                  c6 = 0;
+                }
+                c9 = 3;
+                return { value: "IconComponent", done: null };
+              }
+            } catch (tmp44) {
+              let closure_7 = tmp44;
+              if (0 === c6) {
+                c9 = 3;
+                throw tmp44;
+              } else {
+                c8 = 1;
+              }
+            }
+          }
         }
-        closure_132_7 = substr;
-        closure_3(url(dependencyMap[5]).sanitizeWhitespaceExcludingTabs(closure_132_7));
-        closure_4(closure_132_6);
-        decode(false);
-        c6 = 0;
-        url(dependencyMap[5]);
-      }
-      return value;
+      });
+      return obj(...arguments);
     };
-    !(function download() {
-      const self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    })();
+    const tmp = !download();
   }, items);
-  return { fileContents: fileContents[0], bytesLeft: bytesLeft[0], hadError: hadError[0] };
+  return { fileContents, bytesLeft, hadError };
 };

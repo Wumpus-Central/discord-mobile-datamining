@@ -1,37 +1,49 @@
 // discord_app/modules/collectibles/native/VisibilitySensor.tsx
-import _mod17 from "../../../../_runtime/metro/00017__.js";
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
-import noop_mod from "../../../../_runtime/metro/00019__.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import react_mod from "../../../../_runtime/00019_react.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
-let noop = noop_mod;
-({ useEffect: c3, useRef: closure_4 } = noop);
-let noop = noop_mod;
-let View = _mod17.View;
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const result = size.fileFinishedImporting("modules/collectibles/native/VisibilitySensor.tsx");
+let ref;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+let c3;
+let closure_4;
+let metroImportAll;
+let metroImportDefault;
+let react = react_mod;
+({ useEffect: c3, useRef: closure_4 } = react);
+react = react_mod;
+let View = react_native.View;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (resetKey) => {
-      const cResult = c.c(14);
+      let children;
+      let first;
+      let items1;
+      let onChange;
+      let tmp4;
+      let tmp7;
+      let tmp8;
+      const obj = react2;
+      const cResult = obj.c(14);
       ({ children, onChange } = resetKey);
       resetKey = resetKey.resetKey;
-      const tmp2 = React4(null);
-      closure_1 = tmp2;
-      closure_2 = React4(false);
-      const size = useWindowDimensionsDefault();
+      const tmp2 = React3(null);
+      let closure_1 = tmp2;
+      let closure_2 = React3(false);
+      size = useWindowDimensionsDefault();
       const width = size.width;
       const height = size.height;
-      React4(null);
+      let closure_5 = React3(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function c() {
           closure_2.current = false;
         };
         cResult[0] = fn;
-        let first = fn;
+        first = fn;
       } else {
         first = cResult[0];
       }
@@ -39,30 +51,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [resetKey];
         cResult[1] = resetKey;
         cResult[2] = items;
-        let tmp4 = items;
+        tmp4 = items;
       } else {
         tmp4 = cResult[2];
       }
-      React3(first, tmp4);
+      _false(first, tmp4);
       if (cResult[3] !== onChange) {
         const fn2 = function f(arg0, arg1) {
-          closure_0 = arg0;
-          if (null === arg1.current) {
+          let ref2;
+          let tmp;
+          let closure_0 = arg0;
+          ref = arg1;
+          if (null === ref.current) {
             const _setInterval = setInterval;
             tmp.current = setInterval(() => {
               if (null !== ref.current) {
                 const current = ref.current;
                 current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
-                  let tmp = arg5 + arg3 > 0;
-                  if (tmp) {
-                    tmp = arg5 < ref;
-                  }
-                  if (tmp) {
-                    tmp = arg4 < closure_1_0;
-                  }
-                  if (tmp) {
-                    tmp = arg4 + arg2 > 0;
-                  }
+                  const tmp = arg5 + arg3 > 0 && arg5 < ref && arg4 < closure_1_0 && arg4 + arg2 > 0;
                   if (tmp !== ref2.current) {
                     ref2.current = tmp;
                     closure_0(tmp);
@@ -74,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[3] = onChange;
         cResult[4] = fn2;
-        let tmp7 = fn2;
+        tmp7 = fn2;
       } else {
         tmp7 = cResult[4];
       }
@@ -88,34 +94,37 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         };
         cResult[5] = fn3;
-        let tmp8 = fn3;
+        tmp8 = fn3;
       } else {
         tmp8 = cResult[5];
       }
-      closure_7 = tmp8;
+      metroImportDefault = tmp8;
       if (cResult[6] === tmp7) {
         if (cResult[7] === height) {
+          let tmp9;
+          let tmp10;
+          let tmp12;
+          let tmp16;
           if (cResult[8] === width) {
-            let tmp9 = cResult[9];
-            let tmp10 = cResult[10];
+            tmp9 = cResult[9];
+            tmp10 = cResult[10];
           }
-          React3(tmp9, tmp10);
+          _false(tmp9, tmp10);
           const _Symbol = Symbol;
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp15 = React5(View, {});
+            const tmp15 = metroImportDefault(View, {});
             cResult[11] = tmp15;
-            let tmp12 = tmp15;
+            tmp12 = tmp15;
           } else {
             tmp12 = cResult[11];
           }
           if (cResult[12] !== children) {
-            const obj2 = { collapsable: false, ref: tmp2, children: null };
-            const items1 = [children, tmp12];
-            obj2.children = items1;
-            const tmp19 = closure_1_8(View, obj2);
+            const obj2 = { collapsable: false, ref: tmp2, children: items1 };
+            items1 = [children, tmp12];
+            const tmp19 = metroImportAll(View, obj2);
             cResult[12] = children;
             cResult[13] = tmp19;
-            let tmp16 = tmp19;
+            tmp16 = tmp19;
           } else {
             tmp16 = cResult[13];
           }
@@ -124,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       class K {
         constructor() {
-          tmp = closure_6(width, height);
+          closure_6(width, height);
           return closure_7;
         }
       }
@@ -138,6 +147,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = K;
     }
   : (onChange) => {
+      let children;
+      let items3;
+      let resetKey;
       onChange = onChange.onChange;
       function stopWatching() {
         if (null !== ref.current) {
@@ -147,36 +159,30 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       ({ children, resetKey } = onChange);
-      let tmp = React4(null);
-      closure_1 = tmp;
-      closure_2 = React4(false);
-      const size = useWindowDimensionsDefault();
+      let tmp = React3(null);
+      let closure_1 = tmp;
+      let closure_2 = React3(false);
+      size = useWindowDimensionsDefault();
       const width = size.width;
       const height = size.height;
-      React4(null);
+      let closure_5 = React3(null);
       const items = [resetKey];
-      React3(() => {
+      _false(() => {
         closure_2.current = false;
       }, items);
       const items1 = [onChange];
-      const callback = noop.useCallback((arg0, arg1) => {
-        closure_0 = arg0;
-        if (null === arg1.current) {
+      const callback = react.useCallback((arg0, arg1) => {
+        let ref2;
+        let tmp;
+        let closure_0 = arg0;
+        ref = arg1;
+        if (null === ref.current) {
           const _setInterval = setInterval;
           tmp.current = setInterval(() => {
             if (null !== ref.current) {
               const current = ref.current;
               current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
-                let tmp = arg5 + arg3 > 0;
-                if (tmp) {
-                  tmp = arg5 < ref;
-                }
-                if (tmp) {
-                  tmp = arg4 < closure_1_0;
-                }
-                if (tmp) {
-                  tmp = arg4 + arg2 > 0;
-                }
+                const tmp = arg5 + arg3 > 0 && arg5 < ref && arg4 < closure_1_0 && arg4 + arg2 > 0;
                 if (tmp !== ref2.current) {
                   ref2.current = tmp;
                   closure_0(tmp);
@@ -187,12 +193,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       const items2 = [callback, height, width];
-      React3(() => {
+      _false(() => {
         callback(width, height);
         return stopWatching;
       }, items2);
-      const obj = { collapsable: false, ref: tmp, children: null };
-      const items3 = [children, React5(View, {})];
-      obj.children = items3;
-      return closure_1_8(View, obj);
+      const obj = { collapsable: false, ref: tmp, children: items3 };
+      items3 = [children, metroImportDefault(View, {})];
+      return metroImportAll(View, obj);
     };
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/collectibles/native/VisibilitySensor.tsx");
+
+export default tmp4;

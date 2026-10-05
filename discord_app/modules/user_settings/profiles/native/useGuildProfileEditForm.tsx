@@ -1,32 +1,45 @@
 // discord_app/modules/user_settings/profiles/native/useGuildProfileEditForm.tsx
+import Constants from "../../../../Constants.tsx";
+import UserProfileSettingsStore2 from "../../../user_profile/UserProfileSettingsStore.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
-import UserProfileSettingsStore from "../../../user_profile/UserProfileSettingsStore.tsx";
+import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import react from "../../../../../_runtime/00019_react.js";
 import UserProfileStore from "../../../user_profile/UserProfileStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
-import UserStore from "../../../../stores/UserStore.tsx";
+import UserStore_mod from "../../../../stores/UserStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
+let c0;
 
-const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
 let closure_4 = ["bannerOriginalMd5"];
-const IGNORE_GUILD_IDS = fn(7831).IGNORE_GUILD_IDS;
-let FormStates = fn(1085).FormStates;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useGuildProfileEditForm.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const IGNORE_GUILD_IDS = UserProfileSettingsStore2.IGNORE_GUILD_IDS;
+let UserStore = UserStore_mod;
+let FormStates = Constants.FormStates;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = require("c").c(37);
+      let currentUser;
+      let pendingAvatarDecoration;
+      let pendingNameplate;
+      let pendingNickname;
+      let stateFromStores;
+      let tmp15;
+      let tmp16;
+      let tmp4;
+      let tmp5;
+      let tmp8;
+      let tmp9;
+      const tmp = stateFromStores;
+      let tmp2 = pendingNickname;
+      let obj = stateFromStores(pendingNickname[10]);
+      const cResult = obj.c(37);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         class G {
           constructor() {
-            return closure_13.getCurrentUser();
+            return UserStore.getCurrentUser();
           }
         }
         cResult[0] = items;
@@ -35,36 +48,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      let obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(tmp4, G);
-      _require = stateFromStores;
+      const tmpResult = tmp(tmp2[11]);
+      stateFromStores = tmpResult.useStateFromStores(tmp4, G);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [pendingAvatarDecoration];
         class G {
           constructor() {
-            return closure_13.getCurrentUser();
+            return UserStore.getCurrentUser();
           }
         }
         items1[1] = pendingNameplate;
         const fn = function y() {
           const selectedGuildId = pendingAvatarDecoration.selectedGuildId;
-          const obj = {};
+          const obj = {
+            errors: pendingAvatarDecoration.getErrors(selectedGuildId),
+            selectedGuild: pendingNameplate.getGuild(selectedGuildId),
+            formState: pendingAvatarDecoration.getFormState(),
+          };
           const merged = Object.assign(pendingAvatarDecoration.getPendingChanges(selectedGuildId));
-          obj.errors = pendingAvatarDecoration.getErrors(selectedGuildId);
-          obj.selectedGuild = pendingNameplate.getGuild(selectedGuildId);
-          obj.formState = pendingAvatarDecoration.getFormState();
           return obj;
         };
         cResult[2] = items1;
         cResult[3] = fn;
-        let tmp9 = fn;
-        let tmp8 = items1;
+        tmp9 = fn;
+        tmp8 = items1;
       } else {
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const tmpResult = require("initialize");
-      const stateFromStoresObject = require("initialize").useStateFromStoresObject(tmp8, tmp9);
+      const tmpResult5 = tmp(tmp2[11]);
+      const stateFromStoresObject = tmpResult5.useStateFromStoresObject(tmp8, tmp9);
       let pendingAvatar = stateFromStoresObject.pendingAvatar;
       pendingNickname = stateFromStoresObject.pendingNickname;
       let pendingBanner = stateFromStoresObject.pendingBanner;
@@ -77,376 +90,359 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const pendingProfileFrame = stateFromStoresObject.pendingProfileFrame;
       pendingNameplate = stateFromStoresObject.pendingNameplate;
       const pendingDisplayNameStyles = stateFromStoresObject.pendingDisplayNameStyles;
-      const tmpResult5 = require("initialize");
+      const formState = stateFromStoresObject.formState;
       let id;
+      const useGuildAutomodProfileQuarantineErrors = tmp(tmp2[12]).useGuildAutomodProfileQuarantineErrors;
+      tmp(tmp2[12]);
       if (selectedGuild != null) {
         id = selectedGuild.id;
       }
-      const guildAutomodProfileQuarantineErrors =
-        require("AutomodQuarantineUtils").useGuildAutomodProfileQuarantineErrors(id);
+      const guildAutomodProfileQuarantineErrors = useGuildAutomodProfileQuarantineErrors(id);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [pendingAvatarDecoration];
         class G {
           constructor() {
-            return closure_13.getCurrentUser();
+            return UserStore.getCurrentUser();
           }
         }
         items2[1] = pendingProfileFrame;
         class C {
           constructor() {
-            isSubmitting = pendingAvatarDecoration.getFormState() === closure_14.SUBMITTING;
-            if (!isSubmitting) {
-              tmp = pendingProfileFrame;
-              isSubmitting = pendingProfileFrame.isSubmitting;
-            }
+            const isSubmitting =
+              pendingAvatarDecoration.getFormState() === constants.SUBMITTING || pendingProfileFrame.isSubmitting;
             return isSubmitting;
           }
         }
         cResult[4] = items2;
         cResult[5] = C;
-        let tmp15 = C;
-        let tmp14 = items2;
+        tmp16 = C;
+        tmp15 = items2;
       } else {
-        tmp14 = cResult[4];
-        tmp15 = cResult[5];
+        tmp15 = cResult[4];
+        tmp16 = cResult[5];
       }
-      const tmpResult6 = require("AutomodQuarantineUtils");
-      const stateFromStores1 = require("initialize").useStateFromStores(tmp14, tmp15);
+      const tmpResult7 = tmp(tmp2[11]);
+      const stateFromStores1 = tmpResult7.useStateFromStores(tmp15, tmp16);
       if (cResult[6] === guildAutomodProfileQuarantineErrors) {
+        let tmp25;
+        let tmp24;
+        let tmp30;
         const _Symbol = Symbol;
         class G {
           constructor() {
-            return closure_13.getCurrentUser();
+            return UserStore.getCurrentUser();
           }
         }
-        UserStore = tmp22;
+        UserStore = tmp23;
         class C {
           constructor() {
-            isSubmitting = pendingAvatarDecoration.getFormState() === closure_14.SUBMITTING;
-            if (!isSubmitting) {
-              tmp = pendingProfileFrame;
-              isSubmitting = pendingProfileFrame.isSubmitting;
-            }
+            const isSubmitting =
+              pendingAvatarDecoration.getFormState() === constants.SUBMITTING || pendingProfileFrame.isSubmitting;
             return isSubmitting;
           }
         }
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           const fn2 = function x() {
             return () => {
-              closure_1_13.cancel();
-              pendingAvatar(pendingNickname[14]).wait(closure_0(pendingNickname[15]).resetAllPending);
+              currentUser.cancel();
+              const obj = pendingAvatar(pendingNickname[14]);
+              obj.wait(stateFromStores(pendingNickname[15]).resetAllPending);
             };
           };
-          const items3 = [tmp22];
+          const items3 = [tmp23];
           class G {
             constructor() {
-              return closure_13.getCurrentUser();
+              return UserStore.getCurrentUser();
             }
           }
           cResult[10] = fn2;
           class C {
             constructor() {
-              isSubmitting = pendingAvatarDecoration.getFormState() === closure_14.SUBMITTING;
-              if (!isSubmitting) {
-                tmp = pendingProfileFrame;
-                isSubmitting = pendingProfileFrame.isSubmitting;
-              }
+              const isSubmitting =
+                pendingAvatarDecoration.getFormState() === constants.SUBMITTING || pendingProfileFrame.isSubmitting;
               return isSubmitting;
             }
           }
           cResult[11] = items3;
-          let tmp24 = items3;
-          let tmp23 = fn2;
+          tmp25 = items3;
+          tmp24 = fn2;
         } else {
-          tmp23 = cResult[10];
-          tmp24 = cResult[11];
+          tmp24 = cResult[10];
+          tmp25 = cResult[11];
         }
-        const effect = selectedGuild.useEffect(tmp23, tmp24);
-        const tmp28 = pendingAvatar(tmp2[16])();
-        FormStates = tmp28;
+        const effect = selectedGuild.useEffect(tmp24, tmp25);
+        const tmp29 = pendingAvatar(tmp2[16])();
+        FormStates = tmp29;
         const _Symbol2 = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           const items4 = [pendingNameplate];
           class G {
             constructor() {
-              return closure_13.getCurrentUser();
+              return UserStore.getCurrentUser();
             }
           }
           items4[1] = pendingDisplayNameStyles;
           class C {
             constructor() {
-              isSubmitting = pendingAvatarDecoration.getFormState() === closure_14.SUBMITTING;
-              if (!isSubmitting) {
-                tmp = pendingProfileFrame;
-                isSubmitting = pendingProfileFrame.isSubmitting;
-              }
+              const isSubmitting =
+                pendingAvatarDecoration.getFormState() === constants.SUBMITTING || pendingProfileFrame.isSubmitting;
               return isSubmitting;
             }
           }
           cResult[12] = items4;
-          let tmp29 = items4;
+          tmp30 = items4;
         } else {
-          tmp29 = cResult[12];
+          tmp30 = cResult[12];
         }
-        if (cResult[13] !== tmp28) {
+        if (cResult[13] !== tmp29) {
           class V {
             constructor() {
-              obj = closure_11;
-              guild = closure_11.getGuild(closure_14);
-              id = undefined;
+              const guild = GuildStore.getGuild(constants);
+              let id;
               if (guild != null) {
                 id = guild.id;
               }
               if (null != id) {
-                tmp3 = IGNORE_GUILD_IDS;
                 if (!IGNORE_GUILD_IDS.has(guild.id)) {
                   return guild;
                 }
               }
-              return obj.getGuild(closure_12.getFlattenedGuildIds()[0]);
+              return GuildStore.getGuild(SortedGuildStore.getFlattenedGuildIds()[0]);
             }
           }
-          cResult[13] = tmp28;
+          cResult[13] = tmp29;
           class G {
             constructor() {
-              return closure_13.getCurrentUser();
+              return UserStore.getCurrentUser();
             }
           }
           cResult[14] = V;
           class C {
             constructor() {
-              isSubmitting = pendingAvatarDecoration.getFormState() === closure_14.SUBMITTING;
-              if (!isSubmitting) {
-                tmp = pendingProfileFrame;
-                isSubmitting = pendingProfileFrame.isSubmitting;
-              }
+              const isSubmitting =
+                pendingAvatarDecoration.getFormState() === constants.SUBMITTING || pendingProfileFrame.isSubmitting;
               return isSubmitting;
             }
           }
         } else {
           class V {
             constructor() {
-              obj = closure_11;
-              guild = closure_11.getGuild(closure_14);
-              id = undefined;
+              const guild = GuildStore.getGuild(constants);
+              let id;
               if (guild != null) {
                 id = guild.id;
               }
               if (null != id) {
-                tmp3 = IGNORE_GUILD_IDS;
                 if (!IGNORE_GUILD_IDS.has(guild.id)) {
                   return guild;
                 }
               }
-              return obj.getGuild(closure_12.getFlattenedGuildIds()[0]);
+              return GuildStore.getGuild(SortedGuildStore.getFlattenedGuildIds()[0]);
             }
           }
         }
-        let tmp33 = stateFromStores1;
-        const stateFromStores2 = tmp(tmp2[11]).useStateFromStores(tmp29, tmp31);
+        let tmp34 = stateFromStores1;
+        const tmpResult8 = tmp(tmp2[11]);
+        const stateFromStores2 = tmpResult8.useStateFromStores(tmp30, tmp32);
         if (!stateFromStores1) {
           class V {
             constructor() {
-              obj = closure_11;
-              guild = closure_11.getGuild(closure_14);
-              id = undefined;
+              const guild = GuildStore.getGuild(constants);
+              let id;
               if (guild != null) {
                 id = guild.id;
               }
               if (null != id) {
-                tmp3 = IGNORE_GUILD_IDS;
                 if (!IGNORE_GUILD_IDS.has(guild.id)) {
                   return guild;
                 }
               }
-              return obj.getGuild(closure_12.getFlattenedGuildIds()[0]);
+              return GuildStore.getGuild(SortedGuildStore.getFlattenedGuildIds()[0]);
             }
           }
-          tmp33 = stateFromStoresObject.formState === FormStates.CLOSED;
+          tmp34 = formState === FormStates.CLOSED;
         }
-        closure_15 = tmp33;
-        if (cResult[15] === tmp33) {
+        let closure_15 = tmp34;
+        if (cResult[15] === tmp34) {
           class V {
             constructor() {
-              obj = closure_11;
-              guild = closure_11.getGuild(closure_14);
-              id = undefined;
+              const guild = GuildStore.getGuild(constants);
+              let id;
               if (guild != null) {
                 id = guild.id;
               }
               if (null != id) {
-                tmp3 = IGNORE_GUILD_IDS;
                 if (!IGNORE_GUILD_IDS.has(guild.id)) {
                   return guild;
                 }
               }
-              return obj.getGuild(closure_12.getFlattenedGuildIds()[0]);
+              return GuildStore.getGuild(SortedGuildStore.getFlattenedGuildIds()[0]);
             }
           }
         }
-        _require = pendingThemeColors(function* () {
-          pendingBanner = tmp2;
-          pendingNickname = tmp3;
+        let closure_0 = pendingThemeColors(function* () {
+          let assetOrigin;
+          let c3;
+          let closure_2;
+          let guildMemberChangesForUpdateRequest;
+          let tmp2;
+          pendingBanner = tmp;
           if (!closure_1_15) {
             if (null != c0) {
-              const guildMemberChangesForUpdateRequest = closure_0(
-                pendingNickname[17],
-              ).getGuildMemberChangesForUpdateRequest({
+              const obj4 = {
                 pendingAvatar,
-                pendingNickname,
+                pendingNickname: tmp2,
                 pendingAvatarDecoration,
                 pendingNameplate,
                 pendingDisplayNameStyles,
-              });
-              closure_130_0 = guildMemberChangesForUpdateRequest;
-              closure_0(pendingNickname[17]);
+              };
+              const obj12 = _false(pendingNickname[17]);
+              guildMemberChangesForUpdateRequest = obj12.getGuildMemberChangesForUpdateRequest(obj4);
+              const obj5 = {
+                pendingBanner,
+                pendingBio,
+                pendingPronouns,
+                pendingThemeColors,
+                pendingProfileEffect,
+                pendingProfileFrame,
+              };
               let id;
+              const getProfileChangesForUpdateRequest = _false(pendingNickname[17]).getProfileChangesForUpdateRequest;
+              const tmp112 = _false(pendingNickname[17]);
               if (user != null) {
                 id = user.id;
               }
-              const profileChangesForUpdateRequest = closure_0(pendingNickname[17]).getProfileChangesForUpdateRequest(
-                {
-                  pendingBanner,
-                  pendingBio,
-                  pendingPronouns,
-                  pendingThemeColors,
-                  pendingProfileEffect,
-                  pendingProfileFrame,
-                },
-                id,
-              );
-              closure_130_2 = true;
-              closure_130_3 = false;
+              pendingAvatar = getProfileChangesForUpdateRequest(obj5, id);
+              tmp2 = true;
+              c3 = false;
               const _Object = Object;
               if (Object.keys(guildMemberChangesForUpdateRequest).length > 0) {
                 let id1;
+                const saveGuildIdentityChanges = _false(pendingNickname[15]).saveGuildIdentityChanges;
+                const tmp84 = _false(pendingNickname[15]);
                 if (user != null) {
                   id1 = user.id;
                 }
                 pendingBio = 1;
                 pendingPronouns = 1;
-                return {
-                  value: closure_0(pendingNickname[15]).saveGuildIdentityChanges(
-                    id1,
-                    guildMemberChangesForUpdateRequest,
-                  ),
-                  done: false,
-                };
+                const obj6 = { value: saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest), done: false };
+                return obj6;
               }
-              closure_0(pendingNickname[17]);
             }
           }
           yield "IconComponent";
-          if (1 === tmp6) {
+          if (1 === tmp5) {
             if (arg0 === 1) {
               pendingPronouns = 3;
               throw value;
             } else if (arg0 === 2) {
               pendingPronouns = 3;
-              return { value, done: true };
+              const obj7 = { value, done: true };
+              return obj7;
             } else {
-              closure_130_4 = value;
-              if (closure_130_4.ok) {
-                const body2 = closure_130_4.body;
+              let body;
+              pendingBio = value;
+              if (pendingBio.ok) {
+                body = pendingBio.body;
                 if (undefined !== pendingAvatar) {
-                  const obj12 = {
+                  const obj8 = {
                     isGuildProfile: true,
-                    avatarHash: body2.avatar,
-                    avatarId: closure_130_0.avatarId,
-                    avatarAssetOrigin: null,
+                    avatarHash: body.avatar,
+                    avatarId: guildMemberChangesForUpdateRequest.avatarId,
+                    avatarAssetOrigin: assetOrigin,
                   };
-                  let assetOrigin;
+                  assetOrigin = undefined;
+                  const trackUserAvatarUpdated = _false(pendingNickname[18]).trackUserAvatarUpdated;
+                  const tmp33 = _false(pendingNickname[18]);
                   if (pendingAvatar != null) {
                     assetOrigin = pendingAvatar.assetOrigin;
                   }
-                  obj12.avatarAssetOrigin = assetOrigin;
-                  const result = closure_0(pendingNickname[18]).trackUserAvatarUpdated(obj12);
-                  closure_0(pendingNickname[18]);
+                  const result = trackUserAvatarUpdated(obj8);
                 }
               } else {
                 let avatar;
-                if (closure_130_4 != null) {
-                  const body = closure_130_4.body;
+                if (pendingBio != null) {
+                  body = pendingBio.body;
                   if (body != null) {
                     avatar = body.avatar;
                   }
                 }
                 if (null != avatar) {
-                  const result1 = closure_0(pendingNickname[19]).showGenericGuildProfileUpdateFailureToast(
-                    closure_130_4.body.avatar,
-                  );
-                  closure_130_3 = true;
-                  closure_0(pendingNickname[19]);
+                  const obj11 = _false(pendingNickname[19]);
+                  const result1 = obj11.showGenericGuildProfileUpdateFailureToast(pendingBio.body.avatar);
+                  c3 = true;
                 }
               }
-              let tmp42 = closure_130_2;
-              if (closure_130_2) {
+              let tmp40 = tmp2;
+              if (tmp40) {
                 let ok;
-                if (closure_130_4 != null) {
-                  ok = closure_130_4.ok;
+                if (pendingBio != null) {
+                  ok = pendingBio.ok;
                 }
                 c0 = ok;
                 if (ok == null) {
                   c0 = false;
                 }
-                tmp42 = c0;
+                tmp40 = c0;
               }
-              closure_130_2 = tmp42;
+              tmp2 = tmp40;
             }
           } else if (arg0 === 1) {
             pendingPronouns = 3;
             throw value;
           } else if (arg0 === 2) {
             pendingPronouns = 3;
-            return { value, done: true };
+            const obj9 = { value, done: true };
+            return obj9;
           } else {
-            closure_130_8 = value;
+            pendingAvatarDecoration = value;
             let ok1;
-            if (closure_130_8 != null) {
-              ok1 = closure_130_8.ok;
+            if (pendingAvatarDecoration != null) {
+              ok1 = pendingAvatarDecoration.ok;
             }
             if (!ok1) {
-              const aPIError = new closure_0(pendingNickname[21]).APIError(closure_130_8);
+              const self = this;
+              const self2 = this;
+              const aPIError = new _false(pendingNickname[21]).APIError(pendingAvatarDecoration);
               const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("banner");
               if (null != firstFieldErrorMessage) {
-                const result2 = closure_0(pendingNickname[19]).showGenericGuildProfileUpdateFailureToast(
-                  firstFieldErrorMessage,
-                );
-                closure_130_3 = true;
-                closure_0(pendingNickname[19]);
+                const obj2 = _false(pendingNickname[19]);
+                const result2 = obj2.showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage);
+                c3 = true;
               }
             }
-            let tmp24 = closure_130_2;
-            if (closure_130_2) {
+            let tmp21 = tmp2;
+            if (tmp21) {
               let ok2;
-              if (closure_130_8 != null) {
-                ok2 = closure_130_8.ok;
+              if (pendingAvatarDecoration != null) {
+                ok2 = pendingAvatarDecoration.ok;
               }
               pendingAvatar = ok2;
               if (ok2 == null) {
                 pendingAvatar = false;
               }
-              tmp24 = pendingAvatar;
+              tmp21 = pendingAvatar;
             }
-            closure_130_2 = tmp24;
+            tmp2 = tmp21;
           }
-          let tmp54 = closure_130_2;
-          if (!closure_130_2) {
-            tmp54 = closure_130_3;
-          }
-          if (!tmp54) {
-            const intl = closure_0(pendingNickname[22]).intl;
-            const result3 = closure_0(pendingNickname[19]).showGenericGuildProfileUpdateFailureToast(
-              intl.string(closure_0(pendingNickname[22]).t.s35OuK),
+          const tmp52 = tmp2 || c3;
+          if (!tmp52) {
+            const showGenericGuildProfileUpdateFailureToast = _false(
+              pendingNickname[19],
+            ).showGenericGuildProfileUpdateFailureToast;
+            const tmp56 = _false(pendingNickname[19]);
+            const intl = _false(pendingNickname[22]).intl;
+            const result3 = showGenericGuildProfileUpdateFailureToast(
+              intl.string(_false(pendingNickname[22]).t.s35OuK),
             );
-            closure_0(pendingNickname[19]);
           }
-          if (closure_130_2) {
-            tmp22.delay();
+          const tmp63 = tmp2;
+          if (tmp63) {
+            currentUser.delay();
           }
-          return closure_130_2;
+          return tmp2;
         });
-        cResult[15] = tmp33;
+        cResult[15] = tmp34;
         cResult[16] = pendingAvatar;
         cResult[17] = pendingAvatarDecoration;
         cResult[18] = pendingBanner;
@@ -461,63 +457,63 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (selectedGuild != null) {
           class V {
             constructor() {
-              obj = closure_11;
-              guild = closure_11.getGuild(closure_14);
-              id = undefined;
+              const guild = GuildStore.getGuild(constants);
+              let id;
               if (guild != null) {
                 id = guild.id;
               }
               if (null != id) {
-                tmp3 = IGNORE_GUILD_IDS;
                 if (!IGNORE_GUILD_IDS.has(guild.id)) {
                   return guild;
                 }
               }
-              return obj.getGuild(closure_12.getFlattenedGuildIds()[0]);
+              return GuildStore.getGuild(SortedGuildStore.getFlattenedGuildIds()[0]);
             }
           }
         }
         const fn3 = function () {
-          const self = this;
-          const apply = closure_0.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
+          return closure_0(...arguments);
         };
         cResult[27] = undefined;
         cResult[28] = stateFromStores;
         cResult[29] = fn3;
-        const tmpResult8 = tmp(tmp2[11]);
       }
+      let obj2 = {};
       let merged = Object.assign(guildAutomodProfileQuarantineErrors);
       const merged1 = Object.assign(stateFromStoresObject.errors);
       cResult[6] = guildAutomodProfileQuarantineErrors;
       cResult[7] = stateFromStoresObject.errors;
-      cResult[8] = {};
-      const obj2 = {};
-      const tmpResult7 = require("initialize");
+      cResult[8] = obj2;
     }
   : () => {
-      const items = [memo];
-      stateFromStores = stateFromStores(pendingNickname[11]).useStateFromStores(items, () => memo.getCurrentUser());
+      let memo;
+      let pendingAvatarDecoration;
+      let pendingNameplate;
+      let pendingNickname;
+      let stateFromStores;
+      const tmp = stateFromStores;
+      const tmp2 = pendingNickname;
       let obj = stateFromStores(pendingNickname[11]);
+      const items = [memo];
+      stateFromStores = obj.useStateFromStores(items, () => memo.getCurrentUser());
+      let obj2 = stateFromStores(pendingNickname[11]);
       const items1 = [pendingAvatarDecoration, pendingNameplate];
-      const stateFromStoresObject = stateFromStores(pendingNickname[11]).useStateFromStoresObject(items1, () => {
+      const tmp4 = pendingAvatarDecoration;
+      const tmp5 = pendingNameplate;
+      const stateFromStoresObject = obj2.useStateFromStoresObject(items1, () => {
         const selectedGuildId = pendingAvatarDecoration.selectedGuildId;
-        const obj = {};
+        const obj = {
+          errors: pendingAvatarDecoration.getErrors(selectedGuildId),
+          selectedGuild: pendingNameplate.getGuild(selectedGuildId),
+          formState: pendingAvatarDecoration.getFormState(),
+        };
         const merged = Object.assign(pendingAvatarDecoration.getPendingChanges(selectedGuildId));
-        obj.errors = pendingAvatarDecoration.getErrors(selectedGuildId);
-        obj.selectedGuild = pendingNameplate.getGuild(selectedGuildId);
-        obj.formState = pendingAvatarDecoration.getFormState();
         return obj;
       });
       const pendingAvatar = stateFromStoresObject.pendingAvatar;
       pendingNickname = stateFromStoresObject.pendingNickname;
       const pendingBanner = stateFromStoresObject.pendingBanner;
-      const pendingBio = stateFromStoresObject.pendingBio;
+      let pendingBio = stateFromStoresObject.pendingBio;
       const pendingPronouns = stateFromStoresObject.pendingPronouns;
       const pendingThemeColors = stateFromStoresObject.pendingThemeColors;
       let selectedGuild = stateFromStoresObject.selectedGuild;
@@ -526,30 +522,30 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const pendingProfileFrame = stateFromStoresObject.pendingProfileFrame;
       pendingNameplate = stateFromStoresObject.pendingNameplate;
       const pendingDisplayNameStyles = stateFromStoresObject.pendingDisplayNameStyles;
-      const obj2 = stateFromStores(pendingNickname[11]);
-      const tmp4 = pendingAvatarDecoration;
-      const tmp5 = pendingNameplate;
+      const formState = stateFromStoresObject.formState;
       let id;
+      const useGuildAutomodProfileQuarantineErrors = stateFromStores(
+        pendingNickname[12],
+      ).useGuildAutomodProfileQuarantineErrors;
+      const tmp7 = stateFromStores(pendingNickname[12]);
       if (selectedGuild != null) {
         id = selectedGuild.id;
       }
-      const guildAutomodProfileQuarantineErrors = stateFromStores(
-        pendingNickname[12],
-      ).useGuildAutomodProfileQuarantineErrors(id);
-      const obj3 = stateFromStores(pendingNickname[12]);
+      const guildAutomodProfileQuarantineErrors = useGuildAutomodProfileQuarantineErrors(id);
       const items2 = [tmp4, pendingProfileFrame];
-      const stateFromStores1 = stateFromStores(pendingNickname[11]).useStateFromStores(items2, () => {
-        let isSubmitting = pendingAvatarDecoration.getFormState() === constants.SUBMITTING;
-        if (!isSubmitting) {
-          isSubmitting = pendingProfileFrame.isSubmitting;
-        }
+      const tmpResult = tmp(tmp2[11]);
+      const stateFromStores1 = tmpResult.useStateFromStores(items2, () => {
+        const isSubmitting =
+          pendingAvatarDecoration.getFormState() === constants.SUBMITTING || pendingProfileFrame.isSubmitting;
         return isSubmitting;
       });
+      const obj3 = {};
       let merged = Object.assign(guildAutomodProfileQuarantineErrors);
       const merged1 = Object.assign(stateFromStoresObject.errors);
       memo = selectedGuild.useMemo(() => {
         const delayedCall = new stateFromStores(pendingNickname[13]).DelayedCall(200, () => {
-          pendingAvatar(584).wait(stateFromStores(9419).resetAllPending);
+          const obj = pendingAvatar(pendingNickname[14]);
+          obj.wait(stateFromStores(pendingNickname[15]).resetAllPending);
         });
         return delayedCall;
       }, []);
@@ -557,18 +553,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const effect = selectedGuild.useEffect(
         () => () => {
           memo.cancel();
-          pendingAvatar(pendingNickname[14]).wait(stateFromStores(pendingNickname[15]).resetAllPending);
+          const obj = pendingAvatar(pendingNickname[14]);
+          obj.wait(stateFromStores(pendingNickname[15]).resetAllPending);
         },
         items3,
       );
       FormStates = pendingAvatar(tmp2[16])();
-      const obj4 = {};
-      const obj6 = selectedGuild;
-      const tmpResult = stateFromStores(pendingNickname[11]);
       const items4 = [tmp5, pendingDisplayNameStyles];
-      let tmp15 = stateFromStores1;
-      const stateFromStores2 = stateFromStores(pendingNickname[11]).useStateFromStores(items4, () => {
-        guild = GuildStore.getGuild(closure_14);
+      let tmp17 = stateFromStores1;
+      const tmpResult2 = tmp(tmp2[11]);
+      const stateFromStores2 = tmpResult2.useStateFromStores(items4, () => {
+        const guild = GuildStore.getGuild(constants);
         let id;
         if (guild != null) {
           id = guild.id;
@@ -580,196 +575,194 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return GuildStore.getGuild(SortedGuildStore.getFlattenedGuildIds()[0]);
       });
+      const tmp13 = selectedGuild;
       if (!stateFromStores1) {
-        tmp15 = stateFromStoresObject.formState === FormStates.CLOSED;
+        tmp17 = formState === FormStates.CLOSED;
       }
-      closure_15 = tmp15;
-      const items5 = [
-        tmp15,
-        stateFromStores,
-        pendingAvatar,
-        pendingNickname,
-        pendingAvatarDecoration,
-        pendingNameplate,
-        pendingDisplayNameStyles,
-        pendingBanner,
-        pendingBio,
-        pendingPronouns,
-        pendingThemeColors,
-        pendingProfileEffect,
-        pendingProfileFrame,
-        ,
-      ];
+      let closure_15 = tmp17;
+      const items5 = [, , , , , , , , , , , , , ,];
+      const useCallback = tmp13.useCallback;
+      items5[0] = tmp17;
+      items5[1] = stateFromStores;
+      items5[2] = pendingAvatar;
+      items5[3] = pendingNickname;
+      items5[4] = pendingAvatarDecoration;
+      items5[5] = pendingNameplate;
+      items5[6] = pendingDisplayNameStyles;
+      items5[7] = pendingBanner;
+      items5[8] = pendingBio;
+      items5[9] = pendingPronouns;
+      items5[10] = pendingThemeColors;
+      items5[11] = pendingProfileEffect;
+      items5[12] = pendingProfileFrame;
       let id1;
-      const tmpResult2 = stateFromStores(pendingNickname[11]);
+      const tmp19 = pendingThemeColors(function* () {
+        let _false;
+        let assetOrigin;
+        let c3;
+        let guildMemberChangesForUpdateRequest;
+        let value = tmp2;
+        if (!closure_15) {
+          if (null != stateFromStores) {
+            const obj4 = {
+              pendingAvatar,
+              pendingNickname,
+              pendingAvatarDecoration,
+              pendingNameplate,
+              pendingDisplayNameStyles,
+            };
+            const obj12 = _false(value[17]);
+            guildMemberChangesForUpdateRequest = obj12.getGuildMemberChangesForUpdateRequest(obj4);
+            const obj5 = {
+              pendingBanner,
+              pendingBio,
+              pendingPronouns,
+              pendingThemeColors,
+              pendingProfileEffect,
+              pendingProfileFrame,
+            };
+            let id;
+            const getProfileChangesForUpdateRequest = _false(value[17]).getProfileChangesForUpdateRequest;
+            const tmp112 = _false(value[17]);
+            if (selectedGuild != null) {
+              id = selectedGuild.id;
+            }
+            const _false2 = getProfileChangesForUpdateRequest(obj5, id);
+            value = true;
+            c3 = false;
+            const _Object = Object;
+            if (Object.keys(guildMemberChangesForUpdateRequest).length > 0) {
+              let id1;
+              const saveGuildIdentityChanges = _false(value[15]).saveGuildIdentityChanges;
+              const tmp84 = _false(value[15]);
+              if (selectedGuild != null) {
+                id1 = selectedGuild.id;
+              }
+              let c4 = 1;
+              let v3 = 1;
+              const obj6 = { value: saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest), done: false };
+              return obj6;
+            }
+          }
+        }
+        yield "IconComponent";
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            v3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            v3 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else {
+            let body;
+            pendingBio = value;
+            if (pendingBio.ok) {
+              body = pendingBio.body;
+              if (undefined !== closure_131_1) {
+                const obj8 = {
+                  isGuildProfile: true,
+                  avatarHash: body.avatar,
+                  avatarId: guildMemberChangesForUpdateRequest.avatarId,
+                  avatarAssetOrigin: assetOrigin,
+                };
+                assetOrigin = undefined;
+                const trackUserAvatarUpdated = _false(value[18]).trackUserAvatarUpdated;
+                const tmp33 = _false(value[18]);
+                if (closure_131_1 != null) {
+                  assetOrigin = closure_131_1.assetOrigin;
+                }
+                const result = trackUserAvatarUpdated(obj8);
+              }
+            } else {
+              let avatar;
+              if (pendingBio != null) {
+                body = pendingBio.body;
+                if (body != null) {
+                  avatar = body.avatar;
+                }
+              }
+              if (null != avatar) {
+                const obj11 = _false(value[19]);
+                const result1 = obj11.showGenericGuildProfileUpdateFailureToast(pendingBio.body.avatar);
+                c3 = true;
+              }
+            }
+            let tmp40 = value;
+            if (tmp40) {
+              let ok;
+              if (pendingBio != null) {
+                ok = pendingBio.ok;
+              }
+              _false = ok;
+              if (ok == null) {
+                _false = false;
+              }
+              tmp40 = _false;
+            }
+            value = tmp40;
+          }
+        } else if (arg0 === 1) {
+          v3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          v3 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
+        } else {
+          pendingAvatarDecoration = value;
+          let ok1;
+          if (pendingAvatarDecoration != null) {
+            ok1 = pendingAvatarDecoration.ok;
+          }
+          if (!ok1) {
+            const self = this;
+            const self2 = this;
+            const aPIError = new _false(value[21]).APIError(pendingAvatarDecoration);
+            const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("banner");
+            if (null != firstFieldErrorMessage) {
+              const obj2 = _false(value[19]);
+              const result2 = obj2.showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage);
+              c3 = true;
+            }
+          }
+          let tmp21 = value;
+          if (tmp21) {
+            let ok2;
+            if (pendingAvatarDecoration != null) {
+              ok2 = pendingAvatarDecoration.ok;
+            }
+            let c1 = ok2;
+            if (ok2 == null) {
+              c1 = false;
+            }
+            tmp21 = c1;
+          }
+          value = tmp21;
+        }
+        const tmp52 = value || c3;
+        if (!tmp52) {
+          const showGenericGuildProfileUpdateFailureToast = _false(value[19]).showGenericGuildProfileUpdateFailureToast;
+          const tmp56 = _false(value[19]);
+          const intl = _false(value[22]).intl;
+          const result3 = showGenericGuildProfileUpdateFailureToast(intl.string(_false(value[22]).t.s35OuK));
+        }
+        const tmp63 = value;
+        if (tmp63) {
+          closure_131_13.delay();
+        }
+        return value;
+      });
       if (selectedGuild != null) {
         id1 = selectedGuild.id;
       }
-      const obj5 = {
-        handleSubmit: obj6.useCallback(
-          pendingThemeColors(function* () {
-            closure_3 = tmp2;
-            if (!closure_15) {
-              if (null != stateFromStores) {
-                const guildMemberChangesForUpdateRequest = stateFromStores(
-                  tmp3[17],
-                ).getGuildMemberChangesForUpdateRequest({
-                  pendingAvatar,
-                  pendingNickname,
-                  pendingAvatarDecoration,
-                  pendingNameplate,
-                  pendingDisplayNameStyles,
-                });
-                closure_130_0 = guildMemberChangesForUpdateRequest;
-                stateFromStores(tmp3[17]);
-                let id;
-                if (selectedGuild != null) {
-                  id = selectedGuild.id;
-                }
-                const profileChangesForUpdateRequest = stateFromStores(tmp3[17]).getProfileChangesForUpdateRequest(
-                  {
-                    pendingBanner,
-                    pendingBio,
-                    pendingPronouns,
-                    pendingThemeColors,
-                    pendingProfileEffect,
-                    pendingProfileFrame,
-                  },
-                  id,
-                );
-                closure_130_2 = true;
-                closure_130_3 = false;
-                const _Object = Object;
-                if (Object.keys(guildMemberChangesForUpdateRequest).length > 0) {
-                  let id1;
-                  if (selectedGuild != null) {
-                    id1 = selectedGuild.id;
-                  }
-                  c4 = 1;
-                  let v1 = 1;
-                  return {
-                    value: stateFromStores(tmp3[15]).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest),
-                    done: false,
-                  };
-                }
-                stateFromStores(tmp3[17]);
-              }
-            }
-            yield "IconComponent";
-            if (1 === tmp6) {
-              if (arg0 === 1) {
-                v1 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                v1 = 3;
-                return { value, done: true };
-              } else {
-                closure_130_4 = value;
-                if (closure_130_4.ok) {
-                  const body2 = closure_130_4.body;
-                  if (undefined !== closure_131_1) {
-                    const obj12 = {
-                      isGuildProfile: true,
-                      avatarHash: body2.avatar,
-                      avatarId: closure_130_0.avatarId,
-                      avatarAssetOrigin: null,
-                    };
-                    let assetOrigin;
-                    if (closure_131_1 != null) {
-                      assetOrigin = closure_131_1.assetOrigin;
-                    }
-                    obj12.avatarAssetOrigin = assetOrigin;
-                    const result = stateFromStores(tmp3[18]).trackUserAvatarUpdated(obj12);
-                    stateFromStores(tmp3[18]);
-                  }
-                } else {
-                  let avatar;
-                  if (closure_130_4 != null) {
-                    const body = closure_130_4.body;
-                    if (body != null) {
-                      avatar = body.avatar;
-                    }
-                  }
-                  if (null != avatar) {
-                    const result1 = stateFromStores(tmp3[19]).showGenericGuildProfileUpdateFailureToast(
-                      closure_130_4.body.avatar,
-                    );
-                    closure_130_3 = true;
-                    stateFromStores(tmp3[19]);
-                  }
-                }
-                let tmp42 = closure_130_2;
-                if (closure_130_2) {
-                  let ok;
-                  if (closure_130_4 != null) {
-                    ok = closure_130_4.ok;
-                  }
-                  stateFromStores = ok;
-                  if (ok == null) {
-                    stateFromStores = false;
-                  }
-                  tmp42 = stateFromStores;
-                }
-                closure_130_2 = tmp42;
-              }
-            } else if (arg0 === 1) {
-              v1 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              v1 = 3;
-              return { value, done: true };
-            } else {
-              closure_130_8 = value;
-              let ok1;
-              if (closure_130_8 != null) {
-                ok1 = closure_130_8.ok;
-              }
-              if (!ok1) {
-                const aPIError = new stateFromStores(tmp3[21]).APIError(closure_130_8);
-                const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("banner");
-                if (null != firstFieldErrorMessage) {
-                  const result2 = stateFromStores(tmp3[19]).showGenericGuildProfileUpdateFailureToast(
-                    firstFieldErrorMessage,
-                  );
-                  closure_130_3 = true;
-                  stateFromStores(tmp3[19]);
-                }
-              }
-              let tmp24 = closure_130_2;
-              if (closure_130_2) {
-                let ok2;
-                if (closure_130_8 != null) {
-                  ok2 = closure_130_8.ok;
-                }
-                c1 = ok2;
-                if (ok2 == null) {
-                  c1 = false;
-                }
-                tmp24 = c1;
-              }
-              closure_130_2 = tmp24;
-            }
-            let tmp54 = closure_130_2;
-            if (!closure_130_2) {
-              tmp54 = closure_130_3;
-            }
-            if (!tmp54) {
-              const intl = stateFromStores(tmp3[22]).intl;
-              const result3 = stateFromStores(tmp3[19]).showGenericGuildProfileUpdateFailureToast(
-                intl.string(stateFromStores(tmp3[22]).t.s35OuK),
-              );
-              stateFromStores(tmp3[19]);
-            }
-            if (closure_130_2) {
-              closure_131_13.delay();
-            }
-            return closure_130_2;
-          }),
-          items5,
-        ),
-        isDisabled: tmp15,
+      let obj4 = {
+        handleSubmit: useCallback(tmp19, items5),
+        isDisabled: tmp17,
         isSubmitting: stateFromStores1,
-        resetPending: stateFromStores(pendingNickname[15]).resetAllPending,
+        resetPending: tmp(tmp2[15]).resetAllPending,
+        guild: selectedGuild,
+        errors: obj3,
       };
       items5[13] = id1;
       items5[14] = memo;
@@ -777,8 +770,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (selectedGuild == null) {
         selectedGuild = stateFromStores2;
       }
-      obj5.guild = selectedGuild;
-      obj5.errors = obj4;
-      return obj5;
+      return obj4;
     };
+let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useGuildProfileEditForm.tsx");
+
+export default tmp2;
 export const RESET_DELAY_MS = 200;

@@ -1,26 +1,30 @@
 // discord_app/modules/voice_panel/native/alerts/VoicePanelNoJoinPermissionsAlert.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import util from "../../../../intl/index.native.tsx";
-import AlertModal from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import intl4 from "../../../../intl/index.native.tsx";
+import AlertModal2 from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import VoicePanelLockedIconDefault from "VoicePanelLockedIcon.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNoJoinPermissionsAlert.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(6);
-      const dismissModalCallback = AlertModal.useDismissModalCallback();
+      let tmp15;
+      let tmp5;
+      let tmp6;
+      let tmp7;
+      const obj = react2;
+      const cResult = obj.c(6);
+      const obj2 = AlertModal2;
+      const dismissModalCallback = obj2.useDismissModalCallback();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp10 = jsx(VoicePanelLockedIconDefault, {});
-        const intl = util.intl;
-        const stringResult = intl.string(util.t["7/2/3M"]);
-        const intl2 = util.intl;
-        const stringResult1 = intl2.string(util.t.xsenup);
+        const intl = intl4.intl;
+        const stringResult = intl.string(intl4.t["7/2/3M"]);
+        const intl2 = intl4.intl;
+        const stringResult1 = intl2.string(intl4.t.xsenup);
         cResult[0] = tmp10;
         cResult[1] = stringResult;
         cResult[2] = stringResult1;
@@ -31,46 +35,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         [tmp5, tmp6, tmp7] = cResult;
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl3 = util.intl;
-        const stringResult2 = intl3.string(util.t["NX+WJN"]);
+        const intl3 = intl4.intl;
+        const stringResult2 = intl3.string(intl4.t["NX+WJN"]);
         cResult[3] = stringResult2;
-        let tmp13 = stringResult2;
-      } else {
-        tmp13 = cResult[3];
       }
       if (cResult[4] !== dismissModalCallback) {
-        const obj3 = { header: tmp5, title: tmp6, content: tmp7, actions: null };
-        const obj4 = { variant: "secondary", text: tmp13, onPress: dismissModalCallback };
-        obj3.actions = jsx(AlertModal.AlertActionButton, {
-          variant: "secondary",
-          text: tmp13,
-          onPress: dismissModalCallback,
-        });
-        const tmp17 = jsx(AlertModal.AlertModal, { header: tmp5, title: tmp6, content: tmp7, actions: null });
+        const AlertModal = AlertModal2.AlertModal;
+        const tmp17 = <AlertModal header={tmp5} title={tmp6} content={tmp7} actions={null} />;
         cResult[4] = dismissModalCallback;
         cResult[5] = tmp17;
-        let tmp15 = tmp17;
+        tmp15 = tmp17;
       } else {
         tmp15 = cResult[5];
       }
       return tmp15;
     }
   : () => {
-      const obj2 = { header: jsx(VoicePanelLockedIconDefault, {}), title: null, content: null, actions: null };
-      const intl = util.intl;
-      obj2.title = intl.string(util.t["7/2/3M"]);
-      const intl2 = util.intl;
-      obj2.content = intl2.string(util.t.xsenup);
-      const obj3 = { variant: "secondary", text: null, onPress: null };
-      const intl3 = util.intl;
-      obj3.text = intl3.string(util.t["NX+WJN"]);
-      obj3.onPress = AlertModal.useDismissModalCallback();
-      obj2.actions = jsx(AlertModal.AlertActionButton, { variant: "secondary", text: null, onPress: null });
-      return jsx(AlertModal.AlertModal, {
-        header: jsx(VoicePanelLockedIconDefault, {}),
-        title: null,
-        content: null,
-        actions: null,
-      });
+      let intl3;
+      const obj = AlertModal2;
+      const dismissModalCallback = obj.useDismissModalCallback();
+      const AlertModal = AlertModal2.AlertModal;
+      const intl = intl4.intl;
+      const intl2 = intl4.intl;
+      ({ variant: "secondary", text: intl3.string(intl4.t["NX+WJN"]), onPress: dismissModalCallback });
+      const AlertActionButton = AlertModal2.AlertActionButton;
+      intl3 = intl4.intl;
+      return (
+        <AlertModal
+          header={null}
+          title={intl.string(intl4.t["7/2/3M"])}
+          content={intl2.string(intl4.t.xsenup)}
+          actions={null}
+        />
+      );
     };
+const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNoJoinPermissionsAlert.tsx");
+
+export default tmp3;
 export const VOICE_PANEL_NO_JOIN_PERMS_KEY = "voice-panel-no-join-perms";

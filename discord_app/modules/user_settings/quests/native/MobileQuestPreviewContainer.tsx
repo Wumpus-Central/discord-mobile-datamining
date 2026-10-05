@@ -1,46 +1,51 @@
 // discord_app/modules/user_settings/quests/native/MobileQuestPreviewContainer.tsx
-import _mod17 from "../../../../../_runtime/metro/00017__.js";
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const View = _mod17.View;
-({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let obj = {
-  container: { marginTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 },
-  title: null,
-};
-let obj2 = { marginTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
-obj.title = { marginBottom: nativeDefault.space.PX_16 };
-let closure_5 = createStyles.createStyles(obj);
-let obj3 = { marginBottom: nativeDefault.space.PX_16 };
-const result = size.fileFinishedImporting("modules/user_settings/quests/native/MobileQuestPreviewContainer.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let c3;
+let closure_4;
+let obj2;
+let obj3;
+const View = react_native.View;
+({ jsx: c3, jsxs: closure_4 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { container: obj2, title: obj3 };
+obj2 = { marginTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles = createStyles.createStyles;
+obj3 = { marginBottom: nativeDefault.space.PX_16 };
+let closure_5 = createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(7);
+      let children;
+      let items;
+      let title;
+      const obj = react;
+      const cResult = obj.c(7);
       ({ children, title } = arg0);
       const tmp4 = closure_5();
       if (cResult[0] === tmp4.title) {
+        let tmp5;
         if (cResult[1] === title) {
-          let tmp5 = cResult[2];
+          tmp5 = cResult[2];
         }
         if (cResult[3] === children) {
           if (cResult[4] === tmp4.container) {
+            let tmp8;
             if (cResult[5] === tmp5) {
-              let tmp8 = cResult[6];
+              tmp8 = cResult[6];
             }
             return tmp8;
           }
         }
-        const obj2 = { style: tmp4.container, children: null };
-        const items = [tmp5, children];
-        obj2.children = items;
-        const tmp11 = React4(View, obj2);
+        const obj2 = { style: tmp4.container, children: items };
+        items = [tmp5, children];
+        const tmp11 = React3(View, obj2);
         cResult[3] = children;
         cResult[4] = tmp4.container;
         cResult[5] = tmp5;
@@ -50,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp6 = null != title;
       if (tmp6) {
         const obj3 = { variant: "text-lg/semibold", color: "text-default", style: tmp4.title, children: title };
-        tmp6 = React3(Text_Text.Text, obj3);
+        tmp6 = _false(Text_Text.Text, obj3);
       }
       cResult[0] = tmp4.title;
       cResult[1] = title;
@@ -58,15 +63,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp6;
     }
   : (title) => {
+      let items;
       title = title.title;
+      const children = title.children;
       const tmp = closure_5();
-      const obj = { style: tmp.container, children: null };
       let tmp4 = null != title;
+      const obj = { style: tmp.container, children: items };
       if (tmp4) {
         const obj2 = { variant: "text-lg/semibold", color: "text-default", style: tmp.title, children: title };
-        tmp4 = React3(Text_Text.Text, obj2);
+        tmp4 = _false(Text_Text.Text, obj2);
       }
-      const items = [tmp4, title.children];
-      obj.children = items;
-      return React4(View, obj);
+      items = [tmp4, children];
+      return React3(View, obj);
     };
+const result = size.fileFinishedImporting("modules/user_settings/quests/native/MobileQuestPreviewContainer.tsx");
+
+export default tmp4;

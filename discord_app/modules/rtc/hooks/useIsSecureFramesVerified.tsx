@@ -5,45 +5,53 @@ import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 import SecureFramesVerifiedStore from "../SecureFramesVerifiedStore.tsx";
 import TransientKeyStore from "../TransientKeyStore.tsx";
 import VerifiedKeyStore from "../VerifiedKeyStore.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-fn(558);
-let ReactCompilerGating = fn(558);
+let streamKey, userId;
+
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (userId) => {
-      const cResult = userId(userKey[6]).c(8);
+      let channelId;
+      let tmp4;
+      let tmp6;
+      let userKey;
+      const obj = userId(userKey[6]);
+      const cResult = obj.c(8);
       userId = userId.userId;
       ({ channelId, userKey } = userId);
       if (cResult[0] !== channelId) {
         const obj2 = { channelId };
         cResult[0] = channelId;
         cResult[1] = obj2;
-        let tmp4 = obj2;
+        tmp4 = obj2;
       } else {
         tmp4 = cResult[1];
       }
-      const obj = userId(userKey[6]);
-      const isSecureFramesUIEnabled = userId(userKey[7]).useIsSecureFramesUIEnabled(tmp4);
+      const tmpResult = userId(userKey[7]);
+      const isSecureFramesUIEnabled = tmpResult.useIsSecureFramesUIEnabled(tmp4);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [
-          SecureFramesVerifiedStore,
-          isSecureFramesUIEnabled,
-          RTCConnectionStore,
-          VerifiedKeyStore,
-          TransientKeyStore,
-        ];
+        const items = [SecureFramesVerifiedStore, , , ,];
+        items[1] = isSecureFramesUIEnabled;
+        items[2] = RTCConnectionStore;
+        items[3] = VerifiedKeyStore;
+        items[4] = TransientKeyStore;
         cResult[2] = items;
-        let tmp6 = items;
+        tmp6 = items;
       } else {
         tmp6 = cResult[2];
       }
       if (cResult[3] === isSecureFramesUIEnabled) {
         if (cResult[4] === userId) {
+          let tmp12;
+          let tmp13;
           if (cResult[5] === userKey) {
-            let tmp12 = cResult[6];
-            let tmp13 = cResult[7];
+            tmp12 = cResult[6];
+            tmp13 = cResult[7];
           }
-          return tmp(userKey[8]).useStateFromStores(tmp6, tmp12, tmp13);
+          const tmpResult2 = userId(userKey[8]);
+          return tmpResult2.useStateFromStores(tmp6, tmp12, tmp13);
         }
       }
       const fn = function h() {
@@ -57,11 +65,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   return false;
                 } else {
                   const _Uint8Array = Uint8Array;
+                  const self = this;
+                  const self2 = this;
                   const uint8Array = new Uint8Array(userKey);
-                  let isKeyVerifiedResult = VerifiedKeyStore.isKeyVerified(userId, uint8Array);
-                  if (!isKeyVerifiedResult) {
-                    isKeyVerifiedResult = TransientKeyStore.isKeyVerified(userId, uint8Array);
-                  }
+                  const isKeyVerifiedResult =
+                    VerifiedKeyStore.isKeyVerified(userId, uint8Array) ||
+                    TransientKeyStore.isKeyVerified(userId, uint8Array);
                   return isKeyVerifiedResult;
                 }
               }
@@ -78,13 +87,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = items1;
       tmp13 = items1;
       tmp12 = fn;
-      const tmpResult = userId(userKey[7]);
     }
-  : (channelId) => {
-      const userId = channelId.userId;
-      const userKey = channelId.userKey;
-      const isSecureFramesUIEnabled = userId(userKey[7]).useIsSecureFramesUIEnabled({ channelId: channelId.channelId });
+  : (userId) => {
+      userId = userId.userId;
+      const userKey = userId.userKey;
+      const channelId = userId.channelId;
       const obj = userId(userKey[7]);
+      const isSecureFramesUIEnabled = obj.useIsSecureFramesUIEnabled({ channelId });
       const items = [
         SecureFramesVerifiedStore,
         isSecureFramesUIEnabled,
@@ -93,9 +102,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         TransientKeyStore,
       ];
       const items1 = [isSecureFramesUIEnabled, userId, userKey];
-      return userId(userKey[8]).useStateFromStores(
+      const obj2 = userId(userKey[8]);
+      return obj2.useStateFromStores(
         items,
-        () => {
+        function () {
           if (null != userId) {
             if (isSecureFramesUIEnabled) {
               if (RTCConnectionStore.isUserConnected(userId)) {
@@ -106,11 +116,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     return false;
                   } else {
                     const _Uint8Array = Uint8Array;
+                    const self = this;
+                    const self2 = this;
                     const uint8Array = new Uint8Array(userKey);
-                    let isKeyVerifiedResult = VerifiedKeyStore.isKeyVerified(userId, uint8Array);
-                    if (!isKeyVerifiedResult) {
-                      isKeyVerifiedResult = TransientKeyStore.isKeyVerified(userId, uint8Array);
-                    }
+                    const isKeyVerifiedResult =
+                      VerifiedKeyStore.isKeyVerified(userId, uint8Array) ||
+                      TransientKeyStore.isKeyVerified(userId, uint8Array);
                     return isKeyVerifiedResult;
                   }
                 }
@@ -122,38 +133,45 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (streamKey) => {
-      const cResult = streamKey(isSecureFramesUIEnabled[6]).c(8);
+      let isSecureFramesUIEnabled;
+      let tmp4;
+      let tmp7;
+      let obj = streamKey(isSecureFramesUIEnabled[6]);
+      const cResult = obj.c(8);
       streamKey = streamKey.streamKey;
       const channelId = streamKey.channelId;
       if (cResult[0] !== channelId) {
         const obj2 = { channelId };
         cResult[0] = channelId;
         cResult[1] = obj2;
-        let tmp4 = obj2;
+        tmp4 = obj2;
       } else {
         tmp4 = cResult[1];
       }
-      const obj = streamKey(isSecureFramesUIEnabled[6]);
-      isSecureFramesUIEnabled = streamKey(isSecureFramesUIEnabled[7]).useIsSecureFramesUIEnabled(tmp4);
       const tmpResult = streamKey(isSecureFramesUIEnabled[7]);
-      const isStreamRTCConnectionEmpty = streamKey(isSecureFramesUIEnabled[9]).useIsStreamRTCConnectionEmpty(streamKey);
+      isSecureFramesUIEnabled = tmpResult.useIsSecureFramesUIEnabled(tmp4);
+      const tmpResult3 = streamKey(isSecureFramesUIEnabled[9]);
+      const isStreamRTCConnectionEmpty = tmpResult3.useIsStreamRTCConnectionEmpty(streamKey);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SecureFramesVerifiedStore, isStreamRTCConnectionEmpty];
         cResult[2] = items;
-        let tmp7 = items;
+        tmp7 = items;
       } else {
         tmp7 = cResult[2];
       }
       if (cResult[3] === isStreamRTCConnectionEmpty) {
         if (cResult[4] === isSecureFramesUIEnabled) {
+          let tmp10;
+          let tmp11;
           if (cResult[5] === streamKey) {
-            let tmp10 = cResult[6];
-            let tmp11 = cResult[7];
+            tmp10 = cResult[6];
+            tmp11 = cResult[7];
           }
-          return tmp(tmp2[8]).useStateFromStores(tmp7, tmp10, tmp11);
+          const tmpResult4 = streamKey(isSecureFramesUIEnabled[8]);
+          return tmpResult4.useStateFromStores(tmp7, tmp10, tmp11);
         }
       }
       const fn = function f() {
@@ -163,10 +181,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               return false;
             } else {
               const id = AuthenticationStore.getId();
-              let isStreamVerifiedResult = StreamKeyUtils.decodeStreamKey(streamKey).ownerId !== id;
-              if (isStreamVerifiedResult) {
-                isStreamVerifiedResult = SecureFramesVerifiedStore.isStreamVerified(streamKey);
-              }
+              const obj = StreamKeyUtils;
+              const isStreamVerifiedResult =
+                obj.decodeStreamKey(streamKey).ownerId !== id && SecureFramesVerifiedStore.isStreamVerified(streamKey);
               return isStreamVerifiedResult;
             }
           }
@@ -181,20 +198,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = items1;
       tmp11 = items1;
       tmp10 = fn;
-      const tmpResult3 = streamKey(isSecureFramesUIEnabled[9]);
     }
-  : (channelId) => {
-      const streamKey = channelId.streamKey;
+  : (streamKey) => {
+      streamKey = streamKey.streamKey;
       let isSecureFramesUIEnabled;
-      isSecureFramesUIEnabled = streamKey(isSecureFramesUIEnabled[7]).useIsSecureFramesUIEnabled({
-        channelId: channelId.channelId,
-      });
-      const obj = streamKey(isSecureFramesUIEnabled[7]);
-      const isStreamRTCConnectionEmpty = streamKey(isSecureFramesUIEnabled[9]).useIsStreamRTCConnectionEmpty(streamKey);
+      const channelId = streamKey.channelId;
+      let obj = streamKey(isSecureFramesUIEnabled[7]);
+      isSecureFramesUIEnabled = obj.useIsSecureFramesUIEnabled({ channelId });
       const obj2 = streamKey(isSecureFramesUIEnabled[9]);
+      const isStreamRTCConnectionEmpty = obj2.useIsStreamRTCConnectionEmpty(streamKey);
       const items = [SecureFramesVerifiedStore, isStreamRTCConnectionEmpty];
       const items1 = [isStreamRTCConnectionEmpty, isSecureFramesUIEnabled, streamKey];
-      return streamKey(isSecureFramesUIEnabled[8]).useStateFromStores(
+      const obj3 = streamKey(isSecureFramesUIEnabled[8]);
+      return obj3.useStateFromStores(
         items,
         () => {
           if (isSecureFramesUIEnabled) {
@@ -203,10 +219,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 return false;
               } else {
                 const id = AuthenticationStore.getId();
-                let isStreamVerifiedResult = StreamKeyUtils.decodeStreamKey(streamKey).ownerId !== id;
-                if (isStreamVerifiedResult) {
-                  isStreamVerifiedResult = SecureFramesVerifiedStore.isStreamVerified(streamKey);
-                }
+                const obj = StreamKeyUtils;
+                const isStreamVerifiedResult =
+                  obj.decodeStreamKey(streamKey).ownerId !== id &&
+                  SecureFramesVerifiedStore.isStreamVerified(streamKey);
                 return isStreamVerifiedResult;
               }
             }
@@ -216,50 +232,52 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesVerified.tsx");
-
-export const useIsUserSecureFramesVerified = tmp2;
-export const useIsStreamSecureFramesVerified = tmp3;
-export const useIsCallSecureFramesVerified = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channelId) => {
-      const cResult = isSecureFramesUIEnabled(isCallRTCConnectionEmpty[6]).c(7);
+      let isCallRTCConnectionEmpty;
+      let isSecureFramesUIEnabled;
+      let tmp4;
+      let tmp7;
+      let tmp = isSecureFramesUIEnabled;
+      const obj = isSecureFramesUIEnabled(isCallRTCConnectionEmpty[6]);
+      const cResult = obj.c(7);
       channelId = channelId.channelId;
       if (cResult[0] !== channelId) {
         const obj2 = { channelId };
         cResult[0] = channelId;
         cResult[1] = obj2;
-        let tmp4 = obj2;
+        tmp4 = obj2;
       } else {
         tmp4 = cResult[1];
       }
-      const obj = isSecureFramesUIEnabled(isCallRTCConnectionEmpty[6]);
-      isSecureFramesUIEnabled = isSecureFramesUIEnabled(isCallRTCConnectionEmpty[7]).useIsSecureFramesUIEnabled(tmp4);
-      const tmpResult = isSecureFramesUIEnabled(isCallRTCConnectionEmpty[7]);
-      isCallRTCConnectionEmpty = isSecureFramesUIEnabled(isCallRTCConnectionEmpty[9]).useIsCallRTCConnectionEmpty();
+      const tmpResult = tmp(isCallRTCConnectionEmpty[7]);
+      isSecureFramesUIEnabled = tmpResult.useIsSecureFramesUIEnabled(tmp4);
+      const tmpResult3 = tmp(isCallRTCConnectionEmpty[9]);
+      isCallRTCConnectionEmpty = tmpResult3.useIsCallRTCConnectionEmpty();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SecureFramesVerifiedStore];
         cResult[2] = items;
-        let tmp7 = items;
+        tmp7 = items;
       } else {
         tmp7 = cResult[2];
       }
       if (cResult[3] === isCallRTCConnectionEmpty) {
+        let tmp9;
+        let tmp10;
         if (cResult[4] === isSecureFramesUIEnabled) {
-          let tmp9 = cResult[5];
-          let tmp10 = cResult[6];
+          tmp9 = cResult[5];
+          tmp10 = cResult[6];
         }
-        return tmp(tmp2[8]).useStateFromStores(tmp7, tmp9, tmp10);
+        const tmpResult4 = tmp(isCallRTCConnectionEmpty[8]);
+        return tmpResult4.useStateFromStores(tmp7, tmp9, tmp10);
       }
       const fn = function o() {
         let tmp = !isSecureFramesUIEnabled;
         if (isSecureFramesUIEnabled) {
           tmp = isCallRTCConnectionEmpty;
         }
-        let isCallVerifiedResult = !tmp;
-        if (!tmp) {
-          isCallVerifiedResult = SecureFramesVerifiedStore.isCallVerified();
-        }
+        const isCallVerifiedResult = !tmp && SecureFramesVerifiedStore.isCallVerified();
         return isCallVerifiedResult;
       };
       const items1 = [isCallRTCConnectionEmpty, isSecureFramesUIEnabled];
@@ -269,32 +287,33 @@ export const useIsCallSecureFramesVerified = ReactCompilerGating.isReactCompiler
       cResult[6] = items1;
       tmp10 = items1;
       tmp9 = fn;
-      const tmpResult3 = isSecureFramesUIEnabled(isCallRTCConnectionEmpty[9]);
     }
   : (channelId) => {
       let isSecureFramesUIEnabled;
       let isCallRTCConnectionEmpty;
-      isSecureFramesUIEnabled = isSecureFramesUIEnabled(isCallRTCConnectionEmpty[7]).useIsSecureFramesUIEnabled({
-        channelId: channelId.channelId,
-      });
+      channelId = channelId.channelId;
       const obj = isSecureFramesUIEnabled(isCallRTCConnectionEmpty[7]);
-      isCallRTCConnectionEmpty = isSecureFramesUIEnabled(isCallRTCConnectionEmpty[9]).useIsCallRTCConnectionEmpty();
+      isSecureFramesUIEnabled = obj.useIsSecureFramesUIEnabled({ channelId });
       const obj2 = isSecureFramesUIEnabled(isCallRTCConnectionEmpty[9]);
+      isCallRTCConnectionEmpty = obj2.useIsCallRTCConnectionEmpty();
       const items = [SecureFramesVerifiedStore];
       const items1 = [isCallRTCConnectionEmpty, isSecureFramesUIEnabled];
-      return isSecureFramesUIEnabled(isCallRTCConnectionEmpty[8]).useStateFromStores(
+      const obj3 = isSecureFramesUIEnabled(isCallRTCConnectionEmpty[8]);
+      return obj3.useStateFromStores(
         items,
         () => {
           let tmp = !isSecureFramesUIEnabled;
           if (isSecureFramesUIEnabled) {
             tmp = isCallRTCConnectionEmpty;
           }
-          let isCallVerifiedResult = !tmp;
-          if (!tmp) {
-            isCallVerifiedResult = SecureFramesVerifiedStore.isCallVerified();
-          }
+          const isCallVerifiedResult = !tmp && SecureFramesVerifiedStore.isCallVerified();
           return isCallVerifiedResult;
         },
         items1,
       );
     };
+const result = size.fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesVerified.tsx");
+
+export const useIsUserSecureFramesVerified = tmp2;
+export const useIsStreamSecureFramesVerified = tmp3;
+export const useIsCallSecureFramesVerified = tmp4;

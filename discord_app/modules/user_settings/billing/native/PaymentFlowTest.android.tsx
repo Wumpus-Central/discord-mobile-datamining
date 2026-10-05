@@ -1,36 +1,49 @@
 // discord_app/modules/user_settings/billing/native/PaymentFlowTest.android.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import NativePaymentContext from "../../../payments/native/NativePaymentContext.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
 import UserStore from "../../../../stores/UserStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ScrollView = fn(17).ScrollView;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
-let obj = {
-  wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
-  container: null,
-  textInput: null,
-  title: null,
-};
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.container = { padding: nativeDefault.space.PX_16 };
-obj.textInput = { marginBottom: 16 };
-obj.title = { marginBottom: 8 };
-let closure_9 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
+let importDefault;
+
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let obj3;
+const ScrollView = react_native.ScrollView;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { wrap: obj2, container: obj3, textInput: { marginBottom: 16 }, title: { marginBottom: 8 } };
+obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles = createStyles.createStyles;
+obj3 = { padding: nativeDefault.space.PX_16 };
+let closure_9 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = value(first1[8]).c(31);
+      let closure_1;
+      let currentUser;
+      let first1;
+      let first2;
+      let items1;
+      let tmp8;
+      let tmp9;
+      let value;
+      let tmp2 = first1;
+      let obj = value(first1[8]);
+      const cResult = obj.c(31);
       const tmp4 = closure_9();
-      const tmp6 = first2(noop.useState("1341506443580276736"), 2);
+      const tmp6 = first2(react.useState("1341506443580276736"), 2);
       value = tmp6[0];
       importDefault = tmp6[1];
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -45,37 +58,44 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp8, tmp9] = cResult;
       }
-      let obj = value(first1[8]);
-      const stateFromStores = value(first1[9]).useStateFromStores(tmp8, tmp9);
+      const tmpResult = value(tmp2[9]);
+      const stateFromStores = tmpResult.useStateFromStores(tmp8, tmp9);
       let id;
+      const useState = react.useState;
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
-      const tmp5Result = first2(noop.useState(id), 2);
+      const tmp5Result = first2(useState(id), 2);
       first1 = tmp5Result[0];
-      const tmpResult = value(first1[9]);
-      first2 = first2(noop.useState(undefined), 2)[0];
+      const tmp15 = tmp5Result[1];
+      const tmp5Result2 = first2(react.useState(undefined), 2);
+      first2 = tmp5Result2[0];
       if (cResult[2] === first2) {
         if (cResult[3] === first1) {
+          let tmp19;
+          let tmp23;
           if (cResult[4] === value) {
-            let tmp18 = cResult[5];
+            tmp19 = cResult[5];
           }
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp21 = closure_7(tmp(tmp2[10]).Text, {
+            cResult[6] = closure_7(value(tmp2[10]).Text, {
               variant: "text-lg/bold",
               children: "Android Payment Flow Test",
             });
-            cResult[6] = tmp21;
+            const tmp22 = closure_7(value(tmp2[10]).Text, {
+              variant: "text-lg/bold",
+              children: "Android Payment Flow Test",
+            });
           }
           if (cResult[7] !== tmp4.title) {
             let obj3 = { style: tmp4.title, variant: "text-md/bold", children: "Gift Purchase SKU" };
-            const tmp24 = closure_7(tmp(tmp2[10]).Text, obj3);
+            const tmp25 = closure_7(value(tmp2[10]).Text, obj3);
             cResult[7] = tmp4.title;
-            cResult[8] = tmp24;
-            let tmp22 = tmp24;
+            cResult[8] = tmp25;
+            tmp23 = tmp25;
           } else {
-            tmp22 = cResult[8];
+            tmp23 = cResult[8];
           }
           const _Symbol2 = Symbol;
           if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
@@ -110,61 +130,60 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                     return closure_1(arg0);
                   }
                 }
-                if (cResult[19] === tmp18) {
+                if (cResult[19] === tmp19) {
                   class U {
                     constructor(arg0) {
                       return closure_1(arg0);
                     }
                   }
-                  if (cResult[22] === tmp36) {
+                  if (cResult[22] === tmp37) {
                     class U {
                       constructor(arg0) {
                         return closure_1(arg0);
                       }
                     }
                   }
-                  const obj4 = { children: null };
-                  const items1 = [tmp22, tmp26, tmp29, tmp32, tmp36];
-                  obj4.children = items1;
-                  const tmp41 = closure_8(tmp(tmp2[13]).Card, obj4);
-                  cResult[22] = tmp36;
-                  cResult[23] = tmp22;
-                  cResult[24] = tmp26;
-                  cResult[25] = tmp29;
-                  cResult[26] = tmp32;
-                  cResult[27] = tmp41;
+                  const obj4 = { children: items1 };
+                  items1 = [tmp23, tmp27, tmp30, tmp33, tmp37];
+                  cResult[22] = tmp37;
+                  cResult[23] = tmp23;
+                  cResult[24] = tmp27;
+                  cResult[25] = tmp30;
+                  cResult[26] = tmp33;
+                  cResult[27] = closure_8(value(tmp2[13]).Card, obj4);
+                  const tmp42 = closure_8(value(tmp2[13]).Card, obj4);
                 }
-                const obj5 = { disabled: null === value || null === first1, text: "Send Gift", onPress: tmp18 };
-                const tmp38 = closure_7(tmp(tmp2[12]).Button, obj5);
-                cResult[19] = tmp18;
+                const obj5 = { disabled: null === value || null === first1, text: "Send Gift", onPress: tmp19 };
+                cResult[19] = tmp19;
                 cResult[20] = null === value || null === first1;
-                cResult[21] = tmp38;
+                cResult[21] = closure_7(value(tmp2[12]).Button, obj5);
+                const tmp39 = closure_7(value(tmp2[12]).Button, obj5);
               }
               const obj6 = {
                 containerStyle: tmp4.textInput,
                 label: "Gift Message (Optional)",
                 value: first2,
                 placeholder: "Here's a gift for you!",
-                onChange: tmp17,
+                onChange: tmp18,
                 clearable: true,
               };
-              const tmp34 = closure_7(tmp(tmp2[11]).TextInput, obj6);
               cResult[16] = first2;
               cResult[17] = tmp4.textInput;
-              cResult[18] = tmp34;
+              cResult[18] = closure_7(value(tmp2[11]).TextInput, obj6);
+              const tmp35 = closure_7(value(tmp2[11]).TextInput, obj6);
             }
             const obj7 = {
               containerStyle: tmp4.textInput,
               label: "Gift Recipient ID",
               value: first1,
               placeholder: "Recipient User ID",
-              onChange: tmp5Result[1],
+              onChange: tmp15,
               clearable: true,
             };
-            const tmp31 = closure_7(tmp(tmp2[11]).TextInput, obj7);
             cResult[13] = first1;
             cResult[14] = tmp4.textInput;
-            cResult[15] = tmp31;
+            cResult[15] = closure_7(value(tmp2[11]).TextInput, obj7);
+            const tmp32 = closure_7(value(tmp2[11]).TextInput, obj7);
           }
           const obj8 = {
             containerStyle: tmp4.textInput,
@@ -174,141 +193,128 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             onChange: U,
             clearable: true,
           };
-          const tmp28 = closure_7(tmp(tmp2[11]).TextInput, obj8);
           cResult[10] = value;
           cResult[11] = tmp4.textInput;
-          cResult[12] = tmp28;
+          cResult[12] = closure_7(value(tmp2[11]).TextInput, obj8);
+          const tmp29 = closure_7(value(tmp2[11]).TextInput, obj8);
         }
       }
       class I {
         constructor() {
-          tmp2 = null != closure_0;
-          tmp = closure_0;
+          const tmp2 = null != first && null != first1;
           if (tmp2) {
-            tmp3 = closure_2;
-            tmp2 = null != closure_2;
+            const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
+            const obj2 = ActionSheetActionCreatorsDefault;
+            obj2.hideActionSheet();
+            const obj3 = ActionSheetActionCreatorsDefault;
+            obj3.openLazy(asyncRequire(15573, dependencyMap.paths), "SimpleRequestOTPActionSheet", obj);
           }
-          if (tmp2) {
-            obj = { selectedSkuId: null, requestType: "giftSku", giftRecipientId: null, giftMessage: null };
-            obj.selectedSkuId = tmp;
-            tmp4 = closure_2;
-            obj.giftRecipientId = closure_2;
-            tmp5 = closure_3;
-            obj.giftMessage = closure_3;
-            tmp6 = closure_1;
-            tmp7 = closure_2;
-            obj2 = closure_1(closure_2[15]);
-            hideActionSheetResult = obj2.hideActionSheet();
-            obj3 = closure_1(closure_2[15]);
-            tmp9 = closure_0;
-            str = "SimpleRequestOTPActionSheet";
-            openLazyResult = obj3.openLazy(
-              closure_0(closure_2[17])(closure_2[16], closure_2.paths),
-              "SimpleRequestOTPActionSheet",
-              obj,
-            );
-          }
-          return;
         }
       }
       cResult[2] = first2;
       cResult[3] = first1;
       cResult[4] = value;
       cResult[5] = I;
-      tmp18 = I;
-      const tmp5Result2 = first2(noop.useState(undefined), 2);
+      tmp19 = I;
     }
   : () => {
+      let currentUser;
+      let first1;
+      let first2;
+      let items1;
       const tmp = closure_9();
-      const tmp3 = first2(noop.useState("1341506443580276736"), 2);
-      value = tmp3[0];
-      closure_1 = tmp3[1];
+      let tmp2 = first2;
+      const tmp3 = first2(react.useState("1341506443580276736"), 2);
+      const value = tmp3[0];
+      let closure_1 = tmp3[1];
+      let obj2 = value(first1[9]);
       const items = [UserStore];
-      const stateFromStores = value(first1[9]).useStateFromStores(items, () => currentUser.getCurrentUser());
+      const stateFromStores = obj2.useStateFromStores(items, () => currentUser.getCurrentUser());
       let id;
+      const useState = react.useState;
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
-      const tmp2Result = first2(noop.useState(id), 2);
+      const tmp2Result = tmp2(useState(id), 2);
       first1 = tmp2Result[0];
-      const tmp2Result2 = first2(noop.useState(undefined), 2);
+      const tmp11 = tmp2Result[1];
+      const tmp2Result2 = tmp2(react.useState(undefined), 2);
       first2 = tmp2Result2[0];
-      let obj3 = { spacing: 16, style: tmp.container, children: null };
-      const items1 = [
-        closure_7(value(first1[10]).Text, { variant: "text-lg/bold", children: "Android Payment Flow Test" }),
-      ];
-      const items2 = [
-        closure_7(value(first1[10]).Text, { style: tmp.title, variant: "text-md/bold", children: "Gift Purchase SKU" }),
-        closure_7(value(first1[11]).TextInput, {
-          containerStyle: tmp.textInput,
-          label: "SKU ID",
-          value,
-          placeholder: "Default: 1341506443580276736 (Anime Shy)",
-          onChange(arg0) {
-            return closure_1(arg0);
-          },
-          clearable: true,
-        }),
-        closure_7(value(first1[11]).TextInput, {
-          containerStyle: tmp.textInput,
-          label: "Gift Recipient ID",
-          value: first1,
-          placeholder: "Recipient User ID",
-          onChange: tmp2Result[1],
-          clearable: true,
-        }),
-        closure_7(value(first1[11]).TextInput, {
-          containerStyle: tmp.textInput,
-          label: "Gift Message (Optional)",
-          value: first2,
-          placeholder: "Here's a gift for you!",
-          onChange: tmp2Result2[1],
-          clearable: true,
-        }),
-      ];
-      let tmp15 = null === value;
-      if (!tmp15) {
-        tmp15 = null === first1;
+      let obj3 = { spacing: 16, style: tmp.container, children: items1 };
+      const tmp14 = tmp2Result2[1];
+      const Stack = tmp5(tmp6[14]).Stack;
+      items1 = [closure_7(value(first1[10]).Text, { variant: "text-lg/bold", children: "Android Payment Flow Test" })];
+      const Card = tmp5(tmp6[13]).Card;
+      const items2 = [, , , ,];
+      const obj4 = { style: tmp.title, variant: "text-md/bold", children: "Gift Purchase SKU" };
+      items2[0] = closure_7(value(first1[10]).Text, obj4);
+      const obj5 = {
+        containerStyle: tmp.textInput,
+        label: "SKU ID",
+        value,
+        placeholder: "Default: 1341506443580276736 (Anime Shy)",
+        onChange(arg0) {
+          return closure_1(arg0);
+        },
+        clearable: true,
+      };
+      items2[1] = closure_7(value(first1[11]).TextInput, obj5);
+      const obj6 = {
+        containerStyle: tmp.textInput,
+        label: "Gift Recipient ID",
+        value: first1,
+        placeholder: "Recipient User ID",
+        onChange: tmp11,
+        clearable: true,
+      };
+      items2[2] = closure_7(value(first1[11]).TextInput, obj6);
+      const obj7 = {
+        containerStyle: tmp.textInput,
+        label: "Gift Message (Optional)",
+        value: first2,
+        placeholder: "Here's a gift for you!",
+        onChange: tmp14,
+        clearable: true,
+      };
+      items2[3] = closure_7(value(first1[11]).TextInput, obj7);
+      let tmp17 = null === value;
+      const Button = tmp5(tmp6[12]).Button;
+      if (!tmp17) {
+        tmp17 = null === first1;
       }
-      const obj8 = { children: null };
-      items2[4] = closure_7(value(first1[12]).Button, {
-        disabled: tmp15,
+      const obj8 = { children: items2 };
+      const obj9 = {
+        disabled: tmp17,
         text: "Send Gift",
         onPress() {
-          let tmp2 = null != first;
-          if (tmp2) {
-            tmp2 = null != first1;
-          }
+          const tmp2 = null != first && null != first1;
           if (tmp2) {
             const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
-            ActionSheetActionCreatorsDefault.hideActionSheet();
-            ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(15573, dependencyMap.paths),
-              "SimpleRequestOTPActionSheet",
-              obj,
-            );
+            const obj2 = ActionSheetActionCreatorsDefault;
+            obj2.hideActionSheet();
+            const obj3 = ActionSheetActionCreatorsDefault;
+            obj3.openLazy(asyncRequire(15573, dependencyMap.paths), "SimpleRequestOTPActionSheet", obj);
           }
         },
-      });
-      obj8.children = items2;
-      items1[1] = closure_8(value(first1[13]).Card, obj8);
-      obj3.children = items1;
-      return closure_8(value(first1[14]).Stack, obj3);
+      };
+      items2[4] = closure_7(Button, obj9);
+      items1[1] = closure_8(Card, obj8);
+      return closure_8(Stack, obj3);
     };
-ReactCompilerGating = fn(558);
-let obj4 = { padding: nativeDefault.space.PX_16 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/billing/native/PaymentFlowTest.android.tsx");
-
-export default noop.memo(
+ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
-        const cResult = c.c(11);
+        let first;
+        let obj4;
+        let tmp6;
+        const obj = react2;
+        const cResult = obj.c(11);
         const tmp4 = closure_9();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { includeKeyboardHeight: true };
           cResult[0] = obj2;
-          let first = obj2;
+          first = obj2;
         } else {
           first = cResult[0];
         }
@@ -316,34 +322,37 @@ export default noop.memo(
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [];
           cResult[1] = items;
-          let tmp6 = items;
+          tmp6 = items;
         } else {
           tmp6 = cResult[1];
         }
         if (cResult[2] === insets.bottom) {
           if (cResult[3] === insets.left) {
             if (cResult[4] === insets.right) {
+              let tmp7;
+              let tmp8;
               if (cResult[5] === insets.top) {
-                let tmp7 = cResult[6];
+                tmp7 = cResult[6];
               }
               const _Symbol = Symbol;
               if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmp11 = React5(closure_10, {});
+                const tmp11 = metroImportDefault(closure_10, {});
                 cResult[7] = tmp11;
-                let tmp8 = tmp11;
+                tmp8 = tmp11;
               } else {
                 tmp8 = cResult[7];
               }
               if (cResult[8] === tmp4.wrap) {
+                let tmp12;
                 if (cResult[9] === tmp7) {
-                  let tmp12 = cResult[10];
+                  tmp12 = cResult[10];
                 }
                 return tmp12;
               }
-              const obj3 = { skuIDs: tmp6, activeSubscription: null, children: null };
-              const obj4 = { style: tmp4.wrap, contentContainerStyle: tmp7, children: tmp8 };
-              obj3.children = React5(ScrollView, obj4);
-              const tmp15 = React5(NativePaymentContext.NativePaymentContextProvider, obj3);
+              const obj3 = { skuIDs: tmp6, activeSubscription: null, children: metroImportDefault(ScrollView, obj4) };
+              obj4 = { style: tmp4.wrap, contentContainerStyle: tmp7, children: tmp8 };
+              const NativePaymentContextProvider = NativePaymentContext.NativePaymentContextProvider;
+              const tmp15 = metroImportDefault(NativePaymentContextProvider, obj3);
               cResult[8] = tmp4.wrap;
               cResult[9] = tmp7;
               cResult[10] = tmp15;
@@ -365,19 +374,24 @@ export default noop.memo(
         tmp7 = obj5;
       }
     : () => {
-        const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
-        const obj = { skuIDs: [], activeSubscription: null, children: null };
+        let obj2;
         const tmp = closure_9();
-        obj.children = React5(ScrollView, {
-          style: closure_9().wrap,
+        const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
+        const obj = { skuIDs: [], activeSubscription: null, children: metroImportDefault(ScrollView, obj2) };
+        obj2 = {
+          style: tmp.wrap,
           contentContainerStyle: {
             paddingBottom: insets.bottom,
             paddingTop: insets.top,
             paddingLeft: insets.left,
             paddingRight: insets.right,
           },
-          children: React5(closure_10, {}),
-        });
-        return React5(NativePaymentContext.NativePaymentContextProvider, obj);
+          children: metroImportDefault(closure_10, {}),
+        };
+        const NativePaymentContextProvider = NativePaymentContext.NativePaymentContextProvider;
+        return metroImportDefault(NativePaymentContextProvider, obj);
       },
 );
+const result = size.fileFinishedImporting("modules/user_settings/billing/native/PaymentFlowTest.android.tsx");
+
+export default memoResult;

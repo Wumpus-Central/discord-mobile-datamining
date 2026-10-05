@@ -1,30 +1,50 @@
 // discord_app/design/void/Pressables/native/Pressables.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import FormConstants from "../../Form/native/FormConstants.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import styleConstants from "../../../components/Styles/native/styleConstants.tsx";
 import StyleSheetUtilsDefault from "../../../../utils/native/StyleSheetUtils.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles from "../../../components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+const require = globalThis.__r;
+let _require, dependencyMap, obj1, str;
+
+let obj2;
 let closure_3 = ["children", "androidRippleConfig", "style", "type", "activeOpacity", "underlayColor", "innerRef"];
 let closure_4 = ["activeOpacity"];
 let closure_5 = ["underlayColor"];
-const Pressable = fn(17).Pressable;
-const IOS_POINTER_STYLE = fn(5611).IOS_POINTER_STYLE;
-const getThemedRippleConfig = fn(1192).getThemedRippleConfig;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj = { pressedHighlight: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED } };
+const Pressable = react_native.Pressable;
+const IOS_POINTER_STYLE = styleConstants.IOS_POINTER_STYLE;
+const getThemedRippleConfig = FormConstants.getThemedRippleConfig;
+const jsx = Fragment.jsx;
+let obj = { pressedHighlight: obj2 };
+obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 let closure_12 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   ? (type) => {
-      let merged1 = dependencyMap;
-      const cResult = require("c").c(26);
+      let androidRippleConfig;
+      let children;
+      let closure_0;
+      let closure_2;
+      let style;
+      let tmp5;
+      let tmp6;
+      let tmp7;
+      let tmp8;
+      let tmp = _require;
+      let obj = require("react");
+      const cResult = obj.c(26);
       if (cResult[0] !== type) {
         ({ children, androidRippleConfig, style } = type);
-        importDefault = style;
+        let closure_1 = style;
         type = type.type;
         dependencyMap = type;
         const activeOpacity = type.activeOpacity;
@@ -33,6 +53,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         closure_3 = underlayColor;
         const innerRef = type.innerRef;
         const tmp14 = _objectWithoutProperties(type, closure_3);
+        let num = 0;
         cResult[0] = type;
         cResult[1] = activeOpacity;
         cResult[2] = androidRippleConfig;
@@ -42,80 +63,23 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = style;
         cResult[7] = type;
         cResult[8] = underlayColor;
-        let tmp8 = tmp14;
-        let tmp7 = innerRef;
-        let tmp6 = children;
-        let tmp5 = androidRippleConfig;
+        tmp8 = tmp14;
+        tmp7 = innerRef;
+        tmp6 = children;
+        tmp5 = androidRippleConfig;
       } else {
         _require = cResult[1];
         tmp5 = cResult[2];
         tmp6 = cResult[3];
         tmp7 = cResult[4];
         tmp8 = cResult[5];
-        importDefault = cResult[6];
+        closure_1 = cResult[6];
         dependencyMap = cResult[7];
         closure_3 = cResult[8];
       }
       const backgroundColor = closure_12().pressedHighlight.backgroundColor;
-      let obj = require("c");
-      if (tmpResult.isAndroid()) {
-        if (!tmpResult2.isAndroid()) {
-          if (cResult[20] === undefined) {
-            if (cResult[21] === tmp6) {
-              if (cResult[22] === tmp7) {
-                if (cResult[23] === tmp8) {
-                  if (cResult[24] === style) {
-                    let tmp27 = cResult[25];
-                  }
-                  return tmp27;
-                }
-              }
-            }
-          }
-          let obj2 = { android_ripple: undefined, style, ref: tmp7 };
-          const merged = Object.assign(tmp8);
-          obj2.children = tmp6;
-          const tmp33 = <Pressable android_ripple={undefined} style={style} ref={tmp7} />;
-          cResult[20] = undefined;
-          cResult[21] = tmp6;
-          cResult[22] = tmp7;
-          cResult[23] = tmp8;
-          cResult[24] = style;
-          cResult[25] = tmp33;
-          tmp27 = tmp33;
-        } else {
-          if (cResult[15] === tmp5) {
-          }
-          let obj3 = tmp5;
-          if (tmp5 == null) {
-            obj3 = {};
-          }
-          const cornerRadius = obj3.cornerRadius;
-          let tmp18 = cornerRadius;
-          if (null == cornerRadius) {
-            if (cResult[18] !== style) {
-              const styleProp = StyleSheetUtilsDefault.getStyleProp(style, "borderRadius");
-              cResult[18] = style;
-              cResult[19] = styleProp;
-              let tmp19 = styleProp;
-            } else {
-              tmp19 = cResult[19];
-            }
-            tmp18 = cornerRadius;
-            if (null != tmp19) {
-              tmp18 = tmp19;
-            }
-          }
-          const obj4 = {};
-          merged1 = Object.assign(tmp5);
-          obj4.cornerRadius = tmp18;
-          const tmp25 = getThemedRippleConfig(obj4);
-          cResult[15] = tmp5;
-          cResult[16] = style;
-          cResult[17] = tmp25;
-        }
-        tmpResult2 = tmp(1369);
-      } else {
+      const tmpResult = tmp(1369);
+      if (!tmpResult.isAndroid()) {
         if (cResult[9] === tmp4) {
           if (cResult[10] === backgroundColor) {
             if (cResult[11] === style) {
@@ -124,21 +88,17 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   constructor(arg0) {
                     items = [, ,];
                     items[0] = closure_1;
-                    if (!type.pressed) {
-                      items[1] = null;
-                      tmp4 = IOS_POINTER_STYLE;
-                      items[2] = IOS_POINTER_STYLE;
-                      return items;
-                    } else {
-                      tmp = closure_2;
+                    tmp = null;
+                    if (type.pressed) {
+                      tmp2 = closure_2;
                       str = "highlight";
                       if ("highlight" === closure_2) {
-                        tmp2 = closure_3;
+                        tmp3 = closure_3;
                         if (closure_3 == null) {
-                          tmp2 = backgroundColor;
+                          tmp3 = backgroundColor;
                         }
                         obj1 = { backgroundColor: null };
-                        obj1.backgroundColor = tmp2;
+                        obj1.backgroundColor = tmp3;
                         obj = obj1;
                       } else {
                         num = closure_0;
@@ -148,9 +108,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                         obj = { opacity: null };
                         obj.opacity = num;
                       }
-                      tmp3 = obj;
+                      tmp = obj;
                     }
-                    return;
+                    items[1] = tmp;
+                    items[2] = IOS_POINTER_STYLE;
+                    return items;
                   }
                 }
               }
@@ -161,21 +123,17 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           constructor(arg0) {
             items = [, ,];
             items[0] = closure_1;
-            if (!type.pressed) {
-              items[1] = null;
-              tmp4 = IOS_POINTER_STYLE;
-              items[2] = IOS_POINTER_STYLE;
-              return items;
-            } else {
-              tmp = closure_2;
+            tmp = null;
+            if (type.pressed) {
+              tmp2 = closure_2;
               str = "highlight";
               if ("highlight" === closure_2) {
-                tmp2 = closure_3;
+                tmp3 = closure_3;
                 if (closure_3 == null) {
-                  tmp2 = backgroundColor;
+                  tmp3 = backgroundColor;
                 }
                 obj1 = { backgroundColor: null };
-                obj1.backgroundColor = tmp2;
+                obj1.backgroundColor = tmp3;
                 obj = obj1;
               } else {
                 num = closure_0;
@@ -185,9 +143,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                 obj = { opacity: null };
                 obj.opacity = num;
               }
-              tmp3 = obj;
+              tmp = obj;
             }
-            return;
+            items[1] = tmp;
+            items[2] = IOS_POINTER_STYLE;
+            return items;
           }
         }
         cResult[9] = tmp4;
@@ -197,9 +157,215 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[13] = tmp11;
         cResult[14] = E;
       }
-      tmpResult = require("PlatformUtils");
+      const tmpResult2 = tmp(1369);
+      if (tmpResult2.isAndroid()) {
+        if (cResult[15] === tmp5) {
+          class E {
+            constructor(arg0) {
+              items = [, ,];
+              items[0] = closure_1;
+              tmp = null;
+              if (type.pressed) {
+                tmp2 = closure_2;
+                str = "highlight";
+                if ("highlight" === closure_2) {
+                  tmp3 = closure_3;
+                  if (closure_3 == null) {
+                    tmp3 = backgroundColor;
+                  }
+                  obj1 = { backgroundColor: null };
+                  obj1.backgroundColor = tmp3;
+                  obj = obj1;
+                } else {
+                  num = closure_0;
+                  if (closure_0 == null) {
+                    num = 0.2;
+                  }
+                  obj = { opacity: null };
+                  obj.opacity = num;
+                }
+                tmp = obj;
+              }
+              items[1] = tmp;
+              items[2] = IOS_POINTER_STYLE;
+              return items;
+            }
+          }
+        }
+        class E {
+          constructor(arg0) {
+            items = [, ,];
+            items[0] = closure_1;
+            tmp = null;
+            if (type.pressed) {
+              tmp2 = closure_2;
+              str = "highlight";
+              if ("highlight" === closure_2) {
+                tmp3 = closure_3;
+                if (closure_3 == null) {
+                  tmp3 = backgroundColor;
+                }
+                obj1 = { backgroundColor: null };
+                obj1.backgroundColor = tmp3;
+                obj = obj1;
+              } else {
+                num = closure_0;
+                if (closure_0 == null) {
+                  num = 0.2;
+                }
+                obj = { opacity: null };
+                obj.opacity = num;
+              }
+              tmp = obj;
+            }
+            items[1] = tmp;
+            items[2] = IOS_POINTER_STYLE;
+            return items;
+          }
+        }
+        let obj2 = tmp5;
+        if (tmp5 == null) {
+          obj2 = {};
+        }
+        const cornerRadius = obj2.cornerRadius;
+        let tmp19 = cornerRadius;
+        if (null == cornerRadius) {
+          let tmp20;
+          if (cResult[18] !== style) {
+            class E {
+              constructor(arg0) {
+                items = [, ,];
+                items[0] = closure_1;
+                tmp = null;
+                if (type.pressed) {
+                  tmp2 = closure_2;
+                  str = "highlight";
+                  if ("highlight" === closure_2) {
+                    tmp3 = closure_3;
+                    if (closure_3 == null) {
+                      tmp3 = backgroundColor;
+                    }
+                    obj1 = { backgroundColor: null };
+                    obj1.backgroundColor = tmp3;
+                    obj = obj1;
+                  } else {
+                    num = closure_0;
+                    if (closure_0 == null) {
+                      num = 0.2;
+                    }
+                    obj = { opacity: null };
+                    obj.opacity = num;
+                  }
+                  tmp = obj;
+                }
+                items[1] = tmp;
+                items[2] = IOS_POINTER_STYLE;
+                return items;
+              }
+            }
+            const styleProp = obj5.getStyleProp(style, "borderRadius");
+            cResult[18] = style;
+            cResult[19] = styleProp;
+            tmp20 = styleProp;
+          } else {
+            tmp20 = cResult[19];
+          }
+          class E {
+            constructor(arg0) {
+              items = [, ,];
+              items[0] = closure_1;
+              tmp = null;
+              if (type.pressed) {
+                tmp2 = closure_2;
+                str = "highlight";
+                if ("highlight" === closure_2) {
+                  tmp3 = closure_3;
+                  if (closure_3 == null) {
+                    tmp3 = backgroundColor;
+                  }
+                  obj1 = { backgroundColor: null };
+                  obj1.backgroundColor = tmp3;
+                  obj = obj1;
+                } else {
+                  num = closure_0;
+                  if (closure_0 == null) {
+                    num = 0.2;
+                  }
+                  obj = { opacity: null };
+                  obj.opacity = num;
+                }
+                tmp = obj;
+              }
+              items[1] = tmp;
+              items[2] = IOS_POINTER_STYLE;
+              return items;
+            }
+          }
+          if (null != tmp20) {
+            tmp19 = tmp20;
+          }
+        }
+        const obj3 = { cornerRadius: tmp19 };
+        const merged = Object.assign(tmp5);
+        cResult[15] = tmp5;
+        cResult[16] = style;
+        cResult[17] = getThemedRippleConfig(obj3);
+        const tmp27 = getThemedRippleConfig(obj3);
+      }
+      if (cResult[20] === undefined) {
+        if (cResult[21] === tmp6) {
+          if (cResult[22] === tmp7) {
+            if (cResult[23] === tmp8) {
+              class E {
+                constructor(arg0) {
+                  items = [, ,];
+                  items[0] = closure_1;
+                  tmp = null;
+                  if (type.pressed) {
+                    tmp2 = closure_2;
+                    str = "highlight";
+                    if ("highlight" === closure_2) {
+                      tmp3 = closure_3;
+                      if (closure_3 == null) {
+                        tmp3 = backgroundColor;
+                      }
+                      obj1 = { backgroundColor: null };
+                      obj1.backgroundColor = tmp3;
+                      obj = obj1;
+                    } else {
+                      num = closure_0;
+                      if (closure_0 == null) {
+                        num = 0.2;
+                      }
+                      obj = { opacity: null };
+                      obj.opacity = num;
+                    }
+                    tmp = obj;
+                  }
+                  items[1] = tmp;
+                  items[2] = IOS_POINTER_STYLE;
+                  return items;
+                }
+              }
+            }
+          }
+        }
+      }
+      const merged1 = Object.assign(tmp8);
+      cResult[20] = undefined;
+      cResult[21] = tmp6;
+      cResult[22] = tmp7;
+      cResult[23] = tmp8;
+      cResult[24] = style;
+      cResult[25] = (
+        <Pressable android_ripple={undefined} style={style} ref={tmp7}>
+          {tmp6}
+        </Pressable>
+      );
     }
   : (androidRippleConfig) => {
+      let children;
+      let innerRef;
       androidRippleConfig = androidRippleConfig.androidRippleConfig;
       const style = androidRippleConfig.style;
       const type = androidRippleConfig.type;
@@ -221,63 +387,41 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const backgroundColor = closure_12().pressedHighlight.backgroundColor;
       let items = [type, activeOpacity, underlayColor, style, backgroundColor];
       const items1 = [androidRippleConfig, style];
-      const memo = noop.useMemo(
-        () =>
-          PlatformUtils.isAndroid()
-            ? style
-            : (pressed) => {
-                const items = [style, ,];
-                if (!pressed.pressed) {
-                  items[1] = null;
-                  items[2] = IOS_POINTER_STYLE;
-                  return items;
-                } else if ("highlight" === type) {
-                  let tmp2 = underlayColor;
+      const memo = react.useMemo(() => {
+        let obj = PlatformUtils;
+        return obj.isAndroid()
+          ? style
+          : (pressed) => {
+              const items = [style, ,];
+              let tmp = null;
+              if (pressed.pressed) {
+                let obj;
+                if ("highlight" === type) {
+                  let tmp3 = underlayColor;
                   if (underlayColor == null) {
-                    tmp2 = backgroundColor;
+                    tmp3 = backgroundColor;
                   }
-                  const obj2 = { backgroundColor: tmp2 };
+                  obj = { backgroundColor: tmp3 };
+                  const obj2 = { backgroundColor: tmp3 };
                 } else {
                   let num = activeOpacity;
                   if (activeOpacity == null) {
                     num = 0.2;
                   }
-                  const obj = { opacity: num };
+                  obj = { opacity: num };
                 }
-              },
-        items,
-      );
-      let obj = {
-        android_ripple: noop.useMemo(() => {
-          if (obj.isAndroid()) {
-            let obj2 = androidRippleConfig;
-            if (androidRippleConfig == null) {
-              obj2 = {};
-            }
-            const cornerRadius = obj2.cornerRadius;
-            let tmp4 = cornerRadius;
-            if (null == cornerRadius) {
-              const styleProp = StyleSheetUtilsDefault.getStyleProp(style, "borderRadius");
-              tmp4 = cornerRadius;
-              if (null != styleProp) {
-                tmp4 = styleProp;
+                tmp = obj;
               }
-            }
-            const obj4 = {};
-            const merged = Object.assign(androidRippleConfig);
-            obj4.cornerRadius = tmp4;
-            return getThemedRippleConfig(obj4);
-          }
-          obj = PlatformUtils;
-        }, items1),
-        style: memo,
-        ref: innerRef,
-      };
+              items[1] = tmp;
+              items[2] = IOS_POINTER_STYLE;
+              return items;
+            };
+      }, items);
       const merged1 = Object.assign(merged);
-      obj.children = children;
       return (
         <Pressable
-          android_ripple={noop.useMemo(() => {
+          android_ripple={react.useMemo(() => {
+            const obj = PlatformUtils;
             if (obj.isAndroid()) {
               let obj2 = androidRippleConfig;
               if (androidRippleConfig == null) {
@@ -286,39 +430,43 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               const cornerRadius = obj2.cornerRadius;
               let tmp4 = cornerRadius;
               if (null == cornerRadius) {
-                const styleProp = StyleSheetUtilsDefault.getStyleProp(style, "borderRadius");
+                const obj3 = StyleSheetUtilsDefault;
+                const styleProp = obj3.getStyleProp(style, "borderRadius");
                 tmp4 = cornerRadius;
                 if (null != styleProp) {
                   tmp4 = styleProp;
                 }
               }
-              const obj4 = {};
+              const obj4 = { cornerRadius: tmp4 };
               const merged = Object.assign(androidRippleConfig);
-              obj4.cornerRadius = tmp4;
               return getThemedRippleConfig(obj4);
             }
-            obj = PlatformUtils;
           }, items1)}
           style={memo}
           ref={innerRef}
-        />
+        >
+          {children}
+        </Pressable>
       );
     };
-fn(558);
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
-ReactCompilerGating = fn(558);
-const forwardRefResult = noop.forwardRef(
+const forwardRef = react.forwardRef;
+ReactCompilerGating = ReactCompilerGating_mod;
+const forwardRef2 = react.forwardRef;
+const forwardRefResult = forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (activeOpacity, innerRef) => {
-        const cResult = c.c(7);
+        let tmp2;
+        let tmp3;
+        const obj = react2;
+        const cResult = obj.c(7);
         if (cResult[0] !== activeOpacity) {
           activeOpacity = activeOpacity.activeOpacity;
           const tmp6 = _objectWithoutProperties(activeOpacity, closure_4);
           cResult[0] = activeOpacity;
           cResult[1] = tmp6;
           cResult[2] = activeOpacity;
-          let tmp3 = activeOpacity;
-          let tmp2 = tmp6;
+          tmp3 = activeOpacity;
+          tmp2 = tmp6;
         } else {
           tmp2 = cResult[1];
           tmp3 = cResult[2];
@@ -329,8 +477,9 @@ const forwardRefResult = noop.forwardRef(
         }
         if (cResult[3] === num4) {
           if (cResult[4] === tmp2) {
+            let tmp7;
             if (cResult[5] === innerRef) {
-              let tmp7 = cResult[6];
+              tmp7 = cResult[6];
             }
             return tmp7;
           }
@@ -342,7 +491,6 @@ const forwardRefResult = noop.forwardRef(
         cResult[5] = innerRef;
         cResult[6] = tmp9;
         tmp7 = tmp9;
-        const obj2 = { innerRef, type: "opacity", activeOpacity: num4 };
       }
     : (activeOpacity, innerRef) => {
         let num = activeOpacity.activeOpacity;
@@ -353,30 +501,31 @@ const forwardRefResult = noop.forwardRef(
         return <closure_13 innerRef={innerRef} type="opacity" activeOpacity={num} />;
       },
 );
-const size = fn(2);
-const result = size.fileFinishedImporting("design/void/Pressables/native/Pressables.tsx");
-
-export const PressableOpacity = forwardRefResult;
-export const PressableHighlight = noop.forwardRef(
+ReactCompilerGating = ReactCompilerGating_mod;
+const forwardRef2Result = forwardRef2(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (underlayColor, innerRef) => {
-        const cResult = c.c(7);
+        let tmp2;
+        let tmp3;
+        const obj = react2;
+        const cResult = obj.c(7);
         if (cResult[0] !== underlayColor) {
           underlayColor = underlayColor.underlayColor;
           const tmp6 = _objectWithoutProperties(underlayColor, closure_5);
           cResult[0] = underlayColor;
           cResult[1] = tmp6;
           cResult[2] = underlayColor;
-          let tmp3 = underlayColor;
-          let tmp2 = tmp6;
+          tmp3 = underlayColor;
+          tmp2 = tmp6;
         } else {
           tmp2 = cResult[1];
           tmp3 = cResult[2];
         }
         if (cResult[3] === tmp2) {
           if (cResult[4] === innerRef) {
+            let tmp7;
             if (cResult[5] === tmp3) {
-              let tmp7 = cResult[6];
+              tmp7 = cResult[6];
             }
             return tmp7;
           }
@@ -388,10 +537,13 @@ export const PressableHighlight = noop.forwardRef(
         cResult[5] = tmp3;
         cResult[6] = tmp9;
         tmp7 = tmp9;
-        const obj2 = { innerRef, type: "highlight", underlayColor: tmp3 };
       }
     : (underlayColor, innerRef) => {
         const merged = Object.assign(Object.assign(underlayColor, Object.assign({ underlayColor: 0 })));
         return <closure_13 innerRef={innerRef} type="highlight" underlayColor={underlayColor.underlayColor} />;
       },
 );
+const result = size.fileFinishedImporting("design/void/Pressables/native/Pressables.tsx");
+
+export const PressableOpacity = forwardRefResult;
+export const PressableHighlight = forwardRef2Result;

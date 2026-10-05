@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx
-import util from "../../../../../intl/index.native.tsx";
+import intl3 from "../../../../../intl/index.native.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
@@ -11,25 +11,25 @@ const result = size.fileFinishedImporting(
 );
 
 export const createUserPremiumGuildSubscriptionSystemMessage = function createUserPremiumGuildSubscriptionSystemMessage(
-  roleStyle,
+  message,
 ) {
-  const message = roleStyle.message;
+  let formatToPartsResult;
+  message = message.message;
+  const roleStyle = message.roleStyle;
   const tmp3 = getNumSubscriptionsPurchasedFromSystemMessageDefault(message);
-  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
-  const tmp6 = formatUsernameOnClickDefault({
-    message,
-    author: messageAuthorWithProcessedColor,
-    roleStyle: roleStyle.roleStyle,
-  });
+  const obj = useAuthorWithProcessedColor;
+  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
+  const tmp6 = formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle });
   if (tmp3 > 1) {
-    const intl2 = util.intl;
+    const intl2 = intl3.intl;
     const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6, numSubscriptions: tmp3 };
-    let formatToPartsResult = intl2.formatToParts(util.t.rbj006, obj2);
+    formatToPartsResult = intl2.formatToParts(intl3.t.rbj006, obj2);
   } else {
-    const intl = util.intl;
+    const intl = intl3.intl;
     const obj3 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6 };
-    formatToPartsResult = intl.formatToParts(util.t.ihxM9x, obj3);
+    formatToPartsResult = intl.formatToParts(intl3.t.ihxM9x, obj3);
   }
-  const merged = Object.assign(createCommonMessageDefault(roleStyle));
-  return { content: formatToPartsResult };
+  const obj4 = { content: formatToPartsResult };
+  const merged = Object.assign(createCommonMessageDefault(message));
+  return obj4;
 };

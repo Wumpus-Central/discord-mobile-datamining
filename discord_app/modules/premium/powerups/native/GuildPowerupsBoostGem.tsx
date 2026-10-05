@@ -1,17 +1,18 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsBoostGem.tsx
-import _mod17 from "../../../../../_runtime/metro/00017__.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import BoostGemDefault from "images/BoostGem.tsx";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-const View = _mod17.View;
-const jsx = jsxProd.jsx;
-let obj = { boostGemContainer: null };
-let size = {
+let size;
+const View = react_native.View;
+const jsx = Fragment.jsx;
+let obj = { boostGemContainer: size };
+size = {
   width: 100,
   height: 100,
   borderRadius: nativeDefault.radii.round,
@@ -20,38 +21,39 @@ let size = {
   justifyContent: "center",
   alignSelf: "center",
 };
-obj.boostGemContainer = size;
 let closure_5 = createStyles.createStyles(obj);
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostGem.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(9);
+      let gemHeight;
+      let gemWidth;
+      let style;
+      const obj = react;
+      const cResult = obj.c(9);
       ({ style, gemWidth, gemHeight } = arg0);
       const tmp3 = closure_5();
       if (cResult[0] === style) {
+        let tmp4;
         if (cResult[1] === tmp3.boostGemContainer) {
-          let tmp4 = cResult[2];
+          tmp4 = cResult[2];
         }
         if (cResult[3] === gemHeight) {
+          let tmp5;
           if (cResult[4] === gemWidth) {
-            let tmp5 = cResult[5];
+            tmp5 = cResult[5];
           }
           if (cResult[6] === tmp4) {
+            let tmp9;
             if (cResult[7] === tmp5) {
-              let tmp9 = cResult[8];
+              tmp9 = cResult[8];
             }
             return tmp9;
           }
-          const obj2 = { style: tmp4, children: tmp5 };
           const tmp12 = <View style={tmp4}>{tmp5}</View>;
           cResult[6] = tmp4;
           cResult[7] = tmp5;
           cResult[8] = tmp12;
           tmp9 = tmp12;
         }
-        const size = { width: gemWidth, height: gemHeight };
         const tmp8 = jsx(BoostGemDefault, { width: gemWidth, height: gemHeight });
         cResult[3] = gemHeight;
         cResult[4] = gemWidth;
@@ -65,10 +67,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = items;
     }
   : (arg0) => {
+      let gemHeight;
+      let gemWidth;
+      let style;
       ({ style, gemWidth, gemHeight } = arg0);
-      const obj = { style: null, children: null };
       const items = [closure_5().boostGemContainer, style];
-      obj.style = items;
-      obj.children = jsx(BoostGemDefault, { width: gemWidth, height: gemHeight });
-      return <View style={null}>{null}</View>;
+      return <View style={items}>{null}</View>;
     };
+size = size_mod;
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostGem.tsx");
+
+export default tmp2;

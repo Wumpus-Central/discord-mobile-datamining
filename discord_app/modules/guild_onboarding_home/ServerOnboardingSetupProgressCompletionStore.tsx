@@ -1,61 +1,63 @@
 // discord_app/modules/guild_onboarding_home/ServerOnboardingSetupProgressCompletionStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const set = new Set();
-const PersistedStore = initializeDefault.PersistedStore;
-class ServerOnboardingSetupProgressCompletionStore extends PersistedStore {}
+let set = new Set();
+let _Set1 = set;
+const PersistedStore = get_initializedDefault.PersistedStore;
+class ServerOnboardingSetupProgressCompletionStore extends PersistedStore {
+  initialize(completedGuildIds) {
+    completedGuildIds = undefined;
+    const _Set = Set;
+    if (completedGuildIds != null) {
+      completedGuildIds = completedGuildIds.completedGuildIds;
+    }
+    if (completedGuildIds == null) {
+      completedGuildIds = [];
+    }
+    _Set1 = new _Set(completedGuildIds);
+  }
+  getState() {
+    const obj = { completedGuildIds: Array.from(_Set1) };
+    return obj;
+  }
+  isComplete(arg0) {
+    return _Set1.has(arg0);
+  }
+}
 const prototype = ServerOnboardingSetupProgressCompletionStore.prototype;
-prototype["initialize"] = function initialize(completedGuildIds) {
-  completedGuildIds = undefined;
-  if (completedGuildIds != null) {
-    completedGuildIds = completedGuildIds.completedGuildIds;
-  }
-  if (completedGuildIds == null) {
-    completedGuildIds = [];
-  }
-  closure_3 = new Set(completedGuildIds);
-};
-prototype["getState"] = function getState() {
-  return { completedGuildIds: Array.from(closure_3) };
-};
-prototype["isComplete"] = function isComplete(arg0) {
-  return set.has(arg0);
-};
 ServerOnboardingSetupProgressCompletionStore.displayName = "ServerOnboardingSetupProgressCompletionStore";
 ServerOnboardingSetupProgressCompletionStore.persistKey = "ServerOnboardingSetupProgressCompletedGuildIds";
+let obj = {
+  SERVER_ONBOARDING_SETUP_PROGRESS_COMPLETE: function handleComplete(guildId) {
+    guildId = guildId.guildId;
+    set = new Set(_Set1);
+    _Set1 = set.add(guildId);
+  },
+};
 const serverOnboardingSetupProgressCompletionStore = new ServerOnboardingSetupProgressCompletionStore(
   DispatcherDefault,
-  {
-    SERVER_ONBOARDING_SETUP_PROGRESS_COMPLETE: function handleComplete(guildId) {
-      closure_3 = new Set(closure_3).add(guildId.guildId);
-    },
-  },
+  obj,
 );
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/guild_onboarding_home/ServerOnboardingSetupProgressCompletionStore.tsx",
-);
-
-export default serverOnboardingSetupProgressCompletionStore;
-export const markServerOnboardingSetupProgressComplete = function markServerOnboardingSetupProgressComplete(guildId) {
-  if (!serverOnboardingSetupProgressCompletionStore.isComplete(guildId)) {
-    const obj2 = { type: "SERVER_ONBOARDING_SETUP_PROGRESS_COMPLETE", guildId };
-    DispatcherDefault.dispatch(obj2);
-  }
-};
-export const useIsServerOnboardingSetupProgressComplete = ReactCompilerGating.isReactCompilerEnabled()
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
+      let tmp7;
       _require = arg0;
-      const cResult = require("c").c(4);
+      const obj = require("react");
+      const cResult = obj.c(4);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [serverOnboardingSetupProgressCompletionStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -67,22 +69,37 @@ export const useIsServerOnboardingSetupProgressComplete = ReactCompilerGating.is
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6, tmp7);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6, tmp7);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       const items = [serverOnboardingSetupProgressCompletionStore];
       const items1 = [arg0];
-      return require("initialize").useStateFromStores(
+      const obj = require("get initialized");
+      return obj.useStateFromStores(
         items,
         () => serverOnboardingSetupProgressCompletionStore.isComplete(closure_0),
         items1,
       );
     };
+const result = size.fileFinishedImporting(
+  "modules/guild_onboarding_home/ServerOnboardingSetupProgressCompletionStore.tsx",
+);
+
+export default serverOnboardingSetupProgressCompletionStore;
+export const markServerOnboardingSetupProgressComplete = function markServerOnboardingSetupProgressComplete(guildId) {
+  if (!serverOnboardingSetupProgressCompletionStore.isComplete(guildId)) {
+    const obj2 = { type: "SERVER_ONBOARDING_SETUP_PROGRESS_COMPLETE", guildId };
+    const obj = DispatcherDefault;
+    obj.dispatch(obj2);
+  }
+};
+export const useIsServerOnboardingSetupProgressComplete = tmp4;

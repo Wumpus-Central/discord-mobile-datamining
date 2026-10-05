@@ -1,31 +1,34 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupTier3OverrideConfig.tsx
+import Constants from "../../../../Constants.tsx";
 import _modDef2525 from "../GuildPowerups.messages.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupTier3OverrideConfig.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const GuildFeatures = Constants.GuildFeatures;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let intl;
+      let tmp6;
+      let tmp7;
       _require = arg0;
-      let intl = _require;
-      let stringResult = dependencyMap;
-      const cResult = require("c").c(5);
+      const obj = require("react");
+      const cResult = obj.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         const fn = function l() {
-          guild = GuildStore.getGuild(closure_0);
+          const guild = GuildStore.getGuild(closure_0);
           let hasItem;
           if (guild != null) {
             const features = guild.features;
@@ -35,39 +38,46 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        let tmp5 = fn;
+        tmp6 = fn;
       } else {
-        tmp5 = cResult[2];
+        tmp6 = cResult[2];
       }
-      const obj = require("c");
-      if (intlResult.useStateFromStores(first, tmp5)) {
+      const tmpResult = require("get initialized");
+      if (tmpResult.useStateFromStores(first, tmp6)) {
+        let tmp8;
         const _Symbol2 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { shouldShow: true, text: null };
-          intl = intl(1126).intl;
-          stringResult = intl.string(_modDef2525.l9n4QZ);
-          obj2.text = stringResult;
+          const obj2 = { shouldShow: true, text: intl.string(_modDef2525.l9n4QZ) };
+          intl = tmp(1126).intl;
           cResult[4] = obj2;
+          tmp8 = obj2;
+        } else {
+          tmp8 = cResult[4];
         }
+        tmp7 = tmp8;
       } else {
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { shouldShow: false, text: "" };
           cResult[3] = obj3;
-          let tmp6 = obj3;
+          tmp7 = obj3;
         } else {
-          tmp6 = cResult[3];
+          tmp7 = cResult[3];
         }
-        return tmp6;
       }
-      intlResult = intl(504);
+      return tmp7;
     }
   : (arg0) => {
+      let closure_0;
+      let intl;
+      let obj3;
       _require = arg0;
       const items = [GuildStore];
+      const obj = require("get initialized");
+      const tmp = _require;
       if (
         obj.useStateFromStores(items, () => {
-          guild = GuildStore.getGuild(closure_0);
+          const guild = GuildStore.getGuild(closure_0);
           let hasItem;
           if (guild != null) {
             const features = guild.features;
@@ -76,12 +86,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return true === hasItem;
         })
       ) {
-        const obj2 = { shouldShow: true, text: null };
-        const intl = require("util").intl;
-        obj2.text = intl.string(_modDef2525.l9n4QZ);
-        let obj3 = obj2;
+        const obj2 = { shouldShow: true, text: intl.string(_modDef2525.l9n4QZ) };
+        intl = tmp(1126).intl;
+        obj3 = obj2;
       } else {
         obj3 = { shouldShow: false, text: "" };
       }
       return obj3;
     };
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupTier3OverrideConfig.tsx");
+
+export default tmp2;

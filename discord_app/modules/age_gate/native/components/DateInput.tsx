@@ -1,18 +1,23 @@
 // discord_app/modules/age_gate/native/components/DateInput.tsx
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
 import _modDef4461 from "../../../../../_runtime/metro/04461__.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let date;
 
-require = fn;
-const Keyboard = fn(17).Keyboard;
-const jsx = fn(21).jsx;
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/age_gate/native/components/DateInput.tsx");
-
-export default noop.forwardRef((date, arg1) => {
+const Keyboard = react_native.Keyboard;
+const jsx = Fragment.jsx;
+const forwardRefResult = react.forwardRef((date, arg1) => {
+  let error;
+  let label;
+  let str2;
+  let style;
+  let tmp10;
   date = date.date;
   ({ onChangeDate: importDefault, label } = date);
   let ref;
@@ -24,34 +29,35 @@ export default noop.forwardRef((date, arg1) => {
     }
   }
   function openDatePicker() {
+    let obj4;
+    let obj5;
+    let toDateResult;
     Keyboard.dismiss();
-    const obj2 = {
+    const openLazy = ActionSheetActionCreatorsDefault.openLazy;
+    const obj = {
       onSubmit: updateDate,
       title: label,
-      startDate: null,
-      maximumDate: null,
-      minimumDate: null,
+      startDate: toDateResult,
+      maximumDate: obj4.toDate(),
+      minimumDate: obj5.toDate(),
       requireDateChanged: true,
     };
-    let toDateResult;
-    const obj = ActionSheetActionCreatorsDefault;
+    toDateResult = undefined;
+    ActionSheetActionCreatorsDefault;
+    const tmp5 = asyncRequire(9194, dependencyMap.paths);
     if (date != null) {
       toDateResult = date.toDate();
     }
     if (toDateResult == null) {
-      const obj4 = _modDef4461();
-      const result = obj4.set("year", obj4.year() - 10);
-      toDateResult = obj4.toDate();
+      const obj3 = _modDef4461();
+      const result = obj3.set("year", obj3.year() - 10);
+      toDateResult = obj3.toDate();
     }
-    obj2.startDate = toDateResult;
-    const obj5 = _modDef4461();
-    const result1 = obj5.set("year", obj5.year() - 3);
-    obj2.maximumDate = obj5.toDate();
-    const obj6 = _modDef4461();
-    const result2 = obj6.set("year", obj6.year() - 100);
-    obj2.minimumDate = obj6.toDate();
-    obj.openLazy(asyncRequireImpl(9194, dependencyMap.paths), "DatePicker", obj2);
-    const tmp4 = asyncRequireImpl(9194, dependencyMap.paths);
+    obj4 = _modDef4461();
+    const result1 = obj4.set("year", obj4.year() - 3);
+    obj5 = _modDef4461();
+    const result2 = obj5.set("year", obj5.year() - 100);
+    openLazy(tmp5, "DatePicker", obj);
   }
   ({ style, error } = date);
   ref = ref.useRef(null);
@@ -64,43 +70,40 @@ export default noop.forwardRef((date, arg1) => {
   if (date != null) {
     formatResult = date.format("L");
   }
+  const tmp4 = label;
+  let tmp5 = require("../../../../../_runtime/metro/04461__.js");
   let obj = require("../../../../../_runtime/metro/04461__.js")();
   let result = obj.set("year", obj.year() - 10);
-  let tmp4 = label;
-  const tmp5 = require("../../../../../_runtime/metro/04461__.js");
-  const formatResult1 = require("../../../../../_runtime/metro/04461__.js")(obj.toDate()).format("L");
-  let obj2 = {
+  const tmp5Result = tmp5(obj.toDate());
+  const formatResult1 = tmp5Result.format("L");
+  const obj2 = {
     style,
     ref,
-    value: null,
-    placeholder: null,
+    value: str2,
+    placeholder: formatResult1,
     returnKeyType: "next",
     textContentType: "none",
     autoCapitalize: "none",
-    clearButtonVisibility: null,
+    clearButtonVisibility: date(tmp4[8]).ClearButtonVisibility.NEVER,
     editable: false,
     forceAccessibleContainer: true,
-    accessibilityLabel: null,
-    onPress: null,
-    label: null,
-    error: null,
+    accessibilityLabel: "" + label + ", " + tmp10,
+    onPress: openDatePicker,
+    label,
+    error,
   };
-  let str2 = formatResult;
-  const tmp5Result = require("../../../../../_runtime/metro/04461__.js")(obj.toDate());
+  str2 = formatResult;
   const tmp8 = openDatePicker;
+  const tmp9 = require("FreeFormInputGroup");
   if (formatResult == null) {
     str2 = "";
   }
-  obj2.value = str2;
-  obj2.placeholder = formatResult1;
-  obj2.clearButtonVisibility = date(tmp4[8]).ClearButtonVisibility.NEVER;
-  let tmp10 = formatResult1;
+  tmp10 = formatResult1;
   if (null != formatResult) {
     tmp10 = formatResult;
   }
-  obj2.accessibilityLabel = "" + label + ", " + tmp10;
-  obj2.onPress = openDatePicker;
-  obj2.label = label;
-  obj2.error = error;
-  return tmp8(require("FreeFormInputGroup"), obj2);
+  return tmp8(tmp9, obj2);
 });
+let result = size.fileFinishedImporting("modules/age_gate/native/components/DateInput.tsx");
+
+export default forwardRefResult;

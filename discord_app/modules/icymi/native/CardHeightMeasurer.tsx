@@ -1,28 +1,35 @@
 // discord_app/modules/icymi/native/CardHeightMeasurer.tsx
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import ICYMIActionCreatorsDefault from "../ICYMIActionCreators.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/icymi/native/CardHeightMeasurer.tsx");
+let itemId;
 
-export const CardHeightMeasurer = noop.memo(
+const View = react_native.View;
+const jsx = Fragment.jsx;
+const memo = react.memo;
+const memoResult = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (itemId) => {
-        const cResult = itemId(576).c(8);
+        let tmp2;
+        let tmp3;
+        let obj = itemId(576);
+        const cResult = obj.c(8);
         itemId = itemId.itemId;
         const children = itemId.children;
-        const width = noop.useContext(itemId(16395).ICYMIContext).width;
+        const width = react.useContext(itemId(16395).ICYMIContext).width;
         if (cResult[0] !== itemId) {
           const fn = function s(nativeEvent) {
-            ICYMIActionCreatorsDefault.setCardHeight(itemId, nativeEvent.nativeEvent.layout.height);
+            const height = nativeEvent.nativeEvent.layout.height;
+            const obj = ICYMIActionCreatorsDefault;
+            obj.setCardHeight(itemId, height);
           };
           cResult[0] = itemId;
           cResult[1] = fn;
-          let tmp2 = fn;
+          tmp2 = fn;
         } else {
           tmp2 = cResult[1];
         }
@@ -30,14 +37,15 @@ export const CardHeightMeasurer = noop.memo(
           const obj2 = { width, alignSelf: "center" };
           cResult[2] = width;
           cResult[3] = obj2;
-          let tmp3 = obj2;
+          tmp3 = obj2;
         } else {
           tmp3 = cResult[3];
         }
         if (cResult[4] === children) {
           if (cResult[5] === tmp2) {
+            let tmp4;
             if (cResult[6] === tmp3) {
-              let tmp4 = cResult[7];
+              tmp4 = cResult[7];
             }
             return tmp4;
           }
@@ -53,19 +61,26 @@ export const CardHeightMeasurer = noop.memo(
         cResult[7] = tmp5;
         tmp4 = tmp5;
       }
-    : (children) => {
-        const itemId = children.itemId;
+    : (itemId) => {
+        itemId = itemId.itemId;
+        const children = itemId.children;
         const items = [itemId];
+        const width = react.useContext(itemId(16395).ICYMIContext).width;
         return (
           <View
-            onLayout={noop.useCallback((nativeEvent) => {
-              ICYMIActionCreatorsDefault.setCardHeight(itemId, nativeEvent.nativeEvent.layout.height);
+            onLayout={react.useCallback((nativeEvent) => {
+              const height = nativeEvent.nativeEvent.layout.height;
+              const obj = ICYMIActionCreatorsDefault;
+              obj.setCardHeight(itemId, height);
             }, items)}
             pointerEvents="box-none"
-            style={{ width: noop.useContext(itemId(16395).ICYMIContext).width, alignSelf: "center" }}
+            style={{ width, alignSelf: "center" }}
           >
-            {children.children}
+            {children}
           </View>
         );
       },
 );
+const result = size.fileFinishedImporting("modules/icymi/native/CardHeightMeasurer.tsx");
+
+export const CardHeightMeasurer = memoResult;

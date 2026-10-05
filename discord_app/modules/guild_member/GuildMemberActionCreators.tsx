@@ -1,12 +1,12 @@
 // discord_app/modules/guild_member/GuildMemberActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
+import Constants from "../../Constants.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ImpersonateActionCreators from "../impersonate/ImpersonateActionCreators.tsx";
 import ImpersonateStore from "../impersonate/ImpersonateStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const Endpoints = fn(1085).Endpoints;
-const size = fn(2);
+const Endpoints = Constants.Endpoints;
 let result = size.fileFinishedImporting("modules/guild_member/GuildMemberActionCreators.tsx");
 
 export const updateGuildSelfMember = function updateGuildSelfMember(guildId, memberOptions) {
@@ -16,11 +16,13 @@ export const updateGuildSelfMember = function updateGuildSelfMember(guildId, mem
   }
   if (ImpersonateStore.isFullServerPreview(guildId)) {
     const obj3 = { memberOptions };
-    const result = ImpersonateActionCreators.updateImpersonatedData(guildId, obj3);
+    const obj4 = ImpersonateActionCreators;
+    const result = obj4.updateImpersonatedData(guildId, obj3);
   } else {
     const obj5 = { type: "GUILD_MEMBER_UPDATE_LOCAL", guildId, roles: null, flags: null };
     ({ roles: obj2.roles, flags: obj2.flags } = memberOptions);
-    DispatcherDefault.dispatch(obj5);
+    const obj = DispatcherDefault;
+    obj.dispatch(obj5);
     const HTTP = HTTPUtils.HTTP;
     const request = {
       url: Endpoints.SET_GUILD_MEMBER(guildId),
@@ -28,6 +30,7 @@ export const updateGuildSelfMember = function updateGuildSelfMember(guildId, mem
       oldFormErrors: flag || undefined,
       rejectWithError: false,
     };
-    return HTTP.patch(request);
+    const patch = HTTP.patch;
+    return patch(request);
   }
 };

@@ -1,34 +1,33 @@
 // discord_app/modules/launchpad/native/LaunchPadNotificationCenter.tsx
-import c from "../../../../_runtime/00576_c.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import notifications_NotificationsDefault from "../../main_tabs_v2/native/tabs/notifications/Notifications.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const jsx = Fragment.jsx;
 let closure_4 = createStyles.createStyles({ wrapper: { height: "100%" } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadNotificationCenter.tsx");
-
-export default noop.memo(
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
-        const cResult = c.c(2);
+        let tmp4;
+        const obj = react2;
+        const cResult = obj.c(2);
         const tmp3 = closure_4();
         if (cResult[0] !== tmp3.wrapper) {
-          const obj2 = { style: tmp3.wrapper, nestedInLaunchPad: true };
           const tmp7 = jsx(notifications_NotificationsDefault, { style: tmp3.wrapper, nestedInLaunchPad: true });
           cResult[0] = tmp3.wrapper;
           cResult[1] = tmp7;
-          let tmp4 = tmp7;
+          tmp4 = tmp7;
         } else {
           tmp4 = cResult[1];
         }
         return tmp4;
       }
-    : () => {
-        const tmp = closure_4();
-        return jsx(notifications_NotificationsDefault, { style: closure_4().wrapper, nestedInLaunchPad: true });
-      },
+    : () => jsx(notifications_NotificationsDefault, { style: closure_4().wrapper, nestedInLaunchPad: true }),
 );
+const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadNotificationCenter.tsx");
+
+export default memoResult;

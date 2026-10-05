@@ -1,70 +1,73 @@
 // discord_app/modules/quests/UnenrolledActivityQuestStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-new Set();
 let set = new Set();
-let autoEnroll = false;
-const PersistedStore = initializeDefault.PersistedStore;
-class UnenrolledActivityQuestStore extends PersistedStore {}
+let _Set1 = new Set();
+let flag = false;
+new Set();
+const PersistedStore = get_initializedDefault.PersistedStore;
+class UnenrolledActivityQuestStore extends PersistedStore {
+  initialize(dismissedQuestIds) {
+    dismissedQuestIds = undefined;
+    const _Set = Set;
+    if (dismissedQuestIds != null) {
+      dismissedQuestIds = dismissedQuestIds.dismissedQuestIds;
+    }
+    if (dismissedQuestIds == null) {
+      dismissedQuestIds = [];
+    }
+    _Set1 = new _Set(dismissedQuestIds);
+    flag = undefined;
+    if (dismissedQuestIds != null) {
+      flag = dismissedQuestIds.autoEnroll;
+    }
+    if (flag == null) {
+      flag = false;
+    }
+  }
+  getState() {
+    let items;
+    const obj = { dismissedQuestIds: items, autoEnroll: flag };
+    items = [..._Set1];
+    return obj;
+  }
+  isDismissed(arg0) {
+    const hasItem = null != arg0 && _Set1.has(arg0);
+    return hasItem;
+  }
+  getDismissedQuestIds() {
+    return _Set1;
+  }
+}
 const prototype = UnenrolledActivityQuestStore.prototype;
-prototype["initialize"] = function initialize(dismissedQuestIds) {
-  dismissedQuestIds = undefined;
-  if (dismissedQuestIds != null) {
-    dismissedQuestIds = dismissedQuestIds.dismissedQuestIds;
-  }
-  if (dismissedQuestIds == null) {
-    dismissedQuestIds = [];
-  }
-  set = new Set(dismissedQuestIds);
-  let flag;
-  if (dismissedQuestIds != null) {
-    flag = dismissedQuestIds.autoEnroll;
-  }
-  if (flag == null) {
-    flag = false;
-  }
-  autoEnroll = flag;
-};
-prototype["getState"] = function getState() {
-  const obj = { dismissedQuestIds: null, autoEnroll };
-  const items = [...set];
-  obj.dismissedQuestIds = items;
-  return obj;
-};
-prototype["isDismissed"] = function isDismissed(arg0) {
-  let hasItem = null != arg0;
-  if (hasItem) {
-    hasItem = set.has(arg0);
-  }
-  return hasItem;
-};
-prototype["getDismissedQuestIds"] = function getDismissedQuestIds() {
-  return set;
-};
 UnenrolledActivityQuestStore.displayName = "UnenrolledActivityQuestStore";
 UnenrolledActivityQuestStore.persistKey = "UnenrolledActivityQuestStore";
-const unenrolledActivityQuestStore = new UnenrolledActivityQuestStore(DispatcherDefault, {
+let obj = {
   UNENROLLED_ACTIVITY_QUEST_DISMISS: function handleDismissUnenrolledActivityQuest(questId) {
-    if (set.size >= 20) {
+    const f128968 = (item) => item.toString();
+    if (_Set1.size >= 20) {
       const _Array = Array;
-      const sorted = Array.from(set).sort(SnowflakeUtilsDefault.compare);
+      const arr = Array.from(_Set1);
+      const sorted = arr.sort(SnowflakeUtilsDefault.compare);
       const _Math = Math;
       const substr = sorted.slice(Math.floor(10));
       const _Set = Set;
-      set = new Set(substr.map((item) => item.toString()));
-      const arr = Array.from(set);
+      const self = this;
+      const self2 = this;
+      _Set1 = new Set(substr.map(f128968));
+      set = new Set(substr.map(f128968));
     }
-    set.add(questId.questId);
+    _Set1.add(questId.questId);
     return true;
   },
   UNENROLLED_ACTIVITY_QUEST_AUTO_ENROLL: function handleSetAutoEnroll(autoEnroll) {
-    autoEnroll = autoEnroll.autoEnroll;
     return true;
   },
-});
-const size = fn(2);
+};
+const unenrolledActivityQuestStore = new UnenrolledActivityQuestStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/quests/UnenrolledActivityQuestStore.tsx");
 
 export default unenrolledActivityQuestStore;

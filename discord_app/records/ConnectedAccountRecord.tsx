@@ -1,27 +1,28 @@
 // discord_app/records/ConnectedAccountRecord.tsx
 import Record from "../lib/Record.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const size = fn(2);
 const result = size.fileFinishedImporting("records/ConnectedAccountRecord.tsx");
-class ConnectedAccountRecord extends tmp2 {
-  constructor(arg0) {
-    tmp = new ConnectedAccountRecord(new.target, new.target, global, ConnectedAccountRecord);
-    ({ id: tmp.id, type: tmp.type, name: tmp.name } = global);
-    tmp.revoked = global.revoked || false;
-    tmp.integrations = global.integrations || [];
-    tmp.visibility = global.visibility || 0;
-    tmp.friendSync = global.friend_sync || false;
-    tmp.showActivity = global.show_activity || false;
-    tmp.verified = global.verified || false;
-    tmp.accessToken = global.access_token || null;
-    tmp.twoWayLink = global.two_way_link || false;
-    tmp.metadata = global.metadata || null;
-    tmp.metadataVisibility = global.metadata_visibility || 0;
+class ConnectedAccountRecord extends Record {
+  constructor(revoked) {
+    const tmp = new ConnectedAccountRecord(new.target, this, revoked, ConnectedAccountRecord);
+    ({ id: tmp.id, type: tmp.type, name: tmp.name } = revoked);
+    tmp.revoked = revoked.revoked || false;
+    tmp.integrations = revoked.integrations || [];
+    tmp.visibility = revoked.visibility || 0;
+    tmp.friendSync = revoked.friend_sync || false;
+    tmp.showActivity = revoked.show_activity || false;
+    tmp.verified = revoked.verified || false;
+    tmp.accessToken = revoked.access_token || null;
+    tmp.twoWayLink = revoked.two_way_link || false;
+    tmp.metadata = revoked.metadata || null;
+    tmp.metadataVisibility = revoked.metadata_visibility || 0;
     return tmp;
   }
+  toString() {
+    return this.name;
+  }
 }
-ConnectedAccountRecord.prototype["toString"] = function toString() {
-  return this.name;
-};
+const prototype = ConnectedAccountRecord.prototype;
 
 export default ConnectedAccountRecord;

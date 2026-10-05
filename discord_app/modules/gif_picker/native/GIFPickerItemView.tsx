@@ -1,20 +1,27 @@
 // discord_app/modules/gif_picker/native/GIFPickerItemView.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl2 from "../../../intl/index.native.tsx";
 import KeyboardManagerUtils from "../../../utils/native/KeyboardManagerUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import gif_picker_GIFPickerUtils from "GIFPickerUtils.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const View = react_native.View;
+const jsx = Fragment.jsx;
 let closure_6 = createStyles.createStyles((height) => {
-  const obj = { container: null, gifImage: null, gifImageSelected: null };
-  const size = {
+  const obj = {
+    container: size,
+    gifImage: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 },
+    gifImageSelected: { borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BRAND },
+  };
+  size = {
     paddingBottom: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING,
     paddingHorizontal: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING / 2,
     borderRadius: nativeDefault.radii.xs,
@@ -22,105 +29,30 @@ let closure_6 = createStyles.createStyles((height) => {
     height,
     flex: 1,
   };
-  obj.container = size;
-  obj.gifImage = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 };
-  const obj2 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 };
-  obj.gifImageSelected = { borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BRAND };
+  ({ backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 });
+  ({ borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BRAND });
   return obj;
 });
-const ReactCompilerGating = fn(558);
-let size = fn(2);
-let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerItemView.tsx");
-
-export default function GIFPickerItemView(onPressGIF) {
-  onPressGIF = onPressGIF.onPressGIF;
-  const item = onPressGIF.item;
-  const index = onPressGIF.index;
-  const selected = onPressGIF.selected;
-  const tmp = closure_6(onPressGIF.height);
-  const items = [item, index, onPressGIF];
-  const items1 = [item];
-  const callback = noop.useCallback(() => {
-    onPressGIF(item, index);
-    const result = KeyboardManagerUtils.dismissGlobalKeyboard();
-  }, items);
-  const items2 = [index, item.src];
-  const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(10104, dependencyMap.paths),
-      "GIFPickerItemActionSheet",
-      { item },
-      "stack",
-    );
-    const obj2 = { item };
-    const result = KeyboardManagerUtils.dismissGlobalKeyboard();
-  }, items1);
-  const memo = noop.useMemo(() => {
-    const parts = item.src.split("/");
-    const str2 = parts.pop();
-    let first;
-    if (str2 != null) {
-      first = str2.split(".")[0];
-    }
-    if (null == first) {
-      const intl = util.intl;
-      const obj = { index: index + 1 };
-      first = intl.formatToPlainString(util.t["5iIGZI"], obj);
-    }
-    return first;
-  }, items2);
-  let obj = {
-    style: tmp.container,
-    accessibilityRole: "button",
-    accessibilityLabel: memo,
-    accessibilityState: null,
-    onPress: null,
-    onLongPress: null,
-    children: null,
-  };
-  let tmp7;
-  if (null != selected) {
-    let obj2 = { selected };
-    tmp7 = obj2;
-  }
-  obj.accessibilityState = tmp7;
-  obj.onPress = callback;
-  obj.onLongPress = callback1;
-  if (true === selected) {
-    const items3 = [,];
-    ({ gifImage: arr4[0], gifImageSelected: arr4[1] } = tmp);
-    let gifImage = items3;
-  } else {
-    gifImage = tmp.gifImage;
-  }
-  obj.children = jsx(item(index[14]), { style: gifImage, source: { uri: item.src } });
-  return jsx(onPressGIF(index[13]).PressableOpacity, {
-    style: tmp.container,
-    accessibilityRole: "button",
-    accessibilityLabel: memo,
-    accessibilityState: null,
-    onPress: null,
-    onLongPress: null,
-    children: null,
-  });
-}
-export const GIFPickerItemPlaceholder = noop.memo(
+let memo = react.memo;
+const memoResult = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (height) => {
-        const cResult = c.c(5);
+        let tmp3;
+        const obj = react2;
+        const cResult = obj.c(5);
         const tmp2 = closure_6(height.height);
         if (cResult[0] !== tmp2.gifImage) {
-          const obj2 = { style: tmp2.gifImage };
           const tmp6 = <View style={tmp2.gifImage} />;
           cResult[0] = tmp2.gifImage;
           cResult[1] = tmp6;
-          let tmp3 = tmp6;
+          tmp3 = tmp6;
         } else {
           tmp3 = cResult[1];
         }
         if (cResult[2] === tmp2.container) {
+          let tmp7;
           if (cResult[3] === tmp3) {
-            let tmp7 = cResult[4];
+            tmp7 = cResult[4];
           }
           return tmp7;
         }
@@ -129,15 +61,79 @@ export const GIFPickerItemPlaceholder = noop.memo(
         cResult[3] = tmp3;
         cResult[4] = tmp8;
         tmp7 = tmp8;
-        const obj3 = { style: tmp2.container, children: tmp3 };
       }
     : (height) => {
         const tmp = closure_6(height.height);
-        const obj = { style: tmp.container, children: <View style={tmp.gifImage} /> };
-        return (
-          <View style={tmp.container}>
-            <View style={tmp.gifImage} />
-          </View>
-        );
+        return <View style={tmp.container}>{null}</View>;
       },
 );
+let size = size_mod;
+let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerItemView.tsx");
+
+export default function GIFPickerItemView(onPressGIF) {
+  let gifImage;
+  onPressGIF = onPressGIF.onPressGIF;
+  const item = onPressGIF.item;
+  const index = onPressGIF.index;
+  const selected = onPressGIF.selected;
+  const tmp = closure_6(onPressGIF.height);
+  const items = [item, index, onPressGIF];
+  const items1 = [item];
+  const callback = react.useCallback(() => {
+    onPressGIF(item, index);
+    const obj = KeyboardManagerUtils;
+    const result = obj.dismissGlobalKeyboard();
+  }, items);
+  const items2 = [index, item.src];
+  const callback1 = react.useCallback(() => {
+    const obj = ActionSheetActionCreatorsDefault;
+    const obj2 = { item };
+    obj.openLazy(asyncRequire(10104, dependencyMap.paths), "GIFPickerItemActionSheet", obj2, "stack");
+    const obj3 = KeyboardManagerUtils;
+    const result = obj3.dismissGlobalKeyboard();
+  }, items1);
+  const memo = react.useMemo(() => {
+    const str = item.src;
+    const parts = str.split("/");
+    const str2 = parts.pop();
+    let first;
+    if (str2 != null) {
+      first = str2.split(".")[0];
+    }
+    if (null == first) {
+      const intl = intl2.intl;
+      const obj = { index: index + 1 };
+      first = intl.formatToPlainString(intl2.t["5iIGZI"], obj);
+    }
+    return first;
+  }, items2);
+  let tmp7;
+  const PressableOpacity = onPressGIF(index[13]).PressableOpacity;
+  const tmp6 = index;
+  if (null != selected) {
+    let obj2 = { selected };
+    tmp7 = obj2;
+  }
+  item(tmp6[14]);
+  if (true === selected) {
+    const items3 = [,];
+    ({ gifImage: arr4[0], gifImageSelected: arr4[1] } = tmp);
+    gifImage = items3;
+  } else {
+    gifImage = tmp.gifImage;
+  }
+  let obj3 = { style: gifImage, source: { uri: item.src } };
+  return (
+    <PressableOpacity
+      style={tmp.container}
+      accessibilityRole="button"
+      accessibilityLabel={memo}
+      accessibilityState={tmp7}
+      onPress={callback}
+      onLongPress={callback1}
+    >
+      {null}
+    </PressableOpacity>
+  );
+}
+export const GIFPickerItemPlaceholder = memoResult;

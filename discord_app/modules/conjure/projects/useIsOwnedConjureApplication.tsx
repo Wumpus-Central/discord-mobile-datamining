@@ -1,47 +1,59 @@
 // discord_app/modules/conjure/projects/useIsOwnedConjureApplication.tsx
 import BackoffDefault from "../../../../discord_common/js/packages/backoff/Backoff.tsx";
 import ConjureUtils from "../shared/ConjureUtils.tsx";
+import ConjureProjectStore2 from "ConjureProjectStore.tsx";
 import ConjureActionCreators from "ConjureActionCreators.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
-import ConjureProjectStore from "ConjureProjectStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+const ConjureProjectStore = ConjureProjectStore2;
+let _require, dependencyMap, projectsFetchState;
 
-require = fn;
-const isProjectOwner = fn(8699).isProjectOwner;
+const isProjectOwner = ConjureProjectStore2.isProjectOwner;
 const useIsOwnedVibegrationsApplication = "useIsOwnedVibegrationsApplication";
-let closure_7 = new BackoffDefault(30000, 300000);
-const ReactCompilerGating = fn(558);
-const tmp2 = new BackoffDefault(30000, 300000);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/conjure/projects/useIsOwnedConjureApplication.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = new BackoffDefault(30000, 300000);
+let closure_7 = tmp2;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
+      let closure_0;
+      let closure_1;
+      let first;
+      let stateFromStores1;
       _require = arg0;
       dependencyMap = arg1;
-      const cResult = require("c").c(16);
+      let tmp = _require;
+      const tmp2 = dependencyMap;
+      let obj = require("react");
+      const cResult = obj.c(16);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        let tmp5 = stateFromStores1;
         const items = [stateFromStores1];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === arg0) {
+        let tmp6;
+        let tmp7;
+        let tmp10;
+        let tmp9;
         if (cResult[2] === arg1) {
-          let tmp6 = cResult[3];
-          let tmp7 = cResult[4];
+          tmp6 = cResult[3];
+          tmp7 = cResult[4];
         }
-        const stateFromStores = tmp(504).useStateFromStores(first, tmp6, tmp7);
+        const tmpResult = tmp(504);
+        const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [ConjureProjectStore];
           class F {
             constructor() {
-              projectsFetchState = closure_1_4.getProjectsFetchState();
-              type = undefined;
+              projectsFetchState = projectsFetchState.getProjectsFetchState();
+              let type;
               if (projectsFetchState != null) {
                 type = projectsFetchState.type;
               }
@@ -53,24 +65,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[5] = items1;
           cResult[6] = F;
-          let tmp10 = F;
-          let tmp9 = items1;
+          tmp10 = F;
+          tmp9 = items1;
         } else {
           tmp9 = cResult[5];
           tmp10 = cResult[6];
         }
-        const tmpResult = tmp(504);
-        stateFromStores1 = tmp(504).useStateFromStores(tmp9, tmp10);
+        const tmpResult3 = tmp(504);
+        stateFromStores1 = tmpResult3.useStateFromStores(tmp9, tmp10);
         if (cResult[7] === stateFromStores) {
+          let tmp13;
+          let tmp14;
+          let tmp17;
           if (cResult[8] === stateFromStores1) {
-            let tmp13 = cResult[9];
-            let tmp14 = cResult[10];
+            tmp13 = cResult[9];
+            tmp14 = cResult[10];
           }
           const effect = stateFromStores.useEffect(tmp13, tmp14);
           class F {
             constructor() {
-              projectsFetchState = closure_1_4.getProjectsFetchState();
-              type = undefined;
+              projectsFetchState = projectsFetchState.getProjectsFetchState();
+              let type;
               if (projectsFetchState != null) {
                 type = projectsFetchState.type;
               }
@@ -84,8 +99,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const items2 = [ConjureProjectStore];
             class F {
               constructor() {
-                projectsFetchState = closure_1_4.getProjectsFetchState();
-                type = undefined;
+                projectsFetchState = projectsFetchState.getProjectsFetchState();
+                let type;
                 if (projectsFetchState != null) {
                   type = projectsFetchState.type;
                 }
@@ -96,41 +111,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             cResult[11] = items2;
-            let tmp17 = items2;
+            tmp17 = items2;
           } else {
             tmp17 = cResult[11];
           }
           if (cResult[12] === arg0) {
+            let tmp19;
+            let tmp20;
             if (cResult[13] === stateFromStores) {
-              let tmp19 = cResult[14];
-              let tmp20 = cResult[15];
+              tmp19 = cResult[14];
+              tmp20 = cResult[15];
             }
-            return tmp(504).useStateFromStores(tmp17, tmp19, tmp20);
+            const tmpResult4 = tmp(504);
+            return tmpResult4.useStateFromStores(tmp17, tmp19, tmp20);
           }
           class A {
             constructor() {
-              if (closure_2) {
-                tmp2 = null;
+              if (stateFromStores) {
                 if (null != closure_0) {
-                  obj = closure_4;
-                  result = closure_4.findProjectByApplicationId(tmp);
-                  tmp4 = null == result;
-                  if (!tmp4) {
-                    tmp5 = isProjectOwner;
-                    tmp4 = !isProjectOwner(result);
-                  }
-                  tmp6 = !tmp4;
-                  if (tmp4) {
-                    projectsFetchState = obj.getProjectsFetchState();
-                    type = undefined;
+                  const result = ConjureProjectStore.findProjectByApplicationId(tmp2);
+                  const tmp5 = null == result || !isProjectOwner(result);
+                  let tmp7 = !tmp5;
+                  if (tmp5) {
+                    projectsFetchState = ConjureProjectStore.getProjectsFetchState();
+                    let type;
                     if (projectsFetchState != null) {
                       type = projectsFetchState.type;
                     }
-                    str = "success";
-                    tmp9 = "success" !== type && null;
-                    tmp6 = tmp9;
+                    tmp7 = "success" !== type && null;
                   }
-                  return tmp6;
+                  return tmp7;
                 }
               }
               return false;
@@ -150,15 +160,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (stateFromStores) {
             if (null != stateFromStores1) {
-              let pending = "error" !== stateFromStores1;
+              const pending = "error" !== stateFromStores1 || closure_7.pending;
               if (!pending) {
-                pending = closure_7.pending;
-              }
-              if (!pending) {
-                closure_7.fail(() => closure_1_0(closure_1_1[8]).listProjects());
+                closure_7.fail(() => {
+                  const obj = closure_1_0(closure_1_1[8]);
+                  return obj.listProjects();
+                });
               }
             } else {
-              ConjureActionCreators.listProjects();
+              let obj = ConjureActionCreators;
+              obj.listProjects();
             }
           }
         };
@@ -169,17 +180,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = items4;
         tmp14 = items4;
         tmp13 = fn2;
-        const tmpResult3 = tmp(504);
       }
       const fn = function p() {
-        let tmp = closure_1;
-        if (closure_1) {
-          tmp = null != closure_0;
-        }
+        let tmp = closure_1 && null != closure_0;
         if (tmp) {
-          tmp =
-            ConjureUtils.eligibleConjureGuilds(GuildStore.getGuildsArray(), useIsOwnedVibegrationsApplication).length >
-            0;
+          const obj = ConjureUtils;
+          tmp = obj.eligibleConjureGuilds(GuildStore.getGuildsArray(), useIsOwnedVibegrationsApplication).length > 0;
         }
         return tmp;
       };
@@ -190,32 +196,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items5;
       tmp7 = items5;
       tmp6 = fn;
-      let obj = require("c");
     }
   : (arg0, arg1) => {
+      let closure_0;
+      let closure_1;
+      let stateFromStores1;
       _require = arg0;
       dependencyMap = arg1;
+      let obj = require("get initialized");
       const items = [stateFromStores1];
       const items1 = [arg1, arg0];
-      const stateFromStores = require("initialize").useStateFromStores(
+      const stateFromStores = obj.useStateFromStores(
         items,
         () => {
-          let tmp = closure_1;
-          if (closure_1) {
-            tmp = null != closure_0;
-          }
+          let tmp = closure_1 && null != closure_0;
           if (tmp) {
-            tmp =
-              ConjureUtils.eligibleConjureGuilds(GuildStore.getGuildsArray(), useIsOwnedVibegrationsApplication)
-                .length > 0;
+            const obj = ConjureUtils;
+            tmp = obj.eligibleConjureGuilds(GuildStore.getGuildsArray(), useIsOwnedVibegrationsApplication).length > 0;
           }
           return tmp;
         },
         items1,
       );
-      let obj = require("initialize");
       const items2 = [ConjureProjectStore];
-      stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
+      const obj2 = require("get initialized");
+      stateFromStores1 = obj2.useStateFromStores(items2, () => {
         projectsFetchState = projectsFetchState.getProjectsFetchState();
         let type;
         if (projectsFetchState != null) {
@@ -233,42 +238,39 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (stateFromStores) {
           if (null != stateFromStores1) {
-            let pending = "error" !== stateFromStores1;
+            const pending = "error" !== stateFromStores1 || closure_7.pending;
             if (!pending) {
-              pending = closure_7.pending;
-            }
-            if (!pending) {
-              closure_7.fail(() => closure_1_0(closure_1_1[8]).listProjects());
+              closure_7.fail(() => {
+                const obj = closure_1_0(closure_1_1[8]);
+                return obj.listProjects();
+              });
             }
           } else {
-            ConjureActionCreators.listProjects();
+            let obj = ConjureActionCreators;
+            obj.listProjects();
           }
         }
       }, items3);
-      const obj2 = require("initialize");
       const items4 = [ConjureProjectStore];
       const items5 = [stateFromStores, arg0];
-      return require("initialize").useStateFromStores(
+      const obj3 = require("get initialized");
+      return obj3.useStateFromStores(
         items4,
         () => {
           if (stateFromStores) {
             if (null != closure_0) {
-              const result = ConjureProjectStore.findProjectByApplicationId(tmp);
-              let tmp4 = null == result;
-              if (!tmp4) {
-                tmp4 = !isProjectOwner(result);
-              }
-              let tmp6 = !tmp4;
-              if (tmp4) {
+              const result = ConjureProjectStore.findProjectByApplicationId(tmp2);
+              const tmp5 = null == result || !isProjectOwner(result);
+              let tmp7 = !tmp5;
+              if (tmp5) {
                 projectsFetchState = ConjureProjectStore.getProjectsFetchState();
                 let type;
                 if (projectsFetchState != null) {
                   type = projectsFetchState.type;
                 }
-                tmp6 = "success" !== type && null;
-                const tmp9 = "success" !== type && null;
+                tmp7 = "success" !== type && null;
               }
-              return tmp6;
+              return tmp7;
             }
           }
           return false;
@@ -276,3 +278,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items5,
       );
     };
+let result = size.fileFinishedImporting("modules/conjure/projects/useIsOwnedConjureApplication.tsx");
+
+export default tmp3;

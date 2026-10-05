@@ -10,11 +10,14 @@ export const isAgeRestrictedContentClassification = function isAgeRestrictedCont
 ) {
   let tmp = null != contentClassification;
   if (tmp) {
-    const obj2 = {
+    const obj = {
       type: ContentClassificationToAgeRestriction.ContentClassificationVariant.MINIMAL,
       data: contentClassification,
     };
-    const result = ContentClassificationToAgeRestriction.contentClassificationToAgeRestriction(obj2);
+    const contentClassificationToAgeRestriction =
+      ContentClassificationToAgeRestriction.contentClassificationToAgeRestriction;
+    ContentClassificationToAgeRestriction;
+    const result = contentClassificationToAgeRestriction(obj);
     tmp = result === AgeRestrictionStatus.AgeRestrictionStatus.ADULT;
   }
   return tmp;

@@ -1,27 +1,30 @@
 // discord_app/modules/guild_onboarding_home/useIsSelectedResourceChannel.tsx
+import Constants from "../../Constants.tsx";
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import ChannelConstants from "../channel/ChannelConstants.tsx";
 import isSelectedFromHomeChannelDefault from "isSelectedFromHomeChannel.native.tsx";
 import ChannelSectionStore from "../../stores/ChannelSectionStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, tmp5, tmp6, tmp7;
 
-require = fn;
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
-const ChannelFlags = fn(2058).ChannelFlags;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_onboarding_home/useIsSelectedResourceChannel.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const EMPTY_STRING_SNOWFLAKE_ID = Constants.EMPTY_STRING_SNOWFLAKE_ID;
+const ChannelFlags = ChannelConstants.ChannelFlags;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
       _require = arg0;
-      const cResult = require("c").c(3);
+      let obj = require("react");
+      const cResult = obj.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore, SelectedChannelStore, ChannelSectionStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -70,9 +73,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      let obj = require("c");
-      const stateFromStores = require("useStateFromStores").useStateFromStores(first, S);
       const tmpResult = require("useStateFromStores");
+      const stateFromStores = tmpResult.useStateFromStores(first, S);
+      const useCanSeeOnboardingHome = require("OnboardingHomeUtils").useCanSeeOnboardingHome;
+      require("OnboardingHomeUtils");
       if (stateFromStores == null) {
         class S {
           constructor() {
@@ -95,28 +99,34 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult2 = require("OnboardingHomeUtils");
-      return null != stateFromStores && require("OnboardingHomeUtils").useCanSeeOnboardingHome(stateFromStores);
+      const tmp11 = null != stateFromStores && useCanSeeOnboardingHome(stateFromStores);
+      return tmp11;
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
+      let obj = require("useStateFromStores");
       const items = [ChannelStore, SelectedChannelStore, ChannelSectionStore];
-      const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
+      const stateFromStores = obj.useStateFromStores(items, () => {
         const channel = ChannelStore.getChannel(closure_0);
         if (null != channel) {
+          const obj = FlagUtils;
           if (obj.hasFlag(channel.flags, ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) {
             if (isSelectedFromHomeChannelDefault(channel, SelectedChannelStore, ChannelSectionStore)) {
               return channel.guild_id;
             }
           }
-          obj = FlagUtils;
         }
       });
-      let obj = require("useStateFromStores");
-      let tmp2 = stateFromStores;
+      let tmp3 = stateFromStores;
+      const useCanSeeOnboardingHome = require("OnboardingHomeUtils").useCanSeeOnboardingHome;
+      require("OnboardingHomeUtils");
       if (stateFromStores == null) {
-        tmp2 = EMPTY_STRING_SNOWFLAKE_ID;
+        tmp3 = EMPTY_STRING_SNOWFLAKE_ID;
       }
-      const obj2 = require("OnboardingHomeUtils");
-      return null != stateFromStores && require("OnboardingHomeUtils").useCanSeeOnboardingHome(tmp2);
+      const tmp4 = null != stateFromStores && useCanSeeOnboardingHome(tmp3);
+      return tmp4;
     };
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/useIsSelectedResourceChannel.tsx");
+
+export default tmp2;

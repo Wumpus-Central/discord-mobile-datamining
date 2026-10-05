@@ -1,291 +1,354 @@
 // discord_app/modules/conjure/history/native/ConjureSaveBackupSheet.tsx
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ConjureConnectionStore from "../../connection/ConjureConnectionStore.tsx";
 import conjureDatabaseLock from "../conjureDatabaseLock.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-let closure_6 = fn(12904).createDatabaseRestorePoint;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let react = react_mod;
+const View = react_native.View;
+let closure_6 = ConjureConnectionStore.createDatabaseRestorePoint;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
 const ConjureSaveBackupSheet = "ConjureSaveBackupSheet";
-const createStyles = fn(4890);
-let obj2 = { content: { paddingBottom: nativeDefault.space.PX_16 } };
-let closure_10 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { paddingBottom: nativeDefault.space.PX_16 };
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/conjure/history/native/ConjureSaveBackupSheet.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let obj = { content: obj2 };
+obj2 = { paddingBottom: nativeDefault.space.PX_16 };
+let closure_10 = createStyles.createStyles(obj);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (projectId) => {
-      const cResult = projectId(onSaved[8]).c(28);
+      let intl;
+      let items;
+      let obj6;
+      let onSaved;
+      let tmp11;
+      let tmp9;
+      let tmpResult;
+      let value;
+      let tmp = projectId;
+      const tmp2 = onSaved;
+      let obj = projectId(onSaved[8]);
+      const cResult = obj.c(28);
       projectId = projectId.projectId;
       const environment = projectId.environment;
       onSaved = projectId.onSaved;
       const tmp4 = closure_10();
-      const tmp5 = value(noop.useState(""), 2);
+      const tmp5 = value(react.useState(""), 2);
       value = tmp5[0];
-      let obj = projectId(onSaved[8]);
-      [tmp8, noop] = value(noop.useState(false), 2);
-      const tmp7 = value(noop.useState(false), 2);
-      [tmp10, View] = value(noop.useState(false), 2);
+      const tmp7 = tmp5[1];
+      const tmp8 = value(react.useState(false), 2);
+      [tmp9, react] = tmp8;
+      [tmp11, View] = value(react.useState(false), 2);
+      value(react.useState(false), 2);
       if (cResult[0] === environment) {
         if (cResult[1] === value) {
           if (cResult[2] === onSaved) {
+            let tmp12;
+            let tmp14;
+            let tmp18;
+            let tmp21;
+            let tmp24;
+            let tmp27;
             if (cResult[3] === projectId) {
-              let tmp11 = cResult[4];
+              tmp12 = cResult[4];
             }
             const _Symbol = Symbol;
             if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-              let obj2 = { title: null };
-              let intl = tmp(tmp2[11]).intl;
-              obj2.title = intl.string(environment(tmp2[12]).qywOto);
-              const tmp16 = closure_7(tmp(tmp2[14]).BottomSheetTitleHeader, obj2);
-              cResult[5] = tmp16;
-              let tmp13 = tmp16;
+              let obj2 = { title: intl.string(environment(tmp2[12]).qywOto) };
+              const BottomSheetTitleHeader = tmp(tmp2[14]).BottomSheetTitleHeader;
+              intl = tmp(tmp2[11]).intl;
+              const tmp17 = closure_7(BottomSheetTitleHeader, obj2);
+              cResult[5] = tmp17;
+              tmp14 = tmp17;
             } else {
-              tmp13 = cResult[5];
+              tmp14 = cResult[5];
             }
+            const content = tmp4.content;
             if (cResult[6] !== environment) {
               const intl2 = tmp(tmp2[11]).intl;
-              const obj3 = { environment: tmp(tmp2[15]).historyEnvironmentLabel(environment) };
-              const formatToPlainStringResult = intl2.formatToPlainString(environment(tmp2[12]).sXGNm5, obj3);
+              const formatToPlainString = intl2.formatToPlainString;
+              const obj3 = { environment: tmpResult.historyEnvironmentLabel(environment) };
+              const sXGNm5 = environment(tmp2[12]).sXGNm5;
+              tmpResult = tmp(tmp2[15]);
+              const formatToPlainStringResult = formatToPlainString(sXGNm5, obj3);
               cResult[6] = environment;
               cResult[7] = formatToPlainStringResult;
-              let tmp17 = formatToPlainStringResult;
-              const tmpResult = tmp(tmp2[15]);
+              tmp18 = formatToPlainStringResult;
             } else {
-              tmp17 = cResult[7];
+              tmp18 = cResult[7];
             }
-            if (cResult[8] !== tmp17) {
-              const obj4 = { variant: "text-sm/normal", color: "text-muted", children: tmp17 };
-              const tmp22 = closure_7(tmp(tmp2[16]).Text, obj4);
-              cResult[8] = tmp17;
-              cResult[9] = tmp22;
-              let tmp20 = tmp22;
+            if (cResult[8] !== tmp18) {
+              const obj4 = { variant: "text-sm/normal", color: "text-muted", children: tmp18 };
+              const tmp23 = closure_7(tmp(tmp2[16]).Text, obj4);
+              cResult[8] = tmp18;
+              cResult[9] = tmp23;
+              tmp21 = tmp23;
             } else {
-              tmp20 = cResult[9];
+              tmp21 = cResult[9];
             }
             const _Symbol2 = Symbol;
             if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
               const intl3 = tmp(tmp2[11]).intl;
               const stringResult = intl3.string(environment(tmp2[12]).WKmhsD);
               cResult[10] = stringResult;
-              let tmp23 = stringResult;
+              tmp24 = stringResult;
             } else {
-              tmp23 = cResult[10];
+              tmp24 = cResult[10];
             }
-            if (cResult[11] !== tmp10) {
+            if (cResult[11] !== tmp11) {
               let stringResult1;
-              if (tmp10) {
+              if (tmp11) {
                 const intl4 = tmp(tmp2[11]).intl;
                 stringResult1 = intl4.string(environment(tmp2[12]).TOxYEF);
               }
-              cResult[11] = tmp10;
+              cResult[11] = tmp11;
               cResult[12] = stringResult1;
-              let tmp26 = stringResult1;
+              tmp27 = stringResult1;
             } else {
-              tmp26 = cResult[12];
+              tmp27 = cResult[12];
             }
             if (cResult[13] === value) {
-              if (cResult[14] === tmp8) {
-                if (cResult[15] === tmp26) {
-                  let tmp29 = cResult[16];
+              if (cResult[14] === tmp9) {
+                let tmp30;
+                let tmp33;
+                if (cResult[15] === tmp27) {
+                  tmp30 = cResult[16];
                 }
                 const _Symbol3 = Symbol;
                 if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
                   const intl5 = tmp(tmp2[11]).intl;
                   const stringResult2 = intl5.string(environment(tmp2[12])["5/xCdF"]);
                   cResult[17] = stringResult2;
-                  let tmp32 = stringResult2;
+                  tmp33 = stringResult2;
                 } else {
-                  tmp32 = cResult[17];
+                  tmp33 = cResult[17];
                 }
-                if (cResult[18] === tmp11) {
-                  if (cResult[19] === tmp8) {
-                    let tmp35 = cResult[20];
+                if (cResult[18] === tmp12) {
+                  let tmp36;
+                  if (cResult[19] === tmp9) {
+                    tmp36 = cResult[20];
                   }
-                  if (cResult[21] === tmp35) {
-                    if (cResult[22] === tmp20) {
-                      if (cResult[23] === tmp29) {
-                        let tmp38 = cResult[24];
+                  if (cResult[21] === tmp36) {
+                    if (cResult[22] === tmp21) {
+                      let tmp39;
+                      if (cResult[23] === tmp30) {
+                        tmp39 = cResult[24];
                       }
                       if (cResult[25] === tmp4.content) {
-                        if (cResult[26] === tmp38) {
-                          let tmp41 = cResult[27];
+                        let tmp42;
+                        if (cResult[26] === tmp39) {
+                          tmp42 = cResult[27];
                         }
-                        return tmp41;
+                        return tmp42;
                       }
                       const obj5 = {
                         startExpanded: true,
                         keyboardShouldPersistTaps: "handled",
-                        header: tmp13,
-                        children: null,
+                        header: tmp14,
+                        children: closure_7(View, obj6),
                       };
-                      const obj6 = { style: tmp4.content, children: tmp38 };
-                      obj5.children = closure_7(View, obj6);
-                      const tmp44 = closure_7(tmp(tmp2[20]).ActionSheet, obj5);
+                      obj6 = { style: content, children: tmp39 };
+                      const ActionSheet = tmp(tmp2[20]).ActionSheet;
+                      const tmp45 = closure_7(ActionSheet, obj5);
                       cResult[25] = tmp4.content;
-                      cResult[26] = tmp38;
-                      cResult[27] = tmp44;
-                      tmp41 = tmp44;
+                      cResult[26] = tmp39;
+                      cResult[27] = tmp45;
+                      tmp42 = tmp45;
                     }
                   }
-                  const obj7 = { spacing: 16, children: null };
-                  const items = [tmp20, tmp29, tmp35];
-                  obj7.children = items;
-                  const tmp40 = closure_8(tmp(tmp2[19]).Stack, obj7);
-                  cResult[21] = tmp35;
-                  cResult[22] = tmp20;
-                  cResult[23] = tmp29;
-                  cResult[24] = tmp40;
-                  tmp38 = tmp40;
+                  const obj7 = { spacing: 16, children: items };
+                  items = [tmp21, tmp30, tmp36];
+                  const tmp41 = closure_8(tmp(tmp2[19]).Stack, obj7);
+                  cResult[21] = tmp36;
+                  cResult[22] = tmp21;
+                  cResult[23] = tmp30;
+                  cResult[24] = tmp41;
+                  tmp39 = tmp41;
                 }
-                const obj8 = { variant: "primary", text: tmp32, loading: tmp8, onPress: tmp11 };
-                const tmp37 = closure_7(tmp(tmp2[18]).Button, obj8);
-                cResult[18] = tmp11;
-                cResult[19] = tmp8;
-                cResult[20] = tmp37;
-                tmp35 = tmp37;
+                const obj8 = { variant: "primary", text: tmp33, loading: tmp9, onPress: tmp12 };
+                const tmp38 = closure_7(tmp(tmp2[18]).Button, obj8);
+                cResult[18] = tmp12;
+                cResult[19] = tmp9;
+                cResult[20] = tmp38;
+                tmp36 = tmp38;
               }
             }
-            const obj9 = {
-              label: tmp23,
-              value,
-              onChange: tmp5[1],
-              maxLength: 200,
-              disabled: tmp8,
-              errorMessage: tmp26,
-            };
-            const tmp31 = closure_7(tmp(tmp2[17]).TextInput, obj9);
+            const obj9 = { label: tmp24, value, onChange: tmp7, maxLength: 200, disabled: tmp9, errorMessage: tmp27 };
+            const tmp32 = closure_7(tmp(tmp2[17]).TextInput, obj9);
             cResult[13] = value;
-            cResult[14] = tmp8;
-            cResult[15] = tmp26;
-            cResult[16] = tmp31;
-            tmp29 = tmp31;
+            cResult[14] = tmp9;
+            cResult[15] = tmp27;
+            cResult[16] = tmp32;
+            tmp30 = tmp32;
           }
         }
       }
       const fn = function v() {
-        noop(true);
+        const tmp = react(true);
         View(false);
-        const result = conjureDatabaseLock.withConjureDatabaseLock(projectId, () =>
-          closure_2_6(projectId, environment, closure_1_3),
+        let obj = conjureDatabaseLock;
+        const result = obj.withConjureDatabaseLock(projectId, () => closure_2_6(projectId, environment, closure_1_3));
+        const nextPromise = result.then(function (result) {
+          if (null == result) {
+            const _Error = Error;
+            const self = this;
+            const self2 = this;
+            const error = new Error("database busy");
+            throw error;
+          }
+        });
+        nextPromise.then(
+          () => {
+            let intl;
+            const obj = {
+              key: "VIBEGRATIONS_HISTORY_BACKUP_SAVED",
+              content: intl.string(environment(onSaved[12]).OoHJfv),
+            };
+            const open = environment(onSaved[10]).open;
+            environment(onSaved[10]);
+            intl = projectId(onSaved[11]).intl;
+            open(obj);
+            closure_1_2();
+            const obj2 = environment(onSaved[13]);
+            obj2.hideActionSheet(ConjureSaveBackupSheet);
+          },
+          () => {
+            closure_1_4(false);
+            closure_1_5(true);
+          },
         );
-        result
-          .then((result) => {
-            if (null == result) {
-              const _Error = Error;
-              const error = new Error("database busy");
-              throw error;
-            }
-          })
-          .then(
-            () => {
-              const obj2 = { key: "VIBEGRATIONS_HISTORY_BACKUP_SAVED", content: null };
-              const intl = projectId(onSaved[11]).intl;
-              obj2.content = intl.string(environment(onSaved[12]).OoHJfv);
-              environment(onSaved[10]).open(obj2);
-              closure_1_2();
-              const obj = environment(onSaved[10]);
-              environment(onSaved[13]).hideActionSheet(ConjureSaveBackupSheet);
-            },
-            () => {
-              closure_1_4(false);
-              closure_1_5(true);
-            },
-          );
       };
       cResult[0] = environment;
       cResult[1] = value;
       cResult[2] = onSaved;
       cResult[3] = projectId;
       cResult[4] = fn;
-      tmp11 = fn;
-      const tmp9 = value(noop.useState(false), 2);
+      tmp12 = fn;
     }
   : (projectId) => {
+      let BottomSheetTitleHeader;
+      let Stack;
+      let _undefined;
+      let c4;
+      let formatToPlainString;
+      let intl;
+      let intl3;
+      let intl5;
+      let obj2;
+      let obj3;
+      let obj5;
+      let obj6;
+      let obj8;
+      let sXGNm5;
+      let stringResult;
+      let tmp14;
+      let tmp6;
       projectId = projectId.projectId;
       const environment = projectId.environment;
       const onSaved = projectId.onSaved;
-      value = undefined;
-      noop = undefined;
-      const tmp2 = value(noop.useState(""), 2);
+      let value;
+      react = undefined;
+      let tmp = closure_10();
+      const tmp2 = value(react.useState(""), 2);
       value = tmp2[0];
-      const tmp = closure_10();
-      [tmp5, c4] = value(noop.useState(false), 2);
-      const tmp6 = value(noop.useState(false), 2);
-      closure_5 = tmp6[1];
+      const tmp4 = tmp2[1];
+      [tmp6, c4] = value(react.useState(false), 2);
+      value(react.useState(false), 2);
+      const tmp7 = value(react.useState(false), 2);
+      let closure_5 = tmp7[1];
       const items = [environment, value, onSaved, projectId];
-      const callback = noop.useCallback(() => {
-        _undefined(true);
+      const first1 = tmp7[0];
+      const callback = react.useCallback(() => {
+        const tmp = _undefined(true);
         closure_5(false);
-        const result = conjureDatabaseLock.withConjureDatabaseLock(projectId, () =>
-          closure_2_6(projectId, environment, closure_1_3),
+        let obj = conjureDatabaseLock;
+        const result = obj.withConjureDatabaseLock(projectId, () => closure_2_6(projectId, environment, closure_1_3));
+        const nextPromise = result.then(function (result) {
+          if (null == result) {
+            const _Error = Error;
+            const self = this;
+            const self2 = this;
+            const error = new Error("database busy");
+            throw error;
+          }
+        });
+        nextPromise.then(
+          () => {
+            let intl;
+            const obj = {
+              key: "VIBEGRATIONS_HISTORY_BACKUP_SAVED",
+              content: intl.string(environment(onSaved[12]).OoHJfv),
+            };
+            const open = environment(onSaved[10]).open;
+            environment(onSaved[10]);
+            intl = projectId(onSaved[11]).intl;
+            open(obj);
+            closure_1_2();
+            const obj2 = environment(onSaved[13]);
+            obj2.hideActionSheet(ConjureSaveBackupSheet);
+          },
+          () => {
+            _undefined(false);
+            closure_1_5(true);
+          },
         );
-        result
-          .then((result) => {
-            if (null == result) {
-              const _Error = Error;
-              const error = new Error("database busy");
-              throw error;
-            }
-          })
-          .then(
-            () => {
-              const obj2 = { key: "VIBEGRATIONS_HISTORY_BACKUP_SAVED", content: null };
-              const intl = projectId(onSaved[11]).intl;
-              obj2.content = intl.string(environment(onSaved[12]).OoHJfv);
-              environment(onSaved[10]).open(obj2);
-              closure_1_2();
-              const obj = environment(onSaved[10]);
-              environment(onSaved[13]).hideActionSheet(ConjureSaveBackupSheet);
-            },
-            () => {
-              _undefined(false);
-              closure_1_5(true);
-            },
-          );
       }, items);
-      let obj = { startExpanded: true, keyboardShouldPersistTaps: "handled", header: null, children: null };
-      let obj2 = { title: null };
-      let intl = projectId(onSaved[11]).intl;
-      obj2.title = intl.string(environment(onSaved[12]).qywOto);
-      obj.header = closure_7(projectId(onSaved[14]).BottomSheetTitleHeader, obj2);
-      const obj3 = { style: tmp.content, children: null };
-      const obj4 = { variant: "text-sm/normal", color: "text-muted", children: null };
+      let obj = {
+        startExpanded: true,
+        keyboardShouldPersistTaps: "handled",
+        header: closure_7(BottomSheetTitleHeader, obj2),
+        children: closure_7(tmp14, obj3),
+      };
+      const ActionSheet = projectId(onSaved[20]).ActionSheet;
+      obj2 = { title: intl.string(environment(onSaved[12]).qywOto) };
+      BottomSheetTitleHeader = projectId(onSaved[14]).BottomSheetTitleHeader;
+      intl = projectId(onSaved[11]).intl;
+      obj3 = { style: tmp.content, children: closure_8(Stack, obj8) };
+      Stack = projectId(onSaved[19]).Stack;
+      const obj4 = { variant: "text-sm/normal", color: "text-muted", children: formatToPlainString(sXGNm5, obj5) };
+      const Text = projectId(onSaved[16]).Text;
       const intl2 = projectId(onSaved[11]).intl;
-      const obj5 = { environment: null };
-      const tmp12 = closure_5;
-      const tmp4 = value(noop.useState(false), 2);
-      obj5.environment = projectId(onSaved[15]).historyEnvironmentLabel(environment);
-      obj4.children = intl2.formatToPlainString(environment(onSaved[12]).sXGNm5, obj5);
-      const items1 = [closure_7(projectId(onSaved[16]).Text, obj4), ,];
-      const obj7 = { label: null, value: null, onChange: null, maxLength: 200, disabled: null, errorMessage: null };
-      const intl3 = projectId(onSaved[11]).intl;
-      obj7.label = intl3.string(environment(onSaved[12]).WKmhsD);
-      obj7.value = value;
-      obj7.onChange = tmp2[1];
-      obj7.disabled = tmp5;
-      let stringResult;
-      if (tmp6[0]) {
-        const intl4 = tmp9(tmp10[11]).intl;
-        stringResult = intl4.string(tmp11(tmp10[12]).TOxYEF);
+      formatToPlainString = intl2.formatToPlainString;
+      obj5 = { environment: obj6.historyEnvironmentLabel(environment) };
+      sXGNm5 = environment(onSaved[12]).sXGNm5;
+      obj6 = projectId(onSaved[15]);
+      const items1 = [closure_7(Text, obj4), ,];
+      const obj7 = {
+        label: intl3.string(environment(onSaved[12]).WKmhsD),
+        value,
+        onChange: tmp4,
+        maxLength: 200,
+        disabled: tmp6,
+        errorMessage: stringResult,
+      };
+      const TextInput = projectId(onSaved[17]).TextInput;
+      intl3 = projectId(onSaved[11]).intl;
+      stringResult = undefined;
+      tmp14 = closure_5;
+      if (first1) {
+        const intl4 = tmp11(tmp12[11]).intl;
+        stringResult = intl4.string(tmp13(tmp12[12]).TOxYEF);
       }
-      const obj8 = { spacing: 16, children: null };
-      obj7.errorMessage = stringResult;
-      items1[1] = closure_7(projectId(onSaved[17]).TextInput, obj7);
-      const obj9 = { variant: "primary", text: null, loading: null, onPress: null };
-      const intl5 = tmp9(tmp10[11]).intl;
-      obj9.text = intl5.string(environment(onSaved[12])["5/xCdF"]);
-      obj9.loading = tmp5;
-      obj9.onPress = callback;
-      items1[2] = closure_7(projectId(onSaved[18]).Button, obj9);
-      obj8.children = items1;
-      obj3.children = closure_8(projectId(onSaved[19]).Stack, obj8);
-      obj.children = closure_7(tmp12, obj3);
-      return closure_7(projectId(onSaved[20]).ActionSheet, obj);
+      obj8 = { spacing: 16, children: items1 };
+      items1[1] = closure_7(TextInput, obj7);
+      const obj9 = {
+        variant: "primary",
+        text: intl5.string(environment(onSaved[12])["5/xCdF"]),
+        loading: tmp6,
+        onPress: callback,
+      };
+      const Button = tmp11(tmp12[18]).Button;
+      intl5 = tmp11(tmp12[11]).intl;
+      items1[2] = closure_7(Button, obj9);
+      return closure_7(ActionSheet, obj);
     };
+let result = size.fileFinishedImporting("modules/conjure/history/native/ConjureSaveBackupSheet.tsx");
+
+export default tmp3;
 export const CONJURE_SAVE_BACKUP_SHEET_KEY = "ConjureSaveBackupSheet";

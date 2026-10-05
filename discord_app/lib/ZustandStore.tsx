@@ -1,8 +1,9 @@
 // discord_app/lib/ZustandStore.tsx
-import c from "../../_runtime/00576_c.js";
+import react from "../../_runtime/00576_react.js";
 import size from "../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, closure_0, dependencyMap;
 
 function defaultStatesAreEqual(arg0, arg1) {
   return arg0 === arg1;
@@ -10,24 +11,29 @@ function defaultStatesAreEqual(arg0, arg1) {
 const result = size.fileFinishedImporting("lib/ZustandStore.tsx");
 
 export const createZustandStore = function createZustandStore(arg0) {
+  let closure_1;
   _require = arg0;
-  let obj = require("../../_runtime/metro/01254__.js");
   let tmp = _require;
-  dependencyMap = obj.createWithEqualityFn(
-    require("../../_runtime/metro/04750__.js").subscribeWithSelector((arg0, arg1, arg2) => {
+  let tmp2 = dependencyMap;
+  let tmp3 = require("../../_runtime/metro/01254__.js");
+  const createWithEqualityFn = tmp3.createWithEqualityFn;
+  let obj = require("combine");
+  dependencyMap = createWithEqualityFn(
+    obj.subscribeWithSelector((arg0, arg1, arg2) => {
       closure_0 = arg0;
       return closure_0(
         (arg0) => {
           closure_0 = arg0;
-          return closure_0(closure_1_1[2]).batchUpdates(() => closure_0(closure_0));
+          const obj = closure_0(closure_1_1[2]);
+          return obj.batchUpdates(() => closure_0(closure_0));
         },
         arg1,
         arg2,
       );
     }),
   );
-  const obj2 = require("../../_runtime/metro/04750__.js");
-  let tmp3 = require("ReactCompilerGating").isReactCompilerEnabled()
+  const obj2 = require("ReactCompilerGating");
+  const tmp4 = obj2.isReactCompilerEnabled()
     ? (arg0, arg1) => {
         let tmp = arg1;
         if (undefined === arg1) {
@@ -42,27 +48,30 @@ export const createZustandStore = function createZustandStore(arg0) {
         }
         return closure_1(arg0, tmp);
       };
-  closure_2 = tmp3;
-  const obj3 = require("ReactCompilerGating");
+  let closure_2 = tmp4;
   function setState(arg0) {
     closure_0 = arg0;
-    closure_0(closure_1[2]).batchUpdates(() => state.setState(closure_0));
+    const obj = closure_0(closure_1[2]);
+    obj.batchUpdates(() => state.setState(closure_0));
   }
+  const tmpResult = tmp(558);
   const store = {
-    useState: tmp3,
+    useState: tmp4,
     getState(fn) {
-      state = closure_1.getState();
+      const state = closure_1.getState();
       let tmp2 = state;
       if (null != fn) {
         tmp2 = fn(state);
       }
       return tmp2;
     },
-    useField: tmp(558).isReactCompilerEnabled()
+    useField: tmpResult.isReactCompilerEnabled()
       ? (arg0, arg1) => {
+          let tmp3;
           closure_0 = arg0;
           let tmp = arg1;
-          const cResult = c.c(2);
+          const obj = react;
+          const cResult = obj.c(2);
           if (undefined === arg1) {
             tmp = defaultStatesAreEqual;
           }
@@ -72,7 +81,7 @@ export const createZustandStore = function createZustandStore(arg0) {
             };
             cResult[0] = arg0;
             cResult[1] = fn;
-            let tmp3 = fn;
+            tmp3 = fn;
           } else {
             tmp3 = cResult[1];
           }
@@ -96,8 +105,8 @@ export const createZustandStore = function createZustandStore(arg0) {
     resetState() {
       if (typeof setState === "function") {
         const initialState = state.getInitialState();
-        initialState(state[2]).batchUpdates(() => state.setState(closure_0));
         const obj = initialState(state[2]);
+        obj.batchUpdates(() => state.setState(closure_0));
       } else {
         throw new TypeError("Trying to call a non-function");
       }

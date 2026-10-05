@@ -5,6 +5,10 @@ import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
 ({
   SubscriptionTypes: c3,
   PurchaseTypeToAnalyticsPaymentType: closure_4,
@@ -37,42 +41,46 @@ export const PaymentFlowStep = {
   REWARD_SKU_SELECT: "reward_sku_select",
 };
 export const getBasePurchaseFlowAnalyticsFields = function getBasePurchaseFlowAnalyticsFields(isGift) {
+  let section;
   let flag = isGift.isGift;
+  const analyticsLoadId = isGift.analyticsLoadId;
   if (flag === undefined) {
     flag = false;
   }
   const analyticsLocation = isGift.analyticsLocation;
   const obj = {
-    load_id: isGift.analyticsLoadId,
-    payment_type: React4[constants2.SUBSCRIPTION],
+    load_id: analyticsLoadId,
+    payment_type: React3[hasOwnProperty.SUBSCRIPTION],
     subscription_type: constants.PREMIUM,
     is_gift: flag,
     location: analyticsLocation,
     location_stack: isGift.analyticsLocations,
-    location_section: null,
+    location_section: section,
   };
-  let section;
+  section = undefined;
   if (analyticsLocation != null) {
     section = analyticsLocation.section;
   }
-  obj.location_section = section;
   return obj;
 };
 export const getPaymentFlowCompletedAnalyticsFields = function getPaymentFlowCompletedAnalyticsFields(arg0, arg1) {
+  const obj = {};
   const merged = Object.assign(arg0);
   const merged1 = Object.assign(arg1);
-  return {};
+  return obj;
 };
 export const getPaymentFlowStepAnalyticsFields = function getPaymentFlowStepAnalyticsFields(
   basePurchaseAnalytics,
   arg1,
 ) {
+  const obj = {};
   const merged = Object.assign(basePurchaseAnalytics);
   const merged1 = Object.assign(arg1);
-  return {};
+  return obj;
 };
 export const getNewAnalyticsLoadId = function getNewAnalyticsLoadId() {
-  return v1.v4();
+  const obj = v1;
+  return obj.v4();
 };
 export const CancellationFlowSteps = obj;
 export const STEP_ANALYTICS_NAMES = {
@@ -86,92 +94,99 @@ export const trackPremiumSubscriptionCancellationStarted = function trackPremium
   subscription,
   analyticsLocations,
 ) {
+  let paymentGatewayPlanId;
+  let status;
+  let tmp5;
+  let type;
   let id;
+  const track = AnalyticsUtilsDefault.track;
+  const CANCELLATION_FLOW_STARTED = metroRequire.CANCELLATION_FLOW_STARTED;
+  const obj = { location_stack: analyticsLocations };
+  AnalyticsUtilsDefault;
   if (subscription != null) {
     id = subscription.id;
   }
-  const obj3 = {
+  const obj2 = {
     subscription_id: id,
-    subscription_type: null,
-    subscription_plan_id: null,
-    subscription_plan_gateway_plan_id: null,
-    subscription_status: null,
+    subscription_type: type,
+    subscription_plan_id: tmp5,
+    subscription_plan_gateway_plan_id: paymentGatewayPlanId,
+    subscription_status: status,
   };
-  let type;
+  type = undefined;
   if (subscription != null) {
     type = subscription.type;
   }
-  obj3.subscription_type = type;
-  let tmp4;
+  tmp5 = undefined;
   if (null != subscription) {
-    const premiumPlanItem = PremiumUtils.getPremiumPlanItem(subscription);
+    const obj3 = PremiumUtils;
+    const premiumPlanItem = obj3.getPremiumPlanItem(subscription);
     let id1;
     if (premiumPlanItem != null) {
       id1 = premiumPlanItem.id;
     }
-    tmp4 = id1;
+    tmp5 = id1;
   }
-  obj3.subscription_plan_id = tmp4;
-  let paymentGatewayPlanId;
+  paymentGatewayPlanId = undefined;
   if (subscription != null) {
     paymentGatewayPlanId = subscription.paymentGatewayPlanId;
   }
-  obj3.subscription_plan_gateway_plan_id = paymentGatewayPlanId;
-  let status;
+  status = undefined;
   if (subscription != null) {
     status = subscription.status;
   }
-  obj3.subscription_status = status;
-  const merged = Object.assign(obj3);
-  AnalyticsUtilsDefault.track(constants3.CANCELLATION_FLOW_STARTED, { location_stack: analyticsLocations });
-  const obj2 = { location_stack: analyticsLocations };
+  const merged = Object.assign(obj2);
+  track(CANCELLATION_FLOW_STARTED, obj);
 };
 export const trackPremiumSubscriptionCancellationFlowStep = function trackPremiumSubscriptionCancellationFlowStep(
   subscription,
 ) {
+  let analyticsLocations;
+  let fromStep;
+  let paymentGatewayPlanId;
+  let status;
+  let tmp5;
+  let toStep;
+  let type;
   subscription = subscription.subscription;
   ({ fromStep, toStep, analyticsLocations } = subscription);
   let id;
+  const track = AnalyticsUtilsDefault.track;
+  const CANCELLATION_FLOW_STEP = metroRequire.CANCELLATION_FLOW_STEP;
+  const obj = { from_step: fromStep, to_step: toStep, location_stack: analyticsLocations };
+  AnalyticsUtilsDefault;
   if (subscription != null) {
     id = subscription.id;
   }
-  const obj3 = {
+  const obj2 = {
     subscription_id: id,
-    subscription_type: null,
-    subscription_plan_id: null,
-    subscription_plan_gateway_plan_id: null,
-    subscription_status: null,
+    subscription_type: type,
+    subscription_plan_id: tmp5,
+    subscription_plan_gateway_plan_id: paymentGatewayPlanId,
+    subscription_status: status,
   };
-  let type;
+  type = undefined;
   if (subscription != null) {
     type = subscription.type;
   }
-  obj3.subscription_type = type;
-  let tmp4;
+  tmp5 = undefined;
   if (null != subscription) {
-    const premiumPlanItem = PremiumUtils.getPremiumPlanItem(subscription);
+    const obj3 = PremiumUtils;
+    const premiumPlanItem = obj3.getPremiumPlanItem(subscription);
     let id1;
     if (premiumPlanItem != null) {
       id1 = premiumPlanItem.id;
     }
-    tmp4 = id1;
+    tmp5 = id1;
   }
-  obj3.subscription_plan_id = tmp4;
-  let paymentGatewayPlanId;
+  paymentGatewayPlanId = undefined;
   if (subscription != null) {
     paymentGatewayPlanId = subscription.paymentGatewayPlanId;
   }
-  obj3.subscription_plan_gateway_plan_id = paymentGatewayPlanId;
-  let status;
+  status = undefined;
   if (subscription != null) {
     status = subscription.status;
   }
-  obj3.subscription_status = status;
-  const merged = Object.assign(obj3);
-  AnalyticsUtilsDefault.track(constants3.CANCELLATION_FLOW_STEP, {
-    from_step: fromStep,
-    to_step: toStep,
-    location_stack: analyticsLocations,
-  });
-  const obj2 = { from_step: fromStep, to_step: toStep, location_stack: analyticsLocations };
+  const merged = Object.assign(obj2);
+  track(CANCELLATION_FLOW_STEP, obj);
 };

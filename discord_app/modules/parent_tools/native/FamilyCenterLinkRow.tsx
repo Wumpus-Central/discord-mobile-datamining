@@ -1,25 +1,31 @@
 // discord_app/modules/parent_tools/native/FamilyCenterLinkRow.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import FamilyCenterConstants from "../FamilyCenterConstants.tsx";
 import FamilyCenterRequestorDetailsDefault from "FamilyCenterRequestorDetails.tsx";
 import FamilyCenterLinkWrapperDefault from "FamilyCenterLinkWrapper.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const UserLinkStatus = fn(7049).UserLinkStatus;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4890);
+let hasOwnProperty;
+let metroRequire;
+const View = react_native.View;
+const UserLinkStatus = FamilyCenterConstants.UserLinkStatus;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
 let closure_7 = createStyles.createStyles({
   actionContainer: { flexDirection: "row", alignItems: "center", justifyContent: "flex-end", height: "100%" },
 });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterLinkRow.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(9);
+      let actions;
+      let items;
+      let otherUser;
+      let tmp4;
+      const obj = react2;
+      const cResult = obj.c(9);
       ({ otherUser, actions } = arg0);
       const tmp3 = closure_7();
       if (cResult[0] !== otherUser) {
@@ -27,47 +33,54 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp8 = hasOwnProperty(FamilyCenterRequestorDetailsDefault, obj2);
         cResult[0] = otherUser;
         cResult[1] = tmp8;
-        let tmp4 = tmp8;
+        tmp4 = tmp8;
       } else {
         tmp4 = cResult[1];
       }
       if (cResult[2] === actions) {
+        let tmp9;
         if (cResult[3] === tmp3.actionContainer) {
-          let tmp9 = cResult[4];
+          tmp9 = cResult[4];
         }
         if (cResult[5] === otherUser.id) {
           if (cResult[6] === tmp4) {
+            let tmp11;
             if (cResult[7] === tmp9) {
-              let tmp11 = cResult[8];
+              tmp11 = cResult[8];
             }
             return tmp11;
           }
         }
-        const obj3 = { userId: otherUser.id, children: null };
-        const items = [tmp4, tmp9];
-        obj3.children = items;
-        const tmp14 = timestampProducer(FamilyCenterLinkWrapperDefault, obj3);
+        const obj3 = { userId: otherUser.id, children: items };
+        items = [tmp4, tmp9];
+        const tmp14 = metroRequire(FamilyCenterLinkWrapperDefault, obj3);
         cResult[5] = otherUser.id;
         cResult[6] = tmp4;
         cResult[7] = tmp9;
         cResult[8] = tmp14;
         tmp11 = tmp14;
       }
-      const tmp10 = hasOwnProperty(View, { style: tmp3.actionContainer, children: actions });
+      const obj4 = { style: tmp3.actionContainer, children: actions };
+      const tmp10 = hasOwnProperty(View, obj4);
       cResult[2] = actions;
       cResult[3] = tmp3.actionContainer;
       cResult[4] = tmp10;
       tmp9 = tmp10;
-      const obj4 = { style: tmp3.actionContainer, children: actions };
     }
-  : (children) => {
-      const otherUser = children.otherUser;
-      const obj = { userId: otherUser.id, children: null };
+  : (otherUser) => {
+      let items;
+      otherUser = otherUser.otherUser;
+      const actions = otherUser.actions;
+      const obj = { userId: otherUser.id, children: items };
+      items = [,];
+      const obj2 = { otherUser, status: UserLinkStatus.PENDING };
       const tmp = closure_7();
-      const items = [
-        hasOwnProperty(FamilyCenterRequestorDetailsDefault, { otherUser, status: UserLinkStatus.PENDING }),
-        hasOwnProperty(View, { style: tmp.actionContainer, children: children.actions }),
-      ];
-      obj.children = items;
-      return timestampProducer(FamilyCenterLinkWrapperDefault, obj);
+      const tmp2 = FamilyCenterLinkWrapperDefault;
+      items[0] = hasOwnProperty(FamilyCenterRequestorDetailsDefault, obj2);
+      const obj3 = { style: tmp.actionContainer, children: actions };
+      items[1] = hasOwnProperty(View, obj3);
+      return metroRequire(tmp2, obj);
     };
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterLinkRow.tsx");
+
+export default tmp4;

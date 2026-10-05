@@ -1,17 +1,20 @@
 // discord_app/modules/user_profile/hooks/useShouldShowMutualInfo.tsx
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../../_runtime/00576_react.js";
 import useIsUserProfileObfuscatedDefault from "useIsUserProfileObfuscated.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/hooks/useShouldShowMutualInfo.tsx");
+let id;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (id) => {
-      const cResult = c.c(2);
+      let currentUser;
+      let tmp4;
+      let tmp5;
+      const obj = react;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         const fn = function n() {
@@ -24,22 +27,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       id = undefined;
-      const tmpResult = initialize;
+      const tmp8 = useIsUserProfileObfuscatedDefault(id);
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
-      const tmp8 = useIsUserProfileObfuscatedDefault(id);
-      return id !== id.id && !useIsUserProfileObfuscatedDefault(id);
+      return id !== id.id && !tmp8;
     }
   : (id) => {
+      let currentUser;
       const items = [UserStore];
-      const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+      const obj = get_initialized;
+      const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
       id = undefined;
+      const tmp2 = useIsUserProfileObfuscatedDefault(id);
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
-      const tmp2 = useIsUserProfileObfuscatedDefault(id);
-      return id !== id.id && !useIsUserProfileObfuscatedDefault(id);
+      return id !== id.id && !tmp2;
     };
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useShouldShowMutualInfo.tsx");
+
+export default tmp2;

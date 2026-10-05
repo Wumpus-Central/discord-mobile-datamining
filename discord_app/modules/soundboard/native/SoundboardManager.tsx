@@ -4,98 +4,101 @@ import SoundboardActionCreators from "../SoundboardActionCreators.tsx";
 import SoundUtils from "../../sound_playback/SoundUtils.tsx";
 import getVolumeForSoundDefault from "../getVolumeForSound.tsx";
 import getSoundboardSoundURLDefault from "../getSoundboardSoundURL.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
 import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 import SoundboardStore from "../SoundboardStore.tsx";
 import BaseSoundboardManager from "../BaseSoundboardManager.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let closure_2;
+
 let map = new Map();
-let closure_8 = new LoggerDefault("SoundboardManagerNative");
-const prototype = function SoundboardManager() {
-  let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  require = applyArgumentsResult;
-  applyArgumentsResult._stopAndClearSounds = function _stopAndClearSounds() {
-    const item = map.forEach((stop) => {
-      stop.stop();
-    });
-    map = new Map();
-  };
-  applyArgumentsResult._playSound = function _playSound(soundId, arg1) {
-    let num = arg1;
-    if (arg1 === undefined) {
-      num = 1;
-    }
-    if (SelectedChannelStore.getVoiceChannelId() === arg3) {
-      if (!MediaEngineStore.isDeaf()) {
-        if (!SoundboardStore.isLocalSoundboardMuted(userId)) {
-          const tmp8 = getVolumeForSoundDefault(num);
-          const _HermesInternal = HermesInternal;
-          const combined = "" + userId + "-" + soundId;
-          value = map.get(combined);
-          if (null != value) {
-            value.stop();
+const tmp3 = new LoggerDefault("SoundboardManagerNative");
+let closure_8 = tmp3;
+class SoundboardManager extends BaseSoundboardManager {
+  constructor() {
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    require = applyArgumentsResult;
+    applyArgumentsResult._stopAndClearSounds = function _stopAndClearSounds() {
+      const item = map.forEach((stop) => {
+        stop.stop();
+      });
+      map = new Map();
+    };
+    applyArgumentsResult._playSound = function _playSound(soundId, arg1) {
+      let num = arg1;
+      if (arg1 === undefined) {
+        num = 1;
+      }
+      if (SelectedChannelStore.getVoiceChannelId() === arg3) {
+        if (!MediaEngineStore.isDeaf()) {
+          if (!SoundboardStore.isLocalSoundboardMuted(userId)) {
+            const tmp8 = getVolumeForSoundDefault(num);
+            const _HermesInternal = HermesInternal;
+            const combined = "" + userId + "-" + soundId;
+            const value = map.get(combined);
+            if (null != value) {
+              value.stop();
+            }
+            const tmp14 = getSoundboardSoundURLDefault(soundId);
+            const obj2 = SoundUtils;
+            const sound = obj2.createSound(tmp14, "soundboard_sound", tmp8);
+            sound.volume = tmp8;
+            const result = map.set(combined, sound);
+            const obj3 = SoundboardActionCreators;
+            const result1 = obj3.reportSoundStartedPlaying(soundId, userId);
+            const obj = { sound, soundKey: combined, soundId, userId };
+            const result2 = require._playSoundWithListener(obj);
           }
-          const tmp14 = getSoundboardSoundURLDefault(soundId);
-          const sound = SoundUtils.createSound(tmp14, "soundboard_sound", tmp8);
-          sound.volume = tmp8;
-          const result = map.set(combined, sound);
-          const result1 = SoundboardActionCreators.reportSoundStartedPlaying(soundId, userId);
-          const obj = { sound, soundKey: combined, soundId, userId };
-          const result2 = applyArgumentsResult._playSoundWithListener(obj);
         }
       }
-    }
-  };
-  closure_129_0 = asyncGeneratorStep(async (arg0) => {
-    closure_129_4 = false;
-    await closure_129_0.playWithListener();
-    if (2 === tmp7) {
-      c4 = 0;
-      closure_129_5 = closure_3;
-      logger.error("Failed to play sound", { error: closure_129_5 });
-      closure_129_4 = true;
-    } else if (arg0 === 1) {
-      c6 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c4 = 0;
-      c6 = 3;
-      return { value, done: true };
-    } else {
-      closure_129_4 = value;
-      c4 = 0;
-    }
-    if (closure_129_4) {
-      set.delete(closure_129_1);
-      const result = applyArgumentsResult(tmp3[9]).reportSoundFinishedPlaying(closure_129_2, closure_129_3);
-      applyArgumentsResult(tmp3[9]);
-    }
-    await "IconComponent";
-    ({
-      sound: closure_129_0,
-      soundKey: closure_129_1,
-      soundId: closure_129_2,
-      userId: closure_129_3,
-    } = applyArgumentsResult);
-    return "Set";
-  });
-  applyArgumentsResult._playSoundWithListener = function () {
-    const self = this;
-    const apply = applyArgumentsResult.apply;
-    if (typeof apply === "unknown") {
-      applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
+    };
+    let closure_0 = _asyncToGenerator(async (arg0) => {
+      let c0;
+      let c1;
+      let c2;
+      let c3;
+      let closure_1;
+      closure_0 = arg0;
+      let closure_4 = false;
+      await c0.playWithListener();
+      if (2 === c5) {
+        let c4 = 0;
+        const error = closure_3;
+        const obj7 = { error };
+        logger.error("Failed to play sound", obj7);
+        closure_4 = true;
+      } else if (arg0 === 1) {
+        let c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        closure_4 = value;
+        c4 = 0;
+      }
+      const tmp14 = closure_4;
+      if (tmp14) {
+        set.delete(c1);
+        const obj3 = closure_0(closure_2[9]);
+        const result = obj3.reportSoundFinishedPlaying(c2, c3);
+      }
+      await "IconComponent";
+      closure_2 = tmp;
+      ({ sound: c0, soundKey: c1, soundId: c2, userId: c3 } = closure_0);
+      return "Set";
+    });
+    applyArgumentsResult._playSoundWithListener = function () {
+      return closure_0(...arguments);
+    };
     return applyArgumentsResult;
-  };
-  return applyArgumentsResult;
-}.prototype;
-class prototype extends tmp4 {}
-const prototype1 = new prototype();
-const size = fn(2);
+  }
+}
+const soundboardManager = new SoundboardManager();
 let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardManager.tsx");
 
-export default prototype1;
+export default soundboardManager;

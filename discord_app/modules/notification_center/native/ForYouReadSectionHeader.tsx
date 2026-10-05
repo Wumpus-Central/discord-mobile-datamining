@@ -1,62 +1,61 @@
 // discord_app/modules/notification_center/native/ForYouReadSectionHeader.tsx
-import c from "../../../../_runtime/00576_c.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl2 from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c2, StyleSheet } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = {
-  container: {
-    borderTopWidth: StyleSheet.hairlineWidth,
-    borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
-    marginVertical: 8,
-    paddingHorizontal: 24,
-  },
-  textHeader: null,
-};
-const obj3 = {
+let StyleSheet;
+let c2;
+let obj2;
+({ View: c2, StyleSheet } = react_native);
+const jsx = Fragment.jsx;
+let createStyles = createStyles_mod;
+let obj = { container: obj2, textHeader: { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: 20 } };
+obj2 = {
   borderTopWidth: StyleSheet.hairlineWidth,
   borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
   marginVertical: 8,
   paddingHorizontal: 24,
 };
-obj2.textHeader = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: 20 };
-let closure_4 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const obj4 = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: 20 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/notification_center/native/ForYouReadSectionHeader.tsx");
-
-export const ForYouReadSectionHeader = ReactCompilerGating.isReactCompilerEnabled()
+createStyles = createStyles.createStyles;
+({ color: nativeDefault.colors.TEXT_SUBTLE, marginTop: 20 });
+let closure_4 = createStyles(obj);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(6);
+      let container;
+      let first;
+      let textHeader;
+      let tmp7;
+      const obj = react2;
+      const cResult = obj.c(6);
       const tmp4 = closure_4();
       ({ container, textHeader } = tmp4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = util.intl;
-        const stringResult = intl.string(util.t.hftC1K);
+        const intl = intl2.intl;
+        const stringResult = intl.string(intl2.t.hftC1K);
         cResult[0] = stringResult;
-        let first = stringResult;
+        first = stringResult;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== tmp4.textHeader) {
-        const obj2 = { style: textHeader, variant: "text-sm/semibold", children: first };
         const tmp9 = jsx(Text_Text.Text, { style: textHeader, variant: "text-sm/semibold", children: first });
         cResult[1] = tmp4.textHeader;
         cResult[2] = tmp9;
-        let tmp7 = tmp9;
+        tmp7 = tmp9;
       } else {
         tmp7 = cResult[2];
       }
       if (cResult[3] === tmp4.container) {
+        let tmp10;
         if (cResult[4] === tmp7) {
-          let tmp10 = cResult[5];
+          tmp10 = cResult[5];
         }
         return tmp10;
       }
@@ -67,11 +66,13 @@ export const ForYouReadSectionHeader = ReactCompilerGating.isReactCompilerEnable
       tmp10 = tmp11;
     }
   : () => {
+      let intl;
       const tmp = closure_4();
-      const obj = { style: tmp.container, children: null };
-      const obj2 = { style: tmp.textHeader, variant: "text-sm/semibold", children: null };
-      const intl = util.intl;
-      obj2.children = intl.string(util.t.hftC1K);
-      obj.children = jsx(Text_Text.Text, { style: tmp.textHeader, variant: "text-sm/semibold", children: null });
+      ({ style: tmp.textHeader, variant: "text-sm/semibold", children: intl.string(intl2.t.hftC1K) });
+      const Text = Text_Text.Text;
+      intl = intl2.intl;
       return <React2 style={tmp.container}>{null}</React2>;
     };
+const result = size.fileFinishedImporting("modules/notification_center/native/ForYouReadSectionHeader.tsx");
+
+export const ForYouReadSectionHeader = tmp5;

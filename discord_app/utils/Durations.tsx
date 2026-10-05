@@ -1,9 +1,7 @@
 // discord_app/utils/Durations.tsx
 import size from "../../_runtime/metro/00002__.js";
 
-const result = size.fileFinishedImporting("utils/Durations.tsx");
-
-export default {
+const obj = {
   Millis: Object.freeze({
     HALF_SECOND: 500,
     SECOND: 1000,
@@ -16,3 +14,6 @@ export default {
   Seconds: Object.freeze({ SECOND: 1, MINUTE: 60, HOUR: 3600, DAY: 86400, WEEK: 604800, DAYS_30: 2592000 }),
   Minutes: Object.freeze({ MINUTE: 1, HOUR: 60, DAY: 1440, WEEK: 10080, DAYS_30: 43200 }),
 };
+const result = size.fileFinishedImporting("utils/Durations.tsx");
+
+export default obj;

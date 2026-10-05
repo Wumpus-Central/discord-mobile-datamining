@@ -1,84 +1,109 @@
 // discord_app/modules/guild_automod/native/components/TimeoutDurationActionSheet.tsx
-import util from "../../../../intl/index.native.tsx";
+import intl3 from "../../../../intl/index.native.tsx";
+import GuildDisableCommunicationConstants from "../../../guild_communication_disabled/GuildDisableCommunicationConstants.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
-import TableRadioGroup from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
-import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import TableRadioRow2 from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
+import TableRadioGroup2 from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import BottomSheetTitleHeader2 from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet2 from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import Constants from "../../Constants.tsx";
 import getActionInfo from "../getActionInfo.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let hideActionSheetResult, onRemove, tmp2, tmp3, tmp5;
 
-require = fn;
-const AutomodActionType = fn(11474).AutomodActionType;
-let closure_4 = fn(2114).getDisableCommunicationDurationOptions;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let hasOwnProperty;
+let metroRequire;
+const AutomodActionType = Constants.AutomodActionType;
+let closure_4 = GuildDisableCommunicationConstants.getDisableCommunicationDurationOptions;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
 let c7 = "";
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_automod/native/components/TimeoutDurationActionSheet.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (onRemove) => {
-      const cResult = onSelectDuration(576).c(40);
+      let action;
+      let intl;
+      let intl2;
+      let items;
+      let onSelectDuration;
+      let triggerType;
+      let obj = onSelectDuration(576);
+      const cResult = obj.c(40);
       ({ triggerType, action, onSelectDuration } = onRemove);
       onRemove = onRemove.onRemove;
       if (cResult[0] === action) {
+        let tmp4;
+        let durationSeconds;
+        let tmp19;
+        let flag2;
+        let tmp18;
+        let tmp17;
+        let tmp16;
+        let tmp15;
+        let tmp14;
+        let flag;
+        let tmp13;
+        let tmp12;
+        let tmp11;
         if (cResult[1] === triggerType) {
-          let tmp4 = cResult[2];
+          tmp4 = cResult[2];
         }
         let durationSeconds1;
+        const tmp6 = cResult[3];
         if (action != null) {
           durationSeconds1 = action.metadata.durationSeconds;
         }
-        if (cResult[3] === durationSeconds1) {
+        if (tmp6 === durationSeconds1) {
           let headerText;
+          const tmp9 = cResult[4];
           if (tmp4 != null) {
             headerText = tmp4.headerText;
           }
-          if (cResult[4] === headerText) {
+          if (tmp9 === headerText) {
             if (cResult[5] === onRemove) {
               if (cResult[6] === onSelectDuration) {
-                let tmp9 = cResult[7];
-                let tmp10 = cResult[8];
-                let tmp11 = cResult[9];
-                let flag = cResult[10];
-                let tmp12 = cResult[11];
-                let tmp13 = cResult[12];
-                let tmp14 = cResult[13];
-                let tmp15 = cResult[14];
-                let tmp16 = cResult[15];
-                let flag2 = cResult[16];
-                let tmp17 = cResult[17];
+                tmp11 = cResult[7];
+                tmp12 = cResult[8];
+                tmp13 = cResult[9];
+                flag = cResult[10];
+                tmp14 = cResult[11];
+                tmp15 = cResult[12];
+                tmp16 = cResult[13];
+                tmp17 = cResult[14];
+                tmp18 = cResult[15];
+                flag2 = cResult[16];
+                tmp19 = cResult[17];
               }
-              if (cResult[26] === tmp9) {
+              if (cResult[26] === tmp11) {
                 if (cResult[27] === flag) {
-                  if (cResult[28] === tmp12) {
-                    if (cResult[29] === tmp13) {
-                      if (cResult[30] === tmp14) {
-                        if (cResult[31] === tmp15) {
-                          if (cResult[32] === tmp16) {
-                            let tmp38 = cResult[33];
+                  if (cResult[28] === tmp14) {
+                    if (cResult[29] === tmp15) {
+                      if (cResult[30] === tmp16) {
+                        if (cResult[31] === tmp17) {
+                          let tmp40;
+                          if (cResult[32] === tmp18) {
+                            tmp40 = cResult[33];
                           }
-                          if (cResult[34] === tmp10) {
-                            if (cResult[35] === tmp11) {
-                              if (cResult[36] === tmp38) {
+                          if (cResult[34] === tmp12) {
+                            if (cResult[35] === tmp13) {
+                              if (cResult[36] === tmp40) {
                                 if (cResult[37] === flag2) {
-                                  if (cResult[38] === tmp17) {
-                                    let tmp41 = cResult[39];
+                                  let tmp43;
+                                  if (cResult[38] === tmp19) {
+                                    tmp43 = cResult[39];
                                   }
-                                  return tmp41;
+                                  return tmp43;
                                 }
                               }
                             }
                           }
-                          const obj2 = { startExpanded: flag2, header: tmp17, children: null };
-                          const items = [tmp11, tmp38];
-                          obj2.children = items;
-                          const tmp43 = closure_6(tmp10, obj2);
+                          const obj2 = { startExpanded: flag2, header: tmp19, children: items };
+                          items = [tmp13, tmp40];
+                          const tmp45 = closure_6(tmp12, obj2);
                           class M {
                             constructor(arg0) {
                               obj = closure_1(closure_2[7]);
@@ -95,27 +120,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               return;
                             }
                           }
-                          cResult[34] = tmp10;
-                          cResult[35] = tmp11;
-                          cResult[36] = tmp38;
+                          cResult[34] = tmp12;
+                          cResult[35] = tmp13;
+                          cResult[36] = tmp40;
                           cResult[37] = flag2;
-                          cResult[38] = tmp17;
-                          cResult[39] = tmp43;
-                          tmp41 = tmp43;
+                          cResult[38] = tmp19;
+                          cResult[39] = tmp45;
+                          tmp43 = tmp45;
                         }
                       }
                     }
                   }
                 }
               }
+              const items1 = [tmp17, tmp18];
               const obj3 = {
                 hasIcons: flag,
-                accessibilityLabel: tmp12,
-                defaultValue: tmp13,
-                onChange: tmp14,
+                accessibilityLabel: tmp14,
+                defaultValue: tmp15,
+                onChange: tmp16,
                 children: null,
               };
-              const items1 = [tmp15, tmp16];
               class M {
                 constructor(arg0) {
                   obj = closure_1(closure_2[7]);
@@ -132,25 +157,30 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const tmp40 = closure_6(tmp9, obj3);
-              cResult[26] = tmp9;
+              const tmp42 = closure_6(tmp11, obj3);
+              cResult[26] = tmp11;
               cResult[27] = flag;
-              cResult[28] = tmp12;
-              cResult[29] = tmp13;
-              cResult[30] = tmp14;
-              cResult[31] = tmp15;
-              cResult[32] = tmp16;
-              cResult[33] = tmp40;
-              tmp38 = tmp40;
+              cResult[28] = tmp14;
+              cResult[29] = tmp15;
+              cResult[30] = tmp16;
+              cResult[31] = tmp17;
+              cResult[32] = tmp18;
+              cResult[33] = tmp42;
+              tmp40 = tmp42;
             }
           }
         }
+        const arr = closure_4();
         if (action != null) {
-          const durationSeconds = action.metadata.durationSeconds;
+          durationSeconds = action.metadata.durationSeconds;
         }
         if (cResult[18] === onRemove) {
+          let tmp21;
+          let tmp22;
+          let tmp26;
+          let StringResult;
           if (cResult[19] === onSelectDuration) {
-            let tmp19 = cResult[20];
+            tmp21 = cResult[20];
           }
           const ActionSheet = onSelectDuration(6701).ActionSheet;
           let str;
@@ -162,23 +192,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[21] !== str) {
             const obj4 = { title: str };
-            const tmp22 = closure_5(onSelectDuration(6644).BottomSheetTitleHeader, obj4);
+            const tmp24 = closure_5(onSelectDuration(6644).BottomSheetTitleHeader, obj4);
             cResult[21] = str;
-            cResult[22] = tmp22;
-            let tmp20 = tmp22;
+            cResult[22] = tmp24;
+            tmp22 = tmp24;
           } else {
-            tmp20 = cResult[22];
+            tmp22 = cResult[22];
           }
           const _Symbol = Symbol;
           if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj5 = { variant: "text-md/normal", children: null };
-            const intl = onSelectDuration(1126).intl;
-            obj5.children = intl.string(onSelectDuration(1126).t.DWGBAh);
-            const tmp26 = closure_5(onSelectDuration(4886).Text, obj5);
-            cResult[23] = tmp26;
-            let tmp24 = tmp26;
+            const obj5 = { variant: "text-md/normal", children: intl.string(onSelectDuration(1126).t.DWGBAh) };
+            const Text = onSelectDuration(4886).Text;
+            intl = onSelectDuration(1126).intl;
+            const tmp28 = closure_5(Text, obj5);
+            cResult[23] = tmp28;
+            tmp26 = tmp28;
           } else {
-            tmp24 = cResult[23];
+            tmp26 = cResult[23];
           }
           class M {
             constructor(arg0) {
@@ -202,16 +232,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (null != durationSeconds) {
             const _String = String;
-            let StringResult = String(durationSeconds);
+            StringResult = String(durationSeconds);
           } else {
             StringResult = value;
           }
           const _Symbol2 = Symbol;
           if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj6 = { value, label: null };
-            const intl2 = onSelectDuration(1126).intl;
-            obj6.label = intl2.string(onSelectDuration(1126).t.PoWNfe);
-            cResult[24] = closure_5(onSelectDuration(6071).TableRadioRow, obj6);
+            const obj6 = { value, label: intl2.string(onSelectDuration(1126).t.PoWNfe) };
+            let TableRadioRow = onSelectDuration(6071).TableRadioRow;
+            intl2 = onSelectDuration(1126).intl;
+            cResult[24] = closure_5(TableRadioRow, obj6);
+            closure_5(TableRadioRow, obj6);
             class M {
               constructor(arg0) {
                 obj = closure_1(closure_2[7]);
@@ -228,15 +259,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            const tmp33 = closure_5(onSelectDuration(6071).TableRadioRow, obj6);
           }
           const _Symbol3 = Symbol;
           if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
             class U {
               constructor(arg0) {
                 ({ id, value, label } = onRemove);
-                obj = { value: String(value), label };
-                return closure_1_5(onSelectDuration(closure_1_2[13]).TableRadioRow, obj, id);
+                obj = { value: null, label: null };
+                TableRadioRow = onSelectDuration(closure_1_2[13]).TableRadioRow;
+                obj.value = String(value);
+                obj.label = label;
+                return closure_1_5(TableRadioRow, obj, id);
               }
             }
             cResult[25] = U;
@@ -244,8 +277,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             class U {
               constructor(arg0) {
                 ({ id, value, label } = onRemove);
-                obj = { value: String(value), label };
-                return closure_1_5(onSelectDuration(closure_1_2[13]).TableRadioRow, obj, id);
+                obj = { value: null, label: null };
+                TableRadioRow = onSelectDuration(closure_1_2[13]).TableRadioRow;
+                obj.value = String(value);
+                obj.label = label;
+                return closure_1_5(TableRadioRow, obj, id);
               }
             }
           }
@@ -254,8 +290,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             class U {
               constructor(arg0) {
                 ({ id, value, label } = onRemove);
-                obj = { value: String(value), label };
-                return closure_1_5(onSelectDuration(closure_1_2[13]).TableRadioRow, obj, id);
+                obj = { value: null, label: null };
+                TableRadioRow = onSelectDuration(closure_1_2[13]).TableRadioRow;
+                obj.value = String(value);
+                obj.label = label;
+                return closure_1_5(TableRadioRow, obj, id);
               }
             }
           }
@@ -264,36 +303,39 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             class U {
               constructor(arg0) {
                 ({ id, value, label } = onRemove);
-                obj = { value: String(value), label };
-                return closure_1_5(onSelectDuration(closure_1_2[13]).TableRadioRow, obj, id);
+                obj = { value: null, label: null };
+                TableRadioRow = onSelectDuration(closure_1_2[13]).TableRadioRow;
+                obj.value = String(value);
+                obj.label = label;
+                return closure_1_5(TableRadioRow, obj, id);
               }
             }
           }
           cResult[4] = undefined;
           cResult[5] = onRemove;
           cResult[6] = onSelectDuration;
-          cResult[7] = tmp27;
+          cResult[7] = tmp29;
           cResult[8] = ActionSheet;
-          cResult[9] = tmp24;
+          cResult[9] = tmp26;
           cResult[10] = false;
           cResult[11] = headerText1;
           cResult[12] = StringResult;
-          cResult[13] = tmp19;
-          cResult[14] = tmp30;
+          cResult[13] = tmp21;
+          cResult[14] = tmp32;
           cResult[15] = mapped;
           cResult[16] = true;
-          cResult[17] = tmp20;
-          tmp17 = tmp20;
+          cResult[17] = tmp22;
+          tmp19 = tmp22;
           flag2 = true;
-          tmp16 = mapped;
-          tmp15 = tmp30;
-          tmp14 = tmp19;
-          tmp13 = StringResult;
-          tmp12 = headerText1;
+          tmp18 = mapped;
+          tmp17 = tmp32;
+          tmp16 = tmp21;
+          tmp15 = StringResult;
+          tmp14 = headerText1;
           flag = false;
-          tmp11 = tmp24;
-          tmp10 = ActionSheet;
-          tmp9 = tmp27;
+          tmp13 = tmp26;
+          tmp12 = ActionSheet;
+          tmp11 = tmp29;
         }
         class M {
           constructor(arg0) {
@@ -314,87 +356,89 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[18] = onRemove;
         cResult[19] = onSelectDuration;
         cResult[20] = M;
-        tmp19 = M;
-        arr = closure_4();
+        tmp21 = M;
       }
-      let obj = onSelectDuration(576);
-      const actionInfo = onSelectDuration(17685).getActionInfo(
-        AutomodActionType.USER_COMMUNICATION_DISABLED,
-        action,
-        triggerType,
-      );
+      const tmpResult = onSelectDuration(17685);
+      const actionInfo = tmpResult.getActionInfo(AutomodActionType.USER_COMMUNICATION_DISABLED, action, triggerType);
       cResult[0] = action;
       cResult[1] = triggerType;
       cResult[2] = actionInfo;
       tmp4 = actionInfo;
-      const tmpResult = onSelectDuration(17685);
     }
   : (triggerType) => {
+      let StringResult;
+      let action;
+      let intl;
+      let intl2;
+      let items;
+      let items1;
       ({ action, onSelectDuration: require, onRemove: importDefault } = triggerType);
-      const actionInfo = getActionInfo.getActionInfo(
-        AutomodActionType.USER_COMMUNICATION_DISABLED,
-        action,
-        triggerType.triggerType,
-      );
+      triggerType = triggerType.triggerType;
+      let obj = getActionInfo;
+      const actionInfo = obj.getActionInfo(AutomodActionType.USER_COMMUNICATION_DISABLED, action, triggerType);
       let durationSeconds;
+      const arr = closure_4();
       if (action != null) {
         durationSeconds = action.metadata.durationSeconds;
       }
+      const ActionSheet = ActionSheet2.ActionSheet;
       let str;
+      const BottomSheetTitleHeader = BottomSheetTitleHeader2.BottomSheetTitleHeader;
       if (actionInfo != null) {
         str = actionInfo.headerText;
       }
       if (str == null) {
         str = "";
       }
-      const obj2 = {
-        startExpanded: true,
-        header: closure_5(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: str }),
-        children: null,
-      };
-      const obj3 = { variant: "text-md/normal", children: null };
-      const intl = util.intl;
-      obj3.children = intl.string(util.t.DWGBAh);
-      const items = [closure_5(Text_Text.Text, obj3)];
+      const obj2 = { startExpanded: true, header: closure_5(BottomSheetTitleHeader, { title: str }), children: items };
+      const obj3 = { variant: "text-md/normal", children: intl.string(intl3.t.DWGBAh) };
+      const Text = Text_Text.Text;
+      intl = intl3.intl;
+      items = [closure_5(Text, obj3)];
       let headerText;
+      const TableRadioGroup = TableRadioGroup2.TableRadioGroup;
       if (actionInfo != null) {
         headerText = actionInfo.headerText;
       }
       const obj4 = {
         hasIcons: false,
         accessibilityLabel: headerText,
-        defaultValue: null,
-        onChange: null,
-        children: null,
+        defaultValue: StringResult,
+        onChange(arg0) {
+          const obj = ActionSheetActionCreatorsDefault;
+          obj.hideActionSheet();
+          if (arg0 !== c7) {
+            const _Number = Number;
+            require(Number(arg0));
+          } else {
+            importDefault();
+          }
+        },
+        children: items1,
       };
       if (null != durationSeconds) {
         const _String = String;
-        let StringResult = String(durationSeconds);
+        StringResult = String(durationSeconds);
       } else {
         StringResult = value;
       }
-      obj4.defaultValue = StringResult;
-      obj4.onChange = function onChange(arg0) {
-        ActionSheetActionCreatorsDefault.hideActionSheet();
-        if (arg0 !== c7) {
-          const _Number = Number;
-          require(Number(arg0));
-        } else {
-          closure_1_1();
-        }
-      };
-      const obj5 = { value, label: null };
-      const intl2 = util.intl;
-      obj5.label = intl2.string(util.t.PoWNfe);
-      const items1 = [
-        closure_5(TableRadioRow.TableRadioRow, obj5),
-        closure_4().map((item) => {
+      const obj5 = { value, label: intl2.string(intl3.t.PoWNfe) };
+      let TableRadioRow = TableRadioRow2.TableRadioRow;
+      intl2 = intl3.intl;
+      items1 = [
+        closure_5(TableRadioRow, obj5),
+        arr.map((item) => {
+          let id;
+          let label;
           ({ id, value, label } = item);
-          return closure_1_5(TableRadioRow.TableRadioRow, { value: String(value), label }, id);
+          const obj = { value: String(value), label };
+          const TableRadioRow = TableRadioRow2.TableRadioRow;
+          return closure_1_5(TableRadioRow, obj, id);
         }),
       ];
-      obj4.children = items1;
-      items[1] = closure_6(TableRadioGroup.TableRadioGroup, obj4);
-      obj2.children = items;
-      return closure_6(ActionSheet2.ActionSheet, obj2);
+      items[1] = closure_6(TableRadioGroup, obj4);
+      return closure_6(ActionSheet, obj2);
     };
+const result = size.fileFinishedImporting("modules/guild_automod/native/components/TimeoutDurationActionSheet.tsx");
+
+export default tmp4;

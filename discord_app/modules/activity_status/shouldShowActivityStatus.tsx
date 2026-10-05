@@ -8,11 +8,14 @@ const StatusTypes = Constants2.StatusTypes;
 const result = size.fileFinishedImporting("modules/activity_status/shouldShowActivityStatus.tsx");
 
 export default function shouldShowActivityStatus(arg0) {
+  let activities;
+  let status;
   ({ activities, status } = arg0);
   if (status !== StatusTypes.OFFLINE) {
     if (status !== StatusTypes.INVISIBLE) {
+      let found;
       if (activities != null) {
-        const found = activities.filter((type) => type.type !== constants.HANG_STATUS);
+        found = activities.filter((type) => type.type !== constants.HANG_STATUS);
       }
       let tmp4 = null != tmp || null != tmp2;
       if (!tmp4) {

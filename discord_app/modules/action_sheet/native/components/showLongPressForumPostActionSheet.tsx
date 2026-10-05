@@ -1,5 +1,5 @@
 // discord_app/modules/action_sheet/native/components/showLongPressForumPostActionSheet.tsx
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
 import ActionSheetActionCreatorsDefault from "../ActionSheetActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -12,10 +12,7 @@ export default function showLongPressForumPostActionSheet(thread, parentChannel)
   if (arg2 === undefined) {
     hideActionSheet = ActionSheetActionCreatorsDefault.hideActionSheet;
   }
-  ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(10033, dependencyMap.paths),
-    "ForumPostLongPressActionSheet",
-    { thread, parentChannel, onClose: hideActionSheet },
-  );
+  const obj = ActionSheetActionCreatorsDefault;
   const obj2 = { thread, parentChannel, onClose: hideActionSheet };
+  obj.openLazy(asyncRequire(10033, dependencyMap.paths), "ForumPostLongPressActionSheet", obj2);
 }

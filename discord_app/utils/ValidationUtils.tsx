@@ -19,9 +19,7 @@ let closure_5 = [
   "sustem mesage",
 ];
 let closure_6 = ["discordtag", "everyone", "here", "discord nitro", "discord"];
-const result = size.fileFinishedImporting("utils/ValidationUtils.tsx");
-
-export default {
+const obj = {
   isEmail(query) {
     return re0.test(query);
   },
@@ -35,12 +33,9 @@ export default {
     const match = re3.exec(query);
     if (null != match) {
       if (match.length > 1) {
-        closure_0 = tmp;
+        let closure_0 = tmp;
         const someResult = closure_5.some((item) => closure_0.includes(item));
-        let tmp5 = !someResult;
-        if (!someResult) {
-          tmp5 = !closure_6.includes(tmp);
-        }
+        const tmp5 = !someResult && !closure_6.includes(match[1]);
         return tmp5;
       }
     }
@@ -50,3 +45,6 @@ export default {
     return re4.test(arg0);
   },
 };
+const result = size.fileFinishedImporting("utils/ValidationUtils.tsx");
+
+export default obj;

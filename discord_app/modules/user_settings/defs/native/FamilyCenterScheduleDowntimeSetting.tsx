@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/FamilyCenterScheduleDowntimeSetting.tsx
 import Constants from "../../../../Constants.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import _modDef2493 from "../../../parent_tools/FamilyCenter.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -8,20 +8,23 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const route = SettingBuilders.createRoute({
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const UserSettingsSections = Constants.UserSettingsSections;
+const obj = {
   useTitle() {
-    const intl = util.intl;
+    const intl = intl2.intl;
     return intl.string(_modDef2493["w/ISB8"]);
   },
-  parent: SettingsConstants.MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   unsearchable: true,
   screen: {
-    route: Constants.UserSettingsSections.FAMILY_CENTER_SCHEDULE_DOWNTIME,
+    route: UserSettingsSections.FAMILY_CENTER_SCHEDULE_DOWNTIME,
     getComponent() {
       return require("ScheduleDowntimeScreen").default;
     },
   },
-});
+};
+const route = SettingBuilders.createRoute(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/FamilyCenterScheduleDowntimeSetting.tsx");
 
 export default route;

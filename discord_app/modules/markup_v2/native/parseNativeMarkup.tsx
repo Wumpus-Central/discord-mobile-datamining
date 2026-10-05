@@ -1,11 +1,10 @@
 // discord_app/modules/markup_v2/native/parseNativeMarkup.tsx
 import _mod7778 from "../../../../_runtime/metro/07778__.js";
 import transformNativeMarkupNode from "transformNativeMarkupNode.tsx";
-import apply from "../../../../_runtime/metro/00012__.js";
+import 00012__ from "../../../../_runtime/metro/00012__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-let closure_2 = apply.once(() => _mod7778.parse);
-const size = fn(2);
+let closure_2 = module_12.once(() => _mod7778.parse);
 let result = size.fileFinishedImporting("modules/markup_v2/native/parseNativeMarkup.tsx");
 
 export default function parseNativeMarkupToAST(arg0, arg1, channelId) {
@@ -13,10 +12,11 @@ export default function parseNativeMarkupToAST(arg0, arg1, channelId) {
   if (arg3 === undefined) {
     tmp = null;
   }
-  const result = transformNativeMarkupNode.transformNativeBlocks(closure_2()(arg0), channelId);
+  const obj = transformNativeMarkupNode;
+  const result = obj.transformNativeBlocks(closure_2()(arg0), channelId);
   let tmpResult = result;
   if (null != tmp) {
     tmpResult = tmp(result, arg1, false);
   }
   return tmpResult;
-}
+};

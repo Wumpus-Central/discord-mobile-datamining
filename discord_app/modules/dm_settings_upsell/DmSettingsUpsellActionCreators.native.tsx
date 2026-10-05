@@ -1,33 +1,33 @@
 // discord_app/modules/dm_settings_upsell/DmSettingsUpsellActionCreators.native.tsx
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import asyncRequireImpl from "../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../_runtime/01987_asyncRequire.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import DmSettingsUpsellUtils from "DmSettingsUpsellUtils.tsx";
 import DmSettingsUpsellConstants from "DmSettingsUpsellConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let c3;
+let closure_4;
 ({ DM_SETTINGS_UPSELL_LAST_SHOWN_KEY: c3, DM_SETTINGS_UPSELL_LAST_SHOWN_MAX_TIME_MS: closure_4 } =
   DmSettingsUpsellConstants);
-let result = size.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellActionCreators.native.tsx");
-
-export default {
+let obj = {
   openDmSettingsUpsellModal(guildId) {
     const Storage = Storage3.Storage;
-    value = Storage.get(React3);
+    const value = Storage.get(_false);
     const timestamp = Date.now();
     if (null != value) {
-      if (timestamp - value <= React4) {
-        DmSettingsUpsellUtils.trackEvent(DmSettingsUpsellUtils.DmUpsellActionTypes.SUPPRESSED_BY_COOLDOWN, guildId);
+      if (timestamp - value <= React3) {
         const tmpResult = DmSettingsUpsellUtils;
+        tmpResult.trackEvent(DmSettingsUpsellUtils.DmUpsellActionTypes.SUPPRESSED_BY_COOLDOWN, guildId);
       }
     }
-    ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17488, dependencyMap.paths),
-      "dm_settings_upsell_modal",
-      { guildId },
-    );
-    const Storage2 = Storage3.Storage;
-    const result = Storage2.set(React3, timestamp);
     const obj = { guildId };
+    const obj2 = ActionSheetActionCreatorsDefault;
+    obj2.openLazy(asyncRequire(17488, dependencyMap.paths), "dm_settings_upsell_modal", obj);
+    const Storage2 = Storage3.Storage;
+    const result = Storage2.set(_false, timestamp);
   },
 };
+let result = size.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellActionCreators.native.tsx");
+
+export default obj;

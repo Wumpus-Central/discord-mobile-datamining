@@ -1,12 +1,12 @@
 // discord_app/polyfillsNative.tsx
-import q from "../_runtime/01248_q.js";
+import _mod1248 from "../_runtime/metro/01248__.js";
 import Buffer from "../_runtime/01263_Buffer.js";
 import _mod14152 from "../_runtime/metro/14152__.js";
 import Logger from "modules/debug/Logger.tsx";
 import 14058__ from "../_runtime/metro/14058__.js";
-import get_ActivityIndicator from "../_runtime/metro/14128__.js";
-import _typeof from "../_runtime/metro/14146__.js";
-import GetOption from "../_runtime/metro/14149__.js";
+import react_native from "../_runtime/14128_react-native.js";
+import getPluralRules from "../_runtime/14146_getPluralRules.js";
+import 14149__ from "../_runtime/metro/14149__.js";
 import size from "../_runtime/metro/00002__.js";
 
 if (typeof process === "undefined") {
@@ -44,6 +44,6 @@ if (tmp7) {
   tmp7 = null != window.TextDecoder;
 }
 if (!tmp7) {
-  const _module6 = q;
+  const _module6 = _mod1248;
 }
 const result = size.fileFinishedImporting("polyfillsNative.tsx");

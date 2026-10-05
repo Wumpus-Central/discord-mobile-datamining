@@ -1,41 +1,53 @@
 // discord_app/modules/channel_list_v2/native/components/ChannelListPanelBackdrop.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../../Constants.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import QuestHooks from "../../../quests/native/QuestHooks.native.tsx";
 import useHomeDrawerGesture from "../../../home_drawer/native/useHomeDrawerGesture.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const DM_WIDTH = fn(1085).DM_WIDTH;
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { container: { flex: 1, position: "relative", overflow: "hidden" }, panelTint: null, listWrapper: null };
-let obj3 = {};
+let StyleSheet;
+let closure_4;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+({ View: closure_4, StyleSheet } = react_native);
+const DM_WIDTH = Constants.DM_WIDTH;
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
+  container: { flex: 1, position: "relative", overflow: "hidden" },
+  panelTint: obj2,
+  listWrapper: { flex: 1 },
+};
+obj2 = { backgroundColor: nativeDefault.colors.PANEL_BG };
+createStyles = createStyles.createStyles;
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj3.backgroundColor = nativeDefault.colors.PANEL_BG;
-obj2.panelTint = obj3;
-obj2.listWrapper = { flex: 1 };
-let closure_8 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/ChannelListPanelBackdrop.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_8 = createStyles(obj);
+const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let tmp = require;
-      const cResult = c.c(22);
+      let children;
+      let contentInset;
+      let items;
+      let style;
+      const obj = react2;
+      const cResult = obj.c(22);
       ({ style, contentInset, children } = arg0);
       const tmp4 = closure_8();
-      const isHomeDrawerEnabled = useHomeDrawerGesture.useIsHomeDrawerEnabled();
+      const obj2 = useHomeDrawerGesture;
+      const isHomeDrawerEnabled = obj2.useIsHomeDrawerEnabled();
       const top = useSafeAreaInsetsDefault().top;
       let num;
-      const mobileQuestDockHeight = QuestHooks.useMobileQuestDockHeight();
+      const obj3 = QuestHooks;
+      const mobileQuestDockHeight = obj3.useMobileQuestDockHeight();
       if (contentInset != null) {
         num = contentInset.top;
       }
@@ -67,72 +79,76 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === num) {
         if (cResult[1] === sum) {
           if (cResult[2] === num3) {
+            let tmp9;
             if (cResult[3] === num4) {
-              let tmp9 = cResult[4];
+              tmp9 = cResult[4];
             }
             if (cResult[5] === style) {
               if (cResult[6] === tmp4.container) {
+                let tmp10;
+                let ScreenAlignedThemedGradientSliding;
                 if (cResult[7] === tmp9) {
-                  let tmp10 = cResult[8];
+                  tmp10 = cResult[8];
                 }
                 if (cResult[9] === isHomeDrawerEnabled) {
+                  let tmp11;
+                  let tmp16;
                   if (cResult[10] === top) {
-                    if (cResult[12] !== tmp4.panelTint) {
-                      const obj4 = { pointerEvents: "none", style: tmp4.panelTint };
-                      const tmp18 = timestampProducer(React4, obj4);
-                      cResult[12] = tmp4.panelTint;
-                      cResult[13] = tmp18;
-                      let tmp15 = tmp18;
-                    } else {
-                      tmp15 = cResult[13];
+                    tmp11 = cResult[11];
+                  }
+                  if (cResult[12] !== tmp4.panelTint) {
+                    const obj4 = { pointerEvents: "none", style: tmp4.panelTint };
+                    const tmp19 = metroRequire(React3, obj4);
+                    cResult[12] = tmp4.panelTint;
+                    cResult[13] = tmp19;
+                    tmp16 = tmp19;
+                  } else {
+                    tmp16 = cResult[13];
+                  }
+                  if (cResult[14] === children) {
+                    let tmp20;
+                    if (cResult[15] === tmp4.listWrapper) {
+                      tmp20 = cResult[16];
                     }
-                    if (cResult[14] === children) {
-                      if (cResult[15] === tmp4.listWrapper) {
-                        let tmp19 = cResult[16];
-                      }
-                      if (cResult[17] === tmp10) {
-                        if (cResult[18] === tmp11) {
-                          if (cResult[19] === tmp15) {
-                            if (cResult[20] === tmp19) {
-                              let tmp23 = cResult[21];
-                            }
-                            return tmp23;
+                    if (cResult[17] === tmp10) {
+                      if (cResult[18] === tmp11) {
+                        if (cResult[19] === tmp16) {
+                          let tmp24;
+                          if (cResult[20] === tmp20) {
+                            tmp24 = cResult[21];
                           }
+                          return tmp24;
                         }
                       }
-                      const obj5 = { style: tmp10, children: null };
-                      const items = [tmp11, tmp15, tmp19];
-                      obj5.children = items;
-                      const tmp26 = React5(React4, obj5);
-                      cResult[17] = tmp10;
-                      cResult[18] = tmp11;
-                      cResult[19] = tmp15;
-                      cResult[20] = tmp19;
-                      cResult[21] = tmp26;
-                      tmp23 = tmp26;
                     }
-                    const obj6 = { style: tmp4.listWrapper, children };
-                    const tmp22 = timestampProducer(React4, obj6);
-                    cResult[14] = children;
-                    cResult[15] = tmp4.listWrapper;
-                    cResult[16] = tmp22;
-                    tmp19 = tmp22;
+                    const obj5 = { style: tmp10, children: items };
+                    items = [tmp11, tmp16, tmp20];
+                    const tmp27 = metroImportDefault(React3, obj5);
+                    cResult[17] = tmp10;
+                    cResult[18] = tmp11;
+                    cResult[19] = tmp16;
+                    cResult[20] = tmp20;
+                    cResult[21] = tmp27;
+                    tmp24 = tmp27;
                   }
+                  const obj6 = { style: tmp4.listWrapper, children };
+                  const tmp23 = metroRequire(React3, obj6);
+                  cResult[14] = children;
+                  cResult[15] = tmp4.listWrapper;
+                  cResult[16] = tmp23;
+                  tmp20 = tmp23;
                 }
-                let tmp12Result = 16028;
                 if (isHomeDrawerEnabled) {
-                  let ScreenAlignedThemedGradientSliding = tmp(tmp12Result).ScreenAlignedThemedGradientSliding;
+                  ScreenAlignedThemedGradientSliding = require(tmp13).ScreenAlignedThemedGradientSliding;
                 } else {
-                  ScreenAlignedThemedGradientSliding = importDefault(tmp12Result);
+                  ScreenAlignedThemedGradientSliding = importDefault(tmp13);
                 }
-                const obj7 = { offsetX: null, offsetY: null };
-                tmp = DM_WIDTH;
-                obj7.offsetX = DM_WIDTH;
-                obj7.offsetY = top;
-                tmp12Result = timestampProducer(ScreenAlignedThemedGradientSliding, obj7);
+                const obj7 = { offsetX: DM_WIDTH, offsetY: top };
+                const tmp12Result = metroRequire(ScreenAlignedThemedGradientSliding, obj7);
                 cResult[9] = isHomeDrawerEnabled;
                 cResult[10] = top;
                 cResult[11] = tmp12Result;
+                tmp11 = tmp12Result;
               }
             }
             const items1 = [tmp4.container, tmp9, style];
@@ -152,16 +168,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = obj8;
       tmp9 = obj8;
     }
-  : (children) => {
-      const style = children.style;
-      const contentInset = children.contentInset;
+  : (style) => {
+      let ScreenAlignedThemedGradientSliding;
+      let items1;
+      style = style.style;
+      const contentInset = style.contentInset;
+      const children = style.children;
       const tmp = closure_8();
-      const container = tmp;
-      const isHomeDrawerEnabled = useHomeDrawerGesture.useIsHomeDrawerEnabled();
-      const mobileQuestDockHeight = QuestHooks.useMobileQuestDockHeight();
+      let closure_2 = tmp;
+      let obj = useHomeDrawerGesture;
+      const isHomeDrawerEnabled = obj.useIsHomeDrawerEnabled();
+      const top = useSafeAreaInsetsDefault().top;
+      const obj2 = QuestHooks;
+      const mobileQuestDockHeight = obj2.useMobileQuestDockHeight();
       let items = [tmp, contentInset, mobileQuestDockHeight, style];
       const obj3 = {
-        style: noop.useMemo(() => {
+        style: react.useMemo(() => {
+          let num2;
+          let num3;
+          let num4;
           const items = [container.container, ,];
           const rect = contentInset;
           let num;
@@ -171,50 +196,53 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (num == null) {
             num = 0;
           }
-          const obj = { marginTop: num, paddingBottom: null, marginLeft: null, marginRight: null };
-          let num2;
+          const obj = {
+            marginTop: num,
+            paddingBottom: num2 + mobileQuestDockHeight,
+            marginLeft: num3,
+            marginRight: num4,
+          };
+          num2 = undefined;
           if (rect != null) {
             num2 = rect.bottom;
           }
           if (num2 == null) {
             num2 = 0;
           }
-          obj.paddingBottom = num2 + mobileQuestDockHeight;
-          let num3;
+          num3 = undefined;
           if (rect != null) {
             num3 = rect.left;
           }
           if (num3 == null) {
             num3 = 0;
           }
-          obj.marginLeft = num3;
-          let num4;
+          num4 = undefined;
           if (rect != null) {
             num4 = rect.right;
           }
           if (num4 == null) {
             num4 = 0;
           }
-          obj.marginRight = num4;
           items[1] = obj;
           items[2] = style;
           return items;
         }, items),
-        children: null,
+        children: items1,
       };
       if (isHomeDrawerEnabled) {
-        let ScreenAlignedThemedGradientSliding = require(tmp9).ScreenAlignedThemedGradientSliding;
+        ScreenAlignedThemedGradientSliding = require(tmp9).ScreenAlignedThemedGradientSliding;
       } else {
         ScreenAlignedThemedGradientSliding = importDefault(tmp9);
       }
-      const items1 = [
-        timestampProducer(ScreenAlignedThemedGradientSliding, {
-          offsetX: DM_WIDTH,
-          offsetY: useSafeAreaInsetsDefault().top,
-        }),
-        timestampProducer(React4, { pointerEvents: "none", style: tmp.panelTint }),
-        timestampProducer(React4, { style: tmp.listWrapper, children: children.children }),
-      ];
-      obj3.children = items1;
-      return React5(React4, obj3);
+      items1 = [, ,];
+      const obj4 = { offsetX: DM_WIDTH, offsetY: top };
+      items1[0] = metroRequire(ScreenAlignedThemedGradientSliding, obj4);
+      const obj5 = { pointerEvents: "none", style: tmp.panelTint };
+      items1[1] = metroRequire(React3, obj5);
+      const obj6 = { style: tmp.listWrapper, children };
+      items1[2] = metroRequire(React3, obj6);
+      return metroImportDefault(React3, obj3);
     };
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/ChannelListPanelBackdrop.tsx");
+
+export default tmp6;

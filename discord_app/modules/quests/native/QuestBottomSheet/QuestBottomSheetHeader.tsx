@@ -1,57 +1,56 @@
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetHeader.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl9 from "../../../../intl/index.native.tsx";
 import QuestTypes from "../../QuestTypes.tsx";
-import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.android.tsx";
+import react_native2 from "../../../a11y/native/setAccessibilityFocus.android.tsx";
 import utils_QuestUtils from "../../utils/QuestUtils.tsx";
 import QuestTaskUtils from "../../utils/QuestTaskUtils.tsx";
 import QuestRewardUtils from "../../utils/QuestRewardUtils.tsx";
 import hooks_QuestHooks from "../../hooks/QuestHooks.tsx";
 import QuestHooks from "../QuestHooks.native.tsx";
 import QuestBottomSheet from "QuestBottomSheet.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
 import UserStore from "../../../../stores/UserStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  container: {
-    display: "flex",
-    gap: 6,
-    paddingHorizontal: nativeDefault.space.PX_16,
-    paddingTop: nativeDefault.space.PX_8,
-  },
-  containerWithActionSheet: null,
-  title: null,
-  titleWithActionSheet: null,
-  actionSheetButton: null,
+let dependencyMap;
+
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let obj3;
+let react = react_mod;
+const View = react_native.View;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
+  container: obj2,
+  containerWithActionSheet: obj3,
+  title: { textAlign: "center" },
+  titleWithActionSheet: { textAlign: "left", flex: 1 },
+  actionSheetButton: { flexGrow: 0, flexShrink: 0 },
 };
-let obj3 = {
-  display: "flex",
-  gap: 6,
-  paddingHorizontal: nativeDefault.space.PX_16,
-  paddingTop: nativeDefault.space.PX_8,
-};
-obj2.containerWithActionSheet = {
-  alignItems: "center",
-  flexDirection: "row",
-  paddingHorizontal: nativeDefault.space.PX_8,
-};
-obj2.title = { textAlign: "center" };
-obj2.titleWithActionSheet = { textAlign: "left", flex: 1 };
-obj2.actionSheetButton = { flexGrow: 0, flexShrink: 0 };
-let closure_9 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
+obj2 = { display: "flex", gap: 6, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8 };
+createStyles = createStyles.createStyles;
+obj3 = { alignItems: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_8 };
+let closure_9 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let stringResult = dependencyMap;
-      const cResult = c.c(25);
+      let currentUser;
+      let quest;
+      let step;
+      let tmp12;
+      let tmp13;
+      const obj = react2;
+      const cResult = obj.c(25);
       ({ quest, step } = arg0);
       const userStatus = quest.userStatus;
       let completedAt;
@@ -60,17 +59,19 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const gameTitle = quest.config.messages.gameTitle;
       const tmp5 = null != completedAt;
-      const questTaskDetails = hooks_QuestHooks.useQuestTaskDetails(quest);
       const tmpResult = hooks_QuestHooks;
+      const questTaskDetails = tmpResult.useQuestTaskDetails(quest);
       const tmpResult10 = QuestTaskUtils;
-      const hasWatchVideoTasksResult = QuestTaskUtils.hasWatchVideoTasks(quest);
+      const hasWatchVideoTasksResult = tmpResult10.hasWatchVideoTasks(quest);
       const tmpResult11 = QuestTaskUtils;
-      const isInGameQuestResult = QuestTaskUtils.isInGameQuest(quest);
       const targetMinutes = questTaskDetails.targetMinutes;
+      const isInGameQuestResult = tmpResult11.isInGameQuest(quest);
       const tmpResult12 = hooks_QuestHooks;
-      const result = QuestTaskUtils.hasStreamOnDesktopTask({ quest });
+      const first = _slicedToArray(tmpResult12.useTaskPlatformScreen(quest, questTaskDetails), 1)[0];
       const tmpResult13 = QuestTaskUtils;
-      const hasWatchVideoOnMobileTasks = QuestHooks.useHasWatchVideoOnMobileTasks(quest.config);
+      const result = tmpResult13.hasStreamOnDesktopTask({ quest });
+      const tmpResult14 = QuestHooks;
+      const hasWatchVideoOnMobileTasks = tmpResult14.useHasWatchVideoOnMobileTasks(quest.config);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         const fn = function l() {
@@ -78,175 +79,182 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = items;
         cResult[1] = fn;
-        tmp11 = items;
-        tmp12 = fn;
+        tmp12 = items;
+        tmp13 = fn;
       } else {
-        [tmp11, tmp12] = cResult;
+        [tmp12, tmp13] = cResult;
       }
-      const tmpResult14 = QuestHooks;
-      const stateFromStores = initialize.useStateFromStores(tmp11, tmp12);
+      const tmpResult15 = get_initialized;
+      const stateFromStores = tmpResult15.useStateFromStores(tmp12, tmp13);
       if (cResult[2] === stateFromStores) {
+        let tmp16;
+        let taskDescription;
         if (cResult[3] === quest.config) {
-          let tmp15 = cResult[4];
+          tmp16 = cResult[4];
         }
         utils_QuestUtils;
         if (tmp5) {
+          let tmp35;
           const _Symbol3 = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl8 = util.intl;
-            stringResult = intl8.string(util.t["ij5E/5"]);
+            const intl8 = intl9.intl;
+            const stringResult = intl8.string(intl9.t["ij5E/5"]);
             cResult[5] = stringResult;
+            tmp35 = stringResult;
+          } else {
+            tmp35 = cResult[5];
+          }
+          taskDescription = tmp35;
+        } else if (hasWatchVideoTasksResult) {
+          if (hasWatchVideoOnMobileTasks) {
+            let tmp33;
+            if (cResult[6] !== tmp16) {
+              const intl7 = intl9.intl;
+              const obj2 = { reward: tmp16 };
+              const formatToPlainStringResult = intl7.formatToPlainString(intl9.t.ttFsLj, obj2);
+              cResult[6] = tmp16;
+              cResult[7] = formatToPlainStringResult;
+              tmp33 = formatToPlainStringResult;
+            } else {
+              tmp33 = cResult[7];
+            }
+            taskDescription = tmp33;
+          } else {
+            let tmp31;
+            if (cResult[8] !== tmp16) {
+              const intl6 = intl9.intl;
+              const obj3 = { questReward: tmp16 };
+              const formatToPlainStringResult1 = intl6.formatToPlainString(intl9.t.IpoqqA, obj3);
+              cResult[8] = tmp16;
+              cResult[9] = formatToPlainStringResult1;
+              tmp31 = formatToPlainStringResult1;
+            } else {
+              tmp31 = cResult[9];
+            }
+            taskDescription = tmp31;
           }
         } else {
-          if (hasWatchVideoTasksResult) {
-            if (hasWatchVideoOnMobileTasks) {
-              if (cResult[6] !== tmp15) {
-                const intl7 = util.intl;
-                const obj2 = { reward: tmp15 };
-                const formatToPlainStringResult = intl7.formatToPlainString(util.t.ttFsLj, obj2);
-                cResult[6] = tmp15;
-                cResult[7] = formatToPlainStringResult;
-                let tmp32 = formatToPlainStringResult;
-              } else {
-                tmp32 = cResult[7];
-              }
-              let taskDescription = tmp32;
+          if (isInGameQuestResult) {
+            let tmp20;
+            if (cResult[10] !== quest.config) {
+              const tmpResult17 = QuestTaskUtils;
+              const defaultInGameTask = tmpResult17.getDefaultInGameTask(quest.config);
+              cResult[10] = quest.config;
+              cResult[11] = defaultInGameTask;
+              tmp20 = defaultInGameTask;
             } else {
-              if (cResult[8] !== tmp15) {
-                const intl6 = util.intl;
-                const obj3 = { questReward: tmp15 };
-                const formatToPlainStringResult1 = intl6.formatToPlainString(util.t.IpoqqA, obj3);
-                cResult[8] = tmp15;
-                cResult[9] = formatToPlainStringResult1;
-                let tmp30 = formatToPlainStringResult1;
-              } else {
-                tmp30 = cResult[9];
-              }
-              taskDescription = tmp30;
+              tmp20 = cResult[11];
             }
-          } else {
-            if (isInGameQuestResult) {
-              if (cResult[10] !== quest.config) {
-                const defaultInGameTask = QuestTaskUtils.getDefaultInGameTask(quest.config);
-                cResult[10] = quest.config;
-                cResult[11] = defaultInGameTask;
-                let tmp19 = defaultInGameTask;
-                const tmpResult17 = QuestTaskUtils;
-              } else {
-                tmp19 = cResult[11];
-              }
-              if (null != tmp19) {
-                taskDescription = tmp19.messages.taskDescription;
-              }
-            }
-            if (step !== QuestBottomSheet.QuestBottomSheetStep.TASK_SELECT) {
-              if (step !== QuestBottomSheet.QuestBottomSheetStep.CONSOLE_CONNECT) {
-                if (tmp18) {
-                  if (cResult[14] === tmp15) {
-                    if (cResult[15] === targetMinutes) {
-                      let tmp28 = cResult[16];
-                    }
-                    taskDescription = tmp28;
-                  }
-                  const intl5 = util.intl;
-                  const obj4 = { targetMinutes, rewardNameWithArticle: tmp15 };
-                  const formatToPlainStringResult2 = intl5.formatToPlainString(util.t["2GJLK2"], obj4);
-                  cResult[14] = tmp15;
-                  cResult[15] = targetMinutes;
-                  cResult[16] = formatToPlainStringResult2;
-                  tmp28 = formatToPlainStringResult2;
-                } else {
-                  if (
-                    _slicedToArray(tmpResult12.useTaskPlatformScreen(quest, questTaskDetails), 1)[0] ===
-                    QuestTypes.TaskPlatformScreen.DESKTOP
-                  ) {
-                    if (result) {
-                      if (cResult[17] === gameTitle) {
-                        if (cResult[18] === tmp15) {
-                          if (cResult[19] === targetMinutes) {
-                            let tmp26 = cResult[20];
-                          }
-                          taskDescription = tmp26;
-                        }
-                      }
-                      const intl4 = util.intl;
-                      const obj5 = { gameTitle, questReward: tmp15, streamingDurationRequirement: targetMinutes };
-                      const formatToPlainStringResult3 = intl4.formatToPlainString(util.t["hkJ+Gs"], obj5);
-                      cResult[17] = gameTitle;
-                      cResult[18] = tmp15;
-                      cResult[19] = targetMinutes;
-                      cResult[20] = formatToPlainStringResult3;
-                      tmp26 = formatToPlainStringResult3;
-                    }
-                  }
-                  if (cResult[21] === gameTitle) {
-                    if (cResult[22] === tmp15) {
-                      if (cResult[23] === targetMinutes) {
-                        let tmp24 = cResult[24];
-                      }
-                      taskDescription = tmp24;
-                    }
-                  }
-                  const intl3 = util.intl;
-                  const obj6 = { gameTitle, rewardNameWithArticle: tmp15, targetMinutes };
-                  const formatToPlainStringResult4 = intl3.formatToPlainString(util.t.NIimTt, obj6);
-                  cResult[21] = gameTitle;
-                  cResult[22] = tmp15;
-                  cResult[23] = targetMinutes;
-                  cResult[24] = formatToPlainStringResult4;
-                  tmp24 = formatToPlainStringResult4;
-                }
-              } else {
-                const _Symbol2 = Symbol;
-                if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-                  const intl2 = util.intl;
-                  const stringResult1 = intl2.string(util.t.svdwbA);
-                  cResult[13] = stringResult1;
-                  let tmp22 = stringResult1;
-                } else {
-                  tmp22 = cResult[13];
-                }
-                taskDescription = tmp22;
-              }
-            } else {
-              const _Symbol = Symbol;
-              if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl = util.intl;
-                const stringResult2 = intl.string(util.t.drVw4T);
-                cResult[12] = stringResult2;
-                taskDescription = stringResult2;
-              } else {
-                taskDescription = cResult[12];
-              }
+            if (null != tmp20) {
+              taskDescription = tmp20.messages.taskDescription;
             }
           }
-          return taskDescription;
+          if (step !== QuestBottomSheet.QuestBottomSheetStep.TASK_SELECT) {
+            if (step !== QuestBottomSheet.QuestBottomSheetStep.CONSOLE_CONNECT) {
+              if (tmp19) {
+                if (cResult[14] === tmp16) {
+                  let tmp29;
+                  if (cResult[15] === targetMinutes) {
+                    tmp29 = cResult[16];
+                  }
+                  taskDescription = tmp29;
+                }
+                const intl5 = intl9.intl;
+                const obj4 = { targetMinutes, rewardNameWithArticle: tmp16 };
+                const formatToPlainStringResult2 = intl5.formatToPlainString(intl9.t["2GJLK2"], obj4);
+                cResult[14] = tmp16;
+                cResult[15] = targetMinutes;
+                cResult[16] = formatToPlainStringResult2;
+                tmp29 = formatToPlainStringResult2;
+              } else {
+                if (first === QuestTypes.TaskPlatformScreen.DESKTOP) {
+                  if (result) {
+                    if (cResult[17] === gameTitle) {
+                      if (cResult[18] === tmp16) {
+                        let tmp27;
+                        if (cResult[19] === targetMinutes) {
+                          tmp27 = cResult[20];
+                        }
+                        taskDescription = tmp27;
+                      }
+                    }
+                    const intl4 = intl9.intl;
+                    const obj5 = { gameTitle, questReward: tmp16, streamingDurationRequirement: targetMinutes };
+                    const formatToPlainStringResult3 = intl4.formatToPlainString(intl9.t["hkJ+Gs"], obj5);
+                    cResult[17] = gameTitle;
+                    cResult[18] = tmp16;
+                    cResult[19] = targetMinutes;
+                    cResult[20] = formatToPlainStringResult3;
+                    tmp27 = formatToPlainStringResult3;
+                  }
+                }
+                if (cResult[21] === gameTitle) {
+                  if (cResult[22] === tmp16) {
+                    let tmp25;
+                    if (cResult[23] === targetMinutes) {
+                      tmp25 = cResult[24];
+                    }
+                    taskDescription = tmp25;
+                  }
+                }
+                const intl3 = intl9.intl;
+                const obj6 = { gameTitle, rewardNameWithArticle: tmp16, targetMinutes };
+                const formatToPlainStringResult4 = intl3.formatToPlainString(intl9.t.NIimTt, obj6);
+                cResult[21] = gameTitle;
+                cResult[22] = tmp16;
+                cResult[23] = targetMinutes;
+                cResult[24] = formatToPlainStringResult4;
+                tmp25 = formatToPlainStringResult4;
+              }
+            } else {
+              let tmp23;
+              const _Symbol2 = Symbol;
+              if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+                const intl2 = intl9.intl;
+                const stringResult1 = intl2.string(intl9.t.svdwbA);
+                cResult[13] = stringResult1;
+                tmp23 = stringResult1;
+              } else {
+                tmp23 = cResult[13];
+              }
+              taskDescription = tmp23;
+            }
+          } else {
+            const _Symbol = Symbol;
+            if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
+              const intl = intl9.intl;
+              const stringResult2 = intl.string(intl9.t.drVw4T);
+              cResult[12] = stringResult2;
+              taskDescription = stringResult2;
+            } else {
+              taskDescription = cResult[12];
+            }
+          }
         }
+        return taskDescription;
       }
-      const tmpResult15 = initialize;
-      const defaultRewardNameWithArticle = QuestRewardUtils.getDefaultRewardNameWithArticle(
-        quest.config,
-        stateFromStores,
-      );
+      const tmpResult18 = QuestRewardUtils;
+      const defaultRewardNameWithArticle = tmpResult18.getDefaultRewardNameWithArticle(quest.config, stateFromStores);
       cResult[2] = stateFromStores;
       cResult[3] = quest.config;
       cResult[4] = defaultRewardNameWithArticle;
-      tmp15 = defaultRewardNameWithArticle;
-      const tmpResult18 = QuestRewardUtils;
+      tmp16 = defaultRewardNameWithArticle;
     }
   : (quest) => {
+      let c4;
+      let closure_2;
       quest = quest.quest;
       const step = quest.step;
       dependencyMap = undefined;
       let gameTitle;
-      noop = undefined;
-      c5 = undefined;
+      react = undefined;
+      let c5;
       let first;
       let targetMinutes;
       let memo;
       let hasWatchVideoOnMobileTasks;
       let defaultRewardNameWithArticle;
-      c11 = undefined;
+      let c11;
       const userStatus = quest.userStatus;
       let completedAt;
       if (userStatus != null) {
@@ -254,27 +262,32 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       dependencyMap = tmp2;
       gameTitle = quest.config.messages.gameTitle;
-      const questTaskDetails = quest(10911).useQuestTaskDetails(quest);
       let obj = quest(10911);
-      const hasWatchVideoTasksResult = quest(7208).hasWatchVideoTasks(quest);
-      noop = hasWatchVideoTasksResult;
+      const questTaskDetails = obj.useQuestTaskDetails(quest);
       let obj2 = quest(7208);
-      const isInGameQuestResult = quest(7208).isInGameQuest(quest);
-      c5 = isInGameQuestResult;
+      const hasWatchVideoTasksResult = obj2.hasWatchVideoTasks(quest);
+      react = hasWatchVideoTasksResult;
       let obj3 = quest(7208);
-      first = gameTitle(quest(10911).useTaskPlatformScreen(quest, questTaskDetails), 1)[0];
+      const isInGameQuestResult = obj3.isInGameQuest(quest);
+      c5 = isInGameQuestResult;
+      let obj4 = quest(10911);
+      first = gameTitle(obj4.useTaskPlatformScreen(quest, questTaskDetails), 1)[0];
       targetMinutes = questTaskDetails.targetMinutes;
       const items = [quest];
-      memo = noop.useMemo(() => QuestTaskUtils.hasStreamOnDesktopTask({ quest }), items);
-      let obj4 = quest(10911);
-      hasWatchVideoOnMobileTasks = quest(14892).useHasWatchVideoOnMobileTasks(quest.config);
+      memo = react.useMemo(() => {
+        const obj = QuestTaskUtils;
+        const obj2 = { quest };
+        return obj.hasStreamOnDesktopTask(obj2);
+      }, items);
       let obj5 = quest(14892);
-      const items1 = [first];
-      const stateFromStores = quest(504).useStateFromStores(items1, () => first.getCurrentUser());
+      hasWatchVideoOnMobileTasks = obj5.useHasWatchVideoOnMobileTasks(quest.config);
       let obj6 = quest(504);
-      defaultRewardNameWithArticle = quest(10005).getDefaultRewardNameWithArticle(quest.config, stateFromStores);
+      const items1 = [first];
+      const stateFromStores = obj6.useStateFromStores(items1, () => first.getCurrentUser());
       const obj7 = quest(10005);
-      const isSponsoredPlayQuestResult = quest(7206).isSponsoredPlayQuest(quest);
+      defaultRewardNameWithArticle = obj7.getDefaultRewardNameWithArticle(quest.config, stateFromStores);
+      const obj8 = quest(7206);
+      const isSponsoredPlayQuestResult = obj8.isSponsoredPlayQuest(quest);
       c11 = isSponsoredPlayQuestResult;
       const items2 = [
         null != completedAt,
@@ -290,199 +303,210 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         isSponsoredPlayQuestResult,
         quest.config,
       ];
-      return noop.useMemo(() => {
+      return react.useMemo(() => {
         if (closure_2) {
-          const intl7 = util.intl;
-          return intl7.string(util.t["ij5E/5"]);
+          const intl7 = intl9.intl;
+          return intl7.string(intl9.t["ij5E/5"]);
         } else if (c4) {
-          const intl6 = util.intl;
+          let formatToPlainStringResult;
+          const intl6 = intl9.intl;
           const formatToPlainString = intl6.formatToPlainString;
-          const t = util.t;
+          const t = intl9.t;
           if (hasWatchVideoOnMobileTasks) {
             const obj2 = { reward: defaultRewardNameWithArticle };
-            let formatToPlainStringResult = formatToPlainString(t.ttFsLj, obj2);
+            formatToPlainStringResult = formatToPlainString(t.ttFsLj, obj2);
           } else {
             const obj3 = { questReward: defaultRewardNameWithArticle };
             formatToPlainStringResult = formatToPlainString(t.IpoqqA, obj3);
           }
           return formatToPlainStringResult;
         } else {
+          let stringResult;
           if (c5) {
-            const defaultInGameTask = QuestTaskUtils.getDefaultInGameTask(quest.config);
+            const obj = QuestTaskUtils;
+            const defaultInGameTask = obj.getDefaultInGameTask(quest.config);
             if (null != defaultInGameTask) {
               return defaultInGameTask.messages.taskDescription;
             }
           }
           if (step === QuestBottomSheet.QuestBottomSheetStep.TASK_SELECT) {
-            const intl5 = util.intl;
-            let stringResult = intl5.string(util.t.drVw4T);
+            const intl5 = intl9.intl;
+            stringResult = intl5.string(intl9.t.drVw4T);
           } else if (step === QuestBottomSheet.QuestBottomSheetStep.CONSOLE_CONNECT) {
-            const intl4 = util.intl;
-            stringResult = intl4.string(util.t.svdwbA);
+            const intl4 = intl9.intl;
+            stringResult = intl4.string(intl9.t.svdwbA);
           } else if (c11) {
-            const intl3 = util.intl;
+            const intl3 = intl9.intl;
             const obj4 = { targetMinutes, rewardNameWithArticle: defaultRewardNameWithArticle };
-            stringResult = intl3.formatToPlainString(util.t["2GJLK2"], obj4);
+            stringResult = intl3.formatToPlainString(intl9.t["2GJLK2"], obj4);
           } else {
             if (first === QuestTypes.TaskPlatformScreen.DESKTOP) {
               if (memo) {
-                const intl2 = util.intl;
+                const intl2 = intl9.intl;
                 const obj5 = {
                   gameTitle,
                   questReward: defaultRewardNameWithArticle,
                   streamingDurationRequirement: targetMinutes,
                 };
-                stringResult = intl2.formatToPlainString(util.t["hkJ+Gs"], obj5);
+                stringResult = intl2.formatToPlainString(intl9.t["hkJ+Gs"], obj5);
               }
             }
-            const intl = util.intl;
+            const intl = intl9.intl;
             const obj6 = { gameTitle, rewardNameWithArticle: defaultRewardNameWithArticle, targetMinutes };
-            stringResult = intl.formatToPlainString(util.t.NIimTt, obj6);
+            stringResult = intl.formatToPlainString(intl9.t.NIimTt, obj6);
           }
           return stringResult;
         }
       }, items2);
     };
-ReactCompilerGating = fn(558);
-let obj4 = { alignItems: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_8 };
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetHeader.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = isScreenReaderEnabled(576).c(23);
+      let MoreHorizontalIcon;
+      let _location;
+      let intl;
+      let isScreenReaderEnabled;
+      let items1;
+      let items2;
+      let obj4;
+      let quest;
+      let step;
+      let withActionSheet;
+      let tmp = isScreenReaderEnabled;
+      let obj = isScreenReaderEnabled(576);
+      const cResult = obj.c(23);
       ({ quest, step, withActionSheet, location: _location } = arg0);
       const tmp5 = closure_9();
-      let obj = isScreenReaderEnabled(576);
-      const questCreative = isScreenReaderEnabled(14925).useQuestCreative(quest);
-      const tmpResult = isScreenReaderEnabled(14925);
-      const actionSheetPressHandler = isScreenReaderEnabled(14893).useActionSheetPressHandler(questCreative);
+      const tmpResult = tmp(14925);
+      const questCreative = tmpResult.useQuestCreative(quest);
+      const tmpResult3 = tmp(14893);
+      const actionSheetPressHandler = tmpResult3.useActionSheetPressHandler(questCreative);
       if (cResult[0] === _location) {
         if (cResult[1] === quest) {
+          let tmp8;
+          let tmp15;
+          let tmp14;
           if (cResult[2] === step) {
-            let tmp8 = cResult[3];
+            tmp8 = cResult[3];
           }
           const tmp10 = closure_10(tmp8);
-          isScreenReaderEnabled = tmp(5770).useIsScreenReaderEnabled();
-          const ref = noop.useRef(null);
+          const tmpResult4 = tmp(5770);
+          isScreenReaderEnabled = tmpResult4.useIsScreenReaderEnabled();
+          const ref = react.useRef(null);
           if (cResult[4] !== isScreenReaderEnabled) {
             const fn = function v() {
-              let tmp = isScreenReaderEnabled;
-              if (isScreenReaderEnabled) {
-                tmp = null != ref.current;
-              }
+              const tmp = isScreenReaderEnabled && null != ref.current;
               if (tmp) {
                 const obj2 = { ref, delay: 100 };
-                const result = setAccessibilityFocus.setAccessibilityFocus(obj2);
+                const obj = react_native2;
+                const result = obj.setAccessibilityFocus(obj2);
               }
             };
             const items = [isScreenReaderEnabled];
             cResult[4] = isScreenReaderEnabled;
             cResult[5] = fn;
             cResult[6] = items;
-            let tmp15 = items;
-            let tmp14 = fn;
+            tmp15 = items;
+            tmp14 = fn;
           } else {
             tmp14 = cResult[5];
             tmp15 = cResult[6];
           }
-          const effect = noop.useEffect(tmp14, tmp15);
-          let containerWithActionSheet = tmp4;
-          if (tmp4) {
-            containerWithActionSheet = tmp5.containerWithActionSheet;
-          }
+          const effect = react.useEffect(tmp14, tmp15);
           if (cResult[7] === tmp5.container) {
-            if (cResult[8] === containerWithActionSheet) {
-              let tmp17 = cResult[9];
+            let tmp18;
+            if (cResult[8] === (undefined !== withActionSheet && withActionSheet && tmp5.containerWithActionSheet)) {
+              tmp18 = cResult[9];
             }
             if (cResult[10] === tmp5.title) {
               if (cResult[11] === tmp5.titleWithActionSheet) {
                 if (cResult[12] === tmp10) {
-                  if (cResult[13] === tmp4) {
-                    let tmp18 = cResult[14];
+                  let tmp19;
+                  if (cResult[13] === (undefined !== withActionSheet && withActionSheet)) {
+                    tmp19 = cResult[14];
                   }
                   if (cResult[15] === actionSheetPressHandler) {
                     if (cResult[16] === tmp5.actionSheetButton) {
-                      if (cResult[17] === tmp4) {
-                        let tmp21 = cResult[18];
+                      let tmp22;
+                      if (cResult[17] === (undefined !== withActionSheet && withActionSheet)) {
+                        tmp22 = cResult[18];
                       }
-                      if (cResult[19] === tmp17) {
-                        if (cResult[20] === tmp18) {
-                          if (cResult[21] === tmp21) {
-                            let tmp25 = cResult[22];
+                      if (cResult[19] === tmp18) {
+                        if (cResult[20] === tmp19) {
+                          let tmp26;
+                          if (cResult[21] === tmp22) {
+                            tmp26 = cResult[22];
                           }
-                          return tmp25;
+                          return tmp26;
                         }
                       }
-                      let obj2 = { style: tmp17, children: null };
-                      const items1 = [tmp18, tmp21];
-                      obj2.children = items1;
-                      const tmp28 = closure_8(View, obj2);
-                      cResult[19] = tmp17;
-                      cResult[20] = tmp18;
-                      cResult[21] = tmp21;
-                      cResult[22] = tmp28;
-                      tmp25 = tmp28;
+                      let obj2 = { style: tmp18, children: items1 };
+                      items1 = [tmp19, tmp22];
+                      const tmp29 = closure_8(View, obj2);
+                      cResult[19] = tmp18;
+                      cResult[20] = tmp19;
+                      cResult[21] = tmp22;
+                      cResult[22] = tmp29;
+                      tmp26 = tmp29;
                     }
                   }
-                  let tmp22 = tmp4;
-                  if (tmp4) {
+                  let tmp23 = tmp4;
+                  if (tmp23) {
                     const obj3 = {
                       accessibilityRole: "button",
-                      accessibilityLabel: null,
-                      onPress: null,
-                      style: null,
-                      children: null,
+                      accessibilityLabel: intl.string(tmp(1126).t["UKOtz+"]),
+                      onPress: actionSheetPressHandler,
+                      style: tmp5.actionSheetButton,
+                      children: closure_7(MoreHorizontalIcon, obj4),
                     };
-                    const intl = tmp(1126).intl;
-                    obj3.accessibilityLabel = intl.string(tmp(1126).t["UKOtz+"]);
-                    obj3.onPress = actionSheetPressHandler;
-                    obj3.style = tmp5.actionSheetButton;
-                    const obj4 = { color: ref(587).colors.INTERACTIVE_TEXT_DEFAULT };
-                    obj3.children = closure_7(tmp(7577).MoreHorizontalIcon, obj4);
-                    tmp22 = closure_7(tmp(5909).PressableOpacity, obj3);
+                    const PressableOpacity = tmp(5909).PressableOpacity;
+                    intl = tmp(1126).intl;
+                    obj4 = { color: ref(587).colors.INTERACTIVE_TEXT_DEFAULT };
+                    MoreHorizontalIcon = tmp(7577).MoreHorizontalIcon;
+                    tmp23 = closure_7(PressableOpacity, obj3);
                   }
                   cResult[15] = actionSheetPressHandler;
                   cResult[16] = tmp5.actionSheetButton;
-                  cResult[17] = tmp4;
-                  cResult[18] = tmp22;
-                  tmp21 = tmp22;
+                  cResult[17] = undefined !== withActionSheet && withActionSheet;
+                  cResult[18] = tmp23;
+                  tmp22 = tmp23;
                 }
               }
             }
-            let tmp20Result = null != tmp10;
-            if (tmp20Result) {
+            let tmp21Result = null != tmp10;
+            if (tmp21Result) {
               const obj5 = {
                 ref,
                 variant: "redesign/heading-18/bold",
                 color: "mobile-text-heading-primary",
                 accessibilityRole: "header",
-                style: null,
-                children: null,
+                style: items2,
+                children: tmp10,
               };
-              const items2 = [tmp5.title];
+              items2 = [tmp5.title];
               let titleWithActionSheet = tmp4;
-              if (tmp4) {
+              const Text = tmp(4886).Text;
+              if (undefined !== withActionSheet && withActionSheet) {
                 titleWithActionSheet = tmp5.titleWithActionSheet;
               }
               items2[1] = titleWithActionSheet;
-              obj5.style = items2;
-              obj5.children = tmp10;
-              tmp20Result = closure_7(tmp(4886).Text, obj5);
+              tmp21Result = closure_7(Text, obj5);
             }
             cResult[10] = tmp5.title;
             cResult[11] = tmp5.titleWithActionSheet;
             cResult[12] = tmp10;
-            cResult[13] = tmp4;
-            cResult[14] = tmp20Result;
-            tmp18 = tmp20Result;
+            cResult[13] = undefined !== withActionSheet && withActionSheet;
+            cResult[14] = tmp21Result;
+            tmp19 = tmp21Result;
           }
-          const items3 = [tmp5.container, containerWithActionSheet];
+          const items3 = [
+            tmp5.container,
+            undefined !== withActionSheet && withActionSheet && tmp5.containerWithActionSheet,
+          ];
           cResult[7] = tmp5.container;
-          cResult[8] = containerWithActionSheet;
+          cResult[8] = undefined !== withActionSheet && withActionSheet && tmp5.containerWithActionSheet;
           cResult[9] = items3;
-          tmp17 = items3;
-          const tmpResult4 = tmp(5770);
+          tmp18 = items3;
         }
       }
       const obj7 = { quest, step, location: _location };
@@ -491,39 +515,43 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = step;
       cResult[3] = obj7;
       tmp8 = obj7;
-      const tmpResult3 = isScreenReaderEnabled(14893);
     }
   : (step) => {
+      let MoreHorizontalIcon;
+      let intl;
+      let items2;
+      let items3;
+      let obj7;
+      let quest;
+      let withActionSheet;
       ({ quest, withActionSheet } = step);
+      step = step.step;
       if (withActionSheet === undefined) {
         withActionSheet = false;
       }
       let isScreenReaderEnabled;
+      const _location = step.location;
       let tmp = closure_9();
-      const questCreative = isScreenReaderEnabled(14925).useQuestCreative(quest);
       let obj = isScreenReaderEnabled(14925);
+      const questCreative = obj.useQuestCreative(quest);
       let obj2 = isScreenReaderEnabled(14893);
-      const tmp6 = closure_10({ quest, step: step.step, location: step.location });
-      const actionSheetPressHandler = isScreenReaderEnabled(14893).useActionSheetPressHandler(questCreative);
-      isScreenReaderEnabled = isScreenReaderEnabled(5770).useIsScreenReaderEnabled();
-      const ref = noop.useRef(null);
+      const actionSheetPressHandler = obj2.useActionSheetPressHandler(questCreative);
+      const tmp6 = closure_10({ quest, step, location: _location });
+      const obj3 = isScreenReaderEnabled(5770);
+      isScreenReaderEnabled = obj3.useIsScreenReaderEnabled();
+      const ref = react.useRef(null);
       const items = [isScreenReaderEnabled];
-      const effect = noop.useEffect(() => {
-        let tmp = isScreenReaderEnabled;
-        if (isScreenReaderEnabled) {
-          tmp = null != ref.current;
-        }
+      const effect = react.useEffect(() => {
+        const tmp = isScreenReaderEnabled && null != ref.current;
         if (tmp) {
           const obj2 = { ref, delay: 100 };
-          const result = setAccessibilityFocus.setAccessibilityFocus(obj2);
+          const obj = react_native2;
+          const result = obj.setAccessibilityFocus(obj2);
         }
       }, items);
       const items1 = [tmp.container];
-      let containerWithActionSheet = withActionSheet;
-      if (withActionSheet) {
-        containerWithActionSheet = tmp.containerWithActionSheet;
-      }
-      const obj4 = { style: items1, children: null };
+      const containerWithActionSheet = withActionSheet && tmp.containerWithActionSheet;
+      const obj4 = { style: items1, children: items3 };
       items1[1] = containerWithActionSheet;
       let tmp13Result = null != tmp6;
       if (tmp13Result) {
@@ -532,37 +560,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           variant: "redesign/heading-18/bold",
           color: "mobile-text-heading-primary",
           accessibilityRole: "header",
-          style: null,
-          children: null,
+          style: items2,
+          children: tmp6,
         };
-        const items2 = [tmp.title];
+        items2 = [tmp.title];
         let titleWithActionSheet = withActionSheet;
+        const Text = tmp2(4886).Text;
         if (withActionSheet) {
           titleWithActionSheet = tmp.titleWithActionSheet;
         }
         items2[1] = titleWithActionSheet;
-        obj5.style = items2;
-        obj5.children = tmp6;
-        tmp13Result = closure_7(tmp2(4886).Text, obj5);
+        tmp13Result = closure_7(Text, obj5);
       }
-      const items3 = [tmp13Result];
+      items3 = [tmp13Result];
       if (withActionSheet) {
         const obj6 = {
           accessibilityRole: "button",
-          accessibilityLabel: null,
-          onPress: null,
-          style: null,
-          children: null,
+          accessibilityLabel: intl.string(isScreenReaderEnabled(1126).t["UKOtz+"]),
+          onPress: actionSheetPressHandler,
+          style: tmp.actionSheetButton,
+          children: closure_7(MoreHorizontalIcon, obj7),
         };
-        const intl = tmp2(1126).intl;
-        obj6.accessibilityLabel = intl.string(tmp2(1126).t["UKOtz+"]);
-        obj6.onPress = actionSheetPressHandler;
-        obj6.style = tmp.actionSheetButton;
-        const obj7 = { color: ref(587).colors.INTERACTIVE_TEXT_DEFAULT };
-        obj6.children = closure_7(tmp2(7577).MoreHorizontalIcon, obj7);
-        withActionSheet = closure_7(tmp2(5909).PressableOpacity, obj6);
+        const PressableOpacity = tmp2(5909).PressableOpacity;
+        intl = tmp2(1126).intl;
+        obj7 = { color: ref(587).colors.INTERACTIVE_TEXT_DEFAULT };
+        MoreHorizontalIcon = tmp2(7577).MoreHorizontalIcon;
+        withActionSheet = closure_7(PressableOpacity, obj6);
       }
       items3[1] = withActionSheet;
-      obj4.children = items3;
       return closure_8(View, obj4);
     };
+let result = size.fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetHeader.tsx");
+
+export default tmp4;

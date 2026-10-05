@@ -1,21 +1,26 @@
 // discord_app/modules/conjure/create/useConjureAppSlotsLeft.tsx
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../_runtime/00576_react.js";
 import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/create/useConjureAppSlotsLeft.tsx");
+let maxProjects;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(4);
+      let tmp4;
+      let tmp5;
+      let tmp7;
+      let tmp8;
+      let obj = react2;
+      const cResult = obj.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function c() {
-          const projectLimit = ConjureActionCreators.fetchProjectLimit();
+          const obj = ConjureActionCreators;
+          const projectLimit = obj.fetchProjectLimit();
         };
         const items = [];
         cResult[0] = fn;
@@ -25,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const effect = noop.useEffect(tmp4, tmp5);
+      const effect = react.useEffect(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ConjureProjectStore];
         const fn2 = function u() {
@@ -33,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let bound = null;
           if (null != maxProjects) {
             bound = null;
-            if (obj.hasFetchedOwnedProjects()) {
+            if (maxProjects.hasFetchedOwnedProjects()) {
               const _Math = Math;
               bound = Math.max(0, maxProjects - obj.getOwnedProjects().length);
             }
@@ -42,25 +47,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[2] = items1;
         cResult[3] = fn2;
-        let tmp8 = fn2;
-        let tmp7 = items1;
+        tmp8 = fn2;
+        tmp7 = items1;
       } else {
         tmp7 = cResult[2];
         tmp8 = cResult[3];
       }
-      return initialize.useStateFromStores(tmp7, tmp8);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStores(tmp7, tmp8);
     }
   : () => {
-      const effect = noop.useEffect(() => {
-        const projectLimit = ConjureActionCreators.fetchProjectLimit();
+      const effect = react.useEffect(() => {
+        const obj = ConjureActionCreators;
+        const projectLimit = obj.fetchProjectLimit();
       }, []);
+      let obj = get_initialized;
       const items = [ConjureProjectStore];
-      return initialize.useStateFromStores(items, () => {
+      return obj.useStateFromStores(items, () => {
         maxProjects = maxProjects.getMaxProjects();
         let bound = null;
         if (null != maxProjects) {
           bound = null;
-          if (obj.hasFetchedOwnedProjects()) {
+          if (maxProjects.hasFetchedOwnedProjects()) {
             const _Math = Math;
             bound = Math.max(0, maxProjects - obj.getOwnedProjects().length);
           }
@@ -68,3 +76,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return bound;
       });
     };
+const result = size.fileFinishedImporting("modules/conjure/create/useConjureAppSlotsLeft.tsx");
+
+export default tmp2;

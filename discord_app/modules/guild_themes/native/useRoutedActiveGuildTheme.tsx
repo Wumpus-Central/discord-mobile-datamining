@@ -1,13 +1,17 @@
 // discord_app/modules/guild_themes/native/useRoutedActiveGuildTheme.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import Constants from "../../../Constants.tsx";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
-import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext.tsx";
+import reactDefault from "GuildThemeGuildIdOverrideContext.tsx";
 import GuildThemeResolver from "../GuildThemeResolver.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+const require = globalThis.__r;
+
 function getGuildIdFromNavigationState(routes) {
   if (null != routes) {
     routes = routes.routes;
@@ -20,8 +24,8 @@ function getGuildIdFromNavigationState(routes) {
         }
       }
       if (null == guildId) {
-        state = undefined;
-        if (tmp != null) {
+        let state;
+        if (routes[routes.index] != null) {
           state = tmp.state;
         }
         guildId = getGuildIdFromNavigationState(state);
@@ -31,7 +35,8 @@ function getGuildIdFromNavigationState(routes) {
   }
 }
 function getActiveGuildThemeGuildIdSnapshot() {
-  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+  const obj = RootNavigationRef;
+  const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       const rootState = rootNavigationRef.getRootState();
@@ -47,8 +52,8 @@ function getActiveGuildThemeGuildIdSnapshot() {
             }
           }
           if (null == guildId) {
-            state = undefined;
-            if (tmp5 != null) {
+            let state;
+            if (routes[rootState.index] != null) {
               state = tmp5.state;
             }
             let tmp8;
@@ -64,7 +69,7 @@ function getActiveGuildThemeGuildIdSnapshot() {
                 }
                 if (null == guildId1) {
                   let state1;
-                  if (tmp9 != null) {
+                  if (routes2[state.index] != null) {
                     state1 = tmp9.state;
                   }
                   guildId1 = getGuildIdFromNavigationState(state1);
@@ -103,7 +108,7 @@ function getActiveGuildThemeGuildIdSnapshot() {
             }
             if (null == guildId2) {
               let state3;
-              if (tmp16 != null) {
+              if (routes3[state2.index] != null) {
                 state3 = tmp16.state;
               }
               let tmp19;
@@ -119,7 +124,7 @@ function getActiveGuildThemeGuildIdSnapshot() {
                   }
                   if (null == guildId3) {
                     let state4;
-                    if (tmp20 != null) {
+                    if (routes4[state3.index] != null) {
                       state4 = tmp20.state;
                     }
                     guildId3 = getGuildIdFromNavigationState(state4);
@@ -146,18 +151,24 @@ function getActiveGuildThemeGuildIdSnapshot() {
   }
   return null;
 }
-const ME = fn(1085).ME;
-let ReactCompilerGating = fn(558);
+const ME = Constants.ME;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
-      const context = noop.useContext(GuildThemeGuildIdOverrideContextDefault);
-      [tmp4, require] = noop.useState(getActiveGuildThemeGuildIdSnapshot);
+      let tmp4;
+      let tmp5;
+      let tmp6;
+      let obj = react2;
+      const cResult = obj.c(2);
+      const context = react.useContext(reactDefault);
+      [tmp4, require] = _slicedToArray(react.useState(getActiveGuildThemeGuildIdSnapshot), 2);
+      const tmp3 = _slicedToArray(react.useState(getActiveGuildThemeGuildIdSnapshot), 2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function l() {
-          const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+          const obj = RootNavigationRef;
+          const rootNavigationRef = obj.getRootNavigationRef();
           if (null != rootNavigationRef) {
-            closure_1_0(getActiveGuildThemeGuildIdSnapshot());
+            require(getActiveGuildThemeGuildIdSnapshot());
             return rootNavigationRef.addListener("state", function handleStateChange() {
               closure_1_0(getActiveGuildThemeGuildIdSnapshot());
             });
@@ -171,7 +182,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const effect = noop.useEffect(tmp5, tmp6);
+      const effect = react.useEffect(tmp5, tmp6);
       if (undefined !== context) {
         let tmp9 = null;
         if (context !== ME) {
@@ -182,15 +193,18 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp4;
     }
   : () => {
-      const context = noop.useContext(GuildThemeGuildIdOverrideContextDefault);
-      [tmp3, require] = noop.useState(getActiveGuildThemeGuildIdSnapshot);
-      const effect = noop.useEffect(() => {
-        const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+      let tmp3;
+      const context = react.useContext(reactDefault);
+      [tmp3, require] = react.useState(getActiveGuildThemeGuildIdSnapshot);
+      _slicedToArray(react.useState(getActiveGuildThemeGuildIdSnapshot), 2);
+      const effect = react.useEffect(() => {
+        const obj = RootNavigationRef;
+        const rootNavigationRef = obj.getRootNavigationRef();
         if (null != rootNavigationRef) {
           function handleStateChange() {
             closure_1_0(getActiveGuildThemeGuildIdSnapshot());
           }
-          closure_1_0(getActiveGuildThemeGuildIdSnapshot());
+          require(getActiveGuildThemeGuildIdSnapshot());
           return rootNavigationRef.addListener("state", handleStateChange);
         }
       }, []);
@@ -203,16 +217,18 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     };
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_themes/native/useRoutedActiveGuildTheme.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
       const tmp = closure_8();
-      return GuildThemeResolver.useActiveGuildThemeForGuildId(tmp);
+      const obj = GuildThemeResolver;
+      return obj.useActiveGuildThemeForGuildId(tmp);
     }
   : () => {
       const tmp = closure_8();
-      return GuildThemeResolver.useActiveGuildThemeForGuildId(tmp);
+      const obj = GuildThemeResolver;
+      return obj.useActiveGuildThemeForGuildId(tmp);
     };
+const result = size.fileFinishedImporting("modules/guild_themes/native/useRoutedActiveGuildTheme.tsx");
+
+export default tmp2;

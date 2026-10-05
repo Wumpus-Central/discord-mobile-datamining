@@ -2,126 +2,72 @@
 import NewChannelsStore from "../../../recent_channels/NewChannelsStore.tsx";
 import ReadStateStore from "../../../../stores/ReadStateStore.tsx";
 import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-const require = fn;
-fn(558);
-const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, arg1) => {
-      _require = id;
-      dependencyMap = arg1;
-      const cResult = require("c").c(4);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ReadStateStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] === id.id) {
-        if (cResult[2] === arg1) {
-          let tmp6 = cResult[3];
-        }
-        return tmp(504).useStateFromStoresObject(first, tmp6);
-      }
-      const fn = function u() {
-        const obj = {
-          ackMessageId: ReadStateStore.ackMessageId(id.id),
-          unread: null,
-          mentionCount: null,
-          isMentionLowImportance: null,
-        };
-        let hasUnreadResult = !closure_1;
-        if (!closure_1) {
-          hasUnreadResult = ReadStateStore.hasUnread(id.id);
-        }
-        obj.unread = hasUnreadResult;
-        obj.mentionCount = ReadStateStore.getMentionCount(id.id);
-        obj.isMentionLowImportance = ReadStateStore.getIsMentionLowImportance(id.id);
-        return obj;
-      };
-      cResult[1] = id.id;
-      cResult[2] = arg1;
-      cResult[3] = fn;
-      tmp6 = fn;
-      let obj = require("c");
-      tmp = _require;
-    }
-  : (arg0, arg1) => {
-      _require = arg0;
-      dependencyMap = arg1;
-      const items = [ReadStateStore];
-      return require("initialize").useStateFromStoresObject(items, () => {
-        const obj = {
-          ackMessageId: ReadStateStore.ackMessageId(id.id),
-          unread: null,
-          mentionCount: null,
-          isMentionLowImportance: null,
-        };
-        let hasUnreadResult = !closure_1;
-        if (!closure_1) {
-          hasUnreadResult = ReadStateStore.hasUnread(id.id);
-        }
-        obj.unread = hasUnreadResult;
-        obj.mentionCount = ReadStateStore.getMentionCount(id.id);
-        obj.isMentionLowImportance = ReadStateStore.getIsMentionLowImportance(id.id);
-        return obj;
-      });
-    };
-let closure_5 = tmp3;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/launchpad/native/shared/useChannelUnreadBadgeState.tsx");
-
-export const useChannelUnreadBadgeState = ReactCompilerGating.isReactCompilerEnabled()
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guild_id, arg1) => {
+      let first;
+      let isMentionLowImportance;
+      let mentionCount;
+      let unread;
       _require = guild_id;
-      const cResult = require("c").c(15);
-      const obj = require("c");
+      const obj = require("react");
+      const cResult = obj.c(15);
       ({ unread, mentionCount, isMentionLowImportance } = closure_5(guild_id, arg1));
+      closure_5(guild_id, arg1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [NewChannelsStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === guild_id.guild_id) {
+        let tmp7;
+        let tmp8;
+        let tmp11;
+        let tmp13;
         if (cResult[2] === guild_id.id) {
-          let tmp7 = cResult[3];
-          let tmp8 = cResult[4];
+          tmp7 = cResult[3];
+          tmp8 = cResult[4];
         }
-        const stateFromStores = tmp(504).useStateFromStores(first, tmp7, tmp8);
-        const tmpResult = tmp(504);
-        const optInEnabledForGuild = tmp(7046).useOptInEnabledForGuild(guild_id.guild_id);
+        const tmpResult = require("get initialized");
+        const stateFromStores = tmpResult.useStateFromStores(first, tmp7, tmp8);
+        const tmpResult3 = require("isOptInEnabled");
+        const optInEnabledForGuild = tmpResult3.useOptInEnabledForGuild(guild_id.guild_id);
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [UserGuildSettingsStore];
           cResult[5] = items1;
-          let tmp11 = items1;
+          tmp11 = items1;
         } else {
           tmp11 = cResult[5];
         }
         if (cResult[6] !== guild_id) {
           const fn2 = function b() {
-            return UserGuildSettingsStore.resolveUnreadSetting(closure_0);
+            return UserGuildSettingsStore.resolveUnreadSetting(guild_id);
           };
           cResult[6] = guild_id;
           cResult[7] = fn2;
-          let tmp13 = fn2;
+          tmp13 = fn2;
         } else {
           tmp13 = cResult[7];
         }
-        const tmpResult3 = tmp(7046);
-        const stateFromStores1 = tmp(504).useStateFromStores(tmp11, tmp13);
+        const tmpResult4 = require("get initialized");
+        const stateFromStores1 = tmpResult4.useStateFromStores(tmp11, tmp13);
         if (cResult[8] === isMentionLowImportance) {
           if (cResult[9] === mentionCount) {
             if (cResult[10] === stateFromStores) {
               if (cResult[11] === optInEnabledForGuild) {
                 if (cResult[12] === stateFromStores1) {
+                  let tmp15;
                   if (cResult[13] === unread) {
-                    let tmp15 = cResult[14];
+                    tmp15 = cResult[14];
                   }
                   return tmp15;
                 }
@@ -145,7 +91,6 @@ export const useChannelUnreadBadgeState = ReactCompilerGating.isReactCompilerEna
         cResult[13] = unread;
         cResult[14] = obj2;
         tmp15 = obj2;
-        const tmpResult4 = tmp(504);
       }
       const fn = function c() {
         return NewChannelsStore.shouldIndicateNewChannel(guild_id.guild_id, guild_id.id);
@@ -158,39 +103,102 @@ export const useChannelUnreadBadgeState = ReactCompilerGating.isReactCompilerEna
       cResult[4] = items2;
       tmp8 = items2;
       tmp7 = fn;
-      const tmp4 = closure_5(guild_id, arg1);
     }
   : (guild_id, arg1) => {
+      let isMentionLowImportance;
+      let items2;
+      let mentionCount;
+      let obj4;
+      let optInEnabledForGuild;
+      let unread;
       _require = guild_id;
       ({ unread, mentionCount, isMentionLowImportance } = closure_5(guild_id, arg1));
-      const tmp = closure_5(guild_id, arg1);
+      closure_5(guild_id, arg1);
       const items = [NewChannelsStore];
       const items1 = [,];
       ({ guild_id: arr2[0], id: arr2[1] } = guild_id);
-      const stateFromStores = require("initialize").useStateFromStores(
+      const obj = require("get initialized");
+      const stateFromStores = obj.useStateFromStores(
         items,
         () => NewChannelsStore.shouldIndicateNewChannel(guild_id.guild_id, guild_id.id),
         items1,
       );
-      const obj = require("initialize");
       const obj3 = {
         unread,
-        resolvedUnreadSetting: null,
-        newChannel: null,
-        optInEnabled: null,
-        mentionCount: null,
-        isMentionLowImportance: null,
+        resolvedUnreadSetting: obj4.useStateFromStores(items2, () =>
+          UserGuildSettingsStore.resolveUnreadSetting(guild_id),
+        ),
+        newChannel: stateFromStores,
+        optInEnabled: optInEnabledForGuild,
+        mentionCount,
+        isMentionLowImportance,
       };
-      const optInEnabledForGuild = require("isOptInEnabled").useOptInEnabledForGuild(guild_id.guild_id);
       const obj2 = require("isOptInEnabled");
-      const items2 = [UserGuildSettingsStore];
-      obj3.resolvedUnreadSetting = require("initialize").useStateFromStores(items2, () =>
-        UserGuildSettingsStore.resolveUnreadSetting(closure_0),
-      );
-      obj3.newChannel = stateFromStores;
-      obj3.optInEnabled = optInEnabledForGuild;
-      obj3.mentionCount = mentionCount;
-      obj3.isMentionLowImportance = isMentionLowImportance;
+      optInEnabledForGuild = obj2.useOptInEnabledForGuild(guild_id.guild_id);
+      items2 = [UserGuildSettingsStore];
+      obj4 = require("get initialized");
       return obj3;
     };
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (id, arg1) => {
+      let closure_1;
+      let first;
+      _require = id;
+      dependencyMap = arg1;
+      let obj = require("react");
+      const cResult = obj.c(4);
+      const tmp = _require;
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [ReadStateStore];
+        cResult[0] = items;
+        first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] === id.id) {
+        let tmp6;
+        if (cResult[2] === arg1) {
+          tmp6 = cResult[3];
+        }
+        const tmpResult = tmp(504);
+        return tmpResult.useStateFromStoresObject(first, tmp6);
+      }
+      const fn = function u() {
+        const obj = {
+          ackMessageId: ReadStateStore.ackMessageId(id.id),
+          unread: !closure_1 && ReadStateStore.hasUnread(id.id),
+          mentionCount: ReadStateStore.getMentionCount(id.id),
+          isMentionLowImportance: ReadStateStore.getIsMentionLowImportance(id.id),
+        };
+        !closure_1 && ReadStateStore.hasUnread(id.id);
+        return obj;
+      };
+      cResult[1] = id.id;
+      cResult[2] = arg1;
+      cResult[3] = fn;
+      tmp6 = fn;
+    }
+  : (arg0, arg1) => {
+      let closure_1;
+      let id;
+      _require = arg0;
+      dependencyMap = arg1;
+      let obj = require("get initialized");
+      const items = [ReadStateStore];
+      return obj.useStateFromStoresObject(items, () => {
+        const obj = {
+          ackMessageId: ReadStateStore.ackMessageId(id.id),
+          unread: !closure_1 && ReadStateStore.hasUnread(id.id),
+          mentionCount: ReadStateStore.getMentionCount(id.id),
+          isMentionLowImportance: ReadStateStore.getIsMentionLowImportance(id.id),
+        };
+        !closure_1 && ReadStateStore.hasUnread(id.id);
+        return obj;
+      });
+    };
+let closure_5 = tmp3;
+const result = size.fileFinishedImporting("modules/launchpad/native/shared/useChannelUnreadBadgeState.tsx");
+
+export const useChannelUnreadBadgeState = tmp2;
 export const useBaseChannelUnreadBadgeState = tmp3;

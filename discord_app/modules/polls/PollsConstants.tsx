@@ -4,6 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const items = [,];
 ({ GIF: arr[0], EMOJI: arr[1] } = ExpressionPickerConstants.ExpressionPickerViewType);
+const set = new Set(items);
 const result = size.fileFinishedImporting("modules/polls/PollsConstants.tsx");
 
 export const POLL_ATTACHMENT_FOLDER = "polls";
@@ -32,4 +33,4 @@ export const PollDurations = {
   FOURTEEN_DAYS: 336,
   [336]: "FOURTEEN_DAYS",
 };
-export const POLLS_SUPPORTED_EXPRESSION_PICKER_VIEW_TYPES = new Set(items);
+export const POLLS_SUPPORTED_EXPRESSION_PICKER_VIEW_TYPES = set;

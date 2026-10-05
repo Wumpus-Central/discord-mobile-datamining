@@ -1,35 +1,35 @@
 // discord_app/modules/auth/native/components/atoms/AuthNavbarPlaceholder.tsx
-import c from "../../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import NavigatorHeader from "../../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = { navBar: { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT, borderBottomWidth: 0 } };
-let closure_3 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT, borderBottomWidth: 0 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/auth/native/components/atoms/AuthNavbarPlaceholder.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let obj2;
+const jsx = Fragment.jsx;
+let obj = { navBar: obj2 };
+obj2 = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT, borderBottomWidth: 0 };
+let closure_3 = createStyles.createStyles(obj);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(2);
       const tmp4 = closure_3();
       if (cResult[0] !== tmp4.navBar) {
-        const obj2 = { style: tmp4.navBar, children: null };
         const tmp7 = jsx(NavigatorHeader.FauxHeader, { style: tmp4.navBar, children: null });
         cResult[0] = tmp4.navBar;
         cResult[1] = tmp7;
-        let tmp5 = tmp7;
+        tmp5 = tmp7;
       } else {
         tmp5 = cResult[1];
       }
       return tmp5;
     }
-  : () => {
-      const tmp = closure_3();
-      return jsx(NavigatorHeader.FauxHeader, { style: closure_3().navBar, children: null });
-    };
+  : () => jsx(NavigatorHeader.FauxHeader, { style: closure_3().navBar, children: null });
+const result = size.fileFinishedImporting("modules/auth/native/components/atoms/AuthNavbarPlaceholder.tsx");
+
+export default tmp3;

@@ -3,12 +3,18 @@ import 00570__ from "../../../_runtime/metro/00570__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
 const useCommandDiscoveryManager = module_570.create(() => ({ initialSectionId: "r" }));
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandDiscoveryManager.tsx");
 
 export { useCommandDiscoveryManager };
 export const updateInitialSectionId = function updateInitialSectionId(arg0) {
+  let closure_0;
   _require = arg0;
-  require("ReactBatchUpdates").batchUpdates(() => obj.setState(() => ({ initialSectionId })));
+  const obj = require("react-native");
+  obj.batchUpdates(() => {
+    let initialSectionId;
+    return obj.setState(() => ({ initialSectionId }));
+  });
 };

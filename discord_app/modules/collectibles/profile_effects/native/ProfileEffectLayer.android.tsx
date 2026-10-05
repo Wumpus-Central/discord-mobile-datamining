@@ -1,35 +1,47 @@
 // discord_app/modules/collectibles/profile_effects/native/ProfileEffectLayer.android.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import ProfileEffectUtils from "ProfileEffectUtils.tsx";
-import APNGPlayer from "../../../image/native/APNGPlayer.android.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import APNGPlayer2 from "../../../image/native/APNGPlayer.android.tsx";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const StyleSheet = fn(17).StyleSheet;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-let size = fn(2);
-let result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectLayer.android.tsx");
+let paused;
 
-export default noop.memo(
+const StyleSheet = react_native.StyleSheet;
+const jsx = Fragment.jsx;
+const memo = react.memo;
+const memoResult = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (paused) => {
-        const cResult = c.c(17);
+        let accessibilityLabel;
+        let animate;
+        let layerConfig;
+        let onLoad;
+        let width;
+        const obj = react2;
+        const cResult = obj.c(17);
         ({ layerConfig, animate } = paused);
         paused = paused.paused;
         ({ width, accessibilityLabel, onLoad } = paused);
-        const ref = noop.useRef(null);
-        const aPNGPlayerControls = APNGPlayer.useAPNGPlayerControls(ref);
+        const ref = react.useRef(null);
+        const obj3 = APNGPlayer2;
+        const aPNGPlayerControls = obj3.useAPNGPlayerControls(ref);
         if (cResult[0] === animate) {
           if (cResult[1] === aPNGPlayerControls) {
+            let tmp6;
+            let tmp7;
             if (cResult[2] === paused) {
-              let tmp6 = cResult[3];
-              let tmp7 = cResult[4];
+              tmp6 = cResult[3];
+              tmp7 = cResult[4];
             }
-            const effect = noop.useEffect(tmp6, tmp7);
+            const effect = react.useEffect(tmp6, tmp7);
             if (cResult[5] === layerConfig) {
+              let tmp10;
               if (cResult[6] === width) {
-                let tmp10 = cResult[7];
+                tmp10 = cResult[7];
               }
               let num4 = 0;
               if (animate) {
@@ -37,21 +49,22 @@ export default noop.memo(
               }
               if (cResult[8] === tmp10) {
                 if (cResult[9] === num4) {
+                  let tmp12;
                   if (cResult[10] === width) {
-                    let tmp12 = cResult[11];
+                    tmp12 = cResult[11];
                   }
                   if (cResult[12] === accessibilityLabel) {
                     if (cResult[13] === layerConfig.src) {
                       if (cResult[14] === onLoad) {
+                        let tmp14;
                         if (cResult[15] === tmp12) {
-                          let tmp14 = cResult[16];
+                          tmp14 = cResult[16];
                         }
                         return tmp14;
                       }
                     }
                   }
-                  const obj4 = { ref, url: tmp9, autoplay: false, style: tmp12, ariaLabel: accessibilityLabel, onLoad };
-                  const tmp16 = jsx(APNGPlayer.APNGPlayer, {
+                  const tmp16 = jsx(APNGPlayer2.APNGPlayer, {
                     ref,
                     url: tmp9,
                     autoplay: false,
@@ -68,7 +81,7 @@ export default noop.memo(
                 }
               }
               const items = [StyleSheet.absoluteFill];
-              const size = { position: "absolute", width, height: tmp10, opacity: num4 };
+              size = { position: "absolute", width, height: tmp10, opacity: num4 };
               items[1] = size;
               cResult[8] = tmp10;
               cResult[9] = num4;
@@ -76,12 +89,12 @@ export default noop.memo(
               cResult[11] = items;
               tmp12 = items;
             }
-            const result = ProfileEffectUtils.calculateProfileEffectHeight(layerConfig, width);
+            const tmpResult = ProfileEffectUtils;
+            const result = tmpResult.calculateProfileEffectHeight(layerConfig, width);
             cResult[5] = layerConfig;
             cResult[6] = width;
             cResult[7] = result;
             tmp10 = result;
-            const tmpResult = ProfileEffectUtils;
           }
         }
         const fn = function u() {
@@ -102,14 +115,21 @@ export default noop.memo(
         tmp6 = fn;
       }
     : (paused) => {
+        let accessibilityLabel;
+        let animate;
+        let layerConfig;
+        let num;
+        let obj4;
+        let onLoad;
         ({ layerConfig, animate } = paused);
         paused = paused.paused;
         const width = paused.width;
         ({ accessibilityLabel, onLoad } = paused);
-        const ref = noop.useRef(null);
-        const aPNGPlayerControls = APNGPlayer.useAPNGPlayerControls(ref);
+        const ref = react.useRef(null);
+        const obj = APNGPlayer2;
+        const aPNGPlayerControls = obj.useAPNGPlayerControls(ref);
         const items = [animate, paused, aPNGPlayerControls];
-        const effect = noop.useEffect(() => {
+        const effect = react.useEffect(() => {
           if (animate) {
             if (!paused) {
               aPNGPlayerControls.play();
@@ -117,26 +137,33 @@ export default noop.memo(
           }
           aPNGPlayerControls.pause();
         }, items);
-        const obj2 = { ref, url: layerConfig.src, autoplay: false, style: null, ariaLabel: null, onLoad: null };
         const items1 = [StyleSheet.absoluteFill];
-        const size = { position: "absolute", width, height: null, opacity: null };
-        size.height = ProfileEffectUtils.calculateProfileEffectHeight(layerConfig, width);
-        let num = 0;
+        size = {
+          position: "absolute",
+          width,
+          height: obj4.calculateProfileEffectHeight(layerConfig, width),
+          opacity: num,
+        };
+        const APNGPlayer = APNGPlayer2.APNGPlayer;
+        num = 0;
+        obj4 = ProfileEffectUtils;
         if (animate) {
           num = 1;
         }
-        size.opacity = num;
         items1[1] = size;
-        obj2.style = items1;
-        obj2.ariaLabel = accessibilityLabel;
-        obj2.onLoad = onLoad;
-        return jsx(APNGPlayer.APNGPlayer, {
-          ref,
-          url: layerConfig.src,
-          autoplay: false,
-          style: null,
-          ariaLabel: null,
-          onLoad: null,
-        });
+        return (
+          <APNGPlayer
+            ref={ref}
+            url={layerConfig.src}
+            autoplay={false}
+            style={items1}
+            ariaLabel={accessibilityLabel}
+            onLoad={onLoad}
+          />
+        );
       },
 );
+let size = size_mod;
+let result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectLayer.android.tsx");
+
+export default memoResult;

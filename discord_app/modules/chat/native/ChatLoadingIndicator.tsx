@@ -1,24 +1,36 @@
 // discord_app/modules/chat/native/ChatLoadingIndicator.tsx
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../Constants.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import GatewayConnectionStore from "../../gateway/GatewayConnectionStore.tsx";
 import MessageStore from "../../../stores/MessageStore.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
 const ReanimatedRexportDefault = ReanimatedRexport;
+let _require, channelId;
 
-require = fn;
+let closure_14;
+let closure_15;
+let map1;
+let size;
 function openLoadingIndicatorDebugBody() {
+  let paths;
   const currentUser = UserStore.getCurrentUser();
   let isStaffResult;
   if (currentUser != null) {
@@ -34,54 +46,62 @@ function openLoadingIndicatorDebugBody() {
   if (isStaffResult) {
     let obj = {
       importer() {
-        return require("asyncRequireImpl")(paths[14], paths.paths).then((result) => {
-          closure_0 = result.default;
+        const promise = require("asyncRequire")(paths[14], paths.paths);
+        return promise.then((result) => {
+          let closure_0 = result.default;
           return (arg0) => {
-            const obj = {};
+            const obj = { title: "Chat Loading indicator", children: closure_2_13(closure_2_18, {}) };
             const merged = Object.assign(arg0);
-            obj.title = "Chat Loading indicator";
-            obj.children = closure_2_13(closure_2_18, {});
             return closure_2_13(closure_0, obj);
           };
         });
       },
       isDismissable: true,
     };
-    actions_AlertActionCreatorsDefault.openLazy(obj);
+    const obj2 = actions_AlertActionCreatorsDefault;
+    obj2.openLazy(obj);
   }
 }
-const View = fn(17).View;
-const AppStates = fn(1085).AppStates;
-const jsxProd = fn(21);
-({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4890);
-let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
-let size = {
+const View = react_native.View;
+const AppStates = Constants.AppStates;
+({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = Fragment);
+let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: size };
+size = {
   height: 8,
   width: 8,
   borderRadius: nativeDefault.radii.round,
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
-obj.pulse = size;
 let closure_16 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
-let closure_18 = noop.memo(
+const memo = react.memo;
+let ReactCompilerGating = ReactCompilerGating_mod;
+let closure_18 = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
-        const cResult = c.c(16);
+        let connected;
+        let items1;
+        let messagesCached;
+        let messagesReady;
+        let tmp11;
+        let tmp12;
+        let tmp14;
+        let tmp16;
+        let tmp18;
+        let tmp4;
+        let tmp5;
+        let obj = react2;
+        const cResult = obj.c(16);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [MessageStore, GatewayConnectionStore, SelectedChannelStore];
           const fn = function n() {
             channelId = channelId.getChannelId();
             const isConnectedResult = connected.isConnected();
             if (null == channelId) {
-              const obj2 = { messagesCached: false, messagesReady: false, connected: isConnectedResult };
-              return obj2;
+              return { messagesCached: false, messagesReady: false, connected: isConnectedResult };
             } else {
               messages = messages.getMessages(channelId);
-              const obj = { messagesCached: null, messagesReady: null, connected: null };
+              const obj = { messagesCached: null, messagesReady: null, connected: isConnectedResult };
               ({ cached: obj.messagesCached, ready: obj.messagesReady } = messages);
-              obj.connected = isConnectedResult;
               return obj;
             }
           };
@@ -92,188 +112,192 @@ let closure_18 = noop.memo(
         } else {
           [tmp4, tmp5] = cResult;
         }
-        const stateFromStoresObject = initialize.useStateFromStoresObject(tmp4, tmp5);
+        let tmpResult = get_initialized;
+        const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp4, tmp5);
         ({ messagesCached, messagesReady, connected } = stateFromStoresObject);
-        let tmp10 = messagesCached;
-        if (!messagesCached) {
-          tmp10 = !messagesReady;
-        }
-        if (!tmp10) {
-          tmp10 = !connected;
-        }
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const fn2 = function s(arg0, arg1, arg2) {
+            let items1;
+            let str3;
             const children = [arg0, ":", " ", ,];
             let str = "text-feedback-critical";
+            const Text = require("Text/Text").Text;
             if (arg1) {
               str = "text-feedback-positive";
             }
-            const obj = { variant: "text-md/normal", color: str, children: null };
             let str2 = "false";
-            let str3 = "false";
+            const obj = { variant: "text-md/normal", color: str, children: str3 };
+            str3 = "false";
             if (arg1) {
               str3 = "true";
             }
-            obj.children = str3;
-            children[3] = closure_1_13(require("Text/Text").Text, obj);
+            children[3] = closure_1_13(Text, obj);
             let tmpResult = null;
             if (null != arg2) {
               tmpResult = null;
               if (arg1 !== arg2) {
+                const Text2 = require("Text/Text").Text;
                 if (arg2) {
                   str2 = "true";
                 }
-                const obj2 = { variant: "text-md/normal", color: "text-muted", children: null };
-                const items1 = [" ", "(should be ", str2, " to hide loading indicator)"];
-                obj2.children = items1;
-                tmpResult = closure_1_14(require("Text/Text").Text, obj2);
+                const obj2 = { variant: "text-md/normal", color: "text-muted", children: items1 };
+                items1 = [" ", "(should be ", str2, " to hide loading indicator)"];
+                tmpResult = closure_1_14(Text2, obj2);
               }
             }
             children[4] = tmpResult;
             return closure_1_14(closure_1_15, { children });
           };
           cResult[2] = fn2;
-          let tmp11 = fn2;
+          tmp11 = fn2;
         } else {
           tmp11 = cResult[2];
         }
         if (cResult[3] !== messagesCached) {
+          let str = "messages.cached";
           const tmp11Result = tmp11("messages.cached", messagesCached, false);
           cResult[3] = messagesCached;
           cResult[4] = tmp11Result;
-          let tmp12 = tmp11Result;
+          tmp12 = tmp11Result;
         } else {
           tmp12 = cResult[4];
         }
         if (cResult[5] !== messagesReady) {
+          let str2 = "messages.ready";
           const tmp11Result4 = tmp11("messages.ready", messagesReady, true);
           cResult[5] = messagesReady;
           cResult[6] = tmp11Result4;
-          let tmp14 = tmp11Result4;
+          tmp14 = tmp11Result4;
         } else {
           tmp14 = cResult[6];
         }
         if (cResult[7] !== connected) {
+          let str3 = "connected";
           const tmp11Result5 = tmp11("connected", connected, true);
           cResult[7] = connected;
           cResult[8] = tmp11Result5;
-          let tmp16 = tmp11Result5;
+          tmp16 = tmp11Result5;
         } else {
           tmp16 = cResult[8];
         }
-        if (cResult[9] !== tmp10) {
-          const tmp11Result6 = tmp11("should show chat indicator", tmp10);
-          cResult[9] = tmp10;
+        if (cResult[9] !== (messagesCached || !messagesReady || !connected)) {
+          const tmp11Result6 = tmp11("should show chat indicator", messagesCached || !messagesReady || !connected);
+          cResult[9] = messagesCached || !messagesReady || !connected;
           cResult[10] = tmp11Result6;
-          let tmp18 = tmp11Result6;
+          tmp18 = tmp11Result6;
         } else {
           tmp18 = cResult[10];
         }
         if (cResult[11] === tmp12) {
           if (cResult[12] === tmp14) {
             if (cResult[13] === tmp16) {
+              let tmp20;
               if (cResult[14] === tmp18) {
-                let tmp20 = cResult[15];
+                tmp20 = cResult[15];
               }
               return tmp20;
             }
           }
         }
-        let obj2 = { variant: "text-md/normal", color: "text-default", children: null };
-        let items1 = [tmp12, "\n", tmp14, "\n", tmp16, "\n", tmp18];
-        obj2.children = items1;
-        const tmp21 = state(Text_Text.Text, obj2);
+        let obj2 = { variant: "text-md/normal", color: "text-default", children: items1 };
+        items1 = [tmp12, "\n", tmp14, "\n", tmp16, "\n", tmp18];
+        const tmp21 = authStore2(Text_Text.Text, obj2);
         cResult[11] = tmp12;
         cResult[12] = tmp14;
         cResult[13] = tmp16;
         cResult[14] = tmp18;
         cResult[15] = tmp21;
         tmp20 = tmp21;
-        let tmpResult = initialize;
       }
     : () => {
+        let connected;
+        let items2;
+        let items5;
+        let items7;
+        let messagesCached;
+        let messagesReady;
+        let str11;
+        let str4;
+        let str7;
+        let obj = get_initialized;
         const items = [MessageStore, GatewayConnectionStore, SelectedChannelStore];
-        const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
+        const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
           channelId = channelId.getChannelId();
           const isConnectedResult = connected.isConnected();
           if (null == channelId) {
-            const obj2 = { messagesCached: false, messagesReady: false, connected: isConnectedResult };
-            return obj2;
+            return { messagesCached: false, messagesReady: false, connected: isConnectedResult };
           } else {
             messages = messages.getMessages(channelId);
-            const obj = { messagesCached: null, messagesReady: null, connected: null };
+            const obj = { messagesCached: null, messagesReady: null, connected: isConnectedResult };
             ({ cached: obj.messagesCached, ready: obj.messagesReady } = messages);
-            obj.connected = isConnectedResult;
             return obj;
           }
         });
         ({ messagesCached, messagesReady, connected } = stateFromStoresObject);
         const items1 = ["messages.cached", ":", " ", ,];
+        const Text = Text_Text.Text;
         let str = "text-feedback-critical";
         let str2 = "text-feedback-critical";
+        const Text2 = Text_Text.Text;
         if (messagesCached) {
           str2 = "text-feedback-positive";
         }
-        let obj2 = { variant: "text-md/normal", color: str2, children: null };
+        const obj2 = { variant: "text-md/normal", color: str2, children: str4 };
         let str3 = "false";
-        let str4 = "false";
+        str4 = "false";
         if (messagesCached) {
           str4 = "true";
         }
-        obj2.children = str4;
-        items1[3] = __initData2(Text_Text.Text, obj2);
+        items1[3] = map1(Text2, obj2);
         let tmp4Result = null;
         if (messagesCached !== false) {
-          const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
-          const items2 = [" ", "(should be ", str3, " to hide loading indicator)"];
-          obj3.children = items2;
-          tmp4Result = state(Text_Text.Text, obj3);
+          const obj3 = { variant: "text-md/normal", color: "text-muted", children: items2 };
+          items2 = [" ", "(should be ", str3, " to hide loading indicator)"];
+          tmp4Result = authStore2(Text_Text.Text, obj3);
         }
         items1[4] = tmp4Result;
-        const items3 = [state(closure_1_15, { children: items1 }), "\n", , , , ,];
+        const items3 = [authStore2(closure_15, { children: items1 }), "\n", , , , ,];
         const items4 = ["messages.ready", ":", " ", ,];
         let str6 = str;
+        const Text3 = Text_Text.Text;
         if (messagesReady) {
           str6 = "text-feedback-positive";
         }
-        const obj4 = { variant: "text-md/normal", color: str6, children: null };
-        let str7 = str3;
+        const obj4 = { variant: "text-md/normal", color: str6, children: str7 };
+        str7 = str3;
         if (messagesReady) {
           str7 = "true";
         }
-        obj4.children = str7;
-        items4[3] = __initData2(Text_Text.Text, obj4);
+        items4[3] = map1(Text3, obj4);
         let tmp4Result3 = null;
         if (messagesReady !== true) {
-          const obj5 = { variant: "text-md/normal", color: "text-muted", children: null };
-          const items5 = [" ", "(should be ", "true", " to hide loading indicator)"];
-          obj5.children = items5;
-          tmp4Result3 = state(Text_Text.Text, obj5);
+          const obj5 = { variant: "text-md/normal", color: "text-muted", children: items5 };
+          items5 = [" ", "(should be ", "true", " to hide loading indicator)"];
+          tmp4Result3 = authStore2(Text_Text.Text, obj5);
         }
         items4[4] = tmp4Result3;
-        items3[2] = state(closure_1_15, { children: items4 });
+        items3[2] = authStore2(closure_15, { children: items4 });
         items3[3] = "\n";
         const items6 = ["connected", ":", " ", ,];
         let str10 = str;
+        const Text4 = Text_Text.Text;
         if (connected) {
           str10 = "text-feedback-positive";
         }
-        const obj6 = { variant: "text-md/normal", color: str10, children: null };
-        let str11 = str3;
+        const obj6 = { variant: "text-md/normal", color: str10, children: str11 };
+        str11 = str3;
         if (connected) {
           str11 = "true";
         }
-        obj6.children = str11;
-        items6[3] = __initData2(Text_Text.Text, obj6);
+        items6[3] = map1(Text4, obj6);
         let tmp4Result4 = null;
         if (connected !== true) {
-          const obj7 = { variant: "text-md/normal", color: "text-muted", children: null };
-          const items7 = [" ", "(should be ", "true", " to hide loading indicator)"];
-          obj7.children = items7;
-          tmp4Result4 = state(Text_Text.Text, obj7);
+          const obj7 = { variant: "text-md/normal", color: "text-muted", children: items7 };
+          items7 = [" ", "(should be ", "true", " to hide loading indicator)"];
+          tmp4Result4 = authStore2(Text_Text.Text, obj7);
         }
         items6[4] = tmp4Result4;
-        items3[4] = state(closure_1_15, { children: items6 });
+        items3[4] = authStore2(closure_15, { children: items6 });
         items3[5] = "\n";
         if (!messagesCached) {
           messagesCached = !messagesReady;
@@ -282,38 +306,43 @@ let closure_18 = noop.memo(
           messagesCached = !connected;
         }
         const items8 = ["should show chat indicator", ":", " ", ,];
+        const Text5 = Text_Text.Text;
         if (messagesCached) {
           str = "text-feedback-positive";
         }
-        const obj8 = { variant: "text-md/normal", color: str, children: null };
+        const obj8 = { variant: "text-md/normal", color: str, children: str3 };
         if (messagesCached) {
           str3 = "true";
         }
-        obj8.children = str3;
-        items8[3] = __initData2(Text_Text.Text, obj8);
-        const obj9 = { variant: "text-md/normal", color: "text-default", children: null };
+        items8[3] = map1(Text5, obj8);
+        const obj9 = { variant: "text-md/normal", color: "text-default", children: items3 };
         items8[4] = null;
-        items3[6] = state(closure_1_15, { children: items8 });
-        obj9.children = items3;
-        return state(Text_Text.Text, obj9);
+        items3[6] = authStore2(closure_15, { children: items8 });
+        return authStore2(Text, obj9);
       },
 );
-fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const __initData = {
   code: "function ChatLoadingIndicatorTsx1(){const{useReducedMotion,withRepeat,withSequence,withTiming,Easing}=this.__closure;if(useReducedMotion){return{transform:[]};}return{transform:[{scale:withRepeat(withSequence(withTiming(1,{duration:0}),withTiming(0.5,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)}),withTiming(1,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)})),-1)}]};}",
 };
 const __initData2 = {
   code: "function ChatLoadingIndicatorTsx2(){const{useReducedMotion,withRepeat,withSequence,withTiming,Easing}=this.__closure;if(useReducedMotion){return{transform:[]};}return{transform:[{scale:withRepeat(withSequence(withTiming(1,{duration:0}),withTiming(0.5,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)}),withTiming(1,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)})),-1)}]};}",
 };
-ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let stateFromStores;
+      let tmp13;
+      let tmp5;
       _require = arg0;
-      const cResult = require("c").c(8);
+      const tmp2 = stateFromStores;
+      const obj = require("react");
+      const cResult = obj.c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { location: "ChatLoadingIndicatorGuard" };
         cResult[0] = obj2;
-        let first = obj2;
+        first = obj2;
       } else {
         first = cResult[0];
       }
@@ -322,17 +351,21 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MessageStore, GatewayConnectionStore, AppStateStore];
         cResult[1] = items;
-        let tmp5 = items;
+        tmp5 = items;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === arg0) {
+        let tmp9;
+        let tmp15;
+        let tmp14;
         if (cResult[3] === enabled) {
-          let tmp9 = cResult[4];
+          tmp9 = cResult[4];
         }
-        stateFromStores = tmp(tmp2[18]).useStateFromStores(tmp5, tmp9);
-        const tmpResult = tmp(tmp2[18]);
-        [tmp13, _slicedToArray] = noop.useState(false);
+        const tmpResult = require("get initialized");
+        stateFromStores = tmpResult.useStateFromStores(tmp5, tmp9);
+        const tmp12 = _slicedToArray(react.useState(false), 2);
+        [tmp13, _slicedToArray] = tmp12;
         if (cResult[5] !== stateFromStores) {
           const fn = function v() {
             if (stateFromStores) {
@@ -351,45 +384,35 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[5] = stateFromStores;
           cResult[6] = fn;
           cResult[7] = items1;
-          let tmp15 = items1;
-          let tmp14 = fn;
+          tmp15 = items1;
+          tmp14 = fn;
         } else {
           tmp14 = cResult[6];
           tmp15 = cResult[7];
         }
-        const effect = noop.useEffect(tmp14, tmp15);
+        const effect = react.useEffect(tmp14, tmp15);
         return tmp13;
       }
       class S {
         constructor() {
           if (enabled) {
-            tmp2 = null;
             if (null == closure_0) {
-              flag3 = false;
+              return false;
+            } else if (AppStateStore.getState() !== AppStates.ACTIVE) {
               return false;
             } else {
-              tmp3 = closure_11;
-              tmp4 = AppStates;
-              if (closure_11.getState() !== AppStates.ACTIVE) {
-                flag2 = false;
-                return false;
-              } else {
-                tmp5 = closure_8;
-                messages = closure_8.getMessages(tmp);
-                tmp7 = closure_7;
-                cached = messages.cached;
-                isConnectedResult = closure_7.isConnected();
-                if (!cached) {
-                  cached = !messages.ready;
-                }
-                if (!cached) {
-                  cached = !isConnectedResult;
-                }
-                return cached;
+              const messages = MessageStore.getMessages(tmp2);
+              let cached = messages.cached;
+              const isConnectedResult = GatewayConnectionStore.isConnected();
+              if (!cached) {
+                cached = !messages.ready;
               }
+              if (!cached) {
+                cached = !isConnectedResult;
+              }
+              return cached;
             }
           } else {
-            flag = false;
             return false;
           }
         }
@@ -398,22 +421,27 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = enabled;
       cResult[4] = S;
       tmp9 = S;
-      const obj = require("c");
     }
   : (arg0) => {
+      let closure_0;
+      let closure_3;
+      let first;
+      let stateFromStores;
       _require = arg0;
       const ChatLoadingIndicatorExperiment = require("ChatLoadingIndicatorExperiment").ChatLoadingIndicatorExperiment;
       const enabled = ChatLoadingIndicatorExperiment.useConfig({ location: "ChatLoadingIndicatorGuard" }).enabled;
       const items = [MessageStore, GatewayConnectionStore, AppStateStore];
-      stateFromStores = require("initialize").useStateFromStores(items, () => {
+      const obj = require("get initialized");
+      stateFromStores = obj.useStateFromStores(items, () => {
         if (enabled) {
           if (null == closure_0) {
             return false;
           } else if (AppStateStore.getState() !== AppStates.ACTIVE) {
             return false;
           } else {
-            const messages = MessageStore.getMessages(tmp);
+            const messages = MessageStore.getMessages(tmp2);
             let cached = messages.cached;
+            const isConnectedResult = GatewayConnectionStore.isConnected();
             if (!cached) {
               cached = !messages.ready;
             }
@@ -426,10 +454,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           return false;
         }
       });
-      const tmp2 = _slicedToArray(noop.useState(false), 2);
-      _slicedToArray = tmp2[1];
+      [first, _slicedToArray] = react.useState(false);
       const items1 = [stateFromStores];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
         if (stateFromStores) {
           const _setTimeout = setTimeout;
           const timeout = setTimeout(() => {
@@ -442,18 +469,23 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           closure_3(false);
         }
       }, items1);
-      return tmp2[0];
+      return first;
     };
-size = fn(2);
-const result = size.fileFinishedImporting("modules/chat/native/ChatLoadingIndicator.tsx");
-
-export const useShouldChannelShowLoadingIndicator = tmp3;
-export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let PressableOpacity = stateFromStores;
-      let tmp = dependencyMap;
-      const cResult = stateFromStores(576).c(13);
-      const tmp3 = closure_16();
+      let intl;
+      let items2;
+      let items3;
+      let stateFromStores;
+      let tmp10;
+      let tmp5;
+      let tmp6;
+      let tmp9;
+      let useReducedMotion;
+      let obj = stateFromStores(576);
+      const cResult = obj.c(13);
+      const tmp4 = closure_16();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [AccessibilityStore];
         const fn = function n() {
@@ -461,13 +493,13 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
         };
         cResult[0] = items;
         cResult[1] = fn;
-        tmp4 = items;
-        tmp5 = fn;
+        tmp6 = fn;
+        tmp5 = items;
       } else {
-        [tmp4, tmp5] = cResult;
+        [tmp5, tmp6] = cResult;
       }
-      let obj = stateFromStores(576);
-      stateFromStores = PressableOpacity(504).useStateFromStores(tmp4, tmp5);
+      const tmpResult = stateFromStores(504);
+      stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [UserStore];
         const fn2 = function f() {
@@ -487,136 +519,139 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
         };
         cResult[2] = items1;
         cResult[3] = fn2;
-        let tmp9 = fn2;
-        let tmp8 = items1;
+        tmp10 = fn2;
+        tmp9 = items1;
       } else {
-        tmp8 = cResult[2];
-        tmp9 = cResult[3];
+        tmp9 = cResult[2];
+        tmp10 = cResult[3];
       }
-      const PressableOpacityResult = PressableOpacity(504);
-      const stateFromStores1 = PressableOpacity(504).useStateFromStores(tmp8, tmp9);
-      const PressableOpacityResult1 = PressableOpacity(504);
+      const tmpResult3 = stateFromStores(504);
+      const stateFromStores1 = tmpResult3.useStateFromStores(tmp9, tmp10);
+      const tmpResult4 = stateFromStores(4612);
       class S {
         constructor() {
-          obj = { transform: null };
-          if (closure_0) {
+          let Easing;
+          let Easing2;
+          let obj5;
+          let tmp11;
+          let withRepeat;
+          let withSequence;
+          let withTiming2;
+          let withTimingResult;
+          let withTimingResult1;
+          const obj = { transform: null };
+          if (stateFromStores) {
             obj.transform = [];
-            tmp7 = obj;
+            tmp11 = obj;
           } else {
-            obj1 = { scale: null };
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj3 = closure_0(closure_2[21]);
-            obj4 = closure_0(closure_2[21]);
-            obj5 = closure_0(closure_2[22]);
-            num = 1;
-            withTimingResult = obj5.withTiming(1, { duration: 0 });
-            obj6 = closure_0(closure_2[22]);
-            obj10 = { duration: 1500, easing: null };
-            Easing = closure_0(closure_2[21]).Easing;
-            num2 = 0.2;
-            num3 = 0.4;
-            tmp4 = Easing;
-            num4 = 0.4;
-            num5 = 0;
-            num6 = 0.2;
-            num7 = 1;
-            obj10.easing = Easing.bezier(0.4, 0, 0.2, 1);
-            num8 = 0.5;
-            withTimingResult1 = obj6.withTiming(0.5, obj10);
-            obj8 = closure_0(closure_2[22]);
-            obj11 = { duration: 1500, easing: null };
-            Easing2 = closure_0(closure_2[21]).Easing;
-            tmp6 = Easing2;
-            num9 = 0.4;
-            num10 = 0;
-            obj11.easing = Easing2.bezier(0.4, 0, 0.2, 1);
-            num11 = -1;
-            obj1.scale = obj3.withRepeat(
-              obj4.withSequence(withTimingResult, withTimingResult1, obj8.withTiming(1, obj11)),
-              -1,
-            );
-            items = [];
-            items[0] = obj1;
+            const obj2 = {
+              scale: withRepeat(withSequence(withTimingResult, withTimingResult1, withTiming2(1, obj5)), -1),
+            };
+            withRepeat = ReanimatedRexport.withRepeat;
+            ReanimatedRexport;
+            withSequence = ReanimatedRexport.withSequence;
+            ReanimatedRexport;
+            const obj3 = timing;
+            withTimingResult = obj3.withTiming(1, { duration: 0 });
+            const obj4 = { duration: 1500, easing: Easing.bezier(0.4, 0, 0.2, 1) };
+            const withTiming = timing.withTiming;
+            timing;
+            Easing = ReanimatedRexport.Easing;
+            withTimingResult1 = withTiming(0.5, obj4);
+            obj5 = { duration: 1500, easing: Easing2.bezier(0.4, 0, 0.2, 1) };
+            withTiming2 = timing.withTiming;
+            timing;
+            Easing2 = ReanimatedRexport.Easing;
+            const items = [obj2];
             obj.transform = items;
-            tmp7 = obj;
+            tmp11 = obj;
           }
-          return tmp7;
+          return tmp11;
         }
       }
-      const PressableOpacityResult2 = PressableOpacity(4612);
-      S.__closure = {
+      let obj2 = {
         useReducedMotion: stateFromStores,
-        withRepeat: PressableOpacity(4612).withRepeat,
-        withSequence: PressableOpacity(4612).withSequence,
-        withTiming: PressableOpacity(4891).withTiming,
-        Easing: PressableOpacity(4612).Easing,
+        withRepeat: tmp(4612).withRepeat,
+        withSequence: tmp(4612).withSequence,
+        withTiming: tmp(4891).withTiming,
+        Easing: tmp(4612).Easing,
       };
+      S.__closure = obj2;
       S.__workletHash = 17454673879926;
       S.__initData = __initData;
-      const animatedStyle = PressableOpacityResult2.useAnimatedStyle(S);
+      const animatedStyle = tmpResult4.useAnimatedStyle(S);
       if (cResult[4] === animatedStyle) {
-        if (cResult[5] === tmp3.pulse) {
-          let tmp13 = cResult[6];
+        let tmp14;
+        let tmp16;
+        if (cResult[5] === tmp4.pulse) {
+          tmp14 = cResult[6];
         }
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          let obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
-          const intl = PressableOpacity(1126).intl;
-          obj3.children = intl.string(PressableOpacity(1126).t.JwIJMV);
-          const tmp17 = closure_13(PressableOpacity(4886).Text, obj3);
-          cResult[7] = tmp17;
-          let tmp15 = tmp17;
+          let obj3 = {
+            variant: "text-xs/medium",
+            color: "text-muted",
+            children: intl.string(stateFromStores(1126).t.JwIJMV),
+          };
+          const Text = tmp(4886).Text;
+          intl = tmp(1126).intl;
+          const tmp18 = closure_13(Text, obj3);
+          cResult[7] = tmp18;
+          tmp16 = tmp18;
         } else {
-          tmp15 = cResult[7];
+          tmp16 = cResult[7];
         }
-        if (cResult[8] === tmp3.container) {
-          if (cResult[9] === tmp13) {
-            let tmp18 = cResult[10];
+        if (cResult[8] === tmp4.container) {
+          let tmp19;
+          if (cResult[9] === tmp14) {
+            tmp19 = cResult[10];
           }
-          if (!stateFromStores1) {
-            return tmp18;
-          } else if (cResult[11] !== tmp18) {
-            PressableOpacity = PressableOpacity(5909).PressableOpacity;
-            let obj4 = { onPress: openLoadingIndicatorDebugBody, children: tmp18 };
-            tmp = closure_13(PressableOpacity, obj4);
-            cResult[11] = tmp18;
-            cResult[12] = tmp;
+          let tmp23 = tmp19;
+          if (stateFromStores1) {
+            let tmp24;
+            if (cResult[11] !== tmp19) {
+              let obj4 = { onPress: openLoadingIndicatorDebugBody, children: tmp19 };
+              const tmp27 = closure_13(stateFromStores(5909).PressableOpacity, obj4);
+              cResult[11] = tmp19;
+              cResult[12] = tmp27;
+              tmp24 = tmp27;
+            } else {
+              tmp24 = cResult[12];
+            }
+            tmp23 = tmp24;
           }
+          return tmp23;
         }
-        let obj5 = { style: tmp3.container, children: null };
-        const items2 = [tmp13, tmp15];
-        obj5.children = items2;
-        const tmp21 = closure_14(View, obj5);
-        cResult[8] = tmp3.container;
-        cResult[9] = tmp13;
-        cResult[10] = tmp21;
-        tmp18 = tmp21;
+        let obj5 = { style: tmp4.container, children: items2 };
+        items2 = [tmp14, tmp16];
+        const tmp22 = closure_14(View, obj5);
+        cResult[8] = tmp4.container;
+        cResult[9] = tmp14;
+        cResult[10] = tmp22;
+        tmp19 = tmp22;
       }
-      let obj6 = { style: null };
-      const items3 = [tmp3.pulse, animatedStyle];
-      obj6.style = items3;
-      const tmp14 = closure_13(ReanimatedRexportDefault.View, obj6);
+      const obj6 = { style: items3 };
+      items3 = [tmp4.pulse, animatedStyle];
+      const tmp15 = closure_13(ReanimatedRexportDefault.View, obj6);
       cResult[4] = animatedStyle;
-      cResult[5] = tmp3.pulse;
-      cResult[6] = tmp14;
-      tmp13 = tmp14;
-      let obj2 = {
-        useReducedMotion: stateFromStores,
-        withRepeat: PressableOpacity(4612).withRepeat,
-        withSequence: PressableOpacity(4612).withSequence,
-        withTiming: PressableOpacity(4891).withTiming,
-        Easing: PressableOpacity(4612).Easing,
-      };
+      cResult[5] = tmp4.pulse;
+      cResult[6] = tmp15;
+      tmp14 = tmp15;
     }
   : () => {
+      let intl;
+      let items2;
+      let items3;
+      let stateFromStores;
+      let useReducedMotion;
       const tmp = closure_16();
-      let items = [AccessibilityStore];
-      stateFromStores = stateFromStores(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
       let obj = stateFromStores(504);
+      let items = [AccessibilityStore];
       const tmp2 = stateFromStores;
+      stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+      let obj2 = stateFromStores(504);
       const items1 = [UserStore];
-      const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => {
+      const stateFromStores1 = obj2.useStateFromStores(items1, () => {
         currentUser = currentUser.getCurrentUser();
         let isStaffResult;
         if (currentUser != null) {
@@ -631,60 +666,79 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
         }
         return isStaffResult;
       });
-      let obj2 = stateFromStores(504);
+      let obj3 = stateFromStores(4612);
       const fn = function t() {
+        let Easing;
+        let Easing2;
+        let obj5;
+        let tmp11;
+        let withRepeat;
+        let withSequence;
+        let withTiming2;
+        let withTimingResult;
+        let withTimingResult1;
         const obj = { transform: null };
         if (stateFromStores) {
           obj.transform = [];
-          let tmp7 = obj;
+          tmp11 = obj;
         } else {
-          const obj2 = { scale: null };
-          const obj3 = ReanimatedRexport;
-          const obj4 = ReanimatedRexport;
-          const withTimingResult = timing.withTiming(1, { duration: 0 });
-          const obj7 = { duration: 1500, easing: null };
-          const Easing = ReanimatedRexport.Easing;
-          obj7.easing = Easing.bezier(0.4, 0, 0.2, 1);
-          const withTimingResult1 = timing.withTiming(0.5, obj7);
-          const obj9 = { duration: 1500, easing: null };
-          const Easing2 = ReanimatedRexport.Easing;
-          obj9.easing = Easing2.bezier(0.4, 0, 0.2, 1);
-          obj2.scale = obj3.withRepeat(
-            obj4.withSequence(withTimingResult, withTimingResult1, timing.withTiming(1, obj9)),
-            -1,
-          );
+          const obj2 = {
+            scale: withRepeat(withSequence(withTimingResult, withTimingResult1, withTiming2(1, obj5)), -1),
+          };
+          withRepeat = ReanimatedRexport.withRepeat;
+          ReanimatedRexport;
+          withSequence = ReanimatedRexport.withSequence;
+          ReanimatedRexport;
+          const obj3 = timing;
+          withTimingResult = obj3.withTiming(1, { duration: 0 });
+          const obj4 = { duration: 1500, easing: Easing.bezier(0.4, 0, 0.2, 1) };
+          const withTiming = timing.withTiming;
+          timing;
+          Easing = ReanimatedRexport.Easing;
+          withTimingResult1 = withTiming(0.5, obj4);
+          obj5 = { duration: 1500, easing: Easing2.bezier(0.4, 0, 0.2, 1) };
+          withTiming2 = timing.withTiming;
+          timing;
+          Easing2 = ReanimatedRexport.Easing;
           const items = [obj2];
           obj.transform = items;
-          tmp7 = obj;
+          tmp11 = obj;
         }
-        return tmp7;
+        return tmp11;
       };
-      let obj3 = stateFromStores(4612);
-      fn.__closure = {
+      let obj4 = {
         useReducedMotion: stateFromStores,
         withRepeat: stateFromStores(4612).withRepeat,
         withSequence: stateFromStores(4612).withSequence,
         withTiming: stateFromStores(4891).withTiming,
         Easing: stateFromStores(4612).Easing,
       };
+      fn.__closure = obj4;
       fn.__workletHash = 9356373946997;
       fn.__initData = __initData2;
-      let obj5 = { style: tmp.container, children: null };
+      let obj5 = { style: tmp.container, children: items3 };
       const animatedStyle = obj3.useAnimatedStyle(fn);
-      let obj6 = { style: null };
-      const items2 = [tmp.pulse, animatedStyle];
-      obj6.style = items2;
-      const items3 = [closure_13(ReanimatedRexportDefault.View, obj6)];
-      let obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
-      const intl = stateFromStores(1126).intl;
-      obj7.children = intl.string(stateFromStores(1126).t.JwIJMV);
-      items3[1] = closure_13(stateFromStores(4886).Text, obj7);
-      obj5.children = items3;
+      const obj6 = { style: items2 };
+      items2 = [tmp.pulse, animatedStyle];
+      items3 = [closure_13(ReanimatedRexportDefault.View, obj6)];
+      const obj7 = {
+        variant: "text-xs/medium",
+        color: "text-muted",
+        children: intl.string(stateFromStores(1126).t.JwIJMV),
+      };
+      const Text = stateFromStores(4886).Text;
+      intl = stateFromStores(1126).intl;
+      items3[1] = closure_13(Text, obj7);
       const tmp8 = closure_14(View, obj5);
       let tmp7Result = tmp8;
       if (stateFromStores1) {
-        let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
+        const obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
         tmp7Result = closure_13(tmp2(5909).PressableOpacity, obj8);
       }
       return tmp7Result;
     };
+size = size_mod;
+const result = size.fileFinishedImporting("modules/chat/native/ChatLoadingIndicator.tsx");
+
+export const useShouldChannelShowLoadingIndicator = tmp4;
+export const ChannelHeaderLoadingIndicator = tmp5;

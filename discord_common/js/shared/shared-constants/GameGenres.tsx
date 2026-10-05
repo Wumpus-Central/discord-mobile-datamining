@@ -3,37 +3,32 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = {
   ACTION_GENRES: new Set([1, 2, 3, 4, 5, 6, 7]),
-  ADVENTURE_GENRES: null,
-  DRIVING_RACING_GENRES: null,
-  MASSIVELY_MULTIPLAYER_GENRES: null,
-  ROLE_PLAYING_GENRES: null,
-  SHOOTER_GENRES: null,
-  SIMULATION_GENRES: null,
-  SPORTS_GENRES: null,
-  STRATEGY_GENRES: null,
-  MISCELLANEOUS_GENRES: null,
-  ALL: null,
+  ADVENTURE_GENRES: new Set([8, 9, 10, 11, 12, 13, 14, 15]),
+  DRIVING_RACING_GENRES: new Set([16, 17]),
+  MASSIVELY_MULTIPLAYER_GENRES: new Set([18, 19, 55]),
+  ROLE_PLAYING_GENRES: new Set([20, 21, 22]),
+  SHOOTER_GENRES: new Set([23, 24, 25, 26, 27]),
+  SIMULATION_GENRES: new Set([28, 29, 30, 31, 32]),
+  SPORTS_GENRES: new Set([33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]),
+  STRATEGY_GENRES: new Set([48, 49, 50, 51, 52, 53, 54]),
+  MISCELLANEOUS_GENRES: new Set([56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]),
+  ALL: new Set([
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
+    32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
+    61, 62, 63, 64, 65, 66, 67, 68, 69,
+  ]),
 };
-const set = new Set([1, 2, 3, 4, 5, 6, 7]);
-obj.ADVENTURE_GENRES = new Set([8, 9, 10, 11, 12, 13, 14, 15]);
-const set1 = new Set([8, 9, 10, 11, 12, 13, 14, 15]);
-obj.DRIVING_RACING_GENRES = new Set([16, 17]);
-const set2 = new Set([16, 17]);
-obj.MASSIVELY_MULTIPLAYER_GENRES = new Set([18, 19, 55]);
-const set3 = new Set([18, 19, 55]);
-obj.ROLE_PLAYING_GENRES = new Set([20, 21, 22]);
-const set4 = new Set([20, 21, 22]);
-obj.SHOOTER_GENRES = new Set([23, 24, 25, 26, 27]);
-const set5 = new Set([23, 24, 25, 26, 27]);
-obj.SIMULATION_GENRES = new Set([28, 29, 30, 31, 32]);
-const set6 = new Set([28, 29, 30, 31, 32]);
-obj.SPORTS_GENRES = new Set([33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]);
-const set7 = new Set([33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]);
-obj.STRATEGY_GENRES = new Set([48, 49, 50, 51, 52, 53, 54]);
-const set8 = new Set([48, 49, 50, 51, 52, 53, 54]);
-obj.MISCELLANEOUS_GENRES = new Set([56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]);
-const set9 = new Set([56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]);
-obj.ALL = new Set([
+new Set([1, 2, 3, 4, 5, 6, 7]);
+new Set([8, 9, 10, 11, 12, 13, 14, 15]);
+new Set([16, 17]);
+new Set([18, 19, 55]);
+new Set([20, 21, 22]);
+new Set([23, 24, 25, 26, 27]);
+new Set([28, 29, 30, 31, 32]);
+new Set([33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]);
+new Set([48, 49, 50, 51, 52, 53, 54]);
+new Set([56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]);
+new Set([
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32,
   33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61,
   62, 63, 64, 65, 66, 67, 68, 69,

@@ -1,75 +1,88 @@
 // discord_app/modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import DurationsDefault from "../../../utils/Durations.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl4 from "../../../intl/index.native.tsx";
 import _modDef3593 from "../intl/SlayerStorefront.messages.js";
 import _modDef4461 from "../../../../_runtime/metro/04461__.js";
 import useIntervalDefault from "../../../hooks/useInterval.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, importDefault;
 
-require = fn;
 function getLimitedOfferTimeLeft(arg0) {
+  let floor;
+  let floor2;
+  let result;
+  let result1;
   if (null == arg0) {
     return null;
   } else {
-    const diffResult = _modDef4461(arg0).diff(_modDef4461(), "seconds");
+    const obj2 = _modDef4461(arg0);
+    const diffResult = obj2.diff(_modDef4461(), "seconds");
     let tmp4 = null;
     if (diffResult > 0) {
-      const time = { days: null, hours: null, minutes: null, seconds: null };
+      const time = {
+        days: Math.floor(diffResult / DurationsDefault.Seconds.DAY),
+        hours: floor(result / DurationsDefault.Seconds.HOUR),
+        minutes: floor2(result1 / DurationsDefault.Seconds.MINUTE),
+        seconds: diffResult % DurationsDefault.Seconds.MINUTE,
+      };
       const _Math = Math;
-      time.days = Math.floor(diffResult / DurationsDefault.Seconds.DAY);
       const _Math2 = Math;
-      const result = diffResult % DurationsDefault.Seconds.DAY;
-      time.hours = Math.floor(result / DurationsDefault.Seconds.HOUR);
+      floor = Math.floor;
+      result = diffResult % DurationsDefault.Seconds.DAY;
       const _Math3 = Math;
-      const result1 = diffResult % DurationsDefault.Seconds.HOUR;
-      time.minutes = Math.floor(result1 / DurationsDefault.Seconds.MINUTE);
-      time.seconds = diffResult % DurationsDefault.Seconds.MINUTE;
+      floor2 = Math.floor;
+      result1 = diffResult % DurationsDefault.Seconds.HOUR;
       tmp4 = time;
     }
     return tmp4;
   }
 }
 function formatLimitedOfferTimeLeft(arg0) {
+  let days;
+  let hours;
   const tmp = getLimitedOfferTimeLeft(arg0);
   if (null == tmp) {
     return null;
   } else {
+    let formatToPlainStringResult;
     ({ days, hours } = tmp);
     if (days > 0) {
-      const intl3 = util.intl;
+      const intl3 = intl4.intl;
       const obj2 = { days };
-      let formatToPlainStringResult = intl3.formatToPlainString(util.t.BXpdIg, obj2);
+      formatToPlainStringResult = intl3.formatToPlainString(intl4.t.BXpdIg, obj2);
     } else if (hours > 0) {
-      const intl2 = util.intl;
+      const intl2 = intl4.intl;
       const obj3 = { hours };
       formatToPlainStringResult = intl2.formatToPlainString(_modDef3593.PPaJSw, obj3);
     } else {
-      const intl = util.intl;
-      const obj = { minutes: null };
+      const intl = intl4.intl;
+      const formatToPlainString = intl.formatToPlainString;
       const _Math = Math;
-      obj.minutes = Math.max(tmp12, 1);
-      formatToPlainStringResult = intl.formatToPlainString(_modDef3593["7Z+aIf"], obj);
+      const obj = { minutes: Math.max(tmp13, 1) };
+      const prop = _modDef3593["7Z+aIf"];
+      formatToPlainStringResult = formatToPlainString(prop, obj);
     }
     return formatToPlainStringResult;
   }
 }
-fn(558);
-const ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(3);
+      let tmp3;
+      let tmp7;
+      const obj = react2;
+      const cResult = obj.c(3);
       if (cResult[0] !== arg0) {
-        let tmp5 = null != arg0;
-        if (tmp5) {
-          tmp5 = null == getLimitedOfferTimeLeft(arg0);
-        }
+        const tmp5 = null != arg0 && null == getLimitedOfferTimeLeft(arg0);
         cResult[0] = arg0;
         cResult[1] = tmp5;
-        let tmp3 = tmp5;
+        tmp3 = tmp5;
       } else {
         tmp3 = cResult[1];
       }
@@ -78,68 +91,63 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           return arg0 + 1;
         };
         cResult[2] = fn;
-        let tmp7 = fn;
+        tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
       let SECOND = null;
+      const tmp8 = _slicedToArray(react.useReducer(tmp7, 0), 2)[1];
+      const tmp10 = useIntervalDefault;
       if (null != arg0) {
         SECOND = null;
         if (!tmp3) {
           SECOND = DurationsDefault.Millis.SECOND;
         }
       }
-      useIntervalDefault(_slicedToArray(noop.useReducer(tmp7, 0), 2)[1], SECOND);
+      tmp10(tmp8, SECOND);
       return tmp3;
     }
   : (arg0) => {
-      let tmp = null != arg0;
-      if (tmp) {
-        tmp = null == getLimitedOfferTimeLeft(arg0);
-      }
+      const tmp = null != arg0 && null == getLimitedOfferTimeLeft(arg0);
       let SECOND = null;
+      const tmp3 = _slicedToArray(
+        react.useReducer((arg0) => arg0 + 1, 0),
+        2,
+      )[1];
+      const tmp6 = useIntervalDefault;
       if (null != arg0) {
         SECOND = null;
         if (!tmp) {
           SECOND = DurationsDefault.Millis.SECOND;
         }
       }
-      useIntervalDefault(
-        _slicedToArray(
-          noop.useReducer((arg0) => arg0 + 1, 0),
-          2,
-        )[1],
-        SECOND,
-      );
+      tmp6(tmp3, SECOND);
       return tmp;
     };
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx");
-
-export { getLimitedOfferTimeLeft };
-export const useIsLimitedOfferExpired = tmp2;
-export { formatLimitedOfferTimeLeft };
-export const useTickingFormattedLimitedOfferTimeLeft = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
+      let closure_0;
+      let tmp4;
       _require = arg0;
-      const cResult = require("c").c(4);
+      const obj = require("react");
+      const cResult = obj.c(4);
       if (cResult[0] !== arg0) {
         const fn = function o() {
           return formatLimitedOfferTimeLeft(closure_0);
         };
         cResult[0] = arg0;
         cResult[1] = fn;
-        let tmp4 = fn;
+        tmp4 = fn;
       } else {
         tmp4 = cResult[1];
       }
-      const obj = require("c");
-      [r10022, importDefault] = noop.useState(tmp4);
+      [r10022, importDefault] = react.useState(tmp4);
+      _slicedToArray(react.useState(tmp4), 2);
       if (cResult[2] !== arg0) {
         class L {
           constructor() {
-            tmp = closure_1(formatLimitedOfferTimeLeft(closure_0));
-            return;
+            importDefault(formatLimitedOfferTimeLeft(closure_0));
           }
         }
         cResult[2] = arg0;
@@ -147,52 +155,55 @@ export const useTickingFormattedLimitedOfferTimeLeft = ReactCompilerGating.isRea
       } else {
         class L {
           constructor() {
-            tmp = closure_1(formatLimitedOfferTimeLeft(closure_0));
-            return;
+            importDefault(formatLimitedOfferTimeLeft(closure_0));
           }
         }
       }
-      const tmp5 = _slicedToArray(noop.useState(tmp4), 2);
+      const tmp7 = useIntervalDefault;
       if (undefined === arg1 || arg1) {
         class L {
           constructor() {
-            tmp = closure_1(formatLimitedOfferTimeLeft(closure_0));
-            return;
+            importDefault(formatLimitedOfferTimeLeft(closure_0));
           }
         }
       }
-      useIntervalDefault(L, null);
+      tmp7(L, null);
       if (undefined === arg1 || arg1) {
         class L {
           constructor() {
-            tmp = closure_1(formatLimitedOfferTimeLeft(closure_0));
-            return;
+            importDefault(formatLimitedOfferTimeLeft(closure_0));
           }
         }
       }
       return null;
     }
   : (arg0) => {
-      closure_0 = arg0;
+      let closure_1;
+      let first;
+      let closure_0 = arg0;
       let flag = arg1;
       if (arg1 === undefined) {
         flag = true;
       }
-      const tmp = _slicedToArray(
-        noop.useState(() => formatLimitedOfferTimeLeft(closure_0)),
-        2,
-      );
-      importDefault = tmp[1];
+      importDefault = undefined;
+      [first, importDefault] = react.useState(() => formatLimitedOfferTimeLeft(closure_0));
       let num = null;
+      const tmp3 = useIntervalDefault;
       if (flag) {
         num = 1000;
       }
-      useIntervalDefault(() => {
+      tmp3(() => {
         closure_1(formatLimitedOfferTimeLeft(closure_0));
       }, num);
-      let first = null;
+      let tmp5 = null;
       if (flag) {
-        first = tmp[0];
+        tmp5 = first;
       }
-      return first;
+      return tmp5;
     };
+let result = size.fileFinishedImporting("modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx");
+
+export { getLimitedOfferTimeLeft };
+export const useIsLimitedOfferExpired = tmp2;
+export { formatLimitedOfferTimeLeft };
+export const useTickingFormattedLimitedOfferTimeLeft = tmp3;

@@ -1,42 +1,48 @@
 // discord_app/modules/gif_picker/native/GIFPickerNoResults.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import Constants from "../../../Constants.tsx";
+import intl3 from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import BottomSheetModal from "../../../../_runtime/06112_BottomSheetModal.js";
 import SearchEmpty from "../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
 import useModalDismissGuardRefreshControl from "../../keyboard/native/useModalDismissGuardRefreshControl.tsx";
 import useExpressionPickerInsetsDefault from "../../expression_picker/native/useExpressionPickerInsets.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ScrollView = fn(17).ScrollView;
-fn(1085).GIFPickerResultTypes;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj = {
-  emptyStateContainer: { padding: 0, flex: 1 },
-  emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE },
-  emptyStateImage: null,
-};
-let obj3 = { color: nativeDefault.colors.TEXT_SUBTLE };
-obj.emptyStateImage = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
-let closure_7 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-let obj4 = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerNoResults.tsx");
-
-export default noop.memo(
+let obj2;
+let obj3;
+const ScrollView = react_native.ScrollView;
+const GIFPickerResultTypes = Constants.GIFPickerResultTypes;
+const jsx = Fragment.jsx;
+let createStyles = createStyles_mod;
+let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: obj2, emptyStateImage: obj3 };
+obj2 = { color: nativeDefault.colors.TEXT_SUBTLE };
+createStyles = createStyles.createStyles;
+obj3 = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
+let closure_7 = createStyles(obj);
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        const cResult = c.c(16);
+        let BottomSheetScrollView;
+        let categoryType;
+        let first;
+        let inActionSheet;
+        let tmp6;
+        let tmp8;
+        const obj = react2;
+        const cResult = obj.c(16);
         ({ categoryType, inActionSheet } = arg0);
         const tmp4 = closure_7();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { hasCategories: false };
           cResult[0] = obj2;
-          let first = obj2;
+          first = obj2;
         } else {
           first = cResult[0];
         }
@@ -45,145 +51,123 @@ export default noop.memo(
           const obj3 = { paddingBottom: safeAreaBottomKeyboardAware, flex: 1 };
           cResult[1] = safeAreaBottomKeyboardAware;
           cResult[2] = obj3;
-          let tmp6 = obj3;
+          tmp6 = obj3;
         } else {
           tmp6 = cResult[2];
         }
-        const searchEmptySource = SearchEmpty.useSearchEmptySource();
+        const tmpResult = SearchEmpty;
+        const searchEmptySource = tmpResult.useSearchEmptySource();
         if (cResult[3] !== categoryType) {
+          let stringResult;
           if (categoryType === GIFPickerResultTypes.FAVORITES) {
-            const intl2 = util.intl;
-            let stringResult = intl2.string(util.t.ZH4o6l);
+            const intl2 = intl3.intl;
+            stringResult = intl2.string(intl3.t.ZH4o6l);
           } else {
-            const intl = util.intl;
-            stringResult = intl.string(util.t["5dX4UM"]);
+            const intl = intl3.intl;
+            stringResult = intl.string(intl3.t["5dX4UM"]);
           }
           cResult[3] = categoryType;
           cResult[4] = stringResult;
+          tmp8 = stringResult;
         } else {
-          const modalDismissGuardRefreshControl =
-            useModalDismissGuardRefreshControl.useModalDismissGuardRefreshControl();
-          if (inActionSheet) {
-            let BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
-          } else {
-            BottomSheetScrollView = ScrollView;
-          }
-          if (cResult[5] === searchEmptySource) {
-            if (cResult[6] === tmp8) {
-              if (cResult[7] === tmp4.emptyStateBody) {
-                if (cResult[8] === tmp4.emptyStateContainer) {
-                  if (cResult[9] === tmp4.emptyStateImage) {
-                    let tmp14 = cResult[10];
-                  }
-                  if (cResult[11] === BottomSheetScrollView) {
-                    if (cResult[12] === tmp6) {
-                      if (cResult[13] === tmp13) {
-                        if (cResult[14] === tmp14) {
-                          let tmp17 = cResult[15];
-                        }
-                        return tmp17;
+          tmp8 = cResult[4];
+        }
+        const tmpResult2 = useModalDismissGuardRefreshControl;
+        const modalDismissGuardRefreshControl = tmpResult2.useModalDismissGuardRefreshControl();
+        if (inActionSheet) {
+          BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
+        } else {
+          BottomSheetScrollView = ScrollView;
+        }
+        if (cResult[5] === searchEmptySource) {
+          if (cResult[6] === tmp8) {
+            if (cResult[7] === tmp4.emptyStateBody) {
+              if (cResult[8] === tmp4.emptyStateContainer) {
+                let tmp13;
+                if (cResult[9] === tmp4.emptyStateImage) {
+                  tmp13 = cResult[10];
+                }
+                if (cResult[11] === BottomSheetScrollView) {
+                  if (cResult[12] === tmp6) {
+                    if (cResult[13] === tmp12) {
+                      let tmp15;
+                      if (cResult[14] === tmp13) {
+                        tmp15 = cResult[15];
                       }
+                      return tmp15;
                     }
                   }
-                  const obj4 = {
-                    contentContainerStyle: tmp6,
-                    keyboardShouldPersistTaps: "always",
-                    refreshControl: tmp13,
-                    children: tmp14,
-                  };
-                  const tmp19 = (
-                    <BottomSheetScrollView
-                      contentContainerStyle={tmp6}
-                      keyboardShouldPersistTaps="always"
-                      refreshControl={tmp13}
-                    >
-                      {tmp14}
-                    </BottomSheetScrollView>
-                  );
-                  cResult[11] = BottomSheetScrollView;
-                  cResult[12] = tmp6;
-                  cResult[13] = tmp13;
-                  cResult[14] = tmp14;
-                  cResult[15] = tmp19;
-                  tmp17 = tmp19;
                 }
+                const tmp17 = (
+                  <BottomSheetScrollView
+                    contentContainerStyle={tmp6}
+                    keyboardShouldPersistTaps="always"
+                    refreshControl={tmp12}
+                  >
+                    {tmp13}
+                  </BottomSheetScrollView>
+                );
+                cResult[11] = BottomSheetScrollView;
+                cResult[12] = tmp6;
+                cResult[13] = tmp12;
+                cResult[14] = tmp13;
+                cResult[15] = tmp17;
+                tmp15 = tmp17;
               }
             }
           }
-          const obj5 = {
-            source: searchEmptySource,
-            body: cResult[4],
-            bodyStyle: null,
-            containerStyle: null,
-            imageStyle: null,
-          };
-          ({
-            emptyStateBody: obj6.bodyStyle,
-            emptyStateContainer: obj6.containerStyle,
-            emptyStateImage: obj6.imageStyle,
-          } = tmp4);
-          const tmp16 = jsx(native.RefreshEmptyState, {
-            source: searchEmptySource,
-            body: cResult[4],
-            bodyStyle: null,
-            containerStyle: null,
-            imageStyle: null,
-          });
-          cResult[5] = searchEmptySource;
-          cResult[6] = cResult[4];
-          cResult[7] = tmp4.emptyStateBody;
-          cResult[8] = tmp4.emptyStateContainer;
-          cResult[9] = tmp4.emptyStateImage;
-          cResult[10] = tmp16;
-          tmp14 = tmp16;
-          const tmpResult2 = useModalDismissGuardRefreshControl;
         }
-        const tmpResult = SearchEmpty;
+        const tmp14 = jsx(native.RefreshEmptyState, {
+          source: searchEmptySource,
+          body: tmp8,
+          bodyStyle: tmp4.emptyStateBody,
+          containerStyle: tmp4.emptyStateContainer,
+          imageStyle: tmp4.emptyStateImage,
+        });
+        cResult[5] = searchEmptySource;
+        cResult[6] = tmp8;
+        cResult[7] = tmp4.emptyStateBody;
+        cResult[8] = tmp4.emptyStateContainer;
+        cResult[9] = tmp4.emptyStateImage;
+        cResult[10] = tmp14;
+        tmp13 = tmp14;
       }
     : (inActionSheet) => {
         inActionSheet = inActionSheet.inActionSheet;
+        const categoryType = inActionSheet.categoryType;
         const tmp = closure_7();
         const safeAreaBottomKeyboardAware = useExpressionPickerInsetsDefault({
           hasCategories: false,
         }).safeAreaBottomKeyboardAware;
         const items = [safeAreaBottomKeyboardAware];
-        const memo = noop.useMemo(() => ({ paddingBottom: safeAreaBottomKeyboardAware, flex: 1 }), items);
-        const searchEmptySource = SearchEmpty.useSearchEmptySource();
-        if (inActionSheet.categoryType === GIFPickerResultTypes.FAVORITES) {
-          const intl2 = util.intl;
-          let stringResult = intl2.string(util.t.ZH4o6l);
+        const memo = react.useMemo(() => ({ paddingBottom: safeAreaBottomKeyboardAware, flex: 1 }), items);
+        const obj = SearchEmpty;
+        const searchEmptySource = obj.useSearchEmptySource();
+        if (categoryType === GIFPickerResultTypes.FAVORITES) {
+          const intl2 = intl3.intl;
+          let stringResult = intl2.string(intl3.t.ZH4o6l);
         } else {
-          const intl = util.intl;
-          stringResult = intl.string(util.t["5dX4UM"]);
+          const intl = intl3.intl;
+          stringResult = intl.string(intl3.t["5dX4UM"]);
         }
-        const modalDismissGuardRefreshControl = useModalDismissGuardRefreshControl.useModalDismissGuardRefreshControl();
+        const tmp4Result = useModalDismissGuardRefreshControl;
+        const modalDismissGuardRefreshControl = tmp4Result.useModalDismissGuardRefreshControl();
         if (inActionSheet) {
           let BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
         } else {
           BottomSheetScrollView = ScrollView;
         }
-        const obj2 = {
-          contentContainerStyle: memo,
-          keyboardShouldPersistTaps: "always",
-          refreshControl: null,
-          children: null,
-        };
         let tmp9;
         if (inActionSheet) {
           tmp9 = modalDismissGuardRefreshControl;
         }
-        obj2.refreshControl = tmp9;
-        obj2.children = jsx(native.RefreshEmptyState, {
-          source: searchEmptySource,
-          body: stringResult,
-          bodyStyle: tmp.emptyStateBody,
-          containerStyle: tmp.emptyStateContainer,
-          imageStyle: tmp.emptyStateImage,
-        });
         return (
-          <BottomSheetScrollView contentContainerStyle={memo} keyboardShouldPersistTaps="always" refreshControl={null}>
+          <BottomSheetScrollView contentContainerStyle={memo} keyboardShouldPersistTaps="always" refreshControl={tmp9}>
             {null}
           </BottomSheetScrollView>
         );
       },
 );
+const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerNoResults.tsx");
+
+export default memoResult;

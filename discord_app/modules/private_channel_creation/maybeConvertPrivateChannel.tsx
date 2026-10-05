@@ -2,9 +2,8 @@
 import ChannelActionCreatorsDefault from "../../actions/ChannelActionCreators.tsx";
 import FakePlaceholderPrivateChannel from "../channel/FakePlaceholderPrivateChannel.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/private_channel_creation/maybeConvertPrivateChannel.tsx");
 
 export default function maybeConvertPrivateChannel(arg0) {
@@ -14,7 +13,8 @@ export default function maybeConvertPrivateChannel(arg0) {
     const channel = ChannelStore.getChannel(arg0);
     let ensurePrivateChannelResult = null;
     if (null != channel) {
-      ensurePrivateChannelResult = ChannelActionCreatorsDefault.ensurePrivateChannel(channel.recipients);
+      const obj = ChannelActionCreatorsDefault;
+      ensurePrivateChannelResult = obj.ensurePrivateChannel(channel.recipients);
     }
     return ensurePrivateChannelResult;
   }

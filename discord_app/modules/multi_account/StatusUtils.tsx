@@ -1,10 +1,14 @@
 // discord_app/modules/multi_account/StatusUtils.tsx
-import util from "../../intl/index.native.tsx";
+import intl from "../../intl/index.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/multi_account/StatusUtils.tsx");
 
 export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {
+  let data2;
+  let data3;
+  let data4;
+  let obj3;
   const date = new Date(Number(arg0));
   const date1 = new Date();
   const fullYear = date.getFullYear();
@@ -14,8 +18,8 @@ export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {
     tmp2 = month === date1.getMonth();
   }
   if (tmp2) {
-    tmp2 = date.getDate() === date1.getDate();
     const date2 = date.getDate();
+    tmp2 = date2 === date1.getDate();
   }
   const date3 = new Date();
   date3.setDate(date3.getDate() + 1);
@@ -26,28 +30,30 @@ export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {
     tmp7 = month1 === date3.getMonth();
   }
   if (tmp7) {
-    tmp7 = date.getDate() === date3.getDate();
     const date4 = date.getDate();
+    tmp7 = date4 === date3.getDate();
   }
-  const data = util.intl.data;
+  const data = intl.intl.data;
   const formatTimeResult = data.formatTime(date, { format: "short" });
   if (tmp2) {
-    const obj = { kind: "today", dateString: null, timeString: null };
-    const data4 = util.intl.data;
-    obj.dateString = data4.formatRelativeTime(0, "day", { numeric: "auto" });
-    obj.timeString = formatTimeResult;
-    let obj3 = obj;
+    const obj = {
+      kind: "today",
+      dateString: data4.formatRelativeTime(0, "day", { numeric: "auto" }),
+      timeString: formatTimeResult,
+    };
+    data4 = intl.intl.data;
+    obj3 = obj;
   } else if (tmp7) {
-    const obj2 = { kind: "tomorrow", dateString: null, timeString: null };
-    const data3 = util.intl.data;
-    obj2.dateString = data3.formatRelativeTime(1, "day", { numeric: "auto" });
-    obj2.timeString = formatTimeResult;
+    const obj2 = {
+      kind: "tomorrow",
+      dateString: data3.formatRelativeTime(1, "day", { numeric: "auto" }),
+      timeString: formatTimeResult,
+    };
+    data3 = intl.intl.data;
     obj3 = obj2;
   } else {
-    obj3 = { kind: "date", dateString: null, timeString: null };
-    const data2 = util.intl.data;
-    obj3.dateString = data2.formatDate(date, { dateStyle: "short" });
-    obj3.timeString = formatTimeResult;
+    obj3 = { kind: "date", dateString: data2.formatDate(date, { dateStyle: "short" }), timeString: formatTimeResult };
+    data2 = intl.intl.data;
   }
   return obj3;
 };

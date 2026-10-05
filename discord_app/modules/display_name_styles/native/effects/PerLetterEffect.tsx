@@ -1,66 +1,65 @@
 // discord_app/modules/display_name_styles/native/effects/PerLetterEffect.tsx
-import noop from "../../../../../_runtime/metro/00019__.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, Text: hasOwnProperty } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+let closure_4;
+let hasOwnProperty;
+({ View: closure_4, Text: hasOwnProperty } = react_native);
+const jsx = Fragment.jsx;
 let closure_7 = createStyles.createStyles({ container: { overflow: "hidden" } });
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/native/effects/PerLetterEffect.tsx");
 
 export default function PerLetterEffect(name) {
+  let colors;
+  let containerStyle;
+  let textProps;
+  let textStyle;
   name = name.name;
   ({ textProps, colors } = name);
   ({ containerStyle, textStyle } = name);
   const items = [name, colors];
-  let obj = { style: null, children: null };
-  const items1 = [closure_7().container, containerStyle];
-  obj.style = items1;
-  const memo = noop.useMemo(() => {
-    const regex = colors(10639)();
-    closure_1 = 0;
-    let obj = name(10640);
-    return name(10640)
-      .splitGraphemes(regex)
-      .map((children, index) => {
-        regex.lastIndex = 0;
-        const tmp = regex.test(children) || 0 === children.trim().length;
-        let tmp2;
-        if (null != colors) {
-          if (colors.length > 0) {
-            if (!tmp) {
-              tmp2 = colors[closure_1 % colors.length];
-            }
+  let tmp = closure_7();
+  const items1 = [tmp.container, containerStyle];
+  const memo = react.useMemo(() => {
+    const regex = colors(dependencyMap[4])();
+    let closure_1 = 0;
+    let obj = name(dependencyMap[5]);
+    const splitGraphemesResult = obj.splitGraphemes(regex);
+    return splitGraphemesResult.map((children, index) => {
+      regex.lastIndex = 0;
+      const tmp = regex.test(children) || 0 === children.trim().length;
+      let tmp2;
+      if (null != colors) {
+        if (colors.length > 0) {
+          if (!tmp) {
+            tmp2 = colors[closure_1 % colors.length];
           }
         }
-        if (!tmp) {
-          closure_1 = closure_1 + 1;
-        }
-        let tmp7;
-        if (null != tmp2) {
-          const obj = { color: tmp2 };
-          tmp7 = obj;
-        }
-        return (
-          <hasOwnProperty key={index} style={tmp7}>
-            {children}
-          </hasOwnProperty>
-        );
-      });
+      }
+      if (!tmp) {
+        closure_1 = closure_1 + 1;
+      }
+      let tmp7;
+      if (null != tmp2) {
+        tmp7 = { color: tmp2 };
+        const obj = { color: tmp2 };
+      }
+      return (
+        <hasOwnProperty key={index} style={tmp7}>
+          {children}
+        </hasOwnProperty>
+      );
+    });
   }, items);
-  const obj2 = {};
+  const Text = name(4886).Text;
   const merged = Object.assign(textProps);
-  obj2.textBreakStrategy = "simple";
   let accessibilityLabel = textProps.accessibilityLabel;
   if (accessibilityLabel == null) {
     accessibilityLabel = name;
   }
-  obj2.accessibilityLabel = accessibilityLabel;
   const items2 = [textStyle, { lineHeight: "r" }];
-  obj2.style = items2;
-  obj2.children = memo;
-  obj.children = jsx(name(4886).Text, {});
-  return <closure_4 style={null}>{null}</closure_4>;
+  return <closure_4 style={items1}>{null}</closure_4>;
 }

@@ -1,90 +1,99 @@
 // discord_app/modules/stage_channels/usePrivacyLevelHelpText.tsx
+import Constants from "../../Constants.tsx";
+import Constants2 from "../../../discord_common/js/shared/Constants.tsx";
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import GuildScheduledEventsConstants from "../guild_scheduled_events/GuildScheduledEventsConstants.tsx";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const HelpdeskArticles = fn(1085).HelpdeskArticles;
-const constants = fn(2057).GuildScheduledEventPrivacyLevel;
-const Permissions = fn(1096).Permissions;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/stage_channels/usePrivacyLevelHelpText.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const HelpdeskArticles = Constants.HelpdeskArticles;
+const constants = GuildScheduledEventsConstants.GuildScheduledEventPrivacyLevel;
+const Permissions = Constants2.Permissions;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel, privacy_level, arg2) => {
+      let first;
+      let obj5;
+      let stringResult;
+      let tmp6;
+      let tmp8;
       _require = channel;
-      const cResult = require("c").c(14);
+      const obj = require("react");
+      const cResult = obj.c(14);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PermissionStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== channel) {
         const fn = function _() {
-          return PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, closure_0);
+          return PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, channel);
         };
         cResult[1] = channel;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
+      const tmpResult = require("get initialized");
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
       if (cResult[3] !== channel) {
-        const obj3 = PermissionUtilsAll;
-        const canEveryoneRoleResult = obj3.canEveryoneRole(
-          BigFlagUtilsAll.combine(Permissions.VIEW_CHANNEL, Permissions.CONNECT),
+        const canEveryoneRole = PermissionUtilsAll.canEveryoneRole;
+        PermissionUtilsAll;
+        const obj3 = BigFlagUtilsAll;
+        const canEveryoneRoleResult = canEveryoneRole(
+          obj3.combine(Permissions.VIEW_CHANNEL, Permissions.CONNECT),
           channel,
         );
         cResult[3] = channel;
         cResult[4] = canEveryoneRoleResult;
-        let tmp8 = canEveryoneRoleResult;
+        tmp8 = canEveryoneRoleResult;
       } else {
         tmp8 = cResult[4];
       }
       if (cResult[5] === tmp8) {
         if (cResult[6] === stateFromStores) {
           if (cResult[7] === arg2) {
+            let tmp16;
             privacy_level = undefined;
+            const tmp13 = cResult[8];
             if (privacy_level != null) {
               privacy_level = privacy_level.privacy_level;
             }
-            if (cResult[8] === privacy_level) {
-              let tmp14 = cResult[9];
+            if (tmp13 === privacy_level) {
+              tmp16 = cResult[9];
             }
             let privacy_level1;
             if (privacy_level != null) {
               privacy_level1 = privacy_level.privacy_level;
             }
-            let tmp26 = !stateFromStores;
+            let tmp29 = !stateFromStores;
+            const PUBLIC = constants.PUBLIC;
             if (stateFromStores) {
-              tmp26 = !tmp8;
+              tmp29 = !tmp8;
             }
-            if (cResult[10] === tmp14) {
-              if (cResult[11] === tmp27) {
-                if (cResult[12] === tmp26) {
-                  let tmp28 = cResult[13];
+            if (cResult[10] === tmp16) {
+              if ((cResult[11] === privacy_level1) === PUBLIC) {
+                let tmp31;
+                if (cResult[12] === tmp29) {
+                  tmp31 = cResult[13];
                 }
-                return tmp28;
+                return tmp31;
               }
             }
-            const obj2 = {
-              helpText: tmp14,
-              guildOnlyDisabled: privacy_level1 === constants.PUBLIC,
-              publicDisabled: tmp26,
-            };
-            cResult[10] = tmp14;
-            cResult[11] = privacy_level1 === constants.PUBLIC;
-            cResult[12] = tmp26;
+            const obj2 = { helpText: tmp16, guildOnlyDisabled: privacy_level1 === PUBLIC, publicDisabled: tmp29 };
+            cResult[10] = tmp16;
+            cResult[11] = privacy_level1 === PUBLIC;
+            cResult[12] = tmp29;
             cResult[13] = obj2;
-            tmp28 = obj2;
+            tmp31 = obj2;
           }
         }
       }
@@ -92,23 +101,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (privacy_level != null) {
         privacy_level2 = privacy_level.privacy_level;
       }
-      let formatResult = constants;
       if (privacy_level2 === constants.PUBLIC) {
         const intl4 = tmp(1126).intl;
-        let stringResult = intl4.string(tmp(1126).t.GFq5Rg);
+        stringResult = intl4.string(tmp(1126).t.GFq5Rg);
       } else if (stateFromStores) {
+        let stringResult1;
         if (tmp8) {
-          formatResult = null;
-          if (arg2 === formatResult.PUBLIC) {
+          let formatResult = null;
+          if (arg2 === tmp18.PUBLIC) {
             const intl3 = tmp(1126).intl;
-            const obj5 = { articleURL: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES) };
-            formatResult = intl3.format(tmp(1126).t["ew/Jq4"], obj5);
+            const format = intl3.format;
+            const obj4 = { articleURL: obj5.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES) };
+            const prop = tmp(1126).t["ew/Jq4"];
+            obj5 = HelpdeskUtilsDefault;
+            formatResult = format(prop, obj4);
           }
-          let stringResult1 = formatResult;
+          stringResult1 = formatResult;
         } else {
           const intl2 = tmp(1126).intl;
           stringResult1 = intl2.string(tmp(1126).t.E5T7a3);
         }
+        stringResult = stringResult1;
       } else {
         const intl = tmp(1126).intl;
         stringResult = intl.string(tmp(1126).t.BOjr7t);
@@ -122,19 +135,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       cResult[8] = privacy_level3;
       cResult[9] = stringResult;
-      tmp14 = stringResult;
-      const tmpResult = require("initialize");
+      tmp16 = stringResult;
     }
   : (channel, privacy_level, arg2) => {
+      let obj4;
+      let privacy_level1;
+      let stringResult;
+      let tmp16;
       _require = channel;
       const items = [PermissionStore];
-      const stateFromStores = require("initialize").useStateFromStores(items, () =>
-        PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, closure_0),
+      const obj = require("get initialized");
+      const stateFromStores = obj.useStateFromStores(items, () =>
+        PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, channel),
       );
-      const obj = require("initialize");
-      const obj2 = PermissionUtilsAll;
-      const canEveryoneRoleResult = obj2.canEveryoneRole(
-        BigFlagUtilsAll.combine(Permissions.VIEW_CHANNEL, Permissions.CONNECT),
+      const canEveryoneRole = PermissionUtilsAll.canEveryoneRole;
+      PermissionUtilsAll;
+      const obj2 = BigFlagUtilsAll;
+      const canEveryoneRoleResult = canEveryoneRole(
+        obj2.combine(Permissions.VIEW_CHANNEL, Permissions.CONNECT),
         channel,
       );
       privacy_level = undefined;
@@ -143,34 +161,44 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (privacy_level === constants.PUBLIC) {
         const intl4 = tmp(1126).intl;
-        let stringResult = intl4.string(tmp(1126).t.GFq5Rg);
+        stringResult = intl4.string(tmp(1126).t.GFq5Rg);
       } else if (stateFromStores) {
+        let stringResult1;
         if (canEveryoneRoleResult) {
           let formatResult = null;
           if (arg2 === constants.PUBLIC) {
             const intl3 = tmp(1126).intl;
-            const obj4 = { articleURL: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES) };
-            formatResult = intl3.format(tmp(1126).t["ew/Jq4"], obj4);
+            const format = intl3.format;
+            const obj3 = { articleURL: obj4.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES) };
+            const prop = tmp(1126).t["ew/Jq4"];
+            obj4 = HelpdeskUtilsDefault;
+            formatResult = format(prop, obj3);
           }
-          let stringResult1 = formatResult;
+          stringResult1 = formatResult;
         } else {
           const intl2 = tmp(1126).intl;
           stringResult1 = intl2.string(tmp(1126).t.E5T7a3);
         }
+        stringResult = stringResult1;
       } else {
         const intl = tmp(1126).intl;
         stringResult = intl.string(tmp(1126).t.BOjr7t);
       }
-      const obj6 = { helpText: stringResult, guildOnlyDisabled: null, publicDisabled: null };
-      let privacy_level1;
+      const obj5 = {
+        helpText: stringResult,
+        guildOnlyDisabled: privacy_level1 === constants.PUBLIC,
+        publicDisabled: tmp16,
+      };
+      privacy_level1 = undefined;
       if (privacy_level != null) {
         privacy_level1 = privacy_level.privacy_level;
       }
-      obj6.guildOnlyDisabled = privacy_level1 === constants.PUBLIC;
-      let tmp15 = !stateFromStores;
+      tmp16 = !stateFromStores;
       if (stateFromStores) {
-        tmp15 = !canEveryoneRoleResult;
+        tmp16 = !canEveryoneRoleResult;
       }
-      obj6.publicDisabled = tmp15;
-      return obj6;
+      return obj5;
     };
+const result = size.fileFinishedImporting("modules/stage_channels/usePrivacyLevelHelpText.tsx");
+
+export default tmp2;

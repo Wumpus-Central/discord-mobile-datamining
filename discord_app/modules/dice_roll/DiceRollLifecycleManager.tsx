@@ -1,46 +1,57 @@
 // discord_app/modules/dice_roll/DiceRollLifecycleManager.tsx
-import util from "../../intl/index.native.tsx";
+import intl3 from "../../intl/index.native.tsx";
+import MessageConstants from "../messages/MessageConstants.tsx";
 import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
 import MessageParserDefault from "../messages/MessageParser.tsx";
+import DiceRollStore2 from "DiceRollStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
-import DiceRollStore from "DiceRollStore.tsx";
+import DiceRollConstants from "DiceRollConstants.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const INITIAL_STATE = fn(11573).INITIAL_STATE;
-const DiceRollConstants = fn(8806);
+const DiceRollStore = DiceRollStore2;
+let state;
+
+let c10;
+let c9;
+let closure_12;
+let metroImportAll;
+let metroImportDefault;
+let unpackModuleId;
+const INITIAL_STATE = DiceRollStore2.INITIAL_STATE;
 ({
-  AFTER_ROLL_DELAY_MS: closure_7,
-  ALLOWED_DICE_SIDES_SET: closure_8,
-  DEFAULT_DICE_SIDES: closure_9,
+  AFTER_ROLL_DELAY_MS: metroImportDefault,
+  ALLOWED_DICE_SIDES_SET: metroImportAll,
+  DEFAULT_DICE_SIDES: c9,
   DISMISS_DELAY_MS: c10,
-  MAX_DICE_COUNT: closure_11,
+  MAX_DICE_COUNT: unpackModuleId,
   ROLL_DURATION_MS: closure_12,
 } = DiceRollConstants);
-const MessageSendLocation = fn(4883).MessageSendLocation;
-class DiceRollLifecycleManager extends tmp3 {
+const MessageSendLocation = MessageConstants.MessageSendLocation;
+class DiceRollLifecycleManager extends AutomaticLifecycleManager {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    closure_0 = applyArgumentsResult;
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    require = applyArgumentsResult;
     applyArgumentsResult.actions = {
       CHANNEL_SELECT(arg0) {
-        return applyArgumentsResult.handleChannelSelect(arg0);
+        return require.handleChannelSelect(arg0);
       },
       DICE_ROLL_START(channelId) {
-        return applyArgumentsResult.handleStartRoll(channelId);
+        return require.handleStartRoll(channelId);
       },
     };
     applyArgumentsResult.rollTimer = null;
     applyArgumentsResult.postRollDismissTimer = null;
     applyArgumentsResult.collapseTimer = null;
     applyArgumentsResult.handleChannelSelect = function handleChannelSelect(channelId) {
+      channelId = channelId.channelId;
       state = DiceRollStore.getState();
+      const tmp2 = null != state.channelId && state.channelId !== channelId;
       if (tmp2) {
-        applyArgumentsResult.clearTimers();
-        applyArgumentsResult.dismiss();
+        require.clearTimers();
+        require.dismiss();
       }
-      tmp2 = null != state.channelId && state.channelId !== channelId.channelId;
     };
     applyArgumentsResult.handleStartRoll = function handleStartRoll(channelId) {
       channelId = channelId.channelId;
@@ -53,7 +64,7 @@ class DiceRollLifecycleManager extends tmp3 {
         diceSides = closure_1_9;
       }
       let num3;
-      closure_2 = undefined;
+      let closure_2;
       let items;
       if (channelId.getChannelId() === channelId) {
         if (null == state.getState().channelId) {
@@ -78,100 +89,100 @@ class DiceRollLifecycleManager extends tmp3 {
           }
           const _setTimeout = setTimeout;
           channelId.rollTimer = setTimeout(() => {
-            applyArgumentsResult.rollTimer = null;
-            applyArgumentsResult.finishRoll(channelId, num3, closure_2, items);
+            require.rollTimer = null;
+            require.finishRoll(channelId, num3, closure_2, items);
           }, closure_1_12);
         }
       }
     };
     return applyArgumentsResult;
   }
+  finishRoll(channelId, arg1, arg2, items) {
+    const self = this;
+    const obj = { rolling: false, results: items };
+    DiceRollStore.setState(obj);
+    this.postRollDismissTimer = setTimeout(() => {
+      self.postRollDismissTimer = null;
+      self.dismiss();
+    }, metroImportDefault);
+    this.sendMessage(channelId, arg1, arg2, items);
+  }
+  sendMessage(arg0, count, sides, arr) {
+    const channel = ChannelStore.getChannel(arg0);
+    if (null != channel) {
+      let combined3;
+      let str = channel.getGuildId();
+      if (str == null) {
+        str = "@me";
+      }
+      const _location = location;
+      const _window = window;
+      const _HermesInternal = HermesInternal;
+      const combined =
+        "" +
+        location.protocol +
+        window.GLOBAL_ENV.WEBAPP_ENDPOINT +
+        "/channels/" +
+        str +
+        "/" +
+        arg0 +
+        "/roll-dice/" +
+        count +
+        "d" +
+        sides;
+      const intl = intl3.intl;
+      const _HermesInternal2 = HermesInternal;
+      const obj = { count, sides };
+      const combined1 = "[`" + intl.formatToPlainString(intl3.t.uV5JaG, obj) + "`](" + combined + ")";
+      const reduced = arr.reduce((acc, item) => acc + item, 0);
+      const intl2 = intl3.intl;
+      const obj2 = { total: reduced, count, sides };
+      const result = intl2.formatToMarkdownString(intl3.t.tmSbYW, obj2);
+      const mapped = arr.map((item) => ":game_die: " + item.toString());
+      const _HermesInternal3 = HermesInternal;
+      const combined2 = "-# " + mapped.join(" ");
+      if (1 === count) {
+        const _HermesInternal5 = HermesInternal;
+        combined3 = "### " + result + " " + combined1;
+      } else {
+        const _HermesInternal4 = HermesInternal;
+        combined3 = "### " + result + " " + combined1 + "\n" + combined2;
+      }
+      const sendMessage = MessageActionCreatorsDefault.sendMessage;
+      const obj3 = { location: MessageSendLocation.CHAT_INPUT };
+      const obj5 = MessageParserDefault;
+      sendMessage(arg0, obj5.parse(channel, combined3), true, obj3);
+    }
+  }
+  dismiss() {
+    const self = this;
+    DiceRollStore.setState({ dismissing: true });
+    this.collapseTimer = setTimeout(() => {
+      self.collapseTimer = null;
+      DiceRollStore.setState(INITIAL_STATE);
+    }, closure_10);
+  }
+  clearTimers() {
+    const self = this;
+    if (null != this.rollTimer) {
+      const _clearTimeout = clearTimeout;
+      clearTimeout(self.rollTimer);
+      self.rollTimer = null;
+    }
+    if (null != self.postRollDismissTimer) {
+      const _clearTimeout2 = clearTimeout;
+      clearTimeout(self.postRollDismissTimer);
+      self.postRollDismissTimer = null;
+    }
+    if (null != self.collapseTimer) {
+      const _clearTimeout3 = clearTimeout;
+      clearTimeout(self.collapseTimer);
+      self.collapseTimer = null;
+    }
+  }
 }
 const prototype = DiceRollLifecycleManager.prototype;
-prototype["finishRoll"] = function finishRoll(channelId, arg1, arg2, items) {
-  const self = this;
-  DiceRollStore.setState({ rolling: false, results: items });
-  this.postRollDismissTimer = setTimeout(() => {
-    self.postRollDismissTimer = null;
-    self.dismiss();
-  }, React5);
-  this.sendMessage(channelId, arg1, arg2, items);
-};
-prototype["sendMessage"] = function sendMessage(arg0, count, sides, arr) {
-  const channel = ChannelStore.getChannel(arg0);
-  if (null != channel) {
-    let str = channel.getGuildId();
-    if (str == null) {
-      str = "@me";
-    }
-    let obj2 = globalThis;
-    const _location = location;
-    const _window = window;
-    const _HermesInternal = HermesInternal;
-    const combined =
-      "" +
-      location.protocol +
-      window.GLOBAL_ENV.WEBAPP_ENDPOINT +
-      "/channels/" +
-      str +
-      "/" +
-      arg0 +
-      "/roll-dice/" +
-      count +
-      "d" +
-      sides;
-    const intl = util.intl;
-    const obj = { count, sides };
-    const _HermesInternal2 = HermesInternal;
-    const combined1 = "[`" + intl.formatToPlainString(util.t.uV5JaG, obj) + "`](" + combined + ")";
-    const reduced = arr.reduce((acc, item) => acc + item, 0);
-    const intl2 = util.intl;
-    const obj3 = { total: reduced, count, sides };
-    const result = intl2.formatToMarkdownString(util.t.tmSbYW, obj3);
-    const mapped = arr.map((item) => ":game_die: " + item.toString());
-    let str10 = " ";
-    const _HermesInternal3 = HermesInternal;
-    const combined2 = "-# " + mapped.join(" ");
-    if (1 === count) {
-      let combined3 = "### " + result + ` ` + combined1;
-    } else {
-      const _HermesInternal4 = HermesInternal;
-      combined3 = "### " + result + ` ` + combined1 + "\n" + combined2;
-    }
-    str10 = MessageActionCreatorsDefault;
-    obj2 = MessageParserDefault;
-    const obj4 = { location: MessageSendLocation.CHAT_INPUT };
-    str10.sendMessage(arg0, obj2.parse(channel, combined3), true, obj4);
-  }
-};
-prototype["dismiss"] = function dismiss() {
-  const self = this;
-  DiceRollStore.setState({ dismissing: true });
-  this.collapseTimer = setTimeout(() => {
-    self.collapseTimer = null;
-    DiceRollStore.setState(INITIAL_STATE);
-  }, closure_10);
-};
-prototype["clearTimers"] = function clearTimers() {
-  const self = this;
-  if (null != this.rollTimer) {
-    const _clearTimeout = clearTimeout;
-    clearTimeout(self.rollTimer);
-    self.rollTimer = null;
-  }
-  if (null != self.postRollDismissTimer) {
-    const _clearTimeout2 = clearTimeout;
-    clearTimeout(self.postRollDismissTimer);
-    self.postRollDismissTimer = null;
-  }
-  if (null != self.collapseTimer) {
-    const _clearTimeout3 = clearTimeout;
-    clearTimeout(self.collapseTimer);
-    self.collapseTimer = null;
-  }
-};
 const diceRollLifecycleManager = new DiceRollLifecycleManager();
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/dice_roll/DiceRollLifecycleManager.tsx");
 
 export default diceRollLifecycleManager;

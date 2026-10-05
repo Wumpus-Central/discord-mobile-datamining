@@ -1,78 +1,234 @@
 // discord_app/modules/saved_messages/SavedMessagesActions.tsx
+import Constants from "../../Constants.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import SavedMessagesStore from "SavedMessagesStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-let closure_6 = async function _upsertSavedMessage() {
-  closure_2 = tmp2;
-  closure_1 = tmp5;
-  const HTTP = HTTPUtils.HTTP;
-  const request = { url: Endpoints.PUT_SAVED_MESSAGE(_require.channelId, _require.messageId), body: { due_at: null, source: null }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
-  ({ dueAt: obj8.due_at, source: obj8.source } = _require);
-  await HTTP.put(request);
-  closure_129_0 = value;
-  return closure_130_0(closure_130_2[4]).savedMessageCreateObjectToClient(closure_129_0.body);
-};
-let closure_7 = async function _deleteSavedMessage() {
-  const HTTP = HTTPUtils.HTTP;
-  await HTTP.del({ url: Endpoints.DELETE_SAVED_MESSAGE(closure_0.channelId, closure_0.messageId), rejectWithError: HTTPUtils.rejectWithMigratedError() });
-  return true;
-};
-let closure_8 = async function _fetchAndUpdateSavedMessages() {
-  closure_1 = tmp3;
-  if (!isStale.getIsStale()) {
-    return Promise.resolve();
-  }
-  const HTTP = HTTPUtils.HTTP;
-  await HTTP.get({ url: constants.GET_SAVED_MESSAGES, rejectWithError: HTTPUtils.rejectWithMigratedError() });
-  await closure_129_1(closure_129_2[5]).dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: [] });
-  await "IconComponent";
-  closure_128_0 = value;
-  const results = closure_128_0.body.results;
-  closure_128_1 = results.map((message) => {
-    let messageRecord = null;
-    if (null != message.message) {
-      messageRecord = closure_1_0(5112).createMessageRecord(message.message);
-      const obj = closure_1_0(5112);
+let c3, c4;
+
+let obj = function _upsertSavedMessage() {
+  obj = _asyncToGenerator(async (arg0) => {
+    let obj4;
+    let obj9;
+    let closure_0 = arg0;
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let closure_2 = tmp;
+            let closure_1 = tmp4;
+            closure_0 = undefined;
+            const HTTP = HTTPUtils.HTTP;
+            const request = {
+              url: Endpoints.PUT_SAVED_MESSAGE(closure_0.channelId, closure_0.messageId),
+              body: obj4,
+              rejectWithError: obj9.rejectWithMigratedError(),
+            };
+            const put = HTTP.put;
+            obj4 = { due_at: null, source: null };
+            ({ dueAt: obj8.due_at, source: obj8.source } = closure_0);
+            obj9 = HTTPUtils;
+            c3 = 1;
+            c4 = 1;
+            const obj5 = { value: put(request), done: false };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_0 = value;
+          c4 = 3;
+          const obj7 = { value: obj.savedMessageCreateObjectToClient(closure_0.body), done: true };
+          obj = closure_130_0(closure_130_2[4]);
+          return obj7;
+        }
+      } catch (tmp10) {
+        c4 = 3;
+        throw tmp10;
+      }
     }
-    const obj2 = { message: messageRecord, saveData: closure_1_0(7495).savedMessageDataToClient(message.save_data) };
-    return obj2;
   });
-  await closure_129_1(closure_129_2[5]).dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: closure_128_1 });
-  { url: constants.GET_SAVED_MESSAGES, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+  return obj(...arguments);
 };
-const Endpoints = fn(1085).Endpoints;
-const size = fn(2);
+obj = function _deleteSavedMessage() {
+  obj = _asyncToGenerator(async (arg0) => {
+    let c1;
+    let c2;
+    let obj6;
+    let closure_0 = arg0;
+    const HTTP = HTTPUtils.HTTP;
+    const obj4 = {
+      url: Endpoints.DELETE_SAVED_MESSAGE(closure_0.channelId, closure_0.messageId),
+      rejectWithError: obj6.rejectWithMigratedError(),
+    };
+    const del = HTTP.del;
+    obj6 = HTTPUtils;
+    await del(obj4);
+    return true;
+  });
+  return obj(...arguments);
+};
+obj = function _fetchAndUpdateSavedMessages() {
+  let isStale;
+  obj = _asyncToGenerator(async () => {
+    let obj11;
+    let obj15;
+    let obj6;
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      let c2;
+      try {
+        let body;
+        let savedMessages;
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            let obj3 = { value, done: true };
+            return obj3;
+          } else {
+            body = undefined;
+            savedMessages = undefined;
+            if (isStale.getIsStale()) {
+              c2 = 1;
+              const HTTP = HTTPUtils.HTTP;
+              const obj4 = { url: constants.GET_SAVED_MESSAGES, rejectWithError: obj11.rejectWithMigratedError() };
+              const get = HTTP.get;
+              obj11 = HTTPUtils;
+              c3 = 4;
+              c4 = 1;
+              const obj5 = { value: get(obj4), done: false };
+              return obj5;
+            } else {
+              c4 = 3;
+              const obj7 = { value: Promise.resolve(), done: true };
+              return obj7;
+            }
+          }
+        } else if (1 === c3) {
+          c2 = 0;
+          const obj8 = { type: "SAVED_MESSAGES_UPDATE", savedMessages: [] };
+          c3 = 2;
+          c4 = 1;
+          const obj9 = { value: obj6.dispatch(obj8), done: false };
+          obj6 = closure_129_1(closure_129_2[5]);
+          return obj9;
+        } else if (2 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj10 = { value, done: true };
+            return obj10;
+          } else {
+            c4 = 3;
+            const obj12 = { value: undefined, done: true };
+            return obj12;
+          }
+        } else if (3 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj13 = { value, done: true };
+            return obj13;
+          } else {
+            c4 = 3;
+            return { value: "IconComponent", done: null };
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 0;
+          c4 = 3;
+          const obj14 = { value, done: true };
+          return obj14;
+        } else {
+          body = value;
+          c2 = 0;
+          const results = body.body.results;
+          savedMessages = results.map((message) => {
+            let obj3;
+            let messageRecord = null;
+            if (null != message.message) {
+              obj = body(closure_1_2[6]);
+              messageRecord = obj.createMessageRecord(message.message);
+            }
+            const obj2 = { message: messageRecord, saveData: obj3.savedMessageDataToClient(message.save_data) };
+            obj3 = body(closure_1_2[4]);
+            return obj2;
+          });
+          const obj16 = { type: "SAVED_MESSAGES_UPDATE", savedMessages };
+          c3 = 3;
+          c4 = 1;
+          obj = { value: obj15.dispatch(obj16), done: false };
+          obj15 = closure_129_1(closure_129_2[5]);
+          return obj;
+        }
+      } catch (tmp12) {
+        if (0 === c2) {
+          c4 = 3;
+          throw tmp12;
+        } else {
+          c3 = 1;
+        }
+      }
+    }
+  });
+  return obj(...arguments);
+};
+const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessagesActions.tsx");
 
 export const upsertSavedMessage = function upsertSavedMessage() {
-  const self = this;
-  const apply = closure_6.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const deleteSavedMessage = function deleteSavedMessage() {
-  const self = this;
-  const apply = closure_7.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const fetchAndUpdateSavedMessages = function fetchAndUpdateSavedMessages() {
-  const self = this;
-  const apply = closure_8.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

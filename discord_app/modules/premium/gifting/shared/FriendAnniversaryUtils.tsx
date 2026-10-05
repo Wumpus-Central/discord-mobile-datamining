@@ -18,7 +18,7 @@ export const isFriendAnniversary = function isFriendAnniversary(date) {
     if (!obj4.isSameDay(setYearResult, date)) {
       let _Math = Math;
       let tmp3Result = _mod4104;
-      if (Math.abs(tmp3Result.differenceInDays(date, tmp6)) <= 7) {
+      if (abs(tmp3Result.differenceInDays(date, tmp6)) <= 7) {
         obj2.return();
         let flag = true;
         return true;
@@ -29,13 +29,16 @@ export const isFriendAnniversary = function isFriendAnniversary(date) {
   return false;
 };
 export const yearsSince = function yearsSince(friendsSince) {
-  const obj = _mod4104;
-  return Math.round(obj.differenceInMonths(new Date(), friendsSince) / 12);
+  const differenceInMonths = _mod4104.differenceInMonths;
+  _mod4104;
+  const date = new Date();
+  return round(differenceInMonths(date, friendsSince) / 12);
 };
 export const categorizeFriendAnniversariesByAffinity = function categorizeFriendAnniversariesByAffinity(arr, fn, flag) {
   const highestAffinity = new Set();
   const highAffinity = new Set();
-  if (flag) {
+  const tmp = flag;
+  if (tmp) {
     const _Math = Math;
     const substr = arr.slice(0, Math.ceil(arr.length / 2));
     const item = substr.forEach((item) => {
@@ -48,22 +51,22 @@ export const categorizeFriendAnniversariesByAffinity = function categorizeFriend
     const iter = arr[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp6 = nextResult;
-      let tmp7 = fn(nextResult);
-      let tmp8 = tmp7;
-      let tmp9 = null != tmp7;
-      if (tmp9) {
-        tmp9 = tmp8 > 0.7;
+      let tmp7 = nextResult;
+      let tmp8 = fn(nextResult);
+      let tmp9 = tmp8;
+      let tmp10 = null != tmp8;
+      if (tmp10) {
+        tmp10 = tmp9 > 0.7;
       }
-      if (tmp9) {
-        let addResult = highestAffinity.add(tmp6);
+      if (tmp10) {
+        let addResult = highestAffinity.add(tmp7);
       }
-      let tmp14 = null != tmp8;
-      if (tmp14) {
-        tmp14 = tmp8 > 0.5;
+      let tmp15 = null != tmp9;
+      if (tmp15) {
+        tmp15 = tmp9 > 0.5;
       }
-      if (tmp14) {
-        let addResult1 = highAffinity.add(tmp6);
+      if (tmp15) {
+        let addResult1 = highAffinity.add(tmp7);
       }
       continue;
     }
@@ -72,9 +75,9 @@ export const categorizeFriendAnniversariesByAffinity = function categorizeFriend
 };
 export const pruneTimestampMap = function pruneTimestampMap(messageGiftIntentLastShownMap, currentTime, arg2) {
   const obj = {};
-  for (const key10006 in arg0) {
-    let tmp2 = arg0[key10006];
-    if (arg1 - tmp2 > arg2) {
+  for (const key10006 in messageGiftIntentLastShownMap) {
+    let tmp2 = messageGiftIntentLastShownMap[key10006];
+    if (currentTime - tmp2 > arg2) {
       continue;
     } else {
       obj[key10006] = tmp2;

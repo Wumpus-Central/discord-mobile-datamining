@@ -3,7 +3,8 @@ import size from "../../../_runtime/metro/00002__.js";
 
 let closure_0 = [];
 const tmp2 = /^<@\$(\d+)>/;
-const regExp = new RegExp(tmp2.source.replace(/^\^/, ""), "g");
+const str = tmp2.source;
+const regExp = new RegExp(str.replace(/^\^/, ""), "g");
 const result = size.fileFinishedImporting("modules/channel_autocomplete/ChannelAutocompleteConstants.tsx");
 
 export const MENTION_SENTINEL = "@";
@@ -26,7 +27,7 @@ export const GAME_MENTION_RAW_RE_GLOBAL = regExp;
 export const extractGameMentionIds = function extractGameMentionIds(arr) {
   if (arr.includes("<@$")) {
     const items = [];
-    HermesBuiltin.arraySpread(arr.matchAll(regExp), 0);
+    HermesBuiltin.arraySpread(items, arr.matchAll(regExp), 0);
     let mapped = items.map((item) => item[1]);
     if (mapped.length <= 0) {
       mapped = closure_0;

@@ -1,31 +1,23 @@
 // discord_app/modules/parent_tools/native/FamilyCenterAvatarPair.tsx
+import react_native from "../../../../_runtime/00017_react-native.js";
 import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import UserStore from "../../../stores/UserStore.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  avatars: {
-    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
-    borderRadius: nativeDefault.radii.round,
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: 8,
-  },
-  icon: { height: 24, width: 24, marginHorizontal: 16 },
-};
-let closure_6 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = {
+let closure_4;
+let hasOwnProperty;
+let obj2;
+const View = react_native.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
+let obj = { avatars: obj2, icon: { height: 24, width: 24, marginHorizontal: 16 } };
+obj2 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   borderRadius: nativeDefault.radii.round,
   display: "flex",
@@ -34,14 +26,20 @@ let obj3 = {
   alignItems: "center",
   padding: 8,
 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterAvatarPair.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_6 = createStyles.createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(17);
+      let currentUser;
+      let iconSrc;
+      let iconStyles;
+      let items1;
+      let otherUser;
+      let tmp5;
+      let tmp6;
+      const obj = react2;
+      const cResult = obj.c(17);
       ({ otherUser, iconSrc, iconStyles } = arg0);
-      let avatars = closure_6();
+      const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         const fn = function u() {
@@ -49,16 +47,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = items;
         cResult[1] = fn;
-        tmp4 = items;
-        tmp5 = fn;
+        tmp5 = items;
+        tmp6 = fn;
       } else {
-        [tmp4, tmp5] = cResult;
+        [tmp5, tmp6] = cResult;
       }
-      const stateFromStores = useStateFromStores.useStateFromStores(tmp4, tmp5);
-      let tmp8 = null;
+      const tmpResult = useStateFromStores;
+      const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+      let tmp9 = null;
       if (undefined !== stateFromStores) {
-        tmp8 = null;
+        tmp9 = null;
         if (undefined !== otherUser) {
+          let tmp10;
           if (cResult[2] !== stateFromStores) {
             const obj2 = {
               size: native.AvatarSizes.LARGE_48,
@@ -66,20 +66,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               guildId: "Array",
               avatarDecoration: stateFromStores.avatarDecoration,
             };
-            const tmp11 = React4(native.Avatar, obj2);
+            const Avatar = native.Avatar;
+            const tmp12 = React3(Avatar, obj2);
             cResult[2] = stateFromStores;
-            cResult[3] = tmp11;
-            let tmp9 = tmp11;
+            cResult[3] = tmp12;
+            tmp10 = tmp12;
           } else {
-            tmp9 = cResult[3];
+            tmp10 = cResult[3];
           }
           if (cResult[4] === iconStyles) {
-            if (cResult[5] === avatars.icon) {
-              let tmp12 = cResult[6];
+            let tmp13;
+            if (cResult[5] === tmp4.icon) {
+              tmp13 = cResult[6];
             }
             if (cResult[7] === iconSrc) {
-              if (cResult[8] === tmp12) {
-                let tmp13 = cResult[9];
+              let tmp14;
+              let tmp17;
+              if (cResult[8] === tmp13) {
+                tmp14 = cResult[9];
               }
               if (cResult[10] !== otherUser) {
                 const obj3 = {
@@ -88,80 +92,94 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   guildId: "Array",
                   avatarDecoration: otherUser.avatarDecoration,
                 };
-                const tmp18 = React4(native.Avatar, obj3);
+                const Avatar2 = native.Avatar;
+                const tmp19 = React3(Avatar2, obj3);
                 cResult[10] = otherUser;
-                cResult[11] = tmp18;
-                let tmp16 = tmp18;
+                cResult[11] = tmp19;
+                tmp17 = tmp19;
               } else {
-                tmp16 = cResult[11];
+                tmp17 = cResult[11];
               }
-              if (cResult[12] === avatars.avatars) {
-                if (cResult[13] === tmp9) {
-                  if (cResult[14] === tmp13) {
+              if (cResult[12] === tmp4.avatars) {
+                if (cResult[13] === tmp10) {
+                  if (cResult[14] === tmp14) {
+                    let tmp20;
+                    if (cResult[15] === tmp17) {
+                      tmp20 = cResult[16];
+                    }
+                    tmp9 = tmp20;
                   }
                 }
               }
-              const obj4 = { style: avatars.avatars, children: null };
-              const items1 = [tmp9, tmp13, tmp16];
-              obj4.children = items1;
-              const tmp22 = hasOwnProperty(View, obj4);
-              avatars = avatars.avatars;
-              cResult[12] = avatars;
-              cResult[13] = tmp9;
-              cResult[14] = tmp13;
-              cResult[15] = tmp16;
-              cResult[16] = tmp22;
+              const obj4 = { style: tmp4.avatars, children: items1 };
+              items1 = [tmp10, tmp14, tmp17];
+              const tmp23 = hasOwnProperty(View, obj4);
+              cResult[12] = tmp4.avatars;
+              cResult[13] = tmp10;
+              cResult[14] = tmp14;
+              cResult[15] = tmp17;
+              cResult[16] = tmp23;
+              tmp20 = tmp23;
             }
-            const obj5 = { style: tmp12, size: native.Icon.Sizes.EXTRA_SMALL, source: iconSrc };
-            const tmp15 = React4(native.Icon, obj5);
+            const obj5 = { style: tmp13, size: native.Icon.Sizes.EXTRA_SMALL, source: iconSrc };
+            const Icon = native.Icon;
+            const tmp16 = React3(Icon, obj5);
             cResult[7] = iconSrc;
-            cResult[8] = tmp12;
-            cResult[9] = tmp15;
-            tmp13 = tmp15;
+            cResult[8] = tmp13;
+            cResult[9] = tmp16;
+            tmp14 = tmp16;
           }
-          const items2 = [avatars.icon, iconStyles];
+          const items2 = [tmp4.icon, iconStyles];
           cResult[4] = iconStyles;
-          cResult[5] = avatars.icon;
+          cResult[5] = tmp4.icon;
           cResult[6] = items2;
-          tmp12 = items2;
+          tmp13 = items2;
         }
       }
-      return tmp8;
+      return tmp9;
     }
   : (otherUser) => {
+      let currentUser;
+      let iconSrc;
+      let iconStyles;
+      let items1;
+      let items2;
       otherUser = otherUser.otherUser;
       ({ iconSrc, iconStyles } = otherUser);
       const tmp = closure_6();
       const items = [UserStore];
-      const stateFromStores = useStateFromStores.useStateFromStores(items, () => currentUser.getCurrentUser());
+      const obj = useStateFromStores;
+      const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
       let tmp5 = null;
       if (undefined !== stateFromStores) {
         tmp5 = null;
         if (undefined !== otherUser) {
-          const obj2 = { style: tmp.avatars, children: null };
+          const obj2 = { style: tmp.avatars, children: items1 };
           const obj3 = {
             size: native.AvatarSizes.LARGE_48,
             user: stateFromStores,
             guildId: "Array",
             avatarDecoration: stateFromStores.avatarDecoration,
           };
-          const items1 = [React4(native.Avatar, obj3), ,];
-          const obj4 = { style: null, size: null, source: null };
-          const items2 = [tmp.icon, iconStyles];
-          obj4.style = items2;
-          obj4.size = native.Icon.Sizes.EXTRA_SMALL;
-          obj4.source = iconSrc;
-          items1[1] = React4(native.Icon, obj4);
+          const Avatar = native.Avatar;
+          items1 = [React3(Avatar, obj3), ,];
+          const obj4 = { style: items2, size: native.Icon.Sizes.EXTRA_SMALL, source: iconSrc };
+          items2 = [tmp.icon, iconStyles];
+          const Icon = native.Icon;
+          items1[1] = React3(Icon, obj4);
           const obj5 = {
             size: native.AvatarSizes.LARGE_48,
             user: otherUser,
             guildId: "Array",
             avatarDecoration: otherUser.avatarDecoration,
           };
-          items1[2] = React4(native.Avatar, obj5);
-          obj2.children = items1;
+          const Avatar2 = native.Avatar;
+          items1[2] = React3(Avatar2, obj5);
           tmp5 = hasOwnProperty(View, obj2);
         }
       }
       return tmp5;
     };
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterAvatarPair.tsx");
+
+export default tmp4;

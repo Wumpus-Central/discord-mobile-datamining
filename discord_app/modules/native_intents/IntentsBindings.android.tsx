@@ -1,9 +1,7 @@
 // discord_app/modules/native_intents/IntentsBindings.android.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
-const result = size.fileFinishedImporting("modules/native_intents/IntentsBindings.android.tsx");
-
-export default {
+const obj = {
   hasSearch() {
     return false;
   },
@@ -17,3 +15,6 @@ export default {
   resignActivity() {},
   setActivity() {},
 };
+const result = size.fileFinishedImporting("modules/native_intents/IntentsBindings.android.tsx");
+
+export default obj;

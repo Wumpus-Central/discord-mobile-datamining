@@ -1,50 +1,59 @@
 // discord_app/modules/instant_invite/native/action_sheet/invite_to_guilds/GuildInviteRow.tsx
+import react_native from "../../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import Constants from "../../../Constants.tsx";
 import GuildInviteUtils from "../../GuildInviteUtils.tsx";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import GuildInviteSendStateStore from "../../../GuildInviteSendStateStore.tsx";
+import react from "../../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let source;
 
-require = fn;
-const View = fn(17).View;
-const useGuildInviteSendStates = fn(12791).useGuildInviteSendStates;
-const InviteSendStates = fn(7226).InviteSendStates;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/instant_invite/native/action_sheet/invite_to_guilds/GuildInviteRow.tsx",
-);
-
-export default noop.memo(
+const View = react_native.View;
+const useGuildInviteSendStates = GuildInviteSendStateStore.useGuildInviteSendStates;
+const InviteSendStates = Constants.InviteSendStates;
+const jsx = Fragment.jsx;
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (source) => {
-        const cResult = recipientId(guild[6]).c(28);
+        let end;
+        let guild;
+        let recipientId;
+        let row;
+        let start;
+        let tmp2 = guild;
+        let obj = recipientId(guild[6]);
+        const cResult = obj.c(28);
         ({ row, recipientId } = source);
         source = source.source;
         ({ start, end } = source);
         guild = row.guild;
         if (cResult[0] === guild.id) {
+          let tmp4;
           if (cResult[1] === recipientId) {
-            let tmp4 = cResult[2];
+            tmp4 = cResult[2];
           }
           const tmp6 = useGuildInviteSendStates(tmp4);
           if (cResult[3] === guild.id) {
             if (cResult[4] === recipientId) {
+              let tmp7;
               if (cResult[5] === source) {
-                let tmp7 = cResult[6];
+                tmp7 = cResult[6];
               }
               if (cResult[7] === tmp7) {
+                let tmp8;
+                let tmp12;
+                let tmp18;
+                let tmp20;
+                let tmp24;
                 if (cResult[8] === tmp6) {
-                  let tmp8 = cResult[9];
+                  tmp8 = cResult[9];
                 }
                 if (cResult[10] !== guild) {
-                  const obj2 = {
-                    importantForAccessibility: "no-hide-descendants",
-                    accessibilityElementsHidden: true,
-                    children: null,
-                  };
-                  const obj3 = { guild, size: recipientId(tmp2[9]).GuildIconSizes.SMALL };
-                  obj2.children = jsx(source(tmp2[9]), { guild, size: recipientId(tmp2[9]).GuildIconSizes.SMALL });
+                  ({ guild, size: recipientId(tmp2[9]).GuildIconSizes.SMALL });
+                  source(tmp2[9]);
                   const tmp17 = (
                     <View importantForAccessibility="no-hide-descendants" accessibilityElementsHidden>
                       {null}
@@ -52,8 +61,7 @@ export default noop.memo(
                   );
                   cResult[10] = guild;
                   cResult[11] = tmp17;
-                  let tmp12 = tmp17;
-                  const tmp16 = source(tmp2[9]);
+                  tmp12 = tmp17;
                 } else {
                   tmp12 = cResult[11];
                 }
@@ -63,12 +71,11 @@ export default noop.memo(
                   const formatResult = intl.format(recipientId(tmp2[10]).t.zRl6XR, obj4);
                   cResult[12] = row.memberCount;
                   cResult[13] = formatResult;
-                  let tmp18 = formatResult;
+                  tmp18 = formatResult;
                 } else {
                   tmp18 = cResult[13];
                 }
                 if (cResult[14] !== tmp18) {
-                  const obj5 = { variant: "text-xs/medium", color: "text-default", children: tmp18 };
                   const tmp22 = jsx(recipientId(tmp2[11]).Text, {
                     variant: "text-xs/medium",
                     color: "text-default",
@@ -76,15 +83,15 @@ export default noop.memo(
                   });
                   cResult[14] = tmp18;
                   cResult[15] = tmp22;
-                  let tmp20 = tmp22;
+                  tmp20 = tmp22;
                 } else {
                   tmp20 = cResult[15];
                 }
                 if (cResult[16] !== (tmp6 === InviteSendStates.SENDING || tmp6 === InviteSendStates.SENT)) {
-                  const obj6 = { disabled: tmp23 };
-                  cResult[16] = tmp23;
+                  const obj6 = { disabled: tmp6 === InviteSendStates.SENDING || tmp6 === InviteSendStates.SENT };
+                  cResult[16] = tmp6 === InviteSendStates.SENDING || tmp6 === InviteSendStates.SENT;
                   cResult[17] = obj6;
-                  let tmp24 = obj6;
+                  tmp24 = obj6;
                 } else {
                   tmp24 = cResult[17];
                 }
@@ -96,8 +103,9 @@ export default noop.memo(
                           if (cResult[23] === start) {
                             if (cResult[24] === tmp20) {
                               if (cResult[25] === tmp24) {
+                                let tmp25;
                                 if (cResult[26] === tmp8) {
-                                  let tmp25 = cResult[27];
+                                  tmp25 = cResult[27];
                                 }
                                 return tmp25;
                               }
@@ -108,17 +116,6 @@ export default noop.memo(
                     }
                   }
                 }
-                const obj7 = {
-                  icon: tmp12,
-                  label: guild.name,
-                  trailing: tmp8,
-                  subLabel: tmp20,
-                  onPress: tmp7,
-                  disabled: tmp6 === InviteSendStates.SENDING || tmp6 === InviteSendStates.SENT,
-                  accessibilityState: tmp24,
-                  start,
-                  end,
-                };
                 const tmp27 = jsx(recipientId(tmp2[12]).TableRow, {
                   icon: tmp12,
                   label: guild.name,
@@ -142,7 +139,6 @@ export default noop.memo(
                 cResult[27] = tmp27;
                 tmp25 = tmp27;
               }
-              const obj8 = { sendState: tmp6, onPressSend: tmp7 };
               const tmp11 = jsx(source(tmp2[8]), { sendState: tmp6, onPressSend: tmp7 });
               cResult[7] = tmp7;
               cResult[8] = tmp6;
@@ -151,7 +147,8 @@ export default noop.memo(
             }
           }
           const fn2 = function x() {
-            GuildInviteUtils.sendGuildInvite(recipientId, guild.id, source);
+            const obj = GuildInviteUtils;
+            obj.sendGuildInvite(recipientId, guild.id, source);
           };
           cResult[3] = guild.id;
           cResult[4] = recipientId;
@@ -170,14 +167,17 @@ export default noop.memo(
         cResult[1] = recipientId;
         cResult[2] = fn;
         tmp4 = fn;
-        const obj = recipientId(guild[6]);
       }
     : (arg0) => {
+        let end;
+        let row;
+        let start;
         ({ row, recipientId: require, source: importDefault } = arg0);
         function handlePress() {
-          GuildInviteUtils.sendGuildInvite(closure_1_0, guild.id, importDefault);
+          const obj = GuildInviteUtils;
+          obj.sendGuildInvite(require, guild.id, importDefault);
         }
-        guild = row.guild;
+        const guild = row.guild;
         ({ start, end } = arg0);
         const tmp = useGuildInviteSendStates((arg0) => {
           let tmp2;
@@ -186,44 +186,32 @@ export default noop.memo(
           }
           return tmp2;
         });
-        const obj = {
-          importantForAccessibility: "no-hide-descendants",
-          accessibilityElementsHidden: true,
-          children: null,
-        };
-        const obj2 = { guild, size: null };
-        const tmp3 = guild;
+        ({ guild, size: require("GuildIcon").GuildIconSizes.SMALL });
         const tmp4 = jsx(require("InviteButton"), { sendState: tmp, onPressSend: handlePress });
-        obj2.size = require("GuildIcon").GuildIconSizes.SMALL;
-        obj.children = jsx(require("GuildIcon"), { guild, size: null });
-        const tmp5 = require("GuildIcon");
-        const obj3 = { variant: "text-xs/medium", color: "text-default", children: null };
-        const intl = require("util").intl;
-        obj3.children = intl.format(require("util").t.zRl6XR, { count: row.memberCount });
-        let tmp9 = tmp === InviteSendStates.SENDING;
-        const obj4 = { count: row.memberCount };
+        require("GuildIcon");
         const tmp7 = (
           <View importantForAccessibility="no-hide-descendants" accessibilityElementsHidden>
             {null}
           </View>
         );
+        const Text = require("Text/Text").Text;
+        const intl = require("intl").intl;
+        let tmp9 = tmp === InviteSendStates.SENDING;
+        const obj4 = { count: row.memberCount };
+        const tmp3 = guild;
+        const tmp8 = (
+          <Text variant="text-xs/medium" color="text-default">
+            {intl.format(require("intl").t.zRl6XR, obj4)}
+          </Text>
+        );
         if (!tmp9) {
           tmp9 = tmp === InviteSendStates.SENT;
         }
-        const tmp8 = jsx(require("Text/Text").Text, {
-          variant: "text-xs/medium",
-          color: "text-default",
-          children: null,
-        });
         return jsx(require("TableRow").TableRow, {
           icon: tmp7,
           label: guild.name,
           trailing: tmp4,
-          subLabel: jsx(require("Text/Text").Text, {
-            variant: "text-xs/medium",
-            color: "text-default",
-            children: null,
-          }),
+          subLabel: tmp8,
           onPress: handlePress,
           disabled: tmp9,
           accessibilityState: { disabled: tmp9 },
@@ -232,3 +220,8 @@ export default noop.memo(
         });
       },
 );
+const result = size.fileFinishedImporting(
+  "modules/instant_invite/native/action_sheet/invite_to_guilds/GuildInviteRow.tsx",
+);
+
+export default memoResult;

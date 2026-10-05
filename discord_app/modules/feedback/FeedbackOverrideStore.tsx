@@ -1,34 +1,35 @@
 // discord_app/modules/feedback/FeedbackOverrideStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import FeedbackConfig from "FeedbackConfig.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-let closure_2 = {};
-const Store = initializeDefault.Store;
-class HotspotStore extends Store {}
+const React2 = {};
+const Store = get_initializedDefault.Store;
+class HotspotStore extends Store {
+  initialize() {}
+  getFeedbackConfig(ACTIVITY) {
+    return closure_2[ACTIVITY];
+  }
+}
 const prototype = HotspotStore.prototype;
-prototype["initialize"] = function initialize() {};
-prototype["getFeedbackConfig"] = function getFeedbackConfig(ACTIVITY) {
-  return closure_2[ACTIVITY];
-};
 HotspotStore.displayName = "FeedbackOverrideStore";
 HotspotStore.persistKey = "feedbackOverrides";
-const hotspotStore = new HotspotStore(DispatcherDefault, {
+let obj = {
   FEEDBACK_OVERRIDE_SET: function handleSetFeedbackOverride(feedbackType) {
+    let chance;
+    let cooldown;
     feedbackType = feedbackType.feedbackType;
-    const obj = {};
+    const obj = { cooldown, chance };
     ({ cooldown, chance } = feedbackType);
     const merged = Object.assign(FeedbackConfig.FeedbackConfig[feedbackType]);
-    obj.cooldown = cooldown;
-    obj.chance = chance;
     closure_2[feedbackType] = obj;
   },
   FEEDBACK_OVERRIDE_CLEAR: function handleClearFeedbackOverride(arg0) {
-    delete tmp[tmp2];
+    delete closure_2[arg0.feedbackType];
   },
-});
-const size = fn(2);
+};
+const hotspotStore = new HotspotStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/feedback/FeedbackOverrideStore.tsx");
 
 export default hotspotStore;

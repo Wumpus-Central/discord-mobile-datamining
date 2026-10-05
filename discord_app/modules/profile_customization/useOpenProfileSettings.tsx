@@ -1,5 +1,5 @@
 // discord_app/modules/profile_customization/useOpenProfileSettings.tsx
-import _mod19 from "../../../_runtime/metro/00019__.js";
+import react from "../../../_runtime/00019_react.js";
 import Constants from "../../Constants.tsx";
 import UserSettingsConstants from "../user_settings/UserSettingsConstants.tsx";
 import openUserSettings from "../user_settings/core/native/openUserSettings.tsx";
@@ -10,14 +10,18 @@ import UserProfileSettingsStore from "../user_profile/UserProfileSettingsStore.t
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-_mod19.useCallback;
+const useCallback = react.useCallback;
 const UserSettingsSections = Constants.UserSettingsSections;
 let closure_5 = UserSettingsConstants.ProfileCustomizationSubsection;
-const result = size.fileFinishedImporting("modules/profile_customization/useOpenProfileSettings.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = guild(scrollPosition[7]).c(7);
+      let guild;
+      let scrollPosition;
+      let tmp4;
+      let obj = guild(scrollPosition[7]);
+      const cResult = obj.c(7);
+      const tmp = guild;
+      const tmp2 = scrollPosition;
       if (cResult[0] !== arg0) {
         let obj2 = arg0;
         if (undefined === arg0) {
@@ -25,40 +29,43 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[0] = arg0;
         cResult[1] = obj2;
-        let tmp4 = obj2;
+        tmp4 = obj2;
       } else {
         tmp4 = cResult[1];
       }
       guild = tmp4.guild;
       scrollPosition = tmp4.scrollPosition;
       const analyticsLocations = tmp4.analyticsLocations;
-      let obj = guild(scrollPosition[7]);
-      const isEligibleForUserProfileWYSIWYGEditing = guild(scrollPosition[8]).useIsEligibleForUserProfileWYSIWYGEditing(
-        "useOpenProfileSettings",
-      );
+      const tmpResult = tmp(tmp2[8]);
+      const isEligibleForUserProfileWYSIWYGEditing =
+        tmpResult.useIsEligibleForUserProfileWYSIWYGEditing("useOpenProfileSettings");
       if (cResult[2] === analyticsLocations) {
         if (cResult[3] === guild) {
           if (cResult[4] === isEligibleForUserProfileWYSIWYGEditing) {
+            let tmp6;
             if (cResult[5] === scrollPosition) {
-              let tmp6 = cResult[6];
+              tmp6 = cResult[6];
             }
             return tmp6;
           }
         }
       }
       const fn = function c() {
+        let USER_PROFILE;
         if (null != guild) {
-          const guildIdentitySettings = GuildIdentityActionCreators.initGuildIdentitySettings(guild.id);
+          const obj = GuildIdentityActionCreators;
+          const guildIdentitySettings = obj.initGuildIdentitySettings(guild.id);
         }
+        const setState = ProfileCustomizationNavigationStore.setState;
         if (null != guild) {
-          let USER_PROFILE = constants.GUILD;
+          USER_PROFILE = constants.GUILD;
         } else {
           USER_PROFILE = constants.USER_PROFILE;
         }
-        ProfileCustomizationNavigationStore.setState({ subsection: USER_PROFILE, scrollPosition });
-        openUserSettings.openUserSettings({ screen: UserSettingsSections.PROFILE_CUSTOMIZATION });
         const obj2 = { subsection: USER_PROFILE, scrollPosition };
+        setState(obj2);
         const obj3 = { screen: UserSettingsSections.PROFILE_CUSTOMIZATION };
+        openUserSettings.openUserSettings(obj3);
       };
       cResult[2] = analyticsLocations;
       cResult[3] = guild;
@@ -72,26 +79,34 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (arg0 === undefined) {
         obj = {};
       }
-      guild = obj.guild;
+      const guild = obj.guild;
       const scrollPosition = obj.scrollPosition;
+      const analyticsLocations = obj.analyticsLocations;
+      let obj2 = guild(scrollPosition[8]);
       const items = [
         guild,
         scrollPosition,
-        obj.analyticsLocations,
-        guild(scrollPosition[8]).useIsEligibleForUserProfileWYSIWYGEditing("useOpenProfileSettings"),
+        analyticsLocations,
+        obj2.useIsEligibleForUserProfileWYSIWYGEditing("useOpenProfileSettings"),
       ];
       return useCallback(() => {
+        let USER_PROFILE;
         if (null != guild) {
-          const guildIdentitySettings = GuildIdentityActionCreators.initGuildIdentitySettings(guild.id);
+          const obj = GuildIdentityActionCreators;
+          const guildIdentitySettings = obj.initGuildIdentitySettings(guild.id);
         }
+        const setState = ProfileCustomizationNavigationStore.setState;
         if (null != guild) {
-          let USER_PROFILE = constants.GUILD;
+          USER_PROFILE = constants.GUILD;
         } else {
           USER_PROFILE = constants.USER_PROFILE;
         }
-        ProfileCustomizationNavigationStore.setState({ subsection: USER_PROFILE, scrollPosition });
-        openUserSettings.openUserSettings({ screen: UserSettingsSections.PROFILE_CUSTOMIZATION });
         const obj2 = { subsection: USER_PROFILE, scrollPosition };
+        setState(obj2);
         const obj3 = { screen: UserSettingsSections.PROFILE_CUSTOMIZATION };
+        openUserSettings.openUserSettings(obj3);
       }, items);
     };
+const result = size.fileFinishedImporting("modules/profile_customization/useOpenProfileSettings.tsx");
+
+export default tmp4;

@@ -1,30 +1,38 @@
 // discord_app/modules/user_settings/content_and_social/native/RestrictedUserRowLabel.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/RestrictedUserRowLabel.tsx");
-
-export const RestrictedUserRowLabel = ReactCompilerGating.isReactCompilerEnabled()
+let closure_4;
+let hasOwnProperty;
+const View = react_native.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(13);
+      let accessibilityActions;
+      let first;
+      let items;
+      let onAccessibilityAction;
+      let userRecord;
+      const obj = react2;
+      const cResult = obj.c(13);
       ({ userRecord, accessibilityActions, onAccessibilityAction } = arg0);
-      const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
-      const token1 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_COLOR);
+      const obj2 = useToken;
+      const token = obj2.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
+      const obj3 = useToken;
+      const token1 = obj3.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_COLOR);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = util.intl;
-        const stringResult = intl.string(util.t.cSgdvE);
+        const intl = intl2.intl;
+        const stringResult = intl.string(intl2.t.cSgdvE);
         cResult[0] = stringResult;
-        let first = stringResult;
+        first = stringResult;
       } else {
         first = cResult[0];
       }
@@ -34,18 +42,21 @@ export const RestrictedUserRowLabel = ReactCompilerGating.isReactCompilerEnabled
       }
       if (cResult[1] === token1) {
         if (cResult[2] === token) {
+          let tmp9;
           if (cResult[3] === username) {
-            let tmp9 = cResult[4];
+            tmp9 = cResult[4];
           }
-          if (cResult[5] === tmp6) {
+          if ((cResult[5] === null) != userRecord.globalName) {
+            let tmp11;
             if (cResult[6] === userRecord.username) {
-              let tmp11 = cResult[7];
+              tmp11 = cResult[7];
             }
             if (cResult[8] === accessibilityActions) {
               if (cResult[9] === onAccessibilityAction) {
                 if (cResult[10] === tmp9) {
+                  let tmp14;
                   if (cResult[11] === tmp11) {
-                    let tmp14 = cResult[12];
+                    tmp14 = cResult[12];
                   }
                   return tmp14;
                 }
@@ -57,10 +68,9 @@ export const RestrictedUserRowLabel = ReactCompilerGating.isReactCompilerEnabled
               accessibilityHint: first,
               accessibilityActions,
               onAccessibilityAction,
-              children: null,
+              children: items,
             };
-            const items = [tmp9, tmp11];
-            obj4.children = items;
+            items = [tmp9, tmp11];
             const tmp17 = hasOwnProperty(View, obj4);
             cResult[8] = accessibilityActions;
             cResult[9] = onAccessibilityAction;
@@ -70,7 +80,7 @@ export const RestrictedUserRowLabel = ReactCompilerGating.isReactCompilerEnabled
             tmp14 = tmp17;
           }
           let tmp12 = tmp6;
-          if (tmp6) {
+          if (tmp12) {
             const obj5 = {
               variant: "text-xs/medium",
               color: "text-subtle",
@@ -78,15 +88,15 @@ export const RestrictedUserRowLabel = ReactCompilerGating.isReactCompilerEnabled
               includeFontPadding: true,
               children: userRecord.username,
             };
-            tmp12 = React4(Text_Text.Text, obj5);
+            tmp12 = React3(Text_Text.Text, obj5);
           }
-          cResult[5] = tmp6;
+          cResult[5] = null != userRecord.globalName;
           cResult[6] = userRecord.username;
           cResult[7] = tmp12;
           tmp11 = tmp12;
         }
       }
-      const tmp10 = React4(Text_Text.Text, {
+      const tmp10 = React3(Text_Text.Text, {
         variant: token,
         color: token1,
         lineClamp: 1,
@@ -100,30 +110,34 @@ export const RestrictedUserRowLabel = ReactCompilerGating.isReactCompilerEnabled
       tmp9 = tmp10;
     }
   : (userRecord) => {
+      let accessibilityActions;
+      let intl;
+      let items;
+      let onAccessibilityAction;
+      let username;
       userRecord = userRecord.userRecord;
       ({ accessibilityActions, onAccessibilityAction } = userRecord);
-      const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
+      const obj = useToken;
+      const token = obj.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
       let tmp8Result = null != userRecord.globalName;
       const obj3 = {
         accessible: true,
         accessibilityRole: "button",
-        accessibilityHint: null,
-        accessibilityActions: null,
-        onAccessibilityAction: null,
-        children: null,
+        accessibilityHint: intl.string(intl2.t.cSgdvE),
+        accessibilityActions,
+        onAccessibilityAction,
+        children: items,
       };
-      const token1 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_COLOR);
-      const intl = util.intl;
-      obj3.accessibilityHint = intl.string(util.t.cSgdvE);
-      obj3.accessibilityActions = accessibilityActions;
-      obj3.onAccessibilityAction = onAccessibilityAction;
-      const obj4 = { variant: token, color: token1, lineClamp: 1, includeFontPadding: true, children: null };
-      let username = userRecord.globalName;
+      const obj2 = useToken;
+      const token1 = obj2.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_COLOR);
+      intl = intl2.intl;
+      const obj4 = { variant: token, color: token1, lineClamp: 1, includeFontPadding: true, children: username };
+      username = userRecord.globalName;
+      const Text = Text_Text.Text;
       if (username == null) {
         username = userRecord.username;
       }
-      obj4.children = username;
-      const items = [React4(Text_Text.Text, obj4)];
+      items = [React3(Text, obj4)];
       if (tmp8Result) {
         const obj5 = {
           variant: "text-xs/medium",
@@ -132,9 +146,11 @@ export const RestrictedUserRowLabel = ReactCompilerGating.isReactCompilerEnabled
           includeFontPadding: true,
           children: userRecord.username,
         };
-        tmp8Result = React4(Text_Text.Text, obj5);
+        tmp8Result = React3(Text_Text.Text, obj5);
       }
       items[1] = tmp8Result;
-      obj3.children = items;
       return hasOwnProperty(View, obj3);
     };
+const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/RestrictedUserRowLabel.tsx");
+
+export const RestrictedUserRowLabel = tmp4;

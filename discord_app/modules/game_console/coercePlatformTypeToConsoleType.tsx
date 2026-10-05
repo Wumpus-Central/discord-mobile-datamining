@@ -23,14 +23,15 @@ export const coerceConsoleTypeToPlatformType = function coerceConsoleTypeToPlatf
   if (GameConsoleTypes.XBOX === arg0) {
     return PlatformTypes.XBOX;
   } else if (tmp.PLAYSTATION === arg0) {
+    const someResult = arr.some((type) => type.type === constants.PLAYSTATION_STAGING && type.twoWayLink);
     if (!arr.some((type) => type.type === constants.PLAYSTATION && type.twoWayLink)) {
+      let PLAYSTATION;
       if (someResult) {
-        let PLAYSTATION = PlatformTypes.PLAYSTATION_STAGING;
+        PLAYSTATION = PlatformTypes.PLAYSTATION_STAGING;
       }
       return PLAYSTATION;
     }
     PLAYSTATION = PlatformTypes.PLAYSTATION;
-    someResult = arr.some((type) => type.type === constants.PLAYSTATION_STAGING && type.twoWayLink);
   } else {
     return null;
   }

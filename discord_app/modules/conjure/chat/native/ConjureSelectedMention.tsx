@@ -1,40 +1,36 @@
 // discord_app/modules/conjure/chat/native/ConjureSelectedMention.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = {
-  chip: {
-    color: nativeDefault.colors.MENTION_FOREGROUND,
-    backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
-    borderRadius: 3,
-    paddingHorizontal: 2,
-  },
-};
-let closure_3 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const obj3 = {
+let obj2;
+const jsx = Fragment.jsx;
+let obj = { chip: obj2 };
+obj2 = {
   color: nativeDefault.colors.MENTION_FOREGROUND,
   backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
   borderRadius: 3,
   paddingHorizontal: 2,
 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureSelectedMention.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_3 = createStyles.createStyles(obj);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(4);
+      let label;
+      let variant;
+      const obj = react2;
+      const cResult = obj.c(4);
       ({ label, variant } = arg0);
       const tmp4 = closure_3();
       if (cResult[0] === label) {
         if (cResult[1] === tmp4.chip) {
+          let tmp5;
           if (cResult[2] === variant) {
-            let tmp5 = cResult[3];
+            tmp5 = cResult[3];
           }
           return tmp5;
         }
@@ -45,10 +41,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = variant;
       cResult[3] = tmp6;
       tmp5 = tmp6;
-      const obj2 = { variant, style: tmp4.chip, children: label };
     }
   : (arg0) => {
+      let label;
+      let variant;
       ({ label, variant } = arg0);
-      const tmp = closure_3();
       return jsx(Text_Text.Text, { variant, style: closure_3().chip, children: label });
     };
+const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureSelectedMention.tsx");
+
+export default tmp3;

@@ -2,12 +2,13 @@
 import ApexExperiment from "../../../experiments/apex/index.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const apexExperiment = ApexExperiment.createApexExperiment({
+const obj = {
   kind: "user",
   name: "2026-09-markdown-parse-sample",
   defaultConfig: { sampleRate: 0 },
   variations: { 0: { sampleRate: 0.001 }, 1: { sampleRate: 0.0001 }, 2: { sampleRate: 0.01 } },
-});
+};
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/MarkdownParseSampleExperiment.tsx");
 
 export default apexExperiment;

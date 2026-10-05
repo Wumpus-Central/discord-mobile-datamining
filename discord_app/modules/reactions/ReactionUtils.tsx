@@ -1,22 +1,26 @@
 // discord_app/modules/reactions/ReactionUtils.tsx
-import util from "../../intl/index.native.tsx";
+import intl2 from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
+import NotificationConstants from "../notifications/NotificationConstants.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import MessageReactionsTypes from "../messages/MessageReactionsTypes.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const Constants = fn(1085);
+let closure_4;
+let hasOwnProperty;
 ({ AnalyticsSections: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
-const constants3 = fn(4522).NotificationSettingsUpdateType;
-const size = fn(2);
+const constants3 = NotificationConstants.NotificationSettingsUpdateType;
 let result = size.fileFinishedImporting("modules/reactions/ReactionUtils.tsx");
 
 export const MAX_REACTIONS = 20;
 export const getReactionEmojiName = function getReactionEmojiName(emoji) {
+  let result;
   if (null == emoji.id) {
-    let result = UnicodeEmojisDefault.convertSurrogateToName(emoji.name);
+    const obj = UnicodeEmojisDefault;
+    result = obj.convertSurrogateToName(emoji.name);
   } else {
     const _HermesInternal = HermesInternal;
     result = ":" + emoji.name + ":";
@@ -24,93 +28,97 @@ export const getReactionEmojiName = function getReactionEmojiName(emoji) {
   return result;
 };
 export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayName(selected, count, emoji, arg3) {
-  const t = util.t;
-  if (arg3) {
+  let PirBBE;
+  let str2;
+  let str3;
+  let tmp6;
+  const t = intl2.t;
+  const tmp3 = arg3;
+  if (tmp3) {
+    let i9DXqM;
+    let tmp10;
     if (selected) {
-      let i9DXqM = t.i9DXqM;
+      i9DXqM = t.i9DXqM;
+      tmp10 = require;
     } else {
       i9DXqM = t["Z/l+qu"];
+      tmp10 = require;
     }
+    tmp6 = tmp10;
+    PirBBE = i9DXqM;
+  } else if (selected) {
+    PirBBE = t.CLuzw5;
+    tmp6 = require;
   } else {
-    if (selected) {
-      let PirBBE = t.CLuzw5;
-      let tmp5 = require;
-    } else {
-      PirBBE = t.PirBBE;
-      tmp5 = require;
-    }
-    const intl = tmp5(1126).intl;
-    const obj = { reactions: count, emojiName: null };
-    if (null == emoji.id) {
-      let str2 = UnicodeEmojisDefault.convertSurrogateToName(emoji.name);
-    } else {
-      const _HermesInternal = HermesInternal;
-      str2 = ":" + emoji.name + ":";
-    }
-    let str3;
-    if (str2 != null) {
-      const str5 = str2.replace(/[:_]/g, " ");
-      if (str5 != null) {
-        str3 = str5.trim();
-      }
-    }
-    if (str3 == null) {
-      str3 = "";
-    }
-    obj.emojiName = str3;
-    return intl.formatToPlainString(PirBBE, obj);
+    PirBBE = t.PirBBE;
+    tmp6 = require;
   }
+  const intl = tmp6(1126).intl;
+  const formatToPlainString = intl.formatToPlainString;
+  const obj = { reactions: count, emojiName: str3 };
+  if (null == emoji.id) {
+    const obj2 = UnicodeEmojisDefault;
+    str2 = obj2.convertSurrogateToName(emoji.name);
+  } else {
+    const _HermesInternal = HermesInternal;
+    str2 = ":" + emoji.name + ":";
+  }
+  str3 = undefined;
+  if (str2 != null) {
+    const str5 = str2.replace(/[:_]/g, " ");
+    if (str5 != null) {
+      str3 = str5.trim();
+    }
+  }
+  if (str3 == null) {
+    str3 = "";
+  }
+  return formatToPlainString(PirBBE, obj);
 };
 export const isMeReaction = function isMeReaction(me, me_burst, arg2) {
-  let tmp3 = arg2 === MessageReactionsTypes.ReactionTypes.BURST;
-  if (tmp3) {
-    tmp3 = true === me_burst;
-  }
+  let tmp3 = arg2 === MessageReactionsTypes.ReactionTypes.BURST && true === me_burst;
   if (!tmp3) {
-    let tmp5 = arg2 === MessageReactionsTypes.ReactionTypes.NORMAL;
-    if (tmp5) {
-      tmp5 = true === me;
-    }
-    tmp3 = tmp5;
+    tmp3 = arg2 === MessageReactionsTypes.ReactionTypes.NORMAL && true === me;
+    const tmp5 = arg2 === MessageReactionsTypes.ReactionTypes.NORMAL && true === me;
   }
   return tmp3;
 };
 export const toReactionEmoji = function toReactionEmoji(byName) {
+  let str;
   let id = byName.id;
   if (id == null) {
     id = null;
   }
-  const obj = { id, name: null, animated: null };
-  let str = null != byName.id ? byName.name : byName.optionallyDiverseSequence;
+  const obj = { id, name: str, animated: Boolean(byName.animated) };
+  str = null != byName.id ? byName.name : byName.optionallyDiverseSequence;
   if (str == null) {
     str = byName.name;
   }
   if (str == null) {
     str = "";
   }
-  obj.name = str;
-  obj.animated = Boolean(byName.animated);
   return obj;
 };
 export const isCustomReactionEmojiId = function isCustomReactionEmojiId(emojiId) {
-  let tmp = null != emojiId;
+  let tmp = null != emojiId && "" !== emojiId;
   if (tmp) {
-    tmp = "" !== emojiId;
+    let tmp2;
+    if (typeof emojiId === "number") {
+      tmp2 = 0 !== emojiId;
+    } else {
+      const _String = String;
+      tmp2 = "0" !== String(emojiId);
+    }
+    tmp = tmp2;
   }
-  if (!tmp) {
-    return tmp;
-  } else if (typeof emojiId === "number") {
-    let tmp2 = 0 !== emojiId;
-  } else {
-    const _String = String;
-    tmp2 = "0" !== String(emojiId);
-  }
+  return tmp;
 };
 export const emojiEquals = function emojiEquals(emoji, id2) {
   if (null != id2.id) {
+    let id;
     if (null != emoji.id) {
       const _HermesInternal = HermesInternal;
-      let id = "" + emoji.id;
+      id = "" + emoji.id;
     } else {
       id = emoji.id;
     }
@@ -121,8 +129,9 @@ export const emojiEquals = function emojiEquals(emoji, id2) {
   }
 };
 export const getBurstAnalyticsSection = function getBurstAnalyticsSection(isThread) {
+  let FORUM_CHANNEL_TEXT_AREA;
   if (isThread.isThread()) {
-    let FORUM_CHANNEL_TEXT_AREA = constants.THREAD_TEXT_AREA;
+    FORUM_CHANNEL_TEXT_AREA = constants.THREAD_TEXT_AREA;
   } else if (isThread.isForumPost()) {
     FORUM_CHANNEL_TEXT_AREA = constants.FORUM_CHANNEL_TEXT_AREA;
   } else {
@@ -132,17 +141,20 @@ export const getBurstAnalyticsSection = function getBurstAnalyticsSection(isThre
 };
 export const shouldApplyReaction = function shouldApplyReaction(optimistic) {
   optimistic = optimistic.optimistic;
+  const userId = optimistic.userId;
   if (optimistic) {
-    optimistic = AuthenticationStore.getId() !== optimistic.userId;
+    optimistic = AuthenticationStore.getId() !== userId;
   }
   return !optimistic;
 };
 export const updateReactionNotificationsSetting = function updateReactionNotificationsSetting(NumberResult, setting) {
   const ReactionNotifications = UserSettings.ReactionNotifications;
   ReactionNotifications.updateSetting(NumberResult);
-  AnalyticsUtilsDefault.track(constants2.NOTIFICATION_SETTINGS_UPDATED, {
+  const obj = AnalyticsUtilsDefault;
+  const obj2 = {
     update_type: constants3.ACCOUNT,
     reaction_notifications: NumberResult,
     reaction_notifications_old: setting,
-  });
+  };
+  obj.track(hasOwnProperty.NOTIFICATION_SETTINGS_UPDATED, obj2);
 };

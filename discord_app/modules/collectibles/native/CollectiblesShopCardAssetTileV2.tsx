@@ -1,6 +1,7 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardAssetTileV2.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import CollectiblesShopConstants from "../CollectiblesShopConstants.tsx";
 import FractionalPremiumSKUs from "../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
@@ -18,28 +19,39 @@ import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
 import ProfileFrameSamplePreviewDefault from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
 import NameplateCardPreviewDefault from "../nameplates/native/NameplateCardPreview.tsx";
 import _modDef8499 from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
-import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import FractionalNitroCoinIllustration2 from "FractionalNitroCoinIllustration.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const EXTERNAL_PRODUCT_SKU_IDS = fn(1087).EXTERNAL_PRODUCT_SKU_IDS;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const diff = fn(8418).COLLECTIBLES_SHOP_CARD_HEIGHT - 2 * nativeDefault.space.PX_16;
-const createStyles = fn(4890);
+let StyleSheet;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let obj3;
+let size;
+let size1;
+({ View: hasOwnProperty, StyleSheet } = react_native);
+const EXTERNAL_PRODUCT_SKU_IDS = CollectiblesShopConstants.EXTERNAL_PRODUCT_SKU_IDS;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+const diff = CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_HEIGHT - 2 * nativeDefault.space.PX_16;
+let c9 = diff;
+let createStyles = createStyles_mod;
 let obj = {
-  assetContainer: null,
-  overlayContainer: null,
-  profileEffectContainer: null,
-  profileFrameContainer: null,
-  externalProductImage: null,
-  purchasedOrDisabled: null,
-  overlayIcon: null,
+  assetContainer: size,
+  overlayContainer: obj2,
+  profileEffectContainer: size1,
+  profileFrameContainer: { width: "100%", height: diff, alignItems: "center" },
+  externalProductImage: { width: 80, height: 80, resizeMode: "contain" },
+  purchasedOrDisabled: { opacity: 0.4 },
+  overlayIcon: obj3,
 };
-let size = {
+size = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -48,104 +60,112 @@ let size = {
   width: "100%",
   borderRadius: nativeDefault.radii.sm,
 };
-obj.assetContainer = size;
-let obj3 = {};
+createStyles = createStyles.createStyles;
+obj2 = { justifyContent: "center", alignItems: "center", width: "100%", height: "75%" };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj3.justifyContent = "center";
-obj3.alignItems = "center";
-obj3.width = "100%";
-obj3.height = "75%";
-obj.overlayContainer = obj3;
-let size1 = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.profileEffectContainer = size1;
-obj.profileFrameContainer = { width: "100%", height: diff, alignItems: "center" };
-obj.externalProductImage = { width: 80, height: 80, resizeMode: "contain" };
-obj.purchasedOrDisabled = { opacity: 0.4 };
-obj.overlayIcon = { position: "absolute", opacity: 1, color: nativeDefault.colors.ICON_STRONG, fontWeight: "bold" };
-let closure_10 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
+size1 = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj3 = { position: "absolute", opacity: 1, color: nativeDefault.colors.ICON_STRONG, fontWeight: "bold" };
+let closure_10 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(5);
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(5);
       const tmp4 = closure_10();
       if (cResult[0] !== tmp4.overlayIcon) {
         const obj2 = { size: "lg", style: tmp4.overlayIcon };
-        const tmp7 = React5(CheckmarkLargeBoldIcon.CheckmarkLargeBoldIcon, obj2);
+        const tmp7 = metroImportDefault(CheckmarkLargeBoldIcon.CheckmarkLargeBoldIcon, obj2);
         cResult[0] = tmp4.overlayIcon;
         cResult[1] = tmp7;
-        let tmp5 = tmp7;
+        tmp5 = tmp7;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === tmp4.overlayContainer) {
+        let tmp8;
         if (cResult[3] === tmp5) {
-          let tmp8 = cResult[4];
+          tmp8 = cResult[4];
         }
         return tmp8;
       }
-      const tmp9 = React5(hasOwnProperty, { style: tmp4.overlayContainer, children: tmp5 });
+      const obj3 = { style: tmp4.overlayContainer, children: tmp5 };
+      const tmp9 = metroImportDefault(hasOwnProperty, obj3);
       cResult[2] = tmp4.overlayContainer;
       cResult[3] = tmp5;
       cResult[4] = tmp9;
       tmp8 = tmp9;
-      const obj3 = { style: tmp4.overlayContainer, children: tmp5 };
     }
   : () => {
+      let obj2;
       const tmp = closure_10();
       const obj = {
         style: tmp.overlayContainer,
-        children: React5(CheckmarkLargeBoldIcon.CheckmarkLargeBoldIcon, { size: "lg", style: tmp.overlayIcon }),
+        children: metroImportDefault(CheckmarkLargeBoldIcon.CheckmarkLargeBoldIcon, obj2),
       };
-      return React5(hasOwnProperty, obj);
+      obj2 = { size: "lg", style: tmp.overlayIcon };
+      return metroImportDefault(hasOwnProperty, obj);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(5);
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(5);
       const tmp4 = closure_10();
       if (cResult[0] !== tmp4.overlayIcon) {
         const obj2 = { size: "lg", style: tmp4.overlayIcon };
-        const tmp7 = React5(LockIcon.LockIcon, obj2);
+        const tmp7 = metroImportDefault(LockIcon.LockIcon, obj2);
         cResult[0] = tmp4.overlayIcon;
         cResult[1] = tmp7;
-        let tmp5 = tmp7;
+        tmp5 = tmp7;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === tmp4.overlayContainer) {
+        let tmp8;
         if (cResult[3] === tmp5) {
-          let tmp8 = cResult[4];
+          tmp8 = cResult[4];
         }
         return tmp8;
       }
-      const tmp9 = React5(hasOwnProperty, { style: tmp4.overlayContainer, children: tmp5 });
+      const obj3 = { style: tmp4.overlayContainer, children: tmp5 };
+      const tmp9 = metroImportDefault(hasOwnProperty, obj3);
       cResult[2] = tmp4.overlayContainer;
       cResult[3] = tmp5;
       cResult[4] = tmp9;
       tmp8 = tmp9;
-      const obj3 = { style: tmp4.overlayContainer, children: tmp5 };
     }
   : () => {
+      let obj2;
       const tmp = closure_10();
-      const obj = {
-        style: tmp.overlayContainer,
-        children: React5(LockIcon.LockIcon, { size: "lg", style: tmp.overlayIcon }),
-      };
-      return React5(hasOwnProperty, obj);
+      const obj = { style: tmp.overlayContainer, children: metroImportDefault(LockIcon.LockIcon, obj2) };
+      obj2 = { size: "lg", style: tmp.overlayIcon };
+      return metroImportDefault(hasOwnProperty, obj);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   ? (isDisabled) => {
-      const cResult = c.c(14);
+      let cardWidth;
+      let disableBundleStaticBackground;
+      let isPurchased;
+      let muteBundleStaticBackground;
+      let product;
+      const obj = react2;
+      const cResult = obj.c(14);
       ({ product, isPurchased, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth } = isDisabled);
+      isDisabled = isDisabled.isDisabled;
       const tmp4 = closure_10();
-      const productType = CollectiblesProductUtils.getProductType(product);
+      const obj2 = CollectiblesProductUtils;
+      const productType = obj2.getProductType(product);
       if (productType !== CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT) {
+        let str;
+        let tmp6;
         if (productType !== CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME) {
-          let str = "75%";
+          str = "75%";
         }
         if (!isPurchased) {
-          isPurchased = isDisabled.isDisabled;
+          isPurchased = isDisabled;
         }
         if (isPurchased) {
           isPurchased = tmp4.purchasedOrDisabled;
@@ -154,24 +174,27 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = { height: str };
           cResult[0] = str;
           cResult[1] = obj3;
-          let tmp6 = obj3;
+          tmp6 = obj3;
         } else {
           tmp6 = cResult[1];
         }
         if (cResult[2] === tmp4.overlayContainer) {
           if (cResult[3] === isPurchased) {
+            let tmp7;
             if (cResult[4] === tmp6) {
-              let tmp7 = cResult[5];
+              tmp7 = cResult[5];
             }
             if (cResult[6] === cardWidth) {
               if (cResult[7] === disableBundleStaticBackground) {
                 if (cResult[8] === muteBundleStaticBackground) {
+                  let tmp8;
                   if (cResult[9] === product) {
-                    let tmp8 = cResult[10];
+                    tmp8 = cResult[10];
                   }
                   if (cResult[11] === tmp7) {
+                    let tmp12;
                     if (cResult[12] === tmp8) {
-                      let tmp12 = cResult[13];
+                      tmp12 = cResult[13];
                     }
                     return tmp12;
                   }
@@ -181,7 +204,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     needsOffscreenAlphaCompositing: true,
                     children: tmp8,
                   };
-                  const tmp15 = React5(hasOwnProperty, obj4);
+                  const tmp15 = metroImportDefault(hasOwnProperty, obj4);
                   cResult[11] = tmp7;
                   cResult[12] = tmp8;
                   cResult[13] = tmp15;
@@ -190,7 +213,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj5 = { product, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth };
-            const tmp11 = React5(closure_14, obj5);
+            const tmp11 = metroImportDefault(closure_14, obj5);
             cResult[6] = cardWidth;
             cResult[7] = disableBundleStaticBackground;
             cResult[8] = muteBundleStaticBackground;
@@ -209,13 +232,22 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       str = "100%";
     }
   : (arg0) => {
+      let cardWidth;
+      let disableBundleStaticBackground;
+      let isDisabled;
+      let isPurchased;
+      let muteBundleStaticBackground;
+      let obj4;
+      let product;
       ({ product, isPurchased } = arg0);
       ({ isDisabled, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth } = arg0);
       const tmp = closure_10();
-      const productType = CollectiblesProductUtils.getProductType(product);
+      const obj = CollectiblesProductUtils;
+      const productType = obj.getProductType(product);
       if (productType !== CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT) {
+        let str;
         if (productType !== CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME) {
-          let str = "75%";
+          str = "75%";
         }
         const items = [tmp.overlayContainer, ,];
         if (!isPurchased) {
@@ -224,38 +256,46 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         if (isPurchased) {
           isPurchased = tmp.purchasedOrDisabled;
         }
-        const obj2 = {
-          style: null,
-          renderToHardwareTextureAndroid: true,
-          needsOffscreenAlphaCompositing: true,
-          children: null,
-        };
         items[1] = isPurchased;
         const obj3 = { height: str };
         items[2] = obj3;
-        obj2.style = items;
-        const obj4 = { product, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth };
-        obj2.children = React5(closure_14, obj4);
-        return React5(hasOwnProperty, obj2);
+        const obj2 = {
+          style: items,
+          renderToHardwareTextureAndroid: true,
+          needsOffscreenAlphaCompositing: true,
+          children: metroImportDefault(closure_14, obj4),
+        };
+        obj4 = { product, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth };
+        return metroImportDefault(hasOwnProperty, obj2);
       }
       str = "100%";
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(29);
+      let cardWidth;
+      let disableBundleStaticBackground;
+      let firstAvatarDecoration;
+      let firstNameplate;
+      let firstProfileEffect;
+      let muteBundleStaticBackground;
+      let product;
+      let tmp6;
+      const obj = react2;
+      const cResult = obj.c(29);
       ({ product, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth } = arg0);
       const tmp4 = closure_10();
-      const shopProductItems = useShopProductItems.useShopProductItems(product);
+      const obj2 = useShopProductItems;
+      const shopProductItems = obj2.useShopProductItems(product);
       ({ firstProfileEffect, firstAvatarDecoration, firstNameplate } = shopProductItems);
       if (cardWidth == null) {
         cardWidth = CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_WIDTH;
       }
       if (cResult[0] !== cardWidth) {
-        const size = { width: cardWidth, height: CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_HEIGHT };
+        size = { width: cardWidth, height: CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_HEIGHT };
         cResult[0] = cardWidth;
         cResult[1] = size;
-        let tmp6 = size;
+        tmp6 = size;
       } else {
         tmp6 = cResult[1];
       }
@@ -266,8 +306,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[5] === firstNameplate) {
                 if (cResult[6] === firstProfileEffect) {
                   if (cResult[7] === muteBundleStaticBackground) {
+                    let tmp46;
                     if (cResult[8] === product.previewAssets) {
-                      let tmp46 = cResult[9];
+                      tmp46 = cResult[9];
                     }
                     return tmp46;
                   }
@@ -286,7 +327,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           mutedStaticBackground: muteBundleStaticBackground,
           targetSize: tmp6,
         };
-        const tmp49 = React5(BundleSampleV2Default, obj3);
+        const tmp49 = metroImportDefault(BundleSampleV2Default, obj3);
         cResult[2] = tmp6;
         cResult[3] = disableBundleStaticBackground;
         cResult[4] = firstAvatarDecoration;
@@ -297,20 +338,22 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp49;
         tmp46 = tmp49;
       } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
+        let tmp40;
+        let tmp42;
         const _Symbol = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           const obj4 = { uri: _modDef8499 };
           cResult[10] = obj4;
-          let tmp40 = obj4;
+          tmp40 = obj4;
         } else {
           tmp40 = cResult[10];
         }
         if (cResult[11] !== tmp4.externalProductImage) {
           const obj5 = { source: tmp40, style: tmp4.externalProductImage };
-          const tmp45 = React5(FastImageDefault, obj5);
+          const tmp45 = metroImportDefault(FastImageDefault, obj5);
           cResult[11] = tmp4.externalProductImage;
           cResult[12] = tmp45;
-          let tmp42 = tmp45;
+          tmp42 = tmp45;
         } else {
           tmp42 = cResult[12];
         }
@@ -318,16 +361,18 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const ALL = FractionalPremiumSKUs.FractionalPremiumSKUsSets.ALL;
         if (ALL.has(product.skuId)) {
+          let tmp36;
           if (cResult[13] !== product.skuId) {
             const size1 = {
               skuId: product.skuId,
-              width: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.CARD,
-              height: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.CARD,
+              width: FractionalNitroCoinIllustration2.FRACTIONAL_NITRO_COIN_SIZE.CARD,
+              height: FractionalNitroCoinIllustration2.FRACTIONAL_NITRO_COIN_SIZE.CARD,
             };
-            const tmp38 = React5(FractionalNitroCoinIllustration.FractionalNitroCoinIllustration, size1);
+            const FractionalNitroCoinIllustration = FractionalNitroCoinIllustration2.FractionalNitroCoinIllustration;
+            const tmp38 = metroImportDefault(FractionalNitroCoinIllustration, size1);
             cResult[13] = product.skuId;
             cResult[14] = tmp38;
-            let tmp36 = tmp38;
+            tmp36 = tmp38;
           } else {
             tmp36 = cResult[14];
           }
@@ -339,72 +384,79 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             type = first.type;
           }
           if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
+            let tmp32;
             if (cResult[15] !== first) {
               const obj6 = { item: first, size: 100 };
-              const tmp35 = React5(AvatarDecorationSampleV2Default, obj6);
+              const tmp35 = metroImportDefault(AvatarDecorationSampleV2Default, obj6);
               cResult[15] = first;
               cResult[16] = tmp35;
-              let tmp32 = tmp35;
+              tmp32 = tmp35;
             } else {
               tmp32 = cResult[16];
             }
             return tmp32;
           } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
+            let tmp24;
             if (cResult[17] !== first) {
               const obj7 = { item: first, hideBackground: true };
-              const tmp27 = React5(ProfileEffectSampleV2Default, obj7);
+              const tmp27 = metroImportDefault(ProfileEffectSampleV2Default, obj7);
               cResult[17] = first;
               cResult[18] = tmp27;
-              let tmp24 = tmp27;
+              tmp24 = tmp27;
             } else {
               tmp24 = cResult[18];
             }
             if (cResult[19] === tmp4.profileEffectContainer) {
+              let tmp28;
               if (cResult[20] === tmp24) {
-                let tmp28 = cResult[21];
+                tmp28 = cResult[21];
               }
               return tmp28;
             }
             const obj8 = { style: tmp4.profileEffectContainer, children: tmp24 };
-            const tmp31 = React5(hasOwnProperty, obj8);
+            const tmp31 = metroImportDefault(hasOwnProperty, obj8);
             cResult[19] = tmp4.profileEffectContainer;
             cResult[20] = tmp24;
             cResult[21] = tmp31;
             tmp28 = tmp31;
           } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
+            let tmp14;
             if (cResult[22] !== first) {
               const obj9 = {
                 profileFrame: first,
                 previewWidth: CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_WIDTH - nativeDefault.space.PX_32,
-                previewHeight: diff,
+                previewHeight,
                 profileBackgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
               };
-              const tmp19 = React5(ProfileFrameSamplePreviewDefault, obj9);
+              const tmp17 = ProfileFrameSamplePreviewDefault;
+              const tmp19 = metroImportDefault(tmp17, obj9);
               cResult[22] = first;
               cResult[23] = tmp19;
-              let tmp14 = tmp19;
+              tmp14 = tmp19;
             } else {
               tmp14 = cResult[23];
             }
             if (cResult[24] === tmp4.profileFrameContainer) {
+              let tmp20;
               if (cResult[25] === tmp14) {
-                let tmp20 = cResult[26];
+                tmp20 = cResult[26];
               }
               return tmp20;
             }
             const obj10 = { style: tmp4.profileFrameContainer, children: tmp14 };
-            const tmp23 = React5(hasOwnProperty, obj10);
+            const tmp23 = metroImportDefault(hasOwnProperty, obj10);
             cResult[24] = tmp4.profileFrameContainer;
             cResult[25] = tmp14;
             cResult[26] = tmp23;
             tmp20 = tmp23;
           } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
+            let tmp10;
             if (cResult[27] !== first) {
               const obj11 = { item: first };
-              const tmp13 = React5(NameplateCardPreviewDefault, obj11);
+              const tmp13 = metroImportDefault(NameplateCardPreviewDefault, obj11);
               cResult[27] = first;
               cResult[28] = tmp13;
-              let tmp10 = tmp13;
+              tmp10 = tmp13;
             } else {
               tmp10 = cResult[28];
             }
@@ -416,21 +468,30 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }
     }
   : (arg0) => {
+      let cardWidth;
+      let disableBundleStaticBackground;
+      let firstAvatarDecoration;
+      let firstNameplate;
+      let firstProfileEffect;
+      let muteBundleStaticBackground;
+      let obj4;
+      let obj7;
+      let obj9;
+      let product;
+      let tmp15;
       ({ product, cardWidth } = arg0);
       ({ disableBundleStaticBackground, muteBundleStaticBackground } = arg0);
       const tmp = closure_10();
-      const shopProductItems = cardWidth(7842).useShopProductItems(product);
+      const obj = cardWidth(7842);
+      const shopProductItems = obj.useShopProductItems(product);
       const items = [cardWidth];
       ({ firstProfileEffect, firstAvatarDecoration, firstNameplate } = shopProductItems);
-      const memo = noop.useMemo(() => {
+      const memo = react.useMemo(() => {
         let COLLECTIBLES_SHOP_CARD_WIDTH = cardWidth;
         if (cardWidth == null) {
           COLLECTIBLES_SHOP_CARD_WIDTH = CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_WIDTH;
         }
-        const size = {
-          width: COLLECTIBLES_SHOP_CARD_WIDTH,
-          height: CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_HEIGHT,
-        };
+        size = { width: COLLECTIBLES_SHOP_CARD_WIDTH, height: CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_HEIGHT };
         return size;
       }, items);
       if (product.type === cardWidth(1980).CollectiblesItemType.BUNDLE) {
@@ -446,20 +507,20 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         };
         return closure_7(BundleSampleV2Default, obj2);
       } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
-        const obj3 = { source: null, style: null };
-        const obj4 = { uri: _modDef8499 };
-        obj3.source = obj4;
-        obj3.style = tmp.externalProductImage;
-        return closure_7(FastImageDefault, obj3);
+        const obj3 = { source: obj4, style: tmp.externalProductImage };
+        obj4 = { uri: _modDef8499 };
+        const tmp25 = FastImageDefault;
+        return closure_7(tmp25, obj3);
       } else {
         const ALL = cardWidth(1088).FractionalPremiumSKUsSets.ALL;
         if (ALL.has(product.skuId)) {
-          let size = {
+          size = {
             skuId: product.skuId,
             width: cardWidth(8500).FRACTIONAL_NITRO_COIN_SIZE.CARD,
             height: cardWidth(8500).FRACTIONAL_NITRO_COIN_SIZE.CARD,
           };
-          return closure_7(cardWidth(8500).FractionalNitroCoinIllustration, size);
+          const FractionalNitroCoinIllustration = cardWidth(8500).FractionalNitroCoinIllustration;
+          return closure_7(FractionalNitroCoinIllustration, size);
         } else {
           const first = _slicedToArray(product.items, 1)[0];
           let type;
@@ -470,19 +531,18 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             const obj5 = { item: first, size: 100 };
             return closure_7(AvatarDecorationSampleV2Default, obj5);
           } else if (cardWidth(1980).CollectiblesItemType.PROFILE_EFFECT === type) {
-            const obj6 = { style: tmp.profileEffectContainer, children: null };
-            const obj7 = { item: first, hideBackground: true };
-            obj6.children = closure_7(ProfileEffectSampleV2Default, obj7);
+            const obj6 = { style: tmp.profileEffectContainer, children: closure_7(ProfileEffectSampleV2Default, obj7) };
+            obj7 = { item: first, hideBackground: true };
             return closure_7(closure_5, obj6);
           } else if (cardWidth(1980).CollectiblesItemType.PROFILE_FRAME === type) {
-            const obj8 = { style: tmp.profileFrameContainer, children: null };
-            const obj9 = {
+            const obj8 = { style: tmp.profileFrameContainer, children: closure_7(tmp15, obj9) };
+            obj9 = {
               profileFrame: first,
               previewWidth: cardWidth(8418).COLLECTIBLES_SHOP_CARD_WIDTH - nativeDefault.space.PX_32,
               previewHeight,
               profileBackgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
             };
-            obj8.children = closure_7(ProfileFrameSamplePreviewDefault, obj9);
+            tmp15 = ProfileFrameSamplePreviewDefault;
             return closure_7(closure_5, obj8);
           } else if (cardWidth(1980).CollectiblesItemType.NAMEPLATE === type) {
             const obj10 = { item: first };
@@ -492,94 +552,109 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const obj = cardWidth(7842);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(8);
+      let children;
+      let solidBackground;
+      let tmp10;
+      const obj = react2;
+      const cResult = obj.c(8);
       ({ children, solidBackground } = arg0);
-      const tmp5 = closure_10();
       const tmp4 = undefined !== solidBackground && solidBackground;
-      const tmpResult = ColorUtils;
-      const tmpResult3 = ColorUtils;
+      const tmp5 = closure_10();
+      const hexToRgbaString = ColorUtils.hexToRgbaString;
+      ColorUtils;
+      const hexWithOpacity = ColorUtils.hexWithOpacity;
+      ColorUtils;
       let num = 0.8;
-      const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+      const tmpResult4 = useToken;
+      const token = tmpResult4.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
       if (tmp4) {
         num = 1;
       }
-      const hexToRgbaStringResult = tmpResult.hexToRgbaString(tmpResult3.hexWithOpacity(token, num));
+      const hexToRgbaStringResult = hexToRgbaString(hexWithOpacity(token, num));
       if (cResult[0] !== hexToRgbaStringResult) {
         const obj2 = { backgroundColor: hexToRgbaStringResult };
         cResult[0] = hexToRgbaStringResult;
         cResult[1] = obj2;
-        let tmp8 = obj2;
+        tmp10 = obj2;
       } else {
-        tmp8 = cResult[1];
+        tmp10 = cResult[1];
       }
       if (cResult[2] === tmp5.assetContainer) {
-        if (cResult[3] === tmp8) {
-          let tmp9 = cResult[4];
+        let tmp11;
+        if (cResult[3] === tmp10) {
+          tmp11 = cResult[4];
         }
         if (cResult[5] === children) {
-          if (cResult[6] === tmp9) {
-            let tmp10 = cResult[7];
+          let tmp12;
+          if (cResult[6] === tmp11) {
+            tmp12 = cResult[7];
           }
-          return tmp10;
+          return tmp12;
         }
         const obj3 = {
-          style: tmp9,
+          style: tmp11,
           importantForAccessibility: "no-hide-descendants",
           accessibilityElementsHidden: true,
           children,
         };
-        const tmp13 = React5(hasOwnProperty, obj3);
+        const tmp15 = metroImportDefault(hasOwnProperty, obj3);
         cResult[5] = children;
-        cResult[6] = tmp9;
-        cResult[7] = tmp13;
-        tmp10 = tmp13;
+        cResult[6] = tmp11;
+        cResult[7] = tmp15;
+        tmp12 = tmp15;
       }
-      const items = [tmp5.assetContainer, tmp8];
+      const items = [tmp5.assetContainer, tmp10];
       cResult[2] = tmp5.assetContainer;
-      cResult[3] = tmp8;
+      cResult[3] = tmp10;
       cResult[4] = items;
-      tmp9 = items;
-      const tmpResult4 = useToken;
+      tmp11 = items;
     }
   : (solidBackground) => {
+      let items;
       let flag = solidBackground.solidBackground;
+      const children = solidBackground.children;
       if (flag === undefined) {
         flag = false;
       }
       const tmp = closure_10();
-      const obj = ColorUtils;
-      const obj2 = ColorUtils;
+      const hexToRgbaString = ColorUtils.hexToRgbaString;
+      ColorUtils;
+      const hexWithOpacity = ColorUtils.hexWithOpacity;
+      ColorUtils;
       let num = 0.8;
-      const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+      const obj = useToken;
+      const token = obj.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
       if (flag) {
         num = 1;
       }
-      const obj4 = {
-        style: null,
+      const obj2 = {
+        style: items,
         importantForAccessibility: "no-hide-descendants",
         accessibilityElementsHidden: true,
-        children: null,
+        children,
       };
-      const items = [tmp.assetContainer];
-      items[1] = { backgroundColor: obj.hexToRgbaString(obj2.hexWithOpacity(token, num)) };
-      obj4.style = items;
-      obj4.children = solidBackground.children;
-      return React5(hasOwnProperty, obj4);
+      items = [tmp.assetContainer, { backgroundColor: hexToRgbaString(hexWithOpacity(token, num)) }];
+      ({ backgroundColor: hexToRgbaString(hexWithOpacity(token, num)) });
+      return metroImportDefault(hasOwnProperty, obj2);
     };
-ReactCompilerGating = fn(558);
-let obj4 = { position: "absolute", opacity: 1, color: nativeDefault.colors.ICON_STRONG, fontWeight: "bold" };
-size = fn(2);
-const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardAssetTileV2.tsx");
-
-export default noop.memo(
+ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        const cResult = c.c(20);
+        let cardWidth;
+        let disableBundleStaticBackground;
+        let isDisabled;
+        let isPurchased;
+        let items;
+        let muteBundleStaticBackground;
+        let product;
+        let solidBackground;
+        const obj = react2;
+        const cResult = obj.c(20);
         ({
           product,
           isPurchased,
@@ -589,48 +664,50 @@ export default noop.memo(
           muteBundleStaticBackground,
           cardWidth,
         } = arg0);
-        const defaultVariantIndex = useDefaultVariantIndex.useDefaultVariantIndex(product);
+        const obj2 = useDefaultVariantIndex;
+        const defaultVariantIndex = obj2.useDefaultVariantIndex(product);
         if (cResult[0] === product) {
+          let tmp5;
           if (cResult[1] === defaultVariantIndex) {
-            let tmp5 = cResult[2];
+            tmp5 = cResult[2];
           }
           if (cResult[3] === cardWidth) {
             if (cResult[4] === disableBundleStaticBackground) {
               if (cResult[5] === isDisabled) {
                 if (cResult[6] === isPurchased) {
                   if (cResult[7] === muteBundleStaticBackground) {
+                    let tmp7;
+                    let tmp11;
                     if (cResult[8] === tmp5) {
-                      let tmp7 = cResult[9];
+                      tmp7 = cResult[9];
                     }
                     if (cResult[10] !== isPurchased) {
-                      let tmp12 = isPurchased;
-                      if (isPurchased) {
-                        tmp12 = React5(closure_11, {});
-                      }
+                      const tmp12 = isPurchased && metroImportDefault(closure_11, {});
                       cResult[10] = isPurchased;
                       cResult[11] = tmp12;
-                      let tmp11 = tmp12;
+                      tmp11 = tmp12;
                     } else {
                       tmp11 = cResult[11];
                     }
                     if (cResult[12] === isDisabled) {
+                      let tmp15;
                       if (cResult[13] === isPurchased) {
-                        let tmp15 = cResult[14];
+                        tmp15 = cResult[14];
                       }
                       if (cResult[15] === solidBackground) {
                         if (cResult[16] === tmp7) {
                           if (cResult[17] === tmp11) {
+                            let tmp19;
                             if (cResult[18] === tmp15) {
-                              let tmp19 = cResult[19];
+                              tmp19 = cResult[19];
                             }
                             return tmp19;
                           }
                         }
                       }
-                      const obj3 = { solidBackground, children: null };
-                      const items = [tmp7, tmp11, tmp15];
-                      obj3.children = items;
-                      const tmp22 = closure_1_8(closure_15, obj3);
+                      const obj3 = { solidBackground, children: items };
+                      items = [tmp7, tmp11, tmp15];
+                      const tmp22 = metroImportAll(closure_15, obj3);
                       cResult[15] = solidBackground;
                       cResult[16] = tmp7;
                       cResult[17] = tmp11;
@@ -638,13 +715,7 @@ export default noop.memo(
                       cResult[19] = tmp22;
                       tmp19 = tmp22;
                     }
-                    let tmp16 = isDisabled;
-                    if (isDisabled) {
-                      tmp16 = !isPurchased;
-                    }
-                    if (tmp16) {
-                      tmp16 = React5(closure_12, {});
-                    }
+                    const tmp16 = isDisabled && !isPurchased && metroImportDefault(closure_12, {});
                     cResult[12] = isDisabled;
                     cResult[13] = isPurchased;
                     cResult[14] = tmp16;
@@ -662,7 +733,7 @@ export default noop.memo(
             muteBundleStaticBackground,
             cardWidth,
           };
-          const tmp10 = React5(closure_13, obj4);
+          const tmp10 = metroImportDefault(closure_13, obj4);
           cResult[3] = cardWidth;
           cResult[4] = disableBundleStaticBackground;
           cResult[5] = isDisabled;
@@ -672,42 +743,51 @@ export default noop.memo(
           cResult[9] = tmp10;
           tmp7 = tmp10;
         }
-        const selectedProduct = CollectiblesProductUtils.getSelectedProduct(product, defaultVariantIndex);
+        const tmpResult = CollectiblesProductUtils;
+        const selectedProduct = tmpResult.getSelectedProduct(product, defaultVariantIndex);
         cResult[0] = product;
         cResult[1] = defaultVariantIndex;
         cResult[2] = selectedProduct;
         tmp5 = selectedProduct;
-        const tmpResult = CollectiblesProductUtils;
       }
     : (arg0) => {
+        let cardWidth;
+        let disableBundleStaticBackground;
+        let isDisabled;
+        let isPurchased;
+        let items;
+        let muteBundleStaticBackground;
+        let product;
+        let solidBackground;
         ({ product, isPurchased, isDisabled } = arg0);
         ({ solidBackground, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth } = arg0);
-        const defaultVariantIndex = useDefaultVariantIndex.useDefaultVariantIndex(product);
-        const obj3 = { solidBackground, children: null };
-        const items = [
-          React5(closure_13, {
-            product: CollectiblesProductUtils.getSelectedProduct(product, defaultVariantIndex),
-            isPurchased,
-            isDisabled,
-            disableBundleStaticBackground,
-            muteBundleStaticBackground,
-            cardWidth,
-          }),
-          ,
-        ];
-        let tmp4Result = isPurchased;
-        if (isPurchased) {
-          tmp4Result = React5(closure_11, {});
-        }
-        items[1] = tmp4Result;
+        const obj = useDefaultVariantIndex;
+        const defaultVariantIndex = obj.useDefaultVariantIndex(product);
+        const obj3 = { solidBackground, children: items };
+        items = [, ,];
+        const obj2 = CollectiblesProductUtils;
+        const obj4 = {
+          product: obj2.getSelectedProduct(product, defaultVariantIndex),
+          isPurchased,
+          isDisabled,
+          disableBundleStaticBackground,
+          muteBundleStaticBackground,
+          cardWidth,
+        };
+        items[0] = metroImportDefault(closure_13, obj4);
+        items[1] = isPurchased && metroImportDefault(closure_11, {});
+        const tmp4Result = isPurchased && metroImportDefault(closure_11, {});
         if (isDisabled) {
           isDisabled = !isPurchased;
         }
         if (isDisabled) {
-          isDisabled = React5(closure_12, {});
+          isDisabled = metroImportDefault(closure_12, {});
         }
         items[2] = isDisabled;
-        obj3.children = items;
-        return closure_1_8(closure_15, obj3);
+        return metroImportAll(closure_15, obj3);
       },
 );
+size = size_mod;
+const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardAssetTileV2.tsx");
+
+export default memoResult;

@@ -1,26 +1,29 @@
 // discord_app/modules/guilds_bar/native/hooks/usePreloadedGuildAsset.tsx
-import NativeImageManagerModuleDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
+import react_nativeDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap, importDefault;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/usePreloadedGuildAsset.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let _slicedToArray = _slicedToArray_mod;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId, icon, asset) => {
+      let closure_3;
+      let first;
+      let ref;
       _require = guildId;
       importDefault = icon;
       dependencyMap = asset;
-      const cResult = require("c").c(12);
+      let obj = require("react");
+      const cResult = obj.c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = {};
         cResult[0] = obj2;
-        let first = obj2;
+        first = obj2;
       } else {
         first = cResult[0];
       }
@@ -28,8 +31,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       _slicedToArray = tmp4;
       if (cResult[1] === guildId) {
         if (cResult[2] === icon) {
+          let tmp5;
+          let tmp8;
+          let tmp7;
           if (cResult[3] === asset) {
-            let tmp5 = cResult[4];
+            tmp5 = cResult[4];
           }
           ref = obj3.useRef(tmp5);
           const _Symbol = Symbol;
@@ -42,8 +48,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const items = [];
             cResult[5] = fn;
             cResult[6] = items;
-            let tmp8 = items;
-            let tmp7 = fn;
+            tmp8 = items;
+            tmp7 = fn;
           } else {
             tmp7 = cResult[5];
             tmp8 = cResult[6];
@@ -56,8 +62,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[7] === tmp4) {
             if (cResult[8] === guildId) {
               if (cResult[9] === icon) {
+                let tmp12;
                 if (cResult[10] === asset) {
-                  let tmp12 = cResult[11];
+                  tmp12 = cResult[11];
                 }
                 const effect1 = obj3.useEffect(tmp12);
                 return asset;
@@ -67,23 +74,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const fn2 = function b() {
             if (guildId === ref.current.guildId) {
               if (null != icon) {
+                const tmp3 = icon !== ref.current.icon && icon !== ref.current.preloading;
                 if (tmp3) {
                   ref.current.preloading = icon;
                   const obj2 = { uri: icon };
-                  NativeImageManagerModuleDefault.preload(obj2).then(() => {
-                    let tmp2 = ref.current.guildId === guildId;
-                    if (tmp2) {
-                      tmp2 = ref.current.preloading === icon;
-                    }
+                  const obj = react_nativeDefault;
+                  const preloadResult = obj.preload(obj2);
+                  preloadResult.then(() => {
+                    const tmp2 = ref.current.guildId === guildId && ref.current.preloading === icon;
                     if (tmp2) {
                       ref.current.icon = icon;
                       ref.current.asset = asset;
                       closure_1_3({});
                     }
                   });
-                  const preloadResult = NativeImageManagerModuleDefault.preload(obj2);
                 }
-                tmp3 = icon !== ref.current.icon && icon !== ref.current.preloading;
               }
             }
             ref.current.guildId = guildId;
@@ -107,10 +112,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = obj4;
     }
   : (guildId, icon, asset) => {
+      let closure_3;
+      let ref;
       importDefault = icon;
       dependencyMap = asset;
+      let obj = ref;
       _slicedToArray = _slicedToArray(ref.useState({}), 2)[1];
-      ref = ref.useRef({ guildId, asset, icon, preloading: icon });
+      let obj2 = { guildId, asset, icon, preloading: icon };
+      ref = ref.useRef(obj2);
       const effect = ref.useEffect(
         () => () => {
           ref.current.guildId = undefined;
@@ -121,26 +130,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (guildId === tmp3.guildId) {
         asset = tmp3.asset;
       }
-      const effect1 = ref.useEffect(() => {
+      const effect1 = obj.useEffect(() => {
         if (guildId === ref.current.guildId) {
           if (null != icon) {
+            const tmp3 = icon !== ref.current.icon && icon !== ref.current.preloading;
             if (tmp3) {
               ref.current.preloading = icon;
               const obj2 = { uri: icon };
-              NativeImageManagerModuleDefault.preload(obj2).then(() => {
-                let tmp2 = ref.current.guildId === guildId;
-                if (tmp2) {
-                  tmp2 = ref.current.preloading === icon;
-                }
+              const obj = react_nativeDefault;
+              const preloadResult = obj.preload(obj2);
+              preloadResult.then(() => {
+                const tmp2 = ref.current.guildId === guildId && ref.current.preloading === icon;
                 if (tmp2) {
                   ref.current.icon = icon;
                   ref.current.asset = asset;
                   closure_1_3({});
                 }
               });
-              const preloadResult = NativeImageManagerModuleDefault.preload(obj2);
             }
-            tmp3 = icon !== ref.current.icon && icon !== ref.current.preloading;
           }
         }
         ref.current.guildId = guildId;
@@ -150,3 +157,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       return asset;
     };
+const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/usePreloadedGuildAsset.tsx");
+
+export default tmp2;

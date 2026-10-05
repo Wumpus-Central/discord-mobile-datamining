@@ -1,107 +1,119 @@
 // discord_app/modules/emoji_picker/native/components/EmojiPicker.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import EmojiConstants from "../../../emojis/EmojiConstants.tsx";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Constants from "../../../../Constants.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const Constants = fn(1085);
+let StyleSheet;
+let c10;
+let c9;
+let closure_4;
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
+({ View: closure_4, StyleSheet } = react_native);
 ({
   AnalyticEvents: hasOwnProperty,
   ChatInputComponentViewedTypes: metroRequire,
-  VerticalGradient: closure_7,
+  VerticalGradient: metroImportDefault,
 } = Constants);
-const EmojiIntention = fn(1380).EmojiIntention;
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4890);
+const EmojiIntention = EmojiConstants.EmojiIntention;
+({ jsx: c9, jsxs: c10 } = Fragment);
+let createStyles = createStyles_mod;
 let obj = {
   container: { flex: 1 },
   list: { overflow: "hidden", flex: 1 },
-  header: {
-    flexDirection: "row",
-    paddingTop: nativeDefault.space.PX_8,
-    paddingBottom: 1,
-    gap: nativeDefault.space.PX_12,
-  },
-  headerGradientColor: null,
-  headerGradient: null,
+  header: obj2,
+  headerGradientColor: obj3,
+  headerGradient: obj4,
 };
-let obj3 = {
-  flexDirection: "row",
-  paddingTop: nativeDefault.space.PX_8,
-  paddingBottom: 1,
-  gap: nativeDefault.space.PX_12,
-};
-obj.headerGradientColor = { color: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
-let obj5 = {};
+obj2 = { flexDirection: "row", paddingTop: nativeDefault.space.PX_8, paddingBottom: 1, gap: nativeDefault.space.PX_12 };
+createStyles = createStyles.createStyles;
+obj3 = { color: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
+obj4 = { height: nativeDefault.space.PX_8 + 1, bottom: undefined, top: -1 };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj5.height = nativeDefault.space.PX_8 + 1;
-obj5.bottom = undefined;
-obj5.top = -1;
-obj.headerGradient = obj5;
-let closure_11 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-let obj4 = { color: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPicker.tsx");
-
-export default noop.memo(
+let closure_11 = createStyles(obj);
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        const cResult = channel(handleTextChange[9]).c(60);
+        let bottomSheetIndex;
+        let bottomSheetRef;
+        let channel;
+        let container;
+        let handleTextChange;
+        let header;
+        let inPortalKeyboard;
+        let onBackspace;
+        let onPressEmoji;
+        let safeAreaBottomKeyboardAware;
+        let safeAreaStyle;
+        let searchQueryRef;
+        let searchResults;
+        let suggestedEmojis;
+        let obj = channel(handleTextChange[9]);
+        const cResult = obj.c(60);
         ({ bottomSheetRef, bottomSheetIndex, channel } = arg0);
         ({ onPressEmoji, onBackspace, inPortalKeyboard, suggestedEmojis } = arg0);
         const tmp4 = closure_11();
         if (cResult[0] === channel.guild_id) {
+          let tmp5;
+          let tmp6;
+          let tmp9;
+          let tmp18;
+          let tmp24;
           if (cResult[1] === channel.id) {
-            let tmp5 = cResult[2];
-            let tmp6 = cResult[3];
+            tmp5 = cResult[2];
+            tmp6 = cResult[3];
           }
-          const effect = noop.useEffect(tmp5, tmp6);
-          const sharedValue = channel(tmp2[10]).useSharedValue(0);
+          const effect = react.useEffect(tmp5, tmp6);
+          const tmpResult = channel(handleTextChange[10]);
+          const sharedValue = tmpResult.useSharedValue(0);
           if (cResult[4] !== suggestedEmojis) {
             const obj3 = { suggestedEmojis };
             cResult[4] = suggestedEmojis;
             cResult[5] = obj3;
-            let tmp9 = obj3;
+            tmp9 = obj3;
           } else {
             tmp9 = cResult[5];
           }
-          const tmpResult = channel(tmp2[10]);
-          const emojiCategories = channel(tmp2[11]).useEmojiCategories(EmojiIntention.CHAT, channel, tmp9);
-          const tmpResult2 = channel(tmp2[11]);
-          const ref1 = noop.useRef(null);
-          const ref = noop.useRef(null);
-          const analyticsLocations = ref1(tmp2[12])(ref1(tmp2[13]).EMOJI_PICKER).analyticsLocations;
-          const tmp17 = ref1(tmp2[14])(channel, sharedValue, EmojiIntention.CHAT);
+          const tmpResult2 = channel(handleTextChange[11]);
+          const emojiCategories = tmpResult2.useEmojiCategories(EmojiIntention.CHAT, channel, tmp9);
+          const ref = react.useRef(null);
+          const ref1 = react.useRef(null);
+          const tmp16 = ref1(handleTextChange[12]);
+          const analyticsLocations = tmp16(ref1(tmp2[13]).EMOJI_PICKER).analyticsLocations;
+          const tmp17 = ref1(handleTextChange[14])(channel, sharedValue, EmojiIntention.CHAT);
           handleTextChange = tmp17.handleTextChange;
           ({ searchQueryRef, searchResults } = tmp17);
           if (cResult[6] !== channel) {
             const fn2 = function x() {
-              AnalyticsUtilsDefault.track(constants.CHAT_INPUT_COMPONENT_VIEWED, {
-                type: constants2.EMOJI_SEARCH,
-                channel_id: channel.id,
-                guild_id: channel.guild_id,
-              });
+              const obj = AnalyticsUtilsDefault;
+              const obj2 = { type: metroRequire.EMOJI_SEARCH, channel_id: channel.id, guild_id: channel.guild_id };
+              obj.track(hasOwnProperty.CHAT_INPUT_COMPONENT_VIEWED, obj2);
             };
             cResult[6] = channel;
             cResult[7] = fn2;
-            let tmp18 = fn2;
+            tmp18 = fn2;
           } else {
             tmp18 = cResult[7];
           }
           if (cResult[8] !== handleTextChange) {
             class H {
               constructor() {
-                current = closure_1.current;
+                const current = ref1.current;
                 if (current != null) {
-                  str = "";
-                  setTextResult = current.setText("");
+                  current.setText("");
                 }
-                tmp2 = handleTextChange("");
-                return;
+                handleTextChange("");
               }
             }
             cResult[8] = handleTextChange;
@@ -109,13 +121,11 @@ export default noop.memo(
           } else {
             class H {
               constructor() {
-                current = closure_1.current;
+                const current = ref1.current;
                 if (current != null) {
-                  str = "";
-                  setTextResult = current.setText("");
+                  current.setText("");
                 }
-                tmp2 = handleTextChange("");
-                return;
+                handleTextChange("");
               }
             }
           }
@@ -123,95 +133,81 @@ export default noop.memo(
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
             class H {
               constructor() {
-                current = closure_1.current;
+                const current = ref1.current;
                 if (current != null) {
-                  str = "";
-                  setTextResult = current.setText("");
+                  current.setText("");
                 }
-                tmp2 = handleTextChange("");
-                return;
+                handleTextChange("");
               }
             }
             cResult[10] = tmp22;
           } else {
             class H {
               constructor() {
-                current = closure_1.current;
+                const current = ref1.current;
                 if (current != null) {
-                  str = "";
-                  setTextResult = current.setText("");
+                  current.setText("");
                 }
-                tmp2 = handleTextChange("");
-                return;
+                handleTextChange("");
               }
             }
           }
-          const tmp16 = ref1(tmp2[12]);
-          ({ safeAreaStyle, safeAreaBottomKeyboardAware } = ref1(tmp2[15])(tmp22));
+          ({ safeAreaStyle, safeAreaBottomKeyboardAware } = ref1(handleTextChange[15])(tmp22));
           const _Symbol2 = Symbol;
           ({ container, header } = tmp4);
+          ref1(handleTextChange[15])(tmp22);
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
             class H {
               constructor() {
-                current = closure_1.current;
+                const current = ref1.current;
                 if (current != null) {
-                  str = "";
-                  setTextResult = current.setText("");
+                  current.setText("");
                 }
-                tmp2 = handleTextChange("");
-                return;
+                handleTextChange("");
               }
             }
-            const stringResult = obj6.string(channel(tmp2[16]).t.KgK5qg);
+            const stringResult = obj6.string(channel(handleTextChange[16]).t.KgK5qg);
             cResult[11] = stringResult;
-            const tmp24 = stringResult;
+            tmp24 = stringResult;
           } else {
             class H {
               constructor() {
-                current = closure_1.current;
+                const current = ref1.current;
                 if (current != null) {
-                  str = "";
-                  setTextResult = current.setText("");
+                  current.setText("");
                 }
-                tmp2 = handleTextChange("");
-                return;
+                handleTextChange("");
               }
             }
           }
           if (cResult[12] === tmp18) {
             class H {
               constructor() {
-                current = closure_1.current;
+                const current = ref1.current;
                 if (current != null) {
-                  str = "";
-                  setTextResult = current.setText("");
+                  current.setText("");
                 }
-                tmp2 = handleTextChange("");
-                return;
+                handleTextChange("");
               }
             }
             if (cResult[15] === tmp4.header) {
               class H {
                 constructor() {
-                  current = closure_1.current;
+                  const current = ref1.current;
                   if (current != null) {
-                    str = "";
-                    setTextResult = current.setText("");
+                    current.setText("");
                   }
-                  tmp2 = handleTextChange("");
-                  return;
+                  handleTextChange("");
                 }
               }
               if (cResult[18] === bottomSheetIndex) {
                 class H {
                   constructor() {
-                    current = closure_1.current;
+                    const current = ref1.current;
                     if (current != null) {
-                      str = "";
-                      setTextResult = current.setText("");
+                      current.setText("");
                     }
-                    tmp2 = handleTextChange("");
-                    return;
+                    handleTextChange("");
                   }
                 }
               }
@@ -222,14 +218,14 @@ export default noop.memo(
                 categoryIndexActive: sharedValue,
                 emojis: searchResults,
                 onPressEmoji,
-                onLongPressEmoji: channel(tmp2[19]).openEmojiActionSheet,
+                onLongPressEmoji: channel(handleTextChange[19]).openEmojiActionSheet,
                 channel,
                 emojiPickerIntention: EmojiIntention.CHAT,
                 insetBottom: safeAreaBottomKeyboardAware,
                 inPortalKeyboard,
                 searchQueryRef,
               };
-              const tmp36 = closure_9(tmp15(tmp2[18]), obj4);
+              const tmp15Result = ref1(handleTextChange[18]);
               cResult[18] = bottomSheetIndex;
               cResult[19] = emojiCategories;
               cResult[20] = sharedValue;
@@ -239,14 +235,14 @@ export default noop.memo(
               cResult[24] = safeAreaBottomKeyboardAware;
               cResult[25] = searchQueryRef;
               cResult[26] = searchResults;
-              cResult[27] = tmp36;
-              const tmp15Result = tmp15(tmp2[18]);
+              cResult[27] = closure_9(tmp15Result, obj4);
+              const tmp36 = closure_9(tmp15Result, obj4);
             }
             const obj5 = { style: header, children: tmp26 };
-            const tmp32 = closure_9(closure_4, obj5);
             cResult[15] = tmp4.header;
             cResult[16] = tmp26;
-            cResult[17] = tmp32;
+            cResult[17] = closure_9(closure_4, obj5);
+            const tmp32 = closure_9(closure_4, obj5);
           }
           const obj7 = {
             ref: ref1,
@@ -256,18 +252,15 @@ export default noop.memo(
             onFocus: tmp18,
             round: true,
           };
-          const tmp28 = closure_9(channel(tmp2[17]).SearchField, obj7);
           cResult[12] = tmp18;
           cResult[13] = handleTextChange;
-          cResult[14] = tmp28;
-          const tmp23 = ref1(tmp2[15])(tmp22);
+          cResult[14] = closure_9(channel(handleTextChange[17]).SearchField, obj7);
+          const tmp28 = closure_9(channel(handleTextChange[17]).SearchField, obj7);
         }
         const fn = function n() {
-          AnalyticsUtilsDefault.track(constants.CHAT_INPUT_COMPONENT_VIEWED, {
-            type: constants2.EMOJI,
-            channel_id: channel.id,
-            guild_id: channel.guild_id,
-          });
+          const obj = AnalyticsUtilsDefault;
+          const obj2 = { type: metroRequire.EMOJI, channel_id: channel.id, guild_id: channel.guild_id };
+          obj.track(hasOwnProperty.CHAT_INPUT_COMPONENT_VIEWED, obj2);
         };
         const items = [,];
         ({ id: arr[0], guild_id: arr[1] } = channel);
@@ -277,9 +270,23 @@ export default noop.memo(
         cResult[3] = items;
         tmp6 = items;
         tmp5 = fn;
-        const obj = channel(handleTextChange[9]);
       }
     : (inPortalKeyboard) => {
+        let SearchField;
+        let bottomSheetIndex;
+        let bottomSheetRef;
+        let channel;
+        let intl;
+        let items3;
+        let items4;
+        let items5;
+        let obj4;
+        let obj6;
+        let onBackspace;
+        let onPressEmoji;
+        let safeAreaBottomKeyboardAware;
+        let safeAreaStyle;
+        let suggestedEmojis;
         ({ bottomSheetIndex, channel } = inPortalKeyboard);
         inPortalKeyboard = inPortalKeyboard.inPortalKeyboard;
         let handleTextChange;
@@ -287,52 +294,54 @@ export default noop.memo(
         const tmp = closure_11();
         const items = [,];
         ({ id: arr[0], guild_id: arr[1] } = channel);
-        const effect = noop.useEffect(() => {
-          AnalyticsUtilsDefault.track(constants.CHAT_INPUT_COMPONENT_VIEWED, {
-            type: constants2.EMOJI,
-            channel_id: channel.id,
-            guild_id: channel.guild_id,
-          });
+        const effect = react.useEffect(() => {
+          const obj = AnalyticsUtilsDefault;
+          const obj2 = { type: metroRequire.EMOJI, channel_id: channel.id, guild_id: channel.guild_id };
+          obj.track(hasOwnProperty.CHAT_INPUT_COMPONENT_VIEWED, obj2);
         }, items);
-        const sharedValue = channel(handleTextChange[10]).useSharedValue(0);
-        const obj = channel(handleTextChange[10]);
-        const emojiCategories = channel(handleTextChange[11]).useEmojiCategories(EmojiIntention.CHAT, channel, {
-          suggestedEmojis,
-        });
-        const ref = noop.useRef(null);
-        const ref1 = noop.useRef(null);
-        const obj2 = channel(handleTextChange[11]);
+        let obj = channel(handleTextChange[10]);
+        const sharedValue = obj.useSharedValue(0);
+        let obj2 = channel(handleTextChange[11]);
+        const emojiCategories = obj2.useEmojiCategories(EmojiIntention.CHAT, channel, { suggestedEmojis });
+        const ref = react.useRef(null);
+        const ref1 = react.useRef(null);
+        const tmp7 = ref1(handleTextChange[12]);
+        const analyticsLocations = tmp7(ref1(handleTextChange[13]).EMOJI_PICKER).analyticsLocations;
         const tmp8 = ref1(handleTextChange[14])(channel, sharedValue, EmojiIntention.CHAT);
         handleTextChange = tmp8.handleTextChange;
         const items1 = [channel];
+        const searchQueryRef = tmp8.searchQueryRef;
         const items2 = [handleTextChange];
-        const callback = noop.useCallback(() => {
-          AnalyticsUtilsDefault.track(constants.CHAT_INPUT_COMPONENT_VIEWED, {
-            type: constants2.EMOJI_SEARCH,
-            channel_id: channel.id,
-            guild_id: channel.guild_id,
-          });
+        const callback = react.useCallback(() => {
+          const obj = AnalyticsUtilsDefault;
+          const obj2 = { type: metroRequire.EMOJI_SEARCH, channel_id: channel.id, guild_id: channel.guild_id };
+          obj.track(hasOwnProperty.CHAT_INPUT_COMPONENT_VIEWED, obj2);
         }, items1);
-        const callback1 = noop.useCallback(() => {
+        const callback1 = react.useCallback(() => {
           const current = ref1.current;
           if (current != null) {
             current.setText("");
           }
           handleTextChange("");
         }, items2);
-        const tmp7 = ref1(handleTextChange[12]);
         ({ safeAreaStyle, safeAreaBottomKeyboardAware } = ref1(handleTextChange[15])({ hasCategories: true }));
-        const obj3 = { value: tmp7(ref1(handleTextChange[13]).EMOJI_PICKER).analyticsLocations, children: null };
-        const obj4 = { style: tmp.container, children: null };
-        const obj5 = { style: tmp.header, children: null };
-        const obj6 = { ref: ref1, size: "md", placeholder: null, onChange: null, onFocus: null, round: true };
-        const intl = channel(handleTextChange[16]).intl;
-        obj6.placeholder = intl.string(channel(handleTextChange[16]).t.KgK5qg);
-        obj6.onChange = handleTextChange;
-        obj6.onFocus = callback;
-        obj5.children = closure_9(channel(handleTextChange[17]).SearchField, obj6);
-        const items3 = [closure_9(closure_4, obj5), ,];
-        const obj7 = { style: tmp.list, children: null };
+        const obj3 = { value: analyticsLocations, children: closure_10(closure_4, obj4) };
+        obj4 = { style: tmp.container, children: items3 };
+        const obj5 = { style: tmp.header, children: closure_9(SearchField, obj6) };
+        ref1(handleTextChange[15])({ hasCategories: true });
+        const AnalyticsLocationProvider = channel(handleTextChange[12]).AnalyticsLocationProvider;
+        obj6 = {
+          ref: ref1,
+          size: "md",
+          placeholder: intl.string(channel(handleTextChange[16]).t.KgK5qg),
+          onChange: handleTextChange,
+          onFocus: callback,
+          round: true,
+        };
+        SearchField = channel(handleTextChange[17]).SearchField;
+        intl = channel(handleTextChange[16]).intl;
+        items3 = [closure_9(closure_4, obj5), ,];
+        const obj7 = { style: tmp.list, children: items4 };
         const obj8 = {
           bottomSheetIndex,
           emojiPickerListRef: ref,
@@ -340,32 +349,25 @@ export default noop.memo(
           categoryIndexActive: sharedValue,
           emojis: tmp8.searchResults,
           onPressEmoji,
-          onLongPressEmoji: null,
-          channel: null,
-          emojiPickerIntention: null,
-          insetBottom: null,
-          inPortalKeyboard: null,
-          searchQueryRef: null,
+          onLongPressEmoji: channel(handleTextChange[19]).openEmojiActionSheet,
+          channel,
+          emojiPickerIntention: EmojiIntention.CHAT,
+          insetBottom: safeAreaBottomKeyboardAware,
+          inPortalKeyboard,
+          searchQueryRef,
         };
-        const tmp11 = ref1(handleTextChange[15])({ hasCategories: true });
-        obj8.onLongPressEmoji = channel(handleTextChange[19]).openEmojiActionSheet;
-        obj8.channel = channel;
-        obj8.emojiPickerIntention = EmojiIntention.CHAT;
-        obj8.insetBottom = safeAreaBottomKeyboardAware;
-        obj8.inPortalKeyboard = inPortalKeyboard;
-        obj8.searchQueryRef = tmp8.searchQueryRef;
-        const items4 = [closure_9(ref1(handleTextChange[18]), obj8)];
-        const obj9 = { style: tmp.headerGradient, start: constants3.START, end: constants3.END, colors: null };
         const tmp12 = ref1(handleTextChange[18]);
+        items4 = [closure_9(tmp12, obj8)];
+        const obj9 = { style: tmp.headerGradient, start: constants3.START, end: constants3.END, colors: items5 };
+        items5 = [,];
         const tmp13 = ref1(handleTextChange[21]);
-        const items5 = [channel(handleTextChange[20]).hexOpacityToRgba(tmp.headerGradientColor.color, 100)];
         const obj10 = channel(handleTextChange[20]);
-        items5[1] = channel(handleTextChange[20]).hexOpacityToRgba(tmp.headerGradientColor.color, 0);
-        obj9.colors = items5;
+        items5[0] = obj10.hexOpacityToRgba(tmp.headerGradientColor.color, 100);
+        const obj11 = channel(handleTextChange[20]);
+        items5[1] = obj11.hexOpacityToRgba(tmp.headerGradientColor.color, 0);
         items4[1] = closure_9(tmp13, obj9);
-        obj7.children = items4;
         items3[1] = closure_10(closure_4, obj7);
-        items3[2] = closure_9(ref1(handleTextChange[22]), {
+        const obj12 = {
           bottomSheetRef,
           bottomSheetIndex,
           style: safeAreaStyle,
@@ -376,9 +378,11 @@ export default noop.memo(
           inPortalKeyboard,
           isSearching: null != tmp8.searchResults,
           onClearSearch: callback1,
-        });
-        obj4.children = items3;
-        obj3.children = closure_10(closure_4, obj4);
-        return closure_9(channel(handleTextChange[12]).AnalyticsLocationProvider, obj3);
+        };
+        items3[2] = closure_9(ref1(handleTextChange[22]), obj12);
+        return closure_9(AnalyticsLocationProvider, obj3);
       },
 );
+const result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPicker.tsx");
+
+export default memoResult;

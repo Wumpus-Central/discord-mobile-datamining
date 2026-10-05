@@ -1,14 +1,22 @@
 // discord_app/stores/native/MessagePreviewStore.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import MessageRecordUtils from "../../modules/messages/MessageRecordUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
+let unshift;
+
 let c3 = null;
-let c4 = null;
-const Store = initializeDefault.Store;
-class MessagePreviewStore extends Store {}
+let around = null;
+const Store = get_initializedDefault.Store;
+class MessagePreviewStore extends Store {
+  getMessage(arg0) {
+    let closure_0 = arg0;
+    const arr = _modDef12;
+    return arr.find(c3, (id) => id.id === closure_0 || id.nonce === closure_0);
+  }
+}
 const prototype = MessagePreviewStore.prototype;
 Object.defineProperty(prototype, "messages", {
   get: function messages() {
@@ -18,32 +26,30 @@ Object.defineProperty(prototype, "messages", {
 });
 Object.defineProperty(prototype, "jumpTargetId", {
   get: function jumpTargetId() {
-    return c4;
+    return around;
   },
   set: undefined,
 });
-prototype["getMessage"] = function getMessage(arg0) {
-  closure_0 = arg0;
-  return _modDef12.find(c3, (id) => id.id === closure_0 || id.nonce === closure_0);
-};
 MessagePreviewStore.displayName = "MessagePreviewStore";
-const messagePreviewStore = new MessagePreviewStore(DispatcherDefault, {
+let obj = {
   LOAD_MESSAGES_AROUND_SUCCESS: function handleLoadMessagesAroundSuccess(messages) {
     messages = messages.messages;
     c3 = [];
+    around = messages.around;
     const item = messages.forEach((item) => {
-      if (null != closure_1_3) {
-        closure_1_3.unshift(MessageRecordUtils.createMessageRecord(item));
+      if (null != unshift) {
+        unshift = unshift.unshift;
+        const obj = MessageRecordUtils;
+        unshift(obj.createMessageRecord(item));
       }
     });
-    const around = messages.around;
   },
   CLEAR_MESSAGES_AROUND_SUCCESS: function handleClearMessagesAround() {
     c3 = null;
-    c4 = null;
+    around = null;
   },
-});
-const size = fn(2);
+};
+const messagePreviewStore = new MessagePreviewStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("stores/native/MessagePreviewStore.tsx");
 
 export default messagePreviewStore;

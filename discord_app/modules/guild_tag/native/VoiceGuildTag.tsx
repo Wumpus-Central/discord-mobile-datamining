@@ -1,43 +1,32 @@
 // discord_app/modules/guild_tag/native/VoiceGuildTag.tsx
+import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import GuildTagConstants from "../GuildTagConstants.tsx";
+import react from "../../../../_runtime/00019_react.js";
 import UserStore from "../../../stores/UserStore.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import PlatformUtils_mod from "../../../utils/PlatformUtils.tsx";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const View = fn(17).View;
-const GuildTagBadgeSize = fn(7603).GuildTagBadgeSize;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let PlatformUtils = fn(1369);
+let userId;
+
+let hasOwnProperty;
+let metroRequire;
+let num2;
+let obj2;
+const View = react_native.View;
+const GuildTagBadgeSize = GuildTagConstants.GuildTagBadgeSize;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+let PlatformUtils = PlatformUtils_mod;
 let num = 10;
 if (PlatformUtils.isAndroid()) {
   num = 14;
 }
-const createStyles = fn(4890);
-let obj3 = {
-  gapContainer: { height: num },
-  tagContainer: {
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "row",
-    backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
-    borderRadius: 4,
-    paddingHorizontal: 4,
-    marginVertical: (num - 16) / 2,
-    height: 16,
-    gap: 2,
-  },
-  tag: null,
-};
-let num2 = 16;
-PlatformUtils = fn(1369);
-if (PlatformUtils.isAndroid()) {
-  num2 = 13;
-}
-obj3.tag = { lineHeight: num2 };
-let closure_7 = createStyles.createStyles(obj3);
-const ReactCompilerGating = fn(558);
-let obj4 = {
+let createStyles = createStyles_mod;
+let obj = { gapContainer: { height: num }, tagContainer: obj2, tag: { lineHeight: num2 } };
+obj2 = {
   alignItems: "center",
   justifyContent: "center",
   flexDirection: "row",
@@ -48,18 +37,33 @@ let obj4 = {
   height: 16,
   gap: 2,
 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_tag/native/VoiceGuildTag.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+createStyles = createStyles.createStyles;
+num2 = 16;
+PlatformUtils = PlatformUtils_mod;
+if (PlatformUtils.isAndroid()) {
+  num2 = 13;
+}
+let closure_7 = createStyles(obj);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (userId) => {
-      const cResult = userId(576).c(20);
+      let first;
+      let guildId;
+      let items2;
+      let obj3;
+      let tag;
+      let tmp12;
+      let tmp13;
+      let tmp14;
+      let tmp7;
+      let tmp8;
+      const obj = userId(576);
+      const cResult = obj.c(20);
       userId = userId.userId;
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -71,35 +75,38 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = userId;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp8 = items1;
-        let tmp7 = fn;
+        tmp8 = items1;
+        tmp7 = fn;
       } else {
         tmp7 = cResult[2];
         tmp8 = cResult[3];
       }
-      const obj = userId(576);
-      const stateFromStores = userId(504).useStateFromStores(first, tmp7, tmp8);
+      const tmpResult = userId(504);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp7, tmp8);
       let primaryGuild;
+      const tmp10 = cResult[4];
       if (stateFromStores != null) {
         primaryGuild = stateFromStores.primaryGuild;
       }
-      if (cResult[4] !== primaryGuild) {
+      if (tmp10 !== primaryGuild) {
         const _Symbol = Symbol;
-        const forResult = Symbol.for("react.early_return_sentinel");
         let primaryGuild1;
+        const forResult = Symbol.for("react.early_return_sentinel");
+        const getUserPrimaryGuild = userId(7836).getUserPrimaryGuild;
+        userId(7836);
         if (stateFromStores != null) {
           primaryGuild1 = stateFromStores.primaryGuild;
         }
-        const userPrimaryGuild = tmp(7836).getUserPrimaryGuild(primaryGuild1);
+        const userPrimaryGuild = getUserPrimaryGuild(primaryGuild1);
         ({ tag, guildId } = userPrimaryGuild);
-        let tmp18 = null;
+        let tmp20 = null;
         let guildTagBadgeUrl;
         if (null != guildId) {
-          tmp18 = null;
+          tmp20 = null;
           if (null != tag) {
-            guildTagBadgeUrl = tmp(7836).getGuildTagBadgeUrl(guildId, tmp17, GuildTagBadgeSize.SIZE_12);
-            tmp18 = forResult;
-            const tmpResult4 = tmp(7836);
+            const tmpResult4 = userId(7836);
+            guildTagBadgeUrl = tmpResult4.getGuildTagBadgeUrl(guildId, tmp19, GuildTagBadgeSize.SIZE_12);
+            tmp20 = forResult;
           }
         }
         let primaryGuild2;
@@ -108,103 +115,109 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[4] = primaryGuild2;
         cResult[5] = guildTagBadgeUrl;
-        cResult[6] = tmp18;
+        cResult[6] = tmp20;
         cResult[7] = tag;
-        let tmp13 = tag;
-        let tmp12 = tmp18;
-        let tmp11 = guildTagBadgeUrl;
-        const tmpResult3 = tmp(7836);
+        tmp14 = tag;
+        tmp13 = tmp20;
+        tmp12 = guildTagBadgeUrl;
       } else {
-        tmp11 = cResult[5];
-        tmp12 = cResult[6];
-        tmp13 = cResult[7];
+        tmp12 = cResult[5];
+        tmp13 = cResult[6];
+        tmp14 = cResult[7];
       }
-      if (tmp12 !== Symbol.for("react.early_return_sentinel")) {
-        return tmp12;
+      if (tmp13 !== Symbol.for("react.early_return_sentinel")) {
+        return tmp13;
       } else {
-        if (cResult[8] !== tmp11) {
-          const obj2 = { source: null, size: null };
-          const obj3 = { uri: tmp11 };
-          obj2.source = obj3;
-          obj2.size = GuildTagBadgeSize.SIZE_12;
-          const tmp25 = closure_5(tmp(9395).GuildTagBadge, obj2);
-          cResult[8] = tmp11;
-          cResult[9] = tmp25;
-          let tmp22 = tmp25;
+        let tmp24;
+        if (cResult[8] !== tmp12) {
+          const obj2 = { source: obj3, size: GuildTagBadgeSize.SIZE_12 };
+          obj3 = { uri: tmp12 };
+          const tmp27 = closure_5(userId(9395).GuildTagBadge, obj2);
+          cResult[8] = tmp12;
+          cResult[9] = tmp27;
+          tmp24 = tmp27;
         } else {
-          tmp22 = cResult[9];
+          tmp24 = cResult[9];
         }
         if (cResult[10] === tmp4.tag) {
-          if (cResult[11] === tmp13) {
-            let tmp26 = cResult[12];
+          let tmp28;
+          if (cResult[11] === tmp14) {
+            tmp28 = cResult[12];
           }
           if (cResult[13] === tmp4.tagContainer) {
-            if (cResult[14] === tmp22) {
-              if (cResult[15] === tmp26) {
-                let tmp29 = cResult[16];
+            if (cResult[14] === tmp24) {
+              let tmp31;
+              if (cResult[15] === tmp28) {
+                tmp31 = cResult[16];
               }
               if (cResult[17] === tmp4.gapContainer) {
-                if (cResult[18] === tmp29) {
-                  let tmp33 = cResult[19];
+                let tmp35;
+                if (cResult[18] === tmp31) {
+                  tmp35 = cResult[19];
                 }
-                return tmp33;
+                return tmp35;
               }
-              const obj4 = { style: tmp4.gapContainer, children: tmp29 };
-              const tmp36 = closure_5(View, obj4);
+              const obj4 = { style: tmp4.gapContainer, children: tmp31 };
+              const tmp38 = closure_5(View, obj4);
               cResult[17] = tmp4.gapContainer;
-              cResult[18] = tmp29;
-              cResult[19] = tmp36;
-              tmp33 = tmp36;
+              cResult[18] = tmp31;
+              cResult[19] = tmp38;
+              tmp35 = tmp38;
             }
           }
-          const obj5 = { style: tmp4.tagContainer, children: null };
-          const items2 = [tmp22, tmp26];
-          obj5.children = items2;
-          const tmp32 = closure_6(View, obj5);
+          const obj5 = { style: tmp4.tagContainer, children: items2 };
+          items2 = [tmp24, tmp28];
+          const tmp34 = closure_6(View, obj5);
           cResult[13] = tmp4.tagContainer;
-          cResult[14] = tmp22;
-          cResult[15] = tmp26;
-          cResult[16] = tmp32;
-          tmp29 = tmp32;
+          cResult[14] = tmp24;
+          cResult[15] = tmp28;
+          cResult[16] = tmp34;
+          tmp31 = tmp34;
         }
-        const obj6 = { variant: "text-xs/semibold", color: "text-default", style: tmp4.tag, children: tmp13 };
-        const tmp28 = closure_5(tmp(4886).Text, obj6);
+        const obj6 = { variant: "text-xs/semibold", color: "text-default", style: tmp4.tag, children: tmp14 };
+        const tmp30 = closure_5(userId(4886).Text, obj6);
         cResult[10] = tmp4.tag;
-        cResult[11] = tmp13;
-        cResult[12] = tmp28;
-        tmp26 = tmp28;
+        cResult[11] = tmp14;
+        cResult[12] = tmp30;
+        tmp28 = tmp30;
       }
-      const tmpResult = userId(504);
     }
   : (userId) => {
+      let guildId;
+      let items2;
+      let obj3;
+      let obj5;
+      let tag;
       userId = userId.userId;
       const tmp = closure_7();
       const items = [UserStore];
       const items1 = [userId];
-      const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId), items1);
       const obj = userId(504);
+      const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(userId), items1);
       let primaryGuild;
+      const getUserPrimaryGuild = userId(7836).getUserPrimaryGuild;
+      userId(7836);
       if (stateFromStores != null) {
         primaryGuild = stateFromStores.primaryGuild;
       }
-      const userPrimaryGuild = userId(7836).getUserPrimaryGuild(primaryGuild);
+      const userPrimaryGuild = getUserPrimaryGuild(primaryGuild);
       ({ tag, guildId } = userPrimaryGuild);
       if (null != guildId) {
         if (null != tag) {
-          const obj3 = { style: tmp.gapContainer, children: null };
-          const obj4 = { style: tmp.tagContainer, children: null };
-          const guildTagBadgeUrl = tmp2(7836).getGuildTagBadgeUrl(guildId, tmp7, GuildTagBadgeSize.SIZE_12);
-          const obj5 = { source: null, size: null };
-          const obj6 = { uri: guildTagBadgeUrl };
-          obj5.source = obj6;
-          obj5.size = GuildTagBadgeSize.SIZE_12;
-          const items2 = [closure_5(tmp2(9395).GuildTagBadge, obj5)];
-          const obj7 = { variant: "text-xs/semibold", color: "text-default", style: tmp.tag, children: tag };
-          items2[1] = closure_5(tmp2(4886).Text, obj7);
-          obj4.children = items2;
-          obj3.children = closure_6(View, obj4);
-          return closure_5(View, obj3);
+          const obj2 = { style: tmp.gapContainer, children: closure_6(View, obj3) };
+          obj3 = { style: tmp.tagContainer, children: items2 };
+          const tmp2Result = userId(7836);
+          const guildTagBadgeUrl = tmp2Result.getGuildTagBadgeUrl(guildId, tmp8, GuildTagBadgeSize.SIZE_12);
+          const obj4 = { source: obj5, size: GuildTagBadgeSize.SIZE_12 };
+          obj5 = { uri: guildTagBadgeUrl };
+          items2 = [closure_5(userId(9395).GuildTagBadge, obj4)];
+          const obj6 = { variant: "text-xs/semibold", color: "text-default", style: tmp.tag, children: tag };
+          items2[1] = closure_5(userId(4886).Text, obj6);
+          return closure_5(View, obj2);
         }
       }
       return null;
     };
+const result = size.fileFinishedImporting("modules/guild_tag/native/VoiceGuildTag.tsx");
+
+export default tmp5;

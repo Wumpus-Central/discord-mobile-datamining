@@ -1,15 +1,17 @@
 // discord_app/hooks/usePrevious.tsx
-import noop from "../../_runtime/metro/00019__.js";
+import react from "../../_runtime/00019_react.js";
 import size from "../../_runtime/metro/00002__.js";
 
-({ useRef: closure_0, useEffect: closure_1 } = noop);
+let _window;
+let map;
+({ useRef: _window, useEffect: map } = react);
 const result = size.fileFinishedImporting("hooks/usePrevious.tsx");
 
-export default function usePrevious(current) {
+export default function usePrevious(arg0) {
+  const _window = arg0;
   const tmp = React(null);
-  closure_1 = tmp;
-  const items = [current];
-  framebus(() => {
+  const items = [arg0];
+  tmp(() => {
     closure_1.current = current;
   }, items);
   return tmp.current;
@@ -18,9 +20,9 @@ export const usePreviousWhen = function usePreviousWhen(value) {
   value = value.value;
   const shouldUpdate = value.shouldUpdate;
   const tmp = React(null);
-  closure_2 = tmp;
+  let closure_2 = tmp;
   const items = [value, shouldUpdate];
-  framebus(() => {
+  map(() => {
     if (shouldUpdate) {
       closure_2.current = value;
     }
@@ -31,9 +33,9 @@ export const useCurrentWhen = function useCurrentWhen(value) {
   let current = value.value;
   const shouldUpdate = value.shouldUpdate;
   const tmp = React(null);
-  closure_2 = tmp;
+  let closure_2 = tmp;
   const items = [current, shouldUpdate];
-  framebus(() => {
+  map(() => {
     if (shouldUpdate) {
       closure_2.current = current;
     }

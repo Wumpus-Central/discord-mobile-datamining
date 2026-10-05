@@ -1,42 +1,42 @@
 // discord_app/modules/a11y/native/PortalAccessibilityWorkaroundView.tsx
-import c from "../../../../_runtime/00576_c.js";
-import PlatformUtils2 from "../../../utils/PlatformUtils.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import NonRecycledViewNativeComponent from "../../../../discord_common/js/packages/rtn-codegen/js/NonRecycledViewNativeComponent.tsx";
+import react from "../../../../_runtime/00019_react.js";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-let _default = fn(17).View;
-const jsx = fn(21).jsx;
-const PlatformUtils = fn(1369);
+react_native.View;
+const jsx = Fragment.jsx;
 if (PlatformUtils.isIOS()) {
-  _default = fn(12302).default;
+  NonRecycledViewNativeComponent.default;
 }
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/a11y/native/PortalAccessibilityWorkaroundView.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(3);
+      let first;
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = null;
+        const tmpResult = PlatformUtils;
         if (tmpResult.isIOS()) {
           obj2 = { accessibilityLabel: " ", accessible: false };
         }
         cResult[0] = obj2;
-        let first = obj2;
-        tmpResult = PlatformUtils2;
+        first = obj2;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const obj3 = {};
         const merged = Object.assign(arg0);
         const merged1 = Object.assign(first);
-        obj3.collapsable = false;
-        const tmp14 = <_default />;
+        const tmp14 = <_default collapsable={false} />;
         cResult[1] = arg0;
         cResult[2] = tmp14;
-        let tmp5 = tmp14;
+        tmp5 = tmp14;
       } else {
         tmp5 = cResult[2];
       }
@@ -44,12 +44,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : (arg0) => {
       let obj2 = null;
+      const obj = PlatformUtils;
       if (obj.isIOS()) {
         obj2 = { accessibilityLabel: " ", accessible: false };
       }
-      const obj3 = {};
       const merged = Object.assign(arg0);
       const merged1 = Object.assign(obj2);
-      obj3.collapsable = false;
-      return <_default />;
+      return <_default collapsable={false} />;
     };
+const result = size.fileFinishedImporting("modules/a11y/native/PortalAccessibilityWorkaroundView.tsx");
+
+export default tmp3;

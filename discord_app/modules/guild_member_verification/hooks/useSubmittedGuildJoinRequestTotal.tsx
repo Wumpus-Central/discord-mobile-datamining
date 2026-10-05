@@ -1,21 +1,23 @@
 // discord_app/modules/guild_member_verification/hooks/useSubmittedGuildJoinRequestTotal.tsx
 import GuildJoinRequestStore from "../GuildJoinRequestStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/guild_member_verification/hooks/useSubmittedGuildJoinRequestTotal.tsx",
-);
+let guildId;
 
-export const useSubmittedGuildJoinRequestTotal = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      const cResult = guildId(576).c(4);
+      let first;
+      let tmp6;
+      let tmp7;
+      const tmp = guildId;
+      const obj = guildId(576);
+      const cResult = obj.c(4);
       guildId = guildId.guildId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildJoinRequestStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -31,20 +33,21 @@ export const useSubmittedGuildJoinRequestTotal = ReactCompilerGating.isReactComp
         cResult[1] = guildId;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj = guildId(576);
-      return guildId(504).useStateFromStores(first, tmp6, tmp7);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6, tmp7);
     }
   : (guildId) => {
       guildId = guildId.guildId;
       const items = [GuildJoinRequestStore];
       const items1 = [guildId];
-      return guildId(504).useStateFromStores(
+      const obj = guildId(504);
+      return obj.useStateFromStores(
         items,
         () => {
           let submittedGuildJoinRequestTotal;
@@ -56,3 +59,8 @@ export const useSubmittedGuildJoinRequestTotal = ReactCompilerGating.isReactComp
         items1,
       );
     };
+const result = size.fileFinishedImporting(
+  "modules/guild_member_verification/hooks/useSubmittedGuildJoinRequestTotal.tsx",
+);
+
+export const useSubmittedGuildJoinRequestTotal = tmp2;

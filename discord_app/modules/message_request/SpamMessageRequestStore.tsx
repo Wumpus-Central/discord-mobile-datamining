@@ -1,31 +1,23 @@
 // discord_app/modules/message_request/SpamMessageRequestStore.tsx
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import MobileCacheSnapshotStore from "../../stores/MobileCacheSnapshotStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
+let tmp;
+let tmp2;
 function processChannel(isSpam) {
-  isSpam = isSpam.isSpam;
-  if (isSpam) {
-    isSpam = !set.has(isSpam.id);
-  }
+  isSpam = isSpam.isSpam && !set.has(isSpam.id);
   let flag = false;
   if (isSpam) {
     set.add(isSpam.id);
     flag = true;
   }
-  const isSpam2 = isSpam.isSpam;
-  let hasItem = !isSpam2;
-  if (!isSpam2) {
-    hasItem = set.has(isSpam.id);
-  }
+  const hasItem = !isSpam.isSpam && set.has(isSpam.id);
   if (hasItem) {
     set.delete(isSpam.id);
     flag = true;
   }
-  const isSpam3 = isSpam.isSpam;
-  let hasItem1 = !isSpam3;
-  if (!isSpam3) {
-    hasItem1 = set1.has(isSpam.id);
-  }
+  const hasItem1 = !isSpam.isSpam && set1.has(isSpam.id);
   if (hasItem1) {
     set1.delete(isSpam.id);
     flag = true;
@@ -48,11 +40,11 @@ function handleChannelCreate(channel) {
   return processChannel(channel.channel);
 }
 function handleChannelUpdates(arg0) {
+  const tmp = arg0.channels[Symbol.iterator]();
   while (tmp !== undefined) {
     let tmp4 = processChannel(tmp2);
     continue;
   }
-  tmp = arg0.channels[Symbol.iterator]();
 }
 function handleChannelDelete(channel) {
   channel = channel.channel;
@@ -63,14 +55,12 @@ function handleChannelDelete(channel) {
   }
   return flag;
 }
-let set = new Set();
+const set = new Set();
 const set1 = new Set();
 let c3 = false;
-let SpamMessageRequestStore;
-class SpamMessageRequestStore extends tmp4 {
+class SpamMessageRequestStore extends MobileCacheSnapshotStore {
   constructor() {
-    closure_0 = undefined;
-    obj = {
+    const obj = {
       CONNECTION_OPEN: handleConnectionOpen,
       CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpen,
       CACHE_LOADED_LAZY() {
@@ -81,63 +71,61 @@ class SpamMessageRequestStore extends tmp4 {
       CHANNEL_DELETE: handleChannelDelete,
       MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: handleSpamAcceptOptimistic,
     };
-    tmp1 = new tmp(obj, handleChannelDelete, new.target, tmp);
-    closure_0 = tmp1;
-    return tmp1;
+    const tmp2 = new tmp(obj, handleChannelDelete, new.target, tmp);
+    let closure_0 = tmp2;
+    return tmp2;
+  }
+  initialize() {
+    this.waitFor(ChannelStore);
+  }
+  loadCache() {
+    const snapshot = this.readSnapshot(SpamMessageRequestStore.LATEST_SNAPSHOT_VERSION);
+    if (null != snapshot) {
+      const _Set = Set;
+      const self = this;
+      const self2 = this;
+      new Set(snapshot);
+    }
+  }
+  takeSnapshot() {
+    const obj = { version: SpamMessageRequestStore.LATEST_SNAPSHOT_VERSION, data: Array.from(set) };
+    return obj;
+  }
+  getSpamChannelIds() {
+    return set;
+  }
+  getSpamChannelsCount() {
+    return set.size;
+  }
+  isSpam(arg0) {
+    return set.has(arg0);
+  }
+  isAcceptedOptimistic(arg0) {
+    return set1.has(arg0);
+  }
+  isReady() {
+    return c3;
   }
 }
 const prototype = SpamMessageRequestStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(ChannelStore);
-};
-prototype["loadCache"] = function loadCache() {
-  const snapshot = this.readSnapshot(SpamMessageRequestStore.LATEST_SNAPSHOT_VERSION);
-  if (null != snapshot) {
-    const _Set = Set;
-    set = new Set(snapshot);
-  }
-};
-prototype["takeSnapshot"] = function takeSnapshot() {
-  return { version: SpamMessageRequestStore.LATEST_SNAPSHOT_VERSION, data: Array.from(set) };
-};
-prototype["getSpamChannelIds"] = function getSpamChannelIds() {
-  return set;
-};
-prototype["getSpamChannelsCount"] = function getSpamChannelsCount() {
-  return set.size;
-};
-prototype["isSpam"] = function isSpam(arg0) {
-  return set.has(arg0);
-};
-prototype["isAcceptedOptimistic"] = function isAcceptedOptimistic(arg0) {
-  return set1.has(arg0);
-};
-prototype["isReady"] = function isReady() {
-  return c3;
-};
 SpamMessageRequestStore.displayName = "SpamMessageRequestStore";
 SpamMessageRequestStore.LATEST_SNAPSHOT_VERSION = 1;
-let closure_129_0;
-const obj = {
+let prototype1;
+let obj = {
   CONNECTION_OPEN: handleConnectionOpen,
   CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpen,
-  CACHE_LOADED_LAZY: null,
-  CHANNEL_CREATE: null,
-  CHANNEL_UPDATES: null,
-  CHANNEL_DELETE: null,
-  MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: null,
+  CACHE_LOADED_LAZY,
+  CHANNEL_CREATE: handleChannelCreate,
+  CHANNEL_UPDATES: handleChannelUpdates,
+  CHANNEL_DELETE: handleChannelDelete,
+  MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: handleSpamAcceptOptimistic,
 };
 class CACHE_LOADED_LAZY {
   constructor() {
     return closure_0.loadCache();
   }
 }
-obj.CACHE_LOADED_LAZY = CACHE_LOADED_LAZY;
-obj.CHANNEL_CREATE = handleChannelCreate;
-obj.CHANNEL_UPDATES = handleChannelUpdates;
-obj.CHANNEL_DELETE = handleChannelDelete;
-obj.MESSAGE_REQUEST_ACCEPT_OPTIMISTIC = handleSpamAcceptOptimistic;
-const prototype1 = new prototype(
+prototype1 = new prototype(
   obj,
   tmp2,
   tmp,
@@ -148,8 +136,6 @@ const prototype1 = new prototype(
   handleChannelUpdates,
   handleChannelDelete,
 );
-closure_129_0 = prototype1;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/SpamMessageRequestStore.tsx");
 
 export default prototype1;

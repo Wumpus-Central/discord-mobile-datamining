@@ -1,16 +1,23 @@
 // discord_app/modules/jank_stats/native/getJankSurfaceName.tsx
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import useChatLayout from "../../chat/native/useChatLayout.tsx";
 import getJankScreenName from "getJankScreenName.tsx";
-import NativeJankStatsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react_nativeDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx";
+import react from "../../../../_runtime/00019_react.js";
 import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
+import JankScreenConstants from "JankScreenConstants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
 function composeJankSurfaceName(getBaseScreenName) {
   const stack = ActionSheetStore.getStack();
   let diff = stack.length - 1;
   let tmp2 = null;
   if (0 <= diff) {
+    let combined;
     while (true) {
       let appEntryKey = stack[diff].appEntryKey;
       if (appEntryKey == null) {
@@ -24,62 +31,63 @@ function composeJankSurfaceName(getBaseScreenName) {
       }
     }
     let componentDisplayName = null;
-    if (noop.isValidElement(tmp3.content)) {
-      componentDisplayName = getJankScreenName.getComponentDisplayName(tmp3.content.type);
+    if (react.isValidElement(tmp3.content)) {
+      const obj = getJankScreenName;
+      componentDisplayName = obj.getComponentDisplayName(tmp3.content.type);
     }
     if (null == componentDisplayName) {
-      let combined = closure_1_8;
+      combined = metroImportAll;
     } else {
       let key = componentDisplayName;
       if (set.has(componentDisplayName)) {
         key = tmp3.key;
       }
       const _HermesInternal = HermesInternal;
-      combined = "" + closure_1_8 + ":" + key;
+      combined = "" + metroImportAll + ":" + key;
     }
+    tmp2 = combined;
   }
   if (null != tmp2) {
     return tmp2;
   } else {
-    const tmp23 = getBaseScreenName();
-    if (obj4.isModalScreenName(tmp23)) {
-      return tmp23;
+    const tmp22 = getBaseScreenName();
+    const obj4 = getJankScreenName;
+    if (obj4.isModalScreenName(tmp22)) {
+      return tmp22;
     } else if (null != closure_11[closure_11.length - 1]) {
       const _HermesInternal2 = HermesInternal;
-      return "" + React5 + ":" + tmp16;
+      return "" + metroImportDefault + ":" + closure_11[closure_11.length - 1];
     } else {
-      let tmp18 = null;
+      let tmp17 = null;
       if (set1.size > 0) {
-        tmp18 = hasOwnProperty;
+        tmp17 = hasOwnProperty;
       }
-      if (tmp24Result.getChatLayout().isChatBesideChannelList) {
-        const wideViewScreenName = getJankScreenName.getWideViewScreenName(tmp18);
+      const tmp23Result = useChatLayout;
+      if (tmp23Result.getChatLayout().isChatBesideChannelList) {
+        const tmp23Result2 = getJankScreenName;
+        const wideViewScreenName = tmp23Result2.getWideViewScreenName(tmp17);
         if (null != wideViewScreenName) {
           return wideViewScreenName;
         }
-        const tmp24Result2 = getJankScreenName;
       }
-      if (tmp18 == null) {
-        tmp18 = tmp23;
+      if (tmp17 == null) {
+        tmp17 = tmp22;
       }
-      return tmp18;
+      return tmp17;
     }
-    obj4 = getJankScreenName;
   }
 }
-const JankScreenConstants = fn(15935);
 ({
   CHANNEL_DETAILS_SCREEN: hasOwnProperty,
   INTERACTION_NONE: metroRequire,
-  PANEL_SURFACE: closure_7,
-  SHEET_SURFACE: closure_8,
+  PANEL_SURFACE: metroImportDefault,
+  SHEET_SURFACE: metroImportAll,
 } = JankScreenConstants);
 const set = new Set(["SimpleActionSheet"]);
 const main = "main";
 let closure_11 = [];
 const set1 = new Set();
 let c13 = false;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/jank_stats/native/getJankSurfaceName.tsx");
 
 export { composeJankSurfaceName };
@@ -111,9 +119,9 @@ export const setJankChannelDetailsOpen = function setJankChannelDetailsOpen(cons
     }
   }
   if (flag) {
-    const obj2 = NativeJankStatsModuleDefault;
+    const obj2 = react_nativeDefault;
     if (obj2 != null) {
-      obj2.setScreenContext(composeJankSurfaceName(getJankScreenName.getBaseScreenName), timestampProducer);
+      obj2.setScreenContext(composeJankSurfaceName(getJankScreenName.getBaseScreenName), metroRequire);
     }
   }
 };
@@ -125,21 +133,22 @@ export const setJankPanelOpen = function setJankPanelOpen(activity, arg1) {
     } else {
       closure_11.splice(lastIndexOfResult, 1);
     }
-    const obj = NativeJankStatsModuleDefault;
+    const obj = react_nativeDefault;
     if (obj != null) {
-      obj.setScreenContext(composeJankSurfaceName(getJankScreenName.getBaseScreenName), timestampProducer);
+      obj.setScreenContext(composeJankSurfaceName(getJankScreenName.getBaseScreenName), metroRequire);
     }
   }
 };
 export const attachJankActionSheetReporter = function attachJankActionSheetReporter() {
   let isAndroidResult = !c13;
-  if (!c13) {
-    isAndroidResult = PlatformUtils.isAndroid();
+  if (isAndroidResult) {
+    let obj = PlatformUtils;
+    isAndroidResult = obj.isAndroid();
   }
   if (isAndroidResult) {
     c13 = true;
     ActionSheetStore.addChangeListener(() => {
-      const obj = NativeJankStatsModuleDefault;
+      const obj = react_nativeDefault;
       if (obj != null) {
         obj.setScreenContext(composeJankSurfaceName(getJankScreenName.getBaseScreenName), closure_1_6);
       }

@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/utils/WideBannerDismissibleContentVersion.tsx
+import CollectiblesShopConstants from "../CollectiblesShopConstants.tsx";
 import ShopBlockType from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 import CollectiblesShopHomeStore from "../CollectiblesShopHomeStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const CollectibleShopTab = fn(1087).CollectibleShopTab;
-const size = fn(2);
+const CollectibleShopTab = CollectiblesShopConstants.CollectibleShopTab;
 const result = size.fileFinishedImporting("modules/collectibles/utils/WideBannerDismissibleContentVersion.tsx");
 
 export const getWideBannerDismissibleContentVersion = function getWideBannerDismissibleContentVersion() {
@@ -19,8 +19,9 @@ export const getWideBannerDismissibleContentVersion = function getWideBannerDism
       prop = found.dismissibleContentVersion;
     }
     if (null != prop) {
+      let dismissibleContentVersion = found.dismissibleContentVersion;
       obj.return();
-      return found.dismissibleContentVersion;
+      return dismissibleContentVersion;
     }
   }
   return 0;

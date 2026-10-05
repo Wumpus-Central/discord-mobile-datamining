@@ -1,28 +1,33 @@
 // discord_app/modules/stickers/useLoadGuildStickerWithCreator.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
-import noop from "../../../_runtime/metro/00019__.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../_runtime/00019_react.js";
 import UserStore from "../../stores/UserStore.tsx";
 import GuildStickersStore from "GuildStickersStore.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, c1, c4, closure_0, user;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/stickers/useLoadGuildStickerWithCreator.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let first;
+      let tmp10;
+      let tmp16;
+      let tmp5;
+      let tmp8;
+      let tmp9;
       _require = arg0;
-      const cResult = require("c").c(14);
-      let obj = require("c");
       const tmp = _require;
-      [tmp5, dependencyMap] = noop.useState("loading");
+      let obj = require("react");
+      const cResult = obj.c(14);
+      const tmp4 = _slicedToArray(react.useState("loading"), 2);
+      [tmp5, dependencyMap] = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStickersStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -32,47 +37,91 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        let tmp8 = fn;
+        tmp8 = fn;
       } else {
         tmp8 = cResult[2];
       }
-      const tmp4 = _slicedToArray(noop.useState("loading"), 2);
-      const stateFromStores = tmp(504).useStateFromStores(first, tmp8);
+      const tmpResult = tmp(504);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp8);
       if (cResult[3] !== arg0) {
         const fn2 = function v() {
+          function fetch() {
+            return closure_0(...arguments);
+          }
           const abortController = new AbortController();
           const signal = abortController.signal;
-          closure_0 = asyncGeneratorStep(async () => {
-            await _null(10112).fetchGuildStickersWithCreator(_null, c1);
-            if (1 === tmp7) {
-              c3 = 0;
-              signal("error");
-              c0 = null;
+          closure_0 = _asyncToGenerator(async () => {
+            let obj2;
+            if (c4 === 2) {
               c4 = 3;
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 !== 2) {
-              signal("success");
-              c0 = null;
-              c3 = 0;
-            }
-            return value;
-          });
-          (function fetch() {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              throw new TypeError("Generator functions may not be called on executing generators");
+            } else if (tmp3 === 3) {
+              if (arg0 === 1) {
+                throw value;
+              } else if (arg0 === 2) {
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                return { value: "IconComponent", done: null };
+              }
             } else {
-              applyArgumentsResult = apply(self, arguments);
+              let c3;
+              try {
+                c4 = 2;
+                if (0 === c1) {
+                  if (arg0 === 1) {
+                    c4 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c4 = 3;
+                    const obj4 = { value, done: true };
+                    return obj4;
+                  } else {
+                    let c0 = tmp;
+                    c3 = 1;
+                    c1 = 2;
+                    c4 = 1;
+                    const obj5 = { value: obj2.fetchGuildStickersWithCreator(closure_0, c1), done: false };
+                    obj2 = abortController(signal[8]);
+                    return obj5;
+                  }
+                } else {
+                  if (1 === tmp4) {
+                    c3 = 0;
+                    signal("error");
+                    c0 = null;
+                  } else if (arg0 === 1) {
+                    c4 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c3 = 0;
+                    c4 = 3;
+                    const obj = { value, done: true };
+                    return obj;
+                  } else {
+                    signal("success");
+                    c0 = null;
+                    c3 = 0;
+                  }
+                  c4 = 3;
+                  return { value: "IconComponent", done: null };
+                }
+              } catch (tmp16) {
+                let closure_2 = tmp16;
+                if (0 === c3) {
+                  c4 = 3;
+                  throw tmp16;
+                } else {
+                  c1 = 1;
+                }
+              }
             }
-            return applyArgumentsResult;
-          })();
+          });
+          fetch();
           return () => {
             dependencyMap("loading");
-            if (closure_0 != null) {
-              closure_0.abort();
+            if (abortController != null) {
+              abortController.abort();
             }
           };
         };
@@ -80,27 +129,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[3] = arg0;
         cResult[4] = fn2;
         cResult[5] = items1;
-        let tmp10 = items1;
-        let tmp9 = fn2;
+        tmp10 = items1;
+        tmp9 = fn2;
       } else {
         tmp9 = cResult[4];
         tmp10 = cResult[5];
       }
-      const effect = noop.useEffect(tmp9, tmp10);
+      const effect = react.useEffect(tmp9, tmp10);
       if ("success" === tmp5) {
         if (cResult[6] !== stateFromStores) {
           const _Symbol = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
             class E {
-              constructor(arg0) {
-                user = closure_1_5.getUser(arg0.user_id);
-                tmp2 = arg0;
+              constructor(user_id) {
+                user = user.getUser(user_id.user_id);
+                let tmp2 = user_id;
                 if (null != user) {
-                  obj = {};
-                  tmp3 = obj;
-                  tmp4 = arg0;
-                  merged = Object.assign(arg0);
-                  obj.user = user;
+                  const obj = { user };
+                  const merged = Object.assign(user_id);
                   tmp2 = obj;
                 }
                 return tmp2;
@@ -109,15 +155,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[8] = E;
           } else {
             class E {
-              constructor(arg0) {
-                user = closure_1_5.getUser(arg0.user_id);
-                tmp2 = arg0;
+              constructor(user_id) {
+                user = user.getUser(user_id.user_id);
+                let tmp2 = user_id;
                 if (null != user) {
-                  obj = {};
-                  tmp3 = obj;
-                  tmp4 = arg0;
-                  merged = Object.assign(arg0);
-                  obj.user = user;
+                  const obj = { user };
+                  const merged = Object.assign(user_id);
                   tmp2 = obj;
                 }
                 return tmp2;
@@ -129,55 +172,46 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[7] = mapped;
         } else {
           class E {
-            constructor(arg0) {
-              user = closure_1_5.getUser(arg0.user_id);
-              tmp2 = arg0;
+            constructor(user_id) {
+              user = user.getUser(user_id.user_id);
+              let tmp2 = user_id;
               if (null != user) {
-                obj = {};
-                tmp3 = obj;
-                tmp4 = arg0;
-                merged = Object.assign(arg0);
-                obj.user = user;
+                const obj = { user };
+                const merged = Object.assign(user_id);
                 tmp2 = obj;
               }
               return tmp2;
             }
           }
-          if (cResult[9] === tmp5) {
-            class E {
-              constructor(arg0) {
-                user = closure_1_5.getUser(arg0.user_id);
-                tmp2 = arg0;
-                if (null != user) {
-                  obj = {};
-                  tmp3 = obj;
-                  tmp4 = arg0;
-                  merged = Object.assign(arg0);
-                  obj.user = user;
-                  tmp2 = obj;
-                }
-                return tmp2;
-              }
-            }
-            return tmp17;
-          }
-          const obj3 = { status: tmp5, stickers: tmp13 };
-          cResult[9] = tmp5;
-          cResult[10] = tmp13;
-          cResult[11] = obj3;
-          tmp17 = obj3;
         }
+        if (cResult[9] === tmp5) {
+          class E {
+            constructor(user_id) {
+              user = user.getUser(user_id.user_id);
+              let tmp2 = user_id;
+              if (null != user) {
+                const obj = { user };
+                const merged = Object.assign(user_id);
+                tmp2 = obj;
+              }
+              return tmp2;
+            }
+          }
+          return tmp16;
+        }
+        let obj3 = { status: tmp5, stickers: tmp13 };
+        cResult[9] = tmp5;
+        cResult[10] = tmp13;
+        cResult[11] = obj3;
+        tmp16 = obj3;
       } else {
         class E {
-          constructor(arg0) {
-            user = closure_1_5.getUser(arg0.user_id);
-            tmp2 = arg0;
+          constructor(user_id) {
+            user = user.getUser(user_id.user_id);
+            let tmp2 = user_id;
             if (null != user) {
-              obj = {};
-              tmp3 = obj;
-              tmp4 = arg0;
-              merged = Object.assign(arg0);
-              obj.user = user;
+              const obj = { user };
+              const merged = Object.assign(user_id);
               tmp2 = obj;
             }
             return tmp2;
@@ -185,48 +219,95 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp12;
       }
-      const tmpResult = tmp(504);
     }
   : (arg0) => {
+      let obj3;
+      let tmp2;
       _require = arg0;
-      [tmp2, dependencyMap] = noop.useState("loading");
-      const tmp = _slicedToArray(noop.useState("loading"), 2);
+      const tmp = _slicedToArray(react.useState("loading"), 2);
+      [tmp2, dependencyMap] = tmp;
+      let obj = require("get initialized");
       const items = [GuildStickersStore];
-      const stateFromStores = require("initialize").useStateFromStores(items, () =>
-        GuildStickersStore.getStickersByGuildId(closure_0),
-      );
+      const stateFromStores = obj.useStateFromStores(items, () => GuildStickersStore.getStickersByGuildId(closure_0));
       const items1 = [arg0];
-      const effect = noop.useEffect(() => {
-        closure_2 = async function _fetch2() {
-          closure_0 = tmp3;
-          await abortController(signal[8]).fetchGuildStickersWithCreator(closure_0, signal);
-          if (1 === tmp7) {
-            c3 = 0;
-            v2("error");
-            closure_128_0 = null;
-            c4 = 3;
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            v2("success");
-            closure_128_0 = null;
-            c3 = 0;
-          }
-          return value;
+      const effect = react.useEffect(() => {
+        function fetch() {
+          return obj(...arguments);
+        }
+        let obj = function _fetch2() {
+          obj = _asyncToGenerator(async () => {
+            let obj2;
+            let v1;
+            if (c4 === 2) {
+              c4 = 3;
+              throw new TypeError("Generator functions may not be called on executing generators");
+            } else if (tmp3 === 3) {
+              if (arg0 === 1) {
+                throw value;
+              } else if (arg0 === 2) {
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                return { value: "IconComponent", done: null };
+              }
+            } else {
+              let c3;
+              try {
+                c4 = 2;
+                if (0 === v1) {
+                  if (arg0 === 1) {
+                    c4 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c4 = 3;
+                    const obj4 = { value, done: true };
+                    return obj4;
+                  } else {
+                    closure_0 = tmp;
+                    c3 = 1;
+                    v1 = 2;
+                    c4 = 1;
+                    const obj5 = { value: obj2.fetchGuildStickersWithCreator(closure_0, signal), done: false };
+                    obj2 = abortController(signal[8]);
+                    return obj5;
+                  }
+                } else {
+                  if (1 === tmp4) {
+                    c3 = 0;
+                    v1("error");
+                    let c0 = null;
+                  } else if (arg0 === 1) {
+                    c4 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c3 = 0;
+                    c4 = 3;
+                    obj = { value, done: true };
+                    return obj;
+                  } else {
+                    v1("success");
+                    c0 = null;
+                    c3 = 0;
+                  }
+                  c4 = 3;
+                  return { value: "IconComponent", done: null };
+                }
+              } catch (tmp16) {
+                let closure_2 = tmp16;
+                if (0 === c3) {
+                  c4 = 3;
+                  throw tmp16;
+                } else {
+                  v1 = 1;
+                }
+              }
+            }
+          });
+          return obj(...arguments);
         };
         const abortController = new AbortController();
         const signal = abortController.signal;
-        (function fetch() {
-          const self = this;
-          const apply = closure_2.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
-        })();
+        fetch();
         return () => {
           dependencyMap("loading");
           if (abortController != null) {
@@ -235,23 +316,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
       }, items1);
       if ("success" === tmp2) {
-        const obj2 = {
+        let obj2 = {
           status: tmp2,
           stickers: stateFromStores.map((user_id) => {
             user = user.getUser(user_id.user_id);
             let tmp2 = user_id;
             if (null != user) {
-              const obj = {};
+              const obj = { user };
               const merged = Object.assign(user_id);
-              obj.user = user;
               tmp2 = obj;
             }
             return tmp2;
           }),
         };
-        let obj3 = obj2;
+        obj3 = obj2;
       } else {
         obj3 = { status: tmp2 };
       }
       return obj3;
     };
+const result = size.fileFinishedImporting("modules/stickers/useLoadGuildStickerWithCreator.tsx");
+
+export default tmp2;

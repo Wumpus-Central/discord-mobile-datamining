@@ -1,49 +1,50 @@
 // discord_app/modules/voice_calls/native/ProximitySensorManager.tsx
-import PlatformUtils2 from "../../../utils/PlatformUtils.tsx";
+import react_native from "../../../../_runtime/00017_react-native.js";
 import VoiceCallTypes from "../VoiceCallTypes.tsx";
-import NativeProximitySensorManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeProximitySensorManagerModule.tsx";
+import react_nativeDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeProximitySensorManagerModule.tsx";
 import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.tsx";
 import ApplicationStreamingStore from "../../../stores/ApplicationStreamingStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 import AudioRouteStore from "../AudioRouteStore.native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let map;
+
 function handleChange() {
   const currentRouteType = AudioRouteStore.getCurrentRouteType();
-  const tmp3 = null != EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   const isConnectedResult = RTCConnectionStore.isConnected();
+  const tmp3 = null != EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
+  const setProximityMonitoringEnabled = ProximitySensorManager2.setProximityMonitoringEnabled;
+  const tmp4 = ApplicationStreamingStore.getAllActiveStreams().length > 0;
   let tmp8 = currentRouteType === VoiceCallTypes.RouteTypes.RECEIVER && isConnectedResult;
   if (tmp8) {
-    let isIOSResult = PlatformUtils2.isIOS();
+    const tmp6Result = PlatformUtils;
+    let isIOSResult = tmp6Result.isIOS();
     if (!isIOSResult) {
-      let tmp10 = !tmp3;
-      if (!tmp3) {
-        tmp10 = !tmp4;
-      }
-      isIOSResult = tmp10;
+      isIOSResult = !tmp3 && !tmp4;
     }
     tmp8 = isIOSResult;
-    const tmp6Result = PlatformUtils2;
   }
-  const result = ProximitySensorManager.setProximityMonitoringEnabled(tmp8);
-  tmp4 = ApplicationStreamingStore.getAllActiveStreams().length > 0;
+  const result = setProximityMonitoringEnabled(tmp8);
 }
-const PlatformUtils = fn(1369);
+const NativeModules = react_native.NativeModules;
 if (PlatformUtils.isIOS()) {
-  let ProximitySensorManager = fn(17).NativeModules.ProximitySensorManager;
+  let ProximitySensorManager2 = NativeModules.ProximitySensorManager;
 } else {
-  ProximitySensorManager = NativeProximitySensorManagerModuleDefault;
+  ProximitySensorManager2 = react_nativeDefault;
 }
-const prototype = function ProximitySensorManager() {
-  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const result = new Map().set(AudioRouteStore, handleChange);
-  applyArgumentsResult.stores = result.set(RTCConnectionStore, handleChange);
-  return applyArgumentsResult;
-}.prototype;
-class prototype extends tmp2 {}
-const prototype1 = new prototype();
-const size = fn(2);
+class ProximitySensorManager extends AutomaticLifecycleManager {
+  constructor() {
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    map = new Map();
+    const result = map.set(AudioRouteStore, handleChange);
+    applyArgumentsResult.stores = result.set(RTCConnectionStore, handleChange);
+    return applyArgumentsResult;
+  }
+}
+const proximitySensorManager = new ProximitySensorManager();
 let result = size.fileFinishedImporting("modules/voice_calls/native/ProximitySensorManager.tsx");
 
-export default prototype1;
+export default proximitySensorManager;

@@ -5,5 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/presence_subscriptions/PresenceSubscriptionsActionCreators.tsx");
 
 export const subscribe = function subscribe(subscription) {
-  DispatcherDefault.dispatch({ type: "PRESENCE_SUBSCRIPTIONS_ADD", subscription });
+  const obj = DispatcherDefault;
+  const obj2 = { type: "PRESENCE_SUBSCRIPTIONS_ADD", subscription };
+  obj.dispatch(obj2);
 };

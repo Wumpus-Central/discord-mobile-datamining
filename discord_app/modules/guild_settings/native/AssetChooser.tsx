@@ -1,41 +1,55 @@
 // discord_app/modules/guild_settings/native/AssetChooser.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import Constants from "../../../Constants.tsx";
+import intl3 from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
+import native2 from "../../../../discord_common/js/packages/design/native.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef17671 from "../../../../_runtime/metro/17671__.js";
-import _modDef17672 from "../../../../_runtime/metro/17672__.js";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import AssetRegistryDefault from "../../../../_runtime/17671_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/17672_AssetRegistry.js";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import react from "../../../../_runtime/00019_react.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
+let c2, c3;
+
+let c10;
+let c9;
+let closure_4;
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let rect;
+let size;
+let unpackModuleId;
 ({
   View: closure_4,
   Image: hasOwnProperty,
   ImageBackground: metroRequire,
-  TouchableWithoutFeedback: closure_7,
-} = get_ActivityIndicator);
-const UPLOAD_MEDIUM_SIZE = fn(1085).UPLOAD_MEDIUM_SIZE;
-const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+  TouchableWithoutFeedback: metroImportDefault,
+} = react_native);
+const UPLOAD_MEDIUM_SIZE = Constants.UPLOAD_MEDIUM_SIZE;
+({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = Fragment);
+let obj = {
   assetWrapper: { width: "100%", alignItems: "center" },
-  asset: null,
-  uploadIconWrapper: null,
-  uploadIcon: null,
-  remove: null,
+  asset: size,
+  uploadIconWrapper: rect,
+  uploadIcon: { width: 16, height: 16 },
+  remove: obj2,
 };
-let size = {
+size = {
   width: "100%",
   height: 192,
   borderRadius: nativeDefault.radii.xs,
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-obj2.asset = size;
-const rect = {
+const createLegacyClassComponentStyles = createStyles.createLegacyClassComponentStyles;
+rect = {
   position: "absolute",
   bottom: 10,
   right: 10,
@@ -44,21 +58,20 @@ const rect = {
   shadowOffset: { height: 8, width: 0 },
   shadowOpacity: 0.2,
 };
-obj2.uploadIconWrapper = rect;
-obj2.uploadIcon = { width: 16, height: 16 };
-obj2.remove = { marginTop: 8, fontSize: 14, lineHeight: 18, color: nativeDefault.unsafe_rawColors.BLUE_345 };
-let closure_12 = createStyles.createLegacyClassComponentStyles(obj2);
-const PureComponent = noop.PureComponent;
+obj2 = { marginTop: 8, fontSize: 14, lineHeight: 18, color: nativeDefault.unsafe_rawColors.BLUE_345 };
+let closure_12 = createLegacyClassComponentStyles(obj);
+const PureComponent = react.PureComponent;
 class AssetChooser extends PureComponent {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    closure_0 = applyArgumentsResult;
-    closure_129_0 = applyArgumentsResult;
-    applyArgumentsResult.handleChooseAsset = closure_3(async () => {
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    require = applyArgumentsResult;
+    applyArgumentsResult.handleChooseAsset = _asyncToGenerator(async () => {
+      let c0;
+      let closure_1;
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -69,8 +82,9 @@ class AssetChooser extends PureComponent {
         }
       } else {
         try {
+          let base64;
           c3 = 2;
-          if (0 === dependencyMap) {
+          if (0 === c2) {
             if (arg0 === 1) {
               c3 = 3;
               throw value;
@@ -79,23 +93,26 @@ class AssetChooser extends PureComponent {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              closure_129_0 = undefined;
-              let base64;
-              ({ size, onChooseAsset: closure_129_0 } = applyArgumentsResult.props);
+              let tmp14;
+              c0 = undefined;
+              base64 = undefined;
+              ({ size, onChooseAsset: c0 } = applyArgumentsResult.props);
+              const openImagePicker = tmp(c2[8]).openImagePicker;
+              const tmp22 = tmp(c2[8]);
               if (typeof size === "number") {
                 const obj4 = { size };
-                let tmp15 = obj4;
+                tmp14 = obj4;
               } else {
                 let obj5 = size;
                 if (size == null) {
                   obj5 = { size };
                 }
-                tmp15 = obj5;
+                tmp14 = obj5;
               }
-              tmp2(dependencyMap[8]).openImagePicker(tmp15);
-              dependencyMap = 1;
+              c2 = 1;
               c3 = 1;
-              const obj6 = tmp2(dependencyMap[8]);
+              const obj6 = { value: openImagePicker(tmp14), done: false };
+              return obj6;
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -107,89 +124,97 @@ class AssetChooser extends PureComponent {
           } else {
             base64 = value.base64;
             if (null != base64) {
-              if (closure_129_0 != null) {
-                tmp10(base64);
+              if (c0 != null) {
+                tmp9(base64);
               }
             }
             c3 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp17) {
-          c3 = tmp;
-          throw tmp17;
+        } catch (tmp15) {
+          c3 = 3;
+          throw tmp15;
         }
       }
     });
     applyArgumentsResult.handleRemoveAsset = function handleRemoveAsset() {
-      const onChooseAsset = applyArgumentsResult.props.onChooseAsset;
+      const onChooseAsset = require.props.onChooseAsset;
       if (onChooseAsset != null) {
         onChooseAsset(null);
       }
     };
     return applyArgumentsResult;
   }
+  getSource() {
+    const rawSource = this.props.rawSource;
+    let tmp3 = null;
+    if (null != rawSource) {
+      let tmpResult;
+      if (rawSource.startsWith("data:")) {
+        tmpResult = { uri: rawSource };
+        const obj = { uri: rawSource };
+      } else {
+        tmpResult = tmp(tmp2, 192);
+      }
+      tmp3 = tmpResult;
+    }
+    return tmp3;
+  }
+  render() {
+    let LegacyText;
+    let intl;
+    let intl2;
+    let obj2;
+    let obj4;
+    let obj6;
+    let tmp5Result;
+    const tmp = closure_12(this.context);
+    const disabled = this.props.disabled;
+    const source = this.getSource();
+    const obj = {
+      accessibilityRole: "button",
+      accessibilityLabel: intl.string(intl3.t["MsUY/S"]),
+      style: tmp.assetWrapper,
+      onPress: this.handleChooseAsset,
+      disabled,
+      children: React4(metroRequire, obj2),
+    };
+    const PressableOpacity = Pressables.PressableOpacity;
+    intl = intl3.intl;
+    let tmp9 = source;
+    if (null == source) {
+      tmp9 = AssetRegistryDefault;
+    }
+    obj2 = { source: tmp9, style: tmp.asset, children: tmp5Result };
+    tmp5Result = null;
+    if (!disabled) {
+      const obj3 = { style: tmp.uploadIconWrapper, children: React4(hasOwnProperty, obj4) };
+      obj4 = { style: tmp.uploadIcon, source: AssetRegistryDefault2 };
+      tmp5Result = React4(React3, obj3);
+    }
+    const children = [React4(PressableOpacity, obj)];
+    let tmp5Result2 = null;
+    if (null != source) {
+      tmp5Result2 = null;
+      if (!disabled) {
+        const obj5 = {
+          accessibilityRole: "button",
+          onPress: this.handleRemoveAsset,
+          children: React4(LegacyText, obj6),
+        };
+        obj6 = { style: tmp.remove, children: intl2.string(intl3.t.N86XcP) };
+        LegacyText = native.LegacyText;
+        intl2 = intl3.intl;
+        tmp5Result2 = React4(metroImportDefault, obj5);
+      }
+    }
+    children[1] = tmp5Result2;
+    return unpackModuleId(authStore, { children });
+  }
 }
 const prototype = AssetChooser.prototype;
-prototype["getSource"] = function getSource() {
-  const rawSource = this.props.rawSource;
-  if (null == rawSource) {
-    return null;
-  } else if (rawSource.startsWith("data:")) {
-    const obj = { uri: rawSource };
-    let tmpResult = obj;
-  } else {
-    tmpResult = tmp(tmp2, 192);
-  }
-};
-prototype["render"] = function render() {
-  const tmp = closure_12(this.context);
-  const disabled = this.props.disabled;
-  const source = this.getSource();
-  const obj = {
-    accessibilityRole: "button",
-    accessibilityLabel: null,
-    style: null,
-    onPress: null,
-    disabled: null,
-    children: null,
-  };
-  const intl = util.intl;
-  obj.accessibilityLabel = intl.string(util.t["MsUY/S"]);
-  obj.style = tmp.assetWrapper;
-  obj.onPress = this.handleChooseAsset;
-  obj.disabled = disabled;
-  let tmp9 = source;
-  if (null == source) {
-    tmp9 = _modDef17671;
-  }
-  const obj2 = { source: tmp9, style: tmp.asset, children: null };
-  let tmp5Result = null;
-  if (!disabled) {
-    const obj3 = { style: tmp.uploadIconWrapper, children: null };
-    const obj4 = { style: tmp.uploadIcon, source: _modDef17672 };
-    obj3.children = options(hasOwnProperty, obj4);
-    tmp5Result = options(React4, obj3);
-  }
-  obj2.children = tmp5Result;
-  obj.children = options(timestampProducer, obj2);
-  const children = [options(Pressables.PressableOpacity, obj)];
-  let tmp5Result2 = null;
-  if (null != source) {
-    tmp5Result2 = null;
-    if (!disabled) {
-      const obj5 = { accessibilityRole: "button", onPress: this.handleRemoveAsset, children: null };
-      const obj6 = { style: tmp.remove, children: null };
-      const intl2 = util.intl;
-      obj6.children = intl2.string(util.t.N86XcP);
-      obj5.children = options(native.LegacyText, obj6);
-      tmp5Result2 = options(React5, obj5);
-    }
-  }
-  children[1] = tmp5Result2;
-  return closure_1_11(v65535, { children });
-};
-AssetChooser.contextType = fn(4589).ThemeContext;
-size = fn(2);
+AssetChooser.contextType = native2.ThemeContext;
+size = size_mod;
 const result = size.fileFinishedImporting("modules/guild_settings/native/AssetChooser.tsx");
 
 export default AssetChooser;

@@ -1,38 +1,37 @@
 // discord_app/modules/user_settings/premium/native/useScrollToSection.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/premium/native/useScrollToSection.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      const cResult = c.c(5);
-      closure_2 = noop.useRef(false);
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      let obj = react2;
+      const cResult = obj.c(5);
+      let closure_2 = react.useRef(false);
       if (cResult[0] === arg1) {
+        let tmp2;
+        let tmp3;
         if (cResult[1] === arg0) {
-          let tmp2 = cResult[2];
+          tmp2 = cResult[2];
         }
         if (cResult[3] !== tmp2) {
           const obj2 = { createSectionLayoutHandler: tmp2 };
           cResult[3] = tmp2;
           cResult[4] = obj2;
-          let tmp3 = obj2;
+          tmp3 = obj2;
         } else {
           tmp3 = cResult[4];
         }
         return tmp3;
       }
       const fn = function c(arg0) {
+        let ref2;
+        const ref = arg0;
         return (nativeEvent) => {
-          let current = ref !== closure_1;
-          if (!current) {
-            current = ref2.current;
-          }
+          const current = ref !== closure_1 || ref2.current;
           if (!current) {
             ref2.current = true;
             const current2 = ref.current;
@@ -49,27 +48,30 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp2 = fn;
     }
   : (arg0, arg1) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      closure_2 = noop.useRef(false);
-      let obj = { createSectionLayoutHandler: null };
-      const items = [arg1, arg0];
-      obj.createSectionLayoutHandler = noop.useCallback(
-        (arg0) => (nativeEvent) => {
-          let current = ref !== closure_1;
-          if (!current) {
-            current = ref2.current;
-          }
-          if (!current) {
-            ref2.current = true;
-            const current2 = ref.current;
-            if (current2 != null) {
-              const obj = { y: nativeEvent.nativeEvent.layout.y, animated: true };
-              current2.scrollTo(obj);
+      let items;
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      let closure_2 = react.useRef(false);
+      let obj = {
+        createSectionLayoutHandler: react.useCallback((arg0) => {
+          let ref2;
+          const ref = arg0;
+          return (nativeEvent) => {
+            const current = ref !== closure_1 || ref2.current;
+            if (!current) {
+              ref2.current = true;
+              const current2 = ref.current;
+              if (current2 != null) {
+                const obj = { y: nativeEvent.nativeEvent.layout.y, animated: true };
+                current2.scrollTo(obj);
+              }
             }
-          }
-        },
-        items,
-      );
+          };
+        }, items),
+      };
+      items = [arg1, arg0];
       return obj;
     };
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/useScrollToSection.tsx");
+
+export default tmp2;

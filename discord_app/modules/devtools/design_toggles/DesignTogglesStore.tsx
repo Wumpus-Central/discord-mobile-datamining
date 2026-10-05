@@ -1,6 +1,7 @@
 // discord_app/modules/devtools/design_toggles/DesignTogglesStore.tsx
-import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const toggles = {
   enable_recently_active: "Enable recently active channels",
@@ -13,59 +14,61 @@ const toggles = {
   mana_switch_large_variant: "Larger Switch",
   show_header_debug_info: "Show header component debug overlays",
 };
-let toggleStates = {};
-const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class DesignTogglesStore extends DeviceSettingsStore {}
-const prototype = DesignTogglesStore.prototype;
-prototype["getUserAgnosticState"] = function getUserAgnosticState() {
-  return { toggleStates };
-};
-prototype["initialize"] = function initialize(toggleStates) {
-  for (const key10005 in obj) {
-    let flag;
-    if (arg0 != null) {
-      toggleStates = arg0.toggleStates;
+const DeviceSettingsStore = get_initializedDefault.DeviceSettingsStore;
+class DesignTogglesStore extends DeviceSettingsStore {
+  getUserAgnosticState() {
+    return { toggleStates };
+  }
+  initialize(toggleStates) {
+    for (const key10005 in obj) {
+      let flag;
       if (toggleStates != null) {
-        flag = toggleStates[key10005];
+        toggleStates = toggleStates.toggleStates;
+        if (toggleStates != null) {
+          flag = toggleStates[key10005];
+        }
       }
+      if (flag == null) {
+        flag = false;
+      }
+      closure_1[key10005] = flag;
+      continue;
     }
+  }
+  get(arg0) {
+    let flag = toggleStates[arg0];
     if (flag == null) {
       flag = false;
     }
-    closure_1[key10005] = flag;
-    continue;
+    return flag;
   }
-};
-prototype["get"] = function get(arg0) {
-  let flag = toggleStates[arg0];
-  if (flag == null) {
-    flag = false;
+  set(arg0, arg1) {
+    toggleStates[arg0] = arg1;
+    return arg1;
   }
-  return flag;
-};
-prototype["set"] = function set(arg0, arg1) {
-  closure_1[arg0] = arg1;
-  return arg1;
-};
-prototype["all"] = function all() {
-  return closure_1;
-};
-prototype["allWithDescriptions"] = function allWithDescriptions() {
-  const entries = Object.entries(closure_1);
-  return entries.map((item) => {
-    [tmp, tmp2] = item;
-    const items = [tmp, tmp2, toggles[tmp]];
-    return items;
-  });
-};
+  all() {
+    return toggleStates;
+  }
+  allWithDescriptions() {
+    const entries = Object.entries(toggleStates);
+    return entries.map((item) => {
+      let tmp;
+      let tmp2;
+      [tmp, tmp2] = item;
+      const items = [tmp, tmp2, toggles[tmp]];
+      return items;
+    });
+  }
+}
+const prototype = DesignTogglesStore.prototype;
 DesignTogglesStore.displayName = "DevToolsDesignTogglesStore";
 DesignTogglesStore.persistKey = "DevToolsDesignTogglesStore";
-const designTogglesStore = new DesignTogglesStore(DispatcherDefault, {
+const obj2 = {
   DEV_TOOLS_DESIGN_TOGGLE_SET: function handleSet(toggle) {
-    closure_1[toggle.toggle] = toggle.value;
+    toggleStates[toggle.toggle] = toggle.value;
   },
-});
-const size = fn(2);
+};
+const designTogglesStore = new DesignTogglesStore(DispatcherDefault, obj2);
 const result = size.fileFinishedImporting("modules/devtools/design_toggles/DesignTogglesStore.tsx");
 
 export default designTogglesStore;

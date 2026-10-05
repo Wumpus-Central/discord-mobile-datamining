@@ -1,20 +1,26 @@
 // discord_app/modules/guild_onboarding/native/GuildOnboardingModal.tsx
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import router_utils from "../../routing/router_utils.tsx";
 import MemberVerificationActionCreatorsDefault from "../../guild_member_verification/MemberVerificationActionCreators.tsx";
+import GuildOnboardingConstants from "GuildOnboardingConstants.tsx";
 import GuildOnboardingActionCreatorsDefault from "../GuildOnboardingActionCreators.tsx";
 import GuildOnboardingUtils from "../GuildOnboardingUtils.tsx";
 import GuildOnboardingPromptsDefault from "GuildOnboardingPrompts.tsx";
 import GuildOnboardingPrompt from "GuildOnboardingPrompt.tsx";
 import GuildOnboardingConnectionPromptDefault from "GuildOnboardingConnectionPrompt.tsx";
 import GuildOnboardingCompletedDefault from "GuildOnboardingCompleted.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import MemberVerificationFormStore from "../../guild_member_verification/MemberVerificationFormStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 import GuildOnboardingPromptsStore from "../GuildOnboardingPromptsStore.tsx";
+import Constants from "../../../Constants.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let c10;
+let unpackModuleId;
 function headerTitle() {
   return null;
 }
@@ -22,12 +28,23 @@ function headerRight() {
   return null;
 }
 function getScreens(guildId) {
+  let backShouldLeaveGuild;
+  let closure_10;
+  let closure_9;
+  let connections;
+  let isFirstOpen;
+  let landingAnimation;
+  let obj2;
+  let obj4;
+  let onClose;
+  let prompts;
+  let selectOption;
   guildId = guildId.guildId;
   ({
     prompts: importDefault,
     connections,
     selectOption: dependencyMap,
-    completeOnboarding: noop,
+    completeOnboarding: react,
     onFinish: MemberVerificationFormStore,
     onClose: ChannelStore,
     landingAnimation: GuildStore,
@@ -37,35 +54,65 @@ function getScreens(guildId) {
   constants = GuildStore.getGuild(guildId);
   const rulesPrompt = MemberVerificationFormStore.getRulesPrompt(guildId);
   let obj = { [closure_9.PROMPT]: obj2 };
+  obj2 = {
+    fullscreen: true,
+    headerTitle,
+    headerRight,
+    render(currentPrompt) {
+      let num;
+      GuildOnboardingPromptsDefault;
+      if (currentPrompt != null) {
+        num = currentPrompt.currentPrompt;
+      }
+      if (num == null) {
+        num = 0;
+      }
+      return (
+        <tmp2
+          guildId={guildId}
+          currentPromptIdx={num}
+          prompts={importDefault}
+          selectOption={dependencyMap}
+          onClose={ChannelStore}
+          landingAnimation={GuildStore}
+          isFirstOpen={SelectedChannelStore}
+          backShouldLeaveGuild={GuildOnboardingPromptsStore}
+        />
+      );
+    },
+  };
+  const CONNECTIONS = constants.CONNECTIONS;
   const obj3 = {
     fullscreen: true,
     headerTitle,
     headerRight,
-    headerLeft: guildId(6010).getHeaderCloseButton(() => {
-      if (backShouldLeaveGuild) {
-        let tmp4 = onClose;
-        let channel = ChannelStore.getChannel(SelectedChannelStore.getLastSelectedChannelId());
-        if (null == channel) {
-          router_utils.transitionTo(closure_2_11.ME, { navigationReplace: true });
-          tmp4 = tmp4();
+    headerLeft: obj4.getHeaderCloseButton(() => {
+      if (GuildOnboardingPromptsStore) {
+        const channel = ChannelStore.getChannel(SelectedChannelStore.getLastSelectedChannelId());
+        if (null != channel) {
+          if (channel.guild_id !== guildId) {
+            const obj2 = router_utils;
+            obj2.transitionTo(unpackModuleId.CHANNEL(channel.guild_id, channel.id));
+          }
+          ChannelStore();
         }
-        channel = router_utils.transitionTo(closure_2_11.CHANNEL(channel.guild_id, channel.id));
+        const obj = router_utils;
+        obj.transitionTo(unpackModuleId.ME, { navigationReplace: true });
       } else {
-        onClose();
+        ChannelStore();
       }
     }),
     render() {
-      const obj = { guildId, isLastStep: null, onComplete: null };
-      let tmp4 = 0 === prompts.length;
+      let tmp4 = 0 === importDefault.length;
+      GuildOnboardingConnectionPromptDefault;
       if (tmp4) {
-        tmp4 = !GuildOnboardingUtils.showRulesInOnboarding(closure_9, closure_10);
+        const obj2 = GuildOnboardingUtils;
+        tmp4 = !obj2.showRulesInOnboarding(closure_9, closure_10);
       }
-      obj.isLastStep = tmp4;
-      obj.onComplete = onComplete;
-      return jsx(GuildOnboardingConnectionPromptDefault, { guildId, isLastStep: null, onComplete: null });
+      return <tmp3 guildId={guildId} isLastStep={tmp4} onComplete={onComplete} />;
     },
   };
-  obj[constants.CONNECTIONS] = obj3;
+  obj[CONNECTIONS] = obj3;
   obj[constants.COMPLETED] = {
     fullscreen: true,
     headerTitle,
@@ -73,7 +120,7 @@ function getScreens(guildId) {
     render() {
       return jsx(GuildOnboardingCompletedDefault, {
         guildId,
-        prompts,
+        prompts: importDefault,
         completeOnboarding,
         onClose() {
           onClose();
@@ -87,41 +134,53 @@ function getScreens(guildId) {
     headerTitle,
     headerRight,
     render() {
-      return jsx(GuildOnboardingPrompt.RulesPrompt, { guildId, onClose });
+      return jsx(GuildOnboardingPrompt.RulesPrompt, { guildId, onClose: ChannelStore });
     },
   };
+  obj4 = guildId(6010);
   return obj;
 }
-let constants = fn(6592).GuildOnboardingModalStates;
-const Constants = fn(1085);
-({ GuildFeatures: c10, Routes: closure_11 } = Constants);
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingModal.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let constants = GuildOnboardingConstants.GuildOnboardingModalStates;
+({ GuildFeatures: c10, Routes: unpackModuleId } = Constants);
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      const cResult = guildId(stateFromStoresArray[17]).c(33);
+      let backShouldLeaveGuild;
+      let first;
+      let isFirstOpen;
+      let landingAnimation;
+      let onClose;
+      let onFinish;
+      let stateFromStoresArray;
+      let tmp10;
+      let tmp12;
+      let tmp14;
+      let tmp18;
+      let tmp19;
+      let tmp6;
+      let tmp8;
+      let tmp2 = stateFromStoresArray;
+      let obj = guildId(stateFromStoresArray[17]);
+      const cResult = obj.c(33);
       guildId = guildId.guildId;
       ({ onFinish, onClose, landingAnimation, isFirstOpen, backShouldLeaveGuild } = guildId);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== guildId) {
         const fn = function s() {
-          guild = GuildStore.getGuild(guildId);
+          const guild = GuildStore.getGuild(guildId);
           let tmp2 = null != guild;
           if (tmp2) {
             const features = guild.features;
-            let hasItem = features.has(constants2.MEMBER_VERIFICATION_GATE_ENABLED);
+            let hasItem = features.has(constants.MEMBER_VERIFICATION_GATE_ENABLED);
             if (hasItem) {
               const features2 = guild.features;
-              hasItem = !features2.has(constants2.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+              hasItem = !features2.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL);
             }
             tmp2 = hasItem;
           }
@@ -129,16 +188,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = guildId;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      let obj = guildId(stateFromStoresArray[17]);
-      const stateFromStores = guildId(stateFromStoresArray[18]).useStateFromStores(first, tmp6);
+      const tmpResult = guildId(tmp2[18]);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [GuildOnboardingPromptsStore];
         cResult[3] = items1;
-        let tmp8 = items1;
+        tmp8 = items1;
       } else {
         tmp8 = cResult[3];
       }
@@ -148,16 +207,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[4] = guildId;
         cResult[5] = fn2;
-        let tmp10 = fn2;
+        tmp10 = fn2;
       } else {
         tmp10 = cResult[5];
       }
-      const tmpResult = guildId(stateFromStoresArray[18]);
-      stateFromStoresArray = guildId(stateFromStoresArray[18]).useStateFromStoresArray(tmp8, tmp10);
+      const tmpResult3 = guildId(tmp2[18]);
+      stateFromStoresArray = tmpResult3.useStateFromStoresArray(tmp8, tmp10);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [GuildOnboardingPromptsStore];
         cResult[6] = items2;
-        let tmp12 = items2;
+        tmp12 = items2;
       } else {
         tmp12 = cResult[6];
       }
@@ -167,54 +226,49 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[7] = guildId;
         cResult[8] = fn3;
-        let tmp14 = fn3;
+        tmp14 = fn3;
       } else {
         tmp14 = cResult[8];
       }
-      const tmpResult3 = guildId(stateFromStoresArray[18]);
-      const stateFromStores1 = guildId(stateFromStoresArray[18]).useStateFromStores(tmp12, tmp14);
+      const tmpResult4 = guildId(tmp2[18]);
+      const stateFromStores1 = tmpResult4.useStateFromStores(tmp12, tmp14);
       if (cResult[9] !== guildId) {
         class N {
-          constructor(arg0, arg1, arg2) {
-            obj = closure_1(closure_2[19]);
-            option = obj.selectOption(guildId, guildId, arg1, arg2);
-            return;
+          constructor(id, id2, selected) {
+            const obj = GuildOnboardingActionCreatorsDefault;
+            const option = obj.selectOption(guildId, id, id2, selected);
           }
         }
         cResult[9] = guildId;
         cResult[10] = N;
       } else {
         class N {
-          constructor(arg0, arg1, arg2) {
-            obj = closure_1(closure_2[19]);
-            option = obj.selectOption(guildId, guildId, arg1, arg2);
-            return;
+          constructor(id, id2, selected) {
+            const obj = GuildOnboardingActionCreatorsDefault;
+            const option = obj.selectOption(guildId, id, id2, selected);
           }
         }
       }
       if (cResult[11] === guildId) {
         class N {
-          constructor(arg0, arg1, arg2) {
-            obj = closure_1(closure_2[19]);
-            option = obj.selectOption(guildId, guildId, arg1, arg2);
-            return;
+          constructor(id, id2, selected) {
+            const obj = GuildOnboardingActionCreatorsDefault;
+            const option = obj.selectOption(guildId, id, id2, selected);
           }
         }
         if (cResult[14] === guildId) {
           class N {
-            constructor(arg0, arg1, arg2) {
-              obj = closure_1(closure_2[19]);
-              option = obj.selectOption(guildId, guildId, arg1, arg2);
-              return;
+            constructor(id, id2, selected) {
+              const obj = GuildOnboardingActionCreatorsDefault;
+              const option = obj.selectOption(guildId, id, id2, selected);
             }
           }
-          const effect = noop.useEffect(tmp19, tmp18);
+          const effect = react.useEffect(tmp19, tmp18);
           if (cResult[18] === backShouldLeaveGuild) {
             class N {
-              constructor(arg0, arg1, arg2) {
-                obj = closure_1(closure_2[19]);
-                option = obj.selectOption(guildId, guildId, arg1, arg2);
-                return;
+              constructor(id, id2, selected) {
+                const obj = GuildOnboardingActionCreatorsDefault;
+                const option = obj.selectOption(guildId, id, id2, selected);
               }
             }
           }
@@ -230,7 +284,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             isFirstOpen,
             backShouldLeaveGuild,
           };
-          const tmp24 = getScreens(obj2);
           cResult[18] = backShouldLeaveGuild;
           cResult[19] = M;
           cResult[20] = stateFromStores1;
@@ -241,18 +294,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[25] = onFinish;
           cResult[26] = stateFromStoresArray;
           cResult[27] = N;
+          const tmp24 = getScreens(obj2);
           class M {
             constructor() {
-              obj = closure_1(closure_2[19]);
-              completeOnboardingResult = obj.completeOnboarding(guildId, closure_2);
-              return;
+              const obj = GuildOnboardingActionCreatorsDefault;
+              obj.completeOnboarding(guildId, stateFromStoresArray);
             }
           }
           cResult[28] = tmp24;
         }
         const fn4 = function k() {
           if (stateFromStores) {
-            const verificationForm = MemberVerificationActionCreatorsDefault.fetchVerificationForm(guildId);
+            const obj = MemberVerificationActionCreatorsDefault;
+            const verificationForm = obj.fetchVerificationForm(guildId);
           }
         };
         const items3 = [guildId, stateFromStores];
@@ -265,15 +319,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       class M {
         constructor() {
-          obj = closure_1(closure_2[19]);
-          completeOnboardingResult = obj.completeOnboarding(guildId, closure_2);
-          return;
+          const obj = GuildOnboardingActionCreatorsDefault;
+          obj.completeOnboarding(guildId, stateFromStoresArray);
         }
       }
       cResult[11] = guildId;
       cResult[12] = stateFromStoresArray;
       cResult[13] = M;
-      const tmpResult4 = guildId(stateFromStoresArray[18]);
     }
   : (guildId) => {
       guildId = guildId.guildId;
@@ -284,43 +336,48 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const backShouldLeaveGuild = guildId.backShouldLeaveGuild;
       let stateFromStores;
       let stateFromStores1;
+      let tmp2 = onClose;
+      let obj = guildId(onClose[18]);
       const items = [stateFromStores];
-      stateFromStores = guildId(onClose[18]).useStateFromStores(items, () => {
-        guild = GuildStore.getGuild(guildId);
+      stateFromStores = obj.useStateFromStores(items, () => {
+        const guild = GuildStore.getGuild(guildId);
         let tmp2 = null != guild;
         if (tmp2) {
           const features = guild.features;
-          let hasItem = features.has(constants2.MEMBER_VERIFICATION_GATE_ENABLED);
+          let hasItem = features.has(callback1.MEMBER_VERIFICATION_GATE_ENABLED);
           if (hasItem) {
             const features2 = guild.features;
-            hasItem = !features2.has(constants2.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+            hasItem = !features2.has(callback1.MEMBER_VERIFICATION_MANUAL_APPROVAL);
           }
           tmp2 = hasItem;
         }
         return tmp2;
       });
-      let obj = guildId(onClose[18]);
       const items1 = [stateFromStores1];
-      const stateFromStoresArray = guildId(onClose[18]).useStateFromStoresArray(items1, () =>
+      const obj2 = guildId(onClose[18]);
+      const stateFromStoresArray = obj2.useStateFromStoresArray(items1, () =>
         GuildOnboardingPromptsStore.getOnboardingPromptsForOnboarding(guildId),
       );
-      const obj2 = guildId(onClose[18]);
       const items2 = [stateFromStores1];
-      stateFromStores1 = guildId(onClose[18]).useStateFromStores(items2, () =>
+      const obj3 = guildId(onClose[18]);
+      stateFromStores1 = obj3.useStateFromStores(items2, () =>
         GuildOnboardingPromptsStore.getOnboardingConnections(guildId),
       );
       const items3 = [guildId];
       const selectOption = landingAnimation.useCallback((id, id2, selected) => {
-        const option = GuildOnboardingActionCreatorsDefault.selectOption(guildId, id, id2, selected);
+        const obj = GuildOnboardingActionCreatorsDefault;
+        const option = obj.selectOption(guildId, id, id2, selected);
       }, items3);
       const items4 = [guildId, stateFromStoresArray];
       const callback1 = landingAnimation.useCallback(() => {
-        GuildOnboardingActionCreatorsDefault.completeOnboarding(guildId, stateFromStoresArray);
+        const obj = GuildOnboardingActionCreatorsDefault;
+        obj.completeOnboarding(guildId, stateFromStoresArray);
       }, items4);
       const items5 = [guildId, stateFromStores];
       const effect = landingAnimation.useEffect(() => {
         if (stateFromStores) {
-          const verificationForm = MemberVerificationActionCreatorsDefault.fetchVerificationForm(guildId);
+          const obj = MemberVerificationActionCreatorsDefault;
+          const verificationForm = obj.fetchVerificationForm(guildId);
         }
       }, items5);
       const items6 = [
@@ -336,14 +393,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         backShouldLeaveGuild,
       ];
       if (isFirstOpen) {
+        let PROMPT;
         if (stateFromStores1.length > 0) {
-          let PROMPT = selectOption.CONNECTIONS;
+          PROMPT = selectOption.CONNECTIONS;
         }
-        const obj4 = { screens: tmp8, initialRouteName: PROMPT, headerBackTitle: null };
+        const Navigator = tmp(tmp2[22]).Navigator;
         const intl = tmp(tmp2[21]).intl;
-        obj4.headerBackTitle = intl.string(tmp(tmp2[21]).t["13/7kX"]);
-        return jsx(tmp(tmp2[22]).Navigator, { screens: tmp8, initialRouteName: PROMPT, headerBackTitle: null });
+        return (
+          <Navigator
+            screens={tmp8}
+            initialRouteName={PROMPT}
+            headerBackTitle={intl.string(guildId(tmp2[21]).t["13/7kX"])}
+          />
+        );
       }
       PROMPT = selectOption.PROMPT;
-      const obj3 = guildId(onClose[18]);
     };
+const result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingModal.tsx");
+
+export default tmp3;

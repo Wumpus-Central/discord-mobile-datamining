@@ -1,48 +1,51 @@
 // discord_app/modules/user_profile/native/showUserProfileActionSheet.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import PostConnectionCallbackStore from "../../gateway/PostConnectionCallbackStore.tsx";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let authStore, c4, c5;
+
 function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
+  let str3;
   let str = arg1;
   const timestamp = Date.now();
   const IgnoreProfileSpeedbumpDisabled = UserSettings.IgnoreProfileSpeedbumpDisabled;
   if (!ignoreBlockedSpeedBump.ignoreBlockedSpeedBump) {
     const isBlockedResult = RelationshipStore.isBlocked(ignoreBlockedSpeedBump.userId);
+    const isIgnoredResult = RelationshipStore.isIgnored(ignoreBlockedSpeedBump.userId);
     if (isIgnoredResult) {
-      const tmp8 = asyncRequireImpl(7853, dependencyMap.paths);
-      const obj = ActionSheetActionCreatorsDefault;
+      const tmp8 = asyncRequire(7853, dependencyMap.paths);
       const _HermesInternal = HermesInternal;
+      const openLazy = ActionSheetActionCreatorsDefault.openLazy;
       const combined = "UserProfileIgnoredSpeedBump" + ignoreBlockedSpeedBump.userId;
-      const obj2 = {};
+      const obj = { speedBumpType: str3, openedAt: timestamp };
       const merged = Object.assign(ignoreBlockedSpeedBump);
-      let str3 = "ignore";
+      str3 = "ignore";
       if (isBlockedResult) {
         str3 = "block";
       }
-      obj2.speedBumpType = str3;
-      obj2.openedAt = timestamp;
-      obj.openLazy(tmp8, combined, obj2, str);
+      openLazy(tmp8, combined, obj, str);
     }
-    isIgnoredResult = RelationshipStore.isIgnored(ignoreBlockedSpeedBump.userId);
   }
-  const tmp20 = asyncRequireImpl(7871, dependencyMap.paths);
+  const tmp21 = asyncRequire(7871, dependencyMap.paths);
+  const openLazy2 = ActionSheetActionCreatorsDefault.openLazy;
+  ActionSheetActionCreatorsDefault;
   const combined1 = "UserProfile" + ignoreBlockedSpeedBump.userId;
-  const obj4 = {};
+  const obj2 = { openedAt: timestamp };
   const merged1 = Object.assign(ignoreBlockedSpeedBump);
-  obj4.openedAt = timestamp;
   if (str == null) {
     str = "replaceAll";
   }
-  ActionSheetActionCreatorsDefault.openLazy(tmp20, combined1, obj4, str);
+  openLazy2(tmp21, combined1, obj2, str);
 }
-fn(5948).addPostConnectionCallback;
+const addPostConnectionCallback = PostConnectionCallbackStore.addPostConnectionCallback;
 let closure_6 = new LoggerDefault("showUserProfileActionSheet");
-const size = fn(2);
+new LoggerDefault("showUserProfileActionSheet");
 const result = size.fileFinishedImporting("modules/user_profile/native/showUserProfileActionSheet.tsx");
 
 export default showUserProfileActionSheet;
@@ -60,13 +63,14 @@ export const getUserProfileIgnoredSpeedBumpActionSheetKey = function getUserProf
   return "UserProfileIgnoredSpeedBump" + arg0;
 };
 export const showUserProfileActionSheetPostConnection = function showUserProfileActionSheetPostConnection(arg0) {
-  closure_0 = arg0;
-  addPostConnectionCallback(
-    asyncGeneratorStep(async () => {
+  let closure_0 = arg0;
+  const tmp = addPostConnectionCallback(
+    _asyncToGenerator(async () => {
+      let closure_2;
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp6 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -76,7 +80,9 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
           return { value: "IconComponent", done: null };
         }
       } else {
+        let c3;
         try {
+          let getUser;
           c5 = 2;
           if (0 === c4) {
             if (arg0 === 1) {
@@ -87,17 +93,16 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              closure_1 = tmp3;
-              closure_0 = tmp7;
-              closure_128_0 = undefined;
-              let getUser;
+              let closure_1 = tmp;
+              authStore = undefined;
+              getUser = undefined;
               c4 = 1;
               c5 = 1;
-              const obj5 = { value: closure_0(tmp40[5])(tmp40[4], tmp40.paths), done: false };
+              const obj5 = { value: authStore(tmp37[5])(tmp37[4], tmp37.paths), done: false };
               return obj5;
             }
           } else {
-            if (1 === tmp7) {
+            if (1 === c4) {
               if (arg0 === 1) {
                 c5 = 3;
                 throw value;
@@ -106,24 +111,23 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
                 const obj6 = { value, done: true };
                 return obj6;
               } else {
-                closure_128_0 = value.default;
-                if (null == closure_128_0.getUser(closure_129_0.userId)) {
+                authStore = value.default;
+                if (null == authStore.getUser(closure_129_0.userId)) {
+                  const obj4 = authStore(tmp37[6]);
                   if (obj4.getIsUserProfileLinkFetchEnabled("showUserProfileActionSheet")) {
                     c3 = 1;
                     c4 = 3;
                     c5 = 1;
-                    const obj7 = { value: closure_0(tmp40[5])(tmp40[7], tmp40.paths), done: false };
+                    const obj7 = { value: authStore(tmp37[5])(tmp37[7], tmp37.paths), done: false };
                     return obj7;
                   }
-                  obj4 = closure_0(tmp40[6]);
                 }
               }
-            } else if (2 === tmp7) {
+            } else if (2 === c4) {
               c3 = 0;
-              closure_128_2 = tmp40;
               const _HermesInternal = HermesInternal;
-              logger.log("Failed to fetch user " + closure_129_0.userId + ":", closure_128_2);
-            } else if (3 === tmp7) {
+              logger.log("Failed to fetch user " + closure_129_0.userId + ":", tmp37);
+            } else if (3 === c4) {
               if (arg0 === 1) {
                 c5 = 3;
                 throw value;
@@ -150,18 +154,18 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
             } else {
               c3 = 0;
             }
-            if (null != closure_128_0.getUser(closure_129_0.userId)) {
+            if (null != authStore.getUser(closure_129_0.userId)) {
               showUserProfileActionSheet(closure_129_0);
             }
             c5 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp40) {
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp40;
+        } catch (tmp37) {
+          if (0 === c3) {
+            c5 = 3;
+            throw tmp37;
           } else {
-            c4 = tmp;
+            c4 = 2;
           }
         }
       }

@@ -6,39 +6,36 @@ import size from "../../../../_runtime/metro/00002__.js";
 const AccountLinkManager = AccountLinkManager2.AccountLinkManager;
 class AccountLinkManagerNative extends AccountLinkManager {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
     applyArgumentsResult.unsubscribeBrowser = null;
     applyArgumentsResult.isBrowserOpen = false;
     return applyArgumentsResult;
   }
   _initialize() {
-    self = this;
-    _initializeResult = super._initialize();
-    obj = closure_0(closure_1[1]);
+    const self = this;
+    super._initialize();
+    const obj = BrowserManager;
     this.unsubscribeBrowser = obj.subscribeToIsInAppBrowserOpen((isBrowserOpen, arg1) => {
       self.isBrowserOpen = isBrowserOpen;
-      if (arg1) {
+      const tmp = arg1;
+      if (tmp) {
         self.evaluatePending();
       }
     });
-    return;
   }
   _terminate() {
-    self = this;
-    _terminateResult = super._terminate();
-    unsubscribeBrowser = this.unsubscribeBrowser;
+    const self = this;
+    super._terminate();
+    const unsubscribeBrowser = this.unsubscribeBrowser;
     if (unsubscribeBrowser != null) {
-      unsubscribeBrowserResult = unsubscribeBrowser();
+      unsubscribeBrowser();
     }
     self.unsubscribeBrowser = null;
-    return;
   }
   evaluatePending() {
     if (!this.isBrowserOpen) {
-      tmp2 = closure_2;
-      evaluatePendingResult = super.evaluatePending();
+      super.evaluatePending();
     }
-    return;
   }
 }
 let closure_2 = AccountLinkManagerNative.prototype;

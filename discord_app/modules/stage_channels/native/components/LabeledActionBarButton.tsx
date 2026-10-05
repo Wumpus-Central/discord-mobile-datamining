@@ -1,67 +1,77 @@
 // discord_app/modules/stage_channels/native/components/LabeledActionBarButton.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../../../discord_common/js/shared/Constants.tsx";
 import native from "../../../../design/void/native.tsx";
+import LegacyTokens from "../../../../design/migrations/native/LegacyTokens.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let closure_4;
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
 let closure_2 = ["backgroundColor", "imageStyle", "children", "source", "disabled", "label", "iconPosition"];
-get_ActivityIndicator = fn(17);
-({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  buttonContainer: {
-    minHeight: 56,
-    minWidth: 56,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 28,
-    backgroundColor: fn(5620).ACTION_BAR_BUTTON_BACKGROUND,
-  },
+({ Image: closure_4, View: hasOwnProperty } = react_native);
+const Fonts = Constants.Fonts;
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
+  buttonContainer: obj2,
   container: { marginHorizontal: 12 },
   containerWithLabel: { minWidth: "50%", maxWidth: "70%", flexShrink: 1 },
   pressable: { marginHorizontal: 12, borderRadius: 28 },
   buttonContent: { display: "flex", flexDirection: "row", alignItems: "center" },
-  buttonText: null,
-  rightTextMargin: null,
+  buttonText: obj3,
+  rightTextMargin: { marginStart: 0, marginEnd: 8 },
 };
-let obj3 = {
+obj2 = {
   minHeight: 56,
   minWidth: 56,
   alignItems: "center",
   justifyContent: "center",
   borderRadius: 28,
-  backgroundColor: fn(5620).ACTION_BAR_BUTTON_BACKGROUND,
+  backgroundColor: LegacyTokens.ACTION_BAR_BUTTON_BACKGROUND,
 };
-obj2.buttonText = {
+createStyles = createStyles.createStyles;
+obj3 = {
   marginStart: 8,
   fontSize: 14,
   color: nativeDefault.colors.WHITE,
-  fontFamily: fn(1096).Fonts.PRIMARY_SEMIBOLD,
+  fontFamily: Fonts.PRIMARY_SEMIBOLD,
   paddingStart: 3,
 };
-obj2.rightTextMargin = { marginStart: 0, marginEnd: 8 };
-let closure_8 = createStyles.createStyles(obj2);
-let obj5 = { LEFT: 0, [0]: "LEFT", RIGHT: 1, [1]: "RIGHT" };
-const ReactCompilerGating = fn(558);
-let obj4 = {
-  marginStart: 8,
-  fontSize: 14,
-  color: nativeDefault.colors.WHITE,
-  fontFamily: fn(1096).Fonts.PRIMARY_SEMIBOLD,
-  paddingStart: 3,
-};
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/stage_channels/native/components/LabeledActionBarButton.tsx");
-
-export const IconPosition = obj5;
-export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled()
+let closure_8 = createStyles(obj);
+let obj4 = { LEFT: 0, [0]: "LEFT", RIGHT: 1, [1]: "RIGHT" };
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(55);
+      let LEFT;
+      let backgroundColor;
+      let children;
+      let disabled;
+      let iconPosition;
+      let imageStyle;
+      let items;
+      let items1;
+      let label;
+      let source;
+      let tmp10;
+      let tmp4;
+      let tmp5;
+      let tmp6;
+      let tmp7;
+      let tmp8;
+      let tmp9;
+      const obj = react2;
+      const cResult = obj.c(55);
       if (cResult[0] !== arg0) {
         ({ backgroundColor, imageStyle, children, source, disabled, label, iconPosition } = arg0);
         const tmp13 = _objectWithoutProperties(arg0, closure_2);
@@ -74,14 +84,14 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = tmp13;
         cResult[7] = source;
         cResult[8] = iconPosition;
-        let LEFT = iconPosition;
-        let tmp10 = source;
-        let tmp9 = tmp13;
-        let tmp8 = label;
-        let tmp7 = imageStyle;
-        let tmp6 = disabled;
-        let tmp5 = children;
-        let tmp4 = backgroundColor;
+        LEFT = iconPosition;
+        tmp10 = source;
+        tmp9 = tmp13;
+        tmp8 = label;
+        tmp7 = imageStyle;
+        tmp6 = disabled;
+        tmp5 = children;
+        tmp4 = backgroundColor;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
@@ -93,7 +103,7 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled()
         LEFT = cResult[8];
       }
       if (undefined === LEFT) {
-        LEFT = obj5.LEFT;
+        LEFT = obj4.LEFT;
       }
       const tmp15 = closure_8();
       let containerWithLabel = null;
@@ -101,8 +111,11 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled()
         containerWithLabel = tmp15.containerWithLabel;
       }
       if (cResult[9] === tmp15.container) {
+        let tmp17;
+        let tmp18;
+        let tmp19;
         if (cResult[10] === containerWithLabel) {
-          let tmp17 = cResult[11];
+          tmp17 = cResult[11];
         }
         let num10 = 1;
         if (tmp6) {
@@ -112,83 +125,93 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = { opacity: num10 };
           cResult[12] = num10;
           cResult[13] = obj2;
-          let tmp18 = obj2;
+          tmp18 = obj2;
         } else {
           tmp18 = cResult[13];
         }
         if (cResult[14] !== tmp4) {
           let tmp20 = null;
           if (null != tmp4) {
+            tmp20 = { backgroundColor: tmp4 };
             const obj3 = { backgroundColor: tmp4 };
-            tmp20 = obj3;
           }
           cResult[14] = tmp4;
           cResult[15] = tmp20;
-          let tmp19 = tmp20;
+          tmp19 = tmp20;
         } else {
           tmp19 = cResult[15];
         }
         if (cResult[16] === tmp15.buttonContainer) {
           if (cResult[17] === tmp18) {
+            let tmp21;
+            let tmp22;
             if (cResult[18] === tmp19) {
-              let tmp21 = cResult[19];
+              tmp21 = cResult[19];
             }
             if (cResult[20] !== tmp8) {
-              let obj4 = null;
+              obj4 = null;
               if (null != tmp8) {
                 obj4 = { paddingHorizontal: 16 };
               }
               cResult[20] = tmp8;
               cResult[21] = obj4;
-              let tmp22 = obj4;
+              tmp22 = obj4;
             } else {
               tmp22 = cResult[21];
             }
             if (cResult[22] === tmp15.buttonContent) {
+              let tmp23;
               if (cResult[23] === tmp22) {
-                let tmp23 = cResult[24];
+                tmp23 = cResult[24];
               }
               if (cResult[25] === LEFT) {
                 if (cResult[26] === tmp7) {
+                  let tmp24;
                   if (cResult[27] === tmp10) {
-                    let tmp24 = cResult[28];
+                    tmp24 = cResult[28];
                   }
                   if (cResult[29] === LEFT) {
                     if (cResult[30] === tmp8) {
                       if (cResult[31] === tmp15.buttonText) {
+                        let tmp29;
                         if (cResult[32] === tmp15.rightTextMargin) {
-                          let tmp29 = cResult[33];
+                          tmp29 = cResult[33];
                         }
                         if (cResult[34] === LEFT) {
                           if (cResult[35] === tmp7) {
+                            let tmp33;
                             if (cResult[36] === tmp10) {
-                              let tmp33 = cResult[37];
+                              tmp33 = cResult[37];
                             }
                             if (cResult[38] === tmp24) {
                               if (cResult[39] === tmp29) {
                                 if (cResult[40] === tmp33) {
+                                  let tmp38;
                                   if (cResult[41] === tmp23) {
-                                    let tmp38 = cResult[42];
+                                    tmp38 = cResult[42];
                                   }
                                   if (cResult[43] === tmp5) {
                                     if (cResult[44] === tmp38) {
+                                      let tmp42;
                                       if (cResult[45] === tmp21) {
-                                        let tmp42 = cResult[46];
+                                        tmp42 = cResult[46];
                                       }
                                       if (cResult[47] === tmp6) {
                                         if (cResult[48] === tmp9) {
                                           if (cResult[49] === tmp15.pressable) {
+                                            let tmp46;
                                             if (cResult[50] === tmp42) {
-                                              let tmp46 = cResult[51];
+                                              tmp46 = cResult[51];
                                             }
                                             if (cResult[52] === tmp46) {
+                                              let tmp52;
                                               if (cResult[53] === tmp17) {
-                                                let tmp52 = cResult[54];
+                                                tmp52 = cResult[54];
                                               }
                                               return tmp52;
                                             }
-                                            obj5 = { style: tmp17, children: tmp46 };
-                                            const tmp55 = timestampProducer(hasOwnProperty, obj5);
+                                            const obj5 = { style: tmp17, children: tmp46 };
+                                            const tmp55 = metroRequire(hasOwnProperty, obj5);
                                             cResult[52] = tmp46;
                                             cResult[53] = tmp17;
                                             cResult[54] = tmp55;
@@ -200,10 +223,11 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled()
                                         accessibilityRole: "button",
                                         disabled: tmp6,
                                         style: tmp15.pressable,
+                                        children: tmp42,
                                       };
+                                      const PressableOpacity = Pressables.PressableOpacity;
                                       const merged = Object.assign(tmp9);
-                                      obj6.children = tmp42;
-                                      const tmp51 = timestampProducer(Pressables.PressableOpacity, obj6);
+                                      const tmp51 = metroRequire(PressableOpacity, obj6);
                                       cResult[47] = tmp6;
                                       cResult[48] = tmp9;
                                       cResult[49] = tmp15.pressable;
@@ -212,10 +236,9 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled()
                                       tmp46 = tmp51;
                                     }
                                   }
-                                  const obj7 = { style: tmp21, children: null };
-                                  const items = [tmp38, tmp5];
-                                  obj7.children = items;
-                                  const tmp45 = React5(hasOwnProperty, obj7);
+                                  const obj7 = { style: tmp21, children: items };
+                                  items = [tmp38, tmp5];
+                                  const tmp45 = metroImportDefault(hasOwnProperty, obj7);
                                   cResult[43] = tmp5;
                                   cResult[44] = tmp38;
                                   cResult[45] = tmp21;
@@ -224,10 +247,9 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled()
                                 }
                               }
                             }
-                            const obj8 = { style: tmp23, children: null };
-                            const items1 = [tmp24, tmp29, tmp33];
-                            obj8.children = items1;
-                            const tmp41 = React5(hasOwnProperty, obj8);
+                            const obj8 = { style: tmp23, children: items1 };
+                            items1 = [tmp24, tmp29, tmp33];
+                            const tmp41 = metroImportDefault(hasOwnProperty, obj8);
                             cResult[38] = tmp24;
                             cResult[39] = tmp29;
                             cResult[40] = tmp33;
@@ -236,10 +258,10 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled()
                             tmp38 = tmp41;
                           }
                         }
-                        let tmp35 = LEFT === obj5.RIGHT;
+                        let tmp35 = LEFT === obj4.RIGHT;
                         if (tmp35) {
                           const obj9 = { source: tmp10, style: tmp7 };
-                          tmp35 = timestampProducer(React4, obj9);
+                          tmp35 = metroRequire(React3, obj9);
                         }
                         cResult[34] = LEFT;
                         cResult[35] = tmp7;
@@ -252,15 +274,14 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled()
                   let tmp31Result = null;
                   if (null != tmp8) {
                     const items2 = [tmp15.buttonText];
-                    let rightTextMargin = LEFT === obj5.RIGHT;
+                    let rightTextMargin = LEFT === obj4.RIGHT;
+                    const LegacyText = native.LegacyText;
                     if (rightTextMargin) {
                       rightTextMargin = tmp15.rightTextMargin;
                     }
-                    const obj10 = { numberOfLines: 2, style: null, children: null };
+                    const obj10 = { numberOfLines: 2, style: items2, children: tmp8 };
                     items2[1] = rightTextMargin;
-                    obj10.style = items2;
-                    obj10.children = tmp8;
-                    tmp31Result = timestampProducer(native.LegacyText, obj10);
+                    tmp31Result = metroRequire(LegacyText, obj10);
                   }
                   cResult[29] = LEFT;
                   cResult[30] = tmp8;
@@ -270,10 +291,10 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled()
                   tmp29 = tmp31Result;
                 }
               }
-              let tmp26 = LEFT === obj5.LEFT;
+              let tmp26 = LEFT === obj4.LEFT;
               if (tmp26) {
                 const obj11 = { source: tmp10, style: tmp7 };
-                tmp26 = timestampProducer(React4, obj11);
+                tmp26 = metroRequire(React3, obj11);
               }
               cResult[25] = LEFT;
               cResult[26] = tmp7;
@@ -302,9 +323,20 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled()
       tmp17 = items5;
     }
   : (children) => {
+      let PressableOpacity;
+      let backgroundColor;
+      let disabled;
+      let iconPosition;
+      let imageStyle;
+      let items3;
+      let items5;
+      let label;
+      let obj2;
+      let source;
       ({ backgroundColor, imageStyle, source, disabled, label, iconPosition } = children);
+      children = children.children;
       if (iconPosition === undefined) {
-        iconPosition = obj5.LEFT;
+        iconPosition = obj4.LEFT;
       }
       const merged = Object.assign(
         children,
@@ -324,9 +356,15 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled()
       if (null != label) {
         containerWithLabel = tmp3.containerWithLabel;
       }
-      const obj = { style: items, children: null };
       items[1] = containerWithLabel;
-      const obj2 = { accessibilityRole: "button", disabled, style: tmp3.pressable };
+      const obj = { style: items, children: metroRequire(PressableOpacity, obj2) };
+      obj2 = {
+        accessibilityRole: "button",
+        disabled,
+        style: tmp3.pressable,
+        children: metroImportDefault(hasOwnProperty, obj4),
+      };
+      PressableOpacity = Pressables.PressableOpacity;
       const merged1 = Object.assign(merged);
       const items1 = [tmp3.buttonContainer, ,];
       let num = 1;
@@ -336,48 +374,47 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled()
       items1[1] = { opacity: num };
       let tmp11 = null;
       if (null != backgroundColor) {
+        tmp11 = { backgroundColor };
         const obj3 = { backgroundColor };
-        tmp11 = obj3;
       }
-      const obj4 = { style: items1, children: null };
+      obj4 = { style: items1, children: items5 };
       items1[2] = tmp11;
       const items2 = [tmp3.buttonContent];
-      obj5 = null;
+      let obj5 = null;
       if (null != label) {
         obj5 = { paddingHorizontal: 16 };
       }
-      const obj6 = { style: items2, children: null };
+      const obj6 = { style: items2, children: items3 };
       items2[1] = obj5;
-      let tmp4Result = iconPosition === obj5.LEFT;
+      let tmp4Result = iconPosition === obj4.LEFT;
       if (tmp4Result) {
         const obj7 = { source, style: imageStyle };
-        tmp4Result = timestampProducer(React4, obj7);
+        tmp4Result = metroRequire(React3, obj7);
       }
-      const items3 = [tmp4Result, ,];
+      items3 = [tmp4Result, ,];
       let tmp4Result3 = null;
       if (null != label) {
         const items4 = [tmp3.buttonText];
         let rightTextMargin = iconPosition === tmp12.RIGHT;
+        const LegacyText = native.LegacyText;
         if (rightTextMargin) {
           rightTextMargin = tmp3.rightTextMargin;
         }
-        const obj8 = { numberOfLines: 2, style: null, children: null };
+        const obj8 = { numberOfLines: 2, style: items4, children: label };
         items4[1] = rightTextMargin;
-        obj8.style = items4;
-        obj8.children = label;
-        tmp4Result3 = timestampProducer(native.LegacyText, obj8);
+        tmp4Result3 = metroRequire(LegacyText, obj8);
       }
       items3[1] = tmp4Result3;
       let tmp4Result4 = iconPosition === tmp12.RIGHT;
       if (tmp4Result4) {
         const obj9 = { source, style: imageStyle };
-        tmp4Result4 = timestampProducer(React4, obj9);
+        tmp4Result4 = metroRequire(React3, obj9);
       }
       items3[2] = tmp4Result4;
-      obj6.children = items3;
-      const items5 = [React5(hasOwnProperty, obj6), children.children];
-      obj4.children = items5;
-      obj2.children = React5(hasOwnProperty, obj4);
-      obj.children = timestampProducer(Pressables.PressableOpacity, obj2);
-      return timestampProducer(hasOwnProperty, obj);
+      items5 = [metroImportDefault(hasOwnProperty, obj6), children];
+      return metroRequire(hasOwnProperty, obj);
     };
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/LabeledActionBarButton.tsx");
+
+export const IconPosition = obj4;
+export const LabeledActionButton = tmp6;

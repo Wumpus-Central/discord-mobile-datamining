@@ -1,53 +1,144 @@
 // discord_app/modules/age_assurance/native/AgeVerificationCustomTab.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import react from "../../../../_runtime/00576_react.js";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import NativeBrowserManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import react_nativeDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import 00570__ from "../../../../_runtime/metro/00570__.js";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let c4, closure_2, closure_3;
+
 function withTimeout(arg0) {
   const promise = new Promise((arg0, arg1) => {
-    closure_1 = arg1;
+    let closure_1 = arg1;
     const timeout = setTimeout(() => {
       const error = new Error("Custom Tab launch timed out");
       return closure_1(error);
     }, 5000);
-    arg0.then(
-      (result) => {
-        clearTimeout(closure_2);
-        closure_0(result);
-      },
-      (arg0) => {
-        clearTimeout(closure_2);
-        closure_1(arg0);
-      },
-    );
+    arg0.then((result) => {
+      clearTimeout(closure_2);
+      closure_0(result);
+    }, (arg0) => {
+      clearTimeout(closure_2);
+      closure_1(arg0);
+    });
   });
   return promise;
 }
 function subscribeToClose() {
-  if (_null != null) {
-    _null.remove();
+  let state;
+  obj = c8;
+  if (c8 != null) {
+    obj.remove();
   }
-  _null = NativeBrowserManagerModuleDefault.onTrackedCustomTabClosed(() => {
-    if (_null != null) {
-      _null.remove();
+  const obj2 = react_nativeDefault;
+  c8 = obj2.onTrackedCustomTabClosed(() => {
+    obj = c8;
+    if (c8 != null) {
+      obj.remove();
     }
-    _null = null;
+    c8 = null;
     state.setState({ isOpen: false, copy: null });
   });
 }
-let closure_10 = async function _openAgeVerificationCustomTab(arg0) {
-  closure_0 = arg0;
-  c6 = 0;
-  c7 = 0;
-  c5 = 0;
-  return (async (arg0, value) => {
-    if (c7 === 2) {
-      c7 = 3;
+let obj = function _openAgeVerificationCustomTab() {
+  let state;
+  obj = _asyncToGenerator(async (value, error) => {
+    let c6 = 0;
+    c7 = 0;
+    let c5 = 0;
+    return (async (arg0, value) => {
+      let obj5;
+      if (c7 === 2) {
+        c7 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          return { value, done: true };
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c7 = 2;
+          if (0 === c6) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              return { value, done: true };
+            } else {
+              closure_3 = tmp;
+              closure_2 = tmp4;
+              value = undefined;
+              const obj9 = PlatformUtils;
+              const tmp32 = value;
+              const tmp33 = error;
+              if (obj9.isAndroid()) {
+                subscribeToClose();
+                const obj4 = { isOpen: true, copy: tmp33 };
+                state.setState(obj4);
+                c5 = 1;
+                c6 = 2;
+                c7 = 1;
+                const obj6 = { value: withTimeout(obj5.openTrackedCustomTab(tmp32)), done: false };
+                obj5 = react_nativeDefault;
+                return obj6;
+              } else {
+                c7 = 3;
+                return { value: false, done: true };
+              }
+            }
+          } else if (1 === c6) {
+            c5 = 0;
+            error = closure_4;
+            const obj7 = { error };
+            closure_131_4.warn("Failed to open the verification Custom Tab", obj7);
+            closure_131_12();
+            c7 = 3;
+            return { value: false, done: true };
+          } else if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 0;
+            c7 = 3;
+            return { value, done: true };
+          } else {
+            const tmp6 = value;
+            if (!tmp6) {
+              closure_131_12();
+            }
+            c5 = 0;
+            c7 = 3;
+            return { value, done: true };
+          }
+        } catch (tmp26) {
+          closure_4 = tmp26;
+          if (0 === c5) {
+            c7 = 3;
+            throw tmp26;
+          } else {
+            c6 = 1;
+          }
+        }
+      }
+    })();
+  });
+  return obj(...arguments);
+};
+obj = function _resumeAgeVerificationCustomTab() {
+  obj = _asyncToGenerator(async () => {
+    let obj3;
+    if (c5 === 2) {
+      c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -57,161 +148,77 @@ let closure_10 = async function _openAgeVerificationCustomTab(arg0) {
         return { value: "IconComponent", done: null };
       }
     } else {
+      let c3;
       try {
-        c7 = 2;
-        if (0 === c6) {
+        let error;
+        c5 = 2;
+        if (0 === c4) {
           if (arg0 === 1) {
-            c7 = 3;
+            c5 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c7 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_3 = tmp3;
-            closure_2 = tmp7;
-            closure_130_0 = undefined;
-            if (obj9.isAndroid()) {
-              subscribeToClose();
-              c7 = true;
-              const obj4 = { isOpen: true, copy };
-              state.setState(obj4);
-              c5 = 1;
-              c6 = 2;
-              c7 = 1;
-              const obj6 = {
-                value: withTimeout(NativeBrowserManagerModuleDefault.openTrackedCustomTab(closure_0)),
-                done: false,
-              };
-              return obj6;
-            } else {
-              c7 = 3;
-              return { value: false, done: true };
-            }
-            obj9 = PlatformUtils;
-          }
-        } else if (1 === tmp7) {
-          c5 = 0;
-          closure_130_1 = closure_4;
-          const obj7 = { error: closure_130_1 };
-          closure_131_4.warn("Failed to open the verification Custom Tab", obj7);
-          closure_131_12();
-          c7 = 3;
-          return { value: false, done: true };
-        } else if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 0;
-          c7 = 3;
-          const obj8 = { value, done: true };
-          return obj8;
-        } else {
-          closure_130_0 = value;
-          if (!closure_130_0) {
-            closure_131_12();
-          }
-          c5 = 0;
-          c7 = 3;
-          const obj = { value: closure_130_0, done: true };
-          return obj;
-        }
-      } catch (tmp29) {
-        closure_4 = tmp29;
-        if (tmp4 === c5) {
-          c7 = tmp2;
-          throw tmp29;
-        } else {
-          c6 = tmp;
-        }
-      }
-    }
-  })();
-};
-let closure_11 = async function _resumeAgeVerificationCustomTab() {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          closure_1 = tmp3;
-          closure_0 = tmp7;
-          if (obj7.isAndroid()) {
-            if (!getIsAgeVerificationCustomTabOpen()) {
-              c3 = 1;
-              c4 = 2;
-              c5 = 1;
-              const obj5 = {
-                value: withTimeout(NativeBrowserManagerModuleDefault.resumeTrackedCustomTab()),
-                done: false,
-              };
-              return obj5;
-            }
-          }
-          obj7 = PlatformUtils;
-        }
-      } else {
-        if (1 === tmp7) {
-          c3 = 0;
-          closure_128_0 = closure_2;
-          const obj6 = { error: closure_128_0 };
-          closure_129_4.warn("Failed to resume the verification Custom Tab", obj6);
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          if (value) {
-            closure_129_9();
-            closure_129_7 = true;
-            closure_129_6.setState({ isOpen: true });
-            c3 = 0;
-          } else {
-            c3 = 0;
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            let closure_1 = tmp;
+            error = tmp4;
+            const obj7 = PlatformUtils;
+            if (obj7.isAndroid()) {
+              if (!getIsAgeVerificationCustomTabOpen()) {
+                c3 = 1;
+                c4 = 2;
+                c5 = 1;
+                const obj5 = { value: withTimeout(obj3.resumeTrackedCustomTab()), done: false };
+                obj3 = react_nativeDefault;
+                return obj5;
+              }
+            }
           }
+        } else if (1 === c4) {
+          c3 = 0;
+          error = closure_2;
+          const obj6 = { error };
+          logger.warn("Failed to resume the verification Custom Tab", obj6);
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 0;
+          c5 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else if (value) {
+          closure_129_9();
+          c7 = true;
+          state.setState({ isOpen: true });
+          c3 = 0;
+        } else {
+          c3 = 0;
+          c5 = 3;
+          return { value: "IconComponent", done: null };
         }
-        c3 = 0;
         c5 = 3;
-        const obj = { value, done: true };
-        return obj;
-      }
-      c5 = 3;
-    } catch (tmp23) {
-      closure_2 = tmp23;
-      if (tmp4 === c3) {
-        c5 = tmp2;
-        throw tmp23;
-      } else {
-        c4 = tmp;
+        return { value: "IconComponent", done: null };
+      } catch (tmp20) {
+        closure_2 = tmp20;
+        if (0 === c3) {
+          c5 = 3;
+          throw tmp20;
+        } else {
+          c4 = 1;
+        }
       }
     }
-  }
+  });
+  return obj(...arguments);
 };
 function releaseAgeVerificationCustomTab() {
-  if (_null != null) {
-    _null.remove();
+  obj = c8;
+  if (c8 != null) {
+    obj.remove();
   }
-  _null = null;
+  c8 = null;
   c7 = false;
   closure_6.setState({ isOpen: false, copy: null });
 }
@@ -219,50 +226,49 @@ function getIsAgeVerificationCustomTabOpen() {
   return closure_6.getState().isOpen;
 }
 let closure_4 = new LoggerDefault("AgeVerificationCustomTab");
-const module_570 = fn(570);
+const tmp2 = new LoggerDefault("AgeVerificationCustomTab");
 let closure_6 = module_570.create(() => ({ isOpen: false, copy: null }));
 let c7 = false;
 let c8 = null;
-fn(558);
-const tmp2 = new LoggerDefault("AgeVerificationCustomTab");
-const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function t(isOpen) {
-          return isOpen.isOpen;
-        };
-        cResult[0] = fn;
-        let first = fn;
-      } else {
-        first = cResult[0];
-      }
-      return closure_6(first);
-    }
-  : () => closure_6((isOpen) => isOpen.isOpen);
-const size = fn(2);
+let ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let first;
+  obj = react;
+  const cResult = obj.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function t(isOpen) {
+      return isOpen.isOpen;
+    };
+    cResult[0] = fn;
+    first = fn;
+  } else {
+    first = cResult[0];
+  }
+  return closure_6(first);
+}) : (() => closure_6((isOpen) => isOpen.isOpen));
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let first;
+  obj = react;
+  const cResult = obj.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function t(copy) {
+      return copy.copy;
+    };
+    cResult[0] = fn;
+    first = fn;
+  } else {
+    first = cResult[0];
+  }
+  return closure_6(first);
+}) : (() => closure_6((copy) => copy.copy));
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationCustomTab.tsx");
 
 export const openAgeVerificationCustomTab = function openAgeVerificationCustomTab() {
-  const self = this;
-  const apply = closure_10.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const resumeAgeVerificationCustomTab = function resumeAgeVerificationCustomTab() {
-  const self = this;
-  const apply = closure_11.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const setAgeVerificationCustomTabCopy = function setAgeVerificationCustomTabCopy(copy) {
   if (closure_6.getState().isOpen) {
@@ -275,19 +281,5 @@ export function getIsAgeVerificationCustomTabAwaitingResult() {
   return c7;
 }
 export const useIsAgeVerificationCustomTabOpen = tmp3;
-export const useAgeVerificationCustomTabCopy = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function t(copy) {
-          return copy.copy;
-        };
-        cResult[0] = fn;
-        let first = fn;
-      } else {
-        first = cResult[0];
-      }
-      return closure_6(first);
-    }
-  : () => closure_6((copy) => copy.copy);
+export const useAgeVerificationCustomTabCopy = tmp4;
 export { getIsAgeVerificationCustomTabOpen };

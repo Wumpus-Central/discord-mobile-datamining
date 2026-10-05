@@ -2,10 +2,13 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const result = size.fileFinishedImporting("modules/voice_overlay/native/MobileVoiceOverlayActionCreators.tsx");
-
-export default {
+let obj = {
   setEnabled(enabled) {
-    DispatcherDefault.dispatch({ type: "MOBILE_VOICE_OVERLAY_STATE_CHANGED", enabled });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "MOBILE_VOICE_OVERLAY_STATE_CHANGED", enabled };
+    obj.dispatch(obj2);
   },
 };
+const result = size.fileFinishedImporting("modules/voice_overlay/native/MobileVoiceOverlayActionCreators.tsx");
+
+export default obj;

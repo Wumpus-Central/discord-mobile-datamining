@@ -1,32 +1,34 @@
 // discord_app/modules/collectibles/CollectiblesRecommendationStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const DAY = DurationsDefault.Millis.DAY;
 let c1 = null;
 let c2 = null;
 let c3 = false;
-const Store = initializeDefault.Store;
-class CollectiblesRecommendationStore extends Store {}
-const prototype = CollectiblesRecommendationStore.prototype;
-prototype["getRecommendations"] = function getRecommendations() {
-  return c1;
-};
-prototype["shouldFetch"] = function shouldFetch() {
-  let tmp = !c3;
-  if (!c3) {
-    let tmp4 = null == c2;
-    if (!tmp4) {
-      const _Date = Date;
-      tmp4 = Date.now() - c2 >= DAY;
-    }
-    tmp = tmp4;
+const Store = get_initializedDefault.Store;
+class CollectiblesRecommendationStore extends Store {
+  getRecommendations() {
+    return c1;
   }
-  return tmp;
-};
+  shouldFetch() {
+    let tmp = !c3;
+    if (tmp) {
+      let tmp4 = null == c2;
+      if (!tmp4) {
+        const _Date = Date;
+        tmp4 = Date.now() - c2 >= DAY;
+      }
+      tmp = tmp4;
+    }
+    return tmp;
+  }
+}
+const prototype = CollectiblesRecommendationStore.prototype;
 CollectiblesRecommendationStore.displayName = "CollectiblesRecommendationStore";
-const collectiblesRecommendationStore = new CollectiblesRecommendationStore(DispatcherDefault, {
+const obj = {
   COLLECTIBLES_RECOMMENDATIONS_FETCH_START: function handleFetchStart() {
     c1 = null;
     c2 = null;
@@ -45,8 +47,8 @@ const collectiblesRecommendationStore = new CollectiblesRecommendationStore(Disp
     c2 = null;
     c3 = false;
   },
-});
-const size = fn(2);
+};
+const collectiblesRecommendationStore = new CollectiblesRecommendationStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesRecommendationStore.tsx");
 
 export default collectiblesRecommendationStore;

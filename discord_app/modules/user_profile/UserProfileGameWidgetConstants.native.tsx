@@ -7,11 +7,12 @@ import UserProfileGameWidgetTagMetadata from "UserProfileGameWidgetTagMetadata.t
 import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {};
+const buildWidgetGameTagMetadata = UserProfileGameWidgetTagMetadata.buildWidgetGameTagMetadata;
 obj[UserProfileGameWidgetTagMetadata.WidgetGameTagIconRole.RIBBON] = RibbonIcon.RibbonIcon;
 obj[UserProfileGameWidgetTagMetadata.WidgetGameTagIconRole.THUMBS_UP] = ThumbsUpIcon.ThumbsUpIcon;
 obj[UserProfileGameWidgetTagMetadata.WidgetGameTagIconRole.THUMBS_DOWN] = ThumbsDownIcon.ThumbsDownIcon;
 obj[UserProfileGameWidgetTagMetadata.WidgetGameTagIconRole.FRIENDS] = FriendsIcon.FriendsIcon;
-const widgetGameTagMetadata = UserProfileGameWidgetTagMetadata.buildWidgetGameTagMetadata(obj);
+const widgetGameTagMetadata = buildWidgetGameTagMetadata(obj);
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetConstants.native.tsx");
 
 export const WIDGET_GAME_TAG_METADATA = widgetGameTagMetadata;

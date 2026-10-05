@@ -1,27 +1,30 @@
 // discord_app/modules/checkpoint/CheckpointStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 let obj = { INIT: 0, [0]: "INIT", FETCHING: 1, [1]: "FETCHING", SUCCESS: 2, [2]: "SUCCESS", ERROR: 3, [3]: "ERROR" };
 const obj2 = { isMuted: false };
+const obj3 = {};
 let merged = Object.assign(obj2);
-obj = {};
+obj = obj3;
 let c3 = null;
 let c4 = null;
 let INIT = obj.INIT;
-const PersistedStore = initializeDefault.PersistedStore;
-class CheckpointStore extends PersistedStore {}
-const prototype = CheckpointStore.prototype;
-prototype["getState"] = function getState() {
-  return obj;
-};
-prototype["initialize"] = function initialize(arg0) {
-  if (null != arg0) {
-    obj = {};
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(arg0);
+const PersistedStore = get_initializedDefault.PersistedStore;
+class CheckpointStore extends PersistedStore {
+  getState() {
+    return obj;
   }
-};
+  initialize(arg0) {
+    if (null != arg0) {
+      obj = {};
+      const merged = Object.assign(obj);
+      const merged1 = Object.assign(arg0);
+    }
+  }
+}
+const prototype = CheckpointStore.prototype;
 Object.defineProperty(prototype, "isMuted", {
   get: function isMuted() {
     return obj.isMuted;
@@ -48,7 +51,7 @@ Object.defineProperty(prototype, "fetchState", {
 });
 CheckpointStore.displayName = "Checkpoint2026Store";
 CheckpointStore.persistKey = "Checkpoint2026Store";
-const checkpointStore = new CheckpointStore(DispatcherDefault, {
+const obj4 = {
   CHECKPOINT_TOGGLE_MUTE: function handleToggleMute() {
     obj.isMuted = !obj.isMuted;
   },
@@ -75,8 +78,8 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
     c4 = null;
     INIT = obj.INIT;
   },
-});
-const size = fn(2);
+};
+const checkpointStore = new CheckpointStore(DispatcherDefault, obj4);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointStore.tsx");
 
 export default checkpointStore;

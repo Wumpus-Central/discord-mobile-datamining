@@ -1,13 +1,15 @@
 // discord_app/modules/user_settings/UserSettingDefinitions.tsx
-import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../_runtime/00576_c.js";
-import DispatcherDefault from "../../Dispatcher.tsx";
+import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../_runtime/00576_react.js";
+import UserSettingsConstants from "UserSettingsConstants.tsx";
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore.tsx";
 import UserSettingsProtoStore from "UserSettingsProtoStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const UserSettingsDelay = fn(1095).UserSettingsDelay;
-const size = fn(2);
+const require = globalThis.__r;
+let _require, dependencyMap;
+
+const UserSettingsDelay = UserSettingsConstants.UserSettingsDelay;
 const result = size.fileFinishedImporting("modules/user_settings/UserSettingDefinitions.tsx");
 
 export const defineProtoSetting = function defineProtoSetting(
@@ -17,10 +19,11 @@ export const defineProtoSetting = function defineProtoSetting(
   explicitContentToProto,
   arg4,
 ) {
-  let getSetting = textAndImages;
-  let f85642 = activityRestrictedGuildIds;
+  let fn;
+  _require = textAndImages;
+  let closure_1 = activityRestrictedGuildIds;
   dependencyMap = explicitContentFromProto;
-  closure_3 = explicitContentToProto;
+  let closure_3 = explicitContentToProto;
   let obj = arg4;
   if (arg4 === undefined) {
     obj = {};
@@ -35,28 +38,28 @@ export const defineProtoSetting = function defineProtoSetting(
       return arg0 === arg1;
     };
   }
-  getSetting = function getSetting() {
+  function getSetting() {
     let tmp3;
-    if (UserSettingsProtoStore.settings[getSetting] != null) {
-      tmp3 = tmp2[f85642];
+    if (UserSettingsProtoStore.settings[textAndImages] != null) {
+      tmp3 = tmp2[activityRestrictedGuildIds];
     }
     return explicitContentFromProto(tmp3);
-  };
-  const obj2 = getSetting(558);
-  f85642 = (favorites) => {
-    closure_0 = favorites;
+  }
+  const obj2 = require("ReactCompilerGating");
+  const f85642 = (favorites) => {
+    let closure_0 = favorites;
     const PreloadedUserSettingsActionCreators = getSetting(
       explicitContentFromProto[6],
     ).PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync(
       closure_0,
       async (arg0) => {
-        arg0[f85642] = closure_3(closure_0, arg0[f85642]);
+        arg0[f85642] = explicitContentToProto(favorites, arg0[f85642]);
       },
-      INFREQUENT_USER_ACTION,
+      closure_4,
     );
   };
-  return {
+  const obj3 = {
     getSetting,
     updateSetting: (fn) => {
       let tmp2 = fn;
@@ -65,64 +68,54 @@ export const defineProtoSetting = function defineProtoSetting(
       }
       return f85648(tmp2);
     },
-    useSetting: getSetting(558).isReactCompilerEnabled()
+    useSetting: obj2.isReactCompilerEnabled()
       ? () => {
-          const cResult = c.c(1);
+          let first;
+          const obj = react;
+          const cResult = obj.c(1);
           if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
             const items = [UserSettingsProtoStore];
             cResult[0] = items;
-            let first = items;
+            first = items;
           } else {
             first = cResult[0];
           }
-          return initialize.useStateFromStores(first, getSetting, undefined, fn);
+          const tmpResult = get_initialized;
+          return tmpResult.useStateFromStores(first, getSetting, undefined, fn);
         }
       : () => {
           const items = [UserSettingsProtoStore];
-          return initialize.useStateFromStores(items, getSetting, undefined, fn);
+          const obj = get_initialized;
+          return obj.useStateFromStores(items, getSetting, undefined, fn);
         },
   };
+  return obj3;
 };
-export function wrapSettingWithSelectiveSyncing(UserSettingDefinitions, text, animateEmoji) {
-  closure_2 = animateEmoji;
+export function wrapSettingWithSelectiveSyncing(UserSettingDefinitions, text, inlineAttachmentMedia) {
+  let closure_1 = text;
+  let closure_2 = inlineAttachmentMedia;
   function getSetting() {
-    const tmp = SelectivelySyncedUserSettingsStore.getState()[f85645];
+    const tmp = SelectivelySyncedUserSettingsStore.getState()[importDefault];
     let setting;
     if (tmp != null) {
-      setting = tmp.settings[closure_2];
+      setting = tmp.settings[inlineAttachmentMedia];
     }
     if (setting == null) {
-      setting = getSetting.getSetting();
+      setting = UserSettingDefinitions.getSetting();
     }
     return setting;
   }
-  const f85645 = (arg0) => {
-    if (SelectivelySyncedUserSettingsStore.shouldSync(f85645)) {
-      let updateSettingResult = getSetting.updateSetting(arg0);
-    } else {
-      const obj2 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };
-      const obj3 = {};
-      const obj4 = { settings: null };
-      const obj5 = {};
-      obj5[closure_2] = arg0;
-      obj4.settings = obj5;
-      obj3[f85645] = obj4;
-      obj2.changes = obj3;
-      DispatcherDefault.dispatch(obj2);
-      updateSettingResult = Promise.resolve();
-    }
-    return updateSettingResult;
-  };
-  return {
+  let obj = {
     getSetting,
     useSetting() {
-      const setting = getSetting.useSetting();
+      const setting = UserSettingDefinitions.useSetting();
       const items = [SelectivelySyncedUserSettingsStore];
-      let stateFromStores = initialize.useStateFromStores(items, () => {
-        const tmp = state.getState()[closure_1_1];
+      const obj = get_initialized;
+      let stateFromStores = obj.useStateFromStores(items, () => {
+        const tmp = SelectivelySyncedUserSettingsStore.getState()[closure_1_1];
         let tmp2;
         if (tmp != null) {
-          tmp2 = tmp.settings[animateEmoji];
+          tmp2 = tmp.settings[inlineAttachmentMedia];
         }
         return tmp2;
       });
@@ -139,28 +132,43 @@ export function wrapSettingWithSelectiveSyncing(UserSettingDefinitions, text, an
       return f85648(tmp2);
     },
   };
+  const f85645 = (arg0) => {
+    let obj3;
+    let obj5;
+    let updateSettingResult;
+    if (SelectivelySyncedUserSettingsStore.shouldSync(f85645)) {
+      updateSettingResult = getSetting.updateSetting(arg0);
+    } else {
+      const obj2 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: obj3 };
+      obj3 = {};
+      const obj4 = { settings: obj5 };
+      obj5 = {};
+      obj5[closure_1_2] = arg0;
+      obj3[f85645] = obj4;
+      const obj = require("Dispatcher");
+      obj.dispatch(obj2);
+      updateSettingResult = Promise.resolve();
+    }
+    return updateSettingResult;
+  };
+  return obj;
 }
-export function wrapSettingWithOverride(UserSettingDefinitions, animateEmoji, arg2, arg3) {
-  closure_2 = arg2;
-  closure_3 = arg3;
+export function wrapSettingWithOverride(arg0, gifAutoPlay, arg2, arg3) {
+  let closure_0 = arg0;
+  let closure_1 = gifAutoPlay;
+  let closure_2 = arg2;
+  let closure_3 = arg3;
   function getSetting() {
     let setting = closure_2();
     if (setting == null) {
-      setting = getSetting.getSetting();
+      setting = closure_0.getSetting();
     }
     return setting;
   }
-  const f85648 = (arg0) => {
-    const obj2 = { type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: null };
-    const items = [f85648];
-    obj2.settings = items;
-    DispatcherDefault.dispatch(obj2);
-    return getSetting.updateSetting(arg0);
-  };
-  return {
+  let obj = {
     getSetting,
     useSetting() {
-      const setting = getSetting.useSetting();
+      const setting = closure_0.useSetting();
       let tmp2 = closure_3();
       if (tmp2 == null) {
         tmp2 = setting;
@@ -175,8 +183,18 @@ export function wrapSettingWithOverride(UserSettingDefinitions, animateEmoji, ar
       return f85648(tmp2);
     },
   };
+  const f85648 = (arg0) => {
+    let items;
+    const obj2 = { type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: items };
+    items = [f85648];
+    const obj = gifAutoPlay(closure_2[7]);
+    obj.dispatch(obj2);
+    return getSetting.updateSetting(arg0);
+  };
+  return obj;
 }
 export const wrapSettingWithExperimentDefaults = function wrapSettingWithExperimentDefaults(arg0) {
+  let require;
   ({
     baseSetting: require,
     isEligible: importDefault,
@@ -187,33 +205,39 @@ export const wrapSettingWithExperimentDefaults = function wrapSettingWithExperim
   } = arg0);
   return {
     getSetting() {
-      const setting = require.getSetting();
-      if (null != setting) {
-        return setting;
-      } else {
+      let setting = _require.getSetting();
+      if (null == setting) {
+        let tmp5;
         if (UserSettingsDelay != null) {
           tmp2();
         }
         if (importDefault()) {
-          const tmp5 = SelectivelySyncedUserSettingsStore();
+          tmp5 = SelectivelySyncedUserSettingsStore();
+        } else {
+          tmp5 = UserSettingsProtoStore;
         }
+        setting = tmp5;
       }
+      return setting;
     },
     useSetting() {
-      const setting = require.useSetting();
-      if (null != setting) {
-        return setting;
-      } else {
+      let setting = _require.useSetting();
+      if (null == setting) {
+        let tmp4;
         if (UserSettingsDelay != null) {
           UserSettingsDelay();
         }
         if (tmp2) {
-          const tmp4 = SelectivelySyncedUserSettingsStore();
+          tmp4 = SelectivelySyncedUserSettingsStore();
+        } else {
+          tmp4 = UserSettingsProtoStore;
         }
+        setting = tmp4;
       }
+      return setting;
     },
     updateSetting(arg0) {
-      return require.updateSetting(arg0);
+      return _require.updateSetting(arg0);
     },
   };
 };

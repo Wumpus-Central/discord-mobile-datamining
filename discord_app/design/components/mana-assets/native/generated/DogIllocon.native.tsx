@@ -1,17 +1,21 @@
 // discord_app/design/components/mana-assets/native/generated/DogIllocon.native.tsx
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import c from "../../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import react from "../../../../../../_runtime/00576_react.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import _modDef16691 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DogIllocon-2x.png.js";
 import ReactCompilerGating from "../../../../../modules/react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-const jsx = jsxProd.jsx;
-const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DogIllocon.native.tsx");
-
-export const DogIllocon = ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(8);
+      let accessibilityLabel;
+      let accessible;
+      let first;
+      let resizeMode;
+      let tmp5;
+      const obj = react;
+      const cResult = obj.c(8);
       ({ accessible, accessibilityLabel, resizeMode, size } = arg0);
       let num = 64;
       if (undefined !== size) {
@@ -20,7 +24,7 @@ export const DogIllocon = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { uri: _modDef16691 };
         cResult[0] = obj2;
-        let first = obj2;
+        first = obj2;
       } else {
         first = cResult[0];
       }
@@ -29,15 +33,16 @@ export const DogIllocon = ReactCompilerGating.isReactCompilerEnabled()
         const items = [size1];
         cResult[1] = num;
         cResult[2] = items;
-        let tmp5 = items;
+        tmp5 = items;
       } else {
         tmp5 = cResult[2];
       }
       if (cResult[3] === accessibilityLabel) {
         if (cResult[4] === accessible) {
           if (cResult[5] === resizeMode) {
+            let tmp6;
             if (cResult[6] === tmp5) {
-              let tmp6 = cResult[7];
+              tmp6 = cResult[7];
             }
             return tmp6;
           }
@@ -59,32 +64,28 @@ export const DogIllocon = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = tmp7;
     }
   : (size) => {
+      let accessibilityLabel;
+      let accessible;
+      let resizeMode;
       let num = size.size;
       ({ accessible, accessibilityLabel, resizeMode } = size);
       if (num === undefined) {
         num = 64;
       }
-      const obj = {
-        fadeDuration: 0,
-        source: null,
-        style: null,
-        accessible: null,
-        accessibilityLabel: null,
-        resizeMode: null,
-      };
       const obj2 = { uri: _modDef16691 };
-      obj.source = obj2;
+      FastImageDefault;
       const items = [{ width: num, height: num }];
-      obj.style = items;
-      obj.accessible = accessible;
-      obj.accessibilityLabel = accessibilityLabel;
-      obj.resizeMode = resizeMode;
-      return jsx(FastImageDefault, {
-        fadeDuration: 0,
-        source: null,
-        style: null,
-        accessible: null,
-        accessibilityLabel: null,
-        resizeMode: null,
-      });
+      return (
+        <tmp
+          fadeDuration={0}
+          source={obj2}
+          style={items}
+          accessible={accessible}
+          accessibilityLabel={accessibilityLabel}
+          resizeMode={resizeMode}
+        />
+      );
     };
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DogIllocon.native.tsx");
+
+export const DogIllocon = tmp2;

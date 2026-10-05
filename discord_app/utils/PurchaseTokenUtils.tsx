@@ -2,55 +2,57 @@
 import Storage3 from "../../discord_common/js/packages/storage/Storage.tsx";
 import DurationsDefault from "Durations.tsx";
 import v1 from "../../_runtime/01266_v1.js";
-import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../_runtime/metro/00005__asyncToGenerator.js";
+import size from "../../_runtime/metro/00002__.js";
 
-require = fn;
 function getPurchaseToken() {
   const Storage = Storage3.Storage;
-  value = Storage.get(purchase_token);
+  const value = Storage.get(purchase_token);
   if (null != value) {
     const _Date = Date;
     if (value.expires >= Date.now()) {
       return value.purchaseToken;
     }
   }
-  const v4Result = v1.v4();
-  const Storage2 = Storage3.Storage;
   const tmpResult = v1;
-  const result = Storage2.set(purchase_token, { purchaseToken: v4Result, expires: Date.now() + closure_4 });
+  const v4Result = tmpResult.v4();
+  const Storage2 = Storage3.Storage;
+  obj = { purchaseToken: v4Result, expires: Date.now() + closure_4 };
+  const result = Storage2.set(purchase_token, obj);
   return v4Result;
 }
-let closure_6 = async function _getPurchaseTokenHash() {
-  closure_1 = tmp2;
-  const _Uint8Array2 = Uint8Array;
-  const parts = getPurchaseToken().split("");
-  const uint8Array = new Uint8Array(parts.map((item) => item.charCodeAt(0)));
-  const _window = window;
-  await subtle.digest({ name: "SHA-256" }, uint8Array);
-  closure_129_0 = value;
-  const _btoa = btoa;
-  const _String = String;
-  closure_0 = 0;
-  const _Uint8Array = Uint8Array;
-  const uint8Array1 = new Uint8Array(closure_129_0);
-  const items = [];
-  closure_0 = HermesBuiltin.arraySpread(uint8Array1, closure_0);
-  const _String2 = String;
-  return btoa(HermesBuiltin.apply(items, String));
+let obj = function _getPurchaseTokenHash() {
+  obj = _asyncToGenerator(async function () {
+    let c2;
+    let c3;
+    let closure_1;
+    const _Uint8Array2 = Uint8Array;
+    const str2 = getPurchaseToken();
+    const parts = str2.split("");
+    const self3 = this;
+    const self4 = this;
+    const uint8Array = new Uint8Array(parts.map((item) => item.charCodeAt(0)));
+    const _window = window;
+    await subtle.digest({ name: "SHA-256" }, uint8Array);
+    const _btoa = btoa;
+    const _String = String;
+    let closure_0 = 0;
+    const _Uint8Array = Uint8Array;
+    const self = this;
+    const self2 = this;
+    const uint8Array1 = new Uint8Array(closure_0);
+    const items = [];
+    closure_0 = HermesBuiltin.arraySpread(items, uint8Array1, closure_0);
+    const _String2 = String;
+    return btoa(HermesBuiltin.apply(fromCharCode, items, String));
+  });
+  return obj(...arguments);
 };
 const purchase_token = "purchase_token";
 let closure_4 = 60 * DurationsDefault.Millis.DAY;
-const size = fn(2);
 let result = size.fileFinishedImporting("utils/PurchaseTokenUtils.tsx");
 
 export { getPurchaseToken };
 export const getPurchaseTokenHash = function getPurchaseTokenHash() {
-  const self = this;
-  const apply = closure_6.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

@@ -2,33 +2,38 @@
 import TieredTenureBadgeUtils from "../../../user_profile/TieredTenureBadgeUtils.tsx";
 import UserProfileStore from "../../../user_profile/UserProfileStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx");
-
-export const useTieredTenureBadgeForUser = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp7;
       _require = arg0;
-      const cResult = require("c").c(3);
+      let obj = require("react");
+      const cResult = obj.c(3);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserProfileStore, UserStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         const fn = function s() {
+          let premiumSince;
+          let tieredTenureBadge;
           let userProfile = null;
-          if (null != tieredTenureBadge) {
-            userProfile = UserProfileStore.getUserProfile(tieredTenureBadge);
+          if (null != closure_0) {
+            userProfile = UserProfileStore.getUserProfile(closure_0);
           }
           if (userProfile != null) {
-            const premiumSince = userProfile.premiumSince;
+            premiumSince = userProfile.premiumSince;
           }
           if (null != userProfile) {
             if (null != premiumSince) {
@@ -36,7 +41,8 @@ export const useTieredTenureBadgeForUser = ReactCompilerGating.isReactCompilerEn
                 const badges = userProfile.badges;
                 if (badges != null) {
                   const item = badges.forEach((id) => {
-                    tieredTenureBadge = tieredTenureBadge(dependencyMap[4]).getTieredTenureBadge(id.id);
+                    const obj = closure_2_0(closure_2_1[4]);
+                    tieredTenureBadge = obj.getTieredTenureBadge(id.id);
                   });
                 }
               }
@@ -49,14 +55,15 @@ export const useTieredTenureBadgeForUser = ReactCompilerGating.isReactCompilerEn
                   id = currentUser.id;
                 }
                 let earnedTenureBadge = null;
-                if (tieredTenureBadge === id) {
+                if (closure_0 === id) {
                   let result;
                   if (currentUser != null) {
                     result = currentUser.hasPaidTier2Subscription();
                   }
                   earnedTenureBadge = null;
                   if (result) {
-                    earnedTenureBadge = TieredTenureBadgeUtils.getEarnedTenureBadge(premiumSince);
+                    const obj2 = TieredTenureBadgeUtils;
+                    earnedTenureBadge = obj2.getEarnedTenureBadge(premiumSince);
                   }
                 }
                 return earnedTenureBadge;
@@ -67,23 +74,27 @@ export const useTieredTenureBadgeForUser = ReactCompilerGating.isReactCompilerEn
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        let tmp7 = fn;
+        tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp7);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp7);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
+      let obj = require("get initialized");
       const items = [UserProfileStore, UserStore];
-      return require("initialize").useStateFromStores(items, () => {
+      return obj.useStateFromStores(items, () => {
+        let premiumSince;
+        let tieredTenureBadge;
         let userProfile = null;
-        if (null != tieredTenureBadge) {
-          userProfile = UserProfileStore.getUserProfile(tieredTenureBadge);
+        if (null != closure_0) {
+          userProfile = UserProfileStore.getUserProfile(closure_0);
         }
         if (userProfile != null) {
-          const premiumSince = userProfile.premiumSince;
+          premiumSince = userProfile.premiumSince;
         }
         if (null != userProfile) {
           if (null != premiumSince) {
@@ -91,7 +102,8 @@ export const useTieredTenureBadgeForUser = ReactCompilerGating.isReactCompilerEn
               const badges = userProfile.badges;
               if (badges != null) {
                 const item = badges.forEach((id) => {
-                  tieredTenureBadge = tieredTenureBadge(dependencyMap[4]).getTieredTenureBadge(id.id);
+                  const obj = closure_2_0(closure_2_1[4]);
+                  tieredTenureBadge = obj.getTieredTenureBadge(id.id);
                 });
               }
             }
@@ -104,14 +116,15 @@ export const useTieredTenureBadgeForUser = ReactCompilerGating.isReactCompilerEn
                 id = currentUser.id;
               }
               let earnedTenureBadge = null;
-              if (tieredTenureBadge === id) {
+              if (closure_0 === id) {
                 let result;
                 if (currentUser != null) {
                   result = currentUser.hasPaidTier2Subscription();
                 }
                 earnedTenureBadge = null;
                 if (result) {
-                  earnedTenureBadge = TieredTenureBadgeUtils.getEarnedTenureBadge(premiumSince);
+                  const obj2 = TieredTenureBadgeUtils;
+                  earnedTenureBadge = obj2.getEarnedTenureBadge(premiumSince);
                 }
               }
               return earnedTenureBadge;
@@ -121,3 +134,6 @@ export const useTieredTenureBadgeForUser = ReactCompilerGating.isReactCompilerEn
         return null;
       });
     };
+let result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx");
+
+export const useTieredTenureBadgeForUser = tmp2;

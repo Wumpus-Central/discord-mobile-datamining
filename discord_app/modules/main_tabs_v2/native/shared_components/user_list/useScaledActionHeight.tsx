@@ -5,20 +5,27 @@ import useFontScale from "../../../../screen/native/useFontScale.tsx";
 import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const obj = useFontScale;
+      const fontScale = obj.useFontScale();
+      const obj2 = useToken;
+      const token = obj2.useToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT);
+      const obj3 = useToken;
+      const token1 = obj3.useToken(nativeDefault.modules.mobile.TABLE_ROW_CONTENT_HEIGHT);
+      return token + Math.max(fontScale * token1 - token1, 0);
+    }
+  : () => {
+      const obj = useFontScale;
+      const fontScale = obj.useFontScale();
+      const obj2 = useToken;
+      const token = obj2.useToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT);
+      const obj3 = useToken;
+      const token1 = obj3.useToken(nativeDefault.modules.mobile.TABLE_ROW_CONTENT_HEIGHT);
+      return token + Math.max(fontScale * token1 - token1, 0);
+    };
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/user_list/useScaledActionHeight.tsx",
 );
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      const fontScale = useFontScale.useFontScale();
-      const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT);
-      const token1 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_CONTENT_HEIGHT);
-      return token + Math.max(fontScale * token1 - token1, 0);
-    }
-  : () => {
-      const fontScale = useFontScale.useFontScale();
-      const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT);
-      const token1 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_CONTENT_HEIGHT);
-      return token + Math.max(fontScale * token1 - token1, 0);
-    };
+export default tmp2;

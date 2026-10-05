@@ -1,23 +1,22 @@
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react from "../../../../_runtime/00576_react.js";
 import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const result = size.fileFinishedImporting(
-  "modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx",
-);
-
-export const useCreatorMonetizationIneligibleReasons = ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(2);
+      let tmp2;
+      const obj = react;
+      const cResult = obj.c(2);
       const obj2 = useCreatorMonetizationEligibilityItemsDefault(arg0);
       if (cResult[0] !== obj2) {
         let flatMapResult;
         if (obj2 != null) {
           flatMapResult = obj2.flatMap((checked) => {
+            let items;
             if (checked.checked) {
-              let items = [];
+              items = [];
             } else {
               items = [checked.key];
             }
@@ -26,7 +25,7 @@ export const useCreatorMonetizationIneligibleReasons = ReactCompilerGating.isRea
         }
         cResult[0] = obj2;
         cResult[1] = flatMapResult;
-        let tmp2 = flatMapResult;
+        tmp2 = flatMapResult;
       } else {
         tmp2 = cResult[1];
       }
@@ -40,8 +39,9 @@ export const useCreatorMonetizationIneligibleReasons = ReactCompilerGating.isRea
       let flatMapResult;
       if (obj != null) {
         flatMapResult = obj.flatMap((checked) => {
+          let items;
           if (checked.checked) {
-            let items = [];
+            items = [];
           } else {
             items = [checked.key];
           }
@@ -53,3 +53,8 @@ export const useCreatorMonetizationIneligibleReasons = ReactCompilerGating.isRea
       }
       return flatMapResult;
     };
+const result = size.fileFinishedImporting(
+  "modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx",
+);
+
+export const useCreatorMonetizationIneligibleReasons = tmp2;

@@ -1,32 +1,37 @@
 // discord_app/modules/gateway/useRequestGatewaySocket.tsx
 import RequestGatewaySocketAll from "RequestGatewaySocket.tsx";
-import noop from "../../../_runtime/metro/00019__.js";
+import react from "../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/gateway/useRequestGatewaySocket.tsx");
-
-export const useRequestGatewaySocket = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let canUIRequestGatewaySocket;
+      let closure_0;
       _require = arg0;
-      const cResult = require("c").c(4);
-      const obj = require("c");
-      canUIRequestGatewaySocket = canUIRequestGatewaySocket(10015).useCanUIRequestGatewaySocket();
+      let obj = require("react");
+      const cResult = obj.c(4);
+      const obj2 = canUIRequestGatewaySocket(10015);
+      canUIRequestGatewaySocket = obj2.useCanUIRequestGatewaySocket();
       if (cResult[0] === canUIRequestGatewaySocket) {
+        let tmp3;
+        let tmp4;
         if (cResult[1] === arg0) {
-          let tmp3 = cResult[2];
-          let tmp4 = cResult[3];
+          tmp3 = cResult[2];
+          tmp4 = cResult[3];
         }
-        const effect = noop.useEffect(tmp3, tmp4);
+        const effect = react.useEffect(tmp3, tmp4);
       }
       const fn = function u() {
         if (canUIRequestGatewaySocket) {
-          RequestGatewaySocketAll.setRequestedBy(closure_0);
+          let obj = RequestGatewaySocketAll;
+          obj.setRequestedBy(closure_0);
           return () => {
-            RequestGatewaySocketAll.stopRequest(closure_1_0);
+            const obj = RequestGatewaySocketAll;
+            obj.stopRequest(closure_1_0);
           };
         }
       };
@@ -37,18 +42,24 @@ export const useRequestGatewaySocket = ReactCompilerGating.isReactCompilerEnable
       cResult[3] = items;
       tmp4 = items;
       tmp3 = fn;
-      const obj2 = canUIRequestGatewaySocket(10015);
     }
   : (arg0) => {
-      closure_0 = arg0;
-      canUIRequestGatewaySocket = canUIRequestGatewaySocket(10015).useCanUIRequestGatewaySocket();
+      let canUIRequestGatewaySocket;
+      let closure_0 = arg0;
+      let obj = canUIRequestGatewaySocket(10015);
+      canUIRequestGatewaySocket = obj.useCanUIRequestGatewaySocket();
       const items = [arg0, canUIRequestGatewaySocket];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
         if (canUIRequestGatewaySocket) {
-          RequestGatewaySocketAll.setRequestedBy(closure_0);
+          let obj = RequestGatewaySocketAll;
+          obj.setRequestedBy(closure_0);
           return () => {
-            RequestGatewaySocketAll.stopRequest(closure_1_0);
+            const obj = RequestGatewaySocketAll;
+            obj.stopRequest(closure_1_0);
           };
         }
       }, items);
     };
+const result = size.fileFinishedImporting("modules/gateway/useRequestGatewaySocket.tsx");
+
+export const useRequestGatewaySocket = tmp2;

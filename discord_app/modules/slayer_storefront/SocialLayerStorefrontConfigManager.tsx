@@ -1,23 +1,24 @@
 // discord_app/modules/slayer_storefront/SocialLayerStorefrontConfigManager.tsx
 import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-class SocialLayerStorefrontConfigManager extends tmp2 {
+class SocialLayerStorefrontConfigManager extends AutomaticLifecycleManager {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    obj = { POST_CONNECTION_OPEN: null };
+    let onPostConnectionOpen;
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    const obj = { POST_CONNECTION_OPEN: onPostConnectionOpen.bind(applyArgumentsResult) };
     onPostConnectionOpen = applyArgumentsResult.onPostConnectionOpen;
-    obj.POST_CONNECTION_OPEN = onPostConnectionOpen.bind(applyArgumentsResult);
     applyArgumentsResult.actions = obj;
     return applyArgumentsResult;
   }
+  onPostConnectionOpen() {
+    const obj = SocialLayerStorefrontActionCreators;
+    const socialLayerStorefrontConfig = obj.fetchSocialLayerStorefrontConfig();
+  }
 }
-SocialLayerStorefrontConfigManager.prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
-  const socialLayerStorefrontConfig = SocialLayerStorefrontActionCreators.fetchSocialLayerStorefrontConfig();
-};
+const prototype = SocialLayerStorefrontConfigManager.prototype;
 const socialLayerStorefrontConfigManager = new SocialLayerStorefrontConfigManager();
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontConfigManager.tsx");
 
 export default socialLayerStorefrontConfigManager;

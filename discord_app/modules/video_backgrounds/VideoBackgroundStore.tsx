@@ -1,5 +1,5 @@
 // discord_app/modules/video_backgrounds/VideoBackgroundStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import BaseConnectionEvent from "../../../discord_common/js/packages/media-engine/index.tsx";
 import UnsyncedUserSettingsStore from "../user_settings/UnsyncedUserSettingsStore.tsx";
@@ -7,9 +7,10 @@ import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx"
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
 function handleSyncedStoresUpdate() {
+  let voiceChannelId;
   if (voiceChannelId !== SelectedChannelStore.getVoiceChannelId()) {
     c9 = false;
     c12 = false;
@@ -17,14 +18,11 @@ function handleSyncedStoresUpdate() {
   }
   let flag2 = false;
   if (null != UserStore.getCurrentUser()) {
-    let isVideoEnabledResult = null != SelectedChannelStore.getVoiceChannelId();
-    if (isVideoEnabledResult) {
-      isVideoEnabledResult = MediaEngineStore.isVideoEnabled();
-    }
-    if (isVideoEnabledResult) {
-      isVideoEnabledResult = null != UnsyncedUserSettingsStore.videoBackground;
-    }
-    flag2 = isVideoEnabledResult;
+    const videoBackground = UnsyncedUserSettingsStore.videoBackground;
+    flag2 =
+      null != SelectedChannelStore.getVoiceChannelId() && MediaEngineStore.isVideoEnabled() && null != videoBackground;
+    const isVideoEnabledResult =
+      null != SelectedChannelStore.getVoiceChannelId() && MediaEngineStore.isVideoEnabled() && null != videoBackground;
   }
   if (flag2) {
     c9 = true;
@@ -38,14 +36,15 @@ let c10 = false;
 let closure_11 = {};
 let c12 = false;
 let c13 = false;
-const Store = initializeDefault.Store;
-class VideoBackgroundStore extends Store {}
+const Store = get_initializedDefault.Store;
+class VideoBackgroundStore extends Store {
+  initialize() {
+    this.waitFor(MediaEngineStore, SelectedChannelStore, UnsyncedUserSettingsStore, UserSettingsProtoStore, UserStore);
+    const items = [SelectedChannelStore, MediaEngineStore];
+    this.syncWith(items, handleSyncedStoresUpdate);
+  }
+}
 const prototype = VideoBackgroundStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(MediaEngineStore, SelectedChannelStore, UnsyncedUserSettingsStore, UserSettingsProtoStore, UserStore);
-  const items = [SelectedChannelStore, MediaEngineStore];
-  this.syncWith(items, handleSyncedStoresUpdate);
-};
 Object.defineProperty(prototype, "videoFilterAssets", {
   get: function videoFilterAssets() {
     return closure_11;
@@ -83,7 +82,7 @@ Object.defineProperty(prototype, "videoBackgroundPreviewUnavailable", {
   set: undefined,
 });
 VideoBackgroundStore.displayName = "VideoBackgroundStore";
-const videoBackgroundStore = new VideoBackgroundStore(DispatcherDefault, {
+let obj = {
   VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function handleVideoFilterAssetFetchSuccess(assets) {
     assets = assets.assets;
     const obj = {};
@@ -101,10 +100,11 @@ const videoBackgroundStore = new VideoBackgroundStore(DispatcherDefault, {
     closure_11 = obj;
   },
   VIDEO_FILTER_ASSET_DELETE_SUCCESS: function handleRemoveBackground(videoFilterAsset) {
+    const obj = {};
     videoFilterAsset = videoFilterAsset.videoFilterAsset;
     const merged = Object.assign(closure_11);
-    closure_11 = {};
-    delete tmp2[tmp];
+    closure_11 = obj;
+    delete obj[videoFilterAsset.id];
   },
   VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: function handleSaveLastUsedBackgroundOption(backgroundOption) {
     let videoBackground = backgroundOption.backgroundOption;
@@ -113,14 +113,14 @@ const videoBackgroundStore = new VideoBackgroundStore(DispatcherDefault, {
       if (null == videoBackground) {
         videoBackground = UnsyncedUserSettingsStore.videoBackground;
       }
-      let isVideoEnabledResult = null != SelectedChannelStore.getVoiceChannelId();
-      if (isVideoEnabledResult) {
-        isVideoEnabledResult = MediaEngineStore.isVideoEnabled();
-      }
-      if (isVideoEnabledResult) {
-        isVideoEnabledResult = null != videoBackground;
-      }
-      flag = isVideoEnabledResult;
+      flag =
+        null != SelectedChannelStore.getVoiceChannelId() &&
+        MediaEngineStore.isVideoEnabled() &&
+        null != videoBackground;
+      const isVideoEnabledResult =
+        null != SelectedChannelStore.getVoiceChannelId() &&
+        MediaEngineStore.isVideoEnabled() &&
+        null != videoBackground;
     }
     if (flag) {
       c9 = true;
@@ -159,8 +159,8 @@ const videoBackgroundStore = new VideoBackgroundStore(DispatcherDefault, {
     c13 = false;
     c10 = false;
   },
-});
-const size = fn(2);
+};
+const videoBackgroundStore = new VideoBackgroundStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/video_backgrounds/VideoBackgroundStore.tsx");
 
 export default videoBackgroundStore;

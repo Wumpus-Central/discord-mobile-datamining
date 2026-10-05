@@ -1,25 +1,40 @@
 // discord_app/modules/user_profile/hooks/useUserProfileActivityTabContent.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
+import Constants from "../../../Constants.tsx";
 import ContentInventoryTypes from "../../content_inventory/ContentInventoryTypes.tsx";
 import maybeFetchContentInventoryOutboxDefault from "../../content_inventory/maybeFetchContentInventoryOutbox.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react_mod from "../../../../_runtime/00019_react.js";
 import ContentInventoryOutboxStore from "../../content_inventory/ContentInventoryOutboxStore.tsx";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
 import SelfPresenceStore from "../../../stores/SelfPresenceStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 import UserProfileStore from "../UserProfileStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const StatusTypes = fn(1085).StatusTypes;
-let closure_10 = new LoggerDefault("useUserProfileActivityTabContent");
-const ReactCompilerGating = fn(558);
+let userId;
+
+let react = react_mod;
+const StatusTypes = Constants.StatusTypes;
 let tmp2 = new LoggerDefault("useUserProfileActivityTabContent");
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileActivityTabContent.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_10 = tmp2;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (userId) => {
-      const cResult = userId(voiceActivity[9]).c(30);
+      let closure_3;
+      let currentUserId;
+      let guildId;
+      let live;
+      let logger;
+      let recent;
+      let stream;
+      let tmp36;
+      let tmp4;
+      let tmp5;
+      let voiceActivity;
+      let voiceChannel;
+      const tmp = userId;
+      const obj = userId(voiceActivity[9]);
+      const cResult = obj.c(30);
       userId = userId.userId;
       ({ guildId, currentUserId } = userId);
       if (cResult[0] !== userId) {
@@ -35,28 +50,32 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = userId;
         cResult[1] = fn;
         cResult[2] = items;
-        let tmp5 = items;
-        let tmp4 = fn;
+        tmp5 = items;
+        tmp4 = fn;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
       }
-      const effect = noop.useEffect(tmp4, tmp5);
-      const obj = userId(voiceActivity[9]);
-      const tmp7 = voiceChannel;
+      const effect = react.useEffect(tmp4, tmp5);
       ({ live, recent, stream } = voiceChannel(voiceActivity[11])(userId));
+      voiceChannel(voiceActivity[11])(userId);
+      const tmp7 = voiceChannel;
       if (cResult[3] === guildId) {
+        let tmp9;
+        let arr2;
+        let tmp13;
+        let tmp18;
         if (cResult[4] === userId) {
-          let tmp9 = cResult[5];
+          tmp9 = cResult[5];
         }
-        const tmp10 = tmp7(tmp2[12])(tmp9);
+        const tmp10 = tmp7(voiceActivity[12])(tmp9);
         voiceChannel = tmp10.voiceChannel;
         voiceActivity = tmp10.voiceActivity;
         if (cResult[6] !== recent) {
           const found = recent.filter(tmp(tmp2[13]).isRecentActivityEntry);
           cResult[6] = recent;
           cResult[7] = found;
-          let arr2 = found;
+          arr2 = found;
         } else {
           arr2 = cResult[7];
         }
@@ -64,14 +83,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [ContentInventoryOutboxStore];
           cResult[8] = items1;
-          let tmp13 = items1;
+          tmp13 = items1;
         } else {
           tmp13 = cResult[8];
         }
         if (cResult[9] !== userId) {
           class L {
             constructor() {
-              return closure_4.isFetchingUserOutbox(userId);
+              return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
             }
           }
           cResult[9] = userId;
@@ -79,57 +98,60 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class L {
             constructor() {
-              return closure_4.isFetchingUserOutbox(userId);
+              return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
             }
           }
         }
-        const stateFromStores = tmp(tmp2[14]).useStateFromStores(tmp13, L);
-        noop = tmp17;
+        const tmpResult = tmp(voiceActivity[14]);
+        const stateFromStores = tmpResult.useStateFromStores(tmp13, L);
+        react = tmp17;
         const _Symbol2 = Symbol;
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
           class L {
             constructor() {
-              return closure_4.isFetchingUserOutbox(userId);
+              return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
             }
           }
           const items2 = [SelfPresenceStore, PresenceStore];
           cResult[11] = items2;
-          const tmp18 = items2;
+          tmp18 = items2;
         } else {
           class L {
             constructor() {
-              return closure_4.isFetchingUserOutbox(userId);
+              return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
             }
           }
         }
         if ((cResult[12] === userId) === currentUserId) {
+          let tmp22;
           class L {
             constructor() {
-              return closure_4.isFetchingUserOutbox(userId);
+              return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
             }
           }
-          const stateFromStores1 = tmp(tmp2[14]).useStateFromStores(tmp18, B);
+          const tmpResult4 = tmp(voiceActivity[14]);
+          const stateFromStores1 = tmpResult4.useStateFromStores(tmp18, B);
           const _Symbol3 = Symbol;
           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
             class L {
               constructor() {
-                return closure_4.isFetchingUserOutbox(userId);
+                return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
               }
             }
             const items3 = [UserProfileStore];
             cResult[15] = items3;
-            const tmp22 = items3;
+            tmp22 = items3;
           } else {
             class L {
               constructor() {
-                return closure_4.isFetchingUserOutbox(userId);
+                return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
               }
             }
           }
           if (cResult[16] !== userId) {
             class L {
               constructor() {
-                return closure_4.isFetchingUserOutbox(userId);
+                return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
               }
             }
             cResult[16] = userId;
@@ -137,17 +159,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else {
             class L {
               constructor() {
-                return closure_4.isFetchingUserOutbox(userId);
+                return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
               }
             }
           }
-          const tmpResult4 = tmp(tmp2[14]);
-          const stateFromStores2 = tmp(tmp2[14]).useStateFromStores(tmp22, tmp24);
+          const tmpResult5 = tmp(voiceActivity[14]);
+          const stateFromStores2 = tmpResult5.useStateFromStores(tmp22, tmp24);
           const _Symbol4 = Symbol;
           if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
             class L {
               constructor() {
-                return closure_4.isFetchingUserOutbox(userId);
+                return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
               }
             }
             const items4 = [VoiceStateStore];
@@ -155,14 +177,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else {
             class L {
               constructor() {
-                return closure_4.isFetchingUserOutbox(userId);
+                return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
               }
             }
           }
           if (cResult[19] !== voiceChannel) {
             class L {
               constructor() {
-                return closure_4.isFetchingUserOutbox(userId);
+                return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
               }
             }
             cResult[19] = voiceChannel;
@@ -170,29 +192,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else {
             class L {
               constructor() {
-                return closure_4.isFetchingUserOutbox(userId);
+                return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
               }
             }
           }
-          tmp(tmp2[14]);
+          tmp(voiceActivity[14]);
           if (cResult[21] === live) {
             class L {
               constructor() {
-                return closure_4.isFetchingUserOutbox(userId);
+                return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
               }
             }
-            let tmp32 = stateFromStores1;
-            if (!stateFromStores1) {
-              class L {
-                constructor() {
-                  return closure_4.isFetchingUserOutbox(userId);
-                }
-              }
-            }
+            let tmp32 = stateFromStores1 || stateFromStores2;
             if (tmp32) {
               class L {
                 constructor() {
-                  return closure_4.isFetchingUserOutbox(userId);
+                  return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
                 }
               }
               tmp32 = null != voiceChannel;
@@ -200,69 +215,62 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (tmp32) {
               class L {
                 constructor() {
-                  return closure_4.isFetchingUserOutbox(userId);
+                  return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
                 }
               }
             }
-            let tmp33 = !tmp32;
-            if (!tmp32) {
-              class L {
-                constructor() {
-                  return closure_4.isFetchingUserOutbox(userId);
-                }
-              }
-            }
+            let tmp33 = !tmp32 && !stateFromStores1;
             if (tmp33) {
               class L {
                 constructor() {
-                  return closure_4.isFetchingUserOutbox(userId);
+                  return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
                 }
               }
               let tmp34 = live.length > 0;
               if (!tmp34) {
                 class L {
                   constructor() {
-                    return closure_4.isFetchingUserOutbox(userId);
+                    return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
                   }
                 }
-                if (!stateFromStores2) {
+                if (tmp35) {
                   class L {
                     constructor() {
-                      return closure_4.isFetchingUserOutbox(userId);
+                      return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
                     }
                   }
-                  const tmp35 = null != voiceChannel;
                 }
                 tmp34 = tmp35;
               }
               if (!tmp34) {
                 class L {
                   constructor() {
-                    return closure_4.isFetchingUserOutbox(userId);
+                    return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
                   }
-                }
-                if (!stateFromStores2) {
-                  class L {
-                    constructor() {
-                      return closure_4.isFetchingUserOutbox(userId);
-                    }
-                  }
-                  let tmp36 = null != stream;
                 }
                 if (tmp36) {
                   class L {
                     constructor() {
-                      return closure_4.isFetchingUserOutbox(userId);
+                      return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
                     }
                   }
+                  tmp36 = null != stream;
+                }
+                if (tmp36) {
+                  class L {
+                    constructor() {
+                      return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
+                    }
+                  }
+                  const channelId = stream.channelId;
                   if (voiceChannel != null) {
                     class L {
                       constructor() {
-                        return closure_4.isFetchingUserOutbox(userId);
+                        return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
                       }
                     }
                   }
-                  tmp36 = stream.channelId !== tmp37;
+                  tmp36 = channelId !== tmp37;
                 }
                 tmp34 = tmp36;
               }
@@ -271,34 +279,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[24] === tmp33) {
               class L {
                 constructor() {
-                  return closure_4.isFetchingUserOutbox(userId);
+                  return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
                 }
               }
             }
             const obj2 = {
               recent: arr2,
               isFetching: stateFromStores,
-              isCurrentUser: tmp17,
+              isCurrentUser: userId === currentUserId,
               hasCurrentActivity: tmp33,
               hasRecentActivity: arr2.length > 0,
             };
             cResult[24] = tmp33;
             cResult[25] = arr2.length > 0;
+            cResult[26] = userId === currentUserId;
             class B {
               constructor() {
+                let status;
                 if (closure_3) {
-                  tmp4 = closure_6;
-                  status = closure_6.getStatus();
+                  status = SelfPresenceStore.getStatus();
                 } else {
-                  tmp = closure_5;
-                  tmp2 = userId;
-                  status = closure_5.getStatus(userId);
+                  status = PresenceStore.getStatus(userId);
                 }
-                tmp5 = status === StatusTypes.OFFLINE || status === StatusTypes.INVISIBLE;
-                return tmp5;
+                return status === StatusTypes.OFFLINE || status === StatusTypes.INVISIBLE;
               }
             }
-            cResult[26] = tmp17;
             cResult[27] = stateFromStores;
             cResult[28] = arr2;
             cResult[29] = obj2;
@@ -306,60 +311,56 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (null != voiceActivity) {
             class L {
               constructor() {
-                return closure_4.isFetchingUserOutbox(userId);
+                return ContentInventoryOutboxStore.isFetchingUserOutbox(userId);
               }
             }
           }
           cResult[21] = live;
           class B {
             constructor() {
+              let status;
               if (closure_3) {
-                tmp4 = closure_6;
-                status = closure_6.getStatus();
+                status = SelfPresenceStore.getStatus();
               } else {
-                tmp = closure_5;
-                tmp2 = userId;
-                status = closure_5.getStatus(userId);
+                status = PresenceStore.getStatus(userId);
               }
-              tmp5 = status === StatusTypes.OFFLINE || status === StatusTypes.INVISIBLE;
-              return tmp5;
+              return status === StatusTypes.OFFLINE || status === StatusTypes.INVISIBLE;
             }
           }
           cResult[23] = live;
-          const tmpResult5 = tmp(tmp2[14]);
         }
         class B {
           constructor() {
+            let status;
             if (closure_3) {
-              tmp4 = closure_6;
-              status = closure_6.getStatus();
+              status = SelfPresenceStore.getStatus();
             } else {
-              tmp = closure_5;
-              tmp2 = userId;
-              status = closure_5.getStatus(userId);
+              status = PresenceStore.getStatus(userId);
             }
-            tmp5 = status === StatusTypes.OFFLINE || status === StatusTypes.INVISIBLE;
-            return tmp5;
+            return status === StatusTypes.OFFLINE || status === StatusTypes.INVISIBLE;
           }
         }
         cResult[12] = userId === currentUserId;
         cResult[13] = userId;
         cResult[14] = B;
-        const tmpResult = tmp(tmp2[14]);
       }
       const obj3 = { userId: null, guildId };
       cResult[3] = guildId;
       cResult[4] = userId;
       cResult[5] = obj3;
       tmp9 = obj3;
-      const tmp8 = voiceChannel(voiceActivity[11])(userId);
     }
   : (userId) => {
+      let currentUserId;
+      let guildId;
+      let live;
+      let logger;
+      let recent;
       userId = userId.userId;
       recent = undefined;
       let voiceChannel;
       let voiceActivity;
-      closure_4 = undefined;
+      let closure_4;
       const items = [userId];
       ({ currentUserId, guildId } = userId);
       const effect = voiceActivity.useEffect(() => {
@@ -380,22 +381,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const memo = voiceActivity.useMemo(() => recent.filter(ContentInventoryTypes.isRecentActivityEntry), items1);
       const items2 = [closure_4];
       closure_4 = tmp5;
-      const stateFromStores = userId(voiceChannel[14]).useStateFromStores(items2, () =>
+      const obj = userId(voiceChannel[14]);
+      const stateFromStores = obj.useStateFromStores(items2, () =>
         ContentInventoryOutboxStore.isFetchingUserOutbox(userId),
       );
-      const obj = userId(voiceChannel[14]);
       const items3 = [SelfPresenceStore, PresenceStore];
-      const stateFromStores1 = userId(voiceChannel[14]).useStateFromStores(items3, () => {
+      const obj2 = userId(voiceChannel[14]);
+      const stateFromStores1 = obj2.useStateFromStores(items3, () => {
+        let status;
         if (closure_4) {
-          let status = SelfPresenceStore.getStatus();
+          status = SelfPresenceStore.getStatus();
         } else {
           status = PresenceStore.getStatus(userId);
         }
         return status === StatusTypes.OFFLINE || status === StatusTypes.INVISIBLE;
       });
-      const obj2 = userId(voiceChannel[14]);
       const items4 = [UserProfileStore];
-      const stateFromStores2 = userId(voiceChannel[14]).useStateFromStores(items4, () => {
+      const obj3 = userId(voiceChannel[14]);
+      const stateFromStores2 = obj3.useStateFromStores(items4, () => {
         const userProfile = UserProfileStore.getUserProfile(userId);
         let _private;
         if (userProfile != null) {
@@ -403,53 +406,32 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return true === _private;
       });
-      const obj3 = userId(voiceChannel[14]);
       const items5 = [VoiceStateStore];
       let found = live;
-      const stateFromStores3 = userId(voiceChannel[14]).useStateFromStores(items5, () => {
-        let isInChannelResult = null != voiceChannel;
-        if (isInChannelResult) {
-          isInChannelResult = VoiceStateStore.isInChannel(tmp.id);
-        }
+      const obj4 = userId(voiceChannel[14]);
+      const stateFromStores3 = obj4.useStateFromStores(items5, () => {
+        const isInChannelResult = null != voiceChannel && VoiceStateStore.isInChannel(tmp.id);
         return isInChannelResult;
       });
       if (null != voiceActivity) {
         found = live.filter((item) => item !== voiceActivity);
       }
-      let tmp9 = stateFromStores1;
-      if (!stateFromStores1) {
-        tmp9 = stateFromStores2;
-      }
-      if (tmp9) {
-        tmp9 = null != voiceChannel;
-      }
-      if (tmp9) {
-        tmp9 = stateFromStores3;
-      }
-      let tmp10 = !tmp9;
-      if (!tmp9) {
-        tmp10 = !stateFromStores1;
-      }
+      let tmp10 =
+        !((stateFromStores1 || stateFromStores2) && null != voiceChannel && stateFromStores3) && !stateFromStores1;
       if (tmp10) {
         let tmp11 = found.length > 0;
         if (!tmp11) {
-          let tmp12 = !stateFromStores2;
-          if (!stateFromStores2) {
-            tmp12 = null != voiceChannel;
-          }
-          tmp11 = tmp12;
+          tmp11 = !stateFromStores2 && null != voiceChannel;
         }
         if (!tmp11) {
-          let tmp13 = !stateFromStores2;
-          if (!stateFromStores2) {
-            tmp13 = null != stream;
-          }
+          let tmp13 = !stateFromStores2 && null != stream;
           if (tmp13) {
             let id;
+            const channelId = stream.channelId;
             if (voiceChannel != null) {
               id = voiceChannel.id;
             }
-            tmp13 = stream.channelId !== id;
+            tmp13 = channelId !== id;
           }
           tmp11 = tmp13;
         }
@@ -463,3 +445,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         hasRecentActivity: memo.length > 0,
       };
     };
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileActivityTabContent.tsx");
+
+export default tmp3;

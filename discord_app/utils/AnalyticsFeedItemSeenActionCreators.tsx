@@ -9,32 +9,24 @@ export const markAnalyticsFeedItemSeen = function markAnalyticsFeedItemSeen(
   feedItemId,
   timestampMillis,
 ) {
-  DispatcherDefault.dispatch({
-    type: "ANALYTICS_FEED_ITEM_SEEN",
-    id: forumPostSeenManagerId,
-    feedItemId,
-    timestampMillis,
-  });
+  const obj = DispatcherDefault;
+  const obj2 = { type: "ANALYTICS_FEED_ITEM_SEEN", id: forumPostSeenManagerId, feedItemId, timestampMillis };
+  obj.dispatch(obj2);
 };
 export const markAnalyticsFeedItemUnseen = function markAnalyticsFeedItemUnseen(
   forumPostSeenManagerId,
   feedItemId,
   timestampMillis,
 ) {
-  DispatcherDefault.dispatch({
-    type: "ANALYTICS_FEED_ITEM_UNSEEN",
-    id: forumPostSeenManagerId,
-    feedItemId,
-    timestampMillis,
-  });
+  const obj = DispatcherDefault;
+  const obj2 = { type: "ANALYTICS_FEED_ITEM_UNSEEN", id: forumPostSeenManagerId, feedItemId, timestampMillis };
+  obj.dispatch(obj2);
 };
 export const flushAnalyticsFeedItems = function flushAnalyticsFeedItems(
   forumPostSeenManagerId,
   IMMEDIATE_WITH_COOLDOWN,
 ) {
-  DispatcherDefault.dispatch({
-    type: "ANALYTICS_FEED_FLUSH",
-    id: forumPostSeenManagerId,
-    force: IMMEDIATE_WITH_COOLDOWN,
-  });
+  const obj = DispatcherDefault;
+  const obj2 = { type: "ANALYTICS_FEED_FLUSH", id: forumPostSeenManagerId, force: IMMEDIATE_WITH_COOLDOWN };
+  obj.dispatch(obj2);
 };

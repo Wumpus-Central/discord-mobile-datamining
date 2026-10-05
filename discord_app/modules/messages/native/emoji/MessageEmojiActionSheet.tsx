@@ -1,32 +1,44 @@
 // discord_app/modules/messages/native/emoji/MessageEmojiActionSheet.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import Constants from "../../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import StandardEmojiContentDefault from "StandardEmojiContent.tsx";
 import CustomEmojiContentDefault from "CustomEmojiContent.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-const PlatformUtils = fn(1369);
+const require = globalThis.__r;
+let BottomSheet, emojiNode, nonce, obj1, trackResult;
+
+const View = react_native.View;
+const AnalyticEvents = Constants.AnalyticEvents;
+const jsx = Fragment.jsx;
+let createStyles = createStyles_mod;
+createStyles = createStyles.createStyles;
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 16;
 }
-let closure_6 = createStyles.createStyles({ contentWrapper: { paddingHorizontal: 16, paddingBottom: num } });
-let ReactCompilerGating = fn(558);
+let obj = { contentWrapper: { paddingHorizontal: 16, paddingBottom: num } };
+let closure_6 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
   ? (emojiNode) => {
-      const cResult = nonce(576).c(7);
+      let tmp11;
+      let obj = nonce(576);
+      const cResult = obj.c(7);
       emojiNode = emojiNode.emojiNode;
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const v4Result = tmp(1266).v4();
+        const tmpResult = nonce(1266);
+        const v4Result = tmpResult.v4();
         cResult[0] = v4Result;
         nonce = v4Result;
-        const tmpResult = tmp(1266);
       } else {
         nonce = cResult[0];
       }
@@ -59,10 +71,9 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const obj2 = { emojiNode, nonce };
-        const tmp10 = jsx(StandardEmojiContentDefault, { emojiNode, nonce });
         cResult[2] = emojiNode;
-        cResult[3] = tmp10;
+        cResult[3] = jsx(StandardEmojiContentDefault, { emojiNode, nonce });
+        const tmp10 = jsx(StandardEmojiContentDefault, { emojiNode, nonce });
       } else {
         class S {
           constructor() {
@@ -84,71 +95,74 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp11;
       }
-      const obj3 = { startExpanded: true, onDismiss: S, children: <View style={tmp4.contentWrapper}>{tmp8}</View> };
-      tmp11 = jsx(nonce(6645).BottomSheet, {
-        startExpanded: true,
-        onDismiss: S,
-        children: <View style={tmp4.contentWrapper}>{tmp8}</View>,
-      });
+      BottomSheet = tmp(6645).BottomSheet;
+      tmp11 = (
+        <BottomSheet startExpanded onDismiss={S}>
+          {null}
+        </BottomSheet>
+      );
       cResult[4] = tmp4.contentWrapper;
       cResult[5] = tmp8;
       cResult[6] = tmp11;
-      const obj = nonce(576);
-      const obj4 = { style: tmp4.contentWrapper, children: tmp8 };
     }
   : (emojiNode) => {
       let _require;
+      emojiNode = emojiNode.emojiNode;
       const tmp = closure_6();
-      const v4Result = require("v1").v4();
-      _require = v4Result;
-      const obj2 = {
-        startExpanded: true,
-        onDismiss() {
-          AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });
-        },
-        children: null,
-      };
-      const obj = require("v1");
-      obj2.children = (
-        <View style={tmp.contentWrapper}>
-          {jsx(StandardEmojiContentDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result })}
-        </View>
+      let obj = require("v1");
+      _require = obj.v4();
+      const v4Result = obj.v4();
+      BottomSheet = require("Sheet/BottomSheet").BottomSheet;
+      return (
+        <BottomSheet
+          startExpanded
+          onDismiss={function onDismiss() {
+            const obj = AnalyticsUtilsDefault;
+            const obj2 = { nonce };
+            obj.track(AnalyticEvents.CLOSE_POPOUT, obj2);
+          }}
+        >
+          {null}
+        </BottomSheet>
       );
-      return jsx(require("Sheet/BottomSheet").BottomSheet, {
-        startExpanded: true,
-        onDismiss() {
-          AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });
-        },
-        children: null,
-      });
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? (emojiNode) => {
-      const cResult = require("c").c(14);
+      let _require;
+      let emoji;
+      let expressionSourceApplication;
+      let expressionSourceGuild;
+      let hasJoinedEmojiSourceGuild;
+      let sourceType;
+      let tmp5;
+      let obj = require("react");
+      const cResult = obj.c(14);
       emojiNode = emojiNode.emojiNode;
       const tmp4 = closure_6();
       if (cResult[0] !== emojiNode.id) {
-        const obj2 = { emojiId: emojiNode.id };
+        let obj2 = { emojiId: emojiNode.id };
         cResult[0] = emojiNode.id;
         cResult[1] = obj2;
-        let tmp5 = obj2;
+        tmp5 = obj2;
       } else {
         tmp5 = cResult[1];
       }
-      const obj = require("c");
-      const emojiAndSource = require("useEmojiAndSource").useEmojiAndSource(tmp5);
+      const tmpResult = require("useEmojiAndSource");
+      const emojiAndSource = tmpResult.useEmojiAndSource(tmp5);
       ({ sourceType, expressionSourceGuild, expressionSourceApplication, hasJoinedEmojiSourceGuild, emoji } =
         emojiAndSource);
       if (emojiAndSource.isFetching) {
         return null;
       } else {
+        let tmp8;
+        let tmp10;
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const v4Result = tmp(1266).v4();
+          const tmpResult2 = require("v1");
+          const v4Result = tmpResult2.v4();
           cResult[2] = v4Result;
-          let tmp8 = v4Result;
-          const tmpResult2 = tmp(1266);
+          tmp8 = v4Result;
         } else {
           tmp8 = cResult[2];
         }
@@ -156,10 +170,12 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function y() {
-            AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });
+            const obj = AnalyticsUtilsDefault;
+            const obj2 = { nonce };
+            obj.track(AnalyticEvents.CLOSE_POPOUT, obj2);
           };
           cResult[3] = fn;
-          let tmp10 = fn;
+          tmp10 = fn;
         } else {
           tmp10 = cResult[3];
         }
@@ -168,19 +184,23 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[6] === expressionSourceApplication) {
               if (cResult[7] === expressionSourceGuild) {
                 if (cResult[8] === hasJoinedEmojiSourceGuild) {
+                  let tmp11;
                   if (cResult[9] === sourceType) {
-                    let tmp11 = cResult[10];
+                    tmp11 = cResult[10];
                   }
                   if (cResult[11] === tmp4.contentWrapper) {
+                    let tmp15;
                     if (cResult[12] === tmp11) {
-                      let tmp15 = cResult[13];
+                      tmp15 = cResult[13];
                     }
                     return tmp15;
                   }
-                  const obj3 = { startExpanded: true, onDismiss: tmp10, children: null };
-                  const obj4 = { style: tmp4.contentWrapper, children: tmp11 };
-                  obj3.children = <View style={tmp4.contentWrapper}>{tmp11}</View>;
-                  const tmp18 = jsx(tmp(6645).BottomSheet, { startExpanded: true, onDismiss: tmp10, children: null });
+                  BottomSheet = tmp(6645).BottomSheet;
+                  const tmp18 = (
+                    <BottomSheet startExpanded onDismiss={tmp10}>
+                      {null}
+                    </BottomSheet>
+                  );
                   cResult[11] = tmp4.contentWrapper;
                   cResult[12] = tmp11;
                   cResult[13] = tmp18;
@@ -190,15 +210,6 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const obj5 = {
-          emojiNode,
-          sourceType,
-          expressionSourceApplication,
-          expressionSourceGuild,
-          customEmojiFromJoinedGuild: emoji,
-          hasJoinedEmojiSourceGuild,
-          nonce: tmp8,
-        };
         const tmp14 = jsx(CustomEmojiContentDefault, {
           emojiNode,
           sourceType,
@@ -217,86 +228,67 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = tmp14;
         tmp11 = tmp14;
       }
-      const tmpResult = require("useEmojiAndSource");
     }
   : (emojiNode) => {
       emojiNode = emojiNode.emojiNode;
       let _require;
       const tmp = closure_6();
-      const emojiAndSource = require("useEmojiAndSource").useEmojiAndSource({ emojiId: emojiNode.id });
+      let obj = require("useEmojiAndSource");
+      let obj2 = { emojiId: emojiNode.id };
+      const emojiAndSource = obj.useEmojiAndSource(obj2);
       if (emojiAndSource.isFetching) {
         return null;
       } else {
-        const v4Result = tmp2(1266).v4();
+        const tmp2Result = require("v1");
+        const v4Result = tmp2Result.v4();
         _require = v4Result;
-        const obj3 = {
-          startExpanded: true,
-          onDismiss() {
-            AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });
-          },
-          children: null,
-        };
-        const obj4 = { style: tmp.contentWrapper, children: null };
-        const obj5 = {
-          emojiNode,
-          sourceType: tmp5,
-          expressionSourceApplication: tmp7,
-          expressionSourceGuild: tmp6,
-          customEmojiFromJoinedGuild: tmp9,
-          hasJoinedEmojiSourceGuild: tmp8,
-          nonce: v4Result,
-        };
-        obj4.children = jsx(CustomEmojiContentDefault, {
-          emojiNode,
-          sourceType: tmp5,
-          expressionSourceApplication: tmp7,
-          expressionSourceGuild: tmp6,
-          customEmojiFromJoinedGuild: tmp9,
-          hasJoinedEmojiSourceGuild: tmp8,
-          nonce: v4Result,
-        });
-        obj3.children = <View style={tmp.contentWrapper}>{null}</View>;
-        return jsx(tmp2(6645).BottomSheet, {
-          startExpanded: true,
-          onDismiss() {
-            AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });
-          },
-          children: null,
-        });
+        BottomSheet = tmp2(6645).BottomSheet;
+        return (
+          <BottomSheet
+            startExpanded
+            onDismiss={function onDismiss() {
+              const obj = AnalyticsUtilsDefault;
+              const obj2 = { nonce };
+              obj.track(AnalyticEvents.CLOSE_POPOUT, obj2);
+            }}
+          >
+            {null}
+          </BottomSheet>
+        );
       }
-      const obj = require("useEmojiAndSource");
-      const obj2 = { emojiId: emojiNode.id };
     };
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/messages/native/emoji/MessageEmojiActionSheet.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (emojiNode) => {
-      const cResult = c.c(2);
+      let tmp2;
+      const obj = react2;
+      const cResult = obj.c(2);
       emojiNode = emojiNode.emojiNode;
       if (cResult[0] !== emojiNode) {
+        let tmp3Result;
         if ("surrogate" in emojiNode) {
-          const obj2 = { emojiNode };
-          let tmp2Result = <closure_7 emojiNode={emojiNode} />;
+          tmp3Result = <closure_7 emojiNode={emojiNode} />;
         } else {
-          const obj3 = { emojiNode };
-          tmp2Result = <closure_8 emojiNode={emojiNode} />;
+          tmp3Result = <closure_8 emojiNode={emojiNode} />;
         }
         cResult[0] = emojiNode;
-        cResult[1] = tmp2Result;
+        cResult[1] = tmp3Result;
+        tmp2 = tmp3Result;
       } else {
-        return cResult[1];
+        tmp2 = cResult[1];
       }
+      return tmp2;
     }
   : (emojiNode) => {
+      let tmpResult;
       emojiNode = emojiNode.emojiNode;
       if ("surrogate" in emojiNode) {
-        const obj2 = { emojiNode };
-        let tmpResult = <closure_7 emojiNode={emojiNode} />;
+        tmpResult = <closure_7 emojiNode={emojiNode} />;
       } else {
-        const obj = { emojiNode };
         tmpResult = <closure_8 emojiNode={emojiNode} />;
       }
       return tmpResult;
     };
+const result = size.fileFinishedImporting("modules/messages/native/emoji/MessageEmojiActionSheet.tsx");
+
+export default tmp4;

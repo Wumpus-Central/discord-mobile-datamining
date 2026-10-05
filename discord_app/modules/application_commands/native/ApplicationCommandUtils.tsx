@@ -1,42 +1,49 @@
 // discord_app/modules/application_commands/native/ApplicationCommandUtils.tsx
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import _modDef1975 from "../../../../_runtime/metro/01975__.js";
+import AssetRegistryDefault from "../../../../_runtime/01975_AssetRegistry.js";
 import ApplicationCommandConstants from "../ApplicationCommandConstants.tsx";
 import DraftStore from "../../../stores/DraftStore.tsx";
 import ApplicationCommandTypes from "../ApplicationCommandTypes.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../../actions/UploadAttachmentActionCreators.tsx";
 import showUploadPreviewActionSheetDefault from "../../media_uploads/native/showUploadPreviewActionSheet.tsx";
-import _modDef11861 from "../../../../_runtime/metro/11861__.js";
-import _modDef11862 from "../../../../_runtime/metro/11862__.js";
+import AssetRegistryDefault2 from "../../../../_runtime/11861_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../_runtime/11862_AssetRegistry.js";
 import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
+
+let dependencyMap, importDefault;
 
 const DraftType = DraftStore.DraftType;
 const BuiltInSectionId = ApplicationCommandConstants.BuiltInSectionId;
 let result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandUtils.tsx");
 
 export const getApplicationCommandsIconSource = function getApplicationCommandsIconSource(section, stateFromStores) {
+  let application;
+  let bot;
   if (null == section) {
     return null;
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return AvatarUtilsDefault.makeSource(_modDef11861);
-    } else if (tmp10.FRECENCY === id) {
-      return AvatarUtilsDefault.makeSource(_modDef11862);
+      const obj3 = AvatarUtilsDefault;
+      return obj3.makeSource(AssetRegistryDefault2);
+    } else if (tmp11.FRECENCY === id) {
+      const obj2 = AvatarUtilsDefault;
+      return obj2.makeSource(AssetRegistryDefault3);
     } else {
+      let applicationIconSource;
       if (section.type === ApplicationCommandTypes.ApplicationCommandSectionType.APPLICATION) {
-        const obj5 = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };
-        ({ id: obj2.id, icon: obj2.icon, application } = section);
-        let bot;
+        const obj = { id: null, icon: null, bot, botIconFirst: true, guildMember: stateFromStores };
+        ({ id: obj.id, icon: obj.icon, application } = section);
+        bot = undefined;
+        const getApplicationIconSource = AvatarUtilsDefault.getApplicationIconSource;
+        AvatarUtilsDefault;
         if (application != null) {
           bot = application.bot;
         }
-        obj5.bot = bot;
-        obj5.guildMember = stateFromStores;
-        let applicationIconSource = AvatarUtilsDefault.getApplicationIconSource(obj5);
+        applicationIconSource = getApplicationIconSource(obj);
       } else {
-        applicationIconSource = _modDef1975;
+        applicationIconSource = AssetRegistryDefault;
       }
       return applicationIconSource;
     }
@@ -48,6 +55,7 @@ export const openCommandAttachmentPreview = function openCommandAttachmentPrevie
   name,
   fn,
 ) {
+  let upload;
   importDefault = channelId;
   dependencyMap = name;
   upload = UploadAttachmentStore.getUpload(channelId, name, upload.SlashCommand);
@@ -57,12 +65,13 @@ export const openCommandAttachmentPreview = function openCommandAttachmentPrevie
       disableSpoiler: true,
       onClose: fn,
       onRemove() {
-        UploadAttachmentActionCreatorsDefault.remove(closure_1, upload.id, DraftType.SlashCommand);
+        const obj = UploadAttachmentActionCreatorsDefault;
+        obj.remove(channelId, upload.id, DraftType.SlashCommand);
         let found;
         if (applicationCommandManager != null) {
           const activeCommand = applicationCommandManager.props.activeCommand;
           if (activeCommand != null) {
-            options = activeCommand.options;
+            const options = activeCommand.options;
             if (options != null) {
               found = options.find((name) => name.name === name);
             }

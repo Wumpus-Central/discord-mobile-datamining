@@ -1,69 +1,85 @@
 // discord_app/modules/auth/native/components/MFACodeInput.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../../Constants.tsx";
 import shared from "../../../../design/shared.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ClipboardUtils from "../../../../utils/ClipboardUtils.native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const AppStates = fn(1085).AppStates;
-const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4890);
+let appState, error;
+
+let c10;
+let c9;
+let hasOwnProperty;
+let metroRequire;
+let obj2;
+let unpackModuleId;
+let react = react_mod;
+({ ActivityIndicator: hasOwnProperty, View: metroRequire } = react_native);
+const AppStates = Constants.AppStates;
+({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = Fragment);
 let obj = {
   inputContainer: { marginTop: 20, flexDirection: "row", justifyContent: "center", alignSelf: "stretch" },
   input: { flex: 1, maxWidth: 336, flexDirection: "row", alignSelf: "stretch" },
   status: { flex: 1, maxHeight: 20, alignItems: "center", marginTop: 8 },
-  error: { color: nativeDefault.unsafe_rawColors.RED_400 },
+  error: obj2,
   minHeightGuard: { minHeight: 20 },
 };
+obj2 = { color: nativeDefault.unsafe_rawColors.RED_400 };
 let closure_12 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-let obj3 = { color: nativeDefault.unsafe_rawColors.RED_400 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/auth/native/components/MFACodeInput.tsx");
-
-export default noop.forwardRef(
+const forwardRef = react.forwardRef;
+const forwardRefResult = forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (appState, arg1) => {
-        const cResult = appState(error[9]).c(40);
+        let closure_4;
+        let style;
+        let tmp10;
+        let tmp = appState;
+        let tmp2 = error;
+        let obj = appState(error[9]);
+        const cResult = obj.c(40);
         appState = appState.appState;
         const handleSubmit = appState.handleSubmit;
         ({ style, error } = appState);
         const showActivityIndicator = appState.showActivityIndicator;
         const resetLoginOnClose = appState.resetLoginOnClose;
-        noop = tmp4;
+        react = tmp4;
         const tmp5 = closure_12();
         error = tmp5;
-        let obj = appState(error[9]);
-        const theme = appState(error[10]).useThemeContext().theme;
-        const tmp6 = showActivityIndicator(noop.useState(""), 2);
+        const tmpResult = tmp(tmp2[10]);
+        const theme = tmpResult.useThemeContext().theme;
+        let obj3 = react;
+        const tmp6 = showActivityIndicator(react.useState(""), 2);
         const first = tmp6[0];
-        closure_8 = tmp6[1];
-        const tmp8 = showActivityIndicator(noop.useState(null), 2);
+        let closure_8 = tmp6[1];
+        const tmp8 = showActivityIndicator(react.useState(null), 2);
         const first1 = tmp8[0];
-        closure_10 = tmp8[1];
+        let closure_10 = tmp8[1];
         if (cResult[0] !== first1) {
           const fn = function v() {
-            const string = ClipboardUtils.getString();
+            let obj = ClipboardUtils;
+            const string = obj.getString();
             string.then((result) => {
               const trimmed = result.trim();
               let tmp = trimmed !== first1;
               if (tmp) {
                 let isMatch = 6 === trimmed.length;
                 if (isMatch) {
-                  isMatch = /^\d+$/.test(trimmed);
                   const obj = /^\d+$/;
+                  isMatch = obj.test(trimmed);
                 }
                 if (!isMatch) {
                   let isMatch1 = 8 === trimmed.length;
                   if (isMatch1) {
-                    isMatch1 = /^[a-z0-9]+$/i.test(trimmed);
                     const obj2 = /^[a-z0-9]+$/i;
+                    isMatch1 = obj2.test(trimmed);
                   }
                   isMatch = isMatch1;
                 }
@@ -77,90 +93,86 @@ export default noop.forwardRef(
           };
           cResult[0] = first1;
           cResult[1] = fn;
-          let tmp10 = fn;
+          tmp10 = fn;
         } else {
           tmp10 = cResult[1];
         }
-        closure_11 = tmp10;
+        let closure_11 = tmp10;
         if (cResult[2] === first) {
           if (cResult[3] === tmp10) {
-            if (cResult[4] === tmp4) {
-              let tmp11 = cResult[5];
+            let tmp11;
+            if (cResult[4] === (undefined === resetLoginOnClose || resetLoginOnClose)) {
+              tmp11 = cResult[5];
             }
             handleSubmit(tmp2[13])(tmp11);
             if (cResult[6] === appState) {
+              let tmp14;
+              let tmp15;
               if (cResult[7] === tmp10) {
-                let tmp14 = cResult[8];
-                let tmp15 = cResult[9];
+                tmp14 = cResult[8];
+                tmp15 = cResult[9];
               }
               const effect = obj3.useEffect(tmp14, tmp15);
               if (cResult[10] === first) {
+                let tmp17;
+                let tmp18;
+                let tmp22;
                 if (cResult[11] === handleSubmit) {
-                  let tmp17 = cResult[12];
-                  let tmp18 = cResult[13];
+                  tmp17 = cResult[12];
+                  tmp18 = cResult[13];
                 }
                 const effect1 = obj3.useEffect(tmp17, tmp18);
                 class P {
                   constructor() {
-                    arr = closure_7;
-                    isMatch = 6 === closure_7.length;
+                    let isMatch = 6 === first.length;
                     if (isMatch) {
-                      obj = /^\d+$/;
-                      isMatch = obj.test(arr);
+                      const obj = /^\d+$/;
+                      isMatch = obj.test(first);
                     }
                     if (!isMatch) {
-                      num = 8;
-                      isMatch = 8 === arr.length;
+                      isMatch = 8 === first.length;
                     }
                     if (isMatch) {
-                      tmp2 = handleSubmit;
-                      tmp3 = handleSubmit(arr);
+                      handleSubmit(first);
                     }
-                    return;
                   }
                 }
                 if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
                   class W {
                     constructor() {
-                      obj = {
+                      return {
                         clear() {
                           closure_1_8("");
                         },
                       };
-                      return obj;
                     }
                   }
                   const items = [];
                   class P {
                     constructor() {
-                      arr = closure_7;
-                      isMatch = 6 === closure_7.length;
+                      let isMatch = 6 === first.length;
                       if (isMatch) {
-                        obj = /^\d+$/;
-                        isMatch = obj.test(arr);
+                        const obj = /^\d+$/;
+                        isMatch = obj.test(first);
                       }
                       if (!isMatch) {
-                        num = 8;
-                        isMatch = 8 === arr.length;
+                        isMatch = 8 === first.length;
                       }
                       if (isMatch) {
-                        tmp2 = handleSubmit;
-                        tmp3 = handleSubmit(arr);
+                        handleSubmit(first);
                       }
-                      return;
                     }
                   }
                   cResult[15] = items;
-                  let tmp22 = items;
+                  tmp22 = items;
                 } else {
                   class W {
                     constructor() {
-                      obj = {
+                      return {
                         clear() {
                           closure_1_8("");
                         },
                       };
-                      return obj;
                     }
                   }
                   tmp22 = cResult[15];
@@ -169,44 +181,29 @@ export default noop.forwardRef(
                 if (cResult[16] === error) {
                   class W {
                     constructor() {
-                      obj = {
+                      return {
                         clear() {
                           closure_1_8("");
                         },
                       };
-                      return obj;
                     }
                   }
                 }
                 class Y {
                   constructor() {
                     if (showActivityIndicator) {
-                      tmp7 = closure_0;
-                      tmp8 = closure_2;
-                      obj2 = closure_0(closure_2[10]);
-                      tmp9 = theme;
-                      tmp11 = closure_1;
-                      tmp12 = closure_2;
-                      isThemeDarkResult = obj2.isThemeDark(theme);
-                      unsafe_rawColors = closure_1(closure_2[7]).unsafe_rawColors;
-                      tmp13 = jsx;
-                      tmp14 = ActivityIndicator;
-                      obj1 = { color: null };
-                      obj1.color = isThemeDarkResult ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
-                      return jsx(ActivityIndicator, obj1);
+                      const obj2 = shared;
+                      const isThemeDarkResult = obj2.isThemeDark(theme);
+                      const unsafe_rawColors = nativeDefault.unsafe_rawColors;
+                      const obj3 = { color: isThemeDarkResult ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500 };
+                      return React4(hasOwnProperty, obj3);
                     } else {
-                      tmp2 = null;
+                      let tmp3 = null;
                       if (null != error) {
-                        tmp3 = jsx;
-                        tmp4 = closure_0;
-                        tmp5 = closure_2;
-                        obj = { style: null, variant: "text-md/medium", children: null };
-                        tmp6 = closure_5;
-                        obj.style = closure_5.error;
-                        obj.children = tmp;
-                        tmp2 = jsx(closure_0(closure_2[14]).Text, obj);
+                        const obj = { style: error.error, variant: "text-md/medium", children: tmp2 };
+                        tmp3 = React4(Text_Text.Text, obj);
                       }
-                      return tmp2;
+                      return tmp3;
                     }
                   }
                 }
@@ -218,21 +215,17 @@ export default noop.forwardRef(
               }
               class P {
                 constructor() {
-                  arr = closure_7;
-                  isMatch = 6 === closure_7.length;
+                  let isMatch = 6 === first.length;
                   if (isMatch) {
-                    obj = /^\d+$/;
-                    isMatch = obj.test(arr);
+                    const obj = /^\d+$/;
+                    isMatch = obj.test(first);
                   }
                   if (!isMatch) {
-                    num = 8;
-                    isMatch = 8 === arr.length;
+                    isMatch = 8 === first.length;
                   }
                   if (isMatch) {
-                    tmp2 = handleSubmit;
-                    tmp3 = handleSubmit(arr);
+                    handleSubmit(first);
                   }
-                  return;
                 }
               }
               const items1 = [first, handleSubmit];
@@ -257,21 +250,18 @@ export default noop.forwardRef(
           }
         }
         const fn2 = function z() {
-          closure_11();
+          const tmp = closure_11();
           return () => {
             if (first.isAuthenticated()) {
-              const string = appState(error[11]).getString();
+              const obj2 = appState(error[11]);
+              const string = obj2.getString();
               string.then((result) => {
-                let tmp2 = "" !== closure_1_7;
+                const tmp2 = "" !== closure_1_7 && tmp === result;
                 if (tmp2) {
-                  tmp2 = tmp === result;
-                }
-                if (tmp2) {
-                  appState(error[11]).copy("");
                   const obj = appState(error[11]);
+                  obj.copy("");
                 }
               });
-              const obj2 = appState(error[11]);
             } else {
               let obj = handleSubmit(error[12]);
               if (closure_1_4) {
@@ -287,9 +277,15 @@ export default noop.forwardRef(
         cResult[4] = undefined === resetLoginOnClose || resetLoginOnClose;
         cResult[5] = fn2;
         tmp11 = fn2;
-        const tmpResult = appState(error[10]);
       }
     : (appState, arg1) => {
+        let closure_4;
+        let intl;
+        let items3;
+        let resetLoginOnClose;
+        let showActivityIndicator;
+        let style;
+        let tmp17Result;
         appState = appState.appState;
         const handleSubmit = appState.handleSubmit;
         ({ error, resetLoginOnClose } = appState);
@@ -297,32 +293,36 @@ export default noop.forwardRef(
         if (resetLoginOnClose === undefined) {
           resetLoginOnClose = true;
         }
-        value = undefined;
-        noop = undefined;
+        let value;
+        react = undefined;
         let tmp = closure_12();
-        const tmp4 = value(noop.useState(""), 2);
+        let tmp2 = appState;
+        let obj = appState(resetLoginOnClose[10]);
+        const theme = obj.useThemeContext().theme;
+        const tmp4 = value(react.useState(""), 2);
         value = tmp4[0];
-        noop = tmp6;
-        const tmp7 = value(noop.useState(null), 2);
+        react = tmp6;
+        const tmp7 = value(react.useState(null), 2);
         const first1 = tmp7[0];
-        closure_6 = tmp7[1];
+        let closure_6 = tmp7[1];
         const items = [first1];
-        const callback = noop.useCallback(() => {
-          const string = ClipboardUtils.getString();
+        const callback = react.useCallback(() => {
+          let obj = ClipboardUtils;
+          const string = obj.getString();
           string.then((result) => {
             const trimmed = result.trim();
             let tmp = trimmed !== first1;
             if (tmp) {
               let isMatch = 6 === trimmed.length;
               if (isMatch) {
-                isMatch = /^\d+$/.test(trimmed);
                 const obj = /^\d+$/;
+                isMatch = obj.test(trimmed);
               }
               if (!isMatch) {
                 let isMatch1 = 8 === trimmed.length;
                 if (isMatch1) {
-                  isMatch1 = /^[a-z0-9]+$/i.test(trimmed);
                   const obj2 = /^[a-z0-9]+$/i;
+                  isMatch1 = obj2.test(trimmed);
                 }
                 isMatch = isMatch1;
               }
@@ -335,21 +335,18 @@ export default noop.forwardRef(
           });
         }, items);
         handleSubmit(resetLoginOnClose[13])(() => {
-          callback();
+          const tmp = callback();
           return () => {
             if (callback.isAuthenticated()) {
-              const string = appState(resetLoginOnClose[11]).getString();
+              const obj2 = appState(resetLoginOnClose[11]);
+              const string = obj2.getString();
               string.then((result) => {
-                let tmp2 = "" !== closure_1_3;
+                const tmp2 = "" !== closure_1_3 && tmp === result;
                 if (tmp2) {
-                  tmp2 = tmp === result;
-                }
-                if (tmp2) {
-                  appState(resetLoginOnClose[11]).copy("");
                   const obj = appState(resetLoginOnClose[11]);
+                  obj.copy("");
                 }
               });
-              const obj2 = appState(resetLoginOnClose[11]);
             } else {
               let obj = handleSubmit(resetLoginOnClose[12]);
               if (closure_1_2) {
@@ -361,17 +358,17 @@ export default noop.forwardRef(
           };
         });
         const items1 = [appState, callback];
-        const effect = noop.useEffect(() => {
+        const effect = react.useEffect(() => {
           if (appState === AppStates.ACTIVE) {
             callback();
           }
         }, items1);
         const items2 = [value, handleSubmit];
-        const effect1 = noop.useEffect(() => {
+        const effect1 = react.useEffect(() => {
           let isMatch = 6 === first.length;
           if (isMatch) {
-            isMatch = /^\d+$/.test(first);
             const obj = /^\d+$/;
+            isMatch = obj.test(first);
           }
           if (!isMatch) {
             isMatch = 8 === first.length;
@@ -380,7 +377,7 @@ export default noop.forwardRef(
             handleSubmit(first);
           }
         }, items2);
-        const imperativeHandle = noop.useImperativeHandle(
+        const imperativeHandle = react.useImperativeHandle(
           arg1,
           () => ({
             clear() {
@@ -391,53 +388,43 @@ export default noop.forwardRef(
         );
         let obj2 = {
           autoFocus: true,
-          style: null,
+          style: items3,
           textStyle: tmp.input,
           value,
           autoCapitalize: "none",
           maxLength: 8,
           textContentType: "oneTimeCode",
-          onChangeText: tmp4[1],
-          accessibilityLabel: null,
+          onChangeText: tmp6,
+          accessibilityLabel: intl.string(appState(resetLoginOnClose[15]).t.yO4lAM),
         };
-        const items3 = [tmp.inputContainer, style];
-        obj2.style = items3;
-        let obj = appState(resetLoginOnClose[10]);
-        const tmp10 = handleSubmit;
-        const intl = appState(resetLoginOnClose[15]).intl;
-        obj2.accessibilityLabel = intl.string(appState(resetLoginOnClose[15]).t.yO4lAM);
-        const items4 = [closure_9(handleSubmit(resetLoginOnClose[16]), obj2)];
-        const items5 = [tmp.status];
+        items3 = [tmp.inputContainer, style];
         const tmp18 = handleSubmit(resetLoginOnClose[16]);
-        const tmp19 = closure_6;
-        const obj3 = { style: items5, children: null };
+        intl = appState(resetLoginOnClose[15]).intl;
+        const items4 = [closure_9(tmp18, obj2)];
+        const items5 = [tmp.status];
+        const obj3 = { style: items5, children: tmp17Result };
         items5[1] = Boolean(error) && tmp.minHeightGuard;
+        Boolean(error) && tmp.minHeightGuard;
+        const tmp10 = handleSubmit;
+        const tmp19 = closure_6;
         if (showActivityIndicator) {
-          const tmp2Result = tmp2(tmp3[10]);
-          tmp10(tmp3[7]).unsafe_rawColors;
-          const isThemeDarkResult = tmp2(tmp3[10]).isThemeDark(obj.useThemeContext().theme);
-          const unsafe_rawColors = first1;
-          const obj4 = {
-            color: tmp2(tmp3[10]).isThemeDark(obj.useThemeContext().theme)
-              ? unsafe_rawColors.WHITE
-              : unsafe_rawColors.PRIMARY_500,
-          };
-          closure_9(first1, obj4);
-          const tmp23 = tmp2(tmp3[10]).isThemeDark(obj.useThemeContext().theme)
-            ? unsafe_rawColors.WHITE
-            : unsafe_rawColors.PRIMARY_500;
+          const tmp2Result = tmp2(resetLoginOnClose[10]);
+          const isThemeDarkResult = tmp2Result.isThemeDark(theme);
+          const unsafe_rawColors = tmp10(tmp3[7]).unsafe_rawColors;
+          const obj4 = { color: isThemeDarkResult ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500 };
+          tmp17Result = closure_9(first1, obj4);
         } else {
-          let tmp17Result2 = null;
+          tmp17Result = null;
           if (null != error) {
             const obj5 = { style: tmp.error, variant: "text-md/medium", children: error };
-            tmp17Result2 = closure_9(tmp2(tmp3[14]).Text, obj5);
+            tmp17Result = closure_9(tmp2(tmp3[14]).Text, obj5);
           }
-          const obj6 = { children: null };
-          obj3.children = tmp17Result2;
-          items4[1] = closure_9(tmp19, obj3);
-          obj6.children = items4;
-          return closure_11(closure_10, obj6);
         }
-        const tmp20 = Boolean(error) && tmp.minHeightGuard;
+        const obj6 = { children: items4 };
+        items4[1] = closure_9(tmp19, obj3);
+        return closure_11(closure_10, obj6);
       },
 );
+const result = size.fileFinishedImporting("modules/auth/native/components/MFACodeInput.tsx");
+
+export default forwardRefResult;

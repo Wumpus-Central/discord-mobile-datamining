@@ -1,10 +1,10 @@
 // discord_app/modules/premium/powerups/utils/orderMarketablePerksForDisplay.tsx
+import GameServerConstants from "../../../game_server/GameServerConstants.tsx";
 import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-let closure_3 = fn(4769).GAME_SERVER_POWERUP_SKU_ID;
-const size = fn(2);
+let closure_3 = GameServerConstants.GAME_SERVER_POWERUP_SKU_ID;
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/orderMarketablePerksForDisplay.tsx");
 
 export default function orderMarketablePerksForDisplay(arg0) {

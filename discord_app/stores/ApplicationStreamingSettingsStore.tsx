@@ -1,39 +1,41 @@
 // discord_app/stores/ApplicationStreamingSettingsStore.tsx
-import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import Constants from "../../discord_common/js/packages/media-engine/Constants.tsx";
 import StreamSettingsConstants from "../modules/go_live/StreamSettingsConstants.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
+let ApplicationStreamFPS;
+let ApplicationStreamResolutions;
 const ApplicationStreamPresets = StreamSettingsConstants.ApplicationStreamPresets;
 ({ ApplicationStreamResolutions, ApplicationStreamFPS } = StreamSettingsConstants);
 const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
-let preset = ApplicationStreamPresets.PRESET_VIDEO;
-let resolution = ApplicationStreamResolutions.RESOLUTION_720;
-let frameRate = ApplicationStreamFPS.FPS_30;
-const soundshareEnabled = true;
-const PersistedStore = initializeDefault.PersistedStore;
-class ApplicationStreamingSettingsStore extends PersistedStore {}
-const prototype = ApplicationStreamingSettingsStore.prototype;
-prototype["initialize"] = function initialize(preset) {
-  if (null != preset) {
-    let PRESET_VIDEO = preset.preset;
-    if (PRESET_VIDEO == null) {
-      PRESET_VIDEO = ApplicationStreamPresets.PRESET_VIDEO;
-    }
-    preset = PRESET_VIDEO;
-    ({ resolution, fps: frameRate, soundshareEnabled } = preset);
-    if (soundshareEnabled == null) {
-      soundshareEnabled = true;
+let PRESET_VIDEO = ApplicationStreamPresets.PRESET_VIDEO;
+let RESOLUTION_720 = ApplicationStreamResolutions.RESOLUTION_720;
+let FPS_30 = ApplicationStreamFPS.FPS_30;
+let soundshareEnabled = true;
+const PersistedStore = get_initializedDefault.PersistedStore;
+class ApplicationStreamingSettingsStore extends PersistedStore {
+  initialize(preset) {
+    if (null != preset) {
+      PRESET_VIDEO = preset.preset;
+      if (PRESET_VIDEO == null) {
+        PRESET_VIDEO = ApplicationStreamPresets.PRESET_VIDEO;
+      }
+      ({ resolution: RESOLUTION_720, fps: FPS_30, soundshareEnabled } = preset);
+      if (soundshareEnabled == null) {
+        soundshareEnabled = true;
+      }
     }
   }
-};
-prototype["getState"] = function getState() {
-  return { preset, resolution, fps: frameRate, soundshareEnabled };
-};
+  getState() {
+    return { preset: PRESET_VIDEO, resolution: RESOLUTION_720, fps: FPS_30, soundshareEnabled };
+  }
+}
+const prototype = ApplicationStreamingSettingsStore.prototype;
 ApplicationStreamingSettingsStore.displayName = "ApplicationStreamingSettingsStore";
 ApplicationStreamingSettingsStore.persistKey = "ApplicationStreamingSettingStore";
-const applicationStreamingSettingsStore = new ApplicationStreamingSettingsStore(DispatcherDefault, {
+const obj = {
   MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function handleSetGoLiveSource(settings) {
     settings = settings.settings;
     let context;
@@ -47,16 +49,16 @@ const applicationStreamingSettingsStore = new ApplicationStreamingSettingsStore(
       }
       if (null != qualityOptions) {
         let flag = false;
-        if (preset !== settings.qualityOptions.preset) {
-          preset = settings.qualityOptions.preset;
+        if (PRESET_VIDEO !== settings.qualityOptions.preset) {
+          PRESET_VIDEO = settings.qualityOptions.preset;
           flag = true;
         }
-        if (resolution !== settings.qualityOptions.resolution) {
-          resolution = settings.qualityOptions.resolution;
+        if (RESOLUTION_720 !== settings.qualityOptions.resolution) {
+          RESOLUTION_720 = settings.qualityOptions.resolution;
           flag = true;
         }
-        if (frameRate !== settings.qualityOptions.frameRate) {
-          frameRate = settings.qualityOptions.frameRate;
+        if (FPS_30 !== settings.qualityOptions.frameRate) {
+          FPS_30 = settings.qualityOptions.frameRate;
           flag = true;
         }
         return flag;
@@ -65,39 +67,34 @@ const applicationStreamingSettingsStore = new ApplicationStreamingSettingsStore(
     return false;
   },
   STREAM_UPDATE_SETTINGS: function handleUpdateSettings(arg0) {
+    let frameRate;
+    let preset;
+    let resolution;
     ({ preset, resolution, frameRate, soundshareEnabled } = arg0);
-    let tmp = null != preset;
-    if (tmp) {
-      tmp = preset !== preset;
-    }
     let flag = false;
+    const tmp = null != preset && preset !== PRESET_VIDEO;
     if (tmp) {
+      PRESET_VIDEO = preset;
       flag = true;
     }
-    let tmp3 = null != resolution;
+    const tmp3 = null != resolution && resolution !== RESOLUTION_720;
     if (tmp3) {
-      tmp3 = resolution !== resolution;
-    }
-    if (tmp3) {
+      RESOLUTION_720 = resolution;
       flag = true;
     }
-    let tmp5 = null != frameRate;
+    const tmp5 = null != frameRate && frameRate !== FPS_30;
     if (tmp5) {
-      tmp5 = frameRate !== frameRate;
-    }
-    if (tmp5) {
+      FPS_30 = frameRate;
       flag = true;
     }
-    let tmp7 = null != soundshareEnabled;
-    if (tmp7) {
-      tmp7 = soundshareEnabled !== soundshareEnabled;
-    }
+    const tmp7 = null != soundshareEnabled && soundshareEnabled !== soundshareEnabled;
     if (tmp7) {
       flag = true;
     }
     return flag;
   },
-});
+};
+const applicationStreamingSettingsStore = new ApplicationStreamingSettingsStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("stores/ApplicationStreamingSettingsStore.tsx");
 
 export default applicationStreamingSettingsStore;

@@ -1,17 +1,31 @@
 // discord_app/modules/game_detection/native/GameIcon.tsx
-import c from "../../../../_runtime/00576_c.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef6668 from "../../../../_runtime/metro/06668__.js";
-import _modDef6669 from "../../../../_runtime/metro/06669__.js";
-import _modDef6670 from "../../../../_runtime/metro/06670__.js";
-import _modDef6671 from "../../../../_runtime/metro/06671__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import PremiumConstants from "../../premium/PremiumConstants.tsx";
+import AssetRegistryDefault from "../../../../_runtime/06668_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/06669_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../_runtime/06670_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../../_runtime/06671_AssetRegistry.js";
+import react from "../../../../_runtime/00019_react.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const PremiumSubscriptionSKUs = fn(1379).PremiumSubscriptionSKUs;
-const jsx = fn(21).jsx;
+let obj;
+
+let c3;
+let closure_4;
+let obj4;
+let obj5;
+let size;
+let size1;
+let size2;
+let size3;
+({ Image: c3, View: closure_4 } = react_native);
+const PremiumSubscriptionSKUs = PremiumConstants.PremiumSubscriptionSKUs;
+const jsx = Fragment.jsx;
 const GameIconSizes = { SIZE_24: "size_24", SMALL: "small", NORMAL: "normal", LARGE: "large" };
 let obj2 = {
   [GameIconSizes.SIZE_24]: 24,
@@ -19,32 +33,30 @@ let obj2 = {
   [GameIconSizes.NORMAL]: 48,
   [GameIconSizes.LARGE]: 80,
 };
-const createStyles = fn(4890);
-let obj4 = {
+let createStyles = createStyles_mod;
+const obj3 = {
   gameIcon: { justifyContent: "center", alignItems: "center" },
-  size24: null,
-  small: null,
-  normal: null,
-  large: null,
-  placeholder: null,
-  entityWrapper: null,
+  size24: size,
+  small: size1,
+  normal: size2,
+  large: size3,
+  placeholder: obj4,
+  entityWrapper: obj5,
 };
-let size = { width: obj2.size_24, height: obj2.size_24, borderRadius: nativeDefault.radii.sm };
-obj4.size24 = size;
-const size1 = { width: obj2.small, height: obj2.small, borderRadius: nativeDefault.radii.sm };
-obj4.small = size1;
-const size2 = { width: obj2.normal, height: obj2.normal, borderRadius: nativeDefault.radii.lg };
-obj4.normal = size2;
-const size3 = { width: obj2.large, height: obj2.large, borderRadius: nativeDefault.radii.sm };
-obj4.large = size3;
-obj4.placeholder = { borderRadius: nativeDefault.radii.none, tintColor: nativeDefault.colors.ICON_MUTED };
-let obj5 = { borderRadius: nativeDefault.radii.none, tintColor: nativeDefault.colors.ICON_MUTED };
-obj4.entityWrapper = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
-let closure_9 = createStyles.createStyles(obj4);
-const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+size = { width: obj2.size_24, height: obj2.size_24, borderRadius: nativeDefault.radii.sm };
+createStyles = createStyles.createStyles;
+size1 = { width: obj2.small, height: obj2.small, borderRadius: nativeDefault.radii.sm };
+size2 = { width: obj2.normal, height: obj2.normal, borderRadius: nativeDefault.radii.lg };
+size3 = { width: obj2.large, height: obj2.large, borderRadius: nativeDefault.radii.sm };
+obj4 = { borderRadius: nativeDefault.radii.none, tintColor: nativeDefault.colors.ICON_MUTED };
+obj5 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
+let closure_9 = createStyles(obj3);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      obj = c;
+      let game;
+      let skuId;
+      let style;
+      obj = react2;
       const cResult = obj.c(30);
       ({ game, skuId, size, style } = arg0);
       if (undefined === size) {
@@ -54,8 +66,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === tmp4.large) {
         if (cResult[1] === tmp4.normal) {
           if (cResult[2] === tmp4.size24) {
+            let tmp5;
             if (cResult[3] === tmp4.small) {
-              let tmp5 = cResult[4];
+              tmp5 = cResult[4];
             }
             if (cResult[5] === game) {
               if (cResult[6] === size) {
@@ -63,43 +76,46 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[8] === style) {
                     if (cResult[9] === tmp4.gameIcon) {
                       if (cResult[10] === tmp4.placeholder) {
-                        if (cResult[11] === tmp6) {
-                          let tmp7 = cResult[12];
-                          let tmp8 = cResult[13];
+                        let tmp7;
+                        let tmp8;
+                        if (cResult[11] === tmp5[size]) {
+                          tmp7 = cResult[12];
+                          tmp8 = cResult[13];
                         }
                         if (cResult[21] === tmp8) {
+                          let tmp24;
                           if (cResult[22] === tmp4.entityWrapper) {
-                            let tmp25 = cResult[23];
+                            tmp24 = cResult[23];
                           }
                           if (cResult[24] === tmp7) {
-                            if (cResult[25] === tmp26) {
-                              let tmp27 = cResult[26];
+                            let tmp26;
+                            if (cResult[25] === tmp5[size]) {
+                              tmp26 = cResult[26];
                             }
-                            if (cResult[27] === tmp25) {
-                              if (cResult[28] === tmp27) {
-                                let tmp31 = cResult[29];
+                            if (cResult[27] === tmp24) {
+                              let tmp30;
+                              if (cResult[28] === tmp26) {
+                                tmp30 = cResult[29];
                               }
-                              return tmp31;
+                              return tmp30;
                             }
-                            obj2 = { style: tmp25, children: tmp27 };
-                            const tmp34 = <React4 style={tmp25}>{tmp27}</React4>;
-                            cResult[27] = tmp25;
-                            cResult[28] = tmp27;
-                            cResult[29] = tmp34;
-                            tmp31 = tmp34;
+                            const tmp33 = <React3 style={tmp24}>{tmp26}</React3>;
+                            cResult[27] = tmp24;
+                            cResult[28] = tmp26;
+                            cResult[29] = tmp33;
+                            tmp30 = tmp33;
                           }
-                          const obj3 = { style: tmp5[size], source: tmp7 };
-                          const tmp30 = <React3 style={tmp5[size]} source={tmp7} />;
+                          const tmp29 = <_false style={tmp5[size]} source={tmp7} />;
                           cResult[24] = tmp7;
                           cResult[25] = tmp5[size];
-                          cResult[26] = tmp30;
-                          tmp27 = tmp30;
+                          cResult[26] = tmp29;
+                          tmp26 = tmp29;
                         }
                         const items = [tmp8, tmp4.entityWrapper];
                         cResult[21] = tmp8;
                         cResult[22] = tmp4.entityWrapper;
                         cResult[23] = items;
-                        tmp25 = items;
+                        tmp24 = items;
                       }
                     }
                   }
@@ -107,58 +123,73 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const items1 = [tmp4.gameIcon, tmp5[size], style];
-            if (null == skuId) {
-              let tmp17;
-              if (null != game) {
-                if (null == undefined) {
-                  if (cResult[16] === game) {
-                    if (cResult[17] === size) {
-                      let tmp18 = cResult[18];
-                    }
-                    if (null != tmp18) {
-                      if (cResult[19] !== tmp18) {
-                        const obj4 = { uri: tmp18 };
-                        cResult[19] = tmp18;
-                        cResult[20] = obj4;
-                      }
-                    }
-                  }
-                  const iconURL = game.getIconURL(obj2[size]);
-                  cResult[16] = game;
-                  cResult[17] = size;
-                  cResult[18] = iconURL;
-                  tmp18 = iconURL;
-                }
-              }
-              if (null == tmp17) {
-                tmp17 = _modDef6671;
-                items1.push(tmp4.placeholder);
-              }
-              cResult[5] = game;
-              cResult[6] = size;
-              cResult[7] = skuId;
-              cResult[8] = style;
-              cResult[9] = tmp4.gameIcon;
-              cResult[10] = tmp4.placeholder;
-              cResult[11] = tmp6;
-              cResult[12] = tmp17;
-              cResult[13] = items1;
-              tmp7 = tmp17;
-              tmp8 = items1;
-            } else {
-              if (PremiumSubscriptionSKUs.TIER_0 === skuId) {
-                let tmp11 = _modDef6668;
-                cResult[14] = skuId;
-                cResult[15] = tmp11;
-              } else if (PremiumSubscriptionSKUs.TIER_1 !== skuId) {
-                if (PremiumSubscriptionSKUs.TIER_2 === skuId) {
-                  tmp11 = _modDef6670;
+            let tmp10;
+            if (null != skuId) {
+              let tmp11;
+              if (cResult[14] !== skuId) {
+                let tmp13;
+                if (PremiumSubscriptionSKUs.TIER_0 === skuId) {
+                  tmp13 = AssetRegistryDefault;
+                } else if (PremiumSubscriptionSKUs.TIER_1 === skuId) {
+                  tmp13 = AssetRegistryDefault2;
+                } else if (PremiumSubscriptionSKUs.TIER_2 === skuId) {
+                  tmp13 = AssetRegistryDefault3;
                 } else {
-                  tmp11 = null;
+                  tmp13 = null;
                 }
+                cResult[14] = skuId;
+                cResult[15] = tmp13;
+                tmp11 = tmp13;
+              } else {
+                tmp11 = cResult[15];
               }
-              tmp11 = _modDef6669;
+              tmp10 = tmp11;
             }
+            let tmp17 = tmp10;
+            if (null != game) {
+              tmp17 = tmp10;
+              if (null == tmp10) {
+                if (cResult[16] === game) {
+                  let tmp18;
+                  if (cResult[17] === size) {
+                    tmp18 = cResult[18];
+                  }
+                  tmp17 = tmp10;
+                  if (null != tmp18) {
+                    let tmp21;
+                    if (cResult[19] !== tmp18) {
+                      const obj4 = { uri: tmp18 };
+                      cResult[19] = tmp18;
+                      cResult[20] = obj4;
+                      tmp21 = obj4;
+                    } else {
+                      tmp21 = cResult[20];
+                    }
+                    tmp17 = tmp21;
+                  }
+                }
+                const iconURL = game.getIconURL(obj2[size]);
+                cResult[16] = game;
+                cResult[17] = size;
+                cResult[18] = iconURL;
+                tmp18 = iconURL;
+              }
+            }
+            if (null == tmp17) {
+              tmp17 = AssetRegistryDefault4;
+              items1.push(tmp4.placeholder);
+            }
+            cResult[5] = game;
+            cResult[6] = size;
+            cResult[7] = skuId;
+            cResult[8] = style;
+            cResult[9] = tmp4.gameIcon;
+            cResult[10] = tmp4.placeholder;
+            cResult[11] = tmp5[size];
+            cResult[12] = tmp17;
+            cResult[13] = items1;
+            tmp7 = tmp17;
+            tmp8 = items1;
           }
         }
       }
@@ -176,10 +207,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = obj5;
     }
   : (style) => {
+      let game;
+      let skuId;
       ({ game, skuId, size } = style);
       if (size === undefined) {
         size = obj.NORMAL;
       }
+      style = style.style;
       const tmp2 = closure_9();
       obj = {
         [closure_1_7.NORMAL]: tmp2.normal,
@@ -187,36 +221,44 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         [closure_1_7.SIZE_24]: tmp2.size24,
         [closure_1_7.LARGE]: tmp2.large,
       };
-      const items = [tmp2.gameIcon, obj[size], style.style];
-      if (null == skuId) {
-        let tmp12;
-        if (null != game) {
-          if (null == undefined) {
-            const iconURL = game.getIconURL(obj2[size]);
-            if (null != iconURL) {
-              obj2 = { uri: iconURL };
-              tmp12 = obj2;
-            }
+      const items = [tmp2.gameIcon, obj[size], style];
+      let tmp3;
+      if (null != skuId) {
+        let tmp5;
+        if (PremiumSubscriptionSKUs.TIER_0 === skuId) {
+          tmp5 = AssetRegistryDefault;
+        } else if (PremiumSubscriptionSKUs.TIER_1 === skuId) {
+          tmp5 = AssetRegistryDefault2;
+        } else if (PremiumSubscriptionSKUs.TIER_2 === skuId) {
+          tmp5 = AssetRegistryDefault3;
+        } else {
+          tmp5 = null;
+        }
+        tmp3 = tmp5;
+      }
+      let tmp12 = tmp3;
+      if (null != game) {
+        tmp12 = tmp3;
+        if (null == tmp3) {
+          const iconURL = game.getIconURL(obj2[size]);
+          tmp12 = tmp3;
+          if (null != iconURL) {
+            obj2 = { uri: iconURL };
+            tmp12 = obj2;
           }
         }
-        if (null == tmp12) {
-          tmp12 = _modDef6671;
-          items.push(tmp2.placeholder);
-        }
-        const obj3 = { style: null, children: null };
-        const items1 = [items, tmp2.entityWrapper];
-        obj3.style = items1;
-        const obj4 = { style: obj[size], source: tmp12 };
-        obj3.children = <React3 style={obj[size]} source={tmp12} />;
-        return <React4 style={null}>{null}</React4>;
-      } else if (PremiumSubscriptionSKUs.TIER_0 === skuId) {
-      } else if (PremiumSubscriptionSKUs.TIER_1 !== skuId) {
       }
+      if (null == tmp12) {
+        tmp12 = AssetRegistryDefault4;
+        items.push(tmp2.placeholder);
+      }
+      const items1 = [items, tmp2.entityWrapper];
+      return <React3 style={items1}>{null}</React3>;
     };
-tmp4.Sizes = GameIconSizes;
-size = fn(2);
+tmp5.Sizes = GameIconSizes;
+size = size_mod;
 const result = size.fileFinishedImporting("modules/game_detection/native/GameIcon.tsx");
 
-export default tmp4;
+export default tmp5;
 export { GameIconSizes };
 export const GameIconImageSize = obj2;

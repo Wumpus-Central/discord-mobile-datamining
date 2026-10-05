@@ -1,159 +1,165 @@
 // discord_app/modules/payments/native/utils/createOrReuseGiftOrder.tsx
 import LoggerDefault from "../../../debug/Logger.tsx";
+import Constants from "../../../../../discord_common/js/shared/Constants.tsx";
+import PremiumConstants from "../../../premium/PremiumConstants.tsx";
 import _modDef4461 from "../../../../../_runtime/metro/04461__.js";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import PaymentConstants from "../../PaymentConstants.tsx";
+import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import react from "../../../../../_runtime/00019_react.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const ItemPurchaseType = fn(4869).ItemPurchaseType;
-const SubscriptionPlanInfo = fn(1379).SubscriptionPlanInfo;
-const PaymentGateways = fn(1096).PaymentGateways;
+let c5, c6;
+
+const ItemPurchaseType = PaymentConstants.ItemPurchaseType;
+const SubscriptionPlanInfo = PremiumConstants.SubscriptionPlanInfo;
+const PaymentGateways = Constants.PaymentGateways;
 let closure_8 = new LoggerDefault("createOrReuseGiftOrder");
-const size = fn(2);
+new LoggerDefault("createOrReuseGiftOrder");
 let result = size.fileFinishedImporting("modules/payments/native/utils/createOrReuseGiftOrder.tsx");
 
 export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
-  closure_0 = asyncGeneratorStep(async (_location) => {
+  const useCallback = react.useCallback;
+  let closure_0 = _asyncToGenerator(async function (arg0) {
+    let APPLE;
+    let c0;
+    let c1;
+    let c2;
+    let items;
+    let obj12;
+    let obj7;
+    let subtractResult;
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (_location === 1) {
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
         throw value;
-      } else if (_location === 2) {
+      } else if (arg0 === 2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
         return { value: "IconComponent", done: null };
       }
     } else {
+      let c4;
+      let skuId;
       try {
+        let subscriptionPlanId;
+        let recipientUserId;
+        let external_product_id;
         c6 = 2;
         if (0 === c5) {
-          if (_location === 1) {
+          if (arg0 === 1) {
             c6 = 3;
             throw value;
-          } else if (_location === 2) {
+          } else if (arg0 === 2) {
             c6 = 3;
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_2 = tmp3;
-            closure_1 = tmp7;
-            closure_129_0 = undefined;
-            closure_129_1 = undefined;
-            closure_129_2 = undefined;
-            ({ planId: closure_129_0, recipientUserId: closure_129_1, productId: closure_129_2 } = _location);
-            closure_129_3 = undefined;
-            let skuId;
+            let closure_2 = tmp;
+            let closure_1 = tmp4;
+            subscriptionPlanId = undefined;
+            recipientUserId = undefined;
+            external_product_id = undefined;
+            ({ planId: c0, recipientUserId: c1, productId: c2 } = location);
+            skuId = undefined;
             c5 = 1;
             c6 = 1;
             return { value: "Set", done: true };
           }
-        } else if (1 === tmp7) {
-          if (_location === 1) {
+        } else {
+          let error;
+          if (1 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              skuId = SubscriptionPlanInfo[subscriptionPlanId];
+              if (null == skuId) {
+                const _Error = Error;
+                const _HermesInternal2 = HermesInternal;
+                const self = this;
+                const self2 = this;
+                error = new Error("Invalid plan id: " + subscriptionPlanId);
+                throw error;
+              } else {
+                skuId = skuId.skuId;
+                c4 = 1;
+                const obj5 = {
+                  skuId,
+                  paymentGateway: APPLE,
+                  recipientUserId,
+                  purchaseType: constants.ONE_TIME,
+                  isGift: true,
+                  createdAfter: subtractResult.toISOString(),
+                  subscriptionPlanId,
+                  externalGatewayFacet: obj7,
+                };
+                const getOrCreateOrder = location(dependencyMap[6]).getOrCreateOrder;
+                const tmp55 = location(dependencyMap[6]);
+                const obj16 = location(dependencyMap[7]);
+                if (obj16.isAndroid()) {
+                  APPLE = constants.GOOGLE;
+                } else {
+                  APPLE = constants.APPLE;
+                }
+                const obj6 = _modDef4461();
+                const utcResult = obj6.utc();
+                subtractResult = utcResult.subtract(location(dependencyMap[6]).DRAFT_ORDER_LOOKBACK_DAYS, "days");
+                obj7 = { line_items: items };
+                const obj8 = { external_product_id };
+                items = [obj8];
+                c5 = 3;
+                c6 = 1;
+                const obj9 = { value: getOrCreateOrder(obj5), done: false };
+                return obj9;
+              }
+            }
+          } else if (2 === c5) {
+            c4 = 0;
+            error = skuId;
+            const obj10 = { error, skuId, location };
+            logger.error("Failed to create order for gift purchase", obj10);
+            const obj11 = { tags: obj12 };
+            obj12 = { skuId, source: "" + location + "_createOrder" };
+            const _HermesInternal = HermesInternal;
+            const captureBillingException = location(dependencyMap[9]).captureBillingException;
+            const tmp16 = location(dependencyMap[9]);
+            const result = captureBillingException(error, obj11);
+            throw error;
+          } else if (arg0 === 1) {
             c6 = 3;
             throw value;
-          } else if (_location === 2) {
+          } else if (arg0 === 2) {
+            c4 = 0;
             c6 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj13 = { value, done: true };
+            return obj13;
           } else {
-            closure_129_3 = SubscriptionPlanInfo[closure_129_0];
-            if (null == closure_129_3) {
-              const _Error = Error;
-              const _HermesInternal2 = HermesInternal;
-              const error = new Error("Invalid plan id: " + closure_129_0);
-              throw error;
-            } else {
-              skuId = closure_129_3.skuId;
-              c4 = 1;
-              let getOrCreateOrder = _location(6935).getOrCreateOrder;
-              const obj6 = {
-                skuId,
-                paymentGateway: null,
-                recipientUserId: null,
-                purchaseType: null,
-                isGift: true,
-                createdAfter: null,
-                subscriptionPlanId: null,
-                externalGatewayFacet: null,
-              };
-              const tmp60 = _location(6935);
-              let obj8 = PaymentGateways;
-              if (obj16.isAndroid()) {
-                let APPLE = obj8.GOOGLE;
-              } else {
-                APPLE = obj8.APPLE;
-              }
-              obj6.paymentGateway = APPLE;
-              obj6.recipientUserId = closure_129_1;
-              obj6.purchaseType = constants.ONE_TIME;
-              obj16 = _location(1369);
-              const obj7 = _modDef4461();
-              const utcResult = _modDef4461().utc();
-              obj6.createdAfter = _modDef4461()
-                .utc()
-                .subtract(_location(6935).DRAFT_ORDER_LOOKBACK_DAYS, "days")
-                .toISOString();
-              obj6.subscriptionPlanId = closure_129_0;
-              obj8 = { line_items: null };
-              const obj9 = { external_product_id: closure_129_2 };
-              const items = [obj9];
-              obj8.line_items = items;
-              obj6.externalGatewayFacet = obj8;
-              getOrCreateOrder = getOrCreateOrder(obj6);
-              c5 = 3;
-              c6 = 1;
-              const subtractResult = _modDef4461().utc().subtract(_location(6935).DRAFT_ORDER_LOOKBACK_DAYS, "days");
-            }
+            c4 = 0;
+            c6 = 3;
+            const obj = { value, done: true };
+            return obj;
           }
-        } else if (2 === tmp7) {
-          c4 = 0;
-          closure_129_5 = closure_3;
-          const obj10 = { error: closure_129_5, skuId, location: _location };
-          logger.error("Failed to create order for gift purchase", obj10);
-          const obj11 = { tags: null };
-          const obj12 = { skuId, source: null };
-          const _HermesInternal = HermesInternal;
-          obj12.source = "" + _location + "_createOrder";
-          obj11.tags = obj12;
-          const result = _location(4543).captureBillingException(closure_129_5, obj11);
-          throw closure_129_5;
-        } else if (_location === 1) {
-          c6 = 3;
-          throw value;
-        } else if (_location === 2) {
-          c4 = 0;
-          c6 = 3;
-          const obj13 = { value, done: true };
-          return obj13;
-        } else {
-          c4 = 0;
-          c6 = 3;
-          const obj = { value, done: true };
-          return obj;
         }
-      } catch (tmp40) {
-        closure_3 = tmp40;
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp40;
+      } catch (tmp36) {
+        skuId = tmp36;
+        if (0 === c4) {
+          c6 = 3;
+          throw tmp36;
         } else {
-          c5 = tmp;
+          c5 = 2;
         }
       }
     }
   });
   let items = [GiftPurchaseButton];
-  return noop.useCallback(function () {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+  return useCallback(function () {
+    return closure_0(...arguments);
   }, items);
 };

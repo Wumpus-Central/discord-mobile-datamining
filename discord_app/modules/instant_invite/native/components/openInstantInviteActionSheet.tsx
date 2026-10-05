@@ -1,25 +1,27 @@
 // discord_app/modules/instant_invite/native/components/openInstantInviteActionSheet.tsx
 import discord_common_AnalyticsUtils from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/instant_invite/native/components/openInstantInviteActionSheet.tsx");
 
 export default function openInstantInviteActionSheet(invite_channel_id) {
-  const obj = ActionSheetActionCreatorsDefault;
+  const openLazy = ActionSheetActionCreatorsDefault.openLazy;
+  ActionSheetActionCreatorsDefault;
   let id = invite_channel_id.vanityURLCode;
+  const tmp4 = asyncRequire(9489, dependencyMap.paths);
   if (id == null) {
     id = invite_channel_id.channel.id;
   }
   const combined = "InstantInviteActionSheet-" + id;
-  const obj2 = {};
-  const merged = Object.assign(invite_channel_id);
-  obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.GUILD_INVITE;
-  obj2.impressionProperties = {
-    invite_channel_id: invite_channel_id.channel.id,
-    invite_guild_id: invite_channel_id.channel.guild_id,
+  const obj = {
+    impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_INVITE,
+    impressionProperties: {
+      invite_channel_id: invite_channel_id.channel.id,
+      invite_guild_id: invite_channel_id.channel.guild_id,
+    },
   };
-  obj.openLazy(asyncRequireImpl(9489, dependencyMap.paths), combined, obj2, invite_channel_id.stackingBehavior);
-  const tmp3 = asyncRequireImpl(9489, dependencyMap.paths);
+  const merged = Object.assign(invite_channel_id);
+  openLazy(tmp4, combined, obj, invite_channel_id.stackingBehavior);
 }

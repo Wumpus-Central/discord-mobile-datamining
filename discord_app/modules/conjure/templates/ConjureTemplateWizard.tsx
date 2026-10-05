@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/templates/ConjureTemplateWizard.tsx
-import util from "../../../intl/index.native.tsx";
+import intl3 from "../../../intl/index.native.tsx";
 import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
 import ConjureUtils from "../shared/ConjureUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -7,18 +7,21 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/conjure/templates/ConjureTemplateWizard.tsx");
 
 export const conjureWizardNeedsServerStep = function conjureWizardNeedsServerStep(guildId, stateFromStores) {
-  closure_0 = guildId;
-  return !stateFromStores.some((id) => id.id === closure_0);
+  let closure_0 = guildId;
+  return !stateFromStores.some((id) => id.id === guildId);
 };
-export const conjureTemplateWizardSteps = function conjureTemplateWizardSteps(result1, arg1) {
-  const arr = Array.from({ length: Math.max(1, result1.length) }, (arg0, index) => ({ kind: "question", index }));
-  if (arg1) {
+export const conjureTemplateWizardSteps = function conjureTemplateWizardSteps(result1, first1) {
+  let items1;
+  const obj = { length: Math.max(1, result1.length) };
+  const arr = Array.from(obj, (arg0, index) => ({ kind: "question", index }));
+  const tmp3 = first1;
+  if (tmp3) {
     const items = ["about", "server"];
-    HermesBuiltin.arraySpread(arr, 2);
-    let items1 = items;
+    HermesBuiltin.arraySpread(items, arr, 2);
+    items1 = items;
   } else {
     items1 = ["about"];
-    HermesBuiltin.arraySpread(arr, 1);
+    HermesBuiltin.arraySpread(items1, arr, 1);
   }
   return items1;
 };
@@ -38,15 +41,21 @@ export const canLeaveConjureWizardQuestion = function canLeaveConjureWizardQuest
   return tmp;
 };
 export const conjureTemplateStartMessage = function conjureTemplateStartMessage(name) {
-  const intl = util.intl;
-  return intl.formatToPlainString(_modDef3723["/qSx7+"], { templateName: name, locale: util.intl.currentLocale });
+  const intl = intl3.intl;
+  const formatToPlainString = intl.formatToPlainString;
+  const obj = { templateName: name, locale: intl3.intl.currentLocale };
+  const prop = _modDef3723["/qSx7+"];
+  return formatToPlainString(prop, obj);
 };
 export const conjureTemplateWizardGuilds = function conjureTemplateWizardGuilds(
   guildsArray,
   VibegrationsTemplateWizardSheet,
 ) {
-  closure_0 = VibegrationsTemplateWizardSheet;
-  const found = guildsArray.filter((item) => ConjureUtils.canStartConjureProject(item, closure_0));
+  let closure_0 = VibegrationsTemplateWizardSheet;
+  const found = guildsArray.filter((item) => {
+    const obj = ConjureUtils;
+    return obj.canStartConjureProject(item, VibegrationsTemplateWizardSheet);
+  });
   return found.sort((name, name2) => {
     name = name.name;
     return name.localeCompare(name2.name);
@@ -70,41 +79,45 @@ export const latestConjureIntake = function latestConjureIntake(messages) {
   return null;
 };
 export const conjureWizardIntro = function conjureWizardIntro(stateFromStores1) {
+  let points;
   let tmp = null;
   if (null != stateFromStores1) {
-    let obj = { lead: stateFromStores1.intro.lead, points: null };
-    const points = stateFromStores1.intro.points;
-    obj.points = points.map((title) => {
-      const obj = { title: title.title };
-      if (null != title.subtext) {
-        const obj2 = { subtext: title.subtext };
-        let obj3 = obj2;
-      } else {
-        obj3 = {};
-      }
-      const merged = Object.assign(obj3);
-      let str = title.icon;
-      if (str == null) {
-        str = "shield";
-      }
-      obj.icon = str;
-      return obj;
-    });
+    let obj = {
+      lead: stateFromStores1.intro.lead,
+      points: points.map((title) => {
+        let obj3;
+        let str;
+        const obj = { title: title.title, icon: str };
+        if (null != title.subtext) {
+          obj3 = { subtext: title.subtext };
+          const obj2 = { subtext: title.subtext };
+        } else {
+          obj3 = {};
+        }
+        const merged = Object.assign(obj3);
+        str = title.icon;
+        if (str == null) {
+          str = "shield";
+        }
+        return obj;
+      }),
+    };
+    points = stateFromStores1.intro.points;
     tmp = obj;
   }
   return tmp;
 };
 export const conjureWizardServerCopy = function conjureWizardServerCopy(stateFromStores1) {
+  let intl;
+  let intl2;
   let server;
   if (stateFromStores1 != null) {
     server = stateFromStores1.server;
   }
   if (server == null) {
-    const obj = { title: null, hint: null };
-    const intl = util.intl;
-    obj.title = intl.string(_modDef3723.vcxYIA);
-    const intl2 = util.intl;
-    obj.hint = intl2.string(_modDef3723.auUHPZ);
+    const obj = { title: intl.string(_modDef3723.vcxYIA), hint: intl2.string(_modDef3723.auUHPZ) };
+    intl = intl3.intl;
+    intl2 = intl3.intl;
     server = obj;
   }
   return server;
@@ -119,25 +132,24 @@ export const conjureWizardQuestions = function conjureWizardQuestions(stateFromS
   }
   return questions;
 };
-export const isConjureWizardComplete = function isConjureWizardComplete(result1, first2) {
-  closure_0 = first2;
-  return (
+export const isConjureWizardComplete = function isConjureWizardComplete(result1, first3) {
+  let tmp =
     result1.length > 0 &&
     result1.every((optional, index) => {
       let tmp = true === optional.optional;
       if (!tmp) {
-        let str = closure_0[index];
+        let str = first3[index];
         if (str == null) {
           str = "";
         }
         tmp = "" !== str.trim();
       }
       return tmp;
-    })
-  );
+    });
+  return tmp;
 };
 export const formatConjureWizardAnswers = function formatConjureWizardAnswers(arr, arg1) {
-  closure_0 = arg1;
+  let closure_0 = arg1;
   const items = [];
   const item = arr.forEach((optional, index) => {
     let str = closure_0[index];
@@ -145,10 +157,7 @@ export const formatConjureWizardAnswers = function formatConjureWizardAnswers(ar
       str = "";
     }
     const trimmed = str.trim();
-    let tmp = "" === trimmed;
-    if (tmp) {
-      tmp = true === optional.optional;
-    }
+    const tmp = "" === trimmed && true === optional.optional;
     if (!tmp) {
       const push = items.push;
       const sum = index + 1;

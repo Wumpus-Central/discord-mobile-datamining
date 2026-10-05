@@ -1,19 +1,24 @@
 // discord_app/modules/profile_customization/native/EditButton.tsx
-import c from "../../../../_runtime/00576_c.js";
-import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef7625 from "../../../../_runtime/metro/07625__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import IconButton2 from "../../../design/components/Button/native/IconButton.native.tsx";
+import AssetRegistryDefault from "../../../../_runtime/07625_AssetRegistry.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/profile_customization/native/EditButton.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const View = react_native.View;
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(8);
+      let accessibilityLabel;
+      let disabled;
+      let onPress;
+      let style;
+      let variant;
+      const obj = react2;
+      const cResult = obj.c(8);
       ({ onPress, accessibilityLabel, style, variant, disabled } = arg0);
       let str = "primary-overlay";
       if (undefined !== variant) {
@@ -22,16 +27,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === accessibilityLabel) {
         if (cResult[1] === disabled) {
           if (cResult[2] === onPress) {
+            let tmp4;
             if (cResult[3] === str) {
-              let tmp4 = cResult[4];
+              tmp4 = cResult[4];
             }
             if (cResult[5] === style) {
+              let tmp6;
               if (cResult[6] === tmp4) {
-                let tmp6 = cResult[7];
+                tmp6 = cResult[7];
               }
               return tmp6;
             }
-            const obj2 = { style, children: tmp4 };
             const tmp9 = <View style={style}>{tmp4}</View>;
             cResult[5] = style;
             cResult[6] = tmp4;
@@ -40,49 +46,38 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp5 = jsx(IconButton.IconButton, {
-        icon: _modDef7625,
-        variant: str,
-        size: "sm",
-        onPress,
-        accessibilityLabel,
-        disabled,
-      });
+      const IconButton = IconButton2.IconButton;
+      const tmp5 = (
+        <IconButton
+          icon={AssetRegistryDefault}
+          variant={str}
+          size="sm"
+          onPress={onPress}
+          accessibilityLabel={accessibilityLabel}
+          disabled={disabled}
+        />
+      );
       cResult[0] = accessibilityLabel;
       cResult[1] = disabled;
       cResult[2] = onPress;
       cResult[3] = str;
       cResult[4] = tmp5;
       tmp4 = tmp5;
-      const obj3 = { icon: _modDef7625, variant: str, size: "sm", onPress, accessibilityLabel, disabled };
     }
-  : (disabled) => {
-      let str = disabled.variant;
-      ({ onPress, accessibilityLabel, style } = disabled);
+  : (variant) => {
+      let accessibilityLabel;
+      let onPress;
+      let style;
+      let str = variant.variant;
+      ({ onPress, accessibilityLabel, style } = variant);
       if (str === undefined) {
         str = "primary-overlay";
       }
-      const obj = {
-        style,
-        children: jsx(IconButton.IconButton, {
-          icon: _modDef7625,
-          variant: str,
-          size: "sm",
-          onPress,
-          accessibilityLabel,
-          disabled: disabled.disabled,
-        }),
-      };
-      return (
-        <View style={style}>
-          {jsx(IconButton.IconButton, {
-            icon: _modDef7625,
-            variant: str,
-            size: "sm",
-            onPress,
-            accessibilityLabel,
-            disabled: disabled.disabled,
-          })}
-        </View>
-      );
+      const disabled = variant.disabled;
+      ({ icon: AssetRegistryDefault, variant: str, size: "sm", onPress, accessibilityLabel, disabled });
+      const IconButton = IconButton2.IconButton;
+      return <View style={style}>{null}</View>;
     };
+const result = size.fileFinishedImporting("modules/profile_customization/native/EditButton.tsx");
+
+export default tmp3;

@@ -8,5 +8,6 @@ const set = new Set(items);
 const result = size.fileFinishedImporting("modules/connections/shouldWarnConnectedAccountTwoWay.tsx");
 
 export default function shouldWarnConnectedAccountTwoWay(type) {
-  return set.has(type.type) && type.twoWayLink;
+  const tmp = set.has(type.type) && type.twoWayLink;
+  return tmp;
 }

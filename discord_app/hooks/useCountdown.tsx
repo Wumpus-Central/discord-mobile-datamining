@@ -1,20 +1,24 @@
 // discord_app/hooks/useCountdown.tsx
-import _mod19 from "../../_runtime/metro/00019__.js";
+import react from "../../_runtime/00019_react.js";
 import DateUtils from "../utils/DateUtils.tsx";
 import useIntervalDefault from "useInterval.tsx";
 import ReactCompilerGating from "../modules/react_compiler/ReactCompilerGating.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap, importDefault;
 
-_mod19.useCallback;
-const result = size.fileFinishedImporting("hooks/useCountdown.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+react.useCallback;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (expiresAt, arg1, arg2, arg3) => {
+      let closure_1;
+      let closure_2;
+      let tmp5;
       _require = expiresAt;
       importDefault = arg2;
-      const cResult = require("c").c(7);
+      let tmp = _require;
+      let obj = require("react");
+      const cResult = obj.c(7);
       let num = 1000;
       if (undefined !== arg1) {
         num = arg1;
@@ -22,40 +26,43 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp4;
       if (cResult[0] !== expiresAt) {
         const _Date = Date;
-        const diffAsUnitsResult = tmp(4552).diffAsUnits(Date.now(), expiresAt);
+        const tmpResult = tmp(4552);
+        const diffAsUnitsResult = tmpResult.diffAsUnits(Date.now(), expiresAt);
         cResult[0] = expiresAt;
         cResult[1] = diffAsUnitsResult;
-        let tmp5 = diffAsUnitsResult;
-        const tmpResult = tmp(4552);
+        tmp5 = diffAsUnitsResult;
       } else {
         tmp5 = cResult[1];
       }
-      let obj = require("c");
-      const forceUpdate = require("areHookInputsEqual").useForceUpdate();
+      const tmpResult2 = tmp(6949);
+      const forceUpdate = tmpResult2.useForceUpdate();
       if (cResult[2] === expiresAt) {
-        if (cResult[3] === tmp4) {
+        if (cResult[3] === (undefined !== arg3 && arg3)) {
           if (cResult[4] === forceUpdate) {
+            let tmp9;
             if (cResult[5] === arg2) {
-              let tmp9 = cResult[6];
+              tmp9 = cResult[6];
             }
             let tmp12 = null;
-            if (!tmp4) {
+            const tmp11 = useIntervalDefault;
+            if (!(undefined !== arg3 && arg3)) {
               tmp12 = num;
             }
-            useIntervalDefault(tmp9, tmp12);
+            tmp11(tmp9, tmp12);
             return tmp5;
           }
         }
       }
       const fn = function v() {
-        const time = DateUtils.diffAsUnits(Date.now(), closure_0);
+        const obj = DateUtils;
+        const time = obj.diffAsUnits(Date.now(), expiresAt);
+        const tmp = (0 === time.days && 0 === time.hours && 0 === time.minutes && 0 === time.seconds) || closure_2;
         if (!tmp) {
           forceUpdate();
           if (closure_1 != null) {
             closure_1();
           }
         }
-        tmp = (0 === time.days && 0 === time.hours && 0 === time.minutes && 0 === time.seconds) || closure_2;
       };
       cResult[2] = expiresAt;
       cResult[3] = undefined !== arg3 && arg3;
@@ -65,6 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = fn;
     }
   : (expiresAt) => {
+      let closure_1;
       _require = expiresAt;
       let num = arg1;
       if (arg1 === undefined) {
@@ -76,24 +84,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flag = false;
       }
       let obj = require("DateUtils");
-      const diffAsUnitsResult = require("DateUtils").diffAsUnits(Date.now(), expiresAt);
-      const forceUpdate = require("areHookInputsEqual").useForceUpdate();
+      const diffAsUnitsResult = obj.diffAsUnits(Date.now(), expiresAt);
+      const obj2 = require("../../_runtime/metro/06949__.js");
+      const forceUpdate = obj2.useForceUpdate();
       const items = [expiresAt, flag, forceUpdate, arg2];
-      const obj2 = require("areHookInputsEqual");
       let tmp5 = null;
       const tmp3 = forceUpdate(() => {
-        const time = DateUtils.diffAsUnits(Date.now(), closure_0);
+        const obj = DateUtils;
+        const time = obj.diffAsUnits(Date.now(), expiresAt);
+        const tmp = (0 === time.days && 0 === time.hours && 0 === time.minutes && 0 === time.seconds) || flag;
         if (!tmp) {
           forceUpdate();
           if (closure_1 != null) {
             closure_1();
           }
         }
-        tmp = (0 === time.days && 0 === time.hours && 0 === time.minutes && 0 === time.seconds) || flag;
       }, items);
+      const tmp4 = require("useInterval");
       if (!flag) {
         tmp5 = num;
       }
-      require("useInterval")(tmp3, tmp5);
+      tmp4(tmp3, tmp5);
       return diffAsUnitsResult;
     };
+const result = size.fileFinishedImporting("hooks/useCountdown.tsx");
+
+export default tmp2;

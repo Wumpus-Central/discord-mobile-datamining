@@ -1,14 +1,14 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx
-import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
+import react_native from "../../../../../../../_runtime/00017_react-native.js";
 import Constants from "../../../../../../Constants.tsx";
-import util from "../../../../../../intl/index.native.tsx";
+import intl5 from "../../../../../../intl/index.native.tsx";
 import _modDef4461 from "../../../../../../../_runtime/metro/04461__.js";
-import _modDef4804 from "../../../../../../../_runtime/metro/04804__.js";
+import AssetRegistryDefault from "../../../../../../../_runtime/04804_AssetRegistry.js";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
 import SafetyHubConstants from "../../../../../safety_hub/SafetyHubConstants.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
-const Image = _mod17.Image;
+const Image = react_native.Image;
 const MessageEmbedTypes = Constants.MessageEmbedTypes;
 const SafetyHubPolicyNoticeKeys = SafetyHubConstants.SafetyHubPolicyNoticeKeys;
 const result = size.fileFinishedImporting(
@@ -16,6 +16,15 @@ const result = size.fileFinishedImporting(
 );
 
 export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEmbed(message) {
+  let diff;
+  let eevFb6;
+  let formatToPlainString;
+  let intl;
+  let intl3;
+  let intl4;
+  let obj2;
+  let obj3;
+  let obj4;
   if (null != message.embeds) {
     const first = message.embeds[0];
     let fields;
@@ -29,6 +38,7 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
         type = first1.type;
       }
       if (type === MessageEmbedTypes.SAFETY_POLICY_NOTICE) {
+        let parsed;
         const first2 = message.embeds[0];
         const fields1 = first2.fields;
         let found;
@@ -47,32 +57,30 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
         if (null != found1) {
           if (null != found1.rawValue) {
             const _parseFloat = parseFloat;
-            const parsed = parseFloat(found1.rawValue);
+            parsed = parseFloat(found1.rawValue);
           }
         }
         if (null != rawValue) {
           if (null != parsed) {
             const obj = {
-              titleText: null,
-              titleIcon: null,
-              subtitleText: null,
-              descriptionText: null,
-              ctaText: null,
-              classificationId: null,
+              titleText: intl.string(intl5.t["4CxGXi"]),
+              titleIcon: obj2.getAssetUriForEmbed(Image.resolveAssetSource(AssetRegistryDefault)),
+              subtitleText: formatToPlainString(eevFb6, obj3),
+              descriptionText: intl3.string(intl5.t["5CLb0A"]),
+              ctaText: intl4.string(intl5.t.zKnzwm),
+              classificationId: rawValue,
             };
-            const intl = util.intl;
-            obj.titleText = intl.string(util.t["4CxGXi"]);
-            obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef4804));
-            const intl2 = util.intl;
-            const obj3 = { daysAgo: null };
-            const obj4 = _modDef4461();
-            obj3.daysAgo = obj4.diff(_modDef4461.unix(parsed), "days");
-            obj.subtitleText = intl2.formatToPlainString(util.t.eevFb6, obj3);
-            const intl3 = util.intl;
-            obj.descriptionText = intl3.string(util.t["5CLb0A"]);
-            const intl4 = util.intl;
-            obj.ctaText = intl4.string(util.t.zKnzwm);
-            obj.classificationId = rawValue;
+            intl = intl5.intl;
+            obj2 = renderer_EmbedUtils;
+            const intl2 = intl5.intl;
+            formatToPlainString = intl2.formatToPlainString;
+            obj3 = { daysAgo: diff(obj4.unix(parsed), "days") };
+            eevFb6 = intl5.t.eevFb6;
+            diff = _modDef4461().diff;
+            _modDef4461();
+            obj4 = _modDef4461;
+            intl3 = intl5.intl;
+            intl4 = intl5.intl;
             return obj;
           }
         }

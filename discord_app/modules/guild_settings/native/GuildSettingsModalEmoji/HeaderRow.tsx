@@ -1,16 +1,57 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalEmoji/HeaderRow.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
+import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import EmojiConstants from "../../../emojis/EmojiConstants.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import _objectDestructuringEmpty from "../../../../../_runtime/11870__objectDestructuringEmpty.js";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import GuildSettingsEmojiStore from "../../GuildSettingsEmojiStore.tsx";
+import Constants from "../../../../Constants.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let c8, closure_1, upload_id;
+
+let c10;
+let closure_12;
+let closure_14;
+let closure_15;
+let closure_16;
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+let unpackModuleId;
 function HeaderRow(guild) {
+  let _undefined;
+  let _undefined2;
+  let _undefined3;
+  let c4;
+  let c5;
+  let c6;
+  let c7;
+  let description;
+  let formatToPlainStringResult;
+  let intl5;
+  let isUploading;
+  let items1;
+  let items2;
+  let str;
+  let stringResult;
+  let stringResult1;
+  let stringResult2;
+  let tmp3;
+  let tmp5;
+  let uploadDisabled;
   guild = guild.guild;
   ({ emojisLength: importDefault, onSelectRolesForEmoji: dependencyMap, uploadDisabled } = guild);
   ({ isUploading, description } = guild);
@@ -19,294 +60,288 @@ function HeaderRow(guild) {
   }
   c4 = undefined;
   _slicedToArray = undefined;
-  noop = undefined;
+  react = undefined;
   c7 = undefined;
-  closure_8 = async function _handleImagePicker() {
-    if (c8 === 2) {
-      c8 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        let obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c8 = 2;
-        if (0 === c7) {
-          if (arg0 === 1) {
-            c8 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c8 = 3;
-            let obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_4 = tmp3;
-            closure_3 = tmp7;
-            closure_131_0 = undefined;
-            let base64;
-            let originalMd5;
-            asyncGeneratorStep(true);
-            _slicedToArray(null);
-            React5(guild(upload[15]).v4());
-            c5 = 1;
-            const obj7 = guild(upload[15]);
-            const obj4 = { guild_id: id.id, upload_id };
-            closure_1(upload[13]).track(constants2.EMOJI_UPLOAD_STARTED, obj4);
-            const obj8 = closure_1(upload[13]);
-            const obj5 = { size };
-            c7 = 2;
-            c8 = 1;
-            const obj6 = { value: closure_1(upload[16]).openImagePicker(obj5), done: false };
-            return obj6;
-          }
-        } else if (1 === tmp7) {
-          c5 = 0;
-          closure_132_4(false);
-          throw upload_id;
+  let obj = function _handleImagePicker() {
+    obj = _asyncToGenerator(async () => {
+      let closure_0;
+      let closure_6;
+      let maxSize;
+      let obj10;
+      let tmp;
+      let upload;
+      if (c8 === 2) {
+        c8 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          let obj2 = { value, done: true };
+          return obj2;
         } else {
-          if (2 === tmp7) {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        let c5;
+        try {
+          let base64;
+          let originalMd5;
+          c8 = 2;
+          if (0 === c7) {
             if (arg0 === 1) {
+              c8 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              let closure_4 = tmp;
+              let closure_3 = tmp4;
+              id = undefined;
+              base64 = undefined;
+              originalMd5 = undefined;
+              _undefined(true);
+              _undefined2(null);
+              const obj7 = id(upload[15]);
+              _undefined3(obj7.v4());
+              c5 = 1;
+              const obj4 = { guild_id: id.id, upload_id };
+              const obj8 = closure_1(upload[13]);
+              const trackResult = obj8.track(constants2.EMOJI_UPLOAD_STARTED, obj4);
+              const obj5 = { size };
+              c7 = 2;
+              c8 = 1;
+              const obj6 = { value: obj10.openImagePicker(obj5), done: false };
+              obj10 = closure_1(upload[16]);
+              return obj6;
+            }
+          } else if (1 === c7) {
+            c5 = 0;
+            closure_132_4(false);
+            throw upload_id;
+          } else {
+            if (2 === c7) {
+              if (arg0 === 1) {
+                c8 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 0;
+                closure_132_4(false);
+                c8 = 3;
+                const obj9 = { value, done: true };
+                return obj9;
+              } else {
+                id = value;
+                base64 = id.base64;
+                originalMd5 = id.originalMd5;
+                if (null != base64) {
+                  upload = function upload(image, originalMd5, roles) {
+                    const combined = "emoji_" + closure_1 + 1;
+                    obj = closure_1_0(upload[12]);
+                    let obj2 = { guildId: image.id, image, name: combined, roles, originalMd5 };
+                    const uploadEmojiResult = obj.uploadEmoji(obj2);
+                    const nextPromise = uploadEmojiResult.then(() => {
+                      obj = closure_2_1(upload[13]);
+                      const obj2 = { guild_id: image.id, upload_id };
+                      return obj.track(constants.EMOJI_UPLOAD_COMPLETED, obj2);
+                    });
+                    nextPromise.catch((error) => {
+                      const body = error.body;
+                      let tmp;
+                      if (null != body) {
+                        let stringResult;
+                        if (body.code === constants.TOO_MANY_EMOJI) {
+                          const intl3 = image(upload[14]).intl;
+                          stringResult = intl3.string(image(upload[14]).t["jP/Rqm"]);
+                        } else if (body.code === tmp2.TOO_MANY_ANIMATED_EMOJI) {
+                          const intl2 = image(upload[14]).intl;
+                          stringResult = intl2.string(image(upload[14]).t["6v5dP/"]);
+                        } else if (null != body.image) {
+                          const _Buffer = Buffer;
+                          obj = { guild_id: closure_2_0.id, file_size: Buffer.byteLength(image), upload_id };
+                          const track = closure_1(upload[13]).track;
+                          const EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED =
+                            constants2.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED;
+                          closure_1(upload[13]);
+                          track(EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, obj);
+                          const intl = image(upload[14]).intl;
+                          const obj2 = { maxSize };
+                          stringResult = intl.formatToPlainString(image(upload[14]).t.kIO9jy, obj2);
+                        }
+                        tmp = stringResult;
+                      }
+                      if (null != tmp) {
+                        closure_2_5(tmp);
+                      }
+                    });
+                  };
+                  closure_1 = base64;
+                  id = originalMd5;
+                  let tmp19;
+                  if (closure_132_2 != null) {
+                    tmp19 = closure_132_2();
+                  }
+                  c7 = 3;
+                  c8 = 1;
+                  const obj11 = { value: tmp19, done: false };
+                  return obj11;
+                }
+              }
+            } else if (arg0 === 1) {
               c8 = 3;
               throw value;
             } else if (arg0 === 2) {
               c5 = 0;
               closure_132_4(false);
               c8 = 3;
-              const obj9 = { value, done: true };
-              return obj9;
+              obj = { value, done: true };
+              return obj;
             } else {
-              closure_131_0 = value;
-              base64 = closure_131_0.base64;
-              originalMd5 = closure_131_0.originalMd5;
-              if (null != base64) {
-                upload = function upload(image, originalMd5, roles) {
-                  const combined = "emoji_" + closure_1 + 1;
-                  let obj = closure_1_0(9939);
-                  let obj2 = { guildId: image.id, image, name: combined, roles, originalMd5 };
-                  const uploadEmojiResult = closure_1_0(9939).uploadEmoji({
-                    guildId: image.id,
-                    image,
-                    name: combined,
-                    roles,
-                    originalMd5,
-                  });
-                  closure_1_0(9939)
-                    .uploadEmoji({ guildId: image.id, image, name: combined, roles, originalMd5 })
-                    .then(() =>
-                      closure_2_1(1252).track(constants.EMOJI_UPLOAD_COMPLETED, { guild_id: image.id, upload_id }),
-                    )
-                    .catch((error) => {
-                      const body = error.body;
-                      if (null == body) {
-                        if (null != undefined) {
-                          closure_2_5(undefined);
-                        }
-                      } else if (body.code === constants.TOO_MANY_EMOJI) {
-                        const intl3 = image(upload[14]).intl;
-                        let stringResult = intl3.string(image(upload[14]).t["jP/Rqm"]);
-                      } else if (body.code === tmp.TOO_MANY_ANIMATED_EMOJI) {
-                        const intl2 = image(upload[14]).intl;
-                        stringResult = intl2.string(image(upload[14]).t["6v5dP/"]);
-                      } else if (null != body.image) {
-                        const obj2 = { guild_id: closure_2_0.id, file_size: null, upload_id: null };
-                        const _Buffer = Buffer;
-                        obj2.file_size = Buffer.byteLength(image);
-                        obj2.upload_id = upload_id;
-                        closure_1(upload[13]).track(constants2.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, obj2);
-                        const intl = image(upload[14]).intl;
-                        const obj3 = { maxSize };
-                        stringResult = intl.formatToPlainString(image(upload[14]).t.kIO9jy, obj3);
-                        const obj = closure_1(upload[13]);
-                      }
-                    });
-                };
-                closure_1 = base64;
-                guild = originalMd5;
-                let tmp22;
-                if (closure_132_2 != null) {
-                  tmp22 = closure_132_2();
-                }
-                c7 = 3;
-                c8 = 1;
-                const obj11 = { value: tmp22, done: false };
-                return obj11;
-              } else {
-                c5 = 0;
-                closure_132_4(false);
-                c8 = 3;
-              }
+              const tmp8 = upload(closure_1, id, value);
             }
-          } else if (arg0 === 1) {
+            c5 = 0;
+            closure_132_4(false);
             c8 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            upload(closure_1, guild, value);
+            return { value: "IconComponent", done: null };
           }
-          c5 = 0;
-          closure_132_4(false);
-          c8 = 3;
-          let obj = { value, done: true };
-          return obj;
-        }
-      } catch (tmp31) {
-        upload_id = tmp31;
-        if (tmp4 === c5) {
-          c8 = tmp2;
-          throw tmp31;
-        } else {
-          c7 = tmp;
+        } catch (tmp28) {
+          upload_id = tmp28;
+          if (0 === c5) {
+            c8 = 3;
+            throw tmp28;
+          } else {
+            c7 = 1;
+          }
         }
       }
-    }
+    });
+    return obj(...arguments);
   };
-  const tmp = closure_17();
+  let tmp = closure_17();
   const uploadListItem = tmp;
-  [tmp3, c4] = noop.useState(false);
-  const tmp2 = _slicedToArray(noop.useState(false), 2);
-  [tmp5, c5] = noop.useState(null);
-  const tmp4 = _slicedToArray(noop.useState(null), 2);
-  [c6, c7] = noop.useState("");
-  const tmp6 = _slicedToArray(noop.useState(""), 2);
-  let canCreateExpressions = guild(9169).useManageResourcePermissions(guild).canCreateExpressions;
+  const tmp2 = _slicedToArray(react.useState(false), 2);
+  [tmp3, c4] = tmp2;
+  const tmp4 = _slicedToArray(react.useState(null), 2);
+  [tmp5, c5] = tmp4;
+  [c6, c7] = _slicedToArray(react.useState(""), 2);
+  const tmp6 = _slicedToArray(react.useState(""), 2);
+  obj = guild(9169);
+  let canCreateExpressions = obj.useManageResourcePermissions(guild).canCreateExpressions;
   let intl = guild(1126).intl;
-  let obj2 = { id: null, text: null };
-  let obj = guild(9169);
-  obj2.id = "GUILD_SETTINGS_EMOJI_UPLOAD_REQUIREMENTS_" + 1;
-  obj2.text = intl.string(guild(1126).t.N2qTQ3);
+  let obj2 = { id: "GUILD_SETTINGS_EMOJI_UPLOAD_REQUIREMENTS_" + 1, text: stringResult };
+  stringResult = intl.string(guild(1126).t.N2qTQ3);
   let items = [obj2, , ,];
   let intl2 = guild(1126).intl;
-  let obj4 = { id: null, text: null };
   let obj3 = { maxSize: EMOJI_MAX_FILESIZE_KB };
-  let stringResult = intl.string(guild(1126).t.N2qTQ3);
-  obj4.id = "GUILD_SETTINGS_EMOJI_UPLOAD_REQUIREMENTS_" + 2;
-  obj4.text = intl2.formatToPlainString(guild(1126).t.gfAXoR, { maxSize: EMOJI_MAX_FILESIZE_KB });
+  let obj4 = { id: "GUILD_SETTINGS_EMOJI_UPLOAD_REQUIREMENTS_" + 2, text: formatToPlainStringResult };
   items[1] = obj4;
+  formatToPlainStringResult = intl2.formatToPlainString(guild(1126).t.gfAXoR, obj3);
   let intl3 = guild(1126).intl;
-  let obj5 = { id: null, text: null };
-  const formatToPlainStringResult = intl2.formatToPlainString(guild(1126).t.gfAXoR, { maxSize: EMOJI_MAX_FILESIZE_KB });
-  obj5.id = "GUILD_SETTINGS_EMOJI_UPLOAD_REQUIREMENTS_" + 3;
-  obj5.text = intl3.string(guild(1126).t.rnwKPH);
+  let obj5 = { id: "GUILD_SETTINGS_EMOJI_UPLOAD_REQUIREMENTS_" + 3, text: stringResult1 };
   items[2] = obj5;
+  stringResult1 = intl3.string(guild(1126).t.rnwKPH);
   const intl4 = guild(1126).intl;
-  let obj6 = { id: null, text: null };
-  const stringResult1 = intl3.string(guild(1126).t.rnwKPH);
-  obj6.id = "GUILD_SETTINGS_EMOJI_UPLOAD_REQUIREMENTS_" + 4;
-  obj6.text = intl4.string(guild(1126).t["8Vr5Qd"]);
+  let obj6 = { id: "GUILD_SETTINGS_EMOJI_UPLOAD_REQUIREMENTS_" + 4, text: stringResult2 };
   items[3] = obj6;
-  let obj7 = { style: tmp.headerContainer, children: null };
+  let obj7 = { style: tmp.headerContainer, children: items1 };
+  stringResult2 = intl4.string(guild(1126).t["8Vr5Qd"]);
   if (canCreateExpressions) {
+    const Button = tmp7(5594).Button;
     let obj8 = {
       size: "sm",
       loading: isUploading,
       onPress: function handleImagePicker() {
-        const self = this;
-        const apply = closure_8.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
+        return obj(...arguments);
       },
-      text: null,
-      disabled: null,
+      text: intl5.string(tmp7(1126).t["DU0dy/"]),
+      disabled: uploadDisabled,
     };
-    const intl5 = tmp7(1126).intl;
-    obj8.text = intl5.string(tmp7(1126).t["DU0dy/"]);
-    obj8.disabled = uploadDisabled;
-    canCreateExpressions = closure_15(tmp7(5594).Button, obj8);
+    intl5 = tmp7(1126).intl;
+    canCreateExpressions = closure_15(Button, obj8);
   }
-  const items1 = [canCreateExpressions, ,];
+  items1 = [canCreateExpressions, ,];
   let tmp13Result = null != tmp5;
   if (tmp13Result) {
     let obj9 = { style: tmp.errorText, variant: "text-sm/medium", color: "text-feedback-critical", children: tmp5 };
     tmp13Result = closure_15(tmp7(4886).Text, obj9);
   }
-  const obj10 = { children: null };
+  let obj10 = { children: closure_14(tmp16, obj7) };
   items1[1] = tmp13Result;
-  let obj11 = { style: tmp.uploadInstructionsContainer, children: null };
-  const items2 = [
-    closure_15(guild(4886).Text, { variant: "text-sm/medium", color: "text-muted", children: description }),
-    ,
-  ];
-  const obj12 = { variant: "text-xs/bold", color: "text-muted", style: tmp.uploadInstructionsHeading, children: null };
+  let obj11 = { style: tmp.uploadInstructionsContainer, children: items2 };
+  items2 = [closure_15(tmp7(4886).Text, { variant: "text-sm/medium", color: "text-muted", children: description }), ,];
+  const obj12 = {
+    variant: "text-xs/bold",
+    color: "text-muted",
+    style: tmp.uploadInstructionsHeading,
+    children: str.toUpperCase(),
+  };
+  const Text = tmp7(4886).Text;
   const intl6 = tmp7(1126).intl;
-  const stringResult2 = intl4.string(guild(1126).t["8Vr5Qd"]);
-  obj12.children = intl6.string(guild(1126).t.jrXfyw).toUpperCase();
-  items2[1] = closure_15(guild(4886).Text, obj12);
-  items2[2] = closure_15(closure_8, {
+  str = intl6.string(guild(1126).t.jrXfyw);
+  items2[1] = closure_15(Text, obj12);
+  const obj13 = {
     style: tmp.uploadInstructionsList,
     data: items,
     keyExtractor(id) {
       return id.id;
     },
     renderItem: function renderUploadInstructionsListItem(item) {
+      let items;
       item = item.item;
-      const obj = {
+      obj = {
         style: uploadListItem.uploadListItem,
         variant: "text-xs/medium",
         color: "text-muted",
         accessibilityLabel: item.text,
-        children: null,
+        children: items,
       };
-      const items = ["\u2022", " ", item.text];
-      obj.children = items;
-      return state(Text_Text.Text, obj);
+      items = ["\u2022", " ", item.text];
+      return authStore2(Text_Text.Text, obj);
     },
-  });
-  obj11.children = items2;
+  };
+  items2[2] = closure_15(obj, obj13);
   items1[2] = closure_14(c7, obj11);
-  obj7.children = items1;
-  obj10.children = closure_14(c7, obj7);
   return closure_15(closure_16, obj10);
 }
-get_ActivityIndicator = fn(17);
-({ View: closure_7, FlatList: closure_8 } = get_ActivityIndicator);
-const Constants = fn(1085);
-({ AbortCodes: c10, AnalyticEvents: closure_11, UPLOAD_SMALL_SIZE: closure_12 } = Constants);
-const EMOJI_MAX_FILESIZE_KB = fn(1380).EMOJI_MAX_FILESIZE_KB;
-const jsxProd = fn(21);
-({ jsxs: closure_14, jsx: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  uploadInstructionsContainer: { marginTop: nativeDefault.space.PX_12 },
-  uploadInstructionsHeading: null,
-  uploadInstructionsList: null,
-  headerContainer: null,
-  errorText: null,
-  uploadListItem: null,
+let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
+({ View: metroImportDefault, FlatList: metroImportAll } = react_native);
+({ AbortCodes: c10, AnalyticEvents: unpackModuleId, UPLOAD_SMALL_SIZE: closure_12 } = Constants);
+const EMOJI_MAX_FILESIZE_KB = EmojiConstants.EMOJI_MAX_FILESIZE_KB;
+({ jsxs: closure_14, jsx: closure_15, Fragment: closure_16 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
+  uploadInstructionsContainer: obj2,
+  uploadInstructionsHeading: obj3,
+  uploadInstructionsList: { marginLeft: 8 },
+  headerContainer: obj4,
+  errorText: obj5,
+  uploadListItem: obj6,
 };
-let obj3 = { marginTop: nativeDefault.space.PX_12 };
-obj2.uploadInstructionsHeading = { marginVertical: nativeDefault.space.PX_12 };
-obj2.uploadInstructionsList = { marginLeft: 8 };
-let obj4 = { marginVertical: nativeDefault.space.PX_12 };
-obj2.headerContainer = { paddingTop: nativeDefault.space.PX_16 };
-let obj5 = { paddingTop: nativeDefault.space.PX_16 };
-obj2.errorText = { marginTop: nativeDefault.space.PX_8 };
-let obj6 = { marginTop: nativeDefault.space.PX_8 };
-obj2.uploadListItem = { paddingRight: nativeDefault.space.PX_8 };
-let closure_17 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj7 = { paddingRight: nativeDefault.space.PX_8 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalEmoji/HeaderRow.tsx");
-
-export const ConnectedHeaderRow = ReactCompilerGating.isReactCompilerEnabled()
+obj2 = { marginTop: nativeDefault.space.PX_12 };
+createStyles = createStyles.createStyles;
+obj3 = { marginVertical: nativeDefault.space.PX_12 };
+obj4 = { paddingTop: nativeDefault.space.PX_16 };
+obj5 = { marginTop: nativeDefault.space.PX_8 };
+obj6 = { paddingRight: nativeDefault.space.PX_8 };
+let closure_17 = createStyles(obj);
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ConnectedHeaderRow(arg0) {
-      const cResult = c.c(7);
+      let tmp10;
+      let tmp4;
+      let tmp9;
+      let uploadingEmoji;
+      const obj = react2;
+      const cResult = obj.c(7);
       if (cResult[0] !== arg0) {
         const _Object = Object;
         _objectDestructuringEmpty(arg0);
-        const merged = Object.assign({}, arg0);
+        const obj2 = assign({}, arg0);
         cResult[0] = arg0;
-        cResult[1] = merged;
-        let tmp4 = merged;
+        cResult[1] = obj2;
+        tmp4 = obj2;
       } else {
         tmp4 = cResult[1];
       }
@@ -317,36 +352,43 @@ export const ConnectedHeaderRow = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[2] = items;
         cResult[3] = fn;
-        let tmp10 = fn;
-        let tmp9 = items;
+        tmp10 = fn;
+        tmp9 = items;
       } else {
         tmp9 = cResult[2];
         tmp10 = cResult[3];
       }
-      const stateFromStores = initialize.useStateFromStores(tmp9, tmp10);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp9, tmp10);
       if (cResult[4] === stateFromStores) {
+        let tmp13;
         if (cResult[5] === tmp4) {
-          let tmp13 = cResult[6];
+          tmp13 = cResult[6];
         }
         return tmp13;
       }
-      const merged1 = Object.assign(tmp4);
-      const tmp15 = closure_1_15(HeaderRow, { isUploading: stateFromStores });
+      const obj3 = { isUploading: stateFromStores };
+      const merged = Object.assign(tmp4);
+      const tmp15 = closure_15(HeaderRow, obj3);
       cResult[4] = stateFromStores;
       cResult[5] = tmp4;
       cResult[6] = tmp15;
       tmp13 = tmp15;
-      const obj2 = { isUploading: stateFromStores };
-      const tmpResult = initialize;
     }
   : function ConnectedHeaderRow(arg0) {
+      let obj;
+      let uploadingEmoji;
       if (arg0 == null) {
         throw new TypeError("Cannot destructure 'undefined' or 'null'.");
       } else {
         const merged = Object.assign(arg0, undefined);
         const items = [GuildSettingsEmojiStore];
-        const obj2 = { isUploading: initialize.useStateFromStores(items, () => uploadingEmoji.isUploadingEmoji()) };
+        const obj2 = { isUploading: obj.useStateFromStores(items, () => uploadingEmoji.isUploadingEmoji()) };
+        obj = get_initialized;
         const merged1 = Object.assign(merged);
-        return closure_1_15(HeaderRow, obj2);
+        return closure_15(HeaderRow, obj2);
       }
     };
+const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalEmoji/HeaderRow.tsx");
+
+export const ConnectedHeaderRow = tmp6;

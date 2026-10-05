@@ -9,7 +9,7 @@ export const stashPendingFrameLaunch = function stashPendingFrameLaunch(applicat
 };
 export const consumePendingFrameLaunch = function consumePendingFrameLaunch(applicationId) {
   if (null != closure_0[applicationId]) {
-    delete tmp[tmp2];
-    return tmp3;
+    delete closure_0[applicationId];
+    return closure_0[applicationId];
   }
 };

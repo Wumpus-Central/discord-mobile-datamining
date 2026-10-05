@@ -3,12 +3,12 @@ import size from "../../../_runtime/metro/00002__.js";
 
 class ROBLOX_PROTOCOL_URL {
   constructor(arg0) {
-    return "roblox://placeId=" + global;
+    return "roblox://placeId=" + arg0;
   }
 }
 class ROBLOX_WEB_URL {
   constructor(arg0) {
-    return "https://www.roblox.com/games/start?placeId=" + global;
+    return "https://www.roblox.com/games/start?placeId=" + arg0;
   }
 }
 const result = size.fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgameTypes.tsx");

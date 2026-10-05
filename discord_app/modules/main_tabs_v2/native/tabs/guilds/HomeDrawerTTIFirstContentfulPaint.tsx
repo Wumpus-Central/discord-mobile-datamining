@@ -1,23 +1,24 @@
 // discord_app/modules/main_tabs_v2/native/tabs/guilds/HomeDrawerTTIFirstContentfulPaint.tsx
-import c from "../../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../../_runtime/00576_react.js";
 import TTIAnalyticsUtils from "../../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 import TTIFirstContentfulPaint from "../../../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/main_tabs_v2/native/tabs/guilds/HomeDrawerTTIFirstContentfulPaint.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(3);
+      let tmp4;
+      let tmp5;
+      let tmp7;
+      let obj = react2;
+      const cResult = obj.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function c() {
-          TTIAnalyticsUtils.trackAppUIViewed();
+          const obj = TTIAnalyticsUtils;
+          obj.trackAppUIViewed();
         };
         const items = [];
         cResult[0] = fn;
@@ -27,25 +28,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const layoutEffect = noop.useLayoutEffect(tmp4, tmp5);
+      const layoutEffect = react.useLayoutEffect(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp9 = jsx(TTIFirstContentfulPaint.TTIFirstContentfulPaint, {
           label: "home_drawer",
           checkFocusedScreen: "guilds",
         });
         cResult[2] = tmp9;
-        let tmp7 = tmp9;
+        tmp7 = tmp9;
       } else {
         tmp7 = cResult[2];
       }
       return tmp7;
     }
   : () => {
-      const layoutEffect = noop.useLayoutEffect(() => {
-        TTIAnalyticsUtils.trackAppUIViewed();
+      const layoutEffect = react.useLayoutEffect(() => {
+        const obj = TTIAnalyticsUtils;
+        obj.trackAppUIViewed();
       }, []);
       return jsx(TTIFirstContentfulPaint.TTIFirstContentfulPaint, {
         label: "home_drawer",
         checkFocusedScreen: "guilds",
       });
     };
+const result = size.fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/guilds/HomeDrawerTTIFirstContentfulPaint.tsx",
+);
+
+export default tmp2;

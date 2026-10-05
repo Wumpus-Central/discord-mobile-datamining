@@ -1,62 +1,75 @@
 // discord_app/modules/upsell_tooltip/native/PremiumUpsellTooltipActionSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
+import DismissibleContentConstants from "../../dismissible_content/DismissibleContentConstants.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  container: {
-    justifyContent: "center",
-    paddingTop: nativeDefault.space.PX_16,
-    paddingHorizontal: nativeDefault.space.PX_16,
-  },
-  img: null,
-  header: null,
-  title: null,
-  description: null,
-  nitroWheel: null,
-  buttonContainer: null,
+let BottomSheet, onPrimaryButtonPress;
+
+let c3;
+let closure_4;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
+let size;
+let size1;
+({ Image: c3, View: closure_4 } = react_native);
+const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
+  container: obj2,
+  img: size,
+  header: { flexDirection: "row", justifyContent: "center" },
+  title: { textAlign: "center", marginBottom: 8 },
+  description: obj3,
+  nitroWheel: size1,
+  buttonContainer: obj4,
 };
-let size = { alignSelf: "center", width: 231, height: 231, borderRadius: nativeDefault.radii.sm, marginBottom: 16 };
-obj2.img = size;
-obj2.header = { flexDirection: "row", justifyContent: "center" };
-obj2.title = { textAlign: "center", marginBottom: 8 };
-let obj3 = {
+obj2 = {
   justifyContent: "center",
   paddingTop: nativeDefault.space.PX_16,
   paddingHorizontal: nativeDefault.space.PX_16,
 };
-obj2.description = { textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
-const size1 = {
+createStyles = createStyles.createStyles;
+size = { alignSelf: "center", width: 231, height: 231, borderRadius: nativeDefault.radii.sm, marginBottom: 16 };
+obj3 = { textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
+size1 = {
   tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
   width: 32,
   height: 32,
   marginTop: -2,
   marginLeft: -16,
 };
-obj2.nitroWheel = size1;
-let obj4 = { textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
-obj2.buttonContainer = { gap: nativeDefault.space.PX_8 };
-let closure_8 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const obj5 = { gap: nativeDefault.space.PX_8 };
-size = fn(2);
-let result = size.fileFinishedImporting("modules/upsell_tooltip/native/PremiumUpsellTooltipActionSheet.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+obj4 = { gap: nativeDefault.space.PX_8 };
+let closure_8 = createStyles(obj);
+const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (onPrimaryButtonPress) => {
-      const cResult = dismissibleContent(onPrimaryButtonPress[7]).c(52);
+      let backdropProps;
+      let description;
+      let descriptionStyle;
+      let dismissibleContent;
+      let imageSource;
+      let imageStyle;
+      let onDismiss;
+      let primaryButtonIcon;
+      let primaryButtonText;
+      let secondaryButtonText;
+      let title;
+      let obj = dismissibleContent(onPrimaryButtonPress[7]);
+      const cResult = obj.c(52);
       ({ title, backdropProps, description, descriptionStyle, imageSource, imageStyle, dismissibleContent } =
         onPrimaryButtonPress);
       ({ primaryButtonText, primaryButtonIcon, secondaryButtonText, onDismiss } = onPrimaryButtonPress);
@@ -64,30 +77,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const onSecondaryButtonPress = onPrimaryButtonPress.onSecondaryButtonPress;
       const tmp2 = closure_8();
       if (cResult[0] === dismissibleContent) {
+        let tmp3;
         if (cResult[1] === onDismiss) {
-          let tmp3 = cResult[2];
+          tmp3 = cResult[2];
         }
-        closure_4 = tmp3;
+        let closure_4 = tmp3;
         if (cResult[3] === tmp3) {
           if (cResult[6] === tmp3) {
             class E {
               constructor() {
                 if (onSecondaryButtonPress != null) {
-                  tmpResult = tmp();
+                  tmp();
                 }
-                obj = closure_1(closure_2[9]);
-                hideActionSheetResult = obj.hideActionSheet();
-                tmp4 = closure_4(ContentDismissActionType.DISMISS);
-                return;
+                const obj = ActionSheetActionCreatorsDefault;
+                obj.hideActionSheet();
+                closure_4(ContentDismissActionType.DISMISS);
               }
             }
             class R {
               constructor() {
-                tmp = onPrimaryButtonPress();
-                obj = closure_1(closure_2[9]);
-                hideActionSheetResult = obj.hideActionSheet();
-                tmp3 = closure_4(ContentDismissActionType.PRIMARY);
-                return;
+                onPrimaryButtonPress();
+                const obj = ActionSheetActionCreatorsDefault;
+                obj.hideActionSheet();
+                closure_4(ContentDismissActionType.PRIMARY);
               }
             }
             let tmp9 = null;
@@ -95,21 +107,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               class E {
                 constructor() {
                   if (onSecondaryButtonPress != null) {
-                    tmpResult = tmp();
+                    tmp();
                   }
-                  obj = closure_1(closure_2[9]);
-                  hideActionSheetResult = obj.hideActionSheet();
-                  tmp4 = closure_4(ContentDismissActionType.DISMISS);
-                  return;
+                  const obj = ActionSheetActionCreatorsDefault;
+                  obj.hideActionSheet();
+                  closure_4(ContentDismissActionType.DISMISS);
                 }
               }
               class R {
                 constructor() {
-                  tmp = onPrimaryButtonPress();
-                  obj = closure_1(closure_2[9]);
-                  hideActionSheetResult = obj.hideActionSheet();
-                  tmp3 = closure_4(ContentDismissActionType.PRIMARY);
-                  return;
+                  onPrimaryButtonPress();
+                  const obj = ActionSheetActionCreatorsDefault;
+                  obj.hideActionSheet();
+                  closure_4(ContentDismissActionType.PRIMARY);
                 }
               }
               tmp13[0] = tmp2.img;
@@ -127,21 +137,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           class E {
             constructor() {
               if (onSecondaryButtonPress != null) {
-                tmpResult = tmp();
+                tmp();
               }
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              tmp4 = closure_4(ContentDismissActionType.DISMISS);
-              return;
+              const obj = ActionSheetActionCreatorsDefault;
+              obj.hideActionSheet();
+              closure_4(ContentDismissActionType.DISMISS);
             }
           }
           class R {
             constructor() {
-              tmp = onPrimaryButtonPress();
-              obj = closure_1(closure_2[9]);
-              hideActionSheetResult = obj.hideActionSheet();
-              tmp3 = closure_4(ContentDismissActionType.PRIMARY);
-              return;
+              onPrimaryButtonPress();
+              const obj = ActionSheetActionCreatorsDefault;
+              obj.hideActionSheet();
+              closure_4(ContentDismissActionType.PRIMARY);
             }
           }
           cResult[6] = tmp3;
@@ -150,11 +158,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         class R {
           constructor() {
-            tmp = onPrimaryButtonPress();
-            obj = closure_1(closure_2[9]);
-            hideActionSheetResult = obj.hideActionSheet();
-            tmp3 = closure_4(ContentDismissActionType.PRIMARY);
-            return;
+            onPrimaryButtonPress();
+            const obj = ActionSheetActionCreatorsDefault;
+            obj.hideActionSheet();
+            closure_4(ContentDismissActionType.PRIMARY);
           }
         }
         cResult[3] = tmp3;
@@ -162,28 +169,39 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = R;
       }
       const fn = function l(dismissAction) {
-        let tmp = null != dismissAction;
-        if (tmp) {
-          tmp = dismissAction !== ContentDismissActionType.DISMISS;
-        }
+        const tmp = null != dismissAction && dismissAction !== ContentDismissActionType.DISMISS;
         if (!tmp) {
           if (onDismiss != null) {
             tmp3();
           }
         }
-        const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissibleContent, {
-          forceTrack: true,
-          dismissAction,
-        });
+        const obj = DismissibleContentUnsafeUtils;
         const obj2 = { forceTrack: true, dismissAction };
+        const result = obj.UNSAFE_markDismissibleContentAsDismissed(dismissibleContent, obj2);
       };
       cResult[0] = dismissibleContent;
       cResult[1] = onDismiss;
       cResult[2] = fn;
       tmp3 = fn;
-      let obj = dismissibleContent(onPrimaryButtonPress[7]);
     }
   : (arg0) => {
+      let backdropProps;
+      let closure_3;
+      let description;
+      let descriptionStyle;
+      let imageSource;
+      let imageStyle;
+      let items;
+      let items1;
+      let items2;
+      let items3;
+      let items4;
+      let obj2;
+      let primaryButtonIcon;
+      let primaryButtonIconResult;
+      let primaryButtonText;
+      let secondaryButtonText;
+      let title;
       ({
         imageSource,
         dismissibleContent: require,
@@ -195,97 +213,97 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } = arg0);
       ({ title, backdropProps, description, descriptionStyle, imageStyle, primaryButtonText } = arg0);
       let tmp = closure_8();
-      let obj = { startExpanded: true };
-      const merged = Object.assign(backdropProps);
-      obj.onDismiss = function handleDismiss(dismissAction) {
-        let tmp = null != dismissAction;
-        if (tmp) {
-          tmp = dismissAction !== ContentDismissActionType.DISMISS;
-        }
-        if (!tmp) {
-          if (importDefault != null) {
-            tmp3();
+      let obj = {
+        startExpanded: true,
+        onDismiss: function handleDismiss(dismissAction) {
+          const tmp = null != dismissAction && dismissAction !== ContentDismissActionType.DISMISS;
+          if (!tmp) {
+            if (importDefault != null) {
+              tmp3();
+            }
           }
-        }
-        const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(closure_1_0, {
-          forceTrack: true,
-          dismissAction,
-        });
-        const obj2 = { forceTrack: true, dismissAction };
+          const obj = DismissibleContentUnsafeUtils;
+          const obj2 = { forceTrack: true, dismissAction };
+          const result = obj.UNSAFE_markDismissibleContentAsDismissed(require, obj2);
+        },
+        children: closure_7(closure_4, obj2),
       };
-      let obj2 = { style: tmp.container, children: null };
+      BottomSheet = Sheet_BottomSheet.BottomSheet;
+      const merged = Object.assign(backdropProps);
+      obj2 = { style: tmp.container, children: items1 };
       let tmp2Result = null;
       if (null != imageSource) {
-        const obj3 = { style: null, source: null };
-        const items = [tmp.img, imageStyle];
-        obj3.style = items;
-        obj3.source = imageSource;
+        const obj3 = { style: items, source: imageSource };
+        items = [tmp.img, imageStyle];
         tmp2Result = closure_6(closure_3, obj3);
       }
-      const items1 = [tmp2Result, , ,];
-      const obj4 = { style: tmp.header, children: null };
-      const items2 = [
-        closure_6(native.NitroWheel, { style: tmp.nitroWheel }),
-        closure_6(Text_Text.Text, {
-          variant: "heading-xl/bold",
-          style: tmp.title,
-          color: "mobile-text-heading-primary",
-          accessibilityRole: "header",
-          children: title,
-        }),
-      ];
-      obj4.children = items2;
+      items1 = [tmp2Result, , ,];
+      const obj4 = { style: tmp.header, children: items2 };
+      items2 = [,];
+      const obj5 = { style: tmp.nitroWheel };
+      items2[0] = closure_6(native.NitroWheel, obj5);
+      const obj6 = {
+        variant: "heading-xl/bold",
+        style: tmp.title,
+        color: "mobile-text-heading-primary",
+        accessibilityRole: "header",
+        children: title,
+      };
+      items2[1] = closure_6(Text_Text.Text, obj6);
       items1[1] = closure_7(closure_4, obj4);
-      const obj7 = { style: null, variant: "text-md/medium", color: "text-default", children: description };
-      const items3 = [tmp.description, descriptionStyle];
-      obj7.style = items3;
+      const obj7 = { style: items3, variant: "text-md/medium", color: "text-default", children: description };
+      items3 = [tmp.description, descriptionStyle];
       items1[2] = closure_6(Text_Text.Text, obj7);
-      const obj8 = { style: tmp.buttonContainer, children: null };
       const obj9 = {
         variant: "active",
         text: primaryButtonText,
         onPress() {
           dependencyMap();
-          ActionSheetActionCreatorsDefault.hideActionSheet();
+          const obj = ActionSheetActionCreatorsDefault;
+          obj.hideActionSheet();
           const PRIMARY = ContentDismissActionType.PRIMARY;
+          const tmp4 = null != PRIMARY && PRIMARY !== ContentDismissActionType.DISMISS;
           if (!tmp4) {
-            if (closure_1_1 != null) {
-              closure_1_1();
+            if (importDefault != null) {
+              importDefault();
             }
           }
-          tmp4 = null != PRIMARY && PRIMARY !== ContentDismissActionType.DISMISS;
-          const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(closure_1_0, {
+          const obj2 = DismissibleContentUnsafeUtils;
+          const result = obj2.UNSAFE_markDismissibleContentAsDismissed(require, {
             forceTrack: true,
             dismissAction: PRIMARY,
           });
         },
-        icon: null,
+        icon: primaryButtonIconResult,
         size: "lg",
       };
-      let primaryButtonIconResult;
+      primaryButtonIconResult = undefined;
+      const obj8 = { style: tmp.buttonContainer, children: items4 };
+      const Button = components_Button_Button.Button;
       if (primaryButtonIcon != null) {
         primaryButtonIconResult = primaryButtonIcon();
       }
-      obj9.icon = primaryButtonIconResult;
-      const items4 = [closure_6(components_Button_Button.Button, obj9)];
+      items4 = [closure_6(Button, obj9)];
       let tmp2Result2 = null;
       if (null != secondaryButtonText) {
         const obj10 = {
           variant: "secondary",
           text: secondaryButtonText,
           onPress() {
-            if (closure_1_3 != null) {
+            if (closure_3 != null) {
               tmp();
             }
-            ActionSheetActionCreatorsDefault.hideActionSheet();
+            const obj = ActionSheetActionCreatorsDefault;
+            obj.hideActionSheet();
             const DISMISS = ContentDismissActionType.DISMISS;
+            const tmp5 = null != DISMISS && DISMISS !== ContentDismissActionType.DISMISS;
             if (!tmp5) {
-              if (closure_1_1 != null) {
-                closure_1_1();
+              if (importDefault != null) {
+                importDefault();
               }
             }
-            tmp5 = null != DISMISS && DISMISS !== ContentDismissActionType.DISMISS;
-            const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(closure_1_0, {
+            const obj2 = DismissibleContentUnsafeUtils;
+            const result = obj2.UNSAFE_markDismissibleContentAsDismissed(require, {
               forceTrack: true,
               dismissAction: DISMISS,
             });
@@ -295,9 +313,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp2Result2 = closure_6(components_Button_Button.Button, obj10);
       }
       items4[1] = tmp2Result2;
-      obj8.children = items4;
       items1[3] = closure_7(closure_4, obj8);
-      obj2.children = items1;
-      obj.children = closure_7(closure_4, obj2);
-      return closure_6(Sheet_BottomSheet.BottomSheet, obj);
+      return closure_6(BottomSheet, obj);
     };
+size = size_mod;
+let result = size.fileFinishedImporting("modules/upsell_tooltip/native/PremiumUpsellTooltipActionSheet.tsx");
+
+export default tmp6;

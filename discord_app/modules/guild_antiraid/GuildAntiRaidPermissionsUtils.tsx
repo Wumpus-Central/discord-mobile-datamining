@@ -1,61 +1,71 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidPermissionsUtils.tsx
+import Constants from "../../Constants.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import GuildIncidentsStore from "GuildIncidentsStore.tsx";
+import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const Permissions = fn(1085).Permissions;
-fn(558);
-const ReactCompilerGating = fn(558);
+const Permissions = Constants.Permissions;
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp12;
+      let tmp14;
+      let tmp6;
+      let tmp7;
+      let tmp9;
       _require = arg0;
-      const cResult = require("c").c(10);
+      const tmp = _require;
+      const obj = require("react");
+      const cResult = obj.c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PermissionStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         const fn = function o() {
           if (PermissionStore !== undefined) {
-            return (
+            const tmp3 =
               PermissionStore.can(Permissions.BAN_MEMBERS, closure_0) ||
               PermissionStore.can(Permissions.KICK_MEMBERS, closure_0) ||
               PermissionStore.can(Permissions.MODERATE_MEMBERS, closure_0) ||
-              PermissionStore.can(Permissions.MANAGE_GUILD, closure_0)
-            );
+              PermissionStore.can(Permissions.MANAGE_GUILD, closure_0);
+            return tmp3;
           }
         };
         const items1 = [arg0];
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
+      const tmpResult = tmp(504);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [GuildIncidentsStore];
         cResult[4] = items2;
-        let tmp9 = items2;
+        tmp9 = items2;
       } else {
         tmp9 = cResult[4];
       }
       if (cResult[5] !== arg0) {
         class E {
           constructor() {
-            guildIncident = null;
+            let guildIncident = null;
             if (null != closure_0) {
-              tmp3 = closure_3;
-              guildIncident = closure_3.getGuildIncident(tmp.id);
+              guildIncident = GuildIncidentsStore.getGuildIncident(tmp.id);
             }
             return guildIncident;
           }
@@ -64,29 +74,27 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = arg0;
         cResult[6] = E;
         cResult[7] = items3;
-        let tmp12 = items3;
+        tmp12 = items3;
       } else {
         class E {
           constructor() {
-            guildIncident = null;
+            let guildIncident = null;
             if (null != closure_0) {
-              tmp3 = closure_3;
-              guildIncident = closure_3.getGuildIncident(tmp.id);
+              guildIncident = GuildIncidentsStore.getGuildIncident(tmp.id);
             }
             return guildIncident;
           }
         }
         tmp12 = cResult[7];
       }
-      const tmpResult = require("initialize");
-      const stateFromStores1 = require("initialize").useStateFromStores(tmp9, E, tmp12);
+      const tmpResult2 = tmp(504);
+      const stateFromStores1 = tmpResult2.useStateFromStores(tmp9, E, tmp12);
       if (cResult[8] !== stateFromStores1) {
         class E {
           constructor() {
-            guildIncident = null;
+            let guildIncident = null;
             if (null != closure_0) {
-              tmp3 = closure_3;
-              guildIncident = closure_3.getGuildIncident(tmp.id);
+              guildIncident = GuildIncidentsStore.getGuildIncident(tmp.id);
             }
             return guildIncident;
           }
@@ -95,10 +103,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (hasDetectedActivityResult) {
           class E {
             constructor() {
-              guildIncident = null;
+              let guildIncident = null;
               if (null != closure_0) {
-                tmp3 = closure_3;
-                guildIncident = closure_3.getGuildIncident(tmp.id);
+                guildIncident = GuildIncidentsStore.getGuildIncident(tmp.id);
               }
               return guildIncident;
             }
@@ -107,55 +114,45 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[8] = stateFromStores1;
         cResult[9] = hasDetectedActivityResult;
+        tmp14 = hasDetectedActivityResult;
       } else {
         class E {
           constructor() {
-            guildIncident = null;
+            let guildIncident = null;
             if (null != closure_0) {
-              tmp3 = closure_3;
-              guildIncident = closure_3.getGuildIncident(tmp.id);
+              guildIncident = GuildIncidentsStore.getGuildIncident(tmp.id);
             }
             return guildIncident;
           }
         }
       }
-      if (!tmp14) {
-        class E {
-          constructor() {
-            guildIncident = null;
-            if (null != closure_0) {
-              tmp3 = closure_3;
-              guildIncident = closure_3.getGuildIncident(tmp.id);
-            }
-            return guildIncident;
-          }
-        }
-      }
-      return !tmp14;
+      return !tmp14 && stateFromStores;
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
+      const tmp = _require;
       const items = [PermissionStore];
       const items1 = [arg0];
-      const stateFromStores = require("initialize").useStateFromStores(
+      const obj = require("get initialized");
+      const stateFromStores = obj.useStateFromStores(
         items,
         () => {
           if (PermissionStore !== undefined) {
-            return (
+            const tmp3 =
               PermissionStore.can(Permissions.BAN_MEMBERS, closure_0) ||
               PermissionStore.can(Permissions.KICK_MEMBERS, closure_0) ||
               PermissionStore.can(Permissions.MODERATE_MEMBERS, closure_0) ||
-              PermissionStore.can(Permissions.MANAGE_GUILD, closure_0)
-            );
+              PermissionStore.can(Permissions.MANAGE_GUILD, closure_0);
+            return tmp3;
           }
         },
         items1,
       );
-      const obj = require("initialize");
-      const tmp = _require;
       const items2 = [GuildIncidentsStore];
       const items3 = [arg0];
-      const stateFromStores1 = require("initialize").useStateFromStores(
+      const obj2 = require("get initialized");
+      const stateFromStores1 = obj2.useStateFromStores(
         items2,
         () => {
           let guildIncident = null;
@@ -168,53 +165,26 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       );
       let hasDetectedActivityResult = null != stateFromStores1;
       if (hasDetectedActivityResult) {
-        hasDetectedActivityResult = tmp(7685).hasDetectedActivity(stateFromStores1);
         const tmpResult = tmp(7685);
+        hasDetectedActivityResult = tmpResult.hasDetectedActivity(stateFromStores1);
       }
-      let tmp6 = !hasDetectedActivityResult;
-      if (!hasDetectedActivityResult) {
-        tmp6 = stateFromStores;
-      }
-      return tmp6;
+      return !hasDetectedActivityResult && stateFromStores;
     };
-function canReportRaid(guild) {
-  let obj = PermissionStore;
-  if (PermissionStore === undefined) {
-    obj = PermissionStore;
-  }
-  let canResult = obj.can(Permissions.BAN_MEMBERS, guild);
-  if (!canResult) {
-    canResult = obj.can(Permissions.KICK_MEMBERS, guild);
-  }
-  if (!canResult) {
-    canResult = obj.can(Permissions.MODERATE_MEMBERS, guild);
-  }
-  if (!canResult) {
-    canResult = obj.can(Permissions.MANAGE_GUILD, guild);
-  }
-  return canResult;
-}
-function canEnableRaidAlerts(arg0) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = PermissionStore;
-  }
-  return obj.can(Permissions.MANAGE_GUILD, arg0);
-}
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidPermissionsUtils.tsx");
-
-export { canReportRaid };
-export const useCanReportRaid = tmp2;
-export { canEnableRaidAlerts };
-export const useCanEnableRaidAlerts = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
+      let tmp7;
       _require = arg0;
-      const cResult = require("c").c(4);
+      const tmp = _require;
+      const obj = require("react");
+      const cResult = obj.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PermissionStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -228,20 +198,22 @@ export const useCanEnableRaidAlerts = ReactCompilerGating.isReactCompilerEnabled
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6, tmp7);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6, tmp7);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       const items = [PermissionStore];
       const items1 = [arg0];
-      return require("initialize").useStateFromStores(
+      const obj = require("get initialized");
+      return obj.useStateFromStores(
         items,
         () => {
           if (PermissionStore !== undefined) {
@@ -251,3 +223,28 @@ export const useCanEnableRaidAlerts = ReactCompilerGating.isReactCompilerEnabled
         items1,
       );
     };
+function canReportRaid(guild) {
+  let obj = PermissionStore;
+  if (PermissionStore === undefined) {
+    obj = PermissionStore;
+  }
+  const canResult =
+    obj.can(Permissions.BAN_MEMBERS, guild) ||
+    obj.can(Permissions.KICK_MEMBERS, guild) ||
+    obj.can(Permissions.MODERATE_MEMBERS, guild) ||
+    obj.can(Permissions.MANAGE_GUILD, guild);
+  return canResult;
+}
+function canEnableRaidAlerts(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = PermissionStore;
+  }
+  return obj.can(Permissions.MANAGE_GUILD, arg0);
+}
+const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidPermissionsUtils.tsx");
+
+export { canReportRaid };
+export const useCanReportRaid = tmp2;
+export { canEnableRaidAlerts };
+export const useCanEnableRaidAlerts = tmp3;

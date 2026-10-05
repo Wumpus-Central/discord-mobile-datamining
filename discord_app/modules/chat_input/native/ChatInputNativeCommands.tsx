@@ -3,9 +3,7 @@ import createNonce from "../../messages/createNonce.tsx";
 import ChatInputNativeComponent from "../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let result = size.fileFinishedImporting("modules/chat_input/native/ChatInputNativeCommands.tsx");
-
-export default {
+let obj = {
   backspace(arg0) {
     if (null != arg0) {
       const Commands = ChatInputNativeComponent.Commands;
@@ -31,11 +29,13 @@ export default {
     }
   },
   getText(arg0, set, arg2) {
-    closure_1 = arg2;
+    let closure_0 = set;
+    let closure_1 = arg2;
     if (null == arg0) {
       return null;
     } else {
-      const nonce = createNonce.createNonce();
+      const obj = createNonce;
+      const nonce = obj.createNonce();
       const result = set.set(nonce, (arg0) => {
         set.delete(nonce);
         closure_1(arg0);
@@ -78,11 +78,16 @@ export default {
     if (null != arg0) {
       const Commands = ChatInputNativeComponent.Commands;
       const _JSON = JSON;
+      const updateTextBlocks = Commands.updateTextBlocks;
       const json = JSON.stringify(arg1);
-      Commands.updateTextBlocks(arg0, json, arg2);
+      updateTextBlocks(arg0, json, arg2);
     }
   },
   replaceRange(arg0, keepCursorPosition) {
+    let _location;
+    let length;
+    let nodes;
+    let text;
     ({ location: _location, length, text, nodes } = keepCursorPosition);
     if (nodes === undefined) {
       nodes = [];
@@ -99,3 +104,6 @@ export default {
     }
   },
 };
+let result = size.fileFinishedImporting("modules/chat_input/native/ChatInputNativeCommands.tsx");
+
+export default obj;

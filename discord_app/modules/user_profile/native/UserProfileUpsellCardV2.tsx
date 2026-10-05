@@ -1,42 +1,53 @@
 // discord_app/modules/user_profile/native/UserProfileUpsellCardV2.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
-import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import ColorConstants from "../../colors/native/ColorConstants.tsx";
+import NitroWheelIcon2 from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import react from "../../../../_runtime/00019_react.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const Gradients = fn(6938).Gradients;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { outer: { borderRadius: nativeDefault.radii.lg, padding: 1 }, inner: null, text: null, textCenter: null };
-let obj3 = { borderRadius: nativeDefault.radii.lg, padding: 1 };
-obj2.inner = {
+let hasOwnProperty;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
+const View = react_native.View;
+const Gradients = ColorConstants.Gradients;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { outer: obj2, inner: obj3, text: obj4, textCenter: { textAlign: "center" } };
+obj2 = { borderRadius: nativeDefault.radii.lg, padding: 1 };
+createStyles = createStyles.createStyles;
+obj3 = {
   borderRadius: nativeDefault.radii.lg - 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   padding: nativeDefault.space.PX_16,
 };
-let obj4 = {
-  borderRadius: nativeDefault.radii.lg - 1,
-  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
-  padding: nativeDefault.space.PX_16,
-};
-obj2.text = { marginBottom: nativeDefault.space.PX_12 };
-obj2.textCenter = { textAlign: "center" };
-let closure_7 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj5 = { marginBottom: nativeDefault.space.PX_12 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileUpsellCardV2.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+obj4 = { marginBottom: nativeDefault.space.PX_12 };
+let closure_7 = createStyles(obj);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(25);
+      let buttonText;
+      let buttonVariant;
+      let children;
+      let disabled;
+      let items;
+      let loading;
+      let onButtonPress;
+      let onLayout;
+      let style;
+      let text;
+      let textAlign;
+      const obj = react2;
+      const cResult = obj.c(25);
       ({ text, textAlign, buttonText, onButtonPress, buttonVariant, disabled, loading, children, style, onLayout } =
         arg0);
       let str = "left";
@@ -50,23 +61,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp4 = undefined !== disabled && disabled;
       const tmp6 = closure_7();
       if (cResult[0] === style) {
+        let tmp7;
         if (cResult[1] === tmp6.outer) {
-          let tmp7 = cResult[2];
+          tmp7 = cResult[2];
         }
         if (cResult[3] === tmp6.text) {
-          if (cResult[4] === tmp8) {
-            let tmp9 = cResult[5];
+          let tmp9;
+          if (cResult[4] === ("center" === str && tmp6.textCenter)) {
+            tmp9 = cResult[5];
           }
           if (cResult[6] === tmp9) {
+            let tmp10;
+            let tmp14;
             if (cResult[7] === text) {
-              let tmp10 = cResult[8];
+              tmp10 = cResult[8];
             }
             const _Symbol = Symbol;
             if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
               const obj2 = { color: nativeDefault.colors.WHITE, size: "xs" };
-              const tmp17 = hasOwnProperty(NitroWheelIcon.NitroWheelIcon, obj2);
+              const NitroWheelIcon = NitroWheelIcon2.NitroWheelIcon;
+              const tmp17 = hasOwnProperty(NitroWheelIcon, obj2);
               cResult[9] = tmp17;
-              let tmp14 = tmp17;
+              tmp14 = tmp17;
             } else {
               tmp14 = cResult[9];
             }
@@ -75,21 +91,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[10] === buttonText) {
               if (cResult[11] === str2) {
-                if (cResult[12] === tmp5) {
+                if (cResult[12] === (undefined !== loading && loading)) {
                   if (cResult[13] === onButtonPress) {
+                    let tmp18;
                     if (cResult[14] === tmp4) {
-                      let tmp18 = cResult[15];
+                      tmp18 = cResult[15];
                     }
                     if (cResult[16] === children) {
                       if (cResult[17] === tmp6.inner) {
                         if (cResult[18] === tmp18) {
+                          let tmp21;
                           if (cResult[19] === tmp10) {
-                            let tmp21 = cResult[20];
+                            tmp21 = cResult[20];
                           }
                           if (cResult[21] === onLayout) {
                             if (cResult[22] === tmp21) {
+                              let tmp25;
                               if (cResult[23] === tmp7) {
-                                let tmp25 = cResult[24];
+                                tmp25 = cResult[24];
                               }
                               return tmp25;
                             }
@@ -102,7 +121,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             onLayout,
                             children: tmp21,
                           };
-                          const tmp30 = hasOwnProperty(LinearGradientDefault, obj3);
+                          const tmp28 = LinearGradientDefault;
+                          const tmp30 = hasOwnProperty(tmp28, obj3);
                           cResult[21] = onLayout;
                           cResult[22] = tmp21;
                           cResult[23] = tmp7;
@@ -111,10 +131,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                     }
-                    const obj4 = { style: tmp6.inner, children: null };
-                    const items = [tmp10, tmp18, children];
-                    obj4.children = items;
-                    const tmp24 = timestampProducer(View, obj4);
+                    const obj4 = { style: tmp6.inner, children: items };
+                    items = [tmp10, tmp18, children];
+                    const tmp24 = metroRequire(View, obj4);
                     cResult[16] = children;
                     cResult[17] = tmp6.inner;
                     cResult[18] = tmp18;
@@ -130,14 +149,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               text: buttonText,
               onPress: onButtonPress,
               variant: str2,
-              loading: tmp5,
+              loading: undefined !== loading && loading,
               disabled: tmp4,
               grow: true,
             };
             const tmp20 = hasOwnProperty(components_Button_Button.Button, obj5);
             cResult[10] = buttonText;
             cResult[11] = str2;
-            cResult[12] = tmp5;
+            cResult[12] = undefined !== loading && loading;
             cResult[13] = onButtonPress;
             cResult[14] = tmp4;
             cResult[15] = tmp20;
@@ -168,67 +187,85 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = items2;
       tmp7 = items2;
     }
-  : (children) => {
-      let str = children.textAlign;
+  : (textAlign) => {
+      let NitroWheelIcon;
+      let buttonText;
+      let buttonVariant;
+      let children;
+      let items;
+      let items2;
+      let obj2;
+      let obj4;
+      let onButtonPress;
+      let onLayout;
+      let style;
+      let str = textAlign.textAlign;
+      const text = textAlign.text;
       if (str === undefined) {
         str = "left";
       }
-      ({ buttonVariant, buttonText, onButtonPress } = children);
+      ({ buttonVariant, buttonText, onButtonPress } = textAlign);
       if (buttonVariant === undefined) {
         buttonVariant = "primary";
       }
-      let flag = children.disabled;
+      let flag = textAlign.disabled;
       if (flag === undefined) {
         flag = false;
       }
-      let flag2 = children.loading;
+      let flag2 = textAlign.loading;
       if (flag2 === undefined) {
         flag2 = false;
       }
-      ({ children, style, onLayout } = children);
+      ({ children, style, onLayout } = textAlign);
       const tmp = closure_7();
       const obj = {
         start: ConstantsIOS.HorizontalGradient.START,
         end: ConstantsIOS.HorizontalGradient.END,
         colors: Gradients.PREMIUM_TIER_2,
-        style: null,
+        style: items,
         onLayout,
-        children: null,
+        children: metroRequire(View, obj2),
       };
-      const items = [tmp.outer, style];
-      obj.style = items;
-      const obj2 = { style: tmp.inner, children: null };
+      items = [tmp.outer, style];
       const items1 = [tmp.text];
       let textCenter = "center" === str;
+      obj2 = { style: tmp.inner, children: items2 };
+      const tmp5 = LinearGradientDefault;
+      const Text = Text_Text.Text;
       if (textCenter) {
         textCenter = tmp.textCenter;
       }
       items1[1] = textCenter;
-      const items2 = [
-        hasOwnProperty(Text_Text.Text, {
+      items2 = [
+        hasOwnProperty(Text, {
           style: items1,
           variant: "text-md/normal",
           color: "text-default",
           maxFontSizeMultiplier: 2.5,
-          children: children.text,
+          children: text,
         }),
         ,
       ];
-      const obj3 = { icon: null, text: null, onPress: null, variant: null, loading: null, disabled: null, grow: true };
-      const tmp5 = LinearGradientDefault;
-      obj3.icon = hasOwnProperty(NitroWheelIcon.NitroWheelIcon, { color: nativeDefault.colors.WHITE, size: "xs" });
-      obj3.text = buttonText;
-      obj3.onPress = onButtonPress;
-      obj3.variant = buttonVariant;
-      obj3.loading = flag2;
+      const obj3 = {
+        icon: hasOwnProperty(NitroWheelIcon, obj4),
+        text: buttonText,
+        onPress: onButtonPress,
+        variant: buttonVariant,
+        loading: flag2,
+        disabled: flag,
+        grow: true,
+      };
+      const Button = components_Button_Button.Button;
+      obj4 = { color: nativeDefault.colors.WHITE, size: "xs" };
+      NitroWheelIcon = NitroWheelIcon2.NitroWheelIcon;
       if (!flag) {
         flag = flag2;
       }
-      obj3.disabled = flag;
-      items2[1] = hasOwnProperty(components_Button_Button.Button, obj3);
+      items2[1] = hasOwnProperty(Button, obj3);
       items2[2] = children;
-      obj2.children = items2;
-      obj.children = timestampProducer(View, obj2);
       return hasOwnProperty(tmp5, obj);
     };
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileUpsellCardV2.tsx");
+
+export default tmp5;
 export const GRADIENT_BORDER_WIDTH = 1;

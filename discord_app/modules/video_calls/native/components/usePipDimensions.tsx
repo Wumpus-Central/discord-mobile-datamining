@@ -1,23 +1,26 @@
 // discord_app/modules/video_calls/native/components/usePipDimensions.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import DeviceOrientation from "../../../device/native/DeviceOrientation.tsx";
 import useIsViewingActivity from "../../../activities/native/useIsViewingActivity.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
 let c4 = 0.5625;
 let c5 = 0.25;
 let c6 = 0.5;
 let c7 = 400;
 let c8 = 300;
-const ReactCompilerGating = fn(558);
-let size = fn(2);
-const result = size.fileFinishedImporting("modules/video_calls/native/components/usePipDimensions.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(5);
+      let channelId;
+      let forcedOrientation;
+      let height;
+      let tmp5;
+      let width;
+      const obj = react2;
+      const cResult = obj.c(5);
       ({ channelId, forcedOrientation } = arg0);
       let tmp4 = null;
       if (undefined !== forcedOrientation) {
@@ -27,21 +30,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { channelId };
         cResult[0] = channelId;
         cResult[1] = obj2;
-        let tmp5 = obj2;
+        tmp5 = obj2;
       } else {
         tmp5 = cResult[1];
       }
-      const isViewingActivity = useIsViewingActivity.useIsViewingActivity(tmp5);
       const tmpResult = useIsViewingActivity;
+      const isViewingActivity = tmpResult.useIsViewingActivity(tmp5);
       ({ width, height } = useWindowDimensionsDefault());
       let tmp8 = width > height;
+      useWindowDimensionsDefault();
       let tmp9 = tmp4 === DeviceOrientation.OrientationType.LANDSCAPE;
       if (!tmp9) {
-        let tmp10 = tmp8;
-        if (tmp8) {
-          tmp10 = tmp4 !== DeviceOrientation.OrientationType.PORTRAIT;
-        }
-        tmp9 = tmp10;
+        tmp9 = tmp8 && tmp4 !== DeviceOrientation.OrientationType.PORTRAIT;
+        tmp8 && tmp4 !== DeviceOrientation.OrientationType.PORTRAIT;
       }
       let num3 = 96;
       let num4 = 96;
@@ -83,26 +84,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[2] === num3) {
+        let tmp31;
         if (cResult[3] === num4) {
-          let tmp31 = cResult[4];
+          tmp31 = cResult[4];
         }
         return tmp31;
       }
-      const size = { height: num3, width: num4 };
+      size = { height: num3, width: num4 };
       cResult[2] = num3;
       cResult[3] = num4;
       cResult[4] = size;
       tmp31 = size;
-      const tmp7 = useWindowDimensionsDefault();
     }
-  : (channelId) => {
-      let forcedOrientation = channelId.forcedOrientation;
+  : (forcedOrientation) => {
+      forcedOrientation = forcedOrientation.forcedOrientation;
+      const channelId = forcedOrientation.channelId;
       if (forcedOrientation === undefined) {
         forcedOrientation = null;
       }
       let width;
-      const isViewingActivity = forcedOrientation(width[3]).useIsViewingActivity({ channelId: channelId.channelId });
-      const size = isViewingActivity(width[4])();
+      const obj = forcedOrientation(width[3]);
+      const isViewingActivity = obj.useIsViewingActivity({ channelId });
+      size = isViewingActivity(width[4])();
       width = size.width;
       let height = size.height;
       const items = [height, width, forcedOrientation, isViewingActivity];
@@ -110,11 +113,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp3 = width > height;
         let tmp7 = forcedOrientation === DeviceOrientation.OrientationType.LANDSCAPE;
         if (!tmp7) {
-          let tmp8 = tmp3;
-          if (tmp3) {
-            tmp8 = forcedOrientation !== DeviceOrientation.OrientationType.PORTRAIT;
-          }
-          tmp7 = tmp8;
+          tmp7 = tmp3 && forcedOrientation !== DeviceOrientation.OrientationType.PORTRAIT;
+          tmp3 && forcedOrientation !== DeviceOrientation.OrientationType.PORTRAIT;
         }
         height = 96;
         width = 96;
@@ -158,3 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return { height, width };
       }, items);
     };
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/video_calls/native/components/usePipDimensions.tsx");
+
+export default tmp2;

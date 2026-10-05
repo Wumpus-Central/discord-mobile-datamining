@@ -1,71 +1,85 @@
 // discord_app/modules/user_required_action/native/NewTermsModal.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl10 from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
-import showSimpleActionSheet from "../../action_sheet/native/showSimpleActionSheet.tsx";
+import showSimpleActionSheet2 from "../../action_sheet/native/showSimpleActionSheet.tsx";
 import useTrackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import AssetRegistryDefault from "../../../../_runtime/09290_AssetRegistry.js";
+import TouchableHitBoxDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
 import UserRequiredActionStore from "../../../stores/UserRequiredActionStore.tsx";
+import Constants from "../../../Constants.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
+let c2, c3, dependencyMap;
 
-require = fn;
+let c10;
+let closure_12;
+let map1;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+let obj7;
+let unpackModuleId;
 function handleTouch() {
-  React5.dismiss();
+  metroImportDefault.dismiss();
 }
 function handleMoreActions() {
-  const obj2 = { key: "NewTermsModalMore", options: null, hasIcons: false };
-  const obj3 = { label: null, isDestructive: true, onPress: null };
-  const intl = util.intl;
-  obj3.label = intl.string(util.t["2jxGer"]);
-  obj3.onPress = function onPress() {
-    return AuthenticationActionCreatorsDefault.logout("new_terms_modal");
+  let intl;
+  let items;
+  let obj = { key: "NewTermsModalMore", options: items, hasIcons: false };
+  const obj2 = {
+    label: intl.string(intl10.t["2jxGer"]),
+    isDestructive: true,
+    onPress() {
+      const obj = AuthenticationActionCreatorsDefault;
+      return obj.logout("new_terms_modal");
+    },
   };
-  const items = [obj3];
-  obj2.options = items;
-  const result = showSimpleActionSheet.showSimpleActionSheet(obj2);
+  const showSimpleActionSheet = showSimpleActionSheet2.showSimpleActionSheet;
+  showSimpleActionSheet2;
+  intl = intl10.intl;
+  items = [obj2];
+  const result = showSimpleActionSheet(obj);
 }
-get_ActivityIndicator = fn(17);
-({ View: metroRequire, Keyboard: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const Constants = fn(1085);
-({ MarketingURLs: c10, UserRequiredActions: closure_11 } = Constants);
-const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  contentContainer: {
-    paddingHorizontal: nativeDefault.space.PX_16,
-    flexGrow: 1,
-    display: "flex",
-    alignContent: "center",
-    justifyContent: "center",
-  },
+({ View: metroRequire, Keyboard: metroImportDefault, ScrollView: metroImportAll } = react_native);
+({ MarketingURLs: c10, UserRequiredActions: unpackModuleId } = Constants);
+({ jsx: closure_12, jsxs: map1 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
+  contentContainer: obj2,
   scrollView: { flex: 1 },
-  container: null,
-  description: null,
-  agreementDescription: null,
-  navbarRight: null,
-  stickyFooter: null,
+  container: obj3,
+  description: obj4,
+  agreementDescription: obj5,
+  navbarRight: obj6,
+  stickyFooter: obj7,
 };
-let obj3 = {
+obj2 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   flexGrow: 1,
   display: "flex",
   alignContent: "center",
   justifyContent: "center",
 };
-obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-obj2.description = { marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_24 };
-let obj5 = { marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_24 };
-obj2.agreementDescription = { marginTop: nativeDefault.space.PX_24 };
-let obj6 = { marginTop: nativeDefault.space.PX_24 };
-obj2.navbarRight = { position: "absolute", right: 0, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let obj7 = { position: "absolute", right: 0, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj2.stickyFooter = {
+createStyles = createStyles.createStyles;
+obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj4 = { marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_24 };
+obj5 = { marginTop: nativeDefault.space.PX_24 };
+obj6 = { position: "absolute", right: 0, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+obj7 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_16,
   marginTop: nativeDefault.space.PX_24,
@@ -73,45 +87,41 @@ obj2.stickyFooter = {
   borderTopWidth: 1,
   borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
 };
-let closure_14 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj8 = {
-  paddingHorizontal: nativeDefault.space.PX_16,
-  paddingVertical: nativeDefault.space.PX_16,
-  marginTop: nativeDefault.space.PX_24,
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-  borderTopWidth: 1,
-  borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
-};
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/user_required_action/native/NewTermsModal.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_14 = createStyles(obj);
+const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = require("c").c(50);
-      closure_14();
-      let obj = require("c");
+      let bottom;
+      let closure_2;
+      let required_action;
+      let tmp12;
+      let tmp16;
+      let tmp17;
+      let top;
+      let tmp = required_action;
+      let obj = required_action(576);
+      const cResult = obj.c(50);
+      const tmp4 = closure_14();
       ({ bottom, top } = useSafeAreaInsetsDefault());
+      useSafeAreaInsetsDefault();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const action = UserRequiredActionStore.getAction();
         cResult[0] = action;
-        let first = action;
+        required_action = action;
       } else {
-        first = cResult[0];
+        required_action = cResult[0];
       }
-      _require = first;
-      const tmp6 = useSafeAreaInsetsDefault();
-      [r10034, importDefault] = noop.useState(false);
-      const tmp10 = _slicedToArray(noop.useState(false), 2);
-      require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(
-        require("useBackPressHandler").BackPressHandler.minimize,
-      );
+      [r10034, importDefault] = react.useState(false);
+      _slicedToArray(react.useState(false), 2);
+      const tmpResult = tmp(6016);
+      tmpResult.useNavigatorBackPressHandler(tmp(5780).BackPressHandler.minimize);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        _require = asyncGeneratorStep(async () => {
+        required_action = _asyncToGenerator(async () => {
+          let closure_1;
+          let obj2;
           if (c3 === 2) {
             c3 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
+          } else if (tmp3 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -122,6 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           } else {
             try {
+              let tmp;
               c3 = 2;
               if (0 === c2) {
                 if (arg0 === 1) {
@@ -132,11 +143,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  closure_128_0 = undefined;
-                  tmp5(true);
+                  tmp = undefined;
+                  tmp4(true);
                   c2 = 1;
                   c3 = 1;
-                  const obj5 = { value: tmp2(dependencyMap[17]).acceptAgreements(), done: false };
+                  const obj5 = { value: obj2.acceptAgreements(), done: false };
+                  obj2 = tmp(closure_2_2[17]);
                   return obj5;
                 }
               } else if (arg0 === 1) {
@@ -147,29 +159,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj = { value, done: true };
                 return obj;
               } else {
-                closure_128_0 = value;
-                tmp5(closure_128_0);
+                tmp = value;
+                tmp4(tmp);
                 c3 = 3;
                 return { value: "IconComponent", done: null };
               }
-            } catch (tmp15) {
-              c3 = tmp;
-              throw tmp15;
+            } catch (tmp14) {
+              c3 = 3;
+              throw tmp14;
             }
           }
         });
         const fn = function () {
-          const self = this;
-          const apply = closure_0.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
+          return closure_0(...arguments);
         };
         cResult[1] = fn;
-        let tmp12 = fn;
+        tmp12 = fn;
       } else {
         tmp12 = cResult[1];
       }
@@ -177,78 +182,66 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         class B {
           constructor() {
-            if (closure_0 === UserRequiredActions.AGREEMENTS) {
-              tmp = closure_2;
-              tmp2 = closure_2();
+            if (first === unpackModuleId.AGREEMENTS) {
+              closure_2();
             }
-            return;
           }
         }
         cResult[2] = B;
       } else {
         class B {
           constructor() {
-            if (closure_0 === UserRequiredActions.AGREEMENTS) {
-              tmp = closure_2;
-              tmp2 = closure_2();
+            if (first === unpackModuleId.AGREEMENTS) {
+              closure_2();
             }
-            return;
           }
         }
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class B {
           constructor() {
-            if (closure_0 === UserRequiredActions.AGREEMENTS) {
-              tmp = closure_2;
-              tmp2 = closure_2();
+            if (first === unpackModuleId.AGREEMENTS) {
+              closure_2();
             }
-            return;
           }
         }
         tmp18[0] = tmp(1260).ImpressionTypes.VIEW;
         tmp18[1] = tmp(1260).ImpressionNames.USER_AGREEMENTS;
-        const obj2 = { required_action: first };
+        let obj2 = { required_action };
         tmp18[2] = obj2;
         let obj3 = {};
         const items = [];
         cResult[3] = tmp18;
         cResult[4] = obj3;
         cResult[5] = items;
-        let tmp17 = items;
-        let tmp16 = obj3;
+        tmp17 = items;
+        tmp16 = obj3;
       } else {
         class B {
           constructor() {
-            if (closure_0 === UserRequiredActions.AGREEMENTS) {
-              tmp = closure_2;
-              tmp2 = closure_2();
+            if (first === unpackModuleId.AGREEMENTS) {
+              closure_2();
             }
-            return;
           }
         }
         tmp16 = cResult[4];
         tmp17 = cResult[5];
       }
       useTrackImpressionDefault(tmp18, tmp16, tmp17);
-      if (null == first) {
+      if (null == required_action) {
         class B {
           constructor() {
-            if (closure_0 === UserRequiredActions.AGREEMENTS) {
-              tmp = closure_2;
-              tmp2 = closure_2();
+            if (first === unpackModuleId.AGREEMENTS) {
+              closure_2();
             }
-            return;
           }
         }
       } else {
         class B {
           constructor() {
-            if (closure_0 === UserRequiredActions.AGREEMENTS) {
-              tmp = closure_2;
-              tmp2 = closure_2();
+            if (first === unpackModuleId.AGREEMENTS) {
+              closure_2();
             }
-            return;
           }
         }
         let obj4 = { paddingTop: top, paddingBottom: bottom };
@@ -256,22 +249,49 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = top;
         cResult[8] = obj4;
       }
-      const tmpResult = require("useNavigatorBackPressHandler");
     }
   : () => {
-      const tmp = closure_14();
+      let Button;
+      let action;
+      let closure_1;
+      let closure_2;
+      let first;
+      let intl;
+      let intl2;
+      let intl3;
+      let intl4;
+      let intl5;
+      let intl6;
+      let intl7;
+      let intl8;
+      let intl9;
+      let items;
+      let items1;
+      let items2;
+      let items3;
+      let items4;
+      let obj10;
+      let obj12;
+      let obj14;
+      let obj16;
+      let obj19;
+      let obj8;
+      let tmp = closure_14();
+      const tmp3 = dependencyMap;
       const rect = useSafeAreaInsetsDefault();
       const top = rect.top;
-      const memo = noop.useMemo(() => action.getAction(), []);
-      const tmp5 = _slicedToArray(noop.useState(false), 2);
-      importDefault = tmp5[1];
-      memo(6016).useNavigatorBackPressHandler(memo(5780).BackPressHandler.minimize);
-      dependencyMap = noop.useCallback(
-        asyncGeneratorStep(async () => {
+      const bottom = rect.bottom;
+      const memo = react.useMemo(() => action.getAction(), []);
+      [first, importDefault] = react.useState(false);
+      let obj = memo(6016);
+      obj.useNavigatorBackPressHandler(memo(5780).BackPressHandler.minimize);
+      dependencyMap = react.useCallback(
+        _asyncToGenerator(async () => {
+          let closure_0;
           if (c3 === 2) {
             c3 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
+          } else if (tmp3 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -282,8 +302,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           } else {
             try {
+              let tmp;
               c3 = 2;
-              if (0 === dependencyMap) {
+              if (0 === c2) {
                 if (arg0 === 1) {
                   c3 = 3;
                   throw value;
@@ -292,11 +313,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  closure_128_0 = undefined;
-                  tmp5(true);
-                  dependencyMap = 1;
+                  tmp = undefined;
+                  tmp4(true);
+                  const obj2 = tmp(c2[17]);
+                  c2 = 1;
                   c3 = 1;
-                  const obj5 = { value: tmp2(dependencyMap[17]).acceptAgreements(), done: false };
+                  const obj5 = { value: obj2.acceptAgreements(), done: false };
                   return obj5;
                 }
               } else if (arg0 === 1) {
@@ -307,107 +329,116 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj = { value, done: true };
                 return obj;
               } else {
-                closure_128_0 = value;
-                closure_129_1(closure_128_0);
+                tmp = value;
+                closure_129_1(tmp);
                 c3 = 3;
                 return { value: "IconComponent", done: null };
               }
-            } catch (tmp15) {
-              c3 = tmp;
-              throw tmp15;
+            } catch (tmp14) {
+              c3 = 3;
+              throw tmp14;
             }
           }
         }),
         [],
       );
-      const obj2 = { type: null, name: null, properties: null };
-      let obj = memo(6016);
-      obj2.type = memo(1260).ImpressionTypes.VIEW;
-      obj2.name = memo(1260).ImpressionNames.USER_AGREEMENTS;
-      obj2.properties = { required_action: memo };
-      useTrackImpressionDefault(obj2, {}, []);
-      let tmp10 = null;
+      let obj2 = {
+        type: memo(1260).ImpressionTypes.VIEW,
+        name: memo(1260).ImpressionNames.USER_AGREEMENTS,
+        properties: { required_action: memo },
+      };
+      const tmp9 = useTrackImpressionDefault;
+      tmp9(obj2, {}, []);
+      let tmp11 = null;
       if (null != memo) {
-        let obj3 = { style: null, children: null };
-        const items = [tmp.container];
-        let obj4 = { paddingTop: top, paddingBottom: rect.bottom };
+        let obj3 = { style: items, children: items3 };
+        items = [tmp.container];
+        let obj4 = { paddingTop: top, paddingBottom: bottom };
         items[1] = obj4;
-        obj3.style = items;
-        let obj5 = { style: null, contentContainerStyle: null, onTouchStart: null, children: null };
-        const items1 = [tmp.scrollView];
-        obj5.style = items1;
-        obj5.contentContainerStyle = tmp.contentContainer;
-        obj5.onTouchStart = handleTouch;
-        const obj6 = { maxFontSizeMultiplier: 2, variant: "heading-xxl/bold", children: null };
-        const intl = tmp6(1126).intl;
-        obj6.children = intl.string(tmp6(1126).t["7glvXu"]);
-        const items2 = [closure_12(tmp6(4886).Text, obj6), , , , , ,];
-        const obj7 = { variant: "text-md/normal", style: tmp.description, children: null };
-        const intl2 = tmp6(1126).intl;
-        const obj8 = { url: constants.TERMS_SUMMARY };
-        obj7.children = intl2.format(tmp6(1126).t.CN0Hvb, obj8);
-        items2[1] = closure_12(tmp6(4886).Text, obj7);
-        const obj9 = { variant: "text-md/normal", children: null };
-        const intl3 = tmp6(1126).intl;
-        const obj10 = { url: constants.TERMS };
-        obj9.children = intl3.format(tmp6(1126).t.iw0hFi, obj10);
-        items2[2] = closure_12(tmp6(4886).Text, obj9);
-        const obj11 = { variant: "text-md/normal", children: null };
-        const intl4 = tmp6(1126).intl;
-        const obj12 = { url: constants.PAID_TERMS };
-        obj11.children = intl4.format(tmp6(1126).t["36klnD"], obj12);
-        items2[3] = closure_12(tmp6(4886).Text, obj11);
-        const obj13 = { variant: "text-md/normal", children: null };
-        const intl5 = tmp6(1126).intl;
-        const obj14 = { url: constants.PRIVACY };
-        obj13.children = intl5.format(tmp6(1126).t.TquFBF, obj14);
-        items2[4] = closure_12(tmp6(4886).Text, obj13);
-        const obj15 = { variant: "text-md/normal", children: null };
-        const intl6 = tmp6(1126).intl;
-        const obj16 = { url: constants.GUIDELINES };
-        obj15.children = intl6.format(tmp6(1126).t.ia96Tb, obj16);
-        items2[5] = closure_12(tmp6(4886).Text, obj15);
-        const obj17 = { variant: "text-md/normal", style: tmp.agreementDescription, children: null };
-        const intl7 = tmp6(1126).intl;
-        obj17.children = intl7.string(tmp6(1126).t["+USXQE"]);
-        items2[6] = closure_12(tmp6(4886).Text, obj17);
-        obj5.children = items2;
-        const items3 = [closure_13(closure_8, obj5), ,];
-        const obj18 = { style: tmp.stickyFooter, children: null };
-        const obj19 = {
-          loading: tmp5[0],
+        let obj5 = {
+          style: items1,
+          contentContainerStyle: tmp.contentContainer,
+          onTouchStart: handleTouch,
+          children: items2,
+        };
+        items1 = [tmp.scrollView];
+        const obj6 = {
+          maxFontSizeMultiplier: 2,
+          variant: "heading-xxl/bold",
+          children: intl.string(memo(1126).t["7glvXu"]),
+        };
+        const Text = tmp7(4886).Text;
+        intl = tmp7(1126).intl;
+        items2 = [closure_12(Text, obj6), , , , , ,];
+        const obj7 = {
+          variant: "text-md/normal",
+          style: tmp.description,
+          children: intl2.format(memo(1126).t.CN0Hvb, obj8),
+        };
+        const Text2 = tmp7(4886).Text;
+        intl2 = tmp7(1126).intl;
+        obj8 = { url: constants.TERMS_SUMMARY };
+        items2[1] = closure_12(Text2, obj7);
+        const obj9 = { variant: "text-md/normal", children: intl3.format(memo(1126).t.iw0hFi, obj10) };
+        const Text3 = tmp7(4886).Text;
+        intl3 = tmp7(1126).intl;
+        obj10 = { url: constants.TERMS };
+        items2[2] = closure_12(Text3, obj9);
+        const obj11 = { variant: "text-md/normal", children: intl4.format(memo(1126).t["36klnD"], obj12) };
+        const Text4 = tmp7(4886).Text;
+        intl4 = tmp7(1126).intl;
+        obj12 = { url: constants.PAID_TERMS };
+        items2[3] = closure_12(Text4, obj11);
+        const obj13 = { variant: "text-md/normal", children: intl5.format(memo(1126).t.TquFBF, obj14) };
+        const Text5 = tmp7(4886).Text;
+        intl5 = tmp7(1126).intl;
+        obj14 = { url: constants.PRIVACY };
+        items2[4] = closure_12(Text5, obj13);
+        const obj15 = { variant: "text-md/normal", children: intl6.format(memo(1126).t.ia96Tb, obj16) };
+        const Text6 = tmp7(4886).Text;
+        intl6 = tmp7(1126).intl;
+        obj16 = { url: constants.GUIDELINES };
+        items2[5] = closure_12(Text6, obj15);
+        const obj17 = {
+          variant: "text-md/normal",
+          style: tmp.agreementDescription,
+          children: intl7.string(memo(1126).t["+USXQE"]),
+        };
+        const Text7 = tmp7(4886).Text;
+        intl7 = tmp7(1126).intl;
+        items2[6] = closure_12(Text7, obj17);
+        items3 = [closure_13(closure_8, obj5), ,];
+        const obj18 = { style: tmp.stickyFooter, children: closure_12(Button, obj19) };
+        obj19 = {
+          loading: first,
           onPress() {
-            if (memo === constants2.AGREEMENTS) {
-              dependencyMap();
+            if (memo === unpackModuleId.AGREEMENTS) {
+              closure_2();
             }
           },
-          text: null,
+          text: intl8.string(memo(1126).t["+TBKL1"]),
         };
-        const intl8 = tmp6(1126).intl;
-        obj19.text = intl8.string(tmp6(1126).t["+TBKL1"]);
-        obj18.children = closure_12(tmp6(5594).Button, obj19);
+        Button = tmp7(5594).Button;
+        intl8 = tmp7(1126).intl;
         items3[1] = closure_12(closure_6, obj18);
         const obj20 = {
-          style: null,
-          source: null,
-          color: null,
-          onPress: null,
+          style: items4,
+          source: AssetRegistryDefault,
+          color: tmp.navbarRight.tintColor,
+          onPress: handleMoreActions,
           accessibilityRole: "button",
-          accessibilityLabel: null,
+          accessibilityLabel: intl9.string(memo(1126).t["UKOtz+"]),
         };
-        const items4 = [tmp.navbarRight];
+        items4 = [tmp.navbarRight];
         const obj21 = { top };
         items4[1] = obj21;
-        obj20.style = items4;
-        obj20.source = tmp2(9290);
-        obj20.color = tmp.navbarRight.tintColor;
-        obj20.onPress = handleMoreActions;
-        const intl9 = tmp6(1126).intl;
-        obj20.accessibilityLabel = intl9.string(tmp6(1126).t["UKOtz+"]);
-        items3[2] = closure_12(tmp2(9442), obj20);
-        obj3.children = items3;
-        tmp10 = closure_13(closure_6, obj3);
-        const tmp2Result = tmp2(9442);
+        const tmp2Result = TouchableHitBoxDefault;
+        intl9 = tmp7(1126).intl;
+        items3[2] = closure_12(tmp2Result, obj20);
+        tmp11 = closure_13(closure_6, obj3);
       }
-      return tmp10;
+      return tmp11;
     };
+let result = size.fileFinishedImporting("modules/user_required_action/native/NewTermsModal.tsx");
+
+export default tmp6;

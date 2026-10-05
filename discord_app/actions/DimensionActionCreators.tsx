@@ -2,18 +2,18 @@
 import DispatcherDefault from "../Dispatcher.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
-let result = size.fileFinishedImporting("actions/DimensionActionCreators.tsx");
-
-export default {
+let obj = {
   updateChannelDimensions(id, eventTimestamp, scrollTop, scrollHeight, offsetHeight, fn) {
-    DispatcherDefault.dispatch({
+    const obj = DispatcherDefault;
+    const obj2 = {
       type: "UPDATE_CHANNEL_DIMENSIONS",
       channelId: id,
       timestamp: eventTimestamp,
       scrollTop,
       scrollHeight,
       offsetHeight,
-    });
+    };
+    obj.dispatch(obj2);
     if (fn != null) {
       fn();
     }
@@ -23,23 +23,29 @@ export default {
     if (arg2 === undefined) {
       items = [];
     }
-    DispatcherDefault.dispatch({ type: "UPDATE_CHANNEL_LIST_DIMENSIONS", guildId, scrollTop, channelIds: items });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "UPDATE_CHANNEL_LIST_DIMENSIONS", guildId, scrollTop, channelIds: items };
+    obj.dispatch(obj2);
   },
   channelListScrollTo(guildId, dMFromUserId) {
-    DispatcherDefault.dispatch({
-      type: "UPDATE_CHANNEL_LIST_DIMENSIONS",
-      guildId,
-      scrollTo: dMFromUserId,
-      channelIds: [],
-    });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "UPDATE_CHANNEL_LIST_DIMENSIONS", guildId, scrollTo: dMFromUserId, channelIds: [] };
+    obj.dispatch(obj2);
   },
   clearChannelListScrollTo(guildId) {
-    DispatcherDefault.dispatch({ type: "UPDATE_CHANNEL_LIST_DIMENSIONS", guildId, scrollTo: null, channelIds: [] });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "UPDATE_CHANNEL_LIST_DIMENSIONS", guildId, scrollTo: null, channelIds: [] };
+    obj.dispatch(obj2);
   },
   clearChannelDimensions(channelId, fn) {
     const result = this.updateChannelDimensions(channelId, Date.now(), null, null, null, fn);
   },
   updateGuildListScrollTo(scrollTop) {
-    DispatcherDefault.dispatch({ type: "UPDATE_GUILD_LIST_DIMENSIONS", scrollTop });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "UPDATE_GUILD_LIST_DIMENSIONS", scrollTop };
+    obj.dispatch(obj2);
   },
 };
+let result = size.fileFinishedImporting("actions/DimensionActionCreators.tsx");
+
+export default obj;

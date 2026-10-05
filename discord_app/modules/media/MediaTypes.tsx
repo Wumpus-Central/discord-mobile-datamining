@@ -4,27 +4,32 @@ import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import Server from "../../flow/Server.tsx";
 import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
-import size from "../../../_runtime/metro/00002__.js";
+import size_mod from "../../../_runtime/metro/00002__.js";
 
 function messageAttachmentToUnfurledMediaItem(flags) {
-  const obj = FlagUtils;
+  let obj;
+  let tmp8;
   let num = flags.flags;
+  const hasFlag = FlagUtils.hasFlag;
+  FlagUtils;
   if (num == null) {
     num = 0;
   }
   let num2 = 0;
-  if (obj.hasFlag(num, MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA)) {
+  if (hasFlag(num, MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA)) {
     num2 = obj.EXPLICIT | 0;
   }
   let num3 = flags.flags;
+  const hasFlag2 = FlagUtils.hasFlag;
+  FlagUtils;
   if (num3 == null) {
     num3 = 0;
   }
   let num4 = 0;
-  if (tmpResult.hasFlag(num3, MessageAttachmentFlags.IS_ANIMATED)) {
+  if (hasFlag2(num3, MessageAttachmentFlags.IS_ANIMATED)) {
     num4 = obj2.IS_ANIMATED | 0;
   }
-  const size = {
+  size = {
     url: flags.url,
     proxyUrl: flags.proxy_url,
     height: flags.height,
@@ -34,21 +39,20 @@ function messageAttachmentToUnfurledMediaItem(flags) {
     placeholder: flags.placeholder,
     placeholderVersion: flags.placeholder_version,
     loadingState: Server.UnfurledMediaLoadingState.LOADED_SUCCESS,
-    contentScanMetadata: null,
-    flags: null,
+    contentScanMetadata: tmp8,
+    flags: num4,
   };
-  let tmp6;
+  tmp8 = undefined;
   if (null != flags.content_scan_version) {
-    obj2 = { version: flags.content_scan_version, flags: num2 };
-    tmp6 = obj2;
+    obj = { version: flags.content_scan_version, flags: num2 };
+    tmp8 = obj;
   }
-  size.contentScanMetadata = tmp6;
-  size.flags = num4;
   return size;
 }
 const MessageAttachmentFlags = Constants.MessageAttachmentFlags;
 const ContentScanFlags = { EXPLICIT: 1, [1]: "EXPLICIT", GORE: 2, [2]: "GORE", SELF_HARM: 4, [4]: "SELF_HARM" };
 let obj2 = { IS_ANIMATED: 1, [1]: "IS_ANIMATED" };
+let size = size_mod;
 const result = size.fileFinishedImporting("modules/media/MediaTypes.tsx");
 
 export { ContentScanFlags };
@@ -67,7 +71,9 @@ export const toContentScanMetadata = function toContentScanMetadata(version) {
 };
 export const UnfurledMediaItemFlags = obj2;
 export const toUnfurledMediaItem = function toUnfurledMediaItem(media) {
-  const size = {
+  let num;
+  let tmp;
+  size = {
     url: media.url,
     proxyUrl: media.proxy_url,
     height: media.height,
@@ -77,47 +83,48 @@ export const toUnfurledMediaItem = function toUnfurledMediaItem(media) {
     contentType: media.content_type,
     originalContentType: media.original_content_type,
     loadingState: media.loading_state,
-    contentScanMetadata: null,
-    flags: null,
+    contentScanMetadata: tmp,
+    flags: num,
   };
-  let tmp;
+  tmp = undefined;
   if (null != media.content_scan_metadata) {
-    ({ version: obj2.version, flags: obj2.flags } = media.content_scan_metadata);
-    tmp = { version: null, flags: null };
     const obj = { version: null, flags: null };
+    ({ version: obj2.version, flags: obj2.flags } = media.content_scan_metadata);
+    tmp = obj;
   }
-  size.contentScanMetadata = tmp;
-  let num = media.flags;
+  num = media.flags;
   if (num == null) {
     num = 0;
   }
-  size.flags = num;
   return size;
 };
 export { messageAttachmentToUnfurledMediaItem };
 export const getUnfurledMediaItemType = function getUnfurledMediaItemType(contentType) {
   let str = "IMAGE";
+  const obj = MediaFormatTesters;
   if (!obj.isImageContentType(contentType.contentType)) {
     let str3 = "INVALID";
+    const tmpResult = MediaFormatTesters;
     if (tmpResult.isVideoContentType(contentType.contentType)) {
       str3 = "INVALID";
       if (null != contentType.proxyUrl) {
         str3 = "INVALID";
+        const obj3 = URLUtilsDefault;
         if (null != obj3.toURLSafe(contentType.proxyUrl)) {
           str3 = "VIDEO";
         }
-        obj3 = URLUtilsDefault;
       }
     }
     str = str3;
-    tmpResult = MediaFormatTesters;
   }
   return str;
 };
 export const messageAttachmentToMediaItem = function messageAttachmentToMediaItem(found2, tmp2Result) {
-  const obj = {};
+  let str;
+  const obj = { type: str, alt: found2.description, sourceMetadata: obj3 };
   const merged = Object.assign(messageAttachmentToUnfurledMediaItem(found2));
-  let str = "IMAGE";
+  str = "IMAGE";
+  obj2 = MediaFormatTesters;
   if (!obj2.isImageFile(found2.filename)) {
     tmp2Result = MediaFormatTesters;
     let str2 = "INVALID";
@@ -126,22 +133,10 @@ export const messageAttachmentToMediaItem = function messageAttachmentToMediaIte
     }
     str = str2;
   }
-  obj.type = str;
-  obj.alt = found2.description;
-  obj.sourceMetadata = {
-    message: tmp2Result,
-    identifier: {
-      type: "attachment",
-      attachmentId: found2.id,
-      filename: found2.filename,
-      title: found2.title,
-      size: found2.size,
-    },
-  };
   return obj;
 };
 export const embedMediaToMediaItem = function embedMediaToMediaItem(thumbnail, sourceMetadata, IMAGE) {
-  const size = {
+  size = {
     type: IMAGE,
     url: thumbnail.url,
     proxyUrl: thumbnail.proxyURL,
@@ -155,17 +150,7 @@ export const embedMediaToMediaItem = function embedMediaToMediaItem(thumbnail, s
   return size;
 };
 export const isVisualUnfurledMediaItem = function isVisualUnfurledMediaItem(width) {
-  let tmp = null != width.width;
-  if (tmp) {
-    tmp = width.width > 0;
-  }
-  if (tmp) {
-    tmp = null != width.height;
-  }
-  if (tmp) {
-    tmp = width.height > 0;
-  }
-  return tmp;
+  return null != width.width && width.width > 0 && null != width.height && width.height > 0;
 };
 export const getMediaItemDisplayUrl = function getMediaItemDisplayUrl(type) {
   if (null == type) {
@@ -173,7 +158,8 @@ export const getMediaItemDisplayUrl = function getMediaItemDisplayUrl(type) {
   } else {
     if ("VIDEO" === type.type) {
       if (null != type.proxyUrl) {
-        const str = URLUtilsDefault.toURLSafe(type.proxyUrl);
+        const obj = URLUtilsDefault;
+        const str = obj.toURLSafe(type.proxyUrl);
         let str1 = null;
         if (null != str) {
           const searchParams = str.searchParams;

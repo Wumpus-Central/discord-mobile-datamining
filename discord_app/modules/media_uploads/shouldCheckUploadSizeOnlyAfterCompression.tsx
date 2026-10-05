@@ -1,11 +1,11 @@
 // discord_app/modules/media_uploads/shouldCheckUploadSizeOnlyAfterCompression.tsx
 import PremiumTypeUtils from "../../utils/PremiumTypeUtils.tsx";
 import UserStore from "../../stores/UserStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_uploads/shouldCheckUploadSizeOnlyAfterCompression.tsx");
 
 export const shouldCheckUploadSizeOnlyAfterCompression = function shouldCheckUploadSizeOnlyAfterCompression() {
-  return PremiumTypeUtils.isPremium(UserStore.getCurrentUser());
+  const obj = PremiumTypeUtils;
+  return obj.isPremium(UserStore.getCurrentUser());
 };

@@ -1,27 +1,31 @@
 // discord_app/modules/premium/native/hooks/usePremiumProductPricingString.tsx
+import PremiumConstants from "../../PremiumConstants.tsx";
 import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const PRICE_PLACEHOLDER = fn(1379).PRICE_PLACEHOLDER;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/native/hooks/usePremiumProductPricingString.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const PRICE_PLACEHOLDER = PremiumConstants.PRICE_PLACEHOLDER;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (premiumType, c3) => {
-      const cResult = require("c").c(6);
+      let closure_0;
+      const obj = require("react");
+      const cResult = obj.c(6);
       if (cResult[0] === c3) {
+        let tmp4;
+        let tmp8;
+        let tmp10;
         if (cResult[1] === premiumType) {
-          let tmp4 = cResult[2];
+          tmp4 = cResult[2];
         }
         _require = tmp4;
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [IAPStore];
           cResult[3] = items;
-          let tmp8 = items;
+          tmp8 = items;
         } else {
           tmp8 = cResult[3];
         }
@@ -31,11 +35,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           cResult[4] = tmp4;
           cResult[5] = fn;
-          let tmp10 = fn;
+          tmp10 = fn;
         } else {
           tmp10 = cResult[5];
         }
-        const stateFromStores = tmp(504).useStateFromStores(tmp8, tmp10);
+        const tmpResult = require("get initialized");
+        const stateFromStores = tmpResult.useStateFromStores(tmp8, tmp10);
         let priceString;
         if (stateFromStores != null) {
           priceString = stateFromStores.priceString;
@@ -45,23 +50,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return priceString;
       }
-      const obj = require("c");
-      const planIdForPremiumType = require("PremiumUtils").getPlanIdForPremiumType(premiumType, c3);
       const tmpResult3 = require("PremiumUtils");
-      const productIdForGift = require("ProductIds").getProductIdForGift(planIdForPremiumType);
+      const planIdForPremiumType = tmpResult3.getPlanIdForPremiumType(premiumType, c3);
+      const tmpResult4 = require("ProductIds");
+      const productIdForGift = tmpResult4.getProductIdForGift(planIdForPremiumType);
       cResult[0] = c3;
       cResult[1] = premiumType;
       cResult[2] = productIdForGift;
       tmp4 = productIdForGift;
-      const tmpResult4 = require("ProductIds");
     }
   : (premiumType, c3) => {
-      const planIdForPremiumType = require("PremiumUtils").getPlanIdForPremiumType(premiumType, c3);
+      let closure_0;
       const obj = require("PremiumUtils");
-      _require = require("ProductIds").getProductIdForGift(planIdForPremiumType);
+      const planIdForPremiumType = obj.getPlanIdForPremiumType(premiumType, c3);
       const obj2 = require("ProductIds");
+      _require = obj2.getProductIdForGift(planIdForPremiumType);
       const items = [IAPStore];
-      const stateFromStores = require("initialize").useStateFromStores(items, () => IAPStore.getProduct(closure_0));
+      const obj3 = require("get initialized");
+      const stateFromStores = obj3.useStateFromStores(items, () => IAPStore.getProduct(closure_0));
       let priceString;
       if (stateFromStores != null) {
         priceString = stateFromStores.priceString;
@@ -71,3 +77,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return priceString;
     };
+const result = size.fileFinishedImporting("modules/premium/native/hooks/usePremiumProductPricingString.tsx");
+
+export default tmp2;

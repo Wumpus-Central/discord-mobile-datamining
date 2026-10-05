@@ -1,21 +1,22 @@
 // discord_app/modules/user_settings/defs/native/DisplayNameStylesRouteSetting.tsx
 import Constants from "../../../../Constants.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import _modDef2883 from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const route = SettingBuilders.createRoute({
+const UserSettingsSections = Constants.UserSettingsSections;
+const obj = {
   useTitle() {
-    const intl = util.intl;
+    const intl = intl2.intl;
     return intl.string(_modDef2883.ZPMAlX);
   },
   parent: null,
   unsearchable: true,
   screen: {
-    route: Constants.UserSettingsSections.DISPLAY_NAME_STYLES,
+    route: UserSettingsSections.DISPLAY_NAME_STYLES,
     getComponent() {
       return require("DisplayNameStylesEditScreen").default;
     },
@@ -23,7 +24,8 @@ const route = SettingBuilders.createRoute({
   usePredicate() {
     return true;
   },
-});
+};
+const route = SettingBuilders.createRoute(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DisplayNameStylesRouteSetting.tsx");
 
 export default route;

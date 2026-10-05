@@ -5,39 +5,47 @@ import RPCHelpers from "../../RPCHelpers.tsx";
 import Constants from "../../../../Constants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+let RPCCommands;
+let RPC_APPLICATION_LOGGING_CATEGORY;
 ({ RPC_APPLICATION_LOGGING_CATEGORY, RPCCommands } = Constants);
 let closure_3 = new LoggerDefault(RPC_APPLICATION_LOGGING_CATEGORY);
-let result = size.fileFinishedImporting("modules/rpc/server/commands/logs.tsx");
-
-export default {
-  [RPCCommands.CAPTURE_LOG]: {
-    validation(string) {
-      const obj = createRpcJoiSchemaObjectDefault(string);
-      const obj2 = { level: null, message: null };
-      const requiredResult = createRpcJoiSchemaObjectDefault(string).required();
-      const stringResult = string.string();
-      obj2.level = string.string().max(10).required();
-      const maxResult = string.string().max(10);
-      const stringResult1 = string.string();
-      obj2.message = string.string().max(1000).required();
-      return requiredResult.keys(obj2);
-    },
-    handler(arg0) {
-      ({ socket, args } = arg0);
-      const level = args.level;
-      const result = RPCHelpers.validatePostMessageTransport(socket.transport);
-      const combined = "" + socket.application.id + " - " + args.message;
-      if ("log" === level) {
-        closure_3.log(combined);
-      } else if ("warn" === level) {
-        closure_3.warn(combined);
-      } else if ("debug" === level) {
-        closure_3.verbose(combined);
-      } else if ("info" === level) {
-        closure_3.info(combined);
-      } else if ("error" === level) {
-        closure_3.error(combined);
-      }
-    },
+let obj = {
+  validation(string) {
+    let maxResult;
+    let maxResult1;
+    const obj = createRpcJoiSchemaObjectDefault(string);
+    const obj2 = { level: maxResult.required(), message: maxResult1.required() };
+    const keys = obj.required().keys;
+    obj.required();
+    const stringResult = string.string();
+    maxResult = stringResult.max(10);
+    const stringResult1 = string.string();
+    maxResult1 = stringResult1.max(1000);
+    return keys(obj2);
+  },
+  handler(arg0) {
+    let args;
+    let socket;
+    ({ socket, args } = arg0);
+    const level = args.level;
+    const message = args.message;
+    const obj = RPCHelpers;
+    const result = obj.validatePostMessageTransport(socket.transport);
+    const combined = "" + socket.application.id + " - " + message;
+    if ("log" === level) {
+      closure_3.log(combined);
+    } else if ("warn" === level) {
+      closure_3.warn(combined);
+    } else if ("debug" === level) {
+      closure_3.verbose(combined);
+    } else if ("info" === level) {
+      closure_3.info(combined);
+    } else if ("error" === level) {
+      closure_3.error(combined);
+    }
   },
 };
+new LoggerDefault(RPC_APPLICATION_LOGGING_CATEGORY);
+let result = size.fileFinishedImporting("modules/rpc/server/commands/logs.tsx");
+
+export default { [RPCCommands.CAPTURE_LOG]: obj };

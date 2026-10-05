@@ -8,4 +8,4 @@ export default function SKUListing(skuId, skuFeatures) {
   obj.skuId = skuId;
   obj.skuFeatures = skuFeatures;
   return obj;
-}.prototype;
+}

@@ -1,124 +1,135 @@
 // discord_app/modules/guild_member_verification/hooks/usePaginatedMemberApplications.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import MemberVerificationTypes from "../MemberVerificationTypes.tsx";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../_runtime/00019_react.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const result = fn(4702).MAX_RESULTS_PER_PAGE * fn(4702).MAX_VISIBLE_PAGES;
+let closure_3, ref, ref2, ref3;
+
+let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
+const result = MemberVerificationTypes.MAX_RESULTS_PER_PAGE * MemberVerificationTypes.MAX_VISIBLE_PAGES;
 const metroRequire = result;
-const size = fn(2);
 const result1 = size.fileFinishedImporting(
   "modules/guild_member_verification/hooks/usePaginatedMemberApplications.tsx",
 );
 
 export const MEMBER_APPLICATION_FETCH_LIMIT = result;
 export const usePaginatedMemberApplications = function usePaginatedMemberApplications(guildId) {
+  let closure_4;
+  let closure_5;
+  let error;
   guildId = guildId.guildId;
   const guildJoinRequests = guildId.guildJoinRequests;
   error = undefined;
   _slicedToArray = undefined;
-  noop = undefined;
-  closure_2 = noop.useRef(false);
-  [error, _slicedToArray] = noop.useState(null);
-  noop = noop.useRef(null);
-  closure_6 = noop.useRef(false);
-  closure_0 = error((guildId, status) => {
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
+  react = undefined;
+  let closure_2 = react.useRef(false);
+  [error, _slicedToArray] = react.useState(null);
+  react = react.useRef(null);
+  let closure_6 = react.useRef(false);
+  const useCallback = react.useCallback;
+  let closure_0 = error((guildId, status) => {
+    let c6 = 0;
+    let c7 = 0;
+    let c5 = 0;
     return (function* (arg0, value) {
+      function getRequestPaginationParams(after, status, arg2, status2, flag) {
+        let date;
+        let fromTimestamp;
+        const tmp2 = status2 === guildId(ref[3]).GuildJoinRequestApplicationStatuses.SUBMITTED;
+        if (arg2 === guildId(ref[3]).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
+          if (!flag) {
+            if (0 !== status.length) {
+              return { before: tmp2 ? status[status.length - 1].joinRequestId : status[status.length - 1].actionedAt };
+            }
+          }
+          const _Date = Date;
+          const self = this;
+          const self2 = this;
+          const obj3 = { before: fromTimestamp(date.getTime()) };
+          fromTimestamp = status(ref[4]).fromTimestamp;
+          status(ref[4]);
+          date = new Date();
+          return obj3;
+        } else {
+          if (!flag) {
+            if (0 !== status.length) {
+              return { after: tmp2 ? status[status.length - 1].joinRequestId : status[status.length - 1].actionedAt };
+            }
+          }
+          return { after };
+        }
+      }
       if (c7 === 2) {
         c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp7 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj3 = { value, done: true };
-          return obj3;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "IconComponent", done: null };
         }
       } else {
         try {
+          let aPIError;
           c7 = 2;
-          if (0 === limit) {
+          if (0 === ref3) {
             if (arg0 === 1) {
               c7 = 3;
               throw value;
             } else if (arg0 === 2) {
               c7 = 3;
-              let obj4 = { value, done: true };
-              return obj4;
+              let obj3 = { value, done: true };
+              return obj3;
             } else {
-              closure_3 = tmp4;
-              closure_130_0 = undefined;
-              closure_130_1 = undefined;
-              if (!tmp8.current) {
+              closure_3 = tmp;
+              ref = tmp4;
+              guildId = undefined;
+              aPIError = undefined;
+              if (!ref.current) {
                 const _HermesInternal = HermesInternal;
-                const combined = "" + guildId + "-" + status;
+                const combined = "" + tmp61 + "-" + status;
                 let flag = false;
                 if (combined !== ref2.current) {
                   ref2.current = combined;
-                  limit.current = false;
+                  ref3.current = false;
                   flag = true;
                 }
-                if (!limit.current) {
+                if (!ref3.current) {
                   if (null != closure_3) {
-                    tmp58(null);
+                    tmp53(null);
                   }
                   ref2 = 2;
                   ref.current = true;
-                  const tmp51 = (function getRequestPaginationParams(after, status, guildId2, status2, flag) {
-                    const tmp2 = status2 === guildId(4702).GuildJoinRequestApplicationStatuses.SUBMITTED;
-                    if (guildId2 === guildId(4702).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
-                      if (!flag) {
-                        if (0 !== status.length) {
-                          const obj2 = {
-                            before: tmp2
-                              ? status[status.length - 1].joinRequestId
-                              : status[status.length - 1].actionedAt,
-                          };
-                          return obj2;
-                        }
-                      }
-                      const obj3 = { before: null };
-                      const _Date = Date;
-                      const date = new Date();
-                      obj3.before = status(11).fromTimestamp(date.getTime());
-                      return obj3;
-                    } else {
-                      if (!flag) {
-                        if (0 !== status.length) {
-                          const obj = {
-                            after: tmp2
-                              ? status[status.length - 1].joinRequestId
-                              : status[status.length - 1].actionedAt,
-                          };
-                          return obj;
-                        }
-                      }
-                      const obj4 = { after };
-                      return obj4;
-                    }
-                  })(guildId, status, guildId, status, flag);
-                  const obj5 = { guildId, status, limit, force: true };
-                  const merged = Object.assign(tmp51);
-                  limit = 3;
+                  const obj4 = { guildId, status, limit, force: true };
+                  const tmp45 = getRequestPaginationParams(guildId, status, guildId, status, flag);
+                  const fetchGuildJoinRequests = guildJoinRequests(closure_2_2[5]).fetchGuildJoinRequests;
+                  guildJoinRequests(closure_2_2[5]);
+                  const merged = Object.assign(tmp45);
+                  ref3 = 3;
                   c7 = 1;
-                  const obj6 = { value: guildJoinRequests(ref[5]).fetchGuildJoinRequests(obj5), done: false };
-                  return obj6;
+                  const obj5 = { value: fetchGuildJoinRequests(obj4), done: false };
+                  return obj5;
                 }
               }
-              c7 = 3;
             }
-          } else if (1 !== tmp8) {
-            if (2 === tmp8) {
+          } else if (1 === ref3) {
+            ref2 = 0;
+            ref.current = false;
+            throw tmp53;
+          } else {
+            if (2 === ref3) {
               ref2 = 1;
-              closure_130_2 = tmp58;
-              const aPIError = new guildId(ref[6]).APIError(closure_130_2);
-              closure_130_1 = aPIError;
-              tmp58(closure_130_1.getAnyErrorMessage());
+              ref = tmp53;
+              let self = this;
+              let self2 = this;
+              aPIError = new guildId(closure_2_2[6]).APIError(ref);
+              tmp53(aPIError.getAnyErrorMessage());
             } else if (arg0 === 1) {
               c7 = 3;
               throw value;
@@ -126,13 +137,13 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
               ref2 = 0;
               ref.current = false;
               c7 = 3;
-              let obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             } else {
-              closure_130_0 = value;
-              if (null != closure_130_0) {
-                if (closure_130_0.body.guild_join_requests.length < limit) {
-                  limit.current = true;
+              guildId = value;
+              if (null != guildId) {
+                if (guildId.body.guild_join_requests.length < limit) {
+                  ref3.current = true;
                 }
               }
               ref2 = 1;
@@ -140,34 +151,27 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
             ref2 = 0;
             ref.current = false;
           }
-          ref2 = 0;
-          ref.current = false;
-          throw tmp58;
-        } catch (tmp58) {
-          if (tmp5 === ref2) {
-            c7 = tmp3;
-            throw tmp58;
-          } else if (tmp2 === tmp60) {
-            limit = tmp2;
+          c7 = 3;
+          return { value: "IconComponent", done: null };
+        } catch (tmp53) {
+          if (0 === ref2) {
+            c7 = 3;
+            throw tmp53;
+          } else if (1 === tmp55) {
+            ref3 = 1;
           } else {
-            limit = tmp;
+            ref3 = 2;
           }
         }
       }
     })();
   });
   const items = [error, guildId, guildJoinRequests];
-  return {
-    fetchNextPage: noop.useCallback(function () {
-      const self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
+  let obj = {
+    fetchNextPage: useCallback(function () {
+      return closure_0(...arguments);
     }, items),
     error,
   };
+  return obj;
 };

@@ -6,7 +6,8 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/jank_stats/native/isJankScreenReportingEnabled.tsx");
 
 export const isJankScreenReportingEnabled = function isJankScreenReportingEnabled() {
-  let isAndroidResult = PlatformUtils.isAndroid();
+  const obj = PlatformUtils;
+  let isAndroidResult = obj.isAndroid();
   if (isAndroidResult) {
     const AndroidJankPerScreenExperiment = libdiscoreExperiments.AndroidJankPerScreenExperiment;
     isAndroidResult = AndroidJankPerScreenExperiment.getCachedEnabled();

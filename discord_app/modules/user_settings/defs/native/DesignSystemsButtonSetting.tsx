@@ -6,18 +6,21 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const route = SettingBuilders.createRoute({
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const UserSettingsSections = Constants.UserSettingsSections;
+const obj = {
   useTitle() {
     return "Button";
   },
-  parent: SettingsConstants.MobileUserSettings.DESIGN_SYSTEMS,
+  parent: MobileUserSettings.DESIGN_SYSTEMS,
   screen: {
-    route: Constants.UserSettingsSections.DESIGN_SYSTEM_BUTTON,
+    route: UserSettingsSections.DESIGN_SYSTEM_BUTTON,
     getComponent() {
       return require("UserSettingsDesignSystemButton").default;
     },
   },
-});
+};
+const route = SettingBuilders.createRoute(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsButtonSetting.tsx");
 
 export default route;

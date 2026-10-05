@@ -4,6 +4,8 @@ import WidgetType from "../../../discord_common/js/shared/shared-constants/Widge
 import UserProfileWidgetConstants from "UserProfileWidgetConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let c2;
+let c3;
 ({ widgetSupportsComment: c2, widgetSupportsTags: c3 } = UserProfileWidgetConstants);
 const items = [
   WidgetType.WidgetType.CURRENT_GAMES,
@@ -11,205 +13,136 @@ const items = [
   WidgetType.WidgetType.WANT_TO_PLAY_GAMES,
   WidgetType.WidgetType.PLAYED_GAMES,
 ];
-let BaseGameWidget;
 class BaseGameWidget {
   constructor(arg0) {
-    ({ id, type, games } = global);
-    obj = Object.create(new.target.prototype);
+    let games;
+    let id;
+    let type;
+    ({ id, type, games } = arg0);
+    const obj = Object.create(new.target.prototype);
     obj.id = id;
     obj.type = type;
     obj.games = games;
     return obj;
   }
+  toSubmission() {
+    let games;
+    let obj2;
+    const obj = { id: this.id, data: obj2 };
+    obj2 = {
+      type: this.type,
+      games: games.map((gameId) => ({ game_id: gameId.gameId, comment: gameId.comment, tags: gameId.tags })),
+    };
+    games = this.games;
+    return obj;
+  }
+  isUpdatable() {
+    return true;
+  }
+  isDiscardable() {
+    return 0 === this.games.length;
+  }
+  isValid() {
+    const self = this;
+    const tmp = this.games.length > 0 && self.games.length <= GameWidgetLimits.GAME_WIDGET_LIMITS_BY_TYPE[self.type];
+    return tmp;
+  }
+  isEqual(type) {
+    const f137979 = (gameId, index) => {
+      let c0;
+      let flag = false;
+      if (gameId.gameId === games1[index].gameId) {
+        if (!React2(type)) {
+          flag = true;
+          if (_false(type)) {
+            const tags = gameId.tags;
+            let tmp10 = null;
+            if (null != tags) {
+              tmp10 = null;
+              if ("" !== tags) {
+                const _Array3 = Array;
+                if (!Array.isArray(tags)) {
+                  tmp10 = tags;
+                } else {
+                  tmp10 = null;
+                }
+              }
+            }
+            const tags1 = tmp.tags;
+            let tmp12 = null;
+            if (null != tags1) {
+              tmp12 = null;
+              if ("" !== tags1) {
+                const _Array4 = Array;
+                if (!Array.isArray(tags1)) {
+                  tmp12 = tags1;
+                } else {
+                  tmp12 = null;
+                }
+              }
+            }
+            c0 = tmp12;
+            flag = false;
+            if (((null === tmp10) === null) === tmp12) {
+              flag = true;
+              if (null !== tmp10) {
+                flag = true;
+                if (null !== tmp12) {
+                  flag = false;
+                  if (tmp10.length === tmp12.length) {
+                    flag = true;
+                    if (!tmp10.every((item, index) => item === _null[index])) {
+                      flag = false;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        } else {
+          const comment = gameId.comment;
+          if (null != comment) {
+            if ("" !== comment) {
+              const _Array = Array;
+            }
+          }
+          const comment1 = tmp.comment;
+          if (null != comment1) {
+            if ("" !== comment1) {
+              const _Array2 = Array;
+            }
+          }
+          flag = false;
+        }
+      }
+      return flag;
+    };
+    let tmp = type instanceof BaseGameWidget;
+    if (tmp) {
+      const self = this;
+      let tmp2 = type.type === this.type;
+      if (tmp2) {
+        const games = self.games;
+        const games1 = type.games;
+        type = self.type;
+        tmp2 = games.length === games1.length && games.every(f137979);
+        const tmp3 = games.length === games1.length && games.every(f137979);
+      }
+      tmp = tmp2;
+    }
+    return tmp;
+  }
+  getUniqueKey() {
+    return this.type;
+  }
+  getProfileAnalyticsOptions() {
+    return { widgetType: this.type };
+  }
+  getProfileEditAnalyticsOptions() {
+    return { widgetEdited: this.type };
+  }
 }
 const prototype = BaseGameWidget.prototype;
-prototype["toSubmission"] = function toSubmission() {
-  const obj = { id: this.id, data: null };
-  const obj2 = { type: this.type, games: null };
-  const games = this.games;
-  obj2.games = games.map((gameId) => ({ game_id: gameId.gameId, comment: gameId.comment, tags: gameId.tags }));
-  obj.data = obj2;
-  return obj;
-};
-prototype["isUpdatable"] = function isUpdatable() {
-  return true;
-};
-prototype["isDiscardable"] = function isDiscardable() {
-  return 0 === this.games.length;
-};
-prototype["isValid"] = function isValid() {
-  const self = this;
-  let tmp = this.games.length > 0;
-  if (tmp) {
-    tmp = self.games.length <= GameWidgetLimits.GAME_WIDGET_LIMITS_BY_TYPE[self.type];
-  }
-  return tmp;
-};
-prototype["isEqual"] = function isEqual(type) {
-  let tmp = type instanceof BaseGameWidget;
-  if (tmp) {
-    const self = this;
-    let tmp2 = type.type === this.type;
-    if (tmp2) {
-      const games = self.games;
-      const games1 = type.games;
-      type = self.type;
-      tmp2 =
-        games.length === games1.length &&
-        games.every((gameId, index) => {
-          c0 = undefined;
-          let flag = false;
-          if (gameId.gameId === games1[index].gameId) {
-            if (!React2(type)) {
-              flag = true;
-              if (React3(type)) {
-                const tags = gameId.tags;
-                let tmp10 = null;
-                if (null != tags) {
-                  tmp10 = null;
-                  if ("" !== tags) {
-                    const _Array3 = Array;
-                    if (!Array.isArray(tags)) {
-                      tmp10 = tags;
-                    } else {
-                      tmp10 = null;
-                    }
-                  }
-                }
-                const tags1 = tmp.tags;
-                let tmp12 = null;
-                if (null != tags1) {
-                  tmp12 = null;
-                  if ("" !== tags1) {
-                    const _Array4 = Array;
-                    if (!Array.isArray(tags1)) {
-                      tmp12 = tags1;
-                    } else {
-                      tmp12 = null;
-                    }
-                  }
-                }
-                c0 = tmp12;
-                flag = false;
-                if (((null === tmp10) === null) === tmp12) {
-                  flag = true;
-                  if (null !== tmp10) {
-                    flag = true;
-                    if (null !== tmp12) {
-                      flag = false;
-                      if (tmp10.length === tmp12.length) {
-                        flag = true;
-                        if (!tmp10.every((item, index) => item === _null[index])) {
-                          flag = false;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            } else {
-              const comment = gameId.comment;
-              if (null != comment) {
-                if ("" !== comment) {
-                  const _Array = Array;
-                }
-              }
-              const comment1 = tmp.comment;
-              if (null != comment1) {
-                if ("" !== comment1) {
-                  const _Array2 = Array;
-                }
-              }
-              flag = false;
-            }
-          }
-          return flag;
-        });
-      const tmp3 =
-        games.length === games1.length &&
-        games.every((gameId, index) => {
-          c0 = undefined;
-          let flag = false;
-          if (gameId.gameId === games1[index].gameId) {
-            if (!React2(type)) {
-              flag = true;
-              if (React3(type)) {
-                const tags = gameId.tags;
-                let tmp10 = null;
-                if (null != tags) {
-                  tmp10 = null;
-                  if ("" !== tags) {
-                    const _Array3 = Array;
-                    if (!Array.isArray(tags)) {
-                      tmp10 = tags;
-                    } else {
-                      tmp10 = null;
-                    }
-                  }
-                }
-                const tags1 = tmp.tags;
-                let tmp12 = null;
-                if (null != tags1) {
-                  tmp12 = null;
-                  if ("" !== tags1) {
-                    const _Array4 = Array;
-                    if (!Array.isArray(tags1)) {
-                      tmp12 = tags1;
-                    } else {
-                      tmp12 = null;
-                    }
-                  }
-                }
-                c0 = tmp12;
-                flag = false;
-                if (((null === tmp10) === null) === tmp12) {
-                  flag = true;
-                  if (null !== tmp10) {
-                    flag = true;
-                    if (null !== tmp12) {
-                      flag = false;
-                      if (tmp10.length === tmp12.length) {
-                        flag = true;
-                        if (!tmp10.every((item, index) => item === _null[index])) {
-                          flag = false;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            } else {
-              const comment = gameId.comment;
-              if (null != comment) {
-                if ("" !== comment) {
-                  const _Array = Array;
-                }
-              }
-              const comment1 = tmp.comment;
-              if (null != comment1) {
-                if ("" !== comment1) {
-                  const _Array2 = Array;
-                }
-              }
-              flag = false;
-            }
-          }
-          return flag;
-        });
-    }
-    tmp = tmp2;
-  }
-  return tmp;
-};
-prototype["getUniqueKey"] = function getUniqueKey() {
-  return this.type;
-};
-prototype["getProfileAnalyticsOptions"] = function getProfileAnalyticsOptions() {
-  return { widgetType: this.type };
-};
-prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOptions() {
-  return { widgetEdited: this.type };
-};
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetTypes.tsx");
 
 export const GAME_WIDGET_TYPES = items;

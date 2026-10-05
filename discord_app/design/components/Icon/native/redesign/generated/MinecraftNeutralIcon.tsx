@@ -1,180 +1,209 @@
 // discord_app/design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx
-import c from "../../../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod8349 from "../../../../../../../_runtime/metro/08349__.js";
-import _mod8350 from "../../../../../../../_runtime/metro/08350__.js";
-import _mod8351 from "../../../../../../../_runtime/metro/08351__.js";
+import BaseIconImage4 from "../../BaseIconImage.tsx";
+import AssetRegistry from "../../../../../../../_runtime/08349_AssetRegistry.js";
+import AssetRegistry2 from "../../../../../../../_runtime/08350_AssetRegistry.js";
+import AssetRegistry3 from "../../../../../../../_runtime/08351_AssetRegistry.js";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
+import ReactCompilerGating from "../../../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let metroImportDefault;
+let metroRequire;
 let closure_3 = ["style", "color", "secondaryColor", "tertiaryColor"];
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx");
-
-export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
+const View = react_native.View;
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(31);
+      let INTERACTIVE_ICON_DEFAULT;
+      let color;
+      let items4;
+      let secondaryColor;
+      let style;
+      let tertiaryColor;
+      let tmp13;
+      let tmp5;
+      let tmp6;
+      let tmp7;
+      let tmp8;
+      const obj = react2;
+      const cResult = obj.c(31);
       if (cResult[0] !== arg0) {
         ({ style, color, secondaryColor, tertiaryColor } = arg0);
-        const tmp10 = _objectWithoutProperties(arg0, closure_3);
+        const tmp11 = _objectWithoutProperties(arg0, closure_3);
         cResult[0] = arg0;
-        cResult[1] = tmp10;
+        cResult[1] = tmp11;
         cResult[2] = style;
         cResult[3] = color;
         cResult[4] = secondaryColor;
         cResult[5] = tertiaryColor;
-        let tmp7 = tertiaryColor;
-        let tmp6 = secondaryColor;
-        let INTERACTIVE_ICON_DEFAULT = color;
-        let tmp5 = style;
-        let tmp4 = tmp10;
+        tmp8 = tertiaryColor;
+        tmp7 = secondaryColor;
+        INTERACTIVE_ICON_DEFAULT = color;
+        tmp6 = style;
+        tmp5 = tmp11;
       } else {
-        tmp4 = cResult[1];
-        tmp5 = cResult[2];
+        tmp5 = cResult[1];
+        tmp6 = cResult[2];
         INTERACTIVE_ICON_DEFAULT = cResult[3];
-        tmp6 = cResult[4];
-        tmp7 = cResult[5];
+        tmp7 = cResult[4];
+        tmp8 = cResult[5];
       }
       if (undefined === INTERACTIVE_ICON_DEFAULT) {
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
       }
       let str = "#000";
-      if (undefined !== tmp6) {
-        str = tmp6;
+      if (undefined !== tmp7) {
+        str = tmp7;
       }
       let str2 = "#fff";
-      if (undefined !== tmp7) {
-        str2 = tmp7;
+      if (undefined !== tmp8) {
+        str2 = tmp8;
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod8349;
-        cResult[6] = tmpResult;
-        let tmp12 = tmpResult;
+        const tmp2Result = AssetRegistry;
+        cResult[6] = tmp2Result;
+        tmp13 = tmp2Result;
       } else {
-        tmp12 = cResult[6];
+        tmp13 = cResult[6];
       }
       if (cResult[7] === INTERACTIVE_ICON_DEFAULT) {
-        if (cResult[8] === tmp4) {
-          if (cResult[9] === tmp5) {
-            let tmp14 = cResult[10];
+        if (cResult[8] === tmp5) {
+          let tmp15;
+          let tmp18;
+          let tmp20;
+          if (cResult[9] === tmp6) {
+            tmp15 = cResult[10];
           }
           const _Symbol = Symbol;
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmpResult3 = _mod8350;
-            cResult[11] = tmpResult3;
-            let tmp17 = tmpResult3;
+            const tmp2Result3 = AssetRegistry2;
+            cResult[11] = tmp2Result3;
+            tmp18 = tmp2Result3;
           } else {
-            tmp17 = cResult[11];
+            tmp18 = cResult[11];
           }
-          if (cResult[12] !== tmp5) {
+          if (cResult[12] !== tmp6) {
+            let tmp21;
             const _Symbol2 = Symbol;
             if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
               const obj2 = { position: "absolute", top: 0 };
               cResult[14] = obj2;
-              let tmp20 = obj2;
+              tmp21 = obj2;
             } else {
-              tmp20 = cResult[14];
+              tmp21 = cResult[14];
             }
-            const items = [tmp5];
+            const items = [tmp6];
             const items1 = [];
-            items1[HermesBuiltin.arraySpread(items.flat(), 0)] = tmp20;
-            cResult[12] = tmp5;
+            items1[HermesBuiltin.arraySpread(items1, items.flat(), 0)] = tmp21;
+            cResult[12] = tmp6;
             cResult[13] = items1;
+            tmp20 = items1;
           } else {
-            if (cResult[15] === tmp4) {
-              if (cResult[16] === str) {
-                if (cResult[17] === tmp19) {
-                  let tmp23 = cResult[18];
-                }
-                const _Symbol3 = Symbol;
-                if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmpResult4 = _mod8351;
-                  cResult[19] = tmpResult4;
-                  let tmp29 = tmpResult4;
+            tmp20 = cResult[13];
+          }
+          if (cResult[15] === tmp5) {
+            if (cResult[16] === str) {
+              let tmp23;
+              let tmp29;
+              let tmp31;
+              if (cResult[17] === tmp20) {
+                tmp23 = cResult[18];
+              }
+              const _Symbol3 = Symbol;
+              if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
+                const tmp2Result4 = AssetRegistry3;
+                cResult[19] = tmp2Result4;
+                tmp29 = tmp2Result4;
+              } else {
+                tmp29 = cResult[19];
+              }
+              if (cResult[20] !== tmp6) {
+                let tmp32;
+                const _Symbol4 = Symbol;
+                if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
+                  const obj3 = { position: "absolute", top: 0 };
+                  cResult[22] = obj3;
+                  tmp32 = obj3;
                 } else {
-                  tmp29 = cResult[19];
+                  tmp32 = cResult[22];
                 }
-                if (cResult[20] !== tmp5) {
-                  const _Symbol4 = Symbol;
-                  if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-                    const obj3 = { position: "absolute", top: 0 };
-                    cResult[22] = obj3;
-                    let tmp32 = obj3;
-                  } else {
-                    tmp32 = cResult[22];
+                const items2 = [tmp6];
+                const items3 = [];
+                items3[HermesBuiltin.arraySpread(items3, items2.flat(), 0)] = tmp32;
+                cResult[20] = tmp6;
+                cResult[21] = items3;
+                tmp31 = items3;
+              } else {
+                tmp31 = cResult[21];
+              }
+              if (cResult[23] === tmp5) {
+                if (cResult[24] === tmp31) {
+                  let tmp34;
+                  if (cResult[25] === str2) {
+                    tmp34 = cResult[26];
                   }
-                  const items2 = [tmp5];
-                  const items3 = [];
-                  items3[HermesBuiltin.arraySpread(items2.flat(), 0)] = tmp32;
-                  cResult[20] = tmp5;
-                  cResult[21] = items3;
-                } else {
-                  if (cResult[23] === tmp4) {
-                    if (cResult[24] === tmp31) {
-                      if (cResult[25] === str2) {
-                        let tmp35 = cResult[26];
+                  if (cResult[27] === tmp34) {
+                    if (cResult[28] === tmp15) {
+                      let tmp40;
+                      if (cResult[29] === tmp23) {
+                        tmp40 = cResult[30];
                       }
-                      if (cResult[27] === tmp35) {
-                        if (cResult[28] === tmp14) {
-                          if (cResult[29] === tmp23) {
-                            let tmp41 = cResult[30];
-                          }
-                          return tmp41;
-                        }
-                      }
-                      const obj4 = { children: null };
-                      const items4 = [tmp14, tmp23, tmp35];
-                      obj4.children = items4;
-                      const tmp44 = React5(View, obj4);
-                      cResult[27] = tmp35;
-                      cResult[28] = tmp14;
-                      cResult[29] = tmp23;
-                      cResult[30] = tmp44;
-                      tmp41 = tmp44;
+                      return tmp40;
                     }
                   }
-                  const obj5 = { source: tmp29, color: str2, style: cResult[21] };
-                  const merged = Object.assign(tmp4);
-                  const tmp40 = timestampProducer(BaseIconImage.BaseIconImage, obj5);
-                  cResult[23] = tmp4;
-                  cResult[24] = cResult[21];
-                  cResult[25] = str2;
-                  cResult[26] = tmp40;
-                  tmp35 = tmp40;
+                  const obj4 = { children: items4 };
+                  items4 = [tmp15, tmp23, tmp34];
+                  const tmp43 = metroImportDefault(View, obj4);
+                  cResult[27] = tmp34;
+                  cResult[28] = tmp15;
+                  cResult[29] = tmp23;
+                  cResult[30] = tmp43;
+                  tmp40 = tmp43;
                 }
               }
+              const obj5 = { source: tmp29, color: str2, style: tmp31 };
+              const BaseIconImage3 = BaseIconImage4.BaseIconImage;
+              const merged = Object.assign(tmp5);
+              const tmp39 = metroRequire(BaseIconImage3, obj5);
+              cResult[23] = tmp5;
+              cResult[24] = tmp31;
+              cResult[25] = str2;
+              cResult[26] = tmp39;
+              tmp34 = tmp39;
             }
-            const obj6 = { source: tmp17, color: str, style: cResult[13] };
-            const merged1 = Object.assign(tmp4);
-            const tmp28 = timestampProducer(BaseIconImage.BaseIconImage, obj6);
-            cResult[15] = tmp4;
-            cResult[16] = str;
-            cResult[17] = cResult[13];
-            cResult[18] = tmp28;
-            tmp23 = tmp28;
           }
+          const obj6 = { source: tmp18, color: str, style: tmp20 };
+          const BaseIconImage2 = BaseIconImage4.BaseIconImage;
+          const merged1 = Object.assign(tmp5);
+          const tmp28 = metroRequire(BaseIconImage2, obj6);
+          cResult[15] = tmp5;
+          cResult[16] = str;
+          cResult[17] = tmp20;
+          cResult[18] = tmp28;
+          tmp23 = tmp28;
         }
       }
-      const merged2 = Object.assign(tmp4);
-      const tmp16 = timestampProducer(BaseIconImage.BaseIconImage, {
-        source: tmp12,
-        color: INTERACTIVE_ICON_DEFAULT,
-        style: tmp5,
-      });
+      const obj7 = { source: tmp13, color: INTERACTIVE_ICON_DEFAULT, style: tmp6 };
+      const BaseIconImage = BaseIconImage4.BaseIconImage;
+      const merged2 = Object.assign(tmp5);
+      const tmp17 = metroRequire(BaseIconImage, obj7);
       cResult[7] = INTERACTIVE_ICON_DEFAULT;
-      cResult[8] = tmp4;
-      cResult[9] = tmp5;
-      cResult[10] = tmp16;
-      tmp14 = tmp16;
-      const obj7 = { source: tmp12, color: INTERACTIVE_ICON_DEFAULT, style: tmp5 };
+      cResult[8] = tmp5;
+      cResult[9] = tmp6;
+      cResult[10] = tmp17;
+      tmp15 = tmp17;
     }
   : (secondaryColor) => {
+      let color;
+      let items;
+      let items2;
+      let items4;
+      let style;
       ({ style, color } = secondaryColor);
       if (color === undefined) {
         color = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
@@ -191,23 +220,27 @@ export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
         secondaryColor,
         Object.assign({ style: 0, color: 0, secondaryColor: 0, tertiaryColor: 0 }),
       );
-      const obj = { children: null };
+      const obj = { children: items };
+      const obj2 = { source: AssetRegistry, color, style };
+      const BaseIconImage = BaseIconImage4.BaseIconImage;
       const merged1 = Object.assign(merged);
-      const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod8349, color, style }), ,];
-      const obj3 = { source: _mod8350, color: str, style: null };
+      items = [metroRequire(BaseIconImage, obj2), ,];
+      const obj3 = { source: AssetRegistry2, color: str, style: items2 };
+      const BaseIconImage2 = BaseIconImage4.BaseIconImage;
       const items1 = [style];
-      const items2 = [];
-      items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };
-      obj3.style = items2;
+      items2 = [];
+      items2[HermesBuiltin.arraySpread(items2, items1.flat(), 0)] = { position: "absolute", top: 0 };
       const merged2 = Object.assign(merged);
-      items[1] = timestampProducer(BaseIconImage.BaseIconImage, obj3);
-      const obj4 = { source: _mod8351, color: str2, style: null };
+      items[1] = metroRequire(BaseIconImage2, obj3);
+      const obj4 = { source: AssetRegistry3, color: str2, style: items4 };
+      const BaseIconImage3 = BaseIconImage4.BaseIconImage;
       const items3 = [style];
-      const items4 = [];
-      items4[HermesBuiltin.arraySpread(items3.flat(), 0)] = { position: "absolute", top: 0 };
-      obj4.style = items4;
+      items4 = [];
+      items4[HermesBuiltin.arraySpread(items4, items3.flat(), 0)] = { position: "absolute", top: 0 };
       const merged3 = Object.assign(merged);
-      items[2] = timestampProducer(BaseIconImage.BaseIconImage, obj4);
-      obj.children = items;
-      return React5(View, obj);
+      items[2] = metroRequire(BaseIconImage3, obj4);
+      return metroImportDefault(View, obj);
     };
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx");
+
+export const MinecraftNeutralIcon = tmp4;

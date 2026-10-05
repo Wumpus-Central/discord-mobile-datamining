@@ -1,22 +1,27 @@
 // discord_app/modules/auth/native/useInitialRegistrationStep.tsx
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import RegistrationStepsUtils from "RegistrationStepsUtils.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import RegistrationUIStore from "RegistrationUIStore.tsx";
+import react from "../../../../_runtime/00019_react.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import ConsentStore from "../../../stores/ConsentStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-const resetRegistration = fn(15867).resetRegistration;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const resetRegistration = RegistrationUIStore.resetRegistration;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let authenticationConsentRequired;
+      let closure_0;
+      let tmp4;
+      let tmp5;
       _require = arg0;
-      const cResult = require("c").c(9);
+      let obj = require("react");
+      const cResult = obj.c(9);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConsentStore];
         const fn = function f() {
@@ -29,14 +34,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      let obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
+      const tmpResult = tmp(504);
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       if (cResult[2] === stateFromStores) {
+        let tmp8;
+        let tmp9;
+        let tmp12;
         if (cResult[3] === arg0) {
-          let tmp8 = cResult[4];
-          let tmp9 = cResult[5];
+          tmp8 = cResult[4];
+          tmp9 = cResult[5];
         }
-        const effect = noop.useEffect(tmp8, tmp9);
+        const effect = react.useEffect(tmp8, tmp9);
         if (cResult[6] !== arg0) {
           class F {
             constructor() {
@@ -45,8 +53,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return () => {
                   closure_1_6();
                   if (!authenticated.isAuthenticated()) {
-                    stateFromStores(dependencyMap[8]).loginReset();
-                    const obj = stateFromStores(dependencyMap[8]);
+                    const obj = stateFromStores(closure_1_2[8]);
+                    obj.loginReset();
                   }
                 };
               } else {
@@ -58,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[6] = arg0;
           cResult[7] = F;
           cResult[8] = items1;
-          let tmp12 = items1;
+          tmp12 = items1;
         } else {
           class F {
             constructor() {
@@ -67,8 +75,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return () => {
                   closure_1_6();
                   if (!authenticated.isAuthenticated()) {
-                    stateFromStores(dependencyMap[8]).loginReset();
-                    const obj = stateFromStores(dependencyMap[8]);
+                    const obj = stateFromStores(closure_1_2[8]);
+                    obj.loginReset();
                   }
                 };
               } else {
@@ -78,24 +86,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           tmp12 = cResult[8];
         }
-        const effect1 = noop.useEffect(F, tmp12);
+        const effect1 = react.useEffect(F, tmp12);
       }
       class S {
         constructor() {
-          tmp = closure_2;
-          obj = closure_0(closure_2[4]);
-          tmp2 = closure_0 === obj.getRegistrationSteps()[1];
+          const obj = RegistrationStepsUtils;
+          const tmp2 = closure_0 === obj.getRegistrationSteps()[1] && null == stateFromStores;
           if (tmp2) {
-            tmp3 = closure_1;
-            tmp4 = null;
-            tmp2 = null == closure_1;
+            const obj2 = AuthenticationActionCreatorsDefault;
+            const locationMetadata = obj2.getLocationMetadata();
           }
-          if (tmp2) {
-            tmp5 = closure_1;
-            obj2 = closure_1(tmp[8]);
-            locationMetadata = obj2.getLocationMetadata();
-          }
-          return;
         }
       }
       const items2 = [stateFromStores, arg0];
@@ -105,35 +105,40 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items2;
       tmp9 = items2;
       tmp8 = S;
-      const tmpResult = require("initialize");
     }
   : (arg0) => {
+      let authenticationConsentRequired;
+      let closure_0;
       _require = arg0;
+      let obj = require("get initialized");
       const items = [ConsentStore];
-      const stateFromStores = require("initialize").useStateFromStores(items, () =>
+      const stateFromStores = obj.useStateFromStores(items, () =>
         authenticationConsentRequired.getAuthenticationConsentRequired(),
       );
       const items1 = [stateFromStores, arg0];
-      const effect = noop.useEffect(() => {
-        let tmp2 = closure_0 === RegistrationStepsUtils.getRegistrationSteps()[1];
+      const effect = react.useEffect(() => {
+        const obj = RegistrationStepsUtils;
+        const tmp2 = closure_0 === obj.getRegistrationSteps()[1] && null == stateFromStores;
         if (tmp2) {
-          tmp2 = null == stateFromStores;
-        }
-        if (tmp2) {
-          const locationMetadata = AuthenticationActionCreatorsDefault.getLocationMetadata();
+          const obj2 = AuthenticationActionCreatorsDefault;
+          const locationMetadata = obj2.getLocationMetadata();
         }
       }, items1);
       const items2 = [arg0];
-      const effect1 = noop.useEffect(() => {
+      const effect1 = react.useEffect(() => {
+        let authenticated;
+        let obj = RegistrationStepsUtils;
         if (closure_0 === obj.getRegistrationSteps()[1]) {
           return () => {
             closure_1_6();
             if (!authenticated.isAuthenticated()) {
-              stateFromStores(dependencyMap[8]).loginReset();
-              const obj = stateFromStores(dependencyMap[8]);
+              const obj = stateFromStores(closure_1_2[8]);
+              obj.loginReset();
             }
           };
         }
-        obj = RegistrationStepsUtils;
       }, items2);
     };
+const result = size.fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");
+
+export default tmp2;

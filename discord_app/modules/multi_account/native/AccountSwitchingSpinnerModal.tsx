@@ -1,24 +1,32 @@
 // discord_app/modules/multi_account/native/AccountSwitchingSpinnerModal.tsx
-import c from "../../../../_runtime/00576_c.js";
-import util from "../../../intl/index.native.tsx";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import ConstantsIOS from "../../../ConstantsIOS.tsx";
+import intl2 from "../../../intl/index.native.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const View = react_native.View;
+const jsx = Fragment.jsx;
 let closure_4 = createStyles.createStyles({
   switchingSpinnerContainer: { flex: 1, alignItems: "center", justifyContent: "center" },
 });
-const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(4);
+      let tmp10;
+      let tmp5;
+      let tmp6;
+      const obj = react2;
+      const cResult = obj.c(4);
       const tmp4 = closure_4();
+      const switchingSpinnerContainer = tmp4.switchingSpinnerContainer;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = util.intl;
-        const stringResult = intl.string(util.t.n8qMH0);
+        const intl = intl2.intl;
+        const stringResult = intl.string(intl2.t.n8qMH0);
         const tmp9 = jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {});
         cResult[0] = stringResult;
         cResult[1] = tmp9;
@@ -28,43 +36,29 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp5, tmp6] = cResult;
       }
       if (cResult[2] !== tmp4.switchingSpinnerContainer) {
-        const obj2 = {
-          style: tmp4.switchingSpinnerContainer,
-          accessible: true,
-          accessibilityLabel: tmp5,
-          children: tmp6,
-        };
         const tmp13 = (
-          <View style={tmp4.switchingSpinnerContainer} accessible accessibilityLabel={tmp5}>
+          <View style={switchingSpinnerContainer} accessible accessibilityLabel={tmp5}>
             {tmp6}
           </View>
         );
         cResult[2] = tmp4.switchingSpinnerContainer;
         cResult[3] = tmp13;
-        let tmp10 = tmp13;
+        tmp10 = tmp13;
       } else {
         tmp10 = cResult[3];
       }
       return tmp10;
     }
   : () => {
-      const obj = {
-        style: closure_4().switchingSpinnerContainer,
-        accessible: true,
-        accessibilityLabel: null,
-        children: null,
-      };
-      const intl = util.intl;
-      obj.accessibilityLabel = intl.string(util.t.n8qMH0);
-      obj.children = jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {});
+      const intl = intl2.intl;
       return (
-        <View style={closure_4().switchingSpinnerContainer} accessible accessibilityLabel={null}>
+        <View style={closure_4().switchingSpinnerContainer} accessible accessibilityLabel={intl.string(intl2.t.n8qMH0)}>
           {null}
         </View>
       );
     };
-tmp3.modalConfig = { animation: fn(1105).ModalAnimation.FADE, closable: false };
-const size = fn(2);
+let obj = { animation: ConstantsIOS.ModalAnimation.FADE, closable: false };
+tmp3.modalConfig = obj;
 const result = size.fileFinishedImporting("modules/multi_account/native/AccountSwitchingSpinnerModal.tsx");
 
 export default tmp3;

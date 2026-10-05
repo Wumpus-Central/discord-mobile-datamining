@@ -5,23 +5,30 @@ import handleUploadAttachmentErrors from "../media_uploads/handleUploadAttachmen
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
 const MessageSendLocation = MessageConstants.MessageSendLocation;
 let result = size.fileFinishedImporting("modules/messages/retrySendMessage.native.tsx");
 
 export default function retrySendMessage(id, id2, arr) {
+  let content;
+  let flags;
+  let guildId;
+  let nonce;
+  let tts;
   _require = id;
   let obj = arg3;
   if (arg3 === undefined) {
     obj = {};
   }
-  MessageActionCreatorsDefault.deleteMessage(id.id, id2.id, true);
+  let obj2 = MessageActionCreatorsDefault;
+  obj2.deleteMessage(id.id, id2.id, true);
   if (id2.isCommandType()) {
-    if (tmp17) {
-      require("executeCommand").retryCommandMessage(id2, id, obj);
-      const obj6 = require("executeCommand");
+    const tmp18 = null != id2.interactionData && null != obj.applicationId;
+    if (tmp18) {
+      const obj5 = require("executeCommand");
+      obj5.retryCommandMessage(id2, id, obj);
     }
-    tmp17 = null != id2.interactionData && null != obj.applicationId;
   } else {
     const messageReference = id2.messageReference;
     let mapped;
@@ -36,26 +43,23 @@ export default function retrySendMessage(id, id2, arr) {
         return fromJsonResult;
       });
     }
-    const tmpResult = MessageActionCreatorsDefault;
     id = id.id;
+    const sendMessage = MessageActionCreatorsDefault.sendMessage;
     const obj3 = { content, tts, invalidEmojis: [], validNonShortcutEmojis: [] };
-    const obj4 = {};
-    const merged = Object.assign(obj);
-    obj4.nonce = nonce;
-    obj4.flags = flags;
-    obj4.messageReference = messageReference;
-    obj4.location = MessageSendLocation.RETRY;
-    obj4.attachmentsToUpload = mapped;
-    obj4.onAttachmentUploadError = function onAttachmentUploadError(file, code, reason) {
-      const obj = handleUploadAttachmentErrors;
-      const result = obj.handleUploadMessageAttachmentsErrors({
-        file,
-        guildId: guildId.getGuildId(),
-        analyticsLocations: [],
-        code,
-        reason,
-      });
+    const obj4 = {
+      nonce,
+      flags,
+      messageReference,
+      location: MessageSendLocation.RETRY,
+      attachmentsToUpload: mapped,
+      onAttachmentUploadError(file, code, reason) {
+        const obj = handleUploadAttachmentErrors;
+        const obj2 = { file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason };
+        const result = obj.handleUploadMessageAttachmentsErrors(obj2);
+      },
     };
-    tmpResult.sendMessage(id, obj3, undefined, obj4);
+    const tmpResult = MessageActionCreatorsDefault;
+    const merged = Object.assign(obj);
+    sendMessage(id, obj3, undefined, obj4);
   }
 }

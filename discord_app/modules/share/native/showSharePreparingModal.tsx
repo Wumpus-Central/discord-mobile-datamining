@@ -1,57 +1,52 @@
 // discord_app/modules/share/native/showSharePreparingModal.tsx
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import SharePreparingModalConstants from "SharePreparingModalConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
+
+let _true;
 
 const SHARE_PREPARING_MODAL_KEY = SharePreparingModalConstants.SHARE_PREPARING_MODAL_KEY;
 const result = size.fileFinishedImporting("modules/share/native/showSharePreparingModal.tsx");
 
 export const showSharePreparingModal = function showSharePreparingModal(onCancel) {
+  let closure_2;
   onCancel = onCancel.onCancel;
-  c1 = false;
+  let c1 = false;
   const timeout = setTimeout(() => {
+    let obj = ModalActionCreatorsDefault;
     const obj2 = {
       onCancel() {
-        if (!_true) {
+        const tmp = _true;
+        if (!tmp) {
           _true = true;
           const _clearTimeout = clearTimeout;
-          clearTimeout(dependencyMap);
-          _true(5093).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          clearTimeout(closure_1_2);
+          const obj = _true(closure_2[1]);
+          obj.popWithKey(SHARE_PREPARING_MODAL_KEY);
           onCancel();
-          const obj = _true(5093);
         }
       },
     };
-    ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(8044, dependencyMap.paths),
-      {
-        onCancel() {
-          if (!_true) {
-            _true = true;
-            const _clearTimeout = clearTimeout;
-            clearTimeout(dependencyMap);
-            _true(5093).popWithKey(SHARE_PREPARING_MODAL_KEY);
-            onCancel();
-            const obj = _true(5093);
-          }
-        },
-      },
-      SHARE_PREPARING_MODAL_KEY,
-      { animation: "fade", presentation: "transparentModal" },
-    ).then(() => {
+    const pushLazyResult = obj.pushLazy(asyncRequire(8044, dependencyMap.paths), obj2, SHARE_PREPARING_MODAL_KEY, {
+      animation: "fade",
+      presentation: "transparentModal",
+    });
+    pushLazyResult.then(() => {
       if (_true) {
-        _true(5093).popWithKey(SHARE_PREPARING_MODAL_KEY);
-        const obj = _true(5093);
+        const obj = _true(closure_2[1]);
+        obj.popWithKey(SHARE_PREPARING_MODAL_KEY);
       }
     });
   }, 1000);
   return () => {
-    if (!c1) {
+    const tmp = c1;
+    if (!tmp) {
       c1 = true;
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_2);
-      ModalActionCreatorsDefault.popWithKey(SHARE_PREPARING_MODAL_KEY);
+      const obj = ModalActionCreatorsDefault;
+      obj.popWithKey(SHARE_PREPARING_MODAL_KEY);
     }
   };
 };

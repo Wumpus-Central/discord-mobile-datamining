@@ -3,5 +3,6 @@ import getTransformedBadgeColors from "../../badges/getTransformedBadgeColors.ts
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeUtils.tsx");
+const getTransformedBadgeColors_export = getTransformedBadgeColors.getTransformedBadgeColors;
 
-export const getTransformedBadgeColors = getTransformedBadgeColors.getTransformedBadgeColors;
+export { getTransformedBadgeColors_export as getTransformedBadgeColors };

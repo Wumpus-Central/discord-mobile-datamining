@@ -1,69 +1,70 @@
 // discord_app/modules/auth/native/images/flags.tsx
-import _mod15247 from "../../../../../_runtime/metro/15247__.js";
-import _mod15248 from "../../../../../_runtime/metro/15248__.js";
-import _mod15249 from "../../../../../_runtime/metro/15249__.js";
-import _mod15250 from "../../../../../_runtime/metro/15250__.js";
-import _mod15251 from "../../../../../_runtime/metro/15251__.js";
-import _mod15252 from "../../../../../_runtime/metro/15252__.js";
-import _mod15253 from "../../../../../_runtime/metro/15253__.js";
-import _mod15254 from "../../../../../_runtime/metro/15254__.js";
-import _mod15255 from "../../../../../_runtime/metro/15255__.js";
-import _mod15256 from "../../../../../_runtime/metro/15256__.js";
-import _mod15257 from "../../../../../_runtime/metro/15257__.js";
-import _mod15258 from "../../../../../_runtime/metro/15258__.js";
-import _mod15259 from "../../../../../_runtime/metro/15259__.js";
-import _mod15260 from "../../../../../_runtime/metro/15260__.js";
-import _mod15261 from "../../../../../_runtime/metro/15261__.js";
-import _mod15262 from "../../../../../_runtime/metro/15262__.js";
-import _mod15263 from "../../../../../_runtime/metro/15263__.js";
-import _mod15264 from "../../../../../_runtime/metro/15264__.js";
-import _mod15265 from "../../../../../_runtime/metro/15265__.js";
-import _mod15266 from "../../../../../_runtime/metro/15266__.js";
-import _mod15267 from "../../../../../_runtime/metro/15267__.js";
-import _mod15268 from "../../../../../_runtime/metro/15268__.js";
-import _mod15269 from "../../../../../_runtime/metro/15269__.js";
-import _mod15270 from "../../../../../_runtime/metro/15270__.js";
-import _mod15271 from "../../../../../_runtime/metro/15271__.js";
-import _mod15272 from "../../../../../_runtime/metro/15272__.js";
-import _mod15273 from "../../../../../_runtime/metro/15273__.js";
-import _mod15274 from "../../../../../_runtime/metro/15274__.js";
-import _mod15275 from "../../../../../_runtime/metro/15275__.js";
-import _mod15276 from "../../../../../_runtime/metro/15276__.js";
-import _mod15277 from "../../../../../_runtime/metro/15277__.js";
+import AssetRegistry from "../../../../../_runtime/15247_AssetRegistry.js";
+import AssetRegistry2 from "../../../../../_runtime/15248_AssetRegistry.js";
+import AssetRegistry3 from "../../../../../_runtime/15249_AssetRegistry.js";
+import AssetRegistry4 from "../../../../../_runtime/15250_AssetRegistry.js";
+import AssetRegistry5 from "../../../../../_runtime/15251_AssetRegistry.js";
+import AssetRegistry6 from "../../../../../_runtime/15252_AssetRegistry.js";
+import AssetRegistry7 from "../../../../../_runtime/15253_AssetRegistry.js";
+import AssetRegistry8 from "../../../../../_runtime/15254_AssetRegistry.js";
+import AssetRegistry9 from "../../../../../_runtime/15255_AssetRegistry.js";
+import AssetRegistry10 from "../../../../../_runtime/15256_AssetRegistry.js";
+import AssetRegistry11 from "../../../../../_runtime/15257_AssetRegistry.js";
+import AssetRegistry12 from "../../../../../_runtime/15258_AssetRegistry.js";
+import AssetRegistry13 from "../../../../../_runtime/15259_AssetRegistry.js";
+import AssetRegistry14 from "../../../../../_runtime/15260_AssetRegistry.js";
+import AssetRegistry15 from "../../../../../_runtime/15261_AssetRegistry.js";
+import AssetRegistry16 from "../../../../../_runtime/15262_AssetRegistry.js";
+import AssetRegistry17 from "../../../../../_runtime/15263_AssetRegistry.js";
+import AssetRegistry18 from "../../../../../_runtime/15264_AssetRegistry.js";
+import AssetRegistry19 from "../../../../../_runtime/15265_AssetRegistry.js";
+import AssetRegistry20 from "../../../../../_runtime/15266_AssetRegistry.js";
+import AssetRegistry21 from "../../../../../_runtime/15267_AssetRegistry.js";
+import AssetRegistry22 from "../../../../../_runtime/15268_AssetRegistry.js";
+import AssetRegistry23 from "../../../../../_runtime/15269_AssetRegistry.js";
+import AssetRegistry24 from "../../../../../_runtime/15270_AssetRegistry.js";
+import AssetRegistry25 from "../../../../../_runtime/15271_AssetRegistry.js";
+import AssetRegistry26 from "../../../../../_runtime/15272_AssetRegistry.js";
+import AssetRegistry27 from "../../../../../_runtime/15273_AssetRegistry.js";
+import AssetRegistry28 from "../../../../../_runtime/15274_AssetRegistry.js";
+import AssetRegistry29 from "../../../../../_runtime/15275_AssetRegistry.js";
+import AssetRegistry30 from "../../../../../_runtime/15276_AssetRegistry.js";
+import AssetRegistry31 from "../../../../../_runtime/15277_AssetRegistry.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const obj = {
+  bg: AssetRegistry,
+  cs: AssetRegistry2,
+  da: AssetRegistry3,
+  de: AssetRegistry4,
+  el: AssetRegistry5,
+  "en-GB": AssetRegistry6,
+  "en-US": AssetRegistry7,
+  "es-ES": AssetRegistry8,
+  "es-419": AssetRegistry9,
+  fi: AssetRegistry10,
+  fr: AssetRegistry11,
+  hi: AssetRegistry12,
+  hr: AssetRegistry13,
+  hu: AssetRegistry14,
+  it: AssetRegistry15,
+  ja: AssetRegistry16,
+  ko: AssetRegistry17,
+  lt: AssetRegistry18,
+  nl: AssetRegistry19,
+  no: AssetRegistry20,
+  pl: AssetRegistry21,
+  "pt-BR": AssetRegistry22,
+  ro: AssetRegistry23,
+  ru: AssetRegistry24,
+  "sv-SE": AssetRegistry25,
+  th: AssetRegistry26,
+  tr: AssetRegistry27,
+  uk: AssetRegistry28,
+  vi: AssetRegistry29,
+  "zh-CN": AssetRegistry30,
+  "zh-TW": AssetRegistry31,
+};
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
-export const flags = {
-  bg: _mod15247,
-  cs: _mod15248,
-  da: _mod15249,
-  de: _mod15250,
-  el: _mod15251,
-  "en-GB": _mod15252,
-  "en-US": _mod15253,
-  "es-ES": _mod15254,
-  "es-419": _mod15255,
-  fi: _mod15256,
-  fr: _mod15257,
-  hi: _mod15258,
-  hr: _mod15259,
-  hu: _mod15260,
-  it: _mod15261,
-  ja: _mod15262,
-  ko: _mod15263,
-  lt: _mod15264,
-  nl: _mod15265,
-  no: _mod15266,
-  pl: _mod15267,
-  "pt-BR": _mod15268,
-  ro: _mod15269,
-  ru: _mod15270,
-  "sv-SE": _mod15271,
-  th: _mod15272,
-  tr: _mod15273,
-  uk: _mod15274,
-  vi: _mod15275,
-  "zh-CN": _mod15276,
-  "zh-TW": _mod15277,
-};
+export const flags = obj;

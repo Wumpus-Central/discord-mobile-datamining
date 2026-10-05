@@ -4,65 +4,51 @@ import shared from "../../../../design/shared.tsx";
 import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+let theme;
+
+let result1;
 let createStyles = createStyles_mod;
 const result = createStyles.experimental_createToken((theme) => {
+  theme = theme.theme;
+  obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_630;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_630;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 let obj = {
-  textColor: null,
-  linkColor: null,
-  timestampColor: null,
-  highlightColor: null,
-  unsupportedColor: null,
-  embedProviderColor: null,
-  embedBorderLeftColor: null,
-  embedBodyTextColor: null,
-  embedHeaderTextColor: null,
-  opTagTextColor: null,
-  opTagBackgroundColor: null,
-  failedMessageBodyTextColor: null,
-  automodBlockedBodyTextColor: null,
-  aiBotTagColor: null,
-  editedColor: null,
-  defaultUsernameColor: null,
-  feedbackColor: null,
-  reportFpTextColor: null,
-  reportFpBackgroundColor: null,
-  retryTextColor: null,
-  retryBackgroundColor: null,
-  clipTagBackgroundColor: null,
-  clipTagTextColor: null,
+  textColor: nativeDefault.colors.TEXT_STRONG,
+  linkColor: nativeDefault.colors.TEXT_LINK,
+  timestampColor: nativeDefault.colors.TEXT_MUTED,
+  highlightColor: nativeDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT,
+  unsupportedColor: nativeDefault.colors.TEXT_MUTED,
+  embedProviderColor: result,
+  embedBorderLeftColor: nativeDefault.colors.BORDER_NORMAL,
+  embedBodyTextColor: nativeDefault.colors.TEXT_DEFAULT,
+  embedHeaderTextColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  opTagTextColor: nativeDefault.unsafe_rawColors.BRAND_560,
+  opTagBackgroundColor: result1,
+  failedMessageBodyTextColor: nativeDefault.unsafe_rawColors.RED_400,
+  automodBlockedBodyTextColor: nativeDefault.colors.TEXT_MUTED,
+  aiBotTagColor: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE,
+  editedColor: nativeDefault.colors.TEXT_MUTED,
+  defaultUsernameColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+  feedbackColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+  reportFpTextColor: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT,
+  reportFpBackgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
+  retryTextColor: nativeDefault.colors.WHITE,
+  retryBackgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
+  clipTagBackgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
+  clipTagTextColor: nativeDefault.unsafe_rawColors.WHITE,
 };
-const result1 = createStyles.experimental_createToken((theme) => {
+result1 = createStyles.experimental_createToken((theme) => {
+  theme = theme.theme;
+  obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.BRAND_260 : unsafe_rawColors.BRAND_200;
+  return isThemeDarkResult ? unsafe_rawColors.BRAND_260 : unsafe_rawColors.BRAND_200;
 });
-obj.textColor = nativeDefault.colors.TEXT_STRONG;
-obj.linkColor = nativeDefault.colors.TEXT_LINK;
-obj.timestampColor = nativeDefault.colors.TEXT_MUTED;
-obj.highlightColor = nativeDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT;
-obj.unsupportedColor = nativeDefault.colors.TEXT_MUTED;
-obj.embedProviderColor = result;
-obj.embedBorderLeftColor = nativeDefault.colors.BORDER_NORMAL;
-obj.embedBodyTextColor = nativeDefault.colors.TEXT_DEFAULT;
-obj.embedHeaderTextColor = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
-obj.opTagTextColor = nativeDefault.unsafe_rawColors.BRAND_560;
-obj.opTagBackgroundColor = result1;
-obj.failedMessageBodyTextColor = nativeDefault.unsafe_rawColors.RED_400;
-obj.automodBlockedBodyTextColor = nativeDefault.colors.TEXT_MUTED;
-obj.aiBotTagColor = nativeDefault.colors.TEXT_FEEDBACK_POSITIVE;
-obj.editedColor = nativeDefault.colors.TEXT_MUTED;
-obj.defaultUsernameColor = nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE;
-obj.feedbackColor = nativeDefault.colors.BACKGROUND_MOD_MUTED;
-obj.reportFpTextColor = nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT;
-obj.reportFpBackgroundColor = nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT;
-obj.retryTextColor = nativeDefault.colors.WHITE;
-obj.retryBackgroundColor = nativeDefault.colors.BACKGROUND_BRAND;
-obj.clipTagBackgroundColor = nativeDefault.colors.BACKGROUND_BRAND;
-obj.clipTagTextColor = nativeDefault.unsafe_rawColors.WHITE;
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 let closure_4 = createStyles.createNativeStyleProperties((arg0) => {
   const colors = nativeDefault.colors;
   obj = { embedBackgroundColor: arg0 ? colors.EMBED_BACKGROUND_ALTERNATE : colors.EMBED_BACKGROUND };

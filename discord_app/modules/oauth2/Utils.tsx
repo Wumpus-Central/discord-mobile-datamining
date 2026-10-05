@@ -1,6 +1,6 @@
 // discord_app/modules/oauth2/Utils.tsx
 import Constants from "../../Constants.tsx";
-import util from "../../intl/index.native.tsx";
+import intl5 from "../../intl/index.native.tsx";
 import utils from "../content_classification/utils.tsx";
 import useIsSocialLayerParentApplication from "../applications/useIsSocialLayerParentApplication.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -9,46 +9,47 @@ const MarketingURLs = Constants.MarketingURLs;
 let result = size.fileFinishedImporting("modules/oauth2/Utils.tsx");
 
 export const getApplicationDetailsText = function getApplicationDetailsText(application) {
-  const isSocialLayerParentApplication =
-    useIsSocialLayerParentApplication.getIsSocialLayerParentApplication(application);
+  const obj = useIsSocialLayerParentApplication;
+  const isSocialLayerParentApplication = obj.getIsSocialLayerParentApplication(application);
   if (null != application.privacy_policy_url) {
     if (null != application.terms_of_service_url) {
-      const t4 = util.t;
-      const intl4 = util.intl;
+      const t4 = intl5.t;
+      const tmp10 = isSocialLayerParentApplication ? t4.yVfotv : t4.rxlyKL;
+      const intl4 = intl5.intl;
       const obj2 = {
         application: null,
         privacyPolicyURL: null,
         termsOfServiceURL: null,
-        discordPrivacyPolicyURL: null,
+        discordPrivacyPolicyURL: MarketingURLs.PRIVACY,
       };
       ({
         name: obj5.application,
         privacy_policy_url: obj5.privacyPolicyURL,
         terms_of_service_url: obj5.termsOfServiceURL,
       } = application);
-      obj2.discordPrivacyPolicyURL = MarketingURLs.PRIVACY;
-      return intl4.format(isSocialLayerParentApplication ? t4.yVfotv : t4.rxlyKL, obj2);
+      return intl4.format(tmp10, obj2);
     }
   }
   if (null != application.privacy_policy_url) {
-    const t3 = util.t;
-    const intl3 = util.intl;
-    const obj9 = { application: null, privacyPolicyURL: null, discordPrivacyPolicyURL: null };
+    const t3 = intl5.t;
+    const tmp8 = isSocialLayerParentApplication ? t3.pYVSah : t3.TBvmM2;
+    const intl3 = intl5.intl;
+    const obj9 = { application: null, privacyPolicyURL: null, discordPrivacyPolicyURL: MarketingURLs.PRIVACY };
     ({ name: obj4.application, privacy_policy_url: obj4.privacyPolicyURL } = application);
-    obj9.discordPrivacyPolicyURL = MarketingURLs.PRIVACY;
-    return intl3.format(isSocialLayerParentApplication ? t3.pYVSah : t3.TBvmM2, obj9);
+    return intl3.format(tmp8, obj9);
   } else if (null != application.terms_of_service_url) {
-    const t2 = util.t;
-    const intl2 = util.intl;
-    const obj10 = { application: null, termsOfServiceURL: null, discordPrivacyPolicyURL: null };
+    const t2 = intl5.t;
+    const tmp6 = isSocialLayerParentApplication ? t2.nBLOp5 : t2["q0T/Q1"];
+    const intl2 = intl5.intl;
+    const obj10 = { application: null, termsOfServiceURL: null, discordPrivacyPolicyURL: MarketingURLs.PRIVACY };
     ({ name: obj3.application, terms_of_service_url: obj3.termsOfServiceURL } = application);
-    obj10.discordPrivacyPolicyURL = MarketingURLs.PRIVACY;
-    return intl2.format(isSocialLayerParentApplication ? t2.nBLOp5 : t2["q0T/Q1"], obj10);
+    return intl2.format(tmp6, obj10);
   } else {
-    const t = util.t;
-    const intl = util.intl;
+    const t = intl5.t;
+    const tmp4 = isSocialLayerParentApplication ? t["8LemYv"] : t["3Ywek3"];
+    const intl = intl5.intl;
     const obj11 = { application: application.name, discordPrivacyPolicyURL: MarketingURLs.PRIVACY };
-    return intl.format(isSocialLayerParentApplication ? t["8LemYv"] : t["3Ywek3"], obj11);
+    return intl.format(tmp4, obj11);
   }
 };
 export const isContentClassificationRestricted = function isContentClassificationRestricted(
@@ -57,7 +58,8 @@ export const isContentClassificationRestricted = function isContentClassificatio
 ) {
   let result = null != content_classification;
   if (result) {
-    result = utils.isAgeRestrictedContentClassification(content_classification);
+    const obj = utils;
+    result = obj.isAgeRestrictedContentClassification(content_classification);
   }
   if (result) {
     result = false === nsfwAllowed;

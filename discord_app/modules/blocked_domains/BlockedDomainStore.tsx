@@ -1,25 +1,27 @@
 // discord_app/modules/blocked_domains/BlockedDomainStore.tsx
-import js_shim_shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
 import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const AnalyticEvents = Constants.AnalyticEvents;
-const prototype = function BlockedDomainStore() {
-  return Object.create(new.target.prototype);
-}.prototype;
-prototype["isBlockedDomain"] = function isBlockedDomain(arg0) {
-  let isBlockedDomainResult = null;
-  if (obj.isLibdiscoreInitialized()) {
-    isBlockedDomainResult = js_shim_shim.isBlockedDomain(arg0);
-    const tmpResult = js_shim_shim;
+class BlockedDomainStore {
+  static isBlockedDomain(arg0) {
+    let isBlockedDomainResult = null;
+    const obj = shim;
+    if (obj.isLibdiscoreInitialized()) {
+      const tmpResult = shim;
+      isBlockedDomainResult = tmpResult.isBlockedDomain(arg0);
+    }
+    const tmp5 = "" !== isBlockedDomainResult && null !== isBlockedDomainResult;
+    if (tmp5) {
+      const obj2 = { blocked_domain: isBlockedDomainResult };
+      const obj3 = AnalyticsUtilsDefault;
+      obj3.track(AnalyticEvents.LINK_SECURITY_CHECK_BLOCKED, obj2);
+    }
+    return isBlockedDomainResult;
   }
-  if (tmp5) {
-    const obj2 = { blocked_domain: isBlockedDomainResult };
-    AnalyticsUtilsDefault.track(AnalyticEvents.LINK_SECURITY_CHECK_BLOCKED, obj2);
-  }
-  return isBlockedDomainResult;
-};
+}
 const result = size.fileFinishedImporting("modules/blocked_domains/BlockedDomainStore.tsx");
 
-export default prototype;
+export default BlockedDomainStore;

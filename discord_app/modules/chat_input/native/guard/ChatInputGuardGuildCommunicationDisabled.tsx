@@ -1,101 +1,118 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardGuildCommunicationDisabled.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import util from "../../../../intl/index.native.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import intl3 from "../../../../intl/index.native.tsx";
+import GuildDisableCommunicationConstants from "../../../guild_communication_disabled/GuildDisableCommunicationConstants.tsx";
 import ClockWarningIcon from "../../../../design/components/Icon/native/redesign/generated/ClockWarningIcon.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
 import useCommunicationDisabledCountdownCleanup from "../../../guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const link = fn(2114).GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/chat_input/native/guard/ChatInputGuardGuildCommunicationDisabled.tsx",
-);
-
-export default noop.memo(
+const link = GuildDisableCommunicationConstants.GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK;
+const jsx = Fragment.jsx;
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (guildMember) => {
-        const cResult = c.c(7);
+    ? function (guildMember) {
+        let tmp11;
+        let tmp12;
+        let tmp13;
+        let tmp19;
+        let tmp5;
+        const obj = react2;
+        const cResult = obj.c(7);
         guildMember = guildMember.guildMember;
-        const communicationDisabledCountdownCleanup =
-          useCommunicationDisabledCountdownCleanup.useCommunicationDisabledCountdownCleanup(guildMember);
+        const obj2 = useCommunicationDisabledCountdownCleanup;
+        const communicationDisabledCountdownCleanup = obj2.useCommunicationDisabledCountdownCleanup(guildMember);
         const communicationDisabledUntil = guildMember.communicationDisabledUntil;
         if (cResult[0] !== communicationDisabledUntil) {
+          let date;
           if (null == communicationDisabledUntil) {
             const _Date2 = Date;
-            let date = new Date();
+            const self3 = this;
+            const self4 = this;
+            date = new Date();
           } else {
             const _Date = Date;
+            const self = this;
+            const self2 = this;
             date = new Date(communicationDisabledUntil);
           }
           cResult[0] = communicationDisabledUntil;
           cResult[1] = date;
+          tmp5 = date;
         } else {
-          const _Symbol = Symbol;
-          if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp21 = jsx(ClockWarningIcon.ClockWarningIcon, {});
-            const intl = util.intl;
-            const stringResult = intl.string(util.t.VSpdzK);
-            const intl2 = util.intl;
-            const obj3 = { link };
-            const formatResult = intl2.format(util.t["4ZwD5G"], obj3);
-            cResult[2] = tmp21;
-            cResult[3] = stringResult;
-            cResult[4] = formatResult;
-            let tmp19 = formatResult;
-            let tmp18 = stringResult;
-            let tmp17 = tmp21;
-          } else {
-            tmp17 = cResult[2];
-            tmp18 = cResult[3];
-            tmp19 = cResult[4];
-          }
-          if (cResult[5] !== cResult[1]) {
-            const obj4 = { type: "simple-action", icon: tmp17, message: tmp18, subtext: tmp19, countdown: tmp5 };
-            const tmp28 = jsx(ChatInputGuardDefault, {
-              type: "simple-action",
-              icon: tmp17,
-              message: tmp18,
-              subtext: tmp19,
-              countdown: tmp5,
-            });
-            cResult[5] = tmp5;
-            cResult[6] = tmp28;
-            let tmp25 = tmp28;
-          } else {
-            tmp25 = cResult[6];
-          }
-          return tmp25;
+          tmp5 = cResult[1];
         }
+        if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+          const tmp15 = jsx(ClockWarningIcon.ClockWarningIcon, {});
+          const intl = intl3.intl;
+          const stringResult = intl.string(intl3.t.VSpdzK);
+          const intl2 = intl3.intl;
+          const obj3 = { link };
+          const formatResult = intl2.format(intl3.t["4ZwD5G"], obj3);
+          cResult[2] = tmp15;
+          cResult[3] = stringResult;
+          cResult[4] = formatResult;
+          tmp13 = formatResult;
+          tmp12 = stringResult;
+          tmp11 = tmp15;
+        } else {
+          tmp11 = cResult[2];
+          tmp12 = cResult[3];
+          tmp13 = cResult[4];
+        }
+        if (cResult[5] !== tmp5) {
+          const tmp22 = jsx(ChatInputGuardDefault, {
+            type: "simple-action",
+            icon: tmp11,
+            message: tmp12,
+            subtext: tmp13,
+            countdown: tmp5,
+          });
+          cResult[5] = tmp5;
+          cResult[6] = tmp22;
+          tmp19 = tmp22;
+        } else {
+          tmp19 = cResult[6];
+        }
+        return tmp19;
       }
-    : (guildMember) => {
+    : function (guildMember) {
+        let date;
         guildMember = guildMember.guildMember;
-        const communicationDisabledCountdownCleanup =
-          useCommunicationDisabledCountdownCleanup.useCommunicationDisabledCountdownCleanup(guildMember);
+        const obj = useCommunicationDisabledCountdownCleanup;
+        const communicationDisabledCountdownCleanup = obj.useCommunicationDisabledCountdownCleanup(guildMember);
         const communicationDisabledUntil = guildMember.communicationDisabledUntil;
         if (null == communicationDisabledUntil) {
           const _Date2 = Date;
-          let date = new Date();
+          const self3 = this;
+          const self4 = this;
+          date = new Date();
         } else {
           const _Date = Date;
+          const self = this;
+          const self2 = this;
           date = new Date(communicationDisabledUntil);
         }
-        const obj2 = { type: "simple-action", icon: null, message: null, subtext: null, countdown: null };
-        obj2.icon = jsx(ClockWarningIcon.ClockWarningIcon, {});
-        const intl = util.intl;
-        obj2.message = intl.string(util.t.VSpdzK);
-        const intl2 = util.intl;
-        obj2.subtext = intl2.format(util.t["4ZwD5G"], { link });
-        obj2.countdown = date;
-        return jsx(ChatInputGuardDefault, {
-          type: "simple-action",
-          icon: null,
-          message: null,
-          subtext: null,
-          countdown: null,
-        });
+        ChatInputGuardDefault;
+        const intl = intl3.intl;
+        const intl2 = intl3.intl;
+        const obj3 = { link };
+        return (
+          <tmp8
+            type="simple-action"
+            icon={null}
+            message={intl.string(intl3.t.VSpdzK)}
+            subtext={intl2.format(intl3.t["4ZwD5G"], obj3)}
+            countdown={date}
+          />
+        );
       },
 );
+const result = size.fileFinishedImporting(
+  "modules/chat_input/native/guard/ChatInputGuardGuildCommunicationDisabled.tsx",
+);
+
+export default memoResult;

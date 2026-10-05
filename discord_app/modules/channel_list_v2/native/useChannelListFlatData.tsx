@@ -1,42 +1,58 @@
 // discord_app/modules/channel_list_v2/native/useChannelListFlatData.tsx
 import FastList from "../../../lib/native/FastList.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/channel_list_v2/native/useChannelListFlatData.tsx");
+let map;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = map(576).c(19);
+      let getItemSize;
+      let getRecyclerKey;
+      let getSectionFooterSize;
+      let getSectionHeaderSize;
+      let headerSize;
+      let recyclerKey;
+      let recyclerKey1;
+      let recyclerKey2;
+      let sections;
+      const obj = map(576);
+      const cResult = obj.c(19);
       ({ getItemSize, getRecyclerKey, getSectionFooterSize, getSectionHeaderSize, headerSize, sections } = arg0);
       if (cResult[0] === getItemSize) {
         if (cResult[1] === getRecyclerKey) {
           if (cResult[2] === getSectionFooterSize) {
             if (cResult[3] === getSectionHeaderSize) {
               if (cResult[4] === headerSize) {
+                let tmp3;
+                let tmp4;
+                let tmp5;
+                let tmp6;
+                let tmp47;
                 if (cResult[5] === sections) {
                   map = cResult[6];
-                  let tmp3 = cResult[7];
-                  let tmp4 = cResult[8];
-                  let tmp5 = cResult[9];
-                  let tmp6 = cResult[10];
+                  tmp3 = cResult[7];
+                  tmp4 = cResult[8];
+                  tmp5 = cResult[9];
+                  tmp6 = cResult[10];
                 }
                 if (cResult[11] !== tmp2) {
                   const fn = function u(arg0, arg1) {
+                    let combined;
+                    const get = map.get;
                     if (null == arg1) {
                       const _HermesInternal2 = HermesInternal;
-                      let combined = "" + FastList.FastListItemTypes.SECTION + ":" + arg0 + ":" + -1;
+                      combined = "" + FastList.FastListItemTypes.SECTION + ":" + arg0 + ":" + -1;
                     } else {
                       const _HermesInternal = HermesInternal;
                       combined = "" + FastList.FastListItemTypes.ITEM + ":" + arg0 + ":" + arg1;
                     }
-                    return map.get(combined);
+                    return get(combined);
                   };
                   cResult[11] = tmp2;
                   cResult[12] = fn;
-                  let tmp47 = fn;
+                  tmp47 = fn;
                 } else {
                   tmp47 = cResult[12];
                 }
@@ -44,8 +60,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[14] === tmp3) {
                     if (cResult[15] === tmp4) {
                       if (cResult[16] === tmp5) {
+                        let tmp48;
                         if (cResult[17] === tmp6) {
-                          let tmp48 = cResult[18];
+                          tmp48 = cResult[18];
                         }
                         return tmp48;
                       }
@@ -86,8 +103,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let str14 = ":";
             let str15 = ":";
             let result = map.set("" + SECTION + ":" + tmp11 + ":" + -1, items.length);
-            let obj3 = { type: SECTION, section: num, item: -1, key: null };
-            let recyclerKey = getRecyclerKey(SECTION, num, undefined);
+            let obj3 = { type: SECTION, section: num, item: -1, key: recyclerKey };
+            let push2 = items.push;
+            recyclerKey = getRecyclerKey(SECTION, num, undefined);
             if (recyclerKey == null) {
               let _HermesInternal = HermesInternal;
               let str = "";
@@ -95,10 +113,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let str3 = ":";
               recyclerKey = "" + SECTION + ":" + tmp11 + ":" + -1;
             }
-            obj3.key = recyclerKey;
-            let arr = items.push(obj3);
-            let arr2 = items1.push(tmp7);
-            let arr3 = items2.push(sectionHeaderSize);
+            let push2Result = push2(obj3);
+            let arr = items1.push(tmp7);
+            let arr2 = items2.push(sectionHeaderSize);
             let sum = tmp7 + sectionHeaderSize;
             let num3 = 0;
             let tmp20 = sum;
@@ -112,13 +129,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let str5 = ":";
                 let str6 = ":";
                 let result1 = map.set("" + ITEM + ":" + tmp11 + ":" + num3, items.length);
-                let obj4 = { type: ITEM, section: num, item: num3, key: null };
+                let obj4 = { type: ITEM, section: num, item: num3, key: recyclerKey1 };
                 let tmp30;
+                let push = items.push;
                 let tmp29 = num3;
                 if (num3 >= 0) {
                   tmp30 = num3;
                 }
-                let recyclerKey1 = getRecyclerKey(ITEM, num, tmp30);
+                recyclerKey1 = getRecyclerKey(ITEM, num, tmp30);
                 if (recyclerKey1 == null) {
                   let _HermesInternal3 = HermesInternal;
                   let str7 = "";
@@ -126,10 +144,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let str9 = ":";
                   recyclerKey1 = "" + ITEM + ":" + tmp11 + ":" + tmp29;
                 }
-                obj4.key = recyclerKey1;
-                let arr12 = items.push(obj4);
-                let arr13 = items1.push(sum);
-                let arr14 = items2.push(itemSize);
+                let arr3 = push(obj4);
+                let arr10 = items1.push(sum);
+                let arr11 = items2.push(itemSize);
                 sum = sum + itemSize;
                 num3 = num3 + 1;
                 tmp20 = sum;
@@ -145,8 +162,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let str17 = ":";
               let str18 = ":";
               let result2 = map.set("" + SECTION_FOOTER + ":" + tmp11 + ":" + -1, items.length);
-              let obj5 = { type: SECTION_FOOTER, section: num, item: -1, key: null };
-              let recyclerKey2 = getRecyclerKey(SECTION_FOOTER, num, undefined);
+              let obj5 = { type: SECTION_FOOTER, section: num, item: -1, key: recyclerKey2 };
+              let push3 = items.push;
+              recyclerKey2 = getRecyclerKey(SECTION_FOOTER, num, undefined);
               if (recyclerKey2 == null) {
                 let _HermesInternal4 = HermesInternal;
                 let str10 = "";
@@ -154,10 +172,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let str12 = ":";
                 recyclerKey2 = "" + SECTION_FOOTER + ":" + tmp11 + ":" + -1;
               }
-              obj5.key = recyclerKey2;
-              let arr15 = items.push(obj5);
-              let arr16 = items1.push(tmp20);
-              let arr17 = items2.push(sectionFooterSize);
+              let push3Result = push3(obj5);
+              let arr12 = items1.push(tmp20);
+              let arr13 = items2.push(sectionFooterSize);
               sum1 = tmp20 + sectionFooterSize;
             }
           }
@@ -181,7 +198,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = items2;
       tmp5 = items1;
       tmp3 = items;
-      const obj = map(576);
     }
   : (getItemSize) => {
       getItemSize = getItemSize.getItemSize;
@@ -192,10 +208,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const sections = getItemSize.sections;
       let items = [getItemSize, getRecyclerKey, getSectionFooterSize, getSectionHeaderSize, headerSize, sections];
       return getSectionFooterSize.useMemo(() => {
+        let combined;
+        let combined1;
+        let combined2;
         const items = [];
         const items1 = [];
         const items2 = [];
-        const map = new Map();
+        map = new Map();
         let tmp = headerSize;
         let num = 0;
         let tmp2 = headerSize;
@@ -213,9 +232,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let str14 = ":";
               let str15 = ":";
               let result = map.set("" + SECTION + ":" + tmp6 + ":" + -1, items.length);
-              let obj = { type: SECTION, section: num, item: -1, key: null };
+              let obj = { type: SECTION, section: num, item: -1, key: combined };
               let tmp37 = getRecyclerKey;
-              let combined = getRecyclerKey(SECTION, num, undefined);
+              let push2 = items.push;
+              combined = getRecyclerKey(SECTION, num, undefined);
               if (combined == null) {
                 let _HermesInternal = HermesInternal;
                 let str = "";
@@ -223,10 +243,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let str3 = ":";
                 combined = "" + SECTION + ":" + tmp6 + ":" + -1;
               }
-              obj.key = combined;
-              let arr = items.push(obj);
-              let arr2 = items1.push(tmp);
-              let arr3 = items2.push(tmp48);
+              let push2Result = push2(obj);
+              let arr = items1.push(tmp);
+              let arr2 = items2.push(tmp48);
               let sum = tmp + tmp48;
               let num3 = 0;
               let tmp15 = sum;
@@ -239,13 +258,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let str5 = ":";
                   let str6 = ":";
                   let result1 = map.set("" + ITEM + ":" + tmp6 + ":" + num3, items.length);
-                  let obj2 = { type: ITEM, section: num, item: num3, key: null };
+                  let obj2 = { type: ITEM, section: num, item: num3, key: combined1 };
                   let tmp27;
+                  let push = items.push;
                   let tmp26 = num3;
                   if (num3 >= 0) {
                     tmp27 = num3;
                   }
-                  let combined1 = getRecyclerKey(ITEM, num, tmp27);
+                  combined1 = getRecyclerKey(ITEM, num, tmp27);
                   if (combined1 == null) {
                     let _HermesInternal3 = HermesInternal;
                     let str7 = "";
@@ -253,10 +273,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     let str9 = ":";
                     combined1 = "" + ITEM + ":" + tmp6 + ":" + tmp26;
                   }
-                  obj2.key = combined1;
-                  let arr12 = items.push(obj2);
-                  let arr13 = items1.push(sum);
-                  let arr14 = items2.push(tmp19);
+                  let arr3 = push(obj2);
+                  let arr10 = items1.push(sum);
+                  let arr11 = items2.push(tmp19);
                   sum = sum + tmp19;
                   num3 = num3 + 1;
                   tmp36 = require;
@@ -273,8 +292,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let str17 = ":";
                 let str18 = ":";
                 let result2 = map.set("" + SECTION_FOOTER + ":" + tmp6 + ":" + -1, items.length);
-                let obj3 = { type: SECTION_FOOTER, section: num, item: -1, key: null };
-                let combined2 = tmp37(SECTION_FOOTER, num, undefined);
+                let obj3 = { type: SECTION_FOOTER, section: num, item: -1, key: combined2 };
+                let push3 = items.push;
+                combined2 = tmp37(SECTION_FOOTER, num, undefined);
                 if (combined2 == null) {
                   let _HermesInternal4 = HermesInternal;
                   let str10 = "";
@@ -282,10 +302,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let str12 = ":";
                   combined2 = "" + SECTION_FOOTER + ":" + tmp6 + ":" + -1;
                 }
-                obj3.key = combined2;
-                let arr15 = items.push(obj3);
-                let arr16 = items1.push(tmp15);
-                let arr17 = items2.push(tmp39);
+                let push3Result = push3(obj3);
+                let arr12 = items1.push(tmp15);
+                let arr13 = items2.push(tmp39);
                 sum1 = tmp15 + tmp39;
               }
             }
@@ -300,15 +319,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           sizes: items2,
           contentSize: tmp2,
           getIndex(arg0, arg1) {
+            let combined;
+            const get = map.get;
             if (null == arg1) {
               const _HermesInternal2 = HermesInternal;
-              let combined = "" + getItemSize(getRecyclerKey[3]).FastListItemTypes.SECTION + ":" + arg0 + ":" + -1;
+              combined = "" + getItemSize(getRecyclerKey[3]).FastListItemTypes.SECTION + ":" + arg0 + ":" + -1;
             } else {
               const _HermesInternal = HermesInternal;
               combined = "" + getItemSize(getRecyclerKey[3]).FastListItemTypes.ITEM + ":" + arg0 + ":" + arg1;
             }
-            return map.get(combined);
+            return get(combined);
           },
         };
       }, items);
     };
+let result = size.fileFinishedImporting("modules/channel_list_v2/native/useChannelListFlatData.tsx");
+
+export default tmp2;

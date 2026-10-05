@@ -1,64 +1,76 @@
 // discord_app/modules/home_drawer/native/subtitles/TypingSubtitle.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
 import TextIcon from "../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import useSubtitleStyles from "useSubtitleStyles.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/TypingSubtitle.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let c3;
+let closure_4;
+const View = react_native.View;
+({ jsx: c3, jsxs: closure_4 } = Fragment);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(17);
+      let channel;
+      let channelName;
+      let guild;
+      let items;
+      let items1;
+      let items2;
+      let text;
+      const obj = react2;
+      const cResult = obj.c(17);
       ({ guild, channel, channelName, text } = arg0);
-      const subtitleStyles = useSubtitleStyles.useSubtitleStyles();
+      const obj2 = useSubtitleStyles;
+      const subtitleStyles = obj2.useSubtitleStyles();
       if (cResult[0] === channel) {
+        let tmp5;
         if (cResult[1] === guild) {
-          let tmp5 = cResult[2];
+          tmp5 = cResult[2];
         }
         if (cResult[3] === tmp5) {
           if (cResult[4] === channelName) {
+            let tmp7;
+            let tmp10;
             if (cResult[5] === subtitleStyles.channelIcon) {
-              let tmp7 = cResult[6];
+              tmp7 = cResult[6];
             }
             if (cResult[7] !== channelName) {
               let tmp11 = null;
               if (null != channelName) {
-                const obj3 = { variant: "text-xs/medium", children: null };
-                const items = [channelName, "  \u00B7  "];
-                obj3.children = items;
-                tmp11 = React4(Text_Text.Text, obj3);
+                const obj3 = { variant: "text-xs/medium", children: items };
+                items = [channelName, "  \u00B7  "];
+                tmp11 = React3(Text_Text.Text, obj3);
               }
               cResult[7] = channelName;
               cResult[8] = tmp11;
-              let tmp10 = tmp11;
+              tmp10 = tmp11;
             } else {
               tmp10 = cResult[8];
             }
             if (cResult[9] === subtitleStyles.subtitleText) {
               if (cResult[10] === tmp10) {
+                let tmp13;
                 if (cResult[11] === text) {
-                  let tmp13 = cResult[12];
+                  tmp13 = cResult[12];
                 }
                 if (cResult[13] === subtitleStyles.subtitleRow) {
                   if (cResult[14] === tmp7) {
+                    let tmp16;
                     if (cResult[15] === tmp13) {
-                      let tmp16 = cResult[16];
+                      tmp16 = cResult[16];
                     }
                     return tmp16;
                   }
                 }
-                const obj4 = { style: subtitleStyles.subtitleRow, children: null };
-                const items1 = [tmp7, tmp13];
-                obj4.children = items1;
-                const tmp19 = React4(View, obj4);
+                const obj4 = { style: subtitleStyles.subtitleRow, children: items1 };
+                items1 = [tmp7, tmp13];
+                const tmp19 = React3(View, obj4);
                 cResult[13] = subtitleStyles.subtitleRow;
                 cResult[14] = tmp7;
                 cResult[15] = tmp13;
@@ -71,11 +83,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               color: "text-muted",
               lineClamp: 1,
               style: subtitleStyles.subtitleText,
-              children: null,
+              children: items2,
             };
-            const items2 = [tmp10, text];
-            obj5.children = items2;
-            const tmp15 = React4(Text_Text.Text, obj5);
+            items2 = [tmp10, text];
+            const tmp15 = React3(Text_Text.Text, obj5);
             cResult[9] = subtitleStyles.subtitleText;
             cResult[10] = tmp10;
             cResult[11] = text;
@@ -86,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp8 = null;
         if (null != channelName) {
           const obj6 = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };
-          tmp8 = React3(tmp5, obj6);
+          tmp8 = _false(tmp5, obj6);
         }
         cResult[3] = tmp5;
         cResult[4] = channelName;
@@ -96,8 +107,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let channelIconComponentWithGuild;
       if (null != channel) {
-        channelIconComponentWithGuild = utils_ChannelUtils.getChannelIconComponentWithGuild(channel, guild);
         const tmpResult = utils_ChannelUtils;
+        channelIconComponentWithGuild = tmpResult.getChannelIconComponentWithGuild(channel, guild);
       }
       if (channelIconComponentWithGuild == null) {
         channelIconComponentWithGuild = TextIcon.TextIcon;
@@ -108,41 +119,50 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = channelIconComponentWithGuild;
     }
   : (arg0) => {
+      let channel;
+      let channelName;
+      let guild;
+      let items;
+      let items1;
+      let items2;
+      let text;
       ({ channel, channelName } = arg0);
       ({ guild, text } = arg0);
-      const subtitleStyles = useSubtitleStyles.useSubtitleStyles();
+      const obj = useSubtitleStyles;
+      const subtitleStyles = obj.useSubtitleStyles();
       let channelIconComponentWithGuild;
       if (null != channel) {
-        channelIconComponentWithGuild = utils_ChannelUtils.getChannelIconComponentWithGuild(channel, guild);
         const tmpResult = utils_ChannelUtils;
+        channelIconComponentWithGuild = tmpResult.getChannelIconComponentWithGuild(channel, guild);
       }
       if (channelIconComponentWithGuild == null) {
         channelIconComponentWithGuild = TextIcon.TextIcon;
       }
-      const obj2 = { style: subtitleStyles.subtitleRow, children: null };
       let tmp7 = null;
+      const obj2 = { style: subtitleStyles.subtitleRow, children: items };
       if (null != channelName) {
         const obj3 = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };
-        tmp7 = React3(channelIconComponentWithGuild, obj3);
+        tmp7 = _false(channelIconComponentWithGuild, obj3);
       }
-      const items = [tmp7];
+      items = [tmp7];
+      let tmp5Result = null;
       const obj4 = {
         variant: "text-xs/medium",
         color: "text-muted",
         lineClamp: 1,
         style: subtitleStyles.subtitleText,
-        children: null,
+        children: items2,
       };
-      let tmp5Result = null;
+      const Text = Text_Text.Text;
       if (null != channelName) {
-        const obj5 = { variant: "text-xs/medium", children: null };
-        const items1 = [channelName, "  \u00B7  "];
-        obj5.children = items1;
-        tmp5Result = React4(Text_Text.Text, obj5);
+        const obj5 = { variant: "text-xs/medium", children: items1 };
+        items1 = [channelName, "  \u00B7  "];
+        tmp5Result = React3(Text_Text.Text, obj5);
       }
-      const items2 = [tmp5Result, text];
-      obj4.children = items2;
-      items[1] = React4(Text_Text.Text, obj4);
-      obj2.children = items;
-      return React4(View, obj2);
+      items2 = [tmp5Result, text];
+      items[1] = React3(Text, obj4);
+      return React3(View, obj2);
     };
+const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/TypingSubtitle.tsx");
+
+export default tmp4;

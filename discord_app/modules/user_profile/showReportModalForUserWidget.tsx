@@ -1,16 +1,17 @@
 // discord_app/modules/user_profile/showReportModalForUserWidget.tsx
 import ReportModals from "../in_app_reports/ReportModals.tsx";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, importDefault;
 
-require = fn;
 const user_profile_widget = "user_profile_widget";
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/showReportModalForUserWidget.tsx");
 
 export const USER_PROFILE_WIDGET_REPORT_ENTRYPOINT = "user_profile_widget";
 export const showReportModalForUserWidget = function showReportModalForUserWidget(userId, widget) {
+  let applicationId;
   _require = userId;
   importDefault = widget;
   if (widget instanceof require("UserProfileApplicationWidgetTypes").ApplicationWidget) {
@@ -23,30 +24,15 @@ export const showReportModalForUserWidget = function showReportModalForUserWidge
       }
       if (null != prop) {
         let obj = { application, entrypoint: user_profile_widget };
-        let result = tmp(tmp2[2]).showReportModalForApp(obj);
-        const tmpResult = tmp(tmp2[2]);
+        const tmpResult = require("ReportModals");
+        let result = tmpResult.showReportModalForApp(obj);
       } else {
-        let result1 = tmp(tmp2[2]).showReportModalForWidget(userId, widget);
-        const tmpResult3 = tmp(tmp2[2]);
+        const tmpResult3 = require("ReportModals");
+        let result1 = tmpResult3.showReportModalForWidget(userId, widget);
       }
     } else {
-      const application1 = require("ApplicationActionCreators").fetchApplication(applicationId);
       let obj3 = require("ApplicationActionCreators");
-      application1
-        .then(() => {
-          const application = ApplicationStore.getApplication(applicationId);
-          let prop;
-          if (application != null) {
-            prop = application.vibegrationsProjectId;
-          }
-          if (null != prop) {
-            const obj3 = { application, entrypoint: user_profile_widget };
-            const result = ReportModals.showReportModalForApp(obj3);
-          } else {
-            const result1 = ReportModals.showReportModalForWidget(closure_0, closure_1);
-          }
-        })
-        .catch(() => ReportModals.showReportModalForWidget(closure_0, closure_1));
+      const application1 = obj3.fetchApplication(applicationId);
       const nextPromise = application1.then(() => {
         const application = ApplicationStore.getApplication(applicationId);
         let prop;
@@ -55,14 +41,20 @@ export const showReportModalForUserWidget = function showReportModalForUserWidge
         }
         if (null != prop) {
           const obj3 = { application, entrypoint: user_profile_widget };
-          const result = ReportModals.showReportModalForApp(obj3);
+          const obj2 = ReportModals;
+          const result = obj2.showReportModalForApp(obj3);
         } else {
-          const result1 = ReportModals.showReportModalForWidget(closure_0, closure_1);
+          const obj = ReportModals;
+          const result1 = obj.showReportModalForWidget(userId, widget);
         }
+      });
+      nextPromise.catch(() => {
+        const obj = ReportModals;
+        return obj.showReportModalForWidget(userId, widget);
       });
     }
   } else {
-    const result2 = tmp(tmp2[2]).showReportModalForWidget(userId, widget);
-    const tmpResult4 = tmp(tmp2[2]);
+    const tmpResult4 = require("ReportModals");
+    const result2 = tmpResult4.showReportModalForWidget(userId, widget);
   }
 };

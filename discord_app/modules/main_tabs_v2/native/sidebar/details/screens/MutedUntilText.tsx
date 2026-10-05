@@ -1,11 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx
-import c from "../../../../../../../_runtime/00576_c.js";
-import util from "../../../../../../intl/index.native.tsx";
+import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../../../_runtime/00576_react.js";
+import intl6 from "../../../../../../intl/index.native.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
-import noop from "../../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../../_runtime/00019_react.js";
+import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
+const jsx = Fragment.jsx;
 const MuteSettingType = {
   SERVER: 0,
   [0]: "SERVER",
@@ -16,204 +19,224 @@ const MuteSettingType = {
   CATEGORY: 3,
   [3]: "CATEGORY",
 };
-const createStyles = fn(4890);
 let closure_4 = createStyles.createStyles({
   formHintText: { lineHeight: 18, marginBottom: 8, marginTop: 8, paddingHorizontal: 16 },
 });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      const obj = c;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function (arg0) {
+      let date;
+      let muteConfig;
+      let tmp7;
+      let type;
+      const obj = react2;
       const cResult = obj.c(13);
       ({ muteConfig, type } = arg0);
       const tmp4 = closure_4();
       if (null != muteConfig) {
         if (null != muteConfig.end_time) {
+          let N2NXMd;
           if (obj.SERVER === type) {
-            let N2NXMd = util.t.MQfdK9;
-          } else if (tmp22.CHANNEL === type) {
-            N2NXMd = util.t["N/kd49"];
-          } else if (tmp22.DM === type) {
-            N2NXMd = util.t.c4aY0P;
-          } else if (tmp22.CATEGORY === type) {
-            N2NXMd = util.t.N2NXMd;
+            N2NXMd = intl6.t.MQfdK9;
+          } else if (obj.CHANNEL === type) {
+            N2NXMd = intl6.t["N/kd49"];
+          } else if (obj.DM === type) {
+            N2NXMd = intl6.t.c4aY0P;
+          } else if (obj.CATEGORY === type) {
+            N2NXMd = intl6.t.N2NXMd;
           } else {
             return null;
           }
           if (cResult[0] === muteConfig.end_time) {
+            let tmp22;
             if (cResult[1] === N2NXMd) {
-              let tmp24 = cResult[2];
+              tmp22 = cResult[2];
             }
             if (cResult[3] === tmp4.formHintText) {
-              if (cResult[4] === tmp24) {
-                let tmp30 = cResult[5];
+              let tmp26;
+              if (cResult[4] === tmp22) {
+                tmp26 = cResult[5];
               }
-              return tmp30;
+              return tmp26;
             }
-            const obj2 = { style: tmp23, variant: "text-sm/medium", color: "text-muted", children: tmp24 };
-            const tmp32 = jsx(Text_Text.Text, {
-              style: tmp23,
+            const tmp28 = jsx(Text_Text.Text, {
+              style: tmp21,
               variant: "text-sm/medium",
               color: "text-muted",
-              children: tmp24,
+              children: tmp22,
             });
             cResult[3] = tmp4.formHintText;
-            cResult[4] = tmp24;
-            cResult[5] = tmp32;
-            tmp30 = tmp32;
+            cResult[4] = tmp22;
+            cResult[5] = tmp28;
+            tmp26 = tmp28;
           }
-          const intl5 = util.intl;
-          const obj3 = { endTime: null, endTimeHook: null };
+          const intl5 = intl6.intl;
           const _Date = Date;
-          const date = new Date(muteConfig.end_time);
-          obj3.endTime = date.toLocaleString(util.intl.currentLocale, {
-            month: "numeric",
-            day: "numeric",
-            hour: "numeric",
-            minute: "2-digit",
-          });
-          obj3.endTimeHook = function endTimeHook(children) {
-            return jsx(
-              Text_Text.Text,
-              { variant: "text-sm/medium", color: "control-brand-foreground", children },
-              "muted",
-            );
+          const self = this;
+          const self2 = this;
+          const format = intl5.format;
+          const obj3 = {
+            endTime: date.toLocaleString(intl6.intl.currentLocale, {
+              month: "numeric",
+              day: "numeric",
+              hour: "numeric",
+              minute: "2-digit",
+            }),
+            endTimeHook(children) {
+              return jsx(
+                Text_Text.Text,
+                { variant: "text-sm/medium", color: "control-brand-foreground", children },
+                "muted",
+              );
+            },
           };
-          const formatResult = intl5.format(N2NXMd, obj3);
+          date = new Date(muteConfig.end_time);
+          const formatResult = format(N2NXMd, obj3);
           cResult[0] = muteConfig.end_time;
           cResult[1] = N2NXMd;
           cResult[2] = formatResult;
-          tmp24 = formatResult;
+          tmp22 = formatResult;
         }
       }
       if (obj.SERVER === type) {
+        let tmp16;
         const _Symbol4 = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl4 = util.intl;
-          const stringResult = intl4.string(util.t["/b/DU7"]);
+          const intl4 = intl6.intl;
+          const stringResult = intl4.string(intl6.t["/b/DU7"]);
           cResult[6] = stringResult;
+          tmp16 = stringResult;
+        } else {
+          tmp16 = cResult[6];
+        }
+        tmp7 = tmp16;
+      } else if (obj.CHANNEL === type) {
+        let tmp13;
+        const _Symbol3 = Symbol;
+        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl3 = intl6.intl;
+          const stringResult1 = intl3.string(intl6.t.utURT8);
+          cResult[7] = stringResult1;
+          tmp13 = stringResult1;
+        } else {
+          tmp13 = cResult[7];
+        }
+        tmp7 = tmp13;
+      } else if (obj.DM === type) {
+        let tmp10;
+        const _Symbol2 = Symbol;
+        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl2 = intl6.intl;
+          const stringResult2 = intl2.string(intl6.t.jxF9er);
+          cResult[8] = stringResult2;
+          tmp10 = stringResult2;
+        } else {
+          tmp10 = cResult[8];
+        }
+        tmp7 = tmp10;
+      } else if (obj.CATEGORY === type) {
+        const _Symbol = Symbol;
+        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl = intl6.intl;
+          const stringResult3 = intl.string(intl6.t["6+wqqt"]);
+          cResult[9] = stringResult3;
+          tmp7 = stringResult3;
+        } else {
+          tmp7 = cResult[9];
         }
       } else {
-        if (tmp5.CHANNEL === type) {
-          const _Symbol3 = Symbol;
-          if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl3 = util.intl;
-            const stringResult1 = intl3.string(util.t.utURT8);
-            cResult[7] = stringResult1;
-            let tmp13 = stringResult1;
-          } else {
-            tmp13 = cResult[7];
-          }
-          let tmp7 = tmp13;
-        } else if (tmp5.DM === type) {
-          const _Symbol2 = Symbol;
-          if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl2 = util.intl;
-            const stringResult2 = intl2.string(util.t.jxF9er);
-            cResult[8] = stringResult2;
-            let tmp10 = stringResult2;
-          } else {
-            tmp10 = cResult[8];
-          }
-          tmp7 = tmp10;
-        } else if (tmp5.CATEGORY === type) {
-          const _Symbol = Symbol;
-          if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = util.intl;
-            const stringResult3 = intl.string(util.t["6+wqqt"]);
-            cResult[9] = stringResult3;
-            tmp7 = stringResult3;
-          } else {
-            tmp7 = cResult[9];
-          }
-        } else {
-          return null;
-        }
-        if (cResult[10] === tmp4.formHintText) {
-          if (cResult[11] === tmp7) {
-            let tmp19 = cResult[12];
-          }
-          return tmp19;
-        }
-        const obj4 = { style: tmp4.formHintText, variant: "text-sm/medium", color: "text-muted", children: tmp7 };
-        const tmp21 = jsx(Text_Text.Text, {
-          style: tmp4.formHintText,
-          variant: "text-sm/medium",
-          color: "text-muted",
-          children: tmp7,
-        });
-        cResult[10] = tmp4.formHintText;
-        cResult[11] = tmp7;
-        cResult[12] = tmp21;
-        tmp19 = tmp21;
+        return null;
       }
+      if (cResult[10] === tmp4.formHintText) {
+        let tmp18;
+        if (cResult[11] === tmp7) {
+          tmp18 = cResult[12];
+        }
+        return tmp18;
+      }
+      const tmp19 = jsx(Text_Text.Text, {
+        style: tmp4.formHintText,
+        variant: "text-sm/medium",
+        color: "text-muted",
+        children: tmp7,
+      });
+      cResult[10] = tmp4.formHintText;
+      cResult[11] = tmp7;
+      cResult[12] = tmp19;
+      tmp18 = tmp19;
     }
-  : (arg0) => {
+  : function (arg0) {
+      let date;
+      let muteConfig;
+      let obj;
+      let stringResult;
+      let tmp3;
+      let type;
       ({ muteConfig, type } = arg0);
       const tmp = closure_4();
       if (null != muteConfig) {
         if (null != muteConfig.end_time) {
+          let N2NXMd;
+          let tmp15;
           if (obj.SERVER === type) {
-            let N2NXMd = util.t.MQfdK9;
-            let tmp15 = require;
-          } else if (tmp12.CHANNEL === type) {
-            N2NXMd = util.t["N/kd49"];
+            N2NXMd = intl6.t.MQfdK9;
             tmp15 = require;
-          } else if (tmp12.DM === type) {
-            N2NXMd = util.t.c4aY0P;
+          } else if (obj.CHANNEL === type) {
+            N2NXMd = intl6.t["N/kd49"];
             tmp15 = require;
-          } else if (tmp12.CATEGORY === type) {
-            N2NXMd = util.t.N2NXMd;
+          } else if (obj.DM === type) {
+            N2NXMd = intl6.t.c4aY0P;
+            tmp15 = require;
+          } else if (obj.CATEGORY === type) {
+            N2NXMd = intl6.t.N2NXMd;
             tmp15 = require;
           } else {
             return null;
           }
-          const obj2 = { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: null };
+          const Text = tmp15(4886).Text;
           const intl5 = tmp15(1126).intl;
-          const obj3 = { endTime: null, endTimeHook: null };
           const _Date = Date;
-          const date = new Date(muteConfig.end_time);
-          obj3.endTime = date.toLocaleString(tmp15(1126).intl.currentLocale, {
-            month: "numeric",
-            day: "numeric",
-            hour: "numeric",
-            minute: "2-digit",
-          });
-          obj3.endTimeHook = function endTimeHook(children) {
-            return jsx(
-              Text_Text.Text,
-              { variant: "text-sm/medium", color: "control-brand-foreground", children },
-              "muted",
-            );
+          const self = this;
+          const self2 = this;
+          const format = intl5.format;
+          const obj3 = {
+            endTime: date.toLocaleString(tmp15(1126).intl.currentLocale, {
+              month: "numeric",
+              day: "numeric",
+              hour: "numeric",
+              minute: "2-digit",
+            }),
+            endTimeHook(children) {
+              return jsx(
+                Text_Text.Text,
+                { variant: "text-sm/medium", color: "control-brand-foreground", children },
+                "muted",
+              );
+            },
           };
-          obj2.children = intl5.format(N2NXMd, obj3);
-          return jsx(tmp15(4886).Text, {
-            style: tmp.formHintText,
-            variant: "text-sm/medium",
-            color: "text-muted",
-            children: null,
-          });
+          date = new Date(muteConfig.end_time);
+          return (
+            <Text style={tmp.formHintText} variant="text-sm/medium" color="text-muted">
+              {format(N2NXMd, obj3)}
+            </Text>
+          );
         }
       }
       if (obj.SERVER === type) {
-        const intl4 = util.intl;
-        let stringResult = intl4.string(util.t["/b/DU7"]);
-        let tmp3 = require;
-      } else if (tmp2.CHANNEL === type) {
-        const intl3 = util.intl;
-        stringResult = intl3.string(util.t.utURT8);
+        const intl4 = intl6.intl;
+        stringResult = intl4.string(intl6.t["/b/DU7"]);
         tmp3 = require;
-      } else if (tmp2.DM === type) {
-        const intl2 = util.intl;
-        stringResult = intl2.string(util.t.jxF9er);
+      } else if (obj.CHANNEL === type) {
+        const intl3 = intl6.intl;
+        stringResult = intl3.string(intl6.t.utURT8);
         tmp3 = require;
-      } else if (tmp2.CATEGORY === type) {
+      } else if (obj.DM === type) {
+        const intl2 = intl6.intl;
+        stringResult = intl2.string(intl6.t.jxF9er);
         tmp3 = require;
-        const intl = util.intl;
-        stringResult = intl.string(util.t["6+wqqt"]);
+      } else if (obj.CATEGORY === type) {
+        tmp3 = require;
+        const intl = intl6.intl;
+        stringResult = intl.string(intl6.t["6+wqqt"]);
       } else {
         return null;
       }
@@ -225,4 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: stringResult,
       });
     };
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx");
+
+export default tmp3;
 export { MuteSettingType };

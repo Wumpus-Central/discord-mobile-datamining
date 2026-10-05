@@ -1,165 +1,173 @@
 // discord_app/modules/age_assurance/native/AgeVerificationAuthSession.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import react from "../../../../_runtime/00576_react.js";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import NativeBrowserManagerModuleIOSDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModuleIOS.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import react_nativeDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModuleIOS.tsx";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import 00570__ from "../../../../_runtime/metro/00570__.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let closure_2, closure_3, closure_7, error, value;
+
 function release() {
-  if (_null != null) {
-    _null.remove();
+  obj = c7;
+  if (c7 != null) {
+    obj.remove();
   }
-  _null = null;
+  c7 = null;
   closure_5.setState({ isOpen: false });
 }
 function discard() {
-  if (_null != null) {
-    _null.remove();
+  obj = c7;
+  if (c7 != null) {
+    obj.remove();
   }
-  _null = null;
+  c7 = null;
   closure_5.setState({ isOpen: false });
   c6 = false;
 }
-let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
+let obj = function _openAgeVerificationAuthSession() {
+  let state;
+  obj = _asyncToGenerator(async (value) => {
+    let c5 = 0;
+    c6 = 0;
+    let c4 = 0;
+    return (async (arg0) => {
+      let obj4;
+      function subscribeToFinish() {
+        obj = closure_7;
+        if (closure_7 != null) {
+          obj.remove();
+        }
+        const obj2 = error(closure_1_2[3]);
+        closure_7 = obj2.onAuthSessionDidFinish(closure_1_8);
+      }
+      if (c6 === 2) {
+        c6 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          let obj2 = { value, done: true };
+          return obj2;
         } else {
-          closure_2 = tmp3;
-          closure_1 = tmp7;
-          closure_129_0 = undefined;
-          if (obj8.isIOS()) {
-            (function subscribeToFinish() {
-              if (closure_7 != null) {
-                closure_7.remove();
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              return { value, done: true };
+            } else {
+              closure_2 = tmp;
+              error = tmp4;
+              value = undefined;
+              const obj8 = PlatformUtils;
+              const tmp30 = value;
+              if (obj8.isIOS()) {
+                subscribeToFinish();
+                state.setState({ isOpen: true });
+                c4 = 1;
+                c5 = 2;
+                c6 = 1;
+                const obj5 = { value: obj4.openAuthSessionURL(tmp30, true), done: false };
+                obj4 = react_nativeDefault;
+                return obj5;
+              } else {
+                c6 = 3;
+                return { value: false, done: true };
               }
-              closure_7 = closure_1_1(closure_1_2[3]).onAuthSessionDidFinish(closure_1_8);
-            })();
-            state.setState({ isOpen: true });
-            c6 = true;
-            c4 = 1;
-            c5 = 2;
-            c6 = 1;
-            const obj5 = {
-              value: NativeBrowserManagerModuleIOSDefault.openAuthSessionURL(closure_0, true),
-              done: false,
-            };
-            return obj5;
-          } else {
+            }
+          } else if (1 === c5) {
+            c4 = 0;
+            error = closure_3;
+            const obj6 = { error };
+            closure_130_4.warn("Failed to open the verification auth session", obj6);
+            closure_130_9();
             c6 = 3;
             return { value: false, done: true };
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            c6 = 3;
+            return { value, done: true };
+          } else {
+            const tmp6 = value;
+            if (!tmp6) {
+              closure_130_9();
+            }
+            c4 = 0;
+            c6 = 3;
+            obj = { value, done: true };
+            return obj;
           }
-          obj8 = PlatformUtils;
+        } catch (tmp24) {
+          closure_3 = tmp24;
+          if (0 === c4) {
+            c6 = 3;
+            throw tmp24;
+          } else {
+            c5 = 1;
+          }
         }
-      } else if (1 === tmp7) {
-        c4 = 0;
-        closure_129_1 = closure_3;
-        const obj6 = { error: closure_129_1 };
-        closure_130_4.warn("Failed to open the verification auth session", obj6);
-        closure_130_9();
-        c6 = 3;
-        return { value: false, done: true };
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 0;
-        c6 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      } else {
-        closure_129_0 = value;
-        if (!closure_129_0) {
-          closure_130_9();
-        }
-        c4 = 0;
-        c6 = 3;
-        const obj = { value: closure_129_0, done: true };
-        return obj;
       }
-    } catch (tmp27) {
-      closure_3 = tmp27;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp27;
-      } else {
-        c5 = tmp;
-      }
-    }
-  }
+    })();
+  });
+  return obj(...arguments);
 };
 let closure_4 = new LoggerDefault("AgeVerificationAuthSession");
-const module_570 = fn(570);
+new LoggerDefault("AgeVerificationAuthSession");
 let closure_5 = module_570.create(() => ({ isOpen: false }));
 let c6 = false;
 let c7 = null;
-const ReactCompilerGating = fn(558);
-const tmp2 = new LoggerDefault("AgeVerificationAuthSession");
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let first;
+  obj = react;
+  const cResult = obj.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function n(isOpen) {
+      return isOpen.isOpen;
+    };
+    cResult[0] = fn;
+    first = fn;
+  } else {
+    first = cResult[0];
+  }
+  return closure_5(first);
+}) : (() => closure_5((isOpen) => isOpen.isOpen));
 function getIsAgeVerificationAuthSessionOpen() {
   return closure_5.getState().isOpen;
 }
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationAuthSession.tsx");
 
 export const openAgeVerificationAuthSession = function openAgeVerificationAuthSession() {
-  const self = this;
-  const apply = closure_10.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const closeAgeVerificationAuthSession = function closeAgeVerificationAuthSession() {
+  const isOpen = closure_5.getState().isOpen;
+  const obj2 = c7;
   if (c7 != null) {
     obj2.remove();
   }
   c7 = null;
   closure_5.setState({ isOpen: false });
   c6 = false;
-  if (closure_5.getState().isOpen) {
-    NativeBrowserManagerModuleIOSDefault.closeAuthSession();
+  if (isOpen) {
+    const obj3 = react_nativeDefault;
+    obj3.closeAuthSession();
   }
-  obj2 = c7;
 };
 export function getIsAgeVerificationAuthSessionAwaitingResult() {
   return c6;
 }
-export const useIsAgeVerificationAuthSessionOpen = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function n(isOpen) {
-          return isOpen.isOpen;
-        };
-        cResult[0] = fn;
-        let first = fn;
-      } else {
-        first = cResult[0];
-      }
-      return closure_5(first);
-    }
-  : () => closure_5((isOpen) => isOpen.isOpen);
+export const useIsAgeVerificationAuthSessionOpen = tmp3;
 export { getIsAgeVerificationAuthSessionOpen };

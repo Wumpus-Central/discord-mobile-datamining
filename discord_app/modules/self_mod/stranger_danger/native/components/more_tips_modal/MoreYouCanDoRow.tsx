@@ -1,27 +1,31 @@
 // discord_app/modules/self_mod/stranger_danger/native/components/more_tips_modal/MoreYouCanDoRow.tsx
-import c from "../../../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../../../_runtime/00576_react.js";
 import TableRow from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import noop from "../../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/self_mod/stranger_danger/native/components/more_tips_modal/MoreYouCanDoRow.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(7);
+      let description;
+      let disabled;
+      let icon;
+      let onClick;
+      let title;
+      let variant;
+      const obj = react2;
+      const cResult = obj.c(7);
       ({ title, description, variant, onClick, icon, disabled } = arg0);
       if (cResult[0] === description) {
         if (cResult[1] === disabled) {
           if (cResult[2] === icon) {
             if (cResult[3] === onClick) {
               if (cResult[4] === title) {
+                let tmp4;
                 if (cResult[5] === variant) {
-                  let tmp4 = cResult[6];
+                  tmp4 = cResult[6];
                 }
                 return tmp4;
               }
@@ -47,6 +51,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = tmp5;
     }
   : (arg0) => {
+      let description;
+      let disabled;
+      let icon;
+      let onClick;
+      let title;
+      let variant;
       ({ title, description, variant, onClick, icon, disabled } = arg0);
       return jsx(TableRow.TableRow, { label, subLabel, onPress, icon, variant, disabled });
     };
+const result = size.fileFinishedImporting(
+  "modules/self_mod/stranger_danger/native/components/more_tips_modal/MoreYouCanDoRow.tsx",
+);
+
+export default tmp3;

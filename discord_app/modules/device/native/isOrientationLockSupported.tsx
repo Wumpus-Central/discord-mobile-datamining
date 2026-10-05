@@ -6,15 +6,16 @@ import size from "../../../../_runtime/metro/00002__.js";
 let result = size.fileFinishedImporting("modules/device/native/isOrientationLockSupported.tsx");
 
 export default function isOrientationLockSupported() {
-  const isIpadOSResult = DeviceUtils.isIpadOS();
-  let result = !isIpadOSResult;
-  if (!isIpadOSResult) {
-    result = !MetaQuestUtils.isMetaQuest();
+  const obj = DeviceUtils;
+  let result = !obj.isIpadOS();
+  obj.isIpadOS();
+  if (result) {
     const tmpResult = MetaQuestUtils;
+    result = !tmpResult.isMetaQuest();
   }
   if (result) {
-    result = DeviceUtils.isOrientationLockSupported();
     const tmpResult2 = DeviceUtils;
+    result = tmpResult2.isOrientationLockSupported();
   }
   return result;
 }

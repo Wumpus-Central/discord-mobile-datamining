@@ -1,15 +1,15 @@
 // discord_app/modules/launchpad/native/shared/useSimpleGuildSize.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-let size = fn(2);
-const result = size.fileFinishedImporting("modules/launchpad/native/shared/useSimpleGuildSize.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(13);
+      let style;
+      let tmp2;
+      const obj = react2;
+      const cResult = obj.c(13);
       ({ size, style } = arg0);
       let num = 48;
       if (null != size) {
@@ -19,7 +19,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const size1 = { width: num, height: num };
         cResult[0] = num;
         cResult[1] = size1;
-        let tmp2 = size1;
+        tmp2 = size1;
       } else {
         tmp2 = cResult[1];
       }
@@ -32,18 +32,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         num5 = 4;
       }
       if (cResult[2] === num4) {
+        let tmp3;
         if (cResult[3] === num5) {
-          let tmp3 = cResult[4];
+          tmp3 = cResult[4];
         }
         if (cResult[5] === tmp2) {
           if (cResult[6] === style) {
+            let tmp4;
             if (cResult[7] === tmp3) {
-              let tmp4 = cResult[8];
+              tmp4 = cResult[8];
             }
             if (cResult[9] === num) {
               if (cResult[10] === tmp2) {
+                let tmp5;
                 if (cResult[11] === tmp4) {
-                  let tmp5 = cResult[12];
+                  tmp5 = cResult[12];
                 }
                 return tmp5;
               }
@@ -78,27 +81,32 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         num = size;
       }
       let items = [num];
-      memo = noop.useMemo(() => {
+      memo = react.useMemo(() => {
         size = { width: num, height: num };
         return size;
       }, items);
       const items1 = [style, size, memo];
-      return {
+      let obj = {
         containerSize: num,
         containerSizeStyle: memo,
-        containerStyles: noop.useMemo(() => {
+        containerStyles: react.useMemo(() => {
+          let num2;
           num = 0;
           if (null == size) {
             num = 4;
           }
-          const obj = { position: "relative", marginLeft: num, marginRight: null };
-          let num2 = 0;
+          const obj = { position: "relative", marginLeft: num, marginRight: num2 };
+          num2 = 0;
           if (null == size) {
             num2 = 4;
           }
-          obj.marginRight = num2;
           const items = [obj, memo, style];
           return items;
         }, items1),
       };
+      return obj;
     };
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/launchpad/native/shared/useSimpleGuildSize.tsx");
+
+export default tmp2;

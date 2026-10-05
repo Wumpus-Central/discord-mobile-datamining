@@ -1,7 +1,7 @@
 // discord_app/modules/navbars/native/NavigationPathUtils.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react from "../../../../_runtime/00576_react.js";
 import Constants from "../../../Constants.tsx";
-import _mod4710 from "../../../../_runtime/metro/04710__.js";
+import MemoryRouter from "../../../../_runtime/04710_MemoryRouter.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -12,15 +12,13 @@ function getSelectedSpecialNavigationPath(pathname) {
     return obj.FRIENDS;
   }
 }
-const result = size.fileFinishedImporting("modules/navbars/native/NavigationPathUtils.tsx");
-
-export { SpecialNavigationPath };
-export { getSelectedSpecialNavigationPath };
-export const useSelectedSpecialNavigationPath = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const obj = c;
+      let tmp3;
+      const obj = react;
       const cResult = obj.c(2);
-      const _location = _mod4710.useLocation();
+      const obj2 = MemoryRouter;
+      const _location = obj2.useLocation();
       if (cResult[0] !== _location) {
         let FRIENDS;
         if (_location.pathname === Routes.FRIENDS) {
@@ -28,17 +26,22 @@ export const useSelectedSpecialNavigationPath = ReactCompilerGating.isReactCompi
         }
         cResult[0] = _location;
         cResult[1] = FRIENDS;
-        let tmp3 = FRIENDS;
+        tmp3 = FRIENDS;
       } else {
         tmp3 = cResult[1];
       }
       return tmp3;
     }
   : () => {
-      const obj = _mod4710;
+      const obj = MemoryRouter;
       let FRIENDS;
       if (obj.useLocation().pathname === Routes.FRIENDS) {
         FRIENDS = obj.FRIENDS;
       }
       return FRIENDS;
     };
+const result = size.fileFinishedImporting("modules/navbars/native/NavigationPathUtils.tsx");
+
+export { SpecialNavigationPath };
+export { getSelectedSpecialNavigationPath };
+export const useSelectedSpecialNavigationPath = tmp2;

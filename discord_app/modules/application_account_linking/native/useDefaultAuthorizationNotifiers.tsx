@@ -1,25 +1,33 @@
 // discord_app/modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx
-import util from "../../../intl/index.native.tsx";
+import Constants from "../../../Constants.tsx";
+import intl2 from "../../../intl/index.native.tsx";
 import _modDef3237 from "../AccountLinking.messages.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react_mod from "../../../../_runtime/00019_react.js";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-require = fn;
-const AppStates = fn(1085).AppStates;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx",
-);
-
-export const useDefaultAuthorizationNotifiers = ReactCompilerGating.isReactCompilerEnabled()
+let react = react_mod;
+const AppStates = Constants.AppStates;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, value, arg2) => {
+      let closure_0;
+      let closure_2;
+      let obj3;
+      let ref;
+      let state;
+      let tmp4;
+      let tmp6;
+      let tmp7;
       _require = arg0;
-      closure_1 = value;
-      const cResult = require("c").c(15);
+      let closure_1 = value;
+      const tmp = _require;
+      let obj = require("react");
+      const cResult = obj.c(15);
       if (cResult[0] !== arg2) {
         let obj2 = arg2;
         if (undefined === arg2) {
@@ -27,34 +35,34 @@ export const useDefaultAuthorizationNotifiers = ReactCompilerGating.isReactCompi
         }
         cResult[0] = arg2;
         cResult[1] = obj2;
-        let tmp4 = obj2;
+        tmp4 = obj2;
       } else {
         tmp4 = cResult[1];
       }
       const showToastOnSuccess = tmp4.showToastOnSuccess;
       dependencyMap = tmp5;
-      noop = noop.useRef(false);
+      react = react.useRef(false);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [stateFromStores];
+        const items = [state];
         const fn = function v() {
-          return stateFromStores.getState() === previousWhen.ACTIVE;
+          return state.getState() === previousWhen.ACTIVE;
         };
         cResult[2] = items;
         cResult[3] = fn;
-        let tmp7 = fn;
-        let tmp6 = items;
+        tmp7 = fn;
+        tmp6 = items;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      let obj = require("c");
-      stateFromStores = require("initialize").useStateFromStores(tmp6, tmp7);
-      const tmpResult = require("initialize");
-      const isInAppBrowserOpen = require("BrowserManager").useIsInAppBrowserOpen();
+      const tmpResult = tmp(504);
+      const stateFromStores = tmpResult.useStateFromStores(tmp6, tmp7);
+      const tmpResult3 = tmp(4851);
+      const isInAppBrowserOpen = tmpResult3.useIsInAppBrowserOpen();
       if (cResult[4] !== arg0) {
         class A {
           constructor(arg0) {
-            closure_3.current = true;
+            ref.current = true;
             return closure_0(arg0);
           }
         }
@@ -63,71 +71,71 @@ export const useDefaultAuthorizationNotifiers = ReactCompilerGating.isReactCompi
       } else {
         class A {
           constructor(arg0) {
-            closure_3.current = true;
+            ref.current = true;
             return closure_0(arg0);
           }
         }
       }
-      if (stateFromStores) {
+      state = tmp12;
+      if (cResult[6] === (stateFromStores && !isInAppBrowserOpen)) {
         class A {
           constructor(arg0) {
-            closure_3.current = true;
+            ref.current = true;
             return closure_0(arg0);
           }
         }
-      }
-      stateFromStores = tmp12;
-      if (cResult[6] === stateFromStores) {
-        class A {
-          constructor(arg0) {
-            closure_3.current = true;
-            return closure_0(arg0);
-          }
-        }
-        const previousWhen = tmp(7946).usePreviousWhen(obj3);
-        if (cResult[9] === tmp12) {
+        const tmpResult4 = tmp(7946);
+        const previousWhen = tmpResult4.usePreviousWhen(obj3);
+        if (cResult[9] === (stateFromStores && !isInAppBrowserOpen)) {
           class A {
             constructor(arg0) {
-              closure_3.current = true;
+              ref.current = true;
               return closure_0(arg0);
             }
           }
         }
         const fn2 = function w() {
+          let intl;
           if (ref.current) {
             if (false === previousWhen) {
               if (true === closure_1) {
-                if (stateFromStores) {
+                if (state) {
                   tmp.current = false;
                   if (closure_2) {
-                    const obj2 = { content: null, key: "account-linked-toast" };
-                    const intl = util.intl;
-                    obj2.content = intl.string(_modDef3237.uG6teD);
-                    ToastActionCreatorsDefault.open(obj2);
+                    const obj = { content: intl.string(_modDef3237.uG6teD), key: "account-linked-toast" };
+                    const open = ToastActionCreatorsDefault.open;
+                    ToastActionCreatorsDefault;
+                    intl = intl2.intl;
+                    open(obj);
                   }
                 }
               }
             }
           }
         };
-        const items1 = [value, previousWhen, tmp5, tmp12];
-        cResult[9] = tmp12;
+        const items1 = [
+          value,
+          previousWhen,
+          undefined === showToastOnSuccess || showToastOnSuccess,
+          stateFromStores && !isInAppBrowserOpen,
+        ];
+        cResult[9] = stateFromStores && !isInAppBrowserOpen;
         cResult[10] = value;
-        cResult[11] = tmp5;
+        cResult[11] = undefined === showToastOnSuccess || showToastOnSuccess;
         cResult[12] = previousWhen;
         cResult[13] = fn2;
         cResult[14] = items1;
-        const tmpResult4 = tmp(7946);
       }
-      obj3 = { value, shouldUpdate: stateFromStores };
-      cResult[6] = stateFromStores;
+      obj3 = { value, shouldUpdate: stateFromStores && !isInAppBrowserOpen };
+      cResult[6] = stateFromStores && !isInAppBrowserOpen;
       cResult[7] = value;
       cResult[8] = obj3;
-      const tmpResult3 = require("BrowserManager");
     }
   : (arg0, value) => {
+      let closure_0;
+      let ref;
       _require = arg0;
-      closure_1 = value;
+      let closure_1 = value;
       let obj = arg2;
       if (arg2 === undefined) {
         obj = {};
@@ -136,42 +144,43 @@ export const useDefaultAuthorizationNotifiers = ReactCompilerGating.isReactCompi
       if (flag === undefined) {
         flag = true;
       }
-      noop = undefined;
+      react = undefined;
       let stateFromStores;
       let previousWhen;
-      noop = noop.useRef(false);
-      const items = [stateFromStores];
-      stateFromStores = require("initialize").useStateFromStores(
-        items,
-        () => stateFromStores.getState() === previousWhen.ACTIVE,
-      );
-      let obj2 = noop;
-      const obj3 = require("initialize");
+      const obj2 = react;
+      react = react.useRef(false);
       const tmp = _require;
-      const tmp2 = flag;
+      const items = [stateFromStores];
+      const obj3 = require("get initialized");
+      stateFromStores = obj3.useStateFromStores(items, () => stateFromStores.getState() === previousWhen.ACTIVE);
       const items1 = [arg0];
-      const isInAppBrowserOpen = require("BrowserManager").useIsInAppBrowserOpen();
-      const callback = noop.useCallback((arg0) => {
-        closure_3.current = true;
+      const obj4 = require("BrowserManager");
+      const isInAppBrowserOpen = obj4.useIsInAppBrowserOpen();
+      const callback = react.useCallback((arg0) => {
+        ref.current = true;
         return closure_0(arg0);
       }, items1);
+      const tmp2 = flag;
       if (stateFromStores) {
         stateFromStores = !isInAppBrowserOpen;
       }
-      const obj4 = require("BrowserManager");
-      previousWhen = tmp(tmp2[7]).usePreviousWhen({ value, shouldUpdate: stateFromStores });
+      const obj5 = { value, shouldUpdate: stateFromStores };
+      const tmpResult = tmp(tmp2[7]);
+      previousWhen = tmpResult.usePreviousWhen(obj5);
       const items2 = [value, previousWhen, flag, stateFromStores];
       const effect = obj2.useEffect(() => {
+        let intl;
         if (ref.current) {
           if (false === previousWhen) {
             if (true === closure_1) {
               if (stateFromStores) {
                 tmp.current = false;
-                if (flag) {
-                  const obj2 = { content: null, key: "account-linked-toast" };
-                  const intl = util.intl;
-                  obj2.content = intl.string(_modDef3237.uG6teD);
-                  ToastActionCreatorsDefault.open(obj2);
+                if (false) {
+                  const obj = { content: intl.string(_modDef3237.uG6teD), key: "account-linked-toast" };
+                  const open = ToastActionCreatorsDefault.open;
+                  ToastActionCreatorsDefault;
+                  intl = intl2.intl;
+                  open(obj);
                 }
               }
             }
@@ -180,3 +189,8 @@ export const useDefaultAuthorizationNotifiers = ReactCompilerGating.isReactCompi
       }, items2);
       return callback;
     };
+const result = size.fileFinishedImporting(
+  "modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx",
+);
+
+export const useDefaultAuthorizationNotifiers = tmp2;

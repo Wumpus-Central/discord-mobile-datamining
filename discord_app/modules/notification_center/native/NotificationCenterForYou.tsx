@@ -1,35 +1,47 @@
 // discord_app/modules/notification_center/native/NotificationCenterForYou.tsx
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import Constants from "../../../Constants.tsx";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import parseURLDefault from "../../../utils/native/parseURL.tsx";
+import ReadStateConstants from "../../read_states/ReadStateConstants.tsx";
 import NotificationCenterItemsTypes from "../NotificationCenterItemsTypes.tsx";
 import NotificationCenterUtils from "../NotificationCenterUtils.tsx";
 import NotificationCenterItemsActions from "../NotificationCenterItemsActions.tsx";
 import NotificationCenterStoreActions from "../NotificationCenterStoreActions.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
 import GuildReadStateStore from "../../../stores/GuildReadStateStore.tsx";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import NotificationCenterItemsStore from "../NotificationCenterItemsStore.tsx";
 import NotificationCenterStore from "../NotificationCenterStore.tsx";
+import MainTabsConstants from "../../main_tabs_v2/native/MainTabsConstants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const MainTabsConstants = fn(10820);
+let set2;
+
+let RootNavigatorScreen;
+let YouBarNavigatorScreens;
+const View = react_native.View;
+const AnalyticEvents = Constants.AnalyticEvents;
 ({ RootNavigatorScreen, YouBarNavigatorScreens } = MainTabsConstants);
-const ReadStateTypes = fn(5072).ReadStateTypes;
-const jsx = fn(21).jsx;
+const ReadStateTypes = ReadStateConstants.ReadStateTypes;
+const jsx = Fragment.jsx;
 let items = [, , , ,];
 ({ YOU: arr[0], SETTINGS: arr[1] } = RootNavigatorScreen);
 ({ GUILDS: arr[2], ICYMI: arr[3], NOTIFICATIONS: arr[4] } = YouBarNavigatorScreens);
 let set = new Set(items);
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_center/native/NotificationCenterForYou.tsx");
 
 export const NotificationCenterForYou = (panelVariant) => {
+  let arr;
+  let loadMore;
+  let loadingMore;
+  let obj11;
+  let tmp44Result;
   let flag = panelVariant.panelVariant;
   if (flag === undefined) {
     flag = false;
@@ -38,11 +50,12 @@ export const NotificationCenterForYou = (panelVariant) => {
   let setting;
   let height;
   const merged = Object.assign(panelVariant, Object.assign({ panelVariant: 0 }));
-  isFocused = isFocused(setting[13]).useIsFocused();
+  let tmp3 = setting;
   let obj = isFocused(setting[13]);
   const tmp2 = isFocused;
-  let tmp3 = setting;
-  const currentNavigationRouteName = isFocused(setting[14]).useCurrentNavigationRouteName();
+  isFocused = obj.useIsFocused();
+  let obj2 = isFocused(setting[14]);
+  const currentNavigationRouteName = obj2.useCurrentNavigationRouteName();
   const NotificationCenterAckedBeforeId = isFocused(setting[15]).NotificationCenterAckedBeforeId;
   setting = NotificationCenterAckedBeforeId.useSetting();
   let items1 = [currentNavigationRouteName, isFocused];
@@ -61,7 +74,7 @@ export const NotificationCenterForYou = (panelVariant) => {
   const ChannelListLayoutSetting = isFocused(setting[15]).ChannelListLayoutSetting;
   const setting1 = ChannelListLayoutSetting.useSetting();
   const tmp9 = setting1 === isFocused(setting[17]).ChannelListLayoutTypes.COMPACT;
-  closure_5 = tmp9;
+  let closure_5 = tmp9;
   let items2 = [tmp9, height];
   const memo1 = height.useMemo(() => {
     let num = 68;
@@ -70,8 +83,8 @@ export const NotificationCenterForYou = (panelVariant) => {
     }
     return Math.min(50, Math.max(8, Math.ceil(height / num)));
   }, items2);
-  let obj2 = isFocused(setting[14]);
-  const notificationCenterItemsLoader = isFocused(setting[18]).useNotificationCenterItemsLoader({
+  let obj3 = isFocused(setting[18]);
+  const notificationCenterItemsLoader = obj3.useNotificationCenterItemsLoader({
     isFocused,
     navigatedAway: memo,
     withMentions: true,
@@ -83,23 +96,18 @@ export const NotificationCenterForYou = (panelVariant) => {
   const setReadNotifItemToAcked = notificationCenterItemsLoader.setReadNotifItemToAcked;
   const errored = notificationCenterItemsLoader.errored;
   ({ loadMore, loadingMore } = notificationCenterItemsLoader);
-  let obj3 = isFocused(setting[18]);
-  let items3 = [errored];
-  const stateFromStores = isFocused(setting[19]).useStateFromStores(items3, () => errored.hasNewMentions());
   let obj4 = isFocused(setting[19]);
-  let items4 = [setReadNotifItemToAcked];
-  const stateFromStores1 = isFocused(setting[19]).useStateFromStores(
-    items4,
-    () => setReadNotifItemToAcked.localItems,
-    [],
-  );
+  let items3 = [errored];
+  const stateFromStores = obj4.useStateFromStores(items3, () => errored.hasNewMentions());
   let obj5 = isFocused(setting[19]);
-  const getOrFetchNotificationCenterItemsApplications = isFocused(
-    setting[20],
-  ).useGetOrFetchNotificationCenterItemsApplications(stateFromStores1);
+  let items4 = [setReadNotifItemToAcked];
+  const stateFromStores1 = obj5.useStateFromStores(items4, () => setReadNotifItemToAcked.localItems, []);
   let obj6 = isFocused(setting[20]);
+  const getOrFetchNotificationCenterItemsApplications =
+    obj6.useGetOrFetchNotificationCenterItemsApplications(stateFromStores1);
   let items5 = [items, hasMore];
-  const stateFromStores2 = isFocused(setting[19]).useStateFromStores(items5, () => {
+  const obj7 = isFocused(setting[19]);
+  const stateFromStores2 = obj7.useStateFromStores(items5, () => {
     const currentUser = items.getCurrentUser();
     let ackMessageIdResult = null;
     if (null != currentUser) {
@@ -107,39 +115,43 @@ export const NotificationCenterForYou = (panelVariant) => {
     }
     return ackMessageIdResult;
   });
-  const obj7 = isFocused(setting[19]);
   let items6 = [initialized];
-  const stateFromStores3 = isFocused(setting[19]).useStateFromStores(items6, () =>
-    initialized.getTotalNotificationsMentionCount(true),
-  );
+  const obj8 = isFocused(setting[19]);
+  const stateFromStores3 = obj8.useStateFromStores(items6, () => initialized.getTotalNotificationsMentionCount(true));
   const tmp17 = memo(height.useState(stateFromStores2), 2);
   const first = tmp17[0];
-  closure_16 = tmp19;
-  const tmp20 = memo(height.useState(false), 2);
-  closure_17 = tmp21;
-  const obj8 = isFocused(setting[19]);
-  const first1 = memo(height.useState(Date.now()), 2)[0];
-  let tmp22 = memo(height.useState(Date.now()), 2);
-  const tmp25 = memo(height.useState(new Set()), 2);
-  const first2 = tmp25[0];
-  closure_20 = tmp25[1];
-  let items7 = [first2];
-  let items8 = [first2];
-  const callback = height.useCallback((arg0) => first2.has(arg0), items7);
-  const callback1 = height.useCallback((forceUnacked) => {
+  let closure_16 = tmp19;
+  let tmp20 = memo(height.useState(false), 2);
+  let closure_17 = tmp22;
+  const first1 = tmp20[0];
+  const first2 = memo(height.useState(Date.now()), 2)[0];
+  const useState = height.useState;
+  memo(height.useState(Date.now()), 2);
+  set = new Set();
+  const tmp26 = memo(useState(set), 2);
+  const first3 = tmp26[0];
+  let closure_20 = tmp26[1];
+  let items7 = [first3];
+  let items8 = [first3];
+  const callback = height.useCallback((arg0) => first3.has(arg0), items7);
+  const callback1 = height.useCallback(function (forceUnacked) {
     if (!forceUnacked.forceUnacked) {
-      if (!first2.has(forceUnacked.id)) {
+      if (!first3.has(forceUnacked.id)) {
         const _Set = Set;
-        set = new Set(first2);
+        const self = this;
+        const self2 = this;
+        set = new Set(first3);
         set.add(forceUnacked.id);
         closure_20(set);
       }
     }
   }, items8);
-  set = new Set();
-  closure_21 = height.useRef(new Set());
+  const useRef = height.useRef;
   const set1 = new Set();
-  height.useRef(new Set());
+  let closure_21 = useRef(set1);
+  const useRef2 = height.useRef;
+  set2 = new Set();
+  const ref = useRef2(set2);
   const callback2 = height.useCallback((id) => {
     const current = ref.current;
     current.add(id.id);
@@ -148,25 +160,28 @@ export const NotificationCenterForYou = (panelVariant) => {
     const current = ref.current;
     return current.has(id.id);
   }, []);
-  const tmp33 = currentNavigationRouteName(setting[21])();
-  const setAdded = tmp33.setAdded;
-  const friendSuggestions = tmp33.friendSuggestions;
+  const tmp34 = currentNavigationRouteName(setting[21])();
+  const setAdded = tmp34.setAdded;
+  const friendSuggestions = tmp34.friendSuggestions;
   let items9 = [setAdded];
   let items10 = [setAdded];
   const callback4 = height.useCallback((arg0) => {
-    closure_0 = arg0;
+    let closure_0 = arg0;
     setAdded((arg0) => {
       items = [];
-      items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
+      items[HermesBuiltin.arraySpread(items, arg0, 0)] = closure_0;
       return items;
     });
   }, items9);
   const callback5 = height.useCallback((arg0) => {
-    closure_0 = arg0;
-    setAdded((arr) => arr.filter((user) => user.user.id !== user.user.id));
+    let closure_0 = arg0;
+    setAdded((arr) => {
+      let user;
+      return arr.filter((user) => user.user.id !== user.user.id);
+    });
   }, items10);
-  const set2 = new Set();
-  const shouldAgeVerifyForAgeGate = isFocused(setting[22]).useShouldAgeVerifyForAgeGate();
+  const obj9 = isFocused(setting[22]);
+  const shouldAgeVerifyForAgeGate = obj9.useShouldAgeVerifyForAgeGate();
   const items11 = [
     items,
     hasMore,
@@ -183,112 +198,121 @@ export const NotificationCenterForYou = (panelVariant) => {
     shouldAgeVerifyForAgeGate,
   ];
   const memo2 = height.useMemo(() => {
+    let arr7;
+    let arr8;
+    let ref2;
+    const f153382 = (id, id2) => {
+      const obj = arr8(items2[23]);
+      return -1 * obj.compare(id.id, id2.id);
+    };
     let id;
     if (items.length > 0) {
       id = arr[arr.length - 1].id;
     }
     if (hasMore) {
+      let found;
       if (null != id) {
-        let found = stateFromStores1.filter((forceUnacked) => {
+        found = stateFromStores1.filter((forceUnacked) => {
           forceUnacked = forceUnacked.forceUnacked;
           if (!forceUnacked) {
-            forceUnacked = SnowflakeUtilsDefault.compare(forceUnacked.id, id) > 0;
+            const obj = SnowflakeUtilsDefault;
+            forceUnacked = obj.compare(forceUnacked.id, id) > 0;
           }
           return forceUnacked;
         });
       }
       items = [];
-      HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(arr, 0));
+      const tmp8 = arr;
+      HermesBuiltin.arraySpread(items, found, HermesBuiltin.arraySpread(items, items, 0));
       let found1 = items;
       if (shouldAgeVerifyForAgeGate) {
         found1 = items.filter((kind) => {
           let tmp = "notification-center-item" !== kind.kind;
           if (!tmp) {
-            tmp = !id(items2[22]).shouldShowAgeGateForChannelId(kind.message_channel_id);
             const obj = id(items2[22]);
+            tmp = !obj.shouldShowAgeGateForChannelId(kind.message_channel_id);
           }
           return tmp;
         });
       }
       const items1 = [];
+      arr8 = items1;
       const items2 = [];
       const items3 = [];
       const item = found1.forEach((kind) => {
-        let addResult = kind;
         if ("notification-center-item" === kind.kind) {
-          if (null != addResult.local_id) {
-            const acked = addResult.acked;
-            let tmp22 = !acked;
-            if (!acked) {
-              tmp22 = !NotificationCenterStore.isLocalItemAcked(addResult);
-            }
-            let flag = tmp22;
+          let flag;
+          if (null != kind.local_id) {
+            flag = !kind.acked && !NotificationCenterStore.isLocalItemAcked(kind);
+            const tmp21 = !kind.acked && !NotificationCenterStore.isLocalItemAcked(kind);
           } else {
-            if (obj4.isMentionItem(addResult)) {
-              if (!addResult.acked) {
-                if (null != addResult.message_channel_id) {
+            const obj4 = NotificationCenterUtils;
+            if (obj4.isMentionItem(kind)) {
+              if (!kind.acked) {
+                if (null != kind.message_channel_id) {
                   const current = ref.current;
-                  if (!current.has(addResult.id)) {
-                    const ackMessageIdResult = ReadStateStore.ackMessageId(addResult.message_channel_id);
-                    if (obj.compare(addResult.message_id, ackMessageIdResult) <= 0) {
-                      setReadNotifItemToAcked(addResult);
+                  if (!current.has(kind.id)) {
+                    const ackMessageIdResult = ReadStateStore.ackMessageId(kind.message_channel_id);
+                    const obj = SnowflakeUtilsDefault;
+                    if (obj.compare(kind.message_id, ackMessageIdResult) <= 0) {
+                      setReadNotifItemToAcked(kind);
                       flag = false;
                     }
-                    obj = SnowflakeUtilsDefault;
                   }
                 }
                 if (null != first) {
-                  flag = SnowflakeUtilsDefault.compare(addResult.id, tmp9) > 0;
+                  const obj2 = SnowflakeUtilsDefault;
+                  flag = obj2.compare(kind.id, tmp8) > 0;
                 }
               }
             }
-            obj4 = NotificationCenterUtils;
-            const isRemoteAckedResult = NotificationCenterUtils.isRemoteAcked(addResult, setting);
-            if ("go_live_push" === addResult.type) {
-              if (null != addResult.deeplink) {
-                let tmp16 =
-                  parseURLDefault(addResult.deeplink).payload.type === ConstantsIOS.LinkingTypes.VOICE_CHANNEL &&
+            const obj3 = NotificationCenterUtils;
+            const isRemoteAckedResult = obj3.isRemoteAcked(kind, setting);
+            if ("go_live_push" === kind.type) {
+              let tmp15;
+              if (null != kind.deeplink) {
+                tmp15 =
+                  parseURLDefault(kind.deeplink).payload.type === ConstantsIOS.LinkingTypes.VOICE_CHANNEL &&
                   !isRemoteAckedResult;
-                const tmp21 =
-                  parseURLDefault(addResult.deeplink).payload.type === ConstantsIOS.LinkingTypes.VOICE_CHANNEL &&
+                parseURLDefault(kind.deeplink).payload.type === ConstantsIOS.LinkingTypes.VOICE_CHANNEL &&
                   !isRemoteAckedResult;
               }
-              flag = tmp16;
+              flag = tmp15;
             }
-            tmp16 = !isRemoteAckedResult;
+            tmp15 = !isRemoteAckedResult;
           }
           if (!flag) {
-            setReadNotifItemToAcked(addResult);
+            setReadNotifItemToAcked(kind);
           }
           const current2 = ref2.current;
-          if (current2.has(addResult.id)) {
-            arr8.push(addResult);
-            addResult.acked = false;
-            const current3 = ref.current;
-            addResult = current3.add(addResult.id);
-          } else if (
-            addResult.type !== NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS
-          ) {
-            if (!flag) {
-              items3.push(addResult);
+          if (current2.has(kind.id)) {
+            arr8.push(kind);
+            kind.acked = false;
+          } else if (kind.type !== NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS) {
+            if (flag) {
+              items2.push(kind);
+            } else {
+              items3.push(kind);
             }
           } else {
-            arr8.push(addResult);
+            arr8.push(kind);
           }
-          items2.push(addResult);
+          const current3 = ref.current;
+          current3.add(kind.id);
         }
       });
-      const sorted = items1.sort((id, id2) => -1 * arr8(items2[23]).compare(id.id, id2.id));
-      const sorted1 = items2.sort((id, id2) => -1 * arr8(items2[23]).compare(id.id, id2.id));
-      const sorted2 = items3.sort((id, id2) => -1 * arr8(items2[23]).compare(id.id, id2.id));
+      const sorted = items1.sort(f153382);
+      const sorted1 = items2.sort(f153382);
+      const sorted2 = items3.sort(f153382);
       let obj = currentNavigationRouteName(setting[27]);
-      [arr7, arr8] = memo(
-        currentNavigationRouteName(setting[27]).partition(
-          items1,
-          (type) => type.type === id(items2[12]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && type.acked,
-        ),
+      const tmp20 = memo(
+        obj.partition(items1, (type) => {
+          const tmp = type.type === id(items2[12]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && type.acked;
+          return tmp;
+        }),
         2,
       );
+      [arr7, arr8] = tmp20;
       let arr9 = items1;
       if (arr7.length > 3) {
         let obj2 = {
@@ -301,7 +325,8 @@ export const NotificationCenterForYou = (panelVariant) => {
           other_users: arr7.map((other_user) => other_user.other_user),
           forceUnacked: true,
         };
-        arr8.push(obj2);
+        const push = arr8.push;
+        push(obj2);
         arr9 = arr8;
       }
       const item1 = arr9.forEach((item) => {
@@ -320,7 +345,8 @@ export const NotificationCenterForYou = (panelVariant) => {
         const _Math = Math;
         const substr = friendSuggestions.slice(0, Math.min(friendSuggestions.length, num5));
         const item2 = substr.forEach((id) => {
-          items4.push({ kind: "suggested-friends-row", id: id.user.id, suggestedFriend: id });
+          const obj = { kind: "suggested-friends-row", id: id.user.id, suggestedFriend: id };
+          items4.push(obj);
         });
         if (friendSuggestions.length > 3) {
           let obj4 = {
@@ -332,7 +358,7 @@ export const NotificationCenterForYou = (panelVariant) => {
         }
       }
       const items5 = [];
-      HermesBuiltin.arraySpread(items3, HermesBuiltin.arraySpread(items2, 0));
+      HermesBuiltin.arraySpread(items5, items3, HermesBuiltin.arraySpread(items5, items2, 0));
       let num7 = 0;
       if (initialized) {
         num7 = 0;
@@ -344,10 +370,10 @@ export const NotificationCenterForYou = (panelVariant) => {
           num7 = bound;
           if (0 < bound) {
             do {
-              let obj5 = { kind: "mentions-placeholder", id: null };
+              let obj5 = { kind: "mentions-placeholder", id: "mp-" + num10 };
               let _HermesInternal = HermesInternal;
-              obj5.id = "mp-" + num10;
-              let arr5 = items5.unshift(obj5);
+              let unshift = items5.unshift;
+              let arr5 = unshift(obj5);
               num10 = num10 + 1;
               num7 = bound;
             } while (num10 < bound);
@@ -364,18 +390,18 @@ export const NotificationCenterForYou = (panelVariant) => {
       const items6 = [];
       if (arr9.length > 0) {
         const spliceResult = items5.splice(0, 3);
-        const push3 = items6.push;
+        const push4 = items6.push;
         const items7 = [];
-        HermesBuiltin.arraySpread(items4, HermesBuiltin.arraySpread(arr9, 0));
-        HermesBuiltin.apply(items7, items6);
-        if (tmp69) {
+        HermesBuiltin.arraySpread(items7, items4, HermesBuiltin.arraySpread(items7, arr9, 0));
+        HermesBuiltin.apply(push4, items7, items6);
+        const tmp71 = spliceResult.length > 0 || items5.length > 0;
+        if (tmp71) {
           items6.push(obj6);
         }
-        const push4 = items6.push;
+        const push5 = items6.push;
         const items8 = [];
-        HermesBuiltin.arraySpread(items5, HermesBuiltin.arraySpread(spliceResult, 0));
-        HermesBuiltin.apply(items8, items6);
-        tmp69 = spliceResult.length > 0 || items5.length > 0;
+        HermesBuiltin.arraySpread(items8, items5, HermesBuiltin.arraySpread(items8, spliceResult, 0));
+        HermesBuiltin.apply(push5, items8, items6);
       } else {
         let num11 = 3;
         if (items2.length > 0) {
@@ -387,44 +413,44 @@ export const NotificationCenterForYou = (panelVariant) => {
             }
           }
         }
-        const spliceResult1 = items5.splice(0, num11);
         let flag = false;
-        if (tmp40) {
+        const spliceResult1 = items5.splice(0, num11);
+        const tmp42 = 0 === items4.length && items5.length > 0;
+        if (tmp42) {
           items6.push(obj6);
           flag = true;
         }
-        const push = items6.push;
+        const push2 = items6.push;
         const items9 = [];
-        HermesBuiltin.arraySpread(items4, HermesBuiltin.arraySpread(spliceResult1, 0));
-        HermesBuiltin.apply(items9, items6);
-        let tmp51 = !flag;
-        if (!flag) {
-          tmp51 = items5.length > 0;
-        }
-        if (tmp51) {
+        HermesBuiltin.arraySpread(items9, items4, HermesBuiltin.arraySpread(items9, spliceResult1, 0));
+        HermesBuiltin.apply(push2, items9, items6);
+        const tmp53 = !flag && items5.length > 0;
+        if (tmp53) {
           items6.push(obj6);
         }
-        const push2 = items6.push;
+        const push3 = items6.push;
         const items10 = [];
-        HermesBuiltin.arraySpread(items5, 0);
-        HermesBuiltin.apply(items10, items6);
-        tmp40 = 0 === items4.length && items5.length > 0;
+        HermesBuiltin.arraySpread(items10, items5, 0);
+        HermesBuiltin.apply(push3, items10, items6);
       }
       return items6;
     }
     found = stateFromStores1;
   }, items11);
-  const items12 = [initialized, first1];
+  const items12 = [initialized, first2];
   const layoutEffect = height.useLayoutEffect(() => {
     if (initialized) {
-      const obj2 = { version: "v2", load_start_timestamp: first1, tti_millis: null };
       const _Date = Date;
-      obj2.tti_millis = Date.now() - first1;
-      AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_CENTER_LOADED, obj2);
+      const obj = { version: "v2", load_start_timestamp: first2, tti_millis: Date.now() - first2 };
+      const track = AnalyticsUtilsDefault.track;
+      const NOTIFICATION_CENTER_LOADED = AnalyticEvents.NOTIFICATION_CENTER_LOADED;
+      AnalyticsUtilsDefault;
+      track(NOTIFICATION_CENTER_LOADED, obj);
     }
   }, items12);
   const items13 = [memo, stateFromStores2, first, memo2, setting, tmp17[1], callback3];
   const effect = height.useEffect(() => {
+    let localItemAcked;
     if (memo) {
       const found = memo2.filter((kind) => "notification-center-item" === kind.kind);
       const current = ref.current;
@@ -435,20 +461,23 @@ export const NotificationCenterForYou = (panelVariant) => {
         }
       });
       if (stateFromStores2 !== first) {
-        closure_16(tmp5);
+        closure_16(tmp6);
         const found1 = found.filter((local_id) => {
-          let tmp = null != local_id.local_id;
-          if (tmp) {
-            tmp = !localItemAcked.isLocalItemAcked(local_id);
-          }
+          const tmp = null != local_id.local_id && !localItemAcked.isLocalItemAcked(local_id);
           return tmp;
         });
         const mapped = found1.map((local_id) => local_id.local_id);
-        const result = NotificationCenterItemsActions.markNotificationCenterLocalItemsAcked(mapped);
-        const result1 = NotificationCenterItemsActions.bulkMarkNotificationCenterItemsAcked(
-          found.filter((item) => !isFocused(setting[24]).isRemoteAcked(item, closure_1_2)),
+        let obj = NotificationCenterItemsActions;
+        const result = obj.markNotificationCenterLocalItemsAcked(mapped);
+        const obj2 = NotificationCenterItemsActions;
+        const result1 = obj2.bulkMarkNotificationCenterItemsAcked(
+          found.filter((item) => {
+            const obj = isFocused(setting[24]);
+            return !obj.isRemoteAcked(item, closure_1_2);
+          }),
         );
-        const result2 = NotificationCenterStoreActions.clearNotificationGuildMentions();
+        const obj3 = NotificationCenterStoreActions;
+        const result2 = obj3.clearNotificationGuildMentions();
       }
     }
   }, items13);
@@ -457,8 +486,12 @@ export const NotificationCenterForYou = (panelVariant) => {
     if (isFocused) {
       closure_17(false);
     }
-    const result = NotificationCenterItemsActions.setNotificationCenterTabFocused(isFocused);
-    return () => isFocused(setting[29]).setNotificationCenterTabFocused(false);
+    let obj = NotificationCenterItemsActions;
+    const result = obj.setNotificationCenterTabFocused(isFocused);
+    return () => {
+      const obj = isFocused(setting[29]);
+      return obj.setNotificationCenterTabFocused(false);
+    };
   }, items14);
   const items15 = [memo, tmp20[1]];
   const effect2 = height.useEffect(() => {
@@ -466,20 +499,24 @@ export const NotificationCenterForYou = (panelVariant) => {
       closure_17(true);
     }
   }, items15);
-  const obj10 = { type: null, name: null, properties: null };
-  const obj9 = isFocused(setting[22]);
-  obj10.type = isFocused(setting[32]).ImpressionTypes.VIEW;
-  obj10.name = isFocused(setting[32]).ImpressionNames.NOTIFICATION_CENTER_LANDING;
-  obj10.properties = { empty: 0 === memo2.length };
-  const items16 = [initialized];
-  currentNavigationRouteName(setting[31])(obj10, { disableTrack: !initialized }, items16);
+  const obj10 = {
+    type: isFocused(setting[32]).ImpressionTypes.VIEW,
+    name: isFocused(setting[32]).ImpressionNames.NOTIFICATION_CENTER_LANDING,
+    properties: obj11,
+  };
+  let tmp42 = currentNavigationRouteName(setting[31]);
+  const items16 = [];
+  obj11 = { empty: 0 === memo2.length };
+  const obj12 = { disableTrack: !initialized };
+  items16[0] = initialized;
+  tmp42(obj10, obj12, items16);
   if (initialized) {
     const obj13 = {
       items: memo2,
       loadingMore,
       loadMore,
       nestedInLaunchPad: merged.nestedInLaunchPad,
-      shouldScrollToTop: tmp20[0],
+      shouldScrollToTop: first1,
       isSoftAcked: callback,
       onSoftAckItem: callback1,
       forceHoistItem: callback2,
@@ -488,16 +525,16 @@ export const NotificationCenterForYou = (panelVariant) => {
       onAddSuggestionAnimationFinish: callback5,
       panelVariant: flag,
     };
-    let tmp43Result = tmp43(tmp2(tmp3[34]).ForYouItems, obj13);
+    tmp44Result = tmp44(tmp2(tmp3[34]).ForYouItems, obj13);
   } else {
-    const obj14 = { children: null };
     const _Array = Array;
     const _Array2 = Array;
-    obj14.children = Array.from(Array(10)).map((item, index) =>
-      stateFromStores3(isFocused(setting[33]).ForYouMentionPlaceholder, {}, index),
-    );
-    tmp43Result = tmp43(closure_5, obj14);
-    const arr = Array.from(Array(10));
+    let num = 10;
+    const obj14 = {
+      children: arr.map((item, index) => stateFromStores3(isFocused(setting[33]).ForYouMentionPlaceholder, {}, index)),
+    };
+    arr = Array.from(Array(10));
+    tmp44Result = tmp44(closure_5, obj14);
   }
-  return tmp43Result;
+  return tmp44Result;
 };

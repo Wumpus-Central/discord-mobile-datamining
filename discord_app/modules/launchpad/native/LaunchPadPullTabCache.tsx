@@ -2,25 +2,32 @@
 import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import useWindowDimensions from "../../screen/useWindowDimensions.native.tsx";
-import NativeDeviceSettingsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx";
+import react_nativeDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx";
 import LaunchPadConstants from "LaunchPadConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+let _undefined;
+
+let c3;
+let closure_4;
+let hasOwnProperty;
 function setLaunchPadPullTabExclusionRect(arg0) {
   let tmp = arg0;
   if (arg0 === undefined) {
     const Storage = Storage2.Storage;
-    value = Storage.get(LAUNCH_PAD_PULL_TAB_POSITION_CACHE_KEY);
+    let value = Storage.get(LAUNCH_PAD_PULL_TAB_POSITION_CACHE_KEY);
     if (value == null) {
-      value = React4;
+      value = React3;
     }
     tmp = value;
   }
+  const obj = PlatformUtils;
   if (obj.isAndroid()) {
-    const diff = useWindowDimensions.getWindowDimensions().width - hasOwnProperty;
     const tmp7Result = useWindowDimensions;
-    const width = useWindowDimensions.getWindowDimensions().width;
-    const sum = tmp + React3;
+    const diff = tmp7Result.getWindowDimensions().width - hasOwnProperty;
+    const tmp7Result2 = useWindowDimensions;
+    const width = tmp7Result2.getWindowDimensions().width;
+    const sum = tmp + _false;
     let left;
     if (_undefined != null) {
       left = _undefined.left;
@@ -51,11 +58,10 @@ function setLaunchPadPullTabExclusionRect(arg0) {
       const rect = { left: diff, right: width, top: tmp, bottom: sum };
       _undefined = rect;
       const items = [_undefined];
-      const result = NativeDeviceSettingsModuleDefault.setSystemGestureExclusionRects(items);
+      const obj5 = react_nativeDefault;
+      const result = obj5.setSystemGestureExclusionRects(items);
     }
-    const tmp7Result2 = useWindowDimensions;
   }
-  obj = PlatformUtils;
 }
 ({
   LAUNCH_PAD_PULL_TAB_HEIGHT: c3,
@@ -69,9 +75,9 @@ let result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadPullT
 
 export const getLaunchPadPullTabPositionCached = function getLaunchPadPullTabPositionCached() {
   const Storage = Storage2.Storage;
-  value = Storage.get(LAUNCH_PAD_PULL_TAB_POSITION_CACHE_KEY);
+  let value = Storage.get(LAUNCH_PAD_PULL_TAB_POSITION_CACHE_KEY);
   if (value == null) {
-    value = React4;
+    value = React3;
   }
   return value;
 };
@@ -80,7 +86,9 @@ export const setLaunchPadPullTabPositionCached = function setLaunchPadPullTabPos
   const result = Storage.set(LAUNCH_PAD_PULL_TAB_POSITION_CACHE_KEY, arg0);
 };
 export const persistLaunchPadPullTabPosition = function persistLaunchPadPullTabPosition(arg0) {
-  closure_0 = arg0;
+  let closure_7;
+  let timeout;
+  let closure_0 = arg0;
   clearTimeout(timeout);
   timeout = setTimeout(() => {
     const Storage = Storage2.Storage;
@@ -91,13 +99,12 @@ export const persistLaunchPadPullTabPosition = function persistLaunchPadPullTabP
   }, 300);
 };
 export const clearLaunchPadPullTabExclusionRect = function clearLaunchPadPullTabExclusionRect() {
-  let isAndroidResult = PlatformUtils.isAndroid();
-  if (isAndroidResult) {
-    isAndroidResult = null != c8;
-  }
+  const obj = PlatformUtils;
+  const isAndroidResult = obj.isAndroid() && null != c8;
   if (isAndroidResult) {
     c8 = undefined;
-    const result = NativeDeviceSettingsModuleDefault.setSystemGestureExclusionRects([]);
+    const obj2 = react_nativeDefault;
+    const result = obj2.setSystemGestureExclusionRects([]);
   }
 };
 export { setLaunchPadPullTabExclusionRect };

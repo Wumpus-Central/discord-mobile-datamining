@@ -1,11 +1,15 @@
 // discord_app/modules/channel_permissions/ChannelPermissionsConstants.tsx
-import util from "../../intl/index.native.tsx";
+import intl62 from "../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
 import ForumPlatformUtilsDefault from "../forums/ForumPlatformUtils.native.tsx";
 import GuildTiVPlatformUtilsDefault from "../text_in_voice/GuildTiVPlatformUtils.native.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
 ({
   ChannelTypes: c3,
   ChannelTypesSets: closure_4,
@@ -52,23 +56,118 @@ export const TrackExposureLocations = {
 };
 export const SettingMode = { BASIC: "basic", ADVANCED: "advanced" };
 export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(type, arg1, createPostsDisabled) {
+  let AuEQEC;
+  let BhEo9V;
+  let CP2sz4;
+  let CYBZry;
+  let Chg2zd;
+  let CpakGz;
+  let Ha1xbw;
+  let KYDG2K;
+  let M2iEy3;
+  let MANAGE_CHANNELS;
+  let PVjR1Y;
+  let Qc5vOr;
+  let ReG3gG;
+  let RqCc7i;
+  let RyEwla;
+  let S31soU;
+  let VF4fZZ;
+  let WK9r7F;
+  let WQ6zpT;
+  let XFFhA0;
+  let XTnrPH;
+  let XcrieN;
+  let amZ5vn;
+  let cbdQy2;
+  let ckKKIO;
+  let enableHangoutWindow;
+  let fUYPly;
+  let format5Result;
+  let format8Result;
+  let gmbD87;
+  let hOMXOv;
+  let iXhS6R;
+  let intl12;
+  let intl13;
+  let intl14;
+  let intl15;
+  let intl16;
+  let intl19;
+  let intl21;
+  let intl22;
+  let intl23;
+  let intl25;
+  let intl26;
+  let intl27;
+  let intl28;
+  let intl29;
+  let intl30;
+  let intl31;
+  let intl32;
+  let intl33;
+  let intl34;
+  let intl38;
+  let intl39;
+  let intl40;
+  let intl42;
+  let intl44;
+  let intl46;
+  let intl47;
+  let intl48;
+  let intl49;
+  let intl5;
+  let intl50;
+  let intl54;
+  let intl55;
+  let intl59;
+  let intl6;
+  let intl60;
+  let intl61;
+  let intl7;
+  let lUCs1n;
+  let obj19;
+  let obj35;
+  let obj37;
+  let obj39;
+  let obj9;
+  let prop;
+  let prop3;
+  let qEbw4W;
+  let qPUPip;
+  let sPoBLa;
+  let stringResult;
+  let stringResult1;
+  let stringResult2;
+  let stringResult3;
+  let stringResult4;
+  let stringResult5;
+  let stringResult6;
+  let t2;
+  let tmp10;
+  let tmp8;
+  let uzlYFE;
+  let v5R9nYh;
+  let ydL28i;
   type = type.type;
+  const str = metroRequire.VIEW_CHANNEL;
+  const str1 = str.toString();
   if (type === constants.GUILD_CATEGORY) {
-    const intl2 = util.intl;
-    let stringResult = intl2.string(util.t.uV83yi);
-    let tmp8 = require;
-    let tmp10 = require;
+    const intl2 = intl62.intl;
+    stringResult = intl2.string(intl62.t.uV83yi);
+    tmp8 = require;
+    tmp10 = require;
   } else {
-    const intl = util.intl;
-    stringResult = intl.string(util.t["W/A4Qp"]);
+    const intl = intl62.intl;
+    stringResult = intl.string(intl62.t["W/A4Qp"]);
     tmp8 = require;
     tmp10 = require;
   }
-  const obj = { title: stringResult, description: null, flag: null };
+  const obj = { title: stringResult, description: M2iEy3, flag: null };
   const GUILD_CATEGORY = constants.GUILD_CATEGORY;
   if (arg1) {
     if (GUILD_CATEGORY === type) {
-      let M2iEy3 = tmp8(1126).t["o/vBzj"];
+      M2iEy3 = tmp8(1126).t["o/vBzj"];
     } else {
       if (constants.GUILD_VOICE !== type) {
         if (constants.GUILD_STAGE_VOICE !== type) {
@@ -82,20 +181,19 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   } else {
     M2iEy3 = tmp8(1126).t.M2iEy3;
   }
-  const obj2 = { [constants4.VIEW_CHANNEL.toString()]: obj };
-  obj.description = M2iEy3;
-  ({ VIEW_CHANNEL: obj.flag, MANAGE_CHANNELS } = constants4);
-  const str1 = constants4.VIEW_CHANNEL.toString();
+  const obj2 = { [str1]: obj };
+  ({ VIEW_CHANNEL: obj.flag, MANAGE_CHANNELS } = metroRequire);
+  const str41 = MANAGE_CHANNELS.toString();
   if (type === constants.GUILD_CATEGORY) {
     const intl4 = tmp10(1126).intl;
-    let stringResult1 = intl4.string(tmp10(1126).t["9qLtWs"]);
+    stringResult1 = intl4.string(tmp10(1126).t["9qLtWs"]);
   } else {
     const intl3 = tmp10(1126).intl;
     stringResult1 = intl3.string(tmp10(1126).t.nAw15L);
   }
-  const obj3 = { title: stringResult1, description: null, flag: null };
+  const obj3 = { title: stringResult1, description: ydL28i, flag: metroRequire.MANAGE_CHANNELS };
   if (constants.GUILD_CATEGORY === type) {
-    let ydL28i = tmp8(1126).t.KJ2JnG;
+    ydL28i = tmp8(1126).t.KJ2JnG;
   } else if (constants.GUILD_VOICE === type) {
     ydL28i = tmp8(1126).t["+gl2ne"];
   } else if (constants.GUILD_STAGE_VOICE === type) {
@@ -103,41 +201,43 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   } else {
     ydL28i = tmp8(1126).t.ydL28i;
   }
-  obj3.description = ydL28i;
-  obj3.flag = constants4.MANAGE_CHANNELS;
-  obj2[MANAGE_CHANNELS.toString()] = obj3;
-  const obj4 = { title: null, description: null, flag: null };
-  const str41 = MANAGE_CHANNELS.toString();
-  const intl5 = tmp10(1126).intl;
-  obj4.title = intl5.string(tmp10(1126).t.ICb6am);
+  obj2[str41] = obj3;
+  const obj4 = { title: intl5.string(tmp10(1126).t.ICb6am), description: hOMXOv, flag: metroRequire.MANAGE_ROLES };
+  const str2 = metroRequire.MANAGE_ROLES;
+  const str42 = str2.toString();
+  intl5 = tmp10(1126).intl;
   if (constants.GUILD_CATEGORY === type) {
-    let hOMXOv = tmp8(1126).t.TyyCMD;
+    hOMXOv = tmp8(1126).t.TyyCMD;
   } else if (constants.GUILD_STAGE_VOICE === type) {
     hOMXOv = tmp8(1126).t.hcw4mx;
   } else {
     hOMXOv = tmp8(1126).t.hOMXOv;
   }
-  obj4.description = hOMXOv;
-  obj4.flag = constants4.MANAGE_ROLES;
-  obj2[constants4.MANAGE_ROLES.toString()] = obj4;
-  const obj5 = { title: null, description: null, flag: null };
-  const str42 = constants4.MANAGE_ROLES.toString();
-  const intl6 = tmp10(1126).intl;
-  obj5.title = intl6.string(tmp10(1126).t["/ADKmM"]);
+  obj2[str42] = obj4;
+  const obj5 = {
+    title: intl6.string(tmp10(1126).t["/ADKmM"]),
+    description: CYBZry,
+    flag: metroRequire.MANAGE_WEBHOOKS,
+  };
+  const str3 = metroRequire.MANAGE_WEBHOOKS;
+  const str43 = str3.toString();
+  intl6 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let CYBZry = tmp10(1126).t["K5+ZZ7"];
+    CYBZry = tmp10(1126).t["K5+ZZ7"];
   } else {
     CYBZry = tmp10(1126).t.CYBZry;
   }
-  obj5.description = CYBZry;
-  obj5.flag = constants4.MANAGE_WEBHOOKS;
-  obj2[constants4.MANAGE_WEBHOOKS.toString()] = obj5;
-  const obj6 = { title: null, description: null, flag: null };
-  const str43 = constants4.MANAGE_WEBHOOKS.toString();
-  const intl7 = tmp10(1126).intl;
-  obj6.title = intl7.string(tmp10(1126).t.zJrgTG);
+  obj2[str43] = obj5;
+  const obj6 = {
+    title: intl7.string(tmp10(1126).t.zJrgTG),
+    description: lUCs1n,
+    flag: metroRequire.CREATE_INSTANT_INVITE,
+  };
+  const str4 = metroRequire.CREATE_INSTANT_INVITE;
+  const str44 = str4.toString();
+  intl7 = tmp10(1126).intl;
   if (constants.GUILD_CATEGORY === type) {
-    let lUCs1n = tmp8(1126).t["3YFAAX"];
+    lUCs1n = tmp8(1126).t["3YFAAX"];
   } else {
     if (constants.GUILD_VOICE !== type) {
       if (constants.GUILD_STAGE_VOICE !== type) {
@@ -146,14 +246,13 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     lUCs1n = tmp8(1126).t.lUCs1n;
   }
-  obj6.description = lUCs1n;
-  obj6.flag = constants4.CREATE_INSTANT_INVITE;
-  obj2[constants4.CREATE_INSTANT_INVITE.toString()] = obj6;
+  obj2[str44] = obj6;
   const GUILD_THREADS_ONLY = constants2.GUILD_THREADS_ONLY;
-  const str44 = constants4.CREATE_INSTANT_INVITE.toString();
+  const str5 = metroRequire.SEND_MESSAGES;
+  const str45 = str5.toString();
   if (GUILD_THREADS_ONLY.has(type)) {
     const intl10 = tmp10(1126).intl;
-    let stringResult2 = intl10.string(tmp10(1126).t.nJwAHX);
+    stringResult2 = intl10.string(tmp10(1126).t.nJwAHX);
   } else if (type === constants.GUILD_CATEGORY) {
     const intl9 = tmp10(1126).intl;
     stringResult2 = intl9.string(tmp10(1126).t.S1VOwd);
@@ -161,17 +260,19 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     const intl8 = tmp10(1126).intl;
     stringResult2 = intl8.string(tmp10(1126).t.T32rkC);
   }
-  const obj7 = { title: stringResult2, description: null, flag: null };
+  const obj7 = { title: stringResult2, description: WQ6zpT, flag: metroRequire.SEND_MESSAGES };
   if (constants.GUILD_CATEGORY === type) {
-    let WQ6zpT = tmp8(1126).t.IjeLuu;
+    WQ6zpT = tmp8(1126).t.IjeLuu;
   } else if (constants.GUILD_FORUM === type) {
     createPostsDisabled = undefined;
     if (createPostsDisabled != null) {
       createPostsDisabled = createPostsDisabled.createPostsDisabled;
     }
     if (createPostsDisabled) {
+      let LG9VAi;
       if (!type.isMediaChannel()) {
-        let LG9VAi = ForumPlatformUtilsDefault.getForumChannelPermissionText();
+        const obj10 = ForumPlatformUtilsDefault;
+        LG9VAi = obj10.getForumChannelPermissionText();
       }
       WQ6zpT = LG9VAi;
     }
@@ -180,173 +281,181 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     WQ6zpT = tmp8(1126).t.LG9VAi;
   } else if (constants.GUILD_ANNOUNCEMENT === type) {
     const intl11 = tmp8(1126).intl;
-    const obj9 = { articleURL: HelpdeskUtilsDefault.getArticleURL(constants3.ANNOUNCEMENT_CHANNELS) };
-    WQ6zpT = intl11.format(tmp8(1126).t.WFwfSD, obj9);
+    const format = intl11.format;
+    const obj8 = { articleURL: obj9.getArticleURL(hasOwnProperty.ANNOUNCEMENT_CHANNELS) };
+    const WFwfSD = tmp8(1126).t.WFwfSD;
+    obj9 = HelpdeskUtilsDefault;
+    WQ6zpT = format(WFwfSD, obj8);
   } else if (constants.GUILD_VOICE === type) {
     let sendMessagesDisabled;
+    const getTextInVoiceSendMessageChannelPermissionText =
+      GuildTiVPlatformUtilsDefault.getTextInVoiceSendMessageChannelPermissionText;
+    GuildTiVPlatformUtilsDefault;
     if (createPostsDisabled != null) {
       sendMessagesDisabled = createPostsDisabled.sendMessagesDisabled;
     }
-    WQ6zpT = GuildTiVPlatformUtilsDefault.getTextInVoiceSendMessageChannelPermissionText(sendMessagesDisabled);
+    WQ6zpT = getTextInVoiceSendMessageChannelPermissionText(sendMessagesDisabled);
   } else {
     WQ6zpT = tmp8(1126).t.WQ6zpT;
   }
-  obj7.description = WQ6zpT;
-  obj7.flag = constants4.SEND_MESSAGES;
-  obj2[constants4.SEND_MESSAGES.toString()] = obj7;
-  const obj12 = { title: null, description: null, flag: null };
-  const str45 = constants4.SEND_MESSAGES.toString();
-  const intl12 = tmp10(1126).intl;
-  obj12.title = intl12.string(tmp10(1126).t["969dEL"]);
+  obj2[str45] = obj7;
+  const obj11 = { title: intl12.string(tmp10(1126).t["969dEL"]), description: XFFhA0, flag: metroRequire.EMBED_LINKS };
+  const str6 = metroRequire.EMBED_LINKS;
+  const str46 = str6.toString();
+  intl12 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let XFFhA0 = tmp10(1126).t["7zlUay"];
+    XFFhA0 = tmp10(1126).t["7zlUay"];
   } else {
     XFFhA0 = tmp10(1126).t.XFFhA0;
   }
-  obj12.description = XFFhA0;
-  obj12.flag = constants4.EMBED_LINKS;
-  obj2[constants4.EMBED_LINKS.toString()] = obj12;
-  const obj13 = { title: null, description: null, flag: null };
-  const str46 = constants4.EMBED_LINKS.toString();
-  const intl13 = tmp10(1126).intl;
-  obj13.title = intl13.string(tmp10(1126).t["3AS4UM"]);
+  obj2[str46] = obj11;
+  const obj12 = { title: intl13.string(tmp10(1126).t["3AS4UM"]), description: WK9r7F, flag: metroRequire.ATTACH_FILES };
+  const str7 = metroRequire.ATTACH_FILES;
+  const str47 = str7.toString();
+  intl13 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let WK9r7F = tmp10(1126).t.XREf9l;
+    WK9r7F = tmp10(1126).t.XREf9l;
   } else {
     WK9r7F = tmp10(1126).t.WK9r7F;
   }
-  obj13.description = WK9r7F;
-  obj13.flag = constants4.ATTACH_FILES;
-  obj2[constants4.ATTACH_FILES.toString()] = obj13;
-  const obj14 = { title: null, description: null, flag: null };
-  const str47 = constants4.ATTACH_FILES.toString();
-  const intl14 = tmp10(1126).intl;
-  obj14.title = intl14.string(tmp10(1126).t.yEoJAr);
+  obj2[str47] = obj12;
+  const obj13 = { title: intl14.string(tmp10(1126).t.yEoJAr), description: PVjR1Y, flag: metroRequire.ADD_REACTIONS };
+  const str8 = metroRequire.ADD_REACTIONS;
+  const str48 = str8.toString();
+  intl14 = tmp10(1126).intl;
   if (constants.GUILD_CATEGORY === type) {
-    let PVjR1Y = tmp8(1126).t.pZT2Zh;
+    PVjR1Y = tmp8(1126).t.pZT2Zh;
   } else if (constants.GUILD_VOICE === type) {
     PVjR1Y = tmp8(1126).t.xSSbIs;
   } else {
     PVjR1Y = tmp8(1126).t.PVjR1Y;
   }
-  obj14.description = PVjR1Y;
-  obj14.flag = constants4.ADD_REACTIONS;
-  obj2[constants4.ADD_REACTIONS.toString()] = obj14;
-  const obj15 = { title: null, description: null, flag: null };
-  const str48 = constants4.ADD_REACTIONS.toString();
-  const intl15 = tmp10(1126).intl;
-  obj15.title = intl15.string(tmp10(1126).t["+bxf3H"]);
+  obj2[str48] = obj13;
+  const obj14 = {
+    title: intl15.string(tmp10(1126).t["+bxf3H"]),
+    description: Qc5vOr,
+    flag: metroRequire.USE_EXTERNAL_EMOJIS,
+  };
+  const str9 = metroRequire.USE_EXTERNAL_EMOJIS;
+  const str49 = str9.toString();
+  intl15 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let Qc5vOr = tmp10(1126).t.mWAbK4;
+    Qc5vOr = tmp10(1126).t.mWAbK4;
   } else {
     Qc5vOr = tmp10(1126).t.Qc5vOr;
   }
-  obj15.description = Qc5vOr;
-  obj15.flag = constants4.USE_EXTERNAL_EMOJIS;
-  obj2[constants4.USE_EXTERNAL_EMOJIS.toString()] = obj15;
-  const obj16 = { title: null, description: null, flag: null };
-  const str49 = constants4.USE_EXTERNAL_EMOJIS.toString();
-  const intl16 = tmp10(1126).intl;
-  obj16.title = intl16.string(tmp10(1126).t.ERNhYf);
+  obj2[str49] = obj14;
+  const obj15 = {
+    title: intl16.string(tmp10(1126).t.ERNhYf),
+    description: VF4fZZ,
+    flag: metroRequire.USE_EXTERNAL_STICKERS,
+  };
+  const str10 = metroRequire.USE_EXTERNAL_STICKERS;
+  const str50 = str10.toString();
+  intl16 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let VF4fZZ = tmp10(1126).t["39whJ4"];
+    VF4fZZ = tmp10(1126).t["39whJ4"];
   } else {
     VF4fZZ = tmp10(1126).t.VF4fZZ;
   }
-  obj16.description = VF4fZZ;
-  obj16.flag = constants4.USE_EXTERNAL_STICKERS;
-  obj2[constants4.USE_EXTERNAL_STICKERS.toString()] = obj16;
-  const str50 = constants4.USE_EXTERNAL_STICKERS.toString();
+  obj2[str50] = obj15;
+  const str11 = metroRequire.MENTION_EVERYONE;
+  const str51 = str11.toString();
   if (type === constants.GUILD_STAGE_VOICE) {
     const intl18 = tmp10(1126).intl;
-    let stringResult3 = intl18.string(tmp10(1126).t.VDUAHO);
+    stringResult3 = intl18.string(tmp10(1126).t.VDUAHO);
   } else {
     const intl17 = tmp10(1126).intl;
     stringResult3 = intl17.string(tmp10(1126).t.Y78KGC);
   }
-  const obj17 = { title: stringResult3, description: null, flag: null };
+  const obj16 = { title: stringResult3, description: prop, flag: metroRequire.MENTION_EVERYONE };
   if (type === constants.GUILD_CATEGORY) {
-    let prop = tmp10(1126).t["HOhg/B"];
+    prop = tmp10(1126).t["HOhg/B"];
   } else if (type === constants.GUILD_STAGE_VOICE) {
     prop = tmp10(1126).t.rZn1oO;
   } else {
     prop = tmp10(1126).t["6IUSdt"];
   }
-  obj17.description = prop;
-  obj17.flag = constants4.MENTION_EVERYONE;
-  obj2[constants4.MENTION_EVERYONE.toString()] = obj17;
-  const obj18 = { title: null, description: null, flag: null };
-  const str51 = constants4.MENTION_EVERYONE.toString();
-  const intl19 = tmp10(1126).intl;
-  obj18.title = intl19.string(tmp10(1126).t["6lU9xM"]);
+  obj2[str51] = obj16;
+  const obj17 = {
+    title: intl19.string(tmp10(1126).t["6lU9xM"]),
+    description: v5R9nYh,
+    flag: metroRequire.MANAGE_MESSAGES,
+  };
+  const str12 = metroRequire.MANAGE_MESSAGES;
+  const str52 = str12.toString();
+  intl19 = tmp10(1126).intl;
   if (constants.GUILD_CATEGORY === type) {
-    let v5R9nYh = tmp8(1126).t["5R9nYh"];
+    v5R9nYh = tmp8(1126).t["5R9nYh"];
   } else if (constants.GUILD_ANNOUNCEMENT === type) {
     const intl20 = tmp8(1126).intl;
-    const obj19 = { articleURL: HelpdeskUtilsDefault.getArticleURL(constants3.ANNOUNCEMENT_CHANNELS) };
-    v5R9nYh = intl20.format(tmp8(1126).t.XRxOo0, obj19);
+    const format2 = intl20.format;
+    const obj18 = { articleURL: obj19.getArticleURL(hasOwnProperty.ANNOUNCEMENT_CHANNELS) };
+    const XRxOo0 = tmp8(1126).t.XRxOo0;
+    obj19 = HelpdeskUtilsDefault;
+    v5R9nYh = format2(XRxOo0, obj18);
   } else {
     v5R9nYh = tmp8(1126).t["SeA+G9"];
   }
-  obj18.description = v5R9nYh;
-  obj18.flag = constants4.MANAGE_MESSAGES;
-  obj2[constants4.MANAGE_MESSAGES.toString()] = obj18;
-  const obj21 = { title: null, description: null, flag: null };
-  const str52 = constants4.MANAGE_MESSAGES.toString();
-  const intl21 = tmp10(1126).intl;
-  obj21.title = intl21.string(tmp10(1126).t.Y5BI39);
+  obj2[str52] = obj17;
+  const obj20 = { title: intl21.string(tmp10(1126).t.Y5BI39), description: gmbD87, flag: metroRequire.PIN_MESSAGES };
+  const str13 = metroRequire.PIN_MESSAGES;
+  const str53 = str13.toString();
+  intl21 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let gmbD87 = tmp10(1126).t.gmbD87;
+    gmbD87 = tmp10(1126).t.gmbD87;
   } else {
     gmbD87 = tmp10(1126).t["0l2EjL"];
   }
-  obj21.description = gmbD87;
-  obj21.flag = constants4.PIN_MESSAGES;
-  obj2[constants4.PIN_MESSAGES.toString()] = obj21;
-  const obj22 = { title: null, description: null, flag: null };
-  const str53 = constants4.PIN_MESSAGES.toString();
-  const intl22 = tmp10(1126).intl;
-  obj22.title = intl22.string(tmp10(1126).t.kqcjeV);
+  obj2[str53] = obj20;
+  const obj21 = { title: intl22.string(tmp10(1126).t.kqcjeV), description: Ha1xbw, flag: metroRequire.BYPASS_SLOWMODE };
+  const str14 = metroRequire.BYPASS_SLOWMODE;
+  const str54 = str14.toString();
+  intl22 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let Ha1xbw = tmp10(1126).t.C4t1Xu;
+    Ha1xbw = tmp10(1126).t.C4t1Xu;
   } else {
     Ha1xbw = tmp10(1126).t.Ha1xbw;
   }
-  obj22.description = Ha1xbw;
-  obj22.flag = constants4.BYPASS_SLOWMODE;
-  obj2[constants4.BYPASS_SLOWMODE.toString()] = obj22;
-  const obj23 = { title: null, description: null, flag: null };
-  const str54 = constants4.BYPASS_SLOWMODE.toString();
-  const intl23 = tmp10(1126).intl;
-  obj23.title = intl23.string(tmp10(1126).t.Aj9ruN);
+  obj2[str54] = obj21;
+  const obj22 = {
+    title: intl23.string(tmp10(1126).t.Aj9ruN),
+    description: qEbw4W,
+    flag: metroRequire.MANAGE_OFFICIAL_MESSAGES,
+  };
+  const str15 = metroRequire.MANAGE_OFFICIAL_MESSAGES;
+  const str55 = str15.toString();
+  intl23 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let qEbw4W = tmp10(1126).t["Pf0e/Q"];
+    qEbw4W = tmp10(1126).t["Pf0e/Q"];
   } else {
     qEbw4W = tmp10(1126).t.qEbw4W;
   }
-  obj23.description = qEbw4W;
-  obj23.flag = constants4.MANAGE_OFFICIAL_MESSAGES;
-  obj2[constants4.MANAGE_OFFICIAL_MESSAGES.toString()] = obj23;
+  obj2[str55] = obj22;
   const GUILD_THREADS_ONLY2 = constants2.GUILD_THREADS_ONLY;
-  const str55 = constants4.MANAGE_OFFICIAL_MESSAGES.toString();
+  const str16 = metroRequire.READ_MESSAGE_HISTORY;
+  const str56 = str16.toString();
   const hasItem = GUILD_THREADS_ONLY2.has(type);
   const intl24 = tmp10(1126).intl;
   const string = intl24.string;
   const t = tmp10(1126).t;
   if (hasItem) {
-    let stringResult4 = string(t["0RQwtn"]);
+    stringResult4 = string(t["0RQwtn"]);
   } else {
     stringResult4 = string(t.l9ufaR);
   }
-  const obj24 = { title: stringResult4, description: null, flag: null };
+  const obj23 = { title: stringResult4, description: RqCc7i, flag: metroRequire.READ_MESSAGE_HISTORY };
   if (constants.GUILD_CATEGORY === type) {
-    let RqCc7i = tmp8(1126).t["cJRv/g"];
+    RqCc7i = tmp8(1126).t["cJRv/g"];
   } else if (constants.GUILD_VOICE === type) {
     let prop1;
+    const getTextInVoiceReadMessageHistoryChannelPermissionText =
+      GuildTiVPlatformUtilsDefault.getTextInVoiceReadMessageHistoryChannelPermissionText;
+    GuildTiVPlatformUtilsDefault;
     if (createPostsDisabled != null) {
       prop1 = createPostsDisabled.readMessageHistoryDisabled;
     }
-    RqCc7i = GuildTiVPlatformUtilsDefault.getTextInVoiceReadMessageHistoryChannelPermissionText(prop1);
+    RqCc7i = getTextInVoiceReadMessageHistoryChannelPermissionText(prop1);
   } else {
     if (constants.GUILD_FORUM !== type) {
       if (constants.GUILD_MEDIA !== type) {
@@ -355,65 +464,67 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     RqCc7i = tmp8(1126).t.RqCc7i;
   }
-  obj24.description = RqCc7i;
-  obj24.flag = constants4.READ_MESSAGE_HISTORY;
-  obj2[constants4.READ_MESSAGE_HISTORY.toString()] = obj24;
-  const obj26 = { title: null, description: null, flag: null };
-  const str56 = constants4.READ_MESSAGE_HISTORY.toString();
-  const intl25 = tmp10(1126).intl;
-  obj26.title = intl25.string(tmp10(1126).t.mMbwh7);
+  obj2[str56] = obj23;
+  const obj24 = {
+    title: intl25.string(tmp10(1126).t.mMbwh7),
+    description: CpakGz,
+    flag: metroRequire.SEND_TTS_MESSAGES,
+  };
+  const str17 = metroRequire.SEND_TTS_MESSAGES;
+  const str57 = str17.toString();
+  intl25 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let CpakGz = tmp10(1126).t.b7pc9U;
+    CpakGz = tmp10(1126).t.b7pc9U;
   } else {
     CpakGz = tmp10(1126).t.CpakGz;
   }
-  obj26.description = CpakGz;
-  obj26.flag = constants4.SEND_TTS_MESSAGES;
-  obj2[constants4.SEND_TTS_MESSAGES.toString()] = obj26;
-  const obj27 = { title: null, description: null, flag: null };
-  const str57 = constants4.SEND_TTS_MESSAGES.toString();
-  const intl26 = tmp10(1126).intl;
-  obj27.title = intl26.string(tmp10(1126).t.nkoPOt);
+  obj2[str57] = obj24;
+  const obj25 = {
+    title: intl26.string(tmp10(1126).t.nkoPOt),
+    description: ReG3gG,
+    flag: metroRequire.USE_APPLICATION_COMMANDS,
+  };
+  const str18 = metroRequire.USE_APPLICATION_COMMANDS;
+  const str58 = str18.toString();
+  intl26 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let ReG3gG = tmp10(1126).t["D+qW0J"];
+    ReG3gG = tmp10(1126).t["D+qW0J"];
   } else {
     ReG3gG = tmp10(1126).t.ReG3gG;
   }
-  obj27.description = ReG3gG;
-  obj27.flag = constants4.USE_APPLICATION_COMMANDS;
-  obj2[constants4.USE_APPLICATION_COMMANDS.toString()] = obj27;
-  const obj28 = { title: null, description: null, flag: null };
-  const str58 = constants4.USE_APPLICATION_COMMANDS.toString();
-  const intl27 = tmp10(1126).intl;
-  obj28.title = intl27.string(tmp10(1126).t.WlWSBT);
+  obj2[str58] = obj25;
+  const obj26 = {
+    title: intl27.string(tmp10(1126).t.WlWSBT),
+    description: BhEo9V,
+    flag: metroRequire.SEND_VOICE_MESSAGES,
+  };
+  const str19 = metroRequire.SEND_VOICE_MESSAGES;
+  const str59 = str19.toString();
+  intl27 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let BhEo9V = tmp10(1126).t.gavGfv;
+    BhEo9V = tmp10(1126).t.gavGfv;
   } else {
     BhEo9V = tmp10(1126).t.BhEo9V;
   }
-  obj28.description = BhEo9V;
-  obj28.flag = constants4.SEND_VOICE_MESSAGES;
-  obj2[constants4.SEND_VOICE_MESSAGES.toString()] = obj28;
-  const obj29 = { title: null, description: null, flag: null };
-  const str59 = constants4.SEND_VOICE_MESSAGES.toString();
-  const intl28 = tmp10(1126).intl;
-  obj29.title = intl28.string(tmp10(1126).t.UMQ7Ww);
+  obj2[str59] = obj26;
+  const obj27 = { title: intl28.string(tmp10(1126).t.UMQ7Ww), description: ckKKIO, flag: metroRequire.SEND_POLLS };
+  const str20 = metroRequire.SEND_POLLS;
+  const str60 = str20.toString();
+  intl28 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let ckKKIO = tmp10(1126).t["18Ya7L"];
+    ckKKIO = tmp10(1126).t["18Ya7L"];
   } else {
     ckKKIO = tmp10(1126).t.ckKKIO;
   }
-  obj29.description = ckKKIO;
-  obj29.flag = constants4.SEND_POLLS;
-  obj2[constants4.SEND_POLLS.toString()] = obj29;
-  const obj30 = { title: null, description: null, flag: null };
-  const str60 = constants4.SEND_POLLS.toString();
-  const intl29 = tmp10(1126).intl;
-  obj30.title = intl29.string(tmp10(1126).t.S0W8Z5);
+  obj2[str60] = obj27;
+  const obj28 = { title: intl29.string(tmp10(1126).t.S0W8Z5), description: XcrieN, flag: metroRequire.CONNECT };
+  const str21 = metroRequire.CONNECT;
+  const str61 = str21.toString();
+  intl29 = tmp10(1126).intl;
   const GUILD_CATEGORY2 = constants.GUILD_CATEGORY;
   if (arg1) {
     if (GUILD_CATEGORY2 === type) {
-      let XcrieN = tmp8(1126).t.XcrieN;
+      XcrieN = tmp8(1126).t.XcrieN;
     } else if (constants.GUILD_STAGE_VOICE === type) {
       XcrieN = tmp8(1126).t.SOFNhP;
     } else {
@@ -440,15 +551,13 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     XcrieN = tmp8(1126).t["QU/Rw8"];
   }
-  obj30.description = XcrieN;
-  obj30.flag = constants4.CONNECT;
-  obj2[constants4.CONNECT.toString()] = obj30;
-  const obj31 = { title: null, description: null, flag: null };
-  const str61 = constants4.CONNECT.toString();
-  const intl30 = tmp10(1126).intl;
-  obj31.title = intl30.string(tmp10(1126).t["8w1tIR"]);
+  obj2[str61] = obj28;
+  const obj29 = { title: intl30.string(tmp10(1126).t["8w1tIR"]), description: iXhS6R, flag: metroRequire.SPEAK };
+  const str22 = metroRequire.SPEAK;
+  const str62 = str22.toString();
+  intl30 = tmp10(1126).intl;
   if (constants.GUILD_CATEGORY === type) {
-    let iXhS6R = tmp8(1126).t.iXhS6R;
+    iXhS6R = tmp8(1126).t.iXhS6R;
   } else if (constants.GUILD_STAGE_VOICE === type) {
     iXhS6R = tmp8(1126).t.a8n741;
   } else {
@@ -461,15 +570,13 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     iXhS6R = tmp8(1126).t["+VXsJI"];
   }
-  obj31.description = iXhS6R;
-  obj31.flag = constants4.SPEAK;
-  obj2[constants4.SPEAK.toString()] = obj31;
-  const obj32 = { title: null, description: null, flag: null };
-  const str62 = constants4.SPEAK.toString();
-  const intl31 = tmp10(1126).intl;
-  obj32.title = intl31.string(tmp10(1126).t.FlNoSV);
+  obj2[str62] = obj29;
+  const obj30 = { title: intl31.string(tmp10(1126).t.FlNoSV), description: AuEQEC, flag: metroRequire.STREAM };
+  const str23 = metroRequire.STREAM;
+  const str63 = str23.toString();
+  intl31 = tmp10(1126).intl;
   if (constants.GUILD_CATEGORY === type) {
-    let AuEQEC = tmp8(1126).t["ryG0/J"];
+    AuEQEC = tmp8(1126).t["ryG0/J"];
   } else {
     if (constants.GUILD_TEXT !== type) {
       if (constants.GUILD_FORUM !== type) {
@@ -484,15 +591,17 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     AuEQEC = tmp8(1126).t.AuEQEC;
   }
-  obj32.description = AuEQEC;
-  obj32.flag = constants4.STREAM;
-  obj2[constants4.STREAM.toString()] = obj32;
-  const obj33 = { title: null, description: null, flag: null };
-  const str63 = constants4.STREAM.toString();
-  const intl32 = tmp10(1126).intl;
-  obj33.title = intl32.string(tmp10(1126).t.rLSGeh);
+  obj2[str63] = obj30;
+  const obj31 = {
+    title: intl32.string(tmp10(1126).t.rLSGeh),
+    description: RyEwla,
+    flag: metroRequire.USE_EMBEDDED_ACTIVITIES,
+  };
+  const str24 = metroRequire.USE_EMBEDDED_ACTIVITIES;
+  const str64 = str24.toString();
+  intl32 = tmp10(1126).intl;
   if (constants.GUILD_CATEGORY === type) {
-    let RyEwla = tmp8(1126).t.maNzCO;
+    RyEwla = tmp8(1126).t.maNzCO;
   } else {
     if (constants.GUILD_FORUM !== type) {
       if (constants.GUILD_MEDIA !== type) {
@@ -501,15 +610,17 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     RyEwla = tmp8(1126).t.RyEwla;
   }
-  obj33.description = RyEwla;
-  obj33.flag = constants4.USE_EMBEDDED_ACTIVITIES;
-  obj2[constants4.USE_EMBEDDED_ACTIVITIES.toString()] = obj33;
-  const obj34 = { title: null, description: null, flag: null };
-  const str64 = constants4.USE_EMBEDDED_ACTIVITIES.toString();
-  const intl33 = tmp10(1126).intl;
-  obj34.title = intl33.string(tmp10(1126).t["3TzAk0"]);
+  obj2[str64] = obj31;
+  const obj32 = {
+    title: intl33.string(tmp10(1126).t["3TzAk0"]),
+    description: qPUPip,
+    flag: metroRequire.USE_EXTERNAL_APPS,
+  };
+  const str25 = metroRequire.USE_EXTERNAL_APPS;
+  const str65 = str25.toString();
+  intl33 = tmp10(1126).intl;
   if (constants.GUILD_CATEGORY === type) {
-    let qPUPip = tmp8(1126).t.bgIY3H;
+    qPUPip = tmp8(1126).t.bgIY3H;
   } else {
     if (constants.GUILD_FORUM !== type) {
       if (constants.GUILD_MEDIA !== type) {
@@ -518,47 +629,58 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     qPUPip = tmp8(1126).t.qPUPip;
   }
-  obj34.description = qPUPip;
-  obj34.flag = constants4.USE_EXTERNAL_APPS;
-  obj2[constants4.USE_EXTERNAL_APPS.toString()] = obj34;
-  const obj35 = { title: null, description: null, flag: null };
-  const str65 = constants4.USE_EXTERNAL_APPS.toString();
-  const intl34 = tmp10(1126).intl;
-  obj35.title = intl34.string(tmp10(1126).t.Bco7NG);
+  obj2[str65] = obj32;
+  const obj33 = {
+    title: intl34.string(tmp10(1126).t.Bco7NG),
+    description: format5Result,
+    flag: metroRequire.USE_SOUNDBOARD,
+  };
+  const str26 = metroRequire.USE_SOUNDBOARD;
+  const str66 = str26.toString();
+  intl34 = tmp10(1126).intl;
   if (constants.GUILD_CATEGORY === type) {
     const intl37 = tmp8(1126).intl;
-    const obj36 = { helpCenterArticle: HelpdeskUtilsDefault.getArticleURL(constants3.SOUNDBOARD) };
-    let formatResult = intl37.format(tmp8(1126).t["0kBp/0"], obj36);
+    const format5 = intl37.format;
+    const obj34 = { helpCenterArticle: obj39.getArticleURL(hasOwnProperty.SOUNDBOARD) };
+    const prop2 = tmp8(1126).t["0kBp/0"];
+    obj39 = HelpdeskUtilsDefault;
+    format5Result = format5(prop2, obj34);
   } else {
     if (constants.GUILD_TEXT !== type) {
       if (constants.GUILD_FORUM !== type) {
         if (constants.GUILD_MEDIA !== type) {
           const intl35 = tmp8(1126).intl;
-          const obj38 = { helpCenterArticle: HelpdeskUtilsDefault.getArticleURL(constants3.SOUNDBOARD) };
-          formatResult = intl35.format(tmp8(1126).t.GEi6Ym, obj38);
+          const format3 = intl35.format;
+          const obj36 = { helpCenterArticle: obj35.getArticleURL(hasOwnProperty.SOUNDBOARD) };
+          const GEi6Ym = tmp8(1126).t.GEi6Ym;
+          obj35 = HelpdeskUtilsDefault;
+          format5Result = format3(GEi6Ym, obj36);
         }
       }
     }
     const intl36 = tmp8(1126).intl;
-    const obj40 = { helpCenterArticle: HelpdeskUtilsDefault.getArticleURL(constants3.SOUNDBOARD) };
-    formatResult = intl36.format(tmp8(1126).t["6eYqU1"], obj40);
+    const format4 = intl36.format;
+    const obj38 = { helpCenterArticle: obj37.getArticleURL(hasOwnProperty.SOUNDBOARD) };
+    const v6eYqU1 = tmp8(1126).t["6eYqU1"];
+    obj37 = HelpdeskUtilsDefault;
+    format5Result = format4(v6eYqU1, obj38);
   }
-  obj35.description = formatResult;
-  obj35.flag = constants4.USE_SOUNDBOARD;
-  obj2[constants4.USE_SOUNDBOARD.toString()] = obj35;
-  const obj42 = { title: null, description: null, flag: null };
-  const str66 = constants4.USE_SOUNDBOARD.toString();
-  const intl38 = tmp10(1126).intl;
-  obj42.title = intl38.string(tmp10(1126).t.pwaVJ6);
-  obj42.description = tmp10(1126).t.qDpPtX;
-  obj42.flag = constants4.USE_EXTERNAL_SOUNDS;
-  obj2[constants4.USE_EXTERNAL_SOUNDS.toString()] = obj42;
-  const obj43 = { title: null, description: null, flag: null };
-  const str67 = constants4.USE_EXTERNAL_SOUNDS.toString();
-  const intl39 = tmp10(1126).intl;
-  obj43.title = intl39.string(tmp10(1126).t["08zAV7"]);
+  obj2[str66] = obj33;
+  const obj40 = {
+    title: intl38.string(tmp10(1126).t.pwaVJ6),
+    description: tmp10(1126).t.qDpPtX,
+    flag: metroRequire.USE_EXTERNAL_SOUNDS,
+  };
+  const str27 = metroRequire.USE_EXTERNAL_SOUNDS;
+  const str67 = str27.toString();
+  intl38 = tmp10(1126).intl;
+  obj2[str67] = obj40;
+  const obj41 = { title: intl39.string(tmp10(1126).t["08zAV7"]), description: fUYPly, flag: metroRequire.USE_VAD };
+  const str28 = metroRequire.USE_VAD;
+  const str68 = str28.toString();
+  intl39 = tmp10(1126).intl;
   if (constants.GUILD_CATEGORY === type) {
-    let fUYPly = tmp8(1126).t.fUYPly;
+    fUYPly = tmp8(1126).t.fUYPly;
   } else if (constants.GUILD_STAGE_VOICE === type) {
     fUYPly = tmp8(1126).t.BJKqsW;
   } else {
@@ -571,46 +693,49 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     fUYPly = tmp8(1126).t["3GJwsc"];
   }
-  obj43.description = fUYPly;
-  obj43.flag = constants4.USE_VAD;
-  obj2[constants4.USE_VAD.toString()] = obj43;
-  const obj44 = { title: null, description: null, flag: null };
-  const str68 = constants4.USE_VAD.toString();
-  const intl40 = tmp10(1126).intl;
-  obj44.title = intl40.string(tmp10(1126).t.BVK71i);
+  obj2[str68] = obj41;
+  const obj42 = {
+    title: intl40.string(tmp10(1126).t.BVK71i),
+    description: format8Result,
+    flag: metroRequire.PRIORITY_SPEAKER,
+  };
+  const str29 = metroRequire.PRIORITY_SPEAKER;
+  const str69 = str29.toString();
+  intl40 = tmp10(1126).intl;
   if (constants.GUILD_CATEGORY === type) {
     const intl45 = tmp8(1126).intl;
-    const obj45 = { keybind: null };
-    const intl46 = tmp8(1126).intl;
-    obj45.keybind = intl46.string(tmp8(1126).t.DkSwJ2);
-    let formatResult1 = intl45.format(tmp8(1126).t.g5MzON, obj45);
+    const format8 = intl45.format;
+    const obj43 = { keybind: intl46.string(tmp8(1126).t.DkSwJ2) };
+    const g5MzON = tmp8(1126).t.g5MzON;
+    intl46 = tmp8(1126).intl;
+    format8Result = format8(g5MzON, obj43);
   } else {
     if (constants.GUILD_TEXT !== type) {
       if (constants.GUILD_FORUM !== type) {
         if (constants.GUILD_MEDIA !== type) {
           const intl41 = tmp8(1126).intl;
-          const obj46 = { keybind: null };
-          const intl42 = tmp8(1126).intl;
-          obj46.keybind = intl42.string(tmp8(1126).t.DkSwJ2);
-          formatResult1 = intl41.format(tmp8(1126).t.Ij0yKX, obj46);
+          const format6 = intl41.format;
+          const obj44 = { keybind: intl42.string(tmp8(1126).t.DkSwJ2) };
+          const Ij0yKX = tmp8(1126).t.Ij0yKX;
+          intl42 = tmp8(1126).intl;
+          format8Result = format6(Ij0yKX, obj44);
         }
       }
     }
     const intl43 = tmp8(1126).intl;
-    const obj47 = { keybind: null };
-    const intl44 = tmp8(1126).intl;
-    obj47.keybind = intl44.string(tmp8(1126).t.DkSwJ2);
-    formatResult1 = intl43.format(tmp8(1126).t["4nbjL0"], obj47);
+    const format7 = intl43.format;
+    const obj45 = { keybind: intl44.string(tmp8(1126).t.DkSwJ2) };
+    const v4nbjL0 = tmp8(1126).t["4nbjL0"];
+    intl44 = tmp8(1126).intl;
+    format8Result = format7(v4nbjL0, obj45);
   }
-  obj44.description = formatResult1;
-  obj44.flag = constants4.PRIORITY_SPEAKER;
-  obj2[constants4.PRIORITY_SPEAKER.toString()] = obj44;
-  const obj48 = { title: null, description: null, flag: null };
-  const str69 = constants4.PRIORITY_SPEAKER.toString();
-  const intl47 = tmp10(1126).intl;
-  obj48.title = intl47.string(tmp10(1126).t["8EI30/"]);
+  obj2[str69] = obj42;
+  const obj46 = { title: intl47.string(tmp10(1126).t["8EI30/"]), description: KYDG2K, flag: metroRequire.MUTE_MEMBERS };
+  const str30 = metroRequire.MUTE_MEMBERS;
+  const str70 = str30.toString();
+  intl47 = tmp10(1126).intl;
   if (constants.GUILD_CATEGORY === type) {
-    let KYDG2K = tmp8(1126).t.bcuobK;
+    KYDG2K = tmp8(1126).t.bcuobK;
   } else if (constants.GUILD_STAGE_VOICE === type) {
     KYDG2K = tmp8(1126).t.EbvdH9;
   } else {
@@ -623,15 +748,17 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     KYDG2K = tmp8(1126).t.KYDG2K;
   }
-  obj48.description = KYDG2K;
-  obj48.flag = constants4.MUTE_MEMBERS;
-  obj2[constants4.MUTE_MEMBERS.toString()] = obj48;
-  const obj49 = { title: null, description: null, flag: null };
-  const str70 = constants4.MUTE_MEMBERS.toString();
-  const intl48 = tmp10(1126).intl;
-  obj49.title = intl48.string(tmp10(1126).t["9L47Fr"]);
+  obj2[str70] = obj46;
+  const obj47 = {
+    title: intl48.string(tmp10(1126).t["9L47Fr"]),
+    description: amZ5vn,
+    flag: metroRequire.DEAFEN_MEMBERS,
+  };
+  const str31 = metroRequire.DEAFEN_MEMBERS;
+  const str71 = str31.toString();
+  intl48 = tmp10(1126).intl;
   if (constants.GUILD_CATEGORY === type) {
-    let amZ5vn = tmp8(1126).t.amZ5vn;
+    amZ5vn = tmp8(1126).t.amZ5vn;
   } else {
     if (constants.GUILD_TEXT !== type) {
       if (constants.GUILD_FORUM !== type) {
@@ -642,15 +769,13 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     amZ5vn = tmp8(1126).t["d+i1nX"];
   }
-  obj49.description = amZ5vn;
-  obj49.flag = constants4.DEAFEN_MEMBERS;
-  obj2[constants4.DEAFEN_MEMBERS.toString()] = obj49;
-  const obj50 = { title: null, description: null, flag: null };
-  const str71 = constants4.DEAFEN_MEMBERS.toString();
-  const intl49 = tmp10(1126).intl;
-  obj50.title = intl49.string(tmp10(1126).t.YtjJPQ);
+  obj2[str71] = obj47;
+  const obj48 = { title: intl49.string(tmp10(1126).t.YtjJPQ), description: cbdQy2, flag: metroRequire.MOVE_MEMBERS };
+  const str32 = metroRequire.MOVE_MEMBERS;
+  const str72 = str32.toString();
+  intl49 = tmp10(1126).intl;
   if (constants.GUILD_CATEGORY === type) {
-    let cbdQy2 = tmp8(1126).t.XmoyRD;
+    cbdQy2 = tmp8(1126).t.XmoyRD;
   } else if (constants.GUILD_STAGE_VOICE === type) {
     cbdQy2 = tmp8(1126).t.bizKz6;
   } else {
@@ -663,26 +788,27 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     cbdQy2 = tmp8(1126).t.cbdQy2;
   }
-  obj50.description = cbdQy2;
-  obj50.flag = constants4.MOVE_MEMBERS;
-  obj2[constants4.MOVE_MEMBERS.toString()] = obj50;
-  const obj51 = { title: null, description: null, flag: null };
-  const str72 = constants4.MOVE_MEMBERS.toString();
-  const intl50 = tmp10(1126).intl;
-  obj51.title = intl50.string(tmp10(1126).t["5kicT2"]);
+  obj2[str72] = obj48;
+  const obj49 = {
+    title: intl50.string(tmp10(1126).t["5kicT2"]),
+    description: uzlYFE,
+    flag: metroRequire.REQUEST_TO_SPEAK,
+  };
+  const str33 = metroRequire.REQUEST_TO_SPEAK;
+  const str73 = str33.toString();
+  intl50 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let uzlYFE = tmp10(1126).t.T1lMSl;
+    uzlYFE = tmp10(1126).t.T1lMSl;
   } else {
     uzlYFE = tmp10(1126).t.uzlYFE;
   }
-  obj51.description = uzlYFE;
-  obj51.flag = constants4.REQUEST_TO_SPEAK;
-  obj2[constants4.REQUEST_TO_SPEAK.toString()] = obj51;
+  obj2[str73] = obj49;
   const GUILD_THREADS_ONLY3 = constants2.GUILD_THREADS_ONLY;
-  const str73 = constants4.REQUEST_TO_SPEAK.toString();
+  const str34 = metroRequire.MANAGE_THREADS;
+  const str74 = str34.toString();
   if (GUILD_THREADS_ONLY3.has(type)) {
     const intl53 = tmp10(1126).intl;
-    let stringResult5 = intl53.string(tmp10(1126).t.ossiZD);
+    stringResult5 = intl53.string(tmp10(1126).t.ossiZD);
   } else if (type === constants.GUILD_CATEGORY) {
     const intl52 = tmp10(1126).intl;
     stringResult5 = intl52.string(tmp10(1126).t.QKe7Q3);
@@ -690,9 +816,9 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     const intl51 = tmp10(1126).intl;
     stringResult5 = intl51.string(tmp10(1126).t.kEqgr7);
   }
-  const obj52 = { title: stringResult5, description: null, flag: null };
+  const obj50 = { title: stringResult5, description: S31soU, flag: metroRequire.MANAGE_THREADS };
   if (constants.GUILD_CATEGORY === type) {
-    let S31soU = tmp8(1126).t.S31soU;
+    S31soU = tmp8(1126).t.S31soU;
   } else {
     if (constants.GUILD_FORUM !== type) {
       if (constants.GUILD_MEDIA !== type) {
@@ -701,38 +827,41 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     S31soU = tmp8(1126).t["XLi/jG"];
   }
-  obj52.description = S31soU;
-  obj52.flag = constants4.MANAGE_THREADS;
-  obj2[constants4.MANAGE_THREADS.toString()] = obj52;
-  const obj53 = { title: null, description: null, flag: null };
-  const str74 = constants4.MANAGE_THREADS.toString();
-  const intl54 = tmp10(1126).intl;
-  obj53.title = intl54.string(tmp10(1126).t["25rKnX"]);
+  obj2[str74] = obj50;
+  const obj51 = {
+    title: intl54.string(tmp10(1126).t["25rKnX"]),
+    description: prop3,
+    flag: metroRequire.CREATE_PUBLIC_THREADS,
+  };
+  const str35 = metroRequire.CREATE_PUBLIC_THREADS;
+  const str75 = str35.toString();
+  intl54 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let prop2 = tmp10(1126).t["+M1yLj"];
+    prop3 = tmp10(1126).t["+M1yLj"];
   } else {
-    prop2 = tmp10(1126).t["5SDtGB"];
+    prop3 = tmp10(1126).t["5SDtGB"];
   }
-  obj53.description = prop2;
-  obj53.flag = constants4.CREATE_PUBLIC_THREADS;
-  obj2[constants4.CREATE_PUBLIC_THREADS.toString()] = obj53;
-  const obj54 = { title: null, description: null, flag: null };
-  const str75 = constants4.CREATE_PUBLIC_THREADS.toString();
-  const intl55 = tmp10(1126).intl;
-  obj54.title = intl55.string(tmp10(1126).t.QwbTSa);
+  obj2[str75] = obj51;
+  const obj52 = {
+    title: intl55.string(tmp10(1126).t.QwbTSa),
+    description: Chg2zd,
+    flag: metroRequire.CREATE_PRIVATE_THREADS,
+  };
+  const str36 = metroRequire.CREATE_PRIVATE_THREADS;
+  const str76 = str36.toString();
+  intl55 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let Chg2zd = tmp10(1126).t["hBS/zn"];
+    Chg2zd = tmp10(1126).t["hBS/zn"];
   } else {
     Chg2zd = tmp10(1126).t.Chg2zd;
   }
-  obj54.description = Chg2zd;
-  obj54.flag = constants4.CREATE_PRIVATE_THREADS;
-  obj2[constants4.CREATE_PRIVATE_THREADS.toString()] = obj54;
+  obj2[str76] = obj52;
   const GUILD_THREADS_ONLY4 = constants2.GUILD_THREADS_ONLY;
-  const str76 = constants4.CREATE_PRIVATE_THREADS.toString();
+  const str37 = metroRequire.SEND_MESSAGES_IN_THREADS;
+  const str77 = str37.toString();
   if (GUILD_THREADS_ONLY4.has(type)) {
     const intl58 = tmp10(1126).intl;
-    let stringResult6 = intl58.string(tmp10(1126).t.fqhqWm);
+    stringResult6 = intl58.string(tmp10(1126).t.fqhqWm);
   } else if (type === constants.GUILD_CATEGORY) {
     const intl57 = tmp10(1126).intl;
     stringResult6 = intl57.string(tmp10(1126).t["5QlVGy"]);
@@ -740,9 +869,9 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     const intl56 = tmp10(1126).intl;
     stringResult6 = intl56.string(tmp10(1126).t.fTE74g);
   }
-  const obj55 = { title: stringResult6, description: null, flag: null };
+  const obj53 = { title: stringResult6, description: XTnrPH, flag: metroRequire.SEND_MESSAGES_IN_THREADS };
   if (constants.GUILD_CATEGORY === type) {
-    let XTnrPH = tmp8(1126).t.DlIVcN;
+    XTnrPH = tmp8(1126).t.DlIVcN;
   } else {
     if (constants.GUILD_FORUM !== type) {
       if (constants.GUILD_MEDIA !== type) {
@@ -751,44 +880,40 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     XTnrPH = tmp8(1126).t.XTnrPH;
   }
-  obj55.description = XTnrPH;
-  obj55.flag = constants4.SEND_MESSAGES_IN_THREADS;
-  obj2[constants4.SEND_MESSAGES_IN_THREADS.toString()] = obj55;
-  const obj56 = { title: null, description: null, flag: null };
-  const str77 = constants4.SEND_MESSAGES_IN_THREADS.toString();
-  const intl59 = tmp10(1126).intl;
-  obj56.title = intl59.string(tmp10(1126).t.HIgA5a);
+  obj2[str77] = obj53;
+  const obj54 = { title: intl59.string(tmp10(1126).t.HIgA5a), description: CP2sz4, flag: metroRequire.MANAGE_EVENTS };
+  const str38 = metroRequire.MANAGE_EVENTS;
+  const str78 = str38.toString();
+  intl59 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let CP2sz4 = tmp10(1126).t.CP2sz4;
+    CP2sz4 = tmp10(1126).t.CP2sz4;
   } else {
     CP2sz4 = tmp10(1126).t["4pO/TY"];
   }
-  obj56.description = CP2sz4;
-  obj56.flag = constants4.MANAGE_EVENTS;
-  obj2[constants4.MANAGE_EVENTS.toString()] = obj56;
-  const obj57 = { title: null, description: null, flag: null };
-  const str78 = constants4.MANAGE_EVENTS.toString();
-  const intl60 = tmp10(1126).intl;
-  obj57.title = intl60.string(tmp10(1126).t.qyjZua);
+  obj2[str78] = obj54;
+  const obj55 = { title: intl60.string(tmp10(1126).t.qyjZua), description: sPoBLa, flag: metroRequire.CREATE_EVENTS };
+  const str39 = metroRequire.CREATE_EVENTS;
+  const str79 = str39.toString();
+  intl60 = tmp10(1126).intl;
   if (type === constants.GUILD_CATEGORY) {
-    let sPoBLa = tmp10(1126).t.XpibmC;
+    sPoBLa = tmp10(1126).t.XpibmC;
   } else {
     sPoBLa = tmp10(1126).t.sPoBLa;
   }
-  obj57.description = sPoBLa;
-  obj57.flag = constants4.CREATE_EVENTS;
-  obj2[constants4.CREATE_EVENTS.toString()] = obj57;
-  const obj58 = { title: null, description: null, flag: null };
-  const str79 = constants4.CREATE_EVENTS.toString();
-  const intl61 = tmp10(1126).intl;
-  obj58.title = intl61.string(tmp10(1126).t.VBwkUf);
-  let enableHangoutWindow;
+  obj2[str79] = obj55;
+  const obj56 = {
+    title: intl61.string(tmp10(1126).t.VBwkUf),
+    description: enableHangoutWindow ? t2.CYcJ6H : t2.C6BzXx,
+    flag: metroRequire.SET_VOICE_CHANNEL_STATUS,
+  };
+  const str40 = metroRequire.SET_VOICE_CHANNEL_STATUS;
+  const str80 = str40.toString();
+  intl61 = tmp10(1126).intl;
+  enableHangoutWindow = undefined;
   if (createPostsDisabled != null) {
     enableHangoutWindow = createPostsDisabled.enableHangoutWindow;
   }
-  const t2 = tmp10(1126).t;
-  obj58.description = enableHangoutWindow ? t2.CYcJ6H : t2.C6BzXx;
-  obj58.flag = constants4.SET_VOICE_CHANNEL_STATUS;
-  obj2[constants4.SET_VOICE_CHANNEL_STATUS.toString()] = obj58;
+  t2 = tmp10(1126).t;
+  obj2[str80] = obj56;
   return obj2;
 };

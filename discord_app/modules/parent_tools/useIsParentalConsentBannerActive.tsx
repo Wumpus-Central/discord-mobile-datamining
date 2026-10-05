@@ -1,21 +1,23 @@
 // discord_app/modules/parent_tools/useIsParentalConsentBannerActive.tsx
-import c from "../../../_runtime/00576_c.js";
+import react from "../../../_runtime/00576_react.js";
 import useParentalConsentWarning from "useParentalConsentWarning.tsx";
 import ParentalConsentWarningTypes from "ParentalConsentWarningTypes.tsx";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const result = size.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
-
-export const useIsParentalConsentBannerActive = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
-      const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
+      let tmp7;
+      const obj = react;
+      const cResult = obj.c(2);
+      const obj2 = useParentalConsentWarning;
+      const parentalConsentWarning = obj2.useParentalConsentWarning();
       let surfaces1;
+      const first = cResult[0];
       if (parentalConsentWarning != null) {
         surfaces1 = parentalConsentWarning.surfaces;
       }
-      if (cResult[0] !== surfaces1) {
+      if (first !== surfaces1) {
         let hasItem;
         if (parentalConsentWarning != null) {
           const surfaces = parentalConsentWarning.surfaces;
@@ -29,14 +31,15 @@ export const useIsParentalConsentBannerActive = ReactCompilerGating.isReactCompi
         }
         cResult[0] = surfaces2;
         cResult[1] = hasItem;
-        let tmp6 = hasItem;
+        tmp7 = hasItem;
       } else {
-        tmp6 = cResult[1];
+        tmp7 = cResult[1];
       }
-      return true === tmp6;
+      return true === tmp7;
     }
   : () => {
-      const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
+      const obj = useParentalConsentWarning;
+      const parentalConsentWarning = obj.useParentalConsentWarning();
       let hasItem;
       if (parentalConsentWarning != null) {
         const surfaces = parentalConsentWarning.surfaces;
@@ -46,3 +49,6 @@ export const useIsParentalConsentBannerActive = ReactCompilerGating.isReactCompi
       }
       return true === hasItem;
     };
+const result = size.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
+
+export const useIsParentalConsentBannerActive = tmp2;

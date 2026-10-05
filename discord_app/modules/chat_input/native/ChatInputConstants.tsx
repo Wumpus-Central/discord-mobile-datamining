@@ -5,6 +5,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const obj = { easing: native.STANDARD_EASING, duration: 250 };
 const obj2 = { easing: native.STANDARD_EASING, duration: 50 };
 const obj3 = { easing: native.STANDARD_EASING, duration: 100 };
+const obj4 = { easing: native.STANDARD_EASING, duration: 200 };
 const result = size.fileFinishedImporting("modules/chat_input/native/ChatInputConstants.tsx");
 
 export const TextAreaCta = {
@@ -49,6 +50,6 @@ export const CHAT_INPUT_TIMING_CONFIG = obj;
 export const CHAT_INPUT_FLOATING_COLLAPSED_SCALE = 0.5;
 export const CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG = obj2;
 export const CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG = obj3;
-export const CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG = { easing: native.STANDARD_EASING, duration: 200 };
+export const CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG = obj4;
 export const CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG = { mass: 0.5, damping: 13, stiffness: 400 };
 export const CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS = 50;

@@ -1,7 +1,9 @@
 // discord_app/modules/launchpad/native/shared/renderChannelItem.tsx
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import useChannelName from "../../../channel/useChannelName.tsx";
+import ReadStateConstants from "../../../read_states/ReadStateConstants.tsx";
 import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
 import NotificationCenterUtils from "../../../notification_center/NotificationCenterUtils.tsx";
 import getChannelA11yLabelDefault from "../../../channel/getChannelA11yLabel.tsx";
@@ -9,23 +11,38 @@ import GroupDMAvatarDefault from "../../../group_dm/native/GroupDMAvatar.tsx";
 import getLayoutStylesDefault from "getLayoutStyles.tsx";
 import renderChannelWrapperDefault from "renderChannelWrapper.tsx";
 import renderChannelContentDefault from "renderChannelContent.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let c10;
+let c9;
+let metroImportAll;
 function LaunchpadChannelIcon(channel) {
+  let guild;
+  let items1;
+  let items3;
+  let obj9;
+  let tmp14;
   if (closure_12) {
-    const cResult = channel(576).c(14);
+    let first;
+    let tmp24;
+    let tmp26;
+    let tmp28;
+    const obj6 = channel(576);
+    const cResult = obj6.c(14);
     const channel2 = channel.channel;
-    closure_129_0 = channel2;
-    const tmp17 = closure_11();
+    const tmp19 = closure_11();
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp21 = getLayoutStylesDefault();
-      cResult[0] = tmp21;
-      let first = tmp21;
+      const tmp23 = getLayoutStylesDefault();
+      cResult[0] = tmp23;
+      first = tmp23;
     } else {
       first = cResult[0];
     }
@@ -33,86 +50,91 @@ function LaunchpadChannelIcon(channel) {
     if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [GuildStore];
       cResult[1] = items;
-      let tmp22 = items;
+      tmp24 = items;
     } else {
-      tmp22 = cResult[1];
+      tmp24 = cResult[1];
     }
     if (cResult[2] !== channel2.guild_id) {
       const fn = function v() {
-        return GuildStore.getGuild(channel.guild_id);
+        return guild.getGuild(channel2.guild_id);
       };
       cResult[2] = channel2.guild_id;
       cResult[3] = fn;
-      let tmp24 = fn;
+      tmp26 = fn;
     } else {
-      tmp24 = cResult[3];
+      tmp26 = cResult[3];
     }
-    const obj6 = channel(576);
-    const stateFromStores = channel(504).useStateFromStores(tmp22, tmp24);
+    const tmp15Result = channel(504);
+    const stateFromStores = tmp15Result.useStateFromStores(tmp24, tmp26);
     if (cResult[4] !== stateFromStores) {
       const obj2 = { guild: stateFromStores, size: first.icon.guildBadgeIconSize };
-      const tmp29 = closure_8(GuildIconDefault, obj2);
+      const tmp31 = closure_8(GuildIconDefault, obj2);
       cResult[4] = stateFromStores;
-      cResult[5] = tmp29;
-      let tmp26 = tmp29;
+      cResult[5] = tmp31;
+      tmp28 = tmp31;
     } else {
-      tmp26 = cResult[5];
+      tmp28 = cResult[5];
     }
-    if (cResult[6] === tmp17.guildBadgeIcon) {
-      if (cResult[7] === tmp26) {
-        let tmp30 = cResult[8];
+    if (cResult[6] === tmp19.guildBadgeIcon) {
+      let tmp32;
+      let tmp36;
+      if (cResult[7] === tmp28) {
+        tmp32 = cResult[8];
       }
       if (cResult[9] !== channel2) {
         const obj3 = { channel: channel2, size: "sm", wrapperSize: 32 };
-        const tmp36 = closure_8(tmp13(11817).ChannelIcon, obj3);
+        const tmp38 = closure_8(channel(11817).ChannelIcon, obj3);
         cResult[9] = channel2;
-        cResult[10] = tmp36;
-        let tmp34 = tmp36;
+        cResult[10] = tmp38;
+        tmp36 = tmp38;
       } else {
-        tmp34 = cResult[10];
+        tmp36 = cResult[10];
       }
-      if (cResult[11] === tmp30) {
+      if (cResult[11] === tmp32) {
+        let tmp39;
+        if (cResult[12] === tmp36) {
+          tmp39 = cResult[13];
+        }
+        tmp14 = tmp39;
       }
-      const obj4 = { children: null };
-      const items1 = [tmp30, tmp34];
-      obj4.children = items1;
-      const tmp40 = closure_10(closure_9, obj4);
-      cResult[11] = tmp30;
-      cResult[12] = tmp34;
-      cResult[13] = tmp40;
+      const obj4 = { children: items1 };
+      items1 = [tmp32, tmp36];
+      const tmp42 = closure_10(closure_9, obj4);
+      cResult[11] = tmp32;
+      cResult[12] = tmp36;
+      cResult[13] = tmp42;
+      tmp39 = tmp42;
     }
-    const obj5 = { style: tmp17.guildBadgeIcon, children: tmp26 };
-    const tmp33 = closure_8(View, obj5);
-    cResult[6] = tmp17.guildBadgeIcon;
-    cResult[7] = tmp26;
-    cResult[8] = tmp33;
-    tmp30 = tmp33;
-    const tmp13Result = channel(504);
+    const obj5 = { style: tmp19.guildBadgeIcon, children: tmp28 };
+    const tmp35 = closure_8(View, obj5);
+    cResult[6] = tmp19.guildBadgeIcon;
+    cResult[7] = tmp28;
+    cResult[8] = tmp35;
+    tmp32 = tmp35;
   } else {
     channel = channel.channel;
-    const tmp2 = closure_11();
-    const tmp5 = getLayoutStylesDefault();
+    const tmp3 = closure_11();
     const items2 = [GuildStore];
-    const obj7 = { children: null };
-    const obj8 = { style: tmp2.guildBadgeIcon, children: null };
-    const stateFromStores1 = channel(504).useStateFromStores(items2, () => GuildStore.getGuild(channel.guild_id));
-    const obj9 = { guild: stateFromStores1, size: tmp5.icon.guildBadgeIconSize };
-    obj8.children = closure_8(GuildIconDefault, obj9);
-    const items3 = [closure_8(View, obj8)];
+    const obj7 = { children: items3 };
+    const tmp6 = getLayoutStylesDefault();
+    const obj8 = { style: tmp3.guildBadgeIcon, children: closure_8(GuildIconDefault, obj9) };
+    const obj = channel(504);
+    const stateFromStores1 = obj.useStateFromStores(items2, () => GuildStore.getGuild(channel.guild_id));
+    obj9 = { guild: stateFromStores1, size: tmp6.icon.guildBadgeIconSize };
+    items3 = [closure_8(View, obj8)];
     const obj10 = { channel, size: "sm", wrapperSize: 32 };
     items3[1] = closure_8(channel(11817).ChannelIcon, obj10);
-    obj7.children = items3;
-    return closure_10(closure_9, obj7);
+    tmp14 = closure_10(closure_9, obj7);
   }
+  return tmp14;
 }
-const View = fn(17).View;
-const UnreadSetting = fn(5072).UnreadSetting;
-const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4890);
+const View = react_native.View;
+const UnreadSetting = ReadStateConstants.UnreadSetting;
+({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = Fragment);
 let closure_11 = createStyles.createStyles(() => {
-  const obj = { guildBadgeIcon: null };
-  const rect = {
+  let rect;
+  const obj = { guildBadgeIcon: rect };
+  rect = {
     position: "absolute",
     zIndex: 1,
     bottom: -4,
@@ -121,15 +143,27 @@ let closure_11 = createStyles.createStyles(() => {
     borderWidth: 2,
     borderRadius: 6,
   };
-  obj.guildBadgeIcon = rect;
   return obj;
 });
-const ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled();
-let size = fn(2);
+let size = size_mod;
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/renderChannelItem.tsx");
 
 export default function renderChannelItem(unread) {
+  let channel;
+  let channelCategoryName;
+  let channelName;
+  let connected;
+  let end;
+  let fontScale;
+  let isSubscriptionGated;
+  let latestMessageTimestamp;
+  let locked;
+  let mentionBadge;
+  let mentionCount;
+  let subtitle;
+  let tmp11Result;
+  let unreadBadge;
   ({ channel, locked } = unread);
   ({ channelCategoryName, subtitle, unreadBadge, mentionBadge } = unread);
   if (locked === undefined) {
@@ -163,13 +197,14 @@ export default function renderChannelItem(unread) {
   if (null != latestMessageTimestamp) {
     relativeTimestamp = null;
     if (!flag3) {
-      relativeTimestamp = NotificationCenterUtils.getRelativeTimestamp(latestMessageTimestamp);
+      const obj = NotificationCenterUtils;
+      relativeTimestamp = obj.getRelativeTimestamp(latestMessageTimestamp);
     }
   }
   const tmp7 = getLayoutStylesDefault();
   const children = [unreadBadge, , ,];
-  const obj2 = { style: null, children: null };
-  const size = {
+  const obj2 = { style: size, children: tmp11Result };
+  size = {
     position: "relative",
     borderRadius: nativeDefault.radii.round,
     justifyContent: "center",
@@ -179,22 +214,22 @@ export default function renderChannelItem(unread) {
     width: tmp7.icon.wrapper.size,
     height: tmp7.icon.wrapper.size,
   };
+  const tmp8 = renderChannelWrapperDefault;
   const merged = Object.assign(tmp7.icon.margin);
-  obj2.style = size;
   if (channel.isGroupDM()) {
     const obj3 = { channel, size: tmp7.icon.avatarSize };
-    let tmp11Result = closure_1_8(GroupDMAvatarDefault, obj3);
+    tmp11Result = metroImportAll(GroupDMAvatarDefault, obj3);
   } else {
     const obj4 = { channel };
-    tmp11Result = closure_1_8(LaunchpadChannelIcon, obj4);
+    tmp11Result = metroImportAll(LaunchpadChannelIcon, obj4);
   }
-  obj2.children = tmp11Result;
-  children[1] = closure_1_8(View, obj2);
-  const tmp8 = renderChannelWrapperDefault;
+  children[1] = metroImportAll(View, obj2);
+  const tmp5Result = renderChannelContentDefault;
   if (channelName == null) {
-    channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
+    const obj6 = useChannelName;
+    channelName = obj6.computeChannelName(channel, UserStore, RelationshipStore);
   }
-  children[2] = renderChannelContentDefault({
+  children[2] = tmp5Result({
     name: channelName,
     subtitle,
     unread: flag,
@@ -214,12 +249,17 @@ export default function renderChannelItem(unread) {
   let tmp11Result2 = null;
   if (null != end) {
     const obj5 = { style: { paddingLeft: 8 }, children: end };
-    tmp11Result2 = closure_1_8(View, obj5);
+    tmp11Result2 = metroImportAll(View, obj5);
   }
   children[3] = tmp11Result2;
-  return tmp8(v65535(options, { children }), { fontScale });
+  return tmp8(authStore(React4, { children }), { fontScale });
 }
 export const getChannelAccessibilityProps = function getChannelAccessibilityProps(channel) {
+  let embeddedActivitiesCount;
+  let mentionCount;
+  let stringResult;
+  let unread;
+  let voiceStates;
   channel = channel.channel;
   const obj = {
     accessible: true,
@@ -231,13 +271,12 @@ export const getChannelAccessibilityProps = function getChannelAccessibilityProp
       voiceStates,
       embeddedActivitiesCount,
     }),
-    accessibilityHint: null,
+    accessibilityHint: stringResult,
   };
   ({ unread, mentionCount, voiceStates, embeddedActivitiesCount } = channel);
   if (channel.isGuildVoice()) {
-    const intl = util.intl;
-    const stringResult = intl.string(util.t["9C444m"]);
+    const intl = intl2.intl;
+    stringResult = intl.string(intl2.t["9C444m"]);
   }
-  obj.accessibilityHint = stringResult;
   return obj;
 };

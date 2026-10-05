@@ -1,28 +1,37 @@
 // discord_app/modules/messages/native/renderer/getRoleIcon.tsx
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import useRoleIconProps from "../../../roles/useRoleIconProps.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
+let size = size_mod;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/getRoleIcon.tsx");
 
 export const getRoleIcon = function getRoleIcon(size) {
+  let guildId;
+  let intl;
+  let roleId;
+  let surrogates;
   size = size.size;
   ({ guildId, roleId } = size);
+  const getRoleIconProps = useRoleIconProps.getRoleIconProps;
+  useRoleIconProps;
   const obj = useRoleIconProps;
-  const roleIconProps = obj.getRoleIconProps(useRoleIconProps.computeRoleIconRole({ guildId, roleId }), size);
+  const roleIconProps = getRoleIconProps(obj.computeRoleIconRole({ guildId, roleId }), size);
   if (null != roleIconProps) {
-    const obj4 = { source: null, name: null, size: null, unicodeEmoji: null, alt: null };
-    ({ src: obj3.source, name: obj3.name } = roleIconProps);
-    obj4.size = size;
+    ({ src: obj2.source, name: obj2.name } = roleIconProps);
     const unicodeEmoji = roleIconProps.unicodeEmoji;
-    let surrogates;
+    const obj3 = {
+      source: null,
+      name: null,
+      size,
+      unicodeEmoji: surrogates,
+      alt: intl.formatToPlainString(intl2.t["9+YWrE"], obj5),
+    };
+    surrogates = undefined;
     if (unicodeEmoji != null) {
       surrogates = unicodeEmoji.surrogates;
     }
-    obj4.unicodeEmoji = surrogates;
-    const intl = util.intl;
-    const obj6 = { name: roleIconProps.name };
-    obj4.alt = intl.formatToPlainString(util.t["9+YWrE"], obj6);
-    return obj4;
+    intl = intl2.intl;
+    return obj3;
   }
 };

@@ -1,12 +1,16 @@
 // discord_app/modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx
+import Constants from "../../Constants.tsx";
 import GatedChannelStore from "../channel/GatedChannelStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
 function getChannelRoleSubscriptionStatus(id) {
+  let obj3;
   let obj = ChannelStore;
   if (ChannelStore === undefined) {
     obj = ChannelStore;
@@ -25,38 +29,41 @@ function getChannelRoleSubscriptionStatus(id) {
     result = channel.isRoleSubscriptionTemplatePreviewChannel();
   }
   if (result) {
-    let obj3 = { isSubscriptionGated: true, needSubscriptionToAccess: true };
+    obj3 = { isSubscriptionGated: true, needSubscriptionToAccess: true };
   } else {
     if (null != channel) {
       if (obj2.isChannelGated(channel.guild_id, channel.id)) {
+        let tmp4;
         const can = tmp.can;
-        let obj4 = Permissions;
         if (channel.isGuildVocal()) {
-          let tmp3 = !can(obj4.CONNECT, channel);
+          tmp4 = !can(Permissions.CONNECT, channel);
         } else {
-          tmp3 = !can(obj4.VIEW_CHANNEL, channel);
+          tmp4 = !can(Permissions.VIEW_CHANNEL, channel);
         }
-        obj4 = { isSubscriptionGated: true, needSubscriptionToAccess: tmp3 };
+        obj3 = { isSubscriptionGated: true, needSubscriptionToAccess: tmp4 };
+        const obj4 = { isSubscriptionGated: true, needSubscriptionToAccess: tmp4 };
       }
     }
     obj3 = closure_6;
   }
   return obj3;
 }
-const Permissions = fn(1085).Permissions;
+const Permissions = Constants.Permissions;
 let closure_6 = { needSubscriptionToAccess: false, isSubscriptionGated: false };
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp8;
+      let tmp9;
       _require = arg0;
-      const cResult = require("c").c(4);
+      const obj = require("react");
+      const cResult = obj.c(4);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore, GatedChannelStore, PermissionStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -68,23 +75,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp9 = items1;
-        let tmp8 = fn;
+        tmp9 = items1;
+        tmp8 = fn;
       } else {
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStoresObject(first, tmp8, tmp9);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStoresObject(first, tmp8, tmp9);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       const items = [ChannelStore, GatedChannelStore, PermissionStore];
       const items1 = [arg0];
-      return require("initialize").useStateFromStoresObject(
+      const obj = require("get initialized");
+      return obj.useStateFromStoresObject(
         items,
         () => getChannelRoleSubscriptionStatus(closure_0, ChannelStore, GatedChannelStore, PermissionStore),
         items1,
       );
     };
+let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
+
+export default tmp2;
 export { getChannelRoleSubscriptionStatus };

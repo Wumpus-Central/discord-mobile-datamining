@@ -1,8 +1,8 @@
 // discord_app/modules/action_sheet/native/ActionSheetContext.tsx
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const context = noop.createContext(null);
-const size = fn(2);
+const context = react.createContext(null);
 const result = size.fileFinishedImporting("modules/action_sheet/native/ActionSheetContext.tsx");
 
 export default context;

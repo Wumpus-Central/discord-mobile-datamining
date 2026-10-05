@@ -3,15 +3,15 @@ import StageInstanceStore from "../../stage_channels/StageInstanceStore.tsx";
 import ApplicationStreamingStore from "../../../stores/ApplicationStreamingStore.tsx";
 import GuildReadStateStore from "../../../stores/GuildReadStateStore.tsx";
 import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/isGuildSelectable.tsx");
 
 export default function isGuildSelectable(id) {
-  closure_0 = id;
-  const isMutedResult = UserGuildSettingsStore.isMuted(id);
-  let tmp2 = !isMutedResult;
-  if (!isMutedResult) {
+  let closure_0 = id;
+  let tmp2 = !UserGuildSettingsStore.isMuted(id);
+  UserGuildSettingsStore.isMuted(id);
+  if (tmp2) {
     let hasUnreadResult = GuildReadStateStore.hasUnread(id);
     if (!hasUnreadResult) {
       const _Object = Object;

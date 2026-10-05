@@ -2,9 +2,12 @@
 import UserSettings from "../user_settings/UserSettings.tsx";
 import AccessibilityStore from "../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../user_settings/ThemeStore.tsx";
+import UIDensityConstants from "../themes/UIDensityConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const UIDensityConstants = fn(9137);
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
 ({
   RESPONSIVE_DENSITY_FALLBACK: closure_4,
   RESPONSIVE_DENSITY_MEDIA_QUERY: hasOwnProperty,
@@ -22,7 +25,6 @@ const frozen = Object.freeze({
   underlineLinks: false,
 });
 let closure_8 = ["custom-theme-background", "custom-client-theme"];
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/DiscordEnvironment.tsx");
 
 export const DEFAULT_DISCORD_ENVIRONMENT = frozen;
@@ -48,6 +50,7 @@ export const getDiscordCustomTheme = function getDiscordCustomTheme() {
       if (0 === found.length) {
         return null;
       } else {
+        let num;
         const _window2 = window;
         const computedStyle = window.getComputedStyle(documentElement);
         const obj = {};
@@ -58,8 +61,7 @@ export const getDiscordCustomTheme = function getDiscordCustomTheme() {
             obj[itemResult] = str.trim();
           }
         }
-        const obj2 = { classNames: found, variables: obj };
-        return obj2;
+        return { classNames: found, variables: obj };
       }
     }
   }
@@ -67,6 +69,7 @@ export const getDiscordCustomTheme = function getDiscordCustomTheme() {
 };
 export const getDiscordUIDensity = function getDiscordUIDensity() {
   if (typeof window !== "undefined") {
+    let tmp;
     const _window2 = window;
     if (typeof window.matchMedia === "function") {
       const _window = window;
@@ -74,24 +77,26 @@ export const getDiscordUIDensity = function getDiscordUIDensity() {
       if (window.matchMedia(hasOwnProperty).matches) {
         str = "cozy";
       }
-      let tmp = str;
+      tmp = str;
     }
     const UIDensitySetting = UserSettings.UIDensitySetting;
-    return timestampProducer(UIDensitySetting.getSetting(), tmp);
+    return metroRequire(UIDensitySetting.getSetting(), tmp);
   }
-  tmp = React4;
+  tmp = React3;
 };
 export const getDiscordFontScale = function getDiscordFontScale() {
+  let fontScale2;
   const fontScale = AccessibilityStore.fontScale;
   if (Number.isFinite(fontScale)) {
     const _Math = Math;
-    let fontScale2 = Math.round(100 * fontScale) / 100;
+    fontScale2 = Math.round(100 * fontScale) / 100;
   } else {
     fontScale2 = frozen.fontScale;
   }
   return fontScale2;
 };
 export const getDiscordEnvironment = function getDiscordEnvironment(useReducedMotion) {
+  let tmp;
   const theme = ThemeStore.theme;
   let str = theme;
   if ("light" !== theme) {
@@ -105,7 +110,7 @@ export const getDiscordEnvironment = function getDiscordEnvironment(useReducedMo
   }
   const obj = {
     baseTheme: str,
-    customTheme: null,
+    customTheme: tmp,
     uiDensity: null,
     messageDisplayCompact: null,
     fontScale: null,
@@ -114,7 +119,7 @@ export const getDiscordEnvironment = function getDiscordEnvironment(useReducedMo
     forcedColors: null,
     underlineLinks: null,
   };
-  let tmp = null;
+  tmp = null;
   if (typeof document !== "undefined") {
     const _window2 = window;
     tmp = null;
@@ -126,6 +131,7 @@ export const getDiscordEnvironment = function getDiscordEnvironment(useReducedMo
       });
       tmp = null;
       if (0 !== found.length) {
+        let num;
         const _window3 = window;
         const computedStyle = window.getComputedStyle(documentElement);
         const obj2 = {};
@@ -136,13 +142,14 @@ export const getDiscordEnvironment = function getDiscordEnvironment(useReducedMo
             obj2[itemResult] = str4.trim();
           }
         }
+        tmp = { classNames: found, variables: obj2 };
         const obj3 = { classNames: found, variables: obj2 };
-        tmp = obj3;
       }
     }
   }
-  obj.customTheme = tmp;
   if (typeof window !== "undefined") {
+    let tmp3;
+    let fontScale2;
     const _window4 = window;
     if (typeof window.matchMedia === "function") {
       const _window = window;
@@ -150,17 +157,17 @@ export const getDiscordEnvironment = function getDiscordEnvironment(useReducedMo
       if (window.matchMedia(hasOwnProperty).matches) {
         str5 = "cozy";
       }
-      let tmp3 = str5;
+      tmp3 = str5;
     }
     const UIDensitySetting = UserSettings.UIDensitySetting;
-    obj.uiDensity = timestampProducer(UIDensitySetting.getSetting(), tmp3);
+    obj.uiDensity = metroRequire(UIDensitySetting.getSetting(), tmp3);
     const MessageDisplayCompact = UserSettings.MessageDisplayCompact;
     obj.messageDisplayCompact = MessageDisplayCompact.getSetting();
     const fontScale = AccessibilityStore.fontScale;
     const _Number = Number;
     if (Number.isFinite(fontScale)) {
       const _Math = Math;
-      let fontScale2 = Math.round(100 * fontScale) / 100;
+      fontScale2 = Math.round(100 * fontScale) / 100;
     } else {
       fontScale2 = frozen.fontScale;
     }
@@ -173,7 +180,7 @@ export const getDiscordEnvironment = function getDiscordEnvironment(useReducedMo
     } = AccessibilityStore);
     return obj;
   }
-  tmp3 = React4;
+  tmp3 = React3;
 };
 export const getDiscordEnvQueryParams = function getDiscordEnvQueryParams() {
   const theme = ThemeStore.theme;
@@ -198,6 +205,8 @@ export const getDiscordEnvQueryParams = function getDiscordEnvQueryParams() {
     underline_links: null,
   };
   if (typeof window !== "undefined") {
+    let tmp;
+    let fontScale2;
     const _window2 = window;
     if (typeof window.matchMedia === "function") {
       const _window = window;
@@ -205,31 +214,32 @@ export const getDiscordEnvQueryParams = function getDiscordEnvQueryParams() {
       if (window.matchMedia(hasOwnProperty).matches) {
         str4 = "cozy";
       }
-      let tmp = str4;
+      tmp = str4;
     }
     const UIDensitySetting = UserSettings.UIDensitySetting;
-    obj.ui_density = timestampProducer(UIDensitySetting.getSetting(), tmp);
+    obj.ui_density = metroRequire(UIDensitySetting.getSetting(), tmp);
     const _String = String;
     const MessageDisplayCompact = UserSettings.MessageDisplayCompact;
     obj.message_display_compact = String(MessageDisplayCompact.getSetting());
     const fontScale = AccessibilityStore.fontScale;
     const _Number = Number;
+    const _String2 = String;
     if (Number.isFinite(fontScale)) {
       const _Math = Math;
-      let fontScale2 = Math.round(100 * fontScale) / 100;
+      fontScale2 = Math.round(100 * fontScale) / 100;
     } else {
       fontScale2 = frozen.fontScale;
     }
-    obj.font_scale = String(fontScale2);
-    const _String2 = String;
-    obj.reduced_motion = String(AccessibilityStore.useReducedMotion);
+    obj.font_scale = _String2(fontScale2);
     const _String3 = String;
-    obj.high_contrast = String(AccessibilityStore.isHighContrastModeEnabled);
+    obj.reduced_motion = String(AccessibilityStore.useReducedMotion);
     const _String4 = String;
-    obj.forced_colors = String(AccessibilityStore.useForcedColors);
+    obj.high_contrast = String(AccessibilityStore.isHighContrastModeEnabled);
     const _String5 = String;
+    obj.forced_colors = String(AccessibilityStore.useForcedColors);
+    const _String6 = String;
     obj.underline_links = String(AccessibilityStore.alwaysShowLinkDecorations);
     return obj;
   }
-  tmp = React4;
+  tmp = React3;
 };

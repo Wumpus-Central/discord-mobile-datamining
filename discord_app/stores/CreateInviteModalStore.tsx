@@ -1,62 +1,63 @@
 // discord_app/stores/CreateInviteModalStore.tsx
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
+import Constants from "../Constants.tsx";
 import InstantInviteUtilsDefault from "../utils/InstantInviteUtils.tsx";
 import DefaultInviteExpirationExperiments from "../modules/instant_invite/DefaultInviteExpirationExperiments.tsx";
 import ChannelStore from "ChannelStore.tsx";
 import GuildStore from "GuildStore.tsx";
 import InstantInviteStore from "InstantInviteStore.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-require = fn;
+let c8, closure_6, closure_7, invite;
+
 function updateWithLatestInvite(channelId, arg1) {
+  let mapped;
+  let maxUses;
+  let num;
+  let targetApplicationId;
+  let targetType;
+  let targetUserId;
+  let temporary;
   ({ targetType, targetUserId, targetApplicationId } = arg1);
   const channel = ChannelStore.getChannel(channelId);
   let guild_id;
+  const getGuild = GuildStore.getGuild;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  guild = GuildStore.getGuild(guild_id);
-  let maxAge = DefaultInviteExpirationExperiments.getDefaultInviteExpiration({ guild });
-  const invite = InstantInviteStore.getInvite(channelId, { targetType, targetUserId, targetApplicationId });
-  _null = invite;
+  const guild = getGuild(guild_id);
+  const obj = DefaultInviteExpirationExperiments;
+  let maxAge = obj.getDefaultInviteExpiration({ guild });
+  invite = InstantInviteStore.getInvite(channelId, { targetType, targetUserId, targetApplicationId });
   const obj2 = {
     channelId,
-    maxAge: null,
-    maxUses: null,
-    temporary: null,
-    flags: null,
-    targetType: null,
-    targetUserId: null,
-    targetApplicationId: null,
-    roleIds: null,
+    maxAge,
+    maxUses,
+    temporary,
+    flags: num,
+    targetType,
+    targetUserId,
+    targetApplicationId,
+    roleIds: mapped,
   };
   if (null != invite) {
-    maxAge = _null.maxAge;
+    maxAge = invite.maxAge;
   }
-  obj2.maxAge = maxAge;
-  if (null != _null) {
-    let maxUses = _null.maxUses;
+  if (null != invite) {
+    maxUses = invite.maxUses;
   } else {
-    maxUses = value;
+    maxUses = map1;
   }
-  obj2.maxUses = maxUses;
-  let temporary = null != _null;
-  if (temporary) {
-    temporary = _null.temporary;
+  temporary = null != invite && invite.temporary;
+  num = 0;
+  if (null != invite) {
+    num = invite.flags;
   }
-  obj2.temporary = temporary;
-  let num = 0;
-  if (null != _null) {
-    num = _null.flags;
-  }
-  obj2.flags = num;
-  obj2.targetType = targetType;
-  obj2.targetUserId = targetUserId;
-  obj2.targetApplicationId = targetApplicationId;
-  let mapped;
-  if (_null != null) {
-    const roles = _null.roles;
+  mapped = undefined;
+  if (invite != null) {
+    const roles = invite.roles;
     if (roles != null) {
       mapped = roles.map((id) => id.id);
     }
@@ -64,55 +65,54 @@ function updateWithLatestInvite(channelId, arg1) {
   if (mapped == null) {
     mapped = [];
   }
-  obj2.roleIds = mapped;
   closure_6 = obj2;
   closure_7 = obj2;
 }
-const FormStates = fn(1085).FormStates;
-InstantInviteUtilsDefault.INVITE_OPTIONS_UNLIMITED.value;
+const FormStates = Constants.FormStates;
+const map1 = InstantInviteUtilsDefault.INVITE_OPTIONS_UNLIMITED.value;
 let CLOSED = FormStates.CLOSED;
 let c15 = false;
-const Store = initializeDefault.Store;
-class CreateInviteModalStore extends Store {}
-const prototype = CreateInviteModalStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(ChannelStore, GuildStore, InstantInviteStore);
-};
-prototype["init"] = function init() {
-  this.waitFor(InstantInviteStore);
-};
-prototype["isOpen"] = function isOpen() {
-  return CLOSED !== FormStates.CLOSED;
-};
-prototype["isSubmitting"] = function isSubmitting() {
-  return c15;
-};
-prototype["getGuildId"] = function getGuildId() {
-  return guildId;
-};
-prototype["getError"] = function getError() {
-  return message;
-};
-prototype["getInvite"] = function getInvite() {
-  return c5;
-};
-prototype["getInviteSettings"] = function getInviteSettings() {
-  return closure_6;
-};
-prototype["getPendingSettings"] = function getPendingSettings() {
-  return closure_7;
-};
-prototype["getProps"] = function getProps() {
-  return {};
-};
-Object.defineProperty(prototype, "onClose", {
+const Store = get_initializedDefault.Store;
+class CreateInviteModalStore extends Store {
+  initialize() {
+    this.waitFor(ChannelStore, GuildStore, InstantInviteStore);
+  }
+  init() {
+    this.waitFor(InstantInviteStore);
+  }
+  isOpen() {
+    return CLOSED !== FormStates.CLOSED;
+  }
+  isSubmitting() {
+    return c15;
+  }
+  getGuildId() {
+    return guildId;
+  }
+  getError() {
+    return message;
+  }
+  getInvite() {
+    return invite;
+  }
+  getInviteSettings() {
+    return closure_6;
+  }
+  getPendingSettings() {
+    return closure_7;
+  }
+  getProps() {
+    return {};
+  }
+}
+Object.defineProperty(CreateInviteModalStore.prototype, "onClose", {
   get: function onClose() {
     return c8;
   },
   set: undefined,
 });
 CreateInviteModalStore.displayName = "CreateInviteModalStore";
-const createInviteModalStore = new CreateInviteModalStore(DispatcherDefault, {
+let obj = {
   CREATE_INVITE_MODAL_INIT: function handleInit(guildId) {
     guildId = guildId.guildId;
     message = null;
@@ -169,15 +169,17 @@ const createInviteModalStore = new CreateInviteModalStore(DispatcherDefault, {
   CREATE_INVITE_MODAL_GENERATE_INVITE_SUCCESS: function handleGenerateInviteSuccess(channelId) {
     message = null;
     c15 = false;
+    channelId = channelId.channelId;
     _modDef38(null != closure_6, "No invite settings for generated invite");
-    updateWithLatestInvite(channelId.channelId, {
+    const obj = {
       targetType: closure_6.targetType,
       targetUserId: closure_6.targetUserId,
       targetApplicationId: closure_6.targetApplicationId,
-    });
+    };
+    updateWithLatestInvite(channelId, obj);
   },
   CREATE_INVITE_MODAL_GENERATE_INVITE_FAILURE: function handleGenerateInviteFailure(message) {
-    c5 = null;
+    invite = null;
     c15 = false;
     message = message.message;
   },
@@ -185,8 +187,8 @@ const createInviteModalStore = new CreateInviteModalStore(DispatcherDefault, {
     CLOSED = FormStates.CLOSED;
     c8 = undefined;
   },
-});
-const size = fn(2);
+};
+const createInviteModalStore = new CreateInviteModalStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("stores/CreateInviteModalStore.tsx");
 
 export default createInviteModalStore;

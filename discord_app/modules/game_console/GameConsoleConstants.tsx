@@ -3,6 +3,7 @@ import Constants from "../../Constants.tsx";
 import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const ActivityGamePlatforms = Constants.ActivityGamePlatforms;
 const items = [
   OAuth2Scopes.OAuth2Scopes.VOICE,
   OAuth2Scopes.OAuth2Scopes.DM_CHANNELS_READ,
@@ -24,8 +25,7 @@ let obj = { PLAYSTATION: "playstation", XBOX: "xbox" };
 const items2 = [,];
 ({ XBOX: arr3[0], PLAYSTATION: arr3[1] } = obj);
 const items3 = [,];
-({ XBOX: arr4[0], PS5: arr4[1] } = Constants.ActivityGamePlatforms);
-const set = new Set(items2);
+({ XBOX: arr4[0], PS5: arr4[1] } = ActivityGamePlatforms);
 const obj2 = {
   CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED: 270000,
   [270000]: "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED",
@@ -45,7 +45,9 @@ const obj2 = {
   [270007]: "CONSOLE_DEVICE_BAD_COMMAND",
 };
 const items4 = [obj2.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED];
+const set = new Set(items2);
 const set1 = new Set(items3);
+const set2 = new Set(items4);
 const result = size.fileFinishedImporting("modules/game_console/GameConsoleConstants.tsx");
 
 export const XBOX_URL_BASE = "xbox://communitylinking/donut/audio";
@@ -76,5 +78,5 @@ export const GameConsoleTypes = obj;
 export const GAME_CONSOLE_SESSIONS = set;
 export const CONSOLE_VOICE_PLATFORMS = set1;
 export const GameConsoleCommandResultErrorCodes = obj2;
-export const USER_ACTION_REQUIRED_ERROR_CODES = new Set(items4);
+export const USER_ACTION_REQUIRED_ERROR_CODES = set2;
 export const GAME_CONSOLE_ALERT_MODAL_LOCATION = "console error alert";

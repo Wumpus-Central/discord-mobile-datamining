@@ -2,91 +2,91 @@
 import LoggerDefault from "../debug/Logger.tsx";
 import libdiscoreExperiments from "libdiscoreExperiments.tsx";
 import initLibdiscore from "../../../discord_common/js/packages/libdiscore/js_shim/js/initLibdiscore.native.tsx";
+import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
+let c4, c5, closure_2;
+
 function libDiscoreSmokeTest() {
-  const self = this;
-  const apply = closure_7.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }
-let closure_7 = async function _libDiscoreSmokeTest() {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      let tmp7 = c4;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          closure_1 = tmp3;
-          closure_0 = tmp7;
-          closure_128_0 = undefined;
-          tmp7 = timestampProducer;
-          if (!timestampProducer) {
-            c3 = 1;
-            c4 = 2;
-            c5 = 1;
-            const obj5 = { value: initLibdiscore.initLibdiscore(), done: false };
-            return obj5;
-          }
-        }
-      } else {
-        if (1 === tmp7) {
-          c3 = 0;
-          closure_129_9(closure_2);
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c3 = 0;
-          c5 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          closure_128_0 = closure_129_0(closure_129_2[4]).rustMultiply(6, 7);
-          closure_129_5.info("The answer for life the universe and everything is:", closure_128_0);
-          closure_129_8();
-          c3 = 0;
-          const obj = closure_129_0(closure_129_2[4]);
-        }
-        tmp7 = closure_1;
-        closure_129_6 = true;
-      }
+let obj = function _libDiscoreSmokeTest() {
+  obj = _asyncToGenerator(async () => {
+    let obj3;
+    if (c5 === 2) {
       c5 = 3;
-    } catch (tmp24) {
-      closure_2 = tmp24;
-      if (tmp4 === c3) {
-        c5 = tmp2;
-        throw tmp24;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        c4 = tmp;
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      let c3;
+      try {
+        let closure_0;
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            let closure_1 = tmp;
+            closure_0 = undefined;
+            if (!closure_2_6) {
+              c3 = 1;
+              c4 = 2;
+              c5 = 1;
+              const obj5 = { value: obj3.initLibdiscore(), done: false };
+              obj3 = initLibdiscore;
+              return obj5;
+            }
+          }
+        } else {
+          if (1 === c4) {
+            c3 = 0;
+            closure_129_9(closure_2);
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            c5 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            obj = closure_129_0(closure_129_2[4]);
+            closure_0 = obj.rustMultiply(6, 7);
+            logger.info("The answer for life the universe and everything is:", closure_0);
+            closure_129_8();
+            c3 = 0;
+          }
+          c6 = true;
+        }
+        c5 = 3;
+        return { value: "IconComponent", done: null };
+      } catch (tmp23) {
+        closure_2 = tmp23;
+        if (0 === c3) {
+          c5 = 3;
+          throw tmp23;
+        } else {
+          c4 = 1;
+        }
       }
     }
-  }
+  });
+  return obj(...arguments);
 };
 function trackLibdiscoreSuccess() {
   const items = [];
@@ -97,9 +97,12 @@ function trackLibdiscoreSuccess() {
       items.push(enabledFeatureName);
     }
   });
-  AnalyticsUtilsDefault.track(AnalyticEvents.LIBDISCORE_LOADED, { success: true, experimental_features: items });
+  obj = AnalyticsUtilsDefault;
+  obj.track(AnalyticEvents.LIBDISCORE_LOADED, { success: true, experimental_features: items });
 }
 function trackLibdiscoreFailure(arg0) {
+  let message;
+  let name;
   logger.error("Failed to execute smoke test:", arg0);
   if (arg0 instanceof Error) {
     ({ message, name } = arg0);
@@ -120,18 +123,21 @@ function trackLibdiscoreFailure(arg0) {
     const _HermesInternal = HermesInternal;
     combined = "" + name + ": " + text;
   }
-  AnalyticsUtilsDefault.track(AnalyticEvents.LIBDISCORE_LOADED, { success: false, error: combined });
+  obj = AnalyticsUtilsDefault;
+  obj.track(AnalyticEvents.LIBDISCORE_LOADED, { success: false, error: combined });
 }
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = Constants.AnalyticEvents;
 const logger = new LoggerDefault("libdiscore");
 let c6 = false;
-const size = fn(2);
+const tmp2 = new LoggerDefault("libdiscore");
 const result = size.fileFinishedImporting("modules/libdiscore/libDiscoreSmokeTest.tsx");
 
 export default libDiscoreSmokeTest;
 export { libDiscoreSmokeTest };
 export { trackLibdiscoreSuccess };
 export const formatErrorMessage = function formatErrorMessage(arg0) {
+  let message;
+  let name;
   if (arg0 instanceof Error) {
     ({ message, name } = arg0);
   } else {

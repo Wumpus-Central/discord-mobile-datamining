@@ -1,4 +1,5 @@
 // discord_app/modules/interaction_components/native/components/MentionableSelectComponentActionSheet.tsx
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -6,96 +7,114 @@ import InteractionComponentTypes from "../../InteractionComponentTypes.tsx";
 import RoleIconUtils from "../../../guild_boosting/RoleIconUtils.tsx";
 import RoleIconDefault from "../../../roles/native/RoleIcon.tsx";
 import SearchableSelectActionComponentUtils from "../../SearchableSelectActionComponentUtils.tsx";
-import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
+import ShieldUserIcon2 from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
 import DiscordTagDefault from "../../../user_profile/native/DiscordTag.tsx";
 import UserIcon from "../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
-import GuildRoleStore from "../../../../stores/GuildRoleStore.tsx";
+import react_mod from "../../../../../_runtime/00019_react.js";
+import GuildRoleStore_mod from "../../../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import PresenceStore from "../../../../stores/PresenceStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
+import Constants from "../../../../Constants.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const Constants = fn(1085);
-({ Fonts, DEFAULT_ROLE_COLOR_HEX: closure_9 } = Constants);
-const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  name: {
-    color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT,
-    fontFamily: Fonts.PRIMARY_MEDIUM,
-    fontSize: 12,
-    lineHeight: 16,
+let selectionActionComponent, user;
+
+let Fonts;
+let c10;
+let c9;
+let obj2;
+let obj3;
+let unpackModuleId;
+let react = react_mod;
+const View = react_native.View;
+let GuildRoleStore = GuildRoleStore_mod;
+({ Fonts, DEFAULT_ROLE_COLOR_HEX: c9 } = Constants);
+({ jsx: c10, jsxs: unpackModuleId } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
+  name: obj2,
+  discriminator: obj3,
+  roleCountContainer: {
+    display: "flex",
+    flexDirection: "row",
+    flexGrow: 1,
+    alignItems: "center",
+    justifyContent: "flex-end",
+    marginRight: 12,
   },
-  discriminator: null,
-  roleCountContainer: null,
-  roleCountText: null,
+  roleCountText: { paddingRight: 4 },
 };
-let obj3 = {
+obj2 = {
   color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT,
   fontFamily: Fonts.PRIMARY_MEDIUM,
   fontSize: 12,
   lineHeight: 16,
 };
-obj2.discriminator = { color: nativeDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
-obj2.roleCountContainer = {
-  display: "flex",
-  flexDirection: "row",
-  flexGrow: 1,
-  alignItems: "center",
-  justifyContent: "flex-end",
-  marginRight: 12,
-};
-obj2.roleCountText = { paddingRight: 4 };
-let closure_12 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj4 = { color: nativeDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/interaction_components/native/components/MentionableSelectComponentActionSheet.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+createStyles = createStyles.createStyles;
+obj3 = { color: nativeDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
+let closure_12 = createStyles(obj);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (selectionActionComponent) => {
-      const cResult = selectionActionComponent(guildId[11]).c(35);
+      let allowEmpty;
+      let channelId;
+      let closure_3;
+      let closure_5;
+      let containerId;
+      let guildId;
+      let isSelected;
+      let labelComponent;
+      let onPressOptionItem;
+      let onSubmit;
+      let options;
+      let selectedOptions;
+      let setQuery;
+      let submitSelection;
+      let tmp5;
+      let obj = selectionActionComponent(guildId[11]);
+      const cResult = obj.c(35);
+      const tmp = selectionActionComponent;
       selectionActionComponent = selectionActionComponent.selectionActionComponent;
       ({ labelComponent, channelId } = selectionActionComponent);
       guildId = selectionActionComponent.guildId;
       ({ containerId, onSubmit, allowEmpty } = selectionActionComponent);
       const tmp4 = closure_12();
-      noop = tmp4;
+      react = tmp4;
       if (cResult[0] !== guildId) {
-        guild = GuildStore.getGuild(guildId);
+        const guild = GuildStore.getGuild(guildId);
         cResult[0] = guildId;
         cResult[1] = guild;
-        let tmp5 = guild;
+        tmp5 = guild;
       } else {
         tmp5 = cResult[1];
       }
       let id;
-      let obj = selectionActionComponent(guildId[11]);
-      const tmp = selectionActionComponent;
+      let tmp9 = channelId(tmp2[12]);
       if (tmp5 != null) {
         id = tmp5.id;
       }
-      const tmp9Result = channelId(guildId[12])(id, tmp(guildId[13]).MIN_REREQUEST_TIME);
+      const tmp9Result = tmp9(id, tmp(guildId[13]).MIN_REREQUEST_TIME);
       GuildRoleStore = tmp9Result;
       if (cResult[2] === channelId) {
+        let tmp12;
         if (cResult[3] === selectionActionComponent) {
-          let tmp12 = cResult[4];
+          tmp12 = cResult[4];
         }
         if (cResult[5] === containerId) {
           if (cResult[6] === guildId) {
             if (cResult[7] === onSubmit) {
               if (cResult[8] === tmp12) {
+                let tmp13;
                 if (cResult[9] === selectionActionComponent) {
-                  let tmp13 = cResult[10];
+                  tmp13 = cResult[10];
                 }
                 ({ options, selectedOptions, isSelected, onPressOptionItem, submitSelection, setQuery } = channelId(
                   tmp2[14],
                 )(tmp13));
+                const tmp14 = channelId(tmp2[14])(tmp13);
                 if (cResult[11] === tmp5) {
                   if (cResult[14] !== tmp4) {
                     const fn = function w(type) {
@@ -107,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           discriminator: obj.discriminatorStyle,
                           name: obj.nicknameStyle,
                         } = closure_3);
-                        return v65535(DiscordTagDefault, obj);
+                        return authStore(DiscordTagDefault, obj);
                       }
                     };
                     cResult[14] = tmp4;
@@ -116,269 +135,208 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const _Symbol = Symbol;
                   if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
                     class G {
-                      constructor(arg0) {
-                        tmp = selectionActionComponent;
-                        tmp2 = guildId;
-                        if (
-                          selectionActionComponent.type === selectionActionComponent(guildId[15]).SelectOptionType.USER
-                        ) {
-                          tmp3 = closure_1_8;
-                          user = closure_1_8.getUser(selectionActionComponent.value);
-                          tmp5 = null;
-                          bot = undefined;
+                      constructor(type) {
+                        let discriminator;
+                        let discriminator1;
+                        if (type.type === selectionActionComponent(guildId[15]).SelectOptionType.USER) {
+                          let formatToPlainStringResult;
+                          user = user.getUser(type.value);
+                          let bot;
                           if (user != null) {
                             bot = user.bot;
                           }
-                          intl2 = tmp(tmp2[21]).intl;
-                          formatToPlainString = intl2.formatToPlainString;
-                          t = tmp(tmp2[21]).t;
+                          const intl2 = selectionActionComponent(guildId[21]).intl;
+                          const formatToPlainString = intl2.formatToPlainString;
+                          const t = selectionActionComponent(guildId[21]).t;
                           if (bot) {
-                            obj1 = { username: null, discriminator: null };
-                            obj1.username = selectionActionComponent.label;
+                            const obj2 = { username: type.label, discriminator };
                             discriminator = undefined;
+                            const prop = t["zogo/8"];
                             if (user != null) {
                               discriminator = user.discriminator;
                             }
-                            obj1.discriminator = discriminator;
-                            formatToPlainStringResult = formatToPlainString(t["zogo/8"], obj1);
+                            formatToPlainStringResult = formatToPlainString(prop, obj2);
                           } else {
-                            obj4 = { username: null, discriminator: null };
-                            obj4.username = selectionActionComponent.label;
+                            const obj3 = { username: type.label, discriminator: discriminator1 };
                             discriminator1 = undefined;
+                            const AydQ7a = t.AydQ7a;
                             if (user != null) {
                               discriminator1 = user.discriminator;
                             }
-                            obj4.discriminator = discriminator1;
-                            formatToPlainStringResult = formatToPlainString(t.AydQ7a, obj4);
+                            formatToPlainStringResult = formatToPlainString(AydQ7a, obj3);
                           }
                           return formatToPlainStringResult;
-                        } else if (selectionActionComponent.type === tmp(tmp2[15]).SelectOptionType.ROLE) {
-                          intl = tmp(tmp2[21]).intl;
-                          obj = { roleName: null };
-                          obj.roleName = selectionActionComponent.label;
-                          return intl.formatToPlainString(tmp(tmp2[21]).t.F6ejkk, obj);
-                        } else {
-                          return;
+                        } else if (type.type === selectionActionComponent(guildId[15]).SelectOptionType.ROLE) {
+                          const intl = selectionActionComponent(guildId[21]).intl;
+                          const obj = { roleName: type.label };
+                          return intl.formatToPlainString(selectionActionComponent(guildId[21]).t.F6ejkk, obj);
                         }
                       }
                     }
                     cResult[16] = G;
                   } else {
                     class G {
-                      constructor(arg0) {
-                        tmp = selectionActionComponent;
-                        tmp2 = guildId;
-                        if (
-                          selectionActionComponent.type === selectionActionComponent(guildId[15]).SelectOptionType.USER
-                        ) {
-                          tmp3 = closure_1_8;
-                          user = closure_1_8.getUser(selectionActionComponent.value);
-                          tmp5 = null;
-                          bot = undefined;
+                      constructor(type) {
+                        let discriminator;
+                        let discriminator1;
+                        if (type.type === selectionActionComponent(guildId[15]).SelectOptionType.USER) {
+                          let formatToPlainStringResult;
+                          user = user.getUser(type.value);
+                          let bot;
                           if (user != null) {
                             bot = user.bot;
                           }
-                          intl2 = tmp(tmp2[21]).intl;
-                          formatToPlainString = intl2.formatToPlainString;
-                          t = tmp(tmp2[21]).t;
+                          const intl2 = selectionActionComponent(guildId[21]).intl;
+                          const formatToPlainString = intl2.formatToPlainString;
+                          const t = selectionActionComponent(guildId[21]).t;
                           if (bot) {
-                            obj1 = { username: null, discriminator: null };
-                            obj1.username = selectionActionComponent.label;
+                            const obj2 = { username: type.label, discriminator };
                             discriminator = undefined;
+                            const prop = t["zogo/8"];
                             if (user != null) {
                               discriminator = user.discriminator;
                             }
-                            obj1.discriminator = discriminator;
-                            formatToPlainStringResult = formatToPlainString(t["zogo/8"], obj1);
+                            formatToPlainStringResult = formatToPlainString(prop, obj2);
                           } else {
-                            obj4 = { username: null, discriminator: null };
-                            obj4.username = selectionActionComponent.label;
+                            const obj3 = { username: type.label, discriminator: discriminator1 };
                             discriminator1 = undefined;
+                            const AydQ7a = t.AydQ7a;
                             if (user != null) {
                               discriminator1 = user.discriminator;
                             }
-                            obj4.discriminator = discriminator1;
-                            formatToPlainStringResult = formatToPlainString(t.AydQ7a, obj4);
+                            formatToPlainStringResult = formatToPlainString(AydQ7a, obj3);
                           }
                           return formatToPlainStringResult;
-                        } else if (selectionActionComponent.type === tmp(tmp2[15]).SelectOptionType.ROLE) {
-                          intl = tmp(tmp2[21]).intl;
-                          obj = { roleName: null };
-                          obj.roleName = selectionActionComponent.label;
-                          return intl.formatToPlainString(tmp(tmp2[21]).t.F6ejkk, obj);
-                        } else {
-                          return;
+                        } else if (type.type === selectionActionComponent(guildId[15]).SelectOptionType.ROLE) {
+                          const intl = selectionActionComponent(guildId[21]).intl;
+                          const obj = { roleName: type.label };
+                          return intl.formatToPlainString(selectionActionComponent(guildId[21]).t.F6ejkk, obj);
                         }
                       }
                     }
                   }
                   if (cResult[17] === tmp5) {
                     class G {
-                      constructor(arg0) {
-                        tmp = selectionActionComponent;
-                        tmp2 = guildId;
-                        if (
-                          selectionActionComponent.type === selectionActionComponent(guildId[15]).SelectOptionType.USER
-                        ) {
-                          tmp3 = closure_1_8;
-                          user = closure_1_8.getUser(selectionActionComponent.value);
-                          tmp5 = null;
-                          bot = undefined;
+                      constructor(type) {
+                        let discriminator;
+                        let discriminator1;
+                        if (type.type === selectionActionComponent(guildId[15]).SelectOptionType.USER) {
+                          let formatToPlainStringResult;
+                          user = user.getUser(type.value);
+                          let bot;
                           if (user != null) {
                             bot = user.bot;
                           }
-                          intl2 = tmp(tmp2[21]).intl;
-                          formatToPlainString = intl2.formatToPlainString;
-                          t = tmp(tmp2[21]).t;
+                          const intl2 = selectionActionComponent(guildId[21]).intl;
+                          const formatToPlainString = intl2.formatToPlainString;
+                          const t = selectionActionComponent(guildId[21]).t;
                           if (bot) {
-                            obj1 = { username: null, discriminator: null };
-                            obj1.username = selectionActionComponent.label;
+                            const obj2 = { username: type.label, discriminator };
                             discriminator = undefined;
+                            const prop = t["zogo/8"];
                             if (user != null) {
                               discriminator = user.discriminator;
                             }
-                            obj1.discriminator = discriminator;
-                            formatToPlainStringResult = formatToPlainString(t["zogo/8"], obj1);
+                            formatToPlainStringResult = formatToPlainString(prop, obj2);
                           } else {
-                            obj4 = { username: null, discriminator: null };
-                            obj4.username = selectionActionComponent.label;
+                            const obj3 = { username: type.label, discriminator: discriminator1 };
                             discriminator1 = undefined;
+                            const AydQ7a = t.AydQ7a;
                             if (user != null) {
                               discriminator1 = user.discriminator;
                             }
-                            obj4.discriminator = discriminator1;
-                            formatToPlainStringResult = formatToPlainString(t.AydQ7a, obj4);
+                            formatToPlainStringResult = formatToPlainString(AydQ7a, obj3);
                           }
                           return formatToPlainStringResult;
-                        } else if (selectionActionComponent.type === tmp(tmp2[15]).SelectOptionType.ROLE) {
-                          intl = tmp(tmp2[21]).intl;
-                          obj = { roleName: null };
-                          obj.roleName = selectionActionComponent.label;
-                          return intl.formatToPlainString(tmp(tmp2[21]).t.F6ejkk, obj);
-                        } else {
-                          return;
+                        } else if (type.type === selectionActionComponent(guildId[15]).SelectOptionType.ROLE) {
+                          const intl = selectionActionComponent(guildId[21]).intl;
+                          const obj = { roleName: type.label };
+                          return intl.formatToPlainString(selectionActionComponent(guildId[21]).t.F6ejkk, obj);
                         }
                       }
                     }
                   }
                   class X {
-                    constructor(arg0) {
-                      tmp = closure_0;
-                      tmp2 = closure_2;
-                      if (selectionActionComponent.type === closure_0(closure_2[15]).SelectOptionType.ROLE) {
-                        tmp4 = null;
-                        role = undefined;
-                        if (null != closure_4) {
-                          tmp6 = closure_5;
-                          role = closure_5.getRole(tmp3.id, selectionActionComponent.value);
+                    constructor(type) {
+                      let items;
+                      if (type.type === InteractionComponentTypes.SelectOptionType.ROLE) {
+                        let role;
+                        if (null != id) {
+                          role = GuildRoleStore.getRole(tmp3.id, type.value);
                         }
-                        tmp7 = null;
+                        let tmp7 = null;
                         if (null != role) {
-                          tmp9 = undefined;
+                          let tmp9;
                           if (closure_5 != null) {
                             tmp9 = tmp8[role.id];
                           }
                           tmp7 = tmp9;
                         }
-                        if (null == tmp7) {
-                          return;
-                        } else {
-                          tmp10 = jsxs;
-                          tmp11 = View;
-                          obj = { style: null, children: null };
-                          tmp12 = closure_3;
-                          obj.style = closure_3.roleCountContainer;
-                          tmp13 = jsx;
-                          obj1 = {
-                            style: null,
+                        if (null != tmp7) {
+                          const obj = { style: closure_3.roleCountContainer, children: items };
+                          const obj2 = {
+                            style: closure_3.roleCountText,
                             variant: "text-sm/medium",
                             color: "interactive-text-default",
-                            children: null,
+                            children: tmp7,
                           };
-                          obj1.style = closure_3.roleCountText;
-                          obj1.children = tmp7;
-                          items = [,];
-                          items[0] = jsx(tmp(tmp2[22]).Text, obj1);
-                          items[1] = jsx(tmp(tmp2[23]).UserIcon, { size: "xs" });
-                          obj.children = items;
-                          return jsxs(View, obj);
+                          items = [authStore(Text_Text.Text, obj2), authStore(UserIcon.UserIcon, { size: "xs" })];
+                          return unpackModuleId(View, obj);
                         }
-                      } else {
-                        return;
                       }
                     }
                   }
                   class L {
-                    constructor(arg0) {
-                      tmp = closure_0;
-                      tmp2 = closure_2;
-                      if (selectionActionComponent.type === closure_0(closure_2[15]).SelectOptionType.USER) {
-                        tmp12 = closure_8;
-                        user = closure_8.getUser(selectionActionComponent.value);
-                        tmp14 = null;
+                    constructor(type) {
+                      if (type.type === InteractionComponentTypes.SelectOptionType.USER) {
+                        user = UserStore.getUser(type.value);
                         if (null == user) {
                           return null;
                         } else {
-                          tmp16 = closure_7;
-                          isMobileOnlineResult = closure_7.isMobileOnline(user.id);
-                          isVROnlineResult = closure_7.isVROnline(user.id);
-                          status = closure_7.getStatus(user.id);
-                          tmp20 = jsx;
-                          obj1 = {
-                            user: null,
-                            isMobileOnline: null,
-                            isVROnline: null,
-                            status: null,
-                            guildId: null,
-                            size: null,
+                          const isMobileOnlineResult = PresenceStore.isMobileOnline(user.id);
+                          const isVROnlineResult = PresenceStore.isVROnline(user.id);
+                          const status = PresenceStore.getStatus(user.id);
+                          const obj = {
+                            user,
+                            isMobileOnline: isMobileOnlineResult,
+                            isVROnline: isVROnlineResult,
+                            status,
+                            guildId,
+                            size: native.AvatarSizes.XSMALL,
                           };
-                          obj1.user = user;
-                          obj1.isMobileOnline = isMobileOnlineResult;
-                          obj1.isVROnline = isVROnlineResult;
-                          obj1.status = status;
-                          tmp15 = guildId;
-                          obj1.guildId = tmp15;
-                          obj1.size = tmp(tmp2[16]).AvatarSizes.XSMALL;
-                          return tmp20(tmp(tmp2[16]).Avatar, obj1);
+                          const Avatar = native.Avatar;
+                          return authStore(Avatar, obj);
                         }
-                      } else if (selectionActionComponent.type === tmp(tmp2[15]).SelectOptionType.ROLE) {
-                        tmp3 = closure_4;
-                        tmp4 = null;
-                        if (null != closure_4) {
-                          tmp6 = closure_5;
-                          role = closure_5.getRole(tmp3.id, selectionActionComponent.value);
+                      } else if (type.type === InteractionComponentTypes.SelectOptionType.ROLE) {
+                        let role;
+                        if (null != id) {
+                          role = GuildRoleStore.getRole(id.id, type.value);
                         }
-                        if (null != tmp3) {
+                        if (null != id) {
                           if (null != role) {
-                            tmpResult = tmp(tmp2[17]);
-                            if (tmpResult.canGuildUseRoleIcons(tmp3, role)) {
-                              tmpResult1 = tmp(tmp2[17]);
-                              roleIconData = tmpResult1.getRoleIconData(role);
+                            const tmpResult = RoleIconUtils;
+                            if (tmpResult.canGuildUseRoleIcons(id, role)) {
+                              const tmpResult2 = RoleIconUtils;
+                              const roleIconData = tmpResult2.getRoleIconData(role);
                               if (null != roleIconData) {
-                                tmp10 = jsx;
-                                tmp11 = closure_1;
-                                obj6 = { src: null, unicodeEmoji: null, size: 24, name: null };
+                                const obj2 = { src: null, unicodeEmoji: null, size: 24, name: role.name };
                                 ({ customIconSrc: obj3.src, unicodeEmoji: obj3.unicodeEmoji } = roleIconData);
-                                obj6.name = role.name;
-                                return jsx(closure_1(tmp2[18]), obj6);
+                                return authStore(RoleIconDefault, obj2);
                               }
                             }
-                            tmp8 = jsx;
-                            colorString = undefined;
+                            let colorString;
+                            const ShieldUserIcon = ShieldUserIcon2.ShieldUserIcon;
                             if (role != null) {
                               colorString = role.colorString;
                             }
                             if (colorString == null) {
-                              colorString = DEFAULT_ROLE_COLOR_HEX;
+                              colorString = React4;
                             }
-                            obj7 = { color: null };
-                            obj7.color = colorString;
-                            return tmp8(tmp(tmp2[19]).ShieldUserIcon, obj7);
+                            const obj4 = { color: colorString };
+                            return authStore(ShieldUserIcon, obj4);
                           }
                         }
                         return null;
-                      } else {
-                        return;
                       }
                     }
                   }
@@ -388,83 +346,62 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[20] = X;
                 }
                 class L {
-                  constructor(arg0) {
-                    tmp = closure_0;
-                    tmp2 = closure_2;
-                    if (selectionActionComponent.type === closure_0(closure_2[15]).SelectOptionType.USER) {
-                      tmp12 = closure_8;
-                      user = closure_8.getUser(selectionActionComponent.value);
-                      tmp14 = null;
+                  constructor(type) {
+                    if (type.type === InteractionComponentTypes.SelectOptionType.USER) {
+                      user = UserStore.getUser(type.value);
                       if (null == user) {
                         return null;
                       } else {
-                        tmp16 = closure_7;
-                        isMobileOnlineResult = closure_7.isMobileOnline(user.id);
-                        isVROnlineResult = closure_7.isVROnline(user.id);
-                        status = closure_7.getStatus(user.id);
-                        tmp20 = jsx;
-                        obj1 = {
-                          user: null,
-                          isMobileOnline: null,
-                          isVROnline: null,
-                          status: null,
-                          guildId: null,
-                          size: null,
+                        const isMobileOnlineResult = PresenceStore.isMobileOnline(user.id);
+                        const isVROnlineResult = PresenceStore.isVROnline(user.id);
+                        const status = PresenceStore.getStatus(user.id);
+                        const obj = {
+                          user,
+                          isMobileOnline: isMobileOnlineResult,
+                          isVROnline: isVROnlineResult,
+                          status,
+                          guildId,
+                          size: native.AvatarSizes.XSMALL,
                         };
-                        obj1.user = user;
-                        obj1.isMobileOnline = isMobileOnlineResult;
-                        obj1.isVROnline = isVROnlineResult;
-                        obj1.status = status;
-                        tmp15 = guildId;
-                        obj1.guildId = tmp15;
-                        obj1.size = tmp(tmp2[16]).AvatarSizes.XSMALL;
-                        return tmp20(tmp(tmp2[16]).Avatar, obj1);
+                        const Avatar = native.Avatar;
+                        return authStore(Avatar, obj);
                       }
-                    } else if (selectionActionComponent.type === tmp(tmp2[15]).SelectOptionType.ROLE) {
-                      tmp3 = closure_4;
-                      tmp4 = null;
-                      if (null != closure_4) {
-                        tmp6 = closure_5;
-                        role = closure_5.getRole(tmp3.id, selectionActionComponent.value);
+                    } else if (type.type === InteractionComponentTypes.SelectOptionType.ROLE) {
+                      let role;
+                      if (null != id) {
+                        role = GuildRoleStore.getRole(id.id, type.value);
                       }
-                      if (null != tmp3) {
+                      if (null != id) {
                         if (null != role) {
-                          tmpResult = tmp(tmp2[17]);
-                          if (tmpResult.canGuildUseRoleIcons(tmp3, role)) {
-                            tmpResult1 = tmp(tmp2[17]);
-                            roleIconData = tmpResult1.getRoleIconData(role);
+                          const tmpResult = RoleIconUtils;
+                          if (tmpResult.canGuildUseRoleIcons(id, role)) {
+                            const tmpResult2 = RoleIconUtils;
+                            const roleIconData = tmpResult2.getRoleIconData(role);
                             if (null != roleIconData) {
-                              tmp10 = jsx;
-                              tmp11 = closure_1;
-                              obj6 = { src: null, unicodeEmoji: null, size: 24, name: null };
+                              const obj2 = { src: null, unicodeEmoji: null, size: 24, name: role.name };
                               ({ customIconSrc: obj3.src, unicodeEmoji: obj3.unicodeEmoji } = roleIconData);
-                              obj6.name = role.name;
-                              return jsx(closure_1(tmp2[18]), obj6);
+                              return authStore(RoleIconDefault, obj2);
                             }
                           }
-                          tmp8 = jsx;
-                          colorString = undefined;
+                          let colorString;
+                          const ShieldUserIcon = ShieldUserIcon2.ShieldUserIcon;
                           if (role != null) {
                             colorString = role.colorString;
                           }
                           if (colorString == null) {
-                            colorString = DEFAULT_ROLE_COLOR_HEX;
+                            colorString = React4;
                           }
-                          obj7 = { color: null };
-                          obj7.color = colorString;
-                          return tmp8(tmp(tmp2[19]).ShieldUserIcon, obj7);
+                          const obj4 = { color: colorString };
+                          return authStore(ShieldUserIcon, obj4);
                         }
                       }
                       return null;
-                    } else {
-                      return;
                     }
                   }
                 }
                 cResult[11] = tmp5;
                 cResult[12] = guildId;
                 cResult[13] = L;
-                const tmp14 = channelId(tmp2[14])(tmp13);
               }
             }
           }
@@ -484,37 +421,47 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = obj2;
       }
       class A {
-        constructor(arg0) {
-          obj = closure_0(closure_2[13]);
-          return obj.queryMentionables(selectionActionComponent.type, selectionActionComponent, channelId);
+        constructor(query) {
+          const obj = SearchableSelectActionComponentUtils;
+          return obj.queryMentionables(selectionActionComponent.type, query, channelId);
         }
       }
       cResult[2] = channelId;
       cResult[3] = selectionActionComponent;
       cResult[4] = A;
       tmp12 = A;
-      let tmp9 = channelId(guildId[12]);
     }
   : (selectionActionComponent) => {
+      let allowEmpty;
+      let closure_3;
+      let containerId;
+      let isSelected;
+      let labelComponent;
+      let onPressOptionItem;
+      let onSubmit;
+      let options;
+      let setQuery;
+      let submitSelection;
       selectionActionComponent = selectionActionComponent.selectionActionComponent;
       const channelId = selectionActionComponent.channelId;
       const guildId = selectionActionComponent.guildId;
-      closure_5 = undefined;
+      let closure_5;
       ({ labelComponent, containerId, onSubmit, allowEmpty } = selectionActionComponent);
-      noop = closure_12();
-      guild = GuildStore.getGuild(guildId);
+      react = closure_12();
+      const guild = GuildStore.getGuild(guildId);
+      const tmp3 = guildId;
       let id;
+      const tmp4 = channelId(guildId[12]);
       if (guild != null) {
         id = guild.id;
       }
-      closure_5 = channelId(guildId[12])(id, selectionActionComponent(tmp3[13]).MIN_REREQUEST_TIME);
+      closure_5 = tmp4(id, selectionActionComponent(tmp3[13]).MIN_REREQUEST_TIME);
       let items = [selectionActionComponent, channelId];
-      const callback = noop.useCallback(
-        (query) =>
-          SearchableSelectActionComponentUtils.queryMentionables(selectionActionComponent.type, query, channelId),
-        items,
-      );
-      let tmp7 = channelId(guildId[14])({
+      const callback = react.useCallback((query) => {
+        const obj = SearchableSelectActionComponentUtils;
+        return obj.queryMentionables(selectionActionComponent.type, query, channelId);
+      }, items);
+      let tmp7 = tmp2(tmp3[14])({
         selectActionComponent: selectionActionComponent,
         containerId,
         guildId,
@@ -524,55 +471,59 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const selectedOptions = tmp7.selectedOptions;
       const items1 = [guild, guildId];
       ({ options, isSelected, onPressOptionItem, submitSelection, setQuery } = tmp7);
-      const callback1 = noop.useCallback((type) => {
+      const callback1 = react.useCallback((type) => {
         if (type.type === InteractionComponentTypes.SelectOptionType.USER) {
           user = UserStore.getUser(type.value);
           if (null == user) {
             return null;
           } else {
             const isMobileOnlineResult = PresenceStore.isMobileOnline(user.id);
+            const isVROnlineResult = PresenceStore.isVROnline(user.id);
             const status = PresenceStore.getStatus(user.id);
             const obj = {
               user,
               isMobileOnline: isMobileOnlineResult,
-              isVROnline: PresenceStore.isVROnline(user.id),
+              isVROnline: isVROnlineResult,
               status,
               guildId,
               size: native.AvatarSizes.XSMALL,
             };
-            return v65535(native.Avatar, obj);
+            const Avatar = native.Avatar;
+            return authStore(Avatar, obj);
           }
         } else if (type.type === InteractionComponentTypes.SelectOptionType.ROLE) {
+          let role;
           if (null != guild) {
-            const role = GuildRoleStore.getRole(guild.id, type.value);
+            role = GuildRoleStore.getRole(guild.id, type.value);
           }
           if (null != guild) {
             if (null != role) {
+              const tmpResult = RoleIconUtils;
               if (tmpResult.canGuildUseRoleIcons(guild, role)) {
-                const roleIconData = RoleIconUtils.getRoleIconData(role);
-                if (null != roleIconData) {
-                  const obj2 = { src: null, unicodeEmoji: null, size: 24, name: null };
-                  ({ customIconSrc: obj3.src, unicodeEmoji: obj3.unicodeEmoji } = roleIconData);
-                  obj2.name = role.name;
-                  return v65535(RoleIconDefault, obj2);
-                }
                 const tmpResult2 = RoleIconUtils;
+                const roleIconData = tmpResult2.getRoleIconData(role);
+                if (null != roleIconData) {
+                  const obj2 = { src: null, unicodeEmoji: null, size: 24, name: role.name };
+                  ({ customIconSrc: obj3.src, unicodeEmoji: obj3.unicodeEmoji } = roleIconData);
+                  return authStore(RoleIconDefault, obj2);
+                }
               }
               let colorString;
+              const ShieldUserIcon = ShieldUserIcon2.ShieldUserIcon;
               if (role != null) {
                 colorString = role.colorString;
               }
               if (colorString == null) {
-                colorString = options;
+                colorString = React4;
               }
               const obj4 = { color: colorString };
-              return v65535(ShieldUserIcon.ShieldUserIcon, obj4);
+              return authStore(ShieldUserIcon, obj4);
             }
           }
           return null;
         }
       }, items1);
-      return closure_10(channelId(guildId[24]), {
+      let obj = {
         onPressOptionItem,
         renderIcon: callback1,
         renderDescription(type) {
@@ -580,10 +531,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             user = UserStore.getUser(type.value);
             const obj = { user, usernameStyle: null, discriminatorStyle: null, nicknameStyle: null };
             ({ name: obj.usernameStyle, discriminator: obj.discriminatorStyle, name: obj.nicknameStyle } = closure_3);
-            return v65535(DiscordTagDefault, obj);
+            return authStore(DiscordTagDefault, obj);
           }
         },
         renderOptionSuffix(type) {
+          let items;
           if (type.type === InteractionComponentTypes.SelectOptionType.ROLE) {
             let role;
             if (null != guild) {
@@ -598,16 +550,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp7 = tmp9;
             }
             if (null != tmp7) {
-              const obj = { style: closure_3.roleCountContainer, children: null };
+              const obj = { style: closure_3.roleCountContainer, children: items };
               const obj2 = {
                 style: closure_3.roleCountText,
                 variant: "text-sm/medium",
                 color: "interactive-text-default",
                 children: tmp7,
               };
-              const items = [v65535(Text_Text.Text, obj2), v65535(UserIcon.UserIcon, { size: "xs" })];
-              obj.children = items;
-              return closure_2_11(View, obj);
+              items = [authStore(Text_Text.Text, obj2), authStore(UserIcon.UserIcon, { size: "xs" })];
+              return unpackModuleId(View, obj);
             }
           }
         },
@@ -620,7 +571,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         submitSelection,
         onQueryChange: setQuery,
         itemAccessibilityLabel(type) {
+          let discriminator;
+          let discriminator1;
           if (type.type === selectionActionComponent(guildId[15]).SelectOptionType.USER) {
+            let formatToPlainStringResult;
             user = user.getUser(type.value);
             let bot;
             if (user != null) {
@@ -630,21 +584,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const formatToPlainString = intl2.formatToPlainString;
             const t = selectionActionComponent(guildId[21]).t;
             if (bot) {
-              const obj2 = { username: type.label, discriminator: null };
-              let discriminator;
+              const obj2 = { username: type.label, discriminator };
+              discriminator = undefined;
+              const prop = t["zogo/8"];
               if (user != null) {
                 discriminator = user.discriminator;
               }
-              obj2.discriminator = discriminator;
-              let formatToPlainStringResult = formatToPlainString(t["zogo/8"], obj2);
+              formatToPlainStringResult = formatToPlainString(prop, obj2);
             } else {
-              const obj3 = { username: type.label, discriminator: null };
-              let discriminator1;
+              const obj3 = { username: type.label, discriminator: discriminator1 };
+              discriminator1 = undefined;
+              const AydQ7a = t.AydQ7a;
               if (user != null) {
                 discriminator1 = user.discriminator;
               }
-              obj3.discriminator = discriminator1;
-              formatToPlainStringResult = formatToPlainString(t.AydQ7a, obj3);
+              formatToPlainStringResult = formatToPlainString(AydQ7a, obj3);
             }
             return formatToPlainStringResult;
           } else if (type.type === selectionActionComponent(guildId[15]).SelectOptionType.ROLE) {
@@ -655,5 +609,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         channelId,
         allowEmpty,
-      });
+      };
+      return closure_10(channelId(tmp3[24]), obj);
     };
+const result = size.fileFinishedImporting(
+  "modules/interaction_components/native/components/MentionableSelectComponentActionSheet.tsx",
+);
+
+export default tmp5;

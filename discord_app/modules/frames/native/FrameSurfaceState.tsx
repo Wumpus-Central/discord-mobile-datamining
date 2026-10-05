@@ -1,48 +1,52 @@
 // discord_app/modules/frames/native/FrameSurfaceState.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    gap: nativeDefault.space.PX_8,
-    paddingHorizontal: nativeDefault.space.PX_24,
-  },
-};
-let closure_5 = createStyles.createStyles(obj2);
-fn(558);
-let obj3 = {
+let c3;
+let closure_4;
+let obj2;
+const View = react_native.View;
+({ jsx: c3, jsxs: closure_4 } = Fragment);
+let obj = { container: obj2 };
+obj2 = {
   flex: 1,
   alignItems: "center",
   justifyContent: "center",
   gap: nativeDefault.space.PX_8,
   paddingHorizontal: nativeDefault.space.PX_24,
 };
-const ReactCompilerGating = fn(558);
+let closure_5 = createStyles.createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(11);
+      let description;
+      let error;
+      let heading;
+      let items;
+      let tmp11;
+      let tmp5;
+      let tmp8;
+      const obj = react2;
+      const cResult = obj.c(11);
       ({ heading, description, error } = arg0);
       const tmp4 = closure_5();
       if (cResult[0] !== heading) {
         let tmp6 = null;
         if (null != heading) {
           const obj2 = { variant: "heading-md/semibold", color: "text-default", children: heading };
-          tmp6 = React3(Text_Text.Heading, obj2);
+          tmp6 = _false(Text_Text.Heading, obj2);
         }
         cResult[0] = heading;
         cResult[1] = tmp6;
-        let tmp5 = tmp6;
+        tmp5 = tmp6;
       } else {
         tmp5 = cResult[1];
       }
@@ -50,11 +54,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp9 = null;
         if (null != description) {
           const obj3 = { variant: "text-sm/normal", color: "text-muted", children: description };
-          tmp9 = React3(Text_Text.Text, obj3);
+          tmp9 = _false(Text_Text.Text, obj3);
         }
         cResult[2] = description;
         cResult[3] = tmp9;
-        let tmp8 = tmp9;
+        tmp8 = tmp9;
       } else {
         tmp8 = cResult[3];
       }
@@ -62,28 +66,28 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp12 = null;
         if (null != error) {
           const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: error };
-          tmp12 = React3(Text_Text.Text, obj4);
+          tmp12 = _false(Text_Text.Text, obj4);
         }
         cResult[4] = error;
         cResult[5] = tmp12;
-        let tmp11 = tmp12;
+        tmp11 = tmp12;
       } else {
         tmp11 = cResult[5];
       }
       if (cResult[6] === tmp4.container) {
         if (cResult[7] === tmp5) {
           if (cResult[8] === tmp8) {
+            let tmp14;
             if (cResult[9] === tmp11) {
-              let tmp14 = cResult[10];
+              tmp14 = cResult[10];
             }
             return tmp14;
           }
         }
       }
-      const obj5 = { style: tmp4.container, children: null };
-      const items = [tmp5, tmp8, tmp11];
-      obj5.children = items;
-      const tmp15 = React4(View, obj5);
+      const obj5 = { style: tmp4.container, children: items };
+      items = [tmp5, tmp8, tmp11];
+      const tmp15 = React3(View, obj5);
       cResult[6] = tmp4.container;
       cResult[7] = tmp5;
       cResult[8] = tmp8;
@@ -92,57 +96,66 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = tmp15;
     }
   : (arg0) => {
+      let description;
+      let error;
+      let heading;
+      let items;
       ({ heading, description, error } = arg0);
-      const obj = { style: closure_5().container, children: null };
       let tmp3 = null;
+      const obj = { style: closure_5().container, children: items };
       if (null != heading) {
         const obj2 = { variant: "heading-md/semibold", color: "text-default", children: heading };
-        tmp3 = React3(Text_Text.Heading, obj2);
+        tmp3 = _false(Text_Text.Heading, obj2);
       }
-      const items = [tmp3, ,];
+      items = [tmp3, ,];
       let tmp7 = null;
       if (null != description) {
         const obj3 = { variant: "text-sm/normal", color: "text-muted", children: description };
-        tmp7 = React3(Text_Text.Text, obj3);
+        tmp7 = _false(Text_Text.Text, obj3);
       }
       items[1] = tmp7;
       let tmp11 = null;
       if (null != error) {
         const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: error };
-        tmp11 = React3(Text_Text.Text, obj4);
+        tmp11 = _false(Text_Text.Text, obj4);
       }
       items[2] = tmp11;
-      obj.children = items;
-      return React4(View, obj);
+      return React3(View, obj);
     };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/frames/native/FrameSurfaceState.tsx");
-
-export const FrameSurfaceExplanation = tmp4;
-export const FrameSurfaceLoading = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(3);
+      let first;
+      let tmp8;
+      const obj = react2;
+      const cResult = obj.c(3);
       const tmp4 = closure_5();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = React3(ActivityIndicator_ActivityIndicator.ActivityIndicator, {});
+        const tmp7 = _false(ActivityIndicator_ActivityIndicator.ActivityIndicator, {});
         cResult[0] = tmp7;
-        let first = tmp7;
+        first = tmp7;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== tmp4.container) {
         const obj2 = { style: tmp4.container, children: first };
-        const tmp11 = React3(View, obj2);
+        const tmp11 = _false(View, obj2);
         cResult[1] = tmp4.container;
         cResult[2] = tmp11;
-        let tmp8 = tmp11;
+        tmp8 = tmp11;
       } else {
         tmp8 = cResult[2];
       }
       return tmp8;
     }
-  : () =>
-      React3(View, {
+  : () => {
+      const obj = {
         style: closure_5().container,
-        children: React3(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}),
-      });
+        children: _false(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}),
+      };
+      return _false(View, obj);
+    };
+const result = size.fileFinishedImporting("modules/frames/native/FrameSurfaceState.tsx");
+
+export const FrameSurfaceExplanation = tmp4;
+export const FrameSurfaceLoading = tmp5;

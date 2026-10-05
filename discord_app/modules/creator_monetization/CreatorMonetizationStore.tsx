@@ -1,77 +1,98 @@
 // discord_app/modules/creator_monetization/CreatorMonetizationStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
+
+let set, set2;
 
 let map = new Map();
 let map1 = new Map();
 const FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
-const Store = initializeDefault.Store;
-class CreatorMonetizationStore extends Store {}
+const Store = get_initializedDefault.Store;
+class CreatorMonetizationStore extends Store {
+  getPriceTiersFetchStateForGuildAndType(arg0, arg1) {
+    const value = map1.get(arg0);
+    let value2;
+    if (value != null) {
+      value2 = value.get(arg1);
+    }
+    if (value2 == null) {
+      value2 = obj.NOT_FETCHED;
+    }
+    return value2;
+  }
+  getPriceTiersForGuildAndType(arg0, arg1) {
+    const value = map.get(arg0);
+    let value2;
+    if (value != null) {
+      value2 = value.get(arg1);
+    }
+    return value2;
+  }
+}
 const prototype = CreatorMonetizationStore.prototype;
-prototype["getPriceTiersFetchStateForGuildAndType"] = function getPriceTiersFetchStateForGuildAndType(arg0, arg1) {
-  value = map1.get(arg0);
-  value2 = undefined;
-  if (value != null) {
-    value2 = value.get(arg1);
-  }
-  if (value2 == null) {
-    value2 = obj.NOT_FETCHED;
-  }
-  return value2;
-};
-prototype["getPriceTiersForGuildAndType"] = function getPriceTiersForGuildAndType(arg0, arg1) {
-  value = map.get(arg0);
-  value2 = undefined;
-  if (value != null) {
-    value2 = value.get(arg1);
-  }
-  return value2;
-};
 CreatorMonetizationStore.displayName = "CreatorMonetizationStore";
-const creatorMonetizationStore = new CreatorMonetizationStore(DispatcherDefault, {
+const obj2 = {
   CONNECTION_OPEN: function handleConnectionOpen() {
     map.clear();
     map1.clear();
   },
   CREATOR_MONETIZATION_PRICE_TIERS_FETCH: function handleFetchPriceTiers(guildId) {
     guildId = guildId.guildId;
+    const priceTierType = guildId.priceTierType;
     if (!map1.has(guildId)) {
       const _Map = Map;
+      const self = this;
+      const self2 = this;
+      set = map1.set;
       map = new Map();
-      const result = map1.set(guildId, map);
+      const result = set(guildId, map);
     }
-    value = map1.get(guildId);
-    const result1 = value.set(guildId.priceTierType, map1.FETCHING);
+    const value = map1.get(guildId);
+    const result1 = value.set(priceTierType, map1.FETCHING);
   },
   CREATOR_MONETIZATION_PRICE_TIERS_FETCH_SUCCESS: function handleFetchPriceTiersSuccess(priceTiers) {
+    let guildId;
+    let priceTierType;
     ({ guildId, priceTierType } = priceTiers);
+    priceTiers = priceTiers.priceTiers;
     if (!map1.has(guildId)) {
       const _Map = Map;
+      const self = this;
+      const self2 = this;
+      set = map1.set;
       map = new Map();
-      const result = obj.set(guildId, map);
+      const result = set(guildId, map);
     }
-    value = obj.get(guildId);
+    const value = obj.get(guildId);
     const result1 = value.set(priceTierType, obj.FETCHED);
     if (!map.has(guildId)) {
       const _Map2 = Map;
+      const self3 = this;
+      const self4 = this;
+      set2 = map.set;
       map1 = new Map();
-      const result2 = obj3.set(guildId, map1);
+      set2(guildId, map1);
     }
-    value2 = obj3.get(guildId);
-    const result3 = value2.set(priceTierType, priceTiers.priceTiers);
+    const value2 = obj3.get(guildId);
+    const result2 = value2.set(priceTierType, priceTiers);
   },
   CREATOR_MONETIZATION_PRICE_TIERS_FETCH_FAILURE: function handleFetchPriceTiersFailure(guildId) {
     guildId = guildId.guildId;
+    const priceTierType = guildId.priceTierType;
     if (!map1.has(guildId)) {
       const _Map = Map;
+      const self = this;
+      const self2 = this;
+      set = map1.set;
       map = new Map();
-      const result = map1.set(guildId, map);
+      const result = set(guildId, map);
     }
-    value = map1.get(guildId);
-    const result1 = value.set(guildId.priceTierType, map1.FETCHED);
+    const value = map1.get(guildId);
+    const result1 = value.set(priceTierType, map1.FETCHED);
   },
-});
-const size = fn(2);
+};
+const creatorMonetizationStore = new CreatorMonetizationStore(DispatcherDefault, obj2);
 let result = size.fileFinishedImporting("modules/creator_monetization/CreatorMonetizationStore.tsx");
 
 export default creatorMonetizationStore;

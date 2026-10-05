@@ -1,106 +1,125 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UsersFastList.tsx
-import c from "../../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import ThemedGradientDefault from "../../../../client_themes/native/ThemedGradient.tsx";
-import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRow2 from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import ClientThemesOverrides from "../../../../client_themes/native/ClientThemesOverrides.tsx";
 import useFastestListTableRowPlaceholderConfig from "../../../../fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx";
 import UserRowDefault from "UserRow.tsx";
 import GroupDMRowDefault from "GroupDMRow.tsx";
 import ChannelRowDefault from "ChannelRow.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../../../_runtime/00019_react.js";
+import UsersFastListConstants from "UsersFastListConstants.tsx";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
 const ReanimatedRexportDefault = ReanimatedRexport;
+let dependencyMap, tmp3;
 
-require = fn;
-const View = fn(17).View;
-const UsersFastListConstants = fn(10599);
+let c9;
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+let obj7;
+let rect;
+let react = react_mod;
+let View = react_native.View;
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = UsersFastListConstants.USERS_LIST_PADDING_BETWEEN_SECTIONS;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4890);
+const USERS_LIST_SECTION_BOTTOM_PADDING = UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING;
+({ jsx: metroImportDefault, jsxs: metroImportAll, Fragment: c9 } = Fragment);
+let createStyles = createStyles_mod;
 let obj = {
-  sectionHeader: { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING },
-  stickyHeader: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
-  list: null,
-  emptySection: null,
-  section: null,
-  interactiveSection: null,
-  titlePressable: null,
-  titleRow: null,
-  badgeWrapper: null,
-  badge: null,
+  sectionHeader: obj2,
+  stickyHeader: obj3,
+  list: obj4,
+  emptySection: { paddingBottom: USERS_LIST_PADDING_BETWEEN_SECTIONS },
+  section: {
+    flex: 1,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
+    justifyContent: "space-between",
+    paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS,
+    textTransform: "none",
+  },
+  interactiveSection: obj5,
+  titlePressable: obj6,
+  titleRow: obj7,
+  badgeWrapper: { height: "100%" },
+  badge: rect,
 };
-let obj3 = { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING };
-let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-obj.list = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: 16 };
-obj.emptySection = { paddingBottom: USERS_LIST_PADDING_BETWEEN_SECTIONS };
-obj.section = {
-  flex: 1,
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "flex-start",
-  justifyContent: "space-between",
-  paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS,
-  textTransform: "none",
-};
-let obj5 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: 16 };
-obj.interactiveSection = { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS - nativeDefault.space.PX_8 };
-let obj6 = { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS - nativeDefault.space.PX_8 };
-obj.titlePressable = { paddingVertical: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8 };
-let obj7 = { paddingVertical: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8 };
-obj.titleRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-obj.badgeWrapper = { height: "100%" };
-const rect = { position: "absolute", left: nativeDefault.space.PX_4 + nativeDefault.space.PX_4 / 2, top: 5 };
-obj.badge = rect;
-let closure_10 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
+obj2 = { flex: 1, overflow: "hidden", top: -1 * USERS_LIST_SECTION_BOTTOM_PADDING };
+obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createStyles = createStyles.createStyles;
+obj4 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: 16 };
+obj5 = { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS - nativeDefault.space.PX_8 };
+obj6 = { paddingVertical: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8 };
+obj7 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+rect = { position: "absolute", left: nativeDefault.space.PX_4 + nativeDefault.space.PX_4 / 2, top: 5 };
+let closure_10 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(11);
+      let end;
+      let first;
+      let items;
+      let start;
+      let obj = react2;
+      const cResult = obj.c(11);
       ({ start, end } = arg0);
-      const fastestListTableRowPlaceholderStyles =
-        useFastestListTableRowPlaceholderConfig.useFastestListTableRowPlaceholderStyles();
+      const obj2 = useFastestListTableRowPlaceholderConfig;
+      const fastestListTableRowPlaceholderStyles = obj2.useFastestListTableRowPlaceholderStyles();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n() {
-          return { width: `${(10 + 80 * Math.random()) | 0}%` };
+          const obj = { width: `${(10 + 80 * Math.random()) | 0}%` };
+          return obj;
         };
         cResult[0] = fn;
-        let first = fn;
+        first = fn;
       } else {
         first = cResult[0];
       }
-      const first1 = _slicedToArray(noop.useState(first), 1)[0];
+      const first1 = _slicedToArray(react.useState(first), 1)[0];
       if (cResult[1] === fastestListTableRowPlaceholderStyles.placeholderUsername) {
+        let tmp7;
+        let tmp9;
         if (cResult[2] === first1) {
-          let tmp7 = cResult[3];
+          tmp7 = cResult[3];
         }
         if (cResult[4] !== fastestListTableRowPlaceholderStyles.placeholderAvatar) {
           const obj3 = { style: fastestListTableRowPlaceholderStyles.placeholderAvatar };
-          const tmp12 = React5(View, obj3);
+          const tmp12 = metroImportDefault(View, obj3);
           cResult[4] = fastestListTableRowPlaceholderStyles.placeholderAvatar;
           cResult[5] = tmp12;
-          let tmp9 = tmp12;
+          tmp9 = tmp12;
         } else {
           tmp9 = cResult[5];
         }
         if (cResult[6] === end) {
           if (cResult[7] === start) {
             if (cResult[8] === tmp7) {
+              let tmp13;
               if (cResult[9] === tmp9) {
-                let tmp13 = cResult[10];
+                tmp13 = cResult[10];
               }
               return tmp13;
             }
           }
         }
         const obj4 = { end, start, label: tmp7, icon: tmp9, height: "100%" };
-        const tmp15 = React5(TableRow.TableRow, obj4);
+        const tmp15 = metroImportDefault(TableRow2.TableRow, obj4);
         cResult[6] = end;
         cResult[7] = start;
         cResult[8] = tmp7;
@@ -108,47 +127,61 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = tmp15;
         tmp13 = tmp15;
       }
-      const obj5 = { style: null };
-      const items = [fastestListTableRowPlaceholderStyles.placeholderUsername, first1];
-      obj5.style = items;
-      const tmp8 = React5(View, obj5);
+      const obj5 = { style: items };
+      items = [fastestListTableRowPlaceholderStyles.placeholderUsername, first1];
+      const tmp8 = metroImportDefault(View, obj5);
       cResult[1] = fastestListTableRowPlaceholderStyles.placeholderUsername;
       cResult[2] = first1;
       cResult[3] = tmp8;
       tmp7 = tmp8;
     }
   : (arg0) => {
+      let end;
+      let items;
+      let obj3;
+      let obj4;
+      let start;
       ({ start, end } = arg0);
-      const fastestListTableRowPlaceholderStyles =
-        useFastestListTableRowPlaceholderConfig.useFastestListTableRowPlaceholderStyles();
-      const obj2 = { end, start, label: null, icon: null, height: "100%" };
-      const obj3 = { style: null };
-      const items = [
+      let obj = useFastestListTableRowPlaceholderConfig;
+      const fastestListTableRowPlaceholderStyles = obj.useFastestListTableRowPlaceholderStyles();
+      const obj2 = {
+        end,
+        start,
+        label: metroImportDefault(View, obj3),
+        icon: metroImportDefault(View, obj4),
+        height: "100%",
+      };
+      obj3 = { style: items };
+      items = [
         fastestListTableRowPlaceholderStyles.placeholderUsername,
         _slicedToArray(
-          noop.useState(() => ({ width: `${(10 + 80 * Math.random()) | 0}%` })),
+          react.useState(() => {
+            const obj = { width: `${(10 + 80 * Math.random()) | 0}%` };
+            return obj;
+          }),
           1,
         )[0],
       ];
-      obj3.style = items;
-      obj2.label = React5(View, obj3);
-      obj2.icon = React5(View, { style: fastestListTableRowPlaceholderStyles.placeholderAvatar });
-      return React5(TableRow.TableRow, obj2);
+      const TableRow = TableRow2.TableRow;
+      obj4 = { style: fastestListTableRowPlaceholderStyles.placeholderAvatar };
+      return metroImportDefault(TableRow, obj2);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(1);
+      let first;
+      const obj = react2;
+      const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp5 = React5(View, {});
+        const tmp5 = metroImportDefault(View, {});
         cResult[0] = tmp5;
-        let first = tmp5;
+        first = tmp5;
       } else {
         first = cResult[0];
       }
       return first;
     }
-  : () => React5(View, {});
+  : () => metroImportDefault(View, {});
 const __initData = {
   code: "function UsersFastListTsx1(){const{scrollPosValue,stickyAt}=this.__closure;var _scrollPosValue;const scrollPos=(_scrollPosValue=scrollPosValue)===null||_scrollPosValue===void 0?void 0:_scrollPosValue.get();if(scrollPos==null||stickyAt==null){return false;}return scrollPos>=stickyAt;}",
 };
@@ -167,11 +200,26 @@ const __initData5 = {
 const __initData6 = {
   code: "function UsersFastListTsx6(){const{isSticky}=this.__closure;return{opacity:isSticky.get()?1:0};}",
 };
-ReactCompilerGating = fn(558);
-let closure_19 = noop.memo(
+ReactCompilerGating = ReactCompilerGating_mod;
+let closure_19 = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (stickyAt) => {
-        const cResult = c.c(40);
+        let action;
+        let actionTitle;
+        let badge;
+        let colorOverride;
+        let disableStickySections;
+        let disableThemedGradient;
+        let items1;
+        let items3;
+        let obj9;
+        let onTitlePress;
+        let scrollPosValue;
+        let title;
+        let titleLeading;
+        let tmp5;
+        const obj = react2;
+        const cResult = obj.c(40);
         ({ title, colorOverride, actionTitle, action, badge, scrollPosValue } = stickyAt);
         stickyAt = stickyAt.stickyAt;
         ({ disableStickySections, disableThemedGradient, titleLeading, onTitlePress } = stickyAt);
@@ -180,21 +228,24 @@ let closure_19 = noop.memo(
         if (cResult[0] !== colorOverride) {
           let tmp7 = null != colorOverride;
           if (tmp7) {
+            tmp7 = { color: colorOverride };
             const obj2 = { color: colorOverride };
-            tmp7 = obj2;
           }
           cResult[0] = colorOverride;
           cResult[1] = tmp7;
-          let tmp5 = tmp7;
+          tmp5 = tmp7;
         } else {
           tmp5 = cResult[1];
         }
-        const clientThemesOverride = ClientThemesOverrides.useClientThemesOverride();
+        const tmpResult = ClientThemesOverrides;
+        const clientThemesOverride = tmpResult.useClientThemesOverride();
         if (cResult[2] === tmp4.section) {
-          if (cResult[3] === tmp9) {
+          if (cResult[3] === (null != onTitlePress && tmp4.interactiveSection)) {
+            let tmp10;
             if (cResult[4] === clientThemesOverride) {
-              let tmp10 = cResult[5];
+              tmp10 = cResult[5];
             }
+            const tmpResult4 = ReanimatedRexport;
             class E {
               constructor() {
                 obj = scrollPosValue;
@@ -218,8 +269,8 @@ let closure_19 = noop.memo(
             E.__closure = obj3;
             E.__workletHash = 15448160320615;
             E.__initData = __initData;
-            const derivedValue = ReanimatedRexport.useDerivedValue(E);
-            const tmpResult4 = ReanimatedRexport;
+            const derivedValue = tmpResult4.useDerivedValue(E);
+            const tmpResult5 = ReanimatedRexport;
             class O {
               constructor() {
                 backgroundColor = "transparent";
@@ -234,11 +285,13 @@ let closure_19 = noop.memo(
             O.__closure = obj4;
             O.__workletHash = 11315917458152;
             O.__initData = __initData2;
-            const animatedStyle = ReanimatedRexport.useAnimatedStyle(O);
+            const animatedStyle = tmpResult5.useAnimatedStyle(O);
             if (cResult[6] === animatedStyle) {
+              let tmp15;
               if (cResult[7] === tmp4.sectionHeader) {
-                let tmp15 = cResult[8];
+                tmp15 = cResult[8];
               }
+              const tmpResult6 = ReanimatedRexport;
               class M {
                 constructor() {
                   opacity = 0;
@@ -252,9 +305,10 @@ let closure_19 = noop.memo(
               M.__closure = obj5;
               M.__workletHash = 13270974904859;
               M.__initData = __initData3;
-              const animatedStyle1 = ReanimatedRexport.useAnimatedStyle(M);
+              const animatedStyle1 = tmpResult6.useAnimatedStyle(M);
               if (null == title) {
                 if (null == actionTitle) {
+                  let tmp43;
                   if (cResult[9] !== tmp4.emptySection) {
                     class M {
                       constructor() {
@@ -266,10 +320,10 @@ let closure_19 = noop.memo(
                       }
                     }
                     tmp46[0] = tmp4.emptySection;
-                    const tmp47 = React5(View, tmp46);
+                    const tmp47 = metroImportDefault(View, tmp46);
                     cResult[9] = tmp4.emptySection;
                     cResult[10] = tmp47;
-                    let tmp43 = tmp47;
+                    tmp43 = tmp47;
                   } else {
                     tmp43 = cResult[10];
                   }
@@ -278,39 +332,50 @@ let closure_19 = noop.memo(
               }
               if (cResult[11] === badge) {
                 if (cResult[12] === tmp4.badge) {
+                  let tmp18;
                   if (cResult[13] === tmp4.badgeWrapper) {
-                    let tmp18 = cResult[14];
+                    tmp18 = cResult[14];
                   }
                   if (cResult[15] === tmp18) {
                     if (cResult[16] === tmp5) {
+                      let tmp20;
+                      let tmp23;
                       if (cResult[17] === title) {
-                        let tmp20 = cResult[18];
+                        tmp20 = cResult[18];
                       }
                       if (cResult[19] === tmp4.titleRow) {
                         if (cResult[20] === titleLeading) {
+                          let tmp22;
+                          let tmp28;
                           if (cResult[21] === tmp20) {
-                            let tmp22 = cResult[22];
+                            tmp22 = cResult[22];
                           }
                           if (cResult[23] === onTitlePress) {
                             if (cResult[24] === tmp4.titlePressable) {
+                              let tmp27;
+                              let tmp31;
                               if (cResult[25] === tmp22) {
-                                let tmp27 = cResult[26];
+                                tmp27 = cResult[26];
                               }
                               if (cResult[27] === action) {
+                                let tmp30;
                                 if (cResult[28] === actionTitle) {
-                                  let tmp30 = cResult[29];
+                                  tmp30 = cResult[29];
                                 }
                                 if (cResult[30] === tmp10) {
                                   if (cResult[31] === tmp30) {
+                                    let tmp33;
+                                    let tmp38Result;
                                     if (cResult[32] === tmp27) {
-                                      let tmp33 = cResult[33];
+                                      tmp33 = cResult[33];
                                     }
                                     if (cResult[34] === animatedStyle1) {
                                       if (cResult[35] === disableStickySections) {
                                         if (cResult[36] === disableThemedGradient) {
                                           if (cResult[37] === tmp33) {
+                                            let tmp36;
                                             if (cResult[38] === tmp15) {
-                                              let tmp36 = cResult[39];
+                                              tmp36 = cResult[39];
                                             }
                                             return tmp36;
                                           }
@@ -338,8 +403,17 @@ let closure_19 = noop.memo(
                                       }
                                       tmp40[0] = tmp15;
                                       let tmp41 = !disableThemedGradient;
+                                      View = ReanimatedRexportDefault.View;
                                       if (!disableThemedGradient) {
-                                        const obj6 = { style: null, children: null };
+                                        const obj6 = {
+                                          style: null,
+                                          children: metroImportDefault(ThemedGradientDefault, {
+                                            absolute: true,
+                                            tall: true,
+                                            wide: true,
+                                            mix: true,
+                                          }),
+                                        };
                                         class M {
                                           constructor() {
                                             opacity = 0;
@@ -349,17 +423,12 @@ let closure_19 = noop.memo(
                                             return { opacity };
                                           }
                                         }
-                                        obj6.children = React5(ThemedGradientDefault, {
-                                          absolute: true,
-                                          tall: true,
-                                          wide: true,
-                                          mix: true,
-                                        });
-                                        tmp41 = React5(ReanimatedRexportDefault.View, obj6);
+                                        const View2 = ReanimatedRexportDefault.View;
+                                        tmp41 = metroImportDefault(View2, obj6);
                                       }
                                       const items = [tmp41, tmp33];
                                       tmp40[1] = items;
-                                      const tmp38Result = closure_1_8(ReanimatedRexportDefault.View, tmp40);
+                                      tmp38Result = metroImportAll(View, tmp40);
                                     }
                                     cResult[34] = animatedStyle1;
                                     cResult[35] = disableStickySections;
@@ -389,10 +458,9 @@ let closure_19 = noop.memo(
                                     return { opacity };
                                   }
                                 }
-                                const obj7 = { style: tmp10, children: null };
-                                const items1 = [tmp27, tmp30];
-                                obj7.children = items1;
-                                const tmp35 = closure_1_8(View, obj7);
+                                const obj7 = { style: tmp10, children: items1 };
+                                items1 = [tmp27, tmp30];
+                                const tmp35 = metroImportAll(View, obj7);
                                 cResult[30] = tmp10;
                                 class O {
                                   constructor() {
@@ -418,7 +486,7 @@ let closure_19 = noop.memo(
                                 }
                               }
                               if (null != actionTitle) {
-                                const obj8 = { onPress: null, children: null };
+                                const obj8 = { onPress: null, children: metroImportDefault(Text_Text.Text, obj9) };
                                 class M {
                                   constructor() {
                                     opacity = 0;
@@ -428,13 +496,9 @@ let closure_19 = noop.memo(
                                     return { opacity };
                                   }
                                 }
-                                const obj9 = {
-                                  variant: "text-sm/semibold",
-                                  color: "text-brand",
-                                  children: actionTitle,
-                                };
-                                obj8.children = React5(Text_Text.Text, obj9);
-                                const tmp31 = React5(Pressables.PressableOpacity, obj8);
+                                const PressableOpacity = Pressables.PressableOpacity;
+                                obj9 = { variant: "text-sm/semibold", color: "text-brand", children: actionTitle };
+                                tmp31 = metroImportDefault(PressableOpacity, obj8);
                               }
                               cResult[27] = action;
                               cResult[28] = actionTitle;
@@ -452,7 +516,12 @@ let closure_19 = noop.memo(
                             }
                           }
                           if (null != onTitlePress) {
-                            const obj10 = { accessibilityRole: "button", style: null, onPress: null, children: null };
+                            const obj10 = {
+                              accessibilityRole: "button",
+                              style: null,
+                              onPress: onTitlePress,
+                              children: tmp22,
+                            };
                             class M {
                               constructor() {
                                 opacity = 0;
@@ -462,9 +531,7 @@ let closure_19 = noop.memo(
                                 return { opacity };
                               }
                             }
-                            obj10.onPress = onTitlePress;
-                            obj10.children = tmp22;
-                            const tmp28 = React5(Pressables.PressableOpacity, obj10);
+                            tmp28 = metroImportDefault(Pressables.PressableOpacity, obj10);
                           }
                           cResult[23] = onTitlePress;
                           cResult[24] = tmp4.titlePressable;
@@ -495,7 +562,7 @@ let closure_19 = noop.memo(
                         tmp26[0] = tmp4.titleRow;
                         const items2 = [titleLeading, tmp20];
                         tmp26[1] = items2;
-                        const tmp23 = closure_1_8(View, tmp26);
+                        tmp23 = metroImportAll(View, tmp26);
                       }
                       cResult[19] = tmp4.titleRow;
                       cResult[20] = titleLeading;
@@ -519,11 +586,10 @@ let closure_19 = noop.memo(
                     variant: "text-md/medium",
                     color: "text-subtle",
                     style: tmp5,
-                    children: null,
+                    children: items3,
                   };
-                  const items3 = [title, tmp18];
-                  obj11.children = items3;
-                  const tmp21 = closure_1_8(Text_Text.Text, obj11);
+                  items3 = [title, tmp18];
+                  const tmp21 = metroImportAll(Text_Text.Text, obj11);
                   cResult[15] = tmp18;
                   cResult[16] = tmp5;
                   class O {
@@ -556,14 +622,12 @@ let closure_19 = noop.memo(
               cResult[13] = tmp4.badgeWrapper;
               cResult[14] = null;
               tmp18 = tmp19;
-              const tmpResult6 = ReanimatedRexport;
             }
             const items4 = [tmp4.sectionHeader, animatedStyle];
             cResult[6] = animatedStyle;
             cResult[7] = tmp4.sectionHeader;
             cResult[8] = items4;
             tmp15 = items4;
-            const tmpResult5 = ReanimatedRexport;
           }
         }
         const items5 = [tmp4.section, null != onTitlePress && tmp4.interactiveSection, clientThemesOverride];
@@ -572,9 +636,24 @@ let closure_19 = noop.memo(
         cResult[4] = clientThemesOverride;
         cResult[5] = items5;
         tmp10 = items5;
-        const tmpResult = ClientThemesOverrides;
       }
     : (stickyAt) => {
+        let action;
+        let actionTitle;
+        let badge;
+        let colorOverride;
+        let disableStickySections;
+        let disableThemedGradient;
+        let items3;
+        let items4;
+        let items5;
+        let items6;
+        let obj13;
+        let obj8;
+        let onTitlePress;
+        let scrollPosValue;
+        let title;
+        let titleLeading;
         ({ title, colorOverride } = stickyAt);
         ({ actionTitle, badge, scrollPosValue } = stickyAt);
         stickyAt = stickyAt.stickyAt;
@@ -582,48 +661,43 @@ let closure_19 = noop.memo(
         let animatedStyle;
         ({ action, disableStickySections } = stickyAt);
         const tmp = closure_10();
-        noop = tmp;
+        react = tmp;
         let items = [colorOverride];
-        const memo = noop.useMemo(() => {
+        const memo = react.useMemo(() => {
           let tmp2 = null != colorOverride;
           if (tmp2) {
+            tmp2 = { color: tmp };
             const obj = { color: tmp };
-            tmp2 = obj;
           }
           return tmp2;
         }, items);
-        const clientThemesOverride = ClientThemesOverrides.useClientThemesOverride();
+        let obj = ClientThemesOverrides;
+        const clientThemesOverride = obj.useClientThemesOverride();
         const items1 = [, , ,];
         ({ section: arr2[0], interactiveSection: arr2[1] } = tmp);
         items1[2] = onTitlePress;
         items1[3] = clientThemesOverride;
-        const memo1 = noop.useMemo(() => {
+        const memo1 = react.useMemo(() => {
           const items = [closure_4.section, null != onTitlePress && closure_4.interactiveSection, clientThemesOverride];
           return items;
         }, items1);
         const fn = function x() {
-          value = undefined;
+          let value;
           if (scrollPosValue != null) {
             value = scrollPosValue.get();
           }
-          let tmp2 = null != value;
-          if (tmp2) {
-            tmp2 = null != stickyAt;
-          }
-          if (tmp2) {
-            tmp2 = value >= stickyAt;
-          }
-          return tmp2;
+          return null != value && null != stickyAt && value >= stickyAt;
         };
         fn.__closure = { scrollPosValue, stickyAt };
         fn.__workletHash = 1305370085058;
         fn.__initData = __initData4;
-        const derivedValue = ReanimatedRexport.useDerivedValue(fn);
+        const obj2 = ReanimatedRexport;
+        const derivedValue = obj2.useDerivedValue(fn);
+        const obj3 = ReanimatedRexport;
         class C {
           constructor() {
-            backgroundColor = "transparent";
-            if (closure_6.get()) {
-              tmp = closure_4;
+            let backgroundColor = "transparent";
+            if (derivedValue.get()) {
               backgroundColor = closure_4.stickyHeader.backgroundColor;
             }
             return { backgroundColor };
@@ -632,16 +706,17 @@ let closure_19 = noop.memo(
         C.__closure = { isSticky: derivedValue, styles: tmp };
         C.__workletHash = 2763129547727;
         C.__initData = __initData5;
-        animatedStyle = ReanimatedRexport.useAnimatedStyle(C);
+        animatedStyle = obj3.useAnimatedStyle(C);
         const items2 = [tmp.sectionHeader, animatedStyle];
-        const memo2 = noop.useMemo(() => {
+        const memo2 = react.useMemo(() => {
           const items = [closure_4.sectionHeader, animatedStyle];
           return items;
         }, items2);
+        const obj4 = ReanimatedRexport;
         class H {
           constructor() {
-            opacity = 0;
-            if (closure_6.get()) {
+            let opacity = 0;
+            if (derivedValue.get()) {
               opacity = 1;
             }
             return { opacity };
@@ -650,11 +725,11 @@ let closure_19 = noop.memo(
         H.__closure = { isSticky: derivedValue };
         H.__workletHash = 9025735048830;
         H.__initData = __initData6;
-        const animatedStyle1 = ReanimatedRexport.useAnimatedStyle(H);
+        const animatedStyle1 = obj4.useAnimatedStyle(H);
         if (null == title) {
           if (null == actionTitle) {
             const obj5 = { style: tmp.emptySection };
-            return React5(View, obj5);
+            return metroImportDefault(View, obj5);
           }
         }
         const obj6 = {
@@ -663,25 +738,23 @@ let closure_19 = noop.memo(
           variant: "text-md/medium",
           color: "text-subtle",
           style: memo,
-          children: null,
+          children: items3,
         };
-        const items3 = [title];
+        items3 = [title];
         let tmp12 = null;
+        const Text = Text_Text.Text;
         if (null != badge) {
-          const obj7 = { style: tmp.badgeWrapper, children: null };
-          const obj8 = { style: tmp.badge, value: badge };
-          obj7.children = React5(native.Badge, obj8);
-          tmp12 = React5(View, obj7);
+          const obj7 = { style: tmp.badgeWrapper, children: metroImportDefault(native.Badge, obj8) };
+          obj8 = { style: tmp.badge, value: badge };
+          tmp12 = metroImportDefault(View, obj7);
         }
         items3[1] = tmp12;
-        obj6.children = items3;
-        const tmp11Result = closure_1_8(Text_Text.Text, obj6);
+        const tmp11Result = metroImportAll(Text, obj6);
         let tmp11Result4 = tmp11Result;
         if (null != titleLeading) {
-          const obj9 = { style: tmp.titleRow, children: null };
-          const items4 = [titleLeading, tmp11Result];
-          obj9.children = items4;
-          tmp11Result4 = closure_1_8(View, obj9);
+          const obj9 = { style: tmp.titleRow, children: items4 };
+          items4 = [titleLeading, tmp11Result];
+          tmp11Result4 = metroImportAll(View, obj9);
         }
         let tmp18 = tmp11Result4;
         if (null != onTitlePress) {
@@ -691,47 +764,67 @@ let closure_19 = noop.memo(
             onPress: onTitlePress,
             children: tmp11Result4,
           };
-          tmp18 = React5(Pressables.PressableOpacity, obj10);
+          tmp18 = metroImportDefault(Pressables.PressableOpacity, obj10);
         }
-        const obj11 = { style: memo1, children: null };
-        const items5 = [tmp18];
+        const obj11 = { style: memo1, children: items5 };
+        items5 = [tmp18];
         let tmp21 = null;
+        const tmp20 = View;
         if (null != actionTitle) {
-          const obj12 = { onPress: action, children: null };
-          const obj13 = { variant: "text-sm/semibold", color: "text-brand", children: actionTitle };
-          obj12.children = React5(Text_Text.Text, obj13);
-          tmp21 = React5(Pressables.PressableOpacity, obj12);
+          const obj12 = { onPress: action, children: metroImportDefault(Text_Text.Text, obj13) };
+          const PressableOpacity = Pressables.PressableOpacity;
+          obj13 = { variant: "text-sm/semibold", color: "text-brand", children: actionTitle };
+          tmp21 = metroImportDefault(PressableOpacity, obj12);
         }
         items5[1] = tmp21;
-        obj11.children = items5;
-        const tmp11Result5 = closure_1_8(View, obj11);
+        const tmp11Result5 = metroImportAll(tmp20, obj11);
         let tmp11Result6 = tmp11Result5;
         if (!disableStickySections) {
-          const obj14 = { style: memo2, children: null };
           let tmp26 = !disableThemedGradient;
+          const obj14 = { style: memo2, children: items6 };
+          View = ReanimatedRexportDefault.View;
           if (!disableThemedGradient) {
             const obj15 = {
               style: animatedStyle1,
-              children: React5(ThemedGradientDefault, { absolute: true, tall: true, wide: true, mix: true }),
+              children: metroImportDefault(ThemedGradientDefault, {
+                absolute: true,
+                tall: true,
+                wide: true,
+                mix: true,
+              }),
             };
-            tmp26 = React5(ReanimatedRexportDefault.View, obj15);
+            const View2 = ReanimatedRexportDefault.View;
+            tmp26 = metroImportDefault(View2, obj15);
           }
-          const items6 = [tmp26, tmp11Result5];
-          obj14.children = items6;
-          tmp11Result6 = closure_1_8(ReanimatedRexportDefault.View, obj14);
+          items6 = [tmp26, tmp11Result5];
+          tmp11Result6 = metroImportAll(View, obj14);
         }
         return tmp11Result6;
       },
 );
-ReactCompilerGating = fn(558);
-let obj8 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UsersFastList.tsx");
-
-export const UsersFastList = noop.forwardRef(
+ReactCompilerGating = ReactCompilerGating_mod;
+const forwardRefResult = react.forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (getSectionProps, arg1) => {
-        const cResult = getItemProps(disableThemedGradient[8]).c(32);
+        let disableBackgroundOverlay;
+        let disableBottomSafeZone;
+        let disableStickySections;
+        let disableThemedGradient;
+        let getItemProps;
+        let getItemSize;
+        let inActionSheet;
+        let insetEnd;
+        let insetStart;
+        let keyExtractor;
+        let listHeaderSize;
+        let listStyleOverride;
+        let onContentLengthChange;
+        let onLayout;
+        let onScroll;
+        let renderListHeader;
+        let sections;
+        let obj = getItemProps(disableThemedGradient[8]);
+        const cResult = obj.c(32);
         ({ sections, getItemProps } = getSectionProps);
         getSectionProps = getSectionProps.getSectionProps;
         ({
@@ -754,398 +847,237 @@ export const UsersFastList = noop.forwardRef(
           listStyleOverride,
         } = getSectionProps);
         disableStickySections = tmp5;
+        const tmp4 = undefined !== disableBottomSafeZone && disableBottomSafeZone;
         const tmp6 = closure_10();
+        let tmp7 = getSectionProps;
+        let num2 = 0;
         if (!tmp4) {
-          getSectionProps(disableThemedGradient[17])().bottom;
+          num2 = getSectionProps(disableThemedGradient[17])().bottom;
         }
-        getSectionProps(disableThemedGradient[18])();
-        const tmp9 = getSectionProps(disableThemedGradient[19])();
-        closure_4 = tmp9;
+        tmp7(disableThemedGradient[18])();
+        const tmp9 = tmp7(disableThemedGradient[19])();
+        let closure_4 = tmp9;
         getItemProps(disableThemedGradient[11]);
         if (cResult[0] === (undefined !== disableStickySections && disableStickySections)) {
           if (cResult[1] === disableThemedGradient) {
             if (cResult[4] !== getItemProps) {
               class X {
-                constructor(arg0, arg1) {
-                  element = getItemProps(getSectionProps, arg1);
-                  type = undefined;
+                constructor(disableThemedGradient, arg1) {
+                  const element = getItemProps(disableThemedGradient, arg1);
+                  let type;
                   if (element != null) {
                     type = element.type;
                   }
                   if ("user" === type) {
-                    tmp20 = jsx;
-                    tmp21 = closure_1;
-                    tmp22 = closure_2;
-                    obj1 = {};
-                    tmp24 = obj1;
-                    tmp23 = closure_1(closure_2[20]);
-                    merged = Object.assign(element.props);
-                    return jsx(tmp23, obj1);
+                    const obj2 = {};
+                    const tmp23 = UserRowDefault;
+                    const merged = Object.assign(element.props);
+                    return metroImportDefault(tmp23, obj2);
+                  } else if ("placeholder" === type) {
+                    const obj3 = {};
+                    const merged1 = Object.assign(element.props);
+                    return metroImportDefault(closure_11, obj3);
+                  } else if ("gdm" === type) {
+                    const obj4 = {};
+                    const tmp13 = GroupDMRowDefault;
+                    const merged2 = Object.assign(element.props);
+                    return metroImportDefault(tmp13, obj4);
+                  } else if ("channel" === type) {
+                    const obj5 = {};
+                    const tmp7 = ChannelRowDefault;
+                    const merged3 = Object.assign(element.props);
+                    return metroImportDefault(tmp7, obj5);
+                  } else if ("custom" === type) {
+                    const obj = { children: element.component() };
+                    return metroImportDefault(React4, obj);
                   } else {
-                    str3 = "placeholder";
-                    if ("placeholder" === type) {
-                      tmp16 = jsx;
-                      tmp17 = f55321;
-                      obj6 = {};
-                      tmp18 = obj6;
-                      merged1 = Object.assign(element.props);
-                      return jsx(f55321, obj6);
-                    } else {
-                      str4 = "gdm";
-                      if ("gdm" === type) {
-                        tmp10 = jsx;
-                        tmp11 = closure_1;
-                        tmp12 = closure_2;
-                        obj7 = {};
-                        tmp14 = obj7;
-                        tmp13 = closure_1(closure_2[21]);
-                        merged2 = Object.assign(element.props);
-                        return jsx(tmp13, obj7);
-                      } else {
-                        str = "channel";
-                        if ("channel" === type) {
-                          tmp4 = jsx;
-                          tmp5 = closure_1;
-                          tmp6 = closure_2;
-                          obj8 = {};
-                          tmp8 = obj8;
-                          tmp7 = closure_1(closure_2[22]);
-                          merged3 = Object.assign(element.props);
-                          return jsx(tmp7, obj8);
-                        } else {
-                          str2 = "custom";
-                          if ("custom" === type) {
-                            tmp2 = jsx;
-                            tmp3 = Fragment;
-                            obj = { children: null };
-                            obj.children = element.component();
-                            return jsx(Fragment, obj);
-                          } else {
-                            return null;
-                          }
-                        }
-                      }
-                    }
+                    return null;
                   }
                 }
               }
               cResult[4] = getItemProps;
               class K {
                 constructor(arg0) {
-                  element = getSectionProps(getSectionProps);
-                  type = undefined;
+                  const element = getSectionProps(arg0);
+                  let type;
                   if (element != null) {
                     type = element.type;
                   }
                   if ("placeholder" === type) {
-                    tmp3 = closure_4;
                     return closure_4;
-                  } else {
-                    str = "section";
-                    if ("section" === type) {
-                      num2 = 0;
-                      if (element.props.hideTitle) {
-                        return 0;
-                      } else {
-                        tmp2 = null == element.props.title ? closure_6 : closure_4;
-                      }
-                    } else {
-                      num = 0;
-                      return 0;
+                  } else if ("section" === type) {
+                    let num2 = 0;
+                    if (!element.props.hideTitle) {
+                      num2 = null == element.props.title ? USERS_LIST_PADDING_BETWEEN_SECTIONS : closure_4;
                     }
+                    return num2;
+                  } else {
+                    return 0;
                   }
-                  return;
                 }
               }
               cResult[5] = X;
             } else {
               class X {
-                constructor(arg0, arg1) {
-                  element = getItemProps(getSectionProps, arg1);
-                  type = undefined;
+                constructor(disableThemedGradient, arg1) {
+                  const element = getItemProps(disableThemedGradient, arg1);
+                  let type;
                   if (element != null) {
                     type = element.type;
                   }
                   if ("user" === type) {
-                    tmp20 = jsx;
-                    tmp21 = closure_1;
-                    tmp22 = closure_2;
-                    obj1 = {};
-                    tmp24 = obj1;
-                    tmp23 = closure_1(closure_2[20]);
-                    merged = Object.assign(element.props);
-                    return jsx(tmp23, obj1);
+                    const obj2 = {};
+                    const tmp23 = UserRowDefault;
+                    const merged = Object.assign(element.props);
+                    return metroImportDefault(tmp23, obj2);
+                  } else if ("placeholder" === type) {
+                    const obj3 = {};
+                    const merged1 = Object.assign(element.props);
+                    return metroImportDefault(closure_11, obj3);
+                  } else if ("gdm" === type) {
+                    const obj4 = {};
+                    const tmp13 = GroupDMRowDefault;
+                    const merged2 = Object.assign(element.props);
+                    return metroImportDefault(tmp13, obj4);
+                  } else if ("channel" === type) {
+                    const obj5 = {};
+                    const tmp7 = ChannelRowDefault;
+                    const merged3 = Object.assign(element.props);
+                    return metroImportDefault(tmp7, obj5);
+                  } else if ("custom" === type) {
+                    const obj = { children: element.component() };
+                    return metroImportDefault(React4, obj);
                   } else {
-                    str3 = "placeholder";
-                    if ("placeholder" === type) {
-                      tmp16 = jsx;
-                      tmp17 = f55321;
-                      obj6 = {};
-                      tmp18 = obj6;
-                      merged1 = Object.assign(element.props);
-                      return jsx(f55321, obj6);
-                    } else {
-                      str4 = "gdm";
-                      if ("gdm" === type) {
-                        tmp10 = jsx;
-                        tmp11 = closure_1;
-                        tmp12 = closure_2;
-                        obj7 = {};
-                        tmp14 = obj7;
-                        tmp13 = closure_1(closure_2[21]);
-                        merged2 = Object.assign(element.props);
-                        return jsx(tmp13, obj7);
-                      } else {
-                        str = "channel";
-                        if ("channel" === type) {
-                          tmp4 = jsx;
-                          tmp5 = closure_1;
-                          tmp6 = closure_2;
-                          obj8 = {};
-                          tmp8 = obj8;
-                          tmp7 = closure_1(closure_2[22]);
-                          merged3 = Object.assign(element.props);
-                          return jsx(tmp7, obj8);
-                        } else {
-                          str2 = "custom";
-                          if ("custom" === type) {
-                            tmp2 = jsx;
-                            tmp3 = Fragment;
-                            obj = { children: null };
-                            obj.children = element.component();
-                            return jsx(Fragment, obj);
-                          } else {
-                            return null;
-                          }
-                        }
-                      }
-                    }
+                    return null;
                   }
                 }
               }
             }
             if (cResult[6] === getSectionProps) {
               class X {
-                constructor(arg0, arg1) {
-                  element = getItemProps(getSectionProps, arg1);
-                  type = undefined;
+                constructor(disableThemedGradient, arg1) {
+                  const element = getItemProps(disableThemedGradient, arg1);
+                  let type;
                   if (element != null) {
                     type = element.type;
                   }
                   if ("user" === type) {
-                    tmp20 = jsx;
-                    tmp21 = closure_1;
-                    tmp22 = closure_2;
-                    obj1 = {};
-                    tmp24 = obj1;
-                    tmp23 = closure_1(closure_2[20]);
-                    merged = Object.assign(element.props);
-                    return jsx(tmp23, obj1);
+                    const obj2 = {};
+                    const tmp23 = UserRowDefault;
+                    const merged = Object.assign(element.props);
+                    return metroImportDefault(tmp23, obj2);
+                  } else if ("placeholder" === type) {
+                    const obj3 = {};
+                    const merged1 = Object.assign(element.props);
+                    return metroImportDefault(closure_11, obj3);
+                  } else if ("gdm" === type) {
+                    const obj4 = {};
+                    const tmp13 = GroupDMRowDefault;
+                    const merged2 = Object.assign(element.props);
+                    return metroImportDefault(tmp13, obj4);
+                  } else if ("channel" === type) {
+                    const obj5 = {};
+                    const tmp7 = ChannelRowDefault;
+                    const merged3 = Object.assign(element.props);
+                    return metroImportDefault(tmp7, obj5);
+                  } else if ("custom" === type) {
+                    const obj = { children: element.component() };
+                    return metroImportDefault(React4, obj);
                   } else {
-                    str3 = "placeholder";
-                    if ("placeholder" === type) {
-                      tmp16 = jsx;
-                      tmp17 = f55321;
-                      obj6 = {};
-                      tmp18 = obj6;
-                      merged1 = Object.assign(element.props);
-                      return jsx(f55321, obj6);
-                    } else {
-                      str4 = "gdm";
-                      if ("gdm" === type) {
-                        tmp10 = jsx;
-                        tmp11 = closure_1;
-                        tmp12 = closure_2;
-                        obj7 = {};
-                        tmp14 = obj7;
-                        tmp13 = closure_1(closure_2[21]);
-                        merged2 = Object.assign(element.props);
-                        return jsx(tmp13, obj7);
-                      } else {
-                        str = "channel";
-                        if ("channel" === type) {
-                          tmp4 = jsx;
-                          tmp5 = closure_1;
-                          tmp6 = closure_2;
-                          obj8 = {};
-                          tmp8 = obj8;
-                          tmp7 = closure_1(closure_2[22]);
-                          merged3 = Object.assign(element.props);
-                          return jsx(tmp7, obj8);
-                        } else {
-                          str2 = "custom";
-                          if ("custom" === type) {
-                            tmp2 = jsx;
-                            tmp3 = Fragment;
-                            obj = { children: null };
-                            obj.children = element.component();
-                            return jsx(Fragment, obj);
-                          } else {
-                            return null;
-                          }
-                        }
-                      }
-                    }
+                    return null;
                   }
                 }
               }
               if (disableBackgroundOverlay) {
                 class X {
-                  constructor(arg0, arg1) {
-                    element = getItemProps(getSectionProps, arg1);
-                    type = undefined;
+                  constructor(disableThemedGradient, arg1) {
+                    const element = getItemProps(disableThemedGradient, arg1);
+                    let type;
                     if (element != null) {
                       type = element.type;
                     }
                     if ("user" === type) {
-                      tmp20 = jsx;
-                      tmp21 = closure_1;
-                      tmp22 = closure_2;
-                      obj1 = {};
-                      tmp24 = obj1;
-                      tmp23 = closure_1(closure_2[20]);
-                      merged = Object.assign(element.props);
-                      return jsx(tmp23, obj1);
+                      const obj2 = {};
+                      const tmp23 = UserRowDefault;
+                      const merged = Object.assign(element.props);
+                      return metroImportDefault(tmp23, obj2);
+                    } else if ("placeholder" === type) {
+                      const obj3 = {};
+                      const merged1 = Object.assign(element.props);
+                      return metroImportDefault(closure_11, obj3);
+                    } else if ("gdm" === type) {
+                      const obj4 = {};
+                      const tmp13 = GroupDMRowDefault;
+                      const merged2 = Object.assign(element.props);
+                      return metroImportDefault(tmp13, obj4);
+                    } else if ("channel" === type) {
+                      const obj5 = {};
+                      const tmp7 = ChannelRowDefault;
+                      const merged3 = Object.assign(element.props);
+                      return metroImportDefault(tmp7, obj5);
+                    } else if ("custom" === type) {
+                      const obj = { children: element.component() };
+                      return metroImportDefault(React4, obj);
                     } else {
-                      str3 = "placeholder";
-                      if ("placeholder" === type) {
-                        tmp16 = jsx;
-                        tmp17 = f55321;
-                        obj6 = {};
-                        tmp18 = obj6;
-                        merged1 = Object.assign(element.props);
-                        return jsx(f55321, obj6);
-                      } else {
-                        str4 = "gdm";
-                        if ("gdm" === type) {
-                          tmp10 = jsx;
-                          tmp11 = closure_1;
-                          tmp12 = closure_2;
-                          obj7 = {};
-                          tmp14 = obj7;
-                          tmp13 = closure_1(closure_2[21]);
-                          merged2 = Object.assign(element.props);
-                          return jsx(tmp13, obj7);
-                        } else {
-                          str = "channel";
-                          if ("channel" === type) {
-                            tmp4 = jsx;
-                            tmp5 = closure_1;
-                            tmp6 = closure_2;
-                            obj8 = {};
-                            tmp8 = obj8;
-                            tmp7 = closure_1(closure_2[22]);
-                            merged3 = Object.assign(element.props);
-                            return jsx(tmp7, obj8);
-                          } else {
-                            str2 = "custom";
-                            if ("custom" === type) {
-                              tmp2 = jsx;
-                              tmp3 = Fragment;
-                              obj = { children: null };
-                              obj.children = element.component();
-                              return jsx(Fragment, obj);
-                            } else {
-                              return null;
-                            }
-                          }
-                        }
-                      }
+                      return null;
                     }
                   }
                 }
               }
               if (cResult[9] === listStyleOverride) {
                 class X {
-                  constructor(arg0, arg1) {
-                    element = getItemProps(getSectionProps, arg1);
-                    type = undefined;
+                  constructor(disableThemedGradient, arg1) {
+                    const element = getItemProps(disableThemedGradient, arg1);
+                    let type;
                     if (element != null) {
                       type = element.type;
                     }
                     if ("user" === type) {
-                      tmp20 = jsx;
-                      tmp21 = closure_1;
-                      tmp22 = closure_2;
-                      obj1 = {};
-                      tmp24 = obj1;
-                      tmp23 = closure_1(closure_2[20]);
-                      merged = Object.assign(element.props);
-                      return jsx(tmp23, obj1);
+                      const obj2 = {};
+                      const tmp23 = UserRowDefault;
+                      const merged = Object.assign(element.props);
+                      return metroImportDefault(tmp23, obj2);
+                    } else if ("placeholder" === type) {
+                      const obj3 = {};
+                      const merged1 = Object.assign(element.props);
+                      return metroImportDefault(closure_11, obj3);
+                    } else if ("gdm" === type) {
+                      const obj4 = {};
+                      const tmp13 = GroupDMRowDefault;
+                      const merged2 = Object.assign(element.props);
+                      return metroImportDefault(tmp13, obj4);
+                    } else if ("channel" === type) {
+                      const obj5 = {};
+                      const tmp7 = ChannelRowDefault;
+                      const merged3 = Object.assign(element.props);
+                      return metroImportDefault(tmp7, obj5);
+                    } else if ("custom" === type) {
+                      const obj = { children: element.component() };
+                      return metroImportDefault(React4, obj);
                     } else {
-                      str3 = "placeholder";
-                      if ("placeholder" === type) {
-                        tmp16 = jsx;
-                        tmp17 = f55321;
-                        obj6 = {};
-                        tmp18 = obj6;
-                        merged1 = Object.assign(element.props);
-                        return jsx(f55321, obj6);
-                      } else {
-                        str4 = "gdm";
-                        if ("gdm" === type) {
-                          tmp10 = jsx;
-                          tmp11 = closure_1;
-                          tmp12 = closure_2;
-                          obj7 = {};
-                          tmp14 = obj7;
-                          tmp13 = closure_1(closure_2[21]);
-                          merged2 = Object.assign(element.props);
-                          return jsx(tmp13, obj7);
-                        } else {
-                          str = "channel";
-                          if ("channel" === type) {
-                            tmp4 = jsx;
-                            tmp5 = closure_1;
-                            tmp6 = closure_2;
-                            obj8 = {};
-                            tmp8 = obj8;
-                            tmp7 = closure_1(closure_2[22]);
-                            merged3 = Object.assign(element.props);
-                            return jsx(tmp7, obj8);
-                          } else {
-                            str2 = "custom";
-                            if ("custom" === type) {
-                              tmp2 = jsx;
-                              tmp3 = Fragment;
-                              obj = { children: null };
-                              obj.children = element.component();
-                              return jsx(Fragment, obj);
-                            } else {
-                              return null;
-                            }
-                          }
-                        }
-                      }
+                      return null;
                     }
                   }
                 }
               }
               class K {
                 constructor(arg0) {
-                  element = getSectionProps(getSectionProps);
-                  type = undefined;
+                  const element = getSectionProps(arg0);
+                  let type;
                   if (element != null) {
                     type = element.type;
                   }
                   if ("placeholder" === type) {
-                    tmp3 = closure_4;
                     return closure_4;
-                  } else {
-                    str = "section";
-                    if ("section" === type) {
-                      num2 = 0;
-                      if (element.props.hideTitle) {
-                        return 0;
-                      } else {
-                        tmp2 = null == element.props.title ? closure_6 : closure_4;
-                      }
-                    } else {
-                      num = 0;
-                      return 0;
+                  } else if ("section" === type) {
+                    let num2 = 0;
+                    if (!element.props.hideTitle) {
+                      num2 = null == element.props.title ? USERS_LIST_PADDING_BETWEEN_SECTIONS : closure_4;
                     }
+                    return num2;
+                  } else {
+                    return 0;
                   }
-                  return;
                 }
               }
               tmp15[0] = tmp6.list;
@@ -1158,29 +1090,22 @@ export const UsersFastList = noop.forwardRef(
             }
             class K {
               constructor(arg0) {
-                element = getSectionProps(getSectionProps);
-                type = undefined;
+                const element = getSectionProps(arg0);
+                let type;
                 if (element != null) {
                   type = element.type;
                 }
                 if ("placeholder" === type) {
-                  tmp3 = closure_4;
                   return closure_4;
-                } else {
-                  str = "section";
-                  if ("section" === type) {
-                    num2 = 0;
-                    if (element.props.hideTitle) {
-                      return 0;
-                    } else {
-                      tmp2 = null == element.props.title ? closure_6 : closure_4;
-                    }
-                  } else {
-                    num = 0;
-                    return 0;
+                } else if ("section" === type) {
+                  let num2 = 0;
+                  if (!element.props.hideTitle) {
+                    num2 = null == element.props.title ? USERS_LIST_PADDING_BETWEEN_SECTIONS : closure_4;
                   }
+                  return num2;
+                } else {
+                  return 0;
                 }
-                return;
               }
             }
             cResult[6] = getSectionProps;
@@ -1195,15 +1120,11 @@ export const UsersFastList = noop.forwardRef(
             type = element.type;
           }
           if ("placeholder" === type) {
-            return React5(closure_12, {});
+            return metroImportDefault(closure_12, {});
           } else if ("section" === type) {
-            const obj = {};
+            const obj = { disableStickySections, disableThemedGradient, scrollPosValue, stickyAt };
             const merged = Object.assign(element.props);
-            obj.disableStickySections = disableStickySections;
-            obj.disableThemedGradient = disableThemedGradient;
-            obj.scrollPosValue = scrollPosValue;
-            obj.stickyAt = stickyAt;
-            return React5(closure_19, obj);
+            return metroImportDefault(closure_19, obj);
           } else {
             return null;
           }
@@ -1212,10 +1133,20 @@ export const UsersFastList = noop.forwardRef(
         cResult[1] = disableThemedGradient;
         cResult[2] = getSectionProps;
         cResult[3] = fn;
-        let obj = getItemProps(disableThemedGradient[8]);
-        tmp4 = undefined !== disableBottomSafeZone && disableBottomSafeZone;
       }
     : (getItemProps, ref) => {
+        let getItemSize;
+        let inActionSheet;
+        let insetEnd;
+        let insetStart;
+        let keyExtractor;
+        let listHeaderSize;
+        let onContentLengthChange;
+        let onLayout;
+        let onScroll;
+        let renderListHeader;
+        let sections;
+        let tmp12;
         getItemProps = getItemProps.getItemProps;
         const getSectionProps = getItemProps.getSectionProps;
         ({ getItemSize, insetEnd } = getItemProps);
@@ -1234,20 +1165,21 @@ export const UsersFastList = noop.forwardRef(
         const disableThemedGradient = getItemProps.disableThemedGradient;
         const disableBackgroundOverlay = getItemProps.disableBackgroundOverlay;
         const listStyleOverride = getItemProps.listStyleOverride;
-        closure_7 = undefined;
+        let closure_7;
         let clientThemesOverride;
         ({ inActionSheet, listHeaderSize, onContentLengthChange, onScroll, onLayout, renderListHeader } = getItemProps);
-        let tmp = closure_10();
+        const tmp = closure_10();
         const list = tmp;
         let num = 0;
         if (!flag) {
           num = getSectionProps(flag2[17])().bottom;
         }
         const sum = insetEnd + num;
+        const tmp5 = getSectionProps(flag2[18])();
         const tmp6 = getSectionProps(flag2[19])();
         closure_7 = tmp6;
-        const tmp5 = getSectionProps(flag2[18])();
-        clientThemesOverride = getItemProps(flag2[11]).useClientThemesOverride();
+        let obj = getItemProps(tmp3[11]);
+        clientThemesOverride = obj.useClientThemesOverride();
         let items = [getSectionProps, flag2, disableThemedGradient];
         const items1 = [getItemProps];
         const callback = disableBackgroundOverlay.useCallback((arg0, arg1, scrollPosValue, stickyAt) => {
@@ -1257,15 +1189,11 @@ export const UsersFastList = noop.forwardRef(
             type = element.type;
           }
           if ("placeholder" === type) {
-            return React5(closure_12, {});
+            return metroImportDefault(closure_12, {});
           } else if ("section" === type) {
-            const obj = {};
+            const obj = { disableStickySections: flag2, disableThemedGradient, scrollPosValue, stickyAt };
             const merged = Object.assign(element.props);
-            obj.disableStickySections = flag2;
-            obj.disableThemedGradient = disableThemedGradient;
-            obj.scrollPosValue = scrollPosValue;
-            obj.stickyAt = stickyAt;
-            return React5(closure_19, obj);
+            return metroImportDefault(closure_19, obj);
           } else {
             return null;
           }
@@ -1279,23 +1207,26 @@ export const UsersFastList = noop.forwardRef(
           }
           if ("user" === type) {
             const obj2 = {};
+            const tmp23 = UserRowDefault;
             const merged = Object.assign(element.props);
-            return React5(UserRowDefault, obj2);
+            return metroImportDefault(tmp23, obj2);
           } else if ("placeholder" === type) {
             const obj3 = {};
             const merged1 = Object.assign(element.props);
-            return React5(closure_11, obj3);
+            return metroImportDefault(closure_11, obj3);
           } else if ("gdm" === type) {
             const obj4 = {};
+            const tmp13 = GroupDMRowDefault;
             const merged2 = Object.assign(element.props);
-            return React5(GroupDMRowDefault, obj4);
+            return metroImportDefault(tmp13, obj4);
           } else if ("channel" === type) {
             const obj5 = {};
+            const tmp7 = ChannelRowDefault;
             const merged3 = Object.assign(element.props);
-            return React5(ChannelRowDefault, obj5);
+            return metroImportDefault(tmp7, obj5);
           } else if ("custom" === type) {
             const obj = { children: element.component() };
-            return React5(options, obj);
+            return metroImportDefault(React4, obj);
           } else {
             return null;
           }
@@ -1310,24 +1241,20 @@ export const UsersFastList = noop.forwardRef(
           if ("placeholder" === type) {
             return closure_7;
           } else if ("section" === type) {
-            if (element.props.hideTitle) {
-              return 0;
+            let num2 = 0;
+            if (!element.props.hideTitle) {
+              num2 = null == element.props.title ? USERS_LIST_PADDING_BETWEEN_SECTIONS : closure_7;
             }
+            return num2;
           } else {
             return 0;
           }
         }, items2);
         const memo = disableBackgroundOverlay.useMemo(() => {
-          const items = [list.list, ,];
-          let tmp = disableBackgroundOverlay;
-          if (disableBackgroundOverlay) {
-            tmp = clientThemesOverride;
-          }
-          items[1] = tmp;
-          items[2] = listStyleOverride;
+          const items = [list.list, disableBackgroundOverlay && clientThemesOverride, listStyleOverride];
           return items;
         }, items3);
-        let obj = getItemProps(flag2[11]);
+        let tmp13 = closure_7;
         let obj2 = {
           sections,
           sectionHeaderIsSticky: !flag2,
@@ -1336,42 +1263,33 @@ export const UsersFastList = noop.forwardRef(
           keyExtractor,
           ref,
           style: memo,
-          itemSize: null,
-          renderItem: null,
-          renderListHeader: null,
-          renderSectionHeader: null,
-          insetStart: null,
-          insetEnd: null,
+          itemSize: getItemSize,
+          renderItem: callback1,
+          renderListHeader,
+          renderSectionHeader: callback,
+          insetStart,
+          insetEnd: sum,
           keyboardDismissMode: "on-drag",
           keyboardShouldPersistTaps: "always",
-          inActionSheet: null,
-          onContentLengthChange: null,
-          onScroll: null,
-          onLayout: null,
-          placeholderConfig: null,
+          inActionSheet,
+          onContentLengthChange,
+          onScroll,
+          onLayout,
+          placeholderConfig: tmp12,
           listId: "users-fast-list",
-          listHeaderSize: null,
+          listHeaderSize,
           listHeaderAlwaysMounted: true,
           scrollReporting: "callbacks",
           wrapChildren: true,
         };
-        const tmp12 = getSectionProps(flag2[9])();
-        const tmp13 = closure_7;
+        tmp12 = getSectionProps(flag2[9])();
+        const tmp2Result = getSectionProps(flag2[23]);
         if (getItemSize == null) {
           getItemSize = tmp5;
         }
-        obj2.itemSize = getItemSize;
-        obj2.renderItem = callback1;
-        obj2.renderListHeader = renderListHeader;
-        obj2.renderSectionHeader = callback;
-        obj2.insetStart = insetStart;
-        obj2.insetEnd = sum;
-        obj2.inActionSheet = inActionSheet;
-        obj2.onContentLengthChange = onContentLengthChange;
-        obj2.onScroll = onScroll;
-        obj2.onLayout = onLayout;
-        obj2.placeholderConfig = tmp12;
-        obj2.listHeaderSize = listHeaderSize;
-        return tmp13(getSectionProps(flag2[23]), obj2);
+        return tmp13(tmp2Result, obj2);
       },
 );
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UsersFastList.tsx");
+
+export const UsersFastList = forwardRefResult;

@@ -393,6 +393,7 @@ const result = size.fileFinishedImporting("modules/messages/PlaintextFilePreview
 
 export const PLAINTEXT_FILE_EXTENSIONS = set;
 export const isPlaintextPreviewableFile = function isPlaintextPreviewableFile(filename) {
+  const has = set.has;
   const parts = filename.split(".");
-  return set.has(parts.slice(-1)[0]);
+  return has(parts.slice(-1)[0]);
 };

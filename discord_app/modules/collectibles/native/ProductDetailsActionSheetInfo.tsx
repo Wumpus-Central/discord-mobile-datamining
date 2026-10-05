@@ -1,64 +1,73 @@
 // discord_app/modules/collectibles/native/ProductDetailsActionSheetInfo.tsx
-import _mod17 from "../../../../_runtime/metro/00017__.js";
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import react from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl3 from "../../../intl/index.native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useProductPurchaseState from "../hooks/useProductPurchaseState.tsx";
 import useProductDescription from "../hooks/useProductDescription.tsx";
 import InlinePriceTagDefault from "InlinePriceTag.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const View = _mod17.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+let closure_4;
+let hasOwnProperty;
+let obj2;
+const View = react_native.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
 let obj = {
   title: { marginBottom: 2 },
-  body: {
-    marginTop: nativeDefault.space.PX_24,
-    marginHorizontal: nativeDefault.space.PX_16,
-    flexDirection: "column",
-    gap: 20,
-  },
+  body: obj2,
   bundleBody: { marginTop: 0 },
   description: { flexDirection: "column", gap: 6 },
+};
+obj2 = {
+  marginTop: nativeDefault.space.PX_24,
+  marginHorizontal: nativeDefault.space.PX_16,
+  flexDirection: "column",
+  gap: 20,
 };
 let closure_6 = createStyles.createStyles(obj);
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
   ? (product) => {
-      const cResult = c.c(9);
+      let items;
+      const obj = react;
+      const cResult = obj.c(9);
       product = product.product;
       const tmp4 = closure_6();
-      const productDescription = useProductDescription.useProductDescription(product);
+      const obj2 = useProductDescription;
+      const productDescription = obj2.useProductDescription(product);
       if (cResult[0] === product.name) {
+        let tmp6;
+        let tmp8;
         if (cResult[1] === tmp4.title) {
-          let tmp6 = cResult[2];
+          tmp6 = cResult[2];
         }
         if (cResult[3] !== productDescription) {
           const obj3 = { variant: "text-md/medium", color: "text-default", children: productDescription };
-          const tmp10 = React4(Text_Text.Text, obj3);
+          const tmp10 = React3(Text_Text.Text, obj3);
           cResult[3] = productDescription;
           cResult[4] = tmp10;
-          let tmp8 = tmp10;
+          tmp8 = tmp10;
         } else {
           tmp8 = cResult[4];
         }
         if (cResult[5] === tmp4.description) {
           if (cResult[6] === tmp6) {
+            let tmp11;
             if (cResult[7] === tmp8) {
-              let tmp11 = cResult[8];
+              tmp11 = cResult[8];
             }
             return tmp11;
           }
         }
-        const obj4 = { style: tmp4.description, children: null };
-        const items = [tmp6, tmp8];
-        obj4.children = items;
+        const obj4 = { style: tmp4.description, children: items };
+        items = [tmp6, tmp8];
         const tmp14 = hasOwnProperty(View, obj4);
         cResult[5] = tmp4.description;
         cResult[6] = tmp6;
@@ -66,17 +75,6 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = tmp14;
         tmp11 = tmp14;
       }
-      const tmp7 = React4(Text_Text.Text, {
-        variant: "heading-xl/bold",
-        color: "mobile-text-heading-primary",
-        style: tmp4.title,
-        accessibilityRole: "header",
-        children: product.name,
-      });
-      cResult[0] = product.name;
-      cResult[1] = tmp4.title;
-      cResult[2] = tmp7;
-      tmp6 = tmp7;
       const obj5 = {
         variant: "heading-xl/bold",
         color: "mobile-text-heading-primary",
@@ -84,78 +82,107 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityRole: "header",
         children: product.name,
       };
+      const tmp7 = React3(Text_Text.Text, obj5);
+      cResult[0] = product.name;
+      cResult[1] = tmp4.title;
+      cResult[2] = tmp7;
+      tmp6 = tmp7;
     }
   : (product) => {
+      let items;
       product = product.product;
       const tmp = closure_6();
-      const obj2 = { style: tmp.description, children: null };
-      const productDescription = useProductDescription.useProductDescription(product);
-      const items = [
-        React4(Text_Text.Text, {
-          variant: "heading-xl/bold",
-          color: "mobile-text-heading-primary",
-          style: tmp.title,
-          accessibilityRole: "header",
-          children: product.name,
-        }),
-        React4(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: productDescription }),
-      ];
-      obj2.children = items;
+      const obj2 = { style: tmp.description, children: items };
+      const obj = useProductDescription;
+      const productDescription = obj.useProductDescription(product);
+      items = [,];
+      const obj3 = {
+        variant: "heading-xl/bold",
+        color: "mobile-text-heading-primary",
+        style: tmp.title,
+        accessibilityRole: "header",
+        children: product.name,
+      };
+      items[0] = React3(Text_Text.Text, obj3);
+      items[1] = React3(Text_Text.Text, {
+        variant: "text-md/medium",
+        color: "text-default",
+        children: productDescription,
+      });
       return hasOwnProperty(View, obj2);
     };
-let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let stringResult = dependencyMap;
-      const cResult = c.c(10);
+      let intl;
+      let intl2;
+      let isPartiallyOwnedBundle;
+      let isPurchased;
+      let onTrackPress;
+      let product;
+      let tmp4;
+      let tmp8;
+      const obj = react;
+      const cResult = obj.c(10);
       ({ product, onTrackPress } = arg0);
       if (cResult[0] !== product) {
-        const result = CollectiblesUtils.isPremiumCollectiblesProduct(product);
+        const tmpResult = CollectiblesUtils;
+        const result = tmpResult.isPremiumCollectiblesProduct(product);
         cResult[0] = product;
         cResult[1] = result;
-        let tmp4 = result;
-        const tmpResult = CollectiblesUtils;
+        tmp4 = result;
       } else {
         tmp4 = cResult[1];
       }
-      const productPurchaseState = useProductPurchaseState.useProductPurchaseState(product);
+      const tmpResult2 = useProductPurchaseState;
+      const productPurchaseState = tmpResult2.useProductPurchaseState(product);
       ({ isPurchased, isPartiallyOwnedBundle } = productPurchaseState);
       if (cResult[2] === isPartiallyOwnedBundle) {
         if (cResult[3] === tmp4) {
           if (cResult[4] === isPurchased) {
             if (cResult[5] === onTrackPress) {
+              let tmp7;
+              let tmp13;
               if (cResult[6] === product) {
-                if (cResult[8] !== cResult[7]) {
-                  const obj2 = { children: tmp7 };
-                  const tmp16 = React4(View, obj2);
-                  cResult[8] = tmp7;
-                  cResult[9] = tmp16;
-                  let tmp13 = tmp16;
-                } else {
-                  tmp13 = cResult[9];
-                }
-                return tmp13;
+                tmp7 = cResult[7];
               }
+              if (cResult[8] !== tmp7) {
+                const obj2 = { children: tmp7 };
+                const tmp16 = React3(View, obj2);
+                cResult[8] = tmp7;
+                cResult[9] = tmp16;
+                tmp13 = tmp16;
+              } else {
+                tmp13 = cResult[9];
+              }
+              return tmp13;
             }
           }
         }
       }
       if (isPurchased) {
-        const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
-        const intl2 = util.intl;
-        stringResult = intl2.string(util.t["6cfuDj"]);
-        obj3.children = stringResult;
-        let tmp8 = React4(Text_Text.Text, obj3);
+        const obj3 = {
+          variant: "text-md/semibold",
+          color: "interactive-text-active",
+          children: intl2.string(intl3.t["6cfuDj"]),
+        };
+        const Text2 = Text_Text.Text;
+        intl2 = intl3.intl;
+        tmp8 = React3(Text2, obj3);
       } else if (isPartiallyOwnedBundle) {
-        const obj4 = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
-        const intl = util.intl;
-        obj4.children = intl.string(util.t.BEjTij);
-        tmp8 = React4(Text_Text.Text, obj4);
+        const obj4 = {
+          variant: "text-md/semibold",
+          color: "interactive-text-active",
+          children: intl.string(intl3.t.BEjTij),
+        };
+        const Text = Text_Text.Text;
+        intl = intl3.intl;
+        tmp8 = React3(Text, obj4);
       } else {
         tmp8 = !tmp4;
-        if (!tmp4) {
+        if (tmp8) {
           const obj5 = { product, onTrackPress };
-          tmp8 = React4(InlinePriceTagDefault, obj5);
+          tmp8 = React3(InlinePriceTagDefault, obj5);
         }
       }
       cResult[2] = isPartiallyOwnedBundle;
@@ -164,60 +191,80 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = onTrackPress;
       cResult[6] = product;
       cResult[7] = tmp8;
-      const tmpResult2 = useProductPurchaseState;
+      tmp7 = tmp8;
     }
   : (product) => {
+      let children;
+      let intl;
+      let intl2;
       product = product.product;
-      const result = CollectiblesUtils.isPremiumCollectiblesProduct(product);
-      const productPurchaseState = useProductPurchaseState.useProductPurchaseState(product);
+      const onTrackPress = product.onTrackPress;
+      const obj = CollectiblesUtils;
+      const result = obj.isPremiumCollectiblesProduct(product);
+      const obj2 = useProductPurchaseState;
+      const productPurchaseState = obj2.useProductPurchaseState(product);
       if (productPurchaseState.isPurchased) {
-        const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
-        const intl2 = util.intl;
-        obj3.children = intl2.string(util.t["6cfuDj"]);
-        let children = React4(Text_Text.Text, obj3);
+        const obj3 = {
+          variant: "text-md/semibold",
+          color: "interactive-text-active",
+          children: intl2.string(intl3.t["6cfuDj"]),
+        };
+        const Text2 = Text_Text.Text;
+        intl2 = intl3.intl;
+        children = React3(Text2, obj3);
       } else if (tmp5) {
-        const obj4 = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
-        const intl = util.intl;
-        obj4.children = intl.string(util.t.BEjTij);
-        children = React4(Text_Text.Text, obj4);
+        const obj4 = {
+          variant: "text-md/semibold",
+          color: "interactive-text-active",
+          children: intl.string(intl3.t.BEjTij),
+        };
+        const Text = Text_Text.Text;
+        intl = intl3.intl;
+        children = React3(Text, obj4);
       } else {
         children = !result;
-        if (!result) {
-          const obj5 = { product, onTrackPress: product.onTrackPress };
-          children = React4(InlinePriceTagDefault, obj5);
+        if (children) {
+          const obj5 = { product, onTrackPress };
+          children = React3(InlinePriceTagDefault, obj5);
         }
       }
-      return React4(View, { children });
+      return React3(View, { children });
     };
-let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(9);
+      let onTrackPress;
+      let product;
+      const obj = react;
+      const cResult = obj.c(9);
       ({ product, onTrackPress } = arg0);
       const tmp2 = closure_6();
       if (cResult[0] === tmp2.body) {
+        let tmp3;
         if (cResult[1] === tmp2.bundleBody) {
-          let tmp3 = cResult[2];
+          tmp3 = cResult[2];
         }
         if (cResult[3] === onTrackPress) {
+          let tmp4;
           if (cResult[4] === product) {
-            let tmp4 = cResult[5];
+            tmp4 = cResult[5];
           }
           if (cResult[6] === tmp3) {
+            let tmp8;
             if (cResult[7] === tmp4) {
-              let tmp8 = cResult[8];
+              tmp8 = cResult[8];
             }
             return tmp8;
           }
           const obj2 = { style: tmp3, children: tmp4 };
-          const tmp11 = React4(View, obj2);
+          const tmp11 = React3(View, obj2);
           cResult[6] = tmp3;
           cResult[7] = tmp4;
           cResult[8] = tmp11;
           tmp8 = tmp11;
         }
         const obj3 = { product, onTrackPress };
-        const tmp7 = React4(closure_8, obj3);
+        const tmp7 = React3(closure_8, obj3);
         cResult[3] = onTrackPress;
         cResult[4] = product;
         cResult[5] = tmp7;
@@ -231,60 +278,66 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = items;
     }
   : (arg0) => {
+      let items;
+      let onTrackPress;
+      let product;
       ({ product, onTrackPress } = arg0);
-      const obj = { style: null, children: React4(closure_8, { product, onTrackPress }) };
-      const items = [,];
-      ({ body: arr[0], bundleBody: arr[1] } = closure_6());
-      obj.style = items;
-      return React4(View, obj);
+      const tmp = closure_6();
+      const obj = { style: items, children: React3(closure_8, { product, onTrackPress }) };
+      items = [,];
+      ({ body: arr[0], bundleBody: arr[1] } = tmp);
+      return React3(View, obj);
     };
-let ReactCompilerGating = ReactCompilerGating_mod;
-let obj2 = {
-  marginTop: nativeDefault.space.PX_24,
-  marginHorizontal: nativeDefault.space.PX_16,
-  flexDirection: "column",
-  gap: 20,
-};
-let result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetInfo.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(12);
+      let items;
+      let onTrackPress;
+      let product;
+      let tmp11;
+      const obj = react;
+      const cResult = obj.c(12);
       ({ product, onTrackPress } = arg0);
       const tmp2 = closure_6();
       if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
         if (cResult[0] === onTrackPress) {
+          let tmp15;
+          if (cResult[1] === product) {
+            tmp15 = cResult[2];
+          }
+          tmp11 = tmp15;
         }
         const obj2 = { product, onTrackPress };
-        const tmp18 = React4(closure_9, obj2);
+        const tmp18 = React3(closure_9, obj2);
         cResult[0] = onTrackPress;
         cResult[1] = product;
         cResult[2] = tmp18;
+        tmp15 = tmp18;
       } else {
+        let tmp3;
         if (cResult[3] !== product) {
           const obj3 = { product };
-          const tmp6 = React4(closure_7, obj3);
+          const tmp6 = React3(closure_7, obj3);
           cResult[3] = product;
           cResult[4] = tmp6;
-          let tmp3 = tmp6;
+          tmp3 = tmp6;
         } else {
           tmp3 = cResult[4];
         }
         if (cResult[5] === onTrackPress) {
+          let tmp7;
           if (cResult[6] === product) {
-            let tmp7 = cResult[7];
+            tmp7 = cResult[7];
           }
           if (cResult[8] === tmp2.body) {
             if (cResult[9] === tmp3) {
               if (cResult[10] === tmp7) {
-                let tmp11 = cResult[11];
+                tmp11 = cResult[11];
               }
-              return tmp11;
             }
           }
-          const obj4 = { style: tmp2.body, children: null };
-          const items = [tmp3, tmp7];
-          obj4.children = items;
+          const obj4 = { style: tmp2.body, children: items };
+          items = [tmp3, tmp7];
           const tmp14 = hasOwnProperty(View, obj4);
           cResult[8] = tmp2.body;
           cResult[9] = tmp3;
@@ -293,26 +346,34 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp11 = tmp14;
         }
         const obj5 = { product, onTrackPress };
-        const tmp10 = React4(closure_8, obj5);
+        const tmp10 = React3(closure_8, obj5);
         cResult[5] = onTrackPress;
         cResult[6] = product;
         cResult[7] = tmp10;
         tmp7 = tmp10;
       }
+      return tmp11;
     }
   : (arg0) => {
+      let items;
+      let onTrackPress;
+      let product;
+      let tmp7;
       ({ product, onTrackPress } = arg0);
+      const tmp = closure_6();
       if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
         const obj2 = { product, onTrackPress };
-        let tmp7 = React4(closure_9, obj2);
+        tmp7 = React3(closure_9, obj2);
       } else {
-        const obj = { style: tmp.body, children: null };
+        const obj = { style: tmp.body, children: items };
         const obj3 = { product };
-        const items = [React4(closure_7, obj3)];
+        items = [React3(closure_7, obj3)];
         const obj4 = { product, onTrackPress };
-        items[1] = React4(closure_8, obj4);
-        obj.children = items;
+        items[1] = React3(closure_8, obj4);
         tmp7 = hasOwnProperty(View, obj);
       }
       return tmp7;
     };
+let result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetInfo.tsx");
+
+export default tmp3;

@@ -1,9 +1,11 @@
 // discord_app/modules/application_commands/ApplicationCommandChoiceUtils.tsx
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore.tsx";
+import ApplicationCommandConstants from "ApplicationCommandConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const ApplicationCommandConstants = fn(5788);
-({ FALSE_OPTION_NAME: closure_1, TRUE_OPTION_NAME: c2 } = ApplicationCommandConstants);
-const size = fn(2);
+let c2;
+let map;
+({ FALSE_OPTION_NAME: map, TRUE_OPTION_NAME: c2 } = ApplicationCommandConstants);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandChoiceUtils.tsx");
 
 export const toChoiceBooleanValue = function toChoiceBooleanValue(trimmed) {
@@ -13,8 +15,8 @@ export const toChoiceBooleanValue = function toChoiceBooleanValue(trimmed) {
   return tmp2;
 };
 export const findChoiceStringValue = function findChoiceStringValue(choices, surrogate) {
-  closure_0 = surrogate;
-  value = undefined;
+  let closure_0 = surrogate;
+  let value;
   if (choices != null) {
     const iter = choices.find((displayName) => displayName.displayName === closure_0);
     if (iter != null) {
@@ -24,8 +26,8 @@ export const findChoiceStringValue = function findChoiceStringValue(choices, sur
   return typeof value === "string" ? value : undefined;
 };
 export const findChoiceNumberValue = function findChoiceNumberValue(choices, trimmed) {
-  closure_0 = trimmed;
-  value = undefined;
+  let closure_0 = trimmed;
+  let value;
   if (choices != null) {
     const iter = choices.find((displayName) => displayName.displayName === closure_0);
     if (iter != null) {
@@ -36,8 +38,8 @@ export const findChoiceNumberValue = function findChoiceNumberValue(choices, tri
 };
 export const findAutocompleteChoiceStringValue = function findAutocompleteChoiceStringValue(id, name, surrogate) {
   const autocompleteLastChoices = ApplicationCommandAutocompleteStore.getAutocompleteLastChoices(id, name);
-  closure_0 = surrogate;
-  value = undefined;
+  let closure_0 = surrogate;
+  let value;
   if (autocompleteLastChoices != null) {
     const iter = autocompleteLastChoices.find((displayName) => displayName.displayName === closure_0);
     if (iter != null) {
@@ -52,8 +54,8 @@ export const findAutocompleteChoiceStringValue = function findAutocompleteChoice
 };
 export const findAutocompleteChoiceNumberValue = function findAutocompleteChoiceNumberValue(id, name, trimmed) {
   const autocompleteLastChoices = ApplicationCommandAutocompleteStore.getAutocompleteLastChoices(id, name);
-  closure_0 = trimmed;
-  value = undefined;
+  let closure_0 = trimmed;
+  let value;
   if (autocompleteLastChoices != null) {
     const iter = autocompleteLastChoices.find((displayName) => displayName.displayName === closure_0);
     if (iter != null) {

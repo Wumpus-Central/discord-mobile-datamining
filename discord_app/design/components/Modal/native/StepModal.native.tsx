@@ -1,49 +1,57 @@
 // discord_app/design/components/Modal/native/StepModal.native.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
 import NavigatorConstants from "../../Navigator/native/NavigatorConstants.native.tsx";
-import Modal from "Modal.native.tsx";
-import ModalStepIndicator from "ModalStepIndicator.native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import Modal2 from "Modal.native.tsx";
+import ModalStepIndicator2 from "ModalStepIndicator.native.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let steps;
+
+let c9;
+let metroImportAll;
+let rect;
 let closure_3 = ["steps", "onWillFocus"];
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { container: { height: "100%" }, stepContainer: null };
-const rect = {
+const View = react_native.View;
+({ jsx: metroImportAll, jsxs: c9 } = Fragment);
+let obj = { container: { height: "100%" }, stepContainer: rect };
+rect = {
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
   top: 0,
   left: 0,
   right: 0,
-  height: fn(6068).NAV_BAR_HEIGHT,
+  height: NavigatorConstants.NAV_BAR_HEIGHT,
 };
-obj2.stepContainer = rect;
-let closure_10 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/Modal/native/StepModal.native.tsx");
-
-export const StepModal = ReactCompilerGating.isReactCompilerEnabled()
+let closure_10 = createStyles.createStyles(obj);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (steps) => {
-      const cResult = c.c(28);
+      let closure_129_2;
+      let items;
+      let tmp12;
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(28);
       if (cResult[0] !== steps) {
         steps = steps.steps;
-        closure_1 = steps;
+        let closure_1 = steps;
         const onWillFocus = steps.onWillFocus;
-        closure_0 = onWillFocus;
+        let closure_0 = onWillFocus;
         const tmp8 = _objectWithoutProperties(steps, closure_3);
+        let num = 0;
         cResult[0] = steps;
         cResult[1] = onWillFocus;
         cResult[2] = tmp8;
         cResult[3] = steps;
-        let tmp5 = tmp8;
+        tmp5 = tmp8;
       } else {
         closure_0 = cResult[1];
         tmp5 = cResult[2];
@@ -51,36 +59,42 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp9 = closure_10();
       const tmp10 = useSafeAreaInsetsDefault();
-      [tmp12, dependencyMap] = noop.useState(0);
+      [tmp12, closure_129_2] = react.useState(0);
+      _slicedToArray(react.useState(0), 2);
       if (cResult[4] === tmp4) {
+        let tmp13;
+        let tmp15;
         if (cResult[5] === arr) {
-          let tmp13 = cResult[6];
+          tmp13 = cResult[6];
         }
         const sum = NavigatorConstants.NAV_BAR_HEIGHT + tmp10.top;
         if (cResult[7] !== sum) {
           const obj2 = { height: sum };
           cResult[7] = sum;
           cResult[8] = obj2;
-          let tmp15 = obj2;
+          tmp15 = obj2;
         } else {
           tmp15 = cResult[8];
         }
         if (cResult[9] === tmp13) {
           if (cResult[10] === tmp5) {
+            let tmp16;
+            let tmp22;
             if (cResult[11] === tmp15) {
-              let tmp16 = cResult[12];
+              tmp16 = cResult[12];
             }
             if (cResult[13] !== tmp10.top) {
               const obj3 = { marginTop: tmp10.top };
               cResult[13] = tmp10.top;
               cResult[14] = obj3;
-              let tmp22 = obj3;
+              tmp22 = obj3;
             } else {
               tmp22 = cResult[14];
             }
             if (cResult[15] === tmp9.stepContainer) {
+              let tmp23;
               if (cResult[16] === tmp22) {
-                let tmp23 = cResult[17];
+                tmp23 = cResult[17];
               }
               let num16;
               if (arr != null) {
@@ -90,25 +104,27 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled()
                 num16 = 0;
               }
               if (cResult[18] === tmp12) {
+                let tmp25;
                 if (cResult[19] === num16) {
-                  let tmp25 = cResult[20];
+                  tmp25 = cResult[20];
                 }
                 if (cResult[21] === tmp23) {
+                  let tmp28;
                   if (cResult[22] === tmp25) {
-                    let tmp28 = cResult[23];
+                    tmp28 = cResult[23];
                   }
                   if (cResult[24] === tmp9.container) {
                     if (cResult[25] === tmp16) {
+                      let tmp32;
                       if (cResult[26] === tmp28) {
-                        let tmp32 = cResult[27];
+                        tmp32 = cResult[27];
                       }
                       return tmp32;
                     }
                   }
-                  const obj4 = { style: tmp9.container, children: null };
-                  const items = [tmp16, tmp28];
-                  obj4.children = items;
-                  const tmp35 = options(View, obj4);
+                  const obj4 = { style: tmp9.container, children: items };
+                  items = [tmp16, tmp28];
+                  const tmp35 = React4(View, obj4);
                   cResult[24] = tmp9.container;
                   cResult[25] = tmp16;
                   cResult[26] = tmp28;
@@ -116,14 +132,14 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled()
                   tmp32 = tmp35;
                 }
                 const obj5 = { style: tmp23, pointerEvents: "box-none", children: tmp25 };
-                const tmp31 = closure_1_8(View, obj5);
+                const tmp31 = metroImportAll(View, obj5);
                 cResult[21] = tmp23;
                 cResult[22] = tmp25;
                 cResult[23] = tmp31;
                 tmp28 = tmp31;
               }
               const obj6 = { currentStep: tmp12, totalSteps: num16 };
-              const tmp27 = closure_1_8(ModalStepIndicator.ModalStepIndicator, obj6);
+              const tmp27 = metroImportAll(ModalStepIndicator2.ModalStepIndicator, obj6);
               cResult[18] = tmp12;
               cResult[19] = num16;
               cResult[20] = tmp27;
@@ -136,12 +152,10 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled()
             tmp23 = items1;
           }
         }
-        const obj7 = {};
+        const obj7 = { onWillFocus: tmp13, headerStyle: tmp15, hideTitle: true };
+        const Modal = Modal2.Modal;
         const merged = Object.assign(tmp5);
-        obj7.onWillFocus = tmp13;
-        obj7.headerStyle = tmp15;
-        obj7.hideTitle = true;
-        const tmp21 = closure_1_8(Modal.Modal, obj7);
+        const tmp21 = metroImportAll(Modal, obj7);
         cResult[9] = tmp13;
         cResult[10] = tmp5;
         cResult[11] = tmp15;
@@ -156,7 +170,7 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled()
         if (num == null) {
           num = 0;
         }
-        dependencyMap(num);
+        closure_1_2(num);
         if (closure_0 != null) {
           closure_0(arg0);
         }
@@ -165,19 +179,25 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = arr;
       cResult[6] = fn;
       tmp13 = fn;
-      const tmp11 = _slicedToArray(noop.useState(0), 2);
     }
   : (steps) => {
+      let ModalStepIndicator;
+      let closure_2;
+      let first;
+      let items1;
+      let items2;
+      let num;
+      let obj5;
       steps = steps.steps;
       const onWillFocus = steps.onWillFocus;
       const merged = Object.assign(steps, Object.assign({ steps: 0, onWillFocus: 0 }));
+      closure_2 = undefined;
       const tmp2 = closure_10();
       const tmp3 = useSafeAreaInsetsDefault();
-      const tmp4 = _slicedToArray(noop.useState(0), 2);
-      closure_2 = tmp4[1];
+      [first, closure_2] = react.useState(0);
       const items = [onWillFocus, steps];
-      const obj = { style: tmp2.container, children: null };
-      const callback = noop.useCallback((onDidFocus) => {
+      const obj = { style: tmp2.container, children: items1 };
+      const callback = react.useCallback((onDidFocus) => {
         let num;
         if (steps != null) {
           num = steps.indexOf(tmp.name);
@@ -190,26 +210,30 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled()
           onWillFocus(onDidFocus);
         }
       }, items);
-      const obj2 = {};
+      const obj2 = {
+        onWillFocus: callback,
+        headerStyle: { height: NavigatorConstants.NAV_BAR_HEIGHT + tmp3.top },
+        hideTitle: true,
+      };
+      const Modal = Modal2.Modal;
       const merged1 = Object.assign(merged);
-      obj2.onWillFocus = callback;
-      obj2.headerStyle = { height: NavigatorConstants.NAV_BAR_HEIGHT + tmp3.top };
-      obj2.hideTitle = true;
-      const items1 = [closure_1_8(Modal.Modal, obj2)];
-      const obj4 = { style: null, pointerEvents: "box-none", children: null };
-      const items2 = [tmp2.stepContainer, { marginTop: tmp3.top }];
-      obj4.style = items2;
-      const obj5 = { currentStep: tmp4[0], totalSteps: null };
-      let num;
+      items1 = [,];
+      ({ height: NavigatorConstants.NAV_BAR_HEIGHT + tmp3.top });
+      items1[0] = metroImportAll(Modal, obj2);
+      const obj4 = { style: items2, pointerEvents: "box-none", children: metroImportAll(ModalStepIndicator, obj5) };
+      items2 = [tmp2.stepContainer, { marginTop: tmp3.top }];
+      obj5 = { currentStep: first, totalSteps: num };
+      num = undefined;
+      ModalStepIndicator = ModalStepIndicator2.ModalStepIndicator;
       if (steps != null) {
         num = steps.length;
       }
       if (num == null) {
         num = 0;
       }
-      obj5.totalSteps = num;
-      obj4.children = closure_1_8(ModalStepIndicator.ModalStepIndicator, obj5);
-      items1[1] = closure_1_8(View, obj4);
-      obj.children = items1;
-      return options(View, obj);
+      items1[1] = metroImportAll(View, obj4);
+      return React4(View, obj);
     };
+const result = size.fileFinishedImporting("design/components/Modal/native/StepModal.native.tsx");
+
+export const StepModal = tmp3;

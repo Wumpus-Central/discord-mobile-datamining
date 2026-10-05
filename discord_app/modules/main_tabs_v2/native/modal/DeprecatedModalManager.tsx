@@ -7,24 +7,30 @@ import GuildSettingsStore from "../../../guild_settings/GuildSettingsStore.tsx";
 import CreateInviteModalStore from "../../../../stores/CreateInviteModalStore.tsx";
 import NotificationSettingsModalStore from "../../../../stores/NotificationSettingsModalStore.tsx";
 import UserRequiredActionStore from "../../../../stores/UserRequiredActionStore.tsx";
+import Constants from "../../../../Constants.tsx";
 import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+const require = globalThis.__r;
+
 function handlePushedModal(modal) {
-  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+  const obj = RootNavigationRef;
+  const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     const obj2 = { modal };
     rootNavigationRef.navigate("modal", obj2);
   }
 }
 function handlePoppedModal() {
-  NavigationRouteUtils.popModal();
+  const obj = NavigationRouteUtils;
+  obj.popModal();
 }
 function pushFirstOpenModal(items, requiredAction) {
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let key = nextResult;
+    let props;
+    let obj = nextResult;
     let isOpenResult;
     if (nextResult != null) {
       let isOpen = nextResult.isOpen;
@@ -32,31 +38,29 @@ function pushFirstOpenModal(items, requiredAction) {
         isOpenResult = isOpen(APP, requiredAction);
       }
     }
-    let component = key.getComponent();
-    let store = key.store;
+    let component = obj.getComponent();
+    let store = obj.store;
     let getProps;
     if (store != null) {
       getProps = store.getProps;
     }
     if (typeof getProps === "function") {
-      let store2 = key.store;
-      let props = store2.getProps();
+      let store2 = obj.store;
+      props = store2.getProps();
     } else {
       props = {};
     }
-    let obj = { key: null };
-    key = key.key;
-    obj.key = key;
-    component = handlePushedModal(getDeprecatedModalDataDefault(component, obj, props));
+    let obj2 = { key: nextResult.key };
+    let tmp12 = handlePushedModal(getDeprecatedModalDataDefault(component, obj2, props));
+    iter.return();
   }
 }
 function createPushModalHandler() {
-  closure_0 = [...arguments];
+  let closure_0 = [...arguments];
   return () => {
     pushFirstOpenModal(closure_0);
   };
 }
-const Constants = fn(1085);
 const UserRequiredActions = Constants.UserRequiredActions;
 const APP = Constants.AppContext.APP;
 const EMAIL_VERIFICATION_MODAL_OPEN = "EMAIL_VERIFICATION_MODAL_OPEN";
@@ -66,10 +70,11 @@ let closure_14 = {
   closable: false,
   center: true,
   isOpen(arg0, action) {
+    const tmp2 = isFullScreenVerificationModalRequiredDefault;
     if (action == null) {
       action = UserRequiredActionStore.getAction();
     }
-    return isFullScreenVerificationModalRequiredDefault(action, "modal-manager-verification");
+    return tmp2(action, "modal-manager-verification");
   },
   getComponent() {
     return require("VerificationModal").default;
@@ -91,66 +96,72 @@ let closure_16 = {
     return require("NewTermsModal").default;
   },
 };
-const prototype = function DeprecatedModalManager() {
-  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  let obj = {
-    CONNECTION_OPEN_SUPPLEMENTAL: createPushModalHandler(closure_16, closure_14),
-    EMAIL_VERIFICATION_MODAL_OPEN: createPushModalHandler(closure_14),
-    USER_REQUIRED_ACTION_UPDATE(requiredAction) {
-      if (null == requiredAction.requiredAction) {
-        if (obj.isModalOpen(USER_REQUIRED_ACTION_UPDATE)) {
-          NavigationRouteUtils.popModal(USER_REQUIRED_ACTION_UPDATE);
-          const tmp5Result = NavigationRouteUtils;
+class DeprecatedModalManager extends AutomaticLifecycleManager {
+  constructor() {
+    let obj2;
+    let obj3;
+    let obj4;
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    let obj = {
+      CONNECTION_OPEN_SUPPLEMENTAL: createPushModalHandler(closure_16, closure_14),
+      EMAIL_VERIFICATION_MODAL_OPEN: createPushModalHandler(closure_14),
+      USER_REQUIRED_ACTION_UPDATE(requiredAction) {
+        if (null == requiredAction.requiredAction) {
+          const obj = NavigationRouteUtils;
+          if (obj.isModalOpen(USER_REQUIRED_ACTION_UPDATE)) {
+            const tmp5Result = NavigationRouteUtils;
+            tmp5Result.popModal(USER_REQUIRED_ACTION_UPDATE);
+          }
+          const tmp5Result3 = NavigationRouteUtils;
+          if (tmp5Result3.isModalOpen(EMAIL_VERIFICATION_MODAL_OPEN)) {
+            const tmp5Result4 = NavigationRouteUtils;
+            tmp5Result4.popModal(EMAIL_VERIFICATION_MODAL_OPEN);
+          }
+        } else {
+          const items = [closure_1_16, closure_1_14];
+          pushFirstOpenModal(items, requiredAction.requiredAction);
         }
-        obj = NavigationRouteUtils;
-        if (tmp5Result3.isModalOpen(EMAIL_VERIFICATION_MODAL_OPEN)) {
-          NavigationRouteUtils.popModal(EMAIL_VERIFICATION_MODAL_OPEN);
-          const tmp5Result4 = NavigationRouteUtils;
-        }
-        tmp5Result3 = NavigationRouteUtils;
-      } else {
-        const items = [closure_1_16, closure_1_14];
-        pushFirstOpenModal(items, requiredAction.requiredAction);
-      }
-    },
-    GUILD_SETTINGS_OPEN: createPushModalHandler({
+      },
+      GUILD_SETTINGS_OPEN: createPushModalHandler(obj2),
+      NOTIFICATION_SETTINGS_MODAL_OPEN: createPushModalHandler(obj3),
+      CREATE_INVITE_MODAL_OPEN: createPushModalHandler(obj4),
+      GUILD_SETTINGS_CLOSE: handlePoppedModal,
+      NOTIFICATION_SETTINGS_MODAL_CLOSE: handlePoppedModal,
+      PREMIUM_PAYMENT_MODAL_CLOSE: handlePoppedModal,
+      EMAIL_VERIFICATION_MODAL_CLOSE: handlePoppedModal,
+      CREATE_INVITE_MODAL_CLOSE: handlePoppedModal,
+      QUICKSWITCHER_HIDE: handlePoppedModal,
+      IFE_EXPERIMENT_SEARCH_MODAL_CLOSE: handlePoppedModal,
+    };
+    obj2 = {
       key: "GUILD_SETTINGS_OPEN",
       store: GuildSettingsStore,
       closable: false,
       getComponent() {
         return require("GuildSettingsModal").default;
       },
-    }),
-    NOTIFICATION_SETTINGS_MODAL_OPEN: createPushModalHandler({
+    };
+    obj3 = {
       key: "NOTIFICATION_SETTINGS_MODAL_OPEN",
       store: NotificationSettingsModalStore,
       closable: false,
       getComponent() {
         return require("NotificationSettingsModal").default;
       },
-    }),
-    CREATE_INVITE_MODAL_OPEN: createPushModalHandler({
+    };
+    obj4 = {
       key: "CREATE_INVITE_MODAL_OPEN",
       store: CreateInviteModalStore,
       closable: false,
       getComponent() {
         return require("InviteSettingsModal").default;
       },
-    }),
-    GUILD_SETTINGS_CLOSE: handlePoppedModal,
-    NOTIFICATION_SETTINGS_MODAL_CLOSE: handlePoppedModal,
-    PREMIUM_PAYMENT_MODAL_CLOSE: handlePoppedModal,
-    EMAIL_VERIFICATION_MODAL_CLOSE: handlePoppedModal,
-    CREATE_INVITE_MODAL_CLOSE: handlePoppedModal,
-    QUICKSWITCHER_HIDE: handlePoppedModal,
-    IFE_EXPERIMENT_SEARCH_MODAL_CLOSE: handlePoppedModal,
-  };
-  applyArgumentsResult.actions = obj;
-  return applyArgumentsResult;
-}.prototype;
-class prototype extends tmp4 {}
-const prototype1 = new prototype();
-const size = fn(2);
+    };
+    applyArgumentsResult.actions = obj;
+    return applyArgumentsResult;
+  }
+}
+const deprecatedModalManager = new DeprecatedModalManager();
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/modal/DeprecatedModalManager.tsx");
 
-export default prototype1;
+export default deprecatedModalManager;

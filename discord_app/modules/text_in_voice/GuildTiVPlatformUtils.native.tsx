@@ -1,16 +1,17 @@
 // discord_app/modules/text_in_voice/GuildTiVPlatformUtils.native.tsx
-import util from "../../intl/index.native.tsx";
+import intl2 from "../../intl/index.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const result = size.fileFinishedImporting("modules/text_in_voice/GuildTiVPlatformUtils.native.tsx");
-
-export default {
+const obj = {
   getTextInVoiceSendMessageChannelPermissionText() {
-    const intl = util.intl;
-    return intl.string(util.t.WQ6zpT);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.WQ6zpT);
   },
   getTextInVoiceReadMessageHistoryChannelPermissionText() {
-    const intl = util.intl;
-    return intl.string(util.t.cuMfH0);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.cuMfH0);
   },
 };
+const result = size.fileFinishedImporting("modules/text_in_voice/GuildTiVPlatformUtils.native.tsx");
+
+export default obj;

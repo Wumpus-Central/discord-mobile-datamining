@@ -2,6 +2,7 @@
 import _mod7014 from "../../../../_runtime/metro/07014__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const F6 = _mod7014.Key.F6;
 const items = [_mod7014.Key.F6, "f6"];
 const items1 = [items, , , , , , ,];
 const items2 = [_mod7014.Key.Tab, "tab"];
@@ -19,6 +20,7 @@ items1[6] = items7;
 const items8 = [_mod7014.Key.End, "end"];
 items1[7] = items8;
 const map = new Map(items1);
+const set = new Set(["tab", "shift+tab", "down", "up", "left", "right", "home", "end"]);
 const frozen = Object.freeze({
   esc: 9,
   f1: 67,
@@ -373,30 +375,30 @@ const point = {
 const merged = Object.assign(
   Object.freeze({
     "^": 220,
-    "§": 220,
-    "½": 220,
+    "\u00a7": 220,
+    "\u00bd": 220,
     plus: 192,
-    ž: 192,
+    "\u017e": 192,
     "@": 192,
     "|": 220,
     "#": 222,
     $: 222,
     process: 229,
-    "·": 229,
-    ذ: 192,
+    "\u00b7": 229,
+    "\u0630": 192,
     "`": 192,
-    "¬": 223,
+    "\u00ac": 223,
     "\\": 220,
     "'": 222,
   }),
 );
-const frozen2 = Object.freeze(point);
+const freezeResult = freeze(point);
 const result = size.fileFinishedImporting("../discord_common/js/shared/constants/KeyboardConstants.tsx");
 
 export const KeyboardEventKey = _mod7014.Key;
-export const FOCUS_SECTION_JUMP_KEY = _mod7014.Key.F6;
+export const FOCUS_SECTION_JUMP_KEY = F6;
 export const NavigationKeyShortcutMap = map;
-export const NavigationShortcuts = new Set(["tab", "shift+tab", "down", "up", "left", "right", "home", "end"]);
+export const NavigationShortcuts = set;
 export const KeyboardDeviceTypes = {
   KEYBOARD_KEY: 0,
   [0]: "KEYBOARD_KEY",
@@ -409,7 +411,7 @@ export const KeyboardDeviceTypes = {
 };
 export const LinuxKeyToCode = frozen;
 export const MacosKeyToCode = frozen1;
-export const WindowsKeyToCode = frozen2;
+export const WindowsKeyToCode = freezeResult;
 export const KeyboardEnvs = {
   WINDOWS: 1,
   [1]: "WINDOWS",

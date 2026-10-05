@@ -6,6 +6,8 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/user_profile/preloadUserBannerImage.tsx");
 
 export default function preloadUserBannerImage(user, guildId) {
+  let GifAutoPlay;
+  let GifAutoPlay2;
   if (typeof globalThis.Image !== "undefined") {
     user = user.user;
     let id;
@@ -25,10 +27,17 @@ export default function preloadUserBannerImage(user, guildId) {
         }
         let guildMemberBannerURL;
         if (tmp3) {
-          const obj2 = { id, guildId, banner: user.guild_member_profile.banner, canAnimate: null, size: 600 };
-          const GifAutoPlay = UserSettings.GifAutoPlay;
-          obj2.canAnimate = GifAutoPlay.getSetting();
-          guildMemberBannerURL = AvatarUtils.getGuildMemberBannerURL(obj2);
+          const obj = {
+            id,
+            guildId,
+            banner: user.guild_member_profile.banner,
+            canAnimate: GifAutoPlay.getSetting(),
+            size: 600,
+          };
+          const getGuildMemberBannerURL = AvatarUtils.getGuildMemberBannerURL;
+          AvatarUtils;
+          GifAutoPlay = UserSettings.GifAutoPlay;
+          guildMemberBannerURL = getGuildMemberBannerURL(obj);
         }
         let banner1;
         if (user != null) {
@@ -38,12 +47,15 @@ export default function preloadUserBannerImage(user, guildId) {
           }
         }
         if (null != banner1) {
-          const obj4 = { id, banner: user.user_profile.banner, canAnimate: null, size: 600 };
-          const GifAutoPlay2 = UserSettings.GifAutoPlay;
-          obj4.canAnimate = GifAutoPlay2.getSetting();
-          guildMemberBannerURL = AvatarUtils.getUserBannerURL(obj4);
+          const obj2 = { id, banner: user.user_profile.banner, canAnimate: GifAutoPlay2.getSetting(), size: 600 };
+          const getUserBannerURL = AvatarUtils.getUserBannerURL;
+          AvatarUtils;
+          GifAutoPlay2 = UserSettings.GifAutoPlay;
+          guildMemberBannerURL = getUserBannerURL(obj2);
         }
         if (null != guildMemberBannerURL) {
+          const self = this;
+          const self2 = this;
           const image = new globalThis.Image();
           image.src = guildMemberBannerURL;
         }

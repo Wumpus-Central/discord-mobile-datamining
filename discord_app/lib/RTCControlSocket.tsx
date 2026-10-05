@@ -7,16 +7,80 @@ import PlatformUtils from "../utils/PlatformUtils.tsx";
 import TimeUtils from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import DeveloperOptionsStore from "../stores/DeveloperOptionsStore.tsx";
 import MediaEngineStore from "../stores/MediaEngineStore.tsx";
+import Constants from "../../discord_common/js/packages/media-engine/Constants.tsx";
 import TypedEventEmitter from "../../discord_common/js/shared/utils/TypedEventEmitter.tsx";
+import size_mod from "../../_runtime/metro/00002__.js";
 
-require = fn;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+const f85435 = (name) => ({
+  name: name.name,
+  type: name.type,
+  priority: 1000 * name.priority,
+  payload_type: name.payloadType,
+  rtx_payload_type: name.rtxPayloadType,
+  encode: name.encode,
+  decode: name.decode,
+});
+const f85436 = (type) => {
+  let tmp;
+  const obj = {
+    type: type.type,
+    rid: type.rid,
+    ssrc: type.ssrc,
+    active: type.active,
+    quality: type.quality,
+    rtx_ssrc: type.rtxSsrc,
+    max_bitrate: type.maxBitrate,
+    max_framerate: type.maxFrameRate,
+    max_resolution: tmp,
+  };
+  tmp = undefined;
+  if (null != type.maxResolution) {
+    size = { type: type.maxResolution.type, width: type.maxResolution.width, height: type.maxResolution.height };
+    tmp = size;
+  }
+  return obj;
+};
+const f85437 = (rid) => {
+  let VIDEO;
+  let tmp5;
+  const type = rid.type;
+  if ("audio" === type) {
+    VIDEO = constants.AUDIO;
+  } else if ("test" === type) {
+    VIDEO = constants.TEST;
+  } else if ("screen" === type) {
+    VIDEO = constants.SCREEN;
+  } else {
+    VIDEO = constants.VIDEO;
+  }
+  const obj = {
+    type: VIDEO,
+    rid: rid.rid,
+    ssrc: rid.ssrc,
+    rtxSsrc: rid.rtx_ssrc,
+    active: rid.active,
+    quality: rid.quality,
+    maxBitrate: rid.max_bitrate,
+    maxFrameRate: rid.max_framerate,
+    maxResolution: tmp5,
+  };
+  tmp5 = undefined;
+  if (null != rid.max_resolution) {
+    size = { type: rid.max_resolution.type, width: rid.max_resolution.width, height: rid.max_resolution.height };
+    tmp5 = size;
+  }
+  return obj;
+};
 function noop() {}
-const Constants = fn(4915);
 ({
   Features: hasOwnProperty,
   MediaEngineContextTypes: metroRequire,
-  MediaTypes: closure_7,
-  SpeakingFlags: closure_8,
+  MediaTypes: metroImportDefault,
+  SpeakingFlags: metroImportAll,
 } = Constants);
 const RTCSocketOpcode = {
   IDENTIFY: 0,
@@ -106,7 +170,7 @@ let obj2 = {
   DAVE_DOWNGRADE_REFUSED: 4804,
   [4804]: "DAVE_DOWNGRADE_REFUSED",
 };
-const __initData = {
+const constants3 = {
   DISCONNECTED: 0,
   [0]: "DISCONNECTED",
   CONNECTING: 1,
@@ -158,25 +222,24 @@ let obj3 = {
   ReceiveMessage: "receive-message",
   SendMessage: "send-message",
 };
-class RTCControlSocket extends tmp3 {
-  constructor(arg0) {
-    DEFAULT = fn;
-    if (fn === undefined) {
-      tmp5 = MediaEngineContextTypes;
-      DEFAULT = MediaEngineContextTypes.DEFAULT;
+class RTCControlSocket extends TypedEventEmitter {
+  constructor(url) {
+    let DEFAULT;
+    if (DEFAULT === undefined) {
+      DEFAULT = metroRequire.DEFAULT;
     }
-    tmp6 = new RTCControlSocket(tmp4, tmp3, tmp2, DEFAULT, tmp, global);
-    tmp7 = new closure_1(closure_2[5])(1000, 5000);
-    tmp6.backoff = tmp7;
+    const tmp6 = new RTCControlSocket(tmp4, tmp3, tmp2, DEFAULT, tmp, url);
+    tmp6.backoff = new BackoffDefault(1000, 5000);
     tmp6.serverVersion = 0;
-    tmp6.url = global;
-    tmp8 = closure_1(closure_2[6]);
-    tmp81 = new tmp8("RTCControlSocket(" + DEFAULT + ")");
-    tmp6.logger = tmp81;
-    logger = tmp6.logger;
-    enableNativeLoggerResult = logger.enableNativeLogger(true);
+    tmp6.url = url;
+    new BackoffDefault(1000, 5000);
+    const tmp8 = LoggerDefault;
+    tmp6.logger = new tmp8("RTCControlSocket(" + DEFAULT + ")");
+    const logger = tmp6.logger;
+    new tmp8("RTCControlSocket(" + DEFAULT + ")");
+    logger.enableNativeLogger(true);
     tmp6.webSocket = null;
-    tmp6.connectionState = closure_12.DISCONNECTED;
+    tmp6.connectionState = constants3.DISCONNECTED;
     tmp6.helloTimeout = null;
     tmp6.lastHeartbeatAckTime = null;
     tmp6.heartbeatInterval = null;
@@ -193,920 +256,868 @@ class RTCControlSocket extends tmp3 {
     tmp6.resumable = false;
     return tmp6;
   }
-}
-const prototype = RTCControlSocket.prototype;
-prototype["createWebSocket"] = function createWebSocket() {
-  const self = this;
-  let logger = this.logger;
-  logger.info("[CONNECT] " + this.url);
-  if (null !== this.webSocket) {
-    let logger2 = self.logger;
-    logger2.error("Connect called with already existing websocket");
-    self.cleanupWebSocket((close) => close.close(4000));
-  }
-  self.connectionStartTime = self(4919).now();
-  self.helloTimeout = setTimeout(() => {
-    self.handleClose(
-      false,
-      0,
-      "The connection timed out after " +
-        TimeUtils.now() -
-        self.connectionStartTime +
-        " ms - did not receive OP_HELLO in time.",
-    );
-  }, closure_13);
-  let obj = self(4919);
-  obj2 = self(13893);
-  const webSocket = new WebSocket(
-    "" +
-      self.url +
-      "?v=" +
-      obj2.getVoiceGatewayProtocolVersion({
-        location: "RTCControlSocket",
-        supportsSfuUpdate: MediaEngineStore.supports(constants.UDP_ENDPOINT_UPDATE),
-      }),
-  );
-  self.webSocket = webSocket;
-  webSocket.binaryType = "arraybuffer";
-  webSocket.onopen = () => {
-    if (self.connectionState === constants.CONNECTING) {
-      self.emit(obj3.Connect);
-    } else if (self.connectionState === constants.RECONNECTING) {
-      self.doResumeOrClose();
+  createWebSocket() {
+    let self = this;
+    let logger = this.logger;
+    logger.info("[CONNECT] " + this.url);
+    if (null !== this.webSocket) {
+      let logger2 = self.logger;
+      let str = "Connect called with already existing websocket";
+      logger2.error("Connect called with already existing websocket");
+      self.cleanupWebSocket((close) => close.close(4000));
     }
-    self.connectionState = constants.CONNECTED;
-    const diff = TimeUtils.now() - self.connectionStartTime;
-    const logger = self.logger;
-    logger.info("[CONNECTED] " + self.url + " in " + diff + " ms");
-    self.emit(obj3.Ping, Math.round(diff / 2));
-  };
-  webSocket.onmessage = (data) => {
-    const result = self.parseWebSocketMessage(data);
-    ({ op, seq, d } = result);
-    self.emit(obj3.ReceiveMessage, op, d);
-    if (seq) {
-      self.lastRecvSeqNum = seq;
-    }
-    if (DeveloperOptionsStore.isLoggingGatewayEvents) {
-      const _Uint8Array = Uint8Array;
-      if (d instanceof Uint8Array) {
-        const items = [];
-        HermesBuiltin.arraySpread(d, 0);
-        const mapped = items.map((item) => item.toString(16).padStart(2, "0"));
-        const logger2 = self.logger;
-        const _HermesInternal2 = HermesInternal;
-        logger2.info("~> " + op + ": 0x" + mapped.join(""));
-      } else {
-        const logger = self.logger;
-        const _JSON = JSON;
-        const _HermesInternal = HermesInternal;
-        logger.info("~> " + op + ": " + JSON.stringify(d));
+    let obj = self(4919);
+    self.connectionStartTime = obj.now();
+    self.helloTimeout = setTimeout(() => {
+      const obj = TimeUtils;
+      self.handleClose(
+        false,
+        0,
+        "The connection timed out after " +
+          obj.now() -
+          self.connectionStartTime +
+          " ms - did not receive OP_HELLO in time.",
+      );
+    }, closure_13);
+    obj2 = self(13893);
+    obj3 = {
+      location: "RTCControlSocket",
+      supportsSfuUpdate: MediaEngineStore.supports(constants.UDP_ENDPOINT_UPDATE),
+    };
+    const webSocket = new WebSocket("" + self.url + "?v=" + obj2.getVoiceGatewayProtocolVersion(obj3));
+    self.webSocket = webSocket;
+    webSocket.binaryType = "arraybuffer";
+    webSocket.onopen = () => {
+      if (self.connectionState === constants.CONNECTING) {
+        self.emit(obj3.Connect);
+      } else if (self.connectionState === constants.RECONNECTING) {
+        self.doResumeOrClose();
       }
-    }
-    if (self.HELLO === op) {
-      self.clearHelloTimeout();
-      self.handleHello(d);
-    } else if (self.READY === op) {
-      self.handleReady(d);
-    } else if (self.SFU_UPDATE === op) {
-      self.emit(obj3.SfuUpdate, d);
-    } else if (self.RESUMED === op) {
-      self.handleResumed(d);
-    } else if (self.SELECT_PROTOCOL_ACK === op) {
-      self.emit(obj3.SelectProtocolAck);
-      if (d.bandwidth_estimation_experiment) {
-        self.emit(obj3.BandwidthEstimationExperiment, d.bandwidth_estimation_experiment);
+      self.connectionState = constants.CONNECTED;
+      obj2 = TimeUtils;
+      const diff = obj2.now() - self.connectionStartTime;
+      const logger = self.logger;
+      logger.info("[CONNECTED] " + self.url + " in " + diff + " ms");
+      self.emit(obj3.Ping, Math.round(diff / 2));
+    };
+    webSocket.onmessage = function (data) {
+      let audio_ssrc;
+      let d;
+      let op;
+      let seq;
+      let streams;
+      let user_id;
+      let video_ssrc;
+      let obj = self;
+      const result = self.parseWebSocketMessage(data);
+      ({ op, seq, d } = result);
+      self.emit(obj3.ReceiveMessage, op, d);
+      if (seq) {
+        obj.lastRecvSeqNum = seq;
       }
-      self.emit(obj3.Codecs, d.audio_codec, d.video_codec);
-      if (d.media_session_id) {
-        self.emit(obj3.MediaSessionId, d.media_session_id);
-      }
-      if (d.sdp) {
-        self.emit(obj3.SDP, d.sdp);
-      } else if (d.mode) {
-        self.emit(obj3.Encryption, d.mode, d.secret_key);
-      }
-      if (d.keyframe_interval) {
-        self.emit(obj3.KeyframeInterval, d.keyframe_interval);
-      }
-      let num8 = d.dave_protocol_version;
-      if (!num8) {
-        num8 = 0;
-      }
-      self.emit(obj3.SecureFramesInit, num8);
-      self.resumable = true;
-    } else if (self.SPEAKING === op) {
-      const speaking = d.speaking;
-      if (typeof speaking !== "boolean") {
-        self.emit(obj3.Speaking, d.user_id, d.ssrc, tmp61);
-      }
-    } else if (self.HEARTBEAT === op) {
-      self.sendHeartbeat();
-    } else if (self.HEARTBEAT_ACK === op) {
-      self.handleHeartbeatAck(d);
-    } else if (self.VIDEO === op) {
-      const Video = obj3.Video;
-      ({ user_id, audio_ssrc, video_ssrc, streams } = d);
-      let mapped1;
-      if (streams != null) {
-        mapped1 = streams.map((rid) => {
-          const type = rid.type;
-          if ("audio" === type) {
-            let VIDEO = constants.AUDIO;
-          } else if ("test" === type) {
-            VIDEO = constants.TEST;
-          } else if ("screen" === type) {
-            VIDEO = constants.SCREEN;
-          } else {
-            VIDEO = constants.VIDEO;
-          }
-          const obj = {
-            type: VIDEO,
-            rid: rid.rid,
-            ssrc: rid.ssrc,
-            rtxSsrc: rid.rtx_ssrc,
-            active: rid.active,
-            quality: rid.quality,
-            maxBitrate: rid.max_bitrate,
-            maxFrameRate: rid.max_framerate,
-            maxResolution: null,
-          };
-          let tmp5;
-          if (null != rid.max_resolution) {
-            const size = {
-              type: rid.max_resolution.type,
-              width: rid.max_resolution.width,
-              height: rid.max_resolution.height,
-            };
-            tmp5 = size;
-          }
-          obj.maxResolution = tmp5;
-          return obj;
-        });
-      }
-      if (mapped1 == null) {
-        mapped1 = [];
-      }
-      self.emit(Video, user_id, audio_ssrc, video_ssrc, mapped1);
-    } else if (self.CLIENT_CONNECT === op) {
-      self.emit(obj3.ClientConnect, d.user_ids);
-    } else if (self.CLIENT_DISCONNECT === op) {
-      self.emit(obj3.ClientDisconnect, d.user_id);
-    } else if (self.SESSION_UPDATE === op) {
-      if (!tmp45) {
-        self.emit(obj3.Codecs, d.audio_codec, d.video_codec);
-      }
-      if (null != d.media_session_id) {
-        self.emit(obj3.MediaSessionId, d.media_session_id);
-      }
-      if (d.keyframe_interval) {
-        self.emit(obj3.KeyframeInterval, d.keyframe_interval);
-      }
-      tmp45 = null == d.audio_codec && null == d.video_codec;
-    } else if (self.MEDIA_SINK_WANTS === op) {
-      self.emit(obj3.MediaSinkWants, d);
-    } else if (self.VOICE_BACKEND_VERSION === op) {
-      if (tmp41) {
-        self.emit(obj3.VoiceBackendVersion, d.voice, d.rtc_worker);
-      }
-      tmp41 = null != d.voice && null != d.rtc_worker;
-    } else if (self.FLAGS === op) {
-      if (tmp38) {
-        self.emit(obj3.Flags, d.user_id, d.flags);
-      }
-      tmp38 = null != d.flags && null != d.user_id;
-    } else if (self.PLATFORM === op) {
-      if (tmp35) {
-        self.emit(obj3.Platform, d.user_id, d.platform);
-      }
-      tmp35 = null != d.platform && null != d.user_id;
-    } else if (self.DAVE_PROTOCOL_PREPARE_TRANSITION === op) {
-      if (tmp32) {
-        self.emit(obj3.SecureFramesPrepareTransition, d.transition_id, d.protocol_version);
-      }
-      tmp32 = null != d.transition_id && null != d.protocol_version;
-    } else if (self.DAVE_PROTOCOL_EXECUTE_TRANSITION === op) {
-      if (null != d.transition_id) {
-        self.emit(obj3.SecureFramesExecuteTransition, d.transition_id);
-      }
-    } else if (self.DAVE_PROTOCOL_PREPARE_EPOCH === op) {
-      if (tmp28) {
-        self.emit(obj3.SecureFramesPrepareEpoch, d.epoch, d.protocol_version);
-      }
-      tmp28 = null != d.epoch && null != d.protocol_version;
-    } else if (self.MLS_EXTERNAL_SENDER_PACKAGE === op) {
-      self.emit(obj3.MLSExternalSenderPackage, d);
-    } else if (self.MLS_PROPOSALS === op) {
-      self.emit(obj3.MLSProposals, d);
-    } else if (self.MLS_PREPARE_COMMIT_TRANSITION === op) {
-      const _DataView2 = DataView;
-      const dataView = new DataView(d.buffer, d.byteOffset, 2);
-      const uint16 = dataView.getUint16(0, false);
-      self.emit(obj3.MLSPrepareCommitTransition, uint16, d.slice(2));
-    } else if (self.MLS_WELCOME === op) {
-      const _DataView = DataView;
-      const dataView1 = new DataView(d.buffer, d.byteOffset, 2);
-      const uint161 = dataView1.getUint16(0, false);
-      self.emit(obj3.MLSWelcome, uint161, d.slice(2));
-    } else {
-      const logger3 = self.logger;
-      const _HermesInternal3 = HermesInternal;
-      logger3.info("Unhandled op " + op);
-    }
-  };
-  webSocket.onerror = () => self.handleClose(false, 0, "An error with the websocket occurred");
-  webSocket.onclose = (wasClean) => self.handleClose(wasClean.wasClean, wasClean.code, wasClean.reason);
-};
-prototype["send"] = function send(op) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    tmp = null;
-  }
-  const self = this;
-  const webSocket = this.webSocket;
-  if (null != webSocket) {
-    const _WebSocket = WebSocket;
-    if (webSocket.readyState === WebSocket.OPEN) {
-      const _JSON = JSON;
-      const obj = { op, d: tmp };
-      const json = JSON.stringify(obj);
       if (DeveloperOptionsStore.isLoggingGatewayEvents) {
-        const logger = self.logger;
-        const _HermesInternal = HermesInternal;
-        logger.info("<~ " + json);
-      }
-      self.emit(obj3.SendMessage, op, tmp);
-      try {
-        webSocket.send(json);
-      } catch (err) {}
-    }
-  }
-};
-prototype["sendBinary"] = function sendBinary(MLS_COMMIT_WELCOME, uint8Array) {
-  const webSocket = this.webSocket;
-  if (null != webSocket) {
-    const _WebSocket = WebSocket;
-    if (webSocket.readyState === WebSocket.OPEN) {
-      const _Uint8Array = Uint8Array;
-      uint8Array = new Uint8Array(uint8Array.byteLength + 1);
-      uint8Array[0] = MLS_COMMIT_WELCOME;
-      const result = uint8Array.set(uint8Array, 1);
-      try {
-        webSocket.send(uint8Array.buffer);
-      } catch (err) {}
-    }
-  }
-};
-prototype["doResumeOrClose"] = function doResumeOrClose() {
-  const self = this;
-  if (null !== this.serverId) {
-    if (null !== self.channelId) {
-      if (null !== self.token) {
-        if (null !== self.sessionId) {
-          if (self.resumable) {
-            self.doResume();
-            self.lastHeartbeatAckTime = nowResult;
-          }
+        let tmp5 = globalThis;
+        const _Uint8Array = Uint8Array;
+        if (d instanceof Uint8Array) {
+          const items = [];
+          HermesBuiltin.arraySpread(items, d, 0);
+          const mapped = items.map((item) => {
+            const str = item.toString(16);
+            return str.padStart(2, "0");
+          });
+          const logger2 = obj.logger;
+          const _HermesInternal2 = HermesInternal;
+          logger2.info("~> " + op + ": 0x" + mapped.join(""));
+        } else {
+          const logger = obj.logger;
+          const _JSON = JSON;
+          const _HermesInternal = HermesInternal;
+          let str = ": ";
+          logger.info("~> " + op + ": " + JSON.stringify(d));
         }
       }
-    }
-  }
-  self.disconnect(false, obj2.UNRESUMABLE, "Cannot resume connection.");
-  nowResult = TimeUtils.now();
-};
-prototype["doResume"] = function doResume() {
-  const self = this;
-  let num = this.lastRecvSeqNum;
-  if (num == null) {
-    num = -1;
-  }
-  ({ logger, serverId } = self);
-  if (serverId == null) {
-    serverId = "";
-  }
-  let str = self.channelId;
-  if (str == null) {
-    str = "";
-  }
-  let str2 = self.sessionId;
-  if (str2 == null) {
-    str2 = "";
-  }
-  logger.info(
-    "[RESUME] resuming session. serverId=" + serverId + " channelId=" + str + " sessionId=" + str2 + " seqAck=" + num,
-  );
-  self.emit(obj3.Resuming);
-  self.connectionState = constants3.RESUMING;
-  const obj = {
-    token: self.token,
-    session_id: self.sessionId,
-    server_id: self.serverId,
-    channel_id: self.channelId,
-    seq_ack: num,
-  };
-  self.send(obj.RESUME, obj);
-};
-prototype["handleHello"] = function handleHello(d) {
-  let num = d.v;
-  if (num == null) {
-    num = 3;
-  }
-  const self = this;
-  this.serverVersion = num;
-  if (this.serverVersion <= 3) {
-    let num3 = 0.1;
-    if (PlatformUtils.isPlatformEmbedded) {
-      num3 = 0.25;
-    }
-    self.heartbeatInterval = d.heartbeat_interval * num3;
-    let tmp4 = require;
-  } else {
-    self.heartbeatInterval = d.heartbeat_interval * self.heartbeatIntervalModifier;
-    tmp4 = require;
-    if (!PlatformUtils.isPlatformEmbedded) {
-      let num2 = self.heartbeatInterval;
-      if (num2 == null) {
-        num2 = NaN;
-      }
-      self.heartbeatInterval = Math.min(closure_15, num2);
-      tmp4 = require;
-    }
-  }
-  const diff = tmp4(4919).now() - self.connectionStartTime;
-  ({ logger, heartbeatInterval } = self);
-  if (heartbeatInterval == null) {
-    heartbeatInterval = "??";
-  }
-  logger.info(
-    "[HELLO] heartbeat interval: " + heartbeatInterval + ", version: " + self.serverVersion + ", took " + diff + " ms",
-  );
-  self.startHeartbeater();
-  const tmp4Result = tmp4(4919);
-};
-prototype["handleReady"] = function handleReady(experiments) {
-  const self = this;
-  const backoff = this.backoff;
-  backoff.succeed();
-  const obj = TimeUtils;
-  const logger = this.logger;
-  logger.info("[READY] took " + obj.now() - this.connectionStartTime + " ms");
-  if (this.serverVersion >= 6) {
-    self.send(obj.VOICE_BACKEND_VERSION, {});
-  }
-  ({ ip, port, modes, ssrc, streams } = experiments);
-  let mapped;
-  if (streams != null) {
-    mapped = streams.map((rid) => {
-      const type = rid.type;
-      if ("audio" === type) {
-        let VIDEO = constants.AUDIO;
-      } else if ("test" === type) {
-        VIDEO = constants.TEST;
-      } else if ("screen" === type) {
-        VIDEO = constants.SCREEN;
+      if (obj.HELLO === op) {
+        obj.clearHelloTimeout();
+        obj.handleHello(d);
+      } else if (obj.READY === op) {
+        obj.handleReady(d);
+      } else if (obj.SFU_UPDATE === op) {
+        obj.emit(obj3.SfuUpdate, d);
+      } else if (obj.RESUMED === op) {
+        obj.handleResumed(d);
+      } else if (obj.SELECT_PROTOCOL_ACK === op) {
+        obj.emit(obj3.SelectProtocolAck);
+        if (d.bandwidth_estimation_experiment) {
+          obj.emit(obj3.BandwidthEstimationExperiment, d.bandwidth_estimation_experiment);
+        }
+        obj.emit(obj3.Codecs, d.audio_codec, d.video_codec);
+        if (d.media_session_id) {
+          obj.emit(obj3.MediaSessionId, d.media_session_id);
+        }
+        if (d.sdp) {
+          obj.emit(obj3.SDP, d.sdp);
+        } else if (d.mode) {
+          obj.emit(obj3.Encryption, d.mode, d.secret_key);
+        }
+        if (d.keyframe_interval) {
+          obj.emit(obj3.KeyframeInterval, d.keyframe_interval);
+        }
+        let num8 = d.dave_protocol_version;
+        const emit2 = obj.emit;
+        const SecureFramesInit = obj3.SecureFramesInit;
+        if (!num8) {
+          num8 = 0;
+        }
+        emit2(SecureFramesInit, num8);
+        obj.resumable = true;
+      } else if (obj.SPEAKING === op) {
+        const speaking = d.speaking;
+        let tmp58 = speaking;
+        if (typeof speaking === "boolean") {
+          tmp58 = speaking ? metroImportAll.VOICE : metroImportAll.NONE;
+        }
+        obj.emit(obj3.Speaking, d.user_id, d.ssrc, tmp58);
+      } else if (obj.HEARTBEAT === op) {
+        obj.sendHeartbeat();
+      } else if (obj.HEARTBEAT_ACK === op) {
+        obj.handleHeartbeatAck(d);
+      } else if (obj.VIDEO === op) {
+        const Video = obj3.Video;
+        ({ user_id, audio_ssrc, video_ssrc, streams } = d);
+        let mapped1;
+        const emit = obj.emit;
+        if (streams != null) {
+          mapped1 = streams.map(f85437);
+        }
+        if (mapped1 == null) {
+          mapped1 = [];
+        }
+        emit(Video, user_id, audio_ssrc, video_ssrc, mapped1);
+      } else if (obj.CLIENT_CONNECT === op) {
+        obj.emit(obj3.ClientConnect, d.user_ids);
+      } else if (obj.CLIENT_DISCONNECT === op) {
+        obj.emit(obj3.ClientDisconnect, d.user_id);
+      } else if (obj.SESSION_UPDATE === op) {
+        const tmp42 = null == d.audio_codec && null == d.video_codec;
+        if (!tmp42) {
+          obj.emit(obj3.Codecs, d.audio_codec, d.video_codec);
+        }
+        if (null != d.media_session_id) {
+          obj.emit(obj3.MediaSessionId, d.media_session_id);
+        }
+        if (d.keyframe_interval) {
+          obj.emit(obj3.KeyframeInterval, d.keyframe_interval);
+        }
+      } else if (obj.MEDIA_SINK_WANTS === op) {
+        obj.emit(obj3.MediaSinkWants, d);
+      } else if (obj.VOICE_BACKEND_VERSION === op) {
+        const tmp38 = null != d.voice && null != d.rtc_worker;
+        if (tmp38) {
+          obj.emit(obj3.VoiceBackendVersion, d.voice, d.rtc_worker);
+        }
+      } else if (obj.FLAGS === op) {
+        const tmp35 = null != d.flags && null != d.user_id;
+        if (tmp35) {
+          obj.emit(obj3.Flags, d.user_id, d.flags);
+        }
+      } else if (obj.PLATFORM === op) {
+        const tmp32 = null != d.platform && null != d.user_id;
+        if (tmp32) {
+          obj.emit(obj3.Platform, d.user_id, d.platform);
+        }
+      } else if (obj.DAVE_PROTOCOL_PREPARE_TRANSITION === op) {
+        const tmp29 = null != d.transition_id && null != d.protocol_version;
+        if (tmp29) {
+          obj.emit(obj3.SecureFramesPrepareTransition, d.transition_id, d.protocol_version);
+        }
+      } else if (obj.DAVE_PROTOCOL_EXECUTE_TRANSITION === op) {
+        if (null != d.transition_id) {
+          obj.emit(obj3.SecureFramesExecuteTransition, d.transition_id);
+        }
+      } else if (obj.DAVE_PROTOCOL_PREPARE_EPOCH === op) {
+        const tmp25 = null != d.epoch && null != d.protocol_version;
+        if (tmp25) {
+          obj.emit(obj3.SecureFramesPrepareEpoch, d.epoch, d.protocol_version);
+        }
+      } else if (obj.MLS_EXTERNAL_SENDER_PACKAGE === op) {
+        obj.emit(obj3.MLSExternalSenderPackage, d);
+      } else if (obj.MLS_PROPOSALS === op) {
+        obj.emit(obj3.MLSProposals, d);
+      } else if (obj.MLS_PREPARE_COMMIT_TRANSITION === op) {
+        const _DataView2 = DataView;
+        const self3 = this;
+        const self4 = this;
+        const dataView = new DataView(d.buffer, d.byteOffset, 2);
+        const uint16 = dataView.getUint16(0, false);
+        obj.emit(obj3.MLSPrepareCommitTransition, uint16, d.slice(2));
+      } else if (obj.MLS_WELCOME === op) {
+        const _DataView = DataView;
+        self = this;
+        const self2 = this;
+        const dataView1 = new DataView(d.buffer, d.byteOffset, 2);
+        const uint161 = dataView1.getUint16(0, false);
+        obj.emit(obj3.MLSWelcome, uint161, d.slice(2));
       } else {
-        VIDEO = constants.VIDEO;
+        const logger3 = obj.logger;
+        const _HermesInternal3 = HermesInternal;
+        logger3.info("Unhandled op " + op);
       }
-      const obj = {
-        type: VIDEO,
-        rid: rid.rid,
-        ssrc: rid.ssrc,
-        rtxSsrc: rid.rtx_ssrc,
-        active: rid.active,
-        quality: rid.quality,
-        maxBitrate: rid.max_bitrate,
-        maxFrameRate: rid.max_framerate,
-        maxResolution: null,
-      };
-      let tmp5;
-      if (null != rid.max_resolution) {
-        const size = {
-          type: rid.max_resolution.type,
-          width: rid.max_resolution.width,
-          height: rid.max_resolution.height,
-        };
-        tmp5 = size;
+    };
+    webSocket.onerror = () => self.handleClose(false, 0, "An error with the websocket occurred");
+    webSocket.onclose = (wasClean) => self.handleClose(wasClean.wasClean, wasClean.code, wasClean.reason);
+  }
+  send(op) {
+    let tmp = arg1;
+    if (arg1 === undefined) {
+      tmp = null;
+    }
+    const self = this;
+    const webSocket = this.webSocket;
+    if (null != webSocket) {
+      const _WebSocket = WebSocket;
+      if (webSocket.readyState === WebSocket.OPEN) {
+        const _JSON = JSON;
+        const obj = { op, d: tmp };
+        const json = JSON.stringify(obj);
+        if (DeveloperOptionsStore.isLoggingGatewayEvents) {
+          const logger = self.logger;
+          const _HermesInternal = HermesInternal;
+          logger.info("<~ " + json);
+        }
+        self.emit(obj3.SendMessage, op, tmp);
+        try {
+          webSocket.send(json);
+        } catch (err) {}
       }
-      obj.maxResolution = tmp5;
-      return obj;
-    });
+    }
   }
-  if (mapped == null) {
-    mapped = [];
+  sendBinary(MLS_COMMIT_WELCOME, uint8Array) {
+    const webSocket = this.webSocket;
+    if (null != webSocket) {
+      const _WebSocket = WebSocket;
+      if (webSocket.readyState === WebSocket.OPEN) {
+        const _Uint8Array = Uint8Array;
+        const self = this;
+        const self2 = this;
+        uint8Array = new Uint8Array(uint8Array.byteLength + 1);
+        uint8Array[0] = MLS_COMMIT_WELCOME;
+        const result = uint8Array.set(uint8Array, 1);
+        try {
+          webSocket.send(uint8Array.buffer);
+        } catch (err) {}
+      }
+    }
   }
-  self.emit(obj3.Ready, ip, port, modes, ssrc, mapped, experiments.experiments);
-};
-prototype["supportsSfuUpdate"] = function supportsSfuUpdate() {
-  return this.serverVersion >= 10;
-};
-prototype["handleResumed"] = function handleResumed() {
-  const backoff = this.backoff;
-  backoff.succeed();
-};
-prototype["handleClose"] = function handleClose(arg0, arg1, arg2) {
-  const self = this;
-  let flag = arg0;
-  closure_2 = arg1;
-  closure_0 = arg2;
-  this.connectionState = constants3.DISCONNECTED;
-  if (!arg0) {
-    flag = false;
-  }
-  self.cleanupWebSocket();
-  if (arg1 !== obj2.AUTHENTICATION_FAILED) {
-    if (arg1 !== obj2.SERVER_CRASH) {
-      if (arg1 !== obj2.SERVER_NOT_FOUND) {
-        if (arg1 !== obj2.INVALID_SESSION) {
-          if (self.backoff.fails > 3) {
-            const logger = self.logger;
-            logger.warn("[WS CLOSED] Backoff exceed. Resetting.");
-            self.disconnect(flag, arg1, arg2);
-          } else {
-            ({ backoff, logger: logger2 } = self);
-            const str1 = flag.toString();
-            const result = backoff.fail(() => self.reconnect(flag, closure_2, closure_0)) / 1000;
-            const _HermesInternal = HermesInternal;
-            logger2.warn(
-              "[WS CLOSED] (clean: " +
-                str1 +
-                ", code: " +
-                arg1 +
-                ", reason: " +
-                arg2 +
-                ") retrying in " +
-                result.toFixed(2) +
-                " seconds.",
-            );
-            const failResult = backoff.fail(() => self.reconnect(flag, closure_2, closure_0));
+  doResumeOrClose() {
+    const self = this;
+    const obj = TimeUtils;
+    const nowResult = obj.now();
+    if (null !== this.serverId) {
+      if (null !== self.channelId) {
+        if (null !== self.token) {
+          if (null !== self.sessionId) {
+            if (self.resumable) {
+              self.doResume();
+              self.lastHeartbeatAckTime = nowResult;
+            }
           }
         }
       }
     }
+    self.disconnect(false, obj2.UNRESUMABLE, "Cannot resume connection.");
   }
-  return self.disconnect(flag, arg1, arg2);
-};
-prototype["disconnect"] = function disconnect(arg0, arg1, arg2) {
-  const logger = this.logger;
-  logger.warn("[DISCONNECT] (" + arg0.toString() + ", " + arg1 + ", " + arg2 + ")");
-  this.cleanupWebSocket();
-  this.cleanupState();
-  this.connectionState = constants3.DISCONNECTED;
-  this.emit(obj3.Disconnect, arg0, arg1, arg2);
-};
-prototype["reconnect"] = function reconnect(arg0, arg1, arg2) {
-  const logger = this.logger;
-  logger.info("[RECONNECT] wasClean=" + arg0.toString() + " code=" + arg1 + " reason=" + arg2);
-  this.cleanupWebSocket((close) => close.close(4000));
-  this.connectionState = constants3.RECONNECTING;
-  const webSocket = this.createWebSocket();
-};
-prototype["cleanupWebSocket"] = function cleanupWebSocket(fn) {
-  this.stopHeartbeater();
-  this.clearHelloTimeout();
-  const webSocket = this.webSocket;
-  this.webSocket = null;
-  if (null != webSocket) {
-    webSocket.onopen = noop;
-    webSocket.onmessage = noop;
-    webSocket.onerror = noop;
-    webSocket.onclose = noop;
-    if (fn != null) {
-      fn(webSocket);
-    }
-  }
-  const backoff = this.backoff;
-  backoff.cancel();
-};
-prototype["cleanupState"] = function cleanupState() {
-  this.serverId = null;
-  this.channelId = null;
-  this.sessionId = null;
-  this.token = null;
-  this.resumable = false;
-  this.lastRecvSeqNum = null;
-};
-prototype["parseWebSocketMessage"] = function parseWebSocketMessage(data) {
-  if (data.data instanceof ArrayBuffer) {
-    const _Uint8Array = Uint8Array;
+  doResume() {
+    let logger;
+    let serverId;
     const self = this;
-    const uint8Array = new Uint8Array(data.data);
-    let uint16 = null;
-    if (this.serverVersion >= 8) {
-      const _DataView = DataView;
-      const dataView = new DataView(uint8Array.buffer);
-      uint16 = dataView.getUint16(0, false);
-    }
-    let num3 = 0;
-    if (self.serverVersion >= 8) {
-      num3 = 2;
-    }
-    const obj = { op: uint8Array[num3], seq: uint16, d: uint8Array.subarray(num3 + 1) };
-    return obj;
-  } else {
-    const _JSON = JSON;
-    return JSON.parse(data.data);
-  }
-};
-prototype["clearHelloTimeout"] = function clearHelloTimeout() {
-  const self = this;
-  if (null != this.helloTimeout) {
-    const _clearTimeout = clearTimeout;
-    clearTimeout(self.helloTimeout);
-    self.helloTimeout = null;
-  }
-};
-prototype["handleHeartbeatAck"] = function handleHeartbeatAck(d) {
-  const self = this;
-  const logger = this.logger;
-  logger.info("Heartbeat ACK received");
-  let t = d;
-  if (this.serverVersion >= 8) {
-    t = d.t;
-  }
-  self.emit(obj3.Ping, TimeUtils.now() - t);
-  self.lastHeartbeatAckTime = TimeUtils.now();
-  self.heartbeatAck = true;
-  if (null !== self.expeditedHeartbeatTimeout) {
-    const _clearTimeout = clearTimeout;
-    clearTimeout(self.expeditedHeartbeatTimeout);
-    self.expeditedHeartbeatTimeout = null;
-    const logger2 = self.logger;
-    logger2.info("Expedited heartbeat succeeded");
-  }
-};
-prototype["handleHeartbeatTimeout"] = function handleHeartbeatTimeout() {
-  const self = this;
-  this.cleanupWebSocket((close) => close.close(4000));
-  ({ backoff, logger } = this);
-  const result = backoff.fail(() => self.reconnect(false, obj2.HEARTBEAT_TIMEOUT, "Heartbeat timeout.")) / 1000;
-  logger.warn("[HEARTBEAT ACK TIMEOUT] reconnecting in " + result.toFixed(2) + " seconds.");
-};
-prototype["startHeartbeater"] = function startHeartbeater() {
-  const self = this;
-  _modDef38(null != this.heartbeatInterval, "RTCControlSocket: Heartbeat interval should never null here.");
-  const logger = this.logger;
-  logger.info("Starting heartbeat with interval: " + this.heartbeatInterval);
-  if (null !== this.heartbeater) {
-    const _clearInterval = clearInterval;
-    clearInterval(self.heartbeater);
-  }
-  self.heartbeatAck = true;
-  self.heartbeater = setInterval(() => {
-    if (self.heartbeatAck) {
-      self.heartbeatAck = false;
-      self.sendHeartbeat();
-    } else if (null === self.expeditedHeartbeatTimeout) {
-      const result = self.handleHeartbeatTimeout();
-    }
-  }, self.heartbeatInterval);
-};
-prototype["sendHeartbeat"] = function sendHeartbeat() {
-  const self = this;
-  if (this.serverVersion >= 8) {
-    let num = self.lastRecvSeqNum;
+    let num = this.lastRecvSeqNum;
     if (num == null) {
       num = -1;
     }
-    const logger2 = self.logger;
-    const _HermesInternal = HermesInternal;
-    logger2.info("Sending heartbeat with last received sequence number: " + num);
-    obj2 = { t: TimeUtils.now(), seq_ack: num };
-    self.send(obj.HEARTBEAT, obj2);
-  } else {
-    const logger = self.logger;
-    logger.info("Sending heartbeat");
-    obj = TimeUtils;
-    self.send(obj.HEARTBEAT, obj.now());
+    ({ logger, serverId } = self);
+    const info = logger.info;
+    if (serverId == null) {
+      serverId = "";
+    }
+    let str = self.channelId;
+    if (str == null) {
+      str = "";
+    }
+    let str2 = self.sessionId;
+    if (str2 == null) {
+      str2 = "";
+    }
+    info(
+      "[RESUME] resuming session. serverId=" + serverId + " channelId=" + str + " sessionId=" + str2 + " seqAck=" + num,
+    );
+    self.emit(obj3.Resuming);
+    self.connectionState = constants3.RESUMING;
+    const obj = {
+      token: self.token,
+      session_id: self.sessionId,
+      server_id: self.serverId,
+      channel_id: self.channelId,
+      seq_ack: num,
+    };
+    self.send(obj.RESUME, obj);
   }
-};
-prototype["stopHeartbeater"] = function stopHeartbeater() {
-  const self = this;
-  if (null !== this.heartbeater) {
-    const _clearInterval = clearInterval;
-    clearInterval(self.heartbeater);
-    self.heartbeater = null;
-  }
-  if (null !== self.expeditedHeartbeatTimeout) {
-    const _clearTimeout = clearTimeout;
-    clearTimeout(self.expeditedHeartbeatTimeout);
-    self.expeditedHeartbeatTimeout = null;
-  }
-};
-prototype["connect"] = function connect() {
-  const self = this;
-  if (this.connectionState !== constants3.DISCONNECTED) {
-    const logger = self.logger;
-    logger.error("Cannot start a new connection, connection state is not disconnected");
-    let flag = false;
-  } else {
-    self.connectionState = tmp.CONNECTING;
-    const webSocket = self.createWebSocket();
-    self.emit(obj3.Connecting);
-    flag = true;
-  }
-  return flag;
-};
-prototype["identify"] = function identify(streamParameters) {
-  ({ serverId, channelId, sessionId, token, video } = streamParameters);
-  ({ userId, maxDaveProtocolVersion } = streamParameters);
-  if (video === undefined) {
-    video = false;
-  }
-  streamParameters = streamParameters.streamParameters;
-  this.serverId = serverId;
-  this.channelId = channelId;
-  this.sessionId = sessionId;
-  this.token = token;
-  this.connectionState = constants3.IDENTIFYING;
-  const obj = {
-    server_id: serverId,
-    channel_id: channelId,
-    user_id: userId,
-    session_id: sessionId,
-    token,
-    max_dave_protocol_version: maxDaveProtocolVersion,
-    video,
-    streams: null,
-  };
-  let mapped;
-  if (streamParameters != null) {
-    mapped = streamParameters.map((type) => {
-      const obj = {
-        type: type.type,
-        rid: type.rid,
-        ssrc: type.ssrc,
-        active: type.active,
-        quality: type.quality,
-        rtx_ssrc: type.rtxSsrc,
-        max_bitrate: type.maxBitrate,
-        max_framerate: type.maxFrameRate,
-        max_resolution: null,
-      };
-      let tmp;
-      if (null != type.maxResolution) {
-        const size = {
-          type: type.maxResolution.type,
-          width: type.maxResolution.width,
-          height: type.maxResolution.height,
-        };
-        tmp = size;
+  handleHello(d) {
+    let heartbeatInterval;
+    let logger;
+    let tmp4;
+    let num = d.v;
+    if (num == null) {
+      num = 3;
+    }
+    const self = this;
+    this.serverVersion = num;
+    if (this.serverVersion <= 3) {
+      let num3 = 0.1;
+      if (PlatformUtils.isPlatformEmbedded) {
+        num3 = 0.25;
       }
-      obj.max_resolution = tmp;
-      return obj;
-    });
-  }
-  obj.streams = mapped;
-  this.send(obj.IDENTIFY, obj);
-};
-prototype["expeditedHeartbeat"] = function expeditedHeartbeat(arg0) {
-  const self = this;
-  let str = arg1;
-  if (arg1 === undefined) {
-    str = "";
-  }
-  let flag = arg2;
-  if (arg2 === undefined) {
-    flag = true;
-  }
-  if (null != self.webSocket) {
-    const logger2 = self.logger;
-    let str5 = "";
-    if ("" !== str) {
-      str5 = `reason: ${str}`;
-    }
-    logger2.info(`Performing an expedited heartbeat ${str5}`);
-    self.heartbeatAck = false;
-    self.sendHeartbeat();
-    if (null !== self.expeditedHeartbeatTimeout) {
-      const _clearTimeout = clearTimeout;
-      clearTimeout(self.expeditedHeartbeatTimeout);
-    }
-    const _setTimeout = setTimeout;
-    self.expeditedHeartbeatTimeout = setTimeout(() => {
-      self.expeditedHeartbeatTimeout = null;
-      if (false === self.heartbeatAck) {
-        const result = self.handleHeartbeatTimeout();
+      self.heartbeatInterval = d.heartbeat_interval * num3;
+      tmp4 = require;
+    } else {
+      self.heartbeatInterval = d.heartbeat_interval * self.heartbeatIntervalModifier;
+      tmp4 = require;
+      if (!PlatformUtils.isPlatformEmbedded) {
+        let num2 = self.heartbeatInterval;
+        const _Math = Math;
+        if (num2 == null) {
+          num2 = NaN;
+        }
+        self.heartbeatInterval = min(closure_15, num2);
+        tmp4 = require;
       }
-    }, arg0);
-  } else if (flag) {
-    return self.resetBackoff(str);
-  } else {
-    const logger = self.logger;
-    let str2 = "";
-    if ("" !== str) {
-      str2 = `reason: ${str}`;
     }
-    logger.info(`Expedited heartbeat requested, but is disconnected and a reset was not requested ${str2}`);
-  }
-  return false;
-};
-prototype["resetBackoff"] = function resetBackoff() {
-  let str = arg0;
-  if (arg0 === undefined) {
-    str = "";
-  }
-  const self = this;
-  let flag = this.backoff.fails > 0;
-  if (flag) {
-    flag = null == self.webSocket;
-  }
-  if (flag) {
-    const logger = self.logger;
-    let str2 = "";
-    if ("" !== str) {
-      str2 = `for reason: ${str}`;
+    const tmp4Result = tmp4(4919);
+    const diff = tmp4Result.now() - self.connectionStartTime;
+    ({ logger, heartbeatInterval } = self);
+    const info = logger.info;
+    if (heartbeatInterval == null) {
+      heartbeatInterval = "??";
     }
-    logger.info(`Connection backoff reset ${str2}`);
-    const backoff = self.backoff;
+    info(
+      "[HELLO] heartbeat interval: " +
+        heartbeatInterval +
+        ", version: " +
+        self.serverVersion +
+        ", took " +
+        diff +
+        " ms",
+    );
+    self.startHeartbeater();
+  }
+  handleReady(experiments) {
+    let ip;
+    let modes;
+    let port;
+    let ssrc;
+    let streams;
+    const self = this;
+    const backoff = this.backoff;
     backoff.succeed();
-    self.reconnect(false, obj2.RESET_BACKOFF, "Reset backoff.");
-    flag = true;
+    const obj = TimeUtils;
+    const logger = this.logger;
+    logger.info("[READY] took " + obj.now() - this.connectionStartTime + " ms");
+    if (this.serverVersion >= 6) {
+      self.send(obj.VOICE_BACKEND_VERSION, {});
+    }
+    const Ready = obj3.Ready;
+    ({ ip, port, modes, ssrc, streams } = experiments);
+    let mapped;
+    const emit = self.emit;
+    if (streams != null) {
+      mapped = streams.map(f85437);
+    }
+    if (mapped == null) {
+      mapped = [];
+    }
+    emit(Ready, ip, port, modes, ssrc, mapped, experiments.experiments);
   }
-  return flag;
-};
-prototype["close"] = function close() {
-  const logger = this.logger;
-  logger.info("CLOSE");
-  this.cleanupWebSocket((close) => close.close(4000));
-  this.cleanupState();
-  this.connectionState = constants3.DISCONNECTED;
-  this.emit(obj3.Disconnect, true, 1000, "Force Close");
-};
-prototype["destroy"] = function destroy() {
-  this.close();
-};
-prototype["selectProtocol"] = function selectProtocol(protocol, rTCConnectionId, sdp, _selectedExperiments) {
-  const obj = {};
-  let tmp = obj;
-  sdp = null;
-  if (null != sdp) {
-    if ("sdp" in sdp) {
-      if (null != sdp.sdp) {
-        if ("" !== sdp.sdp) {
-          sdp = sdp.sdp;
-          obj3 = {};
-          const merged = Object.assign(sdp);
-          const codecs = sdp.codecs;
-          obj3.codecs = codecs.map((name) => ({
-            name: name.name,
-            type: name.type,
-            priority: 1000 * name.priority,
-            payload_type: name.payloadType,
-            rtx_payload_type: name.rtxPayloadType,
-            encode: name.encode,
-            decode: name.decode,
-          }));
-          obj3.rtc_connection_id = rTCConnectionId;
-          tmp = obj3;
+  supportsSfuUpdate() {
+    return this.serverVersion >= 10;
+  }
+  handleResumed() {
+    const backoff = this.backoff;
+    backoff.succeed();
+  }
+  handleClose(arg0, arg1, arg2) {
+    let backoff;
+    let logger2;
+    const self = this;
+    let flag = arg0;
+    let closure_2 = arg1;
+    let closure_0 = arg2;
+    this.connectionState = constants3.DISCONNECTED;
+    if (!arg0) {
+      flag = false;
+    }
+    self.cleanupWebSocket();
+    if (arg1 !== obj2.AUTHENTICATION_FAILED) {
+      if (arg1 !== obj2.SERVER_CRASH) {
+        if (arg1 !== obj2.SERVER_NOT_FOUND) {
+          if (arg1 !== obj2.INVALID_SESSION) {
+            if (self.backoff.fails > 3) {
+              const logger = self.logger;
+              logger.warn("[WS CLOSED] Backoff exceed. Resetting.");
+              self.disconnect(flag, arg1, arg2);
+            } else {
+              ({ backoff, logger: logger2 } = self);
+              const warn = logger2.warn;
+              const failResult = backoff.fail(() => self.reconnect(flag, closure_2, closure_0));
+              const result = failResult / 1000;
+              const _HermesInternal = HermesInternal;
+              const str1 = flag.toString();
+              warn(
+                "[WS CLOSED] (clean: " +
+                  str1 +
+                  ", code: " +
+                  arg1 +
+                  ", reason: " +
+                  arg2 +
+                  ") retrying in " +
+                  result.toFixed(2) +
+                  " seconds.",
+              );
+            }
+          }
         }
       }
     }
-    let BooleanResult = "address" in sdp && null != sdp.address;
-    if (BooleanResult) {
-      BooleanResult = "" !== sdp.address;
-    }
-    if (BooleanResult) {
-      const _Boolean = Boolean;
-      BooleanResult = Boolean(sdp.port);
-    }
-    if (BooleanResult) {
-      BooleanResult = null != sdp.mode;
-    }
-    if (BooleanResult) {
-      BooleanResult = "" !== sdp.mode;
-    }
-    tmp = obj;
-    if (BooleanResult) {
-      ({ address: obj2.address, port: obj2.port, mode: obj2.mode } = sdp);
-      const obj5 = {};
-      const merged1 = Object.assign(sdp);
-      const codecs1 = sdp.codecs;
-      obj5.codecs = codecs1.map((name) => ({
-        name: name.name,
-        type: name.type,
-        priority: 1000 * name.priority,
-        payload_type: name.payloadType,
-        rtx_payload_type: name.rtxPayloadType,
-        encode: name.encode,
-        decode: name.decode,
-      }));
-      obj5.rtc_connection_id = rTCConnectionId;
-      obj5.experiments = _selectedExperiments;
-      tmp = obj5;
-      sdp = { address: null, port: null, mode: null };
-      const obj4 = { address: null, port: null, mode: null };
-    }
+    return self.disconnect(flag, arg1, arg2);
   }
-  const merged2 = Object.assign(tmp);
-  this.send(obj.SELECT_PROTOCOL, { protocol, data: sdp });
-};
-prototype["updateSession"] = function updateSession(codecs) {
-  const obj = { codecs: null };
-  codecs = codecs.codecs;
-  obj.codecs = codecs.map((name) => ({
-    name: name.name,
-    type: name.type,
-    priority: 1000 * name.priority,
-    payload_type: name.payloadType,
-    rtx_payload_type: name.rtxPayloadType,
-    encode: name.encode,
-    decode: name.decode,
-  }));
-  this.send(obj.SESSION_UPDATE, obj);
-};
-prototype["speaking"] = function speaking(_lastSentSpeakingStatus) {
-  let num = packetDelay;
-  if (packetDelay === undefined) {
-    num = 0;
+  disconnect(arg0, arg1, arg2) {
+    const logger = this.logger;
+    logger.warn("[DISCONNECT] (" + arg0.toString() + ", " + arg1 + ", " + arg2 + ")");
+    this.cleanupWebSocket();
+    this.cleanupState();
+    this.connectionState = constants3.DISCONNECTED;
+    this.emit(obj3.Disconnect, arg0, arg1, arg2);
   }
-  let num2 = _lastSentSSRC;
-  if (_lastSentSSRC === undefined) {
-    num2 = 0;
+  reconnect(arg0, arg1, arg2) {
+    const logger = this.logger;
+    logger.info("[RECONNECT] wasClean=" + arg0.toString() + " code=" + arg1 + " reason=" + arg2);
+    this.cleanupWebSocket((close) => close.close(4000));
+    this.connectionState = constants3.RECONNECTING;
+    const webSocket = this.createWebSocket();
   }
-  let BooleanResult = _lastSentSpeakingStatus;
-  if (this.serverVersion <= 3) {
-    const _Boolean = Boolean;
-    BooleanResult = Boolean(_lastSentSpeakingStatus);
-  }
-  this.send(obj.SPEAKING, { speaking: BooleanResult, delay: num, ssrc: num2 });
-};
-prototype["video"] = function video(audio_ssrc, video_ssrc, rtx_ssrc, arr) {
-  let obj = { audio_ssrc, video_ssrc, rtx_ssrc, streams: null };
-  let mapped;
-  if (arr != null) {
-    mapped = arr.map((type) => {
-      const obj = {
-        type: type.type,
-        rid: type.rid,
-        ssrc: type.ssrc,
-        active: type.active,
-        quality: type.quality,
-        rtx_ssrc: type.rtxSsrc,
-        max_bitrate: type.maxBitrate,
-        max_framerate: type.maxFrameRate,
-        max_resolution: null,
-      };
-      let tmp;
-      if (null != type.maxResolution) {
-        const size = {
-          type: type.maxResolution.type,
-          width: type.maxResolution.width,
-          height: type.maxResolution.height,
-        };
-        tmp = size;
+  cleanupWebSocket(fn) {
+    this.stopHeartbeater();
+    this.clearHelloTimeout();
+    const webSocket = this.webSocket;
+    this.webSocket = null;
+    if (null != webSocket) {
+      webSocket.onopen = noop;
+      webSocket.onmessage = noop;
+      webSocket.onerror = noop;
+      webSocket.onclose = noop;
+      if (fn != null) {
+        fn(webSocket);
       }
-      obj.max_resolution = tmp;
+    }
+    const backoff = this.backoff;
+    backoff.cancel();
+  }
+  cleanupState() {
+    this.serverId = null;
+    this.channelId = null;
+    this.sessionId = null;
+    this.token = null;
+    this.resumable = false;
+    this.lastRecvSeqNum = null;
+  }
+  parseWebSocketMessage(data) {
+    if (data.data instanceof ArrayBuffer) {
+      const _Uint8Array = Uint8Array;
+      const self2 = this;
+      const self3 = this;
+      const self = this;
+      const uint8Array = new Uint8Array(data.data);
+      let uint16 = null;
+      if (this.serverVersion >= 8) {
+        const _DataView = DataView;
+        const self4 = this;
+        const self5 = this;
+        const dataView = new DataView(uint8Array.buffer);
+        uint16 = dataView.getUint16(0, false);
+      }
+      let num3 = 0;
+      if (self.serverVersion >= 8) {
+        num3 = 2;
+      }
+      const obj = { op: uint8Array[num3], seq: uint16, d: uint8Array.subarray(num3 + 1) };
       return obj;
-    });
+    } else {
+      const _JSON = JSON;
+      return JSON.parse(data.data);
+    }
   }
-  obj.streams = mapped;
-  this.send(obj.VIDEO, obj);
-};
-prototype["mediaSinkWants"] = function mediaSinkWants(localVideoSinkWants) {
-  const self = this;
-  if (this.serverVersion >= 5) {
-    self.send(obj.MEDIA_SINK_WANTS, localVideoSinkWants);
+  clearHelloTimeout() {
+    const self = this;
+    if (null != this.helloTimeout) {
+      const _clearTimeout = clearTimeout;
+      clearTimeout(self.helloTimeout);
+      self.helloTimeout = null;
+    }
   }
-};
-prototype["secureFramesReadyForTransition"] = function secureFramesReadyForTransition(transition_id) {
-  const obj = { transition_id };
-  this.send(obj.DAVE_PROTOCOL_READY_FOR_TRANSITION, obj);
-};
-prototype["sendMLSKeyPackage"] = function sendMLSKeyPackage(arg0) {
-  const logger = this.logger;
-  logger.info("Sending MLS key package");
-  const uint8Array = new Uint8Array(arg0);
-  this.sendBinary(obj.MLS_KEY_PACKAGE, uint8Array);
-};
-prototype["sendMLSCommitWelcome"] = function sendMLSCommitWelcome(byteLength) {
-  const logger = this.logger;
-  logger.info("Sending MLS commit + welcome message");
-  const uint8Array = new Uint8Array(byteLength);
-  this.sendBinary(obj.MLS_COMMIT_WELCOME, uint8Array);
-};
-prototype["flagMLSInvalidCommitWelcome"] = function flagMLSInvalidCommitWelcome(transition_id) {
-  const obj = { transition_id };
-  this.send(obj.MLS_INVALID_COMMIT_WELCOME, obj);
-};
-prototype["disconnectForRepeatedMLSInvalidMessages"] = function disconnectForRepeatedMLSInvalidMessages(arg0) {
-  const logger = this.logger;
-  logger.warn("[MLS] " + arg0 + " consecutive invalid commit/welcome messages.");
-  this.cleanupWebSocket((close) => close.close(constants.REPEATED_MLS_INVALID_MESSAGES));
-  this.disconnect(false, obj2.REPEATED_MLS_INVALID_MESSAGES, "Repeated invalid MLS commit/welcome messages.");
-};
-prototype["disconnectForRefusedDaveDowngrade"] = function disconnectForRefusedDaveDowngrade(EPOCH) {
-  const logger = this.logger;
-  logger.warn("[DAVE] Refused protocol downgrade to version 0 at " + EPOCH + ".");
-  this.cleanupWebSocket((close) => close.close(constants.DAVE_DOWNGRADE_REFUSED));
-  this.disconnect(false, obj2.DAVE_DOWNGRADE_REFUSED, "Refused DAVE protocol downgrade.");
-};
-prototype["noRoute"] = function noRoute() {
-  this.send(obj.CLIENT_CANNOT_REACH_RTC_SERVER, {});
-};
-prototype["setHeartbeatIntervalModifier"] = function setHeartbeatIntervalModifier(heartbeatIntervalModifier) {
-  this.heartbeatIntervalModifier = heartbeatIntervalModifier;
-};
-let size = fn(2);
+  handleHeartbeatAck(d) {
+    const self = this;
+    const logger = this.logger;
+    logger.info("Heartbeat ACK received");
+    let t = d;
+    if (this.serverVersion >= 8) {
+      t = d.t;
+    }
+    const emit = self.emit;
+    const Ping = obj3.Ping;
+    const obj = TimeUtils;
+    emit(Ping, obj.now() - t);
+    obj2 = TimeUtils;
+    self.lastHeartbeatAckTime = obj2.now();
+    self.heartbeatAck = true;
+    if (null !== self.expeditedHeartbeatTimeout) {
+      const _clearTimeout = clearTimeout;
+      clearTimeout(self.expeditedHeartbeatTimeout);
+      self.expeditedHeartbeatTimeout = null;
+      const logger2 = self.logger;
+      logger2.info("Expedited heartbeat succeeded");
+    }
+  }
+  handleHeartbeatTimeout() {
+    let backoff;
+    let logger;
+    const self = this;
+    this.cleanupWebSocket((close) => close.close(4000));
+    ({ backoff, logger } = this);
+    const result = backoff.fail(() => self.reconnect(false, obj2.HEARTBEAT_TIMEOUT, "Heartbeat timeout.")) / 1000;
+    logger.warn("[HEARTBEAT ACK TIMEOUT] reconnecting in " + result.toFixed(2) + " seconds.");
+  }
+  startHeartbeater() {
+    const self = this;
+    _modDef38(null != this.heartbeatInterval, "RTCControlSocket: Heartbeat interval should never null here.");
+    const logger = this.logger;
+    logger.info("Starting heartbeat with interval: " + this.heartbeatInterval);
+    if (null !== this.heartbeater) {
+      const _clearInterval = clearInterval;
+      clearInterval(self.heartbeater);
+    }
+    self.heartbeatAck = true;
+    self.heartbeater = setInterval(() => {
+      if (self.heartbeatAck) {
+        self.heartbeatAck = false;
+        self.sendHeartbeat();
+      } else if (null === self.expeditedHeartbeatTimeout) {
+        const result = self.handleHeartbeatTimeout();
+      }
+    }, self.heartbeatInterval);
+  }
+  sendHeartbeat() {
+    let obj;
+    const self = this;
+    if (this.serverVersion >= 8) {
+      let num = self.lastRecvSeqNum;
+      if (num == null) {
+        num = -1;
+      }
+      const logger2 = self.logger;
+      const _HermesInternal = HermesInternal;
+      logger2.info("Sending heartbeat with last received sequence number: " + num);
+      const send2 = self.send;
+      const HEARTBEAT2 = obj.HEARTBEAT;
+      obj2 = { t: obj3.now(), seq_ack: num };
+      obj3 = TimeUtils;
+      send2(HEARTBEAT2, obj2);
+    } else {
+      const logger = self.logger;
+      logger.info("Sending heartbeat");
+      const send = self.send;
+      const HEARTBEAT = obj.HEARTBEAT;
+      obj = TimeUtils;
+      send(HEARTBEAT, obj.now());
+    }
+  }
+  stopHeartbeater() {
+    const self = this;
+    if (null !== this.heartbeater) {
+      const _clearInterval = clearInterval;
+      clearInterval(self.heartbeater);
+      self.heartbeater = null;
+    }
+    if (null !== self.expeditedHeartbeatTimeout) {
+      const _clearTimeout = clearTimeout;
+      clearTimeout(self.expeditedHeartbeatTimeout);
+      self.expeditedHeartbeatTimeout = null;
+    }
+  }
+  connect() {
+    let flag;
+    const self = this;
+    if (this.connectionState !== constants3.DISCONNECTED) {
+      const logger = self.logger;
+      logger.error("Cannot start a new connection, connection state is not disconnected");
+      flag = false;
+    } else {
+      self.connectionState = tmp.CONNECTING;
+      const webSocket = self.createWebSocket();
+      self.emit(obj3.Connecting);
+      flag = true;
+    }
+    return flag;
+  }
+  identify(streamParameters) {
+    let channelId;
+    let mapped;
+    let maxDaveProtocolVersion;
+    let serverId;
+    let sessionId;
+    let token;
+    let userId;
+    let video;
+    ({ serverId, channelId, sessionId, token, video } = streamParameters);
+    ({ userId, maxDaveProtocolVersion } = streamParameters);
+    if (video === undefined) {
+      video = false;
+    }
+    streamParameters = streamParameters.streamParameters;
+    this.serverId = serverId;
+    this.channelId = channelId;
+    this.sessionId = sessionId;
+    this.token = token;
+    this.connectionState = constants3.IDENTIFYING;
+    const obj = {
+      server_id: serverId,
+      channel_id: channelId,
+      user_id: userId,
+      session_id: sessionId,
+      token,
+      max_dave_protocol_version: maxDaveProtocolVersion,
+      video,
+      streams: mapped,
+    };
+    mapped = undefined;
+    const send = this.send;
+    const IDENTIFY = obj.IDENTIFY;
+    if (streamParameters != null) {
+      mapped = streamParameters.map(f85436);
+    }
+    send(IDENTIFY, obj);
+  }
+  expeditedHeartbeat(arg0) {
+    const self = this;
+    let str = arg1;
+    if (arg1 === undefined) {
+      str = "";
+    }
+    let flag = arg2;
+    if (arg2 === undefined) {
+      flag = true;
+    }
+    if (null != self.webSocket) {
+      const logger2 = self.logger;
+      let str5 = "";
+      const info2 = logger2.info;
+      if ("" !== str) {
+        str5 = `reason: ${str}`;
+      }
+      info2(`Performing an expedited heartbeat ${str5}`);
+      self.heartbeatAck = false;
+      self.sendHeartbeat();
+      if (null !== self.expeditedHeartbeatTimeout) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(self.expeditedHeartbeatTimeout);
+      }
+      const _setTimeout = setTimeout;
+      self.expeditedHeartbeatTimeout = setTimeout(() => {
+        self.expeditedHeartbeatTimeout = null;
+        if (false === self.heartbeatAck) {
+          const result = self.handleHeartbeatTimeout();
+        }
+      }, arg0);
+    } else if (flag) {
+      return self.resetBackoff(str);
+    } else {
+      const logger = self.logger;
+      let str2 = "";
+      const info = logger.info;
+      if ("" !== str) {
+        str2 = `reason: ${str}`;
+      }
+      info(`Expedited heartbeat requested, but is disconnected and a reset was not requested ${str2}`);
+    }
+    return false;
+  }
+  resetBackoff() {
+    let str = arg0;
+    if (arg0 === undefined) {
+      str = "";
+    }
+    const self = this;
+    let flag = this.backoff.fails > 0 && null == self.webSocket;
+    if (flag) {
+      const logger = self.logger;
+      let str2 = "";
+      const info = logger.info;
+      if ("" !== str) {
+        str2 = `for reason: ${str}`;
+      }
+      info(`Connection backoff reset ${str2}`);
+      const backoff = self.backoff;
+      backoff.succeed();
+      self.reconnect(false, obj2.RESET_BACKOFF, "Reset backoff.");
+      flag = true;
+    }
+    return flag;
+  }
+  close() {
+    const logger = this.logger;
+    logger.info("CLOSE");
+    this.cleanupWebSocket((close) => close.close(4000));
+    this.cleanupState();
+    this.connectionState = constants3.DISCONNECTED;
+    this.emit(obj3.Disconnect, true, 1000, "Force Close");
+  }
+  destroy() {
+    this.close();
+  }
+  selectProtocol(protocol, rTCConnectionId, sdp, _selectedExperiments) {
+    let codecs;
+    let codecs1;
+    const obj = {};
+    let tmp = obj;
+    sdp = null;
+    if (null != sdp) {
+      if ("sdp" in sdp) {
+        if (null != sdp.sdp) {
+          if ("" !== sdp.sdp) {
+            sdp = sdp.sdp;
+            obj3 = { codecs: codecs.map(f85435), rtc_connection_id: rTCConnectionId };
+            const merged = Object.assign(sdp);
+            codecs = sdp.codecs;
+            tmp = obj3;
+          }
+        }
+      }
+      let BooleanResult = "address" in sdp && null != sdp.address && "" !== sdp.address;
+      if (BooleanResult) {
+        const _Boolean = Boolean;
+        BooleanResult = Boolean(sdp.port);
+      }
+      if (BooleanResult) {
+        BooleanResult = null != sdp.mode;
+      }
+      if (BooleanResult) {
+        BooleanResult = "" !== sdp.mode;
+      }
+      tmp = obj;
+      if (BooleanResult) {
+        const obj4 = { address: null, port: null, mode: null };
+        ({ address: obj2.address, port: obj2.port, mode: obj2.mode } = sdp);
+        const obj5 = {
+          codecs: codecs1.map(f85435),
+          rtc_connection_id: rTCConnectionId,
+          experiments: _selectedExperiments,
+        };
+        const merged1 = Object.assign(sdp);
+        codecs1 = sdp.codecs;
+        tmp = obj5;
+        sdp = obj4;
+      }
+    }
+    const send = this.send;
+    const SELECT_PROTOCOL = obj.SELECT_PROTOCOL;
+    const obj9 = { protocol, data: sdp };
+    const merged2 = Object.assign(tmp);
+    send(SELECT_PROTOCOL, obj9);
+  }
+  updateSession(codecs) {
+    const obj = { codecs: codecs.map(f85435) };
+    codecs = codecs.codecs;
+    const send = this.send;
+    const SESSION_UPDATE = obj.SESSION_UPDATE;
+    send(SESSION_UPDATE, obj);
+  }
+  speaking(_lastSentSpeakingStatus) {
+    let num = packetDelay;
+    if (packetDelay === undefined) {
+      num = 0;
+    }
+    let num2 = _lastSentSSRC;
+    if (_lastSentSSRC === undefined) {
+      num2 = 0;
+    }
+    let BooleanResult = _lastSentSpeakingStatus;
+    const send = this.send;
+    const SPEAKING = obj.SPEAKING;
+    if (this.serverVersion <= 3) {
+      const _Boolean = Boolean;
+      BooleanResult = Boolean(_lastSentSpeakingStatus);
+    }
+    send(SPEAKING, { speaking: BooleanResult, delay: num, ssrc: num2 });
+  }
+  video(audio_ssrc, video_ssrc, rtx_ssrc, arr) {
+    let mapped;
+    let obj = { audio_ssrc, video_ssrc, rtx_ssrc, streams: mapped };
+    mapped = undefined;
+    const send = this.send;
+    const VIDEO = obj.VIDEO;
+    if (arr != null) {
+      mapped = arr.map(f85436);
+    }
+    send(VIDEO, obj);
+  }
+  mediaSinkWants(localVideoSinkWants) {
+    const self = this;
+    if (this.serverVersion >= 5) {
+      self.send(obj.MEDIA_SINK_WANTS, localVideoSinkWants);
+    }
+  }
+  secureFramesReadyForTransition(transition_id) {
+    const obj = { transition_id };
+    this.send(obj.DAVE_PROTOCOL_READY_FOR_TRANSITION, obj);
+  }
+  sendMLSKeyPackage(arg0) {
+    const logger = this.logger;
+    logger.info("Sending MLS key package");
+    const sendBinary = this.sendBinary;
+    const MLS_KEY_PACKAGE = obj.MLS_KEY_PACKAGE;
+    const uint8Array = new Uint8Array(arg0);
+    sendBinary(MLS_KEY_PACKAGE, uint8Array);
+  }
+  sendMLSCommitWelcome(byteLength) {
+    const logger = this.logger;
+    logger.info("Sending MLS commit + welcome message");
+    const sendBinary = this.sendBinary;
+    const MLS_COMMIT_WELCOME = obj.MLS_COMMIT_WELCOME;
+    const uint8Array = new Uint8Array(byteLength);
+    sendBinary(MLS_COMMIT_WELCOME, uint8Array);
+  }
+  flagMLSInvalidCommitWelcome(transition_id) {
+    const obj = { transition_id };
+    this.send(obj.MLS_INVALID_COMMIT_WELCOME, obj);
+  }
+  disconnectForRepeatedMLSInvalidMessages(arg0) {
+    const logger = this.logger;
+    logger.warn("[MLS] " + arg0 + " consecutive invalid commit/welcome messages.");
+    this.cleanupWebSocket((close) => close.close(constants.REPEATED_MLS_INVALID_MESSAGES));
+    this.disconnect(false, obj2.REPEATED_MLS_INVALID_MESSAGES, "Repeated invalid MLS commit/welcome messages.");
+  }
+  disconnectForRefusedDaveDowngrade(EPOCH) {
+    const logger = this.logger;
+    logger.warn("[DAVE] Refused protocol downgrade to version 0 at " + EPOCH + ".");
+    this.cleanupWebSocket((close) => close.close(constants.DAVE_DOWNGRADE_REFUSED));
+    this.disconnect(false, obj2.DAVE_DOWNGRADE_REFUSED, "Refused DAVE protocol downgrade.");
+  }
+  noRoute() {
+    this.send(obj.CLIENT_CANNOT_REACH_RTC_SERVER, {});
+  }
+  setHeartbeatIntervalModifier(heartbeatIntervalModifier) {
+    this.heartbeatIntervalModifier = heartbeatIntervalModifier;
+  }
+}
+const prototype = RTCControlSocket.prototype;
+let size = size_mod;
 let result = size.fileFinishedImporting("lib/RTCControlSocket.tsx");
 
 export default RTCControlSocket;

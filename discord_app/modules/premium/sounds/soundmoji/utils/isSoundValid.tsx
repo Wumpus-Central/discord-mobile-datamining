@@ -1,12 +1,14 @@
 // discord_app/modules/premium/sounds/soundmoji/utils/isSoundValid.tsx
+import Constants from "../../../../../../discord_common/js/shared/Constants.tsx";
 import PremiumUtilsDefault from "../../../../../utils/PremiumUtils.tsx";
+import SoundboardConstants from "../../../../soundboard/SoundboardConstants.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import PermissionStore from "../../../../../stores/PermissionStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const DEFAULT_SOUND_GUILD_ID = fn(5682).DEFAULT_SOUND_GUILD_ID;
-const Permissions = fn(1096).Permissions;
-const size = fn(2);
+const DEFAULT_SOUND_GUILD_ID = SoundboardConstants.DEFAULT_SOUND_GUILD_ID;
+const Permissions = Constants.Permissions;
 let result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/utils/isSoundValid.tsx");
 
 export default function isSoundValid(guildId, guild_id, id) {
@@ -33,7 +35,8 @@ export default function isSoundValid(guildId, guild_id, id) {
       }
       if (guildId2 !== guild_id) {
         let canResult = null == channel;
-        const result = PremiumUtilsDefault.canUseSoundboardEverywhere(UserStore.getCurrentUser());
+        const obj = PremiumUtilsDefault;
+        const result = obj.canUseSoundboardEverywhere(UserStore.getCurrentUser());
         if (!canResult) {
           canResult = null == channel.guild_id;
         }

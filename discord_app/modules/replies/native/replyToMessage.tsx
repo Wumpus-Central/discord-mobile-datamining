@@ -1,4 +1,5 @@
 // discord_app/modules/replies/native/replyToMessage.tsx
+import Constants from "../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
@@ -7,13 +8,19 @@ import PendingReplyActionCreators from "../PendingReplyActionCreators.tsx";
 import EditMessageStore from "../../../stores/EditMessageStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import PendingReplyStore from "../PendingReplyStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const size = fn(2);
+const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/replies/native/replyToMessage.tsx");
 
 export default function longPressMessageHandleReply(arg0) {
+  let actionSource;
+  let channel;
+  let chatInputRef;
+  let invertible;
+  let message;
+  let obj9;
+  let tmp20;
   ({ message, channel, chatInputRef, actionSource, invertible } = arg0);
   if (invertible === undefined) {
     invertible = false;
@@ -21,44 +28,48 @@ export default function longPressMessageHandleReply(arg0) {
   const editingMessage = EditMessageStore.getEditingMessage(channel.id);
   if (null != editingMessage) {
     const currentUser = UserStore.getCurrentUser();
+    ({ id: obj8.channel_id, guild_id: obj8.guild_id } = channel);
     const obj2 = {
       message_id: message.id,
       channel_id: null,
       guild_id: null,
       context_action: "edit",
-      reason: null,
-      is_own_message: null,
+      reason: obj9.getContextBarCancelReason("edit", actionSource),
+      is_own_message: null != currentUser && currentUser.id === editingMessage.author.id,
     };
-    ({ id: obj11.channel_id, guild_id: obj11.guild_id } = channel);
-    const obj10 = AnalyticsUtilsDefault;
-    obj2.reason = LongPressMessageActionSheetUtils.getContextBarCancelReason("edit", actionSource);
-    obj2.is_own_message = null != currentUser && currentUser.id === editingMessage.author.id;
-    obj10.track(AnalyticEvents.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj2);
+    const track3 = AnalyticsUtilsDefault.track;
+    const CHAT_CONTEXT_BAR_ACTION_CANCELED2 = AnalyticEvents.CHAT_CONTEXT_BAR_ACTION_CANCELED;
+    AnalyticsUtilsDefault;
+    obj9 = LongPressMessageActionSheetUtils;
+    track3(CHAT_CONTEXT_BAR_ACTION_CANCELED2, obj2);
   }
-  MessageActionCreatorsDefault.endEditMessage(channel.id);
+  const obj = MessageActionCreatorsDefault;
+  obj.endEditMessage(channel.id);
   const pendingReply = PendingReplyStore.getPendingReply(channel.id);
   if (invertible) {
     if ("message_swipe" === actionSource) {
       if (null != pendingReply) {
         if (pendingReply.message.id === message.id) {
           const currentUser1 = UserStore.getCurrentUser();
-          const obj3 = {
+          const obj5 = {
             message_id: message.id,
             channel_id: null,
             guild_id: null,
             context_action: "reply",
             reason: "swipe_reply_undo",
-            is_own_message: null,
+            is_own_message: tmp20,
           };
-          ({ id: obj8.channel_id, guild_id: obj8.guild_id } = channel);
-          let tmp18 = null != currentUser1;
-          if (tmp18) {
-            tmp18 = currentUser1.id === pendingReply.message.author.id;
+          ({ id: obj6.channel_id, guild_id: obj6.guild_id } = channel);
+          tmp20 = null != currentUser1;
+          const track2 = AnalyticsUtilsDefault.track;
+          const CHAT_CONTEXT_BAR_ACTION_CANCELED = AnalyticEvents.CHAT_CONTEXT_BAR_ACTION_CANCELED;
+          AnalyticsUtilsDefault;
+          if (tmp20) {
+            tmp20 = currentUser1.id === pendingReply.message.author.id;
           }
-          obj3.is_own_message = tmp18;
-          AnalyticsUtilsDefault.track(AnalyticEvents.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj3);
-          const tmp3Result = AnalyticsUtilsDefault;
-          PendingReplyActionCreators.deletePendingReply(channel.id);
+          track2(CHAT_CONTEXT_BAR_ACTION_CANCELED, obj5);
+          const obj7 = PendingReplyActionCreators;
+          obj7.deletePendingReply(channel.id);
           let text;
           if (chatInputRef != null) {
             const current = chatInputRef.current;
@@ -78,31 +89,23 @@ export default function longPressMessageHandleReply(arg0) {
       }
     }
   }
-  const obj6 = { source: actionSource };
-  const tmp3Result2 = AnalyticsUtilsDefault;
-  const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(channel.guild_id));
-  const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
-  tmp3Result2.track(AnalyticEvents.REPLY_MESSAGE_STARTED, obj6);
+  const track = AnalyticsUtilsDefault.track;
+  const REPLY_MESSAGE_STARTED = AnalyticEvents.REPLY_MESSAGE_STARTED;
+  const obj12 = { source: actionSource };
+  AnalyticsUtilsDefault;
+  const obj3 = AppAnalyticsUtils;
+  const merged = Object.assign(obj3.collectGuildAnalyticsMetadata(channel.guild_id));
+  const obj4 = AppAnalyticsUtils;
+  const merged1 = Object.assign(obj4.collectChannelAnalyticsMetadata(channel));
+  track(REPLY_MESSAGE_STARTED, obj12);
   const currentUser2 = UserStore.getCurrentUser();
-  const isDMResult = channel.isDM();
-  let tmp13 = !isDMResult;
-  if (!isDMResult) {
-    tmp13 = null != currentUser2;
-  }
-  if (tmp13) {
-    tmp13 = message.author.id !== currentUser2.id;
-  }
-  const pendingReply1 = PendingReplyActionCreators.createPendingReply({
-    message,
-    channel,
-    shouldMention: tmp13,
-    source: actionSource,
-  });
+  const tmp14 = !channel.isDM() && null != currentUser2 && message.author.id !== currentUser2.id;
+  const tmp8Result = PendingReplyActionCreators;
+  const pendingReply1 = tmp8Result.createPendingReply({ message, channel, shouldMention: tmp14, source: actionSource });
   if (chatInputRef != null) {
     const current3 = chatInputRef.current;
     if (current3 != null) {
       current3.openSystemKeyboard();
     }
   }
-  const tmp7Result = PendingReplyActionCreators;
 }

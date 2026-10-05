@@ -3,6 +3,35 @@ import AppleProductIds from "../../../../discord_common/js/shared/shared-constan
 import PremiumConstants from "../PremiumConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+let PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID;
+let PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID;
+let PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID;
+let PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID;
+let PREMIUM_TIER_2_REACTIVATION_TRIAL_ID;
+let PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID;
+let PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
+let PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
+let PremiumTypes;
+let SubscriptionIntervalTypes;
+let SubscriptionPlans;
+let items1;
+let items10;
+let items11;
+let items12;
+let items13;
+let items14;
+let items15;
+let items16;
+let items17;
+let items18;
+let items2;
+let items3;
+let items4;
+let items5;
+let items6;
+let items7;
+let items8;
+let items9;
 ({ PremiumTypes, SubscriptionIntervalTypes, SubscriptionPlans } = PremiumConstants);
 ({
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID,
@@ -14,7 +43,7 @@ import size from "../../../../_runtime/metro/00002__.js";
   PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID,
   PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID,
 } = PremiumConstants);
-const frozen = Object.freeze({
+const obj = {
   PREMIUM_MONTH_TIER_1: "premium_month_tier_1.1",
   PREMIUM_YEAR_TIER_1: "premium_year_tier_1.1",
   PREMIUM_MONTH_TIER_2: "premium_month_tier_2.1",
@@ -53,7 +82,8 @@ const frozen = Object.freeze({
   STICKER_PACK_299: "sticker_pack_299",
   GENERIC_SUBSCRIPTION: AppleProductIds.AppleProductIds.GENERIC_SUBSCRIPTION,
   GENERIC_CONSUMABLE: AppleProductIds.AppleProductIds.GENERIC_CONSUMABLE,
-});
+};
+const frozen = Object.freeze(obj);
 const items = [
   AppleProductIds.AppleProductIds.GENERIC_SUBSCRIPTION,
   AppleProductIds.AppleProductIds.GENERIC_CONSUMABLE,
@@ -64,181 +94,35 @@ const obj13 = {
   numPremiumGuild: 1,
   premiumTier: PremiumTypes.TIER_2,
   basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
-  additionalPlans: null,
+  additionalPlans: items1,
 };
-const items1 = [{ quantity: 1, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD }];
-obj13.additionalPlans = items1;
-const obj15 = {
-  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY,
+items1 = [];
+const obj10 = {
+  productId: frozen.PREMIUM_TIER_1_YEARLY,
   interval: SubscriptionIntervalTypes.YEAR,
-  numPremiumGuild: 1,
-  premiumTier: PremiumTypes.TIER_2,
-  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
-  additionalPlans: null,
-};
-const items2 = [{ quantity: 1, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD }];
-obj15.additionalPlans = items2;
-const obj17 = {
-  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_2_MONTHLY,
-  interval: SubscriptionIntervalTypes.MONTH,
-  numPremiumGuild: 2,
-  premiumTier: PremiumTypes.TIER_2,
-  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
-  additionalPlans: null,
-};
-const items3 = [{ quantity: 2, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD }];
-obj17.additionalPlans = items3;
-const obj19 = {
-  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_2_YEARLY,
-  interval: SubscriptionIntervalTypes.YEAR,
-  numPremiumGuild: 2,
-  premiumTier: PremiumTypes.TIER_2,
-  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
-  additionalPlans: null,
-};
-const items4 = [{ quantity: 2, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD }];
-obj19.additionalPlans = items4;
-const obj21 = {
-  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_3_MONTHLY,
-  interval: SubscriptionIntervalTypes.MONTH,
-  numPremiumGuild: 3,
-  premiumTier: PremiumTypes.TIER_2,
-  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
-  additionalPlans: null,
-};
-const items5 = [{ quantity: 3, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD }];
-obj21.additionalPlans = items5;
-const obj23 = {
-  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_3_YEARLY,
-  interval: SubscriptionIntervalTypes.YEAR,
-  numPremiumGuild: 3,
-  premiumTier: PremiumTypes.TIER_2,
-  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
-  additionalPlans: null,
-};
-const items6 = [{ quantity: 3, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD }];
-obj23.additionalPlans = items6;
-const obj25 = {
-  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_5_MONTHLY,
-  interval: SubscriptionIntervalTypes.MONTH,
-  numPremiumGuild: 5,
-  premiumTier: PremiumTypes.TIER_2,
-  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
-  additionalPlans: null,
-};
-const items7 = [{ quantity: 5, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD }];
-obj25.additionalPlans = items7;
-const obj27 = {
-  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_5_YEARLY,
-  interval: SubscriptionIntervalTypes.YEAR,
-  numPremiumGuild: 5,
-  premiumTier: PremiumTypes.TIER_2,
-  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
-  additionalPlans: null,
-};
-const items8 = [{ quantity: 5, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD }];
-obj27.additionalPlans = items8;
-const obj29 = {
-  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_10_MONTHLY,
-  interval: SubscriptionIntervalTypes.MONTH,
-  numPremiumGuild: 10,
-  premiumTier: PremiumTypes.TIER_2,
-  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
-  additionalPlans: null,
-};
-const items9 = [{ quantity: 10, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD }];
-obj29.additionalPlans = items9;
-const obj31 = {
-  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_10_YEARLY,
-  interval: SubscriptionIntervalTypes.YEAR,
-  numPremiumGuild: 10,
-  premiumTier: PremiumTypes.TIER_2,
-  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
-  additionalPlans: null,
-};
-const items10 = [{ quantity: 10, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD }];
-obj31.additionalPlans = items10;
-const obj33 = {
-  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_13_MONTHLY,
-  interval: SubscriptionIntervalTypes.MONTH,
-  numPremiumGuild: 13,
-  premiumTier: PremiumTypes.TIER_2,
-  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
-  additionalPlans: null,
-};
-const items11 = [{ quantity: 13, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD }];
-obj33.additionalPlans = items11;
-const obj35 = {
-  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_13_YEARLY,
-  interval: SubscriptionIntervalTypes.YEAR,
-  numPremiumGuild: 13,
-  premiumTier: PremiumTypes.TIER_2,
-  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
-  additionalPlans: null,
-};
-const items12 = [{ quantity: 13, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD }];
-obj35.additionalPlans = items12;
-const obj37 = {
-  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_28_MONTHLY,
-  interval: SubscriptionIntervalTypes.MONTH,
-  numPremiumGuild: 28,
-  premiumTier: PremiumTypes.TIER_2,
-  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
-  additionalPlans: null,
-};
-const items13 = [{ quantity: 28, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD }];
-obj37.additionalPlans = items13;
-const obj39 = {
-  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_28_YEARLY,
-  interval: SubscriptionIntervalTypes.YEAR,
-  numPremiumGuild: 28,
-  premiumTier: PremiumTypes.TIER_2,
-  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
-  additionalPlans: null,
-};
-const items14 = [{ quantity: 28, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD }];
-obj39.additionalPlans = items14;
-const obj41 = {
-  productId: frozen.PREMIUM_TIER_1_PREMIUM_GUILD_1_MONTHLY,
-  interval: SubscriptionIntervalTypes.MONTH,
-  numPremiumGuild: 1,
-  premiumTier: PremiumTypes.TIER_1,
-  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_1,
-  additionalPlans: null,
-};
-const items15 = [{ quantity: 1, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD }];
-obj41.additionalPlans = items15;
-const obj43 = {
-  productId: frozen.PREMIUM_TIER_1_PREMIUM_GUILD_1_YEARLY,
-  interval: SubscriptionIntervalTypes.YEAR,
-  numPremiumGuild: 1,
+  numPremiumGuild: 0,
   premiumTier: PremiumTypes.TIER_1,
   basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_1,
-  additionalPlans: null,
+  additionalPlans: [],
 };
-const items16 = [{ quantity: 1, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD }];
-obj43.additionalPlans = items16;
-const obj45 = {
-  productId: frozen.PREMIUM_GUILD_1_MONTHLY,
+const obj11 = {
+  productId: frozen.PREMIUM_TIER_0_MONTHLY,
   interval: SubscriptionIntervalTypes.MONTH,
-  numPremiumGuild: 1,
-  premiumTier: null,
-  basePlanId: SubscriptionPlans.NONE_MONTH,
-  additionalPlans: null,
+  numPremiumGuild: 0,
+  premiumTier: PremiumTypes.TIER_0,
+  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_0,
+  additionalPlans: [],
 };
-const items17 = [{ quantity: 1, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD }];
-obj45.additionalPlans = items17;
-const obj47 = {
-  productId: frozen.PREMIUM_GUILD_2_MONTHLY,
-  interval: SubscriptionIntervalTypes.MONTH,
-  numPremiumGuild: 2,
-  premiumTier: null,
-  basePlanId: SubscriptionPlans.NONE_MONTH,
-  additionalPlans: null,
+const obj12 = {
+  productId: frozen.PREMIUM_TIER_0_YEARLY,
+  interval: SubscriptionIntervalTypes.YEAR,
+  numPremiumGuild: 0,
+  premiumTier: PremiumTypes.TIER_0,
+  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_0,
+  additionalPlans: [],
 };
-const items18 = [{ quantity: 2, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD }];
-obj47.additionalPlans = items18;
-const frozen1 = Object.freeze({
+const obj14 = { quantity: 1, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD };
+const obj2 = {
   [SubscriptionPlans.PREMIUM_MONTH_TIER_0]: frozen.PREMIUM_TIER_0_MONTHLY,
   [SubscriptionPlans.PREMIUM_MONTH_TIER_1]: frozen.PREMIUM_TIER_1_MONTHLY,
   [SubscriptionPlans.PREMIUM_MONTH_TIER_2]: frozen.PREMIUM_TIER_2_MONTHLY,
@@ -246,7 +130,256 @@ const frozen1 = Object.freeze({
   [SubscriptionPlans.PREMIUM_YEAR_TIER_0]: frozen.PREMIUM_TIER_0_YEARLY,
   [SubscriptionPlans.PREMIUM_YEAR_TIER_1]: frozen.PREMIUM_TIER_1_YEARLY,
   [SubscriptionPlans.PREMIUM_YEAR_TIER_2]: frozen.PREMIUM_TIER_2_YEARLY,
-});
+};
+const obj3 = {
+  productId: frozen.PREMIUM_MONTH_TIER_1,
+  interval: SubscriptionIntervalTypes.MONTH,
+  numPremiumGuild: 0,
+  premiumTier: PremiumTypes.TIER_1,
+  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_1,
+  additionalPlans: [],
+  isDeprecated: true,
+};
+const obj4 = {
+  productId: frozen.PREMIUM_YEAR_TIER_1,
+  interval: SubscriptionIntervalTypes.YEAR,
+  numPremiumGuild: 0,
+  premiumTier: PremiumTypes.TIER_1,
+  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_1,
+  additionalPlans: [],
+  isDeprecated: true,
+};
+const obj5 = {
+  productId: frozen.PREMIUM_MONTH_TIER_2,
+  interval: SubscriptionIntervalTypes.MONTH,
+  numPremiumGuild: 0,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
+  additionalPlans: [],
+  isDeprecated: true,
+};
+const obj6 = {
+  productId: frozen.PREMIUM_YEAR_TIER_2,
+  interval: SubscriptionIntervalTypes.YEAR,
+  numPremiumGuild: 0,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
+  additionalPlans: [],
+  isDeprecated: true,
+};
+const obj7 = {
+  productId: frozen.PREMIUM_TIER_2_MONTHLY,
+  interval: SubscriptionIntervalTypes.MONTH,
+  numPremiumGuild: 0,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
+  additionalPlans: [],
+};
+const obj8 = {
+  productId: frozen.PREMIUM_TIER_2_YEARLY,
+  interval: SubscriptionIntervalTypes.YEAR,
+  numPremiumGuild: 0,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
+  additionalPlans: [],
+};
+const obj9 = {
+  productId: frozen.PREMIUM_TIER_1_MONTHLY,
+  interval: SubscriptionIntervalTypes.MONTH,
+  numPremiumGuild: 0,
+  premiumTier: PremiumTypes.TIER_1,
+  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_1,
+  additionalPlans: [],
+};
+items1[0] = obj14;
+const obj15 = {
+  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY,
+  interval: SubscriptionIntervalTypes.YEAR,
+  numPremiumGuild: 1,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
+  additionalPlans: items2,
+};
+items2 = [];
+const obj16 = { quantity: 1, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD };
+items2[0] = obj16;
+const obj17 = {
+  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_2_MONTHLY,
+  interval: SubscriptionIntervalTypes.MONTH,
+  numPremiumGuild: 2,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
+  additionalPlans: items3,
+};
+items3 = [];
+const obj18 = { quantity: 2, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD };
+items3[0] = obj18;
+const obj19 = {
+  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_2_YEARLY,
+  interval: SubscriptionIntervalTypes.YEAR,
+  numPremiumGuild: 2,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
+  additionalPlans: items4,
+};
+items4 = [];
+const obj20 = { quantity: 2, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD };
+items4[0] = obj20;
+const obj21 = {
+  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_3_MONTHLY,
+  interval: SubscriptionIntervalTypes.MONTH,
+  numPremiumGuild: 3,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
+  additionalPlans: items5,
+};
+items5 = [];
+const obj22 = { quantity: 3, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD };
+items5[0] = obj22;
+const obj23 = {
+  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_3_YEARLY,
+  interval: SubscriptionIntervalTypes.YEAR,
+  numPremiumGuild: 3,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
+  additionalPlans: items6,
+};
+items6 = [];
+const obj24 = { quantity: 3, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD };
+items6[0] = obj24;
+const obj25 = {
+  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_5_MONTHLY,
+  interval: SubscriptionIntervalTypes.MONTH,
+  numPremiumGuild: 5,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
+  additionalPlans: items7,
+};
+items7 = [];
+const obj26 = { quantity: 5, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD };
+items7[0] = obj26;
+const obj27 = {
+  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_5_YEARLY,
+  interval: SubscriptionIntervalTypes.YEAR,
+  numPremiumGuild: 5,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
+  additionalPlans: items8,
+};
+items8 = [];
+const obj28 = { quantity: 5, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD };
+items8[0] = obj28;
+const obj29 = {
+  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_10_MONTHLY,
+  interval: SubscriptionIntervalTypes.MONTH,
+  numPremiumGuild: 10,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
+  additionalPlans: items9,
+};
+items9 = [];
+const obj30 = { quantity: 10, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD };
+items9[0] = obj30;
+const obj31 = {
+  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_10_YEARLY,
+  interval: SubscriptionIntervalTypes.YEAR,
+  numPremiumGuild: 10,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
+  additionalPlans: items10,
+};
+items10 = [];
+const obj32 = { quantity: 10, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD };
+items10[0] = obj32;
+const obj33 = {
+  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_13_MONTHLY,
+  interval: SubscriptionIntervalTypes.MONTH,
+  numPremiumGuild: 13,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
+  additionalPlans: items11,
+};
+items11 = [];
+const obj34 = { quantity: 13, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD };
+items11[0] = obj34;
+const obj35 = {
+  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_13_YEARLY,
+  interval: SubscriptionIntervalTypes.YEAR,
+  numPremiumGuild: 13,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
+  additionalPlans: items12,
+};
+items12 = [];
+const obj36 = { quantity: 13, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD };
+items12[0] = obj36;
+const obj37 = {
+  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_28_MONTHLY,
+  interval: SubscriptionIntervalTypes.MONTH,
+  numPremiumGuild: 28,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
+  additionalPlans: items13,
+};
+items13 = [];
+const obj38 = { quantity: 28, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD };
+items13[0] = obj38;
+const obj39 = {
+  productId: frozen.PREMIUM_TIER_2_PREMIUM_GUILD_28_YEARLY,
+  interval: SubscriptionIntervalTypes.YEAR,
+  numPremiumGuild: 28,
+  premiumTier: PremiumTypes.TIER_2,
+  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
+  additionalPlans: items14,
+};
+items14 = [];
+const obj40 = { quantity: 28, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD };
+items14[0] = obj40;
+const obj41 = {
+  productId: frozen.PREMIUM_TIER_1_PREMIUM_GUILD_1_MONTHLY,
+  interval: SubscriptionIntervalTypes.MONTH,
+  numPremiumGuild: 1,
+  premiumTier: PremiumTypes.TIER_1,
+  basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_1,
+  additionalPlans: items15,
+};
+items15 = [];
+const obj42 = { quantity: 1, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD };
+items15[0] = obj42;
+const obj43 = {
+  productId: frozen.PREMIUM_TIER_1_PREMIUM_GUILD_1_YEARLY,
+  interval: SubscriptionIntervalTypes.YEAR,
+  numPremiumGuild: 1,
+  premiumTier: PremiumTypes.TIER_1,
+  basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_1,
+  additionalPlans: items16,
+};
+items16 = [];
+const obj44 = { quantity: 1, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD };
+items16[0] = obj44;
+const obj45 = {
+  productId: frozen.PREMIUM_GUILD_1_MONTHLY,
+  interval: SubscriptionIntervalTypes.MONTH,
+  numPremiumGuild: 1,
+  premiumTier: null,
+  basePlanId: SubscriptionPlans.NONE_MONTH,
+  additionalPlans: items17,
+};
+items17 = [];
+const obj46 = { quantity: 1, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD };
+items17[0] = obj46;
+const obj47 = {
+  productId: frozen.PREMIUM_GUILD_2_MONTHLY,
+  interval: SubscriptionIntervalTypes.MONTH,
+  numPremiumGuild: 2,
+  premiumTier: null,
+  basePlanId: SubscriptionPlans.NONE_MONTH,
+  additionalPlans: items18,
+};
+items18 = [];
+const obj48 = { quantity: 2, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD };
+items18[0] = obj48;
+const frozen1 = Object.freeze(obj2);
 const result = size.fileFinishedImporting("modules/premium/native/ProductIds.ios.tsx");
 
 export const ProductIds = frozen;
@@ -255,90 +388,16 @@ export const BasePlanIdToProductId = frozen1;
 export const IAPProductIds = [];
 export const SubscriptionProductIds = [];
 export const AppStorePremiumProductIdsToPremiumBundledItems = {
-  [frozen.PREMIUM_MONTH_TIER_1]: {
-    productId: frozen.PREMIUM_MONTH_TIER_1,
-    interval: SubscriptionIntervalTypes.MONTH,
-    numPremiumGuild: 0,
-    premiumTier: PremiumTypes.TIER_1,
-    basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_1,
-    additionalPlans: [],
-    isDeprecated: true,
-  },
-  [frozen.PREMIUM_YEAR_TIER_1]: {
-    productId: frozen.PREMIUM_YEAR_TIER_1,
-    interval: SubscriptionIntervalTypes.YEAR,
-    numPremiumGuild: 0,
-    premiumTier: PremiumTypes.TIER_1,
-    basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_1,
-    additionalPlans: [],
-    isDeprecated: true,
-  },
-  [frozen.PREMIUM_MONTH_TIER_2]: {
-    productId: frozen.PREMIUM_MONTH_TIER_2,
-    interval: SubscriptionIntervalTypes.MONTH,
-    numPremiumGuild: 0,
-    premiumTier: PremiumTypes.TIER_2,
-    basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
-    additionalPlans: [],
-    isDeprecated: true,
-  },
-  [frozen.PREMIUM_YEAR_TIER_2]: {
-    productId: frozen.PREMIUM_YEAR_TIER_2,
-    interval: SubscriptionIntervalTypes.YEAR,
-    numPremiumGuild: 0,
-    premiumTier: PremiumTypes.TIER_2,
-    basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
-    additionalPlans: [],
-    isDeprecated: true,
-  },
-  [frozen.PREMIUM_TIER_2_MONTHLY]: {
-    productId: frozen.PREMIUM_TIER_2_MONTHLY,
-    interval: SubscriptionIntervalTypes.MONTH,
-    numPremiumGuild: 0,
-    premiumTier: PremiumTypes.TIER_2,
-    basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_2,
-    additionalPlans: [],
-  },
-  [frozen.PREMIUM_TIER_2_YEARLY]: {
-    productId: frozen.PREMIUM_TIER_2_YEARLY,
-    interval: SubscriptionIntervalTypes.YEAR,
-    numPremiumGuild: 0,
-    premiumTier: PremiumTypes.TIER_2,
-    basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_2,
-    additionalPlans: [],
-  },
-  [frozen.PREMIUM_TIER_1_MONTHLY]: {
-    productId: frozen.PREMIUM_TIER_1_MONTHLY,
-    interval: SubscriptionIntervalTypes.MONTH,
-    numPremiumGuild: 0,
-    premiumTier: PremiumTypes.TIER_1,
-    basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_1,
-    additionalPlans: [],
-  },
-  [frozen.PREMIUM_TIER_1_YEARLY]: {
-    productId: frozen.PREMIUM_TIER_1_YEARLY,
-    interval: SubscriptionIntervalTypes.YEAR,
-    numPremiumGuild: 0,
-    premiumTier: PremiumTypes.TIER_1,
-    basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_1,
-    additionalPlans: [],
-  },
-  [frozen.PREMIUM_TIER_0_MONTHLY]: {
-    productId: frozen.PREMIUM_TIER_0_MONTHLY,
-    interval: SubscriptionIntervalTypes.MONTH,
-    numPremiumGuild: 0,
-    premiumTier: PremiumTypes.TIER_0,
-    basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_0,
-    additionalPlans: [],
-  },
-  [frozen.PREMIUM_TIER_0_YEARLY]: {
-    productId: frozen.PREMIUM_TIER_0_YEARLY,
-    interval: SubscriptionIntervalTypes.YEAR,
-    numPremiumGuild: 0,
-    premiumTier: PremiumTypes.TIER_0,
-    basePlanId: SubscriptionPlans.PREMIUM_YEAR_TIER_0,
-    additionalPlans: [],
-  },
+  [frozen.PREMIUM_MONTH_TIER_1]: obj3,
+  [frozen.PREMIUM_YEAR_TIER_1]: obj4,
+  [frozen.PREMIUM_MONTH_TIER_2]: obj5,
+  [frozen.PREMIUM_YEAR_TIER_2]: obj6,
+  [frozen.PREMIUM_TIER_2_MONTHLY]: obj7,
+  [frozen.PREMIUM_TIER_2_YEARLY]: obj8,
+  [frozen.PREMIUM_TIER_1_MONTHLY]: obj9,
+  [frozen.PREMIUM_TIER_1_YEARLY]: obj10,
+  [frozen.PREMIUM_TIER_0_MONTHLY]: obj11,
+  [frozen.PREMIUM_TIER_0_YEARLY]: obj12,
   [frozen.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY]: obj13,
   [frozen.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY]: obj15,
   [frozen.PREMIUM_TIER_2_PREMIUM_GUILD_2_MONTHLY]: obj17,
@@ -408,6 +467,8 @@ export const getProductIdForGift = function getProductIdForGift(arg0) {
     return frozen.PREMIUM_GIFT_YEAR_TIER_2;
   } else {
     const _Error = Error;
+    const self = this;
+    const self2 = this;
     const error = new Error("Tried to get Product for Plan not configured for IAP!");
     throw error;
   }
@@ -427,6 +488,8 @@ export const getPlanIdForGift = function getPlanIdForGift(arg0) {
     return SubscriptionPlans.PREMIUM_YEAR_TIER_2;
   } else {
     const _Error = Error;
+    const self = this;
+    const self2 = this;
     const error = new Error("Tried to get Plan for Product not configured for IAP!");
     throw error;
   }

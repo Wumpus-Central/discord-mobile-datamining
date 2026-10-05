@@ -1,84 +1,110 @@
 // discord_app/modules/quests/native/QuestHomeOrbShopCarousel.tsx
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl2 from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import QuestConstants from "../QuestConstants.tsx";
 import AnalyticsActions from "../lib/analytics/AnalyticsActions.tsx";
 import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
 import CollectiblesAnalyticsContext from "../../collectibles/CollectiblesAnalyticsContext.tsx";
 import SkeletonCardDefault from "../../collectibles/native/SkeletonCard.tsx";
 import usePopularOrbShopProducts from "../../collectibles/native/hooks/usePopularOrbShopProducts.tsx";
 import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../_runtime/00019_react.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import BountyStore from "../BountyStore.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(5623).BOUNTY_ORB_AMOUNT;
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+let closure_12, dependencyMap, width;
+
+let c10;
+let c9;
+let react = react_mod;
+const View = react_native.View;
+const BOUNTY_ORB_AMOUNT = QuestConstants.BOUNTY_ORB_AMOUNT;
+({ jsx: c9, jsxs: c10 } = Fragment);
 let PX_20 = nativeDefault.space.PX_20;
 let PX_12 = nativeDefault.space.PX_12;
 const contentContainerStyle = { backgroundColor: "transparent" };
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
   ? (width) => {
-      const cResult = c.c(2);
+      let obj3;
+      let tmp2;
+      const obj = react2;
+      const cResult = obj.c(2);
       width = width.width;
       if (cResult[0] !== width) {
-        const obj2 = { style: null };
-        const obj3 = { width };
-        obj2.style = obj3;
-        const tmp5 = options(View, obj2);
+        const obj2 = { style: obj3 };
+        obj3 = { width };
+        const tmp5 = React4(View, obj2);
         cResult[0] = width;
         cResult[1] = tmp5;
-        let tmp2 = tmp5;
+        tmp2 = tmp5;
       } else {
         tmp2 = cResult[1];
       }
       return tmp2;
     }
-  : (width) => options(View, { style: { width: width.width } });
-ReactCompilerGating = fn(558);
+  : (width) => {
+      const obj = { style: { width: width.width } };
+      return React4(View, obj);
+    };
+ReactCompilerGating = ReactCompilerGating_mod;
 const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(1);
+      let first;
+      let obj3;
+      const obj = react2;
+      const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { style: null };
-        const obj3 = { width: PX_12 };
-        obj2.style = obj3;
-        const tmp6 = options(View, obj2);
+        const obj2 = { style: obj3 };
+        obj3 = { width: PX_12 };
+        const tmp6 = React4(View, obj2);
         cResult[0] = tmp6;
-        let first = tmp6;
+        first = tmp6;
       } else {
         first = cResult[0];
       }
       return first;
     }
   : () => {
-      const obj = { style: { width: PX_12 } };
-      return options(View, obj);
+      let obj2;
+      const obj = { style: obj2 };
+      obj2 = { width: PX_12 };
+      return React4(View, obj);
     };
-const data = Array.from({ length: fn(14873).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
-const createStyles = fn(4890);
+let obj = { length: usePopularOrbShopProducts.MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL };
+const data = Array.from(obj, (arg0, arg1) => arg1);
 let closure_17 = createStyles.createStyles(() => {
-  const obj = { standaloneRoot: { marginTop: nativeDefault.space.PX_32 }, headerMediaRoot: null };
-  const obj2 = { marginTop: nativeDefault.space.PX_32 };
-  obj.headerMediaRoot = { paddingBottom: nativeDefault.space.PX_8 };
+  const obj = {
+    standaloneRoot: { marginTop: nativeDefault.space.PX_32 },
+    headerMediaRoot: { paddingBottom: nativeDefault.space.PX_8 },
+  };
+  ({ marginTop: nativeDefault.space.PX_32 });
+  ({ paddingBottom: nativeDefault.space.PX_8 });
   return obj;
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let bountyCompleted;
+      let tmp4;
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [BountyStore];
         const fn = function t() {
           let num = 0;
-          for (const item10007 of tmp) {
+          const questHomeBounties = bountyCompleted.questHomeBounties;
+          for (const item10007 of questHomeBounties) {
             if (!bountyCompleted.isBountyCompleted(item10007.id)) {
               num = num + BOUNTY_ORB_AMOUNT;
             }
@@ -86,6 +112,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           }
           return num;
         };
+        let num = 0;
         cResult[0] = items;
         cResult[1] = fn;
         tmp4 = items;
@@ -93,13 +120,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      return initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStores(tmp4, tmp5);
     }
   : () => {
+      let bountyCompleted;
       const items = [BountyStore];
-      return initialize.useStateFromStores(items, () => {
+      const obj = get_initialized;
+      return obj.useStateFromStores(items, () => {
         let num = 0;
-        for (const item10007 of tmp) {
+        const questHomeBounties = bountyCompleted.questHomeBounties;
+        for (const item10007 of questHomeBounties) {
           if (!bountyCompleted.isBountyCompleted(item10007.id)) {
             num = num + BOUNTY_ORB_AMOUNT;
           }
@@ -108,14 +139,72 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         return num;
       });
     };
-fn(558);
-let obj3 = { length: fn(14873).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      let enabled;
+      let products;
+      let showPlaceholderCarousel;
+      let sortType;
+      const obj = react2;
+      const cResult = obj.c(7);
+      ({ enabled, sortType } = arg0);
+      const tmp4 = closure_18();
+      if (cResult[0] === enabled) {
+        let tmp5;
+        if (cResult[1] === sortType) {
+          tmp5 = cResult[2];
+        }
+        const tmpResult = usePopularOrbShopProducts;
+        const popularOrbShopProducts = tmpResult.usePopularOrbShopProducts(tmp5);
+        ({ products, showPlaceholderCarousel } = popularOrbShopProducts);
+        if (cResult[3] === tmp4) {
+          if (cResult[4] === products) {
+            let tmp7;
+            if (cResult[5] === showPlaceholderCarousel) {
+              tmp7 = cResult[6];
+            }
+            return tmp7;
+          }
+        }
+        const obj2 = { products, obtainableOrbRewards: tmp4, showPlaceholderCarousel };
+        cResult[3] = tmp4;
+        cResult[4] = products;
+        cResult[5] = showPlaceholderCarousel;
+        cResult[6] = obj2;
+        tmp7 = obj2;
+      }
+      const obj3 = { enabled, sortType };
+      cResult[0] = enabled;
+      cResult[1] = sortType;
+      cResult[2] = obj3;
+      tmp5 = obj3;
+    }
+  : (arg0) => {
+      let enabled;
+      let sortType;
+      ({ enabled, sortType } = arg0);
+      const tmp = closure_18();
+      const obj = usePopularOrbShopProducts;
+      const popularOrbShopProducts = obj.usePopularOrbShopProducts({ enabled, sortType });
+      return {
+        products: popularOrbShopProducts.products,
+        obtainableOrbRewards: tmp,
+        showPlaceholderCarousel: popularOrbShopProducts.showPlaceholderCarousel,
+      };
+    };
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(12);
+      let belowCarousel;
+      let compactHeading;
+      let listEdgeSpacing;
+      let orbRewardAmount;
+      const obj = react2;
+      const cResult = obj.c(12);
       ({ orbRewardAmount, belowCarousel, listEdgeSpacing, compactHeading } = arg0);
       let num = 0;
+      const tmp5 = undefined !== compactHeading && compactHeading;
       if (undefined !== belowCarousel && belowCarousel) {
         num = nativeDefault.space.PX_8;
       }
@@ -125,11 +214,13 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[0] === listEdgeSpacing) {
         if (cResult[1] === num) {
+          let tmp8;
+          let tmp9;
           if (cResult[2] === num2) {
-            let tmp8 = cResult[3];
+            tmp8 = cResult[3];
           }
           let str = "text-xs/medium";
-          if (!tmp4) {
+          if (!(undefined !== belowCarousel && belowCarousel)) {
             let str2 = "text-md/semibold";
             if (tmp5) {
               str2 = "text-sm/semibold";
@@ -137,34 +228,36 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             str = str2;
           }
           if (cResult[4] !== orbRewardAmount) {
-            const intl = util.intl;
+            const intl = intl2.intl;
             const obj2 = { orbAmount: orbRewardAmount };
-            const formatResult = intl.format(util.t.CXlsRP, obj2);
+            const formatResult = intl.format(intl2.t.CXlsRP, obj2);
             cResult[4] = orbRewardAmount;
             cResult[5] = formatResult;
-            let tmp9 = formatResult;
+            tmp9 = formatResult;
           } else {
             tmp9 = cResult[5];
           }
           if (cResult[6] === str) {
+            let tmp11;
             if (cResult[7] === tmp9) {
-              let tmp11 = cResult[8];
+              tmp11 = cResult[8];
             }
             if (cResult[9] === tmp8) {
+              let tmp14;
               if (cResult[10] === tmp11) {
-                let tmp14 = cResult[11];
+                tmp14 = cResult[11];
               }
               return tmp14;
             }
             const obj3 = { style: tmp8, children: tmp11 };
-            const tmp17 = options(View, obj3);
+            const tmp17 = React4(View, obj3);
             cResult[9] = tmp8;
             cResult[10] = tmp11;
             cResult[11] = tmp17;
             tmp14 = tmp17;
           }
           const obj4 = { variant: str, color: "text-strong", children: tmp9 };
-          const tmp13 = options(Text_Text.Heading, obj4);
+          const tmp13 = React4(Text_Text.Heading, obj4);
           cResult[6] = str;
           cResult[7] = tmp9;
           cResult[8] = tmp13;
@@ -177,30 +270,36 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = num2;
       cResult[3] = obj5;
       tmp8 = obj5;
-      tmp5 = undefined !== compactHeading && compactHeading;
     }
-  : (orbAmount) => {
-      let flag = orbAmount.belowCarousel;
+  : (belowCarousel) => {
+      let Heading;
+      let compactHeading;
+      let intl;
+      let listEdgeSpacing;
+      let num;
+      let num2;
+      let obj3;
+      let flag = belowCarousel.belowCarousel;
+      const orbRewardAmount = belowCarousel.orbRewardAmount;
       if (flag === undefined) {
         flag = false;
       }
-      ({ compactHeading, listEdgeSpacing } = orbAmount);
+      ({ compactHeading, listEdgeSpacing } = belowCarousel);
       if (compactHeading === undefined) {
         compactHeading = false;
       }
-      const obj = { paddingHorizontal: listEdgeSpacing, marginTop: null, marginBottom: null };
-      let num = 0;
+      const obj = { paddingHorizontal: listEdgeSpacing, marginTop: num, marginBottom: num2 };
+      num = 0;
       if (flag) {
         num = nativeDefault.space.PX_8;
       }
-      obj.marginTop = num;
-      let num2 = 0;
+      num2 = 0;
       if (!flag) {
         num2 = nativeDefault.space.PX_8;
       }
-      const obj2 = { style: obj, children: null };
-      obj.marginBottom = num2;
       let str = "text-xs/medium";
+      const obj2 = { style: obj, children: React4(Heading, obj3) };
+      Heading = Text_Text.Heading;
       if (!flag) {
         let str2 = "text-md/semibold";
         if (compactHeading) {
@@ -208,22 +307,33 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         }
         str = str2;
       }
-      const obj3 = { variant: str, color: "text-strong", children: null };
-      const intl = util.intl;
-      obj3.children = intl.format(util.t.CXlsRP, { orbAmount: orbAmount.orbRewardAmount });
-      obj2.children = options(Text_Text.Heading, obj3);
-      return options(View, obj2);
+      obj3 = {
+        variant: str,
+        color: "text-strong",
+        children: intl.format(intl2.t.CXlsRP, { orbAmount: orbRewardAmount }),
+      };
+      intl = intl2.intl;
+      return React4(View, obj2);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
   ? (cardHeight) => {
-      const cResult = cardWidth(listEdgeSpacing[9]).c(18);
+      let cardStride;
+      let cardWidth;
+      let listEdgeSpacing;
+      let listStyle;
+      let obj = cardWidth(listEdgeSpacing[9]);
+      const cResult = obj.c(18);
       ({ listStyle, cardWidth } = cardHeight);
       cardHeight = cardHeight.cardHeight;
       ({ cardStride, listEdgeSpacing } = cardHeight);
       if (cResult[0] === cardHeight) {
+        let tmp4;
+        let tmp6;
+        let tmp11;
+        let tmp10;
         if (cResult[1] === cardWidth) {
-          let tmp4 = cResult[2];
+          tmp4 = cResult[2];
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
@@ -231,15 +341,15 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             return "placeholder-" + arg0;
           };
           cResult[3] = fn2;
-          let tmp6 = fn2;
+          tmp6 = fn2;
         } else {
           tmp6 = cResult[3];
         }
         if (cResult[4] !== listEdgeSpacing) {
           class H {
             constructor() {
-              obj = { width: listEdgeSpacing };
-              return jsx(f68876, obj);
+              const obj = { width: listEdgeSpacing };
+              return React4(closure_14, obj);
             }
           }
           cResult[4] = listEdgeSpacing;
@@ -247,16 +357,16 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class H {
             constructor() {
-              obj = { width: listEdgeSpacing };
-              return jsx(f68876, obj);
+              const obj = { width: listEdgeSpacing };
+              return React4(closure_14, obj);
             }
           }
         }
         if (cResult[6] !== listEdgeSpacing) {
           class H {
             constructor() {
-              obj = { width: listEdgeSpacing };
-              return jsx(f68876, obj);
+              const obj = { width: listEdgeSpacing };
+              return React4(closure_14, obj);
             }
           }
           cResult[6] = listEdgeSpacing;
@@ -264,8 +374,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class H {
             constructor() {
-              obj = { width: listEdgeSpacing };
-              return jsx(f68876, obj);
+              const obj = { width: listEdgeSpacing };
+              return React4(closure_14, obj);
             }
           }
         }
@@ -273,21 +383,21 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           class H {
             constructor() {
-              obj = { width: listEdgeSpacing };
-              return jsx(f68876, obj);
+              const obj = { width: listEdgeSpacing };
+              return React4(closure_14, obj);
             }
           }
           const stringResult = obj2.string(cardWidth(listEdgeSpacing[13]).t.hVV8Wi);
           const obj3 = { busy: true };
           cResult[8] = stringResult;
           cResult[9] = obj3;
-          let tmp11 = obj3;
-          const tmp10 = stringResult;
+          tmp11 = obj3;
+          tmp10 = stringResult;
         } else {
           class H {
             constructor() {
-              obj = { width: listEdgeSpacing };
-              return jsx(f68876, obj);
+              const obj = { width: listEdgeSpacing };
+              return React4(closure_14, obj);
             }
           }
           tmp11 = cResult[9];
@@ -295,8 +405,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[10] !== listStyle) {
           class H {
             constructor() {
-              obj = { width: listEdgeSpacing };
-              return jsx(f68876, obj);
+              const obj = { width: listEdgeSpacing };
+              return React4(closure_14, obj);
             }
           }
           tmp14[0] = listStyle;
@@ -306,16 +416,16 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class H {
             constructor() {
-              obj = { width: listEdgeSpacing };
-              return jsx(f68876, obj);
+              const obj = { width: listEdgeSpacing };
+              return React4(closure_14, obj);
             }
           }
         }
         if (cResult[12] === tmp9) {
           class H {
             constructor() {
-              obj = { width: listEdgeSpacing };
-              return jsx(f68876, obj);
+              const obj = { width: listEdgeSpacing };
+              return React4(closure_14, obj);
             }
           }
         }
@@ -336,129 +446,99 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           ListFooterComponent: tmp9,
           ItemSeparatorComponent,
         };
-        const tmp21 = closure_9(cardWidth(listEdgeSpacing[16]).FlashList, obj4);
         cResult[12] = tmp9;
         cResult[13] = H;
         cResult[14] = cardStride;
         cResult[15] = tmp4;
         cResult[16] = tmp14;
-        cResult[17] = tmp21;
+        cResult[17] = closure_9(cardWidth(listEdgeSpacing[16]).FlashList, obj4);
+        const tmp21 = closure_9(cardWidth(listEdgeSpacing[16]).FlashList, obj4);
       }
       const fn = function t() {
-        const size = { width: cardWidth, height: cardHeight };
-        return options(SkeletonCardDefault, size);
+        size = { width: cardWidth, height: cardHeight };
+        return React4(SkeletonCardDefault, size);
       };
       cResult[0] = cardHeight;
       cResult[1] = cardWidth;
       cResult[2] = fn;
       tmp4 = fn;
-      const obj = cardWidth(listEdgeSpacing[9]);
     }
   : (cardWidth) => {
+      let cardStride;
+      let intl;
+      let items3;
+      let listStyle;
       cardWidth = cardWidth.cardWidth;
       const cardHeight = cardWidth.cardHeight;
       const listEdgeSpacing = cardWidth.listEdgeSpacing;
       const items = [cardWidth, cardHeight];
       ({ listStyle, cardStride } = cardWidth);
-      const callback = noop.useCallback(() => {
-        const size = { width: cardWidth, height: cardHeight };
-        return options(SkeletonCardDefault, size);
+      const callback = react.useCallback(() => {
+        size = { width: cardWidth, height: cardHeight };
+        return React4(SkeletonCardDefault, size);
       }, items);
       const items1 = [listEdgeSpacing];
-      const callback1 = noop.useCallback((arg0) => "placeholder-" + arg0, []);
+      const callback1 = react.useCallback((arg0) => "placeholder-" + arg0, []);
       const items2 = [listEdgeSpacing];
-      const callback2 = noop.useCallback(() => options(closure_14, { width: listEdgeSpacing }), items1);
-      const callback3 = noop.useCallback(() => options(closure_14, { width: listEdgeSpacing }), items2);
-      const obj = {
+      const callback2 = react.useCallback(() => {
+        const obj = { width: listEdgeSpacing };
+        return React4(closure_14, obj);
+      }, items1);
+      const callback3 = react.useCallback(() => {
+        const obj = { width: listEdgeSpacing };
+        return React4(closure_14, obj);
+      }, items2);
+      let obj = {
         horizontal: true,
         accessibilityRole: "list",
-        accessibilityLabel: null,
-        accessibilityState: null,
-        data: null,
-        keyExtractor: null,
-        renderItem: null,
-        style: null,
-        contentContainerStyle: null,
+        accessibilityLabel: intl.string(cardWidth(listEdgeSpacing[13]).t.hVV8Wi),
+        accessibilityState: { busy: true },
+        data,
+        keyExtractor: callback1,
+        renderItem: callback,
+        style: items3,
+        contentContainerStyle,
         decelerationRate: "fast",
-        snapToInterval: null,
+        snapToInterval: cardStride,
         showsHorizontalScrollIndicator: false,
-        ListHeaderComponent: null,
-        ListFooterComponent: null,
-        ItemSeparatorComponent: null,
+        ListHeaderComponent: callback2,
+        ListFooterComponent: callback3,
+        ItemSeparatorComponent,
       };
-      const intl = cardWidth(listEdgeSpacing[13]).intl;
-      obj.accessibilityLabel = intl.string(cardWidth(listEdgeSpacing[13]).t.hVV8Wi);
-      obj.accessibilityState = { busy: true };
-      obj.data = data;
-      obj.keyExtractor = callback1;
-      obj.renderItem = callback;
-      const items3 = [listStyle, contentContainerStyle];
-      obj.style = items3;
-      obj.contentContainerStyle = contentContainerStyle;
-      obj.snapToInterval = cardStride;
-      obj.ListHeaderComponent = callback2;
-      obj.ListFooterComponent = callback3;
-      obj.ItemSeparatorComponent = ItemSeparatorComponent;
-      return closure_9(cardWidth(listEdgeSpacing[16]).FlashList, obj);
+      const FlashList = cardWidth(listEdgeSpacing[16]).FlashList;
+      intl = cardWidth(listEdgeSpacing[13]).intl;
+      items3 = [listStyle, contentContainerStyle];
+      return closure_9(FlashList, obj);
     };
-ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(7);
-      ({ enabled, sortType } = arg0);
-      const tmp4 = closure_18();
-      if (cResult[0] === enabled) {
-        if (cResult[1] === sortType) {
-          let tmp5 = cResult[2];
-        }
-        const popularOrbShopProducts = usePopularOrbShopProducts.usePopularOrbShopProducts(tmp5);
-        ({ products, showPlaceholderCarousel } = popularOrbShopProducts);
-        if (cResult[3] === tmp4) {
-          if (cResult[4] === products) {
-            if (cResult[5] === showPlaceholderCarousel) {
-              let tmp7 = cResult[6];
-            }
-            return tmp7;
-          }
-        }
-        const obj2 = { products, obtainableOrbRewards: tmp4, showPlaceholderCarousel };
-        cResult[3] = tmp4;
-        cResult[4] = products;
-        cResult[5] = showPlaceholderCarousel;
-        cResult[6] = obj2;
-        tmp7 = obj2;
-        const tmpResult = usePopularOrbShopProducts;
-      }
-      const obj3 = { enabled, sortType };
-      cResult[0] = enabled;
-      cResult[1] = sortType;
-      cResult[2] = obj3;
-      tmp5 = obj3;
-    }
-  : (arg0) => {
-      ({ enabled, sortType } = arg0);
-      const tmp = closure_18();
-      const popularOrbShopProducts = usePopularOrbShopProducts.usePopularOrbShopProducts({ enabled, sortType });
-      return {
-        products: popularOrbShopProducts.products,
-        obtainableOrbRewards: tmp,
-        showPlaceholderCarousel: popularOrbShopProducts.showPlaceholderCarousel,
-      };
-    };
-let size = fn(2);
-let result = size.fileFinishedImporting("modules/quests/native/QuestHomeOrbShopCarousel.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      const cResult = obtainableOrbRewards(576).c(58);
+      let COLLECTIBLES_SHOP_CARD_HEIGHT;
+      let COLLECTIBLES_SHOP_CARD_WIDTH;
+      let clickable;
+      let embedded;
+      let hideCardDetails;
+      let listEdgeSpacing;
+      let obtainableOrbRewards;
+      let orbShopProducts;
+      let ref;
+      let replacesHeaderMedia;
+      let showOrbShopPlaceholderCarousel;
+      let tmp11;
+      let tmp8;
+      let tmp9;
+      const tmp2 = dependencyMap;
+      let obj = obtainableOrbRewards(576);
+      const cResult = obj.c(58);
       ({ orbShopProducts, obtainableOrbRewards } = arg0);
       ({ showOrbShopPlaceholderCarousel, embedded, replacesHeaderMedia, listEdgeSpacing, clickable } = arg0);
-      closure_1 = tmp4;
+      let closure_1 = tmp4;
+      const tmp5 = undefined !== embedded && embedded;
       dependencyMap = tmp6;
       if (undefined === listEdgeSpacing) {
         listEdgeSpacing = PX_20;
       }
-      noop = undefined !== clickable && clickable;
+      react = undefined !== clickable && clickable;
       closure_17();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [COLLECTIBLES_SHOP_CARD_HEIGHT];
@@ -472,14 +552,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp8, tmp9] = cResult;
       }
-      let obj = obtainableOrbRewards(576);
-      const tmp5 = undefined !== embedded && embedded;
-      let ONYX = obtainableOrbRewards(504).useStateFromStores(tmp8, tmp9);
+      const tmpResult = obtainableOrbRewards(504);
+      let ONYX = tmpResult.useStateFromStores(tmp8, tmp9);
       if (tmp5) {
         ONYX = obtainableOrbRewards(14863).ThemeTypes.ONYX;
       }
       if (undefined !== replacesHeaderMedia && replacesHeaderMedia) {
-        let COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(14887).QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH;
+        COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(14887).QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH;
       } else {
         COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(8418).COLLECTIBLES_SHOP_CARD_WIDTH;
       }
@@ -492,11 +571,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const sum = COLLECTIBLES_SHOP_CARD_WIDTH + PX_12;
         cResult[2] = COLLECTIBLES_SHOP_CARD_WIDTH;
         cResult[3] = sum;
-        let tmp11 = sum;
+        tmp11 = sum;
       } else {
         tmp11 = cResult[3];
       }
-      closure_7 = tmp11;
+      let closure_7 = tmp11;
       if (cResult[4] !== COLLECTIBLES_SHOP_CARD_HEIGHT) {
         let obj2 = { height: COLLECTIBLES_SHOP_CARD_HEIGHT };
         cResult[4] = COLLECTIBLES_SHOP_CARD_HEIGHT;
@@ -505,8 +584,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] !== listEdgeSpacing) {
         class Q {
           constructor() {
-            obj = { width: closure_3 };
-            return jsx(f68876, obj);
+            const obj = { width: listEdgeSpacing };
+            return React4(closure_14, obj);
           }
         }
         cResult[6] = listEdgeSpacing;
@@ -514,16 +593,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class Q {
           constructor() {
-            obj = { width: closure_3 };
-            return jsx(f68876, obj);
+            const obj = { width: listEdgeSpacing };
+            return React4(closure_14, obj);
           }
         }
       }
       if (cResult[8] !== listEdgeSpacing) {
         class G {
           constructor() {
-            obj = { width: closure_3 };
-            return jsx(f68876, obj);
+            const obj = { width: listEdgeSpacing };
+            return React4(closure_14, obj);
           }
         }
         cResult[8] = listEdgeSpacing;
@@ -531,84 +610,70 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class G {
           constructor() {
-            obj = { width: closure_3 };
-            return jsx(f68876, obj);
+            const obj = { width: listEdgeSpacing };
+            return React4(closure_14, obj);
           }
         }
       }
-      const tmp17 = listEdgeSpacing(noop.useState(0), 2);
-      closure_8 = tmp17[0];
-      closure_9 = tmp17[1];
-      PX_20 = noop.useRef(false);
+      const tmp17 = listEdgeSpacing(react.useState(0), 2);
+      let closure_8 = tmp17[0];
+      let closure_9 = tmp17[1];
+      const length = orbShopProducts.length;
+      PX_20 = react.useRef(false);
       let tmp18 = obtainableOrbRewards > 0;
       if (tmp18) {
         class G {
           constructor() {
-            obj = { width: closure_3 };
-            return jsx(f68876, obj);
-          }
-        }
-        if (!tmp4) {
-          class G {
-            constructor() {
-              obj = { width: closure_3 };
-              return jsx(f68876, obj);
-            }
+            const obj = { width: listEdgeSpacing };
+            return React4(closure_14, obj);
           }
         }
         tmp18 = tmp19;
       }
       PX_12 = tmp18;
-      if (cResult[10] === orbShopProducts.length) {
+      if (cResult[10] === length) {
         class G {
           constructor() {
-            obj = { width: closure_3 };
-            return jsx(f68876, obj);
+            const obj = { width: listEdgeSpacing };
+            return React4(closure_14, obj);
           }
         }
       }
       class N {
         constructor() {
-          current = closure_11.current;
-          tmp = closure_11;
+          const current = ref.current || !PX_12 || closure_1;
           if (!current) {
-            tmp2 = closure_12;
-            current = !closure_12;
+            ref.current = true;
+            const obj2 = { obtainableOrbRewards, carouselSize: length, isPlaceholderCarousel: false };
+            const obj = AnalyticsActions;
+            const result = obj.trackQuestHomeOrbShopCarouselViewed(obj2);
           }
-          if (!current) {
-            current = closure_1;
-          }
-          if (!current) {
-            flag = true;
-            tmp.current = true;
-            tmp3 = closure_0;
-            tmp4 = closure_2;
-            obj = closure_0(closure_2[20]);
-            obj1 = { obtainableOrbRewards: null, carouselSize: null, isPlaceholderCarousel: false };
-            tmp5 = obtainableOrbRewards;
-            obj1.obtainableOrbRewards = obtainableOrbRewards;
-            tmp6 = length;
-            obj1.carouselSize = length;
-            result = obj.trackQuestHomeOrbShopCarouselViewed(obj1);
-          }
-          return;
         }
       }
       const items1 = [
-        orbShopProducts.length,
+        length,
         tmp18,
         obtainableOrbRewards,
         undefined !== showOrbShopPlaceholderCarousel && showOrbShopPlaceholderCarousel,
       ];
-      cResult[10] = orbShopProducts.length;
+      cResult[10] = length;
       cResult[11] = tmp18;
       cResult[12] = obtainableOrbRewards;
       cResult[13] = undefined !== showOrbShopPlaceholderCarousel && showOrbShopPlaceholderCarousel;
       cResult[14] = N;
       cResult[15] = items1;
-      const tmpResult = obtainableOrbRewards(504);
     }
   : (showOrbShopPlaceholderCarousel) => {
+      let ONYX;
+      let intl;
+      let items6;
+      let items7;
+      let obj3;
+      let obtainableOrbRewards;
+      let orbShopProducts;
+      let ref;
+      let tmp19Result2;
+      let tmp20;
       ({ orbShopProducts, obtainableOrbRewards } = showOrbShopPlaceholderCarousel);
       let flag = showOrbShopPlaceholderCarousel.showOrbShopPlaceholderCarousel;
       if (flag === undefined) {
@@ -632,9 +697,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let COLLECTIBLES_SHOP_CARD_WIDTH;
       let COLLECTIBLES_SHOP_CARD_HEIGHT;
-      c7 = undefined;
+      let c7;
       let first;
-      closure_9 = undefined;
+      let closure_9;
       let length;
       ref = undefined;
       closure_12 = undefined;
@@ -642,7 +707,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obtainableOrbRewards(flag3[12]);
       [][0] = COLLECTIBLES_SHOP_CARD_HEIGHT;
       if (flag2) {
-        let ONYX = obtainableOrbRewards(tmp3[17]).ThemeTypes.ONYX;
+        ONYX = obtainableOrbRewards(tmp3[17]).ThemeTypes.ONYX;
       } else {
         ONYX = tmp5;
       }
@@ -658,12 +723,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const sum = COLLECTIBLES_SHOP_CARD_WIDTH + closure_12;
       c7 = sum;
+      let obj = flag4;
       const items = [COLLECTIBLES_SHOP_CARD_HEIGHT];
       const memo = flag4.useMemo(() => ({ height: COLLECTIBLES_SHOP_CARD_HEIGHT }), items);
       const items1 = [listEdgeSpacing];
       const items2 = [listEdgeSpacing];
-      const callback = flag4.useCallback(() => options(closure_14, { width: listEdgeSpacing }), items1);
-      const callback1 = flag4.useCallback(() => options(closure_14, { width: listEdgeSpacing }), items2);
+      const callback = flag4.useCallback(() => {
+        const obj = { width: listEdgeSpacing };
+        return React4(closure_14, obj);
+      }, items1);
+      const callback1 = flag4.useCallback(() => {
+        const obj = { width: listEdgeSpacing };
+        return React4(closure_14, obj);
+      }, items2);
       const tmp10 = listEdgeSpacing(flag4.useState(0), 2);
       first = tmp10[0];
       closure_9 = tmp10[1];
@@ -671,26 +743,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ref = flag4.useRef(false);
       let tmp12 = obtainableOrbRewards > 0;
       if (tmp12) {
-        let tmp13 = flag;
-        if (!flag) {
-          tmp13 = length > 0;
-        }
-        tmp12 = tmp13;
+        tmp12 = flag || length > 0;
       }
       closure_12 = tmp12;
       const items3 = [length, tmp12, obtainableOrbRewards, flag];
       const effect = obj.useEffect(() => {
-        let current = ref.current;
-        if (!current) {
-          current = !closure_12;
-        }
-        if (!current) {
-          current = flag;
-        }
+        const current = ref.current || !closure_12 || flag;
         if (!current) {
           ref.current = true;
           const obj2 = { obtainableOrbRewards, carouselSize: length, isPlaceholderCarousel: false };
-          const result = AnalyticsActions.trackQuestHomeOrbShopCarouselViewed(obj2);
+          const obj = AnalyticsActions;
+          const result = obj.trackQuestHomeOrbShopCarouselViewed(obj2);
         }
       }, items3);
       const items4 = [first, sum, length];
@@ -698,46 +761,56 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback2 = obj.useCallback((nativeEvent) => {
         const rounded = Math.round(nativeEvent.nativeEvent.contentOffset.x / c7);
         if (rounded !== first) {
-          let result = dependencyMap;
+          let LEFT;
+          const trackQuestHomeOrbShopCarouselScroll = AnalyticsActions.trackQuestHomeOrbShopCarouselScroll;
+          AnalyticsActions;
           if (rounded > tmp2) {
-            let LEFT = AnalyticsTypes.HorizontalScrollingDirection.RIGHT;
+            LEFT = AnalyticsTypes.HorizontalScrollingDirection.RIGHT;
           } else {
             LEFT = AnalyticsTypes.HorizontalScrollingDirection.LEFT;
           }
-          const obj2 = { scrollingDirection: LEFT, carouselPosition: rounded, carouselSize: length };
-          result = AnalyticsActions.trackQuestHomeOrbShopCarouselScroll(obj2);
+          const obj = { scrollingDirection: LEFT, carouselPosition: rounded, carouselSize: length };
+          const result = trackQuestHomeOrbShopCarouselScroll(obj);
           closure_9(rounded);
         }
       }, items4);
       const callback3 = obj.useCallback((arg0) => {
+        let index;
+        let item;
+        let obj2;
         ({ item, index } = arg0);
         const obj = {
           newValue: { tilePosition: index, pageSection: "quest_home_orb_shop" },
-          children: options(QuestHomeOrbShopRewardCardDefault, {
-            product: item,
-            cardWidth: COLLECTIBLES_SHOP_CARD_WIDTH,
-            cardHeight: COLLECTIBLES_SHOP_CARD_HEIGHT,
-            hideCardDetails: flag3,
-            clickable: flag4,
-          }),
+          children: React4(QuestHomeOrbShopRewardCardDefault, obj2),
         };
-        return options(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
+        const CollectiblesAnalyticsProvider = CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider;
+        obj2 = {
+          product: item,
+          cardWidth: COLLECTIBLES_SHOP_CARD_WIDTH,
+          cardHeight: COLLECTIBLES_SHOP_CARD_HEIGHT,
+          hideCardDetails: flag3,
+          clickable: flag4,
+        };
+        return React4(CollectiblesAnalyticsProvider, obj);
       }, items5);
       if (tmp12) {
+        let standaloneRoot;
         if (flag3) {
-          let standaloneRoot = tmp.headerMediaRoot;
+          standaloneRoot = tmp.headerMediaRoot;
         } else if (!flag2) {
           standaloneRoot = tmp.standaloneRoot;
         }
-        let obj2 = { theme: ONYX, children: null };
-        const obj3 = { style: standaloneRoot, children: null };
+        let obj2 = { theme: ONYX, children: tmp20(COLLECTIBLES_SHOP_CARD_WIDTH, obj3) };
         let tmp19Result = !flag3;
+        obj3 = { style: standaloneRoot, children: items6 };
+        const ThemeContextProvider = obtainableOrbRewards(tmp3[23]).ThemeContextProvider;
+        tmp20 = length;
         if (!flag3) {
           const obj4 = { orbRewardAmount: obtainableOrbRewards, listEdgeSpacing, compactHeading: flag2 };
           tmp19Result = tmp19(closure_19, obj4);
         }
-        const items6 = [tmp19Result, ,];
-        const obj5 = { style: memo, children: null };
+        items6 = [tmp19Result, ,];
+        const obj5 = { style: memo, children: tmp19Result2 };
         if (flag) {
           const obj6 = {
             listStyle: memo,
@@ -746,41 +819,30 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cardStride: sum,
             listEdgeSpacing,
           };
-          let tmp19Result2 = tmp19(closure_20, obj6);
+          tmp19Result2 = tmp19(closure_20, obj6);
         } else {
           const obj7 = {
             horizontal: true,
             accessibilityRole: "list",
-            accessibilityLabel: null,
-            data: null,
-            keyExtractor: null,
-            renderItem: null,
-            style: null,
-            contentContainerStyle: null,
+            accessibilityLabel: intl.string(obtainableOrbRewards(flag3[13]).t.hVV8Wi),
+            data: orbShopProducts,
+            keyExtractor: tmp17,
+            renderItem: callback3,
+            style: items7,
+            contentContainerStyle,
             decelerationRate: "fast",
-            snapToInterval: null,
+            snapToInterval: sum,
             showsHorizontalScrollIndicator: false,
-            ListHeaderComponent: null,
-            ListFooterComponent: null,
-            ItemSeparatorComponent: null,
-            onMomentumScrollEnd: null,
+            ListHeaderComponent: callback,
+            ListFooterComponent: callback1,
+            ItemSeparatorComponent,
+            onMomentumScrollEnd: callback2,
           };
-          const intl = obtainableOrbRewards(tmp3[13]).intl;
-          obj7.accessibilityLabel = intl.string(obtainableOrbRewards(tmp3[13]).t.hVV8Wi);
-          obj7.data = orbShopProducts;
-          obj7.keyExtractor = tmp17;
-          obj7.renderItem = callback3;
-          const items7 = [memo, contentContainerStyle];
-          obj7.style = items7;
-          obj7.contentContainerStyle = contentContainerStyle;
-          obj7.snapToInterval = sum;
-          obj7.ListHeaderComponent = callback;
-          obj7.ListFooterComponent = callback1;
-          obj7.ItemSeparatorComponent = ItemSeparatorComponent;
-          obj7.onMomentumScrollEnd = callback2;
-          tmp19Result2 = tmp19(obtainableOrbRewards(tmp3[16]).FlashList, obj7);
+          const FlashList = obtainableOrbRewards(tmp3[16]).FlashList;
+          intl = obtainableOrbRewards(tmp3[13]).intl;
+          items7 = [memo, contentContainerStyle];
+          tmp19Result2 = tmp19(FlashList, obj7);
         }
-        obj5.children = tmp19Result2;
         items6[1] = closure_9(COLLECTIBLES_SHOP_CARD_WIDTH, obj5);
         if (flag3) {
           const obj8 = {
@@ -792,11 +854,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           flag3 = tmp19(closure_19, obj8);
         }
         items6[2] = flag3;
-        obj3.children = items6;
-        obj2.children = length(COLLECTIBLES_SHOP_CARD_WIDTH, obj3);
-        return closure_9(obtainableOrbRewards(tmp3[23]).ThemeContextProvider, obj2);
+        return closure_9(ThemeContextProvider, obj2);
       } else {
         return null;
       }
     };
+let size = size_mod;
+let result = size.fileFinishedImporting("modules/quests/native/QuestHomeOrbShopCarousel.tsx");
+
+export default tmp4;
 export const useQuestHomeOrbShopCarouselData = tmp3;

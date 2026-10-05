@@ -1,36 +1,35 @@
 // discord_common/js/packages/design/hooks/useFieldLabelA11yNative.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import utils_getNodeText from "../utils/getNodeText.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import react3 from "../utils/getNodeText.tsx";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../../discord_app/modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const Platform = fn(17).Platform;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("../discord_common/js/packages/design/hooks/useFieldLabelA11yNative.tsx");
-
-export const useFieldLabelA11yNative = ReactCompilerGating.isReactCompilerEnabled()
+const Platform = react_native.Platform;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(8);
+      let accessibilityLabel;
+      let label;
+      const obj = react2;
+      const cResult = obj.c(8);
       ({ label, accessibilityLabel } = arg0);
-      const id = noop.useId();
-      let tmp6 = tmp5;
-      if (null != label) {
-        tmp6 = null == accessibilityLabel;
-      }
+      const id = react.useId();
       if (cResult[0] === accessibilityLabel) {
         if (cResult[1] === label) {
-          if (cResult[2] === tmp6) {
-            let tmp8 = cResult[3];
+          let tmp8;
+          if (cResult[2] === (null != label && null == accessibilityLabel)) {
+            tmp8 = cResult[3];
           }
           let tmp11;
-          if (tmp6) {
+          if (null != label && null == accessibilityLabel) {
             tmp11 = id;
           }
           if (cResult[4] === tmp7) {
             if (cResult[5] === tmp8) {
+              let tmp12;
               if (cResult[6] === tmp11) {
-                let tmp12 = cResult[7];
+                tmp12 = cResult[7];
               }
               return tmp12;
             }
@@ -44,44 +43,46 @@ export const useFieldLabelA11yNative = ReactCompilerGating.isReactCompilerEnable
         }
       }
       let tmp9;
-      if (!tmp6) {
+      if (!(null != label && null == accessibilityLabel)) {
         let nodeText = accessibilityLabel;
         if (accessibilityLabel == null) {
-          nodeText = utils_getNodeText.getNodeText(label);
-          const tmpResult = utils_getNodeText;
+          const tmpResult = react3;
+          nodeText = tmpResult.getNodeText(label);
         }
         tmp9 = nodeText;
       }
       cResult[0] = accessibilityLabel;
       cResult[1] = label;
-      cResult[2] = tmp6;
+      cResult[2] = null != label && null == accessibilityLabel;
       cResult[3] = tmp9;
       tmp8 = tmp9;
     }
   : (arg0) => {
+      let accessibilityLabel;
+      let label;
+      let tmp5;
+      let tmp8;
       ({ label, accessibilityLabel } = arg0);
-      const id = noop.useId();
-      let tmp3 = tmp2;
-      if (null != label) {
-        tmp3 = null == accessibilityLabel;
-      }
+      const id = react.useId();
       let tmp4;
       if (null != label) {
         tmp4 = id;
       }
-      const obj = { labelId: tmp4, accessibilityLabel: null, accessibilityLabelledBy: null };
-      let tmp5;
-      if (!tmp3) {
+      const obj = { labelId: tmp4, accessibilityLabel: tmp5, accessibilityLabelledBy: tmp8 };
+      tmp5 = undefined;
+      if (!(null != label && null == accessibilityLabel)) {
         if (accessibilityLabel == null) {
-          accessibilityLabel = utils_getNodeText.getNodeText(label);
+          const obj2 = react3;
+          accessibilityLabel = obj2.getNodeText(label);
         }
         tmp5 = accessibilityLabel;
       }
-      obj.accessibilityLabel = tmp5;
-      let tmp8;
-      if (tmp3) {
+      tmp8 = undefined;
+      if (null != label && null == accessibilityLabel) {
         tmp8 = id;
       }
-      obj.accessibilityLabelledBy = tmp8;
       return obj;
     };
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/hooks/useFieldLabelA11yNative.tsx");
+
+export const useFieldLabelA11yNative = tmp2;

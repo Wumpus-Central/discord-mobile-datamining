@@ -1,5 +1,5 @@
 // discord_app/stores/DefaultRouteStore.tsx
-import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage3 from "../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import Constants from "../Constants.tsx";
@@ -9,19 +9,23 @@ const Routes = Constants.Routes;
 const obj = { lastViewedPath: null, lastViewedNonVoicePath: null };
 let closure_4 = obj;
 const LAST_VIEWED_PATH = "LAST_VIEWED_PATH";
-const PersistedStore = initializeDefault.PersistedStore;
-class DefaultRouteStore extends PersistedStore {}
+const PersistedStore = get_initializedDefault.PersistedStore;
+class DefaultRouteStore extends PersistedStore {
+  initialize() {
+    let tmp = arg0;
+    if (arg0 === undefined) {
+      tmp = obj;
+    }
+    if (tmp == null) {
+      tmp = obj;
+    }
+    closure_4 = tmp;
+  }
+  getState() {
+    return closure_4;
+  }
+}
 const prototype = DefaultRouteStore.prototype;
-prototype["initialize"] = function initialize() {
-  let tmp = arg0;
-  if (arg0 === undefined) {
-    tmp = obj;
-  }
-  if (tmp == null) {
-    tmp = obj;
-  }
-  closure_4 = tmp;
-};
 Object.defineProperty(prototype, "defaultRoute", {
   get: function defaultRoute() {
     let ME = closure_4.lastViewedPath;
@@ -48,9 +52,6 @@ Object.defineProperty(prototype, "fallbackRoute", {
   },
   set: undefined,
 });
-prototype["getState"] = function getState() {
-  return closure_4;
-};
 DefaultRouteStore.displayName = "DefaultRouteStore";
 DefaultRouteStore.persistKey = "DefaultRouteStore";
 const items = [
@@ -63,7 +64,7 @@ const items = [
   },
 ];
 DefaultRouteStore.migrations = items;
-const defaultRouteStore = new DefaultRouteStore(DispatcherDefault, {
+const obj2 = {
   SAVE_LAST_ROUTE: function handleSaveRoute(path) {
     closure_4.lastViewedPath = path.path;
     return true;
@@ -75,7 +76,8 @@ const defaultRouteStore = new DefaultRouteStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     closure_4 = { lastViewedPath: null, lastViewedNonVoicePath: null };
   },
-});
+};
+const defaultRouteStore = new DefaultRouteStore(DispatcherDefault, obj2);
 const result = size.fileFinishedImporting("stores/DefaultRouteStore.tsx");
 
 export default defaultRouteStore;

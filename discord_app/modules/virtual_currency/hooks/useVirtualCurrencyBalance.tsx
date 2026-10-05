@@ -1,16 +1,21 @@
 // discord_app/modules/virtual_currency/hooks/useVirtualCurrencyBalance.tsx
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../../_runtime/00576_react.js";
 import VirtualCurrencyStore from "../stores/VirtualCurrencyStore.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-fn(558);
-const ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let balance;
+      let tmp4;
+      let tmp5;
+      const obj = react;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [VirtualCurrencyStore];
         const fn = function u() {
@@ -23,24 +28,30 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      return initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStores(tmp4, tmp5);
     }
   : () => {
+      let balance;
       const items = [VirtualCurrencyStore];
-      return initialize.useStateFromStores(items, () => balance.balance);
+      const obj = get_initialized;
+      return obj.useStateFromStores(items, () => balance.balance);
     };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useVirtualCurrencyBalance.tsx");
-
-export const useVirtualCurrencyBalance = tmp2;
-export const useHasEnoughVirtualCurrency = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
       _require = arg0;
-      const cResult = require("c").c(3);
+      const tmp = _require;
+      const obj = require("react");
+      const cResult = obj.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [VirtualCurrencyStore];
+        let num = 0;
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -58,17 +69,19 @@ export const useHasEnoughVirtualCurrency = ReactCompilerGating.isReactCompilerEn
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       const items = [VirtualCurrencyStore];
-      return require("initialize").useStateFromStores(items, () => {
+      const obj = require("get initialized");
+      return obj.useStateFromStores(items, () => {
         let tmp2 = null != closure_0;
         if (tmp2) {
           let num = VirtualCurrencyStore.balance;
@@ -80,6 +93,10 @@ export const useHasEnoughVirtualCurrency = ReactCompilerGating.isReactCompilerEn
         return tmp2;
       });
     };
+const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useVirtualCurrencyBalance.tsx");
+
+export const useVirtualCurrencyBalance = tmp2;
+export const useHasEnoughVirtualCurrency = tmp3;
 export const getVirtualCurrencyBalance = function getVirtualCurrencyBalance() {
   return VirtualCurrencyStore.getCurrentBalance();
 };

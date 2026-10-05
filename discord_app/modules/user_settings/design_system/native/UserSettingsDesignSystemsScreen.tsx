@@ -1,13 +1,21 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
 function getDesignSystemsSettings() {
-  const obj = { label: "Components", settings: null };
-  const items = [, , , , , , , , , , , , , , , ,];
+  let items;
+  let items2;
+  let items3;
+  let items4;
+  let items5;
+  const obj = { label: "Components", settings: items };
+  items = [, , , , , , , , , , , , , , , ,];
   ({
     DESIGN_SYSTEMS_TEXT: arr[0],
     DESIGN_SYSTEMS_BUTTON: arr[1],
@@ -27,15 +35,13 @@ function getDesignSystemsSettings() {
     DESIGN_SYSTEM_TAG_GROUP: arr[15],
     DESIGN_SYSTEM_HAPTICS: arr[16],
   } = MobileUserSettings);
-  obj.settings = items;
   const items1 = [obj, , , ,];
-  const obj2 = { label: "AI Visual Identity", settings: null };
-  const items2 = [,];
+  const obj2 = { label: "AI Visual Identity", settings: items2 };
+  items2 = [,];
   ({ DESIGN_SYSTEM_AI_LOADER: arr3[0], DESIGN_SYSTEM_AI_SHIMMER: arr3[1] } = MobileUserSettings);
-  obj2.settings = items2;
   items1[1] = obj2;
-  const obj3 = { label: "In Progress", settings: null };
-  const items3 = [, , , ,];
+  const obj3 = { label: "In Progress", settings: items3 };
+  items3 = [, , , ,];
   ({
     DESIGN_SYSTEM_SHEETS: arr4[0],
     DESIGN_SYSTEM_STACK: arr4[1],
@@ -43,53 +49,53 @@ function getDesignSystemsSettings() {
     DESIGN_SYSTEMS_TOAST: arr4[3],
     DESIGN_SYSTEMS_MODAL: arr4[4],
   } = MobileUserSettings);
-  obj3.settings = items3;
   items1[2] = obj3;
-  const obj4 = { label: "Experimental", settings: null };
-  const items4 = [,];
+  const obj4 = { label: "Experimental", settings: items4 };
+  items4 = [,];
   ({ DESIGN_SYSTEMS_BACKGROUND_BLUR_VIEW: arr5[0], DESIGN_SYSTEMS_EXPERIMENTAL_BUTTONS: arr5[1] } = MobileUserSettings);
-  obj4.settings = items4;
   items1[3] = obj4;
-  const obj5 = { label: "Legacy Audit", settings: null };
-  const items5 = [MobileUserSettings.DESIGN_SYSTEMS_LEGACY_BUTTON];
-  obj5.settings = items5;
+  const obj5 = { label: "Legacy Audit", settings: items5 };
+  items5 = [MobileUserSettings.DESIGN_SYSTEMS_LEGACY_BUTTON];
   items1[4] = obj5;
   return items1;
 }
-const MobileUserSettings = fn(7634).MobileUserSettings;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let first;
+      let tmp8;
+      const obj = react2;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { sections: getDesignSystemsSettings() };
-        const list = SettingBuilders.createList(obj2);
+        const createList = SettingBuilders.createList;
+        SettingBuilders;
+        const list = createList(obj2);
         cResult[0] = list;
-        let first = list;
-        const tmpResult = SettingBuilders;
+        first = list;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { node: first };
-        const tmp10 = jsx(SettingLayoutDefault, { node: first });
-        cResult[1] = tmp10;
-        let tmp7 = tmp10;
+        const tmp11 = jsx(SettingLayoutDefault, { node: first });
+        cResult[1] = tmp11;
+        tmp8 = tmp11;
       } else {
-        tmp7 = cResult[1];
+        tmp8 = cResult[1];
       }
-      return tmp7;
+      return tmp8;
     }
   : () => {
-      const node = noop.useMemo(() => {
+      const node = react.useMemo(() => {
         const obj = SettingBuilders;
-        return obj.createList({ sections: getDesignSystemsSettings() });
+        const obj2 = { sections: getDesignSystemsSettings() };
+        return obj.createList(obj2);
       }, []);
       return jsx(SettingLayoutDefault, { node });
     };
+const result = size.fileFinishedImporting(
+  "modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx",
+);
+
+export default tmp2;

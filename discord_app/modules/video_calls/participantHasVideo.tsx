@@ -1,10 +1,17 @@
 // discord_app/modules/video_calls/participantHasVideo.tsx
+import Constants from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
+import CallConstants from "../calls/CallConstants.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
 function canRenderParticipantVideo(participant) {
   let obj = MediaEngineStore;
   if (MediaEngineStore === undefined) {
@@ -14,83 +21,61 @@ function canRenderParticipantVideo(participant) {
   if (tmp) {
     let tmp3 = participant.type !== constants.ACTIVITY;
     if (tmp3) {
-      const supportsResult = MediaEngineStore.supports(Features.VIDEO);
-      if (!supportsResult) {
-        tmp3 = supportsResult;
-      } else if (hasOwnProperty(participant)) {
-        let flag = null != participant.streamId;
-      } else {
-        const voiceState = participant.voiceState;
-        flag = undefined;
-        if (voiceState != null) {
-          flag = voiceState.selfVideo;
+      let supportsResult = MediaEngineStore.supports(Features.VIDEO);
+      if (supportsResult) {
+        let flag;
+        if (hasOwnProperty(participant)) {
+          flag = null != participant.streamId;
+        } else {
+          const voiceState = participant.voiceState;
+          flag = undefined;
+          if (voiceState != null) {
+            flag = voiceState.selfVideo;
+          }
+          if (flag == null) {
+            flag = false;
+          }
         }
-        if (flag == null) {
-          flag = false;
-        }
+        supportsResult = flag;
       }
+      tmp3 = supportsResult;
     }
-    let tmp9 = tmp3;
-    if (tmp9) {
-      const tmp11 = hasOwnProperty(participant);
-      let tmp12 = !tmp11;
+    let tmp8 = tmp3;
+    if (tmp8) {
+      const tmp10 = hasOwnProperty(participant);
+      let tmp11 = !tmp10;
+      if (tmp10) {
+        tmp11 = participant.user.id !== AuthenticationStore.getId();
+      }
       if (tmp11) {
-        tmp12 = participant.user.id !== AuthenticationStore.getId();
-      }
-      if (tmp12) {
-        const tmp15 = timestampProducer(participant);
-        let tmp16 = !tmp15;
-        if (tmp15) {
-          tmp16 = !obj.isLocalVideoDisabled(participant.id);
+        const tmp14 = metroRequire(participant);
+        let tmp15 = !tmp14;
+        if (tmp14) {
+          tmp15 = !obj.isLocalVideoDisabled(participant.id);
         }
-        tmp12 = tmp16;
+        tmp11 = tmp15;
       }
-      tmp9 = tmp12;
+      tmp8 = tmp11;
     }
-    tmp = tmp9;
+    tmp = tmp8;
   }
   return tmp;
 }
-const CallConstants = fn(4911);
 ({ ParticipantTypes: closure_4, isStreamParticipant: hasOwnProperty, isUserParticipant: metroRequire } = CallConstants);
-const Features = fn(4915).Features;
-const ReactCompilerGating = fn(558);
-function participantHasVideo(type) {
-  let streamId = type;
-  let tmp = type.type !== constants.ACTIVITY;
-  if (tmp) {
-    const supportsResult = MediaEngineStore.supports(Features.VIDEO);
-    if (!supportsResult) {
-      tmp = supportsResult;
-    } else if (hasOwnProperty(streamId)) {
-      streamId = streamId.streamId;
-      let flag = null != streamId;
-    } else {
-      const voiceState = streamId.voiceState;
-      flag = undefined;
-      if (voiceState != null) {
-        flag = voiceState.selfVideo;
-      }
-      if (flag == null) {
-        flag = false;
-      }
-    }
-  }
-  return tmp;
-}
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/video_calls/participantHasVideo.tsx");
-
-export default participantHasVideo;
-export { canRenderParticipantVideo };
-export const useCanRenderParticipantVideo = ReactCompilerGating.isReactCompilerEnabled()
+const Features = Constants.Features;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
       _require = arg0;
-      const cResult = require("c").c(3);
+      const obj = require("react");
+      const cResult = obj.c(3);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MediaEngineStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -100,17 +85,46 @@ export const useCanRenderParticipantVideo = ReactCompilerGating.isReactCompilerE
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       const items = [MediaEngineStore];
-      return require("initialize").useStateFromStores(items, () =>
-        canRenderParticipantVideo(closure_0, MediaEngineStore),
-      );
+      const obj = require("get initialized");
+      return obj.useStateFromStores(items, () => canRenderParticipantVideo(closure_0, MediaEngineStore));
     };
+function participantHasVideo(type) {
+  let tmp = type.type !== constants.ACTIVITY;
+  if (tmp) {
+    let supportsResult = MediaEngineStore.supports(Features.VIDEO);
+    if (supportsResult) {
+      let flag;
+      if (hasOwnProperty(type)) {
+        flag = null != type.streamId;
+      } else {
+        const voiceState = type.voiceState;
+        flag = undefined;
+        if (voiceState != null) {
+          flag = voiceState.selfVideo;
+        }
+        if (flag == null) {
+          flag = false;
+        }
+      }
+      supportsResult = flag;
+    }
+    tmp = supportsResult;
+  }
+  return tmp;
+}
+const result = size.fileFinishedImporting("modules/video_calls/participantHasVideo.tsx");
+
+export default participantHasVideo;
+export { canRenderParticipantVideo };
+export const useCanRenderParticipantVideo = tmp3;

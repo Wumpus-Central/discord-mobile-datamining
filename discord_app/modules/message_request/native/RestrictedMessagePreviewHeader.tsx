@@ -1,116 +1,141 @@
 // discord_app/modules/message_request/native/RestrictedMessagePreviewHeader.tsx
+import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import MessageRequestConstants from "../MessageRequestConstants.tsx";
+import react from "../../../../_runtime/00019_react.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-let closure_5 = fn(12085).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  container: { alignItems: "flex-start", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 },
-  avatar: null,
-};
-let obj3 = { alignItems: "flex-start", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 };
-obj2.avatar = { marginBottom: nativeDefault.space.PX_4 };
-let closure_8 = createStyles.createStyles(obj2);
-const size = fn(2);
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+const View = react_native.View;
+let closure_5 = MessageRequestConstants.MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { container: obj2, avatar: obj3 };
+obj2 = { alignItems: "flex-start", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 };
+createStyles = createStyles.createStyles;
+obj3 = { marginBottom: nativeDefault.space.PX_4 };
+let closure_8 = createStyles(obj);
 let result = size.fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewHeader.tsx");
 
 export default function RestrictedMessagePreviewHeader(channel) {
+  let Avatar;
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let items3;
+  let obj5;
+  let obj8;
   channel = channel.channel;
   const user = channel.user;
   let analyticsLocations;
   const tmp = closure_8();
   analyticsLocations = user(analyticsLocations[6])().analyticsLocations;
-  const name = user(analyticsLocations[7]).getName(user);
   let obj = user(analyticsLocations[7]);
-  const userTag = user(analyticsLocations[7]).getUserTag(user, { decoration: "never", identifiable: "always" });
+  const name = obj.getName(user);
+  let obj2 = user(analyticsLocations[7]);
+  const userTag = obj2.getUserTag(user, { decoration: "never", identifiable: "always" });
   const items = [user.id, channel.id, analyticsLocations];
   const callback = userTag.useCallback(() => {
-    showUserProfileActionSheetDefault({
-      userId: user.id,
-      channelId: channel.id,
-      sourceAnalyticsLocations: analyticsLocations,
-    });
+    const obj = { userId: user.id, channelId: channel.id, sourceAnalyticsLocations: analyticsLocations };
+    showUserProfileActionSheetDefault(obj);
   }, items);
   const items1 = [userTag];
   const items2 = [user];
   const callback1 = userTag.useCallback(() => {
-    ClipboardUtils.copy(userTag);
-    const result = ToastUtils.presentUsernameCopied();
+    const obj = ClipboardUtils;
+    obj.copy(userTag);
+    const obj2 = ToastUtils;
+    const result = obj2.presentUsernameCopied();
   }, items1);
-  let obj3 = { style: tmp.container, children: null };
+  let obj3 = { style: tmp.container, children: items3 };
   const callback2 = userTag.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12269, dependencyMap.paths), "MutualGuildsActionSheet", {
+    let obj = ActionSheetActionCreatorsDefault;
+    let obj2 = {
       user,
       onPressMutualGuild(arg0) {
-        const result = channel(7862).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
-        const obj = channel(7862);
-        channel(6845).transitionToGuild(arg0);
-        const obj2 = channel(6845);
-        user(4854).hideActionSheet();
-        const obj3 = user(4854);
-        user(5093).popWithKey(closure_1_5);
+        const obj = channel(analyticsLocations[14]);
+        const result = obj.trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
+        const obj2 = channel(analyticsLocations[15]);
+        obj2.transitionToGuild(arg0);
+        const obj3 = user(analyticsLocations[11]);
+        obj3.hideActionSheet();
+        const obj4 = user(analyticsLocations[16]);
+        obj4.popWithKey(closure_1_5);
       },
-    });
+    };
+    obj.openLazy(asyncRequire(12269, dependencyMap.paths), "MutualGuildsActionSheet", obj2);
   }, items2);
-  const obj4 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-  const intl = channel(analyticsLocations[18]).intl;
-  obj4.accessibilityLabel = intl.string(channel(analyticsLocations[18]).t.iXAna6);
-  obj4.onPress = callback;
-  let obj2 = user(analyticsLocations[7]);
-  obj4.children = closure_6(channel(analyticsLocations[19]).Avatar, {
-    style: tmp.avatar,
-    user,
-    guildId: channel.guild_id,
-    size: channel(analyticsLocations[19]).AvatarSizes.XXLARGE,
-    avatarDecoration: user.avatarDecoration,
-  });
-  const items3 = [closure_6(channel(analyticsLocations[17]).PressableOpacity, obj4), , , , ,];
-  const obj6 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-  const intl2 = channel(analyticsLocations[18]).intl;
-  obj6.accessibilityLabel = intl2.string(channel(analyticsLocations[18]).t.iXAna6);
-  obj6.onPress = callback;
-  obj6.children = closure_6(channel(analyticsLocations[20]).Text, {
-    variant: "heading-xxl/extrabold",
-    color: "mobile-text-heading-primary",
-    children: name,
-  });
-  items3[1] = closure_6(channel(analyticsLocations[17]).PressableOpacity, obj6);
-  const isProvisional = user.isProvisional;
-  let tmp11Result = !isProvisional;
-  if (!isProvisional) {
-    const obj7 = { accessibilityRole: "button", accessibilityHint: null, onPress: null, children: null };
-    const intl3 = tmp12(tmp3[18]).intl;
-    obj7.accessibilityHint = intl3.string(tmp12(tmp3[18]).t.y5MwJy);
-    obj7.onPress = callback1;
-    const obj8 = { variant: "heading-lg/medium", color: "text-default", children: userTag };
-    obj7.children = closure_6(tmp12(tmp3[20]).Text, obj8);
-    tmp11Result = closure_6(tmp12(tmp3[17]).PressableOpacity, obj7);
-  }
-  items3[2] = tmp11Result;
-  const obj9 = { variant: "text-md/medium", color: "text-default", children: null };
-  const intl4 = tmp12(tmp3[18]).intl;
-  obj9.children = intl4.formatToPlainString(channel(analyticsLocations[18]).t["Qvg+6+"], { username: name });
-  items3[3] = closure_6(channel(analyticsLocations[20]).Text, obj9);
-  const obj10 = { userId: user.id, onPress: callback2, iconSize: null, textVariant: "text-md/medium" };
-  const obj5 = {
+  let obj4 = {
+    accessibilityRole: "button",
+    accessibilityLabel: intl.string(channel(analyticsLocations[18]).t.iXAna6),
+    onPress: callback,
+    children: closure_6(Avatar, obj5),
+  };
+  const PressableOpacity = channel(analyticsLocations[17]).PressableOpacity;
+  intl = channel(analyticsLocations[18]).intl;
+  obj5 = {
     style: tmp.avatar,
     user,
     guildId: channel.guild_id,
     size: channel(analyticsLocations[19]).AvatarSizes.XXLARGE,
     avatarDecoration: user.avatarDecoration,
   };
-  obj10.iconSize = channel(analyticsLocations[22]).GuildIconSizes.XSMALL;
-  items3[4] = closure_6(user(analyticsLocations[21]), obj10);
+  Avatar = channel(analyticsLocations[19]).Avatar;
+  items3 = [closure_6(PressableOpacity, obj4), , , , ,];
+  const obj6 = {
+    accessibilityRole: "button",
+    accessibilityLabel: intl2.string(channel(analyticsLocations[18]).t.iXAna6),
+    onPress: callback,
+    children: closure_6(channel(analyticsLocations[20]).Text, {
+      variant: "heading-xxl/extrabold",
+      color: "mobile-text-heading-primary",
+      children: name,
+    }),
+  };
+  const PressableOpacity2 = channel(analyticsLocations[17]).PressableOpacity;
+  intl2 = channel(analyticsLocations[18]).intl;
+  items3[1] = closure_6(PressableOpacity2, obj6);
+  let tmp11Result = !user.isProvisional;
+  if (tmp11Result) {
+    const obj7 = {
+      accessibilityRole: "button",
+      accessibilityHint: intl3.string(channel(analyticsLocations[18]).t.y5MwJy),
+      onPress: callback1,
+      children: closure_6(channel(analyticsLocations[20]).Text, obj8),
+    };
+    const PressableOpacity3 = tmp12(tmp3[17]).PressableOpacity;
+    intl3 = tmp12(tmp3[18]).intl;
+    obj8 = { variant: "heading-lg/medium", color: "text-default", children: userTag };
+    tmp11Result = closure_6(PressableOpacity3, obj7);
+  }
+  items3[2] = tmp11Result;
+  const obj9 = {
+    variant: "text-md/medium",
+    color: "text-default",
+    children: intl4.formatToPlainString(channel(analyticsLocations[18]).t["Qvg+6+"], { username: name }),
+  };
+  const Text = tmp12(tmp3[20]).Text;
+  intl4 = tmp12(tmp3[18]).intl;
+  items3[3] = closure_6(Text, obj9);
+  const obj10 = {
+    userId: user.id,
+    onPress: callback2,
+    iconSize: channel(analyticsLocations[22]).GuildIconSizes.XSMALL,
+    textVariant: "text-md/medium",
+  };
+  const tmp2Result = user(analyticsLocations[21]);
+  items3[4] = closure_6(tmp2Result, obj10);
   items3[5] = closure_6(user(analyticsLocations[23]), { channel, user });
-  obj3.children = items3;
   return closure_7(View, obj3);
 }

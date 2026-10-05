@@ -1,42 +1,54 @@
 // discord_app/stores/AnalyticsTrackingStore.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
+import Constants from "../Constants.tsx";
 import AnalyticsUtils2 from "../utils/AnalyticsUtils.tsx";
-import discord_common_AnalyticsUtils from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import SessionHeartbeatScheduler from "../modules/analytics_sessions/SessionHeartbeatScheduler.tsx";
+import requestSafeIdleCallback from "../../discord_common/js/packages/design/utils/requestSafeIdleCallback.tsx";
+import sendUnloadRequest from "../modules/analytics/sendUnloadRequest.tsx";
 import AuthenticationStore from "AuthenticationStore.tsx";
+import AnalyticsUtils from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-require = fn;
-const AnalyticsUtils = fn(1260);
-const obj2 = {
+let items;
+const Endpoints = Constants.Endpoints;
+let obj = {
   dispatcher: DispatcherDefault,
   actionHandler: {
     CONNECTION_OPEN(arg0) {
-      return discord_common_AnalyticsUtils.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+      const AnalyticsActionHandlers = AnalyticsUtils.AnalyticsActionHandlers;
+      return AnalyticsActionHandlers.handleConnectionOpen(arg0);
     },
     OVERLAY_INITIALIZE(arg0) {
-      return discord_common_AnalyticsUtils.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+      const AnalyticsActionHandlers = AnalyticsUtils.AnalyticsActionHandlers;
+      return AnalyticsActionHandlers.handleConnectionOpen(arg0);
     },
     CURRENT_USER_UPDATE(arg0) {
-      return discord_common_AnalyticsUtils.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+      const AnalyticsActionHandlers = AnalyticsUtils.AnalyticsActionHandlers;
+      return AnalyticsActionHandlers.handleConnectionOpen(arg0);
     },
     CONNECTION_CLOSED() {
-      return discord_common_AnalyticsUtils.AnalyticsActionHandlers.handleConnectionClosed();
+      const AnalyticsActionHandlers = AnalyticsUtils.AnalyticsActionHandlers;
+      return AnalyticsActionHandlers.handleConnectionClosed();
     },
     FINGERPRINT() {
-      return discord_common_AnalyticsUtils.AnalyticsActionHandlers.handleFingerprint();
+      const AnalyticsActionHandlers = AnalyticsUtils.AnalyticsActionHandlers;
+      return AnalyticsActionHandlers.handleFingerprint();
     },
     TRACK(arg0) {
-      return discord_common_AnalyticsUtils.AnalyticsActionHandlers.handleTrack(arg0);
+      const AnalyticsActionHandlers = AnalyticsUtils.AnalyticsActionHandlers;
+      return AnalyticsActionHandlers.handleTrack(arg0);
     },
     SET_ANALYTICS_TOKEN(arg0) {
-      return discord_common_AnalyticsUtils.AnalyticsActionHandlers.handleSetAnalyticsToken(arg0);
+      const AnalyticsActionHandlers = AnalyticsUtils.AnalyticsActionHandlers;
+      return AnalyticsActionHandlers.handleSetAnalyticsToken(arg0);
     },
   },
-  TRACKING_URL: fn(1085).Endpoints.TRACK,
-  waitFor: null,
+  TRACKING_URL: Endpoints.TRACK,
+  waitFor: items,
   getFingerprint: AuthenticationStore.getFingerprint,
   getSessionId() {
-    const session = SessionHeartbeatScheduler.getSession();
+    const obj = SessionHeartbeatScheduler;
+    const session = obj.getSession();
     return session.then((uuid) => {
       let sessionId;
       if (uuid != null) {
@@ -48,13 +60,11 @@ const obj2 = {
   getLaunchSignature() {
     return AnalyticsUtils2.launchSignature;
   },
-  scheduleWhenIdle: fn(6981).requestSafeIdleCallback,
-  sendUnloadRequest: fn(6982).sendUnloadRequest,
+  scheduleWhenIdle: requestSafeIdleCallback.requestSafeIdleCallback,
+  sendUnloadRequest: sendUnloadRequest.sendUnloadRequest,
 };
-const items = [AuthenticationStore];
-obj2.waitFor = items;
-const result = AnalyticsUtils.analyticsTrackingStoreMaker(obj2);
-const size = fn(2);
+items = [AuthenticationStore];
+const result = AnalyticsUtils.analyticsTrackingStoreMaker(obj);
 const result1 = size.fileFinishedImporting("stores/AnalyticsTrackingStore.tsx");
 
 export default result;

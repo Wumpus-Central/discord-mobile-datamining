@@ -1,30 +1,37 @@
 // discord_app/modules/video_calls/native/components/ChannelCallMicButton.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import useMuteStatesDefault from "../../useMuteStates.tsx";
 import CallBarActionAll from "CallBarAction.tsx";
 import VoiceActionUtils from "../VoiceActionUtils.tsx";
 import VoicePanelRiveMicButton from "../../../voice_panel/native/controls/buttons/VoicePanelRiveMicButton.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import GameConsoleStore from "../../../game_console/GameConsoleStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallMicButton.tsx");
-
-export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      const cResult = c.c(16);
+      let awaitingRemoteSessionInfo;
+      let disableTint;
+      let isSmallSize;
+      let mute;
+      let onPress;
+      let tmp7;
+      let tmp8;
+      const obj = react2;
+      const cResult = obj.c(16);
       ({ isSmallSize, disableTint } = channel);
       let tmp4 = undefined !== disableTint;
+      channel = channel.channel;
       if (tmp4) {
         tmp4 = disableTint;
       }
-      const tmp6 = useMuteStatesDefault(channel.channel);
+      const tmp6 = useMuteStatesDefault(channel);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GameConsoleStore];
         const fn = function s() {
@@ -37,27 +44,30 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp7, tmp8] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp7, tmp8);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp7, tmp8);
       if (cResult[2] === stateFromStores) {
+        let tmp11;
+        let tmp13;
+        let tmp16;
         if (cResult[3] === tmp6) {
-          let tmp11 = cResult[4];
+          tmp11 = cResult[4];
         }
         ({ mute, onPress } = tmp11);
         if (cResult[5] !== mute) {
-          const obj2 = { muted: mute };
           const tmp15 = jsx(VoicePanelRiveMicButton.VoicePanelRiveMicButton, { muted: mute });
           cResult[5] = mute;
           cResult[6] = tmp15;
-          let tmp13 = tmp15;
+          tmp13 = tmp15;
         } else {
           tmp13 = cResult[6];
         }
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = util.intl;
-          const stringResult = intl.string(util.t.B3zz0G);
+          const intl = intl2.intl;
+          const stringResult = intl.string(intl2.t.B3zz0G);
           cResult[7] = stringResult;
-          let tmp16 = stringResult;
+          tmp16 = stringResult;
         } else {
           tmp16 = cResult[7];
         }
@@ -75,8 +85,9 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[11] === onPress) {
                 if (cResult[12] === tmp5Result) {
                   if (cResult[13] === tmp4) {
+                    let tmp20;
                     if (cResult[14] === RED_400) {
-                      let tmp20 = cResult[15];
+                      tmp20 = cResult[15];
                     }
                     return tmp20;
                   }
@@ -85,16 +96,6 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const obj3 = {
-          appearsDisabled: stateFromStores,
-          accessibilityLabel: tmp16,
-          onPress,
-          source: tmp5Result,
-          isActive: tmp4,
-          isSmallSize,
-          lottieComponent: tmp13,
-          tintColor: RED_400,
-        };
         const tmp23 = jsx(CallBarActionAll.ToggledActionButton, {
           appearsDisabled: stateFromStores,
           accessibilityLabel: tmp16,
@@ -115,15 +116,17 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
         cResult[15] = tmp23;
         tmp20 = tmp23;
       }
-      const tmpResult = initialize;
-      const muteHandler = VoiceActionUtils.createMuteHandler(tmp6, stateFromStores);
+      const tmpResult2 = VoiceActionUtils;
+      const muteHandler = tmpResult2.createMuteHandler(tmp6, stateFromStores);
       cResult[2] = stateFromStores;
       cResult[3] = tmp6;
       cResult[4] = muteHandler;
       tmp11 = muteHandler;
-      const tmpResult2 = VoiceActionUtils;
     }
   : (disableTint) => {
+      let awaitingRemoteSessionInfo;
+      let channel;
+      let isSmallSize;
       let flag = disableTint.disableTint;
       ({ channel, isSmallSize } = disableTint);
       if (flag === undefined) {
@@ -132,48 +135,39 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
       let mute;
       const tmp3 = useMuteStatesDefault(channel);
       const items = [GameConsoleStore];
-      const stateFromStores = mute(504).useStateFromStores(
+      const obj = mute(504);
+      const stateFromStores = obj.useStateFromStores(
         items,
         () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo(),
       );
-      const obj = mute(504);
-      const muteHandler = mute(9687).createMuteHandler(tmp3, stateFromStores);
+      const obj2 = mute(9687);
+      const muteHandler = obj2.createMuteHandler(tmp3, stateFromStores);
       mute = muteHandler.mute;
       const items1 = [mute];
-      const memo = noop.useMemo(() => jsx(VoicePanelRiveMicButton.VoicePanelRiveMicButton, { muted: mute }), items1);
-      const obj3 = {
-        appearsDisabled: stateFromStores,
-        accessibilityLabel: null,
-        onPress: null,
-        source: null,
-        isActive: null,
-        isSmallSize: null,
-        lottieComponent: null,
-        tintColor: null,
-      };
+      const onPress = muteHandler.onPress;
+      const memo = react.useMemo(() => jsx(VoicePanelRiveMicButton.VoicePanelRiveMicButton, { muted: mute }), items1);
+      const ToggledActionButton = CallBarActionAll.ToggledActionButton;
       const intl = mute(1126).intl;
-      obj3.accessibilityLabel = intl.string(mute(1126).t.B3zz0G);
-      obj3.onPress = muteHandler.onPress;
-      obj3.source = importDefault(mute ? 9691 : 9692);
       if (!flag) {
         flag = mute;
       }
-      obj3.isActive = flag;
-      obj3.isSmallSize = isSmallSize;
-      obj3.lottieComponent = memo;
       let RED_400;
       if (mute) {
         RED_400 = nativeDefault.unsafe_rawColors.RED_400;
       }
-      obj3.tintColor = RED_400;
-      return jsx(CallBarActionAll.ToggledActionButton, {
-        appearsDisabled: stateFromStores,
-        accessibilityLabel: null,
-        onPress: null,
-        source: null,
-        isActive: null,
-        isSmallSize: null,
-        lottieComponent: null,
-        tintColor: null,
-      });
+      return (
+        <ToggledActionButton
+          appearsDisabled={stateFromStores}
+          accessibilityLabel={intl.string(mute(1126).t.B3zz0G)}
+          onPress={onPress}
+          source={importDefault(mute ? 9691 : 9692)}
+          isActive={flag}
+          isSmallSize={isSmallSize}
+          lottieComponent={memo}
+          tintColor={RED_400}
+        />
+      );
     };
+const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallMicButton.tsx");
+
+export const ChannelCallMicButton = tmp2;

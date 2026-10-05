@@ -1,28 +1,31 @@
 // discord_app/modules/activities/panel/native/InviteActivityButton.tsx
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import getCurrentUserPresenceActivityDefault from "../../utils/getCurrentUserPresenceActivity.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import LocalActivityStore from "../../../../stores/LocalActivityStore.tsx";
 import SelfPresenceStore from "../../../../stores/SelfPresenceStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/activities/panel/native/InviteActivityButton.tsx");
+let applicationId;
 
-export default noop.memo(
+const jsx = Fragment.jsx;
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (applicationId) => {
-        let Button = applicationId;
-        let tmp = dependencyMap;
-        const cResult = applicationId(576).c(10);
+        let first;
+        let tmp7;
+        let tmp8;
+        const tmp = applicationId;
+        let obj = applicationId(576);
+        const cResult = obj.c(10);
         applicationId = applicationId.applicationId;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [LocalActivityStore, SelfPresenceStore];
           cResult[0] = items;
-          let first = items;
+          first = items;
         } else {
           first = cResult[0];
         }
@@ -34,130 +37,110 @@ export default noop.memo(
           cResult[1] = applicationId;
           cResult[2] = fn;
           cResult[3] = items1;
-          let tmp7 = items1;
-          let tmp6 = fn;
+          tmp8 = items1;
+          tmp7 = fn;
         } else {
-          tmp6 = cResult[2];
-          tmp7 = cResult[3];
+          tmp7 = cResult[2];
+          tmp8 = cResult[3];
         }
-        let obj = applicationId(576);
-        const stateFromStores = Button(504).useStateFromStores(first, tmp6, tmp7);
-        if (null == stateFromStores) {
-          return null;
-        } else {
+        const tmpResult = tmp(504);
+        const stateFromStores = tmpResult.useStateFromStores(first, tmp7, tmp8);
+        let tmp10 = null;
+        if (null != stateFromStores) {
+          let tmp11;
+          let tmp13;
+          let tmp12;
+          let tmp16;
           if (cResult[4] !== stateFromStores) {
             const fn2 = function y() {
-              const obj = ActionSheetActionCreatorsDefault;
-              obj.openLazy(
-                asyncRequireImpl(17180, dependencyMap.paths),
-                "ActivityInviteSheet-" + stateFromStores.session_id,
-                { activity: stateFromStores },
-              );
+              const openLazy = ActionSheetActionCreatorsDefault.openLazy;
+              ActionSheetActionCreatorsDefault;
+              const obj = { activity: stateFromStores };
+              const tmp2 = asyncRequire(17180, dependencyMap.paths);
+              openLazy(tmp2, "ActivityInviteSheet-" + stateFromStores.session_id, obj);
             };
             cResult[4] = stateFromStores;
             cResult[5] = fn2;
-            let tmp9 = fn2;
+            tmp11 = fn2;
           } else {
-            tmp9 = cResult[5];
+            tmp11 = cResult[5];
           }
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = Button(1126).intl;
-            const stringResult = intl.string(Button(1126).t["OzOM/q"]);
-            const intl2 = Button(1126).intl;
-            const stringResult1 = intl2.string(Button(1126).t["OzOM/q"]);
+            const intl = tmp(1126).intl;
+            const stringResult = intl.string(tmp(1126).t["OzOM/q"]);
+            const intl2 = tmp(1126).intl;
+            const stringResult1 = intl2.string(tmp(1126).t["OzOM/q"]);
             cResult[6] = stringResult;
             cResult[7] = stringResult1;
-            let tmp11 = stringResult1;
-            let tmp10 = stringResult;
+            tmp13 = stringResult1;
+            tmp12 = stringResult;
           } else {
-            tmp10 = cResult[6];
-            tmp11 = cResult[7];
+            tmp12 = cResult[6];
+            tmp13 = cResult[7];
           }
-          if (cResult[8] !== tmp9) {
-            Button = Button(5594).Button;
-            const obj2 = {
-              onPress: tmp9,
-              icon: null,
-              text: null,
-              accessibilityLabel: null,
-              variant: "secondary-overlay",
-              size: "sm",
-              shrink: true,
-              maxFontSizeMultiplier: 1,
-            };
-            tmp = stateFromStores(9715);
-            obj2.icon = tmp;
-            obj2.text = tmp10;
-            obj2.accessibilityLabel = tmp11;
-            const tmp17 = (
+          if (cResult[8] !== tmp11) {
+            const Button = tmp(5594).Button;
+            const tmp19 = (
               <Button
-                onPress={tmp9}
-                icon={null}
-                text={null}
-                accessibilityLabel={null}
+                onPress={tmp11}
+                icon={stateFromStores(9715)}
+                text={tmp12}
+                accessibilityLabel={tmp13}
                 variant="secondary-overlay"
                 size="sm"
                 shrink
                 maxFontSizeMultiplier={1}
               />
             );
-            cResult[8] = tmp9;
-            cResult[9] = tmp17;
+            cResult[8] = tmp11;
+            cResult[9] = tmp19;
+            tmp16 = tmp19;
+          } else {
+            tmp16 = cResult[9];
           }
+          tmp10 = tmp16;
         }
-        const ButtonResult = Button(504);
+        return tmp10;
       }
     : (applicationId) => {
         applicationId = applicationId.applicationId;
+        const tmp = applicationId;
+        let obj = applicationId(504);
         const items = [LocalActivityStore, SelfPresenceStore];
         const items1 = [applicationId];
-        const stateFromStores = applicationId(504).useStateFromStores(
+        const stateFromStores = obj.useStateFromStores(
           items,
           () => getCurrentUserPresenceActivityDefault(LocalActivityStore, SelfPresenceStore, applicationId),
           items1,
         );
         let tmp4 = null;
         if (null != stateFromStores) {
-          const obj2 = {
-            onPress() {
-              const obj = ActionSheetActionCreatorsDefault;
-              obj.openLazy(
-                asyncRequireImpl(17180, dependencyMap.paths),
-                "ActivityInviteSheet-" + stateFromStores.session_id,
-                { activity: stateFromStores },
-              );
-            },
-            icon: stateFromStores(9715),
-            text: null,
-            accessibilityLabel: null,
-            variant: "secondary-overlay",
-            size: "sm",
-            shrink: true,
-            maxFontSizeMultiplier: 1,
-          };
+          const Button = tmp(5594).Button;
           const intl = tmp(1126).intl;
-          obj2.text = intl.string(tmp(1126).t["OzOM/q"]);
           const intl2 = tmp(1126).intl;
-          obj2.accessibilityLabel = intl2.string(tmp(1126).t["OzOM/q"]);
-          tmp4 = jsx(tmp(5594).Button, {
-            onPress() {
-              const obj = ActionSheetActionCreatorsDefault;
-              obj.openLazy(
-                asyncRequireImpl(17180, dependencyMap.paths),
-                "ActivityInviteSheet-" + stateFromStores.session_id,
-                { activity: stateFromStores },
-              );
-            },
-            icon: stateFromStores(9715),
-            text: null,
-            accessibilityLabel: null,
-            variant: "secondary-overlay",
-            size: "sm",
-            shrink: true,
-            maxFontSizeMultiplier: 1,
-          });
+          tmp4 = (
+            <Button
+              onPress={function onPress() {
+                const openLazy = ActionSheetActionCreatorsDefault.openLazy;
+                ActionSheetActionCreatorsDefault;
+                const obj = { activity: stateFromStores };
+                const tmp2 = asyncRequire(17180, dependencyMap.paths);
+                openLazy(tmp2, "ActivityInviteSheet-" + stateFromStores.session_id, obj);
+              }}
+              icon={stateFromStores(9715)}
+              text={intl.string(tmp(1126).t["OzOM/q"])}
+              accessibilityLabel={intl2.string(tmp(1126).t["OzOM/q"])}
+              variant="secondary-overlay"
+              size="sm"
+              shrink
+              maxFontSizeMultiplier={1}
+            />
+          );
         }
         return tmp4;
       },
 );
+const result = size.fileFinishedImporting("modules/activities/panel/native/InviteActivityButton.tsx");
+
+export default memoResult;

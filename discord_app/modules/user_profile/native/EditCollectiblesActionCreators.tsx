@@ -7,5 +7,7 @@ const UserSettingsSections = Constants.UserSettingsSections;
 const result = size.fileFinishedImporting("modules/user_profile/native/EditCollectiblesActionCreators.tsx");
 
 export const navigateToNitroManagement = function navigateToNitroManagement() {
-  openUserSettings.openUserSettings({ screen: UserSettingsSections.PREMIUM });
+  const obj = openUserSettings;
+  const obj2 = { screen: UserSettingsSections.PREMIUM };
+  obj.openUserSettings(obj2);
 };

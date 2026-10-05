@@ -9,11 +9,14 @@ const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningActionCreators.tsx");
 
 export const dismissGdmBlockedUserWarning = function dismissGdmBlockedUserWarning(channelId) {
+  let obj2;
   closure_2(channelId);
   const HTTP = HTTPUtils.HTTP;
+  const post = HTTP.post;
   const obj = {
     url: Endpoints.CHANNEL_BLOCKED_USER_WARNING_ACK(channelId),
-    rejectWithError: HTTPUtils.rejectWithMigratedError(),
+    rejectWithError: obj2.rejectWithMigratedError(),
   };
-  return HTTP.post(obj);
+  obj2 = HTTPUtils;
+  return post(obj);
 };

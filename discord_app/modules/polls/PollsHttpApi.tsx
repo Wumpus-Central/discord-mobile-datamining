@@ -1,195 +1,203 @@
 // discord_app/modules/polls/PollsHttpApi.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import Constants from "../../Constants.tsx";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const require = fn;
-let closure_4 = async function _submitPollVote(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp7 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp3;
-          closure_1 = tmp5;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          ({ channelId: closure_129_0, messageId: closure_129_1, answerIds: closure_129_2 } = closure_0);
-          c5 = 1;
-          c6 = 1;
-          return { value: "Set", done: true };
-        }
-      } else if (1 === tmp8) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          c4 = 1;
-          const HTTP = closure_130_0(closure_130_1[2]).HTTP;
-          const request = {
-            url: closure_130_3.POLL_ANSWERS(closure_129_0, closure_129_1),
-            body: null,
-            rejectWithError: false,
-          };
-          const obj5 = { answer_ids: closure_129_2 };
-          request.body = obj5;
-          c5 = 3;
-          c6 = 1;
-          const obj6 = { value: HTTP.put(request), done: false };
-          return obj6;
-        }
-      } else if (2 === tmp8) {
-        c4 = 0;
-        closure_129_3 = closure_3;
-        const aPIError = new closure_130_0(closure_130_1[3]).APIError(closure_129_3);
-        throw aPIError;
-      } else if (arg0 === 1) {
-        c6 = 3;
+let c5, c6, closure_3;
+
+let obj = function _submitPollVote() {
+  obj = _asyncToGenerator(async function (arg0) {
+    let c0;
+    let c1;
+    let c2;
+    let obj5;
+    let closure_0 = arg0;
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        c4 = 0;
-        c6 = 3;
-        const obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        c4 = 0;
-        c6 = 3;
         return { value: "IconComponent", done: null };
       }
-    } catch (tmp21) {
-      closure_3 = tmp21;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp21;
-      } else {
-        c5 = tmp;
+    } else {
+      let c4;
+      try {
+        let answer_ids;
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let closure_2 = tmp;
+            c0 = undefined;
+            c1 = undefined;
+            answer_ids = undefined;
+            ({ channelId: c0, messageId: c1, answerIds: c2 } = closure_0);
+            c5 = 1;
+            c6 = 1;
+            return { value: "Set", done: true };
+          }
+        } else if (1 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            c4 = 1;
+            const HTTP = closure_130_0(closure_130_1[2]).HTTP;
+            const request = { url: closure_130_3.POLL_ANSWERS(c0, c1), body: obj5, rejectWithError: false };
+            const put = HTTP.put;
+            obj5 = { answer_ids };
+            c5 = 3;
+            c6 = 1;
+            const obj6 = { value: put(request), done: false };
+            return obj6;
+          }
+        } else if (2 === c5) {
+          c4 = 0;
+          const self2 = this;
+          const self = this;
+          const aPIError = new closure_130_0(closure_130_1[3]).APIError(closure_3);
+          throw aPIError;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          c4 = 0;
+          c6 = 3;
+          return { value: "IconComponent", done: null };
+        }
+      } catch (tmp15) {
+        closure_3 = tmp15;
+        if (0 === c4) {
+          c6 = 3;
+          throw tmp15;
+        } else {
+          c5 = 2;
+        }
       }
     }
-  }
+  });
+  return obj(...arguments);
 };
-let closure_5 = async function _endPollEarly(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp7 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp3;
-          closure_1 = tmp5;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          ({ channelId: closure_129_0, messageId: closure_129_1 } = closure_0);
-          c5 = 1;
-          c6 = 1;
-          return { value: "Set", done: true };
-        }
-      } else if (1 === tmp8) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          c4 = 1;
-          const HTTP = closure_130_0(closure_130_1[2]).HTTP;
-          const obj5 = { url: closure_130_3.POLL_EXPIRE(closure_129_0, closure_129_1), rejectWithError: false };
-          c5 = 3;
-          c6 = 1;
-          const obj6 = { value: HTTP.post(obj5), done: false };
-          return obj6;
-        }
-      } else if (2 === tmp8) {
-        c4 = 0;
-        closure_129_2 = closure_3;
-        const aPIError = new closure_130_0(closure_130_1[3]).APIError(closure_129_2);
-        throw aPIError;
-      } else if (arg0 === 1) {
-        c6 = 3;
+obj = function _endPollEarly() {
+  obj = _asyncToGenerator(async function (arg0) {
+    let c0;
+    let c1;
+    let closure_0 = arg0;
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        c4 = 0;
-        c6 = 3;
-        const obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        c4 = 0;
-        c6 = 3;
         return { value: "IconComponent", done: null };
       }
-    } catch (tmp28) {
-      closure_3 = tmp28;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp28;
-      } else {
-        c5 = tmp;
+    } else {
+      let c4;
+      try {
+        let closure_2;
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_2 = tmp;
+            c0 = undefined;
+            c1 = undefined;
+            ({ channelId: c0, messageId: c1 } = closure_0);
+            c5 = 1;
+            c6 = 1;
+            return { value: "Set", done: true };
+          }
+        } else {
+          let self;
+          if (1 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              c4 = 1;
+              const HTTP = closure_130_0(closure_130_1[2]).HTTP;
+              const obj5 = { url: closure_130_3.POLL_EXPIRE(c0, c1), rejectWithError: false };
+              const post = HTTP.post;
+              self = post(obj5);
+              c5 = 3;
+              c6 = 1;
+              const obj6 = { value: self, done: false };
+              return obj6;
+            }
+          } else if (2 === c5) {
+            c4 = 0;
+            closure_2 = closure_3;
+            self = this;
+            const self2 = this;
+            const aPIError = new closure_130_0(closure_130_1[3]).APIError(closure_2);
+            throw aPIError;
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            c6 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            c4 = 0;
+            c6 = 3;
+            return { value: "IconComponent", done: null };
+          }
+        }
+      } catch (tmp22) {
+        closure_3 = tmp22;
+        if (0 === c4) {
+          c6 = 3;
+          throw tmp22;
+        } else {
+          c5 = 2;
+        }
       }
     }
-  }
+  });
+  return obj(...arguments);
 };
-const Endpoints = fn(1085).Endpoints;
-const size = fn(2);
+const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("modules/polls/PollsHttpApi.tsx");
 
 export const submitPollVote = function submitPollVote() {
-  const self = this;
-  const apply = closure_4.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const endPollEarly = function endPollEarly() {
-  const self = this;
-  const apply = closure_5.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

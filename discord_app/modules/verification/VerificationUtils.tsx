@@ -1,9 +1,13 @@
 // discord_app/modules/verification/VerificationUtils.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
-import util from "../../intl/index.native.tsx";
+import intl6 from "../../intl/index.native.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let EMAIL;
+let PHONE;
+let REVERIFY_EMAIL;
+let REVERIFY_PHONE;
 const UserRequiredActions = Constants.UserRequiredActions;
 const VerificationTypes = Constants.VerificationTypes;
 ({ EMAIL, PHONE, REVERIFY_EMAIL, REVERIFY_PHONE } = VerificationTypes);
@@ -29,17 +33,11 @@ let closure_5 = {
   [UserRequiredActions.AGREEMENTS]: [],
   [UserRequiredActions.REQUIRE_SAFETY_FLOWS]: [],
 };
-let result = size.fileFinishedImporting("modules/verification/VerificationUtils.tsx");
-
-export default {
+let obj = {
   isPhoneReverification(currentUser, action) {
     let tmp = undefined !== currentUser && currentUser.isPhoneVerified();
     if (tmp) {
       tmp =
-        action === UserRequiredActions.REQUIRE_REVERIFIED_PHONE ||
-        action === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
-        action === UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE;
-      const tmp4 =
         action === UserRequiredActions.REQUIRE_REVERIFIED_PHONE ||
         action === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
         action === UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE;
@@ -74,23 +72,27 @@ export default {
   },
   getButtonTitle(item) {
     if (VerificationTypes.EMAIL === item) {
-      const intl5 = util.intl;
-      return intl5.string(util.t["1MPz27"]);
+      const intl5 = intl6.intl;
+      return intl5.string(intl6.t["1MPz27"]);
     } else if (VerificationTypes.PHONE === item) {
-      const intl4 = util.intl;
-      return intl4.string(util.t.mjJeco);
+      const intl4 = intl6.intl;
+      return intl4.string(intl6.t.mjJeco);
     } else if (VerificationTypes.REVERIFY_EMAIL === item) {
-      const intl3 = util.intl;
-      return intl3.string(util.t.nmdPFX);
+      const intl3 = intl6.intl;
+      return intl3.string(intl6.t.nmdPFX);
     } else if (VerificationTypes.REVERIFY_PHONE === item) {
-      const intl2 = util.intl;
-      return intl2.string(util.t.of2125);
+      const intl2 = intl6.intl;
+      return intl2.string(intl6.t.of2125);
     } else {
-      const intl = util.intl;
-      return intl.string(util.t["oF6+Ww"]);
+      const intl = intl6.intl;
+      return intl.string(intl6.t["oF6+Ww"]);
     }
   },
   areVerificationTypesEqual(arg0, arg1) {
-    return _modDef12.isEqual(arg0, arg1);
+    const obj = _modDef12;
+    return obj.isEqual(arg0, arg1);
   },
 };
+let result = size.fileFinishedImporting("modules/verification/VerificationUtils.tsx");
+
+export default obj;

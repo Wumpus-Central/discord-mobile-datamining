@@ -1,48 +1,56 @@
 // discord_app/modules/badges/BadgeDirectorySeenStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let obj = { seenBadgeIndicatorIds: new Set() };
-const PersistedStore = initializeDefault.PersistedStore;
-class BadgeDirectorySeenStore extends PersistedStore {}
+let set;
+let obj = { seenBadgeIndicatorIds: set };
+set = new Set();
+const PersistedStore = get_initializedDefault.PersistedStore;
+class BadgeDirectorySeenStore extends PersistedStore {
+  initialize(seenBadgeIndicatorIds) {
+    let _Set1;
+    let prop;
+    const _Set = Set;
+    if (seenBadgeIndicatorIds != null) {
+      prop = seenBadgeIndicatorIds.seenBadgeIndicatorIds;
+    }
+    if (prop == null) {
+      prop = [];
+    }
+    obj = { seenBadgeIndicatorIds: _Set1 };
+    _Set1 = new _Set(prop);
+  }
+  getState() {
+    obj = { seenBadgeIndicatorIds: Array.from(obj.seenBadgeIndicatorIds) };
+    return obj;
+  }
+  getSeenBadgeIndicators() {
+    return obj.seenBadgeIndicatorIds;
+  }
+}
 const prototype = BadgeDirectorySeenStore.prototype;
-prototype["initialize"] = function initialize(seenBadgeIndicatorIds) {
-  let prop;
-  if (seenBadgeIndicatorIds != null) {
-    prop = seenBadgeIndicatorIds.seenBadgeIndicatorIds;
-  }
-  if (prop == null) {
-    prop = [];
-  }
-  obj = { seenBadgeIndicatorIds: new Set(prop) };
-};
-prototype["getState"] = function getState() {
-  obj = { seenBadgeIndicatorIds: Array.from(obj.seenBadgeIndicatorIds) };
-  return obj;
-};
-prototype["getSeenBadgeIndicators"] = function getSeenBadgeIndicators() {
-  return obj.seenBadgeIndicatorIds;
-};
 BadgeDirectorySeenStore.displayName = "BadgeDirectorySeenStore";
 BadgeDirectorySeenStore.persistKey = "BadgeDirectorySeenStore";
-const badgeDirectorySeenStore = new BadgeDirectorySeenStore(DispatcherDefault, {
+const obj2 = {
   BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN: function handleMarkBadgeIndicatorSeen(badgeId) {
     badgeId = badgeId.badgeId;
     const seenBadgeIndicatorIds = obj.seenBadgeIndicatorIds;
     if (seenBadgeIndicatorIds.has(badgeId)) {
       return false;
     } else {
-      obj = {};
+      obj = { seenBadgeIndicatorIds: set };
       const merged = Object.assign(obj);
       const _Set = Set;
       const items = [];
-      items[HermesBuiltin.arraySpread(obj.seenBadgeIndicatorIds, 0)] = badgeId;
-      const set = new Set(items);
-      obj.seenBadgeIndicatorIds = set;
+      items[HermesBuiltin.arraySpread(items, obj.seenBadgeIndicatorIds, 0)] = badgeId;
+      const self = this;
+      const self2 = this;
+      set = new Set(items);
     }
   },
-});
-const size = fn(2);
+};
+const badgeDirectorySeenStore = new BadgeDirectorySeenStore(DispatcherDefault, obj2);
 const result = size.fileFinishedImporting("modules/badges/BadgeDirectorySeenStore.tsx");
 
 export default badgeDirectorySeenStore;

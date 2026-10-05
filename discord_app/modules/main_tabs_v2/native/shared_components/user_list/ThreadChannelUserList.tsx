@@ -1,52 +1,53 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/ThreadChannelUserList.tsx
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import throttleDefault from "../../../../../../_runtime/00550_throttle.js";
+import Constants from "../../../../../Constants.tsx";
 import UserUtilsDefault from "../../../../../utils/UserUtils.tsx";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../_runtime/00019_react.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import GuildMemberStore from "../../../../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const RelationshipTypes = fn(1085).RelationshipTypes;
-const jsx = fn(21).jsx;
-const size = fn(2);
-let result = size.fileFinishedImporting(
-  "modules/main_tabs_v2/native/shared_components/user_list/ThreadChannelUserList.tsx",
-);
-
-export default noop.memo(function ThreadChannelUserList(channelId) {
+const RelationshipTypes = Constants.RelationshipTypes;
+const jsx = Fragment.jsx;
+const memoResult = react.memo(function ThreadChannelUserList(channelId) {
+  let disableBottomSafeZone;
+  let disableStickySections;
+  let insetEnd;
+  let listStyleOverride;
   channelId = channelId.channelId;
   const guildId = channelId.guildId;
   const onUserPress = channelId.onUserPress;
-  closure_6 = undefined;
+  let closure_6;
   ({ disableStickySections, listStyleOverride, disableBottomSafeZone, insetEnd } = channelId);
   const analyticsLocations = guildId(onUserPress[7])().analyticsLocations;
-  const items = [closure_6];
-  const stateFromStores = channelId(onUserPress[8]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   let obj = channelId(onUserPress[8]);
-  const threadMemberListSections = channelId(onUserPress[9]).useThreadMemberListSections(channelId, stateFromStores);
+  const items = [closure_6];
+  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
   let obj2 = channelId(onUserPress[9]);
+  const threadMemberListSections = obj2.useThreadMemberListSections(channelId, stateFromStores);
   const items1 = [threadMemberListSections];
-  const stateFromStores1 = channelId(onUserPress[8]).useStateFromStores(items1, () =>
-    ChannelStore.getChannel(channelId),
-  );
+  const obj3 = channelId(onUserPress[8]);
+  const stateFromStores1 = obj3.useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const tmp3 = guildId(onUserPress[10])();
   closure_6 = tmp3;
-  closure_7 = analyticsLocations.useRef(0);
-  closure_8 = analyticsLocations.useRef(0);
+  let closure_7 = analyticsLocations.useRef(0);
+  let closure_8 = analyticsLocations.useRef(0);
   const items2 = [channelId, guildId, tmp3];
-  const memo = analyticsLocations.useMemo(
-    () =>
-      throttleDefault(() => {
-        if (null != threadMemberListSections.getChannel(channelId)) {
-          const obj2 = { guildId, channelId, y: ref2.current, height: ref.current, rowHeight };
-          const result = channelId(onUserPress[12]).subscribeChannelDimensions(obj2);
-          const obj = channelId(onUserPress[12]);
-        }
-      }, 50),
-    items2,
-  );
+  const memo = analyticsLocations.useMemo(() => {
+    let ref;
+    let ref2;
+    let rowHeight;
+    return throttleDefault(() => {
+      if (null != threadMemberListSections.getChannel(channelId)) {
+        const obj2 = { guildId, channelId, y: ref2.current, height: ref.current, rowHeight };
+        const obj = channelId(onUserPress[12]);
+        const result = obj.subscribeChannelDimensions(obj2);
+      }
+    }, 50);
+  }, items2);
   const items3 = [memo];
   const items4 = [memo];
   const callback = analyticsLocations.useCallback((nativeEvent) => {
@@ -66,78 +67,77 @@ export default noop.memo(function ThreadChannelUserList(channelId) {
   const items6 = [threadMemberListSections];
   const items7 = [threadMemberListSections, guildId, onUserPress, analyticsLocations, channelId];
   const callback2 = analyticsLocations.useCallback((arg0) => {
+    let obj;
     if (null != threadMemberListSections[arg0]) {
       const label = tmp.label;
       if (null != label) {
-        if (0 !== length) {
-          const element = { type: "section", props: null };
-          const obj = { title: null };
+        if (0 !== threadMemberListSections[arg0].userIds.length) {
+          const element = { type: "section", props: obj };
           const _HermesInternal = HermesInternal;
-          obj.title = "" + label + " \u2014 " + length;
-          element.props = obj;
+          obj = { title: "" + label + " \u2014 " + threadMemberListSections[arg0].userIds.length };
           return element;
         }
       }
     }
   }, items6);
   const callback3 = analyticsLocations.useCallback((arg0, arg1) => {
+    let colorString;
+    let colorStrings;
+    let element1;
+    let member;
+    let nick;
+    let obj2;
+    let sourceAnalyticsLocations;
     const userIds = threadMemberListSections[arg0].userIds;
     const user = UserStore.getUser(userIds[arg1]);
     if (null != user) {
-      const member = GuildMemberStore.getMember(guildId, user.id);
+      member = GuildMemberStore.getMember(guildId, user.id);
     }
     if (null != user) {
-      const obj = {
+      let obj = {
         type: RelationshipTypes.NONE,
         user,
         guildId,
-        nickname: null,
-        usernameColor: null,
-        roleColors: null,
+        nickname: nick,
+        usernameColor: colorString,
+        roleColors: colorStrings,
         isNameplatedRow: true,
         canShowDisplayNameStylesFont: true,
-        onPress: null,
-        start: null,
-        end: null,
+        onPress(id) {
+          if (closure_1_2 != null) {
+            tmp();
+          }
+          const obj = { userId: id.id, sourceAnalyticsLocations, channelId };
+          guildId(onUserPress[14])(obj);
+        },
+        start: 0 === arg1,
+        end: arg1 === userIds.length - 1,
       };
-      let nick;
+      nick = undefined;
       if (member != null) {
         nick = member.nick;
       }
       if (nick == null) {
-        nick = UserUtilsDefault.getGlobalName(user);
+        const obj4 = UserUtilsDefault;
+        nick = obj4.getGlobalName(user);
       }
-      obj.nickname = nick;
-      let colorString;
+      colorString = undefined;
       if (member != null) {
         colorString = member.colorString;
       }
-      obj.usernameColor = colorString;
-      let colorStrings;
+      colorStrings = undefined;
       if (member != null) {
         colorStrings = member.colorStrings;
       }
-      const element = { type: "user", props: null };
-      obj.roleColors = colorStrings;
-      obj.onPress = function onPress(id) {
-        if (closure_1_2 != null) {
-          tmp();
-        }
-        guildId(onUserPress[14])({ userId: id.id, sourceAnalyticsLocations, channelId });
-      };
-      obj.start = tmp5;
-      obj.end = tmp6;
-      element.props = obj;
-      let element1 = element;
+      const element = { type: "user", props: obj };
+      element1 = element;
     } else {
-      element1 = { type: "placeholder", props: null };
-      const obj2 = { start: tmp5, end: tmp6 };
-      element1.props = obj2;
+      element1 = { type: "placeholder", props: obj2 };
+      obj2 = { start: 0 === arg1, end: arg1 === userIds.length - 1 };
     }
     return element1;
   }, items7);
-  const obj3 = channelId(onUserPress[8]);
-  return memo(channelId(onUserPress[15]).UsersFastList, {
+  let obj4 = {
     sections: threadMemberListSections.map((userIds) => userIds.userIds.length),
     getItemProps: callback3,
     getSectionProps: callback2,
@@ -148,5 +148,12 @@ export default noop.memo(function ThreadChannelUserList(channelId) {
     listStyleOverride,
     disableBottomSafeZone,
     insetEnd,
-  });
+  };
+  const UsersFastList = channelId(onUserPress[15]).UsersFastList;
+  return memo(UsersFastList, obj4);
 });
+let result = size.fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/ThreadChannelUserList.tsx",
+);
+
+export default memoResult;

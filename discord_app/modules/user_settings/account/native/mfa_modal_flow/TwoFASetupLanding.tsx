@@ -1,65 +1,82 @@
 // discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupLanding.tsx
-import c from "../../../../../../_runtime/00576_c.js";
-import util from "../../../../../intl/index.native.tsx";
+import react2 from "../../../../../../_runtime/00576_react.js";
+import intl3 from "../../../../../intl/index.native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
 import TwoFASetupStyles from "TwoFASetupStyles.tsx";
-import _modDef14572 from "../../../../../../_runtime/metro/14572__.js";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import AssetRegistryDefault from "../../../../../../_runtime/14572_AssetRegistry.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4890);
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
+({ Image: c3, View: closure_4 } = react_native);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
 let closure_7 = createStyles.createStyles({
   container: { flex: 1, alignItems: "center", justifyContent: "center" },
   authIcon: { width: 120, height: 120, marginBottom: 32 },
 });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupLanding.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(16);
+      let container;
+      let container2;
+      let intl;
+      let items;
+      let obj7;
+      let tmp11;
+      let tmp6;
+      const obj = react2;
+      const cResult = obj.c(16);
       const tmp4 = closure_7();
-      const twoFASetupStyles = TwoFASetupStyles.useTwoFASetupStyles();
+      const obj2 = TwoFASetupStyles;
+      const twoFASetupStyles = obj2.useTwoFASetupStyles();
       ({ container, container: container2 } = tmp4);
       if (cResult[0] !== tmp4.authIcon) {
-        const obj3 = { source: _modDef14572, style: tmp4.authIcon };
-        const tmp10 = hasOwnProperty(React3, obj3);
+        const obj3 = { source: AssetRegistryDefault, style: tmp4.authIcon };
+        const tmp10 = hasOwnProperty(_false, obj3);
         cResult[0] = tmp4.authIcon;
         cResult[1] = tmp10;
-        let tmp6 = tmp10;
+        tmp6 = tmp10;
       } else {
         tmp6 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj4 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-        const intl = util.intl;
-        obj4.children = intl.string(util.t["9E74Dx"]);
-        const tmp13 = hasOwnProperty(Text_Text.Heading, obj4);
+        const obj4 = {
+          variant: "heading-xl/extrabold",
+          color: "mobile-text-heading-primary",
+          children: intl.string(intl3.t["9E74Dx"]),
+        };
+        const Heading = Text_Text.Heading;
+        intl = intl3.intl;
+        const tmp13 = hasOwnProperty(Heading, obj4);
         cResult[2] = tmp13;
-        let tmp11 = tmp13;
+        tmp11 = tmp13;
       } else {
         tmp11 = cResult[2];
       }
       if (cResult[3] === twoFASetupStyles.modalBody) {
+        let tmp14;
+        let tmp15;
+        let tmp17;
         if (cResult[4] === twoFASetupStyles.text) {
-          let tmp14 = cResult[5];
+          tmp14 = cResult[5];
         }
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl2 = util.intl;
-          const formatResult = intl2.format(util.t.A7Aehw, {
+          const intl2 = intl3.intl;
+          const formatResult = intl2.format(intl3.t.A7Aehw, {
             googleAuthURL: "https://support.google.com/accounts/answer/1066447?hl=en",
             authyURL: "https://www.authy.com/",
           });
           cResult[6] = formatResult;
-          let tmp15 = formatResult;
+          tmp15 = formatResult;
         } else {
           tmp15 = cResult[6];
         }
@@ -68,35 +85,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const tmp19 = hasOwnProperty(Text_Text.Text, obj5);
           cResult[7] = tmp14;
           cResult[8] = tmp19;
-          let tmp17 = tmp19;
+          tmp17 = tmp19;
         } else {
           tmp17 = cResult[8];
         }
         if (cResult[9] === tmp4.container) {
           if (cResult[10] === tmp6) {
+            let tmp20;
             if (cResult[11] === tmp17) {
-              let tmp20 = cResult[12];
+              tmp20 = cResult[12];
             }
             if (cResult[13] === tmp4.container) {
+              let tmp23;
               if (cResult[14] === tmp20) {
-                let tmp23 = cResult[15];
+                tmp23 = cResult[15];
               }
               return tmp23;
             }
-            const obj6 = { children: null };
-            const obj7 = { style: container, children: tmp20 };
-            obj6.children = hasOwnProperty(React4, obj7);
-            const tmp26 = hasOwnProperty(TwoFASetupModal.TwoFASetupModalScreen, obj6);
+            const obj6 = { children: hasOwnProperty(React3, obj7) };
+            obj7 = { style: container, children: tmp20 };
+            const TwoFASetupModalScreen = TwoFASetupModal.TwoFASetupModalScreen;
+            const tmp26 = hasOwnProperty(TwoFASetupModalScreen, obj6);
             cResult[13] = tmp4.container;
             cResult[14] = tmp20;
             cResult[15] = tmp26;
             tmp23 = tmp26;
           }
         }
-        const obj8 = { bottom: true, style: container2, children: null };
-        const items = [tmp6, tmp11, tmp17];
-        obj8.children = items;
-        const tmp22 = timestampProducer(common_SafeAreaView.SafeAreaPaddingView, obj8);
+        const obj8 = { bottom: true, style: container2, children: items };
+        items = [tmp6, tmp11, tmp17];
+        const tmp22 = metroRequire(common_SafeAreaView.SafeAreaPaddingView, obj8);
         cResult[9] = tmp4.container;
         cResult[10] = tmp6;
         cResult[11] = tmp17;
@@ -111,28 +129,46 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = items1;
     }
   : () => {
+      let SafeAreaPaddingView;
+      let intl;
+      let intl2;
+      let items;
+      let items1;
+      let obj3;
+      let obj4;
       const tmp = closure_7();
-      const twoFASetupStyles = TwoFASetupStyles.useTwoFASetupStyles();
-      const obj2 = { children: null };
-      const obj3 = { style: tmp.container, children: null };
-      const obj4 = { bottom: true, style: tmp.container, children: null };
-      const items = [hasOwnProperty(React3, { source: _modDef14572, style: tmp.authIcon }), ,];
-      const obj6 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-      const intl = util.intl;
-      obj6.children = intl.string(util.t["9E74Dx"]);
-      items[1] = hasOwnProperty(Text_Text.Heading, obj6);
-      const obj7 = { variant: "text-md/normal", style: null, children: null };
-      const items1 = [,];
+      const obj = TwoFASetupStyles;
+      const twoFASetupStyles = obj.useTwoFASetupStyles();
+      const obj2 = { children: hasOwnProperty(React3, obj3) };
+      obj3 = { style: tmp.container, children: metroRequire(SafeAreaPaddingView, obj4) };
+      const TwoFASetupModalScreen = TwoFASetupModal.TwoFASetupModalScreen;
+      obj4 = { bottom: true, style: tmp.container, children: items };
+      const obj5 = { source: AssetRegistryDefault, style: tmp.authIcon };
+      SafeAreaPaddingView = common_SafeAreaView.SafeAreaPaddingView;
+      items = [hasOwnProperty(_false, obj5), ,];
+      const obj6 = {
+        variant: "heading-xl/extrabold",
+        color: "mobile-text-heading-primary",
+        children: intl.string(intl3.t["9E74Dx"]),
+      };
+      const Heading = Text_Text.Heading;
+      intl = intl3.intl;
+      items[1] = hasOwnProperty(Heading, obj6);
+      const obj7 = {
+        variant: "text-md/normal",
+        style: items1,
+        children: intl2.format(intl3.t.A7Aehw, {
+          googleAuthURL: "https://support.google.com/accounts/answer/1066447?hl=en",
+          authyURL: "https://www.authy.com/",
+        }),
+      };
+      items1 = [,];
       ({ modalBody: arr2[0], text: arr2[1] } = twoFASetupStyles);
-      obj7.style = items1;
-      const intl2 = util.intl;
-      obj7.children = intl2.format(util.t.A7Aehw, {
-        googleAuthURL: "https://support.google.com/accounts/answer/1066447?hl=en",
-        authyURL: "https://www.authy.com/",
-      });
-      items[2] = hasOwnProperty(Text_Text.Text, obj7);
-      obj4.children = items;
-      obj3.children = timestampProducer(common_SafeAreaView.SafeAreaPaddingView, obj4);
-      obj2.children = hasOwnProperty(React4, obj3);
-      return hasOwnProperty(TwoFASetupModal.TwoFASetupModalScreen, obj2);
+      const Text = Text_Text.Text;
+      intl2 = intl3.intl;
+      items[2] = hasOwnProperty(Text, obj7);
+      return hasOwnProperty(TwoFASetupModalScreen, obj2);
     };
+const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupLanding.tsx");
+
+export default tmp5;

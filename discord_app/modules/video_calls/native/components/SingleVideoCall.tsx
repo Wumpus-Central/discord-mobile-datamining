@@ -1,80 +1,83 @@
 // discord_app/modules/video_calls/native/components/SingleVideoCall.tsx
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ChannelCallStore from "../ChannelCallStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const ChannelCallStore = fn(9050);
+let closure_4;
+let hasOwnProperty;
 ({ resetFocus: closure_4, toggleFocus: hasOwnProperty } = ChannelCallStore);
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/video_calls/native/components/SingleVideoCall.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = channel(576).c(13);
+      let analyticsLocations;
+      let bottom;
+      let channel;
+      let participant;
+      let right;
+      let tmp6;
+      let obj = channel(576);
+      const cResult = obj.c(13);
       ({ participant, channel } = arg0);
-      const obj = channel(576);
-      const tmp4 = analyticsLocations;
       ({ bottom, right } = analyticsLocations(1618)());
+      analyticsLocations(1618)();
+      const tmp4 = analyticsLocations;
       analyticsLocations = analyticsLocations(6657)().analyticsLocations;
       if (cResult[0] !== channel.id) {
         const fn = function n() {
-          React4();
-          const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
+          React3();
+          const obj = ChannelRTCActionCreatorsDefault;
+          const participant = obj.selectParticipant(channel.id, null);
         };
         cResult[0] = channel.id;
         cResult[1] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[1];
       }
       if (cResult[2] === analyticsLocations) {
+        let tmp7;
         if (cResult[3] === channel.id) {
-          let tmp7 = cResult[4];
+          tmp7 = cResult[4];
         }
         if (cResult[5] === bottom) {
+          let tmp8;
           if (cResult[6] === right) {
-            let tmp8 = cResult[7];
+            tmp8 = cResult[7];
           }
           if (cResult[8] === tmp6) {
             if (cResult[9] === tmp7) {
               if (cResult[10] === participant) {
+                let tmp9;
                 if (cResult[11] === tmp8) {
-                  let tmp9 = cResult[12];
+                  tmp9 = cResult[12];
                 }
                 return tmp9;
               }
             }
           }
-          const obj2 = {
-            gestureEnabled: true,
-            participant,
-            avatarSize: channel(1188).AvatarSizes.PROFILE,
-            resizeMode: channel(9105).ResizeMode.AUTO,
-            statusStyle: tmp8,
-            onSingleTap,
-            onDoubleTap: tmp6,
-            onLongPress: tmp7,
-          };
-          const tmp13 = jsx(tmp4(9120), {
-            gestureEnabled: true,
-            participant,
-            avatarSize: channel(1188).AvatarSizes.PROFILE,
-            resizeMode: channel(9105).ResizeMode.AUTO,
-            statusStyle: tmp8,
-            onSingleTap,
-            onDoubleTap: tmp6,
-            onLongPress: tmp7,
-          });
+          tmp4(9120);
+          const tmp13 = (
+            <tmp4Result
+              gestureEnabled
+              participant={participant}
+              avatarSize={channel(1188).AvatarSizes.PROFILE}
+              resizeMode={channel(9105).ResizeMode.AUTO}
+              statusStyle={tmp8}
+              onSingleTap={onSingleTap}
+              onDoubleTap={tmp6}
+              onLongPress={tmp7}
+            />
+          );
           cResult[8] = tmp6;
           cResult[9] = tmp7;
           cResult[10] = participant;
           cResult[11] = tmp8;
           cResult[12] = tmp13;
           tmp9 = tmp13;
-          const tmp4Result = tmp4(9120);
         }
         const obj3 = { marginRight: right, marginBottom: bottom };
         cResult[5] = bottom;
@@ -83,67 +86,56 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = obj3;
       }
       const fn2 = function b(user) {
-        showUserProfileActionSheetDefault({
+        const obj = {
           userId: user.user.id,
           channelId: channel.id,
           isVoiceContext: true,
           sourceAnalyticsLocations: analyticsLocations,
-        });
+        };
+        showUserProfileActionSheetDefault(obj);
       };
       cResult[2] = analyticsLocations;
       cResult[3] = channel.id;
       cResult[4] = fn2;
       tmp7 = fn2;
-      const tmp5 = analyticsLocations(1618)();
     }
   : (channel) => {
       channel = channel.channel;
       let bottom;
       let right;
+      let participant = channel.participant;
       const rect = bottom(right[5])();
       bottom = rect.bottom;
       right = rect.right;
       const analyticsLocations = bottom(right[6])().analyticsLocations;
       const items = [right, bottom];
       const memo = analyticsLocations.useMemo(() => ({ marginRight: right, marginBottom: bottom }), items);
-      const obj = {
-        gestureEnabled: true,
-        participant: channel.participant,
-        avatarSize: channel(right[10]).AvatarSizes.PROFILE,
-        resizeMode: channel(right[11]).ResizeMode.AUTO,
-        statusStyle: memo,
-        onSingleTap,
-        onDoubleTap() {
-          React4();
-          const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
-        },
-        onLongPress(user) {
-          showUserProfileActionSheetDefault({
-            userId: user.user.id,
-            channelId: channel.id,
-            isVoiceContext: true,
-            sourceAnalyticsLocations: analyticsLocations,
-          });
-        },
-      };
-      return jsx(bottom(right[9]), {
-        gestureEnabled: true,
-        participant: channel.participant,
-        avatarSize: channel(right[10]).AvatarSizes.PROFILE,
-        resizeMode: channel(right[11]).ResizeMode.AUTO,
-        statusStyle: memo,
-        onSingleTap,
-        onDoubleTap() {
-          React4();
-          const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
-        },
-        onLongPress(user) {
-          showUserProfileActionSheetDefault({
-            userId: user.user.id,
-            channelId: channel.id,
-            isVoiceContext: true,
-            sourceAnalyticsLocations: analyticsLocations,
-          });
-        },
-      });
+      bottom(right[9]);
+      return (
+        <tmp2
+          gestureEnabled
+          participant={participant}
+          avatarSize={channel(right[10]).AvatarSizes.PROFILE}
+          resizeMode={channel(right[11]).ResizeMode.AUTO}
+          statusStyle={memo}
+          onSingleTap={onSingleTap}
+          onDoubleTap={function onDoubleTap() {
+            React3();
+            const obj = ChannelRTCActionCreatorsDefault;
+            const participant = obj.selectParticipant(channel.id, null);
+          }}
+          onLongPress={function onLongPress(user) {
+            const obj = {
+              userId: user.user.id,
+              channelId: channel.id,
+              isVoiceContext: true,
+              sourceAnalyticsLocations: analyticsLocations,
+            };
+            showUserProfileActionSheetDefault(obj);
+          }}
+        />
+      );
     };
+const result = size.fileFinishedImporting("modules/video_calls/native/components/SingleVideoCall.tsx");
+
+export default tmp3;

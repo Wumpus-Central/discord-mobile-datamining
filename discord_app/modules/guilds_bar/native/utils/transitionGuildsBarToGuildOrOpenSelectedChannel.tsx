@@ -1,27 +1,29 @@
 // discord_app/modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx
+import Constants from "../../../../Constants.tsx";
 import NavigationRouteUtils from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 import transitionToChannel from "../../../routing/transitionToChannel.tsx";
 import transitionToGuild from "../../../routing/transitionToGuild.native.tsx";
 import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 import SelectedGuildStore from "../../../../stores/SelectedGuildStore.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ME = fn(1085).ME;
-const size = fn(2);
+const ME = Constants.ME;
 const result = size.fileFinishedImporting(
   "modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx",
 );
 
 export default function transitionGuildsBarToGuildOrOpenSelectedChannel(id) {
-  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+  const obj = RootNavigationRef;
+  const rootNavigationRef = obj.getRootNavigationRef();
   let isReadyResult;
   if (rootNavigationRef != null) {
     isReadyResult = rootNavigationRef.isReady();
   }
   let tmp4;
   if (true === isReadyResult) {
-    const coerceGuildsRouteResult = NavigationRouteUtils.coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
+    const tmpResult = NavigationRouteUtils;
+    const coerceGuildsRouteResult = tmpResult.coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
     let drawerOpen;
     if (coerceGuildsRouteResult != null) {
       const params = coerceGuildsRouteResult.params;
@@ -45,13 +47,12 @@ export default function transitionGuildsBarToGuildOrOpenSelectedChannel(id) {
       }
       tmp4 = tmp10;
     }
-    const tmpResult = NavigationRouteUtils;
   }
   if (null != tmp4) {
-    transitionToChannel.transitionToChannel(tmp4);
     const tmpResult3 = transitionToChannel;
+    tmpResult3.transitionToChannel(tmp4);
   } else {
-    transitionToGuild.transitionToGuild(id);
     const tmpResult4 = transitionToGuild;
+    tmpResult4.transitionToGuild(id);
   }
 }

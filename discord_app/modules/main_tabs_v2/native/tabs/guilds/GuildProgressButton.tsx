@@ -1,67 +1,76 @@
 // discord_app/modules/main_tabs_v2/native/tabs/guilds/GuildProgressButton.tsx
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useScaledTextLineHeight from "../../../../screen/native/useScaledTextLineHeight.android.tsx";
 import MobileVisualRefreshExperiment from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import GuildProgressUtils from "../../../../guild_progress/native/GuildProgressUtils.tsx";
 import GuildProgressActionCreatorsDefault from "../../../../guild_progress/GuildProgressActionCreators.tsx";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/GuildProgressButton.tsx");
+let guild;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guild) => {
-      const cResult = guild(576).c(15);
-      guild = guild.guild;
+      let completed;
+      let percentComplete;
+      let subtitle;
       let obj = guild(576);
-      const guildProgressStep = guild(12130).useGuildProgressStep(guild);
+      const cResult = obj.c(15);
+      guild = guild.guild;
+      let obj2 = guild(12130);
+      const guildProgressStep = obj2.useGuildProgressStep(guild);
       ({ percentComplete, subtitle, completed } = guildProgressStep);
       if (cResult[0] === completed) {
+        let tmp5;
+        let tmp6;
         if (cResult[1] === guild.id) {
-          let tmp5 = cResult[2];
-          let tmp6 = cResult[3];
+          tmp5 = cResult[2];
+          tmp6 = cResult[3];
         }
-        const effect = noop.useEffect(tmp5, tmp6);
+        const effect = react.useEffect(tmp5, tmp6);
         if (cResult[4] === completed) {
+          let tmp9;
+          let tmp12;
+          let tmp11;
+          let tmp17;
           if (cResult[5] === guild) {
-            let tmp9 = cResult[6];
+            tmp9 = cResult[6];
           }
           const _Symbol = Symbol;
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj3 = { source: completed(16123) };
-            const tmp15 = jsx(tmp(8897).RowButton.Icon, { source: completed(16123) });
+            const Icon = tmp(8897).RowButton.Icon;
+            const tmp15 = <Icon source={completed(16123)} />;
             const intl = tmp(1126).intl;
-            const stringResult = intl.string(tmp(1126).t.o3HK3d);
+            const stringResult = intl.string(guild(1126).t.o3HK3d);
             cResult[7] = tmp15;
             cResult[8] = stringResult;
-            let tmp12 = stringResult;
-            let tmp11 = tmp15;
+            tmp12 = stringResult;
+            tmp11 = tmp15;
           } else {
             tmp11 = cResult[7];
             tmp12 = cResult[8];
           }
           if (cResult[9] !== percentComplete) {
-            const obj4 = { percent: percentComplete };
             const tmp20 = jsx(completed(12250), { percent: percentComplete });
             cResult[9] = percentComplete;
             cResult[10] = tmp20;
-            let tmp17 = tmp20;
+            tmp17 = tmp20;
           } else {
             tmp17 = cResult[10];
           }
           if (cResult[11] === tmp9) {
             if (cResult[12] === subtitle) {
+              let tmp21;
               if (cResult[13] === tmp17) {
-                let tmp21 = cResult[14];
+                tmp21 = cResult[14];
               }
               return tmp21;
             }
           }
-          const obj5 = { icon: tmp11, label: tmp12, subLabel: subtitle, onPress: tmp9, trailing: tmp17 };
-          const tmp23 = jsx(tmp(8897).RowButton, {
+          const tmp23 = jsx(guild(8897).RowButton, {
             icon: tmp11,
             label: tmp12,
             subLabel: subtitle,
@@ -76,9 +85,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const fn2 = function u() {
           if (!completed) {
-            const progress = GuildProgressActionCreatorsDefault.createProgress(guild.id);
+            const obj = GuildProgressActionCreatorsDefault;
+            const progress = obj.createProgress(guild.id);
           }
-          GuildProgressUtils.openActionSheet(guild);
+          const obj2 = GuildProgressUtils;
+          obj2.openActionSheet(guild);
         };
         cResult[4] = completed;
         cResult[5] = guild;
@@ -87,7 +98,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const fn = function n() {
         if (completed) {
-          const result = GuildProgressActionCreatorsDefault.markCompletedProgressSeen(guild.id);
+          const obj = GuildProgressActionCreatorsDefault;
+          const result = obj.markCompletedProgressSeen(guild.id);
         }
       };
       const items = [completed, guild.id];
@@ -97,40 +109,53 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp6 = items;
       tmp5 = fn;
-      let obj2 = guild(12130);
     }
   : (guild) => {
+      let percentComplete;
+      let subtitle;
       guild = guild.guild;
-      const guildProgressStep = guild(12130).useGuildProgressStep(guild);
+      let obj = guild(12130);
+      const guildProgressStep = obj.useGuildProgressStep(guild);
       const completed = guildProgressStep.completed;
       const items = [completed, guild.id];
       ({ percentComplete, subtitle } = guildProgressStep);
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
         if (completed) {
-          const result = GuildProgressActionCreatorsDefault.markCompletedProgressSeen(guild.id);
+          const obj = GuildProgressActionCreatorsDefault;
+          const result = obj.markCompletedProgressSeen(guild.id);
         }
       }, items);
       const items1 = [guild, completed];
-      const callback = noop.useCallback(() => {
+      const callback = react.useCallback(() => {
         if (!completed) {
-          const progress = GuildProgressActionCreatorsDefault.createProgress(guild.id);
+          const obj = GuildProgressActionCreatorsDefault;
+          const progress = obj.createProgress(guild.id);
         }
-        GuildProgressUtils.openActionSheet(guild);
+        const obj2 = GuildProgressUtils;
+        obj2.openActionSheet(guild);
       }, items1);
-      let obj2 = { icon: null, label: null, subLabel: null, onPress: null, trailing: null };
-      let obj = guild(12130);
-      obj2.icon = jsx(guild(8897).RowButton.Icon, { source: completed(16123) });
+      const RowButton = guild(8897).RowButton;
+      ({ source: completed(16123) });
+      const Icon = guild(8897).RowButton.Icon;
       const intl = guild(1126).intl;
-      obj2.label = intl.string(guild(1126).t.o3HK3d);
-      obj2.subLabel = subtitle;
-      obj2.onPress = callback;
-      obj2.trailing = jsx(completed(12250), { percent: percentComplete });
-      return jsx(guild(8897).RowButton, { icon: null, label: null, subLabel: null, onPress: null, trailing: null });
+      return (
+        <RowButton
+          icon={null}
+          label={intl.string(guild(1126).t.o3HK3d)}
+          subLabel={subtitle}
+          onPress={callback}
+          trailing={null}
+        />
+      );
     };
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/GuildProgressButton.tsx");
+
+export default tmp2;
 export const getScaledGuildProgressButtonHeight = function getScaledGuildProgressButtonHeight(fontScale) {
-  const refreshToken = MobileVisualRefreshExperiment.resolveRefreshToken(
-    nativeDefault.modules.mobile.TABLE_ROW_PADDING,
-  );
-  const sum = refreshToken + useScaledTextLineHeight.scaleTextLineHeight("text-md/semibold", fontScale);
-  return sum + 2 * useScaledTextLineHeight.scaleTextLineHeight("text-xs/medium", fontScale) + refreshToken;
+  const obj = MobileVisualRefreshExperiment;
+  const refreshToken = obj.resolveRefreshToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
+  const obj2 = useScaledTextLineHeight;
+  const sum = refreshToken + obj2.scaleTextLineHeight("text-md/semibold", fontScale);
+  const obj3 = useScaledTextLineHeight;
+  return sum + 2 * obj3.scaleTextLineHeight("text-xs/medium", fontScale) + refreshToken;
 };

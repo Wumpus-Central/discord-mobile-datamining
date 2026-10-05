@@ -1,25 +1,31 @@
 // discord_app/modules/premium/hooks/usePremiumDiscountOffer.android.tsx
 import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import react from "../../../../_runtime/00576_react.js";
 import ProductIds from "../native/ProductIds.android.tsx";
 import useDiscountOfferDefault from "useDiscountOffer.tsx";
 import IAPStore from "../../../stores/native/IAPStore.android.tsx";
+import PremiumConstants from "../PremiumConstants.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const PremiumConstants = fn(1379);
+let closure_4;
+let hasOwnProperty;
 ({
   PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: closure_4,
   PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID: hasOwnProperty,
 } = PremiumConstants);
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      const cResult = c.c(4);
+      let closure_0 = arg1;
+      const obj = react;
+      const cResult = obj.c(4);
       const tmp4 = useDiscountOfferDefault(arg0);
       if (cResult[0] === tmp4) {
         if (cResult[1] === arg0) {
+          let tmp5;
           if (cResult[2] === arg1) {
-            let tmp5 = cResult[3];
+            tmp5 = cResult[3];
           }
           const _Symbol = Symbol;
           if (tmp5 !== Symbol.for("react.early_return_sentinel")) {
@@ -44,6 +50,8 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp7;
     }
   : (arg0, arg1) => {
+      let closure_0 = arg1;
+      const tmp = useDiscountOfferDefault(arg0);
       const values = Object.values(ProductIds.DiscountIdToProductOfferId[arg0]);
       let tmp2 = null;
       if (0 !== values.length) {
@@ -55,17 +63,18 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp2;
     };
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/hooks/usePremiumDiscountOffer.android.tsx");
-
-export const usePremiumDiscountOffer = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let tmp4;
+      let tmp5;
+      let obj = react;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [IAPStore];
         const fn = function c() {
-          return { isFetchingProducts: IAPStore.isFetchingProducts(), offerIds: IAPStore.getOfferIds() };
+          const obj = { isFetchingProducts: IAPStore.isFetchingProducts(), offerIds: IAPStore.getOfferIds() };
+          return obj;
         };
         cResult[0] = items;
         cResult[1] = fn;
@@ -74,25 +83,30 @@ export const usePremiumDiscountOffer = ReactCompilerGating.isReactCompilerEnable
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const offerIds = useStateFromStores.useStateFromStoresObject(tmp4, tmp5).offerIds;
-      let tmp7 = closure_6(React4, offerIds);
+      const tmpResult = useStateFromStores;
+      const offerIds = tmpResult.useStateFromStoresObject(tmp4, tmp5).offerIds;
+      let tmp7 = closure_6(React3, offerIds);
       if (tmp7 == null) {
         tmp7 = closure_6(hasOwnProperty, offerIds);
       }
       return tmp7;
     }
   : () => {
+      let obj = useStateFromStores;
       const items = [IAPStore];
-      const offerIds = useStateFromStores.useStateFromStoresObject(items, () => ({
-        isFetchingProducts: IAPStore.isFetchingProducts(),
-        offerIds: IAPStore.getOfferIds(),
-      })).offerIds;
-      let tmp = closure_6(React4, offerIds);
+      const offerIds = obj.useStateFromStoresObject(items, () => {
+        const obj = { isFetchingProducts: IAPStore.isFetchingProducts(), offerIds: IAPStore.getOfferIds() };
+        return obj;
+      }).offerIds;
+      let tmp = closure_6(React3, offerIds);
       if (tmp == null) {
         tmp = closure_6(hasOwnProperty, offerIds);
       }
       return tmp;
     };
+const result = size.fileFinishedImporting("modules/premium/hooks/usePremiumDiscountOffer.android.tsx");
+
+export const usePremiumDiscountOffer = tmp3;
 export function usePremiumGroupDiscountOffer() {
   return null;
 }

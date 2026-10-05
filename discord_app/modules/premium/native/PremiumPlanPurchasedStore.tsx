@@ -1,103 +1,113 @@
 // discord_app/modules/premium/native/PremiumPlanPurchasedStore.tsx
-import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import react_native from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet.tsx";
 import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
+import PremiumConstants from "../PremiumConstants.tsx";
+import 00570__ from "../../../../_runtime/metro/00570__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-const PremiumConstants = fn(1379);
+let closure_4;
+let hasOwnProperty;
 ({ PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
-const module_570 = fn(570);
-const obj3 = module_570.create(() => ({
-  productId: "",
-  initiatedPurchaseFromNewFlow: false,
-  isPaymentSuccess: false,
-  mobileWebRedirectCheckoutStatus: null,
-}));
-const size = fn(2);
+const usePremiumPlanPurchasedStore = module_570.create(() => ({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: null }));
 const result = size.fileFinishedImporting("modules/premium/native/PremiumPlanPurchasedStore.tsx");
 
-export const usePremiumPlanPurchasedStore = obj3;
+export { usePremiumPlanPurchasedStore };
 export const setInitiatedPurchaseFromNewFlow = function setInitiatedPurchaseFromNewFlow(productId) {
+  let onPaymentDismiss;
+  let onPaymentStart;
+  let onPaymentSuccess;
   productId = productId.productId;
   ({ onPaymentStart, onPaymentSuccess: importDefault, onPaymentDismiss: dependencyMap } = productId);
-  productId(1259).batchUpdates(() => {
-    obj3.setState({ productId, initiatedPurchaseFromNewFlow: true, onPaymentSuccess, onPaymentDismiss });
+  let obj = productId(1259);
+  obj.batchUpdates(() => {
+    const obj = { productId, initiatedPurchaseFromNewFlow: true, onPaymentSuccess: importDefault, onPaymentDismiss: dependencyMap };
+    obj.setState(obj);
   });
   if (onPaymentStart != null) {
     onPaymentStart(productId);
   }
 };
 export const setPaymentSuccess = function setPaymentSuccess() {
-  if (obj3.getState().initiatedPurchaseFromNewFlow) {
-    state = obj3.getState();
+  if (obj.getState().initiatedPurchaseFromNewFlow) {
+    const state = obj.getState();
     const onPaymentSuccess = state.onPaymentSuccess;
-    ReactBatchUpdates.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
+    const productId = state.productId;
+    const obj2 = react_native;
+    obj2.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
     if (onPaymentSuccess != null) {
-      onPaymentSuccess(state.productId);
+      onPaymentSuccess(productId);
     }
   }
 };
-export const setMobileWebRedirectCheckoutStatus = function setMobileWebRedirectCheckoutStatus(
-  mobileWebRedirectCheckoutStatus,
-) {
+export const setMobileWebRedirectCheckoutStatus = function setMobileWebRedirectCheckoutStatus(mobileWebRedirectCheckoutStatus) {
   _require = mobileWebRedirectCheckoutStatus;
-  require("ReactBatchUpdates").batchUpdates(() => obj3.setState({ mobileWebRedirectCheckoutStatus }));
+  let obj = require("react-native");
+  obj.batchUpdates(() => {
+    const obj = { mobileWebRedirectCheckoutStatus };
+    return obj.setState(obj);
+  });
 };
 export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutStatus(mobileWebRedirectCheckoutStatus) {
+  let items;
+  let obj;
   _require = mobileWebRedirectCheckoutStatus;
   if ("succeeded" === mobileWebRedirectCheckoutStatus) {
-    state = obj3.getState();
+    const state = obj.getState();
     const onPaymentSuccess = state.onPaymentSuccess;
     if ("dismissed" !== state.mobileWebRedirectCheckoutStatus) {
       if (ActionSheetStore.getKey() !== closure_4) {
-        const obj = { premiumType: TIER_2.TIER_2, analyticsLocations: null, analyticsLocation: null };
-        const items = [AnalyticsLocationDefault.DEEPLINK];
-        obj.analyticsLocations = items;
-        obj.analyticsLocation = {};
-        openPremiumPlanSelectionActionSheetDefault(obj);
+        obj = { premiumType: TIER_2.TIER_2, analyticsLocations: items, analyticsLocation: {} };
+        items = [];
+        const tmp3 = openPremiumPlanSelectionActionSheetDefault;
+        items[0] = AnalyticsLocationDefault.DEEPLINK;
+        tmp3(obj);
       }
-      require("ReactBatchUpdates").batchUpdates(() =>
-        obj3.setState({ isPaymentSuccess: true, mobileWebRedirectCheckoutStatus }),
-      );
+      const obj2 = require("react-native");
+      obj2.batchUpdates(() => {
+        const obj = { isPaymentSuccess: true, mobileWebRedirectCheckoutStatus };
+        return obj.setState(obj);
+      });
       if (null != onPaymentSuccess) {
         onPaymentSuccess(tmp13);
       }
-      const obj2 = require("ReactBatchUpdates");
     }
   }
 };
 export const showOldPaymentFlowSuccess = function showOldPaymentFlowSuccess(fn) {
-  if (obj3.getState().initiatedPurchaseFromNewFlow) {
-    ReactBatchUpdates.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
+  let obj;
+  let state;
+  if (obj.getState().initiatedPurchaseFromNewFlow) {
+    obj = react_native;
+    obj.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
   } else {
     fn();
   }
 };
 export const reset = function reset() {
-  state = obj3.getState();
+  let obj;
+  let onPaymentDismiss;
+  let require;
+  const state = obj.getState();
   ({ onPaymentDismiss, mobileWebRedirectCheckoutStatus: require } = state);
   if (onPaymentDismiss != null) {
-    const obj = { productId: tmp2, isSuccess: tmp3 };
+    obj = { productId: tmp2, isSuccess: tmp3 };
     onPaymentDismiss(obj);
   }
-  ReactBatchUpdates.batchUpdates(() => {
+  const obj2 = react_native;
+  obj2.batchUpdates(() => {
     let str = null;
+    const setState = obj.setState;
     if (null != _require) {
       str = null;
       if ("in_mobile_web" !== tmp2) {
         str = "dismissed";
       }
     }
-    obj3.setState({
-      productId: "",
-      initiatedPurchaseFromNewFlow: false,
-      isPaymentSuccess: false,
-      mobileWebRedirectCheckoutStatus: str,
-      onPaymentSuccess: "r",
-      onPaymentDismiss: "emoji",
-    });
+    setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "r", onPaymentDismiss: "emoji" });
   });
 };

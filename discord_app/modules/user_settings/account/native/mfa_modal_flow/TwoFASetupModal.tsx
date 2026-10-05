@@ -1,96 +1,113 @@
 // discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModal.tsx
-import c from "../../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../../intl/index.native.tsx";
+import intl3 from "../../../../../intl/index.native.tsx";
 import useInitialValueDefault from "../../../../../hooks/useInitialValue.tsx";
-import Navigator from "../../../../../design/components/Navigator/native/Navigator.native.tsx";
+import Navigator2 from "../../../../../design/components/Navigator/native/Navigator.native.tsx";
 import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators.tsx";
+import TwoFAConstants from "TwoFAConstants.tsx";
 import TwoFASetupScanDefault from "TwoFASetupScan.tsx";
 import TwoFASetupEnterCodeDefault from "TwoFASetupEnterCode.tsx";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const TwoFAModalSetupSections = fn(14568).TwoFAModalSetupSections;
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
-  floatingButton: { position: "absolute", bottom: 12, left: 12, right: 12 },
+let children, closure_0, navigation;
+
+let metroImportDefault;
+let metroRequire;
+let obj2;
+function render() {
+  return closure_1_6(closure_1_1(closure_1_2[16]), {});
+}
+function headerTitle() {
+  return null;
+}
+const render2 = function render() {
+  return closure_1_6(closure_1_1(closure_1_2[19]), {});
 };
-let closure_8 = createStyles.createStyles(obj2);
+const View = react_native.View;
+const TwoFAModalSetupSections = TwoFAConstants.TwoFAModalSetupSections;
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let obj = { container: obj2, floatingButton: { position: "absolute", bottom: 12, left: 12, right: 12 } };
+obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let closure_8 = createStyles.createStyles(obj);
 let closure_9 = {
   [TwoFAModalSetupSections.LANDING]: 1,
   [TwoFAModalSetupSections.SCAN]: 2,
   [TwoFAModalSetupSections.ENTER_CODE]: 3,
 };
-fn(558);
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-const ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+let ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (children) => {
-      let i4jeWR = dependencyMap;
-      const cResult = navigation(576).c(12);
-      children = children.children;
-      const tmp3 = closure_8();
+      let Button;
+      let items;
+      let obj6;
+      let stringResult;
       let obj = navigation(576);
-      navigation = navigation(1490).useNavigation();
+      const cResult = obj.c(12);
+      children = children.children;
+      const tmp4 = closure_8();
       const obj2 = navigation(1490);
-      const name = navigation(1491).useRoute().name;
+      navigation = obj2.useNavigation();
+      const obj3 = navigation(1491);
+      const name = obj3.useRoute().name;
       if (cResult[0] === navigation) {
+        let tmp8;
         if (cResult[1] === name) {
-          let tmp7 = cResult[2];
+          tmp8 = cResult[2];
         }
-        if ((cResult[3] === name) !== tmp6) {
-          if (cResult[4] === tmp7) {
+        if ((cResult[3] === name) !== tmp7) {
+          if (cResult[4] === tmp8) {
             if (cResult[5] === name) {
-              if (cResult[6] === tmp3.floatingButton) {
-                let tmp9 = cResult[7];
+              let tmp10;
+              if (cResult[6] === tmp4.floatingButton) {
+                tmp10 = cResult[7];
               }
               if (cResult[8] === children) {
-                if (cResult[9] === tmp3.container) {
-                  if (cResult[10] === tmp9) {
-                    let tmp14 = cResult[11];
+                if (cResult[9] === tmp4.container) {
+                  let tmp14;
+                  if (cResult[10] === tmp10) {
+                    tmp14 = cResult[11];
                   }
                   return tmp14;
                 }
               }
-              const obj4 = { style: tmp3.container, children: null };
-              const items = [children, tmp9];
-              obj4.children = items;
+              const obj4 = { style: tmp4.container, children: items };
+              items = [children, tmp10];
               const tmp17 = closure_7(View, obj4);
               cResult[8] = children;
-              cResult[9] = tmp3.container;
-              cResult[10] = tmp9;
+              cResult[9] = tmp4.container;
+              cResult[10] = tmp10;
               cResult[11] = tmp17;
               tmp14 = tmp17;
             }
           }
         }
-        if (name === tmp6) {
-          cResult[3] = tmp8;
-          cResult[4] = tmp7;
-          cResult[5] = name;
-          cResult[6] = tmp3.floatingButton;
-          cResult[7] = tmp8;
-          tmp9 = tmp8;
-        } else {
-          const obj5 = { bottom: true, style: tmp3.floatingButton, children: null };
-          let obj6 = { onPress: tmp7, text: null };
-          if (name === tmp5.SUCCESS) {
+        let tmp12Result = tmp9;
+        if (tmp12Result) {
+          const obj5 = { bottom: true, style: tmp4.floatingButton, children: closure_6(Button, obj6) };
+          const SafeAreaPaddingView = tmp(6619).SafeAreaPaddingView;
+          obj6 = { onPress: tmp8, text: stringResult };
+          Button = tmp(5594).Button;
+          if (name === tmp6.SUCCESS) {
             const intl2 = tmp(1126).intl;
-            i4jeWR = tmp(1126).t.i4jeWR;
-            let stringResult = intl2.string(i4jeWR);
+            stringResult = intl2.string(tmp(1126).t.i4jeWR);
           } else {
             const intl = tmp(1126).intl;
             stringResult = intl.string(tmp(1126).t.XiOHRX);
           }
-          obj6.text = stringResult;
-          obj6 = closure_6(tmp(5594).Button, obj6);
-          obj5.children = obj6;
-          closure_6(tmp(6619).SafeAreaPaddingView, obj5);
+          tmp12Result = closure_6(SafeAreaPaddingView, obj5);
         }
+        cResult[3] = name !== tmp7;
+        cResult[4] = tmp8;
+        cResult[5] = name;
+        cResult[6] = tmp4.floatingButton;
+        cResult[7] = tmp12Result;
+        tmp10 = tmp12Result;
       }
       const fn = function l() {
         if (name === TwoFAModalSetupSections.LANDING) {
@@ -100,129 +117,132 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         } else if (name === TwoFAModalSetupSections.ENTER_CODE) {
           navigation.push(TwoFAModalSetupSections.SUCCESS);
         } else {
-          TwoFASetupModalActionCreatorsDefault.close();
+          const obj = TwoFASetupModalActionCreatorsDefault;
+          obj.close();
         }
       };
       cResult[0] = navigation;
       cResult[1] = name;
       cResult[2] = fn;
-      tmp7 = fn;
-      const obj3 = navigation(1491);
+      tmp8 = fn;
     }
   : (children) => {
-      let navigation;
+      let Button;
+      let items1;
+      let obj5;
+      let stringResult;
+      navigation = undefined;
+      children = children.children;
       const tmp = closure_8();
-      let i4jeWR = dependencyMap;
-      navigation = navigation(1490).useNavigation();
       let obj = navigation(1490);
-      const name = navigation(1491).useRoute().name;
+      navigation = obj.useNavigation();
+      const obj2 = navigation(1491);
+      const name = obj2.useRoute().name;
+      let tmp10Result = name !== TwoFAModalSetupSections.ENTER_CODE;
       const items = [navigation, name];
-      const obj3 = { style: tmp.container, children: null };
-      const items1 = [children.children];
-      if (name === TwoFAModalSetupSections.ENTER_CODE) {
-        items1[1] = tmp5;
-        obj3.children = items1;
-        return tmp7(tmp8, obj3);
-      } else {
-        const obj4 = { bottom: true, style: tmp.floatingButton, children: null };
-        let obj5 = { onPress: tmp6, text: null };
+      const obj3 = { style: tmp.container, children: items1 };
+      items1 = [children];
+      if (tmp10Result) {
+        const obj4 = { bottom: true, style: tmp.floatingButton, children: closure_6(Button, obj5) };
+        const SafeAreaPaddingView = tmp2(6619).SafeAreaPaddingView;
+        obj5 = { onPress: tmp7, text: stringResult };
+        Button = tmp2(5594).Button;
         if (name === TwoFAModalSetupSections.SUCCESS) {
           const intl2 = tmp2(1126).intl;
-          i4jeWR = tmp2(1126).t.i4jeWR;
-          let stringResult = intl2.string(i4jeWR);
+          stringResult = intl2.string(tmp2(1126).t.i4jeWR);
         } else {
           const intl = tmp2(1126).intl;
           stringResult = intl.string(tmp2(1126).t.XiOHRX);
         }
-        obj5.text = stringResult;
-        obj5 = closure_6(tmp2(5594).Button, obj5);
-        obj4.children = obj5;
-        closure_6(tmp2(6619).SafeAreaPaddingView, obj4);
+        tmp10Result = closure_6(SafeAreaPaddingView, obj4);
       }
-      const obj2 = navigation(1491);
+      items1[1] = tmp10Result;
+      return closure_7(View, obj3);
     };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModal.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (initialRouteName) => {
-      const cResult = c.c(5);
+      let first;
+      let tmp7;
+      let obj = react2;
+      const cResult = obj.c(5);
       let LANDING = initialRouteName.initialRouteName;
       if (undefined === LANDING) {
         LANDING = TwoFAModalSetupSections.LANDING;
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n() {
-          closure_0 = closure_0(6439).generateTotpSecret();
+          let obj4;
+          let obj6;
+          const obj = closure_0(closure_2[20]);
+          closure_0 = obj.generateTotpSecret();
           const obj2 = {};
-          const obj3 = { headerLeft: null, headerTitle: null, render: null };
-          const obj = closure_0(6439);
-          obj3.headerLeft = closure_0(6010).getHeaderCloseButton(closure_1(14566).close);
-          obj3.headerTitle = function headerTitle() {
-            return closure_1_6(totpSecret(14569).PageMarker, {
-              currentPage: dependencyMap2[constants.LANDING],
-              numMarkers: Object.keys(dependencyMap2).length - 1,
-            });
+          const LANDING = constants.LANDING;
+          const obj3 = {
+            headerLeft: obj4.getHeaderCloseButton(closure_1(closure_2[10]).close),
+            headerTitle() {
+              const LANDING = constants.LANDING;
+              const obj = { currentPage: closure_1_9[LANDING], numMarkers: Object.keys(closure_1_9).length - 1 };
+              return closure_1_6(totpSecret(closure_1_2[14]).PageMarker, obj);
+            },
+            render,
           };
-          obj3.render = function render() {
-            return closure_1_6(closure_1_1(14570), {});
-          };
-          obj2[constants.LANDING] = obj3;
+          obj2[LANDING] = obj3;
           obj2[constants.SCAN] = {
             headerTitle() {
-              return closure_1_6(totpSecret(14569).PageMarker, {
-                currentPage: dependencyMap2[constants.SCAN],
-                numMarkers: Object.keys(dependencyMap2).length - 1,
-              });
+              const SCAN = constants.SCAN;
+              const obj = { currentPage: closure_1_9[SCAN], numMarkers: Object.keys(closure_1_9).length - 1 };
+              return closure_1_6(totpSecret(closure_1_2[14]).PageMarker, obj);
             },
             render() {
-              return closure_2_6(TwoFASetupScanDefault, { totpSecret });
+              const obj = { totpSecret };
+              return closure_2_6(TwoFASetupScanDefault, obj);
             },
           };
           obj2[constants.ENTER_CODE] = {
             headerTitle() {
-              return closure_1_6(totpSecret(14569).PageMarker, {
-                currentPage: dependencyMap2[constants.ENTER_CODE],
-                numMarkers: Object.keys(dependencyMap2).length - 1,
-              });
+              const ENTER_CODE = constants.ENTER_CODE;
+              const obj = { currentPage: closure_1_9[ENTER_CODE], numMarkers: Object.keys(closure_1_9).length - 1 };
+              return closure_1_6(totpSecret(closure_1_2[14]).PageMarker, obj);
             },
             render() {
-              return closure_2_6(TwoFASetupEnterCodeDefault, { totpSecret });
+              const obj = { totpSecret };
+              return closure_2_6(TwoFASetupEnterCodeDefault, obj);
             },
           };
-          const obj5 = { headerLeft: null, headerTitle: null, render: null };
-          const obj4 = closure_0(6010);
-          obj5.headerLeft = closure_0(6010).getHeaderCloseButton(closure_1(14566).close);
-          obj5.headerTitle = function headerTitle() {
-            return null;
+          obj4 = closure_0(closure_2[15]);
+          const SUCCESS = constants.SUCCESS;
+          const obj5 = {
+            headerLeft: obj6.getHeaderCloseButton(closure_1(closure_2[10]).close),
+            headerTitle,
+            render: render2,
           };
-          obj5.render = function render() {
-            return closure_1_6(closure_1_1(14577), {});
-          };
-          obj2[constants.SUCCESS] = obj5;
+          obj2[SUCCESS] = obj5;
+          obj6 = closure_0(closure_2[15]);
           return obj2;
         };
         cResult[0] = fn;
-        let first = fn;
+        first = fn;
       } else {
         first = cResult[0];
       }
       const tmp6 = useInitialValueDefault(first);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = util.intl;
-        const stringResult = intl.string(util.t["13/7kX"]);
+        const intl = intl3.intl;
+        const stringResult = intl.string(intl3.t["13/7kX"]);
         cResult[1] = stringResult;
-        let tmp7 = stringResult;
+        tmp7 = stringResult;
       } else {
         tmp7 = cResult[1];
       }
       if (cResult[2] === LANDING) {
+        let tmp9;
         if (cResult[3] === tmp6) {
-          let tmp9 = cResult[4];
+          tmp9 = cResult[4];
         }
         return tmp9;
       }
-      const tmp10 = timestampProducer(Navigator.Navigator, {
+      const tmp10 = metroRequire(Navigator2.Navigator, {
         initialRouteName: LANDING,
         screens: tmp6,
         headerBackTitle: tmp7,
@@ -234,67 +254,74 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
     }
   : (initialRouteName) => {
+      let intl;
+      const f117321 = () => {
+        let obj4;
+        let obj6;
+        let totpSecret;
+        let obj = totpSecret(closure_2[20]);
+        totpSecret = obj.generateTotpSecret();
+        const obj2 = {};
+        let LANDING = constants.LANDING;
+        const obj3 = {
+          headerLeft: obj4.getHeaderCloseButton(closure_1(closure_2[10]).close),
+          headerTitle() {
+            const LANDING = constants.LANDING;
+            const obj = { currentPage: closure_1_9[LANDING], numMarkers: Object.keys(closure_1_9).length - 1 };
+            return closure_1_6(totpSecret(closure_1_2[14]).PageMarker, obj);
+          },
+          render,
+        };
+        obj2[LANDING] = obj3;
+        obj2[constants.SCAN] = {
+          headerTitle() {
+            const SCAN = constants.SCAN;
+            const obj = { currentPage: closure_1_9[SCAN], numMarkers: Object.keys(closure_1_9).length - 1 };
+            return closure_1_6(totpSecret(closure_1_2[14]).PageMarker, obj);
+          },
+          render() {
+            const obj = { totpSecret };
+            return closure_2_6(TwoFASetupScanDefault, obj);
+          },
+        };
+        obj2[constants.ENTER_CODE] = {
+          headerTitle() {
+            const ENTER_CODE = constants.ENTER_CODE;
+            const obj = { currentPage: closure_1_9[ENTER_CODE], numMarkers: Object.keys(closure_1_9).length - 1 };
+            return closure_1_6(totpSecret(closure_1_2[14]).PageMarker, obj);
+          },
+          render() {
+            const obj = { totpSecret };
+            return closure_2_6(TwoFASetupEnterCodeDefault, obj);
+          },
+        };
+        obj4 = totpSecret(closure_2[15]);
+        const SUCCESS = constants.SUCCESS;
+        const obj5 = {
+          headerLeft: obj6.getHeaderCloseButton(closure_1(closure_2[10]).close),
+          headerTitle,
+          render: render2,
+        };
+        obj2[SUCCESS] = obj5;
+        obj6 = totpSecret(closure_2[15]);
+        return obj2;
+      };
       let LANDING = initialRouteName.initialRouteName;
       if (LANDING === undefined) {
         LANDING = TwoFAModalSetupSections.LANDING;
       }
       let obj = {
         initialRouteName: LANDING,
-        screens: useInitialValueDefault(() => {
-          totpSecret = totpSecret(6439).generateTotpSecret();
-          const obj2 = {};
-          const obj3 = { headerLeft: null, headerTitle: null, render: null };
-          const obj = totpSecret(6439);
-          obj3.headerLeft = totpSecret(6010).getHeaderCloseButton(closure_1(14566).close);
-          obj3.headerTitle = function headerTitle() {
-            return closure_1_6(totpSecret(14569).PageMarker, {
-              currentPage: dependencyMap2[constants.LANDING],
-              numMarkers: Object.keys(dependencyMap2).length - 1,
-            });
-          };
-          obj3.render = function render() {
-            return closure_1_6(closure_1_1(14570), {});
-          };
-          obj2[constants.LANDING] = obj3;
-          obj2[constants.SCAN] = {
-            headerTitle() {
-              return closure_1_6(totpSecret(14569).PageMarker, {
-                currentPage: dependencyMap2[constants.SCAN],
-                numMarkers: Object.keys(dependencyMap2).length - 1,
-              });
-            },
-            render() {
-              return closure_2_6(TwoFASetupScanDefault, { totpSecret });
-            },
-          };
-          obj2[constants.ENTER_CODE] = {
-            headerTitle() {
-              return closure_1_6(totpSecret(14569).PageMarker, {
-                currentPage: dependencyMap2[constants.ENTER_CODE],
-                numMarkers: Object.keys(dependencyMap2).length - 1,
-              });
-            },
-            render() {
-              return closure_2_6(TwoFASetupEnterCodeDefault, { totpSecret });
-            },
-          };
-          const obj5 = { headerLeft: null, headerTitle: null, render: null };
-          const obj4 = totpSecret(6010);
-          obj5.headerLeft = totpSecret(6010).getHeaderCloseButton(closure_1(14566).close);
-          obj5.headerTitle = function headerTitle() {
-            return null;
-          };
-          obj5.render = function render() {
-            return closure_1_6(closure_1_1(14577), {});
-          };
-          obj2[constants.SUCCESS] = obj5;
-          return obj2;
-        }),
-        headerBackTitle: null,
+        screens: useInitialValueDefault(f117321),
+        headerBackTitle: intl.string(intl3.t["13/7kX"]),
         headerTitleAlign: "center",
       };
-      const intl = util.intl;
-      obj.headerBackTitle = intl.string(util.t["13/7kX"]);
-      return timestampProducer(Navigator.Navigator, obj);
+      useInitialValueDefault(f117321);
+      const Navigator = Navigator2.Navigator;
+      intl = intl3.intl;
+      return metroRequire(Navigator, obj);
     };
+const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModal.tsx");
+
+export default tmp4;
 export const TwoFASetupModalScreen = tmp3;

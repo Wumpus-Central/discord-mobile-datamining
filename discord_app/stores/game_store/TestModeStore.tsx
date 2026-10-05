@@ -1,14 +1,16 @@
 // discord_app/stores/game_store/TestModeStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import UserSettings from "../../modules/user_settings/UserSettings.tsx";
 import SelectivelySyncedUserSettingsStore from "../../modules/user_settings/SelectivelySyncedUserSettingsStore.tsx";
 import UserSettingsProtoStore from "../../modules/user_settings/UserSettingsProtoStore.tsx";
 import LibraryApplicationStore from "../LibraryApplicationStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
+let originURL;
+
 function reset() {
-  testModeApplicationId = null;
+  applicationId = null;
   originURL = null;
   set = new Set();
   obj.applicationId = null;
@@ -18,53 +20,60 @@ function reset() {
 let obj = { applicationId: null, originURL: null };
 let set = new Set();
 let c11 = false;
-const PersistedStore = initializeDefault.PersistedStore;
-class TestModeStore extends PersistedStore {}
+const PersistedStore = get_initializedDefault.PersistedStore;
+class TestModeStore extends PersistedStore {
+  initialize(arg0) {
+    let tmp = arg0;
+    if (arg0 == null) {
+      tmp = obj;
+    }
+    obj = {};
+    const merged = Object.assign(tmp);
+    applicationId = obj.applicationId;
+    originURL = obj.originURL;
+    this.waitFor(LibraryApplicationStore, SelectivelySyncedUserSettingsStore, UserSettingsProtoStore);
+    const items = [UserSettingsProtoStore, SelectivelySyncedUserSettingsStore];
+    this.syncWith(items, () => true);
+    LibraryApplicationStore.whenInitialized(() => {
+      c11 = true;
+    });
+  }
+  getTestModeApplicationId() {
+    return applicationId;
+  }
+  inTestModeForApplication(applicationId) {
+    return applicationId === applicationId;
+  }
+  inTestModeForEmbeddedApplication(arg0) {
+    return applicationId === arg0 && null != originURL;
+  }
+  shouldDisplayTestMode(applicationId) {
+    const DeveloperMode = UserSettings.DeveloperMode;
+    let setting = DeveloperMode.getSetting();
+    if (setting) {
+      const self = this;
+      setting = this.inTestModeForApplication(applicationId);
+    }
+    return setting;
+  }
+  getState() {
+    return obj;
+  }
+  whenInitialized(arg0) {
+    let closure_0 = arg0;
+    const result = this.addConditionalChangeListener(() => {
+      if (c11) {
+        const _setImmediate = setImmediate;
+        setImmediate(closure_0);
+        return false;
+      }
+    });
+  }
+}
 const prototype = TestModeStore.prototype;
-prototype["initialize"] = function initialize(arg0) {
-  let tmp = arg0;
-  if (arg0 == null) {
-    tmp = obj;
-  }
-  obj = {};
-  const merged = Object.assign(tmp);
-  testModeApplicationId = obj.applicationId;
-  originURL = obj.originURL;
-  this.waitFor(LibraryApplicationStore, SelectivelySyncedUserSettingsStore, UserSettingsProtoStore);
-  const items = [UserSettingsProtoStore, SelectivelySyncedUserSettingsStore];
-  this.syncWith(items, () => true);
-  LibraryApplicationStore.whenInitialized(() => {
-    c11 = true;
-  });
-};
-prototype["getTestModeApplicationId"] = function getTestModeApplicationId() {
-  return testModeApplicationId;
-};
-prototype["inTestModeForApplication"] = function inTestModeForApplication(applicationId) {
-  return testModeApplicationId === applicationId;
-};
-prototype["inTestModeForEmbeddedApplication"] = function inTestModeForEmbeddedApplication(arg0) {
-  let tmp = testModeApplicationId === arg0;
-  if (tmp) {
-    tmp = null != originURL;
-  }
-  return tmp;
-};
-prototype["shouldDisplayTestMode"] = function shouldDisplayTestMode(applicationId) {
-  const DeveloperMode = UserSettings.DeveloperMode;
-  let setting = DeveloperMode.getSetting();
-  if (setting) {
-    const self = this;
-    setting = this.inTestModeForApplication(applicationId);
-  }
-  return setting;
-};
-prototype["getState"] = function getState() {
-  return obj;
-};
 Object.defineProperty(prototype, "isTestMode", {
   get: function isTestMode() {
-    return null != testModeApplicationId;
+    return null != applicationId;
   },
   set: undefined,
 });
@@ -78,7 +87,7 @@ Object.defineProperty(prototype, "testModeEmbeddedApplicationId", {
   get: function testModeEmbeddedApplicationId() {
     let tmp = null;
     if (null != originURL) {
-      tmp = testModeApplicationId;
+      tmp = applicationId;
     }
     return tmp;
   },
@@ -86,7 +95,7 @@ Object.defineProperty(prototype, "testModeEmbeddedApplicationId", {
 });
 Object.defineProperty(prototype, "testModeApplicationId", {
   get: function testModeApplicationId() {
-    return testModeApplicationId;
+    return applicationId;
   },
   set: undefined,
 });
@@ -102,45 +111,34 @@ Object.defineProperty(prototype, "error", {
   },
   set: undefined,
 });
-prototype["whenInitialized"] = function whenInitialized(arg0) {
-  closure_0 = arg0;
-  const result = this.addConditionalChangeListener(() => {
-    if (c11) {
-      const _setImmediate = setImmediate;
-      setImmediate(closure_0);
-      return false;
-    }
-  });
-};
 TestModeStore.displayName = "TestModeStore";
 TestModeStore.persistKey = "TestModeStore";
-const testModeStore = new TestModeStore(DispatcherDefault, {
+const obj2 = {
   DEVELOPER_TEST_MODE_AUTHORIZATION_START: function handleDeveloperTestModeAuthorizationStart(applicationId) {
     set.add(applicationId.applicationId);
     error = null;
   },
   DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: function handleDeveloperTestModeAuthorizationSuccess(arg0) {
     ({ applicationId, originURL } = arg0);
-    testModeApplicationId = applicationId;
     set.delete(applicationId);
     error = null;
     obj.applicationId = applicationId;
     obj.originURL = originURL;
   },
-  DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: function handleDeveloperTestModeAuthorizationFail(applicationId) {
-    set.delete(applicationId.applicationId);
-    error = applicationId.error;
+  DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: function handleDeveloperTestModeAuthorizationFail(error) {
+    error = error.error;
+    set.delete(error.applicationId);
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(testModeApplicationId) {
-    testModeApplicationId = testModeApplicationId.testModeApplicationId;
+    applicationId = testModeApplicationId.testModeApplicationId;
   },
   DEVELOPER_TEST_MODE_RESET_ERROR: function resetError() {
     error = null;
   },
   LOGOUT: reset,
   DEVELOPER_TEST_MODE_RESET: reset,
-});
-const size = fn(2);
+};
+const testModeStore = new TestModeStore(DispatcherDefault, obj2);
 let result = size.fileFinishedImporting("stores/game_store/TestModeStore.tsx");
 
 export default testModeStore;

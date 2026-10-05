@@ -7,8 +7,10 @@ import size from "../../../_runtime/metro/00002__.js";
 let result = size.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
 
 export const updateDynamicSuperProperties = function updateDynamicSuperProperties() {
-  const activeSessionUnsafe = SessionHeartbeatScheduler.getActiveSessionUnsafe();
-  const superProperties = discord_common_AnalyticsUtils.getSuperProperties();
+  const obj = SessionHeartbeatScheduler;
+  const activeSessionUnsafe = obj.getActiveSessionUnsafe();
+  const obj2 = discord_common_AnalyticsUtils;
+  const superProperties = obj2.getSuperProperties();
   let uuid;
   if (activeSessionUnsafe != null) {
     uuid = activeSessionUnsafe.uuid;
@@ -21,7 +23,8 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
   if (uuid !== prop) {
     obj3.client_heartbeat_session_id = uuid;
   }
-  state = DiscordAppStateDefault.getState();
+  const obj4 = DiscordAppStateDefault;
+  const state = obj4.getState();
   let client_app_state;
   if (superProperties != null) {
     client_app_state = superProperties.client_app_state;
@@ -30,7 +33,7 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
     obj3.client_app_state = state;
   }
   if (Object.keys(obj3).length > 0) {
-    const result = discord_common_AnalyticsUtils.extendSuperProperties(obj3);
     const tmpResult = discord_common_AnalyticsUtils;
+    const result = tmpResult.extendSuperProperties(obj3);
   }
 };

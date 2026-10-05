@@ -1,6 +1,11 @@
 // discord_app/modules/billing/native/iapProducts.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
+let items1;
+let items2;
+let items3;
+let items4;
+let items5;
 const result = size.fileFinishedImporting("modules/billing/native/iapProducts.tsx");
 const items = [
   {
@@ -70,9 +75,9 @@ const obj = {
   downloadable: false,
   description: "Chat perks (Yearly Sub)",
   title: "Nitro Basic Yearly",
-  discounts: null,
+  discounts: items1,
 };
-const items1 = [
+items1 = [
   {
     identifier: "premium_tier_0_yearly_likelihood",
     localizedPrice: "$0.00",
@@ -83,7 +88,6 @@ const items1 = [
     price: "0",
   },
 ];
-obj.discounts = items1;
 items[2] = obj;
 const obj2 = {
   identifier: "premium_tier_2_monthly",
@@ -95,9 +99,9 @@ const obj2 = {
   downloadable: false,
   description: "Chat perks and 2 Boosts (Monthly Sub)",
   title: "Nitro Monthly",
-  discounts: null,
+  discounts: items2,
 };
-const items2 = [
+items2 = [
   {
     numberOfPeriods: "14",
     type: "SUBSCRIPTION",
@@ -135,7 +139,6 @@ const items2 = [
     subscriptionPeriod: "MONTH",
   },
 ];
-obj2.discounts = items2;
 items[3] = obj2;
 items[4] = {
   identifier: "premium_tier_1_premium_guild_1_monthly",
@@ -195,9 +198,9 @@ const obj3 = {
   downloadable: false,
   description: "Chat perks (Monthly Sub)",
   title: "Nitro Basic Monthly",
-  discounts: null,
+  discounts: items3,
 };
-const items3 = [
+items3 = [
   {
     localizedPrice: "$0.00",
     paymentMode: "FREETRIAL",
@@ -208,7 +211,6 @@ const items3 = [
     identifier: "premium_tier_0_monthly_likelihood",
   },
 ];
-obj3.discounts = items3;
 items[8] = obj3;
 items[9] = {
   identifier: "premium_guild_1_monthly",
@@ -232,9 +234,9 @@ const obj4 = {
   downloadable: false,
   description: "Chat perks like animated emojis (Monthly Sub)",
   title: "Classic Monthly",
-  discounts: null,
+  discounts: items4,
 };
-const items4 = [
+items4 = [
   {
     localizedPrice: "$0.00",
     identifier: "premium_tier_1_monthly_likelihood",
@@ -245,7 +247,6 @@ const items4 = [
     numberOfPeriods: "1",
   },
 ];
-obj4.discounts = items4;
 items[10] = obj4;
 items[11] = {
   identifier: "premium_tier_1_yearly",
@@ -413,9 +414,9 @@ const obj5 = {
   downloadable: false,
   description: "Chat perks and 2 Boosts (Yearly Sub)",
   title: "Nitro Yearly",
-  discounts: null,
+  discounts: items5,
 };
-const items5 = [
+items5 = [
   {
     subscriptionPeriod: "MONTH",
     paymentMode: "FREETRIAL",
@@ -453,7 +454,6 @@ const items5 = [
     identifier: "premium_tier_2_yearly_likelihood",
   },
 ];
-obj5.discounts = items5;
 items[24] = obj5;
 items[25] = {
   identifier: "premium_tier_2_premium_guild_13_monthly",

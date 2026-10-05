@@ -1,4 +1,5 @@
 // discord_app/modules/user_profile/native/UserProfileAlertUtils.tsx
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import useAlertStore from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import UserProfileConfirmCancelFriendRequestDefault from "UserProfileConfirmCancelFriendRequest.tsx";
 import UserProfileConfirmRemoveFriendDefault from "UserProfileConfirmRemoveFriend.tsx";
@@ -6,43 +7,45 @@ import UserProfileConfirmRemoveGameFriendDefault from "UserProfileConfirmRemoveG
 import UserProfileConfirmVideoUnstableConnectionDefault from "UserProfileConfirmVideoUnstableConnection.tsx";
 import UserProfileAlertUserReportedDefault from "UserProfileAlertUserReported.tsx";
 import UserProfileConfirmThreadRemoveDefault from "UserProfileConfirmThreadRemove.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const size = fn(2);
+const jsx = Fragment.jsx;
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileAlertUtils.tsx");
 
 export const confirmCancelFriendRequest = function confirmCancelFriendRequest(arg0) {
-  const obj = useAlertStore;
-  const obj2 = {};
+  const openAlert = useAlertStore.openAlert;
+  useAlertStore;
+  UserProfileConfirmCancelFriendRequestDefault;
   const merged = Object.assign(arg0);
-  obj.openAlert("cancel-friend-request", jsx(UserProfileConfirmCancelFriendRequestDefault, {}));
+  openAlert("cancel-friend-request", <tmp2 />);
 };
 export const confirmRemoveFriend = function confirmRemoveFriend(arg0) {
-  const obj = useAlertStore;
-  const obj2 = {};
+  const openAlert = useAlertStore.openAlert;
+  useAlertStore;
+  UserProfileConfirmRemoveFriendDefault;
   const merged = Object.assign(arg0);
-  obj.openAlert("remove-friend", jsx(UserProfileConfirmRemoveFriendDefault, {}));
+  openAlert("remove-friend", <tmp2 />);
 };
 export const confirmRemoveGameFriend = function confirmRemoveGameFriend(arg0) {
-  const obj = useAlertStore;
-  const obj2 = {};
+  const openAlert = useAlertStore.openAlert;
+  useAlertStore;
+  UserProfileConfirmRemoveGameFriendDefault;
   const merged = Object.assign(arg0);
-  obj.openAlert("remove-game-friend", jsx(UserProfileConfirmRemoveGameFriendDefault, {}));
+  openAlert("remove-game-friend", <tmp2 />);
 };
 export const confirmVideoUnstableConnection = function confirmVideoUnstableConnection(onConfirm) {
-  useAlertStore.openAlert(
-    "video-unstable-connection",
-    jsx(UserProfileConfirmVideoUnstableConnectionDefault, { onConfirm }),
-  );
+  const obj = useAlertStore;
+  obj.openAlert("video-unstable-connection", jsx(UserProfileConfirmVideoUnstableConnectionDefault, { onConfirm }));
 };
 export const alertUserReported = function alertUserReported() {
-  useAlertStore.openAlert("user-reported", jsx(UserProfileAlertUserReportedDefault, {}));
+  const obj = useAlertStore;
+  obj.openAlert("user-reported", jsx(UserProfileAlertUserReportedDefault, {}));
 };
 export const confirmThreadRemove = function confirmThreadRemove(arg0) {
-  const obj = useAlertStore;
-  const obj2 = {};
+  const openAlert = useAlertStore.openAlert;
+  useAlertStore;
+  UserProfileConfirmThreadRemoveDefault;
   const merged = Object.assign(arg0);
-  obj.openAlert("thread-remove", jsx(UserProfileConfirmThreadRemoveDefault, {}));
+  openAlert("thread-remove", <tmp2 />);
 };

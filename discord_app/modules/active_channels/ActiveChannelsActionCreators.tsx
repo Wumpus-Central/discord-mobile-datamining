@@ -1,125 +1,132 @@
 // discord_app/modules/active_channels/ActiveChannelsActionCreators.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import Constants from "../../Constants.tsx";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const require = fn;
-let closure_5 = async function _fetchActiveChannels(arg0) {
-  if (c8 === 2) {
-    c8 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c8 = 2;
-      if (0 === c7) {
-        if (arg0 === 1) {
-          c8 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c8 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_4 = tmp3;
-          closure_3 = tmp7;
-          closure_131_1 = undefined;
-          closure_131_0 = closure_0;
-          let num7 = closure_1;
-          if (closure_1 === undefined) {
-            num7 = 10;
-          }
-          closure_131_1 = num7;
-          closure_131_2 = undefined;
-          closure_131_3 = undefined;
-          c7 = 1;
-          c8 = 1;
-          return { value: "Set", done: true };
-        }
-      } else if (1 === tmp7) {
-        if (arg0 === 1) {
-          c8 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c8 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          const obj6 = { type: "ACTIVE_CHANNELS_FETCH_START", guildId: closure_131_0 };
-          closure_132_1(closure_132_2[2]).dispatch(obj6);
-          c6 = 1;
-          const HTTP = closure_132_0(closure_132_2[3]).HTTP;
-          const request = { url: closure_132_4.ACTIVE_CHANNELS(closure_131_0), query: null, rejectWithError: true };
-          const obj7 = { channel_limit: closure_131_1 };
-          request.query = obj7;
-          c7 = 3;
-          c8 = 1;
-          const obj8 = { value: HTTP.get(request), done: false };
-          return obj8;
-        }
-      } else if (2 === tmp7) {
-        c6 = 0;
-        closure_131_4 = closure_5;
-        const obj9 = { type: "ACTIVE_CHANNELS_FETCH_FAILURE", guildId: closure_131_0, error: null };
-        const tmp29 = new closure_132_1(closure_132_2[4])(closure_131_4);
-        obj9.error = tmp29;
-        closure_132_1(closure_132_2[2]).dispatch(obj9);
-        throw closure_131_4;
-      } else if (arg0 === 1) {
-        c8 = 3;
+let c7, c8, closure_5;
+
+let obj = function _fetchActiveChannels() {
+  obj = _asyncToGenerator(async function (guildId) {
+    let obj6;
+    let tmp25;
+    let value;
+    let closure_1 = arg1;
+    if (c8 === 2) {
+      c8 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (guildId === 1) {
         throw value;
-      } else if (arg0 === 2) {
-        c6 = 0;
-        c8 = 3;
-        const obj10 = { value, done: true };
-        return obj10;
+      } else if (guildId === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        closure_131_2 = value;
-        const body = closure_131_2.body;
-        let channels;
-        if (body != null) {
-          channels = body.channels;
-        }
-        closure_2 = channels;
-        if (channels == null) {
-          closure_2 = [];
-        }
-        closure_131_3 = closure_2;
-        const obj12 = { type: "ACTIVE_CHANNELS_FETCH_SUCCESS", guildId: closure_131_0, channels: closure_131_3 };
-        closure_132_1(closure_132_2[2]).dispatch(obj12);
-        c6 = 0;
-        c8 = 3;
-        const obj13 = { value: closure_131_2, done: true };
-        return obj13;
+        return { value: "IconComponent", done: null };
       }
-    } catch (tmp34) {
-      closure_5 = tmp34;
-      if (tmp4 === c6) {
-        c8 = tmp2;
-        throw tmp34;
-      } else {
-        c7 = tmp;
+    } else {
+      let c6;
+      try {
+        let closure_4;
+        let channels;
+        let num7;
+        c8 = 2;
+        if (0 === c7) {
+          if (guildId === 1) {
+            c8 = 3;
+            throw value;
+          } else if (guildId === 2) {
+            c8 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_4 = tmp;
+            channels = tmp4;
+            num7 = closure_1;
+            if (closure_1 === undefined) {
+              num7 = 10;
+            }
+            value = undefined;
+            channels = undefined;
+            c7 = 1;
+            c8 = 1;
+            return { value: "Set", done: true };
+          }
+        } else if (1 === c7) {
+          if (guildId === 1) {
+            c8 = 3;
+            throw value;
+          } else if (guildId === 2) {
+            c8 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            const obj5 = { type: "ACTIVE_CHANNELS_FETCH_START", guildId };
+            const obj10 = closure_132_1(closure_132_2[2]);
+            obj10.dispatch(obj5);
+            c6 = 1;
+            const HTTP = closure_132_0(closure_132_2[3]).HTTP;
+            const request = { url: closure_132_4.ACTIVE_CHANNELS(guildId), query: obj6, rejectWithError: true };
+            const get = HTTP.get;
+            obj6 = { channel_limit: num7 };
+            c7 = 3;
+            c8 = 1;
+            const obj7 = { value: get(request), done: false };
+            return obj7;
+          }
+        } else if (2 === c7) {
+          c6 = 0;
+          closure_4 = closure_5;
+          const obj8 = { type: "ACTIVE_CHANNELS_FETCH_FAILURE", guildId, error: tmp25 };
+          const dispatch = closure_132_1(closure_132_2[2]).dispatch;
+          const self = this;
+          const self2 = this;
+          const tmp20 = closure_132_1(closure_132_2[2]);
+          tmp25 = new closure_132_1(closure_132_2[4])(closure_4);
+          dispatch(obj8);
+          throw closure_4;
+        } else if (guildId === 1) {
+          c8 = 3;
+          throw value;
+        } else if (guildId === 2) {
+          c6 = 0;
+          c8 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
+        } else {
+          const body = value.body;
+          channels = undefined;
+          if (body != null) {
+            channels = body.channels;
+          }
+          value = channels;
+          if (channels == null) {
+            value = [];
+          }
+          channels = value;
+          const obj11 = { type: "ACTIVE_CHANNELS_FETCH_SUCCESS", guildId, channels };
+          obj = closure_132_1(closure_132_2[2]);
+          obj.dispatch(obj11);
+          c6 = 0;
+          c8 = 3;
+          const obj12 = { value, done: true };
+          return obj12;
+        }
+      } catch (tmp30) {
+        closure_5 = tmp30;
+        if (0 === c6) {
+          c8 = 3;
+          throw tmp30;
+        } else {
+          c7 = 2;
+        }
       }
     }
-  }
+  });
+  return obj(...arguments);
 };
-const Endpoints = fn(1085).Endpoints;
-const size = fn(2);
+const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("modules/active_channels/ActiveChannelsActionCreators.tsx");
 
 export const fetchActiveChannels = function fetchActiveChannels() {
-  const self = this;
-  const apply = closure_5.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

@@ -1,39 +1,40 @@
 // discord_app/stores/ConnectedAppsStore.tsx
-import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
 let obj = {};
-const Store = initializeDefault.Store;
-class ConnectedAppsStore extends Store {}
-const prototype = ConnectedAppsStore.prototype;
-prototype["isConnected"] = function isConnected(arg0) {
-  return null != obj[arg0];
-};
-prototype["isChildConnected"] = function isChildConnected(arg0) {
-  closure_0 = arg0;
-  let someResult = null != arg0;
-  if (someResult) {
-    const _Object = Object;
-    const values = Object.values(obj);
-    someResult = values.some((parentId) => parentId.parentId === closure_0);
+const Store = get_initializedDefault.Store;
+class ConnectedAppsStore extends Store {
+  isConnected(arg0) {
+    return null != obj[arg0];
   }
-  return someResult;
-};
-Object.defineProperty(prototype, "connections", {
+  isChildConnected(arg0) {
+    let closure_0 = arg0;
+    let someResult = null != arg0;
+    if (someResult) {
+      const _Object = Object;
+      const values = Object.values(obj);
+      someResult = values.some((parentId) => parentId.parentId === closure_0);
+    }
+    return someResult;
+  }
+  getApplication(arg0) {
+    return obj[arg0];
+  }
+  getAllConnections() {
+    return obj;
+  }
+}
+Object.defineProperty(ConnectedAppsStore.prototype, "connections", {
   get: function connections() {
     obj = require("../../_runtime/metro/00012__.js");
     return obj.values(obj);
   },
   set: undefined,
 });
-prototype["getApplication"] = function getApplication(arg0) {
-  return obj[arg0];
-};
-prototype["getAllConnections"] = function getAllConnections() {
-  return obj;
-};
 ConnectedAppsStore.displayName = "ConnectedAppsStore";
 obj = {
   OVERLAY_INITIALIZE: function handleOverlayInitialize(connectedApps) {
@@ -62,31 +63,23 @@ obj = {
   },
   RPC_APP_AUTHENTICATED: function handleAppAuthenticated(application) {
     application = application.application;
-    let tmp = null != application.id;
-    if (tmp) {
-      tmp = null != obj[application.id];
-    }
+    const tmp = null != application.id && null != obj[application.id];
     if (tmp) {
       obj[application.id].authenticated = true;
     }
   },
   RPC_APP_DISCONNECTED: function handleAppDisconnection(application) {
     application = application.application;
-    let tmp3 = null != application.id;
-    if (tmp3) {
-      tmp3 = null != obj[application.id];
-    }
-    if (tmp3) {
+    const tmp = null != application.id && null != obj[application.id];
+    if (tmp) {
       obj[application.id].count = obj[application.id].count - 1;
       if (0 === obj[application.id].count) {
-        const id = application.id;
-        delete tmp2[tmp];
+        delete obj[application.id];
       }
     }
   },
 };
 const connectedAppsStore = new ConnectedAppsStore(DispatcherDefault, obj);
-const size = fn(2);
 const result = size.fileFinishedImporting("stores/ConnectedAppsStore.tsx");
 
 export default connectedAppsStore;

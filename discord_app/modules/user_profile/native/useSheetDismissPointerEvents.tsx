@@ -9,11 +9,12 @@ const __initData = {
 const __initData2 = {
   code: "function useSheetDismissPointerEventsTsx2(){const{contentGestureState,State,handleGestureState}=this.__closure;var _contentGestureState,_handleGestureState;const isDragging=((_contentGestureState=contentGestureState)===null||_contentGestureState===void 0?void 0:_contentGestureState.get())===State.ACTIVE||((_handleGestureState=handleGestureState)===null||_handleGestureState===void 0?void 0:_handleGestureState.get())===State.ACTIVE;return{pointerEvents:isDragging?'none':'box-none'};}",
 };
-const result = size.fileFinishedImporting("modules/user_profile/native/useSheetDismissPointerEvents.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const bottomSheetInternal = prop(prop1[1]).useBottomSheetInternal(true);
+      let prop;
+      let prop1;
+      const obj = prop(prop1[1]);
+      const bottomSheetInternal = obj.useBottomSheetInternal(true);
       prop = undefined;
       if (bottomSheetInternal != null) {
         prop = bottomSheetInternal.animatedContentGestureState;
@@ -22,16 +23,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (bottomSheetInternal != null) {
         prop1 = bottomSheetInternal.animatedHandleGestureState;
       }
-      const obj = prop(prop1[1]);
       const fn = function n() {
-        value = undefined;
+        let pointerEvents;
+        let value;
         if (prop != null) {
           value = prop.get();
         }
         if (value === LegacyBaseButton.State.ACTIVE) {
-          let pointerEvents = "none";
+          pointerEvents = "none";
         } else {
-          value2 = undefined;
+          let value2;
           if (prop1 != null) {
             value2 = prop1.get();
           }
@@ -43,10 +44,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = { contentGestureState: prop, State: prop(prop1[3]).State, handleGestureState: prop1 };
       fn.__workletHash = 2092561663728;
       fn.__initData = __initData;
+      ({ contentGestureState: prop, State: prop(prop1[3]).State, handleGestureState: prop1 });
       return tmpResult.useAnimatedStyle(fn);
     }
   : () => {
-      const bottomSheetInternal = prop(prop1[1]).useBottomSheetInternal(true);
+      let prop;
+      let prop1;
+      const obj = prop(prop1[1]);
+      const bottomSheetInternal = obj.useBottomSheetInternal(true);
       prop = undefined;
       if (bottomSheetInternal != null) {
         prop = bottomSheetInternal.animatedContentGestureState;
@@ -55,16 +60,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (bottomSheetInternal != null) {
         prop1 = bottomSheetInternal.animatedHandleGestureState;
       }
-      const obj = prop(prop1[1]);
       const fn = function t() {
-        value = undefined;
+        let pointerEvents;
+        let value;
         if (prop != null) {
           value = prop.get();
         }
         if (value === LegacyBaseButton.State.ACTIVE) {
-          let pointerEvents = "none";
+          pointerEvents = "none";
         } else {
-          value2 = undefined;
+          let value2;
           if (prop1 != null) {
             value2 = prop1.get();
           }
@@ -76,5 +81,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = { contentGestureState: prop, State: prop(prop1[3]).State, handleGestureState: prop1 };
       fn.__workletHash = 9715865768435;
       fn.__initData = __initData2;
+      ({ contentGestureState: prop, State: prop(prop1[3]).State, handleGestureState: prop1 });
       return tmpResult.useAnimatedStyle(fn);
     };
+const result = size.fileFinishedImporting("modules/user_profile/native/useSheetDismissPointerEvents.tsx");
+
+export default tmp2;

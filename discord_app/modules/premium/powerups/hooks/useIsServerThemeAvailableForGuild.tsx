@@ -9,6 +9,9 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/premium/powerups/hooks/useIsServerThemeAvailableForGuild.tsx");
 
 export default (arg0, arg1) => {
-  const serverThemeEnabled = ServerThemeExperiment.useServerThemeEnabled(arg0, arg1);
-  return null != GuildThemeResolver.useEnabledGuildThemeForGuildId(arg0, arg1);
+  const useServerThemeEnabled = ServerThemeExperiment.useServerThemeEnabled;
+  ServerThemeExperiment;
+  const serverThemeEnabled = useServerThemeEnabled(arg0, arg1);
+  const tmpResult = GuildThemeResolver;
+  return null != tmpResult.useEnabledGuildThemeForGuildId(arg0, arg1);
 };

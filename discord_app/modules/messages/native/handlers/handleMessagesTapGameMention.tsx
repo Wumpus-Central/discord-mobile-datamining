@@ -8,9 +8,10 @@ const result = size.fileFinishedImporting("modules/messages/native/handlers/hand
 export const handleMessagesTapGameMention = function handleMessagesTapGameMention(gameId) {
   gameId = gameId.gameId;
   const obj = GameProfileActionCreatorsDefault;
-  obj.openGameProfileModal({
+  const obj2 = {
     gameId,
     gameProfileModalChecks: { shouldOpenGameProfile: true, gameId },
     source: GameProfileAnalyticUtils.GameProfileSources.GameMention,
-  });
+  };
+  obj.openGameProfileModal(obj2);
 };

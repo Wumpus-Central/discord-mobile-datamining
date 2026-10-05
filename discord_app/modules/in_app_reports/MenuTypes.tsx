@@ -28,9 +28,9 @@ export const UnauthenticatedReportNames = {
   MEDIA_TAKEDOWN: "media_takedown",
 };
 export { MediaTakedownRegulation };
-export const isMediaTakedownRegulation = function isMediaTakedownRegulation(arg0) {
+export const isMediaTakedownRegulation = function isMediaTakedownRegulation(media_takedown_regulation) {
   const values = Object.values(obj);
-  return values.includes(arg0);
+  return values.includes(media_takedown_regulation);
 };
 export const ReportSubType = {
   SUB_SPAM: "sub_spam",

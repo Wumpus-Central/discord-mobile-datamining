@@ -1,21 +1,21 @@
 // discord_app/modules/user_profile/useBotProfileCommands.tsx
-import c from "../../../_runtime/00576_c.js";
+import react2 from "../../../_runtime/00576_react.js";
 import ApplicationCommandQueryApiAll from "../application_commands/ApplicationCommandQueryApi.tsx";
-import noop from "../../../_runtime/metro/00019__.js";
+import react from "../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/useBotProfileCommands.tsx");
+let type;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1, arg2) => {
-      const cResult = c.c(5);
-      const accessibleCommandsForApplication = ApplicationCommandQueryApiAll.useAccessibleCommandsForApplication(
-        arg0,
-        arg1,
-        arg2,
-      );
+      let application;
+      let commands;
+      let tmp3;
+      const obj = react2;
+      const cResult = obj.c(5);
+      const obj2 = ApplicationCommandQueryApiAll;
+      const accessibleCommandsForApplication = obj2.useAccessibleCommandsForApplication(arg0, arg1, arg2);
       ({ commands, application } = accessibleCommandsForApplication);
       if (cResult[0] !== commands) {
         let found;
@@ -23,15 +23,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           found = commands.filter((nsfw) => {
             let tmp = true !== nsfw.nsfw;
             if (tmp) {
-              options = nsfw.options;
+              const options = nsfw.options;
               let found;
               if (options != null) {
                 found = options.find((type) => {
                   type = type.type;
-                  return (
-                    type === closure_1_0(dependencyMap[4]).ApplicationCommandOptionType.SUB_COMMAND ||
-                    type === closure_1_0(dependencyMap[4]).ApplicationCommandOptionType.SUB_COMMAND_GROUP
-                  );
+                  const tmp3 =
+                    type === closure_1_0(closure_1_2[4]).ApplicationCommandOptionType.SUB_COMMAND ||
+                    type === closure_1_0(closure_1_2[4]).ApplicationCommandOptionType.SUB_COMMAND_GROUP;
+                  return tmp3;
                 });
               }
               tmp = null == found;
@@ -41,13 +41,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[0] = commands;
         cResult[1] = found;
-        let tmp3 = found;
+        tmp3 = found;
       } else {
         tmp3 = cResult[1];
       }
       if (cResult[2] === application) {
+        let tmp6;
         if (cResult[3] === tmp3) {
-          let tmp6 = cResult[4];
+          tmp6 = cResult[4];
         }
         return tmp6;
       }
@@ -58,37 +59,40 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = obj3;
     }
   : (arg0, arg1, arg2) => {
-      const accessibleCommandsForApplication = ApplicationCommandQueryApiAll.useAccessibleCommandsForApplication(
-        arg0,
-        arg1,
-        arg2,
-      );
+      let items;
+      const obj = ApplicationCommandQueryApiAll;
+      const accessibleCommandsForApplication = obj.useAccessibleCommandsForApplication(arg0, arg1, arg2);
       const commands = accessibleCommandsForApplication.commands;
-      const obj2 = { application: accessibleCommandsForApplication.application, commands: null };
-      const items = [commands];
-      obj2.commands = noop.useMemo(() => {
-        let found;
-        if (commands != null) {
-          found = commands.filter((nsfw) => {
-            let tmp = true !== nsfw.nsfw;
-            if (tmp) {
-              options = nsfw.options;
-              let found;
-              if (options != null) {
-                found = options.find((type) => {
-                  type = type.type;
-                  return (
-                    type === closure_1_0(dependencyMap[4]).ApplicationCommandOptionType.SUB_COMMAND ||
-                    type === closure_1_0(dependencyMap[4]).ApplicationCommandOptionType.SUB_COMMAND_GROUP
-                  );
-                });
+      const obj2 = {
+        application: accessibleCommandsForApplication.application,
+        commands: react.useMemo(() => {
+          let found;
+          if (commands != null) {
+            found = commands.filter((nsfw) => {
+              let tmp = true !== nsfw.nsfw;
+              if (tmp) {
+                const options = nsfw.options;
+                let found;
+                if (options != null) {
+                  found = options.find((type) => {
+                    type = type.type;
+                    const tmp3 =
+                      type === closure_1_0(closure_1_2[4]).ApplicationCommandOptionType.SUB_COMMAND ||
+                      type === closure_1_0(closure_1_2[4]).ApplicationCommandOptionType.SUB_COMMAND_GROUP;
+                    return tmp3;
+                  });
+                }
+                tmp = null == found;
               }
-              tmp = null == found;
-            }
-            return tmp;
-          });
-        }
-        return found;
-      }, items);
+              return tmp;
+            });
+          }
+          return found;
+        }, items),
+      };
+      items = [commands];
       return obj2;
     };
+const result = size.fileFinishedImporting("modules/user_profile/useBotProfileCommands.tsx");
+
+export default tmp2;

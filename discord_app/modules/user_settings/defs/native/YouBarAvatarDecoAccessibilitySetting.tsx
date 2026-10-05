@@ -1,26 +1,31 @@
 // discord_app/modules/user_settings/defs/native/YouBarAvatarDecoAccessibilitySetting.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import util from "../../../../intl/index.native.tsx";
+import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import AccessibilityActionCreators from "../../../a11y/AccessibilityActionCreators.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const SettingBuilders = fn(11129);
-const toggle = SettingBuilders.createToggle({
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t["34XN2f"]);
+    const intl = intl2.intl;
+    return intl.string(intl2.t["34XN2f"]);
   },
-  parent: fn(7634).MobileUserSettings.ACCESSIBILITY,
+  parent: MobileUserSettings.ACCESSIBILITY,
   useValue() {
     const items = [AccessibilityStore];
-    return initialize.useStateFromStores(items, () => AccessibilityStore.animateYouBarAvatarDeco);
+    const obj = get_initialized;
+    return obj.useStateFromStores(items, () => AccessibilityStore.animateYouBarAvatarDeco);
   },
   onValueChange(animateAvatarDeco) {
-    return AccessibilityActionCreators.setYouBarAnimations({ animateAvatarDeco });
+    const obj = AccessibilityActionCreators;
+    const obj2 = { animateAvatarDeco };
+    return obj.setYouBarAnimations(obj2);
   },
-});
-const size = fn(2);
+};
+const toggle = SettingBuilders.createToggle(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/YouBarAvatarDecoAccessibilitySetting.tsx");
 
 export default toggle;

@@ -1,220 +1,150 @@
 // discord_app/modules/premium/gifting/native/views/promotions/GiftingSKUSelectScreen.tsx
-import c from "../../../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../../../intl/index.native.tsx";
+import intl4 from "../../../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../../../safe_area/useSafeAreaInsets.native.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import GiftingSKUCardsGridDefault from "GiftingSKUCardsGrid.tsx";
-import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
+let defaultHighlightedReward;
+
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+({ View: hasOwnProperty, ScrollView: metroRequire } = react_native);
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
+  container: obj2,
   scroll: { flex: 1 },
-  contentContainer: null,
-  header: null,
-  subtitle: null,
-  buttonContainer: null,
-  headerContainer: null,
+  contentContainer: obj3,
+  header: obj4,
+  subtitle: { textAlign: "center" },
+  buttonContainer: obj5,
+  headerContainer: obj6,
 };
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj2.contentContainer = { display: "flex", flexDirection: "column", padding: nativeDefault.space.PX_24 };
-let obj4 = { display: "flex", flexDirection: "column", padding: nativeDefault.space.PX_24 };
-obj2.header = { textAlign: "center", padding: nativeDefault.space.PX_8 };
-obj2.subtitle = { textAlign: "center" };
-let obj5 = { textAlign: "center", padding: nativeDefault.space.PX_8 };
-obj2.buttonContainer = { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_24 };
-let obj6 = { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_24 };
-obj2.headerContainer = { marginBottom: nativeDefault.space.PX_24 };
-let closure_9 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj7 = { marginBottom: nativeDefault.space.PX_24 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUSelectScreen.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles = createStyles.createStyles;
+obj3 = { display: "flex", flexDirection: "column", padding: nativeDefault.space.PX_24 };
+obj4 = { textAlign: "center", padding: nativeDefault.space.PX_8 };
+obj5 = { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_24 };
+obj6 = { marginBottom: nativeDefault.space.PX_24 };
+let closure_9 = createStyles(obj);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (defaultHighlightedReward) => {
-      const cResult = c.c(52);
+      let allRewards;
+      let claimableRewards;
+      let closure_6;
+      let first;
+      let first1;
+      const obj = react2;
+      const cResult = obj.c(52);
       defaultHighlightedReward = defaultHighlightedReward.defaultHighlightedReward;
       ({ allRewards, claimableRewards } = defaultHighlightedReward);
       const onSelect = defaultHighlightedReward.onSelect;
       closure_9();
       const bottom = useSafeAreaInsetsDefault().bottom;
-      [first, noop] = noop.useState(defaultHighlightedReward);
-      [first1, closure_6] = noop.useState(false);
+      [first, react] = react.useState(defaultHighlightedReward);
+      [first1, closure_6] = react.useState(false);
       if (cResult[0] === claimableRewards) {
         if (cResult[1] === first) {
+          if (cResult[2] === onSelect) {
+            let tmp7 = cResult[3];
+          }
           const _Symbol = Symbol;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             class O {
               constructor(arg0) {
-                tmp = closure_4(defaultHighlightedReward);
-                tmp2 = closure_6(true);
-                return;
+                closure_4(arg0);
+                closure_6(true);
               }
             }
             cResult[4] = O;
           } else {
             class O {
               constructor(arg0) {
-                tmp = closure_4(defaultHighlightedReward);
-                tmp2 = closure_6(true);
-                return;
+                closure_4(arg0);
+                closure_6(true);
               }
             }
           }
-          if (null == first) {
+          const flag = false;
+          if (null != first) {
             class O {
               constructor(arg0) {
-                tmp = closure_4(defaultHighlightedReward);
-                tmp2 = closure_6(true);
-                return;
-              }
-            }
-            if (cResult[10] === claimableRewards) {
-              class O {
-                constructor(arg0) {
-                  tmp = closure_4(defaultHighlightedReward);
-                  tmp2 = closure_6(true);
-                  return;
-                }
-              }
-            }
-            class H {
-              constructor() {
-                obj = claimableRewards;
-                if (0 === claimableRewards.length) {
-                  tmp9 = closure_4;
-                  tmp10 = closure_4(undefined);
-                } else {
-                  tmp = c7;
-                  if (!c7) {
-                    tmp2 = closure_5;
-                    someResult = !closure_5;
-                    if (!closure_5) {
-                      tmp4 = defaultHighlightedReward;
-                      tmp5 = null;
-                      someResult = null != defaultHighlightedReward;
-                    }
-                    if (someResult) {
-                      someResult = obj.some((item) => item === defaultHighlightedReward);
-                    }
-                    tmp7 = undefined;
-                    tmp6 = closure_4;
-                    if (someResult) {
-                      tmp7 = defaultHighlightedReward;
-                    }
-                    tmp6Result = tmp6(tmp7);
-                  }
-                }
-                return;
-              }
-            }
-            const items = [first, claimableRewards, first1, defaultHighlightedReward, false];
-            cResult[10] = claimableRewards;
-            cResult[11] = defaultHighlightedReward;
-            cResult[12] = first1;
-            cResult[13] = first;
-            cResult[14] = false;
-            cResult[15] = H;
-            cResult[16] = items;
-          } else {
-            class O {
-              constructor(arg0) {
-                tmp = closure_4(defaultHighlightedReward);
-                tmp2 = closure_6(true);
-                return;
+                closure_4(arg0);
+                closure_6(true);
               }
             }
             if (cResult[8] !== first) {
               class O {
                 constructor(arg0) {
-                  tmp = closure_4(defaultHighlightedReward);
-                  tmp2 = closure_6(true);
-                  return;
+                  closure_4(arg0);
+                  closure_6(true);
                 }
               }
-              class H {
-                constructor() {
-                  obj = claimableRewards;
-                  if (0 === claimableRewards.length) {
-                    tmp9 = closure_4;
-                    tmp10 = closure_4(undefined);
-                  } else {
-                    tmp = c7;
-                    if (!c7) {
-                      tmp2 = closure_5;
-                      someResult = !closure_5;
-                      if (!closure_5) {
-                        tmp4 = defaultHighlightedReward;
-                        tmp5 = null;
-                        someResult = null != defaultHighlightedReward;
-                      }
-                      if (someResult) {
-                        someResult = obj.some((item) => item === defaultHighlightedReward);
-                      }
-                      tmp7 = undefined;
-                      tmp6 = closure_4;
-                      if (someResult) {
-                        tmp7 = defaultHighlightedReward;
-                      }
-                      tmp6Result = tmp6(tmp7);
-                    }
-                  }
-                  return;
-                }
-              }
-              cResult[9] = tmp12;
+              cResult[8] = first;
+              cResult[9] = tmp13;
             } else {
               class O {
                 constructor(arg0) {
-                  tmp = closure_4(defaultHighlightedReward);
-                  tmp2 = closure_6(true);
-                  return;
+                  closure_4(arg0);
+                  closure_6(true);
                 }
               }
             }
-            class H {
-              constructor() {
-                obj = claimableRewards;
-                if (0 === claimableRewards.length) {
-                  tmp9 = closure_4;
-                  tmp10 = closure_4(undefined);
-                } else {
-                  tmp = c7;
-                  if (!c7) {
-                    tmp2 = closure_5;
-                    someResult = !closure_5;
-                    if (!closure_5) {
-                      tmp4 = defaultHighlightedReward;
-                      tmp5 = null;
-                      someResult = null != defaultHighlightedReward;
-                    }
-                    if (someResult) {
-                      someResult = obj.some((item) => item === defaultHighlightedReward);
-                    }
-                    tmp7 = undefined;
-                    tmp6 = closure_4;
-                    if (someResult) {
-                      tmp7 = defaultHighlightedReward;
-                    }
-                    tmp6Result = tmp6(tmp7);
-                  }
-                }
-                return;
-              }
-            }
+            let someResult = claimableRewards.some(tmp13);
             cResult[5] = claimableRewards;
             cResult[6] = first;
-            cResult[7] = tmp13;
+            cResult[7] = someResult;
           }
+          if (cResult[10] === claimableRewards) {
+            class O {
+              constructor(arg0) {
+                closure_4(arg0);
+                closure_6(true);
+              }
+            }
+          }
+          class H {
+            constructor() {
+              if (0 === claimableRewards.length) {
+                closure_4(undefined);
+              } else if (!flag) {
+                let tmp7;
+                const someResult =
+                  !first1 &&
+                  null != defaultHighlightedReward &&
+                  claimableRewards.some((item) => item === defaultHighlightedReward);
+                if (someResult) {
+                  tmp7 = defaultHighlightedReward;
+                }
+                closure_4(tmp7);
+              }
+            }
+          }
+          const items = [first, claimableRewards, first1, defaultHighlightedReward, flag];
+          cResult[10] = claimableRewards;
+          cResult[11] = defaultHighlightedReward;
+          cResult[12] = first1;
+          cResult[13] = first;
+          cResult[14] = flag;
+          cResult[15] = H;
+          cResult[16] = items;
         }
       }
       const fn = function c() {
@@ -228,94 +158,103 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = onSelect;
       cResult[3] = fn;
     }
-  : (rewardsToDisplay) => {
-      const defaultHighlightedReward = rewardsToDisplay.defaultHighlightedReward;
-      const claimableRewards = rewardsToDisplay.claimableRewards;
-      const onSelect = rewardsToDisplay.onSelect;
-      highlightedSkuId = undefined;
+  : (defaultHighlightedReward) => {
+      let Button;
+      let closure_4;
+      let first;
+      let first1;
+      let intl;
+      let intl2;
+      let intl3;
+      let items3;
+      let items4;
+      let items5;
+      let items6;
+      let obj7;
+      defaultHighlightedReward = defaultHighlightedReward.defaultHighlightedReward;
+      const claimableRewards = defaultHighlightedReward.claimableRewards;
+      const onSelect = defaultHighlightedReward.onSelect;
+      first = undefined;
       closure_4 = undefined;
       first1 = undefined;
-      closure_6 = undefined;
+      metroRequire = undefined;
+      const allRewards = defaultHighlightedReward.allRewards;
       const tmp = closure_9();
-      [highlightedSkuId, closure_4] = noop.useState(defaultHighlightedReward);
-      [first1, closure_6] = noop.useState(false);
-      const items = [onSelect, highlightedSkuId, claimableRewards];
-      const callback = noop.useCallback(() => {
-        const found = claimableRewards.find((item) => item === highlightedSkuId);
+      const bottom = useSafeAreaInsetsDefault().bottom;
+      [first, closure_4] = react.useState(defaultHighlightedReward);
+      [first1, metroRequire] = react.useState(false);
+      const items = [onSelect, first, claimableRewards];
+      const callback = react.useCallback(() => {
+        const found = claimableRewards.find((item) => item === first);
         if (null != found) {
           onSelect(found);
         }
       }, items);
-      const items1 = [highlightedSkuId, claimableRewards];
-      const callback1 = noop.useCallback((arg0) => {
+      const items1 = [first, claimableRewards];
+      const callback1 = react.useCallback((arg0) => {
         closure_4(arg0);
         closure_6(true);
       }, []);
-      const memo = noop.useMemo(() => {
-        let someResult = null != first;
-        if (someResult) {
-          someResult = claimableRewards.some((item) => item === highlightedSkuId);
-        }
+      const memo = react.useMemo(() => {
+        const someResult = null != first && claimableRewards.some((item) => item === first);
         return someResult;
       }, items1);
-      const items2 = [highlightedSkuId, claimableRewards, first1, defaultHighlightedReward, memo];
-      const effect = noop.useEffect(() => {
+      const items2 = [first, claimableRewards, first1, defaultHighlightedReward, memo];
+      const effect = react.useEffect(() => {
         if (0 === claimableRewards.length) {
           closure_4(undefined);
         } else if (!memo) {
-          let someResult = !first1;
-          if (!first1) {
-            someResult = null != defaultHighlightedReward;
-          }
-          if (someResult) {
-            someResult = claimableRewards.some((item) => item === defaultHighlightedReward);
-          }
           let tmp7;
+          const someResult =
+            !first1 &&
+            null != defaultHighlightedReward &&
+            claimableRewards.some((item) => item === defaultHighlightedReward);
           if (someResult) {
             tmp7 = defaultHighlightedReward;
           }
           closure_4(tmp7);
         }
       }, items2);
-      const obj = { style: tmp.container, children: null };
-      const obj2 = { style: tmp.scroll, contentContainerStyle: tmp.contentContainer, children: null };
-      const obj3 = { style: tmp.headerContainer, children: null };
+      const obj = { style: tmp.container, children: items5 };
+      const obj2 = { style: tmp.scroll, contentContainerStyle: tmp.contentContainer, children: items4 };
+      const obj3 = { style: tmp.headerContainer, children: items3 };
       const obj4 = {
         style: tmp.header,
         variant: "heading-xl/extrabold",
         color: "mobile-text-heading-primary",
         accessibilityRole: "header",
-        children: null,
+        children: intl.string(intl4.t["+ByEeM"]),
       };
-      const intl = util.intl;
-      obj4.children = intl.string(util.t["+ByEeM"]);
-      const items3 = [React5(Text_Text.Text, obj4)];
-      const obj5 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
-      const intl2 = util.intl;
-      obj5.children = intl2.string(util.t.vPeaOS);
-      items3[1] = React5(Text_Text.Text, obj5);
-      obj3.children = items3;
-      const items4 = [
-        closure_1_8(hasOwnProperty, obj3),
-        React5(GiftingSKUCardsGridDefault, {
-          rewardsToDisplay: rewardsToDisplay.allRewards,
+      const Text = Text_Text.Text;
+      intl = intl4.intl;
+      items3 = [metroImportDefault(Text, obj4)];
+      const obj5 = {
+        style: tmp.subtitle,
+        variant: "text-md/medium",
+        color: "text-default",
+        children: intl2.string(intl4.t.vPeaOS),
+      };
+      const Text2 = Text_Text.Text;
+      intl2 = intl4.intl;
+      items3[1] = metroImportDefault(Text2, obj5);
+      items4 = [
+        metroImportAll(hasOwnProperty, obj3),
+        metroImportDefault(GiftingSKUCardsGridDefault, {
+          rewardsToDisplay: allRewards,
           claimableRewards,
           onSelect: callback1,
-          highlightedSkuId,
+          highlightedSkuId: first,
         }),
       ];
-      obj2.children = items4;
-      const items5 = [closure_1_8(timestampProducer, obj2)];
-      const obj6 = { style: null, children: null };
-      const items6 = [tmp.buttonContainer, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
-      obj6.style = items6;
-      const obj7 = { text: null, onPress: null, disabled: null };
-      const intl3 = util.intl;
-      obj7.text = intl3.string(util.t["3d0Nmb"]);
-      obj7.onPress = callback;
-      obj7.disabled = null == highlightedSkuId || !memo;
-      obj6.children = React5(components_Button_Button.Button, obj7);
-      items5[1] = React5(hasOwnProperty, obj6);
-      obj.children = items5;
-      return closure_1_8(hasOwnProperty, obj);
+      items5 = [metroImportAll(metroRequire, obj2)];
+      const obj6 = { style: items6, children: metroImportDefault(Button, obj7) };
+      items6 = [tmp.buttonContainer, { paddingBottom: bottom }];
+      obj7 = { text: intl3.string(intl4.t["3d0Nmb"]), onPress: callback, disabled: null == first || !memo };
+      Button = components_Button_Button.Button;
+      intl3 = intl4.intl;
+      items5[1] = metroImportDefault(hasOwnProperty, obj6);
+      return metroImportAll(hasOwnProperty, obj);
     };
+const result = size.fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUSelectScreen.tsx");
+
+export default tmp5;

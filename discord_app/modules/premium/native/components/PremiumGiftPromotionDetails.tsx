@@ -1,44 +1,65 @@
 // discord_app/modules/premium/native/components/PremiumGiftPromotionDetails.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_PlatformUtils from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import CollectiblesItemType from "../../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import SKUPreview from "../../../skus/native/SKUPreview.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let _require, product;
+
+let c10;
+let obj2;
+let size;
+let unpackModuleId;
 let closure_3 = ["imageUrl", "shouldAnimate"];
 let closure_4 = ["product"];
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const View = react_native.View;
+({ jsx: c10, jsxs: unpackModuleId } = Fragment);
 const PX_40 = nativeDefault.space.PX_40;
-let createStyles = fn(4890);
+let createStyles = createStyles_mod;
 let closure_13 = createStyles.createStyles(() => {
   const obj = {
     container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_12 },
-    image: null,
-    textContainer: null,
+    image: size,
+    textContainer: { flex: 1, alignSelf: "center" },
   };
-  const size = { width: 64, height: 64, borderRadius: nativeDefault.radii.xs };
-  obj.image = size;
-  obj.textContainer = { flex: 1, alignSelf: "center" };
+  ({ flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_12 });
+  size = { width: 64, height: 64, borderRadius: nativeDefault.radii.xs };
   return obj;
 });
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(20);
+      let graphic;
+      let items;
+      let items1;
+      let style;
+      let subtitle;
+      let subtitleColor;
+      let subtitleVariant;
+      let title;
+      let titleColor;
+      let titleVariant;
+      let topContent;
+      const obj = react2;
+      const cResult = obj.c(20);
       ({ style, graphic, topContent, title, titleVariant, titleColor, subtitle, subtitleVariant, subtitleColor } =
         arg0);
       const tmp4 = closure_13();
       if (cResult[0] === style) {
+        let tmp5;
         if (cResult[1] === tmp4.container) {
-          let tmp5 = cResult[2];
+          tmp5 = cResult[2];
         }
         if (titleVariant == null) {
           titleVariant = "text-md/semibold";
@@ -48,8 +69,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[3] === titleVariant) {
           if (cResult[4] === titleColor) {
+            let tmp7;
             if (cResult[5] === title) {
-              let tmp7 = cResult[6];
+              tmp7 = cResult[6];
             }
             if (subtitleVariant == null) {
               subtitleVariant = "text-sm/medium";
@@ -59,27 +81,29 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[7] === subtitle) {
               if (cResult[8] === subtitleVariant) {
+                let tmp10;
                 if (cResult[9] === subtitleColor) {
-                  let tmp10 = cResult[10];
+                  tmp10 = cResult[10];
                 }
                 if (cResult[11] === tmp4.textContainer) {
                   if (cResult[12] === tmp7) {
                     if (cResult[13] === tmp10) {
+                      let tmp13;
                       if (cResult[14] === topContent) {
-                        let tmp13 = cResult[15];
+                        tmp13 = cResult[15];
                       }
                       if (cResult[16] === graphic) {
                         if (cResult[17] === tmp5) {
+                          let tmp17;
                           if (cResult[18] === tmp13) {
-                            let tmp17 = cResult[19];
+                            tmp17 = cResult[19];
                           }
                           return tmp17;
                         }
                       }
-                      const obj2 = { style: tmp5, children: null };
-                      const items = [graphic, tmp13];
-                      obj2.children = items;
-                      const tmp20 = closure_1_11(View, obj2);
+                      const obj2 = { style: tmp5, children: items };
+                      items = [graphic, tmp13];
+                      const tmp20 = unpackModuleId(View, obj2);
                       cResult[16] = graphic;
                       cResult[17] = tmp5;
                       cResult[18] = tmp13;
@@ -88,10 +112,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                const obj3 = { style: tmp4.textContainer, children: null };
-                const items1 = [topContent, tmp7, tmp10];
-                obj3.children = items1;
-                const tmp16 = closure_1_11(View, obj3);
+                const obj3 = { style: tmp4.textContainer, children: items1 };
+                items1 = [topContent, tmp7, tmp10];
+                const tmp16 = unpackModuleId(View, obj3);
                 cResult[11] = tmp4.textContainer;
                 cResult[12] = tmp7;
                 cResult[13] = tmp10;
@@ -101,7 +124,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj4 = { variant: subtitleVariant, color: subtitleColor, children: subtitle };
-            const tmp12 = v65535(Text_Text.Text, obj4);
+            const tmp12 = authStore(Text_Text.Text, obj4);
             cResult[7] = subtitle;
             cResult[8] = subtitleVariant;
             cResult[9] = subtitleColor;
@@ -110,7 +133,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj5 = { variant: titleVariant, color: titleColor, children: title };
-        const tmp9 = v65535(Text_Text.Text, obj5);
+        const tmp9 = authStore(Text_Text.Text, obj5);
         cResult[3] = titleVariant;
         cResult[4] = titleColor;
         cResult[5] = title;
@@ -124,45 +147,61 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = items2;
     }
   : (arg0) => {
+      let graphic;
+      let items;
+      let items1;
+      let items2;
+      let style;
+      let subtitle;
+      let subtitleColor;
+      let subtitleVariant;
+      let title;
+      let titleColor;
+      let titleVariant;
+      let topContent;
       ({ titleVariant, titleColor, subtitleVariant, subtitleColor } = arg0);
       ({ style, graphic, topContent, title, subtitle } = arg0);
       const tmp = closure_13();
-      const obj = { style: null, children: null };
-      const items = [tmp.container, style];
-      obj.style = items;
-      const items1 = [graphic];
-      const obj2 = { style: tmp.textContainer, children: null };
-      const items2 = [topContent, ,];
+      const obj = { style: items, children: items1 };
+      items = [tmp.container, style];
+      items1 = [graphic];
+      const obj2 = { style: tmp.textContainer, children: items2 };
+      items2 = [topContent, ,];
+      const Text = Text_Text.Text;
       if (titleVariant == null) {
         titleVariant = "text-md/semibold";
       }
-      const obj3 = { variant: titleVariant, color: null, children: null };
+      const obj3 = { variant: titleVariant, color: titleColor, children: title };
       if (titleColor == null) {
         titleColor = "text-default";
       }
-      obj3.color = titleColor;
-      obj3.children = title;
-      items2[1] = v65535(Text_Text.Text, obj3);
+      items2[1] = authStore(Text, obj3);
+      const Text2 = Text_Text.Text;
       if (subtitleVariant == null) {
         subtitleVariant = "text-sm/medium";
       }
-      const obj4 = { variant: subtitleVariant, color: null, children: null };
+      const obj4 = { variant: subtitleVariant, color: subtitleColor, children: subtitle };
       if (subtitleColor == null) {
         subtitleColor = "text-subtle";
       }
-      obj4.color = subtitleColor;
-      obj4.children = subtitle;
-      items2[2] = v65535(Text_Text.Text, obj4);
-      obj2.children = items2;
-      items1[1] = closure_1_11(View, obj2);
-      obj.children = items1;
-      return closure_1_11(View, obj);
+      items2[2] = authStore(Text2, obj4);
+      items1[1] = unpackModuleId(View, obj2);
+      return unpackModuleId(View, obj);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let tmp2 = aPNGPlayerControls;
-      const cResult = require("c").c(18);
+      let aPNGPlayerControls;
+      let closure_0;
+      let first;
+      let imageUrl;
+      let shouldAnimate;
+      let style;
+      let tmp5;
+      let tmp6;
+      let useReducedMotion;
+      let obj = require("react");
+      const cResult = obj.c(18);
       ({ imageUrl, style, shouldAnimate } = arg0);
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -177,98 +216,98 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      let obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(tmp5, tmp6);
-      const tmpResult = require("initialize");
-      const ref = noop.useRef(null);
-      aPNGPlayerControls = require("APNGPlayer").useAPNGPlayerControls(ref);
-      [first, closure_4] = noop.useState(false);
+      const tmpResult = require("get initialized");
+      const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+      const ref = react.useRef(null);
+      const tmpResult3 = require("APNGPlayer");
+      aPNGPlayerControls = tmpResult3.useAPNGPlayerControls(ref);
+      [first, closure_4] = react.useState(false);
       if (cResult[2] === aPNGPlayerControls) {
-        if (cResult[3] === tmp4) {
+        if (cResult[3] === (undefined === shouldAnimate || shouldAnimate)) {
+          let tmp13;
+          let tmp14;
           if (cResult[4] === stateFromStores) {
-            let tmp13 = cResult[5];
-            let tmp14 = cResult[6];
+            tmp13 = cResult[5];
+            tmp14 = cResult[6];
           }
-          const effect = noop.useEffect(tmp13, tmp14);
+          const effect = react.useEffect(tmp13, tmp14);
           if (cResult[7] === aPNGPlayerControls) {
+            let tmp16;
+            let tmp23;
+            let tmp20;
             if (cResult[8] === first) {
-              let tmp16 = cResult[9];
+              tmp16 = cResult[9];
             }
-            let tmp17 = stateFromStores;
             let num6 = null;
+            const tmp17 = stateFromStores;
             class A {
               constructor() {
-                if (closure_3) {
-                  tmp = closure_2;
-                  playResult = closure_2.play();
+                if (first) {
+                  aPNGPlayerControls.play();
                 }
-                return;
               }
             }
             if (first) {
               num6 = 100;
             }
             tmp18(tmp16, num6);
+            const tmpResult4 = require("utils/PlatformUtils");
             if (tmpResult4.isAndroid()) {
               if (!stateFromStores) {
                 if (cResult[10] === imageUrl) {
                   if (cResult[11] === style) {
-                    let tmp20 = cResult[12];
+                    tmp20 = cResult[12];
                   }
-                  return tmp20;
                 }
-                const obj2 = { ref: null, url: null, autoplay: false, style: null };
+                const obj2 = { ref: null, url: imageUrl, autoplay: false, style };
                 class A {
                   constructor() {
-                    if (closure_3) {
-                      tmp = closure_2;
-                      playResult = closure_2.play();
+                    if (first) {
+                      aPNGPlayerControls.play();
                     }
-                    return;
                   }
                 }
-                obj2.url = imageUrl;
-                obj2.style = style;
-                const tmp22 = closure_10(tmp(tmp2[12]).APNGPlayer, obj2);
+                const tmp22 = closure_10(require("APNGPlayer").APNGPlayer, obj2);
                 cResult[10] = imageUrl;
                 cResult[11] = style;
                 cResult[12] = tmp22;
                 tmp20 = tmp22;
               }
+              return tmp20;
             }
             if (cResult[13] !== imageUrl) {
               const obj4 = { uri: imageUrl };
               class A {
                 constructor() {
-                  if (closure_3) {
-                    tmp = closure_2;
-                    playResult = closure_2.play();
+                  if (first) {
+                    aPNGPlayerControls.play();
                   }
-                  return;
                 }
               }
               cResult[14] = obj4;
-              let tmp23 = obj4;
+              tmp23 = obj4;
             } else {
               tmp23 = cResult[14];
             }
             if (cResult[15] === style) {
+              let tmp24;
+              if (cResult[16] === tmp23) {
+                tmp24 = cResult[17];
+              }
+              tmp20 = tmp24;
             }
-            tmp17 = tmp17(tmp2[15]);
             const obj5 = { style, resizeMode: "contain", source: tmp23 };
-            tmp2 = closure_10(tmp17, obj5);
+            const tmp26 = closure_10(tmp17(aPNGPlayerControls[15]), obj5);
             cResult[15] = style;
             cResult[16] = tmp23;
-            cResult[17] = tmp2;
-            tmpResult4 = tmp(tmp2[13]);
+            cResult[17] = tmp26;
+            tmp24 = tmp26;
           }
           class A {
             constructor() {
-              if (closure_3) {
-                tmp = closure_2;
-                playResult = closure_2.play();
+              if (first) {
+                aPNGPlayerControls.play();
               }
-              return;
             }
           }
           cResult[7] = aPNGPlayerControls;
@@ -278,10 +317,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const fn2 = function b() {
-        let isAndroidResult = utils_PlatformUtils.isAndroid();
-        if (isAndroidResult) {
-          isAndroidResult = !stateFromStores;
-        }
+        const obj = utils_PlatformUtils;
+        const isAndroidResult = obj.isAndroid() && !stateFromStores;
         if (isAndroidResult) {
           if (closure_0) {
             aPNGPlayerControls.seek(0);
@@ -300,9 +337,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = items1;
       tmp14 = items1;
       tmp13 = fn2;
-      const tmpResult3 = require("APNGPlayer");
     }
   : (arg0) => {
+      let first;
+      let imageUrl;
+      let shouldAnimate;
+      let style;
+      let useReducedMotion;
       ({ imageUrl, style, shouldAnimate } = arg0);
       if (shouldAnimate === undefined) {
         shouldAnimate = true;
@@ -310,22 +351,18 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       let aPNGPlayerControls;
       first = undefined;
       closure_4 = undefined;
-      const items = [AccessibilityStore];
-      const stateFromStores = shouldAnimate(aPNGPlayerControls[11]).useStateFromStores(
-        items,
-        () => useReducedMotion.useReducedMotion,
-      );
-      let num = null;
-      const ref = noop.useRef(null);
       let obj = shouldAnimate(aPNGPlayerControls[11]);
-      aPNGPlayerControls = shouldAnimate(aPNGPlayerControls[12]).useAPNGPlayerControls(ref);
-      [first, closure_4] = noop.useState(false);
+      const items = [AccessibilityStore];
+      const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+      let num = null;
+      const ref = react.useRef(null);
+      const obj2 = shouldAnimate(aPNGPlayerControls[12]);
+      aPNGPlayerControls = obj2.useAPNGPlayerControls(ref);
+      [first, closure_4] = react.useState(false);
       const items1 = [shouldAnimate, aPNGPlayerControls, stateFromStores];
-      const effect = noop.useEffect(() => {
-        let isAndroidResult = utils_PlatformUtils.isAndroid();
-        if (isAndroidResult) {
-          isAndroidResult = !stateFromStores;
-        }
+      const effect = react.useEffect(() => {
+        const obj = utils_PlatformUtils;
+        const isAndroidResult = obj.isAndroid() && !stateFromStores;
         if (isAndroidResult) {
           if (shouldAnimate) {
             aPNGPlayerControls.seek(0);
@@ -336,42 +373,38 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items1);
-      const obj2 = shouldAnimate(aPNGPlayerControls[12]);
+      const tmp10 = stateFromStores(aPNGPlayerControls[14]);
       const tmp9 = stateFromStores;
       if (first) {
         num = 100;
       }
-      stateFromStores(aPNGPlayerControls[14])(() => {
+      tmp10(() => {
         if (first) {
           aPNGPlayerControls.play();
         }
       }, num);
-      const tmp10 = stateFromStores(aPNGPlayerControls[14]);
+      const tmpResult = shouldAnimate(aPNGPlayerControls[13]);
       if (tmpResult.isAndroid()) {
+        let tmp13;
         if (!stateFromStores) {
           const obj3 = { ref, url: imageUrl, autoplay: false, style };
-          let tmp13 = closure_10(tmp(tmp2[12]).APNGPlayer, obj3);
+          tmp13 = closure_10(tmp(tmp2[12]).APNGPlayer, obj3);
         }
         return tmp13;
       }
-      tmp13 = closure_10(tmp9(tmp2[15]), { style, resizeMode: "contain", source: { uri: imageUrl } });
       const obj4 = { style, resizeMode: "contain", source: { uri: imageUrl } };
-      tmpResult = shouldAnimate(aPNGPlayerControls[13]);
+      tmp13 = closure_10(tmp9(tmp2[15]), obj4);
     };
-ReactCompilerGating = fn(558);
-createStyles = fn(4890);
-let obj6 = { preview: null };
-let size = {
-  width: PX_40,
-  height: PX_40,
-  borderRadius: nativeDefault.radii.xs,
-  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
-  border: null,
-  overflow: "hidden",
-};
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(11);
+      let imageUrl;
+      let shouldAnimate;
+      let tmp2;
+      let tmp3;
+      let tmp4;
+      const obj = react2;
+      const cResult = obj.c(11);
       if (cResult[0] !== arg0) {
         ({ imageUrl, shouldAnimate } = arg0);
         const tmp7 = _objectWithoutProperties(arg0, closure_3);
@@ -379,9 +412,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = imageUrl;
         cResult[2] = tmp7;
         cResult[3] = shouldAnimate;
-        let tmp4 = shouldAnimate;
-        let tmp3 = tmp7;
-        let tmp2 = imageUrl;
+        tmp4 = shouldAnimate;
+        tmp3 = tmp7;
+        tmp2 = imageUrl;
       } else {
         tmp2 = cResult[1];
         tmp3 = cResult[2];
@@ -390,18 +423,20 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp8 = closure_13();
       if (cResult[4] === tmp2) {
         if (cResult[5] === tmp4) {
+          let tmp9;
           if (cResult[6] === tmp8) {
-            let tmp9 = cResult[7];
+            tmp9 = cResult[7];
           }
           if (cResult[8] === tmp3) {
+            let tmp13;
             if (cResult[9] === tmp9) {
-              let tmp13 = cResult[10];
+              tmp13 = cResult[10];
             }
             return tmp13;
           }
           const obj2 = { graphic: tmp9 };
           const merged = Object.assign(tmp3);
-          const tmp19 = v65535(closure_14, obj2);
+          const tmp19 = authStore(closure_14, obj2);
           cResult[8] = tmp3;
           cResult[9] = tmp9;
           cResult[10] = tmp19;
@@ -411,7 +446,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp10 = null != tmp2;
       if (tmp10) {
         const obj3 = { style: tmp8.image, imageUrl: tmp2, shouldAnimate: tmp4 };
-        tmp10 = v65535(closure_15, obj3);
+        tmp10 = authStore(closure_15, obj3);
       }
       cResult[4] = tmp2;
       cResult[5] = tmp4;
@@ -421,95 +456,112 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (imageUrl) => {
       imageUrl = imageUrl.imageUrl;
+      const shouldAnimate = imageUrl.shouldAnimate;
       const merged = Object.assign(imageUrl, Object.assign({ imageUrl: 0, shouldAnimate: 0 }));
       let tmp3Result = null != imageUrl;
       if (tmp3Result) {
-        const obj = { style: tmp2.image, imageUrl, shouldAnimate: imageUrl.shouldAnimate };
-        tmp3Result = v65535(closure_15, obj);
+        const obj = { style: tmp2.image, imageUrl, shouldAnimate };
+        tmp3Result = authStore(closure_15, obj);
       }
+      const obj2 = { graphic: tmp3Result };
       const merged1 = Object.assign(merged);
-      return v65535(closure_14, { graphic: tmp3Result });
+      return authStore(closure_14, obj2);
     };
-size.border = { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
-obj6.preview = size;
-let closure_16 = createStyles.createStyles(obj6);
-ReactCompilerGating = fn(558);
-const obj7 = { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
-size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/native/components/PremiumGiftPromotionDetails.tsx");
-
-export default tmp3;
-export const PremiumGiftPromotionCollectibleRewardDetails = ReactCompilerGating.isReactCompilerEnabled()
+createStyles = createStyles_mod;
+let obj = { preview: size };
+size = {
+  width: PX_40,
+  height: PX_40,
+  borderRadius: nativeDefault.radii.xs,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
+  border: obj2,
+  overflow: "hidden",
+};
+createStyles = createStyles.createStyles;
+obj2 = { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
+let closure_16 = createStyles(obj);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (product) => {
-      const cResult = c.c(14);
+      let CollectiblesPreview;
+      let obj11;
+      let rounded;
+      let tmp4;
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(14);
       if (cResult[0] !== product) {
         product = product.product;
         const tmp8 = _objectWithoutProperties(product, closure_4);
         cResult[0] = product;
         cResult[1] = product;
         cResult[2] = tmp8;
-        let tmp5 = tmp8;
-        let first = product;
+        tmp5 = tmp8;
+        tmp4 = product;
       } else {
-        first = cResult[1];
+        tmp4 = cResult[1];
         tmp5 = cResult[2];
       }
       const tmp9 = closure_16();
       let tmp10;
-      if (null != first) {
-        if (0 !== first.items.length) {
-          if (first.type !== CollectiblesItemType.CollectiblesItemType.BUNDLE) {
-            if (cResult[6] !== first.items[0]) {
-              const obj3 = { type: "single", item: first.items[0] };
-              first = first.items[0];
-              cResult[6] = first;
+      if (null != tmp4) {
+        if (0 !== tmp4.items.length) {
+          if (tmp4.type !== CollectiblesItemType.CollectiblesItemType.BUNDLE) {
+            let tmp12;
+            if (cResult[6] !== tmp4.items[0]) {
+              const obj3 = { type: "single", item: tmp4.items[0] };
+              cResult[6] = tmp4.items[0];
               cResult[7] = obj3;
+              tmp12 = obj3;
+            } else {
+              tmp12 = cResult[7];
             }
+            tmp10 = tmp12;
           } else {
-            if (cResult[3] === first.items) {
-              if (cResult[4] === first.previewAssets) {
-                let tmp11 = cResult[5];
+            if (cResult[3] === tmp4.items) {
+              let tmp11;
+              if (cResult[4] === tmp4.previewAssets) {
+                tmp11 = cResult[5];
               }
               tmp10 = tmp11;
             }
             const obj4 = { type: "bundle", items: null, previewAssets: null };
-            ({ items: obj2.items, previewAssets: obj2.previewAssets } = first);
-            cResult[3] = first.items;
-            cResult[4] = first.previewAssets;
+            ({ items: obj2.items, previewAssets: obj2.previewAssets } = tmp4);
+            cResult[3] = tmp4.items;
+            cResult[4] = tmp4.previewAssets;
             cResult[5] = obj4;
             tmp11 = obj4;
           }
         }
       }
       if (cResult[8] === tmp10) {
+        let tmp13;
         if (cResult[9] === tmp9) {
-          let tmp14 = cResult[10];
+          tmp13 = cResult[10];
         }
         if (cResult[11] === tmp5) {
-          if (cResult[12] === tmp14) {
-            let tmp23 = cResult[13];
+          let tmp21;
+          if (cResult[12] === tmp13) {
+            tmp21 = cResult[13];
           }
-          return tmp23;
+          return tmp21;
         }
-        const obj5 = { graphic: tmp14 };
+        const obj5 = { graphic: tmp13 };
         const merged = Object.assign(tmp5);
-        const tmp29 = v65535(closure_14, obj5);
+        const tmp27 = authStore(closure_14, obj5);
         cResult[11] = tmp5;
-        cResult[12] = tmp14;
-        cResult[13] = tmp29;
-        tmp23 = tmp29;
+        cResult[12] = tmp13;
+        cResult[13] = tmp27;
+        tmp21 = tmp27;
       }
-      if (null == tmp10) {
-        cResult[8] = tmp10;
-        cResult[9] = tmp9;
-        cResult[10] = tmp15;
-        tmp14 = tmp15;
-      } else {
-        const obj6 = { style: tmp9.preview, children: null };
-        let obj11 = { collectiblesItemData: tmp10, size: null };
+      let tmp15Result = null != tmp10;
+      if (tmp15Result) {
+        const obj6 = { style: tmp9.preview, children: authStore(CollectiblesPreview, obj11) };
+        obj11 = { collectiblesItemData: tmp10, size: rounded };
+        CollectiblesPreview = SKUPreview.CollectiblesPreview;
         if ("bundle" === tmp10.type) {
           const _Math2 = Math;
-          let rounded = Math.floor(1.2 * PX_40);
+          rounded = Math.floor(1.2 * PX_40);
         } else {
           rounded = PX_40;
           if (tmp10.item.type === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION) {
@@ -517,41 +569,46 @@ export const PremiumGiftPromotionCollectibleRewardDetails = ReactCompilerGating.
             rounded = Math.floor(1.5 * PX_40);
           }
         }
-        obj11.size = rounded;
-        obj11 = v65535(SKUPreview.CollectiblesPreview, obj11);
-        obj6.children = obj11;
-        v65535(View, obj6);
+        tmp15Result = authStore(View, obj6);
       }
+      cResult[8] = tmp10;
+      cResult[9] = tmp9;
+      cResult[10] = tmp15Result;
+      tmp13 = tmp15Result;
     }
   : (product) => {
+      let CollectiblesPreview;
+      let obj2;
+      let rounded;
       product = product.product;
       const require = product;
       const merged = Object.assign(product, Object.assign({ product: 0 }));
       const items = [product];
-      const memo = noop.useMemo(() => {
-        if (null != product) {
-          if (0 !== product.items.length) {
-            if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
-              ({ items: obj2.items, previewAssets: obj2.previewAssets } = product);
-              let obj = { type: "bundle", items: null, previewAssets: null };
+      const tmp2 = closure_16();
+      const memo = react.useMemo(() => {
+        if (null != require) {
+          if (0 !== require.items.length) {
+            let obj;
+            if (require.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
               const obj3 = { type: "bundle", items: null, previewAssets: null };
+              ({ items: obj2.items, previewAssets: obj2.previewAssets } = require);
+              obj = obj3;
             } else {
-              obj = { type: "single", item: product.items[0] };
+              obj = { type: "single", item: require.items[0] };
             }
             return obj;
           }
         }
       }, items);
-      if (null == memo) {
-        const obj2 = { graphic: tmp6 };
-        const merged1 = Object.assign(merged);
-        return closure_10(tmp5, obj2);
-      } else {
-        let obj = { style: tmp2.preview, children: null };
-        let obj3 = { collectiblesItemData: memo, size: null };
+      let tmp4Result = null != memo;
+      if (tmp4Result) {
+        let obj = { style: tmp2.preview, children: closure_10(CollectiblesPreview, obj2) };
+        obj2 = { collectiblesItemData: memo, size: rounded };
+        CollectiblesPreview = SKUPreview.CollectiblesPreview;
+        const tmp8 = require;
         if ("bundle" === memo.type) {
           const _Math2 = Math;
-          let rounded = Math.floor(1.2 * PX_40);
+          rounded = Math.floor(1.2 * PX_40);
         } else {
           rounded = PX_40;
           if (memo.item.type === tmp8(1980).CollectiblesItemType.AVATAR_DECORATION) {
@@ -559,11 +616,14 @@ export const PremiumGiftPromotionCollectibleRewardDetails = ReactCompilerGating.
             rounded = Math.floor(1.5 * PX_40);
           }
         }
-        obj3.size = rounded;
-        obj3 = closure_10(SKUPreview.CollectiblesPreview, obj3);
-        obj.children = obj3;
-        closure_10(View, obj);
-        tmp8 = require;
+        tmp4Result = closure_10(View, obj);
       }
-      tmp2 = closure_16();
+      let obj3 = { graphic: tmp4Result };
+      const merged1 = Object.assign(merged);
+      return closure_10(closure_14, obj3);
     };
+size = size_mod;
+const result = size.fileFinishedImporting("modules/premium/native/components/PremiumGiftPromotionDetails.tsx");
+
+export default tmp3;
+export const PremiumGiftPromotionCollectibleRewardDetails = tmp5;

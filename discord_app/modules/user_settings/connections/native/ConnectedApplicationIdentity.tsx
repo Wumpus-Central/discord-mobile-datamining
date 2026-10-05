@@ -1,32 +1,44 @@
 // discord_app/modules/user_settings/connections/native/ConnectedApplicationIdentity.tsx
-import util from "../../../../intl/index.native.tsx";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import intl6 from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Icon from "../../../../design/void/Icon/native/Icon.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
-import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
+import AlertDefault from "../../../../components_native/common/Alert.tsx";
 import InfoBoxDefault from "../../authorized_apps/native/InfoBox.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
 const IconDefault = Icon;
+let closure_1, identity, v0, v3;
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectedApplicationIdentity.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let metroImportAll;
+let metroImportDefault;
+let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
+const View = react_native.View;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (identity) => {
-      const cResult = require("c").c(44);
+      let body;
+      let icon1;
+      let items;
+      let profile3;
+      let str;
+      let tmp8;
+      let tmp9;
+      let tmpResult2;
+      let tmp = identity;
+      let tmp2 = str;
+      let obj = identity(str[6]);
+      const cResult = obj.c(44);
       identity = identity.identity;
-      _require = identity;
       const token = identity.token;
       let application;
       if (token != null) {
@@ -39,231 +51,295 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (str == null) {
         str = "";
       }
-      let obj = require("c");
-      const legacyClassComponentStyles = require("createStyles").useLegacyClassComponentStyles(tmp(tmp2[8]).readStyles);
+      const tmpResult = tmp(tmp2[7]);
+      const legacyClassComponentStyles = tmpResult.useLegacyClassComponentStyles(tmp(tmp2[8]).readStyles);
       let profile = identity.profile;
       let flag;
+      const useState = react.useState;
       if (profile != null) {
         flag = profile.connection_visible;
       }
       if (flag == null) {
         flag = false;
       }
-      const tmpResult = require("createStyles");
-      [tmp8, asyncGeneratorStep] = noop.useState(flag);
+      [tmp8, _asyncToGenerator] = _slicedToArray(useState(flag), 2);
+      const tmp7 = _slicedToArray(useState(flag), 2);
       if (cResult[0] !== str) {
         let intl = tmp(tmp2[9]).intl;
         let obj2 = { provider: str };
         const formatResult = intl.format(tmp(tmp2[9]).t.VgqIPj, obj2);
         cResult[0] = str;
         cResult[1] = formatResult;
-        let tmp9 = formatResult;
+        tmp9 = formatResult;
       } else {
         tmp9 = cResult[1];
       }
       _slicedToArray = tmp9;
       if (cResult[2] === str) {
         if (cResult[3] === tmp9) {
+          let tmp11;
           if (cResult[4] === token) {
-            let tmp11 = cResult[5];
+            tmp11 = cResult[5];
           }
           let icon;
+          const tmp12 = cResult[6];
           if (application != null) {
             icon = application.icon;
           }
-          if (cResult[6] === icon) {
+          if (tmp12 === icon) {
+            let tmp14;
             if (cResult[7] === identity.application_id) {
-              let tmp13 = cResult[8];
+              tmp14 = cResult[8];
             }
             if (cResult[9] === identity.application_id) {
               const profile2 = identity.profile;
               let connection_visible;
+              const tmp20 = cResult[10];
               if (profile2 != null) {
                 connection_visible = profile2.connection_visible;
               }
-              if (cResult[10] === connection_visible) {
+              if (tmp20 === connection_visible) {
+                let tmp22;
                 if (cResult[11] === identity.provider_issued_user_id) {
-                  let tmp19 = cResult[12];
+                  tmp22 = cResult[12];
                 }
                 const profile4 = identity.profile;
                 if (null == application) {
                   return null;
                 } else {
                   if (cResult[13] === legacyClassComponentStyles.connectedApplicationIdentityIcon) {
+                    let tmp25;
                     if (cResult[14] === legacyClassComponentStyles.platformIcon) {
-                      let tmp22 = cResult[15];
+                      tmp25 = cResult[15];
                     }
                     if (cResult[16] === application.name) {
-                      if (cResult[17] === tmp13) {
-                        if (cResult[18] === tmp22) {
-                          let tmp23 = cResult[19];
+                      if (cResult[17] === tmp14) {
+                        let tmp26;
+                        let tmp33;
+                        let tmp32;
+                        let tmp37;
+                        if (cResult[18] === tmp25) {
+                          tmp26 = cResult[19];
                         }
                         const _Symbol = Symbol;
                         if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-                          const tmp32 = closure_7(tmp(tmp2[19]).XLargeBoldIcon, { size: "sm" });
+                          const tmp35 = closure_7(tmp(tmp2[19]).XLargeBoldIcon, { size: "sm" });
                           let intl2 = tmp(tmp2[9]).intl;
                           const stringResult = intl2.string(tmp(tmp2[9]).t["DT39A+"]);
-                          cResult[20] = tmp32;
+                          cResult[20] = tmp35;
                           cResult[21] = stringResult;
-                          let tmp30 = stringResult;
-                          let tmp29 = tmp32;
+                          tmp33 = stringResult;
+                          tmp32 = tmp35;
                         } else {
-                          tmp29 = cResult[20];
-                          tmp30 = cResult[21];
+                          tmp32 = cResult[20];
+                          tmp33 = cResult[21];
                         }
                         if (cResult[22] !== tmp11) {
                           let obj3 = {
                             size: "sm",
                             variant: "icon-only",
-                            icon: tmp29,
-                            accessibilityLabel: tmp30,
+                            icon: tmp32,
+                            accessibilityLabel: tmp33,
                             onPress: tmp11,
                           };
-                          const tmp36 = closure_7(tmp(tmp2[20]).IconButton, obj3);
+                          const tmp39 = closure_7(tmp(tmp2[20]).IconButton, obj3);
                           cResult[22] = tmp11;
-                          cResult[23] = tmp36;
-                          let tmp34 = tmp36;
+                          cResult[23] = tmp39;
+                          tmp37 = tmp39;
                         } else {
-                          tmp34 = cResult[23];
+                          tmp37 = cResult[23];
                         }
                         if (cResult[24] === application.name) {
-                          if (cResult[25] === tmp34) {
-                            if (cResult[26] === tmp23) {
-                              let tmp39 = cResult[27];
+                          if (cResult[25] === tmp37) {
+                            let tmp42;
+                            if (cResult[26] === tmp26) {
+                              tmp42 = cResult[27];
                             }
                             if (cResult[28] === legacyClassComponentStyles.connectedAccountHeader) {
-                              if (cResult[29] === tmp39) {
-                                let tmp42 = cResult[30];
+                              let tmp45;
+                              let tmp49;
+                              if (cResult[29] === tmp42) {
+                                tmp45 = cResult[30];
                               }
                               const _Symbol2 = Symbol;
                               if (cResult[31] === Symbol.for("react.memo_cache_sentinel")) {
                                 let intl3 = tmp(tmp2[9]).intl;
                                 const stringResult1 = intl3.string(tmp(tmp2[9]).t.f7yOAX);
                                 cResult[31] = stringResult1;
-                                let tmp46 = stringResult1;
+                                tmp49 = stringResult1;
                               } else {
-                                tmp46 = cResult[31];
+                                tmp49 = cResult[31];
                               }
-                              if (cResult[32] === tmp19) {
+                              if (cResult[32] === tmp22) {
+                                let tmp51;
                                 if (cResult[33] === tmp8) {
-                                  let tmp48 = cResult[34];
+                                  tmp51 = cResult[34];
                                 }
-                                if (cResult[35] === tmp42) {
-                                  if (cResult[36] === tmp48) {
-                                    let tmp51 = cResult[37];
+                                if (cResult[35] === tmp45) {
+                                  let tmp54;
+                                  if (cResult[36] === tmp51) {
+                                    tmp54 = cResult[37];
                                   }
                                   if (cResult[38] === legacyClassComponentStyles.connectedAccountItem) {
-                                    if (cResult[39] === tmp51) {
-                                      let tmp54 = cResult[40];
+                                    let tmp57;
+                                    if (cResult[39] === tmp54) {
+                                      tmp57 = cResult[40];
                                     }
                                     if (cResult[41] === legacyClassComponentStyles.container) {
-                                      if (cResult[42] === tmp54) {
-                                        let tmp58 = cResult[43];
+                                      let tmp61;
+                                      if (cResult[42] === tmp57) {
+                                        tmp61 = cResult[43];
                                       }
-                                      return tmp58;
+                                      return tmp61;
                                     }
-                                    let obj5 = { style: tmp37, children: tmp54 };
-                                    const tmp61 = closure_7(View, obj5);
+                                    let obj4 = { style: tmp40, children: tmp57 };
+                                    const tmp64 = closure_7(View, obj4);
                                     cResult[41] = legacyClassComponentStyles.container;
-                                    cResult[42] = tmp54;
-                                    cResult[43] = tmp61;
-                                    tmp58 = tmp61;
+                                    cResult[42] = tmp57;
+                                    cResult[43] = tmp64;
+                                    tmp61 = tmp64;
                                   }
-                                  const obj6 = { style: tmp38, children: tmp51 };
-                                  const tmp57 = closure_7(View, obj6);
+                                  let obj5 = { style: tmp41, children: tmp54 };
+                                  const tmp60 = closure_7(View, obj5);
                                   cResult[38] = legacyClassComponentStyles.connectedAccountItem;
-                                  cResult[39] = tmp51;
-                                  cResult[40] = tmp57;
-                                  tmp54 = tmp57;
+                                  cResult[39] = tmp54;
+                                  cResult[40] = tmp60;
+                                  tmp57 = tmp60;
                                 }
-                                let obj7 = { value: true, children: null };
-                                let items = [tmp42, tmp48];
-                                obj7.children = items;
-                                const tmp53 = closure_8(tmp(tmp2[23]).TableRowGroupContext, obj7);
-                                cResult[35] = tmp42;
-                                cResult[36] = tmp48;
-                                cResult[37] = tmp53;
-                                tmp51 = tmp53;
+                                let obj6 = { value: true, children: items };
+                                items = [tmp45, tmp51];
+                                const tmp56 = closure_8(tmp(tmp2[23]).TableRowGroupContext, obj6);
+                                cResult[35] = tmp45;
+                                cResult[36] = tmp51;
+                                cResult[37] = tmp56;
+                                tmp54 = tmp56;
                               }
-                              const obj8 = { label: tmp46, value: tmp8, onValueChange: tmp19 };
-                              const tmp50 = closure_7(tmp(tmp2[22]).TableSwitchRow, obj8);
-                              cResult[32] = tmp19;
+                              let obj7 = { label: tmp49, value: tmp8, onValueChange: tmp22 };
+                              const tmp53 = closure_7(tmp(tmp2[22]).TableSwitchRow, obj7);
+                              cResult[32] = tmp22;
                               cResult[33] = tmp8;
-                              cResult[34] = tmp50;
-                              tmp48 = tmp50;
+                              cResult[34] = tmp53;
+                              tmp51 = tmp53;
                             }
-                            const obj9 = { style: legacyClassComponentStyles.connectedAccountHeader, children: tmp39 };
-                            const tmp45 = closure_7(View, obj9);
+                            const obj8 = { style: legacyClassComponentStyles.connectedAccountHeader, children: tmp42 };
+                            const tmp48 = closure_7(View, obj8);
                             cResult[28] = legacyClassComponentStyles.connectedAccountHeader;
-                            cResult[29] = tmp39;
-                            cResult[30] = tmp45;
-                            tmp42 = tmp45;
+                            cResult[29] = tmp42;
+                            cResult[30] = tmp48;
+                            tmp45 = tmp48;
                           }
                         }
-                        const obj10 = { label: application.name, icon: tmp23, trailing: tmp34 };
-                        const tmp41 = closure_7(tmp(tmp2[21]).TableRow, obj10);
+                        const obj9 = { label: application.name, icon: tmp26, trailing: tmp37 };
+                        const tmp44 = closure_7(tmp(tmp2[21]).TableRow, obj9);
                         cResult[24] = application.name;
-                        cResult[25] = tmp34;
-                        cResult[26] = tmp23;
-                        cResult[27] = tmp41;
-                        tmp39 = tmp41;
+                        cResult[25] = tmp37;
+                        cResult[26] = tmp26;
+                        cResult[27] = tmp44;
+                        tmp42 = tmp44;
                       }
                     }
-                    const obj11 = {
+                    const obj10 = {
                       accessible: true,
                       accessibilityLabel: application.name,
-                      style: tmp22,
+                      style: tmp25,
                       size: token(tmp2[17]).Sizes.LARGE,
-                      source: tmp13,
+                      source: tmp14,
                       disableColor: true,
                     };
-                    const tmp27 = closure_7(token(tmp2[17]), obj11);
+                    const tmp29 = token(tmp2[17]);
+                    const tmp30 = closure_7(tmp29, obj10);
                     cResult[16] = application.name;
-                    cResult[17] = tmp13;
-                    cResult[18] = tmp22;
-                    cResult[19] = tmp27;
-                    tmp23 = tmp27;
-                    const tmp26 = token(tmp2[17]);
+                    cResult[17] = tmp14;
+                    cResult[18] = tmp25;
+                    cResult[19] = tmp30;
+                    tmp26 = tmp30;
                   }
                   const items1 = [,];
                   ({ connectedApplicationIdentityIcon: arr[0], platformIcon: arr[1] } = legacyClassComponentStyles);
                   cResult[13] = legacyClassComponentStyles.connectedApplicationIdentityIcon;
                   cResult[14] = legacyClassComponentStyles.platformIcon;
                   cResult[15] = items1;
-                  tmp22 = items1;
+                  tmp25 = items1;
                 }
               }
             }
-            _require = asyncGeneratorStep(async (connection_visible) => {
-              c2 = 0;
-              c4 = 0;
-              c3 = 0;
+            let closure_0 = _asyncToGenerator(async (connection_visible) => {
+              let c2 = 0;
+              let c4 = 0;
+              let c3 = 0;
               return (async (arg0) => {
-                closure_1 = tmp3;
-                v0(connection_visible);
-                v0 = 1;
-                await token(str[18]).updateApplicationIdentityConfig(
-                  connection_visible.application_id,
-                  connection_visible.provider_issued_user_id,
-                  { connection_visible },
-                );
-                if (1 === tmp7) {
-                  v0 = 0;
-                  const profile = connection_visible.profile;
-                  connection_visible = undefined;
-                  if (profile != null) {
-                    connection_visible = profile.connection_visible;
+                let obj2;
+                if (c4 === 2) {
+                  c4 = 3;
+                  throw new TypeError("Generator functions may not be called on executing generators");
+                } else if (tmp3 === 3) {
+                  if (arg0 === 1) {
+                    throw value;
+                  } else if (arg0 === 2) {
+                    return { value, done: true };
+                  } else {
+                    return { value: "IconComponent", done: null };
                   }
-                  v0(true === connection_visible);
-                  c4 = 3;
-                } else if (arg0 === 1) {
-                  c4 = 3;
-                  throw value;
-                } else if (arg0 !== 2) {
-                  v0 = 0;
+                } else {
+                  try {
+                    c4 = 2;
+                    if (0 === c2) {
+                      if (arg0 === 1) {
+                        c4 = 3;
+                        throw value;
+                      } else if (arg0 === 2) {
+                        c4 = 3;
+                        return { value, done: true };
+                      } else {
+                        closure_1 = tmp;
+                        v0(connection_visible);
+                        v0 = 1;
+                        c2 = 2;
+                        c4 = 1;
+                        const obj5 = { connection_visible };
+                        const obj6 = {
+                          value: obj2.updateApplicationIdentityConfig(
+                            connection_visible.application_id,
+                            connection_visible.provider_issued_user_id,
+                            obj5,
+                          ),
+                          done: false,
+                        };
+                        obj2 = token(str[18]);
+                        return obj6;
+                      }
+                    } else {
+                      if (1 === tmp4) {
+                        v0 = 0;
+                        const profile = connection_visible.profile;
+                        connection_visible = undefined;
+                        const tmp6 = v0;
+                        if (profile != null) {
+                          connection_visible = profile.connection_visible;
+                        }
+                        tmp6(true === connection_visible);
+                      } else if (arg0 === 1) {
+                        c4 = 3;
+                        throw value;
+                      } else if (arg0 === 2) {
+                        v0 = 0;
+                        c4 = 3;
+                        return { value, done: true };
+                      } else {
+                        v0 = 0;
+                      }
+                      c4 = 3;
+                      return { value: "IconComponent", done: null };
+                    }
+                  } catch (tmp17) {
+                    if (0 === v0) {
+                      c4 = 3;
+                      throw tmp17;
+                    } else {
+                      c2 = 1;
+                    }
+                  }
                 }
-                v0 = 0;
-                return value;
               })();
             });
             ({ application_id: tmp3[9], profile: profile3 } = identity);
@@ -272,30 +348,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               connection_visible1 = profile3.connection_visible;
             }
             const fn2 = function () {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
+              return closure_0(...arguments);
             };
             cResult[10] = connection_visible1;
             cResult[11] = identity.provider_issued_user_id;
             cResult[12] = fn2;
-            tmp19 = fn2;
+            tmp22 = fn2;
           }
-          const obj12 = { id: identity.application_id, icon: null, size: null, botIconFirst: false };
-          let icon1;
+          const tmp16 = token(tmp2[16]);
+          const obj11 = {
+            id: identity.application_id,
+            icon: icon1,
+            size: tmpResult2.getIconSize(token(tmp2[17]).Sizes.LARGE),
+            botIconFirst: false,
+          };
+          icon1 = undefined;
+          const getApplicationIconSource = tmp16.getApplicationIconSource;
           if (application != null) {
             icon1 = application.icon;
           }
-          obj12.icon = icon1;
-          let obj4 = token(tmp2[16]);
-          const tmp14 = token;
-          obj12.size = tmp(tmp2[17]).getIconSize(tmp14(tmp2[17]).Sizes.LARGE);
-          const applicationIconSource = obj4.getApplicationIconSource(obj12);
+          tmpResult2 = tmp(tmp2[17]);
+          const applicationIconSource = getApplicationIconSource(obj11);
           let icon2;
           if (application != null) {
             icon2 = application.icon;
@@ -303,66 +376,78 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[6] = icon2;
           cResult[7] = identity.application_id;
           cResult[8] = applicationIconSource;
-          tmp13 = applicationIconSource;
-          const tmpResult2 = tmp(tmp2[17]);
+          tmp14 = applicationIconSource;
         }
       }
       const fn = function z() {
-        let obj = { children: null };
-        const items = [React5(native.Spacer, { size: 8 }), , ,];
-        const obj2 = { variant: "text-md/medium", children: null };
-        const intl = util.intl;
-        obj2.children = intl.format(util.t.VgqIPj, { provider: str });
-        items[1] = React5(Text_Text.Text, obj2);
-        items[2] = React5(native.Spacer, { size: 16 });
-        const obj4 = { children: null };
-        const intl2 = util.intl;
-        obj4.children = intl2.format(util.t.COW3Xn, { platformName: str });
-        items[3] = React5(InfoBoxDefault, obj4);
-        obj.children = items;
-        const obj3 = { provider: str };
-        const obj5 = { platformName: str };
-        const tmp2 = closure_2_8(View, obj);
-        const obj7 = {
-          title: null,
-          body: null,
-          cancelText: null,
-          children: null,
-          confirmText: null,
-          onConfirm: null,
-          confirmColor: null,
+        let intl;
+        let intl2;
+        let intl3;
+        let intl4;
+        let intl5;
+        let items;
+        let obj3;
+        let obj5;
+        let obj7;
+        let obj = { children: items };
+        items = [metroImportDefault(native.Spacer, { size: 8 }), , ,];
+        const obj2 = { variant: "text-md/medium", children: intl.format(intl6.t.VgqIPj, obj3) };
+        const Text = Text_Text.Text;
+        intl = intl6.intl;
+        obj3 = { provider: str };
+        items[1] = metroImportDefault(Text, obj2);
+        items[2] = metroImportDefault(native.Spacer, { size: 16 });
+        const obj4 = { children: intl2.format(intl6.t.COW3Xn, obj5) };
+        const tmp = InfoBoxDefault;
+        intl2 = intl6.intl;
+        obj5 = { platformName: str };
+        items[3] = metroImportDefault(tmp, obj4);
+        const tmp2 = metroImportAll(View, obj);
+        const obj6 = {
+          title: intl3.formatToPlainString(intl6.t.U5x12f, obj7),
+          body,
+          cancelText: intl4.string(intl6.t["ETE/oC"]),
+          children: tmp2,
+          confirmText: intl5.string(intl6.t.ppppRJ),
+          onConfirm() {
+            if (null != token) {
+              const obj = identity(str[14]);
+              obj.handleDeleteApp(tmp);
+            }
+          },
+          confirmColor: AlertDefault.Colors.RED,
         };
-        const intl3 = util.intl;
-        obj7.title = intl3.formatToPlainString(util.t.U5x12f, { name: str });
-        obj7.body = body;
-        const intl4 = util.intl;
-        obj7.cancelText = intl4.string(util.t["ETE/oC"]);
-        obj7.children = tmp2;
-        const intl5 = util.intl;
-        obj7.confirmText = intl5.string(util.t.ppppRJ);
-        obj7.onConfirm = function onConfirm() {
-          if (null != token) {
-            closure_0(str[14]).handleDeleteApp(tmp);
-            const obj = closure_0(str[14]);
-          }
-        };
-        obj7.confirmColor = common_AlertDefault.Colors.RED;
-        AlertActionCreatorsDefault.show(obj7);
+        const show = AlertActionCreatorsDefault.show;
+        AlertActionCreatorsDefault;
+        intl3 = intl6.intl;
+        obj7 = { name: str };
+        intl4 = intl6.intl;
+        intl5 = intl6.intl;
+        show(obj6);
       };
       cResult[2] = str;
       cResult[3] = tmp9;
       cResult[4] = token;
       cResult[5] = fn;
       tmp11 = fn;
-      const tmp7 = _slicedToArray(noop.useState(flag), 2);
     }
   : (identity) => {
+      let TableRowGroupContext;
+      let body;
+      let c4;
+      let intl2;
+      let intl3;
+      let items3;
+      let items4;
+      let obj6;
+      let obj7;
+      let obj9;
+      let tmp6;
       identity = identity.identity;
-      _require = identity;
       const token = identity.token;
       let str;
       _slicedToArray = undefined;
-      noop = undefined;
+      react = undefined;
       let application;
       if (token != null) {
         application = token.application;
@@ -374,109 +459,173 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (str == null) {
         str = "";
       }
-      const legacyClassComponentStyles = require("createStyles").useLegacyClassComponentStyles(
-        require("ConnectedAccount").readStyles,
-      );
+      let tmp2 = identity;
+      const tmp3 = application;
+      let obj = identity(application[7]);
+      const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(identity(application[8]).readStyles);
+      let obj2 = react;
       let profile = identity.profile;
       let flag;
+      const useState = react.useState;
       if (profile != null) {
         flag = profile.connection_visible;
       }
       if (flag == null) {
         flag = false;
       }
-      let obj = require("createStyles");
-      [tmp6, c4] = noop.useState(flag);
+      [tmp6, c4] = _slicedToArray(useState(flag), 2);
+      const tmp5 = _slicedToArray(useState(flag), 2);
       let intl = tmp2(tmp3[9]).intl;
-      const formatResult = intl.format(require("util").t.VgqIPj, { provider: str });
-      noop = formatResult;
+      const formatResult = intl.format(tmp2(tmp3[9]).t.VgqIPj, { provider: str });
+      react = formatResult;
       let items = [str, formatResult, token];
       let icon;
       const callback = obj2.useCallback(() => {
-        let obj = { children: null };
-        const items = [React5(native.Spacer, { size: 8 }), , ,];
-        const obj2 = { variant: "text-md/medium", children: null };
-        const intl = util.intl;
-        obj2.children = intl.format(util.t.VgqIPj, { provider: str });
-        items[1] = React5(Text_Text.Text, obj2);
-        items[2] = React5(native.Spacer, { size: 16 });
-        const obj4 = { children: null };
-        const intl2 = util.intl;
-        obj4.children = intl2.format(util.t.COW3Xn, { platformName: str });
-        items[3] = React5(InfoBoxDefault, obj4);
-        obj.children = items;
-        const obj3 = { provider: str };
-        const obj5 = { platformName: str };
-        const tmp2 = closure_2_8(View, obj);
-        const obj7 = {
-          title: null,
-          body: null,
-          cancelText: null,
-          children: null,
-          confirmText: null,
-          onConfirm: null,
-          confirmColor: null,
+        let intl;
+        let intl2;
+        let intl3;
+        let intl4;
+        let intl5;
+        let items;
+        let obj3;
+        let obj5;
+        let obj7;
+        let obj = { children: items };
+        items = [metroImportDefault(native.Spacer, { size: 8 }), , ,];
+        const obj2 = { variant: "text-md/medium", children: intl.format(intl6.t.VgqIPj, obj3) };
+        const Text = Text_Text.Text;
+        intl = intl6.intl;
+        obj3 = { provider: str };
+        items[1] = metroImportDefault(Text, obj2);
+        items[2] = metroImportDefault(native.Spacer, { size: 16 });
+        const obj4 = { children: intl2.format(intl6.t.COW3Xn, obj5) };
+        const tmp = InfoBoxDefault;
+        intl2 = intl6.intl;
+        obj5 = { platformName: str };
+        items[3] = metroImportDefault(tmp, obj4);
+        const tmp2 = metroImportAll(View, obj);
+        const obj6 = {
+          title: intl3.formatToPlainString(intl6.t.U5x12f, obj7),
+          body,
+          cancelText: intl4.string(intl6.t["ETE/oC"]),
+          children: tmp2,
+          confirmText: intl5.string(intl6.t.ppppRJ),
+          onConfirm() {
+            if (null != token) {
+              const obj = identity(application[14]);
+              obj.handleDeleteApp(tmp);
+            }
+          },
+          confirmColor: AlertDefault.Colors.RED,
         };
-        const intl3 = util.intl;
-        obj7.title = intl3.formatToPlainString(util.t.U5x12f, { name: str });
-        obj7.body = body;
-        const intl4 = util.intl;
-        obj7.cancelText = intl4.string(util.t["ETE/oC"]);
-        obj7.children = tmp2;
-        const intl5 = util.intl;
-        obj7.confirmText = intl5.string(util.t.ppppRJ);
-        obj7.onConfirm = function onConfirm() {
-          if (null != token) {
-            closure_0(application[14]).handleDeleteApp(tmp);
-            const obj = closure_0(application[14]);
-          }
-        };
-        obj7.confirmColor = common_AlertDefault.Colors.RED;
-        AlertActionCreatorsDefault.show(obj7);
+        const show = AlertActionCreatorsDefault.show;
+        AlertActionCreatorsDefault;
+        intl3 = intl6.intl;
+        obj7 = { name: str };
+        intl4 = intl6.intl;
+        intl5 = intl6.intl;
+        show(obj6);
       }, items);
+      const useMemo = obj2.useMemo;
       if (application != null) {
         icon = application.icon;
       }
       const items1 = [icon, identity.application_id];
-      const memo = obj2.useMemo(() => {
-        const obj2 = { id: application_id.application_id, icon: null, size: null, botIconFirst: false };
+      const memo = useMemo(() => {
         let icon;
+        let obj2;
+        const obj = {
+          id: identity.application_id,
+          icon,
+          size: obj2.getIconSize(IconDefault.Sizes.LARGE),
+          botIconFirst: false,
+        };
+        icon = undefined;
+        const getApplicationIconSource = AvatarUtilsDefault.getApplicationIconSource;
+        AvatarUtilsDefault;
         if (application != null) {
           icon = application.icon;
         }
-        obj2.icon = icon;
-        const obj = AvatarUtilsDefault;
-        obj2.size = Icon.getIconSize(IconDefault.Sizes.LARGE);
-        return obj.getApplicationIconSource(obj2);
+        obj2 = Icon;
+        return getApplicationIconSource(obj);
       }, items1);
-      _require = str((connection_visible) => {
-        c2 = 0;
+      let closure_0 = str((connection_visible) => {
+        let c2 = 0;
         c4 = 0;
-        c3 = 0;
+        let c3 = 0;
         return (function* (arg0) {
-          closure_1 = tmp3;
-          v3(connection_visible);
-          yield token(application[18]).updateApplicationIdentityConfig(
-            connection_visible.application_id,
-            connection_visible.provider_issued_user_id,
-            { connection_visible },
-          );
-          if (1 === tmp7) {
-            c3 = 0;
-            const profile = connection_visible.profile;
-            connection_visible = undefined;
-            if (profile != null) {
-              connection_visible = profile.connection_visible;
+          let obj2;
+          if (v3 === 2) {
+            v3 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              return { value, done: true };
+            } else {
+              return { value: "IconComponent", done: null };
             }
-            v3(true === connection_visible);
-            v3 = 3;
-          } else if (arg0 === 1) {
-            v3 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            c3 = 0;
+          } else {
+            try {
+              v3 = 2;
+              if (0 === c2) {
+                if (arg0 === 1) {
+                  v3 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  v3 = 3;
+                  return { value, done: true };
+                } else {
+                  closure_1 = tmp;
+                  v3(connection_visible);
+                  c3 = 1;
+                  c2 = 2;
+                  v3 = 1;
+                  const obj5 = { connection_visible };
+                  const obj6 = {
+                    value: obj2.updateApplicationIdentityConfig(
+                      connection_visible.application_id,
+                      connection_visible.provider_issued_user_id,
+                      obj5,
+                    ),
+                    done: false,
+                  };
+                  obj2 = token(application[18]);
+                  return obj6;
+                }
+              } else {
+                if (1 === tmp4) {
+                  c3 = 0;
+                  const profile = connection_visible.profile;
+                  connection_visible = undefined;
+                  const tmp6 = v3;
+                  if (profile != null) {
+                    connection_visible = profile.connection_visible;
+                  }
+                  tmp6(true === connection_visible);
+                } else if (arg0 === 1) {
+                  v3 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c3 = 0;
+                  v3 = 3;
+                  return { value, done: true };
+                } else {
+                  c3 = 0;
+                }
+                v3 = 3;
+                return { value: "IconComponent", done: null };
+              }
+            } catch (tmp17) {
+              if (0 === c3) {
+                v3 = 3;
+                throw tmp17;
+              } else {
+                c2 = 1;
+              }
+            }
           }
-          return value;
         })();
       });
       const profile2 = identity.profile;
@@ -492,45 +641,45 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = {
           accessible: true,
           accessibilityLabel: application.name,
-          style: null,
-          size: null,
-          source: null,
+          style: items3,
+          size: token(tmp3[17]).Sizes.LARGE,
+          source: memo,
           disableColor: true,
         };
-        const items3 = [,];
+        items3 = [,];
         ({ connectedApplicationIdentityIcon: arr4[0], platformIcon: arr4[1] } = legacyClassComponentStyles);
-        obj3.style = items3;
-        obj3.size = token(tmp3[17]).Sizes.LARGE;
-        obj3.source = memo;
         const tmp15 = token(tmp3[17]);
+        const tmp16 = closure_7(tmp15, obj3);
         let obj4 = {
           size: "sm",
           variant: "icon-only",
           icon: closure_7(tmp2(tmp3[19]).XLargeBoldIcon, { size: "sm" }),
-          accessibilityLabel: null,
-          onPress: null,
+          accessibilityLabel: intl2.string(tmp2(tmp3[9]).t["DT39A+"]),
+          onPress: callback,
         };
-        let intl2 = tmp2(tmp3[9]).intl;
-        obj4.accessibilityLabel = intl2.string(tmp2(tmp3[9]).t["DT39A+"]);
-        obj4.onPress = callback;
-        let obj5 = { style: legacyClassComponentStyles.container, children: null };
-        const obj6 = { style: legacyClassComponentStyles.connectedAccountItem, children: null };
-        const tmp16 = closure_7(token(tmp3[17]), obj3);
-        let obj7 = { value: true, children: null };
-        const obj8 = { style: legacyClassComponentStyles.connectedAccountHeader, children: null };
-        const obj9 = { label: application.name, icon: tmp16, trailing: closure_7(tmp2(tmp3[20]).IconButton, obj4) };
-        obj8.children = closure_7(tmp2(tmp3[21]).TableRow, obj9);
-        const items4 = [closure_7(View, obj8)];
-        const obj10 = { label: null, value: null, onValueChange: null };
-        let intl3 = tmp2(tmp3[9]).intl;
-        obj10.label = intl3.string(tmp2(tmp3[9]).t.f7yOAX);
-        obj10.value = tmp6;
-        obj10.onValueChange = tmp12;
-        items4[1] = closure_7(tmp2(tmp3[22]).TableSwitchRow, obj10);
-        obj7.children = items4;
-        obj6.children = closure_8(tmp2(tmp3[23]).TableRowGroupContext, obj7);
-        obj5.children = closure_7(View, obj6);
+        const IconButton = tmp2(tmp3[20]).IconButton;
+        intl2 = tmp2(tmp3[9]).intl;
+        let obj5 = { style: legacyClassComponentStyles.container, children: closure_7(View, obj6) };
+        obj6 = {
+          style: legacyClassComponentStyles.connectedAccountItem,
+          children: closure_8(TableRowGroupContext, obj7),
+        };
+        const tmp17 = closure_7(IconButton, obj4);
+        obj7 = { value: true, children: items4 };
+        const obj8 = {
+          style: legacyClassComponentStyles.connectedAccountHeader,
+          children: closure_7(tmp2(tmp3[21]).TableRow, obj9),
+        };
+        TableRowGroupContext = tmp2(tmp3[23]).TableRowGroupContext;
+        obj9 = { label: application.name, icon: tmp16, trailing: tmp17 };
+        items4 = [closure_7(View, obj8)];
+        const obj10 = { label: intl3.string(tmp2(tmp3[9]).t.f7yOAX), value: tmp6, onValueChange: tmp12 };
+        const TableSwitchRow = tmp2(tmp3[22]).TableSwitchRow;
+        intl3 = tmp2(tmp3[9]).intl;
+        items4[1] = closure_7(TableSwitchRow, obj10);
         return closure_7(View, obj5);
       }
-      const tmp5 = _slicedToArray(noop.useState(flag), 2);
     };
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectedApplicationIdentity.tsx");
+
+export default tmp3;

@@ -14,11 +14,11 @@ export const useGuildEligibleForMediaChannels = function useGuildEligibleForMedi
     return false;
   } else {
     const features = stateFromStores.features;
-    return (
+    const tmp3 =
       ((features.has(GuildFeatures.CREATOR_MONETIZABLE) ||
         features.has(GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) &&
         features.has(GuildFeatures.COMMUNITY)) ||
-      features.has(GuildFeatures.INTERNAL_EMPLOYEE_ONLY)
-    );
+      features.has(GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
+    return tmp3;
   }
 };

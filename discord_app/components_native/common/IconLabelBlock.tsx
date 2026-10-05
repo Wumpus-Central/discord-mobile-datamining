@@ -1,121 +1,123 @@
 // discord_app/components_native/common/IconLabelBlock.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../design/void/native.tsx";
+import native2 from "../../../discord_common/js/packages/design/native.tsx";
 import shared from "../../design/shared.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import IconUploaderDefault from "IconUploader.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../_runtime/metro/00019__.js";
+import react from "../../../_runtime/00019_react.js";
+import react_native from "../../../_runtime/00017_react-native.js";
+import Fragment from "../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
 let closure_3 = ["error"];
-get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+({ View: hasOwnProperty, Image: metroRequire } = react_native);
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+let obj = {
   wrapper: { alignItems: "center", paddingTop: 26, paddingBottom: 16 },
-  error: {
-    fontSize: 12,
-    textAlign: "center",
-    alignSelf: "center",
-    marginBottom: 10,
-    color: nativeDefault.unsafe_rawColors.RED_400,
-  },
-  label: null,
-  iconUploaderWrapper: null,
-  text: null,
+  error: obj2,
+  label: obj3,
+  iconUploaderWrapper: { alignSelf: "stretch", alignItems: "center" },
+  text: { marginTop: 9 },
 };
-let obj3 = {
+obj2 = {
   fontSize: 12,
   textAlign: "center",
   alignSelf: "center",
   marginBottom: 10,
   color: nativeDefault.unsafe_rawColors.RED_400,
 };
-obj2.label = { fontSize: 12, marginTop: 20, color: nativeDefault.colors.TEXT_SUBTLE };
-obj2.iconUploaderWrapper = { alignSelf: "stretch", alignItems: "center" };
-obj2.text = { marginTop: 9 };
-let closure_9 = createStyles.createLegacyClassComponentStyles(obj2);
-const PureComponent = noop.PureComponent;
-class IconLabelBlock extends PureComponent {}
-const prototype = IconLabelBlock.prototype;
-prototype["renderLabel"] = function renderLabel() {
-  const label = this.props.label;
-  let tmp3 = null;
-  if (null != label) {
-    const obj = { style: null, children: null };
-    const items = [tmp.label, tmp2];
-    obj.style = items;
-    obj.children = label;
-    tmp3 = React5(native.LegacyText, obj);
-  }
-  return tmp3;
-};
-prototype["renderText"] = function renderText() {
-  const text = this.props.text;
-  let tmp4 = null;
-  if (null != text) {
-    const obj = {
-      variant: "heading-md/medium",
-      color: "text-default",
-      style: null,
-      accessibilityRole: null,
-      children: null,
-    };
-    const items = [tmp.text, tmp2];
-    obj.style = items;
-    obj.accessibilityRole = tmp3;
-    obj.children = text;
-    tmp4 = React5(Text_Text.Text, obj);
-  }
-  return tmp4;
-};
-prototype["renderIcon"] = function renderIcon() {
-  const tmp = closure_9(this.context);
-  ({ iconProps, source, darkSource, errorProps } = this.props);
-  if (null != iconProps) {
-    const error = iconProps.error;
-    const obj2 = { style: tmp.iconUploaderWrapper, children: null };
-    const obj3 = {};
-    const tmp11 = _objectWithoutProperties(iconProps, closure_3);
-    const merged = Object.assign(tmp11);
-    const items = [React5(IconUploaderDefault, obj3)];
-    let tmp14Result = null;
-    if (null != error) {
-      const obj4 = { style: null };
-      const items1 = [tmp.error, tmp4];
-      obj4.style = items1;
-      const merged1 = Object.assign(errorProps);
-      obj4.children = error;
-      tmp14Result = React5(native.LegacyText, obj4);
+const createLegacyClassComponentStyles = createStyles.createLegacyClassComponentStyles;
+obj3 = { fontSize: 12, marginTop: 20, color: nativeDefault.colors.TEXT_SUBTLE };
+const React4 = createLegacyClassComponentStyles(obj);
+const PureComponent = react.PureComponent;
+class IconLabelBlock extends PureComponent {
+  renderLabel() {
+    let items;
+    const label = this.props.label;
+    let tmp3 = null;
+    if (null != label) {
+      const obj = { style: items, children: label };
+      items = [tmp.label, tmp2];
+      tmp3 = metroImportDefault(native.LegacyText, obj);
     }
-    items[1] = tmp14Result;
-    obj2.children = items;
-    return closure_1_8(hasOwnProperty, obj2);
-  } else {
-    if (null == source) {
-      if (obj.isThemeLight(this.context.theme)) {
-        darkSource = tmp2;
+    return tmp3;
+  }
+  renderText() {
+    let items;
+    const text = this.props.text;
+    let tmp4 = null;
+    if (null != text) {
+      const obj = {
+        variant: "heading-md/medium",
+        color: "text-default",
+        style: items,
+        accessibilityRole: tmp3,
+        children: text,
+      };
+      items = [tmp.text, tmp2];
+      tmp4 = metroImportDefault(Text_Text.Text, obj);
+    }
+    return tmp4;
+  }
+  renderIcon() {
+    let darkSource;
+    let errorProps;
+    let iconProps;
+    let items;
+    let items1;
+    let source;
+    const tmp = closure_9(this.context);
+    ({ iconProps, source, darkSource, errorProps } = this.props);
+    if (null != iconProps) {
+      const error = iconProps.error;
+      const obj2 = { style: tmp.iconUploaderWrapper, children: items };
+      const obj3 = {};
+      const tmp11 = _objectWithoutProperties(iconProps, closure_3);
+      const tmp17 = IconUploaderDefault;
+      const merged = Object.assign(tmp11);
+      items = [metroImportDefault(tmp17, obj3)];
+      let tmp14Result = null;
+      if (null != error) {
+        const obj4 = { style: items1, children: error };
+        items1 = [tmp.error, tmp4];
+        const LegacyText = native.LegacyText;
+        const merged1 = Object.assign(errorProps);
+        tmp14Result = metroImportDefault(LegacyText, obj4);
       }
-      source = darkSource;
-      obj = shared;
+      items[1] = tmp14Result;
+      return metroImportAll(hasOwnProperty, obj2);
+    } else {
+      if (null == source) {
+        const obj = shared;
+        if (obj.isThemeLight(this.context.theme)) {
+          darkSource = tmp2;
+        }
+        source = darkSource;
+      }
+      const obj5 = { source, style: tmp3, resizeMode: "contain" };
+      return metroImportDefault(metroRequire, obj5);
     }
-    const obj5 = { source, style: tmp3, resizeMode: "contain" };
-    return React5(timestampProducer, obj5);
   }
-};
-prototype["render"] = function render() {
-  const obj = { style: null, children: null };
-  const items = [closure_9(this.context).wrapper, this.props.wrapperStyles];
-  obj.style = items;
-  const items1 = [this.renderIcon(), this.props.children, this.renderLabel(), this.renderText()];
-  obj.children = items1;
-  return closure_1_8(hasOwnProperty, obj);
-};
-IconLabelBlock.contextType = fn(4589).ThemeContext;
-const size = fn(2);
+  render() {
+    let items;
+    let items1;
+    const obj = { style: items, children: items1 };
+    items = [closure_9(this.context).wrapper, this.props.wrapperStyles];
+    items1 = [this.renderIcon(), this.props.children, this.renderLabel(), this.renderText()];
+    return metroImportAll(hasOwnProperty, obj);
+  }
+}
+const prototype = IconLabelBlock.prototype;
+IconLabelBlock.contextType = native2.ThemeContext;
 const result = size.fileFinishedImporting("components_native/common/IconLabelBlock.tsx");
 
 export default IconLabelBlock;

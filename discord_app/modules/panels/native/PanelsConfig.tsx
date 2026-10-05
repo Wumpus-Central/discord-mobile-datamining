@@ -17,24 +17,22 @@ const obj = {
   restSpeedThreshold: 0.001,
   restDisplacementThreshold: 0.001,
 };
+const obj2 = { damping: 30 };
 const merged = Object.assign(obj);
+const obj3 = { damping: 20 };
 const merged1 = Object.assign(obj);
 const obj4 = { duration: 250, easing: native.STANDARD_EASING };
 const obj5 = { duration: 200, easing: native.STANDARD_EASING };
 const obj6 = {
   swipeSidePanelOpen: { duration: 250, easing: native.DECELERATED_EASING },
-  swipeSidePanelClose: null,
-  nonSwipeSidePanelOpen: null,
-  nonSwipeSidePanelClose: null,
+  swipeSidePanelClose: { duration: 200, easing: native.DECELERATED_EASING },
+  nonSwipeSidePanelOpen: obj4,
+  nonSwipeSidePanelClose: obj5,
   touchSlopForPanGesture: 8,
   minFlingVelocityX: 240,
 };
-const obj2 = { damping: 30 };
-const obj3 = { damping: 20 };
-const obj7 = { duration: 250, easing: native.DECELERATED_EASING };
-obj6.swipeSidePanelClose = { duration: 200, easing: native.DECELERATED_EASING };
-obj6.nonSwipeSidePanelOpen = obj4;
-obj6.nonSwipeSidePanelClose = obj5;
+({ duration: 250, easing: native.DECELERATED_EASING });
+({ duration: 200, easing: native.DECELERATED_EASING });
 const result = size.fileFinishedImporting("modules/panels/native/PanelsConfig.tsx");
 
 export { isTimingConfig };

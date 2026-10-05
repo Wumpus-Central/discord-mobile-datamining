@@ -1,19 +1,27 @@
 // discord_app/modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Constants from "../../../../Constants.tsx";
 import useNavigatorBackHandlerDefault from "../../../../design/components/Navigator/native/useNavigatorBackHandler.native.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const Keyboard = fn(17).Keyboard;
-const NOOP = fn(1085).NOOP;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx");
+let importDefault;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+const Keyboard = react_native.Keyboard;
+const NOOP = Constants.NOOP;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = ref(576).c(4);
-      ref = noop.useRef(null);
-      importDefault = noop.useRef(false);
+      let first;
+      let ref;
+      let ref2;
+      let resetPending;
+      let tmp5;
+      let tmp6;
+      let obj = ref(576);
+      const cResult = obj.c(4);
+      ref = react.useRef(null);
+      importDefault = react.useRef(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(preventable) {
           if (preventable.preventable) {
@@ -33,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 hasEdits: true,
                 resetPending,
                 onConfirm() {
-                  closure_1.current = true;
+                  ref2.current = true;
                   preventable.goBack();
                 },
               };
@@ -42,14 +50,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         };
         cResult[0] = fn;
-        let first = fn;
+        first = fn;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { onBeforeGoBack: first };
         cResult[1] = obj2;
-        let tmp5 = obj2;
+        tmp5 = obj2;
       } else {
         tmp5 = cResult[1];
       }
@@ -58,45 +66,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { onGoBack, ref };
         cResult[2] = onGoBack;
         cResult[3] = obj3;
-        let tmp6 = obj3;
+        tmp6 = obj3;
       } else {
         tmp6 = cResult[3];
       }
       return tmp6;
     }
   : () => {
-      const ref = noop.useRef(null);
-      importDefault = noop.useRef(false);
-      let obj = {
-        onGoBack: useNavigatorBackHandlerDefault({
-          onBeforeGoBack(navigation) {
-            if (navigation.preventable) {
-              let current = ref2.current;
-              if (!current) {
-                const current2 = ref.current;
-                let hasUnsavedChangesResult;
-                if (current2 != null) {
-                  hasUnsavedChangesResult = current2.hasUnsavedChanges();
-                }
-                current = true !== hasUnsavedChangesResult;
-              }
-              if (!current) {
-                navigation.preventDefault();
-                Keyboard.dismiss();
-                const obj = {
-                  hasEdits: true,
-                  resetPending,
-                  onConfirm() {
-                    closure_1.current = true;
-                    navigation.goBack();
-                  },
-                };
-                ref2(dependencyMap[5])(obj);
-              }
-            }
-          },
-        }).onGoBack,
-        ref,
-      };
+      let ref2;
+      let resetPending;
+      const ref = react.useRef(null);
+      importDefault = react.useRef(false);
+      let obj = { onGoBack: useNavigatorBackHandlerDefault(obj2).onGoBack, ref };
       return obj;
     };
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx");
+
+export default tmp2;

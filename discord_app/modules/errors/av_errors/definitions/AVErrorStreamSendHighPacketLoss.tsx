@@ -5,12 +5,9 @@ import AVErrorContext from "../AVErrorContext.tsx";
 import AVErrorUtils from "../AVErrorUtils.tsx";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
 import StreamRTCConnectionStore from "../../../../stores/StreamRTCConnectionStore.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendHighPacketLoss.tsx");
-
-export const AVErrorStreamSendHighPacketLossDefinition = {
+const obj = {
   getActiveErrors() {
     const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
     if (null == currentUserActiveStream) {
@@ -18,9 +15,9 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
     } else if (0 === ApplicationStreamingStore.getViewerIds(currentUserActiveStream).length) {
       return null;
     } else {
-      const rTCConnection = StreamRTCConnectionStore.getRTCConnection(
-        StreamKeyUtils.encodeStreamKey(currentUserActiveStream),
-      );
+      const getRTCConnection = StreamRTCConnectionStore.getRTCConnection;
+      const obj4 = StreamKeyUtils;
+      const rTCConnection = getRTCConnection(obj4.encodeStreamKey(currentUserActiveStream));
       let mediaEngineConnectionId;
       if (rTCConnection != null) {
         mediaEngineConnectionId = rTCConnection.getMediaEngineConnectionId();
@@ -28,25 +25,26 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
       if (null == mediaEngineConnectionId) {
         return null;
       } else {
-        const accumulatedStatsWithMinDatapoints = AVErrorUtils.getAccumulatedStatsWithMinDatapoints(
+        const tmp9Result = AVErrorUtils;
+        const accumulatedStatsWithMinDatapoints = tmp9Result.getAccumulatedStatsWithMinDatapoints(
           mediaEngineConnectionId,
           currentUserActiveStream.ownerId,
         );
-        let tmp6 = null;
+        let tmp7 = null;
         if (null != accumulatedStatsWithMinDatapoints) {
+          let tmp3;
           if (10 < 100 * accumulatedStatsWithMinDatapoints.short.packetLossRate) {
             const obj2 = { type: AVError.AVError.STREAM_SEND_HIGH_PACKET_LOSS };
-            const tmp8Result3 = AVErrorContext;
-            const merged = Object.assign(
-              tmp8Result3.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(currentUserActiveStream)),
-            );
+            const getStreamErrorContext = AVErrorContext.getStreamErrorContext;
+            AVErrorContext;
+            const tmp9Result4 = StreamKeyUtils;
+            const merged = Object.assign(getStreamErrorContext(tmp9Result4.encodeStreamKey(currentUserActiveStream)));
             const items = [obj2];
-            const tmp3 = items;
-            const tmp8Result4 = StreamKeyUtils;
+            tmp3 = items;
           }
-          tmp6 = tmp3;
+          tmp7 = tmp3;
         }
-        return tmp6;
+        return tmp7;
       }
     }
   },
@@ -54,3 +52,6 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
     return "" + streamKey.streamKey + ":" + streamKey.mediaSessionId;
   },
 };
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendHighPacketLoss.tsx");
+
+export const AVErrorStreamSendHighPacketLossDefinition = obj;

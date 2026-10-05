@@ -1,17 +1,21 @@
 // discord_app/modules/premium/native/useStoreConnectionErrorAlert.tsx
-import util from "../../../intl/index.native.tsx";
+import intl3 from "../../../intl/index.native.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import IAPStore from "../../../stores/native/IAPStore.android.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/native/useStoreConnectionErrorAlert.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = stateFromStores(576).c(5);
+      let stateFromStores;
+      let tmp4;
+      let tmp5;
+      let tmp8;
+      let tmp9;
+      let obj = stateFromStores(576);
+      const cResult = obj.c(5);
+      const tmp = stateFromStores;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [IAPStore];
         const fn = function s() {
@@ -24,44 +28,52 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      let obj = stateFromStores(576);
-      stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
+      const tmpResult = tmp(504);
+      stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       if (cResult[2] !== stateFromStores) {
         const fn2 = function c() {
+          let intl;
+          let intl2;
           if (stateFromStores) {
-            const obj2 = { title: null, body: null };
-            const intl = util.intl;
-            obj2.title = intl.string(util.t["U+H+kd"]);
-            const intl2 = util.intl;
-            obj2.body = intl2.string(util.t.Q9OYlM);
-            AlertActionCreatorsDefault.show(obj2);
+            const obj = { title: intl.string(intl3.t["U+H+kd"]), body: intl2.string(intl3.t.Q9OYlM) };
+            const show = AlertActionCreatorsDefault.show;
+            AlertActionCreatorsDefault;
+            intl = intl3.intl;
+            intl2 = intl3.intl;
+            show(obj);
           }
         };
         const items1 = [stateFromStores];
         cResult[2] = stateFromStores;
         cResult[3] = fn2;
         cResult[4] = items1;
-        let tmp9 = items1;
-        let tmp8 = fn2;
+        tmp9 = items1;
+        tmp8 = fn2;
       } else {
         tmp8 = cResult[3];
         tmp9 = cResult[4];
       }
-      const effect = noop.useEffect(tmp8, tmp9);
-      const tmpResult = stateFromStores(504);
+      const effect = react.useEffect(tmp8, tmp9);
     }
   : () => {
+      let stateFromStores;
+      let obj = stateFromStores(504);
       const items = [IAPStore];
-      stateFromStores = stateFromStores(504).useStateFromStores(items, () => IAPStore.hasConnectionError());
+      stateFromStores = obj.useStateFromStores(items, () => IAPStore.hasConnectionError());
       const items1 = [stateFromStores];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
+        let intl;
+        let intl2;
         if (stateFromStores) {
-          const obj2 = { title: null, body: null };
-          const intl = util.intl;
-          obj2.title = intl.string(util.t["U+H+kd"]);
-          const intl2 = util.intl;
-          obj2.body = intl2.string(util.t.Q9OYlM);
-          AlertActionCreatorsDefault.show(obj2);
+          const obj = { title: intl.string(intl3.t["U+H+kd"]), body: intl2.string(intl3.t.Q9OYlM) };
+          const show = AlertActionCreatorsDefault.show;
+          AlertActionCreatorsDefault;
+          intl = intl3.intl;
+          intl2 = intl3.intl;
+          show(obj);
         }
       }, items1);
     };
+const result = size.fileFinishedImporting("modules/premium/native/useStoreConnectionErrorAlert.tsx");
+
+export default tmp2;

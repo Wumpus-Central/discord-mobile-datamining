@@ -1,76 +1,96 @@
 // discord_app/modules/forums/native/ForumChannelSearch.tsx
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import tracking_Tracking from "../tracking/Tracking.tsx";
 import ForumActionCreatorsDefault from "../ForumActionCreators.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import ForumSearchStore from "../ForumSearchStore.tsx";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+let channelId, navigation;
+
+const View = react_native.View;
+const jsx = Fragment.jsx;
 let closure_8 = createStyles.createStyles({
   inputContainer: { flexGrow: 1, marginLeft: 8 },
   cancelButtonContainer: { paddingLeft: 8 },
 });
-fn(558);
-const ReactCompilerGating = fn(558);
-const memoResult = noop.memo(
+const memo = react.memo;
+let ReactCompilerGating = ReactCompilerGating_mod;
+const memo2 = react.memo;
+const memoResult = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (channelId) => {
-        const cResult = channelId(route[7]).c(12);
+        let route;
+        const tmp = channelId;
+        let obj = channelId(route[7]);
+        const cResult = obj.c(12);
         channelId = channelId.channelId;
         const tmp4 = closure_8();
-        let obj = channelId(route[7]);
-        const navigation = channelId(route[8]).useNavigation();
-        let obj2 = channelId(route[8]);
-        route = channelId(route[8]).useRoute();
+        const obj2 = channelId(route[8]);
+        navigation = obj2.useNavigation();
+        const obj3 = channelId(route[8]);
+        route = obj3.useRoute();
         channelId(route[9]);
         if (cResult[0] === navigation) {
+          let tmp9;
+          let tmp10;
           if (cResult[1] === route) {
-            let tmp9 = cResult[2];
-            let tmp10 = cResult[3];
+            tmp9 = cResult[2];
+            tmp10 = cResult[3];
           }
-          const effect = noop.useEffect(tmp9, tmp10);
+          const effect = react.useEffect(tmp9, tmp10);
           if (tmp8) {
+            let tmp14;
+            let tmp16;
+            let tmp18;
             if (cResult[4] !== channelId) {
               const fn2 = function h() {
                 if (null != channelId) {
-                  const result = ForumActionCreatorsDefault.updateForumSearchQuery(tmp, null);
+                  const obj = ForumActionCreatorsDefault;
+                  const result = obj.updateForumSearchQuery(tmp, null);
                 }
               };
               cResult[4] = channelId;
               cResult[5] = fn2;
-              let tmp14 = fn2;
+              tmp14 = fn2;
             } else {
               tmp14 = cResult[5];
             }
             const _Symbol = Symbol;
+            const cancelButtonContainer = tmp4.cancelButtonContainer;
             if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
               const intl = tmp(tmp2[12]).intl;
-              const stringResult = intl.string(tmp(tmp2[12]).t["ETE/oC"]);
+              const stringResult = intl.string(tmp(route[12]).t["ETE/oC"]);
               cResult[6] = stringResult;
-              let tmp16 = stringResult;
+              tmp16 = stringResult;
             } else {
               tmp16 = cResult[6];
             }
             if (cResult[7] !== tmp14) {
-              const obj4 = { variant: "tertiary", size: "sm", text: tmp16, onPress: tmp14 };
-              const tmp20 = jsx(tmp(tmp2[13]).Button, { variant: "tertiary", size: "sm", text: tmp16, onPress: tmp14 });
+              const tmp20 = jsx(tmp(route[13]).Button, {
+                variant: "tertiary",
+                size: "sm",
+                text: tmp16,
+                onPress: tmp14,
+              });
               cResult[7] = tmp14;
               cResult[8] = tmp20;
-              let tmp18 = tmp20;
+              tmp18 = tmp20;
             } else {
               tmp18 = cResult[8];
             }
             if (cResult[9] === tmp4.cancelButtonContainer) {
+              let tmp21;
               if (cResult[10] === tmp18) {
-                let tmp21 = cResult[11];
+                tmp21 = cResult[11];
               }
               return tmp21;
             }
-            const obj5 = { style: tmp4.cancelButtonContainer, children: tmp18 };
-            const tmp24 = <View style={tmp4.cancelButtonContainer}>{tmp18}</View>;
+            const tmp24 = <View style={cancelButtonContainer}>{tmp18}</View>;
             cResult[9] = tmp4.cancelButtonContainer;
             cResult[10] = tmp18;
             cResult[11] = tmp24;
@@ -82,8 +102,9 @@ const memoResult = noop.memo(
         const fn = function u() {
           return () => {
             if (null != navigation) {
-              navigation.setOptions(channelId(route[10]).getDefaultChannelStackHeaderProps(navigation, closure_1_2));
-              const obj2 = channelId(route[10]);
+              const setOptions = navigation.setOptions;
+              const obj = channelId(route[10]);
+              setOptions(obj.getDefaultChannelStackHeaderProps(navigation, closure_1_2));
             }
           };
         };
@@ -94,61 +115,70 @@ const memoResult = noop.memo(
         cResult[3] = items;
         tmp10 = items;
         tmp9 = fn;
-        const obj3 = channelId(route[8]);
       }
     : (channelId) => {
+        let intl;
         channelId = channelId.channelId;
         let route;
         const tmp = closure_8();
-        const navigation = channelId(route[8]).useNavigation();
         let obj = channelId(route[8]);
-        route = channelId(route[8]).useRoute();
-        let obj2 = channelId(route[8]);
+        navigation = obj.useNavigation();
+        const obj2 = channelId(route[8]);
+        route = obj2.useRoute();
         const items = [navigation, route];
-        const canSearchForumPostsByChannelId = channelId(route[9]).useCanSearchForumPostsByChannelId(channelId);
-        const effect = noop.useEffect(
+        const obj3 = channelId(route[9]);
+        const canSearchForumPostsByChannelId = obj3.useCanSearchForumPostsByChannelId(channelId);
+        const effect = react.useEffect(
           () => () => {
             if (null != navigation) {
-              navigation.setOptions(channelId(route[10]).getDefaultChannelStackHeaderProps(navigation, closure_1_2));
-              const obj2 = channelId(route[10]);
+              const setOptions = navigation.setOptions;
+              const obj = channelId(route[10]);
+              setOptions(obj.getDefaultChannelStackHeaderProps(navigation, closure_1_2));
             }
           },
           items,
         );
         let tmp8 = null;
         if (canSearchForumPostsByChannelId) {
-          const obj4 = { style: tmp.cancelButtonContainer, children: null };
-          const obj5 = { variant: "tertiary", size: "sm", text: null, onPress: null };
-          const intl = tmp2(tmp3[12]).intl;
-          obj5.text = intl.string(tmp2(tmp3[12]).t["ETE/oC"]);
-          obj5.onPress = function onPress() {
-            if (null != channelId) {
-              const result = ForumActionCreatorsDefault.updateForumSearchQuery(tmp, null);
-            }
-          };
-          obj4.children = jsx(tmp2(tmp3[13]).Button, { variant: "tertiary", size: "sm", text: null, onPress: null });
+          ({
+            variant: "tertiary",
+            size: "sm",
+            text: intl.string(channelId(route[12]).t["ETE/oC"]),
+            onPress() {
+              if (null != channelId) {
+                const obj = ForumActionCreatorsDefault;
+                const result = obj.updateForumSearchQuery(tmp, null);
+              }
+            },
+          });
+          const Button = tmp2(tmp3[13]).Button;
+          intl = tmp2(tmp3[12]).intl;
           tmp8 = <View style={tmp.cancelButtonContainer}>{null}</View>;
         }
         return tmp8;
       },
 );
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/forums/native/ForumChannelSearch.tsx");
-
-export const ForumChannelCloseSearchButton = memoResult;
-export const ForumChannelSearchInput = noop.memo(
+ReactCompilerGating = ReactCompilerGating_mod;
+const memo2Result = memo2(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (channelId) => {
-        const cResult = channelId(576).c(25);
+        let first;
+        let tmp11;
+        let tmp14;
+        let tmp8;
+        let tmp9;
+        const tmp = channelId;
+        let obj = channelId(576);
+        const cResult = obj.c(25);
         channelId = channelId.channelId;
         const guildId = channelId.guildId;
         closure_8();
-        let obj = channelId(576);
-        const canSearchForumPostsByChannelId = channelId(13099).useCanSearchForumPostsByChannelId(channelId);
+        let obj2 = channelId(13099);
+        const canSearchForumPostsByChannelId = obj2.useCanSearchForumPostsByChannelId(channelId);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ForumSearchStore];
           cResult[0] = items;
-          let first = items;
+          first = items;
         } else {
           first = cResult[0];
         }
@@ -164,29 +194,28 @@ export const ForumChannelSearchInput = noop.memo(
           cResult[1] = channelId;
           cResult[2] = fn;
           cResult[3] = items1;
-          let tmp9 = items1;
-          let tmp8 = fn;
+          tmp9 = items1;
+          tmp8 = fn;
         } else {
           tmp8 = cResult[2];
           tmp9 = cResult[3];
         }
-        let obj2 = channelId(13099);
-        const stateFromStores = channelId(504).useStateFromStores(first, tmp8, tmp9);
+        const tmpResult = tmp(504);
+        const stateFromStores = tmpResult.useStateFromStores(first, tmp8, tmp9);
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const items2 = [ChannelStore];
           cResult[4] = items2;
-          let tmp11 = items2;
+          tmp11 = items2;
         } else {
           tmp11 = cResult[4];
         }
         if (cResult[5] !== channelId) {
           class B {
             constructor() {
-              tmp2 = null != channelId;
+              let tmp2 = null != channelId;
               if (tmp2) {
-                tmp3 = closure_5;
-                channel = closure_5.getChannel(tmp);
-                flag = undefined;
+                const channel = ChannelStore.getChannel(tmp);
+                let flag;
                 if (channel != null) {
                   flag = channel.isGameInvitesChannel();
                 }
@@ -202,15 +231,14 @@ export const ForumChannelSearchInput = noop.memo(
           cResult[5] = channelId;
           cResult[6] = B;
           cResult[7] = items3;
-          let tmp14 = items3;
+          tmp14 = items3;
         } else {
           class B {
             constructor() {
-              tmp2 = null != channelId;
+              let tmp2 = null != channelId;
               if (tmp2) {
-                tmp3 = closure_5;
-                channel = closure_5.getChannel(tmp);
-                flag = undefined;
+                const channel = ChannelStore.getChannel(tmp);
+                let flag;
                 if (channel != null) {
                   flag = channel.isGameInvitesChannel();
                 }
@@ -224,16 +252,15 @@ export const ForumChannelSearchInput = noop.memo(
           }
           tmp14 = cResult[7];
         }
-        const tmpResult = channelId(504);
-        const stateFromStores1 = channelId(504).useStateFromStores(tmp11, B, tmp14);
+        const tmpResult2 = tmp(504);
+        const stateFromStores1 = tmpResult2.useStateFromStores(tmp11, B, tmp14);
         if (canSearchForumPostsByChannelId) {
           class B {
             constructor() {
-              tmp2 = null != channelId;
+              let tmp2 = null != channelId;
               if (tmp2) {
-                tmp3 = closure_5;
-                channel = closure_5.getChannel(tmp);
-                flag = undefined;
+                const channel = ChannelStore.getChannel(tmp);
+                let flag;
                 if (channel != null) {
                   flag = channel.isGameInvitesChannel();
                 }
@@ -248,11 +275,10 @@ export const ForumChannelSearchInput = noop.memo(
           if (null != stateFromStores) {
             class B {
               constructor() {
-                tmp2 = null != channelId;
+                let tmp2 = null != channelId;
                 if (tmp2) {
-                  tmp3 = closure_5;
-                  channel = closure_5.getChannel(tmp);
-                  flag = undefined;
+                  const channel = ChannelStore.getChannel(tmp);
+                  let flag;
                   if (channel != null) {
                     flag = channel.isGameInvitesChannel();
                   }
@@ -265,16 +291,15 @@ export const ForumChannelSearchInput = noop.memo(
               }
             }
             const fn2 = function _() {
-              let tmp2 = null != guildId;
-              if (tmp2) {
-                tmp2 = null != channelId;
-              }
+              const tmp2 = null != guildId && null != channelId;
               if (tmp2) {
                 const obj2 = { guildId, channelId };
-                const result = tracking_Tracking.trackForumSearchCleared(obj2);
+                const obj = tracking_Tracking;
+                const result = obj.trackForumSearchCleared(obj2);
               }
               if (null != channelId) {
-                const result1 = ForumActionCreatorsDefault.updateForumSearchQuery(tmp8, "");
+                const obj3 = ForumActionCreatorsDefault;
+                const result1 = obj3.updateForumSearchQuery(tmp8, "");
               }
             };
             cResult[8] = channelId;
@@ -285,14 +310,17 @@ export const ForumChannelSearchInput = noop.memo(
         return null;
       }
     : (channelId) => {
+        let placeholder;
         channelId = channelId.channelId;
         ({ guildId: importDefault, placeholder } = channelId);
+        let tmp2 = channelId;
         const tmp = closure_8();
-        const canSearchForumPostsByChannelId = channelId(13099).useCanSearchForumPostsByChannelId(channelId);
         let obj = channelId(13099);
+        const canSearchForumPostsByChannelId = obj.useCanSearchForumPostsByChannelId(channelId);
+        let obj2 = channelId(504);
         const items = [ForumSearchStore];
         const items1 = [channelId];
-        const stateFromStores = channelId(504).useStateFromStores(
+        const stateFromStores = obj2.useStateFromStores(
           items,
           () => {
             let searchQuery = null;
@@ -309,45 +337,20 @@ export const ForumChannelSearchInput = noop.memo(
         if (canSearchForumPostsByChannelId) {
           tmp8Result = null;
           if (null != stateFromStores) {
-            let obj3 = { style: tmp.inputContainer, children: null };
-            const obj4 = {
-              size: "sm",
-              defaultValue: stateFromStores,
-              onChange(query) {
-                if (null != channelId) {
-                  const result = ForumActionCreatorsDefault.updateForumSearchQuery(tmp, query);
-                }
-              },
-              placeholder: null,
-              autoFocus: null,
-              onClear: null,
-              grow: false,
-            };
-            if (null != placeholder) {
-              obj4.placeholder = placeholder;
-              obj4.autoFocus = 0 === stateFromStores.length;
-              obj4.onClear = function onClear() {
-                let tmp2 = null != guildId;
-                if (tmp2) {
-                  tmp2 = null != channelId;
-                }
-                if (tmp2) {
-                  const obj2 = { guildId, channelId };
-                  const result = tracking_Tracking.trackForumSearchCleared(obj2);
-                }
-                if (null != channelId) {
-                  const result1 = ForumActionCreatorsDefault.updateForumSearchQuery(tmp8, "");
-                }
-              };
-              obj3.children = <tmp10 {...obj4} />;
-              tmp8Result = <View {...obj3} />;
-            } else {
+            const SearchField = tmp2(6547).SearchField;
+            if (null == placeholder) {
               const intl = tmp2(1126).intl;
+              const string = intl.string;
               const t = tmp2(1126).t;
-              intl.string(tmp6 ? t["5h0QOP"] : t.Iy2gnS);
+              placeholder = string(tmp6 ? t["5h0QOP"] : t.Iy2gnS);
             }
+            tmp8Result = <View style={tmp.inputContainer}>{null}</View>;
           }
         }
         return tmp8Result;
       },
 );
+let result = size.fileFinishedImporting("modules/forums/native/ForumChannelSearch.tsx");
+
+export const ForumChannelCloseSearchButton = memoResult;
+export const ForumChannelSearchInput = memo2Result;

@@ -11,13 +11,14 @@ export const closeConversationsAndJumpToMessage = function closeConversationsAnd
   messageId,
   conversationId,
 ) {
-  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+  const obj = RootNavigationRef;
+  const rootNavigationRef = obj.getRootNavigationRef();
   if (rootNavigationRef != null) {
     rootNavigationRef.goBack();
   }
-  const result = ConversationsActionCreators.setSelectedConversation(channelId, conversationId, { shouldJump: false });
   const tmpResult = ConversationsActionCreators;
-  transitionToChannel.transitionToMessage(channelId, messageId, { navigationReplace: true });
+  const result = tmpResult.setSelectedConversation(channelId, conversationId, { shouldJump: false });
   const tmpResult2 = transitionToChannel;
+  tmpResult2.transitionToMessage(channelId, messageId, { navigationReplace: true });
 };
 export const ConversationNavigatorScreens = { LIST: "conversation_list", FOCUS: "conversation_focus" };

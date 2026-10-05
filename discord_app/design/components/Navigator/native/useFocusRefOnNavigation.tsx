@@ -1,34 +1,36 @@
 // discord_app/design/components/Navigator/native/useFocusRefOnNavigation.tsx
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/Navigator/native/useFocusRefOnNavigation.tsx");
+let dependencyMap, inputRef;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (inputRef) => {
-      const cResult = inputRef(576).c(5);
+      let closure_1;
+      let tmp = inputRef;
+      let obj = inputRef(576);
+      const cResult = obj.c(5);
       inputRef = inputRef.inputRef;
       const enabled = inputRef.enabled;
       dependencyMap = tmp4;
-      const obj = inputRef(576);
-      const isFocused = inputRef(1491).useIsFocused();
+      const tmpResult = tmp(1491);
+      const isFocused = tmpResult.useIsFocused();
       if (cResult[0] === (undefined === enabled || enabled)) {
         if (cResult[1] === inputRef) {
+          let tmp6;
+          let tmp7;
           if (cResult[2] === isFocused) {
-            let tmp6 = cResult[3];
-            let tmp7 = cResult[4];
+            tmp6 = cResult[3];
+            tmp7 = cResult[4];
           }
           const effect = isFocused.useEffect(tmp6, tmp7);
         }
       }
       const fn = function u() {
-        inputRef(closure_1[4]).runAfterInteractions(() => {
-          let tmp = closure_1_1;
-          if (closure_1_1) {
-            tmp = isFocused;
-          }
+        const obj = inputRef(closure_1[4]);
+        const ref = obj.runAfterInteractions(() => {
+          const tmp = closure_1_1 && isFocused;
           if (tmp) {
             const current = ref.current;
             if (current != null) {
@@ -55,14 +57,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (flag === undefined) {
         flag = true;
       }
-      const isFocused = inputRef(flag[3]).useIsFocused();
+      let obj = inputRef(flag[3]);
+      const isFocused = obj.useIsFocused();
       const items = [flag, inputRef, isFocused];
       const effect = isFocused.useEffect(() => {
-        inputRef(flag[4]).runAfterInteractions(() => {
-          let tmp = flag;
-          if (flag) {
-            tmp = isFocused;
-          }
+        const obj = inputRef(flag[4]);
+        const ref = obj.runAfterInteractions(() => {
+          const tmp = flag && isFocused;
           if (tmp) {
             const current = ref.current;
             if (current != null) {
@@ -75,3 +76,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
       }, items);
     };
+const result = size.fileFinishedImporting("design/components/Navigator/native/useFocusRefOnNavigation.tsx");
+
+export default tmp2;

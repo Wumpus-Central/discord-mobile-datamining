@@ -1,5 +1,6 @@
 // discord_app/modules/activity_status/native/PresenceActivityStatus.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import Constants from "../../../Constants.tsx";
 import AppsIcon2 from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
 import GameControllerIcon2 from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
@@ -9,16 +10,23 @@ import TvIcon from "../../../design/components/Icon/native/redesign/generated/Tv
 import ActivityStatusTextDefault from "ActivityStatusText.tsx";
 import conjurePresenceActivity from "../../conjure/presence/conjurePresenceActivity.tsx";
 import getActivityStatusTextDefault from "../getActivityStatusText.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
 function getActivityStatusIcon(activity) {
+  let AppsIcon;
   const flag = false;
-  let tmp = dependencyMap;
   if (!isEmbeddedActivityDefault(activity)) {
+    let GameControllerIcon;
+    const obj = conjurePresenceActivity;
     if (!obj.isConjurePresenceActivity(activity)) {
       if (activity.type === ActivityTypes.PLAYING) {
-        let GameControllerIcon = GameControllerIcon2.GameControllerIcon;
+        GameControllerIcon = GameControllerIcon2.GameControllerIcon;
       } else if (activity.type === ActivityTypes.LISTENING) {
         GameControllerIcon = MusicIcon.MusicIcon;
       } else {
@@ -32,30 +40,34 @@ function getActivityStatusIcon(activity) {
         }
         GameControllerIcon = TvIcon.TvIcon;
       }
-      return GameControllerIcon;
     }
-    obj = conjurePresenceActivity;
+    return GameControllerIcon;
   }
   if (flag) {
-    tmp = GameControllerIcon2;
-    let AppsIcon = tmp.GameControllerIcon;
+    AppsIcon = GameControllerIcon2.GameControllerIcon;
   } else {
     AppsIcon = AppsIcon2.AppsIcon;
   }
+  GameControllerIcon = AppsIcon;
 }
-const ActivityTypes = fn(1085).ActivityTypes;
-const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/activity_status/native/PresenceActivityStatus.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const ActivityTypes = Constants.ActivityTypes;
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = Fragment);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(16);
+      let activity;
+      let hideIcon;
+      let hideText;
+      let iconStyle;
+      let items;
+      let maxFontSizeMultiplier;
+      let textStyle;
+      let tmp5;
+      let tmp8;
+      const obj = react2;
+      const cResult = obj.c(16);
       ({ activity, iconStyle, textStyle, maxFontSizeMultiplier, hideIcon, hideText } = arg0);
       if (undefined !== hideIcon && hideIcon) {
-        if (tmp4) {
+        if (undefined !== hideText && hideText) {
           return null;
         }
       }
@@ -63,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp7 = getActivityStatusTextDefault(activity, true);
         cResult[0] = activity;
         cResult[1] = tmp7;
-        let tmp5 = tmp7;
+        tmp5 = tmp7;
       } else {
         tmp5 = cResult[1];
       }
@@ -72,31 +84,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp10 = getActivityStatusIcon(activity);
         cResult[2] = activity;
         cResult[3] = tmp10;
-        let tmp8 = tmp10;
+        tmp8 = tmp10;
       } else {
         tmp8 = cResult[3];
       }
       if (cResult[4] === tmp8) {
-        if (cResult[5] === tmp3) {
+        if (cResult[5] === (undefined !== hideIcon && hideIcon)) {
+          let tmp11;
           if (cResult[6] === iconStyle) {
-            let tmp11 = cResult[7];
+            tmp11 = cResult[7];
           }
-          if (cResult[8] === tmp4) {
+          if (cResult[8] === (undefined !== hideText && hideText)) {
             if (cResult[9] === maxFontSizeMultiplier) {
               if (cResult[10] === text) {
+                let tmp16;
                 if (cResult[11] === textStyle) {
-                  let tmp16 = cResult[12];
+                  tmp16 = cResult[12];
                 }
                 if (cResult[13] === tmp11) {
+                  let tmp20;
                   if (cResult[14] === tmp16) {
-                    let tmp20 = cResult[15];
+                    tmp20 = cResult[15];
                   }
                   return tmp20;
                 }
-                const obj2 = { children: null };
-                const items = [tmp11, tmp16];
-                obj2.children = items;
-                const tmp23 = timestampProducer(hasOwnProperty, obj2);
+                const obj2 = { children: items };
+                items = [tmp11, tmp16];
+                const tmp23 = metroRequire(hasOwnProperty, obj2);
                 cResult[13] = tmp11;
                 cResult[14] = tmp16;
                 cResult[15] = tmp23;
@@ -105,11 +119,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let tmp17 = !tmp4;
-          if (!tmp4) {
+          if (tmp17) {
             const obj3 = { style: textStyle, maxFontSizeMultiplier, children: text };
-            tmp17 = React4(ActivityStatusTextDefault, obj3);
+            tmp17 = React3(ActivityStatusTextDefault, obj3);
           }
-          cResult[8] = tmp4;
+          cResult[8] = undefined !== hideText && hideText;
           cResult[9] = maxFontSizeMultiplier;
           cResult[10] = text;
           cResult[11] = textStyle;
@@ -117,13 +131,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp16 = tmp17;
         }
       }
-      let tmp12 = !tmp3;
-      if (!(undefined !== hideIcon && hideIcon)) {
-        tmp12 = null != tmp8;
-      }
+      let tmp12 = !tmp3 && null != tmp8;
       if (tmp12) {
         const obj4 = { icon: tmp8, style: iconStyle };
-        tmp12 = React4(ActivityStatusIconDefault, obj4);
+        tmp12 = React3(ActivityStatusIconDefault, obj4);
       }
       cResult[4] = tmp8;
       cResult[5] = undefined !== hideIcon && hideIcon;
@@ -132,6 +143,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = tmp12;
     }
   : (hideText) => {
+      let activity;
+      let hideIcon;
+      let iconStyle;
+      let maxFontSizeMultiplier;
+      let textStyle;
       ({ activity, hideIcon } = hideText);
       ({ iconStyle, textStyle, maxFontSizeMultiplier } = hideText);
       if (hideIcon === undefined) {
@@ -146,25 +162,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return null;
         }
       }
+      const text = getActivityStatusTextDefault(activity, true).text;
       const tmp3 = getActivityStatusIcon(activity);
-      let tmp6 = !hideIcon;
-      if (!hideIcon) {
-        tmp6 = null != tmp3;
-      }
+      let tmp6 = !hideIcon && null != tmp3;
       if (tmp6) {
         const obj = { icon: tmp3, style: iconStyle };
-        tmp6 = React4(ActivityStatusIconDefault, obj);
+        tmp6 = React3(ActivityStatusIconDefault, obj);
       }
       const children = [tmp6];
       let tmp9 = !flag;
-      if (!flag) {
-        const obj2 = {
-          style: textStyle,
-          maxFontSizeMultiplier,
-          children: getActivityStatusTextDefault(activity, true).text,
-        };
-        tmp9 = React4(ActivityStatusTextDefault, obj2);
+      if (tmp9) {
+        const obj2 = { style: textStyle, maxFontSizeMultiplier, children: text };
+        tmp9 = React3(ActivityStatusTextDefault, obj2);
       }
       children[1] = tmp9;
-      return timestampProducer(hasOwnProperty, { children });
+      return metroRequire(hasOwnProperty, { children });
     };
+const result = size.fileFinishedImporting("modules/activity_status/native/PresenceActivityStatus.tsx");
+
+export default tmp4;

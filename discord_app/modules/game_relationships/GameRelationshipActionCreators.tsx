@@ -1,204 +1,158 @@
 // discord_app/modules/game_relationships/GameRelationshipActionCreators.tsx
-import util from "../../intl/index.native.tsx";
+import intl3 from "../../intl/index.native.tsx";
 import shared from "../../design/shared.tsx";
 import V6OrEarlierAPIError from "../../errors/index.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
+let closure_4;
+let hasOwnProperty;
 function showRequestFailedAlert(arg0) {
+  let intl;
   const aPIError = new V6OrEarlierAPIError.APIError(arg0);
   let anyErrorMessage = aPIError.getAnyErrorMessage();
-  const obj = { title: null, body: null };
-  const intl = util.intl;
-  obj.title = intl.string(util.t["328j/I"]);
+  obj = { title: intl.string(intl3.t["328j/I"]), body: anyErrorMessage };
+  const show = AlertActionCreatorsDefault.show;
+  AlertActionCreatorsDefault;
+  intl = intl3.intl;
   if (null == anyErrorMessage) {
-    const intl2 = util.intl;
-    anyErrorMessage = intl2.string(util.t.fEptJP);
+    const intl2 = intl3.intl;
+    anyErrorMessage = intl2.string(intl3.t.fEptJP);
   }
-  obj.body = anyErrorMessage;
-  AlertActionCreatorsDefault.show(obj);
+  show(obj);
 }
 function deleteGameRelationship() {
-  const self = this;
-  const apply = closure_8.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }
-let closure_8 = async function _deleteGameRelationship(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp7 === 3) {
-    if (arg0 === 1) {
+let obj = function _deleteGameRelationship() {
+  obj = _asyncToGenerator(async (arg0) => {
+    let c0;
+    let c1;
+    let c2;
+    let closure_0 = arg0;
+    const HTTP = closure_130_0(closure_130_2[5]).HTTP;
+    const obj5 = { url: closure_130_4.USER_GAME_RELATIONSHIP(c0, c1), oldFormErrors: true, rejectWithError: false };
+    const del = HTTP.del;
+    let delResult = del(obj5);
+    await delResult;
+    if (2 === c5) {
+      delResult = closure_3;
+      let c4 = 0;
+      closure_130_6(closure_3);
+    } else if (arg0 === 1) {
+      let c6 = 3;
       throw value;
     } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+      c4 = 0;
+      c6 = 3;
+      obj = { value, done: true };
+      return obj;
     } else {
-      return { value: "IconComponent", done: null };
+      tmp();
+      c4 = 0;
     }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp3;
-          closure_1 = tmp5;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          ({ userId: closure_129_0, applicationId: closure_129_1, onSuccess: closure_129_2 } = closure_0);
-          c5 = 1;
-          c6 = 1;
-          return { value: "Set", done: true };
-        }
-      } else if (1 === tmp8) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          c4 = 1;
-          const HTTP = closure_130_0(closure_130_2[5]).HTTP;
-          const obj5 = {
-            url: closure_130_4.USER_GAME_RELATIONSHIP(closure_129_0, closure_129_1),
-            oldFormErrors: true,
-            rejectWithError: false,
-          };
-          c5 = 3;
-          c6 = 1;
-          const obj6 = { value: HTTP.del(obj5), done: false };
-          return obj6;
-        }
-      } else {
-        if (2 === tmp8) {
-          c4 = 0;
-          closure_130_6(closure_3);
-          c6 = 3;
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          closure_129_2();
-          c4 = 0;
-        }
-        c4 = 0;
-        c6 = 3;
-        const obj = { value, done: true };
-        return obj;
-      }
-    } catch (tmp25) {
-      closure_3 = tmp25;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp25;
-      } else {
-        c5 = tmp;
-      }
-    }
-  }
-};
-let closure_9 = async function _removeGameFriend() {
-  await closure_130_7({
-    userId: closure_129_0,
-    applicationId: closure_129_1,
-    onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(4729).AccessibilityAnnouncer;
-      const intl = closure_1_0(1126).intl;
-      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1126).t.zRf8cO));
-    },
+    await "IconComponent";
+    let closure_2 = tmp;
+    ({ userId: c0, applicationId: c1, onSuccess: c2 } = closure_0);
+    return "Set";
   });
-  await "IconComponent";
-  closure_1 = tmp2;
-  ({ userId: closure_129_0, applicationId: closure_129_1 } = closure_0);
-  return "Set";
+  return obj(...arguments);
 };
-let closure_10 = async function _cancelGameFriendRequest() {
-  await closure_130_7({
-    userId: closure_129_0,
-    applicationId: closure_129_1,
-    onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(4729).AccessibilityAnnouncer;
-      const intl = closure_1_0(1126).intl;
-      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1126).t.XMf21q));
-    },
+obj = function _removeGameFriend() {
+  obj = _asyncToGenerator(async (userId) => {
+    let c0;
+    let c1;
+    let c3;
+    let c4;
+    let closure_2;
+    const obj5 = {
+      userId,
+      applicationId,
+      onSuccess() {
+        const AccessibilityAnnouncer = userId(closure_1_2[6]).AccessibilityAnnouncer;
+        const announce = AccessibilityAnnouncer.announce;
+        const intl = userId(closure_1_2[4]).intl;
+        announce(intl.string(userId(closure_1_2[4]).t.zRf8cO));
+      },
+    };
+    await closure_130_7(obj5);
+    await "IconComponent";
+    ({ userId: c0, applicationId: c1 } = closure_0);
+    return "Set";
   });
-  await "IconComponent";
-  closure_1 = tmp2;
-  ({ userId: closure_129_0, applicationId: closure_129_1 } = closure_0);
-  return "Set";
+  return obj(...arguments);
 };
-const Constants = fn(1085);
+obj = function _cancelGameFriendRequest() {
+  obj = _asyncToGenerator(async (userId) => {
+    let c0;
+    let c1;
+    let c3;
+    let c4;
+    let closure_2;
+    const obj5 = {
+      userId,
+      applicationId,
+      onSuccess() {
+        const AccessibilityAnnouncer = userId(closure_1_2[6]).AccessibilityAnnouncer;
+        const announce = AccessibilityAnnouncer.announce;
+        const intl = userId(closure_1_2[4]).intl;
+        announce(intl.string(userId(closure_1_2[4]).t.XMf21q));
+      },
+    };
+    await closure_130_7(obj5);
+    await "IconComponent";
+    ({ userId: c0, applicationId: c1 } = closure_0);
+    return "Set";
+  });
+  return obj(...arguments);
+};
 ({ Endpoints: closure_4, RelationshipTypes: hasOwnProperty } = Constants);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/game_relationships/GameRelationshipActionCreators.tsx");
-
-export default {
+obj = {
   removeGameFriend() {
-    const self = this;
-    const apply = closure_9.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+    return obj(...arguments);
   },
   acceptGameFriendRequest(arg0) {
+    let applicationId;
+    let userId;
     function onSuccess() {}
     ({ userId, applicationId } = arg0);
+    const FRIEND = constants.FRIEND;
     const HTTP = onSuccess(1282).HTTP;
     const request = {
       url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId),
-      body: { type: constants.FRIEND },
+      body: { type: FRIEND },
       oldFormErrors: true,
       rejectWithError: false,
     };
     const putResult = HTTP.put(request);
-    return HTTP.put(request)
-      .then(() => {
-        const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
-        const intl = util.intl;
-        AccessibilityAnnouncer.announce(intl.string(util.t.taJiuc));
-      })
-      .catch((error) => {
-        const aPIError = new onSuccess(5312).APIError(error);
-        let anyErrorMessage = aPIError.getAnyErrorMessage();
-        const obj = { title: null, body: null };
-        const intl = onSuccess(1126).intl;
-        obj.title = intl.string(onSuccess(1126).t["328j/I"]);
-        if (null == anyErrorMessage) {
-          const intl2 = onSuccess(1126).intl;
-          anyErrorMessage = intl2.string(onSuccess(1126).t.fEptJP);
-        }
-        obj.body = anyErrorMessage;
-        AlertActionCreatorsDefault.show(obj);
-        return Promise.reject(error);
-      });
+    const nextPromise = putResult.then(() => {
+      const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+      const announce = AccessibilityAnnouncer.announce;
+      const intl = intl3.intl;
+      announce(intl.string(intl3.t.taJiuc));
+    });
+    return nextPromise.catch((error) => {
+      let intl;
+      const aPIError = new onSuccess(dependencyMap[2]).APIError(error);
+      let anyErrorMessage = aPIError.getAnyErrorMessage();
+      obj = { title: intl.string(onSuccess(dependencyMap[4]).t["328j/I"]), body: anyErrorMessage };
+      const show = AlertActionCreatorsDefault.show;
+      AlertActionCreatorsDefault;
+      intl = onSuccess(dependencyMap[4]).intl;
+      if (null == anyErrorMessage) {
+        const intl2 = onSuccess(dependencyMap[4]).intl;
+        anyErrorMessage = intl2.string(onSuccess(dependencyMap[4]).t.fEptJP);
+      }
+      show(obj);
+      return Promise.reject(error);
+    });
   },
   cancelGameFriendRequest() {
-    const self = this;
-    const apply = closure_10.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+    return obj(...arguments);
   },
 };
+const result = size.fileFinishedImporting("modules/game_relationships/GameRelationshipActionCreators.tsx");
+
+export default obj;

@@ -1,26 +1,30 @@
 // discord_app/modules/media_engine/InputWatcher.tsx
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import logger_Logger from "../../../discord_common/js/packages/logger/Logger.tsx";
+import Constants from "../go_live/Constants.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const require = fn;
-let closure_5 = fn(4932).WINDOWS_SETTINGS_SOUND_DEVICE_DEEPLINK_SEMVER;
-const logger = new fn(4).Logger("InputWatcher");
-const size = fn(2);
+let c4, c5;
+
+let closure_5 = Constants.WINDOWS_SETTINGS_SOUND_DEVICE_DEEPLINK_SEMVER;
+const logger = new logger_Logger.Logger("InputWatcher");
 const result = size.fileFinishedImporting("modules/media_engine/InputWatcher.tsx");
 class InputWatcher {
-  constructor(arg0, arg1) {
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
-    timeout = new closure_0(closure_2[4]).Timeout();
+  constructor(mediaEngine, mediaEngineStore) {
+    let obj = Object.create(new.target.prototype);
+    const timeout = new obj(2046).Timeout();
     obj.stateChangeTimeout = timeout;
     obj.inputDetected = undefined;
     obj.lastUpdateTime = performance.now();
-    closure_129_0 = obj;
-    obj.fetchInputDeviceOSConfig = closure_4(async () => {
+    obj.fetchInputDeviceOSConfig = _asyncToGenerator(async () => {
+      let _Promise;
+      let _default;
+      let closure_1;
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp6 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -30,7 +34,12 @@ class InputWatcher {
           return { value: "IconComponent", done: null };
         }
       } else {
+        let osVolume;
+        let closure_2;
         try {
+          let guid;
+          let tmp;
+          let osMuted;
           c5 = 2;
           if (0 === c4) {
             if (arg0 === 1) {
@@ -41,113 +50,119 @@ class InputWatcher {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              closure_128_0 = undefined;
-              closure_128_1 = undefined;
-              closure_128_2 = undefined;
-              closure_128_3 = undefined;
-              closure_128_4 = undefined;
-              if (obj10.isWindows()) {
-                const tmp36 = tmp3(tmp45[8]);
+              guid = undefined;
+              tmp = undefined;
+              closure_2 = undefined;
+              osVolume = undefined;
+              osMuted = undefined;
+              const obj8 = _Promise(closure_2[6]);
+              const tmp50 = _Promise;
+              if (obj8.isWindows()) {
+                const satisfies = tmp(closure_2[7]).satisfies;
+                const tmp30 = tmp(closure_2[7]);
+                const tmp33 = tmp(closure_2[8]);
                 let release;
-                if (tmp36 != null) {
-                  release = tmp36.os.release;
+                if (tmp33 != null) {
+                  release = tmp33.os.release;
                 }
-                if (obj6.satisfies(release, c5)) {
-                  let v0 = 1;
+                if (satisfies(release, c5)) {
+                  osVolume = 1;
                   const mediaEngineStore = obj.mediaEngineStore;
                   const mediaEngineStore2 = obj.mediaEngineStore;
                   const inputDeviceId = mediaEngineStore.getInputDeviceId();
-                  const tmp42 = mediaEngineStore2.getInputDevices()[inputDeviceId];
-                  let guid;
-                  if (tmp42 != null) {
-                    guid = tmp42.guid;
+                  const tmp39 = mediaEngineStore2.getInputDevices()[inputDeviceId];
+                  guid = undefined;
+                  if (tmp39 != null) {
+                    guid = tmp39.guid;
                   }
-                  closure_128_0 = guid;
                   if (null != guid) {
                     if ("" !== guid) {
                       c4 = 2;
                       c5 = 1;
-                      const obj4 = { value: logger(tmp45[9]).default.ensureModule("discord_voice"), done: false };
+                      const obj4 = { value: _default.ensureModule("discord_voice"), done: false };
+                      _default = tmp50(closure_2[9]).default;
                       return obj4;
                     }
                   }
-                  v0 = 0;
-                  v0 = 0;
-                  c5 = 3;
-                  const obj5 = { value, done: true };
-                  return obj5;
+                  osVolume = 0;
                 }
-                obj6 = tmp3(tmp45[7]);
               }
-              obj10 = logger(tmp45[6]);
             }
-          } else if (1 === tmp7) {
-            v0 = 0;
-            closure_128_5 = tmp45;
+          } else if (1 === c4) {
+            osVolume = 0;
+            closure_5 = closure_2;
+            _Promise = logger;
             const _HermesInternal = HermesInternal;
-            logger.warn("Failed to get device OS volume and/or mute state: " + closure_128_5);
-          } else if (2 === tmp7) {
+            logger.warn("Failed to get device OS volume and/or mute state: " + closure_5);
+          } else if (2 === c4) {
             if (arg0 === 1) {
               c5 = 3;
               throw value;
             } else if (arg0 === 2) {
-              v0 = 0;
+              osVolume = 0;
               c5 = 3;
-              const obj7 = { value, done: true };
-              return obj7;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
+              _Promise = Promise;
               const mediaEngine = closure_129_0.mediaEngine;
-              const items = [mediaEngine.getDeviceOSVolume(closure_128_0)];
+              const items = [mediaEngine.getDeviceOSVolume(guid)];
               const mediaEngine2 = closure_129_0.mediaEngine;
-              items[1] = mediaEngine2.getDeviceOSMuted(closure_128_0);
+              items[1] = mediaEngine2.getDeviceOSMuted(guid);
               c4 = 3;
               c5 = 1;
-              const obj8 = { value: Promise.all(items), done: false };
-              return obj8;
+              const obj6 = { value: all(items), done: false };
+              return obj6;
             }
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
-          } else if (arg0 !== 2) {
-            closure_128_1 = value;
-            closure_128_2 = v0(closure_128_1, 2);
-            closure_128_3 = closure_128_2[0];
-            closure_128_4 = closure_128_2[1];
-            obj = tmp3(tmp45[10]);
-            const obj9 = {
-              type: "AUDIO_INPUT_DEVICE_OS_CONFIG_FETCHED",
-              osVolume: closure_128_3,
-              osMuted: closure_128_4,
-            };
-            obj.dispatch(obj9);
+          } else if (arg0 === 2) {
+            osVolume = 0;
+            c5 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else {
+            tmp = value;
+            closure_2 = osVolume(tmp, 2);
+            osVolume = closure_2[0];
+            osMuted = closure_2[1];
+            _Promise = tmp(closure_2[10]);
+            obj = { type: "AUDIO_INPUT_DEVICE_OS_CONFIG_FETCHED", osVolume, osMuted };
+            _Promise.dispatch(obj);
           }
           c5 = 3;
-        } catch (tmp45) {
-          if (tmp4 === v0) {
-            c5 = tmp2;
-            throw tmp45;
+          return { value: "IconComponent", done: null };
+        } catch (tmp42) {
+          closure_2 = tmp42;
+          if (0 === osVolume) {
+            c5 = 3;
+            throw tmp42;
           } else {
-            c4 = tmp;
+            c4 = 1;
           }
         }
       }
     });
     obj.handleSilence = function handleSilence(arg0) {
-      closure_0 = arg0;
-      closure_1 = obj;
-      closure_2 = !arg0;
+      let closure_0 = arg0;
+      let closure_1 = obj;
+      let closure_2 = !arg0;
       const stateChangeTimeout = obj.stateChangeTimeout;
       let num = 5000;
+      const start = stateChangeTimeout.start;
       if (!arg0) {
         num = 1500;
       }
-      stateChangeTimeout.start(
+      start(
         num,
-        asyncGeneratorStep(async () => {
+        _asyncToGenerator(async () => {
+          let inputDetected;
+          let v1;
           if (inputDetected === 2) {
             inputDetected = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
+          } else if (tmp2 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -168,7 +183,7 @@ class InputWatcher {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  closure_0 = tmp4;
+                  closure_0 = tmp3;
                   logger.info("Silence:", closure_0);
                   v1.inputDetected = inputDetected;
                   const _performance = performance;
@@ -193,32 +208,34 @@ class InputWatcher {
                 inputDetected: closure_128_1.inputDetected,
                 lastUpdateTime: closure_128_1.lastUpdateTime,
               };
-              v1(inputDetected[10]).dispatch(obj6);
+              const obj2 = v1(inputDetected[10]);
+              obj2.dispatch(obj6);
               inputDetected = 3;
               return { value: "IconComponent", done: null };
-            } catch (tmp12) {
-              inputDetected = tmp;
-              throw tmp12;
+            } catch (tmp11) {
+              inputDetected = 3;
+              throw tmp11;
             }
           }
         }),
       );
     };
-    obj.mediaEngine = global;
-    obj.mediaEngineStore = fn;
+    obj.mediaEngine = mediaEngine;
+    obj.mediaEngineStore = mediaEngineStore;
     mediaEngine = obj.mediaEngine;
-    onResult = mediaEngine.on(closure_0(closure_2[5]).MediaEngineEvent.Silence, obj.handleSilence);
+    mediaEngine.on(obj(4945).MediaEngineEvent.Silence, obj.handleSilence);
     return obj;
   }
-}
-InputWatcher.prototype["reset"] = function reset() {
-  const self = this;
-  const stateChangeTimeout = this.stateChangeTimeout;
-  stateChangeTimeout.stop();
-  if (null != this.inputDetected) {
-    self.handleSilence(!self.inputDetected);
+  reset() {
+    const self = this;
+    const stateChangeTimeout = this.stateChangeTimeout;
+    stateChangeTimeout.stop();
+    if (null != this.inputDetected) {
+      self.handleSilence(!self.inputDetected);
+    }
+    self.inputDetected = undefined;
   }
-  self.inputDetected = undefined;
-};
+}
+const prototype = InputWatcher.prototype;
 
 export default InputWatcher;

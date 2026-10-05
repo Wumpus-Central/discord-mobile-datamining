@@ -1,23 +1,35 @@
 // discord_app/modules/user_profile/hooks/useActivityTimer.tsx
 import DurationsDefault from "../../../utils/Durations.tsx";
 import utils from "../../content_inventory/utils.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const noop = fn(19);
-({ useEffect: closure_4, useState: hasOwnProperty } = noop);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/user_profile/hooks/useActivityTimer.tsx");
+let importDefault;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (start) => {
-      const cResult = first1(576).c(9);
+let closure_4;
+let hasOwnProperty;
+({ useEffect: closure_4, useState: hasOwnProperty } = react);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function (start) {
+      let first;
+      let first1;
+      let tmp10;
+      let tmp12;
+      let tmp13;
+      let tmp14;
+      const obj = first1(576);
+      const cResult = obj.c(9);
       start = start.start;
+      const end = start.end;
+      const tmp = first1;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const self = this;
+        const self2 = this;
         const interval = new tmp(2046).Interval();
         cResult[0] = interval;
-        let first = interval;
+        first = interval;
       } else {
         first = cResult[0];
       }
@@ -27,13 +39,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return Date.now();
         };
         cResult[1] = fn;
-        let tmp12 = fn;
+        tmp10 = fn;
       } else {
-        tmp12 = cResult[1];
+        tmp10 = cResult[1];
       }
-      const obj = first1(576);
-      tmp = first1;
-      [tmp14, importDefault] = closure_5(tmp12);
+      [tmp12, importDefault] = closure_5(tmp10);
+      _slicedToArray(closure_5(tmp10), 2);
       if (cResult[2] !== first1) {
         const fn2 = function v() {
           first1.start(DurationsDefault.Millis.HALF_SECOND, () => closure_1_1(Date.now()));
@@ -43,24 +54,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = first1;
         cResult[3] = fn2;
         cResult[4] = items;
-        let tmp16 = items;
-        let tmp15 = fn2;
+        tmp14 = items;
+        tmp13 = fn2;
       } else {
-        tmp15 = cResult[3];
-        tmp16 = cResult[4];
+        tmp13 = cResult[3];
+        tmp14 = cResult[4];
       }
-      closure_4(tmp15, tmp16);
-      const diff = start.end - start;
+      closure_4(tmp13, tmp14);
+      const diff = end - start;
       const result = diff / DurationsDefault.Millis.SECOND;
-      const diff1 = tmp14 - start;
+      const diff1 = tmp12 - start;
       const bound = Math.max(Math.min(diff1 / DurationsDefault.Millis.SECOND, result), 0);
       const bound1 = Math.max(Math.min(bound / result, 1), 0);
       if (cResult[5] === result) {
         if (cResult[6] === bound) {
+          let tmp21;
           if (cResult[7] === bound1) {
-            let tmp23 = cResult[8];
+            tmp21 = cResult[8];
           }
-          return tmp23;
+          return tmp21;
         }
       }
       const obj2 = { elapsed: bound, duration: result, percentage: bound1 };
@@ -68,31 +80,35 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = bound;
       cResult[7] = bound1;
       cResult[8] = obj2;
-      tmp23 = obj2;
-      const tmp10Result = _slicedToArray(closure_5(tmp12), 2);
+      tmp21 = obj2;
     }
   : (start) => {
+      let closure_1;
+      let first1;
       start = start.start;
       let first;
+      importDefault = undefined;
+      const end = start.end;
       const interval = new first(2046).Interval();
       first = _slicedToArray(closure_5(interval), 1)[0];
-      const tmp3 = _slicedToArray(
-        closure_5(() => Date.now()),
-        2,
-      );
-      importDefault = tmp3[1];
+      [first1, importDefault] = closure_5(() => Date.now());
       const items = [first];
       closure_4(() => {
         first.start(DurationsDefault.Millis.HALF_SECOND, () => closure_1_1(Date.now()));
         return () => first.stop();
       }, items);
-      const diff = start.end - start;
+      const diff = end - start;
       const result = diff / DurationsDefault.Millis.SECOND;
-      const diff1 = tmp3[0] - start;
+      const diff1 = first1 - start;
       const bound = Math.max(Math.min(diff1 / DurationsDefault.Millis.SECOND, result), 0);
-      return { elapsed: bound, duration: result, percentage: Math.max(Math.min(bound / result, 1), 0) };
+      const obj = { elapsed: bound, duration: result, percentage: Math.max(Math.min(bound / result, 1), 0) };
+      return obj;
     };
+let result = size.fileFinishedImporting("modules/user_profile/hooks/useActivityTimer.tsx");
+
+export default tmp3;
 export const formatTime = function formatTime(duration) {
+  let combined;
   const rounded = Math.floor(duration);
   const result = rounded % DurationsDefault.Seconds.MINUTE;
   const rounded1 = Math.floor(duration / DurationsDefault.Seconds.MINUTE);
@@ -102,21 +118,21 @@ export const formatTime = function formatTime(duration) {
     const _String4 = String;
     const _String5 = String;
     const StringResult = String(result1);
-    const padStartResult = String(result1).padStart(2, "0");
     const _HermesInternal2 = HermesInternal;
-    let combined = "" + padStartResult + ":" + String(result).padStart(2, "0");
+    const padStartResult = StringResult.padStart(2, "0");
     const StringResult1 = String(result);
+    combined = "" + padStartResult + ":" + StringResult1.padStart(2, "0");
   } else {
     const _String = String;
-    const padStartResult1 = String(rounded2).padStart(2, "0");
-    const _String2 = String;
     const StringResult2 = String(rounded2);
+    const _String2 = String;
     const _String3 = String;
+    const padStartResult1 = StringResult2.padStart(2, "0");
     const StringResult3 = String(result1);
-    const padStartResult2 = String(result1).padStart(2, "0");
     const _HermesInternal = HermesInternal;
-    combined = "" + padStartResult1 + ":" + padStartResult2 + ":" + String(result).padStart(2, "0");
+    const padStartResult2 = StringResult3.padStart(2, "0");
     const StringResult4 = String(result);
+    combined = "" + padStartResult1 + ":" + padStartResult2 + ":" + StringResult4.padStart(2, "0");
   }
   return combined;
 };
@@ -126,5 +142,6 @@ export const formatTimeForA11yLabel = function formatTimeForA11yLabel(arg0) {
   const rounded1 = Math.floor(arg0 / DurationsDefault.Seconds.MINUTE);
   const minutes = rounded1 % DurationsDefault.Seconds.MINUTE;
   const hours = Math.floor(arg0 / DurationsDefault.Seconds.HOUR);
-  return utils.formatTimestampToA11yLabel({ hours, minutes, seconds });
+  const obj = utils;
+  return obj.formatTimestampToA11yLabel({ hours, minutes, seconds });
 };

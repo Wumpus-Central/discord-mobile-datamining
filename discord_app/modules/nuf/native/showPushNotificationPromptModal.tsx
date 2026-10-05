@@ -10,21 +10,15 @@ let result = size.fileFinishedImporting("modules/nuf/native/showPushNotification
 
 export const showPushNotificationPromptModal = function showPushNotificationPromptModal(onComplete) {
   onComplete = onComplete.onComplete;
-  ModalActionCreatorsDefault.pushLazy(
-    onComplete(1987)(15921, dependencyMap.paths),
-    {
-      onComplete() {
-        ModalActionCreatorsDefault.popWithKey(closure_4);
-        onComplete();
-      },
-    },
-    closure_4,
-  );
+  let obj = ModalActionCreatorsDefault;
   const obj2 = {
     onComplete() {
-      ModalActionCreatorsDefault.popWithKey(closure_4);
+      const obj = ModalActionCreatorsDefault;
+      obj.popWithKey(closure_4);
       onComplete();
     },
   };
-  const result = onComplete(12055).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
+  obj.pushLazy(onComplete(1987)(15921, dependencyMap.paths), obj2, closure_4);
+  const obj3 = onComplete(12055);
+  const result = obj3.setPushPermissionState(PermissionStateType.PROMPT_SEEN);
 };

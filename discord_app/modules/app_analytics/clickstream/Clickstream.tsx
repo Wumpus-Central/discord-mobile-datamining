@@ -3,37 +3,35 @@ import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import ClickstreamExperiment from "ClickstreamExperiment.tsx";
 import ClickstreamEvents from "ClickstreamEvents.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
 function isClickstreamEnabled() {
-  if (flag === undefined) {
-    flag = true;
-  }
   if (flag) {
-    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(AuthenticationStore.getId());
+    const obj = SnowflakeUtilsDefault;
+    const extractTimestampResult = obj.extractTimestamp(AuthenticationStore.getId());
     if (extractTimestampResult !== c7) {
       drainClickstream(false);
       c7 = extractTimestampResult;
     }
-    result = ClickstreamExperiment.clickstreamExperimentEnabled();
+    const obj2 = ClickstreamExperiment;
+    metroImportAll = obj2.clickstreamExperimentEnabled();
   }
-  return result;
+  return metroImportAll;
 }
 function drainClickstream() {
-  if (flag === undefined) {
-    flag = true;
-  }
+  let first;
+  let tmp10;
   if (isClickstreamEnabled(flag)) {
     const tmp3 = map[Symbol.iterator]();
     while (tmp3 !== undefined) {
-      let tmp8 = _slicedToArray(tmp5, 2);
-      let first = tmp8[0];
-      let obj2 = AnalyticsUtilsDefault;
-      let obj3 = ClickstreamEvents;
-      let trackResult = obj2.track(first, obj3.getClickstreamDrainEvent(first, tmp8[1]));
+      [first, tmp10] = tmp5;
+      let tmp13 = AnalyticsUtilsDefault;
+      let track = tmp13.track;
+      let obj2 = ClickstreamEvents;
+      let trackResult = track(first, obj2.getClickstreamDrainEvent(first, tmp10));
       continue;
     }
     map.clear();
@@ -43,29 +41,33 @@ function drainClickstream() {
 }
 const map = new Map();
 let c7 = -1;
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
+let metroImportAll = false;
+const result = size.fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
 
 export const trackClickstream = function trackClickstream(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, arg1) {
-  const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(AuthenticationStore.getId());
+  let date;
+  const obj = SnowflakeUtilsDefault;
+  const extractTimestampResult = obj.extractTimestamp(AuthenticationStore.getId());
   if (extractTimestampResult !== c7) {
     drainClickstream(false);
     c7 = extractTimestampResult;
   }
-  result = ClickstreamExperiment.clickstreamExperimentEnabled();
-  if (result) {
+  const obj2 = ClickstreamExperiment;
+  metroImportAll = obj2.clickstreamExperimentEnabled();
+  if (metroImportAll) {
     if (!map.has(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM)) {
       const result1 = map.set(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, []);
     }
-    value = map.get(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM);
+    const value = map.get(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM);
     if (value != null) {
-      const obj4 = { timestamp: null, rtc_state: null };
       const _Date = Date;
-      const date = new Date();
-      obj4.timestamp = date;
-      obj4.rtc_state = RTCConnectionStore.getState();
+      const self = this;
+      const self2 = this;
+      const push = value.push;
+      const obj4 = { timestamp: date, rtc_state: RTCConnectionStore.getState() };
+      date = new Date();
       const merged = Object.assign(arg1);
-      value.push(obj4);
+      push(obj4);
     }
   }
 };

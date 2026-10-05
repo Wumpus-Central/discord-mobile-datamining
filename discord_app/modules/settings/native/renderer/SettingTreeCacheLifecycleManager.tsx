@@ -1,22 +1,27 @@
 // discord_app/modules/settings/native/renderer/SettingTreeCacheLifecycleManager.tsx
+import SettingTreeManagerDefault from "SettingTreeManager.tsx";
 import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const prototype = function SettingTreeManagerLifecycleManager() {
-  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  importDefault = applyArgumentsResult;
-  applyArgumentsResult.actions = {
-    POST_CONNECTION_OPEN() {
-      return applyArgumentsResult.handleConnectionOpen();
-    },
-  };
-  applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
-    applyArgumentsResult(dependencyMap[1]).clearCaches();
-  };
-  return applyArgumentsResult;
-}.prototype;
-class prototype extends tmp2 {}
-const prototype1 = new prototype();
-const size = fn(2);
+let importDefault;
+
+class SettingTreeManagerLifecycleManager extends AutomaticLifecycleManager {
+  constructor() {
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    importDefault = applyArgumentsResult;
+    applyArgumentsResult.actions = {
+      POST_CONNECTION_OPEN() {
+        return importDefault.handleConnectionOpen();
+      },
+    };
+    applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
+      const obj = SettingTreeManagerDefault;
+      obj.clearCaches();
+    };
+    return applyArgumentsResult;
+  }
+}
+const settingTreeManagerLifecycleManager = new SettingTreeManagerLifecycleManager();
 const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingTreeCacheLifecycleManager.tsx");
 
-export default prototype1;
+export default settingTreeManagerLifecycleManager;

@@ -1,18 +1,27 @@
 // discord_app/modules/premium/premium_group/hooks/usePremiumGroupMembership.tsx
-import _mod19 from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import DispatcherDefault from "../../../../Dispatcher.tsx";
 import PremiumGroupStore from "../PremiumGroupStore.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const useEffect = _mod19.useEffect;
-const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembership.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const useEffect = react.useEffect;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = require("c").c(11);
+      let _fetch;
+      let closure_0;
+      let isFetchingMembership;
+      let premiumGroupMembership;
+      let tmp4;
+      let tmp7;
+      let tmp8;
+      let useCachedData;
+      let obj = require("react");
+      const cResult = obj.c(11);
+      const tmp = _require;
       if (cResult[0] !== arg0) {
         let obj2 = arg0;
         if (undefined === arg0) {
@@ -20,41 +29,45 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[0] = arg0;
         cResult[1] = obj2;
-        let tmp4 = obj2;
+        tmp4 = obj2;
       } else {
         tmp4 = cResult[1];
       }
       ({ useCachedData, fetch: _fetch } = tmp4);
       _require = tmp5;
-      closure_1 = tmp6;
+      let closure_1 = tmp6;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PremiumGroupStore];
         const fn = function c() {
-          return {
+          const obj = {
             premiumGroupMembership: PremiumGroupStore.getMembership(),
             isFetchingMembership: PremiumGroupStore.isFetchingMembership(),
           };
+          return obj;
         };
         cResult[2] = items;
         cResult[3] = fn;
-        let tmp8 = fn;
-        let tmp7 = items;
+        tmp8 = fn;
+        tmp7 = items;
       } else {
         tmp7 = cResult[2];
         tmp8 = cResult[3];
       }
-      let obj = require("c");
-      const stateFromStoresObject = require("initialize").useStateFromStoresObject(tmp7, tmp8);
+      const tmpResult = tmp(504);
+      const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp7, tmp8);
       ({ premiumGroupMembership, isFetchingMembership } = stateFromStoresObject);
       if (cResult[4] === (undefined === _fetch || _fetch)) {
-        if (cResult[5] === tmp5) {
-          let tmp11 = cResult[6];
-          let tmp12 = cResult[7];
+        let tmp11;
+        let tmp12;
+        if (cResult[5] === (undefined !== useCachedData && useCachedData)) {
+          tmp11 = cResult[6];
+          tmp12 = cResult[7];
         }
         useEffect(tmp11, tmp12);
         if (cResult[8] === isFetchingMembership) {
+          let tmp15;
           if (cResult[9] === premiumGroupMembership) {
-            let tmp15 = cResult[10];
+            tmp15 = cResult[10];
           }
           return tmp15;
         }
@@ -66,12 +79,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const fn2 = function f() {
         if (closure_1) {
-          let hasFetchedMembershipResult = closure_0;
-          if (closure_0) {
-            hasFetchedMembershipResult = PremiumGroupStore.hasFetchedMembership();
-          }
+          const hasFetchedMembershipResult = closure_0 && PremiumGroupStore.hasFetchedMembership();
           if (!hasFetchedMembershipResult) {
-            DispatcherDefault.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_REQUEST" });
+            const obj = DispatcherDefault;
+            obj.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_REQUEST" });
           }
         }
       };
@@ -82,9 +93,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = items1;
       tmp12 = items1;
       tmp11 = fn2;
-      const tmpResult = require("initialize");
     }
   : () => {
+      let isFetchingMembership;
+      let premiumGroupMembership;
       let obj = arg0;
       if (arg0 === undefined) {
         obj = {};
@@ -98,22 +110,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flag2 = true;
       }
       const items = [PremiumGroupStore];
-      const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => ({
-        premiumGroupMembership: PremiumGroupStore.getMembership(),
-        isFetchingMembership: PremiumGroupStore.isFetchingMembership(),
-      }));
+      const obj2 = flag(504);
+      const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => {
+        const obj = {
+          premiumGroupMembership: PremiumGroupStore.getMembership(),
+          isFetchingMembership: PremiumGroupStore.isFetchingMembership(),
+        };
+        return obj;
+      });
       const items1 = [flag2, flag];
       ({ premiumGroupMembership, isFetchingMembership } = stateFromStoresObject);
       useEffect(() => {
         if (flag2) {
-          let hasFetchedMembershipResult = flag;
-          if (flag) {
-            hasFetchedMembershipResult = PremiumGroupStore.hasFetchedMembership();
-          }
+          const hasFetchedMembershipResult = flag && PremiumGroupStore.hasFetchedMembership();
           if (!hasFetchedMembershipResult) {
-            DispatcherDefault.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_REQUEST" });
+            const obj = DispatcherDefault;
+            obj.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_REQUEST" });
           }
         }
       }, items1);
       return { premiumGroupMembership, isLoading };
     };
+const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembership.tsx");
+
+export default tmp2;

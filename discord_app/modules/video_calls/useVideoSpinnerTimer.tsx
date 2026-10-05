@@ -1,23 +1,24 @@
 // discord_app/modules/video_calls/useVideoSpinnerTimer.tsx
 import VideoSpinnerTimer from "../../lib/VideoSpinnerTimer.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
-import noop from "../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/video_calls/useVideoSpinnerTimer.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (location) => {
-      const cResult = _location(videoSpinnerContext[3]).c(10);
+      let _location;
+      let tmp3;
+      let videoSpinnerContext;
+      const obj = _location(videoSpinnerContext[3]);
+      const cResult = obj.c(10);
       _location = location.location;
       videoSpinnerContext = location.videoSpinnerContext;
       const userId = location.userId;
       const streamId = location.streamId;
       const loading = location.loading;
       const paused = location.paused;
-      closure_5 = tmp2;
+      let closure_5 = tmp2;
       if (cResult[0] !== _location) {
         const fn = function u() {
           const videoSpinnerTimer = new VideoSpinnerTimer.VideoSpinnerTimer(_location);
@@ -25,21 +26,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = _location;
         cResult[1] = fn;
-        let tmp3 = fn;
+        tmp3 = fn;
       } else {
         tmp3 = cResult[1];
       }
       const first = userId(streamId.useState(tmp3), 1)[0];
+      const obj2 = streamId;
       if (cResult[2] === loading) {
-        if (cResult[3] === tmp2) {
+        if (cResult[3] === (undefined !== paused && paused)) {
           if (cResult[4] === streamId) {
             if (cResult[5] === userId) {
               if (cResult[6] === videoSpinnerContext) {
+                let tmp5;
+                let tmp6;
                 if (cResult[7] === first) {
-                  let tmp5 = cResult[8];
-                  let tmp6 = cResult[9];
+                  tmp5 = cResult[8];
+                  tmp6 = cResult[9];
                 }
-                const effect = streamId.useEffect(tmp5, tmp6);
+                const effect = obj2.useEffect(tmp5, tmp6);
               }
             }
           }
@@ -50,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (loading) {
             first.onSpinnerStarted();
           } else if (null != streamId) {
-            first.trackSpinnerDuration(videoSpinnerContext, userId, tmp2);
+            first.trackSpinnerDuration(videoSpinnerContext, userId, tmp3);
           }
         }
       };
@@ -67,6 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn2;
     }
   : (userId) => {
+      let videoSpinnerContext;
       ({ location: require, videoSpinnerContext } = userId);
       userId = userId.userId;
       const streamId = userId.streamId;
@@ -77,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const first = userId(
         streamId.useState(() => {
-          const videoSpinnerTimer = new VideoSpinnerTimer.VideoSpinnerTimer(closure_1_0);
+          const videoSpinnerTimer = new VideoSpinnerTimer.VideoSpinnerTimer(require);
           return videoSpinnerTimer;
         }),
         1,
@@ -88,8 +93,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (loading) {
             first.onSpinnerStarted();
           } else if (null != streamId) {
-            first.trackSpinnerDuration(videoSpinnerContext, userId, tmp2);
+            first.trackSpinnerDuration(videoSpinnerContext, userId, tmp3);
           }
         }
       }, items);
     };
+const result = size.fileFinishedImporting("modules/video_calls/useVideoSpinnerTimer.tsx");
+
+export default tmp2;

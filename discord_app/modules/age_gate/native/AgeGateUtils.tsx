@@ -4,35 +4,40 @@ import AgeRestrictedContentSettingsUtils from "../../user_settings/content_and_s
 import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const Constants = fn(1085);
+let hasOwnProperty;
+let metroRequire;
 ({ GuildNSFWContentLevel: hasOwnProperty, Permissions: metroRequire } = Constants);
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/AgeGateUtils.tsx");
 
 export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
+  const obj = PlatformUtils;
   if (obj.isIOS()) {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     const currentUser = UserStore.getCurrentUser();
     if (null != guild) {
       if (null != currentUser) {
-        const tmp9 =
-          PermissionStore.can(constants2.ADMINISTRATOR, guild) ||
-          PermissionStore.can(constants2.MANAGE_GUILD, guild) ||
-          PermissionStore.can(constants2.KICK_MEMBERS, guild) ||
-          PermissionStore.can(constants2.BAN_MEMBERS, guild);
         let nsfwAllowed = currentUser.nsfwAllowed;
+        const nsfwLevel = guild.nsfwLevel;
+        const AGE_RESTRICTED = hasOwnProperty.AGE_RESTRICTED;
+        const nsfwLevel2 = guild.nsfwLevel;
+        const EXPLICIT = hasOwnProperty.EXPLICIT;
+        const tmp9 =
+          PermissionStore.can(metroRequire.ADMINISTRATOR, guild) ||
+          PermissionStore.can(metroRequire.MANAGE_GUILD, guild) ||
+          PermissionStore.can(metroRequire.KICK_MEMBERS, guild) ||
+          PermissionStore.can(metroRequire.BAN_MEMBERS, guild);
         if (nsfwAllowed) {
-          nsfwAllowed = AgeRestrictedContentSettingsUtils.getViewNsfwGuildsOrDefault();
           const tmpResult = AgeRestrictedContentSettingsUtils;
+          nsfwAllowed = tmpResult.getViewNsfwGuildsOrDefault();
         }
         let tmp11 = !tmp9;
-        if (!tmp9) {
-          let tmp12 = guild.nsfwLevel === constants.EXPLICIT;
+        if (tmp11) {
+          let tmp12 = nsfwLevel2 === EXPLICIT;
           if (!tmp12) {
-            tmp12 = guild.nsfwLevel === constants.AGE_RESTRICTED && !nsfwAllowed;
-            const tmp13 = guild.nsfwLevel === constants.AGE_RESTRICTED && !nsfwAllowed;
+            tmp12 = nsfwLevel === AGE_RESTRICTED && !nsfwAllowed;
           }
           tmp11 = tmp12;
         }
@@ -43,5 +48,4 @@ export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
   } else {
     return false;
   }
-  obj = PlatformUtils;
 };

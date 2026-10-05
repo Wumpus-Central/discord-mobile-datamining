@@ -1,5 +1,5 @@
 // discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextFlags.tsx
-import c from "../../../../../../_runtime/00576_c.js";
+import react from "../../../../../../_runtime/00576_react.js";
 import ThemeContext from "ThemeContext.tsx";
 import ReactCompilerGating from "../../../../../../discord_app/modules/react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
@@ -7,6 +7,28 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 function hasThemeFlag(flags, MOBILE_DARK_GRADIENT_THEME_ENABLED) {
   return (flags.flags & MOBILE_DARK_GRADIENT_THEME_ENABLED) === MOBILE_DARK_GRADIENT_THEME_ENABLED;
 }
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const obj = react;
+      const cResult = obj.c(3);
+      const obj2 = ThemeContext;
+      const themeContext = obj2.useThemeContext();
+      if (cResult[0] === themeContext) {
+        let tmp3;
+        if (cResult[1] === arg0) {
+          tmp3 = cResult[2];
+        }
+        return tmp3;
+      }
+      cResult[0] = themeContext;
+      cResult[1] = arg0;
+      cResult[2] = (themeContext.flags & arg0) === arg0;
+      tmp3 = tmp4;
+    }
+  : (arg0) => {
+      const obj = ThemeContext;
+      return (obj.useThemeContext().flags & arg0) === arg0;
+    };
 const result = size.fileFinishedImporting(
   "../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextFlags.tsx",
 );
@@ -24,22 +46,7 @@ export const ThemeContextFlags = {
   [64]: "REDUCE_SATURATION_ENABLED",
 };
 export { hasThemeFlag };
-export const setThemeFlag = function setThemeFlag(tmpResult, MOBILE_DARK_GRADIENT_THEME_ENABLED) {
-  return tmpResult | MOBILE_DARK_GRADIENT_THEME_ENABLED;
+export const setThemeFlag = function setThemeFlag(setThemeFlagResult, MOBILE_DARK_GRADIENT_THEME_ENABLED) {
+  return setThemeFlagResult | MOBILE_DARK_GRADIENT_THEME_ENABLED;
 };
-export const useThemeFlag = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      const cResult = c.c(3);
-      const themeContext = ThemeContext.useThemeContext();
-      if (cResult[0] === themeContext) {
-        if (cResult[1] === arg0) {
-          let tmp3 = cResult[2];
-        }
-        return tmp3;
-      }
-      cResult[0] = themeContext;
-      cResult[1] = arg0;
-      cResult[2] = (themeContext.flags & arg0) === arg0;
-      tmp3 = tmp4;
-    }
-  : (arg0) => (ThemeContext.useThemeContext().flags & arg0) === arg0;
+export const useThemeFlag = tmp2;

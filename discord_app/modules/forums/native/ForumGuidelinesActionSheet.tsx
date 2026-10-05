@@ -1,44 +1,55 @@
 // discord_app/modules/forums/native/ForumGuidelinesActionSheet.tsx
+import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
+import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import LinkUtils from "../../links/LinkUtils.tsx";
+import ForumConstants from "../ForumConstants.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../../actions/ChannelSettingsActionCreators.tsx";
 import ForumGuidelinesManagerDefault from "../ForumGuidelinesManager.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../_runtime/00019_react.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-let closure_6 = fn(6776).FORUM_GUIDELINES_ACTION_SHEET;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+let BottomSheet, channel, hideActionSheetResult, markAsSeenResult, tmpResult;
+
+let c9;
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let obj3;
+let obj4;
+let rect;
+let react = react_mod;
+const View = react_native.View;
+let closure_6 = ForumConstants.FORUM_GUIDELINES_ACTION_SHEET;
+({ jsx: metroImportDefault, jsxs: metroImportAll, Fragment: c9 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
   scrollContainer: { paddingHorizontal: 16 },
   header: { alignItems: "center", paddingTop: 20, paddingBottom: 24 },
   headerTitle: { marginTop: 8 },
-  guidelinesContainer: {
-    padding: 16,
-    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
-    borderRadius: nativeDefault.radii.sm,
-  },
+  guidelinesContainer: obj2,
   footer: { paddingBottom: 16 },
   buttonWrapper: { marginHorizontal: 16 },
-  buttonPill: null,
-  floatingButtonContainer: null,
-  editButton: null,
-  editText: null,
-  editIcon: null,
+  buttonPill: obj3,
+  floatingButtonContainer: rect,
+  editButton: { display: "flex", flexDirection: "row", alignItems: "center", position: "absolute", top: 12, right: 0 },
+  editText: { marginRight: 4 },
+  editIcon: obj4,
 };
-let obj3 = {
+obj2 = {
   padding: 16,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   borderRadius: nativeDefault.radii.sm,
 };
-obj2.buttonPill = { borderRadius: nativeDefault.radii.sm };
-const rect = {
+createStyles = createStyles.createStyles;
+obj3 = { borderRadius: nativeDefault.radii.sm };
+rect = {
   marginTop: 16,
   position: "absolute",
   left: 16,
@@ -49,37 +60,31 @@ const rect = {
   shadowRadius: 4,
   borderRadius: nativeDefault.radii.sm,
 };
-obj2.floatingButtonContainer = rect;
-obj2.editButton = {
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
-  position: "absolute",
-  top: 12,
-  right: 0,
-};
-obj2.editText = { marginRight: 4 };
-const obj4 = { borderRadius: nativeDefault.radii.sm };
-obj2.editIcon = { color: nativeDefault.colors.TEXT_BRAND };
-let closure_10 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj5 = { color: nativeDefault.colors.TEXT_BRAND };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/forums/native/ForumGuidelinesActionSheet.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+obj4 = { color: nativeDefault.colors.TEXT_BRAND };
+let closure_10 = createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      const cResult = channel(first[8]).c(68);
+      let BaseTextButton;
+      let closure_3;
+      let first;
+      let intl;
+      let obj8;
+      let ref;
+      const tmp = channel;
+      let obj = channel(first[8]);
+      const cResult = obj.c(68);
       channel = channel.channel;
       const onPress = channel.onPress;
       const tmp4 = closure_10();
-      let obj = channel(first[8]);
-      const canManageChannel = channel(first[9]).useCanManageChannel(channel);
+      let obj2 = channel(first[9]);
+      const canManageChannel = obj2.useCanManageChannel(channel);
       const bottom = onPress(first[10])().bottom;
-      [first, _slicedToArray] = noop.useState();
+      [first, _slicedToArray] = react.useState();
       if (cResult[0] === bottom) {
+        let tmp9;
+        let tmp16;
         if (cResult[1] === first) {
-          let tmp9 = cResult[2];
+          tmp9 = cResult[2];
         }
         let num3 = tmp9;
         if (tmp9 == null) {
@@ -120,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[5] = channel.id;
           cResult[6] = E;
           cResult[7] = items;
-          let tmp16 = items;
+          tmp16 = items;
         } else {
           class E {
             constructor() {
@@ -131,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           tmp16 = cResult[7];
         }
-        const effect = noop.useEffect(E, tmp16);
+        const effect = react.useEffect(E, tmp16);
         if (cResult[8] !== onPress) {
           class F {
             constructor() {
@@ -170,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         let tmp20 = !tmp12;
-        if (tmp8 >= num3) {
+        if (tmp20) {
           class F {
             constructor() {
               if (onPress != null) {
@@ -181,14 +186,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const obj5 = { bottom: true, style: tmp4.footer, children: null };
-          const obj8 = { grow: true, text: null, onPress: null, style: null, pillStyle: null };
-          const intl = tmp(tmp2[17]).intl;
-          obj8.text = intl.string(tmp(tmp2[17]).t["NX+WJN"]);
-          obj8.onPress = F;
+          const obj5 = { bottom: true, style: tmp4.footer, children: closure_7(BaseTextButton, obj8) };
+          const SafeAreaPaddingView = tmp(tmp2[15]).SafeAreaPaddingView;
+          obj8 = {
+            grow: true,
+            text: intl.string(tmp(first[17]).t["NX+WJN"]),
+            onPress: F,
+            style: null,
+            pillStyle: null,
+          };
+          BaseTextButton = tmp(tmp2[16]).BaseTextButton;
+          intl = tmp(tmp2[17]).intl;
           ({ buttonWrapper: obj6.style, buttonPill: obj6.pillStyle } = tmp4);
-          obj5.children = closure_7(tmp(tmp2[16]).BaseTextButton, obj8);
-          tmp20 = closure_7(tmp(tmp2[15]).SafeAreaPaddingView, obj5);
+          tmp20 = closure_7(SafeAreaPaddingView, obj5);
         }
         cResult[10] = tmp8 < num3;
         cResult[11] = F;
@@ -227,43 +237,63 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = first;
       cResult[2] = sum;
       tmp9 = sum;
-      let obj2 = channel(first[9]);
     }
   : (channel) => {
+      let BaseTextButton;
+      let BottomSheetScrollView;
+      let Text3;
+      let closure_4;
+      let intl;
+      let intl2;
+      let intl3;
+      let intl4;
+      let intl5;
+      let items10;
+      let items6;
+      let items7;
+      let items8;
+      let obj14;
+      let obj15;
+      let obj5;
+      let obj7;
+      let tmp5Result;
       channel = channel.channel;
       const onPress = channel.onPress;
       let bottom;
       let first;
-      noop = undefined;
-      closure_5 = undefined;
+      react = undefined;
+      let closure_5;
       let pathname;
       let ref;
+      const onClose = channel.onClose;
       const tmp = closure_10();
-      const canManageChannel = channel(bottom[9]).useCanManageChannel(channel);
-      bottom = onPress(bottom[10])().bottom;
-      const tmp6 = first(noop.useState(), 2);
-      first = tmp6[0];
-      noop = tmp6[1];
-      const items = [bottom, first];
       let obj = channel(bottom[9]);
-      const tmp5 = onPress;
-      const memo = noop.useMemo(() => {
+      const canManageChannel = obj.useCanManageChannel(channel);
+      bottom = onPress(bottom[10])().bottom;
+      let obj2 = react;
+      const tmp6 = first(react.useState(), 2);
+      first = tmp6[0];
+      react = tmp6[1];
+      const items = [bottom, first];
+      const tmp8 = onPress(bottom[11])();
+      const memo = react.useMemo(() => {
         let sum;
         if (null != first) {
           let num = 0;
+          const obj = PlatformUtils;
           if (obj.isAndroid()) {
             num = bottom;
           }
           sum = 72 + num + tmp + bottom;
-          obj = PlatformUtils;
         }
         return sum;
       }, items);
       let num = memo;
+      const tmp5 = onPress;
       if (memo == null) {
         num = 0;
       }
-      let tmp21Result = onPress(bottom[11])() < num;
+      let tmp21Result = tmp8 < num;
       closure_5 = tmp21Result;
       let tmp11;
       if (!tmp21Result) {
@@ -273,7 +303,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (onPress != null) {
           tmp();
         }
-        ActionSheetActionCreatorsDefault.hideActionSheet(closure_6);
+        const obj = ActionSheetActionCreatorsDefault;
+        obj.hideActionSheet(closure_6);
       }
       const items1 = [first];
       const items2 = [channel.id];
@@ -283,18 +314,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       const effect = obj2.useEffect(() => {
-        ForumGuidelinesManagerDefault.markAsSeen(channel.id);
+        const obj = ForumGuidelinesManagerDefault;
+        obj.markAsSeen(channel.id);
       }, items2);
       let tmp14 = !tmp21Result;
-      if (!tmp21Result) {
-        const obj3 = { bottom: true, style: tmp.footer, children: null };
-        const obj5 = { grow: true, text: null, onPress: null, style: null, pillStyle: null };
-        const intl = tmp2(tmp3[17]).intl;
-        obj5.text = intl.string(tmp2(tmp3[17]).t["NX+WJN"]);
-        obj5.onPress = handlePress;
+      if (tmp14) {
+        const obj3 = { bottom: true, style: tmp.footer, children: ref(BaseTextButton, obj5) };
+        const SafeAreaPaddingView = tmp2(tmp3[15]).SafeAreaPaddingView;
+        obj5 = {
+          grow: true,
+          text: intl.string(channel(bottom[17]).t["NX+WJN"]),
+          onPress: handlePress,
+          style: null,
+          pillStyle: null,
+        };
+        BaseTextButton = tmp2(tmp3[16]).BaseTextButton;
+        intl = tmp2(tmp3[17]).intl;
         ({ buttonWrapper: obj4.style, buttonPill: obj4.pillStyle } = tmp);
-        obj3.children = ref(tmp2(tmp3[16]).BaseTextButton, obj5);
-        tmp14 = ref(tmp2(tmp3[15]).SafeAreaPaddingView, obj3);
+        tmp14 = ref(SafeAreaPaddingView, obj3);
       }
       const items3 = [bottom, tmp21Result];
       const memo1 = obj2.useMemo(() => {
@@ -304,16 +341,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return num;
       }, items3);
-      const tmp8 = onPress(bottom[11])();
-      pathname = channel(bottom[18]).useLocation().pathname;
+      const tmp2Result = channel(bottom[18]);
+      pathname = tmp2Result.useLocation().pathname;
       ref = obj2.useRef(true);
       const items4 = [pathname, channel.id];
       const effect1 = obj2.useEffect(() => {
-        const tryParseChannelPathResult = LinkUtils.tryParseChannelPath(pathname);
+        const obj = LinkUtils;
+        const tryParseChannelPathResult = obj.tryParseChannelPath(pathname);
         if (!ref.current) {
           if (null != tryParseChannelPathResult) {
             if (tryParseChannelPathResult.channelId !== channel.id) {
-              ActionSheetActionCreatorsDefault.hideActionSheet(closure_6);
+              const obj2 = ActionSheetActionCreatorsDefault;
+              obj2.hideActionSheet(closure_6);
             }
           }
         }
@@ -321,90 +360,100 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items4);
       const items5 = [channel.id];
       const callback1 = obj2.useCallback(() => {
-        ActionSheetActionCreatorsDefault.hideActionSheet(closure_6);
-        ChannelSettingsActionCreatorsDefault.open(channel.id);
+        const obj = ActionSheetActionCreatorsDefault;
+        obj.hideActionSheet(closure_6);
+        const obj2 = ChannelSettingsActionCreatorsDefault;
+        obj2.open(channel.id);
       }, items5);
       const obj6 = {
         scrollable: true,
         contentHeight: tmp11,
         footer: tmp14,
-        onDismiss: channel.onClose,
-        children: null,
+        onDismiss: onClose,
+        children: closure_8(BottomSheetScrollView, obj7),
       };
-      const obj7 = {
+      BottomSheet = tmp2(tmp3[26]).BottomSheet;
+      let tmp19Result = canManageChannel;
+      obj7 = {
         style: tmp.scrollContainer,
         scrollIndicatorInsets: { bottom },
         contentContainerStyle: { paddingBottom: memo1 },
         onContentSizeChange: callback,
-        children: null,
+        children: items8,
       };
-      const obj8 = { style: tmp.header, children: null };
-      let tmp19Result = canManageChannel;
+      const obj8 = { style: tmp.header, children: items7 };
+      BottomSheetScrollView = tmp2(tmp3[25]).BottomSheetScrollView;
       if (canManageChannel) {
         const obj9 = {
-          accessibilityLabel: null,
+          accessibilityLabel: intl2.string(channel(bottom[17]).t.bt75uw),
           accessibilityRole: "button",
-          style: null,
-          onPress: null,
-          children: null,
+          style: tmp.editButton,
+          onPress: callback1,
+          children: items6,
         };
-        const intl2 = tmp2(tmp3[17]).intl;
-        obj9.accessibilityLabel = intl2.string(tmp2(tmp3[17]).t.bt75uw);
-        obj9.style = tmp.editButton;
-        obj9.onPress = callback1;
-        const obj10 = { style: tmp.editText, variant: "text-sm/medium", color: "text-brand", children: null };
-        const intl3 = tmp2(tmp3[17]).intl;
-        obj10.children = intl3.string(tmp2(tmp3[17]).t.bt75uw);
-        const items6 = [tmp21(tmp2(tmp3[22]).Text, obj10)];
+        const PressableOpacity = tmp2(tmp3[21]).PressableOpacity;
+        intl2 = tmp2(tmp3[17]).intl;
+        const obj10 = {
+          style: tmp.editText,
+          variant: "text-sm/medium",
+          color: "text-brand",
+          children: intl3.string(channel(bottom[17]).t.bt75uw),
+        };
+        const Text = tmp2(tmp3[22]).Text;
+        intl3 = tmp2(tmp3[17]).intl;
+        items6 = [ref(Text, obj10)];
         const obj11 = { color: tmp.editIcon.color, size: "xs" };
-        items6[1] = tmp21(tmp2(tmp3[23]).PencilIcon, obj11);
-        obj9.children = items6;
-        tmp19Result = closure_8(tmp2(tmp3[21]).PressableOpacity, obj9);
+        items6[1] = ref(channel(bottom[23]).PencilIcon, obj11);
+        tmp19Result = closure_8(PressableOpacity, obj9);
       }
-      const items7 = [tmp19Result];
+      items7 = [tmp19Result];
       const obj12 = {
         style: tmp.headerTitle,
         variant: "heading-xl/extrabold",
         color: "mobile-text-heading-primary",
-        children: null,
+        children: intl4.string(channel(bottom[17]).t["4d4T4l"]),
       };
-      const intl4 = tmp2(tmp3[17]).intl;
-      obj12.children = intl4.string(channel(bottom[17]).t["4d4T4l"]);
-      items7[1] = ref(channel(bottom[22]).Text, obj12);
-      obj8.children = items7;
-      const items8 = [closure_8(closure_5, obj8)];
-      const obj13 = { style: tmp.guidelinesContainer, children: null };
-      const obj14 = { variant: "text-md/medium", color: "text-default", children: null };
-      const tmp2Result = channel(bottom[18]);
-      obj14.children = tmp5(bottom[24]).parseForumPostGuidelines(channel.topic, true, {
-        channelId: channel.id,
-        allowHeading: true,
-        allowList: true,
-        allowLinks: true,
-      });
-      obj13.children = ref(channel(bottom[22]).Text, obj14);
+      const Text2 = tmp2(tmp3[22]).Text;
+      intl4 = tmp2(tmp3[17]).intl;
+      items7[1] = ref(Text2, obj12);
+      items8 = [closure_8(closure_5, obj8)];
+      const obj13 = { style: tmp.guidelinesContainer, children: ref(Text3, obj14) };
+      obj14 = {
+        variant: "text-md/medium",
+        color: "text-default",
+        children: tmp5Result.parseForumPostGuidelines(channel.topic, true, obj15),
+      };
+      Text3 = tmp2(tmp3[22]).Text;
+      obj15 = { channelId: channel.id, allowHeading: true, allowList: true, allowLinks: true };
+      tmp5Result = tmp5(bottom[24]);
       items8[1] = ref(closure_5, obj13);
-      obj7.children = items8;
-      obj6.children = closure_8(channel(bottom[25]).BottomSheetScrollView, obj7);
-      const children = [ref(channel(bottom[26]).BottomSheet, obj6)];
+      const children = [ref(BottomSheet, obj6)];
       if (tmp21Result) {
-        const obj16 = { grow: true, style: null, pillStyle: null, text: null, onPress: null };
-        const items10 = [tmp.floatingButtonContainer];
+        const obj16 = {
+          grow: true,
+          style: items10,
+          pillStyle: tmp.buttonPill,
+          text: intl5.string(channel(bottom[17]).t["NX+WJN"]),
+          onPress: handlePress,
+        };
+        items10 = [tmp.floatingButtonContainer];
         const obj17 = { bottom: bottom + 16 };
         items10[1] = obj17;
-        obj16.style = items10;
-        obj16.pillStyle = tmp.buttonPill;
-        const intl5 = tmp2(tmp3[17]).intl;
-        obj16.text = intl5.string(tmp2(tmp3[17]).t["NX+WJN"]);
-        obj16.onPress = handlePress;
-        tmp21Result = tmp21(tmp2(tmp3[16]).BaseTextButton, obj16);
+        const BaseTextButton2 = tmp2(tmp3[16]).BaseTextButton;
+        intl5 = tmp2(tmp3[17]).intl;
+        tmp21Result = tmp21(BaseTextButton2, obj16);
       }
       children[1] = tmp21Result;
       return closure_8(closure_9, { children });
     };
+const result = size.fileFinishedImporting("modules/forums/native/ForumGuidelinesActionSheet.tsx");
+
+export default tmp4;
 export const openForumGuidelinesActionSheet = function openForumGuidelinesActionSheet(arg0) {
-  const obj = ActionSheetActionCreatorsDefault;
-  const obj2 = {};
+  const openLazy = ActionSheetActionCreatorsDefault.openLazy;
+  const obj = {};
+  ActionSheetActionCreatorsDefault;
+  const tmp2 = asyncRequire(10076, dependencyMap.paths);
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(10076, dependencyMap.paths), closure_6, obj2);
+  openLazy(tmp2, closure_6, obj);
 };

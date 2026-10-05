@@ -1,17 +1,23 @@
 // discord_app/modules/guild_role_subscriptions/native/components/EmojiIcon.tsx
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import EmojiDefault from "../../../emojis/native/Emoji.tsx";
-import _modDef9904 from "../../../../../_runtime/metro/09904__.js";
+import AssetRegistryDefault from "../../../../../_runtime/09904_AssetRegistry.js";
 import useEmojiByIdOrName from "../../useEmojiByIdOrName.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-let size = fn(2);
+const jsx = Fragment.jsx;
+let size = size_mod;
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/EmojiIcon.tsx");
 
 export default function EmojiIcon(size) {
+  let fontSize;
+  let guildId;
+  let id;
+  let lineHeight;
+  let tmp8Result;
   let num = size.size;
   ({ guildId, id } = size);
   if (num === undefined) {
@@ -25,28 +31,28 @@ export default function EmojiIcon(size) {
   if (lineHeight === undefined) {
     lineHeight = num + 4;
   }
-  const emojiByIdOrName = useEmojiByIdOrName.useEmojiByIdOrName(guildId, id);
+  const style = size.style;
+  const obj = useEmojiByIdOrName;
+  const emojiByIdOrName = obj.useEmojiByIdOrName(guildId, id);
   if (null == emojiByIdOrName) {
     let tmp4 = null;
     if (flag) {
-      const obj2 = { resizeMode: "contain", style: null, source: null };
       size = { width: num, height: num };
-      obj2.style = size;
-      obj2.source = _modDef9904;
-      tmp4 = jsx(FastImageDefault, { resizeMode: "contain", style: null, source: null });
+      FastImageDefault;
+      tmp4 = <tmp7 resizeMode="contain" style={size} source={AssetRegistryDefault} />;
     }
-    let tmp8Result = tmp4;
+    tmp8Result = tmp4;
   } else {
-    const obj3 = { style: size.style, fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
+    let str;
+    let url;
     const size1 = { width: num, height: num };
-    obj3.fastImageStyle = size1;
+    EmojiDefault;
     if (fontSize == null) {
       fontSize = num;
     }
     const obj5 = { fontSize, lineHeight };
-    obj3.textEmojiStyle = obj5;
     if (null != emojiByIdOrName.id) {
-      let str = emojiByIdOrName.name;
+      str = emojiByIdOrName.name;
     } else {
       str = emojiByIdOrName.surrogates;
       if (str == null) {
@@ -56,24 +62,15 @@ export default function EmojiIcon(size) {
         str = "";
       }
     }
-    obj3.name = str;
     if (null != emojiByIdOrName.id) {
-      const obj6 = { id: null, animated: null, size: null };
+      const obj6 = { id: null, animated: null, size: num };
       ({ id: obj4.id, animated: obj4.animated } = emojiByIdOrName);
-      obj6.size = num;
-      let url = AvatarUtilsDefault.getEmojiURL(obj6);
       const tmp9Result = AvatarUtilsDefault;
+      url = tmp9Result.getEmojiURL(obj6);
     } else {
       url = emojiByIdOrName.url;
     }
-    obj3.src = url;
-    tmp8Result = jsx(EmojiDefault, {
-      style: size.style,
-      fastImageStyle: null,
-      textEmojiStyle: null,
-      name: null,
-      src: null,
-    });
+    tmp8Result = <tmp10 style={style} fastImageStyle={size1} textEmojiStyle={obj5} name={str} src={url} />;
   }
   return tmp8Result;
 }

@@ -1,19 +1,23 @@
 // discord_app/actions/DefaultRouteActionCreators.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
+import Constants from "../Constants.tsx";
 import matchPathCompat from "../modules/routing/matchPathCompat.tsx";
 import RouteUtils from "../modules/routing/RouteUtils.tsx";
 import LurkingStore from "../modules/lurker_mode/LurkingStore.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-require = fn;
-const Routes = fn(1085).Routes;
-const size = fn(2);
+const Routes = Constants.Routes;
 const result = size.fileFinishedImporting("actions/DefaultRouteActionCreators.tsx");
 
 export const saveLastRoute = function saveLastRoute(pathname) {
-  const obj2 = { path: null };
-  const RouteParam = RouteUtils.RouteParam;
-  obj2.path = Routes.CHANNEL(RouteParam.guildId());
-  const matchPathResult = matchPathCompat.matchPath(pathname, obj2);
+  let CHANNEL;
+  let RouteParam;
+  const obj = { path: CHANNEL(RouteParam.guildId()) };
+  const matchPath = matchPathCompat.matchPath;
+  CHANNEL = Routes.CHANNEL;
+  matchPathCompat;
+  RouteParam = RouteUtils.RouteParam;
+  const matchPathResult = matchPath(pathname, obj);
   let guildId;
   if (matchPathResult != null) {
     const params = matchPathResult.params;
@@ -21,20 +25,22 @@ export const saveLastRoute = function saveLastRoute(pathname) {
       guildId = params.guildId;
     }
   }
-  let tmp4 = null == guildId;
-  if (!tmp4) {
-    tmp4 = !LurkingStore.isLurking(guildId);
-  }
-  if (tmp4) {
-    const obj4 = { type: "SAVE_LAST_ROUTE", path: pathname };
-    DispatcherDefault.dispatch(obj4);
+  const tmp5 = null == guildId || !LurkingStore.isLurking(guildId);
+  if (tmp5) {
+    const obj3 = { type: "SAVE_LAST_ROUTE", path: pathname };
+    const obj2 = DispatcherDefault;
+    obj2.dispatch(obj3);
   }
 };
 export const saveLastNonVoiceRoute = function saveLastNonVoiceRoute(Routes) {
-  const obj2 = { path: null };
-  const RouteParam = RouteUtils.RouteParam;
-  obj2.path = Routes.CHANNEL(RouteParam.guildId());
-  const matchPathResult = matchPathCompat.matchPath(Routes, obj2);
+  let CHANNEL;
+  let RouteParam;
+  const obj = { path: CHANNEL(RouteParam.guildId()) };
+  const matchPath = matchPathCompat.matchPath;
+  CHANNEL = Routes.CHANNEL;
+  matchPathCompat;
+  RouteParam = RouteUtils.RouteParam;
+  const matchPathResult = matchPath(Routes, obj);
   let guildId;
   if (matchPathResult != null) {
     const params = matchPathResult.params;
@@ -42,12 +48,10 @@ export const saveLastNonVoiceRoute = function saveLastNonVoiceRoute(Routes) {
       guildId = params.guildId;
     }
   }
-  let tmp4 = null == guildId;
-  if (!tmp4) {
-    tmp4 = !LurkingStore.isLurking(guildId);
-  }
-  if (tmp4) {
-    const obj4 = { type: "SAVE_LAST_NON_VOICE_ROUTE", path: Routes };
-    DispatcherDefault.dispatch(obj4);
+  const tmp5 = null == guildId || !LurkingStore.isLurking(guildId);
+  if (tmp5) {
+    const obj3 = { type: "SAVE_LAST_NON_VOICE_ROUTE", path: Routes };
+    const obj2 = DispatcherDefault;
+    obj2.dispatch(obj3);
   }
 };

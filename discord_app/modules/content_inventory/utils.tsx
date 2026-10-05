@@ -1,54 +1,58 @@
 // discord_app/modules/content_inventory/utils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import util from "../../intl/index.native.tsx";
+import intl4 from "../../intl/index.native.tsx";
 import _mod4104 from "../../../_runtime/metro/04104__.js";
 import _modDef4461 from "../../../_runtime/metro/04461__.js";
 import ContentInventoryEntryType from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
 import ContentInventoryTraitType from "../../../discord_common/js/shared/shared-constants/ContentInventoryTraitType.tsx";
-import size from "../../../_runtime/metro/00002__.js";
+import size_mod from "../../../_runtime/metro/00002__.js";
 
 function calculateTimestampDurations(end, now) {
+  let rounded;
+  let rounded1;
   const bound = Math.max(end - now, 0);
   const result = bound / DurationsDefault.Millis.SECOND;
-  const time = { seconds: null, minutes: null, hours: null, days: null };
-  const rounded = Math.floor(result);
-  time.seconds = rounded % DurationsDefault.Seconds.MINUTE;
-  const rounded1 = Math.floor(result / DurationsDefault.Seconds.MINUTE);
-  time.minutes = rounded1 % DurationsDefault.Seconds.MINUTE;
-  time.hours = Math.floor(result / DurationsDefault.Seconds.HOUR);
-  time.days = Math.floor(result / DurationsDefault.Seconds.DAY);
+  const time = {
+    seconds: rounded % DurationsDefault.Seconds.MINUTE,
+    minutes: rounded1 % DurationsDefault.Seconds.MINUTE,
+    hours: Math.floor(result / DurationsDefault.Seconds.HOUR),
+    days: Math.floor(result / DurationsDefault.Seconds.DAY),
+  };
+  rounded = Math.floor(result);
+  rounded1 = Math.floor(result / DurationsDefault.Seconds.MINUTE);
   return time;
 }
 function formatActiveTimestamp(entry, now) {
+  let hours;
+  let minutes;
+  let start;
   let end;
   if ("end" in entry) {
     end = entry.end;
   }
-  let isCountDown = "isCountDown" in entry;
-  if (isCountDown) {
-    isCountDown = null != entry.isCountDown;
-  }
-  if (isCountDown) {
-    isCountDown = entry.isCountDown;
-  }
+  const isCountDown = "isCountDown" in entry && null != entry.isCountDown && entry.isCountDown;
   if (isCountDown) {
     if (null != end) {
+      let tmp6Result;
+      let combined;
       if (end > now) {
-        let tmp6Result = calculateTimestampDurations(end, now);
+        tmp6Result = calculateTimestampDurations(end, now);
       }
       ({ minutes, hours } = tmp6Result);
       let padStartResult = minutes;
+      const seconds = tmp6Result.seconds;
       if (hours > 0) {
         const _String = String;
-        padStartResult = String(minutes).padStart(2, "0");
         const StringResult = String(minutes);
+        padStartResult = StringResult.padStart(2, "0");
       }
       const _String2 = String;
-      const padStartResult1 = String(tmp6Result.seconds).padStart(2, "0");
+      const StringResult1 = String(seconds);
+      const padStartResult1 = StringResult1.padStart(2, "0");
       if (hours > 0) {
         const _HermesInternal2 = HermesInternal;
-        let combined = "" + hours + ":" + padStartResult + ":" + padStartResult1;
+        combined = "" + hours + ":" + padStartResult + ":" + padStartResult1;
       } else {
         const _HermesInternal = HermesInternal;
         combined = "" + padStartResult + ":" + padStartResult1;
@@ -57,7 +61,8 @@ function formatActiveTimestamp(entry, now) {
     }
   }
   if ("id" in entry) {
-    let start = SnowflakeUtilsDefault.extractTimestamp(entry.id);
+    const obj = SnowflakeUtilsDefault;
+    start = obj.extractTimestamp(entry.id);
   } else {
     start = entry.start;
   }
@@ -72,18 +77,23 @@ function formatActiveTimestamp(entry, now) {
   tmp6Result = calculateTimestampDurations(bound, start);
 }
 function formatTimestampToA11yLabel(time) {
+  let minutes;
+  let seconds;
   const hours = time.hours;
   const items = [];
   ({ minutes, seconds } = time);
   if (hours > 0) {
-    const intl = util.intl;
+    const push = items.push;
+    const intl = intl4.intl;
     const obj = { hours };
-    items.push(intl.formatToPlainString(util.t.xCjYxK, obj));
+    push(intl.formatToPlainString(intl4.t.xCjYxK, obj));
   }
-  const intl2 = util.intl;
-  items.push(intl2.formatToPlainString(util.t.iXLF9W, { minutes }));
-  const intl3 = util.intl;
-  items.push(intl3.formatToPlainString(util.t.geSp4K, { seconds }));
+  const push2 = items.push;
+  const intl2 = intl4.intl;
+  push2(intl2.formatToPlainString(intl4.t.iXLF9W, { minutes }));
+  const push3 = items.push;
+  const intl3 = intl4.intl;
+  push3(intl3.formatToPlainString(intl4.t.geSp4K, { seconds }));
   return items.join(", ");
 }
 function formatEndedTimestamp(entry, stateFromStores, timestamp, arg3) {
@@ -97,7 +107,8 @@ function formatEndedTimestamp(entry, stateFromStores, timestamp, arg3) {
   }
   const obj2 = _modDef4461(timestamp);
   const tmp3 = _modDef4461;
-  const diffResult = obj2.diff(tmp3(SnowflakeUtilsDefault.extractTimestamp(entry.id)), "s");
+  const obj3 = SnowflakeUtilsDefault;
+  const diffResult = obj2.diff(tmp3(obj3.extractTimestamp(entry.id)), "s");
   const absolute = Math.abs(diffResult);
   if (absolute < DurationsDefault.Seconds.MINUTE) {
     return formatSet.secondsAgo(diffResult);
@@ -120,45 +131,79 @@ function formatEndedTimestamp(entry, stateFromStores, timestamp, arg3) {
 }
 let closure_6 = {
   secondsAgo(count) {
-    const intl = util.intl;
-    return intl.formatToPlainString(util.t.EOrEJl, { count });
+    const intl = intl4.intl;
+    const obj = { count };
+    return intl.formatToPlainString(intl4.t.EOrEJl, obj);
   },
   minutesAgo(count) {
-    const intl = util.intl;
-    return intl.formatToPlainString(util.t.LRNgHp, { count });
+    const intl = intl4.intl;
+    const obj = { count };
+    return intl.formatToPlainString(intl4.t.LRNgHp, obj);
   },
   hoursAgo(count) {
-    const intl = util.intl;
-    return intl.formatToPlainString(util.t.raJpz3, { count });
+    const intl = intl4.intl;
+    const obj = { count };
+    return intl.formatToPlainString(intl4.t.raJpz3, obj);
   },
   daysAgo(count) {
-    const intl = util.intl;
-    return intl.formatToPlainString(util.t.KkvKhi, { count });
+    const intl = intl4.intl;
+    const obj = { count };
+    return intl.formatToPlainString(intl4.t.KkvKhi, obj);
   },
   weeksAgo(count) {
-    const intl = util.intl;
-    return intl.formatToPlainString(util.t.sDtO6D, { count });
+    const intl = intl4.intl;
+    const obj = { count };
+    return intl.formatToPlainString(intl4.t.sDtO6D, obj);
   },
   monthsAgo(count) {
-    const intl = util.intl;
-    return intl.formatToPlainString(util.t.ITymou, { count });
+    const intl = intl4.intl;
+    const obj = { count };
+    return intl.formatToPlainString(intl4.t.ITymou, obj);
   },
 };
+let obj = {
+  secondsAgo(count) {
+    const intl = intl4.intl;
+    const obj = { count };
+    return intl.formatToPlainString(intl4.t.jfUoRQ, obj);
+  },
+  minutesAgo(count) {
+    const intl = intl4.intl;
+    const obj = { count };
+    return intl.formatToPlainString(intl4.t.DmvRVO, obj);
+  },
+  hoursAgo(count) {
+    const intl = intl4.intl;
+    const obj = { count };
+    return intl.formatToPlainString(intl4.t.AfXezt, obj);
+  },
+  daysAgo(count) {
+    const intl = intl4.intl;
+    const obj = { count };
+    return intl.formatToPlainString(intl4.t.Lru1rV, obj);
+  },
+  weeksAgo(count) {
+    const intl = intl4.intl;
+    const obj = { count };
+    return intl.formatToPlainString(intl4.t["jovF+x"], obj);
+  },
+  monthsAgo(count) {
+    const intl = intl4.intl;
+    const obj = { count };
+    return intl.formatToPlainString(intl4.t.nmSbST, obj);
+  },
+};
+let size = size_mod;
 let result = size.fileFinishedImporting("modules/content_inventory/utils.tsx");
 
 export { calculateTimestampDurations };
 export const calculateActiveTimestampDurations = function calculateActiveTimestampDurations(end, now) {
+  let start;
   end = undefined;
   if ("end" in end) {
     end = end.end;
   }
-  let isCountDown = "isCountDown" in end;
-  if (isCountDown) {
-    isCountDown = null != end.isCountDown;
-  }
-  if (isCountDown) {
-    isCountDown = end.isCountDown;
-  }
+  const isCountDown = "isCountDown" in end && null != end.isCountDown && end.isCountDown;
   if (isCountDown) {
     if (null != end) {
       if (end > now) {
@@ -167,7 +212,8 @@ export const calculateActiveTimestampDurations = function calculateActiveTimesta
     }
   }
   if ("id" in end) {
-    let start = SnowflakeUtilsDefault.extractTimestamp(end.id);
+    const obj = SnowflakeUtilsDefault;
+    start = obj.extractTimestamp(end.id);
   } else {
     start = end.start;
   }
@@ -184,21 +230,17 @@ export const calculateActiveTimestampDurations = function calculateActiveTimesta
 export { formatActiveTimestamp };
 export { formatTimestampToA11yLabel };
 export const formatActiveA11yTimestamp = function formatActiveA11yTimestamp(end, now) {
+  let start;
   end = undefined;
   if ("end" in end) {
     end = end.end;
   }
-  let isCountDown = "isCountDown" in end;
-  if (isCountDown) {
-    isCountDown = null != end.isCountDown;
-  }
-  if (isCountDown) {
-    isCountDown = end.isCountDown;
-  }
+  const isCountDown = "isCountDown" in end && null != end.isCountDown && end.isCountDown;
   if (isCountDown) {
     if (null != end) {
+      let tmp6Result;
       if (end > now) {
-        let tmp6Result = calculateTimestampDurations(end, now);
+        tmp6Result = calculateTimestampDurations(end, now);
       }
       const time = { hours: null, minutes: null, seconds: null };
       ({ hours: obj2.hours, minutes: obj2.minutes, seconds: obj2.seconds } = tmp6Result);
@@ -206,7 +248,8 @@ export const formatActiveA11yTimestamp = function formatActiveA11yTimestamp(end,
     }
   }
   if ("id" in end) {
-    let start = SnowflakeUtilsDefault.extractTimestamp(end.id);
+    const obj = SnowflakeUtilsDefault;
+    start = obj.extractTimestamp(end.id);
   } else {
     start = end.start;
   }
@@ -220,34 +263,10 @@ export const formatActiveA11yTimestamp = function formatActiveA11yTimestamp(end,
   }
   tmp6Result = calculateTimestampDurations(bound, start);
 };
-export const A11Y_FORMAT_SET = {
-  secondsAgo(count) {
-    const intl = util.intl;
-    return intl.formatToPlainString(util.t.jfUoRQ, { count });
-  },
-  minutesAgo(count) {
-    const intl = util.intl;
-    return intl.formatToPlainString(util.t.DmvRVO, { count });
-  },
-  hoursAgo(count) {
-    const intl = util.intl;
-    return intl.formatToPlainString(util.t.AfXezt, { count });
-  },
-  daysAgo(count) {
-    const intl = util.intl;
-    return intl.formatToPlainString(util.t.Lru1rV, { count });
-  },
-  weeksAgo(count) {
-    const intl = util.intl;
-    return intl.formatToPlainString(util.t["jovF+x"], { count });
-  },
-  monthsAgo(count) {
-    const intl = util.intl;
-    return intl.formatToPlainString(util.t.nmSbST, { count });
-  },
-};
+export const A11Y_FORMAT_SET = obj;
 export { formatEndedTimestamp };
 export const formatEntryTimestamp = function formatEntryTimestamp(contentInventoryEntry, locale) {
+  let tmp8;
   let timestamp = time;
   if (time === undefined) {
     const _Date = Date;
@@ -268,14 +287,14 @@ export const formatEntryTimestamp = function formatEntryTimestamp(contentInvento
     flag = false;
   }
   if (flag) {
-    let tmp8 = formatActiveTimestamp(contentInventoryEntry, timestamp);
+    tmp8 = formatActiveTimestamp(contentInventoryEntry, timestamp);
   } else {
     tmp8 = formatEndedTimestamp(contentInventoryEntry, 0, timestamp, obj);
   }
   return tmp8;
 };
 export const getTrait = function getTrait(contentInventoryEntry, AGGREGATE_COUNT) {
-  closure_0 = AGGREGATE_COUNT;
+  let closure_0 = AGGREGATE_COUNT;
   const traits = contentInventoryEntry.traits;
   return traits.find((type) => type.type === TRENDING_CONTENT);
 };
@@ -306,16 +325,22 @@ export const isEntryNew = function isEntryNew(entry) {
   return flag;
 };
 export const isEntryRecent = function isEntryRecent(id) {
-  return SnowflakeUtilsDefault.age(id.id) / DurationsDefault.Millis.HOUR < 48;
+  const obj = SnowflakeUtilsDefault;
+  const ageResult = obj.age(id.id);
+  return ageResult / DurationsDefault.Millis.HOUR < 48;
 };
 export const isEntryExpired = function isEntryExpired(content) {
   let tmp = null != content.expires_at;
   if (tmp) {
     const _Date = Date;
-    const date = new Date(content.expires_at);
+    const self = this;
+    const self2 = this;
     const _Date2 = Date;
+    const self3 = this;
+    const self4 = this;
+    const date = new Date(content.expires_at);
+    tmp = date < new Date();
     const date1 = new Date();
-    tmp = date < date1;
   }
   return tmp;
 };
@@ -334,10 +359,14 @@ export const isEntryLive = function isEntryLive(traits) {
     let tmp2 = null != traits.expires_at;
     if (tmp2) {
       const _Date = Date;
-      const date = new Date(traits.expires_at);
+      const self = this;
+      const self2 = this;
       const _Date2 = Date;
+      const self3 = this;
+      const self4 = this;
+      const date = new Date(traits.expires_at);
+      tmp2 = date < new Date();
       const date1 = new Date();
-      tmp2 = date < date1;
     }
     flag = !tmp2;
   }
@@ -384,15 +413,20 @@ export const getResurrectedEntryLastPlayTime = function getResurrectedEntryLastP
   let date;
   if (null != prop) {
     const _Date = Date;
+    const self = this;
+    const self2 = this;
     date = new Date(found.resurrected_last_played);
   }
   return date;
 };
 export const getFullResurrectedBadgeText = function getFullResurrectedBadgeText(start) {
-  const obj2 = { start, end: null };
-  const obj = _mod4104;
-  obj2.end = new Date();
-  const intervalToDurationResult = obj.intervalToDuration(obj2);
+  let num4;
+  let num5;
+  const obj = { start, end: new Date() };
+  const intervalToDuration = _mod4104.intervalToDuration;
+  _mod4104;
+  new Date();
+  const intervalToDurationResult = intervalToDuration(obj);
   const months = intervalToDurationResult.months;
   let num = 0;
   if (undefined !== months) {
@@ -408,32 +442,33 @@ export const getFullResurrectedBadgeText = function getFullResurrectedBadgeText(
   if (undefined !== days) {
     num3 = days;
   }
-  const intl = util.intl;
-  const obj3 = { months: num, weeks: null, days: null };
-  let num4 = 0;
+  const intl = intl4.intl;
+  const formatToPlainString = intl.formatToPlainString;
+  const obj2 = { months: num, weeks: num4, days: num5 };
+  num4 = 0;
+  const NXBtjF = intl4.t.NXBtjF;
   if (num <= 0) {
     num4 = num2;
   }
-  obj3.weeks = num4;
-  let num5 = 0;
+  num5 = 0;
   if (num <= 0) {
     num5 = 0;
     if (num2 <= 0) {
       num5 = num3;
     }
   }
-  obj3.days = num5;
-  return intl.formatToPlainString(util.t.NXBtjF, obj3);
+  return formatToPlainString(NXBtjF, obj2);
 };
 export const getEpisodeBadgeText = function getEpisodeBadgeText(large_text) {
   if (null != large_text) {
     if ("" !== large_text) {
-      const match = /\w+ (\d+), \w+ (\d+)/.exec(large_text);
+      const obj2 = /\w+ (\d+), \w+ (\d+)/;
+      const match = obj2.exec(large_text);
       let formatToPlainStringResult = null;
       if (null != match) {
-        const intl = util.intl;
+        const intl = intl4.intl;
         const obj = { seasonNum: match[1], episodeNum: match[2] };
-        formatToPlainStringResult = intl.formatToPlainString(util.t.ijVm6y, obj);
+        formatToPlainStringResult = intl.formatToPlainString(intl4.t.ijVm6y, obj);
       }
       return formatToPlainStringResult;
     }
@@ -443,20 +478,21 @@ export const getEpisodeBadgeText = function getEpisodeBadgeText(large_text) {
 export const getEpisodeBadgeA11yText = function getEpisodeBadgeA11yText(arg0) {
   if (null != arg0) {
     if ("" !== arg0) {
-      const match = /\w+ (\d+), \w+ (\d+)/.exec(arg0);
-      if (null != match) {
-        const intl = util.intl;
-        const obj2 = { seasonNum: match[1], episodeNum: match[2] };
-        return intl.formatToPlainString(util.t.zmi5IM, obj2);
-      }
       const obj = /\w+ (\d+), \w+ (\d+)/;
+      const match = obj.exec(arg0);
+      if (null != match) {
+        const intl = intl4.intl;
+        const obj2 = { seasonNum: match[1], episodeNum: match[2] };
+        return intl.formatToPlainString(intl4.t.zmi5IM, obj2);
+      }
     }
   }
 };
 export const getRichGameStateBadgeText = function getRichGameStateBadgeText(state, party) {
+  let formatToPlainStringResult;
   let first;
   if (party != null) {
-    const size = party.size;
+    size = party.size;
     if (size != null) {
       first = size[0];
     }
@@ -471,15 +507,16 @@ export const getRichGameStateBadgeText = function getRichGameStateBadgeText(stat
   if (null != first) {
     if (null != tmp2) {
       if (first > 0) {
+        let combined;
         if (tmp2 > 0) {
-          const intl2 = util.intl;
+          const intl2 = intl4.intl;
           const obj2 = { count: first, max: tmp2 };
-          let formatToPlainStringResult = intl2.formatToPlainString(util.t.wmUSiy, obj2);
+          formatToPlainStringResult = intl2.formatToPlainString(intl4.t.wmUSiy, obj2);
         }
         if (null != formatToPlainStringResult) {
           if (null != state) {
             const _HermesInternal = HermesInternal;
-            let combined = "" + state + " (" + formatToPlainStringResult + ")";
+            combined = "" + state + " (" + formatToPlainStringResult + ")";
           }
           return combined;
         }
@@ -490,14 +527,11 @@ export const getRichGameStateBadgeText = function getRichGameStateBadgeText(stat
       }
     }
   }
-  let tmp3 = null != first;
+  const tmp3 = null != first && first > 0;
   if (tmp3) {
-    tmp3 = first > 0;
-  }
-  if (tmp3) {
-    const intl = util.intl;
+    const intl = intl4.intl;
     const obj = { count: first };
-    formatToPlainStringResult = intl.formatToPlainString(util.t.UTYMsa, obj);
+    formatToPlainStringResult = intl.formatToPlainString(intl4.t.UTYMsa, obj);
   }
 };
 export const isEntryTopGame = function isEntryTopGame(contentInventoryEntry) {
@@ -527,11 +561,19 @@ export const isValidStreak = function isValidStreak(traits) {
     return false;
   } else {
     const _Date = Date;
-    const diff = Date.now() - SnowflakeUtilsDefault.extractTimestamp(traits.id);
+    const obj = SnowflakeUtilsDefault;
+    const extractTimestampResult = obj.extractTimestamp(traits.id);
+    const diff = Date.now() - extractTimestampResult;
     return diff <= 48 * DurationsDefault.Millis.HOUR;
   }
 };
 export const getMarathonDescription = function getMarathonDescription(entry) {
+  let intl;
+  let intl2;
+  let intl3;
+  let obj2;
+  let obj3;
+  let obj4;
   const DURATION_SECONDS = ContentInventoryTraitType.ContentInventoryTraitType.DURATION_SECONDS;
   const traits = entry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
@@ -542,21 +584,23 @@ export const getMarathonDescription = function getMarathonDescription(entry) {
   if (null == duration_seconds) {
     return { text: null, tooltipText: null, a11yText: null };
   } else {
+    let obj;
     const _Math = Math;
     const rounded = Math.round(duration_seconds / DurationsDefault.Seconds.HOUR);
     if (rounded <= 0) {
-      let obj = { text: null, tooltipText: null, a11yText: null };
-    } else {
       obj = { text: null, tooltipText: null, a11yText: null };
-      const intl = util.intl;
-      const obj2 = { hours: rounded };
-      obj.text = intl.formatToPlainString(util.t.vZaMem, obj2);
-      const intl2 = util.intl;
-      const obj3 = { hours: rounded };
-      obj.tooltipText = intl2.formatToPlainString(util.t.S5F485, obj3);
-      const intl3 = util.intl;
-      const obj4 = { hours: rounded };
-      obj.a11yText = intl3.formatToPlainString(util.t["RZY+tX"], obj4);
+    } else {
+      obj = {
+        text: intl.formatToPlainString(intl4.t.vZaMem, obj2),
+        tooltipText: intl2.formatToPlainString(intl4.t.S5F485, obj3),
+        a11yText: intl3.formatToPlainString(intl4.t["RZY+tX"], obj4),
+      };
+      intl = intl4.intl;
+      obj2 = { hours: rounded };
+      intl2 = intl4.intl;
+      obj3 = { hours: rounded };
+      intl3 = intl4.intl;
+      obj4 = { hours: rounded };
     }
     return obj;
   }

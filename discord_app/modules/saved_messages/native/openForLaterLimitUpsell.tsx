@@ -7,9 +7,11 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/saved_messages/native/openForLaterLimitUpsell.tsx");
 
 export default function openForLaterLimitUpsell(arg0, items) {
+  const tmp = openPremiumUpsellActionSheetDefault;
+  const SAVED_MESSAGES = EntitlementFeatureNames.EntitlementFeatureNames.SAVED_MESSAGES;
   const PremiumUpsellSubfeatureNames = PremiumUpsellSubfeatureNames2.PremiumUpsellSubfeatureNames;
-  openPremiumUpsellActionSheetDefault(
-    EntitlementFeatureNames.EntitlementFeatureNames.SAVED_MESSAGES,
+  tmp(
+    SAVED_MESSAGES,
     arg0
       ? PremiumUpsellSubfeatureNames.SAVED_MESSAGES_REMINDER_LIMIT
       : PremiumUpsellSubfeatureNames.SAVED_MESSAGES_BOOKMARK_LIMIT,

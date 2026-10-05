@@ -7,6 +7,9 @@ const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("modules/experiments/fetchExperiments.tsx");
 
 export const fetchExperiments = function fetchExperiments(arg0) {
+  let context;
+  let headers;
+  let withGuildExperiments;
   ({ withGuildExperiments, headers, context } = arg0);
   const HTTP = HTTPUtils.HTTP;
   const request = {

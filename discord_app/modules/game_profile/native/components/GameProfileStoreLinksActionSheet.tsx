@@ -1,62 +1,69 @@
 // discord_app/modules/game_profile/native/components/GameProfileStoreLinksActionSheet.tsx
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl3 from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import BottomSheetModal from "../../../../../_runtime/06112_BottomSheetModal.js";
-import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import ActionSheet2 from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import useOpenExternalUrlFromGameProfileDefault from "../../hooks/useOpenExternalUrlFromGameProfile.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let importDefault;
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  header: {
-    gap: nativeDefault.space.PX_8,
-    paddingTop: nativeDefault.space.PX_8,
-    paddingHorizontal: nativeDefault.space.PX_16,
-    paddingBottom: nativeDefault.space.PX_24,
-  },
-  headerText: { textAlign: "center" },
-  buttons: null,
-};
-let obj3 = {
+let closure_4;
+let hasOwnProperty;
+let obj2;
+let obj3;
+const View = react_native.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { header: obj2, headerText: { textAlign: "center" }, buttons: obj3 };
+obj2 = {
   gap: nativeDefault.space.PX_8,
   paddingTop: nativeDefault.space.PX_8,
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingBottom: nativeDefault.space.PX_24,
 };
-obj2.buttons = { gap: nativeDefault.space.PX_12 };
-let closure_6 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj4 = { gap: nativeDefault.space.PX_12 };
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/game_profile/native/components/GameProfileStoreLinksActionSheet.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+createStyles = createStyles.createStyles;
+obj3 = { gap: nativeDefault.space.PX_12 };
+let closure_6 = createStyles(obj);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = trackAction(576).c(28);
+      let closure_1;
+      let gameName;
+      let header;
+      let headerText;
+      let items;
+      let items1;
+      let obj6;
+      let tmp11;
+      let tmp14;
+      let tmp8;
+      let tmp9;
+      let trackAction;
+      let websiteButtons;
+      let obj = trackAction(576);
+      const cResult = obj.c(28);
       ({ gameName, websiteButtons, trackAction } = arg0);
       const tmp4 = closure_6();
-      const obj = trackAction(576);
-      const tmp5Result = useOpenExternalUrlFromGameProfileDefault(LinkingDefault.openURL);
+      const tmp5 = useOpenExternalUrlFromGameProfileDefault;
+      const tmp5Result = tmp5(LinkingDefault.openURL);
       importDefault = tmp5Result;
       const sum = useSafeAreaInsetsDefault().bottom + nativeDefault.space.PX_16;
       if (cResult[0] !== sum) {
         const obj2 = { paddingBottom: sum };
         cResult[0] = sum;
         cResult[1] = obj2;
-        let tmp8 = obj2;
+        tmp8 = obj2;
       } else {
         tmp8 = cResult[1];
       }
@@ -65,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl = trackAction(1126).intl;
         const stringResult = intl.string(trackAction(1126).t["/4gj6r"]);
         cResult[2] = stringResult;
-        let tmp9 = stringResult;
+        tmp9 = stringResult;
       } else {
         tmp9 = cResult[2];
       }
@@ -79,94 +86,102 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp13 = closure_4(trackAction(4886).Text, obj3);
         cResult[3] = tmp4.headerText;
         cResult[4] = tmp13;
-        let tmp11 = tmp13;
+        tmp11 = tmp13;
       } else {
         tmp11 = cResult[4];
       }
+      const headerText2 = tmp4.headerText;
       if (cResult[5] !== gameName) {
         const intl2 = trackAction(1126).intl;
         const obj4 = { gameName };
         const formatResult = intl2.format(trackAction(1126).t["0acM2Y"], obj4);
         cResult[5] = gameName;
         cResult[6] = formatResult;
-        let tmp14 = formatResult;
+        tmp14 = formatResult;
       } else {
         tmp14 = cResult[6];
       }
       if (cResult[7] === tmp4.headerText) {
+        let tmp16;
         if (cResult[8] === tmp14) {
-          let tmp16 = cResult[9];
+          tmp16 = cResult[9];
         }
         if (cResult[10] === tmp4.header) {
           if (cResult[11] === tmp11) {
+            let tmp18;
+            let tmp23;
             if (cResult[12] === tmp16) {
-              let tmp18 = cResult[13];
+              tmp18 = cResult[13];
             }
             if (cResult[14] === tmp5Result) {
               if (cResult[15] === trackAction) {
                 if (cResult[16] === websiteButtons) {
-                  if (cResult[21] === tmp4.buttons) {
-                    if (cResult[22] === tmp23) {
-                      let tmp27 = cResult[23];
-                    }
-                    if (cResult[24] === tmp18) {
-                      if (cResult[25] === tmp27) {
-                        if (cResult[26] === tmp8) {
-                          let tmp31 = cResult[27];
-                        }
-                        return tmp31;
-                      }
-                    }
-                    const obj5 = { children: null };
-                    const obj6 = { contentContainerStyle: tmp8, children: null };
-                    const items = [tmp18, tmp27];
-                    obj6.children = items;
-                    obj5.children = closure_5(trackAction(6112).BottomSheetScrollView, obj6);
-                    const tmp34 = closure_4(trackAction(6701).ActionSheet, obj5);
-                    cResult[24] = tmp18;
-                    cResult[25] = tmp27;
-                    cResult[26] = tmp8;
-                    cResult[27] = tmp34;
-                    tmp31 = tmp34;
-                  }
-                  const obj7 = { style: tmp22, children: cResult[17] };
-                  const tmp30 = closure_4(View, obj7);
-                  cResult[21] = tmp4.buttons;
-                  cResult[22] = cResult[17];
-                  cResult[23] = tmp30;
-                  tmp27 = tmp30;
+                  tmp23 = cResult[17];
                 }
+                if (cResult[21] === tmp4.buttons) {
+                  let tmp26;
+                  if (cResult[22] === tmp23) {
+                    tmp26 = cResult[23];
+                  }
+                  if (cResult[24] === tmp18) {
+                    if (cResult[25] === tmp26) {
+                      let tmp30;
+                      if (cResult[26] === tmp8) {
+                        tmp30 = cResult[27];
+                      }
+                      return tmp30;
+                    }
+                  }
+                  const obj5 = { children: closure_5(trackAction(6112).BottomSheetScrollView, obj6) };
+                  const ActionSheet = trackAction(6701).ActionSheet;
+                  obj6 = { contentContainerStyle: tmp8, children: items };
+                  items = [tmp18, tmp26];
+                  const tmp33 = closure_4(ActionSheet, obj5);
+                  cResult[24] = tmp18;
+                  cResult[25] = tmp26;
+                  cResult[26] = tmp8;
+                  cResult[27] = tmp33;
+                  tmp30 = tmp33;
+                }
+                const obj7 = { style: tmp22, children: tmp23 };
+                const tmp29 = closure_4(View, obj7);
+                cResult[21] = tmp4.buttons;
+                cResult[22] = tmp23;
+                cResult[23] = tmp29;
+                tmp26 = tmp29;
               }
             }
             if (cResult[18] === tmp5Result) {
+              let tmp24;
               if (cResult[19] === trackAction) {
-                let tmp24 = cResult[20];
+                tmp24 = cResult[20];
               }
               const mapped = websiteButtons.map(tmp24);
               cResult[14] = tmp5Result;
               cResult[15] = trackAction;
               cResult[16] = websiteButtons;
               cResult[17] = mapped;
+              tmp23 = mapped;
             }
             const fn = function w(url) {
+              let icon;
+              let title;
               url = url.url;
               const action = url.action;
               ({ icon, title } = url);
-              return closure_1_4(
-                trackAction(dependencyMap[12]).Button,
-                {
-                  icon,
-                  text: title,
-                  variant: "secondary",
-                  size: "md",
-                  onPress() {
-                    ActionSheetActionCreatorsDefault.hideActionSheet();
-                    trackAction(action);
-                    action(url);
-                  },
+              let obj = {
+                icon,
+                text: title,
+                variant: "secondary",
+                size: "md",
+                onPress() {
+                  const obj = ActionSheetActionCreatorsDefault;
+                  obj.hideActionSheet();
+                  trackAction(action);
+                  action(url);
                 },
-                url,
-              );
+              };
+              return closure_1_4(trackAction(dependencyMap[12]).Button, obj, url);
             };
             cResult[18] = tmp5Result;
             cResult[19] = trackAction;
@@ -174,9 +189,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp24 = fn;
           }
         }
-        const obj8 = { style: header, children: null };
-        const items1 = [tmp11, tmp16];
-        obj8.children = items1;
+        const obj8 = { style: header, children: items1 };
+        items1 = [tmp11, tmp16];
         const tmp21 = closure_5(View, obj8);
         cResult[10] = tmp4.header;
         cResult[11] = tmp11;
@@ -187,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp17 = closure_4(trackAction(4886).Text, {
         variant: "text-md/medium",
         color: "text-subtle",
-        style: tmp4.headerText,
+        style: headerText2,
         children: tmp14,
       });
       cResult[7] = tmp4.headerText;
@@ -196,54 +210,75 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp16 = tmp17;
     }
   : (gameName) => {
+      let BottomSheetScrollView;
+      let closure_1;
+      let intl;
+      let intl2;
+      let items;
+      let items1;
+      let obj2;
+      let obj3;
+      let websiteButtons;
       ({ websiteButtons, trackAction: require } = gameName);
+      gameName = gameName.gameName;
       const tmp = closure_6();
-      importDefault = useOpenExternalUrlFromGameProfileDefault(LinkingDefault.openURL);
-      const obj = { children: null };
-      const obj2 = { contentContainerStyle: null, children: null };
-      obj2.contentContainerStyle = { paddingBottom: useSafeAreaInsetsDefault().bottom + nativeDefault.space.PX_16 };
-      const obj4 = { style: tmp.header, children: null };
+      const tmp2 = useOpenExternalUrlFromGameProfileDefault;
+      importDefault = tmp2(LinkingDefault.openURL);
+      const bottom = useSafeAreaInsetsDefault().bottom;
+      let obj = { children: closure_5(BottomSheetScrollView, obj2) };
+      const ActionSheet = ActionSheet2.ActionSheet;
+      obj2 = { contentContainerStyle: obj3, children: items1 };
+      obj3 = { paddingBottom: bottom + nativeDefault.space.PX_16 };
+      BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
+      const obj4 = { style: tmp.header, children: items };
       const obj5 = {
         variant: "heading-lg/semibold",
         color: "mobile-text-heading-primary",
         style: tmp.headerText,
-        children: null,
+        children: intl.string(intl3.t["/4gj6r"]),
       };
-      const intl = util.intl;
-      obj5.children = intl.string(util.t["/4gj6r"]);
-      const items = [closure_4(Text_Text.Text, obj5)];
-      const obj6 = { variant: "text-md/medium", color: "text-subtle", style: tmp.headerText, children: null };
-      const intl2 = util.intl;
-      obj6.children = intl2.format(util.t["0acM2Y"], { gameName: gameName.gameName });
-      items[1] = closure_4(Text_Text.Text, obj6);
-      obj4.children = items;
-      const items1 = [closure_5(View, obj4)];
-      const obj3 = { paddingBottom: useSafeAreaInsetsDefault().bottom + nativeDefault.space.PX_16 };
-      items1[1] = closure_4(View, {
+      const Text = Text_Text.Text;
+      intl = intl3.intl;
+      items = [closure_4(Text, obj5)];
+      const obj6 = {
+        variant: "text-md/medium",
+        color: "text-subtle",
+        style: tmp.headerText,
+        children: intl2.format(intl3.t["0acM2Y"], { gameName }),
+      };
+      const Text2 = Text_Text.Text;
+      intl2 = intl3.intl;
+      items[1] = closure_4(Text2, obj6);
+      items1 = [closure_5(View, obj4)];
+      const obj7 = {
         style: tmp.buttons,
         children: websiteButtons.map((url) => {
+          let icon;
+          let title;
           url = url.url;
           const action = url.action;
           ({ icon, title } = url);
-          return closure_1_4(
-            components_Button_Button.Button,
-            {
-              icon,
-              text: title,
-              variant: "secondary",
-              size: "md",
-              onPress() {
-                ActionSheetActionCreatorsDefault.hideActionSheet();
-                require(action);
-                action(url);
-              },
+          let obj = {
+            icon,
+            text: title,
+            variant: "secondary",
+            size: "md",
+            onPress() {
+              const obj = ActionSheetActionCreatorsDefault;
+              obj.hideActionSheet();
+              require(action);
+              action(url);
             },
-            url,
-          );
+          };
+          return closure_1_4(components_Button_Button.Button, obj, url);
         }),
-      });
-      obj2.children = items1;
-      obj.children = closure_5(BottomSheetModal.BottomSheetScrollView, obj2);
-      return closure_4(ActionSheet.ActionSheet, obj);
+      };
+      items1[1] = closure_4(View, obj7);
+      return closure_4(ActionSheet, obj);
     };
+const result = size.fileFinishedImporting(
+  "modules/game_profile/native/components/GameProfileStoreLinksActionSheet.tsx",
+);
+
+export default tmp5;
 export const ACTION_SHEET_KEY = "game-profile-store-links";

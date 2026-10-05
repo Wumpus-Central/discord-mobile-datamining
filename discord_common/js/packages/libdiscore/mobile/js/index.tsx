@@ -1,14 +1,17 @@
 // discord_common/js/packages/libdiscore/mobile/js/index.tsx
-import _mod17 from "../../../../../../_runtime/metro/00017__.js";
+import react_native from "../../../../../../_runtime/00017_react-native.js";
 import global_types from "global_types.tsx";
 import clock from "clock.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-const NativeModules = _mod17.NativeModules;
+let LibDiscoreModule;
+const NativeModules = react_native.NativeModules;
 if (NativeModules.LibDiscoreModule) {
-  let LibDiscoreModule = NativeModules.LibDiscoreModule;
+  LibDiscoreModule = NativeModules.LibDiscoreModule;
 } else {
   const _Proxy = Proxy;
+  const self = this;
+  const self2 = this;
   const obj = {
     get() {
       const error = new Error("The package 'react-native-libdiscore-jsi-module' doesn't seem to be linked");
@@ -19,18 +22,18 @@ if (NativeModules.LibDiscoreModule) {
 }
 LibDiscoreModule.bridgeJSIFunctions();
 const LIBDISCORE_JSI = global_types.typedGlobal.LIBDISCORE_JSI;
+const ExperimentCacher = LIBDISCORE_JSI.ExperimentCacher;
 let result = size.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/index.tsx");
-const prototype = function BlockedDomainsStore() {
-  return Object.create(new.target.prototype);
-}.prototype;
-prototype["isBlockedDomain"] = function isBlockedDomain(arg0) {
-  return LIBDISCORE_JSI.isBlockedDomain(arg0);
-};
-prototype["startFetchingBlockedDomains"] = function startFetchingBlockedDomains(arg0) {
-  const result = LIBDISCORE_JSI.startFetchingBlockedDomains(arg0);
-};
+class BlockedDomainsStore {
+  static isBlockedDomain(arg0) {
+    return LIBDISCORE_JSI.isBlockedDomain(arg0);
+  }
+  static startFetchingBlockedDomains(arg0) {
+    const result = LIBDISCORE_JSI.startFetchingBlockedDomains(arg0);
+  }
+}
 
-export const ExperimentCacher = LIBDISCORE_JSI.ExperimentCacher;
+export { ExperimentCacher };
 export const rustMultiply = function rustMultiply(arg0, arg1) {
   return LIBDISCORE_JSI.rustMultiply(arg0, arg1);
 };
@@ -38,7 +41,7 @@ export const consumeLogs = function consumeLogs() {
   return LIBDISCORE_JSI.consumeLogs();
 };
 export const monotonicNowMs = clock.monotonicNowMs;
-export const BlockedDomainsStore = prototype;
+export { BlockedDomainsStore };
 export const getFluxApi = function getFluxApi() {
   return LIBDISCORE_JSI.fluxApi;
 };

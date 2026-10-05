@@ -1,23 +1,32 @@
 // discord_app/modules/media_panel/native/MediaPlaybackPanelController.tsx
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import ActivityPanelConstants from "../../activities/panel/ActivityPanelConstants.tsx";
+import MorphablePanelConstants from "../../panels/morphable/native/MorphablePanelConstants.tsx";
 import MediaPlayerManagerDefault from "../../media/native/MediaPlayerManager.tsx";
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants.tsx";
 import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.tsx";
 import VoicePanelStore from "../../voice_panel/VoicePanelStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const require = fn;
+let children, dependencyMap, importDefault, set;
+
 function useCoreState() {
-  sharedValue = sharedValue(4612).useSharedValue(MediaPlaybackPanelModes.PIP);
+  let sharedValue;
   const obj = sharedValue(4612);
-  const sharedValue1 = sharedValue(4612).useSharedValue({ height: 0, width: 0 });
+  sharedValue = obj.useSharedValue(MediaPlaybackPanelModes.PIP);
   const obj2 = sharedValue(4612);
-  const sharedValue2 = sharedValue(4612).useSharedValue({ x: -1, y: -1 });
+  const sharedValue1 = obj2.useSharedValue({ height: 0, width: 0 });
   const obj3 = sharedValue(4612);
-  const sharedValue3 = sharedValue(4612).useSharedValue(AccessibilityStore.useReducedMotion);
+  const sharedValue2 = obj3.useSharedValue({ x: -1, y: -1 });
+  const obj4 = sharedValue(4612);
+  const sharedValue3 = obj4.useSharedValue(AccessibilityStore.useReducedMotion);
   const items = [sharedValue3];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     function onChange() {
       const useReducedMotion = AccessibilityStore.useReducedMotion;
       if (useReducedMotion !== sharedValue3.get()) {
@@ -29,31 +38,31 @@ function useCoreState() {
       const result = AccessibilityStore.removeReactChangeListener(onChange);
     };
   }, items);
-  const obj4 = sharedValue(4612);
-  const sharedValue4 = sharedValue(4612).useSharedValue(true);
   const obj5 = sharedValue(4612);
-  const sharedValue5 = sharedValue(4612).useSharedValue(0);
+  const sharedValue4 = obj5.useSharedValue(true);
   const obj6 = sharedValue(4612);
+  const sharedValue5 = obj6.useSharedValue(0);
   const fn = function p() {
+    let UNDEFINED;
     if (sharedValue.get() === MediaPlaybackPanelModes.PIP) {
-      let UNDEFINED = MorphablePanelModes.PIP;
+      UNDEFINED = MorphablePanelModes.PIP;
     } else {
       UNDEFINED = MorphablePanelModes.UNDEFINED;
     }
     return UNDEFINED;
   };
-  fn.__closure = { mode: sharedValue, MediaPlaybackPanelModes, MorphablePanelModes };
+  const obj8 = { mode: sharedValue, MediaPlaybackPanelModes, MorphablePanelModes };
+  fn.__closure = obj8;
   fn.__workletHash = 10375114450450;
   fn.__initData = __initData;
-  const derivedValue = sharedValue(4612).useDerivedValue(fn);
   const obj7 = sharedValue(4612);
-  const obj8 = { mode: sharedValue, MediaPlaybackPanelModes, MorphablePanelModes };
+  const derivedValue = obj7.useDerivedValue(fn);
   const tmp9 = sharedValue3(1618)();
-  const tmp10 = sharedValue3(17163)(sharedValue3(1618)());
-  const sharedValue6 = sharedValue(4612).useSharedValue(false);
+  const tmp10 = sharedValue3(17163)(tmp9);
   const obj9 = sharedValue(4612);
+  const sharedValue6 = obj9.useSharedValue(false);
   const obj10 = sharedValue(4612);
-  return {
+  const obj11 = {
     mode: sharedValue,
     morphablePanelMode: derivedValue,
     wrapperDimensions: sharedValue1,
@@ -63,24 +72,33 @@ function useCoreState() {
     scrollPosition: sharedValue5,
     canShowPIP: sharedValue4,
     lockScrolling: sharedValue6,
-    wrapperOffset: sharedValue(4612).useSharedValue({ x: 0, y: 0, gestureActive: false }),
+    wrapperOffset: obj10.useSharedValue({ x: 0, y: 0, gestureActive: false }),
   };
+  return obj11;
 }
-const MediaPlaybackPanelModes = fn(14379).MediaPlaybackPanelModes;
-const ActivityPanelModes = fn(8705).ActivityPanelModes;
-const MorphablePanelModes = fn(11903).MorphablePanelModes;
-const jsx = fn(21).jsx;
+let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
+const MediaPlaybackPanelModes = MediaPlaybackPanelConstants.MediaPlaybackPanelModes;
+const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
+const MorphablePanelModes = MorphablePanelConstants.MorphablePanelModes;
+const jsx = Fragment.jsx;
 let __initData = {
   code: "function MediaPlaybackPanelControllerTsx1(){const{mode,MediaPlaybackPanelModes,MorphablePanelModes}=this.__closure;switch(mode.get()){case MediaPlaybackPanelModes.PIP:{return MorphablePanelModes.PIP;}default:{return MorphablePanelModes.UNDEFINED;}}}",
 };
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelController.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = mode(wrapperDimensions[13]).c(27);
-      const tmp4 = useCoreState();
+      let mode;
+      let setMode;
+      let tmp12;
+      let tmp13;
+      let tmp5;
+      let tmp9;
+      let wrapperDimensions;
+      let tmp2 = wrapperDimensions;
+      const tmp = mode;
+      let obj = mode(wrapperDimensions[13]);
+      const cResult = obj.c(27);
+      const tmp4 = E();
       mode = tmp4.mode;
       const morphablePanelMode = tmp4.morphablePanelMode;
       wrapperDimensions = tmp4.wrapperDimensions;
@@ -92,28 +110,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const lockScrolling = tmp4.lockScrolling;
       const wrapperOffset = tmp4.wrapperOffset;
       const dismissToPipGestureRef = pipState.useRef(undefined);
+      const obj2 = pipState;
       if (cResult[0] !== mode) {
-        value = mode.get();
+        const value = mode.get();
         cResult[0] = mode;
         cResult[1] = value;
-        let tmp5 = value;
+        tmp5 = value;
       } else {
         tmp5 = cResult[1];
       }
-      const tmp7 = useReducedMotion(pipState.useState(tmp5), 2);
+      const tmp7 = useReducedMotion(obj2.useState(tmp5), 2);
       const first = tmp7[0];
       __initData = tmp7[1];
       if (cResult[2] !== first) {
         class E {
           constructor() {
-            flag = closure_11 === MediaPlaybackPanelModes.PIP;
+            let flag = first === MediaPlaybackPanelModes.PIP;
             if (flag) {
-              tmp2 = closure_12;
-              tmp3 = closure_12(tmp.DISMISSED);
-              tmp4 = closure_1;
-              tmp5 = closure_2;
-              obj = closure_1(closure_2[14]);
-              userDidClosePipResult = obj.userDidClosePip();
+              setMode(tmp.DISMISSED);
+              const obj = MediaPlayerManagerDefault;
+              obj.userDidClosePip();
               flag = true;
             }
             return flag;
@@ -121,44 +137,42 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[2] = first;
         cResult[3] = E;
+        tmp9 = E;
       } else {
         class E {
           constructor() {
-            flag = closure_11 === MediaPlaybackPanelModes.PIP;
+            let flag = first === MediaPlaybackPanelModes.PIP;
             if (flag) {
-              tmp2 = closure_12;
-              tmp3 = closure_12(tmp.DISMISSED);
-              tmp4 = closure_1;
-              tmp5 = closure_2;
-              obj = closure_1(closure_2[14]);
-              userDidClosePipResult = obj.userDidClosePip();
+              setMode(tmp.DISMISSED);
+              const obj = MediaPlayerManagerDefault;
+              obj.userDidClosePip();
               flag = true;
             }
             return flag;
           }
         }
       }
-      useCoreState = E;
+      E = tmp9;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         class F {
-          constructor(arg0) {
-            return arg0.voicePanelsPIP.size > 0;
+          constructor(voicePanelsPIP) {
+            return voicePanelsPIP.voicePanelsPIP.size > 0;
           }
         }
         cResult[4] = F;
       } else {
         class F {
-          constructor(arg0) {
-            return arg0.voicePanelsPIP.size > 0;
+          constructor(voicePanelsPIP) {
+            return voicePanelsPIP.voicePanelsPIP.size > 0;
           }
         }
       }
       const tmp11 = canShowPIP(F);
-      closure_14 = tmp11;
+      let closure_14 = tmp11;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class F {
-          constructor(arg0) {
-            return arg0.voicePanelsPIP.size > 0;
+          constructor(voicePanelsPIP) {
+            return voicePanelsPIP.voicePanelsPIP.size > 0;
           }
         }
         const items = [scrollPosition];
@@ -169,31 +183,32 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[5] = items;
         cResult[6] = T;
-        let tmp13 = T;
-        const tmp12 = items;
+        tmp13 = T;
+        tmp12 = items;
       } else {
         class F {
-          constructor(arg0) {
-            return arg0.voicePanelsPIP.size > 0;
+          constructor(voicePanelsPIP) {
+            return voicePanelsPIP.voicePanelsPIP.size > 0;
           }
         }
         tmp13 = cResult[6];
       }
-      let obj = mode(wrapperDimensions[13]);
-      const stateFromStores = mode(wrapperDimensions[15]).useStateFromStores(tmp12, tmp13);
+      const tmpResult = tmp(tmp2[15]);
+      const stateFromStores = tmpResult.useStateFromStores(tmp12, tmp13);
       if (cResult[7] === canShowPIP) {
         class F {
-          constructor(arg0) {
-            return arg0.voicePanelsPIP.size > 0;
+          constructor(voicePanelsPIP) {
+            return voicePanelsPIP.voicePanelsPIP.size > 0;
           }
         }
       }
       const fn = function z() {
         let tmp2 = !closure_14;
+        set = canShowPIP.set;
         if (!closure_14) {
           tmp2 = !stateFromStores;
         }
-        const result = canShowPIP.set(tmp2);
+        const result = set(tmp2);
       };
       const items1 = [canShowPIP, tmp11, stateFromStores];
       cResult[7] = canShowPIP;
@@ -201,19 +216,37 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp11;
       cResult[10] = fn;
       cResult[11] = items1;
-      const tmpResult = mode(wrapperDimensions[15]);
     }
   : (children) => {
+      let c1;
+      let c2;
+      let c3;
+      let c4;
+      let c5;
+      let c6;
+      let c8;
+      let c9;
+      let canShowPIP;
+      let dismissPanel;
+      let lockScrolling;
+      let morphablePanelMode;
+      let pipAvoidanceSpecs;
+      let pipState;
+      let scrollPosition;
+      let useReducedMotion;
+      let wrapperDimensions;
+      let wrapperOffset;
       importDefault = undefined;
       dependencyMap = undefined;
       _slicedToArray = undefined;
-      noop = undefined;
+      react = undefined;
       c5 = undefined;
       c6 = undefined;
       canShowPIP = undefined;
       c8 = undefined;
       c9 = undefined;
       useCoreState = undefined;
+      children = children.children;
       const tmp = useCoreState();
       const mode = tmp.mode;
       ({
@@ -226,38 +259,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         canShowPIP,
       } = tmp);
       ({ lockScrolling: c8, wrapperOffset: c9 } = tmp);
-      const dismissToPipGestureRef = noop.useRef(undefined);
-      let tmp2 = _slicedToArray(noop.useState(mode.get()), 2);
+      const dismissToPipGestureRef = react.useRef(undefined);
+      let tmp2 = _slicedToArray(react.useState(mode.get()), 2);
       const first = tmp2[0];
       const setMode = tmp4;
       const items = [first, tmp2[1]];
-      useCoreState = noop.useCallback(() => {
+      useCoreState = react.useCallback(() => {
         let flag = first === MediaPlaybackPanelModes.PIP;
         if (flag) {
           setMode(tmp.DISMISSED);
-          MediaPlayerManagerDefault.userDidClosePip();
+          const obj = MediaPlayerManagerDefault;
+          obj.userDidClosePip();
           flag = true;
         }
         return flag;
       }, items);
       const tmp5 = canShowPIP((voicePanelsPIP) => voicePanelsPIP.voicePanelsPIP.size > 0);
-      closure_14 = tmp5;
+      let closure_14 = tmp5;
+      let obj = mode(504);
       const items1 = [c6];
-      const stateFromStores = mode(504).useStateFromStores(
+      const stateFromStores = obj.useStateFromStores(
         items1,
         () => scrollPosition.getActivityPanelMode() === wrapperOffset.PIP,
       );
       const items2 = [canShowPIP, tmp5, stateFromStores];
-      const layoutEffect = noop.useLayoutEffect(() => {
+      const layoutEffect = react.useLayoutEffect(() => {
         let tmp2 = !closure_14;
+        set = canShowPIP.set;
         if (!closure_14) {
           tmp2 = !stateFromStores;
         }
-        const result = canShowPIP.set(tmp2);
+        const result = set(tmp2);
       }, items2);
       return first(MediaPlaybackPanelStateContextDefault.Provider, {
         value: _slicedToArray(
-          noop.useState(() => ({
+          react.useState(() => ({
             mode,
             setMode,
             morphablePanelMode,
@@ -274,6 +310,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           })),
           1,
         )[0],
-        children: children.children,
+        children,
       });
     };
+let result = size.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelController.tsx");
+
+export default tmp2;

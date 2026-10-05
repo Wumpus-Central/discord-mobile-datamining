@@ -1,68 +1,73 @@
 // discord_app/modules/message_previews/MessagePreviewManager.tsx
 import LoggerDefault from "../debug/Logger.tsx";
 import _modDef12 from "../../../_runtime/metro/00012__.js";
+import Constants from "../../Constants.tsx";
+import ChannelRecord from "../../records/ChannelRecord.tsx";
 import RemoteFetchData from "RemoteFetchData.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import MessagePreviewStore from "MessagePreviewStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const isThread = fn(2055).isThread;
-const Endpoints = fn(1085).Endpoints;
-let closure_11 = new LoggerDefault("MessagePreviewManager");
-class MessagePreviewManager extends tmp3 {
+let c2, c4, c5, c7, c8, closure_2, importDefault, set;
+
+const isThread = ChannelRecord.isThread;
+const Endpoints = Constants.Endpoints;
+const tmp2 = new LoggerDefault("MessagePreviewManager");
+let closure_11 = tmp2;
+class MessagePreviewManager extends AutomaticLifecycleManager {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    closure_0 = applyArgumentsResult;
-    map = new Map();
-    applyArgumentsResult.remote = map;
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    require = applyArgumentsResult;
+    applyArgumentsResult.remote = new Map();
     applyArgumentsResult.remoteTicking = false;
     applyArgumentsResult.tickQueued = false;
-    set = new Set();
-    applyArgumentsResult.localFetching = set;
+    new Map();
+    applyArgumentsResult.localFetching = new Set();
     applyArgumentsResult.actions = {
       CONNECTION_OPEN_SUPPLEMENTAL() {
-        return applyArgumentsResult.handleConnectionOpenSupplemental();
+        return require.handleConnectionOpenSupplemental();
       },
       CONNECTION_RESUMED() {
-        return applyArgumentsResult.handleConnectionResumed();
+        return require.handleConnectionResumed();
       },
       GUILD_CREATE(arg0) {
-        return applyArgumentsResult.handleGuildCreate(arg0);
+        return require.handleGuildCreate(arg0);
       },
       GUILD_DELETE(arg0) {
-        return applyArgumentsResult.handleGuildDelete(arg0);
+        return require.handleGuildDelete(arg0);
       },
       LOAD_MESSAGES_SUCCESS(channelId) {
-        return applyArgumentsResult.handleMessagesLoaded(channelId);
+        return require.handleMessagesLoaded(channelId);
       },
       LOCAL_MESSAGES_LOADED(channelId) {
-        return applyArgumentsResult.handleMessagesLoaded(channelId);
+        return require.handleMessagesLoaded(channelId);
       },
       LOGOUT() {
-        return applyArgumentsResult.handleLogout();
+        return require.handleLogout();
       },
       MESSAGE_CREATE(arg0) {
-        return applyArgumentsResult.handleMessageCreate(arg0);
+        return require.handleMessageCreate(arg0);
       },
       MESSAGE_DELETE(arg0) {
-        return applyArgumentsResult.handleMessageDelete(arg0);
+        return require.handleMessageDelete(arg0);
       },
       MESSAGE_UPDATE(arg0) {
-        return applyArgumentsResult.handleMessageUpdate(arg0);
+        return require.handleMessageUpdate(arg0);
       },
       THREAD_LIST_SYNC(arg0) {
-        return applyArgumentsResult.handleThreadListSync(arg0);
+        return require.handleThreadListSync(arg0);
       },
     };
-    obj = closure_1(closure_2[10]);
-    closure_129_0 = applyArgumentsResult;
+    new Set();
+    let obj = _modDef12;
     applyArgumentsResult.remoteTick = obj.debounce(
-      closure_4(async () => {
+      _asyncToGenerator(async () => {
+        let closure_0 = arg0;
         if (c8 === 2) {
           c8 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -77,6 +82,11 @@ class MessagePreviewManager extends tmp3 {
           }
         } else {
           while (true) {
+            let closure_4;
+            let closure_3;
+            let num8;
+            let c1;
+            let remote;
             c8 = 2;
             let tmp4 = c7;
             if (0 === c7) {
@@ -90,21 +100,20 @@ class MessagePreviewManager extends tmp3 {
               } else {
                 closure_4 = tmp;
                 closure_3 = tmp4;
-                closure_131_0 = undefined;
-                let num8 = closure_0;
+                num8 = closure_0;
                 if (closure_0 === undefined) {
                   num8 = 0;
                 }
-                closure_131_0 = num8;
-                closure_131_1 = undefined;
-                closure_131_2 = undefined;
-                closure_131_3 = undefined;
-                closure_131_4 = undefined;
+                c1 = undefined;
+                remote = undefined;
+                closure_3 = undefined;
+                closure_4 = undefined;
                 c7 = 1;
                 c8 = 1;
                 return { value: "Set", done: true };
               }
             } else {
+              let closure_1;
               if (1 === tmp4) {
                 if (arg0 === 1) {
                   c8 = 3;
@@ -115,29 +124,32 @@ class MessagePreviewManager extends tmp3 {
                   return obj4;
                 } else if (connected.isConnected()) {
                   if (!closure_132_0.remoteTicking) {
-                    if (closure_131_0 <= 5) {
+                    if (num8 <= 5) {
                       closure_132_0.tickQueued = false;
-                      c6 = 1;
+                      let c6 = 1;
                       closure_132_0.remoteTicking = true;
-                      let remote = closure_132_0.remote;
+                      remote = closure_132_0.remote;
                       closure_1 = remote[Symbol.iterator]();
                       if (closure_1 === undefined) {
                         let cleanupResult = closure_132_0.cleanup();
                         closure_132_0.remoteTicking = false;
                         c6 = 0;
                       } else {
+                        let dms;
                         c6 = 2;
-                        closure_131_1 = tmp25;
-                        closure_131_2 = closure_3(closure_131_1, 2);
-                        closure_131_3 = closure_131_2[0];
-                        closure_131_4 = closure_131_2[1];
-                        if (null == closure_131_3) {
-                          let dms = closure_132_0.fetchDms(closure_131_4);
+                        c1 = tmp25;
+                        remote = closure_3(c1, 2);
+                        closure_3 = remote[0];
+                        closure_4 = remote[1];
+                        if (null == closure_3) {
+                          dms = closure_132_0.fetchDms(closure_4);
                         } else {
-                          let guilds = closure_132_0.fetchGuilds(closure_131_3, closure_131_4);
+                          dms = closure_132_0.fetchGuilds(closure_3, closure_4);
                         }
                         c7 = 4;
                         c8 = 1;
+                        let obj5 = { value: dms, done: false };
+                        return obj5;
                       }
                     }
                   }
@@ -146,16 +158,16 @@ class MessagePreviewManager extends tmp3 {
                 }
               } else if (2 === tmp4) {
                 c6 = 0;
-                closure_131_5 = connected;
+                let closure_5 = connected;
                 let _HermesInternal = HermesInternal;
                 let str = "couldn't fetch message previews (attempt: ";
                 let str2 = ", error: ";
                 let str3 = ")";
                 let logResult = logger.log(
-                  "couldn't fetch message previews (attempt: " + closure_131_0 + ", error: " + closure_131_5 + ")",
+                  "couldn't fetch message previews (attempt: " + num8 + ", error: " + closure_5 + ")",
                 );
                 closure_132_0.remoteTicking = false;
-                let remoteTickResult = closure_132_0.remoteTick(closure_131_0 + 1);
+                let remoteTickResult = closure_132_0.remoteTick(num8 + 1);
               } else if (3 === tmp4) {
                 c6 = 1;
                 closure_1.return();
@@ -173,6 +185,7 @@ class MessagePreviewManager extends tmp3 {
                 c6 = 1;
               }
               c8 = 3;
+              return { value: "IconComponent", done: null };
             }
           }
         }
@@ -181,366 +194,384 @@ class MessagePreviewManager extends tmp3 {
     );
     return applyArgumentsResult;
   }
-}
-const prototype = MessagePreviewManager.prototype;
-prototype["addWant"] = function addWant(arg0) {
-  const basicChannel = ChannelStore.getBasicChannel(arg0);
-  if (null != basicChannel) {
-    let guild_id = basicChannel.guild_id;
-    if (guild_id == null) {
-      guild_id = null;
-    }
-    let isLatestResult = isThread(basicChannel.type);
-    if (!isLatestResult) {
-      isLatestResult = MessagePreviewStore.isLatest(guild_id, arg0);
-    }
-    if (!isLatestResult) {
-      const self = this;
-      const orCreate = this.getOrCreate(guild_id);
-      orCreate.addWant(arg0);
-      const local = this.fetchLocal(guild_id);
-      this.remoteTick();
+  addWant(arg0) {
+    const basicChannel = ChannelStore.getBasicChannel(arg0);
+    if (null != basicChannel) {
+      let guild_id = basicChannel.guild_id;
+      if (guild_id == null) {
+        guild_id = null;
+      }
+      const isLatestResult = isThread(basicChannel.type) || MessagePreviewStore.isLatest(guild_id, arg0);
+      if (!isLatestResult) {
+        const self = this;
+        const orCreate = this.getOrCreate(guild_id);
+        orCreate.addWant(arg0);
+        const local = this.fetchLocal(guild_id);
+        this.remoteTick();
+      }
     }
   }
-};
-prototype["fetchLocal"] = function fetchLocal(guild_id) {
-  closure_0 = guild_id;
-  const self = this;
-  return (async () => {
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp8 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+  fetchLocal(guild_id) {
+    let closure_0 = guild_id;
+    const self = this;
+    return (async () => {
+      let closure_1;
+      if (c5 === 2) {
+        c5 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
       } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_0 = tmp6;
-            let id;
-            closure_128_1 = undefined;
-            if (localFetchNeeded.isLocalFetchNeeded(closure_0)) {
-              const localFetching4 = self.localFetching;
-              if (!localFetching4.has(closure_0)) {
-                c3 = 2;
-                const _HermesInternal2 = HermesInternal;
-                closure_1_11.verbose("fetching local previews (via: database, guild_id: " + closure_0 + ")");
-                const localFetching5 = self.localFetching;
-                localFetching5.add(closure_0);
-                id = AuthenticationStore.getId();
-                const messagesResult = tmp4(tmp56[11]).messages();
-                let mostRecents;
-                if (messagesResult != null) {
-                  mostRecents = messagesResult.getMostRecents(closure_0);
+        let c3;
+        try {
+          let id;
+          let tmp;
+          let mostRecents;
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              id = undefined;
+              tmp = undefined;
+              if (localFetchNeeded.isLocalFetchNeeded(id)) {
+                const localFetching4 = self.localFetching;
+                if (!localFetching4.has(id)) {
+                  c3 = 2;
+                  const _HermesInternal2 = HermesInternal;
+                  closure_1_11.verbose("fetching local previews (via: database, guild_id: " + id + ")");
+                  const localFetching5 = self.localFetching;
+                  localFetching5.add(id);
+                  id = AuthenticationStore.getId();
+                  const obj3 = tmp(closure_2[11]);
+                  const messagesResult = obj3.messages();
+                  mostRecents = undefined;
+                  if (messagesResult != null) {
+                    mostRecents = messagesResult.getMostRecents(id);
+                  }
+                  c4 = 3;
+                  c5 = 1;
+                  const obj5 = { value: mostRecents, done: false };
+                  return obj5;
                 }
-                c4 = 3;
-                c5 = 1;
-                const obj5 = { value: mostRecents, done: false };
-                return obj5;
               }
             }
-            c5 = 3;
-          }
-        } else if (1 !== tmp9) {
-          if (2 === tmp9) {
-            c3 = 1;
-            closure_128_2 = tmp56;
-            const _HermesInternal = HermesInternal;
-            closure_1_11.log("couldn't fetch local previews (error: " + closure_128_2 + ")");
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
+          } else if (1 === c4) {
             c3 = 0;
-            const localFetching = closure_129_1.localFetching;
-            localFetching.delete(closure_129_0);
-            c5 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
+            const localFetching3 = closure_129_1.localFetching;
+            mostRecents = localFetching3.delete(closure_129_0);
+            throw closure_2;
           } else {
-            closure_128_1 = value;
-            let tmp14 = null != closure_128_1;
-            if (tmp14) {
-              tmp14 = id === AuthenticationStore.getId();
+            if (2 === c4) {
+              c3 = 1;
+              const _HermesInternal = HermesInternal;
+              closure_1_11.log("couldn't fetch local previews (error: " + closure_2 + ")");
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 0;
+              const localFetching = closure_129_1.localFetching;
+              localFetching.delete(closure_129_0);
+              c5 = 3;
+              const obj6 = { value, done: true };
+              return obj6;
+            } else {
+              tmp = value;
+              let tmp10 = null != tmp;
+              if (tmp10) {
+                mostRecents = AuthenticationStore.getId();
+                tmp10 = id === mostRecents;
+              }
+              if (tmp10) {
+                mostRecents = tmp(closure_2[12]).dispatch;
+                const obj = {
+                  type: "MESSAGE_PREVIEWS_LOCALLY_LOADED",
+                  guildId: closure_129_0,
+                  messages: tmp.map((item) => {
+                    let tmp;
+                    let tmp2;
+                    [tmp, tmp2] = item;
+                    const items = [tmp, tmp2.message];
+                    return items;
+                  }),
+                };
+                const tmp15 = tmp(closure_2[12]);
+                mostRecents(obj);
+              }
+              c3 = 1;
             }
-            if (tmp14) {
-              const obj7 = {
-                type: "MESSAGE_PREVIEWS_LOCALLY_LOADED",
-                guildId: closure_129_0,
-                messages: closure_128_1.map((item) => {
-                  [tmp, tmp2] = item;
-                  const items = [tmp, tmp2.message];
-                  return items;
-                }),
-              };
-              tmp4(tmp56[12]).dispatch(obj7);
-              const obj = tmp4(tmp56[12]);
-            }
-            c3 = 1;
+            c3 = 0;
+            const localFetching2 = closure_129_1.localFetching;
+            mostRecents = localFetching2.delete;
+            mostRecents(closure_129_0);
           }
-          c3 = 0;
-          const localFetching2 = closure_129_1.localFetching;
-          localFetching2.delete(closure_129_0);
-        }
-        c3 = 0;
-        const localFetching3 = closure_129_1.localFetching;
-        localFetching3.delete(closure_129_0);
-        throw tmp56;
-      } catch (tmp56) {
-        if (tmp5 === c3) {
-          c5 = tmp3;
-          throw tmp56;
-        } else if (tmp2 === tmp58) {
-          c4 = tmp2;
-        } else {
-          c4 = tmp;
+          c5 = 3;
+          return { value: "IconComponent", done: null };
+        } catch (tmp51) {
+          closure_2 = tmp51;
+          if (0 === c3) {
+            c5 = 3;
+            throw tmp51;
+          } else if (1 === tmp53) {
+            c4 = 1;
+          } else {
+            c4 = 2;
+          }
         }
       }
-    }
-  })();
-};
-prototype["fetchGuilds"] = function fetchGuilds(arg0, nextWants) {
-  closure_0 = arg0;
-  const nextWantsResult = nextWants.nextWants(1000);
-  importDefault = nextWantsResult;
-  if (0 === nextWantsResult.length) {
-    let resolved = Promise.resolve();
-  } else {
-    resolved = nextWants.try(nextWantsResult, () => {
-      closure_11.verbose(
-        "fetching guild previews (via: gateway, guild_id: " +
-          closure_0 +
-          ", channel_ids: " +
-          nextWantsResult.join(", ") +
-          ")",
-      );
-      const socket = GatewayConnectionStore.getSocket();
-      const lastMessages = socket.requestLastMessages(closure_0, nextWantsResult);
-      return Promise.resolve();
-    });
+    })();
   }
-  return resolved;
-};
-prototype["fetchDms"] = function fetchDms(nextWants) {
-  const nextWantsResult = nextWants.nextWants(30);
-  require = nextWantsResult;
-  if (0 === nextWantsResult.length) {
-    let resolved = Promise.resolve();
-  } else {
-    resolved = nextWants.try(
-      nextWantsResult,
-      asyncGeneratorStep(async () => {
-        if (c3 === 2) {
-          c3 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj2 = { value, done: true };
-            return obj2;
+  fetchGuilds(arg0, nextWants) {
+    let resolved;
+    let closure_0 = arg0;
+    const nextWantsResult = nextWants.nextWants(1000);
+    importDefault = nextWantsResult;
+    if (0 === nextWantsResult.length) {
+      resolved = Promise.resolve();
+    } else {
+      resolved = nextWants.try(nextWantsResult, () => {
+        closure_11.verbose(
+          "fetching guild previews (via: gateway, guild_id: " +
+            closure_0 +
+            ", channel_ids: " +
+            importDefault.join(", ") +
+            ")",
+        );
+        const socket = GatewayConnectionStore.getSocket();
+        const lastMessages = socket.requestLastMessages(closure_0, importDefault);
+        return Promise.resolve();
+      });
+    }
+    return resolved;
+  }
+  fetchDms(nextWants) {
+    let resolved;
+    const nextWantsResult = nextWants.nextWants(30);
+    require = nextWantsResult;
+    if (0 === nextWantsResult.length) {
+      const tmp3 = globalThis;
+      resolved = Promise.resolve();
+    } else {
+      resolved = nextWants.try(
+        nextWantsResult,
+        _asyncToGenerator(async () => {
+          let closure_0;
+          let closure_1;
+          let obj4;
+          if (c3 === 2) {
+            c3 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj2 = { value, done: true };
+              return obj2;
+            } else {
+              return { value: "IconComponent", done: null };
+            }
           } else {
-            return { value: "IconComponent", done: null };
-          }
-        } else {
-          try {
-            c3 = 2;
-            if (0 === dependencyMap) {
-              if (arg0 === 1) {
+            try {
+              let body;
+              c3 = 2;
+              if (0 === c2) {
+                if (arg0 === 1) {
+                  c3 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c3 = 3;
+                  const obj3 = { value, done: true };
+                  return obj3;
+                } else {
+                  body = undefined;
+                  const _HermesInternal = HermesInternal;
+                  closure_1_11.verbose("fetching dm previews (via: http, channel_ids: " + require.join(", ") + ")");
+                  const HTTP = tmp(c2[13]).HTTP;
+                  const request = { url: constants.MESSAGE_PREVIEWS, body: obj4, rejectWithError: false };
+                  obj4 = { channel_ids: require };
+                  c2 = 1;
+                  c3 = 1;
+                  const obj5 = { value: HTTP.post(request), done: false };
+                  return obj5;
+                }
+              } else if (arg0 === 1) {
                 c3 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c3 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
+                const obj6 = { value, done: true };
+                return obj6;
               } else {
-                let body;
-                const _HermesInternal = HermesInternal;
-                closure_1_11.verbose(
-                  "fetching dm previews (via: http, channel_ids: " + nextWantsResult.join(", ") + ")",
-                );
-                const HTTP = tmp2(1282).HTTP;
-                const request = { url: constants.MESSAGE_PREVIEWS, body: null, rejectWithError: false };
-                const obj4 = { channel_ids: nextWantsResult };
-                request.body = obj4;
-                dependencyMap = 1;
-                c3 = 1;
-                const obj5 = { value: HTTP.post(request), done: false };
-                return obj5;
+                body = value.body;
+                const obj7 = { type: "MESSAGE_PREVIEWS_LOADED", guildId: null, messages: body };
+                const obj = tmp4(c2[12]);
+                obj.dispatch(obj7);
+                c3 = 3;
+                return { value: "IconComponent", done: null };
               }
-            } else if (arg0 === 1) {
+            } catch (tmp11) {
               c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
-            } else {
-              body = value.body;
-              const obj7 = { type: "MESSAGE_PREVIEWS_LOADED", guildId: null, messages: body };
-              tmp5(584).dispatch(obj7);
-              c3 = 3;
-              return { value: "IconComponent", done: null };
+              throw tmp11;
             }
-          } catch (tmp12) {
-            c3 = tmp;
-            throw tmp12;
           }
-        }
-      }),
-    );
-  }
-  return resolved;
-};
-prototype["syncChannel"] = function syncChannel(guildId, channelId) {
-  const remote = this.remote;
-  value = remote.get(guildId);
-  let isLatestResult = null != value;
-  if (isLatestResult) {
-    isLatestResult = MessagePreviewStore.isLatest(guildId, channelId);
-  }
-  if (isLatestResult) {
-    value.removeWant(channelId);
-  }
-};
-prototype["getOrCreate"] = function getOrCreate(arg0) {
-  const self = this;
-  const remote = this.remote;
-  if (!remote.has(arg0)) {
-    const remote2 = self.remote;
-    const remoteFetchData = new RemoteFetchData.RemoteFetchData();
-    const result = remote2.set(arg0, remoteFetchData);
-  }
-  const remote3 = self.remote;
-  return remote3.get(arg0);
-};
-prototype["cleanup"] = function cleanup() {
-  while (tmp !== undefined) {
-    let tmp4 = _slicedToArray(tmp2, 2);
-    [tmp5, obj] = tmp4;
-    if (obj.empty()) {
-      let remote = this.remote;
-      let deleteResult = remote.delete(tmp5);
+        }),
+      );
     }
-    continue;
+    return resolved;
   }
-  tmp = this.remote[Symbol.iterator]();
-};
-prototype["handleConnectionOpenSupplemental"] = function handleConnectionOpenSupplemental() {
-  const result = this.handleConnectionResumed(false);
-};
-prototype["handleConnectionResumed"] = function handleConnectionResumed() {
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
-  }
-  const self = this;
-  if (this.tickQueued) {
-    if (!self.remoteTicking) {
-      self.remoteTick();
-      const remoteTick = self.remoteTick;
-      remoteTick.flush();
+  syncChannel(guildId, channelId) {
+    const remote = this.remote;
+    const value = remote.get(guildId);
+    const isLatestResult = null != value && MessagePreviewStore.isLatest(guildId, channelId);
+    if (isLatestResult) {
+      value.removeWant(channelId);
     }
   }
-  if (flag) {
-    const localFetching = self.localFetching;
-    localFetching.clear();
-    const remote = self.remote;
-    remote.clear();
-    self.remoteTicking = false;
-  }
-};
-prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
-  const remote = this.remote;
-  remote.delete(guild.guild.id);
-};
-prototype["handleGuildDelete"] = function handleGuildDelete(guild) {
-  const remote = this.remote;
-  remote.delete(guild.guild.id);
-};
-prototype["handleLogout"] = function handleLogout() {
-  const localFetching = this.localFetching;
-  localFetching.clear();
-  const remote = this.remote;
-  remote.clear();
-  this.remoteTicking = false;
-};
-prototype["handleMessageCreate"] = function handleMessageCreate(guildId) {
-  guildId = guildId.guildId;
-  if (guildId == null) {
-    guildId = null;
-  }
-  this.syncChannel(guildId, guildId.channelId);
-};
-prototype["handleMessageDelete"] = function handleMessageDelete(guildId) {
-  guildId = guildId.guildId;
-  if (guildId == null) {
-    guildId = null;
-  }
-  this.syncChannel(guildId, guildId.channelId);
-};
-prototype["handleMessageUpdate"] = function handleMessageUpdate(message) {
-  if (null != message.message.channel_id) {
-    let guildId = message.guildId;
+  getOrCreate(arg0) {
     const self = this;
+    const remote = this.remote;
+    if (!remote.has(arg0)) {
+      const remote2 = self.remote;
+      const self2 = this;
+      const self3 = this;
+      set = remote2.set;
+      const remoteFetchData = new RemoteFetchData.RemoteFetchData();
+      const result = set(arg0, remoteFetchData);
+    }
+    const remote3 = self.remote;
+    return remote3.get(arg0);
+  }
+  cleanup() {
+    let obj;
+    let tmp5;
+    const tmp = this.remote[Symbol.iterator]();
+    while (tmp !== undefined) {
+      let tmp4 = _slicedToArray(tmp2, 2);
+      [tmp5, obj] = tmp4;
+      if (obj.empty()) {
+        let remote = this.remote;
+        let deleteResult = remote.delete(tmp5);
+      }
+      continue;
+    }
+  }
+  handleConnectionOpenSupplemental() {
+    const result = this.handleConnectionResumed(false);
+  }
+  handleConnectionResumed() {
+    let flag = arg0;
+    if (arg0 === undefined) {
+      flag = true;
+    }
+    const self = this;
+    if (this.tickQueued) {
+      if (!self.remoteTicking) {
+        self.remoteTick();
+        const remoteTick = self.remoteTick;
+        remoteTick.flush();
+      }
+    }
+    if (flag) {
+      const localFetching = self.localFetching;
+      localFetching.clear();
+      const remote = self.remote;
+      remote.clear();
+      self.remoteTicking = false;
+    }
+  }
+  handleGuildCreate(guild) {
+    const remote = this.remote;
+    remote.delete(guild.guild.id);
+  }
+  handleGuildDelete(guild) {
+    const remote = this.remote;
+    remote.delete(guild.guild.id);
+  }
+  handleLogout() {
+    const localFetching = this.localFetching;
+    localFetching.clear();
+    const remote = this.remote;
+    remote.clear();
+    this.remoteTicking = false;
+  }
+  handleMessageCreate(guildId) {
+    guildId = guildId.guildId;
+    const syncChannel = this.syncChannel;
     if (guildId == null) {
       guildId = null;
     }
-    this.syncChannel(guildId, message.message.channel_id);
+    syncChannel(guildId, guildId.channelId);
   }
-};
-prototype["handleMessagesLoaded"] = function handleMessagesLoaded(channelId) {
-  const self = this;
-  const basicChannel = ChannelStore.getBasicChannel(channelId.channelId);
-  let guild_id;
-  if (basicChannel != null) {
-    guild_id = basicChannel.guild_id;
-  }
-  if (guild_id == null) {
-    guild_id = null;
-  }
-  if (null != basicChannel) {
-    let messages = channelId.messages;
-    if (messages == null) {
-      messages = [];
+  handleMessageDelete(guildId) {
+    guildId = guildId.guildId;
+    const syncChannel = this.syncChannel;
+    if (guildId == null) {
+      guildId = null;
     }
-    for (const item10014 of messages) {
-      let syncChannelResult = self.syncChannel(guild_id, item10014.channel_id);
-      continue;
+    syncChannel(guildId, guildId.channelId);
+  }
+  handleMessageUpdate(message) {
+    if (null != message.message.channel_id) {
+      let guildId = message.guildId;
+      const self = this;
+      const syncChannel = this.syncChannel;
+      if (guildId == null) {
+        guildId = null;
+      }
+      syncChannel(guildId, message.message.channel_id);
     }
   }
-};
-prototype["handleThreadListSync"] = function handleThreadListSync(guildId) {
-  const remote = this.remote;
-  value = remote.get(guildId.guildId);
-  if (null != value) {
-    let mostRecentMessages = guildId.mostRecentMessages;
-    if (mostRecentMessages == null) {
-      mostRecentMessages = [];
+  handleMessagesLoaded(channelId) {
+    const self = this;
+    const basicChannel = ChannelStore.getBasicChannel(channelId.channelId);
+    let guild_id;
+    if (basicChannel != null) {
+      guild_id = basicChannel.guild_id;
     }
-    for (const item10012 of mostRecentMessages) {
-      let removeWantResult = value.removeWant(item10012.channel_id);
-      continue;
+    if (guild_id == null) {
+      guild_id = null;
+    }
+    if (null != basicChannel) {
+      let messages = channelId.messages;
+      if (messages == null) {
+        messages = [];
+      }
+      for (const item10014 of messages) {
+        let syncChannelResult = self.syncChannel(guild_id, item10014.channel_id);
+        continue;
+      }
     }
   }
-};
+  handleThreadListSync(guildId) {
+    const remote = this.remote;
+    const value = remote.get(guildId.guildId);
+    if (null != value) {
+      let mostRecentMessages = guildId.mostRecentMessages;
+      if (mostRecentMessages == null) {
+        mostRecentMessages = [];
+      }
+      for (const item10012 of mostRecentMessages) {
+        let removeWantResult = value.removeWant(item10012.channel_id);
+        continue;
+      }
+    }
+  }
+}
+const prototype = MessagePreviewManager.prototype;
 const messagePreviewManager = new MessagePreviewManager();
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/message_previews/MessagePreviewManager.tsx");
 
 export default messagePreviewManager;

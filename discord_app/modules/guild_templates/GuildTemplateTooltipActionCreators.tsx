@@ -1,20 +1,21 @@
 // discord_app/modules/guild_templates/GuildTemplateTooltipActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import Constants from "../../Constants.tsx";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import PermissionStore from "../../stores/PermissionStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const Permissions = fn(1085).Permissions;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");
+let c1;
 
-export default {
+const Permissions = Constants.Permissions;
+let obj = {
   checkGuildTemplateDirty(guildId) {
-    closure_0 = guildId;
+    let closure_0 = guildId;
     return (async () => {
       if (guildId === 2) {
         guildId = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp2 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -36,13 +37,14 @@ export default {
               return obj4;
             } else {
               const obj5 = { guildId };
+              const tmp12 = guildId;
               if (PermissionStore.canWithPartialContext(constants.MANAGE_GUILD, obj5)) {
+                const obj2 = guildId(c1[3]);
                 c1 = 1;
                 guildId = 1;
-                const obj6 = { value: guildId(c1[3]).loadTemplatesForGuild(tmp14), done: false };
+                const obj6 = { value: obj2.loadTemplatesForGuild(tmp12), done: false };
                 return obj6;
               }
-              tmp14 = guildId;
             }
           } else if (arg0 === 1) {
             guildId = 3;
@@ -54,17 +56,23 @@ export default {
           }
           guildId = 3;
           return { value: "IconComponent", done: null };
-        } catch (tmp7) {
-          guildId = tmp;
-          throw tmp7;
+        } catch (tmp6) {
+          guildId = 3;
+          throw tmp6;
         }
       }
     })();
   },
   hideGuildTemplateDirtyTooltip(guildId) {
-    DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE", guildId });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE", guildId };
+    obj.dispatch(obj2);
   },
   hideGuildTemplatePromotionTooltip() {
-    DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE" });
+    const obj = DispatcherDefault;
+    obj.dispatch({ type: "GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE" });
   },
 };
+const result = size.fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");
+
+export default obj;

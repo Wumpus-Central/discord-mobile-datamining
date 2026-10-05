@@ -1,5 +1,6 @@
 // discord_app/modules/age_gate/AgeGateConstants.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {
   AUTH: "Register Age Gate",
@@ -21,14 +22,14 @@ const obj = {
 const items = [, ,];
 ({ NSFW_CHANNEL: arr[0], NSFW_VOICE_CHANNEL: arr[1], NSFW_SERVER: arr[2] } = obj);
 const result = 2 * DurationsDefault.Millis.HOUR;
-const size = fn(2);
+const set = new Set(items);
 const result1 = size.fileFinishedImporting("modules/age_gate/AgeGateConstants.tsx");
 
 export const AGE_GATE_REGISTER_TIMEOUT_MS = result;
 export const NEW_USER_AGE_GATE_MODAL_KEY = "new-user-age-gate-modal";
 export const EXISTING_USER_AGE_GATE_MODAL_KEY = "existing-user-age-gate-modal";
 export const AgeGateSource = obj;
-export const REACTIVE_CHECK_AGE_GATE_SOURCES = new Set(items);
+export const REACTIVE_CHECK_AGE_GATE_SOURCES = set;
 export const AgeGateAnalyticAction = {
   AGE_GATE_OPEN: "AGE_GATE_OPEN",
   AGE_GATE_CLOSE: "AGE_GATE_CLOSE",

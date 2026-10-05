@@ -1,34 +1,36 @@
 // discord_common/js/packages/application-widget-renderer/src/index.tsx
-import discord_common_resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile.tsx";
+import createCompactNumberFormat from "createCompactNumberFormat.tsx";
+import resolvedDisplayField from "resolvedDisplayField.tsx";
+import resolvedValues from "resolvedValues.tsx";
+import schemas from "schemas.tsx";
+import types from "types.tsx";
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-const discord_common_resolvedValuesFromUserApplicationIdentityProfileDefault =
-  discord_common_resolvedValuesFromUserApplicationIdentityProfile;
+const resolvedValuesFromUserApplicationIdentityProfileDefault = resolvedValuesFromUserApplicationIdentityProfile;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/index.tsx");
-for (const key10018 in require("createCompactNumberFormat")) {
-  arg5[key10018] = require("createCompactNumberFormat")[key10018];
+for (const key10018 in createCompactNumberFormat) {
+  exports[key10018] = createCompactNumberFormat[key10018];
   continue;
 }
-for (const key10022 in require("resolvedDisplayField")) {
-  arg5[key10022] = require("resolvedDisplayField")[key10022];
+for (const key10022 in resolvedDisplayField) {
+  exports[key10022] = resolvedDisplayField[key10022];
   continue;
 }
-for (const key10026 in require("resolvedValues")) {
-  arg5[key10026] = require("resolvedValues")[key10026];
+for (const key10026 in resolvedValues) {
+  exports[key10026] = resolvedValues[key10026];
   continue;
 }
-for (const key10030 in require("schemas")) {
-  arg5[key10030] = require("schemas")[key10030];
+for (const key10030 in schemas) {
+  exports[key10030] = schemas[key10030];
   continue;
 }
-for (const key10034 in require("types")) {
-  arg5[key10034] = require("types")[key10034];
+for (const key10034 in types) {
+  exports[key10034] = types[key10034];
   continue;
 }
+const resolvedValuesFromUserApplicationIdentityProfile_export = resolvedValuesFromUserApplicationIdentityProfileDefault;
 
-export const resolvedValuesFromUserApplicationIdentityProfile =
-  discord_common_resolvedValuesFromUserApplicationIdentityProfileDefault;
-export const UnfurledMediaLoadingState =
-  discord_common_resolvedValuesFromUserApplicationIdentityProfile.UnfurledMediaLoadingState;
+export { resolvedValuesFromUserApplicationIdentityProfile_export as resolvedValuesFromUserApplicationIdentityProfile };
+export const UnfurledMediaLoadingState = resolvedValuesFromUserApplicationIdentityProfile.UnfurledMediaLoadingState;

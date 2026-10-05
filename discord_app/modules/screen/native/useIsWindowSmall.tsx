@@ -10,8 +10,11 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/screen/native/useIsWindowSmall.tsx");
 
 export default function getIsWindowSmall() {
-  const windowSizeClassifier = useWindowSizeClassifier.getWindowSizeClassifier();
+  const obj = useWindowSizeClassifier;
+  const windowSizeClassifier = obj.getWindowSizeClassifier();
   return windowSizeClassifier <= useWindowSizeClassifier.WindowSizeClassifier.SMALL;
 }
-export const useIsWindowSmall = () =>
-  useWindowSizeClassifierDefault() <= useWindowSizeClassifier.WindowSizeClassifier.SMALL;
+export const useIsWindowSmall = () => {
+  const tmp = useWindowSizeClassifierDefault();
+  return tmp <= useWindowSizeClassifier.WindowSizeClassifier.SMALL;
+};

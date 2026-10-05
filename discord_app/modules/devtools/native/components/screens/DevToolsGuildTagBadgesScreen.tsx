@@ -2,57 +2,73 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import badges_GuildBadge from "../../../../guild_tag/native/badges/GuildBadge.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../../_runtime/00017_react-native.js";
+import GuildTagConstants from "../../../../guild_tag/GuildTagConstants.tsx";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, closure_0, value;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagConstants = fn(7603);
+let GUILD_TAG_BADGE_PALETTE_PRESETS;
+let GuildTagBadgeKind;
+let closure_4;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+let react = react_mod;
+({ ScrollView: closure_4, View: hasOwnProperty } = react_native);
 ({
   GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: metroRequire,
   GUILD_TAG_BADGE_PALETTE_PRESETS,
   GuildTagBadgeKind,
 } = GuildTagConstants);
-const jsxProd = fn(21);
-({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
+({ jsxs: metroImportDefault, jsx: metroImportAll } = Fragment);
 const entries = Object.entries(GuildTagBadgeKind);
 const found = entries.filter((item) => {
+  let tmp;
   [tmp] = item;
   return isNaN(Number(tmp));
 });
 let closure_9 = found.map((item) => {
+  let tmp;
+  let tmp2;
   [tmp, tmp2] = item;
   return { name, value };
 });
 let items = [
   { label: "Untinted", primary: "enabled", secondary: "PX_16" },
-  ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary, index) => ({
-    label: "P" + index + 1,
-    primary: primary.primary,
-    secondary: primary.secondary,
-  })),
+  ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary, index) => {
+    const obj = { label: "P" + index + 1, primary: primary.primary, secondary: primary.secondary };
+    return obj;
+  }),
 ];
-const dependencyMap2 = [24, 48, 72];
-const createStyles = fn(4890);
-let obj2 = {
-  wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
-  contentContainer: null,
-  controlRow: null,
-  grid: null,
-  tile: null,
-  badgeBox: null,
+let closure_11 = [24, 48, 72];
+let createStyles = createStyles_mod;
+let obj = {
+  wrap: obj2,
+  contentContainer: obj3,
+  controlRow: obj4,
+  grid: obj5,
+  tile: obj6,
+  badgeBox: { height: 72, alignItems: "center", justifyContent: "center" },
 };
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-obj2.contentContainer = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
-let obj4 = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
-obj2.controlRow = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
-let obj5 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
-obj2.grid = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
-let obj6 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
-obj2.tile = {
+obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+createStyles = createStyles.createStyles;
+obj3 = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
+obj4 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
+obj5 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
+obj6 = {
   alignItems: "center",
   justifyContent: "flex-start",
   gap: nativeDefault.space.PX_4,
@@ -61,103 +77,112 @@ obj2.tile = {
   backgroundColor: "#ffffff",
   borderRadius: 8,
 };
-obj2.badgeBox = { height: 72, alignItems: "center", justifyContent: "center" };
-let closure_12 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj7 = {
-  alignItems: "center",
-  justifyContent: "flex-start",
-  gap: nativeDefault.space.PX_4,
-  width: 96,
-  padding: nativeDefault.space.PX_8,
-  backgroundColor: "#ffffff",
-  borderRadius: 8,
-};
-let size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/devtools/native/components/screens/DevToolsGuildTagBadgesScreen.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_12 = createStyles(obj);
+const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = require("c").c(29);
+      let closure_2;
+      let closure_3;
+      let first;
+      let items1;
+      let obj7;
+      let tmp = _require;
+      let obj = require("react");
+      const cResult = obj.c(29);
       const tmp4 = closure_12();
       _require = tmp4;
-      [first, _slicedToArray] = noop.useState(1);
-      const tmp7 = _slicedToArray(noop.useState(1), 2);
-      noop = tmp7[1];
-      closure_4 = tmp8;
-      closure_5 = tmp9;
-      if (cResult[0] === dependencyMap2[tmp7[0]]) {
-        if (cResult[1] === tmp8.label) {
-          let tmp12 = cResult[2];
+      [first, _slicedToArray] = react.useState(1);
+      const tmp7 = _slicedToArray(react.useState(1), 2);
+      react = tmp7[1];
+      let closure_4 = tmp8;
+      let closure_5 = tmp9;
+      const arr = items;
+      if (cResult[0] === closure_11[tmp7[0]]) {
+        let tmp12;
+        let tmp14;
+        if (cResult[1] === items[first].label) {
+          tmp12 = cResult[2];
         }
+        const controlRow = tmp4.controlRow;
         if (cResult[3] !== first) {
           const mapped = arr.map((label, index) => {
+            let str;
             closure_0 = index;
-            const obj = { text: label.label, size: "sm", variant: null, onPress: null };
-            let str = "secondary";
+            const obj = {
+              text: label.label,
+              size: "sm",
+              variant: str,
+              onPress() {
+                return closure_2(index);
+              },
+            };
+            str = "secondary";
+            const Button = closure_0(first[10]).Button;
             if (index === first) {
               str = "primary";
             }
-            obj.variant = str;
-            obj.onPress = function onPress() {
-              return closure_2(closure_0);
-            };
-            return closure_1_8(closure_0(first[10]).Button, obj, label.label);
+            return closure_1_8(Button, obj, label.label);
           });
           cResult[3] = first;
           cResult[4] = mapped;
-          let tmp14 = mapped;
+          tmp14 = mapped;
         } else {
           tmp14 = cResult[4];
         }
         if (cResult[5] === tmp4.controlRow) {
+          let tmp16;
+          let tmp23;
+          let tmp24;
           if (cResult[6] === tmp14) {
-            let tmp16 = cResult[7];
+            tmp16 = cResult[7];
           }
           const _HermesInternal = HermesInternal;
+          let str = "px (tap to cycle)";
           const combined = "Size: " + tmp9 + "px (tap to cycle)";
           const _Symbol = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
             const fn = function j() {
+              let length;
               return closure_3((arg0) => (arg0 + 1) % length.length);
             };
             cResult[8] = fn;
-            let tmp23 = fn;
+            tmp23 = fn;
           } else {
             tmp23 = cResult[8];
           }
           if (cResult[9] !== combined) {
             let obj2 = { text: combined, size: "sm", onPress: tmp23 };
-            const tmp26 = closure_8(tmp(tmp2[10]).Button, obj2);
+            const tmp26 = closure_8(tmp(first[10]).Button, obj2);
             cResult[9] = combined;
             cResult[10] = tmp26;
-            let tmp24 = tmp26;
+            tmp24 = tmp26;
           } else {
             tmp24 = cResult[10];
           }
-          if (cResult[11] === tmp9) {
+          if (cResult[11] === closure_11[tmp7[0]]) {
             if (cResult[12] === tmp4.badgeBox) {
               if (cResult[13] === tmp4.tile) {
-                if (cResult[14] === tmp8.primary) {
-                  if (cResult[15] === tmp8.secondary) {
-                    let tmp28 = cResult[16];
+                if (cResult[14] === items[first].primary) {
+                  let tmp28;
+                  if (cResult[15] === items[first].secondary) {
+                    tmp28 = cResult[16];
                   }
                   if (cResult[17] === tmp4.grid) {
+                    let tmp31;
                     if (cResult[18] === tmp28) {
-                      let tmp31 = cResult[19];
+                      tmp31 = cResult[19];
                     }
                     if (cResult[20] === tmp31) {
                       if (cResult[21] === tmp12) {
                         if (cResult[22] === tmp16) {
+                          let tmp35;
                           if (cResult[23] === tmp24) {
-                            let tmp35 = cResult[24];
+                            tmp35 = cResult[24];
                           }
                           if (cResult[25] === tmp4.contentContainer) {
                             if (cResult[26] === tmp4.wrap) {
+                              let tmp38;
                               if (cResult[27] === tmp35) {
-                                let tmp38 = cResult[28];
+                                tmp38 = cResult[28];
                               }
                               return tmp38;
                             }
@@ -172,10 +197,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                     }
-                    const obj4 = { spacing: 16, children: null };
+                    const obj4 = { spacing: 16, children: items };
                     items = [tmp12, tmp16, tmp24, tmp31];
-                    obj4.children = items;
-                    const tmp37 = closure_7(tmp(tmp2[12]).Stack, obj4);
+                    const tmp37 = closure_7(tmp(first[12]).Stack, obj4);
                     cResult[20] = tmp31;
                     cResult[21] = tmp12;
                     cResult[22] = tmp16;
@@ -194,174 +218,166 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const mapped1 = closure_9.map((value) => {
+            let items1;
             value = value.value;
-            const obj = { style: closure_0.tile, children: null };
-            const obj2 = { style: closure_0.badgeBox, children: null };
-            const size = {
+            const obj = { style: closure_0.tile, children: items };
+            const name = value.name;
+            const obj2 = { style: closure_0.badgeBox, children: metroImportAll(badges_GuildBadge.GuildBadge, size) };
+            size = {
               badge: value,
               primaryTintColor: closure_4.primary,
               secondaryTintColor: closure_4.secondary,
               width: height,
               height,
             };
-            obj2.children = closure_2_8(badges_GuildBadge.GuildBadge, size);
-            items = [closure_2_8(hasOwnProperty, obj2)];
+            const tmp = metroRequire[value];
+            items = [metroImportAll(hasOwnProperty, obj2)];
             const obj3 = {
               variant: "text-xs/normal",
               color: "text-muted",
               style: { textAlign: "center" },
-              children: null,
+              children: items1,
             };
-            const items1 = [value.name];
+            items1 = [name];
             let str = "";
-            if (2 === dependencyMap[value]) {
+            const Text = Text_Text.Text;
+            if (2 === tmp) {
               str = " \u00B7 2c";
             }
             items1[1] = str;
-            obj3.children = items1;
-            items[1] = React5(Text_Text.Text, obj3);
-            obj.children = items;
-            return React5(hasOwnProperty, obj, value);
+            items[1] = metroImportDefault(Text, obj3);
+            return metroImportDefault(hasOwnProperty, obj, value);
           });
-          cResult[11] = tmp9;
+          cResult[11] = closure_11[tmp7[0]];
           cResult[12] = tmp4.badgeBox;
           cResult[13] = tmp4.tile;
-          cResult[14] = tmp8.primary;
-          cResult[15] = tmp8.secondary;
+          cResult[14] = items[first].primary;
+          cResult[15] = items[first].secondary;
           cResult[16] = mapped1;
           tmp28 = mapped1;
         }
-        const obj6 = { horizontal: true, showsHorizontalScrollIndicator: false, children: null };
-        const obj7 = { style: tmp4.controlRow, children: tmp14 };
-        obj6.children = closure_8(closure_5, obj7);
+        const obj6 = { horizontal: true, showsHorizontalScrollIndicator: false, children: closure_8(closure_5, obj7) };
+        obj7 = { style: controlRow, children: tmp14 };
         const tmp20 = closure_8(closure_4, obj6);
         cResult[5] = tmp4.controlRow;
         cResult[6] = tmp14;
         cResult[7] = tmp20;
         tmp16 = tmp20;
       }
-      const obj8 = { variant: "text-md/normal", children: null };
-      let items1 = [
+      const obj8 = { variant: "text-md/normal", children: items1 };
+      items1 = [
         "All ",
         closure_9.length,
         " badge kinds. Tint: ",
         items[first].label,
         " \u00B7 Size: ",
-        dependencyMap2[tmp7[0]],
+        closure_11[tmp7[0]],
         "px. 2c = two-color badge.",
       ];
-      obj8.children = items1;
-      const tmp13 = closure_7(require("Text/Text").Text, obj8);
-      cResult[0] = dependencyMap2[tmp7[0]];
+      const tmp13 = closure_7(tmp(first[9]).Text, obj8);
+      cResult[0] = closure_11[tmp7[0]];
       cResult[1] = items[first].label;
       cResult[2] = tmp13;
       tmp12 = tmp13;
-      arr = items;
-      let obj = require("c");
     }
   : () => {
-      const tmp = closure_12();
+      let Stack;
+      let closure_2;
+      let closure_3;
+      let first;
+      let items1;
+      let obj2;
+      let obj5;
+      let tmp = closure_12();
       _require = tmp;
-      [first, _slicedToArray] = noop.useState(1);
-      const tmp4 = _slicedToArray(noop.useState(1), 2);
-      noop = tmp4[1];
-      closure_4 = tmp5;
-      closure_5 = tmp6;
-      let obj = { style: tmp.wrap, contentContainerStyle: tmp.contentContainer, children: null };
-      let obj2 = { spacing: 16, children: null };
-      let obj3 = { variant: "text-md/normal", children: null };
+      [first, _slicedToArray] = react.useState(1);
+      const tmp4 = _slicedToArray(react.useState(1), 2);
+      react = tmp4[1];
+      let closure_4 = tmp5;
+      let closure_5 = tmp6;
+      let obj = { style: tmp.wrap, contentContainerStyle: tmp.contentContainer, children: closure_7(Stack, obj2) };
+      obj2 = { spacing: 16, children: items1 };
+      Stack = require("Stack/Stack").Stack;
+      let obj3 = { variant: "text-md/normal", children: items };
       items = ["All ", closure_9.length, " badge kinds. Tint: "];
       items[3] = items[first].label;
       items[4] = " \u00B7 Size: ";
-      items[5] = dependencyMap2[tmp4[0]];
+      items[5] = closure_11[tmp4[0]];
       items[6] = "px. 2c = two-color badge.";
-      obj3.children = items;
-      let items1 = [closure_7(require("Text/Text").Text, obj3), , ,];
-      const obj4 = {
-        horizontal: true,
-        showsHorizontalScrollIndicator: false,
-        children: closure_8(closure_5, {
-          style: tmp.controlRow,
-          children: items.map((label, index) => {
-            closure_0 = index;
-            const obj = { text: label.label, size: "sm", variant: null, onPress: null };
-            let str = "secondary";
-            if (index === first) {
-              str = "primary";
-            }
-            obj.variant = str;
-            obj.onPress = function onPress() {
-              return closure_2(closure_0);
-            };
-            return closure_1_8(closure_0(first[10]).Button, obj, label.label);
-          }),
-        }),
-      };
-      items1[1] = closure_8(closure_4, obj4);
-      const obj5 = {
+      items1 = [closure_7(require("Text/Text").Text, obj3), , ,];
+      const obj4 = { horizontal: true, showsHorizontalScrollIndicator: false, children: closure_8(closure_5, obj5) };
+      obj5 = {
         style: tmp.controlRow,
         children: items.map((label, index) => {
+          let str;
           closure_0 = index;
-          const obj = { text: label.label, size: "sm", variant: null, onPress: null };
-          let str = "secondary";
+          const obj = {
+            text: label.label,
+            size: "sm",
+            variant: str,
+            onPress() {
+              return closure_2(index);
+            },
+          };
+          str = "secondary";
+          const Button = closure_0(first[10]).Button;
           if (index === first) {
             str = "primary";
           }
-          obj.variant = str;
-          obj.onPress = function onPress() {
-            return closure_2(closure_0);
-          };
-          return closure_1_8(closure_0(first[10]).Button, obj, label.label);
+          return closure_1_8(Button, obj, label.label);
         }),
       };
-      items1[2] = closure_8(require("components/Button/Button").Button, {
-        text: "Size: " + dependencyMap2[tmp4[0]] + "px (tap to cycle)",
-        size: "sm",
-        onPress() {
-          return closure_3((arg0) => (arg0 + 1) % length.length);
-        },
-      });
+      items1[1] = closure_8(closure_4, obj4);
       const obj6 = {
-        text: "Size: " + dependencyMap2[tmp4[0]] + "px (tap to cycle)",
+        text: "Size: " + closure_11[tmp4[0]] + "px (tap to cycle)",
         size: "sm",
         onPress() {
+          let length;
           return closure_3((arg0) => (arg0 + 1) % length.length);
         },
       };
-      items1[3] = closure_8(closure_5, {
+      let Button = require("components/Button/Button").Button;
+      items1[2] = closure_8(Button, obj6);
+      const obj7 = {
         style: tmp.grid,
         children: closure_9.map((value) => {
+          let items1;
           value = value.value;
-          const obj = { style: closure_0.tile, children: null };
-          const obj2 = { style: closure_0.badgeBox, children: null };
-          const size = {
+          const obj = { style: closure_0.tile, children: items };
+          const name = value.name;
+          const obj2 = { style: closure_0.badgeBox, children: metroImportAll(badges_GuildBadge.GuildBadge, size) };
+          size = {
             badge: value,
             primaryTintColor: closure_4.primary,
             secondaryTintColor: closure_4.secondary,
             width: height,
             height,
           };
-          obj2.children = closure_2_8(badges_GuildBadge.GuildBadge, size);
-          items = [closure_2_8(hasOwnProperty, obj2)];
+          const tmp = metroRequire[value];
+          items = [metroImportAll(hasOwnProperty, obj2)];
           const obj3 = {
             variant: "text-xs/normal",
             color: "text-muted",
             style: { textAlign: "center" },
-            children: null,
+            children: items1,
           };
-          const items1 = [value.name];
+          items1 = [name];
           let str = "";
-          if (2 === dependencyMap[value]) {
+          const Text = Text_Text.Text;
+          if (2 === tmp) {
             str = " \u00B7 2c";
           }
           items1[1] = str;
-          obj3.children = items1;
-          items[1] = React5(Text_Text.Text, obj3);
-          obj.children = items;
-          return React5(hasOwnProperty, obj, value);
+          items[1] = metroImportDefault(Text, obj3);
+          return metroImportDefault(hasOwnProperty, obj, value);
         }),
-      });
-      obj2.children = items1;
-      obj.children = closure_7(require("Stack/Stack").Stack, obj2);
+      };
+      items1[3] = closure_8(closure_5, obj7);
       return closure_8(closure_4, obj);
     };
+let size = size_mod;
+const result = size.fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsGuildTagBadgesScreen.tsx",
+);
+
+export default tmp6;

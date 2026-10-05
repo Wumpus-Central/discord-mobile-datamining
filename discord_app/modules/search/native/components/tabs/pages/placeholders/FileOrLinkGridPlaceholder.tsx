@@ -1,50 +1,53 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx
-import c from "../../../../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../../../../_runtime/00576_react.js";
 import ReanimatedRexportDefault from "../../../../../../reanimated/ReanimatedRexport.tsx";
 import useFontScale from "../../../../../../screen/native/useFontScale.tsx";
 import usePlaceholderStyles from "../../../../hooks/usePlaceholderStyles.tsx";
 import SearchListCard from "../../../list/SearchListCard.tsx";
-import noop from "../../../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-let size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(11);
+      let containerStyle;
+      let imageStyle;
+      const obj = react2;
+      const cResult = obj.c(11);
       ({ imageStyle, containerStyle } = arg0);
-      const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(true);
+      const obj2 = usePlaceholderStyles;
+      const placeholderAnimatedStyle = obj2.usePlaceholderAnimatedStyle(true);
       const width = imageStyle.width;
-      const sum = imageStyle.height + 108 * useFontScale.useFontScale();
+      const obj3 = useFontScale;
+      const sum = imageStyle.height + 108 * obj3.useFontScale();
       if (cResult[0] === sum) {
+        let tmp6;
         if (cResult[1] === width) {
-          let tmp6 = cResult[2];
+          tmp6 = cResult[2];
         }
         if (cResult[3] === placeholderAnimatedStyle) {
+          let tmp7;
+          let tmp8;
           if (cResult[4] === containerStyle) {
-            let tmp7 = cResult[5];
+            tmp7 = cResult[5];
           }
           if (cResult[6] !== tmp6) {
-            const obj4 = { containerStyle: tmp6 };
             const tmp10 = jsx(SearchListCard.SearchListCardContainer, { containerStyle: tmp6 });
             cResult[6] = tmp6;
             cResult[7] = tmp10;
-            let tmp8 = tmp10;
+            tmp8 = tmp10;
           } else {
             tmp8 = cResult[7];
           }
           if (cResult[8] === tmp7) {
+            let tmp11;
             if (cResult[9] === tmp8) {
-              let tmp11 = cResult[10];
+              tmp11 = cResult[10];
             }
             return tmp11;
           }
-          const obj5 = { style: tmp7, pointerEvents: "none", children: tmp8 };
           const tmp14 = jsx(ReanimatedRexportDefault.View, { style: tmp7, pointerEvents: "none", children: tmp8 });
           cResult[8] = tmp7;
           cResult[9] = tmp8;
@@ -57,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = items;
         tmp7 = items;
       }
-      const size = { width, height: sum };
+      size = { width, height: sum };
       cResult[0] = sum;
       cResult[1] = width;
       cResult[2] = size;
@@ -65,25 +68,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : (imageStyle) => {
       imageStyle = imageStyle.imageStyle;
-      const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(true);
+      const containerStyle = imageStyle.containerStyle;
+      const obj = usePlaceholderStyles;
+      const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
       const width = imageStyle.width;
-      const sum = imageStyle.height + 108 * useFontScale.useFontScale();
-      c1 = sum;
+      const obj2 = useFontScale;
+      const sum = imageStyle.height + 108 * obj2.useFontScale();
+      let c1 = sum;
       const items = [width, sum];
-      const memo = noop.useMemo(() => {
-        const size = { width, height };
+      const memo = react.useMemo(() => {
+        size = { width, height };
         return size;
       }, items);
-      const obj3 = {
-        style: null,
-        pointerEvents: "none",
-        children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }),
-      };
-      const items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
-      obj3.style = items1;
-      return jsx(ReanimatedRexportDefault.View, {
-        style: null,
-        pointerEvents: "none",
-        children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }),
-      });
+      const items1 = [containerStyle, placeholderAnimatedStyle];
+      const View = ReanimatedRexportDefault.View;
+      return (
+        <View style={items1} pointerEvents="none">
+          {null}
+        </View>
+      );
     };
+let size = size_mod;
+const result = size.fileFinishedImporting(
+  "modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx",
+);
+
+export default tmp2;

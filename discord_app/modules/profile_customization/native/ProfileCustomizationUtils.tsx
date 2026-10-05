@@ -1,40 +1,52 @@
 // discord_app/modules/profile_customization/native/ProfileCustomizationUtils.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react from "../../../../_runtime/00576_react.js";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import AvatarUtils from "../../../utils/AvatarUtils.tsx";
 import VideoBackground from "../../calls/native/VideoBackground.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const result = size.fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
-
-export const useUserProfileBannerBackgroundColor = ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(10);
+      let displayProfile;
+      let guildId;
+      let pendingAvatarSrc;
+      let tmp13;
+      let tmp16;
+      let user;
+      const obj = react;
+      const cResult = obj.c(10);
       ({ user, guildId, pendingAvatarSrc, displayProfile } = arg0);
       let tmp4 = null;
       if (null != user) {
         if (null == pendingAvatarSrc) {
           if (cResult[0] === guildId) {
+            let tmp11;
+            if (cResult[1] === user) {
+              tmp11 = cResult[2];
+            }
+            tmp4 = tmp11;
           }
           const avatarURL = user.getAvatarURL(guildId, 80);
           cResult[0] = guildId;
           cResult[1] = user;
           cResult[2] = avatarURL;
+          tmp11 = avatarURL;
         } else {
           if (cResult[3] === pendingAvatarSrc) {
+            let tmp5;
             if (cResult[4] === user) {
-              let tmp5 = cResult[5];
+              tmp5 = cResult[5];
             }
             tmp4 = tmp5;
           }
           let userAvatarURL = pendingAvatarSrc;
           if (pendingAvatarSrc == null) {
-            const obj2 = {};
+            const obj2 = { avatar: null };
+            const getUserAvatarURL = AvatarUtils.getUserAvatarURL;
+            AvatarUtils;
             const merged = Object.assign(user);
-            obj2.avatar = null;
-            userAvatarURL = AvatarUtils.getUserAvatarURL(obj2);
-            const tmpResult = AvatarUtils;
+            userAvatarURL = getUserAvatarURL(obj2);
           }
           cResult[3] = pendingAvatarSrc;
           cResult[4] = user;
@@ -43,21 +55,22 @@ export const useUserProfileBannerBackgroundColor = ReactCompilerGating.isReactCo
         }
       }
       if (cResult[6] !== tmp4) {
-        const memoizedImageSourceResult = VideoBackground.memoizedImageSource(tmp4);
+        const tmpResult4 = VideoBackground;
+        const memoizedImageSourceResult = tmpResult4.memoizedImageSource(tmp4);
         cResult[6] = tmp4;
         cResult[7] = memoizedImageSourceResult;
-        let tmp13 = memoizedImageSourceResult;
-        const tmpResult4 = VideoBackground;
+        tmp13 = memoizedImageSourceResult;
       } else {
         tmp13 = cResult[7];
       }
-      const dominantColorFromImage = VideoBackground.useDominantColorFromImage(tmp4, tmp13);
+      const tmpResult5 = VideoBackground;
+      const dominantColorFromImage = tmpResult5.useDominantColorFromImage(tmp4, tmp13);
       if (cResult[8] !== dominantColorFromImage) {
-        const rgb2intResult = utils_ColorUtils.rgb2int(dominantColorFromImage);
+        const tmpResult6 = utils_ColorUtils;
+        const rgb2intResult = tmpResult6.rgb2int(dominantColorFromImage);
         cResult[8] = dominantColorFromImage;
         cResult[9] = rgb2intResult;
-        let tmp16 = rgb2intResult;
-        const tmpResult6 = utils_ColorUtils;
+        tmp16 = rgb2intResult;
       } else {
         tmp16 = cResult[9];
       }
@@ -71,45 +84,62 @@ export const useUserProfileBannerBackgroundColor = ReactCompilerGating.isReactCo
       return primaryColor;
     }
   : (arg0) => {
+      let displayProfile;
+      let pendingAvatarSrc;
+      let user;
       ({ user, pendingAvatarSrc, displayProfile } = arg0);
-      if (null == user) {
-        const memoizedImageSourceResult = VideoBackground.memoizedImageSource(null);
-        let primaryColor;
-        if (displayProfile != null) {
-          primaryColor = displayProfile.primaryColor;
+      let tmp2 = null;
+      if (null != user) {
+        if (null == pendingAvatarSrc) {
+          pendingAvatarSrc = user.getAvatarURL(tmp, 80);
+        } else if (pendingAvatarSrc == null) {
+          const obj = { avatar: null };
+          const getUserAvatarURL = AvatarUtils.getUserAvatarURL;
+          AvatarUtils;
+          const merged = Object.assign(user);
+          pendingAvatarSrc = getUserAvatarURL(obj);
         }
-        if (primaryColor == null) {
-          primaryColor = rgb2intResult;
-        }
-        return primaryColor;
-      } else if (null == pendingAvatarSrc) {
-        pendingAvatarSrc = user.getAvatarURL(tmp, 80);
-      } else if (pendingAvatarSrc == null) {
-        const obj2 = {};
-        const merged = Object.assign(user);
-        obj2.avatar = null;
-        pendingAvatarSrc = AvatarUtils.getUserAvatarURL(obj2);
+        tmp2 = pendingAvatarSrc;
       }
+      const obj2 = VideoBackground;
+      const memoizedImageSourceResult = obj2.memoizedImageSource(tmp2);
+      const rgb2int = utils_ColorUtils.rgb2int;
+      utils_ColorUtils;
+      let primaryColor;
+      const obj3 = VideoBackground;
+      const rgb2intResult = rgb2int(obj3.useDominantColorFromImage(tmp2, memoizedImageSourceResult));
+      if (displayProfile != null) {
+        primaryColor = displayProfile.primaryColor;
+      }
+      if (primaryColor == null) {
+        primaryColor = rgb2intResult;
+      }
+      return primaryColor;
     };
+const result = size.fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
+
+export const useUserProfileBannerBackgroundColor = tmp2;
 export const getAvatarSource = function getAvatarSource(getAvatarURL, guildId, arg2, acked) {
-  if (null == getAvatarURL) {
-    return null;
-  } else {
+  let tmp = null;
+  if (null != getAvatarURL) {
+    let memoizedImageSourceResult;
     let userAvatarURL = arg2;
     if (undefined === arg2) {
-      let memoizedImageSourceResult = VideoBackground.memoizedImageSource(
-        getAvatarURL.getAvatarURL(guildId, 80, !acked),
-      );
-      const tmp2 = !acked;
+      const obj2 = VideoBackground;
+      memoizedImageSourceResult = obj2.memoizedImageSource(getAvatarURL.getAvatarURL(guildId, 80, !acked));
     } else {
+      const memoizedImageSource = VideoBackground.memoizedImageSource;
+      VideoBackground;
       if (userAvatarURL == null) {
-        const obj2 = {};
+        const obj = { avatar: null };
+        const getUserAvatarURL = AvatarUtils.getUserAvatarURL;
+        AvatarUtils;
         const merged = Object.assign(getAvatarURL);
-        obj2.avatar = null;
-        userAvatarURL = AvatarUtils.getUserAvatarURL(obj2);
-        const tmp3Result = AvatarUtils;
+        userAvatarURL = getUserAvatarURL(obj);
       }
-      memoizedImageSourceResult = VideoBackground.memoizedImageSource(userAvatarURL);
+      memoizedImageSourceResult = memoizedImageSource(userAvatarURL);
     }
+    tmp = memoizedImageSourceResult;
   }
+  return tmp;
 };

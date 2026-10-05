@@ -1,23 +1,27 @@
 // discord_app/modules/game_relationships/hooks/useIsGameFriends.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import Constants from "../../../Constants.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import GameRelationshipStore from "../GameRelationshipStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const RelationshipTypes = fn(1085).RelationshipTypes;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/game_relationships/hooks/useIsGameFriends.tsx");
-
-export const useIsGameFriends = ReactCompilerGating.isReactCompilerEnabled()
+const RelationshipTypes = Constants.RelationshipTypes;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
+      let tmp7;
       _require = arg0;
-      const cResult = require("c").c(4);
+      const obj = require("react");
+      const cResult = obj.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [GameRelationshipStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -37,24 +41,26 @@ export const useIsGameFriends = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj = require("c");
+      const tmpResult = require("get initialized");
       return _slicedToArray(
-        require("initialize").useStateFromStores(first, tmp6, tmp7, require("SecondaryIndexMapUtils").isVersionEqual),
+        tmpResult.useStateFromStores(first, tmp6, tmp7, require("SecondaryIndexMapUtils").isVersionEqual),
         1,
       )[0];
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       let items = [GameRelationshipStore];
       const items1 = [arg0];
+      const obj = require("get initialized");
       return _slicedToArray(
-        require("initialize").useStateFromStores(
+        obj.useStateFromStores(
           items,
           () => {
             const gameRelationshipsForUserByType = GameRelationshipStore.getGameRelationshipsForUserByType(
@@ -73,3 +79,6 @@ export const useIsGameFriends = ReactCompilerGating.isReactCompilerEnabled()
         1,
       )[0];
     };
+const result = size.fileFinishedImporting("modules/game_relationships/hooks/useIsGameFriends.tsx");
+
+export const useIsGameFriends = tmp2;

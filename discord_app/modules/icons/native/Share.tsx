@@ -1,13 +1,14 @@
 // discord_app/modules/icons/native/Share.tsx
-import _modDef9519 from "../../../../_runtime/metro/09519__.js";
-import _modDef9520 from "../../../../_runtime/metro/09520__.js";
+import AssetRegistryDefault from "../../../../_runtime/09519_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/09520_AssetRegistry.js";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+let importDefaultResult;
 if (PlatformUtils.isIOS()) {
-  let importDefaultResult = _modDef9519;
+  importDefaultResult = AssetRegistryDefault;
 } else {
-  importDefaultResult = _modDef9520;
+  importDefaultResult = AssetRegistryDefault2;
 }
 const result = size.fileFinishedImporting("modules/icons/native/Share.tsx");
 

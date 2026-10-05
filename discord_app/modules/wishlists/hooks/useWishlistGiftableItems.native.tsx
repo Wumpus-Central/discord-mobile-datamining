@@ -1,28 +1,31 @@
 // discord_app/modules/wishlists/hooks/useWishlistGiftableItems.native.tsx
-import c from "../../../../_runtime/00576_c.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import Constants from "../../../Constants.tsx";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
 let items = [, ,];
-({ COLLECTIBLES: arr[0], PREMIUM: arr[1], SOCIAL_LAYER_GAME_ITEM: arr[2] } = fn(1085).SKUProductLines);
+({ COLLECTIBLES: arr[0], PREMIUM: arr[1], SOCIAL_LAYER_GAME_ITEM: arr[2] } = Constants.SKUProductLines);
 const set = new Set(items);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistGiftableItems.native.tsx");
-
-export const GIFTABLE_PRODUCT_LINES = set;
-export const useWishlistGiftableItems = ReactCompilerGating.isReactCompilerEnabled()
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (items) => {
-      const cResult = c.c(2);
+      let tmp4;
+      const obj = react2;
+      const cResult = obj.c(2);
       items = undefined;
+      const first = cResult[0];
       if (items != null) {
         items = items.items;
       }
-      if (cResult[0] !== items) {
+      if (first !== items) {
         let found;
         if (items != null) {
           const items1 = items.items;
-          found = items1.filter((skuProductLine) => set.has(skuProductLine.skuProductLine) && !skuProductLine.isOwned);
+          found = items1.filter((skuProductLine) => {
+            const tmp = set.has(skuProductLine.skuProductLine) && !skuProductLine.isOwned;
+            return tmp;
+          });
         }
         if (found == null) {
           found = [];
@@ -33,19 +36,22 @@ export const useWishlistGiftableItems = ReactCompilerGating.isReactCompilerEnabl
         }
         cResult[0] = items2;
         cResult[1] = found;
-        let tmp3 = found;
+        tmp4 = found;
       } else {
-        tmp3 = cResult[1];
+        tmp4 = cResult[1];
       }
-      return tmp3;
+      return tmp4;
     }
   : (arg0) => {
       let items = [arg0];
-      return noop.useMemo(() => {
+      return react.useMemo(() => {
         let found;
         if (items != null) {
           items = items.items;
-          found = items.filter((skuProductLine) => set.has(skuProductLine.skuProductLine) && !skuProductLine.isOwned);
+          found = items.filter((skuProductLine) => {
+            const tmp = set.has(skuProductLine.skuProductLine) && !skuProductLine.isOwned;
+            return tmp;
+          });
         }
         if (found == null) {
           found = [];
@@ -53,3 +59,7 @@ export const useWishlistGiftableItems = ReactCompilerGating.isReactCompilerEnabl
         return found;
       }, items);
     };
+const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistGiftableItems.native.tsx");
+
+export const GIFTABLE_PRODUCT_LINES = set;
+export const useWishlistGiftableItems = tmp3;

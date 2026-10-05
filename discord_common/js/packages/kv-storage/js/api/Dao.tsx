@@ -3,171 +3,167 @@ import Table from "Table.tsx";
 import TableId from "../types/index.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-let Dao;
 class Dao {
-  constructor(arg0, arg1, arg2) {
-    flag = importAll;
-    if (importAll === undefined) {
-      flag = true;
-    }
-    obj = Object.create(new.target.prototype);
-    obj.originalPrefix = global;
-    items = [];
-    items[0] = global;
-    table = new closure_0(closure_1[0]).Table(items, require, importDefault, flag);
+  constructor(basic_channels, KvCache, database) {
+    const obj = Object.create(new.target.prototype);
+    obj.originalPrefix = basic_channels;
+    const items = [basic_channels];
+    const table = new Table.Table(items, KvCache, database, flag);
     obj.table = table;
     return obj;
   }
-}
-const prototype = Dao.prototype;
-Object.defineProperty(prototype, "prefix", {
-  get: function prefix() {
-    return this.table.prefix;
-  },
-  set: undefined
-});
-prototype["withoutLogging"] = function withoutLogging() {
-  const originalPrefix = this.originalPrefix;
-  const tableId = this.table.tableId;
-  const database = this.table.database;
-  if (typeof Dao === "function") {
-    const obj = Object.create(Dao.prototype);
-    obj.originalPrefix = originalPrefix;
-    const items = [originalPrefix];
-    const table = new Table.Table(items, tableId, database, false);
-    obj.table = table;
-    return obj;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-};
-prototype["get"] = function get(arg0) {
-  const table = this.table;
-  const items = [arg0];
-  return table.get(items);
-};
-prototype["getMany"] = function getMany(arg0) {
-  const table = this.table;
-  return table.getMany([], arg0);
-};
-prototype["getRange"] = function getRange(arg0, arg1, arg2) {
-  const table = this.table;
-  const items = [arg0];
-  const items1 = [arg1];
-  return table.getRange(items, items1, arg2);
-};
-prototype["getKvEntries"] = function getKvEntries() {
-  const table = this.table;
-  return table.getKvEntries();
-};
-prototype["getMapEntries"] = function getMapEntries() {
-  const table = this.table;
-  return table.getMapEntries();
-};
-prototype["getIds"] = function getIds() {
-  const table = this.table;
-  return table.getChildIds([]);
-};
-prototype["getParentId"] = function getParentId(arg0) {
-  const table = this.table;
-  const items = [null, arg0];
-  return table.getParentId(items);
-};
-prototype["put"] = function put(arg0, data) {
-  let Replace = arg2;
-  if (arg2 === undefined) {
-    Replace = TableId.ConflictOptions.Replace;
-  }
-  const table = this.table;
-  const obj = { key: null, data, generation: null };
-  const items = [arg0];
-  obj.key = items;
-  return table.put(obj, Replace);
-};
-prototype["delete"] = function delete(arg0) {
-  const self = this;
-  if (0 === arguments.length) {
-    const table2 = self.table;
-    let deleteResult = table2.delete();
-  } else {
-    const table = self.table;
-    const items = [arg0];
-    deleteResult = table.delete(items);
-  }
-  return deleteResult;
-};
-prototype["transaction"] = function transaction(arg0, arg1) {
-  closure_0 = arg0;
-  const table = this.table;
-  return table.transaction((transaction) => {
-    if (typeof DaoTransaction === "function") {
-      const obj = Object.create(tmp2.prototype);
-      obj.transaction = transaction;
-      return tmp(obj);
+  withoutLogging() {
+    const originalPrefix = this.originalPrefix;
+    const tableId = this.table.tableId;
+    const database = this.table.database;
+    if (typeof Dao === "function") {
+      const obj = Object.create(Dao.prototype);
+      obj.originalPrefix = originalPrefix;
+      const items = [originalPrefix];
+      const self = this;
+      const self2 = this;
+      const table = new Table.Table(items, tableId, database, false);
+      obj.table = table;
+      return obj;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-  }, arg1);
-};
-prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
-  if (typeof DaoTransaction === "function") {
-    const obj = Object.create(DaoTransaction.prototype);
-    obj.transaction = tmp2;
-    return obj;
-  } else {
-    throw new TypeError("Trying to call a non-function");
   }
-};
-prototype["getManySyncUnsafe"] = function getManySyncUnsafe(arg0) {
-  const table = this.table;
-  return table.getManySyncUnsafe([], arg0);
-};
-prototype["getMapEntriesSyncUnsafe"] = function getMapEntriesSyncUnsafe() {
-  const table = this.table;
-  return table.getMapEntriesSyncUnsafe();
-};
-let DaoTransaction;
-class DaoTransaction {
-  constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj.transaction = global;
-    return obj;
+  get(arg0) {
+    const table = this.table;
+    const items = [arg0];
+    return table.get(items);
+  }
+  getMany(arg0) {
+    const table = this.table;
+    return table.getMany([], arg0);
+  }
+  getRange(arg0, arg1, arg2) {
+    const table = this.table;
+    const items = [arg0];
+    const items1 = [arg1];
+    return table.getRange(items, items1, arg2);
+  }
+  getKvEntries() {
+    const table = this.table;
+    return table.getKvEntries();
+  }
+  getMapEntries() {
+    const table = this.table;
+    return table.getMapEntries();
+  }
+  getIds() {
+    const table = this.table;
+    return table.getChildIds([]);
+  }
+  getParentId(arg0) {
+    const table = this.table;
+    const items = [null, arg0];
+    return table.getParentId(items);
+  }
+  put(arg0, data) {
+    let items;
+    let Replace = arg2;
+    if (arg2 === undefined) {
+      Replace = TableId.ConflictOptions.Replace;
+    }
+    const table = this.table;
+    const obj = { key: items, data, generation: null };
+    items = [arg0];
+    return table.put(obj, Replace);
+  }
+  delete(arg0) {
+    let deleteResult;
+    const self = this;
+    if (0 === arguments.length) {
+      const table2 = self.table;
+      deleteResult = table2.delete();
+    } else {
+      const table = self.table;
+      const items = [arg0];
+      deleteResult = table.delete(items);
+    }
+    return deleteResult;
+  }
+  transaction(arg0, arg1) {
+    let closure_0 = arg0;
+    const table = this.table;
+    return table.transaction((transaction) => {
+      if (typeof DaoTransaction === "function") {
+        const obj = Object.create(tmp2.prototype);
+        obj.transaction = transaction;
+        return tmp(obj);
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }, arg1);
+  }
+  upgradeTransaction(arg0) {
+    if (typeof DaoTransaction === "function") {
+      const obj = Object.create(DaoTransaction.prototype);
+      obj.transaction = tmp2;
+      return obj;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  }
+  getManySyncUnsafe(arg0) {
+    const table = this.table;
+    return table.getManySyncUnsafe([], arg0);
+  }
+  getMapEntriesSyncUnsafe() {
+    const table = this.table;
+    return table.getMapEntriesSyncUnsafe();
   }
 }
-const prototype2 = DaoTransaction.prototype;
-DaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
-  const tableTransaction = new Table.TableTransaction(prefix, tableId, transaction);
-  if (typeof DaoTransaction === "function") {
-    const obj = Object.create(DaoTransaction.prototype);
-    obj.transaction = tableTransaction;
+Object.defineProperty(Dao.prototype, "prefix", {
+  get: function prefix() {
+    return this.table.prefix;
+  },
+  set: undefined,
+});
+class DaoTransaction {
+  constructor(transaction) {
+    const obj = Object.create(new.target.prototype);
+    obj.transaction = transaction;
     return obj;
-  } else {
-    throw new TypeError("Trying to call a non-function");
   }
-};
-prototype2["put"] = function put(arg0, data) {
-  let Replace = arg2;
-  if (arg2 === undefined) {
-    Replace = TableId.ConflictOptions.Replace;
+  static fromDatabaseTransaction(prefix, tableId, transaction) {
+    const tableTransaction = new Table.TableTransaction(prefix, tableId, transaction);
+    if (typeof DaoTransaction === "function") {
+      const obj = Object.create(DaoTransaction.prototype);
+      obj.transaction = tableTransaction;
+      return obj;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
   }
-  const transaction = this.transaction;
-  const obj = { key: null, data, generation: null };
-  const items = [arg0];
-  obj.key = items;
-  transaction.put(obj, Replace);
-};
-prototype2["delete"] = function delete(arg0) {
-  const self = this;
-  if (0 === arguments.length) {
-    const transaction2 = self.transaction;
-    let deleteResult = transaction2.delete();
-  } else {
-    const transaction = self.transaction;
-    const items = [arg0];
-    deleteResult = transaction.delete(items);
+  put(arg0, data) {
+    let items;
+    let Replace = arg2;
+    if (arg2 === undefined) {
+      Replace = TableId.ConflictOptions.Replace;
+    }
+    const transaction = this.transaction;
+    const obj = { key: items, data, generation: null };
+    items = [arg0];
+    transaction.put(obj, Replace);
   }
-  return deleteResult;
-};
+  delete(arg0) {
+    let deleteResult;
+    const self = this;
+    if (0 === arguments.length) {
+      const transaction2 = self.transaction;
+      deleteResult = transaction2.delete();
+    } else {
+      const transaction = self.transaction;
+      const items = [arg0];
+      deleteResult = transaction.delete(items);
+    }
+    return deleteResult;
+  }
+}
+const prototype = DaoTransaction.prototype;
 const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Dao.tsx");
 
 export { Dao };

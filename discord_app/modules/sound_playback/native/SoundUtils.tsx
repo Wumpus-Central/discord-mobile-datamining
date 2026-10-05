@@ -1,70 +1,72 @@
 // discord_app/modules/sound_playback/native/SoundUtils.tsx
-import _mod17 from "../../../../_runtime/metro/00017__.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import "MetaQuestUtils";
 import MetaQuestUtils_mod from "../../device/MetaQuestUtils.android.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const NativeModules = _mod17.NativeModules;
+let MetaQuestUtils;
+const NativeModules = react_native.NativeModules;
 let closure_3 = 0;
 class RNSound {
-  constructor(arg0, arg1, arg2, arg3) {
-    obj = Object.create(new.target.prototype);
-    obj._volume = importDefault;
+  constructor(arg0, arg1, _volume, fn) {
+    const obj = Object.create(new.target.prototype);
+    obj._volume = _volume;
     obj._loaded = false;
-    tmp = +closure_3;
     closure_3 = tmp + 1;
-    obj._key = tmp;
+    obj._key = +closure_3;
     obj._duration = -1;
     obj._numberOfChannels = -1;
     obj._volume = 1;
     obj._pan = 0;
     obj._numberOfLoops = 0;
-    obj._sound = obj._createSound(global, require, importAll);
+    obj._sound = obj._createSound(arg0, arg1, fn);
     return obj;
+  }
+  _createSound(arg0, arg1, fn) {
+    const self = this;
+    let closure_0 = fn;
+    const DCDSoundManager = NativeModules.DCDSoundManager;
+    DCDSoundManager.prepare(arg0, arg1, this._key, (arg0, arg1) => {
+      const tmp = arg1;
+      if (tmp) {
+        ({ duration: self._duration, numberOfChannels: self._numberOfChannels } = arg1);
+      }
+      if (null == arg0) {
+        self._loaded = true;
+      }
+      if (closure_0 != null) {
+        tmp4(arg0);
+      }
+    });
+  }
+  play() {
+    if (this._loaded) {
+      const DCDSoundManager = NativeModules.DCDSoundManager;
+      DCDSoundManager.play(tmp._key);
+    }
+  }
+  pause() {
+    if (this._loaded) {
+      const DCDSoundManager = NativeModules.DCDSoundManager;
+      DCDSoundManager.pause(tmp._key);
+    }
+  }
+  stop() {
+    if (this._loaded) {
+      const DCDSoundManager = NativeModules.DCDSoundManager;
+      DCDSoundManager.stop(tmp._key);
+    }
+  }
+  release() {
+    const self = this;
+    if (this._loaded) {
+      const DCDSoundManager = NativeModules.DCDSoundManager;
+      DCDSoundManager.release(self._key);
+    }
+    self._loaded = false;
   }
 }
 const prototype = RNSound.prototype;
-prototype["_createSound"] = function _createSound(arg0, arg1, fn) {
-  const self = this;
-  closure_0 = fn;
-  const DCDSoundManager = NativeModules.DCDSoundManager;
-  DCDSoundManager.prepare(arg0, arg1, this._key, (arg0, arg1) => {
-    if (arg1) {
-      ({ duration: self._duration, numberOfChannels: self._numberOfChannels } = arg1);
-    }
-    if (null == arg0) {
-      self._loaded = true;
-    }
-    if (closure_0 != null) {
-      tmp3(arg0);
-    }
-  });
-};
-prototype["play"] = function play() {
-  if (this._loaded) {
-    const DCDSoundManager = NativeModules.DCDSoundManager;
-    DCDSoundManager.play(tmp._key);
-  }
-};
-prototype["pause"] = function pause() {
-  if (this._loaded) {
-    const DCDSoundManager = NativeModules.DCDSoundManager;
-    DCDSoundManager.pause(tmp._key);
-  }
-};
-prototype["stop"] = function stop() {
-  if (this._loaded) {
-    const DCDSoundManager = NativeModules.DCDSoundManager;
-    DCDSoundManager.stop(tmp._key);
-  }
-};
-prototype["release"] = function release() {
-  const self = this;
-  if (this._loaded) {
-    const DCDSoundManager = NativeModules.DCDSoundManager;
-    DCDSoundManager.release(self._key);
-  }
-  self._loaded = false;
-};
 Object.defineProperty(prototype, "volume", {
   get: function volume() {
     return this._volume;
@@ -112,8 +114,8 @@ let obj = {
 };
 const obj3 = {
   call_calling: obj.VOICE,
-  call_ringing: null,
-  call_ringing_halloween: null,
+  call_ringing: MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE,
+  call_ringing_halloween: MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE,
   camera_on: null,
   camera_off: null,
   deafen: null,
@@ -145,10 +147,7 @@ const obj3 = {
   activity_user_join: null,
   activity_user_left: null,
 };
-let MetaQuestUtils = MetaQuestUtils_mod;
-obj3.call_ringing = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
-let MetaQuestUtils = MetaQuestUtils_mod;
-obj3.call_ringing_halloween = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
+MetaQuestUtils = MetaQuestUtils_mod;
 ({
   VOICE: obj2.camera_on,
   VOICE: obj2.camera_off,
@@ -182,15 +181,115 @@ obj3.call_ringing_halloween = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RIN
   NOTIFICATION_NO_VIBRATION: obj2.activity_user_left,
 } = obj);
 const result = size.fileFinishedImporting("modules/sound_playback/native/SoundUtils.tsx");
-let fn = (name, call_calling, _volume, DEFAULT) => {
-  const obj = Object.create(new.target.prototype);
-  obj.name = name;
-  obj.usage = obj3[call_calling];
-  obj._volume = _volume;
-  obj.outputChannel = DEFAULT;
-  return obj;
-};
-const prototype2 = fn.prototype;
+class tmp3 {
+  constructor(name, arg1, _volume, outputChannel) {
+    const obj = Object.create(new.target.prototype);
+    obj.name = name;
+    obj.usage = obj3[arg1];
+    obj._volume = _volume;
+    obj.outputChannel = outputChannel;
+    return obj;
+  }
+  loop() {
+    const ensureSoundResult = this.ensureSound();
+    ensureSoundResult.then((play) => {
+      play.numberOfLoops = -1;
+      play.play();
+    });
+  }
+  play() {
+    const ensureSoundResult = this.ensureSound();
+    ensureSoundResult.then((play) => {
+      play.play();
+    });
+  }
+  playWithListener() {
+    const self = this;
+    const promise = new Promise((arg0, arg1) => {
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      const ensureSoundResult = self.ensureSound();
+      const nextPromise = ensureSoundResult.then((duration) => {
+        const tmp = null != duration.duration && 0 !== duration.duration;
+        if (!tmp) {
+          closure_1("sound has no duration");
+        }
+        duration.play();
+        let num2 = 1;
+        const obj = self(closure_2_1[2]);
+        if (obj.isIOS()) {
+          num2 = 1000;
+        }
+        const timerId = setTimeout(() => {
+          closure_1_0(true);
+        }, duration.duration * num2);
+      });
+      nextPromise.catch((error) => {
+        closure_1(error);
+      });
+    });
+    return promise;
+  }
+  pause() {
+    if (null != this.soundPromise) {
+      const soundPromise = this.soundPromise;
+      soundPromise.then((pause) => pause.pause());
+    }
+  }
+  stop() {
+    this.destroyAudio();
+  }
+  destroyAudio() {
+    const self = this;
+    if (null != this.soundPromise) {
+      const soundPromise = this.soundPromise;
+      soundPromise.then((stop) => {
+        stop.stop();
+        stop.release();
+        self.soundPromise = null;
+      });
+    }
+  }
+  ensureSound() {
+    const self = this;
+    let soundPromise = this.soundPromise;
+    if (soundPromise == null) {
+      const tmp = globalThis;
+      const self2 = this;
+      const self3 = this;
+      soundPromise = new Promise((arg0, arg1) => {
+        let closure_0 = arg0;
+        let closure_1 = arg1;
+        if (typeof RNSound === "function") {
+          const fn = (arg0) => {
+            if (null != arg0) {
+              if ("" !== arg0) {
+                closure_1(arg0);
+              }
+            }
+            closure_0(obj);
+          };
+          const obj = Object.create(tmp.prototype);
+          obj._volume = tmp4;
+          obj._loaded = false;
+          closure_3 = tmp6 + 1;
+          obj._key = +closure_3;
+          obj._duration = -1;
+          obj._numberOfChannels = -1;
+          obj._volume = 1;
+          obj._pan = 0;
+          obj._numberOfLoops = 0;
+          obj._sound = obj._createSound(tmp2, tmp3, fn);
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      });
+    }
+    self.soundPromise = soundPromise;
+    return self.soundPromise;
+  }
+}
+const prototype2 = tmp3.prototype;
 Object.defineProperty(prototype2, "volume", {
   get: function volume() {
     return this._volume;
@@ -202,107 +301,11 @@ Object.defineProperty(prototype2, "volume", {
   set: function volume(_volume) {
     const volume = _volume;
     this._volume = _volume;
-    this.ensureSound().then((result) => {
+    const ensureSoundResult = this.ensureSound();
+    ensureSoundResult.then((result) => {
       result.volume = volume;
     });
   },
 });
-prototype2["loop"] = function loop() {
-  this.ensureSound().then((play) => {
-    play.numberOfLoops = -1;
-    play.play();
-  });
-};
-prototype2["play"] = function play() {
-  this.ensureSound().then((play) => {
-    play.play();
-  });
-};
-prototype2["playWithListener"] = function playWithListener() {
-  const self = this;
-  return new Promise((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    const ensureSoundResult = self.ensureSound();
-    self
-      .ensureSound()
-      .then((duration) => {
-        let tmp = null != duration.duration;
-        if (tmp) {
-          tmp = 0 !== duration.duration;
-        }
-        if (!tmp) {
-          closure_1("sound has no duration");
-        }
-        duration.play();
-        let num2 = 1;
-        if (obj.isIOS()) {
-          num2 = 1000;
-        }
-        const timerId = setTimeout(() => {
-          closure_1_0(true);
-        }, duration.duration * num2);
-        obj = self(dependencyMap[2]);
-      })
-      .catch((error) => {
-        closure_1(error);
-      });
-  });
-};
-prototype2["pause"] = function pause() {
-  if (null != this.soundPromise) {
-    this.soundPromise.then((pause) => pause.pause());
-    const soundPromise = this.soundPromise;
-  }
-};
-prototype2["stop"] = function stop() {
-  this.destroyAudio();
-};
-prototype2["destroyAudio"] = function destroyAudio() {
-  const self = this;
-  if (null != this.soundPromise) {
-    this.soundPromise.then((stop) => {
-      stop.stop();
-      stop.release();
-      self.soundPromise = null;
-    });
-    const soundPromise = this.soundPromise;
-  }
-};
-prototype2["ensureSound"] = function ensureSound() {
-  const self = this;
-  let soundPromise = this.soundPromise;
-  if (soundPromise == null) {
-    soundPromise = new Promise((arg0, arg1) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      if (typeof RNSound === "function") {
-        const fn = (arg0) => {
-          if (null != arg0) {
-            if ("" !== arg0) {
-              closure_1(arg0);
-            }
-          }
-          closure_0(obj);
-        };
-        const obj = Object.create(tmp.prototype);
-        obj._volume = tmp4;
-        obj._loaded = false;
-        closure_3 = tmp6 + 1;
-        obj._key = +closure_3;
-        obj._duration = -1;
-        obj._numberOfChannels = -1;
-        obj._volume = 1;
-        obj._pan = 0;
-        obj._numberOfLoops = 0;
-        obj._sound = obj._createSound(tmp2, tmp3, fn);
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    });
-  }
-  self.soundPromise = soundPromise;
-  return self.soundPromise;
-};
 
-export const MobileAudioSound = fn;
+export const MobileAudioSound = tmp3;

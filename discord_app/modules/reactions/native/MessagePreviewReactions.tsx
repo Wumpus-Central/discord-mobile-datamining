@@ -1,37 +1,48 @@
 // discord_app/modules/reactions/native/MessagePreviewReactions.tsx
-import c from "../../../../_runtime/00576_c.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import useAnalyticsLocations from "../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import MessageReactionsContent from "MessageReactionsContent.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import ChannelConversationsStore from "../../conversations/ChannelConversationsStore.tsx";
 import ConversationPreviewStore from "../../conversations/ConversationPreviewStore.tsx";
 import MessagePreviewStore from "../../../stores/native/MessagePreviewStore.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
+let _require;
 
-require = fn;
-const jsx = fn(21).jsx;
+const jsx = Fragment.jsx;
 let closure_7 = [];
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
+      let closure_0;
+      let first;
       _require = arg0;
-      closure_1 = arg1;
-      const cResult = require("c").c(5);
+      let closure_1 = arg1;
+      const obj = require("react");
+      const cResult = obj.c(5);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MessagePreviewStore, ChannelConversationsStore, ConversationPreviewStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === arg0) {
+        let tmp8;
+        let tmp9;
         if (cResult[2] === arg1) {
-          let tmp8 = cResult[3];
-          let tmp9 = cResult[4];
+          tmp8 = cResult[3];
+          tmp9 = cResult[4];
         }
-        return tmp(504).useStateFromStores(first, tmp8, tmp9);
+        const tmpResult = tmp(504);
+        return tmpResult.useStateFromStores(first, tmp8, tmp9);
       }
       class E {
         constructor() {
@@ -56,15 +67,15 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp9 = items1;
       tmp8 = E;
-      const obj = require("c");
-      tmp = _require;
     }
   : (arg0, arg1) => {
+      let closure_0;
       _require = arg0;
-      closure_1 = arg1;
+      let closure_1 = arg1;
       const items = [MessagePreviewStore, ChannelConversationsStore, ConversationPreviewStore];
       const items1 = [arg0, arg1];
-      return require("initialize").useStateFromStores(
+      const obj = require("get initialized");
+      return obj.useStateFromStores(
         items,
         () => {
           let message = MessagePreviewStore.getMessage(closure_1);
@@ -79,81 +90,81 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/reactions/native/MessagePreviewReactions.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(8);
+      let channelId;
+      let emoji;
+      let messageId;
+      let tmp7;
+      const obj = react2;
+      const cResult = obj.c(8);
       ({ channelId, messageId, emoji } = arg0);
       const arr = closure_8(channelId, messageId);
-      const analyticsLocations = useAnalyticsLocationsDefault(
-        AnalyticsLocationDefault.MESSAGE_PREVIEW_REACTIONS,
-      ).analyticsLocations;
+      const tmp4 = useAnalyticsLocationsDefault;
+      const analyticsLocations = tmp4(AnalyticsLocationDefault.MESSAGE_PREVIEW_REACTIONS).analyticsLocations;
       if (cResult[0] === channelId) {
         if (cResult[1] === emoji) {
           if (cResult[2] === messageId) {
+            let tmp5;
             if (cResult[3] === arr) {
-              if (cResult[5] === analyticsLocations) {
-                if (cResult[6] === tmp5) {
-                  let tmp9 = cResult[7];
-                }
-                return tmp9;
-              }
-              const obj2 = { value: analyticsLocations, children: cResult[4] };
-              const tmp11 = jsx(useAnalyticsLocations.AnalyticsLocationProvider, {
-                value: analyticsLocations,
-                children: cResult[4],
-              });
-              cResult[5] = analyticsLocations;
-              cResult[6] = cResult[4];
-              cResult[7] = tmp11;
-              tmp9 = tmp11;
+              tmp5 = cResult[4];
             }
+            if (cResult[5] === analyticsLocations) {
+              let tmp9;
+              if (cResult[6] === tmp5) {
+                tmp9 = cResult[7];
+              }
+              return tmp9;
+            }
+            const tmp11 = jsx(useAnalyticsLocations.AnalyticsLocationProvider, {
+              value: analyticsLocations,
+              children: tmp5,
+            });
+            cResult[5] = analyticsLocations;
+            cResult[6] = tmp5;
+            cResult[7] = tmp11;
+            tmp9 = tmp11;
           }
         }
       }
-      let num = 0;
       if (arr.length > 0) {
-        const obj3 = { channelId, messageId, emoji, reactions: arr };
-        let tmp7 = jsx(MessageReactionsContent.MessageReactionsContent, {
+        tmp7 = jsx(MessageReactionsContent.MessageReactionsContent, { channelId, messageId, emoji, reactions: arr });
+      } else {
+        tmp7 = jsx(MessageReactionsContent.MessageReactionsEmpty, {});
+      }
+      cResult[0] = channelId;
+      cResult[1] = emoji;
+      cResult[2] = messageId;
+      cResult[3] = arr;
+      cResult[4] = tmp7;
+      tmp5 = tmp7;
+    }
+  : (emoji) => {
+      let channelId;
+      let messageId;
+      let tmp3Result;
+      ({ channelId, messageId } = emoji);
+      emoji = emoji.emoji;
+      const arr = closure_8(channelId, messageId);
+      const tmp2 = useAnalyticsLocationsDefault;
+      const AnalyticsLocationProvider = useAnalyticsLocations.AnalyticsLocationProvider;
+      if (arr.length > 0) {
+        tmp3Result = jsx(MessageReactionsContent.MessageReactionsContent, {
           channelId,
           messageId,
           emoji,
           reactions: arr,
         });
       } else {
-        tmp7 = jsx(MessageReactionsContent.MessageReactionsEmpty, {});
-      }
-      cResult[num] = channelId;
-      cResult[1] = emoji;
-      cResult[2] = messageId;
-      cResult[3] = arr;
-      num = 4;
-      cResult[4] = tmp7;
-    }
-  : (emoji) => {
-      ({ channelId, messageId } = emoji);
-      const arr = closure_8(channelId, messageId);
-      const obj = {
-        value: useAnalyticsLocationsDefault(AnalyticsLocationDefault.MESSAGE_PREVIEW_REACTIONS).analyticsLocations,
-        children: null,
-      };
-      if (arr.length > 0) {
-        const obj2 = { channelId, messageId, emoji: emoji.emoji, reactions: arr };
-        let tmp3Result = jsx(MessageReactionsContent.MessageReactionsContent, {
-          channelId,
-          messageId,
-          emoji: emoji.emoji,
-          reactions: arr,
-        });
-      } else {
         tmp3Result = jsx(MessageReactionsContent.MessageReactionsEmpty, {});
       }
-      obj.children = tmp3Result;
-      return jsx(useAnalyticsLocations.AnalyticsLocationProvider, {
-        value: useAnalyticsLocationsDefault(AnalyticsLocationDefault.MESSAGE_PREVIEW_REACTIONS).analyticsLocations,
-        children: null,
-      });
+      return (
+        <AnalyticsLocationProvider value={tmp2(AnalyticsLocationDefault.MESSAGE_PREVIEW_REACTIONS).analyticsLocations}>
+          {tmp3Result}
+        </AnalyticsLocationProvider>
+      );
     };
+const result = size.fileFinishedImporting("modules/reactions/native/MessagePreviewReactions.tsx");
+
+export default tmp3;

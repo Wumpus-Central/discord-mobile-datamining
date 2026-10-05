@@ -1,7 +1,7 @@
 // discord_app/modules/go_live/utils/windowSourceMatches.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/utils/windowSourceMatches.tsx");
 
 export default function windowSourceMatches(str, arg1) {

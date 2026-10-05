@@ -1,15 +1,14 @@
 // discord_app/modules/go_live/VideoStreamStats.tsx
+import Constants from "../../Constants.tsx";
 import TimeUtils from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import ApplicationStreamingSettingsStore from "../../stores/ApplicationStreamingSettingsStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const StreamLayouts = fn(1085).StreamLayouts;
-const size = fn(2);
+const StreamLayouts = Constants.StreamLayouts;
 const result = size.fileFinishedImporting("modules/go_live/VideoStreamStats.tsx");
 class VideoStreamStats {
-  constructor(arg0, arg1) {
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
+  constructor(_lastLayout, _isSender) {
+    const obj = Object.create(new.target.prototype);
     obj._targetResolution = 0;
     obj._targetFPS = 0;
     obj._streamSettingsChanged = false;
@@ -24,116 +23,119 @@ class VideoStreamStats {
       _layoutBuckets[_lastLayout] = _layoutBuckets[_lastLayout] + arg1;
     };
     obj._sampleStats = function _sampleStats() {
-      state = ApplicationStreamingSettingsStore.getState();
+      const state = ApplicationStreamingSettingsStore.getState();
       obj._streamSettingsChanged = state.resolution !== obj._targetResolution || tmp2 !== obj._targetFPS;
     };
-    obj._isSender = fn;
-    interval = new closure_0(closure_1[2]).Interval();
+    obj._isSender = _isSender;
+    const interval = new obj(2046).Interval();
     obj._statInterval = interval;
-    obj._lastLayout = global;
+    obj._lastLayout = _lastLayout;
     obj._layoutBuckets = {};
     return obj;
   }
-}
-const prototype = VideoStreamStats.prototype;
-prototype["start"] = function start() {
-  state = ApplicationStreamingSettingsStore.getState();
-  ({ resolution: this._targetResolution, fps: this._targetFPS } = state);
-  const _statInterval = this._statInterval;
-  _statInterval.start(1000, this._sampleStats);
-  this._lastLayoutChanged = TimeUtils.now();
-};
-prototype["stop"] = function stop() {
-  const _statInterval = this._statInterval;
-  _statInterval.stop();
-  this._streamEnd = TimeUtils.now();
-  this._incrementLayout(this._lastLayout, (this._streamEnd - this._lastLayoutChanged) / 1000);
-};
-prototype["autoQualityChange"] = function autoQualityChange() {
-  this._automaticQualityChanges = this._automaticQualityChanges + 1;
-};
-prototype["layoutChange"] = function layoutChange(_lastLayout) {
-  const self = this;
-  if (_lastLayout !== this._lastLayout) {
-    if (null == self._streamEnd) {
-      const nowResult = TimeUtils.now();
-      self._incrementLayout(self._lastLayout, (nowResult - self._lastLayoutChanged) / 1000);
-      self._layoutChanges = self._layoutChanges + 1;
-      self._lastLayout = _lastLayout;
-      self._lastLayoutChanged = nowResult;
+  start() {
+    const state = ApplicationStreamingSettingsStore.getState();
+    ({ resolution: this._targetResolution, fps: this._targetFPS } = state);
+    const _statInterval = this._statInterval;
+    _statInterval.start(1000, this._sampleStats);
+    const obj = TimeUtils;
+    this._lastLayoutChanged = obj.now();
+  }
+  stop() {
+    const _statInterval = this._statInterval;
+    _statInterval.stop();
+    const obj = TimeUtils;
+    this._streamEnd = obj.now();
+    this._incrementLayout(this._lastLayout, (this._streamEnd - this._lastLayoutChanged) / 1000);
+  }
+  autoQualityChange() {
+    this._automaticQualityChanges = this._automaticQualityChanges + 1;
+  }
+  layoutChange(_lastLayout) {
+    const self = this;
+    if (_lastLayout !== this._lastLayout) {
+      if (null == self._streamEnd) {
+        const obj = TimeUtils;
+        const nowResult = obj.now();
+        self._incrementLayout(self._lastLayout, (nowResult - self._lastLayoutChanged) / 1000);
+        self._layoutChanges = self._layoutChanges + 1;
+        self._lastLayout = _lastLayout;
+        self._lastLayoutChanged = nowResult;
+      }
     }
   }
-};
-prototype["getLayout"] = function getLayout() {
-  return this._lastLayout;
-};
-prototype["getStats"] = function getStats() {
-  const self = this;
-  const obj = {
-    num_layout_changes: this._layoutChanges,
-    duration_layout_fullscreen: null,
-    duration_layout_theatre: null,
-    duration_layout_pip: null,
-    duration_layout_popout: null,
-    duration_layout_portrait: null,
-    duration_layout_landscape: null,
-    duration_layout_minimized: null,
-  };
-  let num = 0;
-  if (null != this._layoutBuckets[StreamLayouts.FULL_SCREEN]) {
-    const _Math = Math;
-    num = Math.round(tmp2);
+  getLayout() {
+    return this._lastLayout;
   }
-  obj.duration_layout_fullscreen = num;
-  let num2 = 0;
-  if (null != self._layoutBuckets[StreamLayouts.THEATRE]) {
-    const _Math2 = Math;
-    num2 = Math.round(tmp4);
+  getStats() {
+    let num;
+    let num2;
+    let num3;
+    let num4;
+    let num5;
+    let num6;
+    let num7;
+    const self = this;
+    const obj = {
+      num_layout_changes: this._layoutChanges,
+      duration_layout_fullscreen: num,
+      duration_layout_theatre: num2,
+      duration_layout_pip: num3,
+      duration_layout_popout: num4,
+      duration_layout_portrait: num5,
+      duration_layout_landscape: num6,
+      duration_layout_minimized: num7,
+    };
+    num = 0;
+    if (null != this._layoutBuckets[StreamLayouts.FULL_SCREEN]) {
+      const _Math = Math;
+      num = Math.round(tmp2);
+    }
+    num2 = 0;
+    if (null != self._layoutBuckets[StreamLayouts.THEATRE]) {
+      const _Math2 = Math;
+      num2 = Math.round(tmp4);
+    }
+    num3 = 0;
+    if (null != self._layoutBuckets[StreamLayouts.PIP]) {
+      const _Math3 = Math;
+      num3 = Math.round(tmp6);
+    }
+    num4 = 0;
+    if (null != self._layoutBuckets[StreamLayouts.POPOUT]) {
+      const _Math4 = Math;
+      num4 = Math.round(tmp8);
+    }
+    num5 = 0;
+    if (null != self._layoutBuckets[StreamLayouts.PORTRAIT]) {
+      const _Math5 = Math;
+      num5 = Math.round(tmp10);
+    }
+    num6 = 0;
+    if (null != self._layoutBuckets[StreamLayouts.LANDSCAPE]) {
+      const _Math6 = Math;
+      num6 = Math.round(tmp12);
+    }
+    num7 = 0;
+    if (null != self._layoutBuckets[StreamLayouts.MINIMIZED]) {
+      const _Math7 = Math;
+      num7 = Math.round(tmp14);
+    }
+    let tmp16 = obj;
+    if (self._isSender) {
+      const obj3 = {};
+      const merged = Object.assign(obj);
+      ({
+        _targetFPS: obj2.target_fps,
+        _targetResolution: obj2.target_resolution_height,
+        _streamSettingsChanged: obj2.stream_settings_changed,
+        _automaticQualityChanges: obj2.num_auto_quality_changes,
+      } = self);
+      tmp16 = obj3;
+    }
+    return tmp16;
   }
-  obj.duration_layout_theatre = num2;
-  let num3 = 0;
-  if (null != self._layoutBuckets[StreamLayouts.PIP]) {
-    const _Math3 = Math;
-    num3 = Math.round(tmp6);
-  }
-  obj.duration_layout_pip = num3;
-  let num4 = 0;
-  if (null != self._layoutBuckets[StreamLayouts.POPOUT]) {
-    const _Math4 = Math;
-    num4 = Math.round(tmp8);
-  }
-  obj.duration_layout_popout = num4;
-  let num5 = 0;
-  if (null != self._layoutBuckets[StreamLayouts.PORTRAIT]) {
-    const _Math5 = Math;
-    num5 = Math.round(tmp10);
-  }
-  obj.duration_layout_portrait = num5;
-  let num6 = 0;
-  if (null != self._layoutBuckets[StreamLayouts.LANDSCAPE]) {
-    const _Math6 = Math;
-    num6 = Math.round(tmp12);
-  }
-  obj.duration_layout_landscape = num6;
-  let num7 = 0;
-  if (null != self._layoutBuckets[StreamLayouts.MINIMIZED]) {
-    const _Math7 = Math;
-    num7 = Math.round(tmp14);
-  }
-  obj.duration_layout_minimized = num7;
-  let tmp16 = obj;
-  if (self._isSender) {
-    const obj3 = {};
-    const merged = Object.assign(obj);
-    ({
-      _targetFPS: obj2.target_fps,
-      _targetResolution: obj2.target_resolution_height,
-      _streamSettingsChanged: obj2.stream_settings_changed,
-      _automaticQualityChanges: obj2.num_auto_quality_changes,
-    } = self);
-    tmp16 = obj3;
-  }
-  return tmp16;
-};
+}
+const prototype = VideoStreamStats.prototype;
 
 export default VideoStreamStats;

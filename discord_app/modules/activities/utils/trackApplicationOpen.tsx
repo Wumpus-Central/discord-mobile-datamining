@@ -7,6 +7,19 @@ const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/activities/utils/trackApplicationOpen.tsx");
 
 export default function trackApplicationOpen(partyId) {
+  let analyticsLocations;
+  let applicationId;
+  let channelId;
+  let channelType;
+  let guildId;
+  let inviterUserId;
+  let locationObject;
+  let messageId;
+  let referrerId;
+  let remoteJoinPlatform;
+  let source;
+  let type;
+  let userId;
   partyId = partyId.partyId;
   ({
     type,
@@ -23,7 +36,7 @@ export default function trackApplicationOpen(partyId) {
     inviterUserId,
     remoteJoinPlatform,
   } = partyId);
-  const obj2 = {
+  const obj = {
     type,
     source,
     guild_id: guildId,
@@ -39,5 +52,8 @@ export default function trackApplicationOpen(partyId) {
     invite_inviter_id: inviterUserId,
     remote_join_platform: remoteJoinPlatform,
   };
-  AnalyticsUtilsDefault.track(AnalyticEvents.APPLICATION_OPENED, obj2);
+  const track = AnalyticsUtilsDefault.track;
+  const APPLICATION_OPENED = AnalyticEvents.APPLICATION_OPENED;
+  AnalyticsUtilsDefault;
+  track(APPLICATION_OPENED, obj);
 }

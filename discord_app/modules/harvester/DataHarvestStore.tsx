@@ -1,10 +1,11 @@
 // discord_app/modules/harvester/DataHarvestStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 let c0 = false;
 let c1;
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class DataHarvestStore extends Store {}
 const prototype = DataHarvestStore.prototype;
 Object.defineProperty(prototype, "harvestType", {
@@ -20,7 +21,7 @@ Object.defineProperty(prototype, "requestingHarvest", {
   set: undefined,
 });
 DataHarvestStore.displayName = "DataHarvestStore";
-const dataHarvestStore = new DataHarvestStore(DispatcherDefault, {
+const obj = {
   CONNECTION_OPEN: function handleConnectionOpen() {
     c1 = undefined;
   },
@@ -38,8 +39,8 @@ const dataHarvestStore = new DataHarvestStore(DispatcherDefault, {
     c0 = false;
     c1 = null;
   },
-});
-const size = fn(2);
+};
+const dataHarvestStore = new DataHarvestStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/harvester/DataHarvestStore.tsx");
 
 export default dataHarvestStore;

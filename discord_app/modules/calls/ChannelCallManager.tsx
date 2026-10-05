@@ -5,24 +5,29 @@ import NotificationSettingsStore from "../../stores/NotificationSettingsStore.ts
 import StreamerModeStore from "../../stores/StreamerModeStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 import SortedVoiceStateStore from "../../stores/views/SortedVoiceStateStore.tsx";
+import SoundUtils from "../sound_playback/SoundUtils.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let require = fn;
-const SoundUtils = fn(9562);
+let currentClientVoiceChannelId, map;
+
 let closure_8 = SoundUtils.createSoundForPack("call_calling", SoundpackStore.getSoundpack());
-class ChannelCallManager extends tmp2 {
+class ChannelCallManager extends AutomaticLifecycleManager {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    closure_0 = applyArgumentsResult;
+    let disableSounds;
+    let soundDisabled;
+    let soundpack;
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    require = applyArgumentsResult;
     applyArgumentsResult._handleRing = function _handleRing(arg0) {
       currentClientVoiceChannelId = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null);
-      let tmp2 = null != currentClientVoiceChannelId;
-      if (tmp2) {
-        tmp2 = SortedVoiceStateStore.countVoiceStatesForChannel(currentClientVoiceChannelId) >= 2;
-      }
+      const tmp2 =
+        null != currentClientVoiceChannelId &&
+        SortedVoiceStateStore.countVoiceStatesForChannel(currentClientVoiceChannelId) >= 2;
       if (null != currentClientVoiceChannelId) {
         if (!tmp2) {
-          if (arg0) {
+          const tmp4 = arg0;
+          if (tmp4) {
             if (!soundDisabled.isSoundDisabled("call_calling")) {
               if (!disableSounds.disableSounds) {
                 closure_8.loop();
@@ -35,32 +40,33 @@ class ChannelCallManager extends tmp2 {
     };
     applyArgumentsResult.handleSoundpackUpdate = function handleSoundpackUpdate() {
       closure_8.stop();
-      closure_8 = applyArgumentsResult(dependencyMap[6]).createSoundForPack("call_calling", soundpack.getSoundpack());
+      const obj = SoundUtils;
+      closure_8 = obj.createSoundForPack("call_calling", soundpack.getSoundpack());
     };
     applyArgumentsResult.handleRingUpdate = function handleRingUpdate() {
       const calls = CallStore.getCalls();
-      applyArgumentsResult._handleRing(
+      require._handleRing(
         calls.some((ringing) => {
-          let tmp = ringing.ringing.length > 0;
-          if (tmp) {
-            tmp = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null) === ringing.channelId;
-          }
+          const tmp =
+            ringing.ringing.length > 0 &&
+            currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null) === ringing.channelId;
           return tmp;
         }),
       );
     };
     return applyArgumentsResult;
   }
+  _initialize() {
+    map = new Map();
+    const result = map.set(CallStore, this.handleRingUpdate);
+    const result1 = result.set(NotificationSettingsStore, this.handleRingUpdate);
+    const result2 = result1.set(StreamerModeStore, this.handleRingUpdate);
+    const result3 = result2.set(VoiceStateStore, this.handleRingUpdate);
+    this.stores = result3.set(SoundpackStore, this.handleSoundpackUpdate);
+  }
 }
-ChannelCallManager.prototype["_initialize"] = function _initialize() {
-  const result = new Map().set(CallStore, this.handleRingUpdate);
-  const result1 = result.set(NotificationSettingsStore, this.handleRingUpdate);
-  const result2 = result1.set(StreamerModeStore, this.handleRingUpdate);
-  const result3 = result2.set(VoiceStateStore, this.handleRingUpdate);
-  this.stores = result3.set(SoundpackStore, this.handleSoundpackUpdate);
-};
+const prototype = ChannelCallManager.prototype;
 const channelCallManager = new ChannelCallManager();
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/calls/ChannelCallManager.tsx");
 
 export default channelCallManager;

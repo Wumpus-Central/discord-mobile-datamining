@@ -1,76 +1,72 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockInsetHeaderBody.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import QuestRewardTileDefault from "../QuestRewardTile.tsx";
 import QuestDockRewardTileDefault from "../QuestDockRewardTile.tsx";
+import QuestDockHooks from "QuestDockHooks.tsx";
 import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground.tsx";
 import PremiumRewardGradientDefault from "../PremiumRewardGradient.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import QuestDockConstants from "QuestDockConstants.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const native = Button(1188);
-const Text_Text = Button(4886);
-const components_Button_Button = Button(5594);
-const QuestDockHooks = Button(14893);
-require = fn;
-const View = fn(17).View;
-const QuestDockConstants = fn(14896);
+let hasOwnProperty;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+let rect;
+let rect1;
+const View = react_native.View;
 const QUEST_DOCK_EXPANDED_PADDING_BOTTOM = QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_BOTTOM;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL = QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
 const PX_80 = nativeDefault.space.PX_80;
-const createStyles = fn(4890);
+let createStyles = createStyles_mod;
 let obj = {
-  rewardTile: { borderRadius: nativeDefault.radii.lg },
+  rewardTile: obj2,
   wrapper: {
     flexGrow: 1,
     flexShrink: 0,
     justifyContent: "flex-end",
-    paddingHorizontal: QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL,
+    paddingHorizontal: QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL,
     paddingBottom: QUEST_DOCK_EXPANDED_PADDING_BOTTOM,
   },
   rewardContentContainer: { position: "relative" },
-  rewardContentWrapper: null,
-  contentBadge: null,
-  rewardContent: null,
-  rewardContentCopy: null,
-  premiumRewardPerkPill: null,
-  titleRow: null,
-  questDockCtaWrapper: null,
-  questDockCta: null,
-  questDockCtaRow: null,
-  questDockCtaSaparator: null,
+  rewardContentWrapper: obj3,
+  contentBadge: rect,
+  rewardContent: { alignItems: "center", flexDirection: "row", gap: 16 },
+  rewardContentCopy: { flexGrow: 1, flexShrink: 1, gap: 4 },
+  premiumRewardPerkPill: { alignSelf: "flex-start" },
+  titleRow: obj4,
+  questDockCtaWrapper: { marginTop: 12, paddingHorizontal: 4, paddingTop: 16, position: "relative" },
+  questDockCta: obj5,
+  questDockCtaRow: obj6,
+  questDockCtaSaparator: rect1,
 };
-let obj3 = { borderRadius: nativeDefault.radii.lg };
-obj.rewardContentWrapper = {
+obj2 = { borderRadius: nativeDefault.radii.lg };
+createStyles = createStyles.createStyles;
+obj3 = {
   borderRadius: nativeDefault.modules.mobile.QUEST_DOCK_BORDER_RADIUS,
   overflow: "hidden",
   padding: 8,
   paddingRight: 16,
 };
-const rect = { position: "absolute", top: -10, right: nativeDefault.space.PX_12, zIndex: 1 };
-obj.contentBadge = rect;
-obj.rewardContent = { alignItems: "center", flexDirection: "row", gap: 16 };
-obj.rewardContentCopy = { flexGrow: 1, flexShrink: 1, gap: 4 };
-obj.premiumRewardPerkPill = { alignSelf: "flex-start" };
-let obj4 = {
-  borderRadius: nativeDefault.modules.mobile.QUEST_DOCK_BORDER_RADIUS,
-  overflow: "hidden",
-  padding: 8,
-  paddingRight: 16,
-};
-obj.titleRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexWrap: "wrap" };
-obj.questDockCtaWrapper = { marginTop: 12, paddingHorizontal: 4, paddingTop: 16, position: "relative" };
-let obj5 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexWrap: "wrap" };
-obj.questDockCta = { borderRadius: nativeDefault.radii.round };
-let obj6 = { borderRadius: nativeDefault.radii.round };
-obj.questDockCtaRow = {
-  alignSelf: "stretch",
-  flexDirection: "row",
-  alignItems: "center",
-  gap: nativeDefault.space.PX_8,
-};
-const rect1 = {
+rect = { position: "absolute", top: -10, right: nativeDefault.space.PX_12, zIndex: 1 };
+obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexWrap: "wrap" };
+obj5 = { borderRadius: nativeDefault.radii.round };
+obj6 = { alignSelf: "stretch", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+rect1 = {
   position: "absolute",
   left: -12,
   right: -12,
@@ -79,80 +75,94 @@ const rect1 = {
   height: 1,
   opacity: 1,
 };
-obj.questDockCtaSaparator = rect1;
-let closure_8 = createStyles.createStyles(obj);
-fn(558);
-let obj7 = { alignSelf: "stretch", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      const cResult = c.c(3);
-      const tmp3 = closure_8();
-      if (cResult[0] === arg0) {
-        if (cResult[1] === tmp3.rewardTile) {
-          let tmp4 = cResult[2];
-        }
-        return tmp4;
-      }
-      const obj2 = {};
-      const merged = Object.assign(arg0);
-      obj2.height = PX_80;
-      obj2.width = PX_80;
-      obj2.style = tmp3.rewardTile;
-      const tmp7 = hasOwnProperty(QuestDockRewardTileDefault, obj2);
-      cResult[0] = arg0;
-      cResult[1] = tmp3.rewardTile;
-      cResult[2] = tmp7;
-      tmp4 = tmp7;
-    }
-  : (arg0) => {
-      const obj = {};
-      const tmp = closure_8();
-      const merged = Object.assign(arg0);
-      obj.height = PX_80;
-      obj.width = PX_80;
-      obj.style = tmp.rewardTile;
-      return hasOwnProperty(QuestDockRewardTileDefault, obj);
-    };
-ReactCompilerGating = fn(558);
+let closure_8 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(3);
+      const obj = react2;
+      const cResult = obj.c(3);
       const tmp3 = closure_8();
       if (cResult[0] === arg0) {
+        let tmp4;
         if (cResult[1] === tmp3.rewardTile) {
-          let tmp4 = cResult[2];
+          tmp4 = cResult[2];
         }
         return tmp4;
       }
-      const obj2 = {};
+      const obj2 = { height: PX_80, width: PX_80, style: tmp3.rewardTile };
+      const tmp5 = QuestDockRewardTileDefault;
       const merged = Object.assign(arg0);
-      obj2.height = PX_80;
-      obj2.width = PX_80;
-      obj2.style = tmp3.rewardTile;
-      const tmp7 = hasOwnProperty(QuestRewardTileDefault, obj2);
+      const tmp7 = hasOwnProperty(tmp5, obj2);
       cResult[0] = arg0;
       cResult[1] = tmp3.rewardTile;
       cResult[2] = tmp7;
       tmp4 = tmp7;
     }
   : (arg0) => {
-      const obj = {};
-      const tmp = closure_8();
+      let tmp;
+      const obj = { height: PX_80, width: PX_80, style: tmp.rewardTile };
+      tmp = closure_8();
+      const tmp2 = QuestDockRewardTileDefault;
       const merged = Object.assign(arg0);
-      obj.height = PX_80;
-      obj.width = PX_80;
-      obj.style = tmp.rewardTile;
-      return hasOwnProperty(QuestRewardTileDefault, obj);
+      return hasOwnProperty(tmp2, obj);
     };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockInsetHeaderBody.tsx");
-
-export default noop.memo(
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const obj = react2;
+      const cResult = obj.c(3);
+      const tmp3 = closure_8();
+      if (cResult[0] === arg0) {
+        let tmp4;
+        if (cResult[1] === tmp3.rewardTile) {
+          tmp4 = cResult[2];
+        }
+        return tmp4;
+      }
+      const obj2 = { height: PX_80, width: PX_80, style: tmp3.rewardTile };
+      const tmp5 = QuestRewardTileDefault;
+      const merged = Object.assign(arg0);
+      const tmp7 = hasOwnProperty(tmp5, obj2);
+      cResult[0] = arg0;
+      cResult[1] = tmp3.rewardTile;
+      cResult[2] = tmp7;
+      tmp4 = tmp7;
+    }
+  : (arg0) => {
+      let tmp;
+      const obj = { height: PX_80, width: PX_80, style: tmp.rewardTile };
+      tmp = closure_8();
+      const tmp2 = QuestRewardTileDefault;
+      const merged = Object.assign(arg0);
+      return hasOwnProperty(tmp2, obj);
+    };
+ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        let Button = require;
-        const cResult = c.c(58);
+        let contentBadge;
+        let ctaButtonVariant;
+        let ctaLoading;
+        let ctaText;
+        let description;
+        let items;
+        let items1;
+        let items2;
+        let items3;
+        let items4;
+        let items5;
+        let items6;
+        let onCtaPress;
+        let premiumRewardPerkPill;
+        let renderCtaIcon;
+        let renderCtaIconResult;
+        let rewardTile;
+        let secondaryCta;
+        let showBonusOrbsGradient;
+        let title;
+        let tmp10;
+        const obj = react2;
+        const cResult = obj.c(58);
         ({
           rewardTile,
           premiumRewardPerkPill,
@@ -171,156 +181,175 @@ export default noop.memo(
         if (undefined !== ctaButtonVariant) {
           str = ctaButtonVariant;
         }
-        const tmp5 = closure_8();
-        const isQuestDockExpanded = QuestDockHooks.useIsQuestDockExpanded();
+        const tmp6 = closure_8();
+        const tmpResult = QuestDockHooks;
+        const isQuestDockExpanded = tmpResult.useIsQuestDockExpanded();
+        const wrapper = tmp6.wrapper;
         const bound = Math.max(useSafeAreaInsetsDefault().bottom, QUEST_DOCK_EXPANDED_PADDING_BOTTOM);
         if (cResult[0] !== bound) {
           const obj2 = { paddingBottom: bound };
           cResult[0] = bound;
           cResult[1] = obj2;
-          let tmp9 = obj2;
+          tmp10 = obj2;
         } else {
-          tmp9 = cResult[1];
+          tmp10 = cResult[1];
         }
-        if (cResult[2] === tmp5.wrapper) {
-          if (cResult[3] === tmp9) {
-            let tmp10 = cResult[4];
+        if (cResult[2] === tmp6.wrapper) {
+          let tmp11;
+          let tmp12;
+          if (cResult[3] === tmp10) {
+            tmp11 = cResult[4];
           }
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp13 = hasOwnProperty(QuestDockBlurredContentBackgroundDefault, {});
-            cResult[5] = tmp13;
-            let tmp11 = tmp13;
+            const tmp14 = hasOwnProperty(QuestDockBlurredContentBackgroundDefault, {});
+            cResult[5] = tmp14;
+            tmp12 = tmp14;
           } else {
-            tmp11 = cResult[5];
+            tmp12 = cResult[5];
           }
           if (cResult[6] === premiumRewardPerkPill) {
-            if (cResult[7] === tmp5.premiumRewardPerkPill) {
-              let tmp14 = cResult[8];
+            let tmp15;
+            let tmp20;
+            if (cResult[7] === tmp6.premiumRewardPerkPill) {
+              tmp15 = cResult[8];
             }
             if (cResult[9] !== title) {
               const obj3 = { variant: "heading-md/medium", color: "mobile-text-heading-primary", children: title };
-              const tmp21 = hasOwnProperty(Text_Text.Text, obj3);
+              const tmp22 = hasOwnProperty(Text_Text.Text, obj3);
               cResult[9] = title;
-              cResult[10] = tmp21;
-              let tmp19 = tmp21;
+              cResult[10] = tmp22;
+              tmp20 = tmp22;
             } else {
-              tmp19 = cResult[10];
+              tmp20 = cResult[10];
             }
-            if (cResult[11] === tmp5.titleRow) {
-              if (cResult[12] === tmp19) {
-                let tmp22 = cResult[13];
+            if (cResult[11] === tmp6.titleRow) {
+              let tmp23;
+              let tmp27;
+              if (cResult[12] === tmp20) {
+                tmp23 = cResult[13];
               }
               if (cResult[14] !== description) {
                 const obj4 = { color: "text-default", variant: "text-sm/normal", children: description };
-                const tmp28 = hasOwnProperty(Text_Text.Text, obj4);
+                const tmp29 = hasOwnProperty(Text_Text.Text, obj4);
                 cResult[14] = description;
-                cResult[15] = tmp28;
-                let tmp26 = tmp28;
+                cResult[15] = tmp29;
+                tmp27 = tmp29;
               } else {
-                tmp26 = cResult[15];
+                tmp27 = cResult[15];
               }
-              if (cResult[16] === tmp5.rewardContentCopy) {
-                if (cResult[17] === tmp22) {
-                  if (cResult[18] === tmp26) {
-                    if (cResult[19] === tmp14) {
-                      let tmp29 = cResult[20];
+              if (cResult[16] === tmp6.rewardContentCopy) {
+                if (cResult[17] === tmp23) {
+                  if (cResult[18] === tmp27) {
+                    let tmp30;
+                    if (cResult[19] === tmp15) {
+                      tmp30 = cResult[20];
                     }
                     if (cResult[21] === rewardTile) {
-                      if (cResult[22] === tmp5.rewardContent) {
-                        if (cResult[23] === tmp29) {
-                          let tmp33 = cResult[24];
+                      if (cResult[22] === tmp6.rewardContent) {
+                        let tmp34;
+                        if (cResult[23] === tmp30) {
+                          tmp34 = cResult[24];
                         }
-                        if (cResult[25] === tmp5.rewardContentWrapper) {
-                          if (cResult[26] === tmp33) {
-                            let tmp37 = cResult[27];
+                        if (cResult[25] === tmp6.rewardContentWrapper) {
+                          let tmp38;
+                          if (cResult[26] === tmp34) {
+                            tmp38 = cResult[27];
                           }
                           if (cResult[28] === contentBadge) {
-                            if (cResult[29] === tmp5.contentBadge) {
-                              let tmp41 = cResult[30];
+                            let tmp42;
+                            if (cResult[29] === tmp6.contentBadge) {
+                              tmp42 = cResult[30];
                             }
-                            if (cResult[31] === tmp5.rewardContentContainer) {
-                              if (cResult[32] === tmp37) {
-                                if (cResult[33] === tmp41) {
-                                  let tmp46 = cResult[34];
+                            if (cResult[31] === tmp6.rewardContentContainer) {
+                              if (cResult[32] === tmp38) {
+                                let tmp47;
+                                let tmp51;
+                                let tmp58Result;
+                                if (cResult[33] === tmp42) {
+                                  tmp47 = cResult[34];
                                 }
-                                if (cResult[35] !== tmp5.questDockCtaSaparator) {
-                                  const obj5 = { style: tmp5.questDockCtaSaparator };
-                                  const tmp53 = hasOwnProperty(View, obj5);
-                                  cResult[35] = tmp5.questDockCtaSaparator;
-                                  cResult[36] = tmp53;
-                                  let tmp50 = tmp53;
+                                if (cResult[35] !== tmp6.questDockCtaSaparator) {
+                                  const obj5 = { style: tmp6.questDockCtaSaparator };
+                                  const tmp54 = hasOwnProperty(View, obj5);
+                                  cResult[35] = tmp6.questDockCtaSaparator;
+                                  cResult[36] = tmp54;
+                                  tmp51 = tmp54;
                                 } else {
-                                  tmp50 = cResult[36];
+                                  tmp51 = cResult[36];
                                 }
                                 if (cResult[37] === str) {
-                                  if (cResult[38] === tmp3) {
+                                  if (cResult[38] === (undefined !== ctaLoading && ctaLoading)) {
                                     if (cResult[39] === ctaText) {
                                       if (cResult[40] === isQuestDockExpanded) {
                                         if (cResult[41] === onCtaPress) {
                                           if (cResult[42] === renderCtaIcon) {
-                                            if (cResult[43] === tmp5.questDockCta) {
-                                              if (cResult[45] === secondaryCta) {
-                                                if (cResult[46] === tmp5.questDockCtaRow) {
-                                                  if (cResult[47] === tmp54) {
-                                                    let tmp61 = cResult[48];
-                                                  }
-                                                  if (cResult[49] === tmp5.questDockCtaWrapper) {
-                                                    if (cResult[50] === tmp50) {
-                                                      if (cResult[51] === tmp61) {
-                                                        let tmp65 = cResult[52];
-                                                      }
-                                                      if (cResult[53] === tmp4) {
-                                                        if (cResult[54] === tmp46) {
-                                                          if (cResult[55] === tmp65) {
-                                                            if (cResult[56] === tmp10) {
-                                                              let tmp69 = cResult[57];
-                                                            }
-                                                            return tmp69;
+                                            let tmp55;
+                                            if (cResult[43] === tmp6.questDockCta) {
+                                              tmp55 = cResult[44];
+                                            }
+                                            if (cResult[45] === secondaryCta) {
+                                              if (cResult[46] === tmp6.questDockCtaRow) {
+                                                let tmp61;
+                                                if (cResult[47] === tmp55) {
+                                                  tmp61 = cResult[48];
+                                                }
+                                                if (cResult[49] === tmp6.questDockCtaWrapper) {
+                                                  if (cResult[50] === tmp51) {
+                                                    let tmp65;
+                                                    if (cResult[51] === tmp61) {
+                                                      tmp65 = cResult[52];
+                                                    }
+                                                    if (
+                                                      cResult[53] ===
+                                                      (undefined !== showBonusOrbsGradient && showBonusOrbsGradient)
+                                                    ) {
+                                                      if (cResult[54] === tmp47) {
+                                                        if (cResult[55] === tmp65) {
+                                                          let tmp69;
+                                                          if (cResult[56] === tmp11) {
+                                                            tmp69 = cResult[57];
                                                           }
+                                                          return tmp69;
                                                         }
                                                       }
-                                                      const obj6 = {
-                                                        visible: tmp4,
-                                                        glow: true,
-                                                        style: tmp10,
-                                                        children: null,
-                                                      };
-                                                      const items = [tmp46, tmp65];
-                                                      obj6.children = items;
-                                                      const tmp71 = timestampProducer(
-                                                        PremiumRewardGradientDefault,
-                                                        obj6,
-                                                      );
-                                                      cResult[53] = tmp4;
-                                                      cResult[54] = tmp46;
-                                                      cResult[55] = tmp65;
-                                                      cResult[56] = tmp10;
-                                                      cResult[57] = tmp71;
-                                                      tmp69 = tmp71;
                                                     }
+                                                    const obj6 = {
+                                                      visible:
+                                                        undefined !== showBonusOrbsGradient && showBonusOrbsGradient,
+                                                      glow: true,
+                                                      style: tmp11,
+                                                      children: items,
+                                                    };
+                                                    items = [tmp47, tmp65];
+                                                    const tmp71 = metroRequire(PremiumRewardGradientDefault, obj6);
+                                                    cResult[53] =
+                                                      undefined !== showBonusOrbsGradient && showBonusOrbsGradient;
+                                                    cResult[54] = tmp47;
+                                                    cResult[55] = tmp65;
+                                                    cResult[56] = tmp11;
+                                                    cResult[57] = tmp71;
+                                                    tmp69 = tmp71;
                                                   }
-                                                  const obj7 = { style: tmp5.questDockCtaWrapper, children: null };
-                                                  const items1 = [tmp50, tmp61];
-                                                  obj7.children = items1;
-                                                  const tmp68 = timestampProducer(View, obj7);
-                                                  cResult[49] = tmp5.questDockCtaWrapper;
-                                                  cResult[50] = tmp50;
-                                                  cResult[51] = tmp61;
-                                                  cResult[52] = tmp68;
-                                                  tmp65 = tmp68;
                                                 }
+                                                const obj7 = { style: tmp6.questDockCtaWrapper, children: items1 };
+                                                items1 = [tmp51, tmp61];
+                                                const tmp68 = metroRequire(View, obj7);
+                                                cResult[49] = tmp6.questDockCtaWrapper;
+                                                cResult[50] = tmp51;
+                                                cResult[51] = tmp61;
+                                                cResult[52] = tmp68;
+                                                tmp65 = tmp68;
                                               }
-                                              const obj8 = { style: tmp5.questDockCtaRow, children: null };
-                                              const items2 = [secondaryCta, cResult[44]];
-                                              obj8.children = items2;
-                                              const tmp64 = timestampProducer(View, obj8);
-                                              cResult[45] = secondaryCta;
-                                              cResult[46] = tmp5.questDockCtaRow;
-                                              cResult[47] = cResult[44];
-                                              cResult[48] = tmp64;
-                                              tmp61 = tmp64;
                                             }
+                                            const obj8 = { style: tmp6.questDockCtaRow, children: items2 };
+                                            items2 = [secondaryCta, tmp55];
+                                            const tmp64 = metroRequire(View, obj8);
+                                            cResult[45] = secondaryCta;
+                                            cResult[46] = tmp6.questDockCtaRow;
+                                            cResult[47] = tmp55;
+                                            cResult[48] = tmp64;
+                                            tmp61 = tmp64;
                                           }
                                         }
                                       }
@@ -328,122 +357,136 @@ export default noop.memo(
                                   }
                                 }
                                 if ("primary" === str) {
-                                  Button = components_Button_Button.Button;
                                   const obj9 = {
                                     variant: "primary",
                                     grow: true,
                                     onPress: onCtaPress,
-                                    loading: tmp3,
-                                    icon: null,
-                                    text: null,
+                                    loading: undefined !== ctaLoading && ctaLoading,
+                                    icon: renderCtaIconResult,
+                                    text: ctaText,
                                   };
-                                  let renderCtaIconResult;
+                                  renderCtaIconResult = undefined;
+                                  const Button = components_Button_Button.Button;
                                   if (renderCtaIcon != null) {
                                     renderCtaIconResult = renderCtaIcon();
                                   }
-                                  obj9.icon = renderCtaIconResult;
-                                  obj9.text = ctaText;
-                                  let tmp57Result = hasOwnProperty(Button, obj9);
+                                  tmp58Result = hasOwnProperty(Button, obj9);
                                 } else {
                                   const obj10 = {
-                                    style: tmp5.questDockCta,
+                                    style: tmp6.questDockCta,
                                     onPress: onCtaPress,
-                                    loading: tmp3,
+                                    loading: undefined !== ctaLoading && ctaLoading,
                                     renderIcon: renderCtaIcon,
                                     text: ctaText,
                                     shineDisabled: !isQuestDockExpanded,
                                   };
-                                  tmp57Result = hasOwnProperty(native.ShinyButton, obj10);
+                                  tmp58Result = hasOwnProperty(native.ShinyButton, obj10);
                                 }
                                 cResult[37] = str;
-                                cResult[38] = tmp3;
+                                cResult[38] = undefined !== ctaLoading && ctaLoading;
                                 cResult[39] = ctaText;
                                 cResult[40] = isQuestDockExpanded;
                                 cResult[41] = onCtaPress;
                                 cResult[42] = renderCtaIcon;
-                                renderCtaIcon = tmp5.questDockCta;
-                                cResult[43] = renderCtaIcon;
-                                cResult[44] = tmp57Result;
+                                cResult[43] = tmp6.questDockCta;
+                                cResult[44] = tmp58Result;
+                                tmp55 = tmp58Result;
                               }
                             }
-                            const obj11 = { style: tmp5.rewardContentContainer, children: null };
-                            const items3 = [tmp37, tmp41];
-                            obj11.children = items3;
-                            const tmp49 = timestampProducer(View, obj11);
-                            cResult[31] = tmp5.rewardContentContainer;
-                            cResult[32] = tmp37;
-                            cResult[33] = tmp41;
-                            cResult[34] = tmp49;
-                            tmp46 = tmp49;
+                            const obj11 = { style: tmp6.rewardContentContainer, children: items3 };
+                            items3 = [tmp38, tmp42];
+                            const tmp50 = metroRequire(View, obj11);
+                            cResult[31] = tmp6.rewardContentContainer;
+                            cResult[32] = tmp38;
+                            cResult[33] = tmp42;
+                            cResult[34] = tmp50;
+                            tmp47 = tmp50;
                           }
-                          let tmp43 = null != contentBadge;
-                          if (tmp43) {
-                            const obj12 = { style: tmp5.contentBadge, children: contentBadge };
-                            tmp43 = hasOwnProperty(View, obj12);
+                          let tmp44 = null != contentBadge;
+                          if (tmp44) {
+                            const obj12 = { style: tmp6.contentBadge, children: contentBadge };
+                            tmp44 = hasOwnProperty(View, obj12);
                           }
                           cResult[28] = contentBadge;
-                          cResult[29] = tmp5.contentBadge;
-                          cResult[30] = tmp43;
-                          tmp41 = tmp43;
+                          cResult[29] = tmp6.contentBadge;
+                          cResult[30] = tmp44;
+                          tmp42 = tmp44;
                         }
-                        const obj13 = { style: tmp5.rewardContentWrapper, children: null };
-                        const items4 = [tmp11, tmp33];
-                        obj13.children = items4;
-                        const tmp40 = timestampProducer(View, obj13);
-                        cResult[25] = tmp5.rewardContentWrapper;
-                        cResult[26] = tmp33;
-                        cResult[27] = tmp40;
-                        tmp37 = tmp40;
+                        const obj13 = { style: tmp6.rewardContentWrapper, children: items4 };
+                        items4 = [tmp12, tmp34];
+                        const tmp41 = metroRequire(View, obj13);
+                        cResult[25] = tmp6.rewardContentWrapper;
+                        cResult[26] = tmp34;
+                        cResult[27] = tmp41;
+                        tmp38 = tmp41;
                       }
                     }
-                    const obj14 = { style: tmp5.rewardContent, children: null };
-                    const items5 = [rewardTile, tmp29];
-                    obj14.children = items5;
-                    const tmp36 = timestampProducer(View, obj14);
+                    const obj14 = { style: tmp6.rewardContent, children: items5 };
+                    items5 = [rewardTile, tmp30];
+                    const tmp37 = metroRequire(View, obj14);
                     cResult[21] = rewardTile;
-                    cResult[22] = tmp5.rewardContent;
-                    cResult[23] = tmp29;
-                    cResult[24] = tmp36;
-                    tmp33 = tmp36;
+                    cResult[22] = tmp6.rewardContent;
+                    cResult[23] = tmp30;
+                    cResult[24] = tmp37;
+                    tmp34 = tmp37;
                   }
                 }
               }
-              const obj15 = { style: tmp5.rewardContentCopy, children: null };
-              const items6 = [tmp14, tmp22, tmp26];
-              obj15.children = items6;
-              const tmp32 = timestampProducer(View, obj15);
-              cResult[16] = tmp5.rewardContentCopy;
-              cResult[17] = tmp22;
-              cResult[18] = tmp26;
-              cResult[19] = tmp14;
-              cResult[20] = tmp32;
-              tmp29 = tmp32;
+              const obj15 = { style: tmp6.rewardContentCopy, children: items6 };
+              items6 = [tmp15, tmp23, tmp27];
+              const tmp33 = metroRequire(View, obj15);
+              cResult[16] = tmp6.rewardContentCopy;
+              cResult[17] = tmp23;
+              cResult[18] = tmp27;
+              cResult[19] = tmp15;
+              cResult[20] = tmp33;
+              tmp30 = tmp33;
             }
-            const obj16 = { style: tmp5.titleRow, children: tmp19 };
-            const tmp25 = hasOwnProperty(View, obj16);
-            cResult[11] = tmp5.titleRow;
-            cResult[12] = tmp19;
-            cResult[13] = tmp25;
-            tmp22 = tmp25;
+            const obj16 = { style: tmp6.titleRow, children: tmp20 };
+            const tmp26 = hasOwnProperty(View, obj16);
+            cResult[11] = tmp6.titleRow;
+            cResult[12] = tmp20;
+            cResult[13] = tmp26;
+            tmp23 = tmp26;
           }
-          let tmp16 = null != premiumRewardPerkPill;
-          if (tmp16) {
-            const obj17 = { style: tmp5.premiumRewardPerkPill, children: premiumRewardPerkPill };
-            tmp16 = hasOwnProperty(View, obj17);
+          let tmp17 = null != premiumRewardPerkPill;
+          if (tmp17) {
+            const obj17 = { style: tmp6.premiumRewardPerkPill, children: premiumRewardPerkPill };
+            tmp17 = hasOwnProperty(View, obj17);
           }
           cResult[6] = premiumRewardPerkPill;
-          cResult[7] = tmp5.premiumRewardPerkPill;
-          cResult[8] = tmp16;
-          tmp14 = tmp16;
+          cResult[7] = tmp6.premiumRewardPerkPill;
+          cResult[8] = tmp17;
+          tmp15 = tmp17;
         }
-        const items7 = [tmp5.wrapper, tmp9];
-        cResult[2] = tmp5.wrapper;
-        cResult[3] = tmp9;
+        const items7 = [wrapper, tmp10];
+        cResult[2] = tmp6.wrapper;
+        cResult[3] = tmp10;
         cResult[4] = items7;
-        tmp10 = items7;
-        const ButtonResult = QuestDockHooks;
+        tmp11 = items7;
       }
     : (showBonusOrbsGradient) => {
+        let contentBadge;
+        let ctaButtonVariant;
+        let ctaLoading;
+        let ctaText;
+        let description;
+        let items;
+        let items1;
+        let items2;
+        let items3;
+        let items4;
+        let items5;
+        let items6;
+        let items7;
+        let onCtaPress;
+        let premiumRewardPerkPill;
+        let renderCtaIcon;
+        let renderCtaIconResult;
+        let rewardTile;
+        let secondaryCta;
+        let title;
+        let tmp8Result4;
         ({ premiumRewardPerkPill, contentBadge, ctaText, onCtaPress, renderCtaIcon, ctaButtonVariant } =
           showBonusOrbsGradient);
         ({ rewardTile, title, description } = showBonusOrbsGradient);
@@ -459,73 +502,71 @@ export default noop.memo(
           flag = false;
         }
         const tmp = closure_8();
-        const isQuestDockExpanded = QuestDockHooks.useIsQuestDockExpanded();
-        const obj2 = { visible: flag, glow: true, style: null, children: null };
-        const items = [tmp.wrapper];
-        const obj3 = { paddingBottom: null };
-        obj3.paddingBottom = Math.max(useSafeAreaInsetsDefault().bottom, QUEST_DOCK_EXPANDED_PADDING_BOTTOM);
+        const obj = QuestDockHooks;
+        const isQuestDockExpanded = obj.useIsQuestDockExpanded();
+        const bottom = useSafeAreaInsetsDefault().bottom;
+        const obj2 = { visible: flag, glow: true, style: items, children: items5 };
+        items = [tmp.wrapper];
+        const obj3 = { paddingBottom: Math.max(bottom, QUEST_DOCK_EXPANDED_PADDING_BOTTOM) };
         items[1] = obj3;
-        obj2.style = items;
-        const obj4 = { style: tmp.rewardContentContainer, children: null };
-        const obj5 = { style: tmp.rewardContentWrapper, children: null };
-        const items1 = [hasOwnProperty(QuestDockBlurredContentBackgroundDefault, {})];
-        const obj6 = { style: tmp.rewardContent, children: null };
-        const items2 = [rewardTile];
-        const obj7 = { style: tmp.rewardContentCopy, children: null };
+        const obj4 = { style: tmp.rewardContentContainer, children: items4 };
+        const obj5 = { style: tmp.rewardContentWrapper, children: items1 };
+        const tmp6 = PremiumRewardGradientDefault;
+        items1 = [hasOwnProperty(QuestDockBlurredContentBackgroundDefault, {})];
+        const obj6 = { style: tmp.rewardContent, children: items2 };
+        items2 = [rewardTile];
         let tmp8Result = null != premiumRewardPerkPill;
+        const obj7 = { style: tmp.rewardContentCopy, children: items3 };
         if (tmp8Result) {
           const obj8 = { style: tmp.premiumRewardPerkPill, children: premiumRewardPerkPill };
           tmp8Result = hasOwnProperty(View, obj8);
         }
-        const items3 = [tmp8Result, ,];
-        const tmp6 = PremiumRewardGradientDefault;
-        items3[1] = hasOwnProperty(View, {
+        items3 = [tmp8Result, ,];
+        const obj9 = {
           style: tmp.titleRow,
           children: hasOwnProperty(Text_Text.Text, {
             variant: "heading-md/medium",
             color: "mobile-text-heading-primary",
             children: title,
           }),
-        });
+        };
+        items3[1] = hasOwnProperty(View, obj9);
         items3[2] = hasOwnProperty(Text_Text.Text, {
           color: "text-default",
           variant: "text-sm/normal",
           children: description,
         });
-        obj7.children = items3;
-        items2[1] = timestampProducer(View, obj7);
-        obj6.children = items2;
-        items1[1] = timestampProducer(View, obj6);
-        obj5.children = items1;
-        const items4 = [timestampProducer(View, obj5)];
+        items2[1] = metroRequire(View, obj7);
+        items1[1] = metroRequire(View, obj6);
+        items4 = [metroRequire(View, obj5)];
         let tmp8Result3 = null != contentBadge;
         if (tmp8Result3) {
           const obj10 = { style: tmp.contentBadge, children: contentBadge };
           tmp8Result3 = hasOwnProperty(View, obj10);
         }
         items4[1] = tmp8Result3;
-        obj4.children = items4;
-        const items5 = [timestampProducer(View, obj4)];
-        const obj11 = { style: tmp.questDockCtaWrapper, children: null };
-        const items6 = [hasOwnProperty(View, { style: tmp.questDockCtaSaparator })];
-        const obj13 = { style: tmp.questDockCtaRow, children: null };
-        const items7 = [secondaryCta];
+        items5 = [metroRequire(View, obj4)];
+        const obj11 = { style: tmp.questDockCtaWrapper, children: items6 };
+        items6 = [,];
+        const obj12 = { style: tmp.questDockCtaSaparator };
+        items6[0] = hasOwnProperty(View, obj12);
+        const obj13 = { style: tmp.questDockCtaRow, children: items7 };
+        items7 = [secondaryCta];
         if ("primary" === ctaButtonVariant) {
           const obj14 = {
             variant: "primary",
             grow: true,
             onPress: onCtaPress,
             loading: ctaLoading,
-            icon: null,
-            text: null,
+            icon: renderCtaIconResult,
+            text: ctaText,
           };
-          let renderCtaIconResult;
+          renderCtaIconResult = undefined;
+          const Button = components_Button_Button.Button;
           if (renderCtaIcon != null) {
             renderCtaIconResult = renderCtaIcon();
           }
-          obj14.icon = renderCtaIconResult;
-          obj14.text = ctaText;
-          let tmp8Result4 = hasOwnProperty(components_Button_Button.Button, obj14);
+          tmp8Result4 = hasOwnProperty(Button, obj14);
         } else {
           const obj15 = {
             style: tmp.questDockCta,
@@ -538,13 +579,13 @@ export default noop.memo(
           tmp8Result4 = hasOwnProperty(native.ShinyButton, obj15);
         }
         items7[1] = tmp8Result4;
-        obj13.children = items7;
-        items6[1] = timestampProducer(View, obj13);
-        obj11.children = items6;
-        items5[1] = timestampProducer(View, obj11);
-        obj2.children = items5;
-        return timestampProducer(tmp6, obj2);
+        items6[1] = metroRequire(View, obj13);
+        items5[1] = metroRequire(View, obj11);
+        return metroRequire(tmp6, obj2);
       },
 );
-export const QuestDockBodyRewardTile = tmp4;
-export const QuestDockBodyQuestRewardTile = tmp5;
+const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockInsetHeaderBody.tsx");
+
+export default memoResult;
+export const QuestDockBodyRewardTile = tmp5;
+export const QuestDockBodyQuestRewardTile = tmp6;

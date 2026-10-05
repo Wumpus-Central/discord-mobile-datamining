@@ -1,77 +1,83 @@
 // discord_app/modules/app_icons/native/AppIcon.tsx
-import c from "../../../../_runtime/00576_c.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import AppIconConstants from "AppIconConstants.tsx";
+import react from "../../../../_runtime/00019_react.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const getIconById = fn(8828).getIconById;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = {
-  container: { overflow: "hidden", borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
-  image: { resizeMode: "contain", height: "100%", width: "100%" },
-};
-let closure_7 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { overflow: "hidden", borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/app_icons/native/AppIcon.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let c3;
+let closure_4;
+let obj2;
+({ Image: c3, View: closure_4 } = react_native);
+const getIconById = AppIconConstants.getIconById;
+const jsx = Fragment.jsx;
+let obj = { container: obj2, image: { resizeMode: "contain", height: "100%", width: "100%" } };
+obj2 = { overflow: "hidden", borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+let closure_7 = createStyles.createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(15);
+      let id;
+      let style;
+      let tmp6;
+      const obj = react2;
+      const cResult = obj.c(15);
       ({ id, size, style } = arg0);
       let num = 56;
       if (undefined !== size) {
         num = size;
       }
       const tmp4 = closure_7();
+      const tmp5 = useThemeDefault();
       if (cResult[0] !== id) {
         const tmp8 = getIconById(id);
         cResult[0] = id;
         cResult[1] = tmp8;
-        let tmp6 = tmp8;
+        tmp6 = tmp8;
       } else {
         tmp6 = cResult[1];
       }
-      const tmp5 = useThemeDefault();
       let num4 = 1;
+      const tmpResult = shared;
       if (tmpResult.isThemeDark(tmp5)) {
         num4 = 0;
       }
       if (cResult[2] === num4) {
+        let tmp9;
         if (cResult[3] === num) {
-          let tmp9 = cResult[4];
+          tmp9 = cResult[4];
         }
         if (cResult[5] === style) {
           if (cResult[6] === tmp4.container) {
+            let tmp10;
             if (cResult[7] === tmp9) {
-              let tmp10 = cResult[8];
+              tmp10 = cResult[8];
             }
             const iconSource = tmp6.iconSource;
             if (cResult[9] === tmp4.image) {
+              let tmp11;
               if (cResult[10] === iconSource) {
-                let tmp11 = cResult[11];
+                tmp11 = cResult[11];
               }
               if (cResult[12] === tmp10) {
+                let tmp15;
                 if (cResult[13] === tmp11) {
-                  let tmp15 = cResult[14];
+                  tmp15 = cResult[14];
                 }
                 return tmp15;
               }
-              const obj2 = { style: tmp10, children: tmp11 };
-              const tmp18 = <React4 style={tmp10}>{tmp11}</React4>;
+              const tmp18 = <React3 style={tmp10}>{tmp11}</React3>;
               cResult[12] = tmp10;
               cResult[13] = tmp11;
               cResult[14] = tmp18;
               tmp15 = tmp18;
             }
-            const obj3 = { style: tmp4.image, source: iconSource };
-            const tmp14 = <React3 style={tmp4.image} source={iconSource} />;
+            const tmp14 = <_false style={tmp4.image} source={iconSource} />;
             cResult[9] = tmp4.image;
             cResult[10] = iconSource;
             cResult[11] = tmp14;
@@ -90,26 +96,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = num;
       cResult[4] = size1;
       tmp9 = size1;
-      tmpResult = shared;
     }
   : (size) => {
       let num = size.size;
+      const id = size.id;
       if (num === undefined) {
         num = 56;
       }
+      const style = size.style;
       const tmp = closure_7();
       const tmp2 = useThemeDefault();
-      const tmp3 = getIconById(size.id);
       let num2 = 1;
+      const tmp3 = getIconById(id);
+      const obj = shared;
       if (obj.isThemeDark(tmp2)) {
         num2 = 0;
       }
-      const obj2 = { style: null, children: <React3 style={tmp.image} source={tmp3.iconSource} /> };
-      const items = [tmp.container, { width: num, height: num, borderWidth: num2 }, size.style];
-      obj2.style = items;
-      return (
-        <React4 style={null}>
-          <React3 style={tmp.image} source={tmp3.iconSource} />
-        </React4>
-      );
+      const items = [tmp.container, { width: num, height: num, borderWidth: num2 }, style];
+      return <React3 style={items}>{null}</React3>;
     };
+const result = size.fileFinishedImporting("modules/app_icons/native/AppIcon.tsx");
+
+export default tmp4;

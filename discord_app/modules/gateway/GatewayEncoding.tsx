@@ -5,31 +5,35 @@ import size from "../../../_runtime/metro/00002__.js";
 
 let GatewayEncodingErlpackEncoding = GatewayEncodingErlpackEncoding_mod;
 GatewayEncodingErlpackEncoding = GatewayEncodingErlpackEncoding.getErlpackEncoding();
-class JSONEncoding {}
-const prototype = JSONEncoding.prototype;
-prototype["pack"] = function pack(arg0) {
-  return JSON.stringify(arg0);
-};
-prototype["unpack"] = function unpack(str) {
-  if (typeof str !== "string") {
-    let tmp2 = null;
-    if (null != str) {
-      tmp2 = typeof str;
-    }
-    const _HermesInternal = HermesInternal;
-    const error = new Error("Expected a string to be passed to JSONEncoding.unpack, got " + tmp2);
-    throw error;
-  } else {
-    const _JSON = JSON;
-    return JSON.parse(str);
+class JSONEncoding {
+  pack(arg0) {
+    return JSON.stringify(arg0);
   }
-};
-prototype["getName"] = function getName() {
-  return "json";
-};
-prototype["wantsString"] = function wantsString() {
-  return true;
-};
+  unpack(str) {
+    if (typeof str !== "string") {
+      let tmp2 = null;
+      const _Error = Error;
+      if (null != str) {
+        tmp2 = typeof str;
+      }
+      const _HermesInternal = HermesInternal;
+      const self = this;
+      const self2 = this;
+      const _Error1 = new _Error("Expected a string to be passed to JSONEncoding.unpack, got " + tmp2);
+      throw _Error1;
+    } else {
+      const _JSON = JSON;
+      return JSON.parse(str);
+    }
+  }
+  getName() {
+    return "json";
+  }
+  wantsString() {
+    return true;
+  }
+}
+const prototype = JSONEncoding.prototype;
 let tmp3 = JSONEncoding;
 if (undefined !== GatewayEncodingErlpackEncoding) {
   tmp3 = GatewayEncodingErlpackEncoding;

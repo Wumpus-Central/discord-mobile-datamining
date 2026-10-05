@@ -1,58 +1,60 @@
 // discord_app/modules/external_pip/ExternalPip.android.tsx
-import get_ActivityIndicator from "../../../_runtime/metro/00017__.js";
+import react_native from "../../../_runtime/00017_react-native.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
-const NativeModules = get_ActivityIndicator.NativeModules;
-const ExternalPip = NativeModules.ExternalPip;
+let isInPipMode;
+
+const NativeEventEmitter = react_native.NativeEventEmitter;
+const NativeModules = react_native.NativeModules;
+const ExternalPip2 = NativeModules.ExternalPip;
 class ExternalPip {
   constructor() {
-    merged = Object.assign({ _enabled: false, _isInPipMode: false });
-    tmp2 = new NativeEventEmitter(NativeModules.PipAndroid);
-    merged.eventEmitter = tmp2;
+    const merged = Object.assign({ _enabled: false, _isInPipMode: false });
+    merged.eventEmitter = new NativeEventEmitter(NativeModules.PipAndroid);
+    new NativeEventEmitter(NativeModules.PipAndroid);
     return merged;
+  }
+  addOnPipModeChangedListener(callback2) {
+    const self = this;
+    const eventEmitter = this.eventEmitter;
+    return eventEmitter.addListener("onPipModeChanged", (isInPipMode) => {
+      isInPipMode = isInPipMode.isInPipMode;
+      self._isInPipMode = isInPipMode;
+      callback2(isInPipMode);
+    });
+  }
+  addOnPipModeWillChangeListener(arg0) {
+    const eventEmitter = this.eventEmitter;
+    return eventEmitter.addListener("onPipModeWillChange", arg0);
+  }
+  setSelectedStream() {}
+  setFocusedStream() {}
+  setMirrored() {}
+  setPipAspectRatio(width, height) {
+    ExternalPip2.setPipAspectRatio(width, height);
+  }
+  refreshPipUi() {
+    ExternalPip2.refreshPipUi();
+  }
+  updateSourceTrackingView() {}
+  setEnabled(_enabled) {
+    this._enabled = _enabled;
+    ExternalPip2.setEnabled(this._enabled);
+  }
+  setActive(arg0) {
+    return ExternalPip2.setActive(arg0);
+  }
+  isEnabled() {
+    return this._enabled;
+  }
+  isSupported() {
+    return true === ExternalPip2.isSupported;
+  }
+  isInPipMode() {
+    return this._isInPipMode;
   }
 }
 const prototype = ExternalPip.prototype;
-prototype["addOnPipModeChangedListener"] = function addOnPipModeChangedListener(callback2) {
-  const self = this;
-  const eventEmitter = this.eventEmitter;
-  return eventEmitter.addListener("onPipModeChanged", (isInPipMode) => {
-    isInPipMode = isInPipMode.isInPipMode;
-    self._isInPipMode = isInPipMode;
-    callback2(isInPipMode);
-  });
-};
-prototype["addOnPipModeWillChangeListener"] = function addOnPipModeWillChangeListener(arg0) {
-  const eventEmitter = this.eventEmitter;
-  return eventEmitter.addListener("onPipModeWillChange", arg0);
-};
-prototype["setSelectedStream"] = function setSelectedStream() {};
-prototype["setFocusedStream"] = function setFocusedStream() {};
-prototype["setMirrored"] = function setMirrored() {};
-prototype["setPipAspectRatio"] = function setPipAspectRatio(width, height) {
-  ExternalPip.setPipAspectRatio(width, height);
-};
-prototype["refreshPipUi"] = function refreshPipUi() {
-  ExternalPip.refreshPipUi();
-};
-prototype["updateSourceTrackingView"] = function updateSourceTrackingView() {};
-prototype["setEnabled"] = function setEnabled(_enabled) {
-  this._enabled = _enabled;
-  ExternalPip.setEnabled(this._enabled);
-};
-prototype["setActive"] = function setActive(arg0) {
-  return ExternalPip.setActive(arg0);
-};
-prototype["isEnabled"] = function isEnabled() {
-  return this._enabled;
-};
-prototype["isSupported"] = function isSupported() {
-  return true === ExternalPip.isSupported;
-};
-prototype["isInPipMode"] = function isInPipMode() {
-  return this._isInPipMode;
-};
 let merged = Object.assign({ _enabled: false, _isInPipMode: false });
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.PipAndroid);
 merged.eventEmitter = nativeEventEmitter;

@@ -1,59 +1,61 @@
 // discord_app/modules/guild_settings_picker/GuildSettingsPickerFeatures.tsx
-import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import util from "../../intl/index.native.tsx";
+import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
+import intl2 from "../../intl/index.native.tsx";
 import RoleSubscriptionsOnboardingGuildPickerFeatureSpecDefault from "../guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx";
 import RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpecDefault from "../guild_role_subscriptions/ui/RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
-import noop from "../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../_runtime/00019_react.js";
 import PermissionStore from "../../stores/PermissionStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
 let obj = {
   "server-subscriptions-onboarding": RoleSubscriptionsOnboardingGuildPickerFeatureSpecDefault,
   "server-subscriptions-create-tier-from-template": RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpecDefault,
 };
 let closure_6 = {
   title() {
-    const intl = util.intl;
-    return intl.string(util.t.V42OaH);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.V42OaH);
   },
   description() {
-    const intl = util.intl;
-    return intl.string(util.t["7dJ16X"]);
+    const intl = intl2.intl;
+    return intl.string(intl2.t["7dJ16X"]);
   },
   selectGuildCta() {
-    const intl = util.intl;
-    return intl.string(util.t.LhlgY9);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.LhlgY9);
   },
   createGuildDescription() {
-    const intl = util.intl;
-    return intl.string(util.t.anOisx);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.anOisx);
   },
   createGuildCta() {
-    const intl = util.intl;
-    return intl.string(util.t.B44MTm);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.B44MTm);
   },
   canCreateGuild: true,
   useIsGuildSupported() {
     const items = [PermissionStore];
-    return initialize.useStateFromStores(
+    obj = get_initialized;
+    return obj.useStateFromStores(
       items,
       () => (guild) => closure_1_4.canAccessGuildSettings(guild),
       [],
-      initialize.statesWillNeverBeEqual,
+      get_initialized.statesWillNeverBeEqual,
     );
   },
 };
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings_picker/GuildSettingsPickerFeatures.tsx");
 
 export const useGuildSettingsPickerFeature = function useGuildSettingsPickerFeature(feature) {
   let tmp2;
+  const useState = react.useState;
   if (null != feature) {
+    let tmp3 = obj;
     tmp2 = obj[feature];
   }
-  let first = _slicedToArray(noop.useState(tmp2), 1)[0];
-  closure_0 = closure_6.useIsGuildSupported();
+  let first = _slicedToArray(useState(tmp2), 1)[0];
+  let closure_0 = closure_6.useIsGuildSupported();
   let isGuildSupported;
   if (first != null) {
     const useIsGuildSupported = first.useIsGuildSupported;
@@ -67,7 +69,7 @@ export const useGuildSettingsPickerFeature = function useGuildSettingsPickerFeat
     first = {};
   }
   const merged1 = Object.assign(first);
-  return {
+  const obj2 = {
     title: obj.title(),
     description: obj.description(),
     selectGuildCta: obj.selectGuildCta(),
@@ -86,4 +88,5 @@ export const useGuildSettingsPickerFeature = function useGuildSettingsPickerFeat
       return tmp;
     },
   };
+  return obj2;
 };

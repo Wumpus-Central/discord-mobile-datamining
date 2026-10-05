@@ -1,30 +1,31 @@
 // discord_app/modules/stage_channels/StageChannelModalActionCreators.tsx
 import SelectedChannelActionCreatorsDefault from "../../actions/SelectedChannelActionCreators.tsx";
 import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras.native.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import ApplicationStreamingStore from "../../stores/ApplicationStreamingStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const require = fn;
+const require = globalThis.__r;
+let _require, c3, c4, isStreamMarkedFull;
+
 function connectToStage(channel) {
-  if (flag === undefined) {
-    flag = false;
-  }
   if (!flag) {
     _require = channel;
     const canResult = PermissionStore.can(require("StageChannelPermissions").JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
     let tmp6 = !canResult;
     if (canResult) {
-      let num = StageChannelActionCreatorExtrasAll.shouldShowBlockedUsers(channel.id) && tmp !== channel.id;
+      const obj2 = StageChannelActionCreatorExtrasAll;
+      let num = obj2.shouldShowBlockedUsers(channel.id) && tmp !== channel.id;
       if (num) {
-        const result = StageChannelActionCreatorExtrasAll.openStageBlockedUsersSheet(channel, () => {
-          connectAndOpen(closure_0, true);
+        const tmp7Result = StageChannelActionCreatorExtrasAll;
+        const result = tmp7Result.openStageBlockedUsersSheet(channel, () => {
+          connectAndOpen(channel, true);
         });
         num = 1;
-        const tmp7Result = StageChannelActionCreatorExtrasAll;
       }
       tmp6 = num;
     }
@@ -32,22 +33,27 @@ function connectToStage(channel) {
       return false;
     }
   }
-  const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
+  const obj4 = SelectedChannelActionCreatorsDefault;
+  const voiceChannel = obj4.selectVoiceChannel(channel.id);
   if (SelectedChannelStore.getVoiceChannelId() !== channel.id) {
     return false;
   } else {
     const allApplicationStreamsForChannel = ApplicationStreamingStore.getAllApplicationStreamsForChannel(channel.id);
-    const found = allApplicationStreamsForChannel.find(
-      (item) => !streamMarkedFull.isStreamMarkedFull(channel(dependencyMap[12]).encodeStreamKey(item)),
-    );
+    const found = allApplicationStreamsForChannel.find((item) => {
+      isStreamMarkedFull = isStreamMarkedFull.isStreamMarkedFull;
+      const obj = channel(dependencyMap[12]);
+      return !isStreamMarkedFull(obj.encodeStreamKey(item));
+    });
     if (null != found) {
-      require("StreamActionCreators").watchStream(found, { noFocus: true });
       const obj5 = require("StreamActionCreators");
+      obj5.watchStream(found, { noFocus: true });
     }
     return true;
   }
 }
 function connectAndOpen(channel) {
+  let flag;
+  let flag2;
   _require = channel;
   if (flag === undefined) {
     flag = false;
@@ -60,42 +66,41 @@ function connectAndOpen(channel) {
     flag3 = false;
   }
   const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
-  let result = !flag3;
-  if (!flag3) {
-    result = voiceChannelId !== channel.id;
-  }
+  let result = !flag3 && voiceChannelId !== channel.id;
   if (result) {
-    result = require("shouldShowVoiceChannelChangeConfirmation").shouldShowVoiceChannelChangeConfirmation(channel);
     const obj = require("shouldShowVoiceChannelChangeConfirmation");
+    result = obj.shouldShowVoiceChannelChangeConfirmation(channel);
   }
   if (result) {
-    result = flag2(8070).showChannelChangeConfirmationAlert(channel, () => {
-      connectAndOpen(closure_0, flag, flag2, true);
-    });
     const obj2 = flag2(8070);
+    result = obj2.showChannelChangeConfirmationAlert(channel, () => {
+      connectAndOpen(channel, flag, flag2, true);
+    });
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(8070).navigateToStage(channel, voiceChannelId);
       const obj3 = flag2(8070);
+      obj3.navigateToStage(channel, voiceChannelId);
     }
   }
 }
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelModalActionCreators.tsx");
 
 export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) {
-  closure_0 = arg0;
-  closure_1 = arg1;
+  let closure_0 = arg0;
+  let closure_1 = arg1;
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
-  closure_0 = asyncGeneratorStep(async (arg0) => {
+  closure_0 = _asyncToGenerator(async (arg0) => {
+    let obj2;
+    let obj5;
+    closure_0 = arg0;
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -116,9 +121,9 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            closure_2 = tmp5;
-            closure_129_0 = closure_0;
-            let channel = ChannelStore.getChannel(tmp2);
+            let closure_2 = tmp4;
+            closure_1 = tmp;
+            channel = channel.getChannel(closure_1);
             if (null != channel) {
               connectToStage(channel, closure_2);
               c4 = 3;
@@ -128,11 +133,12 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
               const items = [closure_0];
               c3 = 1;
               c4 = 1;
-              const obj7 = { value: closure_0(6825).stopLurkingAll(items), done: false };
+              const obj7 = { value: obj5.stopLurkingAll(items), done: false };
+              obj5 = closure_0(dependencyMap[8]);
               return obj7;
             }
           }
-        } else if (1 === tmp5) {
+        } else if (1 === c3) {
           if (arg0 === 1) {
             c4 = 3;
             throw value;
@@ -143,7 +149,8 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
           } else {
             c3 = 2;
             c4 = 1;
-            const obj9 = { value: tmp2(5705).joinGuild(closure_0, { lurker: true }), done: false };
+            const obj9 = { value: obj2.joinGuild(closure_0, { lurker: true }), done: false };
+            obj2 = closure_2_1(dependencyMap[9]);
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -155,42 +162,38 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
           return obj;
         } else {
           const result = GuildStore.addConditionalChangeListener(() => {
-            const channel = ChannelStore.getChannel(closure_1);
+            channel = channel.getChannel(closure_1);
             flag = null == channel;
             if (!flag) {
-              connectToStage(channel);
-              closure_1(12731).initialize();
+              closure_3_10(channel);
+              const obj = closure_3_1(closure_3_3[10]);
+              obj.initialize();
               closure_1_0(channel);
               flag = false;
-              const obj = closure_1(12731);
             }
             return flag;
           });
           c4 = 3;
           return { value: "IconComponent", done: null };
         }
-      } catch (tmp20) {
-        c4 = tmp;
-        throw tmp20;
+      } catch (tmp19) {
+        c4 = 3;
+        throw tmp19;
       }
     }
   });
-  return new Promise(function () {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+  const promise = new Promise(function () {
+    return closure_0(...arguments);
   });
+  return promise;
 };
 export { connectToStage };
 export { connectAndOpen };
 export const navigateToStage = function navigateToStage(id, arg1) {
-  StageChannelActionCreatorExtrasAll.navigateToStage(id, arg1);
+  const obj = StageChannelActionCreatorExtrasAll;
+  obj.navigateToStage(id, arg1);
 };
 export const showUserProfile = function showUserProfile(arg0) {
-  const result = StageChannelActionCreatorExtrasAll.showPlatformUserProfile(arg0);
+  const obj = StageChannelActionCreatorExtrasAll;
+  const result = obj.showPlatformUserProfile(arg0);
 };

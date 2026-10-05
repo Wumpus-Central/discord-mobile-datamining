@@ -1,90 +1,112 @@
 // discord_app/design/void/RefreshEmptyState/native/RefreshEmptyState.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../../Constants.tsx";
 import shared from "../../../shared.tsx";
 import components_Button_Button from "../../../components/Button/native/Button.native.tsx";
 import LegacyText_LegacyTextDefault from "../../LegacyText/native/LegacyText.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../components/Styles/native/createStyles.tsx";
 import TextStyles_mod from "../../../../modules/rebrand/native/TextStyles.tsx";
+import ReactCompilerGating_mod from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
 let closure_3 = ["lightSource", "darkSource"];
-get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
-const Fonts = fn(1085).Fonts;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
+({ View: hasOwnProperty, Image: metroRequire } = react_native);
+const Fonts = Constants.Fonts;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
   container: { alignItems: "center", justifyContent: "center", padding: 16 },
-  title: null,
-  body: null,
-  image: null,
-  cta: null,
+  title: obj2,
+  body: obj3,
+  image: { marginBottom: 32 },
+  cta: { alignSelf: "center", marginTop: 16 },
 };
-let obj3 = {};
+obj2 = { textAlign: "center", marginBottom: 8 };
+createStyles = createStyles.createStyles;
 let TextStyles = TextStyles_mod;
 let merged = Object.assign(TextStyles(Fonts.DISPLAY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16));
-obj3.textAlign = "center";
-obj3.marginBottom = 8;
-obj2.title = obj3;
-let obj4 = {};
-let TextStyles = TextStyles_mod;
+obj3 = { textAlign: "center" };
+TextStyles = TextStyles_mod;
 let merged1 = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_SUBTLE, 14));
-obj4.textAlign = "center";
-obj2.body = obj4;
-obj2.image = { marginBottom: 32 };
-obj2.cta = { alignSelf: "center", marginTop: 16 };
-let closure_9 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_9 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(26);
+      let body;
+      let bodyStyle;
+      let callToAction;
+      let containerStyle;
+      let imageStyle;
+      let items;
+      let items2;
+      let items3;
+      let obj4;
+      let source;
+      let title;
+      let titleStyle;
+      const obj = react2;
+      const cResult = obj.c(26);
       ({ source, title, body, containerStyle, imageStyle, titleStyle, bodyStyle, callToAction } = arg0);
       const tmp4 = closure_9();
       if (cResult[0] === containerStyle) {
+        let tmp5;
         if (cResult[1] === tmp4.container) {
-          let tmp5 = cResult[2];
+          tmp5 = cResult[2];
         }
         if (cResult[3] === imageStyle) {
           if (cResult[4] === source) {
+            let tmp6;
             if (cResult[5] === tmp4.image) {
-              let tmp6 = cResult[6];
+              tmp6 = cResult[6];
             }
             if (cResult[7] === tmp4.title) {
               if (cResult[8] === title) {
+                let tmp10;
                 if (cResult[9] === titleStyle) {
-                  let tmp10 = cResult[10];
+                  tmp10 = cResult[10];
                 }
                 if (cResult[11] === bodyStyle) {
+                  let tmp14;
                   if (cResult[12] === tmp4.body) {
-                    let tmp14 = cResult[13];
+                    tmp14 = cResult[13];
                   }
                   if (cResult[14] === body) {
+                    let tmp15;
                     if (cResult[15] === tmp14) {
-                      let tmp15 = cResult[16];
+                      tmp15 = cResult[16];
                     }
                     if (cResult[17] === callToAction) {
+                      let tmp19;
                       if (cResult[18] === tmp4.cta) {
-                        let tmp19 = cResult[19];
+                        tmp19 = cResult[19];
                       }
                       if (cResult[20] === tmp5) {
                         if (cResult[21] === tmp6) {
                           if (cResult[22] === tmp10) {
                             if (cResult[23] === tmp15) {
+                              let tmp23;
                               if (cResult[24] === tmp19) {
-                                let tmp23 = cResult[25];
+                                tmp23 = cResult[25];
                               }
                               return tmp23;
                             }
                           }
                         }
                       }
-                      const obj2 = { style: tmp5, children: null };
-                      const items = [tmp6, tmp10, tmp15, tmp19];
-                      obj2.children = items;
-                      const tmp26 = closure_1_8(hasOwnProperty, obj2);
+                      const obj2 = { style: tmp5, children: items };
+                      items = [tmp6, tmp10, tmp15, tmp19];
+                      const tmp26 = metroImportAll(hasOwnProperty, obj2);
                       cResult[20] = tmp5;
                       cResult[21] = tmp6;
                       cResult[22] = tmp10;
@@ -95,16 +117,13 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     let tmp20 = null;
                     if (null != callToAction) {
-                      const obj3 = { style: tmp4.cta, children: null };
+                      const obj3 = {
+                        style: tmp4.cta,
+                        children: metroImportDefault(components_Button_Button.Button, obj4),
+                      };
+                      obj4 = { shrink: true, text: null, onPress: null, size: "sm" };
                       ({ label: obj6.text, onPress: obj6.onPress } = callToAction);
-                      obj3.children = React5(components_Button_Button.Button, {
-                        shrink: true,
-                        text: null,
-                        onPress: null,
-                        size: "sm",
-                      });
-                      tmp20 = React5(hasOwnProperty, obj3);
-                      const obj4 = { shrink: true, text: null, onPress: null, size: "sm" };
+                      tmp20 = metroImportDefault(hasOwnProperty, obj3);
                     }
                     cResult[17] = callToAction;
                     cResult[18] = tmp4.cta;
@@ -112,7 +131,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
                     tmp19 = tmp20;
                   }
                   const obj5 = { style: tmp14, children: body };
-                  const tmp18 = React5(LegacyText_LegacyTextDefault, obj5);
+                  const tmp18 = metroImportDefault(LegacyText_LegacyTextDefault, obj5);
                   cResult[14] = body;
                   cResult[15] = tmp14;
                   cResult[16] = tmp18;
@@ -127,11 +146,9 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             }
             let tmp11 = null;
             if (null != title) {
-              const obj7 = { style: null, children: null };
-              const items2 = [tmp4.title, titleStyle];
-              obj7.style = items2;
-              obj7.children = title;
-              tmp11 = React5(LegacyText_LegacyTextDefault, obj7);
+              const obj7 = { style: items2, children: title };
+              items2 = [tmp4.title, titleStyle];
+              tmp11 = metroImportDefault(LegacyText_LegacyTextDefault, obj7);
             }
             cResult[7] = tmp4.title;
             cResult[8] = title;
@@ -142,10 +159,9 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp7 = null;
         if (null != source) {
-          const obj13 = { source, style: null };
-          const items3 = [tmp4.image, imageStyle];
-          obj13.style = items3;
-          tmp7 = React5(timestampProducer, obj13);
+          const obj13 = { source, style: items3 };
+          items3 = [tmp4.image, imageStyle];
+          tmp7 = metroImportDefault(metroRequire, obj13);
         }
         cResult[3] = imageStyle;
         cResult[4] = source;
@@ -160,59 +176,63 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = items4;
     }
   : (arg0) => {
+      let body;
+      let bodyStyle;
+      let callToAction;
+      let containerStyle;
+      let imageStyle;
+      let items;
+      let items1;
+      let items2;
+      let items3;
+      let items4;
+      let obj11;
+      let source;
+      let title;
+      let titleStyle;
       ({ source, title, callToAction } = arg0);
       ({ body, containerStyle, imageStyle, titleStyle, bodyStyle } = arg0);
       const tmp = closure_9();
-      const obj = { style: null, children: null };
-      const items = [tmp.container, containerStyle];
-      obj.style = items;
+      const obj = { style: items, children: items2 };
+      items = [tmp.container, containerStyle];
       let tmp4 = null;
       if (null != source) {
-        const obj2 = { source, style: null };
-        const items1 = [tmp.image, imageStyle];
-        obj2.style = items1;
-        tmp4 = React5(timestampProducer, obj2);
+        const obj2 = { source, style: items1 };
+        items1 = [tmp.image, imageStyle];
+        tmp4 = metroImportDefault(metroRequire, obj2);
       }
-      const items2 = [tmp4, , ,];
+      items2 = [tmp4, , ,];
       let tmp7 = null;
       if (null != title) {
-        const obj3 = { style: null, children: null };
-        const items3 = [tmp.title, titleStyle];
-        obj3.style = items3;
-        obj3.children = title;
-        tmp7 = React5(LegacyText_LegacyTextDefault, obj3);
+        const obj3 = { style: items3, children: title };
+        items3 = [tmp.title, titleStyle];
+        tmp7 = metroImportDefault(LegacyText_LegacyTextDefault, obj3);
       }
       items2[1] = tmp7;
-      const obj4 = { style: null, children: body };
-      const items4 = [tmp.body, bodyStyle];
-      obj4.style = items4;
-      items2[2] = React5(LegacyText_LegacyTextDefault, obj4);
+      const obj4 = { style: items4, children: body };
+      items4 = [tmp.body, bodyStyle];
+      items2[2] = metroImportDefault(LegacyText_LegacyTextDefault, obj4);
       let tmp11Result = null;
       if (null != callToAction) {
-        const obj5 = { style: tmp.cta, children: null };
+        const obj5 = { style: tmp.cta, children: metroImportDefault(components_Button_Button.Button, obj11) };
+        obj11 = { shrink: true, text: null, onPress: null, size: "sm" };
         ({ label: obj6.text, onPress: obj6.onPress } = callToAction);
-        obj5.children = React5(components_Button_Button.Button, {
-          shrink: true,
-          text: null,
-          onPress: null,
-          size: "sm",
-        });
-        tmp11Result = React5(hasOwnProperty, obj5);
-        const obj11 = { shrink: true, text: null, onPress: null, size: "sm" };
+        tmp11Result = metroImportDefault(hasOwnProperty, obj5);
       }
       items2[3] = tmp11Result;
-      obj.children = items2;
-      return closure_1_8(hasOwnProperty, obj);
+      return metroImportAll(hasOwnProperty, obj);
     };
-let closure_10 = tmp9;
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/void/RefreshEmptyState/native/RefreshEmptyState.tsx");
-
-export default tmp9;
-export const ThemedEmptyState = ReactCompilerGating.isReactCompilerEnabled()
+let closure_10 = tmp10;
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(7);
+      let darkSource;
+      let lightSource;
+      let tmp4;
+      let tmp5;
+      let tmp6;
+      const obj = react2;
+      const cResult = obj.c(7);
       if (cResult[0] !== arg0) {
         ({ lightSource, darkSource } = arg0);
         const tmp9 = _objectWithoutProperties(arg0, closure_3);
@@ -220,40 +240,50 @@ export const ThemedEmptyState = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = darkSource;
         cResult[2] = lightSource;
         cResult[3] = tmp9;
-        let tmp6 = tmp9;
-        let tmp5 = lightSource;
-        let tmp4 = darkSource;
+        tmp6 = tmp9;
+        tmp5 = lightSource;
+        tmp4 = darkSource;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
         tmp6 = cResult[3];
       }
       const tmpResult = shared;
-      if (tmpResult2.isThemeLight(tmpResult.useThemeContext().theme)) {
+      const theme = tmpResult.useThemeContext().theme;
+      const tmpResult2 = shared;
+      if (tmpResult2.isThemeLight(theme)) {
         tmp4 = tmp5;
       }
       if (cResult[4] === tmp6) {
+        let tmp10;
         if (cResult[5] === tmp4) {
-          let tmp10 = cResult[6];
+          tmp10 = cResult[6];
         }
         return tmp10;
       }
+      const obj2 = { source: tmp4 };
       const merged = Object.assign(tmp6);
-      const tmp12 = React5(closure_10, { source: tmp4 });
+      const tmp12 = metroImportDefault(closure_10, obj2);
       cResult[4] = tmp6;
       cResult[5] = tmp4;
       cResult[6] = tmp12;
       tmp10 = tmp12;
-      const obj2 = { source: tmp4 };
-      tmpResult2 = shared;
     }
   : (darkSource) => {
-      let lightSource = darkSource.darkSource;
+      darkSource = darkSource.darkSource;
+      const lightSource = darkSource.lightSource;
       const merged = Object.assign(darkSource, Object.assign({ lightSource: 0, darkSource: 0 }));
       const obj = shared;
-      if (obj2.isThemeLight(obj.useThemeContext().theme)) {
-        lightSource = darkSource.lightSource;
+      const theme = obj.useThemeContext().theme;
+      const obj2 = shared;
+      if (obj2.isThemeLight(theme)) {
+        darkSource = lightSource;
       }
+      const obj3 = { source: darkSource };
       const merged1 = Object.assign(merged);
-      return React5(closure_10, { source: lightSource });
+      return metroImportDefault(closure_10, obj3);
     };
+const result = size.fileFinishedImporting("design/void/RefreshEmptyState/native/RefreshEmptyState.tsx");
+
+export default tmp10;
+export const ThemedEmptyState = tmp11;

@@ -4,236 +4,255 @@ import UploadDefault from "../../../../lib/uploader/Upload.tsx";
 import utils_UploadUtils from "../../../../utils/native/UploadUtils.tsx";
 import ImagePickerDefault from "../../../image/native/ImagePicker.tsx";
 import conjureAttachmentDrafts from "../conjureAttachmentDrafts.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-let closure_4 = async function _pickConjurePhotos() {
-  c3 = 0;
-  c4 = 0;
-  return (async (arg0, value) => {
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
+let closure_10,
+  closure_2,
+  closure_5,
+  closure_6,
+  closure_7,
+  closure_9,
+  mediaType,
+  name2,
+  overrideFilename,
+  uploadConjureAttachment;
+
+let obj = function _pickConjurePhotos() {
+  obj = _asyncToGenerator(async (mediaType, selectionLimit) => {
+    let c3 = 0;
+    let c4 = 0;
+    return (async (arg0, value) => {
+      let obj3;
+      if (c4 === 2) {
+        c4 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          return { value, done: true };
+        } else {
+          return { value: "IconComponent", done: null };
+        }
       } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              return { value, done: true };
+            } else {
+              closure_2 = tmp;
+              mediaType = undefined;
+              c3 = 1;
+              c4 = 1;
+              const obj5 = { mediaType, selectionLimit, skipProcessing: true };
+              const obj6 = { value: obj3.launchImageLibraryAsync(obj5), done: false };
+              obj3 = ImagePickerDefault;
+              return obj6;
+            }
+          } else if (arg0 === 1) {
             c4 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            return { value, done: true };
           } else {
-            closure_2 = tmp2;
-            closure_130_0 = undefined;
-            const obj5 = { mediaType, selectionLimit, skipProcessing: true };
-            c3 = 1;
-            c4 = 1;
-            const obj6 = { value: ImagePickerDefault.launchImageLibraryAsync(obj5), done: false };
-            return obj6;
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          let obj = { value, done: true };
-          return obj;
-        } else {
-          closure_130_0 = value;
-          if (!closure_130_0.didCancel) {
-            if (null != closure_130_0.assets) {
-              const assets = closure_130_0.assets;
-              const mapped = assets.map((uri) => {
-                const obj = { uri: uri.uri, name: null, contentType: null, size: null };
-                ({ uri, fileName } = uri);
-                if (null == fileName) {
-                  const parts = uri.split("/");
-                  let str3 = parts.at(-1);
-                  if (str3 == null) {
-                    str3 = "attachment";
+            mediaType = value;
+            if (!mediaType.didCancel) {
+              let mapped;
+              if (null != mediaType.assets) {
+                const assets = mediaType.assets;
+                mapped = assets.map((uri) => {
+                  let fileName;
+                  let str4;
+                  obj = { uri: uri.uri, name: fileName, contentType: str4, size: null };
+                  ({ uri, fileName } = uri);
+                  if (null == fileName) {
+                    const parts = uri.split("/");
+                    let str3 = parts.at(-1);
+                    if (str3 == null) {
+                      str3 = "attachment";
+                    }
+                    fileName = str3;
                   }
-                  fileName = str3;
-                }
-                obj.name = fileName;
-                let str4 = uri.mimeType;
-                if (str4 == null) {
-                  str4 = uri.fileType;
-                }
-                if (str4 == null) {
-                  str4 = uri.type;
-                }
-                if (str4 == null) {
-                  str4 = "application/octet-stream";
-                }
-                obj.contentType = str4;
-                return obj;
-              });
+                  str4 = uri.mimeType;
+                  if (str4 == null) {
+                    str4 = uri.fileType;
+                  }
+                  if (str4 == null) {
+                    str4 = uri.type;
+                  }
+                  if (str4 == null) {
+                    str4 = "application/octet-stream";
+                  }
+                  return obj;
+                });
+              }
+              c4 = 3;
+              obj = { value: mapped, done: true };
+              return obj;
             }
-            c4 = 3;
+            mapped = [];
           }
-          const items = [];
+        } catch (tmp16) {
+          c4 = 3;
+          throw tmp16;
         }
-      } catch (tmp18) {
-        c4 = tmp;
-        throw tmp18;
       }
-    }
-  })();
+    })();
+  });
+  return obj(...arguments);
 };
 function readFile() {
-  const self = this;
-  const apply = closure_6.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }
-let closure_6 = async function _readFile() {
-  let combined = _require;
-  if (_require.startsWith("/")) {
-    const _HermesInternal = HermesInternal;
-    combined = "file://" + _require;
-  }
-  await fetch(combined);
-  return value.blob();
+obj = function _readFile() {
+  obj = _asyncToGenerator(async (arg0) => {
+    let c1;
+    let c2;
+    let closure_0 = arg0;
+    const _fetch = fetch;
+    let combined = closure_0;
+    if (closure_0.startsWith("/")) {
+      const _HermesInternal = HermesInternal;
+      combined = "file://" + closure_0;
+    }
+    await _fetch(combined);
+    return value.blob();
+  });
+  return obj(...arguments);
 };
-let closure_7 = async function _uploadConjurePickedFile(arg0, arg1) {
-  closure_0 = arg0;
-  let uri = arg1;
-  c11 = 0;
-  c12 = 0;
-  return (async (arg0, value) => {
-    if (c12 === 2) {
-      c12 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c12 = 2;
-        if (0 === c11) {
-          if (arg0 === 1) {
-            c12 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c12 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_5 = tmp2;
-            closure_6 = tmp5;
-            closure_134_0 = closure_0;
-            closure_134_1 = uri;
-            closure_134_2 = undefined;
-            closure_134_3 = undefined;
-            let type;
-            const obj5 = {
-              platform: UploadPlatform.UploadPlatform.REACT_NATIVE,
-              uri: null,
-              originalUri: null,
-              filename: null,
-            };
-            ({ uri: obj14.uri, uri: obj14.originalUri, name: obj14.filename } = uri);
-            const tmp492 = new UploadDefault(obj5);
-            if (tmp492.isImage) {
-              c11 = 2;
-              c12 = 1;
-              const obj6 = { value: utils_UploadUtils.getFileInfo(tmp492), done: false };
-              return obj6;
-            } else {
-              const tmp57Result2 = conjureAttachmentDrafts;
-              closure_7 = tmp57Result2;
-              uploadConjureAttachment = tmp57Result2.uploadConjureAttachment;
-              closure_9 = closure_0;
-              c11 = 1;
-              c12 = 1;
-              const obj7 = { value: readFile(uri.uri), done: false };
-              return obj7;
-            }
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c12 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c12 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
-          } else {
-            c12 = 3;
-            const obj9 = {
-              value: uploadConjureAttachment(closure_9, value, closure_134_1.name, closure_134_1.contentType),
-              done: true,
-            };
-            return obj9;
-          }
-        } else if (2 === tmp5) {
-          if (arg0 === 1) {
-            c12 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c12 = 3;
-            const obj10 = { value, done: true };
-            return obj10;
-          } else {
-            closure_134_2 = value;
-            name = closure_134_2.name;
-            if (name == null) {
-              name = closure_134_1.name;
-            }
-            closure_134_3 = name;
-            const obj11 = { uri: closure_134_2.uri, overrideFilename: closure_134_3 };
-            type = closure_133_0(closure_133_2[6]).getFile(obj11).type;
-            const tmp24 = closure_133_0(closure_133_2[4]);
-            closure_10 = tmp24;
-            uploadConjureAttachment = tmp24.uploadConjureAttachment;
-            closure_3 = closure_134_0;
-            c11 = 3;
-            c12 = 1;
-            const obj12 = { value: closure_133_5(closure_134_2.uri), done: false };
-            return obj12;
-          }
-        } else if (arg0 === 1) {
-          c12 = 3;
+obj = function _uploadConjurePickedFile() {
+  obj = _asyncToGenerator(async (arg0, arg1) => {
+    let closure_0 = arg0;
+    const user = arg1;
+    let c11 = 0;
+    let c12 = 0;
+    return (async function (arg0, value) {
+      let tmp53Result;
+      if (c12 === 2) {
+        c12 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          c12 = 3;
-          const obj13 = { value, done: true };
-          return obj13;
+          return { value, done: true };
         } else {
-          c12 = 3;
-          const obj = { value: uploadConjureAttachment(closure_3, value, closure_134_3, type), done: true };
-          return obj;
+          return { value: "IconComponent", done: null };
         }
-      } catch (tmp37) {
-        c12 = tmp;
-        throw tmp37;
+      } else {
+        try {
+          let type;
+          c12 = 2;
+          if (0 === c11) {
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c12 = 3;
+              return { value, done: true };
+            } else {
+              closure_5 = tmp;
+              closure_6 = tmp4;
+              name2 = undefined;
+              overrideFilename = undefined;
+              type = undefined;
+              const obj5 = {
+                platform: UploadPlatform.UploadPlatform.REACT_NATIVE,
+                uri: null,
+                originalUri: null,
+                filename: null,
+              };
+              ({ uri: obj14.uri, uri: obj14.originalUri, name: obj14.filename } = user);
+              const self = this;
+              const self2 = this;
+              const tmp47 = UploadDefault;
+              const tmp472 = new tmp47(obj5);
+              if (tmp472.isImage) {
+                c11 = 2;
+                c12 = 1;
+                const obj6 = { value: tmp53Result.getFileInfo(tmp472), done: false };
+                tmp53Result = utils_UploadUtils;
+                return obj6;
+              } else {
+                const tmp53Result2 = conjureAttachmentDrafts;
+                closure_7 = tmp53Result2;
+                uploadConjureAttachment = tmp53Result2.uploadConjureAttachment;
+                closure_9 = closure_0;
+                c11 = 1;
+                c12 = 1;
+                const obj7 = { value: readFile(user.uri), done: false };
+                return obj7;
+              }
+            }
+          } else if (1 === c11) {
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c12 = 3;
+              return { value, done: true };
+            } else {
+              c12 = 3;
+              const obj9 = {
+                value: uploadConjureAttachment(closure_9, value, user.name, user.contentType),
+                done: true,
+              };
+              return obj9;
+            }
+          } else if (2 === c11) {
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c12 = 3;
+              return { value, done: true };
+            } else {
+              name2 = value;
+              const name = name2.name;
+              name2 = name;
+              if (name == null) {
+                name2 = user.name;
+              }
+              overrideFilename = name2;
+              const obj11 = { uri: name2.uri, overrideFilename };
+              const obj3 = closure_133_0(closure_133_2[6]);
+              type = obj3.getFile(obj11).type;
+              const tmp23 = closure_133_0(closure_133_2[4]);
+              closure_10 = tmp23;
+              uploadConjureAttachment = tmp23.uploadConjureAttachment;
+              overrideFilename = closure_0;
+              c11 = 3;
+              c12 = 1;
+              const obj12 = { value: closure_133_5(name2.uri), done: false };
+              return obj12;
+            }
+          } else if (arg0 === 1) {
+            c12 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c12 = 3;
+            return { value, done: true };
+          } else {
+            c12 = 3;
+            obj = { value: uploadConjureAttachment(overrideFilename, value, overrideFilename, type), done: true };
+            return obj;
+          }
+        } catch (tmp36) {
+          c12 = 3;
+          throw tmp36;
+        }
       }
-    }
-  })();
+    })();
+  });
+  return obj(...arguments);
 };
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/native/conjurePickedFiles.tsx");
 
 export const pickedName = function pickedName(uri, name) {
@@ -249,22 +268,8 @@ export const pickedName = function pickedName(uri, name) {
   return tmp;
 };
 export const pickConjurePhotos = function pickConjurePhotos() {
-  const self = this;
-  const apply = closure_4.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const uploadConjurePickedFile = function uploadConjurePickedFile() {
-  const self = this;
-  const apply = closure_7.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

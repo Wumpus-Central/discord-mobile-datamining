@@ -1,26 +1,33 @@
 // discord_app/modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx
+import Constants from "../../../../Constants.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
-fn(558);
-const ReactCompilerGating = fn(558);
+const GuildFeatures = Constants.GuildFeatures;
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
       _require = arg0;
-      const cResult = require("c").c(3);
+      const obj = require("react");
+      const cResult = obj.c(3);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         const fn = function l() {
-          guild = GuildStore.getGuild(closure_0);
+          const guild = GuildStore.getGuild(closure_0);
           let hasItem = null != guild;
           if (hasItem) {
             const features = guild.features;
@@ -30,18 +37,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       const items = [GuildStore];
-      return require("initialize").useStateFromStores(items, () => {
-        guild = GuildStore.getGuild(closure_0);
+      const obj = require("get initialized");
+      return obj.useStateFromStores(items, () => {
+        const guild = GuildStore.getGuild(closure_0);
         let hasItem = null != guild;
         if (hasItem) {
           const features = guild.features;
@@ -50,7 +59,57 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return hasItem;
       });
     };
-const size = fn(2);
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
+      _require = arg0;
+      const obj = require("react");
+      const cResult = obj.c(3);
+      const tmp = _require;
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [GuildStore];
+        cResult[0] = items;
+        first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== arg0) {
+        const fn = function l() {
+          const guild = GuildStore.getGuild(closure_0);
+          let hasItem = null != guild;
+          if (hasItem) {
+            const features = guild.features;
+            hasItem = features.has(GuildFeatures.ENHANCED_ROLE_COLORS);
+          }
+          return hasItem;
+        };
+        cResult[1] = arg0;
+        cResult[2] = fn;
+        tmp6 = fn;
+      } else {
+        tmp6 = cResult[2];
+      }
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6);
+    }
+  : (arg0) => {
+      let closure_0;
+      _require = arg0;
+      const items = [GuildStore];
+      const obj = require("get initialized");
+      return obj.useStateFromStores(items, () => {
+        const guild = GuildStore.getGuild(closure_0);
+        let hasItem = null != guild;
+        if (hasItem) {
+          const features = guild.features;
+          hasItem = features.has(GuildFeatures.ENHANCED_ROLE_COLORS);
+        }
+        return hasItem;
+      });
+    };
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx");
 
 export default tmp2;
@@ -58,7 +117,7 @@ export const getHasEnhancedRoleColors = function getHasEnhancedRoleColors(guildI
   if (null == guildId1) {
     return false;
   } else {
-    guild = GuildStore.getGuild(guildId1);
+    const guild = GuildStore.getGuild(guildId1);
     let hasItem = null != guild;
     if (hasItem) {
       const features = guild.features;
@@ -67,51 +126,9 @@ export const getHasEnhancedRoleColors = function getHasEnhancedRoleColors(guildI
     return hasItem;
   }
 };
-export const useHasEnhancedRoleColorsForRole = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      _require = arg0;
-      const cResult = require("c").c(3);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [GuildStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== arg0) {
-        const fn = function l() {
-          guild = GuildStore.getGuild(closure_0);
-          let hasItem = null != guild;
-          if (hasItem) {
-            const features = guild.features;
-            hasItem = features.has(GuildFeatures.ENHANCED_ROLE_COLORS);
-          }
-          return hasItem;
-        };
-        cResult[1] = arg0;
-        cResult[2] = fn;
-        let tmp6 = fn;
-      } else {
-        tmp6 = cResult[2];
-      }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6);
-    }
-  : (arg0) => {
-      _require = arg0;
-      const items = [GuildStore];
-      return require("initialize").useStateFromStores(items, () => {
-        guild = GuildStore.getGuild(closure_0);
-        let hasItem = null != guild;
-        if (hasItem) {
-          const features = guild.features;
-          hasItem = features.has(GuildFeatures.ENHANCED_ROLE_COLORS);
-        }
-        return hasItem;
-      });
-    };
+export const useHasEnhancedRoleColorsForRole = tmp3;
 export const getHasEnhancedRoleColorsForRole = function getHasEnhancedRoleColorsForRole(id) {
-  guild = GuildStore.getGuild(id);
+  const guild = GuildStore.getGuild(id);
   let hasItem = null != guild;
   if (hasItem) {
     const features = guild.features;

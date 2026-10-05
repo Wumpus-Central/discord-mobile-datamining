@@ -20,9 +20,17 @@ export const resolveAttachmentHost = function resolveAttachmentHost(hasAttachmen
   return str;
 };
 export const resolveTurnPresentation = function resolveTurnPresentation(hasAttachments) {
+  let content;
+  let hasProposal;
+  let key;
+  let steps;
+  let str4;
+  let str5;
   ({ steps, content, hasProposal } = hasAttachments);
-  c0 = undefined;
-  const streamedContentResult = ConjureTimelineTree.streamedContent(steps);
+  let c0;
+  hasAttachments = hasAttachments.hasAttachments;
+  const obj = ConjureTimelineTree;
+  const streamedContentResult = obj.streamedContent(steps);
   const found = streamedContentResult.filter((type) => "message" === type.type);
   const atResult = found.at(-1);
   let tmp4 = null;
@@ -35,8 +43,8 @@ export const resolveTurnPresentation = function resolveTurnPresentation(hasAttac
       if (tmp6) {
         let tmp7 = trimmed === trimmed1;
         if (!tmp7) {
-          tmp7 = str.length >= 16000 && trimmed1.startsWith(trimmed);
-          const tmp8 = str.length >= 16000 && trimmed1.startsWith(trimmed);
+          tmp7 = atResult.content.length >= 16000 && trimmed1.startsWith(trimmed);
+          atResult.content.length >= 16000 && trimmed1.startsWith(trimmed);
         }
         tmp6 = tmp7;
       }
@@ -50,31 +58,29 @@ export const resolveTurnPresentation = function resolveTurnPresentation(hasAttac
   const found1 = streamedContentResult.filter((item) => item !== c0);
   const found2 = found1.filter((type) => "message" === type.type);
   let tmp10 = !hasProposal;
+  const atResult1 = found2.at(-1);
   if (!hasProposal) {
     tmp10 = "" !== content.trim();
   }
   const obj2 = {
     streamed: found1,
-    lastStreamedMessage: found2.at(-1),
-    replyKey: null,
-    showsClosingMessage: null,
-    closingContent: null,
-    attachmentsHost: null,
+    lastStreamedMessage: atResult1,
+    replyKey: key,
+    showsClosingMessage: tmp10,
+    closingContent: str4,
+    attachmentsHost: str5,
   };
-  let key;
+  key = undefined;
   if (tmp4 != null) {
     key = tmp4.key;
   }
-  obj2.replyKey = key;
-  obj2.showsClosingMessage = tmp10;
-  let str4 = "";
+  str4 = "";
   if (tmp10) {
     str4 = content.trim();
   }
-  obj2.closingContent = str4;
   ConjureTimelineTree;
-  let str5 = "none";
-  if (hasAttachments.hasAttachments) {
+  str5 = "none";
+  if (hasAttachments) {
     let str6 = "closing";
     if (!tmp10) {
       let str7 = "standalone";
@@ -85,12 +91,11 @@ export const resolveTurnPresentation = function resolveTurnPresentation(hasAttac
     }
     str5 = str6;
   }
-  obj2.attachmentsHost = str5;
   return obj2;
 };
 export const turnLeadsWithStretch = function turnLeadsWithStretch(arg0, turnPresentation) {
   let someResult = arg0;
-  if (!arg0) {
+  if (!someResult) {
     const streamed = turnPresentation.streamed;
     someResult = streamed.some((type) => "message" === type.type);
   }

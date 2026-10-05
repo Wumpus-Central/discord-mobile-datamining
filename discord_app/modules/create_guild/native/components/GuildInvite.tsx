@@ -1,31 +1,55 @@
 // discord_app/modules/create_guild/native/components/GuildInvite.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl5 from "../../../../intl/index.native.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
-import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.android.tsx";
+import react_native from "../../../a11y/native/setAccessibilityFocus.android.tsx";
 import GroupIcon from "../../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
-import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRow2 from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
+import CreateGuildConstants from "../CreateGuildConstants.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import InviteSuggestionsActionCreators from "../../../../actions/InviteSuggestionsActionCreators.tsx";
 import InstantInviteRowDefault from "../../../instant_invite/native/components/InstantInviteRow.tsx";
+import InstantInviteSendStateStore from "../../../instant_invite/InstantInviteSendStateStore.tsx";
 import CreateGuildModalActionCreatorsDefault from "../CreateGuildModalActionCreators.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
-import ChannelStore from "../../../../stores/ChannelStore.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native2 from "../../../../../_runtime/00017_react-native.js";
+import ChannelStore_mod from "../../../../stores/ChannelStore.tsx";
 import CreateInviteModalStore from "../../../../stores/CreateInviteModalStore.tsx";
 import GuildChannelStore from "../../../../stores/GuildChannelStore.tsx";
 import InviteSuggestionsStore from "../../../../stores/InviteSuggestionsStore.tsx";
+import Constants from "../../../../Constants.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let defaultChannel, importDefault, invite, navigation, setOptionsResult;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: hasOwnProperty, View: metroRequire, FlatList: closure_7, StyleSheet } = get_ActivityIndicator);
-let channel = fn(9554).useInstantInviteSendStates;
-const CreateGuildModalStates = fn(6468).CreateGuildModalStates;
-const Constants = fn(1085);
+let StyleSheet;
+let closure_14;
+let closure_15;
+let closure_16;
+let closure_17;
+let closure_18;
+let closure_19;
+let closure_20;
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let size;
+({ Image: hasOwnProperty, View: metroRequire, FlatList: metroImportDefault, StyleSheet } = react_native2);
+let channel = InstantInviteSendStateStore.useInstantInviteSendStates;
+let ChannelStore = ChannelStore_mod;
+const CreateGuildModalStates = CreateGuildConstants.CreateGuildModalStates;
 ({
   AnalyticEvents: closure_14,
   AnalyticsSections: closure_15,
@@ -33,36 +57,31 @@ const Constants = fn(1085);
   Permissions: closure_17,
   SearchTypes: closure_18,
 } = Constants);
-const jsxProd = fn(21);
-({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  container: {
-    marginTop: fn(6068).NAV_BAR_HEIGHT,
-    flex: 1,
-    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
-    alignItems: "center",
-  },
+({ jsx: closure_19, jsxs: closure_20 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
+  container: obj2,
   header: { marginBottom: 8 },
   description: { lineHeight: 18, marginBottom: 8, paddingHorizontal: 16, textAlign: "center" },
   headerImage: { marginVertical: 16 },
   linkContainer: { paddingHorizontal: 16, width: "100%" },
-  linkButton: null,
-  linkButtonIcon: null,
-  inviteDetail: null,
-  shareButton: null,
-  suggestionsContainer: null,
-  friendIcon: null,
-  suggestionRowsContainer: null,
-  separator: null,
+  linkButton: obj3,
+  linkButtonIcon: obj4,
+  inviteDetail: { marginTop: 8 },
+  shareButton: { marginVertical: 16 },
+  suggestionsContainer: { width: "100%", flex: 1, alignContent: "flex-start" },
+  friendIcon: size,
+  suggestionRowsContainer: { marginHorizontal: 12 },
+  separator: obj5,
 };
-let obj3 = {
-  marginTop: fn(6068).NAV_BAR_HEIGHT,
+obj2 = {
+  marginTop: NavigatorConstants.NAV_BAR_HEIGHT,
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   alignItems: "center",
 };
-obj2.linkButton = {
+createStyles = createStyles.createStyles;
+obj3 = {
   marginTop: 16,
   flexDirection: "row",
   alignItems: "center",
@@ -71,20 +90,8 @@ obj2.linkButton = {
   padding: 12,
   justifyContent: "space-between",
 };
-let obj4 = {
-  marginTop: 16,
-  flexDirection: "row",
-  alignItems: "center",
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-  borderRadius: nativeDefault.radii.xs,
-  padding: 12,
-  justifyContent: "space-between",
-};
-obj2.linkButtonIcon = { flexShrink: 0, marginLeft: 8, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj2.inviteDetail = { marginTop: 8 };
-obj2.shareButton = { marginVertical: 16 };
-obj2.suggestionsContainer = { width: "100%", flex: 1, alignContent: "flex-start" };
-let size = {
+obj4 = { flexShrink: 0, marginLeft: 8, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   height: 32,
   width: 32,
@@ -93,73 +100,83 @@ let size = {
   justifyContent: "center",
   borderRadius: nativeDefault.radii.xxl,
 };
-obj2.friendIcon = size;
-obj2.suggestionRowsContainer = { marginHorizontal: 12 };
-let obj5 = { flexShrink: 0, marginLeft: 8, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj2.separator = {
+obj5 = {
   height: StyleSheet.hairlineWidth,
   backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
   marginStart: nativeDefault.modules.mobile.TABLE_ROW_DIVIDER_PADDING,
 };
-let closure_21 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
+let closure_21 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
   ? (openInviteSheet) => {
-      const cResult = c.c(7);
+      let first;
+      let tmp12;
+      let tmp8;
+      const obj = react2;
+      const cResult = obj.c(7);
       openInviteSheet = openInviteSheet.openInviteSheet;
       const tmp4 = closure_21();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = closure_1_19(GroupIcon.GroupIcon, { size: "sm" });
+        const tmp7 = closure_19(GroupIcon.GroupIcon, { size: "sm" });
         cResult[0] = tmp7;
-        let first = tmp7;
+        first = tmp7;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== tmp4.friendIcon) {
         const obj2 = { style: tmp4.friendIcon, children: first };
-        const tmp11 = closure_1_19(timestampProducer, obj2);
+        const tmp11 = closure_19(metroRequire, obj2);
         cResult[1] = tmp4.friendIcon;
         cResult[2] = tmp11;
-        let tmp8 = tmp11;
+        tmp8 = tmp11;
       } else {
         tmp8 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = util.intl;
-        const stringResult = intl.string(util.t.zrLIIz);
+        const intl = intl5.intl;
+        const stringResult = intl.string(intl5.t.zrLIIz);
         cResult[3] = stringResult;
-        let tmp12 = stringResult;
+        tmp12 = stringResult;
       } else {
         tmp12 = cResult[3];
       }
       if (cResult[4] === openInviteSheet) {
+        let tmp14;
         if (cResult[5] === tmp8) {
-          let tmp14 = cResult[6];
+          tmp14 = cResult[6];
         }
         return tmp14;
       }
-      const tmp15 = closure_1_19(TableRow.TableRow, { icon: tmp8, onPress: openInviteSheet, label: tmp12, end: true });
+      const tmp15 = closure_19(TableRow2.TableRow, { icon: tmp8, onPress: openInviteSheet, label: tmp12, end: true });
       cResult[4] = openInviteSheet;
       cResult[5] = tmp8;
       cResult[6] = tmp15;
       tmp14 = tmp15;
     }
   : (openInviteSheet) => {
-      const obj = { icon: null, onPress: null, label: null, end: true };
-      const tmp = closure_21();
-      obj.icon = closure_1_19(timestampProducer, {
-        style: closure_21().friendIcon,
-        children: closure_1_19(GroupIcon.GroupIcon, { size: "sm" }),
-      });
-      obj.onPress = openInviteSheet.openInviteSheet;
-      const intl = util.intl;
-      obj.label = intl.string(util.t.zrLIIz);
-      return closure_1_19(TableRow.TableRow, obj);
+      let intl;
+      let obj2;
+      openInviteSheet = openInviteSheet.openInviteSheet;
+      const obj = {
+        icon: closure_19(metroRequire, obj2),
+        onPress: openInviteSheet,
+        label: intl.string(intl5.t.zrLIIz),
+        end: true,
+      };
+      obj2 = { style: closure_21().friendIcon, children: closure_19(GroupIcon.GroupIcon, { size: "sm" }) };
+      const TableRow = TableRow2.TableRow;
+      intl = intl5.intl;
+      return closure_19(TableRow, obj);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
   ? (invite) => {
-      const cResult = invite(576).c(19);
+      let openInviteSheet;
+      let separator;
+      let suggestions;
+      let tmp3;
+      let obj = invite(576);
+      const cResult = obj.c(19);
       invite = invite.invite;
       ({ suggestions, openInviteSheet } = invite);
       const tmp2 = closure_21();
@@ -168,7 +185,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         const substr = suggestions.slice(0, 6);
         cResult[0] = suggestions;
         cResult[1] = substr;
-        let tmp3 = substr;
+        tmp3 = substr;
       } else {
         tmp3 = cResult[1];
       }
@@ -251,13 +268,13 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
             ItemSeparatorComponent: tmp10,
             keyExtractor: E,
           };
-          const tmp16 = closure_19(closure_7, obj2);
           cResult[10] = tmp3;
           cResult[11] = S;
           cResult[12] = tmp2.suggestionRowsContainer;
           cResult[13] = tmp6;
           cResult[14] = tmp10;
-          cResult[15] = tmp16;
+          cResult[15] = closure_19(closure_7, obj2);
+          const tmp16 = closure_19(closure_7, obj2);
         }
         let tmp7 = null;
         if (suggestions.length > 6) {
@@ -273,67 +290,79 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = suggestions.length;
         cResult[6] = tmp7;
       }
-      const obj = invite(576);
     }
   : (openInviteSheet) => {
+      let code;
+      let obj3;
+      let require;
+      let suggestions;
+      let tmp6Result;
       ({ invite: require, suggestions } = openInviteSheet);
+      openInviteSheet = openInviteSheet.openInviteSheet;
       const tmp = closure_21();
       const separator = tmp;
       [][0] = suggestions;
       let tmp6Result2 = null;
       if (0 !== suggestions.length) {
-        const obj2 = { style: tmp.suggestionsContainer, children: null };
-        const obj3 = {
+        const obj2 = { style: tmp.suggestionsContainer, children: closure_19(closure_7, obj3) };
+        obj3 = {
           data: tmp2,
           renderItem(arg0) {
+            let index;
+            let item;
             ({ item, index } = arg0);
-            return closure_2_19(InstantInviteRowDefault, { row: item, code: code.code, start: 0 === index });
+            const obj = { row: item, code: require.code, start: 0 === index };
+            return closure_19(InstantInviteRowDefault, obj);
           },
           contentContainerStyle: tmp.suggestionRowsContainer,
-          ListFooterComponent: null,
-          ItemSeparatorComponent: null,
-          keyExtractor: null,
+          ListFooterComponent: tmp6Result,
+          ItemSeparatorComponent() {
+            const obj = { style: separator.separator };
+            return closure_19(metroRequire, obj);
+          },
+          keyExtractor(item) {
+            return item.item.id;
+          },
         };
-        let tmp6Result = null;
+        tmp6Result = null;
         if (suggestions.length > 6) {
-          const obj = { openInviteSheet: openInviteSheet.openInviteSheet };
+          let obj = { openInviteSheet };
           tmp6Result = closure_19(closure_22, obj);
         }
-        obj3.ListFooterComponent = tmp6Result;
-        obj3.ItemSeparatorComponent = function ItemSeparatorComponent() {
-          return closure_2_19(timestampProducer, { style: separator.separator });
-        };
-        obj3.keyExtractor = function keyExtractor(item) {
-          return item.item.id;
-        };
-        obj2.children = closure_19(closure_7, obj3);
         tmp6Result2 = closure_19(closure_6, obj2);
       }
       return tmp6Result2;
     };
-ReactCompilerGating = fn(558);
-let obj6 = {
-  height: StyleSheet.hairlineWidth,
-  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
-  marginStart: nativeDefault.modules.mobile.TABLE_ROW_DIVIDER_PADDING,
-};
-size = fn(2);
-let result = size.fileFinishedImporting("modules/create_guild/native/components/GuildInvite.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = onClose(navigation[16]).c(88);
+      let closeOnEditInviteLink;
+      let closure_1;
+      let inviteSuggestionRows;
+      let onClose;
+      let ref;
+      let tmp11;
+      let tmp12;
+      let tmp15;
+      let tmp16;
+      let tmp21;
+      let tmp31;
+      let tmp2 = navigation;
+      let obj = onClose(navigation[16]);
+      const cResult = obj.c(88);
       ({ closeOnEditInviteLink, onClose } = arg0);
       importDefault = undefined === closeOnEditInviteLink || closeOnEditInviteLink;
-      closure_21();
-      let obj = onClose(navigation[16]);
-      navigation = onClose(navigation[21]).useNavigation();
-      const tmpResult = onClose(navigation[21]);
-      const isScreenReaderEnabled = onClose(navigation[22]).useIsScreenReaderEnabled();
+      const tmp4 = closure_21();
+      const tmpResult = onClose(tmp2[21]);
+      navigation = tmpResult.useNavigation();
+      const tmpResult4 = onClose(tmp2[22]);
+      const isScreenReaderEnabled = tmpResult4.useIsScreenReaderEnabled();
+      let obj4 = ref;
       ref = ref.useRef(null);
       const tmp9 = isScreenReaderEnabled(ref.useState(false), 2);
       const first = tmp9[0];
-      closure_6 = tmp9[1];
+      let closure_6 = tmp9[1];
+      const tmp8 = isScreenReaderEnabled;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [CreateInviteModalStore];
         const fn = function u() {
@@ -346,30 +375,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp11, tmp12] = cResult;
       }
-      const tmp8 = isScreenReaderEnabled;
-      const tmpResult4 = onClose(navigation[22]);
-      const stateFromStores = onClose(navigation[23]).useStateFromStores(tmp11, tmp12);
+      const tmpResult5 = onClose(tmp2[23]);
+      const stateFromStores = tmpResult5.useStateFromStores(tmp11, tmp12);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [CreateInviteModalStore, ChannelStore, GuildChannelStore];
         class P {
           constructor() {
-            obj = closure_10;
-            inviteSettings = closure_10.getInviteSettings();
-            channelId = undefined;
+            const inviteSettings = CreateInviteModalStore.getInviteSettings();
+            let channelId;
             if (inviteSettings != null) {
               channelId = inviteSettings.channelId;
             }
             if (null != channelId) {
-              tmp7 = closure_9;
-              return closure_9.getChannel(channelId);
+              return channel.getChannel(channelId);
             } else {
-              guildId = obj.getGuildId();
+              const guildId = CreateInviteModalStore.getGuildId();
               defaultChannel = null;
               if (null != guildId) {
-                tmp5 = closure_1_11;
-                tmp6 = closure_1_17;
-                flag = true;
-                defaultChannel = closure_1_11.getDefaultChannel(guildId, true, closure_1_17.CREATE_INSTANT_INVITE);
+                defaultChannel = defaultChannel.getDefaultChannel(guildId, true, constants4.CREATE_INSTANT_INVITE);
               }
               return defaultChannel;
             }
@@ -377,71 +400,65 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[2] = items1;
         cResult[3] = P;
-        let tmp16 = P;
-        let tmp15 = items1;
+        tmp16 = P;
+        tmp15 = items1;
       } else {
         tmp15 = cResult[2];
         tmp16 = cResult[3];
       }
-      const tmpResult5 = onClose(navigation[23]);
-      const stateFromStores1 = onClose(navigation[23]).useStateFromStores(tmp15, tmp16);
+      const tmpResult6 = onClose(tmp2[23]);
+      const stateFromStores1 = tmpResult6.useStateFromStores(tmp15, tmp16);
       if (cResult[4] !== isScreenReaderEnabled) {
         const fn2 = function z() {
-          let tmp = isScreenReaderEnabled;
-          if (isScreenReaderEnabled) {
-            tmp = null != ref.current;
-          }
+          const tmp = isScreenReaderEnabled && null != ref.current;
           if (tmp) {
             const obj2 = { ref, delay: 100 };
-            const result = setAccessibilityFocus.setAccessibilityFocus(obj2);
+            const obj = react_native;
+            const result = obj.setAccessibilityFocus(obj2);
           }
         };
         cResult[4] = isScreenReaderEnabled;
         cResult[5] = fn2;
-        let tmp21 = fn2;
+        tmp21 = fn2;
       } else {
         tmp21 = cResult[5];
       }
       if (cResult[6] === stateFromStores) {
+        let tmp22;
         if (cResult[7] === isScreenReaderEnabled) {
-          let tmp22 = cResult[8];
+          tmp22 = cResult[8];
         }
         const effect = obj4.useEffect(tmp21, tmp22);
         const _Symbol = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
           class M {
             constructor() {
-              return closure_1_12.getInviteSuggestionRows();
+              return inviteSuggestionRows.getInviteSuggestionRows();
             }
           }
           cResult[9] = M;
         } else {
           class M {
             constructor() {
-              return closure_1_12.getInviteSuggestionRows();
+              return inviteSuggestionRows.getInviteSuggestionRows();
             }
           }
         }
         const first1 = tmp8(obj4.useState(M), 1)[0];
         class P {
           constructor() {
-            obj = closure_10;
-            inviteSettings = closure_10.getInviteSettings();
-            channelId = undefined;
+            const inviteSettings = CreateInviteModalStore.getInviteSettings();
+            let channelId;
             if (inviteSettings != null) {
               channelId = inviteSettings.channelId;
             }
             if (null != channelId) {
-              tmp7 = closure_9;
-              return closure_9.getChannel(channelId);
+              return channel.getChannel(channelId);
             } else {
-              guildId = obj.getGuildId();
+              const guildId = CreateInviteModalStore.getGuildId();
               defaultChannel = null;
               if (null != guildId) {
-                tmp5 = closure_1_11;
-                tmp6 = closure_1_17;
-                flag = true;
-                defaultChannel = closure_1_11.getDefaultChannel(guildId, true, closure_1_17.CREATE_INSTANT_INVITE);
+                defaultChannel = defaultChannel.getDefaultChannel(guildId, true, constants4.CREATE_INSTANT_INVITE);
               }
               return defaultChannel;
             }
@@ -452,13 +469,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[10] !== stateFromStores1) {
           class Y {
             constructor() {
-              obj = closure_0(closure_2[25]);
-              obj1 = { omitUserIds: null, channel: null };
-              set = new Set();
-              obj1.omitUserIds = set;
-              obj1.channel = closure_8;
-              inviteSuggestions = obj.loadInviteSuggestions(obj1);
-              return;
+              const obj = { omitUserIds: new Set(), channel: stateFromStores1 };
+              const loadInviteSuggestions = InviteSuggestionsActionCreators.loadInviteSuggestions;
+              InviteSuggestionsActionCreators;
+              new Set();
+              const inviteSuggestions = loadInviteSuggestions(obj);
             }
           }
           cResult[10] = stateFromStores1;
@@ -466,13 +481,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class Y {
             constructor() {
-              obj = closure_0(closure_2[25]);
-              obj1 = { omitUserIds: null, channel: null };
-              set = new Set();
-              obj1.omitUserIds = set;
-              obj1.channel = closure_8;
-              inviteSuggestions = obj.loadInviteSuggestions(obj1);
-              return;
+              const obj = { omitUserIds: new Set(), channel: stateFromStores1 };
+              const loadInviteSuggestions = InviteSuggestionsActionCreators.loadInviteSuggestions;
+              InviteSuggestionsActionCreators;
+              new Set();
+              const inviteSuggestions = loadInviteSuggestions(obj);
             }
           }
         }
@@ -480,33 +493,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[12] === tmp26) {
           class Y {
             constructor() {
-              obj = closure_0(closure_2[25]);
-              obj1 = { omitUserIds: null, channel: null };
-              set = new Set();
-              obj1.omitUserIds = set;
-              obj1.channel = closure_8;
-              inviteSuggestions = obj.loadInviteSuggestions(obj1);
-              return;
+              const obj = { omitUserIds: new Set(), channel: stateFromStores1 };
+              const loadInviteSuggestions = InviteSuggestionsActionCreators.loadInviteSuggestions;
+              InviteSuggestionsActionCreators;
+              new Set();
+              const inviteSuggestions = loadInviteSuggestions(obj);
             }
           }
           const effect1 = obj4.useEffect(K, tmp31);
           if (cResult[16] === first) {
             class Y {
               constructor() {
-                obj = closure_0(closure_2[25]);
-                obj1 = { omitUserIds: null, channel: null };
-                set = new Set();
-                obj1.omitUserIds = set;
-                obj1.channel = closure_8;
-                inviteSuggestions = obj.loadInviteSuggestions(obj1);
-                return;
+                const obj = { omitUserIds: new Set(), channel: stateFromStores1 };
+                const loadInviteSuggestions = InviteSuggestionsActionCreators.loadInviteSuggestions;
+                InviteSuggestionsActionCreators;
+                new Set();
+                const inviteSuggestions = loadInviteSuggestions(obj);
               }
             }
           }
           class X {
             constructor() {
               tmp = closure_2;
-              obj = closure_0(closure_2[27]);
+              setOptions = closure_2.setOptions;
+              tmp2 = closure_0(closure_2[27]);
+              getHeaderTextButton = tmp2.getHeaderTextButton;
               intl = closure_0(closure_2[18]).intl;
               string = intl.string;
               t = closure_0(closure_2[18]).t;
@@ -515,47 +526,46 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 stringResult = string(t["5Wxrcd"]);
               }
-              obj1 = {
-                headerRight: obj.getHeaderTextButton(stringResult, () => {
+              obj = {
+                headerRight: getHeaderTextButton(stringResult, () => {
                   const AccessibilityAnnouncer = onClose(navigation[28]).AccessibilityAnnouncer;
+                  const announce = AccessibilityAnnouncer.announce;
                   const intl = onClose(navigation[18]).intl;
-                  AccessibilityAnnouncer.announce(intl.string(onClose(navigation[18]).t["FY/yLY"]));
+                  announce(intl.string(onClose(navigation[18]).t["FY/yLY"]));
                   closure_1_0();
-                  closure_1(navigation[14]).track(constants2.USER_FLOW_TRANSITION, {
+                  const tmp3 = !first;
+                  const obj = closure_1(navigation[14]);
+                  const obj2 = {
                     flow_type: constants3.GUILD_CREATE_MODAL,
                     from_step: constants.GUILD_INVITE,
                     to_step: "modal_closed",
-                    skip: !first,
-                  });
+                    skip: tmp3,
+                  };
+                  obj.track(constants2.USER_FLOW_TRANSITION, obj2);
                 }),
                 headerLeft() {
                   return null;
                 },
               };
-              setOptionsResult = closure_2.setOptions(obj1);
+              setOptionsResult = setOptions(obj);
               return;
             }
           }
           const items2 = [navigation, onClose];
           class P {
             constructor() {
-              obj = closure_10;
-              inviteSettings = closure_10.getInviteSettings();
-              channelId = undefined;
+              const inviteSettings = CreateInviteModalStore.getInviteSettings();
+              let channelId;
               if (inviteSettings != null) {
                 channelId = inviteSettings.channelId;
               }
               if (null != channelId) {
-                tmp7 = closure_9;
-                return closure_9.getChannel(channelId);
+                return channel.getChannel(channelId);
               } else {
-                guildId = obj.getGuildId();
+                const guildId = CreateInviteModalStore.getGuildId();
                 defaultChannel = null;
                 if (null != guildId) {
-                  tmp5 = closure_1_11;
-                  tmp6 = closure_1_17;
-                  flag = true;
-                  defaultChannel = closure_1_11.getDefaultChannel(guildId, true, closure_1_17.CREATE_INSTANT_INVITE);
+                  defaultChannel = defaultChannel.getDefaultChannel(guildId, true, constants4.CREATE_INSTANT_INVITE);
                 }
                 return defaultChannel;
               }
@@ -566,15 +576,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[18] = onClose;
           class K {
             constructor() {
-              if (null != closure_7) {
-                tmp2 = closure_9;
-                if (null != closure_9[tmp.code]) {
-                  tmp3 = closure_6;
-                  flag = true;
-                  tmp4 = closure_6(true);
+              if (null != stateFromStores) {
+                if (null != channel[tmp.code]) {
+                  closure_6(true);
                 }
               }
-              return;
             }
           }
           cResult[19] = X;
@@ -582,15 +588,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         class K {
           constructor() {
-            if (null != closure_7) {
-              tmp2 = closure_9;
-              if (null != closure_9[tmp.code]) {
-                tmp3 = closure_6;
-                flag = true;
-                tmp4 = closure_6(true);
+            if (null != stateFromStores) {
+              if (null != channel[tmp.code]) {
+                closure_6(true);
               }
             }
-            return;
           }
         }
         const items3 = [tmp26, stateFromStores];
@@ -605,32 +607,46 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = isScreenReaderEnabled;
       cResult[8] = items4;
       tmp22 = items4;
-      const tmpResult6 = onClose(navigation[23]);
     }
   : (closeOnEditInviteLink) => {
+      let Button;
+      let intl;
+      let intl2;
+      let intl3;
+      let intl4;
+      let inviteSuggestionRows;
+      let items10;
+      let items8;
+      let items9;
+      let obj15;
+      let obj17;
       let flag = closeOnEditInviteLink.closeOnEditInviteLink;
       if (flag === undefined) {
         flag = true;
       }
       const onClose = closeOnEditInviteLink.onClose;
-      let navigation;
+      navigation = undefined;
       let ref;
       channel = undefined;
-      closure_10 = undefined;
+      let closure_10;
       let tmp = closure_21();
-      navigation = flag(navigation[21]).useNavigation();
+      let tmp2 = flag;
+      let tmp3 = navigation;
       let obj = flag(navigation[21]);
-      const isScreenReaderEnabled = flag(navigation[22]).useIsScreenReaderEnabled();
+      navigation = obj.useNavigation();
+      let obj2 = flag(navigation[22]);
+      const isScreenReaderEnabled = obj2.useIsScreenReaderEnabled();
+      let obj3 = ref;
       ref = ref.useRef(null);
       const tmp7 = isScreenReaderEnabled(ref.useState(false), 2);
       const first = tmp7[0];
-      closure_6 = tmp7[1];
-      let obj2 = flag(navigation[22]);
-      const items = [closure_10];
-      const stateFromStores = flag(navigation[23]).useStateFromStores(items, () => closure_10.getInvite());
+      let closure_6 = tmp7[1];
       let obj4 = flag(navigation[23]);
+      const items = [closure_10];
+      const stateFromStores = obj4.useStateFromStores(items, () => closure_10.getInvite());
       const items1 = [closure_10, channel, GuildChannelStore];
-      const stateFromStores1 = flag(navigation[23]).useStateFromStores(items1, () => {
+      const obj5 = flag(navigation[23]);
+      const stateFromStores1 = obj5.useStateFromStores(items1, () => {
         const inviteSettings = closure_10.getInviteSettings();
         let channelId;
         if (inviteSettings != null) {
@@ -649,13 +665,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       const items2 = [isScreenReaderEnabled, stateFromStores];
       const effect = ref.useEffect(() => {
-        let tmp = isScreenReaderEnabled;
-        if (isScreenReaderEnabled) {
-          tmp = null != ref.current;
-        }
+        const tmp = isScreenReaderEnabled && null != ref.current;
         if (tmp) {
           const obj2 = { ref, delay: 100 };
-          const result = setAccessibilityFocus.setAccessibilityFocus(obj2);
+          const obj = react_native;
+          const result = obj.setAccessibilityFocus(obj2);
         }
       }, items2);
       const first1 = isScreenReaderEnabled(
@@ -665,11 +679,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp12 = stateFromStores1();
       channel = tmp12;
       onClose(navigation[26])(() => {
-        const obj2 = { omitUserIds: null, channel: null };
-        const obj = InviteSuggestionsActionCreators;
-        obj2.omitUserIds = new Set();
-        obj2.channel = stateFromStores1;
-        const inviteSuggestions = obj.loadInviteSuggestions(obj2);
+        const obj = { omitUserIds: new Set(), channel: stateFromStores1 };
+        const loadInviteSuggestions = InviteSuggestionsActionCreators.loadInviteSuggestions;
+        InviteSuggestionsActionCreators;
+        new Set();
+        const inviteSuggestions = loadInviteSuggestions(obj);
       });
       const items3 = [tmp12, stateFromStores];
       const effect1 = ref.useEffect(() => {
@@ -681,146 +695,138 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items3);
       const items4 = [navigation, onClose, first];
       const layoutEffect = ref.useLayoutEffect(() => {
-        let intl = util.intl;
+        let stringResult;
+        const setOptions = navigation.setOptions;
+        const getHeaderTextButton = NavigatorHeader.getHeaderTextButton;
+        let intl = intl5.intl;
         const string = intl.string;
-        const t = util.t;
+        const t = intl5.t;
         if (first) {
-          let stringResult = string(t.i4jeWR);
+          stringResult = string(t.i4jeWR);
         } else {
           stringResult = string(t["5Wxrcd"]);
         }
-        navigation.setOptions({
-          headerRight: NavigatorHeader.getHeaderTextButton(stringResult, () => {
+        let obj = {
+          headerRight: getHeaderTextButton(stringResult, () => {
             const AccessibilityAnnouncer = flag(navigation[28]).AccessibilityAnnouncer;
+            const announce = AccessibilityAnnouncer.announce;
             const intl = flag(navigation[18]).intl;
-            AccessibilityAnnouncer.announce(intl.string(flag(navigation[18]).t["FY/yLY"]));
+            announce(intl.string(flag(navigation[18]).t["FY/yLY"]));
             closure_1_1();
-            onClose(navigation[14]).track(constants2.USER_FLOW_TRANSITION, {
+            const tmp3 = !first;
+            const obj = onClose(navigation[14]);
+            const obj2 = {
               flow_type: constants3.GUILD_CREATE_MODAL,
               from_step: constants.GUILD_INVITE,
               to_step: "modal_closed",
-              skip: !first,
-            });
-          }),
-          headerLeft() {
-            return null;
-          },
-        });
-        const obj2 = {
-          headerRight: NavigatorHeader.getHeaderTextButton(stringResult, () => {
-            const AccessibilityAnnouncer = flag(navigation[28]).AccessibilityAnnouncer;
-            const intl = flag(navigation[18]).intl;
-            AccessibilityAnnouncer.announce(intl.string(flag(navigation[18]).t["FY/yLY"]));
-            closure_1_1();
-            onClose(navigation[14]).track(constants2.USER_FLOW_TRANSITION, {
-              flow_type: constants3.GUILD_CREATE_MODAL,
-              from_step: constants.GUILD_INVITE,
-              to_step: "modal_closed",
-              skip: !first,
-            });
+              skip: tmp3,
+            };
+            obj.track(constants2.USER_FLOW_TRANSITION, obj2);
           }),
           headerLeft() {
             return null;
           },
         };
+        setOptions(obj);
       }, items4);
       let code;
-      const obj5 = flag(navigation[23]);
+      const tmp17 = onClose(navigation[29]);
       if (stateFromStores != null) {
         code = stateFromStores.code;
       }
-      const tmp17Result = onClose(navigation[29])(code);
+      const tmp17Result = tmp17(code);
       closure_10 = tmp17Result;
-      let tmp20 = null != first1;
-      if (tmp20) {
-        tmp20 = first1.length > 0;
-      }
       const items5 = [stateFromStores1];
       const items6 = [stateFromStores1, ,];
       let code1;
       const callback = obj3.useCallback(() => {
         if (null != stateFromStores1) {
-          const result = CreateGuildModalActionCreatorsDefault.openGuildInviteScreen(tmp);
+          const obj = CreateGuildModalActionCreatorsDefault;
+          const result = obj.openGuildInviteScreen(tmp);
         }
       }, items5);
+      const useCallback = obj3.useCallback;
       if (stateFromStores != null) {
         code1 = stateFromStores.code;
       }
       items6[1] = code1;
       items6[2] = tmp17Result;
       const items7 = [stateFromStores, stateFromStores1];
-      const callback1 = obj3.useCallback(() => {
+      const callback1 = useCallback(() => {
         if (null != stateFromStores1) {
           let code;
+          const handleOpenShareSheet = instant_invite_InstantInviteUtils.handleOpenShareSheet;
+          instant_invite_InstantInviteUtils;
           if (stateFromStores != null) {
             code = stateFromStores.code;
           }
-          const obj = instant_invite_InstantInviteUtils;
-          obj.handleOpenShareSheet(code, tmp, instant_invite_InstantInviteUtils.getShareMessage(closure_10));
-          closure_6(true);
           const tmp2Result = instant_invite_InstantInviteUtils;
+          handleOpenShareSheet(code, tmp, tmp2Result.getShareMessage(closure_10));
+          closure_6(true);
         }
       }, items6);
       if (null != stateFromStores) {
         if (null != stateFromStores1) {
           let tmp27 = tmp20;
-          if (tmp20) {
+          if (tmp27) {
             const obj6 = { invite: stateFromStores, suggestions: first1, openInviteSheet: tmp24 };
             tmp27 = closure_19(closure_23, obj6);
           }
-          const rect = { top: true, left: true, right: true, style: tmp.container, children: null };
+          const rect = { top: true, left: true, right: true, style: tmp.container, children: items8 };
+          const SafeAreaPaddingView = tmp2(tmp3[40]).SafeAreaPaddingView;
           const obj7 = {
             ref,
             style: tmp.header,
             accessibilityRole: "header",
             variant: "heading-xl/extrabold",
             color: "mobile-text-heading-primary",
-            children: null,
+            children: intl.string(tmp2(tmp3[18]).t.OZ1qhO),
           };
-          let intl = tmp2(tmp3[18]).intl;
-          obj7.children = intl.string(tmp2(tmp3[18]).t.OZ1qhO);
-          const items8 = [closure_19(tmp2(tmp3[33]).Text, obj7), , , ,];
-          const obj8 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-          const intl2 = tmp2(tmp3[18]).intl;
-          obj8.children = intl2.string(tmp2(tmp3[18]).t.eU2ZaK);
-          items8[1] = closure_19(tmp2(tmp3[33]).Text, obj8);
+          const Text = tmp2(tmp3[33]).Text;
+          intl = tmp2(tmp3[18]).intl;
+          items8 = [closure_19(Text, obj7), , , ,];
+          const obj8 = {
+            style: tmp.description,
+            variant: "text-sm/medium",
+            color: "text-default",
+            children: intl2.string(tmp2(tmp3[18]).t.eU2ZaK),
+          };
+          const Text2 = tmp2(tmp3[33]).Text;
+          intl2 = tmp2(tmp3[18]).intl;
+          items8[1] = closure_19(Text2, obj8);
           let tmp29Result = !tmp20;
-          if (!tmp20) {
-            const obj9 = { source: tmp13(tmp3[34]), resizeMode: "contain", style: tmp.headerImage };
+          if (tmp29Result) {
+            const obj9 = { source: onClose(tmp3[34]), resizeMode: "contain", style: tmp.headerImage };
             tmp29Result = closure_19(first, obj9);
           }
           items8[2] = tmp29Result;
-          const obj10 = { style: tmp.linkContainer, children: null };
+          const obj10 = { style: tmp.linkContainer, children: items10 };
           const obj11 = {
             style: tmp.linkButton,
             accessibilityRole: "button",
-            accessibilityLabel: null,
-            onPress: null,
-            children: null,
+            accessibilityLabel: intl3.string(tmp2(tmp3[18]).t["3XVNyt"]),
+            onPress() {
+              const obj = instant_invite_InstantInviteUtils;
+              obj.handleCopy(stateFromStores.code, stateFromStores1, constants.GUILD_CREATE);
+              closure_6(true);
+            },
+            children: items9,
           };
-          const intl3 = tmp2(tmp3[18]).intl;
-          obj11.accessibilityLabel = intl3.string(tmp2(tmp3[18]).t["3XVNyt"]);
-          obj11.onPress = function onPress() {
-            instant_invite_InstantInviteUtils.handleCopy(
-              stateFromStores.code,
-              stateFromStores1,
-              constants2.GUILD_CREATE,
-            );
-            closure_6(true);
-          };
+          const PressableOpacity = tmp2(tmp3[37]).PressableOpacity;
+          intl3 = tmp2(tmp3[18]).intl;
           const obj12 = {
             variant: "text-sm/medium",
             color: "mobile-text-heading-primary",
             style: { flexShrink: 1 },
             children: tmp17Result,
           };
-          const items9 = [closure_19(tmp2(tmp3[33]).Text, obj12)];
-          const obj13 = { source: tmp13(tmp3[36]), style: tmp.linkButtonIcon };
-          items9[1] = closure_19(tmp2(tmp3[35]).Icon, obj13);
-          obj11.children = items9;
-          const items10 = [closure_20(tmp2(tmp3[37]).PressableOpacity, obj11), ,];
-          const obj14 = { style: tmp.inviteDetail, children: null };
-          const obj15 = {
+          items9 = [closure_19(tmp2(tmp3[33]).Text, obj12)];
+          const obj13 = { source: onClose(tmp3[36]), style: tmp.linkButtonIcon };
+          const Icon = tmp2(tmp3[35]).Icon;
+          items9[1] = closure_19(Icon, obj13);
+          items10 = [closure_20(PressableOpacity, obj11), ,];
+          const obj14 = { style: tmp.inviteDetail, children: closure_19(onClose(tmp3[38]), obj15) };
+          obj15 = {
             channel: stateFromStores1,
             canEditInvite: true,
             callbackActionSheet: callback,
@@ -831,21 +837,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             },
             source: constants2.GUILD_CREATE,
           };
-          obj14.children = closure_19(tmp13(tmp3[38]), obj15);
           items10[1] = closure_19(closure_6, obj14);
-          const obj16 = { style: tmp.shareButton, children: null };
-          const obj17 = { text: null, onPress: null };
-          const intl4 = tmp2(tmp3[18]).intl;
-          obj17.text = intl4.string(tmp2(tmp3[18]).t.Ej3B3Y);
-          obj17.onPress = callback1;
-          obj16.children = closure_19(tmp2(tmp3[39]).Button, obj17);
+          const obj16 = { style: tmp.shareButton, children: closure_19(Button, obj17) };
+          obj17 = { text: intl4.string(tmp2(tmp3[18]).t.Ej3B3Y), onPress: callback1 };
+          Button = tmp2(tmp3[39]).Button;
+          intl4 = tmp2(tmp3[18]).intl;
           items10[2] = closure_19(closure_6, obj16);
-          obj10.children = items10;
           items8[3] = closure_20(closure_6, obj10);
           items8[4] = tmp27;
-          rect.children = items8;
-          return closure_20(tmp2(tmp3[40]).SafeAreaPaddingView, rect);
+          return closure_20(SafeAreaPaddingView, rect);
         }
       }
       return null;
     };
+size = size_mod;
+let result = size.fileFinishedImporting("modules/create_guild/native/components/GuildInvite.tsx");
+
+export default tmp6;

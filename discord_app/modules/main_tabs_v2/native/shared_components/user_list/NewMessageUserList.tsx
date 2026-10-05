@@ -1,17 +1,30 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/NewMessageUserList.tsx
+import react_native from "../../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../../intl/index.native.tsx";
+import intl3 from "../../../../../intl/index.native.tsx";
 import UserUtilsDefault from "../../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
 import fuzzysearchDefault from "../../../../../../_runtime/05702_fuzzysearch.js";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../../_runtime/metro/00019__.js";
-import ChannelStore from "../../../../../stores/ChannelStore.tsx";
+import UserRowConstants from "UserRowConstants.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import ChannelStore_mod from "../../../../../stores/ChannelStore.tsx";
 import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+const require = globalThis.__r;
+let _require, dependencyMap, selectedUserIds, title;
+
+let c10;
+let closure_12;
+let obj2;
+let obj3;
+let unpackModuleId;
 function matchGroupDMRecipients(trimmed1, recipients) {
   const obj = recipients.recipients[Symbol.iterator]();
   while (obj !== undefined) {
@@ -57,7 +70,8 @@ function matchGroupDM(id, trimmed1) {
   if ("" === trimmed1) {
     return 0;
   } else {
-    const channelName = useChannelName.computeChannelName(id, UserStore, RelationshipStore);
+    const obj = useChannelName;
+    const channelName = obj.computeChannelName(id, UserStore, RelationshipStore);
     const toLocaleLowerCaseResult = channelName.toLocaleLowerCase();
     let num = 3;
     if (!toLocaleLowerCaseResult.startsWith(trimmed1)) {
@@ -92,44 +106,52 @@ function isMatchNewMessageUserListGroupDM(recipients, arg1, trimmed1) {
 function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
-const View = fn(17).View;
-const UserRowModes = fn(10592).UserRowModes;
-const jsxProd = fn(21);
-({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+const View = react_native.View;
+let ChannelStore = ChannelStore_mod;
+const UserRowModes = UserRowConstants.UserRowModes;
+({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = Fragment);
 let closure_13 = [];
-const createStyles = fn(4890);
-let obj2 = { searchBarRowContainer: { paddingTop: nativeDefault.space.PX_8 }, noResults: null };
-let obj3 = { paddingTop: nativeDefault.space.PX_8 };
-obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-let closure_14 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+let createStyles = createStyles_mod;
+let obj = { searchBarRowContainer: obj2, noResults: obj3 };
+obj2 = { paddingTop: nativeDefault.space.PX_8 };
+createStyles = createStyles.createStyles;
+obj3 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let closure_14 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1, arg2) => {
+      let closure_2;
+      let closure_3;
+      let first;
+      let mutablePrivateChannels;
       _require = arg0;
-      closure_1 = arg1;
+      let closure_1 = arg1;
       dependencyMap = arg2;
-      const cResult = require("c").c(6);
+      const obj = require("react");
+      const cResult = obj.c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
-      const obj = require("c");
-      _slicedToArray = _slicedToArray(noop.useState(first), 2)[1];
+      [, _slicedToArray] = react.useState(first);
       if (cResult[1] === arg2) {
         if (cResult[2] === arg1) {
+          let tmp5;
+          let tmp6;
           if (cResult[3] === arg0) {
-            let tmp5 = cResult[4];
-            let tmp6 = cResult[5];
+            tmp5 = cResult[4];
+            tmp6 = cResult[5];
           }
-          const effect = noop.useEffect(tmp5, tmp6);
+          const effect = react.useEffect(tmp5, tmp6);
           return tmp4;
         }
       }
       const fn = function f() {
-        if (closure_0) {
+        const tmp = closure_0;
+        if (tmp) {
           if ("" !== closure_2) {
             closure_0 = closure_2.toLocaleLowerCase();
             const _Object = Object;
@@ -141,12 +163,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             });
             const found1 = mapped.filter((item) => closure_1_3(item, 2)[1] > 0);
             const obj2 = closure_1(closure_2[15]);
-            closure_3(
-              closure_1(closure_2[15])
-                .sortBy(found1, (arg0) => -closure_1_3(arg0, 2)[1])
-                .map((item) => closure_1_3(item, 1)[0]),
-            );
-            const sortByResult = closure_1(closure_2[15]).sortBy(found1, (arg0) => -closure_1_3(arg0, 2)[1]);
+            const sortByResult = obj2.sortBy(found1, (arg0) => -closure_1_3(arg0, 2)[1]);
+            closure_3(sortByResult.map((item) => closure_1_3(item, 1)[0]));
           } else {
             closure_3(closure_1_13);
           }
@@ -162,17 +180,19 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items1;
       tmp6 = items1;
       tmp5 = fn;
-      const tmp3 = _slicedToArray(noop.useState(first), 2);
     }
   : (arg0, arg1, arg2) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      closure_2 = arg2;
-      const tmp = _slicedToArray(noop.useState([]), 2);
-      _slicedToArray = tmp[1];
+      let closure_3;
+      let first;
+      let mutablePrivateChannels;
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      let closure_2 = arg2;
+      [first, _slicedToArray] = react.useState([]);
       let items = [arg0, arg1, arg2];
-      const effect = noop.useEffect(() => {
-        if (closure_0) {
+      const effect = react.useEffect(() => {
+        const tmp = closure_0;
+        if (tmp) {
           if ("" !== closure_2) {
             closure_0 = closure_2.toLocaleLowerCase();
             const _Object = Object;
@@ -183,25 +203,23 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               return items;
             });
             const found1 = mapped.filter((item) => {
+              let tmp;
               [, tmp] = item;
               return tmp > 0;
             });
             const obj2 = closure_1(closure_2[15]);
-            closure_3(
-              closure_1(closure_2[15])
-                .sortBy(found1, (arg0) => {
-                  [, tmp] = arg0;
-                  return -tmp;
-                })
-                .map((item) => {
-                  [tmp] = item;
-                  return tmp;
-                }),
-            );
-            const sortByResult = closure_1(closure_2[15]).sortBy(found1, (arg0) => {
+            const sortByResult = obj2.sortBy(found1, (arg0) => {
+              let tmp;
               [, tmp] = arg0;
               return -tmp;
             });
+            closure_3(
+              sortByResult.map((item) => {
+                let tmp;
+                [tmp] = item;
+                return tmp;
+              }),
+            );
           } else {
             closure_3(closure_1_13);
           }
@@ -209,19 +227,40 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           closure_3(closure_1_13);
         }
       }, items);
-      return tmp[0];
+      return first;
     };
-let closure_19 = tmp3;
-ReactCompilerGating = fn(558);
-let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/main_tabs_v2/native/shared_components/user_list/NewMessageUserList.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_19 = tmp4;
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (selectedUserIds) => {
-      const cResult = selectedUserIds(onSelectUser[14]).c(75);
+      let actions;
+      let afterSearchContent;
+      let autoFocusSearch;
+      let closure_6;
+      let defaultNoResultsFound;
+      let forceSearchResults;
+      let noResultActions;
+      let onForceSearchResults;
+      let onSearchFocus;
+      let onSelectUser;
+      let overrideResults;
+      let ref;
+      let rowMode;
+      let str;
+      let tagListInputRef;
+      let tmp19;
+      let withAffinitySuggestions;
+      let withFriendRequests;
+      let withFriendRequestsIncoming;
+      let withFriendRequestsOutgoing;
+      let withFriendSuggestions;
+      let withFriends;
+      let withGDMNames;
+      let withGameFriends;
+      let withGuildMembers;
+      let tmp3 = onSelectUser;
+      let obj = selectedUserIds(onSelectUser[14]);
+      const cResult = obj.c(75);
       selectedUserIds = selectedUserIds.selectedUserIds;
       const disabledUserIds = selectedUserIds.disabledUserIds;
       onSelectUser = selectedUserIds.onSelectUser;
@@ -259,10 +298,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (undefined === rowMode) {
         rowMode = UserRowModes.ACTIONS;
       }
+      let tmp8 = undefined === withAffinitySuggestions || withAffinitySuggestions;
+      const tmp15 = undefined !== withGDMNames && withGDMNames;
       closure_14();
-      let obj = selectedUserIds(onSelectUser[14]);
-      const tmp14 = undefined !== withGDMNames && withGDMNames;
       [str, View] = onQueryChanged(rowMode.useState(""), 2);
+      onQueryChanged(rowMode.useState(""), 2);
       if (cResult[2] !== onQueryChanged) {
         const fn = function z(arg0) {
           View(arg0);
@@ -277,866 +317,580 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const trimmed = str.trim();
         cResult[4] = str;
         cResult[5] = trimmed;
-        let tmp18 = trimmed;
+        tmp19 = trimmed;
       } else {
-        tmp18 = cResult[5];
+        tmp19 = cResult[5];
       }
-      if (cResult[6] === tmp18) {
-        if (cResult[7] === tmp7) {
-          if (cResult[8] === tmp10) {
-            if (cResult[9] === tmp11) {
-              if (cResult[10] === tmp12) {
-                if (cResult[11] === tmp13) {
-                  if (cResult[12] === tmp8) {
-                    if (cResult[13] === tmp9) {
-                      if (cResult[14] === tmp6) {
-                        let tmp20 = cResult[15];
+      if (cResult[6] === tmp19) {
+        if (cResult[7] === tmp8) {
+          if (cResult[8] === (undefined !== withFriendRequests && withFriendRequests)) {
+            if (cResult[9] === (undefined !== withFriendRequestsIncoming && withFriendRequestsIncoming)) {
+              if (cResult[10] === (undefined !== withFriendRequestsOutgoing && withFriendRequestsOutgoing)) {
+                if (cResult[11] === (undefined !== withFriendSuggestions && withFriendSuggestions)) {
+                  if (cResult[12] === (undefined === withFriends || withFriends)) {
+                    if (cResult[13] === (undefined === withGameFriends || withGameFriends)) {
+                      let tmp21;
+                      if (cResult[14] === (undefined !== withGuildMembers && withGuildMembers)) {
+                        tmp21 = cResult[15];
                       }
-                      const arr2 = disabledUserIds(tmp2[16])(tmp20);
-                      const arr3 = closure_19(tmp14, selectedUserIds, tmp18);
+                      const arr2 = disabledUserIds(tmp3[16])(tmp21);
+                      const arr3 = closure_19(tmp15, selectedUserIds, tmp19);
                       if (cResult[16] === arr3) {
+                        let tmp24;
                         if (cResult[17] === arr2) {
-                          if (cResult[22] !== cResult[18]) {
-                            const _Symbol3 = Symbol;
-                            if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
-                              class Me {
-                                constructor(arg0) {
-                                  return selectedUserIds.items.length;
-                                }
-                              }
-                              cResult[24] = Me;
-                            } else {
-                              class Me {
-                                constructor(arg0) {
-                                  return selectedUserIds.items.length;
-                                }
+                          tmp24 = cResult[18];
+                        }
+                        ChannelStore = tmp24;
+                        if (cResult[22] !== tmp24) {
+                          const _Symbol3 = Symbol;
+                          if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
+                            class Me {
+                              constructor(items) {
+                                return items.items.length;
                               }
                             }
-                            const mapped = arr4.map(Me);
-                            cResult[22] = arr4;
-                            cResult[23] = mapped;
+                            cResult[24] = Me;
                           } else {
                             class Me {
-                              constructor(arg0) {
-                                return selectedUserIds.items.length;
+                              constructor(items) {
+                                return items.items.length;
                               }
                             }
-                            if (cResult[25] !== arr4) {
-                              class Me {
-                                constructor(arg0) {
-                                  return selectedUserIds.items.length;
-                                }
-                              }
-                              cResult[25] = arr4;
-                              class Le {
-                                constructor(arg0, arg1) {
-                                  tmp = closure_6[selectedUserIds].items[arg1];
-                                  type = tmp.type;
-                                  tmp2 = 0 === arg1;
-                                  tmp3 = arg1 === closure_6[selectedUserIds].items.length - 1;
-                                  if ("UserSearchItem" === type) {
-                                    data = tmp.data;
-                                    ({ user, firstMatch } = data);
-                                    tmp5 = selectedUserIds;
-                                    hasItem = selectedUserIds.includes(user.id);
-                                    obj1 = {
-                                      type: null,
-                                      user: null,
-                                      nickname: null,
-                                      onPress: null,
-                                      disabled: null,
-                                      selected: null,
-                                      mode: null,
-                                      subLabel: null,
-                                      arrow: null,
-                                      start: null,
-                                      end: null,
-                                    };
-                                    obj1.type = data.type;
-                                    obj1.user = user;
-                                    tmp7 = null;
-                                    tmp8 = undefined;
-                                    if (null != firstMatch) {
-                                      if (user.username !== firstMatch) {
-                                        tmp8 = firstMatch;
-                                      }
-                                    }
-                                    obj1.nickname = tmp8;
-                                    tmp9 = onSelectUser;
-                                    obj1.onPress = onSelectUser;
-                                    obj4 = disabledUserIds;
-                                    flag = undefined;
-                                    if (disabledUserIds != null) {
-                                      flag = obj4.includes(user.id);
-                                    }
-                                    if (flag == null) {
-                                      flag = false;
-                                    }
-                                    obj1.disabled = flag;
-                                    obj1.selected = hasItem;
-                                    obj5 = closure_7;
-                                    if (closure_7.isFriend(user.id)) {
-                                      if (hasItem) {
-                                        tmp10 = UserRowModes;
-                                        TOGGLE = UserRowModes.TOGGLE;
-                                      }
-                                      element = { type: "user", props: null };
-                                      obj1.mode = TOGGLE;
-                                      tmp11 = jsx;
-                                      tmp12 = closure_0;
-                                      tmp13 = closure_2;
-                                      obj9 = { variant: "text-xs/medium", color: "text-muted", children: null };
-                                      tmp14 = closure_1;
-                                      obj8 = closure_1(closure_2[11]);
-                                      obj9.children = obj8.getUserTag(user);
-                                      obj1.subLabel = jsx(closure_0(closure_2[18]).Text, obj9);
-                                      obj1.arrow = !obj5.isFriend(user.id);
-                                      obj1.start = tmp2;
-                                      obj1.end = tmp3;
-                                      element.props = obj1;
-                                      return element;
-                                    }
-                                    TOGGLE = ACTIONS;
-                                  } else {
-                                    str = "GroupDMChannelRecord";
-                                    if ("GroupDMChannelRecord" === type) {
-                                      element1 = { type: "gdm", props: null };
-                                      obj10 = { channel: null, onPress: null, arrow: true, start: null, end: null };
-                                      obj10.channel = tmp.data;
-                                      tmp4 = onSelectUser;
-                                      obj10.onPress = onSelectUser;
-                                      obj10.start = tmp2;
-                                      obj10.end = tmp3;
-                                      element1.props = obj10;
-                                      return element1;
-                                    } else {
-                                      return tmp;
-                                    }
+                          }
+                          class Le {
+                            constructor(arg0, arg1) {
+                              let firstMatch;
+                              let flag;
+                              let obj8;
+                              let tmp8;
+                              let user;
+                              const type = tmp.type;
+                              const tmp3 = arg1 === closure_6[arg0].items.length - 1;
+                              if ("UserSearchItem" === type) {
+                                const data = tmp.data;
+                                ({ user, firstMatch } = data);
+                                const type2 = data.type;
+                                const hasItem = selectedUserIds.includes(user.id);
+                                const obj = {
+                                  type: type2,
+                                  user,
+                                  nickname: tmp8,
+                                  onPress: onSelectUser,
+                                  disabled: flag,
+                                  selected: hasItem,
+                                  mode: null,
+                                  subLabel: null,
+                                  arrow: null,
+                                  start: null,
+                                  end: null,
+                                };
+                                tmp8 = undefined;
+                                if (null != firstMatch) {
+                                  if (user.username !== firstMatch) {
+                                    tmp8 = firstMatch;
                                   }
-                                  return;
                                 }
-                              }
-                              cResult[26] = tmp43;
-                            } else {
-                              class Me {
-                                constructor(arg0) {
-                                  return selectedUserIds.items.length;
+                                flag = undefined;
+                                if (disabledUserIds != null) {
+                                  flag = disabledUserIds.includes(user.id);
                                 }
-                              }
-                            }
-                            if (cResult[27] === arr4) {
-                              class Me {
-                                constructor(arg0) {
-                                  return selectedUserIds.items.length;
+                                if (flag == null) {
+                                  flag = false;
                                 }
-                              }
-                            }
-                            class Le {
-                              constructor(arg0, arg1) {
-                                tmp = closure_6[selectedUserIds].items[arg1];
-                                type = tmp.type;
-                                tmp2 = 0 === arg1;
-                                tmp3 = arg1 === closure_6[selectedUserIds].items.length - 1;
-                                if ("UserSearchItem" === type) {
-                                  data = tmp.data;
-                                  ({ user, firstMatch } = data);
-                                  tmp5 = selectedUserIds;
-                                  hasItem = selectedUserIds.includes(user.id);
-                                  obj1 = {
-                                    type: null,
-                                    user: null,
-                                    nickname: null,
-                                    onPress: null,
-                                    disabled: null,
-                                    selected: null,
-                                    mode: null,
-                                    subLabel: null,
-                                    arrow: null,
-                                    start: null,
-                                    end: null,
+                                if (RelationshipStore.isFriend(user.id)) {
+                                  let TOGGLE;
+                                  if (hasItem) {
+                                    TOGGLE = UserRowModes.TOGGLE;
+                                  }
+                                  const element = { type: "user", props: obj };
+                                  obj.mode = TOGGLE;
+                                  const obj2 = {
+                                    variant: "text-xs/medium",
+                                    color: "text-muted",
+                                    children: obj8.getUserTag(user),
                                   };
-                                  obj1.type = data.type;
-                                  obj1.user = user;
-                                  tmp7 = null;
-                                  tmp8 = undefined;
-                                  if (null != firstMatch) {
-                                    if (user.username !== firstMatch) {
-                                      tmp8 = firstMatch;
-                                    }
-                                  }
-                                  obj1.nickname = tmp8;
-                                  tmp9 = onSelectUser;
-                                  obj1.onPress = onSelectUser;
-                                  obj4 = disabledUserIds;
-                                  flag = undefined;
-                                  if (disabledUserIds != null) {
-                                    flag = obj4.includes(user.id);
-                                  }
-                                  if (flag == null) {
-                                    flag = false;
-                                  }
-                                  obj1.disabled = flag;
-                                  obj1.selected = hasItem;
-                                  obj5 = closure_7;
-                                  if (closure_7.isFriend(user.id)) {
-                                    if (hasItem) {
-                                      tmp10 = UserRowModes;
-                                      TOGGLE = UserRowModes.TOGGLE;
-                                    }
-                                    element = { type: "user", props: null };
-                                    obj1.mode = TOGGLE;
-                                    tmp11 = jsx;
-                                    tmp12 = closure_0;
-                                    tmp13 = closure_2;
-                                    obj9 = { variant: "text-xs/medium", color: "text-muted", children: null };
-                                    tmp14 = closure_1;
-                                    obj8 = closure_1(closure_2[11]);
-                                    obj9.children = obj8.getUserTag(user);
-                                    obj1.subLabel = jsx(closure_0(closure_2[18]).Text, obj9);
-                                    obj1.arrow = !obj5.isFriend(user.id);
-                                    obj1.start = tmp2;
-                                    obj1.end = tmp3;
-                                    element.props = obj1;
-                                    return element;
-                                  }
-                                  TOGGLE = ACTIONS;
-                                } else {
-                                  str = "GroupDMChannelRecord";
-                                  if ("GroupDMChannelRecord" === type) {
-                                    element1 = { type: "gdm", props: null };
-                                    obj10 = { channel: null, onPress: null, arrow: true, start: null, end: null };
-                                    obj10.channel = tmp.data;
-                                    tmp4 = onSelectUser;
-                                    obj10.onPress = onSelectUser;
-                                    obj10.start = tmp2;
-                                    obj10.end = tmp3;
-                                    element1.props = obj10;
-                                    return element1;
-                                  } else {
-                                    return tmp;
-                                  }
+                                  const Text = Text_Text.Text;
+                                  obj8 = UserUtilsDefault;
+                                  obj.subLabel = authStore(Text, obj2);
+                                  obj.arrow = !RelationshipStore.isFriend(user.id);
+                                  obj.start = 0 === arg1;
+                                  obj.end = tmp3;
+                                  return element;
                                 }
-                                return;
+                                TOGGLE = rowMode;
+                              } else if ("GroupDMChannelRecord" === type) {
+                                const element1 = { type: "gdm", props: obj3 };
+                                return element1;
+                              } else {
+                                return closure_6[arg0].items[arg1];
                               }
                             }
-                            cResult[27] = arr4;
-                            cResult[28] = disabledUserIds;
-                            cResult[29] = onSelectUser;
-                            cResult[30] = rowMode;
-                            cResult[31] = selectedUserIds;
-                            cResult[32] = Le;
+                          }
+                          cResult[22] = tmp24;
+                          cResult[23] = tmp45;
+                        } else {
+                          class Me {
+                            constructor(items) {
+                              return items.items.length;
+                            }
                           }
                         }
+                        if (cResult[25] !== tmp24) {
+                          class Me {
+                            constructor(items) {
+                              return items.items.length;
+                            }
+                          }
+                          cResult[25] = tmp24;
+                          cResult[26] = tmp46;
+                          class Le {
+                            constructor(arg0, arg1) {
+                              let firstMatch;
+                              let flag;
+                              let obj8;
+                              let tmp8;
+                              let user;
+                              const type = tmp.type;
+                              const tmp3 = arg1 === closure_6[arg0].items.length - 1;
+                              if ("UserSearchItem" === type) {
+                                const data = tmp.data;
+                                ({ user, firstMatch } = data);
+                                const type2 = data.type;
+                                const hasItem = selectedUserIds.includes(user.id);
+                                const obj = {
+                                  type: type2,
+                                  user,
+                                  nickname: tmp8,
+                                  onPress: onSelectUser,
+                                  disabled: flag,
+                                  selected: hasItem,
+                                  mode: null,
+                                  subLabel: null,
+                                  arrow: null,
+                                  start: null,
+                                  end: null,
+                                };
+                                tmp8 = undefined;
+                                if (null != firstMatch) {
+                                  if (user.username !== firstMatch) {
+                                    tmp8 = firstMatch;
+                                  }
+                                }
+                                flag = undefined;
+                                if (disabledUserIds != null) {
+                                  flag = disabledUserIds.includes(user.id);
+                                }
+                                if (flag == null) {
+                                  flag = false;
+                                }
+                                if (RelationshipStore.isFriend(user.id)) {
+                                  let TOGGLE;
+                                  if (hasItem) {
+                                    TOGGLE = UserRowModes.TOGGLE;
+                                  }
+                                  const element = { type: "user", props: obj };
+                                  obj.mode = TOGGLE;
+                                  const obj2 = {
+                                    variant: "text-xs/medium",
+                                    color: "text-muted",
+                                    children: obj8.getUserTag(user),
+                                  };
+                                  const Text = Text_Text.Text;
+                                  obj8 = UserUtilsDefault;
+                                  obj.subLabel = authStore(Text, obj2);
+                                  obj.arrow = !RelationshipStore.isFriend(user.id);
+                                  obj.start = 0 === arg1;
+                                  obj.end = tmp3;
+                                  return element;
+                                }
+                                TOGGLE = rowMode;
+                              } else if ("GroupDMChannelRecord" === type) {
+                                const element1 = { type: "gdm", props: obj3 };
+                                return element1;
+                              } else {
+                                return closure_6[arg0].items[arg1];
+                              }
+                            }
+                          }
+                        } else {
+                          class Me {
+                            constructor(items) {
+                              return items.items.length;
+                            }
+                          }
+                        }
+                        if (cResult[27] === tmp24) {
+                          class Me {
+                            constructor(items) {
+                              return items.items.length;
+                            }
+                          }
+                        }
+                        class Le {
+                          constructor(arg0, arg1) {
+                            let firstMatch;
+                            let flag;
+                            let obj8;
+                            let tmp8;
+                            let user;
+                            const type = tmp.type;
+                            const tmp3 = arg1 === closure_6[arg0].items.length - 1;
+                            if ("UserSearchItem" === type) {
+                              const data = tmp.data;
+                              ({ user, firstMatch } = data);
+                              const type2 = data.type;
+                              const hasItem = selectedUserIds.includes(user.id);
+                              const obj = {
+                                type: type2,
+                                user,
+                                nickname: tmp8,
+                                onPress: onSelectUser,
+                                disabled: flag,
+                                selected: hasItem,
+                                mode: null,
+                                subLabel: null,
+                                arrow: null,
+                                start: null,
+                                end: null,
+                              };
+                              tmp8 = undefined;
+                              if (null != firstMatch) {
+                                if (user.username !== firstMatch) {
+                                  tmp8 = firstMatch;
+                                }
+                              }
+                              flag = undefined;
+                              if (disabledUserIds != null) {
+                                flag = disabledUserIds.includes(user.id);
+                              }
+                              if (flag == null) {
+                                flag = false;
+                              }
+                              if (RelationshipStore.isFriend(user.id)) {
+                                let TOGGLE;
+                                if (hasItem) {
+                                  TOGGLE = UserRowModes.TOGGLE;
+                                }
+                                const element = { type: "user", props: obj };
+                                obj.mode = TOGGLE;
+                                const obj2 = {
+                                  variant: "text-xs/medium",
+                                  color: "text-muted",
+                                  children: obj8.getUserTag(user),
+                                };
+                                const Text = Text_Text.Text;
+                                obj8 = UserUtilsDefault;
+                                obj.subLabel = authStore(Text, obj2);
+                                obj.arrow = !RelationshipStore.isFriend(user.id);
+                                obj.start = 0 === arg1;
+                                obj.end = tmp3;
+                                return element;
+                              }
+                              TOGGLE = rowMode;
+                            } else if ("GroupDMChannelRecord" === type) {
+                              const element1 = { type: "gdm", props: obj3 };
+                              return element1;
+                            } else {
+                              return closure_6[arg0].items[arg1];
+                            }
+                          }
+                        }
+                        cResult[27] = tmp24;
+                        cResult[28] = disabledUserIds;
+                        cResult[29] = onSelectUser;
+                        cResult[30] = rowMode;
+                        cResult[31] = selectedUserIds;
+                        cResult[32] = Le;
                       }
-                      let _Symbol = Symbol;
+                      const _Symbol = Symbol;
                       if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
                         class Me {
-                          constructor(arg0) {
-                            return selectedUserIds.items.length;
+                          constructor(items) {
+                            return items.items.length;
                           }
                         }
-                        cResult[19] = tmp25;
-                        class Le {
-                          constructor(arg0, arg1) {
-                            tmp = closure_6[selectedUserIds].items[arg1];
-                            type = tmp.type;
-                            tmp2 = 0 === arg1;
-                            tmp3 = arg1 === closure_6[selectedUserIds].items.length - 1;
-                            if ("UserSearchItem" === type) {
-                              data = tmp.data;
-                              ({ user, firstMatch } = data);
-                              tmp5 = selectedUserIds;
-                              hasItem = selectedUserIds.includes(user.id);
-                              obj1 = {
-                                type: null,
-                                user: null,
-                                nickname: null,
-                                onPress: null,
-                                disabled: null,
-                                selected: null,
-                                mode: null,
-                                subLabel: null,
-                                arrow: null,
-                                start: null,
-                                end: null,
-                              };
-                              obj1.type = data.type;
-                              obj1.user = user;
-                              tmp7 = null;
-                              tmp8 = undefined;
-                              if (null != firstMatch) {
-                                if (user.username !== firstMatch) {
-                                  tmp8 = firstMatch;
-                                }
-                              }
-                              obj1.nickname = tmp8;
-                              tmp9 = onSelectUser;
-                              obj1.onPress = onSelectUser;
-                              obj4 = disabledUserIds;
-                              flag = undefined;
-                              if (disabledUserIds != null) {
-                                flag = obj4.includes(user.id);
-                              }
-                              if (flag == null) {
-                                flag = false;
-                              }
-                              obj1.disabled = flag;
-                              obj1.selected = hasItem;
-                              obj5 = closure_7;
-                              if (closure_7.isFriend(user.id)) {
-                                if (hasItem) {
-                                  tmp10 = UserRowModes;
-                                  TOGGLE = UserRowModes.TOGGLE;
-                                }
-                                element = { type: "user", props: null };
-                                obj1.mode = TOGGLE;
-                                tmp11 = jsx;
-                                tmp12 = closure_0;
-                                tmp13 = closure_2;
-                                obj9 = { variant: "text-xs/medium", color: "text-muted", children: null };
-                                tmp14 = closure_1;
-                                obj8 = closure_1(closure_2[11]);
-                                obj9.children = obj8.getUserTag(user);
-                                obj1.subLabel = jsx(closure_0(closure_2[18]).Text, obj9);
-                                obj1.arrow = !obj5.isFriend(user.id);
-                                obj1.start = tmp2;
-                                obj1.end = tmp3;
-                                element.props = obj1;
-                                return element;
-                              }
-                              TOGGLE = ACTIONS;
-                            } else {
-                              str = "GroupDMChannelRecord";
-                              if ("GroupDMChannelRecord" === type) {
-                                element1 = { type: "gdm", props: null };
-                                obj10 = { channel: null, onPress: null, arrow: true, start: null, end: null };
-                                obj10.channel = tmp.data;
-                                tmp4 = onSelectUser;
-                                obj10.onPress = onSelectUser;
-                                obj10.start = tmp2;
-                                obj10.end = tmp3;
-                                element1.props = obj10;
-                                return element1;
-                              } else {
-                                return tmp;
-                              }
-                            }
-                            return;
-                          }
-                        }
+                        cResult[19] = tmp27;
                       } else {
                         class Me {
-                          constructor(arg0) {
-                            return selectedUserIds.items.length;
+                          constructor(items) {
+                            return items.items.length;
                           }
                         }
                       }
-                      const mapped1 = arr2.map(tmp24);
-                      let slice = arr3.length;
-                      let tmp26 = mapped1;
-                      if (0 === slice) {
+                      const mapped = arr2.map(tmp27);
+                      let tmp28 = mapped;
+                      if (0 !== arr3.length) {
                         class Me {
-                          constructor(arg0) {
-                            return selectedUserIds.items.length;
-                          }
-                        }
-                        cResult[16] = arr3;
-                        class Le {
-                          constructor(arg0, arg1) {
-                            tmp = closure_6[selectedUserIds].items[arg1];
-                            type = tmp.type;
-                            tmp2 = 0 === arg1;
-                            tmp3 = arg1 === closure_6[selectedUserIds].items.length - 1;
-                            if ("UserSearchItem" === type) {
-                              data = tmp.data;
-                              ({ user, firstMatch } = data);
-                              tmp5 = selectedUserIds;
-                              hasItem = selectedUserIds.includes(user.id);
-                              obj1 = {
-                                type: null,
-                                user: null,
-                                nickname: null,
-                                onPress: null,
-                                disabled: null,
-                                selected: null,
-                                mode: null,
-                                subLabel: null,
-                                arrow: null,
-                                start: null,
-                                end: null,
-                              };
-                              obj1.type = data.type;
-                              obj1.user = user;
-                              tmp7 = null;
-                              tmp8 = undefined;
-                              if (null != firstMatch) {
-                                if (user.username !== firstMatch) {
-                                  tmp8 = firstMatch;
-                                }
-                              }
-                              obj1.nickname = tmp8;
-                              tmp9 = onSelectUser;
-                              obj1.onPress = onSelectUser;
-                              obj4 = disabledUserIds;
-                              flag = undefined;
-                              if (disabledUserIds != null) {
-                                flag = obj4.includes(user.id);
-                              }
-                              if (flag == null) {
-                                flag = false;
-                              }
-                              obj1.disabled = flag;
-                              obj1.selected = hasItem;
-                              obj5 = closure_7;
-                              if (closure_7.isFriend(user.id)) {
-                                if (hasItem) {
-                                  tmp10 = UserRowModes;
-                                  TOGGLE = UserRowModes.TOGGLE;
-                                }
-                                element = { type: "user", props: null };
-                                obj1.mode = TOGGLE;
-                                tmp11 = jsx;
-                                tmp12 = closure_0;
-                                tmp13 = closure_2;
-                                obj9 = { variant: "text-xs/medium", color: "text-muted", children: null };
-                                tmp14 = closure_1;
-                                obj8 = closure_1(closure_2[11]);
-                                obj9.children = obj8.getUserTag(user);
-                                obj1.subLabel = jsx(closure_0(closure_2[18]).Text, obj9);
-                                obj1.arrow = !obj5.isFriend(user.id);
-                                obj1.start = tmp2;
-                                obj1.end = tmp3;
-                                element.props = obj1;
-                                return element;
-                              }
-                              TOGGLE = ACTIONS;
-                            } else {
-                              str = "GroupDMChannelRecord";
-                              if ("GroupDMChannelRecord" === type) {
-                                element1 = { type: "gdm", props: null };
-                                obj10 = { channel: null, onPress: null, arrow: true, start: null, end: null };
-                                obj10.channel = tmp.data;
-                                tmp4 = onSelectUser;
-                                obj10.onPress = onSelectUser;
-                                obj10.start = tmp2;
-                                obj10.end = tmp3;
-                                element1.props = obj10;
-                                return element1;
-                              } else {
-                                return tmp;
-                              }
-                            }
-                            return;
-                          }
-                        }
-                        cResult[18] = tmp26;
-                      } else {
-                        class Me {
-                          constructor(arg0) {
-                            return selectedUserIds.items.length;
+                          constructor(items) {
+                            return items.items.length;
                           }
                         }
                         if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
                           class Me {
-                            constructor(arg0) {
-                              return selectedUserIds.items.length;
+                            constructor(items) {
+                              return items.items.length;
                             }
                           }
-                          cResult[20] = tmp28;
-                          class Le {
-                            constructor(arg0, arg1) {
-                              tmp = closure_6[selectedUserIds].items[arg1];
-                              type = tmp.type;
-                              tmp2 = 0 === arg1;
-                              tmp3 = arg1 === closure_6[selectedUserIds].items.length - 1;
-                              if ("UserSearchItem" === type) {
-                                data = tmp.data;
-                                ({ user, firstMatch } = data);
-                                tmp5 = selectedUserIds;
-                                hasItem = selectedUserIds.includes(user.id);
-                                obj1 = {
-                                  type: null,
-                                  user: null,
-                                  nickname: null,
-                                  onPress: null,
-                                  disabled: null,
-                                  selected: null,
-                                  mode: null,
-                                  subLabel: null,
-                                  arrow: null,
-                                  start: null,
-                                  end: null,
-                                };
-                                obj1.type = data.type;
-                                obj1.user = user;
-                                tmp7 = null;
-                                tmp8 = undefined;
-                                if (null != firstMatch) {
-                                  if (user.username !== firstMatch) {
-                                    tmp8 = firstMatch;
-                                  }
-                                }
-                                obj1.nickname = tmp8;
-                                tmp9 = onSelectUser;
-                                obj1.onPress = onSelectUser;
-                                obj4 = disabledUserIds;
-                                flag = undefined;
-                                if (disabledUserIds != null) {
-                                  flag = obj4.includes(user.id);
-                                }
-                                if (flag == null) {
-                                  flag = false;
-                                }
-                                obj1.disabled = flag;
-                                obj1.selected = hasItem;
-                                obj5 = closure_7;
-                                if (closure_7.isFriend(user.id)) {
-                                  if (hasItem) {
-                                    tmp10 = UserRowModes;
-                                    TOGGLE = UserRowModes.TOGGLE;
-                                  }
-                                  element = { type: "user", props: null };
-                                  obj1.mode = TOGGLE;
-                                  tmp11 = jsx;
-                                  tmp12 = closure_0;
-                                  tmp13 = closure_2;
-                                  obj9 = { variant: "text-xs/medium", color: "text-muted", children: null };
-                                  tmp14 = closure_1;
-                                  obj8 = closure_1(closure_2[11]);
-                                  obj9.children = obj8.getUserTag(user);
-                                  obj1.subLabel = jsx(closure_0(closure_2[18]).Text, obj9);
-                                  obj1.arrow = !obj5.isFriend(user.id);
-                                  obj1.start = tmp2;
-                                  obj1.end = tmp3;
-                                  element.props = obj1;
-                                  return element;
-                                }
-                                TOGGLE = ACTIONS;
-                              } else {
-                                str = "GroupDMChannelRecord";
-                                if ("GroupDMChannelRecord" === type) {
-                                  element1 = { type: "gdm", props: null };
-                                  obj10 = { channel: null, onPress: null, arrow: true, start: null, end: null };
-                                  obj10.channel = tmp.data;
-                                  tmp4 = onSelectUser;
-                                  obj10.onPress = onSelectUser;
-                                  obj10.start = tmp2;
-                                  obj10.end = tmp3;
-                                  element1.props = obj10;
-                                  return element1;
-                                } else {
-                                  return tmp;
-                                }
-                              }
-                              return;
-                            }
-                          }
+                          cResult[20] = tmp30;
                         } else {
                           class Me {
-                            constructor(arg0) {
-                              return selectedUserIds.items.length;
+                            constructor(items) {
+                              return items.items.length;
                             }
                           }
                         }
+                        let obj2 = { title: tmp31(tmp2(tmp3[17]).t.qGlQrW), items: arr3.map(tmp30) };
+                        let intl = tmp2(tmp3[17]).intl;
                         class Le {
                           constructor(arg0, arg1) {
-                            tmp = closure_6[selectedUserIds].items[arg1];
-                            type = tmp.type;
-                            tmp2 = 0 === arg1;
-                            tmp3 = arg1 === closure_6[selectedUserIds].items.length - 1;
+                            let firstMatch;
+                            let flag;
+                            let obj8;
+                            let tmp8;
+                            let user;
+                            const type = tmp.type;
+                            const tmp3 = arg1 === closure_6[arg0].items.length - 1;
                             if ("UserSearchItem" === type) {
-                              data = tmp.data;
+                              const data = tmp.data;
                               ({ user, firstMatch } = data);
-                              tmp5 = selectedUserIds;
-                              hasItem = selectedUserIds.includes(user.id);
-                              obj1 = {
-                                type: null,
-                                user: null,
-                                nickname: null,
-                                onPress: null,
-                                disabled: null,
-                                selected: null,
+                              const type2 = data.type;
+                              const hasItem = selectedUserIds.includes(user.id);
+                              const obj = {
+                                type: type2,
+                                user,
+                                nickname: tmp8,
+                                onPress: onSelectUser,
+                                disabled: flag,
+                                selected: hasItem,
                                 mode: null,
                                 subLabel: null,
                                 arrow: null,
                                 start: null,
                                 end: null,
                               };
-                              obj1.type = data.type;
-                              obj1.user = user;
-                              tmp7 = null;
                               tmp8 = undefined;
                               if (null != firstMatch) {
                                 if (user.username !== firstMatch) {
                                   tmp8 = firstMatch;
                                 }
                               }
-                              obj1.nickname = tmp8;
-                              tmp9 = onSelectUser;
-                              obj1.onPress = onSelectUser;
-                              obj4 = disabledUserIds;
                               flag = undefined;
                               if (disabledUserIds != null) {
-                                flag = obj4.includes(user.id);
+                                flag = disabledUserIds.includes(user.id);
                               }
                               if (flag == null) {
                                 flag = false;
                               }
-                              obj1.disabled = flag;
-                              obj1.selected = hasItem;
-                              obj5 = closure_7;
-                              if (closure_7.isFriend(user.id)) {
+                              if (RelationshipStore.isFriend(user.id)) {
+                                let TOGGLE;
                                 if (hasItem) {
-                                  tmp10 = UserRowModes;
                                   TOGGLE = UserRowModes.TOGGLE;
                                 }
-                                element = { type: "user", props: null };
-                                obj1.mode = TOGGLE;
-                                tmp11 = jsx;
-                                tmp12 = closure_0;
-                                tmp13 = closure_2;
-                                obj9 = { variant: "text-xs/medium", color: "text-muted", children: null };
-                                tmp14 = closure_1;
-                                obj8 = closure_1(closure_2[11]);
-                                obj9.children = obj8.getUserTag(user);
-                                obj1.subLabel = jsx(closure_0(closure_2[18]).Text, obj9);
-                                obj1.arrow = !obj5.isFriend(user.id);
-                                obj1.start = tmp2;
-                                obj1.end = tmp3;
-                                element.props = obj1;
+                                const element = { type: "user", props: obj };
+                                obj.mode = TOGGLE;
+                                const obj2 = {
+                                  variant: "text-xs/medium",
+                                  color: "text-muted",
+                                  children: obj8.getUserTag(user),
+                                };
+                                const Text = Text_Text.Text;
+                                obj8 = UserUtilsDefault;
+                                obj.subLabel = authStore(Text, obj2);
+                                obj.arrow = !RelationshipStore.isFriend(user.id);
+                                obj.start = 0 === arg1;
+                                obj.end = tmp3;
                                 return element;
                               }
-                              TOGGLE = ACTIONS;
+                              TOGGLE = rowMode;
+                            } else if ("GroupDMChannelRecord" === type) {
+                              const element1 = { type: "gdm", props: obj3 };
+                              return element1;
                             } else {
-                              str = "GroupDMChannelRecord";
-                              if ("GroupDMChannelRecord" === type) {
-                                element1 = { type: "gdm", props: null };
-                                obj10 = { channel: null, onPress: null, arrow: true, start: null, end: null };
-                                obj10.channel = tmp.data;
-                                tmp4 = onSelectUser;
-                                obj10.onPress = onSelectUser;
-                                obj10.start = tmp2;
-                                obj10.end = tmp3;
-                                element1.props = obj10;
-                                return element1;
-                              } else {
-                                return tmp;
-                              }
+                              return closure_6[arg0].items[arg1];
                             }
-                            return;
                           }
                         }
-                        let intl = tmp(tmp2[17]).intl;
-                        slice[0] = intl.string(tmp(tmp2[17]).t.qGlQrW);
-                        slice[1] = arr3.map(tmp27);
                         const _Symbol2 = Symbol;
                         if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
                           class Me {
-                            constructor(arg0) {
-                              return selectedUserIds.items.length;
+                            constructor(items) {
+                              return items.items.length;
                             }
                           }
                           cResult[21] = Re;
-                          class Le {
-                            constructor(arg0, arg1) {
-                              tmp = closure_6[selectedUserIds].items[arg1];
-                              type = tmp.type;
-                              tmp2 = 0 === arg1;
-                              tmp3 = arg1 === closure_6[selectedUserIds].items.length - 1;
-                              if ("UserSearchItem" === type) {
-                                data = tmp.data;
-                                ({ user, firstMatch } = data);
-                                tmp5 = selectedUserIds;
-                                hasItem = selectedUserIds.includes(user.id);
-                                obj1 = {
-                                  type: null,
-                                  user: null,
-                                  nickname: null,
-                                  onPress: null,
-                                  disabled: null,
-                                  selected: null,
-                                  mode: null,
-                                  subLabel: null,
-                                  arrow: null,
-                                  start: null,
-                                  end: null,
-                                };
-                                obj1.type = data.type;
-                                obj1.user = user;
-                                tmp7 = null;
-                                tmp8 = undefined;
-                                if (null != firstMatch) {
-                                  if (user.username !== firstMatch) {
-                                    tmp8 = firstMatch;
-                                  }
-                                }
-                                obj1.nickname = tmp8;
-                                tmp9 = onSelectUser;
-                                obj1.onPress = onSelectUser;
-                                obj4 = disabledUserIds;
-                                flag = undefined;
-                                if (disabledUserIds != null) {
-                                  flag = obj4.includes(user.id);
-                                }
-                                if (flag == null) {
-                                  flag = false;
-                                }
-                                obj1.disabled = flag;
-                                obj1.selected = hasItem;
-                                obj5 = closure_7;
-                                if (closure_7.isFriend(user.id)) {
-                                  if (hasItem) {
-                                    tmp10 = UserRowModes;
-                                    TOGGLE = UserRowModes.TOGGLE;
-                                  }
-                                  element = { type: "user", props: null };
-                                  obj1.mode = TOGGLE;
-                                  tmp11 = jsx;
-                                  tmp12 = closure_0;
-                                  tmp13 = closure_2;
-                                  obj9 = { variant: "text-xs/medium", color: "text-muted", children: null };
-                                  tmp14 = closure_1;
-                                  obj8 = closure_1(closure_2[11]);
-                                  obj9.children = obj8.getUserTag(user);
-                                  obj1.subLabel = jsx(closure_0(closure_2[18]).Text, obj9);
-                                  obj1.arrow = !obj5.isFriend(user.id);
-                                  obj1.start = tmp2;
-                                  obj1.end = tmp3;
-                                  element.props = obj1;
-                                  return element;
-                                }
-                                TOGGLE = ACTIONS;
-                              } else {
-                                str = "GroupDMChannelRecord";
-                                if ("GroupDMChannelRecord" === type) {
-                                  element1 = { type: "gdm", props: null };
-                                  obj10 = { channel: null, onPress: null, arrow: true, start: null, end: null };
-                                  obj10.channel = tmp.data;
-                                  tmp4 = onSelectUser;
-                                  obj10.onPress = onSelectUser;
-                                  obj10.start = tmp2;
-                                  obj10.end = tmp3;
-                                  element1.props = obj10;
-                                  return element1;
-                                } else {
-                                  return tmp;
-                                }
-                              }
-                              return;
-                            }
-                          }
                         } else {
                           class Me {
-                            constructor(arg0) {
-                              return selectedUserIds.items.length;
+                            constructor(items) {
+                              return items.items.length;
                             }
                           }
                         }
-                        _Symbol = arr2.findIndex(tmp29);
-                        if (-1 === _Symbol) {
+                        const findIndexResult = arr2.findIndex(Re);
+                        if (-1 !== findIndexResult) {
                           class Me {
-                            constructor(arg0) {
-                              return selectedUserIds.items.length;
+                            constructor(items) {
+                              return items.items.length;
                             }
                           }
+                          const arraySpreadResult = HermesBuiltin.arraySpread(
+                            tmp37,
+                            mapped.slice(0, findIndexResult),
+                            0,
+                          );
+                          tmp37[arraySpreadResult] = obj2;
                           class Le {
                             constructor(arg0, arg1) {
-                              tmp = closure_6[selectedUserIds].items[arg1];
-                              type = tmp.type;
-                              tmp2 = 0 === arg1;
-                              tmp3 = arg1 === closure_6[selectedUserIds].items.length - 1;
+                              let firstMatch;
+                              let flag;
+                              let obj8;
+                              let tmp8;
+                              let user;
+                              const type = tmp.type;
+                              const tmp3 = arg1 === closure_6[arg0].items.length - 1;
                               if ("UserSearchItem" === type) {
-                                data = tmp.data;
+                                const data = tmp.data;
                                 ({ user, firstMatch } = data);
-                                tmp5 = selectedUserIds;
-                                hasItem = selectedUserIds.includes(user.id);
-                                obj1 = {
-                                  type: null,
-                                  user: null,
-                                  nickname: null,
-                                  onPress: null,
-                                  disabled: null,
-                                  selected: null,
+                                const type2 = data.type;
+                                const hasItem = selectedUserIds.includes(user.id);
+                                const obj = {
+                                  type: type2,
+                                  user,
+                                  nickname: tmp8,
+                                  onPress: onSelectUser,
+                                  disabled: flag,
+                                  selected: hasItem,
                                   mode: null,
                                   subLabel: null,
                                   arrow: null,
                                   start: null,
                                   end: null,
                                 };
-                                obj1.type = data.type;
-                                obj1.user = user;
-                                tmp7 = null;
                                 tmp8 = undefined;
                                 if (null != firstMatch) {
                                   if (user.username !== firstMatch) {
                                     tmp8 = firstMatch;
                                   }
                                 }
-                                obj1.nickname = tmp8;
-                                tmp9 = onSelectUser;
-                                obj1.onPress = onSelectUser;
-                                obj4 = disabledUserIds;
                                 flag = undefined;
                                 if (disabledUserIds != null) {
-                                  flag = obj4.includes(user.id);
+                                  flag = disabledUserIds.includes(user.id);
                                 }
                                 if (flag == null) {
                                   flag = false;
                                 }
-                                obj1.disabled = flag;
-                                obj1.selected = hasItem;
-                                obj5 = closure_7;
-                                if (closure_7.isFriend(user.id)) {
+                                if (RelationshipStore.isFriend(user.id)) {
+                                  let TOGGLE;
                                   if (hasItem) {
-                                    tmp10 = UserRowModes;
                                     TOGGLE = UserRowModes.TOGGLE;
                                   }
-                                  element = { type: "user", props: null };
-                                  obj1.mode = TOGGLE;
-                                  tmp11 = jsx;
-                                  tmp12 = closure_0;
-                                  tmp13 = closure_2;
-                                  obj9 = { variant: "text-xs/medium", color: "text-muted", children: null };
-                                  tmp14 = closure_1;
-                                  obj8 = closure_1(closure_2[11]);
-                                  obj9.children = obj8.getUserTag(user);
-                                  obj1.subLabel = jsx(closure_0(closure_2[18]).Text, obj9);
-                                  obj1.arrow = !obj5.isFriend(user.id);
-                                  obj1.start = tmp2;
-                                  obj1.end = tmp3;
-                                  element.props = obj1;
+                                  const element = { type: "user", props: obj };
+                                  obj.mode = TOGGLE;
+                                  const obj2 = {
+                                    variant: "text-xs/medium",
+                                    color: "text-muted",
+                                    children: obj8.getUserTag(user),
+                                  };
+                                  const Text = Text_Text.Text;
+                                  obj8 = UserUtilsDefault;
+                                  obj.subLabel = authStore(Text, obj2);
+                                  obj.arrow = !RelationshipStore.isFriend(user.id);
+                                  obj.start = 0 === arg1;
+                                  obj.end = tmp3;
                                   return element;
                                 }
-                                TOGGLE = ACTIONS;
+                                TOGGLE = rowMode;
+                              } else if ("GroupDMChannelRecord" === type) {
+                                const element1 = { type: "gdm", props: obj3 };
+                                return element1;
                               } else {
-                                str = "GroupDMChannelRecord";
-                                if ("GroupDMChannelRecord" === type) {
-                                  element1 = { type: "gdm", props: null };
-                                  obj10 = { channel: null, onPress: null, arrow: true, start: null, end: null };
-                                  obj10.channel = tmp.data;
-                                  tmp4 = onSelectUser;
-                                  obj10.onPress = onSelectUser;
-                                  obj10.start = tmp2;
-                                  obj10.end = tmp3;
-                                  element1.props = obj10;
-                                  return element1;
-                                } else {
-                                  return tmp;
-                                }
+                                return closure_6[arg0].items[arg1];
                               }
-                              return;
                             }
                           }
-                          tmp30[HermesBuiltin.arraySpread(mapped1, 0)] = slice;
-                          tmp26 = tmp30;
+                          HermesBuiltin.arraySpread(tmp37, mapped.slice(findIndexResult), arraySpreadResult + 1);
+                          tmp28 = tmp37;
+                        } else {
+                          class Me {
+                            constructor(items) {
+                              return items.items.length;
+                            }
+                          }
+                          tmp34[HermesBuiltin.arraySpread(tmp34, mapped, 0)] = obj2;
+                          class Le {
+                            constructor(arg0, arg1) {
+                              let firstMatch;
+                              let flag;
+                              let obj8;
+                              let tmp8;
+                              let user;
+                              const type = tmp.type;
+                              const tmp3 = arg1 === closure_6[arg0].items.length - 1;
+                              if ("UserSearchItem" === type) {
+                                const data = tmp.data;
+                                ({ user, firstMatch } = data);
+                                const type2 = data.type;
+                                const hasItem = selectedUserIds.includes(user.id);
+                                const obj = {
+                                  type: type2,
+                                  user,
+                                  nickname: tmp8,
+                                  onPress: onSelectUser,
+                                  disabled: flag,
+                                  selected: hasItem,
+                                  mode: null,
+                                  subLabel: null,
+                                  arrow: null,
+                                  start: null,
+                                  end: null,
+                                };
+                                tmp8 = undefined;
+                                if (null != firstMatch) {
+                                  if (user.username !== firstMatch) {
+                                    tmp8 = firstMatch;
+                                  }
+                                }
+                                flag = undefined;
+                                if (disabledUserIds != null) {
+                                  flag = disabledUserIds.includes(user.id);
+                                }
+                                if (flag == null) {
+                                  flag = false;
+                                }
+                                if (RelationshipStore.isFriend(user.id)) {
+                                  let TOGGLE;
+                                  if (hasItem) {
+                                    TOGGLE = UserRowModes.TOGGLE;
+                                  }
+                                  const element = { type: "user", props: obj };
+                                  obj.mode = TOGGLE;
+                                  const obj2 = {
+                                    variant: "text-xs/medium",
+                                    color: "text-muted",
+                                    children: obj8.getUserTag(user),
+                                  };
+                                  const Text = Text_Text.Text;
+                                  obj8 = UserUtilsDefault;
+                                  obj.subLabel = authStore(Text, obj2);
+                                  obj.arrow = !RelationshipStore.isFriend(user.id);
+                                  obj.start = 0 === arg1;
+                                  obj.end = tmp3;
+                                  return element;
+                                }
+                                TOGGLE = rowMode;
+                              } else if ("GroupDMChannelRecord" === type) {
+                                const element1 = { type: "gdm", props: obj3 };
+                                return element1;
+                              } else {
+                                return closure_6[arg0].items[arg1];
+                              }
+                            }
+                          }
                         }
                       }
-                      const items1 = [];
-                      const arraySpreadResult = HermesBuiltin.arraySpread(mapped1.slice(0, _Symbol), 0);
-                      items1[arraySpreadResult] = slice;
-                      slice = mapped1.slice;
-                      HermesBuiltin.arraySpread(slice(_Symbol), arraySpreadResult + 1);
-                      tmp26 = items1;
+                      cResult[16] = arr3;
+                      cResult[17] = arr2;
+                      cResult[18] = tmp28;
+                      tmp24 = tmp28;
                     }
                   }
                 }
@@ -1145,20 +899,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      let obj2 = {
-        query: tmp18,
-        withGuildMembers: undefined !== withGuildMembers && withGuildMembers,
-        withAffinitySuggestions: undefined === withAffinitySuggestions || withAffinitySuggestions,
-        withFriends: undefined === withFriends || withFriends,
-        withGameFriends: undefined === withGameFriends || withGameFriends,
-        withFriendSuggestions: undefined !== withFriendSuggestions && withFriendSuggestions,
-        withFriendRequests: undefined !== withFriendRequests && withFriendRequests,
-        withFriendRequestsIncoming: undefined !== withFriendRequestsIncoming && withFriendRequestsIncoming,
-        withFriendRequestsOutgoing: undefined !== withFriendRequestsOutgoing && withFriendRequestsOutgoing,
+      const obj3 = {
+        query: tmp19,
+        withGuildMembers: tmp7,
+        withAffinitySuggestions: tmp8,
+        withFriends: tmp9,
+        withGameFriends: tmp10,
+        withFriendSuggestions: tmp14,
+        withFriendRequests: tmp11,
+        withFriendRequestsIncoming: tmp12,
+        withFriendRequestsOutgoing: tmp13,
         excludeCurrentUser: true,
       };
-      cResult[6] = tmp18;
-      cResult[7] = undefined === withAffinitySuggestions || withAffinitySuggestions;
+      cResult[6] = tmp19;
+      cResult[7] = tmp8;
       cResult[8] = undefined !== withFriendRequests && withFriendRequests;
       cResult[9] = undefined !== withFriendRequestsIncoming && withFriendRequestsIncoming;
       cResult[10] = undefined !== withFriendRequestsOutgoing && withFriendRequestsOutgoing;
@@ -1166,11 +920,32 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = undefined === withFriends || withFriends;
       cResult[13] = undefined === withGameFriends || withGameFriends;
       cResult[14] = undefined !== withGuildMembers && withGuildMembers;
-      cResult[15] = obj2;
-      tmp20 = obj2;
-      const tmp16 = onQueryChanged(rowMode.useState(""), 2);
+      cResult[15] = obj3;
+      tmp21 = obj3;
     }
   : (selectedUserIds) => {
+      let UserFlashListActions;
+      let _undefined;
+      let afterSearchContent;
+      let autoFocusSearch;
+      let c5;
+      let defaultNoResultsFound;
+      let forceSearchResults;
+      let headerSize;
+      let intl;
+      let intl2;
+      let items7;
+      let noResultActions;
+      let obj6;
+      let onForceSearchResults;
+      let onSearchFocus;
+      let overrideResults;
+      let prop;
+      let ref;
+      let renderHeader;
+      let rowMode;
+      let str;
+      let tagListInputRef;
       selectedUserIds = selectedUserIds.selectedUserIds;
       const disabledUserIds = selectedUserIds.disabledUserIds;
       const onSelectUser = selectedUserIds.onSelectUser;
@@ -1181,6 +956,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       ({ noResultActions, rowMode } = selectedUserIds);
       if (rowMode === undefined) {
+        const tmp = ref;
         rowMode = ref.ACTIONS;
       }
       ({ autoFocusSearch, tagListInputRef } = selectedUserIds);
@@ -1227,7 +1003,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       c5 = undefined;
       ({ afterSearchContent, forceSearchResults, onForceSearchResults, onSearchFocus } = selectedUserIds);
       const tmp2 = closure_14();
-      [str, c5] = onQueryChanged(rowMode.useState(""), 2);
+      let obj = rowMode;
+      let tmp3 = onQueryChanged(rowMode.useState(""), 2);
+      [str, c5] = tmp3;
       let items = [onQueryChanged];
       const callback = rowMode.useCallback((arg0) => {
         _undefined(arg0);
@@ -1248,36 +1026,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         withFriendRequestsOutgoing: flag7,
         excludeCurrentUser: true,
       });
-      closure_6 = tmp8;
+      let closure_6 = tmp8;
       const tmp9 = closure_19(flag9, selectedUserIds, trimmed);
+      const length = tmp9;
       let items1 = [tmp9, tmp8];
       const memo = rowMode.useMemo(() => {
+        let intl;
         const mapped = closure_6.map((title) => {
-          const obj = { title: title.title, items: null };
-          const items = title.items;
-          obj.items = items.map((data) => ({ type: "UserSearchItem", data }));
+          let items;
+          const obj = { title: title.title, items: items.map((data) => ({ type: "UserSearchItem", data })) };
+          items = title.items;
           return obj;
         });
         if (0 === length.length) {
           return mapped;
         } else {
-          const obj2 = { title: null, items: null };
-          let intl = util.intl;
-          obj2.title = intl.string(util.t.qGlQrW);
-          obj2.items = length.map((data) => ({ type: "GroupDMChannelRecord", data }));
+          let items1;
+          const obj2 = {
+            title: intl.string(intl3.t.qGlQrW),
+            items: length.map((data) => ({ type: "GroupDMChannelRecord", data })),
+          };
+          intl = intl3.intl;
           const findIndexResult = closure_6.findIndex((title) => {
-            const intl = selectedUserIds(1126).intl;
-            return title.title === intl.string(selectedUserIds(1126).t.y29JXs);
+            title = title.title;
+            const intl = selectedUserIds(onSelectUser[17]).intl;
+            return title === intl.string(selectedUserIds(onSelectUser[17]).t.y29JXs);
           });
           if (-1 === findIndexResult) {
             let items = [];
-            items[HermesBuiltin.arraySpread(mapped, 0)] = obj2;
-            let items1 = items;
+            items[HermesBuiltin.arraySpread(items, mapped, 0)] = obj2;
+            items1 = items;
           } else {
             items1 = [];
-            const arraySpreadResult = HermesBuiltin.arraySpread(mapped.slice(0, findIndexResult), 0);
+            const arraySpreadResult = HermesBuiltin.arraySpread(items1, mapped.slice(0, findIndexResult), 0);
             items1[arraySpreadResult] = obj2;
-            HermesBuiltin.arraySpread(mapped.slice(findIndexResult), arraySpreadResult + 1);
+            HermesBuiltin.arraySpread(items1, mapped.slice(findIndexResult), arraySpreadResult + 1);
           }
           return items1;
         }
@@ -1287,91 +1070,87 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items3 = [memo];
       const items4 = [memo, selectedUserIds, onSelectUser, disabledUserIds, rowMode];
       const callback1 = rowMode.useCallback((arg0) => {
-        const element = { type: "section", props: { title: memo[arg0].title } };
+        const element = { type: "section", props: obj };
         return element;
       }, items3);
       const callback2 = rowMode.useCallback((arg0, arg1) => {
+        let firstMatch;
+        let flag;
+        let obj8;
+        let tmp8;
+        let user;
         const type = tmp.type;
         const tmp3 = arg1 === memo[arg0].items.length - 1;
         if ("UserSearchItem" === type) {
           const data = tmp.data;
           ({ user, firstMatch } = data);
+          const type2 = data.type;
           const hasItem = selectedUserIds.includes(user.id);
           const obj = {
-            type: data.type,
+            type: type2,
             user,
-            nickname: null,
-            onPress: null,
-            disabled: null,
-            selected: null,
+            nickname: tmp8,
+            onPress: onSelectUser,
+            disabled: flag,
+            selected: hasItem,
             mode: null,
             subLabel: null,
             arrow: null,
             start: null,
             end: null,
           };
-          let tmp8;
+          tmp8 = undefined;
           if (null != firstMatch) {
             if (user.username !== firstMatch) {
               tmp8 = firstMatch;
             }
           }
-          obj.nickname = tmp8;
-          obj.onPress = onSelectUser;
-          let flag;
+          flag = undefined;
           if (disabledUserIds != null) {
             flag = disabledUserIds.includes(user.id);
           }
           if (flag == null) {
             flag = false;
           }
-          obj.disabled = flag;
-          obj.selected = hasItem;
           if (RelationshipStore.isFriend(user.id)) {
+            let TOGGLE;
             if (hasItem) {
-              let TOGGLE = UserRowModes.TOGGLE;
+              TOGGLE = UserRowModes.TOGGLE;
             }
-            const element = { type: "user", props: null };
+            const element = { type: "user", props: obj };
             obj.mode = TOGGLE;
-            const obj2 = {
-              variant: "text-xs/medium",
-              color: "text-muted",
-              children: UserUtilsDefault.getUserTag(user),
-            };
-            obj.subLabel = v65535(Text_Text.Text, obj2);
+            const obj2 = { variant: "text-xs/medium", color: "text-muted", children: obj8.getUserTag(user) };
+            const Text = Text_Text.Text;
+            obj8 = UserUtilsDefault;
+            obj.subLabel = authStore(Text, obj2);
             obj.arrow = !RelationshipStore.isFriend(user.id);
-            obj.start = tmp2;
+            obj.start = 0 === arg1;
             obj.end = tmp3;
-            element.props = obj;
             return element;
           }
           TOGGLE = rowMode;
         } else if ("GroupDMChannelRecord" === type) {
-          const element1 = { type: "gdm", props: null };
-          const obj3 = { channel: tmp.data, onPress: onSelectUser, arrow: true, start: tmp2, end: tmp3 };
-          element1.props = obj3;
+          const element1 = { type: "gdm", props: obj3 };
           return element1;
         } else {
-          return tmp;
+          return memo[arg0].items[arg1];
         }
       }, items4);
       ref = rowMode.useRef(null);
-      let UsersFastList = selectedUserIds;
-      let obj = rowMode;
-      let tmp3 = onQueryChanged(rowMode.useState(""), 2);
-      let tmp14;
+      let tmp16;
+      const useUserListActionsProps = selectedUserIds(onSelectUser[19]).useUserListActionsProps;
+      selectedUserIds(onSelectUser[19]);
       if (trimmed.length <= 0) {
-        tmp14 = actions;
+        tmp16 = actions;
       }
-      let obj2 = { actions: tmp14, style: null };
-      let prop;
+      let obj2 = { actions: tmp16, style: prop };
+      prop = undefined;
       if (trimmed.length <= 0) {
         if (flag3) {
           prop = tmp2.searchBarRowContainer;
         }
       }
-      obj2.style = prop;
-      const userListActionsProps = selectedUserIds(onSelectUser[19]).useUserListActionsProps(obj2);
+      const userListActionsProps = useUserListActionsProps(obj2);
       const items5 = [str];
       ({ headerSize, renderHeader } = userListActionsProps);
       const layoutEffect = obj.useLayoutEffect(() => {
@@ -1381,14 +1160,62 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items5);
       const someResult = memo1.some((item) => item > 0);
-      if (null != overrideResults) {
-        if (autoFocusSearch) {
-          autoFocusSearch = someResult;
+      const tmp21 = 0 === str.length && null != defaultNoResultsFound;
+      if (null == overrideResults) {
+        if (someResult) {
+          const obj3 = {
+            ref,
+            sections: memo1,
+            getItemProps: callback2,
+            getSectionProps: callback1,
+            listHeaderSize: headerSize,
+            renderListHeader: renderHeader,
+            insetStart: 0,
+            insetEnd: 12,
+            disableThemedGradient: true,
+          };
+          closure_10(tmp14(onSelectUser[20]).UsersFastList, obj3);
+        } else {
+          let tmp24;
+          const obj4 = { style: null, children: null };
+          const tmp22 = c5;
+          if (tmp21) {
+            const items6 = [tmp2.noResults];
+            let prop1;
+            if (flag3) {
+              prop1 = tmp2.searchBarRowContainer;
+            }
+            items6[1] = prop1;
+            obj4.style = items6;
+            obj4.children = defaultNoResultsFound;
+            tmp24 = obj4;
+          } else {
+            obj4.style = tmp2.noResults;
+            const obj5 = {
+              title: intl.string(selectedUserIds(onSelectUser[17]).t.sPAvXU),
+              subtitle: intl2.string(selectedUserIds(onSelectUser[17]).t.nQ05z2),
+              children: closure_10(UserFlashListActions, obj6),
+            };
+            const tmp6Result = disabledUserIds(onSelectUser[21]);
+            intl = tmp14(tmp7[17]).intl;
+            intl2 = tmp14(tmp7[17]).intl;
+            UserFlashListActions = tmp14(tmp7[19]).UserFlashListActions;
+            obj6 = { actions: noResultActions };
+            obj4.children = closure_10(tmp6Result, obj5);
+            tmp24 = obj4;
+          }
+          closure_10(tmp22, tmp24);
         }
-        const obj4 = { children: null };
-        const obj5 = {
+      }
+      const tmp6Result2 = disabledUserIds(onSelectUser[22]);
+      if (autoFocusSearch) {
+        autoFocusSearch = someResult;
+      }
+      const obj7 = { children: items7 };
+      items7 = [
+        closure_10(tmp6Result2, {
           autoFocus: autoFocusSearch,
-          hasQuery: tmp5,
+          hasQuery: trimmed.length > 0,
           onChangeText: callback,
           onFocus: onSearchFocus,
           onForceSearchResults,
@@ -1396,54 +1223,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           selectedUserIds,
           forceSearchResults,
           tagListInputRef,
-        };
-        const items6 = [closure_10(tmp6(tmp7[22]), obj5), afterSearchContent, overrideResults];
-        obj4.children = items6;
-        return closure_12(closure_11, obj4);
-      } else if (someResult) {
-        UsersFastList = UsersFastList(tmp7[20]).UsersFastList;
-        const obj6 = {
-          ref,
-          sections: memo1,
-          getItemProps: callback2,
-          getSectionProps: callback1,
-          listHeaderSize: headerSize,
-          renderListHeader: renderHeader,
-          insetStart: 0,
-          insetEnd: 12,
-          disableThemedGradient: true,
-        };
-        let tmp30Result = closure_10(UsersFastList, obj6);
-      } else {
-        const obj7 = { style: null, children: null };
-        if (tmp19) {
-          const items7 = [noResults];
-          let prop1;
-          if (flag3) {
-            prop1 = tmp2.searchBarRowContainer;
-          }
-          items7[1] = prop1;
-          obj7.style = items7;
-          obj7.children = defaultNoResultsFound;
-          let tmp22 = obj7;
-        } else {
-          obj7.style = noResults;
-          const obj8 = { title: null, subtitle: null, children: null };
-          let intl = UsersFastList(tmp7[17]).intl;
-          obj8.title = intl.string(UsersFastList(tmp7[17]).t.sPAvXU);
-          const intl2 = UsersFastList(tmp7[17]).intl;
-          obj8.subtitle = intl2.string(UsersFastList(tmp7[17]).t.nQ05z2);
-          const obj9 = { actions: noResultActions };
-          obj8.children = closure_10(UsersFastList(tmp7[19]).UserFlashListActions, obj9);
-          obj7.children = closure_10(tmp6(tmp7[21]), obj8);
-          tmp22 = obj7;
-          const tmp6Result2 = tmp6(tmp7[21]);
-        }
-        tmp30Result = closure_10(c5, tmp22);
-      }
-      let obj3 = selectedUserIds(onSelectUser[19]);
-      tmp19 = 0 === str.length && null != defaultNoResultsFound;
+        }),
+        afterSearchContent,
+        overrideResults,
+      ];
+      return closure_12(closure_11, obj7);
     };
+const result = size.fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/NewMessageUserList.tsx",
+);
+
+export default tmp5;
 export { matchGroupDM };
 export { filterGroupDMs };
-export const useSearchGDMNames = tmp3;
+export const useSearchGDMNames = tmp4;

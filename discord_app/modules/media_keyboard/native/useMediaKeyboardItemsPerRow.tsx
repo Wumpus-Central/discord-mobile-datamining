@@ -1,26 +1,30 @@
 // discord_app/modules/media_keyboard/native/useMediaKeyboardItemsPerRow.tsx
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const require = fn;
 let c4 = 17;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/media_keyboard/native/useMediaKeyboardItemsPerRow.tsx");
-
-export const useMediaKeyboardItemsPerRow = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      const cResult = num(576).c(6);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function () {
+      let num;
+      let ref;
+      let tmp10;
+      let tmp11;
+      const obj = num(576);
+      const cResult = obj.c(6);
       const tmp4 = ref(4740)();
       num = 8;
       if (num(4740).WindowSizeClassifier.XLARGE !== tmp4) {
         num = 6;
-        if (tmp(4740).WindowSizeClassifier.LARGE !== tmp4) {
+        if (num(4740).WindowSizeClassifier.LARGE !== tmp4) {
           num = 4;
-          if (tmp(4740).WindowSizeClassifier.NORMAL !== tmp4) {
+          if (num(4740).WindowSizeClassifier.NORMAL !== tmp4) {
             num = 3;
-            if (tmp(4740).WindowSizeClassifier.SMALL !== tmp4) {
+            if (num(4740).WindowSizeClassifier.SMALL !== tmp4) {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
+              const self = this;
+              const self2 = this;
               const error = new Error("Unknown window size classifier: " + tmp4);
               throw error;
             }
@@ -28,7 +32,7 @@ export const useMediaKeyboardItemsPerRow = ReactCompilerGating.isReactCompilerEn
         }
       }
       const result = num * c4;
-      ref = noop.useRef(result);
+      ref = react.useRef(result);
       if (cResult[0] !== num) {
         const fn = function n() {
           ref.current = num * c4;
@@ -37,38 +41,41 @@ export const useMediaKeyboardItemsPerRow = ReactCompilerGating.isReactCompilerEn
         cResult[0] = num;
         cResult[1] = fn;
         cResult[2] = items;
-        let tmp13 = items;
-        let tmp12 = fn;
+        tmp11 = items;
+        tmp10 = fn;
       } else {
-        tmp12 = cResult[1];
-        tmp13 = cResult[2];
+        tmp10 = cResult[1];
+        tmp11 = cResult[2];
       }
-      const effect = noop.useEffect(tmp12, tmp13);
+      const effect = react.useEffect(tmp10, tmp11);
       if (cResult[3] === num) {
+        let tmp13;
         if (cResult[4] === result) {
-          let tmp15 = cResult[5];
+          tmp13 = cResult[5];
         }
-        return tmp15;
+        return tmp13;
       }
       const obj3 = { itemsPerRow: num, itemsPageSize: result, itemsPageSizeRef: ref };
       cResult[3] = num;
       cResult[4] = result;
       cResult[5] = obj3;
-      tmp15 = obj3;
-      const obj = num(576);
+      tmp13 = obj3;
     }
-  : () => {
+  : function () {
+      let itemsPageSizeRef;
       const tmp2 = itemsPageSizeRef(4740)();
       let itemsPerRow = 8;
       if (itemsPerRow(4740).WindowSizeClassifier.XLARGE !== tmp2) {
         itemsPerRow = 6;
-        if (tmp3(4740).WindowSizeClassifier.LARGE !== tmp2) {
+        if (itemsPerRow(4740).WindowSizeClassifier.LARGE !== tmp2) {
           itemsPerRow = 4;
-          if (tmp3(4740).WindowSizeClassifier.NORMAL !== tmp2) {
+          if (itemsPerRow(4740).WindowSizeClassifier.NORMAL !== tmp2) {
             itemsPerRow = 3;
-            if (tmp3(4740).WindowSizeClassifier.SMALL !== tmp2) {
+            if (itemsPerRow(4740).WindowSizeClassifier.SMALL !== tmp2) {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
+              const self = this;
+              const self2 = this;
               const error = new Error("Unknown window size classifier: " + tmp2);
               throw error;
             }
@@ -76,10 +83,13 @@ export const useMediaKeyboardItemsPerRow = ReactCompilerGating.isReactCompilerEn
         }
       }
       const itemsPageSize = itemsPerRow * c4;
-      itemsPageSizeRef = noop.useRef(itemsPageSize);
+      itemsPageSizeRef = react.useRef(itemsPageSize);
       const items = [itemsPerRow];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
         itemsPageSizeRef.current = itemsPerRow * c4;
       }, items);
       return { itemsPerRow, itemsPageSize, itemsPageSizeRef };
     };
+let result = size.fileFinishedImporting("modules/media_keyboard/native/useMediaKeyboardItemsPerRow.tsx");
+
+export const useMediaKeyboardItemsPerRow = tmp2;

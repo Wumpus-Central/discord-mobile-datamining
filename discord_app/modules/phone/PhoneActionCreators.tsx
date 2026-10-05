@@ -1,36 +1,40 @@
 // discord_app/modules/phone/PhoneActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
+import Constants from "../../Constants.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import PhoneConstants from "PhoneConstants.tsx";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-let closure_5 = fn(6540).PHONE_VERIFICATION_MODAL_KEY;
-const Endpoints = fn(1085).Endpoints;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/phone/PhoneActionCreators.tsx");
-
-export default {
+let closure_5 = PhoneConstants.PHONE_VERIFICATION_MODAL_KEY;
+const Endpoints = Constants.Endpoints;
+let obj = {
   setCountryCode(countryCode) {
-    DispatcherDefault.dispatch({ type: "PHONE_SET_COUNTRY_CODE", countryCode });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "PHONE_SET_COUNTRY_CODE", countryCode };
+    obj.dispatch(obj2);
   },
   removePhone(password, reason) {
+    let obj;
+    let obj3;
     const HTTP = HTTPUtils.HTTP;
     const request = {
       url: Endpoints.PHONE,
-      body: { password, change_phone_reason: reason },
+      body: obj,
       oldFormErrors: true,
-      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+      rejectWithError: obj3.rejectWithMigratedError(),
     };
-    return HTTP.del(request);
+    const del = HTTP.del;
+    obj = { password, change_phone_reason: reason };
+    obj3 = HTTPUtils;
+    return del(request);
   },
   resendCode(phone) {
+    let obj3;
     const fingerprint = AuthenticationStore.getFingerprint();
-    let tmp2 = null != fingerprint;
-    if (tmp2) {
-      tmp2 = "" !== fingerprint;
-    }
     const obj = {};
+    const tmp2 = null != fingerprint && "" !== fingerprint;
     if (tmp2) {
       obj["X-Fingerprint"] = fingerprint;
     }
@@ -39,70 +43,94 @@ export default {
       url: Endpoints.RESEND_PHONE,
       headers: obj,
       body: { phone },
-      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+      rejectWithError: obj3.rejectWithMigratedError(),
     };
-    return HTTP.post(request);
+    const post = HTTP.post;
+    obj3 = HTTPUtils;
+    return post(request);
   },
   beginAddPhone(combined, change_phone_reason) {
+    let obj;
+    let obj3;
     const HTTP = HTTPUtils.HTTP;
-    const request = {
-      url: Endpoints.PHONE,
-      body: { phone: combined, change_phone_reason },
-      rejectWithError: HTTPUtils.rejectWithMigratedError(),
-    };
-    return HTTP.post(request);
+    const request = { url: Endpoints.PHONE, body: obj, rejectWithError: obj3.rejectWithMigratedError() };
+    const post = HTTP.post;
+    obj = { phone: combined, change_phone_reason };
+    obj3 = HTTPUtils;
+    return post(request);
   },
   addPhone(phoneToken, password, CONTACT_SYNC) {
+    let obj;
+    let obj3;
     const HTTP = HTTPUtils.HTTP;
     const request = {
       url: Endpoints.PHONE,
-      body: { phone_token: phoneToken, password, change_phone_reason: CONTACT_SYNC },
+      body: obj,
       oldFormErrors: true,
-      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+      rejectWithError: obj3.rejectWithMigratedError(),
     };
-    return HTTP.post(request);
+    const post = HTTP.post;
+    obj = { phone_token: phoneToken, password, change_phone_reason: CONTACT_SYNC };
+    obj3 = HTTPUtils;
+    return post(request);
   },
   addPhoneWithoutPassword(code) {
+    let obj;
+    let obj3;
     const HTTP = HTTPUtils.HTTP;
     const request = {
       url: Endpoints.PHONE_VERIFY_NO_PASSWORD,
-      body: { code },
-      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+      body: obj,
+      rejectWithError: obj3.rejectWithMigratedError(),
     };
-    return HTTP.post(request);
+    const post = HTTP.post;
+    obj = { code };
+    obj3 = HTTPUtils;
+    return post(request);
   },
   beginReverifyPhone(combined, change_phone_reason) {
+    let obj;
+    let obj3;
     const HTTP = HTTPUtils.HTTP;
-    const request = {
-      url: Endpoints.PHONE_REVERIFY,
-      body: { phone: combined, change_phone_reason },
-      rejectWithError: HTTPUtils.rejectWithMigratedError(),
-    };
-    return HTTP.post(request);
+    const request = { url: Endpoints.PHONE_REVERIFY, body: obj, rejectWithError: obj3.rejectWithMigratedError() };
+    const post = HTTP.post;
+    obj = { phone: combined, change_phone_reason };
+    obj3 = HTTPUtils;
+    return post(request);
   },
   reverifyPhone(phone_token, password, USER_ACTION_REQUIRED) {
+    let obj;
+    let obj3;
     const HTTP = HTTPUtils.HTTP;
     const request = {
       url: Endpoints.PHONE_REVERIFY,
-      body: { phone_token, password, change_phone_reason: USER_ACTION_REQUIRED },
+      body: obj,
       oldFormErrors: true,
-      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+      rejectWithError: obj3.rejectWithMigratedError(),
     };
-    return HTTP.post(request);
+    const post = HTTP.post;
+    obj = { phone_token, password, change_phone_reason: USER_ACTION_REQUIRED };
+    obj3 = HTTPUtils;
+    return post(request);
   },
   validatePhoneForSupport(token) {
+    let obj;
+    let obj3;
     const HTTP = HTTPUtils.HTTP;
     const request = {
       url: Endpoints.VERIFY_PHONE_FOR_TICKET,
-      body: { token },
+      body: obj,
       oldFormErrors: true,
-      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+      rejectWithError: obj3.rejectWithMigratedError(),
     };
-    return HTTP.post(request);
+    const post = HTTP.post;
+    obj = { token };
+    obj3 = HTTPUtils;
+    return post(request);
   },
   verifyPhone(arg0, arg1) {
-    closure_0 = arg0;
-    closure_1 = arg1;
+    let closure_0 = arg0;
+    let closure_1 = arg1;
     let flag = arg2;
     if (arg2 === undefined) {
       flag = true;
@@ -112,15 +140,17 @@ export default {
       flag2 = false;
     }
     return flag2(function* () {
-      const code = tmp2;
-      const phone = tmp5;
+      let c3;
+      let fingerprint;
+      let obj5;
+      let obj6;
+      let obj9;
+      const code = tmp;
+      let phone = tmp4;
       fingerprint = fingerprint.getFingerprint();
-      let tmp15 = null != fingerprint;
-      if (tmp15) {
-        tmp15 = "" !== fingerprint;
-      }
+      const tmp14 = null != fingerprint && "" !== fingerprint;
       const obj4 = {};
-      if (tmp15) {
+      if (tmp14) {
         obj4["X-Fingerprint"] = fingerprint;
       }
       if (flag2) {
@@ -129,25 +159,30 @@ export default {
       const request = {
         url: constants.VERIFY_PHONE,
         headers: obj4,
-        body: { phone, code },
+        body: obj5,
         oldFormErrors: true,
-        trackedActionData: { event: phone(1260).NetworkActionNames.USER_VERIFY_PHONE },
-        rejectWithError: null,
+        trackedActionData: obj6,
+        rejectWithError: obj9.rejectWithMigratedError(),
       };
-      {
-        event: phone(1260).NetworkActionNames.USER_VERIFY_PHONE;
-      }
-      request.rejectWithError = phone(1282).rejectWithMigratedError();
-      yield code(5083).post(request);
-      closure_128_0 = value;
+      obj5 = { phone, code };
+      obj6 = { event: phone(c2[7]).NetworkActionNames.USER_VERIFY_PHONE };
+      const post = code(c2[6]).post;
+      const tmp18 = code(c2[6]);
+      obj9 = phone(c2[5]);
+      yield post(request);
+      phone = value;
       if (closure_129_2) {
-        code(584).dispatch({ type: "MODAL_POP", key });
-        code(584);
+        const obj10 = { type: "MODAL_POP", key };
+        const obj = code(c2[4]);
+        obj.dispatch(obj10);
       }
-      return closure_128_0.body;
+      return phone.body;
     })();
   },
 };
+const result = size.fileFinishedImporting("modules/phone/PhoneActionCreators.tsx");
+
+export default obj;
 export const ChangePhoneReason = {
   USER_ACTION_REQUIRED: "user_action_required",
   USER_SETTINGS_UPDATE: "user_settings_update",

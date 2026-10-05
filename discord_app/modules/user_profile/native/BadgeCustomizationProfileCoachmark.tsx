@@ -1,39 +1,50 @@
 // discord_app/modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl4 from "../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import DismissibleContentConstants from "../../dismissible_content/DismissibleContentConstants.tsx";
 import BadgesCoachmarkRive from "../../../../discord_common/js/packages/design/components/Rive/native/generated/BadgesCoachmarkRive.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import YouBannerDecorations from "../../main_tabs_v2/native/tabs/you/YouBannerDecorations.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
 import UserStore from "../../../stores/UserStore.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
 const PX_64 = nativeDefault.space.PX_64;
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      closure_1 = arg1;
-      const cResult = c.c(7);
+      let closure_129_2;
+      let rect2;
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      const obj = react2;
+      const cResult = obj.c(7);
       const height = useWindowDimensionsDefault().height;
       let rect = useSafeAreaInsetsDefault();
-      [rect2, dependencyMap] = noop.useState(null);
+      [rect2, closure_129_2] = react.useState(null);
+      _slicedToArray(react.useState(null), 2);
       if (cResult[0] === arg0) {
+        let tmp5;
         if (cResult[1] === arg1) {
-          let tmp5 = cResult[2];
+          tmp5 = cResult[2];
         }
         if (cResult[3] === arg0) {
           if (cResult[4] === arg1) {
+            let tmp6;
             if (cResult[5] === height) {
-              let tmp6 = cResult[6];
+              tmp6 = cResult[6];
             }
-            const effect = noop.useEffect(tmp5, tmp6);
+            const effect = react.useEffect(tmp5, tmp6);
             if (null == rect2) {
               return "bottom";
             } else {
               let str = "bottom";
+              const tmpResult = YouBannerDecorations;
               if (
                 height - tmpResult.getFloatingNavBottomMargin(rect.bottom) - PX_64 - rect2.bottom <
                 rect2.top - rect.top
@@ -68,15 +79,18 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = arg1;
       cResult[2] = fn;
       tmp5 = fn;
-      const tmp4 = _slicedToArray(noop.useState(null), 2);
     }
   : (arg0, arg1) => {
-      closure_1 = arg1;
+      let closure_129_2;
+      let rect2;
+      let closure_0 = arg0;
+      let closure_1 = arg1;
       const height = useWindowDimensionsDefault().height;
       let rect = useSafeAreaInsetsDefault();
-      [rect2, dependencyMap] = noop.useState(null);
+      [rect2, closure_129_2] = react.useState(null);
       const items = [arg0, arg1, height];
-      const effect = noop.useEffect(() => {
+      _slicedToArray(react.useState(null), 2);
+      const effect = react.useEffect(() => {
         if (closure_1) {
           const current = ref.current;
           if (current != null) {
@@ -93,26 +107,34 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         return "bottom";
       } else {
         let str = "bottom";
+        const obj = YouBannerDecorations;
         if (height - obj.getFloatingNavBottomMargin(rect.bottom) - PX_64 - rect2.bottom < rect2.top - rect.top) {
           str = "top";
         }
         return str;
       }
-      const tmp2 = _slicedToArray(noop.useState(null), 2);
     };
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (onTryItOut) => {
-      const cResult = markAsDismissed(576).c(21);
+      let currentUser;
+      let markAsDismissed;
+      let obj4;
+      let targetRef;
+      let tmp11;
+      let tmp4;
+      let tmp5;
+      let tmp9;
+      let visible;
+      let obj = markAsDismissed(576);
+      const cResult = obj.c(21);
       ({ targetRef, visible, markAsDismissed } = onTryItOut);
       onTryItOut = onTryItOut.onTryItOut;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         const fn = function c() {
-          return onTryItOut(dependencyMap[10]).canUsePremiumProfileCustomization(currentUser.getCurrentUser());
+          const obj = onTryItOut(dependencyMap[10]);
+          return obj.canUsePremiumProfileCustomization(currentUser.getCurrentUser());
         };
         cResult[0] = items;
         cResult[1] = fn;
@@ -121,183 +143,184 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const obj = markAsDismissed(576);
-      const stateFromStores = markAsDismissed(504).useStateFromStores(tmp4, tmp5);
-      const reducedMotion = noop.useContext(markAsDismissed(4596).AccessibilityPreferencesContext).reducedMotion;
+      const tmpResult = markAsDismissed(504);
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+      const reducedMotion = react.useContext(markAsDismissed(4596).AccessibilityPreferencesContext).reducedMotion;
       const tmp8 = closure_8(targetRef, visible);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = markAsDismissed(1126).intl;
         const stringResult = intl.string(markAsDismissed(1126).t["9JoKQb"]);
         cResult[2] = stringResult;
-        let tmp9 = stringResult;
+        tmp9 = stringResult;
       } else {
         tmp9 = cResult[2];
       }
       if (cResult[3] !== stateFromStores) {
         const intl2 = markAsDismissed(1126).intl;
+        const string = intl2.string;
         const t = markAsDismissed(1126).t;
-        const stringResult1 = intl2.string(stateFromStores ? t.p82vky : t.IDh31t);
+        const stringResult1 = string(stateFromStores ? t.p82vky : t.IDh31t);
         cResult[3] = stateFromStores;
         cResult[4] = stringResult1;
+        tmp11 = stringResult1;
       } else {
-        if (cResult[5] === reducedMotion.enabled) {
-          if (cResult[6] === visible) {
-            let tmp14 = cResult[7];
+        tmp11 = cResult[4];
+      }
+      if (cResult[5] === reducedMotion.enabled) {
+        let tmp13;
+        let tmp14;
+        let tmp15;
+        if (cResult[6] === visible) {
+          tmp13 = cResult[7];
+        }
+        if (cResult[8] !== markAsDismissed) {
+          const fn2 = function y() {
+            return markAsDismissed(ContentDismissActionType.USER_DISMISS);
+          };
+          cResult[8] = markAsDismissed;
+          cResult[9] = fn2;
+          tmp14 = fn2;
+        } else {
+          tmp14 = cResult[9];
+        }
+        const _Symbol = Symbol;
+        if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl3 = markAsDismissed(1126).intl;
+          const stringResult2 = intl3.string(markAsDismissed(1126).t["4P5I8V"]);
+          cResult[10] = stringResult2;
+          tmp15 = stringResult2;
+        } else {
+          tmp15 = cResult[10];
+        }
+        if (cResult[11] === markAsDismissed) {
+          let tmp17;
+          if (cResult[12] === onTryItOut) {
+            tmp17 = cResult[13];
           }
-          if (cResult[8] !== markAsDismissed) {
-            const fn2 = function y() {
-              return markAsDismissed(ContentDismissActionType.USER_DISMISS);
-            };
-            cResult[8] = markAsDismissed;
-            cResult[9] = fn2;
-            let tmp15 = fn2;
-          } else {
-            tmp15 = cResult[9];
-          }
-          const _Symbol = Symbol;
-          if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl3 = markAsDismissed(1126).intl;
-            const stringResult2 = intl3.string(markAsDismissed(1126).t["4P5I8V"]);
-            cResult[10] = stringResult2;
-            let tmp16 = stringResult2;
-          } else {
-            tmp16 = cResult[10];
-          }
-          if (cResult[11] === markAsDismissed) {
-            if (cResult[12] === onTryItOut) {
-              let tmp18 = cResult[13];
-            }
-            if (cResult[14] === tmp8) {
-              if (cResult[15] === tmp11) {
-                if (cResult[16] === tmp14) {
-                  if (cResult[17] === tmp15) {
-                    if (cResult[18] === tmp18) {
-                      if (cResult[19] === visible) {
-                        let tmp19 = cResult[20];
-                      }
-                      const coachmark = markAsDismissed(9882).useCoachmark(targetRef, tmp19);
-                      return null;
+          if (cResult[14] === tmp8) {
+            if (cResult[15] === tmp11) {
+              if (cResult[16] === tmp13) {
+                if (cResult[17] === tmp14) {
+                  if (cResult[18] === tmp17) {
+                    let tmp18;
+                    if (cResult[19] === visible) {
+                      tmp18 = cResult[20];
                     }
+                    const tmpResult2 = markAsDismissed(9882);
+                    const coachmark = tmpResult2.useCoachmark(targetRef, tmp18);
+                    return null;
                   }
                 }
               }
             }
-            const obj2 = {
-              title: tmp9,
-              description: tmp11,
-              visible,
-              position: null,
-              gradientColor: "blue",
-              graphic: null,
-              onDismiss: null,
-              buttonLabel: null,
-              buttonVariant: "primary",
-              onButtonPress: null,
-            };
-            class P {
-              constructor() {
-                tmp = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-                tmp2 = onTryItOut();
-                return;
-              }
-            }
-            obj2.graphic = tmp14;
-            obj2.onDismiss = tmp15;
-            obj2.buttonLabel = tmp16;
-            obj2.onButtonPress = tmp18;
-            cResult[14] = tmp8;
-            cResult[15] = tmp11;
-            cResult[16] = tmp14;
-            cResult[17] = tmp15;
-            cResult[18] = tmp18;
-            cResult[19] = visible;
-            cResult[20] = obj2;
-            tmp19 = obj2;
           }
+          const obj2 = {
+            title: tmp9,
+            description: tmp11,
+            visible,
+            position: null,
+            gradientColor: "blue",
+            graphic: tmp13,
+            onDismiss: tmp14,
+            buttonLabel: tmp15,
+            buttonVariant: "primary",
+            onButtonPress: tmp17,
+          };
           class P {
             constructor() {
-              tmp = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-              tmp2 = onTryItOut();
-              return;
+              markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+              onTryItOut();
             }
           }
-          cResult[11] = markAsDismissed;
-          cResult[12] = onTryItOut;
-          cResult[13] = P;
-          tmp18 = P;
+          cResult[14] = tmp8;
+          cResult[15] = tmp11;
+          cResult[16] = tmp13;
+          cResult[17] = tmp14;
+          cResult[18] = tmp17;
+          cResult[19] = visible;
+          cResult[20] = obj2;
+          tmp18 = obj2;
         }
-        const obj3 = {
-          type: "rive",
-          rive: markAsDismissed(4605).BadgesCoachmarkRive,
-          aspectRatio: "16/9",
-          riveProps: null,
-        };
-        const obj4 = { dataBinding: null };
-        const obj5 = { on: null, reducedMotion: reducedMotion.enabled };
-        obj4.dataBinding = obj5;
-        obj3.riveProps = obj4;
-        cResult[5] = reducedMotion.enabled;
-        cResult[6] = visible;
-        cResult[7] = obj3;
-        tmp14 = obj3;
+        class P {
+          constructor() {
+            markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+            onTryItOut();
+          }
+        }
+        cResult[11] = markAsDismissed;
+        cResult[12] = onTryItOut;
+        cResult[13] = P;
+        tmp17 = P;
       }
-      const tmpResult = markAsDismissed(504);
+      const obj3 = {
+        type: "rive",
+        rive: markAsDismissed(4605).BadgesCoachmarkRive,
+        aspectRatio: "16/9",
+        riveProps: obj4,
+      };
+      obj4 = { dataBinding: { on: visible, reducedMotion: reducedMotion.enabled } };
+      cResult[5] = reducedMotion.enabled;
+      cResult[6] = visible;
+      cResult[7] = obj3;
+      tmp13 = obj3;
     }
   : (markAsDismissed) => {
+      let targetRef;
+      let visible;
       ({ targetRef, visible } = markAsDismissed);
       markAsDismissed = markAsDismissed.markAsDismissed;
       const onTryItOut = markAsDismissed.onTryItOut;
       let reducedMotion;
       let position;
+      let obj = visible(onTryItOut[11]);
       const items = [position];
-      const stateFromStores = visible(onTryItOut[11]).useStateFromStores(items, () =>
-        markAsDismissed(onTryItOut[10]).canUsePremiumProfileCustomization(position.getCurrentUser()),
-      );
+      const stateFromStores = obj.useStateFromStores(items, () => {
+        const obj = markAsDismissed(onTryItOut[10]);
+        return obj.canUsePremiumProfileCustomization(position.getCurrentUser());
+      });
       reducedMotion = reducedMotion.useContext(visible(onTryItOut[12]).AccessibilityPreferencesContext).reducedMotion;
       const tmp2 = closure_8(targetRef, visible);
       position = tmp2;
       const items1 = [stateFromStores, visible, tmp2, markAsDismissed, onTryItOut, reducedMotion.enabled];
       const memo = reducedMotion.useMemo(() => {
+        let intl;
+        let intl3;
+        let obj2;
+        let obj3;
+        let obj4;
+        let string;
+        let t;
         const obj = {
-          title: null,
-          description: null,
-          visible: null,
-          position: null,
+          title: intl.string(intl4.t["9JoKQb"]),
+          description: string(stateFromStores ? t.p82vky : t.IDh31t),
+          visible,
+          position,
           gradientColor: "blue",
-          graphic: null,
-          onDismiss: null,
-          buttonLabel: null,
+          graphic: obj2,
+          onDismiss() {
+            return markAsDismissed(constants.USER_DISMISS);
+          },
+          buttonLabel: intl3.string(intl4.t["4P5I8V"]),
           buttonVariant: "primary",
-          onButtonPress: null,
+          onButtonPress() {
+            markAsDismissed(constants.TAKE_ACTION);
+            onTryItOut();
+          },
         };
-        const intl = util.intl;
-        obj.title = intl.string(util.t["9JoKQb"]);
-        const intl2 = util.intl;
-        const t = util.t;
-        obj.description = intl2.string(stateFromStores ? t.p82vky : t.IDh31t);
-        obj.visible = visible;
-        obj.position = position;
-        const obj2 = {
-          type: "rive",
-          rive: BadgesCoachmarkRive.BadgesCoachmarkRive,
-          aspectRatio: "16/9",
-          riveProps: null,
-        };
-        const obj3 = { dataBinding: { on: visible, reducedMotion: reducedMotion.enabled } };
-        obj2.riveProps = obj3;
-        obj.graphic = obj2;
-        obj.onDismiss = function onDismiss() {
-          return markAsDismissed(constants.USER_DISMISS);
-        };
-        const intl3 = util.intl;
-        obj.buttonLabel = intl3.string(util.t["4P5I8V"]);
-        obj.onButtonPress = function onButtonPress() {
-          markAsDismissed(constants.TAKE_ACTION);
-          onTryItOut();
-        };
+        intl = intl4.intl;
+        const intl2 = intl4.intl;
+        string = intl2.string;
+        t = intl4.t;
+        obj2 = { type: "rive", rive: BadgesCoachmarkRive.BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: obj3 };
+        obj3 = { dataBinding: obj4 };
+        obj4 = { on: visible, reducedMotion: reducedMotion.enabled };
+        intl3 = intl4.intl;
         return obj;
       }, items1);
-      let obj = visible(onTryItOut[11]);
-      const coachmark = visible(onTryItOut[15]).useCoachmark(targetRef, memo);
+      let obj2 = visible(onTryItOut[15]);
+      const coachmark = obj2.useCoachmark(targetRef, memo);
       return null;
     };
+const result = size.fileFinishedImporting("modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx");
+
+export default tmp2;

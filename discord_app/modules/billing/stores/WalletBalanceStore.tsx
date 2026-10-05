@@ -1,24 +1,28 @@
 // discord_app/modules/billing/stores/WalletBalanceStore.tsx
-import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_0 = {};
+let closure_0;
+
+const React = {};
 let set = new Set();
-const Store = initializeDefault.Store;
-class WalletBalanceStore extends Store {}
-const prototype = WalletBalanceStore.prototype;
-prototype["getBalance"] = function getBalance(arg0) {
-  let tmp = closure_0[arg0];
-  if (tmp == null) {
-    tmp = null;
+const Store = get_initializedDefault.Store;
+class WalletBalanceStore extends Store {
+  getBalance(arg0) {
+    let tmp = closure_0[arg0];
+    if (tmp == null) {
+      tmp = null;
+    }
+    return tmp;
   }
-  return tmp;
-};
-prototype["getIsFetching"] = function getIsFetching(arg0) {
-  return set.has(arg0);
-};
+  getIsFetching(arg0) {
+    return set.has(arg0);
+  }
+}
+const prototype = WalletBalanceStore.prototype;
 WalletBalanceStore.displayName = "WalletBalanceStore";
-const walletBalanceStore = new WalletBalanceStore(DispatcherDefault, {
+let obj = {
   BILLING_WALLET_BALANCE_FETCH_START: function handleFetchStart(paymentSourceId) {
     set = new Set(set);
     set.add(paymentSourceId.paymentSourceId);
@@ -45,8 +49,8 @@ const walletBalanceStore = new WalletBalanceStore(DispatcherDefault, {
     closure_0 = {};
     set = new Set();
   },
-});
-const size = fn(2);
+};
+const walletBalanceStore = new WalletBalanceStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/billing/stores/WalletBalanceStore.tsx");
 
 export default walletBalanceStore;

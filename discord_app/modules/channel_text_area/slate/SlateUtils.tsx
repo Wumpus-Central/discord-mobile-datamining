@@ -1,67 +1,57 @@
 // discord_app/modules/channel_text_area/slate/SlateUtils.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
+const f94448 = (text) => {
+  let items;
+  const element = { type: "line", children: items };
+  items = [];
+  const obj = { text };
+  items[0] = obj;
+  return element;
+};
 const result = size.fileFinishedImporting("modules/channel_text_area/slate/SlateUtils.tsx");
 
 export function createEmptyState() {
-  const obj = { textValue: "", richValue: null };
-  const element = { type: "line", children: null };
-  const items = [{ text: "" }];
-  element.children = items;
-  const items1 = [element];
-  obj.richValue = items1;
+  let items;
+  let items1;
+  const element = { type: "line", children: items };
+  items = [{ text: "" }];
+  const obj = { textValue: "", richValue: items1 };
+  items1 = [element];
   return obj;
 }
 export const createState = function createState(textValue) {
-  const obj = { textValue, richValue: null };
-  const parts = textValue.split("\n");
-  obj.richValue = parts.map((text) => {
-    const element = { type: "line", children: null };
-    const items = [{ text }];
-    element.children = items;
-    return element;
-  });
+  let parts;
+  let obj = { textValue, richValue: parts.map(f94448) };
+  parts = textValue.split("\n");
   return obj;
 };
 export const toRichValue = function toRichValue(content) {
   const parts = content.split("\n");
-  return parts.map((text) => {
-    const element = { type: "line", children: null };
-    const items = [{ text }];
-    element.children = items;
-    return element;
-  });
+  return parts.map(f94448);
 };
 export const voidToOptionValue = function voidToOptionValue(type) {
   type = type.type;
   if ("userMention" === type) {
-    const obj2 = { type: "userMention", userId: type.userId };
-    return obj2;
+    return { type: "userMention", userId: type.userId };
   } else if ("channelMention" === type) {
-    const obj3 = { type: "channelMention", channelId: type.channelId };
-    return obj3;
+    return { type: "channelMention", channelId: type.channelId };
   } else if ("soundboard" === type) {
+    const obj4 = { type: "soundboard", guildId: null, soundId: null };
     ({ guildId: obj5.guildId, soundId: obj5.soundId } = type);
-    return { type: "soundboard", guildId: null, soundId: null };
+    return obj4;
   } else if ("roleMention" === type) {
-    const obj6 = { type: "roleMention", roleId: type.roleId };
-    return obj6;
+    return { type: "roleMention", roleId: type.roleId };
   } else if ("textMention" === type) {
-    const obj7 = { type: "textMention", text: type.name };
-    return obj7;
+    return { type: "textMention", text: type.name };
   } else if ("emoji" === type) {
-    const obj13 = { type: "emoji", name: type.emoji.name, surrogate: type.emoji.surrogate };
-    return obj13;
+    return { type: "emoji", name: type.emoji.name, surrogate: type.emoji.surrogate };
   } else if ("customEmoji" === type) {
-    const obj = {
-      type: "customEmoji",
-      emojiId: type.emoji.emojiId,
-      name: type.emoji.name,
-      animated: type.emoji.animated,
-    };
-    return obj;
+    return { type: "customEmoji", emojiId: type.emoji.emojiId, name: type.emoji.name, animated: type.emoji.animated };
   } else if ("testInlineVoid" === type) {
     const _Error = Error;
+    const self = this;
+    const self2 = this;
     const error = new Error("Unable to convert test types");
     throw error;
   } else {

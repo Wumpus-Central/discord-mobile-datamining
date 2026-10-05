@@ -16,34 +16,34 @@ if (_crypto == null) {
   _crypto = msCrypto;
 }
 let tmp5 = null != _crypto;
+const tmp4 = "Uint8Array" in window;
 if (tmp5) {
+  let str = "getRandomValues";
   tmp5 = "getRandomValues" in _crypto;
 }
 if (tmp5) {
   tmp5 = tmp4;
 }
 function encodeTotpSecret(totpSecret) {
-  return totpSecret.replace(/[\s._-]+/g, "").toUpperCase();
+  const str = totpSecret.replace(/[\s._-]+/g, "");
+  return str.toUpperCase();
 }
+const tmp6 = !MetaQuestUtils.isMetaQuest();
 const result = size.fileFinishedImporting("utils/MFAUtils.tsx");
 
 export const hasCrypto = tmp5;
-export const hasWebAuthn = !MetaQuestUtils.isMetaQuest();
+export const hasWebAuthn = tmp6;
 export const generateTotpSecret = function generateTotpSecret() {
+  const getRandomValues = _crypto.getRandomValues;
   const uint8Array = new Uint8Array(20);
-  const randomValues = _crypto.getRandomValues(uint8Array);
+  const randomValues = getRandomValues(uint8Array);
   const encoder = encodeDefault;
   const str = encoder.encode(randomValues);
-  const str2 = encoder.encode(randomValues).toString("utf8");
-  const str3 = encoder.encode(randomValues).toString("utf8").replace(/=/g, "");
-  const str4 = encoder.encode(randomValues).toString("utf8").replace(/=/g, "").toLowerCase();
-  return encoder
-    .encode(randomValues)
-    .toString("utf8")
-    .replace(/=/g, "")
-    .toLowerCase()
-    .replace(/(\w{4})/g, "$1 ")
-    .trim();
+  const str2 = str.toString("utf8");
+  const str3 = str2.replace(/=/g, "");
+  const str4 = str3.toLowerCase();
+  const str5 = str4.replace(/(\w{4})/g, "$1 ");
+  return str5.trim();
 };
 export { encodeTotpSecret };
 export const encodeTotpSecretAsUrl = function encodeTotpSecretAsUrl(arg0, str) {
@@ -53,7 +53,8 @@ export const encodeTotpSecretAsUrl = function encodeTotpSecretAsUrl(arg0, str) {
   }
   const encodeURIResult = encodeURI(str);
   const encodeURIResult1 = encodeURI(arg0);
-  const formatted = str.replace(/[\s._-]+/g, "").toUpperCase();
+  const str2 = str.replace(/[\s._-]+/g, "");
+  const formatted = str2.toUpperCase();
   return (
     "otpauth://totp/" +
     encodeURIResult +
@@ -66,15 +67,16 @@ export const encodeTotpSecretAsUrl = function encodeTotpSecretAsUrl(arg0, str) {
   );
 };
 export const captureWebAuthnException = function captureWebAuthnException(error, tags) {
-  const obj2 = {};
+  let obj2;
+  const obj = { tags: obj2 };
+  const captureException = SentryUtilsDefault.captureException;
+  SentryUtilsDefault;
   const merged = Object.assign(tags);
   tags = undefined;
   if (tags != null) {
     tags = tags.tags;
   }
-  const obj3 = {};
+  obj2 = { app_context: "webauthn" };
   const merged1 = Object.assign(tags);
-  obj3.app_context = "webauthn";
-  obj2.tags = obj3;
-  SentryUtilsDefault.captureException(error, obj2);
+  captureException(error, obj);
 };

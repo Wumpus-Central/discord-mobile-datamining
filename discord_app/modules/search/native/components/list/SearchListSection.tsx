@@ -1,27 +1,19 @@
 // discord_app/modules/search/native/components/list/SearchListSection.tsx
-import c from "../../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../../../_runtime/00576_react.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import SearchConstants from "../../../SearchConstants.tsx";
+import react from "../../../../../../_runtime/00019_react.js";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4890);
-let closure_5 = createStyles.createStyles({
-  section: {
-    flex: 1,
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    textTransform: "none",
-    paddingTop: fn(7513).SEARCH_LIST_SECTION_TOP_PADDING,
-    paddingHorizontal: 16,
-    paddingBottom: 8,
-  },
-});
-const ReactCompilerGating = fn(558);
+let c3;
+let closure_4;
+const View = react_native.View;
+const SEARCH_LIST_SECTION_TOP_PADDING = SearchConstants.SEARCH_LIST_SECTION_TOP_PADDING;
+({ jsx: c3, jsxs: closure_4 } = Fragment);
 let obj = {
   section: {
     flex: 1,
@@ -30,18 +22,22 @@ let obj = {
     alignItems: "center",
     justifyContent: "space-between",
     textTransform: "none",
-    paddingTop: fn(7513).SEARCH_LIST_SECTION_TOP_PADDING,
+    paddingTop: SEARCH_LIST_SECTION_TOP_PADDING,
     paddingHorizontal: 16,
     paddingBottom: 8,
   },
 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/search/native/components/list/SearchListSection.tsx");
-
-export default noop.memo(
+let closure_5 = createStyles.createStyles(obj);
+const memo = react.memo;
+const memoResult = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        const cResult = c.c(6);
+        let items;
+        let title;
+        let tmp5;
+        let trailing;
+        const obj = react2;
+        const cResult = obj.c(6);
         ({ title, trailing } = arg0);
         const tmp4 = closure_5();
         if (cResult[0] !== title) {
@@ -52,25 +48,25 @@ export default noop.memo(
             color: "interactive-text-default",
             children: title,
           };
-          const tmp7 = React3(Text_Text.Text, obj2);
+          const tmp7 = _false(Text_Text.Text, obj2);
           cResult[0] = title;
           cResult[1] = tmp7;
-          let tmp5 = tmp7;
+          tmp5 = tmp7;
         } else {
           tmp5 = cResult[1];
         }
         if (cResult[2] === tmp4.section) {
           if (cResult[3] === tmp5) {
+            let tmp8;
             if (cResult[4] === trailing) {
-              let tmp8 = cResult[5];
+              tmp8 = cResult[5];
             }
             return tmp8;
           }
         }
-        const obj3 = { style: tmp4.section, children: null };
-        const items = [tmp5, trailing];
-        obj3.children = items;
-        const tmp9 = React4(View, obj3);
+        const obj3 = { style: tmp4.section, children: items };
+        items = [tmp5, trailing];
+        const tmp9 = React3(View, obj3);
         cResult[2] = tmp4.section;
         cResult[3] = tmp5;
         cResult[4] = trailing;
@@ -78,10 +74,13 @@ export default noop.memo(
         tmp8 = tmp9;
       }
     : (arg0) => {
+        let items;
+        let title;
+        let trailing;
         ({ title, trailing } = arg0);
-        const obj = { style: closure_5().section, children: null };
-        const items = [
-          React3(Text_Text.Text, {
+        const obj = { style: closure_5().section, children: items };
+        items = [
+          _false(Text_Text.Text, {
             maxFontSizeMultiplier: 2,
             accessibilityRole: "header",
             variant: "text-sm/semibold",
@@ -90,7 +89,9 @@ export default noop.memo(
           }),
           trailing,
         ];
-        obj.children = items;
-        return React4(View, obj);
+        return React3(View, obj);
       },
 );
+const result = size.fileFinishedImporting("modules/search/native/components/list/SearchListSection.tsx");
+
+export default memoResult;

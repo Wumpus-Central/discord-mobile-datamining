@@ -1,69 +1,81 @@
 // discord_app/stores/ExpandedGuildFolderStore.tsx
-import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import UserSettingsProtoStore from "../modules/user_settings/UserSettingsProtoStore.tsx";
+import size from "../../_runtime/metro/00002__.js";
+
+let c1;
 
 let set = new Set();
-const PersistedStore = initializeDefault.PersistedStore;
-class ExpandedGuildFolderStore extends PersistedStore {}
-const prototype = ExpandedGuildFolderStore.prototype;
-prototype["initialize"] = function initialize(expandedFolders) {
-  if (null != expandedFolders) {
-    const _Set = Set;
-    set = new Set(expandedFolders.expandedFolders);
+const PersistedStore = get_initializedDefault.PersistedStore;
+class ExpandedGuildFolderStore extends PersistedStore {
+  initialize(expandedFolders) {
+    if (null != expandedFolders) {
+      const _Set = Set;
+      const self = this;
+      const self2 = this;
+      new Set(expandedFolders.expandedFolders);
+    }
+    this.waitFor(UserSettingsProtoStore);
   }
-  this.waitFor(UserSettingsProtoStore);
-};
-prototype["getState"] = function getState() {
-  return { expandedFolders: Array.from(set) };
-};
-prototype["getExpandedFolders"] = function getExpandedFolders() {
-  return set;
-};
-prototype["isFolderExpanded"] = function isFolderExpanded(PENDING_JOIN_REQUESTS_FOLDER) {
-  return set.has(PENDING_JOIN_REQUESTS_FOLDER);
-};
+  getState() {
+    const obj = { expandedFolders: Array.from(set) };
+    return obj;
+  }
+  getExpandedFolders() {
+    return set;
+  }
+  isFolderExpanded(PENDING_JOIN_REQUESTS_FOLDER) {
+    return set.has(PENDING_JOIN_REQUESTS_FOLDER);
+  }
+}
+const prototype = ExpandedGuildFolderStore.prototype;
 ExpandedGuildFolderStore.displayName = "ExpandedGuildFolderStore";
 ExpandedGuildFolderStore.persistKey = "ExpandedGuildFolderStore";
-const expandedGuildFolderStore = new ExpandedGuildFolderStore(DispatcherDefault, {
+let obj = {
   TOGGLE_GUILD_FOLDER_EXPAND: function toggleFolderExpand(folderId) {
     folderId = folderId.folderId;
     set = new Set(set);
     if (set.has(folderId)) {
-      obj2.delete(folderId);
+      set.delete(folderId);
     } else {
-      obj2.add(folderId);
+      set.add(folderId);
     }
   },
   SET_GUILD_FOLDER_EXPANDED: function setFolderExpanded(folderId) {
     folderId = folderId.folderId;
+    const expanded = folderId.expanded;
     set = new Set(set);
-    if (folderId.expanded) {
+    if (expanded) {
       set.add(folderId);
     } else if (set.has(folderId)) {
       set.delete(folderId);
     }
   },
   USER_SETTINGS_PROTO_UPDATE: function handleSettingsUpdate() {
+    let guildFolders;
     guildFolders = guildFolders.getGuildFolders();
     if (null == guildFolders) {
       return false;
     } else {
+      set = false;
       function _loop(iter) {
-        closure_0 = iter;
+        let closure_0 = iter;
         if (!guildFolders.some((folderId) => folderId.folderId === closure_0)) {
           const _Set = Set;
+          const self = this;
+          const self2 = this;
           set = new Set(set);
           set.delete(iter);
           c1 = true;
         }
       }
-      const iter = false[Symbol.iterator]();
+      const iter = set[Symbol.iterator]();
       while (iter !== undefined) {
         let _loopResult = _loop(iter.next());
         continue;
       }
-      return false;
+      return set;
     }
   },
   GUILD_FOLDER_COLLAPSE: function handleCollapseAll() {
@@ -71,11 +83,13 @@ const expandedGuildFolderStore = new ExpandedGuildFolderStore(DispatcherDefault,
       return false;
     } else {
       const _Set = Set;
+      const self = this;
+      const self2 = this;
       set = new Set();
     }
   },
-});
-const size = fn(2);
+};
+const expandedGuildFolderStore = new ExpandedGuildFolderStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("stores/ExpandedGuildFolderStore.tsx");
 
 export default expandedGuildFolderStore;

@@ -1,16 +1,33 @@
 // discord_app/modules/user_settings/UserSettings.tsx
 import _mod12 from "../../../_runtime/metro/00012__.js";
-import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import discord_common_shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
+import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import wrappers from "../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx";
+import GuildThemeSourcePreferenceUtils from "GuildThemeSourcePreferenceUtils.tsx";
+import StickersConstants from "../stickers/StickersConstants.tsx";
 import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import SettingsDefaultFeature from "../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
 import ChannelListLayoutTypes from "../main_tabs_v2/ChannelListLayoutTypes.tsx";
 import UserSettingsOverridesStore from "UserSettingsOverridesStore.tsx";
+import UserSettingsConstants from "UserSettingsConstants.tsx";
+import DMSafetyConstants from "privacy_and_safety/DMSafetyConstants.tsx";
+import Constants from "../../Constants.tsx";
+import UserSettingDefinitions_mod from "UserSettingDefinitions.tsx";
+import "UserSettingDefinitions";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
+let ListDensityMode;
+let StatusTypes;
+let UserSettingsDelay;
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
 function explicitContentFromProto(settings) {
+  let explicitContentFriendDm;
+  let explicitContentGuilds;
+  let explicitContentNonFriendDm;
   let obj = settings;
   if (settings == null) {
     obj = {};
@@ -19,27 +36,28 @@ function explicitContentFromProto(settings) {
   if (explicitContentGuilds == null) {
     explicitContentGuilds = preloaded_user_settings.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
-  const obj2 = { explicitContentGuilds, explicitContentFriendDm: null, explicitContentNonFriendDm: null };
+  const obj2 = { explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm };
   if (explicitContentFriendDm == null) {
     explicitContentFriendDm = preloaded_user_settings.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
-  obj2.explicitContentFriendDm = explicitContentFriendDm;
   if (explicitContentNonFriendDm == null) {
     explicitContentNonFriendDm = preloaded_user_settings.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
-  obj2.explicitContentNonFriendDm = explicitContentNonFriendDm;
   return obj2;
 }
 function explicitContentToProto(explicitContentGuilds) {
+  let explicitContentFriendDm;
+  let explicitContentNonFriendDm;
   explicitContentGuilds = explicitContentGuilds.explicitContentGuilds;
-  const obj = { explicitContentGuilds, explicitContentFriendDm: null, explicitContentNonFriendDm: null };
-  const explicitContentFriendDm = explicitContentGuilds.explicitContentFriendDm;
-  obj.explicitContentFriendDm = explicitContentFriendDm;
-  const explicitContentNonFriendDm = explicitContentGuilds.explicitContentNonFriendDm;
-  obj.explicitContentNonFriendDm = explicitContentNonFriendDm;
+  const obj = { explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm };
+  explicitContentFriendDm = explicitContentGuilds.explicitContentFriendDm;
+  explicitContentNonFriendDm = explicitContentGuilds.explicitContentNonFriendDm;
   return obj;
 }
 function goreContentFromProto(arg0) {
+  let goreContentFriendDm;
+  let goreContentGuilds;
+  let goreContentNonFriendDm;
   let obj = arg0;
   if (arg0 == null) {
     obj = {};
@@ -48,35 +66,29 @@ function goreContentFromProto(arg0) {
   if (goreContentGuilds == null) {
     goreContentGuilds = preloaded_user_settings.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
-  const obj2 = { goreContentGuilds, goreContentFriendDm: null, goreContentNonFriendDm: null };
+  const obj2 = { goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm };
   if (goreContentFriendDm == null) {
     goreContentFriendDm = preloaded_user_settings.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
-  obj2.goreContentFriendDm = goreContentFriendDm;
   if (goreContentNonFriendDm == null) {
     goreContentNonFriendDm = preloaded_user_settings.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
-  obj2.goreContentNonFriendDm = goreContentNonFriendDm;
   return obj2;
 }
 function goreContentToProto(goreContentGuilds) {
+  let goreContentFriendDm;
+  let goreContentNonFriendDm;
   goreContentGuilds = goreContentGuilds.goreContentGuilds;
-  const obj = { goreContentGuilds, goreContentFriendDm: null, goreContentNonFriendDm: null };
-  const goreContentFriendDm = goreContentGuilds.goreContentFriendDm;
-  obj.goreContentFriendDm = goreContentFriendDm;
-  const goreContentNonFriendDm = goreContentGuilds.goreContentNonFriendDm;
-  obj.goreContentNonFriendDm = goreContentNonFriendDm;
+  const obj = { goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm };
+  goreContentFriendDm = goreContentGuilds.goreContentFriendDm;
+  goreContentNonFriendDm = goreContentGuilds.goreContentNonFriendDm;
   return obj;
 }
-const UserSettingsConstants = fn(1095);
 ({ UserSettingsDelay, ListDensityMode } = UserSettingsConstants);
-const DMSafetyConstants = fn(2030);
 ({ DmSpamFilterTypes: c3, ExplicitContentFilterTypes: closure_4 } = DMSafetyConstants);
-const Constants = fn(1085);
 ({ AllFriendSourceFlags: hasOwnProperty, SpoilerRenderSetting: metroRequire, StatusTypes } = Constants);
-const StickerAnimationSettings = fn(2031).StickerAnimationSettings;
-fn(2032);
-let UserSettingDefinitions = fn(2032);
+const StickerAnimationSettings = StickersConstants.StickerAnimationSettings;
+let UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "useLegacyChatInput",
@@ -92,10 +104,11 @@ const defineProtoSettingResult = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult1 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "useRichChatInput",
@@ -111,10 +124,11 @@ const defineProtoSettingResult1 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult2 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "includeStickersInAutocomplete",
@@ -130,10 +144,11 @@ const defineProtoSettingResult2 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult3 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "includeSoundmojiInAutocomplete",
@@ -149,10 +164,11 @@ const defineProtoSettingResult3 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult4 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "includeGameMentionsInAutocomplete",
@@ -168,10 +184,11 @@ const defineProtoSettingResult4 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult5 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "inlineEmojiSuggestionsEnabled",
@@ -187,10 +204,11 @@ const defineProtoSettingResult5 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult6 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "renderSpoilers",
@@ -200,16 +218,17 @@ const defineProtoSettingResult6 = UserSettingDefinitions.defineProtoSetting(
       ON_CLICK = value.value;
     }
     if (ON_CLICK == null) {
-      ON_CLICK = constants3.ON_CLICK;
+      ON_CLICK = metroRequire.ON_CLICK;
     }
     return ON_CLICK;
   },
   (value) => {
     const StringValue = wrappers.StringValue;
-    return StringValue.create({ value });
+    const obj = { value };
+    return StringValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult7 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "useThreadSidebar",
@@ -225,10 +244,11 @@ const defineProtoSettingResult7 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult8 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "showInAppNotifications",
@@ -244,10 +264,11 @@ const defineProtoSettingResult8 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult9 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "reactionNotifications",
@@ -260,7 +281,7 @@ const defineProtoSettingResult9 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult10 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "customStatusPushNotifications",
@@ -273,7 +294,7 @@ const defineProtoSettingResult10 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult11 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableSummaryReminderNotifications",
@@ -289,10 +310,11 @@ const defineProtoSettingResult11 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult12 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableScreenDowntimeScheduleNotifications",
@@ -308,10 +330,11 @@ const defineProtoSettingResult12 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult13 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableVoiceActivityNotifications",
@@ -327,10 +350,11 @@ const defineProtoSettingResult13 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult14 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableFriendOnlineNotifications",
@@ -346,10 +370,11 @@ const defineProtoSettingResult14 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult15 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableFriendAnniversaryNotifications",
@@ -365,10 +390,11 @@ const defineProtoSettingResult15 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult16 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableServerTrendingNotifications",
@@ -384,10 +410,11 @@ const defineProtoSettingResult16 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult17 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableProfileUpdatesNotifications",
@@ -403,10 +430,11 @@ const defineProtoSettingResult17 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult18 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableFriendGamingActivityNotifications",
@@ -422,10 +450,11 @@ const defineProtoSettingResult18 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult19 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "enableUpcomingServerEventNotifications",
@@ -441,11 +470,11 @@ const defineProtoSettingResult19 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
-let closure_9 = [];
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult20 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "quietMode",
@@ -461,10 +490,12 @@ const defineProtoSettingResult20 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
+let closure_9 = [];
 const defineProtoSettingResult21 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "focusModeExpiresAtMs",
@@ -477,7 +508,7 @@ const defineProtoSettingResult21 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult22 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "emojiPickerCollapsedSections",
@@ -490,7 +521,7 @@ const defineProtoSettingResult22 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult23 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "stickerPickerCollapsedSections",
@@ -503,7 +534,7 @@ const defineProtoSettingResult23 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult24 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "soundboardPickerCollapsedSections",
@@ -516,7 +547,7 @@ const defineProtoSettingResult24 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult25 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "viewImageDescriptions",
@@ -532,10 +563,11 @@ const defineProtoSettingResult25 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult26 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "showCommandSuggestions",
@@ -551,10 +583,11 @@ const defineProtoSettingResult26 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult27 = UserSettingDefinitions.defineProtoSetting(
   "voiceAndVideo",
   "alwaysPreviewVideo",
@@ -570,10 +603,11 @@ const defineProtoSettingResult27 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult28 = UserSettingDefinitions.defineProtoSetting(
   "voiceAndVideo",
   "disableStreamPreviews",
@@ -586,10 +620,11 @@ const defineProtoSettingResult28 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult29 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "notifyFriendsOnGoLive",
@@ -602,10 +637,11 @@ const defineProtoSettingResult29 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult30 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "notifyFriendsOnComeOnline",
@@ -621,10 +657,11 @@ const defineProtoSettingResult30 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult31 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "notifyFriendsOnProfileUpdate",
@@ -640,10 +677,11 @@ const defineProtoSettingResult31 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult32 = UserSettingDefinitions.defineProtoSetting(
   "notifications",
   "notificationCenterAckedBeforeId",
@@ -656,7 +694,7 @@ const defineProtoSettingResult32 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult33 = UserSettingDefinitions.defineProtoSetting(
   "gameLibrary",
   "installShortcutDesktop",
@@ -672,10 +710,11 @@ const defineProtoSettingResult33 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult34 = UserSettingDefinitions.defineProtoSetting(
   "gameLibrary",
   "installShortcutStartMenu",
@@ -691,11 +730,11 @@ const defineProtoSettingResult34 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
-let closure_10 = [];
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult35 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "allowActivityPartyPrivacyFriends",
@@ -711,10 +750,12 @@ const defineProtoSettingResult35 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
+let closure_10 = [];
 const defineProtoSettingResult36 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "allowActivityPartyPrivacyVoiceChannel",
@@ -730,10 +771,11 @@ const defineProtoSettingResult36 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult37 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "messageRequestRestrictedGuildIds",
@@ -746,7 +788,7 @@ const defineProtoSettingResult37 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult38 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "defaultMessageRequestRestricted",
@@ -759,10 +801,11 @@ const defineProtoSettingResult38 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult39 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "nonSpamRetrainingOptIn",
@@ -783,7 +826,7 @@ const defineProtoSettingResult39 = UserSettingDefinitions.defineProtoSetting(
     return obj2;
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult40 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "contactSyncEnabled",
@@ -799,10 +842,11 @@ const defineProtoSettingResult40 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult41 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "defaultGuildsRestricted",
@@ -815,7 +859,7 @@ const defineProtoSettingResult41 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult42 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "defaultGuildsRestrictedV2",
@@ -828,10 +872,11 @@ const defineProtoSettingResult42 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult43 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "restrictedGuildIds",
@@ -844,7 +889,7 @@ const defineProtoSettingResult43 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult44 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "friendDiscoveryFlags",
@@ -860,10 +905,11 @@ const defineProtoSettingResult44 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const UInt32Value = wrappers.UInt32Value;
-    return UInt32Value.create({ value });
+    const obj = { value };
+    return UInt32Value.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult45 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "friendSourceFlags",
@@ -879,10 +925,11 @@ const defineProtoSettingResult45 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const UInt32Value = wrappers.UInt32Value;
-    return UInt32Value.create({ value });
+    const obj = { value };
+    return UInt32Value.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult46 = UserSettingDefinitions.defineProtoSetting(
   "debug",
   "rtcPanelShowVoiceStates",
@@ -898,10 +945,11 @@ const defineProtoSettingResult46 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult47 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "convertEmoticons",
@@ -917,10 +965,11 @@ const defineProtoSettingResult47 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult48 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "messageDisplayCompact",
@@ -936,10 +985,11 @@ const defineProtoSettingResult48 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult49 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "displayCompactAvatars",
@@ -955,17 +1005,18 @@ const defineProtoSettingResult49 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult50 = UserSettingDefinitions.defineProtoSetting(
   "voiceAndVideo",
   "soundboardSettings",
   (arg0) => arg0,
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult51 = UserSettingDefinitions.defineProtoSetting(
   "voiceAndVideo",
   "soundmojiVolume",
@@ -981,10 +1032,11 @@ const defineProtoSettingResult51 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const FloatValue = wrappers.FloatValue;
-    return FloatValue.create({ value });
+    const obj = { value };
+    return FloatValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult52 = UserSettingDefinitions.defineProtoSetting(
   "voiceAndVideo",
   "streamNotificationsEnabled",
@@ -1000,11 +1052,11 @@ const defineProtoSettingResult52 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
-let closure_11 = [];
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult53 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "dropsOptedOut",
@@ -1020,10 +1072,12 @@ const defineProtoSettingResult53 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
+let closure_11 = [];
 const defineProtoSettingResult54 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "quests3PDataOptedOut",
@@ -1039,10 +1093,11 @@ const defineProtoSettingResult54 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult55 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "adTopicOptOuts",
@@ -1055,7 +1110,7 @@ const defineProtoSettingResult55 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult56 = UserSettingDefinitions.defineProtoSetting(
   "voiceAndVideo",
   "nativePhoneIntegrationEnabled",
@@ -1071,10 +1126,11 @@ const defineProtoSettingResult56 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult57 = UserSettingDefinitions.defineProtoSetting(
   "voiceAndVideo",
   "afkTimeout",
@@ -1090,10 +1146,11 @@ const defineProtoSettingResult57 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const UInt32Value = wrappers.UInt32Value;
-    return UInt32Value.create({ value });
+    const obj = { value };
+    return UInt32Value.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult58 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "viewNsfwGuilds",
@@ -1109,10 +1166,11 @@ const defineProtoSettingResult58 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult59 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "viewNsfwCommands",
@@ -1128,10 +1186,11 @@ const defineProtoSettingResult59 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult60 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "detectPlatformAccounts",
@@ -1147,10 +1206,11 @@ const defineProtoSettingResult60 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult61 = UserSettingDefinitions.defineProtoSetting(
   "gameLibrary",
   "disableGamesTab",
@@ -1166,10 +1226,11 @@ const defineProtoSettingResult61 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult62 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "enableTtsCommand",
@@ -1185,10 +1246,11 @@ const defineProtoSettingResult62 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult63 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "explicitContentFilter",
@@ -1204,10 +1266,11 @@ const defineProtoSettingResult63 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const UInt32Value = wrappers.UInt32Value;
-    return UInt32Value.create({ value });
+    const obj = { value };
+    return UInt32Value.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult64 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "dmSpamFilter",
@@ -1223,10 +1286,11 @@ const defineProtoSettingResult64 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const UInt32Value = wrappers.UInt32Value;
-    return UInt32Value.create({ value });
+    const obj = { value };
+    return UInt32Value.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult65 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "dmSpamFilterV2",
@@ -1239,7 +1303,7 @@ const defineProtoSettingResult65 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult66 = UserSettingDefinitions.defineProtoSetting(
   "status",
   "showCurrentGame",
@@ -1255,10 +1319,11 @@ const defineProtoSettingResult66 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult67 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "recentGamesEnabled",
@@ -1274,11 +1339,11 @@ const defineProtoSettingResult67 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-const set = new Set(Object.values(StatusTypes));
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult68 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "profileVisibility",
@@ -1291,14 +1356,16 @@ const defineProtoSettingResult68 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+const set = new Set(Object.values(StatusTypes));
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult69 = UserSettingDefinitions.defineProtoSetting(
   "status",
   "status",
   (value) => {
     if (null != value) {
+      let UNKNOWN;
       if (set.has(value.value)) {
-        let UNKNOWN = value.value;
+        UNKNOWN = value.value;
       }
       return UNKNOWN;
     }
@@ -1306,10 +1373,11 @@ const defineProtoSettingResult69 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const StringValue = wrappers.StringValue;
-    return StringValue.create({ value });
+    const obj = { value };
+    return StringValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult70 = UserSettingDefinitions.defineProtoSetting(
   "status",
   "statusExpiresAtMs",
@@ -1322,118 +1390,21 @@ const defineProtoSettingResult70 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult71 = UserSettingDefinitions.defineProtoSetting(
   "status",
   "statusCreatedAtMs",
   (arg0) => arg0,
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult72 = UserSettingDefinitions.defineProtoSetting(
   "status",
   "customStatus",
   (arg0) => arg0,
   (arg0) => arg0,
 );
-fn(2032);
-UserSettingDefinitions = fn(2032);
-const result = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
-  UserSettingDefinitions.defineProtoSetting(
-    "textAndImages",
-    "inlineAttachmentMedia",
-    (value) => {
-      let flag;
-      if (value != null) {
-        flag = value.value;
-      }
-      if (flag == null) {
-        flag = true;
-      }
-      return flag;
-    },
-    (value) => {
-      const BoolValue = wrappers.BoolValue;
-      return BoolValue.create({ value });
-    },
-  ),
-  "text",
-  "inlineAttachmentMedia",
-);
-fn(2032);
-UserSettingDefinitions = fn(2032);
-const result1 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
-  UserSettingDefinitions.defineProtoSetting(
-    "textAndImages",
-    "inlineEmbedMedia",
-    (value) => {
-      let flag;
-      if (value != null) {
-        flag = value.value;
-      }
-      if (flag == null) {
-        flag = true;
-      }
-      return flag;
-    },
-    (value) => {
-      const BoolValue = wrappers.BoolValue;
-      return BoolValue.create({ value });
-    },
-  ),
-  "text",
-  "inlineEmbedMedia",
-);
-fn(2032);
-UserSettingDefinitions = fn(2032);
-const result2 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
-  UserSettingDefinitions.defineProtoSetting(
-    "textAndImages",
-    "renderEmbeds",
-    (value) => {
-      let flag;
-      if (value != null) {
-        flag = value.value;
-      }
-      if (flag == null) {
-        flag = true;
-      }
-      return flag;
-    },
-    (value) => {
-      const BoolValue = wrappers.BoolValue;
-      return BoolValue.create({ value });
-    },
-  ),
-  "text",
-  "renderEmbeds",
-);
-fn(2032);
-UserSettingDefinitions = fn(2032);
-const result3 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
-  UserSettingDefinitions.defineProtoSetting(
-    "textAndImages",
-    "renderReactions",
-    (value) => {
-      let flag;
-      if (value != null) {
-        flag = value.value;
-      }
-      if (flag == null) {
-        flag = true;
-      }
-      return flag;
-    },
-    (value) => {
-      const BoolValue = wrappers.BoolValue;
-      return BoolValue.create({ value });
-    },
-  ),
-  "text",
-  "renderReactions",
-);
-fn(2032);
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult73 = UserSettingDefinitions.defineProtoSetting(
   "clips",
   "allowVoiceRecording",
@@ -1449,35 +1420,148 @@ const defineProtoSettingResult73 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-const result4 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const wrapSettingWithSelectiveSyncing = UserSettingDefinitions.wrapSettingWithSelectiveSyncing;
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const result = wrapSettingWithSelectiveSyncing(
+  UserSettingDefinitions.defineProtoSetting(
+    "textAndImages",
+    "inlineAttachmentMedia",
+    (value) => {
+      let flag;
+      if (value != null) {
+        flag = value.value;
+      }
+      if (flag == null) {
+        flag = true;
+      }
+      return flag;
+    },
+    (value) => {
+      const BoolValue = wrappers.BoolValue;
+      const obj = { value };
+      return BoolValue.create(obj);
+    },
+  ),
+  "text",
+  "inlineAttachmentMedia",
+);
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const wrapSettingWithSelectiveSyncing2 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing;
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const result1 = wrapSettingWithSelectiveSyncing2(
+  UserSettingDefinitions.defineProtoSetting(
+    "textAndImages",
+    "inlineEmbedMedia",
+    (value) => {
+      let flag;
+      if (value != null) {
+        flag = value.value;
+      }
+      if (flag == null) {
+        flag = true;
+      }
+      return flag;
+    },
+    (value) => {
+      const BoolValue = wrappers.BoolValue;
+      const obj = { value };
+      return BoolValue.create(obj);
+    },
+  ),
+  "text",
+  "inlineEmbedMedia",
+);
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const wrapSettingWithSelectiveSyncing3 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing;
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const result2 = wrapSettingWithSelectiveSyncing3(
+  UserSettingDefinitions.defineProtoSetting(
+    "textAndImages",
+    "renderEmbeds",
+    (value) => {
+      let flag;
+      if (value != null) {
+        flag = value.value;
+      }
+      if (flag == null) {
+        flag = true;
+      }
+      return flag;
+    },
+    (value) => {
+      const BoolValue = wrappers.BoolValue;
+      const obj = { value };
+      return BoolValue.create(obj);
+    },
+  ),
+  "text",
+  "renderEmbeds",
+);
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const wrapSettingWithSelectiveSyncing4 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing;
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const result3 = wrapSettingWithSelectiveSyncing4(
+  UserSettingDefinitions.defineProtoSetting(
+    "textAndImages",
+    "renderReactions",
+    (value) => {
+      let flag;
+      if (value != null) {
+        flag = value.value;
+      }
+      if (flag == null) {
+        flag = true;
+      }
+      return flag;
+    },
+    (value) => {
+      const BoolValue = wrappers.BoolValue;
+      const obj = { value };
+      return BoolValue.create(obj);
+    },
+  ),
+  "text",
+  "renderReactions",
+);
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const wrapSettingWithSelectiveSyncing5 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing;
+UserSettingDefinitions = UserSettingDefinitions_mod;
+let obj = { comparator: shallowEqualDefault };
+const result4 = wrapSettingWithSelectiveSyncing5(
   UserSettingDefinitions.defineProtoSetting(
     "textAndImages",
     "defaultReactionEmoji",
     (disableDoubleTap) => {
+      let animated;
+      let emojiId;
+      let emojiName;
+      let flag;
+      let value3;
+      let value4;
       let obj = disableDoubleTap;
       if (disableDoubleTap == null) {
         obj = {};
       }
       ({ emojiId, emojiName, animated } = obj);
-      value = undefined;
+      let value;
       if (emojiId != null) {
         value = emojiId.value;
       }
-      const obj2 = { emojiId: value, emojiName: null, animated: null, disableDoubleTap: null };
+      const obj2 = { emojiId: value, emojiName: value3, animated: value4, disableDoubleTap: flag };
       value3 = undefined;
       if (emojiName != null) {
         value3 = emojiName.value;
       }
-      obj2.emojiName = value3;
-      let value4;
+      value4 = undefined;
       if (animated != null) {
         value4 = animated.value;
       }
-      obj2.animated = value4;
-      let flag;
+      flag = undefined;
       if (disableDoubleTap != null) {
         if (disableDoubleTap.disableDoubleTap != null) {
           flag = iter.value;
@@ -1486,34 +1570,37 @@ const result4 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
       if (flag == null) {
         flag = false;
       }
-      obj2.disableDoubleTap = flag;
       return obj2;
     },
     (arg0) => {
-      const obj = { emojiId: null, emojiName: null, animated: null, disableDoubleTap: null };
+      let BoolValue;
+      let BoolValue2;
+      let StringValue;
+      let UInt64Value;
+      let animated;
+      let disableDoubleTap;
+      let emojiId;
+      let emojiName;
+      const obj = {
+        emojiId: UInt64Value.create({ value: emojiId }),
+        emojiName: StringValue.create({ value: emojiName }),
+        animated: BoolValue.create({ value: animated }),
+        disableDoubleTap: BoolValue2.create({ value: disableDoubleTap }),
+      };
       ({ emojiId, emojiName, animated, disableDoubleTap } = arg0);
-      const UInt64Value = wrappers.UInt64Value;
-      obj.emojiId = UInt64Value.create({ value: emojiId });
-      const StringValue = wrappers.StringValue;
-      obj.emojiName = StringValue.create({ value: emojiName });
-      const BoolValue = wrappers.BoolValue;
-      obj.animated = BoolValue.create({ value: animated });
-      const BoolValue2 = wrappers.BoolValue;
-      obj.disableDoubleTap = BoolValue2.create({ value: disableDoubleTap });
+      UInt64Value = wrappers.UInt64Value;
+      StringValue = wrappers.StringValue;
+      BoolValue = wrappers.BoolValue;
+      BoolValue2 = wrappers.BoolValue;
       return obj;
     },
-    { comparator: discord_common_shallowEqualDefault },
+    obj,
   ),
   "text",
   "defaultReactionEmoji",
 );
-fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 let items = [ListDensityMode.AUTO, ,];
-const obj85 = { comparator: discord_common_shallowEqualDefault };
-items[1] = fn(7514).ChannelListLayoutTypes.COZY;
-items[2] = fn(7514).ChannelListLayoutTypes.COMPACT;
-const set1 = new Set(items);
-UserSettingDefinitions = fn(2032);
 const defineProtoSettingResult74 = UserSettingDefinitions.defineProtoSetting(
   "localization",
   "timezoneOffset",
@@ -1528,28 +1615,28 @@ const defineProtoSettingResult74 = UserSettingDefinitions.defineProtoSetting(
     return value;
   },
   (arg0) => {
-    value = arg0;
+    let value = arg0;
     const Int32Value = wrappers.Int32Value;
+    const create = Int32Value.create;
     if (arg0 == null) {
       value = 0;
     }
-    return Int32Value.create({ value });
+    return create({ value });
   },
 );
-const items1 = [
-  fn(7514).MessagePreviewTypes.ALL,
-  fn(7514).MessagePreviewTypes.UNREADS,
-  fn(7514).MessagePreviewTypes.NONE,
-];
-const set2 = new Set(items1);
-UserSettingDefinitions = fn(2032);
+items[1] = ChannelListLayoutTypes.ChannelListLayoutTypes.COZY;
+items[2] = ChannelListLayoutTypes.ChannelListLayoutTypes.COMPACT;
+const set1 = new Set(items);
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const items1 = [, ,];
 const defineProtoSettingResult75 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "channelListLayout",
   (value) => {
     if (null != value) {
+      let COZY;
       if (set1.has(value.value)) {
-        let COZY = value.value;
+        COZY = value.value;
       }
       return COZY;
     }
@@ -1557,12 +1644,38 @@ const defineProtoSettingResult75 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const StringValue = wrappers.StringValue;
-    return StringValue.create({ value });
+    const obj = { value };
+    return StringValue.create(obj);
   },
 );
-fn(2032);
-UserSettingDefinitions = fn(2032);
-const result5 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
+items1[0] = ChannelListLayoutTypes.MessagePreviewTypes.ALL;
+items1[1] = ChannelListLayoutTypes.MessagePreviewTypes.UNREADS;
+items1[2] = ChannelListLayoutTypes.MessagePreviewTypes.NONE;
+const set2 = new Set(items1);
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const defineProtoSettingResult76 = UserSettingDefinitions.defineProtoSetting(
+  "appearance",
+  "messagePreviews",
+  (value) => {
+    if (null != value) {
+      let ALL;
+      if (set2.has(value.value)) {
+        ALL = value.value;
+      }
+      return ALL;
+    }
+    ALL = ChannelListLayoutTypes.MessagePreviewTypes.ALL;
+  },
+  (value) => {
+    const StringValue = wrappers.StringValue;
+    const obj = { value };
+    return StringValue.create(obj);
+  },
+);
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const wrapSettingWithSelectiveSyncing6 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing;
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const result5 = wrapSettingWithSelectiveSyncing6(
   UserSettingDefinitions.defineProtoSetting(
     "appearance",
     "developerMode",
@@ -1578,26 +1691,7 @@ const result5 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
   "appearance",
   "developerMode",
 );
-UserSettingDefinitions = fn(2032);
-const defineProtoSettingResult76 = UserSettingDefinitions.defineProtoSetting(
-  "appearance",
-  "messagePreviews",
-  (value) => {
-    if (null != value) {
-      if (set2.has(value.value)) {
-        let ALL = value.value;
-      }
-      return ALL;
-    }
-    ALL = ChannelListLayoutTypes.MessagePreviewTypes.ALL;
-  },
-  (value) => {
-    const StringValue = wrappers.StringValue;
-    return StringValue.create({ value });
-  },
-);
-fn(2032);
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult77 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "darkSidebar",
@@ -1610,66 +1704,82 @@ const defineProtoSettingResult77 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-const result6 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const wrapSettingWithSelectiveSyncing7 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing;
+UserSettingDefinitions = UserSettingDefinitions_mod;
+let obj2 = { comparator: _mod12.isEqual };
+const result6 = wrapSettingWithSelectiveSyncing7(
   UserSettingDefinitions.defineProtoSetting(
     "appearance",
     "clientThemeSettings",
     (backgroundGradientPresetId) => {
-      value = undefined;
+      let tmp3;
+      let value;
       if (backgroundGradientPresetId != null) {
         if (backgroundGradientPresetId.backgroundGradientPresetId != null) {
           value = iter.value;
         }
       }
-      const obj = { backgroundGradientPresetId: value, customUserThemeSettings: null };
       let prop;
+      const obj = { backgroundGradientPresetId: value, customUserThemeSettings: tmp3 };
       if (backgroundGradientPresetId != null) {
         prop = backgroundGradientPresetId.customUserThemeSettings;
       }
-      let tmp3;
+      tmp3 = undefined;
       if (null != prop) {
+        tmp3 = {
+          colors: backgroundGradientPresetId.customUserThemeSettings.colors,
+          gradientColorStops: backgroundGradientPresetId.customUserThemeSettings.gradientColorStops,
+          gradientAngle: backgroundGradientPresetId.customUserThemeSettings.gradientAngle,
+          baseMix: backgroundGradientPresetId.customUserThemeSettings.baseMix,
+        };
         const obj2 = {
           colors: backgroundGradientPresetId.customUserThemeSettings.colors,
           gradientColorStops: backgroundGradientPresetId.customUserThemeSettings.gradientColorStops,
           gradientAngle: backgroundGradientPresetId.customUserThemeSettings.gradientAngle,
           baseMix: backgroundGradientPresetId.customUserThemeSettings.baseMix,
         };
-        tmp3 = obj2;
       }
-      obj.customUserThemeSettings = tmp3;
       return obj;
     },
     (backgroundGradientPresetId) => {
+      let tmp4;
       let obj2;
       if (null != backgroundGradientPresetId.backgroundGradientPresetId) {
         const UInt32Value = wrappers.UInt32Value;
         const obj = { value: backgroundGradientPresetId.backgroundGradientPresetId };
         obj2 = UInt32Value.create(obj);
       }
-      const obj3 = { backgroundGradientPresetId: obj2, customUserThemeSettings: null };
-      let tmp4;
+      const obj3 = { backgroundGradientPresetId: obj2, customUserThemeSettings: tmp4 };
+      tmp4 = undefined;
       if (null != backgroundGradientPresetId.customUserThemeSettings) {
+        tmp4 = {
+          colors: backgroundGradientPresetId.customUserThemeSettings.colors,
+          gradientColorStops: backgroundGradientPresetId.customUserThemeSettings.gradientColorStops,
+          gradientAngle: backgroundGradientPresetId.customUserThemeSettings.gradientAngle,
+          baseMix: backgroundGradientPresetId.customUserThemeSettings.baseMix,
+        };
         const obj6 = {
           colors: backgroundGradientPresetId.customUserThemeSettings.colors,
           gradientColorStops: backgroundGradientPresetId.customUserThemeSettings.gradientColorStops,
           gradientAngle: backgroundGradientPresetId.customUserThemeSettings.gradientAngle,
           baseMix: backgroundGradientPresetId.customUserThemeSettings.baseMix,
         };
-        tmp4 = obj6;
       }
-      obj3.customUserThemeSettings = tmp4;
       return obj3;
     },
-    { comparator: fn(12).isEqual },
+    obj2,
   ),
   "appearance",
   "clientThemeSettings",
 );
-fn(2032);
-fn(2032);
-UserSettingDefinitions = fn(2032);
-const result7 = UserSettingDefinitions.wrapSettingWithOverride(
-  UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const wrapSettingWithOverride = UserSettingDefinitions.wrapSettingWithOverride;
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const wrapSettingWithSelectiveSyncing8 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing;
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const result7 = wrapSettingWithOverride(
+  wrapSettingWithSelectiveSyncing8(
     UserSettingDefinitions.defineProtoSetting(
       "textAndImages",
       "gifAutoPlay",
@@ -1685,7 +1795,8 @@ const result7 = UserSettingDefinitions.wrapSettingWithOverride(
       },
       (value) => {
         const BoolValue = wrappers.BoolValue;
-        return BoolValue.create({ value });
+        const obj = { value };
+        return BoolValue.create(obj);
       },
     ),
     "text",
@@ -1694,17 +1805,19 @@ const result7 = UserSettingDefinitions.wrapSettingWithOverride(
   "gifAutoPlay",
   () => {
     const iter = UserSettingsOverridesStore.getOverride("gifAutoPlay");
-    value = undefined;
+    let value;
     if (iter != null) {
       value = iter.value;
     }
     return value;
   },
   () => {
+    let override;
     const items = [UserSettingsOverridesStore];
-    return initialize.useStateFromStores(items, () => {
+    const obj = get_initialized;
+    return obj.useStateFromStores(items, () => {
       const iter = override.getOverride("gifAutoPlay");
-      value = undefined;
+      let value;
       if (iter != null) {
         value = iter.value;
       }
@@ -1712,11 +1825,13 @@ const result7 = UserSettingDefinitions.wrapSettingWithOverride(
     });
   },
 );
-fn(2032);
-fn(2032);
-UserSettingDefinitions = fn(2032);
-const result8 = UserSettingDefinitions.wrapSettingWithOverride(
-  UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const wrapSettingWithOverride2 = UserSettingDefinitions.wrapSettingWithOverride;
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const wrapSettingWithSelectiveSyncing9 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing;
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const result8 = wrapSettingWithOverride2(
+  wrapSettingWithSelectiveSyncing9(
     UserSettingDefinitions.defineProtoSetting(
       "textAndImages",
       "animateEmoji",
@@ -1732,7 +1847,8 @@ const result8 = UserSettingDefinitions.wrapSettingWithOverride(
       },
       (value) => {
         const BoolValue = wrappers.BoolValue;
-        return BoolValue.create({ value });
+        const obj = { value };
+        return BoolValue.create(obj);
       },
     ),
     "text",
@@ -1741,17 +1857,19 @@ const result8 = UserSettingDefinitions.wrapSettingWithOverride(
   "animateEmoji",
   () => {
     const iter = UserSettingsOverridesStore.getOverride("animateEmoji");
-    value = undefined;
+    let value;
     if (iter != null) {
       value = iter.value;
     }
     return value;
   },
   () => {
+    let override;
     const items = [UserSettingsOverridesStore];
-    return initialize.useStateFromStores(items, () => {
+    const obj = get_initialized;
+    return obj.useStateFromStores(items, () => {
       const iter = override.getOverride("animateEmoji");
-      value = undefined;
+      let value;
       if (iter != null) {
         value = iter.value;
       }
@@ -1759,12 +1877,14 @@ const result8 = UserSettingDefinitions.wrapSettingWithOverride(
     });
   },
 );
-fn(2032);
-fn(2032);
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const wrapSettingWithOverride3 = UserSettingDefinitions.wrapSettingWithOverride;
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const wrapSettingWithSelectiveSyncing10 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing;
+UserSettingDefinitions = UserSettingDefinitions_mod;
 let closure_15 = [];
-const result9 = UserSettingDefinitions.wrapSettingWithOverride(
-  UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
+const result9 = wrapSettingWithOverride3(
+  wrapSettingWithSelectiveSyncing10(
     UserSettingDefinitions.defineProtoSetting(
       "textAndImages",
       "animateStickers",
@@ -1780,7 +1900,8 @@ const result9 = UserSettingDefinitions.wrapSettingWithOverride(
       },
       (value) => {
         const UInt32Value = wrappers.UInt32Value;
-        return UInt32Value.create({ value });
+        const obj = { value };
+        return UInt32Value.create(obj);
       },
     ),
     "text",
@@ -1789,17 +1910,19 @@ const result9 = UserSettingDefinitions.wrapSettingWithOverride(
   "animateStickers",
   () => {
     const iter = UserSettingsOverridesStore.getOverride("animateStickers");
-    value = undefined;
+    let value;
     if (iter != null) {
       value = iter.value;
     }
     return value;
   },
   () => {
+    let override;
     const items = [UserSettingsOverridesStore];
-    return initialize.useStateFromStores(items, () => {
+    const obj = get_initialized;
+    return obj.useStateFromStores(items, () => {
       const iter = override.getOverride("animateStickers");
-      value = undefined;
+      let value;
       if (iter != null) {
         value = iter.value;
       }
@@ -1807,10 +1930,7 @@ const result9 = UserSettingDefinitions.wrapSettingWithOverride(
     });
   },
 );
-fn(2032);
-const obj94 = { comparator: fn(12).isEqual };
-UserSettingDefinitions = fn(2032);
-let closure_16 = [];
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult78 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "activityRestrictedGuildIds",
@@ -1823,8 +1943,9 @@ const defineProtoSettingResult78 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-const obj106 = { delay: UserSettingsDelay.FREQUENT_USER_ACTION };
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
+let obj3 = { delay: UserSettingsDelay.FREQUENT_USER_ACTION };
+let closure_16 = [];
 const defineProtoSettingResult79 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "activityRestrictedGuildIds",
@@ -1836,87 +1957,9 @@ const defineProtoSettingResult79 = UserSettingDefinitions.defineProtoSetting(
     return tmp;
   },
   (arg0) => arg0,
-  { delay: UserSettingsDelay.FREQUENT_USER_ACTION },
+  obj3,
 );
-fn(2032);
-const obj109 = {
-  baseSetting: null,
-  isEligible: null,
-  useIsEligible: null,
-  ineligibleDefault: null,
-  eligibleDefault: null,
-};
-UserSettingDefinitions = fn(2032);
-obj109.baseSetting = UserSettingDefinitions.defineProtoSetting(
-  "privacy",
-  "defaultGuildsActivityRestricted",
-  (arg0) => arg0,
-  (arg0) => {
-    let OFF = arg0;
-    if (arg0 == null) {
-      OFF = preloaded_user_settings.GuildActivityStatusRestrictionDefault.OFF;
-    }
-    return OFF;
-  },
-);
-obj109.isEligible = function isEligible() {
-  return RegionalFeatureConfigUtils.isSettingTeenByDefault(
-    SettingsDefaultFeature.SettingsDefaultFeature.GUILD_ACTIVITY_STATUS,
-  );
-};
-obj109.useIsEligible = function useIsEligible() {
-  return RegionalFeatureConfigUtils.useIsSettingTeenByDefault(
-    SettingsDefaultFeature.SettingsDefaultFeature.GUILD_ACTIVITY_STATUS,
-  );
-};
-obj109.ineligibleDefault = fn(1197).GuildActivityStatusRestrictionDefault.OFF;
-obj109.eligibleDefault = function eligibleDefault() {
-  return preloaded_user_settings.GuildActivityStatusRestrictionDefault.ON_FOR_LARGE_GUILDS;
-};
-const result10 = UserSettingDefinitions.wrapSettingWithExperimentDefaults(obj109);
-fn(2032);
-const obj112 = {
-  baseSetting: null,
-  isEligible: null,
-  useIsEligible: null,
-  ineligibleDefault: null,
-  eligibleDefault: null,
-};
-UserSettingDefinitions = fn(2032);
-obj112.baseSetting = UserSettingDefinitions.defineProtoSetting(
-  "privacy",
-  "defaultGuildsActivityRestrictedV2",
-  (arg0) => {
-    let tmp = null;
-    if (arg0 !== preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_UNSET) {
-      tmp = arg0;
-    }
-    return tmp;
-  },
-  (arg0) => {
-    let ACTIVITY_STATUS_OFF = arg0;
-    if (arg0 == null) {
-      ACTIVITY_STATUS_OFF = preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF;
-    }
-    return ACTIVITY_STATUS_OFF;
-  },
-);
-obj112.isEligible = function isEligible() {
-  return RegionalFeatureConfigUtils.isSettingTeenByDefault(
-    SettingsDefaultFeature.SettingsDefaultFeature.GUILD_ACTIVITY_STATUS,
-  );
-};
-obj112.useIsEligible = function useIsEligible() {
-  return RegionalFeatureConfigUtils.useIsSettingTeenByDefault(
-    SettingsDefaultFeature.SettingsDefaultFeature.GUILD_ACTIVITY_STATUS,
-  );
-};
-obj112.ineligibleDefault = fn(1197).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF;
-obj112.eligibleDefault = function eligibleDefault() {
-  return preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS;
-};
-const result11 = UserSettingDefinitions.wrapSettingWithExperimentDefaults(obj112);
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult80 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "activityJoiningRestrictedGuildIds",
@@ -1929,7 +1972,71 @@ const defineProtoSettingResult80 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const wrapSettingWithExperimentDefaults = UserSettingDefinitions.wrapSettingWithExperimentDefaults;
+const obj4 = {
+  baseSetting: UserSettingDefinitions.defineProtoSetting(
+    "privacy",
+    "defaultGuildsActivityRestricted",
+    (arg0) => arg0,
+    (arg0) => {
+      let OFF = arg0;
+      if (arg0 == null) {
+        OFF = preloaded_user_settings.GuildActivityStatusRestrictionDefault.OFF;
+      }
+      return OFF;
+    },
+  ),
+  isEligible() {
+    const obj = RegionalFeatureConfigUtils;
+    return obj.isSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.GUILD_ACTIVITY_STATUS);
+  },
+  useIsEligible() {
+    const obj = RegionalFeatureConfigUtils;
+    return obj.useIsSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.GUILD_ACTIVITY_STATUS);
+  },
+  ineligibleDefault: preloaded_user_settings.GuildActivityStatusRestrictionDefault.OFF,
+  eligibleDefault() {
+    return preloaded_user_settings.GuildActivityStatusRestrictionDefault.ON_FOR_LARGE_GUILDS;
+  },
+};
+const result10 = wrapSettingWithExperimentDefaults(obj4);
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const wrapSettingWithExperimentDefaults2 = UserSettingDefinitions.wrapSettingWithExperimentDefaults;
+const obj5 = {
+  baseSetting: UserSettingDefinitions.defineProtoSetting(
+    "privacy",
+    "defaultGuildsActivityRestrictedV2",
+    (arg0) => {
+      let tmp = null;
+      if (arg0 !== preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_UNSET) {
+        tmp = arg0;
+      }
+      return tmp;
+    },
+    (arg0) => {
+      let ACTIVITY_STATUS_OFF = arg0;
+      if (arg0 == null) {
+        ACTIVITY_STATUS_OFF = preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF;
+      }
+      return ACTIVITY_STATUS_OFF;
+    },
+  ),
+  isEligible() {
+    const obj = RegionalFeatureConfigUtils;
+    return obj.isSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.GUILD_ACTIVITY_STATUS);
+  },
+  useIsEligible() {
+    const obj = RegionalFeatureConfigUtils;
+    return obj.useIsSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.GUILD_ACTIVITY_STATUS);
+  },
+  ineligibleDefault: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF,
+  eligibleDefault() {
+    return preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS;
+  },
+};
+const result11 = wrapSettingWithExperimentDefaults2(obj5);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult81 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "familyCenterEnabledV2",
@@ -1942,10 +2049,11 @@ const defineProtoSettingResult81 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult82 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "hideLegacyUsername",
@@ -1961,10 +2069,11 @@ const defineProtoSettingResult82 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult83 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "allowGameFriendDmsInDiscord",
@@ -1980,10 +2089,11 @@ const defineProtoSettingResult83 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult84 = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "slayerSdkReceiveDmsInGame",
@@ -1997,7 +2107,7 @@ const defineProtoSettingResult84 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult85 = UserSettingDefinitions.defineProtoSetting(
   "ads",
   "alwaysDeliver",
@@ -2010,21 +2120,21 @@ const defineProtoSettingResult85 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult86 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "explicitContentSettings",
   explicitContentFromProto,
   explicitContentToProto,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult87 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "goreContentSettings",
   goreContentFromProto,
   goreContentToProto,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult88 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "searchResultExactCountEnabled",
@@ -2040,10 +2150,11 @@ const defineProtoSettingResult88 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult89 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "happeningNowCardsDisabled",
@@ -2059,10 +2170,11 @@ const defineProtoSettingResult89 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult90 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "timestampHourCycle",
@@ -2075,14 +2187,14 @@ const defineProtoSettingResult90 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult91 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "defaultGuildThemePreference",
-  fn(1236).resolveDefaultGuildThemePreference,
+  GuildThemeSourcePreferenceUtils.resolveDefaultGuildThemePreference,
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult92 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "launchPadMode",
@@ -2095,7 +2207,7 @@ const defineProtoSettingResult92 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult93 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "swipeRightToLeftMode",
@@ -2108,7 +2220,7 @@ const defineProtoSettingResult93 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult94 = UserSettingDefinitions.defineProtoSetting(
   "userContent",
   "lastReceivedChangelogId",
@@ -2121,7 +2233,7 @@ const defineProtoSettingResult94 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult95 = UserSettingDefinitions.defineProtoSetting(
   "safetySettings",
   "ignoreProfileSpeedbumpDisabled",
@@ -2134,7 +2246,7 @@ const defineProtoSettingResult95 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult96 = UserSettingDefinitions.defineProtoSetting(
   "appearance",
   "uiDensity",
@@ -2149,18 +2261,21 @@ const defineProtoSettingResult96 = UserSettingDefinitions.defineProtoSetting(
   },
   (arg0) => arg0,
 );
-const obj131 = { delay: UserSettingsDelay.AUTOMATED };
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
+let obj6 = { delay: UserSettingsDelay.AUTOMATED };
 const defineProtoSettingResult97 = UserSettingDefinitions.defineProtoSetting(
   "inAppFeedbackSettings",
   "inAppFeedbackStates",
   (arg0) => {
     let obj = arg0;
+    const mapValues = _mod12.mapValues;
+    _mod12;
     if (arg0 == null) {
       obj = {};
     }
-    return _mod12.mapValues(obj, (arg0) =>
-      _mod12.mapValues(arg0, (value) => {
+    return mapValues(obj, (arg0) => {
+      const obj = _mod12;
+      return obj.mapValues(arg0, (value) => {
         value = undefined;
         if (value != null) {
           value = value.value;
@@ -2171,24 +2286,28 @@ const defineProtoSettingResult97 = UserSettingDefinitions.defineProtoSetting(
           NumberResult = Number(value.value);
         }
         return NumberResult;
-      }),
-    );
+      });
+    });
   },
-  (arg0) =>
-    _mod12.mapValues(arg0, (arg0) =>
-      _mod12.mapValues(arg0, (arg0) => {
+  (arg0) => {
+    let obj = _mod12;
+    return obj.mapValues(arg0, (arg0) => {
+      const obj = _mod12;
+      return obj.mapValues(arg0, (arg0) => {
         const UInt64Value = closure_1_0(closure_1_1[6]).UInt64Value;
-        value = undefined;
+        let value;
+        const create = UInt64Value.create;
         if (null != arg0) {
           const _String = String;
           value = String(arg0);
         }
-        return UInt64Value.create({ value });
-      }),
-    ),
-  { delay: UserSettingsDelay.AUTOMATED },
+        return create({ value });
+      });
+    });
+  },
+  obj6,
 );
-UserSettingDefinitions = fn(2032);
+UserSettingDefinitions = UserSettingDefinitions_mod;
 const defineProtoSettingResult98 = UserSettingDefinitions.defineProtoSetting(
   "textAndImages",
   "isCrossDmSearchEnabled",
@@ -2204,10 +2323,27 @@ const defineProtoSettingResult98 = UserSettingDefinitions.defineProtoSetting(
   },
   (value) => {
     const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
+    const obj = { value };
+    return BoolValue.create(obj);
   },
 );
-const size = fn(2);
+UserSettingDefinitions = UserSettingDefinitions_mod;
+const defineProtoSettingResult99 = UserSettingDefinitions.defineProtoSetting(
+  "privacy",
+  "hideFriendRequestNotes",
+  (value) => {
+    value = undefined;
+    if (value != null) {
+      value = value.value;
+    }
+    return value;
+  },
+  (value) => {
+    const BoolValue = wrappers.BoolValue;
+    const obj = { value };
+    return BoolValue.create(obj);
+  },
+);
 const result12 = size.fileFinishedImporting("modules/user_settings/UserSettings.tsx");
 
 export const UseLegacyChatInput = defineProtoSettingResult;
@@ -2328,18 +2464,4 @@ export const IgnoreProfileSpeedbumpDisabled = defineProtoSettingResult95;
 export const UIDensitySetting = defineProtoSettingResult96;
 export const InAppFeedbackStates = defineProtoSettingResult97;
 export const IsCrossDMSearchEnabledSetting = defineProtoSettingResult98;
-export const HideFriendRequestNotes = UserSettingDefinitions.defineProtoSetting(
-  "privacy",
-  "hideFriendRequestNotes",
-  (value) => {
-    value = undefined;
-    if (value != null) {
-      value = value.value;
-    }
-    return value;
-  },
-  (value) => {
-    const BoolValue = wrappers.BoolValue;
-    return BoolValue.create({ value });
-  },
-);
+export const HideFriendRequestNotes = defineProtoSettingResult99;

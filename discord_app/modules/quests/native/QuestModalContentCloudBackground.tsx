@@ -1,156 +1,173 @@
 // discord_app/modules/quests/native/QuestModalContentCloudBackground.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import themes from "../../../design/utils/shared/themes.tsx";
 import useTheme from "../../../hooks/useTheme.tsx";
 import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4890);
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
+({ View: c3, StyleSheet: closure_4 } = react_native);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
 let closure_7 = createStyles.createStyles((arg0) => {
-  const obj = {};
+  let obj3;
+  let obj4;
+  let obj5;
+  let obj6;
+  let obj7;
+  const obj = { height: 380, zIndex: 1 };
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
-  const obj2 = { wrapper: null, cloudsImage: null, cloudsImageLight: null, gradient: null, solidBackground: null };
-  const merged1 = Object.assign(arg0 ? { top: "r" } : { bottom: "r" });
-  obj.height = 380;
-  obj.zIndex = 1;
-  obj2.wrapper = obj;
-  const obj3 = {};
+  const obj2 = { wrapper: obj, cloudsImage: obj3, cloudsImageLight: obj5, gradient: obj6, solidBackground: obj7 };
+  const tmp3 = arg0 ? { top: "r" } : { bottom: "r" };
+  const merged1 = Object.assign(tmp3);
+  obj3 = { width: "100%" };
   const merged2 = Object.assign(absoluteFillObject.absoluteFillObject);
-  const merged3 = Object.assign(arg0 ? { top: "r" } : { bottom: "r" });
+  const tmp6 = arg0 ? { top: "r" } : { bottom: "r" };
+  const merged3 = Object.assign(tmp6);
   if (arg0) {
-    let obj4 = {};
+    obj4 = {};
   } else {
-    obj4 = { transform: null };
+    obj4 = { transform: items };
     items = [{ rotate: "180deg" }];
-    obj4.transform = items;
   }
   const merged4 = Object.assign(obj4);
-  obj3.width = "100%";
-  obj2.cloudsImage = obj3;
-  const obj5 = {};
+  obj5 = { bottom: undefined, width: "100%" };
   const merged5 = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj5.bottom = undefined;
-  obj5.width = "100%";
-  obj2.cloudsImageLight = obj5;
-  const obj6 = {};
+  obj6 = { opacity: 1 };
   const merged6 = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj6.opacity = 1;
-  obj2.gradient = obj6;
+  obj7 = {};
   const merged7 = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj2.solidBackground = {};
   return obj2;
 });
 let items = ["#292252FF", "#1E1F2200"];
 const substr = items.slice();
 let closure_9 = substr.reverse();
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/quests/native/QuestModalContentCloudBackground.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(21);
+      let align;
+      let imgStyle;
+      let resizeMode;
+      let style;
+      let tmp6;
+      const obj = react2;
+      const cResult = obj.c(21);
       ({ align, style, imgStyle, resizeMode } = arg0);
-      solidBackground = "bottom";
+      let str = "bottom";
       if (undefined !== align) {
-        solidBackground = align;
+        str = align;
       }
-      let str = "cover";
+      let str2 = "cover";
       if (undefined !== resizeMode) {
-        str = resizeMode;
+        str2 = resizeMode;
       }
-      const tmp4 = closure_7("bottom" === solidBackground);
-      const theme = useTheme.useTheme();
+      const tmp4 = closure_7("bottom" === str);
+      const tmpResult = useTheme;
+      const theme = tmpResult.useTheme();
       if (cResult[0] !== theme) {
-        const isThemeDarkResult = themes.isThemeDark(theme);
+        const tmpResult2 = themes;
+        const isThemeDarkResult = tmpResult2.isThemeDark(theme);
         cResult[0] = theme;
         cResult[1] = isThemeDarkResult;
-        let tmp6 = isThemeDarkResult;
-        const tmpResult2 = themes;
+        tmp6 = isThemeDarkResult;
       } else {
         tmp6 = cResult[1];
       }
       if (cResult[2] === style) {
+        let tmp8;
+        let tmp10Result;
         if (cResult[3] === tmp4.wrapper) {
-          let tmp8 = cResult[4];
+          tmp8 = cResult[4];
         }
-        if (cResult[5] === solidBackground) {
+        if (cResult[5] === str) {
           if (cResult[6] === tmp6) {
             if (cResult[7] === tmp4.gradient) {
+              let tmp9;
               if (cResult[8] === tmp4.solidBackground) {
-                const tmp16 = tmp6 ? tmp4.cloudsImage : tmp4.cloudsImageLight;
-                if (cResult[10] === imgStyle) {
-                  if (cResult[11] === tmp16) {
-                    let tmp17 = cResult[12];
-                  }
-                  const tmp18Result = importDefault(tmp6 ? 14932 : 14933);
-                  if (cResult[13] === str) {
-                    if (cResult[14] === tmp17) {
-                      if (cResult[15] === tmp18Result) {
-                        let tmp20 = cResult[16];
-                      }
-                      if (cResult[17] === tmp8) {
-                        if (cResult[18] === tmp9) {
-                          if (cResult[19] === tmp20) {
-                            let tmp23 = cResult[20];
-                          }
-                          return tmp23;
-                        }
-                      }
-                      const obj2 = { style: tmp8, children: null };
-                      items = [tmp9, tmp20];
-                      obj2.children = items;
-                      const tmp26 = timestampProducer(React3, obj2);
-                      cResult[17] = tmp8;
-                      cResult[18] = tmp9;
-                      cResult[19] = tmp20;
-                      cResult[20] = tmp26;
-                      tmp23 = tmp26;
-                    }
-                  }
-                  const obj3 = { style: tmp17, source: tmp18Result, resizeMode: str };
-                  const tmp22 = hasOwnProperty(FastImageDefault, obj3);
-                  cResult[13] = str;
-                  cResult[14] = tmp17;
-                  cResult[15] = tmp18Result;
-                  cResult[16] = tmp22;
-                  tmp20 = tmp22;
-                }
-                const items1 = [tmp16, imgStyle];
-                cResult[10] = imgStyle;
-                cResult[11] = tmp16;
-                cResult[12] = items1;
-                tmp17 = items1;
+                tmp9 = cResult[9];
               }
+              const tmp14 = tmp6 ? tmp4.cloudsImage : tmp4.cloudsImageLight;
+              if (cResult[10] === imgStyle) {
+                let tmp15;
+                if (cResult[11] === tmp14) {
+                  tmp15 = cResult[12];
+                }
+                const tmp16Result = importDefault(tmp6 ? 14932 : 14933);
+                if (cResult[13] === str2) {
+                  if (cResult[14] === tmp15) {
+                    let tmp18;
+                    if (cResult[15] === tmp16Result) {
+                      tmp18 = cResult[16];
+                    }
+                    if (cResult[17] === tmp8) {
+                      if (cResult[18] === tmp9) {
+                        let tmp21;
+                        if (cResult[19] === tmp18) {
+                          tmp21 = cResult[20];
+                        }
+                        return tmp21;
+                      }
+                    }
+                    const obj2 = { style: tmp8, children: items };
+                    items = [tmp9, tmp18];
+                    const tmp24 = metroRequire(_false, obj2);
+                    cResult[17] = tmp8;
+                    cResult[18] = tmp9;
+                    cResult[19] = tmp18;
+                    cResult[20] = tmp24;
+                    tmp21 = tmp24;
+                  }
+                }
+                const obj3 = { style: tmp15, source: tmp16Result, resizeMode: str2 };
+                const tmp20 = hasOwnProperty(FastImageDefault, obj3);
+                cResult[13] = str2;
+                cResult[14] = tmp15;
+                cResult[15] = tmp16Result;
+                cResult[16] = tmp20;
+                tmp18 = tmp20;
+              }
+              const items1 = [tmp14, imgStyle];
+              cResult[10] = imgStyle;
+              cResult[11] = tmp14;
+              cResult[12] = items1;
+              tmp15 = items1;
             }
           }
         }
-        if (!tmp6) {
-          const obj4 = { style: tmp4.solidBackground };
-          const tmp10Result = hasOwnProperty(React3, obj4);
-          cResult[5] = solidBackground;
-          cResult[6] = tmp6;
-          ({ gradient: tmp3[7], solidBackground } = tmp4);
-          cResult[8] = solidBackground;
-          cResult[9] = tmp10Result;
+        if (tmp6) {
+          const obj4 = { colors: "top" === str ? items : closure_9, style: tmp4.gradient };
+          tmp10Result = hasOwnProperty(LinearGradientDefault, obj4);
+        } else {
+          const obj5 = { style: tmp4.solidBackground };
+          tmp10Result = hasOwnProperty(_false, obj5);
         }
-        const obj5 = { colors: "top" === solidBackground ? items : closure_9, style: tmp4.gradient };
-        hasOwnProperty(LinearGradientDefault, obj5);
+        cResult[5] = str;
+        cResult[6] = tmp6;
+        cResult[7] = tmp4.gradient;
+        cResult[8] = tmp4.solidBackground;
+        cResult[9] = tmp10Result;
+        tmp9 = tmp10Result;
       }
       const items2 = [tmp4.wrapper, style];
       cResult[2] = style;
       cResult[3] = tmp4.wrapper;
       cResult[4] = items2;
       tmp8 = items2;
-      const tmpResult = useTheme;
     }
   : (align) => {
+      let imgStyle;
+      let items1;
+      let items2;
+      let style;
+      let tmp7Result;
+      let tmp9;
       align = align.align;
       let str = "bottom";
       if (undefined !== align) {
@@ -163,24 +180,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         str2 = resizeMode;
       }
       const tmp = closure_7("bottom" === str);
-      const obj = themes;
-      const isThemeDarkResult = obj.isThemeDark(useTheme.useTheme());
-      const obj3 = { style: null, children: null };
+      const isThemeDark = themes.isThemeDark;
+      themes;
+      const obj = useTheme;
+      const isThemeDarkResult = isThemeDark(obj.useTheme());
+      const obj2 = { style: items, children: items1 };
       items = [tmp.wrapper, style];
-      obj3.style = items;
       if (isThemeDarkResult) {
-        const obj4 = { colors: "top" === str ? items : closure_9, style: tmp.gradient };
-        hasOwnProperty(LinearGradientDefault, obj4);
+        const obj3 = { colors: "top" === str ? items : closure_9, style: tmp.gradient };
+        tmp7Result = hasOwnProperty(LinearGradientDefault, obj3);
+        tmp9 = hasOwnProperty;
       } else {
-        const obj5 = { style: tmp.solidBackground };
-        const items1 = [hasOwnProperty(React3, obj5)];
-        const obj6 = { style: null, source: null, resizeMode: null };
-        const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
-        obj6.style = items2;
-        obj6.source = importDefault(isThemeDarkResult ? 14932 : 14933);
-        obj6.resizeMode = str2;
-        items1[1] = hasOwnProperty(FastImageDefault, obj6);
-        obj3.children = items1;
-        return tmp4(React3, obj3);
+        const obj4 = { style: tmp.solidBackground };
+        tmp7Result = hasOwnProperty(_false, obj4);
+        tmp9 = hasOwnProperty;
       }
+      items1 = [tmp7Result];
+      const obj5 = { style: items2, source: importDefault(isThemeDarkResult ? 14932 : 14933), resizeMode: str2 };
+      items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
+      const tmp12 = FastImageDefault;
+      items1[1] = tmp9(tmp12, obj5);
+      return metroRequire(_false, obj2);
     };
+const result = size.fileFinishedImporting("modules/quests/native/QuestModalContentCloudBackground.tsx");
+
+export default tmp5;

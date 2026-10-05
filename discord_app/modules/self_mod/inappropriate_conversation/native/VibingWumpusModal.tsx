@@ -1,40 +1,53 @@
 // discord_app/modules/self_mod/inappropriate_conversation/native/VibingWumpusModal.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import Constants2 from "../../Constants.tsx";
 import InappropriateConversationsActionCreators from "../InappropriateConversationsActionCreators.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+import InappropriateConversationsConstants from "../InappropriateConversationsConstants.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VIBING_WUMPUS_MODAL_KEY = fn(9784).VIBING_WUMPUS_MODAL_KEY;
-const InappropriateConversationsConstants = fn(9839);
-({ VibingWumpusAction: closure_9, VibingWumpusSource: c10 } = InappropriateConversationsConstants);
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  container: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: nativeDefault.space.PX_32,
-    gap: nativeDefault.space.PX_16,
-    height: "100%",
-  },
-  warningText: null,
-  ctaContainer: null,
-  takeoverHeader: null,
-  takeoverDescription: null,
-  wumpus: null,
-  rings: null,
+const require = globalThis.__r;
+let closure_0, importDefault, obj1, trackResult;
+
+let c10;
+let c9;
+let closure_12;
+let closure_14;
+let hasOwnProperty;
+let map1;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
+function render() {
+  return closure_1_12(closure_1_16, {});
+}
+({ Image: hasOwnProperty, View: metroRequire } = react_native);
+const VIBING_WUMPUS_MODAL_KEY = Constants2.VIBING_WUMPUS_MODAL_KEY;
+({ VibingWumpusAction: c9, VibingWumpusSource: c10 } = InappropriateConversationsConstants);
+const AnalyticEvents = Constants.AnalyticEvents;
+({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
+  container: obj2,
+  warningText: obj3,
+  ctaContainer: obj4,
+  takeoverHeader: { textAlign: "center" },
+  takeoverDescription: { textAlign: "center" },
+  wumpus: { height: 187 },
+  rings: { position: "absolute", width: "100%", height: 440, top: 120 },
 };
-let obj3 = {
+obj2 = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -42,23 +55,30 @@ let obj3 = {
   gap: nativeDefault.space.PX_16,
   height: "100%",
 };
-obj2.warningText = { marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_4 };
-let obj4 = { marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_4 };
-obj2.ctaContainer = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 };
-obj2.takeoverHeader = { textAlign: "center" };
-obj2.takeoverDescription = { textAlign: "center" };
-obj2.wumpus = { height: 187 };
-obj2.rings = { position: "absolute", width: "100%", height: 440, top: 120 };
-let closure_15 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+createStyles = createStyles.createStyles;
+obj3 = { marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_4 };
+obj4 = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 };
+let closure_15 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = first(ref[11]).c(45);
+      let closure_1;
+      let constants3;
+      let first;
+      let ref;
+      let stateFromStores;
+      let tmp13;
+      let tmp8;
+      let tmp9;
+      let useReducedMotion;
+      const tmp = first;
+      let obj = first(ref[11]);
+      const cResult = obj.c(45);
       const tmp4 = closure_15();
-      const tmp5 = stateFromStores(noop.useState(false), 2);
+      const tmp5 = stateFromStores(react.useState(false), 2);
       first = tmp5[0];
       importDefault = tmp5[1];
-      ref = noop.useRef(null);
+      ref = react.useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
         const fn = function _() {
@@ -71,8 +91,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp8, tmp9] = cResult;
       }
-      let obj = first(ref[11]);
-      stateFromStores = first(ref[12]).useStateFromStores(tmp8, tmp9);
+      const tmpResult = tmp(ref[12]);
+      stateFromStores = tmpResult.useStateFromStores(tmp8, tmp9);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         class E {
           constructor() {
@@ -84,21 +104,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
             trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
             return () => {
-              const obj2 = { duration_open_ms: null, source: null };
+              let time;
+              const obj = { duration_open_ms: time - date.getTime(), source: constants2.INAPPROPRIATE_CONVERSATION };
+              const track = closure_1(ref[14]).track;
+              const VIBING_WUMPUS_CLOSED = constants3.VIBING_WUMPUS_CLOSED;
+              closure_1(ref[14]);
               date = new Date();
-              const time = date.getTime();
-              obj2.duration_open_ms = time - date.getTime();
-              obj2.source = constants2.INAPPROPRIATE_CONVERSATION;
-              closure_1(ref[14]).track(constants3.VIBING_WUMPUS_CLOSED, obj2);
-              const obj = closure_1(ref[14]);
-              const result = first(ref[13]).stopVibingWumpusMusic();
+              time = date.getTime();
+              track(VIBING_WUMPUS_CLOSED, obj);
+              const obj3 = first(ref[13]);
+              const result = obj3.stopVibingWumpusMusic();
             };
           }
         }
         const items1 = [];
         cResult[2] = E;
         cResult[3] = items1;
-        let tmp13 = items1;
+        tmp13 = items1;
       } else {
         class E {
           constructor() {
@@ -110,20 +132,22 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
             trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
             return () => {
-              const obj2 = { duration_open_ms: null, source: null };
+              let time;
+              const obj = { duration_open_ms: time - date.getTime(), source: constants2.INAPPROPRIATE_CONVERSATION };
+              const track = closure_1(ref[14]).track;
+              const VIBING_WUMPUS_CLOSED = constants3.VIBING_WUMPUS_CLOSED;
+              closure_1(ref[14]);
               date = new Date();
-              const time = date.getTime();
-              obj2.duration_open_ms = time - date.getTime();
-              obj2.source = constants2.INAPPROPRIATE_CONVERSATION;
-              closure_1(ref[14]).track(constants3.VIBING_WUMPUS_CLOSED, obj2);
-              const obj = closure_1(ref[14]);
-              const result = first(ref[13]).stopVibingWumpusMusic();
+              time = date.getTime();
+              track(VIBING_WUMPUS_CLOSED, obj);
+              const obj3 = first(ref[13]);
+              const result = obj3.stopVibingWumpusMusic();
             };
           }
         }
         tmp13 = cResult[3];
       }
-      const effect = noop.useEffect(E, tmp13);
+      const effect = react.useEffect(E, tmp13);
       if (cResult[4] === first) {
         class E {
           constructor() {
@@ -135,14 +159,16 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
             trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
             return () => {
-              const obj2 = { duration_open_ms: null, source: null };
+              let time;
+              const obj = { duration_open_ms: time - date.getTime(), source: constants2.INAPPROPRIATE_CONVERSATION };
+              const track = closure_1(ref[14]).track;
+              const VIBING_WUMPUS_CLOSED = constants3.VIBING_WUMPUS_CLOSED;
+              closure_1(ref[14]);
               date = new Date();
-              const time = date.getTime();
-              obj2.duration_open_ms = time - date.getTime();
-              obj2.source = constants2.INAPPROPRIATE_CONVERSATION;
-              closure_1(ref[14]).track(constants3.VIBING_WUMPUS_CLOSED, obj2);
-              const obj = closure_1(ref[14]);
-              const result = first(ref[13]).stopVibingWumpusMusic();
+              time = date.getTime();
+              track(VIBING_WUMPUS_CLOSED, obj);
+              const obj3 = first(ref[13]);
+              const result = obj3.stopVibingWumpusMusic();
             };
           }
         }
@@ -158,14 +184,16 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
               trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
               return () => {
-                const obj2 = { duration_open_ms: null, source: null };
+                let time;
+                const obj = { duration_open_ms: time - date.getTime(), source: constants2.INAPPROPRIATE_CONVERSATION };
+                const track = closure_1(ref[14]).track;
+                const VIBING_WUMPUS_CLOSED = constants3.VIBING_WUMPUS_CLOSED;
+                closure_1(ref[14]);
                 date = new Date();
-                const time = date.getTime();
-                obj2.duration_open_ms = time - date.getTime();
-                obj2.source = constants2.INAPPROPRIATE_CONVERSATION;
-                closure_1(ref[14]).track(constants3.VIBING_WUMPUS_CLOSED, obj2);
-                const obj = closure_1(ref[14]);
-                const result = first(ref[13]).stopVibingWumpusMusic();
+                time = date.getTime();
+                track(VIBING_WUMPUS_CLOSED, obj);
+                const obj3 = first(ref[13]);
+                const result = obj3.stopVibingWumpusMusic();
               };
             }
           }
@@ -181,14 +209,16 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
               trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
               return () => {
-                const obj2 = { duration_open_ms: null, source: null };
+                let time;
+                const obj = { duration_open_ms: time - date.getTime(), source: constants2.INAPPROPRIATE_CONVERSATION };
+                const track = closure_1(ref[14]).track;
+                const VIBING_WUMPUS_CLOSED = constants3.VIBING_WUMPUS_CLOSED;
+                closure_1(ref[14]);
                 date = new Date();
-                const time = date.getTime();
-                obj2.duration_open_ms = time - date.getTime();
-                obj2.source = constants2.INAPPROPRIATE_CONVERSATION;
-                closure_1(ref[14]).track(constants3.VIBING_WUMPUS_CLOSED, obj2);
-                const obj = closure_1(ref[14]);
-                const result = first(ref[13]).stopVibingWumpusMusic();
+                time = date.getTime();
+                track(VIBING_WUMPUS_CLOSED, obj);
+                const obj3 = first(ref[13]);
+                const result = obj3.stopVibingWumpusMusic();
               };
             }
           }
@@ -204,21 +234,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
               trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
               return () => {
-                const obj2 = { duration_open_ms: null, source: null };
+                let time;
+                const obj = { duration_open_ms: time - date.getTime(), source: constants2.INAPPROPRIATE_CONVERSATION };
+                const track = closure_1(ref[14]).track;
+                const VIBING_WUMPUS_CLOSED = constants3.VIBING_WUMPUS_CLOSED;
+                closure_1(ref[14]);
                 date = new Date();
-                const time = date.getTime();
-                obj2.duration_open_ms = time - date.getTime();
-                obj2.source = constants2.INAPPROPRIATE_CONVERSATION;
-                closure_1(ref[14]).track(constants3.VIBING_WUMPUS_CLOSED, obj2);
-                const obj = closure_1(ref[14]);
-                const result = first(ref[13]).stopVibingWumpusMusic();
+                time = date.getTime();
+                track(VIBING_WUMPUS_CLOSED, obj);
+                const obj3 = first(ref[13]);
+                const result = obj3.stopVibingWumpusMusic();
               };
             }
           }
-          let obj3 = { source: require("../../../../../_runtime/metro/09841__.js"), style: tmp4.rings };
-          const tmp20 = closure_12(closure_5, obj3);
+          let obj3 = { source: require("AssetRegistry"), style: tmp4.rings };
           cResult[8] = tmp4.rings;
-          cResult[9] = tmp20;
+          cResult[9] = closure_12(closure_5, obj3);
+          const tmp20 = closure_12(closure_5, obj3);
         } else {
           class E {
             constructor() {
@@ -230,14 +262,16 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
               trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
               return () => {
-                const obj2 = { duration_open_ms: null, source: null };
+                let time;
+                const obj = { duration_open_ms: time - date.getTime(), source: constants2.INAPPROPRIATE_CONVERSATION };
+                const track = closure_1(ref[14]).track;
+                const VIBING_WUMPUS_CLOSED = constants3.VIBING_WUMPUS_CLOSED;
+                closure_1(ref[14]);
                 date = new Date();
-                const time = date.getTime();
-                obj2.duration_open_ms = time - date.getTime();
-                obj2.source = constants2.INAPPROPRIATE_CONVERSATION;
-                closure_1(ref[14]).track(constants3.VIBING_WUMPUS_CLOSED, obj2);
-                const obj = closure_1(ref[14]);
-                const result = first(ref[13]).stopVibingWumpusMusic();
+                time = date.getTime();
+                track(VIBING_WUMPUS_CLOSED, obj);
+                const obj3 = first(ref[13]);
+                const result = obj3.stopVibingWumpusMusic();
               };
             }
           }
@@ -255,14 +289,16 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
               trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
               return () => {
-                const obj2 = { duration_open_ms: null, source: null };
+                let time;
+                const obj = { duration_open_ms: time - date.getTime(), source: constants2.INAPPROPRIATE_CONVERSATION };
+                const track = closure_1(ref[14]).track;
+                const VIBING_WUMPUS_CLOSED = constants3.VIBING_WUMPUS_CLOSED;
+                closure_1(ref[14]);
                 date = new Date();
-                const time = date.getTime();
-                obj2.duration_open_ms = time - date.getTime();
-                obj2.source = constants2.INAPPROPRIATE_CONVERSATION;
-                closure_1(ref[14]).track(constants3.VIBING_WUMPUS_CLOSED, obj2);
-                const obj = closure_1(ref[14]);
-                const result = first(ref[13]).stopVibingWumpusMusic();
+                time = date.getTime();
+                track(VIBING_WUMPUS_CLOSED, obj);
+                const obj3 = first(ref[13]);
+                const result = obj3.stopVibingWumpusMusic();
               };
             }
           }
@@ -278,14 +314,16 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
               trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
               return () => {
-                const obj2 = { duration_open_ms: null, source: null };
+                let time;
+                const obj = { duration_open_ms: time - date.getTime(), source: constants2.INAPPROPRIATE_CONVERSATION };
+                const track = closure_1(ref[14]).track;
+                const VIBING_WUMPUS_CLOSED = constants3.VIBING_WUMPUS_CLOSED;
+                closure_1(ref[14]);
                 date = new Date();
-                const time = date.getTime();
-                obj2.duration_open_ms = time - date.getTime();
-                obj2.source = constants2.INAPPROPRIATE_CONVERSATION;
-                closure_1(ref[14]).track(constants3.VIBING_WUMPUS_CLOSED, obj2);
-                const obj = closure_1(ref[14]);
-                const result = first(ref[13]).stopVibingWumpusMusic();
+                time = date.getTime();
+                track(VIBING_WUMPUS_CLOSED, obj);
+                const obj3 = first(ref[13]);
+                const result = obj3.stopVibingWumpusMusic();
               };
             }
           }
@@ -301,14 +339,16 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
               trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
               return () => {
-                const obj2 = { duration_open_ms: null, source: null };
+                let time;
+                const obj = { duration_open_ms: time - date.getTime(), source: constants2.INAPPROPRIATE_CONVERSATION };
+                const track = closure_1(ref[14]).track;
+                const VIBING_WUMPUS_CLOSED = constants3.VIBING_WUMPUS_CLOSED;
+                closure_1(ref[14]);
                 date = new Date();
-                const time = date.getTime();
-                obj2.duration_open_ms = time - date.getTime();
-                obj2.source = constants2.INAPPROPRIATE_CONVERSATION;
-                closure_1(ref[14]).track(constants3.VIBING_WUMPUS_CLOSED, obj2);
-                const obj = closure_1(ref[14]);
-                const result = first(ref[13]).stopVibingWumpusMusic();
+                time = date.getTime();
+                track(VIBING_WUMPUS_CLOSED, obj);
+                const obj3 = first(ref[13]);
+                const result = obj3.stopVibingWumpusMusic();
               };
             }
           }
@@ -324,14 +364,16 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
               trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
               return () => {
-                const obj2 = { duration_open_ms: null, source: null };
+                let time;
+                const obj = { duration_open_ms: time - date.getTime(), source: constants2.INAPPROPRIATE_CONVERSATION };
+                const track = closure_1(ref[14]).track;
+                const VIBING_WUMPUS_CLOSED = constants3.VIBING_WUMPUS_CLOSED;
+                closure_1(ref[14]);
                 date = new Date();
-                const time = date.getTime();
-                obj2.duration_open_ms = time - date.getTime();
-                obj2.source = constants2.INAPPROPRIATE_CONVERSATION;
-                closure_1(ref[14]).track(constants3.VIBING_WUMPUS_CLOSED, obj2);
-                const obj = closure_1(ref[14]);
-                const result = first(ref[13]).stopVibingWumpusMusic();
+                time = date.getTime();
+                track(VIBING_WUMPUS_CLOSED, obj);
+                const obj3 = first(ref[13]);
+                const result = obj3.stopVibingWumpusMusic();
               };
             }
           }
@@ -344,144 +386,154 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp4.wumpus,
           progress: undefined,
         };
-        const tmp28 = closure_12(require("LottieAnimationView"), obj4);
         cResult[11] = tmp4.wumpus;
         cResult[12] = undefined;
         cResult[13] = !stateFromStores;
-        cResult[14] = tmp28;
+        cResult[14] = closure_12(require("LottieAnimationView"), obj4);
+        const tmp28 = closure_12(require("LottieAnimationView"), obj4);
       }
       class W {
         constructor() {
-          tmp = closure_0;
-          obj = closure_0(closure_2[13]);
-          if (closure_0) {
-            result = obj.playVibingWumpusMusic();
-            tmp9 = closure_1;
-            tmp10 = closure_2;
-            obj4 = closure_1(closure_2[14]);
-            tmp11 = AnalyticEvents;
-            obj1 = { action: null };
-            tmp12 = VibingWumpusAction;
-            obj1.action = VibingWumpusAction.PLAY;
-            trackResult = obj4.track(AnalyticEvents.VIBING_WUMPUS_ACTION, obj1);
+          const obj = InappropriateConversationsActionCreators;
+          if (first) {
+            const result = obj.playVibingWumpusMusic();
+            const obj3 = { action: constants.PLAY };
+            const obj4 = AnalyticsUtilsDefault;
+            obj4.track(AnalyticEvents.VIBING_WUMPUS_ACTION, obj3);
           } else {
-            result1 = obj.pauseVibingWumpusMusic();
-            tmp3 = closure_1;
-            tmp4 = closure_2;
-            obj2 = closure_1(closure_2[14]);
-            tmp5 = AnalyticEvents;
-            obj6 = { action: null };
-            tmp6 = VibingWumpusAction;
-            obj6.action = VibingWumpusAction.PAUSE;
-            trackResult1 = obj2.track(AnalyticEvents.VIBING_WUMPUS_ACTION, obj6);
+            const result1 = obj.pauseVibingWumpusMusic();
+            const obj5 = { action: constants.PAUSE };
+            const obj2 = AnalyticsUtilsDefault;
+            obj2.track(AnalyticEvents.VIBING_WUMPUS_ACTION, obj5);
           }
-          tmp14 = closure_3;
-          if (!closure_3) {
-            if (tmp) {
-              tmp15 = closure_2;
-              current = closure_2.current;
-              tmp16 = null;
+          let tmp14 = stateFromStores;
+          if (!tmp14) {
+            if (first) {
+              const current = ref.current;
               if (current != null) {
-                resumeResult = current.resume();
+                current.resume();
               }
             }
-            tmp21 = closure_1;
-            tmp22 = closure_1(!tmp);
-            return;
+            closure_1(!first);
           }
           if (!tmp14) {
-            tmp14 = tmp;
+            tmp14 = first;
           }
           if (!tmp14) {
-            tmp18 = closure_2;
-            current2 = closure_2.current;
-            tmp19 = null;
+            const current2 = ref.current;
             if (current2 != null) {
-              pauseResult = current2.pause();
+              current2.pause();
             }
           }
-          return;
         }
       }
       cResult[4] = first;
       cResult[5] = stateFromStores;
       cResult[6] = W;
-      const tmpResult = first(ref[12]);
     }
   : () => {
+      let PauseIcon;
+      let closure_1;
+      let constants3;
+      let intl;
+      let intl2;
+      let intl3;
+      let items2;
+      let items3;
+      let items4;
+      let num;
+      let obj12;
+      let stateFromStores;
+      let stringResult;
+      let useReducedMotion;
       const tmp = closure_15();
-      const tmp2 = stateFromStores(noop.useState(false), 2);
+      const tmp2 = stateFromStores(react.useState(false), 2);
       const first = tmp2[0];
       importDefault = tmp2[1];
-      const ref = noop.useRef(null);
+      const ref = react.useRef(null);
+      let obj = first(ref[12]);
       const items = [AccessibilityStore];
-      stateFromStores = first(ref[12]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-      const effect = noop.useEffect(() => {
+      stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+      const effect = react.useEffect(() => {
         let date = new Date();
-        let result = date(ref[13]).playVibingWumpusMusic();
         let obj = date(ref[13]);
-        closure_1(ref[14]).track(constants3.VIBING_WUMPUS_VIEWED, { source: constants2.INAPPROPRIATE_CONVERSATION });
+        let result = obj.playVibingWumpusMusic();
+        let obj3 = { source: constants2.INAPPROPRIATE_CONVERSATION };
+        const obj2 = closure_1(ref[14]);
+        obj2.track(constants3.VIBING_WUMPUS_VIEWED, obj3);
         return () => {
-          const obj2 = { duration_open_ms: null, source: null };
+          let time;
+          const obj = { duration_open_ms: time - date.getTime(), source: constants2.INAPPROPRIATE_CONVERSATION };
+          const track = closure_1(ref[14]).track;
+          const VIBING_WUMPUS_CLOSED = constants3.VIBING_WUMPUS_CLOSED;
+          closure_1(ref[14]);
           date = new Date();
-          const time = date.getTime();
-          obj2.duration_open_ms = time - date.getTime();
-          obj2.source = constants2.INAPPROPRIATE_CONVERSATION;
-          closure_1(ref[14]).track(constants3.VIBING_WUMPUS_CLOSED, obj2);
-          const obj = closure_1(ref[14]);
-          const result = first(ref[13]).stopVibingWumpusMusic();
+          time = date.getTime();
+          track(VIBING_WUMPUS_CLOSED, obj);
+          const obj3 = first(ref[13]);
+          const result = obj3.stopVibingWumpusMusic();
         };
       }, []);
-      let obj = first(ref[12]);
-      const items1 = [
-        closure_12(closure_5, { source: require("../../../../../_runtime/metro/09841__.js"), style: tmp.rings }),
-      ];
-      let obj3 = { style: tmp.container, children: null };
-      let obj4 = { source: null, ref: null, autoPlay: null, loop: true, style: null, progress: null };
-      let obj2 = { source: require("../../../../../_runtime/metro/09841__.js"), style: tmp.rings };
+      let obj2 = { source: require("AssetRegistry"), style: tmp.rings };
+      const items1 = [closure_12(closure_5, obj2)];
+      let obj3 = { style: tmp.container, children: items2 };
+      let obj4 = {
+        source: first(ref[17]),
+        ref,
+        autoPlay: !stateFromStores,
+        loop: true,
+        style: tmp.wumpus,
+        progress: num,
+      };
+      let tmp14 = require("LottieAnimationView");
+      num = undefined;
       const tmp12 = importDefault;
-      obj4.source = first(ref[17]);
-      obj4.ref = ref;
-      obj4.autoPlay = !stateFromStores;
-      obj4.style = tmp.wumpus;
-      let num;
       if (stateFromStores) {
         num = 0.8;
       }
-      obj4.progress = num;
-      const items2 = [closure_12(require("LottieAnimationView"), obj4), ,];
-      let obj5 = { style: tmp.warningText, children: null };
+      items2 = [closure_12(tmp14, obj4), ,];
+      let obj5 = { style: tmp.warningText, children: items3 };
       const obj6 = {
         variant: "heading-xl/semibold",
         style: tmp.takeoverHeader,
         accessibilityRole: "header",
-        children: null,
+        children: intl.string(first(ref[19]).t.L4ifkZ),
       };
-      const intl = tmp5(tmp6[19]).intl;
-      obj6.children = intl.string(first(ref[19]).t.L4ifkZ);
-      const items3 = [closure_12(first(ref[20]).Text, obj6)];
-      const obj7 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
-      const intl2 = tmp5(tmp6[19]).intl;
-      obj7.children = intl2.string(first(ref[19]).t.R8LCMZ);
-      items3[1] = closure_12(first(ref[20]).Text, obj7);
-      obj5.children = items3;
+      const Text = tmp5(tmp6[20]).Text;
+      intl = tmp5(tmp6[19]).intl;
+      items3 = [closure_12(Text, obj6)];
+      const obj7 = {
+        variant: "text-md/medium",
+        style: tmp.takeoverDescription,
+        children: intl2.string(first(ref[19]).t.R8LCMZ),
+      };
+      const Text2 = tmp5(tmp6[20]).Text;
+      intl2 = tmp5(tmp6[19]).intl;
+      items3[1] = closure_12(Text2, obj7);
       items2[1] = closure_13(closure_6, obj5);
-      const obj8 = { style: tmp.ctaContainer, children: null };
-      const obj9 = { variant: "primary", size: "lg", text: null, grow: true, onPress: null };
-      const intl3 = tmp5(tmp6[19]).intl;
-      obj9.text = intl3.string(first(ref[19]).t["8eKkaf"]);
-      obj9.onPress = function onPress() {
-        closure_1(ref[14]).track(constants3.VIBING_WUMPUS_ACTION, { action: constants.BACK_TO_CONVERSATION });
-        const obj = closure_1(ref[14]);
-        const obj2 = { action: constants.BACK_TO_CONVERSATION };
-        closure_1(ref[15]).popWithKey(VIBING_WUMPUS_MODAL_KEY);
+      const obj8 = { style: tmp.ctaContainer, children: items4 };
+      const obj9 = {
+        variant: "primary",
+        size: "lg",
+        text: intl3.string(first(ref[19]).t["8eKkaf"]),
+        grow: true,
+        onPress() {
+          const obj = closure_1(ref[14]);
+          const obj2 = { action: constants.BACK_TO_CONVERSATION };
+          obj.track(constants3.VIBING_WUMPUS_ACTION, obj2);
+          const obj3 = closure_1(ref[15]);
+          obj3.popWithKey(VIBING_WUMPUS_MODAL_KEY);
+        },
       };
-      const items4 = [closure_12(first(ref[21]).Button, obj9)];
+      const Button = tmp5(tmp6[21]).Button;
+      intl3 = tmp5(tmp6[19]).intl;
+      items4 = [closure_12(Button, obj9)];
+      const Button2 = tmp5(tmp6[21]).Button;
       const intl4 = tmp5(tmp6[19]).intl;
       const string = intl4.string;
       const t = tmp5(tmp6[19]).t;
       if (first) {
-        let stringResult = string(t.RscU7I);
+        stringResult = string(t.RscU7I);
       } else {
         stringResult = string(t.ZcgDJX);
       }
@@ -495,14 +547,16 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           if (first) {
             const result = obj.playVibingWumpusMusic();
             const obj3 = { action: constants.PLAY };
-            AnalyticsUtilsDefault.track(AnalyticEvents.VIBING_WUMPUS_ACTION, obj3);
+            const obj4 = AnalyticsUtilsDefault;
+            obj4.track(AnalyticEvents.VIBING_WUMPUS_ACTION, obj3);
           } else {
             const result1 = obj.pauseVibingWumpusMusic();
             const obj5 = { action: constants.PAUSE };
-            AnalyticsUtilsDefault.track(AnalyticEvents.VIBING_WUMPUS_ACTION, obj5);
+            const obj2 = AnalyticsUtilsDefault;
+            obj2.track(AnalyticEvents.VIBING_WUMPUS_ACTION, obj5);
           }
           let tmp14 = stateFromStores;
-          if (!stateFromStores) {
+          if (!tmp14) {
             if (first) {
               const current = ref.current;
               if (current != null) {
@@ -521,68 +575,48 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         },
-        icon: null,
+        icon: closure_12(PauseIcon, obj12),
       };
       if (first) {
-        let PauseIcon = tmp5(tmp6[22]).PlayIcon;
+        PauseIcon = tmp5(tmp6[22]).PlayIcon;
       } else {
         PauseIcon = tmp5(tmp6[23]).PauseIcon;
       }
-      const obj11 = { children: null };
-      let tmp14 = require("LottieAnimationView");
-      obj10.icon = closure_12(PauseIcon, { size: "md", color: tmp12(ref[9]).colors.REDESIGN_BUTTON_TERTIARY_TEXT });
-      items4[1] = closure_12(first(ref[21]).Button, obj10);
-      obj8.children = items4;
+      const obj11 = { children: items1 };
+      obj12 = { size: "md", color: tmp12(ref[9]).colors.REDESIGN_BUTTON_TERTIARY_TEXT };
+      items4[1] = closure_12(Button2, obj10);
       items2[2] = closure_13(closure_6, obj8);
-      obj3.children = items2;
       items1[1] = closure_13(closure_6, obj3);
-      obj11.children = items1;
       return closure_13(closure_14, obj11);
     };
-let closure_16 = tmp5;
-ReactCompilerGating = fn(558);
-let obj5 = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 };
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/VibingWumpusModal.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_16 = tmp6;
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(1);
+      let first;
+      let obj3;
+      let obj4;
+      const obj = react2;
+      const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { screens: null, initialRouteName: "VIBING_WUMPUS" };
-        const obj3 = { VIBING_WUMPUS: null };
-        const obj4 = {
-          title: "",
-          fullscreen: true,
-          headerShown: false,
-          render() {
-            return closure_1_12(closure_1_16, {});
-          },
-        };
-        obj3.VIBING_WUMPUS = obj4;
-        obj2.screens = obj3;
-        const tmp6 = __initData(Navigator.Navigator, obj2);
+        const obj2 = { screens: obj3, initialRouteName: "VIBING_WUMPUS" };
+        obj3 = { VIBING_WUMPUS: obj4 };
+        obj4 = { title: "", fullscreen: true, headerShown: false, render };
+        const tmp6 = closure_12(Navigator.Navigator, obj2);
         cResult[0] = tmp6;
-        let first = tmp6;
+        first = tmp6;
       } else {
         first = cResult[0];
       }
       return first;
     }
   : () => {
-      const obj = {
-        screens: {
-          VIBING_WUMPUS: {
-            title: "",
-            fullscreen: true,
-            headerShown: false,
-            render() {
-              return closure_1_12(closure_1_16, {});
-            },
-          },
-        },
-        initialRouteName: "VIBING_WUMPUS",
-      };
-      return __initData(Navigator.Navigator, obj);
+      let obj2;
+      const obj = { screens: obj2, initialRouteName: "VIBING_WUMPUS" };
+      obj2 = { VIBING_WUMPUS: { title: "", fullscreen: true, headerShown: false, render } };
+      return closure_12(Navigator.Navigator, obj);
     };
-export const VibingWumpusScreen = tmp5;
+let result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/VibingWumpusModal.tsx");
+
+export default tmp7;
+export const VibingWumpusScreen = tmp6;

@@ -7,6 +7,14 @@ import PlainRecord from "../lib/PlainRecord.tsx";
 import Constants from "../Constants.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
+let importDefault;
+
+let BoostedGuildTiers;
+let GuildExplicitContentFilterTypes;
+let TypeTag;
+let UserNotificationSettings;
+let VerificationLevels;
+let c3;
 ({ set: c3, TypeTag } = PlainRecord);
 const GuildNSFWContentLevel = Constants.GuildNSFWContentLevel;
 const MFALevels = Constants.MFALevels;
@@ -59,12 +67,13 @@ let obj = {
   officialMessageColor: null,
   incidentsData: null,
 };
-const frozen = Object.freeze(obj);
+new Set();
+const freezeResult = freeze(obj);
 const result = size.fileFinishedImporting("records/GuildRecord.tsx");
 
 export const GuildRecordTypeTag = "Guild";
 export const RESTRICTED_CONTENT_LEVELS = set;
-export const GUILD_DEFAULT_PROPERTY_VALUES = frozen;
+export const GUILD_DEFAULT_PROPERTY_VALUES = freezeResult;
 export const getGuildIconURL = function getGuildIconURL(id, size) {
   let flag = arg2;
   if (arg2 === undefined) {
@@ -74,21 +83,27 @@ export const getGuildIconURL = function getGuildIconURL(id, size) {
   if (arg3 === undefined) {
     flag2 = false;
   }
-  return AvatarUtilsDefault.getGuildIconURL({ id: id.id, size, icon: id.icon, canAnimate: flag, lossless: flag2 });
+  const obj = AvatarUtilsDefault;
+  const obj2 = { id: id.id, size, icon: id.icon, canAnimate: flag, lossless: flag2 };
+  return obj.getGuildIconURL(obj2);
 };
 export const getGuildIconSource = function getGuildIconSource(arg0, size) {
-  closure_0 = arg0;
+  let closure_0 = arg0;
   importDefault = size;
   let flag = hasItem;
   if (hasItem === undefined) {
     flag = false;
   }
-  return AvatarUtilsDefault.getAnimatableSourceWithFallback(flag, (canAnimate) =>
-    AvatarUtilsDefault.getGuildIconSource({ id: closure_0.id, size, icon: closure_0.icon, canAnimate }),
-  );
+  let obj = AvatarUtilsDefault;
+  return obj.getAnimatableSourceWithFallback(flag, (canAnimate) => {
+    const obj = AvatarUtilsDefault;
+    const obj2 = { id: closure_0.id, size, icon: closure_0.icon, canAnimate };
+    return obj.getGuildIconSource(obj2);
+  });
 };
 export const getGuildAcronym = function getGuildAcronym(guild) {
-  return StringUtils.getAcronym(guild.name);
+  const obj = StringUtils;
+  return obj.getAcronym(guild.name);
 };
 export const isGuildOwner = function isGuildOwner(guild, currentUser) {
   let tmp = currentUser;
@@ -102,13 +117,9 @@ export const isGuildOwner = function isGuildOwner(guild, currentUser) {
   return guild.ownerId === tmp;
 };
 export const isGuildOwnerWithRequiredMfaLevel = function isGuildOwnerWithRequiredMfaLevel(mfaLevel, mfaEnabled) {
-  mfaEnabled = mfaEnabled.mfaEnabled;
-  let tmp = !mfaEnabled;
-  if (!mfaEnabled) {
-    tmp = mfaLevel.mfaLevel === MFALevels.ELEVATED;
-  }
-  let tmp3 = !tmp;
-  if (!tmp) {
+  let tmp3 = !(!mfaEnabled.mfaEnabled && mfaLevel.mfaLevel === MFALevels.ELEVATED);
+  const tmp = !mfaEnabled.mfaEnabled && mfaLevel.mfaLevel === MFALevels.ELEVATED;
+  if (tmp3) {
     let tmp4 = mfaEnabled;
     if (typeof mfaEnabled !== "string") {
       let id = null;
@@ -125,35 +136,38 @@ export const isGuildLurker = function isGuildLurker(guild) {
   return null == guild.joinedAt;
 };
 export const getGuildEveryoneRoleId = function getGuildEveryoneRoleId(id) {
-  return SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(id.id);
+  const obj = SnowflakeUtilsDefault;
+  return obj.castGuildIdAsEveryoneGuildRoleId(id.id);
 };
 export const updateJoinedAt = function updateJoinedAt(guild, joinedAt) {
   let date = joinedAt;
   if (typeof joinedAt === "string") {
     const _Date = Date;
+    const self = this;
+    const self2 = this;
     date = new Date(joinedAt);
   }
-  return React3(guild, "joinedAt", date);
+  return _false(guild, "joinedAt", date);
 };
 export const updateGameApplications = function updateGameApplications(arg0, arg1) {
-  return React3(arg0, "gameApplicationIds", arg1);
+  return _false(arg0, "gameApplicationIds", arg1);
 };
 export const isGuildNSFW = function isGuildNSFW(guild) {
-  let nsfwLevel = guild;
-  if (null == guild) {
-    return tmp;
-  } else {
+  let tmp = null != guild;
+  if (tmp) {
+    let hasItem;
     const has = set.has;
+    const obj = ServerNSFWLevelExperiment;
     if (obj.isServerNSFWLevelEnabled("guild_record")) {
-      nsfwLevel = nsfwLevel.nsfwLevel;
-      let hasItem = has(nsfwLevel);
+      hasItem = has(guild.nsfwLevel);
     } else {
-      let DEFAULT = nsfwLevel.ownerConfiguredContentLevel;
+      let DEFAULT = guild.ownerConfiguredContentLevel;
       if (DEFAULT == null) {
         DEFAULT = GuildNSFWContentLevel.DEFAULT;
       }
       hasItem = has(DEFAULT);
     }
-    obj = ServerNSFWLevelExperiment;
+    tmp = hasItem;
   }
+  return tmp;
 };

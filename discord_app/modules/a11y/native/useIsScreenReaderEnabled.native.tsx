@@ -1,12 +1,13 @@
 // discord_app/modules/a11y/native/useIsScreenReaderEnabled.native.tsx
-import _mod17 from "../../../../_runtime/metro/00017__.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
 import 00570__ from "../../../../_runtime/metro/00570__.js";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const AccessibilityInfo = _mod17.AccessibilityInfo;
+const AccessibilityInfo = react_native.AccessibilityInfo;
 function SCREEN_READER_ENABLED_GETTER(screenReaderEnabled) {
   return screenReaderEnabled.screenReaderEnabled;
 }
@@ -15,27 +16,30 @@ let closure_5 = module_570.create((arg0) => {
   _require = arg0;
   function updateScreenReaderEnabled(event) {
     closure_0 = event;
-    closure_0(1259).batchUpdates(() => screenReaderEnabled((screenReaderEnabled) => {
+    const obj = closure_0(dependencyMap[3]);
+    obj.batchUpdates(() => _false((screenReaderEnabled) => {
       let tmp = screenReaderEnabled;
-      if (screenReaderEnabled.screenReaderEnabled !== screenReaderEnabled) {
-        const Storage = screenReaderEnabled(510).Storage;
-        const result = Storage.set(screenReaderEnabled, screenReaderEnabled);
-        const obj = { screenReaderEnabled };
-        tmp = obj;
+      if (screenReaderEnabled.screenReaderEnabled !== _false) {
+        const Storage = closure_0(dependencyMap[1]).Storage;
+        const result = Storage.set(screenReaderEnabled, _false);
+        tmp = { screenReaderEnabled: _false };
+        const obj = { screenReaderEnabled: _false };
       }
       return tmp;
     }));
   }
   let result = AccessibilityInfo.isScreenReaderEnabled();
-  result.then(updateScreenReaderEnabled).catch(() => {
-    c0 = false;
-    closure_0(1259).batchUpdates(() => screenReaderEnabled((screenReaderEnabled) => {
+  const nextPromise = result.then(updateScreenReaderEnabled);
+  nextPromise.catch(() => {
+    let c0 = false;
+    let obj = _false(dependencyMap[3]);
+    obj.batchUpdates(() => _false((screenReaderEnabled) => {
       let tmp = screenReaderEnabled;
-      if (screenReaderEnabled.screenReaderEnabled !== screenReaderEnabled) {
-        const Storage = screenReaderEnabled(510).Storage;
-        const result = Storage.set(screenReaderEnabled, screenReaderEnabled);
-        const obj = { screenReaderEnabled };
-        tmp = obj;
+      if (screenReaderEnabled.screenReaderEnabled !== _false) {
+        const Storage = closure_0(dependencyMap[1]).Storage;
+        const result = Storage.set(screenReaderEnabled, _false);
+        tmp = { screenReaderEnabled: _false };
+        const obj = { screenReaderEnabled: _false };
       }
       return tmp;
     }));
@@ -53,7 +57,7 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/a11y/native/useIsScreenReaderEnabled.native.tsx");
 
 export const addScreenReaderEnabledListener = function addScreenReaderEnabledListener(arg0) {
-  closure_0 = arg0;
+  let closure_0 = arg0;
   return closure_5.subscribe((screenReaderEnabled) => {
     closure_0(screenReaderEnabled.screenReaderEnabled);
   });

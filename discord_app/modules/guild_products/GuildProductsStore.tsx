@@ -1,15 +1,19 @@
 // discord_app/modules/guild_products/GuildProductsStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
+import SecondaryIndexMap from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
+import size from "../../../_runtime/metro/00002__.js";
+
+let closure_3, closure_4, closure_5;
 
 const FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
-let closure_3 = {};
-let closure_4 = {};
-let closure_5 = {};
+const _false = {};
+const React3 = {};
+const hasOwnProperty = {};
 let closure_6 = 10 * DurationsDefault.Millis.MINUTE;
-const secondaryIndexMap = new fn(4504).SecondaryIndexMap(
+const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(
   (guild_id) => {
     const items = ["guild:" + guild_id.guild_id];
     if (guild_id.published) {
@@ -19,9 +23,11 @@ const secondaryIndexMap = new fn(4504).SecondaryIndexMap(
     return items;
   },
   (id) => {
-    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(id.id);
+    let diff;
+    const obj = SnowflakeUtilsDefault;
+    const extractTimestampResult = obj.extractTimestamp(id.id);
     if (id.published) {
-      let diff = -extractTimestampResult;
+      diff = -extractTimestampResult;
     } else {
       diff = 1000000000000 - extractTimestampResult;
     }
@@ -29,50 +35,54 @@ const secondaryIndexMap = new fn(4504).SecondaryIndexMap(
   },
 );
 let closure_8 = [];
-const Store = initializeDefault.Store;
-class GuildProductsStore extends Store {}
-const prototype = GuildProductsStore.prototype;
-prototype["getGuildProductsForGuildFetchState"] = function getGuildProductsForGuildFetchState(arg0) {
-  let NOT_FETCHED = closure_3[arg0];
-  if (NOT_FETCHED == null) {
-    NOT_FETCHED = obj.NOT_FETCHED;
-  }
-  return NOT_FETCHED;
-};
-prototype["getGuildProduct"] = function getGuildProduct(arg0) {
-  return secondaryIndexMap.get(arg0);
-};
-prototype["getGuildProductsForGuild"] = function getGuildProductsForGuild(arg0, arg1) {
-  if (null == arg0) {
-    let values = closure_8;
-  } else {
-    const _HermesInternal = HermesInternal;
-    if (tmp) {
-      let combined = concat(arg0, ":published");
-    } else {
-      combined = concat(arg0);
+const Store = get_initializedDefault.Store;
+class GuildProductsStore extends Store {
+  getGuildProductsForGuildFetchState(arg0) {
+    let NOT_FETCHED = closure_3[arg0];
+    if (NOT_FETCHED == null) {
+      NOT_FETCHED = obj.NOT_FETCHED;
     }
-    values = secondaryIndexMap.values(combined);
+    return NOT_FETCHED;
   }
-  return values;
-};
-prototype["getGuildProductFetchState"] = function getGuildProductFetchState(arg0) {
-  let NOT_FETCHED = closure_4[arg0];
-  if (NOT_FETCHED == null) {
-    NOT_FETCHED = obj.NOT_FETCHED;
+  getGuildProduct(arg0) {
+    return secondaryIndexMap.get(arg0);
   }
-  return NOT_FETCHED;
-};
-prototype["isGuildProductsCacheExpired"] = function isGuildProductsCacheExpired(arg0) {
-  let num = closure_5[arg0];
-  const timestamp = Date.now();
-  if (num == null) {
-    num = 0;
+  getGuildProductsForGuild(arg0, arg1) {
+    let values2;
+    if (null == arg0) {
+      values2 = closure_8;
+    } else {
+      let combined;
+      const _HermesInternal = HermesInternal;
+      const values = secondaryIndexMap.values;
+      if (tmp) {
+        combined = concat(arg0, ":published");
+      } else {
+        combined = concat(arg0);
+      }
+      values2 = values(combined);
+    }
+    return values2;
   }
-  return timestamp - num > closure_6;
-};
+  getGuildProductFetchState(arg0) {
+    let NOT_FETCHED = closure_4[arg0];
+    if (NOT_FETCHED == null) {
+      NOT_FETCHED = obj.NOT_FETCHED;
+    }
+    return NOT_FETCHED;
+  }
+  isGuildProductsCacheExpired(arg0) {
+    let num = closure_5[arg0];
+    const timestamp = Date.now();
+    if (num == null) {
+      num = 0;
+    }
+    return timestamp - num > closure_6;
+  }
+}
+const prototype = GuildProductsStore.prototype;
 GuildProductsStore.displayName = "GuildProductsStore";
-const guildProductsStore = new GuildProductsStore(DispatcherDefault, {
+const obj2 = {
   CONNECTION_OPEN: function handleConnectionOpen() {
     secondaryIndexMap.clear();
     closure_3 = {};
@@ -82,12 +92,15 @@ const guildProductsStore = new GuildProductsStore(DispatcherDefault, {
   GUILD_PRODUCTS_FETCH: function handleFetchGuildProducts(guildId) {
     guildId = guildId.guildId;
     closure_3[guildId] = obj.FETCHING;
-    const items = [...secondaryIndexMap.values("guild:" + guildId)];
+    const values = secondaryIndexMap.values;
+    const items = [...values("guild:" + guildId)];
     const item = items.forEach((id) => {
       set.delete(id.id);
     });
   },
   GUILD_PRODUCTS_FETCH_SUCCESS: function handleFetchProductsSuccess(arg0) {
+    let guildId;
+    let products;
     ({ guildId, products } = arg0);
     closure_3[guildId] = obj.FETCHED;
     closure_5[guildId] = Date.now();
@@ -125,8 +138,8 @@ const guildProductsStore = new GuildProductsStore(DispatcherDefault, {
       secondaryIndexMap.delete(productId);
     }
   },
-});
-const size = fn(2);
+};
+const guildProductsStore = new GuildProductsStore(DispatcherDefault, obj2);
 let result = size.fileFinishedImporting("modules/guild_products/GuildProductsStore.tsx");
 
 export default guildProductsStore;

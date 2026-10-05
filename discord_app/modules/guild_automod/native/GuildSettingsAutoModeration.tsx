@@ -1,199 +1,224 @@
 // discord_app/modules/guild_automod/native/GuildSettingsAutoModeration.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl3 from "../../../intl/index.native.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRowGroup2 from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import GuildSettingsAutomodRuleStore from "../GuildSettingsAutomodRuleStore.tsx";
 import AutomodTriggerConfigs from "../AutomodTriggerConfigs.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../_runtime/00019_react.js";
+import AutomodStore from "../AutomodStore.tsx";
+import Constants from "../../../Constants.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let constants2, importDefault, navigation;
 
-require = fn;
-const AutomodStore = fn(17675);
+let c10;
+let c9;
+let closure_4;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let obj3;
+let unpackModuleId;
+let _slicedToArray = _slicedToArray_mod;
 ({ useAutomodRulesList: closure_4, useSyncAutomodRulesEffect: hasOwnProperty } = AutomodStore);
-let closure_6 = fn(17677).useAutomodEditingRuleState;
-const Constants = fn(1085);
-({ GuildSettingsSections: closure_7, HelpdeskArticles: closure_8 } = Constants);
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  stack: { marginTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING },
-  loading: null,
-};
-let obj3 = { marginTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
-obj2.loading = { paddingVertical: nativeDefault.space.PX_24 };
-let closure_12 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj4 = { paddingVertical: nativeDefault.space.PX_24 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_automod/native/GuildSettingsAutoModeration.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_6 = GuildSettingsAutomodRuleStore.useAutomodEditingRuleState;
+({ GuildSettingsSections: metroImportDefault, HelpdeskArticles: metroImportAll } = Constants);
+({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { stack: obj2, loading: obj3 };
+obj2 = { marginTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+createStyles = createStyles.createStyles;
+obj3 = { paddingVertical: nativeDefault.space.PX_24 };
+let closure_12 = createStyles(obj);
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      const cResult = guildId(navigation[11]).c(24);
+      let closure_1;
+      let closure_8;
+      let createNewEditingRule;
+      let first;
+      let format;
+      let items;
+      let items1;
+      let obj8;
+      let obj9;
+      let prop;
+      let rulesByTriggerType;
+      let setEditingRule;
+      const tmp = guildId;
+      let tmp2 = navigation;
+      let obj = guildId(navigation[11]);
+      const cResult = obj.c(24);
       guildId = guildId.guildId;
       const contentContainerStyle = guildId.contentContainerStyle;
       let tmp4 = closure_12();
       importDefault = tmp4;
-      let obj = guildId(navigation[11]);
-      navigation = guildId(navigation[12]).useNavigation();
+      let obj2 = guildId(navigation[12]);
+      navigation = obj2.useNavigation();
       first = first(setEditingRule(guildId), 1)[0];
       rulesByTriggerType = rulesByTriggerType(guildId).rulesByTriggerType;
       const tmp7 = createNewEditingRule();
       setEditingRule = tmp7.setEditingRule;
       createNewEditingRule = tmp7.createNewEditingRule;
-      let obj2 = guildId(navigation[12]);
-      const availableTriggerTypes = guildId(navigation[8]).useAvailableTriggerTypes(guildId);
+      const obj3 = guildId(navigation[8]);
+      const availableTriggerTypes = obj3.useAvailableTriggerTypes(guildId);
       if (cResult[0] === createNewEditingRule) {
         if (cResult[1] === guildId) {
           if (cResult[2] === navigation) {
             if (cResult[3] === rulesByTriggerType) {
+              let tmp9;
               if (cResult[4] === setEditingRule) {
-                let tmp9 = cResult[5];
+                tmp9 = cResult[5];
               }
               constants2 = tmp9;
               if (cResult[6] === availableTriggerTypes) {
                 if (cResult[7] === first) {
                   if (cResult[8] === tmp9) {
+                    let tmp10;
+                    let tmp15;
+                    let tmp22;
                     if (cResult[9] === tmp4.loading) {
-                      let tmp10 = cResult[10];
+                      tmp10 = cResult[10];
                     }
                     const _Symbol = Symbol;
                     class D {
                       constructor() {
-                        if (closure_3) {
-                          tmp4 = jsx;
-                          tmp5 = closure_0;
-                          tmp6 = closure_2;
-                          obj = { style: null };
-                          tmp7 = closure_1;
-                          obj.style = closure_1.loading;
-                          mapped = jsx(closure_0(closure_2[15]).ActivityIndicator, obj);
+                        let mapped;
+                        if (first) {
+                          let obj = { style: closure_1.loading };
+                          mapped = React4(ActivityIndicator_ActivityIndicator.ActivityIndicator, obj);
                         } else {
-                          tmp = globalThis;
-                          _Object = Object;
-                          tmp2 = closure_7;
-                          entries = Object.entries(closure_7);
+                          const tmp2 = globalThis;
+                          const _Object = Object;
+                          const entries = Object.entries(availableTriggerTypes);
                           mapped = entries.map((item) => {
+                            let arr;
+                            let tmp2;
                             [tmp2, arr] = first(item, 2);
-                            if (0 === arr.length) {
-                              return null;
-                            } else {
-                              let obj = navigation;
+                            let tmp6Result = null;
+                            first(item, 2);
+                            if (0 !== arr.length) {
+                              let stringResult;
+                              const TableRowGroup = guildId(navigation[16]).TableRowGroup;
                               if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
-                                const intl2 = guildId(obj[9]).intl;
-                                let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
-                              } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
-                                const intl = guildId(obj[9]).intl;
-                                stringResult = intl.string(guildId(obj[9]).t.fphZb0);
+                                const intl2 = guildId(navigation[9]).intl;
+                                stringResult = intl2.string(guildId(navigation[9]).t.sx4E5v);
+                              } else if (guildId(navigation[8]).AutomodTriggerCategory.CONTENT === tmp2) {
+                                const intl = guildId(navigation[9]).intl;
+                                stringResult = intl.string(guildId(navigation[9]).t.fphZb0);
                               }
-                              obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
-                              closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
+                              const obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
+                              tmp6Result = closure_2_9(TableRowGroup, obj, tmp2);
                             }
-                            const tmp = first(item, 2);
+                            return tmp6Result;
                           });
                         }
                         return mapped;
                       }
                     }
+                    const stack = tmp4.stack;
                     if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-                      const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
+                      const obj4 = {
+                        variant: "text-sm/normal",
+                        color: "text-default",
+                        children: obj5.string(tmp(tmp2[9]).t.EwuSCR),
+                      };
+                      const Text = tmp(tmp2[17]).Text;
                       class D {
                         constructor() {
-                          if (closure_3) {
-                            tmp4 = jsx;
-                            tmp5 = closure_0;
-                            tmp6 = closure_2;
-                            obj = { style: null };
-                            tmp7 = closure_1;
-                            obj.style = closure_1.loading;
-                            mapped = jsx(closure_0(closure_2[15]).ActivityIndicator, obj);
+                          let mapped;
+                          if (first) {
+                            let obj = { style: closure_1.loading };
+                            mapped = React4(ActivityIndicator_ActivityIndicator.ActivityIndicator, obj);
                           } else {
-                            tmp = globalThis;
-                            _Object = Object;
-                            tmp2 = closure_7;
-                            entries = Object.entries(closure_7);
+                            const tmp2 = globalThis;
+                            const _Object = Object;
+                            const entries = Object.entries(availableTriggerTypes);
                             mapped = entries.map((item) => {
+                              let arr;
+                              let tmp2;
                               [tmp2, arr] = first(item, 2);
-                              if (0 === arr.length) {
-                                return null;
-                              } else {
-                                let obj = navigation;
+                              let tmp6Result = null;
+                              first(item, 2);
+                              if (0 !== arr.length) {
+                                let stringResult;
+                                const TableRowGroup = guildId(navigation[16]).TableRowGroup;
                                 if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
-                                  const intl2 = guildId(obj[9]).intl;
-                                  let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
-                                } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
-                                  const intl = guildId(obj[9]).intl;
-                                  stringResult = intl.string(guildId(obj[9]).t.fphZb0);
+                                  const intl2 = guildId(navigation[9]).intl;
+                                  stringResult = intl2.string(guildId(navigation[9]).t.sx4E5v);
+                                } else if (guildId(navigation[8]).AutomodTriggerCategory.CONTENT === tmp2) {
+                                  const intl = guildId(navigation[9]).intl;
+                                  stringResult = intl.string(guildId(navigation[9]).t.fphZb0);
                                 }
-                                obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
-                                closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
+                                const obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
+                                tmp6Result = closure_2_9(TableRowGroup, obj, tmp2);
                               }
-                              const tmp = first(item, 2);
+                              return tmp6Result;
                             });
                           }
                           return mapped;
                         }
                       }
-                      obj4.children = obj5.string(tmp(tmp2[9]).t.EwuSCR);
-                      const tmp14 = closure_9(tmp(tmp2[17]).Text, obj4);
-                      cResult[11] = tmp14;
+                      cResult[11] = closure_9(Text, obj4);
+                      const tmp14 = closure_9(Text, obj4);
                     }
                     const _Symbol2 = Symbol;
                     if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                      const obj6 = { children: null };
-                      let items = [,];
+                      const obj6 = { children: items };
+                      items = [,];
                       class D {
                         constructor() {
-                          if (closure_3) {
-                            tmp4 = jsx;
-                            tmp5 = closure_0;
-                            tmp6 = closure_2;
-                            obj = { style: null };
-                            tmp7 = closure_1;
-                            obj.style = closure_1.loading;
-                            mapped = jsx(closure_0(closure_2[15]).ActivityIndicator, obj);
+                          let mapped;
+                          if (first) {
+                            let obj = { style: closure_1.loading };
+                            mapped = React4(ActivityIndicator_ActivityIndicator.ActivityIndicator, obj);
                           } else {
-                            tmp = globalThis;
-                            _Object = Object;
-                            tmp2 = closure_7;
-                            entries = Object.entries(closure_7);
+                            const tmp2 = globalThis;
+                            const _Object = Object;
+                            const entries = Object.entries(availableTriggerTypes);
                             mapped = entries.map((item) => {
+                              let arr;
+                              let tmp2;
                               [tmp2, arr] = first(item, 2);
-                              if (0 === arr.length) {
-                                return null;
-                              } else {
-                                let obj = navigation;
+                              let tmp6Result = null;
+                              first(item, 2);
+                              if (0 !== arr.length) {
+                                let stringResult;
+                                const TableRowGroup = guildId(navigation[16]).TableRowGroup;
                                 if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
-                                  const intl2 = guildId(obj[9]).intl;
-                                  let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
-                                } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
-                                  const intl = guildId(obj[9]).intl;
-                                  stringResult = intl.string(guildId(obj[9]).t.fphZb0);
+                                  const intl2 = guildId(navigation[9]).intl;
+                                  stringResult = intl2.string(guildId(navigation[9]).t.sx4E5v);
+                                } else if (guildId(navigation[8]).AutomodTriggerCategory.CONTENT === tmp2) {
+                                  const intl = guildId(navigation[9]).intl;
+                                  stringResult = intl.string(guildId(navigation[9]).t.fphZb0);
                                 }
-                                obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
-                                closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
+                                const obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
+                                tmp6Result = closure_2_9(TableRowGroup, obj, tmp2);
                               }
-                              const tmp = first(item, 2);
+                              return tmp6Result;
                             });
                           }
                           return mapped;
                         }
                       }
-                      const obj7 = { variant: "text-sm/normal", color: "text-default", children: null };
+                      const Stack = tmp(tmp2[18]).Stack;
+                      const obj7 = { variant: "text-sm/normal", color: "text-default", children: format(prop, obj8) };
+                      const Text2 = tmp(tmp2[17]).Text;
                       let intl = tmp(tmp2[9]).intl;
-                      const obj8 = {
-                        helpUrl: require("HelpdeskUtils").getArticleURL(constants2.GUILD_AUTOMOD_BLOCKED_MESSAGE),
-                      };
-                      obj7.children = intl.format(tmp(tmp2[9]).t["B+sgGt"], obj8);
-                      items[1] = closure_9(tmp(tmp2[17]).Text, obj7);
-                      obj6.children = items;
-                      const tmp20 = closure_10(tmp(tmp2[18]).Stack, obj6);
-                      cResult[12] = tmp20;
-                      let tmp15 = tmp20;
-                      const obj9 = require("HelpdeskUtils");
+                      format = intl.format;
+                      obj8 = { helpUrl: obj9.getArticleURL(constants2.GUILD_AUTOMOD_BLOCKED_MESSAGE) };
+                      prop = tmp(tmp2[9]).t["B+sgGt"];
+                      obj9 = require("HelpdeskUtils");
+                      items[1] = closure_9(Text2, obj7);
+                      const tmp21 = closure_10(Stack, obj6);
+                      cResult[12] = tmp21;
+                      tmp15 = tmp21;
                     } else {
                       tmp15 = cResult[12];
                     }
@@ -202,231 +227,223 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       cResult[13] = tmp10;
                       class D {
                         constructor() {
-                          if (closure_3) {
-                            tmp4 = jsx;
-                            tmp5 = closure_0;
-                            tmp6 = closure_2;
-                            obj = { style: null };
-                            tmp7 = closure_1;
-                            obj.style = closure_1.loading;
-                            mapped = jsx(closure_0(closure_2[15]).ActivityIndicator, obj);
+                          let mapped;
+                          if (first) {
+                            let obj = { style: closure_1.loading };
+                            mapped = React4(ActivityIndicator_ActivityIndicator.ActivityIndicator, obj);
                           } else {
-                            tmp = globalThis;
-                            _Object = Object;
-                            tmp2 = closure_7;
-                            entries = Object.entries(closure_7);
+                            const tmp2 = globalThis;
+                            const _Object = Object;
+                            const entries = Object.entries(availableTriggerTypes);
                             mapped = entries.map((item) => {
+                              let arr;
+                              let tmp2;
                               [tmp2, arr] = first(item, 2);
-                              if (0 === arr.length) {
-                                return null;
-                              } else {
-                                let obj = navigation;
+                              let tmp6Result = null;
+                              first(item, 2);
+                              if (0 !== arr.length) {
+                                let stringResult;
+                                const TableRowGroup = guildId(navigation[16]).TableRowGroup;
                                 if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
-                                  const intl2 = guildId(obj[9]).intl;
-                                  let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
-                                } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
-                                  const intl = guildId(obj[9]).intl;
-                                  stringResult = intl.string(guildId(obj[9]).t.fphZb0);
+                                  const intl2 = guildId(navigation[9]).intl;
+                                  stringResult = intl2.string(guildId(navigation[9]).t.sx4E5v);
+                                } else if (guildId(navigation[8]).AutomodTriggerCategory.CONTENT === tmp2) {
+                                  const intl = guildId(navigation[9]).intl;
+                                  stringResult = intl.string(guildId(navigation[9]).t.fphZb0);
                                 }
-                                obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
-                                closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
+                                const obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
+                                tmp6Result = closure_2_9(TableRowGroup, obj, tmp2);
                               }
-                              const tmp = first(item, 2);
+                              return tmp6Result;
                             });
                           }
                           return mapped;
                         }
                       }
                       cResult[14] = tmp10Result;
-                      let tmp21 = tmp10Result;
+                      tmp22 = tmp10Result;
                     } else {
-                      tmp21 = cResult[14];
+                      tmp22 = cResult[14];
                     }
                     if (cResult[15] === tmp4.stack) {
-                      if (cResult[16] === tmp21) {
-                        let tmp23 = cResult[17];
+                      let tmp24;
+                      if (cResult[16] === tmp22) {
+                        tmp24 = cResult[17];
                       }
                       if (cResult[18] === contentContainerStyle) {
-                        if (cResult[19] === tmp23) {
-                          let tmp27 = cResult[20];
+                        let tmp28;
+                        let tmp34;
+                        if (cResult[19] === tmp24) {
+                          tmp28 = cResult[20];
                         }
                         const _Symbol3 = Symbol;
                         class D {
                           constructor() {
-                            if (closure_3) {
-                              tmp4 = jsx;
-                              tmp5 = closure_0;
-                              tmp6 = closure_2;
-                              obj = { style: null };
-                              tmp7 = closure_1;
-                              obj.style = closure_1.loading;
-                              mapped = jsx(closure_0(closure_2[15]).ActivityIndicator, obj);
+                            let mapped;
+                            if (first) {
+                              let obj = { style: closure_1.loading };
+                              mapped = React4(ActivityIndicator_ActivityIndicator.ActivityIndicator, obj);
                             } else {
-                              tmp = globalThis;
-                              _Object = Object;
-                              tmp2 = closure_7;
-                              entries = Object.entries(closure_7);
+                              const tmp2 = globalThis;
+                              const _Object = Object;
+                              const entries = Object.entries(availableTriggerTypes);
                               mapped = entries.map((item) => {
+                                let arr;
+                                let tmp2;
                                 [tmp2, arr] = first(item, 2);
-                                if (0 === arr.length) {
-                                  return null;
-                                } else {
-                                  let obj = navigation;
+                                let tmp6Result = null;
+                                first(item, 2);
+                                if (0 !== arr.length) {
+                                  let stringResult;
+                                  const TableRowGroup = guildId(navigation[16]).TableRowGroup;
                                   if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
-                                    const intl2 = guildId(obj[9]).intl;
-                                    let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
-                                  } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
-                                    const intl = guildId(obj[9]).intl;
-                                    stringResult = intl.string(guildId(obj[9]).t.fphZb0);
+                                    const intl2 = guildId(navigation[9]).intl;
+                                    stringResult = intl2.string(guildId(navigation[9]).t.sx4E5v);
+                                  } else if (guildId(navigation[8]).AutomodTriggerCategory.CONTENT === tmp2) {
+                                    const intl = guildId(navigation[9]).intl;
+                                    stringResult = intl.string(guildId(navigation[9]).t.fphZb0);
                                   }
-                                  obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
-                                  closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
+                                  const obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
+                                  tmp6Result = closure_2_9(TableRowGroup, obj, tmp2);
                                 }
-                                const tmp = first(item, 2);
+                                return tmp6Result;
                               });
                             }
                             return mapped;
                           }
                         }
-                        if (cResult[22] !== tmp27) {
-                          const obj10 = { children: null };
+                        if (cResult[22] !== tmp28) {
+                          const obj10 = { children: tmp37 };
                           class D {
                             constructor() {
-                              if (closure_3) {
-                                tmp4 = jsx;
-                                tmp5 = closure_0;
-                                tmp6 = closure_2;
-                                obj = { style: null };
-                                tmp7 = closure_1;
-                                obj.style = closure_1.loading;
-                                mapped = jsx(closure_0(closure_2[15]).ActivityIndicator, obj);
+                              let mapped;
+                              if (first) {
+                                let obj = { style: closure_1.loading };
+                                mapped = React4(ActivityIndicator_ActivityIndicator.ActivityIndicator, obj);
                               } else {
-                                tmp = globalThis;
-                                _Object = Object;
-                                tmp2 = closure_7;
-                                entries = Object.entries(closure_7);
+                                const tmp2 = globalThis;
+                                const _Object = Object;
+                                const entries = Object.entries(availableTriggerTypes);
                                 mapped = entries.map((item) => {
+                                  let arr;
+                                  let tmp2;
                                   [tmp2, arr] = first(item, 2);
-                                  if (0 === arr.length) {
-                                    return null;
-                                  } else {
-                                    let obj = navigation;
+                                  let tmp6Result = null;
+                                  first(item, 2);
+                                  if (0 !== arr.length) {
+                                    let stringResult;
+                                    const TableRowGroup = guildId(navigation[16]).TableRowGroup;
                                     if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
-                                      const intl2 = guildId(obj[9]).intl;
-                                      let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
-                                    } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
-                                      const intl = guildId(obj[9]).intl;
-                                      stringResult = intl.string(guildId(obj[9]).t.fphZb0);
+                                      const intl2 = guildId(navigation[9]).intl;
+                                      stringResult = intl2.string(guildId(navigation[9]).t.sx4E5v);
+                                    } else if (guildId(navigation[8]).AutomodTriggerCategory.CONTENT === tmp2) {
+                                      const intl = guildId(navigation[9]).intl;
+                                      stringResult = intl.string(guildId(navigation[9]).t.fphZb0);
                                     }
-                                    obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
-                                    closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
+                                    const obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
+                                    tmp6Result = closure_2_9(TableRowGroup, obj, tmp2);
                                   }
-                                  const tmp = first(item, 2);
+                                  return tmp6Result;
                                 });
                               }
                               return mapped;
                             }
                           }
-                          tmp36[0] = tmp27;
-                          tmp36[1] = tmp32;
-                          obj10.children = tmp36;
-                          const tmp37 = closure_10(closure_11, obj10);
-                          cResult[22] = tmp27;
-                          cResult[23] = tmp37;
-                          let tmp33 = tmp37;
+                          tmp37[0] = tmp28;
+                          tmp37[1] = tmp33;
+                          const tmp38 = closure_10(closure_11, obj10);
+                          cResult[22] = tmp28;
+                          cResult[23] = tmp38;
+                          tmp34 = tmp38;
                         } else {
-                          tmp33 = cResult[23];
+                          tmp34 = cResult[23];
                         }
-                        return tmp33;
+                        return tmp34;
                       }
                       class D {
                         constructor() {
-                          if (closure_3) {
-                            tmp4 = jsx;
-                            tmp5 = closure_0;
-                            tmp6 = closure_2;
-                            obj = { style: null };
-                            tmp7 = closure_1;
-                            obj.style = closure_1.loading;
-                            mapped = jsx(closure_0(closure_2[15]).ActivityIndicator, obj);
+                          let mapped;
+                          if (first) {
+                            let obj = { style: closure_1.loading };
+                            mapped = React4(ActivityIndicator_ActivityIndicator.ActivityIndicator, obj);
                           } else {
-                            tmp = globalThis;
-                            _Object = Object;
-                            tmp2 = closure_7;
-                            entries = Object.entries(closure_7);
+                            const tmp2 = globalThis;
+                            const _Object = Object;
+                            const entries = Object.entries(availableTriggerTypes);
                             mapped = entries.map((item) => {
+                              let arr;
+                              let tmp2;
                               [tmp2, arr] = first(item, 2);
-                              if (0 === arr.length) {
-                                return null;
-                              } else {
-                                let obj = navigation;
+                              let tmp6Result = null;
+                              first(item, 2);
+                              if (0 !== arr.length) {
+                                let stringResult;
+                                const TableRowGroup = guildId(navigation[16]).TableRowGroup;
                                 if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
-                                  const intl2 = guildId(obj[9]).intl;
-                                  let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
-                                } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
-                                  const intl = guildId(obj[9]).intl;
-                                  stringResult = intl.string(guildId(obj[9]).t.fphZb0);
+                                  const intl2 = guildId(navigation[9]).intl;
+                                  stringResult = intl2.string(guildId(navigation[9]).t.sx4E5v);
+                                } else if (guildId(navigation[8]).AutomodTriggerCategory.CONTENT === tmp2) {
+                                  const intl = guildId(navigation[9]).intl;
+                                  stringResult = intl.string(guildId(navigation[9]).t.fphZb0);
                                 }
-                                obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
-                                closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
+                                const obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
+                                tmp6Result = closure_2_9(TableRowGroup, obj, tmp2);
                               }
-                              const tmp = first(item, 2);
+                              return tmp6Result;
                             });
                           }
                           return mapped;
                         }
                       }
-                      tmp29[0] = contentContainerStyle;
-                      tmp29[1] = tmp23;
-                      const tmp30 = closure_9(tmp(tmp2[20]).Form, tmp29);
+                      tmp30[0] = contentContainerStyle;
+                      tmp30[1] = tmp24;
+                      const tmp31 = closure_9(tmp(tmp2[20]).Form, tmp30);
                       cResult[18] = contentContainerStyle;
-                      cResult[19] = tmp23;
-                      cResult[20] = tmp30;
-                      tmp27 = tmp30;
+                      cResult[19] = tmp24;
+                      cResult[20] = tmp31;
+                      tmp28 = tmp31;
                     }
-                    const obj11 = { style: tmp4.stack, spacing: require("native").space.PX_24, children: null };
-                    const items1 = [tmp15, tmp21];
-                    obj11.children = items1;
-                    const tmp26 = closure_10(tmp(tmp2[18]).Stack, obj11);
+                    const obj11 = { style: stack, spacing: require("native").space.PX_24, children: items1 };
+                    const Stack2 = tmp(tmp2[18]).Stack;
+                    items1 = [tmp15, tmp22];
+                    const tmp27 = closure_10(Stack2, obj11);
                     cResult[15] = tmp4.stack;
-                    cResult[16] = tmp21;
-                    cResult[17] = tmp26;
-                    tmp23 = tmp26;
+                    cResult[16] = tmp22;
+                    cResult[17] = tmp27;
+                    tmp24 = tmp27;
                   }
                 }
               }
               class D {
                 constructor() {
-                  if (closure_3) {
-                    tmp4 = jsx;
-                    tmp5 = closure_0;
-                    tmp6 = closure_2;
-                    obj = { style: null };
-                    tmp7 = closure_1;
-                    obj.style = closure_1.loading;
-                    mapped = jsx(closure_0(closure_2[15]).ActivityIndicator, obj);
+                  let mapped;
+                  if (first) {
+                    let obj = { style: closure_1.loading };
+                    mapped = React4(ActivityIndicator_ActivityIndicator.ActivityIndicator, obj);
                   } else {
-                    tmp = globalThis;
-                    _Object = Object;
-                    tmp2 = closure_7;
-                    entries = Object.entries(closure_7);
+                    const tmp2 = globalThis;
+                    const _Object = Object;
+                    const entries = Object.entries(availableTriggerTypes);
                     mapped = entries.map((item) => {
+                      let arr;
+                      let tmp2;
                       [tmp2, arr] = first(item, 2);
-                      if (0 === arr.length) {
-                        return null;
-                      } else {
-                        let obj = navigation;
+                      let tmp6Result = null;
+                      first(item, 2);
+                      if (0 !== arr.length) {
+                        let stringResult;
+                        const TableRowGroup = guildId(navigation[16]).TableRowGroup;
                         if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
-                          const intl2 = guildId(obj[9]).intl;
-                          let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
-                        } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
-                          const intl = guildId(obj[9]).intl;
-                          stringResult = intl.string(guildId(obj[9]).t.fphZb0);
+                          const intl2 = guildId(navigation[9]).intl;
+                          stringResult = intl2.string(guildId(navigation[9]).t.sx4E5v);
+                        } else if (guildId(navigation[8]).AutomodTriggerCategory.CONTENT === tmp2) {
+                          const intl = guildId(navigation[9]).intl;
+                          stringResult = intl.string(guildId(navigation[9]).t.fphZb0);
                         }
-                        obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
-                        closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
+                        const obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
+                        tmp6Result = closure_2_9(TableRowGroup, obj, tmp2);
                       }
-                      const tmp = first(item, 2);
+                      return tmp6Result;
                     });
                   }
                   return mapped;
@@ -443,72 +460,67 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const fn = function c(triggerType) {
-        c0 = triggerType;
         let items = rulesByTriggerType[triggerType];
         if (items == null) {
           items = [];
         }
         if (0 === items.length) {
-          const obj2 = { triggerType, onPress: null };
-          c0 = undefined;
-          obj2.onPress = () => {
-            if (navigation.isFocused()) {
-              let GUILD_AUTOMOD_RULE = closure_0;
-              if (null != closure_0) {
-                setEditingRule(GUILD_AUTOMOD_RULE);
-              } else {
-                createNewEditingRule(guildId, triggerType);
+          let c0;
+          const obj2 = {
+            triggerType,
+            onPress: () => {
+              if (navigation.isFocused()) {
+                if (null != triggerType) {
+                  setEditingRule(tmp);
+                } else {
+                  createNewEditingRule(guildId, triggerType);
+                }
+                const obj = { triggerType };
+                navigation.push(metroImportDefault.GUILD_AUTOMOD_RULE, obj);
               }
-              GUILD_AUTOMOD_RULE = constants.GUILD_AUTOMOD_RULE;
-              const obj = { triggerType };
-              navigation.push(GUILD_AUTOMOD_RULE, obj);
-            }
+            },
           };
           return closure_1_9(closure_1(navigation[13]), obj2, triggerType);
         } else {
           const mapped = items.map((rule) => {
-            triggerType = rule;
-            return closure_2_9(
-              closure_1(navigation[13]),
-              {
-                triggerType,
-                rule,
-                onPress: () => {
-                  if (navigation.isFocused()) {
-                    let GUILD_AUTOMOD_RULE = closure_0;
-                    if (null != closure_0) {
-                      setEditingRule(GUILD_AUTOMOD_RULE);
-                    } else {
-                      createNewEditingRule(guildId, triggerType);
-                    }
-                    GUILD_AUTOMOD_RULE = constants.GUILD_AUTOMOD_RULE;
-                    const obj = { triggerType };
-                    navigation.push(GUILD_AUTOMOD_RULE, obj);
+            let obj = {
+              triggerType,
+              rule,
+              onPress: () => {
+                if (navigation.isFocused()) {
+                  if (null != triggerType) {
+                    setEditingRule(tmp);
+                  } else {
+                    createNewEditingRule(guildId, triggerType);
                   }
-                },
+                  const obj = { triggerType };
+                  navigation.push(metroImportDefault.GUILD_AUTOMOD_RULE, obj);
+                }
               },
-              rule.id,
-            );
+            };
+            triggerType = rule;
+            return closure_2_9(closure_1(navigation[13]), obj, rule.id);
           });
           if (items.length < guildId(navigation[8]).triggerConfigs[triggerType].perGuildMaxCount) {
-            let obj = { triggerType, onPress: null };
-            c0 = undefined;
-            obj.onPress = () => {
-              if (navigation.isFocused()) {
-                let GUILD_AUTOMOD_RULE = closure_0;
-                if (null != closure_0) {
-                  setEditingRule(GUILD_AUTOMOD_RULE);
-                } else {
-                  createNewEditingRule(guildId, triggerType);
+            const push = mapped.push;
+            let obj = {
+              triggerType,
+              onPress: () => {
+                if (navigation.isFocused()) {
+                  if (null != triggerType) {
+                    setEditingRule(tmp);
+                  } else {
+                    createNewEditingRule(guildId, triggerType);
+                  }
+                  const obj = { triggerType };
+                  navigation.push(metroImportDefault.GUILD_AUTOMOD_RULE, obj);
                 }
-                GUILD_AUTOMOD_RULE = constants.GUILD_AUTOMOD_RULE;
-                const obj = { triggerType };
-                navigation.push(GUILD_AUTOMOD_RULE, obj);
-              }
+              },
             };
+            c0 = undefined;
             const _HermesInternal = HermesInternal;
-            mapped.push(closure_1_9(closure_1(navigation[14]), obj, "" + triggerType + "-add"));
             const tmp4 = closure_1(navigation[14]);
+            push(closure_1_9(tmp4, obj, "" + triggerType + "-add"));
           }
           return mapped;
         }
@@ -520,139 +532,158 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = setEditingRule;
       cResult[5] = fn;
       tmp9 = fn;
-      const obj3 = guildId(navigation[8]);
     }
-  : (contentContainerStyle) => {
-      const guildId = contentContainerStyle.guildId;
+  : (guildId) => {
+      let Stack;
+      let c3;
+      let c4;
+      let closure_1;
+      let format;
+      let intl;
+      let items;
+      let items1;
+      let items2;
+      let mapped;
+      let obj4;
+      let obj8;
+      let obj9;
+      let prop;
+      guildId = guildId.guildId;
       let rulesByTriggerType;
       _slicedToArray = undefined;
       c4 = undefined;
       function renderTriggerType(guildId) {
-        c0 = guildId;
+        let triggerType = guildId;
         let items = rulesByTriggerType[guildId];
         if (items == null) {
           items = [];
         }
         if (0 === items.length) {
-          const obj2 = { triggerType: guildId, onPress: null };
-          c0 = undefined;
-          obj2.onPress = () => {
-            if (focused.isFocused()) {
-              let GUILD_AUTOMOD_RULE = closure_0;
-              if (null != closure_0) {
-                c3(GUILD_AUTOMOD_RULE);
-              } else {
-                c4(guildId, triggerType);
+          let c0;
+          const obj2 = {
+            triggerType: guildId,
+            onPress: () => {
+              if (focused.isFocused()) {
+                if (null != triggerType) {
+                  c3(tmp);
+                } else {
+                  c4(guildId, triggerType);
+                }
+                const obj = { triggerType };
+                focused.push(metroImportDefault.GUILD_AUTOMOD_RULE, obj);
               }
-              GUILD_AUTOMOD_RULE = constants.GUILD_AUTOMOD_RULE;
-              const obj = { triggerType };
-              focused.push(GUILD_AUTOMOD_RULE, obj);
-            }
+            },
           };
           return closure_1_9(closure_1(rulesByTriggerType[13]), obj2, guildId);
         } else {
           const mapped = items.map((rule) => {
-            triggerType = rule;
-            return closure_2_9(
-              focused(rulesByTriggerType[13]),
-              {
-                triggerType,
-                rule,
-                onPress: () => {
-                  if (focused.isFocused()) {
-                    let GUILD_AUTOMOD_RULE = closure_0;
-                    if (null != closure_0) {
-                      c3(GUILD_AUTOMOD_RULE);
-                    } else {
-                      c4(guildId, triggerType);
-                    }
-                    GUILD_AUTOMOD_RULE = constants.GUILD_AUTOMOD_RULE;
-                    const obj = { triggerType };
-                    focused.push(GUILD_AUTOMOD_RULE, obj);
+            let obj = {
+              triggerType,
+              rule,
+              onPress: () => {
+                if (focused.isFocused()) {
+                  if (null != triggerType) {
+                    c3(tmp);
+                  } else {
+                    c4(guildId, triggerType);
                   }
-                },
+                  const obj = { triggerType };
+                  focused.push(metroImportDefault.GUILD_AUTOMOD_RULE, obj);
+                }
               },
-              rule.id,
-            );
+            };
+            triggerType = rule;
+            return closure_2_9(focused(rulesByTriggerType[13]), obj, rule.id);
           });
           if (items.length < guildId(rulesByTriggerType[8]).triggerConfigs[guildId].perGuildMaxCount) {
-            let obj = { triggerType: guildId, onPress: null };
-            c0 = undefined;
-            obj.onPress = () => {
-              if (focused.isFocused()) {
-                let GUILD_AUTOMOD_RULE = closure_0;
-                if (null != closure_0) {
-                  c3(GUILD_AUTOMOD_RULE);
-                } else {
-                  c4(guildId, triggerType);
+            const push = mapped.push;
+            let obj = {
+              triggerType: guildId,
+              onPress: () => {
+                if (focused.isFocused()) {
+                  if (null != triggerType) {
+                    c3(tmp);
+                  } else {
+                    c4(guildId, triggerType);
+                  }
+                  const obj = { triggerType };
+                  focused.push(metroImportDefault.GUILD_AUTOMOD_RULE, obj);
                 }
-                GUILD_AUTOMOD_RULE = constants.GUILD_AUTOMOD_RULE;
-                const obj = { triggerType };
-                focused.push(GUILD_AUTOMOD_RULE, obj);
-              }
+              },
             };
+            c0 = undefined;
             const _HermesInternal = HermesInternal;
-            mapped.push(closure_1_9(closure_1(rulesByTriggerType[14]), obj, "" + guildId + "-add"));
             const tmp4 = closure_1(rulesByTriggerType[14]);
+            push(closure_1_9(tmp4, obj, "" + guildId + "-add"));
           }
           return mapped;
         }
       }
+      const contentContainerStyle = guildId.contentContainerStyle;
       const tmp = closure_12();
-      importDefault = guildId(rulesByTriggerType[12]).useNavigation();
-      rulesByTriggerType = c4(guildId).rulesByTriggerType;
       let obj = guildId(rulesByTriggerType[12]);
+      importDefault = obj.useNavigation();
+      const first = _slicedToArray(renderTriggerType(guildId), 1)[0];
+      rulesByTriggerType = c4(guildId).rulesByTriggerType;
       ({ setEditingRule: c3, createNewEditingRule: c4 } = closure_6());
-      let tmp4 = closure_6();
-      const availableTriggerTypes = guildId(rulesByTriggerType[8]).useAvailableTriggerTypes(guildId);
-      const obj3 = { contentContainerStyle: contentContainerStyle.contentContainerStyle, children: null };
-      const obj4 = { style: tmp.stack, spacing: require("native").space.PX_24, children: null };
-      const obj5 = { children: null };
-      const obj6 = { variant: "text-sm/normal", color: "text-default", children: null };
-      let intl = guildId(rulesByTriggerType[9]).intl;
-      obj6.children = intl.string(guildId(rulesByTriggerType[9]).t.EwuSCR);
-      let items = [closure_9(guildId(rulesByTriggerType[17]).Text, obj6)];
-      const obj7 = { variant: "text-sm/normal", color: "text-default", children: null };
-      let intl2 = guildId(rulesByTriggerType[9]).intl;
-      const obj8 = { helpUrl: null };
+      const tmp5 = closure_6();
       let obj2 = guildId(rulesByTriggerType[8]);
-      obj8.helpUrl = require("HelpdeskUtils").getArticleURL(constants2.GUILD_AUTOMOD_BLOCKED_MESSAGE);
-      obj7.children = intl2.format(guildId(rulesByTriggerType[9]).t["B+sgGt"], obj8);
-      items[1] = closure_9(guildId(rulesByTriggerType[17]).Text, obj7);
-      obj5.children = items;
-      const items1 = [closure_10(guildId(rulesByTriggerType[18]).Stack, obj5)];
-      if (_slicedToArray(renderTriggerType(guildId), 1)[0]) {
+      const availableTriggerTypes = obj2.useAvailableTriggerTypes(guildId);
+      const obj3 = { contentContainerStyle, children: closure_10(Stack, obj4) };
+      const Form = guildId(rulesByTriggerType[20]).Form;
+      obj4 = { style: tmp.stack, spacing: require("native").space.PX_24, children: items1 };
+      Stack = guildId(rulesByTriggerType[18]).Stack;
+      const obj5 = { children: items };
+      const Stack2 = guildId(rulesByTriggerType[18]).Stack;
+      const obj6 = {
+        variant: "text-sm/normal",
+        color: "text-default",
+        children: intl.string(guildId(rulesByTriggerType[9]).t.EwuSCR),
+      };
+      const Text = guildId(rulesByTriggerType[17]).Text;
+      intl = guildId(rulesByTriggerType[9]).intl;
+      items = [closure_9(Text, obj6)];
+      const obj7 = { variant: "text-sm/normal", color: "text-default", children: format(prop, obj8) };
+      const Text2 = guildId(rulesByTriggerType[17]).Text;
+      let intl2 = guildId(rulesByTriggerType[9]).intl;
+      format = intl2.format;
+      obj8 = { helpUrl: obj9.getArticleURL(constants2.GUILD_AUTOMOD_BLOCKED_MESSAGE) };
+      prop = guildId(rulesByTriggerType[9]).t["B+sgGt"];
+      obj9 = require("HelpdeskUtils");
+      items[1] = closure_9(Text2, obj7);
+      items1 = [closure_10(Stack2, obj5)];
+      if (first) {
         const obj10 = { style: tmp.loading };
-        let mapped = closure_9(tmp2(tmp3[15]).ActivityIndicator, obj10);
+        mapped = closure_9(tmp2(tmp3[15]).ActivityIndicator, obj10);
       } else {
         const _Object = Object;
         const entries = Object.entries(availableTriggerTypes);
         mapped = entries.map((item) => {
+          let arr;
+          let tmp;
           [tmp, arr] = item;
-          if (0 === arr.length) {
-            return null;
-          } else {
-            let obj = dependencyMap;
+          let tmp5Result = null;
+          if (0 !== arr.length) {
+            let stringResult;
+            const TableRowGroup = TableRowGroup2.TableRowGroup;
             if (AutomodTriggerConfigs.AutomodTriggerCategory.MEMBERS === tmp) {
-              const intl2 = util.intl;
-              let stringResult = intl2.string(util.t.sx4E5v);
+              const intl2 = intl3.intl;
+              stringResult = intl2.string(intl3.t.sx4E5v);
             } else if (AutomodTriggerConfigs.AutomodTriggerCategory.CONTENT === tmp) {
-              const intl = util.intl;
-              stringResult = intl.string(util.t.fphZb0);
+              const intl = intl3.intl;
+              stringResult = intl.string(intl3.t.fphZb0);
             }
-            obj = { title: stringResult, hasIcons: true, children: arr.map(renderTriggerType) };
-            options(TableRowGroup.TableRowGroup, obj, tmp);
+            const obj = { title: stringResult, hasIcons: true, children: arr.map(renderTriggerType) };
+            tmp5Result = React4(TableRowGroup, obj, tmp);
           }
+          return tmp5Result;
         });
       }
-      const obj11 = { children: null };
+      const obj11 = { children: items2 };
       items1[1] = mapped;
-      obj4.children = items1;
-      obj3.children = closure_10(guildId(rulesByTriggerType[18]).Stack, obj4);
-      const items2 = [
-        closure_9(guildId(rulesByTriggerType[20]).Form, obj3),
-        closure_9(guildId(rulesByTriggerType[21]).NavScrim, {}),
-      ];
-      obj11.children = items2;
+      items2 = [closure_9(Form, obj3), closure_9(tmp2(rulesByTriggerType[21]).NavScrim, {})];
       return closure_10(closure_11, obj11);
     };
+const result = size.fileFinishedImporting("modules/guild_automod/native/GuildSettingsAutoModeration.tsx");
+
+export default tmp7;

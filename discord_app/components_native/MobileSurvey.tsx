@@ -1,27 +1,37 @@
 // discord_app/components_native/MobileSurvey.tsx
+import Fragment from "../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../Constants.tsx";
 import native from "../design/void/native.tsx";
 import LinkingDefault from "../lib/native/Linking.tsx";
-import _modDef8756 from "../../_runtime/metro/08756__.js";
+import AssetRegistryDefault from "../../_runtime/08756_AssetRegistry.js";
 import SurveyActionCreators from "../actions/SurveyActionCreators.tsx";
-import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../_runtime/metro/00019__.js";
+import _asyncToGenerator from "../../_runtime/metro/00005__asyncToGenerator.js";
+import react from "../../_runtime/00019_react.js";
 import SurveyStore from "../stores/SurveyStore.tsx";
+import createStyles from "../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, c0, c1;
 
-require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const AnalyticEvents = Constants.AnalyticEvents;
+const jsx = Fragment.jsx;
 let closure_8 = createStyles.createStyles({ confirmIcon: { marginLeft: 4 } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("components_native/MobileSurvey.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = require("c").c(19);
+      let _prompt;
+      let confirmIcon;
+      let cta;
+      let currentSurvey;
+      let tmp10;
+      let tmp5;
+      let tmp6;
+      let tmp9;
+      const tmp = _require;
+      let obj = require("react");
+      const cResult = obj.c(19);
       const tmp4 = closure_8();
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -36,18 +46,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      let obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(tmp5, tmp6);
+      const tmpResult = tmp(504);
+      const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
       if (cResult[2] !== stateFromStores) {
         const fn2 = function v() {
+          function setSurveySeen() {
+            return closure_0(...arguments);
+          }
           if (null != stateFromStores) {
-            const obj2 = { type: "survey", promotion_id: tmp.id };
-            stateFromStores(dependencyMap[9]).track(constants.OPEN_MODAL, obj2);
-            closure_0 = asyncGeneratorStep(async () => {
+            let obj = stateFromStores(dependencyMap[9]);
+            let obj2 = { type: "survey", promotion_id: tmp.id };
+            obj.track(constants.OPEN_MODAL, obj2);
+            let closure_0 = _asyncToGenerator(async () => {
+              let obj2;
               if (c0 === 2) {
                 c0 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
-              } else if (tmp3 === 3) {
+              } else if (tmp2 === 3) {
                 if (arg0 === 1) {
                   throw value;
                 } else if (arg0 === 2) {
@@ -70,7 +85,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     } else if (null != c1) {
                       c1 = 1;
                       c0 = 1;
-                      const obj5 = { value: v3(dependencyMap[10]).surveySeen(tmp5.key), done: false };
+                      const obj5 = { value: obj2.surveySeen(tmp4.key), done: false };
+                      obj2 = v3(dependencyMap[10]);
                       return obj5;
                     }
                   } else if (arg0 === 1) {
@@ -83,56 +99,48 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   c0 = 3;
                   return { value: "IconComponent", done: null };
-                } catch (tmp9) {
-                  c0 = tmp;
-                  throw tmp9;
+                } catch (tmp8) {
+                  c0 = 3;
+                  throw tmp8;
                 }
               }
             });
-            (function setSurveySeen() {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            })();
-            let obj = stateFromStores(dependencyMap[9]);
+            setSurveySeen();
           }
         };
         const items1 = [stateFromStores];
         cResult[2] = stateFromStores;
         cResult[3] = fn2;
         cResult[4] = items1;
-        let tmp10 = items1;
-        let tmp9 = fn2;
+        tmp10 = items1;
+        tmp9 = fn2;
       } else {
         tmp9 = cResult[3];
         tmp10 = cResult[4];
       }
-      const effect = noop.useEffect(tmp9, tmp10);
+      const effect = react.useEffect(tmp9, tmp10);
       if (null != stateFromStores) {
+        let tmp12;
         const _Symbol = Symbol;
         ({ prompt: _prompt, cta } = stateFromStores);
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = tmp(1126).intl;
           const stringResult = intl.string(tmp(1126).t.f3Pet9);
           cResult[5] = stringResult;
-          let tmp12 = stringResult;
+          tmp12 = stringResult;
         } else {
           tmp12 = cResult[5];
         }
         if (cResult[6] === stateFromStores.key) {
+          let tmp14;
           if (cResult[7] === stateFromStores.url) {
-            let tmp14 = cResult[8];
+            tmp14 = cResult[8];
           }
           if (cResult[9] !== stateFromStores.key) {
             class C {
               constructor() {
-                obj = closure_0(closure_2[10]);
-                return obj.surveyHide(closure_1.key, true);
+                const obj = SurveyActionCreators;
+                return obj.surveyHide(stateFromStores.key, true);
               }
             }
             cResult[9] = stateFromStores.key;
@@ -140,21 +148,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else {
             class C {
               constructor() {
-                obj = closure_0(closure_2[10]);
-                return obj.surveyHide(closure_1.key, true);
+                const obj = SurveyActionCreators;
+                return obj.surveyHide(stateFromStores.key, true);
               }
             }
           }
           if (cResult[11] !== tmp4.confirmIcon) {
             class L {
               constructor() {
-                obj = {
-                  style: closure_0.confirmIcon,
-                  color: closure_1(closure_2[14]).unsafe_rawColors.WHITE,
-                  size: closure_0(closure_2[13]).Icon.Sizes.SMALL,
-                  source: closure_1(closure_2[15]),
-                };
-                return jsx(closure_0(closure_2[13]).Icon, obj);
+                const Icon = native.Icon;
+                return (
+                  <Icon
+                    style={confirmIcon.confirmIcon}
+                    color={nativeDefault.unsafe_rawColors.WHITE}
+                    size={native.Icon.Sizes.SMALL}
+                    source={AssetRegistryDefault}
+                  />
+                );
               }
             }
             cResult[11] = tmp4.confirmIcon;
@@ -162,37 +172,46 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else {
             class L {
               constructor() {
-                obj = {
-                  style: closure_0.confirmIcon,
-                  color: closure_1(closure_2[14]).unsafe_rawColors.WHITE,
-                  size: closure_0(closure_2[13]).Icon.Sizes.SMALL,
-                  source: closure_1(closure_2[15]),
-                };
-                return jsx(closure_0(closure_2[13]).Icon, obj);
+                const Icon = native.Icon;
+                return (
+                  <Icon
+                    style={confirmIcon.confirmIcon}
+                    color={nativeDefault.unsafe_rawColors.WHITE}
+                    size={native.Icon.Sizes.SMALL}
+                    source={AssetRegistryDefault}
+                  />
+                );
               }
             }
           }
           if (cResult[13] === stateFromStores.cta) {
             class L {
               constructor() {
-                obj = {
-                  style: closure_0.confirmIcon,
-                  color: closure_1(closure_2[14]).unsafe_rawColors.WHITE,
-                  size: closure_0(closure_2[13]).Icon.Sizes.SMALL,
-                  source: closure_1(closure_2[15]),
-                };
-                return jsx(closure_0(closure_2[13]).Icon, obj);
+                const Icon = native.Icon;
+                return (
+                  <Icon
+                    style={confirmIcon.confirmIcon}
+                    color={nativeDefault.unsafe_rawColors.WHITE}
+                    size={native.Icon.Sizes.SMALL}
+                    source={AssetRegistryDefault}
+                  />
+                );
               }
             }
           }
-          let obj2 = {
+          cResult[13] = stateFromStores.cta;
+          cResult[14] = stateFromStores.prompt;
+          cResult[15] = tmp14;
+          cResult[16] = C;
+          cResult[17] = L;
+          cResult[18] = jsx(stateFromStores(5783), {
             body: _prompt,
             confirmText: cta,
             cancelText: tmp12,
             onConfirm: tmp14,
             onCancel: C,
             renderConfirmRightIcon: L,
-          };
+          });
           const tmp20 = jsx(stateFromStores(5783), {
             body: _prompt,
             confirmText: cta,
@@ -201,16 +220,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             onCancel: C,
             renderConfirmRightIcon: L,
           });
-          cResult[13] = stateFromStores.cta;
-          cResult[14] = stateFromStores.prompt;
-          cResult[15] = tmp14;
-          cResult[16] = C;
-          cResult[17] = L;
-          cResult[18] = tmp20;
         }
         const fn3 = function k() {
-          LinkingDefault.openURL(stateFromStores.url);
-          SurveyActionCreators.surveyHide(stateFromStores.key, false);
+          const obj = LinkingDefault;
+          obj.openURL(stateFromStores.url);
+          const obj2 = SurveyActionCreators;
+          obj2.surveyHide(stateFromStores.key, false);
         };
         cResult[6] = stateFromStores.key;
         cResult[7] = stateFromStores.url;
@@ -219,123 +234,126 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class L {
           constructor() {
-            obj = {
-              style: closure_0.confirmIcon,
-              color: closure_1(closure_2[14]).unsafe_rawColors.WHITE,
-              size: closure_0(closure_2[13]).Icon.Sizes.SMALL,
-              source: closure_1(closure_2[15]),
-            };
-            return jsx(closure_0(closure_2[13]).Icon, obj);
+            const Icon = native.Icon;
+            return (
+              <Icon
+                style={confirmIcon.confirmIcon}
+                color={nativeDefault.unsafe_rawColors.WHITE}
+                size={native.Icon.Sizes.SMALL}
+                source={AssetRegistryDefault}
+              />
+            );
           }
         }
       }
-      const tmpResult = require("initialize");
     }
   : () => {
+      let confirmIcon;
+      let currentSurvey;
       _require = closure_8();
+      const tmp = _require;
+      let obj = require("get initialized");
       const items = [SurveyStore];
-      const stateFromStores = require("initialize").useStateFromStores(items, () => currentSurvey.getCurrentSurvey());
+      const stateFromStores = obj.useStateFromStores(items, () => currentSurvey.getCurrentSurvey());
       const items1 = [stateFromStores];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
+        function setSurveySeen() {
+          return obj(...arguments);
+        }
         if (null != stateFromStores) {
-          closure_0 = async function _setSurveySeen2() {
-            if (c0 === 2) {
-              c0 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp3 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj3 = { value, done: true };
-                return obj3;
+          let obj = function _setSurveySeen2() {
+            obj = _asyncToGenerator(async () => {
+              let obj2;
+              if (c0 === 2) {
+                c0 = 3;
+                throw new TypeError("Generator functions may not be called on executing generators");
+              } else if (tmp2 === 3) {
+                if (arg0 === 1) {
+                  throw value;
+                } else if (arg0 === 2) {
+                  const obj3 = { value, done: true };
+                  return obj3;
+                } else {
+                  return { value: "IconComponent", done: null };
+                }
               } else {
-                return { value: "IconComponent", done: null };
-              }
-            } else {
-              try {
-                c0 = 2;
-                if (0 === c1) {
-                  if (arg0 === 1) {
+                try {
+                  c0 = 2;
+                  if (0 === c1) {
+                    if (arg0 === 1) {
+                      c0 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c0 = 3;
+                      const obj4 = { value, done: true };
+                      return obj4;
+                    } else if (null != c1) {
+                      c1 = 1;
+                      c0 = 1;
+                      const obj5 = { value: obj2.surveySeen(tmp4.key), done: false };
+                      obj2 = closure_2_0(closure_2_2[10]);
+                      return obj5;
+                    }
+                  } else if (arg0 === 1) {
                     c0 = 3;
                     throw value;
                   } else if (arg0 === 2) {
                     c0 = 3;
-                    const obj4 = { value, done: true };
-                    return obj4;
-                  } else if (null != c1) {
-                    c1 = 1;
-                    c0 = 1;
-                    const obj5 = { value: confirmIcon(dependencyMap[10]).surveySeen(tmp5.key), done: false };
-                    return obj5;
+                    obj = { value, done: true };
+                    return obj;
                   }
-                } else if (arg0 === 1) {
                   c0 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
+                  return { value: "IconComponent", done: null };
+                } catch (tmp8) {
                   c0 = 3;
-                  const obj = { value, done: true };
-                  return obj;
+                  throw tmp8;
                 }
-                c0 = 3;
-                return { value: "IconComponent", done: null };
-              } catch (tmp9) {
-                c0 = tmp;
-                throw tmp9;
               }
-            }
+            });
+            return obj(...arguments);
           };
-          const obj2 = { type: "survey", promotion_id: tmp.id };
-          stateFromStores(dependencyMap[9]).track(constants.OPEN_MODAL, obj2);
-          (function setSurveySeen() {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          })();
-          let obj = stateFromStores(dependencyMap[9]);
+          obj = stateFromStores(dependencyMap[9]);
+          let obj2 = { type: "survey", promotion_id: tmp.id };
+          obj.track(constants.OPEN_MODAL, obj2);
+          setSurveySeen();
         }
       }, items1);
       let tmp5 = null;
       if (null != stateFromStores) {
-        let obj3 = {
-          body: null,
-          confirmText: null,
-          cancelText: null,
-          onConfirm: null,
-          onCancel: null,
-          renderConfirmRightIcon: null,
-        };
         ({ prompt: obj2.body, cta: obj2.confirmText } = stateFromStores);
-        const intl = tmp(1126).intl;
-        obj3.cancelText = intl.string(tmp(1126).t.f3Pet9);
-        obj3.onConfirm = function onConfirm() {
-          LinkingDefault.openURL(stateFromStores.url);
-          SurveyActionCreators.surveyHide(stateFromStores.key, false);
-        };
-        obj3.onCancel = function onCancel() {
-          return SurveyActionCreators.surveyHide(stateFromStores.key, true);
-        };
-        obj3.renderConfirmRightIcon = function renderConfirmRightIcon() {
-          return jsx(native.Icon, {
-            style: confirmIcon.confirmIcon,
-            color: nativeDefault.unsafe_rawColors.WHITE,
-            size: native.Icon.Sizes.SMALL,
-            source: _modDef8756,
-          });
-        };
-        tmp5 = jsx(stateFromStores(5783), {
-          body: null,
-          confirmText: null,
-          cancelText: null,
-          onConfirm: null,
-          onCancel: null,
-          renderConfirmRightIcon: null,
-        });
         const tmp8 = stateFromStores(5783);
+        const intl = tmp(1126).intl;
+        tmp5 = (
+          <tmp8
+            body={null}
+            confirmText={null}
+            cancelText={intl.string(tmp(1126).t.f3Pet9)}
+            onConfirm={function onConfirm() {
+              const obj = LinkingDefault;
+              obj.openURL(stateFromStores.url);
+              const obj2 = SurveyActionCreators;
+              obj2.surveyHide(stateFromStores.key, false);
+            }}
+            onCancel={function onCancel() {
+              const obj = SurveyActionCreators;
+              return obj.surveyHide(stateFromStores.key, true);
+            }}
+            renderConfirmRightIcon={function renderConfirmRightIcon() {
+              const Icon = native.Icon;
+              return (
+                <Icon
+                  style={confirmIcon.confirmIcon}
+                  color={nativeDefault.unsafe_rawColors.WHITE}
+                  size={native.Icon.Sizes.SMALL}
+                  source={AssetRegistryDefault}
+                />
+              );
+            }}
+          />
+        );
       }
       return tmp5;
     };
+const result = size.fileFinishedImporting("components_native/MobileSurvey.tsx");
+
+export default tmp2;

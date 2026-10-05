@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/preview/ConjurePreviewMode.tsx
-import util from "../../../intl/index.native.tsx";
+import intl2 from "../../../intl/index.native.tsx";
 import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePrevie
 
 export const CONJURE_PREVIEW_MODE_ORDER = ["frame", "widget", "bot"];
 export const getPreviewModeLabel = function getPreviewModeLabel(id) {
-  const intl = util.intl;
+  const intl = intl2.intl;
   return intl.string(obj[id]);
 };
 export const getPreviewModePanelId = function getPreviewModePanelId(arg0) {

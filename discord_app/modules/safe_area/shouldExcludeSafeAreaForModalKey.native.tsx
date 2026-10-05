@@ -5,9 +5,13 @@ import SharePreparingModalConstants from "../share/native/SharePreparingModalCon
 import Constants from "../oauth2/native/Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let OAUTH2_AUTHORIZE_MODAL_KEY;
+let OAUTH2_ERROR_RESULT_MODAL_KEY;
+let OAUTH2_SUCCESS_RESULT_MODAL_KEY;
+const MEDIA_MODAL_KEY = Constants2.MEDIA_MODAL_KEY;
 ({ OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_ERROR_RESULT_MODAL_KEY, OAUTH2_SUCCESS_RESULT_MODAL_KEY } = Constants);
 const items = [
-  Constants2.MEDIA_MODAL_KEY,
+  MEDIA_MODAL_KEY,
   OAUTH2_AUTHORIZE_MODAL_KEY,
   OAUTH2_SUCCESS_RESULT_MODAL_KEY,
   OAUTH2_ERROR_RESULT_MODAL_KEY,
@@ -19,10 +23,8 @@ const result = size.fileFinishedImporting("modules/safe_area/shouldExcludeSafeAr
 export const shouldExcludeSafeAreaForModalKey = function shouldExcludeSafeAreaForModalKey(key) {
   let tmp = null != key;
   if (tmp) {
-    let hasItem = PrivateChannelCallUtils.isVoiceChannelModalKey(key);
-    if (!hasItem) {
-      hasItem = set.has(key);
-    }
+    const obj = PrivateChannelCallUtils;
+    const hasItem = obj.isVoiceChannelModalKey(key) || set.has(key);
     tmp = hasItem;
   }
   return tmp;

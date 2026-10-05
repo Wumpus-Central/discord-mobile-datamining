@@ -1,29 +1,40 @@
 // discord_app/modules/stage_channels/useLiveStageChannels.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../_runtime/00576_c.js";
+import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../_runtime/00576_react.js";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import StageInstanceStore from "StageInstanceStore.tsx";
+import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, arr;
 
-require = fn;
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp11;
+      let tmp12;
+      let tmp6;
+      let tmp7;
+      let tmp9;
       _require = arg0;
-      const cResult = require("c").c(8);
+      const obj = require("react");
+      const cResult = obj.c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         const fn = function o() {
+          let channel;
           const mapped = closure_0.map((item) => channel.getChannel(item));
           return mapped.filter(GlobalUtils.isNotNullish);
         };
@@ -31,18 +42,18 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj = require("c");
-      const stateFromStoresArray = require("initialize").useStateFromStoresArray(first, tmp6, tmp7);
+      const tmpResult = require("get initialized");
+      const stateFromStoresArray = tmpResult.useStateFromStoresArray(first, tmp6, tmp7);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [PermissionStore];
         cResult[4] = items2;
-        let tmp9 = items2;
+        tmp9 = items2;
       } else {
         tmp9 = cResult[4];
       }
@@ -56,31 +67,34 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = stateFromStoresArray;
         cResult[6] = fn2;
         cResult[7] = items3;
-        let tmp12 = items3;
-        let tmp11 = fn2;
+        tmp12 = items3;
+        tmp11 = fn2;
       } else {
         tmp11 = cResult[6];
         tmp12 = cResult[7];
       }
-      const tmpResult = require("initialize");
-      return require("initialize").useStateFromStoresArray(tmp9, tmp11, tmp12);
+      const tmpResult2 = require("get initialized");
+      return tmpResult2.useStateFromStoresArray(tmp9, tmp11, tmp12);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       const items = [ChannelStore];
       const items1 = [arg0];
-      const stateFromStoresArray = require("initialize").useStateFromStoresArray(
+      const obj = require("get initialized");
+      const stateFromStoresArray = obj.useStateFromStoresArray(
         items,
         () => {
+          let channel;
           const mapped = closure_0.map((item) => channel.getChannel(item));
           return mapped.filter(GlobalUtils.isNotNullish);
         },
         items1,
       );
-      const obj = require("initialize");
       const items2 = [PermissionStore];
       const items3 = [stateFromStoresArray];
-      return require("initialize").useStateFromStoresArray(
+      const obj2 = require("get initialized");
+      return obj2.useStateFromStoresArray(
         items2,
         () =>
           stateFromStoresArray.filter((item) =>
@@ -89,11 +103,14 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         items3,
       );
     };
-fn(558);
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(3);
+      let tmp4;
+      let tmp5;
+      let tmp6;
+      const obj = react;
+      const cResult = obj.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [StageInstanceStore];
         const fn = function n() {
@@ -110,68 +127,82 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5, tmp6] = cResult;
       }
-      return closure_6(initialize.useStateFromStores(tmp4, tmp5, tmp6));
+      const tmpResult = get_initialized;
+      return closure_6(tmpResult.useStateFromStores(tmp4, tmp5, tmp6));
     }
   : () => {
       const items = [StageInstanceStore];
+      const obj = get_initialized;
       return closure_6(
-        initialize.useStateFromStores(items, () => {
+        obj.useStateFromStores(items, () => {
           allStageInstances = allStageInstances.getAllStageInstances();
           return allStageInstances.map((channel_id) => channel_id.channel_id);
         }, []),
       );
     };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/stage_channels/useLiveStageChannels.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
+      let tmp7;
       _require = arg0;
-      const cResult = require("c").c(4);
+      let obj = require("react");
+      const cResult = obj.c(4);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [StageInstanceStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         const fn = function o() {
-          return SnowflakeUtilsDefault.keys(StageInstanceStore.getStageInstancesByGuild(closure_0));
+          const obj = SnowflakeUtilsDefault;
+          return obj.keys(StageInstanceStore.getStageInstancesByGuild(closure_0));
         };
         const items1 = [arg0];
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj = require("c");
-      return closure_6(require("initialize").useStateFromStoresArray(first, tmp6, tmp7));
+      const tmpResult = tmp(504);
+      return closure_6(tmpResult.useStateFromStoresArray(first, tmp6, tmp7));
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
+      let obj = require("get initialized");
       const items = [StageInstanceStore];
       const items1 = [arg0];
       return closure_6(
-        require("initialize").useStateFromStoresArray(
+        obj.useStateFromStoresArray(
           items,
-          () => SnowflakeUtilsDefault.keys(StageInstanceStore.getStageInstancesByGuild(closure_0)),
+          () => {
+            const obj = SnowflakeUtilsDefault;
+            return obj.keys(StageInstanceStore.getStageInstancesByGuild(closure_0));
+          },
           items1,
         ),
       );
     };
+const result = size.fileFinishedImporting("modules/stage_channels/useLiveStageChannels.tsx");
+
+export default tmp3;
 export const getAllLiveStageChannels = function getAllLiveStageChannels() {
   const allStageInstances = StageInstanceStore.getAllStageInstances();
   return allStageInstances.reduce((arr, channel_id) => {
     channel = channel.getChannel(channel_id.channel_id);
-    let canResult = null != channel;
-    if (canResult) {
-      canResult = PermissionStore.can(require("StageChannelPermissions").JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
-    }
+    const canResult =
+      null != channel &&
+      PermissionStore.can(require("StageChannelPermissions").JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
     if (canResult) {
       arr = arr.push(channel);
     }

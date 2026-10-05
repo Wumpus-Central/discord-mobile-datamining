@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/UserProfileActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
 import ComponentDispatchUtils from "../../utils/ComponentDispatchUtils.tsx";
-import util from "../../intl/index.native.tsx";
+import intl3 from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import shared from "../../design/shared.tsx";
@@ -9,174 +9,191 @@ import InlineUploaderDefault from "../../lib/uploader_inline/InlineUploader.tsx"
 import safetyScannedUploadSurfaces from "../../lib/uploader_inline/safetyScannedUploadSurfaces.tsx";
 import MessageParserDefault from "../messages/MessageParser.tsx";
 import useShouldConvertBioEmoji from "hooks/useShouldConvertBioEmoji.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import UserStore from "../../stores/UserStore.tsx";
+import Constants from "../../Constants.tsx";
+import PremiumConstants from "../premium/PremiumConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-let closure_11 = async function _saveProfileChanges(arg0) {
-  if (c9 === 2) {
-    c9 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c9 = 2;
-      if (0 === c8) {
+let closure_3, closure_6, errors, guildId, value2;
+
+let c10;
+let c9;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let obj = function _saveProfileChanges() {
+  obj = _asyncToGenerator(async (guildId, arg1, value) => {
+    guildId = arg1;
+    let c8 = 0;
+    let c9 = 0;
+    let c7 = 0;
+    return (async function (arg0, value, arg2) {
+      let bannerSurface;
+      let obj11;
+      let obj14;
+      let url;
+      if (c9 === 2) {
+        c9 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          c9 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c9 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          return { value, done: true };
         } else {
-          closure_5 = tmp3;
-          closure_4 = tmp7;
-          let headersForMd5 = closure_0;
-          let bannerSurface = closure_1;
-          closure_132_0 = closure_1;
-          closure_132_1 = undefined;
-          closure_132_2 = undefined;
-          closure_132_3 = undefined;
-          closure_132_4 = undefined;
-          currentUser = currentUser.getCurrentUser();
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          let aPIError;
           let id;
-          if (currentUser != null) {
-            id = currentUser.id;
-          }
-          closure_132_1 = id;
-          if (null != id) {
-            let shouldConvertBioEmoji = null != headersForMd5.bio;
-            if (shouldConvertBioEmoji) {
-              shouldConvertBioEmoji = obj8.getShouldConvertBioEmoji();
-            }
-            if (shouldConvertBioEmoji) {
-              headersForMd5.bio = MessageParserDefault.parse(undefined, headersForMd5.bio).content;
-            }
-            c7 = 1;
-            obj8 = useShouldConvertBioEmoji;
-            const obj4 = { type: "USER_PROFILE_UPDATE_START", userId: id, guildId: bannerSurface };
-            DispatcherDefault.dispatch(obj4);
-            if (null != bannerSurface) {
-              const obj6 = {
-                url: React5.USER_GUILD_PROFILE(bannerSurface, closure_2_8),
-                bannerSurface: safetyScannedUploadSurfaces.SafetyScannedUploadSurface.USER_GUILD_PROFILE_BANNER,
-              };
-              let obj7 = obj6;
+          c9 = 2;
+          if (0 === c8) {
+            if (arg0 === 1) {
+              c9 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 3;
+              return { value, done: true };
             } else {
-              obj7 = {
-                url: React5.USER_PROFILE(closure_2_8),
-                bannerSurface: safetyScannedUploadSurfaces.SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_BANNER,
-              };
+              value2 = tmp;
+              value = undefined;
+              aPIError = undefined;
+              errors = undefined;
+              currentUser = currentUser.getCurrentUser();
+              id = undefined;
+              const tmp65 = value;
+              if (currentUser != null) {
+                id = currentUser.id;
+              }
+              if (null != id) {
+                let obj10;
+                let shouldConvertBioEmoji = null != tmp63.bio;
+                const obj7 = useShouldConvertBioEmoji;
+                if (shouldConvertBioEmoji) {
+                  shouldConvertBioEmoji = obj7.getShouldConvertBioEmoji();
+                }
+                if (shouldConvertBioEmoji) {
+                  const obj8 = MessageParserDefault;
+                  guildId.bio = obj8.parse(undefined, guildId.bio).content;
+                }
+                c7 = 1;
+                const obj5 = { type: "USER_PROFILE_UPDATE_START", userId: id, guildId };
+                const obj9 = DispatcherDefault;
+                obj9.dispatch(obj5);
+                if (null != guildId) {
+                  obj10 = {
+                    url: closure_2_7.USER_GUILD_PROFILE(guildId, closure_2_8),
+                    bannerSurface: safetyScannedUploadSurfaces.SafetyScannedUploadSurface.USER_GUILD_PROFILE_BANNER,
+                  };
+                  const obj6 = {
+                    url: closure_2_7.USER_GUILD_PROFILE(guildId, closure_2_8),
+                    bannerSurface: safetyScannedUploadSurfaces.SafetyScannedUploadSurface.USER_GUILD_PROFILE_BANNER,
+                  };
+                } else {
+                  obj10 = {
+                    url: closure_2_7.USER_PROFILE(closure_2_8),
+                    bannerSurface: safetyScannedUploadSurfaces.SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_BANNER,
+                  };
+                }
+                ({ url, bannerSurface } = obj10);
+                const HTTP = HTTPUtils.HTTP;
+                const request = {
+                  url,
+                  body: guildId,
+                  headers: obj14.buildHeadersForMd5(obj11),
+                  oldFormErrors: true,
+                  rejectWithError: false,
+                };
+                const patch = HTTP.patch;
+                obj11 = {};
+                obj11[bannerSurface] = tmp65;
+                c8 = 2;
+                c9 = 1;
+                obj14 = InlineUploaderDefault;
+                const obj12 = { value: patch(request), done: false };
+                return obj12;
+              } else {
+                c9 = 3;
+                return { value: "IconComponent", done: null };
+              }
             }
-            bannerSurface = obj7.bannerSurface;
-            const HTTP = HTTPUtils.HTTP;
-            const request = {
-              url: obj7.url,
-              body: headersForMd5,
-              headers: null,
-              oldFormErrors: true,
-              rejectWithError: false,
-            };
-            const obj11 = {};
-            obj11[bannerSurface] = closure_2;
-            headersForMd5 = InlineUploaderDefault.buildHeadersForMd5(obj11);
-            request.headers = headersForMd5;
-            HTTP.patch(request);
-            c8 = 2;
-            c9 = 1;
-          } else {
+          } else if (1 === c8) {
+            c7 = 0;
+            value2 = closure_6;
+            const self = this;
+            const self2 = this;
+            aPIError = new closure_133_0(closure_133_2[14]).APIError(value2);
+            let body;
+            if (value2 != null) {
+              body = value2.body;
+            }
+            closure_3 = body;
+            if (body == null) {
+              closure_3 = {};
+            }
+            errors = closure_3;
+            const obj13 = { type: "USER_PROFILE_UPDATE_FAILURE", guildId, errors, apiError: aPIError };
+            const obj4 = closure_133_1(closure_133_2[10]);
+            obj4.dispatch(obj13);
             c9 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: value2, done: true };
+          } else if (arg0 === 1) {
+            c9 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 0;
+            c9 = 3;
+            return { value, done: true };
+          } else {
+            obj = { type: "USER_PROFILE_UPDATE_SUCCESS", userId: id, guildId };
+            const dispatch = closure_133_1(closure_133_2[10]).dispatch;
+            closure_133_1(closure_133_2[10]);
+            const merged = Object.assign(value.body);
+            dispatch(obj);
+            c7 = 0;
+            c9 = 3;
+            return { value, done: true };
+          }
+        } catch (tmp56) {
+          closure_6 = tmp56;
+          if (0 === c7) {
+            c9 = 3;
+            throw tmp56;
+          } else {
+            c8 = 1;
           }
         }
-      } else if (1 === tmp7) {
-        c7 = 0;
-        closure_132_5 = closure_6;
-        const aPIError = new closure_133_0(closure_133_2[14]).APIError(closure_132_5);
-        closure_132_3 = aPIError;
-        let body;
-        if (closure_132_5 != null) {
-          body = closure_132_5.body;
-        }
-        closure_3 = body;
-        if (body == null) {
-          closure_3 = {};
-        }
-        closure_132_4 = closure_3;
-        const obj12 = {
-          type: "USER_PROFILE_UPDATE_FAILURE",
-          guildId: closure_132_0,
-          errors: closure_132_4,
-          apiError: closure_132_3,
-        };
-        closure_133_1(closure_133_2[10]).dispatch(obj12);
-        c9 = 3;
-        const obj13 = { value: closure_132_5, done: true };
-        return obj13;
-      } else if (arg0 === 1) {
-        c9 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c7 = 0;
-        c9 = 3;
-        const obj14 = { value, done: true };
-        return obj14;
-      } else {
-        closure_132_2 = value;
-        const obj16 = { type: "USER_PROFILE_UPDATE_SUCCESS", userId: closure_132_1, guildId: closure_132_0 };
-        const merged = Object.assign(closure_132_2.body);
-        closure_133_1(closure_133_2[10]).dispatch(obj16);
-        c7 = 0;
-        c9 = 3;
-        const obj17 = { value: closure_132_2, done: true };
-        return obj17;
       }
-    } catch (tmp62) {
-      closure_6 = tmp62;
-      if (tmp4 === c7) {
-        c9 = tmp2;
-        throw tmp62;
-      } else {
-        c8 = tmp;
-      }
-    }
-  }
+    })();
+  });
+  return obj(...arguments);
 };
-const Constants = fn(1085);
-({ ComponentActions: hasOwnProperty, AnalyticEvents: metroRequire, Endpoints: closure_7, ME: closure_8 } = Constants);
-const PremiumConstants = fn(1379);
-({ AnalyticsPremiumFeatureTiers: closure_9, AnalyticsPremiumFeatureNames: c10 } = PremiumConstants);
-const size = fn(2);
+({
+  ComponentActions: hasOwnProperty,
+  AnalyticEvents: metroRequire,
+  Endpoints: metroImportDefault,
+  ME: metroImportAll,
+} = Constants);
+({ AnalyticsPremiumFeatureTiers: c9, AnalyticsPremiumFeatureNames: c10 } = PremiumConstants);
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileActionCreators.tsx");
 
 export const notifyUnsavedUserProfileChangesInModal = function notifyUnsavedUserProfileChangesInModal() {
   const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-  ComponentDispatch.dispatch(constants.SHAKE_PROFILE_MODAL);
+  ComponentDispatch.dispatch(hasOwnProperty.SHAKE_PROFILE_MODAL);
   const ComponentDispatch2 = ComponentDispatchUtils.ComponentDispatch;
-  ComponentDispatch2.dispatch(constants.EMPHASIZE_NOTICE);
+  ComponentDispatch2.dispatch(hasOwnProperty.EMPHASIZE_NOTICE);
   const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
-  const intl = util.intl;
-  const intl2 = util.intl;
-  AccessibilityAnnouncer.announce("" + intl.string(util.t.GP7JLE) + " " + intl2.string(util.t.gKoO1D));
+  const announce = AccessibilityAnnouncer.announce;
+  const intl = intl3.intl;
+  const stringResult = intl.string(intl3.t.GP7JLE);
+  const intl2 = intl3.intl;
+  announce("" + stringResult + " " + intl2.string(intl3.t.gKoO1D));
 };
 export const saveProfileChanges = function saveProfileChanges() {
-  const self = this;
-  const apply = closure_11.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const pinUserProfileBadgesOnClient = function pinUserProfileBadgesOnClient(items, ttlInSeconds) {
   const currentUser = UserStore.getCurrentUser();
@@ -186,91 +203,98 @@ export const pinUserProfileBadgesOnClient = function pinUserProfileBadgesOnClien
   }
   if (null != id) {
     const obj2 = { type: "USER_PROFILE_PIN_BADGES_ON_CLIENT", badges: items, ttlInSeconds, userId: id };
-    DispatcherDefault.dispatch(obj2);
+    obj = DispatcherDefault;
+    obj.dispatch(obj2);
   }
 };
 export const resetPendingProfileChanges = function resetPendingProfileChanges() {
-  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
+  obj = DispatcherDefault;
+  obj.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
 };
 export const resetAllPendingChanges = function resetAllPendingChanges() {
-  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
+  obj = DispatcherDefault;
+  obj.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
 };
 export const resetAllTryItOutChanges = function resetAllTryItOutChanges() {
-  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES" });
+  obj = DispatcherDefault;
+  obj.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES" });
 };
 export const setTryItOutAvatar = function setTryItOutAvatar(avatar) {
-  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar });
+  obj = DispatcherDefault;
   const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar };
-  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
-    feature_name: constants4.ANIMATED_AVATAR,
-    feature_tier: constants3.PREMIUM_STANDARD,
-  });
+  obj.dispatch(obj2);
+  const ANIMATED_AVATAR = constants4.ANIMATED_AVATAR;
+  const obj3 = AnalyticsUtilsDefault;
+  const obj4 = { feature_name: ANIMATED_AVATAR, feature_tier: constants3.PREMIUM_STANDARD };
+  obj3.track(metroRequire.PREMIUM_FEATURE_TRY_OUT, obj4);
 };
 export const setTryItOutAvatarDecoration = function setTryItOutAvatarDecoration(avatarDecoration) {
-  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration });
+  obj = DispatcherDefault;
   const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration };
-  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
-    feature_name: constants4.AVATAR_DECORATION,
-    feature_tier: constants3.PREMIUM_STANDARD,
-  });
+  obj.dispatch(obj2);
+  const AVATAR_DECORATION = constants4.AVATAR_DECORATION;
+  const obj3 = AnalyticsUtilsDefault;
+  const obj4 = { feature_name: AVATAR_DECORATION, feature_tier: constants3.PREMIUM_STANDARD };
+  obj3.track(metroRequire.PREMIUM_FEATURE_TRY_OUT, obj4);
 };
 export const setTryItOutProfileEffect = function setTryItOutProfileEffect(purchasedItem) {
-  DispatcherDefault.dispatch({
-    type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT",
-    profileEffect: purchasedItem,
-  });
+  obj = DispatcherDefault;
   const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT", profileEffect: purchasedItem };
-  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
-    feature_name: constants4.PROFILE_EFFECT,
-    feature_tier: constants3.PREMIUM_STANDARD,
-  });
+  obj.dispatch(obj2);
+  const PROFILE_EFFECT = constants4.PROFILE_EFFECT;
+  const obj3 = AnalyticsUtilsDefault;
+  const obj4 = { feature_name: PROFILE_EFFECT, feature_tier: constants3.PREMIUM_STANDARD };
+  obj3.track(metroRequire.PREMIUM_FEATURE_TRY_OUT, obj4);
 };
 export const setTryItOutBanner = function setTryItOutBanner(banner) {
-  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner });
+  obj = DispatcherDefault;
   const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner };
-  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
-    feature_name: constants4.PROFILE_BANNER,
-    feature_tier: constants3.PREMIUM_STANDARD,
-  });
+  obj.dispatch(obj2);
+  const PROFILE_BANNER = constants4.PROFILE_BANNER;
+  const obj3 = AnalyticsUtilsDefault;
+  const obj4 = { feature_name: PROFILE_BANNER, feature_tier: constants3.PREMIUM_STANDARD };
+  obj3.track(metroRequire.PREMIUM_FEATURE_TRY_OUT, obj4);
 };
 export const setTryItOutThemeColors = function setTryItOutThemeColors(themeColors) {
-  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors });
+  obj = DispatcherDefault;
   const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors };
-  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
-    feature_name: constants4.PROFILE_THEME_COLOR,
-    feature_tier: constants3.PREMIUM_STANDARD,
-  });
+  obj.dispatch(obj2);
+  const PROFILE_THEME_COLOR = constants4.PROFILE_THEME_COLOR;
+  const obj3 = AnalyticsUtilsDefault;
+  const obj4 = { feature_name: PROFILE_THEME_COLOR, feature_tier: constants3.PREMIUM_STANDARD };
+  obj3.track(metroRequire.PREMIUM_FEATURE_TRY_OUT, obj4);
 };
 export const setTryItOutDisplayNameStyles = function setTryItOutDisplayNameStyles(displayNameStyles) {
-  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles });
+  obj = DispatcherDefault;
   const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles };
-  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
-    feature_name: constants4.DISPLAY_NAME_STYLES,
-    feature_tier: constants3.PREMIUM_STANDARD,
-  });
+  obj.dispatch(obj2);
+  const DISPLAY_NAME_STYLES = constants4.DISPLAY_NAME_STYLES;
+  const obj3 = AnalyticsUtilsDefault;
+  const obj4 = { feature_name: DISPLAY_NAME_STYLES, feature_tier: constants3.PREMIUM_STANDARD };
+  obj3.track(metroRequire.PREMIUM_FEATURE_TRY_OUT, obj4);
 };
 export const setTryItOutCustomTypingIndicatorStyle = function setTryItOutCustomTypingIndicatorStyle(
   customTypingIndicatorStyle,
 ) {
-  DispatcherDefault.dispatch({
-    type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_CUSTOM_TYPING_INDICATOR_STYLE",
-    customTypingIndicatorStyle,
-  });
+  obj = DispatcherDefault;
   const obj2 = {
     type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_CUSTOM_TYPING_INDICATOR_STYLE",
     customTypingIndicatorStyle,
   };
-  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
-    feature_name: constants4.TYPING_INDICATOR,
-    feature_tier: constants3.PREMIUM_STANDARD,
-  });
+  obj.dispatch(obj2);
+  const TYPING_INDICATOR = constants4.TYPING_INDICATOR;
+  const obj3 = AnalyticsUtilsDefault;
+  const obj4 = { feature_name: TYPING_INDICATOR, feature_tier: constants3.PREMIUM_STANDARD };
+  obj3.track(metroRequire.PREMIUM_FEATURE_TRY_OUT, obj4);
 };
 export const setTryItOutPreset = function setTryItOutPreset(arg0) {
+  const dispatch = DispatcherDefault.dispatch;
+  obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET" };
+  DispatcherDefault;
   const merged = Object.assign(arg0);
-  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET" });
-  const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET" };
-  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
-    feature_name: constants4.PRESET,
-    feature_tier: constants3.PREMIUM_STANDARD,
-  });
+  dispatch(obj);
+  const PRESET = constants4.PRESET;
+  const obj2 = AnalyticsUtilsDefault;
+  const obj3 = { feature_name: PRESET, feature_tier: constants3.PREMIUM_STANDARD };
+  obj2.track(metroRequire.PREMIUM_FEATURE_TRY_OUT, obj3);
 };

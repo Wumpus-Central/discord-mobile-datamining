@@ -1,215 +1,53 @@
 // discord_app/modules/guild_sidebar/native/ChannelInfo.tsx
-import c from "../../../../_runtime/00576_c.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import StageMediaHooks from "../../stage_channels/StageMediaHooks.tsx";
 import useEmbeddedAppsForChannelDefault from "../../activities/useEmbeddedAppsForChannel.tsx";
 import useShowConnectedUserLimitDefault from "../useShowConnectedUserLimit.tsx";
+import Badges from "../../icymi/native/content_inventory/Badges.tsx";
 import GuildRoleSubscriptionGatedChannelIconDefault from "../../guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx";
 import ChannelBadgeDefault from "ChannelBadge.tsx";
 import showChannelBadgeDefault from "../showChannelBadge.tsx";
 import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities.tsx";
 import useVoiceChannelStartTime from "../../channel/useVoiceChannelStartTime.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import NewChannelsStore from "../../recent_channels/NewChannelsStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
+import Constants from "../../../Constants.tsx";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const Badges = ActiveTimestamp(12831);
-require = fn;
-const Constants = fn(1085);
-({ GuildFeatures: closure_8, Permissions: closure_9, Fonts } = Constants);
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let closure_11 = createStyles.createStyles({
-  activeTimestamp: { fontFamily: Fonts.CODE_NORMAL, fontSize: 12, lineHeight: 16 },
-});
-fn(558);
-let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
+let channel;
+
+let Fonts;
+let c9;
+let metroImportAll;
+({ GuildFeatures: metroImportAll, Permissions: c9, Fonts } = Constants);
+const jsx = Fragment.jsx;
+let obj = { activeTimestamp: { fontFamily: Fonts.CODE_NORMAL, fontSize: 12, lineHeight: 16 } };
+let closure_11 = createStyles.createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      const cResult = channel(576).c(14);
-      channel = channel.channel;
-      ({ voiceStatesCount, selected } = channel);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [VoiceStateStore, PermissionStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== channel) {
-        const fn = function o() {
-          let isGuildStageVoiceResult = channel.isGuildStageVoice();
-          if (isGuildStageVoiceResult) {
-            isGuildStageVoiceResult = StageMediaHooks.getStageHasMedia(channel.id);
-          }
-          const hasVideoResult = VoiceStateStore.hasVideo(channel.id);
-          return {
-            isLocked: !PermissionStore.can(constants2.CONNECT, channel),
-            hasVideo: VoiceStateStore.hasVideo(channel.id),
-            hasMedia: isGuildStageVoiceResult,
-          };
-        };
-        cResult[1] = channel;
-        cResult[2] = fn;
-        let tmp7 = fn;
-      } else {
-        tmp7 = cResult[2];
-      }
+      let enableActivities;
+      let enableConnectedUserLimit;
+      let first;
+      let guild;
+      let isChannelCollapsed;
+      let isChannelSelected;
+      let isMentionLowImportance;
+      let isNewChannel;
+      let isSubscriptionGated;
+      let mentionsCount;
+      let muted;
+      let needSubscriptionToAccess;
+      let voiceStates;
       let obj = channel(576);
-      const stateFromStoresObject = channel(504).useStateFromStoresObject(first, tmp7);
-      ({ isLocked, hasVideo, hasMedia } = stateFromStoresObject);
-      let tmp9 = hasVideo;
-      if (!hasVideo) {
-        tmp9 = hasMedia;
-      }
-      if (cResult[3] === channel) {
-        if (cResult[4] === isLocked) {
-          if (cResult[5] === selected) {
-            if (cResult[6] === tmp9) {
-              let tmp10 = cResult[7];
-            }
-            if (useShowConnectedUserLimitDefault(tmp10)) {
-              if (!hasVideo) {
-                hasVideo = hasMedia;
-              }
-              if (cResult[8] === channel) {
-                if (cResult[9] === hasVideo) {
-                  if (cResult[10] === voiceStatesCount) {
-                    let tmp16 = cResult[11];
-                  }
-                  return tmp16;
-                }
-              }
-              const obj2 = { userCount: voiceStatesCount, video: hasVideo, channel };
-              const tmp18 = jsx(tmp(16042).ConnectedUserLimit, {
-                userCount: voiceStatesCount,
-                video: hasVideo,
-                channel,
-              });
-              cResult[8] = channel;
-              cResult[9] = hasVideo;
-              cResult[10] = voiceStatesCount;
-              cResult[11] = tmp18;
-              tmp16 = tmp18;
-            } else {
-              if (cResult[12] !== channel) {
-                const obj3 = { channel };
-                const tmp15 = <closure_13 channel={channel} />;
-                cResult[12] = channel;
-                cResult[13] = tmp15;
-                let tmp12 = tmp15;
-              } else {
-                tmp12 = cResult[13];
-              }
-              return tmp12;
-            }
-          }
-        }
-      }
-      const obj4 = { channel, locked: isLocked, video: tmp9, selected };
-      cResult[3] = channel;
-      cResult[4] = isLocked;
-      cResult[5] = selected;
-      cResult[6] = tmp9;
-      cResult[7] = obj4;
-      tmp10 = obj4;
-      const tmpResult = channel(504);
-    }
-  : (channel) => {
-      channel = channel.channel;
-      ({ voiceStatesCount, selected } = channel);
-      const items = [VoiceStateStore, PermissionStore];
-      const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
-        let isGuildStageVoiceResult = channel.isGuildStageVoice();
-        if (isGuildStageVoiceResult) {
-          isGuildStageVoiceResult = StageMediaHooks.getStageHasMedia(channel.id);
-        }
-        const hasVideoResult = VoiceStateStore.hasVideo(channel.id);
-        return {
-          isLocked: !PermissionStore.can(constants2.CONNECT, channel),
-          hasVideo: VoiceStateStore.hasVideo(channel.id),
-          hasMedia: isGuildStageVoiceResult,
-        };
-      });
-      ({ hasVideo, hasMedia } = stateFromStoresObject);
-      const obj2 = { channel, locked: stateFromStoresObject.isLocked, video: null, selected: null };
-      let tmp5 = hasVideo;
-      let obj = channel(504);
-      const tmp = channel;
-      if (!hasVideo) {
-        tmp5 = hasMedia;
-      }
-      obj2.video = tmp5;
-      obj2.selected = selected;
-      if (tmp4(obj2)) {
-        const obj3 = { userCount: voiceStatesCount, video: null, channel: null };
-        if (!hasVideo) {
-          hasVideo = hasMedia;
-        }
-        obj3.video = hasVideo;
-        obj3.channel = channel;
-        let tmp6Result = jsx(tmp(16042).ConnectedUserLimit, {
-          userCount: voiceStatesCount,
-          video: null,
-          channel: null,
-        });
-      } else {
-        const obj4 = { channel };
-        tmp6Result = <closure_13 channel={channel} />;
-      }
-      return tmp6Result;
-    };
-ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
-      let ActiveTimestamp = require;
-      let tmp = dependencyMap;
-      const cResult = c.c(5);
-      let activeTimestamp = closure_11();
-      const startTime = useVoiceChannelStartTime.useStartTime(channel.channel);
-      if (null == startTime) {
-        return null;
-      } else {
-        if (cResult[0] !== startTime) {
-          const obj3 = { start: startTime };
-          cResult[0] = startTime;
-          cResult[1] = obj3;
-          let tmp4 = obj3;
-        } else {
-          tmp4 = cResult[1];
-        }
-        if (cResult[2] === activeTimestamp.activeTimestamp) {
-        }
-        ActiveTimestamp = Badges.ActiveTimestamp;
-        const obj4 = { entry: tmp4, style: activeTimestamp.activeTimestamp };
-        tmp = <ActiveTimestamp entry={tmp4} style={activeTimestamp.activeTimestamp} />;
-        activeTimestamp = activeTimestamp.activeTimestamp;
-        cResult[2] = activeTimestamp;
-        cResult[3] = tmp4;
-        cResult[4] = tmp;
-      }
-    }
-  : (channel) => {
-      const tmp = closure_11();
-      const startTime = useVoiceChannelStartTime.useStartTime(channel.channel);
-      let tmp5 = null;
-      if (null != startTime) {
-        const obj2 = { entry: null, style: null };
-        const obj3 = { start: startTime };
-        obj2.entry = obj3;
-        obj2.style = tmp.activeTimestamp;
-        tmp5 = jsx(Badges.ActiveTimestamp, { entry: null, style: null });
-      }
-      return tmp5;
-    };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelInfo.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? (channel) => {
-      const cResult = channel(576).c(23);
+      const cResult = obj.c(23);
       channel = channel.channel;
       ({
         isChannelSelected,
@@ -224,44 +62,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore, ReadStateStore, NewChannelsStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === channel.guild_id) {
+        let tmp8;
         if (cResult[2] === channel.id) {
-          let tmp8 = cResult[3];
+          tmp8 = cResult[3];
         }
-        const stateFromStoresObject = tmp(504).useStateFromStoresObject(first, tmp8);
+        const tmpResult = channel(504);
+        const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, tmp8);
         ({ guild, mentionsCount, isMentionLowImportance, isNewChannel } = stateFromStoresObject);
         const tmp11 = useEmbeddedAppsForChannelDefault(channel);
-        const tmpResult = tmp(504);
-        const unreadThreadsCountForParent = tmp(7528).useUnreadThreadsCountForParent(channel.guild_id, channel.id);
+        const tmpResult4 = channel(7528);
+        const unreadThreadsCountForParent = tmpResult4.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
         const obj2 = { mentionsCount, isNewChannel, postsWithUnreadsCount: unreadThreadsCountForParent, muted };
         if (showChannelBadgeDefault(obj2)) {
           if (cResult[4] === channel) {
+            let tmp29;
             if (cResult[5] === unreadThreadsCountForParent) {
-              let tmp29 = cResult[6];
+              tmp29 = cResult[6];
             }
             if (cResult[7] === isMentionLowImportance) {
               if (cResult[8] === isNewChannel) {
                 if (cResult[9] === mentionsCount) {
                   if (cResult[10] === muted) {
+                    let tmp31;
                     if (cResult[11] === tmp29) {
-                      let tmp31 = cResult[12];
+                      tmp31 = cResult[12];
                     }
                     return tmp31;
                   }
                 }
               }
             }
-            const obj3 = {
-              mentionCount: mentionsCount,
-              isMentionLowImportance,
-              isNewChannel,
-              postsWithUnreadsCount: tmp29,
-              muted,
-            };
             const tmp33 = jsx(ChannelBadgeDefault, {
               mentionCount: mentionsCount,
               isMentionLowImportance,
@@ -294,49 +129,50 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 hasItem = features.has(constants.COMMUNITY);
               }
               if (hasItem) {
+                const tmpResult5 = channel(5036);
                 if (tmpResult5.hasStream(voiceStates)) {
+                  let tmp26;
                   const _Symbol = Symbol;
                   if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-                    const tmp28 = jsx(tmp(1188).LiveTag, {});
+                    const tmp28 = jsx(channel(1188).LiveTag, {});
                     cResult[13] = tmp28;
-                    let tmp26 = tmp28;
+                    tmp26 = tmp28;
                   } else {
                     tmp26 = cResult[13];
                   }
                   return tmp26;
                 }
-                tmpResult5 = tmp(5036);
               }
             }
           }
           if (null != enableActivities) {
             if (enableActivities) {
+              const tmpResult6 = channel(16159);
               if (tmpResult6.showChannelItemEmbeddedActivities(tmp11)) {
                 if (cResult[14] === tmp11) {
+                  let tmp23;
                   if (cResult[15] === muted) {
-                    let tmp23 = cResult[16];
+                    tmp23 = cResult[16];
                   }
                   return tmp23;
                 }
-                const obj4 = { embeddedApps: tmp11, muted };
                 const tmp25 = jsx(ChannelItemEmbeddedActivitiesDefault, { embeddedApps: tmp11, muted });
                 cResult[14] = tmp11;
                 cResult[15] = muted;
                 cResult[16] = tmp25;
                 tmp23 = tmp25;
               }
-              tmpResult6 = tmp(16159);
             }
           }
           if (null != isSubscriptionGated) {
             if (null != needSubscriptionToAccess) {
               if (isSubscriptionGated) {
+                let tmp20;
                 if (cResult[17] !== needSubscriptionToAccess) {
-                  const obj5 = { locked: needSubscriptionToAccess };
                   const tmp22 = jsx(GuildRoleSubscriptionGatedChannelIconDefault, { locked: needSubscriptionToAccess });
                   cResult[17] = needSubscriptionToAccess;
                   cResult[18] = tmp22;
-                  let tmp20 = tmp22;
+                  tmp20 = tmp22;
                 } else {
                   tmp20 = cResult[18];
                 }
@@ -355,13 +191,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[19] === channel) {
                 if (cResult[20] === isChannelSelected) {
+                  let tmp16;
                   if (cResult[21] === num2) {
-                    let tmp16 = cResult[22];
+                    tmp16 = cResult[22];
                   }
                   return tmp16;
                 }
               }
-              const obj6 = { channel, voiceStatesCount: num2, selected: isChannelSelected };
               const tmp19 = <closure_12 channel={channel} voiceStatesCount={num2} selected={isChannelSelected} />;
               cResult[19] = channel;
               cResult[20] = isChannelSelected;
@@ -372,23 +208,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return null;
         }
-        const tmpResult4 = tmp(7528);
       }
       const fn = function u() {
-        return {
+        const obj = {
           guild: GuildStore.getGuild(channel.guild_id),
           mentionsCount: ReadStateStore.getMentionCount(channel.id),
           isMentionLowImportance: ReadStateStore.getIsMentionLowImportance(channel.id),
           isNewChannel: NewChannelsStore.shouldIndicateNewChannel(channel.guild_id, channel.id),
         };
+        return obj;
       };
       cResult[1] = channel.guild_id;
       cResult[2] = channel.id;
       cResult[3] = fn;
       tmp8 = fn;
-      const obj = channel(576);
     }
   : (channel) => {
+      let enableActivities;
+      let enableConnectedUserLimit;
+      let guild;
+      let isChannelCollapsed;
+      let isNewChannel;
+      let isSubscriptionGated;
+      let mentionsCount;
+      let muted;
+      let needSubscriptionToAccess;
+      let tmp11Result;
+      let voiceStates;
       channel = channel.channel;
       ({
         isChannelCollapsed,
@@ -399,39 +245,38 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         isSubscriptionGated,
         needSubscriptionToAccess,
       } = channel);
+      const isChannelSelected = channel.isChannelSelected;
+      let obj = channel(504);
       const items = [GuildStore, ReadStateStore, NewChannelsStore];
-      const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => ({
-        guild: GuildStore.getGuild(channel.guild_id),
-        mentionsCount: ReadStateStore.getMentionCount(channel.id),
-        isMentionLowImportance: ReadStateStore.getIsMentionLowImportance(channel.id),
-        isNewChannel: NewChannelsStore.shouldIndicateNewChannel(channel.guild_id, channel.id),
-      }));
-      ({ guild, mentionsCount, isNewChannel } = stateFromStoresObject);
-      const tmp5 = useEmbeddedAppsForChannelDefault(channel);
-      const obj = channel(504);
-      const postsWithUnreadsCount = channel(7528).useUnreadThreadsCountForParent(channel.guild_id, channel.id);
-      if (showChannelBadgeDefault({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
-        const obj3 = {
-          mentionCount: mentionsCount,
-          isMentionLowImportance: stateFromStoresObject.isMentionLowImportance,
-          isNewChannel,
-          postsWithUnreadsCount: null,
-          muted: null,
+      const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+        const obj = {
+          guild: GuildStore.getGuild(channel.guild_id),
+          mentionsCount: ReadStateStore.getMentionCount(channel.id),
+          isMentionLowImportance: ReadStateStore.getIsMentionLowImportance(channel.id),
+          isNewChannel: NewChannelsStore.shouldIndicateNewChannel(channel.guild_id, channel.id),
         };
+        return obj;
+      });
+      ({ guild, mentionsCount, isNewChannel } = stateFromStoresObject);
+      const isMentionLowImportance = stateFromStoresObject.isMentionLowImportance;
+      const tmp5 = useEmbeddedAppsForChannelDefault(channel);
+      const obj2 = channel(7528);
+      const postsWithUnreadsCount = obj2.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
+      if (showChannelBadgeDefault({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
         let tmp18 = null;
+        ChannelBadgeDefault;
         if (channel.isForumLikeChannel()) {
           tmp18 = postsWithUnreadsCount;
         }
-        obj3.postsWithUnreadsCount = tmp18;
-        obj3.muted = muted;
-        let tmp11Result = jsx(ChannelBadgeDefault, {
-          mentionCount: mentionsCount,
-          isMentionLowImportance: stateFromStoresObject.isMentionLowImportance,
-          isNewChannel,
-          postsWithUnreadsCount: null,
-          muted: null,
-        });
-        const tmp4Result = ChannelBadgeDefault;
+        tmp11Result = (
+          <tmp4Result
+            mentionCount={mentionsCount}
+            isMentionLowImportance={isMentionLowImportance}
+            isNewChannel={isNewChannel}
+            postsWithUnreadsCount={tmp18}
+            muted={muted}
+          />
+        );
       } else {
         if (null != isChannelCollapsed) {
           if (isChannelCollapsed) {
@@ -441,26 +286,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               hasItem = features.has(constants.COMMUNITY);
             }
             if (hasItem) {
+              const tmpResult = channel(5036);
               if (tmpResult.hasStream(voiceStates)) {
                 tmp11Result = jsx(tmp(1188).LiveTag, {});
               }
-              tmpResult = tmp(5036);
             }
           }
         }
         if (null != enableActivities) {
           if (enableActivities) {
+            const tmpResult2 = channel(16159);
             if (tmpResult2.showChannelItemEmbeddedActivities(tmp5)) {
-              const obj4 = { embeddedApps: tmp5, muted };
               tmp11Result = jsx(ChannelItemEmbeddedActivitiesDefault, { embeddedApps: tmp5, muted });
             }
-            tmpResult2 = tmp(16159);
           }
         }
         if (null != isSubscriptionGated) {
           if (null != needSubscriptionToAccess) {
             if (isSubscriptionGated) {
-              const obj5 = { locked: needSubscriptionToAccess };
               tmp11Result = jsx(GuildRoleSubscriptionGatedChannelIconDefault, { locked: needSubscriptionToAccess });
             }
           }
@@ -469,7 +312,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (null != enableConnectedUserLimit) {
           tmp11Result = null;
           if (enableConnectedUserLimit) {
-            const obj6 = { channel, voiceStatesCount: null, selected: null };
             let num;
             if (voiceStates != null) {
               num = voiceStates.length;
@@ -477,11 +319,201 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (num == null) {
               num = 0;
             }
-            obj6.voiceStatesCount = num;
-            obj6.selected = channel.isChannelSelected;
-            tmp11Result = <closure_12 channel={channel} voiceStatesCount={null} selected={null} />;
+            tmp11Result = <closure_12 channel={channel} voiceStatesCount={num} selected={isChannelSelected} />;
           }
         }
       }
       return tmp11Result;
     };
+ReactCompilerGating = ReactCompilerGating_mod;
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (channel) => {
+      let first;
+      let hasMedia;
+      let hasVideo;
+      let isLocked;
+      let selected;
+      let tmp7;
+      let voiceStatesCount;
+      let obj = channel(576);
+      const cResult = obj.c(14);
+      channel = channel.channel;
+      ({ voiceStatesCount, selected } = channel);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [VoiceStateStore, PermissionStore];
+        cResult[0] = items;
+        first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== channel) {
+        const fn = function o() {
+          const hasVideoResult = VoiceStateStore.hasVideo(channel.id);
+          let isGuildStageVoiceResult = channel.isGuildStageVoice();
+          if (isGuildStageVoiceResult) {
+            const obj = StageMediaHooks;
+            isGuildStageVoiceResult = obj.getStageHasMedia(channel.id);
+          }
+          const obj2 = {
+            isLocked: !PermissionStore.can(constants.CONNECT, channel),
+            hasVideo: hasVideoResult,
+            hasMedia: isGuildStageVoiceResult,
+          };
+          return obj2;
+        };
+        cResult[1] = channel;
+        cResult[2] = fn;
+        tmp7 = fn;
+      } else {
+        tmp7 = cResult[2];
+      }
+      const tmpResult = channel(504);
+      const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, tmp7);
+      ({ isLocked, hasVideo, hasMedia } = stateFromStoresObject);
+      if (cResult[3] === channel) {
+        if (cResult[4] === isLocked) {
+          if (cResult[5] === selected) {
+            let tmp10;
+            if (cResult[6] === (hasVideo || hasMedia)) {
+              tmp10 = cResult[7];
+            }
+            if (useShowConnectedUserLimitDefault(tmp10)) {
+              if (!hasVideo) {
+                hasVideo = hasMedia;
+              }
+              if (cResult[8] === channel) {
+                if (cResult[9] === hasVideo) {
+                  let tmp16;
+                  if (cResult[10] === voiceStatesCount) {
+                    tmp16 = cResult[11];
+                  }
+                  return tmp16;
+                }
+              }
+              const tmp18 = jsx(channel(16042).ConnectedUserLimit, {
+                userCount: voiceStatesCount,
+                video: hasVideo,
+                channel,
+              });
+              cResult[8] = channel;
+              cResult[9] = hasVideo;
+              cResult[10] = voiceStatesCount;
+              cResult[11] = tmp18;
+              tmp16 = tmp18;
+            } else {
+              let tmp12;
+              if (cResult[12] !== channel) {
+                const tmp15 = <closure_13 channel={channel} />;
+                cResult[12] = channel;
+                cResult[13] = tmp15;
+                tmp12 = tmp15;
+              } else {
+                tmp12 = cResult[13];
+              }
+              return tmp12;
+            }
+          }
+        }
+      }
+      const obj4 = { channel, locked: isLocked, video: hasVideo || hasMedia, selected };
+      cResult[3] = channel;
+      cResult[4] = isLocked;
+      cResult[5] = selected;
+      cResult[6] = hasVideo || hasMedia;
+      cResult[7] = obj4;
+      tmp10 = obj4;
+    }
+  : (channel) => {
+      let hasMedia;
+      let hasVideo;
+      let selected;
+      let tmp5;
+      let tmp6Result;
+      let voiceStatesCount;
+      channel = channel.channel;
+      ({ voiceStatesCount, selected } = channel);
+      let obj = channel(504);
+      const items = [VoiceStateStore, PermissionStore];
+      const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+        const hasVideoResult = VoiceStateStore.hasVideo(channel.id);
+        let isGuildStageVoiceResult = channel.isGuildStageVoice();
+        if (isGuildStageVoiceResult) {
+          const obj = StageMediaHooks;
+          isGuildStageVoiceResult = obj.getStageHasMedia(channel.id);
+        }
+        const obj2 = {
+          isLocked: !PermissionStore.can(constants.CONNECT, channel),
+          hasVideo: hasVideoResult,
+          hasMedia: isGuildStageVoiceResult,
+        };
+        return obj2;
+      });
+      ({ hasVideo, hasMedia } = stateFromStoresObject);
+      let obj2 = { channel, locked: stateFromStoresObject.isLocked, video: tmp5, selected };
+      tmp5 = hasVideo;
+      const tmp = channel;
+      const tmp4 = useShowConnectedUserLimitDefault;
+      if (!hasVideo) {
+        tmp5 = hasMedia;
+      }
+      if (tmp4(obj2)) {
+        const ConnectedUserLimit = tmp(16042).ConnectedUserLimit;
+        if (!hasVideo) {
+          hasVideo = hasMedia;
+        }
+        tmp6Result = <ConnectedUserLimit userCount={voiceStatesCount} video={hasVideo} channel={channel} />;
+      } else {
+        tmp6Result = <closure_13 channel={channel} />;
+      }
+      return tmp6Result;
+    };
+ReactCompilerGating = ReactCompilerGating_mod;
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (channel) => {
+      const obj = react2;
+      const cResult = obj.c(5);
+      channel = channel.channel;
+      const tmp4 = closure_11();
+      const obj2 = useVoiceChannelStartTime;
+      const startTime = obj2.useStartTime(channel);
+      let tmp6 = null;
+      if (null != startTime) {
+        let tmp7;
+        if (cResult[0] !== startTime) {
+          const obj3 = { start: startTime };
+          cResult[0] = startTime;
+          cResult[1] = obj3;
+          tmp7 = obj3;
+        } else {
+          tmp7 = cResult[1];
+        }
+        if (cResult[2] === tmp4.activeTimestamp) {
+          let tmp8;
+          if (cResult[3] === tmp7) {
+            tmp8 = cResult[4];
+          }
+          tmp6 = tmp8;
+        }
+        const tmp10 = jsx(Badges.ActiveTimestamp, { entry: tmp7, style: tmp4.activeTimestamp });
+        cResult[2] = tmp4.activeTimestamp;
+        cResult[3] = tmp7;
+        cResult[4] = tmp10;
+        tmp8 = tmp10;
+      }
+      return tmp6;
+    }
+  : (channel) => {
+      channel = channel.channel;
+      const tmp = closure_11();
+      const obj = useVoiceChannelStartTime;
+      const startTime = obj.useStartTime(channel);
+      let tmp5 = null;
+      if (null != startTime) {
+        const obj3 = { start: startTime };
+        tmp5 = jsx(Badges.ActiveTimestamp, { entry: obj3, style: tmp.activeTimestamp });
+      }
+      return tmp5;
+    };
+const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelInfo.tsx");
+
+export default tmp4;

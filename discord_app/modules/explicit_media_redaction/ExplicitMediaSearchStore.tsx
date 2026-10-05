@@ -1,10 +1,12 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaSearchStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
+let closure_2, messages;
+
 function handleSearchMessagesSuccess(data) {
   data = data.data;
   closure_2 = {};
@@ -13,19 +15,22 @@ function handleSearchMessagesSuccess(data) {
     let item = messages.forEach((arr) => {
       const item = arr.forEach((channel_id) => {
         const combined = "" + channel_id.channel_id + ":" + channel_id.id;
-        closure_1_2[combined] = closure_1_0(closure_1_1[0]).createMessageRecord(channel_id);
+        const obj = closure_1_0(closure_1_1[0]);
+        closure_1_2[combined] = obj.createMessageRecord(channel_id);
       });
     });
   });
 }
-const dependencyMap = {};
-const Store = initializeDefault.Store;
-class ExplicitMediaSearchStore extends Store {}
-ExplicitMediaSearchStore.prototype["getMessage"] = function getMessage(arg0, arg1) {
-  return dependencyMap["" + arg1 + ":" + arg0];
-};
+const React2 = {};
+const Store = get_initializedDefault.Store;
+class ExplicitMediaSearchStore extends Store {
+  getMessage(arg0, arg1) {
+    return closure_2["" + arg1 + ":" + arg0];
+  }
+}
+const prototype = ExplicitMediaSearchStore.prototype;
 ExplicitMediaSearchStore.displayName = "SearchMessageStore";
-const explicitMediaSearchStore = new ExplicitMediaSearchStore(DispatcherDefault, {
+let obj = {
   SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
   MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
@@ -36,10 +41,11 @@ const explicitMediaSearchStore = new ExplicitMediaSearchStore(DispatcherDefault,
         const combined = "" + message.channel_id + ":" + message.id;
         let flag = null != tmp7;
         if (flag) {
-          ({ attachments: obj2.attachments, embeds: obj2.embeds } = message);
-          dependencyMap[combined] = MessageRecordUtils.updateMessageRecord(tmp7, { attachments: null, embeds: null });
-          flag = true;
           const obj3 = { attachments: null, embeds: null };
+          ({ attachments: obj2.attachments, embeds: obj2.embeds } = message);
+          const obj = MessageRecordUtils;
+          closure_2[combined] = obj.updateMessageRecord(closure_2[combined], obj3);
+          flag = true;
         }
         return flag;
       }
@@ -54,12 +60,13 @@ const explicitMediaSearchStore = new ExplicitMediaSearchStore(DispatcherDefault,
   },
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function handleScanTimeout(channelId) {
     const combined = "" + channelId.channelId + ":" + channelId.messageId;
-    if (null != dependencyMap[combined]) {
-      dependencyMap[combined] = ExplicitMediaRedactionUtils.handleExplicitMediaScanTimeoutForMessage(tmp2);
+    if (null != closure_2[combined]) {
+      const obj = ExplicitMediaRedactionUtils;
+      closure_2[combined] = obj.handleExplicitMediaScanTimeoutForMessage(closure_2[combined]);
     }
   },
-});
-const size = fn(2);
+};
+const explicitMediaSearchStore = new ExplicitMediaSearchStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaSearchStore.tsx");
 
 export default explicitMediaSearchStore;

@@ -1,18 +1,40 @@
 // discord_app/modules/rpc/native/server/commands/auth.tsx
 import ComponentDispatchUtils from "../../../../../utils/ComponentDispatchUtils.tsx";
 import EmbeddedSurfaceUtils from "../../../../applications/utils/EmbeddedSurfaceUtils.tsx";
-import RPCErrorDefault from "../../../RPCError.tsx";
 import AuthCommandsFactoryDefault from "../../../server/commands/AuthCommandsFactory.tsx";
 import ApplicationStore from "../../../../applications/ApplicationStore.tsx";
+import Constants from "../../../../../Constants.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const Constants = fn(1085);
+let importDefault;
+
+let closure_4;
+let hasOwnProperty;
 ({ ComponentActions: closure_4, RPCErrors: hasOwnProperty } = Constants);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/rpc/native/server/commands/auth.tsx");
-
-export default AuthCommandsFactoryDefault(
+const tmp3 = AuthCommandsFactoryDefault(
   (arg0) => {
+    let _prompt;
+    let channelId;
+    let clientId;
+    let closure_10;
+    let closure_11;
+    let closure_13;
+    let closure_14;
+    let closure_4;
+    let closure_5;
+    let closure_6;
+    let closure_7;
+    let closure_8;
+    let closure_9;
+    let codeChallenge;
+    let codeChallengeMethod;
+    let disclosures;
+    let guildId;
+    let integrationType;
+    let permissions;
+    let redirectUri;
+    let responseType;
+    let state;
     ({
       clientId: require,
       authorizations: importDefault,
@@ -30,14 +52,19 @@ export default AuthCommandsFactoryDefault(
       disclosures: closure_13,
       integrationType: closure_14,
     } = arg0);
-    return new Promise((arg0, arg1) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
+    const promise = new Promise((arg0, arg1) => {
+      let OAUTH2_ERROR;
+      let items;
+      let obj3;
+      let tmp8;
+      let closure_0 = arg0;
+      importDefault = arg1;
       let tmp2;
       if (null != integrationType) {
-        value = undefined;
+        let obj = importDefault;
+        let value;
         if (importDefault != null) {
-          value = importDefault.get(integrationType);
+          value = obj.get(integrationType);
         }
         tmp2 = value;
       }
@@ -46,61 +73,53 @@ export default AuthCommandsFactoryDefault(
         application = tmp2.application;
       }
       if (application == null) {
-        application = ApplicationStore.getApplication(clientId);
+        application = ApplicationStore.getApplication(require);
       }
       const obj2 = {
-        clientId,
-        scopes: null,
-        responseType: null,
-        redirectUri: null,
-        codeChallenge: null,
-        codeChallengeMethod: null,
-        state: null,
-        guildId: null,
-        channelId: null,
-        permissions: null,
-        prompt: null,
-        disableGuildSelect: null,
+        clientId: require,
+        scopes: items,
+        responseType,
+        redirectUri,
+        codeChallenge,
+        codeChallengeMethod,
+        state,
+        guildId,
+        channelId,
+        permissions: ApplicationStore,
+        prompt: _prompt,
+        disableGuildSelect: tmp8,
         showLogout: false,
-        callback: null,
-        isEmbeddedFlow: null,
-        disclosures: null,
-        integrationType: null,
+        callback(location) {
+          if (null != location.location) {
+            closure_0(location.location);
+          } else {
+            const self = this;
+            const self2 = this;
+            const obj = { errorCode: OAUTH2_ERROR.OAUTH2_ERROR };
+            const tmp6 = new closure_2_1(closure_2_2[2])(obj, "User cancelled authorization");
+            closure_1(tmp6);
+          }
+        },
+        isEmbeddedFlow: obj3.isEmbeddedApplication(application),
+        disclosures,
+        integrationType,
       };
-      let items = dependencyMap;
+      items = dependencyMap;
       if (dependencyMap == null) {
         items = [];
       }
-      obj2.scopes = items;
-      obj2.responseType = responseType;
-      obj2.redirectUri = redirectUri;
-      obj2.codeChallenge = codeChallenge;
-      obj2.codeChallengeMethod = codeChallengeMethod;
-      obj2.state = state;
-      obj2.guildId = guildId;
-      obj2.channelId = channelId;
-      obj2.permissions = permissions;
-      obj2.prompt = _prompt;
-      let tmp8 = closure_1_12;
-      if (typeof closure_1_12 !== "boolean") {
+      tmp8 = closure_12;
+      if (typeof closure_12 !== "boolean") {
         tmp8 = "true" === tmp7;
       }
-      obj2.disableGuildSelect = tmp8;
-      obj2.callback = function callback(location) {
-        if (null != location.location) {
-          closure_0(location.location);
-        } else {
-          const obj = { errorCode: redirectUri.OAUTH2_ERROR };
-          const tmp8 = new RPCErrorDefault(obj, "User cancelled authorization");
-          closure_1(tmp8);
-        }
-      };
-      obj2.isEmbeddedFlow = EmbeddedSurfaceUtils.isEmbeddedApplication(application);
-      obj2.disclosures = disclosures;
-      obj2.integrationType = integrationType;
+      obj3 = EmbeddedSurfaceUtils;
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-      ComponentDispatch.dispatch(SHOW_OAUTH2_MODAL.SHOW_OAUTH2_MODAL, obj2);
+      ComponentDispatch.dispatch(responseType.SHOW_OAUTH2_MODAL, obj2);
     });
+    return promise;
   },
   function onAuthorizeValidationPassed() {},
 );
+const result = size.fileFinishedImporting("modules/rpc/native/server/commands/auth.tsx");
+
+export default tmp3;

@@ -1,7 +1,8 @@
 // discord_app/components_native/MainShared.tsx
-import initialize from "../../discord_common/js/packages/flux/index.tsx";
-import c from "../../_runtime/00576_c.js";
-import util from "../intl/index.native.tsx";
+import Fragment from "../../_runtime/react/00021_Fragment.js";
+import get_initialized from "../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../_runtime/00576_react.js";
+import intl2 from "../intl/index.native.tsx";
 import PlatformUtils from "../utils/PlatformUtils.tsx";
 import NavigationRouteUtils from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import KeyCommands from "../modules/keyboard/native/KeyCommands.tsx";
@@ -17,18 +18,23 @@ import AlertsDefault from "common/Alerts.tsx";
 import SoundPlayerDefault from "../modules/soundplayer/SoundPlayer.tsx";
 import MainViewTooltipActionSheetsV2Default from "../modules/upsell_tooltip/native/MainViewTooltipActionSheetsV2.tsx";
 import AppToastContainerDefault from "../modules/toast/native/AppToastContainer.tsx";
-import noop from "../../_runtime/metro/00019__.js";
+import react from "../../_runtime/00019_react.js";
 import ChannelStore from "../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../stores/RTCConnectionStore.tsx";
+import ReactCompilerGating_mod from "../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-fn(558);
-let ReactCompilerGating = fn(558);
+const jsx = Fragment.jsx;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp2 = dependencyMap;
-      const cResult = c.c(5);
+      let channel;
+      let channelId;
+      let tmp4;
+      let tmp5;
+      let tmp9;
+      const obj = react2;
+      const cResult = obj.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore, RTCConnectionStore];
         const fn = function l() {
@@ -41,18 +47,19 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { isActivityViewFocused: false };
         cResult[2] = obj2;
-        let tmp9 = obj2;
+        tmp9 = obj2;
       } else {
         tmp9 = cResult[2];
       }
-      const tmpResult = initialize;
-      const hasPipParticipant = usePipVideoOrStream.useHasPipParticipant(tmp9);
       const tmpResult4 = usePipVideoOrStream;
-      const isModalOpen = NavigationRouteUtils.useIsModalOpen();
+      const hasPipParticipant = tmpResult4.useHasPipParticipant(tmp9);
+      const tmpResult5 = NavigationRouteUtils;
+      const isModalOpen = tmpResult5.useIsModalOpen();
       VoicePanelUtils;
       let tmp14 = null;
       if (null != stateFromStores) {
@@ -62,12 +69,16 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (!isModalOpen) {
             tmp14 = null;
             if (!tmp13) {
+              let tmp15;
               if (cResult[3] !== stateFromStores) {
-                const obj3 = { channel: stateFromStores };
-                tmp2 = jsx(PictureInPictureGlobalDefault, { channel: stateFromStores });
+                const tmp18 = jsx(PictureInPictureGlobalDefault, { channel: stateFromStores });
                 cResult[3] = stateFromStores;
-                cResult[4] = tmp2;
+                cResult[4] = tmp18;
+                tmp15 = tmp18;
+              } else {
+                tmp15 = cResult[4];
               }
+              tmp14 = tmp15;
             }
           }
         }
@@ -75,10 +86,15 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp14;
     }
   : () => {
+      let channel;
+      let channelId;
       const items = [ChannelStore, RTCConnectionStore];
-      const stateFromStores = initialize.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
-      const hasPipParticipant = usePipVideoOrStream.useHasPipParticipant({ isActivityViewFocused: false });
-      const isModalOpen = NavigationRouteUtils.useIsModalOpen();
+      const obj = get_initialized;
+      const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
+      const obj2 = usePipVideoOrStream;
+      const hasPipParticipant = obj2.useHasPipParticipant({ isActivityViewFocused: false });
+      const obj3 = NavigationRouteUtils;
+      const isModalOpen = obj3.useIsModalOpen();
       VoicePanelUtils;
       let tmp7 = null;
       if (null != stateFromStores) {
@@ -88,7 +104,6 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (!isModalOpen) {
             tmp7 = null;
             if (!tmp6) {
-              const obj4 = { channel: stateFromStores };
               tmp7 = jsx(PictureInPictureGlobalDefault, { channel: stateFromStores });
             }
           }
@@ -96,63 +111,88 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp7;
     };
-ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(1);
+      let first;
+      let intl;
+      const obj = react2;
+      const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmpResult = PlatformUtils;
-        const isAndroidResult = PlatformUtils.isAndroid();
-        const KeyModifierFlags = {
-          input: "k",
-          modifierFlags: null,
-          eventName: "keyCommandShowQuickSwitcher",
-          discoverabilityTitle: null,
-          onKeyCommand: null,
-        };
-        KeyModifierFlags.modifierFlags = PlatformUtils.isAndroid()
-          ? KeyModifierFlags.keyModifierControl
-          : KeyModifierFlags.keyModifierCommand;
-        const intl = util.intl;
-        KeyModifierFlags.discoverabilityTitle = intl.string(util.t.yYsRlD);
-        KeyModifierFlags.onKeyCommand = function onKeyCommand() {
-          showLaunchPadDefault();
-          return true;
-        };
-        const items = [KeyModifierFlags];
-        cResult[0] = items;
-        const tmp5 = PlatformUtils.isAndroid()
-          ? KeyModifierFlags.keyModifierControl
-          : KeyModifierFlags.keyModifierCommand;
-      } else {
-        const keyCommands = KeyCommands.useKeyCommands(cResult[0]);
-        const tmpResult2 = KeyCommands;
-      }
-    }
-  : () => {
-      const memo = noop.useMemo(() => {
+        const isAndroidResult = tmpResult.isAndroid();
         const KeyModifierFlags = KeyCommands.KeyModifierFlags;
         const obj2 = {
           input: "k",
-          modifierFlags: PlatformUtils.isAndroid()
-            ? KeyModifierFlags.keyModifierControl
-            : KeyModifierFlags.keyModifierCommand,
+          modifierFlags: isAndroidResult ? KeyModifierFlags.keyModifierControl : KeyModifierFlags.keyModifierCommand,
           eventName: "keyCommandShowQuickSwitcher",
-          discoverabilityTitle: null,
-          onKeyCommand: null,
+          discoverabilityTitle: intl.string(intl2.t.yYsRlD),
+          onKeyCommand() {
+            showLaunchPadDefault();
+            return true;
+          },
         };
-        const intl = util.intl;
-        obj2.discoverabilityTitle = intl.string(util.t.yYsRlD);
-        obj2.onKeyCommand = function onKeyCommand() {
-          closure_1_1(dependencyMap[14])();
-          return true;
+        intl = intl2.intl;
+        const items = [obj2];
+        cResult[0] = items;
+        first = items;
+      } else {
+        first = cResult[0];
+      }
+      const tmpResult2 = KeyCommands;
+      const keyCommands = tmpResult2.useKeyCommands(first);
+    }
+  : () => {
+      const memo = react.useMemo(() => {
+        let intl;
+        const obj = PlatformUtils;
+        const isAndroidResult = obj.isAndroid();
+        const KeyModifierFlags = KeyCommands.KeyModifierFlags;
+        const obj2 = {
+          input: "k",
+          modifierFlags: isAndroidResult ? KeyModifierFlags.keyModifierControl : KeyModifierFlags.keyModifierCommand,
+          eventName: "keyCommandShowQuickSwitcher",
+          discoverabilityTitle: intl.string(intl2.t.yYsRlD),
+          onKeyCommand() {
+            closure_1_1(closure_1_2[14])();
+            return true;
+          },
         };
+        intl = intl2.intl;
         const items = [obj2];
         return items;
       }, []);
-      const keyCommands = KeyCommands.useKeyCommands(memo);
+      let obj = KeyCommands;
+      const keyCommands = obj.useKeyCommands(memo);
     };
-const size = fn(2);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      let tmp2;
+      let tmp3;
+      let obj = react2;
+      const cResult = obj.c(2);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function o() {
+          const obj = AccessibilityManagerDefault;
+          const result = obj.checkScreenreaderEnabled();
+        };
+        const items = [];
+        cResult[0] = fn;
+        cResult[1] = items;
+        tmp2 = fn;
+        tmp3 = items;
+      } else {
+        [tmp2, tmp3] = cResult;
+      }
+      const effect = react.useEffect(tmp2, tmp3);
+    }
+  : () => {
+      const effect = react.useEffect(() => {
+        const obj = AccessibilityManagerDefault;
+        const result = obj.checkScreenreaderEnabled();
+      }, []);
+    };
 let result = size.fileFinishedImporting("components_native/MainShared.tsx");
 
 export const BurstReactionAnimationContainer = BurstReactionAnimationContainerDefault;
@@ -164,25 +204,4 @@ export const MainViewTooltipActionSheetsV2 = MainViewTooltipActionSheetsV2Defaul
 export const ToastContainer = AppToastContainerDefault;
 export const PictureInPictureGlobalContainer = tmp2;
 export const useAppKeyCommands = tmp3;
-export const useScreenReaderEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      const cResult = c.c(2);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function o() {
-          const result = AccessibilityManagerDefault.checkScreenreaderEnabled();
-        };
-        const items = [];
-        cResult[0] = fn;
-        cResult[1] = items;
-        tmp2 = fn;
-        tmp3 = items;
-      } else {
-        [tmp2, tmp3] = cResult;
-      }
-      const effect = noop.useEffect(tmp2, tmp3);
-    }
-  : () => {
-      const effect = noop.useEffect(() => {
-        const result = AccessibilityManagerDefault.checkScreenreaderEnabled();
-      }, []);
-    };
+export const useScreenReaderEnabled = tmp4;

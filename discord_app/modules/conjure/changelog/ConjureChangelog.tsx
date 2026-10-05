@@ -1346,12 +1346,13 @@ const items = [
 ];
 const items1 = [...items];
 let closure_0 = items1.sort(function compareNewestFirst(date, date2) {
+  let num;
   if (date.date !== date2.date) {
     let num4 = -1;
     if (date.date < date2.date) {
       num4 = 1;
     }
-    let num = num4;
+    num = num4;
   } else if (date.time !== date2.time) {
     let num3 = -1;
     if (date.time < date2.time) {

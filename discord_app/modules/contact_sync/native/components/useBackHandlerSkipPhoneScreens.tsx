@@ -1,26 +1,33 @@
 // discord_app/modules/contact_sync/native/components/useBackHandlerSkipPhoneScreens.tsx
-import _mod17 from "../../../../../_runtime/metro/00017__.js";
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import react from "../../../../../_runtime/00576_react.js";
 import useNavigatorBackPressHandler from "../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
 import ContactSyncConstants from "../ContactSyncConstants.tsx";
-import "ReactCompilerGating";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let MinimizeApp, _require, dependencyMap;
 
-const NativeModules = _mod17.NativeModules;
+const NativeModules = react_native.NativeModules;
 const ContactSyncScenes = ContactSyncConstants.ContactSyncScenes;
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
+      let closure_1;
+      let state;
       _require = arg0;
       dependencyMap = arg1;
-      const cResult = require("c").c(3);
+      const tmp = _require;
+      const obj = require("react");
+      const cResult = obj.c(3);
       if (cResult[0] === arg1) {
+        let tmp4;
         if (cResult[1] === arg0) {
-          let tmp4 = cResult[2];
+          tmp4 = cResult[2];
         }
-        require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(tmp4);
+        const tmpResult = tmp(6016);
+        tmpResult.useNavigatorBackPressHandler(tmp4);
       }
       const fn = function o() {
         if (null != closure_1) {
@@ -43,9 +50,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn;
     }
   : (arg0, arg1) => {
+      let closure_1;
+      let state;
       _require = arg0;
       dependencyMap = arg1;
-      require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(() => {
+      const obj = require("useNavigatorBackPressHandler");
+      obj.useNavigatorBackPressHandler(() => {
         if (null != closure_1) {
           tmp();
         } else {
@@ -61,12 +71,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return true;
       });
     };
-const result = size.fileFinishedImporting("modules/contact_sync/native/components/useBackHandlerSkipPhoneScreens.tsx");
-
-export default tmp2;
-export const useBackHandlerMinimizeApp = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(1);
+      let first;
+      const obj = react;
+      const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t() {
           MinimizeApp = MinimizeApp.MinimizeApp;
@@ -74,17 +84,22 @@ export const useBackHandlerMinimizeApp = ReactCompilerGating.isReactCompilerEnab
           return true;
         };
         cResult[0] = fn;
-        let first = fn;
+        first = fn;
       } else {
         first = cResult[0];
       }
-      useNavigatorBackPressHandler.useNavigatorBackPressHandler(first);
       const tmpResult = useNavigatorBackPressHandler;
+      tmpResult.useNavigatorBackPressHandler(first);
     }
   : () => {
-      useNavigatorBackPressHandler.useNavigatorBackPressHandler(() => {
+      const obj = useNavigatorBackPressHandler;
+      obj.useNavigatorBackPressHandler(() => {
         MinimizeApp = MinimizeApp.MinimizeApp;
         MinimizeApp.minimizeApp();
         return true;
       });
     };
+const result = size.fileFinishedImporting("modules/contact_sync/native/components/useBackHandlerSkipPhoneScreens.tsx");
+
+export default tmp2;
+export const useBackHandlerMinimizeApp = tmp3;

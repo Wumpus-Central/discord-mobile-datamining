@@ -4,12 +4,13 @@ import size from "../../../../_runtime/metro/00002__.js";
 let result = size.fileFinishedImporting("modules/conjure/clarification/ConjureClarification.tsx");
 
 export const isClarificationComplete = function isClarificationComplete(questions, arg1) {
-  closure_0 = arg1;
+  let closure_0 = arg1;
   questions = questions.questions;
   return questions.every((item) => {
     let tmp2 = null != tmp;
     if (tmp2) {
-      tmp2 = "" !== tmp.text.trim();
+      const str = closure_0[item.id].text;
+      tmp2 = "" !== str.trim();
     }
     return tmp2;
   });
@@ -32,8 +33,9 @@ export const nextClarificationStep = function nextClarificationStep(questions, a
   return null;
 };
 export const followingClarificationStep = function followingClarificationStep(clarification, arg1, bound) {
+  let sum;
   if (bound < clarification.questions.length - 1) {
-    let sum = bound + 1;
+    sum = bound + 1;
   } else {
     const questions = clarification.questions;
     let num = 1;
@@ -60,29 +62,31 @@ export const followingClarificationStep = function followingClarificationStep(cl
   return sum;
 };
 export const formatClarificationAnswers = function formatClarificationAnswers(clarification, arg1) {
-  closure_0 = arg1;
+  let closure_0 = arg1;
   const questions = clarification.questions;
   const mapped = questions.map((question, index) => ({ question, index, answer: closure_0[question.id] }));
   const found = mapped.filter((answer) => {
     let tmp = null != answer.answer;
     if (tmp) {
-      tmp = "" !== answer.answer.text.trim();
+      const str = answer.answer.text;
+      tmp = "" !== str.trim();
     }
     return tmp;
   });
   const mapped1 = found.map((answer) => {
     const sum = answer.index + 1;
-    return "" + sum + ". " + answer.question.question + " \u2192 " + answer.answer.text.trim();
+    const str = answer.answer.text;
+    return "" + sum + ". " + answer.question.question + " \u2192 " + str.trim();
   });
   return mapped1.join("\n");
 };
 export const toggleClarificationOption = function toggleClarificationOption(options, arr, id) {
-  closure_0 = id;
+  let closure_0 = id;
   if (arr.includes(id)) {
-    let found = arr.filter((item) => item !== closure_0);
+    let found = arr.filter((item) => item !== id);
   } else {
     const items = [];
-    items[HermesBuiltin.arraySpread(arr, 0)] = id;
+    items[HermesBuiltin.arraySpread(items, arr, 0)] = id;
     found = items;
   }
   options = options.options;
@@ -90,46 +94,52 @@ export const toggleClarificationOption = function toggleClarificationOption(opti
   return found1.map((id) => id.id);
 };
 export const multiSelectAnswer = function multiSelectAnswer(options, answeredOptionIdsResult, str, conjureOwnImages) {
+  let items;
+  let items1;
+  let items2;
+  let obj2;
+  let obj3;
   const trimmed = str.trim();
   options = options.options;
   const found = options.filter((id) => answeredOptionIdsResult.includes(id.id));
   const mapped = found.map((label) => label.label);
-  const obj = { kind: "multi", optionIds: answeredOptionIdsResult };
+  const obj = { kind: "multi", optionIds: answeredOptionIdsResult, text: items.join(", ") };
   if ("" === trimmed) {
-    let obj2 = {};
+    obj2 = {};
   } else {
     obj2 = { custom: trimmed };
   }
   const merged = Object.assign(obj2);
   if (null == conjureOwnImages) {
-    let obj3 = {};
+    obj3 = {};
   } else {
     obj3 = { attachment: conjureOwnImages.attachment };
   }
   const merged1 = Object.assign(obj3);
-  const items = [...mapped];
+  items = [...mapped];
   if (null == conjureOwnImages) {
-    let items1 = [];
+    items1 = [];
   } else {
     items1 = [conjureOwnImages.text];
   }
+  const arraySpreadResult = HermesBuiltin.arraySpread(items, items1, tmp7);
   if ("" === trimmed) {
-    let items2 = [];
+    items2 = [];
   } else {
     items2 = [trimmed];
   }
-  HermesBuiltin.arraySpread(items2, HermesBuiltin.arraySpread(items1, tmp6));
-  obj.text = items.join(", ");
+  HermesBuiltin.arraySpread(items, items2, arraySpreadResult);
   return obj;
 };
 export const clarificationAnswerAttachments = function clarificationAnswerAttachments(clarification, arg1) {
-  closure_0 = arg1;
+  let closure_0 = arg1;
   const questions = clarification.questions;
   return questions.flatMap((item) => {
     if (null != closure_0[item.id]) {
+      const str = closure_0[item.id].text;
       if ("" !== str.trim()) {
-        if ("image" === tmp.kind) {
-          const items = [tmp.attachment];
+        if ("image" === closure_0[item.id].kind) {
+          const items = [closure_0[item.id].attachment];
           let items1 = items;
         } else {
           items1 = [];
@@ -140,35 +150,42 @@ export const clarificationAnswerAttachments = function clarificationAnswerAttach
   });
 };
 export const clarificationAnswersPayload = function clarificationAnswersPayload(clarification, arg1) {
-  closure_0 = arg1;
+  let closure_0 = arg1;
   const questions = clarification.questions;
   const flatMapResult = questions.flatMap((id) => {
     if (null != closure_0[id.id]) {
+      const str7 = closure_0[id.id].text;
       if ("" !== str7.trim()) {
-        if ("option" === tmp.kind) {
-          const items = [tmp.optionId];
-          let tmp2 = items;
+        let tmp2;
+        let custom;
+        let attachment;
+        if ("option" === closure_0[id.id].kind) {
+          const items = [closure_0[id.id].optionId];
+          tmp2 = items;
         } else {
           tmp2 = "multi" === tmp.kind ? tmp.optionIds : [];
         }
-        if ("custom" === tmp.kind) {
-          let custom = tmp.text.trim();
-        } else if ("multi" === tmp.kind) {
+        if ("custom" === closure_0[id.id].kind) {
+          const str4 = closure_0[id.id].text;
+          custom = str4.trim();
+        } else if ("multi" === closure_0[id.id].kind) {
           custom = tmp.custom;
         }
-        if ("image" === tmp.kind) {
-          const attachment = tmp.attachment;
+        if ("image" === closure_0[id.id].kind) {
+          attachment = tmp.attachment;
         }
         const obj = { question_id: id.id, option_ids: tmp2 };
         if (null != custom) {
+          let obj5;
+          let obj4;
           if ("" !== custom) {
+            obj5 = { custom };
             const obj2 = { custom };
-            let obj5 = obj2;
           }
           const merged = Object.assign(obj5);
           if (null != attachment) {
+            obj4 = { attachment_id: attachment.id };
             const obj3 = { attachment_id: attachment.id };
-            let obj4 = obj3;
           } else {
             obj4 = {};
           }
@@ -178,7 +195,6 @@ export const clarificationAnswersPayload = function clarificationAnswersPayload(
         }
         obj5 = {};
       }
-      str7 = tmp.text;
     }
     return [];
   });

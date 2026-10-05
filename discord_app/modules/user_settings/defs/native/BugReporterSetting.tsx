@@ -1,44 +1,52 @@
 // discord_app/modules/user_settings/defs/native/BugReporterSetting.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import react from "../../../../../_runtime/00576_react.js";
+import intl2 from "../../../../intl/index.native.tsx";
+import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import BugReporterExperimentDefault from "../../../bug_reporter/BugReporterExperiment.tsx";
+import BugIcon from "../../../../design/components/Icon/native/redesign/generated/BugIcon.tsx";
 import BugReportStore from "../../../bug_reporter/BugReportStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(1);
+      let first;
+      const obj = react;
+      const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { location: "native-settings" };
         cResult[0] = obj2;
-        let first = obj2;
+        first = obj2;
       } else {
         first = cResult[0];
       }
-      return BugReporterExperimentDefault.useConfig(first).hasBugReporterAccess;
+      const obj3 = BugReporterExperimentDefault;
+      return obj3.useConfig(first).hasBugReporterAccess;
     }
-  : () => BugReporterExperimentDefault.useConfig({ location: "native-settings" }).hasBugReporterAccess;
-const SettingBuilders = fn(11129);
-const pressable = SettingBuilders.createPressable({
+  : () => {
+      const obj = BugReporterExperimentDefault;
+      return obj.useConfig({ location: "native-settings" }).hasBugReporterAccess;
+    };
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t["/tZh0A"]);
+    const intl = intl2.intl;
+    return intl.string(intl2.t["/tZh0A"]);
   },
   parent: null,
-  IconComponent: fn(15620).BugIcon,
+  IconComponent: BugIcon.BugIcon,
   onPress: function handleBugReporterSettingPress() {
     if (!BugReportStore.getField("isReportOpen")) {
       BugReportStore.setState({ isReportOpen: true });
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12525, dependencyMap.paths));
+      const obj2 = ModalActionCreatorsDefault;
+      obj2.pushLazy(asyncRequire(12525, dependencyMap.paths));
     }
   },
   withArrow: true,
   usePredicate: tmp2,
-});
-const size = fn(2);
+};
+const pressable = SettingBuilders.createPressable(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/BugReporterSetting.tsx");
 
 export default pressable;

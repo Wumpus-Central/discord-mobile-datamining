@@ -5,37 +5,43 @@ import NameplateRecord from "NameplateRecord.tsx";
 import ProfileEffectRecord from "ProfileEffectRecord.tsx";
 import ProfileFrameRecord from "ProfileFrameRecord.tsx";
 import UnknownCollectiblesItemRecord from "UnknownCollectiblesItemRecord.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const Constants = fn(1085);
-({ SKUProductLines: closure_7, SKUTypes: closure_8 } = Constants);
-const size = fn(2);
+let metroImportAll;
+let metroImportDefault;
+({ SKUProductLines: metroImportDefault, SKUTypes: metroImportAll } = Constants);
 const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesItemRecord.tsx");
 function transformSKUToCollectiblesItem(productLine) {
-  if (productLine.productLine === constants.COLLECTIBLES) {
-    if (productLine.type === constants2.BUNDLE) {
+  let effects;
+  let previewAssetPaths;
+  let tmp102;
+  let tmp16;
+  let tmp20;
+  let tmp8;
+  if (productLine.productLine === metroImportDefault.COLLECTIBLES) {
+    if (productLine.type === metroImportAll.BUNDLE) {
       const items = [];
       let bundledSkus = productLine.bundledSkus;
       if (bundledSkus == null) {
         bundledSkus = [];
       }
-      const tmp32 = bundledSkus[Symbol.iterator]();
-      while (tmp32 !== undefined) {
-        let tmp37 = transformSKUToCollectiblesItem(tmp34);
+      const tmp24 = bundledSkus[Symbol.iterator]();
+      while (tmp24 !== undefined) {
+        let tmp29 = transformSKUToCollectiblesItem(tmp26);
         let type1;
-        let tmp38 = tmp37;
-        if (tmp37 != null) {
-          type1 = tmp37.type;
+        let tmp30 = tmp29;
+        if (tmp29 != null) {
+          type1 = tmp29.type;
         }
         if ("single" === type1) {
-          let arr = items.push(tmp38.item);
+          let arr = items.push(tmp30.item);
         }
         continue;
       }
       if (0 !== items.length) {
-        const obj4 = { type: "bundle", items, previewAssets: null };
-        const previewAssetPaths = productLine.previewAssetPaths;
-        obj4.previewAssets = previewAssetPaths;
+        const obj4 = { type: "bundle", items, previewAssets: previewAssetPaths };
+        previewAssetPaths = productLine.previewAssetPaths;
         return obj4;
       }
     } else {
@@ -51,18 +57,20 @@ function transformSKUToCollectiblesItem(productLine) {
       if (null != item) {
         const type = item.type;
         if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-          const obj5 = { type: "single", item: null };
+          const obj5 = { type: "single", item: tmp20 };
           const obj7 = { skuId: productLine.id, type: null, asset: null, label: null };
           ({ type: obj8.type, asset: obj8.asset, label: obj8.label } = item);
-          const tmp28 = new AvatarDecorationRecord(obj7);
-          obj5.item = tmp28;
+          const self7 = this;
+          const self8 = this;
+          tmp20 = new AvatarDecorationRecord(obj7);
           return obj5;
         } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
-          const obj9 = { type: "single", item: null };
           const obj17 = { skuId: productLine.id, type: null, asset: null, label: null, palette: null };
+          const obj9 = { type: "single", item: tmp16 };
           ({ type: obj6.type, asset: obj6.asset, label: obj6.label, palette: obj6.palette } = item);
-          const tmp22 = new NameplateRecord(obj17);
-          obj9.item = tmp22;
+          const self5 = this;
+          const self6 = this;
+          tmp16 = new NameplateRecord(obj17);
           return obj9;
         } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
           const obj18 = {
@@ -72,7 +80,7 @@ function transformSKUToCollectiblesItem(productLine) {
             description: null,
             thumbnailPreviewSrc: null,
             reducedMotionSrc: null,
-            effects: null,
+            effects,
             accessibilityLabel: null,
             animationType: null,
             staticFrameSrc: null,
@@ -88,18 +96,18 @@ function transformSKUToCollectiblesItem(productLine) {
           if (effects == null) {
             effects = [];
           }
-          const obj19 = { type: "single", item: null };
-          obj18.effects = effects;
+          const obj19 = { type: "single", item: tmp102 };
           ({
             accessibilityLabel: obj3.accessibilityLabel,
             animationType: obj3.animationType,
             staticFrameSrc: obj3.staticFrameSrc,
           } = item);
-          const tmp122 = new ProfileEffectRecord(obj18);
-          obj19.item = tmp122;
+          const self3 = this;
+          const self4 = this;
+          tmp102 = new ProfileEffectRecord(obj18);
           return obj19;
         } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
-          const obj = { type: "single", item: null };
+          const obj = { type: "single", item: tmp8 };
           const obj20 = {
             skuId: productLine.id,
             type: null,
@@ -119,8 +127,9 @@ function transformSKUToCollectiblesItem(productLine) {
             overflowBottom: obj2.overflowBottom,
             overflowHorizontal: obj2.overflowHorizontal,
           } = item);
-          const tmp10 = new ProfileFrameRecord(obj20);
-          obj.item = tmp10;
+          const self = this;
+          const self2 = this;
+          tmp8 = new ProfileFrameRecord(obj20);
           return obj;
         }
       }
@@ -129,8 +138,9 @@ function transformSKUToCollectiblesItem(productLine) {
 }
 
 export const createCollectiblesItemsFromServerResponse = function createCollectiblesItemsFromServerResponse(arr) {
+  let items;
   if (null == arr) {
-    let items = [];
+    items = [];
   } else {
     items = arr.reduce((arr, type) => {
       type = type.type;
@@ -153,10 +163,11 @@ export const createCollectiblesItemsFromServerResponse = function createCollecti
 export const transformProductToCollectiblesItem = function transformProductToCollectiblesItem(type) {
   if (null != type) {
     if (0 !== type.items.length) {
+      let obj;
       if (type.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
-        ({ items: obj2.items, previewAssets: obj2.previewAssets } = type);
-        let obj = { type: "bundle", items: null, previewAssets: null };
         const obj3 = { type: "bundle", items: null, previewAssets: null };
+        ({ items: obj2.items, previewAssets: obj2.previewAssets } = type);
+        obj = obj3;
       } else {
         obj = { type: "single", item: type.items[0] };
       }

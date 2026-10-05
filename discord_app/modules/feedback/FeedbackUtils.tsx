@@ -1,291 +1,471 @@
 // discord_app/modules/feedback/FeedbackUtils.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import Constants2 from "../../Constants.tsx";
-import util from "../../intl/index.native.tsx";
+import intl20 from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import _modDef2755 from "intl/Feedback.messages.js";
 import Constants from "Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let c10;
+let c3;
+let c9;
+let closure_4;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let unpackModuleId;
+const f107163 = (disabled) => !disabled.disabled;
+const f107164 = (item) => Object.assign(item, Object.assign({ disabled: 0 }));
 ({
   ConnectionFeedbackOption: c3,
   AudioFeedbackOption: closure_4,
   VideoFeedbackOption: hasOwnProperty,
   VideoBackgroundFeedbackOption: metroRequire,
-  StreamFeedbackOption: closure_7,
-  FeedbackOptionVariant: closure_8,
-  FeedbackType: closure_9,
+  StreamFeedbackOption: metroImportDefault,
+  FeedbackOptionVariant: metroImportAll,
+  FeedbackType: c9,
   MAX_REPRESENTABLE_DATE: c10,
-  PeopleFeedbackOption: closure_11,
+  PeopleFeedbackOption: unpackModuleId,
 } = Constants);
 const AnalyticEvents = Constants2.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/feedback/FeedbackUtils.tsx");
 
 export const shuffleProblems = function shuffleProblems(reasons, otherKey) {
-  closure_0 = otherKey;
-  const shuffleResult = _modDef12.shuffle(reasons);
+  let closure_0 = otherKey;
+  const obj = _modDef12;
+  const shuffleResult = obj.shuffle(reasons);
   const findIndexResult = shuffleResult.findIndex((value) => value.value === closure_0);
   if (findIndexResult > -1) {
+    const tmp2 = shuffleResult[findIndexResult];
     shuffleResult.splice(findIndexResult, 1);
-    shuffleResult.push(shuffleResult[findIndexResult]);
+    shuffleResult.push(tmp2);
   }
   return shuffleResult;
 };
 export const processOptOut = function processOptOut(feedbackType) {
   feedbackType = feedbackType.feedbackType;
-  AnalyticsUtilsDefault.track(AnalyticEvents.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, {
-    feedback_type: closure_9[feedbackType],
-    opted_out_until,
-  });
+  let obj = AnalyticsUtilsDefault;
+  let obj2 = { feedback_type: closure_9[feedbackType], opted_out_until };
+  obj.track(AnalyticEvents.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, obj2);
   const InAppFeedbackStates = feedbackType(2028).InAppFeedbackStates;
   InAppFeedbackStates.updateSetting((arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
-    const obj2 = {};
+    const obj2 = { optOutExpiryTime };
     const merged1 = Object.assign(arg0[feedbackType]);
-    obj2.optOutExpiryTime = optOutExpiryTime;
     obj[feedbackType] = obj2;
     return obj;
   });
 };
 export const getConnectionFeedbackOptions = function getConnectionFeedbackOptions() {
-  const obj = { variant: constants6.SELF, value: constants.COULD_NOT_CONNECT, label: null };
-  const intl = util.intl;
-  obj.label = intl.string(_modDef2755.gMHKDJ);
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let intl6;
+  const obj = {
+    variant: metroImportAll.SELF,
+    value: constants.COULD_NOT_CONNECT,
+    label: intl.string(_modDef2755.gMHKDJ),
+  };
+  intl = intl20.intl;
   const items = [obj, , , , ,];
-  const obj2 = { value: constants.HIGH_TTC, variant: constants6.SELF, label: null };
-  const intl2 = util.intl;
-  obj2.label = intl2.string(_modDef2755.y06Ayn);
+  const obj2 = { value: constants.HIGH_TTC, variant: metroImportAll.SELF, label: intl2.string(_modDef2755.y06Ayn) };
+  intl2 = intl20.intl;
   items[1] = obj2;
-  const obj3 = { value: constants.HIGH_LATENCY, variant: constants6.SELF, label: null };
-  const intl3 = util.intl;
-  obj3.label = intl3.string(_modDef2755.y5k8Jq);
+  const obj3 = { value: constants.HIGH_LATENCY, variant: metroImportAll.SELF, label: intl3.string(_modDef2755.y5k8Jq) };
+  intl3 = intl20.intl;
   items[2] = obj3;
-  const obj4 = { value: constants.ROBOT_VOICE, variant: constants6.SOMEONE, label: null };
-  const intl4 = util.intl;
-  obj4.label = intl4.string(_modDef2755.f2914v);
+  const obj4 = {
+    value: constants.ROBOT_VOICE,
+    variant: metroImportAll.SOMEONE,
+    label: intl4.string(_modDef2755.f2914v),
+  };
+  intl4 = intl20.intl;
   items[3] = obj4;
-  const obj5 = { value: constants.DESYNC, variant: constants6.UNSPECIFIED, label: null };
-  const intl5 = util.intl;
-  obj5.label = intl5.string(_modDef2755["zk+QL1"]);
+  const obj5 = {
+    value: constants.DESYNC,
+    variant: metroImportAll.UNSPECIFIED,
+    label: intl5.string(_modDef2755["zk+QL1"]),
+  };
+  intl5 = intl20.intl;
   items[4] = obj5;
-  const obj6 = { value: constants.CUTTING, variant: constants6.SOMEONE, label: null };
-  const intl6 = util.intl;
-  obj6.label = intl6.string(_modDef2755.K5vYQA);
+  const obj6 = { value: constants.CUTTING, variant: metroImportAll.SOMEONE, label: intl6.string(_modDef2755.K5vYQA) };
+  intl6 = intl20.intl;
   items[5] = obj6;
-  const found = items.filter((disabled) => !disabled.disabled);
-  return found.map((item) => Object.assign(item, Object.assign({ disabled: 0 })));
+  const found = items.filter(f107163);
+  return found.map(f107164);
 };
 export const getAudioFeedbackOptions = function getAudioFeedbackOptions(isMobile) {
-  const obj = { value: constants2.NO_AUDIO, variant: constants6.SELF, label: null };
-  const intl = util.intl;
-  obj.label = intl.string(_modDef2755["GWypH+"]);
+  let intl;
+  let intl10;
+  let intl11;
+  let intl12;
+  let intl13;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let intl6;
+  let intl7;
+  let intl8;
+  let intl9;
+  isMobile = isMobile.isMobile;
+  const obj = { value: constants2.NO_AUDIO, variant: metroImportAll.SELF, label: intl.string(_modDef2755["GWypH+"]) };
+  intl = intl20.intl;
   const items = [obj, , , , , , , , , , , ,];
-  const obj2 = { value: constants2.NO_AUDIO, variant: constants6.OTHERS, label: null };
-  const intl2 = util.intl;
-  obj2.label = intl2.string(_modDef2755.ftSvQ0);
+  const obj2 = { value: constants2.NO_AUDIO, variant: metroImportAll.OTHERS, label: intl2.string(_modDef2755.ftSvQ0) };
+  intl2 = intl20.intl;
   items[1] = obj2;
-  const obj3 = { value: constants2.LOW_QUALITY_AUDIO, variant: constants6.OTHERS, label: null };
-  const intl3 = util.intl;
-  obj3.label = intl3.string(_modDef2755["1DnNRO"]);
+  const obj3 = {
+    value: constants2.LOW_QUALITY_AUDIO,
+    variant: metroImportAll.OTHERS,
+    label: intl3.string(_modDef2755["1DnNRO"]),
+  };
+  intl3 = intl20.intl;
   items[2] = obj3;
-  const obj4 = { value: constants2.ROBOT_VOICE, variant: constants6.SOMEONE, label: null };
-  const intl4 = util.intl;
-  obj4.label = intl4.string(_modDef2755.yGe0BL);
+  const obj4 = {
+    value: constants2.ROBOT_VOICE,
+    variant: metroImportAll.SOMEONE,
+    label: intl4.string(_modDef2755.yGe0BL),
+  };
+  intl4 = intl20.intl;
   items[3] = obj4;
-  const obj5 = { value: constants2.ECHO, variant: constants6.OTHERS, label: null };
-  const intl5 = util.intl;
-  obj5.label = intl5.string(_modDef2755.Q5Dsaz);
+  const obj5 = { value: constants2.ECHO, variant: metroImportAll.OTHERS, label: intl5.string(_modDef2755.Q5Dsaz) };
+  intl5 = intl20.intl;
   items[4] = obj5;
-  const obj6 = { value: constants2.TOO_QUIET_OR_LOUD, variant: constants6.SOMEONE, label: null };
-  const intl6 = util.intl;
-  obj6.label = intl6.string(_modDef2755["1o77I3"]);
+  const obj6 = {
+    value: constants2.TOO_QUIET_OR_LOUD,
+    variant: metroImportAll.SOMEONE,
+    label: intl6.string(_modDef2755["1o77I3"]),
+  };
+  intl6 = intl20.intl;
   items[5] = obj6;
-  const obj7 = { value: constants2.CUTTING, variant: constants6.SOMEONE, label: null };
-  const intl7 = util.intl;
-  obj7.label = intl7.string(_modDef2755.RK9DUi);
+  const obj7 = { value: constants2.CUTTING, variant: metroImportAll.SOMEONE, label: intl7.string(_modDef2755.RK9DUi) };
+  intl7 = intl20.intl;
   items[6] = obj7;
-  const obj8 = { value: constants2.DELAYED, variant: constants6.UNSPECIFIED, label: null };
-  const intl8 = util.intl;
-  obj8.label = intl8.string(_modDef2755.RGRgmM);
+  const obj8 = {
+    value: constants2.DELAYED,
+    variant: metroImportAll.UNSPECIFIED,
+    label: intl8.string(_modDef2755.RGRgmM),
+  };
+  intl8 = intl20.intl;
   items[7] = obj8;
-  const obj9 = { value: constants2.BACKGROUND_NOISE, variant: constants6.SOMEONE, label: null };
-  const intl9 = util.intl;
-  obj9.label = intl9.string(_modDef2755["anHk1/"]);
+  const obj9 = {
+    value: constants2.BACKGROUND_NOISE,
+    variant: metroImportAll.SOMEONE,
+    label: intl9.string(_modDef2755["anHk1/"]),
+  };
+  intl9 = intl20.intl;
   items[8] = obj9;
-  const obj10 = { value: constants2.UNABLE_TO_FIND_DEVICE, variant: constants6.SELF, label: null };
-  const intl10 = util.intl;
-  obj10.label = intl10.string(_modDef2755["05VSjm"]);
+  const obj10 = {
+    value: constants2.UNABLE_TO_FIND_DEVICE,
+    variant: metroImportAll.SELF,
+    label: intl10.string(_modDef2755["05VSjm"]),
+  };
+  intl10 = intl20.intl;
   items[9] = obj10;
-  const obj11 = { value: constants2.COMPLAINTS, variant: constants6.OTHERS, label: null };
-  const intl11 = util.intl;
-  obj11.label = intl11.string(_modDef2755.kbbtwi);
+  const obj11 = {
+    value: constants2.COMPLAINTS,
+    variant: metroImportAll.OTHERS,
+    label: intl11.string(_modDef2755.kbbtwi),
+  };
+  intl11 = intl20.intl;
   items[10] = obj11;
-  const obj12 = { value: constants2.TROUBLE_WITH_SPEAKERPHONE, variant: constants6.SELF, label: null, disabled: null };
-  const intl12 = util.intl;
-  obj12.label = intl12.string(_modDef2755["4qlGrO"]);
-  obj12.disabled = !isMobile.isMobile;
+  const obj12 = {
+    value: constants2.TROUBLE_WITH_SPEAKERPHONE,
+    variant: metroImportAll.SELF,
+    label: intl12.string(_modDef2755["4qlGrO"]),
+    disabled: !isMobile,
+  };
+  intl12 = intl20.intl;
   items[11] = obj12;
-  const obj13 = { value: constants2.NO_GAME_AUDIO, variant: constants6.SELF, label: null };
-  const intl13 = util.intl;
-  obj13.label = intl13.string(_modDef2755["2IG95D"]);
+  const obj13 = {
+    value: constants2.NO_GAME_AUDIO,
+    variant: metroImportAll.SELF,
+    label: intl13.string(_modDef2755["2IG95D"]),
+  };
+  intl13 = intl20.intl;
   items[12] = obj13;
-  const found = items.filter((disabled) => !disabled.disabled);
-  return found.map((item) => Object.assign(item, Object.assign({ disabled: 0 })));
+  const found = items.filter(f107163);
+  return found.map(f107164);
 };
 export const getVideoFeedbackOptions = function getVideoFeedbackOptions() {
-  const obj = { value: constants3.NO_VIDEO, variant: constants6.SELF, label: null };
-  const intl = util.intl;
-  obj.label = intl.string(_modDef2755["Bh+02d"]);
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let intl6;
+  const obj = {
+    value: hasOwnProperty.NO_VIDEO,
+    variant: metroImportAll.SELF,
+    label: intl.string(_modDef2755["Bh+02d"]),
+  };
+  intl = intl20.intl;
   const items = [obj, , , , ,];
-  const obj2 = { value: constants3.NO_VIDEO, variant: constants6.SOMEONE, label: null };
-  const intl2 = util.intl;
-  obj2.label = intl2.string(_modDef2755["R+wqwU"]);
+  const obj2 = {
+    value: hasOwnProperty.NO_VIDEO,
+    variant: metroImportAll.SOMEONE,
+    label: intl2.string(_modDef2755["R+wqwU"]),
+  };
+  intl2 = intl20.intl;
   items[1] = obj2;
-  const obj3 = { value: constants3.FREEZING_OR_HITCHING, variant: constants6.SOMEONE, label: null };
-  const intl3 = util.intl;
-  obj3.label = intl3.string(_modDef2755["8I/GUL"]);
+  const obj3 = {
+    value: hasOwnProperty.FREEZING_OR_HITCHING,
+    variant: metroImportAll.SOMEONE,
+    label: intl3.string(_modDef2755["8I/GUL"]),
+  };
+  intl3 = intl20.intl;
   items[2] = obj3;
-  const obj4 = { value: constants3.BLURRY_OR_PIXELATED, variant: constants6.SOMEONE, label: null };
-  const intl4 = util.intl;
-  obj4.label = intl4.string(_modDef2755.k7Idoz);
+  const obj4 = {
+    value: hasOwnProperty.BLURRY_OR_PIXELATED,
+    variant: metroImportAll.SOMEONE,
+    label: intl4.string(_modDef2755.k7Idoz),
+  };
+  intl4 = intl20.intl;
   items[3] = obj4;
-  const obj5 = { value: constants3.UNABLE_TO_ENABLE_DEVICE, variant: constants6.SELF, label: null };
-  const intl5 = util.intl;
-  obj5.label = intl5.string(_modDef2755.QbC6La);
+  const obj5 = {
+    value: hasOwnProperty.UNABLE_TO_ENABLE_DEVICE,
+    variant: metroImportAll.SELF,
+    label: intl5.string(_modDef2755.QbC6La),
+  };
+  intl5 = intl20.intl;
   items[4] = obj5;
-  const obj6 = { value: constants3.DESYNC, variant: constants6.UNSPECIFIED, label: null };
-  const intl6 = util.intl;
-  obj6.label = intl6.string(_modDef2755.vRDE5O);
+  const obj6 = {
+    value: hasOwnProperty.DESYNC,
+    variant: metroImportAll.UNSPECIFIED,
+    label: intl6.string(_modDef2755.vRDE5O),
+  };
+  intl6 = intl20.intl;
   items[5] = obj6;
-  const found = items.filter((disabled) => !disabled.disabled);
-  return found.map((item) => Object.assign(item, Object.assign({ disabled: 0 })));
+  const found = items.filter(f107163);
+  return found.map(f107164);
 };
 export const getVideoBackgroundFeedbackOptions = function getVideoBackgroundFeedbackOptions() {
-  const obj = { value: constants4.OUTLINE_FUZZY_OR_HALO, variant: constants6.SELF, label: null };
-  const intl = util.intl;
-  obj.label = intl.string(_modDef2755.calUNv);
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  const obj = {
+    value: metroRequire.OUTLINE_FUZZY_OR_HALO,
+    variant: metroImportAll.SELF,
+    label: intl.string(_modDef2755.calUNv),
+  };
+  intl = intl20.intl;
   const items = [obj, , ,];
-  const obj2 = { value: constants4.INACCURATE_BACKGROUND_DETECTION, variant: constants6.SELF, label: null };
-  const intl2 = util.intl;
-  obj2.label = intl2.string(_modDef2755.zYumoj);
+  const obj2 = {
+    value: metroRequire.INACCURATE_BACKGROUND_DETECTION,
+    variant: metroImportAll.SELF,
+    label: intl2.string(_modDef2755.zYumoj),
+  };
+  intl2 = intl20.intl;
   items[1] = obj2;
-  const obj3 = { value: constants4.FLICKERING_ARTIFACTS, variant: constants6.SELF, label: null };
-  const intl3 = util.intl;
-  obj3.label = intl3.string(_modDef2755.ie5nCG);
+  const obj3 = {
+    value: metroRequire.FLICKERING_ARTIFACTS,
+    variant: metroImportAll.SELF,
+    label: intl3.string(_modDef2755.ie5nCG),
+  };
+  intl3 = intl20.intl;
   items[2] = obj3;
-  const obj4 = { value: constants4.LAG_ON_MOVEMENT, variant: constants6.SELF, label: null };
-  const intl4 = util.intl;
-  obj4.label = intl4.string(_modDef2755["Gg/Y1X"]);
+  const obj4 = {
+    value: metroRequire.LAG_ON_MOVEMENT,
+    variant: metroImportAll.SELF,
+    label: intl4.string(_modDef2755["Gg/Y1X"]),
+  };
+  intl4 = intl20.intl;
   items[3] = obj4;
-  const found = items.filter((disabled) => !disabled.disabled);
-  return found.map((item) => Object.assign(item, Object.assign({ disabled: 0 })));
+  const found = items.filter(f107163);
+  return found.map(f107164);
 };
 export const getStreamFeedbackOptions = function getStreamFeedbackOptions(isStreamer) {
+  let intl;
+  let intl10;
+  let intl11;
+  let intl12;
+  let intl13;
+  let intl14;
+  let intl15;
+  let intl16;
+  let intl17;
+  let intl18;
+  let intl19;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let intl6;
+  let intl7;
+  let intl8;
+  let intl9;
   isStreamer = isStreamer.isStreamer;
-  const obj = { value: constants5.COULD_NOT_LOAD, variant: constants6.SELF, label: null, disabled: null };
-  const intl = util.intl;
-  obj.label = intl.string(_modDef2755["w+kiDF"]);
-  obj.disabled = !isStreamer;
+  const obj = {
+    value: metroImportDefault.COULD_NOT_LOAD,
+    variant: metroImportAll.SELF,
+    label: intl.string(_modDef2755["w+kiDF"]),
+    disabled: !isStreamer,
+  };
+  intl = intl20.intl;
   const items = [obj, , , , , , , , , , , , , , , , , ,];
-  const obj2 = { value: constants5.BLACK_SCREEN, variant: constants6.SELF, label: null, disabled: null };
-  const intl2 = util.intl;
-  obj2.label = intl2.string(_modDef2755.RRZZZb);
-  obj2.disabled = !isStreamer;
+  const obj2 = {
+    value: metroImportDefault.BLACK_SCREEN,
+    variant: metroImportAll.SELF,
+    label: intl2.string(_modDef2755.RRZZZb),
+    disabled: !isStreamer,
+  };
+  intl2 = intl20.intl;
   items[1] = obj2;
-  const obj3 = { value: constants5.FREEZING_OR_HITCHING, variant: constants6.SELF, label: null, disabled: null };
-  const intl3 = util.intl;
-  obj3.label = intl3.string(_modDef2755["3PKSkd"]);
-  obj3.disabled = !isStreamer;
+  const obj3 = {
+    value: metroImportDefault.FREEZING_OR_HITCHING,
+    variant: metroImportAll.SELF,
+    label: intl3.string(_modDef2755["3PKSkd"]),
+    disabled: !isStreamer,
+  };
+  intl3 = intl20.intl;
   items[2] = obj3;
-  const obj4 = { value: constants5.LAG, variant: constants6.SELF, label: null, disabled: null };
-  const intl4 = util.intl;
-  obj4.label = intl4.string(_modDef2755.iMxexK);
-  obj4.disabled = !isStreamer;
+  const obj4 = {
+    value: metroImportDefault.LAG,
+    variant: metroImportAll.SELF,
+    label: intl4.string(_modDef2755.iMxexK),
+    disabled: !isStreamer,
+  };
+  intl4 = intl20.intl;
   items[3] = obj4;
-  const obj5 = { value: constants5.BLURRY_OR_PIXELATED, variant: constants6.SELF, label: null, disabled: null };
-  const intl5 = util.intl;
-  obj5.label = intl5.string(_modDef2755["8ceyQy"]);
-  obj5.disabled = !isStreamer;
+  const obj5 = {
+    value: metroImportDefault.BLURRY_OR_PIXELATED,
+    variant: metroImportAll.SELF,
+    label: intl5.string(_modDef2755["8ceyQy"]),
+    disabled: !isStreamer,
+  };
+  intl5 = intl20.intl;
   items[4] = obj5;
-  const obj6 = { value: constants5.NO_AUDIO, variant: constants6.SELF, label: null, disabled: null };
-  const intl6 = util.intl;
-  obj6.label = intl6.string(_modDef2755.HaZSC3);
-  obj6.disabled = !isStreamer;
+  const obj6 = {
+    value: metroImportDefault.NO_AUDIO,
+    variant: metroImportAll.SELF,
+    label: intl6.string(_modDef2755.HaZSC3),
+    disabled: !isStreamer,
+  };
+  intl6 = intl20.intl;
   items[5] = obj6;
-  const obj7 = { value: constants5.BAD_AUDIO, variant: constants6.SELF, label: null, disabled: null };
-  const intl7 = util.intl;
-  obj7.label = intl7.string(_modDef2755["zIC+8Y"]);
-  obj7.disabled = !isStreamer;
+  const obj7 = {
+    value: metroImportDefault.BAD_AUDIO,
+    variant: metroImportAll.SELF,
+    label: intl7.string(_modDef2755["zIC+8Y"]),
+    disabled: !isStreamer,
+  };
+  intl7 = intl20.intl;
   items[6] = obj7;
-  const obj8 = { value: constants5.STOPPED_UNEXPECTEDLY, variant: constants6.SELF, label: null, disabled: null };
-  const intl8 = util.intl;
-  obj8.label = intl8.string(_modDef2755["/nlKuG"]);
-  obj8.disabled = !isStreamer;
+  const obj8 = {
+    value: metroImportDefault.STOPPED_UNEXPECTEDLY,
+    variant: metroImportAll.SELF,
+    label: intl8.string(_modDef2755["/nlKuG"]),
+    disabled: !isStreamer,
+  };
+  intl8 = intl20.intl;
   items[7] = obj8;
-  const obj9 = { value: constants5.DESYNC, variant: constants6.SELF, label: null, disabled: null };
-  const intl9 = util.intl;
-  obj9.label = intl9.string(_modDef2755.JS6akP);
-  obj9.disabled = !isStreamer;
+  const obj9 = {
+    value: metroImportDefault.DESYNC,
+    variant: metroImportAll.SELF,
+    label: intl9.string(_modDef2755.JS6akP),
+    disabled: !isStreamer,
+  };
+  intl9 = intl20.intl;
   items[8] = obj9;
-  const obj10 = { value: constants5.NO_GAME_AUDIO, variant: constants6.SELF, label: null, disabled: null };
-  const intl10 = util.intl;
-  obj10.label = intl10.string(_modDef2755.TaIrh5);
-  obj10.disabled = !isStreamer;
+  const obj10 = {
+    value: metroImportDefault.NO_GAME_AUDIO,
+    variant: metroImportAll.SELF,
+    label: intl10.string(_modDef2755.TaIrh5),
+    disabled: !isStreamer,
+  };
+  intl10 = intl20.intl;
   items[9] = obj10;
-  const obj11 = { value: constants5.COULD_NOT_LOAD, variant: constants6.SOMEONE, label: null, disabled: null };
-  const intl11 = util.intl;
-  obj11.label = intl11.string(_modDef2755.jU9Zs8);
-  obj11.disabled = isStreamer;
+  const obj11 = {
+    value: metroImportDefault.COULD_NOT_LOAD,
+    variant: metroImportAll.SOMEONE,
+    label: intl11.string(_modDef2755.jU9Zs8),
+    disabled: isStreamer,
+  };
+  intl11 = intl20.intl;
   items[10] = obj11;
-  const obj12 = { value: constants5.BLACK_SCREEN, variant: constants6.SOMEONE, label: null, disabled: null };
-  const intl12 = util.intl;
-  obj12.label = intl12.string(_modDef2755.aml28x);
-  obj12.disabled = isStreamer;
+  const obj12 = {
+    value: metroImportDefault.BLACK_SCREEN,
+    variant: metroImportAll.SOMEONE,
+    label: intl12.string(_modDef2755.aml28x),
+    disabled: isStreamer,
+  };
+  intl12 = intl20.intl;
   items[11] = obj12;
-  const obj13 = { value: constants5.FREEZING_OR_HITCHING, variant: constants6.SOMEONE, label: null, disabled: null };
-  const intl13 = util.intl;
-  obj13.label = intl13.string(_modDef2755.V3EeCH);
-  obj13.disabled = isStreamer;
+  const obj13 = {
+    value: metroImportDefault.FREEZING_OR_HITCHING,
+    variant: metroImportAll.SOMEONE,
+    label: intl13.string(_modDef2755.V3EeCH),
+    disabled: isStreamer,
+  };
+  intl13 = intl20.intl;
   items[12] = obj13;
-  const obj14 = { value: constants5.LAG, variant: constants6.SOMEONE, label: null, disabled: null };
-  const intl14 = util.intl;
-  obj14.label = intl14.string(_modDef2755.hi1Y39);
-  obj14.disabled = isStreamer;
+  const obj14 = {
+    value: metroImportDefault.LAG,
+    variant: metroImportAll.SOMEONE,
+    label: intl14.string(_modDef2755.hi1Y39),
+    disabled: isStreamer,
+  };
+  intl14 = intl20.intl;
   items[13] = obj14;
-  const obj15 = { value: constants5.BLURRY_OR_PIXELATED, variant: constants6.SOMEONE, label: null, disabled: null };
-  const intl15 = util.intl;
-  obj15.label = intl15.string(_modDef2755.qdBn3L);
-  obj15.disabled = isStreamer;
+  const obj15 = {
+    value: metroImportDefault.BLURRY_OR_PIXELATED,
+    variant: metroImportAll.SOMEONE,
+    label: intl15.string(_modDef2755.qdBn3L),
+    disabled: isStreamer,
+  };
+  intl15 = intl20.intl;
   items[14] = obj15;
-  const obj16 = { value: constants5.NO_AUDIO, variant: constants6.SOMEONE, label: null, disabled: null };
-  const intl16 = util.intl;
-  obj16.label = intl16.string(_modDef2755.DOOlop);
-  obj16.disabled = isStreamer;
+  const obj16 = {
+    value: metroImportDefault.NO_AUDIO,
+    variant: metroImportAll.SOMEONE,
+    label: intl16.string(_modDef2755.DOOlop),
+    disabled: isStreamer,
+  };
+  intl16 = intl20.intl;
   items[15] = obj16;
-  const obj17 = { value: constants5.BAD_AUDIO, variant: constants6.SOMEONE, label: null, disabled: null };
-  const intl17 = util.intl;
-  obj17.label = intl17.string(_modDef2755.k7bdGE);
-  obj17.disabled = isStreamer;
+  const obj17 = {
+    value: metroImportDefault.BAD_AUDIO,
+    variant: metroImportAll.SOMEONE,
+    label: intl17.string(_modDef2755.k7bdGE),
+    disabled: isStreamer,
+  };
+  intl17 = intl20.intl;
   items[16] = obj17;
-  const obj18 = { value: constants5.STOPPED_UNEXPECTEDLY, variant: constants6.SOMEONE, label: null, disabled: null };
-  const intl18 = util.intl;
-  obj18.label = intl18.string(_modDef2755.jPD998);
-  obj18.disabled = isStreamer;
+  const obj18 = {
+    value: metroImportDefault.STOPPED_UNEXPECTEDLY,
+    variant: metroImportAll.SOMEONE,
+    label: intl18.string(_modDef2755.jPD998),
+    disabled: isStreamer,
+  };
+  intl18 = intl20.intl;
   items[17] = obj18;
-  const obj19 = { value: constants5.DESYNC, variant: constants6.SOMEONE, label: null, disabled: null };
-  const intl19 = util.intl;
-  obj19.label = intl19.string(_modDef2755.JfAvQp);
-  obj19.disabled = isStreamer;
+  const obj19 = {
+    value: metroImportDefault.DESYNC,
+    variant: metroImportAll.SOMEONE,
+    label: intl19.string(_modDef2755.JfAvQp),
+    disabled: isStreamer,
+  };
+  intl19 = intl20.intl;
   items[18] = obj19;
-  const found = items.filter((disabled) => !disabled.disabled);
-  return found.map((item) => Object.assign(item, Object.assign({ disabled: 0 })));
+  const found = items.filter(f107163);
+  return found.map(f107164);
 };
 export const getPeopleFeedbackOptions = function getPeopleFeedbackOptions() {
-  const obj = { value: constants7.TOXIC_OR_INAPPROPRIATE, variant: constants6.OTHERS, label: null };
-  const intl = util.intl;
-  obj.label = intl.string(_modDef2755.PLBRzF);
+  let intl;
+  const obj = {
+    value: unpackModuleId.TOXIC_OR_INAPPROPRIATE,
+    variant: metroImportAll.OTHERS,
+    label: intl.string(_modDef2755.PLBRzF),
+  };
+  intl = intl20.intl;
   const items = [obj];
-  const found = items.filter((disabled) => !disabled.disabled);
-  return found.map((item) => Object.assign(item, Object.assign({ disabled: 0 })));
+  const found = items.filter(f107163);
+  return found.map(f107164);
 };

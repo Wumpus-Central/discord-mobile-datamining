@@ -1,15 +1,27 @@
 // discord_app/modules/premium/powerups/GuildPowerupsStore.tsx
-import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
+import GuildPowerupsConstants from "constants/GuildPowerupsConstants.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
+let sku_id;
+
+let c2;
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
 function calculateAppliedBoosts(guildId) {
-  guild = GuildStore.getGuild(guildId);
+  let tmp14;
+  let tmp15;
+  const guild = GuildStore.getGuild(guildId);
   let hasItem;
   if (guild != null) {
     const features = guild.features;
-    hasItem = features.has(timestampProducer.PREMIUM_TIER_3_OVERRIDE);
+    hasItem = features.has(metroRequire.PREMIUM_TIER_3_OVERRIDE);
   }
   let num = 0;
   if (true !== hasItem) {
@@ -18,19 +30,17 @@ function calculateAppliedBoosts(guildId) {
       premiumTier = guild.premiumTier;
     }
     if (premiumTier == null) {
-      premiumTier = constants.NONE;
+      premiumTier = hasOwnProperty.NONE;
     }
-    num = React4[premiumTier];
+    num = React3[premiumTier];
   }
   let sum = num;
-  const entries = Object.entries(React3);
+  const entries = Object.entries(_false);
+  const tmp10 = entries[Symbol.iterator]();
   while (tmp10 !== undefined) {
     let tmp13 = _slicedToArray(tmp11, 2);
     [tmp14, tmp15] = tmp13;
-    let hasItem1 = tmp4;
-    if (tmp4) {
-      hasItem1 = set.has(tmp14);
-    }
+    let hasItem1 = tmp4 && set.has(tmp14);
     if (!hasItem1) {
       let hasItem2;
       if (guild != null) {
@@ -52,10 +62,7 @@ function calculateAppliedBoosts(guildId) {
         hasItem2 = num2;
       }
       if (hasItem2) {
-        let tmp23 = null == tmp15.includedInLevel;
-        if (!tmp23) {
-          tmp23 = guild.premiumTier < tmp15.includedInLevel;
-        }
+        let tmp23 = null == tmp15.includedInLevel || guild.premiumTier < tmp15.includedInLevel;
         hasItem2 = tmp23;
       }
       if (hasItem2) {
@@ -66,113 +73,117 @@ function calculateAppliedBoosts(guildId) {
   }
   return sum;
 }
-const GuildPowerupsConstants = fn(4768);
 ({ GUILD_POWERUP_TIER_3_OVERRIDDEN_PURCHASABLE_FEATURES: c2, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: c3 } =
   GuildPowerupsConstants);
-const Constants = fn(1085);
 ({
   AppliedGuildBoostsRequiredForBoostedGuildTier: closure_4,
   BoostedGuildTiers: hasOwnProperty,
   GuildFeatures: metroRequire,
 } = Constants);
-const PersistedStore = initializeDefault.PersistedStore;
-class GuildPowerupsStore extends PersistedStore {}
+let obj2 = {};
+const PersistedStore = get_initializedDefault.PersistedStore;
+class GuildPowerupsStore extends PersistedStore {
+  initialize(arg0) {
+    this.waitFor(GuildStore);
+  }
+  getState() {
+    return obj2;
+  }
+  getStateForGuild(arg0) {
+    let tmp;
+    if (null != arg0) {
+      tmp = obj2[arg0];
+    }
+    return tmp;
+  }
+  shouldFetchCatalogForGuild(arg0) {
+    let catalogFetchCooldown;
+    if (obj2[arg0] != null) {
+      catalogFetchCooldown = tmp.catalogFetchCooldown;
+    }
+    let tmp3 = null == catalogFetchCooldown;
+    if (!tmp3) {
+      const _Date = Date;
+      const sum = catalogFetchCooldown + 86400000;
+      tmp3 = sum < Date.now();
+    }
+    return tmp3;
+  }
+  shouldFetchPowerupsForGuild(guildId) {
+    let prop;
+    if (obj2[guildId] != null) {
+      prop = tmp.unlockedPowerupsFetchCooldown;
+    }
+    let tmp3 = null == prop;
+    if (!tmp3) {
+      const _Date = Date;
+      const sum = prop + 3600000;
+      tmp3 = sum < Date.now();
+    }
+    return tmp3;
+  }
+  hasFetchedPowerupCatalog(arg0) {
+    let tmp = null != arg0;
+    if (tmp) {
+      let prop;
+      if (obj2[arg0] != null) {
+        prop = tmp3.hasFetchedPowerupCatalog;
+      }
+      tmp = true === prop;
+    }
+    return tmp;
+  }
+  hasFetchedUnlockedPowerups(arg0) {
+    let tmp = null != arg0;
+    if (tmp) {
+      let prop;
+      if (obj2[arg0] != null) {
+        prop = tmp3.hasFetchedUnlockedPowerups;
+      }
+      tmp = true === prop;
+    }
+    return tmp;
+  }
+}
 const prototype = GuildPowerupsStore.prototype;
-prototype["initialize"] = function initialize(arg0) {
-  this.waitFor(GuildStore);
-};
-prototype["getState"] = function getState() {
-  return obj2;
-};
-prototype["getStateForGuild"] = function getStateForGuild(arg0) {
-  let tmp;
-  if (null != arg0) {
-    tmp = obj2[arg0];
-  }
-  return tmp;
-};
-prototype["shouldFetchCatalogForGuild"] = function shouldFetchCatalogForGuild(arg0) {
-  let catalogFetchCooldown;
-  if (obj2[arg0] != null) {
-    catalogFetchCooldown = tmp.catalogFetchCooldown;
-  }
-  let tmp3 = null == catalogFetchCooldown;
-  if (!tmp3) {
-    const _Date = Date;
-    const sum = catalogFetchCooldown + 86400000;
-    tmp3 = sum < Date.now();
-  }
-  return tmp3;
-};
-prototype["shouldFetchPowerupsForGuild"] = function shouldFetchPowerupsForGuild(guildId) {
-  let prop;
-  if (obj2[guildId] != null) {
-    prop = tmp.unlockedPowerupsFetchCooldown;
-  }
-  let tmp3 = null == prop;
-  if (!tmp3) {
-    const _Date = Date;
-    const sum = prop + 3600000;
-    tmp3 = sum < Date.now();
-  }
-  return tmp3;
-};
-prototype["hasFetchedPowerupCatalog"] = function hasFetchedPowerupCatalog(arg0) {
-  let tmp = null != arg0;
-  if (tmp) {
-    let prop;
-    if (obj2[arg0] != null) {
-      prop = tmp3.hasFetchedPowerupCatalog;
-    }
-    tmp = true === prop;
-  }
-  return tmp;
-};
-prototype["hasFetchedUnlockedPowerups"] = function hasFetchedUnlockedPowerups(arg0) {
-  let tmp = null != arg0;
-  if (tmp) {
-    let prop;
-    if (obj2[arg0] != null) {
-      prop = tmp3.hasFetchedUnlockedPowerups;
-    }
-    tmp = true === prop;
-  }
-  return tmp;
-};
 GuildPowerupsStore.displayName = "GuildPowerupsStore";
 GuildPowerupsStore.persistKey = "GuildPowerupsStore";
 let items = [
   (arg0) => {
     let fromEntriesResult = arg0;
     if (null != arg0) {
+      const tmp2 = globalThis;
       const _Object = Object;
       const _Object2 = Object;
       const entries = Object.entries(arg0);
       const found = entries.filter((item) => {
+        let tmp;
         [, tmp] = item;
         return null != tmp && typeof tmp === "object";
       });
-      fromEntriesResult = Object.fromEntries(
+      fromEntriesResult = fromEntries(
         found.map((item) => {
+          let allPowerups;
+          let powerupCatalog;
+          let tmp;
+          let tmp2;
+          let unlockedPowerups;
           [tmp, tmp2] = item;
           const items = [tmp];
-          const obj = {};
+          const obj = { allPowerups, powerupCatalog, unlockedPowerups };
           const merged = Object.assign(tmp2);
-          let allPowerups = tmp2.allPowerups;
+          allPowerups = tmp2.allPowerups;
           if (allPowerups == null) {
             allPowerups = {};
           }
-          obj.allPowerups = allPowerups;
-          let powerupCatalog = tmp2.powerupCatalog;
+          powerupCatalog = tmp2.powerupCatalog;
           if (powerupCatalog == null) {
             powerupCatalog = {};
           }
-          obj.powerupCatalog = powerupCatalog;
-          let unlockedPowerups = tmp2.unlockedPowerups;
+          unlockedPowerups = tmp2.unlockedPowerups;
           if (unlockedPowerups == null) {
             unlockedPowerups = {};
           }
-          obj.unlockedPowerups = unlockedPowerups;
           items[1] = obj;
           return items;
         }),
@@ -182,142 +193,180 @@ let items = [
   },
 ];
 GuildPowerupsStore.migrations = items;
-const guildPowerupsStore = new GuildPowerupsStore(DispatcherDefault, {
+let obj = {
   LOGOUT: function handleReset() {},
   GUILD_POWERUP_CATALOG_FETCH_SUCCESS: function handleGuildPowerupCatalogFetchSuccess(guildId) {
+    let allPowerups;
+    let powerupCatalog;
     guildId = guildId.guildId;
     ({ allPowerups, powerupCatalog } = guildId);
     if (null == obj2[guildId]) {
+      obj2[guildId] = {
+        allPowerups: {},
+        powerupCatalog: {},
+        unlockedPowerups: {},
+        appliedBoosts: calculateAppliedBoosts(guildId),
+      };
       const obj = {
         allPowerups: {},
         powerupCatalog: {},
         unlockedPowerups: {},
         appliedBoosts: calculateAppliedBoosts(guildId),
       };
-      obj2[guildId] = obj;
     }
+    const tmp3 = obj2[guildId];
     obj2 = {};
     const merged = Object.assign(obj2);
-    const obj3 = {};
-    const merged1 = Object.assign(obj2[guildId]);
-    obj3.allPowerups = allPowerups;
-    obj3.powerupCatalog = powerupCatalog;
-    obj3.catalogFetchCooldown = Date.now();
-    obj3.hasFetchedPowerupCatalog = true;
+    const obj3 = { allPowerups, powerupCatalog, catalogFetchCooldown: Date.now(), hasFetchedPowerupCatalog: true };
+    const merged1 = Object.assign(tmp3);
     obj2[guildId] = obj3;
   },
   GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS: function handleGuildBoostEntitlementsFetchSuccess(guildId) {
     guildId = guildId.guildId;
+    const unlockedPowerups = guildId.unlockedPowerups;
     if (null == obj2[guildId]) {
+      obj2[guildId] = {
+        allPowerups: {},
+        powerupCatalog: {},
+        unlockedPowerups: {},
+        appliedBoosts: calculateAppliedBoosts(guildId),
+      };
       const obj = {
         allPowerups: {},
         powerupCatalog: {},
         unlockedPowerups: {},
         appliedBoosts: calculateAppliedBoosts(guildId),
       };
-      obj2[guildId] = obj;
     }
+    const tmp3 = obj2[guildId];
     obj2 = {};
+    const tmp4 = calculateAppliedBoosts(guildId);
     const merged = Object.assign(obj2);
-    const obj3 = {};
-    const merged1 = Object.assign(obj2[guildId]);
-    obj3.unlockedPowerups = guildId.unlockedPowerups;
-    obj3.appliedBoosts = calculateAppliedBoosts(guildId);
-    obj3.unlockedPowerupsFetchCooldown = Date.now();
-    obj3.hasFetchedUnlockedPowerups = true;
+    const obj3 = {
+      unlockedPowerups,
+      appliedBoosts: tmp4,
+      unlockedPowerupsFetchCooldown: Date.now(),
+      hasFetchedUnlockedPowerups: true,
+    };
+    const merged1 = Object.assign(tmp3);
     obj2[guildId] = obj3;
-    const tmp3 = calculateAppliedBoosts(guildId);
   },
   GUILD_POWERUP_ENTITLEMENTS_CREATE: function handleGuildPowerupCreated(arg0) {
+    let entitlements;
+    let guildId;
     ({ guildId, entitlements } = arg0);
-    c0 = true;
-    closure_1 = undefined;
+    let c0 = true;
+    let closure_1;
     if (null == obj2[guildId]) {
+      obj2[guildId] = {
+        allPowerups: {},
+        powerupCatalog: {},
+        unlockedPowerups: {},
+        appliedBoosts: calculateAppliedBoosts(guildId),
+      };
       const obj = {
         allPowerups: {},
         powerupCatalog: {},
         unlockedPowerups: {},
         appliedBoosts: calculateAppliedBoosts(guildId),
       };
-      obj2[guildId] = obj;
     }
     closure_1 = tmp3;
     const item = entitlements.forEach((sku_id) => {
+      unlockedPowerups = unlockedPowerups.unlockedPowerups;
+      sku_id = sku_id.sku_id;
       if (c0) {
-        unlockedPowerups.unlockedPowerups[sku_id.sku_id] = sku_id;
+        unlockedPowerups[sku_id] = sku_id;
       } else {
-        delete tmp2[tmp];
+        delete unlockedPowerups[sku_id];
       }
     });
     obj2 = {};
     const merged = Object.assign(obj2);
-    const obj3 = {};
+    const obj3 = { appliedBoosts: calculateAppliedBoosts(guildId) };
     const merged1 = Object.assign(tmp3);
-    obj3.appliedBoosts = calculateAppliedBoosts(guildId);
     obj2[guildId] = obj3;
   },
   GUILD_POWERUP_ENTITLEMENTS_DELETE: function handleGuildPowerupDeleted(arg0) {
+    let entitlements;
+    let guildId;
     ({ guildId, entitlements } = arg0);
-    c0 = false;
-    let unlockedPowerups;
+    let c0 = false;
+    let closure_1;
     if (null == obj2[guildId]) {
+      obj2[guildId] = {
+        allPowerups: {},
+        powerupCatalog: {},
+        unlockedPowerups: {},
+        appliedBoosts: calculateAppliedBoosts(guildId),
+      };
       const obj = {
         allPowerups: {},
         powerupCatalog: {},
         unlockedPowerups: {},
         appliedBoosts: calculateAppliedBoosts(guildId),
       };
-      obj2[guildId] = obj;
     }
-    unlockedPowerups = tmp3;
+    closure_1 = tmp3;
     const item = entitlements.forEach((sku_id) => {
+      unlockedPowerups = unlockedPowerups.unlockedPowerups;
+      sku_id = sku_id.sku_id;
       if (c0) {
-        unlockedPowerups.unlockedPowerups[sku_id.sku_id] = sku_id;
+        unlockedPowerups[sku_id] = sku_id;
       } else {
-        delete tmp2[tmp];
+        delete unlockedPowerups[sku_id];
       }
     });
     obj2 = {};
     const merged = Object.assign(obj2);
-    const obj3 = {};
+    const obj3 = { appliedBoosts: calculateAppliedBoosts(guildId) };
     const merged1 = Object.assign(tmp3);
-    obj3.appliedBoosts = calculateAppliedBoosts(guildId);
     obj2[guildId] = obj3;
   },
   GUILD_UPDATE: function handleGuildUpdated(guild) {
     const id = guild.guild.id;
+    const tmp = obj2;
     if (null == obj2[id]) {
+      obj2[id] = {
+        allPowerups: {},
+        powerupCatalog: {},
+        unlockedPowerups: {},
+        appliedBoosts: calculateAppliedBoosts(id),
+      };
       const obj = {
         allPowerups: {},
         powerupCatalog: {},
         unlockedPowerups: {},
         appliedBoosts: calculateAppliedBoosts(id),
       };
-      obj2[id] = obj;
     }
-    obj2 = {};
+    obj2 = { appliedBoosts: calculateAppliedBoosts(id) };
     const merged = Object.assign(obj2[id]);
-    obj2.appliedBoosts = calculateAppliedBoosts(id);
-    obj2[id] = obj2;
+    tmp[id] = obj2;
   },
   GAME_SERVER_FETCH_INSTANCES_SUCCESS: function handleGameServerInstanceFetched(guildId) {
     guildId = guildId.guildId;
+    const tmp = obj2;
     if (null == obj2[guildId]) {
+      obj2[guildId] = {
+        allPowerups: {},
+        powerupCatalog: {},
+        unlockedPowerups: {},
+        appliedBoosts: calculateAppliedBoosts(guildId),
+      };
       const obj = {
         allPowerups: {},
         powerupCatalog: {},
         unlockedPowerups: {},
         appliedBoosts: calculateAppliedBoosts(guildId),
       };
-      obj2[guildId] = obj;
     }
-    obj2 = {};
+    obj2 = { appliedBoosts: calculateAppliedBoosts(guildId) };
     const merged = Object.assign(obj2[guildId]);
-    obj2.appliedBoosts = calculateAppliedBoosts(guildId);
-    obj2[guildId] = obj2;
+    tmp[guildId] = obj2;
   },
-});
-const size = fn(2);
+};
+const guildPowerupsStore = new GuildPowerupsStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/premium/powerups/GuildPowerupsStore.tsx");
 
 export default guildPowerupsStore;

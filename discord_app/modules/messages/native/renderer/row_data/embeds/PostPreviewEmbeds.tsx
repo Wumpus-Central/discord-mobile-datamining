@@ -7,8 +7,8 @@ const MessageEmbedTypes = Constants.MessageEmbedTypes;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/PostPreviewEmbeds.tsx");
 
 export const createPostPreviewEmbeds = function createPostPreviewEmbeds(message, roleStyle) {
-  closure_0 = message;
-  closure_1 = roleStyle;
+  let closure_0 = message;
+  let closure_1 = roleStyle;
   let flag = useReducedMotion;
   if (useReducedMotion === undefined) {
     flag = false;
@@ -18,7 +18,7 @@ export const createPostPreviewEmbeds = function createPostPreviewEmbeds(message,
   if (embeds != null) {
     const item = embeds.forEach((type) => {
       if (type.type === MessageEmbedTypes.POST_PREVIEW) {
-        const tmp6 = createMediaPostPreviewEmbedContentDefault(closure_0, closure_1, type.url, flag);
+        const tmp6 = createMediaPostPreviewEmbedContentDefault(message, roleStyle, type.url, flag);
         if (null != tmp6) {
           items.push(tmp6);
         }

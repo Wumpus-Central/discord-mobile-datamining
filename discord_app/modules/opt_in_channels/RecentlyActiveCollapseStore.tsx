@@ -1,27 +1,29 @@
 // discord_app/modules/opt_in_channels/RecentlyActiveCollapseStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const set = new Set();
-const PersistedStore = initializeDefault.PersistedStore;
-class RecentlyActiveCollapseStore extends PersistedStore {}
-const prototype = RecentlyActiveCollapseStore.prototype;
-prototype["initialize"] = function initialize(guilds) {
-  set.clear();
-  if (guilds != null) {
-    guilds = guilds.guilds;
-    const item = guilds.forEach((item) => set.add(item));
+const PersistedStore = get_initializedDefault.PersistedStore;
+class RecentlyActiveCollapseStore extends PersistedStore {
+  initialize(guilds) {
+    set.clear();
+    if (guilds != null) {
+      guilds = guilds.guilds;
+      const item = guilds.forEach((item) => set.add(item));
+    }
   }
-};
-prototype["isCollapsed"] = function isCollapsed(arg0) {
-  return set.has(arg0);
-};
-prototype["getState"] = function getState() {
-  return { guilds: set };
-};
+  isCollapsed(arg0) {
+    return set.has(arg0);
+  }
+  getState() {
+    return { guilds: set };
+  }
+}
+const prototype = RecentlyActiveCollapseStore.prototype;
 RecentlyActiveCollapseStore.displayName = "RecentlyActiveCollapseStore";
 RecentlyActiveCollapseStore.persistKey = "RecentlyActiveCollapseStore";
-const recentlyActiveCollapseStore = new RecentlyActiveCollapseStore(DispatcherDefault, {
+const obj = {
   SET_RECENTLY_ACTIVE_COLLAPSED: function handleSetRecentlyActiveCollapsed(guildId) {
     guildId = guildId.guildId;
     if (guildId.collapsed) {
@@ -30,8 +32,8 @@ const recentlyActiveCollapseStore = new RecentlyActiveCollapseStore(DispatcherDe
       set.delete(guildId);
     }
   },
-});
-const size = fn(2);
+};
+const recentlyActiveCollapseStore = new RecentlyActiveCollapseStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/opt_in_channels/RecentlyActiveCollapseStore.tsx");
 
 export default recentlyActiveCollapseStore;

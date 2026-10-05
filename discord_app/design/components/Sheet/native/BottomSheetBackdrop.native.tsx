@@ -1,10 +1,12 @@
 // discord_app/design/components/Sheet/native/BottomSheetBackdrop.native.tsx
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles from "../../Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const jsx = Fragment.jsx;
 let closure_4 = createStyles.createStyles({ container: { flex: 1 } });
 let closure_5 = {
   code: "function BottomSheetBackdropNativeTsx1(){const{runOnJS,handleOnPress}=this.__closure;runOnJS(handleOnPress)();}",
@@ -18,14 +20,18 @@ let __initData = {
 let closure_8 = {
   code: "function BottomSheetBackdropNativeTsx4(){const{interpolate,animatedIndex,disappearsOnIndex,appearsOnIndex,opacity}=this.__closure;return{opacity:interpolate(animatedIndex.get(),[-1,disappearsOnIndex,appearsOnIndex],[0,0,opacity])};}",
 };
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/Sheet/native/BottomSheetBackdrop.native.tsx");
-
-export const BottomSheetBackdrop = noop.memo(
+let memo = react.memo;
+const memoResult = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (animatedIndex) => {
-        const cResult = animatedIndex(onPress[4]).c(19);
+        let appearsOnIndex;
+        let disappearsOnIndex;
+        let onPress;
+        let opacity;
+        let pressBehavior;
+        const tmp = animatedIndex;
+        let obj = animatedIndex(onPress[4]);
+        const cResult = obj.c(19);
         animatedIndex = animatedIndex.animatedIndex;
         ({ opacity, appearsOnIndex, disappearsOnIndex, pressBehavior, onPress } = animatedIndex);
         const style = animatedIndex.style;
@@ -46,130 +52,137 @@ export const BottomSheetBackdrop = noop.memo(
           str = pressBehavior;
         }
         const tmp4 = num3();
-        let obj = animatedIndex(onPress[4]);
-        const bottomSheet = animatedIndex(onPress[5]).useBottomSheet();
+        const tmpResult = tmp(tmp2[5]);
+        const bottomSheet = tmpResult.useBottomSheet();
         const snapToIndex = bottomSheet.snapToIndex;
         const close = bottomSheet.close;
         if (cResult[0] === close) {
           if (cResult[1] === num3) {
             if (cResult[2] === onPress) {
               if (cResult[3] === str) {
+                let tmp6;
+                let tmp7;
                 if (cResult[4] === snapToIndex) {
-                  let tmp6 = cResult[5];
+                  tmp6 = cResult[5];
                 }
                 closure_8 = tmp6;
                 if (cResult[6] !== tmp6) {
                   const Gesture = tmp(tmp2[6]).Gesture;
                   Gesture.Tap();
                   const fn2 = function b() {
-                    ReanimatedRexport.runOnJS(closure_8)();
+                    const obj = ReanimatedRexport;
+                    obj.runOnJS(closure_8)();
                   };
-                  const obj2 = { runOnJS: null, handleOnPress: null };
+                  let obj2 = { runOnJS: tmp(onPress[7]).runOnJS, handleOnPress: tmp6 };
                   class G {
                     constructor() {
-                      obj = { opacity: null };
-                      obj2 = closure_0(closure_1[7]);
-                      items = [-1];
-                      items[1] = disappearsOnIndex;
-                      items[2] = appearsOnIndex;
-                      items1 = [0, 0];
-                      items1[2] = opacity;
-                      obj.opacity = obj2.interpolate(animatedIndex.get(), items, items1);
+                      let items;
+                      let items1;
+                      let obj2;
+                      const obj = { opacity: obj2.interpolate(animatedIndex.get(), items, items1) };
+                      items = [-1, num3, num2];
+                      items1 = [0, 0, num];
+                      obj2 = ReanimatedRexport;
                       return obj;
                     }
                   }
-                  obj2.runOnJS = tmp(tmp2[7]).runOnJS;
-                  obj2.handleOnPress = tmp6;
                   fn2.__closure = obj2;
                   fn2.__workletHash = 3995467602852;
                   fn2.__initData = str;
                   const tmp9Result = tmp9(fn2);
                   cResult[6] = tmp6;
                   cResult[7] = tmp9Result;
-                  let tmp7 = tmp9Result;
+                  tmp7 = tmp9Result;
                 } else {
                   tmp7 = cResult[7];
                 }
+                const tmpResult2 = tmp(onPress[7]);
                 class G {
                   constructor() {
-                    obj = { opacity: null };
-                    obj2 = closure_0(closure_1[7]);
-                    items = [-1];
-                    items[1] = disappearsOnIndex;
-                    items[2] = appearsOnIndex;
-                    items1 = [0, 0];
-                    items1[2] = opacity;
-                    obj.opacity = obj2.interpolate(animatedIndex.get(), items, items1);
+                    let items;
+                    let items1;
+                    let obj2;
+                    const obj = { opacity: obj2.interpolate(animatedIndex.get(), items, items1) };
+                    items = [-1, num3, num2];
+                    items1 = [0, 0, num];
+                    obj2 = ReanimatedRexport;
                     return obj;
                   }
                 }
-                const obj3 = {
-                  interpolate: tmp(tmp2[7]).interpolate,
+                const useAnimatedStyle = tmpResult2.useAnimatedStyle;
+                G.__closure = {
+                  interpolate: tmp(onPress[7]).interpolate,
                   animatedIndex,
                   disappearsOnIndex: num3,
                   appearsOnIndex: num2,
                   opacity: num,
                 };
-                G.__closure = obj3;
                 G.__workletHash = 1140766381376;
                 G.__initData = snapToIndex;
-                const animatedStyle = tmp(tmp2[7]).useAnimatedStyle(G);
+                const obj3 = {
+                  interpolate: tmp(onPress[7]).interpolate,
+                  animatedIndex,
+                  disappearsOnIndex: num3,
+                  appearsOnIndex: num2,
+                  opacity: num,
+                };
+                const animatedStyle = useAnimatedStyle(G);
                 if (cResult[8] === animatedStyle) {
                   if (cResult[9] === style) {
+                    let tmp15;
                     if (cResult[10] === tmp4.container) {
-                      let tmp14 = cResult[11];
+                      tmp15 = cResult[11];
                     }
                     if (cResult[12] === tmp6) {
-                      if (cResult[13] === tmp14) {
-                        let tmp15 = cResult[14];
+                      let tmp16;
+                      if (cResult[13] === tmp15) {
+                        tmp16 = cResult[14];
                       }
-                      if (cResult[15] === tmp15) {
+                      if (cResult[15] === tmp16) {
                         if (cResult[16] === str) {
+                          let tmp19;
                           if (cResult[17] === tmp7) {
-                            let tmp18 = cResult[18];
+                            tmp19 = cResult[18];
                           }
-                          return tmp18;
+                          return tmp19;
                         }
                       }
                       class G {
                         constructor() {
-                          obj = { opacity: null };
-                          obj2 = closure_0(closure_1[7]);
-                          items = [-1];
-                          items[1] = disappearsOnIndex;
-                          items[2] = appearsOnIndex;
-                          items1 = [0, 0];
-                          items1[2] = opacity;
-                          obj.opacity = obj2.interpolate(animatedIndex.get(), items, items1);
+                          let items;
+                          let items1;
+                          let obj2;
+                          const obj = { opacity: obj2.interpolate(animatedIndex.get(), items, items1) };
+                          items = [-1, num3, num2];
+                          items1 = [0, 0, num];
+                          obj2 = ReanimatedRexport;
                           return obj;
                         }
                       }
-                      cResult[15] = tmp15;
+                      cResult[15] = tmp16;
                       cResult[16] = str;
                       cResult[17] = tmp7;
-                      cResult[18] = tmp15;
-                      tmp18 = tmp19;
+                      cResult[18] = tmp16;
+                      tmp19 = tmp20;
                     }
-                    const obj4 = { blur: "none", style: null, onDismiss: null, "aria-hidden": true };
+                    const obj4 = { blur: "none", style: null, onDismiss: tmp6, "aria-hidden": true };
                     class G {
                       constructor() {
-                        obj = { opacity: null };
-                        obj2 = closure_0(closure_1[7]);
-                        items = [-1];
-                        items[1] = disappearsOnIndex;
-                        items[2] = appearsOnIndex;
-                        items1 = [0, 0];
-                        items1[2] = opacity;
-                        obj.opacity = obj2.interpolate(animatedIndex.get(), items, items1);
+                        let items;
+                        let items1;
+                        let obj2;
+                        const obj = { opacity: obj2.interpolate(animatedIndex.get(), items, items1) };
+                        items = [-1, num3, num2];
+                        items1 = [0, 0, num];
+                        obj2 = ReanimatedRexport;
                         return obj;
                       }
                     }
-                    obj4.onDismiss = tmp6;
-                    const tmp17 = num2(tmp(tmp2[8]).Backdrop, obj4);
+                    const tmp18 = num2(tmp(onPress[8]).Backdrop, obj4);
                     cResult[12] = tmp6;
-                    cResult[13] = tmp14;
-                    cResult[14] = tmp17;
-                    tmp15 = tmp17;
+                    cResult[13] = tmp15;
+                    cResult[14] = tmp18;
+                    tmp16 = tmp18;
                   }
                 }
                 let items = [tmp4.container, style, animatedStyle];
@@ -177,8 +190,7 @@ export const BottomSheetBackdrop = noop.memo(
                 cResult[9] = style;
                 cResult[10] = tmp4.container;
                 cResult[11] = items;
-                tmp14 = items;
-                const tmpResult2 = tmp(tmp2[7]);
+                tmp15 = items;
               }
             }
           }
@@ -189,10 +201,10 @@ export const BottomSheetBackdrop = noop.memo(
           }
           if ("close" === str) {
             close();
-          } else if ("collapse" === tmp3) {
+          } else if ("collapse" === str) {
             snapToIndex(num3);
-          } else if (typeof tmp3 === "number") {
-            snapToIndex(tmp3);
+          } else if (typeof str === "number") {
+            snapToIndex(str);
           }
         };
         cResult[0] = close;
@@ -204,6 +216,8 @@ export const BottomSheetBackdrop = noop.memo(
         tmp6 = fn;
       }
     : (animatedIndex) => {
+        let callback;
+        let container;
         animatedIndex = animatedIndex.animatedIndex;
         let num = animatedIndex.opacity;
         if (num === undefined) {
@@ -226,7 +240,8 @@ export const BottomSheetBackdrop = noop.memo(
         let animatedStyle;
         const tmp = str();
         __initData = tmp;
-        const bottomSheet = animatedIndex(num[5]).useBottomSheet();
+        let obj = animatedIndex(num[5]);
+        const bottomSheet = obj.useBottomSheet();
         const snapToIndex = bottomSheet.snapToIndex;
         const close = bottomSheet.close;
         let items = [snapToIndex, close, num3, str, onPress];
@@ -236,36 +251,37 @@ export const BottomSheetBackdrop = noop.memo(
           }
           if ("close" === str) {
             close();
-          } else if ("collapse" === tmp3) {
+          } else if ("collapse" === str) {
             snapToIndex(num3);
-          } else if (typeof tmp3 === "number") {
-            snapToIndex(tmp3);
+          } else if (typeof str === "number") {
+            snapToIndex(str);
           }
         }, items);
         const Gesture = animatedIndex(num[6]).Gesture;
-        let obj = animatedIndex(num[5]);
+        const TapResult = Gesture.Tap();
         const tmp2 = animatedIndex;
         const tmp3 = num;
         class I {
           constructor() {
-            obj = closure_0(closure_1[7]);
-            tmp = obj.runOnJS(closure_10)();
-            return;
+            const obj = ReanimatedRexport;
+            obj.runOnJS(callback)();
           }
         }
-        const TapResult = Gesture.Tap();
-        I.__closure = { runOnJS: animatedIndex(num[7]).runOnJS, handleOnPress: onDismiss };
+        let obj2 = { runOnJS: animatedIndex(num[7]).runOnJS, handleOnPress: onDismiss };
+        I.__closure = obj2;
         I.__workletHash = 1200388032614;
         I.__initData = __initData;
-        const obj2 = { runOnJS: animatedIndex(num[7]).runOnJS, handleOnPress: onDismiss };
-        const onEndResult = TapResult.onEnd(I);
         const fn = function y() {
-          const obj = { opacity: null };
-          const items = [-1, num3, num2];
-          const items1 = [0, 0, num];
-          obj.opacity = ReanimatedRexport.interpolate(animatedIndex.get(), items, items1);
+          let items;
+          let items1;
+          let obj2;
+          const obj = { opacity: obj2.interpolate(animatedIndex.get(), items, items1) };
+          items = [-1, num3, num2];
+          items1 = [0, 0, num];
+          obj2 = ReanimatedRexport;
           return obj;
         };
+        const onEndResult = TapResult.onEnd(I);
         const obj4 = animatedIndex(num[7]);
         fn.__closure = {
           interpolate: animatedIndex(num[7]).interpolate,
@@ -276,6 +292,13 @@ export const BottomSheetBackdrop = noop.memo(
         };
         fn.__workletHash = 17214781637254;
         fn.__initData = snapToIndex;
+        ({
+          interpolate: animatedIndex(num[7]).interpolate,
+          animatedIndex,
+          disappearsOnIndex: num3,
+          appearsOnIndex: num2,
+          opacity: num,
+        });
         animatedStyle = obj4.useAnimatedStyle(fn);
         let items1 = [tmp.container, style, animatedStyle];
         const memo = num2.useMemo(() => {
@@ -289,10 +312,14 @@ export const BottomSheetBackdrop = noop.memo(
           "aria-hidden": true,
         });
         let tmp9Result = tmp10;
+        const tmp9 = num3;
         if ("none" !== str) {
           const obj5 = { gesture: onEndResult, children: tmp10 };
-          tmp9Result = num3(tmp2(tmp3[6]).GestureDetector, obj5);
+          tmp9Result = tmp9(tmp2(tmp3[6]).GestureDetector, obj5);
         }
         return tmp9Result;
       },
 );
+const result = size.fileFinishedImporting("design/components/Sheet/native/BottomSheetBackdrop.native.tsx");
+
+export const BottomSheetBackdrop = memoResult;

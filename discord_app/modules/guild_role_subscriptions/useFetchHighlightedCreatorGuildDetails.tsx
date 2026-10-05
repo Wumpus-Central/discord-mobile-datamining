@@ -1,24 +1,35 @@
 // discord_app/modules/guild_role_subscriptions/useFetchHighlightedCreatorGuildDetails.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
-import noop from "../../../_runtime/metro/00019__.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../_runtime/00019_react.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const size = fn(2);
+let c5, c6;
+
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/useFetchHighlightedCreatorGuildDetails.tsx",
 );
 
 export default function useFetchHighlightedCreatorGuildDetails(arg0) {
-  [tmp2, dependencyMap] = callback.useState(true);
+  let callback;
+  let closure_3;
+  let highlightedCreatorDetails;
+  let tmp2;
+  let tmp4;
   const tmp = _slicedToArray(callback.useState(true), 2);
-  [tmp4, asyncGeneratorStep] = callback.useState();
-  const highlightedCreatorDetails = _slicedToArray(callback.useState(), 2);
-  _slicedToArray = highlightedCreatorDetails[1];
-  closure_0 = asyncGeneratorStep(async (arg0) => {
+  [tmp2, dependencyMap] = tmp;
+  const tmp3 = _slicedToArray(callback.useState(), 2);
+  [tmp4, _asyncToGenerator] = tmp3;
+  [highlightedCreatorDetails, _slicedToArray] = callback.useState();
+  const useCallback = callback.useCallback;
+  let closure_0 = _asyncToGenerator(async (arg0) => {
+    let closure_2;
+    let obj2;
+    closure_0 = arg0;
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp7 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -28,7 +39,9 @@ export default function useFetchHighlightedCreatorGuildDetails(arg0) {
         return { value: "IconComponent", done: null };
       }
     } else {
+      let c4;
       try {
+        let closure_1;
         c6 = 2;
         if (0 === c5) {
           if (arg0 === 1) {
@@ -39,69 +52,62 @@ export default function useFetchHighlightedCreatorGuildDetails(arg0) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            closure_1 = tmp8;
-            closure_129_0 = undefined;
+            closure_1 = tmp4;
+            closure_0 = undefined;
             closure_1(true);
-            tmp4(undefined);
+            tmp(undefined);
             c4 = 2;
             c5 = 3;
             c6 = 1;
-            const obj5 = {
-              value: closure_0(dependencyMap[3]).fetchHighlightedCreatorGuildDetails(closure_0),
-              done: false,
-            };
+            const obj5 = { value: obj2.fetchHighlightedCreatorGuildDetails(closure_0), done: false };
+            obj2 = closure_0(dependencyMap[3]);
             return obj5;
           }
-        } else if (1 === tmp8) {
+        } else if (1 === c5) {
           c4 = 0;
           closure_1(false);
-          throw tmp37;
+          throw tmp33;
         } else {
-          if (2 === tmp8) {
+          if (2 === c5) {
             c4 = 1;
-            tmp4(tmp37);
-            c4 = 0;
-            closure_1(false);
-            c6 = 3;
+            tmp(tmp33);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
-          } else if (arg0 !== 2) {
-            closure_129_0 = value;
-            tmp37(closure_129_0);
+          } else if (arg0 === 2) {
+            c4 = 0;
+            closure_1(false);
+            c6 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            closure_0 = value;
+            tmp33(closure_0);
             c4 = 1;
           }
           c4 = 0;
           closure_1(false);
           c6 = 3;
-          const obj = { value, done: true };
-          return obj;
+          return { value: "IconComponent", done: null };
         }
-      } catch (tmp37) {
-        if (tmp5 === c4) {
-          c6 = tmp3;
-          throw tmp37;
-        } else if (tmp2 === tmp39) {
-          c5 = tmp2;
+      } catch (tmp33) {
+        if (0 === c4) {
+          c6 = 3;
+          throw tmp33;
+        } else if (1 === tmp35) {
+          c5 = 1;
         } else {
-          c5 = tmp;
+          c5 = 2;
         }
       }
     }
   });
-  callback = callback.useCallback(function () {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+  callback = useCallback(function () {
+    return closure_0(...arguments);
   }, []);
   const items = [arg0, callback];
   const effect = callback.useEffect(() => {
     callback(closure_0);
   }, items);
-  return { isLoading, error, highlightedCreatorDetails: highlightedCreatorDetails[0] };
+  return { isLoading, error, highlightedCreatorDetails };
 }

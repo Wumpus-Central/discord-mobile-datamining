@@ -3,47 +3,50 @@ import EmojiTypes from "../../../../emojis/EmojiTypes.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
 const result = size.fileFinishedImporting(
   "modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemSlimEmoji.tsx",
 );
 
 export default function getEmojiPickerDataRowItemSlimEmoji(isSectionNitroLocked) {
+  let emojis;
   _require = isSectionNitroLocked;
   let obj = {
     type: require("useEmojiPickerData").EmojiPickerItemType.EMOJI_ROW_SLIM,
-    emojis: null,
+    emojis: emojis.map((type) => {
+      if (type.type === EmojiTypes.EmojiTypes.UNICODE) {
+        const obj9 = { name: null, surrogates: null };
+        ({ name: obj5.name, surrogates: obj5.surrogates } = type);
+        return obj9;
+      } else {
+        let obj;
+        const emojisDisabled = isSectionNitroLocked.emojisDisabled;
+        const hasItem = emojisDisabled.has(type.id);
+        if (type.animated) {
+          if (hasItem) {
+            const obj10 = { id: null, name: null, animated: true, disabled: true };
+            ({ id: obj4.id, name: obj4.name } = type);
+            obj = obj10;
+          }
+          return obj;
+        }
+        if (type.animated) {
+          const obj11 = { id: null, name: null, animated: true };
+          ({ id: obj3.id, name: obj3.name } = type);
+          obj = obj11;
+        } else if (hasItem) {
+          const obj12 = { id: null, name: null, disabled: true };
+          ({ id: obj2.id, name: obj2.name } = type);
+          obj = obj12;
+        } else {
+          obj = { id: null, name: null };
+          ({ id: obj.id, name: obj.name } = type);
+        }
+      }
+    }),
     isSectionNitroLocked: true === isSectionNitroLocked.isSectionNitroLocked,
   };
-  const emojis = isSectionNitroLocked.emojis;
-  obj.emojis = emojis.map((type) => {
-    if (type.type === EmojiTypes.EmojiTypes.UNICODE) {
-      ({ name: obj5.name, surrogates: obj5.surrogates } = type);
-      return { name: null, surrogates: null };
-    } else {
-      const emojisDisabled = isSectionNitroLocked.emojisDisabled;
-      const hasItem = emojisDisabled.has(type.id);
-      if (type.animated) {
-        if (hasItem) {
-          ({ id: obj4.id, name: obj4.name } = type);
-          let obj = { id: null, name: null, animated: true, disabled: true };
-          const obj10 = { id: null, name: null, animated: true, disabled: true };
-        }
-        return obj;
-      }
-      if (type.animated) {
-        ({ id: obj3.id, name: obj3.name } = type);
-        obj = { id: null, name: null, animated: true };
-        const obj11 = { id: null, name: null, animated: true };
-      } else if (hasItem) {
-        ({ id: obj2.id, name: obj2.name } = type);
-        obj = { id: null, name: null, disabled: true };
-        const obj12 = { id: null, name: null, disabled: true };
-      } else {
-        obj = { id: null, name: null };
-        ({ id: obj.id, name: obj.name } = type);
-      }
-    }
-  });
+  emojis = isSectionNitroLocked.emojis;
   return obj;
 }

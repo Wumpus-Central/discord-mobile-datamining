@@ -6,36 +6,36 @@ import setupLoadFromMessageManagerHandlersDefault from "../../../messages/setupL
 import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";
 import UserOfferStore from "../../../../stores/billing/UserOfferStore.tsx";
 import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let tmp3;
 function handleReferralMessages(type) {
   if (type.type === MessageTypes.MessageTypes.PREMIUM_REFERRAL) {
     if (null != type.content) {
+      const obj3 = SnowflakeUtilsDefault;
       if (obj3.isProbablyAValidSnowflake(type.content)) {
         const premiumTypeSubscription = SubscriptionStore.getPremiumTypeSubscription();
         const tmp9Result = SnowflakeUtilsDefault;
-        if (tmp6) {
-          const userOffer = UserOfferActionCreators.fetchUserOffer("ReferralMessageManager");
-          const tmpResult = UserOfferActionCreators;
-        }
-        tmp6 =
+        const tmp6 =
           null == premiumTypeSubscription &&
-          UserOfferStore.shouldFetchReferralOffer(SnowflakeUtilsDefault.extractTimestamp(type.content));
+          UserOfferStore.shouldFetchReferralOffer(tmp9Result.extractTimestamp(type.content));
+        if (tmp6) {
+          const tmpResult = UserOfferActionCreators;
+          const userOffer = tmpResult.fetchUserOffer("ReferralMessageManager");
+        }
       }
-      obj3 = SnowflakeUtilsDefault;
     }
   }
 }
-class ReferralMessageManager extends tmp6 {
+class ReferralMessageManager extends AutomaticLifecycleManager {
   constructor() {
-    tmp3 = new ReferralMessageManager(tmp2, tmp, new.target);
-    tmp4 = closure_1(closure_2[6])(tmp3, handleReferralMessages);
+    const tmp3 = new ReferralMessageManager(tmp2, tmp, new.target);
+    setupLoadFromMessageManagerHandlersDefault(tmp3, handleReferralMessages);
     return tmp3;
   }
 }
 const tmp5 = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, ReferralMessageManager, importDefault);
 setupLoadFromMessageManagerHandlersDefault(tmp5, handleReferralMessages);
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/referrals/ReferralMessageManager.tsx");
 
 export default tmp5;

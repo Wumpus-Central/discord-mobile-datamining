@@ -1,13 +1,16 @@
 // discord_app/modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx
 import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import utils_ImageUtils from "../../../utils/native/ImageUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import VisualEffectViewDefault from "../../visual_effect_view/native/VisualEffectView.tsx";
+import ImageWarningIcon from "../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import EyeIcon from "../../../design/components/Icon/native/redesign/generated/EyeIcon.tsx";
 import ObscuredMediaUtils from "../../explicit_media_redaction/ObscuredMediaUtils.tsx";
 import ExplicitMediaRedactionModels from "../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
 import ExplicitMediaRedactionUtils from "../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
@@ -18,24 +21,38 @@ import common_VideoDefault from "../../../components_native/common/Video.tsx";
 import ClipView from "../../../design/components/Icon/native/ClipView.tsx";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
 import useContentHarmTypes from "../../explicit_media_redaction/hooks/useContentHarmTypes.tsx";
+import InAppNotificationConstants from "InAppNotificationConstants.tsx";
 import usePreviewableMedia from "hooks/usePreviewableMedia.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
 const ClipViewDefault = ClipView;
+let isSpoiler, total;
 
-const PlatformUtils = ImageWarningIcon(1369);
-const ImageWarningIcon2 = ImageWarningIcon(5865);
-const EyeIcon = ImageWarningIcon(6458);
-require = fn;
-get_ActivityIndicator = fn(17);
-({ PixelRatio: closure_4, StyleSheet } = get_ActivityIndicator);
-const View = get_ActivityIndicator.View;
-const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-let createStyles = fn(4890);
-let obj2 = { badge: null, icon: null };
-let size = {
+let StyleSheet;
+let c10;
+let c9;
+let closure_4;
+let metroImportAll;
+let obj4;
+let obj5;
+let obj6;
+let obj7;
+let obj8;
+let size;
+let size1;
+({ PixelRatio: closure_4, StyleSheet } = react_native);
+const View = react_native.View;
+const RIGHT_ACCESSORY_LEFT_MARGIN = InAppNotificationConstants.RIGHT_ACCESSORY_LEFT_MARGIN;
+({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { badge: size, icon: { width: 10, height: 10 } };
+size = {
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
@@ -46,12 +63,10 @@ let size = {
   bottom: 4,
   left: 4,
 };
-obj2.badge = size;
-obj2.icon = { width: 10, height: 10 };
-let closure_11 = createStyles.createStyles(obj2);
-createStyles = fn(4890);
-let obj3 = { badge: null };
-let size1 = {
+let closure_11 = createStyles.createStyles(obj);
+createStyles = createStyles_mod;
+let obj2 = { badge: size1 };
+size1 = {
   width: 20,
   height: 20,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
@@ -62,273 +77,292 @@ let size1 = {
   right: -5,
   top: -5,
 };
-obj3.badge = size1;
-let closure_12 = createStyles.createStyles(obj3);
-createStyles = fn(4890);
-let obj5 = {
-  mediaThumbnailContainer: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" },
+let closure_12 = createStyles.createStyles(obj2);
+createStyles = createStyles_mod;
+let obj3 = {
+  mediaThumbnailContainer: obj4,
   mediaThumbnail: { width: "100%", height: "100%" },
-  iconContainer: null,
-  obscureBackground: null,
-  spoilerIconContainer: null,
-  spoilerPill: null,
+  iconContainer: obj5,
+  obscureBackground: obj6,
+  spoilerIconContainer: obj7,
+  spoilerPill: obj8,
 };
-let obj6 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
-obj5.iconContainer = {
+obj4 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+createStyles = createStyles.createStyles;
+obj5 = {
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
   borderRadius: nativeDefault.radii.sm,
 };
-let obj9 = {};
+obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500 };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj9.backgroundColor = nativeDefault.unsafe_rawColors.PRIMARY_500;
-obj5.obscureBackground = obj9;
-let obj10 = {};
+obj7 = { justifyContent: "center", alignItems: "center" };
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj10.justifyContent = "center";
-obj10.alignItems = "center";
-obj5.spoilerIconContainer = obj10;
-let obj8 = {
-  alignItems: "center",
-  justifyContent: "center",
-  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
-  borderRadius: nativeDefault.radii.sm,
-};
-obj5.spoilerPill = {
+obj8 = {
   padding: nativeDefault.space.PX_4,
   borderRadius: nativeDefault.radii.xs,
   backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
   justifyContent: "center",
   alignItems: "center",
 };
-let closure_13 = createStyles.createStyles(obj5);
-createStyles = fn(4890);
+let closure_13 = createStyles(obj3);
+createStyles = createStyles_mod;
 let closure_14 = createStyles.createStyles({ container: { overflow: "visible" } });
-createStyles = fn(4890);
-let obj11 = {
-  padding: nativeDefault.space.PX_4,
-  borderRadius: nativeDefault.radii.xs,
-  backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
-  justifyContent: "center",
-  alignItems: "center",
-};
-let closure_15 = createStyles.createStyles({
-  rightAccessoryContainer: { marginLeft: fn(12478).RIGHT_ACCESSORY_LEFT_MARGIN },
-});
-let ReactCompilerGating = fn(558);
+createStyles = createStyles_mod;
+let obj9 = { rightAccessoryContainer: { marginLeft: RIGHT_ACCESSORY_LEFT_MARGIN } };
+let closure_15 = createStyles.createStyles(obj9);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(5);
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(5);
       const tmp4 = closure_11();
       if (cResult[0] !== tmp4.icon) {
         const obj2 = { style: tmp4.icon, size: "custom", color: "white" };
-        const tmp7 = closure_1_8(PlayIcon.PlayIcon, obj2);
+        const tmp7 = metroImportAll(PlayIcon.PlayIcon, obj2);
         cResult[0] = tmp4.icon;
         cResult[1] = tmp7;
-        let tmp5 = tmp7;
+        tmp5 = tmp7;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === tmp4.badge) {
+        let tmp8;
         if (cResult[3] === tmp5) {
-          let tmp8 = cResult[4];
+          tmp8 = cResult[4];
         }
         return tmp8;
       }
-      const tmp9 = closure_1_8(View, { style: tmp4.badge, children: tmp5 });
+      const obj3 = { style: tmp4.badge, children: tmp5 };
+      const tmp9 = metroImportAll(View, obj3);
       cResult[2] = tmp4.badge;
       cResult[3] = tmp5;
       cResult[4] = tmp9;
       tmp8 = tmp9;
-      const obj3 = { style: tmp4.badge, children: tmp5 };
     }
   : () => {
+      let obj2;
       const tmp = closure_11();
-      const obj = {
-        style: tmp.badge,
-        children: closure_1_8(PlayIcon.PlayIcon, { style: tmp.icon, size: "custom", color: "white" }),
-      };
-      return closure_1_8(View, obj);
+      const obj = { style: tmp.badge, children: metroImportAll(PlayIcon.PlayIcon, obj2) };
+      obj2 = { style: tmp.icon, size: "custom", color: "white" };
+      return metroImportAll(View, obj);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
   ? (total) => {
-      const cResult = c.c(5);
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(5);
       total = total.total;
       const tmp4 = closure_12();
       if (cResult[0] !== total) {
         const obj2 = { variant: "text-xs/semibold", color: "text-default", children: total };
-        const tmp7 = closure_1_8(Text_Text.Text, obj2);
+        const tmp7 = metroImportAll(Text_Text.Text, obj2);
         cResult[0] = total;
         cResult[1] = tmp7;
-        let tmp5 = tmp7;
+        tmp5 = tmp7;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === tmp4.badge) {
+        let tmp8;
         if (cResult[3] === tmp5) {
-          let tmp8 = cResult[4];
+          tmp8 = cResult[4];
         }
         return tmp8;
       }
-      const tmp9 = closure_1_8(View, { style: tmp4.badge, children: tmp5 });
+      const obj3 = { style: tmp4.badge, children: tmp5 };
+      const tmp9 = metroImportAll(View, obj3);
       cResult[2] = tmp4.badge;
       cResult[3] = tmp5;
       cResult[4] = tmp9;
       tmp8 = tmp9;
-      const obj3 = { style: tmp4.badge, children: tmp5 };
     }
-  : (children) =>
-      closure_1_8(View, {
+  : (total) => {
+      total = total.total;
+      const obj = {
         style: closure_12().badge,
-        children: closure_1_8(Text_Text.Text, {
+        children: metroImportAll(Text_Text.Text, {
           variant: "text-xs/semibold",
           color: "text-default",
-          children: children.total,
+          children: total,
         }),
-      });
-ReactCompilerGating = fn(558);
+      };
+      return metroImportAll(View, obj);
+    };
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
   ? (isSpoiler) => {
-      let ImageWarningIcon = require;
-      let obj = dependencyMap;
-      const cResult = c.c(17);
+      let children;
+      let isObscured;
+      let items;
+      const obj = react2;
+      const cResult = obj.c(17);
       ({ isObscured, children } = isSpoiler);
-      const tmp2 = closure_13();
-      const token = useToken.useToken(nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND);
+      isSpoiler = isSpoiler.isSpoiler;
+      const tmp4 = closure_13();
+      const obj2 = useToken;
+      const token = obj2.useToken(nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND);
       if (!isObscured) {
-        if (!isSpoiler.isSpoiler) {
+        if (!isSpoiler) {
           return children;
         }
       }
       let str = "light";
-      if (ImageWarningIconResult.isAndroid()) {
+      const tmpResult = PlatformUtils;
+      if (tmpResult.isAndroid()) {
         str = "dark";
       }
       if (cResult[0] === isObscured) {
-        if (cResult[1] === tmp2.obscureBackground) {
-          let tmp5 = cResult[2];
+        let tmp7;
+        if (cResult[1] === tmp4.obscureBackground) {
+          tmp7 = cResult[2];
         }
         if (cResult[3] === isObscured) {
+          let tmp11;
+          let tmp16Result;
           if (cResult[4] === token) {
-            let tmp9 = cResult[5];
+            tmp11 = cResult[5];
           }
           if (cResult[6] === isObscured) {
-            if (cResult[7] === tmp2.spoilerPill) {
-              if (cResult[9] === tmp2.spoilerIconContainer) {
-                if (cResult[10] === tmp13) {
-                  let tmp18 = cResult[11];
-                }
-                if (cResult[12] === children) {
-                  if (cResult[13] === tmp5) {
-                    if (cResult[14] === tmp9) {
-                      if (cResult[15] === tmp18) {
-                        let tmp22 = cResult[16];
-                      }
-                      return tmp22;
+            let tmp15;
+            if (cResult[7] === tmp4.spoilerPill) {
+              tmp15 = cResult[8];
+            }
+            if (cResult[9] === tmp4.spoilerIconContainer) {
+              let tmp19;
+              if (cResult[10] === tmp15) {
+                tmp19 = cResult[11];
+              }
+              if (cResult[12] === children) {
+                if (cResult[13] === tmp7) {
+                  if (cResult[14] === tmp11) {
+                    let tmp23;
+                    if (cResult[15] === tmp19) {
+                      tmp23 = cResult[16];
                     }
+                    return tmp23;
                   }
                 }
-                const obj4 = { children: null };
-                const items = [children, tmp5, tmp9, tmp18];
-                obj4.children = items;
-                const tmp25 = v65535(options, obj4);
-                cResult[12] = children;
-                cResult[13] = tmp5;
-                cResult[14] = tmp9;
-                cResult[15] = tmp18;
-                cResult[16] = tmp25;
-                tmp22 = tmp25;
               }
-              const obj5 = { style: tmp2.spoilerIconContainer, children: cResult[8] };
-              const tmp21 = closure_1_8(View, obj5);
-              cResult[9] = tmp2.spoilerIconContainer;
-              cResult[10] = cResult[8];
-              cResult[11] = tmp21;
-              tmp18 = tmp21;
+              const obj3 = { children: items };
+              items = [children, tmp7, tmp11, tmp19];
+              const tmp26 = authStore(React4, obj3);
+              cResult[12] = children;
+              cResult[13] = tmp7;
+              cResult[14] = tmp11;
+              cResult[15] = tmp19;
+              cResult[16] = tmp26;
+              tmp23 = tmp26;
             }
+            const obj4 = { style: tmp4.spoilerIconContainer, children: tmp15 };
+            const tmp22 = metroImportAll(View, obj4);
+            cResult[9] = tmp4.spoilerIconContainer;
+            cResult[10] = tmp15;
+            cResult[11] = tmp22;
+            tmp19 = tmp22;
           }
           if (isObscured) {
-            ImageWarningIcon = ImageWarningIcon2.ImageWarningIcon;
-            obj = { size: "sm", color: "white" };
-            let tmp14Result = closure_1_8(ImageWarningIcon, obj);
+            tmp16Result = metroImportAll(ImageWarningIcon.ImageWarningIcon, { size: "sm", color: "white" });
           } else {
-            const obj6 = {
-              style: tmp2.spoilerPill,
-              children: closure_1_8(EyeIcon.EyeIcon, { size: "sm", color: "white" }),
+            const obj5 = {
+              style: tmp4.spoilerPill,
+              children: metroImportAll(EyeIcon.EyeIcon, { size: "sm", color: "white" }),
             };
-            tmp14Result = closure_1_8(View, obj6);
+            tmp16Result = metroImportAll(View, obj5);
           }
           cResult[6] = isObscured;
-          isObscured = tmp2.spoilerPill;
-          cResult[7] = isObscured;
-          cResult[8] = tmp14Result;
+          cResult[7] = tmp4.spoilerPill;
+          cResult[8] = tmp16Result;
+          tmp15 = tmp16Result;
         }
-        let tmp10 = !isObscured;
-        if (!isObscured) {
-          const obj7 = { blurTheme: str, android_fallbackColor: token, style: StyleSheet.absoluteFill };
-          tmp10 = closure_1_8(VisualEffectViewDefault, obj7);
+        let tmp12 = !isObscured;
+        if (tmp12) {
+          const obj6 = { blurTheme: str, android_fallbackColor: token, style: StyleSheet.absoluteFill };
+          tmp12 = metroImportAll(VisualEffectViewDefault, obj6);
         }
         cResult[3] = isObscured;
         cResult[4] = token;
-        cResult[5] = tmp10;
-        tmp9 = tmp10;
+        cResult[5] = tmp12;
+        tmp11 = tmp12;
       }
-      let tmp6 = isObscured;
-      if (isObscured) {
-        const obj8 = { style: tmp2.obscureBackground };
-        tmp6 = closure_1_8(View, obj8);
+      let tmp8 = isObscured;
+      if (tmp8) {
+        const obj7 = { style: tmp4.obscureBackground };
+        tmp8 = metroImportAll(View, obj7);
       }
       cResult[0] = isObscured;
-      cResult[1] = tmp2.obscureBackground;
-      cResult[2] = tmp6;
-      tmp5 = tmp6;
-      ImageWarningIconResult = PlatformUtils;
+      cResult[1] = tmp4.obscureBackground;
+      cResult[2] = tmp8;
+      tmp7 = tmp8;
     }
   : (isSpoiler) => {
+      let children;
+      let isObscured;
+      let tmp14Result;
       ({ isObscured, children } = isSpoiler);
+      isSpoiler = isSpoiler.isSpoiler;
       const tmp = closure_13();
-      const token = useToken.useToken(nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND);
+      const obj = useToken;
+      const token = obj.useToken(nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND);
       if (!isObscured) {
-        if (!isSpoiler.isSpoiler) {
+        if (!isSpoiler) {
           return children;
         }
       }
       let str = "light";
+      const tmp2Result = PlatformUtils;
       if (tmp2Result.isAndroid()) {
         str = "dark";
       }
       const items = [children, , ,];
       let tmp8 = isObscured;
-      if (isObscured) {
+      if (tmp8) {
         const obj2 = { style: tmp.obscureBackground };
-        tmp8 = closure_1_8(View, obj2);
+        tmp8 = metroImportAll(View, obj2);
       }
       items[1] = tmp8;
       let tmp11 = !isObscured;
-      if (!isObscured) {
+      if (tmp11) {
         const obj3 = { blurTheme: str, android_fallbackColor: token, style: StyleSheet.absoluteFill };
-        tmp11 = closure_1_8(VisualEffectViewDefault, obj3);
+        tmp11 = metroImportAll(VisualEffectViewDefault, obj3);
       }
       items[2] = tmp11;
-      const obj4 = { style: tmp.spoilerIconContainer, children: null };
+      const obj4 = { style: tmp.spoilerIconContainer, children: tmp14Result };
       if (isObscured) {
-        let tmp14Result = closure_1_8(ImageWarningIcon2.ImageWarningIcon, { size: "sm", color: "white" });
+        tmp14Result = metroImportAll(ImageWarningIcon.ImageWarningIcon, { size: "sm", color: "white" });
       } else {
-        const obj5 = { style: tmp.spoilerPill, children: closure_1_8(EyeIcon.EyeIcon, { size: "sm", color: "white" }) };
-        tmp14Result = closure_1_8(View, obj5);
+        const obj5 = {
+          style: tmp.spoilerPill,
+          children: metroImportAll(EyeIcon.EyeIcon, { size: "sm", color: "white" }),
+        };
+        tmp14Result = metroImportAll(View, obj5);
       }
-      const obj6 = { children: null };
-      obj4.children = tmp14Result;
-      items[3] = closure_1_8(View, obj4);
-      obj6.children = items;
-      return v65535(options, obj6);
+      const obj6 = { children: items };
+      items[3] = metroImportAll(View, obj4);
+      return authStore(React4, obj6);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(79);
+      let height;
+      let icon;
+      let items3;
+      let media;
+      let message;
+      let obj5;
+      let obj7;
+      let previewableMedia;
+      let str3;
+      let tmp5;
+      let tmp6;
+      let type;
+      let useReducedMotion;
+      let width;
+      const obj = react2;
+      const cResult = obj.c(79);
       ({ previewableMedia, size, message } = arg0);
       const tmp4 = closure_13();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -343,42 +377,47 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      let mediaThumbnail = useStateFromStores.useStateFromStores(tmp5, tmp6);
-      ({ type, media, icon } = previewableMedia);
       const tmpResult = useStateFromStores;
-      const shouldAgeVerifyForExplicitMedia = ExplicitMediaRedactionUtils.useShouldAgeVerifyForExplicitMedia();
+      const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+      ({ type, media, icon } = previewableMedia);
       const tmpResult8 = ExplicitMediaRedactionUtils;
-      const enabledHarmTypesBitmaskForMessage = useContentHarmTypes.useEnabledHarmTypesBitmaskForMessage(message);
+      const shouldAgeVerifyForExplicitMedia = tmpResult8.useShouldAgeVerifyForExplicitMedia();
+      const tmpResult9 = useContentHarmTypes;
+      const enabledHarmTypesBitmaskForMessage = tmpResult9.useEnabledHarmTypesBitmaskForMessage(message);
       if (usePreviewableMedia.PreviewableMediaTypes.VOICE_MESSAGE === type) {
+        let tmp82;
         if (cResult[2] !== size) {
           const size1 = { width: size, height: size };
           cResult[2] = size;
           cResult[3] = size1;
-          let tmp78 = size1;
+          tmp82 = size1;
         } else {
-          tmp78 = cResult[3];
+          tmp82 = cResult[3];
         }
         if (cResult[4] === icon) {
-          if (cResult[5] === tmp78) {
-            let tmp79 = cResult[6];
+          let tmp83;
+          if (cResult[5] === tmp82) {
+            tmp83 = cResult[6];
           }
-          return tmp79;
+          return tmp83;
         }
-        const obj2 = { style: tmp78, children: icon };
-        const tmp82 = closure_1_8(View, obj2);
+        const obj2 = { style: tmp82, children: icon };
+        const tmp86 = metroImportAll(View, obj2);
         cResult[4] = icon;
-        cResult[5] = tmp78;
-        cResult[6] = tmp82;
-        tmp79 = tmp82;
+        cResult[5] = tmp82;
+        cResult[6] = tmp86;
+        tmp83 = tmp86;
       } else {
+        let tmp76;
         if (usePreviewableMedia.PreviewableMediaTypes.AUDIO !== type) {
           if (usePreviewableMedia.PreviewableMediaTypes.FILE !== type) {
             if (usePreviewableMedia.PreviewableMediaTypes.IMAGE !== type) {
               if (usePreviewableMedia.PreviewableMediaTypes.VIDEO !== type) {
                 if (usePreviewableMedia.PreviewableMediaTypes.GIF === type) {
+                  let url;
                   const video = media.video;
                   if (video != null) {
-                    const url = video.url;
+                    url = video.url;
                   }
                   const thumbnail = media.thumbnail;
                   if (null == thumbnail) {
@@ -387,115 +426,127 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[45] === media) {
                       const author = message.author;
                       let id;
+                      const tmp24 = cResult[46];
                       if (author != null) {
                         id = author.id;
                       }
-                      if (cResult[46] === id) {
+                      if (tmp24 === id) {
+                        let arr3;
+                        if (cResult[47] === message.channel_id) {
+                          arr3 = cResult[48];
+                        }
                         if (null != thumbnail.proxyURL) {
+                          let url2;
+                          let tmp34;
                           if ("" !== thumbnail.proxyURL) {
-                            let url2 = thumbnail.proxyURL;
-                          }
-                          let tmp29 = null != url;
-                          if (tmp29) {
-                            tmp29 = "" !== url;
+                            url2 = thumbnail.proxyURL;
                           }
                           if (cResult[49] !== size) {
                             const size2 = { width: size, height: size };
                             cResult[49] = size;
                             cResult[50] = size2;
-                            let tmp30 = size2;
+                            tmp34 = size2;
                           } else {
-                            tmp30 = cResult[50];
+                            tmp34 = cResult[50];
                           }
                           if (cResult[51] === tmp4.mediaThumbnailContainer) {
-                            if (cResult[52] === tmp30) {
-                              let tmp31 = cResult[53];
+                            let tmp35;
+                            let tmp36;
+                            if (cResult[52] === tmp34) {
+                              tmp35 = cResult[53];
                             }
-                            if (cResult[54] === tmp29) {
+                            if (cResult[54] === (null != url && "" !== url)) {
                               if (cResult[55] === url2) {
-                                if (cResult[56] === mediaThumbnail) {
+                                if (cResult[56] === stateFromStores) {
                                   if (cResult[57] === size) {
                                     if (cResult[58] === tmp4.mediaThumbnail) {
                                       if (cResult[59] === url) {
-                                        if (cResult[61] === tmp28) {
-                                          if (cResult[62] === tmp32) {
-                                            let tmp39 = cResult[63];
-                                          }
-                                          if (cResult[64] === tmp31) {
-                                            if (cResult[65] === tmp39) {
-                                              let tmp43 = cResult[66];
-                                            }
-                                            return tmp43;
-                                          }
-                                          const obj3 = { style: tmp31, children: tmp39 };
-                                          const tmp46 = closure_1_8(View, obj3);
-                                          cResult[64] = tmp31;
-                                          cResult[65] = tmp39;
-                                          cResult[66] = tmp46;
-                                          tmp43 = tmp46;
-                                        }
-                                        const obj4 = { isObscured: tmp28, isSpoiler: false, children: cResult[60] };
-                                        const tmp42 = closure_1_8(closure_18, obj4);
-                                        cResult[61] = tmp28;
-                                        cResult[62] = cResult[60];
-                                        cResult[63] = tmp42;
-                                        tmp39 = tmp42;
+                                        tmp36 = cResult[60];
                                       }
+                                      if (cResult[61] === arr3.length > 0) {
+                                        let tmp42;
+                                        if (cResult[62] === tmp36) {
+                                          tmp42 = cResult[63];
+                                        }
+                                        if (cResult[64] === tmp35) {
+                                          let tmp46;
+                                          if (cResult[65] === tmp42) {
+                                            tmp46 = cResult[66];
+                                          }
+                                          return tmp46;
+                                        }
+                                        const obj3 = { style: tmp35, children: tmp42 };
+                                        const tmp49 = metroImportAll(View, obj3);
+                                        cResult[64] = tmp35;
+                                        cResult[65] = tmp42;
+                                        cResult[66] = tmp49;
+                                        tmp46 = tmp49;
+                                      }
+                                      const obj4 = { isObscured: arr3.length > 0, isSpoiler: false, children: tmp36 };
+                                      const tmp45 = metroImportAll(closure_18, obj4);
+                                      cResult[61] = arr3.length > 0;
+                                      cResult[62] = tmp36;
+                                      cResult[63] = tmp45;
+                                      tmp42 = tmp45;
                                     }
                                   }
                                 }
                               }
                             }
-                            if (tmp29) {
-                              if (!mediaThumbnail) {
+                            if (null != url && "" !== url) {
+                              let tmp39;
+                              if (!stateFromStores) {
                                 const size3 = {
                                   resizeMode: "cover",
                                   width: size,
                                   height: size,
                                   paused: false,
-                                  src: null,
-                                  poster: null,
+                                  src: obj5,
+                                  poster: url2,
                                   postponeRender: false,
                                 };
-                                const obj5 = { videoURI: url };
-                                size3.src = obj5;
-                                size3.poster = url2;
-                                let tmp35 = closure_1_8(common_VideoDefault, size3);
+                                obj5 = { videoURI: url };
+                                tmp39 = metroImportAll(common_VideoDefault, size3);
                               }
-                              cResult[54] = tmp29;
+                              cResult[54] = null != url && "" !== url;
                               cResult[55] = url2;
-                              cResult[56] = mediaThumbnail;
+                              cResult[56] = stateFromStores;
                               cResult[57] = size;
-                              mediaThumbnail = tmp4.mediaThumbnail;
-                              cResult[58] = mediaThumbnail;
+                              cResult[58] = tmp4.mediaThumbnail;
                               cResult[59] = url;
-                              cResult[60] = tmp35;
+                              cResult[60] = tmp39;
+                              tmp36 = tmp39;
                             }
-                            const obj6 = { source: null, style: null, resizeMode: "cover" };
-                            const obj7 = { uri: url2 };
-                            obj6.source = obj7;
-                            obj6.style = tmp4.mediaThumbnail;
-                            tmp35 = closure_1_8(FastImageDefault, obj6);
+                            const obj6 = { source: obj7, style: tmp4.mediaThumbnail, resizeMode: "cover" };
+                            obj7 = { uri: url2 };
+                            tmp39 = metroImportAll(FastImageDefault, obj6);
                           }
-                          const items1 = [tmp4.mediaThumbnailContainer, tmp30];
+                          const items1 = [tmp4.mediaThumbnailContainer, tmp34];
                           cResult[51] = tmp4.mediaThumbnailContainer;
-                          cResult[52] = tmp30;
+                          cResult[52] = tmp34;
                           cResult[53] = items1;
-                          tmp31 = items1;
+                          tmp35 = items1;
                         }
                         url2 = thumbnail.url;
                       }
                     }
                     const author2 = message.author;
                     let id1;
+                    const getEnabledHarmTypesForChannelAndAuthorId =
+                      ObscuredMediaUtils.getEnabledHarmTypesForChannelAndAuthorId;
+                    const channel_id = message.channel_id;
+                    ObscuredMediaUtils;
                     if (author2 != null) {
                       id1 = author2.id;
                     }
-                    const enabledHarmTypesForChannelAndAuthorId =
-                      ObscuredMediaUtils.getEnabledHarmTypesForChannelAndAuthorId(message.channel_id, id1);
-                    const tmpResult10 = ObscuredMediaUtils;
+                    const enabledHarmTypesForChannelAndAuthorId = getEnabledHarmTypesForChannelAndAuthorId(
+                      channel_id,
+                      id1,
+                    );
                     const obj8 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media };
-                    const mediaObscuredReasonFromBitmask = ObscuredMediaUtils.getMediaObscuredReasonFromBitmask(
+                    const getMediaObscuredReasonFromBitmask = ObscuredMediaUtils.getMediaObscuredReasonFromBitmask;
+                    ObscuredMediaUtils;
+                    const mediaObscuredReasonFromBitmask = getMediaObscuredReasonFromBitmask(
                       obj8,
                       enabledHarmTypesForChannelAndAuthorId,
                     );
@@ -508,53 +559,57 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                     cResult[46] = id2;
                     cResult[47] = message.channel_id;
                     cResult[48] = mediaObscuredReasonFromBitmask;
-                    const tmpResult11 = ObscuredMediaUtils;
+                    arr3 = mediaObscuredReasonFromBitmask;
                   }
                 } else if (usePreviewableMedia.PreviewableMediaTypes.STICKER === type) {
+                  let tmp12;
                   if (cResult[67] !== size) {
                     const size4 = { width: size, height: size };
                     cResult[67] = size;
                     cResult[68] = size4;
-                    let tmp11 = size4;
+                    tmp12 = size4;
                   } else {
-                    tmp11 = cResult[68];
+                    tmp12 = cResult[68];
                   }
                   if (cResult[69] === tmp4.mediaThumbnailContainer) {
-                    if (cResult[70] === tmp11) {
-                      let tmp12 = cResult[71];
+                    let tmp13;
+                    if (cResult[70] === tmp12) {
+                      tmp13 = cResult[71];
                     }
                     if (cResult[72] === media) {
                       if (cResult[73] === size) {
-                        if (cResult[74] === tmp13) {
-                          let tmp14 = cResult[75];
+                        let tmp15;
+                        if (cResult[74] === !stateFromStores) {
+                          tmp15 = cResult[75];
                         }
-                        if (cResult[76] === tmp12) {
-                          if (cResult[77] === tmp14) {
-                            let tmp18 = cResult[78];
+                        if (cResult[76] === tmp13) {
+                          let tmp19;
+                          if (cResult[77] === tmp15) {
+                            tmp19 = cResult[78];
                           }
-                          return tmp18;
+                          return tmp19;
                         }
-                        const obj9 = { style: tmp12, children: tmp14 };
-                        const tmp21 = closure_1_8(View, obj9);
-                        cResult[76] = tmp12;
-                        cResult[77] = tmp14;
-                        cResult[78] = tmp21;
-                        tmp18 = tmp21;
+                        const obj9 = { style: tmp13, children: tmp15 };
+                        const tmp22 = metroImportAll(View, obj9);
+                        cResult[76] = tmp13;
+                        cResult[77] = tmp15;
+                        cResult[78] = tmp22;
+                        tmp19 = tmp22;
                       }
                     }
-                    const obj10 = { sticker: media, size, animated: !mediaThumbnail };
-                    const tmp17 = closure_1_8(StickerDefault, obj10);
+                    const obj10 = { sticker: media, size, animated: !stateFromStores };
+                    const tmp18 = metroImportAll(StickerDefault, obj10);
                     cResult[72] = media;
                     cResult[73] = size;
-                    cResult[74] = !mediaThumbnail;
-                    cResult[75] = tmp17;
-                    tmp14 = tmp17;
+                    cResult[74] = !stateFromStores;
+                    cResult[75] = tmp18;
+                    tmp15 = tmp18;
                   }
-                  const items2 = [tmp4.mediaThumbnailContainer, tmp11];
+                  const items2 = [tmp4.mediaThumbnailContainer, tmp12];
                   cResult[69] = tmp4.mediaThumbnailContainer;
-                  cResult[70] = tmp11;
+                  cResult[70] = tmp12;
                   cResult[71] = items2;
-                  tmp12 = items2;
+                  tmp13 = items2;
                 } else {
                   return null;
                 }
@@ -567,102 +622,110 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                   if (height > 0) {
                     if (cResult[15] === enabledHarmTypesBitmaskForMessage) {
                       if (cResult[16] === media) {
+                        let tmp51;
                         if (cResult[17] === shouldAgeVerifyForExplicitMedia) {
-                          let tmp48 = cResult[18];
+                          tmp51 = cResult[18];
                         }
                         if (cResult[19] === height) {
                           if (cResult[20] === media) {
                             if (cResult[21] === size) {
                               if (cResult[22] === type) {
+                                let tmp53;
+                                let tmp57;
                                 if (cResult[23] === width) {
-                                  let tmp50 = cResult[24];
+                                  tmp53 = cResult[24];
                                 }
                                 if (cResult[25] !== size) {
                                   const size5 = { width: size, height: size };
                                   cResult[25] = size;
                                   cResult[26] = size5;
-                                  let tmp53 = size5;
+                                  tmp57 = size5;
                                 } else {
-                                  tmp53 = cResult[26];
+                                  tmp57 = cResult[26];
                                 }
                                 if (cResult[27] === tmp4.mediaThumbnailContainer) {
-                                  if (cResult[28] === tmp53) {
-                                    let tmp54 = cResult[29];
+                                  let tmp58;
+                                  let tmp59;
+                                  if (cResult[28] === tmp57) {
+                                    tmp58 = cResult[29];
                                   }
-                                  if (cResult[30] !== tmp50) {
-                                    const obj11 = { uri: tmp50 };
-                                    cResult[30] = tmp50;
+                                  if (cResult[30] !== tmp53) {
+                                    const obj11 = { uri: tmp53 };
+                                    cResult[30] = tmp53;
                                     cResult[31] = obj11;
-                                    let tmp55 = obj11;
+                                    tmp59 = obj11;
                                   } else {
-                                    tmp55 = cResult[31];
+                                    tmp59 = cResult[31];
                                   }
                                   if (cResult[32] === tmp4.mediaThumbnail) {
-                                    if (cResult[33] === tmp55) {
-                                      let tmp56 = cResult[34];
+                                    let tmp60;
+                                    let tmp64;
+                                    if (cResult[33] === tmp59) {
+                                      tmp60 = cResult[34];
                                     }
                                     if (cResult[35] !== type) {
-                                      let tmp61 = null;
+                                      let tmp65 = null;
                                       if (type === usePreviewableMedia.PreviewableMediaTypes.VIDEO) {
-                                        tmp61 = closure_1_8(closure_16, {});
+                                        tmp65 = metroImportAll(closure_16, {});
                                       }
                                       cResult[35] = type;
-                                      cResult[36] = tmp61;
-                                      let tmp60 = tmp61;
+                                      cResult[36] = tmp65;
+                                      tmp64 = tmp65;
                                     } else {
-                                      tmp60 = cResult[36];
+                                      tmp64 = cResult[36];
                                     }
-                                    if (cResult[37] === tmp48.isSpoiler) {
-                                      if (cResult[38] === tmp48.obscure) {
-                                        if (cResult[39] === tmp56) {
-                                          if (cResult[40] === tmp60) {
-                                            let tmp64 = cResult[41];
+                                    if (cResult[37] === tmp51.isSpoiler) {
+                                      if (cResult[38] === tmp51.obscure) {
+                                        if (cResult[39] === tmp60) {
+                                          let tmp68;
+                                          if (cResult[40] === tmp64) {
+                                            tmp68 = cResult[41];
                                           }
-                                          if (cResult[42] === tmp64) {
-                                            if (cResult[43] === tmp54) {
-                                              let tmp68 = cResult[44];
+                                          if (cResult[42] === tmp68) {
+                                            let tmp72;
+                                            if (cResult[43] === tmp58) {
+                                              tmp72 = cResult[44];
                                             }
-                                            return tmp68;
+                                            return tmp72;
                                           }
-                                          const obj12 = { style: tmp54, children: tmp64 };
-                                          const tmp71 = closure_1_8(View, obj12);
-                                          cResult[42] = tmp64;
-                                          cResult[43] = tmp54;
-                                          cResult[44] = tmp71;
-                                          tmp68 = tmp71;
+                                          const obj12 = { style: tmp58, children: tmp68 };
+                                          const tmp75 = metroImportAll(View, obj12);
+                                          cResult[42] = tmp68;
+                                          cResult[43] = tmp58;
+                                          cResult[44] = tmp75;
+                                          tmp72 = tmp75;
                                         }
                                       }
                                     }
-                                    const obj13 = { isObscured: null, isSpoiler: null, children: null };
-                                    ({ obscure: obj26.isObscured, isSpoiler: obj26.isSpoiler } = tmp48);
-                                    const items3 = [tmp56, tmp60];
-                                    obj13.children = items3;
-                                    const tmp67 = v65535(closure_18, obj13);
-                                    cResult[37] = tmp48.isSpoiler;
-                                    cResult[38] = tmp48.obscure;
-                                    cResult[39] = tmp56;
-                                    cResult[40] = tmp60;
-                                    cResult[41] = tmp67;
-                                    tmp64 = tmp67;
+                                    const obj13 = { isObscured: null, isSpoiler: null, children: items3 };
+                                    ({ obscure: obj23.isObscured, isSpoiler: obj23.isSpoiler } = tmp51);
+                                    items3 = [tmp60, tmp64];
+                                    const tmp71 = authStore(closure_18, obj13);
+                                    cResult[37] = tmp51.isSpoiler;
+                                    cResult[38] = tmp51.obscure;
+                                    cResult[39] = tmp60;
+                                    cResult[40] = tmp64;
+                                    cResult[41] = tmp71;
+                                    tmp68 = tmp71;
                                   }
-                                  const obj14 = { source: tmp55, style: tmp4.mediaThumbnail, resizeMode: "cover" };
-                                  const tmp59 = closure_1_8(FastImageDefault, obj14);
+                                  const obj14 = { source: tmp59, style: tmp4.mediaThumbnail, resizeMode: "cover" };
+                                  const tmp63 = metroImportAll(FastImageDefault, obj14);
                                   cResult[32] = tmp4.mediaThumbnail;
-                                  cResult[33] = tmp55;
-                                  cResult[34] = tmp59;
-                                  tmp56 = tmp59;
+                                  cResult[33] = tmp59;
+                                  cResult[34] = tmp63;
+                                  tmp60 = tmp63;
                                 }
-                                const items4 = [tmp4.mediaThumbnailContainer, tmp53];
+                                const items4 = [tmp4.mediaThumbnailContainer, tmp57];
                                 cResult[27] = tmp4.mediaThumbnailContainer;
-                                cResult[28] = tmp53;
+                                cResult[28] = tmp57;
                                 cResult[29] = items4;
-                                tmp54 = items4;
+                                tmp58 = items4;
                               }
                             }
                           }
                         }
-                        const attachmentUrl = MediaSourceUtil.getAttachmentUrl(media);
                         const tmpResult12 = MediaSourceUtil;
+                        const attachmentUrl = tmpResult12.getAttachmentUrl(media);
                         const obj15 = {
                           src: attachmentUrl,
                           sourceWidth: width,
@@ -670,22 +733,22 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                           targetWidth: 2 * size,
                           targetHeight: 2 * size,
                           animated: false,
-                          format: null,
+                          format: str3,
                         };
-                        let str3;
+                        const getSrcWithWidthAndHeight = utils_ImageUtils.getSrcWithWidthAndHeight;
+                        str3 = undefined;
+                        utils_ImageUtils;
                         if (type === usePreviewableMedia.PreviewableMediaTypes.VIDEO) {
                           str3 = "png";
                         }
-                        obj15.format = str3;
-                        const srcWithWidthAndHeight = utils_ImageUtils.getSrcWithWidthAndHeight(obj15);
+                        const srcWithWidthAndHeight = getSrcWithWidthAndHeight(obj15);
                         cResult[19] = height;
                         cResult[20] = media;
                         cResult[21] = size;
                         cResult[22] = type;
                         cResult[23] = width;
                         cResult[24] = srcWithWidthAndHeight;
-                        tmp50 = srcWithWidthAndHeight;
-                        const tmpResult13 = utils_ImageUtils;
+                        tmp53 = srcWithWidthAndHeight;
                       }
                     }
                     const obj16 = {
@@ -694,13 +757,13 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                       enabledContentHarmTypeFlags: enabledHarmTypesBitmaskForMessage,
                       shouldAgeVerify: shouldAgeVerifyForExplicitMedia,
                     };
-                    const attachmentObscurityProps = ExplicitMediaUtils.getAttachmentObscurityProps(obj16);
+                    const tmpResult14 = ExplicitMediaUtils;
+                    const attachmentObscurityProps = tmpResult14.getAttachmentObscurityProps(obj16);
                     cResult[15] = enabledHarmTypesBitmaskForMessage;
                     cResult[16] = media;
                     cResult[17] = shouldAgeVerifyForExplicitMedia;
                     cResult[18] = attachmentObscurityProps;
-                    tmp48 = attachmentObscurityProps;
-                    const tmpResult14 = ExplicitMediaUtils;
+                    tmp51 = attachmentObscurityProps;
                   }
                 }
               }
@@ -712,58 +775,81 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           const size6 = { width: size, height: size };
           cResult[7] = size;
           cResult[8] = size6;
-          let tmp72 = size6;
+          tmp76 = size6;
         } else {
-          tmp72 = cResult[8];
+          tmp76 = cResult[8];
         }
         if (cResult[9] === tmp4.iconContainer) {
-          if (cResult[10] === tmp72) {
-            let tmp73 = cResult[11];
+          let tmp77;
+          if (cResult[10] === tmp76) {
+            tmp77 = cResult[11];
           }
           if (cResult[12] === icon) {
-            if (cResult[13] === tmp73) {
-              let tmp74 = cResult[14];
+            let tmp78;
+            if (cResult[13] === tmp77) {
+              tmp78 = cResult[14];
             }
-            return tmp74;
+            return tmp78;
           }
-          const obj17 = { style: tmp73, children: icon };
-          const tmp77 = closure_1_8(View, obj17);
+          const obj17 = { style: tmp77, children: icon };
+          const tmp81 = metroImportAll(View, obj17);
           cResult[12] = icon;
-          cResult[13] = tmp73;
-          cResult[14] = tmp77;
-          tmp74 = tmp77;
+          cResult[13] = tmp77;
+          cResult[14] = tmp81;
+          tmp78 = tmp81;
         }
-        const items5 = [tmp4.iconContainer, tmp72];
+        const items5 = [tmp4.iconContainer, tmp76];
         cResult[9] = tmp4.iconContainer;
-        cResult[10] = tmp72;
+        cResult[10] = tmp76;
         cResult[11] = items5;
-        tmp73 = items5;
+        tmp77 = items5;
       }
-      const tmpResult9 = useContentHarmTypes;
     }
   : (arg0) => {
+      let height;
+      let icon;
+      let items1;
+      let items2;
+      let items3;
+      let items4;
+      let items5;
+      let media;
+      let message;
+      let obj10;
+      let obj12;
+      let obj16;
+      let obj19;
+      let obj8;
+      let previewableMedia;
+      let size1;
+      let str3;
+      let type;
+      let useReducedMotion;
+      let width;
       ({ previewableMedia, size, message } = arg0);
       const tmp = closure_13();
       const items = [AccessibilityStore];
-      const stateFromStores = useStateFromStores.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+      const obj = useStateFromStores;
+      const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
       ({ type, media, icon } = previewableMedia);
-      const shouldAgeVerifyForExplicitMedia = ExplicitMediaRedactionUtils.useShouldAgeVerifyForExplicitMedia();
-      const enabledHarmTypesBitmaskForMessage = useContentHarmTypes.useEnabledHarmTypesBitmaskForMessage(message);
+      const obj2 = ExplicitMediaRedactionUtils;
+      const shouldAgeVerifyForExplicitMedia = obj2.useShouldAgeVerifyForExplicitMedia();
+      const obj3 = useContentHarmTypes;
+      const enabledHarmTypesBitmaskForMessage = obj3.useEnabledHarmTypesBitmaskForMessage(message);
       if (usePreviewableMedia.PreviewableMediaTypes.VOICE_MESSAGE === type) {
-        const obj4 = { style: null, children: null };
-        const size1 = { width: size, height: size };
-        obj4.style = size1;
-        obj4.children = icon;
-        return closure_1_8(View, obj4);
+        const obj4 = { style: size1, children: icon };
+        size1 = { width: size, height: size };
+        return metroImportAll(View, obj4);
       } else {
         if (usePreviewableMedia.PreviewableMediaTypes.AUDIO !== type) {
           if (usePreviewableMedia.PreviewableMediaTypes.FILE !== type) {
             if (usePreviewableMedia.PreviewableMediaTypes.IMAGE !== type) {
               if (usePreviewableMedia.PreviewableMediaTypes.VIDEO !== type) {
                 if (usePreviewableMedia.PreviewableMediaTypes.GIF === type) {
+                  let url;
                   const video = media.video;
                   if (video != null) {
-                    const url = video.url;
+                    url = video.url;
                   }
                   const thumbnail = media.thumbnail;
                   if (null == thumbnail) {
@@ -771,66 +857,64 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                   } else {
                     const author = message.author;
                     let id;
+                    const getEnabledHarmTypesForChannelAndAuthorId =
+                      ObscuredMediaUtils.getEnabledHarmTypesForChannelAndAuthorId;
+                    const channel_id = message.channel_id;
+                    ObscuredMediaUtils;
                     if (author != null) {
                       id = author.id;
                     }
-                    const enabledHarmTypesForChannelAndAuthorId =
-                      ObscuredMediaUtils.getEnabledHarmTypesForChannelAndAuthorId(message.channel_id, id);
-                    const tmp2Result = ObscuredMediaUtils;
-                    const obj5 = { type: null, media: null };
+                    const enabledHarmTypesForChannelAndAuthorId = getEnabledHarmTypesForChannelAndAuthorId(
+                      channel_id,
+                      id,
+                    );
+                    ({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media });
                     const getMediaObscuredReasonFromBitmask = ObscuredMediaUtils.getMediaObscuredReasonFromBitmask;
-                    obj5.type = ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed;
-                    obj5.media = media;
+                    ObscuredMediaUtils;
                     if (null != thumbnail.proxyURL) {
+                      let url2;
                       if ("" !== thumbnail.proxyURL) {
-                        let url2 = thumbnail.proxyURL;
+                        url2 = thumbnail.proxyURL;
                       }
-                      const obj6 = { style: null, children: null };
-                      const items1 = [tmp.mediaThumbnailContainer];
+                      const obj6 = { style: items1, children: null };
+                      items1 = [tmp.mediaThumbnailContainer];
                       const size2 = { width: size, height: size };
                       items1[1] = size2;
-                      obj6.style = items1;
                       const obj7 = { isObscured: tmp15, isSpoiler: false, children: null };
                       if (null != url) {
                         if ("" !== url) {
+                          let tmp16Result;
                           if (!stateFromStores) {
                             const size3 = {
                               resizeMode: "cover",
                               width: size,
                               height: size,
                               paused: false,
-                              src: null,
-                              poster: null,
+                              src: obj8,
+                              poster: url2,
                               postponeRender: false,
                             };
-                            const obj8 = { videoURI: url };
-                            size3.src = obj8;
-                            size3.poster = url2;
-                            let tmp16Result = closure_1_8(common_VideoDefault, size3);
+                            obj8 = { videoURI: url };
+                            tmp16Result = metroImportAll(common_VideoDefault, size3);
                           }
                           obj7.children = tmp16Result;
-                          obj6.children = closure_1_8(tmp18, obj7);
-                          return closure_1_8(tmp17, obj6);
+                          obj6.children = metroImportAll(tmp18, obj7);
+                          return metroImportAll(tmp17, obj6);
                         }
                       }
-                      const obj9 = { source: null, style: null, resizeMode: "cover" };
-                      const obj10 = { uri: url2 };
-                      obj9.source = obj10;
-                      obj9.style = tmp.mediaThumbnail;
-                      tmp16Result = closure_1_8(FastImageDefault, obj9);
+                      const obj9 = { source: obj10, style: tmp.mediaThumbnail, resizeMode: "cover" };
+                      obj10 = { uri: url2 };
+                      tmp16Result = metroImportAll(FastImageDefault, obj9);
                     }
                     url2 = thumbnail.url;
-                    const tmp2Result5 = ObscuredMediaUtils;
                   }
                 } else if (usePreviewableMedia.PreviewableMediaTypes.STICKER === type) {
-                  const obj11 = { style: null, children: null };
-                  const items2 = [tmp.mediaThumbnailContainer];
+                  const obj11 = { style: items2, children: metroImportAll(StickerDefault, obj12) };
+                  items2 = [tmp.mediaThumbnailContainer];
                   const size4 = { width: size, height: size };
                   items2[1] = size4;
-                  obj11.style = items2;
-                  const obj12 = { sticker: media, size, animated: !stateFromStores };
-                  obj11.children = closure_1_8(StickerDefault, obj12);
-                  return closure_1_8(View, obj11);
+                  obj12 = { sticker: media, size, animated: !stateFromStores };
+                  return metroImportAll(View, obj11);
                 } else {
                   return null;
                 }
@@ -847,10 +931,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                       enabledContentHarmTypeFlags: enabledHarmTypesBitmaskForMessage,
                       shouldAgeVerify: shouldAgeVerifyForExplicitMedia,
                     };
-                    const attachmentObscurityProps = ExplicitMediaUtils.getAttachmentObscurityProps(obj13);
                     const tmp2Result6 = ExplicitMediaUtils;
-                    const attachmentUrl = MediaSourceUtil.getAttachmentUrl(media);
+                    const attachmentObscurityProps = tmp2Result6.getAttachmentObscurityProps(obj13);
                     const tmp2Result7 = MediaSourceUtil;
+                    const attachmentUrl = tmp2Result7.getAttachmentUrl(media);
                     const obj14 = {
                       src: attachmentUrl,
                       sourceWidth: width,
@@ -858,34 +942,30 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                       targetWidth: 2 * size,
                       targetHeight: 2 * size,
                       animated: false,
-                      format: null,
+                      format: str3,
                     };
-                    let str3;
+                    const getSrcWithWidthAndHeight = utils_ImageUtils.getSrcWithWidthAndHeight;
+                    str3 = undefined;
+                    utils_ImageUtils;
                     if (type === usePreviewableMedia.PreviewableMediaTypes.VIDEO) {
                       str3 = "png";
                     }
-                    obj14.format = str3;
-                    const obj15 = { style: null, children: null };
-                    const items3 = [tmp.mediaThumbnailContainer];
+                    const obj15 = { style: items3, children: authStore(closure_18, obj16) };
+                    items3 = [tmp.mediaThumbnailContainer];
                     const size5 = { width: size, height: size };
                     items3[1] = size5;
-                    obj15.style = items3;
-                    const obj16 = { isObscured: null, isSpoiler: null, children: null };
+                    obj16 = { isObscured: null, isSpoiler: null, children: items4 };
                     ({ obscure: obj17.isObscured, isSpoiler: obj17.isSpoiler } = attachmentObscurityProps);
-                    const srcWithWidthAndHeight = utils_ImageUtils.getSrcWithWidthAndHeight(obj14);
-                    const obj18 = { source: null, style: null, resizeMode: "cover" };
-                    const obj19 = { uri: srcWithWidthAndHeight };
-                    obj18.source = obj19;
-                    obj18.style = tmp.mediaThumbnail;
-                    const items4 = [closure_1_8(FastImageDefault, obj18)];
+                    const srcWithWidthAndHeight = getSrcWithWidthAndHeight(obj14);
+                    const obj18 = { source: obj19, style: tmp.mediaThumbnail, resizeMode: "cover" };
+                    obj19 = { uri: srcWithWidthAndHeight };
+                    items4 = [metroImportAll(FastImageDefault, obj18)];
                     let tmp24Result = null;
                     if (type === usePreviewableMedia.PreviewableMediaTypes.VIDEO) {
-                      tmp24Result = closure_1_8(closure_16, {});
+                      tmp24Result = metroImportAll(closure_16, {});
                     }
                     items4[1] = tmp24Result;
-                    obj16.children = items4;
-                    obj15.children = v65535(closure_18, obj16);
-                    return closure_1_8(View, obj15);
+                    return metroImportAll(View, obj15);
                   }
                 }
               }
@@ -893,204 +973,236 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             return null;
           }
         }
-        const obj20 = { style: null, children: null };
-        const items5 = [tmp.iconContainer];
+        const obj20 = { style: items5, children: icon };
+        items5 = [tmp.iconContainer];
         const size6 = { width: size, height: size };
         items5[1] = size6;
-        obj20.style = items5;
-        obj20.children = icon;
-        return closure_1_8(View, obj20);
+        return metroImportAll(View, obj20);
       }
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(11);
+      let first;
+      let items1;
+      let message;
+      let previewableMedia;
+      let roundToNearestPixelResult1;
+      let tmp9;
+      let totalMediaCount;
+      const obj = react2;
+      const cResult = obj.c(11);
       ({ previewableMedia, totalMediaCount, message } = arg0);
       const tmp4 = closure_14();
       const sum = native.BADGE_PADDING + 5;
-      const roundToNearestPixelResult = React4.roundToNearestPixel(20 + 2 * native.BADGE_PADDING);
+      const roundToNearestPixelResult = React3.roundToNearestPixel(20 + 2 * native.BADGE_PADDING);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const size = {
+        size = {
           shape: ClipView.CutoutShape.RoundedRect,
           x: 56 - roundToNearestPixelResult + sum,
           y: -sum,
           width: roundToNearestPixelResult,
           height: roundToNearestPixelResult,
-          cornerRadius: React4.roundToNearestPixel(roundToNearestPixelResult / 2),
+          cornerRadius: roundToNearestPixelResult1,
         };
         cResult[0] = size;
-        let first = size;
-        const roundToNearestPixelResult1 = React4.roundToNearestPixel(roundToNearestPixelResult / 2);
+        first = size;
+        roundToNearestPixelResult1 = React3.roundToNearestPixel(roundToNearestPixelResult / 2);
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [first];
         cResult[1] = items;
-        let tmp9 = items;
+        tmp9 = items;
       } else {
         tmp9 = cResult[1];
       }
       if (cResult[2] === message) {
+        let tmp10;
+        let tmp13;
         if (cResult[3] === previewableMedia) {
-          let tmp10 = cResult[4];
+          tmp10 = cResult[4];
         }
         if (cResult[5] !== totalMediaCount) {
           const obj3 = { total: totalMediaCount };
-          const tmp16 = closure_1_8(closure_17, obj3);
+          const tmp16 = metroImportAll(closure_17, obj3);
           cResult[5] = totalMediaCount;
           cResult[6] = tmp16;
-          let tmp13 = tmp16;
+          tmp13 = tmp16;
         } else {
           tmp13 = cResult[6];
         }
         if (cResult[7] === tmp4.container) {
           if (cResult[8] === tmp10) {
+            let tmp17;
             if (cResult[9] === tmp13) {
-              let tmp17 = cResult[10];
+              tmp17 = cResult[10];
             }
             return tmp17;
           }
         }
-        const obj4 = { style: tmp4.container, children: null };
-        const items1 = [tmp10, tmp13];
-        obj4.children = items1;
-        const tmp20 = v65535(View, obj4);
+        const obj4 = { style: tmp4.container, children: items1 };
+        items1 = [tmp10, tmp13];
+        const tmp20 = authStore(View, obj4);
         cResult[7] = tmp4.container;
         cResult[8] = tmp10;
         cResult[9] = tmp13;
         cResult[10] = tmp20;
         tmp17 = tmp20;
       }
-      const obj5 = { cutouts: tmp9, children: null };
-      obj5.children = closure_1_8(closure_19, { previewableMedia, size: 56, message });
-      const tmp12 = closure_1_8(ClipViewDefault, obj5);
+      const obj5 = { cutouts: tmp9, children: metroImportAll(closure_19, { previewableMedia, size: 56, message }) };
+      const tmp11 = ClipViewDefault;
+      const tmp12 = metroImportAll(tmp11, obj5);
       cResult[2] = message;
       cResult[3] = previewableMedia;
       cResult[4] = tmp12;
       tmp10 = tmp12;
     }
   : (arg0) => {
+      let items;
+      let items1;
+      let message;
+      let previewableMedia;
+      let totalMediaCount;
       ({ previewableMedia, totalMediaCount, message } = arg0);
-      const obj = { style: closure_14().container, children: null };
-      const memo = noop.useMemo(() => {
+      const obj = { style: closure_14().container, children: items1 };
+      const memo = react.useMemo(() => {
+        let roundToNearestPixelResult1;
         const BADGE_PADDING = native.BADGE_PADDING;
         const sum = BADGE_PADDING + 5;
         const roundToNearestPixelResult = closure_1_4.roundToNearestPixel(20 + 2 * BADGE_PADDING);
-        const size = {
+        size = {
           shape: ClipView.CutoutShape.RoundedRect,
           x: 56 - roundToNearestPixelResult + sum,
           y: -sum,
           width: roundToNearestPixelResult,
           height: roundToNearestPixelResult,
-          cornerRadius: closure_1_4.roundToNearestPixel(roundToNearestPixelResult / 2),
+          cornerRadius: roundToNearestPixelResult1,
         };
+        roundToNearestPixelResult1 = closure_1_4.roundToNearestPixel(roundToNearestPixelResult / 2);
         return size;
       }, []);
-      const obj2 = { cutouts: null, children: null };
-      const items = [memo];
-      obj2.cutouts = items;
-      const tmp = closure_14();
-      obj2.children = closure_1_8(closure_19, { previewableMedia, size: 56, message });
-      const items1 = [closure_1_8(ClipViewDefault, obj2), closure_1_8(closure_17, { total: totalMediaCount })];
-      obj.children = items1;
-      return v65535(View, obj);
+      const obj2 = { cutouts: items, children: metroImportAll(closure_19, { previewableMedia, size: 56, message }) };
+      items = [memo];
+      const tmp3 = ClipViewDefault;
+      items1 = [metroImportAll(tmp3, obj2), metroImportAll(closure_17, { total: totalMediaCount })];
+      return authStore(View, obj);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(7);
+      let message;
+      let tmp3;
+      let totalMediaCount;
+      const obj = react2;
+      const cResult = obj.c(7);
       ({ totalMediaCount, message } = arg0);
       const first = arg0.previewableMedia[0];
-      let num = 1;
       if (1 === totalMediaCount) {
         if (cResult[0] === first) {
+          let tmp7;
+          if (cResult[1] === message) {
+            tmp7 = cResult[2];
+          }
+          tmp3 = tmp7;
         }
         const obj2 = { previewableMedia: first, size: 64, message };
-        const tmp10 = closure_1_8(closure_19, obj2);
+        const tmp10 = metroImportAll(closure_19, obj2);
         cResult[0] = first;
-        cResult[num] = message;
-        num = 2;
+        cResult[1] = message;
         cResult[2] = tmp10;
+        tmp7 = tmp10;
       } else {
         if (cResult[3] === first) {
           if (cResult[4] === message) {
             if (cResult[5] === totalMediaCount) {
-              let tmp3 = cResult[6];
+              tmp3 = cResult[6];
             }
-            return tmp3;
           }
         }
         const obj3 = { previewableMedia: first, totalMediaCount, message };
-        const tmp6 = closure_1_8(closure_20, obj3);
+        const tmp6 = metroImportAll(closure_20, obj3);
         cResult[3] = first;
         cResult[4] = message;
         cResult[5] = totalMediaCount;
         cResult[6] = tmp6;
         tmp3 = tmp6;
       }
+      return tmp3;
     }
   : (arg0) => {
+      let message;
+      let tmp4;
+      let totalMediaCount;
       ({ totalMediaCount, message } = arg0);
       const first = arg0.previewableMedia[0];
       if (1 === totalMediaCount) {
         const obj2 = { previewableMedia: first, size: 64, message };
-        let tmp4 = closure_1_8(closure_19, obj2);
+        tmp4 = metroImportAll(closure_19, obj2);
       } else {
         const obj = { previewableMedia: first, totalMediaCount, message };
-        tmp4 = closure_1_8(closure_20, obj);
+        tmp4 = metroImportAll(closure_20, obj);
       }
       return tmp4;
     };
-ReactCompilerGating = fn(558);
-let obj12 = { rightAccessoryContainer: { marginLeft: fn(12478).RIGHT_ACCESSORY_LEFT_MARGIN } };
-size = fn(2);
-const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
-
-export const MediaPreviewRightAccessory = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? (message) => {
-      const cResult = c.c(7);
+      const obj = react2;
+      const cResult = obj.c(7);
       message = message.message;
-      let rightAccessoryContainer = closure_15();
-      const previewableMedia = usePreviewableMedia.usePreviewableMedia(message);
-      if (0 === previewableMedia.length) {
-        return null;
-      } else {
+      const tmp2 = closure_15();
+      const obj2 = usePreviewableMedia;
+      const previewableMedia = obj2.usePreviewableMedia(message);
+      let tmp3 = null;
+      if (0 !== previewableMedia.length) {
         if (cResult[0] === message) {
           if (cResult[1] === previewableMedia) {
-            if (cResult[2] === length) {
-              let tmp2 = cResult[3];
+            let tmp4;
+            if (cResult[2] === previewableMedia.length) {
+              tmp4 = cResult[3];
             }
-            if (cResult[4] === rightAccessoryContainer.rightAccessoryContainer) {
+            if (cResult[4] === tmp2.rightAccessoryContainer) {
+              let tmp8;
+              if (cResult[5] === tmp4) {
+                tmp8 = cResult[6];
+              }
+              tmp3 = tmp8;
             }
-            const obj3 = { style: rightAccessoryContainer.rightAccessoryContainer, children: tmp2 };
-            const tmp9 = closure_1_8(View, obj3);
-            rightAccessoryContainer = rightAccessoryContainer.rightAccessoryContainer;
-            cResult[4] = rightAccessoryContainer;
-            cResult[5] = tmp2;
-            cResult[6] = tmp9;
+            const obj3 = { style: tmp2.rightAccessoryContainer, children: tmp4 };
+            const tmp11 = metroImportAll(View, obj3);
+            cResult[4] = tmp2.rightAccessoryContainer;
+            cResult[5] = tmp4;
+            cResult[6] = tmp11;
+            tmp8 = tmp11;
           }
         }
-        const obj4 = { previewableMedia, totalMediaCount: length, message };
-        const tmp5 = closure_1_8(closure_21, obj4);
+        const obj4 = { previewableMedia, totalMediaCount: previewableMedia.length, message };
+        const tmp7 = metroImportAll(closure_21, obj4);
         cResult[0] = message;
         cResult[1] = previewableMedia;
-        cResult[2] = length;
-        cResult[3] = tmp5;
-        tmp2 = tmp5;
+        cResult[2] = previewableMedia.length;
+        cResult[3] = tmp7;
+        tmp4 = tmp7;
       }
+      return tmp3;
     }
   : (message) => {
+      let obj3;
       message = message.message;
       const tmp = closure_15();
-      const previewableMedia = usePreviewableMedia.usePreviewableMedia(message);
+      const obj = usePreviewableMedia;
+      const previewableMedia = obj.usePreviewableMedia(message);
       let tmp2 = null;
       if (0 !== previewableMedia.length) {
-        const obj2 = { style: tmp.rightAccessoryContainer, children: null };
-        const obj3 = { previewableMedia, totalMediaCount: length, message };
-        obj2.children = closure_1_8(closure_21, obj3);
-        tmp2 = closure_1_8(View, obj2);
+        const obj2 = { style: tmp.rightAccessoryContainer, children: metroImportAll(closure_21, obj3) };
+        obj3 = { previewableMedia, totalMediaCount: previewableMedia.length, message };
+        tmp2 = metroImportAll(View, obj2);
       }
       return tmp2;
     };
+size = size_mod;
+const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
+
+export const MediaPreviewRightAccessory = tmp7;

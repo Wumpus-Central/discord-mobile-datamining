@@ -1,38 +1,66 @@
 // discord_app/modules/games/hooks/useGame.tsx
+import Constants from "../../../Constants.tsx";
 import DurationsDefault from "../../../utils/Durations.tsx";
 import GameActionCreators from "../GameActionCreators.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import react from "../../../../_runtime/00019_react.js";
 import GameStore from "../GameStore.tsx";
+import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, c1, c2;
 
-require = fn;
-const initialize = fn(504);
-const obj2 = {
-  getQueryId: fn(1085).QueryIds.GAME,
+const QueryIds = Constants.QueryIds;
+let obj = {
+  getQueryId: QueryIds.GAME,
   failureStaleAfter: 15 * DurationsDefault.Seconds.SECOND,
   get(gameId) {
-    if (null == gameId) {
-      return null;
-    } else if (GameStore.hasNoData(gameId)) {
-      let NO_DATA = require("initialize").NO_DATA;
-    } else {
-      NO_DATA = GameStore.getGame(gameId);
-      if (NO_DATA == null) {
-        NO_DATA = null;
+    let tmp = null;
+    if (null != gameId) {
+      let NO_DATA;
+      if (GameStore.hasNoData(gameId)) {
+        NO_DATA = require("get initialized").NO_DATA;
+      } else {
+        NO_DATA = GameStore.getGame(gameId);
+        if (NO_DATA == null) {
+          NO_DATA = null;
+        }
+      }
+      tmp = NO_DATA;
+    }
+    return tmp;
+  },
+  load: function () {
+    return closure_2(...arguments);
+  },
+  getIsLoading(arg0) {
+    const isFetchingResult = null != arg0 && GameStore.isFetching(arg0);
+    return isFetchingResult;
+  },
+  getError(item) {
+    let error = null;
+    if (null != item) {
+      error = null;
+      if (GameStore.didFetchingFail(item)) {
+        const _Error = Error;
+        const self = this;
+        const self2 = this;
+        error = new Error("Failed to fetch game data");
       }
     }
+    return error;
   },
-  load: null,
-  getIsLoading: null,
-  getError: null,
 };
-let closure_2 = asyncGeneratorStep(async (arg0) => {
+const createFetchStore = get_initialized.createFetchStore;
+let closure_2 = _asyncToGenerator(async (arg0) => {
+  let obj2;
+  let closure_0 = arg0;
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
+  } else if (tmp2 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -53,10 +81,11 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
           const obj4 = { value, done: true };
           return obj4;
         } else if (null != closure_0) {
-          const items = [tmp5];
+          const items = [tmp4];
           c2 = 1;
           c1 = 1;
-          const obj5 = { value: GameActionCreators.fetchGamesWithSupplementalData(items), done: false };
+          const obj5 = { value: obj2.fetchGamesWithSupplementalData(items), done: false };
+          obj2 = GameActionCreators;
           return obj5;
         }
       } else if (arg0 === 1) {
@@ -69,50 +98,21 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       }
       c1 = 3;
       return { value: "IconComponent", done: null };
-    } catch (tmp9) {
-      c1 = tmp;
-      throw tmp9;
+    } catch (tmp8) {
+      c1 = 3;
+      throw tmp8;
     }
   }
 });
-obj2.load = function () {
-  const self = this;
-  const apply = closure_2.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
-obj2.getIsLoading = function getIsLoading(arg0) {
-  let isFetchingResult = null != arg0;
-  if (isFetchingResult) {
-    isFetchingResult = GameStore.isFetching(arg0);
-  }
-  return isFetchingResult;
-};
-obj2.getError = function getError(item) {
-  let error = null;
-  if (null != item) {
-    error = null;
-    if (GameStore.didFetchingFail(item)) {
-      const _Error = Error;
-      error = new Error("Failed to fetch game data");
-    }
-  }
-  return error;
-};
-const fetchStore = initialize.createFetchStore(GameStore, obj2);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/games/hooks/useGame.tsx");
-
-export const useGame = fetchStore;
-export const useGames = ReactCompilerGating.isReactCompilerEnabled()
+const fetchStore = createFetchStore(GameStore, obj);
+const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let tmp2;
+      let tmp3;
       _require = arg0;
-      const cResult = require("c").c(3);
+      const obj = require("react");
+      const cResult = obj.c(3);
       if (cResult[0] !== arg0) {
         const fn = function n() {
           let items = [
@@ -127,18 +127,18 @@ export const useGames = ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = arg0;
         cResult[1] = fn;
         cResult[2] = items;
-        let tmp3 = items;
-        let tmp2 = fn;
+        tmp3 = items;
+        tmp2 = fn;
       } else {
         tmp2 = cResult[1];
         tmp3 = cResult[2];
       }
-      const effect = noop.useEffect(tmp2, tmp3);
+      const effect = react.useEffect(tmp2, tmp3);
     }
   : (arg0) => {
-      closure_0 = arg0;
+      let closure_0 = arg0;
       let items = [arg0];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(() => {
         let items = [
           ...closure_0.map((item) => {
             const items = [item];
@@ -148,3 +148,7 @@ export const useGames = ReactCompilerGating.isReactCompilerEnabled()
         fetchStore.fetchMany.apply(items);
       }, items);
     };
+const result = size.fileFinishedImporting("modules/games/hooks/useGame.tsx");
+
+export const useGame = fetchStore;
+export const useGames = tmp6;

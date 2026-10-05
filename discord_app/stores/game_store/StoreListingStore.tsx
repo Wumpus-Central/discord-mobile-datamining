@@ -1,33 +1,35 @@
 // discord_app/stores/game_store/StoreListingStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import StoreListingRecord from "../../records/StoreListingRecord.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
+let closure_5, closure_6, closure_7, closure_8, locale;
+
 function addRegularStoreListing(id) {
-  let deleteResult = id;
   id = id.id;
-  let id2 = id.sku.id;
+  const id2 = id.sku.id;
   const fromServer = StoreListingRecord.createFromServer(id);
-  if (!tmp2) {
-    if (false === deleteResult.published) {
-      if (null == dependencyMap3[id2]) {
+  const tmp = null != closure_5[id] && !closure_5[id].isSlimDirectoryVersion() && fromServer.isSlimDirectoryVersion();
+  if (!tmp) {
+    if (false === id.published) {
+      if (null == closure_7[id2]) {
         const _Set = Set;
+        const self = this;
+        const self2 = this;
         set = new Set();
-        dependencyMap3[id2] = set;
+        closure_7[id2] = set;
       }
-      id2 = dependencyMap3[id2];
-      id2.add(id);
+      const obj3 = closure_7[id2];
+      obj3.add(id);
     } else {
       closure_8[id2] = id;
     }
-    dependencyMap[id] = fromServer;
-    deleteResult = set.delete(deleteResult.sku.id);
+    closure_5[id] = fromServer;
+    set.delete(id.sku.id);
   }
-  tmp2 =
-    null != dependencyMap[id] && !dependencyMap[id].isSlimDirectoryVersion() && fromServer.isSlimDirectoryVersion();
 }
 function handleUserSettingsStoreUpdate() {
   if (locale === LocaleStore.locale) {
@@ -38,89 +40,99 @@ function handleUserSettingsStoreUpdate() {
     closure_7 = {};
     closure_6 = {};
     const _Set = Set;
-    set = new Set();
+    const self = this;
+    const self2 = this;
+    new Set();
     locale = tmp.locale;
   }
 }
-const dependencyMap = {};
-const dependencyMap2 = {};
-const dependencyMap3 = {};
-let closure_8 = {};
+const hasOwnProperty = {};
+const metroRequire = {};
+const metroImportDefault = {};
+const metroImportAll = {};
 let set = new Set();
-const Store = initializeDefault.Store;
-class StoreListingStore extends Store {}
-const prototype = StoreListingStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(LocaleStore);
-  const items = [LocaleStore];
-  this.syncWith(items, handleUserSettingsStoreUpdate);
-  locale = LocaleStore.locale;
-};
-prototype["get"] = function get(arg0) {
-  return dependencyMap[arg0];
-};
-prototype["getForSKU"] = function getForSKU(arg0, arg1) {
-  if (null != arg1) {
-    const _HermesInternal = HermesInternal;
-    let tmp2 = dependencyMap2["" + arg1 + ":" + arg0];
-  } else {
-    tmp2 = null;
-    if (null != tmp) {
-      tmp2 = dependencyMap[tmp];
+const Store = get_initializedDefault.Store;
+class StoreListingStore extends Store {
+  initialize() {
+    this.waitFor(LocaleStore);
+    const items = [LocaleStore];
+    this.syncWith(items, handleUserSettingsStoreUpdate);
+    locale = LocaleStore.locale;
+  }
+  get(arg0) {
+    return closure_5[arg0];
+  }
+  getForSKU(arg0, arg1) {
+    let tmp2;
+    if (null != arg1) {
+      const _HermesInternal = HermesInternal;
+      tmp2 = closure_6["" + arg1 + ":" + arg0];
+    } else {
+      tmp2 = null;
+      if (null != closure_8[arg0]) {
+        tmp2 = closure_5[tmp];
+      }
     }
+    return tmp2;
   }
-  return tmp2;
-};
-prototype["getUnpublishedForSKU"] = function getUnpublishedForSKU(skuId) {
-  if (null == dependencyMap3[skuId]) {
-    let items = [];
-  } else {
-    const _Array = Array;
-    const mapped = Array.from(tmp).map((item) => dependencyMap[item]);
-    items = mapped.filter(GlobalUtils.isNotNullish);
-    const arr = Array.from(tmp);
+  getUnpublishedForSKU(skuId) {
+    let items;
+    if (null == closure_7[skuId]) {
+      items = [];
+    } else {
+      const _Array = Array;
+      const arr = Array.from(closure_7[skuId]);
+      const mapped = arr.map((item) => closure_1_5[item]);
+      items = mapped.filter(GlobalUtils.isNotNullish);
+    }
+    return items;
   }
-  return items;
-};
-prototype["getForChannel"] = function getForChannel(channelId, skuId) {
-  return dependencyMap2["" + channelId + ":" + skuId];
-};
-prototype["isFetchingForSKU"] = function isFetchingForSKU(arg0) {
-  return set.has(arg0);
-};
-prototype["getStoreListing"] = function getStoreListing(isTestMode) {
-  const self = this;
-  ({ storeListingId, skuId, channelId } = isTestMode);
-  if (isTestMode.isTestMode) {
-    if (null != skuId) {
-      const unpublishedForSKU = self.getUnpublishedForSKU(skuId);
-      if (null != unpublishedForSKU) {
-        if (unpublishedForSKU.length > 0) {
-          return unpublishedForSKU[0];
+  getForChannel(channelId, skuId) {
+    return closure_6["" + channelId + ":" + skuId];
+  }
+  isFetchingForSKU(arg0) {
+    return set.has(arg0);
+  }
+  getStoreListing(isTestMode) {
+    let channelId;
+    let skuId;
+    let storeListingId;
+    const self = this;
+    ({ storeListingId, skuId, channelId } = isTestMode);
+    if (isTestMode.isTestMode) {
+      if (null != skuId) {
+        const unpublishedForSKU = self.getUnpublishedForSKU(skuId);
+        if (null != unpublishedForSKU) {
+          if (unpublishedForSKU.length > 0) {
+            return unpublishedForSKU[0];
+          }
         }
       }
     }
-  }
-  if (null != storeListingId) {
-    return self.get(storeListingId);
-  } else if (null != channelId) {
-    if (null == skuId) {
-      const _Error = Error;
-      const error = new Error("getStoreListing with channel expects a skuId");
-      throw error;
+    if (null != storeListingId) {
+      return self.get(storeListingId);
+    } else if (null != channelId) {
+      if (null == skuId) {
+        const _Error = Error;
+        const self2 = this;
+        const self3 = this;
+        const error = new Error("getStoreListing with channel expects a skuId");
+        throw error;
+      } else {
+        return self.getForChannel(channelId, skuId);
+      }
     } else {
-      return self.getForChannel(channelId, skuId);
+      let forSKU = null;
+      if (null != skuId) {
+        forSKU = self.getForSKU(skuId);
+      }
+      return forSKU;
     }
-  } else {
-    let forSKU = null;
-    if (null != skuId) {
-      forSKU = self.getForSKU(skuId);
-    }
-    return forSKU;
   }
-};
+}
+const prototype = StoreListingStore.prototype;
 StoreListingStore.displayName = "StoreListingStore";
-const storeListingStore = new StoreListingStore(DispatcherDefault, {
+let obj = {
   STORE_LISTINGS_FETCH_START: function handleStoreListingsFetchStart(skuId) {
     set.add(skuId.skuId);
   },
@@ -128,13 +140,15 @@ const storeListingStore = new StoreListingStore(DispatcherDefault, {
     set.delete(skuId.skuId);
   },
   STORE_LISTINGS_FETCH_SUCCESS: function handleStoreListingsFetch(arg0) {
+    const tmp = arg0.storeListings[Symbol.iterator]();
     while (tmp !== undefined) {
       let tmp4 = addRegularStoreListing(tmp2);
       continue;
     }
-    tmp = arg0.storeListings[Symbol.iterator]();
   },
   STORE_LISTING_FETCH_SUCCESS: function handleStoreListingFetch(arg0) {
+    let channelId;
+    let storeListing;
     ({ storeListing, channelId } = arg0);
     if (null != channelId) {
       const fromServer = StoreListingRecord.createFromServer(storeListing);
@@ -145,24 +159,25 @@ const storeListingStore = new StoreListingStore(DispatcherDefault, {
       const id = storeListing.id;
       const id2 = storeListing.sku.id;
       const fromServer1 = StoreListingRecord.createFromServer(storeListing);
+      const tmp =
+        null != closure_5[id] && !closure_5[id].isSlimDirectoryVersion() && fromServer1.isSlimDirectoryVersion();
       if (!tmp) {
         if (false === storeListing.published) {
-          if (null == dependencyMap3[id2]) {
+          if (null == closure_7[id2]) {
             const _Set = Set;
+            const self = this;
+            const self2 = this;
             set = new Set();
-            dependencyMap3[id2] = set;
+            closure_7[id2] = set;
           }
-          dependencyMap3[id2].add(id);
+          const obj = closure_7[id2];
+          obj.add(id);
         } else {
           closure_8[id2] = id;
         }
-        dependencyMap[id] = fromServer1;
+        closure_5[id] = fromServer1;
         set.delete(storeListing.sku.id);
       }
-      tmp =
-        null != dependencyMap[id] &&
-        !dependencyMap[id].isSlimDirectoryVersion() &&
-        fromServer1.isSlimDirectoryVersion();
     }
   },
   USER_SETTINGS_PROTO_UPDATE: handleUserSettingsStoreUpdate,
@@ -178,33 +193,33 @@ const storeListingStore = new StoreListingStore(DispatcherDefault, {
     if (null == giftCode.store_listing) {
       return false;
     } else {
-      let store_listing = giftCode.store_listing;
-      const id2 = store_listing.id;
-      let id = store_listing.sku.id;
+      const store_listing = giftCode.store_listing;
+      const id = store_listing.id;
+      const id2 = store_listing.sku.id;
       const fromServer = StoreListingRecord.createFromServer(store_listing);
+      const tmp =
+        null != closure_5[id] && !closure_5[id].isSlimDirectoryVersion() && fromServer.isSlimDirectoryVersion();
       if (!tmp) {
         if (false === store_listing.published) {
-          if (null == dependencyMap3[id]) {
+          if (null == closure_7[id2]) {
             const _Set = Set;
+            const self = this;
+            const self2 = this;
             set = new Set();
-            dependencyMap3[id] = set;
+            closure_7[id2] = set;
           }
-          id = dependencyMap3[id];
-          id.add(id2);
+          const obj = closure_7[id2];
+          obj.add(id);
         } else {
-          closure_8[id] = id2;
+          closure_8[id2] = id;
         }
-        dependencyMap[id2] = fromServer;
-        store_listing = set.delete(store_listing.sku.id);
+        closure_5[id] = fromServer;
+        set.delete(store_listing.sku.id);
       }
-      tmp =
-        null != dependencyMap[id2] &&
-        !dependencyMap[id2].isSlimDirectoryVersion() &&
-        fromServer.isSlimDirectoryVersion();
     }
   },
-});
-const size = fn(2);
+};
+const storeListingStore = new StoreListingStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("stores/game_store/StoreListingStore.tsx");
 
 export default storeListingStore;

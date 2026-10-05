@@ -1,10 +1,12 @@
 // discord_app/modules/conjure/agent_activity/ConjureSubagentMarks.tsx
-import util from "../../../intl/index.native.tsx";
+import intl2 from "../../../intl/index.native.tsx";
 import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
+let map;
+
 const items = ["snail", "goat", "frog", "bunny", "cat", "caterpillar", "butterfly", "dog", "spider", "bee", "bot"];
-const dependencyMap = {
+let closure_4 = {
   snail() {
     return _modDef3723.ABeVsS;
   },
@@ -46,12 +48,13 @@ export const isConjureSubagentMarkKey = function isConjureSubagentMarkKey(helper
   return items.includes(helperMark);
 };
 export const subagentMarkName = function subagentMarkName(helperMark) {
-  const intl = util.intl;
-  return intl.string(dependencyMap[helperMark]());
+  const intl = intl2.intl;
+  return intl.string(closure_4[helperMark]());
 };
 export const assignSubagentMarkKeys = function assignSubagentMarkKeys(arr) {
-  let length = items;
-  c1 = 0;
+  let length;
+  let closure_0 = items;
+  let c1 = 0;
   let str = arr[0];
   if (str == null) {
     str = "";
@@ -67,8 +70,9 @@ export const assignSubagentMarkKeys = function assignSubagentMarkKeys(arr) {
       length = str.length;
     } while (num < length);
   }
+  map = new Map();
   const item = arr.forEach((item, index) => {
     const result = map.set(item, length[(c1 + index) % length.length]);
   });
-  return new Map();
+  return map;
 };

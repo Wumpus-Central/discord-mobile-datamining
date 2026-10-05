@@ -4,28 +4,36 @@ import DispatcherDefault from "../Dispatcher.tsx";
 import discord_common_AnalyticsUtils from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import TrackedHTTPUtilsDefault from "../utils/TrackedHTTPUtils.tsx";
-import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import fetchConnectedAccounts from "../modules/connections/fetchConnectedAccounts.tsx";
+import postConnectionCallback from "../modules/connections/postConnectionCallback.tsx";
+import _asyncToGenerator_mod from "../../_runtime/metro/00005__asyncToGenerator.js";
 import ConnectedAccountsStore from "../stores/ConnectedAccountsStore.tsx";
+import Constants from "../Constants.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, c4, constants, dependencyMap, importDefault;
 
-require = fn;
-const Constants = fn(1085);
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let _asyncToGenerator = _asyncToGenerator_mod;
 ({
   AbortCodes: hasOwnProperty,
   Endpoints: metroRequire,
-  FRIEND_SYNC_PLATFORM_TYPES: closure_7,
-  AnalyticEvents: closure_8,
+  FRIEND_SYNC_PLATFORM_TYPES: metroImportDefault,
+  AnalyticEvents: metroImportAll,
 } = Constants);
-let closure_9 = new LoggerDefault("ConnectedAccounts");
 const tmp3 = new LoggerDefault("ConnectedAccounts");
-const size = fn(2);
-let result = size.fileFinishedImporting("actions/ConnectedAccountsActionCreators.tsx");
-
-export default {
-  fetch: fn(5565).fetchConnectedAccounts,
+let closure_9 = tmp3;
+let obj = {
+  fetch: fetchConnectedAccounts.fetchConnectedAccounts,
   authorize(arg0) {
-    closure_0 = arg0;
+    let _location;
+    let closure_5;
+    let closure_6;
+    let closure_0 = arg0;
     let obj = arg1;
     if (arg1 === undefined) {
       obj = {};
@@ -33,166 +41,209 @@ export default {
     ({
       location: importDefault,
       twoWayLinkType: dependencyMap,
-      userCode: asyncGeneratorStep,
+      userCode: _asyncToGenerator,
       twoWayLink: ConnectedAccountsStore,
       successRedirect: closure_5,
       handle: closure_6,
     } = obj);
-    return (async () => {
-      tmp5(tmp2[6]).track(constants.CONNECTED_ACCOUNT_INITIATED, { platform_type, location: _location });
+    return (async function () {
+      let _var;
+      let c3;
+      let closure_1;
+      let closure_2;
+      let obj4;
+      dependencyMap = tmp;
+      const obj5 = { platform_type: _var, location: importDefault };
+      const obj8 = tmp4(dependencyMap[6]);
+      obj8.track(constants.CONNECTED_ACCOUNT_INITIATED, obj5);
       const _URLSearchParams = URLSearchParams;
-      const result = closure_1_6.CONNECTIONS_AUTHORIZE(platform_type);
+      const self = this;
+      const self2 = this;
+      const result = closure_1_6.CONNECTIONS_AUTHORIZE(_var);
       const str11 = new URLSearchParams();
-      if (null != asyncGeneratorStep) {
-        str11.append("two_way_user_code", tmp54);
+      if (null != _asyncToGenerator) {
+        str11.append("two_way_user_code", tmp51);
       }
-      if (null != hasOwnProperty) {
-        str11.append("success_redirect", tmp16);
+      if (null != closure_5) {
+        str11.append("success_redirect", tmp15);
       }
       if (null != dependencyMap) {
-        str11.append("two_way_link_type", tmp18);
+        str11.append("two_way_link_type", tmp17);
         str11.append("two_way_link", "true");
       } else if (null != ConnectedAccountsStore) {
         const _String = String;
-        str11.append("two_way_link", String(tmp19));
+        str11.append("two_way_link", String(tmp18));
       }
-      if (null != timestampProducer) {
-        str11.append("handle", tmp23);
+      if (null != closure_6) {
+        str11.append("handle", tmp22);
       }
-      const text = `${tmp49}?`;
-      const text1 = `${tmp49}?${str11.toString()}`;
-      const HTTP = platform_type(tmp2[4]).HTTP;
-      const obj6 = { url: text1, oldFormErrors: true, rejectWithError: null };
-      tmp5(tmp2[6]);
-      obj6.rejectWithError = platform_type(tmp2[4]).rejectWithMigratedError();
-      await HTTP.get(obj6);
-      closure_129_0 = value;
-      const url = closure_129_0.body.url;
-      platform_type = url;
+      const text = `${tmp48}?`;
+      const text1 = `${tmp48}?${str11.toString()}`;
+      const HTTP = _var(dependencyMap[4]).HTTP;
+      const obj6 = { url: text1, oldFormErrors: true, rejectWithError: obj4.rejectWithMigratedError() };
+      const get = HTTP.get;
+      obj4 = _var(dependencyMap[4]);
+      await get(obj6);
+      _var = value;
+      const url = _var.body.url;
+      const tmp38 = _var(dependencyMap[7]);
+      _var = url;
+      const getCallbackParamsFromURL = tmp38.getCallbackParamsFromURL;
       if (url == null) {
-        platform_type = "";
+        _var = "";
       }
-      state = platform_type(tmp2[7]).getCallbackParamsFromURL(platform_type).state;
+      const state = getCallbackParamsFromURL(_var).state;
       if (null != state) {
         const result1 = c4.addPendingAuthorizedState(state);
       }
-      return closure_129_0;
+      return _var;
     })();
   },
-  callback: fn(5566).postConnectionCallback,
+  callback: postConnectionCallback.postConnectionCallback,
   connect(arg0, arg1, name, location, friend_sync) {
+    let obj;
+    let obj2;
+    let obj5;
+    const tmp2 = TrackedHTTPUtilsDefault;
     const request = {
-      url: timestampProducer.CONNECTION(arg0, arg1),
-      body: null,
-      context: null,
+      url: metroRequire.CONNECTION(arg0, arg1),
+      body: obj,
+      context: { location },
       oldFormErrors: true,
-      trackedActionData: null,
-      rejectWithError: null,
+      trackedActionData: obj2,
+      rejectWithError: obj5.rejectWithMigratedError(),
     };
-    const obj2 = { name, friend_sync: null };
+    const put = tmp2.put;
+    obj = { name, friend_sync };
     friend_sync = undefined;
     if (friend_sync != null) {
       friend_sync = friend_sync.friend_sync;
     }
     if (friend_sync == null) {
-      friend_sync = set.has(arg0);
+      friend_sync = metroImportDefault.has(arg0);
     }
-    obj2.friend_sync = friend_sync;
-    request.body = obj2;
-    request.context = { location };
-    const obj3 = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
-    const obj = TrackedHTTPUtilsDefault;
-    obj3.properties = { name, friend_sync: set.has(arg0) };
-    request.trackedActionData = obj3;
-    const obj4 = { name, friend_sync: set.has(arg0) };
-    request.rejectWithError = HTTPUtils.rejectWithMigratedError();
-    return obj.put(request);
+    obj2 = {
+      event: discord_common_AnalyticsUtils.NetworkActionNames.USER_CONNECTIONS_UPDATE,
+      properties: { name, friend_sync: metroImportDefault.has(arg0) },
+    };
+    ({ name, friend_sync: metroImportDefault.has(arg0) });
+    obj5 = HTTPUtils;
+    return put(request);
   },
   disconnect(arg0, arg1) {
+    let obj2;
     const HTTP = HTTPUtils.HTTP;
+    const del = HTTP.del;
     const obj = {
-      url: timestampProducer.CONNECTION(arg0, arg1),
+      url: metroRequire.CONNECTION(arg0, arg1),
       oldFormErrors: true,
-      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+      rejectWithError: obj2.rejectWithMigratedError(),
     };
-    return HTTP.del(obj);
+    obj2 = HTTPUtils;
+    return del(obj);
   },
   refresh(arg0, arg1) {
+    let obj2;
     const HTTP = HTTPUtils.HTTP;
+    const post = HTTP.post;
     const obj = {
-      url: timestampProducer.CONNECTION_REFRESH(arg0, arg1),
+      url: metroRequire.CONNECTION_REFRESH(arg0, arg1),
       oldFormErrors: true,
-      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+      rejectWithError: obj2.rejectWithMigratedError(),
     };
-    return HTTP.post(obj);
+    obj2 = HTTPUtils;
+    return post(obj);
   },
   setVisibility(type, id, inProgressVisibility) {
-    return this.update(type, id, { visibility: 1 === inProgressVisibility });
+    const obj = { visibility: 1 === inProgressVisibility };
+    return this.update(type, id, obj);
   },
   setMetadataVisibility(type, id, inProgressMetadataVisibility) {
-    return this.update(type, id, { metadata_visibility: 1 === inProgressMetadataVisibility });
+    const obj = { metadata_visibility: 1 === inProgressMetadataVisibility };
+    return this.update(type, id, obj);
   },
   setFriendSync(type, id, enabled) {
-    return this.update(type, id, { friend_sync: enabled });
+    const obj = { friend_sync: enabled };
+    return this.update(type, id, obj);
   },
   setShowActivity(type, id, show_activity) {
     const platformType = type;
     const showActivity = show_activity;
-    return this.update(type, id, { show_activity }).then((result) => {
-      DispatcherDefault.dispatch({ type: "USER_CONNECTION_UPDATE", platformType, id, showActivity });
+    let obj = { show_activity };
+    const updateResult = this.update(type, id, obj);
+    return updateResult.then((result) => {
+      const obj = DispatcherDefault;
+      const obj2 = { type: "USER_CONNECTION_UPDATE", platformType, id, showActivity };
+      obj.dispatch(obj2);
       return result;
     });
   },
   update(arg0, arg1, body) {
+    let obj;
+    let obj2;
+    let obj4;
+    const tmp = TrackedHTTPUtilsDefault;
     const request = {
-      url: timestampProducer.CONNECTION(arg0, arg1),
+      url: metroRequire.CONNECTION(arg0, arg1),
       body,
       oldFormErrors: true,
-      trackedActionData: null,
-      rejectWithError: null,
+      trackedActionData: obj,
+      rejectWithError: obj4.rejectWithMigratedError(),
     };
-    const obj2 = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
+    const patch = tmp.patch;
+    obj = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: obj2 };
+    obj2 = {};
     const merged = Object.assign(body);
-    obj2.properties = {};
-    request.trackedActionData = obj2;
-    const obj = TrackedHTTPUtilsDefault;
-    const obj3 = {};
-    request.rejectWithError = HTTPUtils.rejectWithMigratedError();
-    return obj.patch(request);
+    obj4 = HTTPUtils;
+    return patch(request);
   },
   joinServer(id, arg1) {
+    let closure_1;
+    let integrationId;
+    let obj4;
     _require = id;
     importDefault = arg1;
-    DispatcherDefault.dispatch({ type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: id, joining: true });
-    const HTTP = require("HTTPUtils").HTTP;
-    let obj3 = { url: closure_6.INTEGRATION_JOIN(id), oldFormErrors: true, rejectWithError: null };
+    let obj = DispatcherDefault;
     let obj2 = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: id, joining: true };
-    obj3.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
-    HTTP.post(obj3, (ok) => {
-      DispatcherDefault.dispatch({ type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId, joining: false });
+    obj.dispatch(obj2);
+    const HTTP = require("HTTPUtils").HTTP;
+    let obj3 = {
+      url: closure_6.INTEGRATION_JOIN(id),
+      oldFormErrors: true,
+      rejectWithError: obj4.rejectWithMigratedError(),
+    };
+    const post = HTTP.post;
+    obj4 = require("HTTPUtils");
+    post(obj3, (ok) => {
+      let message;
+      const obj = DispatcherDefault;
+      const obj2 = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId, joining: false };
+      obj.dispatch(obj2);
       if (!ok.ok) {
-        const obj3 = { type: "USER_CONNECTIONS_INTEGRATION_JOINING_ERROR", integrationId, error: null };
-        let message;
+        const obj3 = { type: "USER_CONNECTIONS_INTEGRATION_JOINING_ERROR", integrationId, error: message };
+        message = undefined;
+        const dispatch = DispatcherDefault.dispatch;
+        DispatcherDefault;
         if (!ok.hasErr) {
           message = ok.body.message;
         }
-        obj3.error = message;
-        DispatcherDefault.dispatch(obj3);
+        dispatch(obj3);
         if (closure_1 != null) {
           closure_1();
         }
-        const tmpResult = DispatcherDefault;
       }
-      const obj2 = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId, joining: false };
     });
   },
   refreshAccessToken(type, id) {
-    closure_1 = id;
+    let closure_1 = id;
     return (async () => {
+      let closure_0;
+      let closure_1;
+      let obj11;
       if (constants === 2) {
         constants = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp6 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -202,7 +253,9 @@ export default {
           return { value: "IconComponent", done: null };
         }
       } else {
+        let c3;
         try {
+          let access_token;
           constants = 2;
           if (0 === c4) {
             if (arg0 === 1) {
@@ -213,34 +266,35 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              type = tmp7;
-              let access_token;
+              type = tmp4;
+              access_token = undefined;
               c3 = 1;
-              const HTTP = type(tmp30[4]).HTTP;
+              const HTTP = type(closure_2[4]).HTTP;
               const obj4 = {
-                url: closure_1_6.CONNECTION_ACCESS_TOKEN(type, tmp3),
+                url: closure_1_6.CONNECTION_ACCESS_TOKEN(type, tmp),
                 oldFormErrors: true,
-                rejectWithError: type(tmp30[4]).rejectWithMigratedError(),
+                rejectWithError: obj11.rejectWithMigratedError(),
               };
+              const get = HTTP.get;
+              obj11 = type(closure_2[4]);
               c4 = 2;
               constants = 1;
-              const obj6 = { value: HTTP.get(obj4), done: false };
+              const obj6 = { value: get(obj4), done: false };
               return obj6;
             }
-          } else if (1 === tmp7) {
+          } else if (1 === c4) {
             c3 = 0;
-            closure_128_1 = tmp30;
-            if (closure_128_1.body.code === constants.CONNECTION_REVOKED) {
+            if (closure_2.body.code === constants.CONNECTION_REVOKED) {
               const obj7 = {
                 type: "USER_CONNECTION_UPDATE",
                 platformType: closure_129_0,
                 id: closure_129_1,
                 revoked: true,
               };
-              tmp3(tmp30[11]).dispatch(obj7);
-              const obj5 = tmp3(tmp30[11]);
+              const obj5 = closure_2(closure_2[11]);
+              obj5.dispatch(obj7);
             }
-            throw closure_128_1;
+            throw closure_2;
           } else if (arg0 === 1) {
             constants = 3;
             throw value;
@@ -257,125 +311,98 @@ export default {
               id: closure_129_1,
               accessToken: access_token,
             };
-            tmp3(tmp30[11]).dispatch(obj9);
+            const obj = tmp(closure_2[11]);
+            obj.dispatch(obj9);
             c3 = 0;
             constants = 3;
             const obj10 = { value: access_token, done: true };
             return obj10;
           }
-        } catch (tmp30) {
-          if (tmp4 === c3) {
-            constants = tmp2;
-            throw tmp30;
+        } catch (tmp27) {
+          closure_2 = tmp27;
+          if (0 === c3) {
+            constants = 3;
+            throw tmp27;
           } else {
-            c4 = tmp;
+            c4 = 1;
           }
         }
       }
     })();
   },
   linkDispatchAuthCallback(arg0, arg1) {
+    let obj;
+    let obj3;
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: timestampProducer.CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(arg0),
-      body: null,
+      url: metroRequire.CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(arg0),
+      body: obj,
       oldFormErrors: true,
-      rejectWithError: null,
+      rejectWithError: obj3.rejectWithMigratedError(),
     };
+    const post = HTTP.post;
+    obj = {};
     const merged = Object.assign(arg1);
-    request.body = {};
-    request.rejectWithError = HTTPUtils.rejectWithMigratedError();
-    return HTTP.post(request);
+    obj3 = HTTPUtils;
+    return post(request);
   },
-  completeTwoWayLink(arg0, location, _location, arg3, arg4) {
-    closure_0 = arg0;
-    closure_1 = location;
-    closure_2 = _location;
-    asyncGeneratorStep = arg3;
-    closure_4 = arg4;
+  completeTwoWayLink(body, _location, _location2, body2, arg4) {
+    let closure_0 = body;
+    let closure_1 = _location;
+    let closure_2 = _location2;
+    _asyncToGenerator = body;
+    let closure_4 = arg4;
     return (async () => {
-      if (v3 === 2) {
-        v3 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
+      let tmp6Result;
+      let v3;
+      if (null != _location) {
+        const obj3 = v3(code[7]);
+        const callbackParamsFromURL = obj3.getCallbackParamsFromURL(tmp21);
+        const error = callbackParamsFromURL.error;
+        const tmp6 = v3;
+        if (null == error) {
+          const obj5 = { code, state, two_way_link_code: tmp9, token_redirect_uri };
+          let c1 = 1;
+          v3 = 1;
+          const obj6 = { value: tmp6Result.postConnectionCallback(body, obj5), done: false };
+          tmp6Result = tmp6(code[8]);
+          return obj6;
         } else {
-          return { value: "IconComponent", done: null };
+          const obj7 = { error, errorDescription: tmp10 };
+          logger.error("Two-way link: missing authorize code", obj7);
         }
       } else {
-        try {
-          v3 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
-              v3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              v3 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              let tmp12 = closure_1;
-              if (null != closure_1) {
-                const callbackParamsFromURL = v3(code[7]).getCallbackParamsFromURL(tmp12);
-                const error = callbackParamsFromURL.error;
-                if (tmp13 == error) {
-                  const obj5 = { code, state, two_way_link_code: tmp10, token_redirect_uri };
-                  c1 = 1;
-                  v3 = 1;
-                  const obj6 = { value: tmp7(code[8]).postConnectionCallback(closure_0, obj5), done: false };
-                  return obj6;
-                } else {
-                  tmp12 = logger;
-                  const obj7 = { error, errorDescription: tmp11 };
-                  logger.error("Two-way link: missing authorize code", obj7);
-                }
-                const obj3 = v3(code[7]);
-                tmp7 = v3;
-              } else {
-                logger.error("Two-way link: missing authorize location");
-              }
-              v3 = 3;
-            }
-          } else if (arg0 === 1) {
-            v3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            v3 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
-          } else {
-            v3 = 3;
-            const obj = { value, done: true };
-            return obj;
-          }
-        } catch (tmp19) {
-          v3 = tmp;
-          throw tmp19;
-        }
+        logger.error("Two-way link: missing authorize location");
       }
+      await "IconComponent";
+      return value;
     })();
   },
   sessionHandoff(arg0, state, code, openid_params, iss) {
+    let obj;
+    let obj3;
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: timestampProducer.CONNECTIONS_SESSION_HANDOFF(arg0),
-      body: { state, code, openid_params, iss },
+      url: metroRequire.CONNECTIONS_SESSION_HANDOFF(arg0),
+      body: obj,
       oldFormErrors: true,
-      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+      rejectWithError: obj3.rejectWithMigratedError(),
     };
-    return HTTP.post(request);
+    const post = HTTP.post;
+    obj = { state, code, openid_params, iss };
+    obj3 = HTTPUtils;
+    return post(request);
   },
   getHandoffStatus(arg0, state) {
     const str = new URLSearchParams();
     str.append("state", state);
-    const result = timestampProducer.CONNECTIONS_SESSION_HANDOFF(arg0);
+    const result = metroRequire.CONNECTIONS_SESSION_HANDOFF(arg0);
     const combined = "" + result + "?" + str.toString();
     const HTTP = HTTPUtils.HTTP;
     const request = { url: combined, body: { state }, rejectWithError: true };
     return HTTP.get(request);
   },
 };
+let result = size.fileFinishedImporting("actions/ConnectedAccountsActionCreators.tsx");
+
+export default obj;

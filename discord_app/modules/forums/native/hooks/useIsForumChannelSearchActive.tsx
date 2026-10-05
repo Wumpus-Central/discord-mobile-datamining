@@ -1,21 +1,20 @@
 // discord_app/modules/forums/native/hooks/useIsForumChannelSearchActive.tsx
 import ForumSearchStore from "../../ForumSearchStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/forums/native/hooks/useIsForumChannelSearchActive.tsx");
-
-export const useIsForumChannelSearchActive = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
       _require = arg0;
-      const cResult = require("c").c(4);
-      const obj = require("c");
       const tmp = _require;
-      let canSearchForumPostsByChannelId =
-        require("useCanSearchForumPostsByChannelId").useCanSearchForumPostsByChannelId(arg0);
+      const obj = require("react");
+      const cResult = obj.c(4);
+      const obj2 = require("useCanSearchForumPostsByChannelId");
+      let canSearchForumPostsByChannelId = obj2.useCanSearchForumPostsByChannelId(arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ForumSearchStore];
         cResult[0] = items;
@@ -43,13 +42,17 @@ export const useIsForumChannelSearchActive = ReactCompilerGating.isReactCompiler
       return canSearchForumPostsByChannelId;
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
-      let canSearchForumPostsByChannelId =
-        require("useCanSearchForumPostsByChannelId").useCanSearchForumPostsByChannelId(arg0);
-      require("initialize");
+      const obj = require("useCanSearchForumPostsByChannelId");
+      let canSearchForumPostsByChannelId = obj.useCanSearchForumPostsByChannelId(arg0);
+      require("get initialized");
       [][0] = arg0;
       if (canSearchForumPostsByChannelId) {
         canSearchForumPostsByChannelId = null != tmp3;
       }
       return canSearchForumPostsByChannelId;
     };
+const result = size.fileFinishedImporting("modules/forums/native/hooks/useIsForumChannelSearchActive.tsx");
+
+export const useIsForumChannelSearchActive = tmp2;

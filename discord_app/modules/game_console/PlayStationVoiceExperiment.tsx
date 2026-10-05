@@ -1,16 +1,17 @@
 // discord_app/modules/game_console/PlayStationVoiceExperiment.tsx
 import apex_ApexExperimentDefault from "../experiments/apex/ApexExperiment.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
+let obj2;
 const obj = {
   kind: "user",
   name: "2026-03-churro",
   defaultConfig: { allowPlayStationStaging: false },
-  variations: null,
+  variations: obj2,
 };
-const obj2 = { 1: null };
+obj2 = { 1: null };
 obj2[1] = { allowPlayStationStaging: true };
-obj.variations = obj2;
-const size = fn(2);
+const tmp2 = apex_ApexExperimentDefault(obj);
 const result = size.fileFinishedImporting("modules/game_console/PlayStationVoiceExperiment.tsx");
 
-export const PlayStationVoiceExperiment = apex_ApexExperimentDefault(obj);
+export const PlayStationVoiceExperiment = tmp2;

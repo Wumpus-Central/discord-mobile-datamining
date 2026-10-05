@@ -2,11 +2,12 @@
 import ApplicationStore from "../applications/ApplicationStore.tsx";
 import UserProfileStore from "../user_profile/UserProfileStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_dms/getAppDMApplication.tsx");
 
 export const getAppDMApplication = function getAppDMApplication(channel) {
+  let tmp7;
   let recipientId;
   if (channel.isPrivate()) {
     recipientId = channel.getRecipientId();
@@ -30,10 +31,11 @@ export const getAppDMApplication = function getAppDMApplication(channel) {
         id = application.id;
       }
     }
-    const tmp6 = id;
+    tmp7 = id;
   }
+  const getApplication = ApplicationStore.getApplication;
   if (appIdForBotUserId == null) {
-    appIdForBotUserId = tmp6;
+    appIdForBotUserId = tmp7;
   }
-  return ApplicationStore.getApplication(appIdForBotUserId);
+  return getApplication(appIdForBotUserId);
 };

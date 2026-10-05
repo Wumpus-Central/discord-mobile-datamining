@@ -1,27 +1,31 @@
 // discord_app/modules/messages/native/hooks/useChannelLoading.tsx
 import hooks_useMountEffectDefault from "../../../../../discord_common/js/shared/hooks/useMountEffect.tsx";
 import messages_MessagesUtils from "../MessagesUtils.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import ChannelLatestMessageLoadingStatsManagerDefault from "../ChannelLatestMessageLoadingStatsManager.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/messages/native/hooks/useChannelLoading.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channelId) => {
-      const cResult = channelId(oldestUnreadMessageId[3]).c(13);
+      let first;
+      let first1;
+      let oldestUnreadMessageId;
+      let tmp = oldestUnreadMessageId;
+      let obj = channelId(oldestUnreadMessageId[3]);
+      const cResult = obj.c(13);
       channelId = channelId.channelId;
       const jumpTargetId = channelId.jumpTargetId;
       oldestUnreadMessageId = channelId.oldestUnreadMessageId;
       const shouldJumpToOriginalPost = channelId.shouldJumpToOriginalPost;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o() {
-          return new jumpTargetId(oldestUnreadMessageId[4])("Messages");
+          const tmp = new jumpTargetId(oldestUnreadMessageId[4])("Messages");
+          return tmp;
         };
         cResult[0] = fn;
-        let first = fn;
+        first = fn;
       } else {
         first = cResult[0];
       }
@@ -30,22 +34,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] === first1) {
           if (cResult[3] === jumpTargetId) {
             if (cResult[4] === oldestUnreadMessageId) {
+              let tmp5;
               if (cResult[5] === shouldJumpToOriginalPost) {
-                let tmp5 = cResult[6];
+                tmp5 = cResult[6];
               }
-              closure_5 = tmp5;
+              let closure_5 = tmp5;
               if (cResult[7] === first1) {
+                let tmp6;
                 if (cResult[8] === tmp5) {
-                  let tmp6 = cResult[9];
+                  tmp6 = cResult[9];
                 }
-                jumpTargetId(oldestUnreadMessageId[6])(tmp6);
+                jumpTargetId(tmp[6])(tmp6);
                 if (cResult[10] === first1) {
+                  let tmp9;
                   if (cResult[11] === tmp5) {
-                    let tmp9 = cResult[12];
+                    tmp9 = cResult[12];
                   }
                   return tmp9;
                 }
-                const obj2 = { channelLatestMessageLoadingStatsManager: first1, startOrCancelLatestMessagesLoad: tmp5 };
+                let obj2 = { channelLatestMessageLoadingStatsManager: first1, startOrCancelLatestMessagesLoad: tmp5 };
                 cResult[10] = first1;
                 cResult[11] = tmp5;
                 cResult[12] = obj2;
@@ -67,13 +74,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const fn2 = function h(first1) {
         const obj = messages_MessagesUtils;
-        const result = obj.startOrCancelChannelLatestMessagesLoad({
+        const obj2 = {
           jumpTargetId,
           oldestUnreadMessageId,
           shouldJumpToOriginalPost: shouldJumpToOriginalPost(first1),
           channelId,
           tracker: first1,
-        });
+        };
+        const result = obj.startOrCancelChannelLatestMessagesLoad(obj2);
       };
       cResult[1] = channelId;
       cResult[2] = first1;
@@ -84,6 +92,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn2;
     }
   : (arg0) => {
+      let channelId;
+      let first;
+      let jumpTargetId;
+      let oldestUnreadMessageId;
       ({
         channelId: require,
         jumpTargetId: importDefault,
@@ -92,33 +104,42 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } = arg0);
       let channelLatestMessageLoadingStatsManager;
       channelLatestMessageLoadingStatsManager = _slicedToArray(
-        channelLatestMessageLoadingStatsManager.useState(() => new jumpTargetId(oldestUnreadMessageId[4])("Messages")),
+        channelLatestMessageLoadingStatsManager.useState(() => {
+          const tmp = new ChannelLatestMessageLoadingStatsManagerDefault("Messages");
+          return tmp;
+        }),
         1,
       )[0];
       hooks_useMountEffectDefault(() => {
         const obj = messages_MessagesUtils;
-        const result = obj.startOrCancelChannelLatestMessagesLoad({
-          jumpTargetId,
-          oldestUnreadMessageId,
+        const obj2 = {
+          jumpTargetId: importDefault,
+          oldestUnreadMessageId: dependencyMap,
           shouldJumpToOriginalPost: _slicedToArray(false),
-          channelId,
+          channelId: require,
           tracker,
-        });
+        };
+        const result = obj.startOrCancelChannelLatestMessagesLoad(obj2);
         return () => {
           first.cancel();
         };
       });
-      return {
+      let obj = {
         channelLatestMessageLoadingStatsManager,
         startOrCancelLatestMessagesLoad(arg0) {
           const obj = messages_MessagesUtils;
-          const result = obj.startOrCancelChannelLatestMessagesLoad({
-            jumpTargetId,
-            oldestUnreadMessageId,
+          const obj2 = {
+            jumpTargetId: importDefault,
+            oldestUnreadMessageId: dependencyMap,
             shouldJumpToOriginalPost: _slicedToArray(arg0),
-            channelId,
+            channelId: require,
             tracker,
-          });
+          };
+          const result = obj.startOrCancelChannelLatestMessagesLoad(obj2);
         },
       };
+      return obj;
     };
+let result = size.fileFinishedImporting("modules/messages/native/hooks/useChannelLoading.tsx");
+
+export default tmp2;

@@ -1,96 +1,114 @@
 // discord_app/components_native/channel_settings/ChannelSettingsInstantInvites.tsx
+import react_native from "../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../Constants.tsx";
 import useSafeAreaInsetsDefault from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
+import FastestListDefault from "../../modules/fastest_list/FastestList.android.tsx";
 import InstantInvite from "../../modules/guild_instant_invites/native/InstantInvite.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
-import noop from "../../../_runtime/metro/00019__.js";
+import AssetRegistryDefault from "../../../_runtime/10687_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../_runtime/10688_AssetRegistry.js";
+import InstantInviteSelfMeasurerDefault from "../../modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../_runtime/00019_react.js";
 import ChannelSettingsStore from "../../stores/ChannelSettingsStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
+import Fragment from "../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 const InstantInviteDefault = InstantInvite;
+let _require, dependencyMap, invites, tmp2;
 
-const FastestListDefault = tmp2(6552);
-const _modDef10687 = tmp2(10687);
-const _modDef10688 = tmp2(10688);
-const InstantInviteSelfMeasurerDefault = tmp2(16999);
-require = fn;
-const View = fn(17).View;
-const ChannelSettingsSections = fn(1085).ChannelSettingsSections;
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  content: {
-    paddingHorizontal: nativeDefault.space.PX_16,
-    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
-    flex: 1,
-  },
-  gap: null,
-};
-let obj3 = {
+let c10;
+let c9;
+let obj2;
+let obj3;
+const View = react_native.View;
+const ChannelSettingsSections = Constants.ChannelSettingsSections;
+({ jsx: c9, jsxs: c10 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { content: obj2, gap: obj3 };
+obj2 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   flex: 1,
 };
-obj2.gap = { height: nativeDefault.space.PX_16 };
-let closure_11 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj4 = { height: nativeDefault.space.PX_16 };
-const size = fn(2);
-const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsInstantInvites.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+createStyles = createStyles.createStyles;
+obj3 = { height: nativeDefault.space.PX_16 };
+let closure_11 = createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = require("c").c(41);
+      let arr3;
+      let arr6;
+      let gap;
+      let intl;
+      let intl2;
+      let loading;
+      let stateFromStores;
+      let tmp10;
+      let tmp13;
+      let tmp14;
+      let tmp19;
+      let tmp7;
+      let tmp8;
+      let tmp9;
+      const tmp = _require;
+      let obj = require("react");
+      const cResult = obj.c(41);
       const tmp4 = closure_11();
       _require = tmp4;
       const bottom = require("useSafeAreaInsets")().bottom;
-      let obj = require("c");
-      [r10021, importDefault] = noop.useState(undefined);
+      [tmp7, importDefault] = arr6(react.useState(undefined), 2);
+      arr6(react.useState(undefined), 2);
       if (cResult[0] !== tmp4.gap.height) {
         const fn = function c(arg0) {
           importDefault(arg0 + gap.gap.height);
         };
         cResult[0] = tmp4.gap.height;
         cResult[1] = fn;
+        tmp8 = fn;
+      } else {
+        tmp8 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelSettingsStore];
         class L {
           constructor() {
-            return closure_1_6.getChannel();
+            return ChannelSettingsStore.getChannel();
           }
         }
         cResult[2] = items;
         cResult[3] = L;
-        let tmp8 = L;
-        let tmp7 = items;
+        tmp10 = L;
+        tmp9 = items;
       } else {
-        tmp7 = cResult[2];
-        tmp8 = cResult[3];
+        tmp9 = cResult[2];
+        tmp10 = cResult[3];
       }
-      let tmp5 = _slicedToArray(noop.useState(undefined), 2);
-      stateFromStores = require("initialize").useStateFromStores(tmp7, tmp8);
+      const tmpResult = tmp(stateFromStores[12]);
+      stateFromStores = tmpResult.useStateFromStores(tmp9, tmp10);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ChannelSettingsStore];
         class F {
           constructor() {
-            return closure_1_6.getInvites();
+            return ChannelSettingsStore.getInvites();
           }
         }
         cResult[4] = items1;
         cResult[5] = F;
-        let tmp12 = F;
-        let tmp11 = items1;
+        tmp14 = F;
+        tmp13 = items1;
       } else {
-        tmp11 = cResult[4];
-        tmp12 = cResult[5];
+        tmp13 = cResult[4];
+        tmp14 = cResult[5];
       }
-      const tmpResult = require("initialize");
-      const stateFromStoresObject = require("initialize").useStateFromStoresObject(tmp11, tmp12);
+      const tmpResult3 = tmp(stateFromStores[12]);
+      const stateFromStoresObject = tmpResult3.useStateFromStoresObject(tmp13, tmp14);
       ({ invites, loading } = stateFromStoresObject);
       if (cResult[6] !== invites) {
+        let tmp17;
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           const fn2 = function j(inviter, inviter2) {
@@ -116,151 +134,497 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = fn2;
           class F {
             constructor() {
-              return closure_1_6.getInvites();
+              return ChannelSettingsStore.getInvites();
             }
           }
         } else {
-          const tmp15 = cResult[8];
+          tmp17 = cResult[8];
         }
         class F {
           constructor() {
-            return closure_1_6.getInvites();
+            return ChannelSettingsStore.getInvites();
           }
         }
         const values = Object.values(invites);
-        const sorted = values.sort(tmp15);
+        const sorted = values.sort(tmp17);
         cResult[6] = invites;
         cResult[7] = sorted;
+        arr3 = sorted;
       } else {
-        const _Symbol2 = Symbol;
+        arr3 = cResult[7];
+      }
+      if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+        const items2 = [ChannelStore];
         class F {
           constructor() {
-            return closure_1_6.getInvites();
+            return ChannelSettingsStore.getInvites();
           }
         }
-        if (cResult[10] !== stateFromStores) {
-          class M {
-            constructor() {
-              if (null != closure_2) {
-                tmp2 = closure_7;
-                sortedLinkedChannelsForGuild = closure_7.getSortedLinkedChannelsForGuild(tmp.guild_id);
-                found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);
-              } else {
-                found = [];
-              }
-              return found;
-            }
-          }
-          cResult[10] = stateFromStores;
-          class F {
-            constructor() {
-              return closure_1_6.getInvites();
-            }
-          }
-          cResult[11] = M;
-        } else {
-          class M {
-            constructor() {
-              if (null != closure_2) {
-                tmp2 = closure_7;
-                sortedLinkedChannelsForGuild = closure_7.getSortedLinkedChannelsForGuild(tmp.guild_id);
-                found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);
-              } else {
-                found = [];
-              }
-              return found;
-            }
-          }
-        }
-        const stateFromStoresArray = tmp(tmp2[12]).useStateFromStoresArray(tmp19, M);
-        if (cResult[12] === stateFromStoresArray) {
-          class M {
-            constructor() {
-              if (null != closure_2) {
-                tmp2 = closure_7;
-                sortedLinkedChannelsForGuild = closure_7.getSortedLinkedChannelsForGuild(tmp.guild_id);
-                found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);
-              } else {
-                found = [];
-              }
-              return found;
-            }
-          }
-        }
-        const _Symbol3 = Symbol;
-        if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-          class P {
-            constructor(arg0) {
-              obj = { type: "invite", data: arg0 };
-              return obj;
-            }
-          }
-          cResult[15] = P;
-          class F {
-            constructor() {
-              return closure_1_6.getInvites();
-            }
-          }
-        } else {
-          class P {
-            constructor(arg0) {
-              obj = { type: "invite", data: arg0 };
-              return obj;
-            }
-          }
-        }
-        const _Symbol4 = Symbol;
-        if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-          class R {
-            constructor(arg0) {
-              obj = { type: "channel", data: arg0 };
-              return obj;
-            }
-          }
-          cResult[16] = R;
-          class F {
-            constructor() {
-              return closure_1_6.getInvites();
-            }
-          }
-        } else {
-          class R {
-            constructor(arg0) {
-              obj = { type: "channel", data: arg0 };
-              return obj;
-            }
-          }
-        }
-        const items2 = [];
-        const tmpResult4 = tmp(tmp2[12]);
-        HermesBuiltin.arraySpread(
-          stateFromStoresArray.map(tmp21),
-          HermesBuiltin.arraySpread(cResult[7].map(stateFromStoresArray.map), 0),
-        );
-        cResult[12] = stateFromStoresArray;
-        cResult[13] = cResult[7];
-        cResult[14] = items2;
-        const arraySpreadResult = HermesBuiltin.arraySpread(cResult[7].map(map), 0);
+        cResult[9] = items2;
+        tmp19 = items2;
+      } else {
+        tmp19 = cResult[9];
       }
-      const tmpResult3 = require("initialize");
+      if (cResult[10] !== stateFromStores) {
+        class M {
+          constructor() {
+            if (null != closure_2) {
+              tmp2 = closure_7;
+              sortedLinkedChannelsForGuild = closure_7.getSortedLinkedChannelsForGuild(tmp.guild_id);
+              found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);
+            } else {
+              found = [];
+            }
+            return found;
+          }
+        }
+        cResult[10] = stateFromStores;
+        class F {
+          constructor() {
+            return ChannelSettingsStore.getInvites();
+          }
+        }
+        cResult[11] = M;
+      } else {
+        class M {
+          constructor() {
+            if (null != closure_2) {
+              tmp2 = closure_7;
+              sortedLinkedChannelsForGuild = closure_7.getSortedLinkedChannelsForGuild(tmp.guild_id);
+              found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);
+            } else {
+              found = [];
+            }
+            return found;
+          }
+        }
+      }
+      const tmpResult4 = tmp(stateFromStores[12]);
+      const stateFromStoresArray = tmpResult4.useStateFromStoresArray(tmp19, M);
+      if (cResult[12] === stateFromStoresArray) {
+        let tmp27;
+        let tmp30;
+        class M {
+          constructor() {
+            if (null != closure_2) {
+              tmp2 = closure_7;
+              sortedLinkedChannelsForGuild = closure_7.getSortedLinkedChannelsForGuild(tmp.guild_id);
+              found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);
+            } else {
+              found = [];
+            }
+            return found;
+          }
+        }
+        if (cResult[17] !== arr6.length) {
+          class M {
+            constructor() {
+              if (null != closure_2) {
+                tmp2 = closure_7;
+                sortedLinkedChannelsForGuild = closure_7.getSortedLinkedChannelsForGuild(tmp.guild_id);
+                found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);
+              } else {
+                found = [];
+              }
+              return found;
+            }
+          }
+          tmp25[0] = arr6.length;
+          class F {
+            constructor() {
+              return ChannelSettingsStore.getInvites();
+            }
+          }
+          cResult[18] = tmp25;
+        } else {
+          class M {
+            constructor() {
+              if (null != closure_2) {
+                tmp2 = closure_7;
+                sortedLinkedChannelsForGuild = closure_7.getSortedLinkedChannelsForGuild(tmp.guild_id);
+                found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);
+              } else {
+                found = [];
+              }
+              return found;
+            }
+          }
+        }
+        class F {
+          constructor() {
+            return ChannelSettingsStore.getInvites();
+          }
+        }
+        if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
+          class X {
+            constructor() {
+              const obj = require("ChannelSettingsActionCreators");
+              obj.setSection(constants.INSTANT_INVITES);
+            }
+          }
+          const items3 = [];
+          class F {
+            constructor() {
+              return ChannelSettingsStore.getInvites();
+            }
+          }
+          cResult[20] = items3;
+          tmp27 = items3;
+        } else {
+          class X {
+            constructor() {
+              const obj = require("ChannelSettingsActionCreators");
+              obj.setSection(constants.INSTANT_INVITES);
+            }
+          }
+          tmp27 = cResult[20];
+        }
+        const effect = react.useEffect(X, tmp27);
+        if (cResult[21] !== arr6) {
+          class D {
+            constructor(arg0, arg1) {
+              let tmp5;
+              if ("invite" === arr6[arg1].type) {
+                const obj2 = { invite: arr6[arg1].data };
+                tmp5 = React4(InstantInviteDefault, obj2);
+              } else {
+                const obj = { channel: arr6[arg1].data };
+                tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
+              }
+              return tmp5;
+            }
+          }
+          cResult[21] = arr6;
+          class F {
+            constructor() {
+              return ChannelSettingsStore.getInvites();
+            }
+          }
+          cResult[22] = D;
+        } else {
+          class D {
+            constructor(arg0, arg1) {
+              let tmp5;
+              if ("invite" === arr6[arg1].type) {
+                const obj2 = { invite: arr6[arg1].data };
+                tmp5 = React4(InstantInviteDefault, obj2);
+              } else {
+                const obj = { channel: arr6[arg1].data };
+                tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
+              }
+              return tmp5;
+            }
+          }
+        }
+        if (!loading) {
+          class D {
+            constructor(arg0, arg1) {
+              let tmp5;
+              if ("invite" === arr6[arg1].type) {
+                const obj2 = { invite: arr6[arg1].data };
+                tmp5 = React4(InstantInviteDefault, obj2);
+              } else {
+                const obj = { channel: arr6[arg1].data };
+                tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
+              }
+              return tmp5;
+            }
+          }
+          if (0 === arr6.length) {
+            class D {
+              constructor(arg0, arg1) {
+                let tmp5;
+                if ("invite" === arr6[arg1].type) {
+                  const obj2 = { invite: arr6[arg1].data };
+                  tmp5 = React4(InstantInviteDefault, obj2);
+                } else {
+                  const obj = { channel: arr6[arg1].data };
+                  tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
+                }
+                return tmp5;
+              }
+            }
+            if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
+              class D {
+                constructor(arg0, arg1) {
+                  let tmp5;
+                  if ("invite" === arr6[arg1].type) {
+                    const obj2 = { invite: arr6[arg1].data };
+                    tmp5 = React4(InstantInviteDefault, obj2);
+                  } else {
+                    const obj = { channel: arr6[arg1].data };
+                    tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
+                  }
+                  return tmp5;
+                }
+              }
+              const obj3 = {
+                lightSource: null,
+                darkSource: require("AssetRegistry"),
+                title: intl.string(tmp(stateFromStores[18]).t["+nLJkZ"]),
+                body: intl2.string(tmp(stateFromStores[18]).t.F53CAc),
+              };
+              const EmptyState = tmp(tmp2[15]).EmptyState;
+              class F {
+                constructor() {
+                  return ChannelSettingsStore.getInvites();
+                }
+              }
+              intl = tmp(tmp2[18]).intl;
+              intl2 = tmp(tmp2[18]).intl;
+              const tmp31 = closure_9(EmptyState, obj3);
+              cResult[23] = tmp31;
+              tmp30 = tmp31;
+            } else {
+              class D {
+                constructor(arg0, arg1) {
+                  let tmp5;
+                  if ("invite" === arr6[arg1].type) {
+                    const obj2 = { invite: arr6[arg1].data };
+                    tmp5 = React4(InstantInviteDefault, obj2);
+                  } else {
+                    const obj = { channel: arr6[arg1].data };
+                    tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
+                  }
+                  return tmp5;
+                }
+              }
+            }
+          }
+          return tmp30;
+        }
+        if (!loading) {
+          class D {
+            constructor(arg0, arg1) {
+              let tmp5;
+              if ("invite" === arr6[arg1].type) {
+                const obj2 = { invite: arr6[arg1].data };
+                tmp5 = React4(InstantInviteDefault, obj2);
+              } else {
+                const obj = { channel: arr6[arg1].data };
+                tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
+              }
+              return tmp5;
+            }
+          }
+          if (null != tmp7) {
+            class D {
+              constructor(arg0, arg1) {
+                let tmp5;
+                if ("invite" === arr6[arg1].type) {
+                  const obj2 = { invite: arr6[arg1].data };
+                  tmp5 = React4(InstantInviteDefault, obj2);
+                } else {
+                  const obj = { channel: arr6[arg1].data };
+                  tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
+                }
+                return tmp5;
+              }
+            }
+            const obj4 = {
+              sections: null,
+              estimatedListSize: "windowSize",
+              itemSize: tmp7,
+              renderItem: D,
+              insetStart: tmp4.gap.height,
+              insetEnd: bottom,
+            };
+            class F {
+              constructor() {
+                return ChannelSettingsStore.getInvites();
+              }
+            }
+            cResult[32] = tmp7;
+            cResult[33] = D;
+            cResult[34] = bottom;
+            cResult[35] = tmp25;
+            cResult[36] = tmp4.gap.height;
+            cResult[37] = closure_9(require("FastestList"), obj4);
+            const tmp34 = closure_9(require("FastestList"), obj4);
+          }
+          tmp30 = tmp35;
+        }
+        const _Symbol2 = Symbol;
+        if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
+          class D {
+            constructor(arg0, arg1) {
+              let tmp5;
+              if ("invite" === arr6[arg1].type) {
+                const obj2 = { invite: arr6[arg1].data };
+                tmp5 = React4(InstantInviteDefault, obj2);
+              } else {
+                const obj = { channel: arr6[arg1].data };
+                tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
+              }
+              return tmp5;
+            }
+          }
+          closure_9(tmp(stateFromStores[19]).SceneLoadingIndicator, {});
+          class F {
+            constructor() {
+              return ChannelSettingsStore.getInvites();
+            }
+          }
+        } else {
+          class D {
+            constructor(arg0, arg1) {
+              let tmp5;
+              if ("invite" === arr6[arg1].type) {
+                const obj2 = { invite: arr6[arg1].data };
+                tmp5 = React4(InstantInviteDefault, obj2);
+              } else {
+                const obj = { channel: arr6[arg1].data };
+                tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
+              }
+              return tmp5;
+            }
+          }
+        }
+        if (cResult[25] === tmp8) {
+          class D {
+            constructor(arg0, arg1) {
+              let tmp5;
+              if ("invite" === arr6[arg1].type) {
+                const obj2 = { invite: arr6[arg1].data };
+                tmp5 = React4(InstantInviteDefault, obj2);
+              } else {
+                const obj = { channel: arr6[arg1].data };
+                tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
+              }
+              return tmp5;
+            }
+          }
+        }
+        let tmp39 = null;
+        if (arr6.length > 0) {
+          class D {
+            constructor(arg0, arg1) {
+              let tmp5;
+              if ("invite" === arr6[arg1].type) {
+                const obj2 = { invite: arr6[arg1].data };
+                tmp5 = React4(InstantInviteDefault, obj2);
+              } else {
+                const obj = { channel: arr6[arg1].data };
+                tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
+              }
+              return tmp5;
+            }
+          }
+          const obj5 = { item: arr6[0], onMeasured: null };
+          class F {
+            constructor() {
+              return ChannelSettingsStore.getInvites();
+            }
+          }
+          tmp39 = closure_9(require("InstantInviteSelfMeasurer"), obj5);
+        }
+        cResult[25] = tmp8;
+        cResult[26] = arr6[0];
+        cResult[27] = arr6.length;
+        cResult[28] = tmp39;
+      }
+      if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
+        class D {
+          constructor(arg0, arg1) {
+            let tmp5;
+            if ("invite" === arr6[arg1].type) {
+              const obj2 = { invite: arr6[arg1].data };
+              tmp5 = React4(InstantInviteDefault, obj2);
+            } else {
+              const obj = { channel: arr6[arg1].data };
+              tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
+            }
+            return tmp5;
+          }
+        }
+        cResult[15] = P;
+        class F {
+          constructor() {
+            return ChannelSettingsStore.getInvites();
+          }
+        }
+      } else {
+        class D {
+          constructor(arg0, arg1) {
+            let tmp5;
+            if ("invite" === arr6[arg1].type) {
+              const obj2 = { invite: arr6[arg1].data };
+              tmp5 = React4(InstantInviteDefault, obj2);
+            } else {
+              const obj = { channel: arr6[arg1].data };
+              tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
+            }
+            return tmp5;
+          }
+        }
+      }
+      if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
+        class D {
+          constructor(arg0, arg1) {
+            let tmp5;
+            if ("invite" === arr6[arg1].type) {
+              const obj2 = { invite: arr6[arg1].data };
+              tmp5 = React4(InstantInviteDefault, obj2);
+            } else {
+              const obj = { channel: arr6[arg1].data };
+              tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
+            }
+            return tmp5;
+          }
+        }
+        cResult[16] = R;
+        class F {
+          constructor() {
+            return ChannelSettingsStore.getInvites();
+          }
+        }
+      } else {
+        class D {
+          constructor(arg0, arg1) {
+            let tmp5;
+            if ("invite" === arr6[arg1].type) {
+              const obj2 = { invite: arr6[arg1].data };
+              tmp5 = React4(InstantInviteDefault, obj2);
+            } else {
+              const obj = { channel: arr6[arg1].data };
+              tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
+            }
+            return tmp5;
+          }
+        }
+      }
+      const items4 = [...arr3.map(tmp22), ...stateFromStoresArray.map(tmp23)];
+      cResult[12] = stateFromStoresArray;
+      cResult[13] = arr3;
+      cResult[14] = items4;
+      arr6 = items4;
     }
   : () => {
-      let tmp = closure_11();
+      let closure_2;
+      let gap;
+      let intl;
+      let intl2;
+      let items8;
+      let memo;
+      let memo1;
+      let obj6;
+      let tmp21;
+      let tmp5;
+      const tmp = closure_11();
       _require = tmp;
-      let tmp2 = importDefault;
-      let obj = dependencyMap;
-      [tmp4, importDefault] = invites(memo.useState(undefined), 2);
+      const bottom = useSafeAreaInsetsDefault().bottom;
+      [tmp5, importDefault] = invites(memo.useState(undefined), 2);
       let items = [tmp];
-      let tmpResult = _require;
+      invites(memo.useState(undefined), 2);
       const callback = memo.useCallback((arg0) => {
         importDefault(arg0 + gap.gap.height);
       }, items);
-      const tmp3 = invites(memo.useState(undefined), 2);
+      let obj = require("get initialized");
       const items1 = [memo1];
-      dependencyMap = require("initialize").useStateFromStores(items1, () => memo1.getChannel());
-      let obj2 = require("initialize");
+      dependencyMap = obj.useStateFromStores(items1, () => memo1.getChannel());
+      let obj2 = require("get initialized");
       const items2 = [memo1];
-      const stateFromStoresObject = require("initialize").useStateFromStoresObject(items2, () => memo1.getInvites());
+      const stateFromStoresObject = obj2.useStateFromStoresObject(items2, () => memo1.getInvites());
       invites = stateFromStoresObject.invites;
       const loading = stateFromStoresObject.loading;
       const items3 = [invites];
@@ -287,12 +651,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return formatted.localeCompare(str2.toLowerCase());
         });
       }, items3);
-      const obj3 = require("initialize");
       const items4 = [ChannelStore];
-      const stateFromStoresArray = require("initialize").useStateFromStoresArray(items4, () => {
+      const obj3 = require("get initialized");
+      const stateFromStoresArray = obj3.useStateFromStoresArray(items4, () => {
+        let found;
         if (null != id) {
           const sortedLinkedChannelsForGuild = ChannelStore.getSortedLinkedChannelsForGuild(tmp.guild_id);
-          let found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);
+          found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);
         } else {
           found = [];
         }
@@ -308,58 +673,63 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items5);
       const items6 = [memo1.length];
       const effect = memo.useEffect(() => {
-        require("ChannelSettingsActionCreators").setSection(constants.INSTANT_INVITES);
+        const obj = require("ChannelSettingsActionCreators");
+        obj.setSection(constants.INSTANT_INVITES);
       }, []);
       const items7 = [memo1];
       const callback1 = memo.useCallback((arg0, arg1) => {
+        let tmp5;
         if ("invite" === memo1[arg1].type) {
-          const obj2 = { invite: tmp.data };
-          let tmp5 = options(InstantInviteDefault, obj2);
+          const obj2 = { invite: memo1[arg1].data };
+          tmp5 = React4(InstantInviteDefault, obj2);
         } else {
-          const obj = { channel: tmp.data };
-          tmp5 = options(InstantInvite.LinkedChannelInvite, obj);
+          const obj = { channel: memo1[arg1].data };
+          tmp5 = React4(InstantInvite.LinkedChannelInvite, obj);
         }
         return tmp5;
       }, items7);
       if (!loading) {
         if (0 === memo1.length) {
-          const obj5 = { lightSource: _modDef10687, darkSource: _modDef10688, title: null, body: null };
-          const intl = tmpResult(1126).intl;
-          obj5.title = intl.string(tmpResult(1126).t["+nLJkZ"]);
-          const intl2 = tmpResult(1126).intl;
-          obj5.body = intl2.string(tmpResult(1126).t.F53CAc);
-          return closure_9(tmpResult(1188).EmptyState, obj5);
+          const obj4 = {
+            lightSource: AssetRegistryDefault,
+            darkSource: AssetRegistryDefault2,
+            title: intl.string(require("intl").t["+nLJkZ"]),
+            body: intl2.string(require("intl").t.F53CAc),
+          };
+          const EmptyState = tmp7(1188).EmptyState;
+          intl = tmp7(1126).intl;
+          intl2 = tmp7(1126).intl;
+          tmp21 = closure_9(EmptyState, obj4);
         }
+        return tmp21;
       }
       if (!loading) {
-        if (null != tmp4) {
-          const obj6 = { style: tmp.content, children: null };
-          const obj7 = {
+        let tmp17Result;
+        if (null != tmp5) {
+          const obj5 = { style: tmp.content, children: closure_9(FastestListDefault, obj6) };
+          obj6 = {
             sections: items6,
             estimatedListSize: "windowSize",
-            itemSize: tmp4,
+            itemSize: tmp5,
             renderItem: callback1,
             insetStart: tmp.gap.height,
-            insetEnd: useSafeAreaInsetsDefault().bottom,
+            insetEnd: bottom,
           };
-          obj6.children = closure_9(FastestListDefault, obj7);
-          let tmp16Result = closure_9(stateFromStoresArray, obj6);
+          tmp17Result = closure_9(stateFromStoresArray, obj5);
         }
+        tmp21 = tmp17Result;
       }
-      const obj8 = { style: tmp.content, children: null };
-      tmp = closure_9;
-      const items8 = [closure_9(tmpResult(6535).SceneLoadingIndicator, {})];
-      tmpResult = null;
+      const obj7 = { style: tmp.content, children: items8 };
+      items8 = [closure_9(require("SceneLoadingIndicator").SceneLoadingIndicator, {})];
+      let tmp19Result = null;
+      const tmp18 = stateFromStoresArray;
       if (memo1.length > 0) {
-        tmp2 = InstantInviteSelfMeasurerDefault;
-        obj = { item: null, onMeasured: null };
-        memo1 = memo1[0];
-        obj.item = memo1;
-        obj.onMeasured = callback;
-        tmpResult = tmp(tmp2, obj);
+        const obj8 = { item: memo1[0], onMeasured: callback };
+        tmp19Result = closure_9(InstantInviteSelfMeasurerDefault, obj8);
       }
-      items8[1] = tmpResult;
-      obj8.children = items8;
-      tmp16Result = closure_10(stateFromStoresArray, obj8);
-      const obj4 = require("initialize");
+      items8[1] = tmp19Result;
+      tmp17Result = closure_10(tmp18, obj7);
     };
+const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsInstantInvites.tsx");
+
+export default tmp4;

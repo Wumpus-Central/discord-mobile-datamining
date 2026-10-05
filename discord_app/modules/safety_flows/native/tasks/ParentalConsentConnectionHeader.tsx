@@ -1,47 +1,55 @@
 // discord_app/modules/safety_flows/native/tasks/ParentalConsentConnectionHeader.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import _modDef2787 from "../../SafetyFlows.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import AuthenticationActionCreatorsDefault from "../../../../actions/AuthenticationActionCreators.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import UserStore from "../../../../stores/UserStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  row: {
-    height: fn(6068).NAV_BAR_HEIGHT,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingHorizontal: nativeDefault.space.PX_16,
-  },
-  logOut: null,
-};
-let obj3 = {
-  height: fn(6068).NAV_BAR_HEIGHT,
+let currentUser;
+
+let hasOwnProperty;
+let metroRequire;
+let obj2;
+let obj3;
+const View = react_native.View;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { row: obj2, logOut: obj3 };
+obj2 = {
+  height: NavigatorConstants.NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
   paddingHorizontal: nativeDefault.space.PX_16,
 };
-obj2.logOut = { position: "absolute", left: nativeDefault.space.PX_16 };
-let closure_7 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj4 = { position: "absolute", left: nativeDefault.space.PX_16 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/ParentalConsentConnectionHeader.tsx");
-
-export const ParentalConsentConnectionNavbar = ReactCompilerGating.isReactCompilerEnabled()
+createStyles = createStyles.createStyles;
+obj3 = { position: "absolute", left: nativeDefault.space.PX_16 };
+let closure_7 = createStyles(obj);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(17);
+      let items1;
+      let logOut;
+      let row;
+      let tmp10;
+      let tmp11;
+      let tmp12;
+      let tmp14;
+      let tmp17;
+      let tmp6;
+      let tmp7;
+      let obj = react2;
+      const cResult = obj.c(17);
       const tmp4 = closure_7();
       const top = useSafeAreaInsetsDefault().top;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -61,26 +69,28 @@ export const ParentalConsentConnectionNavbar = ReactCompilerGating.isReactCompil
       } else {
         [tmp6, tmp7] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp6, tmp7);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp6, tmp7);
       if (cResult[2] !== top) {
         const obj2 = { paddingTop: top };
         cResult[2] = top;
         cResult[3] = obj2;
-        let tmp10 = obj2;
+        tmp10 = obj2;
       } else {
         tmp10 = cResult[3];
       }
       ({ row, logOut } = tmp4);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function f() {
-          return AuthenticationActionCreatorsDefault.logout("safety_flows_parental_consent_connection");
+          const obj = AuthenticationActionCreatorsDefault;
+          return obj.logout("safety_flows_parental_consent_connection");
         };
-        const intl = util.intl;
+        const intl = intl2.intl;
         const stringResult = intl.string(_modDef2787["3HuGuY"]);
         cResult[4] = fn2;
         cResult[5] = stringResult;
-        let tmp12 = stringResult;
-        let tmp11 = fn2;
+        tmp12 = stringResult;
+        tmp11 = fn2;
       } else {
         tmp11 = cResult[4];
         tmp12 = cResult[5];
@@ -97,7 +107,7 @@ export const ParentalConsentConnectionNavbar = ReactCompilerGating.isReactCompil
         const tmp16 = hasOwnProperty(Text_Text.Text, obj3);
         cResult[6] = tmp4.logOut;
         cResult[7] = tmp16;
-        let tmp14 = tmp16;
+        tmp14 = tmp16;
       } else {
         tmp14 = cResult[7];
       }
@@ -114,18 +124,20 @@ export const ParentalConsentConnectionNavbar = ReactCompilerGating.isReactCompil
         }
         cResult[8] = stateFromStores;
         cResult[9] = tmp19;
-        let tmp17 = tmp19;
+        tmp17 = tmp19;
       } else {
         tmp17 = cResult[9];
       }
       if (cResult[10] === tmp4.row) {
         if (cResult[11] === tmp14) {
+          let tmp21;
           if (cResult[12] === tmp17) {
-            let tmp21 = cResult[13];
+            tmp21 = cResult[13];
           }
           if (cResult[14] === tmp10) {
+            let tmp23;
             if (cResult[15] === tmp21) {
-              let tmp23 = cResult[16];
+              tmp23 = cResult[16];
             }
             return tmp23;
           }
@@ -137,21 +149,24 @@ export const ParentalConsentConnectionNavbar = ReactCompilerGating.isReactCompil
           tmp23 = tmp26;
         }
       }
-      const obj6 = { style: row, children: null };
-      const items1 = [tmp14, tmp17];
-      obj6.children = items1;
-      const tmp22 = timestampProducer(View, obj6);
+      const obj6 = { style: row, children: items1 };
+      items1 = [tmp14, tmp17];
+      const tmp22 = metroRequire(View, obj6);
       cResult[10] = tmp4.row;
       cResult[11] = tmp14;
       cResult[12] = tmp17;
       cResult[13] = tmp22;
       tmp21 = tmp22;
-      const tmpResult = initialize;
     }
   : () => {
+      let intl;
+      let items1;
+      let obj3;
       const tmp = closure_7();
+      const top = useSafeAreaInsetsDefault().top;
+      let obj = get_initialized;
       const items = [UserStore];
-      const stateFromStores = initialize.useStateFromStores(items, () => {
+      const stateFromStores = obj.useStateFromStores(items, () => {
         currentUser = currentUser.getCurrentUser();
         let username;
         if (currentUser != null) {
@@ -159,21 +174,22 @@ export const ParentalConsentConnectionNavbar = ReactCompilerGating.isReactCompil
         }
         return username;
       });
-      const obj2 = { style: { paddingTop: useSafeAreaInsetsDefault().top }, children: null };
-      const obj3 = { style: tmp.row, children: null };
+      const obj2 = { style: { paddingTop: top }, children: metroRequire(View, obj3) };
+      obj3 = { style: tmp.row, children: items1 };
       const obj4 = {
         accessibilityRole: "button",
         variant: "text-md/medium",
         color: "text-link",
         style: tmp.logOut,
         onPress() {
-          return AuthenticationActionCreatorsDefault.logout("safety_flows_parental_consent_connection");
+          const obj = AuthenticationActionCreatorsDefault;
+          return obj.logout("safety_flows_parental_consent_connection");
         },
-        children: null,
+        children: intl.string(_modDef2787["3HuGuY"]),
       };
-      const intl = util.intl;
-      obj4.children = intl.string(_modDef2787["3HuGuY"]);
-      const items1 = [hasOwnProperty(Text_Text.Text, obj4)];
+      const Text = Text_Text.Text;
+      intl = intl2.intl;
+      items1 = [hasOwnProperty(Text, obj4)];
       let tmp5Result = null != stateFromStores;
       if (tmp5Result) {
         const obj5 = {
@@ -185,7 +201,8 @@ export const ParentalConsentConnectionNavbar = ReactCompilerGating.isReactCompil
         tmp5Result = hasOwnProperty(Text_Text.Text, obj5);
       }
       items1[1] = tmp5Result;
-      obj3.children = items1;
-      obj2.children = timestampProducer(View, obj3);
       return hasOwnProperty(View, obj2);
     };
+const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/ParentalConsentConnectionHeader.tsx");
+
+export const ParentalConsentConnectionNavbar = tmp5;

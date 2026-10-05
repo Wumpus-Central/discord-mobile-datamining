@@ -1,39 +1,54 @@
 // discord_app/modules/webauthn/native/WebAuthnDeleteActionSheet.tsx
+import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import WebAuthnActionCreators from "../WebAuthnActionCreators.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = {
-  content: { alignItems: "center" },
-  subtitle: { textAlign: "center", marginTop: nativeDefault.space.PX_16 },
-  sheetContent: null,
-  sheetBody: null,
-};
-let obj3 = { textAlign: "center", marginTop: nativeDefault.space.PX_16 };
-obj2.sheetContent = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
-let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
-obj2.sheetBody = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
-let closure_6 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj5 = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/webauthn/native/WebAuthnDeleteActionSheet.tsx");
+let BottomSheet, credential;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+let closure_4;
+let hasOwnProperty;
+let obj2;
+let obj3;
+let obj4;
+const View = react_native.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { content: { alignItems: "center" }, subtitle: obj2, sheetContent: obj3, sheetBody: obj4 };
+obj2 = { textAlign: "center", marginTop: nativeDefault.space.PX_16 };
+createStyles = createStyles.createStyles;
+obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+obj4 = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+let closure_6 = createStyles(obj);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (credential) => {
-      const cResult = credential(onPress[6]).c(26);
+      let Button;
+      let content;
+      let deleting;
+      let intl3;
+      let items;
+      let obj10;
+      let obj7;
+      let onPress;
+      let setDeleting;
+      let sheetBody;
+      let sheetContent;
+      let subtitle;
+      let tmp = credential;
+      let obj = credential(onPress[6]);
+      const cResult = obj.c(26);
       credential = credential.credential;
       ({ deleting, setDeleting } = credential);
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
-          setDeleting(first[7]).hideActionSheet();
+          const obj = setDeleting(first[7]);
+          obj.hideActionSheet();
         };
         cResult[0] = fn;
         onPress = fn;
@@ -41,35 +56,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onPress = cResult[0];
       }
       if (cResult[1] === credential) {
+        let tmp6;
+        let tmp7;
+        let tmp9;
+        let tmp12;
+        let tmp15;
+        let tmp17;
         if (cResult[2] === setDeleting) {
-          let tmp6 = cResult[3];
+          tmp6 = cResult[3];
         }
         ({ sheetContent, sheetBody } = tmp4);
         if (cResult[4] !== credential.name) {
           let intl = tmp(tmp2[10]).intl;
           let obj2 = { keyName: credential.name };
-          const formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[10]).t.mI3CoL, obj2);
+          const formatToPlainStringResult = intl.formatToPlainString(tmp(onPress[10]).t.mI3CoL, obj2);
           cResult[4] = credential.name;
           cResult[5] = formatToPlainStringResult;
-          let tmp7 = formatToPlainStringResult;
+          tmp7 = formatToPlainStringResult;
         } else {
           tmp7 = cResult[5];
         }
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { onPress };
-          const tmp11 = closure_4(tmp(tmp2[15]).ActionSheetCloseButton, obj3);
+          const tmp11 = closure_4(tmp(onPress[15]).ActionSheetCloseButton, obj3);
           cResult[6] = tmp11;
-          let tmp9 = tmp11;
+          tmp9 = tmp11;
         } else {
           tmp9 = cResult[6];
         }
         if (cResult[7] !== tmp7) {
           const obj4 = { title: tmp7, trailing: tmp9 };
-          const tmp14 = closure_4(tmp(tmp2[16]).BottomSheetTitleHeader, obj4);
+          const tmp14 = closure_4(tmp(onPress[16]).BottomSheetTitleHeader, obj4);
           cResult[7] = tmp7;
           cResult[8] = tmp14;
-          let tmp12 = tmp14;
+          tmp12 = tmp14;
         } else {
           tmp12 = cResult[8];
         }
@@ -77,68 +98,70 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ({ content, subtitle } = tmp4);
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
           const intl2 = tmp(tmp2[10]).intl;
-          const stringResult = intl2.string(tmp(tmp2[10]).t.IfTbc1);
+          const stringResult = intl2.string(tmp(onPress[10]).t.IfTbc1);
           cResult[9] = stringResult;
-          let tmp15 = stringResult;
+          tmp15 = stringResult;
         } else {
           tmp15 = cResult[9];
         }
         if (cResult[10] !== tmp4.subtitle) {
           const obj5 = { variant: "heading-md/normal", style: subtitle, children: tmp15 };
-          const tmp19 = closure_4(tmp(tmp2[17]).Text, obj5);
+          const tmp19 = closure_4(tmp(onPress[17]).Text, obj5);
           cResult[10] = tmp4.subtitle;
           cResult[11] = tmp19;
-          let tmp17 = tmp19;
+          tmp17 = tmp19;
         } else {
           tmp17 = cResult[11];
         }
         if (cResult[12] === tmp4.content) {
+          let tmp20;
+          let tmp24;
+          let tmp28;
           if (cResult[13] === tmp17) {
-            let tmp20 = cResult[14];
+            tmp20 = cResult[14];
           }
           const _Symbol3 = Symbol;
           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj6 = { children: null };
-            const obj7 = { text: null, onPress: null, variant: "primary", grow: true };
-            const intl3 = tmp(tmp2[10]).intl;
-            obj7.text = intl3.string(tmp(tmp2[10]).t["lqK//z"]);
-            obj7.onPress = onPress;
-            obj6.children = closure_4(tmp(tmp2[18]).Button, obj7);
+            const obj6 = { children: closure_4(Button, obj7) };
+            obj7 = { text: intl3.string(tmp(onPress[10]).t["lqK//z"]), onPress, variant: "primary", grow: true };
+            Button = tmp(tmp2[18]).Button;
+            intl3 = tmp(tmp2[10]).intl;
             const tmp27 = closure_4(View, obj6);
             cResult[15] = tmp27;
-            let tmp24 = tmp27;
+            tmp24 = tmp27;
           } else {
             tmp24 = cResult[15];
           }
           const _Symbol4 = Symbol;
           if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
             const intl4 = tmp(tmp2[10]).intl;
-            const stringResult1 = intl4.string(tmp(tmp2[10]).t.zYOk0f);
+            const stringResult1 = intl4.string(tmp(onPress[10]).t.zYOk0f);
             cResult[16] = stringResult1;
-            let tmp28 = stringResult1;
+            tmp28 = stringResult1;
           } else {
             tmp28 = cResult[16];
           }
           if (cResult[17] === deleting) {
+            let tmp30;
             if (cResult[18] === tmp6) {
-              let tmp30 = cResult[19];
+              tmp30 = cResult[19];
             }
             if (cResult[20] === tmp4.sheetBody) {
               if (cResult[21] === tmp4.sheetContent) {
                 if (cResult[22] === tmp20) {
                   if (cResult[23] === tmp30) {
+                    let tmp34;
                     if (cResult[24] === tmp12) {
-                      let tmp34 = cResult[25];
+                      tmp34 = cResult[25];
                     }
                     return tmp34;
                   }
                 }
               }
             }
-            const obj8 = { contentStyles: sheetContent, bodyStyles: sheetBody, children: null };
-            const items = [tmp12, tmp20, tmp24, tmp30];
-            obj8.children = items;
-            const tmp36 = closure_5(tmp(tmp2[19]).BottomSheet, obj8);
+            const obj8 = { contentStyles: sheetContent, bodyStyles: sheetBody, children: items };
+            items = [tmp12, tmp20, tmp24, tmp30];
+            const tmp36 = closure_5(tmp(onPress[19]).BottomSheet, obj8);
             cResult[20] = tmp4.sheetBody;
             cResult[21] = tmp4.sheetContent;
             cResult[22] = tmp20;
@@ -147,8 +170,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[25] = tmp36;
             tmp34 = tmp36;
           }
-          const obj9 = { children: null };
-          const obj10 = {
+          const obj9 = { children: closure_4(tmp(onPress[18]).Button, obj10) };
+          obj10 = {
             text: tmp28,
             onPress: tmp6,
             variant: "destructive",
@@ -156,7 +179,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             loading: deleting,
             grow: true,
           };
-          obj9.children = closure_4(tmp(tmp2[18]).Button, obj10);
           const tmp33 = closure_4(View, obj9);
           cResult[17] = deleting;
           cResult[18] = tmp6;
@@ -171,139 +193,133 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp20 = tmp23;
       }
       const fn2 = function y() {
-        setDeleting(true);
+        const tmp = setDeleting(true);
         first();
-        const result = WebAuthnActionCreators.deleteWebAuthnCredential(credential);
+        let obj = WebAuthnActionCreators;
+        const result = obj.deleteWebAuthnCredential(credential);
         const nextPromise = result.then(() => {
-          const obj2 = {
+          let intl;
+          const obj = {
             key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY",
-            content: null,
-            icon: null,
-            IconComponent: null,
+            content: intl.string(credential(onPress[10]).t.ZnkeXs),
+            icon: setDeleting(onPress[11]),
+            IconComponent: credential(onPress[12]).CircleCheckIcon,
             iconColor: "status-positive",
           };
-          const intl = credential(1126).intl;
-          obj2.content = intl.string(credential(1126).t.ZnkeXs);
-          obj2.icon = setDeleting(10383);
-          obj2.IconComponent = credential(4792).CircleCheckIcon;
-          setDeleting(4568).open(obj2);
+          const open = setDeleting(onPress[9]).open;
+          setDeleting(onPress[9]);
+          intl = credential(onPress[10]).intl;
+          open(obj);
         });
-        result
-          .then(() => {
-            const obj2 = {
-              key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY",
-              content: null,
-              icon: null,
-              IconComponent: null,
-              iconColor: "status-positive",
-            };
-            const intl = credential(1126).intl;
-            obj2.content = intl.string(credential(1126).t.ZnkeXs);
-            obj2.icon = setDeleting(10383);
-            obj2.IconComponent = credential(4792).CircleCheckIcon;
-            setDeleting(4568).open(obj2);
-          })
-          .catch((error) => {
-            const obj = setDeleting(4568);
-            obj.open({
-              key: "WEBAUTHN_CREDENTIAL_DELETE_ERROR_TOAST_KEY",
-              content: error.message,
-              icon: setDeleting(4808),
-              IconComponent: credential(4803).WarningIcon,
-              iconColor: "icon-feedback-critical",
-            });
-          })
-          .finally(() => {
-            setDeleting(false);
-          });
+        const catchPromise = nextPromise.catch((error) => {
+          const obj = setDeleting(onPress[9]);
+          const obj2 = {
+            key: "WEBAUTHN_CREDENTIAL_DELETE_ERROR_TOAST_KEY",
+            content: error.message,
+            icon: setDeleting(onPress[13]),
+            IconComponent: credential(onPress[14]).WarningIcon,
+            iconColor: "icon-feedback-critical",
+          };
+          obj.open(obj2);
+        });
+        catchPromise.finally(() => {
+          setDeleting(false);
+        });
       };
       cResult[1] = credential;
       cResult[2] = setDeleting;
       cResult[3] = fn2;
       tmp6 = fn2;
-      let obj = credential(onPress[6]);
     }
   : (credential) => {
+      let Button;
+      let Button2;
+      let Text;
+      let deleting;
+      let intl;
+      let intl2;
+      let intl3;
+      let intl4;
+      let items;
+      let obj3;
+      let obj5;
+      let obj7;
+      let obj9;
       credential = credential.credential;
       ({ deleting, setDeleting: importDefault } = credential);
       function handleClose() {
-        ActionSheetActionCreatorsDefault.hideActionSheet();
+        const obj = ActionSheetActionCreatorsDefault;
+        obj.hideActionSheet();
       }
-      const tmp = closure_6();
-      let obj = { contentStyles: tmp.sheetContent, bodyStyles: tmp.sheetBody, children: null };
-      let obj2 = { title: null, trailing: null };
-      let intl = credential(1126).intl;
-      obj2.title = intl.formatToPlainString(credential(1126).t.mI3CoL, { keyName: credential.name });
-      obj2.trailing = closure_4(credential(6696).ActionSheetCloseButton, { onPress: handleClose });
-      const items = [closure_4(credential(6644).BottomSheetTitleHeader, obj2), , ,];
-      const obj4 = { style: tmp.content, children: null };
-      const obj5 = { variant: "heading-md/normal", style: tmp.subtitle, children: null };
-      const intl2 = credential(1126).intl;
-      obj5.children = intl2.string(credential(1126).t.IfTbc1);
-      obj4.children = closure_4(credential(4886).Text, obj5);
+      let tmp = closure_6();
+      let obj = { contentStyles: tmp.sheetContent, bodyStyles: tmp.sheetBody, children: items };
+      BottomSheet = credential(6645).BottomSheet;
+      let obj2 = {
+        title: intl.formatToPlainString(credential(1126).t.mI3CoL, obj3),
+        trailing: closure_4(credential(6696).ActionSheetCloseButton, { onPress: handleClose }),
+      };
+      const BottomSheetTitleHeader = credential(6644).BottomSheetTitleHeader;
+      intl = credential(1126).intl;
+      obj3 = { keyName: credential.name };
+      items = [closure_4(BottomSheetTitleHeader, obj2), , ,];
+      const obj4 = { style: tmp.content, children: closure_4(Text, obj5) };
+      obj5 = { variant: "heading-md/normal", style: tmp.subtitle, children: intl2.string(credential(1126).t.IfTbc1) };
+      Text = credential(4886).Text;
+      intl2 = credential(1126).intl;
       items[1] = closure_4(View, obj4);
-      const obj6 = { children: null };
-      const obj7 = { text: null, onPress: null, variant: "primary", grow: true };
-      const intl3 = credential(1126).intl;
-      obj7.text = intl3.string(credential(1126).t["lqK//z"]);
-      obj7.onPress = handleClose;
-      obj6.children = closure_4(credential(5594).Button, obj7);
+      const obj6 = { children: closure_4(Button, obj7) };
+      obj7 = { text: intl3.string(credential(1126).t["lqK//z"]), onPress: handleClose, variant: "primary", grow: true };
+      Button = credential(5594).Button;
+      intl3 = credential(1126).intl;
       items[2] = closure_4(View, obj6);
-      const obj8 = { children: null };
-      const obj9 = { text: null, onPress: null, variant: "destructive", disabled: null, loading: null, grow: true };
-      const intl4 = credential(1126).intl;
-      obj9.text = intl4.string(credential(1126).t.zYOk0f);
-      obj9.onPress = function onPress() {
-        closure_1_1(true);
-        ActionSheetActionCreatorsDefault.hideActionSheet();
-        const result = WebAuthnActionCreators.deleteWebAuthnCredential(credential);
-        const nextPromise = result.then(() => {
-          const obj2 = {
-            key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY",
-            content: null,
-            icon: null,
-            IconComponent: null,
-            iconColor: "status-positive",
-          };
-          const intl = credential(1126).intl;
-          obj2.content = intl.string(credential(1126).t.ZnkeXs);
-          obj2.icon = closure_1_1(10383);
-          obj2.IconComponent = credential(4792).CircleCheckIcon;
-          closure_1_1(4568).open(obj2);
-        });
-        result
-          .then(() => {
-            const obj2 = {
+      const obj8 = { children: closure_4(Button2, obj9) };
+      obj9 = {
+        text: intl4.string(credential(1126).t.zYOk0f),
+        onPress() {
+          const tmp = importDefault(true);
+          let obj = ActionSheetActionCreatorsDefault;
+          obj.hideActionSheet();
+          let obj2 = WebAuthnActionCreators;
+          const result = obj2.deleteWebAuthnCredential(credential);
+          const nextPromise = result.then(() => {
+            let intl;
+            const obj = {
               key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY",
-              content: null,
-              icon: null,
-              IconComponent: null,
+              content: intl.string(credential(closure_1_2[10]).t.ZnkeXs),
+              icon: closure_1_1(closure_1_2[11]),
+              IconComponent: credential(closure_1_2[12]).CircleCheckIcon,
               iconColor: "status-positive",
             };
-            const intl = credential(1126).intl;
-            obj2.content = intl.string(credential(1126).t.ZnkeXs);
-            obj2.icon = closure_1_1(10383);
-            obj2.IconComponent = credential(4792).CircleCheckIcon;
-            closure_1_1(4568).open(obj2);
-          })
-          .catch((error) => {
-            const obj = closure_1_1(4568);
-            obj.open({
+            const open = closure_1_1(closure_1_2[9]).open;
+            closure_1_1(closure_1_2[9]);
+            intl = credential(closure_1_2[10]).intl;
+            open(obj);
+          });
+          const catchPromise = nextPromise.catch((error) => {
+            const obj = closure_1_1(closure_1_2[9]);
+            const obj2 = {
               key: "WEBAUTHN_CREDENTIAL_DELETE_ERROR_TOAST_KEY",
               content: error.message,
-              icon: closure_1_1(4808),
-              IconComponent: credential(4803).WarningIcon,
+              icon: closure_1_1(closure_1_2[13]),
+              IconComponent: credential(closure_1_2[14]).WarningIcon,
               iconColor: "icon-feedback-critical",
-            });
-          })
-          .finally(() => {
+            };
+            obj.open(obj2);
+          });
+          catchPromise.finally(() => {
             closure_1_1(false);
           });
+        },
+        variant: "destructive",
+        disabled: deleting,
+        loading: deleting,
+        grow: true,
       };
-      obj9.disabled = deleting;
-      obj9.loading = deleting;
-      obj8.children = closure_4(credential(5594).Button, obj9);
+      Button2 = credential(5594).Button;
+      intl4 = credential(1126).intl;
       items[3] = closure_4(View, obj8);
-      obj.children = items;
-      return closure_5(credential(6645).BottomSheet, obj);
+      return closure_5(BottomSheet, obj);
     };
+let result = size.fileFinishedImporting("modules/webauthn/native/WebAuthnDeleteActionSheet.tsx");
+
+export default tmp5;

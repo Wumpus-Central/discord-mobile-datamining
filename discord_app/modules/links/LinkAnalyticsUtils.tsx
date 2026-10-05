@@ -3,6 +3,7 @@ import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import LinkUtils from "LinkUtils.tsx";
+import ValidationUtilsDefault from "../../utils/ValidationUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -18,64 +19,74 @@ const constants = {
 const items = [
   (substr) => {
     let SERVER_INVITE = null;
+    const obj = ValidationUtilsDefault;
     if (obj.isInvite(substr)) {
       SERVER_INVITE = constants.SERVER_INVITE;
     }
     return SERVER_INVITE;
   },
   (target) => {
-    const safeParseWithQueryResult = URLUtilsDefault.safeParseWithQuery(target);
+    let channelId;
+    let guildId;
+    const obj = URLUtilsDefault;
+    const safeParseWithQueryResult = obj.safeParseWithQuery(target);
     if (null == safeParseWithQueryResult) {
       return null;
     } else {
-      const tryParseChannelPathResult = LinkUtils.tryParseChannelPath(safeParseWithQueryResult.path);
-      if (null == tryParseChannelPathResult) {
-        return null;
-      } else {
+      const obj2 = LinkUtils;
+      const tryParseChannelPathResult = obj2.tryParseChannelPath(safeParseWithQueryResult.path);
+      let tmp5 = null;
+      if (null != tryParseChannelPathResult) {
+        let UNKNOWN;
         ({ guildId, channelId } = tryParseChannelPathResult);
         if (null != guildId) {
           if (null != channelId) {
-            const MESSAGE = constants.MESSAGE;
+            if (null != tryParseChannelPathResult.messageId) {
+              UNKNOWN = constants.MESSAGE;
+            }
+            tmp5 = UNKNOWN;
           }
         }
         if (null != guildId) {
           if (null != channelId) {
-            let UNKNOWN = constants.CHANNEL;
+            UNKNOWN = constants.CHANNEL;
           }
         }
         UNKNOWN = constants.UNKNOWN;
       }
+      return tmp5;
     }
   },
   (arg0) => {
     let DISCOVERY = null;
+    const obj = ValidationUtilsDefault;
     if (obj.isDiscoveryLink(arg0)) {
       DISCOVERY = constants.DISCOVERY;
     }
     return DISCOVERY;
   },
   (target) => {
-    const safeParseWithQueryResult = URLUtilsDefault.safeParseWithQuery(target);
+    const obj = URLUtilsDefault;
+    const safeParseWithQueryResult = obj.safeParseWithQuery(target);
     let USER_PROFILE = null;
     if (null != safeParseWithQueryResult) {
       USER_PROFILE = null;
+      const obj2 = LinkUtils;
       if (null != obj2.tryParseUserProfilePath(safeParseWithQueryResult.pathname)) {
         USER_PROFILE = constants.USER_PROFILE;
       }
-      obj2 = LinkUtils;
     }
     return USER_PROFILE;
   },
 ];
-const result = size.fileFinishedImporting("modules/links/LinkAnalyticsUtils.tsx");
-
-export default {
+let obj = {
   trackDiscordLinkClicked(guildId) {
+    let UNKNOWN;
     AnalyticsUtilsDefault;
     if (null != guildId.guildId) {
       if (null != guildId.channelId) {
         if (null != guildId.messageId) {
-          let UNKNOWN = constants.MESSAGE;
+          UNKNOWN = constants.MESSAGE;
         }
         const obj = { is_discord_link: true, discord_link_type: UNKNOWN };
         tmp2(tmp3, obj);
@@ -88,51 +99,65 @@ export default {
     }
     UNKNOWN = constants.UNKNOWN;
   },
-  trackLinkClicked(ctaLink, arg1) {
-    if (null != ctaLink) {
-      let tmp3 = URLUtilsDefault.isDiscordUrl(ctaLink, true) || null != arg1;
+  trackLinkClicked(value, arg1) {
+    let tmp6;
+    function getDiscordLinkTypeFromUrl(value) {
+      const iter = items[Symbol.iterator]();
+      while (iter !== undefined) {
+        let tmp2 = iter.next()(value);
+        if (null != tmp2) {
+          iter.return();
+          return tmp2;
+        }
+      }
+      return constants.UNKNOWN;
+    }
+    if (null != value) {
+      const obj = URLUtilsDefault;
+      let tmp3 = obj.isDiscordUrl(value, true) || null != arg1;
+      const obj2 = { is_discord_link: tmp3, discord_link_type: tmp6 };
+      tmp6 = null;
+      const track = AnalyticsUtilsDefault.track;
+      const LINK_CLICKED = AnalyticEvents.LINK_CLICKED;
       AnalyticsUtilsDefault;
-      const obj2 = { is_discord_link: tmp3, discord_link_type: null };
-      if (!tmp3) {
-        obj2.discord_link_type = null;
-        tmp5(tmp7, obj2);
-      } else {
-        if (null != arg1) {
-          if (null == arg1) {
-            let UNKNOWN = (function getDiscordLinkTypeFromUrl(ctaLink) {
-              const iter = dependencyMap[Symbol.iterator]();
-              while (iter !== undefined) {
-                let tmp2 = iter.next()(ctaLink);
-                if (null != tmp2) {
-                  iter.return();
-                  return tmp2;
-                }
-              }
-              return constants.UNKNOWN;
-            })(ctaLink);
-          } else {
-            if (null != arg1.guildId) {
-              if (null != arg1.channelId) {
-                if (null != arg1.messageId) {
-                  UNKNOWN = constants.MESSAGE;
-                }
-              }
-            }
-            if (null != arg1.guildId) {
-              if (null != arg1.channelId) {
-                UNKNOWN = constants.CHANNEL;
-              }
-            }
+      if (tmp3) {
+        let UNKNOWN;
+        if (null == arg1) {
+          if (null == value) {
             UNKNOWN = constants.UNKNOWN;
           }
+          tmp6 = UNKNOWN;
         }
-        UNKNOWN = constants.UNKNOWN;
+        if (null == arg1) {
+          UNKNOWN = getDiscordLinkTypeFromUrl(value);
+        } else {
+          if (null != arg1.guildId) {
+            if (null != arg1.channelId) {
+              if (null != arg1.messageId) {
+                UNKNOWN = constants.MESSAGE;
+              }
+            }
+          }
+          if (null != arg1.guildId) {
+            if (null != arg1.channelId) {
+              UNKNOWN = constants.CHANNEL;
+            }
+          }
+          UNKNOWN = constants.UNKNOWN;
+        }
       }
+      track(LINK_CLICKED, obj2);
     }
   },
   trackAnnouncementMessageLinkClicked(arg0) {
+    let channelId;
+    let guildId;
+    let messageId;
+    let sourceChannelId;
+    let sourceGuildId;
     ({ messageId, channelId, guildId, sourceChannelId, sourceGuildId } = arg0);
-    AnalyticsUtilsDefault.track(AnalyticEvents.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, {
+    const obj = AnalyticsUtilsDefault;
+    obj.track(AnalyticEvents.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, {
       message_id: messageId,
       channel_id: channelId,
       guild_id: guildId,
@@ -141,3 +166,6 @@ export default {
     });
   },
 };
+const result = size.fileFinishedImporting("modules/links/LinkAnalyticsUtils.tsx");
+
+export default obj;

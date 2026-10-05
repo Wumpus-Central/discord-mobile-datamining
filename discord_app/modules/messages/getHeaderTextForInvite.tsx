@@ -1,49 +1,58 @@
 // discord_app/modules/messages/getHeaderTextForInvite.tsx
-import util from "../../intl/index.native.tsx";
+import intl2 from "../../intl/index.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
 
 export const getHeaderTextForInvite = function getHeaderTextForInvite(arg0) {
+  let isGuest;
+  let isHubGuild;
+  let isOwnInvite;
+  let isStage;
+  let isStream;
+  let isVoiceChannel;
+  let stringResult3;
   ({ isOwnInvite, isGuest, isStage, isStream } = arg0);
   ({ isVoiceChannel, isHubGuild } = arg0);
-  const intl = util.intl;
+  const intl = intl2.intl;
   const string = intl.string;
-  let N85DCl = util.t;
+  const t = intl2.t;
   if (isVoiceChannel) {
-    if (!isOwnInvite) {
+    let stringResult1;
+    if (isOwnInvite) {
+      let stringResult;
       if (isStream) {
-        let stringResult = string(N85DCl.Mnvc3C);
+        stringResult = string(t.N85DCl);
       } else if (isStage) {
-        stringResult = string(N85DCl.FdPNr5);
+        stringResult = string(t.TJQcNv);
       } else if (isGuest) {
-        stringResult = string(N85DCl.f4gmrf);
+        stringResult = string(t.mJyBir);
       } else {
-        stringResult = string(N85DCl.H39rEY);
+        stringResult = string(t.lxTgP9);
       }
-    }
-    if (isStream) {
-      N85DCl = N85DCl.N85DCl;
-      let stringResult1 = string(N85DCl);
+      stringResult1 = stringResult;
+    } else if (isStream) {
+      stringResult1 = string(t.Mnvc3C);
     } else if (isStage) {
-      stringResult1 = string(N85DCl.TJQcNv);
+      stringResult1 = string(t.FdPNr5);
     } else if (isGuest) {
-      stringResult1 = string(N85DCl.mJyBir);
+      stringResult1 = string(t.f4gmrf);
     } else {
-      stringResult1 = string(N85DCl.lxTgP9);
+      stringResult1 = string(t.H39rEY);
     }
+    stringResult3 = stringResult1;
   } else if (isHubGuild) {
+    let stringResult2;
     if (isOwnInvite) {
-      let stringResult2 = string(N85DCl.UxmnHx);
+      stringResult2 = string(t.UxmnHx);
     } else {
-      stringResult2 = string(N85DCl.sigPEf);
+      stringResult2 = string(t.sigPEf);
     }
+    stringResult3 = stringResult2;
+  } else if (isOwnInvite) {
+    stringResult3 = string(t["oU/lsl"]);
   } else {
-    if (isOwnInvite) {
-      let stringResult3 = string(N85DCl["oU/lsl"]);
-    } else {
-      stringResult3 = string(N85DCl.BoQUFf);
-    }
-    return stringResult3;
+    stringResult3 = string(t.BoQUFf);
   }
+  return stringResult3;
 };

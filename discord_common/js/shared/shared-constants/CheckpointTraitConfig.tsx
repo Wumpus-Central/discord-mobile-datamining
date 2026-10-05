@@ -1,6 +1,7 @@
 // discord_common/js/shared/shared-constants/CheckpointTraitConfig.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
+const set = new Set([1, 6, 9, 11, 13]);
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CheckpointTraitConfig.tsx");
 
 export const CHECKPOINT_BASE_OPTION_TO_RARITY = {
@@ -174,7 +175,7 @@ export const CHECKPOINT_AURA_OPTION_TO_RARITY = {
   14: "nitro",
 };
 export const CHECKPOINT_RARITY_MIN_PERCENTILE = { common: 0, rare: 70, epic: 80, ultra: 95 };
-export const CHECKPOINT_WEARABLE_LAYER_BACKGROUND = new Set([1, 6, 9, 11, 13]);
+export const CHECKPOINT_WEARABLE_LAYER_BACKGROUND = set;
 export const CHECKPOINT_LAYER_DEFAULT_ORDERING = ["base", "outfit", "shoes", "wearable", "face", "hat", "aura"];
 export const CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING = [
   "wearable",

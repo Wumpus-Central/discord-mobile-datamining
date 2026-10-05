@@ -1,37 +1,44 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupCardFooterConfig.tsx
+import Constants from "../../../../Constants.tsx";
 import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled.tsx";
 import usePowerupActiveStatusDefault from "usePowerupActiveStatus.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
+import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const GuildPowerupsConstants = fn(4768);
+let GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP;
+let closure_4;
+let hasOwnProperty;
 ({
   GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP,
   GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: closure_4,
   PowerupActiveStatusType: hasOwnProperty,
 } = GuildPowerupsConstants);
-const GuildFeatures = fn(1085).GuildFeatures;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupCardFooterConfig.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const GuildFeatures = Constants.GuildFeatures;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, skuId) => {
+      let closure_0;
+      let first;
+      let tmp8;
+      let tmp9;
       _require = arg0;
-      const cResult = require("c").c(11);
+      const obj = require("react");
+      const cResult = obj.c(11);
       const tmp5 = usePowerupActiveStatusDefault(arg0, skuId);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         const fn = function n() {
-          guild = GuildStore.getGuild(closure_0);
+          const guild = GuildStore.getGuild(closure_0);
           let hasItem;
           if (guild != null) {
             const features = guild.features;
@@ -43,34 +50,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp9 = items1;
-        let tmp8 = fn;
+        tmp9 = items1;
+        tmp8 = fn;
       } else {
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp8, tmp9);
+      const tmpResult = require("get initialized");
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp8, tmp9);
+      skuId = skuId.skuId;
       let tmp12 = tmp5.type !== constants.INACTIVE;
       if (!tmp12) {
-        tmp12 = skuId.skuId === tmp(4771).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
-        const tmp13 = skuId.skuId === tmp(4771).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+        tmp12 = skuId === require("Powerups").GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+        skuId === require("Powerups").GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
       }
-      let tmp14 = tmp12;
-      if (!tmp12) {
-        tmp14 = !useGuildPowerupRollbackEnabledDefault(arg0, skuId, "GuildPowerupCardFooterAdmin");
-      }
-      if (tmp14) {
-        tmp14 = tmp5.type !== constants.TIER_OVERRIDE_ACTIVATED;
-      }
+      const tmp14 =
+        (tmp12 || !useGuildPowerupRollbackEnabledDefault(arg0, skuId, "GuildPowerupCardFooterAdmin")) &&
+        tmp5.type !== constants.TIER_OVERRIDE_ACTIVATED;
       if (cResult[4] === tmp12) {
+        let tmp15;
         if (cResult[5] === skuId.skuId) {
-          let tmp15 = cResult[6];
+          tmp15 = cResult[6];
         }
         if (cResult[7] === tmp12) {
           if (cResult[8] === tmp15) {
+            let tmp17;
             if (cResult[9] === tmp14) {
-              let tmp17 = cResult[10];
+              tmp17 = cResult[10];
             }
             return tmp17;
           }
@@ -82,25 +88,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = obj2;
         tmp17 = obj2;
       }
-      let hasItem = tmp12;
-      if (tmp12) {
-        hasItem = set.has(skuId.skuId);
-      }
+      const tmp16 = tmp12 && set.has(skuId.skuId);
       cResult[4] = tmp12;
       cResult[5] = skuId.skuId;
-      cResult[6] = hasItem;
-      tmp15 = hasItem;
-      const tmpResult = require("initialize");
+      cResult[6] = tmp16;
+      tmp15 = tmp16;
     }
   : (arg0, skuId) => {
+      let closure_0;
+      let hasItem;
       _require = arg0;
       const tmp3 = usePowerupActiveStatusDefault(arg0, skuId);
       const items = [GuildStore];
       const items1 = [arg0];
-      const stateFromStores = require("initialize").useStateFromStores(
+      const obj = require("get initialized");
+      const stateFromStores = obj.useStateFromStores(
         items,
         () => {
-          guild = GuildStore.getGuild(closure_0);
+          const guild = GuildStore.getGuild(closure_0);
           let hasItem;
           if (guild != null) {
             const features = guild.features;
@@ -110,24 +115,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         items1,
       );
+      skuId = skuId.skuId;
       let tmp6 = tmp3.type !== constants.INACTIVE;
       if (!tmp6) {
-        tmp6 = skuId.skuId === require("Powerups").GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
-        const tmp7 = skuId.skuId === require("Powerups").GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+        tmp6 = skuId === require("Powerups").GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+        skuId === require("Powerups").GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
       }
-      let tmp8 = tmp6;
-      if (!tmp6) {
-        tmp8 = !useGuildPowerupRollbackEnabledDefault(arg0, skuId, "GuildPowerupCardFooterAdmin");
-      }
-      if (tmp8) {
-        tmp8 = tmp3.type !== constants.TIER_OVERRIDE_ACTIVATED;
-      }
-      const obj2 = { showToggleButton: tmp8, showConfigureButton: null, isPowerupActive: null };
-      let hasItem = tmp6;
-      if (tmp6) {
-        hasItem = set.has(skuId.skuId);
-      }
-      obj2.showConfigureButton = hasItem;
-      obj2.isPowerupActive = tmp6;
+      const obj2 = {
+        showToggleButton:
+          (tmp6 || !useGuildPowerupRollbackEnabledDefault(arg0, skuId, "GuildPowerupCardFooterAdmin")) &&
+          tmp3.type !== constants.TIER_OVERRIDE_ACTIVATED,
+        showConfigureButton: hasItem,
+        isPowerupActive: tmp6,
+      };
+      hasItem = tmp6 && set.has(skuId.skuId);
       return obj2;
     };
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupCardFooterConfig.tsx");
+
+export default tmp3;

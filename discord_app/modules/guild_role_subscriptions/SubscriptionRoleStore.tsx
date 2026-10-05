@@ -1,5 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/SubscriptionRoleStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import GuildRecord from "../../records/GuildRecord.tsx";
 import GuildRoleRecord from "../../records/GuildRoleRecord.tsx";
@@ -11,48 +11,61 @@ import UserStore from "../../stores/UserStore.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let guildsArray, set2;
+
+let c9;
+let metroImportAll;
 function computeRolesForGuild(guildId) {
   const currentUser = UserStore.getCurrentUser();
-  guild = GuildStore.getGuild(guildId);
+  const guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != currentUser) {
-      const _Set = Set;
-      set = new Set();
       const _Set2 = Set;
-      const set1 = new Set();
+      const self3 = this;
+      const self4 = this;
+      set = new Set();
       const _Set3 = Set;
-      const set2 = new Set();
+      const self5 = this;
+      const self6 = this;
+      const set1 = new Set();
+      const _Set4 = Set;
+      const self7 = this;
+      const self8 = this;
+      set2 = new Set();
       const result = map3.set(guildId, isGuildOwner(guild, currentUser));
       const features = guild.features;
       if (features.has(constants2.ROLE_SUBSCRIPTIONS_ENABLED)) {
         const member = GuildMemberStore.getMember(guildId, currentUser.id);
         let roles;
+        const _Set = Set;
         if (member != null) {
           roles = member.roles;
         }
         if (roles == null) {
           roles = [];
         }
-        const set3 = new Set(roles);
+        const self = this;
+        const self2 = this;
+        const _Set1 = new _Set(roles);
         const sortedRoles = GuildRoleStore.getSortedRoles(guild.id);
         const iter = sortedRoles[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
-          let tmp15 = nextResult;
+          let tmp13 = nextResult;
           let obj2 = PremiumRoleUtils;
           if (obj2.isSubscriptionRole(nextResult)) {
-            let addResult = set.add(tmp15.id);
-            let tmp16Result = PremiumRoleUtils;
-            if (tmp16Result.isSubscriptionRoleAvailableForPurchase(tmp15)) {
-              let addResult1 = set1.add(tmp15.id);
-              if (set3.has(tmp15.id)) {
-                let addResult2 = set2.add(tmp15.id);
+            let addResult = set.add(tmp13.id);
+            let tmp14Result = PremiumRoleUtils;
+            if (tmp14Result.isSubscriptionRoleAvailableForPurchase(tmp13)) {
+              let addResult1 = set1.add(tmp13.id);
+              if (_Set1.has(tmp13.id)) {
+                let addResult2 = set2.add(tmp13.id);
               }
             }
           }
-          let hasItem = set3.has(tmp15.id);
+          let hasItem = _Set1.has(tmp13.id);
           if (hasItem) {
-            hasItem = hasPermission(tmp15, constants.ADMINISTRATOR);
+            hasItem = hasPermission(tmp13, metroImportAll.ADMINISTRATOR);
           }
           if (hasItem) {
             let result1 = map3.set(guildId, true);
@@ -88,6 +101,8 @@ function handleGuildUpdate(guild) {
       if (hasItem) {
         if (!set.has(id)) {
           const _Set = Set;
+          const self = this;
+          const self2 = this;
           set = new Set(set);
           set.add(id);
           return true;
@@ -96,6 +111,8 @@ function handleGuildUpdate(guild) {
       if (!hasItem) {
         if (set.has(id)) {
           const _Set2 = Set;
+          const self3 = this;
+          const self4 = this;
           const set1 = new Set(set);
           set1.delete(id);
           set = set1;
@@ -108,30 +125,26 @@ function handleGuildUpdate(guild) {
 }
 function handleRoleUpdate(guildId) {
   guildId = guildId.guildId;
-  let hasItem = map.has(guildId);
-  if (hasItem) {
-    hasItem = computeRolesForGuild(guildId);
-  }
+  const hasItem = map.has(guildId) && computeRolesForGuild(guildId);
   return hasItem;
 }
 const isGuildOwner = GuildRecord.isGuildOwner;
 const hasPermission = GuildRoleRecord.hasPermission;
-({ Permissions: closure_8, GuildFeatures: closure_9 } = Constants);
+({ Permissions: metroImportAll, GuildFeatures: c9 } = Constants);
 new Set();
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
 const map3 = new Map();
 let set = null;
-const Store = initializeDefault.Store;
-class SubscriptionRoleStore extends Store {}
-const prototype = SubscriptionRoleStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(GuildStore, GuildRoleStore, UserStore, GuildMemberStore);
-};
-prototype["getGuildIdsWithPurchasableRoles"] = function getGuildIdsWithPurchasableRoles() {
-  if (null == set) {
-    let tmp = (function computeGuildsWithPurchasableRoles() {
+const Store = get_initializedDefault.Store;
+class SubscriptionRoleStore extends Store {
+  initialize() {
+    this.waitFor(GuildStore, GuildRoleStore, UserStore, GuildMemberStore);
+  }
+  getGuildIdsWithPurchasableRoles() {
+    let tmp;
+    function computeGuildsWithPurchasableRoles() {
       guildsArray = guildsArray.getGuildsArray();
       set = new Set();
       for (const item10014 of guildsArray) {
@@ -142,57 +155,62 @@ prototype["getGuildIdsWithPurchasableRoles"] = function getGuildIdsWithPurchasab
         continue;
       }
       return set;
-    })();
-  } else {
-    tmp = set;
+    }
+    if (null == set) {
+      tmp = computeGuildsWithPurchasableRoles();
+    } else {
+      tmp = set;
+    }
+    return tmp;
   }
-  return tmp;
-};
-prototype["buildRoles"] = function buildRoles(guildId) {
-  if (!map.has(guildId)) {
-    computeRolesForGuild(guildId);
+  buildRoles(guildId) {
+    if (!map.has(guildId)) {
+      computeRolesForGuild(guildId);
+    }
   }
-};
-prototype["getSubscriptionRoles"] = function getSubscriptionRoles(guildId) {
-  const roles = this.buildRoles(guildId);
-  value = map.get(guildId);
-  if (value == null) {
-    value = set;
+  getSubscriptionRoles(guildId) {
+    const roles = this.buildRoles(guildId);
+    let value = map.get(guildId);
+    if (value == null) {
+      value = set;
+    }
+    return value;
   }
-  return value;
-};
-prototype["getPurchasableSubscriptionRoles"] = function getPurchasableSubscriptionRoles(guildId) {
-  const roles = this.buildRoles(guildId);
-  value = map1.get(guildId);
-  if (value == null) {
-    value = set;
+  getPurchasableSubscriptionRoles(guildId) {
+    const roles = this.buildRoles(guildId);
+    let value = map1.get(guildId);
+    if (value == null) {
+      value = set;
+    }
+    return value;
   }
-  return value;
-};
-prototype["getUserSubscriptionRoles"] = function getUserSubscriptionRoles(guildId) {
-  const roles = this.buildRoles(guildId);
-  value = map2.get(guildId);
-  if (value == null) {
-    value = set;
+  getUserSubscriptionRoles(guildId) {
+    const roles = this.buildRoles(guildId);
+    let value = map2.get(guildId);
+    if (value == null) {
+      value = set;
+    }
+    return value;
   }
-  return value;
-};
-prototype["getUserIsAdmin"] = function getUserIsAdmin(guildId) {
-  const roles = this.buildRoles(guildId);
-  let flag = map3.get(guildId);
-  if (flag == null) {
-    flag = false;
+  getUserIsAdmin(guildId) {
+    const roles = this.buildRoles(guildId);
+    let flag = map3.get(guildId);
+    if (flag == null) {
+      flag = false;
+    }
+    return flag;
   }
-  return flag;
-};
+}
+const prototype = SubscriptionRoleStore.prototype;
 SubscriptionRoleStore.displayName = "SubscriptionRoleStore";
-const subscriptionRoleStore = new SubscriptionRoleStore(DispatcherDefault, {
+let obj = {
   CONNECTION_OPEN: deleteEverything,
   LOGOUT: deleteEverything,
   GUILD_CREATE: handleGuildUpdate,
   GUILD_DELETE: function handleGuildDelete(guild) {
     const id = guild.guild.id;
     let hasItem;
+    const obj = set;
     if (set != null) {
       hasItem = obj.has(id);
     }
@@ -200,10 +218,11 @@ const subscriptionRoleStore = new SubscriptionRoleStore(DispatcherDefault, {
       return false;
     } else {
       const _Set = Set;
+      const self = this;
+      const self2 = this;
       set = new Set(set);
       set.delete(id);
     }
-    obj = set;
   },
   GUILD_UPDATE: handleGuildUpdate,
   GUILD_ROLE_CREATE: handleRoleUpdate,
@@ -211,22 +230,19 @@ const subscriptionRoleStore = new SubscriptionRoleStore(DispatcherDefault, {
   GUILD_ROLE_DELETE: handleRoleUpdate,
   GUILD_MEMBER_UPDATE: function handleGuildMemberUpdate(guildId) {
     guildId = guildId.guildId;
+    const user = guildId.user;
     const currentUser = UserStore.getCurrentUser();
-    let id;
+    let id1;
+    const id = user.id;
     if (currentUser != null) {
-      id = currentUser.id;
+      id1 = currentUser.id;
     }
-    let tmp3 = guildId.user.id !== id;
-    if (!tmp3) {
-      tmp3 = !map.has(guildId);
-    }
-    let tmp5 = !tmp3;
-    if (!tmp3) {
-      tmp5 = computeRolesForGuild(guildId);
-    }
+    const tmp3 = id !== id1 || !map.has(guildId);
+    const tmp5 = !tmp3 && computeRolesForGuild(guildId);
     return tmp5;
   },
-});
+};
+const subscriptionRoleStore = new SubscriptionRoleStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/SubscriptionRoleStore.tsx");
 
 export default subscriptionRoleStore;

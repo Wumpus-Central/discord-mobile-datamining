@@ -2,6 +2,8 @@
 import SearchConstants from "../../SearchConstants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+let SearchHistoryItemTypes;
+let SearchTabs;
 ({ SearchHistoryItemTypes, SearchTabs } = SearchConstants);
 const obj = {
   RECENT: "recent",
@@ -21,17 +23,7 @@ const obj3 = {
   DM_CHANNEL: "dm_channel",
   PLAINTEXT: "plaintext",
 };
-const result = size.fileFinishedImporting("modules/search/native/tracking/TrackingConstants.tsx");
-
-export const SearchEntrypointAnalyticsLocations = {
-  GUILD: "guild",
-  CHANNEL_HEADER: "channel_header",
-  CHANNEL_DETAILS_HEADER: "channel_details_header",
-  DM_LIST: "dm_list",
-  INDIVIDUAL_DM: "individual_dm",
-};
-export const AnalyticsSearchTabs = obj;
-export const SEARCH_TAB_TO_ANALYTICS_SEARCH_TAB = {
+const obj2 = {
   [SearchTabs.RECENT]: obj.RECENT,
   [SearchTabs.GUILD_CHANNELS]: obj.CHANNELS,
   [SearchTabs.MEDIA]: obj.MEDIA,
@@ -43,14 +35,26 @@ export const SEARCH_TAB_TO_ANALYTICS_SEARCH_TAB = {
   [SearchTabs.MEMBERS]: obj.MEMBERS,
   [SearchTabs.THREADS]: obj.THREADS,
 };
-export const AnalyticsSearchHistoryTypes = obj3;
-export const SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY = {
+const obj4 = {
   [SearchHistoryItemTypes.GUILD_TEXT_CHANNEL]: obj3.GUILD_CHANNEL,
   [SearchHistoryItemTypes.GUILD_VOICE_CHANNEL]: obj3.GUILD_CHANNEL,
   [SearchHistoryItemTypes.GROUP_DM]: obj3.GDM_CHANNEL,
   [SearchHistoryItemTypes.DM]: obj3.DM_CHANNEL,
   [SearchHistoryItemTypes.TEXT]: obj3.PLAINTEXT,
 };
+const result = size.fileFinishedImporting("modules/search/native/tracking/TrackingConstants.tsx");
+
+export const SearchEntrypointAnalyticsLocations = {
+  GUILD: "guild",
+  CHANNEL_HEADER: "channel_header",
+  CHANNEL_DETAILS_HEADER: "channel_details_header",
+  DM_LIST: "dm_list",
+  INDIVIDUAL_DM: "individual_dm",
+};
+export const AnalyticsSearchTabs = obj;
+export const SEARCH_TAB_TO_ANALYTICS_SEARCH_TAB = obj2;
+export const AnalyticsSearchHistoryTypes = obj3;
+export const SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY = obj4;
 export const SearchFilterAddLocations = {
   SEARCH_HISTORY: "search_history",
   SEARCH_INPUT_DROPDOWN: "search_input_dropdown",

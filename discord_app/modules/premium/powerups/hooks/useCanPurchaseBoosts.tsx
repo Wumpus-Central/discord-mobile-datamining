@@ -1,18 +1,22 @@
 // discord_app/modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
+import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../../../_runtime/00576_react.js";
+import PremiumConstants from "../../PremiumConstants.tsx";
 import useFractionalPremiumInfoDefault from "../../../billing/hooks/useFractionalPremiumInfo.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const FractionalPremiumStates = fn(1379).FractionalPremiumStates;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx");
+let currentUser;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+const FractionalPremiumStates = PremiumConstants.FractionalPremiumStates;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let tmp4;
+      let tmp5;
+      const obj = react;
+      const cResult = obj.c(2);
+      const fractionalState = useFractionalPremiumInfoDefault().fractionalState;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         const fn = function u() {
@@ -30,23 +34,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = initialize;
-      return (
-        useFractionalPremiumInfoDefault().fractionalState === FractionalPremiumStates.NONE &&
-        !initialize.useStateFromStores(tmp4, tmp5)
-      );
+      const tmpResult = get_initialized;
+      const tmp7 = fractionalState === FractionalPremiumStates.NONE && !tmpResult.useStateFromStores(tmp4, tmp5);
+      return tmp7;
     }
   : () => {
+      const fractionalState = useFractionalPremiumInfoDefault().fractionalState;
       const items = [UserStore];
-      return (
-        useFractionalPremiumInfoDefault().fractionalState === FractionalPremiumStates.NONE &&
-        !initialize.useStateFromStores(items, () => {
+      const obj = get_initialized;
+      const tmp =
+        fractionalState === FractionalPremiumStates.NONE &&
+        !obj.useStateFromStores(items, () => {
           currentUser = currentUser.getCurrentUser();
           let isPremiumGroupMemberResult;
           if (currentUser != null) {
             isPremiumGroupMemberResult = currentUser.isPremiumGroupMember();
           }
           return true === isPremiumGroupMemberResult;
-        })
-      );
+        });
+      return tmp;
     };
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx");
+
+export default tmp2;

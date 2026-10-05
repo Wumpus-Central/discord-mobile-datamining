@@ -1,33 +1,39 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx
-import c from "../../../../../../_runtime/00576_c.js";
+import react2 from "../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../../../Constants.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 import useFontScale from "../../../../screen/native/useFontScale.tsx";
 import MessagesHeader from "MessagesHeader.tsx";
 import MessagesItemChannel from "items/MessagesItemChannel.tsx";
 import MessagesItemSuggestedFriend from "items/MessagesItemSuggestedFriend.tsx";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-require = fn;
 let closure_3 = ["height"];
 let closure_4 = ["height"];
-const DM_WIDTH = fn(1085).DM_WIDTH;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const DM_WIDTH = Constants.DM_WIDTH;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(13);
-      const fontScale = useFontScale.useFontScale();
-      const messagesHeaderHeight = MessagesHeader.getMessagesHeaderHeight(fontScale);
+      let tmp10;
+      let tmp15;
+      let tmp7;
+      let tmp9;
+      const obj = react2;
+      const cResult = obj.c(13);
+      const obj2 = useFontScale;
+      const fontScale = obj2.useFontScale();
+      const top = useSafeAreaInsetsDefault().top;
+      const obj3 = MessagesHeader;
+      const messagesHeaderHeight = obj3.getMessagesHeaderHeight(fontScale);
       if (cResult[0] !== fontScale) {
-        const messagesItemChannelSizes = MessagesItemChannel.getMessagesItemChannelSizes(fontScale);
+        const tmpResult = MessagesItemChannel;
+        const messagesItemChannelSizes = tmpResult.getMessagesItemChannelSizes(fontScale);
         cResult[0] = fontScale;
         cResult[1] = messagesItemChannelSizes;
-        let tmp7 = messagesItemChannelSizes;
-        const tmpResult = MessagesItemChannel;
+        tmp7 = messagesItemChannelSizes;
       } else {
         tmp7 = cResult[1];
       }
@@ -37,20 +43,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = tmp7;
         cResult[3] = height;
         cResult[4] = tmp13;
-        let tmp10 = tmp13;
-        let tmp9 = height;
+        tmp10 = tmp13;
+        tmp9 = height;
       } else {
         tmp9 = cResult[3];
         tmp10 = cResult[4];
       }
-      const sum = useSafeAreaInsetsDefault().top + messagesHeaderHeight;
+      const sum = top + messagesHeaderHeight;
       if (cResult[5] !== fontScale) {
-        const messagesItemSuggestedFriendHeight =
-          MessagesItemSuggestedFriend.getMessagesItemSuggestedFriendHeight(fontScale);
+        const tmpResult2 = MessagesItemSuggestedFriend;
+        const messagesItemSuggestedFriendHeight = tmpResult2.getMessagesItemSuggestedFriendHeight(fontScale);
         cResult[5] = fontScale;
         cResult[6] = messagesItemSuggestedFriendHeight;
-        let tmp15 = messagesItemSuggestedFriendHeight;
-        const tmpResult2 = MessagesItemSuggestedFriend;
+        tmp15 = messagesItemSuggestedFriendHeight;
       } else {
         tmp15 = cResult[6];
       }
@@ -58,8 +63,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[8] === tmp9) {
           if (cResult[9] === tmp10) {
             if (cResult[10] === sum) {
+              let tmp17;
               if (cResult[11] === tmp15) {
-                let tmp17 = cResult[12];
+                tmp17 = cResult[12];
               }
               return tmp17;
             }
@@ -84,24 +90,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp17 = obj4;
     }
   : () => {
-      fontScale = fontScale(5602).useFontScale();
+      let fontScale;
+      let top;
+      let obj = fontScale(5602);
+      fontScale = obj.useFontScale();
       top = top(1618)().top;
       const items = [fontScale, top];
-      return noop.useMemo(() => {
-        const messagesHeaderHeight = MessagesHeader.getMessagesHeaderHeight(fontScale);
-        const messagesItemChannelSizes = MessagesItemChannel.getMessagesItemChannelSizes(fontScale);
+      return react.useMemo(() => {
+        let obj4;
+        const obj = MessagesHeader;
+        const messagesHeaderHeight = obj.getMessagesHeaderHeight(fontScale);
+        const obj2 = MessagesItemChannel;
+        const messagesItemChannelSizes = obj2.getMessagesItemChannelSizes(fontScale);
         const obj3 = {
           headerSize: messagesHeaderHeight,
           listTop: top + messagesHeaderHeight,
           listLeft: DM_WIDTH,
           listItemHeight: messagesItemChannelSizes.height,
           listItemSizes: _objectWithoutProperties(messagesItemChannelSizes, closure_4),
-          listItemSuggestedFriendHeight: null,
-          scrollIndicatorInsetEnd: null,
+          listItemSuggestedFriendHeight: obj4.getMessagesItemSuggestedFriendHeight(fontScale),
+          scrollIndicatorInsetEnd: nativeDefault.space.PX_4,
         };
-        obj3.listItemSuggestedFriendHeight =
-          MessagesItemSuggestedFriend.getMessagesItemSuggestedFriendHeight(fontScale);
-        obj3.scrollIndicatorInsetEnd = nativeDefault.space.PX_4;
+        obj4 = MessagesItemSuggestedFriend;
         return obj3;
       }, items);
     };
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
+
+export default tmp2;

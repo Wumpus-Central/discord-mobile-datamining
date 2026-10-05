@@ -6,22 +6,22 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/coded_links/findCodedLinkUrls.native.tsx");
 
 export default function findCodedLinkUrls(content) {
+  let items;
+  let tmp = items;
+  const obj = items(13659);
   if (obj.isFindCodedLinksRegexEnabled()) {
-    let items = findCodedLinkUrlsUsingRegexDefault(content);
+    items = findCodedLinkUrlsUsingRegexDefault(content);
   } else {
     items = [];
     const _default = tmp(4877).default;
-    const parseToASTResult = tmp(4877).default.parseToAST(content, true, { allowLinks: true });
-    tmp(7648).walkAst(parseToASTResult, (type) => {
-      let tmp = type.type === MarkupTypes.AST_KEY.LINK && typeof type.target === "string";
-      if (tmp) {
-        tmp = type.target.length > 0;
-      }
+    const parseToASTResult = _default.parseToAST(content, true, { allowLinks: true });
+    const tmpResult = tmp(7648);
+    tmpResult.walkAst(parseToASTResult, (type) => {
+      const tmp = type.type === MarkupTypes.AST_KEY.LINK && typeof type.target === "string" && type.target.length > 0;
       if (tmp) {
         items.push(type.target);
       }
     });
-    const tmpResult = tmp(7648);
   }
   return items;
 }

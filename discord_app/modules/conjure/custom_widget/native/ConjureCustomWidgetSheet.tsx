@@ -1,44 +1,78 @@
 // discord_app/modules/conjure/custom_widget/native/ConjureCustomWidgetSheet.tsx
+import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../../Constants.tsx";
+import ChannelConstants from "../../../channel/ChannelConstants.tsx";
 import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _asyncToGenerator_mod from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
+import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ConjureConnectionStore from "../../connection/ConjureConnectionStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const View = fn(17).View;
-const ConjureConnectionStore = fn(12904);
-({ ensureConnection: closure_7, sendUserMessage: closure_8 } = ConjureConnectionStore);
-const Routes = fn(1085).Routes;
-const StaticChannelRoute = fn(2058).StaticChannelRoute;
-const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+let c4, c5, dependencyMap;
+
+let closure_12;
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let unpackModuleId;
+let _asyncToGenerator = _asyncToGenerator_mod;
+let _slicedToArray = _slicedToArray_mod;
+const View = react_native.View;
+({ ensureConnection: metroImportDefault, sendUserMessage: metroImportAll } = ConjureConnectionStore);
+const Routes = Constants.Routes;
+const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
+({ jsx: unpackModuleId, jsxs: closure_12 } = Fragment);
 const VibegrationsCustomWidgetSheet = "VibegrationsCustomWidgetSheet";
-const createStyles = fn(4890);
-let obj2 = { body: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 } };
-let closure_14 = createStyles.createStyles(obj2);
-const size = fn(2);
+let obj = { body: obj2 };
+obj2 = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+let closure_14 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/conjure/custom_widget/native/ConjureCustomWidgetSheet.tsx");
 
 export default function ConjureCustomWidgetSheet() {
+  let BottomSheetTitleHeader;
+  let closure_1;
+  let closure_4;
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let items1;
+  let memo;
+  let obj2;
+  let obj3;
+  let tmp5;
+  let tmp7;
+  let value;
+  let tmp = closure_14();
   [value, importDefault] = memo.useState("");
-  const tmp = closure_14();
-  [tmp5, dependencyMap] = memo.useState(null);
   const tmp4 = _slicedToArray(memo.useState(null), 2);
-  [tmp7, asyncGeneratorStep] = memo.useState(false);
+  [tmp5, dependencyMap] = tmp4;
+  [tmp7, _asyncToGenerator] = _slicedToArray(memo.useState(false), 2);
+  const tmp6 = _slicedToArray(memo.useState(false), 2);
   _slicedToArray = memo.useRef(false);
-  memo = memo.useMemo(() => first(6746).resolveConjureWorkspaceGuildId("VibegrationsCustomWidgetSheet"), []);
+  memo = memo.useMemo(() => {
+    const obj = first(dependencyMap[10]);
+    return obj.resolveConjureWorkspaceGuildId("VibegrationsCustomWidgetSheet");
+  }, []);
   const callback = memo.useCallback((arg0) => {
     closure_1(arg0);
     dependencyMap(null);
   }, []);
   const items = [value, memo];
   const callback1 = memo.useCallback(
-    asyncGeneratorStep(async () => {
+    _asyncToGenerator(async () => {
+      let closure_0;
+      let closure_2;
+      let obj4;
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp7 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -48,7 +82,11 @@ export default function ConjureCustomWidgetSheet() {
           return { value: "IconComponent", done: null };
         }
       } else {
+        let c3;
         try {
+          let tmp;
+          let open;
+          let trimmed;
           c5 = 2;
           if (0 === c4) {
             if (arg0 === 1) {
@@ -59,51 +97,57 @@ export default function ConjureCustomWidgetSheet() {
               const obj5 = { value, done: true };
               return obj5;
             } else {
-              value = tmp8;
-              closure_128_0 = undefined;
-              closure_128_1 = undefined;
-              closure_128_2 = function open(arg0) {
-                closure_0(1112).transitionTo(closure_2_9.CHANNEL(closure_1_5, constants.CONJURE, arg0));
-                const obj = closure_0(1112);
-                closure_1(4854).hideActionSheet(closure_2_13);
-                const obj2 = closure_1(4854);
-                closure_1(4854).hideAllActionSheets();
+              value = tmp4;
+              tmp = undefined;
+              open = function open(value) {
+                const obj = closure_2_0(closure_2_2[13]);
+                obj.transitionTo(closure_2_9.CHANNEL(closure_1_5, constants.CONJURE, value));
+                const obj2 = closure_2_1(closure_2_2[14]);
+                obj2.hideActionSheet(closure_2_13);
+                const obj3 = closure_2_1(closure_2_2[14]);
+                obj3.hideAllActionSheets();
               };
-              const trimmed = first.trim();
-              closure_128_0 = trimmed;
+              trimmed = first.trim();
               if ("" !== trimmed) {
                 if (null != memo) {
                   if (!ref.current) {
                     ref.current = true;
-                    asyncGeneratorStep(true);
+                    _asyncToGenerator(true);
                     dependencyMap(null);
-                    closure_128_1 = null;
+                    tmp = null;
                     c3 = 2;
-                    const obj6 = { guild_id: tmp62, install_scope: "user" };
+                    const obj6 = { guild_id: tmp58, install_scope: "user" };
                     c4 = 3;
                     c5 = 1;
-                    const obj7 = { value: value(tmp70[15]).createProject(obj6), done: false };
+                    const obj7 = { value: obj4.createProject(obj6), done: false };
+                    obj4 = value(dependencyMap[15]);
                     return obj7;
                   }
                 }
               } else {
-                const intl = value(tmp70[11]).intl;
-                dependencyMap(intl.string(tmp4(tmp70[12]).AuyDIq));
+                const intl = value(dependencyMap[11]).intl;
+                dependencyMap(intl.string(tmp(dependencyMap[12]).AuyDIq));
               }
-              c5 = 3;
             }
-          } else if (1 === tmp8) {
+          } else if (1 === c4) {
             c3 = 0;
             closure_129_4.current = false;
             closure_129_3(false);
-            throw tmp70;
+            throw dependencyMap;
           } else {
-            if (2 === tmp8) {
+            if (2 === c4) {
               c3 = 1;
-              closure_128_3 = tmp70;
-              if (null == closure_128_1) {
-                closure_129_2(value(tmp70[17]).getConjureCreateErrorMessage(closure_128_3));
-                const obj3 = value(tmp70[17]);
+              _asyncToGenerator = dependencyMap;
+              if (null != tmp) {
+                open(tmp);
+                c3 = 0;
+                closure_129_4.current = false;
+                closure_129_3(false);
+                c5 = 3;
+                return { value: "IconComponent", done: null };
+              } else {
+                let obj3 = value(dependencyMap[17]);
+                closure_129_2(obj3.getConjureCreateErrorMessage(_asyncToGenerator));
               }
             } else if (arg0 === 1) {
               c5 = 3;
@@ -116,74 +160,70 @@ export default function ConjureCustomWidgetSheet() {
               const obj8 = { value, done: true };
               return obj8;
             } else {
-              closure_128_1 = value;
-              closure_1_7(closure_128_1);
-              closure_1_8(closure_128_1, value(tmp70[16]).composeConjureCustomWidgetPrompt(closure_128_0));
-              closure_128_2(closure_128_1);
+              tmp = value;
+              closure_1_7(tmp);
+              let obj = value(dependencyMap[16]);
+              closure_1_8(tmp, obj.composeConjureCustomWidgetPrompt(trimmed));
+              open(tmp);
               c3 = 1;
-              let obj = value(tmp70[16]);
             }
             c3 = 0;
             closure_129_4.current = false;
             closure_129_3(false);
           }
-          closure_128_2(closure_128_1);
-          c3 = 0;
-          closure_129_4.current = false;
-          closure_129_3(false);
           c5 = 3;
           return { value: "IconComponent", done: null };
-        } catch (tmp70) {
-          if (tmp5 === c3) {
-            c5 = tmp3;
-            throw tmp70;
-          } else if (tmp2 === tmp72) {
-            c4 = tmp2;
+        } catch (tmp66) {
+          dependencyMap = tmp66;
+          if (0 === c3) {
+            c5 = 3;
+            throw tmp66;
+          } else if (1 === tmp68) {
+            c4 = 1;
           } else {
-            c4 = tmp;
+            c4 = 2;
           }
         }
       }
     }),
     items,
   );
-  let obj = { startExpanded: true, keyboardShouldPersistTaps: "handled", header: null, children: null };
-  let obj2 = { title: null };
-  let intl = value(1126).intl;
-  obj2.title = intl.string(_modDef3723.yI85oV);
-  obj.header = closure_11(value(6644).BottomSheetTitleHeader, obj2);
-  let obj3 = { style: tmp.body, children: null };
-  const obj4 = {
-    label: null,
-    placeholder: null,
-    description: null,
-    errorMessage: null,
-    value: null,
-    onChange: null,
-    maxLength: null,
-    disabled: null,
+  let obj = {
+    startExpanded: true,
+    keyboardShouldPersistTaps: "handled",
+    header: closure_11(BottomSheetTitleHeader, obj2),
+    children: closure_12(View, obj3),
   };
-  const intl2 = value(1126).intl;
-  obj4.label = intl2.string(_modDef3723["09BSx3"]);
-  const intl3 = value(1126).intl;
-  obj4.placeholder = intl3.string(_modDef3723.K7zdCZ);
-  const intl4 = value(1126).intl;
-  obj4.description = intl4.string(_modDef3723.SKwzvJ);
-  obj4.errorMessage = tmp5;
-  obj4.value = value;
-  obj4.onChange = callback;
-  obj4.maxLength = value(12902).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
-  obj4.disabled = tmp7;
-  const items1 = [closure_11(value(6580).TextArea, obj4)];
-  let obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };
-  const intl5 = tmp12(1126).intl;
-  obj5.text = intl5.string(_modDef3723.MDZXiK);
-  obj5.onPress = callback1;
-  obj5.loading = tmp7;
-  obj5.disabled = null == memo;
-  items1[1] = closure_11(value(5594).Button, obj5);
-  obj3.children = items1;
-  obj.children = closure_12(View, obj3);
-  return closure_11(value(6701).ActionSheet, obj);
+  const ActionSheet = value(6701).ActionSheet;
+  obj2 = { title: intl.string(_modDef3723.yI85oV) };
+  BottomSheetTitleHeader = value(6644).BottomSheetTitleHeader;
+  intl = value(1126).intl;
+  obj3 = { style: tmp.body, children: items1 };
+  let obj4 = {
+    label: intl2.string(_modDef3723["09BSx3"]),
+    placeholder: intl3.string(_modDef3723.K7zdCZ),
+    description: intl4.string(_modDef3723.SKwzvJ),
+    errorMessage: tmp5,
+    value,
+    onChange: callback,
+    maxLength: tmp12(12902).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH,
+    disabled: tmp7,
+  };
+  const TextArea = value(6580).TextArea;
+  intl2 = value(1126).intl;
+  intl3 = value(1126).intl;
+  intl4 = value(1126).intl;
+  items1 = [closure_11(TextArea, obj4)];
+  let obj5 = {
+    variant: "primary",
+    text: intl5.string(_modDef3723.MDZXiK),
+    onPress: callback1,
+    loading: tmp7,
+    disabled: null == memo,
+  };
+  const Button = tmp12(5594).Button;
+  intl5 = tmp12(1126).intl;
+  items1[1] = closure_11(Button, obj5);
+  return closure_11(ActionSheet, obj);
 }
 export const CONJURE_CUSTOM_WIDGET_SHEET_KEY = "VibegrationsCustomWidgetSheet";

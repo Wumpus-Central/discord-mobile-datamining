@@ -1,11 +1,8 @@
 // discord_app/modules/billing/errors/InvalidGooglePlayPurchase.tsx
 import BillingError from "../../../errors/BillingError.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const prototype = function InvalidGooglePlayPurchase() {
-  return HermesBuiltin.applyArguments(new.target, new.target);
-}.prototype;
-class prototype extends tmp2 {}
-const size = fn(2);
+class InvalidGooglePlayPurchase extends BillingError {}
 const result = size.fileFinishedImporting("modules/billing/errors/InvalidGooglePlayPurchase.tsx");
 
-export default prototype;
+export default InvalidGooglePlayPurchase;

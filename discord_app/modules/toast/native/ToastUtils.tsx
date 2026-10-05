@@ -1,6 +1,6 @@
 // discord_app/modules/toast/native/ToastUtils.tsx
 import Constants from "../../../Constants.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl7 from "../../../intl/index.native.tsx";
 import v1 from "../../../../_runtime/01266_v1.js";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import ToastActionCreatorsDefault from "ToastActionCreators.tsx";
@@ -24,315 +24,410 @@ const VerificationCriteria = Constants.VerificationCriteria;
 const result = size.fileFinishedImporting("modules/toast/native/ToastUtils.tsx");
 
 export const presentAddedFriendToast = function presentAddedFriendToast() {
-  const obj2 = { key: "TOAST_ADD_FRIEND", content: null, iconColor: "status-positive", IconComponent: null };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.Fn5bwO);
-  obj2.IconComponent = FriendsIcon.FriendsIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = {
+    key: "TOAST_ADD_FRIEND",
+    content: intl.string(intl7.t.Fn5bwO),
+    iconColor: "status-positive",
+    IconComponent: FriendsIcon.FriendsIcon,
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentFriendRequestAcceptedToast = function presentFriendRequestAcceptedToast(username) {
+  let stringResult;
+  let tmp3;
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
   if (null == username) {
-    const intl2 = util.intl;
-    let stringResult = intl2.string(util.t.UhJna5);
-    let tmp2 = require;
+    const intl2 = intl7.intl;
+    stringResult = intl2.string(intl7.t.UhJna5);
+    tmp3 = require;
   } else {
-    tmp2 = require;
-    const intl = util.intl;
-    const obj2 = { username: username.username };
-    stringResult = intl.formatToPlainString(util.t.b3eoD4, obj2);
+    tmp3 = require;
+    const intl = intl7.intl;
+    const obj = { username: username.username };
+    stringResult = intl.formatToPlainString(intl7.t.b3eoD4, obj);
   }
-  const obj = ToastActionCreatorsDefault;
-  obj.open({
+  const obj2 = {
     key: "TOAST_FRIEND_REQUEST_ACCEPTED",
     content: stringResult,
-    IconComponent: tmp2(4833).UserPlusIcon,
-    iconColor: "status-positive",
-  });
-  const obj3 = {
-    key: "TOAST_FRIEND_REQUEST_ACCEPTED",
-    content: stringResult,
-    IconComponent: tmp2(4833).UserPlusIcon,
+    IconComponent: tmp3(4833).UserPlusIcon,
     iconColor: "status-positive",
   };
+  open(obj2);
 };
 export const presentGameFriendRequestAcceptedToast = function presentGameFriendRequestAcceptedToast() {
-  const obj2 = {
+  let intl;
+  const obj = {
     key: "TOAST_GAME_FRIEND_REQUEST_ACCEPTED",
-    content: null,
-    IconComponent: null,
+    content: intl.string(intl7.t.xjNLeZ),
+    IconComponent: UserPlatformIcon.UserPlatformIcon,
     iconColor: "status-positive",
   };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.xjNLeZ);
-  obj2.IconComponent = UserPlatformIcon.UserPlatformIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentFriendRequestIgnoredToast = function presentFriendRequestIgnoredToast() {
-  const obj2 = {
+  let intl;
+  const obj = {
     key: "TOAST_FRIEND_REQUEST_IGNORED",
-    content: null,
-    IconComponent: null,
+    content: intl.string(intl7.t.YlavlY),
+    IconComponent: UserMinusIcon.UserMinusIcon,
     iconColor: "icon-feedback-critical",
   };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.YlavlY);
-  obj2.IconComponent = UserMinusIcon.UserMinusIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentGameFriendRequestIgnoredToast = function presentGameFriendRequestIgnoredToast() {
-  const obj2 = {
+  let intl;
+  const obj = {
     key: "TOAST_GAME_FRIEND_REQUEST_IGNORED",
-    content: null,
-    IconComponent: null,
+    content: intl.string(intl7.t.P6BzJP),
+    IconComponent: UserMinusIcon.UserMinusIcon,
     iconColor: "icon-feedback-critical",
   };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.P6BzJP);
-  obj2.IconComponent = UserMinusIcon.UserMinusIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentLinkCopied = function presentLinkCopied() {
-  const obj2 = { key: "LINK_COPIED", content: null, IconComponent: null };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t["+5kSoW"]);
-  obj2.IconComponent = LinkIcon.LinkIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = { key: "LINK_COPIED", content: intl.string(intl7.t["+5kSoW"]), IconComponent: LinkIcon.LinkIcon };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentInviteSent = function presentInviteSent() {
-  const obj2 = { key: "INVITE_SENT", content: null, IconComponent: null };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.sVwWdV);
-  obj2.IconComponent = SendMessageIcon.SendMessageIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = {
+    key: "INVITE_SENT",
+    content: intl.string(intl7.t.sVwWdV),
+    IconComponent: SendMessageIcon.SendMessageIcon,
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentIdCopied = function presentIdCopied() {
-  const obj2 = { key: "TOAST_ID_COPIED", content: null, IconComponent: null };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.eNjAah);
-  obj2.IconComponent = CopyIcon.CopyIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = { key: "TOAST_ID_COPIED", content: intl.string(intl7.t.eNjAah), IconComponent: CopyIcon.CopyIcon };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentImageSaved = function presentImageSaved() {
-  const obj2 = { key: "TOAST_IMAGE_SAVED", content: null, IconComponent: null };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.cqpdJW);
-  obj2.IconComponent = DownloadIcon.DownloadIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = {
+    key: "TOAST_IMAGE_SAVED",
+    content: intl.string(intl7.t.cqpdJW),
+    IconComponent: DownloadIcon.DownloadIcon,
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentVideoSaved = function presentVideoSaved() {
-  const obj2 = { key: "TOAST_VIDEO_SAVED", content: null, IconComponent: null };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t["cEK+1g"]);
-  obj2.IconComponent = DownloadIcon.DownloadIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = {
+    key: "TOAST_VIDEO_SAVED",
+    content: intl.string(intl7.t["cEK+1g"]),
+    IconComponent: DownloadIcon.DownloadIcon,
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentGifSaved = function presentGifSaved() {
-  const obj2 = { key: "TOAST_GIF_SAVED", content: null, IconComponent: null };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.LktEtN);
-  obj2.IconComponent = DownloadIcon.DownloadIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = {
+    key: "TOAST_GIF_SAVED",
+    content: intl.string(intl7.t.LktEtN),
+    IconComponent: DownloadIcon.DownloadIcon,
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentMessageCopied = function presentMessageCopied() {
-  const obj2 = { key: "TOAST_MESSAGE_COPIED", content: null, IconComponent: null };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.R3o53R);
-  obj2.IconComponent = CopyIcon.CopyIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = { key: "TOAST_MESSAGE_COPIED", content: intl.string(intl7.t.R3o53R), IconComponent: CopyIcon.CopyIcon };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentMessageIdCopied = function presentMessageIdCopied() {
-  const obj2 = { key: "TOAST_MESSAGE_ID_COPIED", content: null, IconComponent: null };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.svRBmK);
-  obj2.IconComponent = CopyIcon.CopyIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = {
+    key: "TOAST_MESSAGE_ID_COPIED",
+    content: intl.string(intl7.t.svRBmK),
+    IconComponent: CopyIcon.CopyIcon,
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentPostIdCopied = function presentPostIdCopied() {
-  const obj2 = { key: "TOAST_FORUM_POST_ID_COPIED", content: null, IconComponent: null };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.aBQ2RP);
-  obj2.IconComponent = CopyIcon.CopyIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = {
+    key: "TOAST_FORUM_POST_ID_COPIED",
+    content: intl.string(intl7.t.aBQ2RP),
+    IconComponent: CopyIcon.CopyIcon,
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentUsernameCopied = function presentUsernameCopied() {
-  const obj2 = { key: "TOAST_USERNAME_SAVED", content: null, IconComponent: null };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t["FHVR/+"]);
-  obj2.IconComponent = CopyIcon.CopyIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = {
+    key: "TOAST_USERNAME_SAVED",
+    content: intl.string(intl7.t["FHVR/+"]),
+    IconComponent: CopyIcon.CopyIcon,
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentFeedbackSent = function presentFeedbackSent() {
-  const obj2 = { key: "TOAST_FEEDBACK_SENT", content: null, IconComponent: null, iconColor: "status-positive" };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.xpiDtu);
-  obj2.IconComponent = CheckmarkLargeIcon.CheckmarkLargeIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = {
+    key: "TOAST_FEEDBACK_SENT",
+    content: intl.string(intl7.t.xpiDtu),
+    IconComponent: CheckmarkLargeIcon.CheckmarkLargeIcon,
+    iconColor: "status-positive",
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentEmoji = function presentEmoji(id) {
-  const emojiURL = AvatarUtilsDefault.getEmojiURL({ id: id.id, animated: id.animated, size: 48 });
+  let obj5;
+  let obj7;
+  const obj = AvatarUtilsDefault;
   const obj2 = { id: id.id, animated: id.animated, size: 48 };
-  const designSystemsNotificationComponents =
-    DesignSystemsNotificationComponentsExperiment.getDesignSystemsNotificationComponents("presentEmoji");
-  const obj4 = ToastActionCreatorsDefault;
+  const emojiURL = obj.getEmojiURL(obj2);
+  const obj3 = DesignSystemsNotificationComponentsExperiment;
+  const designSystemsNotificationComponents = obj3.getDesignSystemsNotificationComponents("presentEmoji");
+  const tmp3 = ToastActionCreatorsDefault;
   if (designSystemsNotificationComponents) {
     const _HermesInternal3 = HermesInternal;
-    const obj5 = { text: null, icon: null };
+    const openMana = tmp3.openMana;
     const _HermesInternal4 = HermesInternal;
+    const obj4 = { text: ":" + id.name + ":", icon: obj5 };
     const combined = "PRESENT_EMOJI-" + id.id;
-    obj5.text = ":" + id.name + ":";
-    const obj6 = { type: "emoji", src: emojiURL, alt: id.name };
-    obj5.icon = obj6;
-    obj4.openMana(combined, obj5);
+    obj5 = { type: "emoji", src: emojiURL, alt: id.name };
+    openMana(combined, obj4);
   } else {
-    const obj7 = { key: null, content: null, icon: null };
     const _HermesInternal = HermesInternal;
-    obj7.key = "PRESENT_EMOJI-" + id.id;
+    const open = tmp3.open;
     const _HermesInternal2 = HermesInternal;
-    obj7.content = ":" + id.name + ":";
-    const obj8 = { uri: emojiURL };
-    obj7.icon = obj8;
-    obj4.open(obj7);
+    const obj6 = { key: "PRESENT_EMOJI-" + id.id, content: ":" + id.name + ":", icon: obj7 };
+    obj7 = { uri: emojiURL };
+    open(obj6);
   }
 };
 export const presentNoiseCancellation = function presentNoiseCancellation(arg0) {
-  const intl = util.intl;
+  let XLargeIcon;
+  let str;
+  let stringResult;
+  let tmp5;
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  const intl = intl7.intl;
   const string = intl.string;
-  const t = util.t;
+  const t = intl7.t;
   if (arg0) {
-    let stringResult = string(t["Q+fhfv"]);
-    let tmp4 = require;
+    stringResult = string(t["Q+fhfv"]);
+    tmp5 = require;
   } else {
     stringResult = string(t.hEMHnF);
-    tmp4 = require;
+    tmp5 = require;
   }
-  const obj2 = { key: "NOISE_CANCELLATION_TOGGLE", content: stringResult, IconComponent: null, iconColor: null };
+  const obj = { key: "NOISE_CANCELLATION_TOGGLE", content: stringResult, IconComponent: XLargeIcon, iconColor: str };
   if (arg0) {
-    let XLargeIcon = tmp4(4577).CheckmarkLargeIcon;
+    XLargeIcon = tmp5(4577).CheckmarkLargeIcon;
   } else {
-    XLargeIcon = tmp4(4795).XLargeIcon;
+    XLargeIcon = tmp5(4795).XLargeIcon;
   }
-  obj2.IconComponent = XLargeIcon;
-  let str = "icon-feedback-critical";
+  str = "icon-feedback-critical";
   if (arg0) {
     str = "status-positive";
   }
-  obj2.iconColor = str;
-  ToastActionCreatorsDefault.open(obj2);
+  open(obj);
 };
 export const presentNoiseCancellationError = function presentNoiseCancellationError() {
-  const obj2 = {
+  let intl;
+  const obj = {
     key: "MOBILE_NOISE_CANCELLATION_CPU_OVERUSE",
-    content: null,
-    IconComponent: null,
+    content: intl.string(intl7.t.DnmX2G),
+    IconComponent: XLargeIcon2.XLargeIcon,
     iconColor: "icon-feedback-critical",
   };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.DnmX2G);
-  obj2.IconComponent = XLargeIcon2.XLargeIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentError = function presentError(intl) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "ERROR", content: intl, IconComponent: XLargeIcon2.XLargeIcon, iconColor: "icon-feedback-critical" });
-};
-export const presentVoiceActivityDetectionError = function presentVoiceActivityDetectionError() {
   const obj2 = {
-    key: "MOBILE_ADVANCED_VOICE_ACTIVITY_CPU_OVERUSE",
-    content: null,
-    IconComponent: null,
+    key: "ERROR",
+    content: intl,
+    IconComponent: XLargeIcon2.XLargeIcon,
     iconColor: "icon-feedback-critical",
   };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.zz1Tft);
-  obj2.IconComponent = XLargeIcon2.XLargeIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  obj.open(obj2);
+};
+export const presentVoiceActivityDetectionError = function presentVoiceActivityDetectionError() {
+  let intl;
+  const obj = {
+    key: "MOBILE_ADVANCED_VOICE_ACTIVITY_CPU_OVERUSE",
+    content: intl.string(intl7.t.zz1Tft),
+    IconComponent: XLargeIcon2.XLargeIcon,
+    iconColor: "icon-feedback-critical",
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const roleIdCopied = function roleIdCopied(combined) {
-  const obj2 = { key: "ROLE_ID_COPIED-" + combined, content: null, IconComponent: null };
-  const intl = util.intl;
-  obj2.content = intl.formatToPlainString(util.t.iOWpeB, { role: combined });
-  obj2.IconComponent = CopyIcon.CopyIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  let obj2;
+  const tmp = ToastActionCreatorsDefault;
+  const open = tmp.open;
+  const obj = {
+    key: "ROLE_ID_COPIED-" + combined,
+    content: intl.formatToPlainString(intl7.t.iOWpeB, obj2),
+    IconComponent: CopyIcon.CopyIcon,
+  };
+  intl = intl7.intl;
+  obj2 = { role: combined };
+  open(obj);
 };
 export const communityRequirementSatisfied = function communityRequirementSatisfied() {
-  const obj2 = {
+  let intl;
+  const obj = {
     key: "ENABLE_COMMUNITY_MODAL_REQUIREMENT_SATISFIED_TOOLTIP",
-    content: null,
-    IconComponent: null,
+    content: intl.string(intl7.t.PHjrpp),
+    IconComponent: CheckmarkLargeIcon.CheckmarkLargeIcon,
     iconColor: "status-positive",
   };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.PHjrpp);
-  obj2.IconComponent = CheckmarkLargeIcon.CheckmarkLargeIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const communityAdminOnly = function communityAdminOnly() {
-  const obj2 = { key: "GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY", content: null, IconComponent: null };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t["pjG+T3"]);
-  obj2.IconComponent = CircleInformationIcon.CircleInformationIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = {
+    key: "GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY",
+    content: intl.string(intl7.t["pjG+T3"]),
+    IconComponent: CircleInformationIcon.CircleInformationIcon,
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const unverifiedVoiceGate = function unverifiedVoiceGate(check) {
+  let missingVerificationRole;
+  let stringResult;
+  let verificationRole;
   ({ missingVerificationRole, verificationRole } = check);
   if (check.notClaimed) {
-    const intl6 = util.intl;
-    let stringResult = intl6.string(util.t.IRxUlG);
+    const intl6 = intl7.intl;
+    stringResult = intl6.string(intl7.t.IRxUlG);
   } else if (tmp2) {
-    const intl5 = util.intl;
-    stringResult = intl5.string(util.t.vW8iUF);
+    const intl5 = intl7.intl;
+    stringResult = intl5.string(intl7.t.vW8iUF);
   } else if (tmp) {
-    const intl4 = util.intl;
-    stringResult = intl4.string(util.t.vdSOpz);
+    const intl4 = intl7.intl;
+    stringResult = intl4.string(intl7.t.vdSOpz);
   } else if (tmp4) {
-    const intl3 = util.intl;
+    const intl3 = intl7.intl;
     const obj2 = { min: VerificationCriteria.MEMBER_AGE };
-    stringResult = intl3.formatToPlainString(util.t.v1ktYb, obj2);
+    stringResult = intl3.formatToPlainString(intl7.t.v1ktYb, obj2);
   } else if (tmp3) {
-    const intl2 = util.intl;
+    const intl2 = intl7.intl;
     const obj3 = { min: VerificationCriteria.ACCOUNT_AGE };
-    stringResult = intl2.formatToPlainString(util.t.sncw41, obj3);
+    stringResult = intl2.formatToPlainString(intl7.t.sncw41, obj3);
   } else {
     if (missingVerificationRole) {
       missingVerificationRole = null != verificationRole;
     }
     stringResult = null;
     if (missingVerificationRole) {
-      const intl = util.intl;
-      const obj = { roleName: null };
+      const intl = intl7.intl;
+      const formatToPlainString = intl.formatToPlainString;
       const _HermesInternal = HermesInternal;
-      obj.roleName = "@" + verificationRole.name;
-      stringResult = intl.formatToPlainString(util.t.MZbCuG, obj);
+      const obj = { roleName: "@" + verificationRole.name };
+      const MZbCuG = intl7.t.MZbCuG;
+      stringResult = formatToPlainString(MZbCuG, obj);
     }
   }
   if (null != stringResult) {
-    const obj5 = {
+    const obj4 = {
       key: "UNVERIFIED_VOICE_GATE",
       content: stringResult,
       IconComponent: CircleInformationIcon.CircleInformationIcon,
     };
-    ToastActionCreatorsDefault.open(obj5);
+    const open = ToastActionCreatorsDefault.open;
+    ToastActionCreatorsDefault;
+    open(obj4);
   }
 };
 export const transferOwnershipProtected = function transferOwnershipProtected() {
-  const obj2 = { key: "TRANSFER_OWNERSHIP_PROTECTED_GUILD", content: null, IconComponent: null };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.wDkfrN);
-  obj2.IconComponent = CircleInformationIcon.CircleInformationIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = {
+    key: "TRANSFER_OWNERSHIP_PROTECTED_GUILD",
+    content: intl.string(intl7.t.wDkfrN),
+    IconComponent: CircleInformationIcon.CircleInformationIcon,
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const memberOrRoleRemovedToast = function memberOrRoleRemovedToast(name) {
-  const obj2 = { key: "PRIVATE_CHANNEL_MEMBERS_REMOVED", content: null, IconComponent: null };
-  const intl = util.intl;
-  obj2.content = intl.formatToPlainString(util.t.vJGtXc, { name });
-  obj2.IconComponent = TrashIcon.TrashIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  let obj2;
+  const obj = {
+    key: "PRIVATE_CHANNEL_MEMBERS_REMOVED",
+    content: intl.formatToPlainString(intl7.t.vJGtXc, obj2),
+    IconComponent: TrashIcon.TrashIcon,
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  obj2 = { name };
+  open(obj);
 };
-export const memberOrRoleAddedToast = function memberOrRoleAddedToast(count, count2) {
-  if (count > 0) {
-    if (count2 > 0) {
-      const intl3 = util.intl;
-      let stringResult = intl3.string(util.t.fRD8wW);
+export const memberOrRoleAddedToast = function memberOrRoleAddedToast(c1, c0) {
+  let stringResult;
+  if (importDefault > 0) {
+    if (_require > 0) {
+      const intl3 = intl7.intl;
+      stringResult = intl3.string(intl7.t.fRD8wW);
     }
     if (null != stringResult) {
       const obj2 = {
@@ -341,156 +436,211 @@ export const memberOrRoleAddedToast = function memberOrRoleAddedToast(count, cou
         IconComponent: CheckmarkLargeIcon.CheckmarkLargeIcon,
         iconColor: "status-positive",
       };
-      ToastActionCreatorsDefault.open(obj2);
+      const open = ToastActionCreatorsDefault.open;
+      ToastActionCreatorsDefault;
+      open(obj2);
     }
   }
-  if (count > 0) {
-    const intl2 = util.intl;
-    const obj4 = { count };
-    stringResult = intl2.formatToPlainString(util.t["yM/8JE"], obj4);
-  } else if (count2 > 0) {
-    const intl = util.intl;
-    const obj = { count: count2 };
-    stringResult = intl.formatToPlainString(util.t.yvV5Ye, obj);
+  if (importDefault > 0) {
+    const intl2 = intl7.intl;
+    const obj3 = { count: importDefault };
+    stringResult = intl2.formatToPlainString(intl7.t["yM/8JE"], obj3);
+  } else if (_require > 0) {
+    const intl = intl7.intl;
+    const obj = { count: _require };
+    stringResult = intl.formatToPlainString(intl7.t.yvV5Ye, obj);
   }
 };
 export const roleTemplateAppliedToast = function roleTemplateAppliedToast() {
-  const obj2 = {
+  let intl;
+  const obj = {
     key: "ROLE_PERMISSION_TEMPLATE_SELECT_CONFIRMATION_TOAST",
-    content: null,
-    IconComponent: null,
+    content: intl.string(intl7.t.e6xHUV),
+    IconComponent: CheckmarkLargeIcon.CheckmarkLargeIcon,
     iconColor: "status-positive",
   };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.e6xHUV);
-  obj2.IconComponent = CheckmarkLargeIcon.CheckmarkLargeIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const roleCreatedToast = function roleCreatedToast() {
-  const obj2 = { key: "ROLE_CREATED_TOAST", content: null, IconComponent: null, iconColor: "status-positive" };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.kubT4R);
-  obj2.IconComponent = CheckmarkLargeIcon.CheckmarkLargeIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = {
+    key: "ROLE_CREATED_TOAST",
+    content: intl.string(intl7.t.kubT4R),
+    IconComponent: CheckmarkLargeIcon.CheckmarkLargeIcon,
+    iconColor: "status-positive",
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const roleCreateFailedToast = function roleCreateFailedToast() {
-  const obj2 = { key: "ROLE_CREATION_FAILED", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.hbr6Uj);
-  obj2.IconComponent = XLargeIcon2.XLargeIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = {
+    key: "ROLE_CREATION_FAILED",
+    content: intl.string(intl7.t.hbr6Uj),
+    IconComponent: XLargeIcon2.XLargeIcon,
+    iconColor: "icon-feedback-critical",
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentFailedToast = function presentFailedToast(intl) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({
+  const obj2 = {
     key: "FAILED",
     content: intl,
     IconComponent: XLargeIcon2.XLargeIcon,
     iconColor: "icon-feedback-critical",
-  });
+  };
+  obj.open(obj2);
 };
 export const presentCommandCopied = function presentCommandCopied() {
-  const obj2 = { key: "TOAST_COMMAND_COPIED", content: null, IconComponent: null };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.U989ct);
-  obj2.IconComponent = LinkIcon.LinkIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = { key: "TOAST_COMMAND_COPIED", content: intl.string(intl7.t.U989ct), IconComponent: LinkIcon.LinkIcon };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentGuildMemberBio = function presentGuildMemberBio(guildName, arg1) {
-  closure_0 = arg1;
-  const obj2 = { key: "GUILD_IDENTITY_BIO_TOAST", content: null, icon: null };
-  const intl = util.intl;
-  obj2.content = intl.formatToPlainString(util.t.pOy2tm, { guildName });
-  obj2.icon = function icon() {
-    return closure_0;
+  let intl;
+  let obj2;
+  let closure_0 = arg1;
+  const obj = {
+    key: "GUILD_IDENTITY_BIO_TOAST",
+    content: intl.formatToPlainString(intl7.t.pOy2tm, obj2),
+    icon() {
+      return closure_0;
+    },
   };
-  ToastActionCreatorsDefault.open(obj2);
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  obj2 = { guildName };
+  open(obj);
 };
 export const presentGuildMemberPronouns = function presentGuildMemberPronouns(guildName, arg1) {
-  closure_0 = arg1;
-  const obj2 = { key: "GUILD_IDENTITY_PRONOUNS_TOAST", content: null, icon: null };
-  const intl = util.intl;
-  obj2.content = intl.formatToPlainString(util.t.gPVLS0, { guildName });
-  obj2.icon = function icon() {
-    return closure_0;
+  let intl;
+  let obj2;
+  let closure_0 = arg1;
+  const obj = {
+    key: "GUILD_IDENTITY_PRONOUNS_TOAST",
+    content: intl.formatToPlainString(intl7.t.gPVLS0, obj2),
+    icon() {
+      return closure_0;
+    },
   };
-  ToastActionCreatorsDefault.open(obj2);
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  obj2 = { guildName };
+  open(obj);
 };
 export const presentUserPronouns = function presentUserPronouns() {
-  const obj2 = { key: "USER_POPOUT_PRONOUNS", content: null };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t["1w6drw"]);
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = { key: "USER_POPOUT_PRONOUNS", content: intl.string(intl7.t["1w6drw"]) };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentCopiedToClipboard = function presentCopiedToClipboard() {
-  const obj2 = { key: null, content: null, IconComponent: null };
-  const obj = ToastActionCreatorsDefault;
-  obj2.key = "COPIED_TEXT_" + v1.v4();
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.mGZ66D);
-  obj2.IconComponent = CopyIcon.CopyIcon;
-  obj.open(obj2);
+  let intl;
+  let obj2;
+  const obj = {
+    key: "COPIED_TEXT_" + obj2.v4(),
+    content: intl.string(intl7.t.mGZ66D),
+    IconComponent: CopyIcon.CopyIcon,
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  obj2 = v1;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentGuildRoleSubscriptionTrialTierMonthCost =
   function presentGuildRoleSubscriptionTrialTierMonthCost() {
-    const obj2 = {
+    let intl;
+    const obj = {
       key: "GUILD_ROLE_SUBSCRIPTION_MANAGE_SUBSCRIPTION_PAGE_TRIAL_PRICE_INFO",
-      content: null,
-      IconComponent: null,
+      content: intl.string(intl7.t["/q6fpa"]),
+      IconComponent: CircleInformationIcon.CircleInformationIcon,
     };
-    const intl = util.intl;
-    obj2.content = intl.string(util.t["/q6fpa"]);
-    obj2.IconComponent = CircleInformationIcon.CircleInformationIcon;
-    ToastActionCreatorsDefault.open(obj2);
+    const open = ToastActionCreatorsDefault.open;
+    ToastActionCreatorsDefault;
+    intl = intl7.intl;
+    open(obj);
   };
 export const showVoiceRecordingFailed = function showVoiceRecordingFailed() {
-  const obj2 = {
+  let intl;
+  const obj = {
     key: "VOICE_MESSAGES_RECORDING_FAILED",
-    content: null,
-    IconComponent: null,
+    content: intl.string(intl7.t.H03AqF),
+    IconComponent: XLargeIcon2.XLargeIcon,
     iconColor: "icon-feedback-critical",
   };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.H03AqF);
-  obj2.IconComponent = XLargeIcon2.XLargeIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const showMaxGroupMembers = function showMaxGroupMembers() {
-  const obj2 = {
+  let intl;
+  const obj = {
     key: "GROUP_DM_INVITE_FULL_MAIN",
-    content: null,
-    IconComponent: null,
+    content: intl.string(intl7.t.OtTQDz),
+    IconComponent: XLargeIcon2.XLargeIcon,
     iconColor: "icon-feedback-critical",
   };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.OtTQDz);
-  obj2.IconComponent = XLargeIcon2.XLargeIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const showTransferOwnershipSuccess = function showTransferOwnershipSuccess() {
-  const obj2 = { key: "TRANSFER_OWNERSHIP_SUCCESS", content: null, IconComponent: null, iconColor: "status-positive" };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t["2Eyydu"]);
-  obj2.IconComponent = CheckmarkLargeIcon.CheckmarkLargeIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = {
+    key: "TRANSFER_OWNERSHIP_SUCCESS",
+    content: intl.string(intl7.t["2Eyydu"]),
+    IconComponent: CheckmarkLargeIcon.CheckmarkLargeIcon,
+    iconColor: "status-positive",
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const showSafetySuccess = function showSafetySuccess(IAR_SHARE_WITH_PARENT_SUCCESS, safetyToastTypeContent) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({
+  const obj2 = {
     key: IAR_SHARE_WITH_PARENT_SUCCESS,
     content: safetyToastTypeContent,
     IconComponent: CircleCheckIcon.CircleCheckIcon,
     iconColor: "status-positive",
-  });
+  };
+  obj.open(obj2);
 };
 export const showVerificationSent = function showVerificationSent() {
-  const obj2 = { key: "VERIFICATION_RESENT", content: null, IconComponent: null, iconColor: "status-positive" };
-  const intl = util.intl;
-  obj2.content = intl.string(util.t.gI8IST);
-  obj2.IconComponent = CheckmarkLargeIcon.CheckmarkLargeIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  let intl;
+  const obj = {
+    key: "VERIFICATION_RESENT",
+    content: intl.string(intl7.t.gI8IST),
+    IconComponent: CheckmarkLargeIcon.CheckmarkLargeIcon,
+    iconColor: "status-positive",
+  };
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
+  intl = intl7.intl;
+  open(obj);
 };
 export const presentTimestamp = function presentTimestamp(full) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "MESSAGE_TIMESTAMP", content: full, IconComponent: ClockIcon.ClockIcon });
+  const obj2 = { key: "MESSAGE_TIMESTAMP", content: full, IconComponent: ClockIcon.ClockIcon };
+  obj.open(obj2);
 };

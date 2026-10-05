@@ -1,13 +1,15 @@
 // discord_app/modules/rich_presence/FirstPartyRichPresenceStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import _modDef1342 from "../../../_runtime/metro/01342__.js";
 import StageChannelSelfRichPresenceStoreDefault from "../stage_channels/StageChannelSelfRichPresenceStore.tsx";
 import ConjureRichPresenceStore from "../conjure/presence/ConjureRichPresenceStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function updateActivities() {
   items = [];
   const iter = items[Symbol.iterator]();
+  const nextResult = iter.next();
   while (iter !== undefined) {
     let activity = nextResult.getActivity();
     if (null != activity) {
@@ -15,27 +17,27 @@ function updateActivities() {
     }
     continue;
   }
-  const tmp6 = _modDef1342(items, items);
-  let flag = !tmp6;
-  if (!tmp6) {
+  let flag = !_modDef1342(items, items);
+  _modDef1342(items, items);
+  if (flag) {
     flag = true;
   }
   return flag;
 }
 let items = [StageChannelSelfRichPresenceStoreDefault, ConjureRichPresenceStore];
 items = [];
-const Store = initializeDefault.Store;
-class FirstPartyRichPresenceStore extends Store {}
+const Store = get_initializedDefault.Store;
+class FirstPartyRichPresenceStore extends Store {
+  initialize() {
+    this.syncWith(items, updateActivities);
+  }
+  getActivities() {
+    return items;
+  }
+}
 const prototype = FirstPartyRichPresenceStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.syncWith(items, updateActivities);
-};
-prototype["getActivities"] = function getActivities() {
-  return items;
-};
 FirstPartyRichPresenceStore.displayName = "FirstPartyRichPresenceStore";
 const firstPartyRichPresenceStore = new FirstPartyRichPresenceStore(DispatcherDefault);
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/rich_presence/FirstPartyRichPresenceStore.tsx");
 
 export default firstPartyRichPresenceStore;

@@ -1,46 +1,55 @@
 // discord_app/modules/replies/PendingReplyStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import MessageStore from "../../stores/MessageStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const dependencyMap = {};
-const dependencyMap2 = {};
-let closure_7 = {};
-const PersistedStore = initializeDefault.PersistedStore;
-class PendingReplyStore extends PersistedStore {}
+let closure_5, closure_7;
+
+const hasOwnProperty = {};
+let closure_6 = {};
+const metroImportDefault = {};
+const PersistedStore = get_initializedDefault.PersistedStore;
+class PendingReplyStore extends PersistedStore {
+  getState() {
+    let tmp6;
+    let tmp7;
+    const obj = {};
+    const obj2 = SnowflakeUtilsDefault;
+    const entries = obj2.entries(closure_5);
+    const tmp2 = entries[Symbol.iterator]();
+    while (tmp2 !== undefined) {
+      let tmp5 = _slicedToArray(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let obj4 = { channelId: tmp6, messageId: tmp7.message.id, shouldMention: null, showMentionToggle: null };
+      ({ shouldMention: obj3.shouldMention, showMentionToggle: obj3.showMentionToggle } = tmp7);
+      obj[tmp6] = obj4;
+      continue;
+    }
+    const obj6 = {};
+    const merged = Object.assign(closure_6);
+    const merged1 = Object.assign(obj);
+    return obj6;
+  }
+  initialize(arg0) {
+    let obj = arg0;
+    this.waitFor(MessageStore, ChannelStore);
+    if (arg0 == null) {
+      obj = {};
+    }
+    closure_6 = obj;
+  }
+  getPendingReply(id) {
+    return closure_5[id];
+  }
+  getPendingReplyActionSource(c0) {
+    return closure_7[c0];
+  }
+}
 const prototype = PendingReplyStore.prototype;
-prototype["getState"] = function getState() {
-  const obj = {};
-  const entries = SnowflakeUtilsDefault.entries(closure_5);
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let obj4 = { channelId: tmp6, messageId: tmp7.message.id, shouldMention: null, showMentionToggle: null };
-    ({ shouldMention: obj3.shouldMention, showMentionToggle: obj3.showMentionToggle } = tmp7);
-    obj[tmp6] = obj4;
-    continue;
-  }
-  const merged = Object.assign(closure_6);
-  const merged1 = Object.assign(obj);
-  return {};
-};
-prototype["initialize"] = function initialize(arg0) {
-  let obj = arg0;
-  this.waitFor(MessageStore, ChannelStore);
-  if (arg0 == null) {
-    obj = {};
-  }
-  closure_6 = obj;
-};
-prototype["getPendingReply"] = function getPendingReply(id) {
-  return dependencyMap[id];
-};
-prototype["getPendingReplyActionSource"] = function getPendingReplyActionSource(c0) {
-  return closure_7[c0];
-};
 PendingReplyStore.displayName = "PendingReplyStore";
 PendingReplyStore.persistKey = "PendingReplyStore";
 const items = [
@@ -53,27 +62,33 @@ const items = [
   },
 ];
 PendingReplyStore.migrations = items;
-const pendingReplyStore = new PendingReplyStore(DispatcherDefault, {
-  CREATE_PENDING_REPLY: function handleCreatePendingReply(message) {
-    ({ channel, shouldMention } = message);
+let obj = {
+  CREATE_PENDING_REPLY: function handleCreatePendingReply(mediaMention) {
+    let channel;
+    let shouldMention;
+    ({ channel, shouldMention } = mediaMention);
+    const message = mediaMention.message;
     if (shouldMention === undefined) {
       shouldMention = true;
     }
-    let flag = message.showMentionToggle;
+    let flag = mediaMention.showMentionToggle;
     if (flag === undefined) {
       flag = true;
     }
     closure_5[channel.id] = {
       channel,
-      message: message.message,
+      message,
       shouldMention,
       showMentionToggle: flag,
-      mediaMention: message.mediaMention,
+      mediaMention: mediaMention.mediaMention,
     };
-    closure_7[channel.id] = message.source;
+    closure_7[channel.id] = mediaMention.source;
   },
   CREATE_SHALLOW_PENDING_REPLY: function handleCreateShallowPendingReply(messageId) {
+    let channel;
+    let shouldMention;
     ({ channel, shouldMention } = messageId);
+    messageId = messageId.messageId;
     if (shouldMention === undefined) {
       shouldMention = true;
     }
@@ -81,37 +96,36 @@ const pendingReplyStore = new PendingReplyStore(DispatcherDefault, {
     if (flag === undefined) {
       flag = true;
     }
-    closure_6[channel.id] = {
-      channelId: channel.id,
-      messageId: messageId.messageId,
-      shouldMention,
-      showMentionToggle: flag,
-    };
+    closure_6[channel.id] = { channelId: channel.id, messageId, shouldMention, showMentionToggle: flag };
   },
   SET_PENDING_REPLY_SHOULD_MENTION: function handleSetPendingReplyShouldMention(arg0) {
+    let channelId;
+    let shouldMention;
     ({ channelId, shouldMention } = arg0);
-    if (channelId in dependencyMap) {
-      const obj = {};
-      const merged = Object.assign(dependencyMap[channelId]);
-      obj.shouldMention = shouldMention;
-      dependencyMap[channelId] = obj;
+    if (channelId in closure_5) {
+      const obj = { shouldMention };
+      const merged = Object.assign(closure_5[channelId]);
+      closure_5[channelId] = obj;
     }
-    if (channelId in dependencyMap2) {
-      const obj2 = {};
-      const merged1 = Object.assign(dependencyMap2[channelId]);
-      obj2.shouldMention = shouldMention;
-      dependencyMap2[channelId] = obj2;
+    if (channelId in closure_6) {
+      const obj2 = { shouldMention };
+      const merged1 = Object.assign(closure_6[channelId]);
+      closure_6[channelId] = obj2;
     }
   },
-  DELETE_PENDING_REPLY: function handleDeletePendingReply(arg0) {
-    delete tmp3[tmp2];
-    delete tmp[tmp2];
+  DELETE_PENDING_REPLY: function handleDeletePendingReply(channelId) {
+    channelId = channelId.channelId;
+    delete closure_5[channelId];
+    delete closure_6[channelId];
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
-    const keys = SnowflakeUtilsDefault.keys(closure_6);
+    let channel;
+    const obj = SnowflakeUtilsDefault;
+    const keys = obj.keys(closure_6);
     const item = keys.forEach((item) => {
+      const tmp = item;
       if (null == channel.getChannel(item)) {
-        delete tmp[tmp2];
+        delete closure_1_6[tmp];
       }
     });
   },
@@ -121,42 +135,44 @@ const pendingReplyStore = new PendingReplyStore(DispatcherDefault, {
     closure_7 = {};
   },
   MESSAGE_DELETE: function handleMessageDelete(arg0) {
+    let channelId;
+    let id;
     ({ id, channelId } = arg0);
     let id1;
-    if (dependencyMap[channelId] != null) {
-      const message = tmp4.message;
+    if (closure_5[channelId] != null) {
+      const message = tmp.message;
       if (message != null) {
         id1 = message.id;
       }
     }
     if (id1 === id) {
-      delete tmp3[tmp2];
-      delete tmp[tmp2];
+      delete closure_5[channelId];
+      delete closure_7[channelId];
     } else {
       let messageId;
-      if (dependencyMap2[channelId] != null) {
-        messageId = tmp7.messageId;
+      if (closure_6[channelId] != null) {
+        messageId = tmp4.messageId;
       }
       if (messageId !== id) {
         return false;
       } else {
-        delete tmp3[tmp2];
-        delete tmp3[tmp2];
+        delete closure_6[channelId];
+        delete closure_7[channelId];
       }
     }
   },
   CHANNEL_SELECT: function handleChannelSelect(channelId) {
     channelId = channelId.channelId;
     if (null != channelId) {
-      if (null != dependencyMap2[channelId]) {
-        const message = MessageStore.getMessage(channelId, tmp4.messageId);
-        const channel = ChannelStore.getChannel(tmp4.channelId);
+      if (null != closure_6[channelId]) {
+        const message = MessageStore.getMessage(channelId, tmp2.messageId);
+        const channel = ChannelStore.getChannel(tmp2.channelId);
         if (null != message) {
           if (null != channel) {
             const obj = { channel, message, shouldMention: null, showMentionToggle: null };
-            ({ shouldMention: obj.shouldMention, showMentionToggle: obj.showMentionToggle } = tmp4);
+            ({ shouldMention: obj.shouldMention, showMentionToggle: obj.showMentionToggle } = closure_6[channelId]);
             closure_5[channelId] = obj;
-            delete tmp[tmp2];
+            delete closure_6[channelId];
           }
         }
       }
@@ -165,22 +181,22 @@ const pendingReplyStore = new PendingReplyStore(DispatcherDefault, {
   LOAD_MESSAGES_SUCCESS: function handleLoadMessagesSuccess(channelId) {
     channelId = channelId.channelId;
     if (null != channelId) {
-      if (null != dependencyMap2[channelId]) {
-        const message = MessageStore.getMessage(channelId, tmp4.messageId);
-        const channel = ChannelStore.getChannel(tmp4.channelId);
+      if (null != closure_6[channelId]) {
+        const message = MessageStore.getMessage(channelId, tmp2.messageId);
+        const channel = ChannelStore.getChannel(tmp2.channelId);
         if (null != message) {
           if (null != channel) {
             const obj = { channel, message, shouldMention: null, showMentionToggle: null };
-            ({ shouldMention: obj.shouldMention, showMentionToggle: obj.showMentionToggle } = tmp4);
+            ({ shouldMention: obj.shouldMention, showMentionToggle: obj.showMentionToggle } = closure_6[channelId]);
             closure_5[channelId] = obj;
-            delete tmp[tmp2];
+            delete closure_6[channelId];
           }
         }
       }
     }
   },
-});
-const size = fn(2);
+};
+const pendingReplyStore = new PendingReplyStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/replies/PendingReplyStore.tsx");
 
 export default pendingReplyStore;

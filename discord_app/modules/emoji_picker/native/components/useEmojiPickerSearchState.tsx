@@ -1,34 +1,39 @@
 // discord_app/modules/emoji_picker/native/components/useEmojiPickerSearchState.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
 import EmojiStore from "../../../emojis/EmojiStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, channel, dependencyMap;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/emoji_picker/native/components/useEmojiPickerSearchState.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel, arg1, intention, bypassPremiumEmojiEntitlement) => {
+      let closure_5;
+      let tmp4;
       _require = channel;
       dependencyMap = arg1;
       _slicedToArray = intention;
-      noop = bypassPremiumEmojiEntitlement;
-      const cResult = require("c").c(8);
-      const ref = noop.useRef("");
-      let obj = require("c");
-      [tmp4, closure_5] = noop.useState(null);
+      react = bypassPremiumEmojiEntitlement;
+      let obj = require("react");
+      const cResult = obj.c(8);
+      const ref = react.useRef("");
+      [tmp4, closure_5] = react.useState(null);
+      _slicedToArray(react.useState(null), 2);
       if (cResult[0] === bypassPremiumEmojiEntitlement) {
         if (cResult[1] === arg1) {
           if (cResult[2] === channel) {
+            let tmp5;
             if (cResult[3] === intention) {
-              let tmp5 = cResult[4];
+              tmp5 = cResult[4];
             }
             if (cResult[5] === tmp5) {
+              let tmp6;
               if (cResult[6] === tmp4) {
-                let tmp6 = cResult[7];
+                tmp6 = cResult[7];
               }
               return tmp6;
             }
@@ -41,28 +46,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const fn = function h(arr) {
+        let current;
         channel = arr;
         if ("" !== arr) {
           let substr = arr;
           if (":" === arr[0]) {
             substr = arr.slice(1);
           }
-          const FrecencyUserSettingsActionCreators = channel(2033).FrecencyUserSettingsActionCreators;
+          const FrecencyUserSettingsActionCreators = channel(closure_1[6]).FrecencyUserSettingsActionCreators;
           const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
           const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
-          dependencyMap = ref.searchWithoutFetchingLatest(obj2);
-          channel(1259).batchUpdates(() => {
+          closure_1 = ref.searchWithoutFetchingLatest(obj2);
+          const obj3 = channel(closure_1[5]);
+          obj3.batchUpdates(() => {
             ref.current = current;
-            closure_2_5(closure_1);
+            closure_5(closure_1);
           });
-          const obj3 = channel(1259);
         } else {
-          channel(1259).batchUpdates(() => {
+          const obj = channel(closure_1[5]);
+          obj.batchUpdates(() => {
             ref.current = "";
             closure_1_5(null);
             const result = closure_1.set(0);
           });
-          const obj = channel(1259);
         }
       };
       cResult[0] = bypassPremiumEmojiEntitlement;
@@ -73,38 +79,48 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
     }
   : (channel, arg1, intention, bypassPremiumEmojiEntitlement) => {
-      dependencyMap = arg1;
+      let first;
+      let items;
+      let closure_1 = arg1;
       _slicedToArray = intention;
-      noop = bypassPremiumEmojiEntitlement;
-      const ref = noop.useRef("");
-      const tmp2 = _slicedToArray(noop.useState(null), 2);
-      closure_5 = tmp2[1];
-      let obj = { handleTextChange: null, searchQueryRef: ref, searchResults: tmp2[0] };
-      const items = [arg1, channel, intention, bypassPremiumEmojiEntitlement];
-      obj.handleTextChange = noop.useCallback((arr) => {
-        channel = arr;
-        if ("" !== arr) {
-          let substr = arr;
-          if (":" === arr[0]) {
-            substr = arr.slice(1);
+      react = bypassPremiumEmojiEntitlement;
+      const ref = react.useRef("");
+      const tmp2 = _slicedToArray(react.useState(null), 2);
+      let closure_5 = tmp2[1];
+      let obj = {
+        handleTextChange: react.useCallback((arr) => {
+          let current;
+          channel = arr;
+          if ("" !== arr) {
+            let substr = arr;
+            if (":" === arr[0]) {
+              substr = arr.slice(1);
+            }
+            const FrecencyUserSettingsActionCreators = channel(closure_1[6]).FrecencyUserSettingsActionCreators;
+            const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
+            const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
+            closure_1 = ref.searchWithoutFetchingLatest(obj2);
+            const obj3 = channel(closure_1[5]);
+            obj3.batchUpdates(() => {
+              ref.current = current;
+              closure_5(closure_1);
+            });
+          } else {
+            const obj = channel(closure_1[5]);
+            obj.batchUpdates(() => {
+              ref.current = "";
+              closure_1_5(null);
+              const result = closure_1.set(0);
+            });
           }
-          const FrecencyUserSettingsActionCreators = channel(2033).FrecencyUserSettingsActionCreators;
-          const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
-          const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
-          dependencyMap = ref.searchWithoutFetchingLatest(obj2);
-          channel(1259).batchUpdates(() => {
-            ref.current = current;
-            closure_5(closure_1);
-          });
-          const obj3 = channel(1259);
-        } else {
-          channel(1259).batchUpdates(() => {
-            ref.current = "";
-            closure_1_5(null);
-            const result = closure_1.set(0);
-          });
-          const obj = channel(1259);
-        }
-      }, items);
+        }, items),
+        searchQueryRef: ref,
+        searchResults: first,
+      };
+      items = [arg1, channel, intention, bypassPremiumEmojiEntitlement];
+      first = tmp2[0];
       return obj;
     };
+let result = size.fileFinishedImporting("modules/emoji_picker/native/components/useEmojiPickerSearchState.tsx");
+
+export default tmp2;

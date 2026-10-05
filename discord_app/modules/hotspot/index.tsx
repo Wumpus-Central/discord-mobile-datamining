@@ -1,17 +1,16 @@
 // discord_app/modules/hotspot/index.tsx
+import HotspotActionCreators from "HotspotActionCreators.tsx";
 import HotspotStore from "HotspotStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
+import Constants from "Constants.tsx";
 
-const require = globalThis.__r;
-
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/hotspot/index.tsx");
-const Constants = fn(6715);
-for (const key10022 in tmp4) {
-  arg5[key10022] = Constants[key10022];
+for (const key10022 in Constants) {
+  exports[key10022] = Constants[key10022];
   continue;
 }
-for (const key10026 in require("HotspotActionCreators")) {
-  arg5[key10026] = require("HotspotActionCreators")[key10026];
+for (const key10026 in HotspotActionCreators) {
+  exports[key10026] = HotspotActionCreators[key10026];
   continue;
 }
 

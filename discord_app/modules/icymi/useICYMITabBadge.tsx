@@ -1,16 +1,18 @@
 // discord_app/modules/icymi/useICYMITabBadge.tsx
-import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../_runtime/00576_c.js";
+import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../_runtime/00576_react.js";
 import ICYMIStore from "ICYMIStore.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/icymi/useICYMITabBadge.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(5);
+      let tmp4;
+      let tmp5;
+      let tmp6;
+      let tmp9;
+      const obj = react;
+      const cResult = obj.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ICYMIStore];
         const fn = function o() {
@@ -26,23 +28,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5, tmp6] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5, tmp6);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5, tmp6);
       if (cResult[3] !== stateFromStores) {
         const obj2 = { value: 0, showDot: stateFromStores };
         cResult[3] = stateFromStores;
         cResult[4] = obj2;
-        let tmp9 = obj2;
+        tmp9 = obj2;
       } else {
         tmp9 = cResult[4];
       }
       return tmp9;
     }
   : () => {
-      const obj = { value: 0, showDot: null };
-      const items = [ICYMIStore];
-      obj.showDot = initialize.useStateFromStores(items, () => ICYMIStore.hasNewContent(), []);
+      let items;
+      let obj2;
+      const obj = { value: 0, showDot: obj2.useStateFromStores(items, () => ICYMIStore.hasNewContent(), []) };
+      items = [ICYMIStore];
+      obj2 = get_initialized;
       return obj;
     };
+const result = size.fileFinishedImporting("modules/icymi/useICYMITabBadge.tsx");
+
+export default tmp2;
 export const icymiTabBadgeShown = function icymiTabBadgeShown() {
   return ICYMIStore.hasNewContent();
 };

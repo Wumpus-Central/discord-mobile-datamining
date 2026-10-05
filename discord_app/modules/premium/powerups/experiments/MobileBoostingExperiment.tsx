@@ -2,7 +2,7 @@
 import ApexExperiment from "../../../experiments/apex/index.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const apexExperiment = ApexExperiment.createApexExperiment({
+let obj = {
   name: "2026-07-mobile-boosting-optimizations",
   kind: "user",
   defaultConfig: { enabled: false, removeYearlyUpsell: false, recommendedBoostCount: null },
@@ -13,16 +13,20 @@ const apexExperiment = ApexExperiment.createApexExperiment({
     3: { enabled: true, removeYearlyUpsell: false, recommendedBoostCount: 3 },
     4: { enabled: true, removeYearlyUpsell: true, recommendedBoostCount: 3 },
   },
-});
+};
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/premium/powerups/experiments/MobileBoostingExperiment.tsx");
 
 export default apexExperiment;
 export const getShouldRemoveYearlyUpsell = function getShouldRemoveYearlyUpsell(PremiumPlanSelect) {
-  return apexExperiment.getConfig({ location: PremiumPlanSelect }).removeYearlyUpsell;
+  const obj = { location: PremiumPlanSelect };
+  return apexExperiment.getConfig(obj).removeYearlyUpsell;
 };
 export const getMobileBoostingEnabled = function getMobileBoostingEnabled(PremiumPlanSelect) {
-  return apexExperiment.getConfig({ location: PremiumPlanSelect }).enabled;
+  const obj = { location: PremiumPlanSelect };
+  return apexExperiment.getConfig(obj).enabled;
 };
 export const getRecommendedBoostCount = function getRecommendedBoostCount(PremiumPlanSelect) {
-  return apexExperiment.getConfig({ location: PremiumPlanSelect }).recommendedBoostCount;
+  const obj = { location: PremiumPlanSelect };
+  return apexExperiment.getConfig(obj).recommendedBoostCount;
 };

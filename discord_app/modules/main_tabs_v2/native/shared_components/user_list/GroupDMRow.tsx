@@ -1,73 +1,87 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx
-import c from "../../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../../_runtime/00576_react.js";
+import native from "../../../../../design/void/native.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../../../channel/useChannelName.tsx";
+import TableCheckboxRow2 from "../../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
+import TableRow2 from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import UserRowConstants from "UserRowConstants.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
+import useRecipientsLabel from "../../../useRecipientsLabel.tsx";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const native = TableCheckboxRow(1188);
-const Text_Text = TableCheckboxRow(4886);
-const TableCheckboxRow2 = TableCheckboxRow(5990);
-const TableRow = TableCheckboxRow(5993);
-const useRecipientsLabel = TableCheckboxRow(10649);
-require = fn;
+let channel;
+
 let closure_3 = ["channel", "mode", "selected", "disabled", "onPress"];
-const UserRowModes = fn(10592).UserRowModes;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const UserRowModes = UserRowConstants.UserRowModes;
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      let TableCheckboxRow = require;
-      let tmp = dependencyMap;
-      const cResult = c.c(26);
+      let NONE;
+      let disabled;
+      let mode;
+      let onPress;
+      let selected;
+      let tmp6;
+      let tmp7;
+      let tmp8;
+      const obj = react2;
+      const cResult = obj.c(26);
       if (cResult[0] !== channel) {
         channel = channel.channel;
-        closure_0 = channel;
+        let closure_0 = channel;
         ({ mode, selected, disabled, onPress } = channel);
-        closure_1 = onPress;
-        const tmp10 = _objectWithoutProperties(channel, closure_3);
+        let closure_1 = onPress;
+        const tmp11 = _objectWithoutProperties(channel, closure_3);
         cResult[0] = channel;
         cResult[1] = channel;
         cResult[2] = onPress;
-        cResult[3] = tmp10;
+        cResult[3] = tmp11;
         cResult[4] = mode;
         cResult[5] = selected;
         cResult[6] = disabled;
-        let NONE = mode;
-        let tmp5 = tmp10;
+        tmp8 = disabled;
+        tmp7 = selected;
+        NONE = mode;
+        tmp6 = tmp11;
       } else {
         closure_0 = cResult[1];
         closure_1 = cResult[2];
-        tmp5 = cResult[3];
+        tmp6 = cResult[3];
         NONE = cResult[4];
+        tmp7 = cResult[5];
+        tmp8 = cResult[6];
       }
       if (undefined === NONE) {
         NONE = UserRowModes.NONE;
       }
-      const tmp15 = useChannelNameDefault(tmp3);
-      if (cResult[7] === tmp3) {
+      const tmp16 = useChannelNameDefault(tmp4);
+      if (cResult[7] === tmp4) {
+        let tmp17;
+        let tmp18;
+        let tmp23;
         if (cResult[8] === onPress) {
-          let tmp16 = cResult[9];
+          tmp17 = cResult[9];
         }
-        if (cResult[10] !== tmp3) {
-          const obj2 = { size: native.AvatarSizes.REFRESH_MEDIUM_32, channel: tmp3 };
-          const tmp20 = jsx(GroupDMAvatarDefault, { size: native.AvatarSizes.REFRESH_MEDIUM_32, channel: tmp3 });
-          cResult[10] = tmp3;
-          cResult[11] = tmp20;
-          let tmp17 = tmp20;
-          const tmp14Result = GroupDMAvatarDefault;
+        if (cResult[10] !== tmp4) {
+          GroupDMAvatarDefault;
+          const tmp21 = <tmp15Result size={native.AvatarSizes.REFRESH_MEDIUM_32} channel={tmp4} />;
+          cResult[10] = tmp4;
+          cResult[11] = tmp21;
+          tmp18 = tmp21;
         } else {
-          tmp17 = cResult[11];
+          tmp18 = cResult[11];
         }
-        const recipientsLabel = useRecipientsLabel.useRecipientsLabel(tmp3);
+        const tmpResult = useRecipientsLabel;
+        const recipientsLabel = tmpResult.useRecipientsLabel(tmp4);
         if (cResult[12] !== recipientsLabel) {
-          let tmp24;
+          let tmp25;
           if (null != recipientsLabel) {
-            const obj3 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
-            tmp24 = jsx(Text_Text.Text, {
+            tmp25 = jsx(Text_Text.Text, {
               variant: "text-xs/medium",
               color: "text-muted",
               lineClamp: 1,
@@ -75,82 +89,88 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             });
           }
           cResult[12] = recipientsLabel;
-          cResult[13] = tmp24;
-          let tmp22 = tmp24;
+          cResult[13] = tmp25;
+          tmp23 = tmp25;
         } else {
-          tmp22 = cResult[13];
+          tmp23 = cResult[13];
         }
-        let str = tmp15;
-        if (tmp15 == null) {
+        let str = tmp16;
+        if (tmp16 == null) {
           str = "";
         }
-        if (cResult[14] === tmp13) {
-          if (cResult[15] === tmp16) {
-            if (cResult[16] === tmp17) {
-              if (cResult[17] === tmp5) {
-                if (cResult[18] === tmp22) {
+        if (cResult[14] === (undefined !== tmp8 && tmp8)) {
+          if (cResult[15] === tmp17) {
+            if (cResult[16] === tmp18) {
+              if (cResult[17] === tmp6) {
+                if (cResult[18] === tmp23) {
+                  let tmp28;
+                  let tmp33;
                   if (cResult[19] === str) {
-                    let tmp27 = cResult[20];
+                    tmp28 = cResult[20];
                   }
                   if (NONE === UserRowModes.TOGGLE) {
-                    if (cResult[21] === tmp12) {
+                    if (cResult[21] === (undefined !== tmp7 && tmp7)) {
+                      let tmp39;
+                      if (cResult[22] === tmp28) {
+                        tmp39 = cResult[23];
+                      }
+                      tmp33 = tmp39;
                     }
-                    TableCheckboxRow = TableCheckboxRow2.TableCheckboxRow;
-                    const obj4 = {};
-                    const merged = Object.assign(tmp27);
-                    obj4.checked = tmp12;
-                    tmp = <TableCheckboxRow />;
-                    cResult[21] = tmp12;
-                    cResult[22] = tmp27;
-                    cResult[23] = tmp;
+                    const TableCheckboxRow = TableCheckboxRow2.TableCheckboxRow;
+                    const merged = Object.assign(tmp28);
+                    const tmp44 = <TableCheckboxRow checked={undefined !== tmp7 && tmp7} />;
+                    cResult[21] = undefined !== tmp7 && tmp7;
+                    cResult[22] = tmp28;
+                    cResult[23] = tmp44;
+                    tmp39 = tmp44;
+                  } else if (cResult[24] !== tmp28) {
+                    const TableRow = TableRow2.TableRow;
+                    const merged1 = Object.assign(tmp28);
+                    const tmp38 = <TableRow />;
+                    cResult[24] = tmp28;
+                    cResult[25] = tmp38;
+                    tmp33 = tmp38;
                   } else {
-                    if (cResult[24] !== tmp27) {
-                      const obj5 = {};
-                      const merged1 = Object.assign(tmp27);
-                      const tmp37 = jsx(TableRow.TableRow, {});
-                      cResult[24] = tmp27;
-                      cResult[25] = tmp37;
-                      let tmp32 = tmp37;
-                    } else {
-                      tmp32 = cResult[25];
-                    }
-                    return tmp32;
+                    tmp33 = cResult[25];
                   }
+                  return tmp33;
                 }
               }
             }
           }
         }
-        const obj6 = {};
-        const merged2 = Object.assign(tmp5);
-        obj6.disabled = tmp13;
-        obj6.subLabel = tmp22;
-        obj6.icon = tmp17;
-        obj6.onPress = tmp16;
-        obj6.label = str;
-        obj6.labelLineClamp = 1;
-        obj6.height = "100%";
-        cResult[14] = tmp13;
-        cResult[15] = tmp16;
-        cResult[16] = tmp17;
-        cResult[17] = tmp5;
-        cResult[18] = tmp22;
+        const obj6 = {
+          disabled: undefined !== tmp8 && tmp8,
+          subLabel: tmp23,
+          icon: tmp18,
+          onPress: tmp17,
+          label: str,
+          labelLineClamp: 1,
+          height: "100%",
+        };
+        const merged2 = Object.assign(tmp6);
+        cResult[14] = undefined !== tmp8 && tmp8;
+        cResult[15] = tmp17;
+        cResult[16] = tmp18;
+        cResult[17] = tmp6;
+        cResult[18] = tmp23;
         cResult[19] = str;
         cResult[20] = obj6;
-        tmp27 = obj6;
-        const TableCheckboxRowResult = useRecipientsLabel;
+        tmp28 = obj6;
       }
       const fn = function _() {
         if (closure_1 != null) {
           tmp(closure_0);
         }
       };
-      cResult[7] = tmp3;
+      cResult[7] = tmp4;
       cResult[8] = onPress;
       cResult[9] = fn;
-      tmp16 = fn;
+      tmp17 = fn;
     }
   : (channel) => {
+      let tmp5Result;
+      let tmp5Result2;
       channel = channel.channel;
       let NONE = channel.mode;
       if (NONE === undefined) {
@@ -171,20 +191,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       let str = useChannelNameDefault(channel);
       const items = [channel, onPress];
-      const callback = noop.useCallback(() => {
+      const callback = react.useCallback(() => {
         if (onPress != null) {
           tmp(channel);
         }
       }, items);
-      const obj = { size: native.AvatarSizes.REFRESH_MEDIUM_32, channel };
-      const tmp8 = jsx(GroupDMAvatarDefault, { size: native.AvatarSizes.REFRESH_MEDIUM_32, channel });
-      const recipientsLabel = useRecipientsLabel.useRecipientsLabel(channel);
-      const obj3 = {};
+      GroupDMAvatarDefault;
+      const tmp8 = <tmp6 size={native.AvatarSizes.REFRESH_MEDIUM_32} channel={channel} />;
+      const obj2 = useRecipientsLabel;
+      const recipientsLabel = obj2.useRecipientsLabel(channel);
+      const obj3 = {
+        disabled: flag2,
+        subLabel: tmp5Result,
+        icon: tmp8,
+        onPress: callback,
+        label: str,
+        labelLineClamp: 1,
+        height: "100%",
+      };
       const merged1 = Object.assign(merged);
-      obj3.disabled = flag2;
-      let tmp5Result;
+      tmp5Result = undefined;
       if (null != recipientsLabel) {
-        const obj4 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
         tmp5Result = jsx(Text_Text.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
@@ -192,24 +219,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: recipientsLabel,
         });
       }
-      obj3.subLabel = tmp5Result;
-      obj3.icon = tmp8;
-      obj3.onPress = callback;
       if (str == null) {
         str = "";
       }
-      obj3.label = str;
-      obj3.labelLineClamp = 1;
-      obj3.height = "100%";
       if (NONE === UserRowModes.TOGGLE) {
-        const obj5 = {};
+        const TableCheckboxRow = TableCheckboxRow2.TableCheckboxRow;
         const merged2 = Object.assign(obj3);
-        obj5.checked = flag;
-        let tmp5Result2 = jsx(TableCheckboxRow2.TableCheckboxRow, {});
+        tmp5Result2 = <TableCheckboxRow checked={flag} />;
       } else {
-        const obj6 = {};
+        const TableRow = TableRow2.TableRow;
         const merged3 = Object.assign(obj3);
-        tmp5Result2 = jsx(TableRow.TableRow, {});
+        tmp5Result2 = <TableRow />;
       }
       return tmp5Result2;
     };
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");
+
+export default tmp2;

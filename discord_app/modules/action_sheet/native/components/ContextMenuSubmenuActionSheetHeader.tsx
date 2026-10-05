@@ -1,32 +1,36 @@
 // discord_app/modules/action_sheet/native/components/ContextMenuSubmenuActionSheetHeader.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import util from "../../../../intl/index.native.tsx";
-import ActionSheetHeaderPressableText from "../../../../design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import intl2 from "../../../../intl/index.native.tsx";
+import ActionSheetHeaderPressableText2 from "../../../../design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+let onBack;
+
+const View = react_native.View;
+const jsx = Fragment.jsx;
 let closure_4 = createStyles.createStyles({
   headerContainer: { paddingVertical: 12, paddingHorizontal: 16, alignItems: "flex-start" },
 });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/action_sheet/native/components/ContextMenuSubmenuActionSheetHeader.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (onBack) => {
-      const cResult = c.c(8);
+      let first;
+      let tmp7;
+      let tmp9;
+      const obj = react2;
+      const cResult = obj.c(8);
       onBack = onBack.onBack;
       const tmp4 = closure_4();
+      const headerContainer = tmp4.headerContainer;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = util.intl;
-        const stringResult = intl.string(util.t["13/7kX"]);
+        const intl = intl2.intl;
+        const stringResult = intl.string(intl2.t["13/7kX"]);
         cResult[0] = stringResult;
-        let first = stringResult;
+        first = stringResult;
       } else {
         first = cResult[0];
       }
@@ -37,44 +41,47 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[1] = onBack;
         cResult[2] = fn;
-        let tmp7 = fn;
+        tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
       if (cResult[3] !== tmp7) {
-        const obj2 = { label: first, onPress: tmp7 };
-        const tmp11 = jsx(ActionSheetHeaderPressableText.ActionSheetHeaderPressableText, {
+        const tmp11 = jsx(ActionSheetHeaderPressableText2.ActionSheetHeaderPressableText, {
           label: first,
           onPress: tmp7,
         });
         cResult[3] = tmp7;
         cResult[4] = tmp11;
-        let tmp9 = tmp11;
+        tmp9 = tmp11;
       } else {
         tmp9 = cResult[4];
       }
       if (cResult[5] === tmp4.headerContainer) {
+        let tmp12;
         if (cResult[6] === tmp9) {
-          let tmp12 = cResult[7];
+          tmp12 = cResult[7];
         }
         return tmp12;
       }
-      const tmp13 = <View style={tmp4.headerContainer}>{tmp9}</View>;
+      const tmp13 = <View style={headerContainer}>{tmp9}</View>;
       cResult[5] = tmp4.headerContainer;
       cResult[6] = tmp9;
       cResult[7] = tmp13;
       tmp12 = tmp13;
     }
   : (onBack) => {
+      let intl;
       let fn = onBack.onBack;
-      const obj = { style: closure_4().headerContainer, children: null };
-      const obj2 = { label: null, onPress: null };
-      const intl = util.intl;
-      obj2.label = intl.string(util.t["13/7kX"]);
+      ({ label: intl.string(intl2.t["13/7kX"]), onPress: fn });
+      const ActionSheetHeaderPressableText = ActionSheetHeaderPressableText2.ActionSheetHeaderPressableText;
+      intl = intl2.intl;
       if (fn == null) {
         fn = () => {};
       }
-      obj2.onPress = fn;
-      obj.children = jsx(ActionSheetHeaderPressableText.ActionSheetHeaderPressableText, { label: null, onPress: null });
       return <View style={closure_4().headerContainer}>{null}</View>;
     };
+const result = size.fileFinishedImporting(
+  "modules/action_sheet/native/components/ContextMenuSubmenuActionSheetHeader.tsx",
+);
+
+export default tmp3;

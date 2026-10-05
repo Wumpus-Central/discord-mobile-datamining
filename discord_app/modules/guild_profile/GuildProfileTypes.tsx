@@ -3,5 +3,6 @@ import GuildProfileVisibility from "../../../discord_common/js/shared/shared-con
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_profile/GuildProfileTypes.tsx");
+const GuildProfileVisibility_export = GuildProfileVisibility.GuildProfileVisibility;
 
-export const GuildProfileVisibility = GuildProfileVisibility.GuildProfileVisibility;
+export { GuildProfileVisibility_export as GuildProfileVisibility };

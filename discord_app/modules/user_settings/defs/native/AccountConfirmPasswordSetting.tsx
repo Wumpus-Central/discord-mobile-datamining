@@ -1,25 +1,28 @@
 // discord_app/modules/user_settings/defs/native/AccountConfirmPasswordSetting.tsx
 import Constants from "../../../../Constants.tsx";
-import util from "../../../../intl/index.native.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
 import UserSettingsConfirmPassword from "../../account/native/UserSettingsConfirmPassword.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const route = SettingBuilders.createRoute({
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const UserSettingsSections = Constants.UserSettingsSections;
+const obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t["7qKDrE"]);
+    const intl = intl2.intl;
+    return intl.string(intl2.t["7qKDrE"]);
   },
-  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
+  parent: MobileUserSettings.ACCOUNT,
   unsearchable: true,
   screen: {
-    route: Constants.UserSettingsSections.ACCOUNT_CONFIRM_PASSWORD,
+    route: UserSettingsSections.ACCOUNT_CONFIRM_PASSWORD,
     getComponent() {
       return UserSettingsConfirmPassword.UserSettingsConfirmPasswordWrapped;
     },
   },
-});
+};
+const route = SettingBuilders.createRoute(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountConfirmPasswordSetting.tsx");
 
 export default route;

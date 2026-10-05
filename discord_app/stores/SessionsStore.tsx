@@ -1,8 +1,11 @@
 // discord_app/stores/SessionsStore.tsx
 import _modDef12 from "../../_runtime/metro/00012__.js";
-import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import AuthenticationStore from "AuthenticationStore.tsx";
+import size from "../../_runtime/metro/00002__.js";
+
+let active;
 
 function handleUpdate(sessions) {
   closure_4 = {};
@@ -12,95 +15,89 @@ function handleUpdate(sessions) {
   });
 }
 let closure_3 = Object.freeze([]);
-let closure_4 = {};
-const Store = initializeDefault.Store;
-class SessionsStore extends Store {}
-const prototype = SessionsStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(AuthenticationStore);
-};
-prototype["getSessions"] = function getSessions() {
-  return closure_4;
-};
-prototype["getSession"] = function getSession() {
-  const sessionId = AuthenticationStore.getSessionId();
-  let sessionById = null;
-  if (null != sessionId) {
-    const self = this;
-    sessionById = this.getSessionById(sessionId);
+const React3 = {};
+const Store = get_initializedDefault.Store;
+class SessionsStore extends Store {
+  initialize() {
+    this.waitFor(AuthenticationStore);
   }
-  return sessionById;
-};
-prototype["getRemoteActivities"] = function getRemoteActivities() {
-  const sessionId = AuthenticationStore.getSessionId();
-  const found = _modDef12.find(closure_4, (active) => {
-    active = active.active;
-    if (active) {
-      active = active.sessionId !== closure_0;
-    }
-    return active;
-  });
-  return null != found ? found.activities : closure_3;
-};
-prototype["getHiddenActivities"] = function getHiddenActivities() {
-  const sessionId = AuthenticationStore.getSessionId();
-  const found = _modDef12.find(closure_4, (active) => {
-    active = active.active;
-    if (active) {
-      active = active.sessionId !== closure_0;
-    }
-    return active;
-  });
-  if (null != found) {
-    if (null != found.hiddenActivities) {
-      let hiddenActivities = found.hiddenActivities;
-    }
-    return hiddenActivities;
+  getSessions() {
+    return closure_4;
   }
-  hiddenActivities = closure_3;
-};
-prototype["getSessionById"] = function getSessionById(sessionId) {
-  return closure_4[sessionId];
-};
-prototype["getActiveSession"] = function getActiveSession() {
-  return _modDef12.find(closure_4, (active) => active.active);
-};
-prototype["getRemoteApplicationActivity"] = function getRemoteApplicationActivity(application_id) {
-  closure_0 = application_id;
-  if (null == application_id) {
-    return null;
-  } else {
+  getSession() {
     const sessionId = AuthenticationStore.getSessionId();
-    const found = _modDef12.find(closure_4, (active) => {
-      active = active.active;
-      if (active) {
-        active = active.sessionId !== closure_1;
-      }
+    let sessionById = null;
+    if (null != sessionId) {
+      const self = this;
+      sessionById = this.getSessionById(sessionId);
+    }
+    return sessionById;
+  }
+  getRemoteActivities() {
+    const sessionId = AuthenticationStore.getSessionId();
+    const arr = _modDef12;
+    const found = arr.find(closure_4, (active) => {
+      active = active.active && active.sessionId !== closure_0;
       return active;
     });
-    if (null == found) {
+    return null != found ? found.activities : closure_3;
+  }
+  getHiddenActivities() {
+    const sessionId = AuthenticationStore.getSessionId();
+    const arr = _modDef12;
+    const found = arr.find(closure_4, (active) => {
+      active = active.active && active.sessionId !== closure_0;
+      return active;
+    });
+    if (null != found) {
+      let hiddenActivities;
+      if (null != found.hiddenActivities) {
+        hiddenActivities = found.hiddenActivities;
+      }
+      return hiddenActivities;
+    }
+    hiddenActivities = closure_3;
+  }
+  getSessionById(sessionId) {
+    return closure_4[sessionId];
+  }
+  getActiveSession() {
+    const arr = _modDef12;
+    return arr.find(closure_4, (active) => active.active);
+  }
+  getRemoteApplicationActivity(application_id) {
+    let closure_0 = application_id;
+    if (null == application_id) {
       return null;
     } else {
-      const activities = found.activities;
-      let found1 = activities.find((application_id) => application_id.application_id === closure_0);
-      if (null == found1) {
-        const hiddenActivities = found.hiddenActivities;
-        let found2;
-        if (hiddenActivities != null) {
-          found2 = hiddenActivities.find((application_id) => application_id.application_id === closure_0);
+      const sessionId = AuthenticationStore.getSessionId();
+      const arr3 = _modDef12;
+      const found = arr3.find(closure_4, (active) => {
+        active = active.active && active.sessionId !== closure_1;
+        return active;
+      });
+      if (null == found) {
+        return null;
+      } else {
+        const activities = found.activities;
+        let found1 = activities.find((application_id) => application_id.application_id === closure_0);
+        if (null == found1) {
+          const hiddenActivities = found.hiddenActivities;
+          let found2;
+          if (hiddenActivities != null) {
+            found2 = hiddenActivities.find((application_id) => application_id.application_id === closure_0);
+          }
+          found1 = found2;
         }
-        found1 = found2;
+        return found1;
       }
-      return found1;
     }
   }
-};
+}
+const prototype = SessionsStore.prototype;
 SessionsStore.displayName = "SessionsStore";
-const sessionsStore = new SessionsStore(DispatcherDefault, {
-  CONNECTION_OPEN: handleUpdate,
-  SESSIONS_REPLACE: handleUpdate,
-});
-const size = fn(2);
+const obj = { CONNECTION_OPEN: handleUpdate, SESSIONS_REPLACE: handleUpdate };
+const sessionsStore = new SessionsStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("stores/SessionsStore.tsx");
 
 export default sessionsStore;

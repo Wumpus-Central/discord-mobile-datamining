@@ -1,16 +1,23 @@
 // discord_app/modules/user_settings/defs/native/NoiseSuppressionSetting.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
-import util from "../../../../intl/index.native.tsx";
+import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../../../_runtime/00576_react.js";
+import intl2 from "../../../../intl/index.native.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import UserSettingsVoiceUtils from "../../voice/native/UserSettingsVoiceUtils.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-fn(558);
-const ReactCompilerGating = fn(558);
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let noiseSuppression;
+      let tmp4;
+      let tmp5;
+      const obj = react;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MediaEngineStore];
         const fn = function n() {
@@ -23,16 +30,23 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      return initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStores(tmp4, tmp5);
     }
   : () => {
+      let noiseSuppression;
       const items = [MediaEngineStore];
-      return initialize.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());
+      const obj = get_initialized;
+      return obj.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());
     };
-const SettingBuilders = fn(11129);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let noiseCancellationSupported;
+      let tmp4;
+      let tmp5;
+      const obj = react;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MediaEngineStore];
         const fn = function n() {
@@ -45,48 +59,31 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      return initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStores(tmp4, tmp5);
     }
   : () => {
+      let noiseCancellationSupported;
       const items = [MediaEngineStore];
-      return initialize.useStateFromStores(items, () => !noiseCancellationSupported.isNoiseCancellationSupported());
+      const obj = get_initialized;
+      return obj.useStateFromStores(items, () => !noiseCancellationSupported.isNoiseCancellationSupported());
     };
-const toggle = SettingBuilders.createToggle({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.t8Qhib);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.t8Qhib);
   },
-  parent: fn(7634).MobileUserSettings.VOICE,
+  parent: MobileUserSettings.VOICE,
   useValue: tmp2,
   onValueChange: function onNoiseSuppressionSettingValueChange(arg0) {
+    const handleNoiseSuppressionChange = UserSettingsVoiceUtils.handleNoiseSuppressionChange;
+    UserSettingsVoiceUtils;
     const NoiseSuppressionOpt = UserSettingsVoiceUtils.NoiseSuppressionOpt;
-    const result = UserSettingsVoiceUtils.handleNoiseSuppressionChange(
-      arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE,
-    );
+    const result = handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
   },
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
-        const cResult = c.c(2);
-        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const items = [MediaEngineStore];
-          const fn = function n() {
-            return !noiseCancellationSupported.isNoiseCancellationSupported();
-          };
-          cResult[0] = items;
-          cResult[1] = fn;
-          tmp4 = items;
-          tmp5 = fn;
-        } else {
-          [tmp4, tmp5] = cResult;
-        }
-        return initialize.useStateFromStores(tmp4, tmp5);
-      }
-    : () => {
-        const items = [MediaEngineStore];
-        return initialize.useStateFromStores(items, () => !noiseCancellationSupported.isNoiseCancellationSupported());
-      },
-});
-const size = fn(2);
+  usePredicate: tmp3,
+};
+const toggle = SettingBuilders.createToggle(obj);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionSetting.tsx");
 
 export default toggle;

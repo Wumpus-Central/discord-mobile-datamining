@@ -4,6 +4,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/getPowerupEntitlementPrice.tsx");
 
 export default function getPowerupEntitlementPrice(tenant_metadata) {
+  let guild_monetization;
   let guild_monetization1;
   if (tenant_metadata != null) {
     tenant_metadata = tenant_metadata.tenant_metadata;
@@ -16,7 +17,7 @@ export default function getPowerupEntitlementPrice(tenant_metadata) {
     if (sku != null) {
       const tenant_metadata2 = sku.tenant_metadata;
       if (tenant_metadata2 != null) {
-        const guild_monetization = tenant_metadata2.guild_monetization;
+        guild_monetization = tenant_metadata2.guild_monetization;
       }
     }
   }

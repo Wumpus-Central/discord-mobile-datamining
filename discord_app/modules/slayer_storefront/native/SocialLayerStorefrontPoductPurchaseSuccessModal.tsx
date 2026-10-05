@@ -1,127 +1,115 @@
 // discord_app/modules/slayer_storefront/native/SocialLayerStorefrontPoductPurchaseSuccessModal.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl4 from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import _modDef3593 from "../intl/SlayerStorefront.messages.js";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
-import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
+import SocialLayerStorefrontConstants from "../SocialLayerStorefrontConstants.tsx";
 import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import _toArray from "../../../../_runtime/00729__toArray.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react_mod from "../../../../_runtime/00019_react.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import SKUStore from "../../../stores/game_store/SKUStore.tsx";
+import Constants from "../../../Constants.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, importDefault, location_stack, set, set2, skuId;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: metroRequire, ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
-const numDays = fn(6730).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
-const Constants = fn(1085);
+let closure_12;
+let closure_14;
+let closure_15;
+let closure_16;
+let map1;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let obj10;
+let obj11;
+let obj12;
+let obj13;
+let obj14;
+let obj16;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+let obj7;
+let obj8;
+let obj9;
+let react = react_mod;
+({ Image: metroRequire, ScrollView: metroImportDefault, View: metroImportAll } = react_native);
+const numDays = SocialLayerStorefrontConstants.SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 ({ AnalyticEvents: closure_12, HorizontalGradient: map1, VerticalGradient: closure_14 } = Constants);
-const jsxProd = fn(21);
-({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-let createStyles = fn(4890);
-let obj2 = {
-  root: { flex: 1, backgroundColor: nativeDefault.colors.BLACK },
+({ jsx: closure_15, jsxs: closure_16 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = {
+  root: obj2,
   backdropImage: { position: "absolute", inset: 0, opacity: 0.45 },
   backdropGradient: { position: "absolute", inset: 0 },
-  curtain: null,
-  main: null,
-  header: null,
-  closeButtonIcon: null,
-  scroll: null,
-  body: null,
-  bodyLandscape: null,
-  preview: null,
-  previewLandscape: null,
-  messages: null,
-  messagesLandscape: null,
-  contentColumnLandscape: null,
-  title: null,
-  description: null,
-  textLandscape: null,
-  footer: null,
-  footerLandscape: null,
-  cta: null,
-  ctaLandscape: null,
-  finePrint: null,
+  curtain: obj3,
+  main: { flex: 1 },
+  header: obj4,
+  closeButtonIcon: obj5,
+  scroll: { flex: 1 },
+  body: { flexGrow: 1, flexDirection: "column", justifyContent: "center" },
+  bodyLandscape: { flexDirection: "row", alignItems: "center" },
+  preview: { flexDirection: "row", justifyContent: "center", alignItems: "center" },
+  previewLandscape: { flex: 1 },
+  messages: obj6,
+  messagesLandscape: { paddingTop: 0, alignItems: "stretch" },
+  contentColumnLandscape: { flex: 1 },
+  title: obj7,
+  description: obj8,
+  textLandscape: obj9,
+  footer: obj10,
+  footerLandscape: obj11,
+  cta: obj12,
+  ctaLandscape: obj13,
+  finePrint: obj14,
 };
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
-obj2.curtain = { position: "absolute", inset: 0, backgroundColor: nativeDefault.colors.BLACK };
-obj2.main = { flex: 1 };
-let obj4 = { position: "absolute", inset: 0, backgroundColor: nativeDefault.colors.BLACK };
-obj2.header = {
+obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
+createStyles = createStyles.createStyles;
+obj3 = { position: "absolute", inset: 0, backgroundColor: nativeDefault.colors.BLACK };
+obj4 = {
   flexDirection: "row",
   justifyContent: "flex-start",
   alignItems: "center",
   paddingHorizontal: nativeDefault.space.PX_16,
 };
-let obj5 = {
-  flexDirection: "row",
-  justifyContent: "flex-start",
-  alignItems: "center",
-  paddingHorizontal: nativeDefault.space.PX_16,
-};
-obj2.closeButtonIcon = { tintColor: nativeDefault.colors.WHITE };
-obj2.scroll = { flex: 1 };
-obj2.body = { flexGrow: 1, flexDirection: "column", justifyContent: "center" };
-obj2.bodyLandscape = { flexDirection: "row", alignItems: "center" };
-obj2.preview = { flexDirection: "row", justifyContent: "center", alignItems: "center" };
-obj2.previewLandscape = { flex: 1 };
-let obj6 = { tintColor: nativeDefault.colors.WHITE };
-obj2.messages = {
+obj5 = { tintColor: nativeDefault.colors.WHITE };
+obj6 = {
   paddingTop: nativeDefault.space.PX_24,
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "flex-start",
   gap: nativeDefault.space.PX_8,
 };
-obj2.messagesLandscape = { paddingTop: 0, alignItems: "stretch" };
-obj2.contentColumnLandscape = { flex: 1 };
-let obj7 = {
-  paddingTop: nativeDefault.space.PX_24,
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "flex-start",
-  gap: nativeDefault.space.PX_8,
-};
-obj2.title = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_32 };
-let obj8 = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_32 };
-obj2.description = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_32 };
-let obj9 = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_32 };
-obj2.textLandscape = { marginHorizontal: nativeDefault.space.PX_16, textAlign: "left" };
-let obj10 = { marginHorizontal: nativeDefault.space.PX_16, textAlign: "left" };
-obj2.footer = { marginBottom: nativeDefault.space.PX_16 };
-let obj11 = { marginBottom: nativeDefault.space.PX_16 };
-obj2.footerLandscape = { marginTop: nativeDefault.space.PX_24, marginBottom: 0 };
-let obj12 = { marginTop: nativeDefault.space.PX_24, marginBottom: 0 };
-obj2.cta = { marginHorizontal: nativeDefault.space.PX_24 };
-let obj13 = { marginHorizontal: nativeDefault.space.PX_24 };
-obj2.ctaLandscape = { marginHorizontal: nativeDefault.space.PX_16 };
-const obj14 = { marginHorizontal: nativeDefault.space.PX_16 };
-obj2.finePrint = {
-  textAlign: "center",
-  marginHorizontal: nativeDefault.space.PX_24,
-  marginBottom: nativeDefault.space.PX_12,
-};
-let closure_17 = createStyles.createStyles(obj2);
-createStyles = fn(4890);
-let obj17 = { linkAccountIcon: null };
-let obj15 = {
-  textAlign: "center",
-  marginHorizontal: nativeDefault.space.PX_24,
-  marginBottom: nativeDefault.space.PX_12,
-};
-obj17.linkAccountIcon = { marginRight: nativeDefault.space.PX_4 };
-let closure_18 = createStyles.createStyles(obj17);
+obj7 = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_32 };
+obj8 = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_32 };
+obj9 = { marginHorizontal: nativeDefault.space.PX_16, textAlign: "left" };
+obj10 = { marginBottom: nativeDefault.space.PX_16 };
+obj11 = { marginTop: nativeDefault.space.PX_24, marginBottom: 0 };
+obj12 = { marginHorizontal: nativeDefault.space.PX_24 };
+obj13 = { marginHorizontal: nativeDefault.space.PX_16 };
+obj14 = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
+let closure_17 = createStyles(obj);
+createStyles = createStyles_mod;
+let obj15 = { linkAccountIcon: obj16 };
+obj16 = { marginRight: nativeDefault.space.PX_4 };
+let closure_18 = createStyles.createStyles(obj15);
 let c19 = 250;
 let c20 = 200;
 const __initData = {
@@ -142,100 +130,120 @@ const __initData5 = {
 const __initData6 = {
   code: "function SocialLayerStorefrontPoductPurchaseSuccessModalTsx6(){const{interpolate,linearInput}=this.__closure;return{opacity:interpolate(linearInput.get(),[0,1],[0.5,0])};}",
 };
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let sharedValue1;
       _require = arg0;
-      const cResult = require("c").c(9);
-      let obj = require("c");
-      const sharedValue = require("ReanimatedRexport").useSharedValue(0);
+      let obj = require("react");
+      const cResult = obj.c(9);
       let obj2 = require("ReanimatedRexport");
-      sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
+      const sharedValue = obj2.useSharedValue(0);
+      let obj3 = require("ReanimatedRexport");
+      sharedValue1 = obj3.useSharedValue(0);
       if (cResult[0] === sharedValue1) {
         if (cResult[1] === arg0) {
+          let tmp6;
+          let tmp7;
           if (cResult[2] === sharedValue) {
-            let tmp6 = cResult[3];
-            let tmp7 = cResult[4];
+            tmp6 = cResult[3];
+            tmp7 = cResult[4];
           }
-          const effect = noop.useEffect(tmp6, tmp7);
+          const effect = react.useEffect(tmp6, tmp7);
           const fn2 = function u() {
-            const obj = {
-              opacity: ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], [0.1, 1]),
-              transform: null,
-            };
-            const obj3 = { scale: null };
-            obj3.scale = ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], [0, 1]);
-            const items = [obj3];
-            obj.transform = items;
+            let items;
+            let obj2;
+            let obj4;
+            const obj = { opacity: obj2.interpolate(sharedValue.get(), [0, 1], [0.1, 1]), transform: items };
+            obj2 = ReanimatedRexport;
+            const obj3 = { scale: obj4.interpolate(sharedValue.get(), [0, 1], [0, 1]) };
+            items = [obj3];
+            obj4 = ReanimatedRexport;
             return obj;
           };
-          let obj4 = { interpolate: tmp(tmp2[13]).interpolate, springInput: sharedValue };
+          let obj4 = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue };
+          const useAnimatedStyle = require("ReanimatedRexport").useAnimatedStyle;
+          require("ReanimatedRexport");
           fn2.__closure = obj4;
+          let num = 7750024112371;
           fn2.__workletHash = 7750024112371;
           fn2.__initData = __initData;
-          const animatedStyle = tmp(tmp2[13]).useAnimatedStyle(fn2);
-          const tmpResult = tmp(tmp2[13]);
+          const animatedStyle = useAnimatedStyle(fn2);
           const fn3 = function _() {
-            const obj = { opacity: ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], [0, 1]), transform: null };
-            const obj3 = { scale: null };
-            obj3.scale = ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], [0.75, 1]);
-            const items = [obj3];
-            obj.transform = items;
+            let items;
+            let obj2;
+            let obj4;
+            const obj = { opacity: obj2.interpolate(sharedValue.get(), [0, 1], [0, 1]), transform: items };
+            obj2 = ReanimatedRexport;
+            const obj3 = { scale: obj4.interpolate(sharedValue.get(), [0, 1], [0.75, 1]) };
+            items = [obj3];
+            obj4 = ReanimatedRexport;
             return obj;
           };
-          const obj5 = { interpolate: tmp(tmp2[13]).interpolate, springInput: sharedValue };
+          const obj5 = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue };
+          const useAnimatedStyle2 = require("ReanimatedRexport").useAnimatedStyle;
+          require("ReanimatedRexport");
           fn3.__closure = obj5;
+          let num2 = 3400602564931;
           fn3.__workletHash = 3400602564931;
           fn3.__initData = __initData2;
-          const animatedStyle1 = tmp(tmp2[13]).useAnimatedStyle(fn3);
-          const tmpResult3 = tmp(tmp2[13]);
+          const animatedStyle2 = useAnimatedStyle2(fn3);
+          const tmpResult4 = require("ReanimatedRexport");
           class S {
             constructor() {
-              obj = { opacity: null };
-              obj2 = closure_0(closure_2[13]);
-              obj.opacity = obj2.interpolate(closure_2.get(), [0, 1], [0.5, 0]);
+              let obj2;
+              const obj = { opacity: obj2.interpolate(sharedValue1.get(), [0, 1], [0.5, 0]) };
+              obj2 = ReanimatedRexport;
               return obj;
             }
           }
-          const obj6 = { interpolate: tmp(tmp2[13]).interpolate, linearInput: sharedValue1 };
-          S.__closure = obj6;
+          const useAnimatedStyle3 = tmpResult4.useAnimatedStyle;
+          S.__closure = { interpolate: require("ReanimatedRexport").interpolate, linearInput: sharedValue1 };
           S.__workletHash = 4092396015860;
           S.__initData = __initData3;
-          const animatedStyle2 = tmp(tmp2[13]).useAnimatedStyle(S);
-          if (cResult[5] === animatedStyle2) {
+          const obj6 = { interpolate: require("ReanimatedRexport").interpolate, linearInput: sharedValue1 };
+          const animatedStyle3 = useAnimatedStyle3(S);
+          if (cResult[5] === animatedStyle3) {
             if (cResult[6] === animatedStyle) {
-              if (cResult[7] === animatedStyle1) {
-                let tmp16 = cResult[8];
+              let tmp19;
+              if (cResult[7] === animatedStyle2) {
+                tmp19 = cResult[8];
               }
-              return tmp16;
+              return tmp19;
             }
           }
           const obj7 = {
             previewViewStyle: animatedStyle,
-            textViewStyle: animatedStyle1,
-            curtainViewStyle: animatedStyle2,
+            textViewStyle: animatedStyle2,
+            curtainViewStyle: animatedStyle3,
           };
-          cResult[5] = animatedStyle2;
+          cResult[5] = animatedStyle3;
           cResult[6] = animatedStyle;
-          cResult[7] = animatedStyle1;
+          cResult[7] = animatedStyle2;
           cResult[8] = obj7;
-          tmp16 = obj7;
-          const tmpResult4 = tmp(tmp2[13]);
+          tmp19 = obj7;
         }
       }
       const fn = function n() {
         let num = 1;
+        set = sharedValue.set;
         if (!closure_0) {
-          const obj = ReanimatedRexport;
-          num = obj.withDelay(c20, spring.withSpring(1, { duration: 500, dampingRatio: 0.7 }));
+          const withDelay = ReanimatedRexport.withDelay;
+          ReanimatedRexport;
+          const obj = spring;
+          num = withDelay(c20, obj.withSpring(1, { duration: 500, dampingRatio: 0.7 }));
         }
-        const result = sharedValue.set(num);
+        const result = set(num);
         let num2 = 1;
+        set2 = sharedValue1.set;
         if (!closure_0) {
-          const obj3 = ReanimatedRexport;
-          num2 = obj3.withDelay(c20, timing.withTiming(1, { duration: 200 }));
+          const withDelay2 = ReanimatedRexport.withDelay;
+          ReanimatedRexport;
+          const obj2 = timing;
+          num2 = withDelay2(c20, obj2.withTiming(1, { duration: 200 }));
         }
-        const result1 = sharedValue1.set(num2);
+        set2(num2);
       };
       let items = [sharedValue, arg0, sharedValue1];
       cResult[0] = sharedValue1;
@@ -245,75 +253,117 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items;
       tmp7 = items;
       tmp6 = fn;
-      let obj3 = require("ReanimatedRexport");
     }
   : (arg0) => {
+      let closure_0;
+      let fn;
+      let fn2;
+      let fn3;
+      let obj4;
+      let obj6;
+      let obj8;
+      let sharedValue1;
       _require = arg0;
-      const sharedValue = require("ReanimatedRexport").useSharedValue(0);
       let obj = require("ReanimatedRexport");
-      sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
-      let items = [sharedValue, arg0, sharedValue1];
-      const effect = noop.useEffect(() => {
-        let num = 1;
-        if (!closure_0) {
-          const obj = ReanimatedRexport;
-          num = obj.withDelay(c20, spring.withSpring(1, { duration: 500, dampingRatio: 0.7 }));
-        }
-        const result = sharedValue.set(num);
-        let num2 = 1;
-        if (!closure_0) {
-          const obj3 = ReanimatedRexport;
-          num2 = obj3.withDelay(c20, timing.withTiming(1, { duration: 200 }));
-        }
-        const result1 = sharedValue1.set(num2);
-      }, items);
-      let obj3 = { previewViewStyle: null, textViewStyle: null, curtainViewStyle: null };
+      const sharedValue = obj.useSharedValue(0);
       let obj2 = require("ReanimatedRexport");
-      const fn = function n() {
-        const obj = { opacity: ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], [0.1, 1]), transform: null };
-        const obj3 = { scale: null };
-        obj3.scale = ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], [0, 1]);
-        const items = [obj3];
-        obj.transform = items;
+      sharedValue1 = obj2.useSharedValue(0);
+      let items = [sharedValue, arg0, sharedValue1];
+      const effect = react.useEffect(() => {
+        let num = 1;
+        set = sharedValue.set;
+        if (!closure_0) {
+          const withDelay = ReanimatedRexport.withDelay;
+          ReanimatedRexport;
+          const obj = spring;
+          num = withDelay(c20, obj.withSpring(1, { duration: 500, dampingRatio: 0.7 }));
+        }
+        const result = set(num);
+        let num2 = 1;
+        set2 = sharedValue1.set;
+        if (!closure_0) {
+          const withDelay2 = ReanimatedRexport.withDelay;
+          ReanimatedRexport;
+          const obj2 = timing;
+          num2 = withDelay2(c20, obj2.withTiming(1, { duration: 200 }));
+        }
+        set2(num2);
+      }, items);
+      let obj3 = {
+        previewViewStyle: obj4.useAnimatedStyle(fn),
+        textViewStyle: obj6.useAnimatedStyle(fn2),
+        curtainViewStyle: obj8.useAnimatedStyle(fn3),
+      };
+      obj4 = require("ReanimatedRexport");
+      fn = function n() {
+        let items;
+        let obj2;
+        let obj4;
+        const obj = { opacity: obj2.interpolate(sharedValue.get(), [0, 1], [0.1, 1]), transform: items };
+        obj2 = ReanimatedRexport;
+        const obj3 = { scale: obj4.interpolate(sharedValue.get(), [0, 1], [0, 1]) };
+        items = [obj3];
+        obj4 = ReanimatedRexport;
         return obj;
       };
-      let obj4 = require("ReanimatedRexport");
       fn.__closure = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue };
       fn.__workletHash = 11689351950294;
       fn.__initData = __initData4;
-      obj3.previewViewStyle = obj4.useAnimatedStyle(fn);
-      const obj5 = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue };
-      const fn2 = function l() {
-        const obj = { opacity: ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], [0, 1]), transform: null };
-        const obj3 = { scale: null };
-        obj3.scale = ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], [0.75, 1]);
-        const items = [obj3];
-        obj.transform = items;
+      ({ interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue });
+      fn2 = function l() {
+        let items;
+        let obj2;
+        let obj4;
+        const obj = { opacity: obj2.interpolate(sharedValue.get(), [0, 1], [0, 1]), transform: items };
+        obj2 = ReanimatedRexport;
+        const obj3 = { scale: obj4.interpolate(sharedValue.get(), [0, 1], [0.75, 1]) };
+        items = [obj3];
+        obj4 = ReanimatedRexport;
         return obj;
       };
-      const obj6 = require("ReanimatedRexport");
+      obj6 = require("ReanimatedRexport");
       fn2.__closure = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue };
       fn2.__workletHash = 15823058327140;
       fn2.__initData = __initData5;
-      obj3.textViewStyle = obj6.useAnimatedStyle(fn2);
-      const obj7 = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue };
-      const fn3 = function c() {
-        const obj = { opacity: ReanimatedRexport.interpolate(sharedValue1.get(), [0, 1], [0.5, 0]) };
+      ({ interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue });
+      fn3 = function c() {
+        let obj2;
+        const obj = { opacity: obj2.interpolate(sharedValue1.get(), [0, 1], [0.5, 0]) };
+        obj2 = ReanimatedRexport;
         return obj;
       };
-      const obj8 = require("ReanimatedRexport");
+      obj8 = require("ReanimatedRexport");
       fn3.__closure = { interpolate: require("ReanimatedRexport").interpolate, linearInput: sharedValue1 };
       fn3.__workletHash = 2263660325649;
       fn3.__initData = __initData6;
-      obj3.curtainViewStyle = obj8.useAnimatedStyle(fn3);
+      ({ interpolate: require("ReanimatedRexport").interpolate, linearInput: sharedValue1 });
       return obj3;
     };
 let closure_28 = [80, 79, 78, 75, 72, 50, 45, 35, 70];
 function useDrummingHapticFeedbacks() {}
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = require("c").c(112);
+      let body;
+      let closeButtonIcon;
+      let ctaIcon;
+      let ctaLabel;
+      let ctaLoading;
+      let curtainViewStyle;
+      let finePrint;
+      let isScreenLandscape;
+      let onClose;
+      let onCtaPress;
+      let previewViewStyle;
+      let sku;
+      let textViewStyle;
+      let title;
+      let tmp11;
+      let tmp5;
+      let tmp6;
+      let useReducedMotion;
+      let obj = require("react");
+      const cResult = obj.c(112);
       ({ sku, title, body, finePrint, ctaLabel, ctaIcon, ctaLoading, onCtaPress, onClose } = arg0);
       const tmp4 = closure_17();
       _require = tmp4;
@@ -325,61 +375,52 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = items;
         cResult[1] = fn;
-        tmp5 = items;
-        tmp6 = fn;
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const obj = require("c");
-      const tmpResult = require("initialize");
-      ({ previewViewStyle, textViewStyle, curtainViewStyle } = closure_27(
-        require("initialize").useStateFromStores(tmp5, tmp6),
-      ));
-      const tmp8 = closure_27(require("initialize").useStateFromStores(tmp5, tmp6));
-      isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
+      const tmpResult = require("get initialized");
+      ({ previewViewStyle, textViewStyle, curtainViewStyle } = closure_27(tmpResult.useStateFromStores(tmp5, tmp6)));
+      closure_27(tmpResult.useStateFromStores(tmp5, tmp6));
       const tmpResult2 = require("useIsScreenLandscape");
-      [tmp11, dependencyMap] = noop.useState(null);
+      isScreenLandscape = tmpResult2.useIsScreenLandscape();
+      [tmp11, dependencyMap] = react.useState(null);
+      _slicedToArray(react.useState(null), 2);
       if (cResult[2] !== isScreenLandscape) {
         class M {
-          constructor(arg0) {
-            obj = { height: arg0.nativeEvent.layout.height, landscape: closure_1 };
-            tmp = closure_2(obj);
-            return;
+          constructor(height) {
+            const obj = { height: height.nativeEvent.layout.height, landscape: isScreenLandscape };
+            dependencyMap(obj);
           }
         }
         cResult[2] = isScreenLandscape;
         cResult[3] = M;
       } else {
         class M {
-          constructor(arg0) {
-            obj = { height: arg0.nativeEvent.layout.height, landscape: closure_1 };
-            tmp = closure_2(obj);
-            return;
+          constructor(height) {
+            const obj = { height: height.nativeEvent.layout.height, landscape: isScreenLandscape };
+            dependencyMap(obj);
           }
         }
       }
       if (isScreenLandscape) {
         class M {
-          constructor(arg0) {
-            obj = { height: arg0.nativeEvent.layout.height, landscape: closure_1 };
-            tmp = closure_2(obj);
-            return;
+          constructor(height) {
+            const obj = { height: height.nativeEvent.layout.height, landscape: isScreenLandscape };
+            dependencyMap(obj);
           }
         }
         if (null != tmp11) {
           class M {
-            constructor(arg0) {
-              obj = { height: arg0.nativeEvent.layout.height, landscape: closure_1 };
-              tmp = closure_2(obj);
-              return;
+            constructor(height) {
+              const obj = { height: height.nativeEvent.layout.height, landscape: isScreenLandscape };
+              dependencyMap(obj);
             }
           }
           if (tmp11.landscape === isScreenLandscape) {
             class M {
-              constructor(arg0) {
-                obj = { height: arg0.nativeEvent.layout.height, landscape: closure_1 };
-                tmp = closure_2(obj);
-                return;
+              constructor(height) {
+                const obj = { height: height.nativeEvent.layout.height, landscape: isScreenLandscape };
+                dependencyMap(obj);
               }
             }
             const _Math = Math;
@@ -390,38 +431,34 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         }
       } else {
         class M {
-          constructor(arg0) {
-            obj = { height: arg0.nativeEvent.layout.height, landscape: closure_1 };
-            tmp = closure_2(obj);
-            return;
+          constructor(height) {
+            const obj = { height: height.nativeEvent.layout.height, landscape: isScreenLandscape };
+            dependencyMap(obj);
           }
         }
       }
       if (cResult[4] !== sku) {
         class M {
-          constructor(arg0) {
-            obj = { height: arg0.nativeEvent.layout.height, landscape: closure_1 };
-            tmp = closure_2(obj);
-            return;
+          constructor(height) {
+            const obj = { height: height.nativeEvent.layout.height, landscape: isScreenLandscape };
+            dependencyMap(obj);
           }
         }
         let cardBackgroundImageURL = obj5.getCardBackgroundImageURL(sku);
         if (cardBackgroundImageURL == null) {
           class M {
-            constructor(arg0) {
-              obj = { height: arg0.nativeEvent.layout.height, landscape: closure_1 };
-              tmp = closure_2(obj);
-              return;
+            constructor(height) {
+              const obj = { height: height.nativeEvent.layout.height, landscape: isScreenLandscape };
+              dependencyMap(obj);
             }
           }
           cardBackgroundImageURL = obj6.getCardImageURL(sku);
         }
         if (cardBackgroundImageURL != null) {
           class M {
-            constructor(arg0) {
-              obj = { height: arg0.nativeEvent.layout.height, landscape: closure_1 };
-              tmp = closure_2(obj);
-              return;
+            constructor(height) {
+              const obj = { height: height.nativeEvent.layout.height, landscape: isScreenLandscape };
+              dependencyMap(obj);
             }
           }
         }
@@ -429,19 +466,17 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = undefined;
       } else {
         class M {
-          constructor(arg0) {
-            obj = { height: arg0.nativeEvent.layout.height, landscape: closure_1 };
-            tmp = closure_2(obj);
-            return;
+          constructor(height) {
+            const obj = { height: height.nativeEvent.layout.height, landscape: isScreenLandscape };
+            dependencyMap(obj);
           }
         }
       }
       if (cResult[6] !== width) {
         class M {
-          constructor(arg0) {
-            obj = { height: arg0.nativeEvent.layout.height, landscape: closure_1 };
-            tmp = closure_2(obj);
-            return;
+          constructor(height) {
+            const obj = { height: height.nativeEvent.layout.height, landscape: isScreenLandscape };
+            dependencyMap(obj);
           }
         }
         tmp19[0] = width;
@@ -449,110 +484,131 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = tmp19;
       } else {
         class M {
-          constructor(arg0) {
-            obj = { height: arg0.nativeEvent.layout.height, landscape: closure_1 };
-            tmp = closure_2(obj);
-            return;
+          constructor(height) {
+            const obj = { height: height.nativeEvent.layout.height, landscape: isScreenLandscape };
+            dependencyMap(obj);
           }
         }
       }
       if (typeof useDrummingHapticFeedbacks === "function") {
         class M {
-          constructor(arg0) {
-            obj = { height: arg0.nativeEvent.layout.height, landscape: closure_1 };
-            tmp = closure_2(obj);
-            return;
+          constructor(height) {
+            const obj = { height: height.nativeEvent.layout.height, landscape: isScreenLandscape };
+            dependencyMap(obj);
           }
         }
-        closure_129_0 = noop.useRef(closure_28);
-        const callback = noop.useCallback(() => {
-          const arr = _toArray(sku.current);
+        _require = react.useRef(closure_28);
+        const callback = react.useCallback(() => {
+          const arr = first(ref.current);
           first = arr[0];
           const substr = arr.slice(1);
           if (null != first) {
             if (0 === substr.length) {
-              const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_HEAVY);
+              const obj3 = sku(width[16]);
+              const result = obj3.triggerHapticFeedback(sku(width[16]).HapticFeedbackTypes.IMPACT_HEAVY);
             }
             if (null != first) {
               const _setTimeout = setTimeout;
-              const timerId = setTimeout(closure_1, first);
+              const timerId = setTimeout(callback1, first);
             }
-            sku.current = substr;
+            ref.current = substr;
           }
           if (substr.length >= length.length / 2) {
-            const result1 = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
+            const obj2 = sku(width[16]);
+            const result1 = obj2.triggerHapticFeedback(sku(width[16]).HapticFeedbackTypes.IMPACT_LIGHT);
           } else {
-            const result2 = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
+            const obj = sku(width[16]);
+            const result2 = obj.triggerHapticFeedback(sku(width[16]).HapticFeedbackTypes.IMPACT_MEDIUM);
           }
         }, []);
-        closure_129_1 = callback;
         const items1 = [callback];
-        const effect = noop.useEffect(() => {
-          closure_1();
+        const effect = react.useEffect(() => {
+          callback1();
           return () => {
-            sku.current = [];
+            ref.current = [];
           };
         }, items1);
-        if (isScreenLandscape) {
-          class M {
-            constructor(arg0) {
-              obj = { height: arg0.nativeEvent.layout.height, landscape: closure_1 };
-              tmp = closure_2(obj);
-              return;
-            }
-          }
-        }
         if (cResult[8] === tmp4.messages) {
           class M {
-            constructor(arg0) {
-              obj = { height: arg0.nativeEvent.layout.height, landscape: closure_1 };
-              tmp = closure_2(obj);
-              return;
+            constructor(height) {
+              const obj = { height: height.nativeEvent.layout.height, landscape: isScreenLandscape };
+              dependencyMap(obj);
             }
           }
         }
-        const items2 = [tmp4.messages, isScreenLandscape, textViewStyle];
+        const items2 = [tmp4.messages, isScreenLandscape && tmp4.messagesLandscape, textViewStyle];
         cResult[8] = tmp4.messages;
-        cResult[9] = isScreenLandscape;
+        cResult[9] = isScreenLandscape && tmp4.messagesLandscape;
         cResult[10] = textViewStyle;
         cResult[11] = items2;
       } else {
         class M {
-          constructor(arg0) {
-            obj = { height: arg0.nativeEvent.layout.height, landscape: closure_1 };
-            tmp = closure_2(obj);
-            return;
+          constructor(height) {
+            const obj = { height: height.nativeEvent.layout.height, landscape: isScreenLandscape };
+            dependencyMap(obj);
           }
         }
         throw new TypeError("Trying to call a non-function");
       }
-      const tmp10 = _slicedToArray(noop.useState(null), 2);
     }
   : (sku) => {
+      let Button;
+      let HeaderBackButton;
+      let body;
+      let closeButtonIcon;
+      let closure_5;
+      let ctaIcon;
+      let ctaLabel;
+      let ctaLoading;
+      let curtainViewStyle;
+      let finePrint;
+      let intl2;
+      let items11;
+      let items13;
+      let items14;
+      let items15;
+      let items16;
+      let items18;
+      let items19;
+      let items20;
+      let items7;
+      let obj10;
+      let obj13;
+      let obj17;
+      let onClose;
+      let onCtaPress;
+      let previewViewStyle;
+      let textViewStyle;
+      let title;
+      let tmp18Result4;
+      let useReducedMotion;
+      const f105099 = () => useReducedMotion.useReducedMotion;
       sku = sku.sku;
       ({ finePrint, ctaLabel, onCtaPress, onClose } = sku);
       let width;
-      noop = undefined;
+      react = undefined;
       ({ title, body, ctaIcon, ctaLoading } = sku);
       const tmp = closure_17();
       importDefault = tmp;
       width = require("useWindowDimensions")().width;
-      const items = [AccessibilityStore];
       let obj = sku(width[18]);
-      ({ previewViewStyle, textViewStyle, curtainViewStyle } = closure_27(
-        sku(width[18]).useStateFromStores(items, () => useReducedMotion.useReducedMotion),
-      ));
-      const tmp5 = closure_27(sku(width[18]).useStateFromStores(items, () => useReducedMotion.useReducedMotion));
-      const isScreenLandscape = sku(width[19]).useIsScreenLandscape();
-      const tmp8 = isScreenLandscape(noop.useState(null), 2);
+      const items = [AccessibilityStore];
+      ({ previewViewStyle, textViewStyle, curtainViewStyle } = closure_27(obj.useStateFromStores(items, f105099)));
+      const tmp5 = closure_27(obj.useStateFromStores(items, f105099));
+      let obj2 = sku(width[19]);
+      const isScreenLandscape = obj2.useIsScreenLandscape();
+      let obj3 = react;
+      const tmp7 = isScreenLandscape ? closure_13 : closure_14;
+      const tmp8 = isScreenLandscape(react.useState(null), 2);
       let first = tmp8[0];
-      noop = tmp8[1];
+      react = tmp8[1];
       const items1 = [isScreenLandscape];
       const items2 = [isScreenLandscape, first];
-      const callback = noop.useCallback((height) => {
-        closure_5({ height: height.nativeEvent.layout.height, landscape: isScreenLandscape });
+      const callback = react.useCallback((height) => {
+        const obj = { height: height.nativeEvent.layout.height, landscape: isScreenLandscape };
+        closure_5(obj);
       }, items1);
-      const memo = noop.useMemo(() => {
+      const memo = react.useMemo(() => {
         if (isScreenLandscape) {
           if (null != first) {
             if (first.landscape === tmp) {
@@ -568,11 +624,12 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items2);
       const items3 = [sku];
-      const memo1 = noop.useMemo(() => {
-        let str = SlayerStorefrontUtils.getCardBackgroundImageURL(sku);
+      const memo1 = react.useMemo(() => {
+        const obj = SlayerStorefrontUtils;
+        let str = obj.getCardBackgroundImageURL(sku);
         if (str == null) {
-          str = SlayerStorefrontUtils.getCardImageURL(sku);
           const tmpResult = SlayerStorefrontUtils;
+          str = tmpResult.getCardImageURL(sku);
         }
         let str1;
         if (str != null) {
@@ -582,215 +639,194 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       }, items3);
       [][0] = width;
       if (typeof useDrummingHapticFeedbacks === "function") {
-        closure_129_0 = obj3.useRef(length);
+        let closure_0 = obj3.useRef(length);
         const callback1 = obj3.useCallback(() => {
-          const arr = _toArray(sku.current);
+          const arr = first(ref.current);
           first = arr[0];
           const substr = arr.slice(1);
           if (null != first) {
             if (0 === substr.length) {
-              const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_HEAVY);
+              const obj3 = sku(width[16]);
+              const result = obj3.triggerHapticFeedback(sku(width[16]).HapticFeedbackTypes.IMPACT_HEAVY);
             }
             if (null != first) {
               const _setTimeout = setTimeout;
-              const timerId = setTimeout(closure_1, first);
+              const timerId = setTimeout(callback1, first);
             }
-            sku.current = substr;
+            ref.current = substr;
           }
           if (substr.length >= length.length / 2) {
-            const result1 = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
+            const obj2 = sku(width[16]);
+            const result1 = obj2.triggerHapticFeedback(sku(width[16]).HapticFeedbackTypes.IMPACT_LIGHT);
           } else {
-            const result2 = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
+            const obj = sku(width[16]);
+            const result2 = obj.triggerHapticFeedback(sku(width[16]).HapticFeedbackTypes.IMPACT_MEDIUM);
           }
         }, []);
-        closure_129_1 = callback1;
         const items4 = [callback1];
         const effect = obj3.useEffect(() => {
-          closure_1();
+          callback1();
           return () => {
-            sku.current = [];
+            ref.current = [];
           };
         }, items4);
         const items5 = [tmp.messages, ,];
         let messagesLandscape = isScreenLandscape;
+        const View = tmp2(tmp3[13]).View;
         if (isScreenLandscape) {
           messagesLandscape = tmp.messagesLandscape;
         }
-        const obj4 = { style: null, children: null };
+        const obj4 = { style: items5, children: items7 };
         items5[1] = messagesLandscape;
         items5[2] = textViewStyle;
-        obj4.style = items5;
         const items6 = [tmp.title];
         let textLandscape = isScreenLandscape;
+        const Text = tmp4(tmp3[21]).Text;
         if (isScreenLandscape) {
           textLandscape = tmp.textLandscape;
         }
-        const obj5 = { variant: "heading-xl/semibold", color: "text-overlay-light", style: null, children: null };
+        const obj5 = { variant: "heading-xl/semibold", color: "text-overlay-light", style: items6, children: title };
         items6[1] = textLandscape;
-        obj5.style = items6;
-        obj5.children = title;
-        const items7 = [closure_15(tmp4(tmp3[21]).Text, obj5)];
+        items7 = [closure_15(Text, obj5)];
         const items8 = [tmp.description];
         let textLandscape2 = isScreenLandscape;
+        const Text2 = tmp4(tmp3[21]).Text;
         if (isScreenLandscape) {
           textLandscape2 = tmp.textLandscape;
         }
-        const obj6 = { variant: "text-md/medium", color: "text-overlay-light", style: null, children: null };
+        const obj6 = { variant: "text-md/medium", color: "text-overlay-light", style: items8, children: body };
         items8[1] = textLandscape2;
-        obj6.style = items8;
-        obj6.children = body;
-        items7[1] = closure_15(tmp4(tmp3[21]).Text, obj6);
-        obj4.children = items7;
-        const tmp17Result = closure_16(tmp2(tmp3[13]).View, obj4);
+        items7[1] = closure_15(Text2, obj6);
+        const tmp17Result = closure_16(View, obj4);
         const items9 = [tmp.footer];
-        let footerLandscape = isScreenLandscape;
-        if (isScreenLandscape) {
-          footerLandscape = tmp.footerLandscape;
-        }
-        const obj7 = { style: null, children: null };
-        items9[1] = footerLandscape;
-        obj7.style = items9;
+        const obj7 = { style: items9, children: items11 };
+        const tmp21 = isScreenLandscape && tmp.footerLandscape;
+        items9[1] = tmp21;
         let tmp18Result = null != finePrint;
         if (tmp18Result) {
           const items10 = [tmp.finePrint];
           let textLandscape3 = isScreenLandscape;
+          const Text3 = tmp4(tmp3[21]).Text;
           if (isScreenLandscape) {
             textLandscape3 = tmp.textLandscape;
           }
-          const obj8 = { variant: "text-xs/normal", color: "text-overlay-light", style: null, children: null };
+          const obj8 = { variant: "text-xs/normal", color: "text-overlay-light", style: items10, children: finePrint };
           items10[1] = textLandscape3;
-          obj8.style = items10;
-          obj8.children = finePrint;
-          tmp18Result = closure_15(tmp4(tmp3[21]).Text, obj8);
+          tmp18Result = closure_15(Text3, obj8);
         }
-        const items11 = [tmp18Result];
+        items11 = [tmp18Result];
         const items12 = [tmp.cta];
-        let ctaLandscape = isScreenLandscape;
-        if (isScreenLandscape) {
-          ctaLandscape = tmp.ctaLandscape;
-        }
-        const obj9 = { style: null, children: null };
-        items12[1] = ctaLandscape;
-        obj9.style = items12;
+        const tmp23 = isScreenLandscape && tmp.ctaLandscape;
+        items12[1] = tmp23;
+        const obj9 = { style: items12, children: closure_15(Button, obj10) };
+        Button = tmp4(tmp3[23]).Button;
         if (onCtaPress == null) {
           onCtaPress = onClose;
         }
-        const obj10 = { onPress: onCtaPress, text: null, icon: null, loading: null, size: "lg", grow: true };
+        obj10 = { onPress: onCtaPress, text: ctaLabel, icon: ctaIcon, loading: ctaLoading, size: "lg", grow: true };
         if (ctaLabel == null) {
           const intl = tmp4(tmp3[22]).intl;
           ctaLabel = intl.string(tmp4(tmp3[22]).t.cpT0Cq);
         }
-        obj10.text = ctaLabel;
-        obj10.icon = ctaIcon;
-        obj10.loading = ctaLoading;
-        obj9.children = closure_15(tmp4(tmp3[23]).Button, obj10);
         items11[1] = closure_15(closure_8, obj9);
-        obj7.children = items11;
         const tmp17Result3 = closure_16(closure_8, obj7);
-        const obj11 = { style: null, children: null };
-        const items13 = [tmp.root, tmp13];
-        obj11.style = items13;
+        const obj11 = { style: items13, children: items14 };
+        items13 = [tmp.root, tmp13];
         let tmp18Result3 = null != memo1;
         if (tmp18Result3) {
-          const obj12 = { source: null, style: null, blurRadius: 4, resizeMode: "cover" };
-          const obj13 = { uri: memo1 };
-          obj12.source = obj13;
-          obj12.style = tmp.backdropImage;
+          const obj12 = { source: obj13, style: tmp.backdropImage, blurRadius: 4, resizeMode: "cover" };
+          obj13 = { uri: memo1 };
           tmp18Result3 = closure_15(closure_6, obj12);
         }
-        const items14 = [tmp18Result3, , ,];
-        const obj15 = { style: tmp.backdropGradient, start: null, end: null, locations: null, colors: null };
+        items14 = [tmp18Result3, , ,];
+        const obj15 = {
+          style: tmp.backdropGradient,
+          start: null,
+          end: null,
+          locations: [0.4, 0.75, 1],
+          colors: ["rgba(0,0,0,0)", "rgba(0,0,0,0.6)", "#000000"],
+        };
         ({ START: obj14.start, END: obj14.end } = tmp7);
-        obj15.locations = [0.4, 0.75, 1];
-        obj15.colors = ["rgba(0,0,0,0)", "rgba(0,0,0,0.6)", "#000000"];
-        items14[1] = closure_15(tmp2(tmp3[24]), obj15);
-        const rect = { style: tmp.main, top: true, bottom: true, left: true, right: true, children: null };
-        const obj16 = { style: tmp.header, children: null };
-        const obj17 = {
+        items14[1] = closure_15(require("LinearGradient"), obj15);
+        const rect = { style: tmp.main, top: true, bottom: true, left: true, right: true, children: items15 };
+        const obj16 = { style: tmp.header, children: closure_15(HeaderBackButton, obj17) };
+        const SafeAreaPaddingView = tmp4(tmp3[28]).SafeAreaPaddingView;
+        obj17 = {
           onPress: onClose,
           backImage() {
-            return closure_2_15(XSmallIcon.XSmallIcon, { size: "lg", style: closure_1.closeButtonIcon });
+            const obj = { size: "lg", style: closeButtonIcon.closeButtonIcon };
+            return closure_15(XSmallIcon.XSmallIcon, obj);
           },
-          accessibilityLabel: null,
+          accessibilityLabel: intl2.string(sku(width[22]).t.cpT0Cq),
           displayMode: "minimal",
         };
-        const intl2 = tmp4(tmp3[22]).intl;
-        obj17.accessibilityLabel = intl2.string(tmp4(tmp3[22]).t.cpT0Cq);
-        obj16.children = closure_15(tmp4(tmp3[26]).HeaderBackButton, obj17);
-        const items15 = [closure_15(closure_8, obj16), ,];
+        HeaderBackButton = tmp4(tmp3[26]).HeaderBackButton;
+        intl2 = tmp4(tmp3[22]).intl;
+        items15 = [closure_15(closure_8, obj16), ,];
         const obj18 = {
           style: tmp.scroll,
-          contentContainerStyle: null,
-          onLayout: null,
+          contentContainerStyle: items16,
+          onLayout: callback,
           alwaysBounceVertical: false,
-          children: null,
+          children: items18,
         };
-        const items16 = [tmp.body];
-        let bodyLandscape = isScreenLandscape;
-        if (isScreenLandscape) {
-          bodyLandscape = tmp.bodyLandscape;
-        }
+        items16 = [tmp.body];
+        const bodyLandscape = isScreenLandscape && tmp.bodyLandscape;
         items16[1] = bodyLandscape;
-        obj18.contentContainerStyle = items16;
-        obj18.onLayout = callback;
         const items17 = [tmp.preview, ,];
         let previewLandscape = isScreenLandscape;
+        const View2 = tmp2(tmp3[13]).View;
         if (isScreenLandscape) {
           previewLandscape = tmp.previewLandscape;
         }
-        const obj19 = { style: null, children: null };
+        const obj19 = { style: items17, children: tmp18Result4 };
         items17[1] = previewLandscape;
         items17[2] = previewViewStyle;
-        obj19.style = items17;
-        let tmp18Result4 = null != memo;
+        tmp18Result4 = null != memo;
         if (tmp18Result4) {
           const obj20 = { sku, size: memo };
           tmp18Result4 = closure_15(tmp2(tmp3[27]), obj20);
         }
-        obj19.children = tmp18Result4;
-        const items18 = [closure_15(tmp2(tmp3[13]).View, obj19)];
+        items18 = [closure_15(View2, obj19)];
         let tmp17Result4 = tmp17Result;
         if (isScreenLandscape) {
-          const obj21 = { style: tmp.contentColumnLandscape, children: null };
-          const items19 = [tmp17Result, tmp17Result3];
-          obj21.children = items19;
+          const obj21 = { style: tmp.contentColumnLandscape, children: items19 };
+          items19 = [tmp17Result, tmp17Result3];
           tmp17Result4 = closure_16(closure_8, obj21);
         }
         items18[1] = tmp17Result4;
-        obj18.children = items18;
         items15[1] = closure_16(closure_7, obj18);
-        let tmp28 = !isScreenLandscape;
-        if (!isScreenLandscape) {
-          tmp28 = tmp17Result3;
-        }
-        items15[2] = tmp28;
-        rect.children = items15;
-        items14[2] = closure_16(tmp4(tmp3[28]).SafeAreaPaddingView, rect);
-        const obj22 = { style: null, pointerEvents: "none" };
-        const items20 = [tmp.curtain, curtainViewStyle];
-        obj22.style = items20;
-        items14[3] = closure_15(tmp2(tmp3[13]).View, obj22);
-        obj11.children = items14;
+        items15[2] = !isScreenLandscape && tmp17Result3;
+        items14[2] = closure_16(SafeAreaPaddingView, rect);
+        const obj22 = { style: items20, pointerEvents: "none" };
+        items20 = [tmp.curtain, curtainViewStyle];
+        items14[3] = closure_15(require("ReanimatedRexport").View, obj22);
         return closure_16(closure_8, obj11);
       } else {
+        let str = "Trying to call a non-function";
         throw new TypeError("Trying to call a non-function");
       }
-      let obj2 = sku(width[19]);
-      tmp7 = isScreenLandscape ? closure_13 : closure_14;
     };
-fn(558);
-let obj18 = { marginRight: nativeDefault.space.PX_4 };
-ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (skuId) => {
-      const cResult = skuId(fetched[12]).c(55);
+      let analyticsLocations;
+      let fetched;
+      let first;
+      let onClose;
+      let tmp20;
+      let tmp21;
+      let tmp30;
+      let tmp8;
+      let obj = skuId(fetched[12]);
+      const cResult = obj.c(55);
       skuId = skuId.skuId;
       ({ analyticsLocations, onClose } = skuId);
       closure_18();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SKUStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -800,188 +836,173 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = skuId;
         cResult[2] = fn;
-        let tmp7 = fn;
+        tmp8 = fn;
       } else {
-        tmp7 = cResult[2];
+        tmp8 = cResult[2];
       }
-      let obj = skuId(fetched[12]);
-      const stateFromStores = skuId(fetched[18]).useStateFromStores(first, tmp7);
-      const tmpResult = skuId(fetched[18]);
+      const tmp2Result = skuId(fetched[18]);
+      const stateFromStores = tmp2Result.useStateFromStores(first, tmp8);
       let applicationId;
+      const useGetOrFetchApplication = skuId(fetched[29]).useGetOrFetchApplication;
+      skuId(fetched[29]);
       if (stateFromStores != null) {
         applicationId = stateFromStores.applicationId;
       }
-      const getOrFetchApplication = skuId(fetched[29]).useGetOrFetchApplication(applicationId);
-      let tmp14 = getOrFetchApplication;
-      const tmp12 = stateFromStores;
-      const tmpResult3 = skuId(fetched[29]);
+      const getOrFetchApplication = useGetOrFetchApplication(applicationId);
+      let tmp15 = getOrFetchApplication;
+      const tmp13 = stateFromStores;
+      const tmp14 = stateFromStores(fetched[30]);
       if (getOrFetchApplication == null) {
-        tmp14 = null;
+        tmp15 = null;
       }
-      const tmp13Result = stateFromStores(fetched[30])(tmp14);
-      fetched = tmp13Result.fetched;
-      const hasAlreadyLinked = tmp13Result.hasAlreadyLinked;
-      const canStartAuthorization = tmp13Result.canStartAuthorization;
-      const startAuthorization = tmp13Result.startAuthorization;
-      const tmp13 = stateFromStores(fetched[30]);
+      const tmp14Result = tmp14(tmp15);
+      fetched = tmp14Result.fetched;
+      const hasAlreadyLinked = tmp14Result.hasAlreadyLinked;
+      const canStartAuthorization = tmp14Result.canStartAuthorization;
+      const startAuthorization = tmp14Result.startAuthorization;
       let applicationId1;
+      const useSocialLayerStorefrontMobileAccountLinkingDisabled = skuId(
+        fetched[31],
+      ).useSocialLayerStorefrontMobileAccountLinkingDisabled;
+      skuId(fetched[31]);
       if (stateFromStores != null) {
         applicationId1 = stateFromStores.applicationId;
       }
-      const socialLayerStorefrontMobileAccountLinkingDisabled = skuId(
-        fetched[31],
-      ).useSocialLayerStorefrontMobileAccountLinkingDisabled(applicationId1);
+      const socialLayerStorefrontMobileAccountLinkingDisabled =
+        useSocialLayerStorefrontMobileAccountLinkingDisabled(applicationId1);
       if (cResult[3] !== analyticsLocations) {
         let items1 = analyticsLocations;
-        if (analyticsLocations == tmp9) {
+        if (analyticsLocations == null) {
           items1 = [];
         }
         cResult[3] = analyticsLocations;
         cResult[4] = items1;
-        let tmp18 = items1;
+        tmp20 = items1;
       } else {
-        tmp18 = cResult[4];
+        tmp20 = cResult[4];
       }
-      if (cResult[5] !== tmp18) {
+      if (cResult[5] !== tmp20) {
         const items2 = [];
-        items2[HermesBuiltin.arraySpread(tmp18, 0)] = tmp12(tmp2[32]).SLAYER_STOREFRONT_NATIVE_PURCHASE_SUCCESS;
-        cResult[5] = tmp18;
+        const arraySpreadResult = HermesBuiltin.arraySpread(items2, tmp20, 0);
+        items2[arraySpreadResult] = tmp13(fetched[32]).SLAYER_STOREFRONT_NATIVE_PURCHASE_SUCCESS;
+        cResult[5] = tmp20;
         cResult[6] = items2;
-        let tmp19 = items2;
-        const arraySpreadResult = HermesBuiltin.arraySpread(tmp18, 0);
+        tmp21 = items2;
       } else {
-        tmp19 = cResult[6];
+        tmp21 = cResult[6];
       }
-      location_stack = tmp19;
+      location_stack = tmp21;
       let applicationId2;
       if (stateFromStores != null) {
         applicationId2 = stateFromStores.applicationId;
       }
-      if (cResult[7] === tmp19) {
+      if (cResult[7] === tmp21) {
         if (cResult[8] === canStartAuthorization) {
           if (cResult[9] === skuId) {
+            let tmp26;
+            let tmp28;
             if (cResult[10] === applicationId2) {
-              let tmp24 = cResult[11];
+              tmp26 = cResult[11];
             }
-            startAuthorization.useRef(tmp24);
+            const ref = startAuthorization.useRef(tmp26);
             if (cResult[12] !== canStartAuthorization) {
               class O {
                 constructor() {
-                  closure_7.current.canStartAuthorization = canStartAuthorization;
-                  return;
+                  ref.current.canStartAuthorization = canStartAuthorization;
                 }
               }
               const items3 = [canStartAuthorization];
               cResult[12] = canStartAuthorization;
               class H {
                 constructor() {
+                  let analyticsLocations;
+                  let applicationId;
                   if (fetched) {
-                    tmp = closure_7;
-                    tmp2 = closure_1;
-                    tmp3 = closure_2;
-                    ({ analyticsLocations, skuId, applicationId, canStartAuthorization } = closure_7.current);
-                    obj = closure_1(closure_2[33]);
-                    tmp4 = AnalyticEvents;
-                    obj1 = {
-                      location_stack: null,
-                      sku_id: null,
-                      application_id: null,
+                    ({ analyticsLocations, skuId, applicationId, canStartAuthorization } = ref.current);
+                    const obj2 = {
+                      location_stack: analyticsLocations,
+                      sku_id: skuId,
+                      application_id: applicationId,
                       is_gift: false,
-                      is_account_linked: null,
-                      can_start_authorization: null,
+                      is_account_linked: hasAlreadyLinked,
+                      can_start_authorization: canStartAuthorization,
                     };
-                    obj1.location_stack = analyticsLocations;
-                    obj1.sku_id = skuId;
-                    obj1.application_id = applicationId;
-                    tmp5 = hasAlreadyLinked;
-                    obj1.is_account_linked = hasAlreadyLinked;
-                    obj1.can_start_authorization = canStartAuthorization;
-                    trackResult = obj.track(AnalyticEvents.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, obj1);
+                    const obj = AnalyticsUtilsDefault;
+                    obj.track(constants.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, obj2);
                   }
-                  return;
                 }
               }
               cResult[14] = items3;
-              let tmp26 = items3;
+              tmp28 = items3;
             } else {
               class O {
                 constructor() {
-                  closure_7.current.canStartAuthorization = canStartAuthorization;
-                  return;
+                  ref.current.canStartAuthorization = canStartAuthorization;
                 }
               }
-              tmp26 = cResult[14];
+              tmp28 = cResult[14];
             }
-            const effect = obj6.useEffect(O, tmp26);
+            const effect = obj4.useEffect(O, tmp28);
             if (cResult[15] === fetched) {
               class O {
                 constructor() {
-                  closure_7.current.canStartAuthorization = canStartAuthorization;
-                  return;
+                  ref.current.canStartAuthorization = canStartAuthorization;
                 }
               }
-              const effect1 = obj6.useEffect(H, tmp28);
-              if (cResult[19] === tmp19) {
+              const effect1 = obj4.useEffect(H, tmp30);
+              if (cResult[19] === tmp21) {
                 class O {
                   constructor() {
-                    closure_7.current.canStartAuthorization = canStartAuthorization;
-                    return;
+                    ref.current.canStartAuthorization = canStartAuthorization;
                   }
                 }
-                if (stateFromStores != tmp9) {
+                const tmp33 = cResult[20];
+                if (stateFromStores != null) {
                   class O {
                     constructor() {
-                      closure_7.current.canStartAuthorization = canStartAuthorization;
-                      return;
+                      ref.current.canStartAuthorization = canStartAuthorization;
                     }
                   }
                 }
-                if (cResult[20] === tmp31) {
+                if (tmp33 === tmp34) {
                   class O {
                     constructor() {
-                      closure_7.current.canStartAuthorization = canStartAuthorization;
-                      return;
+                      ref.current.canStartAuthorization = canStartAuthorization;
                     }
                   }
                 }
               }
-              cResult[19] = tmp19;
+              cResult[19] = tmp21;
               class H {
                 constructor() {
+                  let analyticsLocations;
+                  let applicationId;
                   if (fetched) {
-                    tmp = closure_7;
-                    tmp2 = closure_1;
-                    tmp3 = closure_2;
-                    ({ analyticsLocations, skuId, applicationId, canStartAuthorization } = closure_7.current);
-                    obj = closure_1(closure_2[33]);
-                    tmp4 = AnalyticEvents;
-                    obj1 = {
-                      location_stack: null,
-                      sku_id: null,
-                      application_id: null,
+                    ({ analyticsLocations, skuId, applicationId, canStartAuthorization } = ref.current);
+                    const obj2 = {
+                      location_stack: analyticsLocations,
+                      sku_id: skuId,
+                      application_id: applicationId,
                       is_gift: false,
-                      is_account_linked: null,
-                      can_start_authorization: null,
+                      is_account_linked: hasAlreadyLinked,
+                      can_start_authorization: canStartAuthorization,
                     };
-                    obj1.location_stack = analyticsLocations;
-                    obj1.sku_id = skuId;
-                    obj1.application_id = applicationId;
-                    tmp5 = hasAlreadyLinked;
-                    obj1.is_account_linked = hasAlreadyLinked;
-                    obj1.can_start_authorization = canStartAuthorization;
-                    trackResult = obj.track(AnalyticEvents.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, obj1);
+                    const obj = AnalyticsUtilsDefault;
+                    obj.track(constants.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, obj2);
                   }
-                  return;
                 }
               }
               const fn2 = function z() {
-                const obj2 = { location_stack, sku_id: skuId, application_id: null, is_gift: false };
                 let applicationId;
+                const obj = { location_stack, sku_id: skuId, application_id: applicationId, is_gift: false };
+                applicationId = undefined;
+                const track = AnalyticsUtilsDefault.track;
+                const SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED = constants.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED;
+                AnalyticsUtilsDefault;
                 if (stateFromStores != null) {
                   applicationId = stateFromStores.applicationId;
                 }
-                obj2.application_id = applicationId;
-                AnalyticsUtilsDefault.track(constants.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, obj2);
+                track(SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, obj);
                 startAuthorization({ analyticsLocations: location_stack });
               };
               cResult[20] = undefined;
@@ -991,30 +1012,21 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             }
             class H {
               constructor() {
+                let analyticsLocations;
+                let applicationId;
                 if (fetched) {
-                  tmp = closure_7;
-                  tmp2 = closure_1;
-                  tmp3 = closure_2;
-                  ({ analyticsLocations, skuId, applicationId, canStartAuthorization } = closure_7.current);
-                  obj = closure_1(closure_2[33]);
-                  tmp4 = AnalyticEvents;
-                  obj1 = {
-                    location_stack: null,
-                    sku_id: null,
-                    application_id: null,
+                  ({ analyticsLocations, skuId, applicationId, canStartAuthorization } = ref.current);
+                  const obj2 = {
+                    location_stack: analyticsLocations,
+                    sku_id: skuId,
+                    application_id: applicationId,
                     is_gift: false,
-                    is_account_linked: null,
-                    can_start_authorization: null,
+                    is_account_linked: hasAlreadyLinked,
+                    can_start_authorization: canStartAuthorization,
                   };
-                  obj1.location_stack = analyticsLocations;
-                  obj1.sku_id = skuId;
-                  obj1.application_id = applicationId;
-                  tmp5 = hasAlreadyLinked;
-                  obj1.is_account_linked = hasAlreadyLinked;
-                  obj1.can_start_authorization = canStartAuthorization;
-                  trackResult = obj.track(AnalyticEvents.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, obj1);
+                  const obj = AnalyticsUtilsDefault;
+                  obj.track(constants.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, obj2);
                 }
-                return;
               }
             }
             const items4 = [fetched, hasAlreadyLinked];
@@ -1022,20 +1034,26 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[16] = hasAlreadyLinked;
             cResult[17] = items4;
             cResult[18] = H;
-            tmp28 = items4;
+            tmp30 = items4;
           }
         }
       }
-      let obj2 = { analyticsLocations: tmp19, skuId, applicationId: applicationId2, canStartAuthorization };
-      cResult[7] = tmp19;
+      let obj2 = { analyticsLocations: tmp21, skuId, applicationId: applicationId2, canStartAuthorization };
+      cResult[7] = tmp21;
       cResult[8] = canStartAuthorization;
       cResult[9] = skuId;
       cResult[10] = applicationId2;
       cResult[11] = obj2;
-      tmp24 = obj2;
-      const tmpResult4 = skuId(fetched[31]);
+      tmp26 = obj2;
     }
   : (skuId) => {
+      let analyticsLocations;
+      let applicationId2;
+      let orbsReward;
+      let stringResult;
+      let stringResult1;
+      let tmp29Result;
+      let tmp33;
       skuId = skuId.skuId;
       ({ orbsReward, analyticsLocations } = skuId);
       let stateFromStores;
@@ -1045,35 +1063,42 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let canStartAuthorization;
       let startAuthorization;
       let memo;
-      closure_10 = undefined;
-      const tmp = closure_18();
-      let items = [closure_10];
-      stateFromStores = skuId(stateFromStores[18]).useStateFromStores(items, () => SKUStore.get(skuId));
+      let ref;
+      let closure_10;
+      const onClose = skuId.onClose;
+      let tmp = closure_18();
       let obj = skuId(stateFromStores[18]);
+      let items = [closure_10];
+      stateFromStores = obj.useStateFromStores(items, () => SKUStore.get(skuId));
       let applicationId;
+      const useGetOrFetchApplication = skuId(stateFromStores[29]).useGetOrFetchApplication;
+      const tmp5 = skuId(stateFromStores[29]);
       if (stateFromStores != null) {
         applicationId = stateFromStores.applicationId;
       }
-      getOrFetchApplication = skuId(stateFromStores[29]).useGetOrFetchApplication(applicationId);
-      let tmp9 = getOrFetchApplication;
-      let obj2 = skuId(stateFromStores[29]);
+      getOrFetchApplication = useGetOrFetchApplication(applicationId);
+      let tmp10 = getOrFetchApplication;
+      const tmp9 = analyticsLocations(stateFromStores[30]);
       if (getOrFetchApplication == null) {
-        tmp9 = null;
+        tmp10 = null;
       }
-      const tmp8Result = analyticsLocations(stateFromStores[30])(tmp9);
-      fetched = tmp8Result.fetched;
-      hasAlreadyLinked = tmp8Result.hasAlreadyLinked;
-      canStartAuthorization = tmp8Result.canStartAuthorization;
-      startAuthorization = tmp8Result.startAuthorization;
-      const tmp8 = analyticsLocations(stateFromStores[30]);
+      const tmp9Result = tmp9(tmp10);
+      fetched = tmp9Result.fetched;
+      hasAlreadyLinked = tmp9Result.hasAlreadyLinked;
+      canStartAuthorization = tmp9Result.canStartAuthorization;
+      startAuthorization = tmp9Result.startAuthorization;
       let applicationId1;
+      const useSocialLayerStorefrontMobileAccountLinkingDisabled = skuId(
+        stateFromStores[31],
+      ).useSocialLayerStorefrontMobileAccountLinkingDisabled;
+      skuId(stateFromStores[31]);
       if (stateFromStores != null) {
         applicationId1 = stateFromStores.applicationId;
       }
+      let obj2 = hasAlreadyLinked;
       let items1 = [analyticsLocations];
-      const socialLayerStorefrontMobileAccountLinkingDisabled = skuId(
-        stateFromStores[31],
-      ).useSocialLayerStorefrontMobileAccountLinkingDisabled(applicationId1);
+      const socialLayerStorefrontMobileAccountLinkingDisabled =
+        useSocialLayerStorefrontMobileAccountLinkingDisabled(applicationId1);
       memo = hasAlreadyLinked.useMemo(() => {
         let items = analyticsLocations;
         if (analyticsLocations == null) {
@@ -1082,20 +1107,20 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [...items, AnalyticsLocationDefault.SLAYER_STOREFRONT_NATIVE_PURCHASE_SUCCESS];
         return items1;
       }, items1);
-      let obj3 = { analyticsLocations: memo, skuId, applicationId: null, canStartAuthorization: null };
-      let applicationId2;
+      let obj3 = { analyticsLocations: memo, skuId, applicationId: applicationId2, canStartAuthorization };
+      applicationId2 = undefined;
+      const useRef = hasAlreadyLinked.useRef;
       if (stateFromStores != null) {
         applicationId2 = stateFromStores.applicationId;
       }
-      obj3.applicationId = applicationId2;
-      obj3.canStartAuthorization = canStartAuthorization;
-      hasAlreadyLinked.useRef(obj3);
+      ref = useRef(obj3);
       const items2 = [canStartAuthorization];
-      const effect = obj4.useEffect(() => {
+      const effect = obj2.useEffect(() => {
         ref.current.canStartAuthorization = canStartAuthorization;
       }, items2);
       const items3 = [fetched, hasAlreadyLinked];
-      const effect1 = obj4.useEffect(() => {
+      const effect1 = obj2.useEffect(() => {
+        let applicationId;
         if (fetched) {
           ({ analyticsLocations, skuId, applicationId, canStartAuthorization } = ref.current);
           const obj2 = {
@@ -1106,56 +1131,62 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             is_account_linked: hasAlreadyLinked,
             can_start_authorization: canStartAuthorization,
           };
-          AnalyticsUtilsDefault.track(constants.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, obj2);
+          const obj = AnalyticsUtilsDefault;
+          obj.track(constants.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, obj2);
         }
       }, items3);
       const items4 = [startAuthorization, memo, skuId];
       let applicationId3;
+      const useCallback = obj2.useCallback;
       if (stateFromStores != null) {
         applicationId3 = stateFromStores.applicationId;
       }
       items4[3] = applicationId3;
-      const callback = obj4.useCallback(() => {
-        const obj2 = { location_stack: memo, sku_id: skuId, application_id: null, is_gift: false };
+      const callback = useCallback(() => {
         let applicationId;
+        const obj = { location_stack: memo, sku_id: skuId, application_id: applicationId, is_gift: false };
+        applicationId = undefined;
+        const track = AnalyticsUtilsDefault.track;
+        const SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED = constants.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED;
+        AnalyticsUtilsDefault;
         if (stateFromStores != null) {
           applicationId = stateFromStores.applicationId;
         }
-        obj2.application_id = applicationId;
-        AnalyticsUtilsDefault.track(constants.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, obj2);
+        track(SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, obj);
         startAuthorization({ analyticsLocations: memo });
       }, items4);
       analyticsLocations(stateFromStores[35])(() => {
-        const obj2 = {
+        let applicationId;
+        const tmp = AnalyticsUtilsDefault;
+        const track = tmp.track;
+        const OPEN_MODAL = constants.OPEN_MODAL;
+        const obj = {
           location_stack: memo,
           type: SocialLayerStorefrontNativeActionCreators.SOCIAL_LAYER_STOREFRONT_SELF_PURCHASE_SUCCESS_MODAL_KEY,
           sku_id: skuId,
-          application_id: null,
+          application_id: applicationId,
         };
-        let applicationId;
+        applicationId = undefined;
         if (stateFromStores != null) {
           applicationId = stateFromStores.applicationId;
         }
-        obj2.application_id = applicationId;
-        AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj2);
+        track(OPEN_MODAL, obj);
       });
       let intl = tmp2(tmp3[22]).intl;
       const string = intl.string;
       if (hasAlreadyLinked) {
-        let stringResult = string(tmp2(tmp3[22]).t["5glWta"]);
+        stringResult = string(tmp2(tmp3[22]).t["5glWta"]);
       } else {
         stringResult = string(analyticsLocations(tmp3[36]).bRPsNX);
       }
-      let tmp21 = !hasAlreadyLinked;
-      if (!hasAlreadyLinked) {
-        tmp21 = canStartAuthorization;
-      }
-      if (tmp21) {
-        tmp21 = !socialLayerStorefrontMobileAccountLinkingDisabled;
-      }
-      closure_10 = tmp21;
-      const items5 = [hasAlreadyLinked, tmp21, ,];
+      closure_10 = tmp23;
+      const items5 = [
+        hasAlreadyLinked,
+        !hasAlreadyLinked && canStartAuthorization && !socialLayerStorefrontMobileAccountLinkingDisabled,
+        ,
+      ];
       let name;
+      const useMemo = obj2.useMemo;
       if (getOrFetchApplication != null) {
         name = getOrFetchApplication.name;
       }
@@ -1166,49 +1197,54 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items5[3] = name1;
       let formatToPlainStringResult;
-      const memo1 = obj4.useMemo(() => {
+      const memo1 = useMemo(() => {
+        let formatToPlainString2Result;
+        let str3;
+        let str5;
         if (hasAlreadyLinked) {
-          const intl2 = util.intl;
+          const intl2 = intl4.intl;
+          const formatToPlainString2 = intl2.formatToPlainString;
           let str4;
+          const W2znvX = intl4.t.W2znvX;
           if (stateFromStores != null) {
             str4 = stateFromStores.name;
           }
           if (str4 == null) {
             str4 = "";
           }
-          const obj2 = { skuName: str4, applicationName: null };
-          let str5;
+          const obj2 = { skuName: str4, applicationName: str5 };
+          str5 = undefined;
           if (getOrFetchApplication != null) {
             str5 = getOrFetchApplication.name;
           }
           if (str5 == null) {
             str5 = "";
           }
-          obj2.applicationName = str5;
-          let formatToPlainStringResult = intl2.formatToPlainString(util.t.W2znvX, obj2);
+          formatToPlainString2Result = formatToPlainString2(W2znvX, obj2);
         } else {
-          const intl = util.intl;
+          const intl = intl4.intl;
           const formatToPlainString = intl.formatToPlainString;
           if (closure_10) {
             let str2;
+            const prop = intl4.t["EgCl+Q"];
             if (stateFromStores != null) {
               str2 = stateFromStores.name;
             }
             if (str2 == null) {
               str2 = "";
             }
-            const obj3 = { skuName: str2, applicationName: null };
-            let str3;
+            const obj3 = { skuName: str2, applicationName: str3 };
+            str3 = undefined;
             if (getOrFetchApplication != null) {
               str3 = getOrFetchApplication.name;
             }
             if (str3 == null) {
               str3 = "";
             }
-            obj3.applicationName = str3;
-            formatToPlainStringResult = formatToPlainString(util.t["EgCl+Q"], obj3);
+            formatToPlainString2Result = formatToPlainString(prop, obj3);
           } else {
             let str;
+            const eNNnIG = _modDef3593.eNNnIG;
             if (getOrFetchApplication != null) {
               str = getOrFetchApplication.name;
             }
@@ -1216,64 +1252,67 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               str = "";
             }
             const obj = { applicationName: str };
-            formatToPlainStringResult = formatToPlainString(_modDef3593.eNNnIG, obj);
+            formatToPlainString2Result = formatToPlainString(eNNnIG, obj);
           }
         }
-        return formatToPlainStringResult;
+        return formatToPlainString2Result;
       }, items5);
       if (!hasAlreadyLinked) {
         let intl2 = tmp2(tmp3[22]).intl;
-        const obj5 = { numDays };
-        formatToPlainStringResult = intl2.formatToPlainString(tmp2(tmp3[22]).t.TTj7ME, obj5);
+        const obj4 = { numDays };
+        formatToPlainStringResult = intl2.formatToPlainString(tmp2(tmp3[22]).t.TTj7ME, obj4);
       }
-      const obj6 = {
+      const obj5 = {
         sku: stateFromStores,
         title: stringResult,
         body: memo1,
         finePrint: formatToPlainStringResult,
-        ctaLabel: null,
-        ctaIcon: null,
-        ctaLoading: null,
-        onCtaPress: null,
-        onClose: null,
+        ctaLabel: stringResult1,
+        ctaIcon: tmp29Result,
+        ctaLoading: !fetched,
+        onCtaPress: tmp33,
+        onClose,
       };
-      let stringResult1;
-      if (tmp21) {
+      stringResult1 = undefined;
+      if (!hasAlreadyLinked && canStartAuthorization && !socialLayerStorefrontMobileAccountLinkingDisabled) {
         const intl3 = tmp2(tmp3[22]).intl;
         stringResult1 = intl3.string(tmp2(tmp3[22]).t["VDAhr+"]);
       }
-      obj6.ctaLabel = stringResult1;
-      let tmp27Result;
-      if (tmp21) {
-        const obj7 = { size: "xs", color: analyticsLocations(tmp3[10]).colors.WHITE, style: tmp.linkAccountIcon };
-        tmp27Result = closure_15(tmp2(tmp3[37]).ExperimentalGameControllerLinkIcon, obj7);
+      tmp29Result = undefined;
+      if (!hasAlreadyLinked && canStartAuthorization && !socialLayerStorefrontMobileAccountLinkingDisabled) {
+        const obj6 = {
+          size: "xs",
+          color: analyticsLocations(stateFromStores[10]).colors.WHITE,
+          style: tmp.linkAccountIcon,
+        };
+        const ExperimentalGameControllerLinkIcon = tmp2(tmp3[37]).ExperimentalGameControllerLinkIcon;
+        tmp29Result = closure_15(ExperimentalGameControllerLinkIcon, obj6);
       }
-      obj6.ctaIcon = tmp27Result;
-      obj6.ctaLoading = !fetched;
-      let tmp31;
-      if (tmp21) {
-        tmp31 = callback;
+      tmp33 = undefined;
+      if (!hasAlreadyLinked && canStartAuthorization && !socialLayerStorefrontMobileAccountLinkingDisabled) {
+        tmp33 = callback;
       }
-      obj6.onCtaPress = tmp31;
-      obj6.onClose = skuId.onClose;
-      return closure_15(closure_30, obj6);
+      return closure_15(closure_30, obj5);
     };
-const size = fn(2);
-let result = size.fileFinishedImporting(
-  "modules/slayer_storefront/native/SocialLayerStorefrontPoductPurchaseSuccessModal.tsx",
-);
-
-export const SocialLayerStorefrontProductSelfPurchaseSuccessModal = tmp5;
-export const SocialLayerStorefrontProductGiftPurchaseSuccessModal = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? (skuId) => {
-      const cResult = skuId(stateFromStores[12]).c(21);
+      let analyticsLocations;
+      let first;
+      let onClose;
+      let stateFromStores;
+      let tmp11;
+      let tmp7;
+      let tmp9;
+      let obj = skuId(stateFromStores[12]);
+      const cResult = obj.c(21);
       skuId = skuId.skuId;
       const recipient = skuId.recipient;
       ({ analyticsLocations, onClose } = skuId);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SKUStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -1283,12 +1322,12 @@ export const SocialLayerStorefrontProductGiftPurchaseSuccessModal = ReactCompile
         };
         cResult[1] = skuId;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp7 = fn;
       } else {
-        tmp6 = cResult[2];
+        tmp7 = cResult[2];
       }
-      let obj = skuId(stateFromStores[12]);
-      stateFromStores = skuId(stateFromStores[18]).useStateFromStores(first, tmp6);
+      const tmp2Result = skuId(stateFromStores[18]);
+      stateFromStores = tmp2Result.useStateFromStores(first, tmp7);
       if (cResult[3] !== analyticsLocations) {
         let items1 = analyticsLocations;
         if (analyticsLocations == null) {
@@ -1296,90 +1335,97 @@ export const SocialLayerStorefrontProductGiftPurchaseSuccessModal = ReactCompile
         }
         cResult[3] = analyticsLocations;
         cResult[4] = items1;
-        let tmp8 = items1;
+        tmp9 = items1;
       } else {
-        tmp8 = cResult[4];
+        tmp9 = cResult[4];
       }
-      if (cResult[5] !== tmp8) {
+      if (cResult[5] !== tmp9) {
         const items2 = [];
-        items2[HermesBuiltin.arraySpread(tmp8, 0)] = recipient(tmp2[32]).SLAYER_STOREFRONT_NATIVE_PURCHASE_SUCCESS;
-        cResult[5] = tmp8;
+        const arraySpreadResult = HermesBuiltin.arraySpread(items2, tmp9, 0);
+        items2[arraySpreadResult] = recipient(stateFromStores[32]).SLAYER_STOREFRONT_NATIVE_PURCHASE_SUCCESS;
+        cResult[5] = tmp9;
         cResult[6] = items2;
-        let tmp10 = items2;
-        const arraySpreadResult = HermesBuiltin.arraySpread(tmp8, 0);
+        tmp11 = items2;
       } else {
-        tmp10 = cResult[6];
+        tmp11 = cResult[6];
       }
-      location_stack = tmp10;
-      if (cResult[7] === tmp10) {
+      location_stack = tmp11;
+      if (cResult[7] === tmp11) {
         let applicationId;
+        const tmp16 = cResult[8];
         if (stateFromStores != null) {
           applicationId = stateFromStores.applicationId;
         }
-        if (cResult[8] === applicationId) {
+        if (tmp16 === applicationId) {
+          let tmp19;
+          let tmp23;
           if (cResult[9] === skuId) {
-            let tmp17 = cResult[10];
+            tmp19 = cResult[10];
           }
-          recipient(tmp2[35])(tmp17);
+          recipient(stateFromStores[35])(tmp19);
           const _Symbol = Symbol;
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-            let intl = tmp(tmp2[22]).intl;
-            const stringResult = intl.string(tmp(tmp2[22]).t["5glWta"]);
+            let intl = tmp2(tmp3[22]).intl;
+            const stringResult = intl.string(skuId(stateFromStores[22]).t["5glWta"]);
             cResult[11] = stringResult;
-            let tmp21 = stringResult;
+            tmp23 = stringResult;
           } else {
-            tmp21 = cResult[11];
+            tmp23 = cResult[11];
           }
           if (cResult[12] === recipient) {
+            let tmp28;
+            let tmp31;
             let name;
+            const tmp25 = cResult[13];
             if (stateFromStores != null) {
               name = stateFromStores.name;
             }
-            if (cResult[13] === name) {
-              let tmp25 = cResult[14];
+            if (tmp25 === name) {
+              tmp28 = cResult[14];
             }
-            if (cResult[15] !== tmp25) {
-              const tmp25Result = tmp25();
-              cResult[15] = tmp25;
-              cResult[16] = tmp25Result;
-              let tmp28 = tmp25Result;
+            if (cResult[15] !== tmp28) {
+              const tmp28Result = tmp28();
+              cResult[15] = tmp28;
+              cResult[16] = tmp28Result;
+              tmp31 = tmp28Result;
             } else {
-              tmp28 = cResult[16];
+              tmp31 = cResult[16];
             }
-            if (cResult[17] === tmp28) {
+            if (cResult[17] === tmp31) {
               if (cResult[18] === onClose) {
+                let tmp33;
                 if (cResult[19] === stateFromStores) {
-                  let tmp30 = cResult[20];
+                  tmp33 = cResult[20];
                 }
-                return tmp30;
+                return tmp33;
               }
             }
-            let obj2 = { sku: stateFromStores, title: tmp21, body: null, onClose: null };
+            let obj2 = { sku: stateFromStores, title: tmp23, body: null, onClose };
             class T {
               constructor() {
-                tmp = closure_2;
-                intl = closure_0(closure_2[22]).intl;
-                name = undefined;
-                if (closure_2 != null) {
-                  name = closure_2.name;
+                let str;
+                const intl = intl4.intl;
+                const formatToPlainString = intl.formatToPlainString;
+                let name;
+                const v2VjPTw = intl4.t["2VjPTw"];
+                if (stateFromStores != null) {
+                  name = stateFromStores.name;
                 }
-                obj = { itemName: name, giftRecipient: null };
-                obj2 = closure_1(tmp[38]);
+                const obj = { itemName: name, giftRecipient: str };
+                const obj2 = UserUtilsDefault;
                 str = obj2.getName(recipient);
                 if (str == null) {
                   str = "your recipient";
                 }
-                obj.giftRecipient = str;
-                return intl.formatToPlainString(closure_0(closure_2[22]).t["2VjPTw"], obj);
+                return formatToPlainString(v2VjPTw, obj);
               }
             }
-            obj2.onClose = onClose;
-            const tmp33 = closure_15(closure_30, obj2);
-            cResult[17] = tmp28;
+            const tmp36 = closure_15(closure_30, obj2);
+            cResult[17] = tmp31;
             cResult[18] = onClose;
             cResult[19] = stateFromStores;
-            cResult[20] = tmp33;
-            tmp30 = tmp33;
+            cResult[20] = tmp36;
+            tmp33 = tmp36;
           }
           cResult[12] = recipient;
           let name1;
@@ -1388,63 +1434,70 @@ export const SocialLayerStorefrontProductGiftPurchaseSuccessModal = ReactCompile
           }
           class T {
             constructor() {
-              tmp = closure_2;
-              intl = closure_0(closure_2[22]).intl;
-              name = undefined;
-              if (closure_2 != null) {
-                name = closure_2.name;
+              let str;
+              const intl = intl4.intl;
+              const formatToPlainString = intl.formatToPlainString;
+              let name;
+              const v2VjPTw = intl4.t["2VjPTw"];
+              if (stateFromStores != null) {
+                name = stateFromStores.name;
               }
-              obj = { itemName: name, giftRecipient: null };
-              obj2 = closure_1(tmp[38]);
+              const obj = { itemName: name, giftRecipient: str };
+              const obj2 = UserUtilsDefault;
               str = obj2.getName(recipient);
               if (str == null) {
                 str = "your recipient";
               }
-              obj.giftRecipient = str;
-              return intl.formatToPlainString(closure_0(closure_2[22]).t["2VjPTw"], obj);
+              return formatToPlainString(v2VjPTw, obj);
             }
           }
           cResult[13] = name1;
           cResult[14] = T;
-          tmp25 = T;
+          tmp28 = T;
         }
       }
-      cResult[7] = tmp10;
+      cResult[7] = tmp11;
       let applicationId1;
       if (stateFromStores != null) {
         applicationId1 = stateFromStores.applicationId;
       }
       class I {
         constructor() {
-          obj = closure_1(closure_2[33]);
-          obj1 = {
-            location_stack: closure_3,
-            type: closure_0(closure_2[34]).SOCIAL_LAYER_STOREFRONT_GIFT_PURCHASE_SUCCESS_MODAL_KEY,
+          let applicationId;
+          const tmp = AnalyticsUtilsDefault;
+          const track = tmp.track;
+          const OPEN_MODAL = constants.OPEN_MODAL;
+          const obj = {
+            location_stack,
+            type: SocialLayerStorefrontNativeActionCreators.SOCIAL_LAYER_STOREFRONT_GIFT_PURCHASE_SUCCESS_MODAL_KEY,
             sku_id: skuId,
-            application_id: null,
+            application_id: applicationId,
           };
           applicationId = undefined;
-          if (closure_2 != null) {
-            applicationId = closure_2.applicationId;
+          if (stateFromStores != null) {
+            applicationId = stateFromStores.applicationId;
           }
-          obj1.application_id = applicationId;
-          trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
-          return;
+          track(OPEN_MODAL, obj);
         }
       }
       cResult[8] = applicationId1;
       cResult[9] = skuId;
       cResult[10] = I;
-      tmp17 = I;
-      const tmpResult = skuId(stateFromStores[18]);
+      tmp19 = I;
     }
   : (analyticsLocations) => {
+      let orbsReward;
+      let recipient;
+      let require;
+      let sku_id;
       ({ skuId: require, orbsReward, recipient } = analyticsLocations);
       analyticsLocations = analyticsLocations.analyticsLocations;
+      const onClose = analyticsLocations.onClose;
+      let obj = require("get initialized");
       let items = [SKUStore];
-      const stateFromStores = require("initialize").useStateFromStores(items, () => SKUStore.get(sku_id));
+      const stateFromStores = obj.useStateFromStores(items, () => SKUStore.get(require));
       let items1 = [analyticsLocations];
-      location_stack = noop.useMemo(() => {
+      location_stack = react.useMemo(() => {
         let items = analyticsLocations;
         if (analyticsLocations == null) {
           items = [];
@@ -1453,44 +1506,57 @@ export const SocialLayerStorefrontProductGiftPurchaseSuccessModal = ReactCompile
         return items1;
       }, items1);
       recipient(analyticsLocations[35])(() => {
-        const obj2 = {
+        let applicationId;
+        const tmp = AnalyticsUtilsDefault;
+        const track = tmp.track;
+        const OPEN_MODAL = constants.OPEN_MODAL;
+        const obj = {
           location_stack,
           type: SocialLayerStorefrontNativeActionCreators.SOCIAL_LAYER_STOREFRONT_GIFT_PURCHASE_SUCCESS_MODAL_KEY,
-          sku_id,
-          application_id: null,
+          sku_id: require,
+          application_id: applicationId,
         };
-        let applicationId;
+        applicationId = undefined;
         if (stateFromStores != null) {
           applicationId = stateFromStores.applicationId;
         }
-        obj2.application_id = applicationId;
-        AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj2);
+        track(OPEN_MODAL, obj);
       });
-      let intl = require("util").intl;
+      let intl = require("intl").intl;
       let name;
-      let obj = require("initialize");
+      const useMemo = react.useMemo;
+      const stringResult = intl.string(require("intl").t["5glWta"]);
       if (stateFromStores != null) {
         name = stateFromStores.name;
       }
       const items2 = [name, recipient];
-      const stringResult = intl.string(require("util").t["5glWta"]);
-      return closure_15(closure_30, {
+      let obj2 = {
         sku: stateFromStores,
-        title: intl.string(require("util").t["5glWta"]),
-        body: noop.useMemo(() => {
-          const intl = util.intl;
+        title: stringResult,
+        body: useMemo(() => {
+          let str;
+          const intl = intl4.intl;
+          const formatToPlainString = intl.formatToPlainString;
           let name;
+          const v2VjPTw = intl4.t["2VjPTw"];
           if (stateFromStores != null) {
             name = stateFromStores.name;
           }
-          const obj = { itemName: name, giftRecipient: null };
-          let str = UserUtilsDefault.getName(recipient);
+          const obj = { itemName: name, giftRecipient: str };
+          const obj2 = UserUtilsDefault;
+          str = obj2.getName(recipient);
           if (str == null) {
             str = "your recipient";
           }
-          obj.giftRecipient = str;
-          return intl.formatToPlainString(util.t["2VjPTw"], obj);
+          return formatToPlainString(v2VjPTw, obj);
         }, items2),
-        onClose: analyticsLocations.onClose,
-      });
+        onClose,
+      };
+      return closure_15(closure_30, obj2);
     };
+let result = size.fileFinishedImporting(
+  "modules/slayer_storefront/native/SocialLayerStorefrontPoductPurchaseSuccessModal.tsx",
+);
+
+export const SocialLayerStorefrontProductSelfPurchaseSuccessModal = tmp6;
+export const SocialLayerStorefrontProductGiftPurchaseSuccessModal = tmp7;

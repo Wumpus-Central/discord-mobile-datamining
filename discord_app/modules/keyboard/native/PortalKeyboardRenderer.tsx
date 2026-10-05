@@ -1,473 +1,601 @@
 // discord_app/modules/keyboard/native/PortalKeyboardRenderer.tsx
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import KeyboardTypes from "KeyboardTypes.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import useKeyboardType from "useKeyboardType.tsx";
 import PortalKeyboardUIStore3 from "PortalKeyboardUIStore.native.tsx";
 import PortalKeyboardRendererComponentDefault from "PortalKeyboardRendererComponent.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let dependencyMap, portal;
+
 function transitionGroupGetItemKey(id) {
   return id.id;
 }
-const jsx = fn(21).jsx;
-let closure_6 = [];
+const jsx = Fragment.jsx;
+let items = [];
 function transitionGroupRenderItem(key, item, state, cleanUp) {
   let isAndroidResult = state === native.TransitionStates.YEETED;
   if (isAndroidResult) {
-    const keyboardType = useKeyboardType.getKeyboardType();
-    isAndroidResult = keyboardType === KeyboardTypes.KeyboardTypes.SYSTEM;
     const tmpResult = useKeyboardType;
+    const keyboardType = tmpResult.getKeyboardType();
+    isAndroidResult = keyboardType === KeyboardTypes.KeyboardTypes.SYSTEM;
   }
   if (isAndroidResult) {
-    isAndroidResult = PlatformUtils.isAndroid();
     const tmpResult2 = PlatformUtils;
+    isAndroidResult = tmpResult2.isAndroid();
   }
   let tmp5 = null;
   if (!isAndroidResult) {
-    const obj = { item, state, cleanUp };
     tmp5 = jsx(PortalKeyboardRendererComponentDefault, { item, state, cleanUp }, key);
   }
   return tmp5;
 }
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardRenderer.tsx");
-
-export const PortalKeyboardRenderer = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (portal) => {
-      const cResult = id(576).c(16);
+      let id;
+      let tmp10;
+      let tmp13;
+      let tmp6;
+      let tmp7;
+      let tmp9;
+      let tmp = id;
+      let obj = id(576);
+      const cResult = obj.c(16);
       portal = portal.portal;
-      id = noop.useId();
+      let tmp4 = undefined === portal || portal;
+      id = react.useId();
       if (cResult[0] !== id) {
         const fn = function s() {
-          return PortalKeyboardUIStore3.registerPortalKeyboardRenderer(id);
+          const obj = PortalKeyboardUIStore3;
+          return obj.registerPortalKeyboardRenderer(id);
         };
-        const items = [id];
+        items = [id];
         cResult[0] = id;
         cResult[1] = fn;
         cResult[2] = items;
-        let tmp6 = items;
-        let tmp5 = fn;
+        tmp7 = items;
+        tmp6 = fn;
       } else {
-        tmp5 = cResult[1];
-        tmp6 = cResult[2];
+        tmp6 = cResult[1];
+        tmp7 = cResult[2];
       }
-      const layoutEffect = noop.useLayoutEffect(tmp5, tmp6);
+      const layoutEffect = react.useLayoutEffect(tmp6, tmp7);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function b() {
-          closure_0 = closure_4(() => {
-            const PortalKeyboardUIStore = closure_0(4748).PortalKeyboardUIStore;
+          let closure_0 = closure_4(() => {
+            const PortalKeyboardUIStore = closure_0(closure_1_2[10]).PortalKeyboardUIStore;
             const field = PortalKeyboardUIStore.getField("keyboard");
-            closure_0(4747);
+            closure_0(closure_1_2[4]);
+            const tmp6 = null != field && tmp5 !== field.type;
             if (tmp6) {
-              const result = closure_0(4748).closePortalKeyboardIfUnhandled();
-              const tmpResult = closure_0(4748);
+              const tmpResult = closure_0(closure_1_2[10]);
+              const result = tmpResult.closePortalKeyboardIfUnhandled();
             }
-            tmp6 = null != field && tmp5 !== field.type;
           });
           return () => {
             closure_0();
-            const result = id(4748).closePortalKeyboardIfUnhandled();
+            const obj = id(dependencyMap[10]);
+            const result = obj.closePortalKeyboardIfUnhandled();
           };
         };
         const items1 = [];
         cResult[3] = fn2;
         cResult[4] = items1;
-        let tmp9 = items1;
-        let tmp8 = fn2;
+        tmp10 = items1;
+        tmp9 = fn2;
       } else {
-        tmp8 = cResult[3];
-        tmp9 = cResult[4];
+        tmp9 = cResult[3];
+        tmp10 = cResult[4];
       }
-      const layoutEffect1 = noop.useLayoutEffect(tmp8, tmp9);
+      const layoutEffect1 = react.useLayoutEffect(tmp9, tmp10);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class K {
           constructor() {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj = closure_0(closure_2[6]);
+            let rootNavigationRef;
+            let obj = rootNavigationRef(closure_2[6]);
+            const tmp = rootNavigationRef;
             if (obj.isAndroid()) {
-              tmpResult = tmp(tmp2[11]);
+              let tmpResult = tmp(closure_2[11]);
               rootNavigationRef = tmpResult.getRootNavigationRef();
-              closure_0 = rootNavigationRef;
-              tmp3 = null;
               if (null != rootNavigationRef) {
-                onNavigationStateChange = function onNavigationStateChange() {
-                  const PortalKeyboardUIStore = rootNavigationRef(dependencyMap[10]).PortalKeyboardUIStore;
+                function onNavigationStateChange() {
+                  const PortalKeyboardUIStore = rootNavigationRef(closure_1_2[10]).PortalKeyboardUIStore;
                   const field = PortalKeyboardUIStore.getField("keyboard");
-                  let tmp4 = null != field;
+                  let tmp4 =
+                    null != field &&
+                    field.channelId !== rootNavigationRef(closure_1_2[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
                   if (tmp4) {
-                    tmp4 = field.channelId !== rootNavigationRef(dependencyMap[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+                    const tmpResult = rootNavigationRef(closure_1_2[13]);
+                    tmp4 = tmpResult.getFocusedChannelId() !== field.channelId;
                   }
                   if (tmp4) {
-                    tmp4 = rootNavigationRef(dependencyMap[13]).getFocusedChannelId() !== field.channelId;
-                    const tmpResult = rootNavigationRef(dependencyMap[13]);
-                  }
-                  if (tmp4) {
-                    const keyboardType = rootNavigationRef(dependencyMap[4]).getKeyboardType();
-                    if (keyboardType !== rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM) {
-                      const obj = { type: rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM };
-                      rootNavigationRef(dependencyMap[14]).setKeyboardType(obj);
-                      const tmpResult5 = rootNavigationRef(dependencyMap[14]);
+                    const tmpResult4 = rootNavigationRef(closure_1_2[4]);
+                    const keyboardType = tmpResult4.getKeyboardType();
+                    if (keyboardType !== rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM) {
+                      const obj = { type: rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM };
+                      const setKeyboardType = rootNavigationRef(closure_1_2[14]).setKeyboardType;
+                      rootNavigationRef(closure_1_2[14]);
+                      setKeyboardType(obj);
                     }
-                    const tmpResult4 = rootNavigationRef(dependencyMap[4]);
-                    const result = rootNavigationRef(dependencyMap[10]).closePortalKeyboardIfUnhandled();
-                    const tmpResult6 = rootNavigationRef(dependencyMap[10]);
+                    const tmpResult6 = rootNavigationRef(closure_1_2[10]);
+                    const result = tmpResult6.closePortalKeyboardIfUnhandled();
                   }
-                };
-                str = "state";
-                addListenerResult = rootNavigationRef.addListener("state", onNavigationStateChange);
+                }
+                rootNavigationRef.addListener("state", onNavigationStateChange);
                 return () => {
                   rootNavigationRef.removeListener("state", onNavigationStateChange);
                 };
               }
             }
-            return;
           }
         }
         const items2 = [];
         cResult[5] = K;
         cResult[6] = items2;
-        let tmp12 = items2;
+        tmp13 = items2;
       } else {
         class K {
           constructor() {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj = closure_0(closure_2[6]);
+            let rootNavigationRef;
+            let obj = rootNavigationRef(closure_2[6]);
+            const tmp = rootNavigationRef;
             if (obj.isAndroid()) {
-              tmpResult = tmp(tmp2[11]);
+              let tmpResult = tmp(closure_2[11]);
               rootNavigationRef = tmpResult.getRootNavigationRef();
-              closure_0 = rootNavigationRef;
-              tmp3 = null;
               if (null != rootNavigationRef) {
-                onNavigationStateChange = function onNavigationStateChange() {
-                  const PortalKeyboardUIStore = rootNavigationRef(dependencyMap[10]).PortalKeyboardUIStore;
+                function onNavigationStateChange() {
+                  const PortalKeyboardUIStore = rootNavigationRef(closure_1_2[10]).PortalKeyboardUIStore;
                   const field = PortalKeyboardUIStore.getField("keyboard");
-                  let tmp4 = null != field;
+                  let tmp4 =
+                    null != field &&
+                    field.channelId !== rootNavigationRef(closure_1_2[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
                   if (tmp4) {
-                    tmp4 = field.channelId !== rootNavigationRef(dependencyMap[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+                    const tmpResult = rootNavigationRef(closure_1_2[13]);
+                    tmp4 = tmpResult.getFocusedChannelId() !== field.channelId;
                   }
                   if (tmp4) {
-                    tmp4 = rootNavigationRef(dependencyMap[13]).getFocusedChannelId() !== field.channelId;
-                    const tmpResult = rootNavigationRef(dependencyMap[13]);
-                  }
-                  if (tmp4) {
-                    const keyboardType = rootNavigationRef(dependencyMap[4]).getKeyboardType();
-                    if (keyboardType !== rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM) {
-                      const obj = { type: rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM };
-                      rootNavigationRef(dependencyMap[14]).setKeyboardType(obj);
-                      const tmpResult5 = rootNavigationRef(dependencyMap[14]);
+                    const tmpResult4 = rootNavigationRef(closure_1_2[4]);
+                    const keyboardType = tmpResult4.getKeyboardType();
+                    if (keyboardType !== rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM) {
+                      const obj = { type: rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM };
+                      const setKeyboardType = rootNavigationRef(closure_1_2[14]).setKeyboardType;
+                      rootNavigationRef(closure_1_2[14]);
+                      setKeyboardType(obj);
                     }
-                    const tmpResult4 = rootNavigationRef(dependencyMap[4]);
-                    const result = rootNavigationRef(dependencyMap[10]).closePortalKeyboardIfUnhandled();
-                    const tmpResult6 = rootNavigationRef(dependencyMap[10]);
+                    const tmpResult6 = rootNavigationRef(closure_1_2[10]);
+                    const result = tmpResult6.closePortalKeyboardIfUnhandled();
                   }
-                };
-                str = "state";
-                addListenerResult = rootNavigationRef.addListener("state", onNavigationStateChange);
+                }
+                rootNavigationRef.addListener("state", onNavigationStateChange);
                 return () => {
                   rootNavigationRef.removeListener("state", onNavigationStateChange);
                 };
               }
             }
-            return;
           }
         }
-        tmp12 = cResult[6];
+        tmp13 = cResult[6];
       }
-      const layoutEffect2 = noop.useLayoutEffect(K, tmp12);
+      const layoutEffect2 = react.useLayoutEffect(K, tmp13);
       let PortalKeyboardUIStore = tmp(4748).PortalKeyboardUIStore;
       let field = PortalKeyboardUIStore.useField("keyboard");
       const PortalKeyboardUIStore2 = tmp(4748).PortalKeyboardUIStore;
       const field1 = PortalKeyboardUIStore2.useField("renderers");
-      let tmp15 = 0 === field1.length;
-      if (!tmp15) {
+      let tmp16 = 0 === field1.length;
+      if (!tmp16) {
         class K {
           constructor() {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj = closure_0(closure_2[6]);
+            let rootNavigationRef;
+            let obj = rootNavigationRef(closure_2[6]);
+            const tmp = rootNavigationRef;
             if (obj.isAndroid()) {
-              tmpResult = tmp(tmp2[11]);
+              let tmpResult = tmp(closure_2[11]);
               rootNavigationRef = tmpResult.getRootNavigationRef();
-              closure_0 = rootNavigationRef;
-              tmp3 = null;
               if (null != rootNavigationRef) {
-                onNavigationStateChange = function onNavigationStateChange() {
-                  const PortalKeyboardUIStore = rootNavigationRef(dependencyMap[10]).PortalKeyboardUIStore;
+                function onNavigationStateChange() {
+                  const PortalKeyboardUIStore = rootNavigationRef(closure_1_2[10]).PortalKeyboardUIStore;
                   const field = PortalKeyboardUIStore.getField("keyboard");
-                  let tmp4 = null != field;
+                  let tmp4 =
+                    null != field &&
+                    field.channelId !== rootNavigationRef(closure_1_2[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
                   if (tmp4) {
-                    tmp4 = field.channelId !== rootNavigationRef(dependencyMap[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+                    const tmpResult = rootNavigationRef(closure_1_2[13]);
+                    tmp4 = tmpResult.getFocusedChannelId() !== field.channelId;
                   }
                   if (tmp4) {
-                    tmp4 = rootNavigationRef(dependencyMap[13]).getFocusedChannelId() !== field.channelId;
-                    const tmpResult = rootNavigationRef(dependencyMap[13]);
-                  }
-                  if (tmp4) {
-                    const keyboardType = rootNavigationRef(dependencyMap[4]).getKeyboardType();
-                    if (keyboardType !== rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM) {
-                      const obj = { type: rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM };
-                      rootNavigationRef(dependencyMap[14]).setKeyboardType(obj);
-                      const tmpResult5 = rootNavigationRef(dependencyMap[14]);
+                    const tmpResult4 = rootNavigationRef(closure_1_2[4]);
+                    const keyboardType = tmpResult4.getKeyboardType();
+                    if (keyboardType !== rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM) {
+                      const obj = { type: rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM };
+                      const setKeyboardType = rootNavigationRef(closure_1_2[14]).setKeyboardType;
+                      rootNavigationRef(closure_1_2[14]);
+                      setKeyboardType(obj);
                     }
-                    const tmpResult4 = rootNavigationRef(dependencyMap[4]);
-                    const result = rootNavigationRef(dependencyMap[10]).closePortalKeyboardIfUnhandled();
-                    const tmpResult6 = rootNavigationRef(dependencyMap[10]);
+                    const tmpResult6 = rootNavigationRef(closure_1_2[10]);
+                    const result = tmpResult6.closePortalKeyboardIfUnhandled();
                   }
-                };
-                str = "state";
-                addListenerResult = rootNavigationRef.addListener("state", onNavigationStateChange);
+                }
+                rootNavigationRef.addListener("state", onNavigationStateChange);
                 return () => {
                   rootNavigationRef.removeListener("state", onNavigationStateChange);
                 };
               }
             }
-            return;
           }
         }
-        tmp15 = field1[field1.length - 1] === id;
+        tmp16 = field1[field1.length - 1] === id;
       }
-      if (cResult[7] === tmp15) {
+      if (cResult[7] === tmp16) {
         class K {
           constructor() {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj = closure_0(closure_2[6]);
+            let rootNavigationRef;
+            let obj = rootNavigationRef(closure_2[6]);
+            const tmp = rootNavigationRef;
             if (obj.isAndroid()) {
-              tmpResult = tmp(tmp2[11]);
+              let tmpResult = tmp(closure_2[11]);
               rootNavigationRef = tmpResult.getRootNavigationRef();
-              closure_0 = rootNavigationRef;
-              tmp3 = null;
               if (null != rootNavigationRef) {
-                onNavigationStateChange = function onNavigationStateChange() {
-                  const PortalKeyboardUIStore = rootNavigationRef(dependencyMap[10]).PortalKeyboardUIStore;
+                function onNavigationStateChange() {
+                  const PortalKeyboardUIStore = rootNavigationRef(closure_1_2[10]).PortalKeyboardUIStore;
                   const field = PortalKeyboardUIStore.getField("keyboard");
-                  let tmp4 = null != field;
+                  let tmp4 =
+                    null != field &&
+                    field.channelId !== rootNavigationRef(closure_1_2[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
                   if (tmp4) {
-                    tmp4 = field.channelId !== rootNavigationRef(dependencyMap[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+                    const tmpResult = rootNavigationRef(closure_1_2[13]);
+                    tmp4 = tmpResult.getFocusedChannelId() !== field.channelId;
                   }
                   if (tmp4) {
-                    tmp4 = rootNavigationRef(dependencyMap[13]).getFocusedChannelId() !== field.channelId;
-                    const tmpResult = rootNavigationRef(dependencyMap[13]);
-                  }
-                  if (tmp4) {
-                    const keyboardType = rootNavigationRef(dependencyMap[4]).getKeyboardType();
-                    if (keyboardType !== rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM) {
-                      const obj = { type: rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM };
-                      rootNavigationRef(dependencyMap[14]).setKeyboardType(obj);
-                      const tmpResult5 = rootNavigationRef(dependencyMap[14]);
+                    const tmpResult4 = rootNavigationRef(closure_1_2[4]);
+                    const keyboardType = tmpResult4.getKeyboardType();
+                    if (keyboardType !== rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM) {
+                      const obj = { type: rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM };
+                      const setKeyboardType = rootNavigationRef(closure_1_2[14]).setKeyboardType;
+                      rootNavigationRef(closure_1_2[14]);
+                      setKeyboardType(obj);
                     }
-                    const tmpResult4 = rootNavigationRef(dependencyMap[4]);
-                    const result = rootNavigationRef(dependencyMap[10]).closePortalKeyboardIfUnhandled();
-                    const tmpResult6 = rootNavigationRef(dependencyMap[10]);
+                    const tmpResult6 = rootNavigationRef(closure_1_2[10]);
+                    const result = tmpResult6.closePortalKeyboardIfUnhandled();
                   }
-                };
-                str = "state";
-                addListenerResult = rootNavigationRef.addListener("state", onNavigationStateChange);
+                }
+                rootNavigationRef.addListener("state", onNavigationStateChange);
                 return () => {
                   rootNavigationRef.removeListener("state", onNavigationStateChange);
                 };
               }
             }
-            return;
           }
         }
+        if (cResult[10] !== items) {
+          class K {
+            constructor() {
+              let rootNavigationRef;
+              let obj = rootNavigationRef(closure_2[6]);
+              const tmp = rootNavigationRef;
+              if (obj.isAndroid()) {
+                let tmpResult = tmp(closure_2[11]);
+                rootNavigationRef = tmpResult.getRootNavigationRef();
+                if (null != rootNavigationRef) {
+                  function onNavigationStateChange() {
+                    const PortalKeyboardUIStore = rootNavigationRef(closure_1_2[10]).PortalKeyboardUIStore;
+                    const field = PortalKeyboardUIStore.getField("keyboard");
+                    let tmp4 =
+                      null != field &&
+                      field.channelId !== rootNavigationRef(closure_1_2[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+                    if (tmp4) {
+                      const tmpResult = rootNavigationRef(closure_1_2[13]);
+                      tmp4 = tmpResult.getFocusedChannelId() !== field.channelId;
+                    }
+                    if (tmp4) {
+                      const tmpResult4 = rootNavigationRef(closure_1_2[4]);
+                      const keyboardType = tmpResult4.getKeyboardType();
+                      if (keyboardType !== rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM) {
+                        const obj = { type: rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM };
+                        const setKeyboardType = rootNavigationRef(closure_1_2[14]).setKeyboardType;
+                        rootNavigationRef(closure_1_2[14]);
+                        setKeyboardType(obj);
+                      }
+                      const tmpResult6 = rootNavigationRef(closure_1_2[10]);
+                      const result = tmpResult6.closePortalKeyboardIfUnhandled();
+                    }
+                  }
+                  rootNavigationRef.addListener("state", onNavigationStateChange);
+                  return () => {
+                    rootNavigationRef.removeListener("state", onNavigationStateChange);
+                  };
+                }
+              }
+            }
+          }
+          cResult[10] = items;
+          cResult[11] = jsx(tmp(4589).TransitionGroup, {
+            items,
+            getItemKey: transitionGroupGetItemKey,
+            renderItem: transitionGroupRenderItem,
+          });
+          const tmp22 = jsx(tmp(4589).TransitionGroup, {
+            items,
+            getItemKey: transitionGroupGetItemKey,
+            renderItem: transitionGroupRenderItem,
+          });
+        } else {
+          class K {
+            constructor() {
+              let rootNavigationRef;
+              let obj = rootNavigationRef(closure_2[6]);
+              const tmp = rootNavigationRef;
+              if (obj.isAndroid()) {
+                let tmpResult = tmp(closure_2[11]);
+                rootNavigationRef = tmpResult.getRootNavigationRef();
+                if (null != rootNavigationRef) {
+                  function onNavigationStateChange() {
+                    const PortalKeyboardUIStore = rootNavigationRef(closure_1_2[10]).PortalKeyboardUIStore;
+                    const field = PortalKeyboardUIStore.getField("keyboard");
+                    let tmp4 =
+                      null != field &&
+                      field.channelId !== rootNavigationRef(closure_1_2[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+                    if (tmp4) {
+                      const tmpResult = rootNavigationRef(closure_1_2[13]);
+                      tmp4 = tmpResult.getFocusedChannelId() !== field.channelId;
+                    }
+                    if (tmp4) {
+                      const tmpResult4 = rootNavigationRef(closure_1_2[4]);
+                      const keyboardType = tmpResult4.getKeyboardType();
+                      if (keyboardType !== rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM) {
+                        const obj = { type: rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM };
+                        const setKeyboardType = rootNavigationRef(closure_1_2[14]).setKeyboardType;
+                        rootNavigationRef(closure_1_2[14]);
+                        setKeyboardType(obj);
+                      }
+                      const tmpResult6 = rootNavigationRef(closure_1_2[10]);
+                      const result = tmpResult6.closePortalKeyboardIfUnhandled();
+                    }
+                  }
+                  rootNavigationRef.addListener("state", onNavigationStateChange);
+                  return () => {
+                    rootNavigationRef.removeListener("state", onNavigationStateChange);
+                  };
+                }
+              }
+            }
+          }
+        }
+        if (tmp4) {
+          class K {
+            constructor() {
+              let rootNavigationRef;
+              let obj = rootNavigationRef(closure_2[6]);
+              const tmp = rootNavigationRef;
+              if (obj.isAndroid()) {
+                let tmpResult = tmp(closure_2[11]);
+                rootNavigationRef = tmpResult.getRootNavigationRef();
+                if (null != rootNavigationRef) {
+                  function onNavigationStateChange() {
+                    const PortalKeyboardUIStore = rootNavigationRef(closure_1_2[10]).PortalKeyboardUIStore;
+                    const field = PortalKeyboardUIStore.getField("keyboard");
+                    let tmp4 =
+                      null != field &&
+                      field.channelId !== rootNavigationRef(closure_1_2[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+                    if (tmp4) {
+                      const tmpResult = rootNavigationRef(closure_1_2[13]);
+                      tmp4 = tmpResult.getFocusedChannelId() !== field.channelId;
+                    }
+                    if (tmp4) {
+                      const tmpResult4 = rootNavigationRef(closure_1_2[4]);
+                      const keyboardType = tmpResult4.getKeyboardType();
+                      if (keyboardType !== rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM) {
+                        const obj = { type: rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM };
+                        const setKeyboardType = rootNavigationRef(closure_1_2[14]).setKeyboardType;
+                        rootNavigationRef(closure_1_2[14]);
+                        setKeyboardType(obj);
+                      }
+                      const tmpResult6 = rootNavigationRef(closure_1_2[10]);
+                      const result = tmpResult6.closePortalKeyboardIfUnhandled();
+                    }
+                  }
+                  rootNavigationRef.addListener("state", onNavigationStateChange);
+                  return () => {
+                    rootNavigationRef.removeListener("state", onNavigationStateChange);
+                  };
+                }
+              }
+            }
+          }
+        } else {
+          class K {
+            constructor() {
+              let rootNavigationRef;
+              let obj = rootNavigationRef(closure_2[6]);
+              const tmp = rootNavigationRef;
+              if (obj.isAndroid()) {
+                let tmpResult = tmp(closure_2[11]);
+                rootNavigationRef = tmpResult.getRootNavigationRef();
+                if (null != rootNavigationRef) {
+                  function onNavigationStateChange() {
+                    const PortalKeyboardUIStore = rootNavigationRef(closure_1_2[10]).PortalKeyboardUIStore;
+                    const field = PortalKeyboardUIStore.getField("keyboard");
+                    let tmp4 =
+                      null != field &&
+                      field.channelId !== rootNavigationRef(closure_1_2[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+                    if (tmp4) {
+                      const tmpResult = rootNavigationRef(closure_1_2[13]);
+                      tmp4 = tmpResult.getFocusedChannelId() !== field.channelId;
+                    }
+                    if (tmp4) {
+                      const tmpResult4 = rootNavigationRef(closure_1_2[4]);
+                      const keyboardType = tmpResult4.getKeyboardType();
+                      if (keyboardType !== rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM) {
+                        const obj = { type: rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM };
+                        const setKeyboardType = rootNavigationRef(closure_1_2[14]).setKeyboardType;
+                        rootNavigationRef(closure_1_2[14]);
+                        setKeyboardType(obj);
+                      }
+                      const tmpResult6 = rootNavigationRef(closure_1_2[10]);
+                      const result = tmpResult6.closePortalKeyboardIfUnhandled();
+                    }
+                  }
+                  rootNavigationRef.addListener("state", onNavigationStateChange);
+                  return () => {
+                    rootNavigationRef.removeListener("state", onNavigationStateChange);
+                  };
+                }
+              }
+            }
+          }
+        }
+        return tmp24;
       }
-      if (null == field) {
+      if (null != field) {
         class K {
           constructor() {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj = closure_0(closure_2[6]);
+            let rootNavigationRef;
+            let obj = rootNavigationRef(closure_2[6]);
+            const tmp = rootNavigationRef;
             if (obj.isAndroid()) {
-              tmpResult = tmp(tmp2[11]);
+              let tmpResult = tmp(closure_2[11]);
               rootNavigationRef = tmpResult.getRootNavigationRef();
-              closure_0 = rootNavigationRef;
-              tmp3 = null;
               if (null != rootNavigationRef) {
-                onNavigationStateChange = function onNavigationStateChange() {
-                  const PortalKeyboardUIStore = rootNavigationRef(dependencyMap[10]).PortalKeyboardUIStore;
+                function onNavigationStateChange() {
+                  const PortalKeyboardUIStore = rootNavigationRef(closure_1_2[10]).PortalKeyboardUIStore;
                   const field = PortalKeyboardUIStore.getField("keyboard");
-                  let tmp4 = null != field;
+                  let tmp4 =
+                    null != field &&
+                    field.channelId !== rootNavigationRef(closure_1_2[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
                   if (tmp4) {
-                    tmp4 = field.channelId !== rootNavigationRef(dependencyMap[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+                    const tmpResult = rootNavigationRef(closure_1_2[13]);
+                    tmp4 = tmpResult.getFocusedChannelId() !== field.channelId;
                   }
                   if (tmp4) {
-                    tmp4 = rootNavigationRef(dependencyMap[13]).getFocusedChannelId() !== field.channelId;
-                    const tmpResult = rootNavigationRef(dependencyMap[13]);
-                  }
-                  if (tmp4) {
-                    const keyboardType = rootNavigationRef(dependencyMap[4]).getKeyboardType();
-                    if (keyboardType !== rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM) {
-                      const obj = { type: rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM };
-                      rootNavigationRef(dependencyMap[14]).setKeyboardType(obj);
-                      const tmpResult5 = rootNavigationRef(dependencyMap[14]);
+                    const tmpResult4 = rootNavigationRef(closure_1_2[4]);
+                    const keyboardType = tmpResult4.getKeyboardType();
+                    if (keyboardType !== rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM) {
+                      const obj = { type: rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM };
+                      const setKeyboardType = rootNavigationRef(closure_1_2[14]).setKeyboardType;
+                      rootNavigationRef(closure_1_2[14]);
+                      setKeyboardType(obj);
                     }
-                    const tmpResult4 = rootNavigationRef(dependencyMap[4]);
-                    const result = rootNavigationRef(dependencyMap[10]).closePortalKeyboardIfUnhandled();
-                    const tmpResult6 = rootNavigationRef(dependencyMap[10]);
+                    const tmpResult6 = rootNavigationRef(closure_1_2[10]);
+                    const result = tmpResult6.closePortalKeyboardIfUnhandled();
                   }
-                };
-                str = "state";
-                addListenerResult = rootNavigationRef.addListener("state", onNavigationStateChange);
+                }
+                rootNavigationRef.addListener("state", onNavigationStateChange);
                 return () => {
                   rootNavigationRef.removeListener("state", onNavigationStateChange);
                 };
               }
             }
-            return;
           }
         }
-        cResult[7] = tmp15;
+        cResult[7] = tmp16;
         cResult[8] = field;
-        cResult[9] = tmp16;
-      } else {
-        class K {
-          constructor() {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj = closure_0(closure_2[6]);
-            if (obj.isAndroid()) {
-              tmpResult = tmp(tmp2[11]);
-              rootNavigationRef = tmpResult.getRootNavigationRef();
-              closure_0 = rootNavigationRef;
-              tmp3 = null;
-              if (null != rootNavigationRef) {
-                onNavigationStateChange = function onNavigationStateChange() {
-                  const PortalKeyboardUIStore = rootNavigationRef(dependencyMap[10]).PortalKeyboardUIStore;
-                  const field = PortalKeyboardUIStore.getField("keyboard");
-                  let tmp4 = null != field;
-                  if (tmp4) {
-                    tmp4 = field.channelId !== rootNavigationRef(dependencyMap[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
-                  }
-                  if (tmp4) {
-                    tmp4 = rootNavigationRef(dependencyMap[13]).getFocusedChannelId() !== field.channelId;
-                    const tmpResult = rootNavigationRef(dependencyMap[13]);
-                  }
-                  if (tmp4) {
-                    const keyboardType = rootNavigationRef(dependencyMap[4]).getKeyboardType();
-                    if (keyboardType !== rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM) {
-                      const obj = { type: rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM };
-                      rootNavigationRef(dependencyMap[14]).setKeyboardType(obj);
-                      const tmpResult5 = rootNavigationRef(dependencyMap[14]);
-                    }
-                    const tmpResult4 = rootNavigationRef(dependencyMap[4]);
-                    const result = rootNavigationRef(dependencyMap[10]).closePortalKeyboardIfUnhandled();
-                    const tmpResult6 = rootNavigationRef(dependencyMap[10]);
-                  }
-                };
-                str = "state";
-                addListenerResult = rootNavigationRef.addListener("state", onNavigationStateChange);
-                return () => {
-                  rootNavigationRef.removeListener("state", onNavigationStateChange);
-                };
-              }
-            }
-            return;
-          }
-        }
+        cResult[9] = items;
       }
-      const items3 = [field];
-      let obj = id(576);
     }
   : (portal) => {
+      let closure_2;
+      let tmp10Result;
       let flag = portal.portal;
       if (flag === undefined) {
         flag = true;
       }
       dependencyMap = undefined;
-      const id = noop.useId();
-      let items = [id];
-      const layoutEffect = noop.useLayoutEffect(() => PortalKeyboardUIStore3.registerPortalKeyboardRenderer(id), items);
-      const layoutEffect1 = noop.useLayoutEffect(() => {
-        closure_0 = closure_4(() => {
-          const PortalKeyboardUIStore = closure_0(4748).PortalKeyboardUIStore;
+      const id = react.useId();
+      items = [id];
+      const layoutEffect = react.useLayoutEffect(() => {
+        const obj = PortalKeyboardUIStore3;
+        return obj.registerPortalKeyboardRenderer(id);
+      }, items);
+      const layoutEffect1 = react.useLayoutEffect(() => {
+        let closure_0 = closure_4(() => {
+          const PortalKeyboardUIStore = closure_0(closure_1_2[10]).PortalKeyboardUIStore;
           field = PortalKeyboardUIStore.getField("keyboard");
-          closure_0(4747);
+          closure_0(closure_1_2[4]);
+          const tmp6 = null != field && tmp5 !== field.type;
           if (tmp6) {
-            const result = closure_0(4748).closePortalKeyboardIfUnhandled();
-            const tmpResult = closure_0(4748);
+            const tmpResult = closure_0(closure_1_2[10]);
+            const result = tmpResult.closePortalKeyboardIfUnhandled();
           }
-          tmp6 = null != field && tmp5 !== field.type;
         });
         return () => {
           closure_0();
-          const result = id(4748).closePortalKeyboardIfUnhandled();
+          const obj = id(closure_2[10]);
+          const result = obj.closePortalKeyboardIfUnhandled();
         };
       }, []);
-      const layoutEffect2 = noop.useLayoutEffect(() => {
+      const layoutEffect2 = react.useLayoutEffect(() => {
+        let rootNavigationRef;
         function onNavigationStateChange() {
-          const PortalKeyboardUIStore = rootNavigationRef(dependencyMap[10]).PortalKeyboardUIStore;
+          const PortalKeyboardUIStore = rootNavigationRef(closure_1_2[10]).PortalKeyboardUIStore;
           field = PortalKeyboardUIStore.getField("keyboard");
-          let tmp4 = null != field;
+          let tmp4 =
+            null != field && field.channelId !== rootNavigationRef(closure_1_2[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
           if (tmp4) {
-            tmp4 = field.channelId !== rootNavigationRef(dependencyMap[12]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+            const tmpResult = rootNavigationRef(closure_1_2[13]);
+            tmp4 = tmpResult.getFocusedChannelId() !== field.channelId;
           }
           if (tmp4) {
-            tmp4 = rootNavigationRef(dependencyMap[13]).getFocusedChannelId() !== field.channelId;
-            const tmpResult = rootNavigationRef(dependencyMap[13]);
-          }
-          if (tmp4) {
-            const keyboardType = rootNavigationRef(dependencyMap[4]).getKeyboardType();
-            if (keyboardType !== rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM) {
-              const obj = { type: rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM };
-              rootNavigationRef(dependencyMap[14]).setKeyboardType(obj);
-              const tmpResult5 = rootNavigationRef(dependencyMap[14]);
+            const tmpResult4 = rootNavigationRef(closure_1_2[4]);
+            const keyboardType = tmpResult4.getKeyboardType();
+            if (keyboardType !== rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM) {
+              const obj = { type: rootNavigationRef(closure_1_2[5]).KeyboardTypes.SYSTEM };
+              const setKeyboardType = rootNavigationRef(closure_1_2[14]).setKeyboardType;
+              rootNavigationRef(closure_1_2[14]);
+              setKeyboardType(obj);
             }
-            const tmpResult4 = rootNavigationRef(dependencyMap[4]);
-            const result = rootNavigationRef(dependencyMap[10]).closePortalKeyboardIfUnhandled();
-            const tmpResult6 = rootNavigationRef(dependencyMap[10]);
+            const tmpResult6 = rootNavigationRef(closure_1_2[10]);
+            const result = tmpResult6.closePortalKeyboardIfUnhandled();
           }
         }
+        let obj = rootNavigationRef(closure_2[6]);
+        const tmp = rootNavigationRef;
         if (obj.isAndroid()) {
-          const rootNavigationRef = tmp(dependencyMap[11]).getRootNavigationRef();
+          let tmpResult = tmp(closure_2[11]);
+          rootNavigationRef = tmpResult.getRootNavigationRef();
           if (null != rootNavigationRef) {
             rootNavigationRef.addListener("state", onNavigationStateChange);
             return () => {
               rootNavigationRef.removeListener("state", onNavigationStateChange);
             };
           }
-          let tmpResult = tmp(dependencyMap[11]);
         }
-        obj = rootNavigationRef(dependencyMap[6]);
-        tmp = rootNavigationRef;
       }, []);
+      const tmp5 = id;
+      let tmp6 = dependencyMap;
       let PortalKeyboardUIStore = id(4748).PortalKeyboardUIStore;
       let field = PortalKeyboardUIStore.useField("keyboard");
       const PortalKeyboardUIStore2 = id(4748).PortalKeyboardUIStore;
       const field1 = PortalKeyboardUIStore2.useField("renderers");
-      let tmp8 = 0 === field1.length;
-      if (!tmp8) {
-        tmp8 = field1[field1.length - 1] === id;
-      }
+      const tmp8 = 0 === field1.length || field1[field1.length - 1] === id;
       dependencyMap = tmp8;
       const items1 = [tmp8, field];
-      const memo = noop.useMemo(() => {
+      const memo = react.useMemo(() => {
         if (null != field) {
+          let tmp3;
           if (closure_2) {
-            const items = [tmp];
-            let tmp3 = items;
+            items = [tmp];
+            tmp3 = items;
           }
           return tmp3;
         }
         tmp3 = closure_6;
       }, items1);
-      const tmp11 = jsx(id(4589).TransitionGroup, {
+      const tmp11 = jsx(tmp5(4589).TransitionGroup, {
         items: memo,
         getItemKey: transitionGroupGetItemKey,
         renderItem: transitionGroupRenderItem,
       });
       if (flag) {
-        const obj3 = { children: tmp11 };
-        let tmp10Result = jsx(tmp5(4751).PortalKeyboard, { children: tmp11 });
+        tmp10Result = jsx(tmp5(4751).PortalKeyboard, { children: tmp11 });
       } else {
-        const obj4 = { value: true, children: tmp11 };
         tmp10Result = jsx(tmp5(9926).PortalKeyboardInModalContext.Provider, { value: true, children: tmp11 });
       }
       return tmp10Result;
     };
+let result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardRenderer.tsx");
+
+export const PortalKeyboardRenderer = tmp2;

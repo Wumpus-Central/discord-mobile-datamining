@@ -1,71 +1,77 @@
 // discord_app/modules/parental_consent/native/AgeUpdateFooter.tsx
-import c from "../../../../_runtime/00576_c.js";
-import util from "../../../intl/index.native.tsx";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../_runtime/00576_react.js";
+import intl2 from "../../../intl/index.native.tsx";
 import _modDef2787 from "../../safety_flows/SafetyFlows.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AgeVerificationActionCreatorsDefault from "../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import AgeVerificationAnalyticsUtils from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const jsx = Fragment.jsx;
 let closure_4 = createStyles.createStyles({ text: { textAlign: "center" } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/parental_consent/native/AgeUpdateFooter.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(3);
+      let first;
+      let tmp8;
+      let obj = react2;
+      const cResult = obj.c(3);
       const tmp4 = closure_4();
+      const text = tmp4.text;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = util.intl;
-        const obj2 = {
+        const intl = intl2.intl;
+        let obj2 = {
           handleAgeVerifyHook() {
             const obj = AgeVerificationActionCreatorsDefault;
-            return obj.showAgeVerificationGetStartedModal({
+            const obj2 = {
               entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT,
-            });
+            };
+            return obj.showAgeVerificationGetStartedModal(obj2);
           },
         };
         const formatResult = intl.format(_modDef2787.ifObbX, obj2);
         cResult[0] = formatResult;
-        let first = formatResult;
+        first = formatResult;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== tmp4.text) {
-        const obj3 = { variant: "text-md/medium", color: "text-muted", style: tmp4.text, children: first };
         const tmp10 = jsx(Text_Text.Text, {
           variant: "text-md/medium",
           color: "text-muted",
-          style: tmp4.text,
+          style: text,
           children: first,
         });
         cResult[1] = tmp4.text;
         cResult[2] = tmp10;
-        let tmp8 = tmp10;
+        tmp8 = tmp10;
       } else {
         tmp8 = cResult[2];
       }
       return tmp8;
     }
   : () => {
-      let obj = { variant: "text-md/medium", color: "text-muted", style: closure_4().text, children: null };
-      const intl = util.intl;
-      obj.children = intl.format(_modDef2787.ifObbX, {
+      closure_4();
+      const Text = Text_Text.Text;
+      const intl = intl2.intl;
+      let obj2 = {
         handleAgeVerifyHook() {
           const obj = AgeVerificationActionCreatorsDefault;
-          return obj.showAgeVerificationGetStartedModal({
+          const obj2 = {
             entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT,
-          });
+          };
+          return obj.showAgeVerificationGetStartedModal(obj2);
         },
-      });
-      return jsx(Text_Text.Text, {
-        variant: "text-md/medium",
-        color: "text-muted",
-        style: closure_4().text,
-        children: null,
-      });
+      };
+      return (
+        <Text variant="text-md/medium" color="text-muted" style={closure_4().text}>
+          {intl.format(_modDef2787.ifObbX, obj2)}
+        </Text>
+      );
     };
+const result = size.fileFinishedImporting("modules/parental_consent/native/AgeUpdateFooter.tsx");
+
+export default tmp3;

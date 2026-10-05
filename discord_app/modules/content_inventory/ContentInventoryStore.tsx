@@ -1,65 +1,72 @@
 // discord_app/modules/content_inventory/ContentInventoryStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import matchUtils from "matchUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
+let set;
+
 let map = new Map();
 const map1 = new Map();
 const map2 = new Map();
 let closure_6 = false;
-const Store = initializeDefault.Store;
-class ContentInventoryStore extends Store {}
-const prototype = ContentInventoryStore.prototype;
-prototype["getFeeds"] = function getFeeds() {
-  return map;
-};
-prototype["getFeed"] = function getFeed(GLOBAL_FEED) {
-  return map.get(GLOBAL_FEED);
-};
-prototype["getFeedState"] = function getFeedState(arg0) {
-  return map1.get(arg0);
-};
-prototype["getLastFeedFetchDate"] = function getLastFeedFetchDate(arg0) {
-  return map2.get(arg0);
-};
-prototype["getFilters"] = function getFilters() {
-  return filters;
-};
-prototype["getFeedRequestId"] = function getFeedRequestId(GLOBAL_FEED) {
-  const feed = this.getFeed(GLOBAL_FEED);
-  let request_id;
-  if (feed != null) {
-    request_id = feed.request_id;
+const Store = get_initializedDefault.Store;
+class ContentInventoryStore extends Store {
+  getFeeds() {
+    return map;
   }
-  return request_id;
-};
-prototype["getDebugImpressionCappingDisabled"] = function getDebugImpressionCappingDisabled() {
-  return closure_6;
-};
-prototype["getMatchingInboxEntry"] = function getMatchingInboxEntry(feedId) {
-  ({ activity, userId: require } = feedId);
-  const feed = this.getFeed(feedId.feedId);
-  if (null != feed) {
-    if (null != activity) {
-      const entries = feed.entries;
-      const reduced = entries.reduce((acc, content) => {
-        if (content.content.author_id === require) {
-          const items = [];
-          items[HermesBuiltin.arraySpread(acc, 0)] = content.content;
-          let items1 = items;
-        } else {
-          items1 = [];
-          HermesBuiltin.arraySpread(acc, 0);
-        }
-        return items1;
-      }, []);
-      return matchUtils.findMatchingEntry(reduced, activity);
+  getFeed(GLOBAL_FEED) {
+    return map.get(GLOBAL_FEED);
+  }
+  getFeedState(arg0) {
+    return map1.get(arg0);
+  }
+  getLastFeedFetchDate(arg0) {
+    return map2.get(arg0);
+  }
+  getFilters() {
+    return filters;
+  }
+  getFeedRequestId(GLOBAL_FEED) {
+    const feed = this.getFeed(GLOBAL_FEED);
+    let request_id;
+    if (feed != null) {
+      request_id = feed.request_id;
+    }
+    return request_id;
+  }
+  getDebugImpressionCappingDisabled() {
+    return closure_6;
+  }
+  getMatchingInboxEntry(feedId) {
+    let activity;
+    let closure_129_0;
+    ({ activity, userId: closure_129_0 } = feedId);
+    const feed = this.getFeed(feedId.feedId);
+    if (null != feed) {
+      if (null != activity) {
+        const entries = feed.entries;
+        const reduced = entries.reduce((acc, content) => {
+          let items1;
+          if (content.content.author_id === closure_1_0) {
+            const items = [];
+            items[HermesBuiltin.arraySpread(items, acc, 0)] = content.content;
+            items1 = items;
+          } else {
+            items1 = [];
+            HermesBuiltin.arraySpread(items1, acc, 0);
+          }
+          return items1;
+        }, []);
+        const obj = matchUtils;
+        return obj.findMatchingEntry(reduced, activity);
+      }
     }
   }
-};
+}
+const prototype = ContentInventoryStore.prototype;
 ContentInventoryStore.displayName = "ContentInventoryStore";
-const contentInventoryStore = new ContentInventoryStore(DispatcherDefault, {
+let obj = {
   CONNECTION_OPEN: function handleConnectionOpen() {
     map = new Map();
   },
@@ -67,7 +74,9 @@ const contentInventoryStore = new ContentInventoryStore(DispatcherDefault, {
     feedId = feedId.feedId;
     const result = map.set(feedId, feedId.feed);
     map = new Map(map);
-    const result1 = map2.set(feedId, new Date());
+    set = map2.set;
+    const date = new Date();
+    const result1 = set(feedId, date);
   },
   CONTENT_INVENTORY_SET_FEED_STATE: function handleSetContentInventoryFeedState(feedId) {
     const result = map1.set(feedId.feedId, feedId.state);
@@ -80,6 +89,8 @@ const contentInventoryStore = new ContentInventoryStore(DispatcherDefault, {
     if (map.has(feedId)) {
       map.delete(feedId);
       const _Map = Map;
+      const self = this;
+      const self2 = this;
       map = new Map(map);
     } else {
       return false;
@@ -88,8 +99,8 @@ const contentInventoryStore = new ContentInventoryStore(DispatcherDefault, {
   CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING: function handleDebugToggleImpressionCapping() {
     closure_6 = !closure_6;
   },
-});
-const size = fn(2);
+};
+const contentInventoryStore = new ContentInventoryStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryStore.tsx");
 
 export default contentInventoryStore;

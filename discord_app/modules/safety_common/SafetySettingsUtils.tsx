@@ -10,8 +10,7 @@ export const trackSafetySettingsNoticeAnalytics = function trackSafetySettingsNo
   AGE_CONFIRMATION_NOTICE,
   LEARN_MORE,
 ) {
-  AnalyticsUtilsDefault.track(AnalyticEvents.SAFETY_SETTINGS_NOTICE_ACTION, {
-    notice_type: AGE_CONFIRMATION_NOTICE,
-    action: LEARN_MORE,
-  });
+  const obj = AnalyticsUtilsDefault;
+  const obj2 = { notice_type: AGE_CONFIRMATION_NOTICE, action: LEARN_MORE };
+  obj.track(AnalyticEvents.SAFETY_SETTINGS_NOTICE_ACTION, obj2);
 };

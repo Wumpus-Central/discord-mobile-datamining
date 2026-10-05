@@ -1,20 +1,21 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
+import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../../../_runtime/00576_react.js";
 import useUserIsTeen from "../../hooks/useUserIsTeen.tsx";
+import InappropriateConversationsDefaultOn from "../InappropriateConversationsDefaultOn.tsx";
 import UserSettingsProtoStore from "../../../user_settings/UserSettingsProtoStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx",
-);
-
-export const useSafetyAlertsSettingOrDefault = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(3);
+      let settings;
+      let tmp4;
+      let tmp5;
+      let tmp9;
+      const obj = react;
+      const cResult = obj.c(3);
       const currentUser = UserStore.getCurrentUser();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserSettingsProtoStore];
@@ -38,18 +39,19 @@ export const useSafetyAlertsSettingOrDefault = ReactCompilerGating.isReactCompil
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
-      const tmpResult = initialize;
-      let userIsTeen = useUserIsTeen.useUserIsTeen();
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+      const tmpResult3 = useUserIsTeen;
+      let userIsTeen = tmpResult3.useUserIsTeen();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { location: "useSafetyAlertsSettingOrDefault" };
         cResult[2] = obj2;
-        let tmp9 = obj2;
+        tmp9 = obj2;
       } else {
         tmp9 = cResult[2];
       }
-      const tmpResult3 = useUserIsTeen;
       let tmp10 = !userIsTeen;
+      const tmpResult4 = InappropriateConversationsDefaultOn;
       if (userIsTeen) {
         tmp10 = !tmpResult4.useIsEligibleForInappropriateConversationDefaultOn(tmp9);
       }
@@ -60,6 +62,7 @@ export const useSafetyAlertsSettingOrDefault = ReactCompilerGating.isReactCompil
           if (currentUser != null) {
             isStaffResult = currentUser.isStaff();
           }
+          let flag = true;
           userIsTeen = true === isStaffResult;
         }
         if (userIsTeen) {
@@ -70,9 +73,11 @@ export const useSafetyAlertsSettingOrDefault = ReactCompilerGating.isReactCompil
       return tmp11;
     }
   : () => {
+      let settings;
       const currentUser = UserStore.getCurrentUser();
       const items = [UserSettingsProtoStore];
-      const stateFromStores = initialize.useStateFromStores(items, () => {
+      const obj2 = get_initialized;
+      const stateFromStores = obj2.useStateFromStores(items, () => {
         const privacy = settings.settings.privacy;
         let flag;
         if (privacy != null) {
@@ -85,8 +90,10 @@ export const useSafetyAlertsSettingOrDefault = ReactCompilerGating.isReactCompil
         }
         return flag;
       });
-      let userIsTeen = useUserIsTeen.useUserIsTeen();
+      const obj3 = useUserIsTeen;
+      let userIsTeen = obj3.useUserIsTeen();
       let tmp3 = !userIsTeen;
+      const obj4 = InappropriateConversationsDefaultOn;
       if (userIsTeen) {
         tmp3 = !obj4.useIsEligibleForInappropriateConversationDefaultOn({
           location: "useSafetyAlertsSettingOrDefault",
@@ -99,6 +106,7 @@ export const useSafetyAlertsSettingOrDefault = ReactCompilerGating.isReactCompil
           if (currentUser != null) {
             isStaffResult = currentUser.isStaff();
           }
+          let flag = true;
           userIsTeen = true === isStaffResult;
         }
         if (userIsTeen) {
@@ -108,3 +116,8 @@ export const useSafetyAlertsSettingOrDefault = ReactCompilerGating.isReactCompil
       }
       return tmp4;
     };
+const result = size.fileFinishedImporting(
+  "modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx",
+);
+
+export const useSafetyAlertsSettingOrDefault = tmp2;

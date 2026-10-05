@@ -1,40 +1,53 @@
 // discord_app/modules/frames/FramesManager.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import Constants2 from "../rpc/Constants.tsx";
 import EmbeddedSurfaceType from "../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
+import EmbeddedActivitiesManager from "../activities/EmbeddedActivitiesManager.tsx";
 import FramesStore from "FramesStore.tsx";
+import Constants from "../../Constants.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const Constants = fn(1085);
+let closure_4;
+let hasOwnProperty;
 ({ AnalyticEvents: closure_4, RPCCloseCodes: hasOwnProperty } = Constants);
-const TransportTypes = fn(5316).TransportTypes;
-class FramesManager extends tmp3 {
+const TransportTypes = Constants2.TransportTypes;
+class FramesManager extends AutomaticLifecycleManager {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    closure_0 = applyArgumentsResult;
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    require = applyArgumentsResult;
     applyArgumentsResult.actions = {
       RPC_APP_DISCONNECTED(arg0) {
-        applyArgumentsResult.handleRPCDisconnect(arg0);
+        require.handleRPCDisconnect(arg0);
       },
       FRAME_LAUNCH(arg0) {
+        let analyticsContext;
+        let applicationId;
         ({ applicationId, analyticsContext } = arg0);
-        const result = applyArgumentsResult(8981).trackFrameSessionStart(applicationId, analyticsContext);
+        const obj = EmbeddedActivitiesManager;
+        const result = obj.trackFrameSessionStart(applicationId, analyticsContext);
       },
       FRAME_LAUNCH_FAIL(arg0) {
+        let analyticsContext;
+        let applicationId;
+        let error;
         ({ applicationId, error, analyticsContext } = arg0);
-        const result = applyArgumentsResult(8981).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
+        const obj = EmbeddedActivitiesManager;
+        const result = obj.trackFrameSessionStartFailed(applicationId, error, analyticsContext);
       },
       FRAME_STOP(applicationId) {
-        applyArgumentsResult(8981).trackFrameSessionEnd(applicationId.applicationId);
+        applicationId = applicationId.applicationId;
+        const obj = EmbeddedActivitiesManager;
+        obj.trackFrameSessionEnd(applicationId);
       },
       VOICE_CHANNEL_SELECT(arg0) {
-        const result = applyArgumentsResult.handleVoiceChannelSelect(arg0);
+        const result = require.handleVoiceChannelSelect(arg0);
       },
       CHANNEL_DELETE(channel) {
         const framesForChannel = FramesStore.getFramesForChannel(channel.channel.id);
         for (const item10010 of framesForChannel) {
-          let leaveFrameResult = applyArgumentsResult.leaveFrame(item10010.id);
+          let leaveFrameResult = require.leaveFrame(item10010.id);
           continue;
         }
       },
@@ -43,23 +56,23 @@ class FramesManager extends tmp3 {
         if (!("unavailable" in guild)) {
           const allFrames = FramesStore.getAllFrames();
           for (const item10014 of allFrames) {
-            let tmp8 = item10014.surface.type !== EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN;
+            let tmp8 =
+              item10014.surface.type !== EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN &&
+              item10014.surface.guildId === guild.id;
             if (tmp8) {
-              tmp8 = item10014.surface.guildId === guild.id;
-            }
-            if (tmp8) {
-              let leaveFrameResult = applyArgumentsResult.leaveFrame(item10014.id);
+              let leaveFrameResult = require.leaveFrame(item10014.id);
             }
             continue;
           }
         }
       },
-      CHANNEL_UPDATES(arg0) {
-        for (const item10008 of tmp) {
+      CHANNEL_UPDATES(channels) {
+        channels = channels.channels;
+        for (const item10008 of channels) {
           let framesForChannel = FramesStore.getFramesForChannel(item10008.id);
           for (const item10018 of framesForChannel) {
             if (item10018.applicationId !== item10008.application_id) {
-              let leaveFrameResult = applyArgumentsResult.leaveFrame(tmp7.id);
+              let leaveFrameResult = require.leaveFrame(tmp6.id);
             }
             continue;
           }
@@ -71,28 +84,31 @@ class FramesManager extends tmp3 {
       currentVoiceChannelId = currentVoiceChannelId.currentVoiceChannelId;
       if (null != currentVoiceChannelId) {
         if (currentVoiceChannelId !== currentVoiceChannelId.channelId) {
+          const getFramesForSurface = FramesStore.getFramesForSurface;
           const obj = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL, channelId: currentVoiceChannelId };
-          const framesForSurface = FramesStore.getFramesForSurface(obj);
+          const framesForSurface = getFramesForSurface(obj);
           for (const item10018 of framesForSurface) {
-            let leaveFrameResult = applyArgumentsResult.leaveFrame(item10018.id);
+            let leaveFrameResult = require.leaveFrame(item10018.id);
             continue;
           }
         }
       }
     };
     applyArgumentsResult.handleRPCDisconnect = function handleRPCDisconnect(arg0) {
+      let reason;
+      let source;
       ({ reason, source } = arg0);
       if (null != reason) {
         if (source.type === TransportTypes.POST_MESSAGE) {
           const frameByIframeId = FramesStore.getFrameByIframeId(source.iframeId);
           if (null != frameByIframeId) {
-            applyArgumentsResult.leaveFrame(frameByIframeId.id);
-            if (reason.code !== constants2.CLOSE_NORMAL) {
-              const obj4 = { rpc_close_code: null, rpc_message: null, application_id: null };
+            require.leaveFrame(frameByIframeId.id);
+            if (reason.code !== hasOwnProperty.CLOSE_NORMAL) {
+              const obj4 = { rpc_close_code: null, rpc_message: null, application_id: frameByIframeId.applicationId };
               ({ code: obj2.rpc_close_code, message: obj2.rpc_message } = reason);
-              obj4.application_id = frameByIframeId.applicationId;
-              AnalyticsUtilsDefault.track(constants.ACTIVITY_CLOSED_RPC_ERROR, obj4);
-              const result = applyArgumentsResult.showRPCDisconnectErrorUI(reason);
+              const obj = AnalyticsUtilsDefault;
+              obj.track(constants.ACTIVITY_CLOSED_RPC_ERROR, obj4);
+              const result = require.showRPCDisconnectErrorUI(reason);
             }
           }
         }
@@ -100,17 +116,18 @@ class FramesManager extends tmp3 {
     };
     return applyArgumentsResult;
   }
-}
-FramesManager.prototype["leaveFrame"] = function leaveFrame(frameId) {
-  const frame = FramesStore.getFrame(frameId);
-  if (null != frame) {
-    ({ applicationId: obj2.applicationId, id: obj2.frameId } = frame);
-    DispatcherDefault.dispatch({ type: "FRAME_STOP", applicationId: null, frameId: null });
-    const obj3 = { type: "FRAME_STOP", applicationId: null, frameId: null };
+  leaveFrame(frameId) {
+    const frame = FramesStore.getFrame(frameId);
+    if (null != frame) {
+      const obj3 = { type: "FRAME_STOP", applicationId: null, frameId: null };
+      ({ applicationId: obj2.applicationId, id: obj2.frameId } = frame);
+      const obj = DispatcherDefault;
+      obj.dispatch(obj3);
+    }
   }
-};
+}
+const prototype = FramesManager.prototype;
 FramesManager.displayName = "FramesManager";
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesManager.tsx");
 
 export default FramesManager;

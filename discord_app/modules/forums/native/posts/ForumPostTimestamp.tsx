@@ -1,52 +1,49 @@
 // discord_app/modules/forums/native/posts/ForumPostTimestamp.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ForumHooks from "../../ForumHooks.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import ForumChannelStore from "../../ForumChannelStore.tsx";
+import react from "../../../../../_runtime/00019_react.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const useForumChannelStore = fn(11615).useForumChannelStore;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const useForumChannelStore = ForumChannelStore.useForumChannelStore;
+const jsx = Fragment.jsx;
 let closure_4 = createStyles.createStyles({ text: { lineHeight: 18, height: 18 } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostTimestamp.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(7);
+      let format;
+      let hasUnreads;
+      let textStyle;
+      let thread;
+      const obj = react2;
+      const cResult = obj.c(7);
       ({ textStyle, thread } = arg0);
       ({ hasUnreads, format } = arg0);
       const tmp4 = closure_4();
-      const lastActiveTimestamp = ForumHooks.useLastActiveTimestamp(
-        thread,
-        useForumChannelStore(thread.parent_id).sortOrder,
-        format,
-      );
+      const sortOrder = useForumChannelStore(thread.parent_id).sortOrder;
+      const obj2 = ForumHooks;
+      const lastActiveTimestamp = obj2.useLastActiveTimestamp(thread, sortOrder, format);
       let str = "text-muted";
       if (hasUnreads) {
         str = "text-default";
       }
       if (cResult[0] === tmp4.text) {
+        let tmp6;
         if (cResult[1] === textStyle) {
-          let tmp6 = cResult[2];
+          tmp6 = cResult[2];
         }
         if (cResult[3] === str) {
           if (cResult[4] === lastActiveTimestamp) {
+            let tmp7;
             if (cResult[5] === tmp6) {
-              let tmp7 = cResult[6];
+              tmp7 = cResult[6];
             }
             return tmp7;
           }
         }
-        const obj3 = {
-          lineClamp: 1,
-          variant: "text-xs/normal",
-          color: str,
-          style: tmp6,
-          children: lastActiveTimestamp,
-        };
         const tmp9 = jsx(Text_Text.Text, {
           lineClamp: 1,
           variant: "text-xs/normal",
@@ -67,26 +64,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = items;
     }
   : (thread) => {
+      let format;
+      let hasUnreads;
+      let textStyle;
       thread = thread.thread;
       ({ textStyle, hasUnreads, format } = thread);
       const tmp = closure_4();
+      const sortOrder = useForumChannelStore(thread.parent_id).sortOrder;
       let str = "text-muted";
-      const lastActiveTimestamp = ForumHooks.useLastActiveTimestamp(
-        thread,
-        useForumChannelStore(thread.parent_id).sortOrder,
-        format,
-      );
+      const obj = ForumHooks;
+      const lastActiveTimestamp = obj.useLastActiveTimestamp(thread, sortOrder, format);
       if (hasUnreads) {
         str = "text-default";
       }
-      const obj2 = { lineClamp: 1, variant: "text-xs/normal", color: str, style: null, children: lastActiveTimestamp };
       const items = [textStyle, tmp.text];
-      obj2.style = items;
       return jsx(Text_Text.Text, {
         lineClamp: 1,
         variant: "text-xs/normal",
         color: str,
-        style: null,
+        style: items,
         children: lastActiveTimestamp,
       });
     };
+const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostTimestamp.tsx");
+
+export default tmp3;

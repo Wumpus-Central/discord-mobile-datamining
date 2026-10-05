@@ -7,9 +7,10 @@ const result = size.fileFinishedImporting(
 );
 
 export default function getEmojiPickerDataRowPremiumInlineRoadblock(position) {
-  return {
+  const obj = {
     type: useEmojiPickerData.EmojiPickerItemType.PREMIUM_INLINE_ROADBLOCK,
     position,
     isSectionNitroLocked: true,
   };
+  return obj;
 }

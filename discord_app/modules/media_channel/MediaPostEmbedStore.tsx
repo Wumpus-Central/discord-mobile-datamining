@@ -1,6 +1,9 @@
 // discord_app/modules/media_channel/MediaPostEmbedStore.tsx
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
+
+let closure_1, closure_2;
 
 const FetchState = {
   NOT_FETCHED: 0,
@@ -12,28 +15,28 @@ const FetchState = {
   FAILED: 3,
   [3]: "FAILED",
 };
-let closure_1 = {};
-let closure_2 = {};
-const Store = initializeDefault.Store;
-class MediaPostEmbedStore extends Store {}
+const React2 = {};
+const Store = get_initializedDefault.Store;
+class MediaPostEmbedStore extends Store {
+  getMediaPostEmbed(mediaPostEmbedChannelId) {
+    if (null != mediaPostEmbedChannelId) {
+      return closure_1[mediaPostEmbedChannelId];
+    }
+  }
+  getEmbedFetchState(mediaPostEmbedChannelId) {
+    let NOT_FETCHED = closure_2[mediaPostEmbedChannelId];
+    if (NOT_FETCHED == null) {
+      NOT_FETCHED = obj.NOT_FETCHED;
+    }
+    return NOT_FETCHED;
+  }
+  getMediaPostEmbeds() {
+    return closure_1;
+  }
+}
 const prototype = MediaPostEmbedStore.prototype;
-prototype["getMediaPostEmbed"] = function getMediaPostEmbed(mediaPostEmbedChannelId) {
-  if (null != mediaPostEmbedChannelId) {
-    return closure_1[mediaPostEmbedChannelId];
-  }
-};
-prototype["getEmbedFetchState"] = function getEmbedFetchState(mediaPostEmbedChannelId) {
-  let NOT_FETCHED = closure_2[mediaPostEmbedChannelId];
-  if (NOT_FETCHED == null) {
-    NOT_FETCHED = obj.NOT_FETCHED;
-  }
-  return NOT_FETCHED;
-};
-prototype["getMediaPostEmbeds"] = function getMediaPostEmbeds() {
-  return closure_1;
-};
 MediaPostEmbedStore.displayName = "MediaPostEmbedStore";
-const mediaPostEmbedStore = new MediaPostEmbedStore(DispatcherDefault, {
+const obj2 = {
   CONNECTION_OPEN: function handleConnectionOpen() {
     closure_1 = {};
     closure_2 = {};
@@ -44,8 +47,9 @@ const mediaPostEmbedStore = new MediaPostEmbedStore(DispatcherDefault, {
   MEDIA_POST_EMBED_FETCH_SUCCESS: function handleFetchMediaPostEmbedSuccess(threadId) {
     threadId = threadId.threadId;
     const obj = {};
+    const mediaPostEmbed = threadId.mediaPostEmbed;
     const merged = Object.assign(closure_1);
-    obj[threadId] = threadId.mediaPostEmbed;
+    obj[threadId] = mediaPostEmbed;
     closure_1 = obj;
     closure_2[threadId] = obj.FETCHED;
   },
@@ -58,8 +62,8 @@ const mediaPostEmbedStore = new MediaPostEmbedStore(DispatcherDefault, {
       closure_2 = {};
     }
   },
-});
-const size = fn(2);
+};
+const mediaPostEmbedStore = new MediaPostEmbedStore(DispatcherDefault, obj2);
 const result = size.fileFinishedImporting("modules/media_channel/MediaPostEmbedStore.tsx");
 
 export default mediaPostEmbedStore;

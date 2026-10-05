@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/experiments/OneDayFractionalNitroExperiment.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react from "../../../../_runtime/00576_react.js";
 import PremiumGroupExperimentDefault from "../../premium/experiments/PremiumGroupExperiment.tsx";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
@@ -11,34 +11,40 @@ const apexExperiment = ApexExperiment.createApexExperiment({
   defaultConfig: false,
   variations: { 1: true },
 });
-const result = size.fileFinishedImporting("modules/collectibles/experiments/OneDayFractionalNitroExperiment.tsx");
-
-export default apexExperiment;
-export const useOneDayFractionalNitroEnabled = ReactCompilerGating.isReactCompilerEnabled()
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (location) => {
-      const cResult = c.c(4);
+      let tmp3;
+      let tmp5;
+      const obj = react;
+      const cResult = obj.c(4);
       if (cResult[0] !== location) {
         const obj2 = { location };
         cResult[0] = location;
         cResult[1] = obj2;
-        let tmp3 = obj2;
+        tmp3 = obj2;
       } else {
         tmp3 = cResult[1];
       }
+      const tmp4 = PremiumGroupExperimentDefault(tmp3);
       if (cResult[2] !== location) {
         const obj3 = { location };
         cResult[2] = location;
         cResult[3] = obj3;
-        let tmp5 = obj3;
+        tmp5 = obj3;
       } else {
         tmp5 = cResult[3];
       }
-      const tmp4 = PremiumGroupExperimentDefault(tmp3);
-      return apexExperiment.useConfig(tmp5) && !PremiumGroupExperimentDefault(tmp3);
+      const tmp6 = apexExperiment.useConfig(tmp5) && !tmp4;
+      return tmp6;
     }
   : (location) => {
       const obj = { location };
       const obj2 = { location };
-      const tmp = PremiumGroupExperimentDefault({ location });
-      return apexExperiment.useConfig({ location }) && !PremiumGroupExperimentDefault({ location });
+      const tmp = PremiumGroupExperimentDefault(obj);
+      const tmp2 = apexExperiment.useConfig(obj2) && !tmp;
+      return tmp2;
     };
+const result = size.fileFinishedImporting("modules/collectibles/experiments/OneDayFractionalNitroExperiment.tsx");
+
+export default apexExperiment;
+export const useOneDayFractionalNitroEnabled = tmp3;

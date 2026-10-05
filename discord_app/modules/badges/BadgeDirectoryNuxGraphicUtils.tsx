@@ -1,17 +1,20 @@
 // discord_app/modules/badges/BadgeDirectoryNuxGraphicUtils.tsx
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import BadgeId from "../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import size from "../../../_runtime/metro/00002__.js";
+
+let map;
 
 let items = [
-  fn(7855).BadgeId.STREAMING,
-  fn(7855).BadgeId.GAME_VARIETY,
-  fn(7855).BadgeId.GAME_TIME,
-  fn(7855).BadgeId.ACCOUNT_AGE,
+  BadgeId.BadgeId.STREAMING,
+  BadgeId.BadgeId.GAME_VARIETY,
+  BadgeId.BadgeId.GAME_TIME,
+  BadgeId.BadgeId.ACCOUNT_AGE,
 ];
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/BadgeDirectoryNuxGraphicUtils.tsx");
 
 export const getBadgeDirectoryNuxGraphicIconUrls = function getBadgeDirectoryNuxGraphicIconUrls(badges) {
-  const map = new Map(
+  map = new Map(
     badges.map((badge_id) => {
       items = [badge_id.badge_id, badge_id];
       return items;
@@ -19,7 +22,7 @@ export const getBadgeDirectoryNuxGraphicIconUrls = function getBadgeDirectoryNux
   );
   items = [];
   function _loop() {
-    value = value.get(closure_2);
+    const value = map.get(closure_2);
     let owned;
     if (value != null) {
       owned = value.owned;
@@ -37,7 +40,7 @@ export const getBadgeDirectoryNuxGraphicIconUrls = function getBadgeDirectoryNux
           }
           if (prop == null) {
             let simple_icon_url;
-            if (tmp3 != null) {
+            if (value.tiers[findIndexResult] != null) {
               simple_icon_url = tmp3.simple_icon_url;
             }
             prop = simple_icon_url;
@@ -55,7 +58,7 @@ export const getBadgeDirectoryNuxGraphicIconUrls = function getBadgeDirectoryNux
   }
   const iter = items[Symbol.iterator]();
   while (iter !== undefined) {
-    closure_2 = iter.next();
+    let closure_2 = iter.next();
     let _loopResult = _loop();
     continue;
   }
@@ -64,23 +67,27 @@ export const getBadgeDirectoryNuxGraphicIconUrls = function getBadgeDirectoryNux
   return substr.map((iconUrl) => iconUrl.iconUrl);
 };
 export const getBadgeDirectoryNuxGraphicLayout = function getBadgeDirectoryNuxGraphicLayout(badgeIconUrls) {
+  let items1;
+  let items2;
+  let obj;
+  let tmp2;
+  let tmp3;
+  let tmp4;
   [tmp2, tmp3, tmp4] = badgeIconUrls;
+  _slicedToArray(badgeIconUrls, 3);
   if (null == tmp2) {
-    let obj = { type: "fallback" };
+    obj = { type: "fallback" };
   } else if (null == tmp3) {
-    const obj2 = { type: "single", iconUrls: null };
+    const obj2 = { type: "single", iconUrls: items };
     items = [tmp2];
-    obj2.iconUrls = items;
     obj = obj2;
   } else if (null == tmp4) {
-    const obj3 = { type: "pair", iconUrls: null };
-    const items1 = [tmp3, tmp2];
-    obj3.iconUrls = items1;
+    const obj3 = { type: "pair", iconUrls: items1 };
+    items1 = [tmp3, tmp2];
     obj = obj3;
   } else {
-    obj = { type: "trio", iconUrls: null };
-    const items2 = [tmp3, tmp2, tmp4];
-    obj.iconUrls = items2;
+    obj = { type: "trio", iconUrls: items2 };
+    items2 = [tmp3, tmp2, tmp4];
   }
   return obj;
 };

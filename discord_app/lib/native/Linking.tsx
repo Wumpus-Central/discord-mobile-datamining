@@ -1,12 +1,10 @@
 // discord_app/lib/native/Linking.tsx
-import _mod17 from "../../../_runtime/metro/00017__.js";
+import react_native from "../../../_runtime/00017_react-native.js";
 import handleURL from "../../modules/links/native/handleURL.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const Linking = _mod17.Linking;
-const result = size.fileFinishedImporting("lib/native/Linking.tsx");
-
-export default {
+const Linking = react_native.Linking;
+const obj = {
   openURL(arg0, arg1) {
     let flag = arg2;
     if (arg2 === undefined) {
@@ -18,6 +16,10 @@ export default {
     handleURL.default(href, SAFARI, { forceExternalBrowser: true });
   },
   performURLNavigation(href) {
-    Linking.openURL(href).catch(() => {});
+    const openURLResult = Linking.openURL(href);
+    openURLResult.catch(() => {});
   },
 };
+const result = size.fileFinishedImporting("lib/native/Linking.tsx");
+
+export default obj;

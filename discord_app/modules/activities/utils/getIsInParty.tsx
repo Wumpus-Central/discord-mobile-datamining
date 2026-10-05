@@ -21,7 +21,6 @@ export const getIsInParty = function getIsInParty(tmp8Result, activity) {
       }
     }
     tmp2 = null != id1 && tmp8Result.party.id === activity.party.id;
-    const tmp5 = null != id1 && tmp8Result.party.id === activity.party.id;
   }
   return tmp2;
 };

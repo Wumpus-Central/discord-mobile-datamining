@@ -1,52 +1,54 @@
 // discord_app/design/components/Menu/native/MenuGroup.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../Styles/native/createStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-get_ActivityIndicator = fn(17);
-({ StyleSheet, View: closure_1 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(4890);
-let obj = {
-  divider: {
-    marginLeft: 0,
-    height: StyleSheet.hairlineWidth,
-    backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
-    marginTop: -1 * StyleSheet.hairlineWidth,
-  },
-};
-let closure_4 = createStyles.createStyles(obj);
-const obj3 = {
+let StyleSheet;
+let c2;
+let c3;
+let map;
+let obj2;
+let react = react_mod;
+({ StyleSheet, View: map } = react_native);
+({ jsx: c2, jsxs: c3 } = Fragment);
+let obj = { divider: obj2 };
+obj2 = {
   marginLeft: 0,
   height: StyleSheet.hairlineWidth,
   backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
   marginTop: -1 * StyleSheet.hairlineWidth,
 };
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/Menu/native/MenuGroup.tsx");
-
-export const MenuGroup = noop.forwardRef((arg0, ref) => {
-  noop = ref;
+let closure_4 = createStyles.createStyles(obj);
+const forwardRefResult = react.forwardRef((arg0, ref) => {
+  let children;
+  let items;
+  let style;
+  react = ref;
   ({ style, children } = arg0);
-  const obj = { style, children: null };
   let tmp4 = null === ref;
+  const obj = { style, children: items };
   if (tmp4) {
     let obj2 = { style: tmp.divider };
     tmp4 = closure_2(closure_1, obj2);
   }
-  const items = [tmp4];
-  const Children = noop.Children;
+  items = [tmp4];
+  const Children = react.Children;
   items[1] = Children.map(children, (label, arg1) => {
     let cloneElementResult = label;
     if (0 === arg1) {
       cloneElementResult = label;
-      if (noop.isValidElement(label)) {
+      if (react.isValidElement(label)) {
         const obj2 = { ref };
-        cloneElementResult = noop.cloneElement(label, obj2);
+        cloneElementResult = react.cloneElement(label, obj2);
       }
     }
     return cloneElementResult;
   });
-  obj.children = items;
   return closure_3(closure_1, obj);
 });
+const result = size.fileFinishedImporting("design/components/Menu/native/MenuGroup.tsx");
+
+export const MenuGroup = forwardRefResult;

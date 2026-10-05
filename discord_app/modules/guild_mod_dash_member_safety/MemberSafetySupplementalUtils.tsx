@@ -1,25 +1,29 @@
 // discord_app/modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx
-import c from "../../../_runtime/00576_c.js";
-import util from "../../intl/index.native.tsx";
+import react from "../../../_runtime/00576_react.js";
+import Constants from "../../Constants.tsx";
+import intl11 from "../../intl/index.native.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import shared from "../../design/shared.tsx";
 import useThemeDefault from "../../hooks/useTheme.tsx";
 import PlatformsDefault from "../../lib/Platforms.tsx";
 import ConnectionsHooks from "../connections/ConnectionsHooks.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
+let c6, c7;
+
 function createFetchKeys(arg0, arr) {
-  closure_0 = arg0;
+  let closure_0 = arg0;
   return arr.map((item) => closure_0 + item);
 }
 function getUserIdFromFetchKey(arg0) {
   return arg0.split("-")[1];
 }
 function updateFetchRequests(arr, PENDING) {
-  closure_0 = PENDING;
+  let closure_0 = PENDING;
   const item = arr.forEach((item) => {
-    closure_5[item] = closure_0;
+    closure_5[item] = PENDING;
   });
 }
 function _transformFetchMemberSupplementalResponse(userId) {
@@ -31,118 +35,131 @@ function _transformFetchMemberSupplementalResponse(userId) {
     integrationType: userId.integration_type,
   };
 }
-let closure_13 = async function _fetchMemberSupplemental(arg0) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
+let obj = function _fetchMemberSupplemental() {
+  obj = _asyncToGenerator(async (arg0, arg1) => {
+    let closure_3;
+    let obj5;
+    let value;
+    function getFetchchableUsers(arr) {
+      const found = arr.filter((item) => closure_1_5[item] <= constants.UNFETCHED);
+      return found.map(closure_1_8);
     }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
+    let closure_0 = arg0;
+    let closure_1 = arg1;
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      let c5;
+      try {
+        let tmp;
+        let closure_7;
+        let arr2;
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let closure_2 = tmp4;
+            closure_1 = undefined;
+            tmp = undefined;
+            value = undefined;
+            closure_5 = undefined;
+            closure_6 = undefined;
+            closure_7 = undefined;
+            const tmp48 = createFetchKeys(closure_0, closure_1);
+            closure_1 = tmp48;
+            arr2 = getFetchchableUsers(tmp48);
+            if (0 === arr2.length) {
+              c7 = 3;
+              const obj4 = { value: [], done: true };
+              return obj4;
+            } else {
+              updateFetchRequests(tmp48, constants.PENDING);
+              c5 = 1;
+              const HTTP = HTTPUtils.HTTP;
+              const request = {
+                url: Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(closure_0),
+                body: obj5,
+                rejectWithError: true,
+              };
+              const post = HTTP.post;
+              obj5 = { user_ids: arr2 };
+              c6 = 2;
+              c7 = 1;
+              const obj6 = { value: post(request), done: false };
+              return obj6;
+            }
+          }
+        } else if (1 === c6) {
+          c5 = 0;
+          closure_131_9(closure_1, closure_131_6.FAILED);
+          c7 = 3;
+          const obj7 = { value: [], done: true };
+          return obj7;
+        } else if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 === 2) {
+          c5 = 0;
           c7 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
-          closure_3 = tmp3;
-          closure_2 = tmp7;
-          closure_130_0 = closure_0;
-          closure_130_1 = undefined;
-          closure_130_2 = undefined;
-          closure_130_3 = undefined;
-          closure_130_4 = undefined;
-          closure_130_5 = undefined;
-          closure_130_6 = undefined;
-          closure_130_7 = undefined;
-          const tmp52 = createFetchKeys(closure_0, closure_1);
-          closure_130_1 = tmp52;
-          const arr2 = (function getFetchchableUsers(arr) {
-            const found = arr.filter((item) => closure_1_5[item] <= constants.UNFETCHED);
-            return found.map(closure_1_8);
-          })(tmp52);
-          closure_130_2 = arr2;
-          if (0 === arr2.length) {
+          tmp = value;
+          const _Array = Array;
+          if (Array.isArray(tmp.body)) {
+            const body = tmp.body;
+            value = body.map(closure_131_12);
+            closure_5 = [];
+            const item = value.forEach((userId) => closure_1_5.push(userId.userId));
+            closure_6 = closure_131_7(closure_0, closure_5);
+            closure_7 = closure_131_7(
+              closure_0,
+              arr2.filter((item) => !closure_1_5.includes(item)),
+            );
+            closure_131_9(closure_6, closure_131_6.SUCCEEDED);
+            closure_131_9(closure_7, closure_131_6.FAILED);
+            c5 = 0;
             c7 = 3;
-            const obj4 = { value: [], done: true };
-            return obj4;
+            const obj9 = { value, done: true };
+            return obj9;
           } else {
-            updateFetchRequests(tmp52, constants.PENDING);
-            c5 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            const request = { url: Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(closure_0), body: null, rejectWithError: true };
-            const obj5 = { user_ids: arr2 };
-            request.body = obj5;
-            c6 = 2;
-            c7 = 1;
-            const obj6 = { value: HTTP.post(request), done: false };
-            return obj6;
+            closure_131_9(closure_1, closure_131_6.FAILED);
+            c5 = 0;
+            c7 = 3;
+            obj = { value: [], done: true };
+            return obj;
           }
         }
-      } else if (1 === tmp7) {
-        c5 = 0;
-        closure_131_9(closure_130_1, closure_131_6.FAILED);
-        c7 = 3;
-        const obj7 = { value: [], done: true };
-        return obj7;
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 0;
-        c7 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
-      } else {
-        closure_130_3 = value;
-        const _Array = Array;
-        if (Array.isArray(closure_130_3.body)) {
-          const body = closure_130_3.body;
-          closure_130_4 = body.map(closure_131_12);
-          closure_130_5 = [];
-          const item = closure_130_4.forEach((userId) => closure_1_5.push(userId.userId));
-          closure_130_6 = closure_131_7(closure_130_0, closure_130_5);
-          closure_130_7 = closure_131_7(
-            closure_130_0,
-            closure_130_2.filter((item) => !closure_1_5.includes(item)),
-          );
-          closure_131_9(closure_130_6, closure_131_6.SUCCEEDED);
-          closure_131_9(closure_130_7, closure_131_6.FAILED);
-          c5 = 0;
+      } catch (tmp34) {
+        value = tmp34;
+        if (0 === c5) {
           c7 = 3;
-          const obj9 = { value: closure_130_4, done: true };
-          return obj9;
+          throw tmp34;
         } else {
-          closure_131_9(closure_130_1, closure_131_6.FAILED);
-          c5 = 0;
-          c7 = 3;
-          const obj = { value: [], done: true };
-          return obj;
+          c6 = 1;
         }
       }
-    } catch (tmp37) {
-      closure_4 = tmp37;
-      if (tmp4 === c5) {
-        c7 = tmp2;
-        throw tmp37;
-      } else {
-        c6 = tmp;
-      }
     }
-  }
+  });
+  return obj(...arguments);
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = Constants.Endpoints;
 let closure_5 = {};
 let closure_6 = {
   FAILED: 0,
@@ -156,7 +173,7 @@ let closure_6 = {
   FAILED_NO_RETRY: 4,
   [4]: "FAILED_NO_RETRY",
 };
-const JoinSourceType = {
+obj = {
   UNSPECIFIED: 0,
   [0]: "UNSPECIFIED",
   BOT: 1,
@@ -177,17 +194,71 @@ const JoinSourceType = {
   [8]: "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL",
 };
 let obj2 = { DISCORD: "discord", TWITCH: "twitch", YOUTUBE: "youtube", GUILD_SUBSCRIPTION: "guild_subscription" };
-const ReactCompilerGating = fn(558);
-const size = fn(2);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      obj = react;
+      const cResult = obj.c(4);
+      const get = PlatformsDefault.get;
+      PlatformsDefault;
+      obj2 = ConnectionsHooks;
+      const value = get(obj2.useLegacyPlatformType(arg0));
+      const tmp6 = useThemeDefault();
+      let combined = null;
+      if (null != value) {
+        const items = [,];
+        ({ TWITCH: arr[0], YOUTUBE: arr[1] } = obj2);
+        combined = null;
+        if (items.includes(arg0)) {
+          if (cResult[0] === value.icon.darkSVG) {
+            if (cResult[1] === value.icon.lightSVG) {
+              let tmp9;
+              if (cResult[2] === tmp6) {
+                tmp9 = cResult[3];
+              }
+              const _HermesInternal = HermesInternal;
+              combined = "url('" + tmp9 + "')";
+            }
+          }
+          const icon = value.icon;
+          const tmpResult = shared;
+          const tmp10 = tmpResult.isThemeDark(tmp6) ? icon.darkSVG : icon.lightSVG;
+          cResult[0] = value.icon.darkSVG;
+          cResult[1] = value.icon.lightSVG;
+          cResult[2] = tmp6;
+          cResult[3] = tmp10;
+          tmp9 = tmp10;
+        }
+      }
+      return combined;
+    }
+  : (arg0) => {
+      const get = PlatformsDefault.get;
+      PlatformsDefault;
+      obj = ConnectionsHooks;
+      const value = get(obj.useLegacyPlatformType(arg0));
+      let combined = null;
+      if (null != value) {
+        const items = [,];
+        ({ TWITCH: arr[0], YOUTUBE: arr[1] } = obj2);
+        combined = null;
+        if (items.includes(arg0)) {
+          const icon = value.icon;
+          const _HermesInternal = HermesInternal;
+          const tmp3Result = shared;
+          combined = "url('" + tmp3Result.isThemeDark(tmp5) ? icon.darkSVG : icon.lightSVG + "')";
+        }
+      }
+      return combined;
+    };
 const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx");
 
 export const registerFetchedSupplementals = function registerFetchedSupplementals(guildId, memberIds) {
-  closure_0 = guildId;
+  let closure_0 = guildId;
   const item = memberIds.forEach((item) => {
-    closure_5[closure_0 + item] = constants.SUCCEEDED;
+    closure_5[guildId + item] = constants.SUCCEEDED;
   });
 };
-export { JoinSourceType };
+export const JoinSourceType = obj;
 export const getJoinSourceTypeLabel = function getJoinSourceTypeLabel(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
@@ -198,114 +269,57 @@ export const getJoinSourceTypeLabel = function getJoinSourceTypeLabel(arg0) {
     flag = false;
   }
   if (obj.BOT === arg0) {
-    const intl10 = util.intl;
-    return intl10.string(util.t.HumZAi);
-  } else if (tmp2.INTEGRATION === arg0) {
-    const intl9 = util.intl;
-    return intl9.string(util.t.gmCUFw);
-  } else if (tmp2.DISCOVERY === arg0) {
-    const intl8 = util.intl;
-    return intl8.string(util.t["Ql/e9Y"]);
-  } else if (tmp2.HUB === arg0) {
-    const intl7 = util.intl;
-    return intl7.string(util.t.Op8B3O);
-  } else if (tmp2.INVITE === arg0) {
-    const intl6 = util.intl;
-    return intl6.string(util.t["/3vIRd"]);
-  } else if (tmp2.VANITY_URL === arg0) {
+    const intl10 = intl11.intl;
+    return intl10.string(intl11.t.HumZAi);
+  } else if (obj.INTEGRATION === arg0) {
+    const intl9 = intl11.intl;
+    return intl9.string(intl11.t.gmCUFw);
+  } else if (obj.DISCOVERY === arg0) {
+    const intl8 = intl11.intl;
+    return intl8.string(intl11.t["Ql/e9Y"]);
+  } else if (obj.HUB === arg0) {
+    const intl7 = intl11.intl;
+    return intl7.string(intl11.t.Op8B3O);
+  } else if (obj.INVITE === arg0) {
+    const intl6 = intl11.intl;
+    return intl6.string(intl11.t["/3vIRd"]);
+  } else if (obj.VANITY_URL === arg0) {
     if (null != tmp) {
+      let formatToPlainStringResult;
       if (!flag) {
-        const intl4 = util.intl;
+        const intl4 = intl11.intl;
         obj = { vanityUrl: tmp };
-        let formatToPlainStringResult = intl4.formatToPlainString(util.t.EIUjRy, obj);
+        formatToPlainStringResult = intl4.formatToPlainString(intl11.t.EIUjRy, obj);
       }
       return formatToPlainStringResult;
     }
-    const intl5 = util.intl;
-    formatToPlainStringResult = intl5.string(util.t.dGiD1O);
-  } else if (tmp2.MANUAL_MEMBER_VERIFICATION === arg0) {
-    const intl3 = util.intl;
-    return intl3.string(util.t.vdu7oS);
-  } else if (tmp2.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL === arg0) {
-    const intl2 = util.intl;
-    return intl2.string(util.t["9/ZreX"]);
+    const intl5 = intl11.intl;
+    formatToPlainStringResult = intl5.string(intl11.t.dGiD1O);
+  } else if (obj.MANUAL_MEMBER_VERIFICATION === arg0) {
+    const intl3 = intl11.intl;
+    return intl3.string(intl11.t.vdu7oS);
+  } else if (obj.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL === arg0) {
+    const intl2 = intl11.intl;
+    return intl2.string(intl11.t["9/ZreX"]);
   } else {
-    const intl = util.intl;
-    return intl.string(util.t.DvMBkS);
+    const intl = intl11.intl;
+    return intl.string(intl11.t.DvMBkS);
   }
 };
 export const IntegrationType = obj2;
 export const getIntegrationLabel = function getIntegrationLabel(arg0) {
   if (obj2.TWITCH === arg0) {
-    const intl3 = util.intl;
-    return intl3.string(util.t.AVGAkw);
+    const intl3 = intl11.intl;
+    return intl3.string(intl11.t.AVGAkw);
   } else if (tmp.YOUTUBE === arg0) {
-    const intl2 = util.intl;
-    return intl2.string(util.t.PHSAsn);
+    const intl2 = intl11.intl;
+    return intl2.string(intl11.t.PHSAsn);
   } else {
-    const intl = util.intl;
-    return intl.string(util.t.gmCUFw);
+    const intl = intl11.intl;
+    return intl.string(intl11.t.gmCUFw);
   }
 };
-export const useGetIntegrationIconString = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      let str2 = c.c(4);
-      obj2 = PlatformsDefault;
-      let lightSVG = obj2.get(ConnectionsHooks.useLegacyPlatformType(arg0));
-      const tmp2 = useThemeDefault();
-      let tmp3 = null;
-      if (null != lightSVG) {
-        const items = [,];
-        ({ TWITCH: arr[0], YOUTUBE: arr[1] } = obj2);
-        tmp3 = null;
-        if (items.includes(arg0)) {
-          if (str2[0] === lightSVG.icon.darkSVG) {
-            if (str2[1] === lightSVG.icon.lightSVG) {
-              if (str2[2] === tmp2) {
-                const _HermesInternal = HermesInternal;
-                str2 = "')";
-                const combined = "url('" + str2[3] + "')";
-              }
-            }
-          }
-          let darkSVG = lightSVG.icon;
-          const tmp5 = shared.isThemeDark(tmp2) ? darkSVG.darkSVG : darkSVG.lightSVG;
-          darkSVG = lightSVG.icon.darkSVG;
-          str2[0] = darkSVG;
-          lightSVG = lightSVG.icon.lightSVG;
-          str2[1] = lightSVG;
-          str2[2] = tmp2;
-          str2[3] = tmp5;
-          const tmpResult = shared;
-        }
-      }
-      return tmp3;
-    }
-  : (arg0) => {
-      obj2 = ConnectionsHooks;
-      value = PlatformsDefault.get(obj2.useLegacyPlatformType(arg0));
-      let tmp5 = null;
-      if (null != value) {
-        const items = [,];
-        ({ TWITCH: arr[0], YOUTUBE: arr[1] } = obj2);
-        tmp5 = null;
-        if (items.includes(arg0)) {
-          const _HermesInternal = HermesInternal;
-          const tmp2Result = shared;
-          const str = "url('";
-          const combined = "url('" + shared.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG + "')";
-          const tmp7 = shared.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG;
-        }
-      }
-      return tmp5;
-    };
+export const useGetIntegrationIconString = tmp2;
 export const fetchMemberSupplemental = function fetchMemberSupplemental() {
-  const self = this;
-  const apply = closure_13.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

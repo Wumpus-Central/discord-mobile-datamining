@@ -1,90 +1,103 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollRecapFooter.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
+import react_native from "../../../../../_runtime/00017_react-native.js";
+import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
-import BountiesScrollGradientRive from "../../../../../discord_common/js/packages/design/components/Rive/native/generated/BountiesScrollGradientRive.tsx";
+import intl2 from "../../../../intl/index.native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import BountiesScrollGradientRive2 from "../../../../../discord_common/js/packages/design/components/Rive/native/generated/BountiesScrollGradientRive.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import OrbsIcon from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4890);
+let orbAmount;
+
+let hasOwnProperty;
+let metroRequire;
+const View = react_native.View;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
 let closure_7 = createStyles.createStyles(() => {
+  let num;
   const obj = {
     container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 },
     headerLabel: { textTransform: "uppercase" },
-    orbRow: null,
-    rive: null,
-    orbAmount: null,
+    orbRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 },
+    rive: { flex: 1, width: "100%" },
+    orbAmount: { marginTop: num },
   };
-  const obj2 = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 };
-  obj.orbRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-  obj.rive = { flex: 1, width: "100%" };
-  const obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-  let num = 0;
+  ({ flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 });
+  ({ flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 });
+  num = 0;
+  const obj4 = PlatformUtils;
   if (obj4.isIOS()) {
     num = 6;
   }
-  obj.orbAmount = { marginTop: num };
   return obj;
 });
-fn(558);
-const ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (orbAmount) => {
-      const cResult = c.c(19);
+      let first;
+      let items;
+      let items1;
+      const obj = react2;
+      const cResult = obj.c(19);
       orbAmount = orbAmount.orbAmount;
       const tmp4 = closure_7();
-      const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow(
-        "BountiesScrollRecapFooter",
-        "text-xs/bold",
-      );
+      const obj2 = useTypeConsolidationTextTransform;
+      const typeConsolidationEyebrow = obj2.useTypeConsolidationEyebrow("BountiesScrollRecapFooter", "text-xs/bold");
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = util.intl;
-        const stringResult = intl.string(util.t.d6Rrn6);
+        const intl = intl2.intl;
+        const stringResult = intl.string(intl2.t.d6Rrn6);
         cResult[0] = stringResult;
-        let first = stringResult;
+        first = stringResult;
       } else {
         first = cResult[0];
       }
       const combined = "" + first + ", +" + orbAmount;
       if (cResult[1] === typeConsolidationEyebrow.style) {
+        let tmp9;
         if (cResult[2] === tmp4.headerLabel) {
-          let tmp9 = cResult[3];
+          tmp9 = cResult[3];
         }
         if (cResult[4] === typeConsolidationEyebrow.variant) {
+          let tmp10;
+          let tmp13;
           if (cResult[5] === tmp9) {
-            let tmp10 = cResult[6];
+            tmp10 = cResult[6];
           }
           const _Symbol = Symbol;
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
             const tmp15 = hasOwnProperty(OrbsIcon.OrbsIcon, { size: "sm", color: "icon-strong", accessible: false });
             cResult[7] = tmp15;
-            let tmp13 = tmp15;
+            tmp13 = tmp15;
           } else {
             tmp13 = cResult[7];
           }
           const _HermesInternal = HermesInternal;
           const combined1 = "+" + orbAmount;
           if (cResult[8] === tmp4.orbAmount) {
+            let tmp17;
             if (cResult[9] === combined1) {
-              let tmp17 = cResult[10];
+              tmp17 = cResult[10];
             }
             if (cResult[11] === tmp4.orbRow) {
+              let tmp20;
               if (cResult[12] === tmp17) {
-                let tmp20 = cResult[13];
+                tmp20 = cResult[13];
               }
               if (cResult[14] === tmp4.container) {
                 if (cResult[15] === combined) {
                   if (cResult[16] === tmp10) {
+                    let tmp24;
                     if (cResult[17] === tmp20) {
-                      let tmp24 = cResult[18];
+                      tmp24 = cResult[18];
                     }
                     return tmp24;
                   }
@@ -96,11 +109,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 accessible: true,
                 accessibilityRole: "text",
                 accessibilityLabel: combined,
-                children: null,
+                children: items,
               };
-              const items = [tmp10, tmp20];
-              obj3.children = items;
-              const tmp27 = timestampProducer(View, obj3);
+              items = [tmp10, tmp20];
+              const tmp27 = metroRequire(View, obj3);
               cResult[14] = tmp4.container;
               cResult[15] = combined;
               cResult[16] = tmp10;
@@ -112,11 +124,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               style: tmp4.orbRow,
               accessible: false,
               importantForAccessibility: "no-hide-descendants",
-              children: null,
+              children: items1,
             };
-            const items1 = [tmp13, tmp17];
-            obj4.children = items1;
-            const tmp23 = timestampProducer(View, obj4);
+            items1 = [tmp13, tmp17];
+            const tmp23 = metroRequire(View, obj4);
             cResult[11] = tmp4.orbRow;
             cResult[12] = tmp17;
             cResult[13] = tmp23;
@@ -155,58 +166,60 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = items2;
     }
   : (orbAmount) => {
+      let items;
+      let items1;
+      let items2;
       orbAmount = orbAmount.orbAmount;
       const tmp = closure_7();
-      const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow(
-        "BountiesScrollRecapFooter",
-        "text-xs/bold",
-      );
-      const intl = util.intl;
-      const stringResult = intl.string(util.t.d6Rrn6);
+      const obj = useTypeConsolidationTextTransform;
+      const typeConsolidationEyebrow = obj.useTypeConsolidationEyebrow("BountiesScrollRecapFooter", "text-xs/bold");
+      const intl = intl2.intl;
+      const stringResult = intl.string(intl2.t.d6Rrn6);
+      const obj3 = {
+        variant: typeConsolidationEyebrow.variant,
+        color: "text-brand",
+        style: items,
+        accessible: false,
+        children: stringResult,
+      };
+      items = [tmp.headerLabel, typeConsolidationEyebrow.style];
       const obj2 = {
         style: tmp.container,
         pointerEvents: "none",
         accessible: true,
         accessibilityRole: "text",
         accessibilityLabel: "" + stringResult + ", +" + orbAmount,
-        children: null,
+        children: items1,
       };
-      const obj3 = {
-        variant: typeConsolidationEyebrow.variant,
-        color: "text-brand",
-        style: null,
-        accessible: false,
-        children: stringResult,
-      };
-      const items = [tmp.headerLabel, typeConsolidationEyebrow.style];
-      obj3.style = items;
-      const items1 = [hasOwnProperty(Text_Text.Text, obj3)];
+      items1 = [hasOwnProperty(Text_Text.Text, obj3)];
       const obj4 = {
         style: tmp.orbRow,
         accessible: false,
         importantForAccessibility: "no-hide-descendants",
-        children: null,
+        children: items2,
       };
-      const items2 = [hasOwnProperty(OrbsIcon.OrbsIcon, { size: "sm", color: "icon-strong", accessible: false })];
-      items2[1] = hasOwnProperty(Text_Text.Text, {
+      items2 = [hasOwnProperty(OrbsIcon.OrbsIcon, { size: "sm", color: "icon-strong", accessible: false })];
+      const obj5 = {
         variant: "display-sm",
         color: "text-strong",
         accessible: false,
         style: tmp.orbAmount,
         children: "+" + orbAmount,
-      });
-      obj4.children = items2;
-      items1[1] = timestampProducer(View, obj4);
-      obj2.children = items1;
-      return timestampProducer(View, obj2);
+      };
+      const Text = Text_Text.Text;
+      items2[1] = hasOwnProperty(Text, obj5);
+      items1[1] = metroRequire(View, obj4);
+      return metroRequire(View, obj2);
     };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollRecapFooter.tsx");
-
-export const BountiesScrollRecapFooter = tmp4;
-export const BountiesScrollRecapFooterGradient = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(7);
+      let tmp5;
+      let tmp6;
+      let tmp8;
+      let useReducedMotion;
+      const obj = react2;
+      const cResult = obj.c(7);
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
@@ -221,6 +234,7 @@ export const BountiesScrollRecapFooterGradient = ReactCompilerGating.isReactComp
         [tmp5, tmp6] = cResult;
       }
       let str = "play";
+      const tmpResult = get_initialized;
       if (tmpResult.useStateFromStores(tmp5, tmp6)) {
         str = "halt";
       }
@@ -231,41 +245,52 @@ export const BountiesScrollRecapFooterGradient = ReactCompilerGating.isReactComp
           alignment: "bottom-center",
           withReducedMotion: str,
         };
-        const tmp10 = hasOwnProperty(BountiesScrollGradientRive.BountiesScrollGradientRive, obj2);
+        const tmp10 = hasOwnProperty(BountiesScrollGradientRive2.BountiesScrollGradientRive, obj2);
         cResult[2] = str;
         cResult[3] = tmp10;
-        let tmp8 = tmp10;
+        tmp8 = tmp10;
       } else {
         tmp8 = cResult[3];
       }
       if (cResult[4] === tmp4.rive) {
+        let tmp11;
         if (cResult[5] === tmp8) {
-          let tmp11 = cResult[6];
+          tmp11 = cResult[6];
         }
         return tmp11;
       }
-      const tmp12 = hasOwnProperty(View, { style: tmp4.rive, children: tmp8 });
+      const obj3 = { style: tmp4.rive, children: tmp8 };
+      const tmp12 = hasOwnProperty(View, obj3);
       cResult[4] = tmp4.rive;
       cResult[5] = tmp8;
       cResult[6] = tmp12;
       tmp11 = tmp12;
-      const obj3 = { style: tmp4.rive, children: tmp8 };
-      tmpResult = initialize;
     }
   : () => {
-      const tmp = closure_7();
+      let BountiesScrollGradientRive;
+      let str;
+      let useReducedMotion;
       const items = [AccessibilityStore];
-      const obj2 = { style: tmp.rive, children: null };
-      const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-      let str = "play";
+      const tmp = closure_7();
+      const obj2 = {
+        style: tmp.rive,
+        children: hasOwnProperty(BountiesScrollGradientRive, {
+          stateMachine: "State Machine 1",
+          fit: "fill",
+          alignment: "bottom-center",
+          withReducedMotion: str,
+        }),
+      };
+      const obj = get_initialized;
+      const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+      str = "play";
+      BountiesScrollGradientRive = BountiesScrollGradientRive2.BountiesScrollGradientRive;
       if (stateFromStores) {
         str = "halt";
       }
-      obj2.children = hasOwnProperty(BountiesScrollGradientRive.BountiesScrollGradientRive, {
-        stateMachine: "State Machine 1",
-        fit: "fill",
-        alignment: "bottom-center",
-        withReducedMotion: str,
-      });
       return hasOwnProperty(View, obj2);
     };
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollRecapFooter.tsx");
+
+export const BountiesScrollRecapFooter = tmp4;
+export const BountiesScrollRecapFooterGradient = tmp5;

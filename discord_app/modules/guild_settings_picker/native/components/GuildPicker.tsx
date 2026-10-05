@@ -1,74 +1,62 @@
 // discord_app/modules/guild_settings_picker/native/components/GuildPicker.tsx
-import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import intl2 from "../../../../intl/index.native.tsx";
+import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import react from "../../../../../_runtime/00019_react.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const GuildPicker = "GuildPicker";
-const size = fn(2);
+let dependencyMap;
+
+const jsx = Fragment.jsx;
+const GuildPicker_str = "GuildPicker";
 const result = size.fileFinishedImporting("modules/guild_settings_picker/native/components/GuildPicker.tsx");
 
 export default function GuildPicker(isGuildIncluded) {
+  let c2;
+  let items;
+  let selectedGuild;
   const guildId = isGuildIncluded.guildId;
   const onChange = isGuildIncluded.onChange;
   dependencyMap = undefined;
-  ({ options: c2, selectedGuild } = onChange(13707)({
-    isGuildIncluded: isGuildIncluded.isGuildIncluded,
-    selectedGuildId: guildId,
-  }));
+  let tmp = dependencyMap;
+  let tmp2 = onChange(13707)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
+  ({ options: c2, selectedGuild } = tmp2);
   let name;
-  const tmp2 = onChange(13707)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
+  onChange(13708);
   if (selectedGuild != null) {
     name = selectedGuild.name;
   }
-  let obj = {
-    label: name,
-    onPress() {
-      const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
-      const obj = ActionSheetActionCreatorsDefault;
-      const intl = util.intl;
-      obj2.title = intl.string(util.t.etZ9tX);
-      obj2.items = items;
-      obj2.onItemSelect = function onItemSelect(arg0) {
-        if (null != arg0) {
-          if (onChange != null) {
-            tmp(arg0);
-          }
-        }
-        setImmediate(() => {
-          closure_1_1(closure_1_2[4]).hideActionSheet(closure_1_4);
-        });
-      };
-      obj2.selectedItem = guildId;
-      obj.openLazy(asyncRequireImpl(8949, dependencyMap.paths), GuildPicker, obj2);
-    },
-    placeholder: null,
-  };
   let intl = guildId(1126).intl;
-  obj.placeholder = intl.string(guildId(1126).t.etZ9tX);
-  return jsx(onChange(13708), {
-    label: name,
-    onPress() {
-      const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
-      const obj = ActionSheetActionCreatorsDefault;
-      const intl = util.intl;
-      obj2.title = intl.string(util.t.etZ9tX);
-      obj2.items = items;
-      obj2.onItemSelect = function onItemSelect(arg0) {
-        if (null != arg0) {
-          if (onChange != null) {
-            tmp(arg0);
-          }
-        }
-        setImmediate(() => {
-          closure_1_1(closure_1_2[4]).hideActionSheet(closure_1_4);
-        });
-      };
-      obj2.selectedItem = guildId;
-      obj.openLazy(asyncRequireImpl(8949, dependencyMap.paths), GuildPicker, obj2);
-    },
-    placeholder: null,
-  });
+  return (
+    <tmp4
+      label={name}
+      onPress={function onPress() {
+        let intl;
+        const tmp = ActionSheetActionCreatorsDefault;
+        const openLazy = tmp.openLazy;
+        let obj = {
+          title: intl.string(intl2.t.etZ9tX),
+          items,
+          onItemSelect(arg0) {
+            if (null != arg0) {
+              if (onChange != null) {
+                tmp(arg0);
+              }
+            }
+            setImmediate(() => {
+              const obj = closure_1_1(closure_1_2[4]);
+              obj.hideActionSheet(closure_1_4);
+            });
+          },
+          selectedItem: guildId,
+          hasIcons: false,
+        };
+        const tmp2 = asyncRequire(8949, dependencyMap.paths);
+        intl = intl2.intl;
+        openLazy(tmp2, GuildPicker_str, obj);
+      }}
+      placeholder={intl.string(guildId(1126).t.etZ9tX)}
+    />
+  );
 }

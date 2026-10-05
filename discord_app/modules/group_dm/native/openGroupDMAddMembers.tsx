@@ -7,15 +7,22 @@ import GroupDMNitroCapExperimentDefault from "../GroupDMNitroCapExperiment.tsx";
 import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
 function getGroupDMAddMembersAction(id, CHANNEL_TEXT_AREA) {
+  let flag;
+  let getGroupDMNitroAudience;
+  let obj2;
+  let premiumType;
+  let tmp5Result;
   const channel = ChannelStore.getChannel(id);
   if (null != channel) {
     if (channel.isGroupDM()) {
       const currentUser = UserStore.getCurrentUser();
       const recipients = channel.recipients;
       let num;
+      const getGroupDMAddMembersEntryAction = GroupDMNitroUpsellModel.getGroupDMAddMembersEntryAction;
+      GroupDMNitroUpsellModel;
       if (recipients != null) {
         num = recipients.length;
       }
@@ -25,41 +32,41 @@ function getGroupDMAddMembersAction(id, CHANNEL_TEXT_AREA) {
       const obj = {
         memberCount: num + 1,
         recipientLimit: getGroupDMRecipientLimitDefault({ useNitroCapExperiment: true }),
-        audience: null,
-        showUpsell: null,
+        audience: getGroupDMNitroAudience(premiumType, flag),
+        showUpsell: tmp5Result.getConfig(obj2).enabled,
       };
-      const obj3 = GroupDMNitroUpsellModel;
-      let premiumType;
+      premiumType = undefined;
+      getGroupDMNitroAudience = GroupDMNitroUpsellModel.getGroupDMNitroAudience;
+      GroupDMNitroUpsellModel;
       if (currentUser != null) {
         premiumType = currentUser.premiumType;
       }
-      let flag;
+      flag = undefined;
       if (currentUser != null) {
         flag = currentUser.isStaff();
       }
       if (flag == null) {
         flag = false;
       }
-      obj.audience = GroupDMNitroUpsellModel.getGroupDMNitroAudience(premiumType, flag);
-      const tmp2Result = GroupDMNitroUpsellModel;
-      const obj2 = { location: CHANNEL_TEXT_AREA };
-      obj.showUpsell = GroupDMNitroCapExperimentDefault.getConfig(obj2).enabled;
-      return obj3.getGroupDMAddMembersEntryAction(obj);
+      obj2 = { location: CHANNEL_TEXT_AREA };
+      tmp5Result = GroupDMNitroCapExperimentDefault;
+      return getGroupDMAddMembersEntryAction(obj);
     }
   }
   return "open";
 }
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/openGroupDMAddMembers.tsx");
 
 export default function openGroupDMAddMembers(channelId, locationPage) {
   const tmp = getGroupDMAddMembersAction(channelId, locationPage);
   if ("open" === tmp) {
-    NavigationRouteUtils.navigateToNewGroupDM(channelId, locationPage);
+    const obj2 = NavigationRouteUtils;
+    obj2.navigateToNewGroupDM(channelId, locationPage);
   } else if ("upsell" === tmp) {
     openGroupDMNitroCapLimitSheetDefault(locationPage);
   } else {
-    ToastUtils.showMaxGroupMembers();
+    const obj = ToastUtils;
+    obj.showMaxGroupMembers();
   }
 }
 export { getGroupDMAddMembersAction };
@@ -70,6 +77,7 @@ export const showGroupDMAddMembersRoadblock = function showGroupDMAddMembersRoad
   if ("upsell" === groupDMAddMembersAction) {
     openGroupDMNitroCapLimitSheetDefault(CHANNEL_TEXT_AREA);
   } else {
-    ToastUtils.showMaxGroupMembers();
+    const obj = ToastUtils;
+    obj.showMaxGroupMembers();
   }
 };

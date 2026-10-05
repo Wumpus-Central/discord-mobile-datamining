@@ -1,17 +1,24 @@
 // discord_app/modules/user_settings/defs/native/CreateBugReportSetting.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
-import util from "../../../../intl/index.native.tsx";
+import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import react from "../../../../../_runtime/00576_react.js";
+import intl2 from "../../../../intl/index.native.tsx";
 import DeveloperOptionsActionCreators from "../../../../actions/DeveloperOptionsActionCreators.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import BugReportManagerDefault from "../../../bug_reporter/native/BugReportManager.tsx";
+import WrenchIcon from "../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx";
+import BugReporterSetting from "BugReporterSetting.tsx";
 import DeveloperOptionsStore from "../../../../stores/DeveloperOptionsStore.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11129);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let isBugReporterEnabled;
+      let tmp4;
+      let tmp5;
+      const obj = react;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DeveloperOptionsStore];
         const fn = function o() {
@@ -24,56 +31,44 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      return initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStores(tmp4, tmp5);
     }
   : () => {
+      let isBugReporterEnabled;
       const items = [DeveloperOptionsStore];
-      return initialize.useStateFromStores(items, () => isBugReporterEnabled.isBugReporterEnabled);
+      const obj = get_initialized;
+      return obj.useStateFromStores(items, () => isBugReporterEnabled.isBugReporterEnabled);
     };
-const toggle = SettingBuilders.createToggle({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.aIkGJD);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.aIkGJD);
   },
   parent: null,
-  IconComponent: fn(15389).WrenchIcon,
+  IconComponent: WrenchIcon.WrenchIcon,
   onValueChange: function handleCreateBugReportSettingToggle(arg0) {
     const setDeveloperOptionSettings = DeveloperOptionsActionCreators.setDeveloperOptionSettings;
-    if (arg0) {
+    DeveloperOptionsActionCreators;
+    const tmp3 = arg0;
+    if (tmp3) {
       const result = setDeveloperOptionSettings({ bugReporterEnabled: true });
-      BugReportManagerDefault.initialize();
+      const obj2 = BugReportManagerDefault;
+      obj2.initialize();
     } else {
       const result1 = setDeveloperOptionSettings({ bugReporterEnabled: false });
-      BugReportManagerDefault.terminate(true);
+      const obj = BugReportManagerDefault;
+      obj.terminate(true);
     }
   },
-  useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? () => {
-        const cResult = c.c(2);
-        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const items = [DeveloperOptionsStore];
-          const fn = function o() {
-            return isBugReporterEnabled.isBugReporterEnabled;
-          };
-          cResult[0] = items;
-          cResult[1] = fn;
-          tmp4 = items;
-          tmp5 = fn;
-        } else {
-          [tmp4, tmp5] = cResult;
-        }
-        return initialize.useStateFromStores(tmp4, tmp5);
-      }
-    : () => {
-        const items = [DeveloperOptionsStore];
-        return initialize.useStateFromStores(items, () => isBugReporterEnabled.isBugReporterEnabled);
-      },
+  useValue: tmp2,
   useDescription: function useCreateBugReportSettingDescription() {
+    PlatformUtils;
     return "Photo permission is required";
   },
-  usePredicate: fn(15619).useBugReporterExperimentSettingPredicate,
-});
-const size = fn(2);
+  usePredicate: BugReporterSetting.useBugReporterExperimentSettingPredicate,
+};
+const toggle = SettingBuilders.createToggle(obj);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/CreateBugReportSetting.tsx");
 
 export default toggle;

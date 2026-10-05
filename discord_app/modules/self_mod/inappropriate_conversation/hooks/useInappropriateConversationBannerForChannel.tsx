@@ -1,5 +1,5 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx
-import c from "../../../../../_runtime/00576_c.js";
+import react from "../../../../../_runtime/00576_react.js";
 import ChannelSafetyWarningsStore from "../../ChannelSafetyWarningsStore.tsx";
 import useChannelSafetyWarning from "../../hooks/useChannelSafetyWarning.tsx";
 import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel.tsx";
@@ -9,28 +9,27 @@ import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const SafetyWarningTypes = ChannelSafetyWarningsStore.SafetyWarningTypes;
-const result = size.fileFinishedImporting(
-  "modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx",
-);
-
-export const useInappropriateConversationBannerForChannel = ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, location) => {
-      const cResult = c.c(2);
+      let tmp4;
+      const obj = react;
+      const cResult = obj.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
         cResult[0] = location;
         cResult[1] = obj2;
-        let tmp4 = obj2;
+        tmp4 = obj2;
       } else {
         tmp4 = cResult[1];
       }
-      const isEligibleForInappropriateConversationWarning =
-        SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning(tmp4);
       const tmpResult = SelfModInappropriateConversationExperiment;
-      const safetyAlertsSettingOrDefault = useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault();
+      const isEligibleForInappropriateConversationWarning =
+        tmpResult.useIsEligibleForInappropriateConversationWarning(tmp4);
       const tmpResult4 = useSafetyAlertsSettingOrDefault;
+      const safetyAlertsSettingOrDefault = tmpResult4.useSafetyAlertsSettingOrDefault();
+      const tmpResult5 = useInappropriateConversationWarningsForChannel;
       const inappropriateConversationWarningsForChannel =
-        useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(arg0);
+        tmpResult5.useInappropriateConversationWarningsForChannel(arg0);
       useChannelSafetyWarning;
       if (isEligibleForInappropriateConversationWarning) {
         if (safetyAlertsSettingOrDefault) {
@@ -39,11 +38,8 @@ export const useInappropriateConversationBannerForChannel = ReactCompilerGating.
               !inappropriateConversationWarningsForChannel.some((type) => {
                 let tmp2 = type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1;
                 if (!tmp2) {
-                  let tmp3 = type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2;
-                  if (tmp3) {
-                    tmp3 = null != type.dismiss_timestamp;
-                  }
-                  tmp2 = tmp3;
+                  tmp2 = type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2 && null != type.dismiss_timestamp;
+                  const tmp3 = type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2 && null != type.dismiss_timestamp;
                 }
                 return tmp2;
               })
@@ -53,16 +49,16 @@ export const useInappropriateConversationBannerForChannel = ReactCompilerGating.
           }
         }
       }
-      const tmpResult5 = useInappropriateConversationWarningsForChannel;
     }
   : (arg0, location) => {
-      const isEligibleForInappropriateConversationWarning =
-        SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location });
+      const obj = SelfModInappropriateConversationExperiment;
       const obj2 = { location };
-      const safetyAlertsSettingOrDefault = useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault();
-      const inappropriateConversationWarningsForChannel =
-        useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(arg0);
-      useChannelSafetyWarning;
+      const isEligibleForInappropriateConversationWarning = obj.useIsEligibleForInappropriateConversationWarning(obj2);
+      const obj3 = useSafetyAlertsSettingOrDefault;
+      const safetyAlertsSettingOrDefault = obj3.useSafetyAlertsSettingOrDefault();
+      const obj4 = useInappropriateConversationWarningsForChannel;
+      const inappropriateConversationWarningsForChannel = obj4.useInappropriateConversationWarningsForChannel(arg0);
+      let tmp3 = useChannelSafetyWarning;
       if (isEligibleForInappropriateConversationWarning) {
         if (safetyAlertsSettingOrDefault) {
           if (0 !== inappropriateConversationWarningsForChannel.length) {
@@ -70,11 +66,8 @@ export const useInappropriateConversationBannerForChannel = ReactCompilerGating.
               !inappropriateConversationWarningsForChannel.some((type) => {
                 let tmp2 = type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1;
                 if (!tmp2) {
-                  let tmp3 = type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2;
-                  if (tmp3) {
-                    tmp3 = null != type.dismiss_timestamp;
-                  }
-                  tmp2 = tmp3;
+                  tmp2 = type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2 && null != type.dismiss_timestamp;
+                  const tmp3 = type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2 && null != type.dismiss_timestamp;
                 }
                 return tmp2;
               })
@@ -85,3 +78,8 @@ export const useInappropriateConversationBannerForChannel = ReactCompilerGating.
         }
       }
     };
+const result = size.fileFinishedImporting(
+  "modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx",
+);
+
+export const useInappropriateConversationBannerForChannel = tmp2;

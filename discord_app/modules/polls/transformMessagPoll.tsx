@@ -5,8 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/polls/transformMessagPoll.tsx");
 
 export default function transformMessagePoll(expiry) {
-  const obj = {};
+  const obj = { expiry: _modDef4461(expiry.expiry) };
   const merged = Object.assign(expiry);
-  obj.expiry = _modDef4461(expiry.expiry);
   return obj;
 }

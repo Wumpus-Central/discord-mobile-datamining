@@ -1,26 +1,37 @@
 // discord_app/modules/guild_role_subscriptions/useEmojiByIdOrName.tsx
 import EmojiStore from "../emojis/EmojiStore.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const require = fn;
-const ReactCompilerGating = fn(558);
+const require = globalThis.__r;
+let _require, dependencyMap;
+
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
+      let closure_0;
+      let closure_1;
+      let first;
       _require = arg0;
       dependencyMap = arg1;
-      const cResult = require("c").c(5);
+      const obj = require("react");
+      const cResult = obj.c(5);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [EmojiStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === arg0) {
+        let tmp6;
+        let tmp7;
         if (cResult[2] === arg1) {
-          let tmp6 = cResult[3];
-          let tmp7 = cResult[4];
+          tmp6 = cResult[3];
+          tmp7 = cResult[4];
         }
-        return tmp(504).useStateFromStores(first, tmp6, tmp7);
+        const tmpResult = tmp(504);
+        return tmpResult.useStateFromStores(first, tmp6, tmp7);
       }
       const fn = function l() {
         if (null == closure_1) {
@@ -41,15 +52,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp7 = items1;
       tmp6 = fn;
-      const obj = require("c");
-      tmp = _require;
     }
   : (arg0, arg1) => {
+      let closure_0;
+      let closure_1;
       _require = arg0;
       dependencyMap = arg1;
       const items = [EmojiStore];
       const items1 = [arg0, arg1];
-      return require("initialize").useStateFromStores(
+      const obj = require("get initialized");
+      return obj.useStateFromStores(
         items,
         () => {
           if (null == closure_1) {
@@ -66,7 +78,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useEmojiByIdOrName.tsx");
 
 export default tmp2;

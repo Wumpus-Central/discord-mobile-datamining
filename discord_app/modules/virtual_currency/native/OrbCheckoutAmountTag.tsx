@@ -1,105 +1,119 @@
 // discord_app/modules/virtual_currency/native/OrbCheckoutAmountTag.tsx
-import _mod17 from "../../../../_runtime/metro/00017__.js";
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import react from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../intl/index.native.tsx";
+import intl3 from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import OrbsIcon from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const View = _mod17.View;
-({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let obj = {
-  orbAmountTag: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 },
-  orbsIcon: { width: 14, height: 14 },
-};
-let closure_5 = createStyles.createStyles(obj);
-let obj2 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-const result = size.fileFinishedImporting("modules/virtual_currency/native/OrbCheckoutAmountTag.tsx");
+let orbAmount;
 
-export default ReactCompilerGating.isReactCompilerEnabled()
+let c3;
+let closure_4;
+let obj2;
+const View = react_native.View;
+({ jsx: c3, jsxs: closure_4 } = Fragment);
+let obj = { orbAmountTag: obj2, orbsIcon: { width: 14, height: 14 } };
+obj2 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+let closure_5 = createStyles.createStyles(obj);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (orbAmount) => {
-      const cResult = c.c(11);
+      let items;
+      let tmp5;
+      let tmp8;
+      const obj = react;
+      const cResult = obj.c(11);
       orbAmount = orbAmount.orbAmount;
       const tmp4 = closure_5();
       if (cResult[0] !== tmp4.orbsIcon) {
         const obj2 = { size: "custom", color: "icon-strong", style: tmp4.orbsIcon };
-        const tmp7 = React3(OrbsIcon.OrbsIcon, obj2);
+        const tmp7 = _false(OrbsIcon.OrbsIcon, obj2);
         cResult[0] = tmp4.orbsIcon;
         cResult[1] = tmp7;
-        let tmp5 = tmp7;
+        tmp5 = tmp7;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] !== orbAmount) {
+        let stringResult;
         if (null == orbAmount) {
-          const intl2 = util.intl;
-          let stringResult = intl2.string(util.t.pfChQr);
+          const intl2 = intl3.intl;
+          stringResult = intl2.string(intl3.t.pfChQr);
         } else {
-          const intl = util.intl;
+          const intl = intl3.intl;
           const obj3 = { orbAmount };
-          stringResult = intl.formatToPlainString(util.t.W4DfeF, obj3);
+          stringResult = intl.formatToPlainString(intl3.t.W4DfeF, obj3);
         }
         cResult[2] = orbAmount;
         cResult[3] = stringResult;
+        tmp8 = stringResult;
       } else {
-        let str = "--";
-        if (null != orbAmount) {
-          str = orbAmount;
-        }
-        if (cResult[4] === cResult[3]) {
-          if (cResult[5] === str) {
-            let tmp13 = cResult[6];
-          }
-          if (cResult[7] === tmp4.orbAmountTag) {
-            if (cResult[8] === tmp5) {
-              if (cResult[9] === tmp13) {
-                let tmp16 = cResult[10];
-              }
-              return tmp16;
-            }
-          }
-          const obj4 = { style: tmp4.orbAmountTag, children: null };
-          const items = [tmp5, tmp13];
-          obj4.children = items;
-          const tmp19 = React4(View, obj4);
-          cResult[7] = tmp4.orbAmountTag;
-          cResult[8] = tmp5;
-          cResult[9] = tmp13;
-          cResult[10] = tmp19;
-          tmp16 = tmp19;
-        }
-        const obj5 = { variant: "text-md/semibold", accessibilityLabel: cResult[3], children: str };
-        const tmp15 = React3(Text_Text.Text, obj5);
-        cResult[4] = cResult[3];
-        cResult[5] = str;
-        cResult[6] = tmp15;
-        tmp13 = tmp15;
+        tmp8 = cResult[3];
       }
-    }
-  : (orbAmount) => {
-      orbAmount = orbAmount.orbAmount;
-      const tmp = closure_5();
-      const obj = { style: tmp.orbAmountTag, children: null };
-      const items = [React3(OrbsIcon.OrbsIcon, { size: "custom", color: "icon-strong", style: tmp.orbsIcon })];
-      if (null == orbAmount) {
-        const intl2 = util.intl;
-        let stringResult = intl2.string(util.t.pfChQr);
-      } else {
-        const intl = util.intl;
-        const obj3 = { orbAmount };
-        stringResult = intl.formatToPlainString(util.t.W4DfeF, obj3);
-      }
-      const obj4 = { variant: "text-md/semibold", accessibilityLabel: stringResult, children: null };
       let str = "--";
       if (null != orbAmount) {
         str = orbAmount;
       }
-      obj4.children = str;
-      items[1] = React3(Text_Text.Text, obj4);
-      obj.children = items;
-      return React4(View, obj);
+      if (cResult[4] === tmp8) {
+        let tmp11;
+        if (cResult[5] === str) {
+          tmp11 = cResult[6];
+        }
+        if (cResult[7] === tmp4.orbAmountTag) {
+          if (cResult[8] === tmp5) {
+            let tmp13;
+            if (cResult[9] === tmp11) {
+              tmp13 = cResult[10];
+            }
+            return tmp13;
+          }
+        }
+        const obj4 = { style: tmp4.orbAmountTag, children: items };
+        items = [tmp5, tmp11];
+        const tmp16 = React3(View, obj4);
+        cResult[7] = tmp4.orbAmountTag;
+        cResult[8] = tmp5;
+        cResult[9] = tmp11;
+        cResult[10] = tmp16;
+        tmp13 = tmp16;
+      }
+      const tmp12 = _false(Text_Text.Text, { variant: "text-md/semibold", accessibilityLabel: tmp8, children: str });
+      cResult[4] = tmp8;
+      cResult[5] = str;
+      cResult[6] = tmp12;
+      tmp11 = tmp12;
+    }
+  : (orbAmount) => {
+      let items;
+      let str;
+      let stringResult;
+      orbAmount = orbAmount.orbAmount;
+      const tmp = closure_5();
+      const obj = { style: tmp.orbAmountTag, children: items };
+      items = [,];
+      const obj2 = { size: "custom", color: "icon-strong", style: tmp.orbsIcon };
+      items[0] = _false(OrbsIcon.OrbsIcon, obj2);
+      const Text = Text_Text.Text;
+      if (null == orbAmount) {
+        const intl2 = intl3.intl;
+        stringResult = intl2.string(intl3.t.pfChQr);
+      } else {
+        const intl = intl3.intl;
+        const obj3 = { orbAmount };
+        stringResult = intl.formatToPlainString(intl3.t.W4DfeF, obj3);
+      }
+      const obj4 = { variant: "text-md/semibold", accessibilityLabel: stringResult, children: str };
+      str = "--";
+      if (null != orbAmount) {
+        str = orbAmount;
+      }
+      items[1] = _false(Text, obj4);
+      return React3(View, obj);
     };
+const result = size.fileFinishedImporting("modules/virtual_currency/native/OrbCheckoutAmountTag.tsx");
+
+export default tmp3;

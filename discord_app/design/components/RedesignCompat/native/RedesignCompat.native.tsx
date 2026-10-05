@@ -1,25 +1,26 @@
 // discord_app/design/components/RedesignCompat/native/RedesignCompat.native.tsx
-import c from "../../../../../_runtime/00576_c.js";
-import noop from "../../../../../_runtime/metro/00019__.js";
+import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import react2 from "../../../../../_runtime/00576_react.js";
+import react from "../../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-const context = noop.createContext(false);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/RedesignCompat/native/RedesignCompat.native.tsx");
-
-export const RedesignCompatContext = context;
-export const RedesignCompat = ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const context = react.createContext(false);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(3);
+      let children;
+      let enabled;
+      const obj = react2;
+      const cResult = obj.c(3);
       ({ children, enabled } = arg0);
       if (enabled == null) {
         enabled = true;
       }
       if (cResult[0] === children) {
+        let tmp2;
         if (cResult[1] === enabled) {
-          let tmp2 = cResult[2];
+          tmp2 = cResult[2];
         }
         return tmp2;
       }
@@ -29,10 +30,16 @@ export const RedesignCompat = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp3;
       tmp2 = tmp3;
     }
-  : (children) => {
-      let enabled = children.enabled;
+  : (enabled) => {
+      enabled = enabled.enabled;
+      const children = enabled.children;
+      const Provider = context.Provider;
       if (enabled == null) {
         enabled = true;
       }
-      return <context.Provider value={enabled}>{children.children}</context.Provider>;
+      return <Provider value={enabled}>{children}</Provider>;
     };
+const result = size.fileFinishedImporting("design/components/RedesignCompat/native/RedesignCompat.native.tsx");
+
+export const RedesignCompatContext = context;
+export const RedesignCompat = tmp3;

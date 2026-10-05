@@ -7,6 +7,7 @@ import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
 let items = [AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.NSFW_GUILD];
@@ -22,43 +23,54 @@ let obj = {
 };
 let obj2 = {};
 const set = new Set(items);
-obj2[obj.FACIAL_AGE_ESTIMATION] = { title: _modDef3045["2yLvkS"], description: _modDef3045.eJmat5 };
 let obj3 = { title: _modDef3045["2yLvkS"], description: _modDef3045.eJmat5 };
-obj2[obj.ID_VERIFICATION] = { title: _modDef3045.dwkwo0, description: _modDef3045.ZdmRwW };
-const obj4 = { title: _modDef3045.dwkwo0, description: _modDef3045.ZdmRwW };
+obj2[obj.FACIAL_AGE_ESTIMATION] = obj3;
+let obj4 = { title: _modDef3045.dwkwo0, description: _modDef3045.ZdmRwW };
+obj2[obj.ID_VERIFICATION] = obj4;
 obj2[obj.GOOGLE_WALLET] = { title: _modDef3045.Y9sLpR, description: _modDef3045.dah4bF };
+({ title: _modDef3045.Y9sLpR, description: _modDef3045.dah4bF });
 let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationConstants.tsx");
 
 export const FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS = set;
 export const getAgeVerificationGetStartedSteps = function getAgeVerificationGetStartedSteps(arg0) {
+  let closure_0;
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let intl6;
+  let obj4;
   _require = arg0;
-  let obj = { title: null, description: null };
-  const intl = require("util").intl;
-  obj.title = intl.string(require("util").t.HphYKp);
-  const intl2 = require("util").intl;
-  obj.description = intl2.string(require("util").t["GCZC+9"]);
+  let obj = { title: intl.string(require("intl").t.HphYKp), description: intl2.string(require("intl").t["GCZC+9"]) };
+  intl = require("intl").intl;
+  intl2 = require("intl").intl;
   const items = [obj, ,];
-  let obj2 = { title: null, description: null };
-  const intl3 = require("util").intl;
-  obj2.title = intl3.string(require("util").t.nkO4L3);
-  const intl4 = require("util").intl;
-  obj2.description = intl4.string(require("util").t.rHZFsH);
+  const obj2 = { title: intl3.string(require("intl").t.nkO4L3), description: intl4.string(require("intl").t.rHZFsH) };
+  intl3 = require("intl").intl;
+  intl4 = require("intl").intl;
   items[1] = obj2;
-  const obj3 = { title: null, description: null };
-  const intl5 = require("util").intl;
-  obj3.title = intl5.string(require("util").t.aVwLfn);
-  const intl6 = require("util").intl;
-  obj3.description = intl6.format(require("util").t.n5vd1E, {
+  const obj3 = {
+    title: intl5.string(require("intl").t.aVwLfn),
+    description: intl6.format(require("intl").t.n5vd1E, obj4),
+  };
+  intl5 = require("intl").intl;
+  intl6 = require("intl").intl;
+  obj4 = {
     handleOnHelpUrlHook() {
-      const obj = AgeVerificationActionCreatorsDefault;
-      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_SYSTEM_DMS));
-      const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(
+      const openUrl = AgeVerificationActionCreatorsDefault.openUrl;
+      AgeVerificationActionCreatorsDefault;
+      const obj = HelpdeskUtilsDefault;
+      openUrl(obj.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_SYSTEM_DMS));
+      const trackAgeVerificationModalClicked = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked;
+      AgeVerificationAnalyticsUtils;
+      const result = trackAgeVerificationModalClicked(
         closure_0,
         AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.PRIMARY,
         AgeVerificationAnalyticsUtils.AgeVerificationModalCta.SYSTEM_DMS_LEARN_MORE,
       );
     },
-  });
+  };
   items[2] = obj3;
   return items;
 };

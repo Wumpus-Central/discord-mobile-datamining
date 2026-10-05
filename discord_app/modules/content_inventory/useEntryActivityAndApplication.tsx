@@ -1,38 +1,40 @@
 // discord_app/modules/content_inventory/useEntryActivityAndApplication.tsx
-import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import EmbeddedActivitiesStore from "../activities/EmbeddedActivitiesStore.tsx";
 import ContentInventoryActivityStore from "ContentInventoryActivityStore.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/content_inventory/useEntryActivityAndApplication.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (extra) => {
+      let first;
+      let first1;
+      let tmp6;
       _require = extra;
-      const cResult = require("c").c(16);
+      const obj = require("react");
+      const cResult = obj.c(16);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ContentInventoryActivityStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== extra) {
         const fn = function l() {
-          return ContentInventoryActivityStore.getMatchingActivity(closure_0);
+          return ContentInventoryActivityStore.getMatchingActivity(extra);
         };
         cResult[1] = extra;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
+      const tmpResult = require("get initialized");
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
       let application_id;
       if (stateFromStores != null) {
         application_id = stateFromStores.application_id;
@@ -42,39 +44,46 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         application_id1 = extra.extra.application_id;
       }
       if (cResult[3] === application_id) {
+        let tmp10;
+        let tmp16;
         if (cResult[4] === application_id1) {
-          let tmp10 = cResult[5];
+          tmp10 = cResult[5];
         }
-        [first1] = first1(6663)(tmp10);
+        const tmp13 = _slicedToArray(first1(6663)(tmp10), 2);
+        first1 = tmp13[0];
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [EmbeddedActivitiesStore];
           cResult[6] = items1;
-          let tmp16 = items1;
+          tmp16 = items1;
         } else {
           tmp16 = cResult[6];
         }
         let id;
+        const tmp18 = cResult[7];
         if (first1 != null) {
           id = first1.id;
         }
-        if (cResult[7] === id) {
+        if (tmp18 === id) {
+          let tmp20;
           if (cResult[8] === extra.author_id) {
-            let tmp19 = cResult[9];
+            tmp20 = cResult[9];
           }
-          const stateFromStores1 = tmp(504).useStateFromStores(tmp16, tmp19);
-          let tmp22 = first1;
+          const tmpResult2 = require("get initialized");
+          const stateFromStores1 = tmpResult2.useStateFromStores(tmp16, tmp20);
+          let tmp23 = first1;
           if (first1 == null) {
-            tmp22 = tmp15;
+            tmp23 = tmp15;
           }
           if (cResult[10] === stateFromStores) {
             if (cResult[11] === first1) {
-              if (cResult[12] === tmp22) {
+              if (cResult[12] === tmp23) {
                 if (cResult[13] === stateFromStores1) {
-                  if (cResult[14] === tmp15) {
-                    let tmp23 = cResult[15];
+                  let tmp24;
+                  if (cResult[14] === tmp13[1]) {
+                    tmp24 = cResult[15];
                   }
-                  return tmp23;
+                  return tmp24;
                 }
               }
             }
@@ -82,18 +91,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = {
             activity: stateFromStores,
             embeddedActivity: stateFromStores1,
-            anyMatchingApplication: tmp22,
+            anyMatchingApplication: tmp23,
             activityApplication: first1,
-            fallbackApplication: tmp15,
+            fallbackApplication: tmp13[1],
           };
           cResult[10] = stateFromStores;
           cResult[11] = first1;
-          cResult[12] = tmp22;
+          cResult[12] = tmp23;
           cResult[13] = stateFromStores1;
-          cResult[14] = tmp15;
+          cResult[14] = tmp13[1];
           cResult[15] = obj2;
-          tmp23 = obj2;
-          const tmpResult2 = tmp(504);
+          tmp24 = obj2;
         }
         let id1;
         if (first1 != null) {
@@ -101,32 +109,38 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const fn2 = function h() {
           let id;
+          const getEmbeddedActivityForUserId = EmbeddedActivitiesStore.getEmbeddedActivityForUserId;
+          const author_id = extra.author_id;
           if (first1 != null) {
             id = first1.id;
           }
-          return EmbeddedActivitiesStore.getEmbeddedActivityForUserId(extra.author_id, id);
+          return getEmbeddedActivityForUserId(author_id, id);
         };
         cResult[7] = id1;
         cResult[8] = extra.author_id;
         cResult[9] = fn2;
-        tmp19 = fn2;
+        tmp20 = fn2;
       }
       const items2 = [application_id, application_id1];
       cResult[3] = application_id;
       cResult[4] = application_id1;
       cResult[5] = items2;
       tmp10 = items2;
-      const tmpResult = require("initialize");
     }
   : (extra) => {
+      let activityApplication;
+      let items2;
+      let tmp10;
+      let tmpResult;
       _require = extra;
       const items = [ContentInventoryActivityStore];
-      const stateFromStores = require("initialize").useStateFromStores(items, () =>
-        ContentInventoryActivityStore.getMatchingActivity(closure_0),
+      const obj = require("get initialized");
+      const stateFromStores = obj.useStateFromStores(items, () =>
+        ContentInventoryActivityStore.getMatchingActivity(extra),
       );
       let application_id;
-      const obj = require("initialize");
       const tmp = _require;
+      const tmp4 = activityApplication(6663);
       if (stateFromStores != null) {
         application_id = stateFromStores.application_id;
       }
@@ -136,28 +150,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         application_id1 = extra.extra.application_id;
       }
       items1[1] = application_id1;
-      [activityApplication, obj2.fallbackApplication] = activityApplication(6663)(items1);
+      const tmp7 = _slicedToArray(tmp4(items1), 2);
+      activityApplication = tmp7[0];
       const obj2 = {
         activity: stateFromStores,
-        embeddedActivity: null,
-        anyMatchingApplication: null,
-        activityApplication: null,
-        fallbackApplication: null,
+        embeddedActivity: tmpResult.useStateFromStores(items2, () => {
+          let id;
+          const getEmbeddedActivityForUserId = EmbeddedActivitiesStore.getEmbeddedActivityForUserId;
+          const author_id = extra.author_id;
+          if (first != null) {
+            id = first.id;
+          }
+          return getEmbeddedActivityForUserId(author_id, id);
+        }),
+        anyMatchingApplication: tmp10,
+        activityApplication,
+        fallbackApplication: tmp7[1],
       };
-      const tmp4 = activityApplication(6663);
-      const items2 = [EmbeddedActivitiesStore];
-      obj2.embeddedActivity = tmp(504).useStateFromStores(items2, () => {
-        let id;
-        if (first != null) {
-          id = first.id;
-        }
-        return EmbeddedActivitiesStore.getEmbeddedActivityForUserId(extra.author_id, id);
-      });
-      let tmp10 = activityApplication;
+      items2 = [EmbeddedActivitiesStore];
+      tmp10 = activityApplication;
+      tmpResult = tmp(504);
       if (activityApplication == null) {
         tmp10 = tmp9;
       }
-      obj2.anyMatchingApplication = tmp10;
-      obj2.activityApplication = activityApplication;
       return obj2;
     };
+const result = size.fileFinishedImporting("modules/content_inventory/useEntryActivityAndApplication.tsx");
+
+export default tmp2;

@@ -8,8 +8,10 @@ const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/trackMarkdownParse.tsx");
 
 export const trackMarkdownParse = function trackMarkdownParse(arg0) {
-  const markdownParseSampleRate = MarkdownParseSampleExperiment.getMarkdownParseSampleRate();
+  const obj = MarkdownParseSampleExperiment;
+  const markdownParseSampleRate = obj.getMarkdownParseSampleRate();
   if (markdownParseSampleRate > 0) {
+    const obj4 = { duration_ms: null, path: null, content_length: null, has_bailed_ast: null };
     ({
       durationMs: obj3.duration_ms,
       path: obj3.path,
@@ -17,11 +19,7 @@ export const trackMarkdownParse = function trackMarkdownParse(arg0) {
       hasBailedAst: obj3.has_bailed_ast,
     } = arg0);
     const obj6 = { throttlePercent: markdownParseSampleRate };
-    AnalyticsUtilsDefault.track(
-      AnalyticEvents.MESSAGE_MARKUP_PARSE,
-      { duration_ms: null, path: null, content_length: null, has_bailed_ast: null },
-      obj6,
-    );
-    const obj4 = { duration_ms: null, path: null, content_length: null, has_bailed_ast: null };
+    const obj2 = AnalyticsUtilsDefault;
+    obj2.track(AnalyticEvents.MESSAGE_MARKUP_PARSE, obj4, obj6);
   }
 };

@@ -8,8 +8,9 @@ const items1 = [items];
 const items2 = [,];
 ({ ONYX: arr3[0], DARK: arr3[1] } = obj);
 items1[1] = items2;
+const map = new Map(items1);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/shared/ThemeTypes.tsx");
 
 export const ThemeTypes = obj;
-export const ThemeExtends = new Map(items1);
+export const ThemeExtends = map;
 export const _private = { Themes: obj };

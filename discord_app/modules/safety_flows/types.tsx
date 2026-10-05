@@ -1,5 +1,5 @@
 // discord_app/modules/safety_flows/types.tsx
-import util from "../../intl/index.native.tsx";
+import intl5 from "../../intl/index.native.tsx";
 import _modDef2787 from "SafetyFlows.messages.js";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -25,9 +25,8 @@ const obj2 = {
   APP_STORE_PARENTAL_REVOCATION: "app_store_parental_revocation",
 };
 const items = [obj.PARENTAL_CONSENT_CONNECTION];
-const set = new Set(Object.values(obj2));
 const items1 = [obj.APP_STORE_PARENTAL_REVOCATION];
-const set1 = new Set(items);
+const set = new Set(Object.values(obj2));
 const obj3 = {
   OVERVIEW: "OVERVIEW",
   ENTER_EMAIL: "ENTER_EMAIL",
@@ -44,21 +43,27 @@ const items3 = [obj3.AGE_VERIFICATION];
 const items4 = [obj3.PARENTAL_CONSENT_CONNECTION];
 const items5 = [obj3.APP_STORE_PARENTAL_REVOCATION];
 const obj4 = {};
-const intl = util.intl;
-obj4[obj.EMAIL_VERIFICATION] = intl.string(_modDef2787["Qm6K/s"]);
-const intl2 = util.intl;
-obj4[obj.AGE_VERIFICATION] = intl2.string(_modDef2787["dSkE/A"]);
-const intl3 = util.intl;
-obj4[obj.PARENTAL_CONSENT_CONNECTION] = intl3.string(_modDef2787.dMMSA0);
-const intl4 = util.intl;
-obj4[obj.APP_STORE_PARENTAL_REVOCATION] = intl4.string(_modDef2787.Z87TFb);
+const EMAIL_VERIFICATION = obj.EMAIL_VERIFICATION;
+const set1 = new Set(items);
+const set2 = new Set(items1);
+const intl = intl5.intl;
+obj4[EMAIL_VERIFICATION] = intl.string(_modDef2787["Qm6K/s"]);
+const AGE_VERIFICATION = obj.AGE_VERIFICATION;
+const intl2 = intl5.intl;
+obj4[AGE_VERIFICATION] = intl2.string(_modDef2787["dSkE/A"]);
+const PARENTAL_CONSENT_CONNECTION = obj.PARENTAL_CONSENT_CONNECTION;
+const intl3 = intl5.intl;
+obj4[PARENTAL_CONSENT_CONNECTION] = intl3.string(_modDef2787.dMMSA0);
+const APP_STORE_PARENTAL_REVOCATION = obj.APP_STORE_PARENTAL_REVOCATION;
+const intl4 = intl5.intl;
+obj4[APP_STORE_PARENTAL_REVOCATION] = intl4.string(_modDef2787.Z87TFb);
 const result = size.fileFinishedImporting("modules/safety_flows/types.tsx");
 
 export const TaskType = obj;
 export const SafetyFlowComponentType = obj2;
 export const SUPPORTED_SAFETY_FLOW_COMPONENT_TYPES = set;
 export const OWN_MODAL_TASK_TYPES = set1;
-export const HIDE_SIDEBAR_STEP_LIST_TASK_TYPES = new Set(items1);
+export const HIDE_SIDEBAR_STEP_LIST_TASK_TYPES = set2;
 export const SafetyFlowScreens = obj3;
 export const TASK_TYPE_TO_SCREENS = {
   [obj.EMAIL_VERIFICATION]: items2,

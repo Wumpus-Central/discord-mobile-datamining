@@ -1,11 +1,18 @@
 // discord_app/modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx
-import c from "../../../../_runtime/00576_c.js";
+import react_native from "../../../../_runtime/00017_react-native.js";
+import react2 from "../../../../_runtime/00576_react.js";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import FastestListPropsPlaceholder from "FastestListPropsPlaceholder.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import react from "../../../../_runtime/00019_react.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
+let obj2;
 function createNativePlaceholderConfig(listFooter) {
+  let labelPaddingInnerRatio;
+  let labelSecondarySize;
+  let spaceGap;
+  let verticalAlignment;
   let type;
   if (listFooter != null) {
     type = listFooter.type;
@@ -14,7 +21,7 @@ function createNativePlaceholderConfig(listFooter) {
   if (type == null) {
     NONE = FastestListPropsPlaceholder.FastestListPropsPlaceholderType.NONE;
   }
-  const size = {
+  size = {
     borderRadius: "Array",
     borderTopLeftRadius: "default",
     borderTopRightRadius: "enumerable",
@@ -70,9 +77,10 @@ function createNativePlaceholderConfig(listFooter) {
           num11 = 0;
         }
         size.placeholderShapePaddingVertical = num11;
-        const tmp15Result = ColorUtils;
-        size.placeholderShapeColor = processColor(ColorUtils.hexToRgbaString(listFooter.colorHex, listFooter.opacity));
+        const tmp13Result = ColorUtils;
+        size.placeholderShapeColor = processColor(tmp13Result.hexToRgbaString(listFooter.colorHex, listFooter.opacity));
         let num12 = listFooter.shapeCount;
+        processColor(tmp13Result.hexToRgbaString(listFooter.colorHex, listFooter.opacity));
         if (num12 == null) {
           num12 = 1;
         }
@@ -87,7 +95,6 @@ function createNativePlaceholderConfig(listFooter) {
           str2 = "center";
         }
         size.horizontalAlignment = str2;
-        const tmp14 = processColor(ColorUtils.hexToRgbaString(listFooter.colorHex, listFooter.opacity));
       } else if (FastestListPropsPlaceholder.FastestListPropsPlaceholderType.FEED_ITEM === type) {
         let num = listFooter.borderRadius;
         if (num == null) {
@@ -121,6 +128,7 @@ function createNativePlaceholderConfig(listFooter) {
         size.divider = flag;
         size.dividerColor = processColor(listFooter.dividerColorHex);
         let num6 = listFooter.dividerPaddingLeft;
+        processColor(listFooter.dividerColorHex);
         if (num6 == null) {
           num6 = 0;
         }
@@ -130,11 +138,11 @@ function createNativePlaceholderConfig(listFooter) {
           num7 = 0;
         }
         size.dividerPaddingRight = num7;
-        const tmp10 = processColor(listFooter.dividerColorHex);
         size.placeholderFeedBackgroundColor = processColor(listFooter.backgroundColorHex);
-        const tmp9Result = processColor(listFooter.backgroundColorHex);
+        processColor(listFooter.backgroundColorHex);
         size.placeholderFeedColor = processColor(listFooter.colorHex);
         ({ labelSize: obj.placeholderFeedLabelSize, labelSecondarySize } = listFooter);
+        processColor(listFooter.colorHex);
         if (labelSecondarySize == null) {
           labelSecondarySize = 0;
         }
@@ -150,10 +158,11 @@ function createNativePlaceholderConfig(listFooter) {
         }
         size.placeholderFeedPadding = num8;
         ({ shape: obj.placeholderFeedShape, shapeSize: obj.placeholderFeedShapeSize } = listFooter);
-        const tmp9Result2 = processColor(listFooter.colorHex);
       } else {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
+        const self = this;
+        const self2 = this;
         const error = new Error("Invalid placeholder type: " + type);
         throw error;
       }
@@ -161,17 +170,21 @@ function createNativePlaceholderConfig(listFooter) {
     return size;
   }
 }
-const processColor = fn(17).processColor;
-let obj = { sectionItem: { type: fn(6559).FastestListPropsPlaceholderType.NONE } };
-const ReactCompilerGating = fn(558);
-let obj2 = { type: fn(6559).FastestListPropsPlaceholderType.NONE };
-let size = fn(2);
-const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const processColor = react_native.processColor;
+let obj = { sectionItem: obj2 };
+obj2 = { type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.NONE };
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let tmp12;
+      let tmp15;
+      let tmp18;
+      let tmp21;
+      let tmp24;
+      let tmp3;
+      let tmp6;
+      let tmp9;
       let tmp = arg0;
-      obj = c;
+      obj = react2;
       const cResult = obj.c(25);
       if (undefined === arg0) {
         tmp = obj;
@@ -180,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp5 = createNativePlaceholderConfig(tmp.listFooter);
         cResult[0] = tmp.listFooter;
         cResult[1] = tmp5;
-        let tmp3 = tmp5;
+        tmp3 = tmp5;
       } else {
         tmp3 = cResult[1];
       }
@@ -188,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp8 = createNativePlaceholderConfig(tmp.listHeader);
         cResult[2] = tmp.listHeader;
         cResult[3] = tmp8;
-        let tmp6 = tmp8;
+        tmp6 = tmp8;
       } else {
         tmp6 = cResult[3];
       }
@@ -196,7 +209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp11 = createNativePlaceholderConfig(tmp.sectionFooter);
         cResult[4] = tmp.sectionFooter;
         cResult[5] = tmp11;
-        let tmp9 = tmp11;
+        tmp9 = tmp11;
       } else {
         tmp9 = cResult[5];
       }
@@ -204,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp14 = createNativePlaceholderConfig(tmp.sectionHeader);
         cResult[6] = tmp.sectionHeader;
         cResult[7] = tmp14;
-        let tmp12 = tmp14;
+        tmp12 = tmp14;
       } else {
         tmp12 = cResult[7];
       }
@@ -212,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp17 = createNativePlaceholderConfig(tmp.sectionItem);
         cResult[8] = tmp.sectionItem;
         cResult[9] = tmp17;
-        let tmp15 = tmp17;
+        tmp15 = tmp17;
       } else {
         tmp15 = cResult[9];
       }
@@ -220,7 +233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp20 = createNativePlaceholderConfig(tmp.sectionItemAtFront);
         cResult[10] = tmp.sectionItemAtFront;
         cResult[11] = tmp20;
-        let tmp18 = tmp20;
+        tmp18 = tmp20;
       } else {
         tmp18 = cResult[11];
       }
@@ -228,7 +241,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp23 = createNativePlaceholderConfig(tmp.sectionItemAtRear);
         cResult[12] = tmp.sectionItemAtRear;
         cResult[13] = tmp23;
-        let tmp21 = tmp23;
+        tmp21 = tmp23;
       } else {
         tmp21 = cResult[13];
       }
@@ -236,7 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp26 = createNativePlaceholderConfig(tmp.sectionItemSingleton);
         cResult[14] = tmp.sectionItemSingleton;
         cResult[15] = tmp26;
-        let tmp24 = tmp26;
+        tmp24 = tmp26;
       } else {
         tmp24 = cResult[15];
       }
@@ -247,8 +260,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[20] === tmp15) {
                 if (cResult[21] === tmp18) {
                   if (cResult[22] === tmp21) {
+                    let tmp27;
                     if (cResult[23] === tmp24) {
-                      let tmp27 = cResult[24];
+                      tmp27 = cResult[24];
                     }
                     return tmp27;
                   }
@@ -284,10 +298,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (arg0 === undefined) {
         tmp = obj;
       }
-      closure_0 = tmp;
+      let closure_0 = tmp;
       const items = [tmp];
-      return noop.useMemo(
-        () => ({
+      return react.useMemo(() => {
+        obj = {
           listFooter: createNativePlaceholderConfig(closure_0.listFooter),
           listHeader: createNativePlaceholderConfig(closure_0.listHeader),
           sectionFooter: createNativePlaceholderConfig(closure_0.sectionFooter),
@@ -296,7 +310,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           sectionItemAtFront: createNativePlaceholderConfig(closure_0.sectionItemAtFront),
           sectionItemAtRear: createNativePlaceholderConfig(closure_0.sectionItemAtRear),
           sectionItemSingleton: createNativePlaceholderConfig(closure_0.sectionItemSingleton),
-        }),
-        items,
-      );
+        };
+        return obj;
+      }, items);
     };
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
+
+export default tmp2;

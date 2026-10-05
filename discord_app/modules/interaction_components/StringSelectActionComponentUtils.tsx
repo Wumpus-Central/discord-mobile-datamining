@@ -1,15 +1,15 @@
 // discord_app/modules/interaction_components/StringSelectActionComponentUtils.tsx
 import Server from "../../flow/Server.tsx";
 import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/StringSelectActionComponentUtils.tsx");
 
 export const getInitialStringSelectOptions = function getInitialStringSelectOptions(
   selectionActionComponent,
   containerId,
 ) {
+  let mapped;
   const interactionComponentState = LocalInteractionComponentStateStore.getInteractionComponentState(
     containerId,
     selectionActionComponent.id,
@@ -19,9 +19,9 @@ export const getInitialStringSelectOptions = function getInitialStringSelectOpti
     type = interactionComponentState.type;
   }
   if (type === Server.ComponentType.STRING_SELECT) {
-    let mapped = interactionComponentState.values;
+    mapped = interactionComponentState.values;
   } else {
-    options = selectionActionComponent.options;
+    const options = selectionActionComponent.options;
     const found = options.filter((item) => item.default);
     mapped = found.map((value) => value.value);
   }

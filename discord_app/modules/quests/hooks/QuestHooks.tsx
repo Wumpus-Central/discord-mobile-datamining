@@ -1,23 +1,26 @@
 // discord_app/modules/quests/hooks/QuestHooks.tsx
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../_runtime/00576_c.js";
+import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
+import react2 from "../../../../_runtime/00576_react.js";
 import DurationsDefault from "../../../utils/Durations.tsx";
-import util from "../../../intl/index.native.tsx";
-import MurmurHashV3Default from "../../../../_runtime/01251_MurmurHashV3.js";
+import intl7 from "../../../intl/index.native.tsx";
+import _modDef1251 from "../../../../_runtime/metro/01251__.js";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
+import PremiumConstants from "../../premium/PremiumConstants.tsx";
+import NumberUtils from "../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import shared from "../../../design/shared.tsx";
-import _mod5075 from "module_5075" /* 5075 */;
+import merged5 from "../../../../_runtime/05075_merged5.js";
 import QualtricsActionCreators from "../../qualtrics/QualtricsActionCreators.tsx";
-import SurveyActionTypes from "../../../../discord_common/js/shared/shared-constants/SurveyActionTypes.tsx";
+import SurveyActionTypes2 from "../../../../discord_common/js/shared/shared-constants/SurveyActionTypes.tsx";
 import QuestTypes from "../QuestTypes.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import FirstPartyQuestTaskTypes from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
 import useGetOrFetchApplicationsDefault from "../../applications/useGetOrFetchApplications.tsx";
 import QuestDataUtils from "../utils/QuestDataUtils.tsx";
+import ConsoleQuestUIStore from "../ConsoleQuestUIStore.tsx";
 import AnalyticsActions from "../lib/analytics/AnalyticsActions.tsx";
 import utils_QuestUtils from "../utils/QuestUtils.tsx";
 import QuestTaskUtils from "../utils/QuestTaskUtils.tsx";
@@ -37,23 +40,42 @@ import QuestPlatformUtils from "../utils/QuestPlatformUtils.tsx";
 import VideoQuestUtils from "../utils/VideoQuestUtils.tsx";
 import QuestConsoleStartError from "../../../../discord_common/js/shared/shared-constants/QuestConsoleStartError.tsx";
 import useRefocusOrLaunchActivityDefault from "../../activities/utils/useRefocusOrLaunchActivity.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import noop from "../../../../_runtime/metro/00019__.js";
-import AdDeliveryStore from "../../ads/AdDeliveryStore.tsx";
-import LocaleStore from "../../user_settings/LocaleStore.tsx";
-import ChannelStore from "../../../stores/ChannelStore.tsx";
+import _asyncToGenerator_mod from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
+import react_mod from "../../../../_runtime/00019_react.js";
+import AdDeliveryStore_mod from "../../ads/AdDeliveryStore.tsx";
+import LocaleStore_mod from "../../user_settings/LocaleStore.tsx";
+import ChannelStore_mod from "../../../stores/ChannelStore.tsx";
 import ConnectedAccountsStore from "../../../stores/ConnectedAccountsStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import BountyStore from "../BountyStore.tsx";
 import QuestStore from "../QuestStore.tsx";
+import QuestConstants from "../QuestConstants.tsx";
+import Constants from "../../../Constants.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
+let _require, c1, c4, c5, dependencyMap, importDefault, map, questIds, selectedSortMethod, set;
 
-const NumberUtils = formatPercent(1888);
-require = fn;
+let closure_14;
+let closure_15;
+let closure_16;
+let closure_17;
+let closure_18;
+let closure_19;
+let closure_20;
+let closure_21;
+let closure_22;
+let closure_23;
+let closure_24;
+let closure_25;
+let closure_26;
+let closure_27;
 function defaultSortFn(id, id2, questHomeHero, get) {
-  let tmp2 = id.id === guild;
+  let num6;
+  let tmp2 = id.id === closure_21;
+  id = id2.id;
   if (tmp2) {
     const userStatus = id.userStatus;
     let completedAt;
@@ -62,7 +84,7 @@ function defaultSortFn(id, id2, questHomeHero, get) {
     }
     tmp2 = null == completedAt;
   }
-  let tmp5 = id2.id === guild;
+  let tmp5 = id === closure_21;
   if (tmp5) {
     const userStatus2 = id2.userStatus;
     let completedAt1;
@@ -78,9 +100,10 @@ function defaultSortFn(id, id2, questHomeHero, get) {
     }
     return num18;
   } else {
-    const isQuestExpiredResult = QuestDataUtils.isQuestExpired(id);
+    const obj10 = QuestDataUtils;
     const userStatus12 = id.userStatus;
     let claimedAt;
+    const isQuestExpiredResult = obj10.isQuestExpired(id);
     if (userStatus12 != null) {
       claimedAt = userStatus12.claimedAt;
     }
@@ -107,20 +130,24 @@ function defaultSortFn(id, id2, questHomeHero, get) {
     }
     const userStatus7 = id.userStatus;
     let enrolledAt2;
+    const tmp19 = null != completedAt2;
     if (userStatus7 != null) {
       enrolledAt2 = userStatus7.enrolledAt;
     }
-    let tmp21 = null != enrolledAt2 && null == completedAt2;
+    let tmp21 = null != enrolledAt2 && !tmp19;
     if (tmp21) {
       const _Date = Date;
       const userStatus8 = id.userStatus;
       let enrolledAt3;
       const timestamp = Date.now();
+      const _Date2 = Date;
       if (userStatus8 != null) {
         enrolledAt3 = userStatus8.enrolledAt;
       }
-      const date = new Date(enrolledAt3);
-      tmp21 = timestamp - date.getTime() > result;
+      const self = this;
+      const self2 = this;
+      const _Date21 = new _Date2(enrolledAt3);
+      tmp21 = timestamp - _Date21.getTime() > result;
     }
     const userStatus9 = id2.userStatus;
     let completedAt3;
@@ -129,48 +156,55 @@ function defaultSortFn(id, id2, questHomeHero, get) {
     }
     const userStatus10 = id2.userStatus;
     let enrolledAt4;
+    const tmp28 = null != completedAt3;
     if (userStatus10 != null) {
       enrolledAt4 = userStatus10.enrolledAt;
     }
-    let tmp32 = null != enrolledAt4 && null == completedAt3;
-    if (tmp32) {
-      const _Date2 = Date;
+    let tmp30 = null != enrolledAt4 && !tmp28;
+    if (tmp30) {
+      const _Date3 = Date;
       const userStatus11 = id2.userStatus;
       let enrolledAt5;
       const timestamp1 = Date.now();
+      const _Date4 = Date;
       if (userStatus11 != null) {
         enrolledAt5 = userStatus11.enrolledAt;
       }
-      const date1 = new Date(enrolledAt5);
-      tmp32 = timestamp1 - date1.getTime() > result;
+      const self3 = this;
+      const self4 = this;
+      const _Date41 = new _Date4(enrolledAt5);
+      tmp30 = timestamp1 - _Date41.getTime() > result;
     }
     if (isQuestExpiredResult) {
-      if (tmp9 !== tmp11) {
+      let result1;
+      if ((null != claimedAt) !== (null != claimedAt1)) {
         let num17 = 1;
-        if (tmp9) {
+        if (null != claimedAt) {
           num17 = c29;
         }
-        let result1 = num17;
-      } else if (tmp13 !== tmp15) {
+        result1 = num17;
+      } else if ((null != enrolledAt) !== (null != enrolledAt1)) {
         let num16 = 1;
-        if (tmp13) {
+        if (null != enrolledAt) {
           num16 = c29;
         }
         result1 = num16;
       } else {
-        const expiresAt2 = id.config.expiresAt;
+        const expiresAt3 = id.config.expiresAt;
         let num15 = 1;
+        const expiresAt4 = id2.config.expiresAt;
         if (constants10.DESC === constants10.DESC) {
           num15 = c29;
         }
-        result1 = expiresAt2.localeCompare(id2.config.expiresAt) * num15;
+        result1 = expiresAt3.localeCompare(expiresAt4) * num15;
       }
       return result1;
     } else {
       questHomeHero = questHomeHero.questHomeHero;
       if (null != questHomeHero) {
         if (!questHomeHero.isQuestHomeHeroShelfEnabled) {
-          const result2 = utils_QuestUtils.isQuestFeaturedByHero(questHomeHero, id.id);
+          const tmp46Result = utils_QuestUtils;
+          const result2 = tmp46Result.isQuestFeaturedByHero(questHomeHero, id.id);
           utils_QuestUtils;
           let num2 = 1;
           if (result2) {
@@ -179,46 +213,48 @@ function defaultSortFn(id, id2, questHomeHero, get) {
           return num2;
         }
       }
-      const tmp51Result12 = utils_QuestUtils;
-      if (questHomeHero.isMobileQuestHomeSortPriorityEnabled) {
-        const hasVariantResult = tmp51Result12.hasVariant(id, constants6.MOBILE_ACTIVITY_QUEST);
-        if (hasVariantResult !== tmp51Result13.hasVariant(id2, constants6.MOBILE_ACTIVITY_QUEST)) {
+      const isMobileQuestHomeSortPriorityEnabled = questHomeHero.isMobileQuestHomeSortPriorityEnabled;
+      const tmp46Result12 = utils_QuestUtils;
+      if (isMobileQuestHomeSortPriorityEnabled) {
+        const hasVariantResult = tmp46Result12.hasVariant(id, constants6.MOBILE_ACTIVITY_QUEST);
+        const tmp46Result13 = utils_QuestUtils;
+        if (hasVariantResult !== tmp46Result13.hasVariant(id2, constants6.MOBILE_ACTIVITY_QUEST)) {
           let num14 = 1;
           if (hasVariantResult) {
             num14 = c29;
           }
           return num14;
         } else {
-          const result3 = QuestTaskUtils.isVideoQuestForMobilePlatformOnly(id);
-          const tmp51Result14 = QuestTaskUtils;
-          if (result3 !== tmp51Result15.isVideoQuestForMobilePlatformOnly(id2)) {
+          const tmp46Result14 = QuestTaskUtils;
+          const result3 = tmp46Result14.isVideoQuestForMobilePlatformOnly(id);
+          const tmp46Result15 = QuestTaskUtils;
+          if (result3 !== tmp46Result15.isVideoQuestForMobilePlatformOnly(id2)) {
             let num13 = 1;
             if (result3) {
               num13 = c29;
             }
             return num13;
           } else {
-            const result4 = QuestTaskUtils.hasWatchVideoOnMobileTasks(id);
-            const tmp51Result16 = QuestTaskUtils;
-            if (result4 !== tmp51Result17.hasWatchVideoOnMobileTasks(id2)) {
+            const tmp46Result16 = QuestTaskUtils;
+            const result4 = tmp46Result16.hasWatchVideoOnMobileTasks(id);
+            const tmp46Result17 = QuestTaskUtils;
+            if (result4 !== tmp46Result17.hasWatchVideoOnMobileTasks(id2)) {
               let num12 = 1;
               if (result4) {
                 num12 = c29;
               }
               return num12;
             }
-            tmp51Result17 = QuestTaskUtils;
           }
-          tmp51Result15 = QuestTaskUtils;
         }
-        tmp51Result13 = utils_QuestUtils;
       } else {
-        const questType = tmp51Result12.getQuestType(id.config);
-        const questType1 = utils_QuestUtils.getQuestType(id2.config);
-        const tmp51Result18 = utils_QuestUtils;
-        const result5 = QuestTaskUtils.hasWatchVideoOnMobileTasks(id);
-        const tmp51Result19 = QuestTaskUtils;
-        const result6 = QuestTaskUtils.hasWatchVideoOnMobileTasks(id2);
+        const questType = tmp46Result12.getQuestType(id.config);
+        const tmp46Result18 = utils_QuestUtils;
+        const questType1 = tmp46Result18.getQuestType(id2.config);
+        const tmp46Result19 = QuestTaskUtils;
+        const result5 = tmp46Result19.hasWatchVideoOnMobileTasks(id);
+        const tmp46Result20 = QuestTaskUtils;
+        const result6 = tmp46Result20.hasWatchVideoOnMobileTasks(id2);
         if (result5 !== result6) {
           let num4 = 1;
           if (result5) {
@@ -233,9 +269,8 @@ function defaultSortFn(id, id2, questHomeHero, get) {
           }
           return num3;
         }
-        const tmp51Result20 = QuestTaskUtils;
       }
-      if (tmp21 !== tmp32) {
+      if (tmp21 !== tmp30) {
         if (!tmp21) {
           return num6;
         }
@@ -245,27 +280,38 @@ function defaultSortFn(id, id2, questHomeHero, get) {
         }
         num6 = num11;
       }
-      if (tmp9 !== tmp11) {
+      if ((null != claimedAt) !== (null != claimedAt1)) {
         let num10 = 1;
-        if (!tmp9) {
+        if (null == claimedAt) {
           num10 = c29;
         }
         num6 = num10;
-      } else if (tmp13 !== tmp15) {
+      } else if ((null != enrolledAt) !== (null != enrolledAt1)) {
         let num9 = 1;
-        if (tmp13) {
+        if (null != enrolledAt) {
           num9 = c29;
         }
         num6 = num9;
       } else {
-        value = get.get(id.id);
-        value2 = get.get(id2.id);
+        const ASC = constants10.ASC;
+        const value = get.get(id.id);
+        const value2 = get.get(id2.id);
         if (null != value) {
           if (null != value2) {
+            let num7;
             if (value !== value2) {
-              const num7 = value - value2;
-            } else if (id.id !== id2.id) {
+              num7 = value - value2;
+            } else {
+              num7 = 0;
+              if (id.id !== id2.id) {
+                let num8 = 1;
+                if (id.id < id2.id) {
+                  num8 = c29;
+                }
+                num7 = num8;
+              }
             }
+            num6 = num7;
           }
         }
         if (null != value) {
@@ -275,27 +321,29 @@ function defaultSortFn(id, id2, questHomeHero, get) {
           num6 = 1;
           if (null == value2) {
             const expiresAt = id.config.expiresAt;
-            if (constants10.ASC === constants10.DESC) {
+            const expiresAt2 = id2.config.expiresAt;
+            if (ASC === constants10.DESC) {
               num5 = c29;
             }
-            num6 = expiresAt.localeCompare(id2.config.expiresAt) * num5;
+            num6 = expiresAt.localeCompare(expiresAt2) * num5;
           }
         }
       }
     }
-    const tmp19 = null != completedAt2;
-    const tmp30 = null != completedAt3;
   }
 }
 function recentSortFn(config, config2) {
   const startsAt = config.config.startsAt;
   let num = 1;
+  const startsAt2 = config2.config.startsAt;
   if (constants10.DESC === constants10.DESC) {
     num = c29;
   }
-  return startsAt.localeCompare(config2.config.startsAt) * num;
+  return startsAt.localeCompare(startsAt2) * num;
 }
 function recentlyEnrolledSortFn(userStatus, userStatus2) {
+  let enrolledAt;
+  let num;
   userStatus = userStatus.userStatus;
   let enrolledAt1;
   if (userStatus != null) {
@@ -303,16 +351,17 @@ function recentlyEnrolledSortFn(userStatus, userStatus2) {
   }
   userStatus2 = userStatus2.userStatus;
   if (userStatus2 != null) {
-    const enrolledAt = userStatus2.enrolledAt;
+    enrolledAt = userStatus2.enrolledAt;
   }
   if (null == enrolledAt1) {
     if (null == enrolledAt) {
       const expiresAt = userStatus.config.expiresAt;
       let num3 = 1;
+      const expiresAt2 = userStatus2.config.expiresAt;
       if (constants10.DESC === constants10.DESC) {
         num3 = c29;
       }
-      let num = expiresAt.localeCompare(userStatus2.config.expiresAt) * num3;
+      num = expiresAt.localeCompare(expiresAt2) * num3;
     }
     return num;
   }
@@ -334,33 +383,36 @@ function recentlyEnrolledSortFn(userStatus, userStatus2) {
 function expiringSoonSortFn(config, config2) {
   const expiresAt = config.config.expiresAt;
   let num = 1;
+  const expiresAt2 = config2.config.expiresAt;
   if (constants10.ASC === constants10.DESC) {
     num = c29;
   }
-  return expiresAt.localeCompare(config2.config.expiresAt) * num;
+  return expiresAt.localeCompare(expiresAt2) * num;
 }
 function doesQuestPassTaskFilter(quest, arg1) {
   if (constants4.VIDEO === arg1) {
-    return QuestTaskUtils.hasWatchVideoTasks(quest);
+    const obj8 = QuestTaskUtils;
+    return obj8.hasWatchVideoTasks(quest);
   } else if (tmp.PLAY === arg1) {
-    const obj2 = { quest };
-    let hasPlayOnDesktopTaskResult = QuestTaskUtils.hasPlayOnDesktopTask(obj2);
+    obj2 = { quest };
+    const obj = QuestTaskUtils;
+    let hasPlayOnDesktopTaskResult = obj.hasPlayOnDesktopTask(obj2);
     if (!hasPlayOnDesktopTaskResult) {
-      obj3 = { quest };
-      hasPlayOnDesktopTaskResult = QuestTaskUtils.hasStreamOnDesktopTask(obj3);
+      const obj3 = { quest };
       const tmp2Result = QuestTaskUtils;
+      hasPlayOnDesktopTaskResult = tmp2Result.hasStreamOnDesktopTask(obj3);
     }
     if (!hasPlayOnDesktopTaskResult) {
-      hasPlayOnDesktopTaskResult = QuestTaskUtils.hasPlayActivityTask(quest);
       const tmp2Result4 = QuestTaskUtils;
+      hasPlayOnDesktopTaskResult = tmp2Result4.hasPlayActivityTask(quest);
     }
     if (!hasPlayOnDesktopTaskResult) {
-      hasPlayOnDesktopTaskResult = QuestTaskUtils.isConsoleQuest(quest);
       const tmp2Result5 = QuestTaskUtils;
+      hasPlayOnDesktopTaskResult = tmp2Result5.isConsoleQuest(quest);
     }
     if (!hasPlayOnDesktopTaskResult) {
-      hasPlayOnDesktopTaskResult = QuestTaskUtils.isInGameQuest(quest);
       const tmp2Result6 = QuestTaskUtils;
+      hasPlayOnDesktopTaskResult = tmp2Result6.isInGameQuest(quest);
     }
     return hasPlayOnDesktopTaskResult;
   } else {
@@ -369,14 +421,17 @@ function doesQuestPassTaskFilter(quest, arg1) {
 }
 function doesQuestPassRewardFilter(config, arg1) {
   if (constants5.VIRTUAL_CURRENCY === arg1) {
-    return QuestRewardUtils.hasVirtualCurrencyReward(config.config);
+    const obj4 = QuestRewardUtils;
+    return obj4.hasVirtualCurrencyReward(config.config);
   } else if (constants5.COLLECTIBLE === arg1) {
-    return QuestRewardUtils.hasCollectiblesQuestReward(config.config);
+    const obj3 = QuestRewardUtils;
+    return obj3.hasCollectiblesQuestReward(config.config);
   } else if (constants5.IN_GAME === arg1) {
-    let hasInGameQuestRewardResult = QuestRewardUtils.hasInGameQuestReward(config.config);
+    const obj = QuestRewardUtils;
+    let hasInGameQuestRewardResult = obj.hasInGameQuestReward(config.config);
     if (!hasInGameQuestRewardResult) {
-      hasInGameQuestRewardResult = QuestRewardUtils.hasQuestRewardCode(config.config);
       const tmp2Result = QuestRewardUtils;
+      hasInGameQuestRewardResult = tmp2Result.hasQuestRewardCode(config.config);
     }
     return hasInGameQuestRewardResult;
   } else {
@@ -384,6 +439,29 @@ function doesQuestPassRewardFilter(config, arg1) {
   }
 }
 function sortQuests(arr) {
+  let filters;
+  let sortMethod;
+  let tmp8;
+  function computeRenewableQuestSortKeys(found, currentUserId, isRenewableEndDateSortEnabled) {
+    map = new Map();
+    const tmp = isRenewableEndDateSortEnabled;
+    if (tmp) {
+      if (null != currentUserId) {
+        const iter = found[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp9 = nextResult;
+          obj2 = closure_0(dependencyMap[23]);
+          if (obj2.hasVariant(nextResult, constants.RENEWABLE_END_DATE)) {
+            let result = map.set(tmp9.id, seededQuestSortKey(currentUserId, tmp9.id));
+          }
+          continue;
+        }
+        return map;
+      }
+    }
+    return map;
+  }
   let tmp = sortMethod;
   if (sortMethod === undefined) {
     tmp = closure_37;
@@ -395,32 +473,38 @@ function sortQuests(arr) {
   ({ sortMethod, filters } = tmp);
   let obj = arr;
   if (null != filters) {
+    let num = 0;
     obj = arr;
     if (0 !== filters.length) {
       let found = arr;
       if (0 !== filters.length) {
-        _require = require("../../../../_runtime/metro/00012__.js").groupBy(filters, "group");
+        obj2 = require("../../../../_runtime/metro/00012__.js");
+        _require = obj2.groupBy(filters, "group");
         found = arr.filter((item) => {
           closure_0 = item;
           const entries = Object.entries(closure_0);
           return entries.every((item) => {
+            let arr;
+            let tmp;
+            let tmp2;
             [tmp, arr] = item;
             if ("task" === tmp) {
-              let tmp2 = doesQuestPassTaskFilter;
+              tmp2 = closure_2_35;
             } else if ("reward" === tmp) {
-              tmp2 = doesQuestPassRewardFilter;
+              tmp2 = closure_2_36;
             }
-            closure_1 = tmp2;
-            return 0 === arr.length || arr.some((item) => closure_1(closure_0, item.filter));
+            let closure_1 = tmp2;
+            const tmp3 = 0 === arr.length || arr.some((item) => closure_1(closure_0, item.filter));
+            return tmp3;
           });
         });
-        let obj2 = require("../../../../_runtime/metro/00012__.js");
       }
       obj = found;
     }
   }
+  const tmp6 = computeRenewableQuestSortKeys(obj, tmp2.currentUserId, tmp2.isRenewableEndDateSortEnabled);
   if (constants3.MOST_RECENT === sortMethod) {
-    let tmp8 = recentSortFn;
+    tmp8 = recentSortFn;
   } else if (constants3.RECENTLY_ENROLLED === sortMethod) {
     tmp8 = recentlyEnrolledSortFn;
   } else if (constants3.EXPIRING_SOON === sortMethod) {
@@ -429,55 +513,42 @@ function sortQuests(arr) {
     const SUGGESTED = constants3.SUGGESTED;
     tmp8 = defaultSortFn;
   }
-  closure_129_0 = tmp8;
-  closure_129_1 = tmp2;
-  closure_129_2 = (function computeRenewableQuestSortKeys(found, currentUserId, isRenewableEndDateSortEnabled) {
-    const map = new Map();
-    if (isRenewableEndDateSortEnabled) {
-      if (null != currentUserId) {
-        const iter = found[Symbol.iterator]();
-        const nextResult = iter.next();
-        while (iter !== undefined) {
-          let tmp8 = nextResult;
-          let obj2 = closure_0(dependencyMap[23]);
-          if (obj2.hasVariant(nextResult, constants.RENEWABLE_END_DATE)) {
-            let result = map.set(tmp8.id, seededQuestSortKey(currentUserId, tmp8.id));
-          }
-          continue;
-        }
-        return map;
-      }
-    }
-    return map;
-  })(obj, tmp2.currentUserId, tmp2.isRenewableEndDateSortEnabled);
-  return obj.sort((stateFromStores, stateFromStores) => {
-    const isQuestExpiredResult = QuestDataUtils.isQuestExpired(stateFromStores);
+  _require = tmp8;
+  let closure_1 = tmp2;
+  let closure_2 = tmp6;
+  return obj.sort((arg0, arg1) => {
+    let tmp8;
+    const obj = closure_0(dependencyMap[21]);
+    const isQuestExpiredResult = obj.isQuestExpired(arg0);
     const tmp2 = !isQuestExpiredResult;
-    if (tmp2 !== !obj2.isQuestExpired(stateFromStores)) {
+    obj2 = closure_0(dependencyMap[21]);
+    if (tmp2 !== !obj2.isQuestExpired(arg1)) {
       let num = 1;
       if (!isQuestExpiredResult) {
-        num = c29;
+        num = closure_2_29;
       }
-      let tmp8 = num;
+      tmp8 = num;
     } else {
-      tmp8 = closure_0(stateFromStores, stateFromStores, importDefault, dependencyMap);
+      tmp8 = closure_0(arg0, arg1, closure_1, closure_2);
     }
     return tmp8;
   });
 }
 function seededQuestSortKey(currentUserId, id) {
-  return MurmurHashV3Default.v3("" + currentUserId + ":" + id) >>> 0;
+  const obj = _modDef1251;
+  return obj.v3("" + currentUserId + ":" + id) >>> 0;
 }
 function useAllQuests(quests, sortMethod) {
+  let ref3;
   const tmp = closure_42();
   const current = tmp;
-  noop.useRef([]);
-  noop.useRef(sortMethod.sortMethod);
-  noop = noop.useRef(sortMethod.filters);
-  noop.useRef(0);
-  noop.useRef(tmp);
+  const ref = react.useRef([]);
+  const ref2 = react.useRef(sortMethod.sortMethod);
+  react = react.useRef(sortMethod.filters);
+  const ref4 = react.useRef(0);
+  const ref5 = react.useRef(tmp);
   const items = [quests, sortMethod, tmp];
-  return noop.useMemo(() => {
+  return react.useMemo(() => {
     if (0 === quests.length) {
       return [];
     } else {
@@ -492,7 +563,8 @@ function useAllQuests(quests, sortMethod) {
           }
         }
       }
-      const mapped = sortQuests(quests, sortMethod, current).map((id) => id.id);
+      const arr2 = sortQuests(quests, sortMethod, current);
+      const mapped = arr2.map((id) => id.id);
       ref.current = mapped;
       ref2.current = sortMethod.sortMethod;
       ref3.current = sortMethod.filters;
@@ -504,9 +576,10 @@ function useAllQuests(quests, sortMethod) {
 }
 function useCompletedAndClaimedQuests(quests) {
   const items = [quests];
-  const memo = noop.useMemo(
+  const memo = react.useMemo(
     () =>
       quests.filter((userStatus) => {
+        let claimedAt;
         userStatus = userStatus.userStatus;
         let completedAt;
         if (userStatus != null) {
@@ -515,7 +588,7 @@ function useCompletedAndClaimedQuests(quests) {
         let tmp2 = null != completedAt;
         const userStatus2 = userStatus.userStatus;
         if (userStatus2 != null) {
-          const claimedAt = userStatus2.claimedAt;
+          claimedAt = userStatus2.claimedAt;
         }
         if (tmp2) {
           tmp2 = null != claimedAt;
@@ -524,9 +597,9 @@ function useCompletedAndClaimedQuests(quests) {
       }),
     items,
   );
-  noop.useRef([]);
+  const ref = react.useRef([]);
   const items1 = [memo];
-  return noop.useMemo(() => {
+  return react.useMemo(() => {
     if (0 === memo.length) {
       return [];
     } else {
@@ -536,6 +609,7 @@ function useCompletedAndClaimedQuests(quests) {
         }
       }
       const sorted = memo.sort((userStatus, userStatus2) => {
+        let result;
         userStatus = userStatus.userStatus;
         let claimedAt;
         if (userStatus != null) {
@@ -548,17 +622,18 @@ function useCompletedAndClaimedQuests(quests) {
         }
         if ((null == claimedAt) !== (null == claimedAt1)) {
           let num2 = 1;
-          if (tmp2) {
+          if (null == claimedAt) {
             num2 = closure_1_29;
           }
-          let result = num2;
+          result = num2;
         } else {
           const rewardsExpireAt = userStatus.config.rewardsConfig.rewardsExpireAt;
           let num = 1;
+          const rewardsExpireAt2 = userStatus2.config.rewardsConfig.rewardsExpireAt;
           if (constants.DESC === constants.DESC) {
             num = closure_1_29;
           }
-          result = rewardsExpireAt.localeCompare(userStatus2.config.rewardsConfig.rewardsExpireAt) * num;
+          result = rewardsExpireAt.localeCompare(rewardsExpireAt2) * num;
         }
         return result;
       });
@@ -569,15 +644,21 @@ function useCompletedAndClaimedQuests(quests) {
   }, items1);
 }
 function isQuestHiddenFromQuestHome(userStatus) {
-  let isQuestExpiredResult = QuestDataUtils.isQuestExpired(userStatus);
+  const obj = QuestDataUtils;
+  let isQuestExpiredResult = obj.isQuestExpired(userStatus);
   if (isQuestExpiredResult) {
-    isQuestExpiredResult = !QuestDataUtils.hasUnclaimedReward(userStatus.userStatus);
     const tmpResult = QuestDataUtils;
+    isQuestExpiredResult = !tmpResult.hasUnclaimedReward(userStatus.userStatus);
   }
   return isQuestExpiredResult;
 }
-const useConsoleQuestUIStore = fn(7188).useConsoleQuestUIStore;
-const QuestConstants = fn(5623);
+let _asyncToGenerator = _asyncToGenerator_mod;
+let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
+let AdDeliveryStore = AdDeliveryStore_mod;
+let LocaleStore = LocaleStore_mod;
+let ChannelStore = ChannelStore_mod;
+const useConsoleQuestUIStore = ConsoleQuestUIStore.useConsoleQuestUIStore;
 ({
   QuestTaskPlatform: closure_14,
   QuestsExperimentLocations: closure_15,
@@ -590,32 +671,44 @@ const QuestConstants = fn(5623);
   ORBS_INTRO_QUEST_ID: closure_22,
   QuestVariants: closure_23,
 } = QuestConstants);
-const Constants = fn(1085);
 ({
   HelpdeskArticles: closure_24,
   PlatformTypes: closure_25,
   ThemeTypes: closure_26,
   AnalyticEvents: closure_27,
 } = Constants);
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = PremiumConstants.PremiumTypes;
 let c29 = -1;
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = require("c").c(25);
+      let closure_2;
+      let closure_5;
+      let lastFetchedCurrentQuests;
+      let tmp11;
+      let tmp12;
+      let tmp15;
+      let tmp16;
+      let tmp19;
+      let tmp4;
+      let tmp7;
+      let tmp8;
+      let obj = require("react");
+      const cResult = obj.c(25);
       if (cResult[0] !== arg0) {
-        let obj2 = arg0;
+        obj2 = arg0;
         if (undefined === arg0) {
           obj2 = { fetchPolicy: "cache-only", callerSource: "unknown" };
         }
         cResult[0] = arg0;
         cResult[1] = obj2;
-        let tmp4 = obj2;
+        tmp4 = obj2;
       } else {
         tmp4 = cResult[1];
       }
       _require = tmp4;
-      const tmp5 = lastFetchedCurrentQuests(noop.useState(false), 2);
+      let obj3 = react;
+      const tmp5 = lastFetchedCurrentQuests(react.useState(false), 2);
       const first = tmp5[0];
       dependencyMap = tmp5[1];
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
@@ -627,93 +720,93 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[2] = items;
         cResult[3] = fn;
-        let tmp8 = fn;
-        let tmp7 = items;
+        tmp8 = fn;
+        tmp7 = items;
       } else {
         tmp7 = cResult[2];
         tmp8 = cResult[3];
       }
-      let obj = require("c");
-      obj3 = noop;
-      const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp7, tmp8);
+      const tmpResult = require("get initialized");
+      const stateFromStoresArray = tmpResult.useStateFromStoresArray(tmp7, tmp8);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [QuestStore];
         class T {
           constructor() {
-            excludedQuests = closure_1_13.excludedQuests;
-            items = [...excludedQuests.values()];
+            const excludedQuests = QuestStore.excludedQuests;
+            const items = [...excludedQuests.values()];
             return items;
           }
         }
         cResult[4] = items1;
         cResult[5] = T;
-        let tmp12 = T;
-        let tmp11 = items1;
+        tmp12 = T;
+        tmp11 = items1;
       } else {
         tmp11 = cResult[4];
         tmp12 = cResult[5];
       }
-      const tmpResult = require("initialize");
-      const stateFromStoresArray1 = require("initialize").useStateFromStoresArray(tmp11, tmp12);
+      const tmpResult4 = require("get initialized");
+      const stateFromStoresArray1 = tmpResult4.useStateFromStoresArray(tmp11, tmp12);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [QuestStore];
         class P {
           constructor() {
-            obj = {
-              isFetchingCurrentQuests: closure_1_13.isFetchingCurrentQuests,
-              lastFetchedCurrentQuests: closure_1_13.lastFetchedCurrentQuests,
+            return {
+              isFetchingCurrentQuests: QuestStore.isFetchingCurrentQuests,
+              lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests,
             };
-            return obj;
           }
         }
         cResult[6] = items2;
         cResult[7] = P;
-        let tmp16 = P;
-        let tmp15 = items2;
+        tmp16 = P;
+        tmp15 = items2;
       } else {
         tmp15 = cResult[6];
         tmp16 = cResult[7];
       }
-      const tmpResult4 = require("initialize");
-      const stateFromStoresObject = require("initialize").useStateFromStoresObject(tmp15, tmp16);
+      const tmpResult5 = require("get initialized");
+      const stateFromStoresObject = tmpResult5.useStateFromStoresObject(tmp15, tmp16);
       const isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
       lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const isEligibleForQuests = tmp(10912).getIsEligibleForQuests();
+        const tmpResult6 = require("QuestsEligibility");
+        const isEligibleForQuests = tmpResult6.getIsEligibleForQuests();
         class P {
           constructor() {
-            obj = {
-              isFetchingCurrentQuests: closure_1_13.isFetchingCurrentQuests,
-              lastFetchedCurrentQuests: closure_1_13.lastFetchedCurrentQuests,
+            return {
+              isFetchingCurrentQuests: QuestStore.isFetchingCurrentQuests,
+              lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests,
             };
-            return obj;
           }
         }
-        let tmp19 = isEligibleForQuests;
-        const tmpResult6 = tmp(10912);
+        tmp19 = isEligibleForQuests;
       } else {
         tmp19 = cResult[8];
       }
-      noop = tmp19;
+      react = tmp19;
       if (cResult[9] === first) {
         if (cResult[10] === isFetchingCurrentQuests) {
           if (cResult[11] === lastFetchedCurrentQuests) {
+            let tmp21;
             if (cResult[12] === tmp4.fetchPolicy) {
-              let tmp21 = cResult[13];
+              tmp21 = cResult[13];
             }
             if (cResult[14] === first) {
               if (cResult[15] === isFetchingCurrentQuests) {
                 if (cResult[16] === lastFetchedCurrentQuests) {
                   if (cResult[17] === tmp4.callerSource) {
+                    let tmp22;
                     if (cResult[18] === tmp4.fetchPolicy) {
-                      let tmp22 = cResult[19];
+                      tmp22 = cResult[19];
                     }
                     const effect = obj3.useEffect(tmp21, tmp22);
                     if (cResult[20] === stateFromStoresArray1) {
                       if (cResult[21] === first) {
                         if (cResult[22] === isFetchingCurrentQuests) {
+                          let tmp24;
                           if (cResult[23] === stateFromStoresArray) {
-                            let tmp24 = cResult[24];
+                            tmp24 = cResult[24];
                           }
                           return tmp24;
                         }
@@ -721,11 +814,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     class P {
                       constructor() {
-                        obj = {
-                          isFetchingCurrentQuests: closure_1_13.isFetchingCurrentQuests,
-                          lastFetchedCurrentQuests: closure_1_13.lastFetchedCurrentQuests,
+                        return {
+                          isFetchingCurrentQuests: QuestStore.isFetchingCurrentQuests,
+                          lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests,
                         };
-                        return obj;
                       }
                     }
                     tmp25[0] = stateFromStoresArray;
@@ -745,11 +837,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             const items3 = [, , , , ,];
             class P {
               constructor() {
-                obj = {
-                  isFetchingCurrentQuests: closure_1_13.isFetchingCurrentQuests,
-                  lastFetchedCurrentQuests: closure_1_13.lastFetchedCurrentQuests,
+                return {
+                  isFetchingCurrentQuests: QuestStore.isFetchingCurrentQuests,
+                  lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests,
                 };
-                return obj;
               }
             }
             items3[1] = tmp19;
@@ -769,46 +860,34 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       class F {
         constructor() {
-          fetchPolicy = closure_0.fetchPolicy;
+          fetchPolicy = fetchPolicy.fetchPolicy;
           if ("cache-only" !== fetchPolicy) {
-            str2 = "cache-or-network";
+            let flag;
             if ("cache-or-network" === fetchPolicy) {
-              tmp = lastFetchedCurrentQuests;
-              num = 0;
               flag = 0 === lastFetchedCurrentQuests;
             } else {
-              str = "cache-and-network";
               flag = true;
             }
             if (flag) {
               flag = closure_5;
             }
             if (flag) {
-              tmp2 = closure_1;
-              flag = !closure_1;
+              flag = !first;
             }
             if (flag) {
-              tmp3 = isFetchingCurrentQuests;
               flag = !isFetchingCurrentQuests;
             }
             if (flag) {
-              tmp4 = closure_2;
-              flag2 = true;
-              tmp5 = closure_2(true);
-              tmp6 = closure_0;
-              tmp7 = closure_2;
-              obj = closure_0(closure_2[18]);
-              currentQuests = obj.fetchCurrentQuests();
-              obj2 = closure_0(closure_2[19]);
+              closure_2(true);
+              const obj = QuestActionCreators;
+              const currentQuests = obj.fetchCurrentQuests();
+              obj2 = PlatformUtils;
               if (obj2.isMac()) {
-                tmp9 = closure_1;
-                obj3 = closure_1(tmp7[20]);
-                state = obj3.getState();
+                const obj3 = DiscordAppStateDefault;
+                const state = obj3.getState();
               }
             }
-            return;
           }
-          return;
         }
       }
       cResult[9] = first;
@@ -817,9 +896,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = tmp4.fetchPolicy;
       cResult[13] = F;
       tmp21 = F;
-      const tmpResult5 = require("initialize");
     }
   : () => {
+      let closure_2;
       let obj = arg0;
       if (arg0 === undefined) {
         obj = { fetchPolicy: "cache-only", callerSource: "unknown" };
@@ -829,29 +908,30 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = lastFetchedCurrentQuests(isEligibleForQuests.useState(false), 2);
       const hasFetched = tmp[0];
       dependencyMap = tmp[1];
+      obj2 = obj(504);
       let items = [QuestStore];
-      let quests = obj(504).useStateFromStoresArray(items, () => {
+      let quests = obj2.useStateFromStoresArray(items, () => {
         const quests = QuestStore.quests;
         const items = [...quests.values()];
         return items;
       });
-      let obj2 = obj(504);
+      let obj3 = obj(504);
       const items1 = [QuestStore];
-      let excludedQuests = obj(504).useStateFromStoresArray(items1, () => {
+      let excludedQuests = obj3.useStateFromStoresArray(items1, () => {
         const excludedQuests = QuestStore.excludedQuests;
         const items = [...excludedQuests.values()];
         return items;
       });
-      obj3 = obj(504);
       const items2 = [QuestStore];
-      const stateFromStoresObject = obj(504).useStateFromStoresObject(items2, () => ({
+      const obj4 = obj(504);
+      const stateFromStoresObject = obj4.useStateFromStoresObject(items2, () => ({
         isFetchingCurrentQuests: QuestStore.isFetchingCurrentQuests,
         lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests,
       }));
       const isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
       lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
-      const obj4 = obj(504);
-      isEligibleForQuests = obj(10912).getIsEligibleForQuests();
+      const obj5 = obj(10912);
+      isEligibleForQuests = obj5.getIsEligibleForQuests();
       const items3 = [
         obj.fetchPolicy,
         isEligibleForQuests,
@@ -863,8 +943,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = isEligibleForQuests.useEffect(() => {
         const fetchPolicy = obj.fetchPolicy;
         if ("cache-only" !== fetchPolicy) {
+          let flag;
           if ("cache-or-network" === fetchPolicy) {
-            let flag = 0 === lastFetchedCurrentQuests;
+            flag = 0 === lastFetchedCurrentQuests;
           } else {
             flag = true;
             if ("cache-and-network" !== fetchPolicy) {
@@ -884,10 +965,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             closure_2(true);
             obj = QuestActionCreators;
             const currentQuests = obj.fetchCurrentQuests();
-            if (obj2.isMac()) {
-              state = DiscordAppStateDefault.getState();
-            }
             obj2 = PlatformUtils;
+            if (obj2.isMac()) {
+              const obj3 = DiscordAppStateDefault;
+              const state = obj3.getState();
+            }
           }
         }
       }, items3);
@@ -903,10 +985,17 @@ let closure_38 = {
   isMobileQuestHomeSortPriorityEnabled: false,
 };
 const constants10 = { DESC: 0, [0]: "DESC", ASC: 1, [1]: "ASC" };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_42 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(12);
+      let tmp12;
+      let tmp14;
+      let tmp4;
+      let tmp5;
+      let tmp8;
+      let tmp9;
+      const obj = react2;
+      const cResult = obj.c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AdDeliveryStore];
         const fn = function s() {
@@ -919,7 +1008,8 @@ let closure_42 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       const isShelfEnabled = closure_61(stateFromStores).isShelfEnabled;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [UserStore];
@@ -936,27 +1026,27 @@ let closure_42 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[2] = items1;
         cResult[3] = fn2;
-        let tmp9 = fn2;
-        let tmp8 = items1;
+        tmp9 = fn2;
+        tmp8 = items1;
       } else {
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const tmpResult = initialize;
-      const stateFromStores1 = initialize.useStateFromStores(tmp8, tmp9);
+      const tmpResult2 = get_initialized;
+      const stateFromStores1 = tmpResult2.useStateFromStores(tmp8, tmp9);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { location: constants2.QUEST_HOME_MOBILE };
+        obj2 = { location: constants2.QUEST_HOME_MOBILE };
         cResult[4] = obj2;
-        let tmp12 = obj2;
+        tmp12 = obj2;
       } else {
         tmp12 = cResult[4];
       }
-      const tmpResult2 = initialize;
-      const enabled = RenewableEndDateSortExperimentDefault.useConfig(tmp12).enabled;
+      const obj5 = RenewableEndDateSortExperimentDefault;
+      const enabled = obj5.useConfig(tmp12).enabled;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        obj3 = { location: constants2.QUEST_HOME_MOBILE };
+        const obj3 = { location: constants2.QUEST_HOME_MOBILE };
         cResult[5] = obj3;
-        let tmp14 = obj3;
+        tmp14 = obj3;
       } else {
         tmp14 = cResult[5];
       }
@@ -966,8 +1056,9 @@ let closure_42 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[7] === enabled2) {
           if (cResult[8] === enabled) {
             if (cResult[9] === isShelfEnabled) {
+              let tmp16;
               if (cResult[10] === stateFromStores) {
-                let tmp16 = cResult[11];
+                tmp16 = cResult[11];
               }
               return tmp16;
             }
@@ -990,12 +1081,15 @@ let closure_42 = ReactCompilerGating.isReactCompilerEnabled()
       tmp16 = obj4;
     }
   : () => {
+      let stateFromStores;
+      let stateFromStores1;
       const items = [AdDeliveryStore];
-      stateFromStores = stateFromStores(stateFromStores1[16]).useStateFromStores(items, () => null);
-      const isShelfEnabled = closure_61(stateFromStores).isShelfEnabled;
       const obj = stateFromStores(stateFromStores1[16]);
+      stateFromStores = obj.useStateFromStores(items, () => null);
+      const isShelfEnabled = closure_61(stateFromStores).isShelfEnabled;
       const items1 = [UserStore];
-      stateFromStores1 = stateFromStores(stateFromStores1[16]).useStateFromStores(items1, () => {
+      obj2 = stateFromStores(stateFromStores1[16]);
+      stateFromStores1 = obj2.useStateFromStores(items1, () => {
         currentUser = currentUser.getCurrentUser();
         let id;
         if (currentUser != null) {
@@ -1006,18 +1100,16 @@ let closure_42 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return id;
       });
-      const obj2 = stateFromStores(stateFromStores1[16]);
-      const enabled = isShelfEnabled(stateFromStores1[29]).useConfig({
-        location: constants2.QUEST_HOME_MOBILE,
-      }).enabled;
+      const obj3 = isShelfEnabled(stateFromStores1[29]);
+      const obj4 = { location: constants2.QUEST_HOME_MOBILE };
+      const enabled = obj3.useConfig(obj4).enabled;
       const MobileQuestHomeSortPriorityExperiment = stateFromStores(
         stateFromStores1[30],
       ).MobileQuestHomeSortPriorityExperiment;
-      const enabled2 = MobileQuestHomeSortPriorityExperiment.useConfig({
-        location: constants2.QUEST_HOME_MOBILE,
-      }).enabled;
+      const obj5 = { location: constants2.QUEST_HOME_MOBILE };
+      const enabled2 = MobileQuestHomeSortPriorityExperiment.useConfig(obj5).enabled;
       const items2 = [stateFromStores, isShelfEnabled, stateFromStores1, enabled, enabled2];
-      return noop.useMemo(
+      return react.useMemo(
         () => ({
           questHomeHero: stateFromStores,
           isQuestHomeHeroShelfEnabled: isShelfEnabled,
@@ -1028,20 +1120,25 @@ let closure_42 = ReactCompilerGating.isReactCompilerEnabled()
         items2,
       );
     };
-let obj3 = { ALL: "all", CLAIMED: "claimed", PREVIEW_TOOL: "preview_tool" };
-fn(558);
-ReactCompilerGating = fn(558);
+const QuestTabs = { ALL: "all", CLAIMED: "claimed", PREVIEW_TOOL: "preview_tool" };
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, sortMethod) => {
+      let excludedQuests;
+      let first;
+      let hasFetched;
+      let isFetchingCurrentQuests;
+      let tmp5;
       let tmp = sortMethod;
-      const cResult = c.c(2);
+      const obj = react2;
+      const cResult = obj.c(2);
       if (undefined === sortMethod) {
         tmp = closure_37;
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { fetchPolicy: "cache-and-network", callerSource: "use_filtered_quests" };
+        obj2 = { fetchPolicy: "cache-and-network", callerSource: "use_filtered_quests" };
         cResult[0] = obj2;
-        let first = obj2;
+        first = obj2;
       } else {
         first = cResult[0];
       }
@@ -1054,20 +1151,24 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           return items;
         };
         cResult[1] = fn;
-        let tmp5 = fn;
+        tmp5 = fn;
       } else {
         tmp5 = cResult[1];
       }
-      const map = new Map(quests.map(tmp5));
-      const tmp7 = useCompletedAndClaimedQuests(quests);
-      const quests1 = [];
+      map = new Map(quests.map(tmp5));
       const tmp6 = useAllQuests(quests, tmp);
+      let tmp7 = useCompletedAndClaimedQuests(quests);
+      if (arg0 === obj.ALL) {
+        tmp7 = tmp6;
+      }
+      const quests1 = [];
+      const tmp8 = tmp7[Symbol.iterator]();
       while (tmp8 !== undefined) {
-        value = map.get(tmp9);
+        let value = map.get(tmp9);
         let tmp11 = value;
         let removeExpiredQuests = null != value;
         if (removeExpiredQuests) {
-          removeExpiredQuests = arg0 === obj3.ALL;
+          removeExpiredQuests = arg0 === obj.ALL;
         }
         if (removeExpiredQuests) {
           removeExpiredQuests = tmp.removeExpiredQuests;
@@ -1084,6 +1185,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       return { quests: quests1, excludedQuests, isFetchingCurrentQuests, hasFetched };
     }
   : (arg0) => {
+      let excludedQuests;
+      let hasFetched;
+      let isFetchingCurrentQuests;
       let tmp = sortMethod;
       if (sortMethod === undefined) {
         tmp = closure_37;
@@ -1091,25 +1195,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = closure_30({ fetchPolicy: "cache-and-network", callerSource: "use_filtered_quests" });
       const quests = tmp2.quests;
       ({ excludedQuests, isFetchingCurrentQuests, hasFetched } = tmp2);
-      const map = new Map(
+      map = new Map(
         quests.map((id) => {
           const items = [id.id, id];
           return items;
         }),
       );
-      const tmp4 = useCompletedAndClaimedQuests(quests);
-      const quests1 = [];
       const tmp3 = useAllQuests(quests, tmp);
+      let tmp4 = useCompletedAndClaimedQuests(quests);
+      if (arg0 === obj.ALL) {
+        tmp4 = tmp3;
+      }
+      const quests1 = [];
+      const tmp5 = tmp4[Symbol.iterator]();
       while (tmp5 !== undefined) {
-        value = map.get(tmp6);
+        let value = map.get(tmp6);
         let tmp8 = value;
-        let removeExpiredQuests = null != value;
-        if (removeExpiredQuests) {
-          removeExpiredQuests = arg0 === obj3.ALL;
-        }
-        if (removeExpiredQuests) {
-          removeExpiredQuests = tmp.removeExpiredQuests;
-        }
+        let removeExpiredQuests = null != value && arg0 === obj.ALL && tmp.removeExpiredQuests;
         if (removeExpiredQuests) {
           removeExpiredQuests = isQuestHiddenFromQuestHome(tmp8);
         }
@@ -1121,11 +1223,19 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return { quests: quests1, excludedQuests, isFetchingCurrentQuests, hasFetched };
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = require("c").c(10);
-      _require = noop.useRef(false);
+      let obj3;
+      let ref;
+      let tmp13;
+      let tmp4;
+      let tmp5;
+      let tmp8;
+      let tmp9;
+      let obj = require("react");
+      const cResult = obj.c(10);
+      _require = react.useRef(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [QuestStore];
         const fn = function s() {
@@ -1139,8 +1249,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      let obj = require("c");
-      const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp4, tmp5);
+      const tmpResult = require("get initialized");
+      const stateFromStoresArray = tmpResult.useStateFromStoresArray(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [QuestStore];
         const fn2 = function l() {
@@ -1148,80 +1258,53 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[2] = items1;
         cResult[3] = fn2;
-        let tmp9 = fn2;
-        let tmp8 = items1;
+        tmp9 = fn2;
+        tmp8 = items1;
       } else {
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const tmpResult = require("initialize");
-      const stateFromStores = require("initialize").useStateFromStores(tmp8, tmp9);
+      const tmpResult2 = require("get initialized");
+      const stateFromStores = tmpResult2.useStateFromStores(tmp8, tmp9);
       if (cResult[4] !== stateFromStores) {
         class S {
           constructor() {
-            current = closure_1;
-            if (!closure_1) {
-              tmp = closure_0;
-              current = closure_0.current;
-            }
+            const current = stateFromStores || ref.current;
             if (!current) {
-              tmp2 = closure_0;
-              flag = true;
-              closure_0.current = true;
-              tmp3 = closure_0;
-              tmp4 = closure_2;
-              obj = closure_0(closure_2[18]);
-              claimedQuests = obj.fetchClaimedQuests();
+              ref.current = true;
+              const obj = QuestActionCreators;
+              const claimedQuests = obj.fetchClaimedQuests();
             }
-            return;
           }
         }
         const items2 = [stateFromStores];
         cResult[4] = stateFromStores;
         cResult[5] = S;
         cResult[6] = items2;
-        let tmp13 = items2;
+        tmp13 = items2;
       } else {
         class S {
           constructor() {
-            current = closure_1;
-            if (!closure_1) {
-              tmp = closure_0;
-              current = closure_0.current;
-            }
+            const current = stateFromStores || ref.current;
             if (!current) {
-              tmp2 = closure_0;
-              flag = true;
-              closure_0.current = true;
-              tmp3 = closure_0;
-              tmp4 = closure_2;
-              obj = closure_0(closure_2[18]);
-              claimedQuests = obj.fetchClaimedQuests();
+              ref.current = true;
+              const obj = QuestActionCreators;
+              const claimedQuests = obj.fetchClaimedQuests();
             }
-            return;
           }
         }
         tmp13 = cResult[6];
       }
-      const effect = noop.useEffect(S, tmp13);
+      const effect = react.useEffect(S, tmp13);
       if (cResult[7] === stateFromStoresArray) {
         class S {
           constructor() {
-            current = closure_1;
-            if (!closure_1) {
-              tmp = closure_0;
-              current = closure_0.current;
-            }
+            const current = stateFromStores || ref.current;
             if (!current) {
-              tmp2 = closure_0;
-              flag = true;
-              closure_0.current = true;
-              tmp3 = closure_0;
-              tmp4 = closure_2;
-              obj = closure_0(closure_2[18]);
-              claimedQuests = obj.fetchClaimedQuests();
+              ref.current = true;
+              const obj = QuestActionCreators;
+              const claimedQuests = obj.fetchClaimedQuests();
             }
-            return;
           }
         }
         return obj3;
@@ -1230,38 +1313,38 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = stateFromStoresArray;
       cResult[8] = stateFromStores;
       cResult[9] = obj3;
-      const tmpResult2 = require("initialize");
     }
   : () => {
-      _require = noop.useRef(false);
+      let ref;
+      _require = react.useRef(false);
+      let obj = require("get initialized");
       const items = [QuestStore];
-      let claimedQuests = require("initialize").useStateFromStoresArray(items, () => {
+      let claimedQuests = obj.useStateFromStoresArray(items, () => {
         const claimedQuests = QuestStore.claimedQuests;
         return Array.from(claimedQuests.values());
       });
-      let obj = require("initialize");
       const items1 = [QuestStore];
-      const isFetchingClaimedQuests = require("initialize").useStateFromStores(
-        items1,
-        () => QuestStore.isFetchingClaimedQuests,
-      );
+      obj2 = require("get initialized");
+      const isFetchingClaimedQuests = obj2.useStateFromStores(items1, () => QuestStore.isFetchingClaimedQuests);
       const items2 = [isFetchingClaimedQuests];
-      const effect = noop.useEffect(() => {
-        let current = isFetchingClaimedQuests;
-        if (!isFetchingClaimedQuests) {
-          current = ref.current;
-        }
+      const effect = react.useEffect(() => {
+        const current = isFetchingClaimedQuests || ref.current;
         if (!current) {
           ref.current = true;
-          const claimedQuests = QuestActionCreators.fetchClaimedQuests();
+          const obj = QuestActionCreators;
+          const claimedQuests = obj.fetchClaimedQuests();
         }
       }, items2);
       return { claimedQuests, isFetchingClaimedQuests };
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let expiredQuestsMap;
+      let tmp4;
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [QuestStore];
         const fn = function s() {
@@ -1274,36 +1357,43 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      return initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStores(tmp4, tmp5);
     }
   : () => {
+      let expiredQuestsMap;
       const items = [QuestStore];
-      return initialize.useStateFromStores(items, () => expiredQuestsMap.getExpiredQuestsMap());
+      const obj = get_initialized;
+      return obj.useStateFromStores(items, () => expiredQuestsMap.getExpiredQuestsMap());
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
   ? (config, arg1) => {
-      const cResult = c.c(4);
+      let tmp5;
+      let tmp7;
+      const obj = react2;
+      const cResult = obj.c(4);
       const tmp4 = closure_47(config);
       if (cResult[0] !== config.config) {
-        const result = QuestRewardUtils.hasVirtualCurrencyReward(config.config);
+        const tmpResult = QuestRewardUtils;
+        const result = tmpResult.hasVirtualCurrencyReward(config.config);
         cResult[0] = config.config;
         cResult[1] = result;
-        let tmp5 = result;
-        const tmpResult = QuestRewardUtils;
+        tmp5 = result;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] !== config.config) {
-        const result1 = QuestRewardUtils.hasPremiumOrbQuantity(config.config);
+        const tmpResult2 = QuestRewardUtils;
+        const result1 = tmpResult2.hasPremiumOrbQuantity(config.config);
         cResult[2] = config.config;
         cResult[3] = result1;
-        let tmp7 = result1;
-        const tmpResult2 = QuestRewardUtils;
+        tmp7 = result1;
       } else {
         tmp7 = cResult[3];
       }
       let tmp9 = !tmp4;
+      const INELIGIBLE = QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.INELIGIBLE;
       if (!tmp4) {
         tmp9 = tmp5;
       }
@@ -1311,15 +1401,18 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = tmp7;
       }
       if (tmp9) {
-        tmp9 = arg1 !== QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.INELIGIBLE;
+        tmp9 = arg1 !== INELIGIBLE;
       }
       return tmp9;
     }
   : (config, arg1) => {
       const tmp = closure_47(config);
-      const result = QuestRewardUtils.hasVirtualCurrencyReward(config.config);
-      const result1 = QuestRewardUtils.hasPremiumOrbQuantity(config.config);
+      const obj = QuestRewardUtils;
+      const result = obj.hasVirtualCurrencyReward(config.config);
+      obj2 = QuestRewardUtils;
+      const result1 = obj2.hasPremiumOrbQuantity(config.config);
       let tmp4 = !tmp;
+      const INELIGIBLE = QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.INELIGIBLE;
       if (!tmp) {
         tmp4 = result;
       }
@@ -1327,115 +1420,131 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = result1;
       }
       if (tmp4) {
-        tmp4 = arg1 !== QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.INELIGIBLE;
+        tmp4 = arg1 !== INELIGIBLE;
       }
       return tmp4;
     };
-ReactCompilerGating = fn(558);
-let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
+      let tmp7;
       _require = arg0;
-      const cResult = require("c").c(4);
+      let obj = require("react");
+      const cResult = obj.c(4);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [QuestStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         const fn = function n() {
-          let isQuestExpiredResult = null != closure_0;
-          if (isQuestExpiredResult) {
-            isQuestExpiredResult = QuestStore.isQuestExpired(tmp.id);
+          const quest = QuestStore.getQuest(closure_0);
+          let questOrbMultiplier = null;
+          if (null != quest) {
+            const obj = QuestRewardUtils;
+            questOrbMultiplier = obj.getQuestOrbMultiplier(quest.config);
           }
+          return questOrbMultiplier;
+        };
+        const items1 = [arg0];
+        cResult[1] = arg0;
+        cResult[2] = fn;
+        cResult[3] = items1;
+        tmp7 = items1;
+        tmp6 = fn;
+      } else {
+        tmp6 = cResult[2];
+        tmp7 = cResult[3];
+      }
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6, tmp7);
+    }
+  : (arg0) => {
+      let closure_0;
+      _require = arg0;
+      let obj = require("get initialized");
+      const items = [QuestStore];
+      const items1 = [arg0];
+      return obj.useStateFromStores(
+        items,
+        () => {
+          const quest = QuestStore.getQuest(closure_0);
+          let questOrbMultiplier = null;
+          if (null != quest) {
+            const obj = QuestRewardUtils;
+            questOrbMultiplier = obj.getQuestOrbMultiplier(quest.config);
+          }
+          return questOrbMultiplier;
+        },
+        items1,
+      );
+    };
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
+      let tmp7;
+      _require = arg0;
+      const tmp = _require;
+      const obj = require("react");
+      const cResult = obj.c(4);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [QuestStore];
+        cResult[0] = items;
+        first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== arg0) {
+        const fn = function n() {
+          const isQuestExpiredResult = null != closure_0 && QuestStore.isQuestExpired(tmp.id);
           return isQuestExpiredResult;
         };
         const items1 = [arg0];
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6, tmp7);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6, tmp7);
     }
   : (arg0) => {
+      let closure_0;
       _require = arg0;
       const items = [QuestStore];
       const items1 = [arg0];
-      return require("initialize").useStateFromStores(
+      const obj = require("get initialized");
+      return obj.useStateFromStores(
         items,
         () => {
-          let isQuestExpiredResult = null != closure_0;
-          if (isQuestExpiredResult) {
-            isQuestExpiredResult = QuestStore.isQuestExpired(tmp.id);
-          }
+          const isQuestExpiredResult = null != closure_0 && QuestStore.isQuestExpired(tmp.id);
           return isQuestExpiredResult;
         },
         items1,
       );
     };
 let closure_47 = tmp10;
-ReactCompilerGating = fn(558);
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      _require = arg0;
-      const cResult = require("c").c(4);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [QuestStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== arg0) {
-        const fn = function n() {
-          const quest = QuestStore.getQuest(closure_0);
-          let questOrbMultiplier = null;
-          if (null != quest) {
-            questOrbMultiplier = QuestRewardUtils.getQuestOrbMultiplier(quest.config);
-          }
-          return questOrbMultiplier;
-        };
-        const items1 = [arg0];
-        cResult[1] = arg0;
-        cResult[2] = fn;
-        cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
-      } else {
-        tmp6 = cResult[2];
-        tmp7 = cResult[3];
-      }
-      let obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6, tmp7);
-    }
-  : (arg0) => {
-      _require = arg0;
-      const items = [QuestStore];
-      const items1 = [arg0];
-      return require("initialize").useStateFromStores(
-        items,
-        () => {
-          const quest = QuestStore.getQuest(closure_0);
-          let questOrbMultiplier = null;
-          if (null != quest) {
-            questOrbMultiplier = QuestRewardUtils.getQuestOrbMultiplier(quest.config);
-          }
-          return questOrbMultiplier;
-        },
-        items1,
-      );
-    };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(3);
+      let tmp4;
+      let tmp5;
+      let tmp6;
+      const obj = react2;
+      const cResult = obj.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [QuestStore];
         const fn = function s() {
@@ -1451,39 +1560,53 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5, tmp6] = cResult;
       }
-      return initialize.useStateFromStores(tmp4, tmp5, tmp6);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStores(tmp4, tmp5, tmp6);
     }
   : () => {
       const items = [QuestStore];
-      return initialize.useStateFromStores(items, () => QuestStore.isQuestAccessSuspended, []);
+      const obj = get_initialized;
+      return obj.useStateFromStores(items, () => QuestStore.isQuestAccessSuspended, []);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, channelId, arg2) => {
+      let closure_0;
+      let first;
+      let tmp11;
+      let tmp12;
+      let tmp13;
+      let tmp16;
+      let tmp17;
+      let tmp8;
       _require = arg0;
-      const cResult = require("c").c(12);
+      const tmp = _require;
+      const obj = require("react");
+      const cResult = obj.c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
       channelId = undefined;
+      const tmp6 = cResult[1];
       if (channelId != null) {
         channelId = channelId.channelId;
       }
-      if (cResult[1] !== channelId) {
+      if (tmp6 !== channelId) {
         let channelId1;
         if (channelId != null) {
           channelId1 = channelId.channelId;
         }
         const fn = function u() {
           channelId = undefined;
+          const getChannel = ChannelStore.getChannel;
           if (channelId != null) {
             channelId = channelId.channelId;
           }
-          let channel = ChannelStore.getChannel(channelId);
+          let channel = getChannel(channelId);
           if (channel == null) {
             channel = null;
           }
@@ -1491,12 +1614,12 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = channelId1;
         cResult[2] = fn;
-        let tmp7 = fn;
+        tmp8 = fn;
       } else {
-        tmp7 = cResult[2];
+        tmp8 = cResult[2];
       }
-      const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp7);
+      const tmpResult = tmp(504);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp8);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [QuestStore];
         const fn2 = function f() {
@@ -1506,22 +1629,22 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[3] = items1;
         cResult[4] = fn2;
         cResult[5] = items2;
-        let tmp12 = items2;
-        let tmp11 = fn2;
-        let tmp10 = items1;
+        tmp13 = items2;
+        tmp12 = fn2;
+        tmp11 = items1;
       } else {
-        tmp10 = cResult[3];
-        tmp11 = cResult[4];
-        tmp12 = cResult[5];
+        tmp11 = cResult[3];
+        tmp12 = cResult[4];
+        tmp13 = cResult[5];
       }
-      const tmpResult = require("initialize");
-      const stateFromStores1 = require("initialize").useStateFromStores(tmp10, tmp11, tmp12);
+      const tmpResult4 = tmp(504);
+      const stateFromStores1 = tmpResult4.useStateFromStores(tmp11, tmp12, tmp13);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items3 = [UserStore];
         class T {
           constructor() {
-            currentUser = closure_1_10.getCurrentUser();
-            id = undefined;
+            currentUser = currentUser.getCurrentUser();
+            let id;
             if (currentUser != null) {
               id = currentUser.id;
             }
@@ -1530,20 +1653,20 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[6] = items3;
         cResult[7] = T;
-        let tmp16 = T;
-        let tmp15 = items3;
+        tmp17 = T;
+        tmp16 = items3;
       } else {
-        tmp15 = cResult[6];
-        tmp16 = cResult[7];
+        tmp16 = cResult[6];
+        tmp17 = cResult[7];
       }
-      const tmpResult4 = require("initialize");
-      const stateFromStores2 = require("initialize").useStateFromStores(tmp15, tmp16);
+      const tmpResult5 = tmp(504);
+      const stateFromStores2 = tmpResult5.useStateFromStores(tmp16, tmp17);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         const items4 = [QuestStore];
         class T {
           constructor() {
-            currentUser = closure_1_10.getCurrentUser();
-            id = undefined;
+            currentUser = currentUser.getCurrentUser();
+            let id;
             if (currentUser != null) {
               id = currentUser.id;
             }
@@ -1555,19 +1678,15 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[9] !== arg0) {
         class P {
           constructor() {
-            isQuestExpiredResult = null != closure_0;
-            if (isQuestExpiredResult) {
-              tmp3 = closure_13;
-              isQuestExpiredResult = closure_13.isQuestExpired(tmp.id);
-            }
+            const isQuestExpiredResult = null != closure_0 && QuestStore.isQuestExpired(tmp.id);
             return isQuestExpiredResult;
           }
         }
         const items5 = [arg0];
         class T {
           constructor() {
-            currentUser = closure_1_10.getCurrentUser();
-            id = undefined;
+            currentUser = currentUser.getCurrentUser();
+            let id;
             if (currentUser != null) {
               id = currentUser.id;
             }
@@ -1580,24 +1699,16 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class P {
           constructor() {
-            isQuestExpiredResult = null != closure_0;
-            if (isQuestExpiredResult) {
-              tmp3 = closure_13;
-              isQuestExpiredResult = closure_13.isQuestExpired(tmp.id);
-            }
+            const isQuestExpiredResult = null != closure_0 && QuestStore.isQuestExpired(tmp.id);
             return isQuestExpiredResult;
           }
         }
       }
-      require("initialize");
+      tmp(504);
       if (null != arg0) {
         class P {
           constructor() {
-            isQuestExpiredResult = null != closure_0;
-            if (isQuestExpiredResult) {
-              tmp3 = closure_13;
-              isQuestExpiredResult = closure_13.isQuestExpired(tmp.id);
-            }
+            const isQuestExpiredResult = null != closure_0 && QuestStore.isQuestExpired(tmp.id);
             return isQuestExpiredResult;
           }
         }
@@ -1607,28 +1718,31 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
   : (userStatus, arg1, arg2) => {
       _require = userStatus;
       let channelId = arg1;
+      const tmp = _require;
       const items = [ChannelStore];
-      const stateFromStores = require("initialize").useStateFromStores(items, () => {
+      const obj = require("get initialized");
+      const stateFromStores = obj.useStateFromStores(items, () => {
         channelId = undefined;
+        const getChannel = ChannelStore.getChannel;
         if (channelId != null) {
           channelId = channelId.channelId;
         }
-        let channel = ChannelStore.getChannel(channelId);
+        let channel = getChannel(channelId);
         if (channel == null) {
           channel = null;
         }
         return channel;
       });
-      const obj = require("initialize");
       const items1 = [QuestStore];
-      const stateFromStores1 = require("initialize").useStateFromStores(
+      obj2 = require("get initialized");
+      const stateFromStores1 = obj2.useStateFromStores(
         items1,
         () => null != QuestStore.questEnrollmentBlockedUntil,
         [],
       );
-      const obj2 = require("initialize");
       const items2 = [UserStore];
-      const stateFromStores2 = require("initialize").useStateFromStores(items2, () => {
+      const obj3 = require("get initialized");
+      const stateFromStores2 = obj3.useStateFromStores(items2, () => {
         currentUser = currentUser.getCurrentUser();
         let id;
         if (currentUser != null) {
@@ -1636,19 +1750,16 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return id;
       });
-      obj3 = require("initialize");
       const items3 = [QuestStore];
       const items4 = [userStatus];
+      const obj4 = require("get initialized");
       if (null != userStatus) {
         if (!stateFromStores1) {
           if (
             !obj4.useStateFromStores(
               items3,
               () => {
-                let isQuestExpiredResult = null != closure_0;
-                if (isQuestExpiredResult) {
-                  isQuestExpiredResult = QuestStore.isQuestExpired(tmp.id);
-                }
+                const isQuestExpiredResult = null != userStatus && QuestStore.isQuestExpired(tmp.id);
                 return isQuestExpiredResult;
               },
               items4,
@@ -1661,6 +1772,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
                 claimedAt = userStatus.claimedAt;
               }
               let tmp8 = null != claimedAt;
+              const tmpResult = tmp(7206);
               if (tmp8) {
                 tmp8 = !tmpResult.isStreamingAndCanWatch(arg1, stateFromStores);
               }
@@ -1671,22 +1783,26 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return false;
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
-      const cResult = c.c(8);
+  ? function (arg0, arg1) {
+      let locale;
+      let tmp4;
+      let tmp5;
+      let tmp6;
+      const obj = react2;
+      const cResult = obj.c(8);
       if (cResult[0] !== arg1) {
-        let obj2 = arg1;
+        obj2 = arg1;
         if (undefined === arg1) {
           obj2 = { dateStyle: "short" };
         }
         cResult[0] = arg1;
         cResult[1] = obj2;
-        let tmp4 = obj2;
+        tmp4 = obj2;
       } else {
         tmp4 = cResult[1];
       }
-      let toLocaleDateStringResult = globalThis;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [LocaleStore];
         const fn = function l() {
@@ -1694,30 +1810,41 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[2] = items;
         cResult[3] = fn;
-        let tmp7 = fn;
-        let tmp6 = items;
+        tmp6 = fn;
+        tmp5 = items;
       } else {
-        tmp6 = cResult[2];
-        tmp7 = cResult[3];
+        tmp5 = cResult[2];
+        tmp6 = cResult[3];
       }
-      const stateFromStores = initialize.useStateFromStores(tmp6, tmp7);
-      if (null == arg0) {
-        return "";
-      } else {
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+      let str = "";
+      if (null != arg0) {
         if (cResult[4] === arg0) {
           if (cResult[5] === tmp4) {
+            let tmp9;
+            if (cResult[6] === stateFromStores) {
+              tmp9 = cResult[7];
+            }
+            str = tmp9;
           }
         }
-        const date = new toLocaleDateStringResult.Date(arg0);
-        toLocaleDateStringResult = date.toLocaleDateString(stateFromStores, tmp4);
+        const _Date = Date;
+        const self = this;
+        const self2 = this;
+        const date = new Date(arg0);
+        const toLocaleDateStringResult = date.toLocaleDateString(stateFromStores, tmp4);
         cResult[4] = arg0;
         cResult[5] = tmp4;
         cResult[6] = stateFromStores;
         cResult[7] = toLocaleDateStringResult;
+        tmp9 = toLocaleDateStringResult;
       }
-      const tmpResult = initialize;
+      return str;
     }
   : (arg0) => {
+      let closure_0;
+      let locale;
       _require = arg0;
       let obj = arg1;
       if (arg1 === undefined) {
@@ -1725,27 +1852,100 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let stateFromStores;
       const items = [LocaleStore];
-      stateFromStores = require("initialize").useStateFromStores(items, () => locale.locale);
+      obj2 = require("get initialized");
+      stateFromStores = obj2.useStateFromStores(items, () => locale.locale);
       const items1 = [arg0, obj, stateFromStores];
-      return noop.useMemo(() => {
+      return react.useMemo(function () {
         let str = "";
         if (null != closure_0) {
           const _Date = Date;
+          const self = this;
+          const self2 = this;
           const date = new Date(closure_0);
           str = date.toLocaleDateString(stateFromStores, obj);
         }
         return str;
       }, items1);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp14 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (quest) => {
+      let ctaContent;
+      let obj = quest(ctaContent[15]);
+      const cResult = obj.c(6);
+      quest = quest.quest;
+      const content = quest.content;
+      ctaContent = quest.ctaContent;
+      const sourceQuestContent = quest.sourceQuestContent;
+      obj2 = quest(ctaContent[32]);
+      const getQuestImpressionId = obj2.useGetQuestImpressionId();
+      if (cResult[0] === content) {
+        if (cResult[1] === ctaContent) {
+          if (cResult[2] === getQuestImpressionId) {
+            if (cResult[3] === quest) {
+              let tmp3;
+              if (cResult[4] === sourceQuestContent) {
+                tmp3 = cResult[5];
+              }
+              return tmp3;
+            }
+          }
+        }
+      }
+      const fn = function s() {
+        if (quest.id !== afk) {
+          obj2 = { content, ctaContent, impressionId: getQuestImpressionId(), sourceQuestContent };
+          const openGameLinkDirectly = QuestPlatformUtils.openGameLinkDirectly;
+          QuestPlatformUtils;
+          openGameLinkDirectly(tmp, obj2);
+        } else {
+          const _window = window;
+          const obj = HelpdeskUtilsDefault;
+          open(obj.getArticleURL(constants.VIRTUAL_CURRENCY_LEARN_MORE));
+        }
+      };
+      cResult[0] = content;
+      cResult[1] = ctaContent;
+      cResult[2] = getQuestImpressionId;
+      cResult[3] = quest;
+      cResult[4] = sourceQuestContent;
+      cResult[5] = fn;
+      tmp3 = fn;
+    }
+  : (quest) => {
+      quest = quest.quest;
+      const content = quest.content;
+      const ctaContent = quest.ctaContent;
+      const sourceQuestContent = quest.sourceQuestContent;
+      let obj = quest(ctaContent[32]);
+      const getQuestImpressionId = obj.useGetQuestImpressionId();
+      const items = [quest, content, ctaContent, getQuestImpressionId, sourceQuestContent];
+      return react.useCallback(() => {
+        if (quest.id !== afk) {
+          obj2 = { content, ctaContent, impressionId: getQuestImpressionId(), sourceQuestContent };
+          const openGameLinkDirectly = QuestPlatformUtils.openGameLinkDirectly;
+          QuestPlatformUtils;
+          openGameLinkDirectly(tmp, obj2);
+        } else {
+          const _window = window;
+          const obj = HelpdeskUtilsDefault;
+          open(obj.getArticleURL(constants.VIRTUAL_CURRENCY_LEARN_MORE));
+        }
+      }, items);
+    };
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp15 = ReactCompilerGating.isReactCompilerEnabled()
   ? (id) => {
+      let first;
+      let tmp6;
       _require = id;
-      const cResult = require("c").c(3);
+      const obj = require("react");
+      const cResult = obj.c(3);
+      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [QuestStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -1755,49 +1955,60 @@ let tmp15 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = id.id;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6);
+      const tmpResult = tmp(504);
+      return tmpResult.useStateFromStores(first, tmp6);
     }
   : (arg0) => {
+      let id;
       _require = arg0;
       const items = [QuestStore];
-      return require("initialize").useStateFromStores(items, () => QuestStore.isProgressingOnDesktop(id.id));
+      const obj = require("get initialized");
+      return obj.useStateFromStores(items, () => QuestStore.isProgressingOnDesktop(id.id));
     };
 let closure_48 = tmp15;
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp16 = ReactCompilerGating.isReactCompilerEnabled()
   ? (quest) => {
-      const cResult = c.c(2);
+      let tmp4;
+      const obj = react2;
+      const cResult = obj.c(2);
       if (cResult[0] !== quest) {
-        const result = QuestTaskUtils.isQuestProgressingOnConsole(quest);
+        const tmpResult = QuestTaskUtils;
+        const result = tmpResult.isQuestProgressingOnConsole(quest);
         cResult[0] = quest;
         cResult[1] = result;
-        let tmp4 = result;
-        const tmpResult = QuestTaskUtils;
+        tmp4 = result;
       } else {
         tmp4 = cResult[1];
       }
       return tmp4;
     }
   : (arg0) => {
-      closure_0 = arg0;
+      let closure_0 = arg0;
       const items = [arg0];
-      return noop.useMemo(() => QuestTaskUtils.isQuestProgressingOnConsole(closure_0), items);
+      return react.useMemo(() => {
+        const obj = QuestTaskUtils;
+        return obj.isQuestProgressingOnConsole(closure_0);
+      }, items);
     };
 let closure_49 = tmp16;
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp17 = ReactCompilerGating.isReactCompilerEnabled()
   ? (id) => {
+      let first;
+      let tmp6;
+      let tmp8;
       _require = id;
-      const cResult = require("c").c(5);
+      const obj = require("react");
+      const cResult = obj.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [QuestStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -1807,40 +2018,46 @@ let tmp17 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = id.id;
         cResult[2] = fn;
-        let tmp6 = fn;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
+      const tmpResult = require("get initialized");
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
       if (cResult[3] !== id) {
-        const result = tmp(10940).isVideoQuestProgressing(id);
+        const tmpResult2 = require("VideoQuestUtils");
+        const result = tmpResult2.isVideoQuestProgressing(id);
         cResult[3] = id;
         cResult[4] = result;
-        let tmp8 = result;
-        const tmpResult2 = tmp(10940);
+        tmp8 = result;
       } else {
         tmp8 = cResult[4];
       }
       return tmp8;
     }
   : (arg0) => {
+      let id;
       _require = arg0;
+      let obj = require("get initialized");
       const items = [QuestStore];
       const items1 = [
         arg0,
-        require("initialize").useStateFromStores(items, () =>
+        obj.useStateFromStores(items, () =>
           QuestStore.getOptimisticProgress(id.id, FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO),
         ),
       ];
-      return noop.useMemo(() => VideoQuestUtils.isVideoQuestProgressing(closure_0), items1);
+      return react.useMemo(() => {
+        const obj = VideoQuestUtils;
+        return obj.isVideoQuestProgressing(id);
+      }, items1);
     };
 let closure_50 = tmp17;
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp18 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
       let tmp = closure_48(arg0);
       const tmp2 = closure_49(arg0);
+      const tmp3 = closure_50(arg0);
       if (!tmp) {
         tmp = tmp2;
       }
@@ -1852,6 +2069,7 @@ let tmp18 = ReactCompilerGating.isReactCompilerEnabled()
   : (arg0) => {
       let tmp = closure_48(arg0);
       const tmp2 = closure_49(arg0);
+      const tmp3 = closure_50(arg0);
       if (!tmp) {
         tmp = tmp2;
       }
@@ -1861,18 +2079,27 @@ let tmp18 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp;
     };
 let closure_51 = tmp18;
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp19 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let closure_1;
+      let closure_3;
+      let closure_4;
+      let tmp2;
+      let tmp3;
+      let tmp6;
+      let tmp7;
       _require = arg0;
-      const cResult = require("c").c(11);
+      let obj = require("react");
+      const cResult = obj.c(11);
       if (cResult[0] !== arg0) {
         const fn = function o() {
-          return QuestTaskUtils.getQuestTaskDetails(closure_0);
+          const obj = QuestTaskUtils;
+          return obj.getQuestTaskDetails(userStatus);
         };
         cResult[0] = arg0;
         cResult[1] = fn;
-        let tmp2 = fn;
+        tmp2 = fn;
       } else {
         tmp2 = cResult[1];
       }
@@ -1881,32 +2108,34 @@ let tmp19 = ReactCompilerGating.isReactCompilerEnabled()
         const tmp2Result = tmp2();
         cResult[2] = tmp2;
         cResult[3] = tmp2Result;
-        let tmp3 = tmp2Result;
+        tmp3 = tmp2Result;
       } else {
         tmp3 = cResult[3];
       }
-      const obj = require("c");
-      [tmp6, dependencyMap] = noop.useState(tmp3);
+      [tmp6, dependencyMap] = react.useState(tmp3);
+      _slicedToArray(react.useState(tmp3), 2);
       if (cResult[4] !== tmp2) {
         const fn2 = function c() {
           return dependencyMap(closure_1());
         };
         cResult[4] = tmp2;
         cResult[5] = fn2;
-        let tmp7 = fn2;
+        tmp7 = fn2;
       } else {
         tmp7 = cResult[5];
       }
-      asyncGeneratorStep = tmp7;
+      _asyncToGenerator = tmp7;
       const tmp8 = closure_51(arg0);
       _slicedToArray = tmp8;
       if (cResult[6] === tmp8) {
         if (cResult[7] === arg0) {
+          let tmp9;
+          let tmp10;
           if (cResult[8] === tmp7) {
-            let tmp9 = cResult[9];
-            let tmp10 = cResult[10];
+            tmp9 = cResult[9];
+            tmp10 = cResult[10];
           }
-          const effect = noop.useEffect(tmp9, tmp10);
+          const effect = react.useEffect(tmp9, tmp10);
           return tmp6;
         }
       }
@@ -1932,7 +2161,7 @@ let tmp19 = ReactCompilerGating.isReactCompilerEnabled()
               }
               if (null == claimedAt) {
                 tmp5 = closure_4;
-                if (closure_4) {
+                if (tmp5) {
                   tmp7 = globalThis;
                   _window = window;
                   tmp8 = closure_1;
@@ -1961,20 +2190,25 @@ let tmp19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = items;
       tmp10 = items;
       tmp9 = C;
-      const tmp5 = _slicedToArray(noop.useState(tmp3), 2);
     }
   : (arg0) => {
+      let closure_2;
+      let closure_4;
+      let first;
       let userStatus = arg0;
       const items = [arg0];
-      const callback = noop.useCallback(() => QuestTaskUtils.getQuestTaskDetails(closure_0), items);
-      const tmp2 = _slicedToArray(noop.useState(callback()), 2);
-      dependencyMap = tmp2[1];
+      const callback = react.useCallback(() => {
+        const obj = QuestTaskUtils;
+        return obj.getQuestTaskDetails(userStatus);
+      }, items);
+      [first, closure_2] = react.useState(callback());
       const items1 = [callback];
-      const callback1 = noop.useCallback(() => dependencyMap(callback()), items1);
-      const tmp4 = closure_51(arg0);
-      _slicedToArray = tmp4;
-      const items2 = [arg0, tmp4, callback1];
-      const effect = noop.useEffect(() => {
+      const callback1 = react.useCallback(() => closure_2(callback()), items1);
+      const tmp5 = closure_51(arg0);
+      _slicedToArray = tmp5;
+      const items2 = [arg0, tmp5, callback1];
+      const effect = react.useEffect(() => {
+        let closure_0;
         userStatus = userStatus.userStatus;
         let enrolledAt;
         if (userStatus != null) {
@@ -1997,7 +2231,7 @@ let tmp19 = ReactCompilerGating.isReactCompilerEnabled()
                 const _window = window;
                 userStatus = window.setInterval(() => {
                   callback1();
-                }, callback(1102).Millis.SECOND);
+                }, callback(closure_2[22]).Millis.SECOND);
                 return () => {
                   clearInterval(closure_0);
                   callback1();
@@ -2008,162 +2242,66 @@ let tmp19 = ReactCompilerGating.isReactCompilerEnabled()
         }
         callback1();
       }, items2);
-      return tmp2[0];
+      return first;
     };
 let closure_52 = tmp19;
-ReactCompilerGating = fn(558);
-const tmp20 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp20 = ReactCompilerGating.isReactCompilerEnabled()
   ? (config) => {
-      const cResult = c.c(2);
+      let tmp4;
+      const obj = react2;
+      const cResult = obj.c(2);
       if (cResult[0] !== config) {
-        const thirdPartyTaskDetails = QuestTaskUtils.getThirdPartyTaskDetails(config);
+        const tmpResult = QuestTaskUtils;
+        const thirdPartyTaskDetails = tmpResult.getThirdPartyTaskDetails(config);
         cResult[0] = config;
         cResult[1] = thirdPartyTaskDetails;
-        let tmp4 = thirdPartyTaskDetails;
-        const tmpResult = QuestTaskUtils;
+        tmp4 = thirdPartyTaskDetails;
       } else {
         tmp4 = cResult[1];
       }
       return tmp4;
     }
   : (arg0) => {
-      closure_0 = arg0;
+      let closure_0 = arg0;
       const items = [arg0];
-      return noop.useMemo(() => QuestTaskUtils.getThirdPartyTaskDetails(closure_0), items);
+      return react.useMemo(() => {
+        const obj = QuestTaskUtils;
+        return obj.getThirdPartyTaskDetails(closure_0);
+      }, items);
     };
 let closure_53 = tmp20;
-ReactCompilerGating = fn(558);
-let tmp14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (quest) => {
-      const cResult = quest(ctaContent[15]).c(6);
-      quest = quest.quest;
-      const content = quest.content;
-      ctaContent = quest.ctaContent;
-      const sourceQuestContent = quest.sourceQuestContent;
-      let obj = quest(ctaContent[15]);
-      const getQuestImpressionId = quest(ctaContent[32]).useGetQuestImpressionId();
-      if (cResult[0] === content) {
-        if (cResult[1] === ctaContent) {
-          if (cResult[2] === getQuestImpressionId) {
-            if (cResult[3] === quest) {
-              if (cResult[4] === sourceQuestContent) {
-                let tmp3 = cResult[5];
-              }
-              return tmp3;
-            }
-          }
-        }
-      }
-      const fn = function s() {
-        if (quest.id !== closure_2_22) {
-          obj3 = { content, ctaContent, impressionId: getQuestImpressionId(), sourceQuestContent };
-          QuestPlatformUtils.openGameLinkDirectly(tmp, obj3);
-        } else {
-          const _window = window;
-          window.open(HelpdeskUtilsDefault.getArticleURL(constants7.VIRTUAL_CURRENCY_LEARN_MORE));
-        }
-      };
-      cResult[0] = content;
-      cResult[1] = ctaContent;
-      cResult[2] = getQuestImpressionId;
-      cResult[3] = quest;
-      cResult[4] = sourceQuestContent;
-      cResult[5] = fn;
-      tmp3 = fn;
-    }
-  : (quest) => {
-      quest = quest.quest;
-      const content = quest.content;
-      const ctaContent = quest.ctaContent;
-      const sourceQuestContent = quest.sourceQuestContent;
-      const getQuestImpressionId = quest(ctaContent[32]).useGetQuestImpressionId();
-      const items = [quest, content, ctaContent, getQuestImpressionId, sourceQuestContent];
-      return noop.useCallback(() => {
-        if (quest.id !== closure_2_22) {
-          obj3 = { content, ctaContent, impressionId: getQuestImpressionId(), sourceQuestContent };
-          QuestPlatformUtils.openGameLinkDirectly(tmp, obj3);
-        } else {
-          const _window = window;
-          window.open(HelpdeskUtilsDefault.getArticleURL(constants7.VIRTUAL_CURRENCY_LEARN_MORE));
-        }
-      }, items);
-    };
-ReactCompilerGating = fn(558);
-let tmp22 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      const cResult = c.c(4);
-      if (cResult[0] !== arg0) {
-        const _Set = Set;
-        const set = new Set();
-        const tmp8 = arg0[Symbol.iterator]();
-        while (tmp8 !== undefined) {
-          obj3 = QuestTaskUtils;
-          let consoleApplicationId = obj3.getConsoleApplicationId(tmp11);
-          if (null != consoleApplicationId) {
-            let addResult = set.add(tmp16);
-          }
-          continue;
-        }
-        cResult[0] = arg0;
-        cResult[1] = set;
-        let tmp2 = set;
-      } else {
-        tmp2 = cResult[1];
-      }
-      if (cResult[2] !== tmp2) {
-        const _Array = Array;
-        const arr = Array.from(tmp2);
-        cResult[2] = tmp2;
-        cResult[3] = arr;
-        let tmp19 = arr;
-      } else {
-        tmp19 = cResult[3];
-      }
-      return useGetOrFetchApplicationsDefault(tmp19);
-    }
-  : (arg0) => {
-      dependencyMap = arg0;
-      const items = [arg0];
-      const memo = noop.useMemo(() => {
-        const set = new Set();
-        while (tmp2 !== undefined) {
-          let obj2 = QuestTaskUtils;
-          let consoleApplicationId = obj2.getConsoleApplicationId(tmp3);
-          if (null != consoleApplicationId) {
-            let addResult = set.add(tmp7);
-          }
-          continue;
-        }
-        return Array.from(set);
-      }, items);
-      return useGetOrFetchApplicationsDefault(memo);
-    };
-let closure_54 = tmp22;
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp21 = ReactCompilerGating.isReactCompilerEnabled()
   ? (quest) => {
-      const cResult = quest(sourceQuestContent[15]).c(8);
+      let sourceQuestContent;
+      let tmp4;
+      let tmp = quest;
+      let obj = quest(sourceQuestContent[15]);
+      const cResult = obj.c(8);
       quest = quest.quest;
       const questContent = quest.questContent;
+      const tmp2 = sourceQuestContent;
       sourceQuestContent = quest.sourceQuestContent;
       if (cResult[0] !== quest) {
-        let obj2 = { quest };
+        obj2 = { quest };
         cResult[0] = quest;
         cResult[1] = obj2;
-        let tmp4 = obj2;
+        tmp4 = obj2;
       } else {
         tmp4 = cResult[1];
       }
       const tmp5 = closure_56(tmp4);
-      closure_3 = tmp5;
-      let obj = quest(sourceQuestContent[15]);
-      const getQuestImpressionId = quest(sourceQuestContent[32]).useGetQuestImpressionId();
+      let closure_3 = tmp5;
+      const tmpResult = tmp(tmp2[32]);
+      const getQuestImpressionId = tmpResult.useGetQuestImpressionId();
       if (cResult[2] === getQuestImpressionId) {
         if (cResult[3] === quest) {
           if (cResult[4] === questContent) {
             if (cResult[5] === sourceQuestContent) {
+              let tmp7;
               if (cResult[6] === tmp5) {
-                let tmp7 = cResult[7];
+                tmp7 = cResult[7];
               }
               return tmp7;
             }
@@ -2171,25 +2309,27 @@ let tmp21 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const fn = function l() {
-        const obj = QuestPlatformUtils;
+        const tmp = QuestPlatformUtils;
         if (closure_3) {
-          const obj2 = { quest };
-          obj3 = {
+          obj2 = { quest };
+          const openAddConsoleConnectionModal = tmp.openAddConsoleConnectionModal;
+          const obj3 = {
             content: questContent,
             ctaContent: AnalyticsTypes.QuestContentCTA.CONNECT_CONSOLE_LINK,
             impressionId: getQuestImpressionId(),
             sourceQuestContent,
           };
-          const result = obj.openAddConsoleConnectionModal(obj2, obj3);
+          const result = openAddConsoleConnectionModal(obj2, obj3);
         } else {
-          const obj4 = { quest };
-          const obj5 = {
+          const obj = { quest };
+          const openConsoleConnectionSettings = tmp.openConsoleConnectionSettings;
+          const obj4 = {
             content: questContent,
             ctaContent: AnalyticsTypes.QuestContentCTA.VIEW_CONSOLE_CONNECTIONS_LINK,
             impressionId: getQuestImpressionId(),
             sourceQuestContent,
           };
-          const result1 = obj.openConsoleConnectionSettings(obj4, obj5);
+          const result1 = openConsoleConnectionSettings(obj, obj4);
         }
       };
       cResult[2] = getQuestImpressionId;
@@ -2201,56 +2341,124 @@ let tmp21 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = fn;
     }
   : (quest) => {
+      let content;
+      let sourceQuestContent;
       quest = quest.quest;
       ({ questContent: importDefault, sourceQuestContent: dependencyMap } = quest);
-      closure_3 = closure_56({ quest });
-      closure_4 = quest(10916).useGetQuestImpressionId();
+      let closure_3 = closure_56({ quest });
+      let obj = quest(10916);
+      let closure_4 = obj.useGetQuestImpressionId();
       return () => {
-        const obj = QuestPlatformUtils;
+        const tmp = QuestPlatformUtils;
         if (closure_3) {
-          const obj2 = { quest };
-          obj3 = {
-            content,
+          obj2 = { quest };
+          const openAddConsoleConnectionModal = tmp.openAddConsoleConnectionModal;
+          const obj3 = {
+            content: importDefault,
             ctaContent: AnalyticsTypes.QuestContentCTA.CONNECT_CONSOLE_LINK,
             impressionId: closure_4(),
-            sourceQuestContent,
+            sourceQuestContent: dependencyMap,
           };
-          const result = obj.openAddConsoleConnectionModal(obj2, obj3);
+          const result = openAddConsoleConnectionModal(obj2, obj3);
         } else {
-          const obj4 = { quest };
-          const obj5 = {
-            content,
+          const obj = { quest };
+          const openConsoleConnectionSettings = tmp.openConsoleConnectionSettings;
+          const obj4 = {
+            content: importDefault,
             ctaContent: AnalyticsTypes.QuestContentCTA.VIEW_CONSOLE_CONNECTIONS_LINK,
             impressionId: closure_4(),
-            sourceQuestContent,
+            sourceQuestContent: dependencyMap,
           };
-          const result1 = obj.openConsoleConnectionSettings(obj4, obj5);
+          const result1 = openConsoleConnectionSettings(obj, obj4);
         }
       };
     };
-ReactCompilerGating = fn(558);
-let tmp23 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp22 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function (arg0) {
+      let tmp17;
+      let tmp2;
+      const obj = react2;
+      const cResult = obj.c(4);
+      if (cResult[0] !== arg0) {
+        const _Set = Set;
+        const self = this;
+        const self2 = this;
+        set = new Set();
+        const tmp6 = arg0[Symbol.iterator]();
+        while (tmp6 !== undefined) {
+          let obj3 = QuestTaskUtils;
+          let consoleApplicationId = obj3.getConsoleApplicationId(tmp9);
+          if (null != consoleApplicationId) {
+            let addResult = set.add(tmp14);
+          }
+          continue;
+        }
+        cResult[0] = arg0;
+        cResult[1] = set;
+        tmp2 = set;
+      } else {
+        tmp2 = cResult[1];
+      }
+      if (cResult[2] !== tmp2) {
+        const _Array = Array;
+        const arr = Array.from(tmp2);
+        cResult[2] = tmp2;
+        cResult[3] = arr;
+        tmp17 = arr;
+      } else {
+        tmp17 = cResult[3];
+      }
+      return useGetOrFetchApplicationsDefault(tmp17);
+    }
+  : (arg0) => {
+      let closure_0 = arg0;
+      const items = [arg0];
+      const memo = react.useMemo(() => {
+        set = new Set();
+        const tmp2 = closure_0[Symbol.iterator]();
+        while (tmp2 !== undefined) {
+          obj2 = QuestTaskUtils;
+          let consoleApplicationId = obj2.getConsoleApplicationId(tmp3);
+          if (null != consoleApplicationId) {
+            let addResult = set.add(tmp7);
+          }
+          continue;
+        }
+        return Array.from(set);
+      }, items);
+      return useGetOrFetchApplicationsDefault(memo);
+    };
+let closure_54 = tmp22;
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp23 = ReactCompilerGating.isReactCompilerEnabled()
   ? (config) => {
-      const cResult = c.c(8);
+      let isFetching;
+      let product;
+      let tmp4;
+      let tmp6;
+      const obj = react2;
+      const cResult = obj.c(8);
       if (cResult[0] !== config) {
-        const result = QuestRewardUtils.hasCollectiblesQuestReward(config);
+        const tmpResult = QuestRewardUtils;
+        const result = tmpResult.hasCollectiblesQuestReward(config);
         cResult[0] = config;
         cResult[1] = result;
-        let tmp4 = result;
-        const tmpResult = QuestRewardUtils;
+        tmp4 = result;
       } else {
         tmp4 = cResult[1];
       }
       if (cResult[2] !== config) {
-        const defaultReward = QuestCopyUtils.getDefaultReward(config);
+        const tmpResult3 = QuestCopyUtils;
+        const defaultReward = tmpResult3.getDefaultReward(config);
         cResult[2] = config;
         cResult[3] = defaultReward;
-        let tmp6 = defaultReward;
-        const tmpResult3 = QuestCopyUtils;
+        tmp6 = defaultReward;
       } else {
         tmp6 = cResult[3];
       }
-      const fetchCollectiblesProduct = useFetchCollectiblesProduct.useFetchCollectiblesProduct(tmp6.skuId);
+      const tmpResult4 = useFetchCollectiblesProduct;
+      const fetchCollectiblesProduct = tmpResult4.useFetchCollectiblesProduct(tmp6.skuId);
       ({ product, isFetching } = fetchCollectiblesProduct);
       let first;
       if (product != null) {
@@ -2261,42 +2469,132 @@ let tmp23 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] === first) {
         if (cResult[5] === tmp4) {
+          let tmp10;
           if (cResult[6] === isFetching) {
-            let tmp10 = cResult[7];
+            tmp10 = cResult[7];
           }
           return tmp10;
         }
       }
-      const obj2 = { hasQuestCollectibles: tmp4, avatarDecoration: first, isFetching };
+      obj2 = { hasQuestCollectibles: tmp4, avatarDecoration: first, isFetching };
       cResult[4] = first;
       cResult[5] = tmp4;
       cResult[6] = isFetching;
       cResult[7] = obj2;
       tmp10 = obj2;
-      const tmpResult4 = useFetchCollectiblesProduct;
     }
   : (config) => {
-      const hasQuestCollectibles = QuestRewardUtils.hasCollectiblesQuestReward(config);
-      const defaultReward = QuestCopyUtils.getDefaultReward(config);
-      const isFetching = useFetchCollectiblesProduct.useFetchCollectiblesProduct(defaultReward.skuId);
-      const product = isFetching.product;
+      const obj = QuestRewardUtils;
+      const hasQuestCollectibles = obj.hasCollectiblesQuestReward(config);
+      obj2 = QuestCopyUtils;
+      const defaultReward = obj2.getDefaultReward(config);
+      const obj3 = useFetchCollectiblesProduct;
+      const fetchCollectiblesProduct = obj3.useFetchCollectiblesProduct(defaultReward.skuId);
+      const product = fetchCollectiblesProduct.product;
       let avatarDecoration;
+      const isFetching = fetchCollectiblesProduct.isFetching;
       if (product != null) {
         const items = product.items;
         if (items != null) {
           avatarDecoration = items[0];
         }
       }
-      return { hasQuestCollectibles, avatarDecoration, isFetching: isFetching.isFetching };
+      return { hasQuestCollectibles, avatarDecoration, isFetching };
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp24 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      let closure_0;
+      let tmp2;
+      _require = arg0;
+      let obj = require("react");
+      const cResult = obj.c(2);
+      if (cResult[0] !== arg0) {
+        obj2 = {
+          handleComplete() {
+            const obj = QuestActionCreators;
+            return obj.completeQuestPreview(closure_0);
+          },
+          handleProgress(random) {
+            const obj = QuestActionCreators;
+            return obj.completeQuestPreview(closure_0, random);
+          },
+          handleResetStatusClick() {
+            const obj = QuestActionCreators;
+            return obj.resetQuestPreviewStatus(closure_0);
+          },
+          handleResetDismissibilityClick() {
+            const obj = QuestActionCreators;
+            return obj.resetQuestDismissibilityStatus(closure_0);
+          },
+          handleOverridePreviewClick(placement) {
+            const obj = QuestActionCreators;
+            return obj.overrideQuestForPlacement(placement, closure_0);
+          },
+          handleResetHasBeenSeenClick() {
+            const items = [closure_0];
+            const obj = QuestActionCreators;
+            return obj.markAdContentUnseen(AdCreativeType.AdCreativeType.QUEST, items);
+          },
+        };
+        cResult[0] = arg0;
+        cResult[1] = obj2;
+        tmp2 = obj2;
+      } else {
+        tmp2 = cResult[1];
+      }
+      return tmp2;
+    }
+  : (arg0) => {
+      let closure_0 = arg0;
+      let items = [arg0];
+      return react.useMemo(() => {
+        let obj = {
+          handleComplete() {
+            const obj = closure_0(dependencyMap[18]);
+            return obj.completeQuestPreview(closure_1_0);
+          },
+          handleProgress(random) {
+            const obj = closure_0(dependencyMap[18]);
+            return obj.completeQuestPreview(closure_1_0, random);
+          },
+          handleResetStatusClick() {
+            const obj = closure_0(dependencyMap[18]);
+            return obj.resetQuestPreviewStatus(closure_1_0);
+          },
+          handleResetDismissibilityClick() {
+            const obj = closure_0(dependencyMap[18]);
+            return obj.resetQuestDismissibilityStatus(closure_1_0);
+          },
+          handleOverridePreviewClick(placement) {
+            const obj = closure_0(dependencyMap[18]);
+            return obj.overrideQuestForPlacement(placement, closure_1_0);
+          },
+          handleResetHasBeenSeenClick() {
+            const items = [closure_1_0];
+            const obj = closure_0(dependencyMap[18]);
+            return obj.markAdContentUnseen(closure_0(dependencyMap[42]).AdCreativeType.QUEST, items);
+          },
+        };
+        return obj;
+      }, items);
+    };
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp25 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(18);
+      let accounts;
+      let fetching;
+      let tmp10;
+      let tmp4;
+      let tmp5;
+      let tmp9;
+      let obj = react2;
+      const cResult = obj.c(18);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConnectedAccountsStore];
         const fn = function s() {
-          return { fetching: ConnectedAccountsStore.isFetching(), accounts: ConnectedAccountsStore.getAccounts() };
+          const obj = { fetching: ConnectedAccountsStore.isFetching(), accounts: ConnectedAccountsStore.getAccounts() };
+          return obj;
         };
         cResult[0] = items;
         cResult[1] = fn;
@@ -2305,21 +2603,22 @@ const tmp25 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const stateFromStoresObject = initialize.useStateFromStoresObject(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp4, tmp5);
       ({ fetching, accounts } = stateFromStoresObject);
       if (cResult[2] !== accounts) {
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           class E {
-            constructor(arg0) {
-              return false === arg0.revoked;
+            constructor(revoked) {
+              return false === revoked.revoked;
             }
           }
           cResult[6] = E;
         } else {
           class E {
-            constructor(arg0) {
-              return false === arg0.revoked;
+            constructor(revoked) {
+              return false === revoked.revoked;
             }
           }
         }
@@ -2327,15 +2626,15 @@ const tmp25 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           class E {
-            constructor(arg0) {
-              return false === arg0.revoked;
+            constructor(revoked) {
+              return false === revoked.revoked;
             }
           }
           cResult[7] = tmp13;
         } else {
           class E {
-            constructor(arg0) {
-              return false === arg0.revoked;
+            constructor(revoked) {
+              return false === revoked.revoked;
             }
           }
         }
@@ -2343,15 +2642,15 @@ const tmp25 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol3 = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           class C {
-            constructor(arg0) {
-              return arg0.type === closure_1_25.PLAYSTATION;
+            constructor(type) {
+              return type.type === constants.PLAYSTATION;
             }
           }
           cResult[8] = C;
         } else {
           class C {
-            constructor(arg0) {
-              return arg0.type === closure_1_25.PLAYSTATION;
+            constructor(type) {
+              return type.type === constants.PLAYSTATION;
             }
           }
         }
@@ -2361,87 +2660,97 @@ const tmp25 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[3] = found2;
         cResult[4] = combined;
         cResult[5] = found1;
+        tmp10 = found1;
+        tmp9 = combined;
       } else {
         class C {
-          constructor(arg0) {
-            return arg0.type === closure_1_25.PLAYSTATION;
+          constructor(type) {
+            return type.type === constants.PLAYSTATION;
           }
         }
-        if (cResult[9] === tmp8) {
-          class C {
-            constructor(arg0) {
-              return arg0.type === closure_1_25.PLAYSTATION;
-            }
-          }
-        }
-        const obj2 = { xboxAccounts: cResult[5], playstationAccounts: tmp8, xboxAndPlaystationAccounts: cResult[4] };
-        cResult[9] = tmp8;
-        cResult[10] = cResult[5];
-        cResult[11] = cResult[4];
-        cResult[12] = obj2;
+        tmp9 = cResult[4];
+        tmp10 = cResult[5];
       }
-      const tmpResult = initialize;
+      if (cResult[9] === tmp8) {
+        class C {
+          constructor(type) {
+            return type.type === constants.PLAYSTATION;
+          }
+        }
+      }
+      obj2 = { xboxAccounts: tmp10, playstationAccounts: tmp8, xboxAndPlaystationAccounts: tmp9 };
+      cResult[9] = tmp8;
+      cResult[10] = tmp10;
+      cResult[11] = tmp9;
+      cResult[12] = obj2;
     }
   : () => {
+      let accounts;
+      let obj = accounts(504);
       const items = [ConnectedAccountsStore];
-      const stateFromStoresObject = accounts(504).useStateFromStoresObject(items, () => ({
-        fetching: ConnectedAccountsStore.isFetching(),
-        accounts: ConnectedAccountsStore.getAccounts(),
-      }));
+      const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+        const obj = { fetching: ConnectedAccountsStore.isFetching(), accounts: ConnectedAccountsStore.getAccounts() };
+        return obj;
+      });
       accounts = stateFromStoresObject.accounts;
       const items1 = [accounts];
-      const memo = noop.useMemo(() => {
+      const fetching = stateFromStoresObject.fetching;
+      const memo = react.useMemo(() => {
         const found = accounts.filter((revoked) => false === revoked.revoked);
         const found1 = found.filter((type) => type.type === constants.XBOX);
         const found2 = found.filter((type) => type.type === constants.PLAYSTATION);
-        return { xboxAccounts: found1, playstationAccounts: found2, xboxAndPlaystationAccounts: found1.concat(found2) };
+        const obj = {
+          xboxAccounts: found1,
+          playstationAccounts: found2,
+          xboxAndPlaystationAccounts: found1.concat(found2),
+        };
+        return obj;
       }, items1);
       return {
-        fetching: stateFromStoresObject.fetching,
+        fetching,
         xboxAccounts: memo.xboxAccounts,
         playstationAccounts: memo.playstationAccounts,
         xboxAndPlaystationAccounts: memo.xboxAndPlaystationAccounts,
       };
     };
 let closure_55 = tmp25;
-ReactCompilerGating = fn(558);
-let tmp26 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp26 = ReactCompilerGating.isReactCompilerEnabled()
   ? (quest) => {
-      const cResult = c.c(4);
+      const obj = react2;
+      const cResult = obj.c(4);
       quest = quest.quest;
+      const prop = closure_55().xboxAndPlaystationAccounts;
       const tmp4 = closure_51(quest);
-      const tmp5 = 0 === closure_55().xboxAndPlaystationAccounts.length;
-      if (cResult[0] === tmp5) {
+      if ((cResult[0] === 0) === prop.length) {
         if (cResult[1] === tmp4) {
+          let tmp6;
           if (cResult[2] === quest) {
-            let tmp6 = cResult[3];
+            tmp6 = cResult[3];
           }
           return tmp6;
         }
       }
-      const tmp7 = QuestTaskUtils.isConsoleQuest(quest) && tmp5 && !tmp4;
-      cResult[0] = tmp5;
+      const tmpResult = QuestTaskUtils;
+      const tmp7 = tmpResult.isConsoleQuest(quest) && 0 === prop.length && !tmp4;
+      cResult[0] = 0 === prop.length;
       cResult[1] = tmp4;
       cResult[2] = quest;
       cResult[3] = tmp7;
       tmp6 = tmp7;
-      const tmpResult = QuestTaskUtils;
     }
   : (quest) => {
       quest = quest.quest;
+      const prop = closure_55().xboxAndPlaystationAccounts;
+      const length = prop.length;
       const tmp = closure_51(quest);
-      let isConsoleQuestResult = QuestTaskUtils.isConsoleQuest(quest);
-      if (isConsoleQuestResult) {
-        isConsoleQuestResult = 0 === closure_55().xboxAndPlaystationAccounts.length;
-      }
-      if (isConsoleQuestResult) {
-        isConsoleQuestResult = !tmp;
-      }
+      const obj = QuestTaskUtils;
+      const isConsoleQuestResult = obj.isConsoleQuest(quest) && 0 === length && !tmp;
       return isConsoleQuestResult;
     };
 let closure_56 = tmp26;
-ReactCompilerGating = fn(558);
-const obj27 = {
+ReactCompilerGating = ReactCompilerGating_mod;
+let obj2 = {
   UNACCEPTED: 0,
   [0]: "UNACCEPTED",
   ACCEPTED: 1,
@@ -2453,95 +2762,41 @@ const obj27 = {
   CLAIMED: 4,
   [4]: "CLAIMED",
 };
-let tmp24 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      _require = arg0;
-      const cResult = require("c").c(2);
-      if (cResult[0] !== arg0) {
-        const obj2 = {
-          handleComplete() {
-            return QuestActionCreators.completeQuestPreview(closure_0);
-          },
-          handleProgress(random) {
-            return QuestActionCreators.completeQuestPreview(closure_0, random);
-          },
-          handleResetStatusClick() {
-            return QuestActionCreators.resetQuestPreviewStatus(closure_0);
-          },
-          handleResetDismissibilityClick() {
-            return QuestActionCreators.resetQuestDismissibilityStatus(closure_0);
-          },
-          handleOverridePreviewClick(placement) {
-            return QuestActionCreators.overrideQuestForPlacement(placement, closure_0);
-          },
-          handleResetHasBeenSeenClick() {
-            const items = [closure_0];
-            return QuestActionCreators.markAdContentUnseen(AdCreativeType.AdCreativeType.QUEST, items);
-          },
-        };
-        cResult[0] = arg0;
-        cResult[1] = obj2;
-        let tmp2 = obj2;
-      } else {
-        tmp2 = cResult[1];
-      }
-      return tmp2;
-    }
-  : (arg0) => {
-      closure_0 = arg0;
-      let items = [arg0];
-      return noop.useMemo(
-        () => ({
-          handleComplete() {
-            return closure_0(9994).completeQuestPreview(closure_1_0);
-          },
-          handleProgress(random) {
-            return closure_0(9994).completeQuestPreview(closure_1_0, random);
-          },
-          handleResetStatusClick() {
-            return closure_0(9994).resetQuestPreviewStatus(closure_1_0);
-          },
-          handleResetDismissibilityClick() {
-            return closure_0(9994).resetQuestDismissibilityStatus(closure_1_0);
-          },
-          handleOverridePreviewClick(placement) {
-            return closure_0(9994).overrideQuestForPlacement(placement, closure_1_0);
-          },
-          handleResetHasBeenSeenClick() {
-            const items = [closure_1_0];
-            return closure_0(9994).markAdContentUnseen(closure_0(5630).AdCreativeType.QUEST, items);
-          },
-        }),
-        items,
-      );
-    };
-ReactCompilerGating = fn(558);
 const tmp27 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(9);
+      let tmp10;
+      let tmp7;
+      let tmp8;
+      let tmp9;
+      const obj = react2;
+      const cResult = obj.c(9);
       const tmp4 = closure_55();
       if (cResult[0] !== tmp4.playstationAccounts.length > 0) {
-        const articleURL = HelpdeskUtilsDefault.getArticleURL(constants7.QUEST_HOW_TO_PLAYSTATION);
-        const articleURL1 = HelpdeskUtilsDefault.getArticleURL(constants7.QUEST_HOW_TO_XBOX);
-        const intl = util.intl;
+        obj2 = HelpdeskUtilsDefault;
+        const articleURL = obj2.getArticleURL(constants7.QUEST_HOW_TO_PLAYSTATION);
+        const obj3 = HelpdeskUtilsDefault;
+        const articleURL1 = obj3.getArticleURL(constants7.QUEST_HOW_TO_XBOX);
+        const intl = intl7.intl;
         const obj4 = { psHelpdeskArticle: articleURL, xboxHelpdeskArticle: articleURL1 };
-        const formatResult = intl.format(util.t.beN4DG, obj4);
-        const intl2 = util.intl;
+        const formatResult = intl.format(intl7.t.beN4DG, obj4);
+        const intl2 = intl7.intl;
+        const format = intl2.format;
         let tmp16 = articleURL1;
-        if (tmp6) {
+        const HVS7nh = intl7.t.HVS7nh;
+        if (tmp4.playstationAccounts.length > 0) {
           tmp16 = articleURL;
         }
         const obj5 = { helpdeskArticle: tmp16 };
-        const formatResult1 = intl2.format(util.t.HVS7nh, obj5);
-        cResult[0] = tmp6;
+        const formatResult1 = format(HVS7nh, obj5);
+        cResult[0] = tmp4.playstationAccounts.length > 0;
         cResult[1] = formatResult;
         cResult[2] = articleURL;
         cResult[3] = formatResult1;
         cResult[4] = articleURL1;
-        let tmp10 = articleURL1;
-        let tmp9 = formatResult1;
-        let tmp8 = articleURL;
-        let tmp7 = formatResult;
+        tmp10 = articleURL1;
+        tmp9 = formatResult1;
+        tmp8 = articleURL;
+        tmp7 = formatResult;
       } else {
         tmp7 = cResult[1];
         tmp8 = cResult[2];
@@ -2550,13 +2805,14 @@ const tmp27 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (tmp4.xboxAccounts.length <= 0) {
         let tmp18 = tmp7;
-        if (!tmp5) {
+        if (tmp4.xboxAccounts.length <= 0) {
           tmp18 = tmp7;
         }
         if (cResult[5] === tmp8) {
           if (cResult[6] === tmp18) {
+            let tmp19;
             if (cResult[7] === tmp10) {
-              let tmp19 = cResult[8];
+              tmp19 = cResult[8];
             }
             return tmp19;
           }
@@ -2572,31 +2828,36 @@ const tmp27 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       const tmp = closure_55();
-      const articleURL = HelpdeskUtilsDefault.getArticleURL(constants7.QUEST_HOW_TO_PLAYSTATION);
-      const articleURL1 = HelpdeskUtilsDefault.getArticleURL(constants7.QUEST_HOW_TO_XBOX);
-      const intl = util.intl;
-      const formatResult = intl.format(util.t.beN4DG, {
+      const obj = HelpdeskUtilsDefault;
+      const articleURL = obj.getArticleURL(constants7.QUEST_HOW_TO_PLAYSTATION);
+      obj2 = HelpdeskUtilsDefault;
+      const articleURL1 = obj2.getArticleURL(constants7.QUEST_HOW_TO_XBOX);
+      const intl = intl7.intl;
+      const formatResult = intl.format(intl7.t.beN4DG, {
         psHelpdeskArticle: articleURL,
         xboxHelpdeskArticle: articleURL1,
       });
-      const intl2 = util.intl;
+      const intl2 = intl7.intl;
+      const format = intl2.format;
       let tmp7 = articleURL1;
+      const HVS7nh = intl7.t.HVS7nh;
       if (tmp.playstationAccounts.length > 0) {
         tmp7 = articleURL;
       }
+      const formatResult1 = format(HVS7nh, { helpdeskArticle: tmp7 });
       if (tmp.xboxAccounts.length <= 0) {
         let tmp9 = formatResult;
-        if (!tmp2) {
+        if (tmp.xboxAccounts.length <= 0) {
           tmp9 = formatResult;
         }
-        obj3 = { message: tmp9, xboxURL: articleURL1, playstationURL: articleURL };
-        return obj3;
+        return { message: tmp9, xboxURL: articleURL1, playstationURL: articleURL };
       }
-      tmp9 = intl2.format(util.t.HVS7nh, { helpdeskArticle: tmp7 });
+      tmp9 = formatResult1;
     };
-ReactCompilerGating = fn(558);
-const tmp28 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp28 = ReactCompilerGating.isReactCompilerEnabled()
   ? (userStatus) => {
+      let IN_PROGRESS;
       userStatus = userStatus.userStatus;
       let enrolledAt;
       if (userStatus != null) {
@@ -2609,24 +2870,27 @@ const tmp28 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const userStatus3 = userStatus.userStatus;
       let claimedAt;
+      const tmp4 = null != completedAt;
       if (userStatus3 != null) {
         claimedAt = userStatus3.claimedAt;
       }
+      const tmp6 = null != claimedAt;
       if (tmp6) {
-        let IN_PROGRESS = obj27.CLAIMED;
+        IN_PROGRESS = obj2.CLAIMED;
       } else if (tmp4) {
-        IN_PROGRESS = obj27.COMPLETED;
+        IN_PROGRESS = obj2.COMPLETED;
       } else {
         if (tmp7) {
-          if (tmp2) {
-            IN_PROGRESS = obj27.IN_PROGRESS;
+          if (null != enrolledAt) {
+            IN_PROGRESS = obj2.IN_PROGRESS;
           }
         }
-        IN_PROGRESS = tmp2 ? obj27.ACCEPTED : obj27.UNACCEPTED;
+        IN_PROGRESS = tmp2 ? obj2.ACCEPTED : obj2.UNACCEPTED;
       }
       return IN_PROGRESS;
     }
   : (userStatus) => {
+      let IN_PROGRESS;
       userStatus = userStatus.userStatus;
       let enrolledAt;
       if (userStatus != null) {
@@ -2639,782 +2903,34 @@ const tmp28 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const userStatus3 = userStatus.userStatus;
       let claimedAt;
+      const tmp4 = null != completedAt;
       if (userStatus3 != null) {
         claimedAt = userStatus3.claimedAt;
       }
+      const tmp6 = null != claimedAt;
       if (tmp6) {
-        let IN_PROGRESS = obj27.CLAIMED;
+        IN_PROGRESS = obj2.CLAIMED;
       } else if (tmp4) {
-        IN_PROGRESS = obj27.COMPLETED;
+        IN_PROGRESS = obj2.COMPLETED;
       } else {
         if (tmp7) {
-          if (tmp2) {
-            IN_PROGRESS = obj27.IN_PROGRESS;
+          if (null != enrolledAt) {
+            IN_PROGRESS = obj2.IN_PROGRESS;
           }
         }
-        IN_PROGRESS = tmp2 ? obj27.ACCEPTED : obj27.UNACCEPTED;
+        IN_PROGRESS = tmp2 ? obj2.ACCEPTED : obj2.UNACCEPTED;
       }
       return IN_PROGRESS;
     };
-ReactCompilerGating = fn(558);
-let tmp30 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      _require = arg0;
-      const cResult = require("c").c(8);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [QuestStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== arg0) {
-        const fn = function n() {
-          return QuestStore.selectedTaskPlatform(closure_0);
-        };
-        cResult[1] = arg0;
-        cResult[2] = fn;
-        let tmp6 = fn;
-      } else {
-        tmp6 = cResult[2];
-      }
-      const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
-      if (cResult[3] !== arg0) {
-        const fn2 = function u(platform) {
-          return QuestActionCreators.selectTaskPlatform(closure_0, platform);
-        };
-        cResult[3] = arg0;
-        cResult[4] = fn2;
-        let tmp8 = fn2;
-      } else {
-        tmp8 = cResult[4];
-      }
-      if (cResult[5] === tmp8) {
-        if (cResult[6] === stateFromStores) {
-          let tmp9 = cResult[7];
-        }
-        return tmp9;
-      }
-      const items1 = [stateFromStores, tmp8];
-      cResult[5] = tmp8;
-      cResult[6] = stateFromStores;
-      cResult[7] = items1;
-      tmp9 = items1;
-      const tmpResult = require("initialize");
-    }
-  : (arg0) => {
-      _require = arg0;
-      const items = [QuestStore];
-      const items1 = [
-        require("initialize").useStateFromStores(items, () => QuestStore.selectedTaskPlatform(closure_0)),
-      ];
-      const items2 = [arg0];
-      items1[1] = noop.useCallback((platform) => QuestActionCreators.selectTaskPlatform(closure_0, platform), items2);
-      return items1;
-    };
-let closure_58 = tmp30;
-ReactCompilerGating = fn(558);
-const tmp31 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, first1) => {
-      let withResult16 = _require;
-      let exhaustiveResult1 = dependencyMap;
-      const cResult = require("c").c(37);
-      const obj2 = require("c");
-      [tmp4, r10016] = closure_58(id.id);
-      if (cResult[0] !== id) {
-        const result = withResult16(10918).supportedTaskPlatforms(id);
-        cResult[0] = id;
-        cResult[1] = result;
-        obj3 = result;
-        const withResult16Result = withResult16(10918);
-      } else {
-        obj3 = cResult[1];
-      }
-      if (cResult[2] !== obj3) {
-        const hasItem = obj3.includes(constants.DESKTOP);
-        cResult[2] = obj3;
-        cResult[3] = hasItem;
-        let tmp6 = hasItem;
-      } else {
-        tmp6 = cResult[3];
-      }
-      _require = tmp6;
-      if (cResult[4] !== obj3) {
-        const hasItem1 = obj3.includes(constants.CONSOLE);
-        cResult[4] = obj3;
-        cResult[5] = hasItem1;
-        let tmp9 = hasItem1;
-      } else {
-        tmp9 = cResult[5];
-      }
-      closure_1 = tmp9;
-      const tmp3 = _slicedToArray(closure_58(id.id), 2);
-      if (cResult[6] !== first1) {
-        const _Symbol = Symbol;
-        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function _() {
-            return null;
-          };
-          cResult[8] = fn;
-          let PLAY_ON_DESKTOP = fn;
-        } else {
-          PLAY_ON_DESKTOP = cResult[8];
-        }
-        const _Symbol2 = Symbol;
-        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          class Q {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-          cResult[9] = Q;
-          let PLAY_ACTIVITY = Q;
-        } else {
-          class Q {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-        }
-        const _Symbol3 = Symbol;
-        if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          class P {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-          cResult[10] = P;
-          let WATCH_VIDEO = P;
-        } else {
-          class P {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-        }
-        const _Symbol4 = Symbol;
-        if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-          class P {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-          cResult[11] = tmp16;
-          let WATCH_VIDEO_ON_MOBILE = tmp16;
-        } else {
-          class P {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-        }
-        const _Symbol5 = Symbol;
-        if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-          class P {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-          cResult[12] = tmp17;
-          let STREAM_ON_DESKTOP = tmp17;
-        } else {
-          class P {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-        }
-        const _Symbol6 = Symbol;
-        if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          class O {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-          cResult[13] = O;
-          let PLAY_ON_XBOX = O;
-        } else {
-          class O {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-        }
-        const _Symbol7 = Symbol;
-        if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-          class A {
-            constructor() {
-              return closure_1_14.CONSOLE;
-            }
-          }
-          cResult[14] = A;
-          let PLAY_ON_PLAYSTATION = A;
-        } else {
-          class A {
-            constructor() {
-              return closure_1_14.CONSOLE;
-            }
-          }
-        }
-        const _Symbol8 = Symbol;
-        if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-          class A {
-            constructor() {
-              return closure_1_14.CONSOLE;
-            }
-          }
-          cResult[15] = tmp18;
-          let ACHIEVEMENT_IN_GAME = tmp18;
-        } else {
-          class A {
-            constructor() {
-              return closure_1_14.CONSOLE;
-            }
-          }
-        }
-        const _Symbol9 = Symbol;
-        if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-          class F {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-          cResult[16] = F;
-          let ACHIEVEMENT_IN_ACTIVITY = F;
-        } else {
-          class F {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-        }
-        const _Symbol10 = Symbol;
-        if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-          class I {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-          cResult[17] = I;
-        } else {
-          class I {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-        }
-        const match = withResult16(5075).match(first1);
-        const str2 = withResult16(5075);
-        const obj = { taskType: null };
-        PLAY_ON_DESKTOP = withResult16(5631).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP;
-        obj.taskType = PLAY_ON_DESKTOP;
-        const withResult = match.with({ percentComplete: 0 }, PLAY_ON_DESKTOP);
-        const obj4 = { taskType: null };
-        PLAY_ACTIVITY = withResult16(5631).FirstPartyQuestTaskTypes.PLAY_ACTIVITY;
-        obj4.taskType = PLAY_ACTIVITY;
-        const withResult1 = match.with({ percentComplete: 0 }, PLAY_ON_DESKTOP).with(obj, PLAY_ACTIVITY);
-        const obj5 = { taskType: null };
-        WATCH_VIDEO = withResult16(5631).FirstPartyQuestTaskTypes.WATCH_VIDEO;
-        obj5.taskType = WATCH_VIDEO;
-        const withResult2 = match
-          .with({ percentComplete: 0 }, PLAY_ON_DESKTOP)
-          .with(obj, PLAY_ACTIVITY)
-          .with(obj4, WATCH_VIDEO);
-        const obj6 = { taskType: null };
-        WATCH_VIDEO_ON_MOBILE = withResult16(5631).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE;
-        obj6.taskType = WATCH_VIDEO_ON_MOBILE;
-        const withResult3 = match
-          .with({ percentComplete: 0 }, PLAY_ON_DESKTOP)
-          .with(obj, PLAY_ACTIVITY)
-          .with(obj4, WATCH_VIDEO)
-          .with(obj5, WATCH_VIDEO_ON_MOBILE);
-        const obj7 = { taskType: null };
-        STREAM_ON_DESKTOP = withResult16(5631).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP;
-        obj7.taskType = STREAM_ON_DESKTOP;
-        const withResult4 = match
-          .with({ percentComplete: 0 }, PLAY_ON_DESKTOP)
-          .with(obj, PLAY_ACTIVITY)
-          .with(obj4, WATCH_VIDEO)
-          .with(obj5, WATCH_VIDEO_ON_MOBILE)
-          .with(obj6, STREAM_ON_DESKTOP);
-        const obj8 = { taskType: null };
-        PLAY_ON_XBOX = withResult16(5631).FirstPartyQuestTaskTypes.PLAY_ON_XBOX;
-        obj8.taskType = PLAY_ON_XBOX;
-        const withResult5 = match
-          .with({ percentComplete: 0 }, PLAY_ON_DESKTOP)
-          .with(obj, PLAY_ACTIVITY)
-          .with(obj4, WATCH_VIDEO)
-          .with(obj5, WATCH_VIDEO_ON_MOBILE)
-          .with(obj6, STREAM_ON_DESKTOP)
-          .with(obj7, PLAY_ON_XBOX);
-        const obj9 = { taskType: null };
-        PLAY_ON_PLAYSTATION = withResult16(5631).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION;
-        obj9.taskType = PLAY_ON_PLAYSTATION;
-        const withResult6 = match
-          .with({ percentComplete: 0 }, PLAY_ON_DESKTOP)
-          .with(obj, PLAY_ACTIVITY)
-          .with(obj4, WATCH_VIDEO)
-          .with(obj5, WATCH_VIDEO_ON_MOBILE)
-          .with(obj6, STREAM_ON_DESKTOP)
-          .with(obj7, PLAY_ON_XBOX)
-          .with(obj8, PLAY_ON_PLAYSTATION);
-        const obj10 = { taskType: null };
-        ACHIEVEMENT_IN_GAME = withResult16(5631).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME;
-        obj10.taskType = ACHIEVEMENT_IN_GAME;
-        const withResult7 = match
-          .with({ percentComplete: 0 }, PLAY_ON_DESKTOP)
-          .with(obj, PLAY_ACTIVITY)
-          .with(obj4, WATCH_VIDEO)
-          .with(obj5, WATCH_VIDEO_ON_MOBILE)
-          .with(obj6, STREAM_ON_DESKTOP)
-          .with(obj7, PLAY_ON_XBOX)
-          .with(obj8, PLAY_ON_PLAYSTATION)
-          .with(obj9, ACHIEVEMENT_IN_GAME);
-        const obj11 = { taskType: null };
-        ACHIEVEMENT_IN_ACTIVITY = withResult16(5631).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY;
-        obj11.taskType = ACHIEVEMENT_IN_ACTIVITY;
-        const withResult8 = match
-          .with({ percentComplete: 0 }, PLAY_ON_DESKTOP)
-          .with(obj, PLAY_ACTIVITY)
-          .with(obj4, WATCH_VIDEO)
-          .with(obj5, WATCH_VIDEO_ON_MOBILE)
-          .with(obj6, STREAM_ON_DESKTOP)
-          .with(obj7, PLAY_ON_XBOX)
-          .with(obj8, PLAY_ON_PLAYSTATION)
-          .with(obj9, ACHIEVEMENT_IN_GAME)
-          .with(obj10, ACHIEVEMENT_IN_ACTIVITY);
-        const exhaustiveResult = match
-          .with({ percentComplete: 0 }, PLAY_ON_DESKTOP)
-          .with(obj, PLAY_ACTIVITY)
-          .with(obj4, WATCH_VIDEO)
-          .with(obj5, WATCH_VIDEO_ON_MOBILE)
-          .with(obj6, STREAM_ON_DESKTOP)
-          .with(obj7, PLAY_ON_XBOX)
-          .with(obj8, PLAY_ON_PLAYSTATION)
-          .with(obj9, ACHIEVEMENT_IN_GAME)
-          .with(obj10, ACHIEVEMENT_IN_ACTIVITY)
-          .with(obj11, I)
-          .exhaustive();
-        cResult[6] = first1;
-        cResult[7] = exhaustiveResult;
-        const withResult9 = match
-          .with({ percentComplete: 0 }, PLAY_ON_DESKTOP)
-          .with(obj, PLAY_ACTIVITY)
-          .with(obj4, WATCH_VIDEO)
-          .with(obj5, WATCH_VIDEO_ON_MOBILE)
-          .with(obj6, STREAM_ON_DESKTOP)
-          .with(obj7, PLAY_ON_XBOX)
-          .with(obj8, PLAY_ON_PLAYSTATION)
-          .with(obj9, ACHIEVEMENT_IN_GAME)
-          .with(obj10, ACHIEVEMENT_IN_ACTIVITY)
-          .with(obj11, I);
-      } else {
-        class I {
-          constructor() {
-            return closure_1_14.DESKTOP;
-          }
-        }
-        if (tmp12) {
-          class I {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-          let CONSOLE = constants.DESKTOP;
-        } else {
-          class I {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-          if (tmp13) {
-            class I {
-              constructor() {
-                return closure_1_14.DESKTOP;
-              }
-            }
-            CONSOLE = constants.CONSOLE;
-          }
-        }
-        if (cResult[18] === CONSOLE) {
-          class I {
-            constructor() {
-              return closure_1_14.DESKTOP;
-            }
-          }
-        }
-        const _Symbol11 = Symbol;
-        if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
-          class M {
-            constructor() {
-              return closure_0(closure_1_2[47]).TaskPlatformScreen.CONSOLE;
-            }
-          }
-          cResult[24] = M;
-          let DESKTOP = M;
-        } else {
-          class M {
-            constructor() {
-              return closure_0(closure_1_2[47]).TaskPlatformScreen.CONSOLE;
-            }
-          }
-        }
-        const _Symbol12 = Symbol;
-        if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-          class L {
-            constructor() {
-              return closure_0(closure_1_2[47]).TaskPlatformScreen.DESKTOP;
-            }
-          }
-          cResult[25] = L;
-          let CONSOLE2 = L;
-        } else {
-          class L {
-            constructor() {
-              return closure_0(closure_1_2[47]).TaskPlatformScreen.DESKTOP;
-            }
-          }
-        }
-        const _Symbol13 = Symbol;
-        if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
-          class N {
-            constructor() {
-              return closure_0(closure_1_2[47]).TaskPlatformScreen.CONSOLE;
-            }
-          }
-          cResult[26] = N;
-          let DESKTOP2 = N;
-        } else {
-          class N {
-            constructor() {
-              return closure_0(closure_1_2[47]).TaskPlatformScreen.CONSOLE;
-            }
-          }
-        }
-        const _Symbol14 = Symbol;
-        if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-          class N {
-            constructor() {
-              return closure_0(closure_1_2[47]).TaskPlatformScreen.CONSOLE;
-            }
-          }
-          cResult[27] = tmp23;
-          let CONSOLE3 = tmp23;
-        } else {
-          class N {
-            constructor() {
-              return closure_0(closure_1_2[47]).TaskPlatformScreen.CONSOLE;
-            }
-          }
-        }
-        const _Symbol15 = Symbol;
-        if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
-          class H {
-            constructor() {
-              return closure_0(closure_1_2[47]).TaskPlatformScreen.CONSOLE;
-            }
-          }
-          cResult[28] = H;
-        } else {
-          class H {
-            constructor() {
-              return closure_0(closure_1_2[47]).TaskPlatformScreen.CONSOLE;
-            }
-          }
-        }
-        const _Symbol16 = Symbol;
-        if (cResult[29] === Symbol.for("react.memo_cache_sentinel")) {
-          class B {
-            constructor() {
-              return closure_0(closure_1_2[47]).TaskPlatformScreen.DESKTOP;
-            }
-          }
-          cResult[29] = B;
-        } else {
-          class B {
-            constructor() {
-              return closure_0(closure_1_2[47]).TaskPlatformScreen.DESKTOP;
-            }
-          }
-        }
-        if (cResult[30] === tmp9) {
-          class B {
-            constructor() {
-              return closure_0(closure_1_2[47]).TaskPlatformScreen.DESKTOP;
-            }
-          }
-          const obj12 = { lastPlatformProgress: tmp14, currentProgressingPlatform: CONSOLE, selectedPlatform: tmp4 };
-          const match1 = withResult16(5075).match(obj12);
-          const obj13 = { currentProgressingPlatform: constants.CONSOLE };
-          const str4 = withResult16(5075);
-          const obj14 = { currentProgressingPlatform: null };
-          DESKTOP = constants.DESKTOP;
-          obj14.currentProgressingPlatform = DESKTOP;
-          const withResult10 = match1.with(obj13, DESKTOP);
-          const obj15 = { currentProgressingPlatform: null, lastPlatformProgress: null };
-          CONSOLE2 = constants.CONSOLE;
-          obj15.lastPlatformProgress = CONSOLE2;
-          const withResult11 = match1.with(obj13, DESKTOP).with(obj14, CONSOLE2);
-          const obj16 = { currentProgressingPlatform: null, lastPlatformProgress: null };
-          DESKTOP2 = constants.DESKTOP;
-          obj16.lastPlatformProgress = DESKTOP2;
-          const withResult12 = match1.with(obj13, DESKTOP).with(obj14, CONSOLE2).with(obj15, DESKTOP2);
-          const obj17 = { currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: null };
-          CONSOLE3 = constants.CONSOLE;
-          obj17.selectedPlatform = CONSOLE3;
-          const withResult13 = match1
-            .with(obj13, DESKTOP)
-            .with(obj14, CONSOLE2)
-            .with(obj15, DESKTOP2)
-            .with(obj16, CONSOLE3);
-          const obj18 = {
-            currentProgressingPlatform: null,
-            lastPlatformProgress: null,
-            selectedPlatform: constants.DESKTOP,
-          };
-          const withResult14 = match1
-            .with(obj13, DESKTOP)
-            .with(obj14, CONSOLE2)
-            .with(obj15, DESKTOP2)
-            .with(obj16, CONSOLE3)
-            .with(obj17, H);
-          withResult16 = match1
-            .with(obj13, DESKTOP)
-            .with(obj14, CONSOLE2)
-            .with(obj15, DESKTOP2)
-            .with(obj16, CONSOLE3)
-            .with(obj17, H)
-            .with(obj18, B)
-            .with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: null }, tmp26);
-          exhaustiveResult1 = withResult16.exhaustive();
-          cResult[18] = CONSOLE;
-          cResult[19] = tmp9;
-          cResult[20] = tmp6;
-          cResult[21] = tmp14;
-          cResult[22] = tmp4;
-          cResult[23] = exhaustiveResult1;
-          const withResult15 = match1
-            .with(obj13, DESKTOP)
-            .with(obj14, CONSOLE2)
-            .with(obj15, DESKTOP2)
-            .with(obj16, CONSOLE3)
-            .with(obj17, H)
-            .with(obj18, B);
-        }
-        const fn2 = function q() {
-          if (closure_1) {
-            if (closure_0) {
-              let SELECT = QuestTypes.TaskPlatformScreen.SELECT;
-            }
-            return SELECT;
-          }
-          const TaskPlatformScreen = QuestTypes.TaskPlatformScreen;
-          SELECT = closure_1 ? TaskPlatformScreen.CONSOLE : TaskPlatformScreen.DESKTOP;
-        };
-        cResult[30] = tmp9;
-        cResult[31] = tmp6;
-        cResult[32] = fn2;
-        tmp26 = fn2;
-      }
-      tmp12 = closure_48(id);
-    }
-  : (id, arg1) => {
-      closure_0 = id;
-      closure_1 = arg1;
-      const tmp = hasItem1(closure_58(id.id), 2);
-      const selectedPlatform = tmp[0];
-      const items = [id];
-      const memo = memo1.useMemo(() => QuestPlatformUtils.supportedTaskPlatforms(closure_0), items);
-      const hasItem = memo.includes(constants.DESKTOP);
-      hasItem1 = memo.includes(constants.CONSOLE);
-      const items1 = [arg1];
-      let obj = memo1;
-      const tmp6 = closure_48(id);
-      memo1 = memo1.useMemo(() => {
-        const match = _mod5075.match(closure_1);
-        const withResult = match.with({ percentComplete: 0 }, () => null);
-        const obj = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP };
-        const withResult1 = withResult.with(
-          { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP },
-          () => constants.DESKTOP,
-        );
-        const obj2 = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY };
-        const withResult2 = withResult1.with(
-          { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY },
-          () => constants.DESKTOP,
-        );
-        obj3 = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO };
-        const withResult3 = withResult2.with(
-          { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO },
-          () => constants.DESKTOP,
-        );
-        const obj4 = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE };
-        const withResult4 = withResult3.with(
-          { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE },
-          () => constants.DESKTOP,
-        );
-        const obj5 = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP };
-        const withResult5 = withResult4.with(
-          { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP },
-          () => constants.DESKTOP,
-        );
-        const obj6 = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_XBOX };
-        const withResult6 = withResult5.with(
-          { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_XBOX },
-          () => constants.CONSOLE,
-        );
-        const obj7 = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION };
-        const withResult7 = withResult6.with(
-          { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION },
-          () => constants.CONSOLE,
-        );
-        const obj8 = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME };
-        const withResult8 = withResult7.with(
-          { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME },
-          () => constants.DESKTOP,
-        );
-        const obj9 = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY };
-        return withResult8
-          .with(
-            { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY },
-            () => constants.DESKTOP,
-          )
-          .exhaustive();
-      }, items1);
-      if (tmp6) {
-        let DESKTOP = constants.DESKTOP;
-      } else {
-        DESKTOP = null;
-        if (tmp7) {
-          DESKTOP = constants.CONSOLE;
-        }
-      }
-      const items2 = [hasItem1, hasItem, memo1, DESKTOP, selectedPlatform];
-      const items3 = [
-        obj.useMemo(() => {
-          const match = _mod5075.match({
-            lastPlatformProgress: memo1,
-            currentProgressingPlatform: DESKTOP,
-            selectedPlatform,
-          });
-          const obj = { lastPlatformProgress: memo1, currentProgressingPlatform: DESKTOP, selectedPlatform };
-          const obj2 = { currentProgressingPlatform: constants.CONSOLE };
-          obj3 = { currentProgressingPlatform: constants.DESKTOP };
-          const withResult = match.with(
-            { currentProgressingPlatform: constants.CONSOLE },
-            () => id(5626).TaskPlatformScreen.CONSOLE,
-          );
-          const obj4 = { currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE };
-          const withResult1 = match
-            .with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5626).TaskPlatformScreen.CONSOLE)
-            .with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5626).TaskPlatformScreen.DESKTOP);
-          const obj5 = { currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP };
-          const withResult2 = match
-            .with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5626).TaskPlatformScreen.CONSOLE)
-            .with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5626).TaskPlatformScreen.DESKTOP)
-            .with(
-              { currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE },
-              () => id(5626).TaskPlatformScreen.CONSOLE,
-            );
-          const obj6 = {
-            currentProgressingPlatform: null,
-            lastPlatformProgress: null,
-            selectedPlatform: constants.CONSOLE,
-          };
-          const withResult3 = match
-            .with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5626).TaskPlatformScreen.CONSOLE)
-            .with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5626).TaskPlatformScreen.DESKTOP)
-            .with(
-              { currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE },
-              () => id(5626).TaskPlatformScreen.CONSOLE,
-            )
-            .with(
-              { currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP },
-              () => id(5626).TaskPlatformScreen.DESKTOP,
-            );
-          const obj7 = {
-            currentProgressingPlatform: null,
-            lastPlatformProgress: null,
-            selectedPlatform: constants.DESKTOP,
-          };
-          const withResult4 = match
-            .with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5626).TaskPlatformScreen.CONSOLE)
-            .with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5626).TaskPlatformScreen.DESKTOP)
-            .with(
-              { currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE },
-              () => id(5626).TaskPlatformScreen.CONSOLE,
-            )
-            .with(
-              { currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP },
-              () => id(5626).TaskPlatformScreen.DESKTOP,
-            )
-            .with(
-              { currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE },
-              () => id(5626).TaskPlatformScreen.CONSOLE,
-            );
-          const withResult5 = match
-            .with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5626).TaskPlatformScreen.CONSOLE)
-            .with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5626).TaskPlatformScreen.DESKTOP)
-            .with(
-              { currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE },
-              () => id(5626).TaskPlatformScreen.CONSOLE,
-            )
-            .with(
-              { currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP },
-              () => id(5626).TaskPlatformScreen.DESKTOP,
-            )
-            .with(
-              { currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE },
-              () => id(5626).TaskPlatformScreen.CONSOLE,
-            )
-            .with(
-              { currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.DESKTOP },
-              () => id(5626).TaskPlatformScreen.DESKTOP,
-            );
-          return match
-            .with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5626).TaskPlatformScreen.CONSOLE)
-            .with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5626).TaskPlatformScreen.DESKTOP)
-            .with(
-              { currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE },
-              () => id(5626).TaskPlatformScreen.CONSOLE,
-            )
-            .with(
-              { currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP },
-              () => id(5626).TaskPlatformScreen.DESKTOP,
-            )
-            .with(
-              { currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE },
-              () => id(5626).TaskPlatformScreen.CONSOLE,
-            )
-            .with(
-              { currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.DESKTOP },
-              () => id(5626).TaskPlatformScreen.DESKTOP,
-            )
-            .with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: null }, () => {
-              if (hasItem1) {
-                if (hasItem) {
-                  let SELECT = closure_0(first[47]).TaskPlatformScreen.SELECT;
-                }
-                return SELECT;
-              }
-              const TaskPlatformScreen = closure_0(first[47]).TaskPlatformScreen;
-              SELECT = hasItem1 ? TaskPlatformScreen.CONSOLE : TaskPlatformScreen.DESKTOP;
-            })
-            .exhaustive();
-        }, items2),
-        memo,
-        tmp[1],
-      ];
-      return items3;
-    };
-let closure_59 = tmp31;
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp29 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let formatPercent = require;
-      let obj = dependencyMap;
-      const cResult = c.c(11);
+      let locale;
+      let tmp11;
+      let tmp5;
+      let tmp6;
+      const obj = react2;
+      const cResult = obj.c(11);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [LocaleStore];
         const fn = function o() {
@@ -3422,83 +2938,84 @@ const tmp29 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = items;
         cResult[1] = fn;
-        tmp3 = items;
-        tmp4 = fn;
+        tmp5 = items;
+        tmp6 = fn;
       } else {
-        [tmp3, tmp4] = cResult;
+        [tmp5, tmp6] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp3, tmp4);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
       let percentComplete = closure_52(arg0).percentComplete;
-      const tmp7 = closure_53(arg0);
-      if (null != tmp7) {
-        percentComplete = tmp7.percentComplete;
+      const tmp9 = closure_53(arg0);
+      if (null != tmp9) {
+        percentComplete = tmp9.percentComplete;
       }
       const result = 100 * percentComplete;
       if (cResult[2] === percentComplete) {
         if (cResult[3] === stateFromStores) {
-          if (cResult[4] === tmp7) {
-            if (cResult[5] === tmp2) {
-              if (cResult[7] === percentComplete) {
-                if (cResult[8] === tmp9) {
-                  if (cResult[9] === result) {
-                    let tmp15 = cResult[10];
-                  }
-                  return tmp15;
-                }
-              }
-              obj3 = { completedRatio: percentComplete, percentComplete: result, completedRatioDisplay: cResult[6] };
-              cResult[7] = percentComplete;
-              cResult[8] = cResult[6];
-              cResult[9] = result;
-              cResult[10] = obj3;
-              tmp15 = obj3;
+          if (cResult[4] === tmp9) {
+            if (cResult[5] === (undefined !== arg1 && arg1)) {
+              tmp11 = cResult[6];
             }
+            if (cResult[7] === percentComplete) {
+              if (cResult[8] === tmp11) {
+                let tmp15;
+                if (cResult[9] === result) {
+                  tmp15 = cResult[10];
+                }
+                return tmp15;
+              }
+            }
+            obj2 = { completedRatio: percentComplete, percentComplete: result, completedRatioDisplay: tmp11 };
+            cResult[7] = percentComplete;
+            cResult[8] = tmp11;
+            cResult[9] = result;
+            cResult[10] = obj2;
+            tmp15 = obj2;
           }
         }
       }
-      if (null != tmp7) {
-        if (!tmp2) {
+      if (null != tmp9) {
+        let combined;
+        if (!(undefined !== arg1 && arg1)) {
           let progress;
-          if (tmp7 != null) {
-            progress = tmp7.progress;
+          if (tmp9 != null) {
+            progress = tmp9.progress;
           }
           let target;
-          if (tmp7 != null) {
-            target = tmp7.target;
+          if (tmp9 != null) {
+            target = tmp9.target;
           }
           const _HermesInternal = HermesInternal;
-          let combined = "" + progress + "/" + target;
+          combined = "" + progress + "/" + target;
         }
         cResult[2] = percentComplete;
         cResult[3] = stateFromStores;
-        cResult[4] = tmp7;
-        cResult[5] = tmp2;
+        cResult[4] = tmp9;
+        cResult[5] = undefined !== arg1 && arg1;
         cResult[6] = combined;
+        tmp11 = combined;
       }
-      const formatPercentResult = initialize;
-      formatPercent = NumberUtils.formatPercent;
-      obj = { roundingMode: "floor" };
-      combined = formatPercent(stateFromStores, percentComplete, obj);
-      const formatPercentResult1 = NumberUtils;
+      const tmpResult2 = NumberUtils;
+      combined = tmpResult2.formatPercent(stateFromStores, percentComplete, { roundingMode: "floor" });
     }
   : (arg0) => {
+      let locale;
       let flag = arg1;
       if (arg1 === undefined) {
         flag = false;
       }
       const items = [LocaleStore];
-      const stateFromStores = initialize.useStateFromStores(items, () => locale.locale);
+      const obj = get_initialized;
+      const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
       let percentComplete = closure_52(arg0).percentComplete;
       const tmp4 = closure_53(arg0);
       if (null != tmp4) {
         percentComplete = tmp4.percentComplete;
       }
-      const obj2 = {
-        completedRatio: percentComplete,
-        percentComplete: 100 * percentComplete,
-        completedRatioDisplay: null,
-      };
+      obj2 = { completedRatio: percentComplete, percentComplete: 100 * percentComplete, completedRatioDisplay: null };
       if (null != tmp4) {
+        let combined;
         if (!flag) {
           let progress;
           if (tmp4 != null) {
@@ -3509,203 +3026,767 @@ const tmp29 = ReactCompilerGating.isReactCompilerEnabled()
             target = tmp4.target;
           }
           const _HermesInternal = HermesInternal;
-          let combined = "" + progress + "/" + target;
+          combined = "" + progress + "/" + target;
         }
         obj2.completedRatioDisplay = combined;
         return obj2;
       }
-      combined = NumberUtils.formatPercent(stateFromStores, percentComplete, { roundingMode: "floor" });
       const tmpResult = NumberUtils;
+      combined = tmpResult.formatPercent(stateFromStores, percentComplete, { roundingMode: "floor" });
     };
-ReactCompilerGating = fn(558);
-let tmp32 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp30 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      let closure_0;
+      let first;
+      let tmp6;
+      let tmp8;
+      _require = arg0;
+      let obj = require("react");
+      const cResult = obj.c(8);
+      const tmp = _require;
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [QuestStore];
+        cResult[0] = items;
+        first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== arg0) {
+        const fn = function n() {
+          return QuestStore.selectedTaskPlatform(closure_0);
+        };
+        cResult[1] = arg0;
+        cResult[2] = fn;
+        tmp6 = fn;
+      } else {
+        tmp6 = cResult[2];
+      }
+      const tmpResult = tmp(504);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+      if (cResult[3] !== arg0) {
+        const fn2 = function u(platform) {
+          const obj = QuestActionCreators;
+          return obj.selectTaskPlatform(closure_0, platform);
+        };
+        cResult[3] = arg0;
+        cResult[4] = fn2;
+        tmp8 = fn2;
+      } else {
+        tmp8 = cResult[4];
+      }
+      if (cResult[5] === tmp8) {
+        let tmp9;
+        if (cResult[6] === stateFromStores) {
+          tmp9 = cResult[7];
+        }
+        return tmp9;
+      }
+      const items1 = [stateFromStores, tmp8];
+      cResult[5] = tmp8;
+      cResult[6] = stateFromStores;
+      cResult[7] = items1;
+      tmp9 = items1;
+    }
+  : (arg0) => {
+      let closure_0;
+      _require = arg0;
+      let obj = require("get initialized");
+      const items = [QuestStore];
+      const items1 = [obj.useStateFromStores(items, () => QuestStore.selectedTaskPlatform(closure_0))];
+      const items2 = [arg0];
+      items1[1] = react.useCallback((platform) => {
+        const obj = QuestActionCreators;
+        return obj.selectTaskPlatform(closure_0, platform);
+      }, items2);
+      return items1;
+    };
+let closure_58 = tmp30;
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp31 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (id, config) => {
+      let CONSOLE;
+      let closure_0;
+      let fn2;
+      let tmp10;
+      let tmp5;
+      let tmp7;
+      const obj = require("react");
+      const cResult = obj.c(37);
+      [tmp5, r10016] = closure_58(id.id);
+      _slicedToArray(closure_58(id.id), 2);
+      if (cResult[0] !== id) {
+        const tmpResult = require("QuestPlatformUtils");
+        const result = tmpResult.supportedTaskPlatforms(id);
+        cResult[0] = id;
+        cResult[1] = result;
+        obj2 = result;
+      } else {
+        obj2 = cResult[1];
+      }
+      if (cResult[2] !== obj2) {
+        const hasItem = obj2.includes(constants.DESKTOP);
+        cResult[2] = obj2;
+        cResult[3] = hasItem;
+        tmp7 = hasItem;
+      } else {
+        tmp7 = cResult[3];
+      }
+      _require = tmp7;
+      if (cResult[4] !== obj2) {
+        const hasItem1 = obj2.includes(constants.CONSOLE);
+        cResult[4] = obj2;
+        cResult[5] = hasItem1;
+        tmp10 = hasItem1;
+      } else {
+        tmp10 = cResult[5];
+      }
+      let closure_1 = tmp10;
+      const tmp13 = closure_48(id);
+      const tmp14 = closure_49(id);
+      if (cResult[6] !== config) {
+        let tmp17;
+        const _Symbol = Symbol;
+        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+          const fn = function _() {
+            return null;
+          };
+          cResult[8] = fn;
+          tmp17 = fn;
+        } else {
+          tmp17 = cResult[8];
+        }
+        const _Symbol2 = Symbol;
+        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+          class Q {
+            constructor() {
+              return constants.DESKTOP;
+            }
+          }
+          cResult[9] = Q;
+        } else {
+          class Q {
+            constructor() {
+              return constants.DESKTOP;
+            }
+          }
+        }
+        const _Symbol3 = Symbol;
+        if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+          class P {
+            constructor() {
+              return constants.DESKTOP;
+            }
+          }
+          cResult[10] = P;
+        } else {
+          class P {
+            constructor() {
+              return constants.DESKTOP;
+            }
+          }
+        }
+        const _Symbol4 = Symbol;
+        if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+          class P {
+            constructor() {
+              return constants.DESKTOP;
+            }
+          }
+          cResult[11] = tmp21;
+        } else {
+          class P {
+            constructor() {
+              return constants.DESKTOP;
+            }
+          }
+        }
+        const _Symbol5 = Symbol;
+        if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
+          class P {
+            constructor() {
+              return constants.DESKTOP;
+            }
+          }
+          cResult[12] = tmp23;
+        } else {
+          class P {
+            constructor() {
+              return constants.DESKTOP;
+            }
+          }
+        }
+        const _Symbol6 = Symbol;
+        if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+          class O {
+            constructor() {
+              return constants.DESKTOP;
+            }
+          }
+          cResult[13] = O;
+        } else {
+          class O {
+            constructor() {
+              return constants.DESKTOP;
+            }
+          }
+        }
+        const _Symbol7 = Symbol;
+        if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
+          class A {
+            constructor() {
+              return constants.CONSOLE;
+            }
+          }
+          cResult[14] = A;
+        } else {
+          class A {
+            constructor() {
+              return constants.CONSOLE;
+            }
+          }
+        }
+        const _Symbol8 = Symbol;
+        if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
+          class A {
+            constructor() {
+              return constants.CONSOLE;
+            }
+          }
+          cResult[15] = tmp27;
+        } else {
+          class A {
+            constructor() {
+              return constants.CONSOLE;
+            }
+          }
+        }
+        const _Symbol9 = Symbol;
+        if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
+          class F {
+            constructor() {
+              return constants.DESKTOP;
+            }
+          }
+          cResult[16] = F;
+        } else {
+          class F {
+            constructor() {
+              return constants.DESKTOP;
+            }
+          }
+        }
+        const _Symbol10 = Symbol;
+        if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
+          class I {
+            constructor() {
+              return constants.DESKTOP;
+            }
+          }
+          cResult[17] = I;
+        } else {
+          class I {
+            constructor() {
+              return constants.DESKTOP;
+            }
+          }
+        }
+        const str2 = require("merged5");
+        const match = str2.match(config);
+        const obj3 = { taskType: require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP };
+        const _with = match.with({ percentComplete: 0 }, tmp17).with;
+        match.with({ percentComplete: 0 }, tmp17);
+        const obj4 = { taskType: require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypes.PLAY_ACTIVITY };
+        const _with2 = _with(obj3, Q).with;
+        _with(obj3, Q);
+        const obj5 = { taskType: require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypes.WATCH_VIDEO };
+        const _with3 = _with2(obj4, P).with;
+        _with2(obj4, P);
+        const obj6 = { taskType: require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE };
+        const _with4 = _with3(obj5, tmp21).with;
+        _with3(obj5, tmp21);
+        const obj7 = { taskType: require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP };
+        const _with5 = _with4(obj6, tmp23).with;
+        _with4(obj6, tmp23);
+        const obj8 = { taskType: require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypes.PLAY_ON_XBOX };
+        const _with6 = _with5(obj7, O).with;
+        _with5(obj7, O);
+        const obj9 = { taskType: require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION };
+        const _with7 = _with6(obj8, A).with;
+        _with6(obj8, A);
+        const obj10 = { taskType: require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME };
+        const _with8 = _with7(obj9, tmp27).with;
+        _with7(obj9, tmp27);
+        const obj11 = {
+          taskType: require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY,
+        };
+        const _with9 = _with8(obj10, F).with;
+        _with8(obj10, F);
+        const _with9Result = _with9(obj11, I);
+        cResult[6] = config;
+        cResult[7] = _with9Result.exhaustive();
+        const exhaustiveResult = _with9Result.exhaustive();
+      } else {
+        class I {
+          constructor() {
+            return constants.DESKTOP;
+          }
+        }
+      }
+      if (tmp13) {
+        class I {
+          constructor() {
+            return constants.DESKTOP;
+          }
+        }
+        CONSOLE = constants.DESKTOP;
+      } else {
+        class I {
+          constructor() {
+            return constants.DESKTOP;
+          }
+        }
+        if (tmp14) {
+          class I {
+            constructor() {
+              return constants.DESKTOP;
+            }
+          }
+          CONSOLE = constants.CONSOLE;
+        }
+      }
+      if (cResult[18] === CONSOLE) {
+        class I {
+          constructor() {
+            return constants.DESKTOP;
+          }
+        }
+      }
+      if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
+        class M {
+          constructor() {
+            return closure_0(dependencyMap[47]).TaskPlatformScreen.CONSOLE;
+          }
+        }
+        cResult[24] = M;
+      } else {
+        class M {
+          constructor() {
+            return closure_0(dependencyMap[47]).TaskPlatformScreen.CONSOLE;
+          }
+        }
+      }
+      if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
+        class L {
+          constructor() {
+            return closure_0(dependencyMap[47]).TaskPlatformScreen.DESKTOP;
+          }
+        }
+        cResult[25] = L;
+      } else {
+        class L {
+          constructor() {
+            return closure_0(dependencyMap[47]).TaskPlatformScreen.DESKTOP;
+          }
+        }
+      }
+      if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
+        class N {
+          constructor() {
+            return closure_0(dependencyMap[47]).TaskPlatformScreen.CONSOLE;
+          }
+        }
+        cResult[26] = N;
+      } else {
+        class N {
+          constructor() {
+            return closure_0(dependencyMap[47]).TaskPlatformScreen.CONSOLE;
+          }
+        }
+      }
+      if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
+        class N {
+          constructor() {
+            return closure_0(dependencyMap[47]).TaskPlatformScreen.CONSOLE;
+          }
+        }
+        cResult[27] = tmp45;
+      } else {
+        class N {
+          constructor() {
+            return closure_0(dependencyMap[47]).TaskPlatformScreen.CONSOLE;
+          }
+        }
+      }
+      if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
+        class H {
+          constructor() {
+            return closure_0(dependencyMap[47]).TaskPlatformScreen.CONSOLE;
+          }
+        }
+        cResult[28] = H;
+      } else {
+        class H {
+          constructor() {
+            return closure_0(dependencyMap[47]).TaskPlatformScreen.CONSOLE;
+          }
+        }
+      }
+      if (cResult[29] === Symbol.for("react.memo_cache_sentinel")) {
+        class B {
+          constructor() {
+            return closure_0(dependencyMap[47]).TaskPlatformScreen.DESKTOP;
+          }
+        }
+        cResult[29] = B;
+      } else {
+        class B {
+          constructor() {
+            return closure_0(dependencyMap[47]).TaskPlatformScreen.DESKTOP;
+          }
+        }
+      }
+      if (cResult[30] === tmp10) {
+        class B {
+          constructor() {
+            return closure_0(dependencyMap[47]).TaskPlatformScreen.DESKTOP;
+          }
+        }
+        const obj12 = { lastPlatformProgress: tmp15, currentProgressingPlatform: CONSOLE, selectedPlatform: tmp5 };
+        const str3 = require("merged5");
+        const match1 = str3.match(obj12);
+        const obj13 = { currentProgressingPlatform: constants.CONSOLE };
+        const obj14 = { currentProgressingPlatform: constants.DESKTOP };
+        const obj15 = { currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE };
+        const withResult1 = match1.with(obj13, M);
+        const obj16 = { currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP };
+        const withResult2 = withResult1.with(obj14, L);
+        const obj17 = {
+          currentProgressingPlatform: null,
+          lastPlatformProgress: null,
+          selectedPlatform: constants.CONSOLE,
+        };
+        const withResult3 = withResult2.with(obj15, N);
+        const obj18 = {
+          currentProgressingPlatform: null,
+          lastPlatformProgress: null,
+          selectedPlatform: constants.DESKTOP,
+        };
+        const withResult4 = withResult3.with(obj16, tmp45);
+        const withResult5 = withResult4.with(obj17, H);
+        const withResult6 = withResult5.with(obj18, B);
+        const withResult7 = withResult6.with(
+          { currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: null },
+          fn2,
+        );
+        cResult[18] = CONSOLE;
+        cResult[19] = tmp10;
+        cResult[20] = tmp7;
+        cResult[21] = tmp15;
+        cResult[22] = tmp5;
+        cResult[23] = withResult7.exhaustive();
+        const exhaustiveResult1 = withResult7.exhaustive();
+      }
+      fn2 = function q() {
+        if (closure_1) {
+          let SELECT;
+          if (closure_0) {
+            SELECT = QuestTypes.TaskPlatformScreen.SELECT;
+          }
+          return SELECT;
+        }
+        const TaskPlatformScreen = QuestTypes.TaskPlatformScreen;
+        SELECT = closure_1 ? TaskPlatformScreen.CONSOLE : TaskPlatformScreen.DESKTOP;
+      };
+      cResult[30] = tmp10;
+      cResult[31] = tmp7;
+      cResult[32] = fn2;
+    }
+  : (id, arg1) => {
+      let DESKTOP;
+      let hasItem1;
+      let memo1;
+      let closure_0 = id;
+      let closure_1 = arg1;
+      const tmp = hasItem1(closure_58(id.id), 2);
+      const selectedPlatform = tmp[0];
+      let obj = memo1;
+      const items = [id];
+      const tmp3 = tmp[1];
+      const memo = memo1.useMemo(() => {
+        const obj = QuestPlatformUtils;
+        return obj.supportedTaskPlatforms(id);
+      }, items);
+      const hasItem = memo.includes(constants.DESKTOP);
+      hasItem1 = memo.includes(constants.CONSOLE);
+      const items1 = [arg1];
+      const tmp7 = closure_48(id);
+      const tmp8 = closure_49(id);
+      memo1 = memo1.useMemo(() => {
+        const str = merged5;
+        const match = str.match(closure_1);
+        const withResult = match.with({ percentComplete: 0 }, () => null);
+        const obj = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP };
+        const withResult1 = withResult.with(obj, () => constants.DESKTOP);
+        obj2 = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY };
+        const withResult2 = withResult1.with(obj2, () => constants.DESKTOP);
+        const obj3 = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO };
+        const withResult3 = withResult2.with(obj3, () => constants.DESKTOP);
+        const obj4 = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE };
+        const withResult4 = withResult3.with(obj4, () => constants.DESKTOP);
+        const obj5 = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP };
+        const withResult5 = withResult4.with(obj5, () => constants.DESKTOP);
+        const obj6 = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_XBOX };
+        const withResult6 = withResult5.with(obj6, () => constants.CONSOLE);
+        const obj7 = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION };
+        const withResult7 = withResult6.with(obj7, () => constants.CONSOLE);
+        const obj8 = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME };
+        const withResult8 = withResult7.with(obj8, () => constants.DESKTOP);
+        const obj9 = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY };
+        const withResult9 = withResult8.with(obj9, () => constants.DESKTOP);
+        return withResult9.exhaustive();
+      }, items1);
+      if (tmp7) {
+        DESKTOP = constants.DESKTOP;
+      } else {
+        DESKTOP = null;
+        if (tmp8) {
+          DESKTOP = constants.CONSOLE;
+        }
+      }
+      const items2 = [hasItem1, hasItem, memo1, DESKTOP, selectedPlatform];
+      const items3 = [
+        obj.useMemo(() => {
+          const obj = { lastPlatformProgress: memo1, currentProgressingPlatform: DESKTOP, selectedPlatform };
+          const str = merged5;
+          const match = str.match(obj);
+          obj2 = { currentProgressingPlatform: constants.CONSOLE };
+          const obj3 = { currentProgressingPlatform: constants.DESKTOP };
+          const obj4 = { currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE };
+          const withResult = match.with(obj2, () => id(selectedPlatform[47]).TaskPlatformScreen.CONSOLE);
+          const obj5 = { currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP };
+          const withResult1 = withResult.with(obj3, () => id(selectedPlatform[47]).TaskPlatformScreen.DESKTOP);
+          const obj6 = {
+            currentProgressingPlatform: null,
+            lastPlatformProgress: null,
+            selectedPlatform: constants.CONSOLE,
+          };
+          const withResult2 = withResult1.with(obj4, () => id(selectedPlatform[47]).TaskPlatformScreen.CONSOLE);
+          const obj7 = {
+            currentProgressingPlatform: null,
+            lastPlatformProgress: null,
+            selectedPlatform: constants.DESKTOP,
+          };
+          const withResult3 = withResult2.with(obj5, () => id(selectedPlatform[47]).TaskPlatformScreen.DESKTOP);
+          const withResult4 = withResult3.with(obj6, () => id(selectedPlatform[47]).TaskPlatformScreen.CONSOLE);
+          const withResult5 = withResult4.with(obj7, () => id(selectedPlatform[47]).TaskPlatformScreen.DESKTOP);
+          const withResult6 = withResult5.with(
+            { currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: null },
+            () => {
+              if (hasItem1) {
+                let SELECT;
+                if (hasItem) {
+                  SELECT = id(first[47]).TaskPlatformScreen.SELECT;
+                }
+                return SELECT;
+              }
+              const TaskPlatformScreen = id(first[47]).TaskPlatformScreen;
+              SELECT = hasItem1 ? TaskPlatformScreen.CONSOLE : TaskPlatformScreen.DESKTOP;
+            },
+          );
+          return withResult6.exhaustive();
+        }, items2),
+        memo,
+        tmp3,
+      ];
+      return items3;
+    };
+let closure_59 = tmp31;
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp32 = ReactCompilerGating.isReactCompilerEnabled()
   ? (userStatus) => {
-      const cResult = c.c(14);
+      const obj = react2;
+      const cResult = obj.c(14);
+      const tmp4 = closure_53(userStatus);
       const tmp5 = closure_52(userStatus);
+      const first = _slicedToArray(closure_59(userStatus, tmp5), 1)[0];
       userStatus = userStatus.userStatus;
       let enrolledAt;
-      const tmp4 = closure_53(userStatus);
+      const tmp7 = closure_47(userStatus);
       if (userStatus != null) {
         enrolledAt = userStatus.enrolledAt;
       }
-      let tmp8 = null != enrolledAt;
+      let tmp9 = null != enrolledAt;
       const userStatus2 = userStatus.userStatus;
       if (userStatus2 != null) {
         const completedAt = userStatus2.completedAt;
       }
       if (cResult[0] === tmp5.percentComplete) {
+        let tmp11;
         if (cResult[1] === tmp5.taskType) {
-          let tmp10 = cResult[2];
+          tmp11 = cResult[2];
         }
-        if (tmp8) {
-          tmp8 = !tmp9;
+        const percentComplete = tmp5.percentComplete;
+        if (tmp9) {
+          tmp9 = !tmp10;
         }
-        if (tmp8) {
-          tmp8 = !tmp6;
+        if (tmp9) {
+          tmp9 = !tmp7;
         }
-        if (tmp8) {
-          tmp8 = null == tmp4;
+        if (tmp9) {
+          tmp9 = null == tmp4;
         }
-        if (tmp8) {
-          if (!tmp10) {
-            tmp10 =
-              0 === tmp5.percentComplete &&
-              _slicedToArray(closure_59(userStatus, tmp5), 1)[0] === QuestTypes.TaskPlatformScreen.DESKTOP;
-            const tmp12 =
-              0 === tmp5.percentComplete &&
-              _slicedToArray(closure_59(userStatus, tmp5), 1)[0] === QuestTypes.TaskPlatformScreen.DESKTOP;
+        if (tmp9) {
+          if (!tmp11) {
+            tmp11 = 0 === percentComplete && first === QuestTypes.TaskPlatformScreen.DESKTOP;
+            0 === percentComplete && first === QuestTypes.TaskPlatformScreen.DESKTOP;
           }
-          tmp8 = tmp10;
+          tmp9 = tmp11;
         }
-        if (cResult[3] === tmp8) {
+        if (cResult[3] === tmp9) {
+          let tmp14;
           if (cResult[4] === userStatus) {
-            let tmp13 = cResult[5];
+            tmp14 = cResult[5];
           }
-          if (cResult[6] === tmp8) {
+          if (cResult[6] === tmp9) {
+            let tmp16;
             if (cResult[7] === tmp5.taskType) {
-              let tmp15 = cResult[8];
+              tmp16 = cResult[8];
             }
-            if (cResult[9] === tmp15) {
-              if (cResult[10] === tmp13) {
-                let tmp17 = cResult[11];
+            if (cResult[9] === tmp16) {
+              let tmp18;
+              if (cResult[10] === tmp14) {
+                tmp18 = cResult[11];
               }
-              return tmp17;
+              return tmp18;
             }
             const items = [];
-            if (!tmp15) {
-              if (!tmp13) {
-                cResult[9] = tmp15;
-                cResult[10] = tmp13;
-                cResult[11] = items;
-                tmp17 = items;
-              } else {
-                const _Symbol2 = Symbol;
-                if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-                  const intl2 = util.intl;
-                  const stringResult = intl2.string(util.t.BV6xDm);
-                  cResult[13] = stringResult;
-                  let tmp23 = stringResult;
-                } else {
-                  tmp23 = cResult[13];
-                }
-                items.push(tmp23);
-              }
-            } else {
+            if (tmp16) {
+              let tmp20;
               const _Symbol = Symbol;
               if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl = util.intl;
-                const stringResult1 = intl.string(util.t.MFGxFM);
-                cResult[12] = stringResult1;
-                let tmp19 = stringResult1;
+                const intl = intl7.intl;
+                const stringResult = intl.string(intl7.t.MFGxFM);
+                cResult[12] = stringResult;
+                tmp20 = stringResult;
               } else {
-                tmp19 = cResult[12];
+                tmp20 = cResult[12];
               }
-              items.push(tmp19);
+              items.push(tmp20);
             }
+            if (tmp14) {
+              let tmp24;
+              const _Symbol2 = Symbol;
+              if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+                const intl2 = intl7.intl;
+                const stringResult1 = intl2.string(intl7.t.BV6xDm);
+                cResult[13] = stringResult1;
+                tmp24 = stringResult1;
+              } else {
+                tmp24 = cResult[13];
+              }
+              items.push(tmp24);
+            }
+            cResult[9] = tmp16;
+            cResult[10] = tmp14;
+            cResult[11] = items;
+            tmp18 = items;
           }
-          let isMacResult = PlatformUtils.isMac();
-          if (isMacResult) {
-            isMacResult = tmp5.taskType === FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP;
-          }
-          if (isMacResult) {
-            isMacResult = tmp8;
-          }
-          cResult[6] = tmp8;
+          const tmpResult = PlatformUtils;
+          const isMacResult =
+            tmpResult.isMac() &&
+            tmp5.taskType === FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP &&
+            tmp9;
+          cResult[6] = tmp9;
           cResult[7] = tmp5.taskType;
           cResult[8] = isMacResult;
-          tmp15 = isMacResult;
-          const tmpResult = PlatformUtils;
+          tmp16 = isMacResult;
         }
-        let tmp14 = PlatformUtils.isWeb() && tmp8;
-        if (tmp14) {
-          tmp14 = !QuestPlatformUtils.isQuestSupportedOnWeb(userStatus);
-          const tmpResult4 = QuestPlatformUtils;
-        }
-        cResult[3] = tmp8;
-        cResult[4] = userStatus;
-        cResult[5] = tmp14;
-        tmp13 = tmp14;
         const tmpResult3 = PlatformUtils;
+        let tmp15 = tmpResult3.isWeb() && tmp9;
+        if (tmp15) {
+          const tmpResult4 = QuestPlatformUtils;
+          tmp15 = !tmpResult4.isQuestSupportedOnWeb(userStatus);
+        }
+        cResult[3] = tmp9;
+        cResult[4] = userStatus;
+        cResult[5] = tmp15;
+        tmp14 = tmp15;
       }
       const DESKTOP = FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypesSets.DESKTOP;
-      let hasItem = DESKTOP.has(tmp5.taskType);
-      if (hasItem) {
-        hasItem = tmp5.percentComplete > 0;
-      }
+      const hasItem = DESKTOP.has(tmp5.taskType) && tmp5.percentComplete > 0;
       ({ percentComplete: tmp3[0], taskType: tmp3[1] } = tmp5);
       cResult[2] = hasItem;
-      tmp10 = hasItem;
-      tmp6 = closure_47(userStatus);
+      tmp11 = hasItem;
     }
   : (userStatus) => {
+      const tmp = closure_53(userStatus);
       const tmp2 = closure_52(userStatus);
+      const first = _slicedToArray(closure_59(userStatus, tmp2), 1)[0];
       userStatus = userStatus.userStatus;
       let enrolledAt;
-      const tmp = closure_53(userStatus);
+      const tmp4 = closure_47(userStatus);
       if (userStatus != null) {
         enrolledAt = userStatus.enrolledAt;
       }
-      let tmp5 = null != enrolledAt;
+      let tmp6 = null != enrolledAt;
       const userStatus2 = userStatus.userStatus;
       let completedAt;
       if (userStatus2 != null) {
         completedAt = userStatus2.completedAt;
       }
+      const tmp8 = null != completedAt;
       const DESKTOP = FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypesSets.DESKTOP;
-      let hasItem = DESKTOP.has(tmp2.taskType);
-      if (hasItem) {
-        hasItem = tmp2.percentComplete > 0;
+      let hasItem = DESKTOP.has(tmp2.taskType) && tmp2.percentComplete > 0;
+      const percentComplete = tmp2.percentComplete;
+      if (tmp6) {
+        tmp6 = !tmp8;
       }
-      if (tmp5) {
-        tmp5 = !tmp7;
+      if (tmp6) {
+        tmp6 = !tmp4;
       }
-      if (tmp5) {
-        tmp5 = !tmp3;
+      if (tmp6) {
+        tmp6 = null == tmp;
       }
-      if (tmp5) {
-        tmp5 = null == tmp;
-      }
-      if (tmp5) {
+      if (tmp6) {
         if (!hasItem) {
-          hasItem =
-            0 === tmp2.percentComplete &&
-            _slicedToArray(closure_59(userStatus, tmp2), 1)[0] === QuestTypes.TaskPlatformScreen.DESKTOP;
-          const tmp11 =
-            0 === tmp2.percentComplete &&
-            _slicedToArray(closure_59(userStatus, tmp2), 1)[0] === QuestTypes.TaskPlatformScreen.DESKTOP;
+          hasItem = 0 === percentComplete && first === QuestTypes.TaskPlatformScreen.DESKTOP;
+          0 === percentComplete && first === QuestTypes.TaskPlatformScreen.DESKTOP;
         }
-        tmp5 = hasItem;
+        tmp6 = hasItem;
       }
-      tmp3 = closure_47(userStatus);
-      tmp7 = null != completedAt;
-      let tmp12 = PlatformUtils.isWeb() && tmp5;
-      if (tmp12) {
-        tmp12 = !QuestPlatformUtils.isQuestSupportedOnWeb(userStatus);
-        const tmp8Result3 = QuestPlatformUtils;
+      const tmp9Result = PlatformUtils;
+      let tmp13 = tmp9Result.isWeb() && tmp6;
+      if (tmp13) {
+        const tmp9Result3 = QuestPlatformUtils;
+        tmp13 = !tmp9Result3.isQuestSupportedOnWeb(userStatus);
       }
-      const tmp8Result = PlatformUtils;
-      let isMacResult = PlatformUtils.isMac();
-      if (isMacResult) {
-        isMacResult = tmp2.taskType === FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP;
-      }
-      if (isMacResult) {
-        isMacResult = tmp5;
-      }
+      const tmp9Result4 = PlatformUtils;
       const items = [];
+      const isMacResult =
+        tmp9Result4.isMac() &&
+        tmp2.taskType === FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP &&
+        tmp6;
       if (isMacResult) {
-        const intl = util.intl;
-        items.push(intl.string(util.t.MFGxFM));
+        const push = items.push;
+        const intl = intl7.intl;
+        push(intl.string(intl7.t.MFGxFM));
       }
-      if (tmp12) {
-        const intl2 = util.intl;
-        items.push(intl2.string(util.t.BV6xDm));
+      if (tmp13) {
+        const push2 = items.push;
+        const intl2 = intl7.intl;
+        push2(intl2.string(intl7.t.BV6xDm));
       }
       return items;
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp33 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const cResult = c.c(5);
+      let quests;
+      let tmp4;
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [QuestStore];
         const fn = function n() {
@@ -3718,14 +3799,16 @@ const tmp33 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       if (cResult[2] === arg0) {
+        let tmp7;
         if (cResult[3] === stateFromStores) {
-          let tmp7 = cResult[4];
+          tmp7 = cResult[4];
         }
         return tmp7;
       }
-      value = stateFromStores.get(arg0);
+      let value = stateFromStores.get(arg0);
       if (value == null) {
         value = null;
       }
@@ -3733,50 +3816,60 @@ const tmp33 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = stateFromStores;
       cResult[4] = value;
       tmp7 = value;
-      const tmpResult = initialize;
     }
   : (arg0) => {
+      let quests;
       const items = [QuestStore];
-      const stateFromStores = initialize.useStateFromStores(items, () => quests.quests);
-      value = stateFromStores.get(arg0);
+      const obj = get_initialized;
+      const stateFromStores = obj.useStateFromStores(items, () => quests.quests);
+      let value = stateFromStores.get(arg0);
       if (value == null) {
         value = null;
       }
       return value;
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp34 = ReactCompilerGating.isReactCompilerEnabled()
   ? (questId, arg1) => {
+      let stateFromStores;
       _require = questId;
-      closure_1 = arg1;
-      const cResult = require("c").c(5);
-      let obj = require("c");
+      let closure_1 = arg1;
+      let obj = require("react");
+      const cResult = obj.c(5);
+      obj2 = require("get initialized");
       let items = [QuestStore];
       const items1 = [questId];
-      stateFromStores = require("initialize").useStateFromStores(items, () => QuestStore.getQuest(closure_0), items1);
+      stateFromStores = obj2.useStateFromStores(items, () => QuestStore.getQuest(questId), items1);
       if (stateFromStores == null) {
         stateFromStores = null;
       }
       if (cResult[0] === arg1) {
         if (cResult[1] === stateFromStores) {
+          let tmp3;
+          let tmp4;
           if (cResult[2] === questId) {
-            let tmp3 = cResult[3];
-            let tmp4 = cResult[4];
+            tmp3 = cResult[3];
+            tmp4 = cResult[4];
           }
-          const effect = noop.useEffect(tmp3, tmp4);
+          const effect = react.useEffect(tmp3, tmp4);
           return stateFromStores;
         }
       }
       const fn = function o() {
+        let obj3;
         if (null == stateFromStores) {
           const quests = QuestStore.quests;
           const items = [];
-          HermesBuiltin.arraySpread(quests.keys(), 0);
+          HermesBuiltin.arraySpread(items, quests.keys(), 0);
           const _Error = Error;
           const _HermesInternal = HermesInternal;
+          const captureQuestsException = QuestDataUtils.captureQuestsException;
+          const self = this;
+          const self2 = this;
+          QuestDataUtils;
           const error = new Error("Quest unexpectedly missing from store: " + questId);
-          const obj2 = { tags: { source: "useNonNullableQuest" }, extra: null };
-          const obj5 = {
+          const obj = { tags: { source: "useNonNullableQuest" }, extra: obj3 };
+          obj3 = {
             questId,
             storeQuestIds: items,
             storeSize: items.length,
@@ -3784,11 +3877,10 @@ const tmp34 = ReactCompilerGating.isReactCompilerEnabled()
             lastFetchedCurrentQuests: null,
           };
           ({
-            isFetchingCurrentQuests: obj3.isFetchingCurrentQuests,
-            lastFetchedCurrentQuests: obj3.lastFetchedCurrentQuests,
+            isFetchingCurrentQuests: obj2.isFetchingCurrentQuests,
+            lastFetchedCurrentQuests: obj2.lastFetchedCurrentQuests,
           } = QuestStore);
-          obj2.extra = obj5;
-          const result = QuestDataUtils.captureQuestsException(error, obj2);
+          const result = captureQuestsException(error, obj);
           if (closure_1 != null) {
             closure_1();
           }
@@ -3802,28 +3894,34 @@ const tmp34 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items2;
       tmp4 = items2;
       tmp3 = fn;
-      let obj2 = require("initialize");
     }
   : (questId, arg1) => {
+      let stateFromStores;
       _require = questId;
-      closure_1 = arg1;
+      let closure_1 = arg1;
+      let obj = require("get initialized");
       let items = [QuestStore];
       const items1 = [questId];
-      stateFromStores = require("initialize").useStateFromStores(items, () => QuestStore.getQuest(closure_0), items1);
+      stateFromStores = obj.useStateFromStores(items, () => QuestStore.getQuest(questId), items1);
       if (stateFromStores == null) {
         stateFromStores = null;
       }
       const items2 = [stateFromStores, questId, arg1];
-      const effect = noop.useEffect(() => {
+      const effect = react.useEffect(function () {
+        let obj3;
         if (null == stateFromStores) {
           const quests = QuestStore.quests;
           const items = [];
-          HermesBuiltin.arraySpread(quests.keys(), 0);
+          HermesBuiltin.arraySpread(items, quests.keys(), 0);
           const _Error = Error;
           const _HermesInternal = HermesInternal;
+          const captureQuestsException = QuestDataUtils.captureQuestsException;
+          const self = this;
+          const self2 = this;
+          QuestDataUtils;
           const error = new Error("Quest unexpectedly missing from store: " + questId);
-          const obj2 = { tags: { source: "useNonNullableQuest" }, extra: null };
-          const obj5 = {
+          const obj = { tags: { source: "useNonNullableQuest" }, extra: obj3 };
+          obj3 = {
             questId,
             storeQuestIds: items,
             storeSize: items.length,
@@ -3831,11 +3929,10 @@ const tmp34 = ReactCompilerGating.isReactCompilerEnabled()
             lastFetchedCurrentQuests: null,
           };
           ({
-            isFetchingCurrentQuests: obj3.isFetchingCurrentQuests,
-            lastFetchedCurrentQuests: obj3.lastFetchedCurrentQuests,
+            isFetchingCurrentQuests: obj2.isFetchingCurrentQuests,
+            lastFetchedCurrentQuests: obj2.lastFetchedCurrentQuests,
           } = QuestStore);
-          obj2.extra = obj5;
-          const result = QuestDataUtils.captureQuestsException(error, obj2);
+          const result = captureQuestsException(error, obj);
           if (closure_1 != null) {
             closure_1();
           }
@@ -3843,10 +3940,17 @@ const tmp34 = ReactCompilerGating.isReactCompilerEnabled()
       }, items2);
       return stateFromStores;
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp35 = ReactCompilerGating.isReactCompilerEnabled()
   ? (mode) => {
-      const cResult = require("c").c(19);
+      let adContentId;
+      let closure_2;
+      let closure_6;
+      let closure_7;
+      let ref;
+      let tmp4;
+      let obj = require("react");
+      const cResult = obj.c(19);
       mode = mode.mode;
       const questContent = mode.questContent;
       const sourceQuestContent = mode.sourceQuestContent;
@@ -3862,152 +3966,141 @@ const tmp35 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = tmp5;
         cResult[2] = tmp6;
         cResult[3] = tmp7;
+        tmp4 = tmp7;
       } else {
-        _require = tmp2;
-        adCreativeType = tmp3;
-        let tmp4 = cResult[3];
-        dependencyMap = tmp4;
-        if (cResult[4] === cResult[1]) {
-          if (cResult[5] === tmp3) {
-            if (cResult[6] === questContent) {
-              if (cResult[7] === tmp4) {
-                if (cResult[8] === sourceQuestContent) {
-                  let tmp11 = cResult[9];
-                }
-                AdDeliveryStore = tmp11;
-                if (tmp4 == null) {
-                  tmp4 = tmp2;
-                }
-                closure_7 = tmp4;
-                ChannelStore = sourceQuestContent.useRef(null);
-                if (cResult[10] === tmp4) {
-                  if (cResult[11] === mode) {
-                    if (cResult[12] === tmp11) {
-                      let tmp13 = cResult[13];
-                      let tmp14 = cResult[14];
-                    }
-                    const effect = obj2.useEffect(tmp13, tmp14);
-                    if (cResult[15] === tmp4) {
-                      if (cResult[16] === tmp11) {
-                        let tmp16 = cResult[17];
-                        let tmp17 = cResult[18];
-                      }
-                      const effect1 = obj2.useEffect(tmp16, tmp17);
-                    }
-                    class C {
-                      constructor() {
-                        return null != closure_7
-                          ? () => {
-                              closure_1_6(null, ref.current);
-                            }
-                          : undefined;
-                      }
-                    }
-                    const items = [tmp4, tmp11];
-                    class E {
-                      constructor() {
-                        tmp = null != closure_7;
-                        if (tmp) {
-                          tmp2 = closure_8;
-                          tmp3 = mode;
-                          tmp = closure_8.current !== mode;
-                        }
-                        if (tmp) {
-                          tmp4 = closure_6;
-                          tmp5 = mode;
-                          tmp6 = closure_8;
-                          tmp7 = closure_6(mode, closure_8.current);
-                          closure_8.current = mode;
-                        }
-                        return;
-                      }
-                    }
-                    cResult[16] = tmp11;
-                    cResult[17] = C;
-                    cResult[18] = items;
-                    tmp17 = items;
-                    tmp16 = C;
-                  }
-                }
-                class E {
-                  constructor() {
-                    tmp = null != closure_7;
-                    if (tmp) {
-                      tmp2 = closure_8;
-                      tmp3 = mode;
-                      tmp = closure_8.current !== mode;
-                    }
-                    if (tmp) {
-                      tmp4 = closure_6;
-                      tmp5 = mode;
-                      tmp6 = closure_8;
-                      tmp7 = closure_6(mode, closure_8.current);
-                      closure_8.current = mode;
-                    }
-                    return;
-                  }
-                }
-                const items1 = [mode, tmp4, tmp11];
-                cResult[10] = tmp4;
-                cResult[11] = mode;
-                cResult[12] = tmp11;
-                cResult[13] = E;
-                cResult[14] = items1;
-                tmp14 = items1;
-                tmp13 = E;
+        _require = cResult[1];
+        adCreativeType = cResult[2];
+        dependencyMap = cResult[3];
+      }
+      if (cResult[4] === tmp5) {
+        if (cResult[5] === tmp6) {
+          if (cResult[6] === questContent) {
+            if (cResult[7] === tmp4) {
+              let tmp8;
+              if (cResult[8] === sourceQuestContent) {
+                tmp8 = cResult[9];
               }
+              AdDeliveryStore = tmp8;
+              if (tmp4 == null) {
+                tmp4 = tmp5;
+              }
+              LocaleStore = tmp4;
+              obj2 = sourceQuestContent;
+              ChannelStore = sourceQuestContent.useRef(null);
+              if (cResult[10] === tmp4) {
+                if (cResult[11] === mode) {
+                  let tmp10;
+                  let tmp11;
+                  if (cResult[12] === tmp8) {
+                    tmp10 = cResult[13];
+                    tmp11 = cResult[14];
+                  }
+                  const effect = obj2.useEffect(tmp10, tmp11);
+                  if (cResult[15] === tmp4) {
+                    let tmp13;
+                    let tmp14;
+                    if (cResult[16] === tmp8) {
+                      tmp13 = cResult[17];
+                      tmp14 = cResult[18];
+                    }
+                    const effect1 = obj2.useEffect(tmp13, tmp14);
+                  }
+                  class C {
+                    constructor() {
+                      return null != closure_7
+                        ? () => {
+                            closure_1_6(null, ref.current);
+                          }
+                        : undefined;
+                    }
+                  }
+                  const items = [tmp4, tmp8];
+                  class E {
+                    constructor() {
+                      const tmp = null != LocaleStore && ref.current !== mode;
+                      if (tmp) {
+                        closure_6(mode, ref.current);
+                        ref.current = mode;
+                      }
+                    }
+                  }
+                  cResult[16] = tmp8;
+                  cResult[17] = C;
+                  cResult[18] = items;
+                  tmp14 = items;
+                  tmp13 = C;
+                }
+              }
+              class E {
+                constructor() {
+                  const tmp = null != LocaleStore && ref.current !== mode;
+                  if (tmp) {
+                    closure_6(mode, ref.current);
+                    ref.current = mode;
+                  }
+                }
+              }
+              const items1 = [mode, tmp4, tmp8];
+              cResult[10] = tmp4;
+              cResult[11] = mode;
+              cResult[12] = tmp8;
+              cResult[13] = E;
+              cResult[14] = items1;
+              tmp11 = items1;
+              tmp10 = E;
             }
           }
         }
-        const fn = function a(mode, prevMode) {
-          if (null != closure_2) {
-            const obj2 = { mode, prevMode, questContent, questId: tmp, sourceQuestContent };
-            const result = AnalyticsActions.trackQuestContentQuestBarOrDockModeChange(obj2);
-          } else {
-            let tmp3 = null != adContentId;
-            if (tmp3) {
-              tmp3 = null != adCreativeType;
-            }
-            if (tmp3) {
-              const obj4 = { adContentId, adCreativeType, mode, prevMode, questContent, sourceQuestContent };
-              const result1 = AnalyticsActions.trackAdContentQuestBarOrDockModeChange(obj4);
-            }
-          }
-        };
-        cResult[4] = cResult[1];
-        cResult[5] = cResult[2];
-        cResult[6] = questContent;
-        cResult[7] = tmp4;
-        cResult[8] = sourceQuestContent;
-        cResult[9] = fn;
-        tmp11 = fn;
       }
-      let obj = require("c");
+      const fn = function a(mode, prevMode) {
+        if (null != closure_2) {
+          obj2 = { mode, prevMode, questContent, questId: tmp, sourceQuestContent };
+          const obj3 = AnalyticsActions;
+          const result = obj3.trackQuestContentQuestBarOrDockModeChange(obj2);
+        } else {
+          const tmp3 = null != adContentId && null != adCreativeType;
+          if (tmp3) {
+            const obj4 = { adContentId, adCreativeType, mode, prevMode, questContent, sourceQuestContent };
+            const obj = AnalyticsActions;
+            const result1 = obj.trackAdContentQuestBarOrDockModeChange(obj4);
+          }
+        }
+      };
+      cResult[4] = tmp5;
+      cResult[5] = tmp6;
+      cResult[6] = questContent;
+      cResult[7] = tmp4;
+      cResult[8] = sourceQuestContent;
+      cResult[9] = fn;
+      tmp8 = fn;
     }
   : (mode) => {
+      let closure_7;
+      let tmp;
+      let tmp3;
       mode = mode.mode;
       const questContent = mode.questContent;
       const sourceQuestContent = mode.sourceQuestContent;
       if ("questId" in mode) {
         const questId = mode.questId;
-        let tmp3 = questId;
+        tmp3 = questId;
       } else {
         const adContentId = mode.adContentId;
         const adCreativeType = mode.adCreativeType;
       }
+      let obj = sourceQuestContent;
       const items = [questContent, sourceQuestContent, tmp3, tmp, tmp2];
       const callback = sourceQuestContent.useCallback((mode, prevMode) => {
         if (null != questId) {
-          const obj2 = { mode, prevMode, questContent, questId: tmp, sourceQuestContent };
-          const result = AnalyticsActions.trackQuestContentQuestBarOrDockModeChange(obj2);
+          obj2 = { mode, prevMode, questContent, questId: tmp, sourceQuestContent };
+          const obj3 = AnalyticsActions;
+          const result = obj3.trackQuestContentQuestBarOrDockModeChange(obj2);
         } else {
-          let tmp3 = null != adContentId;
-          if (tmp3) {
-            tmp3 = null != adCreativeType;
-          }
+          const tmp3 = null != adContentId && null != adCreativeType;
           if (tmp3) {
             const obj4 = { adContentId, adCreativeType, mode, prevMode, questContent, sourceQuestContent };
-            const result1 = AnalyticsActions.trackAdContentQuestBarOrDockModeChange(obj4);
+            const obj = AnalyticsActions;
+            const result1 = obj.trackAdContentQuestBarOrDockModeChange(obj4);
           }
         }
       }, items);
@@ -4015,13 +4108,10 @@ const tmp35 = ReactCompilerGating.isReactCompilerEnabled()
         tmp3 = tmp;
       }
       LocaleStore = tmp3;
-      sourceQuestContent.useRef(null);
+      const ref = obj.useRef(null);
       const items1 = [mode, tmp3, callback];
       const effect = obj.useEffect(() => {
-        let tmp = null != closure_7;
-        if (tmp) {
-          tmp = ref.current !== mode;
-        }
+        const tmp = null != LocaleStore && ref.current !== mode;
         if (tmp) {
           callback(mode, ref.current);
           ref.current = mode;
@@ -4030,7 +4120,7 @@ const tmp35 = ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [tmp3, callback];
       const effect1 = obj.useEffect(
         () =>
-          null != closure_7
+          null != LocaleStore
             ? () => {
                 callback(null, ref.current);
               }
@@ -4038,16 +4128,20 @@ const tmp35 = ReactCompilerGating.isReactCompilerEnabled()
         items2,
       );
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp36 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, DARK) => {
+      let closure_0;
+      let first;
+      let tmp6;
+      let tmp7;
       _require = arg0;
-      let questAsset = dependencyMap;
-      const cResult = require("c").c(7);
+      const obj = require("react");
+      const cResult = obj.c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [QuestStore];
         cResult[0] = items;
-        let first = items;
+        first = items;
       } else {
         first = cResult[0];
       }
@@ -4059,53 +4153,77 @@ const tmp36 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
+        tmp7 = items1;
+        tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
-      if (null == stateFromStores) {
-        return null;
-      } else if (DARK != null) {
-        if (cResult[4] === stateFromStores) {
+      const tmpResult = require("get initialized");
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
+      let tmp10 = null;
+      if (null != stateFromStores) {
+        let tmp11 = DARK;
+        if (DARK == null) {
+          const tmpResult3 = require("shared");
+          tmp11 = tmpResult3.isThemeDark(tmp9) ? constants3.DARK : constants3.LIGHT;
         }
-        questAsset = tmp(10000).getQuestAsset(stateFromStores, tmp(10000).QuestAssetType.COSPONSOR_LOGO_TYPE, DARK);
+        if (cResult[4] === stateFromStores) {
+          let tmp13;
+          if (cResult[5] === tmp11) {
+            tmp13 = cResult[6];
+          }
+          tmp10 = tmp13;
+        }
+        const tmpResult4 = require("AssetUtils");
+        const questAsset = tmpResult4.getQuestAsset(
+          stateFromStores,
+          tmp(10000).QuestAssetType.COSPONSOR_LOGO_TYPE,
+          tmp11,
+        );
         cResult[4] = stateFromStores;
-        cResult[5] = DARK;
+        cResult[5] = tmp11;
         cResult[6] = questAsset;
-        const tmpResult3 = tmp(10000);
-      } else {
-        tmp(4729).isThemeDark(tmp9) ? constants3.DARK : constants3.LIGHT;
-        const tmpResult4 = tmp(4729);
+        tmp13 = questAsset;
       }
-      const tmpResult = require("initialize");
+      return tmp10;
     }
   : (arg0, arg1) => {
+      let closure_0;
+      let closure_1;
+      let stateFromStores;
       _require = arg0;
       importDefault = arg1;
+      let obj = require("get initialized");
       const items = [QuestStore];
       const items1 = [arg0];
-      stateFromStores = require("initialize").useStateFromStores(items, () => QuestStore.getQuest(closure_0), items1);
+      stateFromStores = obj.useStateFromStores(items, () => QuestStore.getQuest(closure_0), items1);
       const tmp2 = require("useTheme")();
-      closure_3 = tmp2;
+      let closure_3 = tmp2;
       const items2 = [tmp2, arg1, stateFromStores];
-      return noop.useMemo(() => {
+      return react.useMemo(() => {
         if (null == stateFromStores) {
           return null;
-        } else if (closure_1 != null) {
-          return AssetUtils.getQuestAsset(tmp, AssetUtils.QuestAssetType.COSPONSOR_LOGO_TYPE, tmp11);
         } else {
-          shared.isThemeDark(closure_3) ? constants3.DARK : constants3.LIGHT;
+          let tmp6 = closure_1;
+          if (closure_1 == null) {
+            const obj = shared;
+            tmp6 = obj.isThemeDark(closure_3) ? prioritySpeakerDucking.DARK : prioritySpeakerDucking.LIGHT;
+          }
+          obj2 = AssetUtils;
+          return obj2.getQuestAsset(tmp, AssetUtils.QuestAssetType.COSPONSOR_LOGO_TYPE, tmp6);
         }
       }, items2);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp37 = ReactCompilerGating.isReactCompilerEnabled()
   ? (config) => {
-      const cResult = c.c(6);
+      let currentUser;
+      let formatToPlainStringResult5;
+      let tmp4;
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         const fn = function n() {
@@ -4118,95 +4236,48 @@ const tmp37 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       if (cResult[2] === stateFromStores) {
+        let tmp8;
+        let tmp9;
         if (cResult[3] === config) {
-          let tmp8 = cResult[4];
-          const _Symbol = Symbol;
-          if (cResult[5] !== Symbol.for("react.early_return_sentinel")) {
-            tmp8 = tmp9;
-          }
-          return tmp8;
+          tmp8 = cResult[4];
+          tmp9 = cResult[5];
         }
+        const _Symbol = Symbol;
+        if (tmp9 !== Symbol.for("react.early_return_sentinel")) {
+          tmp8 = tmp9;
+        }
+        return tmp8;
       }
-      const tmpResult = initialize;
       const forResult = Symbol.for("react.early_return_sentinel");
-      const defaultRewardName = QuestRewardUtils.getDefaultRewardName(config, stateFromStores);
       const tmpResult7 = QuestRewardUtils;
-      const collectibleQuestRewardDuration = QuestRewardUtils.getCollectibleQuestRewardDuration(config);
+      const defaultRewardName = tmpResult7.getDefaultRewardName(config, stateFromStores);
       const tmpResult8 = QuestRewardUtils;
-      const collectibleQuestRewardExtendableExpirationDate =
-        QuestRewardUtils.getCollectibleQuestRewardExtendableExpirationDate(config);
+      const collectibleQuestRewardDuration = tmpResult8.getCollectibleQuestRewardDuration(config);
       const tmpResult9 = QuestRewardUtils;
-      const result = QuestRewardUtils.isCollectibleQuestRewardPermanentWithPremiumSubscription(config);
-      const tmpResult10 = QuestRewardUtils;
-      const result1 = QuestRewardUtils.isCollectibleQuestRewardPremiumExtendable(config);
-      const tmpResult11 = QuestRewardUtils;
-      const isPremiumResult = PremiumUtils.isPremium(stateFromStores, PremiumTypes.TIER_2);
-      if (null == collectibleQuestRewardDuration) {
-        const intl = util.intl;
-        const obj2 = { decorationName: defaultRewardName };
-        const formatToPlainStringResult = intl.formatToPlainString(util.t.l9uXL8, obj2);
-        cResult[2] = stateFromStores;
-        cResult[3] = config;
-        cResult[4] = undefined;
-        cResult[5] = formatToPlainStringResult;
-      }
-      const intl2 = util.intl;
-      const tmpResult12 = PremiumUtils;
-      const intl3 = util.intl;
-      const formatToPlainStringResult1 = intl2.formatToPlainString(util.t.o97tNn, { rewardName: defaultRewardName });
-      const intl4 = util.intl;
-      let formatToPlainStringResult3 = intl4.formatToPlainString(util.t.ie4YK0, {
-        rewardName: defaultRewardName,
-        duration: collectibleQuestRewardDuration,
-      });
-      const intl5 = util.intl;
-      intl5.formatToPlainString(util.t.yCpc0U, {
-        duration: collectibleQuestRewardDuration,
-        rewardName: defaultRewardName,
-      });
-      if (!result1) {
-        const intl6 = util.intl;
-        obj3 = { duration: collectibleQuestRewardDuration, decorationName: defaultRewardName };
-        intl6.formatToPlainString(util.t.tTlItm, obj3);
-      }
-      if (result) {
-        if (isPremiumResult) {
-          formatToPlainStringResult3 = formatToPlainStringResult1;
-        }
-      }
-      const formatToPlainStringResult2 = intl3.formatToPlainString(util.t.PkyRZo, {
-        rewardName: defaultRewardName,
-        expirationDate: collectibleQuestRewardExtendableExpirationDate,
-      });
-    }
-  : (config) => {
-      const items = [UserStore];
-      const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-      const defaultRewardName = QuestRewardUtils.getDefaultRewardName(config, stateFromStores);
-      const collectibleQuestRewardDuration = QuestRewardUtils.getCollectibleQuestRewardDuration(config);
       const collectibleQuestRewardExtendableExpirationDate =
-        QuestRewardUtils.getCollectibleQuestRewardExtendableExpirationDate(config);
-      const result = QuestRewardUtils.isCollectibleQuestRewardPermanentWithPremiumSubscription(config);
-      const result1 = QuestRewardUtils.isCollectibleQuestRewardPremiumExtendable(config);
-      const isPremiumResult = PremiumUtils.isPremium(stateFromStores, PremiumTypes.TIER_2);
-      if (null == collectibleQuestRewardDuration) {
-        const intl2 = util.intl;
-        const obj8 = { decorationName: defaultRewardName };
-        return intl2.formatToPlainString(util.t.l9uXL8, obj8);
-      } else {
-        const intl3 = util.intl;
-        const obj9 = { rewardName: defaultRewardName };
-        const intl4 = util.intl;
-        const obj10 = { rewardName: defaultRewardName, expirationDate: collectibleQuestRewardExtendableExpirationDate };
-        const formatToPlainStringResult = intl3.formatToPlainString(util.t.o97tNn, obj9);
-        const intl5 = util.intl;
-        const obj11 = { rewardName: defaultRewardName, duration: collectibleQuestRewardDuration };
-        let formatToPlainStringResult2 = intl5.formatToPlainString(util.t.ie4YK0, obj11);
-        const intl6 = util.intl;
-        const obj12 = { duration: collectibleQuestRewardDuration, rewardName: defaultRewardName };
-        let formatToPlainStringResult3 = intl6.formatToPlainString(util.t.yCpc0U, obj12);
+        tmpResult9.getCollectibleQuestRewardExtendableExpirationDate(config);
+      const tmpResult10 = QuestRewardUtils;
+      const result = tmpResult10.isCollectibleQuestRewardPermanentWithPremiumSubscription(config);
+      const tmpResult11 = QuestRewardUtils;
+      const result1 = tmpResult11.isCollectibleQuestRewardPremiumExtendable(config);
+      const tmpResult12 = PremiumUtils;
+      const isPremiumResult = tmpResult12.isPremium(stateFromStores, PremiumTypes.TIER_2);
+      if (null != collectibleQuestRewardDuration) {
+        const intl2 = intl7.intl;
+        obj2 = { rewardName: defaultRewardName };
+        const formatToPlainStringResult = intl2.formatToPlainString(intl7.t.o97tNn, obj2);
+        const intl3 = intl7.intl;
+        const obj3 = { rewardName: defaultRewardName, expirationDate: collectibleQuestRewardExtendableExpirationDate };
+        const formatToPlainStringResult1 = intl3.formatToPlainString(intl7.t.PkyRZo, obj3);
+        const intl4 = intl7.intl;
+        const obj4 = { rewardName: defaultRewardName, duration: collectibleQuestRewardDuration };
+        let formatToPlainStringResult2 = intl4.formatToPlainString(intl7.t.ie4YK0, obj4);
+        const intl5 = intl7.intl;
+        const obj5 = { duration: collectibleQuestRewardDuration, rewardName: defaultRewardName };
+        let formatToPlainStringResult3 = intl5.formatToPlainString(intl7.t.yCpc0U, obj5);
         if (result1) {
           if (result) {
             if (isPremiumResult) {
@@ -4217,17 +4288,128 @@ const tmp37 = ReactCompilerGating.isReactCompilerEnabled()
             formatToPlainStringResult3 = formatToPlainStringResult1;
           }
         } else {
-          const intl = util.intl;
-          const obj13 = { duration: collectibleQuestRewardDuration, decorationName: defaultRewardName };
-          return intl.formatToPlainString(util.t.tTlItm, obj13);
+          const intl6 = intl7.intl;
+          const obj6 = { duration: collectibleQuestRewardDuration, decorationName: defaultRewardName };
+          intl6.formatToPlainString(intl7.t.tTlItm, obj6);
         }
-        formatToPlainStringResult1 = intl4.formatToPlainString(util.t.PkyRZo, obj10);
+        formatToPlainStringResult5 = forResult;
+      } else {
+        const intl = intl7.intl;
+        const obj7 = { decorationName: defaultRewardName };
+        formatToPlainStringResult5 = intl.formatToPlainString(intl7.t.l9uXL8, obj7);
+      }
+      cResult[2] = stateFromStores;
+      cResult[3] = config;
+      cResult[4] = tmp18;
+      cResult[5] = formatToPlainStringResult5;
+      tmp9 = formatToPlainStringResult5;
+      tmp8 = tmp18;
+    }
+  : (config) => {
+      let currentUser;
+      const items = [UserStore];
+      const obj = get_initialized;
+      const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+      obj2 = QuestRewardUtils;
+      const defaultRewardName = obj2.getDefaultRewardName(config, stateFromStores);
+      const obj3 = QuestRewardUtils;
+      const collectibleQuestRewardDuration = obj3.getCollectibleQuestRewardDuration(config);
+      const obj4 = QuestRewardUtils;
+      const collectibleQuestRewardExtendableExpirationDate =
+        obj4.getCollectibleQuestRewardExtendableExpirationDate(config);
+      const obj5 = QuestRewardUtils;
+      const result = obj5.isCollectibleQuestRewardPermanentWithPremiumSubscription(config);
+      const obj6 = QuestRewardUtils;
+      const result1 = obj6.isCollectibleQuestRewardPremiumExtendable(config);
+      const obj7 = PremiumUtils;
+      const isPremiumResult = obj7.isPremium(stateFromStores, PremiumTypes.TIER_2);
+      if (null == collectibleQuestRewardDuration) {
+        const intl2 = intl7.intl;
+        const obj8 = { decorationName: defaultRewardName };
+        return intl2.formatToPlainString(intl7.t.l9uXL8, obj8);
+      } else {
+        let formatToPlainStringResult4;
+        const intl3 = intl7.intl;
+        const obj9 = { rewardName: defaultRewardName };
+        const formatToPlainStringResult = intl3.formatToPlainString(intl7.t.o97tNn, obj9);
+        const intl4 = intl7.intl;
+        const obj10 = { rewardName: defaultRewardName, expirationDate: collectibleQuestRewardExtendableExpirationDate };
+        const formatToPlainStringResult1 = intl4.formatToPlainString(intl7.t.PkyRZo, obj10);
+        const intl5 = intl7.intl;
+        const obj11 = { rewardName: defaultRewardName, duration: collectibleQuestRewardDuration };
+        let formatToPlainStringResult2 = intl5.formatToPlainString(intl7.t.ie4YK0, obj11);
+        const intl6 = intl7.intl;
+        const obj12 = { duration: collectibleQuestRewardDuration, rewardName: defaultRewardName };
+        let formatToPlainStringResult3 = intl6.formatToPlainString(intl7.t.yCpc0U, obj12);
+        if (result1) {
+          if (result) {
+            if (isPremiumResult) {
+              formatToPlainStringResult2 = formatToPlainStringResult;
+            }
+            formatToPlainStringResult3 = formatToPlainStringResult2;
+          } else if (isPremiumResult) {
+            formatToPlainStringResult3 = formatToPlainStringResult1;
+          }
+          formatToPlainStringResult4 = formatToPlainStringResult3;
+        } else {
+          const intl = intl7.intl;
+          const obj13 = { duration: collectibleQuestRewardDuration, decorationName: defaultRewardName };
+          formatToPlainStringResult4 = intl.formatToPlainString(intl7.t.tTlItm, obj13);
+        }
+        return formatToPlainStringResult4;
       }
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp38 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (quest) => {
+      let tmp4;
+      let tmp6;
+      let tmp8;
+      const obj = react2;
+      const cResult = obj.c(6);
+      if (cResult[0] !== quest) {
+        const tmpResult = QuestTaskUtils;
+        const activityApplicationId = tmpResult.getActivityApplicationId(quest);
+        cResult[0] = quest;
+        cResult[1] = activityApplicationId;
+        tmp4 = activityApplicationId;
+      } else {
+        tmp4 = cResult[1];
+      }
+      if (cResult[2] !== tmp4) {
+        obj2 = { applicationId: tmp4 };
+        cResult[2] = tmp4;
+        cResult[3] = obj2;
+        tmp6 = obj2;
+      } else {
+        tmp6 = cResult[3];
+      }
+      const tmp7 = useRefocusOrLaunchActivityDefault(tmp6);
+      if (cResult[4] !== tmp7) {
+        const obj3 = { launchInGameActivity: tmp7 };
+        cResult[4] = tmp7;
+        cResult[5] = obj3;
+        tmp8 = obj3;
+      } else {
+        tmp8 = cResult[5];
+      }
+      return tmp8;
+    }
+  : (quest) => {
+      let activityApplicationId;
+      obj2 = { launchInGameActivity: useRefocusOrLaunchActivityDefault({ applicationId: activityApplicationId }) };
+      const obj = QuestTaskUtils;
+      activityApplicationId = obj.getActivityApplicationId(quest);
+      return obj2;
+    };
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp39 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(5);
+      let tmp4;
+      let tmp5;
+      let tmp7;
+      const obj = react2;
+      const cResult = obj.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [QuestStore];
         const fn = function s() {
@@ -4242,29 +4424,33 @@ const tmp39 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const stateFromStoresArray = initialize.useStateFromStoresArray(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      const stateFromStoresArray = tmpResult.useStateFromStoresArray(tmp4, tmp5);
       if (cResult[2] !== stateFromStoresArray) {
+        let tmp8;
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const fn2 = function u(preview) {
             return preview.preview;
           };
           cResult[4] = fn2;
-          let tmp7 = fn2;
+          tmp8 = fn2;
         } else {
-          tmp7 = cResult[4];
+          tmp8 = cResult[4];
         }
-        const someResult = stateFromStoresArray.some(tmp7);
+        const someResult = stateFromStoresArray.some(tmp8);
         cResult[2] = stateFromStoresArray;
         cResult[3] = someResult;
+        tmp7 = someResult;
       } else {
-        return cResult[3];
+        tmp7 = cResult[3];
       }
-      const tmpResult = initialize;
+      return tmp7;
     }
   : () => {
       let items = [QuestStore];
-      const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => {
+      const obj = get_initialized;
+      const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
         quests = quests.quests;
         const items = [...quests.values()];
         return items;
@@ -4272,50 +4458,17 @@ const tmp39 = ReactCompilerGating.isReactCompilerEnabled()
       return stateFromStoresArray.some((preview) => preview.preview);
     };
 let closure_60 = tmp39;
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = fn(558);
-const tmp38 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (quest) => {
-      const cResult = c.c(6);
-      if (cResult[0] !== quest) {
-        const activityApplicationId = QuestTaskUtils.getActivityApplicationId(quest);
-        cResult[0] = quest;
-        cResult[1] = activityApplicationId;
-        let tmp4 = activityApplicationId;
-        const tmpResult = QuestTaskUtils;
-      } else {
-        tmp4 = cResult[1];
-      }
-      if (cResult[2] !== tmp4) {
-        const obj2 = { applicationId: tmp4 };
-        cResult[2] = tmp4;
-        cResult[3] = obj2;
-        let tmp6 = obj2;
-      } else {
-        tmp6 = cResult[3];
-      }
-      const tmp7 = useRefocusOrLaunchActivityDefault(tmp6);
-      if (cResult[4] !== tmp7) {
-        obj3 = { launchInGameActivity: tmp7 };
-        cResult[4] = tmp7;
-        cResult[5] = obj3;
-        let tmp8 = obj3;
-      } else {
-        tmp8 = cResult[5];
-      }
-      return tmp8;
-    }
-  : (quest) => {
-      const obj2 = { launchInGameActivity: null };
-      const activityApplicationId = QuestTaskUtils.getActivityApplicationId(quest);
-      obj2.launchInGameActivity = useRefocusOrLaunchActivityDefault({ applicationId: activityApplicationId });
-      return obj2;
-    };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp41 = ReactCompilerGating.isReactCompilerEnabled()
   ? (userStatus) => {
-      const cResult = c.c(5);
+      let tmp13;
+      let tmp14;
+      let tmp15;
+      let tmp4;
+      const obj = react2;
+      const cResult = obj.c(5);
       if (cResult[0] !== userStatus) {
         let userStatus1;
         if (userStatus != null) {
@@ -4323,12 +4476,12 @@ const tmp41 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let isDismissedResult = null != userStatus1;
         if (isDismissedResult) {
-          isDismissedResult = QuestDataUtils.isDismissed(userStatus.userStatus, QuestTypes.QuestContent.ACTIVITY_PANEL);
           const tmpResult = QuestDataUtils;
+          isDismissedResult = tmpResult.isDismissed(userStatus.userStatus, QuestTypes.QuestContent.ACTIVITY_PANEL);
         }
         cResult[0] = userStatus;
         cResult[1] = isDismissedResult;
-        let tmp4 = isDismissedResult;
+        tmp4 = isDismissedResult;
       } else {
         tmp4 = cResult[1];
       }
@@ -4337,12 +4490,14 @@ const tmp41 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = null;
       }
       let claimedAt;
+      const tmp8Result = closure_47(tmp9);
       if (userStatus != null) {
         userStatus = userStatus.userStatus;
         if (userStatus != null) {
           claimedAt = userStatus.claimedAt;
         }
       }
+      const tmp12 = null != claimedAt;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [QuestStore];
         const fn = function u() {
@@ -4352,17 +4507,16 @@ const tmp41 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = items;
         cResult[3] = fn;
         cResult[4] = items1;
-        let tmp15 = items1;
-        let tmp14 = fn;
-        let tmp13 = items;
+        tmp15 = items1;
+        tmp14 = fn;
+        tmp13 = items;
       } else {
         tmp13 = cResult[2];
         tmp14 = cResult[3];
         tmp15 = cResult[4];
       }
-      const tmp12 = null != claimedAt;
-      const tmp8Result = closure_47(tmp9);
-      const stateFromStores = initialize.useStateFromStores(tmp13, tmp14, tmp15);
+      const tmpResult2 = get_initialized;
+      const stateFromStores = tmpResult2.useStateFromStores(tmp13, tmp14, tmp15);
       if (!tmp4) {
         tmp4 = tmp8Result;
       }
@@ -4381,27 +4535,25 @@ const tmp41 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let isDismissedResult = null != userStatus1;
       if (isDismissedResult) {
-        isDismissedResult = QuestDataUtils.isDismissed(userStatus.userStatus, QuestTypes.QuestContent.ACTIVITY_PANEL);
+        const obj = QuestDataUtils;
+        isDismissedResult = obj.isDismissed(userStatus.userStatus, QuestTypes.QuestContent.ACTIVITY_PANEL);
       }
       let tmp6 = userStatus;
       if (userStatus == null) {
         tmp6 = null;
       }
       let claimedAt;
+      const tmp5Result = closure_47(tmp6);
       if (userStatus != null) {
         userStatus = userStatus.userStatus;
         if (userStatus != null) {
           claimedAt = userStatus.claimedAt;
         }
       }
-      const tmp5Result = closure_47(tmp6);
-      const tmp9 = null != claimedAt;
       const items = [QuestStore];
-      const stateFromStores = initialize.useStateFromStores(
-        items,
-        () => null != QuestStore.questEnrollmentBlockedUntil,
-        [],
-      );
+      const tmp9 = null != claimedAt;
+      obj2 = get_initialized;
+      const stateFromStores = obj2.useStateFromStores(items, () => null != QuestStore.questEnrollmentBlockedUntil, []);
       if (!isDismissedResult) {
         isDismissedResult = tmp5Result;
       }
@@ -4413,10 +4565,14 @@ const tmp41 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return !isDismissedResult;
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp42 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(5);
+      let tmp4;
+      let tmp5;
+      let tmp7;
+      const obj = react2;
+      const cResult = obj.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [QuestStore];
         const fn = function s() {
@@ -4431,152 +4587,169 @@ const tmp42 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const stateFromStoresArray = initialize.useStateFromStoresArray(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      const stateFromStoresArray = tmpResult.useStateFromStoresArray(tmp4, tmp5);
       if (cResult[2] !== stateFromStoresArray) {
+        let tmp8;
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const fn2 = function u(preview) {
             return preview.preview;
           };
           cResult[4] = fn2;
-          let tmp7 = fn2;
+          tmp8 = fn2;
         } else {
-          tmp7 = cResult[4];
+          tmp8 = cResult[4];
         }
-        const found = stateFromStoresArray.filter(tmp7);
+        const found = stateFromStoresArray.filter(tmp8);
         cResult[2] = stateFromStoresArray;
         cResult[3] = found;
+        tmp7 = found;
       } else {
-        return cResult[3];
+        tmp7 = cResult[3];
       }
-      const tmpResult = initialize;
+      return tmp7;
     }
   : () => {
+      let stateFromStoresArray;
       let items = [QuestStore];
-      stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => {
+      const obj = stateFromStoresArray(504);
+      stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
         quests = quests.quests;
         const items = [...quests.values()];
         return items;
       });
       const items1 = [stateFromStoresArray];
-      return noop.useMemo(() => stateFromStoresArray.filter((preview) => preview.preview), items1);
+      return react.useMemo(() => stateFromStoresArray.filter((preview) => preview.preview), items1);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp43 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(1);
+      let first;
+      let obj = react2;
+      const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const mapped = collapsedCategories.map((item) => {
-          const obj = { heading: null, options: null };
+        const mapped = authStore4.map((item) => {
+          let tmp2;
+          let tmp3;
+          const obj = { heading: obj2.getFilterGroupHeadingText(tmp2), options: tmp3 };
           [tmp2, tmp3] = item;
-          const tmp = _slicedToArray(item, 2);
-          obj.heading = require("QuestCopyUtils").getFilterGroupHeadingText(tmp2);
-          obj.options = tmp3;
+          _slicedToArray(item, 2);
+          obj2 = require("QuestCopyUtils");
           return obj;
         });
         cResult[0] = mapped;
-        let first = mapped;
+        first = mapped;
       } else {
         first = cResult[0];
       }
       return first;
     }
   : () => {
-      closure_0 = closure_18;
+      let closure_0 = closure_18;
       const items = [closure_18];
-      return noop.useMemo(
+      return react.useMemo(
         () =>
           closure_0.map((item) => {
+            let tmp;
+            let tmp2;
             [tmp, tmp2] = item;
-            const obj = { heading: closure_1_0(closure_1_2[40]).getFilterGroupHeadingText(tmp), options: tmp2 };
+            const obj = { heading: obj2.getFilterGroupHeadingText(tmp), options: tmp2 };
+            obj2 = closure_1_0(closure_1_2[40]);
             return obj;
           }),
         items,
       );
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp44 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let first;
+      let tmp4;
+      let obj = react2;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const _Object = Object;
-        const keys = Object.keys(constants3);
+        const keys = Object.keys(closure_17);
         cResult[0] = keys;
-        let first = keys;
+        first = keys;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const mapped = first.map((item) => {
-          const obj = {
-            label: require("QuestCopyUtils").getSortMethodText(dependencyMap[item]),
-            value: dependencyMap[item],
-          };
+          const obj = { label: obj2.getSortMethodText(constants3[item]), value: constants3[item] };
+          obj2 = require("QuestCopyUtils");
           return obj;
         });
         cResult[1] = mapped;
-        let tmp4 = mapped;
+        tmp4 = mapped;
       } else {
         tmp4 = cResult[1];
       }
       return tmp4;
     }
   : () =>
-      noop.useMemo(() => {
+      react.useMemo(() => {
         const keys = Object.keys(constants3);
         return keys.map((item) => {
-          const obj = {
-            label: closure_1_0(closure_1_2[40]).getSortMethodText(dependencyMap[item]),
-            value: dependencyMap[item],
-          };
+          const obj = { label: obj2.getSortMethodText(closure_1_17[item]), value: closure_1_17[item] };
+          obj2 = closure_1_0(closure_1_2[40]);
           return obj;
         });
       }, []);
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp45 = ReactCompilerGating.isReactCompilerEnabled()
   ? (selectedSortMethod) => {
-      const cResult = selectedSortMethod(numQuestsVisible[15]).c(7);
+      let numQuestsVisible;
+      let tmp2;
+      let tmp3;
+      let obj = selectedSortMethod(numQuestsVisible[15]);
+      const cResult = obj.c(7);
       selectedSortMethod = selectedSortMethod.selectedSortMethod;
       const selectedFilters = selectedSortMethod.selectedFilters;
       numQuestsVisible = selectedSortMethod.numQuestsVisible;
-      noop.useRef(null);
-      noop.useRef(null);
+      const ref = react.useRef(null);
+      const ref2 = react.useRef(null);
       if (cResult[0] !== selectedSortMethod) {
         const fn = function s() {
-          AnalyticsUtilsDefault.track(constants9.QUEST_HOME_SORT_METHOD_CHANGED, {
-            sort_method: selectedSortMethod,
-            previous_sort_method: ref.current,
-          });
+          const obj = AnalyticsUtilsDefault;
+          obj2 = { sort_method: selectedSortMethod, previous_sort_method: ref.current };
+          obj.track(constants.QUEST_HOME_SORT_METHOD_CHANGED, obj2);
           ref.current = selectedSortMethod;
         };
         const items = [selectedSortMethod];
         cResult[0] = selectedSortMethod;
         cResult[1] = fn;
         cResult[2] = items;
-        let tmp3 = items;
-        let tmp2 = fn;
+        tmp3 = items;
+        tmp2 = fn;
       } else {
         tmp2 = cResult[1];
         tmp3 = cResult[2];
       }
-      const effect = noop.useEffect(tmp2, tmp3);
+      const effect = react.useEffect(tmp2, tmp3);
       if (cResult[3] === numQuestsVisible) {
+        let tmp5;
+        let tmp6;
         if (cResult[4] === selectedFilters) {
-          let tmp5 = cResult[5];
-          let tmp6 = cResult[6];
+          tmp5 = cResult[5];
+          tmp6 = cResult[6];
         }
-        const effect1 = noop.useEffect(tmp5, tmp6);
+        const effect1 = react.useEffect(tmp5, tmp6);
       }
       const fn2 = function u() {
+        let current;
         const mapped = selectedFilters.map((item) => item.filter);
-        const obj2 = { filters: mapped, previous_filters: null, num_quests_visible: null };
-        let current = ref2.current;
+        const obj = { filters: mapped, previous_filters: current, num_quests_visible: numQuestsVisible };
+        current = ref2.current;
+        const track = AnalyticsUtilsDefault.track;
+        const QUEST_HOME_FILTERS_CHANGED = constants.QUEST_HOME_FILTERS_CHANGED;
+        AnalyticsUtilsDefault;
         if (current == null) {
           current = [];
         }
-        obj2.previous_filters = current;
-        obj2.num_quests_visible = numQuestsVisible;
-        AnalyticsUtilsDefault.track(constants9.QUEST_HOME_FILTERS_CHANGED, obj2);
+        track(QUEST_HOME_FILTERS_CHANGED, obj);
         ref2.current = mapped;
       };
       const items1 = [selectedFilters, numQuestsVisible];
@@ -4586,41 +4759,78 @@ const tmp45 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = items1;
       tmp6 = items1;
       tmp5 = fn2;
-      let obj = selectedSortMethod(numQuestsVisible[15]);
     }
   : (selectedSortMethod) => {
       selectedSortMethod = selectedSortMethod.selectedSortMethod;
       const selectedFilters = selectedSortMethod.selectedFilters;
       const numQuestsVisible = selectedSortMethod.numQuestsVisible;
-      noop.useRef(null);
-      noop.useRef(null);
+      const ref = react.useRef(null);
+      const ref2 = react.useRef(null);
       const items = [selectedSortMethod];
-      const effect = noop.useEffect(() => {
-        AnalyticsUtilsDefault.track(constants9.QUEST_HOME_SORT_METHOD_CHANGED, {
-          sort_method: selectedSortMethod,
-          previous_sort_method: ref.current,
-        });
+      const effect = react.useEffect(() => {
+        const obj = AnalyticsUtilsDefault;
+        obj2 = { sort_method: selectedSortMethod, previous_sort_method: ref.current };
+        obj.track(constants.QUEST_HOME_SORT_METHOD_CHANGED, obj2);
         ref.current = selectedSortMethod;
       }, items);
       const items1 = [selectedFilters, numQuestsVisible];
-      const effect1 = noop.useEffect(() => {
+      const effect1 = react.useEffect(() => {
+        let current;
         const mapped = selectedFilters.map((item) => item.filter);
-        const obj2 = { filters: mapped, previous_filters: null, num_quests_visible: null };
-        let current = ref2.current;
+        const obj = { filters: mapped, previous_filters: current, num_quests_visible: numQuestsVisible };
+        current = ref2.current;
+        const track = AnalyticsUtilsDefault.track;
+        const QUEST_HOME_FILTERS_CHANGED = constants.QUEST_HOME_FILTERS_CHANGED;
+        AnalyticsUtilsDefault;
         if (current == null) {
           current = [];
         }
-        obj2.previous_filters = current;
-        obj2.num_quests_visible = numQuestsVisible;
-        AnalyticsUtilsDefault.track(constants9.QUEST_HOME_FILTERS_CHANGED, obj2);
+        track(QUEST_HOME_FILTERS_CHANGED, obj);
         ref2.current = mapped;
       }, items1);
     };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp46 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (preview) => {
+      let first;
+      const obj = react2;
+      const cResult = obj.c(1);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const currentUser = UserStore.getCurrentUser();
+        let isStaffResult;
+        if (currentUser != null) {
+          isStaffResult = currentUser.isStaff();
+        }
+        cResult[0] = isStaffResult;
+        first = isStaffResult;
+      } else {
+        first = cResult[0];
+      }
+      preview = true === first || preview.preview;
+      return preview;
+    }
+  : (preview) => {
+      preview =
+        react.useMemo(() => {
+          currentUser = currentUser.getCurrentUser();
+          let isStaffResult;
+          if (currentUser != null) {
+            isStaffResult = currentUser.isStaff();
+          }
+          return true === isStaffResult;
+        }, []) || preview.preview;
+      return preview;
+    };
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp47 = ReactCompilerGating.isReactCompilerEnabled()
   ? (questIds) => {
-      let found1 = dependencyMap;
-      const cResult = stateFromStores(576).c(12);
+      let quests;
+      let stateFromStores;
+      let tmp4;
+      let tmp5;
+      let tmp9;
+      let obj = stateFromStores(576);
+      const cResult = obj.c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [QuestStore];
         const fn = function n() {
@@ -4633,47 +4843,54 @@ const tmp47 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const obj = stateFromStores(576);
-      stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
+      const tmpResult = stateFromStores(504);
+      stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       questIds = undefined;
       if (questIds != null) {
         questIds = questIds.questIds;
       }
       if (null != questIds) {
         if (cResult[3] === questIds) {
+          let arr2;
           if (cResult[4] === stateFromStores) {
-            if (cResult[5].length <= 1) {
-              const _Symbol2 = Symbol;
-              if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-                const obj2 = { shelfQuests: [], isShelfEnabled: false };
-                cResult[9] = obj2;
-              }
+            arr2 = cResult[5];
+          }
+          if (arr2.length <= 1) {
+            let tmp16;
+            const _Symbol2 = Symbol;
+            if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+              obj2 = { shelfQuests: [], isShelfEnabled: false };
+              cResult[9] = obj2;
+              tmp16 = obj2;
             } else {
-              if (cResult[10] !== arr2) {
-                obj3 = { shelfQuests: arr2, isShelfEnabled: true };
-                cResult[10] = arr2;
-                cResult[11] = obj3;
-                let tmp14 = obj3;
-              } else {
-                tmp14 = cResult[11];
-              }
-              let tmp9 = tmp14;
+              tmp16 = cResult[9];
             }
+            tmp9 = tmp16;
+          } else {
+            let tmp15;
+            if (cResult[10] !== arr2) {
+              const obj3 = { shelfQuests: arr2, isShelfEnabled: true };
+              cResult[10] = arr2;
+              cResult[11] = obj3;
+              tmp15 = obj3;
+            } else {
+              tmp15 = cResult[11];
+            }
+            tmp9 = tmp15;
           }
         }
         if (cResult[6] !== stateFromStores) {
           class S {
             constructor(arg0) {
-              return closure_0.get(questIds);
+              return stateFromStores.get(arg0);
             }
           }
           cResult[6] = stateFromStores;
           cResult[7] = S;
-          let mapped = S;
         } else {
           class S {
             constructor(arg0) {
-              return closure_0.get(questIds);
+              return stateFromStores.get(arg0);
             }
           }
         }
@@ -4681,33 +4898,34 @@ const tmp47 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           class S {
             constructor(arg0) {
-              return closure_0.get(questIds);
+              return stateFromStores.get(arg0);
             }
           }
-          cResult[8] = tmp12;
+          cResult[8] = tmp13;
         } else {
           class S {
             constructor(arg0) {
-              return closure_0.get(questIds);
+              return stateFromStores.get(arg0);
             }
           }
         }
-        mapped = questIds.map(mapped);
+        const mapped = questIds.map(S);
         const found = mapped.filter(tmp(1375).isNotNullish);
-        found1 = found.filter(tmp12);
+        const found1 = found.filter(tmp13);
         cResult[3] = questIds;
         cResult[4] = stateFromStores;
         cResult[5] = found1;
+        arr2 = found1;
       } else {
         class S {
           constructor(arg0) {
-            return closure_0.get(questIds);
+            return stateFromStores.get(arg0);
           }
         }
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           class S {
             constructor(arg0) {
-              return closure_0.get(questIds);
+              return stateFromStores.get(arg0);
             }
           }
           tmp10[0] = [];
@@ -4716,7 +4934,7 @@ const tmp47 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class S {
             constructor(arg0) {
-              return closure_0.get(questIds);
+              return stateFromStores.get(arg0);
             }
           }
         }
@@ -4724,24 +4942,30 @@ const tmp47 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp9;
     }
   : (questIds) => {
+      let quests;
+      let stateFromStores;
+      let obj = stateFromStores(504);
       const items = [QuestStore];
-      stateFromStores = stateFromStores(504).useStateFromStores(items, () => quests.quests);
+      stateFromStores = obj.useStateFromStores(items, () => quests.quests);
       questIds = undefined;
       if (questIds != null) {
         questIds = questIds.questIds;
       }
       const items1 = [stateFromStores, questIds];
-      return noop.useMemo(() => {
+      return react.useMemo(() => {
         if (null == questIds) {
-          const obj2 = { shelfQuests: [], isShelfEnabled: false };
-          return obj2;
+          return { shelfQuests: [], isShelfEnabled: false };
         } else {
+          let obj;
           const mapped = questIds.map((item) => stateFromStores.get(item));
           const found = mapped.filter(GlobalUtils.isNotNullish);
-          const found1 = found.filter((item) => !stateFromStores(closure_1_2[21]).isQuestExpired(item));
+          const found1 = found.filter((item) => {
+            const obj = stateFromStores(closure_1_2[21]);
+            return !obj.isQuestExpired(item);
+          });
           if (found1.length <= 1) {
-            obj3 = { shelfQuests: [], isShelfEnabled: false };
-            let obj = obj3;
+            obj = { shelfQuests: [], isShelfEnabled: false };
+            const obj3 = { shelfQuests: [], isShelfEnabled: false };
           } else {
             obj = { shelfQuests: found1, isShelfEnabled: true };
           }
@@ -4752,45 +4976,13 @@ const tmp47 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_61 = tmp47;
 let closure_62 = 6 * DurationsDefault.Millis.HOUR;
 const MINUTE = DurationsDefault.Millis.MINUTE;
-ReactCompilerGating = fn(558);
-const tmp46 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (preview) => {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const currentUser = UserStore.getCurrentUser();
-        let isStaffResult;
-        if (currentUser != null) {
-          isStaffResult = currentUser.isStaff();
-        }
-        cResult[0] = isStaffResult;
-        let first = isStaffResult;
-      } else {
-        first = cResult[0];
-      }
-      preview = true === first;
-      if (!preview) {
-        preview = preview.preview;
-      }
-      return preview;
-    }
-  : (preview) => {
-      preview = noop.useMemo(() => {
-        currentUser = currentUser.getCurrentUser();
-        let isStaffResult;
-        if (currentUser != null) {
-          isStaffResult = currentUser.isStaff();
-        }
-        return true === isStaffResult;
-      }, []);
-      if (!preview) {
-        preview = preview.preview;
-      }
-      return preview;
-    };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp48 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(2);
+      let tmp4;
+      let tmp5;
+      const obj = react2;
+      const cResult = obj.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [BountyStore];
         const fn = function s() {
@@ -4806,22 +4998,88 @@ const tmp48 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      return initialize.useStateFromStoresObject(tmp4, tmp5);
+      const tmpResult = get_initialized;
+      return tmpResult.useStateFromStoresObject(tmp4, tmp5);
     }
   : () => {
       const items = [BountyStore];
-      return initialize.useStateFromStoresObject(items, () => ({
+      const obj = get_initialized;
+      return obj.useStateFromStoresObject(items, () => ({
         questHomeBounties: BountyStore.questHomeBounties,
         isFetching: BountyStore.isFetchingQuestHomeBounties,
       }));
     };
-fn = () => closure_60();
-const size = fn(2);
+ReactCompilerGating = ReactCompilerGating_mod;
+let fn = () => closure_60();
+const tmp49 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (userStatus) => {
+      let closure_2;
+      _require = userStatus;
+      let obj = require("react");
+      const cResult = obj.c(4);
+      const DropsOptedOut = require("UserSettings").DropsOptedOut;
+      const setting = DropsOptedOut.useSetting();
+      userStatus = userStatus.userStatus;
+      let enrolledAt;
+      if (userStatus != null) {
+        enrolledAt = userStatus.enrolledAt;
+      }
+      dependencyMap = tmp4;
+      if (cResult[0] === setting) {
+        if ((cResult[1] === null) != enrolledAt) {
+          let tmp5;
+          if (cResult[2] === userStatus.id) {
+            tmp5 = cResult[3];
+          }
+          return tmp5;
+        }
+      }
+      const fn = function s() {
+        if (!closure_2) {
+          const SurveyActionTypes = SurveyActionTypes2.SurveyActionTypes;
+          obj2 = { quest_id: userStatus.id };
+          const tmp5 = setting
+            ? SurveyActionTypes.AD_IMPRESSION_QUEST_BAR_OPT_OUT
+            : SurveyActionTypes.AD_IMPRESSION_QUEST_BAR_OPT_IN;
+          const obj = QualtricsActionCreators;
+          obj.fireSurveyAction(tmp5, obj2);
+        }
+      };
+      cResult[0] = setting;
+      cResult[1] = null != enrolledAt;
+      cResult[2] = userStatus.id;
+      cResult[3] = fn;
+      tmp5 = fn;
+    }
+  : (userStatus) => {
+      let closure_2;
+      _require = userStatus;
+      const DropsOptedOut = require("UserSettings").DropsOptedOut;
+      const setting = DropsOptedOut.useSetting();
+      userStatus = userStatus.userStatus;
+      let enrolledAt;
+      if (userStatus != null) {
+        enrolledAt = userStatus.enrolledAt;
+      }
+      dependencyMap = tmp3;
+      const items = [setting, null != enrolledAt, userStatus.id];
+      return react.useCallback(() => {
+        if (!closure_2) {
+          const SurveyActionTypes = SurveyActionTypes2.SurveyActionTypes;
+          obj2 = { quest_id: userStatus.id };
+          const tmp5 = setting
+            ? SurveyActionTypes.AD_IMPRESSION_QUEST_BAR_OPT_OUT
+            : SurveyActionTypes.AD_IMPRESSION_QUEST_BAR_OPT_IN;
+          const obj = QualtricsActionCreators;
+          obj.fireSurveyAction(tmp5, obj2);
+        }
+      }, items);
+    };
 let result1 = size.fileFinishedImporting("modules/quests/hooks/QuestHooks.tsx");
 
 export const useQuests = tmp4;
 export { sortQuests };
-export const QuestTabs = obj3;
+export { QuestTabs };
 export const QuestQueryParams = {
   TAB: "tab",
   QUEST_ID: "quest_id",
@@ -4848,13 +5106,18 @@ export const useThirdPartyTaskDetails = tmp20;
 export const useConnectedConsoleLinkOnClick = tmp21;
 export const useGetOrFetchApplicationForConsoleQuests = tmp22;
 export const useQuestForMemberListSocialEntryPoint = function useQuestForMemberListSocialEntryPoint(arg0) {
+  let closure_0;
+  let quests;
   _require = arg0;
+  let obj = require("get initialized");
   const items = [QuestStore];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => quests.quests);
+  const stateFromStores = obj.useStateFromStores(items, () => quests.quests);
   const items1 = [arg0, stateFromStores, closure_54(Array.from(stateFromStores.values()))];
-  const memo = noop.useMemo(() => {
-    const result = utils_QuestUtils.filterQuestsForSocialEntrypoints(stateFromStores, value2);
-    return QuestMatchingUtils.getQuestsFromActivities(result, closure_0);
+  const memo = react.useMemo(() => {
+    const obj = utils_QuestUtils;
+    const result = obj.filterQuestsForSocialEntrypoints(stateFromStores, authStore3);
+    obj2 = QuestMatchingUtils;
+    return obj2.getQuestsFromActivities(result, closure_0);
   }, items1);
   let tmp2 = null;
   if (!closure_47(memo)) {
@@ -4866,118 +5129,130 @@ export const useQuestCollectibles = tmp23;
 export const useQuestPreviewActions = tmp24;
 export const useConnectedAccounts = tmp25;
 export const useManuallyStartConsoleQuest = function useManuallyStartConsoleQuest(questId) {
+  let accounts;
+  let closure_5;
+  let items3;
   questId = questId.questId;
   const preview = questId.preview;
-  const beforeRequest = questId.beforeRequest;
+  let beforeRequest = questId.beforeRequest;
   const afterRequest = questId.afterRequest;
   let startingConsoleQuest;
-  noop = undefined;
-  const tmp = startingConsoleQuest(noop.useState(false), 2);
+  react = undefined;
+  const tmp = startingConsoleQuest(react.useState(false), 2);
   startingConsoleQuest = tmp[0];
-  noop = tmp[1];
+  react = tmp[1];
+  let obj = questId(beforeRequest[16]);
   const items = [ConnectedAccountsStore];
-  const stateFromStores = questId(beforeRequest[16]).useStateFromStores(items, () => accounts.getAccounts());
+  const stateFromStores = obj.useStateFromStores(items, () => accounts.getAccounts());
   const tmp4 = useConsoleQuestUIStore((clearErrorHintsByType) => clearErrorHintsByType.clearErrorHintsByType);
-  closure_6 = tmp4;
+  let closure_6 = tmp4;
   const items1 = [questId];
-  const callback = noop.useCallback((arg0) => {
-    state = useConsoleQuestUIStore.getState();
+  const callback = react.useCallback((arg0) => {
+    const state = useConsoleQuestUIStore.getState();
     return state.setErrorHints(questId, arg0);
   }, items1);
   const items2 = [stateFromStores, tmp4, questId];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     closure_6(questId, QuestConsoleStartError.QuestConsoleStartError.EXPIRED_CREDENTIAL);
   }, items2);
-  const obj2 = { startConsoleQuest: null, startingConsoleQuest };
-  const items3 = [startingConsoleQuest, beforeRequest, afterRequest, preview, questId, callback];
-  obj2.startConsoleQuest = noop.useCallback(
-    afterRequest(function* () {
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          obj3 = { value, done: true };
-          return obj3;
+  obj2 = {
+    startConsoleQuest: react.useCallback(
+      afterRequest(function* () {
+        let closure_0;
+        let closure_2;
+        if (c5 === 2) {
+          c5 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp3 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            return { value: "IconComponent", done: null };
+          }
         } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
+          let c3;
+          try {
+            c5 = 2;
+            if (0 === c4) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                const obj4 = { value, done: true };
+                return obj4;
+              } else {
+                let closure_1 = tmp;
+                questId = undefined;
+                if (!first) {
+                  if (beforeRequest != null) {
+                    beforeRequest();
+                  }
+                  v3(true);
+                  questId = null;
+                  c3 = 1;
+                  c4 = 2;
+                  c5 = 1;
+                  const obj5 = { value: obj2.manuallyStartConsoleQuest(questId, preview), done: false };
+                  obj2 = questId(beforeRequest[18]);
+                  return obj5;
+                }
+              }
+            } else if (1 === c4) {
+              c3 = 0;
+              closure_129_5(false);
+              const tmp18 = beforeRequest;
+              if (closure_129_3 != null) {
+                closure_129_3();
+              }
+              throw tmp18;
+            } else if (arg0 === 1) {
               c5 = 3;
               throw value;
             } else if (arg0 === 2) {
+              c3 = 0;
+              closure_129_5(false);
+              if (closure_129_3 != null) {
+                closure_129_3();
+              }
               c5 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj = { value, done: true };
+              return obj;
             } else {
-              closure_1 = tmp3;
-              questId = tmp7;
-              closure_128_0 = undefined;
-              if (first) {
-                c5 = 3;
-              } else {
-                if (beforeRequest != null) {
-                  beforeRequest();
-                }
-                v3(true);
-                closure_128_0 = null;
-                c3 = 1;
-                c4 = 2;
-                c5 = 1;
-                const obj5 = { value: questId(tmp33[18]).manuallyStartConsoleQuest(questId, preview), done: false };
-                return obj5;
+              questId = value;
+              closure_129_7(questId.errorHints);
+              c3 = 0;
+              closure_129_5(false);
+              if (closure_129_3 != null) {
+                closure_129_3();
               }
             }
-          } else if (1 === tmp7) {
-            c3 = 0;
-            closure_129_5(false);
-            if (closure_129_3 != null) {
-              closure_129_3();
-            }
-            throw tmp33;
-          } else if (arg0 === 1) {
             c5 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            closure_128_0 = value;
-            closure_129_7(closure_128_0.errorHints);
-            c3 = 0;
-            closure_129_5(false);
-            if (closure_129_3 != null) {
-              closure_129_3();
+            return { value: "IconComponent", done: null };
+          } catch (tmp30) {
+            beforeRequest = tmp30;
+            if (0 === c3) {
+              c5 = 3;
+              throw tmp30;
+            } else {
+              c4 = 1;
             }
-          }
-          c3 = 0;
-          closure_129_5(false);
-          if (closure_129_3 != null) {
-            closure_129_3();
-          }
-          c5 = 3;
-          const obj = { value, done: true };
-          return obj;
-        } catch (tmp33) {
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp33;
-          } else {
-            c4 = tmp;
           }
         }
-      }
-    }),
-    items3,
-  );
+      }),
+      items3,
+    ),
+    startingConsoleQuest,
+  };
+  items3 = [startingConsoleQuest, beforeRequest, afterRequest, preview, questId, callback];
   return obj2;
 };
 export const useWaitingForConsoleConnection = tmp26;
 export const useQuestHowToHelpArticle = tmp27;
-export const QuestProgressState = obj27;
+export const QuestProgressState = obj2;
 export const useProgressState = tmp28;
 export const useQuestCompletionDetails = tmp29;
 export const useSelectedTaskPlatform = tmp30;
@@ -4999,6 +5274,11 @@ export const useQuestHomeSortingFilteringAnalytics = tmp45;
 export const useShouldShowQuestPreviewOverrides = tmp46;
 export const useQuestHomeHeroShelf = tmp47;
 export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0) {
+  let c3;
+  let isFetching;
+  let obj6;
+  let questHomeBounties;
+  let tmp2;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -5009,95 +5289,106 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0
   const QuestHomeBountiesFeatureGateExperiment = previewAdCreativeIds(
     enabled2[56],
   ).QuestHomeBountiesFeatureGateExperiment;
-  const enabled = QuestHomeBountiesFeatureGateExperiment.useConfig({ location: constants2.QUEST_HOME_MOBILE }).enabled;
+  obj2 = { location: constants2.QUEST_HOME_MOBILE };
+  const enabled = QuestHomeBountiesFeatureGateExperiment.useConfig(obj2).enabled;
   const BountyStaleRefreshQuestHomeExperiment = previewAdCreativeIds(
     enabled2[30],
   ).BountyStaleRefreshQuestHomeExperiment;
-  enabled2 = BountyStaleRefreshQuestHomeExperiment.useConfig({ location: constants2.QUEST_HOME_MOBILE }).enabled;
-  [tmp2, c3] = noop.useState(enabled);
-  let obj2 = { location: constants2.QUEST_HOME_MOBILE };
-  obj3 = { location: constants2.QUEST_HOME_MOBILE };
-  const tmp = _slicedToArray(noop.useState(enabled), 2);
+  let obj3 = { location: constants2.QUEST_HOME_MOBILE };
+  enabled2 = BountyStaleRefreshQuestHomeExperiment.useConfig(obj3).enabled;
+  const tmp = _slicedToArray(react.useState(enabled), 2);
+  [tmp2, c3] = tmp;
+  let obj4 = previewAdCreativeIds(enabled2[16]);
   const items = [BountyStore];
-  const stateFromStoresObject = previewAdCreativeIds(enabled2[16]).useStateFromStoresObject(items, () => ({
+  const stateFromStoresObject = obj4.useStateFromStoresObject(items, () => ({
     isFetching: BountyStore.isFetchingQuestHomeBounties,
     questHomeBounties: BountyStore.questHomeBounties,
   }));
   const items1 = [enabled, enabled2, previewAdCreativeIds];
   ({ isFetching, questHomeBounties } = stateFromStoresObject);
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
+    let _true;
+    let interval;
     function loadBounties() {
-      const self = this;
-      const apply = closure_4.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
+      return obj(...arguments);
     }
-    closure_4 = async function _loadBounties() {
-      if (c4 === 2) {
-        c4 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              closure_0 = tmp3;
-              const _Date = Date;
-              closure_1 = Date.now();
-              let v0 = 1;
-              if (null != closure_0) {
-                if (arr.length > 0) {
-                  c1 = 3;
-                  c4 = 1;
-                  const obj6 = {
-                    value: previewAdCreativeIds(10949).fetchBountyPreview(
-                      arr,
-                      previewAdCreativeIds(5626).AdPlacement.VIDEO_MODAL_MOBILE,
-                    ),
-                    done: false,
-                  };
-                  return obj6;
-                }
-              }
-              c1 = 2;
-              c4 = 1;
-              const obj7 = {
-                value: previewAdCreativeIds(10949).fetchQuestHomeBounties(
-                  previewAdCreativeIds(5626).AdPlacement.VIDEO_MODAL_MOBILE,
-                ),
-                done: false,
-              };
-              return obj7;
-            }
-          } else if (1 === tmp7) {
-            v0 = 0;
-            if (!closure_128_0) {
-              v0(false);
-            }
-            throw closure_2;
+    let obj = function _loadBounties() {
+      obj = _asyncToGenerator(async () => {
+        let closure_0;
+        let obj3;
+        let obj5;
+        if (c4 === 2) {
+          c4 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp3 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            obj2 = { value, done: true };
+            return obj2;
           } else {
-            if (2 === tmp7) {
+            return { value: "IconComponent", done: null };
+          }
+        } else {
+          let v0;
+          try {
+            c4 = 2;
+            if (0 === c1) {
               if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                const obj4 = { value, done: true };
+                return obj4;
+              } else {
+                length = tmp;
+                const _Date = Date;
+                closure_1 = Date.now();
+                v0 = 1;
+                if (null != length) {
+                  if (length.length > 0) {
+                    c1 = 3;
+                    c4 = 1;
+                    const obj6 = {
+                      value: obj5.fetchBountyPreview(length, _true(closure_2_2[47]).AdPlacement.VIDEO_MODAL_MOBILE),
+                      done: false,
+                    };
+                    obj5 = _true(closure_2_2[57]);
+                    return obj6;
+                  }
+                }
+                c1 = 2;
+                c4 = 1;
+                const obj7 = {
+                  value: obj3.fetchQuestHomeBounties(_true(closure_2_2[47]).AdPlacement.VIDEO_MODAL_MOBILE),
+                  done: false,
+                };
+                obj3 = _true(closure_2_2[57]);
+                return obj7;
+              }
+            } else if (1 === c1) {
+              v0 = 0;
+              const tmp18 = closure_2;
+              if (!closure_128_0) {
+                v0(false);
+              }
+              throw tmp18;
+            } else {
+              if (2 === c1) {
+                if (arg0 === 1) {
+                  c4 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  v0 = 0;
+                  if (!closure_128_0) {
+                    v0(false);
+                  }
+                  c4 = 3;
+                  const obj8 = { value, done: true };
+                  return obj8;
+                }
+              } else if (arg0 === 1) {
                 c4 = 3;
                 throw value;
               } else if (arg0 === 2) {
@@ -5106,44 +5397,36 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0
                   v0(false);
                 }
                 c4 = 3;
-                const obj8 = { value, done: true };
-                return obj8;
+                obj = { value, done: true };
+                return obj;
               }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
               v0 = 0;
               if (!closure_128_0) {
                 v0(false);
               }
               c4 = 3;
-              const obj = { value, done: true };
-              return obj;
+              return { value: "IconComponent", done: null };
             }
-            v0 = 0;
-            if (!closure_128_0) {
-              v0(false);
+          } catch (tmp31) {
+            closure_2 = tmp31;
+            if (0 === v0) {
+              c4 = 3;
+              throw tmp31;
+            } else {
+              c1 = 1;
             }
-            c4 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp34) {
-          closure_2 = tmp34;
-          if (tmp4 === v0) {
-            c4 = tmp2;
-            throw tmp34;
-          } else {
-            c1 = tmp;
           }
         }
-      }
+      });
+      return obj(...arguments);
     };
     if (c1) {
-      c0 = false;
+      let c0 = false;
       c1 = 0;
       const bounties = loadBounties();
-      if (interval) {
+      const tmp2 = interval;
+      if (tmp2) {
+        const tmp3 = globalThis;
         const _window = window;
         interval = window.setInterval(() => {
           if (Date.now() - c1 > closure_62) {
@@ -5151,90 +5434,23 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0
           }
         }, MINUTE);
         return () => {
-          c0 = true;
+          let c0 = true;
           window.clearInterval(closure_2);
         };
       } else {
         return () => {
-          c0 = true;
+          let c0 = true;
         };
       }
     }
   }, items1);
   if (enabled) {
-    const obj5 = { questHomeBounties, isLoading: isFetching };
-    let obj6 = obj5;
+    let obj5 = { questHomeBounties, isLoading: isFetching };
+    obj6 = obj5;
   } else {
     obj6 = { questHomeBounties: [], isLoading: false };
   }
   return obj6;
 };
 export const useQuestHomeBounties = tmp48;
-export const useQuestBarImpressionSurvey = ReactCompilerGating.isReactCompilerEnabled()
-  ? (userStatus) => {
-      _require = userStatus;
-      const cResult = require("c").c(4);
-      const DropsOptedOut = require("UserSettings").DropsOptedOut;
-      const setting = DropsOptedOut.useSetting();
-      userStatus = userStatus.userStatus;
-      let enrolledAt;
-      if (userStatus != null) {
-        enrolledAt = userStatus.enrolledAt;
-      }
-      dependencyMap = tmp4;
-      if (cResult[0] === setting) {
-        if (cResult[1] === tmp4) {
-          if (cResult[2] === userStatus.id) {
-            let tmp5 = cResult[3];
-          }
-          return tmp5;
-        }
-      }
-      const fn = function s() {
-        if (!closure_2) {
-          const fireSurveyAction = QualtricsActionCreators.fireSurveyAction;
-          const obj = { quest_id: userStatus.id };
-          fireSurveyAction(
-            setting
-              ? fireSurveyAction.AD_IMPRESSION_QUEST_BAR_OPT_OUT
-              : fireSurveyAction.AD_IMPRESSION_QUEST_BAR_OPT_IN,
-            obj,
-          );
-          const tmp4 = setting
-            ? fireSurveyAction.AD_IMPRESSION_QUEST_BAR_OPT_OUT
-            : fireSurveyAction.AD_IMPRESSION_QUEST_BAR_OPT_IN;
-        }
-      };
-      cResult[0] = setting;
-      cResult[1] = null != enrolledAt;
-      cResult[2] = userStatus.id;
-      cResult[3] = fn;
-      tmp5 = fn;
-    }
-  : (userStatus) => {
-      _require = userStatus;
-      const DropsOptedOut = require("UserSettings").DropsOptedOut;
-      const setting = DropsOptedOut.useSetting();
-      userStatus = userStatus.userStatus;
-      let enrolledAt;
-      if (userStatus != null) {
-        enrolledAt = userStatus.enrolledAt;
-      }
-      dependencyMap = tmp3;
-      const items = [setting, null != enrolledAt, userStatus.id];
-      return noop.useCallback(() => {
-        if (!closure_2) {
-          const fireSurveyAction = QualtricsActionCreators.fireSurveyAction;
-          const obj = { quest_id: userStatus.id };
-          fireSurveyAction(
-            setting
-              ? fireSurveyAction.AD_IMPRESSION_QUEST_BAR_OPT_OUT
-              : fireSurveyAction.AD_IMPRESSION_QUEST_BAR_OPT_IN,
-            obj,
-          );
-          const tmp4 = setting
-            ? fireSurveyAction.AD_IMPRESSION_QUEST_BAR_OPT_OUT
-            : fireSurveyAction.AD_IMPRESSION_QUEST_BAR_OPT_IN;
-        }
-      }, items);
-    };
+export const useQuestBarImpressionSurvey = tmp49;

@@ -1,25 +1,28 @@
 // discord_app/modules/checkpoint/native/components/screens/stats/CheckpointServersStatsScreen.tsx
-import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
-import c from "../../../../../../../_runtime/00576_c.js";
+import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
+import react from "../../../../../../../_runtime/00576_react.js";
 import CheckpointStatsScreenDefault from "CheckpointStatsScreen.tsx";
 import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
-const jsx = jsxProd.jsx;
-const result = size.fileFinishedImporting(
-  "modules/checkpoint/native/components/screens/stats/CheckpointServersStatsScreen.tsx",
-);
-
-export default ReactCompilerGating.isReactCompilerEnabled()
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const cResult = c.c(1);
+      let first;
+      const obj = react;
+      const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp6 = jsx(CheckpointStatsScreenDefault, { name: "Servers" });
         cResult[0] = tmp6;
-        let first = tmp6;
+        first = tmp6;
       } else {
         first = cResult[0];
       }
       return first;
     }
   : () => jsx(CheckpointStatsScreenDefault, { name: "Servers" });
+const result = size.fileFinishedImporting(
+  "modules/checkpoint/native/components/screens/stats/CheckpointServersStatsScreen.tsx",
+);
+
+export default tmp2;

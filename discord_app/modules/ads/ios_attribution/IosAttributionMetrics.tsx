@@ -21,47 +21,47 @@ export const IosAttributionClickResult = {
   NO_IMPRESSION: "no_impression",
   NOT_READY: "not_ready",
 };
-export const trackIosAttributionImpression = function trackIosAttributionImpression(
-  NO_FRAMEWORK,
-  activeIosAttributionFramework,
-  id,
-) {
-  let str = activeIosAttributionFramework;
-  const obj2 = { name: MetricEvents.MetricEvents.IOS_ATTRIBUTION_IMPRESSION, tags: null };
-  const items = ["result:" + NO_FRAMEWORK];
-  let str2 = activeIosAttributionFramework;
-  if (activeIosAttributionFramework == null) {
+export const trackIosAttributionImpression = function trackIosAttributionImpression(NO_FRAMEWORK, c2, c0) {
+  let items;
+  let str = c2;
+  const tmp3 = MonitoringAgentDefault;
+  const increment = tmp3.increment;
+  const obj = { name: MetricEvents.MetricEvents.IOS_ATTRIBUTION_IMPRESSION, tags: items };
+  items = ["result:" + NO_FRAMEWORK];
+  let str2 = c2;
+  if (c2 == null) {
     str2 = "none";
   }
   items[1] = "framework:" + str2;
-  obj2.tags = items;
-  MonitoringAgentDefault.increment(obj2);
-  const obj3 = { impression_id: id, attribution_framework: null, attribution_result: null };
+  increment(obj);
+  const obj2 = { impression_id: _require, attribution_framework: str, attribution_result: NO_FRAMEWORK };
+  const track = AnalyticsUtilsDefault.track;
+  const IOS_ATTRIBUTION_VIEW_RESOLVED = AnalyticEvents.IOS_ATTRIBUTION_VIEW_RESOLVED;
+  AnalyticsUtilsDefault;
   if (str == null) {
     str = "none";
   }
-  obj3.attribution_framework = str;
-  obj3.attribution_result = NO_FRAMEWORK;
-  AnalyticsUtilsDefault.track(AnalyticEvents.IOS_ATTRIBUTION_VIEW_RESOLVED, obj3);
-  const tmpResult = AnalyticsUtilsDefault;
+  track(IOS_ATTRIBUTION_VIEW_RESOLVED, obj2);
 };
 export const trackIosAttributionClick = function trackIosAttributionClick(ATTRIBUTED, framework, impression_id) {
+  let items;
   let str = framework;
-  const obj2 = { name: MetricEvents.MetricEvents.IOS_ATTRIBUTION_CLICK, tags: null };
-  const items = ["result:" + ATTRIBUTED];
+  const tmp3 = MonitoringAgentDefault;
+  const increment = tmp3.increment;
+  const obj = { name: MetricEvents.MetricEvents.IOS_ATTRIBUTION_CLICK, tags: items };
+  items = ["result:" + ATTRIBUTED];
   let str2 = framework;
   if (framework == null) {
     str2 = "none";
   }
   items[1] = "framework:" + str2;
-  obj2.tags = items;
-  MonitoringAgentDefault.increment(obj2);
-  const obj3 = { impression_id, attribution_framework: null, attribution_result: null };
+  increment(obj);
+  const obj2 = { impression_id, attribution_framework: str, attribution_result: ATTRIBUTED };
+  const track = AnalyticsUtilsDefault.track;
+  const IOS_ATTRIBUTION_CLICK_RESOLVED = AnalyticEvents.IOS_ATTRIBUTION_CLICK_RESOLVED;
+  AnalyticsUtilsDefault;
   if (str == null) {
     str = "none";
   }
-  obj3.attribution_framework = str;
-  obj3.attribution_result = ATTRIBUTED;
-  AnalyticsUtilsDefault.track(AnalyticEvents.IOS_ATTRIBUTION_CLICK_RESOLVED, obj3);
-  const tmpResult = AnalyticsUtilsDefault;
+  track(IOS_ATTRIBUTION_CLICK_RESOLVED, obj2);
 };

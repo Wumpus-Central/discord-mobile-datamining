@@ -1,25 +1,33 @@
 // discord_app/modules/interaction_components/useFileUploadComponentState.tsx
 import Server from "../../flow/Server.tsx";
-import noop from "../../../_runtime/metro/00019__.js";
+import DraftStore from "../../stores/DraftStore.tsx";
+import react from "../../../_runtime/00019_react.js";
 import UploadAttachmentStore from "../../stores/UploadAttachmentStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const DraftType = fn(7031).DraftType;
-const size = fn(2);
+const DraftType = DraftStore.DraftType;
 const result = size.fileFinishedImporting("modules/interaction_components/useFileUploadComponentState.tsx");
 
 export const useFileUploadComponentState = function useFileUploadComponentState(maxValues) {
-  const componentStateContext = state(uploadIds[3]).useComponentStateContext();
+  let currentUploads;
+  let executeStateUpdate;
+  let setUploadIds;
+  let state;
+  let uploadIds;
+  let uploads;
+  let obj = state(uploadIds[3]);
+  const componentStateContext = obj.useComponentStateContext();
   executeStateUpdate(uploadIds[4])(
     null != componentStateContext,
     "useFileUploadComponentState must be used within a ComponentStateContextProvider",
   );
   const channelId = componentStateContext.channelId;
   executeStateUpdate(uploadIds[4])(null != channelId, "useFileUploadComponentState must be used inside a channel");
-  const error = componentStateContext.useComponentState(maxValues);
-  state = error.state;
-  executeStateUpdate = error.executeStateUpdate;
+  const componentState = componentStateContext.useComponentState(maxValues);
+  state = componentState.state;
+  executeStateUpdate = componentState.executeStateUpdate;
   const items = [state];
+  const error = componentState.error;
   uploadIds = uploads.useMemo(() => {
     let type;
     if (state != null) {
@@ -31,26 +39,26 @@ export const useFileUploadComponentState = function useFileUploadComponentState(
   const items1 = [uploadIds, uploads];
   currentUploads = uploads.useMemo(() => {
     const mapped = uploadIds.map((item) => {
-      closure_0 = item;
+      let closure_0 = item;
       return uploads.find((id) => id.id === closure_0);
     });
     return mapped.filter((item) => null != item);
   }, items1);
   const items2 = [executeStateUpdate];
-  setUploadIds = uploads.useCallback(
-    (uploadIds) => executeStateUpdate({ type: Server.ComponentType.FILE_UPLOAD, uploadIds }),
-    items2,
-  );
+  setUploadIds = uploads.useCallback((uploadIds) => {
+    const obj = { type: Server.ComponentType.FILE_UPLOAD, uploadIds };
+    return executeStateUpdate(obj);
+  }, items2);
   const items3 = [uploadIds, currentUploads, setUploadIds];
   const effect = uploads.useEffect(() => {
     if (uploadIds.length > currentUploads.length) {
       setUploadIds(
         uploadIds.filter((item) => {
-          closure_0 = item;
+          let closure_0 = item;
           return currentUploads.some((id) => id.id === closure_0);
         }),
       );
     }
   }, items3);
-  return { uploadIds, setUploadIds, currentUploads, error: error.error };
+  return { uploadIds, setUploadIds, currentUploads, error };
 };
