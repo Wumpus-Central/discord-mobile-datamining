@@ -210,14 +210,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         let obj3 = { guildId, scrollValue: sharedValue, children: null };
         const obj4 = { guildId, hideDescription: tmp5 };
-        const items3 = [closure_9(tmp4(16503), obj4)];
+        const items3 = [closure_9(tmp4(16507), obj4)];
         if (tmp5) {
           let obj5 = { children: null };
           const obj6 = { guildId };
-          const items4 = [closure_9(tmp4(16508), obj6), ,];
+          const items4 = [closure_9(tmp4(16512), obj6), ,];
           const obj7 = { guildId };
-          items4[1] = closure_9(tmp4(16512), obj7);
-          tmp4 = tmp4(16513);
+          items4[1] = closure_9(tmp4(16516), obj7);
+          tmp4 = tmp4(16517);
           const obj8 = { guildId };
           tmp = closure_9(tmp4, obj8);
           items4[2] = tmp;
@@ -225,12 +225,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp12Result = closure_11(closure_10, obj5);
         } else {
           const obj9 = { guildId };
-          tmp12Result = closure_9(tmp4(16516), obj9);
+          tmp12Result = closure_9(tmp4(16520), obj9);
         }
         items3[1] = tmp12Result;
         obj3.children = items3;
-        closure_11(tmp4(16519), obj3);
-        const tmp4Result = tmp4(16519);
+        closure_11(tmp4(16523), obj3);
+        const tmp4Result = tmp4(16523);
       }
       let obj2 = guildId(504);
     };

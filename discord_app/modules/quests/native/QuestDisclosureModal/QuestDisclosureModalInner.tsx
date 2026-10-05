@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         ({ container, contentContainer } = tmp4);
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp10 = closure_6(tmp(14913).WumpusCouchSpotIllustration, {});
+          const tmp10 = closure_6(tmp(14917).WumpusCouchSpotIllustration, {});
           cResult[2] = tmp10;
           let tmp8 = tmp10;
         } else {

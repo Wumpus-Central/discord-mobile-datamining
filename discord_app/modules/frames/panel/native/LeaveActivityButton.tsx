@@ -22,7 +22,7 @@ export default noop.memo(
           }
           return tmp4;
         }
-        const tmp5 = jsx(frame(17165).BaseLeaveActivityButton, {
+        const tmp5 = jsx(frame(17189).BaseLeaveActivityButton, {
           onPress() {
             setMode(ActivityPanelModes.DISCONNECTED);
             const timerId = setTimeout(() => {

@@ -5,7 +5,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
 import TwoFASetupStyles from "TwoFASetupStyles.tsx";
-import _modDef14568 from "../../../../../../_runtime/metro/14568__.js";
+import _modDef14572 from "../../../../../../_runtime/metro/14572__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const twoFASetupStyles = TwoFASetupStyles.useTwoFASetupStyles();
       ({ container, container: container2 } = tmp4);
       if (cResult[0] !== tmp4.authIcon) {
-        const obj3 = { source: _modDef14568, style: tmp4.authIcon };
+        const obj3 = { source: _modDef14572, style: tmp4.authIcon };
         const tmp10 = hasOwnProperty(React3, obj3);
         cResult[0] = tmp4.authIcon;
         cResult[1] = tmp10;
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { children: null };
       const obj3 = { style: tmp.container, children: null };
       const obj4 = { bottom: true, style: tmp.container, children: null };
-      const items = [hasOwnProperty(React3, { source: _modDef14568, style: tmp.authIcon }), ,];
+      const items = [hasOwnProperty(React3, { source: _modDef14572, style: tmp.authIcon }), ,];
       const obj6 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
       obj6.children = intl.string(util.t["9E74Dx"]);

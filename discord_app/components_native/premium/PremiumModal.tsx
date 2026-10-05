@@ -50,7 +50,7 @@ function getScreens(arg0) {
   const intl2 = util.intl;
   obj4.title = intl2.string(util.t["8jmdON"]);
   obj4.render = function render() {
-    return planId(onClose(13300), {});
+    return planId(onClose(13302), {});
   };
   obj[UserSettingsSections.PREMIUM_MANAGE_PLAN] = obj4;
   const obj5 = { title: null, headerLeft: null, render: null };
@@ -58,7 +58,7 @@ function getScreens(arg0) {
   obj5.title = intl3.string(util.t["+CbP2v"]);
   obj5.headerLeft = NavigatorHeader.getHeaderCloseButton(onClose);
   obj5.render = function render() {
-    return planId(onClose(13303), {});
+    return planId(onClose(13305), {});
   };
   obj[UserSettingsSections.GUILD_BOOSTING] = obj5;
   const obj7 = { title: null, headerLeft: null, initialParams: null, render: null };

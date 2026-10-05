@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[11] === tmp16) {
                     let tmp17 = cResult[12];
                   }
-                  const tmp18Result = importDefault(tmp6 ? 14928 : 14929);
+                  const tmp18Result = importDefault(tmp6 ? 14932 : 14933);
                   if (cResult[13] === str) {
                     if (cResult[14] === tmp17) {
                       if (cResult[15] === tmp18Result) {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { style: null, source: null, resizeMode: null };
         const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
         obj6.style = items2;
-        obj6.source = importDefault(isThemeDarkResult ? 14928 : 14929);
+        obj6.source = importDefault(isThemeDarkResult ? 14932 : 14933);
         obj6.resizeMode = str2;
         items1[1] = hasOwnProperty(FastImageDefault, obj6);
         obj3.children = items1;

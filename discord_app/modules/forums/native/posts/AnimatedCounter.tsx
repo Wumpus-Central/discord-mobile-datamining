@@ -476,7 +476,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           };
           springStandard = springConfig;
           tmp = jsx;
-          tmp2 = f56622;
+          tmp2 = f56650;
           if (null == springConfig) {
             tmp3 = closure_0;
             tmp4 = closure_2;

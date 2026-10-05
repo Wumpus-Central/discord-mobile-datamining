@@ -40,7 +40,7 @@ let closure_8 = async function _deleteGameRelationship(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -62,7 +62,7 @@ let closure_8 = async function _deleteGameRelationship(arg0) {
           ({ userId: closure_129_0, applicationId: closure_129_1, onSuccess: closure_129_2 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -126,7 +126,7 @@ let closure_9 = async function _removeGameFriend() {
   await "IconComponent";
   closure_1 = tmp2;
   ({ userId: closure_129_0, applicationId: closure_129_1 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 let closure_10 = async function _cancelGameFriendRequest() {
   await closure_130_7({
@@ -141,7 +141,7 @@ let closure_10 = async function _cancelGameFriendRequest() {
   await "IconComponent";
   closure_1 = tmp2;
   ({ userId: closure_129_0, applicationId: closure_129_1 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 const Constants = fn(1085);
 ({ Endpoints: closure_4, RelationshipTypes: hasOwnProperty } = Constants);

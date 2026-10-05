@@ -25,7 +25,7 @@ const ThemeTypes = fn(1096).ThemeTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const f68856 = () => {};
+const f68906 = () => {};
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
@@ -97,11 +97,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult9 = tmp(10912);
       }
       if (cResult[4] !== bounty) {
-        const questDockAdCreativeId = tmp(14899).getQuestDockAdCreativeId(bounty);
+        const questDockAdCreativeId = tmp(14903).getQuestDockAdCreativeId(bounty);
         cResult[4] = bounty;
         cResult[5] = questDockAdCreativeId;
         let tmp16 = questDockAdCreativeId;
-        const tmpResult10 = tmp(14899);
+        const tmpResult10 = tmp(14903);
       } else {
         tmp16 = cResult[5];
       }
@@ -344,7 +344,7 @@ let closure_15 = tmp7;
 ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      if (typeof f68856 === "function") {
+      if (typeof f68906 === "function") {
         return closure_15(
           useQuestForPlacement.useDeliveredCreativeForPlacement(
             QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA,
@@ -356,7 +356,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       }
     }
   : () => {
-      if (typeof f68856 === "function") {
+      if (typeof f68906 === "function") {
         return closure_15(
           useQuestForPlacement.useDeliveredCreativeForPlacement(
             QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA,
@@ -604,7 +604,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 fn = () => {
   const adRefreshLoop = useQuestForPlacement.useAdRefreshLoop(QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA);
-  if (typeof f68856 === "function") {
+  if (typeof f68906 === "function") {
     return useQuestForPlacement.useDeliveredCreativeForPlacement(
       QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA,
       QuestTypes.QuestContent.QUEST_BAR_MOBILE,
@@ -761,7 +761,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "IconComponent", done: "IconComponent" };
+                      return { value: "IconComponent", done: null };
                     }
                   } else {
                     try {
@@ -821,7 +821,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                         return obj;
                       }
                       c0 = 3;
-                      return { value: "IconComponent", done: "IconComponent" };
+                      return { value: "IconComponent", done: null };
                     } catch (tmp16) {
                       c0 = tmp;
                       throw tmp16;
@@ -1030,7 +1030,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -1091,7 +1091,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                   return obj;
                 }
                 v3 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               } catch (tmp16) {
                 v3 = tmp;
                 throw tmp16;

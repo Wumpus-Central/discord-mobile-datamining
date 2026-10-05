@@ -258,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = {
               guild: stateFromStores,
               flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS,
-              settingType: tmp(17645).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
+              settingType: tmp(17669).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
               label: tmp29,
               disabled: !stateFromStores1,
             };
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj7 = {
             guild: stateFromStores,
             flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS,
-            settingType: tmp(17645).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
+            settingType: tmp(17669).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
             label: tmp18,
             subLabel: tmp19,
             disabled: !stateFromStores1,
@@ -316,7 +316,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS,
-          settingType: tmp2(17645).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
+          settingType: tmp2(17669).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
           label: null,
           subLabel: null,
           disabled: null,
@@ -330,7 +330,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS,
-          settingType: tmp2(17645).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
+          settingType: tmp2(17669).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
           label: null,
           disabled: null,
         };

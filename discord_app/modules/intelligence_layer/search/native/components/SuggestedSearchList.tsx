@@ -30,7 +30,7 @@ export default noop.memo(
         }
         const tmp5 = closure_6();
         const obj = smartSearchQuery(576);
-        const suggestedSearches = smartSearchQuery(16786).useSuggestedSearches(
+        const suggestedSearches = smartSearchQuery(16805).useSuggestedSearches(
           smartSearchQuery,
           smartSearchQuery.source,
         ).suggestedSearches;
@@ -122,7 +122,7 @@ export default noop.memo(
           cResult[4] = items1;
           tmp8 = items1;
         }
-        const tmpResult = smartSearchQuery(16786);
+        const tmpResult = smartSearchQuery(16805);
       }
     : (smartSearchQuery) => {
         smartSearchQuery = smartSearchQuery.smartSearchQuery;
@@ -131,7 +131,7 @@ export default noop.memo(
           flag = false;
         }
         const tmp = closure_6();
-        const suggestedSearches = smartSearchQuery(16786).useSuggestedSearches(
+        const suggestedSearches = smartSearchQuery(16805).useSuggestedSearches(
           smartSearchQuery,
           smartSearchQuery.source,
         ).suggestedSearches;

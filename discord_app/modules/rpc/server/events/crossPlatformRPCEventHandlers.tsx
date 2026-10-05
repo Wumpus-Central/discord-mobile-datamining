@@ -7,7 +7,7 @@ import RPCErrorDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import RPCHelpers from "../../RPCHelpers.tsx";
 import transformUserDefault from "../../helpers/transformUser.tsx";
-import VibegrationsVoiceSessionCoordinatorDefault from "../../../vibegrations/voice/VibegrationsVoiceSessionCoordinator.tsx";
+import ConjureVoiceSessionCoordinatorDefault from "../../../conjure/voice/ConjureVoiceSessionCoordinator.tsx";
 import transformGuildMemberDefault from "../../helpers/transformGuildMember.tsx";
 import transformApplicationDefault from "../../helpers/transformApplication.tsx";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
@@ -73,10 +73,7 @@ function voiceSessionEventValidation(string) {
   return requiredResult.keys(obj2);
 }
 function voiceSessionEvent(socket) {
-  const result = VibegrationsVoiceSessionCoordinatorDefault.validateEventSubscription(
-    socket.socket,
-    socket.args.session_id,
-  );
+  const result = ConjureVoiceSessionCoordinatorDefault.validateEventSubscription(socket.socket, socket.args.session_id);
 }
 const getGuildIconURL = fn(2070).getGuildIconURL;
 let Constants = fn(5316);
@@ -350,11 +347,11 @@ obj2[RPCEvents.VOICE_SESSION_PARTICIPANTS_UPDATE] = {
   handler(args) {
     const session_id = args.args.session_id;
     const socket = args.socket;
-    const result = socket(14297).validateEventSubscription(socket, session_id);
+    const result = socket(14299).validateEventSubscription(socket, session_id);
     return (prevState) => {
       prevState = prevState.prevState;
       const participantsForEventSubscription =
-        VibegrationsVoiceSessionCoordinatorDefault.getParticipantsForEventSubscription(socket, session_id);
+        ConjureVoiceSessionCoordinatorDefault.getParticipantsForEventSubscription(socket, session_id);
       let tmp5 = prevState;
       if (null != participantsForEventSubscription) {
         let isEqualResult = null == prevState;
@@ -453,7 +450,7 @@ const obj35 = {
   handler() {},
 };
 obj2[RPCEvents.FRAME_LAYOUT_MODE_UPDATE] = obj35;
-obj2[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = fn(14302).activityInstanceConnectedParticipantsUpdateEvent;
+obj2[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = fn(14304).activityInstanceConnectedParticipantsUpdateEvent;
 const obj36 = {
   scope: null,
   handler() {},

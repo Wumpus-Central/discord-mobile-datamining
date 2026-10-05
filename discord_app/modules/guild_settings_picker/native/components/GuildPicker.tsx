@@ -14,12 +14,12 @@ export default function GuildPicker(isGuildIncluded) {
   const guildId = isGuildIncluded.guildId;
   const onChange = isGuildIncluded.onChange;
   dependencyMap = undefined;
-  ({ options: c2, selectedGuild } = onChange(13705)({
+  ({ options: c2, selectedGuild } = onChange(13707)({
     isGuildIncluded: isGuildIncluded.isGuildIncluded,
     selectedGuildId: guildId,
   }));
   let name;
-  const tmp2 = onChange(13705)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
+  const tmp2 = onChange(13707)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
   if (selectedGuild != null) {
     name = selectedGuild.name;
   }
@@ -48,7 +48,7 @@ export default function GuildPicker(isGuildIncluded) {
   };
   let intl = guildId(1126).intl;
   obj.placeholder = intl.string(guildId(1126).t.etZ9tX);
-  return jsx(onChange(13706), {
+  return jsx(onChange(13708), {
     label: name,
     onPress() {
       const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };

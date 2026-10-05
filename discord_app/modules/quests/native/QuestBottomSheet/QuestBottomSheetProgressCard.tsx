@@ -361,7 +361,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = isQuestProgressing;
       }
       obj5.loading = !tmp7;
-      const items2 = [defaultRewardName(isQuestProgressing(14931), obj5)];
+      const items2 = [defaultRewardName(isQuestProgressing(14935), obj5)];
       let tmp18Result = null != memo;
       if (tmp18Result) {
         let obj6 = { style: tmp.instructionsText, variant: "text-sm/semibold", color: "text-subtle", children: memo };
@@ -700,7 +700,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const obj = quest(10911);
       let isHeroVideoSupportedResult = null != memo;
-      const obj2 = quest(14923);
+      const obj2 = quest(14927);
       const obj3 = { questId: quest.id, sourceQuestContent: quest.sourceQuestContent };
       if (isHeroVideoSupportedResult) {
         isHeroVideoSupportedResult = tmp2(10908).isHeroVideoSupported(memo.mimetype);
@@ -716,7 +716,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         YsCuyF = tmp2(1126).t["74KqrR"];
       }
-      const watchTaskPressHandler = quest(14923).useWatchTaskPressHandler({
+      const watchTaskPressHandler = quest(14927).useWatchTaskPressHandler({
         questId: quest.id,
         sourceQuestContent: quest.sourceQuestContent,
       });

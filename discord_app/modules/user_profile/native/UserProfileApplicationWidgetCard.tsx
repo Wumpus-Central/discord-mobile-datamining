@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp23 = require("useStartAuthorize")(getOrFetchApplication);
         token = tmp23.token;
         ({ fetched, canStartAuthorization } = tmp23);
-        require("useIsOwnedVibegrationsApplication")(widget.applicationId, stateFromStores1);
+        require("useIsOwnedConjureApplication")(widget.applicationId, stateFromStores1);
         const tmp22 = require("useApplicationWidgetLayoutRendererProps")(userId, widget.applicationId);
         ({ pending, refresh } = require("useApplicationWidgetRefresh")(widget.applicationId));
         surfaceConfigs[tmp(undefined, tmp2[25]).ApplicationWidgetConfigSurface.WIDGET_TOP];

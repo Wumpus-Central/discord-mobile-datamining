@@ -593,7 +593,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           stringResult = intl4.string(tmp6(1126).t["yvzX/Z"]);
         }
         const obj16 = { title: stringResult, illustration: null, disableBackgroundOverlay: true };
-        WumpusCouchSpotIllustration = tmp6(14913).WumpusCouchSpotIllustration;
+        WumpusCouchSpotIllustration = tmp6(14917).WumpusCouchSpotIllustration;
         obj16.illustration = WumpusCouchSpotIllustration;
         obj15.children = tmp30(tmp2(10726), obj16);
         tmp30(tmp31, obj15);

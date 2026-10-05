@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        guildPowerupBannerImage = markAsDismissed(16090);
+        guildPowerupBannerImage = markAsDismissed(16094);
       }
       cResult[6] = stateFromStores;
       cResult[7] = stateFromStores1;
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = guildId(504);
       guildPowerupBannerImage = guildId(12177).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
       if (guildPowerupBannerImage == null) {
-        guildPowerupBannerImage = markAsDismissed(16090);
+        guildPowerupBannerImage = markAsDismissed(16094);
       }
       const diff = onDismiss - markAsDismissed(7671)(guildId).available;
       c5 = diff;

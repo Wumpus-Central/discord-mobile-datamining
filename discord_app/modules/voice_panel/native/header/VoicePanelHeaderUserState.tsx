@@ -222,7 +222,7 @@ export default noop.memo(
         let obj = isHeaderHidden(576);
         const tmp4 = channelId;
         const stateFromStores = isHeaderHidden(504).useStateFromStores(first, tmp9);
-        const tmp11 = closure_9(tmp4(17195)(stateFromStores, channelId, guildId), guildId);
+        const tmp11 = closure_9(tmp4(17219)(stateFromStores, channelId, guildId), guildId);
         const tmpResult = isHeaderHidden(504);
         const fn2 = function w() {
           let num = 0;
@@ -279,7 +279,7 @@ export default noop.memo(
           }
           return id;
         });
-        const tmp4 = closure_9(channelId(17195)(stateFromStores, channelId, guildId), guildId);
+        const tmp4 = closure_9(channelId(17219)(stateFromStores, channelId, guildId), guildId);
         isHeaderHidden(4612);
         const fn = function f() {
           let num = 0;

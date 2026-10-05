@@ -11,11 +11,11 @@ require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
   const match = showHint(5075).match(showHint.usernameStatus);
-  let obj = { type: showHint(14512).NameValidationState.ERROR, message: null };
+  let obj = { type: showHint(14516).NameValidationState.ERROR, message: null };
   const P = showHint(5075).P;
   obj.message = P.select();
   const str = showHint(5075);
-  const obj2 = { type: showHint(14512).NameValidationState.AVAILABLE, message: null };
+  const obj2 = { type: showHint(14516).NameValidationState.AVAILABLE, message: null };
   const P2 = showHint(5075).P;
   obj2.message = P2.select();
   const withResult = match.with(obj, (children) =>

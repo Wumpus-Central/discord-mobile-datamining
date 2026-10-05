@@ -414,7 +414,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           constructor() {
             obj = { style: closure_1.container, children: null };
             obj1 = { url, wordWrap: closure_2 };
-            obj.children = jsx(f57165, obj1);
+            obj.children = jsx(f57193, obj1);
             return jsx(View, obj);
           }
         }

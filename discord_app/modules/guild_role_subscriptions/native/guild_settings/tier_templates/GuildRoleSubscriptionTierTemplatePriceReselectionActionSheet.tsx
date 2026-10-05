@@ -92,7 +92,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === containerSelected) {
           let tmp8 = cResult[4];
         }
-        const tmp9Result = importDefault(selected ? 17865 : 16514);
+        const tmp9Result = importDefault(selected ? 17889 : 16518);
         if (cResult[5] === tmp4.rowStatusIcon) {
           if (cResult[6] === tmp9Result) {
             let tmp11 = cResult[7];
@@ -176,7 +176,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = containerSelected;
       const obj3 = { style: tmp.rowStatusIcon, source: null };
       const tmp7 = TouchableHitBoxDefault;
-      obj3.source = importDefault(selected ? 17865 : 16514);
+      obj3.source = importDefault(selected ? 17889 : 16518);
       const items1 = [options(FastImageDefault, obj3)];
       const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
       const intl = util.intl;

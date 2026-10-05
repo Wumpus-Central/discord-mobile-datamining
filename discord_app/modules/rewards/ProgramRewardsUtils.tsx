@@ -79,8 +79,8 @@ function hasNecessaryPremiumSubscriptionStatus(stateFromStores) {
   }
   return PremiumUtils.isPremiumExactly(currentUser, PremiumTypes.TIER_2);
 }
-obj2[fn(13536).RewardProgram.NITRO] = canFetchNitroProgramReward;
-obj2[fn(13536).RewardProgram.XBOX] = canFetchXboxProgramReward;
+obj2[fn(13538).RewardProgram.NITRO] = canFetchNitroProgramReward;
+obj2[fn(13538).RewardProgram.XBOX] = canFetchXboxProgramReward;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");
 

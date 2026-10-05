@@ -18,7 +18,7 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -128,7 +128,7 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
 const identity = fn(1254);
 let closure_4 = identity.createWithEqualityFn(() => ({
   isLightsEnabled: "Array",
-  isVibrationsEnabled: "Symbol",
+  isVibrationsEnabled: "T",
   isSoundsEnabled: "y",
   isNotifyEveryTime: "IconComponent",
 }));

@@ -329,7 +329,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj8.label = closure_6(tmp(4886).Text, obj9);
           obj8.onPress = function onPress() {
             const verificationKey = MFAStore.getVerificationKey();
-            const result = items2(14571).confirmViewBackupCodes(verificationKey, true);
+            const result = items2(14575).confirmViewBackupCodes(verificationKey, true);
           };
           obj7.children = closure_6(tmp(5993).TableRow, obj8);
           tmp28 = closure_6(tmp(6074).TableRowGroup, obj7);

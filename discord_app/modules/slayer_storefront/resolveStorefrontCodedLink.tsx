@@ -37,7 +37,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -94,7 +94,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                   return obj;
                 }
                 v3 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp9) {
               v3 = tmp;
@@ -104,7 +104,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
         });
         if (!set.has(storefrontCodedLink)) {
           set.add(storefrontCodedLink);
-          const result1 = tmp(17523).queueMessageLinkFetch(
+          const result1 = tmp(17547).queueMessageLinkFetch(
             asyncGeneratorStep(async () => {
               if (c4 === 2) {
                 c4 = 3;
@@ -116,7 +116,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -154,7 +154,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                     c3 = 0;
                     set.delete(closure_128_0);
                     c4 = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp23) {
                   closure_2 = tmp23;
@@ -168,7 +168,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
               }
             }),
           );
-          const tmpResult2 = tmp(17523);
+          const tmpResult2 = tmp(17547);
         }
         const tmpResult = tmp(11149);
       }

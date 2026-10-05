@@ -3,8 +3,8 @@ import EmbeddedSurfaceUtils from "../../applications/utils/EmbeddedSurfaceUtils.
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import RPCErrorDefault from "../RPCError.tsx";
 import RPCHelpers from "../RPCHelpers.tsx";
+import ConjureBuilderPreviewStore from "../../conjure/preview/ConjureBuilderPreviewStore.tsx";
 import FramesStore from "../../frames/FramesStore.tsx";
-import VibegrationsBuilderPreviewStore from "../../vibegrations/stores/VibegrationsBuilderPreviewStore.tsx";
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {
@@ -23,8 +23,8 @@ function validateEmbeddedAppFrame(transport) {
         if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
           if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
             if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-              if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-                let obj5 = { channelId: "Symbol", guildId: "current" };
+              if (tmp35.applicationId === ConjureBuilderPreviewStore.getBuilderPreviewApplicationId()) {
+                let obj5 = { channelId: "Array", guildId: "Set" };
               } else {
                 obj5 = null;
               }

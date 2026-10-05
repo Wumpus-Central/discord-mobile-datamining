@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       children = children.children;
       const tmp4 = closure_8();
       const tmp6 = updaters(11126)();
-      const tmp7 = updaters(17358)();
+      const tmp7 = updaters(17382)();
       launchPadSharedState = tmp7.launchPadSharedState;
       ({ launchPadPullTabState, launchPadShown, gestureState, updaters } = tmp7);
       if (cResult[0] === gestureState) {
@@ -60,10 +60,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[5] === updaters) {
                   let tmp8 = cResult[6];
                 }
-                ({ gesture, gestureRef } = updaters(17360)(tmp8));
+                ({ gesture, gestureRef } = updaters(17384)(tmp8));
                 const tmp10 = updaters(11647)();
                 dependencyMap = tmp10;
-                const tmp9 = updaters(17360)(tmp8);
+                const tmp9 = updaters(17384)(tmp8);
                 class G {
                   constructor() {
                     return closure_2.get().height;
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         return tmp34;
                                       }
                                       let obj6 = { value: gestureRef, children: tmp31 };
-                                      const tmp36 = closure_6(updaters(15926).Provider, obj6);
+                                      const tmp36 = closure_6(updaters(15930).Provider, obj6);
                                       class G {
                                         constructor() {
                                           return closure_2.get().height;
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           return closure_2.get().height;
                         }
                       }
-                      const tmp25 = closure_6(updaters(17361), obj9);
+                      const tmp25 = closure_6(updaters(17385), obj9);
                     }
                     cResult[14] = enableHome;
                     class G {
@@ -315,10 +315,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       updaters = undefined;
       const tmp = closure_8();
       const tmp4 = updaters(11126)();
-      const tmp5 = updaters(17358)();
+      const tmp5 = updaters(17382)();
       const launchPadSharedState = tmp5.launchPadSharedState;
       ({ launchPadPullTabState, launchPadShown, gestureState, updaters } = tmp5);
-      ({ gesture, gestureRef } = updaters(17360)({
+      ({ gesture, gestureRef } = updaters(17384)({
         launchPadType: tmp4,
         launchPadSharedState,
         launchPadPullTabState,
@@ -329,7 +329,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp7 = updaters(11647)();
       dependencyMap = tmp7;
       const tmp2 = updaters;
-      const tmp6 = updaters(17360)({
+      const tmp6 = updaters(17384)({
         launchPadType: tmp4,
         launchPadSharedState,
         launchPadPullTabState,
@@ -415,11 +415,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           launchPadPullTabState,
           updaters,
         };
-        const tmp10Result = closure_6(tmp2(17361), obj8);
+        const tmp10Result = closure_6(tmp2(17385), obj8);
       }
       items1[1] = tmp10Result;
       obj6.children = items1;
       obj5.children = closure_7(closure_3, obj6);
       obj4.children = closure_6(launchPadSharedState(6140).GestureDetector, obj5);
-      return closure_6(updaters(15926).Provider, obj4);
+      return closure_6(updaters(15930).Provider, obj4);
     };

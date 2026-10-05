@@ -16,7 +16,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -50,7 +50,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
       } else if (1 === tmp8) {
         c6 = 0;
         c8 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } else if (2 === tmp8) {
         if (arg0 === 1) {
           c8 = 3;
@@ -65,7 +65,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
           if (null == closure_131_3) {
             c6 = 0;
             c8 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           } else {
             filePathForGif = closure_132_0(closure_132_2[3]).getFilePathForGif(fileNameFromGifUrl);
             const obj9 = closure_132_0(closure_132_2[4]);
@@ -89,7 +89,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
           if (null == closure_131_5) {
             c6 = 0;
             c8 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           } else {
             c7 = 4;
             c8 = 1;

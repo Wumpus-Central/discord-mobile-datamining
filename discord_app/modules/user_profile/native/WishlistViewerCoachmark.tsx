@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/WishlistViewerCoachmark.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef12961 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
+import _modDef12963 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -20,7 +20,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(6);
       const tmp3 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef12961 };
+        const obj2 = { uri: _modDef12963 };
         cResult[0] = obj2;
         let first = obj2;
       } else {
@@ -51,8 +51,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       const tmp = closure_8();
       const obj = { style: tmp.imageContainer, children: null };
-      const obj2 = { source: { uri: _modDef12961 }, style: tmp.image };
-      obj.children = <hasOwnProperty source={{ uri: _modDef12961 }} style={tmp.image} />;
+      const obj2 = { source: { uri: _modDef12963 }, style: tmp.image };
+      obj.children = <hasOwnProperty source={{ uri: _modDef12963 }} style={tmp.image} />;
       return <React4 style={tmp.imageContainer}>{null}</React4>;
     };
 ReactCompilerGating = fn(558);

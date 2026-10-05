@@ -418,14 +418,14 @@ export default noop.memo(
           selected: stateFromStores,
           sharedId: sharedValue,
           circle: !stateFromStores,
-          overState: "Reflect",
+          overState: "Set",
           unread: null,
           label: null,
           config: null,
           styles: null,
           externalChildren: null,
           expandedChildren: null,
-          children: "M14 5H15V4H14V5Z",
+          children: "M12 11H13V10H12V11Z",
         };
         let str = guildName;
         const tmp2Result2 = guildId(stateFromStores[21]);
@@ -464,14 +464,14 @@ export default noop.memo(
           selected: stateFromStores,
           sharedId: sharedValue,
           circle: !stateFromStores,
-          overState: "Reflect",
+          overState: "Set",
           unread: null,
           label: null,
           config: null,
           styles: null,
           externalChildren: null,
           expandedChildren: null,
-          children: "M14 5H15V4H14V5Z",
+          children: "M12 11H13V10H12V11Z",
         });
       },
 );

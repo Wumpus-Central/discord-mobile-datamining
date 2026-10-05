@@ -2,7 +2,7 @@
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod16338 from "../../../../../../../_runtime/metro/16338__.js";
+import _mod16342 from "../../../../../../../_runtime/metro/16342__.js";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -35,7 +35,7 @@ export const ConnectionFineIcon = ReactCompilerGating.isReactCompilerEnabled()
         ICON_FEEDBACK_POSITIVE = nativeDefault.colors.ICON_FEEDBACK_POSITIVE;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod16338;
+        const tmpResult = _mod16342;
         cResult[4] = tmpResult;
         let tmp10 = tmpResult;
       } else {
@@ -65,5 +65,5 @@ export const ConnectionFineIcon = ReactCompilerGating.isReactCompilerEnabled()
       }
       const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
       const merged1 = Object.assign(merged);
-      return jsx(BaseIconImage.BaseIconImage, { source: _mod16338, color: ICON_FEEDBACK_POSITIVE, style: color.style });
+      return jsx(BaseIconImage.BaseIconImage, { source: _mod16342, color: ICON_FEEDBACK_POSITIVE, style: color.style });
     };

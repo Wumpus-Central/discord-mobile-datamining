@@ -24,7 +24,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
     headerTitle() {
       return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, {
         variant: "text-md/normal",
-        children: "application",
+        children: "applicationId",
       });
     },
     render() {
@@ -40,7 +40,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   obj4.headerTitle = function headerTitle() {
     return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, {
       variant: "text-md/normal",
-      children: "application",
+      children: "applicationId",
     });
   };
   obj4.render = function render() {
@@ -55,7 +55,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   obj6.headerTitle = function headerTitle() {
     return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, {
       variant: "text-md/normal",
-      children: "application",
+      children: "applicationId",
     });
   };
   obj6.render = function render() {
@@ -70,7 +70,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   obj8.headerTitle = function headerTitle() {
     return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, {
       variant: "text-md/normal",
-      children: "application",
+      children: "applicationId",
     });
   };
   obj8.render = function render() {
@@ -85,7 +85,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   obj10.headerTitle = function headerTitle() {
     return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, {
       variant: "text-md/normal",
-      children: "application",
+      children: "applicationId",
     });
   };
   obj10.render = function render() {
@@ -100,7 +100,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   obj12.headerTitle = function headerTitle() {
     return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, {
       variant: "text-md/normal",
-      children: "application",
+      children: "applicationId",
     });
   };
   obj12.render = function render() {
@@ -408,7 +408,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -612,7 +612,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {

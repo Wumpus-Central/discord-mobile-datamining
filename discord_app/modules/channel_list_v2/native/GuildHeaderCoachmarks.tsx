@@ -100,14 +100,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         () => PermissionStore.can(Permissions.MANAGE_GUILD, guild),
         items1,
       );
-      const tmp5 = stateFromStores(16078)(guild.id);
+      const tmp5 = stateFromStores(16082)(guild.id);
       dependencyMap = tmp5;
-      stateFromStores(16080)(guild.id);
+      stateFromStores(16084)(guild.id);
       const obj = guild(504);
       const tmp7 = stateFromStores(12170)(guild.id);
       const tmp9 = stateFromStores(12163)(guild.id);
       const items2 = [stateFromStores, guild.premiumProgressBarEnabled, tmp5];
-      const tmp8 = stateFromStores(16087)();
+      const tmp8 = stateFromStores(16091)();
       const memo = noop.useMemo(() => {
         let tmp = stateFromStores;
         if (stateFromStores) {
@@ -145,15 +145,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (guild(2036).DismissibleContent.BOOST_PROGRESS_BAR_MOBILE_COACHMARK === first) {
         const obj4 = { targetRef, guild, markAsDismissed: tmp16 };
-        return jsx(tmp4(16088), { targetRef, guild, markAsDismissed: tmp16 });
+        return jsx(tmp4(16092), { targetRef, guild, markAsDismissed: tmp16 });
       } else if (guild(2036).DismissibleContent.GUILD_THEME_MEMBER_COACHMARK === first) {
         const obj5 = { guildId: guild.id, targetRef, markAsDismissed: tmp16 };
-        return jsx(tmp4(16089), { guildId: guild.id, targetRef, markAsDismissed: tmp16 });
+        return jsx(tmp4(16093), { guildId: guild.id, targetRef, markAsDismissed: tmp16 });
       } else if (guild(2036).DismissibleContent.BOOST_TO_UNLOCK_COACHMARK === first) {
         let tmp20 = null;
         if (null != tmp9) {
           const obj6 = { guildId: guild.id, powerup: tmp9, targetRef, markAsDismissed: tmp13Result[1] };
-          tmp20 = jsx(tmp4(16091), { guildId: guild.id, powerup: tmp9, targetRef, markAsDismissed: tmp13Result[1] });
+          tmp20 = jsx(tmp4(16095), { guildId: guild.id, powerup: tmp9, targetRef, markAsDismissed: tmp13Result[1] });
         }
         return tmp20;
       } else {

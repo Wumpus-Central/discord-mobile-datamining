@@ -22,7 +22,7 @@ const obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -110,7 +110,7 @@ const obj = {
             tmp3(tmp37[2]).dispatch(obj14);
             c3 = 0;
             c5 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp37) {
           if (tmp4 === c3) {

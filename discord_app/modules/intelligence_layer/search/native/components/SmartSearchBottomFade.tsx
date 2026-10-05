@@ -81,7 +81,7 @@ export default noop.memo(
     : (height) => {
         let searchHostSurfaceColor;
         const tmp = closure_7(height.height);
-        searchHostSurfaceColor = searchHostSurfaceColor(16847).useSearchHostSurfaceColor();
+        searchHostSurfaceColor = searchHostSurfaceColor(16866).useSearchHostSurfaceColor();
         let items = [searchHostSurfaceColor];
         const memo = noop.useMemo(() => {
           const obj = _modDef683(searchHostSurfaceColor);

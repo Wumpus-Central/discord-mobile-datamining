@@ -121,7 +121,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     obj4.accessibilityValue = obj5;
     obj4.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(14467, dependencyMap.paths),
+        asyncRequireImpl(14471, dependencyMap.paths),
         "UserPrimaryGuildListBottomSheet",
         {
           availableGuilds: userAvailableGuildsWithTags,

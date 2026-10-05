@@ -29,8 +29,8 @@ import SoundboardIcon from "../../../../design/components/Icon/native/redesign/g
 import _modDef12728 from "../../../../../_runtime/metro/12728__.js";
 import useCanInviteMembers from "../hooks/useCanInviteMembers.tsx";
 import useInviteMembersCallback from "../hooks/useInviteMembersCallback.tsx";
-import _modDef17232 from "../../../../../_runtime/metro/17232__.js";
-import _modDef17233 from "../../../../../_runtime/metro/17233__.js";
+import _modDef17256 from "../../../../../_runtime/metro/17256__.js";
+import _modDef17257 from "../../../../../_runtime/metro/17257__.js";
 import useSoundboardConfig from "../hooks/useSoundboardConfig.tsx";
 import useHideSelfVideoDefault from "../../../calls/useHideSelfVideo.tsx";
 import ChannelCallUtils from "../../../video_calls/native/ChannelCallUtils.tsx";
@@ -88,7 +88,7 @@ function toggleDeaf() {
 }
 const Constants = fn(1085);
 ({ AnalyticEvents: map1, PlatformTypes: closure_14 } = Constants);
-const constants3 = fn(17330).SelfStreamAndVideoAlertType;
+const constants3 = fn(17354).SelfStreamAndVideoAlertType;
 const MediaEngineContextTypes = fn(4915).MediaEngineContextTypes;
 const jsx = fn(21).jsx;
 fn(558);
@@ -760,8 +760,8 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef17233 };
-    const tmp12 = jsx(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef17233 });
+    const obj2 = { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef17257 };
+    const tmp12 = jsx(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef17257 });
     const intl = util.intl;
     const stringResult = intl.string(util.t.wjcRFX);
     cResult[2] = tmp12;
@@ -799,7 +799,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const items = [MediaEngineStore];
   const stateFromStores = initialize.useStateFromStores(items, () => selfDeaf.isSelfDeaf());
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
-  obj2.icon = jsx(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef17233 });
+  obj2.icon = jsx(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef17257 });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t.wjcRFX);
   obj2.value = stateFromStores;
@@ -1111,7 +1111,7 @@ let tmp14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         if (!closure_0) {
           tmp2 = closure_15;
           VIDEO = closure_15.VIDEO;
-          f148117 = () => f148117(!VIDEO);
+          f148401 = () => f148401(!VIDEO);
           tmp3 = closure_1;
           tmp4 = closure_2;
           obj = closure_1(closure_2[14]);
@@ -1148,7 +1148,7 @@ let tmp14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       if (!paths) {
         if (!VIDEO) {
           VIDEO = constants.VIDEO;
-          const f148118 = () => f148118(!VIDEO);
+          const f148402 = () => f148402(!VIDEO);
           const obj2 = {
             importer() {
                   return VIDEO(paths[16])(paths[15], paths.paths).then((result) => {
@@ -1349,8 +1349,8 @@ let tmp18 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     tmp4 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { IconComponent: tmp(6883).SettingsIcon, source: _modDef17232 };
-    const tmp11 = jsx(tmp(5999).TableRowIcon, { IconComponent: tmp(6883).SettingsIcon, source: _modDef17232 });
+    const obj2 = { IconComponent: tmp(6883).SettingsIcon, source: _modDef17256 };
+    const tmp11 = jsx(tmp(5999).TableRowIcon, { IconComponent: tmp(6883).SettingsIcon, source: _modDef17256 });
     const intl = tmp(1126).intl;
     const stringResult = intl.string(tmp(1126).t.dsXapM);
     const intl2 = tmp(1126).intl;
@@ -1386,13 +1386,13 @@ let tmp18 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const callback = noop.useCallback(() => {
     const result = ChannelCallConnectingScreen.showVoiceSettingsActionSheet(guildId);
   }, items);
-  const obj = { onPress: callback, icon: jsx(guildId(5999).TableRowIcon, { IconComponent: guildId(6883).SettingsIcon, source: _modDef17232 }), label: null, subLabel: null, trailing: null };
+  const obj = { onPress: callback, icon: jsx(guildId(5999).TableRowIcon, { IconComponent: guildId(6883).SettingsIcon, source: _modDef17256 }), label: null, subLabel: null, trailing: null };
   const intl = guildId(1126).intl;
   obj.label = intl.string(guildId(1126).t.dsXapM);
   const intl2 = guildId(1126).intl;
   obj.subLabel = intl2.string(guildId(1126).t["16SG+O"]);
   obj.trailing = jsx(guildId(6000).TableRowArrow, {});
-  return jsx(guildId(5993).TableRow, { onPress: callback, icon: jsx(guildId(5999).TableRowIcon, { IconComponent: guildId(6883).SettingsIcon, source: _modDef17232 }), label: null, subLabel: null, trailing: null });
+  return jsx(guildId(5993).TableRow, { onPress: callback, icon: jsx(guildId(5999).TableRowIcon, { IconComponent: guildId(6883).SettingsIcon, source: _modDef17256 }), label: null, subLabel: null, trailing: null });
 });
 ReactCompilerGating = fn(558);
 let tmp19 = ReactCompilerGating.isReactCompilerEnabled() ? ((stream) => {

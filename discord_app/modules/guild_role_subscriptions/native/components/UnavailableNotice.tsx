@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef16168 from "../../../../../_runtime/metro/16168__.js";
+import _modDef16172 from "../../../../../_runtime/metro/16172__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: _modDef16168 };
+          const obj2 = { source: _modDef16172 };
           const tmp11 = React4(FastImageDefault, obj2);
           cResult[3] = tmp11;
           let tmp7 = tmp11;
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ container: arr[0], unavailableContainer: arr[1] } = tmp);
       obj.style = items;
       const obj2 = { style: tmp.unavailableInfo, children: null };
-      const obj3 = { source: _modDef16168 };
+      const obj3 = { source: _modDef16172 };
       const items1 = [React4(FastImageDefault, obj3), ,];
       const items2 = [tmp.joinCtaTitle];
       if (brightTitle) {

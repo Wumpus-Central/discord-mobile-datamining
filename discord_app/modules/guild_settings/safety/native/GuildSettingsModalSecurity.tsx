@@ -374,7 +374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   return closure_1_9.getProps().mfaLevel;
                                 }
                               }
-                              tmp54[0] = stateFromStores(14574);
+                              tmp54[0] = stateFromStores(14578);
                               tmp54[1] = tmp4.image;
                               const tmp55 = closure_12(closure_5, tmp54);
                               cResult[35] = tmp4.image;
@@ -838,7 +838,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj10 = { style: tmp.center, children: null };
       let obj2 = guildId(504);
       const items6 = [
-        closure_12(closure_5, { source: stateFromStores(14574), style: tmp.image, resizeMode: "contain" }),
+        closure_12(closure_5, { source: stateFromStores(14578), style: tmp.image, resizeMode: "contain" }),
       ];
       const obj12 = { style: tmp.infoWrapper, children: null };
       const obj13 = { variant: "text-sm/medium", color: "text-muted", children: null };

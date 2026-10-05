@@ -79,7 +79,7 @@ export default noop.memo(
               const obj3 = { children: null };
               let obj4 = { accessibilityRole: "radiogroup", children: null };
               let obj5 = { onSelect: tmp17 };
-              obj4.children = closure_9(tmp12(15348), obj5);
+              obj4.children = closure_9(tmp12(15352), obj5);
               obj3.children = closure_9(analyticsLocation, obj4);
               const tmp22 = closure_9(tmp(8895).Form, obj3);
               cResult[9] = tmp17;
@@ -147,7 +147,7 @@ export default noop.memo(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -179,7 +179,7 @@ export default noop.memo(
                         }
                         c2 = 1;
                         c1 = 1;
-                        const obj8 = { value: closure_0(13259).setAppIcon(id, premiumType), done: false };
+                        const obj8 = { value: closure_0(13261).setAppIcon(id, premiumType), done: false };
                         return obj8;
                       }
                     } else {
@@ -190,7 +190,7 @@ export default noop.memo(
                       c2 = 2;
                       c1 = 1;
                       const obj9 = {
-                        value: closure_0(13259).setAppIcon(closure_0(8829).FreemiumAppIconIds.DEFAULT, premiumType1),
+                        value: closure_0(13261).setAppIcon(closure_0(8829).FreemiumAppIconIds.DEFAULT, premiumType1),
                         done: false,
                       };
                       return obj9;
@@ -215,7 +215,7 @@ export default noop.memo(
                 return obj;
               }
               c1 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             } catch (tmp17) {
               c1 = tmp;
               throw tmp17;
@@ -255,7 +255,7 @@ export default noop.memo(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -287,7 +287,7 @@ export default noop.memo(
                         }
                         dependencyMap = 1;
                         v3 = 1;
-                        const obj8 = { value: stateFromStores(13259).setAppIcon(id, premiumType), done: false };
+                        const obj8 = { value: stateFromStores(13261).setAppIcon(id, premiumType), done: false };
                         return obj8;
                       }
                     } else {
@@ -298,7 +298,7 @@ export default noop.memo(
                       dependencyMap = 2;
                       v3 = 1;
                       const obj9 = {
-                        value: stateFromStores(13259).setAppIcon(
+                        value: stateFromStores(13261).setAppIcon(
                           stateFromStores(8829).FreemiumAppIconIds.DEFAULT,
                           premiumType1,
                         ),
@@ -326,7 +326,7 @@ export default noop.memo(
                 return obj;
               }
               v3 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             } catch (tmp17) {
               v3 = tmp;
               throw tmp17;
@@ -337,8 +337,8 @@ export default noop.memo(
         const items = [currentUser];
         stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
         let obj = stateFromStores(504);
-        importDefault = stateFromStores(13259).useCurrentAppIcon();
-        let obj2 = stateFromStores(13259);
+        importDefault = stateFromStores(13261).useCurrentAppIcon();
+        let obj2 = stateFromStores(13261);
         const isPremiumResult = stateFromStores(1976).isPremium(stateFromStores);
         dependencyMap = isPremiumResult;
         const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;

@@ -2,7 +2,7 @@
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef16682 from "../../../../../../discord_assets/assets/mana/asset-library/generated/SpiderIllocon-2x.png.js";
+import _modDef16693 from "../../../../../../discord_assets/assets/mana/asset-library/generated/SpiderIllocon-2x.png.js";
 import ReactCompilerGating from "../../../../../modules/react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
@@ -18,7 +18,7 @@ export const SpiderIllocon = ReactCompilerGating.isReactCompilerEnabled()
         num = size;
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef16682 };
+        const obj2 = { uri: _modDef16693 };
         cResult[0] = obj2;
         let first = obj2;
       } else {
@@ -72,7 +72,7 @@ export const SpiderIllocon = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: null,
         resizeMode: null,
       };
-      const obj2 = { uri: _modDef16682 };
+      const obj2 = { uri: _modDef16693 };
       obj.source = obj2;
       const items = [{ width: num, height: num }];
       obj.style = items;

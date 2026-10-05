@@ -1403,10 +1403,10 @@ export default noop.memo((guild) => {
   let activeEventOrStageInstanceChannel;
   const tmp = closure_30();
   const tmp2 = activeEventOrStageInstanceChannel;
-  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(16108).useActiveEventOrStageInstanceChannel(
+  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(16112).useActiveEventOrStageInstanceChannel(
     guild.id,
   );
-  let obj = activeEventOrStageInstanceChannel(16108);
+  let obj = activeEventOrStageInstanceChannel(16112);
   const guildActiveEvent = activeEventOrStageInstanceChannel(9160).useGuildActiveEvent(guild.id);
   let obj2 = activeEventOrStageInstanceChannel(9160);
   const items = [StageInstanceStore];

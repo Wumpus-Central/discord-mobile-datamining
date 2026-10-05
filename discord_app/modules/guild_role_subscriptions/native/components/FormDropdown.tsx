@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import _modDef9602 from "../../../../../_runtime/metro/09602__.js";
-import _modDef13707 from "../../../../../_runtime/metro/13707__.js";
+import _modDef13709 from "../../../../../_runtime/metro/13709__.js";
 import FormStylesDefault from "FormStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles_mod from "../../../rebrand/native/TextStyles.tsx";
@@ -32,7 +32,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13707 };
+        const obj2 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13709 };
         const tmp7 = React3(native.Icon, obj2);
         cResult[0] = tmp7;
         let first = tmp7;
@@ -41,7 +41,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => React3(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: _modDef13707 });
+  : () => React3(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: _modDef13709 });
 ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {

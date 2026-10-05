@@ -102,7 +102,7 @@ let closure_7 = async function _openMediaModal() {
       openAs: 0,
     }),
   );
-  return "Reflect";
+  return "Set";
 };
 const MEDIA_MODAL_KEY = fn(1085).MEDIA_MODAL_KEY;
 let size = fn(2);

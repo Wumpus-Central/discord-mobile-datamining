@@ -192,10 +192,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const searchContext = navigation.route.params.searchContext;
       const tmp = closure_8();
       importDefault = tmp;
-      const searchSuggestionsGesture = navigation(16770).useSearchSuggestionsGesture(searchContext);
+      const searchSuggestionsGesture = navigation(16789).useSearchSuggestionsGesture(searchContext);
       ({ gesture, detectorRef, suggestionsContext } = searchSuggestionsGesture);
       const items = [navigation.goBack, tmp.back];
-      let obj = navigation(16770);
+      let obj = navigation(16789);
       let obj2 = { children: null };
       const memo = noop.useMemo(() => {
         const obj = { children: null };
@@ -232,8 +232,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       obj5.children = items3;
       obj4.children = closure_6(View, obj5);
-      obj3.children = closure_5(navigation(16299).NonCollapsableGestureDetector, obj4);
-      items1[1] = closure_5(navigation(16770).SearchSuggestionsProvider, obj3);
+      obj3.children = closure_5(navigation(16303).NonCollapsableGestureDetector, obj4);
+      items1[1] = closure_5(navigation(16789).SearchSuggestionsProvider, obj3);
       obj2.children = items1;
       return closure_6(closure_7, obj2);
     };

@@ -15,7 +15,7 @@ export const CardHeightMeasurer = noop.memo(
         const cResult = itemId(576).c(8);
         itemId = itemId.itemId;
         const children = itemId.children;
-        const width = noop.useContext(itemId(16391).ICYMIContext).width;
+        const width = noop.useContext(itemId(16395).ICYMIContext).width;
         if (cResult[0] !== itemId) {
           const fn = function s(nativeEvent) {
             ICYMIActionCreatorsDefault.setCardHeight(itemId, nativeEvent.nativeEvent.layout.height);
@@ -62,7 +62,7 @@ export const CardHeightMeasurer = noop.memo(
               ICYMIActionCreatorsDefault.setCardHeight(itemId, nativeEvent.nativeEvent.layout.height);
             }, items)}
             pointerEvents="box-none"
-            style={{ width: noop.useContext(itemId(16391).ICYMIContext).width, alignSelf: "center" }}
+            style={{ width: noop.useContext(itemId(16395).ICYMIContext).width, alignSelf: "center" }}
           >
             {children.children}
           </View>

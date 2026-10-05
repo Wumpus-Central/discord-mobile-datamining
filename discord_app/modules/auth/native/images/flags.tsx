@@ -1,8 +1,4 @@
 // discord_app/modules/auth/native/images/flags.tsx
-import _mod15243 from "../../../../../_runtime/metro/15243__.js";
-import _mod15244 from "../../../../../_runtime/metro/15244__.js";
-import _mod15245 from "../../../../../_runtime/metro/15245__.js";
-import _mod15246 from "../../../../../_runtime/metro/15246__.js";
 import _mod15247 from "../../../../../_runtime/metro/15247__.js";
 import _mod15248 from "../../../../../_runtime/metro/15248__.js";
 import _mod15249 from "../../../../../_runtime/metro/15249__.js";
@@ -30,40 +26,44 @@ import _mod15270 from "../../../../../_runtime/metro/15270__.js";
 import _mod15271 from "../../../../../_runtime/metro/15271__.js";
 import _mod15272 from "../../../../../_runtime/metro/15272__.js";
 import _mod15273 from "../../../../../_runtime/metro/15273__.js";
+import _mod15274 from "../../../../../_runtime/metro/15274__.js";
+import _mod15275 from "../../../../../_runtime/metro/15275__.js";
+import _mod15276 from "../../../../../_runtime/metro/15276__.js";
+import _mod15277 from "../../../../../_runtime/metro/15277__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
 export const flags = {
-  bg: _mod15243,
-  cs: _mod15244,
-  da: _mod15245,
-  de: _mod15246,
-  el: _mod15247,
-  "en-GB": _mod15248,
-  "en-US": _mod15249,
-  "es-ES": _mod15250,
-  "es-419": _mod15251,
-  fi: _mod15252,
-  fr: _mod15253,
-  hi: _mod15254,
-  hr: _mod15255,
-  hu: _mod15256,
-  it: _mod15257,
-  ja: _mod15258,
-  ko: _mod15259,
-  lt: _mod15260,
-  nl: _mod15261,
-  no: _mod15262,
-  pl: _mod15263,
-  "pt-BR": _mod15264,
-  ro: _mod15265,
-  ru: _mod15266,
-  "sv-SE": _mod15267,
-  th: _mod15268,
-  tr: _mod15269,
-  uk: _mod15270,
-  vi: _mod15271,
-  "zh-CN": _mod15272,
-  "zh-TW": _mod15273,
+  bg: _mod15247,
+  cs: _mod15248,
+  da: _mod15249,
+  de: _mod15250,
+  el: _mod15251,
+  "en-GB": _mod15252,
+  "en-US": _mod15253,
+  "es-ES": _mod15254,
+  "es-419": _mod15255,
+  fi: _mod15256,
+  fr: _mod15257,
+  hi: _mod15258,
+  hr: _mod15259,
+  hu: _mod15260,
+  it: _mod15261,
+  ja: _mod15262,
+  ko: _mod15263,
+  lt: _mod15264,
+  nl: _mod15265,
+  no: _mod15266,
+  pl: _mod15267,
+  "pt-BR": _mod15268,
+  ro: _mod15269,
+  ru: _mod15270,
+  "sv-SE": _mod15271,
+  th: _mod15272,
+  tr: _mod15273,
+  uk: _mod15274,
+  vi: _mod15275,
+  "zh-CN": _mod15276,
+  "zh-TW": _mod15277,
 };

@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const tmp14 = jsx(tmp(17107).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
+        const tmp14 = jsx(tmp(17131).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
         cResult[10] = tmp14;
         const tmp13 = tmp14;
       } else {

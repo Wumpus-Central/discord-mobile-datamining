@@ -123,7 +123,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
       cResult[10] = tmp33;
     }
     const obj4 = { lineClamp: 1, accessibilityLabel: tmp24, children: tmp23 };
-    const tmp29 = jsx(voiceState(15111).HappeningNowCardSubtitle, {
+    const tmp29 = jsx(voiceState(15115).HappeningNowCardSubtitle, {
       lineClamp: 1,
       accessibilityLabel: tmp24,
       children: tmp23,
@@ -148,7 +148,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
       tmp12 = getChannelA11yLabelDefault(obj7);
     }
     const obj8 = { lineClamp: 1, accessibilityLabel: tmp12, children: useChannelNameDefault(stateFromStores1) };
-    obj6.children = jsx(voiceState(15111).HappeningNowCardSubtitle, {
+    obj6.children = jsx(voiceState(15115).HappeningNowCardSubtitle, {
       lineClamp: 1,
       accessibilityLabel: tmp12,
       children: useChannelNameDefault(stateFromStores1),
@@ -167,7 +167,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
         let tmp8 = cResult[2];
       }
       if (cResult[3] !== tmp8) {
-        HappeningNowCardSubtitle = HappeningNowCardSubtitle(15111).HappeningNowCardSubtitle;
+        HappeningNowCardSubtitle = HappeningNowCardSubtitle(15115).HappeningNowCardSubtitle;
         const obj3 = { lineClamp: 1, children: tmp8 };
         tmp6 = <HappeningNowCardSubtitle lineClamp={1}>{tmp8}</HappeningNowCardSubtitle>;
         cResult[3] = tmp8;

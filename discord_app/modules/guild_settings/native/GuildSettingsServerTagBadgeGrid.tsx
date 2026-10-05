@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             children: null,
           };
           size = { badge: badge.kind, width: GuildTagBadgeSize.SIZE_32, height: GuildTagBadgeSize.SIZE_32 };
-          obj.children = closure_1_7(guildId(13726).GuildBadge, size);
+          obj.children = closure_1_7(guildId(13728).GuildBadge, size);
           return closure_1_7(GuildSettingsServerTagPickerCellDefault, obj, badge.kind);
         }),
       });
@@ -265,7 +265,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const substr = lockedBadges.slice(0, 10);
         obj5.children = substr.map((badge) => {
           size = { badge: badge.kind, width: 21, height: 21 };
-          return closure_1_7(guildId(13726).GuildBadge, size, badge.kind);
+          return closure_1_7(guildId(13728).GuildBadge, size, badge.kind);
         });
         const items2 = [closure_7(closure_5, obj5), ,];
         const obj6 = { variant: "text-md/medium", color: "text-subtle", style: tmp.upsellText, children: null };

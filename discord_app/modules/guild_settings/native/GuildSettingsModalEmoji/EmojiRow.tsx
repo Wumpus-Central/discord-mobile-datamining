@@ -10,7 +10,7 @@ import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnab
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import EmojiActionCreators from "../../../../actions/EmojiActionCreators.tsx";
 import showEmojiOverflowActionSheetDefault from "../showEmojiOverflowActionSheet.tsx";
-import _modDef17715 from "../../../../../_runtime/metro/17715__.js";
+import _modDef17739 from "../../../../../_runtime/metro/17739__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";

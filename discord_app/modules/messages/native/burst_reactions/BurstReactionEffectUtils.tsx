@@ -35,7 +35,7 @@ let closure_8 = async function _generateAnimationSource(arg0, arg1, arg2, arg3) 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -213,7 +213,7 @@ let closure_10 = async function _generateAnimationSourceFromLocalImage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -242,7 +242,7 @@ let closure_10 = async function _generateAnimationSourceFromLocalImage(arg0) {
           closure_129_9 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -361,7 +361,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -446,7 +446,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -532,7 +532,7 @@ export const useSuperReactionAnimationSourceFromLocalImage = ReactCompilerGating
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -566,7 +566,7 @@ export const useSuperReactionAnimationSourceFromLocalImage = ReactCompilerGating
                 closure_128_0 = value;
                 v1(closure_128_0);
                 c3 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp14) {
               c3 = tmp;
@@ -612,7 +612,7 @@ export const useSuperReactionAnimationSourceFromLocalImage = ReactCompilerGating
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -646,7 +646,7 @@ export const useSuperReactionAnimationSourceFromLocalImage = ReactCompilerGating
                 closure_128_0 = value;
                 v1(closure_128_0);
                 c3 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp14) {
               c3 = tmp;

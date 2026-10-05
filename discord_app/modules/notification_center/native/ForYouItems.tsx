@@ -34,7 +34,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import NotificationCenterStore from "../NotificationCenterStore.tsx";
 
-const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(16355);
+const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(16359);
 require = fn;
 function getMessageContentPreviewV2(item) {
   item = item.item;
@@ -188,13 +188,13 @@ let closure_27 = createStyles.createStyles(obj10);
 let closure_28 = { channelMentionText: "redesign/message-preview/medium" };
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const f73486 = () => {};
+const f73536 = () => {};
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const f73487 = () => {};
+const f73537 = () => {};
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const f73488 = () => {};
+const f73538 = () => {};
 createStyles = fn(4890);
 let obj13 = {
   container: { flex: 1 },
@@ -348,7 +348,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
       item = item.item;
       ({ acked, compactMode } = item);
       const tmp4 = closure_32();
-      if (typeof f73486 === "function") {
+      if (typeof f73536 === "function") {
         const parser = CustomMarkupAll.getParser(closure_26());
         if (cResult[0] !== tmp4.messagePreviewBarV2) {
           const obj3 = { style: tmp4.messagePreviewBarV2 };
@@ -420,7 +420,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
   : (arg0) => {
       ({ item, acked, compactMode } = arg0);
       const tmp = closure_32();
-      if (typeof f73486 === "function") {
+      if (typeof f73536 === "function") {
         const obj2 = { style: tmp.calloutContainer, pointerEvents: "none", children: null };
         const obj3 = { style: tmp.messagePreviewBarV2 };
         const parser = CustomMarkupAll.getParser(closure_26());
@@ -975,7 +975,7 @@ let closure_39 = noop.memo((item) => {
       obj3.icon = tmp6(notificationCenterItemAcked[44]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[45]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(16352).deleteNotificationCenterItem(tmp3);
+        yield tmp3(16356).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { key: "REMOVE_NOTIFICATION_ERROR", content: null };
@@ -1025,9 +1025,9 @@ let closure_39 = noop.memo((item) => {
     tmp11,
     compactMode,
   );
-  if (typeof f73487 === "function") {
+  if (typeof f73537 === "function") {
     const getParserWithoutLinks = onSoftAckItem(tmp3[17]).getParserWithoutLinks;
-    if (typeof f73488 === "function") {
+    if (typeof f73538 === "function") {
       const parserWithoutLinks = onSoftAckItem(tmp3[17]).getParserWithoutLinks(closure_24());
       let tmp24 = item.type === tmp2(tmp3[35]).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED;
       if (!tmp24) {

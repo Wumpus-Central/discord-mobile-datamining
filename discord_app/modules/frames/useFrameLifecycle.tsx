@@ -43,7 +43,7 @@ function useFrameLifecycleState(applicationId) {
         const obj7 = { state: obj.Loading, frame: tmp3 };
         obj10 = obj7;
       } else if (isLoading) {
-        const obj8 = { state: obj.Loading, frame: "a" };
+        const obj8 = { state: obj.Loading, frame: "r" };
         obj10 = obj8;
       } else {
         if (null != data) {

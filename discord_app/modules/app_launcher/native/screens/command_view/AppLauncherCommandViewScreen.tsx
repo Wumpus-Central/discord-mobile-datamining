@@ -511,7 +511,7 @@ function AppLauncherCommandViewInner(command) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -527,7 +527,7 @@ function AppLauncherCommandViewInner(command) {
             } else if (installOnDemand) {
               if (null == command) {
                 c2 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               } else {
                 const obj4 = {
                   applicationId: command.applicationId,
@@ -552,11 +552,11 @@ function AppLauncherCommandViewInner(command) {
             return obj;
           } else if (!value.isAuthorized) {
             c2 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
           closure_128_50();
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } catch (tmp11) {
           c2 = tmp;
           throw tmp11;

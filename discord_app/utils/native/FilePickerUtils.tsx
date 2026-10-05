@@ -13,7 +13,7 @@ let closure_5 = async function _handleDocumentSelection() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -30,7 +30,8 @@ let closure_5 = async function _handleDocumentSelection() {
           dependencyMap = tmp3;
           closure_1 = tmp7;
           closure_129_0 = undefined;
-          let extensions;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
           let obj6 = closure_0;
           if (closure_0 === undefined) {
             obj6 = {};
@@ -40,12 +41,12 @@ let closure_5 = async function _handleDocumentSelection() {
             flag = true;
           }
           closure_129_0 = flag;
-          extensions = obj6.extensions;
-          closure_129_2 = undefined;
+          ({ extensions: closure_129_1, types: closure_129_2 } = obj6);
           closure_129_3 = undefined;
+          closure_129_4 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -56,12 +57,33 @@ let closure_5 = async function _handleDocumentSelection() {
           const obj8 = { value, done: true };
           return obj8;
         } else {
-          let tmp54;
-          if (null != extensions) {
-            if (extensions.length > 0) {
-              tmp54 = (function getPickerTypesForExtensions(extensions) {
+          if (null != closure_129_2) {
+            if (closure_129_2.length > 0) {
+              let tmp56 = closure_129_2;
+            }
+            closure_129_3 = tmp56;
+            c4 = 1;
+            let pick = closure_130_0(closure_130_2[2]).pick;
+            const tmp66 = closure_130_0(closure_130_2[2]);
+            if (obj9.isIOS()) {
+              let obj10 = { mode: "open" };
+            } else {
+              obj10 = { mode: "import" };
+            }
+            const obj11 = {};
+            const merged = Object.assign(obj10);
+            obj11.allowMultiSelection = closure_129_0;
+            obj11.type = closure_129_3;
+            pick = pick(obj11);
+            c5 = 3;
+            c6 = 1;
+            obj9 = closure_130_0(closure_130_2[3]);
+          }
+          if (null != closure_129_1) {
+            if (closure_129_1.length > 0) {
+              tmp56 = (function getPickerTypesForExtensions(arg0) {
                 const items = [];
-                const iter = extensions[Symbol.iterator]();
+                const iter = arg0[Symbol.iterator]();
                 const nextResult = iter.next();
                 while (iter !== undefined) {
                   if ("jfif" !== nextResult) {
@@ -88,40 +110,23 @@ let closure_5 = async function _handleDocumentSelection() {
                   tmp9 = items;
                 }
                 return tmp9;
-              })(extensions);
+              })(closure_129_1);
             }
           }
-          closure_129_2 = tmp54;
-          c4 = 1;
-          let pick = closure_130_0(closure_130_2[2]).pick;
-          const tmp61 = closure_130_0(closure_130_2[2]);
-          if (obj9.isIOS()) {
-            let obj10 = { mode: "open" };
-          } else {
-            obj10 = { mode: "import" };
-          }
-          const obj11 = {};
-          const merged = Object.assign(obj10);
-          obj11.allowMultiSelection = closure_129_0;
-          obj11.type = closure_129_2;
-          pick = pick(obj11);
-          c5 = 3;
-          c6 = 1;
-          obj9 = closure_130_0(closure_130_2[3]);
         }
       } else if (2 === tmp7) {
         c4 = 0;
-        closure_129_4 = closure_3;
-        if (obj4.isErrorWithCode(closure_129_4)) {
-          if (closure_129_4.code === closure_130_0(closure_130_2[2]).errorCodes.OPERATION_CANCELED) {
+        closure_129_5 = closure_3;
+        if (obj4.isErrorWithCode(closure_129_5)) {
+          if (closure_129_5.code === closure_130_0(closure_130_2[2]).errorCodes.OPERATION_CANCELED) {
             c6 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         }
         obj4 = closure_130_0(closure_130_2[2]);
         const obj12 = { error_message: null };
         const _JSON = JSON;
-        obj12.error_message = JSON.stringify(closure_129_4);
+        obj12.error_message = JSON.stringify(closure_129_5);
         closure_130_0(closure_130_2[6]).trackWithMetadata(closure_130_4.MOBILE_FILE_PICKER_ERROR, obj12);
         const obj5 = closure_130_0(closure_130_2[6]);
         const obj13 = { title: null, body: null };
@@ -131,7 +136,7 @@ let closure_5 = async function _handleDocumentSelection() {
         obj13.body = intl4.string(closure_130_0(closure_130_2[5]).t.fZRH9P);
         closure_130_1(closure_130_2[4]).show(obj13);
         c6 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
@@ -141,8 +146,8 @@ let closure_5 = async function _handleDocumentSelection() {
         const obj14 = { value, done: true };
         return obj14;
       } else {
-        closure_129_3 = value;
-        if (closure_129_3.some((size) => 0 === size.size)) {
+        closure_129_4 = value;
+        if (closure_129_4.some((size) => 0 === size.size)) {
           const obj15 = { title: null, body: null };
           const intl = closure_130_0(closure_130_2[5]).intl;
           obj15.title = intl.string(closure_130_0(closure_130_2[5]).t.B3vFdU);
@@ -154,11 +159,11 @@ let closure_5 = async function _handleDocumentSelection() {
         c4 = 0;
         c6 = 3;
       }
-    } catch (tmp70) {
-      closure_3 = tmp70;
+    } catch (tmp75) {
+      closure_3 = tmp75;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp70;
+        throw tmp75;
       } else {
         c5 = tmp;
       }

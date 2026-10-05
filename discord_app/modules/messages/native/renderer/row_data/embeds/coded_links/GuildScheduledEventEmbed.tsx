@@ -17,7 +17,7 @@ import useCanInviteForGuildEvent from "../../../../../../guild_scheduled_events/
 import GuildScheduledEventManagerDefault from "../../../../../../guild_scheduled_events/GuildScheduledEventManager.tsx";
 import GuildScheduledEventHeaderUtils from "../../../../../../guild_scheduled_events/native/GuildScheduledEventHeaderUtils.tsx";
 import icons_ShareDefault from "../../../../../../icons/native/Share.tsx";
-import _modDef13051 from "../../../../../../../../_runtime/metro/13051__.js";
+import _modDef13053 from "../../../../../../../../_runtime/metro/13053__.js";
 import _slicedToArray from "../../../../../../../../_runtime/metro/00032__.js";
 import GuildScheduledEventStore_mod from "../../../../../../guild_scheduled_events/GuildScheduledEventStore.tsx";
 import ChannelStore from "../../../../../../../stores/ChannelStore.tsx";
@@ -163,7 +163,7 @@ function createGuildScheduledEventEmbed(type) {
   }
   obj8.badgeCount = toLocaleStringResult;
   const tmpResult4 = GuildScheduledEventManagerDefault;
-  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13051);
+  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13053);
   let assetUriForEmbed4;
   if (null != eventLocationIconSource) {
     assetUriForEmbed4 = renderer_EmbedUtils.getAssetUriForEmbed(eventLocationIconSource);

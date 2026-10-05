@@ -247,7 +247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 throw value;
               } else if (arg0 !== 2) {
                 closure_128_0 = value.filter(tmp2(1375).isNotNullish);
-                closure_128_1 = tmp2(14326).resolveActivityShareMessageContent(
+                closure_128_1 = tmp2(14328).resolveActivityShareMessageContent(
                   closure_129_3,
                   closure_129_14,
                   closure_129_12,
@@ -299,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           const obj4 = { value, done: true };
                           return obj4;
                         } else {
-                          return { value: "IconComponent", done: "IconComponent" };
+                          return { value: "IconComponent", done: null };
                         }
                       } else {
                         try {
@@ -335,7 +335,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             return obj;
                           }
                           c1 = 3;
-                          return { value: "IconComponent", done: "IconComponent" };
+                          return { value: "IconComponent", done: null };
                         } catch (tmp12) {
                           c1 = tmp;
                           throw tmp12;
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     };
                   })(),
                 );
-                let obj5 = tmp2(14326);
+                let obj5 = tmp2(14328);
                 let obj7 = { key: "ACTIVITY_SHARE_LINK_SUCCESS", content: null };
                 const intl = tmp2(1126).intl;
                 const obj8 = { applicationName: closure_129_14.name };
@@ -362,8 +362,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp3(4568).open(obj7);
                 closure_129_4(true, closure_129_7);
                 let obj6 = tmp3(4568);
-                const result = tmp2(14324).closeActivityShareLinkModal();
-                const obj9 = tmp2(14324);
+                const result = tmp2(14326).closeActivityShareLinkModal();
+                const obj9 = tmp2(14326);
               }
               c3 = 3;
               let obj = { value, done: true };

@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef13600 from "../../../../_runtime/metro/13600__.js";
+import _modDef13602 from "../../../../_runtime/metro/13602__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -204,7 +204,7 @@ export default noop.memo(
         }
         let tmp7 = null;
         if (videoLimit) {
-          const obj8 = { source: _modDef13600, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
+          const obj8 = { source: _modDef13602, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
           tmp7 = React4(native.Icon, obj8);
         }
         cResult[0] = rect.videoIcon;
@@ -219,7 +219,7 @@ export default noop.memo(
         const obj2 = { style: rect.left, children: null };
         let tmp3 = null;
         if (videoLimit.videoLimit) {
-          const obj3 = { source: _modDef13600, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
+          const obj3 = { source: _modDef13602, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
           tmp3 = React4(native.Icon, obj3);
         }
         const items = [tmp3];

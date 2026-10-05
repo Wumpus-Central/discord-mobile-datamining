@@ -320,7 +320,7 @@ let closure_18 = async function _chatInputSendApplicationCommand(arg0) {
   closure_1 = tmp2;
   ({ command: closure_129_0, optionValues: closure_129_1 } = _require.applicationCommand);
   params = _require.params;
-  return "Reflect";
+  return "Set";
 };
 const DraftType = fn(7031).DraftType;
 const Constants = fn(1085);
@@ -356,7 +356,13 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             let intl2 = util.intl;
             obj3.confirmText = intl2.string(util.t.KJnHq3);
             obj3.onConfirm = function onConfirm() {
-              const obj = { text, parsedMessage, tts: "application", source: false, params };
+              const obj = {
+                text,
+                parsedMessage,
+                tts: "applicationId",
+                source: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000827361285378244,
+                params,
+              };
               chatInputSendMessage(obj);
             };
             let intl3 = util.intl;
@@ -372,7 +378,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
               threadId: channel.id,
               attachments: uploads,
               sendMessage() {
-                const obj = { text, parsedMessage, tts: "application", source: false, params };
+                const obj = { text, parsedMessage, tts: "applicationId", source: "iu", params };
                 chatInputSendMessage(obj);
               },
             };
@@ -383,7 +389,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
           tmp19 = require;
           tmp20 = dependencyMap;
         }
-        const obj7 = { text, parsedMessage: tmp2, tts: "application", source: 1090584577, params };
+        const obj7 = { text, parsedMessage: tmp2, tts: "applicationId", source: false, params };
         chatInputSendMessage(obj7);
       }
     }

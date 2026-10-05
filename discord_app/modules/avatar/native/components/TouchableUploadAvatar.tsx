@@ -6,7 +6,7 @@ import native from "../../../../design/void/native.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import _modDef12442 from "../../../../../_runtime/metro/12442__.js";
-import _modDef13673 from "../../../../../_runtime/metro/13673__.js";
+import _modDef13675 from "../../../../../_runtime/metro/13675__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ avatarSource, showPendingAvatar, onSelectAvatar } = arg0);
       const tmp5 = closure_6();
       if (!(undefined !== showPendingAvatar && showPendingAvatar)) {
-        let tmp7 = _modDef13673;
+        let tmp7 = _modDef13675;
       } else {
         tmp7 = avatarSource;
       }
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp = closure_6();
       if (!showPendingAvatar) {
-        let tmp3 = _modDef13673;
+        let tmp3 = _modDef13675;
       } else {
         tmp3 = avatarSource;
       }

@@ -105,7 +105,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       stateFromStores(4791)();
       let obj = imminentUpcomingGuildEvents(576);
       const tmp4 = stateFromStores;
-      const tmp6 = stateFromStores(17166)(noop.useContext(stateFromStores(11901)).channelId);
+      const tmp6 = stateFromStores(17190)(noop.useContext(stateFromStores(11901)).channelId);
       id = undefined;
       if (id != null) {
         id = id.id;

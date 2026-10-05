@@ -17,8 +17,6 @@ import _modDef10445 from "../../../_runtime/metro/10445__.js";
 import _modDef10446 from "../../../_runtime/metro/10446__.js";
 import _modDef10447 from "../../../_runtime/metro/10447__.js";
 import _modDef10450 from "../../../_runtime/metro/10450__.js";
-import _modDef13156 from "../../../_runtime/metro/13156__.js";
-import _modDef13157 from "../../../_runtime/metro/13157__.js";
 import _modDef13158 from "../../../_runtime/metro/13158__.js";
 import _modDef13159 from "../../../_runtime/metro/13159__.js";
 import _modDef13160 from "../../../_runtime/metro/13160__.js";
@@ -40,6 +38,8 @@ import _modDef13175 from "../../../_runtime/metro/13175__.js";
 import _modDef13176 from "../../../_runtime/metro/13176__.js";
 import _modDef13177 from "../../../_runtime/metro/13177__.js";
 import _modDef13178 from "../../../_runtime/metro/13178__.js";
+import _modDef13179 from "../../../_runtime/metro/13179__.js";
+import _modDef13180 from "../../../_runtime/metro/13180__.js";
 import PremiumPlanWhatYouLoseActionSheet from "../../modules/premium/native/PremiumPlanWhatYouLoseActionSheet.tsx";
 import PremiumSubscriptionInvoice from "../../modules/premium/PremiumSubscriptionInvoice.tsx";
 import SubscriptionRenewalMutationsNoticeDefault from "../../modules/premium/native/SubscriptionRenewalMutationsNotice.tsx";
@@ -50,7 +50,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 import UserStore from "../../stores/UserStore.tsx";
 import IAPStore from "../../stores/native/IAPStore.android.tsx";
 
-const openPremiumPlanWhatYouLoseActionSheetDefault = tmp4(13179);
+const openPremiumPlanWhatYouLoseActionSheetDefault = tmp4(13181);
 require = fn;
 function handleCancelSubscription() {
   const self = this;
@@ -76,7 +76,7 @@ let closure_29 = async function _handleCancelSubscription() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -135,7 +135,7 @@ let closure_29 = async function _handleCancelSubscription() {
           return obj;
         }
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } catch (tmp9) {
         c3 = tmp;
         throw tmp9;
@@ -252,7 +252,7 @@ let closure_32 = async function _onResubscribeClick(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -323,7 +323,7 @@ let closure_32 = async function _onResubscribeClick(arg0) {
           return obj;
         }
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } catch (tmp19) {
         c3 = tmp;
         throw tmp19;
@@ -495,7 +495,7 @@ class PremiumSubscriptionHeader {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -534,7 +534,7 @@ class PremiumSubscriptionHeader {
                 c3 = 0;
                 closure_128_2(false);
                 c4 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp23) {
               closure_2 = tmp23;
@@ -715,54 +715,54 @@ let obj7 = { ACTIVE: "active", RESUB: "resub", ERROR: "error" };
 let obj8 = {};
 let obj9 = {};
 obj9[obj7.ACTIVE] = _modDef10445;
-obj9[obj7.ERROR] = _modDef13156;
-obj9[obj7.RESUB] = _modDef13157;
+obj9[obj7.ERROR] = _modDef13158;
+obj9[obj7.RESUB] = _modDef13159;
 obj8[fn(4528).Branding.BUNDLE] = obj9;
 let obj10 = {};
 obj10[obj7.ACTIVE] = _modDef10442;
-obj10[obj7.ERROR] = _modDef13156;
-obj10[obj7.RESUB] = _modDef13157;
+obj10[obj7.ERROR] = _modDef13158;
+obj10[obj7.RESUB] = _modDef13159;
 obj8[fn(4528).Branding.TIER_0] = obj10;
 let obj11 = {};
 obj11[obj7.ACTIVE] = _modDef10443;
-obj11[obj7.ERROR] = _modDef13156;
-obj11[obj7.RESUB] = _modDef13157;
+obj11[obj7.ERROR] = _modDef13158;
+obj11[obj7.RESUB] = _modDef13159;
 obj8[fn(4528).Branding.TIER_1] = obj11;
 let obj12 = {};
 obj12[obj7.ACTIVE] = _modDef10444;
-obj12[obj7.ERROR] = _modDef13156;
-obj12[obj7.RESUB] = _modDef13157;
+obj12[obj7.ERROR] = _modDef13158;
+obj12[obj7.RESUB] = _modDef13159;
 obj8[fn(4528).Branding.TIER_2] = obj12;
 let obj13 = {};
 obj13[obj7.ACTIVE] = _modDef10446;
-obj13[obj7.ERROR] = _modDef13158;
-obj13[obj7.RESUB] = _modDef13159;
+obj13[obj7.ERROR] = _modDef13160;
+obj13[obj7.RESUB] = _modDef13161;
 obj8[fn(4528).Branding.PREMIUM_GUILD] = obj13;
 let obj14 = {};
 let obj15 = {};
-obj15[obj7.ACTIVE] = _modDef13160;
-obj15[obj7.ERROR] = _modDef13160;
-obj15[obj7.RESUB] = _modDef13160;
+obj15[obj7.ACTIVE] = _modDef13162;
+obj15[obj7.ERROR] = _modDef13162;
+obj15[obj7.RESUB] = _modDef13162;
 obj14[fn(4528).Branding.BUNDLE] = obj15;
 let obj16 = {};
 obj16[obj7.ACTIVE] = _modDef6942;
-obj16[obj7.ERROR] = _modDef13161;
-obj16[obj7.RESUB] = _modDef13162;
+obj16[obj7.ERROR] = _modDef13163;
+obj16[obj7.RESUB] = _modDef13164;
 obj14[fn(4528).Branding.TIER_0] = obj16;
 let obj17 = {};
-obj17[obj7.ACTIVE] = _modDef13163;
-obj17[obj7.ERROR] = _modDef13164;
-obj17[obj7.RESUB] = _modDef13165;
+obj17[obj7.ACTIVE] = _modDef13165;
+obj17[obj7.ERROR] = _modDef13166;
+obj17[obj7.RESUB] = _modDef13167;
 obj14[fn(4528).Branding.TIER_1] = obj17;
 let obj18 = {};
 obj18[obj7.ACTIVE] = _modDef10447;
-obj18[obj7.ERROR] = _modDef13166;
-obj18[obj7.RESUB] = _modDef13167;
+obj18[obj7.ERROR] = _modDef13168;
+obj18[obj7.RESUB] = _modDef13169;
 obj14[fn(4528).Branding.TIER_2] = obj18;
 let obj19 = {};
-obj19[obj7.ACTIVE] = _modDef13168;
-obj19[obj7.ERROR] = _modDef13169;
-obj19[obj7.RESUB] = _modDef13170;
+obj19[obj7.ACTIVE] = _modDef13170;
+obj19[obj7.ERROR] = _modDef13171;
+obj19[obj7.RESUB] = _modDef13172;
 obj14[fn(4528).Branding.PREMIUM_GUILD] = obj19;
 let closure_24 = {
   [fn(4528).Branding.BUNDLE]: { [obj7.ACTIVE]: size, [obj7.ERROR]: size, [obj7.RESUB]: size },
@@ -777,29 +777,29 @@ let closure_24 = {
 };
 let obj20 = {};
 let obj21 = {};
-obj21[obj7.ACTIVE] = _modDef13171;
-obj21[obj7.ERROR] = _modDef13171;
-obj21[obj7.RESUB] = _modDef13172;
+obj21[obj7.ACTIVE] = _modDef13173;
+obj21[obj7.ERROR] = _modDef13173;
+obj21[obj7.RESUB] = _modDef13174;
 obj20[fn(4528).Branding.BUNDLE] = obj21;
 let obj22 = {};
 obj22[obj7.ACTIVE] = _modDef10450;
 obj22[obj7.ERROR] = _modDef10450;
-obj22[obj7.RESUB] = _modDef13173;
+obj22[obj7.RESUB] = _modDef13175;
 obj20[fn(4528).Branding.TIER_0] = obj22;
 let obj23 = {};
-obj23[obj7.ACTIVE] = _modDef13174;
-obj23[obj7.ERROR] = _modDef13174;
-obj23[obj7.RESUB] = _modDef13175;
+obj23[obj7.ACTIVE] = _modDef13176;
+obj23[obj7.ERROR] = _modDef13176;
+obj23[obj7.RESUB] = _modDef13177;
 obj20[fn(4528).Branding.TIER_1] = obj23;
 let obj24 = {};
 obj24[obj7.ACTIVE] = _modDef7738;
 obj24[obj7.ERROR] = _modDef7738;
-obj24[obj7.RESUB] = _modDef13176;
+obj24[obj7.RESUB] = _modDef13178;
 obj20[fn(4528).Branding.TIER_2] = obj24;
 let obj25 = {};
-obj25[obj7.ACTIVE] = _modDef13177;
-obj25[obj7.ERROR] = _modDef13177;
-obj25[obj7.RESUB] = _modDef13178;
+obj25[obj7.ACTIVE] = _modDef13179;
+obj25[obj7.ERROR] = _modDef13179;
+obj25[obj7.RESUB] = _modDef13180;
 obj20[fn(4528).Branding.PREMIUM_GUILD] = obj25;
 let dependencyMap = {
   [fn(4528).Branding.BUNDLE]: { height: 33, width: 205 },
@@ -835,7 +835,7 @@ function onCancelClick(subscription, analyticsLocations) {
   } else {
     const obj3 = {
       subscription,
-      mode: tmp(13180).WhatYouLoseMode.CANCEL,
+      mode: tmp(13182).WhatYouLoseMode.CANCEL,
       onContinue(arg0) {
         return handleCancelSubscription(closure_0, closure_1, arg0);
       },

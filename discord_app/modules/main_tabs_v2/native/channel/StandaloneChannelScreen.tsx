@@ -749,7 +749,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((frame)
   }, items1);
   const ref = isChatBesideChannelList.useRef(null);
   let tmp14 = !isChatLockedOpen;
-  const isForumChannelSearchActive = channelId(13114).useIsForumChannelSearchActive(channelId);
+  const isForumChannelSearchActive = channelId(13116).useIsForumChannelSearchActive(channelId);
   if (isChatLockedOpen) {
     tmp14 = isNavigationScreen;
   }
@@ -757,7 +757,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((frame)
     tmp14 = !isForumChannelSearchActive;
   }
   closure_6 = tmp14;
-  const tmp2Result = channelId(13114);
+  const tmp2Result = channelId(13116);
   const items2 = [ChannelStore];
   const items3 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items2, () => {
@@ -780,7 +780,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((frame)
             let tmp37Result = null;
             if (canSeeOnboardingHome) {
               const obj7 = { guildId };
-              tmp37Result = closure_14(frame(16502), obj7);
+              tmp37Result = closure_14(frame(16506), obj7);
             }
             obj6.children = tmp37Result;
             items4[1] = closure_14(closure_6, obj6);
@@ -788,10 +788,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((frame)
             return closure_15(closure_6, obj4);
           } else if (channelId === StaticChannelRoute.MEMBER_SAFETY) {
             const obj8 = { guildId };
-            return closure_14(frame(16520), obj8);
-          } else if (channelId === StaticChannelRoute.VIBEGRATIONS) {
+            return closure_14(frame(16524), obj8);
+          } else if (channelId === StaticChannelRoute.CONJURE) {
             const obj9 = { guildId };
-            return closure_14(frame(16538), obj9);
+            return closure_14(frame(16542), obj9);
           } else {
             let type;
             if (stateFromStores != null) {
@@ -804,7 +804,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((frame)
                 const items5 = [closure_14(closure_18, obj11), ];
                 const obj12 = { style: memo1, children: null };
                 const obj13 = { channel: stateFromStores };
-                obj12.children = closure_14(frame(16753), obj13);
+                obj12.children = closure_14(frame(16772), obj13);
                 items5[1] = closure_14(closure_6, obj12);
                 obj10.children = items5;
                 return closure_15(closure_6, obj10);
@@ -815,7 +815,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((frame)
               const obj15 = { channelId, frame, guildId, isNavigationScreen, screenIndex, showCreateThread, isBackEnabled: tmp14, measureNavigationTTI: false };
               const items6 = [closure_14(closure_18, obj15), ];
               const obj16 = { channelId, screenIndex };
-              items6[1] = closure_14(channelId(16762).CreateThreadView, obj16);
+              items6[1] = closure_14(channelId(16781).CreateThreadView, obj16);
               obj14.children = items6;
               return closure_15(closure_6, obj14);
             } else {
@@ -825,17 +825,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((frame)
               const obj19 = { name: "chat_container", tracking: "include", style: memo1, children: null };
               const obj20 = { guildId, channelId, chatInputRef: ref, screenIndex };
               obj19.children = closure_14(frame(9760), obj20);
-              items7[1] = closure_14(channelId(16475).NavTTIView, obj19);
+              items7[1] = closure_14(channelId(16479).NavTTIView, obj19);
               obj17.children = items7;
               const tmp24Result = closure_15(closure_16, obj17);
               if (isSwipeToMemberListEnabled) {
                 const obj21 = { style: memo, channelId, isNavigationTTIVisible, screenIndex, isBackEnabled: tmp14, children: tmp24Result };
-                let tmp26Result = closure_14(frame(16766), obj21);
+                let tmp26Result = closure_14(frame(16785), obj21);
               } else {
                 const obj22 = {
                   name: "channel_screen",
                   navigationKey: channelId,
-                  definition: channelId(16768).CHANNEL_NAVIGATION_TTI,
+                  definition: channelId(16787).CHANNEL_NAVIGATION_TTI,
                   visibilityMode: "prerendered",
                   isVisible: isNavigationTTIVisible,
                   descendantTracking: "included",
@@ -848,7 +848,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((frame)
                   style: memo,
                   children: tmp24Result
                 };
-                tmp26Result = closure_14(channelId(16767).NavTTISurfaceProvider, obj22);
+                tmp26Result = closure_14(channelId(16786).NavTTISurfaceProvider, obj22);
               }
               return tmp26Result;
             }
@@ -866,7 +866,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((frame)
         tmp45 = channelId;
       }
       obj26.gatedChannelId = tmp45;
-      items9[1] = closure_14(frame(16485), obj26);
+      items9[1] = closure_14(frame(16489), obj26);
       obj25.children = items9;
       items8[1] = closure_15(closure_6, obj25);
       obj23.children = items8;

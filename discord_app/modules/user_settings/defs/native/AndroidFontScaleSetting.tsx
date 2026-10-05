@@ -6,7 +6,7 @@ import CircleMinusIcon from "../../../../design/components/Icon/native/redesign/
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useFontScaleStore = fn(15079).useFontScaleStore;
+const useFontScaleStore = fn(15083).useFontScaleStore;
 const FontScales = fn(1095).FontScales;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

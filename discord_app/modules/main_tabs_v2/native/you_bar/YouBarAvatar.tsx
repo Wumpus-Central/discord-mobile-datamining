@@ -16,7 +16,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const YouBarConstants = fn(14895);
+const YouBarConstants = fn(14899);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_11,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12,
@@ -519,7 +519,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           status: null,
           statusSizeOverride: null,
           cutout: null,
-          statusStyle: "AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH",
+          statusStyle: "rtc_participants",
         };
         if (OFFLINE === StatusTypes.UNKNOWN) {
           OFFLINE = StatusTypes.OFFLINE;
@@ -765,7 +765,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
             needsOffscreenAlphaCompositing: null,
             avatarDecoration,
             status: OFFLINE,
-            autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==",
+            autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9jbGlwcw==",
           };
           const tmp22 = closure_22(tmp(tmp2[15]).Avatar, obj4);
           cResult[11] = avatarDecoration;
@@ -881,7 +881,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
           needsOffscreenAlphaCompositing: null,
           avatarDecoration,
           status: true,
-          autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==",
+          autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9jbGlwcw==",
         };
         if (OFFLINE === StatusTypes.UNKNOWN) {
           OFFLINE = StatusTypes.OFFLINE;
@@ -962,7 +962,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -993,7 +993,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
             value.openUserSettings();
             closure_128_3(false);
             paths = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp12) {
           paths = tmp;

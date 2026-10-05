@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult = mainFrameId(504);
-      const tmp13 = jsx(mainFrameId(17137).BaseActivityPanelController, {
+      const tmp13 = jsx(mainFrameId(17161).BaseActivityPanelController, {
         context: FramePanelStateContextDefault,
         orientationLockStateForApp,
         mode,
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       let obj = mainFrameId(504);
-      return jsx(mainFrameId(17137).BaseActivityPanelController, {
+      return jsx(mainFrameId(17161).BaseActivityPanelController, {
         context: FramePanelStateContextDefault,
         orientationLockStateForApp,
         mode,

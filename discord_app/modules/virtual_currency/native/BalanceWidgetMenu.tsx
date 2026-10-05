@@ -215,7 +215,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC,
                 });
               };
-              obj.trailing = closure_9(closure_1(15572), {});
+              obj.trailing = closure_9(closure_1(15576), {});
               return closure_9(closure_10, obj);
             } else {
               return null;
@@ -243,7 +243,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC,
                 });
               };
-              obj.trailing = closure_9(closure_1(15572), {});
+              obj.trailing = closure_9(closure_1(15576), {});
               return closure_9(closure_10, obj);
             } else {
               return null;
@@ -280,7 +280,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC,
             });
           };
-          obj.trailing = closure_9(closure_1(15572), {});
+          obj.trailing = closure_9(closure_1(15576), {});
           return closure_9(closure_10, obj);
         } else {
           return null;

@@ -71,7 +71,7 @@ export default function CreateGuildContainer(onCreate) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -106,7 +106,7 @@ export default function CreateGuildContainer(onCreate) {
               closure_129_6(base64);
             }
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp17) {
           c3 = tmp;
@@ -129,7 +129,7 @@ export default function CreateGuildContainer(onCreate) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

@@ -675,7 +675,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -710,7 +710,7 @@ export default {
             const obj6 = { type: "AUDIO_SET_DEBUG_LOGGING", enabled: closure_128_0 };
             v1(584).dispatch(obj6);
             dependencyMap = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp18) {
           dependencyMap = tmp;
@@ -767,7 +767,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -802,7 +802,7 @@ export default {
             const obj6 = { type: "AUDIO_SET_SUBSYSTEM", subsystem: closure_128_0 };
             v1(584).dispatch(obj6);
             dependencyMap = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp18) {
           dependencyMap = tmp;

@@ -1037,7 +1037,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((gestur
                       obj = gestureState(channelId[40]);
                       batchUpdatesResult = obj.batchUpdates(() => {
                         closure_0 = false;
-                        chatOpen(/* F153360 */ function() { ... });
+                        chatOpen(/* F153667 */ function() { ... });
                         if (!closure_3) {
                           const obj = { mode: constants.DRAWER };
                           const merged = Object.assign(closure_2);
@@ -1112,7 +1112,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((gestur
                     obj = gestureState(channelId[40]);
                     batchUpdatesResult = obj.batchUpdates(() => {
                       closure_0 = false;
-                      chatOpen(/* F153360 */ function() { ... });
+                      chatOpen(/* F153667 */ function() { ... });
                       if (!closure_3) {
                         const obj = { mode: constants.DRAWER };
                         const merged = Object.assign(closure_2);
@@ -1378,7 +1378,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((gestur
                       obj = gestureState(channelId[40]);
                       batchUpdatesResult = obj.batchUpdates(() => {
                         closure_0 = false;
-                        chatOpen(/* F153360 */ function() { ... });
+                        chatOpen(/* F153667 */ function() { ... });
                         if (!closure_3) {
                           const obj = { mode: constants.DRAWER };
                           const merged = Object.assign(closure_2);
@@ -1478,7 +1478,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((gestur
               obj = gestureState(channelId[40]);
               batchUpdatesResult = obj.batchUpdates(() => {
                 closure_0 = false;
-                chatOpen(/* F153360 */ function() { ... });
+                chatOpen(/* F153667 */ function() { ... });
                 if (!closure_3) {
                   const obj = { mode: constants.DRAWER };
                   const merged = Object.assign(closure_2);
@@ -1540,7 +1540,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((gestur
             obj = gestureState(channelId[40]);
             batchUpdatesResult = obj.batchUpdates(() => {
               closure_0 = false;
-              chatOpen(/* F153360 */ function() { ... });
+              chatOpen(/* F153667 */ function() { ... });
               if (!closure_3) {
                 const obj = { mode: constants.DRAWER };
                 const merged = Object.assign(closure_2);
@@ -1569,7 +1569,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((gestur
         obj = gestureState(channelId[40]);
         batchUpdatesResult = obj.batchUpdates(() => {
           closure_0 = false;
-          chatOpen(/* F153360 */ function() { ... });
+          chatOpen(/* F153667 */ function() { ... });
           if (!closure_3) {
             const obj = { mode: constants.DRAWER };
             const merged = Object.assign(closure_2);

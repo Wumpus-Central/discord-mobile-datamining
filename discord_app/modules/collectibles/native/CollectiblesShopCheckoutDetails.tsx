@@ -103,7 +103,7 @@ let closure_10 = createStyles.createStyles((arg0) => {
       borderWidth: 2,
       borderColor: BORDER_FEEDBACK_CRITICAL,
       marginHorizontal: tmp4(587).space.PX_16,
-      backgroundColor: "emoji",
+      backgroundColor: "enabled",
     },
   };
   return obj;

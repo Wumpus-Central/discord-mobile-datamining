@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4890);
 let obj2 = {
-  drawerContainer: { overflow: "hidden", backgroundColor: "filter" },
+  drawerContainer: { overflow: "hidden", backgroundColor: "Boolean" },
   drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 },
   drawerHeader: { backgroundColor: "r" },
   messagePreviewContainer: { marginLeft: 6 },

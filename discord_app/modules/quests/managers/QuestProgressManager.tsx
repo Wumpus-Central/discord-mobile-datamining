@@ -366,7 +366,7 @@ class QuestProgressManager extends tmp4 {
       await "IconComponent";
       closure_1 = tmp2;
       applicationId = applyArgumentsResult.applicationId;
-      return "Reflect";
+      return "Set";
     });
     obj1.FRAME_LAUNCH = function FRAME_LAUNCH(arg0) {
       const self = this;

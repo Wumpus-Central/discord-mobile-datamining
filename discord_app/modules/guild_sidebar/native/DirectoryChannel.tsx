@@ -129,7 +129,7 @@ export default noop.memo(
               selected,
               resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS,
             };
-            const tmp21 = jsx(id(16050), {
+            const tmp21 = jsx(id(16054), {
               onPress: tmp11,
               onLongPress: tmp12,
               style: tmp4.container,
@@ -218,7 +218,7 @@ export default noop.memo(
           obj2.channel = stateFromStores;
           obj2.selected = selected;
           obj2.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-          tmp7 = jsx(id(16050), {
+          tmp7 = jsx(id(16054), {
             onPress: callback,
             onLongPress: tmp6,
             style: tmp.container,
@@ -230,7 +230,7 @@ export default noop.memo(
             selected: null,
             resolvedUnreadSetting: null,
           });
-          const tmp10 = id(16050);
+          const tmp10 = id(16054);
         }
         return tmp7;
       },

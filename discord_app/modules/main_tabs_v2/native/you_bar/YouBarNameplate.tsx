@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const YOU_BAR_SPRING_CONFIG = fn(14895).YOU_BAR_SPRING_CONFIG;
+const YOU_BAR_SPRING_CONFIG = fn(14899).YOU_BAR_SPRING_CONFIG;
 const jsx = fn(21).jsx;
 const __initData = {
   code: "function YouBarNameplateTsx1(){const{withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG}=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};}",
@@ -24,7 +24,7 @@ export default noop.memo(
         ({ avatarSize, barWidth } = arg0);
         let obj = isQuestRendered(576);
         token = isQuestRendered(4580).useToken(token(587).modules.mobile.YOU_BAR_BORDER_RADIUS);
-        const tmp6 = token(14982)(token);
+        const tmp6 = token(14986)(token);
         dependencyMap = tmp6;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [AccessibilityStore];
@@ -140,7 +140,7 @@ export default noop.memo(
         let token;
         ({ nameplate, barWidth } = isQuestRendered);
         token = isQuestRendered(4580).useToken(token(587).modules.mobile.YOU_BAR_BORDER_RADIUS);
-        const tmp4 = token(14982)(token);
+        const tmp4 = token(14986)(token);
         dependencyMap = tmp4;
         let obj = isQuestRendered(4580);
         const tmp2 = token;

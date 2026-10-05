@@ -7,8 +7,8 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import InstantInviteActionCreatorsDefault from "../../../../../../actions/InstantInviteActionCreators.tsx";
 import IconActionButtonDefault from "../../../shared_components/IconActionButton.tsx";
-import _modDef13665 from "../../../../../../../_runtime/metro/13665__.js";
-import _modDef16019 from "../../../../../../../_runtime/metro/16019__.js";
+import _modDef13667 from "../../../../../../../_runtime/metro/13667__.js";
+import _modDef16023 from "../../../../../../../_runtime/metro/16023__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -34,7 +34,7 @@ let closure_11 = async function _getFriendInviteCode() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -114,7 +114,7 @@ let closure_13 = async function _handleShare() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -155,7 +155,7 @@ let closure_13 = async function _handleShare() {
           closure_129_6.ADD_FRIENDS_WIDGET,
         );
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp7) {
       c3 = tmp;
@@ -184,7 +184,7 @@ let closure_15 = async function _handleLink() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -217,7 +217,7 @@ let closure_15 = async function _handleLink() {
         closure_128_0 = value;
         closure_129_0(closure_129_2[11]).handleCopy(closure_128_0, null, closure_129_6.ADD_FRIENDS_WIDGET);
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp15) {
       c3 = tmp;
@@ -229,7 +229,7 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1085).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const sum = fn(13095).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+const sum = fn(13097).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
 const createStyles = fn(4890);
 let obj = {
   container: {
@@ -351,7 +351,7 @@ export default noop.memo(
           const obj4 = {
             style: actionIcon,
             variant: "filled",
-            source: _modDef13665,
+            source: _modDef13667,
             onPress: handleShare,
             accessibilityLabel: tmp14,
           };
@@ -374,7 +374,7 @@ export default noop.memo(
           const obj5 = {
             style: tmp4.actionIcon,
             variant: "filled",
-            source: _modDef16019,
+            source: _modDef16023,
             onPress: handleLink,
             accessibilityLabel: tmp22,
           };
@@ -461,7 +461,7 @@ export default noop.memo(
         const obj5 = {
           style: tmp.actionIcon,
           variant: "filled",
-          source: _modDef13665,
+          source: _modDef13667,
           onPress: handleShare,
           accessibilityLabel: null,
         };
@@ -475,7 +475,7 @@ export default noop.memo(
           onPress: null,
           accessibilityLabel: null,
         };
-        obj6.source = _modDef16019;
+        obj6.source = _modDef16023;
         obj6.onPress = handleLink;
         const intl4 = util.intl;
         obj6.accessibilityLabel = intl4.string(util.t.WqhZss);

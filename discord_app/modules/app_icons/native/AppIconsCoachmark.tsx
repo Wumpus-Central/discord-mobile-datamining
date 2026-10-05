@@ -4,7 +4,7 @@ import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import _modDef9642 from "../../../../_runtime/metro/09642__.js";
 import AppIconUtils from "AppIconUtils.tsx";
-import _modDef17083 from "../../../../_runtime/metro/17083__.js";
+import _modDef17107 from "../../../../_runtime/metro/17107__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return markAsDismissed(ContentDismissActionType.DISMISS);
           }
         }
-        let obj2 = { source: _modDef17083, style: tmp4.image };
+        let obj2 = { source: _modDef17107, style: tmp4.image };
         const tmp18 = closure_8(closure_4, obj2);
         cResult[10] = tmp4.image;
         cResult[11] = tmp18;
@@ -265,9 +265,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const obj4 = { style: tmp.info, children: null };
       const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
-      const items2 = [closure_8(closure_4, { source: _modDef17083, style: tmp.image }), ,];
+      const items2 = [closure_8(closure_4, { source: _modDef17107, style: tmp.image }), ,];
       const obj6 = { style: tmp.titleContainer, children: null };
-      const obj5 = { source: _modDef17083, style: tmp.image };
+      const obj5 = { source: _modDef17107, style: tmp.image };
       const items3 = [
         closure_8(markAsDismissed(1188).Icon, {
           source: _modDef9642,

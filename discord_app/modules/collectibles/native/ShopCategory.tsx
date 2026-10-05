@@ -220,20 +220,20 @@ export const ShopCategory = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = category(1490).useNavigation();
       const unpublishedAt = category.unpublishedAt;
       let obj = category(1490);
-      const filteredAndSortedProducts = category(14872).useFilteredAndSortedProducts({
+      const filteredAndSortedProducts = category(14876).useFilteredAndSortedProducts({
         products: category.products,
         bypassAndroidUnsyncedFilter: category.isOrbsExclusive,
       });
       const mobileBannerUrl = category.mobileBannerUrl;
-      let obj2 = category(14872);
+      let obj2 = category(14876);
       let obj3 = { products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive };
-      const collectiblesShopDeepLinkProps = category(15704).useCollectiblesShopDeepLinkProps({
+      const collectiblesShopDeepLinkProps = category(15708).useCollectiblesShopDeepLinkProps({
         products: filteredAndSortedProducts,
       });
       ({ productIndex, initialProductSkuId } = collectiblesShopDeepLinkProps);
       const initialVariantIndex = collectiblesShopDeepLinkProps.initialVariantIndex;
       const ref = unpublishedAt.useRef(null);
-      const obj4 = category(15704);
+      const obj4 = category(15708);
       let items = [category.storeListingId];
       const recyclingState = category(8371).useRecyclingState(null, items, () => {
         const current = ref.current;
@@ -246,19 +246,19 @@ export const ShopCategory = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp9) {
         tmp9 = productIndex > 0;
       }
-      const obj7 = category(15708);
+      const obj7 = category(15712);
       const scrollToInitialIndexOnce = obj7.useScrollToInitialIndexOnce({
         shouldScroll: tmp9,
         initialScrollIndex: productIndex,
         flashListRef: ref,
-        afterMs: category(15708).INITIAL_SCROLL_DELAY_MS,
+        afterMs: category(15712).INITIAL_SCROLL_DELAY_MS,
         resetKey: category.storeListingId,
       });
       const obj8 = {
         shouldScroll: tmp9,
         initialScrollIndex: productIndex,
         flashListRef: ref,
-        afterMs: category(15708).INITIAL_SCROLL_DELAY_MS,
+        afterMs: category(15712).INITIAL_SCROLL_DELAY_MS,
         resetKey: category.storeListingId,
       };
       collectiblesAnalyticsContext = category(8421).useCollectiblesAnalyticsContext();

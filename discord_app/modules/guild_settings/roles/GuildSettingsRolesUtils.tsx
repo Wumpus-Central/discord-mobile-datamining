@@ -12,7 +12,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(17752).GuildSettingsRoleEditSections;
+const constants = fn(17776).GuildSettingsRoleEditSections;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()

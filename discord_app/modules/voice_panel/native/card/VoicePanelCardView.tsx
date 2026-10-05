@@ -33,7 +33,7 @@ const VoicePanelConstants = fn(11902);
   VOICE_PANEL_CHUNK_DIVISOR,
 } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11900).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17182).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(17206).VoicePanelPIPModes;
 const EDGE_GUTTER = fn(11905).EDGE_GUTTER;
 const isUserParticipant = fn(4911).isUserParticipant;
 const jsx = fn(21).jsx;
@@ -383,7 +383,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
       const cResult = mode(576).c(6);
       const obj = mode(576);
-      mode = mode(17183).usePIPState().mode;
+      mode = mode(17207).usePIPState().mode;
       const ref = noop.useRef(mode === VoicePanelPIPModes.IN_APP);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = {};
@@ -429,10 +429,10 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = mode;
       cResult[3] = fn;
       tmp7 = fn;
-      const obj2 = mode(17183);
+      const obj2 = mode(17207);
     }
   : () => {
-      mode = mode(17183).usePIPState().mode;
+      mode = mode(17207).usePIPState().mode;
       const ref = noop.useRef(mode === VoicePanelPIPModes.IN_APP);
       dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
       const items = [mode];
@@ -452,7 +452,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
           ref.current = false;
         }
       }, items);
-      const obj = mode(17183);
+      const obj = mode(17207);
       return mode === VoicePanelPIPModes.IN_APP && ref(5973)(ref);
     };
 ReactCompilerGating = fn(558);
@@ -537,7 +537,7 @@ export default noop.memo(
         channelId = noop.useContext(stateFromStoresArray(11901)).channelId;
         let obj = channelId(576);
         const tmp4 = closure_23(viewableChunks.viewableChunks);
-        const chunkedParticipants = channelId(17277).useChunkedParticipants(channelId, tmp4);
+        const chunkedParticipants = channelId(17301).useChunkedParticipants(channelId, tmp4);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ChannelRTCStore];
           cResult[0] = items;
@@ -560,7 +560,7 @@ export default noop.memo(
           tmp8 = cResult[2];
           tmp9 = cResult[3];
         }
-        const obj3 = channelId(17277);
+        const obj3 = channelId(17301);
         stateFromStoresArray = channelId(504).useStateFromStoresArray(first, tmp8, tmp9);
         dependencyMap = noop.useRef(stateFromStoresArray);
         if (cResult[4] !== stateFromStoresArray) {

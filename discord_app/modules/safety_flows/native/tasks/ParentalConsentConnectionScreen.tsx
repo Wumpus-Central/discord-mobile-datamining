@@ -127,7 +127,7 @@ export default function ParentalConsentConnectionScreen() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -197,7 +197,7 @@ export default function ParentalConsentConnectionScreen() {
     obj2.title = intl.string(_modDef2787.dMMSA0);
     const intl2 = util.intl;
     obj2.body = intl2.format(_modDef2787["6GaRTu"], { link });
-    obj.openLazy(asyncRequireImpl(14683, dependencyMap.paths), closure_9, obj2);
+    obj.openLazy(asyncRequireImpl(14687, dependencyMap.paths), closure_9, obj2);
   }, items7);
   let obj4 = {
     title: null,

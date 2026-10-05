@@ -98,7 +98,7 @@ export default function ICYMISettingsActionSheet() {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -115,7 +115,7 @@ export default function ICYMISettingsActionSheet() {
                 v1 = 1;
                 dependencyMap = 1;
                 const obj5 = {
-                  value: tmp4(16393).regenerateFeedAndClearReadStates(
+                  value: tmp4(16397).regenerateFeedAndClearReadStates(
                     constants.ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON,
                   ),
                   done: false,
@@ -132,7 +132,7 @@ export default function ICYMISettingsActionSheet() {
             } else {
               v1(4854).hideActionSheet();
               dependencyMap = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp12) {
             dependencyMap = tmp;

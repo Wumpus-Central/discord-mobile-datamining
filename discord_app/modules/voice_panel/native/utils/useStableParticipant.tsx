@@ -93,10 +93,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 canRenderVideo: false,
                 userNick: null,
                 userAvatarDecoration: null,
-                streamId: "Set",
+                streamId: "Symbol",
                 ringing: null,
-                hasVideo: "2026-05-quest-home-tile-redesign",
-                isSelf: "user",
+                hasVideo: 0,
+                isSelf: 1,
               };
               id = AuthenticationStore.getId();
               obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
@@ -210,10 +210,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   canRenderVideo: false,
                   userNick: null,
                   userAvatarDecoration: null,
-                  streamId: "Set",
+                  streamId: "Symbol",
                   ringing: null,
-                  hasVideo: "2026-05-quest-home-tile-redesign",
-                  isSelf: "user",
+                  hasVideo: 0,
+                  isSelf: 1,
                 };
                 id = AuthenticationStore.getId();
                 obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);

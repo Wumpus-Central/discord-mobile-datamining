@@ -49,7 +49,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
         if (cResult[5] === tableRowGroupContainer.tableRowGroupContainer) {
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp22 = closure_16(tmp(14774).RefreshIcon, {});
+            const tmp22 = closure_16(tmp(14778).RefreshIcon, {});
             let intl2 = tmp(1126).intl;
             const stringResult = intl2.string(tmp(1126).t.NVwuHq);
             cResult[10] = tmp22;
@@ -150,7 +150,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -191,7 +191,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
               const obj3 = category(12);
             }
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp15) {
           c3 = tmp;
@@ -246,7 +246,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -287,7 +287,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
               const obj3 = category(12);
             }
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp15) {
           c3 = tmp;
@@ -321,7 +321,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj4);
   }
   let obj5 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj6 = { icon: closure_16(channel(14774).RefreshIcon, {}), label: null, onPress: null };
+  let obj6 = { icon: closure_16(channel(14778).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1126).intl;
   obj6.label = intl2.string(channel(1126).t.NVwuHq);
   obj6.onPress = callback;

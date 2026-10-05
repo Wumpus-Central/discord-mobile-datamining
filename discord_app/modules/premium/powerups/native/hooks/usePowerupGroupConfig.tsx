@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             image: tmp10,
             disabledReason: tmp14,
             badge: "IconComponent",
-            forceStaticImages: "/assets/.cache/intl/bW9kdWxlcy9jaGVja291dC9tZXNzYWdlcw==",
+            forceStaticImages: "/assets/modules/copy_experiments/registry",
           };
           cResult[8] = tmp14;
           cResult[9] = obj3;
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             image: null,
             disabledReason: null,
             badge: "IconComponent",
-            forceStaticImages: "/assets/.cache/intl/bW9kdWxlcy9jaGVja291dC9tZXNzYWdlcw==",
+            forceStaticImages: "/assets/modules/copy_experiments/registry",
           };
           const intl = util.intl;
           obj2.title = intl.string(_modDef2525.KC9HRW);

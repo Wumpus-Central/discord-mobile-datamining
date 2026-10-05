@@ -38,7 +38,7 @@ let closure_21 = async function _setWarningBoosts(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -87,7 +87,7 @@ let closure_21 = async function _setWarningBoosts(arg0) {
           true,
         );
         c6 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp20) {
       c6 = tmp;
@@ -116,7 +116,7 @@ let closure_23 = async function _sendPowerupsSystemMessage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -146,7 +146,7 @@ let closure_23 = async function _sendPowerupsSystemMessage(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -156,7 +156,7 @@ let closure_23 = async function _sendPowerupsSystemMessage(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DevToolsGuildPowerupsConstants = fn(15578);
+const DevToolsGuildPowerupsConstants = fn(15582);
 ({
   GUILD_DCS: closure_11,
   SERVER_TAG_GUILD_DCS: closure_12,

@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const QuestDockMode = fn(5623).QuestDockMode;
-const QuestDockConstants = fn(14892);
+const QuestDockConstants = fn(14896);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS: hasOwnProperty, QUEST_DOCK_COLLAPSED_MAX_WIDTH: metroRequire } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -68,13 +68,13 @@ export default noop.memo(
         const cResult = activeQuestDockMode(576).c(26);
         isExpanded = isExpanded.isExpanded;
         const tmp4 = closure_9();
-        const context = youBarHorizontalMargin.useContext(activeQuestDockMode(14893).QuestDockGestureContext);
+        const context = youBarHorizontalMargin.useContext(activeQuestDockMode(14897).QuestDockGestureContext);
         activeQuestDockMode = context.activeQuestDockMode;
         const windowDimensions = context.windowDimensions;
         dependencyMap = tmp6;
         const obj = activeQuestDockMode(576);
-        youBarHorizontalMargin = activeQuestDockMode(14894).useYouBarHorizontalMargin();
-        let obj2 = activeQuestDockMode(14894);
+        youBarHorizontalMargin = activeQuestDockMode(14898).useYouBarHorizontalMargin();
+        let obj2 = activeQuestDockMode(14898);
         const fn = function n() {
           return { width: Math.min(windowDimensions.get().width, QUEST_DOCK_COLLAPSED_MAX_WIDTH) };
         };
@@ -267,7 +267,7 @@ export default noop.memo(
                   }
                   const obj14 = {
                     style: animatedStyle1,
-                    layout: tmp(14891).dimensionsLayoutTransition,
+                    layout: tmp(14895).dimensionsLayoutTransition,
                     children: null,
                   };
                   let items = [tmp21, tmp30];
@@ -316,12 +316,12 @@ export default noop.memo(
     : (arg0) => {
         ({ isExpanded, variant } = arg0);
         const tmp = closure_9();
-        const context = youBarHorizontalMargin.useContext(activeQuestDockMode(14893).QuestDockGestureContext);
+        const context = youBarHorizontalMargin.useContext(activeQuestDockMode(14897).QuestDockGestureContext);
         activeQuestDockMode = context.activeQuestDockMode;
         const windowDimensions = context.windowDimensions;
         dependencyMap = tmp5;
-        youBarHorizontalMargin = activeQuestDockMode(14894).useYouBarHorizontalMargin();
-        const obj = activeQuestDockMode(14894);
+        youBarHorizontalMargin = activeQuestDockMode(14898).useYouBarHorizontalMargin();
+        const obj = activeQuestDockMode(14898);
         const tmp2 = activeQuestDockMode;
         const fn = function n() {
           return { width: Math.min(windowDimensions.get().width, QUEST_DOCK_COLLAPSED_MAX_WIDTH) };
@@ -446,7 +446,7 @@ export default noop.memo(
         const tmp12 = windowDimensions;
         const obj11 = { style: animatedStyle1, layout: null, children: null };
         const tmp13 = windowDimensions(6570);
-        obj11.layout = activeQuestDockMode(14891).dimensionsLayoutTransition;
+        obj11.layout = activeQuestDockMode(14895).dimensionsLayoutTransition;
         const obj12 = { style: null, children: null };
         const items1 = [tmp.dragHandleOverlay, animatedStyle3];
         obj12.style = items1;

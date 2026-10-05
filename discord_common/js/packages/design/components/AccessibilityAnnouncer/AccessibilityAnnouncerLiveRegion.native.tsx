@@ -7,7 +7,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, Text: c2 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const module_4571 = fn(4571);
-const state = module_4571.create(() => ({ message: "done", version: false }));
+const state = module_4571.create(() => ({ message: "duration", version: false }));
 const styles = StyleSheet.create({
   liveRegion: { position: "absolute", top: 0, left: 0, width: 1, height: 1, opacity: 0 },
 });

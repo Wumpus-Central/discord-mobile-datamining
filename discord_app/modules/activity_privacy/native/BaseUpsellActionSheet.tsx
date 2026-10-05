@@ -116,11 +116,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       ({ guildIds, direction, onPress } = arg0);
       const tmp4 = closure_10();
       if (cResult[0] !== guildIds) {
-        const result = tmp(14655).sortGuildIdsByFrecency(guildIds);
+        const result = tmp(14659).sortGuildIdsByFrecency(guildIds);
         cResult[0] = guildIds;
         cResult[1] = result;
         arr = result;
-        const tmpResult = tmp(14655);
+        const tmpResult = tmp(14659);
       } else {
         arr = cResult[1];
       }
@@ -144,7 +144,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = arr(576);
       const stateFromStores = arr(504).useStateFromStores(tmp6, tmp8);
       if (cResult[5] !== direction) {
-        if (direction === tmp(14655).ChangeDirection.RESTRICTING) {
+        if (direction === tmp(14659).ChangeDirection.RESTRICTING) {
           const intl2 = tmp(1126).intl;
           let stringResult = intl2.string(tmp(1126).t.e6Kpa7);
         } else {
@@ -301,7 +301,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const statusRow = tmp4.statusRow;
-        if (direction === tmp(14655).ChangeDirection.RESTRICTING) {
+        if (direction === tmp(14659).ChangeDirection.RESTRICTING) {
           class E {
             constructor() {
               return closure_1.map((item) => {

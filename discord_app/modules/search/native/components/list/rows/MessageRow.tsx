@@ -311,7 +311,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp8, tmp9);
       const obj = channel(576);
-      const searchMessageTimestamp = channel(16825).useSearchMessageTimestamp(message, channel);
+      const searchMessageTimestamp = channel(16844).useSearchMessageTimestamp(message, channel);
       ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
       if (cResult[5] !== tmp5) {
         const obj3 = { lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: tmp5 };
@@ -394,7 +394,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                   let tmp33 = null;
                   if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
                     const obj7 = { size: "xs", style: tmp4.suppressNotificationsIcon };
-                    tmp33 = closure_14(channel(13127).BellZIcon, obj7);
+                    tmp33 = closure_14(channel(13129).BellZIcon, obj7);
                   }
                   cResult[21] = message;
                   cResult[22] = tmp4.suppressNotificationsIcon;
@@ -439,7 +439,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp4.channelStatus;
       cResult[9] = tmp16;
       tmp15 = tmp16;
-      const tmpResult = channel(16825);
+      const tmpResult = channel(16844);
     }
   : (message) => {
       message = message.message;
@@ -456,7 +456,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp = channel.isDM() || channel.isGroupDM();
       }, items1);
-      const searchMessageTimestamp = message(16825).useSearchMessageTimestamp(message, channel);
+      const searchMessageTimestamp = message(16844).useSearchMessageTimestamp(message, channel);
       const obj2 = { style: tmp.labelContainer, children: null };
       const obj3 = { style: tmp.authorRow, children: null };
       ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
@@ -497,13 +497,13 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp9Result = null;
       if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
         const obj7 = { size: "xs", style: tmp.suppressNotificationsIcon };
-        tmp9Result = closure_14(tmp4(13127).BellZIcon, obj7);
+        tmp9Result = closure_14(tmp4(13129).BellZIcon, obj7);
       }
       items3[2] = tmp9Result;
       let tmp9Result2 = null;
       if (message.isPoll()) {
         const obj8 = { style: tmp.pollBadge };
-        tmp9Result2 = closure_14(channel(16826), obj8);
+        tmp9Result2 = closure_14(channel(16845), obj8);
       }
       items3[3] = tmp9Result2;
       obj2.children = items3;

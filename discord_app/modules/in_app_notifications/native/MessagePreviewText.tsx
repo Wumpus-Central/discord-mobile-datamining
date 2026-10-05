@@ -82,7 +82,7 @@ obj6.embedTextContainer = {
   paddingVertical: nativeDefault.space.PX_4,
   paddingHorizontal: nativeDefault.space.PX_8,
 };
-let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "ix" };
+let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "unicodeVersion" };
 obj6.embedMediaContainer = size;
 obj6.embedMedia = { width: "100%", height: "100%" };
 let closure_11 = createStyles.createStyles(obj6);

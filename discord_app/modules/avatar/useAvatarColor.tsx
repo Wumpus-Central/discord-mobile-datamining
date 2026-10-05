@@ -21,7 +21,7 @@ let closure_9 = async function _maybeFetchColors(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -49,7 +49,7 @@ let closure_9 = async function _maybeFetchColors(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     } catch (tmp8) {
       c1 = tmp;
       throw tmp8;
@@ -77,7 +77,7 @@ let closure_11 = async function _fetchColors(arg0) {
       let obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

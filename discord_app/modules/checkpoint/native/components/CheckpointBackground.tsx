@@ -4,7 +4,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import Constants from "../../../../Constants.tsx";
 import CheckpointConstants from "../../CheckpointConstants.tsx";
 import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
-import _modDef15531 from "../../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
+import _modDef15535 from "../../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj4 = { uri: _modDef15531 };
+        const obj4 = { uri: _modDef15535 };
         cResult[2] = obj4;
         let tmp10 = obj4;
       } else {
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.background,
         }),
       ];
-      const obj3 = { source: { uri: _modDef15531 }, style: tmp.background, resizeMode: "cover" };
+      const obj3 = { source: { uri: _modDef15535 }, style: tmp.background, resizeMode: "cover" };
       items[1] = timestampProducer(Image, obj3);
       obj.children = items;
       return closure_1_8(React5, obj);

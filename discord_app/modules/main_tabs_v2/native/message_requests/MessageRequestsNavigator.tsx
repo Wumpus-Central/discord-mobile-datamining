@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let merged = Object.assign(tmp9(10662)());
               tmp19[1] = obj3;
               tmp19[2] = function getComponent() {
-                return closure_0(17030).default;
+                return closure_0(17054).default;
               };
               const tmp22 = closure_7(closure_9.Screen, tmp19);
               cResult[11] = tmp22;
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const merged1 = Object.assign(tmp9(10662)());
               tmp26[1] = obj4;
               tmp26[2] = function getComponent() {
-                return closure_0(17049).default;
+                return closure_0(17073).default;
               };
               const tmp29 = closure_7(closure_9.Screen, tmp26);
               cResult[12] = tmp29;
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const merged2 = Object.assign(tmp9(10662)());
               tmp33[1] = obj5;
               tmp33[2] = function getComponent() {
-                return closure_0(17050).default;
+                return closure_0(17074).default;
               };
               const tmp36 = closure_7(closure_9.Screen, tmp33);
               cResult[13] = tmp36;
@@ -309,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let merged = Object.assign(getNavigationModalPresentationDefault());
       obj4.options = obj5;
       obj4.getComponent = function getComponent() {
-        return closure_0(17030).default;
+        return closure_0(17054).default;
       };
       const items1 = [closure_7(Screen, obj4), ,];
       const obj6 = { name: "spam", options: null, getComponent: null };
@@ -319,7 +319,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let merged1 = Object.assign(getNavigationModalPresentationDefault());
       obj6.options = obj7;
       obj6.getComponent = function getComponent() {
-        return closure_0(17049).default;
+        return closure_0(17073).default;
       };
       items1[1] = closure_7(closure_9.Screen, obj6);
       const obj8 = { name: "preview", options: null, getComponent: null };
@@ -329,7 +329,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const merged2 = Object.assign(getNavigationModalPresentationDefault());
       obj8.options = obj9;
       obj8.getComponent = function getComponent() {
-        return closure_0(17050).default;
+        return closure_0(17074).default;
       };
       items1[2] = closure_7(closure_9.Screen, obj8);
       obj3.children = items1;

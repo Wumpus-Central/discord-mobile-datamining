@@ -11,7 +11,7 @@ import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/B
 import ActionSheetRow from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import PromoSheet from "../../../../design/components/Sheet/native/PromoSheet.native.tsx";
-import _modDef15682 from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
+import _modDef15686 from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -312,7 +312,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           actions: null,
         };
         const obj4 = { type: "image", src: null, aspectRatio: "16/9" };
-        const obj5 = { uri: _modDef15682 };
+        const obj5 = { uri: _modDef15686 };
         obj4.src = obj5;
         obj3.graphic = obj4;
         obj3.actions = first;
@@ -343,7 +343,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const obj3 = { type: "image", src: null, aspectRatio: "16/9" };
       const tmp = React5(components_Button_Button.Button, obj);
-      obj3.src = { uri: _modDef15682 };
+      obj3.src = { uri: _modDef15686 };
       obj2.graphic = obj3;
       obj2.actions = tmp;
       return React5(PromoSheet.PromoSheet, obj2);

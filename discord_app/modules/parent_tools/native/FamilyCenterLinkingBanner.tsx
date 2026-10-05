@@ -7,7 +7,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import FamilyCenterBannerButton from "FamilyCenterBannerButton.tsx";
-import _modDef14718 from "../../../../_runtime/metro/14718__.js";
+import _modDef14722 from "../../../../_runtime/metro/14722__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -87,7 +87,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = useAgeSpecificText;
       const ageSpecificText1 = useAgeSpecificText.useAgeSpecificText(tmp12, tmp13);
       if (cResult[4] !== tmp4.art) {
-        const obj2 = { source: _modDef14718, style: tmp4.art, resizeMethod: "resize" };
+        const obj2 = { source: _modDef14722, style: tmp4.art, resizeMethod: "resize" };
         const tmp20 = hasOwnProperty(React4, obj2);
         cResult[4] = tmp4.art;
         cResult[5] = tmp20;
@@ -180,7 +180,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         intl3.format(_modDef2493.yMnoDl, { link: "https://support.discord.com/hc/articles/14155060633623" }),
         intl4.string(_modDef2493.JsAEDi),
       );
-      obj4.source = _modDef14718;
+      obj4.source = _modDef14722;
       obj4.style = tmp.art;
       const items = [hasOwnProperty(React4, obj4), ,];
       const obj5 = { style: tmp.content, children: null };

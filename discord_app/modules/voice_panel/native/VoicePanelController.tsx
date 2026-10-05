@@ -857,7 +857,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
                 obj5.content = intl.string(obj(1126).t.O2IlPT);
                 obj3.open(obj5);
               }
-              obj = obj(17341);
+              obj = obj(17365);
               result3 = obj.trackActivityThermalStateNoticeShown();
             }
           }
@@ -1030,7 +1030,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
               obj5.content = intl.string(obj(1126).t.O2IlPT);
               obj3.open(obj5);
             }
-            obj = obj(17341);
+            obj = obj(17365);
             result3 = obj.trackActivityThermalStateNoticeShown();
           }
         }

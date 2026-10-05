@@ -213,7 +213,7 @@ export default {
                   event_id: timestamp.event_id,
                   timestamp: result,
                   level: formatted,
-                  tags: "This credit card already exists in the merchant's vault.",
+                  tags: null,
                 };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";

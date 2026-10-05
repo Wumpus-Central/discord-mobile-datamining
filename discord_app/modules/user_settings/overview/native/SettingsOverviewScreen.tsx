@@ -166,5 +166,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { sections: getOverviewSettings({ isPremiumUser: hasPremiumSubscriptionToDisplay }) };
         return SettingBuilders.createList(obj2);
       }, items);
-      return jsx(hasPremiumSubscriptionToDisplay(14496).SearchableSettingsList, { node });
+      return jsx(hasPremiumSubscriptionToDisplay(14500).SearchableSettingsList, { node });
     };

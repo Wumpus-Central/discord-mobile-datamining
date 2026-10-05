@@ -14,7 +14,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 let closure_3 = ["username"];
 let closure_4 = ["username"];
-const RegistrationUIStore = fn(15863);
+const RegistrationUIStore = fn(15867);
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
@@ -330,7 +330,7 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
             }
           }
         }
-        if (undefined === setUsername(14512).NameValidationState.ERROR) {
+        if (undefined === setUsername(14516).NameValidationState.ERROR) {
           class H {
             constructor() {
               tmp = closure_1(true);
@@ -498,7 +498,7 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
         type = usernameStatus.type;
       }
       let str2;
-      if (type === tmp14(14512).NameValidationState.ERROR) {
+      if (type === tmp14(14516).NameValidationState.ERROR) {
         str2 = "error";
       }
       const obj6 = { children: null };

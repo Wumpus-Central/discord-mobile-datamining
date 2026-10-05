@@ -97,7 +97,7 @@ let closure_13 = async function _submitHeadlessReport(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -153,7 +153,7 @@ let closure_13 = async function _submitHeadlessReport(arg0) {
         return obj;
       } else {
         c5 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp10) {
       c5 = tmp;
@@ -229,7 +229,7 @@ function genSubmitData(version, name, arr, email_token) {
   if (str == null) {
     str = "en";
   }
-  let obj2 = { channel_id: "w", message_id: "ix", stage_instance_id: "applicationId", guild_id: "method", guild_scheduled_event_id: "container", user_id: "r", email_token: "toCharArray$esjava$1", application_id: "methodobject", entrypoint: "container", widget_id: "r" };
+  let obj2 = { channel_id: "unicodeVersion", message_id: "value", stage_instance_id: "getChannel", guild_id: "formatToPlainString", guild_scheduled_event_id: "p", user_id: "Set", email_token: "r", application_id: "unicodeVersion", entrypoint: "opacity", widget_id: "getGuild" };
   obj.language = str;
   obj.breadcrumbs = arr.map((nodeRef) => nodeRef.nodeRef);
   obj.elements = arr.reduce((acc, item) => {
@@ -455,7 +455,7 @@ export const submitReport = function submitReport(language, name, arr) {
       }, {});
       let tmp15 = null;
       if (name.name === tmp4(8280).ModeratorReportNames.MESSAGE) {
-        let obj2 = { channel_id: "done", message_id: "toCharArray$esjava$1", guild_id: "toCharArray$esjava$1" };
+        let obj2 = { channel_id: "marginBottom", message_id: "unicodeVersion", guild_id: "Reflect" };
         obj4 = {};
         ({ channel_id, id } = name.record);
         let merged = Object.assign(obj);

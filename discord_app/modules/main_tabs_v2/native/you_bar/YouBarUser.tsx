@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(14895);
+const YouBarConstants = fn(14899);
 ({
   YOU_BAR_SPRING_CONFIG: metroRequire,
   YOU_BAR_LARGE_AVATAR_NAME_MARGIN: closure_7,
@@ -140,7 +140,7 @@ export default noop.memo(
                     tmp28 = tmp30;
                   }
                   const obj7 = { userId: stateFromStores.id, username: name };
-                  const tmp27 = closure_9(tmp17(16326), obj7);
+                  const tmp27 = closure_9(tmp17(16330), obj7);
                   cResult[30] = stateFromStores.id;
                   cResult[31] = name;
                   cResult[32] = tmp27;
@@ -153,7 +153,7 @@ export default noop.memo(
                 tmp24 = items2;
               }
               const obj8 = { isLargeAvatar: tmp9, onPress: onAvatarPress };
-              const tmp22 = closure_9(tmp17(16325), obj8);
+              const tmp22 = closure_9(tmp17(16329), obj8);
               cResult[23] = tmp9;
               cResult[24] = onAvatarPress;
               cResult[25] = tmp22;
@@ -170,7 +170,7 @@ export default noop.memo(
           }
           if (cResult[8] !== tmp9) {
             const obj9 = { isLarge: tmp9 };
-            const tmp38 = closure_9(tmp17(16324), obj9);
+            const tmp38 = closure_9(tmp17(16328), obj9);
             cResult[8] = tmp9;
             cResult[9] = tmp38;
             let tmp36 = tmp38;
@@ -287,12 +287,12 @@ export default noop.memo(
           if (null != name) {
             let obj3 = { style: tmp.youButton, children: null };
             const obj5 = { isLargeAvatar: tmp5, onPress: isQuestRendered.onAvatarPress };
-            const items2 = [closure_9(tmp9(16325), obj5)];
+            const items2 = [closure_9(tmp9(16329), obj5)];
             const obj6 = { style: null, children: null };
             const items3 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
             obj6.style = items3;
             const obj7 = { userId: stateFromStores.id, username: name };
-            obj6.children = closure_9(tmp9(16326), obj7);
+            obj6.children = closure_9(tmp9(16330), obj7);
             items2[1] = closure_9(tmp9(4612).View, obj6);
             obj3.children = items2;
           }
@@ -301,7 +301,7 @@ export default noop.memo(
         const obj8 = { style: null, children: null };
         const items4 = [tmp.youButton];
         obj8.style = items4;
-        const items5 = [closure_9(sharedValue(16324), { isLarge: !isQuestRendered })];
+        const items5 = [closure_9(sharedValue(16328), { isLarge: !isQuestRendered })];
         const obj9 = { style: null, children: closure_9(View, { style: tmp.placeholder }) };
         const items6 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
         obj9.style = items6;

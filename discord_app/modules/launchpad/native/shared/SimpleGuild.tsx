@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = guildId(504);
       const stateFromStoresObject = guildId(504).useStateFromStoresObject(tmp14, tmp16, tmp17);
       ({ unread: unread2, badge: badge2 } = stateFromStoresObject);
-      const tmpResult5 = guildId(17369);
+      const tmpResult5 = guildId(17393);
       const tmp20 = tmp4 ? tmpResult5.SimpleGuildContainerAnimated : tmpResult5.SimpleGuildContainer;
       if (cResult[7] === size) {
         if (cResult[8] === style) {
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const tmp22 = useSimpleGuildSizeDefault(tmp21);
-        const activityIndicatorState = guildId(16270).useActivityIndicatorState(guildId);
+        const activityIndicatorState = guildId(16274).useActivityIndicatorState(guildId);
         let tmp32 = unread2;
         if (!unread2) {
           tmp32 = tmp6;
@@ -449,7 +449,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[21] = tmp32;
         cResult[22] = tmp35Result;
         tmp33 = tmp35Result;
-        const tmpResult6 = guildId(16270);
+        const tmpResult6 = guildId(16274);
       }
       const obj10 = { size, style };
       cResult[7] = size;

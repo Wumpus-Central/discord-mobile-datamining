@@ -17,7 +17,7 @@ let closure_5 = async function _requestAgeSignalChallenge() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -78,7 +78,7 @@ let closure_5 = async function _requestAgeSignalChallenge() {
             }
           }
           c4 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp12) {
         c4 = tmp;
@@ -119,7 +119,7 @@ let closure_7 = async function _submitAgeSignal(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -148,7 +148,7 @@ let closure_7 = async function _submitAgeSignal(arg0) {
           closure_134_4 = closure_4;
           c8 = 1;
           c9 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

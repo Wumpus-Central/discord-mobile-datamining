@@ -228,7 +228,7 @@ let closure_14 = async function _getCommonClickEventProperties(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -261,7 +261,7 @@ let closure_14 = async function _getCommonClickEventProperties(arg0) {
           closure_130_6 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -398,7 +398,7 @@ let closure_16 = async function _trackQuestContentClicked() {
     trackGuildAndChannelMetadata: closure_135_7,
     sourceQuestContent: closure_135_8,
   } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 function trackAdContentClicked() {
   const self = this;
@@ -444,7 +444,7 @@ let closure_18 = async function _trackAdContentClicked() {
     trackGuildAndChannelMetadata: closure_132_8,
     sourceQuestContent: closure_132_9,
   } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const items = [, ,];

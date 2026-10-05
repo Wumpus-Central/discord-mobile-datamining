@@ -7,7 +7,7 @@ import HarmTypeConfiguration from "HarmTypeConfiguration.tsx";
 import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels.tsx";
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils.tsx";
 import ExplicitMediaRedactionActionCreators from "ExplicitMediaRedactionActionCreators.tsx";
-import uniqWithDefault from "../../../_runtime/17470_uniqWith.js";
+import uniqWithDefault from "../../../_runtime/17494_uniqWith.js";
 import ReferencedMessageStore from "../replies/ReferencedMessageStore.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ChannelSectionStore from "../../stores/ChannelSectionStore.tsx";
@@ -185,7 +185,7 @@ function handleUnscannedMessages(found2, isMessageUpdate) {
 }
 function processMessagesFromAction(firstMessages, isMessageUpdate) {
   const found = firstMessages.filter((item) => {
-    obj = obj(17469);
+    obj = obj(17493);
     let result = obj.hasAttachmentsEmbedsComponentsOrSnapshots(item);
     obj(6795);
     if (result) {
@@ -197,7 +197,7 @@ function processMessagesFromAction(firstMessages, isMessageUpdate) {
     if (null != referenced_message) {
       if ("referenced_message" in referenced_message) {
         if (null != referenced_message.referenced_message) {
-          obj = obj(17469);
+          obj = obj(17493);
           if (obj.hasAttachmentsEmbedsComponentsOrSnapshots(referenced_message.referenced_message)) {
             if (0 !== tmpResult.getEnabledHarmTypesForMessage(referenced_message.referenced_message)) {
               return referenced_message.referenced_message;
@@ -216,7 +216,7 @@ function processMessagesFromAction(firstMessages, isMessageUpdate) {
     HermesBuiltin.arraySpread(found1, HermesBuiltin.arraySpread(found, 0));
     tmp2 = items;
   }
-  const arr4 = obj2(17470)(tmp2, (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id);
+  const arr4 = obj2(17494)(tmp2, (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id);
   const found2 = arr4.filter((item) => {
     obj = obj(6795);
     return obj.hasUnscannedMedia(item);
@@ -623,7 +623,7 @@ function maybeScanMessagesForChannelId(channelId) {
   let tmp = 0 !== messages.length;
   if (tmp) {
     const found = messages.filter((item) => {
-      obj = obj(17469);
+      obj = obj(17493);
       let result = obj.hasAttachmentsEmbedsComponentsOrSnapshots(item);
       if (result) {
         result = 0 !== obj(6795).getEnabledHarmTypesForMessage(item);
@@ -637,7 +637,7 @@ function maybeScanMessagesForChannelId(channelId) {
           messageByReference = messageByReference.getMessageByReference(type.messageReference);
           if (messageByReference.state === constants.LOADED) {
             if (null != messageByReference.message) {
-              obj = obj(17469);
+              obj = obj(17493);
               if (obj.hasAttachmentsEmbedsComponentsOrSnapshots(messageByReference.message)) {
                 if (0 !== tmp5Result.getEnabledHarmTypesForMessage(messageByReference.message)) {
                   return messageByReference.message;
@@ -657,7 +657,7 @@ function maybeScanMessagesForChannelId(channelId) {
       HermesBuiltin.arraySpread(found1, HermesBuiltin.arraySpread(found, 0));
       tmp3 = items;
     }
-    const arr5 = obj2(17470)(tmp3, (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id);
+    const arr5 = obj2(17494)(tmp3, (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id);
     const found2 = arr5.filter((item) => {
       obj = obj(6795);
       return obj.hasUnscannedMedia(item);

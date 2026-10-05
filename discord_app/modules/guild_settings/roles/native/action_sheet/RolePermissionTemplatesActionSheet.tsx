@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((permissionsEdite
       tmp17 = tmp20;
     }
     const obj5 = { onSelect: O, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId };
-    const tmp16 = jsx(onPermissionsChanged(17760), { onSelect: O, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId });
+    const tmp16 = jsx(onPermissionsChanged(17784), { onSelect: O, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId });
     cResult[8] = guildId;
     cResult[9] = O;
     cResult[10] = tmp16;

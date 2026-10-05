@@ -9,7 +9,7 @@ import components_Button_Button from "../../../../../design/components/Button/na
 import useIsScreenLandscape from "../../../../screen/useIsScreenLandscape.native.tsx";
 import useTrackImpressionDefault from "../../../../app_analytics/useTrackImpression.tsx";
 import useYouBarTotalHeight from "../../you_bar/hooks/useYouBarTotalHeight.tsx";
-import _modDef15975 from "../../../../../../_runtime/metro/15975__.js";
+import _modDef15979 from "../../../../../../_runtime/metro/15979__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -314,7 +314,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[14] = tmp24;
             cResult[15] = tmp31;
           }
-          const obj6 = { resizeMode: "contain", source: _modDef15975, style: null };
+          const obj6 = { resizeMode: "contain", source: _modDef15979, style: null };
           const size = { height: result1, width: bound };
           obj6.style = size;
           const tmp27 = closure_1_8(timestampProducer, obj6);
@@ -383,7 +383,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: tmp.container, onLayout: callback, children: null };
       const obj6 = { style: tmp.innerContainer, children: null };
       const obj7 = { style: tmp.imageContainer, children: null };
-      const obj8 = { resizeMode: "contain", source: _modDef15975, style: null };
+      const obj8 = { resizeMode: "contain", source: _modDef15979, style: null };
       if (result < c10) {
         let result1 = c11 * (result / c10);
       } else {

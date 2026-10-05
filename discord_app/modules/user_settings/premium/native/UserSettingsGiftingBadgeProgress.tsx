@@ -1035,7 +1035,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj23.children = intl5.string(tmp4(2589).WZ4cXA);
         const items6 = [closure_9(tmp7(4886).Text, obj23)];
         if (tmp11Result) {
-          let ChevronSmallDownIcon = tmp7(13377).ChevronSmallUpIcon;
+          let ChevronSmallDownIcon = tmp7(13379).ChevronSmallUpIcon;
         } else {
           ChevronSmallDownIcon = tmp7(10844).ChevronSmallDownIcon;
         }

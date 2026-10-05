@@ -34,7 +34,7 @@ import CollectiblesMarketingManagerDefault from "../modules/collectibles/Collect
 import SessionAdManagerDefault from "../modules/analytics_sessions/SessionAdManager.tsx";
 import TouchEventAnalyticsManagerDefault from "../modules/touch_analytics/TouchEventAnalyticsManager.android.tsx";
 import LocalMessageCacheManagerDefault from "../modules/local_message_caching/LocalMessageCacheManager.native.tsx";
-import _modDef14392 from "../../_runtime/metro/14392__.js";
+import _modDef14396 from "../../_runtime/metro/14396__.js";
 import MainNavigatorDefault from "../modules/main_tabs_v2/native/MainNavigator.tsx";
 import noop from "../../_runtime/metro/00019__.js";
 import MobileNativeUpdateStore from "../modules/mobile_native_updater/MobileNativeUpdateStore.tsx";
@@ -44,25 +44,25 @@ const StartupProfilerDefault = StartupProfiler;
 
 require = fn;
 const AudioManagerStore = fn(9303);
-const ConnectivityIndicatorStateStore = fn(13495);
-const RequestReviewStore = fn(13505);
-const HexagonCampaignPersistedStore = fn(14157);
-const LocalPushNotificationStore = fn(13526);
+const ConnectivityIndicatorStateStore = fn(13497);
+const RequestReviewStore = fn(13507);
+const HexagonCampaignPersistedStore = fn(14159);
+const LocalPushNotificationStore = fn(13528);
 const PromotionsStore = fn(10396);
-const BitRateStore = fn(13811);
-const ShareStore = fn(14158);
-const PermissionVADStore = fn(14159);
-const InteractionModalStore = fn(14160);
+const BitRateStore = fn(13813);
+const ShareStore = fn(14160);
+const PermissionVADStore = fn(14161);
+const InteractionModalStore = fn(14162);
 const MobileAppDatabaseManager = fn(7128);
 const SubscriptionStore = fn(4534);
 const AccessibilityStore = fn(4879);
-const AnalyticsLogStore = fn(14161);
+const AnalyticsLogStore = fn(14163);
 const PhoneStore = fn(6430);
-const ICYMISessionStore = fn(14162);
-const MemoryExperiment = fn(14164);
+const ICYMISessionStore = fn(14164);
+const MemoryExperiment = fn(14166);
 const jsx = fn(21).jsx;
 if (global.__DEV__) {
-  fn(1987)(14165, dependencyMap.paths);
+  fn(1987)(14167, dependencyMap.paths);
 }
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
@@ -103,37 +103,37 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           obj26 = PlatformUtils;
           const result = RouteManagerUtils.initializeRouteManagerIfNeeded();
           return () => {
-            closure_1_1(14280).terminate();
-            const obj = closure_1_1(14280);
+            closure_1_1(14282).terminate();
+            const obj = closure_1_1(14282);
             closure_1_1(5769).terminate();
             const obj2 = closure_1_1(5769);
             closure_1_1(10440).terminate();
             const obj3 = closure_1_1(10440);
-            closure_1_1(14366).terminate();
-            const obj4 = closure_1_1(14366);
+            closure_1_1(14370).terminate();
+            const obj4 = closure_1_1(14370);
             closure_1_0(12550).cleanupRouteManager();
             const obj5 = closure_1_0(12550);
-            closure_1_1(14386).terminate();
-            const obj6 = closure_1_1(14386);
-            closure_1_1(14374).terminate();
-            const obj7 = closure_1_1(14374);
+            closure_1_1(14390).terminate();
+            const obj6 = closure_1_1(14390);
+            closure_1_1(14378).terminate();
+            const obj7 = closure_1_1(14378);
             closure_1_1(7937).terminate();
             const obj8 = closure_1_1(7937);
-            closure_1_1(14295).terminate();
-            const obj9 = closure_1_1(14295);
-            closure_1_1(14278).terminate();
-            const obj10 = closure_1_1(14278);
-            closure_1_1(14380).terminate();
-            const obj11 = closure_1_1(14380);
-            closure_1_1(14382).terminate();
-            const obj12 = closure_1_1(14382);
-            closure_1_1(14383).terminate();
-            const obj13 = closure_1_1(14383);
-            closure_1_1(14385).terminate();
-            const obj14 = closure_1_1(14385);
+            closure_1_1(14297).terminate();
+            const obj9 = closure_1_1(14297);
+            closure_1_1(14280).terminate();
+            const obj10 = closure_1_1(14280);
+            closure_1_1(14384).terminate();
+            const obj11 = closure_1_1(14384);
+            closure_1_1(14386).terminate();
+            const obj12 = closure_1_1(14386);
+            closure_1_1(14387).terminate();
+            const obj13 = closure_1_1(14387);
+            closure_1_1(14389).terminate();
+            const obj14 = closure_1_1(14389);
             closure_1_1(5031).terminate();
             const obj15 = closure_1_1(5031);
-            closure_1_1(14291).terminate();
+            closure_1_1(14293).terminate();
           };
         };
         const items = [];
@@ -181,37 +181,37 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         obj26 = PlatformUtils;
         const result = RouteManagerUtils.initializeRouteManagerIfNeeded();
         return () => {
-          closure_1_1(14280).terminate();
-          const obj = closure_1_1(14280);
+          closure_1_1(14282).terminate();
+          const obj = closure_1_1(14282);
           closure_1_1(5769).terminate();
           const obj2 = closure_1_1(5769);
           closure_1_1(10440).terminate();
           const obj3 = closure_1_1(10440);
-          closure_1_1(14366).terminate();
-          const obj4 = closure_1_1(14366);
+          closure_1_1(14370).terminate();
+          const obj4 = closure_1_1(14370);
           closure_1_0(12550).cleanupRouteManager();
           const obj5 = closure_1_0(12550);
-          closure_1_1(14386).terminate();
-          const obj6 = closure_1_1(14386);
-          closure_1_1(14374).terminate();
-          const obj7 = closure_1_1(14374);
+          closure_1_1(14390).terminate();
+          const obj6 = closure_1_1(14390);
+          closure_1_1(14378).terminate();
+          const obj7 = closure_1_1(14378);
           closure_1_1(7937).terminate();
           const obj8 = closure_1_1(7937);
-          closure_1_1(14295).terminate();
-          const obj9 = closure_1_1(14295);
-          closure_1_1(14278).terminate();
-          const obj10 = closure_1_1(14278);
-          closure_1_1(14380).terminate();
-          const obj11 = closure_1_1(14380);
-          closure_1_1(14382).terminate();
-          const obj12 = closure_1_1(14382);
-          closure_1_1(14383).terminate();
-          const obj13 = closure_1_1(14383);
-          closure_1_1(14385).terminate();
-          const obj14 = closure_1_1(14385);
+          closure_1_1(14297).terminate();
+          const obj9 = closure_1_1(14297);
+          closure_1_1(14280).terminate();
+          const obj10 = closure_1_1(14280);
+          closure_1_1(14384).terminate();
+          const obj11 = closure_1_1(14384);
+          closure_1_1(14386).terminate();
+          const obj12 = closure_1_1(14386);
+          closure_1_1(14387).terminate();
+          const obj13 = closure_1_1(14387);
+          closure_1_1(14389).terminate();
+          const obj14 = closure_1_1(14389);
           closure_1_1(5031).terminate();
           const obj15 = closure_1_1(5031);
-          closure_1_1(14291).terminate();
+          closure_1_1(14293).terminate();
         };
       }, []);
     };
@@ -316,7 +316,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = isChannelMetadataObfuscationEnabled(576).c(3);
       const obj = isChannelMetadataObfuscationEnabled(576);
       isChannelMetadataObfuscationEnabled =
-        isChannelMetadataObfuscationEnabled(13477).useIsChannelMetadataObfuscationEnabled("App");
+        isChannelMetadataObfuscationEnabled(13479).useIsChannelMetadataObfuscationEnabled("App");
       if (cResult[0] !== isChannelMetadataObfuscationEnabled) {
         const fn = function n() {
           const result = NativeFastConnectModuleDefault.setUseChannelObfuscation(isChannelMetadataObfuscationEnabled);
@@ -335,7 +335,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       isChannelMetadataObfuscationEnabled =
-        isChannelMetadataObfuscationEnabled(13477).useIsChannelMetadataObfuscationEnabled("App");
+        isChannelMetadataObfuscationEnabled(13479).useIsChannelMetadataObfuscationEnabled("App");
       const items = [isChannelMetadataObfuscationEnabled];
       const effect = noop.useEffect(() => {
         const result = NativeFastConnectModuleDefault.setUseChannelObfuscation(isChannelMetadataObfuscationEnabled);
@@ -346,7 +346,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
       const cResult = shouldUseAltGateway(576).c(3);
       const obj = shouldUseAltGateway(576);
-      shouldUseAltGateway = shouldUseAltGateway(14390).useShouldUseAltGateway("App");
+      shouldUseAltGateway = shouldUseAltGateway(14394).useShouldUseAltGateway("App");
       if (cResult[0] !== shouldUseAltGateway) {
         const fn = function n() {
           NativeFastConnectModuleDefault.setUseAltGateway(shouldUseAltGateway);
@@ -364,7 +364,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp3, tmp4);
     }
   : () => {
-      shouldUseAltGateway = shouldUseAltGateway(14390).useShouldUseAltGateway("App");
+      shouldUseAltGateway = shouldUseAltGateway(14394).useShouldUseAltGateway("App");
       const items = [shouldUseAltGateway];
       const effect = noop.useEffect(() => {
         NativeFastConnectModuleDefault.setUseAltGateway(shouldUseAltGateway);
@@ -403,11 +403,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { appEntryKey: main, children: null };
         const tmp4Result = StartupProfilerDefault;
         obj3.children = jsx(MainNavigatorDefault, {});
-        obj2.children = jsx(_modDef14392, { appEntryKey: main, children: null });
+        obj2.children = jsx(_modDef14396, { appEntryKey: main, children: null });
         const tmp18 = <tmp4Result profile={StartupProfiler.Profiles.App}>{null}</tmp4Result>;
         cResult[2] = tmp18;
         let tmp13 = tmp18;
-        const tmp4Result2 = _modDef14392;
+        const tmp4Result2 = _modDef14396;
       } else {
         tmp13 = cResult[2];
       }
@@ -427,6 +427,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { profile: StartupProfiler.Profiles.App, children: null };
       const obj2 = { appEntryKey: main, children: null };
       obj2.children = jsx(MainNavigatorDefault, {});
-      obj.children = jsx(_modDef14392, { appEntryKey: main, children: null });
+      obj.children = jsx(_modDef14396, { appEntryKey: main, children: null });
       return <tmp7 profile={StartupProfiler.Profiles.App}>{null}</tmp7>;
     };

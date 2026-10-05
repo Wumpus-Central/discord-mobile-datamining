@@ -7,7 +7,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const useRegistrationUIStore = fn(15863).useRegistrationUIStore;
+const useRegistrationUIStore = fn(15867).useRegistrationUIStore;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/usePasswordRegistrationStep.tsx");
@@ -103,7 +103,7 @@ export const usePasswordRegistrationStep = ReactCompilerGating.isReactCompilerEn
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -132,7 +132,7 @@ export const usePasswordRegistrationStep = ReactCompilerGating.isReactCompilerEn
                       c3 = 1;
                       c1 = 2;
                       c4 = 1;
-                      const obj7 = { value: tmp3(15874).scorePassword(tmp3), done: false };
+                      const obj7 = { value: tmp3(15878).scorePassword(tmp3), done: false };
                       return obj7;
                     }
                   }
@@ -242,7 +242,7 @@ export const usePasswordRegistrationStep = ReactCompilerGating.isReactCompilerEn
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {

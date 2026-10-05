@@ -100,7 +100,7 @@ export default noop.memo(
                       label: tmp11,
                       icon: tmp20,
                     };
-                    const tmp26 = jsx(tmp(16788).SearchListRow, {
+                    const tmp26 = jsx(tmp(16807).SearchListRow, {
                       onPress: tmp5,
                       accessibilityLabel: suggestedSearch.suggestedSearchText,
                       label: tmp11,
@@ -230,7 +230,7 @@ export default noop.memo(
             {jsx(suggestedSearch(6548).MagnifyingGlassIcon, { size: "sm", color: "icon-muted" })}
           </View>
         );
-        return jsx(suggestedSearch(16788).SearchListRow, {
+        return jsx(suggestedSearch(16807).SearchListRow, {
           onPress: callback,
           accessibilityLabel: suggestedSearch.suggestedSearchText,
           label: null,

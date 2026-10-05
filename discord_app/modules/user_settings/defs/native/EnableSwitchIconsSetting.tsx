@@ -35,7 +35,7 @@ const toggle = SettingBuilders.createToggle({
   },
   parent: fn(7634).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
-  onValueChange: fn(14275).setSwitchIconsEnabled,
+  onValueChange: fn(14277).setSwitchIconsEnabled,
   hasIcon: true,
 });
 const size = fn(2);

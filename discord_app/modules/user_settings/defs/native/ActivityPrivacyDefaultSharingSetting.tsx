@@ -197,7 +197,7 @@ const radio = SettingBuilders.createRadio({
       ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds } = affectedGuilds);
       obj2.settingName = activityRestrictionSettingName;
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(15814, dependencyMap.paths),
+        asyncRequireImpl(15818, dependencyMap.paths),
         "ActivityPrivacyUpsellActionSheet",
         obj2,
       );

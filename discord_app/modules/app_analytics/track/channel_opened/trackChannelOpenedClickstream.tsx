@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 
 export default function trackChannelOpenedClickstream(channelId) {
   channelId = channelId.channelId;
-  if (StaticChannelRoute.VIBEGRATIONS !== channelId) {
+  if (StaticChannelRoute.CONJURE !== channelId) {
     if (StaticChannelRoute.CHANNEL_BROWSER !== channelId) {
       if (StaticChannelRoute.GUILD_HOME !== channelId) {
         if (StaticChannelRoute.GUILD_SHOP !== channelId) {

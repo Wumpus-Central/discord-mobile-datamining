@@ -144,7 +144,7 @@ function getScreens(source) {
 }
 const AgeGateConstants = fn(1110);
 ({ AgeGateAnalyticAction: hasOwnProperty, AgeGateSource: metroRequire } = AgeGateConstants);
-let closure_7 = fn(17422).ExistingUserAgeGateScreens;
+let closure_7 = fn(17446).ExistingUserAgeGateScreens;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

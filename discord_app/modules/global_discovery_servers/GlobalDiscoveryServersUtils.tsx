@@ -29,7 +29,7 @@ let closure_13 = async function _navigateToGuild() {
     analyticsLocation: closure_129_4,
     options: closure_129_5,
   } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 const GlobalDiscoveryServersConstants = fn(9249);
 ({
@@ -216,15 +216,16 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "ix",
-    discoverySplash: null,
-    emojis: [],
+    preferredLocale: "unicodeVersion",
+    discoverySplash: "backgroundColor",
+    emojis: "Array",
   };
   ({
     approximate_presence_count: obj.presenceCount,
     approximate_member_count: obj.memberCount,
     discovery_splash: obj.discoverySplash,
   } = id);
+  obj.emojis = [];
   return obj;
 };
 export const getLanguageCodeFallback = function getLanguageCodeFallback() {

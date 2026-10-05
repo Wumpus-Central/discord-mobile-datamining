@@ -2708,7 +2708,7 @@ export default noop.memo(
         if (tmp6[0]) {
           obj2 = { value: tmp4(AnalyticsLocationDefault.VOICE_PANEL).analyticsLocations, children: null };
           const obj3 = { children: null };
-          const items3 = [closure_21(tmp2(17186), {}), ,];
+          const items3 = [closure_21(tmp2(17210), {}), ,];
           obj4 = { opacity, onPress: dismissPanel };
           items3[1] = closure_21(closure_98, obj4);
           const obj5 = { gesture: tmp11, children: null };
@@ -2724,11 +2724,11 @@ export default noop.memo(
           obj6.nativeID = "voice-panel-ui-" + channelId;
           obj6.layout = layoutTransition;
           obj6.onAccessibilityEscape = tmp2(8987);
-          const items4 = [closure_21(tmp2(17188), {}), , ,];
+          const items4 = [closure_21(tmp2(17212), {}), , ,];
           const obj7 = { wrapperOffset, children: null };
           const obj8 = { zIndex: 2, children: null };
           const obj9 = { wrapperOffset, gestureState, layout: layoutTransition };
-          obj8.children = closure_21(tmp2(17190), obj9);
+          obj8.children = closure_21(tmp2(17214), obj9);
           const items5 = [closure_21(channelId(6651).LayerScope, obj8)];
           const obj10 = { gesture, children: null };
           const obj11 = {
@@ -2737,7 +2737,7 @@ export default noop.memo(
             collapsable: false,
             children: null,
           };
-          const tmp2Result = tmp2(17187);
+          const tmp2Result = tmp2(17211);
           const obj12 = { gesture: scrollNativeGesture, children: null };
           const obj13 = {
             layout: scrollViewLayoutTransition,
@@ -2752,7 +2752,7 @@ export default noop.memo(
             children: null,
           };
           const obj14 = { viewableChunks };
-          const items6 = [closure_21(tmp2(17246), obj14), closure_21(tmp2(17278), {})];
+          const items6 = [closure_21(tmp2(17270), obj14), closure_21(tmp2(17302), {})];
           obj13.children = items6;
           obj12.children = closure_22(closure_35, obj13);
           obj11.children = closure_21(channelId(6140).GestureDetector, obj12);
@@ -2760,9 +2760,9 @@ export default noop.memo(
           items5[1] = closure_21(channelId(6140).GestureDetector, obj10);
           obj7.children = items5;
           items4[1] = closure_22(closure_94, obj7);
-          items4[2] = closure_21(tmp2(17282), {});
+          items4[2] = closure_21(tmp2(17306), {});
           const obj15 = { gestureState };
-          items4[3] = closure_21(tmp2(17288), obj15);
+          items4[3] = closure_21(tmp2(17312), obj15);
           obj6.children = items4;
           obj5.children = closure_22(tmp2Result, obj6);
           items3[2] = closure_21(channelId(6140).GestureDetector, obj5);

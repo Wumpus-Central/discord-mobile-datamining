@@ -151,9 +151,9 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "FRECENCY_SECTION_SET_SELECTION",
+          label: "CHANNEL_FOLLOWING_PUBLISH_BUMP_DISMISSED",
           externalChildren: null,
-          expandedChildren: "off",
+          expandedChildren: "bottom",
           children: null,
         };
         const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
@@ -171,9 +171,9 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "FRECENCY_SECTION_SET_SELECTION",
+          label: "CHANNEL_FOLLOWING_PUBLISH_BUMP_DISMISSED",
           externalChildren: null,
-          expandedChildren: "off",
+          expandedChildren: "bottom",
           children: null,
         });
       },

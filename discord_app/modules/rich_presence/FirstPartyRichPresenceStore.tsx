@@ -3,7 +3,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import DispatcherDefault from "../../Dispatcher.tsx";
 import _modDef1342 from "../../../_runtime/metro/01342__.js";
 import StageChannelSelfRichPresenceStoreDefault from "../stage_channels/StageChannelSelfRichPresenceStore.tsx";
-import VibegrationsRichPresenceStoreDefault from "../vibegrations/stores/VibegrationsRichPresenceStore.tsx";
+import ConjureRichPresenceStore from "../conjure/presence/ConjureRichPresenceStore.tsx";
 
 function updateActivities() {
   items = [];
@@ -22,7 +22,7 @@ function updateActivities() {
   }
   return flag;
 }
-let items = [StageChannelSelfRichPresenceStoreDefault, VibegrationsRichPresenceStoreDefault];
+let items = [StageChannelSelfRichPresenceStoreDefault, ConjureRichPresenceStore];
 items = [];
 const Store = initializeDefault.Store;
 class FirstPartyRichPresenceStore extends Store {}

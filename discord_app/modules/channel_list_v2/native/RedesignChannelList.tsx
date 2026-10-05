@@ -818,7 +818,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             if (tmpResult6.isFavoritesGuildId(tmp6)) {
               const _Symbol = Symbol;
               if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmpResult7 = tmp(16207);
+                const tmpResult7 = tmp(16211);
                 cResult[14] = tmpResult7;
                 let tmp30 = tmpResult7;
               } else {
@@ -924,7 +924,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               obj4.guild = stateFromStores;
               obj4.selectedChannelId = selectedChannelId;
               obj4.selectedVoiceChannelId = stateFromStores1;
-              return closure_16(tmp2(16207).default, obj4);
+              return closure_16(tmp2(16211).default, obj4);
             } else {
               if (tmp2Result2.shouldNSFWGateGuild(selectedGuildId)) {
                 const obj5 = { style: merged.style, guildId: selectedGuildId };

@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       fn.__workletHash = 5587342121093;
       fn.__initData = __initData2;
       const animatedStyle = obj2.useAnimatedStyle(fn);
-      bounty(14833);
+      bounty(14837);
       if (visible) {
         const obj4 = { style: null, children: null };
         const items = [tmp.container, animatedStyle];

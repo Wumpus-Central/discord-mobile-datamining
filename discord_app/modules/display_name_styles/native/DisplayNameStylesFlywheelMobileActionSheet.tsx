@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
       if (cResult[15] !== enabled) {
         let tmp24 = enabled;
         if (enabled) {
-          tmp24 = closure_9(tmp(17092).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+          tmp24 = closure_9(tmp(17116).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
         }
         class O {
           constructor() {
@@ -362,7 +362,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
   const obj9 = { style: tmp6.imageContainer, children: null };
   let tmp15Result = enabled;
   if (enabled) {
-    tmp15Result = closure_9(tmp2(17092).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+    tmp15Result = closure_9(tmp2(17116).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
   const items5 = [tmp15Result, ];
   if (enabled) {
@@ -409,14 +409,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
   } else {
     if (tmp2Result.isIOS()) {
       const obj16 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
-      const obj17 = { uri: tmp4(17094) };
+      const obj17 = { uri: tmp4(17118) };
       obj16.source = obj17;
       obj16.style = tmp6.image;
       obj16.enableAnimation = !enabled;
       let tmp15Result2 = closure_9(tmp4(5974), obj16);
       const tmp4Result = tmp4(5974);
     } else {
-      const obj18 = { url: tmp4(17094), style: tmp6.image, autoplay: true };
+      const obj18 = { url: tmp4(17118), style: tmp6.image, autoplay: true };
       tmp15Result2 = closure_9(tmp2(8464).APNGPlayer, obj18);
     }
     tmp2Result = tmp2(1369);

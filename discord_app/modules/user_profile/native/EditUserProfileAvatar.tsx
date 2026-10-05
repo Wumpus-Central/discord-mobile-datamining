@@ -108,7 +108,7 @@ export default function EditUserProfileAvatar(user) {
       };
     }
     obj2.handleEditAvatarDecorationSelect = fn;
-    const tmp3 = asyncRequireImpl(14433, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(14437, dependencyMap.paths);
     obj2.showRemoveAvatar = ProfileCustomizationUtils.showRemoveAvatar(pendingAvatar, user.avatar);
     obj.openLazy(tmp3, "Change Avatar", obj2);
     const tmp2Result = ProfileCustomizationUtils;

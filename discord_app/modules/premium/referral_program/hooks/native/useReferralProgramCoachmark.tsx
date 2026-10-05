@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import openUserSettings from "../../../../user_settings/core/native/openUserSettings.tsx";
-import _modDef16947 from "../../../../../../_runtime/metro/16947__.js";
+import _modDef16966 from "../../../../../../_runtime/metro/16966__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -26,8 +26,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(5);
       const tmp3 = closure_9();
       if (cResult[0] !== tmp3.coachmarkImage) {
-        const obj2 = { source: _modDef16947, style: tmp3.coachmarkImage };
-        const tmp8 = jsx(FastImageDefault, { source: _modDef16947, style: tmp3.coachmarkImage });
+        const obj2 = { source: _modDef16966, style: tmp3.coachmarkImage };
+        const tmp8 = jsx(FastImageDefault, { source: _modDef16966, style: tmp3.coachmarkImage });
         cResult[0] = tmp3.coachmarkImage;
         cResult[1] = tmp8;
         let tmp4 = tmp8;
@@ -50,8 +50,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       const tmp = closure_9();
       const obj = { style: tmp.coachmarkImageContainer, children: null };
-      const obj2 = { source: _modDef16947, style: tmp.coachmarkImage };
-      obj.children = jsx(FastImageDefault, { source: _modDef16947, style: tmp.coachmarkImage });
+      const obj2 = { source: _modDef16966, style: tmp.coachmarkImage };
+      obj.children = jsx(FastImageDefault, { source: _modDef16966, style: tmp.coachmarkImage });
       return <View style={tmp.coachmarkImageContainer}>{null}</View>;
     };
 ReactCompilerGating = fn(558);

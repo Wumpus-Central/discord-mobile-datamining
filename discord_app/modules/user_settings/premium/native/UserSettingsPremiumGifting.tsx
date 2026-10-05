@@ -16,7 +16,7 @@ import useStoreConnectionErrorAlertDefault from "../../../premium/native/useStor
 import BadgeId from "../../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import BadgeDirectoryActionCreators from "../../../badges/BadgeDirectoryActionCreators.tsx";
 import PremiumFeaturesCards from "PremiumFeaturesCards.tsx";
-import _modDef13361 from "../../../../../_runtime/metro/13361__.js";
+import _modDef13363 from "../../../../../_runtime/metro/13363__.js";
 import OutboundPromotionCardDefault from "../../../../components_native/premium/OutboundPromotionCard.tsx";
 import EntitlementGiftGroupCardDefault from "../../../../components_native/premium/EntitlementGiftGroupCard.tsx";
 import PremiumTierCardDefault from "../../../../components_native/premium/PremiumTierCard.tsx";
@@ -146,7 +146,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
         return enabled.getGiftable();
       }
     }
-    const outboundPromotions = tmp(13360).useOutboundPromotions();
+    const outboundPromotions = tmp(13362).useOutboundPromotions();
     const promotionsLoaded = outboundPromotions.promotionsLoaded;
     const activeOutboundPromotions = outboundPromotions.activeOutboundPromotions;
     closure_7 = outboundPromotions.claimedEndedOutboundPromotions;
@@ -181,13 +181,13 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
       tmp20 = cResult[8];
       tmp21 = cResult[9];
     }
-    const tmpResult8 = tmp(13360);
+    const tmpResult8 = tmp(13362);
     const stateFromStores = tmp(504).useStateFromStores(tmp20, tmp21);
     const tmp25 = navigation(noop.useState(false), 2);
     closure_10 = tmp25[0];
     constants2 = tmp25[1];
     const tmpResult9 = tmp(504);
-    const subscriptionPlansLoaded = tmp(13203).useSubscriptionPlansLoaded();
+    const subscriptionPlansLoaded = tmp(13205).useSubscriptionPlansLoaded();
     const _Symbol4 = Symbol;
     if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
       class X {
@@ -345,7 +345,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     }
     function st() {
       const obj = { style: closure_2.emptyGiftLinks, children: null };
-      const items = [state(hasOwnProperty, { style: closure_2.emptyImage, source: _modDef13361 }), ];
+      const items = [state(hasOwnProperty, { style: closure_2.emptyImage, source: _modDef13363 }), ];
       const obj3 = { style: closure_2.emptyGiftDescription, accessible: true, children: null };
       const obj4 = { style: closure_2.emptyGiftHeader, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
@@ -366,7 +366,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     cResult[22] = tmp7.emptyGiftLinks;
     cResult[23] = tmp7.emptyImage;
     cResult[24] = st;
-    const tmpResult10 = tmp(13203);
+    const tmpResult10 = tmp(13205);
   }
   const tmpResult6 = recipientUserId(504);
 }) : ((arg0, ref) => {

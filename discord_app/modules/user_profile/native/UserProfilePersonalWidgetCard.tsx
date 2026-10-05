@@ -867,26 +867,26 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
       type = userId.type;
       if ("cover" === type) {
         tmp6 = jsx;
-        tmp7 = f46809;
+        tmp7 = f46832;
         obj1 = { userId: null, section: null, disableInteraction: null };
         tmp8 = userId;
         obj1.userId = userId;
         obj1.section = userId;
         tmp9 = disableInteraction;
         obj1.disableInteraction = disableInteraction;
-        return jsx(f46809, obj1, arg1);
+        return jsx(f46832, obj1, arg1);
       } else {
         str = "fields";
         if ("fields" === type) {
           tmp2 = jsx;
-          tmp3 = f46813;
+          tmp3 = f46836;
           obj = { userId: null, section: null, disableInteraction: null };
           tmp4 = userId;
           obj.userId = userId;
           obj.section = userId;
           tmp5 = disableInteraction;
           obj.disableInteraction = disableInteraction;
-          return jsx(f46813, obj, arg1);
+          return jsx(f46836, obj, arg1);
         } else {
           tmp = null;
           return null;

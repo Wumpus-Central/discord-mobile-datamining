@@ -8,7 +8,7 @@ import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx
 import NativePaymentHooksDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
 import useStoreFrontPriceDefault from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import _modDef16494 from "../../../../../_runtime/metro/16494__.js";
+import _modDef16498 from "../../../../../_runtime/metro/16498__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -309,7 +309,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp5 = cResult[2];
         }
         if (cResult[3] !== tmp4.arrowButtonIcon) {
-          const obj2 = { size: native.Icon.Sizes.SMALL, source: _modDef16494, style: tmp4.arrowButtonIcon };
+          const obj2 = { size: native.Icon.Sizes.SMALL, source: _modDef16498, style: tmp4.arrowButtonIcon };
           const tmp10 = closure_1_11(native.Icon, obj2);
           cResult[3] = tmp4.arrowButtonIcon;
           cResult[4] = tmp10;
@@ -361,7 +361,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.arrowButtonText,
           children: text,
         }),
-        closure_1_11(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef16494, style: tmp.arrowButtonIcon }),
+        closure_1_11(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef16498, style: tmp.arrowButtonIcon }),
       ];
       obj.children = items;
       return __initData(Pressables.PressableOpacity, obj);

@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[1];
       }
       const tmp5 = _slicedToArray(noop.useState(false), 2);
-      const twoFASetupStyles = totpSecret(14567).useTwoFASetupStyles();
+      const twoFASetupStyles = totpSecret(14571).useTwoFASetupStyles();
       if (cResult[2] === twoFASetupStyles.modalHeader) {
         if (cResult[3] === twoFASetupStyles.text) {
           let tmp10 = cResult[4];
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const items = [tmp14, tmp20, tmp24, tmp33];
                 obj7.children = items;
                 obj6.children = closure_5(tmp(6619).SafeAreaPaddingView, obj7);
-                const tmp39 = closure_4(tmp(14563).TwoFASetupModalScreen, obj6);
+                const tmp39 = closure_4(tmp(14567).TwoFASetupModalScreen, obj6);
                 cResult[25] = tmp4.container;
                 cResult[26] = tmp24;
                 cResult[27] = tmp33;
@@ -173,7 +173,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = twoFASetupStyles.text;
       cResult[4] = items2;
       tmp10 = items2;
-      const tmpResult = totpSecret(14567);
+      const tmpResult = totpSecret(14571);
     }
   : (totpSecret) => {
       totpSecret = totpSecret.totpSecret;
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         closure_1(true);
         ClipboardUtils.copy(totpSecret.replace(/[^a-zA-Z0-9]/g, ""));
       }, items);
-      const twoFASetupStyles = totpSecret(14567).useTwoFASetupStyles();
+      const twoFASetupStyles = totpSecret(14571).useTwoFASetupStyles();
       const obj2 = { bottom: true, style: tmp.container, children: null };
       const obj3 = { style: null, children: null };
       const items1 = [,];
@@ -222,5 +222,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items2[3] = closure_4(totpSecret(5909).PressableOpacity, obj5);
       obj2.children = items2;
       obj7.children = closure_5(totpSecret(6619).SafeAreaPaddingView, obj2);
-      return closure_4(totpSecret(14563).TwoFASetupModalScreen, obj7);
+      return closure_4(totpSecret(14567).TwoFASetupModalScreen, obj7);
     };

@@ -8,7 +8,7 @@ function getCoinEntitlements() {
 }
 const EntitlementTypes = fn(1085).EntitlementTypes;
 const jsx = fn(21).jsx;
-const SINGLE_ORB_SKU_ID = fn(13144).SINGLE_ORB_SKU_ID;
+const SINGLE_ORB_SKU_ID = fn(13146).SINGLE_ORB_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_marketing/native/premiumOrbsDeliveredModal.tsx");
 
@@ -56,7 +56,7 @@ export const openOrbsModalIfDelivered = function openOrbsModalIfDelivered() {
         importDefault = tmp4;
         const obj2 = {
           importer() {
-            return Promise.resolve((onClose) => jsx(orbsAmount(13145), { orbsAmount, onClose: onClose.onClose }));
+            return Promise.resolve((onClose) => jsx(orbsAmount(13147), { orbsAmount, onClose: onClose.onClose }));
           },
           isDismissable: false,
         };

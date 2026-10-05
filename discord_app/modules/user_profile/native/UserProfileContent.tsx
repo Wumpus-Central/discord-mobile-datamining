@@ -18,7 +18,7 @@ import UserProfileActivityDefault from "UserProfileActivity.tsx";
 import UserProfileModeratorActionsDefault from "UserProfileModeratorActions.tsx";
 import UserProfileNoteDefault from "UserProfileNote.tsx";
 import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice.tsx";
-import VibegrationsCustomWidgetAddOptionDefault from "../../vibegrations/native/VibegrationsCustomWidgetAddOption.tsx";
+import ConjureCustomWidgetAddOptionDefault from "../../conjure/custom_widget/native/ConjureCustomWidgetAddOption.tsx";
 import UserProfileActivityTabDefault from "UserProfileActivityTab.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
 import WishlistUtils from "../../wishlists/WishlistUtils.tsx";
@@ -906,7 +906,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = C;
         tmp14 = C;
       }
-      const fn2 = function v() {
+      const fn2 = function b() {
         trackUserProfileAction({ action: "EDIT_PROFILE" });
         ActionSheetActionCreatorsDefault.hideAllActionSheets();
         closeVoicePanelsDefault();
@@ -1007,7 +1007,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[7] !== isCurrentUser) {
           let tmp11 = isCurrentUser;
           if (isCurrentUser) {
-            tmp11 = closure_1_20(VibegrationsCustomWidgetAddOptionDefault, {});
+            tmp11 = closure_1_20(ConjureCustomWidgetAddOptionDefault, {});
           }
           cResult[7] = isCurrentUser;
           cResult[8] = tmp11;
@@ -1068,7 +1068,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const items1 = [tmp6, ,];
       if (isCurrentUser) {
-        isCurrentUser = closure_1_20(VibegrationsCustomWidgetAddOptionDefault, {});
+        isCurrentUser = closure_1_20(ConjureCustomWidgetAddOptionDefault, {});
       }
       items1[1] = isCurrentUser;
       items1[2] = closure_1_20(UserProfileWidgetsBoardDefault, { userId, isVisible, cardStyle: items });
@@ -1635,8 +1635,7 @@ export default noop.memo(
         const displayableBoardWidgets = user(guildId[71]).useDisplayableBoardWidgets(user.id);
         const tmp6Result35 = user(guildId[71]);
         const tmp37 =
-          displayableBoardWidgets.length > 0 ||
-          user(guildId[72]).useCanConjureVibegrationsCustomWidget("UserProfileContent", tmp9);
+          displayableBoardWidgets.length > 0 || user(guildId[72]).useCanConjureCustomWidget("UserProfileContent", tmp9);
         closure_25 = tmp37;
         const tmp6Result36 = user(guildId[72]);
         const tmp38 =

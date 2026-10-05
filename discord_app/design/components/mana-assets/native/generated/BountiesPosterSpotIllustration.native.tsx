@@ -2,7 +2,7 @@
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef14868 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BountiesPosterSpotIllustration-2x.png.js";
+import _modDef14872 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BountiesPosterSpotIllustration-2x.png.js";
 import ReactCompilerGating from "../../../../../modules/react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
@@ -28,7 +28,7 @@ export const BountiesPosterSpotIllustration = ReactCompilerGating.isReactCompile
         num3 = scale;
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef14868 };
+        const obj2 = { uri: _modDef14872 };
         cResult[0] = obj2;
         let first = obj2;
       } else {
@@ -94,7 +94,7 @@ export const BountiesPosterSpotIllustration = ReactCompilerGating.isReactCompile
         accessibilityLabel: null,
         resizeMode: null,
       };
-      const obj2 = { uri: _modDef14868 };
+      const obj2 = { uri: _modDef14872 };
       obj.source = obj2;
       const size = { width: num * num3, height: num2 * num3 };
       const items = [size];

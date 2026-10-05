@@ -15,7 +15,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -94,7 +94,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
         return obj;
       }
       c5 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     } catch (tmp35) {
       c5 = tmp;
       throw tmp35;

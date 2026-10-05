@@ -14,7 +14,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = subtitleStyles(576).c(16);
       ({ guild, channel, channelName, count } = arg0);
       const obj = subtitleStyles(576);
-      subtitleStyles = subtitleStyles(16261).useSubtitleStyles();
+      subtitleStyles = subtitleStyles(16265).useSubtitleStyles();
       if (cResult[0] === channel) {
         if (cResult[1] === guild) {
           let tmp5 = cResult[2];
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = guild;
       cResult[2] = channelIconComponentWithGuild;
       tmp5 = channelIconComponentWithGuild;
-      const obj2 = subtitleStyles(16261);
+      const obj2 = subtitleStyles(16265);
     }
   : (arg0) => {
       ({ channel, channelName } = arg0);

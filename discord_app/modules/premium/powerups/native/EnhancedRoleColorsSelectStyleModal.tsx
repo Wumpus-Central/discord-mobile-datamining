@@ -12,7 +12,7 @@ import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/B
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import RowGeneratorDefault from "../../../messages/native/renderer/RowGenerator.tsx";
 import enhanced_role_colors_EnhancedRoleColorUtils from "../../enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
-import _modDef13133 from "../../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
+import _modDef13135 from "../../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
 import GuildSettingsRoleConstants from "../../../guild_settings/roles/GuildSettingsRoleConstants.tsx";
 import GuildSettingsRolesStore from "../../../guild_settings/roles/GuildSettingsRolesStore.tsx";
 import EnhancedRoleColorConstants from "../constants/EnhancedRoleColorConstants.tsx";
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       const obj2 = roleStyle(5793);
-      const guildSettingsRoleExampleMessage = roleStyle(17776).useGuildSettingsRoleExampleMessage(first);
+      const guildSettingsRoleExampleMessage = roleStyle(17800).useGuildSettingsRoleExampleMessage(first);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp13 = new tmp4(7591)();
         cResult[1] = tmp13;
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
               message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
               message.message.shouldShowRoleOnName = true;
-              message.message.avatarURL = _modDef13133;
+              message.message.avatarURL = _modDef13135;
             },
           }),
         ];
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = tmp5.text;
       cResult[12] = mapped;
       tmp20 = mapped;
-      const tmpResult = roleStyle(17776);
+      const tmpResult = roleStyle(17800);
     }
   : (arg0) => {
       ({ roleStyle: require, onStyleChanged: importDefault } = arg0);
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
                   message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
                   message.message.shouldShowRoleOnName = true;
-                  message.message.avatarURL = _modDef13133;
+                  message.message.avatarURL = _modDef13135;
                 },
               }),
             ];

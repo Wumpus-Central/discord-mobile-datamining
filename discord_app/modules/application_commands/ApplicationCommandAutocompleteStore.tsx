@@ -70,7 +70,7 @@ prototype["getLastErrored"] = function getLastErrored(id) {
       optionNameToLastQuery: null,
       optionNameToContextKey: null,
       lastErrored: false,
-      lastResponseNonce: "unicodeVersion",
+      lastResponseNonce: "code",
     };
     const _Map = Map;
     map = new Map();
@@ -107,7 +107,7 @@ prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, 
       optionNameToLastQuery: null,
       optionNameToContextKey: null,
       lastErrored: false,
-      lastResponseNonce: "unicodeVersion",
+      lastResponseNonce: "code",
     };
     const _Map = Map;
     map = new Map();
@@ -150,7 +150,7 @@ prototype["getAutocompleteLastChoices"] = function getAutocompleteLastChoices(id
       optionNameToLastQuery: null,
       optionNameToContextKey: null,
       lastErrored: false,
-      lastResponseNonce: "unicodeVersion",
+      lastResponseNonce: "code",
     };
     const _Map = Map;
     map = new Map();
@@ -187,7 +187,7 @@ prototype["getLastResponseNonce"] = function getLastResponseNonce(id) {
       optionNameToLastQuery: null,
       optionNameToContextKey: null,
       lastErrored: false,
-      lastResponseNonce: "unicodeVersion",
+      lastResponseNonce: "code",
     };
     const _Map = Map;
     map = new Map();
@@ -230,7 +230,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
         optionNameToLastQuery: null,
         optionNameToContextKey: null,
         lastErrored: false,
-        lastResponseNonce: "unicodeVersion",
+        lastResponseNonce: "code",
       };
       const _Map = Map;
       map = new Map();
@@ -323,7 +323,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
           optionNameToLastQuery: null,
           optionNameToContextKey: null,
           lastErrored: false,
-          lastResponseNonce: "unicodeVersion",
+          lastResponseNonce: "code",
         };
         const _Map = Map;
         map = new Map();
@@ -450,7 +450,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
             optionNameToLastQuery: null,
             optionNameToContextKey: null,
             lastErrored: false,
-            lastResponseNonce: "unicodeVersion",
+            lastResponseNonce: "code",
           };
           const _Map = Map;
           map = new Map();

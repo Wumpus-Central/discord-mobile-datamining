@@ -37,7 +37,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[0] !== bot) {
           let tmp6 = null;
           if (null != bot) {
-            const obj3 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "Array" };
+            const obj3 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "r" };
             tmp6 = timestampProducer(native.Avatar, obj3);
           }
           cResult[0] = bot;
@@ -80,7 +80,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         const bot = getOrFetchApplicationBatched.bot;
         let tmp6Result = null;
         if (null != bot) {
-          const obj2 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "Array" };
+          const obj2 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "r" };
           tmp6Result = timestampProducer(native.Avatar, obj2);
         }
         const obj3 = { icon: tmp6Result, label: getOrFetchApplicationBatched.name, subLabel: null, onPress: null };
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj2 = {
                       user: application.bot,
                       size: addConnection(excludedApplications[7]).AvatarSizes.XSMALL,
-                      guildId: "Array",
+                      guildId: "r",
                     };
                     obj.icon = closure_1_6(addConnection(excludedApplications[7]).Avatar, obj2);
                     obj.label = application.name;
@@ -476,7 +476,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp = null;
           if (null != application) {
             const obj = { icon: null, label: null, subLabel: null, onPress: null };
-            const obj2 = { user: application.bot, size: require("native").AvatarSizes.XSMALL, guildId: "Array" };
+            const obj2 = { user: application.bot, size: require("native").AvatarSizes.XSMALL, guildId: "r" };
             obj.icon = closure_1_6(require("native").Avatar, obj2);
             obj.label = application.name;
             let description;

@@ -388,7 +388,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       const tmp = closure_8();
-      skuId = skuId(12988).useOrbCheckoutModalContext().skuId;
+      skuId = skuId(12990).useOrbCheckoutModalContext().skuId;
       const items = [skuId];
       const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);
       return closure_6(skuId(4886).Text, {

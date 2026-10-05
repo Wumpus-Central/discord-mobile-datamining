@@ -11,7 +11,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ConsoleVoiceUpsellStore = fn(17235);
+const ConsoleVoiceUpsellStore = fn(17259);
 ({ setVoiceUpsellDismissed: hasOwnProperty, useConsoleVoiceUpsellStore: metroRequire } = ConsoleVoiceUpsellStore);
 let VoicePanelControlsModes = fn(11900).VoicePanelControlsModes;
 const ContentDismissActionType = fn(2048).ContentDismissActionType;

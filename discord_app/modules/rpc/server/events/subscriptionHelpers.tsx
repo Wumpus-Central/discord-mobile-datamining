@@ -4,6 +4,7 @@ import QuestTaskUtils from "../../../quests/utils/QuestTaskUtils.tsx";
 import useThermalState from "../../../device/useThermalState.tsx";
 import activityInstanceConnectedParticipants from "../../helpers/activityInstanceConnectedParticipants.tsx";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
+import ConjureBuilderPreviewStore from "../../../conjure/preview/ConjureBuilderPreviewStore.tsx";
 import FramesStore from "../../../frames/FramesStore.tsx";
 import QuestStore from "../../../quests/QuestStore.tsx";
 

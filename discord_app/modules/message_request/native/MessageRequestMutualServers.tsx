@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp3 = closure_6();
       const obj = iconSize(576);
-      const mutualGuildsForMessageRequests = PressableOpacity(17036).useMutualGuildsForMessageRequests(userId);
+      const mutualGuildsForMessageRequests = PressableOpacity(17060).useMutualGuildsForMessageRequests(userId);
       if (cResult[0] === mutualGuildsForMessageRequests.length) {
         if (cResult[1] === iconSize) {
           if (cResult[2] === mutualGuildsForMessageRequests) {
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[13] = items1;
         tmp12 = items1;
       }
-      const PressableOpacityResult = PressableOpacity(17036);
+      const PressableOpacityResult = PressableOpacity(17060);
     }
   : (textVariant) => {
       ({ onPress, iconSize } = textVariant);
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const suffix = textVariant.suffix;
       const tmp3 = closure_6();
-      const mutualGuildsForMessageRequests = iconSize(17036).useMutualGuildsForMessageRequests(userId);
+      const mutualGuildsForMessageRequests = iconSize(17060).useMutualGuildsForMessageRequests(userId);
       const substr = mutualGuildsForMessageRequests.slice(0, 3);
       if (mutualGuildsForMessageRequests.length > 0) {
         const intl2 = tmp4(1126).intl;

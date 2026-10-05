@@ -343,7 +343,7 @@ export default noop.memo(
           tmp12 = !isChangelogChannelDefault(channel.id);
         }
         const tmpResult = channel(504);
-        const tmpResult3 = channel(15959);
+        const tmpResult3 = channel(15963);
         let id = stateFromStores;
         if (stateFromStores == null) {
           id = channel.id;

@@ -32,9 +32,9 @@ function VCButton(balance) {
   let color;
   const tmp = closure_17();
   noop = tmp;
-  const virtualCurrencyData = balance(12984).useVirtualCurrencyData(product, flag);
+  const virtualCurrencyData = balance(12986).useVirtualCurrencyData(product, flag);
   ({ price, canAfford } = virtualCurrencyData);
-  let obj = balance(12984);
+  let obj = balance(12986);
   let isPartiallyOwnedBundle = balance(8531).useProductDisableState(product.skuId).isDisabled;
   let obj2 = balance(8531);
   if (!isPartiallyOwnedBundle) {
@@ -50,7 +50,7 @@ function VCButton(balance) {
   closure_7 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(12987, dependencyMap.paths),
+      asyncRequireImpl(12989, dependencyMap.paths),
       {
         skuId: product.skuId,
         analyticsLocations,
@@ -66,7 +66,7 @@ function VCButton(balance) {
               },
               orbBalancePriorToPurchase,
             };
-            product(5093).pushLazy(balance(1987)(12991, dependencyMap.paths), obj3, modalKey);
+            product(5093).pushLazy(balance(1987)(12993, dependencyMap.paths), obj3, modalKey);
             const tmp4Result = product(5093);
           } else {
             const ALL = balance(1088).FractionalPremiumSKUsSets.ALL;
@@ -96,11 +96,11 @@ function VCButton(balance) {
                 product(4854).hideActionSheet();
               };
               tmp4Result3.openLazy(
-                balance(1987)(12992, dependencyMap.paths),
+                balance(1987)(12994, dependencyMap.paths),
                 "FractionalNitroCollectedActionSheet",
                 obj4,
               );
-              const tmp10 = balance(1987)(12992, dependencyMap.paths);
+              const tmp10 = balance(1987)(12994, dependencyMap.paths);
             } else {
               const obj5 = {
                 product,

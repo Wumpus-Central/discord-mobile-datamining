@@ -20,7 +20,7 @@ import QuestCopyUtils from "../utils/QuestCopyUtils.tsx";
 import QuestUtils from "QuestUtils.native.tsx";
 import QuestPlatformUtils from "../utils/QuestPlatformUtils.tsx";
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx";
-import _modDef14952 from "../../../../_runtime/metro/14952__.js";
+import _modDef14956 from "../../../../_runtime/metro/14956__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import QuestStore from "../QuestStore.tsx";
@@ -436,7 +436,7 @@ export default noop.memo(
           const intl = util.intl;
           obj2.label = intl.string(util.t.GcsZKJ);
           obj2.action = callback2;
-          obj2.iconSource = _modDef14952;
+          obj2.iconSource = _modDef14956;
           items[1] = obj2;
           if (flag) {
             const obj3 = { label: null, IconComponent: null, action: null };

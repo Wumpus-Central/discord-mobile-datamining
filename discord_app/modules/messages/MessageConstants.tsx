@@ -77,7 +77,7 @@ export const MessageSendLocation = {
   PRIVATE_MESSAGE_COMMAND: "private_message_command",
   POLL_CREATION: "poll_creation",
   SHARE_CUSTOM_THEME: "share_custom_theme",
-  VIBEGRATIONS_PATCH_NOTES: "vibegrations_patch_notes",
+  CONJURE_PATCH_NOTES: "vibegrations_patch_notes",
   GIF_REPLY: "gif_reply",
   STICKER_REPLY: "sticker_reply",
   SEND_WAVE: "send_wave",

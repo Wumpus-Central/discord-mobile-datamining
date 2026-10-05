@@ -176,11 +176,7 @@ AlertWrapper.prototype["render"] = function render() {
   return __initData2(Dialog.Dialog, obj2);
 };
 AlertWrapper.contextType = fn(4589).ThemeContext;
-let closure_18 = Object.freeze({
-  renderAlert: "done",
-  renderKey: "toCharArray$esjava$1",
-  props: "toCharArray$esjava$1",
-});
+let closure_18 = Object.freeze({ renderAlert: "marginBottom", renderKey: "unicodeVersion", props: "Reflect" });
 const ReactCompilerGating = fn(558);
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
@@ -218,7 +214,7 @@ export default noop.memo(
                   return <openModal.component />;
                 };
               } else {
-                return { renderAlert: "done", renderKey: "toCharArray$esjava$1", props: "toCharArray$esjava$1" };
+                return { renderAlert: "marginBottom", renderKey: "unicodeVersion", props: "Reflect" };
               }
             }
           };
@@ -378,7 +374,7 @@ export default noop.memo(
                 return <openModal.component />;
               };
             } else {
-              return { renderAlert: "done", renderKey: "toCharArray$esjava$1", props: "toCharArray$esjava$1" };
+              return { renderAlert: "marginBottom", renderKey: "unicodeVersion", props: "Reflect" };
             }
           }
         });

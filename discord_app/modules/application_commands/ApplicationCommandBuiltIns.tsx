@@ -578,7 +578,7 @@ let closure_14 = asyncGeneratorStep(async (arg0, arg1) => {
     closure_4 = tmp2;
     closure_132_0 = closure_0;
     channel2 = channel.channel;
-    return "Reflect";
+    return "Set";
   })();
   iter.next();
   return iter;
@@ -671,7 +671,7 @@ obj21.execute = function execute(arr, guild) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -926,7 +926,7 @@ obj24.execute = function execute(arr, guild) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1142,7 +1142,7 @@ obj28.execute = function execute(arr, guild) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1343,7 +1343,7 @@ obj32.execute = function execute(arr, channel) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1385,7 +1385,7 @@ obj32.execute = function execute(arr, channel) {
           return obj;
         } else {
           c0 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp8) {
         c0 = tmp;

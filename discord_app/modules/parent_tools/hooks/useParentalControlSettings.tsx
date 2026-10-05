@@ -349,7 +349,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -440,7 +440,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -538,7 +538,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       const selectedTeen = controlledSetting(8297).useSelectedTeen();
-      const ParentalControlledFriendSourceFlags = controlledSetting(14622).ParentalControlledFriendSourceFlags;
+      const ParentalControlledFriendSourceFlags = controlledSetting(14626).ParentalControlledFriendSourceFlags;
       let id;
       if (selectedTeen != null) {
         id = selectedTeen.id;

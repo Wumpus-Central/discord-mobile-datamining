@@ -14,7 +14,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -47,7 +47,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
           let guild3;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -114,7 +114,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
               }
             }
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {

@@ -21,12 +21,12 @@ import PaymentFlowStartedTriggerPoint from "../../experiments/trigger_points/Pay
 import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet.tsx";
 import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet.tsx";
 import TreasureChestBannerSpotIllustration from "../../../design/components/mana-assets/native/generated/TreasureChestBannerSpotIllustration.native.tsx";
-import _modDef13349 from "../../../../_runtime/metro/13349__.js";
-import _modDef13350 from "../../../../_runtime/metro/13350__.js";
 import _modDef13351 from "../../../../_runtime/metro/13351__.js";
 import _modDef13352 from "../../../../_runtime/metro/13352__.js";
 import _modDef13353 from "../../../../_runtime/metro/13353__.js";
 import _modDef13354 from "../../../../_runtime/metro/13354__.js";
+import _modDef13355 from "../../../../_runtime/metro/13355__.js";
+import _modDef13356 from "../../../../_runtime/metro/13356__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -205,7 +205,7 @@ function withCurrentPlanAlternative(plans, productIdFromSubscription, productIdF
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
 let useNativeCheckoutStore = fn(6930).useNativeCheckoutStore;
-const PremiumPlanSelectStore = fn(13346);
+const PremiumPlanSelectStore = fn(13348);
 ({ setIsPurchasing: closure_14, usePremiumPlanSelectStore: closure_15 } = PremiumPlanSelectStore);
 const PremiumConstants = fn(1379);
 ({ GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_16, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_17, PRICE_PLACEHOLDER: closure_18, PremiumSubscriptionSKUs: closure_19, PremiumTypes: closure_20, SubscriptionIntervalTypes: closure_21, SubscriptionPlans: closure_22 } = PremiumConstants);
@@ -355,7 +355,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj.children = items;
   return __initData5(Stack_Stack.Stack, obj);
 });
-let closure_37 = { [_modDef13352]: "imgWumpusNitro", [_modDef13354]: "imgWumpusNitroBoost", [_modDef13351]: "imgWumpusNitroClassic", [_modDef13353]: "imgWumpusNitroClassicBoost", [_modDef13350]: "imgWumpusNitroTier0", [_modDef13349]: "imgBoost" };
+let closure_37 = { [_modDef13354]: "imgWumpusNitro", [_modDef13356]: "imgWumpusNitroBoost", [_modDef13353]: "imgWumpusNitroClassic", [_modDef13355]: "imgWumpusNitroClassicBoost", [_modDef13352]: "imgWumpusNitroTier0", [_modDef13351]: "imgBoost" };
 ReactCompilerGating = fn(558);
 let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const cResult = c.c(8);
@@ -721,21 +721,21 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? ((plan) => {
     tmp20 = 0 !== plan.numPremiumGuild;
   }
   if (null == plan.premiumTier) {
-    let tmp7Result = require("../../../../_runtime/metro/13349__.js");
+    let tmp7Result = require("../../../../_runtime/metro/13351__.js");
   } else if (0 !== plan.numPremiumGuild) {
     if (plan.premiumTier === closure_20.TIER_1) {
-      tmp7Result = require("../../../../_runtime/metro/13353__.js");
+      tmp7Result = require("../../../../_runtime/metro/13355__.js");
     } else {
-      tmp7Result = require("../../../../_runtime/metro/13354__.js");
+      tmp7Result = require("../../../../_runtime/metro/13356__.js");
     }
   } else {
     const premiumTier = plan.premiumTier;
     if (closure_20.TIER_0 === premiumTier) {
-      tmp7Result = require("../../../../_runtime/metro/13350__.js");
-    } else if (closure_20.TIER_1 === premiumTier) {
-      tmp7Result = require("../../../../_runtime/metro/13351__.js");
-    } else if (closure_20.TIER_2 === premiumTier) {
       tmp7Result = require("../../../../_runtime/metro/13352__.js");
+    } else if (closure_20.TIER_1 === premiumTier) {
+      tmp7Result = require("../../../../_runtime/metro/13353__.js");
+    } else if (closure_20.TIER_2 === premiumTier) {
+      tmp7Result = require("../../../../_runtime/metro/13354__.js");
     }
   }
   const intl2 = tmp5(subscription[22]).intl;
@@ -1826,7 +1826,7 @@ let closure_46 = noop.forwardRef(function PremiumPlanSelect(isBoostPurchaseFlow,
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

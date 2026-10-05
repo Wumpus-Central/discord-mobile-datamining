@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const fn4 = function b() {
-                return closure_0(13089).default;
+                return closure_0(13091).default;
               };
               cResult[13] = T;
               cResult[14] = fn4;
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         });
       };
       obj4.getComponent = function getComponent() {
-        return closure_0(13089).default;
+        return closure_0(13091).default;
       };
       items[1] = closure_6(closure_8.Screen, obj4);
       obj2.children = items;

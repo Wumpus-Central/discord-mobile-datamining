@@ -13,7 +13,7 @@ let closure_4 = async function _createStripeSetupIntent() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -37,7 +37,7 @@ let closure_4 = async function _createStripeSetupIntent() {
           closure_129_0 = obj4;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -89,7 +89,7 @@ let closure_5 = async function _createSetupIntentForPaymentElements() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -113,7 +113,7 @@ let closure_5 = async function _createSetupIntentForPaymentElements() {
           closure_129_0 = obj4;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

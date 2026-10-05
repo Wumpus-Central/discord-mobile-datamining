@@ -4902,7 +4902,7 @@ export const useManuallyStartConsoleQuest = function useManuallyStartConsoleQues
           obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -5047,7 +5047,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -5126,7 +5126,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0
               v0(false);
             }
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp34) {
           closure_2 = tmp34;

@@ -492,7 +492,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       return;
                     }
                   }
-                  const tmp33 = closure_8(tmp(14906).UndoIcon, {});
+                  const tmp33 = closure_8(tmp(14910).UndoIcon, {});
                   cResult[23] = tmp33;
                   const tmp32 = tmp33;
                 } else {
@@ -632,7 +632,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     label: "Refresh Organic Serve",
                     subLabel:
                       "Re-runs the dock decision without clearing delivery state. Use to confirm a cooldown still blocks.",
-                    icon: closure_8(tmp(14904).RedoIcon, {}),
+                    icon: closure_8(tmp(14908).RedoIcon, {}),
                     onPress: D,
                   };
                   const tmp37 = closure_8(tmp(5993).TableRow, obj4);
@@ -851,7 +851,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -871,7 +871,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         toast("No dock bounty in memory. Pick a lookback window.", "bounty-qa-missing-id");
                         c2 = 0;
                         c3 = 3;
-                        return { value: "IconComponent", done: "IconComponent" };
+                        return { value: "IconComponent", done: null };
                       } else {
                         c1 = 3;
                         c3 = 1;
@@ -1035,7 +1035,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -1055,7 +1055,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     toast("No dock bounty in memory. Pick a lookback window.", "bounty-qa-missing-id");
                     dependencyMap = 0;
                     c3 = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   } else {
                     c1 = 3;
                     c3 = 1;
@@ -1202,7 +1202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           label: "Reset and re-serve",
           subLabel:
             "Clears serve, dismiss, claim, and impression for the selected scope, then asks the dock for a new decision.",
-          icon: closure_8(stateFromStores(14906).UndoIcon, {}),
+          icon: closure_8(stateFromStores(14910).UndoIcon, {}),
           onPress: function handleResetAndRefresh() {
             const self = this;
             const apply = closure_2.apply;
@@ -1220,7 +1220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         label: "Reset and re-serve",
         subLabel:
           "Clears serve, dismiss, claim, and impression for the selected scope, then asks the dock for a new decision.",
-        icon: closure_8(stateFromStores(14906).UndoIcon, {}),
+        icon: closure_8(stateFromStores(14910).UndoIcon, {}),
         onPress: function handleResetAndRefresh() {
           const self = this;
           const apply = closure_2.apply;
@@ -1235,7 +1235,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items6[1] = closure_8(stateFromStores(5993).TableRow, {
         label: "Refresh Organic Serve",
         subLabel: "Re-runs the dock decision without clearing delivery state. Use to confirm a cooldown still blocks.",
-        icon: closure_8(stateFromStores(14904).RedoIcon, {}),
+        icon: closure_8(stateFromStores(14908).RedoIcon, {}),
         onPress: function handleRefreshOrganicServe() {
           const questToDeliver = stateFromStores(9994).fetchQuestToDeliver(
             stateFromStores(5626).AdPlacement.MOBILE_HOME_DOCK_AREA,

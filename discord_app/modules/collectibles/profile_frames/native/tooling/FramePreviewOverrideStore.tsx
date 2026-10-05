@@ -56,7 +56,7 @@ let closure_11 = async function _buildOverride(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       while (true) {
@@ -249,7 +249,7 @@ export const useFramePreviewOverrideStore = module_570.create((arg0) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -296,7 +296,7 @@ export const useFramePreviewOverrideStore = module_570.create((arg0) => {
           closure_128_5 = closure_2;
           if (closure_128_1()) {
             c5 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           } else {
             const _Error = Error;
             if (closure_128_5 instanceof Error) {
@@ -324,7 +324,7 @@ export const useFramePreviewOverrideStore = module_570.create((arg0) => {
             if (closure_128_1()) {
               c3 = 0;
               c5 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             } else if (null == closure_128_2) {
               closure_129_0({
                 status: "error",
@@ -371,7 +371,7 @@ export const useFramePreviewOverrideStore = module_570.create((arg0) => {
           }
           c3 = 0;
           c5 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp44) {
         closure_2 = tmp44;

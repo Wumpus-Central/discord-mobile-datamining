@@ -142,7 +142,7 @@ let closure_9 = async function _fetchChannelConversations(arg0) {
     }
     closure_132_6 = throwOnError;
     hydrateMessages = hydrateMessages.hydrateMessages;
-    return "Reflect";
+    return "Set";
   })();
   iter.next();
   return iter;
@@ -158,7 +158,7 @@ let closure_10 = async function _fetchConversation(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -249,7 +249,7 @@ let closure_12 = async function _fetchConversationMessages() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -290,7 +290,7 @@ let closure_12 = async function _fetchConversationMessages() {
               }
               if (isFullyHydratedResult) {
                 c8 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               if (tmp18) {
@@ -300,7 +300,7 @@ let closure_12 = async function _fetchConversationMessages() {
               }
               if (null != hydratedMessages) {
                 c8 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             }
             if (tmp18) {

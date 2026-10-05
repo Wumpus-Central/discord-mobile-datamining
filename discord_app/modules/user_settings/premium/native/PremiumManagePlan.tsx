@@ -391,7 +391,7 @@ function SubscriptionAndBillingInfo(subscription) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -429,7 +429,7 @@ function SubscriptionAndBillingInfo(subscription) {
               c3 = 0;
               closure_128_8(false);
               c4 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp24) {
             if (tmp4 === c3) {
@@ -1281,8 +1281,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = navigation(576);
       ({ top, bottom } = useSafeAreaInsetsDefault());
       const tmp6 = useSafeAreaInsetsDefault();
-      const youBarSettingsOutsideSafeAreaTop = navigation(13263).useYouBarSettingsOutsideSafeAreaTop();
-      let obj2 = navigation(13263);
+      const youBarSettingsOutsideSafeAreaTop = navigation(13265).useYouBarSettingsOutsideSafeAreaTop();
+      let obj2 = navigation(13265);
       navigation = navigation(1490).useNavigation();
       if (cResult[0] !== navigation) {
         const fn = function t() {
@@ -1425,7 +1425,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult7 = navigation(504);
       const isInReverseTrial = navigation(7736).useIsInReverseTrial();
       const tmpResult8 = navigation(7736);
-      useFPDurationLeftDefault(tmp26.endsAt, navigation(13265).CountDownMessageTypes.SHORT_TIME);
+      useFPDurationLeftDefault(tmp26.endsAt, navigation(13267).CountDownMessageTypes.SHORT_TIME);
       if (cResult[11] !== tmp26) {
         class X {
           constructor() {
@@ -1908,8 +1908,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_32();
       const rect = useSafeAreaInsetsDefault();
       const top = rect.top;
-      const youBarSettingsOutsideSafeAreaTop = navigation(13263).useYouBarSettingsOutsideSafeAreaTop();
-      let obj = navigation(13263);
+      const youBarSettingsOutsideSafeAreaTop = navigation(13265).useYouBarSettingsOutsideSafeAreaTop();
+      let obj = navigation(13265);
       navigation = navigation(1490).useNavigation();
       let items = [navigation];
       const layoutEffect = noop.useLayoutEffect(() => {
@@ -1955,7 +1955,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = navigation(504);
       let isInReverseTrial = navigation(7736).useIsInReverseTrial();
       const obj8 = navigation(7736);
-      const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13265).CountDownMessageTypes.SHORT_TIME);
+      const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13267).CountDownMessageTypes.SHORT_TIME);
       const unactivatedFractionalPremiumDurationString =
         navigation(4528).getUnactivatedFractionalPremiumDurationString(tmp12);
       if (null !== tmp10) {
@@ -2107,9 +2107,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           },
           subscription: tmp10,
         };
-        const items10 = [closure_29(tmp2(13155), obj17)];
+        const items10 = [closure_29(tmp2(13157), obj17)];
         const obj18 = { style: tmp.billingInfo, subscription: tmp10 };
-        items10[1] = closure_29(tmp2(13195), obj18);
+        items10[1] = closure_29(tmp2(13197), obj18);
         obj16.children = items10;
         tmp27Result = closure_30(closure_8, obj16);
       }

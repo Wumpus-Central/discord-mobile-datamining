@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const tmp16 = tmp8 === tmp(2036).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE;
           if (cResult[8] !== tmp16) {
             const obj4 = { showPremiumIcon: true, showNewBadge: tmp16 };
-            const tmp19 = jsx(tmp(14441).UserProfileEditFormLabelBadges, {
+            const tmp19 = jsx(tmp(14445).UserProfileEditFormLabelBadges, {
               showPremiumIcon: true,
               showNewBadge: tmp16,
             });
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             accessibilityValue: tmp24,
             onPress: tmp10,
           };
-          const tmp27 = jsx(tmp(14441).UserProfileEditFormButton, {
+          const tmp27 = jsx(tmp(14445).UserProfileEditFormButton, {
             label: tmp13,
             labelTrailing: tmp17,
             leading: tmp20,
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = isTryItOut(1126).intl;
       obj5.label = intl2.string(nativeStackNavigation(3725)["pT+BVM"]);
       const obj4 = isTryItOut(11587);
-      obj5.labelTrailing = jsx(isTryItOut(14441).UserProfileEditFormLabelBadges, {
+      obj5.labelTrailing = jsx(isTryItOut(14445).UserProfileEditFormLabelBadges, {
         showPremiumIcon: true,
         showNewBadge:
           tmp3[0] === isTryItOut(2036).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE,
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj5.buttonText = stringResult;
       obj5.accessibilityValue = { text: stringResult };
       obj5.onPress = tmp5;
-      return jsx(isTryItOut(14441).UserProfileEditFormButton, {
+      return jsx(isTryItOut(14445).UserProfileEditFormButton, {
         label: null,
         labelTrailing: null,
         leading: null,

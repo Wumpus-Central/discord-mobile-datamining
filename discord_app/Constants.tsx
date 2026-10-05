@@ -148,7 +148,7 @@ const frozen2 = Object.freeze({
   USER_NON_CHANNEL_ACK(outgoingAck, type) {
     return "/users/@me/" + type + "/" + outgoingAck + "/ack";
   },
-  VIBEGRATIONS_PROJECT_ACK(channelId, outgoingAck) {
+  CONJURE_PROJECT_ACK(channelId, outgoingAck) {
     return "/conjuring/projects/" + channelId + "/ack/" + outgoingAck;
   },
   BULK_ACK: "/read-states/ack-bulk",
@@ -2076,21 +2076,21 @@ const frozen2 = Object.freeze({
   GUILD_ROOM_OBJECT_DELETE(arg0, arg1, arg2) {
     return "/guilds/" + arg0 + "/rooms/" + arg1 + "/objects/" + arg2;
   },
-  VIBEGRATIONS_PROJECTS: "/vibegrations/projects",
-  VIBEGRATIONS_PROJECT(projectId) {
+  CONJURE_PROJECTS: "/vibegrations/projects",
+  CONJURE_PROJECT(projectId) {
     return "/vibegrations/projects/" + projectId;
   },
-  VIBEGRATIONS_PROJECT_LIMIT: "/vibegrations/project-limit",
-  VIBEGRATIONS_PROJECT_WS_TICKET(projectId) {
+  CONJURE_PROJECT_LIMIT: "/vibegrations/project-limit",
+  CONJURE_PROJECT_WS_TICKET(projectId) {
     return "/vibegrations/projects/" + projectId + "/ws-ticket";
   },
-  VIBEGRATIONS_PROJECT_REMIX_TICKET(arg0) {
+  CONJURE_PROJECT_REMIX_TICKET(arg0) {
     return "/vibegrations/projects/" + arg0 + "/remix-ticket";
   },
-  VIBEGRATIONS_PROJECT_PUBLISH(arg0) {
+  CONJURE_PROJECT_PUBLISH(arg0) {
     return "/vibegrations/projects/" + arg0 + "/publish";
   },
-  VIBEGRATIONS_PROJECT_PUBLISH_PREVIEW(arg0) {
+  CONJURE_PROJECT_PUBLISH_PREVIEW(arg0) {
     return "/vibegrations/projects/" + arg0 + "/publish-preview";
   },
   GUILD_SPACE_IMAGE_TEXT_WIDGET_IMAGE(arg0, arg1, arg2, arg3) {
@@ -2199,7 +2199,7 @@ const obj2 = {
   USER_NON_CHANNEL_ACK(outgoingAck, type) {
     return "/users/@me/" + type + "/" + outgoingAck + "/ack";
   },
-  VIBEGRATIONS_PROJECT_ACK(channelId, outgoingAck) {
+  CONJURE_PROJECT_ACK(channelId, outgoingAck) {
     return "/conjuring/projects/" + channelId + "/ack/" + outgoingAck;
   },
   BULK_ACK: "/read-states/ack-bulk",
@@ -4127,21 +4127,21 @@ const obj2 = {
   GUILD_ROOM_OBJECT_DELETE(arg0, arg1, arg2) {
     return "/guilds/" + arg0 + "/rooms/" + arg1 + "/objects/" + arg2;
   },
-  VIBEGRATIONS_PROJECTS: "/vibegrations/projects",
-  VIBEGRATIONS_PROJECT(projectId) {
+  CONJURE_PROJECTS: "/vibegrations/projects",
+  CONJURE_PROJECT(projectId) {
     return "/vibegrations/projects/" + projectId;
   },
-  VIBEGRATIONS_PROJECT_LIMIT: "/vibegrations/project-limit",
-  VIBEGRATIONS_PROJECT_WS_TICKET(projectId) {
+  CONJURE_PROJECT_LIMIT: "/vibegrations/project-limit",
+  CONJURE_PROJECT_WS_TICKET(projectId) {
     return "/vibegrations/projects/" + projectId + "/ws-ticket";
   },
-  VIBEGRATIONS_PROJECT_REMIX_TICKET(arg0) {
+  CONJURE_PROJECT_REMIX_TICKET(arg0) {
     return "/vibegrations/projects/" + arg0 + "/remix-ticket";
   },
-  VIBEGRATIONS_PROJECT_PUBLISH(arg0) {
+  CONJURE_PROJECT_PUBLISH(arg0) {
     return "/vibegrations/projects/" + arg0 + "/publish";
   },
-  VIBEGRATIONS_PROJECT_PUBLISH_PREVIEW(arg0) {
+  CONJURE_PROJECT_PUBLISH_PREVIEW(arg0) {
     return "/vibegrations/projects/" + arg0 + "/publish-preview";
   },
   GUILD_SPACE_IMAGE_TEXT_WIDGET_IMAGE(arg0, arg1, arg2, arg3) {

@@ -197,8 +197,8 @@ export const QuestEmbedPreview = ReactCompilerGating.isReactCompilerEnabled()
           horizontalOffset: 0,
           pointerEvents: "none",
         });
-        tmp6 = jsx(stateFromStores(14971), { title: null, children: null });
-        const tmp9 = stateFromStores(14971);
+        tmp6 = jsx(stateFromStores(14975), { title: null, children: null });
+        const tmp9 = stateFromStores(14975);
       }
       return tmp6;
     };

@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
   View: closure_8,
   FlatList: closure_9,
 } = get_ActivityIndicator);
-const usePriceTiers = fn(17902).usePriceTiers;
+const usePriceTiers = fn(17926).usePriceTiers;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, GuildSettingsSections: map1 } = Constants);
 const jsxProd = fn(21);
@@ -151,7 +151,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               obj.style = size;
               return closure_1_14(closure_1_8, obj);
             };
-            obj.snapToInterval = guildId(17956).CARD_WIDTH + v16;
+            obj.snapToInterval = guildId(17978).CARD_WIDTH + v16;
             obj.renderItem = function renderItem(template) {
               return state(GuildRoleSubscriptionTierTemplatePreviewCardDefault, {
                 template: template.item,

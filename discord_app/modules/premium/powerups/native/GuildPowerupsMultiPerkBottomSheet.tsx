@@ -535,7 +535,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           class P {
                             constructor(arg0) {
                               obj = { guildId, powerup: guildId, forceStaticImage: closure_1.forceStaticImages };
-                              return jsx(f60481, obj, guildId.skuId);
+                              return jsx(f60509, obj, guildId.skuId);
                             }
                           }
                           tmp28[2] = onDismiss;
@@ -551,7 +551,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     class P {
                       constructor(arg0) {
                         obj = { guildId, powerup: guildId, forceStaticImage: closure_1.forceStaticImages };
-                        return jsx(f60481, obj, guildId.skuId);
+                        return jsx(f60509, obj, guildId.skuId);
                       }
                     }
                     tmp24[0] = tmp7;
@@ -568,7 +568,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   class P {
                     constructor(arg0) {
                       obj = { guildId, powerup: guildId, forceStaticImage: closure_1.forceStaticImages };
-                      return jsx(f60481, obj, guildId.skuId);
+                      return jsx(f60509, obj, guildId.skuId);
                     }
                   }
                   const obj3 = { style: tmp14, children: cResult[11] };
@@ -589,7 +589,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               class P {
                 constructor(arg0) {
                   obj = { guildId, powerup: guildId, forceStaticImage: closure_1.forceStaticImages };
-                  return jsx(f60481, obj, guildId.skuId);
+                  return jsx(f60509, obj, guildId.skuId);
                 }
               }
               cResult[8] = tmp6;
@@ -601,7 +601,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             class P {
               constructor(arg0) {
                 obj = { guildId, powerup: guildId, forceStaticImage: closure_1.forceStaticImages };
-                return jsx(f60481, obj, guildId.skuId);
+                return jsx(f60509, obj, guildId.skuId);
               }
             }
             cResult[12] = tmp6.forceStaticImages;

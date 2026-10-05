@@ -34,7 +34,7 @@ let closure_12 = async function _openExternalLink(arg0) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -185,7 +185,7 @@ let closure_12 = async function _openExternalLink(arg0) {
                 obj2,
                 undefined,
                 undefined,
-                closure_1_0(14323).getActivitiesModalContextKey({ application, channelId }),
+                closure_1_0(14325).getActivitiesModalContextKey({ application, channelId }),
               );
             });
           }
@@ -243,7 +243,7 @@ obj2 = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -356,7 +356,7 @@ obj3 = {
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-const CONTEXT_MENU_ICON_NAMES = fn(14315);
+const CONTEXT_MENU_ICON_NAMES = fn(14317);
 let obj5 = {
   scope: null,
   handler(arg0) {

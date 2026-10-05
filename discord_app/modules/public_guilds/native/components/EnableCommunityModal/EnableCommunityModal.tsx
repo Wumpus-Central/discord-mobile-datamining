@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return null;
           },
           render() {
-            return closure_1_4(closure_1_1(17814), {});
+            return closure_1_4(closure_1_1(17838), {});
           },
         };
         obj2[EnableCommunitySharedNavigation.EnableCommunityModalSteps.STEP_1] = obj3;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return null;
           },
           render() {
-            return closure_1_4(closure_1_1(17826), {});
+            return closure_1_4(closure_1_1(17850), {});
           },
         };
         obj2[EnableCommunitySharedNavigation.EnableCommunityModalSteps.STEP_2] = obj4;
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return null;
           },
           render() {
-            return closure_1_4(closure_1_1(17827), {});
+            return closure_1_4(closure_1_1(17851), {});
           },
         };
         obj2[EnableCommunitySharedNavigation.EnableCommunityModalSteps.STEP_3] = obj5;
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             render() {
-              return closure_1_4(closure_1_1(17814), {});
+              return closure_1_4(closure_1_1(17838), {});
             },
           },
           [closure_1_0(closure_1_2[10]).EnableCommunityModalSteps.STEP_2]: {
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             render() {
-              return closure_1_4(closure_1_1(17826), {});
+              return closure_1_4(closure_1_1(17850), {});
             },
           },
           [closure_1_0(closure_1_2[10]).EnableCommunityModalSteps.STEP_3]: {
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             render() {
-              return closure_1_4(closure_1_1(17827), {});
+              return closure_1_4(closure_1_1(17851), {});
             },
           },
         };

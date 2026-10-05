@@ -15,7 +15,7 @@ import SavedMessagesStore from "../../../saved_messages/SavedMessagesStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(14895);
+const YouBarConstants = fn(14899);
 ({
   YOU_BAR_SPRING_CONFIG: metroRequire,
   YOU_BAR_BUTTON_HIT_SLOP: closure_7,
@@ -46,7 +46,7 @@ export default noop.memo(
     ? (hasNameplate) => {
         const cResult = c.c(39);
         const tmp4 = closure_10();
-        value = isForLaterExperimentOn(16332)().value;
+        value = isForLaterExperimentOn(16336)().value;
         const require = value;
         const fn = function s() {
           let num = 0;

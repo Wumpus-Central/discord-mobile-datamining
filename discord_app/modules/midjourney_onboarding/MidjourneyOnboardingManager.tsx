@@ -3,7 +3,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 const require = fn;
-const MIDJOURNEY_GUILD_ID = fn(13671).MIDJOURNEY_GUILD_ID;
+const MIDJOURNEY_GUILD_ID = fn(13673).MIDJOURNEY_GUILD_ID;
 const Routes = fn(1085).Routes;
 class MidjourneyOnboardingManager extends tmp2 {
   constructor() {
@@ -25,7 +25,7 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -42,12 +42,12 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
             if (obj6.isEligibleForMidjourneyRedirect(channel)) {
               v1 = 1;
               dependencyMap = 1;
-              const obj4 = { value: tmp2(13670).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
+              const obj4 = { value: tmp2(13672).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
               return obj4;
             } else {
               dependencyMap = 3;
             }
-            obj6 = tmp2(13670);
+            obj6 = tmp2(13672);
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;

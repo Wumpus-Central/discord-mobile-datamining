@@ -16,7 +16,7 @@ let closure_8 = async function _createWebViewHtmlFile(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -50,7 +50,7 @@ let closure_8 = async function _createWebViewHtmlFile(arg0) {
           closure_129_7 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -157,7 +157,7 @@ let closure_8 = async function _createWebViewHtmlFile(arg0) {
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "IconComponent", done: "IconComponent" };
+                      return { value: "IconComponent", done: null };
                     }
                   } else {
                     try {
@@ -353,7 +353,7 @@ export const deleteWebViewHtmlFile = function deleteWebViewHtmlFile(id) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -405,7 +405,7 @@ export const deleteWebViewHtmlFile = function deleteWebViewHtmlFile(id) {
             return obj;
           }
           v3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp11) {
         v3 = tmp;

@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     let tmp10 = cResult[9];
                   }
                   useTrackImpressionDefault(tmp10);
-                  const formatStringWithCommonPremiumParams = tmp(13233).useFormatStringWithCommonPremiumParams(
+                  const formatStringWithCommonPremiumParams = tmp(13235).useFormatStringWithCommonPremiumParams(
                     bannerFields.body,
                   );
                   if (cResult[10] === bannerFields.helpArticle) {
@@ -244,8 +244,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     cResult[15] = items3;
                     tmp15 = items3;
                   }
-                  const tmpResult = tmp(13233);
-                  const helpArticleLinkProps = tmp(13233).getHelpArticleLinkProps(
+                  const tmpResult = tmp(13235);
+                  const helpArticleLinkProps = tmp(13235).getHelpArticleLinkProps(
                     bannerFields.helpArticle,
                     bannerFields.helpArticleId,
                   );
@@ -253,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[11] = bannerFields.helpArticleId;
                   cResult[12] = helpArticleLinkProps;
                   tmp13 = helpArticleLinkProps;
-                  const tmpResult3 = tmp(13233);
+                  const tmpResult3 = tmp(13235);
                 }
                 const obj11 = {
                   type: tmp(1260).ImpressionTypes.VIEW,
@@ -325,9 +325,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.analyticsPage = analyticsPage;
       obj2.onPaymentSuccess = onPaymentSuccess;
       obj2.onPaymentDismiss = onPaymentDismiss;
-      const obj = helpArticleLinkProps(13230);
+      const obj = helpArticleLinkProps(13232);
       const obj3 = { type: null, name: null, properties: null };
-      const buttonActionHandler = helpArticleLinkProps(13230).getButtonActionHandler(obj2);
+      const buttonActionHandler = helpArticleLinkProps(13232).getButtonActionHandler(obj2);
       obj3.type = helpArticleLinkProps(1260).ImpressionTypes.VIEW;
       obj3.name = helpArticleLinkProps(1260).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
       const tmp2Result = useTrackImpressionDefault;
@@ -342,11 +342,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         component_id: componentId,
         promotion_id: promotionId,
       };
-      const formatStringWithCommonPremiumParams = helpArticleLinkProps(13233).useFormatStringWithCommonPremiumParams(
+      const formatStringWithCommonPremiumParams = helpArticleLinkProps(13235).useFormatStringWithCommonPremiumParams(
         bannerFields.body,
       );
-      const tmp4Result = helpArticleLinkProps(13233);
-      helpArticleLinkProps = helpArticleLinkProps(13233).getHelpArticleLinkProps(
+      const tmp4Result = helpArticleLinkProps(13235);
+      helpArticleLinkProps = helpArticleLinkProps(13235).getHelpArticleLinkProps(
         bannerFields.helpArticle,
         bannerFields.helpArticleId,
       );

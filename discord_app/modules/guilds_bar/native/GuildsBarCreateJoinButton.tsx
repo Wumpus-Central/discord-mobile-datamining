@@ -29,7 +29,7 @@ let closure_15 = async function _handleCreateJoinGuildPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -126,7 +126,7 @@ export default noop.memo(
         const cResult = enabled(576).c(17);
         const tmp4 = closure_13();
         let obj = enabled(576);
-        const guildsBarAnimatedWrapperStyles = enabled(16230).useGuildsBarAnimatedWrapperStyles();
+        const guildsBarAnimatedWrapperStyles = enabled(16234).useGuildsBarAnimatedWrapperStyles();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { location: "GuildsBarCreateJoinButton" };
           cResult[0] = obj3;
@@ -134,7 +134,7 @@ export default noop.memo(
         } else {
           first = cResult[0];
         }
-        const GameCommunityAddServerEntryExperiment = tmp(13525).GameCommunityAddServerEntryExperiment;
+        const GameCommunityAddServerEntryExperiment = tmp(13527).GameCommunityAddServerEntryExperiment;
         enabled = GameCommunityAddServerEntryExperiment.useConfig(first).enabled;
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [SelectedGuildStore];
@@ -149,7 +149,7 @@ export default noop.memo(
           tmp7 = cResult[1];
           tmp8 = cResult[2];
         }
-        const obj2 = enabled(16230);
+        const obj2 = enabled(16234);
         let stateFromStores = enabled;
         if (enabled) {
           stateFromStores = tmpResult.useStateFromStores(tmp7, tmp8);
@@ -175,7 +175,7 @@ export default noop.memo(
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = tmp(1126).intl;
           const stringResult = intl.string(tmp(1126).t.l5WIbf);
-          const tmp16 = jsx(tmp(16290).HomeDrawerAddServerRowExpandedChildren, {});
+          const tmp16 = jsx(tmp(16294).HomeDrawerAddServerRowExpandedChildren, {});
           cResult[5] = stringResult;
           cResult[6] = tmp16;
           let tmp13 = tmp16;
@@ -233,7 +233,7 @@ export default noop.memo(
           expandedChildren: tmp13,
           children: tmp19,
         };
-        const tmp23 = jsx(tmp18(16230), {
+        const tmp23 = jsx(tmp18(16234), {
           selected: stateFromStores,
           circle: false,
           unread: false,
@@ -254,10 +254,10 @@ export default noop.memo(
       }
     : () => {
         const tmp = closure_13();
-        let obj = enabled(16230);
-        const GameCommunityAddServerEntryExperiment = enabled(13525).GameCommunityAddServerEntryExperiment;
+        let obj = enabled(16234);
+        const GameCommunityAddServerEntryExperiment = enabled(13527).GameCommunityAddServerEntryExperiment;
         enabled = GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildsBarCreateJoinButton" }).enabled;
-        const guildsBarAnimatedWrapperStyles = enabled(16230).useGuildsBarAnimatedWrapperStyles();
+        const guildsBarAnimatedWrapperStyles = enabled(16234).useGuildsBarAnimatedWrapperStyles();
         const items = [SelectedGuildStore];
         let stateFromStores = enabled;
         if (enabled) {
@@ -286,14 +286,14 @@ export default noop.memo(
           styles: guildsBarAnimatedWrapperStyles,
           overState: "y",
           config: memo,
-          label: 72520421,
-          expandedChildren: 603427560,
-          children: 1761776381,
+          label: "CHANNEL_INFO",
+          expandedChildren: "CHANNEL_MEMBER_COUNT_UPDATE",
+          children: "THREAD_CREATE",
         };
         obj2 = enabled(504);
         const intl = tmp2(1126).intl;
         obj4.label = intl.string(enabled(1126).t.l5WIbf);
-        obj4.expandedChildren = jsx(enabled(16290).HomeDrawerAddServerRowExpandedChildren, {});
+        obj4.expandedChildren = jsx(enabled(16294).HomeDrawerAddServerRowExpandedChildren, {});
         const colors = nativeDefault.colors;
         obj4.children = jsx(enabled(10983).CirclePlusIcon, {
           size: "md",
@@ -306,9 +306,9 @@ export default noop.memo(
           styles: guildsBarAnimatedWrapperStyles,
           overState: "y",
           config: memo,
-          label: 72520421,
-          expandedChildren: 603427560,
-          children: 1761776381,
+          label: "CHANNEL_INFO",
+          expandedChildren: "CHANNEL_MEMBER_COUNT_UPDATE",
+          children: "THREAD_CREATE",
         });
         return <View style={tmp.stretch}>{null}</View>;
       },

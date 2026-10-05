@@ -21,7 +21,7 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -56,7 +56,7 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
           return obj;
         } else {
           credentials = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp5) {
         credentials = tmp;
@@ -78,7 +78,7 @@ prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(user) 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -121,7 +121,7 @@ prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(user) 
           return obj;
         } else {
           dependencyMap = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -143,7 +143,7 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(credenti
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -184,7 +184,7 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(credenti
           return obj;
         } else {
           c0 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp12) {
         c0 = tmp;

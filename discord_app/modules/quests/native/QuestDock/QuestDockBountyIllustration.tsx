@@ -7,14 +7,14 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import APNGPlayer from "../../../image/native/APNGPlayer.android.tsx";
 import BountiesMobileQuestBarExperiment2 from "../../experiments/BountiesMobileQuestBarExperiment.tsx";
 import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible.tsx";
-import _modDef15011 from "../../../../../discord_assets/assets/quests/bounties/QuestBar_3DOrbs_2X.png.js";
+import _modDef15015 from "../../../../../discord_assets/assets/quests/bounties/QuestBar_3DOrbs_2X.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const View = fn(17).View;
 const QuestsExperimentLocations = fn(5623).QuestsExperimentLocations;
-const QuestDockConstants = fn(14892);
+const QuestDockConstants = fn(14896);
 ({ QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT } = QuestDockConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4890);
@@ -288,8 +288,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const effect = noop.useEffect(tmp7, tmp8);
         if (cResult[4] !== tmp4.fill) {
-          const obj4 = { ref, url: _modDef15011, style: tmp4.fill, autoplay: false };
-          const tmp13 = jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef15011, style: tmp4.fill, autoplay: false });
+          const obj4 = { ref, url: _modDef15015, style: tmp4.fill, autoplay: false };
+          const tmp13 = jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef15015, style: tmp4.fill, autoplay: false });
           cResult[4] = tmp4.fill;
           cResult[5] = tmp13;
           let tmp10 = tmp13;
@@ -326,7 +326,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           aPNGPlayerControls.pause();
         }
       }, items);
-      return jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef15011, style: tmp.fill, autoplay: false });
+      return jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef15015, style: tmp.fill, autoplay: false });
     };
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
@@ -362,7 +362,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj3 = { uri: _modDef15011 };
+          const obj3 = { uri: _modDef15015 };
           cResult[4] = obj3;
           let tmp10 = obj3;
         } else {
@@ -417,7 +417,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           paused: null,
           accessible: false,
         };
-        const obj4 = { uri: _modDef15011 };
+        const obj4 = { uri: _modDef15015 };
         obj3.source = obj4;
         obj3.style = tmp.fill;
         obj3.enableAnimation = !stateFromStores;

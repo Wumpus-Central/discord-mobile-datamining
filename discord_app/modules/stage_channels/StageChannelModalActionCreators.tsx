@@ -102,7 +102,7 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -167,7 +167,7 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
             return flag;
           });
           c4 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp20) {
         c4 = tmp;

@@ -17,7 +17,7 @@ export const useCardLayout = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (num < 2) {
         if (cResult[0] !== num) {
-          const obj2 = { columns: num, cardWidth: "Array", rowWidth: "cursor" };
+          const obj2 = { columns: num, cardWidth: "Array", rowWidth: "toCharArray$esjava$1" };
           cResult[0] = num;
           cResult[1] = obj2;
           let tmp31 = obj2;
@@ -83,7 +83,7 @@ export const useCardLayout = ReactCompilerGating.isReactCompilerEnabled()
               if (1 < tmp14) {
                 const _Symbol = Symbol;
                 if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-                  const obj3 = { columns: 1, cardWidth: "Array", rowWidth: "ix" };
+                  const obj3 = { columns: 1, cardWidth: "Array", rowWidth: "unicodeVersion" };
                   cResult[6] = obj3;
                   let tmp30 = obj3;
                 } else {
@@ -125,7 +125,7 @@ export const useCardLayout = ReactCompilerGating.isReactCompilerEnabled()
         num = 2;
       }
       if (num < 2) {
-        const obj2 = { columns: num, cardWidth: "Array", rowWidth: "cursor" };
+        const obj2 = { columns: num, cardWidth: "Array", rowWidth: "toCharArray$esjava$1" };
         return obj2;
       } else {
         let num2 = 2;
@@ -179,7 +179,7 @@ export const useCardLayout = ReactCompilerGating.isReactCompilerEnabled()
         const diff2 = tmp12 - 1;
         if (result3 + (bound + tmp10(8418).COLLECTIBLES_SHOP_CARD_GAP * diff2) > width) {
           if (1 < tmp12) {
-            let obj = { columns: 1, cardWidth: "Array", rowWidth: "ix" };
+            let obj = { columns: 1, cardWidth: "Array", rowWidth: "unicodeVersion" };
           }
           return obj;
         }

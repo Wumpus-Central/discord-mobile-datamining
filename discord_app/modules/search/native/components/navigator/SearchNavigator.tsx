@@ -10,7 +10,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 let closure_5 = fn(7512).SearchEntrypointAnalyticsLocations;
-const SearchNavigatorScreens = fn(16794).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(16813).SearchNavigatorScreens;
 const SearchTypes = fn(1085).SearchTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -142,7 +142,7 @@ export default noop.memo(
                   return obj;
                 },
                 getComponent() {
-                  return searchContext(17016).default;
+                  return searchContext(17040).default;
                 },
               };
               const tmp27 = closure_8(closure_11.Screen, obj7);
@@ -292,7 +292,7 @@ export default noop.memo(
             name: SearchNavigatorScreens.SEARCH_TABS,
             options: { headerShown: false, fullScreenGestureEnabled: true },
             getComponent() {
-              return searchContext(17021).default;
+              return searchContext(17045).default;
             },
           }),
           closure_8(closure_11.Screen, {
@@ -311,7 +311,7 @@ export default noop.memo(
               return obj;
             },
             getComponent() {
-              return searchContext(17016).default;
+              return searchContext(17040).default;
             },
           }),
         ];
@@ -321,7 +321,7 @@ export default noop.memo(
           name: SearchNavigatorScreens.SEARCH_TABS,
           options: { headerShown: false, fullScreenGestureEnabled: true },
           getComponent() {
-            return searchContext(17021).default;
+            return searchContext(17045).default;
           },
         };
         const obj6 = {
@@ -340,7 +340,7 @@ export default noop.memo(
             return obj;
           },
           getComponent() {
-            return searchContext(17016).default;
+            return searchContext(17040).default;
           },
         };
         const tmp3 = closure_10();
@@ -356,7 +356,7 @@ export default noop.memo(
             return obj.conversationNavigatorFocusHeaderOptions(route, navigation, { shouldHandleSafeArea });
           },
           getComponent() {
-            return searchContext(17017).default;
+            return searchContext(17041).default;
           },
         });
         obj3.children = items2;

@@ -21,7 +21,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(17756);
+const GuildSettingsRoleConstants = fn(17780);
 ({
   PermissionTemplateTypes: closure_9,
   PermissionTemplates: c10,

@@ -15,7 +15,7 @@ import PremiumUpsellGradientBackground from "../../premium/roadblocks/native/vie
 import chunkDefault from "../../../../_runtime/09951_chunk.js";
 import _modDef10116 from "../../../../_runtime/metro/10116__.js";
 import SoundButton from "SoundButton.tsx";
-import _modDef17220 from "../../../../_runtime/metro/17220__.js";
+import _modDef17244 from "../../../../_runtime/metro/17244__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -67,7 +67,7 @@ function getFastListSectionsFromCategories(categories, arr, fontScale) {
   return items;
 }
 const View = fn(17).View;
-const SoundboardStyleConstants = fn(17205);
+const SoundboardStyleConstants = fn(17229);
 ({
   SOUND_ROW_HORIZONTAL_PADDING,
   SOUNDS_PER_ROW: metroRequire,
@@ -399,7 +399,7 @@ export const SoundboardSoundPickerList = noop.memo(
                 class O {
                   constructor(arg0, arg1) {
                     obj = { row: arg1, sectionIndex: channel, section: closure_6[channel], channel };
-                    return jsx(f76594, obj);
+                    return jsx(f76739, obj);
                   }
                 }
                 cResult[12] = C;
@@ -439,7 +439,7 @@ export const SoundboardSoundPickerList = noop.memo(
               class O {
                 constructor(arg0, arg1) {
                   obj = { row: arg1, sectionIndex: channel, section: closure_6[channel], channel };
-                  return jsx(f76594, obj);
+                  return jsx(f76739, obj);
                 }
               }
               const debounceResult = tmp(12).debounce((arg0) => {
@@ -453,7 +453,7 @@ export const SoundboardSoundPickerList = noop.memo(
             class O {
               constructor(arg0, arg1) {
                 obj = { row: arg1, sectionIndex: channel, section: closure_6[channel], channel };
-                return jsx(f76594, obj);
+                return jsx(f76739, obj);
               }
             }
             cResult[8] = channel;
@@ -674,7 +674,7 @@ export const SoundboardSoundPickerList = noop.memo(
               };
               let tmp8Result = React5(GuildIconDefault, obj3);
             } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-              const obj4 = { source: _modDef17220, style: currentUser.sectionIcon };
+              const obj4 = { source: _modDef17244, style: currentUser.sectionIcon };
               tmp8Result = React5(native.Icon, obj4);
             } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
               const obj5 = { source: _modDef10116, style: currentUser.sectionIcon };

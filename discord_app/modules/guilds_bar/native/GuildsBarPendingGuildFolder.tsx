@@ -207,9 +207,9 @@ export default noop.memo(
     : (id) => {
         id = id.id;
         ({ expanded, childNodes } = id);
-        let obj = id(16230);
+        let obj = id(16234);
         importDefault = usePendingFolderGuildIdsDefault();
-        const guildsBarAnimatedWrapperStyles = id(16230).useGuildsBarAnimatedWrapperStyles({
+        const guildsBarAnimatedWrapperStyles = id(16234).useGuildsBarAnimatedWrapperStyles({
           disableSelectedColor: true,
           disableBGColor: false,
         });
@@ -264,10 +264,10 @@ export default noop.memo(
           sharedId: null,
           cutouts: "IconComponent",
           overState: "a",
-          preventClipping: "statue_of_liberty",
-          config: "tokyo_tower",
-          externalChildren: "japanese_castle",
-          children: "stadium",
+          preventClipping: "bracket",
+          config: "text-lg/normal",
+          externalChildren: "text-default",
+          children: null,
         };
         const obj3 = id(4612);
         obj4.id = "" + id;
@@ -282,7 +282,7 @@ export default noop.memo(
         let tmp8Result = null;
         if (expanded) {
           const obj5 = { folderId: id, totalItems: childNodes.length };
-          tmp8Result = jsx(tmp(16229).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+          tmp8Result = jsx(tmp(16233).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
         }
         obj4.externalChildren = tmp8Result;
         obj4.children = jsx(id(12702).HourglassIcon, {});
@@ -298,10 +298,10 @@ export default noop.memo(
           sharedId: null,
           cutouts: "IconComponent",
           overState: "a",
-          preventClipping: "statue_of_liberty",
-          config: "tokyo_tower",
-          externalChildren: "japanese_castle",
-          children: "stadium",
+          preventClipping: "bracket",
+          config: "text-lg/normal",
+          externalChildren: "text-default",
+          children: null,
         });
       },
 );

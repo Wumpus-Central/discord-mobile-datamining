@@ -37,7 +37,7 @@ let closure_12 = async function _maybeFetchStorefrontPromotions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -68,7 +68,7 @@ let closure_12 = async function _maybeFetchStorefrontPromotions(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     } catch (tmp8) {
       c1 = tmp;
       throw tmp8;
@@ -96,7 +96,7 @@ let closure_14 = async function _fetchStorefrontPromotions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -189,7 +189,7 @@ let closure_15 = async function _claimStorefrontPromotion() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -280,7 +280,7 @@ let closure_16 = async function _fetchStorefrontPricesForApplicationId(arg0) {
     await "IconComponent";
     closure_1 = tmp2;
     applicationId2 = applicationId.applicationId;
-    return "Reflect";
+    return "Set";
   })();
   iter.next();
   return iter;
@@ -294,7 +294,7 @@ let closure_17 = async function _fetchStorefrontPricesForSkuIds(arg0) {
     await "IconComponent";
     closure_1 = tmp2;
     skuIds2 = skuIds.skuIds;
-    return "Reflect";
+    return "Set";
   })();
   iter.next();
   return iter;
@@ -320,7 +320,7 @@ let closure_19 = async function _fetchStorefrontPrices(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

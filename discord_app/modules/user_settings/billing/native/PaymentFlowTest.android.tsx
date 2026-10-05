@@ -283,7 +283,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
             ActionSheetActionCreatorsDefault.hideActionSheet();
             ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(15569, dependencyMap.paths),
+              asyncRequireImpl(15573, dependencyMap.paths),
               "SimpleRequestOTPActionSheet",
               obj,
             );

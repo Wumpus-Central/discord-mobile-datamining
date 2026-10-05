@@ -4,7 +4,7 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import BackgroundImageDefault from "../../../auth/native/components/atoms/BackgroundImage.tsx";
 import AgeRestrictedContentSettingsUtils from "../../../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
-import _modDef17428 from "../../../../../_runtime/metro/17428__.js";
+import _modDef17452 from "../../../../../_runtime/metro/17452__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -292,7 +292,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const obj4 = { source: _modDef17428, style: tmp4.image };
+        const obj4 = { source: _modDef17452, style: tmp4.image };
         const tmp25 = closure_11(closure_5, obj4);
         cResult[8] = tmp4.image;
         cResult[9] = tmp25;
@@ -786,7 +786,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj3 = { style: tmp.container, children: null };
       const items1 = [closure_11(currentUser(6463), {}), , , , ,];
       const formatResult = intl3.format(guildId(1126).t.Z12LNW, obj);
-      items1[1] = closure_11(closure_5, { source: currentUser(17428), style: tmp.image });
+      items1[1] = closure_11(closure_5, { source: currentUser(17452), style: tmp.image });
       items1[2] = closure_11(guildId(4886).Text, {
         style: tmp.header,
         variant: "heading-xl/extrabold",

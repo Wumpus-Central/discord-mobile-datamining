@@ -155,7 +155,7 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(17785, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(17809, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
@@ -538,9 +538,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ locked, integrations } = guild);
       closure_13();
       let obj = guild(576);
-      const applicationIdentityLinkedRolesEnabled = guild(17786).useApplicationIdentityLinkedRolesEnabled(guild.id);
-      let obj2 = guild(17786);
-      const applicationIdentityLinkedRolesEnabled1 = guild(17788).useApplicationIdentityLinkedRolesEnabled(
+      const applicationIdentityLinkedRolesEnabled = guild(17810).useApplicationIdentityLinkedRolesEnabled(guild.id);
+      let obj2 = guild(17810);
+      const applicationIdentityLinkedRolesEnabled1 = guild(17812).useApplicationIdentityLinkedRolesEnabled(
         guild.id,
         "guild_settings_roles_edit_connections",
       );
@@ -656,7 +656,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items2;
       tmp10 = items2;
       tmp9 = fn;
-      let obj3 = guild(17788);
+      let obj3 = guild(17812);
     }
   : (guild) => {
       guild = guild.guild;
@@ -822,8 +822,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             connectionType,
             connectionMetadataField: "Array",
             applicationId,
-            operator: "enumerable",
-            value: 12290119973512344000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+            operator: "runOnJS",
+            value: "r",
           };
           items.push(obj);
           if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {

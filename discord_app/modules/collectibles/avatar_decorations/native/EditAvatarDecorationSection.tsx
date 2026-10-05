@@ -19,7 +19,7 @@ let obj = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: fn(13007).GUTTER_SIZE,
+    paddingHorizontal: fn(13009).GUTTER_SIZE,
   },
   rowSpacer: null,
 };
@@ -27,9 +27,9 @@ let obj3 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(13007).GUTTER_SIZE,
+  paddingHorizontal: fn(13009).GUTTER_SIZE,
 };
-obj.rowSpacer = { height: fn(13007).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(13009).GUTTER_SIZE };
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 const memoResult = noop.memo(

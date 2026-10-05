@@ -76,7 +76,7 @@ let closure_37 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -318,13 +318,13 @@ function getActionSheetButtons(channel) {
   }
   guildId = channel.getGuildId();
   if (tmp31) {
-    const obj15 = { sectionKey: "vibegrations", buttons: null };
+    const obj15 = { sectionKey: "conjure", buttons: null };
     const obj16 = { label: null, IconComponent: null, onPress: null };
     const intl7 = channel(isOptedIn[24]).intl;
-    obj16.label = intl7.string(isMuted(isOptedIn[43]).NXfIfj);
+    obj16.label = intl7.string(isMuted(isOptedIn[43]).jMMrDM);
     obj16.IconComponent = channel(isOptedIn[31]).PencilIcon;
     obj16.onPress = function onPress() {
-      router_utils.transitionTo(__initData5.CHANNEL(guildId, StaticChannelRoute.VIBEGRATIONS, vibegrationsProjectId));
+      router_utils.transitionTo(__initData5.CHANNEL(guildId, StaticChannelRoute.CONJURE, vibegrationsProjectId));
     };
     const items4 = [obj16];
     obj15.buttons = items4;
@@ -661,7 +661,7 @@ function getActionSheetButtons(channel) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -690,7 +690,7 @@ function getActionSheetButtons(channel) {
                   } else {
                     value.openEndStageModal(closure_128_0);
                     paths = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp10) {
                   paths = tmp;
@@ -1272,13 +1272,13 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp38 = onClose(guildId[100])(channel);
-      const isVibegrationsChannelCandidate = channel(guildId[102]).useIsVibegrationsChannelCandidate(
+      const isConjureChannelCandidate = channel(guildId[102]).useIsConjureChannelCandidate(
         channel,
         "ChannelLongPressActionSheet",
       );
       let tmp44 = null;
       const tmp5Result25 = channel(guildId[102]);
-      if (isVibegrationsChannelCandidate) {
+      if (isConjureChannelCandidate) {
         tmp44 = channel;
       }
       const tmpResult2Result = onClose(guildId[103])(tmp44);

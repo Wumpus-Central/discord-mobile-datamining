@@ -277,7 +277,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           class P {
             constructor(arg0) {
               obj = { rule: readOnly, teenId: id, navigation: closure_1, readOnly };
-              return jsx(f68420, obj, readOnly.ruleId);
+              return jsx(f68470, obj, readOnly.ruleId);
             }
           }
           const tmp24 = closure_5(tmp(tmp2[10]).Text, obj4);
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class P {
           constructor(arg0) {
             obj = { rule: readOnly, teenId: id, navigation: closure_1, readOnly };
-            return jsx(f68420, obj, readOnly.ruleId);
+            return jsx(f68470, obj, readOnly.ruleId);
           }
         }
         cResult[15] = navigation;

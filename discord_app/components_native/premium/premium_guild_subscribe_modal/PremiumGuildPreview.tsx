@@ -5,14 +5,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import GuildIcon from "../../../modules/guild/native/GuildIcon.tsx";
 import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
-import _modDef13415 from "../../../../_runtime/metro/13415__.js";
-import _modDef13416 from "../../../../_runtime/metro/13416__.js";
 import _modDef13417 from "../../../../_runtime/metro/13417__.js";
 import _modDef13418 from "../../../../_runtime/metro/13418__.js";
 import _modDef13419 from "../../../../_runtime/metro/13419__.js";
 import _modDef13420 from "../../../../_runtime/metro/13420__.js";
 import _modDef13421 from "../../../../_runtime/metro/13421__.js";
 import _modDef13422 from "../../../../_runtime/metro/13422__.js";
+import _modDef13423 from "../../../../_runtime/metro/13423__.js";
+import _modDef13424 from "../../../../_runtime/metro/13424__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../modules/user_settings/ThemeStore.tsx";
 
@@ -21,29 +21,29 @@ const GuildIconDefault = GuildIcon;
 require = fn;
 function getTierIcon(theme, tier) {
   if (BoostedGuildTiers.NONE === tier) {
-    let tmp20 = _modDef13416;
-    const tmp19 = _modDef13415;
+    let tmp20 = _modDef13418;
+    const tmp19 = _modDef13417;
     if (obj4.isThemeDark(theme)) {
       tmp20 = tmp19;
     }
     return tmp20;
   } else if (BoostedGuildTiers.TIER_1 === tier) {
-    let tmp15 = _modDef13418;
-    const tmp14 = _modDef13417;
+    let tmp15 = _modDef13420;
+    const tmp14 = _modDef13419;
     if (obj3.isThemeDark(theme)) {
       tmp15 = tmp14;
     }
     return tmp15;
   } else if (BoostedGuildTiers.TIER_2 === tier) {
-    let tmp10 = _modDef13420;
-    const tmp9 = _modDef13419;
+    let tmp10 = _modDef13422;
+    const tmp9 = _modDef13421;
     if (obj2.isThemeDark(theme)) {
       tmp10 = tmp9;
     }
     return tmp10;
   } else if (BoostedGuildTiers.TIER_3 === tier) {
-    let tmp5 = _modDef13422;
-    const tmp4 = _modDef13421;
+    let tmp5 = _modDef13424;
+    const tmp4 = _modDef13423;
     if (obj.isThemeDark(theme)) {
       tmp5 = tmp4;
     }

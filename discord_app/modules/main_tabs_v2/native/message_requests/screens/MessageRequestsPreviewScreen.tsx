@@ -4,7 +4,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import ReadStateStore from "../../../../../stores/ReadStateStore.tsx";
 
 const ChatViewDefault = tmp11(9760);
-const RestrictedMessageRequestPreviewDefault = tmp11(17051);
+const RestrictedMessageRequestPreviewDefault = tmp11(17075);
 const require = fn;
 const ME = fn(1085).ME;
 const jsx = fn(21).jsx;

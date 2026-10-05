@@ -111,7 +111,7 @@ function UnconnectedYouScreen(arg0) {
   if (!isFocused) {
     tmp28 = !tmp12Result14.useIsProfileModalTransitioning();
   }
-  tmp12Result14 = navigateToSettings(16935);
+  tmp12Result14 = navigateToSettings(16954);
   const ref2 = rect.useRef(undefined);
   const ref3 = rect.useRef(false);
   if (isFocused) {
@@ -253,9 +253,9 @@ function UnconnectedYouScreen(arg0) {
       let tmp62 = null != memo2;
       const tmp12Result21 = navigateToSettings(6891);
       const obj11 = { disabled: tmp62 };
-      youSettingsCoachmark = navigateToSettings(16945).useYouSettingsCoachmark(obj11);
+      youSettingsCoachmark = navigateToSettings(16964).useYouSettingsCoachmark(obj11);
       let tmp64 = null != youSettingsCoachmark;
-      const tmp12Result22 = navigateToSettings(16945);
+      const tmp12Result22 = navigateToSettings(16964);
       const customTypingIndicatorConfig = navigateToSettings(11581).useCustomTypingIndicatorConfig("YouScreen");
       if ("settings" === customTypingIndicatorConfig.entryPoint) {
         if (customTypingIndicatorConfig.canSet) {
@@ -306,20 +306,20 @@ function UnconnectedYouScreen(arg0) {
                       renderImgComponent: obj25.renderImgComponent,
                     } = memo2);
                     obj12.navigateToShop = callback1;
-                    tmp62 = closure_20(navigateToShop(16948), obj12);
+                    tmp62 = closure_20(navigateToShop(16967), obj12);
                   }
                   const items6 = [tmp62, ,];
                   if (tmp64) {
                     const obj13 = { buttonRef: ref5 };
                     const merged = Object.assign(youSettingsCoachmark.props);
-                    tmp64 = closure_20(navigateToShop(16945), obj13);
-                    const tmp5Result9 = navigateToShop(16945);
+                    tmp64 = closure_20(navigateToShop(16964), obj13);
+                    const tmp5Result9 = navigateToShop(16964);
                   }
                   items6[1] = tmp64;
                   let tmp79 = tmp68;
                   if (tmp68) {
                     const obj14 = { targetRef: ref5, visible: tmp68, markAsDismissed: tmp67, position: "top" };
-                    tmp79 = closure_20(navigateToShop(16949), obj14);
+                    tmp79 = closure_20(navigateToShop(16968), obj14);
                   }
                   const obj15 = { zIndex: 1, children: null };
                   items6[2] = tmp79;
@@ -386,7 +386,7 @@ function UnconnectedYouScreen(arg0) {
               obj19.style = items9;
               obj19.nativeID = nativeID;
               let tmp83Result = null != tmp5Result1Result;
-              const tmp84 = closure_20(navigateToShop(16936), obj16);
+              const tmp84 = closure_20(navigateToShop(16955), obj16);
               if (tmp83Result) {
                 const obj20 = {
                   frame: tmp5Result1Result,
@@ -432,7 +432,7 @@ function UnconnectedYouScreen(arg0) {
               const obj27 = { style: null };
               const items14 = [sharedValue.absoluteFill];
               const obj28 = { backgroundColor: null };
-              const tmp5Result10 = navigateToShop(16950);
+              const tmp5Result10 = navigateToShop(16969);
               const tmp99 = sharedValue;
               obj28.backgroundColor = navigateToSettings(1103).int2hex(userProfileBannerBackgroundColor);
               items14[1] = obj28;
@@ -488,7 +488,7 @@ function UnconnectedYouScreen(arg0) {
                 obj33.navigateToShop = navigateToShop;
                 obj33.initialTab = initialTab;
                 obj33.animateAvatar = !tmp28;
-                items16[2] = closure_20(navigateToShop(16952), obj33);
+                items16[2] = closure_20(navigateToShop(16971), obj33);
                 items16[3] = closure_20(navigateToSettings(11507).TTIFirstContentfulPaint, { label: "you_screen" });
                 obj22.children = items16;
                 items10[2] = closure_21(closure_25, obj22);
@@ -574,7 +574,7 @@ function UnconnectedYouScreen(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire, ScrollView } = get_ActivityIndicator);
-const YouConstants = fn(16307);
+const YouConstants = fn(16311);
 ({
   YOU_ACTION_SHEET_TOP_INSET: closure_12,
   YOU_AVATAR_SIZE: map1,

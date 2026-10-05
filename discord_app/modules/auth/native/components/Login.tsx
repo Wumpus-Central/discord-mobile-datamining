@@ -210,7 +210,7 @@ export default function Login(isMultiAccount) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -285,7 +285,7 @@ export default function Login(isMultiAccount) {
             c3 = 0;
             closure_129_4(false);
             v32 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp47) {
           if (tmp5 === c3) {
@@ -312,7 +312,7 @@ export default function Login(isMultiAccount) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -338,7 +338,7 @@ export default function Login(isMultiAccount) {
             let authenticationErrorsFromV6OrEarlierAPIError;
             c7 = 1;
             c8 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (1 === tmp7) {
           if (isMultiAccount === 1) {
@@ -414,7 +414,7 @@ export default function Login(isMultiAccount) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

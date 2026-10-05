@@ -33,7 +33,7 @@ let closure_17 = async function _upload2(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -69,7 +69,7 @@ let closure_17 = async function _upload2(arg0) {
           closure_132_10 = undefined;
           c8 = 1;
           c9 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {

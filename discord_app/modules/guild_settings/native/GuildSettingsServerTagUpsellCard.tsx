@@ -509,7 +509,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj12 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
       const intl3 = tmp2(1126).intl;
       obj12.text = intl3.string(guildId(1126).t.kMRDWs);
-      obj12.icon = closure_6(guildId(16145).BoostTier2Icon, { color: "white" });
+      obj12.icon = closure_6(guildId(16149).BoostTier2Icon, { color: "white" });
       obj12.onPress = guildId.onUnlockPress;
       items5[2] = closure_6(guildId(5594).Button, obj12);
       obj6.children = items5;

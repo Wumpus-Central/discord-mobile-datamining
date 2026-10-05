@@ -17,7 +17,7 @@ let closure_12 = async function _isAccessibleChannelOrThreadPath(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -41,7 +41,7 @@ let closure_12 = async function _isAccessibleChannelOrThreadPath(arg0) {
           let channel2;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -68,17 +68,17 @@ let closure_12 = async function _isAccessibleChannelOrThreadPath(arg0) {
               return { value: true, done: true };
             } else {
               if (closure_131_10(closure_130_1)) {
-                if (closure_131_11.VIBEGRATIONS === closure_130_1) {
-                  let result = null != guild;
-                  if (result) {
-                    result = closure_131_0(closure_131_2[7]).canAccessVibegrations(
+                if (closure_131_11.CONJURE === closure_130_1) {
+                  let canAccessConjureResult = null != guild;
+                  if (canAccessConjureResult) {
+                    canAccessConjureResult = closure_131_0(closure_131_2[7]).canAccessConjure(
                       guild,
                       "isAccessibleChannelOrThreadPath",
                     );
                     const obj33 = closure_131_0(closure_131_2[7]);
                   }
                   c5 = 3;
-                  const obj7 = { value: result, done: true };
+                  const obj7 = { value: canAccessConjureResult, done: true };
                   return obj7;
                 } else if (closure_131_11.ROLE_SUBSCRIPTIONS === tmp31) {
                   c5 = 3;
@@ -91,13 +91,13 @@ let closure_12 = async function _isAccessibleChannelOrThreadPath(arg0) {
                   };
                   return obj9;
                 } else if (closure_131_11.SERVER_MONETIZATION_ONBOARDING === tmp31) {
-                  let result1 = null != guild;
-                  if (result1) {
-                    result1 = closure_131_0(closure_131_2[9]).canUserSeeMonetizationOnboarding(guild);
+                  let result = null != guild;
+                  if (result) {
+                    result = closure_131_0(closure_131_2[9]).canUserSeeMonetizationOnboarding(guild);
                     const obj29 = closure_131_0(closure_131_2[9]);
                   }
                   c5 = 3;
-                  const obj11 = { value: result1, done: true };
+                  const obj11 = { value: result, done: true };
                   return obj11;
                 } else if (closure_131_11.GAME_SHOP === tmp31) {
                   let obj13 = guild;

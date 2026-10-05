@@ -206,7 +206,7 @@ function FriendAnniversary() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -304,7 +304,7 @@ function FriendAnniversary() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -746,7 +746,7 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(15561, dependencyMap.paths),
+          asyncRequireImpl(15565, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
@@ -767,7 +767,7 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(15561, dependencyMap.paths),
+          asyncRequireImpl(15565, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );

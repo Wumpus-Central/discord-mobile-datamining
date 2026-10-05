@@ -173,7 +173,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const _Symbol2 = Symbol;
                       if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
                         const obj7 = { color: CHECKPOINT_PRIMARY };
-                        const tmp27 = closure_7(tmp(15554).ArrowLargeRightIcon, obj7);
+                        const tmp27 = closure_7(tmp(15558).ArrowLargeRightIcon, obj7);
                         cResult[34] = tmp27;
                         let tmp24 = tmp27;
                       } else {

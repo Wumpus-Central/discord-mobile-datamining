@@ -7,7 +7,7 @@ import MusicIcon from "../../../design/components/Icon/native/redesign/generated
 import ActivityStatusIconDefault from "ActivityStatusIcon.tsx";
 import TvIcon from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
 import ActivityStatusTextDefault from "ActivityStatusText.tsx";
-import conjuringActivity from "../../vibegrations/lib/conjuringActivity.tsx";
+import conjurePresenceActivity from "../../conjure/presence/conjurePresenceActivity.tsx";
 import getActivityStatusTextDefault from "../getActivityStatusText.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -16,7 +16,7 @@ function getActivityStatusIcon(activity) {
   const flag = false;
   let tmp = dependencyMap;
   if (!isEmbeddedActivityDefault(activity)) {
-    if (!obj.isConjuringActivity(activity)) {
+    if (!obj.isConjurePresenceActivity(activity)) {
       if (activity.type === ActivityTypes.PLAYING) {
         let GameControllerIcon = GameControllerIcon2.GameControllerIcon;
       } else if (activity.type === ActivityTypes.LISTENING) {
@@ -34,7 +34,7 @@ function getActivityStatusIcon(activity) {
       }
       return GameControllerIcon;
     }
-    obj = conjuringActivity;
+    obj = conjurePresenceActivity;
   }
   if (flag) {
     tmp = GameControllerIcon2;

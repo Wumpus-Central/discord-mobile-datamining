@@ -9,7 +9,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ AccessibilityInfo: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const QuestDockMode = fn(5623).QuestDockMode;
-const QuestDockConstants = fn(14892);
+const QuestDockConstants = fn(14896);
 const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = QuestDockConstants.QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
 ({
   QUEST_DOCK_CONTENT_BORDER_RADII: closure_9,
@@ -158,7 +158,7 @@ export default noop.memo(
           onDisclosurePress: tertiaryContent,
           onSubmenuPress,
         } = arg0);
-        const context = noop.useContext(tmp(14893).QuestDockGestureContext);
+        const context = noop.useContext(tmp(14897).QuestDockGestureContext);
         activeQuestDockMode = context.activeQuestDockMode;
         let num = 2;
         let obj = activeQuestDockMode(576);
@@ -186,7 +186,7 @@ export default noop.memo(
         const effect = obj2.useEffect(tmp10, tmp11);
         const tmp8 = token(noop.useState(false), 2);
         token = activeQuestDockMode(4580).useToken(questDockWrapperSpecs(587).modules.mobile.QUEST_DOCK_BORDER_RADIUS);
-        const tmp15 = context.questDockWrapperSpecs(14982)(token);
+        const tmp15 = context.questDockWrapperSpecs(14986)(token);
         noop = tmp15;
         const tmpResult = activeQuestDockMode(4580);
         class J {
@@ -608,7 +608,7 @@ export default noop.memo(
                                               let tmp61 = !tmp5;
                                               if (!tmp5) {
                                                 const obj15 = { children: null };
-                                                const items4 = [tmp25, closure_12(tmp13(14995), {})];
+                                                const items4 = [tmp25, closure_12(tmp13(14999), {})];
                                                 obj15.children = items4;
                                                 tmp61 = closure_14(closure_13, obj15);
                                               }
@@ -697,7 +697,7 @@ export default noop.memo(
                           opacityAnimatedStyle: animatedStyle6,
                           layoutAnimation: questDockHeaderLayoutAnimation,
                         };
-                        let tmp36 = closure_12(tmp13(14993), obj20);
+                        let tmp36 = closure_12(tmp13(14997), obj20);
                       }
                       cResult[11] = blurHash;
                       cResult[12] = animatedStyle5;
@@ -710,7 +710,7 @@ export default noop.memo(
                       opacityAnimatedStyle: animatedStyle6,
                       layoutAnimation: questDockHeaderLayoutAnimation,
                     };
-                    tmp36 = closure_12(tmp13(14959), obj21);
+                    tmp36 = closure_12(tmp13(14963), obj21);
                     tmpResult18 = tmp(1370);
                   }
                   const items10 = [tmp24.header, animatedStyle];
@@ -781,7 +781,7 @@ export default noop.memo(
         let token;
         noop = undefined;
         ({ onDisclosurePress, onSubmenuPress } = promotedLabelLeading);
-        const context = noop.useContext(activeQuestDockMode(14893).QuestDockGestureContext);
+        const context = noop.useContext(activeQuestDockMode(14897).QuestDockGestureContext);
         activeQuestDockMode = context.activeQuestDockMode;
         const questDockWrapperSpecs = context.questDockWrapperSpecs;
         [tmp5, c2] = token(noop.useState(false), 2);
@@ -796,7 +796,7 @@ export default noop.memo(
         }, []);
         const tmp4 = token(noop.useState(false), 2);
         token = activeQuestDockMode(4580).useToken(questDockWrapperSpecs(587).modules.mobile.QUEST_DOCK_BORDER_RADIUS);
-        const tmp9 = questDockWrapperSpecs(14982)(token);
+        const tmp9 = questDockWrapperSpecs(14986)(token);
         noop = tmp9;
         let obj = activeQuestDockMode(4580);
         const fn = function q() {
@@ -1084,7 +1084,7 @@ export default noop.memo(
               opacityAnimatedStyle: animatedStyle6,
               layoutAnimation: questDockHeaderLayoutAnimation,
             };
-            let tmp22Result = tmp22(tmp7(14993), obj23);
+            let tmp22Result = tmp22(tmp7(14997), obj23);
           }
           const items4 = [tmp22Result, ,];
           let tmp22Result2 = children;
@@ -1127,7 +1127,7 @@ export default noop.memo(
           const tmp7Result5 = tmp7(6570);
           if (!flag) {
             const obj31 = { children: null };
-            const items11 = [tmp19Result, tmp22(tmp7(14995), {})];
+            const items11 = [tmp19Result, tmp22(tmp7(14999), {})];
             obj31.children = items11;
             tmp25Result = closure_14(closure_13, obj31);
           }
@@ -1164,7 +1164,7 @@ export default noop.memo(
           }
           return closure_14(tmp7Result, obj22);
         }
-        tmp22Result = tmp22(tmp7(14959), {
+        tmp22Result = tmp22(tmp7(14963), {
           layoutAnimatedStyle: animatedStyle5,
           opacityAnimatedStyle: animatedStyle6,
           layoutAnimation: questDockHeaderLayoutAnimation,

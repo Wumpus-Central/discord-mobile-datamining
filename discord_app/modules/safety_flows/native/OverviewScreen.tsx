@@ -19,8 +19,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = task(576).c(25);
       const tmp4 = closure_6();
       let obj = task(576);
-      task = task(18042).useSafetyFlowTask().task;
-      const obj2 = task(18042);
+      task = task(18064).useSafetyFlowTask().task;
+      const obj2 = task(18064);
       const navigation = task(1490).useNavigation();
       if (cResult[0] === navigation) {
         if (cResult[1] === task.task_type) {
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const tasks1 = flow_context2.tasks;
             if (tasks1 != null) {
               mapped = tasks1.map((task_type, index) => {
-                const obj = { tip: task(18037).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
+                const obj = { tip: task(18059).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
                 return closure_1_4(navigation(8262), obj, task_type.task_type);
               });
             }
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol4 = Symbol;
             if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp42 = closure_4(navigation(18044), {});
+              const tmp42 = closure_4(navigation(18066), {});
               cResult[18] = tmp42;
               let tmp39 = tmp42;
             } else {
@@ -199,8 +199,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       let tmp = closure_6();
-      task = task(18042).useSafetyFlowTask().task;
-      let obj = task(18042);
+      task = task(18064).useSafetyFlowTask().task;
+      let obj = task(18064);
       const navigation = task(1490).useNavigation();
       const items = [task, navigation];
       const callback = noop.useCallback(() => {
@@ -232,7 +232,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tasks = flow_context.tasks;
         if (tasks != null) {
           mapped = tasks.map((task_type, index) => {
-            const obj = { tip: task(18037).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
+            const obj = { tip: task(18059).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
             return closure_1_4(navigation(8262), obj, task_type.task_type);
           });
         }
@@ -250,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj8.children = closure_5(task(5593).Stack, obj3);
       const items3 = [closure_4(task(8096).ModalContent, obj8)];
       const obj10 = { children: null };
-      const items4 = [closure_4(navigation(18044), {})];
+      const items4 = [closure_4(navigation(18066), {})];
       const obj11 = { variant: "primary", text: null, onPress: null };
       const intl4 = tmp2(1126).intl;
       obj11.text = intl4.string(navigation(2787).Ks6opt);

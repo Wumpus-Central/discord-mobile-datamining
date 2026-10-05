@@ -99,10 +99,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = {
         fontFamily: "System",
         fontSize: result,
-        lineHeight: "ix",
-        textAlign: false,
+        lineHeight: "unicodeVersion",
+        textAlign: "add",
         width: num,
-        marginBottom: false,
+        marginBottom: "duration",
       };
       cResult[2] = num;
       cResult[3] = result;
@@ -118,10 +118,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = {
         fontFamily: "System",
         fontSize: size * num,
-        lineHeight: "ix",
-        textAlign: false,
+        lineHeight: "unicodeVersion",
+        textAlign: "add",
         width: size,
-        marginBottom: false,
+        marginBottom: "duration",
       };
       if (null != src) {
         const obj2 = { resizeMode: "contain", source: null, style: null };

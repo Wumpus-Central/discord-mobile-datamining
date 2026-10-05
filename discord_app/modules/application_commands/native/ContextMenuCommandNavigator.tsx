@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj3.title = intl.string(tmp(1126).t.PHjkRE);
               obj2.options = obj3;
               obj2.getComponent = function getComponent() {
-                return closure_0(17024).default;
+                return closure_0(17048).default;
               };
               const tmp16 = closure_7(closure_9.Screen, obj2);
               cResult[11] = tmp16;
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return { title };
                 },
                 getComponent() {
-                  return closure_0(17026).default;
+                  return closure_0(17050).default;
                 },
               };
               const tmp20 = closure_7(closure_9.Screen, obj4);
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj5.title = intl.string(require("util").t.PHjkRE);
       obj4.options = obj5;
       obj4.getComponent = function getComponent() {
-        return closure_0(17024).default;
+        return closure_0(17048).default;
       };
       const items1 = [
         closure_7(Screen, obj4),
@@ -213,7 +213,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return { title };
           },
           getComponent() {
-            return closure_0(17026).default;
+            return closure_0(17050).default;
           },
         }),
       ];

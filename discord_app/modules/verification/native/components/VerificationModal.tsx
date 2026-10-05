@@ -136,7 +136,7 @@ function getScreens() {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -229,7 +229,7 @@ function getScreens() {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -393,15 +393,15 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) =>
     return tmp14;
   }
   const obj = navigation(576);
-  const tmp15 = jsx(navigation(1188).EmptyState, { Illustration: navigation(17624).VerifyPhone, title: tmp5, body: tmp6, children: <View style={tmp4.button}>{tmp11}</View> });
+  const tmp15 = jsx(navigation(1188).EmptyState, { Illustration: navigation(17648).VerifyPhone, title: tmp5, body: tmp6, children: <View style={tmp4.button}>{tmp11}</View> });
   cResult[5] = tmp4.button;
   cResult[6] = tmp11;
   cResult[7] = tmp15;
   tmp14 = tmp15;
-  const obj3 = { Illustration: navigation(17624).VerifyPhone, title: tmp5, body: tmp6, children: <View style={tmp4.button}>{tmp11}</View> };
+  const obj3 = { Illustration: navigation(17648).VerifyPhone, title: tmp5, body: tmp6, children: <View style={tmp4.button}>{tmp11}</View> };
 }) : ((navigation) => {
   navigation = navigation.navigation;
-  const obj = { Illustration: navigation(17624).VerifyPhone, title: null, body: null, children: null };
+  const obj = { Illustration: navigation(17648).VerifyPhone, title: null, body: null, children: null };
   const intl = navigation(1126).intl;
   obj.title = intl.string(navigation(1126).t.KLnLIP);
   const intl2 = navigation(1126).intl;
@@ -426,7 +426,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) =>
   };
   obj2.children = jsx(navigation(5594).Button, { text: null, onPress: null });
   obj.children = <View style={closure_12().button}>{null}</View>;
-  return jsx(navigation(1188).EmptyState, { Illustration: navigation(17624).VerifyPhone, title: null, body: null, children: null });
+  return jsx(navigation(1188).EmptyState, { Illustration: navigation(17648).VerifyPhone, title: null, body: null, children: null });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);

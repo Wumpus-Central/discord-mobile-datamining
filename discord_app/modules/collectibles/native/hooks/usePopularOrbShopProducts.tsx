@@ -51,7 +51,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -73,7 +73,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                   colors: [],
                   themes: [],
                   orbs_eligible: true,
-                  currency: _true(14871).CollectibleSearchCurrencyFilter.ORBS,
+                  currency: _true(14875).CollectibleSearchCurrencyFilter.ORBS,
                   offset: 0,
                   limit: 10,
                   sort_type,
@@ -82,7 +82,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                 const obj6 = { timeout };
                 c5 = 3;
                 sort_type = 1;
-                const obj7 = { value: _true(14870).search(obj4, obj6), done: false };
+                const obj7 = { value: _true(14874).search(obj4, obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp8) {
@@ -125,7 +125,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                 v0(true);
               }
               sort_type = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp34) {
             closure_3 = tmp34;

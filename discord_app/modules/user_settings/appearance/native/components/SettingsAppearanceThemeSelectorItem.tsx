@@ -11,7 +11,7 @@ import useA11yRolesNative from "../../../../../../discord_common/js/packages/des
 import utils_ColorDefault from "../../../../../utils/Color.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import ThemedGradient from "../../../../client_themes/native/ThemedGradient.tsx";
-import _modDef15090 from "../../../../../../_runtime/metro/15090__.js";
+import _modDef15094 from "../../../../../../_runtime/metro/15094__.js";
 import SynchronizeIconNativeDefault from "../../../../client_themes/images/native/SynchronizeIconNative.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../ThemeStore.tsx";
@@ -137,7 +137,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
           let tmp18 = isThemeLocked;
           if (isThemeLocked) {
-            const obj5 = { source: _modDef15090, style: tmp6.lock };
+            const obj5 = { source: _modDef15094, style: tmp6.lock };
             tmp18 = timestampProducer(native.Icon, obj5);
           }
           cResult[11] = isThemeLocked;
@@ -177,7 +177,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.mixColorOverride = isThemeDarkResult ? closure_10 : closure_11;
       const items1 = [timestampProducer(ThemedGradientDefault, obj4)];
       if (isThemeLocked) {
-        const obj6 = { source: _modDef15090, style: tmp4.lock };
+        const obj6 = { source: _modDef15094, style: tmp4.lock };
         isThemeLocked = timestampProducer(native.Icon, obj6);
       }
       items1[1] = isThemeLocked;
@@ -369,7 +369,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           }
           let tmp17 = isThemeLocked;
           if (isThemeLocked) {
-            const obj5 = { source: _modDef15090, style: tmp6.lock };
+            const obj5 = { source: _modDef15094, style: tmp6.lock };
             tmp17 = timestampProducer(native.Icon, obj5);
           }
           cResult[11] = isThemeLocked;
@@ -407,7 +407,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.customTheme = item;
       const items1 = [timestampProducer(ThemedGradient.CustomThemedGradient, obj4)];
       if (isThemeLocked) {
-        const obj6 = { source: _modDef15090, style: tmp4.lock };
+        const obj6 = { source: _modDef15094, style: tmp4.lock };
         isThemeLocked = timestampProducer(native.Icon, obj6);
       }
       items1[1] = isThemeLocked;

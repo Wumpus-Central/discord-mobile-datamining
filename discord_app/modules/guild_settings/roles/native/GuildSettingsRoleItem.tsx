@@ -1021,7 +1021,7 @@ export default noop.memo(
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -1053,7 +1053,7 @@ export default noop.memo(
                   }
                   onPress(5705).deleteRole(guildId, tmp2.id);
                   c2 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 } catch (tmp16) {
                   c2 = tmp;
                   throw tmp16;
@@ -1183,7 +1183,7 @@ export default noop.memo(
                       const obj4 = { value, done: true };
                       return obj4;
                     } else {
-                      return { value: "IconComponent", done: "IconComponent" };
+                      return { value: "IconComponent", done: null };
                     }
                   } else {
                     try {
@@ -1215,7 +1215,7 @@ export default noop.memo(
                       }
                       GuildActionCreatorsDefault.deleteRole(guildId, tmp2.id);
                       c2 = 3;
-                      return { value: "IconComponent", done: "IconComponent" };
+                      return { value: "IconComponent", done: null };
                     } catch (tmp16) {
                       c2 = tmp;
                       throw tmp16;

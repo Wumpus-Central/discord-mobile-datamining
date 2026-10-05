@@ -19,7 +19,7 @@ let closure_8 = async function _hydrateNextPage() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -57,7 +57,7 @@ let closure_8 = async function _hydrateNextPage() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp5) {
       c0 = tmp;
@@ -76,7 +76,7 @@ let closure_9 = async function _regenerateFeedAndClearReadStates(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -212,7 +212,7 @@ let closure_9 = async function _regenerateFeedAndClearReadStates(arg0) {
       } else {
         const recommendedGuilds = closure_130_1(closure_130_2[12]).getRecommendedGuilds();
         c4 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp36) {
       c4 = tmp;

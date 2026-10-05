@@ -66,7 +66,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           const intl3 = closure_0(1126).intl;
           obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
           obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
-          closure_1(14578)(obj);
+          closure_1(14582)(obj);
           return false;
         };
         cResult[0] = fn;
@@ -101,7 +101,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const intl3 = closure_0(1126).intl;
         obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
         obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
-        closure_1(14578)(obj);
+        closure_1(14582)(obj);
         return false;
       }, []);
 const route = SettingBuilders.createRoute({
@@ -110,7 +110,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.xZEzbu);
   },
   parent: fn(7634).MobileUserSettings.ACCOUNT,
-  usePredicate: fn(14490).useIs2FAEnabled,
+  usePredicate: fn(14494).useIs2FAEnabled,
   usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
         const cResult = c.c(1);
@@ -139,7 +139,7 @@ const route = SettingBuilders.createRoute({
             const intl3 = closure_0(1126).intl;
             obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
             obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
-            closure_1(14578)(obj);
+            closure_1(14582)(obj);
             return false;
           };
           cResult[0] = fn;
@@ -174,7 +174,7 @@ const route = SettingBuilders.createRoute({
           const intl3 = closure_0(1126).intl;
           obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
           obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
-          closure_1(14578)(obj);
+          closure_1(14582)(obj);
           return false;
         }, []),
   screen: {

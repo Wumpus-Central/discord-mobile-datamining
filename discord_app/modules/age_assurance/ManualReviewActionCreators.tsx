@@ -34,7 +34,7 @@ let closure_14 = async function _handleManualReviewCta() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

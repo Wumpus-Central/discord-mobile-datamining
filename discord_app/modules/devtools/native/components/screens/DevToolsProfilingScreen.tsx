@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp19 = closure_5(tmp(15487).DevToolsProfilingUseStateFromStores, {});
+          const tmp19 = closure_5(tmp(15491).DevToolsProfilingUseStateFromStores, {});
           cResult[5] = tmp19;
           let tmp17 = tmp19;
         } else {

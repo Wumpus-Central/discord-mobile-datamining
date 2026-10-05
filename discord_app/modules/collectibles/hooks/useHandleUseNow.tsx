@@ -91,7 +91,7 @@ export const useHandleUseNow = function useHandleUseNow(cResult) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -109,7 +109,7 @@ export const useHandleUseNow = function useHandleUseNow(cResult) {
               closure_130_0 = undefined;
               if (!memo) {
                 c7 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               } else {
                 tmp4(true);
                 const obj5 = {};

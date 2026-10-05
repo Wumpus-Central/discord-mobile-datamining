@@ -28,7 +28,7 @@ export const useIsApplicationRuleEnabled = ReactCompilerGating.isReactCompilerEn
         tmp5 = cResult[3];
       }
       if (!enabled) {
-        enabled = tmpResult.useIsVibegrationsGuildEnabled(tmp5);
+        enabled = tmpResult.useIsConjureGuildEnabled(tmp5);
       }
       return enabled;
     }
@@ -36,7 +36,7 @@ export const useIsApplicationRuleEnabled = ReactCompilerGating.isReactCompilerEn
       const AutomodApplicationRules = AutomodExperiment.AutomodApplicationRules;
       let enabled = AutomodApplicationRules.useConfig({ guildId, location: "automod_settings" }).enabled;
       if (!enabled) {
-        enabled = obj2.useIsVibegrationsGuildEnabled(obj3);
+        enabled = obj2.useIsConjureGuildEnabled(obj3);
       }
       return enabled;
     };

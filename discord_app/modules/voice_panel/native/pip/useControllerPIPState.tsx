@@ -20,7 +20,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = channelId(576).c(6);
       channelId = channelId.channelId;
       const mode = channelId.mode;
-      let tmp4 = mode(17166)(channelId);
+      let tmp4 = mode(17190)(channelId);
       dependencyMap = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [EmbeddedActivitiesStore, FramesStore, ChannelStore];
@@ -96,7 +96,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   : (channelId) => {
       channelId = channelId.channelId;
       const mode = channelId.mode;
-      const tmp = mode(17166)(channelId);
+      const tmp = mode(17190)(channelId);
       dependencyMap = tmp;
       const items = [EmbeddedActivitiesStore, FramesStore, ChannelStore];
       const items1 = [channelId, tmp, mode];
@@ -169,14 +169,14 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   c11 = undefined;
   let obj5;
   let obj = obj5(4612);
-  const sharedValue = obj.useSharedValue(obj5(17283).getVoicePanelPIPScaleCached());
+  const sharedValue = obj.useSharedValue(obj5(17307).getVoicePanelPIPScaleCached());
   const ref = pipAvoidanceSpecs.useRef({
-    id: "emoji",
+    id: "enabled",
     mode: "toCharArray$esjava$1",
     width: false,
     height: null,
-    containerHeight: "\u{1F468}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FE}",
-    showSecondaryPIP: true,
+    containerHeight: "slide_from_bottom",
+    showSecondaryPIP: "_createExtraStyles",
     scale: sharedValue,
   });
   const tmp5 = windowDimensions(pipAvoidanceSpecs.useState(undefined), 2);
@@ -187,14 +187,14 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     closure_9.current = current;
   });
   const tmp8 = closure_13({ channelId, mode });
-  const tmp10 = ref(17344)(channelId);
+  const tmp10 = ref(17368)(channelId);
   const first1 = windowDimensions(
     pipAvoidanceSpecs.useState(() => ref(closure_2[20])((fn) => fn(), 1000, { leading: true })),
     1,
   )[0];
   let items = [first1];
   const layoutEffect = pipAvoidanceSpecs.useLayoutEffect(() => () => first1.cancel(), items);
-  let obj2 = obj5(17283);
+  let obj2 = obj5(17307);
   const tmp9 = ref;
   [tmp14, c11] = windowDimensions(
     pipAvoidanceSpecs.useState(() => closure_2.getTargetDimensions(ref)),
@@ -212,7 +212,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     pipAvoidanceSpecs.useState(() => closure_2.getTargetDimensions(ref)),
     2,
   );
-  ({ participant, dimensions } = ref(17345)(channelId, layoutManager, focusedId, current, {
+  ({ participant, dimensions } = ref(17369)(channelId, layoutManager, focusedId, current, {
     connected,
     mode,
     focusedId,
@@ -229,7 +229,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   }
   obj5.id = id;
   obj5.showSecondaryPIP = tmp8;
-  const tmp15 = ref(17345)(channelId, layoutManager, focusedId, current, {
+  const tmp15 = ref(17369)(channelId, layoutManager, focusedId, current, {
     connected,
     mode,
     focusedId,
@@ -237,8 +237,8 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     selfHasVideo: tmp10,
     showSecondaryPIP: tmp8,
   });
-  obj5.mode = obj5(17181).getPIPMode({ channelId, connected, manuallyFocusedId: focusedId, mode, selfHasVideo: tmp10 });
-  const tmpResult = obj5(17181);
+  obj5.mode = obj5(17205).getPIPMode({ channelId, connected, manuallyFocusedId: focusedId, mode, selfHasVideo: tmp10 });
+  const tmpResult = obj5(17205);
   let result = obj5(9074).cheapWorkletShallowEqual(obj5, ref.current);
   dependencyMap = !result;
   const effect = obj3.useEffect(() => {
@@ -288,7 +288,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     };
   };
   const tmpResult4 = obj5(4612);
-  fn.__closure = { clampPIPScale: obj5(17181).clampPIPScale, pipState: obj5, scale: sharedValue };
+  fn.__closure = { clampPIPScale: obj5(17205).clampPIPScale, pipState: obj5, scale: sharedValue };
   fn.__workletHash = 9660590378927;
   fn.__initData = __initData2;
   const animatedReaction = tmpResult4.useAnimatedReaction(R, fn);
@@ -342,6 +342,6 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
       });
     });
   }, items2);
-  tmp9(17346)(channelId, layoutManager, focusedId);
+  tmp9(17370)(channelId, layoutManager, focusedId);
   return obj5;
 };

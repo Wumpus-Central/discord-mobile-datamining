@@ -206,7 +206,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           } else if (SearchTabs.THREADS === tab) {
             if (cResult[37] !== searchContext) {
               const obj12 = { searchContext };
-              const tmp29 = jsx(searchContext(16870).SearchTabsThreadScreen, { searchContext });
+              const tmp29 = jsx(searchContext(16889).SearchTabsThreadScreen, { searchContext });
               cResult[37] = searchContext;
               cResult[38] = tmp29;
               let tmp27 = tmp29;
@@ -322,7 +322,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           return jsx(LinksScreenDefault, { tab, searchContext, isFocused, width });
         } else if (SearchTabs.THREADS === tab) {
           const obj12 = { searchContext };
-          return jsx(searchContext(16870).SearchTabsThreadScreen, { searchContext });
+          return jsx(searchContext(16889).SearchTabsThreadScreen, { searchContext });
         } else if (SearchTabs.MESSAGES === tab) {
           const obj26 = { tab, searchContext, isFocused };
           return jsx(MessagesScreenDefault, { tab, searchContext, isFocused });

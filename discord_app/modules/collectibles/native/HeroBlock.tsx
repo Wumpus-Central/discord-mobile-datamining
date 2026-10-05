@@ -813,7 +813,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let stateFromStores;
       closure_5 = undefined;
       closure_6 = undefined;
-      let obj = heroBlock(15712);
+      let obj = heroBlock(15716);
       dependencyMap = heroBlock(1490).useNavigation();
       let obj2 = heroBlock(1490);
       noop = heroBlock(8421).useCollectiblesAnalyticsContext();
@@ -832,24 +832,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult9 = heroBlock(10912);
       const tmp7 = preferVCPrice(4791)();
       const tmp8 = closure_14();
-      const tmpResult10 = heroBlock(15713);
+      const tmpResult10 = heroBlock(15717);
       const token = heroBlock(4580).useToken(preferVCPrice(587).colors.BACKGROUND_BASE_LOW);
       const tmpResult11 = heroBlock(4580);
       const tmpResult12 = heroBlock(4727);
       const tmpResult13 = heroBlock(4727);
       const hexToRgbaStringResult = tmpResult12.hexToRgbaString(heroBlock(4727).hexWithOpacity(token, 0));
       const token1 = heroBlock(4580).useToken(preferVCPrice(587).colors.BACKGROUND_BASE_LOWEST);
-      const tmp12 = preferVCPrice(15714)();
+      const tmp12 = preferVCPrice(15718)();
       closure_5 = tmp12;
       const items1 = [heroBlock.rankedSkuIds, tmp12];
       const memo = noop.useMemo(() => closure_5(heroBlock.rankedSkuIds), items1);
       const tmpResult14 = heroBlock(4580);
-      const filteredAndSortedProducts = heroBlock(14872).useFilteredAndSortedProducts({
+      const filteredAndSortedProducts = heroBlock(14876).useFilteredAndSortedProducts({
         products: memo,
         bypassAndroidUnsyncedFilter: tmp4,
       });
       closure_6 = tmp14;
-      const tmpResult15 = heroBlock(14872);
+      const tmpResult15 = heroBlock(14876);
       let unpublishedAt;
       if (stateFromStores != null) {
         unpublishedAt = stateFromStores.unpublishedAt;
@@ -1036,8 +1036,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl5 = tmp(1126).intl;
             const obj31 = { category: stateFromStores.name };
             obj30.accessibilityLabel = intl5.formatToPlainString(tmp(1126).t.FNtLb3, obj31);
-            let tmp22Result9 = closure_11(tmp6(15728), obj30);
-            const tmp6Result3 = tmp6(15728);
+            let tmp22Result9 = closure_11(tmp6(15732), obj30);
+            const tmp6Result3 = tmp6(15732);
           } else {
             if (0 === filteredAndSortedProducts.length) {
               const obj32 = { accessibilityLabel: null };
@@ -1089,13 +1089,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           items6[2] = closure_11(closure_5, obj29);
           obj6.children = items6;
           obj5.children = closure_13(closure_5, obj6);
-          obj4.children = closure_11(tmp6(15731), obj5);
+          obj4.children = closure_11(tmp6(15735), obj5);
           return closure_11(tmp(6657).AnalyticsLocationProvider, obj4);
         } else {
           if (tmpResult16.isThemeDark(tmp7)) {
-            let tmp6Result4 = tmp6(15726);
+            let tmp6Result4 = tmp6(15730);
           } else {
-            tmp6Result4 = tmp6(15727);
+            tmp6Result4 = tmp6(15731);
           }
           tmpResult16 = tmp(4729);
         }

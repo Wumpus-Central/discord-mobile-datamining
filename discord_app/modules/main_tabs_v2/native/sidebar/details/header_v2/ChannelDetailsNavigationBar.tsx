@@ -551,7 +551,7 @@ let closure_27 = noop.forwardRef(
           }
           const obj8 = { ref, channelId: null, guildId: null, showBackButton: true };
           ({ id: obj4.channelId, guild_id: obj4.guildId } = channel);
-          const tmp11 = closure_15(cleanUp(16771), obj8);
+          const tmp11 = closure_15(cleanUp(16790), obj8);
           cResult[3] = channel.guild_id;
           cResult[4] = channel.id;
           cResult[5] = ref;
@@ -619,7 +619,7 @@ let closure_27 = noop.forwardRef(
         const animatedStyle = obj.useAnimatedStyle(fn);
         let obj3 = {
           style: null,
-          children: closure_15(cleanUp(16771), {
+          children: closure_15(cleanUp(16790), {
             ref,
             channelId: channel.id,
             guildId: channel.guild_id,
@@ -985,7 +985,7 @@ export default noop.memo(
                       constructor(arg0, arg1, arg2, arg3) {
                         if (closure_18.BUTTONS === ref) {
                           tmp7 = jsx;
-                          tmp8 = f75489;
+                          tmp8 = f75615;
                           obj1 = {
                             channel: null,
                             onBackPress: null,
@@ -1001,7 +1001,7 @@ export default noop.memo(
                           tmp11 = componentWidth;
                           obj1.width = componentWidth;
                           obj1.cleanUp = arg3;
-                          return jsx(f75489, obj1, channel);
+                          return jsx(f75615, obj1, channel);
                         } else if (tmp.SEARCH === ref) {
                           tmp2 = jsx;
                           tmp3 = closure_27;
@@ -1031,7 +1031,7 @@ export default noop.memo(
                     constructor(arg0, arg1, arg2, arg3) {
                       if (closure_18.BUTTONS === ref) {
                         tmp7 = jsx;
-                        tmp8 = f75489;
+                        tmp8 = f75615;
                         obj1 = { channel: null, onBackPress: null, transitionState: null, width: null, cleanUp: null };
                         tmp9 = channel;
                         obj1.channel = channel;
@@ -1041,7 +1041,7 @@ export default noop.memo(
                         tmp11 = componentWidth;
                         obj1.width = componentWidth;
                         obj1.cleanUp = arg3;
-                        return jsx(f75489, obj1, channel);
+                        return jsx(f75615, obj1, channel);
                       } else if (tmp.SEARCH === ref) {
                         tmp2 = jsx;
                         tmp3 = closure_27;
@@ -1073,7 +1073,7 @@ export default noop.memo(
               constructor(arg0, arg1, arg2, arg3) {
                 if (closure_18.BUTTONS === ref) {
                   tmp7 = jsx;
-                  tmp8 = f75489;
+                  tmp8 = f75615;
                   obj1 = { channel: null, onBackPress: null, transitionState: null, width: null, cleanUp: null };
                   tmp9 = channel;
                   obj1.channel = channel;
@@ -1083,7 +1083,7 @@ export default noop.memo(
                   tmp11 = componentWidth;
                   obj1.width = componentWidth;
                   obj1.cleanUp = arg3;
-                  return jsx(f75489, obj1, channel);
+                  return jsx(f75615, obj1, channel);
                 } else if (tmp.SEARCH === ref) {
                   tmp2 = jsx;
                   tmp3 = closure_27;

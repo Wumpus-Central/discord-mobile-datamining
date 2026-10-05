@@ -210,7 +210,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -244,7 +244,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
             const result = onPressDMItem(tmp5[20]).trackSuggestedSearchClicked(obj7);
             tmp2(closure_129_0, closure_129_1);
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp20) {
           c4 = tmp;
@@ -290,7 +290,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -324,7 +324,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
             const result = tmp2(onPressDMItem[20]).trackSuggestedSearchClicked(obj7);
             tmp5(closure_129_0, closure_129_1);
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp20) {
           c4 = tmp;
@@ -671,7 +671,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sear
     tmp11 = cResult[4];
   }
   const arr3 = closure_21(tmp11);
-  const tmp15 = messages(16796)(searchContext.width);
+  const tmp15 = messages(16815)(searchContext.width);
   dependencyMap = tmp15;
   if (null != messages) {
     if (0 !== messages.length) {
@@ -704,7 +704,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sear
       let tmp30 = cResult[10];
     }
     let num11 = searchContext;
-    const onPressMediaItem = searchContext(16793).useOnPressMediaItem(tmp30);
+    const onPressMediaItem = searchContext(16812).useOnPressMediaItem(tmp30);
     if (cResult[11] === messages) {
       if (cResult[12] === onPressMediaItem) {
         let tmp35 = cResult[13];
@@ -717,7 +717,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sear
       } else {
         tmp36 = cResult[14];
       }
-      const fullscreenPlaceholderCount = num11(16797).useFullscreenPlaceholderCount(tmp36);
+      const fullscreenPlaceholderCount = num11(16816).useFullscreenPlaceholderCount(tmp36);
       if (cResult[15] === tmp35) {
         if (cResult[16] === isInitialSearchQuery) {
           if (cResult[17] === EMPTY_MEDIA_RESULTS) {
@@ -1043,7 +1043,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sear
           arr8.push(element);
         });
       }
-      const num11Result = num11(16797);
+      const num11Result = num11(16816);
     }
     class G {
       constructor(arg0) {
@@ -1073,7 +1073,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sear
     cResult[12] = onPressMediaItem;
     cResult[13] = G;
     tmp35 = G;
-    const obj7 = searchContext(16793);
+    const obj7 = searchContext(16812);
   }
   const obj13 = { searchContext, allMediaResults: EMPTY_MEDIA_RESULTS };
   cResult[8] = EMPTY_MEDIA_RESULTS;

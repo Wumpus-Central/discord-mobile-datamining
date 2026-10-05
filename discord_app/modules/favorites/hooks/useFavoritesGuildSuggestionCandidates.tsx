@@ -17,7 +17,7 @@ function getAffineChannelId(channelId) {
 function getAffineUserDMId(otherUserId) {
   return ChannelStore.getDMFromUserId(otherUserId.otherUserId);
 }
-const NO_SUGGESTIONS = fn(16123).NO_SUGGESTIONS;
+const NO_SUGGESTIONS = fn(16127).NO_SUGGESTIONS;
 const isAllowedType = fn(10712).isAllowedType;
 const ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()

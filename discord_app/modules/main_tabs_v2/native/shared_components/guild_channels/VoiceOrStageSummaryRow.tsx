@@ -622,7 +622,7 @@ export default noop.memo(
           let obj6 = {
             size: tmp(tmp2[9]).Icon.Sizes.CUSTOM,
             style: { height: 14, width: 14 },
-            source: require("../../../../../../_runtime/metro/16808__.js"),
+            source: require("../../../../../../_runtime/metro/16827__.js"),
           };
           const items4 = [closure_4(tmp(tmp2[9]).Icon, obj6)];
           let obj7 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };

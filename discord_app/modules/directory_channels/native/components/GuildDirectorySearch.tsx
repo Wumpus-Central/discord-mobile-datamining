@@ -881,7 +881,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               class P {
                 constructor() {
                   obj = { channel };
-                  return jsx(f59416, obj);
+                  return jsx(f59444, obj);
                 }
               }
               class Y {
@@ -918,7 +918,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               class P {
                 constructor() {
                   obj = { channel };
-                  return jsx(f59416, obj);
+                  return jsx(f59444, obj);
                 }
               }
             }
@@ -927,7 +927,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               class P {
                 constructor() {
                   obj = { channel };
-                  return jsx(f59416, obj);
+                  return jsx(f59444, obj);
                 }
               }
               class Y {
@@ -964,7 +964,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               class P {
                 constructor() {
                   obj = { channel };
-                  return jsx(f59416, obj);
+                  return jsx(f59444, obj);
                 }
               }
             }
@@ -972,7 +972,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               class P {
                 constructor() {
                   obj = { channel };
-                  return jsx(f59416, obj);
+                  return jsx(f59444, obj);
                 }
               }
               class Y {
@@ -1009,7 +1009,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               class P {
                 constructor() {
                   obj = { channel };
-                  return jsx(f59416, obj);
+                  return jsx(f59444, obj);
                 }
               }
             }
@@ -1017,7 +1017,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               class P {
                 constructor() {
                   obj = { channel };
-                  return jsx(f59416, obj);
+                  return jsx(f59444, obj);
                 }
               }
             }
@@ -1078,7 +1078,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class P {
           constructor() {
             obj = { channel };
-            return jsx(f59416, obj);
+            return jsx(f59444, obj);
           }
         }
         class Y {

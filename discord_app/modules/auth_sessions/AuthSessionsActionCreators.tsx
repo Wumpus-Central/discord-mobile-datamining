@@ -34,7 +34,7 @@ let closure_6 = async function _logOutSessions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -59,7 +59,7 @@ let closure_6 = async function _logOutSessions(arg0) {
             let items = length;
             if (num2 === length.length) {
               c4 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             items = [length];

@@ -4,7 +4,7 @@ import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.t
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import CollectiblesActionCreators from "../../../collectibles/CollectiblesActionCreators.tsx";
 import useTrackImpressionDefault from "../../../app_analytics/useTrackImpression.tsx";
-import _modDef13146 from "../../../../../_runtime/metro/13146__.js";
+import _modDef13148 from "../../../../../_runtime/metro/13148__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -207,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj6.children = closure_11(onClose(6696).ActionSheetCloseButton, obj7);
           const items = [closure_11(View, obj6), ,];
           const obj8 = { style: tmp4.body, children: null };
-          const obj9 = { source: _modDef13146, style: tmp4.orbGraphic, resizeMode: "contain" };
+          const obj9 = { source: _modDef13148, style: tmp4.orbGraphic, resizeMode: "contain" };
           const items1 = [closure_11(closure_6, obj9)];
           const obj10 = { children: null };
           const obj11 = { variant: "heading-lg/bold", color: "text-overlay-light", style: tmp4.title, children: null };
@@ -324,7 +324,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj6.children = closure_11(onClose(6696).ActionSheetCloseButton, obj7);
         const items3 = [closure_11(View, obj6), ,];
         const obj8 = { style: tmp.body, children: null };
-        const obj9 = { source: _modDef13146, style: tmp.orbGraphic, resizeMode: "contain" };
+        const obj9 = { source: _modDef13148, style: tmp.orbGraphic, resizeMode: "contain" };
         const items4 = [closure_11(closure_6, obj9)];
         const obj10 = { children: null };
         const obj11 = { variant: "heading-lg/bold", color: "text-overlay-light", style: tmp.title, children: null };

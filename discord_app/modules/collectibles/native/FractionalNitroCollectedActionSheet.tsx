@@ -19,7 +19,7 @@ import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx
 import _modDef10455 from "../../../../_runtime/metro/10455__.js";
 import _modDef10456 from "../../../../_runtime/metro/10456__.js";
 import CircleQuestionIcon from "../../../design/components/Icon/native/redesign/generated/CircleQuestionIcon.tsx";
-import _modDef12993 from "../../../../_runtime/metro/12993__.js";
+import _modDef12995 from "../../../../_runtime/metro/12995__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -82,7 +82,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       skuId = skuId.skuId;
       const tmp4 = closure_12();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { source: _modDef12993 };
+        const obj2 = { source: _modDef12995 };
         const tmp9 = options(FastImageDefault, obj2);
         cResult[0] = tmp9;
         let first = tmp9;
@@ -131,7 +131,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   : (skuId) => {
       const tmp = closure_12();
       const obj = { style: tmp.header, children: null };
-      const obj2 = { source: _modDef12993 };
+      const obj2 = { source: _modDef12995 };
       const items = [options(FastImageDefault, obj2)];
       const obj3 = { style: tmp.fractionNitroIcon, children: null };
       const size = {

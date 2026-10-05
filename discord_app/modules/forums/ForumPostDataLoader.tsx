@@ -30,7 +30,7 @@ let closure_13 = async function _loadForumPostData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -102,7 +102,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -129,7 +129,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
             c4 = 0;
             v65535.finishRequesting(closure_0, nextBatch);
             c6 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           } else {
             channel = channel.getChannel(closure_0);
             let guild_id;
@@ -141,7 +141,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
               c4 = 0;
               v65535.finishRequesting(closure_0, nextBatch);
               c6 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             } else {
               const HTTP = require("HTTPUtils").HTTP;
               const request = { url: Endpoints.FORUM_POSTS(closure_0), body: null, rejectWithError: true };

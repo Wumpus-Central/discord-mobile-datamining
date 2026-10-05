@@ -144,7 +144,7 @@ export const ForumChannelSearchInput = noop.memo(
         const guildId = channelId.guildId;
         closure_8();
         let obj = channelId(576);
-        const canSearchForumPostsByChannelId = channelId(13097).useCanSearchForumPostsByChannelId(channelId);
+        const canSearchForumPostsByChannelId = channelId(13099).useCanSearchForumPostsByChannelId(channelId);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ForumSearchStore];
           cResult[0] = items;
@@ -170,7 +170,7 @@ export const ForumChannelSearchInput = noop.memo(
           tmp8 = cResult[2];
           tmp9 = cResult[3];
         }
-        let obj2 = channelId(13097);
+        let obj2 = channelId(13099);
         const stateFromStores = channelId(504).useStateFromStores(first, tmp8, tmp9);
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const items2 = [ChannelStore];
@@ -288,8 +288,8 @@ export const ForumChannelSearchInput = noop.memo(
         channelId = channelId.channelId;
         ({ guildId: importDefault, placeholder } = channelId);
         const tmp = closure_8();
-        const canSearchForumPostsByChannelId = channelId(13097).useCanSearchForumPostsByChannelId(channelId);
-        let obj = channelId(13097);
+        const canSearchForumPostsByChannelId = channelId(13099).useCanSearchForumPostsByChannelId(channelId);
+        let obj = channelId(13099);
         const items = [ForumSearchStore];
         const items1 = [channelId];
         const stateFromStores = channelId(504).useStateFromStores(

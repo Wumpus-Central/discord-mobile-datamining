@@ -197,7 +197,7 @@ let closure_28 = async function _handleActivityClose(arg0) {
   await "IconComponent";
   closure_1 = tmp3;
   ({ applicationId: closure_129_0, location: closure_129_1, instanceId: closure_129_2 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 function handleOpenEmbeddedActivity(applicationId) {
   applicationId = applicationId.applicationId;
@@ -538,7 +538,7 @@ let closure_32 = async function _trackFrameSessionStartFailed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -792,7 +792,7 @@ class EmbeddedActivitiesManager extends tmp3 {
         isStart: closure_130_5,
         locationKind: closure_130_6,
       } = applyArgumentsResult);
-      return "Reflect";
+      return "Set";
     });
     applyArgumentsResult.handleActivityLaunchFail = function () {
       const self = this;
@@ -872,7 +872,7 @@ class EmbeddedActivitiesManager extends tmp3 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -912,7 +912,7 @@ class EmbeddedActivitiesManager extends tmp3 {
               closure_131_13 = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Set", done: true };
             }
           } else {
             if (1 === getChannel) {

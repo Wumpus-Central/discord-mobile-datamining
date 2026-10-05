@@ -88,7 +88,7 @@ function useSubmitForm(parentChannel) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -116,7 +116,7 @@ function useSubmitForm(parentChannel) {
                   tmp60.current = false;
                   c5 = 0;
                   c7 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
                 v2 = 2;
                 c7 = 1;
@@ -514,7 +514,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                 channelId: parentChannel.id,
                                 messageId: threadSettingsDraft.parentMessageId,
                               };
-                              items4[1] = closure_13(tmp(16765).ThreadCreationStarterMessage, obj18);
+                              items4[1] = closure_13(tmp(16784).ThreadCreationStarterMessage, obj18);
                               obj16.children = items4;
                               tmp52 = closure_14(closure_6, obj16);
                             }
@@ -589,7 +589,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               threadNameError: tmp10,
               optional: tmp24,
             };
-            const tmp44 = closure_13(tmp15(16763), obj22);
+            const tmp44 = closure_13(tmp15(16782), obj22);
             cResult[21] = tmp24;
             cResult[22] = tmp10;
             cResult[23] = threadSettingsDraft;
@@ -658,7 +658,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.threadIconContainer,
           children: closure_13(threadSettingsDraft(5857).ThreadIcon, { size: "lg" }),
         }),
-        closure_13(parentChannel(16763), {
+        closure_13(parentChannel(16782), {
           ref: ref1,
           chatInputRef: ref,
           threadSettingsDraft,
@@ -709,7 +709,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const obj13 = { style: tmp.border };
         const items6 = [closure_13(closure_6, obj13)];
         const obj14 = { channelId: parentChannel.id, messageId: threadSettingsDraft.parentMessageId };
-        items6[1] = closure_13(tmp2(16765).ThreadCreationStarterMessage, obj14);
+        items6[1] = closure_13(tmp2(16784).ThreadCreationStarterMessage, obj14);
         obj12.children = items6;
         tmp15Result = closure_14(closure_6, obj12);
       }

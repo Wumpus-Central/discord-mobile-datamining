@@ -412,13 +412,13 @@ export default noop.memo(
                 guildId: "e",
                 isMobileOnline: stateFromStores3,
                 isVROnline: stateFromStores4,
-                status: true,
-                streaming: true,
-                style: false,
-                size: true,
-                animate: true,
-                typing: "ix",
-                autoStatusCutout: 17072961,
+                status: null,
+                streaming: "791966fb9a6f3ffee5b077e1ac5b0455",
+                style: "hi.messages.791966fb9a6f3ffee5b077e1ac5b0455.compiled.messages",
+                size: "jsona",
+                animate: "AUDIT_LOG_FETCH_NEXT_PAGE_START",
+                typing: null,
+                autoStatusCutout: null,
               };
               if (!stateFromStores2.isSystemUser()) {
                 class H {
@@ -578,13 +578,13 @@ export default noop.memo(
               guildId: "e",
               isMobileOnline: stateFromStores3,
               isVROnline: stateFromStores4,
-              status: true,
-              streaming: true,
-              style: false,
-              size: true,
-              animate: true,
-              typing: "ix",
-              autoStatusCutout: 17072961,
+              status: null,
+              streaming: "791966fb9a6f3ffee5b077e1ac5b0455",
+              style: "hi.messages.791966fb9a6f3ffee5b077e1ac5b0455.compiled.messages",
+              size: "jsona",
+              animate: "AUDIT_LOG_FETCH_NEXT_PAGE_START",
+              typing: null,
+              autoStatusCutout: null,
             };
             let tmp12 = null;
             if (!stateFromStores2.isSystemUser()) {
@@ -602,13 +602,13 @@ export default noop.memo(
               guildId: "e",
               isMobileOnline: stateFromStores3,
               isVROnline: stateFromStores4,
-              status: true,
-              streaming: true,
-              style: false,
-              size: true,
-              animate: true,
-              typing: "ix",
-              autoStatusCutout: 17072961,
+              status: null,
+              streaming: "791966fb9a6f3ffee5b077e1ac5b0455",
+              style: "hi.messages.791966fb9a6f3ffee5b077e1ac5b0455.compiled.messages",
+              size: "jsona",
+              animate: "AUDIT_LOG_FETCH_NEXT_PAGE_START",
+              typing: null,
+              autoStatusCutout: null,
             });
           }
         }

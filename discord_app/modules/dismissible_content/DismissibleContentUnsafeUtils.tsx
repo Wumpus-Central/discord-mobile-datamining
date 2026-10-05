@@ -132,7 +132,7 @@ let closure_7 = async function _UNSAFE_markDismissibleContentAsDismissed(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -157,7 +157,7 @@ let closure_7 = async function _UNSAFE_markDismissibleContentAsDismissed(arg0) {
           closure_130_1 = obj6;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -221,7 +221,7 @@ let closure_8 = async function _UNSAFE_markSingleUseGuildDismissibleContentAsDis
     obj6 = {};
   }
   closure_131_2 = obj6;
-  return "Reflect";
+  return "Set";
 };
 let closure_9 = async function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed(arg0) {
   if (c6 === 2) {
@@ -234,7 +234,7 @@ let closure_9 = async function _UNSAFE_markTimeRecurringGuildDismissibleContentA
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -287,7 +287,7 @@ let closure_9 = async function _UNSAFE_markTimeRecurringGuildDismissibleContentA
           closure_131_1,
         );
         c6 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp13) {
       c6 = tmp;
@@ -312,7 +312,7 @@ let closure_10 = async function _UNSAFE_markSnowflakeBoundGuildDismissibleConten
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -369,7 +369,7 @@ let closure_10 = async function _UNSAFE_markSnowflakeBoundGuildDismissibleConten
             closure_132_1,
           );
           c7 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp13) {
         c7 = tmp;

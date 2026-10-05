@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.isConnectingOrConnectedToConsole = channelId2 === arg0 || channelId === arg0;
       obj3.icon = getConsoleIconDefault(str);
       const tmp9 = useShouldDisplayCancelConsoleTransferDefault(stateFromStores);
-      obj3.text = tmp5(17294).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
+      obj3.text = tmp5(17318).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
       obj3.color = getConsoleColorDefault(str);
       obj3.displayCancel = tmp9;
       return obj3;

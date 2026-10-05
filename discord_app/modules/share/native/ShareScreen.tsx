@@ -127,7 +127,7 @@ export default function ShareScreen(appEntryKey) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -220,7 +220,7 @@ export default function ShareScreen(appEntryKey) {
                               const obj2 = { value, done: true };
                               return obj2;
                             } else {
-                              return { value: "IconComponent", done: "IconComponent" };
+                              return { value: "IconComponent", done: null };
                             }
                           } else {
                             try {
@@ -242,7 +242,7 @@ export default function ShareScreen(appEntryKey) {
                                   let channel2;
                                   c5 = 1;
                                   c6 = 1;
-                                  return { value: "Reflect", done: true };
+                                  return { value: "Set", done: true };
                                 }
                               } else if (1 === tmp7) {
                                 if (arg0 === 1) {
@@ -392,7 +392,7 @@ export default function ShareScreen(appEntryKey) {
               closure_129_8(false);
               closure_129_9.current = false;
               React = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else if (arg0 === 1) {
             React = 3;

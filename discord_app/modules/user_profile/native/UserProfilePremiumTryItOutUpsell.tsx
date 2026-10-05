@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onButtonPress: onPreviewPremium,
           buttonVariant: "primary",
         };
-        const tmp18 = jsx(tmp4(14470), {
+        const tmp18 = jsx(tmp4(14474), {
           style: tmp6.card,
           text: tmp11,
           buttonText: tmp14,
@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = isVisible(1126).intl;
       obj5.buttonText = intl2.string(isVisible(1126).t.PxUx8e);
       obj5.onButtonPress = isVisible.onPreviewPremium;
-      obj4.children = jsx(analyticsLocations(14470), {
+      obj4.children = jsx(analyticsLocations(14474), {
         style: tmp2.card,
         text: null,
         buttonText: null,

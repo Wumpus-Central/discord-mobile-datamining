@@ -12,7 +12,7 @@ import _modDef9522 from "../../../../_runtime/metro/09522__.js";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import _modDef12013 from "../../../../_runtime/metro/12013__.js";
 import QrCodeIcon from "../../../design/components/Icon/native/redesign/generated/QrCodeIcon.tsx";
-import _modDef14690 from "../../../../_runtime/metro/14690__.js";
+import _modDef14694 from "../../../../_runtime/metro/14694__.js";
 import ChatCheckIcon from "../../../design/components/Icon/native/redesign/generated/ChatCheckIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[7] !== ageSpecificText) {
         const obj2 = {
-          icon: _modDef14690,
+          icon: _modDef14694,
           IconComponent: ChatCheckIcon.ChatCheckIcon,
           header: tmp23,
           description: ageSpecificText,
@@ -232,7 +232,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         intl5.string(_modDef2493["+pi4Yt"]),
         intl6.string(_modDef2493["1xPTwE"]),
       );
-      obj4.icon = _modDef14690;
+      obj4.icon = _modDef14694;
       obj4.IconComponent = ChatCheckIcon.ChatCheckIcon;
       const intl7 = util.intl;
       obj4.header = intl7.string(_modDef2493["001l3m"]);

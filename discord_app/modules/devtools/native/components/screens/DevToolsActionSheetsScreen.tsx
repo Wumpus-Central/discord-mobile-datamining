@@ -55,7 +55,7 @@ let items = [
     description: "Shows safety warning for inappropriate conversations",
     show() {
       return ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(15598, dependencyMap.paths),
+        asyncRequireImpl(15602, dependencyMap.paths),
         {
           warningId: "test-warning-123",
           warningType: "inappropriate_conversation",
@@ -235,7 +235,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class T {
           constructor() {
             obj = closure_1(closure_2[13]);
-            obj1 = { default: f71011 };
+            obj1 = { default: f71061 };
             obj4 = { selectedType: closure_0, onSelect: closure_1 };
             openLazyResult = obj.openLazy(Promise.resolve(obj1), "action-sheet-selector", obj4);
             return;
@@ -247,7 +247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class T {
           constructor() {
             obj = closure_1(closure_2[13]);
-            obj1 = { default: f71011 };
+            obj1 = { default: f71061 };
             obj4 = { selectedType: closure_0, onSelect: closure_1 };
             openLazyResult = obj.openLazy(Promise.resolve(obj1), "action-sheet-selector", obj4);
             return;
@@ -258,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class T {
           constructor() {
             obj = closure_1(closure_2[13]);
-            obj1 = { default: f71011 };
+            obj1 = { default: f71061 };
             obj4 = { selectedType: closure_0, onSelect: closure_1 };
             openLazyResult = obj.openLazy(Promise.resolve(obj1), "action-sheet-selector", obj4);
             return;
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class T {
           constructor() {
             obj = closure_1(closure_2[13]);
-            obj1 = { default: f71011 };
+            obj1 = { default: f71061 };
             obj4 = { selectedType: closure_0, onSelect: closure_1 };
             openLazyResult = obj.openLazy(Promise.resolve(obj1), "action-sheet-selector", obj4);
             return;
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class T {
           constructor() {
             obj = closure_1(closure_2[13]);
-            obj1 = { default: f71011 };
+            obj1 = { default: f71061 };
             obj4 = { selectedType: closure_0, onSelect: closure_1 };
             openLazyResult = obj.openLazy(Promise.resolve(obj1), "action-sheet-selector", obj4);
             return;

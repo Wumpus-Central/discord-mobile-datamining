@@ -3,9 +3,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
-import _modDef13407 from "../../../../../_runtime/metro/13407__.js";
-import _mod13408 from "../../../../../_runtime/metro/13408__.js";
 import _modDef13409 from "../../../../../_runtime/metro/13409__.js";
+import _mod13410 from "../../../../../_runtime/metro/13410__.js";
+import _modDef13411 from "../../../../../_runtime/metro/13411__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -62,7 +62,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      return timestampProducer(React3, { style, source: _modDef13407 });
+      return timestampProducer(React3, { style, source: _modDef13409 });
     },
   },
   {
@@ -75,7 +75,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod13408, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod13410, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return timestampProducer(LottieAnimationViewDefault, obj);
     },
   },
@@ -89,7 +89,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      return timestampProducer(React3, { style, source: _modDef13409 });
+      return timestampProducer(React3, { style, source: _modDef13411 });
     },
   },
 ];
@@ -116,7 +116,7 @@ let obj4 = {
     return intl.string(util.t.HTvLGu);
   },
   getGraphic(style) {
-    return timestampProducer(React3, { style, source: _modDef13407 });
+    return timestampProducer(React3, { style, source: _modDef13409 });
   },
 };
 size = fn(2);

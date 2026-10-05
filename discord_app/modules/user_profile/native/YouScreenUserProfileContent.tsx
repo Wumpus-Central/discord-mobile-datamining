@@ -20,7 +20,7 @@ import useBadgeDirectoryNuxCoachmarkVariant from "../../badges/native/useBadgeDi
 import useBadgeDirectoryNuxEntryPoint from "../../badges/native/useBadgeDirectoryNuxEntryPoint.tsx";
 import BadgeDirectoryNuxCoachmarkDefault from "../../badges/native/BadgeDirectoryNuxCoachmark.tsx";
 import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice.tsx";
-import VibegrationsCustomWidgetAddOptionDefault from "../../vibegrations/native/VibegrationsCustomWidgetAddOption.tsx";
+import ConjureCustomWidgetAddOptionDefault from "../../conjure/custom_widget/native/ConjureCustomWidgetAddOption.tsx";
 import UserProfileActivityTabDefault from "UserProfileActivityTab.tsx";
 import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells.tsx";
 import UserProfileConnections from "UserProfileConnections.tsx";
@@ -46,7 +46,7 @@ const useIsContentShown = fn(2042).useIsContentShown;
 let UserProfileSections = fn(7854).UserProfileSections;
 let UserProfileThemeTypes = fn(6707).UserProfileThemeTypes;
 const ContentDismissActionType = fn(2048).ContentDismissActionType;
-const constants = fn(14410).UserProfileEditAutoFocusElement;
+const constants = fn(14414).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -145,7 +145,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = closure_18(containerBackground, containerBorderColor);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp9 = state(UserProfileWidgetsBoardEditNoticeDefault, {});
-        const tmp10 = state(VibegrationsCustomWidgetAddOptionDefault, {});
+        const tmp10 = state(ConjureCustomWidgetAddOptionDefault, {});
         cResult[0] = tmp9;
         cResult[1] = tmp10;
         tmp6 = tmp9;
@@ -191,7 +191,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = UserProfileSharedStylesDefault();
       const items = [
         state(UserProfileWidgetsBoardEditNoticeDefault, {}),
-        state(VibegrationsCustomWidgetAddOptionDefault, {}),
+        state(ConjureCustomWidgetAddOptionDefault, {}),
       ];
       const tmp2 = closure_18(containerBackground, containerBorderColor);
       items[2] = state(UserProfileWidgetsBoardDefault, {
@@ -964,7 +964,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const tmpResult20 = tmp(tmp2[52]);
             const tmp31 =
               displayableBoardWidgets.length > 0 ||
-              tmp(tmp2[53]).useCanConjureVibegrationsCustomWidget("YouScreenUserProfileContent");
+              tmp(tmp2[53]).useCanConjureCustomWidget("YouScreenUserProfileContent");
             const tmpResult21 = tmp(tmp2[53]);
             const isRecentActivityMobileEnabled = tmp(tmp2[54]).useIsRecentActivityMobileEnabled(
               "YouScreenUserProfileContent",
@@ -1148,7 +1148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj11 = user(navigateToPremium[52]);
       const tmp20 =
         displayableBoardWidgets.length > 0 ||
-        user(navigateToPremium[53]).useCanConjureVibegrationsCustomWidget("YouScreenUserProfileContent");
+        user(navigateToPremium[53]).useCanConjureCustomWidget("YouScreenUserProfileContent");
       closure_17 = tmp20;
       const obj12 = user(navigateToPremium[53]);
       const isRecentActivityMobileEnabled = user(navigateToPremium[54]).useIsRecentActivityMobileEnabled(

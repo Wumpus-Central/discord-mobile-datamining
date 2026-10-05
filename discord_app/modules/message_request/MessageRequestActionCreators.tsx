@@ -16,7 +16,7 @@ let closure_5 = async function _acceptMessageRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -54,7 +54,7 @@ let closure_5 = async function _acceptMessageRequest(arg0) {
         const obj7 = { type: "MESSAGE_REQUEST_ACCEPT_OPTIMISTIC", channelId: closure_129_0 };
         closure_130_1(closure_130_2[4]).dispatch(obj7);
         c4 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp12) {
       c4 = tmp;

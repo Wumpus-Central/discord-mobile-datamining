@@ -15,7 +15,7 @@ import showForLaterModal from "../../../../saved_messages/native/showForLaterMod
 import SavedMessagesTypes from "../../../../saved_messages/SavedMessagesTypes.tsx";
 import APNGPlayer from "../../../../image/native/APNGPlayer.android.tsx";
 import _modDef11849 from "../../../../../../_runtime/metro/11849__.js";
-import _modDef13135 from "../../../../../../_runtime/metro/13135__.js";
+import _modDef13137 from "../../../../../../_runtime/metro/13137__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../../../user_settings/ThemeStore.tsx";
@@ -99,7 +99,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[3] === premiumType) {
               if (cResult[4] === subfeatureName) {
                 _require = tmp7;
-                const tmp4Result = importDefault(cResult[5] ? 13131 : 13132);
+                const tmp4Result = importDefault(cResult[5] ? 13133 : 13134);
                 if (cResult[46] === cResult[6]) {
                   if (cResult[47] === tmp4Result) {
                     if (cResult[48] === tmp18) {
@@ -238,7 +238,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                         description: tmp98,
                         analyticsPage: constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY,
                         upsellType: constants.STREAM_QUALITY_UPSELL,
-                        image: _modDef13135,
+                        image: _modDef13137,
                         imageGradientBackground: null,
                       };
                       const obj11 = { colors: null, start: null, end: null };
@@ -703,7 +703,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       obj17.description = stringResult1;
       obj17.analyticsPage = constants3.PREMIUM_UPSELL_FOR_LATER;
       obj17.upsellType = constants.FOR_LATER_MODAL_UPSELL;
-      obj17.image = importDefault(tmp8 ? 13131 : 13132);
+      obj17.image = importDefault(tmp8 ? 13133 : 13134);
       obj3[tmp(7483).EntitlementFeatureNames.SAVED_MESSAGES] = obj17;
       const obj20 = {
         title: null,
@@ -743,7 +743,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       obj24.description = intl21.formatToPlainString(tmp(1126).t["4nlpei"], { fps: ApplicationStreamFPS.FPS_60 });
       obj24.analyticsPage = constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY;
       obj24.upsellType = constants.STREAM_QUALITY_UPSELL;
-      obj24.image = _modDef13135;
+      obj24.image = _modDef13137;
       const obj26 = { colors: null, start: tmp(1105).HorizontalGradient.START, end: tmp(1105).HorizontalGradient.END };
       const items = [token, token1];
       obj26.colors = items;

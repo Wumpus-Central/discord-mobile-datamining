@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return tmp14;
                 }
                 const obj4 = { style: tmp3.container, text: cResult[5] };
-                const tmp17 = jsx(onPress(14678), { style: tmp3.container, text: cResult[5] });
+                const tmp17 = jsx(onPress(14682), { style: tmp3.container, text: cResult[5] });
                 cResult[6] = tmp3.container;
                 cResult[7] = cResult[5];
                 cResult[8] = tmp17;

@@ -724,6 +724,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         orbMultiplierEligibility === multiplier(10008).QuestOrbMultiplierEligibilityType.NITRO ||
         orbMultiplierEligibility === multiplier(10008).QuestOrbMultiplierEligibilityType.UPSELL;
       obj3.children = closure_8(closure_14, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-      obj2.children = closure_8(orbMultiplierEligibility(14962), obj3);
+      obj2.children = closure_8(orbMultiplierEligibility(14966), obj3);
       return closure_8(multiplier(6645).BottomSheet, obj2);
     };

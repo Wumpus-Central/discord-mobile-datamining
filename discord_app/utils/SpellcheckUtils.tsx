@@ -15,7 +15,7 @@ let closure_7 = async function _setEnabled(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -50,7 +50,7 @@ let closure_7 = async function _setEnabled(arg0) {
           closure_129_1.enabled = closure_129_0;
         }
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -69,7 +69,7 @@ let closure_8 = async function _setLearnedWords(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -104,7 +104,7 @@ let closure_8 = async function _setLearnedWords(arg0) {
           closure_129_1.setLearnedWords(closure_129_0);
         }
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp14) {
       c3 = tmp;
@@ -123,7 +123,7 @@ let closure_9 = async function _isMisspelled(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -149,7 +149,7 @@ let closure_9 = async function _isMisspelled(arg0) {
           closure_130_2 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -199,7 +199,7 @@ let closure_10 = async function _getCorrections(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -231,7 +231,7 @@ let closure_10 = async function _getCorrections(arg0) {
           closure_131_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -281,7 +281,7 @@ let closure_11 = async function _getCachedMisspelling() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -307,7 +307,7 @@ let closure_11 = async function _getCachedMisspelling() {
           let cachedMisspelling;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -364,7 +364,7 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -399,7 +399,7 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
           closure_129_1.replaceMisspelling(closure_129_0);
         }
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp14) {
       c3 = tmp;

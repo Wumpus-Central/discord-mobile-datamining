@@ -120,11 +120,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = useFontScale;
     }
   : (banner) => {
-      redesignGuildHeaderHeight = redesignGuildHeaderHeight(16055).useRedesignGuildHeaderHeight(banner);
+      redesignGuildHeaderHeight = redesignGuildHeaderHeight(16059).useRedesignGuildHeaderHeight(banner);
       height = height(1484)({ ignoreKeyboard: true }).height;
-      const tmp2 = height(15943)();
+      const tmp2 = height(15947)();
       dependencyMap = tmp2;
-      const obj = redesignGuildHeaderHeight(16055);
+      const obj = redesignGuildHeaderHeight(16059);
       const fontScale = redesignGuildHeaderHeight(5602).useFontScale();
       closure_4 = tmp4;
       const top = height(1618)().top;

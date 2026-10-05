@@ -88,7 +88,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[12] !== otherUser) {
             const obj4 = { user: otherUser };
-            const tmp25 = closure_5(acceptLinkRequest(14696), obj4);
+            const tmp25 = closure_5(acceptLinkRequest(14700), obj4);
             cResult[12] = otherUser;
             cResult[13] = tmp25;
             let tmp22 = tmp25;
@@ -228,12 +228,12 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           tmp26 = tmp29;
         }
         const obj14 = { otherUser, iconSrc: acceptLinkRequest(4840), iconStyles: tmp4.icon };
-        const tmp15 = closure_5(acceptLinkRequest(14726), obj14);
+        const tmp15 = closure_5(acceptLinkRequest(14730), obj14);
         cResult[6] = otherUser;
         cResult[7] = tmp4.icon;
         cResult[8] = tmp15;
         tmp11 = tmp15;
-        const tmp14 = acceptLinkRequest(14726);
+        const tmp14 = acceptLinkRequest(14730);
       }
       const fn3 = function x() {
         acceptLinkRequest(otherUser.id);
@@ -268,12 +268,12 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = otherUser(11528);
       obj5.iconSrc = acceptLinkRequest(4840);
       obj5.iconStyles = tmp.icon;
-      const items1 = [closure_5(acceptLinkRequest(14726), obj5), ,];
+      const items1 = [closure_5(acceptLinkRequest(14730), obj5), ,];
       const obj6 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
       let intl = otherUser(1126).intl;
       obj6.children = intl.string(acceptLinkRequest(2493).rlNJwZ);
       items1[1] = closure_5(otherUser(4886).Text, obj6);
-      items1[2] = closure_5(acceptLinkRequest(14696), { user: otherUser });
+      items1[2] = closure_5(acceptLinkRequest(14700), { user: otherUser });
       obj4.children = items1;
       const items2 = [closure_6(View, obj4), closure_5(acceptLinkRequest(11530), {})];
       const obj7 = { style: tmp.disclaimer, variant: "text-xs/normal", color: "text-default", children: null };

@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const DEFAULT_AVATARS = size(1405).DEFAULT_AVATARS;
             const substr = DEFAULT_AVATARS.slice(0, 2);
             obj3.children = substr.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-            items[1] = closure_6(size(14273).AvatarDuoPile, obj3);
+            items[1] = closure_6(size(14275).AvatarDuoPile, obj3);
             obj.children = items;
             return closure_7(size(5593).Stack, obj, children);
           }),
@@ -414,7 +414,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const DEFAULT_AVATARS = size(1405).DEFAULT_AVATARS;
           const substr = DEFAULT_AVATARS.slice(0, 2);
           obj3.children = substr.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-          items[1] = closure_6(size(14273).AvatarDuoPile, obj3);
+          items[1] = closure_6(size(14275).AvatarDuoPile, obj3);
           obj.children = items;
           return closure_7(size(5593).Stack, obj, children);
         }),
@@ -429,7 +429,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const DEFAULT_AVATARS = size(1405).DEFAULT_AVATARS;
           const substr = DEFAULT_AVATARS.slice(0, 2);
           obj3.children = substr.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-          items[1] = closure_6(size(14273).AvatarDuoPile, obj3);
+          items[1] = closure_6(size(14275).AvatarDuoPile, obj3);
           obj.children = items;
           return closure_7(size(5593).Stack, obj, children);
         }),

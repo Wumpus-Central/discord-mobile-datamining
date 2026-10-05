@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         sensitiveContentFilterHelpArticle(6804).useSensitiveContentFilterHelpArticle();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o() {
-          const result = sensitiveContentFilterHelpArticle(14494).trackSafetySettingsNoticeAnalytics(
+          const result = sensitiveContentFilterHelpArticle(14498).trackSafetySettingsNoticeAnalytics(
             constants2.AGE_CONFIRMATION_NOTICE,
             constants.VIEWED,
           );
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             entryPoint:
               sensitiveContentFilterHelpArticle(8086).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
           };
-          const result1 = sensitiveContentFilterHelpArticle(14494).trackSafetySettingsNoticeAnalytics(
+          const result1 = sensitiveContentFilterHelpArticle(14498).trackSafetySettingsNoticeAnalytics(
             constants2.AGE_CONFIRMATION_NOTICE,
             constants.CONFIRM_AGE,
           );
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       sensitiveContentFilterHelpArticle =
         sensitiveContentFilterHelpArticle(6804).useSensitiveContentFilterHelpArticle();
       const effect = noop.useEffect(() => {
-        const result = sensitiveContentFilterHelpArticle(14494).trackSafetySettingsNoticeAnalytics(
+        const result = sensitiveContentFilterHelpArticle(14498).trackSafetySettingsNoticeAnalytics(
           constants2.AGE_CONFIRMATION_NOTICE,
           constants.VIEWED,
         );
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {
           entryPoint: sensitiveContentFilterHelpArticle(8086).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
         };
-        const result1 = sensitiveContentFilterHelpArticle(14494).trackSafetySettingsNoticeAnalytics(
+        const result1 = sensitiveContentFilterHelpArticle(14498).trackSafetySettingsNoticeAnalytics(
           constants2.AGE_CONFIRMATION_NOTICE,
           constants.CONFIRM_AGE,
         );

@@ -47,11 +47,11 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
           });
         });
         const promise = data(1987)(4901, dependencyMap.paths);
-      } else if (constants.VIBEGRATIONS === type) {
+      } else if (constants.CONJURE === type) {
         if (null != data.guildId) {
           ({ guildId: data, projectId: closure_1 } = data);
           data(1987)(1112, dependencyMap.paths).then((transitionTo) =>
-            transitionTo.transitionTo(hasOwnProperty.CHANNEL(channelId, StaticChannelRoute.VIBEGRATIONS, closure_1_1)),
+            transitionTo.transitionTo(hasOwnProperty.CHANNEL(channelId, StaticChannelRoute.CONJURE, closure_1_1)),
           );
           const promise3 = data(1987)(1112, dependencyMap.paths);
         }

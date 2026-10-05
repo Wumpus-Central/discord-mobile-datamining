@@ -17,7 +17,7 @@ let closure_9 = async function _handleUploadDebugLogSettingPress() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -127,7 +127,7 @@ const module_570 = fn(570);
 let closure_7 = module_570.create(() => ({ isDisabled: false, isUploading: false }));
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const f70348 = () => {};
+const f70398 = () => {};
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
@@ -136,7 +136,7 @@ const SettingBuilders = fn(11129);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
       const cResult = c.c(2);
-      if (typeof f70348 === "function") {
+      if (typeof f70398 === "function") {
         const isUploading = closure_7().isUploading;
         if (cResult[0] !== isUploading) {
           let tmp4 = null;
@@ -155,7 +155,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
     }
   : () => {
-      if (typeof f70348 === "function") {
+      if (typeof f70398 === "function") {
         let tmp2 = null;
         if (closure_7().isUploading) {
           tmp2 = <ActivityIndicator />;
@@ -185,7 +185,7 @@ const pressable = SettingBuilders.createPressable({
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
         const cResult = c.c(2);
-        if (typeof f70348 === "function") {
+        if (typeof f70398 === "function") {
           const isUploading = closure_7().isUploading;
           if (cResult[0] !== isUploading) {
             let tmp4 = null;
@@ -204,7 +204,7 @@ const pressable = SettingBuilders.createPressable({
         }
       }
     : () => {
-        if (typeof f70348 === "function") {
+        if (typeof f70398 === "function") {
           let tmp2 = null;
           if (closure_7().isUploading) {
             tmp2 = <ActivityIndicator />;

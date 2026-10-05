@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[2];
       }
       let obj = onSave(576);
-      const subscriptionListingsForGuild = onSave(15026).useSubscriptionListingsForGuild(onSave.guildId, tmp10);
+      const subscriptionListingsForGuild = onSave(15030).useSubscriptionListingsForGuild(onSave.guildId, tmp10);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class P {
           constructor(arg0) {
@@ -252,7 +252,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = onSave;
       cResult[5] = first;
       cResult[6] = F;
-      const tmpResult = onSave(15026);
+      const tmpResult = onSave(15030);
     }
   : (arg0) => {
       ({ onSave: require, emoji } = arg0);

@@ -17,7 +17,7 @@ let closure_6 = async function _applyStaffBuildOverride() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -119,7 +119,7 @@ let closure_7 = async function _applyPublicBuildOverride() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -218,7 +218,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -249,7 +249,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
         return obj;
       } else {
         dependencyMap = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp8) {
       dependencyMap = tmp;
@@ -257,7 +257,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const f107407 = function () {
+const f107553 = function () {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

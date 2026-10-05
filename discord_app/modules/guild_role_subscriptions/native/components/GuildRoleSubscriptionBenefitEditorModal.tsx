@@ -20,7 +20,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildRoleSubscriptionsConstants = fn(15019);
+const GuildRoleSubscriptionsConstants = fn(15023);
 ({
   GuildRoleSubscriptionBenefitTypes: c10,
   MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: closure_11,
@@ -158,7 +158,7 @@ export default noop.forwardRef((benefitType) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -236,7 +236,7 @@ export default noop.forwardRef((benefitType) => {
     return value;
   };
   const tmp = closure_15();
-  const tmp4 = value(13708)();
+  const tmp4 = value(13710)();
   [value] = GuildRoleSubscriptionBenefitEditorModalStateStore.useNameState();
   dependencyMap = tmp6;
   [first1, _slicedToArray] = GuildRoleSubscriptionBenefitEditorModalStateStore.useEmojiIdState();
@@ -296,7 +296,7 @@ export default noop.forwardRef((benefitType) => {
           closure_2(useChannelName.computeChannelName(id, UserStore, RelationshipStore));
         },
       };
-      let tmp25 = closure_13(tmp2(17927), obj);
+      let tmp25 = closure_13(tmp2(17949), obj);
       let tmp26 = closure_13;
     } else {
       let obj2 = {
@@ -334,7 +334,7 @@ export default noop.forwardRef((benefitType) => {
       },
       listingId: benefitType.listingId,
     };
-    const items = [tmp26(tmp2(17929), obj4)];
+    const items = [tmp26(tmp2(17951), obj4)];
     let obj5 = {
       keyboardShouldPersistTaps: "handled",
       showsVerticalScrollIndicator: false,
@@ -360,7 +360,7 @@ export default noop.forwardRef((benefitType) => {
       closure_4(emojiId.emojiId);
       closure_6(emojiId.emojiName);
     };
-    items2[3] = tmp26(tmp2(17930), obj9);
+    items2[3] = tmp26(tmp2(17952), obj9);
     const obj11 = { style: tmp4.header, children: null };
     const tmp28 = first2;
     const tmp29 = closure_6;

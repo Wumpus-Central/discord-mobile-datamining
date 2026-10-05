@@ -68,7 +68,7 @@ let closure_10 = async function _fetchSimilarGames(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -116,7 +116,7 @@ let closure_10 = async function _fetchSimilarGames(arg0) {
         const obj7 = { type: "GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS", gameId: closure_130_0, games: closure_130_1 };
         closure_131_1(closure_131_2[6]).dispatch(obj7);
         c5 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp14) {
       c5 = tmp;

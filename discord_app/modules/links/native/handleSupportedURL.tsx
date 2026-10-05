@@ -52,7 +52,7 @@ const NativePermissionTypes = fn(5099).NativePermissionTypes;
 let closure_21 = fn(8710).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_22 = fn(7049).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_23 = fn(4869).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(13662).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(13664).SHARE_SCREEN_MODAL_KEY;
 const MobileUserSettings = fn(7634).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
@@ -298,7 +298,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(13674, dependencyMap.paths),
+                    asyncRequireImpl(13676, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -367,7 +367,7 @@ export default function handleSupportedURL(payload) {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -436,7 +436,7 @@ export default function handleSupportedURL(payload) {
                       const obj3 = payload(paths[48]);
                     }
                     c4 = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp35) {
                   c4 = tmp;
@@ -470,7 +470,7 @@ export default function handleSupportedURL(payload) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -529,7 +529,7 @@ export default function handleSupportedURL(payload) {
                     const obj4 = tmp4(paths[51]);
                   }
                   c2 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 } catch (tmp37) {
                   c2 = tmp;
                   throw tmp37;
@@ -610,7 +610,7 @@ export default function handleSupportedURL(payload) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -787,7 +787,7 @@ export default function handleSupportedURL(payload) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "IconComponent", done: "IconComponent" };
+                        return { value: "IconComponent", done: null };
                       }
                     } else {
                       try {

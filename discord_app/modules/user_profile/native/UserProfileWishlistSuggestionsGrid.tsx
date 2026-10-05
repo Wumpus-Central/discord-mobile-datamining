@@ -500,7 +500,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[19] = wishlistId;
             cResult[20] = obj5;
           }
-          tmpResult = tmp(12943);
+          tmpResult = tmp(12945);
         }
         const obj6 = {
           userId,
@@ -547,7 +547,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmp4 = closure_18();
       const tmp6 = useInitialValueDefault(() => trackUserProfileWishlistAction(dependencyMap[19]).v4());
-      const obj3 = trackUserProfileWishlistAction(12943);
+      const obj3 = trackUserProfileWishlistAction(12945);
       let items = obj3.useAddToWishlistGridItems({
         userId,
         wishlist,
@@ -662,7 +662,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         items4[2] = closure_12(View, obj17);
         obj9.children = items4;
         obj7.children = closure_13(ReanimatedRexportDefault.View, obj9);
-        tmp11Result = closure_12(tmp(12945).WishlistAnalyticsProvider, obj7);
+        tmp11Result = closure_12(tmp(12947).WishlistAnalyticsProvider, obj7);
       }
       return tmp11Result;
     };

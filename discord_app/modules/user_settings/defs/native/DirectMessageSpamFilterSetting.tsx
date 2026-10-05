@@ -56,7 +56,7 @@ const radio = SettingBuilders.createRadio({
           const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
           return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
         }, []),
-  useValue: fn(14643).useDerivedDmSpamFilterSettingValue,
+  useValue: fn(14647).useDerivedDmSpamFilterSettingValue,
   onValueChange: function onDmSpamFilterSettingValueChange(arg0) {
     const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
     DmSpamFilterV2.updateSetting(Number(arg0));

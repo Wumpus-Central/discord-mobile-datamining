@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const QuestConstants = fn(5623);
 ({ QuestDockMode: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const QuestDockConstants = fn(14892);
+const QuestDockConstants = fn(14896);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT: c10, QUEST_DOCK_EXPANDED_PADDING_BOTTOM } = QuestDockConstants);
 ({ QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL, QUEST_DOCK_EXPANDED_ENROLLED_PADDING_TOP } = QuestDockConstants);
 const jsxProd = fn(21);
@@ -175,7 +175,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
   }
   class S {
     constructor() {
-      closure_0 = closure_3(/* F152808 */ function() { ... });
+      closure_0 = closure_3(/* F153094 */ function() { ... });
       if (closure_4) {
         tmp = (function maybeOpenVideoQuestModal() { ... })();
       }
@@ -218,7 +218,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -256,7 +256,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
                 const obj4 = { questId: tmp2.id, sourceQuestContent: quest(5626).QuestContent.QUEST_BAR_MOBILE };
                 v1 = 1;
                 c2 = 1;
-                const obj5 = { value: setRestingQuestDockMode(14924)(obj4), done: false };
+                const obj5 = { value: setRestingQuestDockMode(14928)(obj4), done: false };
                 return obj5;
               } else {
                 c2 = 3;
@@ -469,9 +469,9 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDo
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockEnrolledBody() {
   const cResult = minExpandedContentHeight(576).c(16);
   const obj = minExpandedContentHeight(576);
-  const questDockQuest = minExpandedContentHeight(14921).useQuestDockQuest();
+  const questDockQuest = minExpandedContentHeight(14925).useQuestDockQuest();
   const tmp3 = closure_15();
-  minExpandedContentHeight = noop.useContext(minExpandedContentHeight(14893).QuestDockGestureContext).minExpandedContentHeight;
+  minExpandedContentHeight = noop.useContext(minExpandedContentHeight(14897).QuestDockGestureContext).minExpandedContentHeight;
   if (cResult[0] !== minExpandedContentHeight) {
     const fn = function t(nativeEvent) {
       const height = nativeEvent.nativeEvent.layout.height;
@@ -618,11 +618,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[7] = tmp3.wrapper;
   cResult[8] = tmp10;
   cResult[9] = items1;
-  const obj2 = minExpandedContentHeight(14921);
+  const obj2 = minExpandedContentHeight(14925);
 }) : (function QuestDockEnrolledBody() {
-  const questDockQuest = minExpandedContentHeight(14921).useQuestDockQuest();
-  const obj = minExpandedContentHeight(14921);
-  minExpandedContentHeight = noop.useContext(minExpandedContentHeight(14893).QuestDockGestureContext).minExpandedContentHeight;
+  const questDockQuest = minExpandedContentHeight(14925).useQuestDockQuest();
+  const obj = minExpandedContentHeight(14925);
+  minExpandedContentHeight = noop.useContext(minExpandedContentHeight(14897).QuestDockGestureContext).minExpandedContentHeight;
   const items = [minExpandedContentHeight];
   const items1 = [minExpandedContentHeight];
   const callback = noop.useCallback((nativeEvent) => {

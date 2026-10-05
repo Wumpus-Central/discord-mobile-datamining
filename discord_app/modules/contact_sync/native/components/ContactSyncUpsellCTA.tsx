@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import ContactSyncModalActionCreators from "../ContactSyncModalActionCreators.tsx";
-import _modDef13669 from "../../../../../_runtime/metro/13669__.js";
+import _modDef13671 from "../../../../../_runtime/metro/13671__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -181,7 +181,7 @@ export default noop.memo(
             onPress: tmp5,
             onLongPress: S,
             style: tmp7,
-            iconSource: _modDef13669,
+            iconSource: _modDef13671,
             title: tmp8,
             subtitle: tmp9,
           };
@@ -189,7 +189,7 @@ export default noop.memo(
             onPress: tmp5,
             onLongPress: S,
             style: tmp7,
-            iconSource: _modDef13669,
+            iconSource: _modDef13671,
             title: tmp8,
             subtitle: tmp9,
           });
@@ -234,7 +234,7 @@ export default noop.memo(
             const result = location(6693).showSimpleActionSheet(obj2);
           },
           style: null,
-          iconSource: _modDef13669,
+          iconSource: _modDef13671,
           title: null,
           subtitle: null,
         };
@@ -272,7 +272,7 @@ export default noop.memo(
             const result = location(6693).showSimpleActionSheet(obj2);
           },
           style: null,
-          iconSource: _modDef13669,
+          iconSource: _modDef13671,
           title: null,
           subtitle: null,
         });

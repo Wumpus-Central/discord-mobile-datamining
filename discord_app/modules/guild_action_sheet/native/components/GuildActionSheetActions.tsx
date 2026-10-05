@@ -642,7 +642,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = guild(576).c(22);
       guild = guild.guild;
       let obj = guild(576);
-      const canManageChannels = guild(13772).useGuildActionSheetPermissions(guild).canManageChannels;
+      const canManageChannels = guild(13774).useGuildActionSheetPermissions(guild).canManageChannels;
       const tmp3 = useCanCreateAnEventDefault(guild.id);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildRoleStore];
@@ -661,7 +661,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp6 = cResult[2];
       }
-      const obj2 = guild(13772);
+      const obj2 = guild(13774);
       const stateFromStores = Group(504).useStateFromStores(first, tmp6);
       if (cResult[3] === tmp3) {
         if (cResult[4] === stateFromStores) {
@@ -805,7 +805,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (guild) => {
       guild = guild.guild;
-      let obj = guild(13772);
+      let obj = guild(13774);
       const tmp3 = useCanCreateAnEventDefault(guild.id);
       const items = [GuildRoleStore];
       const items1 = [];
@@ -905,7 +905,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp20 = cResult[8];
         }
-        const messageRequestPrivacyOption = tmp(13720).useMessageRequestPrivacyOption(tmp20);
+        const messageRequestPrivacyOption = tmp(13722).useMessageRequestPrivacyOption(tmp20);
         if (null != messageRequestPrivacyOption) {
           items.push(messageRequestPrivacyOption);
         }
@@ -982,7 +982,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[15] = tmp31;
           tmp29 = tmp31;
         }
-        const tmpResult = tmp(13720);
+        const tmpResult = tmp(13722);
       }
       const tmp13 = closure_21(closure_26, { guild, user: currentUser });
       cResult[2] = guild;
@@ -1000,7 +1000,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       items.push(closure_21(closure_26, { guild, user: currentUser }));
       items.push(closure_21(closure_29, { guild }));
       const tmp4 = closure_7(guild, currentUser);
-      const messageRequestPrivacyOption = guild(13720).useMessageRequestPrivacyOption({ guild });
+      const messageRequestPrivacyOption = guild(13722).useMessageRequestPrivacyOption({ guild });
       if (null != messageRequestPrivacyOption) {
         items.push(messageRequestPrivacyOption);
       }
@@ -1036,7 +1036,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         };
         t = items.push(closure_21(tmp9(6697).ActionSheetRow, obj3));
       }
-      let obj = guild(13720);
+      let obj = guild(13722);
     };
 function handleLeaveServer(guild) {
   ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -1140,7 +1140,7 @@ export const GuildActionSheetGameOrganizationActions = function GuildActionSheet
     obj3.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(13773, dependencyMap.paths),
+        asyncRequireImpl(13775, dependencyMap.paths),
         "GameOrganizationInviteActionSheet",
         { guildId: guild.id },
       );
@@ -1180,7 +1180,7 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
   items.push(closure_21(closure_24, { guild }));
   items.push(closure_21(closure_29, { guild }));
   const obj3 = guild(7046);
-  const messageRequestPrivacyOption = guild(13720).useMessageRequestPrivacyOption({ guild });
+  const messageRequestPrivacyOption = guild(13722).useMessageRequestPrivacyOption({ guild });
   if (null != messageRequestPrivacyOption) {
     items.push(messageRequestPrivacyOption);
   }
@@ -1261,7 +1261,7 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
     };
     t = items.push(closure_21(tmp3(6697).ActionSheetRow, obj9));
   }
-  const tmp3Result = guild(13720);
+  const tmp3Result = guild(13722);
 };
 export const GuildDeveloperOptionAction = ReactCompilerGating.isReactCompilerEnabled()
   ? (guild) => {

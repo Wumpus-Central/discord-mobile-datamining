@@ -1,7 +1,7 @@
 // discord_app/design/components/LottieIcon/native/generated/MicrophoneLottie.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import LottieIcon from "../LottieIcon.tsx";
-import _mod14226 from "../../../../../../_runtime/metro/14226__.js";
+import _mod14228 from "../../../../../../_runtime/metro/14228__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -20,7 +20,7 @@ export const MicrophoneLottie = noop.forwardRef(
     ? (arg0, ref) => {
         const cResult = c.c(4);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmpResult = _mod14226;
+          const tmpResult = _mod14228;
           cResult[0] = tmpResult;
           let first = tmpResult;
         } else {
@@ -42,6 +42,6 @@ export const MicrophoneLottie = noop.forwardRef(
       }
     : (arg0, ref) => {
         const merged = Object.assign(arg0);
-        return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14226, ref, layers, markers: items });
+        return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14228, ref, layers, markers: items });
       },
 );

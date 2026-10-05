@@ -18,10 +18,10 @@ export const useSettingSearchResults = ReactCompilerGating.isReactCompilerEnable
       const cResult = first(576).c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp6 = UserSettingSearchManagerDefault;
-        const tmp62 = new tmp6(tmp(14499).getSettingSearchableTitles());
+        const tmp62 = new tmp6(tmp(14503).getSettingSearchableTitles());
         cResult[0] = tmp62;
         first = tmp62;
-        const tmpResult = tmp(14499);
+        const tmpResult = tmp(14503);
       } else {
         first = cResult[0];
       }
@@ -41,7 +41,7 @@ export const useSettingSearchResults = ReactCompilerGating.isReactCompilerEnable
             const isBlockedResult = SettingTreeManagerDefault.isBlocked(setting, closure_0);
             let tmp3 = !isBlockedResult;
             if (!isBlockedResult) {
-              tmp3 = !first(14405).SETTING_RENDERER_CONFIG[setting].unsearchable;
+              tmp3 = !first(14409).SETTING_RENDERER_CONFIG[setting].unsearchable;
             }
             return tmp3;
           });
@@ -114,9 +114,9 @@ export const useSettingSearchResults = ReactCompilerGating.isReactCompilerEnable
     }
   : () => {
       const memo = memo1.useMemo(() => {
-        const tmp = closure_1(14505);
-        const obj = memo(14499);
-        return new tmp(memo(14499).getSettingSearchableTitles());
+        const tmp = closure_1(14509);
+        const obj = memo(14503);
+        return new tmp(memo(14503).getSettingSearchableTitles());
       }, []);
       const settings = _slicedToArray(memo1.useState(closure_7), 2);
       closure_1 = settings[1];
@@ -132,10 +132,10 @@ export const useSettingSearchResults = ReactCompilerGating.isReactCompilerEnable
             scoredSearchResults = scoredSearchResults.getScoredSearchResults(arg0);
             const found = scoredSearchResults.filter((setting) => {
               setting = setting.setting;
-              const isBlockedResult = closure_2_1(14500).isBlocked(setting, closure_0);
+              const isBlockedResult = closure_2_1(14504).isBlocked(setting, closure_0);
               let tmp3 = !isBlockedResult;
               if (!isBlockedResult) {
-                tmp3 = !scoredSearchResults(14405).SETTING_RENDERER_CONFIG[setting].unsearchable;
+                tmp3 = !scoredSearchResults(14409).SETTING_RENDERER_CONFIG[setting].unsearchable;
               }
               return tmp3;
             });

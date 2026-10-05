@@ -29,7 +29,7 @@ let closure_11 = async function _getDeliveredNotifications() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -90,7 +90,7 @@ let closure_13 = async function _updateAndClearStaleNotifications() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -167,7 +167,7 @@ let closure_13 = async function _updateAndClearStaleNotifications() {
           obj = closure_1_0(dependencyMap[6]);
         })();
         c2 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp8) {
       c2 = tmp;
@@ -206,7 +206,7 @@ const prototype = function NativeNotificationsManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -337,7 +337,7 @@ const prototype = function NativeNotificationsManager() {
                 if (null == closure_131_3) {
                   c6 = 0;
                   logger = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 } else {
                   const _Map = Map;
                   const map = new Map();

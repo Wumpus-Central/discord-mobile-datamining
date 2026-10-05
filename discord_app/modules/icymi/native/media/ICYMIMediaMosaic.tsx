@@ -1023,7 +1023,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
                   class R {
                     constructor(arg0, arg1) {
                       obj = { handlePressMedia, initialIndex: arg1, source: end, dimensions: closure_1 };
-                      return jsx(f73865, obj, arg1);
+                      return jsx(f73915, obj, arg1);
                     }
                   }
                   const obj2 = { style: tmp7, children: cResult[10] };
@@ -1043,7 +1043,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
               class R {
                 constructor(arg0, arg1) {
                   obj = { handlePressMedia, initialIndex: arg1, source: end, dimensions: closure_1 };
-                  return jsx(f73865, obj, arg1);
+                  return jsx(f73915, obj, arg1);
                 }
               }
               cResult[8] = handlePressMedia;
@@ -1053,7 +1053,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
             class R {
               constructor(arg0, arg1) {
                 obj = { handlePressMedia, initialIndex: arg1, source: end, dimensions: closure_1 };
-                return jsx(f73865, obj, arg1);
+                return jsx(f73915, obj, arg1);
               }
             }
             cResult[11] = tmp6;

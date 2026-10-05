@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting(
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
       const cResult = require("c").c(37);
-      const tmp4 = first(15635)();
+      const tmp4 = first(15639)();
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o(buttonSize) {

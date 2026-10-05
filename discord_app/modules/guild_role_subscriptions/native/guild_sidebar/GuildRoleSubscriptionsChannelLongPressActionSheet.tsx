@@ -7,7 +7,7 @@ import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.
 import Form from "../../../../design/void/Form/native/index.tsx";
 import ChannelActionSheetUtils from "../../../channel/native/ChannelActionSheetUtils.tsx";
 import _modDef12461 from "../../../../../_runtime/metro/12461__.js";
-import _modDef16019 from "../../../../../_runtime/metro/16019__.js";
+import _modDef16023 from "../../../../../_runtime/metro/16023__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = cResult[5];
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { source: onClose(16019) };
+        const obj5 = { source: onClose(16023) };
         const tmp21 = closure_5(tmp(1188).Icon, obj5);
         cResult[6] = tmp21;
         let tmp18 = tmp21;
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [closure_5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2)];
       const obj5 = { leading: null, label: null, onPress: null };
       const obj4 = { disableColor: true, source: _modDef12461 };
-      obj5.leading = closure_5(native.Icon, { source: _modDef16019 });
+      obj5.leading = closure_5(native.Icon, { source: _modDef16023 });
       const obj7 = { text: null };
       const intl2 = util.intl;
       obj7.text = intl2.string(util.t.WqhZss);

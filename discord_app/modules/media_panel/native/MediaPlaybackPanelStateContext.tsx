@@ -17,7 +17,7 @@ const obj = {
   wrapperOffset: null,
 };
 let ReanimatedHelperTypes = fn(6571);
-obj.mode = ReanimatedHelperTypes.createFakeSharedValue(fn(14375).MediaPlaybackPanelModes.PIP);
+obj.mode = ReanimatedHelperTypes.createFakeSharedValue(fn(14379).MediaPlaybackPanelModes.PIP);
 obj.setMode = function setMode() {
   const error = new Error("MediaPlaybackPanelModes.Provider.setMode: not called within a context provider");
   throw error;

@@ -16,7 +16,7 @@ const util = items4(1126);
 const WarningIcon = items4(4803);
 const Text_Text = items4(4886);
 const ChevronSmallDownIcon2 = items4(10844);
-const ChevronSmallUpIcon = items4(13377);
+const ChevronSmallUpIcon = items4(13379);
 require = fn;
 function ClassificationDetail(classification) {
   classification = classification.classification;

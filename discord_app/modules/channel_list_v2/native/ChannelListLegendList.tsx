@@ -8,7 +8,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ Fragment: closure_4, jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = [];
-let closure_8 = { item: "done", positionPercentage: false };
+let closure_8 = { item: "duration", positionPercentage: false };
 let closure_9 = { zIndex: 5 };
 let closure_10 = {
   code: "function ChannelListLegendListTsx1(event){const{scrollPosValue,onScrollWorklet,onScroll,runOnJS}=this.__closure;scrollPosValue.set(event.contentOffset.y);onScrollWorklet(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);if(onScroll!=null){runOnJS(onScroll)();}}",
@@ -349,7 +349,7 @@ export default noop.memo(
     const obj4 = { children: null };
     const animatedScrollHandler = obj2.useAnimatedScrollHandler(Q);
     const items6 = [
-      onScroll(tmp5(16020).AnimatedLegendList, {
+      onScroll(tmp5(16024).AnimatedLegendList, {
         ref,
         contentContainerStyle: memo3,
         data: tmp3.listData,

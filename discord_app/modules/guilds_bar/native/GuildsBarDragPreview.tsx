@@ -15,7 +15,7 @@ function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
 const GuildsNodeType = fn(5616).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(16218).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(16222).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(4890);
 let closure_8 = createStyles.createStyles({
@@ -187,11 +187,11 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             const element = {
               type: listInsets.FOLDER,
               id: -1,
-              parentId: "Reflect",
+              parentId: "Set",
               name: "Array",
-              color: "ix",
-              expanded: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002086006742386161,
-              children: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002225074310454486,
+              color: "unicodeVersion",
+              expanded: 27207746,
+              children: 35933184,
             };
             const items = [overNode];
             element.children = items;
@@ -377,11 +377,11 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             const element = {
               type: GuildsNodeType.FOLDER,
               id: -1,
-              parentId: "Reflect",
+              parentId: "Set",
               name: "Array",
-              color: "ix",
-              expanded: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002086006742386161,
-              children: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002225074310454486,
+              color: "unicodeVersion",
+              expanded: 27207746,
+              children: 35933184,
             };
             const items = [tmp2];
             element.children = items;
@@ -891,12 +891,12 @@ export default noop.memo(
                     overState: null,
                     overNode: null,
                     dropPosition: "o",
-                    gestureState: "text-xs/bold",
-                    scrollPosition: "text-muted",
-                    dragRegion: null,
-                    windowSize: null,
-                    dropComplete: "box-none",
-                    listInsets: null,
+                    gestureState: "-1",
+                    scrollPosition: null,
+                    dragRegion: "header",
+                    windowSize: 2,
+                    dropComplete: "heading-lg/semibold",
+                    listInsets: "mobile-text-heading-primary",
                   };
                   ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
                   obj.overState = state;
@@ -991,12 +991,12 @@ export default noop.memo(
                   overState: null,
                   overNode: null,
                   dropPosition: "o",
-                  gestureState: "text-xs/bold",
-                  scrollPosition: "text-muted",
-                  dragRegion: null,
-                  windowSize: null,
-                  dropComplete: "box-none",
-                  listInsets: null,
+                  gestureState: "-1",
+                  scrollPosition: null,
+                  dragRegion: "header",
+                  windowSize: 2,
+                  dropComplete: "heading-lg/semibold",
+                  listInsets: "mobile-text-heading-primary",
                 };
                 ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
                 obj.overState = state;

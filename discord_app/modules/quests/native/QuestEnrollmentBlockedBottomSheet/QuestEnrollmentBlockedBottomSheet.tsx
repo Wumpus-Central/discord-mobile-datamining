@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             class C {
               constructor() {
                 obj = { questId, questEnrollmentBlockedUntil: closure_1, sourceQuestContent };
-                return jsx(f69268, obj);
+                return jsx(f69318, obj);
               }
             }
             const obj2 = {
@@ -283,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class C {
           constructor() {
             obj = { questId, questEnrollmentBlockedUntil: closure_1, sourceQuestContent };
-            return jsx(f69268, obj);
+            return jsx(f69318, obj);
           }
         }
         cResult[3] = questEnrollmentBlockedUntil;

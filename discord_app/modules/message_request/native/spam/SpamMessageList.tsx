@@ -12,7 +12,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const MessageRequestEmptyDefault = tmp2(17042);
+const MessageRequestEmptyDefault = tmp2(17066);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
@@ -892,10 +892,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_11();
       importDefault = tmp;
       const bottom = useSafeAreaInsetsDefault().bottom;
-      dependencyMap = goToMessageRequestPreview(17041).useSpamMessageRequestCount();
+      dependencyMap = goToMessageRequestPreview(17065).useSpamMessageRequestCount();
       const arr = useSortedSpamMessageRequestsDefault();
-      let obj = goToMessageRequestPreview(17041);
-      hasSingleMessageRequest = goToMessageRequestPreview(17039).useListHasSingleSpamMessageRequest();
+      let obj = goToMessageRequestPreview(17065);
+      hasSingleMessageRequest = goToMessageRequestPreview(17063).useListHasSingleSpamMessageRequest();
       useMountEffectDefault(() => {
         AnalyticsUtilsDefault.track(AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests });
         const obj2 = { num_spam_message_requests };
@@ -960,5 +960,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj4.data = items;
         return closure_8(closure_6, obj4);
       }
-      let obj2 = goToMessageRequestPreview(17039);
+      let obj2 = goToMessageRequestPreview(17063);
     };

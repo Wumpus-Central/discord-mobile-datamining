@@ -44,7 +44,7 @@ let closure_5 = async function _confirmCardPayment(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -81,7 +81,7 @@ let closure_5 = async function _confirmCardPayment(arg0) {
           throw error;
         } else {
           c5 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       }
     } catch (tmp19) {
@@ -161,7 +161,7 @@ let closure_6 = async function _authenticateStripePaymentIntent() {
   await "IconComponent";
   closure_1 = tmp2;
   ({ client_secret: closure_129_0, payment_method_id: closure_129_1 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/payments/Stripe3DSChallenge.tsx");

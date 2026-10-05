@@ -284,7 +284,7 @@ export default noop.memo(
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -313,7 +313,7 @@ export default noop.memo(
                     return obj;
                   } else {
                     c1 = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp9) {
                   c1 = tmp;
@@ -346,7 +346,7 @@ export default noop.memo(
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -377,7 +377,7 @@ export default noop.memo(
                 } else {
                   closure_0(acceptMessageRequest[13]).transitionToChannel(closure_0.id, { navigationReplace: true });
                   c3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp14) {
                 c3 = tmp;
@@ -421,7 +421,7 @@ export default noop.memo(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -452,7 +452,7 @@ export default noop.memo(
               } else {
                 channel(c2[13]).transitionToChannel(closure_129_0.id, { navigationReplace: true });
                 c3 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp14) {
               c3 = tmp;
@@ -471,7 +471,7 @@ export default noop.memo(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -500,7 +500,7 @@ export default noop.memo(
                 return obj;
               } else {
                 c1 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp9) {
               c1 = tmp;

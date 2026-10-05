@@ -393,7 +393,7 @@ export default noop.forwardRef(
                   class G {
                     constructor() {
                       obj = { show: closure_5, alpha2: closure_0, countryCode: closure_1, onPress: closure_4 };
-                      return jsx(f38094, obj);
+                      return jsx(f38117, obj);
                     }
                   }
                   class M {
@@ -427,7 +427,7 @@ export default noop.forwardRef(
                   class G {
                     constructor() {
                       obj = { show: closure_5, alpha2: closure_0, countryCode: closure_1, onPress: closure_4 };
-                      return jsx(f38094, obj);
+                      return jsx(f38117, obj);
                     }
                   }
                   class M {

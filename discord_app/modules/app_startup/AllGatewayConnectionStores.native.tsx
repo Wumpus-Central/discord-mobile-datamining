@@ -24,6 +24,7 @@ import VoiceChannelAnimationStateStore from "../channel/VoiceChannelAnimationSta
 import VoiceChannelStartTimeStore from "../channel/VoiceChannelStartTimeStore.tsx";
 import ClientThemesBackgroundStore from "../client_themes/ClientThemesBackgroundStore.tsx";
 import CustomThemeMobileStore from "../client_themes/native/CustomThemeMobileStore.tsx";
+import ConjureRichPresenceStore from "../conjure/presence/ConjureRichPresenceStore.tsx";
 import ConnectivityIndicatorStateStore from "../connectivity/native/ConnectivityIndicatorStateStore.tsx";
 import ContentInventoryActivityStore from "../content_inventory/ContentInventoryActivityStore.tsx";
 import ContentInventoryOutboxStore from "../content_inventory/ContentInventoryOutboxStore.tsx";
@@ -132,7 +133,6 @@ import LocaleStore from "../user_settings/LocaleStore.tsx";
 import ThemeStore from "../user_settings/ThemeStore.tsx";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 import EmailSettingsStore from "../user_settings/notifications/EmailSettingsStore.tsx";
-import VibegrationsRichPresenceStore from "../vibegrations/stores/VibegrationsRichPresenceStore.tsx";
 import ActivityTrackingStore from "../../stores/ActivityTrackingStore.tsx";
 import AnalyticsTrackingStore from "../../stores/AnalyticsTrackingStore.tsx";
 import ApplicationStreamPreviewStore from "../../stores/ApplicationStreamPreviewStore.tsx";

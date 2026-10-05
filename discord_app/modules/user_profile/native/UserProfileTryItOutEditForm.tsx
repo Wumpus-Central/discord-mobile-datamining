@@ -35,7 +35,7 @@ function EditableBanner(user) {
     const obj2 = { user, analyticsLocations, onBannerChange: null, isTryItOut: true };
     const obj = ActionSheetActionCreatorsDefault;
     obj2.onBannerChange = UserProfileActionCreators.setTryItOutBanner;
-    obj.openLazy(asyncRequireImpl(14414, dependencyMap.paths), "Change Banner", obj2);
+    obj.openLazy(asyncRequireImpl(14418, dependencyMap.paths), "Change Banner", obj2);
   }, items);
   let obj = { value: analyticsLocations, children: null };
   let obj2 = {};
@@ -47,7 +47,7 @@ function EditableBanner(user) {
   obj2.editButtonAccessibilityLabel = intl.string(user(1126).t.VqsHy0);
   obj2.bannerSafeArea = 12;
   obj2.isUserProfileEditingRefresh = true;
-  obj.children = closure_7(analyticsLocations(14412), obj2);
+  obj.children = closure_7(analyticsLocations(14416), obj2);
   return closure_7(user(6657).AnalyticsLocationProvider, obj);
 }
 get_ActivityIndicator = fn(17);

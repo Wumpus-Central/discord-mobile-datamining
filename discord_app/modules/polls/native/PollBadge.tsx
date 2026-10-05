@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef16827 from "../../../../_runtime/metro/16827__.js";
+import _modDef16846 from "../../../../_runtime/metro/16846__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef16827 };
+          const obj2 = { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef16846 };
           const tmp10 = React4(native.Icon, obj2);
           cResult[3] = tmp10;
           let tmp7 = tmp10;
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: null, children: null };
       const items = [tmp.container, style.style];
       obj.style = items;
-      const items1 = [React4(native.Icon, { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef16827 })];
+      const items1 = [React4(native.Icon, { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef16846 })];
       const obj3 = { style: tmp.text, variant: "text-xs/semibold", children: null };
       const intl = util.intl;
       obj3.children = intl.string(util.t.RgIi2B);

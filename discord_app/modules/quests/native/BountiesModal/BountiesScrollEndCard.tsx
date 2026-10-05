@@ -158,7 +158,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                 showCloseButton: false,
                 disabled: !isActive,
               };
-              const tmp27 = closure_8(isScrollingInBoundsSharedValue(14834), obj6);
+              const tmp27 = closure_8(isScrollingInBoundsSharedValue(14838), obj6);
               cResult[16] = bounty;
               cResult[17] = sourceQuestContent;
               cResult[18] = !isActive;
@@ -167,7 +167,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj7 = { bounty, sourceQuestContent, disabled: !isActive };
-          const tmp21 = closure_8(isScrollingInBoundsSharedValue(14831), obj7);
+          const tmp21 = closure_8(isScrollingInBoundsSharedValue(14835), obj7);
           cResult[11] = bounty;
           cResult[12] = sourceQuestContent;
           cResult[13] = !isActive;
@@ -241,12 +241,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [tmp.overlayContent, animatedStyle];
       obj6.style = items2;
       const items3 = [
-        closure_8(isScrollingInBoundsSharedValue(14831), { bounty, sourceQuestContent, disabled: !isActive }),
+        closure_8(isScrollingInBoundsSharedValue(14835), { bounty, sourceQuestContent, disabled: !isActive }),
       ];
       const obj8 = {
         style: tmp.endedCtaButtonsContainer,
         pointerEvents: "box-none",
-        children: closure_8(isScrollingInBoundsSharedValue(14834), {
+        children: closure_8(isScrollingInBoundsSharedValue(14838), {
           bounty,
           visible,
           sourceQuestContent,

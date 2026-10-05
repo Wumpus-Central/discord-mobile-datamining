@@ -15,14 +15,14 @@ import useFetchStreamPreviewDefault from "../../../../go_live/useFetchStreamPrev
 import isListeningOnSpotifyDefault from "../../../../activities/utils/isListeningOnSpotify.tsx";
 import isOnXboxDefault from "../../../../activities/utils/isOnXbox.tsx";
 import useLiveStageData from "useLiveStageData.tsx";
-import _modDef15995 from "../../../../../../_runtime/metro/15995__.js";
-import _modDef15996 from "../../../../../../_runtime/metro/15996__.js";
+import _modDef15999 from "../../../../../../_runtime/metro/15999__.js";
+import _modDef16000 from "../../../../../../_runtime/metro/16000__.js";
 import HappeningNowAvatarStack from "HappeningNowAvatarStack.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import StageInstanceStore from "../../../../stage_channels/StageInstanceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
-const _modDef16005 = tmp4(16005);
+const _modDef16009 = tmp4(16009);
 require = fn;
 function getActivityA11yLabel(activity) {
   if (isListeningOnSpotifyDefault(activity)) {
@@ -54,7 +54,7 @@ function getActivityA11yLabel(activity) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15110);
+const HappeningNowConstants = fn(15114);
 ({
   HAPPENING_NOW_CONTENT_HEIGHT,
   HappeningNowCardTrackingType: closure_7,
@@ -66,7 +66,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef15995, _modDef15996];
+let items = [_modDef15999, _modDef16000];
 let c16 = 0.32;
 const createStyles = fn(4890);
 let obj = {
@@ -571,7 +571,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             const substr = userId.slice(-1);
             let tmp4Result = items[substr.charCodeAt(substr, 0) % items.length];
           } else {
-            tmp4Result = _modDef16005;
+            tmp4Result = _modDef16009;
           }
           tmp6 = activity == tmp6;
           let type2;
@@ -678,7 +678,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           userId = substr.charCodeAt(0);
           let tmpResult = items[userId % items.length];
         } else {
-          tmpResult = _modDef16005;
+          tmpResult = _modDef16009;
         }
       }
     };

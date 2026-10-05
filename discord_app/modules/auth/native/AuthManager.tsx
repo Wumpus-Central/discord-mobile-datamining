@@ -38,7 +38,7 @@ class AuthManager extends tmp3 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -76,8 +76,8 @@ class AuthManager extends tmp3 {
             closure_129_0();
           }
           const obj6 = { onComplete: closure_129_0 };
-          const result = applyArgumentsResult(15916).showPushNotificationPromptModal(obj6);
-          const obj = applyArgumentsResult(15916);
+          const result = applyArgumentsResult(15920).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(15920);
         } catch (tmp19) {
           c4 = tmp;
           throw tmp19;

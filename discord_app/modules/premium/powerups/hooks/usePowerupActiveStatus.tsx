@@ -123,7 +123,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             if (null != stateFromStores) {
               if (null != stateFromStores1) {
                 if (null == dependencyMap[skuId.skuId]) {
-                  let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "application" };
+                  let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
                 } else {
                   obj = { isActiveFromLevel: tmp17.premiumTier >= tmp20, levelEntitlement: null, levelPowerup: null };
                   let tmp3;
@@ -197,7 +197,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               return obj3;
             }
           }
-          obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "application" };
+          obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
         }
       });
       cResult[6] = stateFromStores;
@@ -246,7 +246,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             if (null != stateFromStores) {
               if (null != unlockedPowerups) {
                 if (null == dependencyMap[skuId.skuId]) {
-                  let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "application" };
+                  let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
                 } else {
                   let tmp4;
                   if (null != dependencyMap2[tmp22]) {
@@ -319,7 +319,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               return obj3;
             }
           }
-          obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "application" };
+          obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
         }
       });
     };
@@ -344,7 +344,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (arr2.length <= 0) {
           const _Symbol = Symbol;
           if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj2 = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "cursor" };
+            const obj2 = {
+              type: constants.INACTIVE,
+              sourceEntitlement: "Array",
+              sourcePowerup: "toCharArray$esjava$1",
+            };
             cResult[2] = obj2;
           }
         } else {
@@ -360,7 +364,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = closure_10(arg0, items);
       if (tmpResult.length <= 0) {
-        const obj = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "cursor" };
+        const obj = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "toCharArray$esjava$1" };
         let first = obj;
       } else {
         first = tmpResult[0];

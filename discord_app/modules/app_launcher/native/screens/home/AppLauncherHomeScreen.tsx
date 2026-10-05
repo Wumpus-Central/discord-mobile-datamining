@@ -617,7 +617,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? ((isLastTuple) =
   } else {
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const size2 = { width: "Symbol", height: "current" };
+      const size2 = { width: "Array", height: "Set" };
       cResult[0] = size2;
       let size = size2;
     } else {
@@ -755,7 +755,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? ((isLastTuple) =
   const items = [containerWidth];
   let size = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "Symbol", height: "current" };
+      return { width: "Array", height: "Set" };
     } else {
       const tmp5 = roundToNearestPixelDefault(tmp / 2 - DEFAULT_CONTENT_PADDING - 6);
       const size = { width: tmp5, height: roundToNearestPixelDefault(tmp5 / c23) };
@@ -1082,7 +1082,7 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
   } else {
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const size1 = { width: "Symbol", height: "current" };
+      const size1 = { width: "Array", height: "Set" };
       cResult[0] = size1;
       let first = size1;
     } else {
@@ -1126,7 +1126,7 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
                         items[1] = obj1;
                         obj.style = items;
                         obj4 = { context, sectionName, onPress, item: context, entrypoint, imageWidth: closure_5.width, imageHeight: closure_5.height };
-                        obj.children = jsx(f58716, obj4);
+                        obj.children = jsx(f58744, obj4);
                         return jsx(View, obj, "" + context.application.id + "-" + arg1);
                       }
                     }
@@ -1161,7 +1161,7 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
                     items[1] = obj1;
                     obj.style = items;
                     obj4 = { context, sectionName, onPress, item: context, entrypoint, imageWidth: closure_5.width, imageHeight: closure_5.height };
-                    obj.children = jsx(f58716, obj4);
+                    obj.children = jsx(f58744, obj4);
                     return jsx(View, obj, "" + context.application.id + "-" + arg1);
                   }
                 }
@@ -1187,7 +1187,7 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
           items[1] = obj1;
           obj.style = items;
           obj4 = { context, sectionName, onPress, item: context, entrypoint, imageWidth: closure_5.width, imageHeight: closure_5.height };
-          obj.children = jsx(f58716, obj4);
+          obj.children = jsx(f58744, obj4);
           return jsx(View, obj, "" + context.application.id + "-" + arg1);
         }
       }
@@ -1219,7 +1219,7 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
   const items1 = [containerWidth, num];
   styles = height.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "Symbol", height: "current" };
+      return { width: "Array", height: "Set" };
     } else {
       const tmp7 = roundToNearestPixelDefault((tmp - 2 * DEFAULT_CONTENT_PADDING - c22 * (2 - 1)) / 2);
       const size = { width: tmp7, height: roundToNearestPixelDefault(tmp7 / c23) };

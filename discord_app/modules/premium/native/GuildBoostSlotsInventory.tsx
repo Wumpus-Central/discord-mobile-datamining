@@ -10,7 +10,7 @@ import actions_BillingActionCreatorsAll from "../../billing/actions/BillingActio
 import BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import useCountdownDefault from "../../../hooks/useCountdown.tsx";
-import _modDef13305 from "../../../../_runtime/metro/13305__.js";
+import _modDef13307 from "../../../../_runtime/metro/13307__.js";
 import SubscriptionPlaceholderPattern from "../../../design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
@@ -692,7 +692,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               let tmp14 = cResult[7];
             }
             if (cResult[8] !== tmp4.guildInfoRowIcon) {
-              const obj3 = { source: _modDef13305, style: tmp4.guildInfoRowIcon };
+              const obj3 = { source: _modDef13307, style: tmp4.guildInfoRowIcon };
               const tmp21 = closure_1_11(timestampProducer, obj3);
               cResult[8] = tmp4.guildInfoRowIcon;
               cResult[9] = tmp21;
@@ -812,7 +812,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const items1 = [closure_1_11(Text_Text.Text, obj5)];
         const obj6 = { style: tmp.guildInfoRowBottom, children: null };
-        const obj7 = { source: _modDef13305, style: tmp.guildInfoRowIcon };
+        const obj7 = { source: _modDef13307, style: tmp.guildInfoRowIcon };
         const items2 = [closure_1_11(timestampProducer, obj7)];
         const obj8 = {
           style: tmp.guildInfoSubscriptionCount,
@@ -890,7 +890,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = cResult[6];
       }
       const tmpResult3 = guildId(504);
-      let subscriptionPlaceholderPatternSource = guildId(13306).useSubscriptionPlaceholderPatternSource();
+      let subscriptionPlaceholderPatternSource = guildId(13308).useSubscriptionPlaceholderPatternSource();
       if (null != tmp13) {
         subscriptionPlaceholderPatternSource = tmp13;
       }
@@ -939,7 +939,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                                       guildBoostSlot: guildId,
                                       isLast: arg1 === guildBoostSlots.length - 1,
                                     };
-                                    return jsx(f63588, obj, guildId.id);
+                                    return jsx(f63629, obj, guildId.id);
                                   }
                                 }
                                 const tmp44 = closure_11(closure_5, { children: null });
@@ -965,7 +965,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                                     guildBoostSlot: guildId,
                                     isLast: arg1 === guildBoostSlots.length - 1,
                                   };
-                                  return jsx(f63588, obj, guildId.id);
+                                  return jsx(f63629, obj, guildId.id);
                                 }
                               }
                               const obj3 = { style: tmp4.boostedGuild, children: null };
@@ -991,7 +991,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                                   guildBoostSlot: guildId,
                                   isLast: arg1 === guildBoostSlots.length - 1,
                                 };
-                                return jsx(f63588, obj, guildId.id);
+                                return jsx(f63629, obj, guildId.id);
                               }
                             }
                             cResult[32] = guildBoostSlots;
@@ -1004,7 +1004,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                                 guildBoostSlot: guildId,
                                 isLast: arg1 === guildBoostSlots.length - 1,
                               };
-                              return jsx(f63588, obj, guildId.id);
+                              return jsx(f63629, obj, guildId.id);
                             }
                           }
                           cResult[34] = stateFromStores;
@@ -1044,7 +1044,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               tmp28 = tmp30;
             }
             const obj8 = { guild: stateFromStores, theme: stateFromStores1 };
-            const tmp27 = closure_11(guildBoostSlots(13310), obj8);
+            const tmp27 = closure_11(guildBoostSlots(13312), obj8);
             cResult[16] = stateFromStores;
             cResult[17] = stateFromStores1;
             cResult[18] = tmp27;
@@ -1067,7 +1067,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = prop;
       cResult[9] = items5;
       tmp19 = items5;
-      const tmpResult4 = guildId(13306);
+      const tmpResult4 = guildId(13308);
     }
   : (arg0) => {
       ({ guildId: require, guildBoostSlots } = arg0);
@@ -1107,7 +1107,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         tmp11Result = closure_11(closure_5, obj8);
       }
       items3[1] = tmp11Result;
-      items3[2] = closure_11(guildBoostSlots(13310), { guild: stateFromStores, theme: stateFromStores1 });
+      items3[2] = closure_11(guildBoostSlots(13312), { guild: stateFromStores, theme: stateFromStores1 });
       obj6.children = items3;
       const items4 = [
         closure_12(closure_5, obj6),

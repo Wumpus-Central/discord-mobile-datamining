@@ -64,15 +64,15 @@ function renderGuildFolderContent(arg0, type, state, cleanUp) {
   }
 }
 const GuildsNodeType = fn(5616).GuildsNodeType;
-const GuildsBarDnDStore = fn(16221);
+const GuildsBarDnDStore = fn(16225);
 ({ useItemDragState: closure_9, useFolderBGHeightOffset: c10 } = GuildsBarDnDStore);
-let GuildsBarConstants = fn(16226);
+let GuildsBarConstants = fn(16230);
 ({
   DEFAULT_FOLDER_COLOR: closure_11,
   isDefaultFolderColor: closure_12,
   normalizeFolderColor: map1,
 } = GuildsBarConstants);
-GuildsBarConstants = fn(16218);
+GuildsBarConstants = fn(16222);
 ({ TRANSITION_PHYSICS: closure_14, FOLDER_SPRING_PHYSICS: closure_15 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);

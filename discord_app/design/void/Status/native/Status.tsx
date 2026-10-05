@@ -4,13 +4,13 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import Status_StatusUtils from "StatusUtils.tsx";
 import getStatusContainerStyleDefault from "getStatusContainerStyle.tsx";
-import _modDef13919 from "../../../../../_runtime/metro/13919__.js";
-import _modDef13920 from "../../../../../_runtime/metro/13920__.js";
 import _modDef13921 from "../../../../../_runtime/metro/13921__.js";
 import _modDef13922 from "../../../../../_runtime/metro/13922__.js";
 import _modDef13923 from "../../../../../_runtime/metro/13923__.js";
 import _modDef13924 from "../../../../../_runtime/metro/13924__.js";
 import _modDef13925 from "../../../../../_runtime/metro/13925__.js";
+import _modDef13926 from "../../../../../_runtime/metro/13926__.js";
+import _modDef13927 from "../../../../../_runtime/metro/13927__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -129,24 +129,24 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (tmp5) {
-              tmp = 13919;
+              tmp = 13921;
               let tmp14 = importDefault(tmp);
             } else if (tmp4) {
-              tmp14 = _modDef13920;
-            } else if (tmp3) {
-              tmp14 = _modDef13921;
-            } else if (StatusTypes.IDLE === status) {
               tmp14 = _modDef13922;
+            } else if (tmp3) {
+              tmp14 = _modDef13923;
+            } else if (StatusTypes.IDLE === status) {
+              tmp14 = _modDef13924;
             } else {
               if (StatusTypes.DND === status) {
-                tmp14 = _modDef13923;
+                tmp14 = _modDef13925;
               } else if (StatusTypes.OFFLINE !== status) {
                 if (StatusTypes.INVISIBLE !== status) {
                   const ONLINE = StatusTypes.ONLINE;
-                  tmp14 = _modDef13925;
+                  tmp14 = _modDef13927;
                 }
               }
-              tmp14 = _modDef13924;
+              tmp14 = _modDef13926;
             }
             cResult[7] = tmp3;
             cResult[8] = tmp4;
@@ -190,23 +190,23 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       obj.style = items;
       const obj2 = { style: closure_13().statusIcon, source: null, resizeMode: "stretch" };
       if (streaming) {
-        let tmp4Result = _modDef13919;
+        let tmp4Result = _modDef13921;
       } else if (flag2) {
-        tmp4Result = _modDef13920;
-      } else if (flag) {
-        tmp4Result = _modDef13921;
-      } else if (StatusTypes.IDLE === status) {
         tmp4Result = _modDef13922;
-      } else if (StatusTypes.DND === status) {
+      } else if (flag) {
         tmp4Result = _modDef13923;
+      } else if (StatusTypes.IDLE === status) {
+        tmp4Result = _modDef13924;
+      } else if (StatusTypes.DND === status) {
+        tmp4Result = _modDef13925;
       } else {
         if (StatusTypes.OFFLINE !== status) {
           if (StatusTypes.INVISIBLE !== status) {
             const ONLINE = StatusTypes.ONLINE;
-            tmp4Result = _modDef13925;
+            tmp4Result = _modDef13927;
           }
         }
-        tmp4Result = _modDef13924;
+        tmp4Result = _modDef13926;
       }
       obj2.source = tmp4Result;
       obj.children = closure_1_11(React4, obj2);

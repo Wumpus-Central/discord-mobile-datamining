@@ -248,7 +248,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       if (cResult[4] !== stateFromStores) {
-        const obj3 = { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" };
+        const obj3 = { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "r" };
         const tmp15 = __initData2(native.Avatar, obj3);
         cResult[4] = stateFromStores;
         cResult[5] = tmp15;
@@ -282,11 +282,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
       const items1 = [__initData2(View, { style: tmp.avatarInnerBorder })];
       const obj3 = { style: tmp.avatarInnerBorder };
-      items1[1] = __initData2(native.Avatar, {
-        size: native.AvatarSizes.NORMAL,
-        user: stateFromStores,
-        guildId: "Array",
-      });
+      items1[1] = __initData2(native.Avatar, { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "r" });
       obj2.children = items1;
       return state(View, obj2);
     };
@@ -730,7 +726,7 @@ export const useShouldShowRobloxConnectionCoachmark = ReactCompilerGating.isReac
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [LocalAppDetectionStore];
         const fn = function c() {
-          return appInstalled.isAppInstalled(stateFromStores(13523).DetectableAppNames.ROBLOX);
+          return appInstalled.isAppInstalled(stateFromStores(13525).DetectableAppNames.ROBLOX);
         };
         cResult[0] = items;
         cResult[1] = fn;
@@ -833,7 +829,7 @@ export const useShouldShowRobloxConnectionCoachmark = ReactCompilerGating.isReac
   : () => {
       const items = [LocalAppDetectionStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () =>
-        appInstalled.isAppInstalled(stateFromStores(13523).DetectableAppNames.ROBLOX),
+        appInstalled.isAppInstalled(stateFromStores(13525).DetectableAppNames.ROBLOX),
       );
       const tmp2 = hasRoloxAccount(noop.useState(false), 2);
       const first = tmp2[0];

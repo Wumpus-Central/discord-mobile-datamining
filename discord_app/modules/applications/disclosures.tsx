@@ -32,7 +32,7 @@ let closure_5 = async function _ackDisclosures(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -66,7 +66,7 @@ let closure_5 = async function _ackDisclosures(arg0) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp5) {
         c2 = tmp;

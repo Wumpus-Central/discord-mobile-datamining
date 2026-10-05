@@ -162,7 +162,7 @@ function getItemType(kind) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15110);
+const HappeningNowConstants = fn(15114);
 ({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: closure_7, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8, HAPPENING_NOW_PANELS_CONTAINER_PADDING, HappeningNowKindIds: closure_9 } = HappeningNowConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
@@ -342,7 +342,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
   const obj = listRef(576);
   const isFocused = listRef(1491).useIsFocused();
   if (cResult[0] !== isFocused) {
-    const obj3 = { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: 1491009538, isFocused };
+    const obj3 = { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: 2897, isFocused };
     cResult[0] = isFocused;
     cResult[1] = obj3;
     let tmp6 = obj3;
@@ -352,9 +352,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
   const obj2 = listRef(1491);
   const tmp7 = isFocused;
   const tmp8 = ref;
-  [arr, tmp10] = ref(isFocused(15981)(listRef.cards, tmp6), 2);
+  [arr, tmp10] = ref(isFocused(15985)(listRef.cards, tmp6), 2);
   dependencyMap = tmp10;
-  const tmp9 = ref(isFocused(15981)(listRef.cards, tmp6), 2);
+  const tmp9 = ref(isFocused(15985)(listRef.cards, tmp6), 2);
   const analyticsLocations = isFocused(6657)(isFocused(6681).ACTIVITIES_HAPPENING_NOW).analyticsLocations;
   let num3 = 0;
   ref = noop.useRef(0);
@@ -422,7 +422,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
               return obj.cardSize(listRef) === closure_1_8;
             }
           }
-          const first = tmp8(tmp7(15989)(num9, D), 2)[0];
+          const first = tmp8(tmp7(15993)(num9, D), 2)[0];
           class S {
             constructor() {
               if (!closure_1) {
@@ -447,7 +447,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
               }
             }
             let result = obj6.filterHappeningNowCards(length);
-            const result1 = tmp(15988).sortHappeningNowCards(result);
+            const result1 = tmp(15992).sortHappeningNowCards(result);
             class S {
               constructor() {
                 if (!closure_1) {
@@ -466,7 +466,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
             }
             cResult[14] = length;
             cResult[15] = result1;
-            const tmpResult = tmp(15988);
+            const tmpResult = tmp(15992);
           } else {
             class V {
               constructor(arg0) {
@@ -475,8 +475,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
               }
             }
           }
-          const tmp8Result = tmp8(tmp7(15989)(num9, D), 2);
-          const happeningNowScrollSnapping = tmp(15989).useHappeningNowScrollSnapping(listRef);
+          const tmp8Result = tmp8(tmp7(15993)(num9, D), 2);
+          const happeningNowScrollSnapping = tmp(15993).useHappeningNowScrollSnapping(listRef);
           if (cResult[16] !== tmp10) {
             class Y {
               constructor(arg0) {
@@ -509,7 +509,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
               }
             }
           }
-          const tmpResult3 = tmp(15989);
+          const tmpResult3 = tmp(15993);
           const sharedValue = tmp(4612).useSharedValue([]);
           if (cResult[18] !== sharedValue) {
             class X {
@@ -795,7 +795,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((listRe
   let callback2;
   const tmp = closure_13();
   const isFocused = listRef(children[16]).useIsFocused();
-  const obj2 = { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: 1491009538, isFocused };
+  const obj2 = { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: 2897, isFocused };
   const tmp7 = _slicedToArray(isFocused(children[17])(listRef.cards, obj2), 2);
   children = tmp7[0];
   _slicedToArray = tmp8;

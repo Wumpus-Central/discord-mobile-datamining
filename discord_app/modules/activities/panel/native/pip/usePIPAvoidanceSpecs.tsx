@@ -26,9 +26,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? (safeArea) => {
       _require = safeArea;
       const sharedValue = require("ReanimatedRexport").useSharedValue({ top: 0, bottom: 0 });
-      const tmp2 = sharedValue(16577)();
+      const tmp2 = sharedValue(16583)();
       dependencyMap = tmp2;
-      const tmp3 = sharedValue(17140)();
+      const tmp3 = sharedValue(17164)();
       __initData = tmp3;
       let obj = require("ReanimatedRexport");
       const fn = function n() {
@@ -55,8 +55,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = require("ReanimatedRexport");
       fn2.__closure = {
         cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual,
-        getPIPBottomOffsetForPIPMode: sharedValue(17067),
-        getAdjustedBottomOffsets: sharedValue(17141),
+        getPIPBottomOffsetForPIPMode: sharedValue(17091),
+        getAdjustedBottomOffsets: sharedValue(17165),
         updateSharedValueIfChanged: sharedValue(9774),
         pipAvoidanceSpecs: sharedValue,
       };
@@ -68,9 +68,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : (safeArea) => {
       _require = safeArea;
       const sharedValue = require("ReanimatedRexport").useSharedValue({ top: 0, bottom: 0 });
-      const tmp2 = sharedValue(16577)();
+      const tmp2 = sharedValue(16583)();
       dependencyMap = tmp2;
-      const tmp3 = sharedValue(17140)();
+      const tmp3 = sharedValue(17164)();
       closure_3 = tmp3;
       let obj = require("ReanimatedRexport");
       const fn = function n() {
@@ -97,8 +97,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = require("ReanimatedRexport");
       fn2.__closure = {
         cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual,
-        getPIPBottomOffsetForPIPMode: sharedValue(17067),
-        getAdjustedBottomOffsets: sharedValue(17141),
+        getPIPBottomOffsetForPIPMode: sharedValue(17091),
+        getAdjustedBottomOffsets: sharedValue(17165),
         updateSharedValueIfChanged: sharedValue(9774),
         pipAvoidanceSpecs: sharedValue,
       };

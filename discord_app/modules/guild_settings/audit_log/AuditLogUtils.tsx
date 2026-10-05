@@ -242,7 +242,7 @@ function transformAvailableForumTagChange(newValue) {
   }
   return newValue;
 }
-const AuditLogChange = fn(17690).AuditLogChange;
+const AuditLogChange = fn(17714).AuditLogChange;
 const Constants = fn(1085);
 ({ AuditLogActions: closure_15, AuditLogChangeKeys } = Constants);
 const AuditLogTargetTypes = Constants.AuditLogTargetTypes;

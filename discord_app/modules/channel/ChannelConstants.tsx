@@ -2,7 +2,7 @@
 import size from "../../../_runtime/metro/00002__.js";
 
 const StaticChannelRoute = {
-  VIBEGRATIONS: "conjuring",
+  CONJURE: "conjuring",
   ROLE_SUBSCRIPTIONS: "role-subscriptions",
   SERVER_MONETIZATION_ONBOARDING: "server-monetization-onboarding",
   GAME_SHOP: "game-shop",

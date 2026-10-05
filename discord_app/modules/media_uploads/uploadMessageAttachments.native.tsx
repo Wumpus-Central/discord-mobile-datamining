@@ -14,7 +14,7 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -47,7 +47,7 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
           closure_130_7 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -59,7 +59,7 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
           return obj5;
         } else if (closure_131_5.has(closure_130_2)) {
           c5 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } else {
           const tmp16 = new closure_131_1(closure_131_2[2])();
           closure_130_5 = tmp16;

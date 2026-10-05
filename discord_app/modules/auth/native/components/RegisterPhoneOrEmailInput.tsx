@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import PhoneStore from "../../../phone/PhoneStore.tsx";
 
 require = fn;
-const RegistrationUIStore = fn(15863);
+const RegistrationUIStore = fn(15867);
 ({ setRegistrationErrors: hasOwnProperty, useRegistrationUIStore: metroRequire } = RegistrationUIStore);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

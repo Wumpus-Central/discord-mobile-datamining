@@ -11,8 +11,8 @@ import Text_Text from "../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
 import LinearGradientDefault from "../../../_runtime/05605_LinearGradient.js";
 import PremiumFeatureListDefault from "PremiumFeatureList.tsx";
-import _modDef13343 from "../../../_runtime/metro/13343__.js";
-import _modDef13344 from "../../../_runtime/metro/13344__.js";
+import _modDef13345 from "../../../_runtime/metro/13345__.js";
+import _modDef13346 from "../../../_runtime/metro/13346__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[6] === tmp4.subtitle) {
               if (cResult[7] === tmp4.title) {
                 if (cResult[9] !== tmp4.upsellFeatureSubLogo) {
-                  const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef13343 };
+                  const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef13345 };
                   const tmp22 = v65535(React4, obj2);
                   cResult[9] = tmp4.upsellFeatureSubLogo;
                   cResult[10] = tmp22;
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp19 = cResult[10];
                 }
                 if (cResult[11] !== tmp4.upsellFeatureLogoTier2) {
-                  const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef13344 };
+                  const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef13346 };
                   const tmp26 = v65535(React4, obj4);
                   cResult[11] = tmp4.upsellFeatureLogoTier2;
                   cResult[12] = tmp26;
@@ -374,9 +374,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const items3 = [tmp5Result1, ,];
         const obj10 = { style: tmp.upsellFeatures, children: null };
-        const obj11 = { style: tmp.upsellFeatureSubLogo, source: _modDef13343 };
+        const obj11 = { style: tmp.upsellFeatureSubLogo, source: _modDef13345 };
         const items4 = [v65535(React4, obj11), ,];
-        const obj12 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13344 };
+        const obj12 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13346 };
         items4[1] = v65535(React4, obj12);
         const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
         intlResult1 = PremiumUtilsDefault;

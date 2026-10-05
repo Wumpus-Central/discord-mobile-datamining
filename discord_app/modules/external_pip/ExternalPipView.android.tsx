@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      externalPipEnabled = setExternalPipActive(17130)(first).externalPipEnabled;
+      externalPipEnabled = setExternalPipActive(17154)(first).externalPipEnabled;
       const obj = externalPipEnabled(576);
       ({ externalPipActive, setExternalPipActive } = closure_7());
       if (cResult[1] !== externalPipEnabled) {
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       const obj = { disabled: null };
-      const tmp = setExternalPipActive(17130);
+      const tmp = setExternalPipActive(17154);
       obj.disabled = !setExternalPipActive(9110).isSupported();
       const externalPipEnabled = tmp(obj).externalPipEnabled;
       const tmp2 = closure_7();

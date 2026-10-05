@@ -85,7 +85,7 @@ let Constants = fn(1085);
 } = Constants);
 const StreamSettingsConstants = fn(4937);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(13611).BROWSER_SUPPORTS_UNIFIED_PLAN;
+let closure_24 = fn(13613).BROWSER_SUPPORTS_UNIFIED_PLAN;
 Constants = fn(4915);
 ({
   Features: closure_25,
@@ -2038,7 +2038,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     }
   }
   if (MediaEngineStore.supports(constants5.IMAGE_QUALITY_MEASUREMENT)) {
-    const SingleCpuCopyExperiment = tmp2(13625).SingleCpuCopyExperiment;
+    const SingleCpuCopyExperiment = tmp2(13627).SingleCpuCopyExperiment;
     const enabled = SingleCpuCopyExperiment.getConfig({ location: "RTCConnection" }).enabled;
     let str4 = "imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec";
     if (enabled) {

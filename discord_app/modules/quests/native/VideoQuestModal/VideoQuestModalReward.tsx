@@ -23,8 +23,8 @@ export default noop.memo(
           str = size;
         }
         const obj = quest(576);
-        quest = quest(14926).useVideoQuestModalContext().quest;
-        const tmpResult = quest(14926);
+        quest = quest(14930).useVideoQuestModalContext().quest;
+        const tmpResult = quest(14930);
         const questTaskDetails = quest(10911).useQuestTaskDetails(quest);
         if (cResult[0] !== quest.id) {
           const fn = function s() {
@@ -170,8 +170,8 @@ export default noop.memo(
           str = size;
         }
         ({ withRewardTileAnimation, onTextBlockLayout } = style);
-        quest = quest(14926).useVideoQuestModalContext().quest;
-        const obj = quest(14926);
+        quest = quest(14930).useVideoQuestModalContext().quest;
+        const obj = quest(14930);
         const items = [quest.id];
         const questTaskDetails = quest(10911).useQuestTaskDetails(quest);
         const callback = noop.useCallback(() => {

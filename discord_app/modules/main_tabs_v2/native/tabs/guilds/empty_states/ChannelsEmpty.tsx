@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import CreateChannelModalActionCreatorsDefault from "../../../../../../actions/native/CreateChannelModalActionCreators.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef16179 from "../../../../../../../_runtime/metro/16179__.js";
-import _modDef16180 from "../../../../../../../_runtime/metro/16180__.js";
+import _modDef16183 from "../../../../../../../_runtime/metro/16183__.js";
+import _modDef16184 from "../../../../../../../_runtime/metro/16184__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import PermissionStore from "../../../../../../stores/PermissionStore.tsx";
 
@@ -102,7 +102,7 @@ export default noop.memo(
           }
         }
         const tmpResult = guild(573);
-        const youBarTotalHeight = guild(14897).useYouBarTotalHeight(16);
+        const youBarTotalHeight = guild(14901).useYouBarTotalHeight(16);
         if (cResult[8] !== youBarTotalHeight) {
           class S {
             constructor() {
@@ -151,7 +151,7 @@ export default noop.memo(
             }
             const obj2 = { style: tmp4.personalizeButtonWrapper, children: null };
             const obj3 = { icon: null, label: null, onPress: null };
-            const obj4 = { source: _modDef16179, disableColor: true };
+            const obj4 = { source: _modDef16183, disableColor: true };
             obj3.icon = closure_8(tmp(1188).Icon, obj4);
             const intl = tmp(1126).intl;
             obj3.label = intl.string(tmp(1126).t["Yhi9/N"]);
@@ -168,7 +168,7 @@ export default noop.memo(
         cResult[10] = tmp4.wrapper;
         cResult[11] = tmp14;
         cResult[12] = items2;
-        const tmpResult2 = guild(14897);
+        const tmpResult2 = guild(14901);
       }
     : (guild) => {
         guild = guild.guild;
@@ -195,13 +195,13 @@ export default noop.memo(
         const obj = guild(573);
         const obj3 = { style: null, children: null };
         const items4 = [tmp.wrapper];
-        const obj2 = guild(14897);
-        items4[1] = { paddingBottom: guild(14897).useYouBarTotalHeight(16) };
+        const obj2 = guild(14901);
+        items4[1] = { paddingBottom: guild(14901).useYouBarTotalHeight(16) };
         obj3.style = items4;
         if (canCustomizeGuild) {
           const obj5 = { style: tmp.personalizeButtonWrapper, children: null };
           const obj6 = { icon: null, label: null, onPress: null };
-          const obj7 = { source: _modDef16179, disableColor: true };
+          const obj7 = { source: _modDef16183, disableColor: true };
           obj6.icon = closure_8(tmp2(1188).Icon, obj7);
           const intl = tmp2(1126).intl;
           obj6.label = intl.string(tmp2(1126).t["Yhi9/N"]);
@@ -211,8 +211,8 @@ export default noop.memo(
         }
         const items5 = [canCustomizeGuild];
         const obj8 = { style: tmp.content, children: null };
-        const obj4 = { paddingBottom: guild(14897).useYouBarTotalHeight(16) };
-        const items6 = [closure_8(closure_5, { source: _modDef16180 }), , ,];
+        const obj4 = { paddingBottom: guild(14901).useYouBarTotalHeight(16) };
+        const items6 = [closure_8(closure_5, { source: _modDef16184 }), , ,];
         const obj10 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
         const items7 = [,];
         ({ text: arr8[0], headerText: arr8[1] } = tmp);

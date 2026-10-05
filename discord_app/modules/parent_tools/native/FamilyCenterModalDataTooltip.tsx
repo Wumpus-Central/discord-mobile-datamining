@@ -21,7 +21,7 @@ let obj = {
   [USER_INTERACTION]: fn(5855).ChatIcon,
   [USER_CALLED]: fn(11532).PhoneIcon,
   [USER_ADD]: fn(4831).FriendsIcon,
-  [GUILD_ADD]: fn(13392).ServerGridIcon,
+  [GUILD_ADD]: fn(13394).ServerGridIcon,
   [GUILD_INTERACTION]: fn(5857).ThreadIcon,
   [PURCHASES]: fn(8127).CreditCardIcon,
   [TOTAL_VOICE_MINUTES]: fn(4849).ClockIcon,
@@ -291,7 +291,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               [tmp2, obj] = tmp;
               obj1 = { IconComponent: closure_8[tmp2], header: obj.tooltipHeader(), description: null };
               tmp3 = jsx;
-              tmp4 = f68273;
+              tmp4 = f68323;
               tmp5 = closure_0;
               obj1.description = obj.tooltipDescription(tmp5);
               return tmp3(tmp4, obj1, tmp2);
@@ -306,7 +306,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               [tmp2, obj] = tmp;
               obj1 = { IconComponent: closure_8[tmp2], header: obj.tooltipHeader(), description: null };
               tmp3 = jsx;
-              tmp4 = f68273;
+              tmp4 = f68323;
               tmp5 = closure_0;
               obj1.description = obj.tooltipDescription(tmp5);
               return tmp3(tmp4, obj1, tmp2);

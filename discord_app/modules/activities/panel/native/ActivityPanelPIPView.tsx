@@ -28,7 +28,7 @@ let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: map1,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_14,
 } = ActivityPanelConstants);
-const portraitSafeAreasConfig = fn(17147).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+const portraitSafeAreasConfig = fn(17171).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const ThemeTypes = fn(1085).ThemeTypes;
 const PIP_WINDOW_OFFSET = fn(11903).PIP_WINDOW_OFFSET;
 const jsx = fn(21).jsx;
@@ -1893,7 +1893,7 @@ export default noop.memo(
             transitionCleanUp,
             pipOrientationLockState: stateFromStores,
             hasActivity: tmp17,
-            context: applicationId(17144),
+            context: applicationId(17168),
             children: tmp18,
           };
           const tmp24 = (
@@ -1902,7 +1902,7 @@ export default noop.memo(
               transitionCleanUp={transitionCleanUp}
               pipOrientationLockState={stateFromStores}
               hasActivity={tmp17}
-              context={applicationId(17144)}
+              context={applicationId(17168)}
             >
               {tmp18}
             </closure_28>

@@ -9,7 +9,7 @@ import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSett
 import ScreenIcon from "../../../../design/components/Icon/native/redesign/generated/ScreenIcon.tsx";
 import _modDef9748 from "../../../../../_runtime/metro/09748__.js";
 import AuthSessionsActionCreators from "../../../auth_sessions/AuthSessionsActionCreators.tsx";
-import _modDef14754 from "../../../../../_runtime/metro/14754__.js";
+import _modDef14758 from "../../../../../_runtime/metro/14758__.js";
 import VrHeadsetIcon from "../../../../design/components/Icon/native/redesign/generated/VrHeadsetIcon.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -32,7 +32,7 @@ function getOsDetails(text) {
               const obj2 = { text, iconSource: _modDef9748, IconComponent: VrHeadsetIcon.VrHeadsetIcon };
               return obj2;
             } else {
-              const obj = { text, iconSource: _modDef14754, IconComponent: ScreenIcon.ScreenIcon };
+              const obj = { text, iconSource: _modDef14758, IconComponent: ScreenIcon.ScreenIcon };
               return obj;
             }
           }
@@ -45,7 +45,7 @@ function getOsDetails(text) {
   const obj4 = { text: null, iconSource: null, IconComponent: null };
   const intl = util.intl;
   obj4.text = intl.string(util.t.cDHCNY);
-  obj4.iconSource = _modDef14754;
+  obj4.iconSource = _modDef14758;
   obj4.IconComponent = ScreenIcon.ScreenIcon;
   return obj4;
 }
@@ -85,7 +85,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = otherSessions(576).c(31);
       const tmp4 = closure_13();
       const obj = otherSessions(576);
-      let authSessions = otherSessions(14587).useAuthSessions();
+      let authSessions = otherSessions(14591).useAuthSessions();
       ({ currentSession, otherSessions } = authSessions);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -99,7 +99,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp6, tmp7] = cResult;
       }
-      const obj2 = otherSessions(14587);
+      const obj2 = otherSessions(14591);
       const stateFromStores = otherSessions(504).useStateFromStores(tmp6, tmp7);
       const tmp10 = _slicedToArray(noop.useState(false), 2);
       closure_1 = tmp10[1];
@@ -291,9 +291,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       const tmp = closure_13();
-      let authSessions = otherSessions(14587).useAuthSessions();
+      let authSessions = otherSessions(14591).useAuthSessions();
       ({ currentSession, otherSessions } = authSessions);
-      const obj = otherSessions(14587);
+      const obj = otherSessions(14591);
       const items = [UserStore];
       const stateFromStores = otherSessions(504).useStateFromStores(items, () => currentUser.getCurrentUser());
       const obj2 = otherSessions(504);
@@ -628,8 +628,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let formatDateResult = null;
       if (!current) {
-        formatDateResult = tmp(14587).formatDate(session.approx_last_used_time);
-        const tmpResult = tmp(14587);
+        formatDateResult = tmp(14591).formatDate(session.approx_last_used_time);
+        const tmpResult = tmp(14591);
       }
       cResult[8] = current;
       cResult[9] = session.approx_last_used_time;
@@ -667,8 +667,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       let formatDateResult = null;
       ({ text, iconSource, IconComponent } = getOsDetails(os));
       if (!current) {
-        formatDateResult = session(14587).formatDate(session.approx_last_used_time);
-        const obj = session(14587);
+        formatDateResult = session(14591).formatDate(session.approx_last_used_time);
+        const obj = session(14591);
       }
       const items = [text, platform];
       const found = items.filter(session(1375).isNotNullish);

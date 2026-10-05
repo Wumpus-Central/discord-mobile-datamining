@@ -31,7 +31,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
       }
       const fractionalPremiumInfo = tmp5.fractionalPremiumInfo;
       let obj = require("c");
-      const appleSubscriptionOwnership = gknRR3(13189).useAppleSubscriptionOwnership(isPurchasedViaApple);
+      const appleSubscriptionOwnership = gknRR3(13191).useAppleSubscriptionOwnership(isPurchasedViaApple);
       if (null == subscriptionPeriodStart) {
         return null;
       } else {
@@ -60,7 +60,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
                                   const obj3 = { value, done: true };
                                   return obj3;
                                 } else {
-                                  return { value: "IconComponent", done: "IconComponent" };
+                                  return { value: "IconComponent", done: null };
                                 }
                               } else {
                                 try {
@@ -88,7 +88,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
                                     return obj;
                                   } else {
                                     v3 = 3;
-                                    return { value: "IconComponent", done: "IconComponent" };
+                                    return { value: "IconComponent", done: null };
                                   }
                                 } catch (tmp7) {
                                   v3 = tmp;
@@ -149,7 +149,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
         cResult[7] = billingInformationString;
         tmp6 = billingInformationString;
       }
-      const gknRR3Result = gknRR3(13189);
+      const gknRR3Result = gknRR3(13191);
     }
   : (isPurchasedViaApple, subscriptionPeriodStart, arg2) => {
       let tmp = arg2;
@@ -203,7 +203,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "IconComponent", done: "IconComponent" };
+                      return { value: "IconComponent", done: null };
                     }
                   } else {
                     try {
@@ -231,7 +231,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
                         return obj;
                       } else {
                         v3 = 3;
-                        return { value: "IconComponent", done: "IconComponent" };
+                        return { value: "IconComponent", done: null };
                       }
                     } catch (tmp7) {
                       v3 = tmp;

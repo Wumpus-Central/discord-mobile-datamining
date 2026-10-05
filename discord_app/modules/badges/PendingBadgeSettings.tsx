@@ -216,8 +216,8 @@ export const setPendingBadgeVisibility = function setPendingBadgeVisibility(badg
 export const resetPendingBadgeSettings = function resetPendingBadgeSettings() {
   DispatcherDefault.dispatch({
     type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES",
-    pendingBadgeDisplayOrder: "ix",
-    pendingBadgeHiddenBadges: "width",
+    pendingBadgeDisplayOrder: "unicodeVersion",
+    pendingBadgeHiddenBadges: "Symbol",
   });
 };
 export const hasPendingBadgeSettings = function hasPendingBadgeSettings(pendingBadgeDisplayOrder) {

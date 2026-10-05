@@ -109,7 +109,7 @@ export default noop.memo(
           fn.__initData = __initData;
           const animatedStyle = scrollPosition(4612).useAnimatedStyle(fn);
           const tmpResult = scrollPosition(4612);
-          const isHomeDrawerEnabled = scrollPosition(15945).useIsHomeDrawerEnabled();
+          const isHomeDrawerEnabled = scrollPosition(15949).useIsHomeDrawerEnabled();
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
             const fn2 = function f() {
@@ -651,7 +651,7 @@ export default noop.memo(
             cResult[16] = tmp24;
             cResult[17] = tmp30;
           }
-          const tmpResult2 = scrollPosition(15945);
+          const tmpResult2 = scrollPosition(15949);
         }
         const items3 = [tmp4.headerPanel, tmp5];
         cResult[2] = tmp4.headerPanel;
@@ -683,7 +683,7 @@ export default noop.memo(
         fn.__initData = __initData2;
         const animatedStyle = obj.useAnimatedStyle(fn);
         let obj2 = { withSpring: height(5597).withSpring, scrollPosition };
-        const isHomeDrawerEnabled = height(15945).useIsHomeDrawerEnabled();
+        const isHomeDrawerEnabled = height(15949).useIsHomeDrawerEnabled();
         const callback = noop.useCallback(() => {
           const rootNavigationRef = height(headerPanel[14]).getRootNavigationRef();
           if (rootNavigationRef != null) {
@@ -716,7 +716,7 @@ export default noop.memo(
             }
           }
         }, []);
-        let obj3 = height(15945);
+        let obj3 = height(15949);
         const obj4 = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
         const tmp12 = scrollPosition(6011)("bespoke");
         obj4.icon = closure_6(height(10689).PlusLargeIcon, { size: "sm", color: scrollPosition(587).colors.WHITE });
@@ -756,7 +756,7 @@ export default noop.memo(
         obj10.accessibilityLabel = intl3.string(height(1126).t["5h0QOP"]);
         const items2 = [
           closure_6(height(7575).IconButton, obj10),
-          closure_6(scrollPosition(15951), { noMargin: true, onPress: callback, alternateVariant: true }),
+          closure_6(scrollPosition(15955), { noMargin: true, onPress: callback, alternateVariant: true }),
           ,
         ];
         const obj11 = {

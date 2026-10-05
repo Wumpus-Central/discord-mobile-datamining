@@ -101,7 +101,7 @@ export default function AcceptInviteContainer(code) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -163,7 +163,7 @@ export default function AcceptInviteContainer(code) {
             return obj;
           }
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } catch (tmp14) {
           c3 = tmp;
           throw tmp14;
@@ -185,7 +185,7 @@ export default function AcceptInviteContainer(code) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -222,7 +222,7 @@ export default function AcceptInviteContainer(code) {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "IconComponent", done: "IconComponent" };
+                      return { value: "IconComponent", done: null };
                     }
                   } else {
                     try {
@@ -247,7 +247,7 @@ export default function AcceptInviteContainer(code) {
                               }
                               if (null == prop) {
                                 c6 = 3;
-                                return { value: "IconComponent", done: "IconComponent" };
+                                return { value: "IconComponent", done: null };
                               } else {
                                 closure_1();
                                 const result = v3(transitionToInviteChannel[17]).transitionToEventDetailsFromInvite(
@@ -392,7 +392,7 @@ export default function AcceptInviteContainer(code) {
             return obj;
           }
           v3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } catch (tmp5) {
           v3 = tmp;
           throw tmp5;

@@ -641,7 +641,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((users) => {
               obj = {};
               tmp5 = obj;
               tmp3 = createElement;
-              tmp4 = f62347;
+              tmp4 = f62375;
               merged = Object.assign(users);
               obj.key = tmp.id;
               tmp7 = closure_6;
@@ -649,22 +649,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((users) => {
               tmp8 = closure_3;
               if (!closure_3) {
                 tmp10 = jsx;
-                tmp11 = f62351;
+                tmp11 = f62379;
                 obj1 = { guildId: null, user: null };
                 tmp12 = guildId;
                 obj1.guildId = guildId;
                 obj1.user = tmp;
-                tmp13 = jsx(f62351, obj1);
+                tmp13 = jsx(f62379, obj1);
                 tmp3Result = tmp3(tmp4, obj, tmp13);
               } else {
                 tmp9 = c5;
               }
               tmp14 = jsx;
-              tmp15 = f62349;
+              tmp15 = f62377;
               obj4 = { count: null };
               tmp16 = closure_4;
               obj4.count = closure_4;
-              tmp13 = jsx(f62349, obj4);
+              tmp13 = jsx(f62377, obj4);
             }
             return;
           }

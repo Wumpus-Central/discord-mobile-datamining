@@ -23,7 +23,7 @@ import QuestStore from "../../QuestStore.tsx";
 
 const require = globalThis.__r;
 
-const QuestBottomSheetProgressCard = QuestBottomSheetProgressCardWatchTask(14958);
+const QuestBottomSheetProgressCard = QuestBottomSheetProgressCardWatchTask(14962);
 require = fn;
 const useState = fn(19).useState;
 const View = fn(17).View;
@@ -953,8 +953,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = quest(quest(10911).useTaskPlatformScreen(quest, questTaskDetails), 3);
       closure_4 = tmp5[2];
       const obj5 = quest(10911);
-      const hasWatchVideoOnMobileTasks = quest(14888).useHasWatchVideoOnMobileTasks(quest.config);
-      const obj6 = quest(14888);
+      const hasWatchVideoOnMobileTasks = quest(14892).useHasWatchVideoOnMobileTasks(quest.config);
+      const obj6 = quest(14892);
       [tmp8, tmp9] = quest(closure_16({ quest, initialStep, location: _location }), 2);
       const userStatus = quest.userStatus;
       let completedAt;
@@ -1467,7 +1467,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             class T {
               constructor() {
                 obj = { quest: closure_3, initialStep, sourceQuestContent };
-                return jsx(f68962, obj);
+                return jsx(f69012, obj);
               }
             }
             const obj2 = {
@@ -1494,7 +1494,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class T {
           constructor() {
             obj = { quest: closure_3, initialStep, sourceQuestContent };
-            return jsx(f68962, obj);
+            return jsx(f69012, obj);
           }
         }
         cResult[3] = initialStep;

@@ -11,8 +11,8 @@ import _modDef6589 from "../../../../../_runtime/metro/06589__.js";
 import _modDef7625 from "../../../../../_runtime/metro/07625__.js";
 import _modDef11181 from "../../../../../_runtime/metro/11181__.js";
 import _modDef12442 from "../../../../../_runtime/metro/12442__.js";
-import _modDef15658 from "../../../../../_runtime/metro/15658__.js";
-import _modDef15659 from "../../../../../_runtime/metro/15659__.js";
+import _modDef15662 from "../../../../../_runtime/metro/15662__.js";
+import _modDef15663 from "../../../../../_runtime/metro/15663__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -28,8 +28,8 @@ let items = [
   _modDef7625,
   _modDef4811,
   _modDef4850,
-  _modDef15658,
-  _modDef15659,
+  _modDef15662,
+  _modDef15663,
   _modDef11181,
 ];
 let closure_10 = [
@@ -95,8 +95,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant: "a",
-              action: "a",
+              variant: "r",
+              action: "toCharArray$esjava$1",
             };
             let str = "default";
             if (index === closure_0 - 1) {
@@ -124,8 +124,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant: "a",
-              action: "a",
+              variant: "r",
+              action: "toCharArray$esjava$1",
             };
             let str = "default";
             if (index === closure_0 - 1) {
@@ -229,8 +229,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 label: length[index % length.length],
                 IconComponent: "a",
                 iconSource: length2[index % length2.length],
-                variant: "a",
-                action: "a",
+                variant: "r",
+                action: "toCharArray$esjava$1",
               };
               let str = "default";
               if (index === closure_0 - 1) {
@@ -253,8 +253,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant: "a",
-              action: "a",
+              variant: "r",
+              action: "toCharArray$esjava$1",
             };
             let str = "default";
             if (index === closure_0 - 1) {

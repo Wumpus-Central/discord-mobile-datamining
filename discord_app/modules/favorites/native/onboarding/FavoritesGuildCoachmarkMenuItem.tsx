@@ -187,8 +187,8 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           description: null,
           onDismiss: null,
           renderImgComponent: "r",
-          buttonLabel: "good",
-          onButtonPress: 0,
+          buttonLabel: "next",
+          onButtonPress: "Moves focus to the previous field",
         };
         const intl = util.intl;
         const tmp4 = _modDef3367;

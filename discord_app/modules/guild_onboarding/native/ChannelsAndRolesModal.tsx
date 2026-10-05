@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           class I {
             constructor() {
               obj = { guildId, defaultTab };
-              return jsx(f57031, obj);
+              return jsx(f57059, obj);
             }
           }
           const obj2 = { screenKey: "channelAndRolesModal", title: tmp10, render: tmp13 };
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class I {
           constructor() {
             obj = { guildId, defaultTab };
-            return jsx(f57031, obj);
+            return jsx(f57059, obj);
           }
         }
         cResult[5] = defaultTab;

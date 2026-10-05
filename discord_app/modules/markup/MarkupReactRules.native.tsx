@@ -1268,7 +1268,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
         str2 = "text-xs/medium";
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { themedColor: node(587).colors.MENTION_FOREGROUND, source: node(13651), size: null };
+        let obj2 = { themedColor: node(587).colors.MENTION_FOREGROUND, source: node(13653), size: null };
         const fontScale = closure_6.getFontScale();
         if (fontScale < 1) {
           let SMALL = tmp(1188).Icon.Sizes.EXTRA_SMALL_10;
@@ -1413,7 +1413,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
         str2 = "text-xs/medium";
       }
       let obj = { variant: str2, style: tmp.channelMentionText, children: null };
-      const obj2 = { themedColor: node(587).colors.MENTION_FOREGROUND, source: node(13651), size: null };
+      const obj2 = { themedColor: node(587).colors.MENTION_FOREGROUND, source: node(13653), size: null };
       const fontScale = closure_6.getFontScale();
       if (fontScale < 1) {
         let SMALL = tmp3(1188).Icon.Sizes.EXTRA_SMALL_10;
@@ -1884,7 +1884,7 @@ export default function createRules() {
     },
     [closure_0(closure_2[46]).AST_KEY.GAME_MENTION]: {
       react(node, arg1, state) {
-        return closure_1_17(obj2(13656), { node, state }, state.key);
+        return closure_1_17(obj2(13658), { node, state }, state.key);
       },
     },
     [closure_0(closure_2[46]).AST_KEY.TIMESTAMP]: {
@@ -2095,4 +2095,4 @@ export const plainSpoilerRenderer = function plainSpoilerRenderer(content) {
   }
   return str;
 };
-export const createFetchingGameMentionRule = fn(13656).createFetchingGameMentionRule;
+export const createFetchingGameMentionRule = fn(13658).createFetchingGameMentionRule;

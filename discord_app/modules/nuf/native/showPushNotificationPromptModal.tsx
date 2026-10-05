@@ -11,7 +11,7 @@ let result = size.fileFinishedImporting("modules/nuf/native/showPushNotification
 export const showPushNotificationPromptModal = function showPushNotificationPromptModal(onComplete) {
   onComplete = onComplete.onComplete;
   ModalActionCreatorsDefault.pushLazy(
-    onComplete(1987)(15917, dependencyMap.paths),
+    onComplete(1987)(15921, dependencyMap.paths),
     {
       onComplete() {
         ModalActionCreatorsDefault.popWithKey(closure_4);

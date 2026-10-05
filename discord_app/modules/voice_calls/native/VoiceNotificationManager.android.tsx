@@ -24,13 +24,13 @@ class VoiceNotificationManager {
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
     obj.state = {
-      channelId: "Symbol",
-      connectionState: "current",
+      channelId: "T",
+      connectionState: "cursor",
       selfMute: false,
-      deafened: "onRequestClose",
-      isPushToTalk: true,
-      embeddedActivity: true,
-      isStreaming: true,
+      deafened: "increasedFileUploadSize",
+      isPushToTalk: null,
+      embeddedActivity: "webcode",
+      isStreaming: "text",
     };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
@@ -236,13 +236,13 @@ prototype["terminate"] = function terminate() {
 obj2 = Object.create(VoiceNotificationManager.prototype);
 obj2.voiceServiceHandlerId = 9000;
 obj2.state = {
-  channelId: "Symbol",
-  connectionState: "current",
+  channelId: "T",
+  connectionState: "cursor",
   selfMute: false,
-  deafened: "onRequestClose",
-  isPushToTalk: true,
-  embeddedActivity: true,
-  isStreaming: true,
+  deafened: "increasedFileUploadSize",
+  isPushToTalk: null,
+  embeddedActivity: "webcode",
+  isStreaming: "text",
 };
 obj2.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();

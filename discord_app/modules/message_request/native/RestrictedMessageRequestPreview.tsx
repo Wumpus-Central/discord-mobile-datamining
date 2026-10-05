@@ -281,9 +281,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
         }
       };
       const obj6 = { channel: stateFromStores, user: stateFromStores1 };
-      const items8 = [closure_10(tmp2(17052), obj6), ];
+      const items8 = [closure_10(tmp2(17076), obj6), ];
       const obj7 = { channelId };
-      items8[1] = closure_10(tmp2(17054), obj7);
+      items8[1] = closure_10(tmp2(17078), obj7);
       obj5.children = items8;
       const items9 = [closure_11(closure_5, obj5), ];
       const obj8 = { style: null, children: null };

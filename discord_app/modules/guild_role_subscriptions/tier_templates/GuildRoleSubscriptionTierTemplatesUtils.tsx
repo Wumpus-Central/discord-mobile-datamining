@@ -54,7 +54,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -138,7 +138,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(15042).useEditStateStore;
+const useEditStateStore = fn(15046).useEditStateStore;
 const GuildFeatures = fn(1085).GuildFeatures;
 const ChannelFlags = fn(2058).ChannelFlags;
 let allSettled = allSettled_mod;

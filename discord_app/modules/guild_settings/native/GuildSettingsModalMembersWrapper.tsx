@@ -41,7 +41,7 @@ export default noop.memo(
     : (guildId) => {
         guildId = guildId.guildId;
         return jsx(
-          importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 16521 : 16523),
+          importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 16525 : 16527),
           { guildId },
         );
       },

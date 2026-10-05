@@ -119,8 +119,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             size: native.AvatarSizes.NORMAL,
             avatarDecoration: tmp9,
             animate: !stateFromStores,
-            autoStatusCutout: false,
-            "aria-hidden": false,
+            autoStatusCutout: null,
+            "aria-hidden": "SOURCE",
           };
           const tmp25 = timestampProducer(native.Avatar, obj5);
           cResult[12] = tmp9;
@@ -201,8 +201,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           size: native.AvatarSizes.NORMAL,
           avatarDecoration,
           animate: !stateFromStores,
-          autoStatusCutout: false,
-          "aria-hidden": false,
+          autoStatusCutout: null,
+          "aria-hidden": "SOURCE",
         };
         return timestampProducer(native.Avatar, obj);
       }, items1);

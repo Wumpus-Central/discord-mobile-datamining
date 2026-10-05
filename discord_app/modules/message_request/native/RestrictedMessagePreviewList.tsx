@@ -82,7 +82,7 @@ let closure_9 = {
 const createStyles = fn(4890);
 let obj2 = {
   container: { flexDirection: "column" },
-  hiddenMedia: { marginLeft: fn(17055).RESTRICTED_CONTENT_INSET },
+  hiddenMedia: { marginLeft: fn(17079).RESTRICTED_CONTENT_INSET },
   messageRow: { position: "relative" },
   avatarHitbox: null,
   dateDivider: null,
@@ -94,11 +94,11 @@ let size = {
   position: "absolute",
   top: 0,
   left: 0,
-  width: fn(17055).RESTRICTED_CONTENT_INSET,
-  height: fn(17055).RESTRICTED_AVATAR_SIZE,
+  width: fn(17079).RESTRICTED_CONTENT_INSET,
+  height: fn(17079).RESTRICTED_AVATAR_SIZE,
 };
 obj2.avatarHitbox = size;
-let obj3 = { marginLeft: fn(17055).RESTRICTED_CONTENT_INSET };
+let obj3 = { marginLeft: fn(17079).RESTRICTED_CONTENT_INSET };
 obj2.dateDivider = {
   flexDirection: "row",
   alignItems: "center",

@@ -12,7 +12,7 @@ import GuildRoleSubscriptionsHooks from "../../GuildRoleSubscriptionsHooks.tsx";
 import FormSeparatorDefault from "../components/FormSeparator.tsx";
 import useManageSubscriptionCardDataDefault from "../../manage_subscriptions/useManageSubscriptionCardData.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import _modDef15049 from "../../../../../_runtime/metro/15049__.js";
+import _modDef15053 from "../../../../../_runtime/metro/15053__.js";
 import FastAssetImageDefault from "../components/FastAssetImage.tsx";
 import GuildRoleSubscriptionCardAll from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -57,7 +57,7 @@ function CancelSubscriptionButtonFooter(guild) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -222,7 +222,7 @@ let createStyles = fn(4890);
 let obj2 = {
   container: { flex: 1 },
   body: { marginVertical: 24, marginHorizontal: 16 },
-  heroImage: { width: "100%", height: "__initData", aspectRatio: "<string:2353406737>" },
+  heroImage: { width: "100%", height: "filter", aspectRatio: "<string:2353406737>" },
   footer: { borderTopColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER, borderTopWidth: 1, padding: 16 },
 };
 let closure_13 = createStyles.createStyles(obj2);
@@ -368,7 +368,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp51 = cResult[27];
                 }
                 if (cResult[28] !== tmp4.cactus) {
-                  const obj15 = { source: _modDef15049, style: tmp4.cactus };
+                  const obj15 = { source: _modDef15053, style: tmp4.cactus };
                   const tmp58 = v65535(FastImageDefault, obj15);
                   cResult[28] = tmp4.cactus;
                   cResult[29] = tmp58;
@@ -502,7 +502,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         numIntangibles: _slicedToArray(obj3.useIntangibleBenefits(listingId), 1)[0].length,
       });
       const obj10 = { variant: "text-sm/medium", color: "interactive-text-default", children: guild.name };
-      obj13.source = _modDef15049;
+      obj13.source = _modDef15053;
       obj13.style = tmp.cactus;
       items2[6] = v65535(FastImageDefault, obj13);
       obj7.children = items2;

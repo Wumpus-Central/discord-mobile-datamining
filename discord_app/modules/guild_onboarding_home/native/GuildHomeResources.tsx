@@ -4,7 +4,7 @@ import router_utils from "../../routing/router_utils.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import GuildOnboardingHomeActionCreators from "../GuildOnboardingHomeActionCreators.tsx";
 import useResourceChannelsDefault from "../useResourceChannels.tsx";
-import _modDef16518 from "../../../../_runtime/metro/16518__.js";
+import _modDef16522 from "../../../../_runtime/metro/16522__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
@@ -175,7 +175,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const shouldObscure = tmp(11623).useSharedMediaProps(obj2).shouldObscure;
-        stateFromStores(16517)(tmp15);
+        stateFromStores(16521)(tmp15);
         if (cResult[14] === stateFromStores) {
           class R {
             constructor() {
@@ -296,7 +296,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj6 = channelId(7540);
       let flag = channelId(11623).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-      const tmp11 = stateFromStores(16517)(firstResult);
+      const tmp11 = stateFromStores(16521)(firstResult);
       const tmp12 =
         null != stateFromStores &&
         null == stateFromStores2.first() &&
@@ -463,7 +463,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp17 = cResult[2];
         }
         if (cResult[3] !== tmp4.emptyStateImage) {
-          const obj3 = { style: tmp4.emptyStateImage, source: _modDef16518 };
+          const obj3 = { style: tmp4.emptyStateImage, source: _modDef16522 };
           const tmp23 = closure_12(closure_5, obj3);
           cResult[3] = tmp4.emptyStateImage;
           cResult[4] = tmp23;
@@ -582,7 +582,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl = guildId(1126).intl;
         obj3.children = intl.string(guildId(1126).t.owvC9U);
         const items = [closure_12(guildId(4886).Text, obj3), ,];
-        const obj4 = { style: tmp.emptyStateImage, source: _modDef16518 };
+        const obj4 = { style: tmp.emptyStateImage, source: _modDef16522 };
         items[1] = closure_12(closure_5, obj4);
         const obj5 = {
           onPress() {

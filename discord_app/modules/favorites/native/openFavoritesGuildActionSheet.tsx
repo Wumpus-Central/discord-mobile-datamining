@@ -7,7 +7,7 @@ const FavoritesGuildActionSheet = "FavoritesGuildActionSheet";
 const result = size.fileFinishedImporting("modules/favorites/native/openFavoritesGuildActionSheet.tsx");
 
 export default function openFavoritesGuildActionSheet() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16059, dependencyMap.paths), FavoritesGuildActionSheet, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16063, dependencyMap.paths), FavoritesGuildActionSheet, {
     onClose() {
       ActionSheetActionCreatorsDefault.hideActionSheet(FavoritesGuildActionSheet);
     },

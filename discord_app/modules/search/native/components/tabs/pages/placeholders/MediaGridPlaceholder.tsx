@@ -99,7 +99,7 @@ export const RecentsMediaGridPlaceholder = ReactCompilerGating.isReactCompilerEn
     arr = cResult[3];
   }
   const obj = size(576);
-  const placeholderAnimatedStyle = size(16797).usePlaceholderAnimatedStyle(visible);
+  const placeholderAnimatedStyle = size(16816).usePlaceholderAnimatedStyle(visible);
   if (cResult[4] === placeholderAnimatedStyle) {
     if (cResult[5] === row.container) {
       if (cResult[6] === row.recentsContainer) {
@@ -291,7 +291,7 @@ export const RecentsMediaGridPlaceholder = ReactCompilerGating.isReactCompilerEn
   cResult[6] = row.recentsContainer;
   cResult[7] = items2;
   tmp10 = items2;
-  const tmpResult4 = size(16797);
+  const tmpResult4 = size(16816);
 }) : ((visible) => {
   ({ size: require, numRows } = visible);
   let memo;

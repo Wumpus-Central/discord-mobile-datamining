@@ -218,8 +218,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           isMobileOnline: "done",
           isVROnline: true,
           size: null,
-          avatarDecoration: "header",
-          autoStatusCutout: null,
+          avatarDecoration: "text-md/semibold",
+          autoStatusCutout: 1,
         };
         if (StatusTypes.OFFLINE !== status) {
           class A {
@@ -297,8 +297,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           isMobileOnline: "done",
           isVROnline: true,
           size: null,
-          avatarDecoration: "header",
-          autoStatusCutout: null,
+          avatarDecoration: "text-md/semibold",
+          autoStatusCutout: 1,
         };
         let tmp13 = null;
         if (StatusTypes.OFFLINE !== status) {

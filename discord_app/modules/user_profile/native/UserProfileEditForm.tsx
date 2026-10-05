@@ -7,7 +7,7 @@ import ProfileCustomizationUtils from "../../profile_customization/ProfileCustom
 import UserProfileActionCreators from "../UserProfileActionCreators.tsx";
 import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
-import _modDef14411 from "../../../../_runtime/metro/14411__.js";
+import _modDef14415 from "../../../../_runtime/metro/14415__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 import ProfileCustomizationNavigationStore from "../../profile_customization/ProfileCustomizationNavigationStore.tsx";
@@ -61,7 +61,7 @@ function EditUserProfileBanner(user) {
       fn = (banner) => user(isTryItOut[19]).setPendingChanges({ banner });
     }
     obj2.onBannerChange = fn;
-    const tmp3 = asyncRequireImpl(14414, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(14418, dependencyMap.paths);
     let banner;
     if (displayProfile != null) {
       banner = displayProfile.banner;
@@ -83,15 +83,15 @@ const FLOATING_UPSELL_HEIGHT = fn(6707).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1085);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_9, PRONOUNS_MAX_LENGTH: c10, UserSettingsSections: closure_11 } = Constants);
 let closure_12 = fn(1095).ProfileCustomizationScrollPositions;
-const constants2 = fn(14410).UserProfileEditAutoFocusElement;
+const constants2 = fn(14414).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let obj = {
   assetOrigin: fn(6486).AssetOriginTypes.NEW_ASSET,
-  imageUri: _modDef14411,
-  staticImageUri: _modDef14411,
+  imageUri: _modDef14415,
+  staticImageUri: _modDef14415,
   description: "",
-  originalAsset: "unicodeVersion",
+  originalAsset: "code",
 };
 const ReactCompilerGating = fn(558);
 const size = fn(2);

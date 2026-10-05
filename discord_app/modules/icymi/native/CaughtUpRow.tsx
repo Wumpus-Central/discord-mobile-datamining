@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(4886).Text);
-const createICYMIStyles = fn(16390);
+const createICYMIStyles = fn(16394);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = {
     container: {
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj6 = sharedValue(8029);
                     c1 = 1;
                     v3 = 1;
-                    const obj7 = { value: tmp4(16409).maybeFetchGuildDiscoveryCategories(), done: false };
+                    const obj7 = { value: tmp4(16413).maybeFetchGuildDiscoveryCategories(), done: false };
                     return obj7;
                   }
                 } else if (arg0 === 1) {
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }, 500);
                   }, 100);
                   v3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp8) {
                 v3 = tmp;
@@ -909,7 +909,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -940,7 +940,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj6 = v1(8029);
                   v1 = 1;
                   dependencyMap = 1;
-                  const obj7 = { value: tmp4(16409).maybeFetchGuildDiscoveryCategories(), done: false };
+                  const obj7 = { value: tmp4(16413).maybeFetchGuildDiscoveryCategories(), done: false };
                   return obj7;
                 }
               } else if (arg0 === 1) {
@@ -959,7 +959,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }, 500);
                 }, 100);
                 dependencyMap = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp8) {
               dependencyMap = tmp;
@@ -1181,7 +1181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj16.children = items6;
       items5[1] = closure_8(View, obj16);
       obj10.children = items5;
-      const items7 = [closure_8(View, obj10), closure_7(visible(16431).Separator, {})];
+      const items7 = [closure_8(View, obj10), closure_7(visible(16435).Separator, {})];
       const obj19 = { style: tmp.gradient, start: null, end: null, colors: null, pointerEvents: "none" };
       const obj13 = { size: "custom", style: tmp.icon, color: "background-brand" };
       const obj8 = visible(4580);

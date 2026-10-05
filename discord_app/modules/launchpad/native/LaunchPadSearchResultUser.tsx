@@ -585,8 +585,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         isMobileOnline,
         isVROnline,
         status: null,
-        streaming: "c5b76680866e63df9cbd5b736b904808",
-        style: "el.messages.c5b76680866e63df9cbd5b736b904808.compiled.messages",
+        streaming: "07f98cc97271330c0c0aaae9329559a5",
+        style: "es-ES.messages.07f98cc97271330c0c0aaae9329559a5.compiled.messages",
         size: "jsona",
         animate: "Mobile NUX Post Reg",
         typing: "Skip avatar modal",
@@ -682,7 +682,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = user(576);
       const stateFromStores = user(504).useStateFromStores(first, tmp6);
       const tmpResult = user(504);
-      const baseChannelUnreadBadgeState = user(16281).useBaseChannelUnreadBadgeState(channel, stateFromStores);
+      const baseChannelUnreadBadgeState = user(16285).useBaseChannelUnreadBadgeState(channel, stateFromStores);
       ({ unread, mentionCount } = baseChannelUnreadBadgeState);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [TypingStore];
@@ -704,7 +704,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp13 = cResult[8];
         }
-        const tmp15 = channel(15133)(channel, tmp13);
+        const tmp15 = channel(15137)(channel, tmp13);
         if (cResult[9] === channel) {
           if (cResult[10] === stateFromStores1) {
             if (cResult[11] === tmp15) {
@@ -748,7 +748,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = user.id;
       cResult[6] = fn2;
       tmp11 = fn2;
-      const tmpResult3 = user(16281);
+      const tmpResult3 = user(16285);
     }
   : (arg0) => {
       ({ user: require, channel } = arg0);
@@ -766,7 +766,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = {};
       const merged = Object.assign(arg0);
       obj4.channel = channel;
-      obj4.lastMessage = channel(15133)(channel, { unread });
+      obj4.lastMessage = channel(15137)(channel, { unread });
       obj4.unread = unread;
       obj4.mentionCount = mentionCount;
       obj4.muted = stateFromStores;

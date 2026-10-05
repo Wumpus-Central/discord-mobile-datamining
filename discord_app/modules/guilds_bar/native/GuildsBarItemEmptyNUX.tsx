@@ -11,7 +11,7 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const GuildsBarConstants = fn(16218);
+const GuildsBarConstants = fn(16222);
 ({ GUILD_ITEM_HIT_SLOP: closure_8, useGuildWrapperSize: closure_9 } = GuildsBarConstants);
 const EMPTY_NUX_SERVER = fn(1085).EMPTY_NUX_SERVER;
 const MODE_CHANGE_PHYSICS = fn(10820).MODE_CHANGE_PHYSICS;

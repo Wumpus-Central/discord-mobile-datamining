@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     };
                     const intl3 = tmp(1126).intl;
                     obj6.accessibilityLabel = intl3.string(tmp(1126).t.NLl6Q3);
-                    tmp31 = closure_6(tmp(17850).ArrowLargeDownIcon, obj6);
+                    tmp31 = closure_6(tmp(17874).ArrowLargeDownIcon, obj6);
                   }
                   items1[1] = tmp31;
                   const obj7 = { variant: "text-xs/normal", color: "text-subtle", children: subtext };
@@ -262,7 +262,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl3 = tmp4(1126).intl;
           obj8.accessibilityLabel = intl3.string(tmp4(1126).t.NLl6Q3);
-          tmp7Result4 = closure_6(tmp4(17850).ArrowLargeDownIcon, obj8);
+          tmp7Result4 = closure_6(tmp4(17874).ArrowLargeDownIcon, obj8);
         }
         items3[1] = tmp7Result4;
         const obj9 = { variant: "text-xs/normal", color: "text-subtle", children: subtext };

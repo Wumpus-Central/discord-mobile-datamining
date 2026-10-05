@@ -46,7 +46,7 @@ let closure_6 = asyncGeneratorStep(async (arg0) => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -67,7 +67,7 @@ let closure_6 = asyncGeneratorStep(async (arg0) => {
             closure_129_1 = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else {
           if (1 === tmp5) {
@@ -140,7 +140,7 @@ let closure_5 = asyncGeneratorStep(async (arg0) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -162,7 +162,7 @@ let closure_5 = asyncGeneratorStep(async (arg0) => {
             closure_130_2 = undefined;
             c4 = 1;
             c5 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else {
           if (1 === tmp5) {
@@ -239,7 +239,7 @@ let closure_4 = asyncGeneratorStep(async (arg0) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -260,7 +260,7 @@ let closure_4 = asyncGeneratorStep(async (arg0) => {
             closure_129_1 = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else {
           if (1 === tmp5) {

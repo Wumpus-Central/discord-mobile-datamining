@@ -59,7 +59,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.IHMsPn);
   },
   parent: null,
-  IconComponent: fn(15239).LanguageIcon,
+  IconComponent: fn(15243).LanguageIcon,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
         const cResult = stateFromStores(576).c(4);

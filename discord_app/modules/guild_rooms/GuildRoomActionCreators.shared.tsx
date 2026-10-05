@@ -22,7 +22,7 @@ let closure_8 = async function _guildRoomConnect(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     while (true) {
@@ -164,7 +164,7 @@ let closure_8 = async function _guildRoomConnect(arg0) {
           }
           c11 = 0;
           c13 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         c11 = 1;
@@ -190,7 +190,7 @@ let closure_9 = async function _guildRoomUpdate(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -366,7 +366,7 @@ let closure_9 = async function _guildRoomUpdate(arg0) {
           }
           c6 = 0;
           c8 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp81) {
         closure_5 = tmp81;
@@ -465,7 +465,7 @@ let closure_16 = async function _createGuildRoomNote(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -519,7 +519,7 @@ let closure_16 = async function _createGuildRoomNote(arg0) {
           }
           c7 = 0;
           c9 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp27) {
         closure_6 = tmp27;
@@ -544,7 +544,7 @@ let closure_17 = async function _deleteGuildRoomNote(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -582,7 +582,7 @@ let closure_17 = async function _deleteGuildRoomNote(arg0) {
           const obj = closure_132_0(closure_132_2[8]);
         }
         c6 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp15) {
       c6 = tmp;

@@ -283,11 +283,11 @@ class ChatPreviewBase extends PureComponent {
           rows: previousRows,
           scrollToMessageId: jumpTargetId,
           jumpTargetId,
-          jumpType: "Set",
+          jumpType: "Symbol",
           shouldInitialScroll: "Array",
-          animated: "2025-11-video-end-card-v2",
-          scrollPosition: "user",
-          focusTargetId: null,
+          animated: 0.301,
+          scrollPosition: 1,
+          focusTargetId: "hidden",
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -363,7 +363,7 @@ class ChatPreviewBase extends PureComponent {
         message: applyArgumentsResult.getMessage(data.messageId),
         messageChannel: "System",
         selectedChannelId: null,
-        tapLinkData: "ix",
+        tapLinkData: "unicodeVersion",
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;

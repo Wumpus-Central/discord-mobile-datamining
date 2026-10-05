@@ -6,7 +6,7 @@ import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
-import _modDef16121 from "../../../../_runtime/metro/16121__.js";
+import _modDef16125 from "../../../../_runtime/metro/16125__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -32,7 +32,7 @@ let closure_10 = async function _handlePress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -65,7 +65,7 @@ let closure_10 = async function _handlePress() {
         closure_128_0 = value.default;
         closure_129_1(closure_129_2[10]).openURL(closure_128_0.getArticleURL(closure_129_5.SETTING_UP_TWO_FACTOR));
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp17) {
       c3 = tmp;
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(10);
       const tmp4 = closure_8();
       if (cResult[0] !== tmp4.MFAWarningIcon) {
-        const obj2 = { style: tmp4.MFAWarningIcon, source: _modDef16121 };
+        const obj2 = { style: tmp4.MFAWarningIcon, source: _modDef16125 };
         const tmp9 = timestampProducer(Image, obj2);
         cResult[0] = tmp4.MFAWarningIcon;
         cResult[1] = tmp9;
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       const tmp = closure_8();
       const obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-      const items = [timestampProducer(Image, { style: tmp.MFAWarningIcon, source: _modDef16121 })];
+      const items = [timestampProducer(Image, { style: tmp.MFAWarningIcon, source: _modDef16125 })];
       const obj3 = { variant: "text-xs/medium", color: "text-default", children: null };
       const intl = util.intl;
       const items1 = [intl.string(util.t.ZIf8Ag)];

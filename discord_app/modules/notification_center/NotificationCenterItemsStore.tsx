@@ -213,9 +213,9 @@ let obj = {
   notifCenterIds: new Set(),
   notifCenterLocalItems: [],
   paginationHasMore: true,
-  paginationCursor: "Set",
-  notifCenterActive: -6.583,
-  notifCenterTabFocused: 3,
+  paginationCursor: "Symbol",
+  notifCenterActive: "none",
+  notifCenterTabFocused: "URL",
 };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {}
@@ -397,9 +397,9 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterIds: new Set(),
       notifCenterLocalItems: null,
       paginationHasMore: true,
-      paginationCursor: "Set",
-      notifCenterActive: -6.583,
-      notifCenterTabFocused: 3,
+      paginationCursor: "Symbol",
+      notifCenterActive: "none",
+      notifCenterTabFocused: "URL",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -539,9 +539,9 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterIds: new Set(),
       notifCenterLocalItems: null,
       paginationHasMore: true,
-      paginationCursor: "Set",
-      notifCenterActive: -6.583,
-      notifCenterTabFocused: 3,
+      paginationCursor: "Symbol",
+      notifCenterActive: "none",
+      notifCenterTabFocused: "URL",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -710,9 +710,9 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterIds: new Set(),
       notifCenterLocalItems: null,
       paginationHasMore: true,
-      paginationCursor: "Set",
-      notifCenterActive: -6.583,
-      notifCenterTabFocused: 3,
+      paginationCursor: "Symbol",
+      notifCenterActive: "none",
+      notifCenterTabFocused: "URL",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;

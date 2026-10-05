@@ -45,7 +45,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 function onGoreContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
-    const obj = selectedTeenId(14625);
+    const obj = selectedTeenId(14629);
     const obj3 = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
     const intl = selectedTeenId(1126).intl;
     obj3.title = intl.string(selectedTeenId(1126).t["16/3Bi"]);
@@ -57,8 +57,8 @@ function onGoreContentNonFriendsDmOnPress() {
     obj3.currentValue = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
     const items = [selectedTeenId(1197).ExplicitContentRedaction.SHOW];
     obj3.excluded = items;
-    const result = selectedTeenId(14630).handleSensitiveMediaFilterPress(obj3);
-    const obj2 = selectedTeenId(14630);
+    const result = selectedTeenId(14634).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(14634);
   }
 }
 function getTitle() {

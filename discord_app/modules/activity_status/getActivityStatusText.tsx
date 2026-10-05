@@ -3,7 +3,7 @@ import Constants from "../../Constants.tsx";
 import util from "../../intl/index.native.tsx";
 import isEmbeddedActivityDefault from "../activities/utils/isEmbeddedActivity.tsx";
 import isCrunchyrollActivityDefault from "../activities/utils/isCrunchyrollActivity.tsx";
-import conjuringActivity from "../vibegrations/lib/conjuringActivity.tsx";
+import conjurePresenceActivity from "../conjure/presence/conjurePresenceActivity.tsx";
 import StatusDisplayTypes from "../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx";
 import getChannelCopyForEmbeddedActivityDefault from "../activities/utils/getChannelCopyForEmbeddedActivity.tsx";
 import isListeningOnSpotifyDefault from "../activities/utils/isListeningOnSpotify.tsx";
@@ -92,7 +92,7 @@ export default function getActivityStatusText(name) {
     tmp17 = tmp2;
   }
   if (!isEmbeddedActivityDefault(name)) {
-    if (!tmp15Result.isConjuringActivity(name)) {
+    if (!tmp15Result.isConjurePresenceActivity(name)) {
       let type1;
       if (name != null) {
         type1 = name.type;
@@ -198,7 +198,7 @@ export default function getActivityStatusText(name) {
       obj17 = {};
       tmp15Result2 = StageChannelRichPresenceUtils;
     }
-    tmp15Result = conjuringActivity;
+    tmp15Result = conjurePresenceActivity;
   }
   const text = getChannelCopyForEmbeddedActivityDefault(tmp2);
   return { text, tooltip: text };

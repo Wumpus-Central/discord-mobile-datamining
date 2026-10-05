@@ -548,7 +548,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -858,7 +858,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -1627,7 +1627,7 @@ let closure_16 = noop.memo(
         };
         const tmp = _slicedToArray(noop.useState(false), 2);
         _slicedToArray = tmp[1];
-        const tmp3 = guildTemplate(17798)(guildTemplate.code);
+        const tmp3 = guildTemplate(17822)(guildTemplate.code);
         noop = tmp3;
         let obj = { spacing: guildTemplate(587).space.PX_12, children: null };
         let obj2 = { label: null, children: null };

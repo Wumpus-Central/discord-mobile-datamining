@@ -1117,7 +1117,7 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
                                               style: closure_20,
                                               item: onEndDragWorklet,
                                             };
-                                            return jsx(f56477, obj, arg1);
+                                            return jsx(f56505, obj, arg1);
                                           }
                                         }
                                         if (null != nativeGesture) {
@@ -1134,7 +1134,7 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
                                                 style: closure_20,
                                                 item: onEndDragWorklet,
                                               };
-                                              return jsx(f56477, obj, arg1);
+                                              return jsx(f56505, obj, arg1);
                                             }
                                           }
                                           const tmp47 = scrollOverflow(
@@ -1183,7 +1183,7 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
                                   style: closure_20,
                                   item: onEndDragWorklet,
                                 };
-                                return jsx(f56477, obj, arg1);
+                                return jsx(f56505, obj, arg1);
                               }
                             }
                             obj18.style = tmp36;
@@ -1236,7 +1236,7 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
                               style: closure_20,
                               item: onEndDragWorklet,
                             };
-                            return jsx(f56477, obj, arg1);
+                            return jsx(f56505, obj, arg1);
                           }
                         }
                         cResult[19] = first;
@@ -1263,7 +1263,7 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
                     style: closure_20,
                     item: onEndDragWorklet,
                   };
-                  return jsx(f56477, obj, arg1);
+                  return jsx(f56505, obj, arg1);
                 }
               }
               cResult[26] = tmp30;

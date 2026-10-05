@@ -480,7 +480,7 @@ invites = {
       if (null != themeColor) {
         channel = channel.set("themeColor", themeColor);
       }
-      if (null != applicationId) {
+      if (undefined !== applicationId) {
         channel = channel.set("application_id", applicationId);
       }
       closure_26();

@@ -245,10 +245,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       noop = undefined;
       ({ mentionTotalLimit, mentionRaidProtectionEnabled } = rule.triggerMetadata);
       const tmp = closure_9();
-      let hasMentionRaidLimitAccess = rule(16988).useHasMentionRaidLimitAccess(rule.guildId);
+      let hasMentionRaidLimitAccess = rule(17012).useHasMentionRaidLimitAccess(rule.guildId);
       const intl = rule(1126).intl;
       const stringResult = intl.string(rule(1126).t["s/26oQ"]);
-      let obj = rule(16988);
+      let obj = rule(17012);
       [tmp7, c3] = noop.useState(true);
       let obj2 = { title: null, hasIcons: false, helperText: null, children: null };
       const intl2 = rule(1126).intl;

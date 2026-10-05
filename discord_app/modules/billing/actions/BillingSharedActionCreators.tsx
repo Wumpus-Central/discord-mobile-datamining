@@ -19,7 +19,7 @@ let closure_8 = async function _validatePaymentSourceBillingAddress(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -128,7 +128,7 @@ let closure_10 = async function _createPaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -159,7 +159,7 @@ let closure_10 = async function _createPaymentSource(arg0) {
           closure_133_7 = undefined;
           c9 = 1;
           c10 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

@@ -239,7 +239,7 @@ export const QuestCard = noop.memo((questContent) => {
     obj = AdAnalyticsInterfaceExperiment;
   }
   function showQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14919, dependencyMap.paths), "QuestBottomSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14923, dependencyMap.paths), "QuestBottomSheet", {
       questId: quest.id,
       questContentPosition,
       sourceQuestContent,
@@ -580,7 +580,7 @@ export const QuestCard = noop.memo((questContent) => {
             } else {
               const obj2 = { questId: quest.id, questContentPosition, sourceQuestContent };
               ActionSheetActionCreatorsDefault.openLazy(
-                asyncRequireImpl(14919, dependencyMap.paths),
+                asyncRequireImpl(14923, dependencyMap.paths),
                 "QuestBottomSheet",
                 obj2,
               );
@@ -626,7 +626,7 @@ export const QuestCard = noop.memo((questContent) => {
               logger.log("Navigating to console connection action sheet");
               trackClick(AnalyticsTypes.QuestContentCTA.VIEW_REQUIREMENTS);
               ActionSheetActionCreatorsDefault.openLazy(
-                asyncRequireImpl(14919, dependencyMap.paths),
+                asyncRequireImpl(14923, dependencyMap.paths),
                 "QuestBottomSheet",
                 { questId: quest.id, questContentPosition, sourceQuestContent },
               );
@@ -666,7 +666,7 @@ export const QuestCard = noop.memo((questContent) => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -706,7 +706,7 @@ export const QuestCard = noop.memo((questContent) => {
               if (closure_128_14) {
                 if (closure_128_15) {
                   const obj = { questId: closure_128_1.id, sourceQuestContent: closure_128_4 };
-                  v1(14924)(obj);
+                  v1(14928)(obj);
                   dependencyMap = 3;
                 }
                 closure_128_32();
@@ -926,7 +926,7 @@ export const QuestCard = noop.memo((questContent) => {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -955,7 +955,7 @@ export const QuestCard = noop.memo((questContent) => {
             return obj;
           } else {
             v3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp9) {
           v3 = tmp;
@@ -1138,7 +1138,7 @@ export const QuestCard = noop.memo((questContent) => {
     const obj44 = {
       onPress() {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(14966, dependencyMap.paths),
+          asyncRequireImpl(14970, dependencyMap.paths),
           "QuestEnrollmentBlockedBottomSheet",
           { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent },
         );

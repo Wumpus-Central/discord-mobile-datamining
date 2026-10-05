@@ -205,9 +205,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         noop.useState(obj4.isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE),
         2,
       );
-      const announceError = navigation(14591).useAnnounceError(tmp10);
+      const announceError = navigation(14595).useAnnounceError(tmp10);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp22 = closure_7(tmp(14592).KeyImage, {});
+        const tmp22 = closure_7(tmp(14596).KeyImage, {});
         cResult[4] = tmp22;
         let tmp20 = tmp22;
       } else {
@@ -348,7 +348,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp28;
         tmp26 = tmp28;
       }
-      const tmpResult = navigation(14591);
+      const tmpResult = navigation(14595);
     }
   : () => {
       navigation = navigation(1490).useNavigation();
@@ -377,10 +377,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [onRegisterSuccess, tmp11, tmp8];
       closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
       const obj3 = navigation(1369);
-      const announceError = navigation(14591).useAnnounceError(tmp10);
+      const announceError = navigation(14595).useAnnounceError(tmp10);
       const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
       obj4 = { style: tmp4.centerFlex, children: null };
-      const items3 = [closure_7(navigation(14592).KeyImage, {}), ,];
+      const items3 = [closure_7(navigation(14596).KeyImage, {}), ,];
       obj5 = { style: tmp4.margin, variant: "text-md/normal", children: null };
       const intl = tmp(1126).intl;
       const string = intl.string;

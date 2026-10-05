@@ -241,7 +241,7 @@ export const NavTTISurfaceProvider = ReactCompilerGating.isReactCompilerEnabled(
           tmp5 = closure_1;
           fn = obj.subscribe(closure_0, closure_1, definition);
         } else {
-          fn = /* F146284 */ function() { ... };
+          fn = /* F146559 */ function() { ... };
         }
         return fn;
       }
@@ -265,10 +265,10 @@ export const NavTTISurfaceProvider = ReactCompilerGating.isReactCompilerEnabled(
     tmp10 = cResult[7];
   }
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-    const result = tmp(16470).isNavigationTTIEnabled();
+    const result = tmp(16474).isNavigationTTIEnabled();
     cResult[8] = result;
     let tmp14 = result;
-    const tmpResult = tmp(16470);
+    const tmpResult = tmp(16474);
   } else {
     tmp14 = cResult[8];
   }
@@ -376,7 +376,7 @@ export const NavTTISurfaceProvider = ReactCompilerGating.isReactCompilerEnabled(
                       }
                       tmp35[0] = tmp21;
                       tmp35[1] = cResult[27];
-                      const tmp36 = closure_11(tmp(16477).NavTTISurfaceContext.Provider, tmp35);
+                      const tmp36 = closure_11(tmp(16481).NavTTISurfaceContext.Provider, tmp35);
                       cResult[28] = cResult[27];
                       cResult[29] = tmp21;
                       cResult[30] = tmp36;
@@ -448,7 +448,7 @@ export const NavTTISurfaceProvider = ReactCompilerGating.isReactCompilerEnabled(
                     tmp5 = closure_1;
                     fn = obj.subscribe(closure_0, closure_1, definition);
                   } else {
-                    fn = /* F146284 */ function() { ... };
+                    fn = /* F146559 */ function() { ... };
                   }
                   return fn;
                 }
@@ -474,7 +474,7 @@ export const NavTTISurfaceProvider = ReactCompilerGating.isReactCompilerEnabled(
             tmp5 = closure_1;
             fn = obj.subscribe(closure_0, closure_1, definition);
           } else {
-            fn = /* F146284 */ function() { ... };
+            fn = /* F146559 */ function() { ... };
           }
           return fn;
         }
@@ -512,7 +512,7 @@ export const NavTTISurfaceProvider = ReactCompilerGating.isReactCompilerEnabled(
         tmp5 = closure_1;
         fn = obj.subscribe(closure_0, closure_1, definition);
       } else {
-        fn = /* F146284 */ function() { ... };
+        fn = /* F146559 */ function() { ... };
       }
       return fn;
     }

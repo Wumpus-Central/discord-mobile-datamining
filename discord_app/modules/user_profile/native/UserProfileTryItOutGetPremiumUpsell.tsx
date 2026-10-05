@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ));
       const tmp8 = usePremiumFeatureUpsellGetNitroDefault(false, tmp7, constants2.USER_SETTINGS, undefined, items);
       const mobileNitroPreviewDirectCheckoutEnabled =
-        analyticsLocations(14473).useMobileNitroPreviewDirectCheckoutEnabled();
+        analyticsLocations(14477).useMobileNitroPreviewDirectCheckoutEnabled();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
         const stringResult = intl.string(tmp(1126).t["MswR/h"]);
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp7;
       cResult[9] = tmp17;
       tmp16 = tmp17;
-      const tmpResult = analyticsLocations(14473);
+      const tmpResult = analyticsLocations(14477);
     }
   : (onLayout) => {
       let analyticsLocations;
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ));
       const tmp5 = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS, undefined, items);
       const mobileNitroPreviewDirectCheckoutEnabled =
-        analyticsLocations(14473).useMobileNitroPreviewDirectCheckoutEnabled();
+        analyticsLocations(14477).useMobileNitroPreviewDirectCheckoutEnabled();
       const obj3 = {
         text: null,
         buttonText: null,
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onButtonPress: null,
         onLayout: null,
       };
-      const obj2 = analyticsLocations(14473);
+      const obj2 = analyticsLocations(14477);
       const intl = analyticsLocations(1126).intl;
       obj3.text = intl.string(analyticsLocations(1126).t["MswR/h"]);
       if (nitroTrialCtaOverride == null) {

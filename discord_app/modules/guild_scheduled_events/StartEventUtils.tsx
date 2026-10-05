@@ -25,7 +25,7 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -53,7 +53,7 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
           closure_131_4 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -136,7 +136,7 @@ let closure_13 = async function _preStartEventActions(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -250,7 +250,7 @@ let closure_14 = async function _setEventAsActive(arg0) {
     flag = false;
   }
   closure_130_1 = flag;
-  return "Reflect";
+  return "Set";
 };
 let closure_4 = fn(2055).createChannelRecordFromServer;
 const GuildScheduledEventsConstants = fn(2057);

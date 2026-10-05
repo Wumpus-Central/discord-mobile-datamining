@@ -51,7 +51,7 @@ class GuildEventJoinAndRSVPAction {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -98,7 +98,7 @@ class GuildEventJoinAndRSVPAction {
             c3 = 0;
             closure_128_3(false);
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp32) {
           if (tmp4 === c3) {
@@ -110,7 +110,7 @@ class GuildEventJoinAndRSVPAction {
         }
       }
     };
-    tmp = closure_4(f51110(event, global.recurrenceId), 2);
+    tmp = closure_4(f51138(event, global.recurrenceId), 2);
     [closure_1, closure_2] = tmp;
     tmp2 = closure_4(closure_5.useState(false), 2);
     closure_3 = tmp2[1];

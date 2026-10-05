@@ -63,7 +63,7 @@ let closure_7 = async function _deleteRestrictedScheduleRule(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -103,7 +103,7 @@ let closure_7 = async function _deleteRestrictedScheduleRule(arg0) {
         const obj7 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_130_0, restrictedSchedule: body };
         closure_131_1(closure_131_2[3]).dispatch(obj7);
         c5 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp13) {
       c5 = tmp;

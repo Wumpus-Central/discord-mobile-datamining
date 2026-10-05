@@ -44,9 +44,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ application, title } = arg0);
       id = application.id;
       const obj = id(576);
-      const iframeModalState = id(17496).useIframeModalState(arg0);
+      const iframeModalState = id(17520).useIframeModalState(arg0);
       ({ queryParams, iframeUrl } = iframeModalState);
-      let obj2 = id(17496);
+      let obj2 = id(17520);
       [r10027, importDefault] = noop.useState(makeIframeId);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = { includeKeyboardHeight: true };

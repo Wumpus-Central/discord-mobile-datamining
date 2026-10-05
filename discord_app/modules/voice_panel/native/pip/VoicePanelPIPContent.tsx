@@ -66,7 +66,7 @@ function areParticipantsEqual(arg0, arg1) {
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const VoicePanelModes = fn(11902).VoicePanelModes;
-const VoicePanelPIPModes = fn(17182).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(17206).VoicePanelPIPModes;
 let Constants = fn(1085);
 ({ ApplicationStreamStates: closure_16, ComponentActions: closure_17 } = Constants);
 Constants = fn(2011);
@@ -1897,11 +1897,11 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
       let callback2;
       ({ transitionState, transitionCleanUp, layoutTransition } = participantId);
       const tmp = closure_24();
-      const mode = participantId(17183).usePIPState().mode;
+      const mode = participantId(17207).usePIPState().mode;
       let tmp4 = closure_28(tmp, transitionState, transitionCleanUp);
       const context = video.useContext(mode(11901));
       ({ channelId: c2, layoutManager } = context);
-      let obj = participantId(17183);
+      let obj = participantId(17207);
       let tmp2 = participantId;
       const items = [callback2];
       const stateFromStoresObject = participantId(573).useStateFromStoresObject(items, () => {

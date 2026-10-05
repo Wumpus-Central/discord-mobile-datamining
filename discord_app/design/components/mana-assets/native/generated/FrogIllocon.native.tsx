@@ -2,7 +2,7 @@
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef16670 from "../../../../../../discord_assets/assets/mana/asset-library/generated/FrogIllocon-2x.png.js";
+import _modDef16681 from "../../../../../../discord_assets/assets/mana/asset-library/generated/FrogIllocon-2x.png.js";
 import ReactCompilerGating from "../../../../../modules/react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
@@ -18,7 +18,7 @@ export const FrogIllocon = ReactCompilerGating.isReactCompilerEnabled()
         num = size;
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef16670 };
+        const obj2 = { uri: _modDef16681 };
         cResult[0] = obj2;
         let first = obj2;
       } else {
@@ -72,7 +72,7 @@ export const FrogIllocon = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: null,
         resizeMode: null,
       };
-      const obj2 = { uri: _modDef16670 };
+      const obj2 = { uri: _modDef16681 };
       obj.source = obj2;
       const items = [{ width: num, height: num }];
       obj.style = items;

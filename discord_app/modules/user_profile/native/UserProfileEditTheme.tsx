@@ -215,13 +215,13 @@ export default function UserProfileEditTheme(pendingThemeColors) {
   if (flag === undefined) {
     flag = false;
   }
-  let f116720;
+  let f116873;
   let primaryColor;
   suggestedColors = undefined;
   let tmp = closure_6();
-  let tmp4 = f116720(primaryColor[13])(user.id, guildId);
-  f116720 = tmp4;
-  const tmp5 = f116720(primaryColor[14])({
+  let tmp4 = f116873(primaryColor[13])(user.id, guildId);
+  f116873 = tmp4;
+  const tmp5 = f116873(primaryColor[14])({
     user,
     displayProfile: tmp4,
     pendingThemeColors: pendingThemeColors.pendingThemeColors,
@@ -234,7 +234,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
   }
   suggestedColors = secondaryColor(primaryColor[15]).useAvatarColors(
     pendingAvatarSrc,
-    f116720(tmp3[4]).unsafe_rawColors.PRIMARY_530,
+    f116873(tmp3[4]).unsafe_rawColors.PRIMARY_530,
     false,
   );
   if (null != primaryColor) {
@@ -250,7 +250,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         const intl = tmp6(tmp3[9]).intl;
         obj5.accessibilityLabel = intl.string(tmp6(tmp3[9]).t["+1H47t"]);
         obj5.onPress = function onPress() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14449, dependencyMap.paths), "Profile Theme", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14453, dependencyMap.paths), "Profile Theme", {
             onResetTheme() {
               themeColors = undefined;
               if (themeColors != null) {
@@ -262,7 +262,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
                 tmp4 = items;
               }
               secondaryColor(tmp4);
-              tmp = f116720(primaryColor[16]);
+              tmp = f116873(primaryColor[16]);
             },
           });
         };
@@ -276,12 +276,12 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       const obj7 = { style: tmp.themeColorContainer, children: null };
       const obj8 = { onPress: null, color: null, label: null, accessibilityLabel: null };
       secondaryColor = primaryColor;
-      f116720 = (arg0) => {
+      f116873 = (arg0) => {
         if (arg0 !== primaryColor) {
           const items = [arg0, secondaryColor];
           let themeColors;
-          if (f116720 != null) {
-            themeColors = f116720.themeColors;
+          if (f116873 != null) {
+            themeColors = f116873.themeColors;
           }
           let tmp8;
           if (!tmp4(items, themeColors)) {
@@ -292,7 +292,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         }
       };
       obj8.onPress = () => {
-        closure_1(primaryColor[17])({ color: secondaryColor, onSelect: f116720, suggestedColors });
+        closure_1(primaryColor[17])({ color: secondaryColor, onSelect: f116873, suggestedColors });
       };
       obj8.color = primaryColor;
       const intl2 = tmp6(tmp3[9]).intl;
@@ -302,12 +302,12 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       obj8.accessibilityLabel = intl3.formatToPlainString(tmp6(tmp3[9]).t.v4X2kc, obj9);
       const items2 = [suggestedColors(closure_9, obj8)];
       const obj10 = { color: secondaryColor, onPress: null, label: null, accessibilityLabel: null };
-      f116720 = (primaryColor) => {
+      f116873 = (primaryColor) => {
         if (primaryColor !== secondaryColor) {
           const items = [primaryColor, primaryColor];
           let themeColors;
-          if (f116720 != null) {
-            themeColors = f116720.themeColors;
+          if (f116873 != null) {
+            themeColors = f116873.themeColors;
           }
           let tmp8;
           if (!tmp4(items, themeColors)) {
@@ -318,7 +318,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         }
       };
       obj10.onPress = () => {
-        closure_1(primaryColor[17])({ color: secondaryColor, onSelect: f116720, suggestedColors });
+        closure_1(primaryColor[17])({ color: secondaryColor, onSelect: f116873, suggestedColors });
       };
       const intl4 = tmp6(tmp3[9]).intl;
       obj10.label = intl4.string(tmp6(tmp3[9]).t["8elvy6"]);

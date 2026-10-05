@@ -46,7 +46,7 @@ const MODE_CHANGE_PHYSICS = fn(11902).MODE_CHANGE_PHYSICS;
 const EDGE_GUTTER = fn(11905).EDGE_GUTTER;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_22, AnalyticsSections: closure_23, Permissions: closure_24 } = Constants);
-const constants4 = fn(13546).VoiceChannelWarningSurfaces;
+const constants4 = fn(13548).VoiceChannelWarningSurfaces;
 const Features = fn(4915).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_27, jsxs: closure_28, Fragment: closure_29 } = jsxProd);
@@ -525,7 +525,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                   const obj4 = { value, done: true };
                                   return obj4;
                                 } else {
-                                  return { value: "IconComponent", done: "IconComponent" };
+                                  return { value: "IconComponent", done: null };
                                 }
                               } else {
                                 try {
@@ -615,7 +615,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                     const obj4 = { value, done: true };
                                     return obj4;
                                   } else {
-                                    return { value: "IconComponent", done: "IconComponent" };
+                                    return { value: "IconComponent", done: null };
                                   }
                                 } else {
                                   try {
@@ -712,7 +712,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                       const obj4 = { value, done: true };
                                       return obj4;
                                     } else {
-                                      return { value: "IconComponent", done: "IconComponent" };
+                                      return { value: "IconComponent", done: null };
                                     }
                                   } else {
                                     try {
@@ -804,7 +804,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                       const obj4 = { value, done: true };
                                       return obj4;
                                     } else {
-                                      return { value: "IconComponent", done: "IconComponent" };
+                                      return { value: "IconComponent", done: null };
                                     }
                                   } else {
                                     try {
@@ -893,7 +893,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                       const obj4 = { value, done: true };
                                       return obj4;
                                     } else {
-                                      return { value: "IconComponent", done: "IconComponent" };
+                                      return { value: "IconComponent", done: null };
                                     }
                                   } else {
                                     try {
@@ -1006,7 +1006,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                                 const obj4 = { value, done: true };
                                                 return obj4;
                                               } else {
-                                                return { value: "IconComponent", done: "IconComponent" };
+                                                return { value: "IconComponent", done: null };
                                               }
                                             } else {
                                               try {
@@ -1108,7 +1108,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                           const obj4 = { value, done: true };
                                           return obj4;
                                         } else {
-                                          return { value: "IconComponent", done: "IconComponent" };
+                                          return { value: "IconComponent", done: null };
                                         }
                                       } else {
                                         try {
@@ -1204,7 +1204,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                         const obj4 = { value, done: true };
                                         return obj4;
                                       } else {
-                                        return { value: "IconComponent", done: "IconComponent" };
+                                        return { value: "IconComponent", done: null };
                                       }
                                     } else {
                                       try {
@@ -1291,7 +1291,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                     const obj4 = { value, done: true };
                                     return obj4;
                                   } else {
-                                    return { value: "IconComponent", done: "IconComponent" };
+                                    return { value: "IconComponent", done: null };
                                   }
                                 } else {
                                   try {
@@ -1380,7 +1380,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                   const obj4 = { value, done: true };
                                   return obj4;
                                 } else {
-                                  return { value: "IconComponent", done: "IconComponent" };
+                                  return { value: "IconComponent", done: null };
                                 }
                               } else {
                                 try {
@@ -1470,7 +1470,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                                 const obj4 = { value, done: true };
                                 return obj4;
                               } else {
-                                return { value: "IconComponent", done: "IconComponent" };
+                                return { value: "IconComponent", done: null };
                               }
                             } else {
                               try {
@@ -1556,7 +1556,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                             const obj4 = { value, done: true };
                             return obj4;
                           } else {
-                            return { value: "IconComponent", done: "IconComponent" };
+                            return { value: "IconComponent", done: null };
                           }
                         } else {
                           try {
@@ -1644,7 +1644,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -1793,7 +1793,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -3171,7 +3171,7 @@ export default noop.memo(
         const context = noop.useContext(guildId(11901));
         channelId = context.channelId;
         guildId = context.guildId;
-        const tmp5 = guildId(17166)(channelId);
+        const tmp5 = guildId(17190)(channelId);
         dependencyMap = tmp5;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           let items = [
@@ -3197,7 +3197,7 @@ export default noop.memo(
               first,
               tmp12,
               tmp13,
-              tmp(17281).areVoicePanelPreJoinContentPropsEqual,
+              tmp(17305).areVoicePanelPreJoinContentPropsEqual,
             );
             if (cResult[6] !== stateFromStores) {
               const obj2 = { item: stateFromStores, renderItem };
@@ -3262,7 +3262,7 @@ export default noop.memo(
         const context = noop.useContext(guildId(11901));
         const channelId = context.channelId;
         guildId = context.guildId;
-        const tmp2 = guildId(17166)(channelId);
+        const tmp2 = guildId(17190)(channelId);
         dependencyMap = tmp2;
         let items = [
           SortedVoiceStateStore,
@@ -3312,7 +3312,7 @@ export default noop.memo(
             }
           },
           items1,
-          channelId(17281).areVoicePanelPreJoinContentPropsEqual,
+          channelId(17305).areVoicePanelPreJoinContentPropsEqual,
         );
         return closure_27(channelId(4589).TransitionItem, { item: stateFromStores, renderItem });
       },

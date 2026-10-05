@@ -288,7 +288,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp4;
       const items2 = [first, tmp2[1], stateFromStores];
       obj2 = stateFromStores(573);
-      return first(13002)(
+      return first(13004)(
         useMemo(() => {
           let obj = CollectiblesUtils;
           const profileFrames = obj.getProfileFrames(stateFromStores, first);

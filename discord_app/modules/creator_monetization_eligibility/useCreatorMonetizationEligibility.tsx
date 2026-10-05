@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
-let closure_6 = fn(17855).CreatorMonetizationApplicationState;
+let closure_6 = fn(17879).CreatorMonetizationApplicationState;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/creator_monetization_eligibility/useCreatorMonetizationEligibility.tsx",
@@ -27,7 +27,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

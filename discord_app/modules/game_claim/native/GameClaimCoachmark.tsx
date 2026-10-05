@@ -65,7 +65,7 @@ export default noop.memo(
         ({ guild, markAsDismissed } = arg0);
         const tmp4 = closure_13();
         let obj = markAsDismissed(576);
-        let first = markAsDismissed(16113).useUnclaimedGameIdsForGuild(guild.id)[0];
+        let first = markAsDismissed(16117).useUnclaimedGameIdsForGuild(guild.id)[0];
         if (first == null) {
           first = null;
         }
@@ -77,7 +77,7 @@ export default noop.memo(
         } else {
           first1 = cResult[0];
         }
-        const obj2 = markAsDismissed(16113);
+        const obj2 = markAsDismissed(16117);
         ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(first, first1));
         if (null == coverImageUrl) {
           return null;
@@ -184,7 +184,7 @@ export default noop.memo(
                             const obj3 = { value, done: true };
                             return obj3;
                           } else {
-                            return { value: "IconComponent", done: "IconComponent" };
+                            return { value: "IconComponent", done: null };
                           }
                         } else {
                           try {
@@ -219,7 +219,7 @@ export default noop.memo(
                               return obj;
                             } else {
                               v3 = 3;
-                              return { value: "IconComponent", done: "IconComponent" };
+                              return { value: "IconComponent", done: null };
                             }
                           } catch (tmp12) {
                             v3 = tmp;
@@ -374,7 +374,7 @@ export default noop.memo(
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -409,7 +409,7 @@ export default noop.memo(
                   return obj;
                 } else {
                   v3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp12) {
                 v3 = tmp;

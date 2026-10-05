@@ -50,7 +50,7 @@ obj4.handler = function handler(socket) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -75,7 +75,7 @@ obj4.handler = function handler(socket) {
               const tmp62 = new tmp2(9026)(obj4, "No application.");
               throw tmp62;
             } else {
-              const tmp91 = tmp2(14310)(tmp87);
+              const tmp91 = tmp2(14312)(tmp87);
               let id1;
               if (tmp91 != null) {
                 id1 = tmp91.id;

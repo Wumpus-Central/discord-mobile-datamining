@@ -267,8 +267,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [quest];
       memo = noop.useMemo(() => QuestTaskUtils.hasStreamOnDesktopTask({ quest }), items);
       let obj4 = quest(10911);
-      hasWatchVideoOnMobileTasks = quest(14888).useHasWatchVideoOnMobileTasks(quest.config);
-      let obj5 = quest(14888);
+      hasWatchVideoOnMobileTasks = quest(14892).useHasWatchVideoOnMobileTasks(quest.config);
+      let obj5 = quest(14892);
       const items1 = [first];
       const stateFromStores = quest(504).useStateFromStores(items1, () => first.getCurrentUser());
       let obj6 = quest(504);
@@ -354,9 +354,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ quest, step, withActionSheet, location: _location } = arg0);
       const tmp5 = closure_9();
       let obj = isScreenReaderEnabled(576);
-      const questCreative = isScreenReaderEnabled(14921).useQuestCreative(quest);
-      const tmpResult = isScreenReaderEnabled(14921);
-      const actionSheetPressHandler = isScreenReaderEnabled(14889).useActionSheetPressHandler(questCreative);
+      const questCreative = isScreenReaderEnabled(14925).useQuestCreative(quest);
+      const tmpResult = isScreenReaderEnabled(14925);
+      const actionSheetPressHandler = isScreenReaderEnabled(14893).useActionSheetPressHandler(questCreative);
       if (cResult[0] === _location) {
         if (cResult[1] === quest) {
           if (cResult[2] === step) {
@@ -491,7 +491,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = step;
       cResult[3] = obj7;
       tmp8 = obj7;
-      const tmpResult3 = isScreenReaderEnabled(14889);
+      const tmpResult3 = isScreenReaderEnabled(14893);
     }
   : (step) => {
       ({ quest, withActionSheet } = step);
@@ -500,11 +500,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let isScreenReaderEnabled;
       let tmp = closure_9();
-      const questCreative = isScreenReaderEnabled(14921).useQuestCreative(quest);
-      let obj = isScreenReaderEnabled(14921);
-      let obj2 = isScreenReaderEnabled(14889);
+      const questCreative = isScreenReaderEnabled(14925).useQuestCreative(quest);
+      let obj = isScreenReaderEnabled(14925);
+      let obj2 = isScreenReaderEnabled(14893);
       const tmp6 = closure_10({ quest, step: step.step, location: step.location });
-      const actionSheetPressHandler = isScreenReaderEnabled(14889).useActionSheetPressHandler(questCreative);
+      const actionSheetPressHandler = isScreenReaderEnabled(14893).useActionSheetPressHandler(questCreative);
       isScreenReaderEnabled = isScreenReaderEnabled(5770).useIsScreenReaderEnabled();
       const ref = noop.useRef(null);
       const items = [isScreenReaderEnabled];

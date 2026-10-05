@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = navigation(576);
       navigation = navigation(1490).useNavigation();
       let obj2 = navigation(1490);
-      const multiAccountUsers = navigation(15868).useMultiAccountUsers().multiAccountUsers;
+      const multiAccountUsers = navigation(15872).useMultiAccountUsers().multiAccountUsers;
       if (cResult[0] !== navigation) {
         const fn = function s(tokenStatus) {
           if (tokenStatus.tokenStatus === MultiAccountTokenStatus.INVALID) {
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj2 = tmp5(12059);
                   }
                   c4 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp23) {
                 c4 = tmp;
@@ -493,7 +493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = multiAccountUsers.length;
       cResult[3] = navigation;
       cResult[4] = I;
-      let obj3 = navigation(15868);
+      let obj3 = navigation(15872);
     }
   : () => {
       closure_2 = async function _handlePressRemove2(arg0) {
@@ -507,7 +507,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -571,7 +571,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = tmp5(12059);
               }
               c4 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp23) {
             c4 = tmp;
@@ -598,7 +598,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let intl2 = require("util").intl;
       obj4.children = intl2.string(require("util").t["0M5fN7"]);
       obj3.subHeader = closure_11(require("Text/Text").Text, obj4);
-      obj3.backgroundImageSource = multiAccountUsers(13675);
+      obj3.backgroundImageSource = multiAccountUsers(13677);
       obj3.contentStyle = tmp.container;
       let obj5 = { style: tmp.mainCard, children: null };
       let items = [
@@ -660,7 +660,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             },
             children: null,
           };
-          const tmp = multiAccountUsers(15869);
+          const tmp = multiAccountUsers(15873);
           obj2.children = closure_1_11(user(1188).Icon, {
             size: user(1188).Icon.Sizes.SMALL_20,
             source: multiAccountUsers(9290),
@@ -675,7 +675,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.leading = closure_11(require("Form").FormRow.Icon, {
         themedColor: multiAccountUsers(587).colors.TEXT_LINK,
         size: require("native").Icon.Sizes.SMALL_20,
-        source: multiAccountUsers(15870),
+        source: multiAccountUsers(15874),
       });
       let intl3 = require("util").intl;
       obj6.label = intl3.string(require("util").t.bPP34Q);

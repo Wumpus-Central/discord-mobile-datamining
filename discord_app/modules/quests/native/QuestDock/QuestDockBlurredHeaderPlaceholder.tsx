@@ -1,11 +1,11 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx
-import thumbHashToRGBA from "../../../../../_runtime/14994_thumbHashToRGBA.js";
+import thumbHashToRGBA from "../../../../../_runtime/14998_thumbHashToRGBA.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const QuestDockMode = fn(5623).QuestDockMode;
-const QuestDockConstants = fn(14892);
+const QuestDockConstants = fn(14896);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
@@ -37,7 +37,7 @@ export default noop.memo(
     ? (arg0) => {
         const cResult = questDockWrapperSpecs(576).c(20);
         ({ layoutAnimation, layoutAnimatedStyle, opacityAnimatedStyle, placeholder } = arg0);
-        const context = noop.useContext(questDockWrapperSpecs(14893).QuestDockGestureContext);
+        const context = noop.useContext(questDockWrapperSpecs(14897).QuestDockGestureContext);
         const activeQuestDockMode = context.activeQuestDockMode;
         if (cResult[0] !== placeholder) {
           let thumbHashToDataURLResult = globalThis;
@@ -52,12 +52,12 @@ export default noop.memo(
             tmp6 = cResult[2];
           }
           const _Uint8Array = thumbHashToDataURLResult.Uint8Array;
-          thumbHashToDataURLResult = tmp(14994).thumbHashToDataURL(
+          thumbHashToDataURLResult = tmp(14998).thumbHashToDataURL(
             _Uint8Array.from(thumbHashToDataURLResult.atob(placeholder), tmp6),
           );
           cResult[0] = placeholder;
           cResult[1] = thumbHashToDataURLResult;
-          const tmpResult = tmp(14994);
+          const tmpResult = tmp(14998);
         } else {
           if (cResult[3] !== cResult[1]) {
             const obj2 = { uri: tmp5 };

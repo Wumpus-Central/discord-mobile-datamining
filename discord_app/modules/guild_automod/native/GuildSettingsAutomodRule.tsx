@@ -11,8 +11,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const useAutomodRulesList = fn(17651).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(17653);
+const useAutomodRulesList = fn(17675).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(17677);
 ({ useAutomodEditingRuleActions: closure_7, useAutomodEditingRuleState: closure_8 } = GuildSettingsAutomodRuleStore);
 const MAX_RULE_NAME_LENGTH = fn(11474).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               c3 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp20) {
             c3 = tmp;
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -353,7 +353,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 c3 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp20) {
               c3 = tmp;
@@ -537,7 +537,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         const obj3 = { value, done: true };
                         return obj3;
                       } else {
-                        return { value: "IconComponent", done: "IconComponent" };
+                        return { value: "IconComponent", done: null };
                       }
                     } else {
                       try {
@@ -584,7 +584,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           v0(closure_130_1, closure_0);
                           closure_1.pop();
                           c6 = 3;
-                          return { value: "IconComponent", done: "IconComponent" };
+                          return { value: "IconComponent", done: null };
                         }
                       } catch (tmp41) {
                         closure_3 = tmp41;

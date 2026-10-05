@@ -7,7 +7,7 @@ import GuildsBarActivityIndicatorDefault from "../../../guilds_bar/native/Guilds
 import CutoutImageDefault from "CutoutImage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const GuildsBarActivityIndicator = isCurrentUserConnected(16270);
+const GuildsBarActivityIndicator = isCurrentUserConnected(16274);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);

@@ -97,10 +97,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { otherUser, iconSrc: tmp5(4809) };
-          const tmp15 = closure_5(tmp5(14726), obj2);
+          const tmp15 = closure_5(tmp5(14730), obj2);
           cResult[6] = otherUser;
           cResult[7] = tmp15;
-          const tmp5Result = tmp5(14726);
+          const tmp5Result = tmp5(14730);
         } else {
           class C {
             constructor() {
@@ -167,7 +167,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj5 = { user: otherUser };
-          const tmp21 = closure_5(tmp5(14696), obj5);
+          const tmp21 = closure_5(tmp5(14700), obj5);
           cResult[11] = otherUser;
           cResult[12] = tmp21;
         } else {
@@ -236,12 +236,12 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { otherUser, iconSrc: null };
       const obj = otherUser(11528);
       obj5.iconSrc = cancelLinkRequest(4809);
-      const items1 = [closure_5(cancelLinkRequest(14726), obj5), ,];
+      const items1 = [closure_5(cancelLinkRequest(14730), obj5), ,];
       const obj6 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
       let intl = otherUser(1126).intl;
       obj6.children = intl.string(cancelLinkRequest(2493).HynllX);
       items1[1] = closure_5(otherUser(4886).Text, obj6);
-      items1[2] = closure_5(cancelLinkRequest(14696), { user: otherUser });
+      items1[2] = closure_5(cancelLinkRequest(14700), { user: otherUser });
       obj4.children = items1;
       obj3.children = closure_6(View, obj4);
       const items2 = [closure_5(otherUser(8096).ModalContent, obj3)];

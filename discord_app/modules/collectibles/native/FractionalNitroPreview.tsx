@@ -4,7 +4,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import CheckmarkSmallIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
-import _modDef12973 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
+import _modDef12975 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
 import NitroIconDefault from "NitroIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -101,7 +101,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
         tmp7 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { uri: _modDef12973 };
+        const obj5 = { uri: _modDef12975 };
         cResult[4] = obj5;
         let tmp12 = obj5;
       } else {
@@ -223,7 +223,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
         end: VerticalGradient.END,
         style: tmp.gradient,
       };
-      obj8.uri = _modDef12973;
+      obj8.uri = _modDef12975;
       obj7.source = obj8;
       obj7.style = tmp.headerImage;
       items1[1] = closure_6(FastImageDefault, obj7);

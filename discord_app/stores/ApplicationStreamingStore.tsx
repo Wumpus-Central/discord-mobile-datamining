@@ -792,11 +792,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
         FAILED = constants.FAILED;
       } else if (reason === constants3.SAFETY_GUILD_RATE_LIMITED) {
         guildId = StreamKeyUtils.decodeStreamKey(streamKey).guildId;
-        asyncRequireImpl(13641, dependencyMap.paths).then((result) => {
+        asyncRequireImpl(13643, dependencyMap.paths).then((result) => {
           result.default(guildId);
         });
         FAILED = constants.ENDED;
-        const promise = asyncRequireImpl(13641, dependencyMap.paths);
+        const promise = asyncRequireImpl(13643, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = constants.FAILED;

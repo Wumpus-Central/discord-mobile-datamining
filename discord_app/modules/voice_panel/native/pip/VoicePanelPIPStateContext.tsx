@@ -2,12 +2,12 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 let size = {
-  id: "emoji",
+  id: "enabled",
   mode: "toCharArray$esjava$1",
   width: false,
   height: null,
-  containerHeight: "\u{1F468}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FE}",
-  showSecondaryPIP: true,
+  containerHeight: "slide_from_bottom",
+  showSecondaryPIP: "_createExtraStyles",
   scale: null,
 };
 const ReanimatedHelperTypes = fn(6571);

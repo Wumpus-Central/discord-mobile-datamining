@@ -8,7 +8,7 @@ import useChatLayoutDefault from "../../chat/native/useChatLayout.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
-import _modDef14863 from "../../../../_runtime/metro/14863__.js";
+import _modDef14867 from "../../../../_runtime/metro/14867__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let tmp28 = null;
                   if (!isChatLockedOpen) {
                     const obj5 = { children: null };
-                    const obj6 = { style: tmp8.emptyImage, source: _modDef14863, resizeMode: "cover" };
+                    const obj6 = { style: tmp8.emptyImage, source: _modDef14867, resizeMode: "cover" };
                     const items1 = [timestampProducer(React4, obj6)];
                     const obj7 = { style: tmp8.gradient, end: null, start: null, colors: null };
                     ({ END: obj10.end, START: obj10.start } = VerticalGradient);
@@ -264,7 +264,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp11Result = null;
       if (!useChatLayoutDefault().isChatLockedOpen) {
         const obj10 = { children: null };
-        const obj11 = { style: tmp5.emptyImage, source: _modDef14863, resizeMode: "cover" };
+        const obj11 = { style: tmp5.emptyImage, source: _modDef14867, resizeMode: "cover" };
         const items2 = [timestampProducer(React4, obj11)];
         const obj22 = { style: tmp5.gradient, end: null, start: null, colors: null };
         ({ END: obj12.end, START: obj12.start } = VerticalGradient);

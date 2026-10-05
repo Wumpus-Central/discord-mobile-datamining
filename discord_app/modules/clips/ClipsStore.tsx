@@ -23,7 +23,7 @@ let closure_36 = async function _migrateDefaultStorage() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -287,7 +287,7 @@ let obj = {
   maxAutoClips: 20,
   clipSignals: { enableDistributedSignals: true, enableGameSignals: true },
   debugTooltipsEnabled: false,
-  enableAutoclipping: "Reflect",
+  enableAutoclipping: "Set",
   showPovClipsInGallery: true,
 };
 obj = {

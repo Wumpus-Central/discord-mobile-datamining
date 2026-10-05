@@ -2,10 +2,10 @@
 import FavoritesUtils from "../favorites/FavoritesUtils.tsx";
 import OnboardingHomeUtils from "../guild_onboarding_home/OnboardingHomeUtils.tsx";
 import SlayerStorefrontUtils from "../slayer_storefront/SlayerStorefrontUtils.tsx";
-import VibegrationsUtils from "../vibegrations/lib/VibegrationsUtils.tsx";
+import ConjureUtils from "../conjure/shared/ConjureUtils.tsx";
+import ConjureBuilderRouteStore from "../conjure/builder/ConjureBuilderRouteStore.tsx";
 import FavoriteStore from "../favorites/FavoriteStore.tsx";
 import GuildOnboardingStore from "../guild_onboarding/GuildOnboardingStore.tsx";
-import VibegrationsBuilderRouteStore from "../vibegrations/stores/VibegrationsBuilderRouteStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
@@ -16,18 +16,18 @@ require = fn;
 const ME = fn(1085).ME;
 const StaticChannelRoute = fn(2058).StaticChannelRoute;
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/routing/getGuildTransitionRoute.tsx");
+const result = size.fileFinishedImporting("modules/routing/getGuildTransitionRoute.tsx");
 
 export const getGuildTransitionRoute = function getGuildTransitionRoute(guildId) {
-  const lastProjectId = VibegrationsBuilderRouteStore.getLastProjectId(guildId);
+  const lastProjectId = ConjureBuilderRouteStore.getLastProjectId(guildId);
   if (null != lastProjectId) {
     guild = GuildStore.getGuild(guildId);
-    let result = null != guild;
-    if (result) {
-      result = VibegrationsUtils.canAccessVibegrations(guild, "getChannelIdForGuildTransition");
+    let canAccessConjureResult = null != guild;
+    if (canAccessConjureResult) {
+      canAccessConjureResult = ConjureUtils.canAccessConjure(guild, "getChannelIdForGuildTransition");
     }
-    if (result) {
-      const items = [StaticChannelRoute.VIBEGRATIONS, lastProjectId];
+    if (canAccessConjureResult) {
+      const items = [StaticChannelRoute.CONJURE, lastProjectId];
       return items;
     }
   }
@@ -82,14 +82,14 @@ export const getGuildTransitionRoute = function getGuildTransitionRoute(guildId)
       }
       obj3 = SlayerStorefrontUtils;
     }
-    if (channelId === StaticChannelRoute.VIBEGRATIONS) {
+    if (channelId === StaticChannelRoute.CONJURE) {
       const guild1 = GuildStore.getGuild(guildId);
-      let result1 = null != guild1;
-      if (result1) {
-        result1 = VibegrationsUtils.canAccessVibegrations(guild1, "getChannelIdForGuildTransition");
+      let canAccessConjureResult1 = null != guild1;
+      if (canAccessConjureResult1) {
+        canAccessConjureResult1 = ConjureUtils.canAccessConjure(guild1, "getChannelIdForGuildTransition");
       }
       const items5 = [,];
-      if (result1) {
+      if (canAccessConjureResult1) {
         items5[0] = channelId;
         items5[1] = null;
         let tmp29 = items5;

@@ -8,7 +8,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import Stack_Stack from "../../../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import CreateGuildModalActionCreatorsDefault from "../../../../../create_guild/native/CreateGuildModalActionCreators.tsx";
-import _modDef16206 from "../../../../../../../_runtime/metro/16206__.js";
+import _modDef16210 from "../../../../../../../_runtime/metro/16210__.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../../../../stores/AuthenticationStore.tsx";
@@ -98,7 +98,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp6 = cResult[2];
         }
         if (cResult[3] !== tmp4.illustration) {
-          const obj2 = { source: _modDef16206, style: tmp4.illustration };
+          const obj2 = { source: _modDef16210, style: tmp4.illustration };
           const tmp11 = __initData2(hasOwnProperty, obj2);
           cResult[3] = tmp4.illustration;
           cResult[4] = tmp11;
@@ -292,7 +292,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp.content, children: null };
       const obj4 = {
         style: tmp.illustrationWrapper,
-        children: __initData2(hasOwnProperty, { source: _modDef16206, style: tmp.illustration }),
+        children: __initData2(hasOwnProperty, { source: _modDef16210, style: tmp.illustration }),
       };
       const items1 = [__initData2(timestampProducer, obj4)];
       const obj6 = { style: tmp.textWrapper, children: null };
@@ -376,7 +376,7 @@ export default noop.memo(
           const effect = noop.useEffect(tmp13, tmp14);
           const isScreenLandscape = tmp(5912).useIsScreenLandscape();
           const tmpResult3 = tmp(5912);
-          const youBarTotalHeight = tmp(14897).useYouBarTotalHeight();
+          const youBarTotalHeight = tmp(14901).useYouBarTotalHeight();
           if (!stateFromStores) {
             return null;
           } else {
@@ -463,7 +463,7 @@ export default noop.memo(
             cResult[9] = items2;
             tmp20 = items2;
           }
-          const tmpResult4 = tmp(14897);
+          const tmpResult4 = tmp(14901);
         }
         const fn2 = function w() {
           if (null != selectedGuildId) {
@@ -566,7 +566,7 @@ export default noop.memo(
         }, items1);
         const tmp7 = selectedGuildId(8422);
         const isScreenLandscape = navigation(5912).useIsScreenLandscape();
-        navigation(14897);
+        navigation(14901);
         let tmp14Result = null;
         if (stateFromStores) {
           const obj4 = { style: null, children: null };

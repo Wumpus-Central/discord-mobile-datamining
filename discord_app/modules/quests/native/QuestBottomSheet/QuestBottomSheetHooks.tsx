@@ -20,10 +20,10 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
       const cResult = setRestingQuestDockMode(576).c(3);
       setRestingQuestDockMode = noop.useContext(
-        setRestingQuestDockMode(14896).QuestDockExternalCoordinationContext,
+        setRestingQuestDockMode(14900).QuestDockExternalCoordinationContext,
       ).setRestingQuestDockMode;
       const isInQuestBottomSheet = noop.useContext(
-        setRestingQuestDockMode(14919).QuestBottomSheetContext,
+        setRestingQuestDockMode(14923).QuestBottomSheetContext,
       ).isInQuestBottomSheet;
       if (cResult[0] === isInQuestBottomSheet) {
         if (cResult[1] === setRestingQuestDockMode) {
@@ -45,10 +45,10 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       setRestingQuestDockMode = noop.useContext(
-        setRestingQuestDockMode(14896).QuestDockExternalCoordinationContext,
+        setRestingQuestDockMode(14900).QuestDockExternalCoordinationContext,
       ).setRestingQuestDockMode;
       const isInQuestBottomSheet = noop.useContext(
-        setRestingQuestDockMode(14919).QuestBottomSheetContext,
+        setRestingQuestDockMode(14923).QuestBottomSheetContext,
       ).isInQuestBottomSheet;
       const items = [isInQuestBottomSheet, setRestingQuestDockMode];
       return noop.useCallback(() => {
@@ -259,7 +259,7 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
             const obj = { value, done: true };
             return obj;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -388,7 +388,7 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
               const obj = { value, done: true };
               return obj;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {

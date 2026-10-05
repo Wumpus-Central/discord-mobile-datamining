@@ -6,7 +6,7 @@ import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import BotTagDefault from "../../../../../applications/native/BotTag.tsx";
 import _modDef9233 from "../../../../../../../_runtime/metro/09233__.js";
 import ActivityStatusDefault from "../../../../../activity_status/native/ActivityStatus.tsx";
-import _modDef13305 from "../../../../../../../_runtime/metro/13305__.js";
+import _modDef13307 from "../../../../../../../_runtime/metro/13307__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -155,7 +155,7 @@ export default noop.memo(function DMRow(user) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -194,7 +194,7 @@ export default noop.memo(function DMRow(user) {
             c3 = 0;
             closure_128_8(false);
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp23) {
           closure_2 = tmp23;
@@ -246,7 +246,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13305, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13307, disableColor: true };
         obj6.children = __initData2(native.Icon, obj7);
         tmp4Result3 = __initData2(timestampProducer, obj6);
       }

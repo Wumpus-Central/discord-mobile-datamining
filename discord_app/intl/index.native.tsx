@@ -3,7 +3,7 @@ import NativeDeviceLocaleModule from "../../discord_common/js/packages/rtn-codeg
 import intl_util from "util.tsx";
 import native from "../design/void/native.tsx";
 import migration from "native/migration.tsx";
-import _modDef13950 from "messages/international.messages.js";
+import _modDef13952 from "messages/international.messages.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -73,7 +73,7 @@ export { getSystemLocale };
 export const getAvailableLocales = fn(1128).getAvailableLocales;
 export const getLanguages = fn(1128).getLanguages;
 export const useSyncMessages = (messagesLoader) => intl_util.useSyncMessages(messagesLoader, withFormattersResult);
-export const t = fn(13947)._defaultMessages;
-export const international = _modDef13950;
+export const t = fn(13949)._defaultMessages;
+export const international = _modDef13952;
 export const systemLocale = str;
 export const initialLocale = normalizedLocale;

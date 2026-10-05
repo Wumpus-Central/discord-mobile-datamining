@@ -167,7 +167,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             return null;
           } else {
             if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-              let UserPlusIcon = tmp(12955).UserClockIcon;
+              let UserPlusIcon = tmp(12957).UserClockIcon;
             } else {
               UserPlusIcon = tmp(4833).UserPlusIcon;
             }
@@ -342,7 +342,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             return null;
           } else {
             if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-              let UserPlusIcon = tmp3(12955).UserClockIcon;
+              let UserPlusIcon = tmp3(12957).UserClockIcon;
             } else {
               UserPlusIcon = tmp3(4833).UserPlusIcon;
             }
@@ -461,7 +461,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const tmp14 = trackUserProfileAction(12957)(user.id, false, O);
+        const tmp14 = trackUserProfileAction(12959)(user.id, false, O);
         const handlePress = tmp14.handlePress;
         ({ text, inCall, accessibilityHint } = tmp14);
         if (hasCustomProfileTheme) {

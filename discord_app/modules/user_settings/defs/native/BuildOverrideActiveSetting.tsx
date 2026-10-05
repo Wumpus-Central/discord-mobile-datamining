@@ -95,7 +95,7 @@ const pressable = SettingBuilders.createPressable({
     return "Build Override Active";
   },
   parent: null,
-  IconComponent: fn(14774).RefreshIcon,
+  IconComponent: fn(14778).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
         const cResult = c.c(2);

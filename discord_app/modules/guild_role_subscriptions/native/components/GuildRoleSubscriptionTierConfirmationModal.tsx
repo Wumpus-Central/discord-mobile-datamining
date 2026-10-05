@@ -54,7 +54,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -93,7 +93,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
             c3 = 0;
             closure_128_1(false);
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp22) {
           closure_2 = tmp22;

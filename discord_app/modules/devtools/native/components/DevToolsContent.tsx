@@ -277,7 +277,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp10 = closure_10(tmp(15623).ArrowSmallUpIcon, {});
+          const tmp10 = closure_10(tmp(15627).ArrowSmallUpIcon, {});
           cResult[5] = tmp10;
           let tmp8 = tmp10;
         } else {
@@ -340,7 +340,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                     return;
                   }
                 }
-                const tmp18 = closure_10(tmp(15625).ArrowSmallDownIcon, {});
+                const tmp18 = closure_10(tmp(15629).ArrowSmallDownIcon, {});
                 cResult[15] = tmp18;
                 const tmp17 = tmp18;
               } else {

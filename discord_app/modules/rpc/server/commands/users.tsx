@@ -6,7 +6,7 @@ const Constants = fn(5316);
 ({ RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 const RPCCommands = fn(1085).RPCCommands;
 const obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(14315);
+const CONTEXT_MENU_ICON_NAMES = fn(14317);
 const obj3 = {
   scope: null,
   handler(args) {

@@ -162,13 +162,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_10();
       importDefault = tmp;
       let obj = onSelectFont(7841);
-      const visibleFontOrder = onSelectFont(15153).useVisibleFontOrder();
-      let obj2 = onSelectFont(15153);
-      const displayNameStylesNewFonts = onSelectFont(15155).useDisplayNameStylesNewFonts(visibleFontOrder);
+      const visibleFontOrder = onSelectFont(15157).useVisibleFontOrder();
+      let obj2 = onSelectFont(15157);
+      const displayNameStylesNewFonts = onSelectFont(15159).useDisplayNameStylesNewFonts(visibleFontOrder);
       ({ dotFontIds: c2, dismissFontDot: c3 } = displayNameStylesNewFonts);
       [first, closure_5] = first.useState(selectedFontId);
       let tmp15Result = first !== onSelectFont(1397).DisplayNameFont.DEFAULT;
-      let obj3 = onSelectFont(15155);
+      let obj3 = onSelectFont(15159);
       closure_6 = tmp9;
       let obj4 = onSelectFont(1394);
       constants = first.useCallback((arg0) => {

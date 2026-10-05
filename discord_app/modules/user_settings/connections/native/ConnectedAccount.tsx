@@ -905,7 +905,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     if (self.state.metadataAlreadyRefreshed) {
       let tmp19Result = closure_14(tmp2(8451).CheckmarkLargeBoldIcon, { size: "sm" });
     } else {
-      tmp19Result = closure_14(tmp2(14774).RefreshIcon, { size: "sm" });
+      tmp19Result = closure_14(tmp2(14778).RefreshIcon, { size: "sm" });
     }
     const obj12 = {
       size: "sm",

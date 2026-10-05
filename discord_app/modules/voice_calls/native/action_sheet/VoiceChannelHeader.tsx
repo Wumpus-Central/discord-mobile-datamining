@@ -476,7 +476,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: tmp.container, children: null };
       const obj6 = { size: channel(1188).Icon.Sizes.MEDIUM, source: null, disableColor: true, style: null };
       if (isRoleRequiredDefault(channel)) {
-        let tmp5Result = tmp5(13608);
+        let tmp5Result = tmp5(13610);
       } else {
         tmp5Result = tmp5(9694);
       }

@@ -7,7 +7,7 @@ import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const util = tmp(1126);
-const SafetyHubAccountStandingLabels = tmp(14545);
+const SafetyHubAccountStandingLabels = tmp(14549);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useAccountStandingStatusLabel.tsx");
 
 export const useAccountStandingStatusLabel = ReactCompilerGating.isReactCompilerEnabled()

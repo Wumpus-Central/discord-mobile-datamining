@@ -41,8 +41,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let textShadow = undefined !== withTextShadow && withTextShadow;
       const tmp5 = closure_7();
       let obj = quest(576);
-      quest = quest(14926).useVideoQuestModalContext().quest;
-      const tmpResult = quest(14926);
+      quest = quest(14930).useVideoQuestModalContext().quest;
+      const tmpResult = quest(14930);
       const questTaskDetails = quest(10911).useQuestTaskDetails(quest);
       if (cResult[0] === quest.id) {
         if (cResult[1] === questTaskDetails) {
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           tmp34 = tmp37;
                         }
                         const obj4 = { iconColor: closeButtonIconColor, onClose };
-                        const tmp33 = closure_5(questTaskDetails(14948), obj4);
+                        const tmp33 = closure_5(questTaskDetails(14952), obj4);
                         cResult[23] = closeButtonIconColor;
                         cResult[24] = onClose;
                         cResult[25] = tmp33;
@@ -223,8 +223,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const withTextShadow = showCurrentVideoTime.withTextShadow;
       let textShadow = undefined !== withTextShadow && withTextShadow;
       const tmp2 = closure_7();
-      quest = quest(14926).useVideoQuestModalContext().quest;
-      let obj = quest(14926);
+      quest = quest(14930).useVideoQuestModalContext().quest;
+      let obj = quest(14930);
       const questTaskDetails = quest(10911).useQuestTaskDetails(quest);
       const tmp6 = useVideoQuestUIStore((arg0) => {
         let tmp = arg0.videoProgress[quest.id];
@@ -286,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.children = items1;
       const items2 = [
         closure_6(View, obj4),
-        closure_5(questTaskDetails(14948), { iconColor: closeButtonIconColor, onClose }),
+        closure_5(questTaskDetails(14952), { iconColor: closeButtonIconColor, onClose }),
       ];
       obj3.children = items2;
       return closure_6(View, obj3);

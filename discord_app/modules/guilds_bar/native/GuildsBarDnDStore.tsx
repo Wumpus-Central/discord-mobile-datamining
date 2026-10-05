@@ -19,17 +19,17 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_1 = arg1;
   let obj = {
     dragSpecs: "Boolean",
-    overSpecs: "done",
+    overSpecs: "duration",
     dropSpecs: "toCharArray$esjava$1",
     dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
     listInsets: "_createPressabilityConfig",
     scrollPosition: null,
-    windowSize: "\u{1F64C}",
+    windowSize: "\u{1F44F}",
     setStateShallow: true,
     dropStart: 6,
-    dropComplete: 3,
+    dropComplete: 4,
   };
   let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
@@ -71,7 +71,9 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1259).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "cursor" }));
+      dropSpecs(1259).batchUpdates(() =>
+        dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "toCharArray$esjava$1" }),
+      );
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -131,7 +133,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (null == dropSpecs) {
             const obj2 = {
               isDragTarget: false,
-              dragState: "done",
+              dragState: "duration",
               overState: "toCharArray$esjava$1",
               itemSize: null,
               dragDropInProgress,
@@ -239,7 +241,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (null == dropSpecs) {
             const obj2 = {
               isDragTarget: false,
-              dragState: "done",
+              dragState: "duration",
               overState: "toCharArray$esjava$1",
               itemSize: null,
               dragDropInProgress,

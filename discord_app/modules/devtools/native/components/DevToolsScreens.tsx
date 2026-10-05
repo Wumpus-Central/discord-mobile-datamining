@@ -75,28 +75,28 @@ const obj2 = {
 };
 obj.buildOverride = {
   headerTitle: "Build Override",
-  Icon: fn(14774).RefreshIcon,
+  Icon: fn(14778).RefreshIcon,
   render() {
     return jsx(DevToolsBuildOverrideScreen.default, {});
   },
 };
 const obj3 = {
   headerTitle: "Build Override",
-  Icon: fn(14774).RefreshIcon,
+  Icon: fn(14778).RefreshIcon,
   render() {
     return jsx(DevToolsBuildOverrideScreen.default, {});
   },
 };
 obj.experiments = {
   headerTitle: "Experiment Overrides",
-  Icon: fn(15409).BeakerIcon,
+  Icon: fn(15413).BeakerIcon,
   render() {
     return jsx(DevToolsExperimentsScreen.default, {});
   },
 };
 const obj4 = {
   headerTitle: "Experiment Overrides",
-  Icon: fn(15409).BeakerIcon,
+  Icon: fn(15413).BeakerIcon,
   render() {
     return jsx(DevToolsExperimentsScreen.default, {});
   },
@@ -151,28 +151,28 @@ const obj7 = {
 };
 obj.dataStorage = {
   headerTitle: "Data Storage",
-  Icon: fn(15361).FileUpIcon,
+  Icon: fn(15365).FileUpIcon,
   render() {
     return jsx(DevToolsDataStorageScreen.default, {});
   },
 };
 const obj8 = {
   headerTitle: "Data Storage",
-  Icon: fn(15361).FileUpIcon,
+  Icon: fn(15365).FileUpIcon,
   render() {
     return jsx(DevToolsDataStorageScreen.default, {});
   },
 };
 obj.designSystems = {
   headerTitle: "Design Systems",
-  Icon: fn(15076).PaintPaletteIcon,
+  Icon: fn(15080).PaintPaletteIcon,
   render() {
     return jsx(UserSettingsDesignSystemsScreen.default, {});
   },
 };
 const obj9 = {
   headerTitle: "Design Systems",
-  Icon: fn(15076).PaintPaletteIcon,
+  Icon: fn(15080).PaintPaletteIcon,
   render() {
     return jsx(UserSettingsDesignSystemsScreen.default, {});
   },
@@ -207,14 +207,14 @@ const obj11 = {
 };
 obj.i18n = {
   headerTitle: "Intl Testing",
-  Icon: fn(15239).LanguageIcon,
+  Icon: fn(15243).LanguageIcon,
   render() {
     return jsx(IntlTestingSettingsPage.default, {});
   },
 };
 const obj12 = {
   headerTitle: "Intl Testing",
-  Icon: fn(15239).LanguageIcon,
+  Icon: fn(15243).LanguageIcon,
   render() {
     return jsx(IntlTestingSettingsPage.default, {});
   },
@@ -305,14 +305,14 @@ const obj18 = {
 };
 obj.toggles = {
   headerTitle: "Toggles (Design, Reporting, etc)",
-  Icon: fn(15168).EyeDropperIcon,
+  Icon: fn(15172).EyeDropperIcon,
   render() {
     return jsx(DevToolsTogglesScreen.default, {});
   },
 };
 const obj19 = {
   headerTitle: "Toggles (Design, Reporting, etc)",
-  Icon: fn(15168).EyeDropperIcon,
+  Icon: fn(15172).EyeDropperIcon,
   render() {
     return jsx(DevToolsTogglesScreen.default, {});
   },
@@ -389,14 +389,14 @@ const obj24 = {
 };
 obj.actionSheets = {
   headerTitle: "Action Sheets",
-  Icon: fn(15419).CompassIcon,
+  Icon: fn(15423).CompassIcon,
   render() {
     return jsx(DevToolsActionSheetsScreen.default, {});
   },
 };
 const obj25 = {
   headerTitle: "Action Sheets",
-  Icon: fn(15419).CompassIcon,
+  Icon: fn(15423).CompassIcon,
   render() {
     return jsx(DevToolsActionSheetsScreen.default, {});
   },
@@ -446,7 +446,7 @@ const obj28 = {
 };
 obj29.displayNameEffectsBenchmark = {
   headerTitle: "Display Name Effects Benchmark",
-  Icon: fn(15076).PaintPaletteIcon,
+  Icon: fn(15080).PaintPaletteIcon,
   render() {
     return jsx(DevToolsDisplayNameEffectsBenchmarkScreen.default, {});
   },

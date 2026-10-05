@@ -885,7 +885,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   const obj3 = { value, done: true };
                                   return obj3;
                                 } else {
-                                  return { value: "IconComponent", done: "IconComponent" };
+                                  return { value: "IconComponent", done: null };
                                 }
                               } else {
                                 try {
@@ -939,7 +939,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     500,
                                   );
                                   c3 = 3;
-                                  return { value: "IconComponent", done: "IconComponent" };
+                                  return { value: "IconComponent", done: null };
                                 } catch (tmp23) {
                                   c3 = tmp;
                                   throw tmp23;
@@ -1214,7 +1214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -1260,7 +1260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => closure_0(emoji[26]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
               c3 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             } catch (tmp24) {
               c3 = tmp;
               throw tmp24;

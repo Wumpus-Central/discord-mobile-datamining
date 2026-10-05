@@ -534,7 +534,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
           }
         }
         const obj12 = { style: tmp4.rowContainer, location: "Add Friend Modal" };
-        tmp30 = closure_10(contactSyncAccount(13668), obj12);
+        tmp30 = closure_10(contactSyncAccount(13670), obj12);
       }
       cResult[18] = tmp9;
       cResult[19] = tmp4.rowContainer;
@@ -543,7 +543,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
     const obj13 = { style: tmp4.input, autoFocusInput: false, sourcePage };
     cResult[14] = sourcePage;
     cResult[15] = tmp4.input;
-    cResult[16] = closure_10(contactSyncAccount(13666), obj13);
+    cResult[16] = closure_10(contactSyncAccount(13668), obj13);
     class P {
       constructor() {
         obj = { headerRight() { ... } };
@@ -554,7 +554,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
         return;
       }
     }
-    const tmp26 = closure_10(contactSyncAccount(13666), obj13);
+    const tmp26 = closure_10(contactSyncAccount(13668), obj13);
   }
   class P {
     constructor() {
@@ -628,7 +628,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
   const intl2 = navigation(1126).intl;
   obj5.children = intl2.string(navigation(1126).t["Rn/sLl"]);
   items2[1] = closure_10(navigation(4886).Text, obj5);
-  items2[2] = closure_10(contactSyncAccount(13666), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
+  items2[2] = closure_10(contactSyncAccount(13668), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
   const obj7 = { style: tmp.otherOptionsContainer, children: null };
   const obj8 = { accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
   const intl3 = navigation(1126).intl;
@@ -637,7 +637,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
   let tmp10Result = null;
   if (tmp5) {
     const obj9 = { style: tmp.rowContainer, location: "Add Friend Modal" };
-    tmp10Result = closure_10(contactSyncAccount(13668), obj9);
+    tmp10Result = closure_10(contactSyncAccount(13670), obj9);
   }
   const obj10 = { children: null };
   items3[1] = tmp10Result;

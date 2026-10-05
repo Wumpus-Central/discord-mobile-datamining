@@ -57,8 +57,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = require("OnboardingHomeUtils");
       const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp13, tmp14);
       const tmpResult = require("useStateFromStores");
-      const canAccessVibegrations = require("VibegrationsUtils").useCanAccessVibegrations(id, "useGuildActionRows");
-      const tmpResult10 = require("VibegrationsUtils");
+      const canAccessConjure = require("ConjureUtils").useCanAccessConjure(id, "useGuildActionRows");
+      const tmpResult10 = require("ConjureUtils");
       const tmp16 = useIsNewMemberDefault(id.id);
       const allActionsCompleted = require("MemberActionUtils").useAllActionsCompleted(id.id);
       const tmp18 = useIsEligibleForServerOnboardingSetupProgressDefault(id.id);
@@ -161,8 +161,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   items2.push(ChannelListGuildActionRow.GAME_SERVERS_EMPTY);
                 }
               }
-              if (canAccessVibegrations) {
-                items2.push(ChannelListGuildActionRow.GUILD_VIBEGRATIONS);
+              if (canAccessConjure) {
+                items2.push(ChannelListGuildActionRow.GUILD_CONJURE);
               }
               return items2;
             }
@@ -225,8 +225,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       const obj6 = require("useStateFromStores");
-      const canAccessVibegrations = require("VibegrationsUtils").useCanAccessVibegrations(id, "useGuildActionRows");
-      const obj7 = require("VibegrationsUtils");
+      const canAccessConjure = require("ConjureUtils").useCanAccessConjure(id, "useGuildActionRows");
+      const obj7 = require("ConjureUtils");
       const tmp11 = useIsNewMemberDefault(id.id);
       const allActionsCompleted = require("MemberActionUtils").useAllActionsCompleted(id.id);
       const tmp13 = useIsEligibleForServerOnboardingSetupProgressDefault(id.id);
@@ -321,8 +321,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 items3.push(ChannelListGuildActionRow.GAME_SERVERS_EMPTY);
               }
             }
-            if (canAccessVibegrations) {
-              items3.push(ChannelListGuildActionRow.GUILD_VIBEGRATIONS);
+            if (canAccessConjure) {
+              items3.push(ChannelListGuildActionRow.GUILD_CONJURE);
             }
             return items3;
           }

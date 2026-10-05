@@ -18,7 +18,7 @@ let closure_6 = async function _addOrUpdateSavedMessage(arg0) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -42,7 +42,7 @@ let closure_6 = async function _addOrUpdateSavedMessage(arg0) {
             closure_129_3 = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else {
           if (1 === tmp5) {
@@ -243,7 +243,7 @@ let closure_7 = async function _removeSavedMessage() {
   closure_1 = tmp2;
   ({ displayToast: closure_129_0, isReminder: closure_129_1 } = closure_0);
   closure_129_2 = Object.assign(closure_0, Object.assign({ displayToast: 0, isReminder: 0 }));
-  return "Reflect";
+  return "Set";
 };
 const AbortCodes = fn(1085).AbortCodes;
 const size = fn(2);

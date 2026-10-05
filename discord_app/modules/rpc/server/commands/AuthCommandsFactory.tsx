@@ -34,7 +34,7 @@ let closure_18 = async function _authorizeWithPrompt(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -108,7 +108,7 @@ let closure_18 = async function _authorizeWithPrompt(arg0) {
           closure_135_31 = undefined;
           c11 = 1;
           c12 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp10) {

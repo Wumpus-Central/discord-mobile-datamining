@@ -114,7 +114,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
         const result1 = UnicodeEmojisDefault.convertNameToSurrogate("heart");
         let tmp11 = null;
         if ("" !== result1) {
-          obj5 = { name: result1, id: "Reflect", animated: null };
+          obj5 = { name: result1, id: "Set", animated: null };
           tmp11 = obj5;
         }
         if (null != tmp11) {

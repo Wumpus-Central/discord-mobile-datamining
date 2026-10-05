@@ -87,7 +87,7 @@ export default function UserProfileMutuals(user) {
         children: mapped.map((user) =>
           closure_1_6(
             user(_undefined[16]).Avatar,
-            { user, size: user(_undefined[16]).AvatarSizes.SIZE_16, guildId: "Array" },
+            { user, size: user(_undefined[16]).AvatarSizes.SIZE_16, guildId: "r" },
             user.id,
           ),
         ),

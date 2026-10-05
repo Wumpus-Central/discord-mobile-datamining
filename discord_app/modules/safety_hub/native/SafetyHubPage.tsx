@@ -22,7 +22,7 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 
 const require = globalThis.__r;
 
-const useShouldShowInitialGoogleWalletBanner = hyh4ls(14549);
+const useShouldShowInitialGoogleWalletBanner = hyh4ls(14553);
 require = fn;
 function handleLogInClick() {
   AuthenticationActionCreatorsDefault.closeSuspendedUser();
@@ -501,7 +501,7 @@ export default function SafetyHubPage(visible) {
     if (visible) {
       if (null != safetyHubFetchError) {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(14551, dependencyMap.paths),
+          asyncRequireImpl(14555, dependencyMap.paths),
           "SafetyHubErrorActionSheet",
           {},
         );

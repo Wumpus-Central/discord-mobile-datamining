@@ -27,7 +27,7 @@ let closure_8 = async function _requestAgeVerification(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -49,7 +49,7 @@ let closure_8 = async function _requestAgeVerification(arg0) {
           ({ method: closure_129_0, classificationId: closure_129_1, vendor: closure_129_2 } = closure_0);
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -210,7 +210,7 @@ let closure_16 = async function _requestAgeVerificationV(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -286,7 +286,7 @@ let closure_18 = async function _initiateSuspendedUserAgeVerification(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -308,7 +308,7 @@ let closure_18 = async function _initiateSuspendedUserAgeVerification(arg0) {
           let suspendedUserToken;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -365,7 +365,7 @@ let closure_19 = async function _registerIncodeInterview() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -397,7 +397,7 @@ let closure_19 = async function _registerIncodeInterview() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp9) {
         c1 = tmp;
@@ -417,7 +417,7 @@ let closure_20 = async function _requestIncodeSessionBootstrap() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -441,7 +441,7 @@ let closure_20 = async function _requestIncodeSessionBootstrap() {
           closure_129_0 = obj4;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

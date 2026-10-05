@@ -20,7 +20,7 @@ import GuildRoleSubscriptionTierBenefitsModal from "../components/GuildRoleSubsc
 import EditStateContextProvider from "../../edit_state/EditStateContextProvider.tsx";
 import GuildRoleSubscriptionTierDesignModal from "../components/GuildRoleSubscriptionTierDesignModal.tsx";
 import GuildRoleSubscriptionTierDetailsModal from "../components/GuildRoleSubscriptionTierDetailsModal.tsx";
-import _modDef17948 from "../../../../../_runtime/metro/17948__.js";
+import _modDef17970 from "../../../../../_runtime/metro/17970__.js";
 import ActionableNoticeDefault from "../components/ActionableNotice.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -31,7 +31,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const FetchState = fn(4502).FetchState;
-const GuildRoleSubscriptionsTierScenes = fn(15019).GuildRoleSubscriptionsTierScenes;
+const GuildRoleSubscriptionsTierScenes = fn(15023).GuildRoleSubscriptionsTierScenes;
 const GuildSettingsSections = fn(1085).GuildSettingsSections;
 const ContentDismissActionType = fn(2048).ContentDismissActionType;
 const jsxProd = fn(21);
@@ -70,7 +70,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef17948 };
+        const obj5 = { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef17970 };
         const tmp17 = state(native.Icon, obj5);
         cResult[6] = tmp17;
         let tmp15 = tmp17;
@@ -154,7 +154,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj7 = { variant: "destructive", grow: true, icon: null, onPress: null, disabled: null, text: null };
   const obj4 = { style: tmp.actionHeader, children: buttonText };
   const obj5 = { style: tmp.actionDescription, variant: "text-sm/medium", color: "text-default", children: descriptionText };
-  obj7.icon = state(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef17948 });
+  obj7.icon = state(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef17970 });
   obj7.onPress = handleArchiveOrDelete;
   let tmp9 = !allowSelfRemoveMonetization;
   if (allowSelfRemoveMonetization) {

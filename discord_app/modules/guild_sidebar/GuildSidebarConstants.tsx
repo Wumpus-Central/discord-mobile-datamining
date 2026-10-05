@@ -14,7 +14,7 @@ export const ChannelListGuildActionRow = {
   GUILD_GAME_SHOP: "game-shop",
   GUILD_SHOP: "shop",
   GUILD_HOME: "@home",
-  GUILD_VIBEGRATIONS: "conjuring",
+  GUILD_CONJURE: "conjuring",
   CHANNELS_AND_ROLES: "channels-and-roles",
   BROWSE_CHANNELS: "browse-channels",
   GUILD_DIRECTORY: "guild-directory",

@@ -9,7 +9,7 @@ import utils from "../../content_inventory/utils.tsx";
 import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import MusicIcon from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import TvIcon from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
-import conjuringActivity from "../../vibegrations/lib/conjuringActivity.tsx";
+import conjurePresenceActivity from "../../conjure/presence/conjurePresenceActivity.tsx";
 import TopicsIcon from "../../../design/components/Icon/native/redesign/generated/TopicsIcon.tsx";
 import HourglassIcon from "../../../design/components/Icon/native/redesign/generated/HourglassIcon.tsx";
 import shouldShowActivityTimeBarDefault from "../utils/shouldShowActivityTimeBar.tsx";
@@ -26,7 +26,7 @@ function getTimestampBadgeIcon(activity, arg1) {
     let AppsIcon = HourglassIcon.HourglassIcon;
   } else {
     if (!isEmbeddedActivityDefault(activity)) {
-      if (!obj.isConjuringActivity(activity)) {
+      if (!obj.isConjurePresenceActivity(activity)) {
         if (activity.type === ActivityTypes.WATCHING) {
           AppsIcon = TvIcon.TvIcon;
         } else if (activity.type === tmp5.LISTENING) {
@@ -35,7 +35,7 @@ function getTimestampBadgeIcon(activity, arg1) {
           AppsIcon = GameControllerIcon.GameControllerIcon;
         }
       }
-      obj = conjuringActivity;
+      obj = conjurePresenceActivity;
     }
     AppsIcon = AppsIcon2.AppsIcon;
   }

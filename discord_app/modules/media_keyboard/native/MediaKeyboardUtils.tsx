@@ -38,7 +38,7 @@ let closure_21 = async function _handleLimitedPickerDialog() {
   await "IconComponent";
   closure_1 = tmp2;
   ({ onDismissKeyboard: closure_129_0, onRestoreKeyboard: closure_129_1 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 function handleAttachFile() {
   const self = this;
@@ -61,7 +61,7 @@ let closure_23 = async function _handleAttachFile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -88,7 +88,7 @@ let closure_23 = async function _handleAttachFile(arg0) {
           closure_129_7 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

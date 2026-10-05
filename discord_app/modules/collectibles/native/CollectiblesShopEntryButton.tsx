@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [CollectiblesMarketingsStore];
         const fn = function c() {
           return marketingBySurface.getMarketingBySurface(
-            navigateToShop(13801).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON,
+            navigateToShop(13803).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON,
           );
         };
         cResult[0] = items;
@@ -422,7 +422,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const shopButtonRef = navigateToShop.shopButtonRef;
       const items = [CollectiblesMarketingsStore];
       const stateFromStores = navigateToShop(573).useStateFromStores(items, () =>
-        marketingBySurface.getMarketingBySurface(navigateToShop(13801).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON),
+        marketingBySurface.getMarketingBySurface(navigateToShop(13803).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON),
       );
       let tmp4 = null != stateFromStores;
       if (tmp4) {
@@ -458,7 +458,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           };
           obj.showRedDot = null != visibleContent;
-          return closure_1_6(shopButtonRef(16941), obj);
+          return closure_1_6(shopButtonRef(16960), obj);
         }
         if (tmp4) {
           let type1;

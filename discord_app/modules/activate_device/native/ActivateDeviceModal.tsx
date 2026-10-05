@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return null;
           },
           render() {
-            return jsx(userCode(13685).ActivateDevice, { onClose, prefilledUserCode });
+            return jsx(userCode(13687).ActivateDevice, { onClose, prefilledUserCode });
           },
         };
         obj2[constants.ACTIVATE_DEVICE] = obj3;
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             render() {
-              return jsx(userCode(13685).ActivateDevice, { onClose, prefilledUserCode });
+              return jsx(userCode(13687).ActivateDevice, { onClose, prefilledUserCode });
             },
           },
         };

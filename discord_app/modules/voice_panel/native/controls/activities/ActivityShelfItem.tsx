@@ -18,7 +18,7 @@ import _modDef12460 from "../../../../../../_runtime/metro/12460__.js";
 import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground.tsx";
 import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary.tsx";
 import useActivityUsersDefault from "../../../../activities/useActivityUsers.tsx";
-import _modDef17267 from "../../../../../../_runtime/metro/17267__.js";
+import _modDef17291 from "../../../../../../_runtime/metro/17291__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const useActivityShelfItemDefault = useActivityShelfItem;
@@ -566,7 +566,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             const obj5 = { style: tmp5.developerIconContainer, children: null };
                                             const obj6 = {
                                               size: native.Icon.Sizes.REFRESH_SMALL_16,
-                                              source: _modDef17267,
+                                              source: _modDef17291,
                                               color: tmp5.developerIconColor.color,
                                             };
                                             obj5.children = timestampProducer(native.Icon, obj6);
@@ -779,7 +779,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj9 = { style: tmp.developerIconContainer, children: null };
           const obj10 = {
             size: native.Icon.Sizes.REFRESH_SMALL_16,
-            source: _modDef17267,
+            source: _modDef17291,
             color: tmp.developerIconColor.color,
           };
           obj9.children = timestampProducer(native.Icon, obj10);

@@ -603,7 +603,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -654,7 +654,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               closure_1_10(false);
               c4 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp23) {
             c4 = tmp;
@@ -764,7 +764,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         yield "IconComponent";
         paymentGateway = tmp2;
         ({ orderLineItems: closure_129_0, subscriptionFacet: closure_129_1 } = closure_0);
-        return "Reflect";
+        return "Set";
       });
       let items = [paymentGateway, onOrderCreated, isGift, mobileStoreFront, initialExternalGatewayFacet];
       callback = obj.useCallback(function () {

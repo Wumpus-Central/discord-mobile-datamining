@@ -11,9 +11,9 @@ import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidat
 import common_Video from "../../../../components_native/common/Video.tsx";
 import APNGPlayer from "../../../image/native/APNGPlayer.android.tsx";
 import OrbsIcon from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import _modDef14854 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.png.js";
-import _modDef14855 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.mov.js";
-import _modDef14856 from "../../../../../discord_assets/assets/quests/bounties/starfield_bg.mp4.js";
+import _modDef14858 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.png.js";
+import _modDef14859 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.mov.js";
+import _modDef14860 from "../../../../../discord_assets/assets/quests/bounties/starfield_bg.mp4.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -91,7 +91,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       ({ style, reducedMotion } = arg0);
       if (obj2.isAndroid()) {
         if (cResult[0] !== !reducedMotion) {
-          const obj3 = { url: _modDef14854, style: React3.absoluteFillObject, autoplay: tmp10 };
+          const obj3 = { url: _modDef14858, style: React3.absoluteFillObject, autoplay: tmp10 };
           const tmp15 = timestampProducer(APNGPlayer.APNGPlayer, obj3);
           cResult[0] = tmp10;
           cResult[1] = tmp15;
@@ -120,7 +120,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj5 = { uri: _modDef14855 };
+          const obj5 = { uri: _modDef14859 };
           cResult[5] = obj5;
           let tmp5 = obj5;
         } else {
@@ -159,7 +159,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           pointerEvents: "none",
           children: null,
         };
-        const obj3 = { url: _modDef14854, style: React3.absoluteFillObject, autoplay: !reducedMotion };
+        const obj3 = { url: _modDef14858, style: React3.absoluteFillObject, autoplay: !reducedMotion };
         obj2.children = timestampProducer(APNGPlayer.APNGPlayer, obj3);
         let tmp3Result = timestampProducer(React4, obj2);
       } else {
@@ -172,7 +172,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           preventsDisplaySleepDuringVideoPlayback: false,
           importantForAccessibility: "no-hide-descendants",
         };
-        const obj5 = { uri: _modDef14855 };
+        const obj5 = { uri: _modDef14859 };
         obj4.source = obj5;
         obj4.style = style;
         obj4.paused = reducedMotion;
@@ -213,7 +213,7 @@ export const BountiesScrollRecapPage = ReactCompilerGating.isReactCompilerEnable
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj3 = { uri: _modDef14856 };
+          const obj3 = { uri: _modDef14860 };
           cResult[5] = obj3;
           let tmp13 = obj3;
         } else {
@@ -503,7 +503,7 @@ export const BountiesScrollRecapPage = ReactCompilerGating.isReactCompilerEnable
         preventsDisplaySleepDuringVideoPlayback: false,
         importantForAccessibility: "no-hide-descendants",
       };
-      obj5.source = { uri: _modDef14856 };
+      obj5.source = { uri: _modDef14860 };
       obj5.style = React3.absoluteFillObject;
       obj5.paused = stateFromStores;
       const items2 = [
@@ -528,7 +528,7 @@ export const BountiesScrollRecapPage = ReactCompilerGating.isReactCompilerEnable
       };
       const obj12 = { style: tmp.titleRow, children: null };
       const items6 = [timestampProducer(OrbsIcon.OrbsIcon, { size: "lg", color: "icon-strong", accessible: false })];
-      const obj6 = { uri: _modDef14856 };
+      const obj6 = { uri: _modDef14860 };
       const obj7 = { style: tmp.orbsBackground, reducedMotion: stateFromStores };
       items6[1] = timestampProducer(Text_Text.Text, {
         variant: "display-lg",

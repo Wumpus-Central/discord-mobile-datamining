@@ -444,7 +444,7 @@ export default noop.memo(
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "IconComponent", done: "IconComponent" };
+                        return { value: "IconComponent", done: null };
                       }
                     } else {
                       try {
@@ -476,7 +476,7 @@ export default noop.memo(
                             closure_128_3(true);
                           }
                           c2 = 3;
-                          return { value: "IconComponent", done: "IconComponent" };
+                          return { value: "IconComponent", done: null };
                         }
                       } catch (tmp9) {
                         c2 = tmp;

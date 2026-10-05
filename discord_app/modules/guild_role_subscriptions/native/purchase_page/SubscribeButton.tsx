@@ -51,7 +51,7 @@ function useCreateRoleSubscription(listingId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -90,7 +90,7 @@ function useCreateRoleSubscription(listingId) {
             c3 = 0;
             closure_128_1(false);
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp22) {
           closure_2 = tmp22;
@@ -119,7 +119,7 @@ function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  let obj = changeToListingId(15041);
+  let obj = changeToListingId(15045);
   const obj3 = { children: null };
   const obj2 = activeListingId(4461)(activeSubscription.currentPeriodEnd);
   const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
@@ -139,13 +139,13 @@ function SwitchTiersButton(activeSubscription) {
   obj6.text = intl2.string(activeSubscription(1126).t.SACegK);
   obj6.onPress = function onPress() {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(16500, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, {
+    obj.openLazy(asyncRequireImpl(16504, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, {
       activeSubscription,
       activeListingId,
       changeToListingId,
     });
   };
-  items[2] = closure_12(activeSubscription(16493).ArrowButton, obj6);
+  items[2] = closure_12(activeSubscription(16497).ArrowButton, obj6);
   obj3.children = items;
   return closure_13(View, obj3);
 }

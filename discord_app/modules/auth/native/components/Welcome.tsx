@@ -13,8 +13,8 @@ import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx
 import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import TTIAnalyticsUtils from "../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 import GuildInviteIconDefault from "../../../guild/native/GuildInviteIcon.tsx";
-import _modDef13056 from "../../../../../_runtime/metro/13056__.js";
-import _mod13673 from "../../../../../_runtime/metro/13673__.js";
+import _modDef13058 from "../../../../../_runtime/metro/13058__.js";
+import _mod13675 from "../../../../../_runtime/metro/13675__.js";
 import RegistrationStepsUtils from "../RegistrationStepsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AgeGateStore from "../../../age_gate/AgeGateStore.tsx";
@@ -117,7 +117,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             tmp24 = cResult[4];
           }
           if (cResult[5] !== tmp24) {
-            const obj4 = { user: tmp24, guildId: "a" };
+            const obj4 = { user: tmp24, guildId: "r" };
             const tmp33 = closure_1_21(native.Avatar, obj4);
             cResult[5] = tmp24;
             cResult[6] = tmp33;
@@ -158,7 +158,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             tmp6 = cResult[11];
           }
           if (cResult[12] !== tmp6) {
-            const obj5 = { user: tmp6, guildId: "a" };
+            const obj5 = { user: tmp6, guildId: "r" };
             const tmp15 = closure_1_21(native.Avatar, obj5);
             cResult[12] = tmp6;
             cResult[13] = tmp15;
@@ -264,7 +264,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp18 = closure_1_21;
         } else if (null != tmp2) {
           _modDef38(null != inviter, "Null inviter");
-          const obj = { user: null, guildId: "a" };
+          const obj = { user: null, guildId: "r" };
           const tmp12 = new UserRecord(inviter);
           obj.user = tmp12;
           tmp14 = closure_1_21(native.Avatar, obj);
@@ -276,7 +276,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         } else if (null == inviter) {
           return null;
         } else {
-          const obj4 = { user: null, guildId: "a" };
+          const obj4 = { user: null, guildId: "r" };
           const tmp33 = new UserRecord(inviter);
           obj4.user = tmp33;
           const intl3 = util.intl;
@@ -314,7 +314,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: _modDef13056 };
+          const obj2 = { source: _modDef13058 };
           const tmp11 = guild(hasOwnProperty, obj2);
           cResult[3] = tmp11;
           let tmp7 = tmp11;
@@ -385,7 +385,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: null, children: null };
       const items = [tmp.container, style];
       obj.style = items;
-      const items1 = [guild(hasOwnProperty, { source: _modDef13056 })];
+      const items1 = [guild(hasOwnProperty, { source: _modDef13058 })];
       const obj3 = { style: tmp.text, children: null };
       const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: null };
       const intl = util.intl;
@@ -413,7 +413,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const typeConsolidationTextTransform =
         useTypeConsolidationTextTransform.useTypeConsolidationTextTransform("Welcome");
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod13673;
+        const tmpResult = _mod13675;
         cResult[0] = tmpResult;
         let first = tmpResult;
       } else {
@@ -617,7 +617,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [tmp3.centerpieceContainer];
       obj2.style = items;
       const obj3 = { alwaysBounceVertical: false, contentContainerStyle: tmp3.scrollViewContainer, children: null };
-      const items1 = [guild(hasOwnProperty, { style: tmp3.logo, source: _mod13673 }), ,];
+      const items1 = [guild(hasOwnProperty, { style: tmp3.logo, source: _mod13675 }), ,];
       const obj5 = {
         style: null,
         lineClamp: null,

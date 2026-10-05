@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/native/FamilyCenterEmpty.tsx
 import c from "../../../../_runtime/00576_c.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef14721 from "../../../../_runtime/metro/14721__.js";
+import _modDef14725 from "../../../../_runtime/metro/14725__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       text = text.text;
       const tmp4 = closure_7();
       if (cResult[0] !== tmp4.art) {
-        const obj2 = { source: _modDef14721, style: tmp4.art, resizeMethod: "scale" };
+        const obj2 = { source: _modDef14725, style: tmp4.art, resizeMethod: "scale" };
         const tmp9 = hasOwnProperty(React4, obj2);
         cResult[0] = tmp4.art;
         cResult[1] = tmp9;
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_7();
       const obj = { style: tmp.empty, children: null };
       const items = [
-        hasOwnProperty(React4, { source: _modDef14721, style: tmp.art, resizeMethod: "scale" }),
+        hasOwnProperty(React4, { source: _modDef14725, style: tmp.art, resizeMethod: "scale" }),
         hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text }),
       ];
       obj.children = items;

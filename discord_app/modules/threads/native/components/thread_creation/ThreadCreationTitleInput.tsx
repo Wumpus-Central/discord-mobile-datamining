@@ -195,11 +195,11 @@ export default noop.memo(
           }
           let obj = chatInputRef(576);
           let obj2 = { content: threadSettingsDraft.name };
-          const tmpResult2 = chatInputRef(16764);
+          const tmpResult2 = chatInputRef(16783);
           cResult[0] = threadNameError;
           cResult[1] = threadSettingsDraft.name;
-          cResult[2] = chatInputRef(16764).renderError(threadNameError, { content: threadSettingsDraft.name });
-          const renderErrorResult = chatInputRef(16764).renderError(threadNameError, {
+          cResult[2] = chatInputRef(16783).renderError(threadNameError, { content: threadSettingsDraft.name });
+          const renderErrorResult = chatInputRef(16783).renderError(threadNameError, {
             content: threadSettingsDraft.name,
           });
         }
@@ -209,7 +209,7 @@ export default noop.memo(
           const optional = chatInputRef.optional;
           ref = undefined;
           dependencyMap = ref;
-          let obj = chatInputRef(16764);
+          let obj = chatInputRef(16783);
           let obj2 = { content: threadSettingsDraft.name };
           ref = ref.useRef(threadSettingsDraft.name);
           const items = [threadSettingsDraft.parentChannelId];
@@ -262,7 +262,7 @@ export default noop.memo(
               }
             }
           }, items3);
-          const renderErrorResult = chatInputRef(16764).renderError(chatInputRef.threadNameError, {
+          const renderErrorResult = chatInputRef(16783).renderError(chatInputRef.threadNameError, {
             content: threadSettingsDraft.name,
           });
           const items4 = [ChannelStore];

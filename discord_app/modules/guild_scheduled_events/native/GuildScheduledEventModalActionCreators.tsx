@@ -55,7 +55,7 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -99,7 +99,7 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
           const obj = closure_131_0(closure_131_2[35]);
         }
         c5 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp23) {
       c5 = tmp;
@@ -426,7 +426,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
                 "stack",
               );
             },
-            onRsvp: "application",
+            onRsvp: "applicationId",
           });
         },
       };
@@ -452,7 +452,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
               ActionSheetActionCreatorsDefault.hideAllActionSheets();
               ModalActionCreatorsDefault.pushLazy(
                 asyncRequireImpl(9470, dependencyMap.paths),
-                { event, recurrenceId, onCloseActionSheet: "Array" },
+                { event, recurrenceId, onCloseActionSheet: "r" },
                 closure_2_15,
               );
             };
@@ -531,7 +531,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
                 const lazyResult = noop.lazy(() => event(paths[14])(paths[19], paths.paths));
                 useAlertStore.openAlert(
                   "DeleteEventAlert",
-                  <lazyResult eventId={id} guildId={guild_id} recurrenceId="Array" />,
+                  <lazyResult eventId={id} guildId={guild_id} recurrenceId="r" />,
                 );
               },
             };

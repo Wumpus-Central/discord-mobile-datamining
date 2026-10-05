@@ -7,7 +7,7 @@ import QuestTaskUtils from "../../quests/utils/QuestTaskUtils.tsx";
 import useThermalState from "../../device/useThermalState.tsx";
 import RPCHelpers from "../RPCHelpers.tsx";
 import transformUserDefault from "../helpers/transformUser.tsx";
-import VibegrationsVoiceSessionCoordinatorDefault from "../../vibegrations/voice/VibegrationsVoiceSessionCoordinator.tsx";
+import ConjureVoiceSessionCoordinatorDefault from "../../conjure/voice/ConjureVoiceSessionCoordinator.tsx";
 import activityInstanceConnectedParticipants from "../helpers/activityInstanceConnectedParticipants.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import FramesStore from "../../frames/FramesStore.tsx";
@@ -98,7 +98,7 @@ class RPCServerManager {
                 const obj3 = { channel_id: voiceState.channelId, user_id: speakingFlags.userId };
                 const result = rpcServer.dispatchToSubscriptions(SPEAKING_STOP, obj2, obj3);
                 if (null != voiceState.channelId) {
-                  obj = VibegrationsVoiceSessionCoordinatorDefault;
+                  obj = ConjureVoiceSessionCoordinatorDefault;
                   let activeSessionIdsForChannel = obj.getActiveSessionIdsForChannel(voiceState.channelId);
                 } else {
                   activeSessionIdsForChannel = [];
@@ -117,7 +117,7 @@ class RPCServerManager {
     };
     obj.handleVoiceChannelSelect = function handleVoiceChannelSelect(channelId) {
       channelId = channelId.channelId;
-      obj = VibegrationsVoiceSessionCoordinatorDefault;
+      obj = ConjureVoiceSessionCoordinatorDefault;
       obj.releaseUnlessChannel(channelId);
       if (0 !== obj.rpcServer.subscriptions.length) {
         const rpcServer = obj.rpcServer;
@@ -249,11 +249,16 @@ class RPCServerManager {
         }
       }
     };
-    obj.handleScreenOrientationUpdate = function handleScreenOrientationUpdate(arg0) {
+    obj.handleScreenOrientationUpdate = function handleScreenOrientationUpdate(applicationId) {
+      applicationId = applicationId.applicationId;
       if (0 !== obj.rpcServer.subscriptions.length) {
-        const rpcServer = obj.rpcServer;
+        const rpcServer = tmp2.rpcServer;
         obj = { screen_orientation: tmp };
-        const result = rpcServer.dispatchToSubscriptions(constants3.ORIENTATION_UPDATE, {}, obj);
+        const result = rpcServer.dispatchToSubscriptions(
+          constants3.ORIENTATION_UPDATE,
+          null == applicationId ? {} : (socket) => socket.socket.application.id === applicationId,
+          obj,
+        );
       }
     };
     obj.handleEmbeddedActivityUpdate = function handleEmbeddedActivityUpdate() {
@@ -366,7 +371,7 @@ class RPCServerManager {
       }
     };
     obj.handleLogout = function handleLogout() {
-      obj = VibegrationsVoiceSessionCoordinatorDefault;
+      obj = ConjureVoiceSessionCoordinatorDefault;
       obj.release();
       const sockets = obj.rpcServer.sockets;
       const item = sockets.forEach((close) => close.close(constants.CLOSE_NORMAL, "User logout"));
@@ -619,7 +624,7 @@ prototype["init"] = function init() {
     });
   };
   this.rpcServer.onDisconnect = (id, reason) => {
-    VibegrationsVoiceSessionCoordinatorDefault.releaseSocket(id.id);
+    ConjureVoiceSessionCoordinatorDefault.releaseSocket(id.id);
     DispatcherDefault.dispatch({
       type: "RPC_APP_DISCONNECTED",
       socketId: id.id,
@@ -630,7 +635,7 @@ prototype["init"] = function init() {
   };
   const items = [ChannelStore, GuildMemberStore, PresenceStore, VoiceStateStore, MediaEngineStore, RTCConnectionStore];
   const batchedStoreListener = new self(504).BatchedStoreListener(items.concat(this.stores), () => {
-    const result = VibegrationsVoiceSessionCoordinatorDefault.reconcileParticipants();
+    const result = ConjureVoiceSessionCoordinatorDefault.reconcileParticipants();
     const rpcServer = self.rpcServer;
     rpcServer.updateSubscriptions();
   });

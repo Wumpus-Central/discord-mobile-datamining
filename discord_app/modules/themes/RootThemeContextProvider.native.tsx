@@ -186,7 +186,7 @@ export const RootThemeContextProvider = ReactCompilerGating.isReactCompilerEnabl
       const obj2 = manaTypeConsolidationExperiment(6470);
       [][0] = manaTypeConsolidationExperiment;
       const plainTextExperiment =
-        manaTypeConsolidationExperiment(15855).usePlainTextExperiment("RootThemeContextProvider");
+        manaTypeConsolidationExperiment(15859).usePlainTextExperiment("RootThemeContextProvider");
       if (null == tmp4) {
         let num2 = 0;
         if (1 !== saturation) {
@@ -234,5 +234,5 @@ export const RootThemeContextProvider = ReactCompilerGating.isReactCompilerEnabl
         setThemeFlagResult1 = tmp(4589).setThemeFlag(0, tmp(4589).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);
         const tmpResult6 = tmp(4589);
       }
-      const obj3 = manaTypeConsolidationExperiment(15855);
+      const obj3 = manaTypeConsolidationExperiment(15859);
     };

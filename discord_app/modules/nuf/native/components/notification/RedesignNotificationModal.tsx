@@ -5,7 +5,7 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import NotificationPermissionUtil from "../../NotificationPermissionUtil.tsx";
 import PushNotificationActionCreators from "../../../../../actions/native/PushNotificationActionCreators.tsx";
 import NewUserPermissionsOnboardingDefault from "../NewUserPermissionsOnboarding.android.tsx";
-import _modDef15918 from "../../../../../../_runtime/metro/15918__.js";
+import _modDef15922 from "../../../../../../_runtime/metro/15922__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -70,8 +70,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[3];
       }
       if (cResult[4] !== tmp4.notificationHeaderImage) {
-        let obj2 = { resizeMode: "contain", style: tmp4.notificationHeaderImage, source: _modDef15918 };
-        const tmp11 = <closure_4 resizeMode="contain" style={tmp4.notificationHeaderImage} source={_modDef15918} />;
+        let obj2 = { resizeMode: "contain", style: tmp4.notificationHeaderImage, source: _modDef15922 };
+        const tmp11 = <closure_4 resizeMode="contain" style={tmp4.notificationHeaderImage} source={_modDef15922} />;
         cResult[4] = tmp4.notificationHeaderImage;
         cResult[5] = tmp11;
         let tmp7 = tmp11;
@@ -154,8 +154,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       let obj2 = { onAllow: callback, onDontAllow: callback1, header: null, title: null, subtitle: null };
-      let obj3 = { resizeMode: "contain", style: tmp.notificationHeaderImage, source: _modDef15918 };
-      obj2.header = <closure_4 resizeMode="contain" style={tmp.notificationHeaderImage} source={_modDef15918} />;
+      let obj3 = { resizeMode: "contain", style: tmp.notificationHeaderImage, source: _modDef15922 };
+      obj2.header = <closure_4 resizeMode="contain" style={tmp.notificationHeaderImage} source={_modDef15922} />;
       const intl = onComplete(1126).intl;
       obj2.title = intl.string(onComplete(1126).t["3nx0b5"]);
       const intl2 = onComplete(1126).intl;

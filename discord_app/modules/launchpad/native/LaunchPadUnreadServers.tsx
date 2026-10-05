@@ -93,7 +93,7 @@ let closure_13 = noop.memo(
             onLongPress: tmp5,
             backgroundColor: tmp3.maskStrokeStyle.backgroundColor,
           };
-          const tmp9 = closure_10(onGuildSelect(17367), obj3);
+          const tmp9 = closure_10(onGuildSelect(17391), obj3);
           cResult[5] = guildId;
           cResult[6] = tmp5;
           cResult[7] = tmp4;
@@ -124,7 +124,7 @@ let closure_13 = noop.memo(
         const callback1 = noop.useCallback(() => {
           transitionToGuild.transitionToGuild(guildId);
         }, items1);
-        obj.children = closure_10(onGuildSelect(17367), {
+        obj.children = closure_10(onGuildSelect(17391), {
           size: 48,
           borderRadius: 16,
           guildId,

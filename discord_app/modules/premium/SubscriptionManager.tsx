@@ -30,7 +30,7 @@ const prototype = function SubscriptionManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -60,7 +60,7 @@ const prototype = function SubscriptionManager() {
               }
             }
             currentUser = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -140,7 +140,7 @@ const prototype = function SubscriptionManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -176,7 +176,7 @@ const prototype = function SubscriptionManager() {
           return obj;
         }
         v3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } catch (tmp8) {
         v3 = tmp;
         throw tmp8;
@@ -194,7 +194,7 @@ const prototype = function SubscriptionManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -238,7 +238,7 @@ const prototype = function SubscriptionManager() {
             return obj;
           }
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp13) {
         c2 = tmp;

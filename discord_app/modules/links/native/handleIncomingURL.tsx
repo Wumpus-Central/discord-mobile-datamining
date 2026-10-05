@@ -22,7 +22,7 @@ let closure_11 = async function _handleIncomingURL(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -138,17 +138,17 @@ let closure_11 = async function _handleIncomingURL(arg0) {
                   }
                 }
                 c8 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               } else {
                 const parts = url.split("voice/");
                 if (2 !== parts.length) {
                   c8 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 } else {
                   const parts1 = parts[1].split("/");
                   if (0 === parts1.length) {
                     c8 = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   } else if ("user" !== parts1[0]) {
                     if ("invite" === parts1[0]) {
                       const obj14 = { payload: null };

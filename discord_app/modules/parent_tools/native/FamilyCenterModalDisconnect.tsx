@@ -449,7 +449,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp28Result = requiresParentalConsent;
       if (requiresParentalConsent) {
         const obj13 = { style: tmp.warning, text: ageSpecificText1 };
-        tmp28Result = closure_6(tmp3(14678), obj13);
+        tmp28Result = closure_6(tmp3(14682), obj13);
       }
       const obj14 = { children: null };
       items4[1] = tmp28Result;

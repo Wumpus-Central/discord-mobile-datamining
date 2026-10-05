@@ -171,7 +171,7 @@ let closure_12 = noop.memo(
           const intl = tmp(1126).intl;
           obj7.accessibilityLabel = intl.string(tmp(1126).t["13/7kX"]);
           obj7.onPress = goBack;
-          obj7.children = closure_7(tmp(16341).LeftBackIconWithBadge, {});
+          obj7.children = closure_7(tmp(16345).LeftBackIconWithBadge, {});
           const items2 = [closure_7(tmp(5909).PressableOpacity, obj7), ,];
           const obj8 = {
             color: "mobile-text-heading-primary",
@@ -239,7 +239,7 @@ let closure_12 = noop.memo(
           const intl = tmp5(1126).intl;
           obj4.accessibilityLabel = intl.string(tmp5(1126).t["13/7kX"]);
           obj4.onPress = goBack;
-          obj4.children = closure_7(tmp5(16341).LeftBackIconWithBadge, {});
+          obj4.children = closure_7(tmp5(16345).LeftBackIconWithBadge, {});
           const items1 = [closure_7(tmp5(5909).PressableOpacity, obj4), ,];
           const obj5 = {
             color: "mobile-text-heading-primary",

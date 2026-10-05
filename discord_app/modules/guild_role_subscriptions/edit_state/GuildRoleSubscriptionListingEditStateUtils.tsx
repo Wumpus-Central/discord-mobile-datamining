@@ -16,7 +16,7 @@ import GuildRoleSubscriptionsStore from "../GuildRoleSubscriptionsStore.tsx";
 const require = globalThis.__r;
 
 const utils_ColorUtils = obj(1103);
-const Contants = obj(15044);
+const Contants = obj(15048);
 require = fn;
 function getRoleEmojis(arr, arg1) {
   closure_0 = arg1;
@@ -56,7 +56,7 @@ let closure_22 = async function _updateListingPeripheralsFromEditState(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -92,7 +92,7 @@ let closure_22 = async function _updateListingPeripheralsFromEditState(arg0) {
           closure_129_16 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -215,7 +215,7 @@ let closure_22 = async function _updateListingPeripheralsFromEditState(arg0) {
             return obj;
           }
           c4 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
         subscriptionTrial = closure_130_8.getSubscriptionTrial(id);
         let tmp25 = null != trialLimit;
@@ -257,7 +257,7 @@ let closure_23 = async function _createListingFromEditState(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -297,7 +297,7 @@ let closure_23 = async function _createListingFromEditState(arg0) {
           let templateTierCreationAnalyticsContext;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp4) {
@@ -416,9 +416,9 @@ let closure_23 = async function _createListingFromEditState(arg0) {
     }
   }
 };
-const GuildRoleSubscriptionEditStore = fn(15042);
+const GuildRoleSubscriptionEditStore = fn(15046);
 ({ AllChannelAccessOptions: closure_9, useEditStateStore: c10 } = GuildRoleSubscriptionEditStore);
-let closure_11 = fn(15019).GuildRoleSubscriptionBenefitTypes;
+let closure_11 = fn(15023).GuildRoleSubscriptionBenefitTypes;
 const Constants = fn(1085);
 ({ CurrencyCodes: closure_12, DEFAULT_ROLE_COLOR: map1 } = Constants);
 const SubscriptionIntervalTypes = fn(1379).SubscriptionIntervalTypes;
@@ -1535,7 +1535,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1568,7 +1568,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
             closure_129_7 = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1623,8 +1623,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                   if (null != channelBenefits) {
                     const benefits = subscriptionListing.role_benefits.benefits;
                     const benefits1 = subscriptionListing.role_benefits.benefits;
-                    const found = benefits.filter(closure_1_0(15045).isChannelBenefit);
-                    const found1 = benefits1.filter(closure_1_0(15045).isIntangibleBenefit);
+                    const found = benefits.filter(closure_1_0(15049).isChannelBenefit);
+                    const found1 = benefits1.filter(closure_1_0(15049).isIntangibleBenefit);
                     if (channelBenefits == null) {
                       channelBenefits = found;
                     }
@@ -1683,7 +1683,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
             c4 = 0;
             closure_0(false);
             c6 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           } else {
             throw closure_129_8;
           }

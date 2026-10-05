@@ -875,7 +875,7 @@ export const useCreateSubscriptionGroupListing = function useCreateSubscriptionG
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -907,7 +907,7 @@ export const useCreateSubscriptionGroupListing = function useCreateSubscriptionG
           c5 = 0;
           closure_130_0(false);
           c6 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -971,7 +971,7 @@ export const useUpdateSubscriptionGroupListing = function useUpdateSubscriptionG
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1011,7 +1011,7 @@ export const useUpdateSubscriptionGroupListing = function useUpdateSubscriptionG
           c6 = 0;
           closure_0(false);
           c7 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
@@ -1074,7 +1074,7 @@ export const useDeleteSubscriptionListing = function useDeleteSubscriptionListin
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1109,7 +1109,7 @@ export const useDeleteSubscriptionListing = function useDeleteSubscriptionListin
           c6 = 0;
           closure_131_0(false);
           c7 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
@@ -1170,7 +1170,7 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1191,7 +1191,7 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
             ({ guildId: closure_129_0, groupListingId: closure_129_1, listingId: closure_129_2 } = closure_0);
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (1 === tmp9) {
           if (arg0 === 1) {
@@ -1226,7 +1226,7 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
           c4 = 0;
           closure_130_0(false);
           c6 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -1292,7 +1292,7 @@ export const useUpdateSubscriptionsSettings = function useUpdateSubscriptionsSet
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1381,7 +1381,7 @@ export const useDeleteSubscriptionGroupListing = function useDeleteSubscriptionG
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1413,7 +1413,7 @@ export const useDeleteSubscriptionGroupListing = function useDeleteSubscriptionG
           c5 = 0;
           closure_130_0(false);
           c6 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -1477,7 +1477,7 @@ export const useFetchSubscriptionsSettings = function useFetchSubscriptionsSetti
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1568,7 +1568,7 @@ export const useUpdateSubscriptionsTrial = function useUpdateSubscriptionsTrial(
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

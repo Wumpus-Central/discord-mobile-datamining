@@ -22,7 +22,7 @@ let obj2 = {
     alignItems: "center",
     width: "100%",
     marginTop: 40,
-    paddingHorizontal: fn(13387).MARKER_DIMENSIONS / 2 + 34,
+    paddingHorizontal: fn(13389).MARKER_DIMENSIONS / 2 + 34,
   },
   progressBar: { height: 54, maxWidth: 660, width: "100%" },
   progressBarScrubber: null,
@@ -35,12 +35,12 @@ let obj3 = {
   alignItems: "center",
   width: "100%",
   marginTop: 40,
-  paddingHorizontal: fn(13387).MARKER_DIMENSIONS / 2 + 34,
+  paddingHorizontal: fn(13389).MARKER_DIMENSIONS / 2 + 34,
 };
 obj2.progressBarScrubber = {
   height: 8,
-  top: fn(13387).MARKER_DIMENSIONS / 2 - 4,
-  marginHorizontal: fn(13387).MARKER_DIMENSIONS / 2 + 2,
+  top: fn(13389).MARKER_DIMENSIONS / 2 - 4,
+  marginHorizontal: fn(13389).MARKER_DIMENSIONS / 2 + 2,
 };
 let size = {
   borderRadius: 8,
@@ -78,8 +78,8 @@ const __initData6 = {
 const ReactCompilerGating = fn(558);
 let obj4 = {
   height: 8,
-  top: fn(13387).MARKER_DIMENSIONS / 2 - 4,
-  marginHorizontal: fn(13387).MARKER_DIMENSIONS / 2 + 2,
+  top: fn(13389).MARKER_DIMENSIONS / 2 - 4,
+  marginHorizontal: fn(13389).MARKER_DIMENSIONS / 2 + 2,
 };
 size = fn(2);
 let result = size.fileFinishedImporting(

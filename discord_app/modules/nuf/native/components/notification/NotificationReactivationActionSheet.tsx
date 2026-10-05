@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NotificationPermissionUtil from "../../NotificationPermissionUtil.tsx";
-import _modDef17572 from "../../../../../../_runtime/metro/17572__.js";
+import _modDef17596 from "../../../../../../_runtime/metro/17596__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -62,13 +62,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, {
             action_type: EventActionType.SKIP_STEP,
             action_location: _location,
-            permission_granted: "Array",
+            permission_granted: "r",
           });
-          const obj2 = {
-            action_type: EventActionType.SKIP_STEP,
-            action_location: _location,
-            permission_granted: "Array",
-          };
+          const obj2 = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "r" };
           ActionSheetActionCreatorsDefault.hideActionSheet();
         };
         cResult[2] = _location;
@@ -78,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[3];
       }
       if (cResult[4] !== tmp4.image) {
-        let obj2 = { style: tmp4.image, source: _modDef17572, resizeMode: "contain" };
+        let obj2 = { style: tmp4.image, source: _modDef17596, resizeMode: "contain" };
         const tmp11 = closure_8(closure_5, obj2);
         cResult[4] = tmp4.image;
         cResult[5] = tmp11;
@@ -215,18 +211,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, {
           action_type: EventActionType.SKIP_STEP,
           action_location: _location,
-          permission_granted: "Array",
+          permission_granted: "r",
         });
-        const obj2 = {
-          action_type: EventActionType.SKIP_STEP,
-          action_location: _location,
-          permission_granted: "Array",
-        };
+        const obj2 = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "r" };
         ActionSheetActionCreatorsDefault.hideActionSheet();
       }, items1);
       let obj = { children: null };
       let obj2 = { style: tmp.container, children: null };
-      const items2 = [closure_8(closure_5, { style: tmp.image, source: _modDef17572, resizeMode: "contain" }), , ,];
+      const items2 = [closure_8(closure_5, { style: tmp.image, source: _modDef17596, resizeMode: "contain" }), , ,];
       const obj4 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
       const intl = _location(1126).intl;
       obj4.children = intl.string(_location(1126).t.a4bgO0);

@@ -74,11 +74,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5(38)(!tmp6, "FamilyCenterDeclineLinkModal should only be rendered for teens.");
         if (cResult[6] !== otherUser) {
           const obj3 = { otherUser, iconSrc: tmp5(4809) };
-          const tmp16 = closure_5(tmp5(14726), obj3);
+          const tmp16 = closure_5(tmp5(14730), obj3);
           cResult[6] = otherUser;
           cResult[7] = tmp16;
           let tmp13 = tmp16;
-          const tmp5Result = tmp5(14726);
+          const tmp5Result = tmp5(14730);
         } else {
           tmp13 = cResult[7];
         }
@@ -102,7 +102,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[11] !== otherUser) {
           const obj5 = { user: otherUser };
-          const tmp24 = closure_5(tmp5(14696), obj5);
+          const tmp24 = closure_5(tmp5(14700), obj5);
           cResult[11] = otherUser;
           cResult[12] = tmp24;
           let tmp22 = tmp24;
@@ -290,12 +290,12 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { otherUser, iconSrc: null };
       const obj = otherUser(11528);
       obj5.iconSrc = declineLinkRequest(4809);
-      const items1 = [closure_5(declineLinkRequest(14726), obj5), ,];
+      const items1 = [closure_5(declineLinkRequest(14730), obj5), ,];
       const obj6 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
       let intl = otherUser(1126).intl;
       obj6.children = intl.string(declineLinkRequest(2493).teIRCR);
       items1[1] = closure_5(otherUser(4886).Text, obj6);
-      items1[2] = closure_5(declineLinkRequest(14696), { user: otherUser });
+      items1[2] = closure_5(declineLinkRequest(14700), { user: otherUser });
       obj4.children = items1;
       const items2 = [closure_6(View, obj4)];
       const obj7 = { style: tmp.body, children: null };

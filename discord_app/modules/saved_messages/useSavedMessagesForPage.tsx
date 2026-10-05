@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp11 = cResult[5];
   }
   const effect = noop.useEffect(M, tmp11);
-  first(13123)();
+  first(13125)();
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class M {
       constructor() {

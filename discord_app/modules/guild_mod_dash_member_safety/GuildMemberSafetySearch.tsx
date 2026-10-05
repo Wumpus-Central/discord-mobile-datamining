@@ -23,9 +23,9 @@ let obj = {
   selectedRoleIds: new Set(),
   selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
   selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
-  selectedJoinSourceType: "application",
-  selectedSourceInviteCode: "getChannel",
-  selectedSort: "size",
+  selectedJoinSourceType: "applicationId",
+  selectedSourceInviteCode: "round",
+  selectedSort: "width",
 };
 let closure_4 = Object.freeze(obj);
 const size = fn(2);
@@ -43,9 +43,9 @@ class GuildMemberSafetySearch {
       selectedRoleIds: null,
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
-      selectedJoinSourceType: "application",
-      selectedSourceInviteCode: "getChannel",
-      selectedSort: "size",
+      selectedJoinSourceType: "applicationId",
+      selectedSourceInviteCode: "round",
+      selectedSort: "width",
     };
     set = new Set();
     obj.selectedRoleIds = set;
@@ -73,9 +73,9 @@ prototype["reset"] = function reset() {
     selectedRoleIds: new Set(),
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
-    selectedJoinSourceType: "application",
-    selectedSourceInviteCode: "getChannel",
-    selectedSort: "size",
+    selectedJoinSourceType: "applicationId",
+    selectedSourceInviteCode: "round",
+    selectedSort: "width",
   };
   this._searchState = obj;
   this.hasDefaultQuery = true;
@@ -101,9 +101,9 @@ prototype["resetSearchState"] = function resetSearchState() {
       selectedRoleIds: null,
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
-      selectedJoinSourceType: "application",
-      selectedSourceInviteCode: "getChannel",
-      selectedSort: "size",
+      selectedJoinSourceType: "applicationId",
+      selectedSourceInviteCode: "round",
+      selectedSort: "width",
     };
     const _Set = Set;
     const set = new Set();
@@ -299,9 +299,9 @@ export const getDefaultSearchState = function getDefaultSearchState() {
     selectedRoleIds: new Set(),
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
-    selectedJoinSourceType: "application",
-    selectedSourceInviteCode: "getChannel",
-    selectedSort: "size",
+    selectedJoinSourceType: "applicationId",
+    selectedSourceInviteCode: "round",
+    selectedSort: "width",
   };
   return obj;
 };

@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = {
-          folderId: tmp2(16295).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER,
+          folderId: tmp2(16299).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER,
           folderName: null,
           expanded: null,
           guildIds: null,
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items2);
       if (arr2.length > 0) {
         const obj3 = {
-          folderId: tmp2(16295).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER,
+          folderId: tmp2(16299).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER,
           folderName: null,
           expanded: null,
           guildIds: null,

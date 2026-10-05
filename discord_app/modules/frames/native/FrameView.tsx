@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       return obj.leaveFrame(frame.id);
                     }
                   }
-                  const tmp18 = layoutMode(17125)(frame, ActivityPlatform.MOBILE);
+                  const tmp18 = layoutMode(17149)(frame, ActivityPlatform.MOBILE);
                   cResult[17] = frame;
                   cResult[18] = tmp18;
                   let tmp16 = tmp18;
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   isPipOrGridMode: layoutMode === FrameLayoutModes.PIP,
                   safeAreasConfig: portraitSafeAreasConfig,
                 };
-                const tmp27 = jsx(layoutMode(17128), {
+                const tmp27 = jsx(layoutMode(17152), {
                   onActivityCrash,
                   applicationId: frame.applicationId,
                   iframeId,
@@ -311,9 +311,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         safeAreasConfig: null,
       };
       const tmpResult = frame(9134);
-      obj3.queryParams = layoutMode(17125)(frame, ActivityPlatform.MOBILE);
+      obj3.queryParams = layoutMode(17149)(frame, ActivityPlatform.MOBILE);
       obj3.onLoadError = callback;
-      const tmp10 = layoutMode(17128);
+      const tmp10 = layoutMode(17152);
       obj3.allowPopups = frame(9147).allowPopups(data);
       obj3.isPipOrGridMode = layoutMode === FrameLayoutModes.PIP;
       if (isLandscape) {
